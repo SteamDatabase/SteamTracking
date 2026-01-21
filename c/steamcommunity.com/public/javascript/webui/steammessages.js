@@ -3566,141 +3566,6 @@ var CLSTAMP = "steamdb";
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.steamid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  steamid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  token: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  signature: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CAuthentication_MigrateMobileSession_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.refresh_token || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  refresh_token: {
-                    _: 1,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  access_token: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CAuthentication_MigrateMobileSession_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
             _.prototype.token_id || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -4996,17 +4861,6 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.MigrateMobileSession = function (_, _) {
-            return _.SendMsg(
-              "Authentication.MigrateMobileSession#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 0,
-                eWebAPIKeyRequirement: 1,
-              },
-            );
-          }),
           (_.RevokeToken = function (_, _) {
             return _.SendMsg(
               "Authentication.RevokeToken#1",
@@ -5107,6 +4961,7 @@ var CLSTAMP = "steamdb";
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -6302,6 +6157,146 @@ var CLSTAMP = "steamdb";
         }
         getClassName() {
           return "UserContentDescriptorPreferences_ContentDescriptor";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.manufacturer || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  manufacturer: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  model: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  dx_video_card: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  dx_vendorid: {
+                    _: 4,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  dx_deviceid: {
+                    _: 5,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  num_gpu: {
+                    _: 6,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  system_ram: {
+                    _: 7,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  _: {
+                    _: 8,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  cpu_vendor: {
+                    _: 9,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  cpu_name: {
+                    _: 10,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  gaming_device_type: {
+                    _: 11,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  dx_driver_version: {
+                    _: 12,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  dx_driver_name: {
+                    _: 13,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  adapter_description: {
+                    _: 14,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  driver_version: {
+                    _: 15,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  driver_date: {
+                    _: 16,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  vram_size: {
+                    _: 17,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "UserSystemInformation";
         }
       }
     },
@@ -27123,8 +27118,7 @@ var CLSTAMP = "steamdb";
         _: () => _,
         _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -27442,7 +27436,7 @@ var CLSTAMP = "steamdb";
                   },
                   counts: {
                     _: 3,
-                    _: _,
+                    _,
                   },
                 },
               }),
@@ -27545,6 +27539,8 @@ var CLSTAMP = "steamdb";
           return "CClientMetrics_ContentDownloadResponse_Hosts";
         }
       }
+      var _,
+        _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -28512,7 +28508,7 @@ var CLSTAMP = "steamdb";
                 fields: {
                   summary: {
                     _: 1,
-                    _,
+                    _: _,
                   },
                 },
               }),
@@ -29411,7 +29407,7 @@ var CLSTAMP = "steamdb";
                   },
                   system_info: {
                     _: 3,
-                    _: _,
+                    _: _._,
                   },
                 },
               }),
@@ -29451,111 +29447,6 @@ var CLSTAMP = "steamdb";
         }
         getClassName() {
           return "CClientMetrics_GamePerformance_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.manufacturer || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  manufacturer: {
-                    _: 1,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  model: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  dx_video_card: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  dx_vendorid: {
-                    _: 4,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  dx_deviceid: {
-                    _: 5,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  num_gpu: {
-                    _: 6,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  system_ram: {
-                    _: 7,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  _: {
-                    _: 8,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  cpu_vendor: {
-                    _: 9,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  cpu_name: {
-                    _: 10,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientMetrics_GamePerformance_Notification_SystemInformation";
         }
       }
       class _ extends _.Message {
@@ -43778,6 +43669,16 @@ var CLSTAMP = "steamdb";
                   container_properties: {
                     _: 33,
                     _: _,
+                  },
+                  market_bucket_group_name: {
+                    _: 34,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  market_bucket_group_id: {
+                    _: 35,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),
@@ -72638,6 +72539,11 @@ var CLSTAMP = "steamdb";
                     _: 13,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  game_frame_rate_reporting: {
+                    _: 14,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
                   },
                 },
               }),

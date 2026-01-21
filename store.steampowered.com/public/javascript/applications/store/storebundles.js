@@ -46,33 +46,34 @@
     },
     54393: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => E });
+      r.r(t), r.d(t, { default: () => L });
       var n,
         l = r(90626),
         a = r(57876),
-        s = r(55263),
-        u = r(84811),
-        i = r(54847),
-        c = r(37076),
-        d = r(32630),
-        o = r(52038),
-        m = r(61859),
-        p = r(31960),
-        B = r.n(p),
-        S = r(24484),
-        _ = r(82097),
-        G = r(63090),
-        I = r(30894),
-        b = r(94095),
-        g = r(22797);
-      function E(e) {
+        s = r(75279),
+        u = r(55263),
+        i = r(84811),
+        c = r(54847),
+        d = r(37076),
+        o = r(32630),
+        m = r(52038),
+        p = r(61859),
+        B = r(31960),
+        S = r.n(B),
+        _ = r(24484),
+        G = r(16021),
+        I = r(63090),
+        b = r(30894),
+        g = r(92398),
+        E = r(22797);
+      function L(e) {
         const {
             match: {
               params: { appid: t },
             },
           } = e,
           r = Number.parseInt(t),
-          [n] = (0, s.t7)(r, a.Xh);
+          [n] = (0, u.t7)(r, a.Xh);
         return (
           (0, l.useEffect)(() => {
             if (n) {
@@ -82,44 +83,44 @@
             }
           }, [n]),
           l.createElement(
-            d.Ay,
+            o.Ay,
             { method: "bundlelist" },
-            l.createElement(u.tH, null, l.createElement(L, { storeItem: n })),
+            l.createElement(i.tH, null, l.createElement(h, { storeItem: n })),
           )
         );
       }
-      function L(e) {
+      function h(e) {
         const { storeItem: t } = e,
-          [r, u] = (0, l.useState)(n.k_BundleSort_Price),
+          [r, s] = (0, l.useState)(n.k_BundleSort_Price),
           i = (function (e) {
             const t = (0, l.useMemo)(
-                () => (0, S.Tc)("bundle_list", "application_config"),
+                () => (0, _.Tc)("bundle_list", "application_config"),
                 [],
               ),
-              [r] = (0, I.L2)(),
-              u = (0, s.MS)(t, a.Xh),
+              [r] = (0, b.L2)(),
+              s = (0, u.MS)(t, a.Xh),
               i = (0, l.useMemo)(() => {
-                if (3 != u && 2 != u) return null;
+                if (3 != s && 2 != s) return null;
                 {
                   let r = t;
                   switch (
-                    (2 == u &&
+                    (2 == s &&
                       (r = t.filter((e) => {
-                        const t = _.A.Get().GetBundle(e);
+                        const t = G.A.Get().GetBundle(e);
                         return t?.BIsVisible();
                       })),
                     e)
                   ) {
                     case n.k_BundleSort_Name:
                       return [...r].sort((e, t) => {
-                        const r = _.A.Get().GetBundle(e),
-                          n = _.A.Get().GetBundle(t);
+                        const r = G.A.Get().GetBundle(e),
+                          n = G.A.Get().GetBundle(t);
                         return r.GetName().localeCompare(n.GetName());
                       });
                     case n.k_BundleSort_Price:
                       return [...r].sort((e, t) => {
-                        const r = _.A.Get().GetBundle(e),
-                          n = _.A.Get().GetBundle(t);
+                        const r = G.A.Get().GetBundle(e),
+                          n = G.A.Get().GetBundle(t);
                         return (
                           r.GetBestPurchasePriceInCents() -
                           n.GetBestPurchasePriceInCents()
@@ -129,15 +130,15 @@
                       return r;
                   }
                 }
-              }, [e, u, t]);
+              }, [e, s, t]);
             if (i && !r) {
               const e = new Array(),
                 t = new Array(),
                 r = new Array();
               return (
                 i.forEach((n) => {
-                  const l = _.A.Get().GetBundle(n);
-                  l.GetIncludedAppIDs().some((e) => !I.Fm.Get().BOwnsApp(e))
+                  const l = G.A.Get().GetBundle(n);
+                  l.GetIncludedAppIDs().some((e) => !b.Fm.Get().BOwnsApp(e))
                     ? l.GetBestPurchaseOption().must_purchase_as_set
                       ? r.push(n)
                       : t.push(n)
@@ -153,8 +154,8 @@
             return null;
           })(r);
         if (!t || !i)
-          return l.createElement(g.t, {
-            string: (0, m.we)("#Loading"),
+          return l.createElement(E.t, {
+            string: (0, p.we)("#Loading"),
             position: "center",
           });
         const c =
@@ -163,36 +164,36 @@
           t.GetAssets().GetRawPageBackgroundURL();
         return l.createElement(
           "div",
-          { className: B().Ctn },
+          { className: S().Ctn },
           l.createElement(
             "div",
-            { className: B().BackgroundImageCtn },
+            { className: S().BackgroundImageCtn },
             l.createElement("img", { src: c }),
           ),
           l.createElement(
             "div",
-            { className: B().BackgroundImageBlurCtn },
+            { className: S().BackgroundImageBlurCtn },
             l.createElement("img", { src: c }),
           ),
           l.createElement(
             "div",
-            { className: (0, o.A)("page_content") },
-            l.createElement(N, { storeItem: t, eBundleSort: r, fnSetSort: u }),
+            { className: (0, m.A)("page_content") },
+            l.createElement(P, { storeItem: t, eBundleSort: r, fnSetSort: s }),
             i.rgCompleteTheSetBundleIDList?.length > 0 &&
               l.createElement(
                 "div",
-                { className: B().BundlesInLibrary },
+                { className: S().BundlesInLibrary },
                 l.createElement(
                   "div",
-                  { className: B().Title },
-                  (0, m.we)("#BundleList_CompleteTheSet"),
+                  { className: S().Title },
+                  (0, p.we)("#BundleList_CompleteTheSet"),
                 ),
                 l.createElement(
                   "div",
-                  { className: B().Subtitle },
-                  (0, m.we)("#BundleList_CompleteTheSetSubtitle"),
+                  { className: S().Subtitle },
+                  (0, p.we)("#BundleList_CompleteTheSetSubtitle"),
                 ),
-                l.createElement(h, {
+                l.createElement(w, {
                   appId: t.GetAppID(),
                   rgBundleIDs: i.rgCompleteTheSetBundleIDList,
                 }),
@@ -200,18 +201,18 @@
             i.rgMustPurchaseTogetherBundleIDList?.length > 0 &&
               l.createElement(
                 "div",
-                { className: B().BundlesInLibrary },
+                { className: S().BundlesInLibrary },
                 l.createElement(
                   "div",
-                  { className: B().Title },
-                  (0, m.we)("#BundleList_MustPurchaseAsSet"),
+                  { className: S().Title },
+                  (0, p.we)("#BundleList_MustPurchaseAsSet"),
                 ),
                 l.createElement(
                   "div",
-                  { className: B().Subtitle },
-                  (0, m.we)("#BundleList_MustPurchaseAsSetSubtitle"),
+                  { className: S().Subtitle },
+                  (0, p.we)("#BundleList_MustPurchaseAsSetSubtitle"),
                 ),
-                l.createElement(h, {
+                l.createElement(w, {
                   appId: t.GetAppID(),
                   rgBundleIDs: i.rgMustPurchaseTogetherBundleIDList,
                 }),
@@ -219,18 +220,18 @@
             i.rgOwnedBundleIDList?.length > 0 &&
               l.createElement(
                 "div",
-                { className: B().BundlesInLibrary },
+                { className: S().BundlesInLibrary },
                 l.createElement(
                   "div",
-                  { className: B().Title },
-                  (0, m.we)("#BundleList_AllInLibrary"),
+                  { className: S().Title },
+                  (0, p.we)("#BundleList_AllInLibrary"),
                 ),
                 l.createElement(
                   "div",
-                  { className: B().Subtitle },
-                  (0, m.we)("#BundleList_AllInLibrarySubtitle"),
+                  { className: S().Subtitle },
+                  (0, p.we)("#BundleList_AllInLibrarySubtitle"),
                 ),
-                l.createElement(h, {
+                l.createElement(w, {
                   appId: t.GetAppID(),
                   rgBundleIDs: i.rgOwnedBundleIDList,
                 }),
@@ -238,13 +239,13 @@
           ),
         );
       }
-      function h(e) {
+      function w(e) {
         const { rgBundleIDs: t, appId: r } = e;
         return l.createElement(
           "div",
-          { className: B().BundlesList },
+          { className: S().BundlesList },
           t.map((e) =>
-            l.createElement(w, {
+            l.createElement(N, {
               key: "bundleDisplay_" + e,
               bundleId: e,
               appId: r,
@@ -252,12 +253,12 @@
           ),
         );
       }
-      function w(e) {
+      function N(e) {
         const { bundleId: t, appId: r } = e;
         return l.createElement(
           "div",
-          { className: B().BundleRow },
-          l.createElement(i.p, {
+          { className: S().BundleRow },
+          l.createElement(c.p, {
             id: t,
             type: "bundle",
             bShowDeckCompatibilityDialog: !1,
@@ -265,51 +266,52 @@
           }),
         );
       }
-      function N(e) {
-        const { storeItem: t, eBundleSort: r, fnSetSort: a } = e;
+      function P(e) {
+        const { storeItem: t, eBundleSort: r, fnSetSort: a } = e,
+          u = (0, s.DJ)(t);
         return l.createElement(
           "div",
-          { className: B().AppHeader },
+          { className: S().AppHeader },
           l.createElement(
-            c.u,
-            { type: "app", id: t.GetAppID(), hoverClassName: B().PreviewItem },
+            d.u,
+            { type: "app", id: t.GetAppID(), hoverClassName: S().PreviewItem },
             l.createElement("img", { src: t.GetAssets().GetHeaderURL() }),
           ),
           l.createElement(
             "div",
-            { className: B().TitleGroup },
+            { className: S().TitleGroup },
             l.createElement(
               "div",
-              { className: B().SubTitle },
-              (0, m.we)("#BundleList_SubTitle"),
+              { className: S().SubTitle },
+              (0, p.we)("#BundleList_SubTitle"),
             ),
-            l.createElement("div", { className: B().Title }, t.GetName()),
-            l.createElement(b.kb, { storeItem: t }),
+            l.createElement("div", { className: S().Title }, t.GetName()),
+            l.createElement(g.NF, { id: u }),
           ),
           l.createElement(
             "div",
-            { className: B().SortOptions },
-            l.createElement(G.ZU, {
+            { className: S().SortOptions },
+            l.createElement(I.ZU, {
               selectedOption: r,
               renderButtonValue: (e) =>
                 l.createElement(
                   "div",
                   null,
-                  (0, m.we)("#BundleList_SortBy"),
+                  (0, p.we)("#BundleList_SortBy"),
                   " ",
                   e,
                 ),
               rgOptions: [
                 {
                   data: n.k_BundleSort_Name,
-                  label: (0, m.we)("#BundleList_SortBy_Name"),
+                  label: (0, p.we)("#BundleList_SortBy_Name"),
                 },
                 {
                   data: n.k_BundleSort_Price,
-                  label: (0, m.we)("#BundleList_SortBy_Price"),
+                  label: (0, p.we)("#BundleList_SortBy_Price"),
                 },
               ],
-              strDefaultLabel: (0, m.we)("#BundleList_SortBy"),
+              strDefaultLabel: (0, p.we)("#BundleList_SortBy"),
               onChange: ({ data: e }) => a(e),
             }),
           ),

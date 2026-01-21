@@ -1409,6 +1409,7 @@
         (0, _._)([_._], _.prototype, "CloseModal", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1418,19 +1419,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
+      function _(_) {
         const _ = (0, _.useRef)(null),
           _ = Number(_.appID),
-          _ = (0, _.useMemo)(
-            () => ({
-              _: _,
-              type: "game",
-            }),
-            [_],
-          ),
-          [_] = (0, _._)(_, {}),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           [_, _] = (0, _.useState)(null);
         (0, _.useEffect)(
           () => (
@@ -1438,8 +1432,8 @@
               const _ = _().CancelToken.source();
               _.current = _.cancel;
               const _ = await _._.LoadAdjacentPartnerEvents(
-                null,
-                null,
+                void 0,
+                void 0,
                 _,
                 0,
                 1,
@@ -1456,9 +1450,12 @@
           ),
           [_],
         );
-        const _ = _ ? _.GetNameWithFallback((0, _._)(_._.LANGUAGE)) : null,
+        const [_, _, _] = (0, _._)(),
+          _ = _ ? _.GetNameWithFallback((0, _._)(_._.LANGUAGE)) : null,
           _ = !_ || _.BHasEventEnded();
-        return _?.BHasDemo()
+        return _ &&
+          _.related_items?.demo_appid &&
+          0 != _.related_items?.demo_appid.length
           ? _.createElement(
               _.Fragment,
               null,
@@ -1482,14 +1479,14 @@
                       {
                         className: _.TileTitle,
                       },
-                      (0, _._)("#Sale_DownloadDemo", _?.GetName()),
+                      (0, _._)("#Sale_DownloadDemo", _.name || ""),
                     ),
                     _.createElement(_._, {
-                      item: _,
+                      _: _,
                     }),
                   ),
                   _.createElement(_._, {
-                    info: _,
+                    _: _,
                     className: _.TileActionButton,
                   }),
                 ),
@@ -1499,6 +1496,7 @@
                     className: _.TileActionContainer,
                   },
                   _ &&
+                    _ &&
                     _.createElement(
                       "div",
                       {
@@ -1519,18 +1517,7 @@
                         "div",
                         {
                           className: _.TileActionInner,
-                          onClick: (_) => {
-                            (0, _._)(
-                              _.createElement(_._, {
-                                initialEvent: _,
-                                bShowOnlyInitialEvent: !1,
-                                partnerEventStore: _._,
-                                emoticonStore: _._,
-                                showAppHeader: !0,
-                              }),
-                              _._(_),
-                            );
-                          },
+                          onClick: _,
                         },
                         _.createElement(
                           "div",
@@ -1553,9 +1540,23 @@
                     ),
                 ),
               ),
+              _.createElement(
+                _._,
+                {
+                  active: _,
+                },
+                _.createElement(_._, {
+                  initialEvent: _,
+                  bShowOnlyInitialEvent: !1,
+                  partnerEventStore: _._,
+                  emoticonStore: _._,
+                  showAppHeader: !0,
+                  closeModal: _,
+                }),
+              ),
             )
           : null;
-      });
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1675,6 +1676,7 @@
           (_[(_.k_CreatorHomeAll = -1)] = "k_CreatorHomeAll");
       })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -2350,6 +2352,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_transport;
@@ -2426,9 +2430,13 @@
             this.m_mapReactionConfiguration
           );
         }
+        GetAwardConfigForReaction(_) {
+          return this.GetAwardConfigurations().get(_);
+        }
         async LoadAwardsConfiguration() {
           this.m_bReactionConfigurationLoadedOrInFlight = !0;
           const _ = _._.Init(_._);
+          _.Body().set_elanguage((0, _._)(_._.LANGUAGE));
           let _ = await _._.GetReactionConfig(this.m_transport, _);
           if (1 == _.GetEResult()) {
             let _ = _.Body().toObject().reactions;
@@ -2464,11 +2472,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _._)(`#RewardsReaction_${_}`);
-      }
       var _,
         _,
         _,
@@ -2674,6 +2678,7 @@
             ugcType: _,
             initialSelectedReaction: _,
             onDismiss: _,
+            onSuccess: _,
           } = this.props;
           return _.createElement(_, {
             key: _,
@@ -2825,6 +2830,7 @@
                         selected: _ === _ && !_.get(_),
                         cost: _.get(_).points_cost,
                         alreadyAwarded: _.get(_),
+                        store: _,
                         onClick: () => {
                           _.get(_) ||
                             this.setState({
@@ -2961,7 +2967,7 @@
                                 {
                                   className: _.AwardName,
                                 },
-                                _(_),
+                                _.GetAwardConfigForReaction(_).localized_title,
                               ),
                             ),
                           ),
@@ -3368,7 +3374,7 @@
                 {
                   className: _.Label,
                 },
-                _(_),
+                this.props.store.GetAwardConfigForReaction(_).localized_title,
               ),
               _.createElement(
                 _,
@@ -4053,71 +4059,70 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { appid: _ } = _,
-          [__webpack_require__] = (0, _._)(_, {
-            include_assets: !0,
-          }),
-          _ = (0, _._)();
-        if (!__webpack_require__) return null;
-        const _ = (0, _._)(__webpack_require__.GetStorePageURL(), _);
-        return _.createElement(
-          _._,
-          {
-            focusable: !0,
-            className: _().ParentWidgetContainer,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().ParentCapsuleImageContainer),
-            },
-            _.createElement(
-              "a",
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(_);
+        return _ && _
+          ? _.createElement(
+              _._,
               {
-                href: _,
+                focusable: !0,
+                className: _().ParentWidgetContainer,
               },
-              _.createElement("img", {
-                className: _().ParentCapsuleImage,
-                src: __webpack_require__.GetAssets().GetSmallCapsuleURL(),
-              }),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().AppDetails,
-            },
-            _.createElement(
-              "a",
-              {
-                className: (0, _._)(_().GameName),
-                href: _,
-              },
-              __webpack_require__.GetName(),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().PriceContainer,
-              },
-              _.createElement(_._, {
-                info: {
-                  _: _,
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().ParentCapsuleImageContainer),
                 },
-              }),
-              _.createElement(_._, {
-                appid: _,
-                className: _().AddToWishlistButton,
-                bTextMode: !0,
-              }),
-            ),
-          ),
-        );
+                _.createElement(
+                  "a",
+                  {
+                    href: _,
+                  },
+                  _.createElement("img", {
+                    className: _().ParentCapsuleImage,
+                    src: (0, _._)(_, "small_capsule"),
+                  }),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().AppDetails,
+                },
+                _.createElement(
+                  "a",
+                  {
+                    className: (0, _._)(_().GameName),
+                    href: _,
+                  },
+                  _.name,
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().PriceContainer,
+                  },
+                  _.createElement(_._, {
+                    _: _,
+                  }),
+                  _.createElement(_._, {
+                    appid: _,
+                    className: _().AddToWishlistButton,
+                    bTextMode: !0,
+                  }),
+                ),
+              ),
+            )
+          : null;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

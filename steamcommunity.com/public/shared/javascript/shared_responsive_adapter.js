@@ -10,8 +10,8 @@ jQuery( function($) {
 	window.UseTouchFriendlyMode = function() {
 		return $HTML.hasClass( 'responsive' ) && ( mqQuerySmallMode.matches || $HTML.hasClass('touch') );
 	};
-	window.UseSmallScreenMode = function( isWideModeEnabled ) {
-		return $HTML.hasClass( 'responsive' ) && ( isWideModeEnabled ? mqQuerySmallModeWhenWideEnabled.matches : mqQuerySmallMode.matches );
+	window.UseSmallScreenMode = function() {
+		return $HTML.hasClass( 'responsive' ) && ( mqQuerySmallModeWhenWideEnabled.matches );
 	};
 	window.UseMobileScreenMode = function() {
 		return $HTML.hasClass( 'responsive' ) && mqMobileMode.matches;
@@ -684,11 +684,11 @@ function Responsive_ReparentItemsInGamepadMode( strItemSelector, $CtnOrFn )
 }
 
 /* reparent element when screen width is up to RESPONSIVE_CSS_MAXWIDTH, or we're in GamepadScreenMode */
-function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $CtnOrFn, isWideModeEnabled )
+function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $CtnOrFn )
 {
 	var fnShouldReparent = function()
 	{
-		return ( ( window.UseSmallScreenMode && window.UseSmallScreenMode( isWideModeEnabled ) ) ||
+		return ( ( window.UseSmallScreenMode && window.UseSmallScreenMode() ) ||
 			( window.UseGamepadScreenMode && window.UseGamepadScreenMode() ) );
 	}
 

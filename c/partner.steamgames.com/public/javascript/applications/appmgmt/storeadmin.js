@@ -81,6 +81,11 @@
         StartWizardButton: "_1VzLAfLRNEbppzyyYS8ueA",
         ButtonRow: "_1L2BTYNuiNzNkV3fxuFZ4A",
         PreviewContainer: "_1z9Dg4jsYlNummQKgczgWN",
+        Updates: "cCbxuWUtmnc8zsLas0fCR",
+        UpdateButtonContainer: "oQ2jrb8UigZeb9afK7uuf",
+        NewBugContainer: "_2lvnBM3dEA_54CApZ1werw",
+        New: "_2M8-7e6mSLUYg6EP9U-fr-",
+        UpdatesWizardButton: "_2b8NFL_UzE4xC7a-M9SXbC",
       };
     },
     chunkid: (module) => {
@@ -17105,6 +17110,12 @@
             "#Accessibility_Feature_WithoutQuickTimeEvents",
           bAccessibilityChatTexttoSpeech: "#Accessibility_Feature_TextToSpeech",
           bAccessibilityChatSpeechtoText: "#Accessibility_Feature_SpeechToText",
+          bAccessibilityPlayableAtYourOwnPace:
+            "#Accessibility_Feature_PlayableAtYourOwnPace",
+          bAccessibilityPlayableWithoutVision:
+            "#Accessibility_Feature_PlayableWithoutVision",
+          bAccessibilityContrastControls:
+            "#Accessibility_Feature_ContrastControls",
         },
         _ = {
           bAccessibilityDifficultyLevels: "adjustable_difficulty",
@@ -17124,6 +17135,9 @@
             "playable_without_timed_input",
           bAccessibilityChatTexttoSpeech: "chat_text_to_speech",
           bAccessibilityChatSpeechtoText: "chat_speech_to_text",
+          bAccessibilityPlayableAtYourOwnPace: "playable_at_your_own_pace",
+          bAccessibilityPlayableWithoutVision: "playable_without_vision",
+          bAccessibilityContrastControls: "contrast_controls",
         },
         _ = {
           bAccessibilityDifficultyLevels: "gameplay",
@@ -17136,12 +17150,15 @@
           bAccessibilitySubtitles: "visual",
           bAccessibilityColorAlternatives: "visual",
           bAccessibilityCameraComfort: "visual",
+          bAccessibilityPlayableWithoutVision: "visual",
+          bAccessibilityContrastControls: "visual",
           bAccessibilityKeyboardOnlyOption: "input",
           bAccessibilityMouseOnlyOption: "input",
           bAccessibilityTouchOnlyOption: "input",
           bAccessibilityPlayableWithoutQuicktimeEvents: "input",
           bAccessibilityChatTexttoSpeech: "input",
           bAccessibilityChatSpeechtoText: "input",
+          bAccessibilityPlayableAtYourOwnPace: "input",
         },
         _ = {
           gameplay: "#Accessibility_Group_Gameplay",
@@ -17449,7 +17466,7 @@
               (0, _._)(
                 "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_Instructions",
                 _.createElement("a", {
-                  href: "https://learn.microsoft.com/en-us/windows/win32/winauto/entry-uiauto-win32",
+                  href: "https://learn.microsoft.com/windows/win32/winauto/entry-uiauto-win32",
                   target: "_blank",
                 }),
                 _.createElement("a", {
@@ -17494,6 +17511,71 @@
             fnSetValues: (_) => {
               "yes" === _ && _("bAccessibilityNarratedMenus", !0),
                 "no" === _ && _("bAccessibilityNarratedMenus", !1);
+            },
+          }),
+        );
+      }
+      function _() {
+        const { currentValues: _, fnSetValue: _ } = _(),
+          _ = _.useId();
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_PlayableWithoutVision",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_PlayableWithoutVision_Instructions",
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              _: _,
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_PlayableWithoutVision_Question",
+            ),
+          ),
+          _.createElement(_, {
+            labelId: _,
+            options: [
+              {
+                _: "yes",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_PlayableWithoutVision_Yes",
+                ),
+              },
+              {
+                _: "no",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_PlayableWithoutVision_No",
+                ),
+              },
+            ],
+            fnCalculateSelectedOption: () =>
+              _.bAccessibilityPlayableWithoutVision
+                ? "yes"
+                : !1 === _.bAccessibilityPlayableWithoutVision
+                  ? "no"
+                  : void 0,
+            fnSetValues: (_) => {
+              "yes" === _ && _("bAccessibilityPlayableWithoutVision", !0),
+                "no" === _ && _("bAccessibilityPlayableWithoutVision", !1);
             },
           }),
         );
@@ -17711,6 +17793,15 @@
           }),
           _.createElement(_, {
             name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_ContrastControls",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_ContrastControls_Desc",
+            ),
+            _: "bAccessibilityContrastControls",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_CameraComfort",
             ),
             description: (0, _._)(
@@ -17826,29 +17917,43 @@
             labelId: _,
             options: [
               {
-                _: "yes",
-                name: (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_Yes",
-                ),
-              },
-              {
                 _: "no",
                 name: (0, _._)(
                   "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_No",
                 ),
               },
+              {
+                _: "playable_without_quick_time_events",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_NoQTE",
+                ),
+              },
+              {
+                _: "playable_at_your_own_pace",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_NoTimedInput",
+                ),
+              },
             ],
             fnCalculateSelectedOption: () =>
-              _.bAccessibilityPlayableWithoutQuicktimeEvents
-                ? "yes"
-                : !1 === _.bAccessibilityPlayableWithoutQuicktimeEvents
-                  ? "no"
-                  : void 0,
+              _.bAccessibilityPlayableAtYourOwnPace
+                ? "playable_at_your_own_pace"
+                : _.bAccessibilityPlayableWithoutQuicktimeEvents
+                  ? "playable_without_quick_time_events"
+                  : !1 === _.bAccessibilityPlayableAtYourOwnPace &&
+                      !1 === _.bAccessibilityPlayableWithoutQuicktimeEvents
+                    ? "no"
+                    : void 0,
             fnSetValues: (_) => {
-              "yes" === _ &&
-                _("bAccessibilityPlayableWithoutQuicktimeEvents", !0),
+              "playable_at_your_own_pace" === _ &&
+                (_("bAccessibilityPlayableAtYourOwnPace", !0),
+                _("bAccessibilityPlayableWithoutQuicktimeEvents", !0)),
+                "playable_without_quick_time_events" === _ &&
+                  (_("bAccessibilityPlayableAtYourOwnPace", !1),
+                  _("bAccessibilityPlayableWithoutQuicktimeEvents", !0)),
                 "no" === _ &&
-                  _("bAccessibilityPlayableWithoutQuicktimeEvents", !1);
+                  (_("bAccessibilityPlayableAtYourOwnPace", !1),
+                  _("bAccessibilityPlayableWithoutQuicktimeEvents", !1));
             },
           }),
         );
@@ -18012,10 +18117,6 @@
                 ),
                 _: "bAccessibilitySubtitles",
               }),
-            ),
-            _.createElement(
-              _._,
-              null,
               _.createElement(_, {
                 name: (0, _._)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_ColorAlternatives",
@@ -18027,12 +18128,34 @@
               }),
               _.createElement(_, {
                 name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_ContrastControls",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_ContrastControls_Desc",
+                ),
+                _: "bAccessibilityContrastControls",
+              }),
+            ),
+            _.createElement(
+              _._,
+              null,
+              _.createElement(_, {
+                name: (0, _._)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_CameraComfort",
                 ),
                 description: (0, _._)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_CameraComfort_Desc",
                 ),
                 _: "bAccessibilityCameraComfort",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_PlayableWithoutVision",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_PlayableWithoutVision_Desc",
+                ),
+                _: "bAccessibilityPlayableWithoutVision",
               }),
               _.createElement(_, {
                 name: (0, _._)(
@@ -18072,6 +18195,15 @@
               }),
               _.createElement(_, {
                 name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_PlayableAtYourOwnPace",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_PlayableAtYourOwnPace_Desc",
+                ),
+                _: "bAccessibilityPlayableAtYourOwnPace",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_TextToSpeech",
                 ),
                 description: (0, _._)(
@@ -18092,6 +18224,10 @@
           ),
         );
       }
+      const _ = {
+          2: [_, _, _],
+        },
+        _ = 2;
       const _ = _.createContext(void 0);
       function _() {
         return _.useContext(_);
@@ -18119,22 +18255,30 @@
             close: _,
             features: __webpack_require__,
             editMode: _,
+            changedMode: _,
             isMultiplayer: _,
+            nLastVersionCompleted: _,
           } = _,
           [_, _] = (0, _.useState)(0),
-          _ = (function (_, _) {
-            return (0, _.useMemo)(
-              () =>
-                _
-                  ? [_]
-                  : [_, _, _, _, _, _, _, _ ? _ : void 0, _].filter((_) => !!_),
-              [_, _],
-            );
+          _ = (function (_, _, _, _) {
+            return (0, _.useMemo)(() => {
+              if (_) return [_];
+              if (!_)
+                return [_, _, _, _, _, _, _, _, _ ? _ : void 0, _].filter(
+                  (_) => !!_,
+                );
+              const _ = new Set();
+              for (let _ = _ + 1; _ <= _; _++)
+                if (_ in _) for (const _ of _[_]) _.add(_);
+              return [..._, _];
+            }, [_, _, _, _]);
           })(
             _,
             _ ||
               __webpack_require__.bAccessibilityChatSpeechtoText ||
               __webpack_require__.bAccessibilityChatTexttoSpeech,
+            _,
+            _,
           ),
           [_, _] = _.useState(__webpack_require__);
         let _ = () => _((_) => _ - 1);
@@ -18160,9 +18304,17 @@
                 _(77, _.bAccessibilityTouchOnlyOption),
                 _(78, _.bAccessibilityDifficultyLevels),
                 _(79, _.bAccessibilitySaveAnytime),
+                _(80, _.bAccessibilityPlayableAtYourOwnPace),
+                _(81, _.bAccessibilityPlayableWithoutVision),
+                _(82, _.bAccessibilityContrastControls),
                 document
                   .querySelector(
                     '[name="app[content][accessibilitywizard][v1]"]',
+                  )
+                  ?.setAttribute("value", "true"),
+                document
+                  .querySelector(
+                    '[name="app[content][accessibilitywizard][v2]"]',
                   )
                   ?.setAttribute("value", "true");
               const _ = document.getElementById("submitBtn");
@@ -18327,7 +18479,7 @@
         const _ = document.querySelector(
           `[name="app[classification][category][category_${_}]"]`,
         );
-        if (_) {
+        if (((0, _._)(_, "Missing category input for", _), _)) {
           __webpack_require__.setAttribute("value", _ ? "true" : "");
         }
       }
@@ -18337,6 +18489,7 @@
         const {
             isMultiplayer: _,
             bWizardCompleted: __webpack_require__,
+            nLastVersionCompleted: _,
             ..._
           } = _,
           _ = Object.entries(_).some(
@@ -18349,12 +18502,15 @@
           0 !== _ &&
             _.createElement(_, {
               editMode: 2 === _,
+              changedMode: 3 === _,
               close: () => _(0),
               features: _,
               isMultiplayer: _,
+              nLastVersionCompleted: _,
             }),
           _.createElement(_, {
             bWizardCompleted: __webpack_require__,
+            nLastVersionCompleted: _,
             bHasAnyAccessibilityFeatures: _,
             setModalState: _,
             features: _,
@@ -18365,6 +18521,7 @@
         const {
           bHasAnyAccessibilityFeatures: _,
           bWizardCompleted: __webpack_require__,
+          nLastVersionCompleted: _,
           setModalState: _,
           features: _,
         } = _;
@@ -18373,7 +18530,9 @@
               bHasAnyAccessibilityFeatures: _,
               onEdit: () => _(2),
               onStart: () => _(1),
+              onChanged: () => _(3),
               features: _,
+              nLastVersionCompleted: _,
             })
           : _.createElement(_, {
               onStart: () => _(1),
@@ -18438,6 +18597,60 @@
               ),
             ),
           ),
+          _ > _.nLastVersionCompleted &&
+            _.createElement(
+              "div",
+              {
+                className: _().Updates,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().NewBugContainer,
+                },
+                _.createElement(
+                  "span",
+                  {
+                    className: _().New,
+                  },
+                  (0, _._)("#Callout_NEW"),
+                ),
+              ),
+              _.createElement(
+                "div",
+                null,
+                _.createElement(
+                  "p",
+                  null,
+                  (0, _._)(
+                    "#App_Landing_AccessibilityFeatures_WizardPrompt_Update_Desc",
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().UpdateButtonContainer,
+                  },
+                  _.createElement(
+                    _._,
+                    {
+                      className: _().UpdatesWizardButton,
+                      onClick: _.onChanged,
+                    },
+                    (0, _._)(
+                      "#App_Landing_AccessibilityFeatures_WizardPrompt_UpdateButton",
+                    ),
+                  ),
+                  _.createElement(
+                    "span",
+                    null,
+                    (0, _._)(
+                      "#App_Landing_AccessibilityFeatures_WizardPrompt_UpdateButton_Desc",
+                    ),
+                  ),
+                ),
+              ),
+            ),
         );
       }
       function _(_) {

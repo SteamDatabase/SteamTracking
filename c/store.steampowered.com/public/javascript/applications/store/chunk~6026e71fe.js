@@ -9800,7 +9800,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9815,6 +9814,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9840,6 +9841,7 @@
             bUseSubscriptionLayout: _,
             bPreferAssetWithoutOverride: _,
           } = _,
+          _ = (0, _._)(_),
           [_, _] = _.useState(!1),
           _ = () => _(!_),
           _ = (0, _._)(),
@@ -9851,11 +9853,9 @@
           });
         const _ = (0, _._)(_),
           _ =
-            ((0, _._)(_.GetStorePageURL(_)),
-            _.GetName()?.length > 0 && _.GetName(),
             _ && _.HasDemoStandaloneStorePage()
               ? _.GetDemoStandaloneStorePageAppIDs()[0]
-              : _),
+              : _,
           _ = 0 == _.GetStoreItemType();
         return _.createElement(
           "div",
@@ -9897,7 +9897,7 @@
                       appids: _,
                     }),
                     _.createElement(_._, {
-                      info: _,
+                      _: _,
                       imageType: "library",
                       bPreferAssetWithoutOverride: _,
                     }),
@@ -9912,14 +9912,15 @@
                 {
                   className: _().StoreSaleWidgetCrossCenterRight,
                 },
-                _.createElement(_._, {
-                  appID: _ && _.GetAppID(),
-                  classOverride: (0, _._)(
-                    _().WishlistButtonNotTop,
-                    "WishlistButton",
-                  ),
-                  snr: _,
-                }),
+                _ &&
+                  _.createElement(_._, {
+                    _: _,
+                    classOverride: (0, _._)(
+                      _().WishlistButtonNotTop,
+                      "WishlistButton",
+                    ),
+                    snr: _,
+                  }),
                 _.createElement(
                   "div",
                   {
@@ -9998,7 +9999,7 @@
                       className: _().StoreSaleLibraryAssetWidgetRight,
                     },
                     _.createElement(_._, {
-                      info: _,
+                      _: _,
                       bPopOutTrailerPlayback: !0,
                     }),
                   ),
@@ -10026,10 +10027,10 @@
                         _.Fragment,
                         null,
                         _.createElement(_._, {
-                          item: _,
+                          _: _,
                         }),
                         _.createElement(_._, {
-                          info: _,
+                          _: _,
                           bShowDemoButton: _,
                           bHidePrice: _,
                           bShowPurchaseOptionsButton: _,
@@ -10044,7 +10045,7 @@
                     className: _().StoreSaleWidgetBgTint,
                   },
                   _.createElement(_._, {
-                    info: _,
+                    _: _,
                     bPreferAssetWithoutOverride: _,
                   }),
                   _.createElement(_._, {
@@ -10054,7 +10055,7 @@
               ),
             ),
             _.createElement(_._, {
-              storeItem: _,
+              _: _,
               bPurchaseOptionsExpanded: _,
               fnCollapseOptions: _,
               bPreferAssetWithoutOverride: _,
@@ -10065,22 +10066,24 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { displayStoreItem: _, displayInfo: __webpack_require__ } = (0,
-          _._)(_),
+        const { displayID: _ } = (0, _._)(_),
           {
-            bShowDemoButton: _,
+            bShowDemoButton: __webpack_require__,
             bHidePrice: _,
             bHidePlatforms: _,
             bShowDeckCompatibilityDialog: _,
             bAutoFocus: _,
           } = _,
-          _ = 0 == _.GetStoreItemType();
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = 0 == _?.item_type;
         return _.createElement(
           _._,
           {
-            appid: _ ? _.GetAppID() : void 0,
+            appid: _ ? _._ : void 0,
           },
           _.createElement(
             _._,
@@ -10088,7 +10091,7 @@
               "flow-children": "grid",
               navEntryPreferPosition: _._.PREFERRED_CHILD,
               autoFocus: _,
-              navKey: "purchase_only_" + _.GetID(),
+              navKey: "purchase_only_" + _?._,
             },
             "\t",
             _.createElement(
@@ -10106,7 +10109,7 @@
                   {
                     className: _.Name,
                   },
-                  _.GetName(),
+                  _?.name,
                 ),
               ),
               _.createElement(
@@ -10114,27 +10117,25 @@
                 {
                   className: _.PurchaseAndPlatformCtn,
                 },
-                Boolean(!_ && 10 != _.GetAppType()) &&
+                Boolean(!_ && 10 != _?.type) &&
                   _.createElement(
                     "div",
                     {
                       className: _._,
                     },
                     _.createElement(_._, {
-                      item: __webpack_require__,
+                      _: _,
                     }),
-                    Boolean(
-                      _ && 0 == _?.GetStoreItemType() && _.GetPlatforms(),
-                    ) &&
+                    Boolean(_ && 0 == _?.item_type && _) &&
                       _.createElement(_._, {
                         className: _.DeckCompatIcon,
-                        category: _.GetPlatforms().steam_deck_compat_category,
+                        category: _?.steam_deck_compat_category,
                       }),
                   ),
                 _.createElement(_._, {
-                  info: __webpack_require__,
+                  _: _,
                   className: _.PurchaseOnlyActionCtn,
-                  bShowDemoButton: _,
+                  bShowDemoButton: __webpack_require__,
                   bShowCartButton: !0,
                   bHidePrice: _,
                   bHideWishlistButton: !0,
@@ -13957,6 +13958,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -15768,6 +15770,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("TrailerAppVideo"),
         _ = "trailercarousel",
@@ -16255,11 +16258,13 @@
           [_] = (0, _._)(_, _._),
           [_] = (0, _._)(_.GetParentAppID(), _._),
           _ = _(_, __webpack_require__),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = _.GetAssets().GetMainCapsuleURL() ?? _.GetAssets().GetHeaderURL(),
           _ = _.GetAssets().GetLibraryCapsuleURL(),
           _ = (_ ?? _)?.GetFormattedSteamReleaseDate(),
           _ =
-            1 != _.GetAppType() || _?.HasDemoStandaloneStorePage()
+            1 != _?.type || _?.HasDemoStandaloneStorePage()
               ? {
                   _: _,
                   type: (0, _._)(_.GetAppType()),
@@ -16294,7 +16299,7 @@
             !_ &&
               _.createElement(_._, {
                 classOverride: (0, _._)(_().AppCapsuleWishListBtn),
-                appID: _,
+                _: _,
                 snr: _,
               }),
           ),
@@ -16310,7 +16315,7 @@
                   href: _,
                   className: (0, _._)(_().AppName),
                 },
-                _.GetName(),
+                _?.name || "",
               ),
             !_ &&
               _.createElement(_, {
@@ -16375,12 +16380,9 @@
                 !_ &&
                   _ &&
                   !_ &&
-                  (_.BHasDemo() || 1 == _.GetAppType()) &&
+                  (_.BHasDemo() || 1 == _?.type) &&
                   _.createElement(_._, {
-                    info: {
-                      _: _.GetAppID(),
-                      type: (0, _._)(_.GetStoreItemType(), _.GetAppType()),
-                    },
+                    _: _,
                     className: (0, _._)(_().QueueButton, _().Demo),
                   }),
                 _.createElement(
@@ -16391,10 +16393,7 @@
                   !_ &&
                     _.createElement(_._, {
                       bSingleLineMode: !1,
-                      info: {
-                        _: _,
-                        type: (0, _._)(_.GetAppType()),
-                      },
+                      _: _,
                       bHideReleaseDate: !0,
                       bHideIfDemo: !0,
                     }),
@@ -16402,7 +16401,7 @@
                 !_ &&
                   _.createElement(_._, {
                     classOverride: (0, _._)(_().AppCapsuleWishListBtnMobile),
-                    appID: _,
+                    _: _,
                     snr: _,
                   }),
               ),
@@ -16829,6 +16828,7 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid");
       const _ = _.Fragment;
       function _(_) {
         const { section: _, language: __webpack_require__, event: _ } = _,
@@ -16852,7 +16852,8 @@
           _ = (0, _._)(),
           _ = (0, _._)(
             () => _.internal_section_data?.reservation_appid_wishlist,
-          );
+          ),
+          _ = (0, _._)(_);
         return 0 == _.length
           ? null
           : _.createElement(
@@ -16893,7 +16894,7 @@
                   Boolean(_) &&
                     _.createElement(_._, {
                       snr: _,
-                      appID: _,
+                      _: _,
                       classOverride: (0, _._)(
                         _().WishlistButtonNotTop,
                         "WishlistButton",
@@ -22529,7 +22530,10 @@
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         let _ = Math.floor(Date.now() / 1e3);
         const _ = _.GetCalendarEndTime();
@@ -23150,16 +23154,24 @@
           }),
         );
       }
-      const _ = (_) => {
+      function _(_) {
+        const { eventGID: _ } = _;
+        return _ && _._.BHasClanEventModel(_)
+          ? _.createElement(_, {
+              ..._,
+            })
+          : null;
+      }
+      function _(_) {
         const {
-          eventGID: _,
-          bShowDemoButton: __webpack_require__,
-          bPreferDemoStorePage: _,
-        } = _;
-        if (!_ || !_._.BHasClanEventModel(_)) return null;
-        const _ = _._.GetClanEventModel(_),
+            eventGID: _,
+            bShowDemoButton: __webpack_require__,
+            bPreferDemoStorePage: _,
+          } = _,
+          _ = _._.GetClanEventModel(_),
           _ = _(_),
-          _ = _ && _._.Get().GetApp(_),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(_._.LANGUAGE),
           _ = _._.ParseEventModelPresenters(_, _),
           _ = (function (_, _) {
@@ -23189,17 +23201,18 @@
                   "SaleSchedDetailCtn",
                 ),
               },
-              Boolean(_)
+              _ && _
                 ? _.createElement(
                     _.Fragment,
                     null,
                     _.createElement(_, {
-                      storeItem: _,
+                      _: _,
+                      storeItemDefaultData: _,
                       bShowDemoButton: __webpack_require__,
                       bPreferDemoStorePage: _,
                     }),
                     _.createElement(_, {
-                      storeItem: _,
+                      _: _,
                     }),
                   )
                 : _.createElement(_, {
@@ -23210,7 +23223,7 @@
                 broadcastEmbedContext: _.broadcastEmbedContext,
               }),
             );
-      };
+      }
       function _(_) {
         const { event: _ } = _;
         let _ = (0, _._)(_._.LANGUAGE);
@@ -23225,92 +23238,92 @@
       }
       function _(_) {
         const {
-          storeItem: _,
-          bShowDemoButton: __webpack_require__,
-          bPreferDemoStorePage: _,
-        } = _;
-        if (!_) return null;
-        const _ = {
-          _: _.GetID(),
-          type: (0, _._)(_.GetStoreItemType(), _.GetAppType()),
-        };
-        return _.createElement(
-          "div",
-          {
-            className: _().SaleAppWideCtn,
-          },
-          _.createElement(
-            _._,
-            {
-              item: _,
-              className: _().SaleAppCapsule,
-              bPreferDemoStorePage: _,
-            },
-            _.createElement("img", {
-              className: _().WideHeader,
-              src: _?.GetAssets().GetMainCapsuleURL(),
-              alt: _?.GetName(),
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().WideDetailCtn,
-            },
-            _.createElement(
+            _: _,
+            storeItemDefaultData: __webpack_require__,
+            bShowDemoButton: _,
+            bPreferDemoStorePage: _,
+          } = _,
+          { bIsOwned: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(_);
+        return _ && _
+          ? _.createElement(
               "div",
               {
-                className: _().AppTitle,
+                className: _().SaleAppWideCtn,
               },
-              _?.GetName(),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().ReleaseDate,
-              },
-              _?.GetFormattedSteamReleaseDate(),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().GameButtons,
-            },
-            Boolean(_._.Get().BOwnsApp(_?.GetAppID()))
-              ? _.createElement(
-                  _._,
-                  {
-                    disabled: !0,
-                  },
-                  (0, _._)("#Sale_InLibrary"),
-                )
-              : _.createElement(
+              _.createElement(
+                _._,
+                {
+                  item: _,
+                  className: _().SaleAppCapsule,
+                  bPreferDemoStorePage: _,
+                },
+                _.createElement("img", {
+                  className: _().WideHeader,
+                  src: (0, _._)(_, "main_capsule"),
+                  alt: __webpack_require__.name || "",
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().WideDetailCtn,
+                },
+                _.createElement(
                   "div",
                   {
-                    className: _().GameButton,
+                    className: _().AppTitle,
                   },
-                  _.createElement(_._, {
-                    appid: _?.GetAppID(),
-                    bIsFree: _?.BIsFree(),
-                    bIsComingSoon: _?.BIsComingSoon(),
-                  }),
+                  __webpack_require__.name || "",
                 ),
-            Boolean(__webpack_require__) &&
-              _.createElement(_._, {
-                info: _,
-                className: _().DemoButton,
-              }),
-          ),
-        );
+                _.createElement(
+                  "div",
+                  {
+                    className: _().ReleaseDate,
+                  },
+                  (0, _._)(_),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().GameButtons,
+                },
+                _
+                  ? _.createElement(
+                      _._,
+                      {
+                        disabled: !0,
+                      },
+                      (0, _._)("#Sale_InLibrary"),
+                    )
+                  : _.createElement(
+                      "div",
+                      {
+                        className: _().GameButton,
+                      },
+                      _.createElement(_._, {
+                        appid: __webpack_require__.appid,
+                        bIsFree: Boolean(__webpack_require__.is_free),
+                        bIsComingSoon: Boolean(
+                          __webpack_require__.is_coming_soon,
+                        ),
+                      }),
+                    ),
+                Boolean(_) &&
+                  _.createElement(_._, {
+                    _: _,
+                    className: _().DemoButton,
+                  }),
+              ),
+            )
+          : null;
       }
       function _(_) {
-        const { storeItem: _ } = _,
-          _ = _?.GetTagIDs() || [],
-          _ = {
-            _: _?.GetID(),
-            type: (0, _._)(_?.GetStoreItemType(), _?.GetAppType()),
-          };
+        const { _: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_);
         return _.createElement(
           "div",
           {
@@ -23321,30 +23334,27 @@
             {
               className: _().StoreSaleWidgetTags,
             },
-            __webpack_require__.map((_) =>
+            __webpack_require__?.map((_) =>
               _.createElement(
                 "div",
                 {
-                  key: _,
+                  key: _.tagid,
                   className: _().AppTag,
                 },
                 _.createElement(_._, {
-                  tagid: _,
+                  tagid: _.tagid,
                 }),
               ),
             ),
           ),
           _.createElement(_._, {
-            item: _,
+            _: _,
           }),
         );
       }
       function _(_) {
-        const { storeItem: _ } = _,
-          _ = {
-            _: _?.GetID(),
-            type: (0, _._)(_?.GetStoreItemType(), _?.GetAppType()),
-          };
+        const { _: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_);
         return _.createElement(
           "div",
           {
@@ -23356,12 +23366,17 @@
               className: _().StatementCtn,
             },
             _.createElement(_, {
-              storeItem: _,
+              _: _,
             }),
-            _.createElement("div", null, _?.GetShortDescription()),
+            __webpack_require__ &&
+              _.createElement(
+                "div",
+                null,
+                __webpack_require__.short_description,
+              ),
           ),
           _.createElement(_._, {
-            info: _,
+            _: _,
             bPopOutTrailerPlayback: !0,
           }),
         );
@@ -26662,33 +26677,43 @@
                 fnResizeObserver: _,
               });
       }
-      const _ = {
-        include_trailers: !0,
-        include_assets: !0,
-      };
       function _(_) {
         const {
             trailer_display: _,
             trailer_appid: __webpack_require__,
             trailer_base_id: _,
           } = _,
-          [_, _] = (0, _._)(__webpack_require__, _),
+          _ = (0, _.useMemo)(
+            () =>
+              __webpack_require__
+                ? {
+                    appid: __webpack_require__,
+                  }
+                : void 0,
+            [__webpack_require__],
+          ),
+          { data: _ } = (0, _._)(_),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useMemo)(() => {
             let _ = {},
               _ = {};
-            const _ = _?.GetAllTrailers()?.GetTrailerByID(_ || 0);
+            const _ = [
+              ...(_?.highlights || []),
+              ...(_?.other_trailers || []),
+            ].find((_) => _ && _.trailer_base_id == _);
             return (
               _ &&
-                ((_.image = __webpack_require__.GetScreenshot()),
-                (_.video_mp4_src =
-                  __webpack_require__.GetMicroTrailer()?.strMP4URL),
-                (_.video_webm_src =
-                  __webpack_require__.GetMicroTrailer()?.strWebMURL)),
+                ((_.image = _.screenshot_full),
+                (_.video_mp4_src = _.microtrailer?.find(
+                  (_) => "video/mp4" == _.type,
+                )?.filename),
+                (_.video_webm_src = _.microtrailer?.find(
+                  (_) => "video/webm" == _.type,
+                )?.filename)),
               [_, _]
             );
           }, [_, _]);
-        return _ && 3 == _
+        return _
           ? _.createElement(
               _.Fragment,
               null,
@@ -26705,7 +26730,7 @@
                   onClick: () => _(!0),
                 }),
               _.createElement(_._, {
-                storeItem: _,
+                _: _,
                 bShowModal: _,
                 hideModal: () => _(!1),
               }),

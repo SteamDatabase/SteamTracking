@@ -854,6 +854,10 @@ body.login .loginbox {
 	height: 48px;
 }
 
+.login_featuretarget_ctn {
+	min-height: 654px;
+}
+
 .login_bottom_row {
 	display: flex;
 	flex-direction: row;

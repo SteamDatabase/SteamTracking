@@ -31812,6 +31812,7 @@ Error generating stack: ` +
   });
   var _ = _(() => {
     "use strict";
+    _();
   });
   var _ = _(() => {
     "use strict";
@@ -39857,22 +39858,37 @@ Error generating stack: ` +
       _ = class {
         m_schTimer;
         m_fnCallback;
+        m_fnOnCancel;
         Schedule(_, _) {
           this.IsScheduled() && this.Cancel(),
             (this.m_fnCallback = _),
             (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _));
         }
+        AsyncSchedule(_, _) {
+          return new Promise((_, _) => {
+            this.Schedule(_, () => {
+              _(), _();
+            }),
+              (this.m_fnOnCancel = _);
+          });
+        }
         IsScheduled() {
           return this.m_schTimer !== void 0;
         }
         Cancel() {
-          this.m_schTimer &&
-            (clearTimeout(this.m_schTimer), (this.m_schTimer = void 0));
+          if (this.m_schTimer) {
+            let _ = this.m_fnOnCancel;
+            clearTimeout(this.m_schTimer), this.Reset(), _ && _();
+          }
+        }
+        Reset() {
+          (this.m_schTimer = void 0),
+            (this.m_fnCallback = void 0),
+            (this.m_fnOnCancel = void 0);
         }
         ScheduledInternal() {
-          this.m_schTimer = void 0;
           let _ = this.m_fnCallback;
-          (this.m_fnCallback = void 0), _?.();
+          this.Reset(), _?.();
         }
       };
       _([_], _.prototype, "ScheduledInternal", 1);
@@ -44644,11 +44660,8 @@ Error generating stack: ` +
     (0, _.useEffect)(() => {
       window.history.scrollRestoration = "manual";
       async function _(_) {
-        if (
-          (_?.abort(),
-          (_ = new AbortController()),
-          _(history.state) && history.state.loaderData)
-        )
+        if ((_?.abort(), (_ = new AbortController()), !_.state)) return;
+        if (_(history.state) && history.state.loaderData)
           try {
             await _(history.state), (_ = void 0);
             return;

@@ -4095,7 +4095,6 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4107,7 +4106,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       const _ = {
         include_assets: !0,
         include_trailers: !0,
@@ -4239,11 +4241,9 @@
         );
       }
       function _(_) {
-        const _ = (0, _._)(() => _._.Get().BIsGameWishlisted(_)),
+        const _ = Boolean((0, _._)(_)),
           _ = (0, _._)(),
-          _ = _.useCallback(() => {
-            _._.Get().UpdateGameWishlist(_, !_, _);
-          }, [_, _, _]);
+          { mutate: _ } = (0, _._)(_, !_, _);
         return {
           bIsWishlisted: _,
           fnUpdateWishlist: _,

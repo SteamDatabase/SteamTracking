@@ -1685,16 +1685,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1702,6 +1692,19 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = "capsule_index_";
       function _(_) {
@@ -1855,7 +1858,7 @@
           _ = (0, _._)(_),
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = (0, _.useMemo)(() => _?.GetIncludedAppIDsOrSelf(), [_]);
+          _ = (0, _._)(_);
         if (!_) return null;
         const _ = (0, _._)(
           (0, _._)(`${_.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
@@ -1898,7 +1901,7 @@
               "none" != _ &&
                 _.createElement(_._, {
                   imageType: _,
-                  info: _,
+                  _: _,
                   bPreferAssetWithoutOverride: _,
                 }),
               _.createElement(_._, {
@@ -1906,7 +1909,7 @@
               }),
               Boolean(_) &&
                 _.createElement(_._, {
-                  appInfo: _,
+                  _: _,
                   bIsHoverMode: !0,
                 }),
             ),
@@ -1960,20 +1963,18 @@
             onlyOneDiscountPct: _,
             strDoubleCapsuleMessage: _,
           } = _,
-          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          _ =
-            _ &&
-            _?.GetIncludedAppIDsOrSelf().length > 0 &&
-            _?.GetIncludedAppIDsOrSelf().every((_) => _._.Get().BOwnsApp(_)),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { bIsOwned: _ } = (0, _._)(_),
           _ = _ && !_;
-        if (_ && 0 == _?.GetStoreItemType())
+        if (_ && _ && 0 == _.item_type && _.appid)
           return _.createElement(_._, {
-            appid: _.GetAppID(),
+            appid: _.appid,
             bIsMuted: _,
           });
         if (_) return null;
-        const _ = _ && __webpack_require__,
-          _ = _;
+        const _ = Boolean(_ && __webpack_require__),
+          _ = Boolean(_);
         return _.createElement(_._, {
           info: _,
           bShowAsMuted: _,

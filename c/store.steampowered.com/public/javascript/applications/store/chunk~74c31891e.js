@@ -451,10 +451,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { appid: _, color: __webpack_require__, bgcolor: _ } = _,
           _ = (0, _._)(),
+          _ = (0, _._)(_),
           _ = (0, _._)(_);
         return _.createElement(
           "div",
@@ -463,7 +465,7 @@
           },
           _.createElement(_._, {
             snr: _,
-            appID: _,
+            _: _,
             classOverride: (0, _._)(
               _().WishlistButtonNotTop,
               _().BBCodeWishlistButton,

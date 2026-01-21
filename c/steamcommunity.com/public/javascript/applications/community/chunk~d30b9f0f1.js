@@ -1168,26 +1168,65 @@
                 sale_sections: [
                   {
                     ..._(),
+                    section_type: "trailercarousel",
+                    smart_section: !0,
+                    smart_section_type: "popularpurchased",
+                    default_label: "#Sale_default_label_62",
+                    disable_background: !0,
+                    show_as_carousel: !1,
+                  },
+                  {
+                    ..._(),
                     section_type: "items",
                     smart_section: !0,
                     smart_section_type: "wishlist",
+                    background_gradient_top: "rgba(6, 0, 0, 0.25)",
+                    background_gradient_bottom: "rgba(0, 0, 0, 1)",
                   },
                   {
                     ..._(),
                     section_type: "items",
                     smart_section: !0,
                     smart_section_type: "tag_recommender",
-                  },
-                  {
-                    ..._(),
-                    default_label: "#Sale_default_label_62",
-                    section_type: "items",
-                    smart_section: !0,
-                    smart_section_type: "popularpurchased",
+                    disable_background: !0,
                   },
                   {
                     ..._(),
                     section_type: "creator_list_of_lists",
+                    capsules_per_row_array: [4],
+                    carousel_rows: 1,
+                    disable_background: !0,
+                  },
+                  {
+                    ..._(),
+                    section_type: "items",
+                    smart_section: !0,
+                    smart_section_type: "popularpurchaseddiscounted",
+                    default_label: "#Sale_default_label_150",
+                    capsules_per_row_array: [4],
+                    background_gradient_top: "rgba(182, 180, 126, 1)",
+                    background_gradient_bottom: "rgba(182, 180, 126, 0.27)",
+                  },
+                  {
+                    ..._(),
+                    section_type: "items",
+                    smart_section: !0,
+                    smart_section_type: "all_released",
+                    default_label: "#Sale_default_label_24",
+                    capsules_per_row_array: [1],
+                    carousel_rows: 1,
+                    single_item_style: "library",
+                    disable_background: !0,
+                  },
+                  {
+                    ..._(),
+                    section_type: "items",
+                    smart_section: !0,
+                    smart_section_type: "all_upcoming",
+                    default_label: "#Sale_default_label_183",
+                    capsules_per_row_array: [4],
+                    carousel_rows: 1,
+                    disable_background: !0,
                   },
                 ],
               };
@@ -21077,7 +21116,8 @@
           ]),
           _ = _
             ? _._.GenerateURLFromHashAndExt(_.GetClanAccountID(), _)
-            : void 0;
+            : void 0,
+          _ = 36 == _.GetEventType();
         return _.createElement(
           "div",
           {
@@ -21109,13 +21149,14 @@
                 ? (0, _._)("#selectimage_managing_n_existing_title", _)
                 : (0, _._)("#selectimage_uploading_title"),
             ),
-            _.createElement(
-              _._,
-              {
-                onClick: _,
-              },
-              (0, _._)(_ ? "#Sale_EditLinkURL" : "#Sale_AddLinkURL"),
-            ),
+            !_ &&
+              _.createElement(
+                _._,
+                {
+                  onClick: _,
+                },
+                (0, _._)(_ ? "#Sale_EditLinkURL" : "#Sale_AddLinkURL"),
+              ),
             _.createElement(
               _._,
               {
@@ -25494,10 +25535,16 @@
         );
       }
       function _(_) {
-        const { saleSection: _, editModel: __webpack_require__ } = _;
+        const { saleSection: _, editModel: __webpack_require__ } = _,
+          _ =
+            !_.media_container ||
+            !_.media_container.media_rows ||
+            _.media_container.media_rows.length < 1 ||
+            !_.media_container.media_rows[0].media_columns ||
+            _.media_container.media_rows[0].media_columns.length < 1;
         return (
           (0, _.useEffect)(() => {
-            _.media_container ||
+            _ &&
               ((_.media_container = {
                 media_rows: [],
               }),
@@ -25509,12 +25556,12 @@
                 },
                 1,
               ));
-          }, [__webpack_require__, _]),
-          _.media_container
-            ? _.createElement(_, {
+          }, [_, __webpack_require__, _]),
+          _
+            ? _.createElement(_._, null)
+            : _.createElement(_, {
                 ..._,
               })
-            : _.createElement(_._, null)
         );
       }
       function _(_) {
@@ -41438,8 +41485,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -41457,7 +41505,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
-        var _, _, _, _;
+        var _, _, _;
         const {
             myInstance: _,
             setIsHovered: _,
@@ -41477,6 +41525,7 @@
             bUseSubscriptionLayout: _,
             bPreferAssetWithoutOverride: _,
           } = _,
+          _ = (0, _._)(_),
           [_, _] = _.useState(!1),
           _ = () => _(!_),
           _ = (0, _._)(),
@@ -41491,12 +41540,9 @@
           });
         const _ = (0, _._)(_),
           _ =
-            ((0, _._)(_.GetStorePageURL(_)),
-            (null === (_ = _.GetName()) || void 0 === _ ? void 0 : _.length) >
-              0 && _.GetName(),
             _ && _.HasDemoStandaloneStorePage()
               ? _.GetDemoStandaloneStorePageAppIDs()[0]
-              : _),
+              : _,
           _ = 0 == _.GetStoreItemType();
         return _.createElement(
           "div",
@@ -41538,7 +41584,7 @@
                       appids: _,
                     }),
                     _.createElement(_._, {
-                      info: _,
+                      _: _,
                       imageType: "library",
                       bPreferAssetWithoutOverride: _,
                     }),
@@ -41553,14 +41599,15 @@
                 {
                   className: _().StoreSaleWidgetCrossCenterRight,
                 },
-                _.createElement(_._, {
-                  appID: _ && _.GetAppID(),
-                  classOverride: (0, _._)(
-                    _().WishlistButtonNotTop,
-                    "WishlistButton",
-                  ),
-                  snr: _,
-                }),
+                _ &&
+                  _.createElement(_._, {
+                    _: _,
+                    classOverride: (0, _._)(
+                      _().WishlistButtonNotTop,
+                      "WishlistButton",
+                    ),
+                    snr: _,
+                  }),
                 _.createElement(
                   "div",
                   {
@@ -41649,7 +41696,7 @@
                       className: _().StoreSaleLibraryAssetWidgetRight,
                     },
                     _.createElement(_._, {
-                      info: _,
+                      _: _,
                       bPopOutTrailerPlayback: !0,
                     }),
                   ),
@@ -41677,10 +41724,10 @@
                         _.Fragment,
                         null,
                         _.createElement(_._, {
-                          item: _,
+                          _: _,
                         }),
                         _.createElement(_._, {
-                          info: _,
+                          _: _,
                           bShowDemoButton: _,
                           bHidePrice: _,
                           bShowPurchaseOptionsButton: _,
@@ -41695,7 +41742,7 @@
                     className: _().StoreSaleWidgetBgTint,
                   },
                   _.createElement(_._, {
-                    info: _,
+                    _: _,
                     bPreferAssetWithoutOverride: _,
                   }),
                   _.createElement(_._, {
@@ -41705,7 +41752,7 @@
               ),
             ),
             _.createElement(_._, {
-              storeItem: _,
+              _: _,
               bPurchaseOptionsExpanded: _,
               fnCollapseOptions: _,
               bPreferAssetWithoutOverride: _,
@@ -41716,22 +41763,24 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { displayStoreItem: _, displayInfo: __webpack_require__ } = (0,
-          _._)(_),
+        const { displayID: _ } = (0, _._)(_),
           {
-            bShowDemoButton: _,
+            bShowDemoButton: __webpack_require__,
             bHidePrice: _,
             bHidePlatforms: _,
             bShowDeckCompatibilityDialog: _,
             bAutoFocus: _,
           } = _,
-          _ = 0 == _.GetStoreItemType();
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = 0 == (null == _ ? void 0 : _.item_type);
         return _.createElement(
           _._,
           {
-            appid: _ ? _.GetAppID() : void 0,
+            appid: _ ? _._ : void 0,
           },
           _.createElement(
             _._,
@@ -41739,7 +41788,7 @@
               "flow-children": "grid",
               navEntryPreferPosition: _._.PREFERRED_CHILD,
               autoFocus: _,
-              navKey: "purchase_only_" + _.GetID(),
+              navKey: "purchase_only_" + (null == _ ? void 0 : _._),
             },
             "\t",
             _.createElement(
@@ -41757,7 +41806,7 @@
                   {
                     className: _.Name,
                   },
-                  _.GetName(),
+                  null == _ ? void 0 : _.name,
                 ),
               ),
               _.createElement(
@@ -41765,29 +41814,28 @@
                 {
                   className: _.PurchaseAndPlatformCtn,
                 },
-                Boolean(!_ && 10 != _.GetAppType()) &&
+                Boolean(!_ && 10 != (null == _ ? void 0 : _.type)) &&
                   _.createElement(
                     "div",
                     {
                       className: _._,
                     },
                     _.createElement(_._, {
-                      item: __webpack_require__,
+                      _: _,
                     }),
                     Boolean(
-                      _ &&
-                        0 == (null == _ ? void 0 : _.GetStoreItemType()) &&
-                        _.GetPlatforms(),
+                      _ && 0 == (null == _ ? void 0 : _.item_type) && _,
                     ) &&
                       _.createElement(_._, {
                         className: _.DeckCompatIcon,
-                        category: _.GetPlatforms().steam_deck_compat_category,
+                        category:
+                          null == _ ? void 0 : _.steam_deck_compat_category,
                       }),
                   ),
                 _.createElement(_._, {
-                  info: __webpack_require__,
+                  _: _,
                   className: _.PurchaseOnlyActionCtn,
-                  bShowDemoButton: _,
+                  bShowDemoButton: __webpack_require__,
                   bShowCartButton: !0,
                   bHidePrice: _,
                   bHideWishlistButton: !0,
@@ -42416,16 +42464,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -42433,6 +42471,19 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = "capsule_index_";
       function _(_) {
@@ -42590,10 +42641,7 @@
           _ = (0, _._)(_),
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = (0, _.useMemo)(
-            () => (null == _ ? void 0 : _.GetIncludedAppIDsOrSelf()),
-            [_],
-          );
+          _ = (0, _._)(_);
         if (!_) return null;
         const _ = (0, _._)(
           (0, _._)(`${_.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
@@ -42636,7 +42684,7 @@
               "none" != _ &&
                 _.createElement(_._, {
                   imageType: _,
-                  info: _,
+                  _: _,
                   bPreferAssetWithoutOverride: _,
                 }),
               _.createElement(_._, {
@@ -42644,7 +42692,7 @@
               }),
               Boolean(_) &&
                 _.createElement(_._, {
-                  appInfo: _,
+                  _: _,
                   bIsHoverMode: !0,
                 }),
             ),
@@ -42698,24 +42746,18 @@
             onlyOneDiscountPct: _,
             strDoubleCapsuleMessage: _,
           } = _,
-          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          _ =
-            _ &&
-            (null == _ ? void 0 : _.GetIncludedAppIDsOrSelf().length) > 0 &&
-            (null == _
-              ? void 0
-              : _.GetIncludedAppIDsOrSelf().every((_) =>
-                  _._.Get().BOwnsApp(_),
-                )),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { bIsOwned: _ } = (0, _._)(_),
           _ = _ && !_;
-        if (_ && 0 == (null == _ ? void 0 : _.GetStoreItemType()))
+        if (_ && _ && 0 == _.item_type && _.appid)
           return _.createElement(_._, {
-            appid: _.GetAppID(),
+            appid: _.appid,
             bIsMuted: _,
           });
         if (_) return null;
-        const _ = _ && __webpack_require__,
-          _ = _;
+        const _ = Boolean(_ && __webpack_require__),
+          _ = Boolean(_);
         return _.createElement(_._, {
           info: _,
           bShowAsMuted: _,

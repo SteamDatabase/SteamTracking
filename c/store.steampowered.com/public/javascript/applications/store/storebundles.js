@@ -63,6 +63,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -320,10 +321,11 @@
       }
       function _(_) {
         const {
-          storeItem: _,
-          eBundleSort: __webpack_require__,
-          fnSetSort: _,
-        } = _;
+            storeItem: _,
+            eBundleSort: __webpack_require__,
+            fnSetSort: _,
+          } = _,
+          _ = (0, _._)(_);
         return _.createElement(
           "div",
           {
@@ -360,7 +362,7 @@
               _.GetName(),
             ),
             _.createElement(_._, {
-              storeItem: _,
+              _: _,
             }),
           ),
           _.createElement(

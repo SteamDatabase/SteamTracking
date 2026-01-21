@@ -3674,16 +3674,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3691,6 +3681,19 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = "capsule_index_";
       function _(_) {
@@ -3844,7 +3847,7 @@
           _ = (0, _._)(_),
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = (0, _.useMemo)(() => _?.GetIncludedAppIDsOrSelf(), [_]);
+          _ = (0, _._)(_);
         if (!_) return null;
         const _ = (0, _._)(
           (0, _._)(`${_.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
@@ -3887,7 +3890,7 @@
               "none" != _ &&
                 _.createElement(_._, {
                   imageType: _,
-                  info: _,
+                  _: _,
                   bPreferAssetWithoutOverride: _,
                 }),
               _.createElement(_._, {
@@ -3895,7 +3898,7 @@
               }),
               Boolean(_) &&
                 _.createElement(_._, {
-                  appInfo: _,
+                  _: _,
                   bIsHoverMode: !0,
                 }),
             ),
@@ -3949,20 +3952,18 @@
             onlyOneDiscountPct: _,
             strDoubleCapsuleMessage: _,
           } = _,
-          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          _ =
-            _ &&
-            _?.GetIncludedAppIDsOrSelf().length > 0 &&
-            _?.GetIncludedAppIDsOrSelf().every((_) => _._.Get().BOwnsApp(_)),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { bIsOwned: _ } = (0, _._)(_),
           _ = _ && !_;
-        if (_ && 0 == _?.GetStoreItemType())
+        if (_ && _ && 0 == _.item_type && _.appid)
           return _.createElement(_._, {
-            appid: _.GetAppID(),
+            appid: _.appid,
             bIsMuted: _,
           });
         if (_) return null;
-        const _ = _ && __webpack_require__,
-          _ = _;
+        const _ = Boolean(_ && __webpack_require__),
+          _ = Boolean(_);
         return _.createElement(_._, {
           info: _,
           bShowAsMuted: _,
@@ -4311,6 +4312,35 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        (0, _._)();
+        const _ = _._.accountid;
+        return (0, _._)(
+          (function (_, _) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                if (!_) return new Set();
+                const _ = await (async function (_, _) {
+                  const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
+                    _ = await fetch(_);
+                  return (await _.json()).rgFollowedApps || [];
+                })(0, _);
+                return new Set(_);
+              },
+              staleTime: 6e5,
+            };
+          })(0, _),
+        );
+      }
+      function _(_) {
+        return ["AccountFollowApps", _ ?? 0];
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4424,19 +4454,22 @@
             bPreview: __webpack_require__,
             bPreferAssetWithoutOverride: _,
           } = _,
-          _ = (0, _.useMemo)(
-            () => ({
-              _: _.GetID(),
-              type: "game",
-            }),
-            [_],
-          ),
-          _ = (0, _._)(),
-          {
-            bOwnsApp: _,
-            bWishlistApp: _,
-            bFollowsApp: _,
-          } = (0, _._)(_.GetAppID()),
+          _ =
+            ((0, _.useMemo)(
+              () => ({
+                _: _.GetID(),
+                type: "game",
+              }),
+              [_],
+            ),
+            (0, _._)()),
+          _ = (0, _._)(_),
+          { bIsOwned: _ } = (0, _._)(_),
+          _ = (0, _._)(_.GetAppID()),
+          _ = (function (_) {
+            const { data: _ } = _();
+            return void 0 === _ || null == _ ? void 0 : _.has(_);
+          })(_.GetAppID()),
           _ = (0, _._)(_.GetAppID()),
           _ = (0, _.useMemo)(() => {
             if (
@@ -4468,7 +4501,7 @@
               onClick: _,
             },
             _.createElement(_._, {
-              info: _,
+              _: _,
               bPreferLibrary: !0,
               bPreferAssetWithoutOverride: _,
             }),
@@ -4611,7 +4644,8 @@
         );
       }
       function _() {
-        const _ = _().associated_item;
+        const _ = _().associated_item,
+          _ = (0, _._)(_);
         return _ &&
           _.GetBestPurchaseOption() &&
           _.GetBestPurchaseOption().formatted_final_price
@@ -4621,7 +4655,7 @@
                 className: _.MessagePriceCtn,
               },
               _.createElement(_._, {
-                storeItem: _,
+                _: _,
                 bHidePrePurchase: !0,
               }),
             )
@@ -4760,7 +4794,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -5210,13 +5243,7 @@
           _ = _(),
           _ = (0, _._)(_.GetTemplateVars().linkurl, 5),
           _ = _.associated_item,
-          _ = (0, _.useMemo)(
-            () => ({
-              _: _?.GetID(),
-              type: (0, _._)(_?.GetStoreItemType(), _?.GetAppType()),
-            }),
-            [_],
-          );
+          _ = (0, _._)(_);
         return _.createElement(
           _._,
           {
@@ -5259,7 +5286,7 @@
                     appid: _.GetAppID(),
                   },
                   _.createElement(_._, {
-                    info: _,
+                    _: _,
                     fnOnClickButton: _,
                     bLowBandwidthMode: __webpack_require__,
                     bUseAssetWithoutOverride:

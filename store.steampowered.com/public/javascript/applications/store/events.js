@@ -439,7 +439,7 @@
         k = n(9905),
         B = n.n(k),
         L = n(43068),
-        D = n(82097),
+        D = n(16021),
         H = n(55263);
       const F = g.$.Get(),
         R = g.$.GetSummaryStore();
@@ -1921,7 +1921,7 @@
                 ? (n = "group/" + e.id)
                 : "games" == e.corpus &&
                   ((0, oe.wT)(
-                    (0, te.f)(e.type),
+                    (0, te.fp)(e.type),
                     "Unexpected app type " + e.type,
                   ),
                   (n = "app/" + e.id)),

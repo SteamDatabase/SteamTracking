@@ -548,10 +548,10 @@
   color: #fff;
 }
 ._1Cd1TJ4SgK5DkDNbI-USUL ._1tt9jL7Dj8I6_LezFi2Zgv {
-  color: #ffdc9b;
+  color: #eee3d0;
 }
 ._1Cd1TJ4SgK5DkDNbI-USUL ._2XhRaA3elALg0OQnynUZu4 {
-  color: #ffdc9b;
+  color: #ffca69;
   flex-grow: 1;
 }
 ._1Cd1TJ4SgK5DkDNbI-USUL ._3Niy5UbG2M3zTi6wUY2jda {
@@ -567,6 +567,12 @@
 }
 ._2PLSeE9RayjVbZKYqcszIq ._2F5-HSU7JNjiVuDm_h_I4D {
   margin-left: auto;
+  background: #3998ec;
+  padding: 6px 20px;
+}
+._2PLSeE9RayjVbZKYqcszIq ._2F5-HSU7JNjiVuDm_h_I4D:hover {
+  background: #64aeee;
+  color: #fff;
 }
 ._2PLSeE9RayjVbZKYqcszIq .oUfRC_JxvbarFSmiUwBCn {
   margin-left: auto;

@@ -214,13 +214,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _,
-        _,
-        _,
-        _,
         _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -229,86 +224,6 @@
       function _(_) {
         return "unknown ESteamNotificationType ( " + _ + " )";
       }
-      !(function (_) {
-        (_[(_.k_ESteamNotificationType_Invalid = 0)] =
-          "k_ESteamNotificationType_Invalid"),
-          (_[(_.k_ESteamNotificationType_Test = 1)] =
-            "k_ESteamNotificationType_Test"),
-          (_[(_.k_ESteamNotificationType_Gift = 2)] =
-            "k_ESteamNotificationType_Gift"),
-          (_[(_.k_ESteamNotificationType_Comment = 3)] =
-            "k_ESteamNotificationType_Comment"),
-          (_[(_.k_ESteamNotificationType_Item = 4)] =
-            "k_ESteamNotificationType_Item"),
-          (_[(_.k_ESteamNotificationType_FriendInvite = 5)] =
-            "k_ESteamNotificationType_FriendInvite"),
-          (_[(_.k_ESteamNotificationType_MajorSale = 6)] =
-            "k_ESteamNotificationType_MajorSale"),
-          (_[(_.k_ESteamNotificationType_PreloadAvailable = 7)] =
-            "k_ESteamNotificationType_PreloadAvailable"),
-          (_[(_.k_ESteamNotificationType_Wishlist = 8)] =
-            "k_ESteamNotificationType_Wishlist"),
-          (_[(_.k_ESteamNotificationType_TradeOffer = 9)] =
-            "k_ESteamNotificationType_TradeOffer"),
-          (_[(_.k_ESteamNotificationType_General = 10)] =
-            "k_ESteamNotificationType_General"),
-          (_[(_.k_ESteamNotificationType_HelpRequest = 11)] =
-            "k_ESteamNotificationType_HelpRequest"),
-          (_[(_.k_ESteamNotificationType_AsyncGame = 12)] =
-            "k_ESteamNotificationType_AsyncGame"),
-          (_[(_.k_ESteamNotificationType_ChatMsg = 13)] =
-            "k_ESteamNotificationType_ChatMsg"),
-          (_[(_.k_ESteamNotificationType_ModeratorMsg = 14)] =
-            "k_ESteamNotificationType_ModeratorMsg"),
-          (_[(_.k_ESteamNotificationType_ParentalFeatureAccessRequest = 15)] =
-            "k_ESteamNotificationType_ParentalFeatureAccessRequest"),
-          (_[(_.k_ESteamNotificationType_FamilyInvite = 16)] =
-            "k_ESteamNotificationType_FamilyInvite"),
-          (_[(_.k_ESteamNotificationType_FamilyPurchaseRequest = 17)] =
-            "k_ESteamNotificationType_FamilyPurchaseRequest"),
-          (_[(_.k_ESteamNotificationType_ParentalPlaytimeRequest = 18)] =
-            "k_ESteamNotificationType_ParentalPlaytimeRequest"),
-          (_[(_.k_ESteamNotificationType_FamilyPurchaseRequestResponse = 19)] =
-            "k_ESteamNotificationType_FamilyPurchaseRequestResponse"),
-          (_[(_.k_ESteamNotificationType_ParentalFeatureAccessResponse = 20)] =
-            "k_ESteamNotificationType_ParentalFeatureAccessResponse"),
-          (_[(_.k_ESteamNotificationType_ParentalPlaytimeResponse = 21)] =
-            "k_ESteamNotificationType_ParentalPlaytimeResponse"),
-          (_[(_.k_ESteamNotificationType_RequestedGameAdded = 22)] =
-            "k_ESteamNotificationType_RequestedGameAdded"),
-          (_[(_.k_ESteamNotificationType_SendToPhone = 23)] =
-            "k_ESteamNotificationType_SendToPhone"),
-          (_[(_.k_ESteamNotificationType_ClipDownloaded = 24)] =
-            "k_ESteamNotificationType_ClipDownloaded"),
-          (_[(_.k_ESteamNotificationType_2FAPrompt = 25)] =
-            "k_ESteamNotificationType_2FAPrompt"),
-          (_[(_.k_ESteamNotificationType_MobileConfirmation = 26)] =
-            "k_ESteamNotificationType_MobileConfirmation"),
-          (_[(_.k_ESteamNotificationType_PartnerEvent = 27)] =
-            "k_ESteamNotificationType_PartnerEvent"),
-          (_[(_.k_ESteamNotificationType_PlaytestInvite = 28)] =
-            "k_ESteamNotificationType_PlaytestInvite"),
-          (_[(_.k_ESteamNotificationType_TradeReversal = 29)] =
-            "k_ESteamNotificationType_TradeReversal");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESteamNotificationTarget_Invalid = 0)] =
-            "k_ESteamNotificationTarget_Invalid"),
-            (_[(_.k_ESteamNotificationTarget_NotificationFeed = 1)] =
-              "k_ESteamNotificationTarget_NotificationFeed"),
-            (_[(_.k_ESteamNotificationTarget_PushNotification = 2)] =
-              "k_ESteamNotificationTarget_PushNotification"),
-            (_[(_.k_ESteamNotificationTarget_Email = 4)] =
-              "k_ESteamNotificationTarget_Email"),
-            (_[(_.k_ESteamNotificationTarget_Steam = 8)] =
-              "k_ESteamNotificationTarget_Steam");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESteamNotificationTargetClientType_Invalid = 0)] =
-            "k_ESteamNotificationTargetClientType_Invalid"),
-            (_[(_.k_ESteamNotificationTargetClientType_SteamMobileApp = 1)] =
-              "k_ESteamNotificationTargetClientType_SteamMobileApp");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -1284,13 +1199,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
-        [_._.k_ESteamNotificationType_HelpRequest]: {
+        11: {
           displayNameLoc: "#SteamNotification_HelpRequest_Author",
           titleLoc: "#SteamNotification_HelpRequest_Title",
           bodyLoc: (_) => ({
@@ -1299,7 +1210,7 @@
           }),
           link: (_) => _._.HELP_BASE_URL + "wizard/HelpRequest/" + _.ticket,
         },
-        [_._.k_ESteamNotificationType_MajorSale]: {
+        6: {
           displayNameLoc: "#SteamNotifications_MajorSale",
           titleLoc: (_) => ({
             locString: _.title,
@@ -1317,19 +1228,19 @@
                 )
               : _.link,
         },
-        [_._.k_ESteamNotificationType_General]: {
+        10: {
           displayNameLoc: (_) => _.display_name,
           titleLoc: (_) => _.title,
           bodyLoc: (_) => _.body,
           image: (_) => _.image,
           link: (_) => _.link,
         },
-        [_._.k_ESteamNotificationType_ModeratorMsg]: {
+        14: {
           titleLoc: "#SteamNotification_ModeratorMessage_Title",
           link: (_) =>
             _._.COMMUNITY_BASE_URL + "my/moderatormessages/" + _.msgid,
         },
-        [_._.k_ESteamNotificationType_PlaytestInvite]: {
+        28: {
           displayNameLoc: (_) =>
             _.is_limited_launch
               ? "#Notification_LimitedLaunchInviteTitle"
@@ -1350,47 +1261,47 @@
         return !!_(_);
       }
       const _ = {
-        [_._.k_ESteamNotificationType_FamilyInvite]: {
+        16: {
           steamidAttribute: "inviter",
           titleLoc: "#SteamNotifications_FamilyInviteTitle",
           bodyLoc: "#SteamNotifications_FamilyInviteBody",
           url: (_) =>
             `${_._.STORE_BASE_URL}account/familymanagement/join?invitation=${_.familyid}`,
         },
-        [_._.k_ESteamNotificationType_ParentalFeatureAccessRequest]: {
+        15: {
           steamidAttribute: "steamid",
           titleLoc: "#SteamNotifications_ParentalFeatureRequestTitle",
           bodyLoc: "#SteamNotifications_ParentalFeatureRequestBody",
           url: () =>
             `${_._.STORE_BASE_URL}account/familymanagement?tab=requests`,
         },
-        [_._.k_ESteamNotificationType_FamilyPurchaseRequest]: {
+        17: {
           steamidAttribute: "requestor_steamid",
           titleLoc: "#SteamNotifications_FamilyPurchaseRequestTitle",
           bodyLoc: "#SteamNotifications_FamilyPurchaseRequestBody",
           url: (_) => (0, _._)(_.familyid, _.request_id),
         },
-        [_._.k_ESteamNotificationType_FamilyPurchaseRequestResponse]: {
+        19: {
           steamidAttribute: "responder_steamid",
           titleLoc: (_) =>
-            _.action == _._.k_EPurchaseRequestAction_Decline
+            1 == _.action
               ? "#SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle"
               : "",
           bodyLoc: (_) =>
-            _.action == _._.k_EPurchaseRequestAction_Decline
+            1 == _.action
               ? "#SteamNotifications_FamilyPurchaseRequestDeclinedBody"
               : "",
           url: () =>
             `${_._.STORE_BASE_URL}account/familymanagement?tab=requests`,
         },
-        [_._.k_ESteamNotificationType_ParentalPlaytimeRequest]: {
+        18: {
           steamidAttribute: "steamid",
           titleLoc: "#SteamNotifications_ParentalPlaytimeRequestTitle",
           bodyLoc: "#SteamNotifications_ParentalPlaytimeRequestBody",
           url: () =>
             `${_._.STORE_BASE_URL}account/familymanagement?tab=requests`,
         },
-        [_._.k_ESteamNotificationType_ParentalFeatureAccessResponse]: {
+        20: {
           steamidAttribute: "steamid_approver",
           titleLoc: (_) =>
             _.approved
@@ -1403,7 +1314,7 @@
           url: () =>
             `${_._.STORE_BASE_URL}account/familymanagement?tab=requests`,
         },
-        [_._.k_ESteamNotificationType_ParentalPlaytimeResponse]: {
+        21: {
           steamidAttribute: "steamid_approver",
           titleLoc: (_) =>
             _.approved
@@ -1423,19 +1334,7 @@
       function _(_) {
         return !!_(_);
       }
-      const _ = [
-        _._.k_ESteamNotificationType_Comment,
-        _._.k_ESteamNotificationType_FriendInvite,
-        _._.k_ESteamNotificationType_Gift,
-        _._.k_ESteamNotificationType_Item,
-        _._.k_ESteamNotificationType_Wishlist,
-        _._.k_ESteamNotificationType_TradeOffer,
-        _._.k_ESteamNotificationType_AsyncGame,
-        _._.k_ESteamNotificationType_RequestedGameAdded,
-        _._.k_ESteamNotificationType_ClipDownloaded,
-        _._.k_ESteamNotificationType_SendToPhone,
-        _._.k_ESteamNotificationType_TradeReversal,
-      ];
+      const _ = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23, 29];
       function _(_) {
         return null != _.findIndex((_) => _ == _);
       }
@@ -1499,8 +1398,7 @@
             (this.m_rgTestNotifications = []),
             (this.m_currentNotificationsData = null),
             (this.m_strRemoteClientID = ""),
-            (this.m_eTargetClientType =
-              _._.k_ESteamNotificationTargetClientType_Invalid),
+            (this.m_eTargetClientType = 0),
             (this.m_fnOnNotificationCallback = null),
             (0, _._)(this);
         }
@@ -1513,10 +1411,7 @@
         RegisterOnNotificationCallback(_) {
           this.m_fnOnNotificationCallback = _;
         }
-        SetClientFilters(
-          _,
-          _ = _._.k_ESteamNotificationTargetClientType_Invalid,
-        ) {
+        SetClientFilters(_, _ = 0) {
           (this.m_strRemoteClientID = _), (this.m_eTargetClientType = _);
         }
         NotifyServerNotificationsRead(_) {
@@ -1853,7 +1748,7 @@
           _ && this.m_rgUnreadNotificationIDs.push(_.notification_id);
           let _ = _.notification_type;
           switch (_) {
-            case _._.k_ESteamNotificationType_Comment:
+            case 3:
               {
                 const _ = _(_);
                 if (!_) return;
@@ -1899,14 +1794,14 @@
                   });
               }
               break;
-            case _._.k_ESteamNotificationType_Item:
+            case 4:
               const _ = _(_);
               if (_) {
                 const _ = "item_" + _.appid;
                 this.AddNotificationToRollupByAppID(_, _, _, _, _, _.appid);
               }
               break;
-            case _._.k_ESteamNotificationType_AsyncGame:
+            case 12:
               const _ =
                 null === (_ = _(_)) || void 0 === _
                   ? void 0
@@ -1916,7 +1811,7 @@
                 this.AddNotificationToRollupByAppID(_, _, _, _, _, _);
               }
               break;
-            case _._.k_ESteamNotificationType_Wishlist:
+            case 8:
               const _ = null === (_ = _(_)) || void 0 === _ ? void 0 : _.appid;
               _ &&
                 _._.Get().QueueAppRequest(_, {
@@ -2000,7 +1895,7 @@
           _.Body().set_include_pinned_counts(!0),
           _.Body().set_include_confirmation_count(_);
         const _ = await _._.GetSteamNotifications(_, _);
-        if (_.GetEResult() !== _._.k_EResultOK)
+        if (1 !== _.GetEResult())
           throw (
             (_(
               `Received error from GetSteamNotifications. Result ${_.GetEResult()}. Transport ${_.Hdr().transport_error()}`,
@@ -2029,7 +1924,7 @@
         ];
       }
       function _(_, _, _) {
-        let _ = _(_._.k_ESteamNotificationType_Item, _.body_data);
+        let _ = _(4, _.body_data);
         _.steamid = _;
         let _ = (0, _._)({
           queryKey: _(_),
@@ -2047,7 +1942,7 @@
               _.add_assetids(_.assetid),
                 __webpack_require__.Body().set_filters(_);
               const _ = await _._.GetInventoryItemsWithDescriptions(_, _);
-              if (_.GetEResult() !== _._.k_EResultOK)
+              if (1 !== _.GetEResult())
                 return (
                   _(
                     "Request for steam item metadata did not succeed",
@@ -2057,7 +1952,7 @@
                 );
               let _ = "";
               const _ = await _._.Get().QueueAppRequest(parseInt(_.appid), {});
-              if (_ == _._.k_EResultOK) {
+              if (1 == _) {
                 const _ = _._.Get().GetApp(parseInt(_.appid));
                 _ = null == _ ? void 0 : _.GetName();
               } else _("Failed getting app info", _);
@@ -2075,13 +1970,13 @@
         return _.last_post > 0 && (_ += "&tscn=" + (_.last_post - 1)), _;
       }
       function _(_) {
-        return _.comment_type == _._.k_ECommentThreadTypeProfile;
+        return 10 == _.comment_type;
       }
       function _(_) {
         return null == _ ? void 0 : _.bhas_friend;
       }
       function _(_) {
-        return _.comment_type == _._.k_ECommentThreadTypeProfile;
+        return 10 == _.comment_type;
       }
       function _(_) {
         return _(_) || _(_);
@@ -2113,33 +2008,30 @@
         let _ = _(_);
         if (!_) return null;
         switch (_) {
-          case _._.k_ESteamNotificationType_Gift:
+          case 2:
             return _.gifter_account;
-          case _._.k_ESteamNotificationType_RequestedGameAdded:
+          case 22:
             return {
               responder_steamid: _.responder_steamid,
               package_id: _.package_id,
               bundle_id: _.bundle_id,
             };
-          case _._.k_ESteamNotificationType_TradeOffer:
+          case 9:
             return parseInt(_.sender);
-          case _._.k_ESteamNotificationType_Wishlist:
+          case 8:
             return {
               appid: _.appid,
               count: null !== (_ = _.count) && void 0 !== _ ? _ : 1,
               appids: null !== (_ = _.appids) && void 0 !== _ ? _ : [],
             };
-          case _._.k_ESteamNotificationType_AsyncGame:
-            return !_.appid ||
-              !_.state ||
-              (_.state != _._.k_EAsyncGameSessionUserStateReadyForAction &&
-                _.state != _._.k_EAsyncGameSessionUserStateDone)
+          case 12:
+            return !_.appid || !_.state || (1 != _.state && 2 != _.state)
               ? (_("Async game notification invalid data", _), null)
               : {
                   appid: parseInt(_.appid),
                   state: parseInt(_.state),
                 };
-          case _._.k_ESteamNotificationType_Comment:
+          case 3:
             let _ = {
               owner_steam_id: _.owner_steam_id
                 ? new _._(_.owner_steam_id)
@@ -2169,20 +2061,18 @@
                 }),
               _
             );
-          case _._.k_ESteamNotificationType_FriendInvite:
+          case 5:
             return {
               requestorID: parseInt(_.requestor_id),
-              state: _.state
-                ? parseInt(_.state)
-                : _._.k_EFriendRelationshipNone,
+              state: _.state ? parseInt(_.state) : 0,
             };
-          case _._.k_ESteamNotificationType_Item:
+          case 4:
             return {
               appid: parseInt(_.app_id),
               assetid: null !== (_ = _.asset_id) && void 0 !== _ ? _ : "",
               contextid: null !== (_ = _.context_id) && void 0 !== _ ? _ : "",
             };
-          case _._.k_ESteamNotificationType_SendToPhone:
+          case 23:
             return {
               url: null !== (_ = _.url) && void 0 !== _ ? _ : "",
               strGameName:
@@ -2237,109 +2127,109 @@
         );
       }
       const _ = {
-        [_._.k_ESteamNotificationType_Invalid]: {
+        0: {
           rollup_field: void 0,
           eFeature: void 0,
         },
-        [_._.k_ESteamNotificationType_Test]: {
+        1: {
           rollup_field: void 0,
           eFeature: void 0,
         },
-        [_._.k_ESteamNotificationType_Gift]: {
+        2: {
           rollup_field: "gifts",
           eFeature: _._,
         },
-        [_._.k_ESteamNotificationType_Comment]: {
+        3: {
           rollup_field: "comments",
-          eFeature: _._.k_EFeatureCommunity,
+          eFeature: 2,
         },
-        [_._.k_ESteamNotificationType_Item]: {
+        4: {
           rollup_field: "inventory_items",
-          eFeature: _._.k_EFeatureProfile,
+          eFeature: 3,
         },
-        [_._.k_ESteamNotificationType_FriendInvite]: {
+        5: {
           rollup_field: "invites",
-          eFeature: _._.k_EFeatureFriends,
+          eFeature: 4,
         },
-        [_._.k_ESteamNotificationType_MajorSale]: {
+        6: {
           rollup_field: "major_sale",
-          eFeature: _._.k_EFeatureStore,
+          eFeature: 1,
         },
-        [_._.k_ESteamNotificationType_PreloadAvailable]: {
+        7: {
           rollup_field: void 0,
           eFeature: void 0,
         },
-        [_._.k_ESteamNotificationType_Wishlist]: {
+        8: {
           rollup_field: "wishlist",
-          eFeature: _._.k_EFeatureStore,
+          eFeature: 1,
         },
-        [_._.k_ESteamNotificationType_TradeOffer]: {
+        9: {
           rollup_field: "trade_offers",
-          eFeature: _._.k_EFeatureTrading,
+          eFeature: 6,
         },
-        [_._.k_ESteamNotificationType_General]: {
+        10: {
           rollup_field: "general",
           eFeature: _._,
         },
-        [_._.k_ESteamNotificationType_HelpRequest]: {
+        11: {
           rollup_field: "help_request_replies",
           eFeature: _._,
         },
-        [_._.k_ESteamNotificationType_AsyncGame]: {
+        12: {
           rollup_field: "async_game_updates",
           eFeature: _._,
         },
-        [_._.k_ESteamNotificationType_ModeratorMsg]: {
+        14: {
           rollup_field: "moderator_messages",
-          eFeature: _._.k_EFeatureCommunity,
+          eFeature: 2,
         },
-        [_._.k_ESteamNotificationType_ParentalFeatureAccessRequest]: {
+        15: {
           rollup_field: "parental_feature_requests",
           eFeature: _._,
         },
-        [_._.k_ESteamNotificationType_FamilyInvite]: {
+        16: {
           rollup_field: "family_invites",
           eFeature: _._,
         },
-        [_._.k_ESteamNotificationType_FamilyPurchaseRequest]: {
+        17: {
           rollup_field: "family_purchase_requests",
           eFeature: _._,
         },
-        [_._.k_ESteamNotificationType_ParentalPlaytimeRequest]: {
+        18: {
           rollup_field: "parental_playtime_requests",
           eFeature: _._,
         },
-        [_._.k_ESteamNotificationType_FamilyPurchaseRequestResponse]: {
+        19: {
           rollup_field: "family_purchase_request_responses",
           eFeature: _._,
         },
-        [_._.k_ESteamNotificationType_ParentalFeatureAccessResponse]: {
+        20: {
           rollup_field: "parental_feature_access_responses",
           eFeature: _._,
         },
-        [_._.k_ESteamNotificationType_ParentalPlaytimeResponse]: {
+        21: {
           rollup_field: "parental_playtime_responses",
           eFeature: _._,
         },
-        [_._.k_ESteamNotificationType_RequestedGameAdded]: {
+        22: {
           rollup_field: "requested_game_added",
           eFeature: _._,
         },
-        [_._.k_ESteamNotificationType_SendToPhone]: {
+        23: {
           rollup_field: void 0,
           eFeature: _._,
         },
-        [_._.k_ESteamNotificationType_ClipDownloaded]: {
+        24: {
           rollup_field: void 0,
           eFeature: _._,
         },
-        [_._.k_ESteamNotificationType_PlaytestInvite]: {
+        28: {
           rollup_field: "playtest_invites",
-          eFeature: _._.k_EFeatureStore,
+          eFeature: 1,
         },
-        [_._.k_ESteamNotificationType_TradeReversal]: {
+        29: {
           rollup_field: void 0,
-          eFeature: _._.k_EFeatureTrading,
+          eFeature: 6,
         },
       };
       function _(_) {
@@ -2387,7 +2277,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         if (!_) return;
@@ -2424,9 +2313,9 @@
           _ = _,
           _ = _().PinnedTemplate;
         return (
-          _ == _._.k_EUIMode_DesktopUI
+          7 == _
             ? (_ = _().PinnedTemplateDesktop)
-            : _ == _._.k_EUIMode_Web && (_ = _().PinnedTemplateWeb),
+            : 3 == _ && (_ = _().PinnedTemplateWeb),
           (_ = (0, _._)(_, _)),
           _.createElement(
             _._,
@@ -2508,8 +2397,8 @@
             _ &&
             _ > 0 &&
             _ !== _().Unread &&
-            __webpack_require__ != _._.DesktopToast &&
-            __webpack_require__ != _._.GamepadToast
+            2 != __webpack_require__ &&
+            1 != __webpack_require__
               ? _(_().Unread)
               : _ || _ != _().Unread || _(_().MarkedRead);
           }, [_, __webpack_require__, _]);
@@ -2517,17 +2406,16 @@
         _ || (_ = () => console.log("Missing activate function")),
           _ == _.loadingActive && (_ = void 0);
         let _ = _().StandardTemplate;
-        __webpack_require__ == _._.AllNotificationsTray
+        4 == __webpack_require__
           ? (_ = _().AllNotificationsTemplate)
-          : __webpack_require__ == _._.DesktopToast
+          : 2 == __webpack_require__
             ? (_ = _().DesktopToastTemplate)
-            : (_ != _._.k_EUIMode_DesktopUI && _ != _._.k_EUIMode_Web) ||
-              (_ = _().StandardTemplateDesktop);
+            : (7 != _ && 3 != _) || (_ = _().StandardTemplateDesktop);
         let _ = null;
         if (
           _ != _.none &&
-          __webpack_require__ != _._.DesktopToast &&
-          __webpack_require__ != _._.GamepadToast
+          2 != __webpack_require__ &&
+          1 != __webpack_require__
         ) {
           let _ = _ == _.loadingComplete ? _().Hide : null;
           _ = _.createElement(
@@ -2594,7 +2482,7 @@
       }
       function _(_) {
         const { location: _ } = _;
-        return _ && _ == _._.Tray
+        return _ && 3 == _
           ? _.createElement(
               "div",
               {
@@ -2612,10 +2500,10 @@
           location: _,
           fnRenderTimestamp: _,
         } = _;
-        const _ = !!_ && (_ == _._.Tray || _ == _._.AllNotificationsTray);
+        const _ = !!_ && (3 == _ || 4 == _);
         let _;
         return (
-          (_ = _ == _._.AllNotificationsTray ? _ : null != _ ? _ : _),
+          (_ = 4 == _ ? _ : null != _ ? _ : _),
           _.createElement(
             "div",
             {
@@ -2715,10 +2603,9 @@
           (_[(_.loadingActive = 1)] = "loadingActive"),
           (_[(_.loadingComplete = 2)] = "loadingComplete");
       })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
-        return _ == _._.GamepadToast;
+        return 1 == _;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -2803,9 +2690,9 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
-          case _._.k_ESteamNotificationType_MajorSale:
+          case 6:
             return _.createElement(_.ilR, null);
-          case _._.k_ESteamNotificationType_HelpRequest:
+          case 11:
             return _.createElement(_.Cv4, null);
           default:
             return _.createElement(_.Qte, null);
@@ -3069,11 +2956,11 @@
         } = _;
         const _ = _(_);
         let _ = "";
-        _ && _.state == _._.k_EFriendRelationshipRequestRecipient
+        _ && 2 == _.state
           ? (_ = (0, _._)(
               "#SteamNotifications_FriendInvite_Description_AwaitingResponse",
             ))
-          : _ && _.state == _._.k_EFriendRelationshipFriend
+          : _ && 3 == _.state
             ? (_ = (0, _._)(
                 "#SteamNotifications_FriendInvite_Description_Friends",
               ))
@@ -3083,9 +2970,7 @@
           _ = () => _(!0);
         let _ = _;
         if (__webpack_require__ && !_) {
-          const _ =
-              _.state == _._.k_EFriendRelationshipFriend &&
-              _ != _._.GamepadToast,
+          const _ = 3 == _.state && 1 != _,
             _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           _ = _.createElement(
             _._,
@@ -3293,7 +3178,7 @@
           _ = !__webpack_require__;
         let _ = "";
         return (
-          _.state == _._.k_EAsyncGameSessionUserStateReadyForAction
+          1 == _.state
             ? (_ =
                 _ &&
                 (null == __webpack_require__
@@ -3304,7 +3189,7 @@
                       __webpack_require__.GetName(),
                     )
                   : (0, _._)("#SteamNotification_AsyncGame_Action"))
-            : _.state == _._.k_EAsyncGameSessionUserStateDone &&
+            : 2 == _.state &&
               (_ =
                 _ &&
                 (null == __webpack_require__
@@ -3463,16 +3348,16 @@
           ),
           _ = (0, _._)(_) ? _ : null,
           _ = (0, _._)(_) ? _ : null;
-        _.comment_type == _._.k_ECommentThreadTypeProfile
+        10 == _.comment_type
           ? (_ =
               (null === (_ = _.owner_steam_id) || void 0 === _
                 ? void 0
                 : __webpack_require__.ConvertTo64BitString()) == _
-                ? _ == _._.AllNotificationsTray && _
+                ? 4 == _ && _
                   ? (0, _._)("#SteamNotifications_Comment_Your_Profile_By", _)
                   : (0, _._)("#SteamNotifications_Comment_Your_Profile")
                 : _
-                  ? _ == _._.AllNotificationsTray && _
+                  ? 4 == _ && _
                     ? (0, _._)(
                         "#SteamNotifications_Comment_Player_Profile_By",
                         _,
@@ -3480,10 +3365,11 @@
                       )
                     : (0, _._)("#SteamNotifications_Comment_Player_Profile", _)
                   : (0, _._)("#SteamNotifications_Comment_Profile"))
-          : _.comment_type == _._.k_ECommentThreadTypePublishedFile_Public &&
-              (null === (_ = _.json_data) || void 0 === _
-                ? void 0
-                : _.file_type) == _._.k_EWorkshopFileTypeScreenshot
+          : 5 == _.comment_type &&
+              5 ==
+                (null === (_ = _.json_data) || void 0 === _
+                  ? void 0
+                  : _.file_type)
             ? (_ =
                 (null === (_ = _.owner_steam_id) || void 0 === _
                   ? void 0
@@ -3505,9 +3391,7 @@
               (_ = _.json_data.title);
         let _ = null;
         _ =
-          _.comment_type == _._.k_ECommentThreadTypeForumTopic &&
-          _.bis_forum &&
-          _
+          7 == _.comment_type && _.bis_forum && _
             ? _.createElement(
                 _,
                 null,
@@ -3518,7 +3402,7 @@
           _ = null;
         if (void 0 !== _ && _ > 1) {
           const _ = "+" + (_ - 1);
-          _ == _._.AllNotificationsTray
+          4 == _
             ? (_ = _.createElement(
                 "div",
                 {
@@ -3532,7 +3416,7 @@
         if (!_) {
           const _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           if (_ && (0, _._)(_)) {
-            const _ = _.bhas_friend && _ != _._.GamepadToast;
+            const _ = _.bhas_friend && 1 != _;
             _ = _.createElement(
               "div",
               {
@@ -4010,35 +3894,6 @@
             })
           : null;
       }
-      const _ = (_) => {
-        const {
-            rollup: _,
-            onNotificationClick: __webpack_require__,
-            location: _,
-            uimode: _,
-            onHide: _,
-          } = _,
-          _ = `${_._.COMMUNITY_BASE_URL}my/tradehistory`;
-        return _.createElement(
-          "a",
-          {
-            href: _,
-            onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-          },
-          _.createElement(_, {
-            logo: _.createElement(_.Qte, null),
-            icon: _.createElement(_.h20, null),
-            onActivate: () =>
-              __webpack_require__(() => window.location.assign(_), _.item),
-            location: _,
-            eUIMode: _,
-            timestamp: _.timestamp,
-            nUnread: _.rgunread.length,
-            bNewIndicator: (0, _._)(_.item),
-            onHide: _,
-          }),
-        );
-      };
       function _(_) {
         const {
             url: _,
@@ -4062,14 +3917,14 @@
                   count: __webpack_require__,
                   onActivate: () => window.location.assign(_),
                   strLocToken: _,
-                  eUIMode: _._.k_EUIMode_Web,
+                  eUIMode: 3,
                   visible: !0,
                 }),
               )
           : null;
       }
       const _ = {
-        [_._.k_ESteamNotificationType_Comment]: function (_) {
+        chunkid: function (module) {
           var _, _, _;
           const {
               rollup: _,
@@ -4077,7 +3932,7 @@
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = _(_),
             _ = (0, _._)(),
             _ = _._.COMMUNITY_BASE_URL + _.url,
@@ -4138,14 +3993,14 @@
             }),
           );
         },
-        [_._.k_ESteamNotificationType_Wishlist]: function (_) {
+        chunkid: function (module) {
           const {
               rollup: _,
-              onNotificationClick: __webpack_require__,
+              onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = _(_),
             [_] = (0, _._)(_.appid, {
               include_assets: !0,
@@ -4193,14 +4048,14 @@
             )
           );
         },
-        [_._.k_ESteamNotificationType_FriendInvite]: function (_) {
+        chunkid: function (module) {
           const {
               rollup: _,
-              onNotificationClick: __webpack_require__,
+              onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = (0, _._)(),
             _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/friends/pending`,
             _ = _(_),
@@ -4228,14 +4083,14 @@
             }),
           );
         },
-        [_._.k_ESteamNotificationType_Item]: function (_) {
+        chunkid: function (module) {
           const {
               rollup: _,
-              onNotificationClick: __webpack_require__,
+              onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = (0, _._)(),
             _ = (0, _._)(),
             _ = (0, _._)(_.item, _, _),
@@ -4263,14 +4118,14 @@
             }),
           );
         },
-        [_._.k_ESteamNotificationType_Gift]: function (_) {
+        chunkid: function (module) {
           const {
               rollup: _,
-              onNotificationClick: __webpack_require__,
+              onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = (0, _._)(),
             _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/inventory/#pending_gifts`,
             _ = _(_),
@@ -4297,14 +4152,14 @@
             }),
           );
         },
-        [_._.k_ESteamNotificationType_TradeOffer]: function (_) {
+        chunkid: function (module) {
           const {
               rollup: _,
-              onNotificationClick: __webpack_require__,
+              onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = (0, _._)(),
             _ = _(_),
             _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/tradeoffers`,
@@ -4331,14 +4186,14 @@
             }),
           );
         },
-        [_._.k_ESteamNotificationType_AsyncGame]: function (_) {
+        chunkid: function (module) {
           const {
               rollup: _,
-              onNotificationClick: __webpack_require__,
+              onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = `${_._.COMMUNITY_BASE_URL}my/gamenotifications/`,
             _ = _(_),
             [_] = (0, _._)(_.appid, {
@@ -4366,22 +4221,19 @@
             }),
           );
         },
-        [_._.k_ESteamNotificationType_RequestedGameAdded]: function (_) {
+        chunkid: function (module) {
           var _;
           const {
-              rollup: __webpack_require__,
+              rollup: _,
               onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
-            _ = _(__webpack_require__),
+            } = module,
+            _ = _(_),
             { data: _ } = (0, _._)(_.responder_steamid),
             _ = _.package_id > 0 ? _.package_id : _.bundle_id,
-            _ =
-              _.package_id > 0
-                ? _._.k_EStoreItemType_Package
-                : _._.k_EStoreItemType_Bundle,
+            _ = _.package_id > 0 ? 1 : 2,
             [_] = (0, _._)(_, _, {
               include_basic_info: !0,
               include_assets: !0,
@@ -4412,14 +4264,42 @@
                 _(() => window.location.assign(_), __webpack_require__.item),
               location: _,
               eUIMode: _,
-              timestamp: __webpack_require__.timestamp,
-              nUnread: __webpack_require__.rgunread.length,
-              bNewIndicator: (0, _._)(__webpack_require__.item),
+              timestamp: _.timestamp,
+              nUnread: _.rgunread.length,
+              bNewIndicator: (0, _._)(_.item),
               onHide: _,
             }),
           );
         },
-        [_._.k_ESteamNotificationType_TradeReversal]: _,
+        chunkid: (module) => {
+          const {
+              rollup: _,
+              onNotificationClick: _,
+              location: _,
+              uimode: _,
+              onHide: _,
+            } = module,
+            _ = `${_._.COMMUNITY_BASE_URL}my/tradehistory`;
+          return _.createElement(
+            "a",
+            {
+              href: _,
+              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            },
+            _.createElement(_, {
+              logo: _.createElement(_.Qte, null),
+              icon: _.createElement(_.h20, null),
+              onActivate: () =>
+                __webpack_require__(() => window.location.assign(_), _.item),
+              location: _,
+              eUIMode: _,
+              timestamp: _.timestamp,
+              nUnread: _.rgunread.length,
+              bNewIndicator: (0, _._)(_.item),
+              onHide: _,
+            }),
+          );
+        },
       };
     },
   },

@@ -9102,6 +9102,8 @@ div._2XmLnHRWLZ2ZW9YylsShPf .ObTF_MsR6RfGwRVUX3mWv {
   position: relative;
   width: 48px;
   height: 48px;
+  max-height: 100%;
+  max-width: 100%;
 }
 .BasicUI ._1fEbX-PfpZ2FhkhttWcm-V {
   width: 64px;

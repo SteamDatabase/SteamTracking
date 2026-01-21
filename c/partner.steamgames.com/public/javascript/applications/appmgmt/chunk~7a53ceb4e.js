@@ -85,7 +85,6 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
       const _ = ["app_header_capsule", "app_main_capsule"],
         _ = [
           "sale_header",
@@ -121,28 +120,10 @@
       function _(_, _) {
         return void 0 === _ ? _(_) : Array.isArray(_) ? _[_] : _;
       }
-      const _ = [
-          _._.k_EClanImageFileType_JPEG,
-          _._.k_EClanImageFileType_PNG,
-          _._.k_EClanImageFileType_GIF,
-          _._.k_EClanImageFileType_WEBP,
-        ],
-        _ = [
-          _._.k_EClanImageFileType_JPEG,
-          _._.k_EClanImageFileType_PNG,
-          _._.k_EClanImageFileType_GIF,
-        ],
-        _ = [_._.k_EClanImageFileType_JPEG, _._.k_EClanImageFileType_PNG],
-        _ = [_._.k_EClanImageFileType_WEBM, _._.k_EClanImageFileType_MP4],
-        _ = [_._.k_EClanImageFileType_SRT, _._.k_EClanImageFileType_VTT],
-        _ = [
-          _._.k_EClanImageFileType_JPEG,
-          _._.k_EClanImageFileType_PNG,
-          _._.k_EClanImageFileType_GIF,
-          _._.k_EClanImageFileType_WEBP,
-          _._.k_EClanImageFileType_WEBM,
-          _._.k_EClanImageFileType_MP4,
-        ],
+      const _ = [1, 3, 2],
+        _ = [1, 3],
+        _ = [5, 4],
+        _ = [7, 6],
         _ = {
           capsule: {
             width: 800,
@@ -300,7 +281,7 @@
           localized_marketing_message: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: _,
+            rgAcceptableTypes: [1, 3, 2, 10],
           },
           localized_optin_banner: {
             width: 1e3,
@@ -310,39 +291,33 @@
           localized_marketingmessage_webm: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_WEBM],
+            rgAcceptableTypes: [5],
           },
           localized_marketingmessage_mp4: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_MP4],
+            rgAcceptableTypes: [4],
           },
           localized_partnerevent_webm: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_WEBM],
+            rgAcceptableTypes: [5],
           },
           localized_partnerevent_mp4: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_MP4],
+            rgAcceptableTypes: [4],
           },
           localized_subtitles: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [
-              _._.k_EClanImageFileType_VTT,
-              _._.k_EClanImageFileType_SRT,
-            ],
+            rgAcceptableTypes: [6, 7],
           },
           localized_marketingmessage_poster: {
             width: 528,
             height: 297,
-            rgAcceptableTypes: [
-              _._.k_EClanImageFileType_JPEG,
-              _._.k_EClanImageFileType_PNG,
-            ],
+            rgAcceptableTypes: [1, 3],
           },
           localized_marketingmessage_background: {
             width: 570,
@@ -359,7 +334,7 @@
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
+            rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
           },
           user_poll_background: {
             width: 0,
@@ -395,12 +370,12 @@
           takeover_webm_art: {
             width: 1850,
             height: 450,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_WEBM],
+            rgAcceptableTypes: [5],
           },
           takeover_mp4_art: {
             width: 1850,
             height: 450,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_MP4],
+            rgAcceptableTypes: [4],
           },
           takeover_mobile_art: {
             width: 500,
@@ -410,12 +385,12 @@
           takeover_webm_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_WEBM],
+            rgAcceptableTypes: [5],
           },
           takeover_mp4_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_MP4],
+            rgAcceptableTypes: [4],
           },
           takeunder_art: {
             width: 940,
@@ -481,8 +456,7 @@
       function _(_) {
         const _ = _[_];
         return (
-          _.rgAcceptableTypes.includes(_._.k_EClanImageFileType_VTT) ||
-          _.rgAcceptableTypes.includes(_._.k_EClanImageFileType_SRT)
+          _.rgAcceptableTypes.includes(6) || _.rgAcceptableTypes.includes(7)
         );
       }
       function _(_, _) {
@@ -499,7 +473,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -525,7 +498,7 @@
           (0, _._)(this),
             (this.file = _),
             (this.filename = _),
-            (this.fileType = (0, _._)(_) ?? _._.k_EClanImageFileType_Unknown),
+            (this.fileType = (0, _._)(_) ?? 0),
             (this.language = _),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),
@@ -840,7 +813,7 @@
                 const _ = await __webpack_require__(
                   _,
                   _.filename,
-                  _.language ?? _._.k_Lang_None,
+                  _.language ?? -1,
                   _,
                 );
                 (_.status = _.bSuccess ? "success" : "failed"),
@@ -885,12 +858,7 @@
                       _ = [];
                     for (const _ of _) {
                       _.status = "uploading";
-                      const _ = await _(
-                        _,
-                        _.filename,
-                        _.language ?? _._.k_Lang_None,
-                        _,
-                      );
+                      const _ = await _(_, _.filename, _.language ?? -1, _);
                       (_.status = _.bSuccess ? "success" : "failed"),
                         (_.message =
                           !_.bSuccess && _.elErrorMessage
@@ -916,17 +884,15 @@
           return _;
         for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
         for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
-        return __webpack_require__.includes(_._.k_ESteamRealmGlobal)
-          ? _._.k_Lang_English
-          : _._.k_Lang_SteamChina_SChinese;
+        return __webpack_require__.includes(_._.k_ESteamRealmGlobal) ? 0 : 29;
       }
-      function _(_, _ = _._.k_Lang_English) {
+      function _(_, _ = 0) {
         let _ = _.lastIndexOf(".");
         -1 != _ && (_ = _.slice(0, _).toLowerCase());
         let _ = null,
           _ = 0;
-        _.endsWith("korean") && ((_ = _._.k_Lang_Korean), (_ = 6));
-        for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_) {
+        _.endsWith("korean") && ((_ = 4), (_ = 6));
+        for (let _ = 0; _ < 31; ++_) {
           const _ = (0, _._)(_);
           if (_.length <= _) continue;
           if (_.endsWith(_) && _.length > _.length + 2) {
@@ -952,26 +918,25 @@
         _: () => _,
       });
       __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         return (
           _.indexOf("?") > 0 && (_ = _.split("?")[0]),
           _.endsWith(".jpg") || _.endsWith(".jpeg")
-            ? _._.k_EClanImageFileType_JPEG
+            ? 1
             : _.endsWith(".png")
-              ? _._.k_EClanImageFileType_PNG
+              ? 3
               : _.endsWith(".gif")
-                ? _._.k_EClanImageFileType_GIF
+                ? 2
                 : _.endsWith(".mp4")
-                  ? _._.k_EClanImageFileType_MP4
+                  ? 4
                   : _.endsWith(".webm")
-                    ? _._.k_EClanImageFileType_WEBM
+                    ? 5
                     : _.endsWith(".vtt")
-                      ? _._.k_EClanImageFileType_VTT
+                      ? 6
                       : _.endsWith(".srt")
-                        ? _._.k_EClanImageFileType_SRT
+                        ? 7
                         : _.endsWith(".webp")
-                          ? _._.k_EClanImageFileType_WEBP
+                          ? 10
                           : void 0
         );
       }
@@ -986,14 +951,9 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1052,45 +1012,28 @@
                 _._.Get()
                   .QueueStoreItemRequest(_, _, _)
                   .then((_) => {
-                    _?.token.reason ||
-                      _.current !== _ ||
-                      _(_ == _._.k_EResultOK),
-                      _();
+                    _?.token.reason || _.current !== _ || _(1 == _), _();
                   })),
               () => _?.cancel("useStoreItemCache: unmounting")
             );
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return [null, _.k_EStoreItemCacheState_Unavailable];
-        if (!1 === _) return [void 0, _.k_EStoreItemCacheState_Unavailable];
-        if (_._.Get().BIsStoreItemMissing(_, _))
-          return [void 0, _.k_EStoreItemCacheState_Unavailable];
-        if (!_._.Get().BHasStoreItem(_, _, _))
-          return [void 0, _.k_EStoreItemCacheState_Loading];
+          return [null, 2];
+        if (!1 === _) return [void 0, 2];
+        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
+        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
         const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
-        return _
-          ? [_, _.k_EStoreItemCacheState_Found]
-          : [null, _.k_EStoreItemCacheState_Unavailable];
+        return _ ? [_, 3] : [null, 2];
       }
       function _(_, _, _) {
-        return _(_, _._.k_EStoreItemType_App, _, _);
+        return _(_, 0, _, _);
       }
       function _(_, _, _) {
-        return _(_, _._.k_EStoreItemType_Bundle, _, _);
+        return _(_, 2, _, _);
       }
       function _(_, _, _) {
-        return _(_, _._.k_EStoreItemType_Package, _, _);
-      }
-      function _(_, _, _) {
-        const [_, _] = _(_, _, _);
-        let _;
-        _?.GetStoreItemType() != _._.k_EStoreItemType_Package ||
-          _.GetAssets()?.GetHeaderURL() ||
-          1 != _?.GetIncludedAppIDs().length ||
-          (_ = _.GetIncludedAppIDs()[0]);
-        const [_, _] = _(_, _);
-        return _ && _?.BIsVisible() ? [_, _] : [_, _];
+        return _(_, 1, _, _);
       }
       function _(_, _, _, _) {
         const _ = (0, _._)(),
@@ -1152,7 +1095,7 @@
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return _.k_EStoreItemCacheState_Unavailable;
+          return 2;
         if (
           !_.every(
             (_) =>
@@ -1160,30 +1103,22 @@
               _._.Get().BIsStoreItemMissing(_, _),
           )
         )
-          return _.k_EStoreItemCacheState_Loading;
+          return 1;
         return _.every((_) =>
           _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
         )
-          ? _.k_EStoreItemCacheState_Found
-          : _.k_EStoreItemCacheState_Unavailable;
+          ? 3
+          : 2;
       }
       function _(_, _, _) {
-        return _(_, _._.k_EStoreItemType_App, _, _);
+        return _(_, 0, _, _);
       }
       function _(_, _, _) {
-        return _(_, _._.k_EStoreItemType_Bundle, _, _);
+        return _(_, 2, _, _);
       }
       function _(_, _, _) {
-        return _(_, _._.k_EStoreItemType_Package, _, _);
+        return _(_, 1, _, _);
       }
-      !(function (_) {
-        (_[(_.k_EStoreItemCacheState_Loading = 1)] =
-          "k_EStoreItemCacheState_Loading"),
-          (_[(_.k_EStoreItemCacheState_Unavailable = 2)] =
-            "k_EStoreItemCacheState_Unavailable"),
-          (_[(_.k_EStoreItemCacheState_Found = 3)] =
-            "k_EStoreItemCacheState_Found");
-      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1198,8 +1133,7 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _.toLowerCase();
         return _.endsWith(".jpg") || _.endsWith(".jpeg")
@@ -1246,21 +1180,21 @@
       }
       function _(_) {
         switch (_) {
-          case _._.k_EClanImageFileType_JPEG:
+          case 1:
             return ".jpg";
-          case _._.k_EClanImageFileType_GIF:
+          case 2:
             return ".gif";
-          case _._.k_EClanImageFileType_PNG:
+          case 3:
             return ".png";
-          case _._.k_EClanImageFileType_WEBM:
+          case 5:
             return ".webm";
-          case _._.k_EClanImageFileType_MP4:
+          case 4:
             return ".mp4";
-          case _._.k_EClanImageFileType_SRT:
+          case 7:
             return ".srt";
-          case _._.k_EClanImageFileType_VTT:
+          case 6:
             return ".vtt";
-          case _._.k_EClanImageFileType_WEBP:
+          case 10:
             return ".webp";
         }
       }
@@ -1883,7 +1817,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
@@ -1910,8 +1843,7 @@
                 _?.drawImage(_, _, _, _, _, _, _, _, _),
                   _.toBlob((_) => {
                     const _ = _.toDataURL(_);
-                    _ !== _._.k_EClanImageFileType_PNG &&
-                    __webpack_require__.startsWith("data:image/png")
+                    3 !== _ && __webpack_require__.startsWith("data:image/png")
                       ? _("Unable to encode into the requested file format")
                       : _
                         ? ((_.file = (0, _._)(_, _.filename)),
@@ -2087,9 +2019,9 @@
       }
       function _(_) {
         switch (_) {
-          case _._.k_EClanImageFileType_PNG:
+          case 3:
             return "image/png";
-          case _._.k_EClanImageFileType_JPEG:
+          case 1:
             return "image/jpeg";
         }
       }

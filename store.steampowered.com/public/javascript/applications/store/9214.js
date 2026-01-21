@@ -5,14 +5,13 @@
   [9214],
   {
     17690: (e, t, i) => {
-      i.d(t, { IU: () => u, by: () => c, sc: () => _ });
-      var n = i(78327),
-        r = i(85044),
-        s = i(81393),
-        a = i(95679);
-      const _ = 0,
+      i.d(t, { IU: () => _, by: () => c, sc: () => u });
+      var s = i(78327),
+        n = i(85044),
+        r = i(81393);
+      const u = 0,
         l = "061818254b2c99ac49e6626adb128ed1282a392f",
-        u = 120;
+        _ = 120;
       class c {
         m_unAppID;
         m_bInitialized = !1;
@@ -48,20 +47,17 @@
           return this.m_eAppType;
         }
         BIsApplicationOrTool() {
-          return (
-            this.apptype == a.Td.k_EAppTypeTool ||
-            this.apptype == a.Td.k_EAppTypeApplication
-          );
+          return 4 == this.apptype || 2 == this.apptype;
         }
         BuildAppURL(e, t) {
           return e
-            ? n.TS.MEDIA_CDN_COMMUNITY_URL +
+            ? s.TS.MEDIA_CDN_COMMUNITY_URL +
                 "images/apps/" +
                 this.appid +
                 "/" +
                 e +
                 ".jpg"
-            : (0, r.t)(t);
+            : (0, n.t)(t);
         }
         DeserializeFromMessage(e) {
           (this.m_bInitialized = !0),
@@ -71,7 +67,7 @@
             (this.m_eAppType = e.app_type());
         }
         DeserializeFromAppOverview(e) {
-          e.icon_hash() && e.app_type() != a.Td.k_EAppTypeShortcut
+          e.icon_hash() && 1073741824 != e.app_type()
             ? ((this.m_bInitialized = !0),
               (this.m_strName = e.display_name()),
               (this.m_strIconURL = e.icon_hash()),
@@ -90,7 +86,7 @@
         }
         SerializeToCacheObject() {
           return (
-            (0, s.wT)(
+            (0, r.wT)(
               this.m_bInitialized,
               "Attempting to serialize an uninitialized AppInfo object for caching!",
             ),
@@ -107,238 +103,219 @@
       }
     },
     85044: (e, t, i) => {
-      i.d(t, { d: () => r, t: () => s });
-      var n = i(78327);
-      const r = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function s(e, t) {
+      i.d(t, { d: () => n, t: () => r });
+      var s = i(78327);
+      const n = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function r(e, t) {
         let i = ".jpg";
-        (e && "0000000000000000000000000000000000000000" !== e) || (e = r),
+        (e && "0000000000000000000000000000000000000000" !== e) || (e = n),
           44 == e.length && ((i = e.substr(-4)), (e = e.substr(0, 40)));
-        let s = n.TS.AVATAR_BASE_URL;
+        let r = s.TS.AVATAR_BASE_URL;
         return (
-          s ||
-            ((s = n.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (s += e.substr(0, 2) + "/")),
-          (s += e),
-          t && "small" != t && (s += "_" + t),
-          (s += i),
-          s
+          r ||
+            ((r = s.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (r += e.substr(0, 2) + "/")),
+          (r += e),
+          t && "small" != t && (r += "_" + t),
+          (r += i),
+          r
         );
       }
     },
     55263: (e, t, i) => {
       i.d(t, {
-        G6: () => o,
-        Gg: () => m,
-        MS: () => f,
-        N4: () => n,
-        Ow: () => p,
-        YM: () => g,
-        mZ: () => h,
-        t7: () => d,
-        zX: () => S,
+        G6: () => _,
+        Gg: () => d,
+        MS: () => h,
+        Ow: () => a,
+        YM: () => f,
+        mZ: () => o,
+        t7: () => c,
+        zX: () => m,
       });
-      var n,
-        r = i(41735),
-        s = i.n(r),
-        a = i(90626),
-        _ = i(37085),
-        l = i(15161),
+      var s = i(41735),
+        n = i.n(s),
+        r = i(90626),
         u = i(84933),
-        c = i(82097);
-      function o(e, t, i, r) {
-        const l = (0, a.useRef)(void 0),
-          o = (0, a.useRef)(void 0),
-          d = (0, u.CH)();
-        l.current = e;
-        const [p, m] = (0, a.useState)(void 0),
+        l = i(16021);
+      function _(e, t, i, s) {
+        const _ = (0, r.useRef)(void 0),
+          c = (0, r.useRef)(void 0),
+          a = (0, u.CH)();
+        _.current = e;
+        const [d, o] = (0, r.useState)(void 0),
           {
-            include_assets: h,
-            include_release: I,
-            include_platforms: S,
+            include_assets: p,
+            include_release: m,
+            include_platforms: h,
             include_all_purchase_options: f,
-            include_screenshots: g,
-            include_trailers: A,
-            include_ratings: v,
-            include_tag_count: k,
-            include_reviews: b,
-            include_basic_info: U,
-            include_supported_languages: y,
-            include_full_description: T,
-            include_included_items: C,
-            include_assets_without_overrides: E,
-            apply_user_filters: R,
+            include_screenshots: I,
+            include_trailers: g,
+            include_ratings: A,
+            include_tag_count: v,
+            include_reviews: S,
+            include_basic_info: b,
+            include_supported_languages: U,
+            include_full_description: y,
+            include_included_items: R,
+            include_assets_without_overrides: G,
+            apply_user_filters: T,
             include_links: L,
           } = i;
         if (
-          ((0, a.useEffect)(() => {
+          ((0, r.useEffect)(() => {
             const i = {
-              include_assets: h,
-              include_release: I,
-              include_platforms: S,
+              include_assets: p,
+              include_release: m,
+              include_platforms: h,
               include_all_purchase_options: f,
-              include_screenshots: g,
-              include_trailers: A,
-              include_ratings: v,
-              include_tag_count: k,
-              include_reviews: b,
-              include_basic_info: U,
-              include_supported_languages: y,
-              include_full_description: T,
-              include_included_items: C,
-              include_assets_without_overrides: E,
-              apply_user_filters: R,
+              include_screenshots: I,
+              include_trailers: g,
+              include_ratings: A,
+              include_tag_count: v,
+              include_reviews: S,
+              include_basic_info: b,
+              include_supported_languages: U,
+              include_full_description: y,
+              include_included_items: R,
+              include_assets_without_overrides: G,
+              apply_user_filters: T,
               include_links: L,
             };
-            let n = null;
+            let r = null;
             return (
               !e ||
                 e < 0 ||
-                c.A.Get().BHasStoreItem(e, t, i) ||
-                (void 0 !== p && r && r == o.current) ||
-                (r !== o.current && (m(void 0), (o.current = r)),
-                (n = s().CancelToken.source()),
-                c.A.Get()
+                l.A.Get().BHasStoreItem(e, t, i) ||
+                (void 0 !== d && s && s == c.current) ||
+                (s !== c.current && (o(void 0), (c.current = s)),
+                (r = n().CancelToken.source()),
+                l.A.Get()
                   .QueueStoreItemRequest(e, t, i)
                   .then((t) => {
-                    n?.token.reason ||
-                      l.current !== e ||
-                      m(t == _.d.k_EResultOK),
-                      d();
+                    r?.token.reason || _.current !== e || o(1 == t), a();
                   })),
-              () => n?.cancel("useStoreItemCache: unmounting")
+              () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, p, h, I, S, f, g, A, v, k, b, U, y, T, C, E, R, L, d]),
+          }, [e, t, s, d, p, m, h, f, I, g, A, v, S, b, U, y, R, G, T, L, a]),
           !e)
         )
-          return [null, n.k_EStoreItemCacheState_Unavailable];
-        if (!1 === p) return [void 0, n.k_EStoreItemCacheState_Unavailable];
-        if (c.A.Get().BIsStoreItemMissing(e, t))
-          return [void 0, n.k_EStoreItemCacheState_Unavailable];
-        if (!c.A.Get().BHasStoreItem(e, t, i))
-          return [void 0, n.k_EStoreItemCacheState_Loading];
-        const G = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return G
-          ? [G, n.k_EStoreItemCacheState_Found]
-          : [null, n.k_EStoreItemCacheState_Unavailable];
+          return [null, 2];
+        if (!1 === d) return [void 0, 2];
+        if (l.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
+        if (!l.A.Get().BHasStoreItem(e, t, i)) return [void 0, 1];
+        const z = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return z ? [z, 3] : [null, 2];
+      }
+      function c(e, t, i) {
+        return _(e, 0, t, i);
+      }
+      function a(e, t, i) {
+        return _(e, 2, t, i);
       }
       function d(e, t, i) {
-        return o(e, l.c6.k_EStoreItemType_App, t, i);
+        return _(e, 1, t, i);
       }
-      function p(e, t, i) {
-        return o(e, l.c6.k_EStoreItemType_Bundle, t, i);
+      function o(e, t, i) {
+        const [s, n] = _(e, t, i);
+        let r;
+        1 != s?.GetStoreItemType() ||
+          s.GetAssets()?.GetHeaderURL() ||
+          1 != s?.GetIncludedAppIDs().length ||
+          (r = s.GetIncludedAppIDs()[0]);
+        const [u, l] = c(r, i);
+        return r && u?.BIsVisible() ? [u, l] : [s, n];
       }
-      function m(e, t, i) {
-        return o(e, l.c6.k_EStoreItemType_Package, t, i);
-      }
-      function h(e, t, i) {
-        const [n, r] = o(e, t, i);
-        let s;
-        n?.GetStoreItemType() != l.c6.k_EStoreItemType_Package ||
-          n.GetAssets()?.GetHeaderURL() ||
-          1 != n?.GetIncludedAppIDs().length ||
-          (s = n.GetIncludedAppIDs()[0]);
-        const [a, _] = d(s, i);
-        return s && a?.BIsVisible() ? [a, _] : [n, r];
-      }
-      function I(e, t, i, r) {
+      function p(e, t, i, s) {
         const _ = (0, u.CH)(),
           {
-            include_assets: l,
-            include_release: o,
+            include_assets: c,
+            include_release: a,
             include_platforms: d,
-            include_all_purchase_options: p,
-            include_screenshots: m,
-            include_trailers: h,
-            include_ratings: I,
-            include_tag_count: S,
-            include_reviews: f,
+            include_all_purchase_options: o,
+            include_screenshots: p,
+            include_trailers: m,
+            include_ratings: h,
+            include_tag_count: f,
+            include_reviews: I,
             include_basic_info: g,
             include_supported_languages: A,
             include_full_description: v,
-            include_included_items: k,
+            include_included_items: S,
             include_assets_without_overrides: b,
             apply_user_filters: U,
             include_links: y,
           } = i;
         if (
-          ((0, a.useEffect)(() => {
+          ((0, r.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const i = {
-                include_assets: l,
-                include_release: o,
+                include_assets: c,
+                include_release: a,
                 include_platforms: d,
-                include_all_purchase_options: p,
-                include_screenshots: m,
-                include_trailers: h,
-                include_ratings: I,
-                include_tag_count: S,
-                include_reviews: f,
+                include_all_purchase_options: o,
+                include_screenshots: p,
+                include_trailers: m,
+                include_ratings: h,
+                include_tag_count: f,
+                include_reviews: I,
                 include_basic_info: g,
                 include_supported_languages: A,
                 include_full_description: v,
-                include_included_items: k,
+                include_included_items: S,
                 include_assets_without_overrides: b,
                 apply_user_filters: U,
                 include_links: y,
               },
-              n = e.filter(
+              s = e.filter(
                 (e) =>
                   !(
-                    c.A.Get().BHasStoreItem(e, t, i) ||
-                    c.A.Get().BIsStoreItemMissing(e, t)
+                    l.A.Get().BHasStoreItem(e, t, i) ||
+                    l.A.Get().BIsStoreItemMissing(e, t)
                   ),
               );
-            if (0 == n.length) return;
-            const r = s().CancelToken.source(),
-              a = n.map((e) => c.A.Get().QueueStoreItemRequest(e, t, i));
+            if (0 == s.length) return;
+            const r = n().CancelToken.source(),
+              u = s.map((e) => l.A.Get().QueueStoreItemRequest(e, t, i));
             return (
-              Promise.all(a).then(() => {
+              Promise.all(u).then(() => {
                 r.token.reason || _();
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, _, l, o, d, p, m, h, I, S, f, g, A, v, k, b, U, y]),
+          }, [e, t, s, _, c, a, d, o, p, m, h, f, I, g, A, v, S, b, U, y]),
           !e)
         )
-          return n.k_EStoreItemCacheState_Unavailable;
+          return 2;
         if (
           !e.every(
             (e) =>
-              c.A.Get().BHasStoreItem(e, t, i) ||
-              c.A.Get().BIsStoreItemMissing(e, t),
+              l.A.Get().BHasStoreItem(e, t, i) ||
+              l.A.Get().BIsStoreItemMissing(e, t),
           )
         )
-          return n.k_EStoreItemCacheState_Loading;
+          return 1;
         return e.every((e) =>
-          c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
+          l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
         )
-          ? n.k_EStoreItemCacheState_Found
-          : n.k_EStoreItemCacheState_Unavailable;
+          ? 3
+          : 2;
       }
-      function S(e, t, i) {
-        return I(e, l.c6.k_EStoreItemType_App, t, i);
+      function m(e, t, i) {
+        return p(e, 0, t, i);
       }
-      function f(e, t, i) {
-        return I(e, l.c6.k_EStoreItemType_Bundle, t, i);
+      function h(e, t, i) {
+        return p(e, 2, t, i);
       }
-      function g() {
-        a.useEffect(
+      function f() {
+        r.useEffect(
           () => (
-            c.A.Get().SetReturnUnavailableItems(!0),
-            () => c.A.Get().SetReturnUnavailableItems(!1)
+            l.A.Get().SetReturnUnavailableItems(!0),
+            () => l.A.Get().SetReturnUnavailableItems(!1)
           ),
           [],
         );
       }
-      !(function (e) {
-        (e[(e.k_EStoreItemCacheState_Loading = 1)] =
-          "k_EStoreItemCacheState_Loading"),
-          (e[(e.k_EStoreItemCacheState_Unavailable = 2)] =
-            "k_EStoreItemCacheState_Unavailable"),
-          (e[(e.k_EStoreItemCacheState_Found = 3)] =
-            "k_EStoreItemCacheState_Found");
-      })(n || (n = {}));
     },
   },
 ]);

@@ -10,55 +10,10 @@
         _: () => _,
       });
       var _,
-        _,
-        _,
-        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EAssetPropertyType_Unknown = 0)] =
-          "k_EAssetPropertyType_Unknown"),
-          (_[(_.k_EAssetPropertyType_Float = 1)] =
-            "k_EAssetPropertyType_Float"),
-          (_[(_.k_EAssetPropertyType_Int = 2)] = "k_EAssetPropertyType_Int"),
-          (_[(_.k_EAssetPropertyType_String = 3)] =
-            "k_EAssetPropertyType_String"),
-          (_[(_.k_EAssetPropertyType_MAX = 4)] = "k_EAssetPropertyType_MAX");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ETradeOfferStateInvalid = 1)] = "k_ETradeOfferStateInvalid"),
-            (_[(_.k_ETradeOfferStateActive = 2)] = "k_ETradeOfferStateActive"),
-            (_[(_.k_ETradeOfferStateAccepted = 3)] =
-              "k_ETradeOfferStateAccepted"),
-            (_[(_.k_ETradeOfferStateCountered = 4)] =
-              "k_ETradeOfferStateCountered"),
-            (_[(_.k_ETradeOfferStateExpired = 5)] =
-              "k_ETradeOfferStateExpired"),
-            (_[(_.k_ETradeOfferStateCanceled = 6)] =
-              "k_ETradeOfferStateCanceled"),
-            (_[(_.k_ETradeOfferStateDeclined = 7)] =
-              "k_ETradeOfferStateDeclined"),
-            (_[(_.k_ETradeOfferStateInvalidItems = 8)] =
-              "k_ETradeOfferStateInvalidItems"),
-            (_[(_.k_ETradeOfferStateCreatedNeedsConfirmation = 9)] =
-              "k_ETradeOfferStateCreatedNeedsConfirmation"),
-            (_[(_.k_ETradeOfferStateCanceledBySecondFactor = 10)] =
-              "k_ETradeOfferStateCanceledBySecondFactor"),
-            (_[(_.k_ETradeOfferStateInEscrow = 11)] =
-              "k_ETradeOfferStateInEscrow"),
-            (_[(_.k_ETradeOfferStateReverted = 12)] =
-              "k_ETradeOfferStateReverted");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ETradeOfferConfirmationMethod_Invalid = 0)] =
-            "k_ETradeOfferConfirmationMethod_Invalid"),
-            (_[(_.k_ETradeOfferConfirmationMethod_Email = 1)] =
-              "k_ETradeOfferConfirmationMethod_Email"),
-            (_[(_.k_ETradeOfferConfirmationMethod_MobileApp = 2)] =
-              "k_ETradeOfferConfirmationMethod_MobileApp");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -479,7 +434,7 @@
                   },
                   actions: {
                     _: 10,
-                    _: _,
+                    _,
                     _: !0,
                     _: !0,
                   },
@@ -491,7 +446,7 @@
                   },
                   owner_actions: {
                     _: 12,
-                    _: _,
+                    _,
                     _: !0,
                     _: !0,
                   },
@@ -543,7 +498,7 @@
                   },
                   market_actions: {
                     _: 21,
-                    _: _,
+                    _,
                     _: !0,
                     _: !0,
                   },
@@ -596,6 +551,16 @@
                   container_properties: {
                     _: 33,
                     _: _,
+                  },
+                  market_bucket_group_name: {
+                    _: 34,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  market_bucket_group_id: {
+                    _: 35,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),

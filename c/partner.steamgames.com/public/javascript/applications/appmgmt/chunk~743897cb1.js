@@ -2263,20 +2263,39 @@
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          super(),
+            _.prototype.elanguage || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  elanguage: {
+                    _: 1,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
         }
         toObject(_ = !1) {
           return _.toObject(_, this);
         }
         static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
+          return _._(_._(), _, _);
         }
         static fromObject(_) {
-          return new _();
+          return _._(_._(), _);
         }
         static deserializeBinary(_) {
           let _ = new (_().BinaryReader)(_),
@@ -2284,13 +2303,15 @@
           return _.deserializeBinaryFromReader(_, _);
         }
         static deserializeBinaryFromReader(_, _) {
-          return _;
+          return _._(_.MBF(), _, _);
         }
         serializeBinary() {
           var _ = new (_().BinaryWriter)();
           return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
         }
-        static serializeBinaryToWriter(_, _) {}
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
         serializeBase64String() {
           var _ = new (_().BinaryWriter)();
           return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
@@ -2410,6 +2431,21 @@
                     _: 6,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  localized_title: {
+                    _: 7,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  localized_desc: {
+                    _: 8,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  available_until: {
+                    _: 9,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -11860,10 +11896,7 @@
               let _ = (0, _._)(_(_.args));
               if (!_) {
                 const _ = _.children;
-                "string" == typeof _ &&
-                  (__webpack_require__.startsWith("http://") ||
-                    __webpack_require__.startsWith("https://")) &&
-                  (_ = (0, _._)(_));
+                "string" == typeof _ && (0, _._)(_) && (_ = (0, _._)(_));
               }
               const _ = "button" == _(_.args, "style") ? _().LinkButton : null,
                 _ = _ && _(_.args, "buttoncolor");
@@ -29531,10 +29564,6 @@
           (_.k_TrailerAsPoster = "poster"),
           (_.k_TrailerAsMicro = "micro");
       })(_ || (_ = {}));
-      const _ = {
-        include_trailers: !0,
-        include_assets: !0,
-      };
       function _(_) {
         const {
             embedStyle: _,
@@ -29545,7 +29574,12 @@
             trailerBaseID: _,
           } = _,
           [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _._)(__webpack_require__, _);
+          _ = (0, _.useMemo)(
+            () => ({
+              appid: __webpack_require__,
+            }),
+            [__webpack_require__],
+          );
         switch (_) {
           case _.k_TrailerAsButton:
           case _.k_TrailerAsPill:
@@ -29568,13 +29602,12 @@
                 _.createElement(_.jGG, null),
                 _ || (0, _._)("#EventEmail_WatchNow"),
               ),
-              _ &&
-                _.createElement(_._, {
-                  storeItem: _,
-                  bShowModal: _,
-                  trailerBaseID: _,
-                  hideModal: () => _(!1),
-                }),
+              _.createElement(_._, {
+                _: _,
+                bShowModal: _,
+                trailerBaseID: _,
+                hideModal: () => _(!1),
+              }),
             );
           default:
           case _.k_TrailerAsFull:
@@ -30616,144 +30649,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = {};
-      (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 6696, 19))),
-        (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 58906, 19))),
-        (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 53473, 19))),
-        (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 83899, 19))),
-        (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 84925, 19))),
-        (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 69902, 19))),
-        (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 80716, 19))),
-        (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 81663, 19))),
-        (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 48484, 19))),
-        (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 66810, 19))),
-        (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 13744, 19))),
-        (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 62101, 19))),
-        (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 68948, 19))),
-        (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 2916, 19))),
-        (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 40195, 19))),
-        (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 84259, 19))),
-        (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 24475, 19))),
-        (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 36884, 19))),
-        (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 15269, 19))),
-        (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 96865, 19))),
-        (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 71391, 19))),
-        (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 64933, 19))),
-        (_.sc_schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 27503, 19))),
-        (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 44768, 19))),
-        (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 20876, 19))),
-        (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 75181, 19))),
-        (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 89779, 19))),
-        (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 98970, 19))),
-        (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 87996, 19))),
-        (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 47306, 19))),
-        (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 72539, 19)));
-      const _ = (0, __webpack_require__("chunkid")._)(async function (_) {
-          if (_[_]) return _[_]();
-        }),
-        _ = {
-          PerYear: 31536e3,
-          PerMonth: 2628e3,
-          PerWeek: 604800,
-          PerDay: 86400,
-          PerHour: 3600,
-          PerMinute: 60,
-        };
-      var _;
       function _(_) {
         const _ = _.context.event,
           _ = _.context.showErrorInfo,
@@ -31017,39 +30914,7 @@
                     null,
                     (0, _._)(
                       "#UserPolls_status_N_TimeRemaining",
-                      (function (_) {
-                        const _ = Math.floor(_ / _.PerYear),
-                          _ = Math.floor(_ / _.PerMonth),
-                          _ = Math.floor((_ % _.PerMonth) / _.PerDay),
-                          _ = Math.floor((_ % _.PerDay) / _.PerHour),
-                          _ = Math.floor((_ % _.PerHour) / _.PerMinute);
-                        return (
-                          (_ %= _.PerMinute),
-                          _ > 0
-                            ? _.Localize("#TimeRemaining_MoreThanOneYear")
-                            : _ > 0
-                              ? _.Localize("#TimeRemaining_MonthsDays", _, _)
-                              : _ > 0
-                                ? _.Localize(
-                                    "#TimeRemaining_DaysHoursMinutes",
-                                    _,
-                                    _.toString().padStart(2, "0"),
-                                    _.toString().padStart(2, "0"),
-                                  )
-                                : _ > 0
-                                  ? _.Localize(
-                                      "#TimeRemaining_HoursMinutesSeconds",
-                                      _.toString().padStart(2, "0"),
-                                      _.toString().padStart(2, "0"),
-                                      _.toString().padStart(2, "0"),
-                                    )
-                                  : _.Localize(
-                                      "#TimeRemaining_MinutesSeconds",
-                                      _.toString().padStart(2, "0"),
-                                      _.toString().padStart(2, "0"),
-                                    )
-                        );
-                      })(_ - _),
+                      (0, _._)(_ - _),
                     ),
                   ),
             ),
@@ -31113,11 +30978,6 @@
           ),
         );
       }
-      !(function (_) {
-        (_[(_.None = 0)] = "None"),
-          (_[(_.Ago = 1)] = "Ago"),
-          (_[(_.Remaining = 2)] = "Remaining");
-      })(_ || (_ = {}));
       let _ = null;
       function _() {
         return (
@@ -32607,19 +32467,17 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
-      __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid");
+      function _(..._) {
+        return _.join(" ");
+      }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -32668,78 +32526,83 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
-      function _(..._) {
-        return _.join(" ");
-      }
-      var _ = __webpack_require__("chunkid");
-      const _ = {
-        include_trailers: !0,
-        include_screenshots: !0,
-      };
       function _(_) {
-        const { info: _, bPopOutTrailerPlayback: __webpack_require__ } = _,
-          [_] = (0, _._)(_._, (0, _._)(_.type), _),
+        const { _: _, bPopOutTrailerPlayback: __webpack_require__ } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)(),
-          _ = _?.GetAllTrailers().GetHighlightTrailers(_),
-          _ = _?.length > 0 && _[0],
+          _ = _?.highlights?.filter((_) => !_ || _.all_ages),
+          _ = _ && _?.length > 0 ? _[0] : void 0,
           _ = _.useCallback(() => {
             _ && (__webpack_require__ ? _(!0) : _((_) => !_));
-          }, [_, __webpack_require__]),
-          _ = _
-            ? _.createElement(_, {
-                trailer: _,
-                bPlayVideo: _,
-                fnTogglePlayTrailer: _,
-              })
-            : null;
-        return _
-          ? _ || 0 !== _.GetScreenshots(_)?.length
-            ? _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().HilightGrid, _().MediaContainer),
-                },
-                _.createElement(_, {
-                  elFeaturedInCenter: _,
-                  storeItem: _,
-                }),
-                Boolean(__webpack_require__)
-                  ? _.createElement(_, {
-                      storeItem: _,
-                      bShowModal: _,
-                      hideModal: () => _(!1),
-                    })
-                  : _.createElement(_, {
-                      name: _.GetName(),
-                      trailer: _,
-                      bPlayVideo: _,
-                      fnTogglePlayTrailer: _,
-                      bControls: !0,
-                    }),
-              )
-            : (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                console.log(
-                  "appCapsule for appid: " + _?.GetAppID(),
-                  _.GetScreenshots(_),
-                ),
-              null)
-          : _.createElement(
+          }, [_, __webpack_require__]);
+        if (!_)
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().HilightGrid, _().MediaContainer),
+            },
+            _.createElement(_._, {
+              size: "medium",
+            }),
+          );
+        const _ = _
+          ? _.createElement(_, {
+              trailer: _,
+              bPlayVideo: _,
+              fnTogglePlayTrailer: _,
+            })
+          : null;
+        return _ ||
+          (_ && _.all_ages_screenshots && _.all_ages_screenshots.length > 0)
+          ? _.createElement(
               "div",
               {
                 className: (0, _._)(_().HilightGrid, _().MediaContainer),
               },
-              _.createElement(_._, {
-                size: "medium",
+              _.createElement(_, {
+                elFeaturedInCenter: _,
+                storeItemScreenshots: _,
+                trailer: _,
+                _: _,
+                name: _.name || "",
               }),
-            );
+              Boolean(__webpack_require__)
+                ? _.createElement(_, {
+                    _: _,
+                    bShowModal: _,
+                    hideModal: () => _(!1),
+                  })
+                : _.createElement(_, {
+                    name: _.name || "",
+                    trailer: _,
+                    bPlayVideo: _,
+                    fnTogglePlayTrailer: _,
+                    bControls: !0,
+                  }),
+            )
+          : null;
       }
       function _(_) {
         const {
             elFeaturedInCenter: _,
-            storeItem: __webpack_require__,
+            _: __webpack_require__,
+            name: _,
+            trailer: _,
+            storeItemScreenshots: _,
             featureElementclassName: _,
             bUseTrailerAsFirstThumb: _,
             bNoScreenShotModals: _,
@@ -32748,48 +32611,46 @@
           [_, _] = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _.useRef)(null),
-          [_, _] = (0, _.useState)(0),
-          _ = _ || (void 0 !== _ && -1 !== _) ? _ : 0,
+          [_, _] = (0, _.useState)(0);
+        if (!__webpack_require__) return null;
+        const _ = _ || (void 0 !== _ && -1 !== _) ? _ : 0,
           _ = new Array(),
           _ = new Array();
-        if (_) {
-          const _ = __webpack_require__
-              ?.GetAllTrailers()
-              .GetHighlightTrailers(_),
-            _ = _?.length > 0 && _[0];
+        _ &&
           _ &&
-            (_.push(
-              _.createElement(_, {
-                key: "trail_thumb_",
-                trailer: _,
-                bPlayVideo: !1,
-                fnTogglePlayTrailer: () => {},
-                onMouseEnter: () => _(0),
-                onMouseLeave: () => {
-                  const _ = _.current;
-                  _ && _(_.currentTime);
-                },
-              }),
-            ),
-            _.push(
-              _.createElement(_, {
-                key: "trail_inline",
-                ref: _,
-                name: __webpack_require__.GetName(),
-                trailer: _,
-                bControls: !1,
-                bPlayVideo: !0,
-                startTime: _,
-                fnTogglePlayTrailer: () => {},
-              }),
-            ));
-        }
-        const _ = __webpack_require__.GetScreenshots(_);
+          (_.push(
+            _.createElement(_, {
+              key: "trail_thumb_",
+              trailer: _,
+              bPlayVideo: !1,
+              fnTogglePlayTrailer: () => {},
+              onMouseEnter: () => _(0),
+              onMouseLeave: () => {
+                const _ = _.current;
+                _ && _(_.currentTime);
+              },
+            }),
+          ),
+          _.push(
+            _.createElement(_, {
+              key: "trail_inline",
+              ref: _,
+              name: _,
+              trailer: _,
+              bControls: !1,
+              bPlayVideo: !0,
+              startTime: _,
+              fnTogglePlayTrailer: () => {},
+            }),
+          ));
+        const _ = (
+          _ ? _?.all_ages_screenshots : _?.mature_content_screenshots
+        )?.filter(Boolean);
         if (
-          (_.forEach((_, _) => {
+          (_?.forEach((_, _) => {
             if ((_ || _ > 0) && _.length < 3) {
-              const _ = _(_, ".600x338").replace("http://", "https://"),
-                _ = _(_, ".800x600").replace("http://", "https://"),
+              const _ = (0, _._)(_, "thumb"),
+                _ = (0, _._)(_, "full"),
                 _ = _.length;
               _.push(
                 _.createElement(
@@ -32806,9 +32667,14 @@
                     onClick: _
                       ? void 0
                       : () => {
-                          const _ = [..._];
-                          for (let _ = 0; _ < _; ++_) _.push(_.shift());
-                          _(_);
+                          const _ = [...(_ || [])];
+                          if (_.length > 0) {
+                            for (let _ = 0; _ < _; ++_) {
+                              const _ = _.shift();
+                              _ && _.push(_);
+                            }
+                            _(_.map((_) => (0, _._)(_, "full")));
+                          }
                         },
                     onMouseEnter: () => _(_),
                   }),
@@ -32846,7 +32712,7 @@
             },
             Boolean(_ && (-1 === _ || void 0 === _))
               ? _.createElement(_.Fragment, null, _)
-              : _.createElement(_.Fragment, null, _[_]),
+              : _.createElement(_.Fragment, null, void 0 !== _ && _[_]),
           ),
           Boolean(_.length > 0) &&
             _.createElement(
@@ -32858,7 +32724,7 @@
               _,
               _.map((_, _) =>
                 _.createElement("div", {
-                  key: `app_${__webpack_require__?.GetAppID()}_${_}`,
+                  key: `app_${(0, _._)(__webpack_require__)}_${_}`,
                   className: _().ThumbnailCtn,
                 }),
               ),
@@ -32875,21 +32741,24 @@
           fnTogglePlayTrailer: _,
           startTime: _,
         } = _;
-        let _ = _.GetMicroTrailer();
-        (0, _.useEffect)(() => {
-          const _ = _?.current;
-          if (_ > 0 && _) {
-            const _ = () => {
-              _.currentTime = _;
-            };
-            return (
-              _.addEventListener("loadedmetadata", _),
-              () => {
-                _.removeEventListener("loadedmetadata", _);
-              }
-            );
-          }
-        }, [_, _]);
+        if (
+          ((0, _.useEffect)(() => {
+            const _ = _?.current;
+            if (null != _ && _ > 0 && _) {
+              const _ = () => {
+                _.currentTime = _ || 0;
+              };
+              return (
+                _.addEventListener("loadedmetadata", _),
+                () => {
+                  _.removeEventListener("loadedmetadata", _);
+                }
+              );
+            }
+          }, [_, _]),
+          !_)
+        )
+          return null;
         let _ = (0, _._)(_().VideoLargeContainer, _ && _().videoPlaying);
         return _.createElement(
           "div",
@@ -32899,11 +32768,11 @@
           },
           _.createElement(_, {
             name: __webpack_require__,
-            trailerCategory: _.GetTrailerCategory(),
+            trailerCategory: _.trailer_category,
             trailerDisplay: 1,
             mouseOver: !1,
           }),
-          Boolean(_) &&
+          Boolean(_ && _.microtrailer) &&
             _.createElement(
               "video",
               {
@@ -32913,17 +32782,17 @@
                 autoPlay: !0,
                 loop: !0,
                 muted: !0,
-                poster: _ > 0 ? void 0 : _.GetScreenshot(),
+                poster: null != _ && _ > 0 ? void 0 : _.screenshot_full,
               },
-              _.createElement("source", {
-                src: _.strWebMURL,
-                type: "video/webm",
-              }),
-              Boolean(!_._.IN_CLIENT) &&
-                _.createElement("source", {
-                  src: _.strMP4URL,
-                  type: "video/mp4",
-                }),
+              _.microtrailer?.map((_) =>
+                _._.IN_CLIENT && "video/mp4" == _.type
+                  ? null
+                  : _.createElement("source", {
+                      key: _.filename,
+                      src: (0, _._)(_, _.filename || ""),
+                      type: _.type,
+                    }),
+              ),
             ),
           _ &&
             _.createElement(
@@ -32935,33 +32804,43 @@
             ),
         );
       }
-      function _(_, _) {
-        const _ = _.replace(/\.[^\.]+$/g, "");
-        return _ + _ + _.slice(_.length);
-      }
       function _(_) {
         const {
-            storeItem: _,
+            _: _,
             bShowModal: __webpack_require__,
             trailerBaseID: _,
             hideModal: _,
           } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
           _ = (0, _.useMemo)(() => {
+            if (!_) return;
             if (_) {
-              const _ = _?.GetAllTrailers()
-                ?.GetAllTrailers(_)
-                .find((_) => _.GetTrailerID() == _);
+              const _ = [...(_.highlights || []), ...(_.other_trailers || [])]
+                .filter(Boolean)
+                .filter((_) => !_ || _.all_ages)
+                .find((_) => _.trailer_base_id == _);
               if (_) return _;
             }
-            const _ = _?.GetAllTrailers()?.GetHighlightTrailers(_);
+            const _ = (_.highlights || [])
+              .filter(Boolean)
+              .filter((_) => !_ || _.all_ages);
             return _ && _.length > 0 ? _[0] : void 0;
           }, [_, _, _]),
           _ = _.useId(),
           _ = _.useId();
-        if (!_) return null;
-        const _ = _.GetTrailersDash(),
-          _ = _.GetTrailerHls();
+        if (!_ || !_.adaptive_trailers) return null;
+        const _ = _.adaptive_trailers
+            .filter(
+              (_) =>
+                ("dash_h264" == _.encoding || "dash_av1" == _.encoding) &&
+                _.cdn_path,
+            )
+            .map((_) => (0, _._)(_, _.cdn_path || "")),
+          _ = _.adaptive_trailers
+            .filter((_) => "hls_h264" == _.encoding && _.cdn_path)
+            .map((_) => (0, _._)(_, _.cdn_path || ""));
         return 0 == _?.length
           ? null
           : _.createElement(
@@ -32984,9 +32863,9 @@
                   },
                   _.createElement(_._, {
                     dashManifests: _ || [],
-                    hlsManifest: _ || "",
-                    screenshot: "",
-                    altText: "",
+                    hlsManifest: (_.length > 0 && _?.[0]) || "",
+                    screenshot: (0, _._)(_),
+                    altText: _.trailer_name,
                     muteWhenAutoplayBlocked: !0,
                   }),
                 ),
@@ -32998,7 +32877,7 @@
                       display: "none",
                     },
                   },
-                  _.GetName(),
+                  _?.name || "",
                 ),
                 _.createElement(
                   "div",
@@ -33008,7 +32887,7 @@
                       display: "none",
                     },
                   },
-                  _.GetName(),
+                  _.trailer_name,
                 ),
               ),
             );
@@ -33034,7 +32913,7 @@
             onMouseLeave: _,
           },
           _.createElement("img", {
-            src: _.GetScreenshot(),
+            src: (0, _._)(_),
           }),
           _.createElement(
             "div",

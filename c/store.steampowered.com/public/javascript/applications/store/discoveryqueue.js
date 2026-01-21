@@ -716,6 +716,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
@@ -777,6 +779,11 @@
                     _: 9,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  saved_hardware_id: {
+                    _: 10,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
                   },
                 },
               }),
@@ -1332,6 +1339,16 @@
                     _: _,
                     _: !0,
                     _: !0,
+                  },
+                  saved_hardware_id: {
+                    _: 56,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  hardware_cluster_id: {
+                    _: 57,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
                   },
                 },
               }),
@@ -2282,8 +2299,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       new _._("DiscoveryQueueApp").Debug;
       function _(_) {
@@ -2414,6 +2429,7 @@
             appAriaIDs: _,
           } = _,
           [_] = (0, _._)(_, _._),
+          _ = (0, _._)(_),
           { bIsIgnored: _, fnUpdateIgnored: _ } = (0, _._)(_),
           { bIsWishlisted: _, fnUpdateWishlist: _ } = (0, _._)(_),
           _ = _(_, _, _, _),
@@ -2523,10 +2539,7 @@
                   },
                   _.BHasDemo() &&
                     _.createElement(_._, {
-                      info: {
-                        _: _.GetAppID(),
-                        type: (0, _._)(_.GetStoreItemType(), _.GetAppType()),
-                      },
+                      _: _,
                       className: (0, _._)(
                         _().QueueButton,
                         _().Primary,
@@ -2621,6 +2634,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("DiscoveryQueueWizard").Debug,
         _ = 1,
@@ -2938,13 +2952,13 @@
                         index: _ + _,
                         bShowMinimizedDisplay: _,
                         selectedIndex: _,
-                        bPreferDemoStorePage: _,
+                        bPreferDemoStorePage: Boolean(_),
                         mapViewedAppCount: _,
                         fnCloseModal: __webpack_require__,
                         fnLoadNextQueue: () => _(!1),
                         fnAdvance: _,
                         bSkipAppRequestPending: Boolean(0 != _),
-                        showAOAutoPlayWarning: _,
+                        showAOAutoPlayWarning: Boolean(_),
                       }),
                   ),
                 ),
@@ -3073,22 +3087,19 @@
           _ = (0, _._)(),
           _ = (0, _._)(2, _._.LANGUAGE, !1),
           [_, _] = _.useState(0),
-          [_, _] = _.useState(0);
+          [_, _] = _.useState(0),
+          { data: _ } = (0, _._)();
         _.useEffect(() => {
           _ &&
             !_ &&
+            _ &&
             _._.Get()
               .HintLoad()
               .then(() => {
                 _._.Get()
                   .LoadSkippedApps(_, _)
                   .then((_) => {
-                    _(
-                      _.reduce(
-                        (_, _) => (_._.Get().BIsGameWishlisted(_) ? _ + 1 : _),
-                        0,
-                      ),
-                    ),
+                    _(_.reduce((_, _) => (_.has(_) ? _ + 1 : _), 0)),
                       _(
                         _.reduce(
                           (_, _) => (_._.Get().BIsGameIgnored(_) ? _ + 1 : _),
@@ -3098,7 +3109,7 @@
                       _(!0);
                   });
               });
-        }, [_, _, _, _]);
+        }, [_, _, _, _, _]);
         const [_, _] = _.useState(!1),
           _ = (0, _._)(_, _),
           _ = (0, _._)("DiscoveryQueueSummary"),

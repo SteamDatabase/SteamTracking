@@ -121,108 +121,104 @@
     },
     14336: (e, t, a) => {
       "use strict";
-      a.d(t, { mK: () => h, DW: () => v, js: () => f, tb: () => g });
+      a.d(t, { mK: () => g, DW: () => v, js: () => p, tb: () => E });
       var n = a(90626),
-        i = a(20194),
-        c = a(54806),
-        r = a(22837),
-        o = a(23809),
-        s = a(44654),
-        l = a(10622),
-        _ = a(17720),
-        m = a(37735),
-        u = a(58632),
-        d = a.n(u);
-      function p(e, t) {
-        return new (d())(
+        c = a(20194),
+        r = a(54806),
+        s = a(23809),
+        i = a(44654),
+        o = a(10622),
+        l = a(17720),
+        _ = a(37735),
+        m = a(58632),
+        u = a.n(m);
+      function d(e, t) {
+        return new (u())(
           async (t) => {
             const a = [...t],
-              n = await m.xt.GetPlayerLinkDetails(e, { steamids: a }),
-              i = new Map();
+              n = await _.xt.GetPlayerLinkDetails(e, { steamids: a }),
+              c = new Map();
             return (
               n
                 .Body()
                 .accounts()
                 .forEach((e) => {
                   const t = e.toObject();
-                  i.set(t.public_data.steamid, t);
+                  c.set(t.public_data.steamid, t);
                 }),
-              a.map((e) => i.get(e) ?? null)
+              a.map((e) => c.get(e) ?? null)
             );
           },
           { maxBatchSize: 100, cache: !1, ...t },
         );
       }
-      function f(e) {
-        const t = (0, o.KV)(),
-          a = n.useContext(E);
-        return (0, i.I)(h(a, t, e));
+      function p(e) {
+        const t = (0, s.KV)(),
+          a = n.useContext(f);
+        return (0, c.I)(g(a, t, e));
       }
       function v(e) {
-        const t = (0, o.KV)(),
-          a = n.useContext(E);
-        return (0, c.E)({ queries: e.map((e) => h(a, t, e)) });
+        const t = (0, s.KV)(),
+          a = n.useContext(f);
+        return (0, r.E)({ queries: e.map((e) => g(a, t, e)) });
       }
-      const E = n.createContext({
+      const f = n.createContext({
         loadPersonaState: async (e, t) => {
           if (null == e) return null;
           const a = await (function (e) {
-            return (k ??= p(e));
-          })(t).load(_.b.InitFromAccountID(e).ConvertTo64BitString());
+            return (h ??= d(e));
+          })(t).load(l.b.InitFromAccountID(e).ConvertTo64BitString());
           return (function (e, t) {
-            let a = new l.Z(e);
+            let a = new o.Z(e);
             const n = t?.public_data,
-              i = t?.private_data;
+              c = t?.private_data;
             (a.m_bInitialized = !!t),
-              (a.m_ePersonaState =
-                i?.persona_state ?? r.p2.k_EPersonaStateOffline),
+              (a.m_ePersonaState = c?.persona_state ?? 0),
               (a.m_strAvatarHash = n?.sha_digest_avatar
-                ? (0, s.Kx)(n.sha_digest_avatar)
-                : l.dV),
+                ? (0, i.Kx)(n.sha_digest_avatar)
+                : o.dV),
               (a.m_strPlayerName = n?.persona_name ?? e.ConvertTo64BitString()),
-              (a.m_strAccountName = i?.account_name),
-              i?.persona_state_flags &&
-                (a.m_unPersonaStateFlags = i?.persona_state_flags);
-            i?.game_id && (a.m_gameid = i?.game_id);
-            i?.game_server_ip_address &&
-              (a.m_unGameServerIP = i?.game_server_ip_address);
-            i?.lobby_steam_id && (a.m_game_lobby_id = i?.lobby_steam_id);
-            i?.game_extra_info && (a.m_strGameExtraInfo = i?.game_extra_info);
+              (a.m_strAccountName = c?.account_name),
+              c?.persona_state_flags &&
+                (a.m_unPersonaStateFlags = c?.persona_state_flags);
+            c?.game_id && (a.m_gameid = c?.game_id);
+            c?.game_server_ip_address &&
+              (a.m_unGameServerIP = c?.game_server_ip_address);
+            c?.lobby_steam_id && (a.m_game_lobby_id = c?.lobby_steam_id);
+            c?.game_extra_info && (a.m_strGameExtraInfo = c?.game_extra_info);
             n?.profile_url && (a.m_strProfileURL = n.profile_url);
             return a;
-          })(_.b.InitFromAccountID(e), a);
+          })(l.b.InitFromAccountID(e), a);
         },
       });
-      function g() {
-        return n.useContext(E);
+      function E() {
+        return n.useContext(f);
       }
-      function h(e, t, a) {
-        const n = "string" == typeof a ? new _.b(a).GetAccountID() : a;
+      function g(e, t, a) {
+        const n = "string" == typeof a ? new l.b(a).GetAccountID() : a;
         return {
           queryKey: ["PlayerSummary", n],
           queryFn: () => e.loadPersonaState(n, t),
           enabled: !!n,
         };
       }
-      let k;
+      let h;
     },
     9555: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { AccountPreferencesRoutes: () => ot, default: () => st });
+      a.r(t), a.d(t, { AccountPreferencesRoutes: () => Ze, default: () => et });
       var n = a(90626),
-        i = a(92757),
-        c = a(34629),
-        r = a(14947),
-        o = a(37085),
-        s = (a(68797), a(78327)),
-        l = a(82915),
-        _ = a(41735),
-        m = a.n(_),
-        u = a(61859);
-      class d {
+        c = a(92757),
+        r = a(34629),
+        s = a(14947),
+        i = (a(68797), a(78327)),
+        o = a(41735),
+        l = a.n(o),
+        _ = a(61859);
+      class m {
         m_Preferences = void 0;
         constructor(e) {
-          (0, r.Gn)(this),
+          (0, s.Gn)(this),
             (this.m_Preferences = e),
             (this.m_Preferences.content_customization &&
               !Array.isArray(this.m_Preferences.content_customization)) ||
@@ -239,10 +235,8 @@
             (void 0 !== this.m_Preferences.utm_enabled &&
               null !== this.m_Preferences.utm_enabled) ||
               (this.m_Preferences.utm_enabled = !0),
-            (this.m_Preferences.preference_state !=
-              l.CY.k_EPrivacyCookiePreferenceState_DefaultAllowAll &&
-              this.m_Preferences.preference_state !=
-                l.CY.k_EPrivacyCookiePreferenceState_AllowAll) ||
+            (0 != this.m_Preferences.preference_state &&
+              1 != this.m_Preferences.preference_state) ||
               ((this.m_Preferences.valve_analytics.product_impressions_tracking =
                 !0),
               (this.m_Preferences.content_customization.recentapps = !0),
@@ -251,10 +245,7 @@
               (this.m_Preferences.third_party_content.twitter = !0),
               (this.m_Preferences.third_party_content.vimeo = !0),
               (this.m_Preferences.third_party_content.youtube = !0)),
-            this.m_Preferences.version ==
-              l.ie.k_EPrivacyCookiePreferencesVersion_Invalid &&
-              (this.m_Preferences.version =
-                l.ie.k_EPrivacyCookiePreferencesVersion_LATEST);
+            0 == this.m_Preferences.version && (this.m_Preferences.version = 1);
         }
         GetVersion() {
           return this.m_Preferences.version;
@@ -264,26 +255,17 @@
         }
         BIsAllowAll() {
           return (
-            this.m_Preferences.preference_state ==
-              l.CY.k_EPrivacyCookiePreferenceState_AllowAll ||
-            this.m_Preferences.preference_state ==
-              l.CY.k_EPrivacyCookiePreferenceState_DefaultAllowAll
+            1 == this.m_Preferences.preference_state ||
+            0 == this.m_Preferences.preference_state
           );
         }
         BIsRejectAll() {
-          return (
-            this.m_Preferences.preference_state ==
-            l.CY.k_EPrivacyCookiePreferenceState_RejectAll
-          );
+          return 2 == this.m_Preferences.preference_state;
         }
         SetPreferenceState(e) {
           if (this.m_Preferences.preference_state != e) {
-            if (
-              ((this.m_Preferences.preference_state = e),
-              e == l.CY.k_EPrivacyCookiePreferenceState_AllowAll ||
-                e == l.CY.k_EPrivacyCookiePreferenceState_RejectAll)
-            ) {
-              let t = e == l.CY.k_EPrivacyCookiePreferenceState_AllowAll;
+            if (((this.m_Preferences.preference_state = e), 1 == e || 2 == e)) {
+              let t = 1 == e;
               (this.m_Preferences.content_customization.recentapps = t),
                 (this.m_Preferences.third_party_analytics.google_analytics = t),
                 (this.m_Preferences.third_party_content.sketchfab = t),
@@ -345,23 +327,21 @@
             this.PostCookieSettings();
         }
         ProcessToggle() {
-          (this.m_Preferences.preference_state =
-            l.CY.k_EPrivacyCookiePreferenceState_Customized),
-            this.PostCookieSettings();
+          (this.m_Preferences.preference_state = 3), this.PostCookieSettings();
         }
         async PostCookieSettings() {
-          const e = s.TS.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
+          const e = i.TS.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
             t = new FormData();
-          t.set("sessionid", s.TS.SESSIONID),
+          t.set("sessionid", i.TS.SESSIONID),
             t.append("cookiepreferences", JSON.stringify(this.m_Preferences));
           try {
-            let a = await m().post(e, t, { withCredentials: !0 });
-            if (200 != a.status || a?.data?.success != o.d.k_EResultOK)
+            let a = await l().post(e, t, { withCredentials: !0 });
+            if (200 != a.status || 1 != a?.data?.success)
               window.ShowAlertDialog(
-                (0, u.we)("#CookiePref_Error"),
-                (0, u.we)("#CookiePref_ErrorNotSaved"),
+                (0, _.we)("#CookiePref_Error"),
+                (0, _.we)("#CookiePref_ErrorNotSaved"),
               );
-            else if (a?.data?.success == o.d.k_EResultOK) {
+            else if (1 == a?.data?.success) {
               0;
               const { transfer_urls: e, transfer_params: t } = a.data;
               e && t && this.TransferCookiePreferencesToSites(e, t);
@@ -369,106 +349,102 @@
           } catch (e) {
             0,
               window.ShowAlertDialog(
-                (0, u.we)("#CookiePref_Error"),
-                (0, u.we)("#CookiePref_ErrorNotSaved"),
+                (0, _.we)("#CookiePref_Error"),
+                (0, _.we)("#CookiePref_ErrorNotSaved"),
               );
           }
         }
         TransferCookiePreferencesToSites(e, t) {
           const a = new FormData();
           a.set("transfer_params", t);
-          for (const t of e) m().post(t, a);
+          for (const t of e) l().post(t, a);
         }
       }
-      (0, c.Cg)([r.sH], d.prototype, "m_Preferences", void 0);
-      var p = a(75844),
-        f = a(53835),
-        v = a(72518),
-        E = a(52038),
-        g = a(76217),
-        h = a(12447),
-        k = a(45699);
-      let y;
-      const S = (0, p.PA)(() => {
+      (0, r.Cg)([s.sH], m.prototype, "m_Preferences", void 0);
+      var u = a(75844),
+        d = a(53835),
+        p = a(72518),
+        v = a(52038),
+        f = a(76217),
+        E = a(12447),
+        g = a(45699);
+      let h;
+      const w = (0, u.PA)(() => {
           let e = (function () {
-            if (!y) {
-              let e = (0, s.Tc)("cookiepreferences", "application_config");
-              y = new d(e);
+            if (!h) {
+              let e = (0, i.Tc)("cookiepreferences", "application_config");
+              h = new m(e);
             }
-            return y;
+            return h;
           })();
           const t = (0, n.useCallback)(() => {
-              e.SetPreferenceState(
-                l.CY.k_EPrivacyCookiePreferenceState_AllowAll,
-              );
+              e.SetPreferenceState(1);
             }, [e]),
             a = (0, n.useCallback)(() => {
-              e.SetPreferenceState(
-                l.CY.k_EPrivacyCookiePreferenceState_RejectAll,
-              );
+              e.SetPreferenceState(2);
             }, [e]);
           return n.createElement(
-            h.u,
+            E.u,
             { navID: "StoreCookiesSettings" },
             n.createElement(
               "div",
               {
-                className: (0, E.A)(
-                  v.CookieSettingsHeader,
+                className: (0, v.A)(
+                  p.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
               n.createElement(
                 "div",
                 null,
-                (0, u.we)("#CookiePref_OptionalCookies_Title"),
+                (0, _.we)("#CookiePref_OptionalCookies_Title"),
               ),
             ),
             n.createElement(
               "div",
               { className: "account_settings_container" },
               n.createElement(
-                g.Z,
-                { "flow-children": "row", className: v.ButtonGroup },
+                f.Z,
+                { "flow-children": "row", className: p.ButtonGroup },
                 n.createElement(
-                  k.ml,
+                  g.ml,
                   {
-                    className: (0, E.A)(
-                      v.AllButton,
-                      e.BIsRejectAll() ? v.ButtonHighlight : "",
+                    className: (0, v.A)(
+                      p.AllButton,
+                      e.BIsRejectAll() ? p.ButtonHighlight : "",
                     ),
                     onClick: a,
                   },
-                  (0, u.we)("#CookiePref_RejectAll"),
+                  (0, _.we)("#CookiePref_RejectAll"),
                 ),
                 n.createElement(
-                  k.ml,
+                  g.ml,
                   {
-                    className: (0, E.A)(
-                      v.AllButton,
-                      e.BIsAllowAll() ? v.ButtonHighlight : "",
+                    className: (0, v.A)(
+                      p.AllButton,
+                      e.BIsAllowAll() ? p.ButtonHighlight : "",
                     ),
                     onClick: t,
                   },
-                  (0, u.we)("#CookiePref_AcceptAll"),
+                  (0, _.we)("#CookiePref_AcceptAll"),
                 ),
               ),
-              n.createElement(w, { settings: e }),
-              n.createElement(T, { settings: e }),
+              n.createElement(y, { settings: e }),
+              n.createElement(S, { settings: e }),
               n.createElement(N, { settings: e }),
             ),
             n.createElement(
               "div",
               {
-                className: (0, E.A)(
-                  v.CookieSettingsHeader,
+                className: (0, v.A)(
+                  p.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
               n.createElement(
                 "div",
                 null,
-                (0, u.we)("#CookiePref_TechnicallyNeccesary_Title"),
+                (0, _.we)("#CookiePref_TechnicallyNeccesary_Title"),
               ),
             ),
             n.createElement(
@@ -477,121 +453,121 @@
               n.createElement(
                 "p",
                 null,
-                (0, u.we)("#CookiePref_TechnicallyNeccesary_Desc"),
+                (0, _.we)("#CookiePref_TechnicallyNeccesary_Desc"),
               ),
               n.createElement(
                 "div",
-                { className: v.CookieGroup },
+                { className: p.CookieGroup },
                 n.createElement(
                   "div",
-                  { className: v.NecessaryGroup },
+                  { className: p.NecessaryGroup },
                   n.createElement(
                     "span",
-                    { className: v.NecessaryTitle },
-                    (0, u.we)("#CookiePref_SessionID_Title"),
+                    { className: p.NecessaryTitle },
+                    (0, _.we)("#CookiePref_SessionID_Title"),
                   ),
                   n.createElement(
                     "span",
-                    { className: v.NecessaryDesc },
-                    (0, u.we)("#CookiePref_SessionID_Desc"),
+                    { className: p.NecessaryDesc },
+                    (0, _.we)("#CookiePref_SessionID_Desc"),
                   ),
                 ),
                 n.createElement(
                   "div",
-                  { className: v.NecessaryGroup },
+                  { className: p.NecessaryGroup },
                   n.createElement(
                     "span",
-                    { className: v.NecessaryTitle },
-                    (0, u.we)("#CookiePref_ShoppingCart_Title"),
+                    { className: p.NecessaryTitle },
+                    (0, _.we)("#CookiePref_ShoppingCart_Title"),
                   ),
                   n.createElement(
                     "span",
-                    { className: v.NecessaryDesc },
-                    (0, u.we)("#CookiePref_ShoppingCart_Desc"),
-                  ),
-                ),
-                n.createElement(
-                  "div",
-                  { className: v.NecessaryGroup },
-                  n.createElement(
-                    "span",
-                    { className: v.NecessaryTitle },
-                    (0, u.we)("#CookiePref_SteamCountry_Title"),
-                  ),
-                  n.createElement(
-                    "span",
-                    { className: v.NecessaryDesc },
-                    (0, u.we)("#CookiePref_SteamCountry_Desc"),
+                    { className: p.NecessaryDesc },
+                    (0, _.we)("#CookiePref_ShoppingCart_Desc"),
                   ),
                 ),
                 n.createElement(
                   "div",
-                  { className: v.NecessaryGroup },
+                  { className: p.NecessaryGroup },
                   n.createElement(
                     "span",
-                    { className: v.NecessaryTitle },
-                    (0, u.we)("#CookiePref_Timezone_Title"),
+                    { className: p.NecessaryTitle },
+                    (0, _.we)("#CookiePref_SteamCountry_Title"),
                   ),
                   n.createElement(
                     "span",
-                    { className: v.NecessaryDesc },
-                    (0, u.we)("#CookiePref_Timezone_Desc"),
-                  ),
-                ),
-                n.createElement(
-                  "div",
-                  { className: v.NecessaryGroup },
-                  n.createElement(
-                    "span",
-                    { className: v.NecessaryTitle },
-                    (0, u.we)("#CookiePref_BirthTime_Title"),
-                  ),
-                  n.createElement(
-                    "span",
-                    { className: v.NecessaryDesc },
-                    (0, u.we)("#CookiePref_BirthTime_Desc"),
+                    { className: p.NecessaryDesc },
+                    (0, _.we)("#CookiePref_SteamCountry_Desc"),
                   ),
                 ),
                 n.createElement(
                   "div",
-                  { className: v.NecessaryGroup },
+                  { className: p.NecessaryGroup },
                   n.createElement(
                     "span",
-                    { className: v.NecessaryTitle },
-                    (0, u.we)("#CookiePref_Login_Title"),
+                    { className: p.NecessaryTitle },
+                    (0, _.we)("#CookiePref_Timezone_Title"),
                   ),
                   n.createElement(
                     "span",
-                    { className: v.NecessaryDesc },
-                    (0, u.we)("#CookiePref_Login_Desc"),
-                  ),
-                ),
-                n.createElement(
-                  "div",
-                  { className: v.NecessaryGroup },
-                  n.createElement(
-                    "span",
-                    { className: v.NecessaryTitle },
-                    (0, u.we)("#CookiePref_Language_Title"),
-                  ),
-                  n.createElement(
-                    "span",
-                    { className: v.NecessaryDesc },
-                    (0, u.we)("#CookiePref_Language_Desc"),
+                    { className: p.NecessaryDesc },
+                    (0, _.we)("#CookiePref_Timezone_Desc"),
                   ),
                 ),
                 n.createElement(
                   "div",
-                  { className: v.NecessaryGroup },
+                  { className: p.NecessaryGroup },
                   n.createElement(
                     "span",
-                    { className: v.NecessaryTitle },
-                    (0, u.we)("#CookiePref_CookieSettings_Title"),
+                    { className: p.NecessaryTitle },
+                    (0, _.we)("#CookiePref_BirthTime_Title"),
                   ),
                   n.createElement(
                     "span",
-                    { className: v.NecessaryDesc },
-                    (0, u.we)("#CookiePref_CookieSettings_Desc"),
+                    { className: p.NecessaryDesc },
+                    (0, _.we)("#CookiePref_BirthTime_Desc"),
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: p.NecessaryGroup },
+                  n.createElement(
+                    "span",
+                    { className: p.NecessaryTitle },
+                    (0, _.we)("#CookiePref_Login_Title"),
+                  ),
+                  n.createElement(
+                    "span",
+                    { className: p.NecessaryDesc },
+                    (0, _.we)("#CookiePref_Login_Desc"),
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: p.NecessaryGroup },
+                  n.createElement(
+                    "span",
+                    { className: p.NecessaryTitle },
+                    (0, _.we)("#CookiePref_Language_Title"),
+                  ),
+                  n.createElement(
+                    "span",
+                    { className: p.NecessaryDesc },
+                    (0, _.we)("#CookiePref_Language_Desc"),
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: p.NecessaryGroup },
+                  n.createElement(
+                    "span",
+                    { className: p.NecessaryTitle },
+                    (0, _.we)("#CookiePref_CookieSettings_Title"),
+                  ),
+                  n.createElement(
+                    "span",
+                    { className: p.NecessaryDesc },
+                    (0, _.we)("#CookiePref_CookieSettings_Desc"),
                   ),
                 ),
               ),
@@ -599,117 +575,117 @@
             n.createElement(
               "div",
               {
-                className: (0, E.A)(
-                  v.CookieSettingsHeader,
+                className: (0, v.A)(
+                  p.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
               n.createElement(
                 "div",
                 null,
-                (0, u.we)("#PrivacySettings_Marketing_Header"),
+                (0, _.we)("#PrivacySettings_Marketing_Header"),
               ),
             ),
             n.createElement(
               "div",
               { className: "account_settings_container" },
-              n.createElement(P, { settings: e }),
+              n.createElement(k, { settings: e }),
             ),
             null,
           );
         }),
-        w = (0, p.PA)((e) => {
+        y = (0, u.PA)((e) => {
           const { settings: t } = e,
             a = (0, n.useCallback)(() => {
               t.ToggleRecentApps();
             }, [t]);
           return n.createElement(
             "div",
-            { className: v.CookieGroup },
+            { className: p.CookieGroup },
             n.createElement(
               "div",
-              { className: v.CookieSection },
+              { className: p.CookieSection },
               n.createElement(
                 "h2",
                 null,
-                (0, u.we)("#CookiePref_Content_Title"),
+                (0, _.we)("#CookiePref_Content_Title"),
               ),
               n.createElement(
                 "p",
-                { className: v.SectionDescription },
-                (0, u.we)("#CookiePref_Content_Desc"),
+                { className: p.SectionDescription },
+                (0, _.we)("#CookiePref_Content_Desc"),
               ),
-              n.createElement(f.RF, {
+              n.createElement(d.RF, {
                 onChange: a,
-                label: (0, u.we)("#CookiePref_Content_ToggleTitle"),
+                label: (0, _.we)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
-                description: (0, u.we)("#CookiePref_Content_ToggleDesc"),
+                description: (0, _.we)("#CookiePref_Content_ToggleDesc"),
               }),
             ),
           );
         }),
-        T = (0, p.PA)((e) => {
+        S = (0, u.PA)((e) => {
           const { settings: t } = e,
             a = (0, n.useCallback)(() => {
               t.ToggleImpressions();
             }, [t]);
           return n.createElement(
             "div",
-            { className: v.CookieGroup },
+            { className: p.CookieGroup },
             n.createElement(
               "div",
-              { className: v.CookieSection },
+              { className: p.CookieSection },
               n.createElement(
                 "h2",
                 null,
-                (0, u.we)("#CookiePref_ValveAnalytics_Title"),
+                (0, _.we)("#CookiePref_ValveAnalytics_Title"),
               ),
               n.createElement(
                 "p",
-                { className: v.SectionDescription },
-                (0, u.we)("#CookiePref_ValveAnalytics_Desc"),
+                { className: p.SectionDescription },
+                (0, _.we)("#CookiePref_ValveAnalytics_Desc"),
               ),
-              n.createElement(f.RF, {
+              n.createElement(d.RF, {
                 onChange: a,
-                label: (0, u.we)("#CookiePref_ValveAnalytics_ToggleTitle"),
+                label: (0, _.we)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
-                description: (0, u.we)("#CookiePref_ValveAnalytics_ToggleDesc"),
+                description: (0, _.we)("#CookiePref_ValveAnalytics_ToggleDesc"),
               }),
             ),
           );
         }),
-        N = (0, p.PA)((e) => {
+        N = (0, u.PA)((e) => {
           const { settings: t } = e,
             a = (0, n.useCallback)(() => {
               t.ToggleYouTube();
             }, [t]),
-            i = (0, n.useCallback)(() => {
+            c = (0, n.useCallback)(() => {
               t.ToggleVimeo();
             }, [t]),
-            c = (0, n.useCallback)(() => {
+            r = (0, n.useCallback)(() => {
               t.ToggleSketchfab();
             }, [t]);
           return n.createElement(
             "div",
-            { className: v.CookieGroup },
+            { className: p.CookieGroup },
             n.createElement(
               "div",
-              { className: v.CookieSection },
+              { className: p.CookieSection },
               n.createElement(
                 "h2",
                 null,
-                (0, u.we)("#CookiePref_ThirdParty_Title"),
+                (0, _.we)("#CookiePref_ThirdParty_Title"),
               ),
               n.createElement(
                 "p",
-                { className: v.SectionDescription },
-                (0, u.we)("#CookiePref_ThirdParty_Desc"),
+                { className: p.SectionDescription },
+                (0, _.we)("#CookiePref_ThirdParty_Desc"),
               ),
-              n.createElement(f.RF, {
+              n.createElement(d.RF, {
                 onChange: a,
-                label: (0, u.we)("#CookiePref_YouTube_Title"),
+                label: (0, _.we)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
-                description: (0, u.PP)(
+                description: (0, _.PP)(
                   "#CookiePref_YouTube_Desc",
                   n.createElement(
                     "a",
@@ -717,75 +693,74 @@
                       href: "https://policies.google.com/privacy",
                       target: "_blank",
                     },
-                    (0, u.we)("#CookiePref_YouTube_TogglePolicyName"),
+                    (0, _.we)("#CookiePref_YouTube_TogglePolicyName"),
                   ),
                 ),
               }),
-              n.createElement(f.RF, {
-                onChange: i,
-                label: (0, u.we)("#CookiePref_Vimeo_Title"),
+              n.createElement(d.RF, {
+                onChange: c,
+                label: (0, _.we)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
-                description: (0, u.PP)(
+                description: (0, _.PP)(
                   "#CookiePref_Vimeo_Desc",
                   n.createElement(
                     "a",
                     { href: "https://vimeo.com/privacy", target: "_blank" },
-                    (0, u.we)("#CookiePref_Vimeo_TogglePolicyName"),
+                    (0, _.we)("#CookiePref_Vimeo_TogglePolicyName"),
                   ),
                 ),
               }),
-              n.createElement(f.RF, {
-                onChange: c,
-                label: (0, u.we)("#CookiePref_Sketchfab_Title"),
+              n.createElement(d.RF, {
+                onChange: r,
+                label: (0, _.we)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
-                description: (0, u.PP)(
+                description: (0, _.PP)(
                   "#CookiePref_Sketchfab_Desc",
                   n.createElement(
                     "a",
                     { href: "https://sketchfab.com/privacy", target: "_blank" },
-                    (0, u.we)("#CookiePref_Sketchfab_TogglePolicyName"),
+                    (0, _.we)("#CookiePref_Sketchfab_TogglePolicyName"),
                   ),
                 ),
               }),
             ),
           );
         }),
-        P = (0, p.PA)((e) => {
+        k = (0, u.PA)((e) => {
           const { settings: t } = e,
             a = (0, n.useCallback)(() => {
               t.ToggleUTMEnabled();
             }, [t]);
           return n.createElement(
             "div",
-            { className: v.CookieGroup },
+            { className: p.CookieGroup },
             n.createElement(
               "div",
-              { className: v.CookieSection },
+              { className: p.CookieSection },
               n.createElement(
                 "h2",
                 null,
-                (0, u.we)("#PrivacySettings_Marketing_Title"),
+                (0, _.we)("#PrivacySettings_Marketing_Title"),
               ),
               n.createElement(
                 "p",
-                { className: v.SectionDescription },
-                (0, u.we)("#PrivacySettings_Marketing_Desc"),
+                { className: p.SectionDescription },
+                (0, _.we)("#PrivacySettings_Marketing_Desc"),
               ),
-              n.createElement(f.RF, {
+              n.createElement(d.RF, {
                 onChange: a,
-                label: (0, u.we)("#PrivacySettings_UTM_ToggleLabel"),
+                label: (0, _.we)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),
-                description: (0, u.we)("#PrivacySettings_UTM_ToggleDesc"),
+                description: (0, _.we)("#PrivacySettings_UTM_ToggleDesc"),
               }),
             ),
           );
         });
-      var A = a(97788);
-      class b {
+      class P {
         m_Preferences = void 0;
         m_bUpdating = !1;
         constructor(e) {
-          (0, r.Gn)(this), (this.m_Preferences = e);
+          (0, s.Gn)(this), (this.m_Preferences = e);
         }
         GetPreferences() {
           return this.m_Preferences;
@@ -799,73 +774,69 @@
           for (let n of this.m_Preferences)
             if (t.notification_type == n.notification_type) {
               (n.notification_targets ^= e),
-                (n.notification_targets &
-                  A.qn.k_ESteamNotificationTarget_NotificationFeed) !=
-                  A.qn.k_ESteamNotificationTarget_NotificationFeed &&
-                  (n.notification_targets =
-                    A.qn.k_ESteamNotificationTarget_Invalid),
+                1 != (1 & n.notification_targets) &&
+                  (n.notification_targets = 0),
                 (a = !0);
               break;
             }
           a && this.PostNotificationSettings(), (this.m_bUpdating = !1);
         }
         async PostNotificationSettings() {
-          const e = s.TS.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
+          const e = i.TS.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
             t = new FormData();
-          t.set("sessionid", s.TS.SESSIONID),
+          t.set("sessionid", i.TS.SESSIONID),
             t.append(
               "notificationpreferences",
               JSON.stringify(this.m_Preferences),
             );
           try {
-            let a = await m().post(e, t, { withCredentials: !0 });
-            200 != a.status || a?.data?.success != o.d.k_EResultOK
-              ? window.ShowAlertDialog(
-                  (0, u.we)("#NotificationPref_Error"),
-                  (0, u.we)("#NotificationPref_ErrorNotSaved"),
-                )
-              : o.d.k_EResultOK;
+            let a = await l().post(e, t, { withCredentials: !0 });
+            (200 == a.status && 1 == a?.data?.success) ||
+              window.ShowAlertDialog(
+                (0, _.we)("#NotificationPref_Error"),
+                (0, _.we)("#NotificationPref_ErrorNotSaved"),
+              );
           } catch (e) {
             0,
               window.ShowAlertDialog(
-                (0, u.we)("#NotificationPref_Error"),
-                (0, u.we)("#NotificationPref_ErrorNotSaved"),
+                (0, _.we)("#NotificationPref_Error"),
+                (0, _.we)("#NotificationPref_ErrorNotSaved"),
               );
           }
         }
       }
-      (0, c.Cg)([r.sH], b.prototype, "m_Preferences", void 0),
-        (0, c.Cg)([r.sH], b.prototype, "m_bUpdating", void 0);
-      var C = a(6695),
-        D = a(60395);
-      let I;
-      function G() {
-        if (!I) {
-          let e = (0, s.Tc)("notificationpreferences", "application_config");
-          I = new b(e);
+      (0, r.Cg)([s.sH], P.prototype, "m_Preferences", void 0),
+        (0, r.Cg)([s.sH], P.prototype, "m_bUpdating", void 0);
+      var T = a(6695),
+        A = a(4869);
+      let D;
+      function b() {
+        if (!D) {
+          let e = (0, i.Tc)("notificationpreferences", "application_config");
+          D = new P(e);
         }
-        return I;
+        return D;
       }
-      const R = (0, p.PA)(() => {
-          let e = G(),
+      const C = (0, u.PA)(() => {
+          let e = b(),
             t = [];
           for (const a of e.GetPreferences())
-            t.push(n.createElement(F, { preferenceSetting: a }));
+            t.push(n.createElement(I, { preferenceSetting: a }));
           return n.createElement(
-            h.u,
+            E.u,
             { navID: "StoreNotificationSettings" },
             n.createElement(
               "div",
               {
-                className: (0, E.A)(
-                  C.NotificationSettingsHeader,
+                className: (0, v.A)(
+                  T.NotificationSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
               n.createElement(
                 "div",
                 null,
-                (0, u.we)("#NotificationSettings_Title"),
+                (0, _.we)("#NotificationSettings_Title"),
               ),
             ),
             n.createElement(
@@ -873,154 +844,136 @@
               { className: "account_settings_container" },
               n.createElement(
                 "p",
-                { className: C.SectionDescription },
-                (0, u.we)("#NotificationSettings_Desc1"),
+                { className: T.SectionDescription },
+                (0, _.we)("#NotificationSettings_Desc1"),
               ),
               n.createElement(
                 "p",
-                { className: C.SectionDescription },
-                (0, u.we)("#NotificationSettings_Desc2"),
+                { className: T.SectionDescription },
+                (0, _.we)("#NotificationSettings_Desc2"),
               ),
               n.createElement(
                 "div",
                 { className: "notification_settings_container" },
                 n.createElement(
                   "div",
-                  { className: C.NotificationSendWhen },
-                  (0, u.we)("#NotificationSettings_SendMeWhen"),
+                  { className: T.NotificationSendWhen },
+                  (0, _.we)("#NotificationSettings_SendMeWhen"),
                 ),
                 t,
               ),
             ),
           );
         }),
-        F = (0, p.PA)((e) => {
+        I = (0, u.PA)((e) => {
           const { preferenceSetting: t } = e;
-          let a = G();
-          const i = (0, n.useCallback)(() => {
-              a.ToggleTargetPreference(
-                A.qn.k_ESteamNotificationTarget_NotificationFeed,
-                t,
-              );
-            }, [t, a]),
-            c = (0, n.useCallback)(() => {
-              a.ToggleTargetPreference(
-                A.qn.k_ESteamNotificationTarget_Steam,
-                t,
-              );
+          let a = b();
+          const c = (0, n.useCallback)(() => {
+              a.ToggleTargetPreference(1, t);
             }, [t, a]),
             r = (0, n.useCallback)(() => {
-              a.ToggleTargetPreference(
-                A.qn.k_ESteamNotificationTarget_PushNotification,
-                t,
-              );
+              a.ToggleTargetPreference(8, t);
             }, [t, a]),
-            [o, s] = (0, n.useState)(!1),
+            s = (0, n.useCallback)(() => {
+              a.ToggleTargetPreference(2, t);
+            }, [t, a]),
+            [i, o] = (0, n.useState)(!1),
             l = a.BUpdatingPreferences(),
-            _ =
-              (t.notification_targets &
-                A.qn.k_ESteamNotificationTarget_NotificationFeed) ==
-              A.qn.k_ESteamNotificationTarget_NotificationFeed,
-            m =
-              (t.notification_targets &
-                A.qn.k_ESteamNotificationTarget_PushNotification) ==
-              A.qn.k_ESteamNotificationTarget_PushNotification,
-            d =
-              (t.notification_targets &
-                A.qn.k_ESteamNotificationTarget_Steam) ==
-              A.qn.k_ESteamNotificationTarget_Steam,
-            p =
-              ((v = t.notification_type),
-              (0, u.c9)("#SteamNotificationTypeDesc_" + v)
-                ? (0, u.we)("#SteamNotificationTypeDesc_" + v)
+            m = 1 == (1 & t.notification_targets),
+            u = 2 == (2 & t.notification_targets),
+            p = 8 == (8 & t.notification_targets),
+            f =
+              ((E = t.notification_type),
+              (0, _.c9)("#SteamNotificationTypeDesc_" + E)
+                ? (0, _.we)("#SteamNotificationTypeDesc_" + E)
                 : null);
-          var v;
-          return p
+          var E;
+          return f
             ? n.createElement(
                 "div",
-                { className: C.NotificationGroup },
+                { className: T.NotificationGroup },
                 n.createElement(
                   "div",
-                  { className: C.NotificationSection },
-                  n.createElement(f.y4, {
-                    className: C.NotificationFeedToggle,
+                  { className: T.NotificationSection },
+                  n.createElement(d.y4, {
+                    className: T.NotificationFeedToggle,
                     padding: "compact",
-                    onChange: i,
+                    onChange: c,
                     disabled: l,
                     bottomSeparator: "none",
-                    checked: _,
+                    checked: m,
                   }),
                   n.createElement(
                     "p",
-                    { className: C.NotificationDescription },
-                    p,
+                    { className: T.NotificationDescription },
+                    f,
                   ),
                   n.createElement(
-                    f.wl,
+                    d.wl,
                     {
-                      className: (0, E.A)({
-                        [C.PrefDetailsToggle]: !0,
-                        [C.Selected]: o,
+                      className: (0, v.A)({
+                        [T.PrefDetailsToggle]: !0,
+                        [T.Selected]: i,
                       }),
-                      onClick: () => s(!o),
+                      onClick: () => o(!i),
                     },
-                    n.createElement(D.b8_, { direction: "down" }),
+                    n.createElement(A.b8_, { direction: "down" }),
                   ),
                 ),
-                o &&
+                i &&
                   n.createElement(
                     "div",
-                    { className: C.NotificationPrefDetails },
-                    n.createElement(f.Yh, {
-                      label: (0, u.we)("#NotificationSettings_SendToast"),
-                      disabled: l || !_,
-                      checked: d,
-                      onChange: c,
+                    { className: T.NotificationPrefDetails },
+                    n.createElement(d.Yh, {
+                      label: (0, _.we)("#NotificationSettings_SendToast"),
+                      disabled: l || !m,
+                      checked: p,
+                      onChange: r,
                     }),
-                    n.createElement(f.Yh, {
-                      label: (0, u.we)(
+                    n.createElement(d.Yh, {
+                      label: (0, _.we)(
                         "#NotificationSettings_PushNotification",
                       ),
-                      disabled: l || !_,
-                      checked: m,
-                      onChange: r,
+                      disabled: l || !m,
+                      checked: u,
+                      onChange: s,
                     }),
                   ),
               )
             : null;
         });
-      var L = a(6813),
-        z = a(86227),
-        M = a.n(z),
-        B = a(56545),
-        H = a(75487),
-        U = a(20194),
-        O = a(75233),
-        q = a(51614),
-        x = a(23809);
-      const Y = "PlaytestInvites";
+      var G = a(6813),
+        R = a(86227),
+        F = a.n(R),
+        L = a(56545),
+        z = a(75487),
+        B = a(20194),
+        H = a(75233),
+        U = a(51614),
+        M = a(23809);
+      const x = "PlaytestInvites";
       var V = a(1035),
         W = a(14336),
-        K = a(17720),
-        j = a(55263),
-        J = a(44165),
-        X = a(51272),
-        Q = a(56011),
-        $ = a(84811),
-        Z = a(22797),
-        ee = a(23310),
-        te = a(61855);
-      const ae = 1422450;
-      function ne(e) {
+        O = a(17720),
+        q = a(55263),
+        j = a(44165),
+        K = a(51272),
+        Y = a(56011),
+        J = a(84811),
+        X = a(22797),
+        Q = a(23310),
+        $ = a(61855);
+      const Z = 1422450;
+      function ee(e) {
         const { bShowPlaytestOverview: t } = e,
           a = (function () {
-            const e = (0, x.KV)();
-            return (0, U.I)({
-              queryKey: [Y],
+            const e = (0, M.KV)();
+            return (0, B.I)({
+              queryKey: [x],
               queryFn: async () => {
-                const t = B.w.Init(H.rX),
-                  a = await H.BX.GetInvites(e, t);
-                if (a.GetEResult() != o.d.k_EResultOK)
+                const t = L.w.Init(z.rX),
+                  a = await z.BX.GetInvites(e, t);
+                if (1 != a.GetEResult())
                   throw new Error(
                     `Error from usePlaytestInvite: ${a.GetEResult()} ${a.GetErrorMessage()}`,
                   );
@@ -1028,43 +981,35 @@
               },
             });
           })();
-        let i = [];
+        let c = [];
         return (
           a.isSuccess &&
-            (i = a.data
-              .filter(
-                (e) =>
-                  e.status === H.b1.k_EPlaytestInviteStatus_Invited ||
-                  e.status === H.b1.k_EPlaytestInviteStatus_Accepted,
-              )
-              .map((e) => {
-                switch (e.status) {
-                  case H.b1.k_EPlaytestInviteStatus_Accepted:
-                    return n.createElement(ie, { invite: e, key: e.invite_id });
-                  case H.b1.k_EPlaytestInviteStatus_Invited:
-                  default:
-                    return n.createElement(ce, { invite: e, key: e.invite_id });
-                }
-              })),
+            (c = a.data
+              .filter((e) => 1 === e.status || 3 === e.status)
+              .map((e) =>
+                3 === e.status
+                  ? n.createElement(te, { invite: e, key: e.invite_id })
+                  : n.createElement(ae, { invite: e, key: e.invite_id }),
+              )),
           n.createElement(
-            h.u,
+            E.u,
             { navID: "StorePlaytestInvites" },
             n.createElement(
               "div",
               { className: "account_header_line noicon" },
-              (0, u.we)("#PlaytestInvites_Title"),
+              (0, _.we)("#PlaytestInvites_Title"),
             ),
             n.createElement(
               "div",
               {
-                className: (0, E.A)(
-                  M().PlaytestInvites,
+                className: (0, v.A)(
+                  F().PlaytestInvites,
                   "account_settings_container",
                 ),
               },
-              a.isLoading || i.length > 0
-                ? i
-                : (0, u.we)("#PlaytestInvites_NoInvites"),
+              a.isLoading || c.length > 0
+                ? c
+                : (0, _.we)("#PlaytestInvites_NoInvites"),
             ),
             t &&
               n.createElement(
@@ -1073,268 +1018,255 @@
                 n.createElement(
                   "h2",
                   null,
-                  (0, u.we)("#PlaytestInvites_Desc_Title"),
+                  (0, _.we)("#PlaytestInvites_Desc_Title"),
                 ),
                 n.createElement(
                   "p",
-                  { className: M().Description },
-                  (0, u.we)("#PlaytestInvites_Desc1"),
+                  { className: F().Description },
+                  (0, _.we)("#PlaytestInvites_Desc1"),
                 ),
                 n.createElement(
                   "p",
-                  { className: M().Description },
-                  (0, u.we)("#PlaytestInvites_Desc2"),
+                  { className: F().Description },
+                  (0, _.we)("#PlaytestInvites_Desc2"),
                 ),
               ),
           )
         );
       }
-      function ie(e) {
+      function te(e) {
         const { invite: t } = e,
           a = t.appid,
-          i = _e(t.appid);
-        let c = i?.GetName() ?? t.app_name;
-        const r = n.useCallback(
+          c = ie(t.appid);
+        let r = c?.GetName() ?? t.app_name;
+        const s = n.useCallback(
           (e) => {
-            (0, X.EP)((0, Q.uX)(e), `steam://open/games/details/${a}`);
+            (0, K.EP)((0, Y.uX)(e), `steam://open/games/details/${a}`);
           },
           [a],
         );
         return n.createElement(
           "div",
-          { className: M().PlaytestInvite },
+          { className: F().PlaytestInvite },
           n.createElement(
             "div",
-            { className: M().InviteInfo },
+            { className: F().InviteInfo },
             n.createElement(
               "span",
               null,
-              (0, u.we)("#PlaytestInvites_Welcome", c),
+              (0, _.we)("#PlaytestInvites_Welcome", r),
             ),
           ),
-          !s.TS.IN_MOBILE_WEBVIEW &&
+          !i.TS.IN_MOBILE_WEBVIEW &&
             n.createElement(
               "div",
-              { className: M().StatusCtn },
+              { className: F().StatusCtn },
               n.createElement(
-                g.Z,
-                { className: M().Buttons },
+                f.Z,
+                { className: F().Buttons },
                 n.createElement(
-                  f.jn,
-                  { className: M().WideButton, noFocusRing: !1, onClick: r },
-                  (0, u.we)("#PlaytestInvites_ViewLibrary"),
+                  d.jn,
+                  { className: F().WideButton, noFocusRing: !1, onClick: s },
+                  (0, _.we)("#PlaytestInvites_ViewLibrary"),
                 ),
               ),
             ),
         );
       }
-      function ce(e) {
+      function ae(e) {
         const { invite: t } = e,
-          a = (0, J.f1)(),
-          i = _e(t.appid);
-        let c = i?.GetName() ?? t.app_name;
-        const r = (function (e) {
-            const t = (0, x.KV)(),
-              a = (0, O.jE)();
-            return (0, q.n)({
+          a = (0, j.f1)(),
+          c = ie(t.appid);
+        let r = c?.GetName() ?? t.app_name;
+        const s = (function (e) {
+            const t = (0, M.KV)(),
+              a = (0, H.jE)();
+            return (0, U.n)({
               mutationFn: async (a) => {
-                const n = B.w.Init(H.q);
+                const n = L.w.Init(z.q);
                 n.Body().add_invite_ids(e),
-                  n
-                    .Body()
-                    .set_status(
-                      a.bAccept
-                        ? H.b1.k_EPlaytestInviteStatus_Accepted
-                        : H.b1.k_EPlaytestInviteStatus_Rejected,
-                    );
-                const i = await H.BX.UpdateInvites(t, n);
-                if (i.GetEResult() != o.d.k_EResultOK)
+                  n.Body().set_status(a.bAccept ? 3 : 2);
+                const c = await z.BX.UpdateInvites(t, n);
+                if (1 != c.GetEResult())
                   throw {
-                    result: i.GetEResult(),
-                    message: `Error from UpdatePlaytestInvite: ${i.GetErrorMessage()} ( ${i.GetEResult()} )`,
+                    result: c.GetEResult(),
+                    message: `Error from UpdatePlaytestInvite: ${c.GetErrorMessage()} ( ${c.GetEResult()} )`,
                   };
               },
               onSuccess: (t, n) => {
-                a.setQueryData([Y], (t) =>
+                a.setQueryData([x], (t) =>
                   t.map((t) =>
-                    t.invite_id === e
-                      ? {
-                          ...t,
-                          status: n.bAccept
-                            ? H.b1.k_EPlaytestInviteStatus_Accepted
-                            : H.b1.k_EPlaytestInviteStatus_Rejected,
-                        }
-                      : t,
+                    t.invite_id === e ? { ...t, status: n.bAccept ? 3 : 2 } : t,
                   ),
                 );
               },
               onError: () => {
-                a.invalidateQueries({ queryKey: [Y] });
+                a.invalidateQueries({ queryKey: [x] });
               },
             });
           })(t.invite_id),
-          s = n.useCallback(
+          i = n.useCallback(
             (e) => {
-              r.mutate({ bAccept: e });
+              s.mutate({ bAccept: e });
             },
-            [r],
+            [s],
           ),
-          l = new K.b(t.steamid_inviter);
+          o = new O.b(t.steamid_inviter);
         return n.createElement(
-          $.tH,
+          J.tH,
           null,
           n.createElement(
-            g.Z,
+            f.Z,
             {
-              className: M().PlaytestInvite,
-              navEntryPreferPosition: ee.iU.MAINTAIN_X,
+              className: F().PlaytestInvite,
+              navEntryPreferPosition: Q.iU.MAINTAIN_X,
             },
             n.createElement(
               "div",
-              { className: M().InviteInfo },
-              n.createElement(oe, { steamIDInviter: l }),
-              n.createElement(re, {
-                appStoreItem: i,
-                strAppName: c,
+              { className: F().InviteInfo },
+              n.createElement(ce, { steamIDInviter: o }),
+              n.createElement(ne, {
+                appStoreItem: c,
+                strAppName: r,
                 nAppID: t.appid,
               }),
               n.createElement(
                 "div",
-                { className: M().TimeInvited },
-                (0, u.Nm)(t.time_created ?? a),
+                { className: F().TimeInvited },
+                (0, _.Nm)(t.time_created ?? a),
               ),
             ),
             n.createElement(
               "div",
-              { className: M().StatusCtn },
-              r.isPending
-                ? n.createElement(Z.t, {
+              { className: F().StatusCtn },
+              s.isPending
+                ? n.createElement(X.t, {
                     size: "medium",
                     position: "center",
                     msDelayAppear: 250,
                   })
                 : n.createElement(
                     "div",
-                    { className: M().Buttons },
+                    { className: F().Buttons },
                     n.createElement(
-                      f.jn,
-                      { noFocusRing: !1, onClick: () => s(!0) },
-                      (0, u.we)("#PlaytestInvites_Accept"),
+                      d.jn,
+                      { noFocusRing: !1, onClick: () => i(!0) },
+                      (0, _.we)("#PlaytestInvites_Accept"),
                     ),
                     n.createElement(
-                      f.$n,
-                      { noFocusRing: !1, onClick: () => s(!1) },
-                      (0, u.we)("#PlaytestInvites_Reject"),
+                      d.$n,
+                      { noFocusRing: !1, onClick: () => i(!1) },
+                      (0, _.we)("#PlaytestInvites_Reject"),
                     ),
                   ),
             ),
           ),
         );
       }
-      function re(e) {
-        const { appStoreItem: t, strAppName: a, nAppID: i } = e;
-        let c = t?.GetDeveloperNames()?.length
+      function ne(e) {
+        const { appStoreItem: t, strAppName: a, nAppID: c } = e;
+        let r = t?.GetDeveloperNames()?.length
             ? t.GetDeveloperNames()[0]
             : null,
-          r = t?.GetStorePageURL(),
-          o = n.createElement("img", {
-            className: M().SmallCap,
-            src: t?.GetAssets().GetSmallCapsuleURL() ?? te.A,
+          s = t?.GetStorePageURL(),
+          i = n.createElement("img", {
+            className: F().SmallCap,
+            src: t?.GetAssets().GetSmallCapsuleURL() ?? $.A,
           });
         return (
-          i == ae && (c = "Valve"),
+          c == Z && (r = "Valve"),
           n.createElement(
             "div",
-            { className: M().AppInfoCtn },
-            r ? n.createElement(k.Ii, { href: r }, " ", o, " ") : o,
+            { className: F().AppInfoCtn },
+            s ? n.createElement(g.Ii, { href: s }, " ", i, " ") : i,
             n.createElement(
               "div",
-              { className: M().AppDescription },
-              n.createElement("div", { className: M().AppName }, a),
-              c &&
+              { className: F().AppDescription },
+              n.createElement("div", { className: F().AppName }, a),
+              r &&
                 n.createElement(
                   "div",
-                  { className: M().AppDetail },
-                  (0, u.we)("#PlaytestInvites_AppDeveloper", c),
+                  { className: F().AppDetail },
+                  (0, _.we)("#PlaytestInvites_AppDeveloper", r),
                 ),
             ),
           )
         );
       }
-      function oe(e) {
+      function ce(e) {
         const { steamIDInviter: t } = e;
         return t.BIsValid()
-          ? n.createElement(se, { steamIDInviter: t })
-          : n.createElement(le, null);
+          ? n.createElement(re, { steamIDInviter: t })
+          : n.createElement(se, null);
       }
-      function se(e) {
+      function re(e) {
         const { steamIDInviter: t } = e,
           a = (0, W.js)(t.ConvertTo64BitString()),
-          i = a?.data;
+          c = a?.data;
         return a.isSuccess
           ? n.createElement(
               "div",
               {
-                className: (0, E.A)(
-                  M().AvatarAndPersona,
-                  M().InviteDescription,
+                className: (0, v.A)(
+                  F().AvatarAndPersona,
+                  F().InviteDescription,
                 ),
               },
               n.createElement(V.i8, {
-                persona: i,
+                persona: c,
                 size: "Small",
                 statusPosition: "right",
               }),
               n.createElement(
                 "div",
                 null,
-                (0, u.PP)(
+                (0, _.PP)(
                   "#PlaytestInvites_InviteDescription_FromUser2",
                   n.createElement(
-                    k.Ii,
-                    { href: i.GetCommunityProfileURL() },
-                    i?.m_strPlayerName,
+                    g.Ii,
+                    { href: c.GetCommunityProfileURL() },
+                    c?.m_strPlayerName,
                   ),
                 ),
               ),
             )
-          : n.createElement(le, null);
+          : n.createElement(se, null);
       }
-      function le(e) {
+      function se(e) {
         return n.createElement(
           "div",
-          { className: M().InviteDescription },
-          (0, u.we)("#PlaytestInvites_InviteDescription_FromApp2"),
+          { className: F().InviteDescription },
+          (0, _.we)("#PlaytestInvites_InviteDescription_FromApp2"),
         );
       }
-      function _e(e) {
-        const [t, a] = (0, j.t7)(e, {
+      function ie(e) {
+        const [t, a] = (0, q.t7)(e, {
           include_basic_info: !0,
           include_assets: !0,
         });
-        return t && a == j.N4.k_EStoreItemCacheState_Found ? t : null;
+        return t && 3 == a ? t : null;
       }
-      var me = a(31896),
-        ue = a.n(me);
-      function de(e) {
+      var oe = a(31896),
+        le = a.n(oe);
+      function _e(e) {
         return n.createElement(
-          h.u,
+          E.u,
           { navID: "StorePlaytests" },
-          n.createElement(ne, { bShowPlaytestOverview: !1 }),
+          n.createElement(ee, { bShowPlaytestOverview: !1 }),
           n.createElement(
             "div",
             { className: "account_header_line noicon" },
-            (0, u.we)("#PlaytestStatus_Title"),
+            (0, _.we)("#PlaytestStatus_Title"),
           ),
           n.createElement(
             "div",
             {
-              className: (0, E.A)(
-                ue().PlaytestStatusCtn,
+              className: (0, v.A)(
+                le().PlaytestStatusCtn,
                 "account_settings_container",
               ),
             },
-            (0, u.we)("#PlaytestStatus_None"),
+            (0, _.we)("#PlaytestStatus_None"),
           ),
           n.createElement(
             "div",
@@ -1342,22 +1274,22 @@
             n.createElement(
               "h2",
               null,
-              (0, u.we)("#PlaytestInvites_Desc_Title"),
+              (0, _.we)("#PlaytestInvites_Desc_Title"),
             ),
             n.createElement(
               "p",
-              { className: ue().Description },
-              (0, u.we)("#PlaytestInvites_Desc1"),
+              { className: le().Description },
+              (0, _.we)("#PlaytestInvites_Desc1"),
             ),
             n.createElement(
               "p",
-              { className: ue().Description },
-              (0, u.we)("#PlaytestInvites_Desc2"),
+              { className: le().Description },
+              (0, _.we)("#PlaytestInvites_Desc2"),
             ),
           ),
         );
       }
-      class pe {
+      class me {
         m_rgActiveDevices = [];
         m_rgRevokedDevices = [];
         m_strAccountName;
@@ -1367,39 +1299,39 @@
         m_strLatestAndroidAppVersion;
         static s_AuthorizedDevicesStore;
         constructor() {
-          (0, r.Gn)(this);
+          (0, s.Gn)(this);
         }
         static Get() {
           return (
-            pe.s_AuthorizedDevicesStore ||
-              ((pe.s_AuthorizedDevicesStore = new pe()),
-              pe.s_AuthorizedDevicesStore.Init()),
-            pe.s_AuthorizedDevicesStore
+            me.s_AuthorizedDevicesStore ||
+              ((me.s_AuthorizedDevicesStore = new me()),
+              me.s_AuthorizedDevicesStore.Init()),
+            me.s_AuthorizedDevicesStore
           );
         }
         Init() {
-          (this.m_rgActiveDevices = (0, s.Tc)(
+          (this.m_rgActiveDevices = (0, i.Tc)(
             "active_devices",
             "application_config",
           )),
-            (this.m_rgRevokedDevices = (0, s.Tc)(
+            (this.m_rgRevokedDevices = (0, i.Tc)(
               "revoked_devices",
               "application_config",
             )),
-            (this.m_strAccountName = (0, s.Tc)(
+            (this.m_strAccountName = (0, i.Tc)(
               "accountName",
               "application_config",
             )),
-            (this.m_strPhoneHint = (0, s.Tc)(
+            (this.m_strPhoneHint = (0, i.Tc)(
               "phone_hint",
               "application_config",
             )),
-            (this.m_strEmail = (0, s.Tc)("email", "application_config")),
-            (this.m_msgTwoFactorStatus = (0, s.Tc)(
+            (this.m_strEmail = (0, i.Tc)("email", "application_config")),
+            (this.m_msgTwoFactorStatus = (0, i.Tc)(
               "two_factor_status",
               "application_config",
             )),
-            (this.m_strLatestAndroidAppVersion = (0, s.Tc)(
+            (this.m_strLatestAndroidAppVersion = (0, i.Tc)(
               "latest_android_app_version",
               "application_config",
             ));
@@ -1426,33 +1358,28 @@
           return this.m_strLatestAndroidAppVersion;
         }
       }
-      (0, c.Cg)([r.sH], pe.prototype, "m_rgActiveDevices", void 0),
-        (0, c.Cg)([r.sH], pe.prototype, "m_rgRevokedDevices", void 0);
-      var fe = a(26296);
-      const ve =
+      (0, r.Cg)([s.sH], me.prototype, "m_rgActiveDevices", void 0),
+        (0, r.Cg)([s.sH], me.prototype, "m_rgRevokedDevices", void 0);
+      var ue = a(26296);
+      const de =
           a.p +
           "images/applications/store/sg_shield_off.png?v=valveisgoodatcaching",
-        Ee =
+        pe =
           a.p +
           "images/applications/store/sg_shield_on.png?v=valveisgoodatcaching",
-        ge =
+        ve =
           a.p +
           "images/applications/store/steam_mobile_qr_code.png?v=valveisgoodatcaching";
-      var he,
-        ke,
-        ye,
-        Se = a(22837),
-        we = a(2160),
-        Te = a(21565),
-        Ne = a(70695),
-        Pe = a(31258),
-        Ae = a(738),
-        be = a(12155),
-        Ce = a(32754),
-        De = a(91675),
-        Ie = a(14771),
-        Ge = a(11838),
-        Re = a(61359);
+      var fe,
+        Ee = a(2160),
+        ge = a(31258),
+        he = a(738),
+        we = a(12155),
+        ye = a(32754),
+        Se = a(91675),
+        Ne = a(14771),
+        ke = a(11838),
+        Pe = a(61359);
       !(function (e) {
         (e[(e.k_ETwoFactorTokenSteamguardScheme_None = 0)] =
           "k_ETwoFactorTokenSteamguardScheme_None"),
@@ -1460,91 +1387,50 @@
             "k_ETwoFactorTokenSteamguardScheme_Email"),
           (e[(e.k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2)] =
             "k_ETwoFactorTokenSteamguardScheme_TwoFactor");
-      })(he || (he = {})),
-        (function (e) {
-          (e[(e.k_EMobileConfirmationAction_None = 0)] =
-            "k_EMobileConfirmationAction_None"),
-            (e[(e.k_EMobileConfirmationAction_Allow = 1)] =
-              "k_EMobileConfirmationAction_Allow"),
-            (e[(e.k_EMobileConfirmationAction_Cancel = 2)] =
-              "k_EMobileConfirmationAction_Cancel");
-        })(ke || (ke = {})),
-        (function (e) {
-          (e[(e.k_EMobileConfirmationType_Invalid = 0)] =
-            "k_EMobileConfirmationType_Invalid"),
-            (e[(e.k_EMobileConfirmationType_Test = 1)] =
-              "k_EMobileConfirmationType_Test"),
-            (e[(e.k_EMobileConfirmationType_Trade = 2)] =
-              "k_EMobileConfirmationType_Trade"),
-            (e[(e.k_EMobileConfirmationType_MarketListing = 3)] =
-              "k_EMobileConfirmationType_MarketListing"),
-            (e[(e.k_EMobileConfirmationType_FeatureOptOut = 4)] =
-              "k_EMobileConfirmationType_FeatureOptOut"),
-            (e[(e.k_EMobileConfirmationType_PhoneNumberChange = 5)] =
-              "k_EMobileConfirmationType_PhoneNumberChange"),
-            (e[(e.k_EMobileConfirmationType_AccountRecovery = 6)] =
-              "k_EMobileConfirmationType_AccountRecovery"),
-            (e[(e.k_EMobileConfirmationType_BuildChangeRequest = 7)] =
-              "k_EMobileConfirmationType_BuildChangeRequest"),
-            (e[(e.k_EMobileConfirmationType_AddUser = 8)] =
-              "k_EMobileConfirmationType_AddUser"),
-            (e[(e.k_EMobileConfirmationType_RegisterApiKey = 9)] =
-              "k_EMobileConfirmationType_RegisterApiKey"),
-            (e[(e.k_EMobileConfirmationType_InviteToFamilyGroup = 10)] =
-              "k_EMobileConfirmationType_InviteToFamilyGroup"),
-            (e[(e.k_EMobileConfirmationType_JoinFamilyGroup = 11)] =
-              "k_EMobileConfirmationType_JoinFamilyGroup"),
-            (e[(e.k_EMobileConfirmationType_MarketPurchase = 12)] =
-              "k_EMobileConfirmationType_MarketPurchase"),
-            (e[(e.k_EMobileConfirmationType_RequestRefund = 13)] =
-              "k_EMobileConfirmationType_RequestRefund");
-        })(ye || (ye = {}));
-      const Fe = (0, p.PA)(() => {
-        let e = pe.Get();
-        const t = Me(),
+      })(fe || (fe = {}));
+      const Te = (0, u.PA)(() => {
+        let e = me.Get();
+        const t = be(),
           a = Date.now() / 1e3,
-          i = ze(e),
-          c = e.GetTwoFactorStatus();
-        let r = null;
-        switch (c.steamguard_scheme) {
+          c = De(e),
+          r = e.GetTwoFactorStatus();
+        let s = null;
+        switch (r.steamguard_scheme) {
           default:
-          case he.k_ETwoFactorTokenSteamguardScheme_None:
-            r = "#accountpreferences_revoked_devices_revoked_description";
+          case fe.k_ETwoFactorTokenSteamguardScheme_None:
+            s = "#accountpreferences_revoked_devices_revoked_description";
             break;
-          case he.k_ETwoFactorTokenSteamguardScheme_Email:
-            r = "#accountpreferences_revoked_devices_revoked_description_email";
+          case fe.k_ETwoFactorTokenSteamguardScheme_Email:
+            s = "#accountpreferences_revoked_devices_revoked_description_email";
             break;
-          case he.k_ETwoFactorTokenSteamguardScheme_TwoFactor:
-            r = "#accountpreferences_revoked_devices_revoked_description_auth";
+          case fe.k_ETwoFactorTokenSteamguardScheme_TwoFactor:
+            s = "#accountpreferences_revoked_devices_revoked_description_auth";
         }
-        let o = [],
-          s = [];
-        for (const r of e.GetActiveDevices()) {
-          const e = r.logged_in && r.last_seen?.time > a - 900,
-            l =
-              r.effective_token_state == Te.wv.k_EAuthTokenState_LoggedOut
-                ? Re.RememberedDevice
-                : null,
-            _ = n.createElement(Be, {
+        let i = [],
+          o = [];
+        for (const s of e.GetActiveDevices()) {
+          const e = s.logged_in && s.last_seen?.time > a - 900,
+            l = 5 == s.effective_token_state ? Pe.RememberedDevice : null,
+            _ = n.createElement(Ce, {
               className: l,
-              device: r,
-              key: r.token_id,
+              device: s,
+              key: s.token_id,
               bActiveNow: e,
-              bCurrentDevice: t == r.token_id,
-              strActiveCountry: i,
-              msgTwoFactorStatus: c,
+              bCurrentDevice: t == s.token_id,
+              strActiveCountry: c,
+              msgTwoFactorStatus: r,
             });
-          e ? o.push(_) : s.push(_);
+          e ? i.push(_) : o.push(_);
         }
         const l = e
           .GetRevokedDevices()
           .map((e) =>
-            n.createElement(Be, {
-              className: Re.RevokedDevice,
+            n.createElement(Ce, {
+              className: Pe.RevokedDevice,
               device: e,
               key: e.token_id,
-              strActiveCountry: i,
-              msgTwoFactorStatus: c,
+              strActiveCountry: c,
+              msgTwoFactorStatus: r,
             }),
           );
         return n.createElement(
@@ -1553,15 +1439,15 @@
           n.createElement(
             "div",
             {
-              className: (0, E.A)(
-                Re.AuthorizedDeviceHeader,
+              className: (0, v.A)(
+                Pe.AuthorizedDeviceHeader,
                 "account_header_line noicon",
               ),
             },
             n.createElement(
               "div",
               null,
-              (0, u.we)("#accountpreferences_authorized_devices_header"),
+              (0, _.we)("#accountpreferences_authorized_devices_header"),
             ),
           ),
           n.createElement(
@@ -1569,45 +1455,45 @@
             { className: "account_settings_container" },
             n.createElement(
               "div",
-              { className: Re.SectionDescription },
-              (0, u.PP)(
+              { className: Pe.SectionDescription },
+              (0, _.PP)(
                 "#accountpreferences_authorized_devices_description",
                 n.createElement("p", null),
               ),
             ),
             n.createElement(
               "div",
-              { className: Re.AuthorizedDeviceGroup },
-              n.createElement(Le, {
+              { className: Pe.AuthorizedDeviceGroup },
+              n.createElement(Ae, {
                 elHeader: n.createElement(
                   "div",
-                  { className: Re.ActiveNow },
-                  n.createElement(be.jlt, { className: Re.ActiveNowDot }),
-                  (0, u.we)("#accountpreferences_authorized_device_active_now"),
+                  { className: Pe.ActiveNow },
+                  n.createElement(we.jlt, { className: Pe.ActiveNowDot }),
+                  (0, _.we)("#accountpreferences_authorized_device_active_now"),
+                ),
+                rgDevices: i,
+              }),
+              n.createElement(Ae, {
+                elHeader: (0, _.we)(
+                  "#accountpreferences_authorized_devices_recentseen_heading",
                 ),
                 rgDevices: o,
               }),
-              n.createElement(Le, {
-                elHeader: (0, u.we)(
-                  "#accountpreferences_authorized_devices_recentseen_heading",
-                ),
-                rgDevices: s,
-              }),
               n.createElement(
                 "div",
-                { className: Re.DeviceGroup },
+                { className: Pe.DeviceGroup },
                 n.createElement(
                   "div",
-                  { className: Re.RemoveDevicesRow },
+                  { className: Pe.RemoveDevicesRow },
                   n.createElement(
-                    f.wl,
+                    d.wl,
                     {
-                      className: Re.RemoveDevicesButton,
+                      className: Pe.RemoveDevicesButton,
                       onClick: (e) => {
-                        (0, Ae.pg)(n.createElement(We, null), (0, Q.uX)(e));
+                        (0, he.pg)(n.createElement(He, null), (0, Y.uX)(e));
                       },
                     },
-                    (0, u.we)(
+                    (0, _.we)(
                       "#accountpreferences_authorized_devices_remove_button",
                     ),
                   ),
@@ -1622,15 +1508,15 @@
               n.createElement(
                 "div",
                 {
-                  className: (0, E.A)(
-                    Re.AuthorizedDeviceHeader,
+                  className: (0, v.A)(
+                    Pe.AuthorizedDeviceHeader,
                     "account_header_line noicon",
                   ),
                 },
                 n.createElement(
                   "div",
                   null,
-                  (0, u.we)(
+                  (0, _.we)(
                     "#accountpreferences_revoked_devices_revoked_header",
                   ),
                 ),
@@ -1640,97 +1526,97 @@
                 { className: "account_settings_container" },
                 n.createElement(
                   "div",
-                  { className: Re.SectionDescription },
-                  (0, u.PP)(r, n.createElement("p", null)),
+                  { className: Pe.SectionDescription },
+                  (0, _.PP)(s, n.createElement("p", null)),
                 ),
                 n.createElement(
                   "div",
-                  { className: Re.AuthorizedDeviceGroup },
-                  n.createElement(Le, { rgDevices: l }),
+                  { className: Pe.AuthorizedDeviceGroup },
+                  n.createElement(Ae, { rgDevices: l }),
                 ),
               ),
             ),
         );
       });
-      function Le(e) {
+      function Ae(e) {
         const { rgDevices: t, elHeader: a } = e;
         return 0 == t.length
           ? null
-          : n.createElement("div", { className: Re.DeviceGroup }, a && a, t);
+          : n.createElement("div", { className: Pe.DeviceGroup }, a && a, t);
       }
-      function ze(e) {
+      function De(e) {
         const t = Date.now() / 1e3;
-        return Ye(
+        return ze(
           e
             .GetActiveDevices()
             .find((e) => e.logged_in && e.last_seen?.time > t - 900) ??
             e.GetActiveDevices()[0],
         ).country;
       }
-      function Me() {
+      function be() {
         const [e] = n.useState(() =>
-          (0, s.Tc)("requesting_token_id", "application_config"),
+          (0, i.Tc)("requesting_token_id", "application_config"),
         );
         return e;
       }
-      function Be(e) {
+      function Ce(e) {
         const {
             device: t,
             bActiveNow: a,
-            bCurrentDevice: i,
-            strActiveCountry: c,
-            className: r,
-            msgTwoFactorStatus: o,
-            bShowAuthenticatorActivity: s,
+            bCurrentDevice: c,
+            strActiveCountry: r,
+            className: s,
+            msgTwoFactorStatus: i,
+            bShowAuthenticatorActivity: o,
           } = e,
-          [l, _] = (0, n.useState)(!1),
-          m = n.useRef(void 0);
+          [l, m] = (0, n.useState)(!1),
+          u = n.useRef(void 0);
         n.useEffect(() => {
-          m.current?.BHasFocus() && m.current?.Node().ForceMeasureFocusRing();
+          u.current?.BHasFocus() && u.current?.Node().ForceMeasureFocusRing();
         }, [l]);
-        let d = (function (e) {
-          if (e.platform_type == Te.SS.k_EAuthTokenPlatformType_WebBrowser) {
-            let t = new Ge.UAParser(e.token_description).getResult();
+        let p = (function (e) {
+          if (2 == e.platform_type) {
+            let t = new ke.UAParser(e.token_description).getResult();
             return t.browser.name && t.os.name
               ? "WebKit" == t.browser.name
                 ? t.os.name
-                : (0, u.we)(
+                : (0, _.we)(
                     "#accountpreferences_authorized_devices_browser_on_os",
                     t.browser.name,
                     t.os.name,
                   )
-              : (0, u.we)(
+              : (0, _.we)(
                   "#accountpreferences_authorized_devices_browser_unmatched",
                 );
           }
           return e.token_description;
         })(t);
-        d.length &&
-          (d = ` ${(0, u.we)("#accountpreferences_authorized_devices_name_separator")} "${d}"`);
-        const p = Ye(t);
-        let v = null;
-        v =
-          p.country && c && c != p.country
+        p.length &&
+          (p = ` ${(0, _.we)("#accountpreferences_authorized_devices_name_separator")} "${p}"`);
+        const E = ze(t);
+        let g = null;
+        g =
+          E.country && r && r != E.country
             ? n.createElement(
-                Ce.he,
+                ye.he,
                 {
-                  className: Re.Tooltip,
-                  toolTipContent: (0, u.we)(
+                  className: Pe.Tooltip,
+                  toolTipContent: (0, _.we)(
                     "#accountpreferences_authorized_devices_suspicous_tooltip",
                   ),
                   direction: "top",
                 },
                 n.createElement(
                   "div",
-                  { className: Re.LocationSuspicious },
-                  p.location,
-                  n.createElement(D.$$j, null),
+                  { className: Pe.LocationSuspicious },
+                  E.location,
+                  n.createElement(A.$$j, null),
                 ),
               )
             : n.createElement(
                 "div",
-                { className: Re.LocationNotSuspicious },
-                p.location,
+                { className: Pe.LocationNotSuspicious },
+                E.location,
               );
         const h = (function (e, t) {
           return (
@@ -1738,210 +1624,205 @@
             e.token_id &&
             e.token_id == t?.last_seen_auth_token_id
           );
-        })(t, o);
+        })(t, i);
         return n.createElement(
-          g.Z,
+          f.Z,
           {
-            className: (0, E.A)(Re.DeviceContainer, a && Re.ActiveDevice, r),
+            className: (0, v.A)(Pe.DeviceContainer, a && Pe.ActiveDevice, s),
             key: "id_" + t.token_id,
-            navRef: m,
-            onActivate: () => _(!l),
+            navRef: u,
+            onActivate: () => m(!l),
           },
-          n.createElement(xe, { device: t, bHasAuthenticator: h }),
+          n.createElement(Le, { device: t, bHasAuthenticator: h }),
           n.createElement(
             "div",
-            { className: Re.DeviceContent },
+            { className: Pe.DeviceContent },
             n.createElement(
               "div",
-              { className: Re.DeviceHeaderRow },
+              { className: Pe.DeviceHeaderRow },
               n.createElement(
                 "div",
-                { className: Re.DeviceNameContainer },
+                { className: Pe.DeviceNameContainer },
                 n.createElement(
                   "div",
-                  { className: Re.DeviceName },
-                  n.createElement(Ve, { device: t }),
-                  d,
+                  { className: Pe.DeviceName },
+                  n.createElement(Be, { device: t }),
+                  p,
                 ),
-                i &&
+                c &&
                   n.createElement(
                     "div",
-                    { className: Re.ThisDevice },
-                    (0, u.we)(
+                    { className: Pe.ThisDevice },
+                    (0, _.we)(
                       "#accountpreferences_authorized_devices_this_device",
                     ),
                   ),
               ),
               n.createElement(
                 "div",
-                { className: Re.DetailsToggleContainer },
-                v,
+                { className: Pe.DetailsToggleContainer },
+                g,
                 n.createElement(
                   "div",
-                  { className: Re.DetailsToggle },
+                  { className: Pe.DetailsToggle },
                   n.createElement(
-                    f.wl,
+                    d.wl,
                     {
-                      className: (0, E.A)({
-                        [Re.DetailsToggle]: !0,
-                        [Re.Selected]: l,
+                      className: (0, v.A)({
+                        [Pe.DetailsToggle]: !0,
+                        [Pe.Selected]: l,
                       }),
                     },
-                    n.createElement(D.b8_, { direction: "down" }),
+                    n.createElement(A.b8_, { direction: "down" }),
                   ),
                 ),
               ),
             ),
-            n.createElement(He, {
+            n.createElement(Ie, {
               device: t,
               bActiveNow: a,
-              msgTwoFactorStatus: s && o,
+              msgTwoFactorStatus: o && i,
             }),
-            l && n.createElement(qe, { device: t }),
+            l && n.createElement(Fe, { device: t }),
           ),
         );
       }
-      function He(e) {
-        const { device: t, bActiveNow: a, msgTwoFactorStatus: i } = e;
-        return i?.state > 0
-          ? n.createElement(Ue, {
-              msgTwoFactorUsage: i.usages?.length > 0 ? i.usages[0] : null,
+      function Ie(e) {
+        const { device: t, bActiveNow: a, msgTwoFactorStatus: c } = e;
+        return c?.state > 0
+          ? n.createElement(Ge, {
+              msgTwoFactorUsage: c.usages?.length > 0 ? c.usages[0] : null,
             })
           : a
             ? null
-            : n.createElement(Oe, { device: t });
+            : n.createElement(Re, { device: t });
       }
-      function Ue(e) {
+      function Ge(e) {
         const { msgTwoFactorUsage: t } = e;
         if (!t || !t.time) return null;
-        const a = (0, De.Nm)(t.time);
-        let i = null;
-        if (t.usage_type == Ne.oN.k_ETwoFactorUsageType_Login)
-          i = (0, u.we)("#authorized_devices_lasttwofactor_login", a);
-        else if (
-          t.usage_type == Ne.oN.k_ETwoFactorUsageType_MobileConfirmation
-        ) {
-          const e =
-            t.confirmation_action == ke.k_EMobileConfirmationAction_Allow
-              ? "_allow"
-              : "_cancel";
+        const a = (0, Se.Nm)(t.time);
+        let c = null;
+        if (3 == t.usage_type)
+          c = (0, _.we)("#authorized_devices_lasttwofactor_login", a);
+        else if (2 == t.usage_type) {
+          const e = 1 == t.confirmation_action ? "_allow" : "_cancel";
           switch (t.confirmation_type) {
-            case ye.k_EMobileConfirmationType_Trade:
-              i = (0, u.we)(
+            case 2:
+              c = (0, _.we)(
                 `#authorized_devices_lasttwofactor_confirmation_trade${e}`,
                 a,
               );
               break;
-            case ye.k_EMobileConfirmationType_MarketListing:
-              i = (0, u.we)(
+            case 3:
+              c = (0, _.we)(
                 `#authorized_devices_lasttwofactor_confirmation_marketlisting${e}`,
                 a,
               );
               break;
-            case ye.k_EMobileConfirmationType_PhoneNumberChange:
-              i = (0, u.we)(
+            case 5:
+              c = (0, _.we)(
                 `#authorized_devices_lasttwofactor_confirmation_phonechange${e}`,
                 a,
               );
               break;
-            case ye.k_EMobileConfirmationType_AccountRecovery:
-              i = (0, u.we)(
+            case 6:
+              c = (0, _.we)(
                 `#authorized_devices_lasttwofactor_confirmation_accountrecovery${e}`,
                 a,
               );
               break;
-            case ye.k_EMobileConfirmationType_BuildChangeRequest:
-              i = (0, u.we)(
+            case 7:
+              c = (0, _.we)(
                 `#authorized_devices_lasttwofactor_confirmation_buildchange${e}`,
                 a,
               );
               break;
-            case ye.k_EMobileConfirmationType_AddUser:
-              i = (0, u.we)(
+            case 8:
+              c = (0, _.we)(
                 `#authorized_devices_lasttwofactor_confirmation_adduser${e}`,
                 a,
               );
               break;
-            case ye.k_EMobileConfirmationType_RegisterApiKey:
-              i = (0, u.we)(
+            case 9:
+              c = (0, _.we)(
                 `#authorized_devices_lasttwofactor_confirmation_registerapikey${e}`,
                 a,
               );
               break;
-            case ye.k_EMobileConfirmationType_InviteToFamilyGroup:
-              i = (0, u.we)(
+            case 10:
+              c = (0, _.we)(
                 `#authorized_devices_lasttwofactor_confirmation_familygroupinvite${e}`,
                 a,
               );
               break;
-            case ye.k_EMobileConfirmationType_JoinFamilyGroup:
-              i = (0, u.we)(
+            case 11:
+              c = (0, _.we)(
                 `#authorized_devices_lasttwofactor_confirmation_joinfamilygroup${e}`,
                 a,
               );
               break;
-            case ye.k_EMobileConfirmationType_MarketPurchase:
-              i = (0, u.we)(
+            case 12:
+              c = (0, _.we)(
                 `#authorized_devices_lasttwofactor_confirmation_marketpurchase${e}`,
                 a,
               );
               break;
-            case ye.k_EMobileConfirmationType_RequestRefund:
-              i = (0, u.we)(
+            case 13:
+              c = (0, _.we)(
                 `#authorized_devices_lasttwofactor_confirmation_refund${e}`,
                 a,
               );
               break;
             default:
-              i = (0, u.we)(
+              c = (0, _.we)(
                 `#authorized_devices_lasttwofactor_confirmation_unknown${e}`,
                 a,
               );
           }
         }
-        return i
+        return c
           ? n.createElement(
               "div",
-              { className: Re.LastSeenRow },
-              n.createElement("div", null, i),
+              { className: Pe.LastSeenRow },
+              n.createElement("div", null, c),
             )
           : null;
       }
-      function Oe(e) {
+      function Re(e) {
         const { device: t } = e,
           a =
             t.first_seen?.time &&
-            t.first_seen.time + 2 * Ie.Kp.PerWeek > Date.now() / 1e3,
-          i = t.effective_token_state == Te.wv.k_EAuthTokenState_LoggedOut;
-        let c = (0, u.we)(
+            t.first_seen.time + 2 * Ne.Kp.PerWeek > Date.now() / 1e3,
+          c = 5 == t.effective_token_state;
+        let r = (0, _.we)(
           "#accountpreferences_authorized_devices_last_seen_max",
         );
         return (
           t.last_seen?.time
-            ? (c = (0, De.Nm)(t.last_seen.time))
+            ? (r = (0, Se.Nm)(t.last_seen.time))
             : t.time_updated &&
               t.time_updated > Math.floor(Date.now() / 1e3 - 7776e3) &&
-              (c = (0, De.Nm)(t.time_updated)),
+              (r = (0, Se.Nm)(t.time_updated)),
           n.createElement(
             "div",
-            { className: Re.LastSeenRow },
+            { className: Pe.LastSeenRow },
             n.createElement(
               "div",
               null,
               n.createElement(
                 "span",
-                { className: Re.LastActive },
-                (0, u.we)(
+                { className: Pe.LastActive },
+                (0, _.we)(
                   "#accountpreferences_authorized_devices_last_seen_title",
                 ),
               ),
-              c,
-              i &&
+              r,
+              c &&
                 n.createElement(
                   "span",
-                  { className: Re.LastActive },
+                  { className: Pe.LastActive },
                   " - ",
-                  (0, u.we)(
+                  (0, _.we)(
                     "#accountpreferences_authorized_devices_state_signedout",
                   ),
                 ),
@@ -1949,11 +1830,11 @@
             a &&
               n.createElement(
                 "div",
-                { className: Re.NewDevice },
-                (0, u.oW)(
+                { className: Pe.NewDevice },
+                (0, _.oW)(
                   "#accountpreferences_authorized_devices_new_device",
                   n.createElement("a", {
-                    href: s.TS.HELP_BASE_URL + "wizard/HelpWithAccountStolen",
+                    href: i.TS.HELP_BASE_URL + "wizard/HelpWithAccountStolen",
                     onClick: (e) => {
                       e.stopPropagation();
                     },
@@ -1963,189 +1844,183 @@
           )
         );
       }
-      function qe(e) {
+      function Fe(e) {
         const { device: t } = e;
         return n.createElement(
           "div",
-          { className: Re.AuthorizedDeviceDetails },
-          (0, u.we)(
+          { className: Pe.AuthorizedDeviceDetails },
+          (0, _.we)(
             (function (e) {
               const t = e.authentication_type,
                 a = e.auth_type;
-              if (t == Te.O6.k_EAuthenticationType_QR)
-                return "#authorized_devices_default_qr";
-              if (e.effective_token_state == Te.wv.k_EAuthTokenState_LoggedOut)
+              if (2 == t) return "#authorized_devices_default_qr";
+              if (5 == e.effective_token_state)
                 return "#authorized_devices_remembered_machine";
               switch (a) {
-                case Te.TY.k_EAuthSessionGuardType_EmailCode:
+                case 2:
                   return "#authorized_devices_emailcode_password";
-                case Te.TY.k_EAuthSessionGuardType_DeviceCode:
+                case 3:
                   return "#authorized_devices_devicecode_password";
-                case Te.TY.k_EAuthSessionGuardType_DeviceConfirmation:
-                case Te.TY.k_EAuthSessionGuardType_EmailConfirmation:
+                case 4:
+                case 5:
                   return "#authorized_devices_mobileconf_password";
-                case Te.TY.k_EAuthSessionGuardType_MachineToken:
+                case 6:
                   return "#authorized_devices_machinetoken_password";
-                case Te.TY.k_EAuthSessionGuardType_LegacyMachineAuth:
-                case Te.TY.k_EAuthSessionGuardType_Unknown:
-                case Te.TY.k_EAuthSessionGuardType_None:
                 default:
                   return "#authorized_devices_default_password";
               }
             })(t),
-            (0, u.TW)(t.first_seen.time) +
+            (0, _.TW)(t.first_seen.time) +
               " @ " +
-              (0, De.KC)(t.first_seen.time),
+              (0, Se.KC)(t.first_seen.time),
           ),
         );
       }
-      function xe(e) {
+      function Le(e) {
         const { device: t, bHasAuthenticator: a } = e,
-          i = t.effective_token_state == Te.wv.k_EAuthTokenState_LoggedOut;
-        let c = null;
-        if (t.platform_type == Te.SS.k_EAuthTokenPlatformType_WebBrowser)
-          c = i
-            ? n.createElement(D.SQF, {
-                className: (0, E.A)(Re.DeviceLogo, Re.RememberedDevice),
+          c = 5 == t.effective_token_state;
+        let r = null;
+        if (2 == t.platform_type)
+          r = c
+            ? n.createElement(A.SQF, {
+                className: (0, v.A)(Pe.DeviceLogo, Pe.RememberedDevice),
               })
-            : n.createElement(D.FH7, { className: Re.DeviceLogo });
+            : n.createElement(A.FH7, { className: Pe.DeviceLogo });
         else if (
-          t.platform_type != Te.SS.k_EAuthTokenPlatformType_SteamClient ||
-          (t.gaming_device_type !== Se.zm.k_EGamingDeviceType_SteamDeck &&
-            t.gaming_device_type != Se.zm.k_EGamingDeviceType_LegionGoS &&
-            t.gaming_device_type != Se.zm.k_EGamingDeviceType_SteamOSGeneric)
+          1 != t.platform_type ||
+          (544 !== t.gaming_device_type &&
+            545 != t.gaming_device_type &&
+            541 != t.gaming_device_type)
         )
           switch (t.os_platform) {
-            case Pe.tz.k_EPlatformTypeWin32:
-            case Pe.tz.k_EPlatformTypeWin64:
-            case Pe.tz.k_EPlatformTypeOSX:
-              c = i
-                ? n.createElement(D.ulH, {
-                    className: (0, E.A)(Re.DeviceLogo, Re.RememberedDevice),
+            case ge.t.k_EPlatformTypeWin32:
+            case ge.t.k_EPlatformTypeWin64:
+            case ge.t.k_EPlatformTypeOSX:
+              r = c
+                ? n.createElement(A.ulH, {
+                    className: (0, v.A)(Pe.DeviceLogo, Pe.RememberedDevice),
                   })
-                : n.createElement(D.nl8, { className: Re.DeviceLogo });
+                : n.createElement(A.nl8, { className: Pe.DeviceLogo });
               break;
-            case Pe.tz.k_EPlatformTypeAndroid32:
-            case Pe.tz.k_EPlatformTypeAndroid64:
-            case Pe.tz.k_EPlatformTypeLinux32:
-            case Pe.tz.k_EPlatformTypeLinux64:
-            case Pe.tz.k_EPlatformTypeIOS32:
-            case Pe.tz.k_EPlatformTypeIOS64:
-              c = n.createElement(be.rfv, { className: Re.DeviceLogo });
+            case ge.t.k_EPlatformTypeAndroid32:
+            case ge.t.k_EPlatformTypeAndroid64:
+            case ge.t.k_EPlatformTypeLinux32:
+            case ge.t.k_EPlatformTypeLinux64:
+            case ge.t.k_EPlatformTypeIOS32:
+            case ge.t.k_EPlatformTypeIOS64:
+              r = n.createElement(we.rfv, { className: Pe.DeviceLogo });
           }
         else
-          c = i
-            ? n.createElement(D.VRo, {
-                className: (0, E.A)(Re.DeviceLogo, Re.RememberedDevice),
+          r = c
+            ? n.createElement(A.VRo, {
+                className: (0, v.A)(Pe.DeviceLogo, Pe.RememberedDevice),
               })
-            : n.createElement(D.oEi, { className: Re.DeviceLogo });
+            : n.createElement(A.oEi, { className: Pe.DeviceLogo });
         return a
           ? n.createElement(
               "div",
-              { className: Re.DeviceLogoBoundingBox },
-              c,
+              { className: Pe.DeviceLogoBoundingBox },
+              r,
               n.createElement("img", {
-                src: Ee,
-                className: Re.DeviceSteamGuardLogo,
+                src: pe,
+                className: Pe.DeviceSteamGuardLogo,
               }),
             )
-          : c;
+          : r;
       }
-      function Ye(e) {
+      function ze(e) {
         const t = e.last_seen ?? e.first_seen;
         if (t && t.city && t.country) {
           return {
-            location: (0, we.nA)(s.TS.EREALM)
+            location: (0, Ee.nA)(i.TS.EREALM)
               ? t.city
               : t.city + ", " + t.country,
             country: t.country,
           };
         }
         return {
-          location: (0, u.we)(
+          location: (0, _.we)(
             "#accountpreferences_authorized_devices_loc_unknown",
           ),
           country: "",
         };
       }
-      function Ve(e) {
+      function Be(e) {
         const { device: t } = e;
         switch (t.platform_type) {
-          case Te.SS.k_EAuthTokenPlatformType_MobileApp:
-            return (0, u.we)(
+          case 3:
+            return (0, _.we)(
               "#accountpreferences_authorized_devices_type_mobile",
             );
-          case Te.SS.k_EAuthTokenPlatformType_SteamClient:
-            return t.gaming_device_type === Se.zm.k_EGamingDeviceType_SteamDeck
-              ? (0, u.we)(
+          case 1:
+            return 544 === t.gaming_device_type
+              ? (0, _.we)(
                   "#accountpreferences_authorized_devices_type_steamdeck",
                 )
-              : t.gaming_device_type == Se.zm.k_EGamingDeviceType_LegionGoS
-                ? (0, u.we)(
+              : 545 == t.gaming_device_type
+                ? (0, _.we)(
                     "#accountpreferences_authorized_devices_type_legiongos",
                   )
-                : t.gaming_device_type ==
-                    Se.zm.k_EGamingDeviceType_SteamOSGeneric
-                  ? (0, u.we)(
+                : 541 == t.gaming_device_type
+                  ? (0, _.we)(
                       "#accountpreferences_authorized_devices_type_steamos",
                     )
-                  : (0, u.we)(
+                  : (0, _.we)(
                       "#accountpreferences_authorized_devices_type_desktop",
                     );
-          case Te.SS.k_EAuthTokenPlatformType_WebBrowser:
-            return (0, u.we)(
+          case 2:
+            return (0, _.we)(
               "#accountpreferences_authorized_devices_type_browser",
             );
-          case Te.SS.k_EAuthTokenPlatformType_Unknown:
           default:
-            return (0, u.we)(
+            return (0, _.we)(
               "#accountpreferences_authorized_devices_type_unknown",
             );
         }
       }
-      function We(e) {
+      function He(e) {
         const { closeModal: t } = e;
         return n.createElement(
-          Ae.x_,
+          he.x_,
           { onEscKeypress: t },
           n.createElement(
-            f.UC,
+            d.UC,
             null,
             n.createElement(
-              f.Y9,
+              d.Y9,
               null,
-              (0, u.we)("#authorized_devices_deauthorize_title"),
+              (0, _.we)("#authorized_devices_deauthorize_title"),
             ),
             n.createElement(
-              f.nB,
+              d.nB,
               null,
               n.createElement(
-                f.a3,
+                d.a3,
                 null,
-                (0, u.we)("#authorized_devices_deauthorize_msg"),
+                (0, _.we)("#authorized_devices_deauthorize_msg"),
               ),
               n.createElement(
-                f.wi,
+                d.wi,
                 null,
-                n.createElement(f.CB, {
-                  strOKText: (0, u.we)(
+                n.createElement(d.CB, {
+                  strOKText: (0, _.we)(
                     "#authorized_devices_deauthorize_proceed",
                   ),
                   onOK: async () => {
                     const e = new FormData();
                     e.set("action", "deauthorize"),
-                      e.set("sessionid", s.TS.SESSIONID),
-                      await m().post(
-                        s.TS.STORE_BASE_URL + "twofactor/manage_action",
+                      e.set("sessionid", i.TS.SESSIONID),
+                      await l().post(
+                        i.TS.STORE_BASE_URL + "twofactor/manage_action",
                         e,
                       );
                     const t = document.createElement("form");
                     (t.method = "POST"),
-                      (t.action = s.TS.STORE_BASE_URL + "logout");
+                      (t.action = i.TS.STORE_BASE_URL + "logout");
                     const a = document.createElement("input");
                     (a.type = "hidden"),
                       (a.name = "sessionid"),
-                      (a.value = s.TS.SESSIONID),
+                      (a.value = i.TS.SESSIONID),
                       t.appendChild(a),
                       document.body.appendChild(t),
                       t.submit();
@@ -2157,22 +2032,22 @@
           ),
         );
       }
-      var Ke,
-        je = a(86342);
-      function Je(e) {
+      var Ue,
+        Me = a(86342);
+      function xe(e) {
         return n.createElement(
-          h.u,
+          E.u,
           { navID: "StoreSecurityAndDevices" },
-          n.createElement(Xe, null),
-          n.createElement(Fe, null),
+          n.createElement(Ve, null),
+          n.createElement(Te, null),
         );
       }
-      function Xe(e) {
-        const t = s.TS.HELP_BASE_URL + "faqs/view/7EFD-3CAE-64D3-1C31",
-          a = pe.Get(),
-          i =
+      function Ve(e) {
+        const t = i.TS.HELP_BASE_URL + "faqs/view/7EFD-3CAE-64D3-1C31",
+          a = me.Get(),
+          c =
             a.GetTwoFactorStatus()?.steamguard_scheme ==
-            Ke.k_ETwoFactorTokenSteamguardScheme_TwoFactor;
+            Ue.k_ETwoFactorTokenSteamguardScheme_TwoFactor;
         return n.createElement(
           n.Fragment,
           null,
@@ -2182,84 +2057,84 @@
             n.createElement(
               "div",
               null,
-              n.createElement(D.iSZ, { className: je.HeaderIcon }),
-              (0, u.we)("#youraccount_account_security"),
+              n.createElement(A.iSZ, { className: Me.HeaderIcon }),
+              (0, _.we)("#youraccount_account_security"),
             ),
           ),
           n.createElement(
             "div",
             {
-              className: (0, E.A)(
-                je.AccountSecurityCtn,
+              className: (0, v.A)(
+                Me.AccountSecurityCtn,
                 "account_settings_container",
               ),
             },
             n.createElement(
               "div",
               null,
-              (0, u.oW)(
+              (0, _.oW)(
                 "#accountpreferences_account_security_description",
-                n.createElement(k.Ii, { target: "_blank", href: t }),
+                n.createElement(g.Ii, { target: "_blank", href: t }),
               ),
             ),
-            i
-              ? n.createElement(Qe, {
+            c
+              ? n.createElement(We, {
                   msgTwoFactorStatus: a.GetTwoFactorStatus(),
                   strFaqUrl: t,
                 })
-              : n.createElement($e, { strFaqUrl: t }),
+              : n.createElement(Oe, { strFaqUrl: t }),
             n.createElement(
               "div",
-              { className: je.AccountDetailsCtn },
-              n.createElement(et, null),
-              n.createElement("div", { className: je.Divider }),
-              n.createElement(at, null),
-              n.createElement(tt, {
+              { className: Me.AccountDetailsCtn },
+              n.createElement(je, null),
+              n.createElement("div", { className: Me.Divider }),
+              n.createElement(Ye, null),
+              n.createElement(Ke, {
                 msgTwoFactorStatus: a.GetTwoFactorStatus(),
               }),
-              i && n.createElement(nt, null),
+              c && n.createElement(Je, null),
             ),
           ),
         );
       }
-      function Qe(e) {
+      function We(e) {
         const { msgTwoFactorStatus: t, strFaqUrl: a } = e,
-          i = pe.Get(),
-          c = ze(i),
-          r = Me(),
+          c = me.Get(),
+          r = De(c),
+          s = be(),
           o = [
-            ...(i.GetActiveDevices() ?? []),
-            ...(i.GetActiveDevices() ?? []),
+            ...(c.GetActiveDevices() ?? []),
+            ...(c.GetActiveDevices() ?? []),
           ];
         let l = null,
-          _ = !1;
+          m = !1;
         return (
           t?.last_seen_auth_token_id &&
             ((l = o.find((e) => e.token_id === t.last_seen_auth_token_id)),
-            (_ = r?.length > 0 && r == l?.token_id)),
+            (m = s?.length > 0 && s == l?.token_id)),
           n.createElement(
             "div",
             null,
             n.createElement(
               "div",
-              { className: je.SteamGuardStatusHeader },
-              n.createElement("img", { className: je.SteamGuardLogo, src: Ee }),
+              { className: Me.SteamGuardStatusHeader },
+              n.createElement("img", { className: Me.SteamGuardLogo, src: pe }),
               n.createElement(
                 "div",
-                { className: je.HeaderText },
-                (0, u.we)("#accountpreferences_account_security_steamguard"),
+                { className: Me.HeaderText },
+                (0, _.we)("#accountpreferences_account_security_steamguard"),
               ),
               n.createElement(
                 "div",
-                { className: je.RemoveText },
+                { className: Me.RemoveText },
                 n.createElement(
-                  k.Ii,
+                  g.Ii,
                   {
                     href:
-                      s.TS.STORE_BASE_URL +
+                      i.TS.STORE_BASE_URL +
                       "twofactor/remove?step=promptdevice",
                   },
-                  (0, u.we)(
+                  (0, _.we)(
                     "#accountpreferences_account_security_steamguard_remove",
                   ),
                 ),
@@ -2267,43 +2142,43 @@
             ),
             n.createElement(
               "div",
-              { className: je.SteamGuardStatusBody },
+              { className: Me.SteamGuardStatusBody },
               !!l &&
                 n.createElement(
                   n.Fragment,
                   null,
-                  n.createElement(Be, {
-                    className: je.AuthorizedDevice,
+                  n.createElement(Ce, {
+                    className: Me.AuthorizedDevice,
                     device: l,
-                    strActiveCountry: c,
+                    strActiveCountry: r,
                     msgTwoFactorStatus: t,
                     bShowAuthenticatorActivity: !0,
                   }),
-                  n.createElement("div", { className: je.Divider }),
+                  n.createElement("div", { className: Me.Divider }),
                 ),
               n.createElement(
                 "div",
-                { className: je.SteamGuardActionsCtn },
-                n.createElement(ct, {
-                  strLabel: (0, u.we)(
+                { className: Me.SteamGuardActionsCtn },
+                n.createElement(Qe, {
+                  strLabel: (0, _.we)(
                     "#accountpreferences_account_security_move",
                   ),
-                  href: s.TS.HELP_BASE_URL + "faqs/view/29A9-9EEE-09F0-75F9",
+                  href: i.TS.HELP_BASE_URL + "faqs/view/29A9-9EEE-09F0-75F9",
                 }),
-                n.createElement(ct, {
-                  strLabel: (0, u.we)(
+                n.createElement(Qe, {
+                  strLabel: (0, _.we)(
                     "#accountpreferences_account_security_help_lost",
                   ),
                   href:
-                    s.TS.STORE_BASE_URL + "twofactor/remove?step=promptdevice",
+                    i.TS.STORE_BASE_URL + "twofactor/remove?step=promptdevice",
                 }),
                 n.createElement(
                   "div",
-                  { className: je.RightAligned },
+                  { className: Me.RightAligned },
                   n.createElement(
-                    k.Ii,
+                    g.Ii,
                     { href: a, target: "_blank" },
-                    (0, u.we)("#accountpreferences_account_security_view_faq"),
+                    (0, _.we)("#accountpreferences_account_security_view_faq"),
                   ),
                 ),
               ),
@@ -2311,100 +2186,100 @@
           )
         );
       }
-      function $e(e) {
+      function Oe(e) {
         const { strFaqUrl: t } = e,
-          a = pe.Get().GetLatestAndroidAppVersion();
+          a = me.Get().GetLatestAndroidAppVersion();
         return n.createElement(
           "div",
-          { className: je.NoSteamGuardCtn },
+          { className: Me.NoSteamGuardCtn },
           n.createElement(
             "div",
-            { className: je.SteamGuardStatusHeader },
-            n.createElement("img", { className: je.SteamGuardLogo, src: ve }),
+            { className: Me.SteamGuardStatusHeader },
+            n.createElement("img", { className: Me.SteamGuardLogo, src: de }),
             n.createElement(
               "div",
-              { className: je.HeaderText },
-              (0, u.we)("#accountpreferences_account_security_no_steamguard"),
+              { className: Me.HeaderText },
+              (0, _.we)("#accountpreferences_account_security_no_steamguard"),
             ),
           ),
-          n.createElement("div", { className: je.Divider }),
+          n.createElement("div", { className: Me.Divider }),
           n.createElement(
             "div",
-            { className: je.NoSteamGuardBody },
+            { className: Me.NoSteamGuardBody },
             n.createElement(
               "div",
-              { className: je.QROuterCtn },
+              { className: Me.QROuterCtn },
               n.createElement(
                 "div",
-                { className: je.GetMobileAppCtn },
+                { className: Me.GetMobileAppCtn },
                 n.createElement(
                   "div",
-                  { className: je.GetMobileAppText },
-                  (0, u.oW)(
+                  { className: Me.GetMobileAppText },
+                  (0, _.oW)(
                     "#accountpreferences_account_security_get_app",
-                    n.createElement(k.Ii, {
-                      href: s.TS.STORE_BASE_URL + "mobile#mobile_section",
+                    n.createElement(g.Ii, {
+                      href: i.TS.STORE_BASE_URL + "mobile#mobile_section",
                     }),
                   ),
                 ),
                 n.createElement(
                   "div",
                   null,
-                  (0, u.we)("#accountpreferences_account_security_scan_qr"),
+                  (0, _.we)("#accountpreferences_account_security_scan_qr"),
                 ),
               ),
-              n.createElement("img", { src: ge, className: je.QRCode }),
+              n.createElement("img", { src: ve, className: Me.QRCode }),
             ),
             n.createElement(
               "div",
-              { className: je.MobileAppLinksCtn },
+              { className: Me.MobileAppLinksCtn },
               n.createElement(
                 "div",
                 null,
-                (0, u.we)(
+                (0, _.we)(
                   "#accountpreferences_account_security_mobile_os_reqs",
                 ),
               ),
               n.createElement(
                 "div",
-                { className: je.MobileAppDownloadImages },
+                { className: Me.MobileAppDownloadImages },
                 n.createElement(
-                  k.Ii,
+                  g.Ii,
                   {
                     href: "https://itunes.apple.com/us/app/steam-mobile/id495369748",
                     rel: "noopener",
                     target: "_blank",
                   },
-                  n.createElement(fe.o, {
-                    srcs: Ze(
-                      s.TS.IMG_URL +
+                  n.createElement(ue.o, {
+                    srcs: qe(
+                      i.TS.IMG_URL +
                         "mobile/localizedimages/appleappstore/apple_store_",
                       ".png",
                     ),
-                    className: je.AppleAppStoreImg,
+                    className: Me.AppleAppStoreImg,
                   }),
                 ),
                 n.createElement(
-                  k.Ii,
+                  g.Ii,
                   {
                     href: "https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community",
                     rel: "noopener",
                     target: "_blank",
                   },
-                  n.createElement(fe.o, {
-                    srcs: Ze(
-                      s.TS.IMG_URL +
+                  n.createElement(ue.o, {
+                    srcs: qe(
+                      i.TS.IMG_URL +
                         "mobile/localizedimages/googleplaystore/google_play_store_",
                       ".png",
                     ),
-                    className: je.GooglePlayStoreImg,
+                    className: Me.GooglePlayStoreImg,
                   }),
                 ),
               ),
               n.createElement(
                 "div",
                 null,
-                (0, u.oW)(
+                (0, _.oW)(
                   "#accountpreferences_account_security_apk_download",
                   n.createElement("a", {
                     href: `https://media.steampowered.com/apps/steam-android/steam-${a}.apk`,
@@ -2417,152 +2292,152 @@
                 n.createElement(
                   "a",
                   { href: t, target: "_blank" },
-                  (0, u.we)("#accountpreferences_account_security_mobile_faq"),
+                  (0, _.we)("#accountpreferences_account_security_mobile_faq"),
                 ),
               ),
             ),
           ),
         );
       }
-      function Ze(e, t) {
-        const a = u.A0.GetLanguageFallback(s.TS.LANGUAGE);
-        let n = [e + s.TS.LANGUAGE + t];
-        return s.TS.LANGUAGE != a && n.push(e + a + t), n;
+      function qe(e, t) {
+        const a = _.A0.GetLanguageFallback(i.TS.LANGUAGE);
+        let n = [e + i.TS.LANGUAGE + t];
+        return i.TS.LANGUAGE != a && n.push(e + a + t), n;
       }
-      function et(e) {
-        const t = pe.Get(),
-          a = s.TS.IN_MOBILE_WEBVIEW;
+      function je(e) {
+        const t = me.Get(),
+          a = i.TS.IN_MOBILE_WEBVIEW;
         return n.createElement(
           "div",
-          { className: je.AccountDetailsSubBlock },
-          n.createElement(it, {
-            strLabel: (0, u.we)(
+          { className: Me.AccountDetailsSubBlock },
+          n.createElement(Xe, {
+            strLabel: (0, _.we)(
               "#accountpreferences_account_security_account_name",
             ),
             strText: t.GetAccountName(),
           }),
-          n.createElement(ct, {
-            strLabel: (0, u.we)(
+          n.createElement(Qe, {
+            strLabel: (0, _.we)(
               "#accountpreferences_account_security_change_pass",
             ),
             href:
-              s.TS.HELP_BASE_URL +
+              i.TS.HELP_BASE_URL +
               "wizard/HelpChangePassword?redir=store/account/",
             target: a ? "_blank" : void 0,
           }),
         );
       }
-      function tt(e) {
+      function Ke(e) {
         const { msgTwoFactorStatus: t } = e,
-          a = pe.Get(),
-          i = t.email_validated,
-          c = t.steamguard_scheme == Ke.k_ETwoFactorTokenSteamguardScheme_Email,
-          r = s.TS.IN_MOBILE_WEBVIEW;
+          a = me.Get(),
+          c = t.email_validated,
+          r = t.steamguard_scheme == Ue.k_ETwoFactorTokenSteamguardScheme_Email,
+          s = i.TS.IN_MOBILE_WEBVIEW;
         return n.createElement(
           "div",
-          { className: je.AccountDetailsSubBlock },
-          n.createElement(it, {
-            strLabel: (0, u.we)("#accountpreferences_account_security_email"),
+          { className: Me.AccountDetailsSubBlock },
+          n.createElement(Xe, {
+            strLabel: (0, _.we)("#accountpreferences_account_security_email"),
             strText: a.GetEmailAddress(),
           }),
-          n.createElement(it, {
-            strLabel: (0, u.we)(
+          n.createElement(Xe, {
+            strLabel: (0, _.we)(
               "#accountpreferences_account_security_email_status",
             ),
-            strText: i
-              ? (0, u.we)("#youraccount_email_verified")
-              : (0, u.we)("#youraccount_email_unverified"),
+            strText: c
+              ? (0, _.we)("#youraccount_email_verified")
+              : (0, _.we)("#youraccount_email_unverified"),
           }),
-          c &&
-            n.createElement(it, {
-              strLabel: (0, u.we)(
+          r &&
+            n.createElement(Xe, {
+              strLabel: (0, _.we)(
                 "#accountpreferences_account_security_verification",
               ),
-              strText: (0, u.we)(
+              strText: (0, _.we)(
                 "#accountpreferences_account_security_via_email",
               ),
             }),
           n.createElement(
             "div",
-            { className: je.EmailActions },
-            n.createElement(ct, {
-              strLabel: (0, u.we)(
+            { className: Me.EmailActions },
+            n.createElement(Qe, {
+              strLabel: (0, _.we)(
                 "#accountpreferences_account_security_change_email",
               ),
               href:
-                s.TS.HELP_BASE_URL +
+                i.TS.HELP_BASE_URL +
                 "wizard/HelpChangeEmail?redir=store/account/",
-              target: r ? "_blank" : void 0,
+              target: s ? "_blank" : void 0,
             }),
-            c &&
-              n.createElement(ct, {
-                strLabel: (0, u.we)(
+            r &&
+              n.createElement(Qe, {
+                strLabel: (0, _.we)(
                   "#accountpreferences_account_security_remove_email_guard",
                 ),
-                href: s.TS.STORE_BASE_URL + "twofactor/manage",
+                href: i.TS.STORE_BASE_URL + "twofactor/manage",
               }),
           ),
         );
       }
-      function at(e) {
-        const t = pe.Get();
-        let a = (0, u.we)("#accountpreferences_account_security_phone_none");
+      function Ye(e) {
+        const t = me.Get();
+        let a = (0, _.we)("#accountpreferences_account_security_phone_none");
         return (
           t.GetPhoneHint() &&
-            (a = (0, u.we)(
+            (a = (0, _.we)(
               "#accountpreferences_account_security_phone_hint",
               t.GetPhoneHint(),
             )),
           n.createElement(
             "div",
-            { className: je.AccountDetailsSubBlock },
-            n.createElement(it, {
-              strLabel: (0, u.we)("#accountpreferences_account_security_phone"),
+            { className: Me.AccountDetailsSubBlock },
+            n.createElement(Xe, {
+              strLabel: (0, _.we)("#accountpreferences_account_security_phone"),
               strText: a,
             }),
-            n.createElement(ct, {
-              strLabel: (0, u.we)(
+            n.createElement(Qe, {
+              strLabel: (0, _.we)(
                 "#accountpreferences_account_security_manage_phone",
               ),
-              href: s.TS.STORE_BASE_URL + "phone/manage",
+              href: i.TS.STORE_BASE_URL + "phone/manage",
             }),
           )
         );
       }
-      function nt(e) {
+      function Je(e) {
         return n.createElement(
           "div",
-          { className: je.AccountDetailsSubBlock },
-          n.createElement(it, {
-            strLabel: (0, u.we)(
+          { className: Me.AccountDetailsSubBlock },
+          n.createElement(Xe, {
+            strLabel: (0, _.we)(
               "#accountpreferences_account_security_backup_codes",
             ),
           }),
-          n.createElement(ct, {
-            strLabel: (0, u.we)(
+          n.createElement(Qe, {
+            strLabel: (0, _.we)(
               "#accountpreferences_account_security_get_backup_codes",
             ),
-            href: s.TS.STORE_BASE_URL + "twofactor/emergency_codes",
+            href: i.TS.STORE_BASE_URL + "twofactor/emergency_codes",
           }),
         );
       }
-      function it(e) {
+      function Xe(e) {
         const { strLabel: t, strText: a } = e;
         return n.createElement(
           "div",
           null,
-          n.createElement("span", { className: je.AccountDetailLabel }, t),
+          n.createElement("span", { className: Me.AccountDetailLabel }, t),
           !!a && n.createElement("span", null, a),
         );
       }
-      function ct(e) {
-        const { strLabel: t, href: a, target: i } = e;
+      function Qe(e) {
+        const { strLabel: t, href: a, target: c } = e;
         return n.createElement(
           "div",
           null,
           n.createElement(
-            k.Ii,
-            { className: je.AccountActionButton, href: a, target: i },
+            g.Ii,
+            { className: Me.AccountActionButton, href: a, target: c },
             t,
           ),
         );
@@ -2574,25 +2449,24 @@
             "k_ETwoFactorTokenSteamguardScheme_Email"),
           (e[(e.k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2)] =
             "k_ETwoFactorTokenSteamguardScheme_TwoFactor");
-      })(Ke || (Ke = {}));
-      const rt = n.lazy(() =>
+      })(Ue || (Ue = {}));
+      const $e = n.lazy(() =>
           Promise.all([
             a.e(8970),
             a.e(2298),
             a.e(576),
-            a.e(2120),
-            a.e(1540),
+            a.e(7436),
             a.e(4796),
             a.e(1726),
-            a.e(4789),
-            a.e(7048),
-            a.e(925),
+            a.e(3270),
+            a.e(5247),
+            a.e(4860),
             a.e(1677),
             a.e(8567),
             a.e(7072),
           ]).then(a.bind(a, 42048)),
         ),
-        ot = {
+        Ze = {
           CookieSettings: () => "/cookiepreferences",
           NotificationSettings: () => "/notificationsettings",
           FamilyManagement: () => "/familymanagement",
@@ -2600,63 +2474,63 @@
           PlaytestInvites: () => "/playtestinvites",
           Playtests: () => "/playtests",
         },
-        st = (e) => {
+        et = (e) => {
           const t = e.match.url,
-            a = ot;
+            a = Ze;
           return n.createElement(
-            i.dO,
+            c.dO,
             null,
-            n.createElement(i.qh, {
+            n.createElement(c.qh, {
               path: `${t}${a.CookieSettings()}`,
               render: () =>
-                n.createElement(L.X, {
+                n.createElement(G.X, {
                   config: {
-                    "cookie-preferences": () => n.createElement(S, null),
+                    "cookie-preferences": () => n.createElement(w, null),
                   },
                 }),
             }),
-            n.createElement(i.qh, {
+            n.createElement(c.qh, {
               path: `${t}${a.NotificationSettings()}`,
               render: () =>
-                n.createElement(L.X, {
+                n.createElement(G.X, {
                   config: {
-                    "notification-settings": () => n.createElement(R, null),
+                    "notification-settings": () => n.createElement(C, null),
                   },
                 }),
             }),
-            n.createElement(i.qh, {
+            n.createElement(c.qh, {
               path: `${t}${a.FamilyManagement()}`,
               render: () =>
-                n.createElement(L.X, {
+                n.createElement(G.X, {
                   config: {
-                    "family-management": () => n.createElement(rt, null),
+                    "family-management": () => n.createElement($e, null),
                   },
                 }),
             }),
-            n.createElement(i.qh, {
+            n.createElement(c.qh, {
               path: `${t}${a.SecurityDevices()}`,
               render: () =>
-                n.createElement(L.X, {
+                n.createElement(G.X, {
                   config: {
-                    "security-devices": () => n.createElement(Je, null),
+                    "security-devices": () => n.createElement(xe, null),
                   },
                 }),
             }),
-            n.createElement(i.qh, {
+            n.createElement(c.qh, {
               path: `${t}${a.PlaytestInvites()}`,
               render: () =>
-                n.createElement(L.X, {
+                n.createElement(G.X, {
                   config: {
                     "playtest-invites": () =>
-                      n.createElement(ne, { bShowPlaytestOverview: !0 }),
+                      n.createElement(ee, { bShowPlaytestOverview: !0 }),
                   },
                 }),
             }),
-            n.createElement(i.qh, {
+            n.createElement(c.qh, {
               path: `${t}${a.Playtests()}`,
               render: () =>
-                n.createElement(L.X, {
-                  config: { playtests: (e) => n.createElement(de, { ...e }) },
+                n.createElement(G.X, {
+                  config: { playtests: (e) => n.createElement(_e, { ...e }) },
                 }),
             }),
           );

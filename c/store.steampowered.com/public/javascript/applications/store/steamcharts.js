@@ -10091,6 +10091,9 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { Item: _ } = _,
@@ -10116,8 +10119,9 @@
       function _(_) {
         const { Item: _ } = _,
           _ = _.GetAppID(),
-          _ = _._.Get().BOwnsApp(_),
-          _ = _._.Get().BIsGameWishlisted(_);
+          _ = (0, _._)(_),
+          { bIsOwned: _ } = (0, _._)(_),
+          _ = (0, _._)(_);
         return _.createElement(
           _.Fragment,
           null,
@@ -10783,6 +10787,7 @@
           _ = (0, _._)(_),
           _ = (0, _._)(),
           _ = (0, _._)(_.GetStorePageURL(), _),
+          _ = (0, _._)(_),
           _ = _.GetBestPurchaseOption();
         let _ = "";
         _.BIsFree()
@@ -10855,7 +10860,7 @@
                 className: _().PriceWidget,
               },
               _.createElement(_._, {
-                storeItem: _,
+                _: _,
               }),
             ),
           ),

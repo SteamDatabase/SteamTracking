@@ -4291,10 +4291,18 @@ span._1P__hyqsgd049GH0Bn007_ {
   color: #fff;
   font-size: 12px;
 }
-._2FXMECiK-1oag3HieTiKJW {
-  background-color: hotpink;
-  border: 1px solid;
-  padding: 10px;
+._3cEK5JKL6FSqY5FgD_4hFA {
+  opacity: 1;
+  transition: opacity .2s ease .1s;
+  display: block;
+  top: 4px;
+  right: 4px;
+  width: 44px;
+  height: 24px;
+  position: absolute;
+  border-radius: 24px;
+  background-color: var(--gpBackground-DarkMedium) !important;
+  backdrop-filter: blur(24px);
 }
 .yloqxGhIEzvGIwbQbo6KP .DialogContentFullSize .DialogContent_InnerWidth {
   overflow: hidden;
@@ -4361,6 +4369,11 @@ span._1P__hyqsgd049GH0Bn007_ {
 ._16SknI_KfMn45zQAvi-Xrs:hover ._3Mns5ZEBThi10kv9zwdCRr {
   opacity: 0.5;
 }
+._2FXMECiK-1oag3HieTiKJW {
+  background-color: hotpink;
+  border: 1px solid;
+  padding: 10px;
+}
 ._21egtPB7z9UR7Z80XrE3ci {
   position: absolute;
   top: 0;
@@ -4368,19 +4381,6 @@ span._1P__hyqsgd049GH0Bn007_ {
   width: 100px;
   height: auto;
   pointer-events: none;
-}
-._3cEK5JKL6FSqY5FgD_4hFA {
-  opacity: 1;
-  transition: opacity .2s ease .1s;
-  display: block;
-  top: 4px;
-  right: 4px;
-  width: 44px;
-  height: 24px;
-  position: absolute;
-  border-radius: 24px;
-  background-color: var(--gpBackground-DarkMedium) !important;
-  backdrop-filter: blur(24px);
 }
 ._24C5lxFpKz_kHyuT-8GJKK {
   border-radius: 50%;
@@ -7628,6 +7628,27 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent 80%);
   pointer-events: none;
 }
+._3HELOo0qFfDrRZ9Sa1GXeF {
+  position: absolute;
+  z-index: 11;
+  top: -20px;
+  left: 0;
+  padding: 3px 4px;
+  color: #fff;
+  background-color: #333;
+  font-size: 14px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  user-select: none;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+._3HELOo0qFfDrRZ9Sa1GXeF ._2YhOhoyYNbue9fEPMYPiq2 {
+  font-weight: 600;
+}
+._3HELOo0qFfDrRZ9Sa1GXeF._2cpBClyttSkWAsgMArc0BM {
+  top: 0;
+  opacity: 1;
+}
 .-ap7mXqcxyhrxn5-5EaM8 {
   width: 100%;
   --gap-size: 4px;
@@ -7864,27 +7885,6 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 }
 ._3zPl6O67BYIiFOlq7FxlJP:focus {
   outline: none;
-}
-._3HELOo0qFfDrRZ9Sa1GXeF {
-  position: absolute;
-  z-index: 11;
-  top: -20px;
-  left: 0;
-  padding: 3px 4px;
-  color: #fff;
-  background-color: #333;
-  font-size: 14px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-  user-select: none;
-  opacity: 0;
-  transition: all .5s ease-in-out;
-}
-._3HELOo0qFfDrRZ9Sa1GXeF ._2YhOhoyYNbue9fEPMYPiq2 {
-  font-weight: 600;
-}
-._3HELOo0qFfDrRZ9Sa1GXeF._2cpBClyttSkWAsgMArc0BM {
-  top: 0;
-  opacity: 1;
 }
 ._861OI3fFcj_3yxoWXG_5_ {
   display: flex;

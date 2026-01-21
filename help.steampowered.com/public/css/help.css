@@ -2155,6 +2155,28 @@ a.guide_row {
 	padding: 0px 8px 0px 8px;
 }
 
+.help_purchase_recipient_block {
+	margin: 24px 0;
+}
+
+.help_purchase_recipient_block.is_gift .gift_line_items {
+	padding-left: 24px;
+}
+
+.purchase_item_bundle {
+	margin: 0 0 12px 0;
+}
+
+.purchase_item_bundle .bundle_name {
+	font-size: 14px;
+	margin: 6px 0;
+}
+
+.purchase_item_bundle .bundle_name a {
+	font-size: 20px;
+}
+
+
 .help_issue_details,
 .help_notinlibrary_details,
 .help_missingrefund_details,

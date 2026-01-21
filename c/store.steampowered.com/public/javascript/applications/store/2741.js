@@ -283,6 +283,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
@@ -1795,6 +1796,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -2042,11 +2044,11 @@
             LineItemContainer: _,
           } = _,
           _ = _.line_item_id,
-          _ = {
-            _: _?.GetID(),
-            type: (0, _._)(_?.GetStoreItemType(), _?.GetAppType()),
-          },
           _ = (0, _._)(_),
+          _ =
+            (_?.GetID(),
+            (0, _._)(_?.GetStoreItemType(), _?.GetAppType()),
+            (0, _._)(_)),
           _ = _.isPending || _.isSuccess,
           _ = _(__webpack_require__),
           _ = _.GetIncludedAppIDsOrSelf(),
@@ -2149,7 +2151,7 @@
                       className: (0, _._)(_().LineItemCol, _().PlatformIcons),
                     },
                     _.createElement(_._, {
-                      item: _,
+                      _: _,
                       strClassName: _().LineItemPlatforms,
                     }),
                   ),
@@ -2541,8 +2543,9 @@
                 .flat(),
             ),
           ];
-        return _.length && 1 != _.length
-          ? _.createElement(
+        return !_.length || (1 == _.length && !_.item_id.bundleid)
+          ? null
+          : _.createElement(
               _._,
               {
                 text: !0,
@@ -2566,8 +2569,7 @@
                   }),
                 ),
               ),
-            )
-          : null;
+            );
       });
       function _(_) {
         const { appids: _ } = _,
@@ -3787,6 +3789,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (function (_) {
@@ -3836,9 +3840,31 @@
             if (_.ownership.wishes_for) {
               if (!_.ownership.wishes_for) return -1;
             } else if (_.ownership.wishes_for) return 1;
+            const _ = _.ownership.partial_wishes_for?.length ?? 0,
+              _ = _.ownership.partial_wishes_for?.length ?? 0;
+            if (_ != _) return _ - _;
             if (_.ownership.already_owns) {
               if (!_.ownership.already_owns) return 1;
             } else if (_.ownership.already_owns) return -1;
+            const _ = _.ownership.partial_owns_appids?.length ?? 0,
+              _ = _.ownership.partial_owns_appids?.length ?? 0;
+            if (_ != _) return _ - _;
+            if (_ > 0) {
+              const _ = _.ownership.partial_wishes_for.reduce(
+                  (_, _) => _ ^ _,
+                  0,
+                ),
+                _ = _.ownership.partial_wishes_for.reduce((_, _) => _ ^ _, 0);
+              if (_ != _) return _ - _;
+            }
+            if (_ > 0) {
+              const _ = _.ownership.partial_owns_appids.reduce(
+                  (_, _) => _ ^ _,
+                  0,
+                ),
+                _ = _.ownership.partial_owns_appids.reduce((_, _) => _ ^ _, 0);
+              if (_ != _) return _ - _;
+            }
             return _.persona.m_strPlayerName.localeCompare(
               _.persona.m_strPlayerName,
             );
@@ -3951,8 +3977,7 @@
                     key: _.accountid,
                     selected: _.accountid === _,
                     onSelect: _,
-                    ownsGame: _.ownership.already_owns,
-                    wishlistsGame: _.ownership.wishes_for,
+                    ownership: _.ownership,
                     persona: _.persona,
                     nickname: _.nickname,
                   }),
@@ -4005,57 +4030,138 @@
             onSelect: __webpack_require__,
             nickname: _,
             persona: _,
-            ownsGame: _,
-            wishlistsGame: _,
+            ownership: _,
           } = _,
-          _ = _,
+          _ = _.already_owns,
           _ = _.useCallback(() => {
             _ || __webpack_require__(_.m_steamid.ConvertTo64BitString());
           }, [_, __webpack_require__, _]);
-        let _ = null;
-        return (
-          _
-            ? (_ = _.createElement(
+        return _.createElement(
+          _._,
+          {
+            className: (0, _._)(
+              _().GiftPickerFriendBlock,
+              _ && _().Selected,
+              _ && _().Disabled,
+            ),
+            focusClassName: _().Focused,
+            noFocusRing: !0,
+            onActivate: _,
+          },
+          _.createElement(_._, {
+            className: _().FriendAvatar,
+            statusPosition: "right",
+            persona: _,
+          }),
+          _.createElement(_._, {
+            bParenthesizeNicknames: !0,
+            strNickname: _,
+            persona: _,
+            className: _().PersonaName,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().FriendsGiftLabel,
+            },
+            _.createElement(_, {
+              ownership: _,
+            }),
+            _.createElement(_, {
+              ownership: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { ownership: _ } = _,
+          { already_owns: __webpack_require__, partial_owns_appids: _ } = _;
+        return __webpack_require__
+          ? _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().OwnsGame),
+              },
+              (0, _._)("#Cart_GiftRecipientModal_OwnsGameLabel"),
+            )
+          : _ && _.length > 0
+            ? _.createElement(
                 "div",
                 {
-                  className: (0, _._)(_().FriendsGiftLabel, _().OwnsGame),
+                  className: (0, _._)(_().OwnsGame),
                 },
-                (0, _._)("#Cart_GiftRecipientModal_OwnsGameLabel"),
-              ))
-            : _ &&
-              (_ = _.createElement(
+                (0, _._)(
+                  "#Cart_GiftRecipientModal_PartialOwnsLabel",
+                  _.createElement(_, {
+                    rgAppList: _,
+                  }),
+                ),
+              )
+            : null;
+      }
+      function _(_) {
+        const { ownership: _ } = _,
+          {
+            already_owns: __webpack_require__,
+            wishes_for: _,
+            partial_wishes_for: _,
+          } = _;
+        return __webpack_require__
+          ? null
+          : _
+            ? _.createElement(
                 "div",
                 {
-                  className: (0, _._)(_().FriendsGiftLabel, _().OnWishlist),
+                  className: (0, _._)(_().OnWishlist),
                 },
                 (0, _._)("#Cart_GiftRecipientModal_OnWishlist"),
-              )),
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(
-                _().GiftPickerFriendBlock,
-                _ && _().Selected,
-                _ && _().Disabled,
+              )
+            : _ && _.length > 0
+              ? _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_().OnWishlist),
+                  },
+                  (0, _._)(
+                    "#Cart_GiftRecipientModal_PartialWishlistLabel",
+                    _.createElement(_, {
+                      rgAppList: _,
+                    }),
+                  ),
+                )
+              : null;
+      }
+      function _(_) {
+        const { rgAppList: _ } = _,
+          _ = (0, _._)(),
+          _ = _.useMemo(
+            () =>
+              Array.from(new Set(_))
+                .slice(0, 6)
+                .map((_) =>
+                  (0, _._)(_, {
+                    appid: _,
+                  }),
+                ),
+            [_, _],
+          ),
+          _ = (0, _._)({
+            queries: _,
+          }),
+          _ = [];
+        for (const _ of _)
+          if (_.data && _.data.name) {
+            if (_.length >= 3) break;
+            _.push(
+              _.createElement(
+                _.Fragment,
+                null,
+                _.length ? ", " : "",
+                _.data.name,
               ),
-              focusClassName: _().Focused,
-              noFocusRing: !0,
-              onActivate: _,
-            },
-            _.createElement(_._, {
-              className: _().FriendAvatar,
-              statusPosition: "right",
-              persona: _,
-            }),
-            _.createElement(_._, {
-              bParenthesizeNicknames: !0,
-              strNickname: _,
-              persona: _,
-              className: _().PersonaName,
-            }),
-            _,
-          )
-        );
+            );
+          }
+        return _;
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {

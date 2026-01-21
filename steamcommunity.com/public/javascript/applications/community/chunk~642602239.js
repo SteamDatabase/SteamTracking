@@ -2257,9 +2257,7 @@
                 let t = (0, w.J)(k(e.args));
                 if (!t) {
                   const n = e.children;
-                  "string" == typeof n &&
-                    (n.startsWith("http://") || n.startsWith("https://")) &&
-                    (t = (0, w.J)(n));
+                  "string" == typeof n && (0, y.DZ)(n) && (t = (0, w.J)(n));
                 }
                 const n =
                     "button" == k(e.args, "style") ? a().LinkButton : null,
@@ -3251,7 +3249,7 @@
       "use strict";
       n.d(t, { NK: () => o, bK: () => i, dF: () => l, w2: () => c });
       var i,
-        a = n(13952),
+        a = n(16021),
         r = n(4796),
         s = n(61859);
       !(function (e) {
@@ -3468,7 +3466,7 @@
         u = n(4796),
         p = n(8092),
         h = n(44165),
-        _ = n(13952),
+        _ = n(16021),
         g = n(81393),
         v = n(61859),
         E = n(25489),

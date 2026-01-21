@@ -221,7 +221,7 @@
         r = s(88997),
         l = s(55963),
         u = s(54728),
-        c = s(82097),
+        c = s(16021),
         d = s(84933),
         m = s(6144);
       class p extends i.Component {
@@ -330,8 +330,8 @@
         w = s(12155),
         D = s(51272),
         k = s(56011),
-        I = s(61859),
-        P = s(82227),
+        P = s(61859),
+        I = s(82227),
         T = s(25489),
         M = s(78327),
         A = s(3067),
@@ -339,14 +339,14 @@
         V = s(15527),
         B = s.n(V),
         N = s(22797);
-      function G() {
+      function R() {
         return i.createElement(
           "div",
           { className: "STV_ReplayBanner" },
-          (0, I.we)("#DASHPlayerControls_IsReplay"),
+          (0, P.we)("#DASHPlayerControls_IsReplay"),
         );
       }
-      const R = (0, a.PA)((e) => {
+      const G = (0, a.PA)((e) => {
         let t = e.video;
         if (t && (t.IsBroadcastClip() || t.IsBroadcastVOD())) return null;
         let s = u.fK.Loading,
@@ -390,7 +390,7 @@
             i.createElement(
               "span",
               null,
-              (0, I.we)("#DASHPlayerControls_ClickToPlay"),
+              (0, P.we)("#DASHPlayerControls_ClickToPlay"),
             ),
           );
         }
@@ -416,7 +416,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_BufferingResolution"),
+              (0, P.we)("#DASHPlayerStats_BufferingResolution"),
               " ",
               i.createElement(
                 "span",
@@ -427,7 +427,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_PlaybackResolution"),
+              (0, P.we)("#DASHPlayerStats_PlaybackResolution"),
               " ",
               i.createElement(
                 "span",
@@ -438,7 +438,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_HtmlResolution"),
+              (0, P.we)("#DASHPlayerStats_HtmlResolution"),
               " ",
               i.createElement(
                 "span",
@@ -449,7 +449,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_ContentServer"),
+              (0, P.we)("#DASHPlayerStats_ContentServer"),
               " ",
               i.createElement(
                 "span",
@@ -460,7 +460,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_StallEvents"),
+              (0, P.we)("#DASHPlayerStats_StallEvents"),
               " ",
               i.createElement(
                 "span",
@@ -471,7 +471,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_FailedDownloads"),
+              (0, P.we)("#DASHPlayerStats_FailedDownloads"),
               " ",
               i.createElement(
                 "span",
@@ -482,7 +482,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_TimeToFirstFrame"),
+              (0, P.we)("#DASHPlayerStats_TimeToFirstFrame"),
               " ",
               i.createElement(
                 "span",
@@ -493,7 +493,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_PlaybackRate"),
+              (0, P.we)("#DASHPlayerStats_PlaybackRate"),
               " ",
               i.createElement(
                 "span",
@@ -520,7 +520,7 @@
               : t.GetNumBufferedAudioRanges();
           if (o > 0)
             for (let a = 0; a < o; ++a) {
-              let o = (0, I.we)(
+              let o = (0, P.we)(
                   e
                     ? "#DASHPlayerStats_VideoBufferRange"
                     : "#DASHPlayerStats_AudioBufferRange",
@@ -540,7 +540,7 @@
               );
             }
           else {
-            let t = (0, I.we)(
+            let t = (0, P.we)(
               e
                 ? "#DASHPlayerStats_VideoNoRangeInformation"
                 : "#DASHPlayerStats_AudioNoRangeInformation",
@@ -557,7 +557,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_BytesReceived"),
+              (0, P.we)("#DASHPlayerStats_BytesReceived"),
               " ",
               i.createElement(
                 "span",
@@ -569,7 +569,7 @@
               i.createElement(
                 "div",
                 null,
-                (0, I.we)("#DASHPlayerStats_DroppedFrames"),
+                (0, P.we)("#DASHPlayerStats_DroppedFrames"),
                 " ",
                 i.createElement(
                   "span",
@@ -580,7 +580,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_VideoBuffered"),
+              (0, P.we)("#DASHPlayerStats_VideoBuffered"),
               " ",
               i.createElement(
                 "span",
@@ -592,7 +592,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_AudioBuffered"),
+              (0, P.we)("#DASHPlayerStats_AudioBuffered"),
               " ",
               i.createElement(
                 "span",
@@ -606,7 +606,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_BandwidthRequired"),
+              (0, P.we)("#DASHPlayerStats_BandwidthRequired"),
               " ",
               i.createElement(
                 "span",
@@ -617,7 +617,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_BandwidthVideo"),
+              (0, P.we)("#DASHPlayerStats_BandwidthVideo"),
               " ",
               i.createElement(
                 "span",
@@ -628,7 +628,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_BandwidthNums"),
+              (0, P.we)("#DASHPlayerStats_BandwidthNums"),
               " ",
               i.createElement(
                 "span",
@@ -639,7 +639,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_DownloadNums"),
+              (0, P.we)("#DASHPlayerStats_DownloadNums"),
               " ",
               i.createElement(
                 "span",
@@ -650,7 +650,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_ActiveDownloads"),
+              (0, P.we)("#DASHPlayerStats_ActiveDownloads"),
               " ",
               i.createElement(
                 "span",
@@ -661,7 +661,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_VideoDownloadProgress"),
+              (0, P.we)("#DASHPlayerStats_VideoDownloadProgress"),
               " ",
               i.createElement(
                 "span",
@@ -672,7 +672,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_DroppingFrames"),
+              (0, P.we)("#DASHPlayerStats_DroppingFrames"),
               " ",
               i.createElement(
                 "span",
@@ -683,7 +683,7 @@
             i.createElement(
               "div",
               null,
-              (0, I.we)("#DASHPlayerStats_CurrentFPS"),
+              (0, P.we)("#DASHPlayerStats_CurrentFPS"),
               " ",
               i.createElement(
                 "span",
@@ -792,7 +792,7 @@
                 i.createElement(
                   F.D,
                   { key: "statsToggle", onClick: this.OnShowStats },
-                  (0, I.we)("#Broadcast_VideoContext_ToggleStats"),
+                  (0, P.we)("#Broadcast_VideoContext_ToggleStats"),
                   "\t",
                 ),
               ),
@@ -815,7 +815,7 @@
                     className: "NoSubtitles",
                     bChecked: !1,
                   },
-                  (0, I.we)("#Broadcast_None"),
+                  (0, P.we)("#Broadcast_None"),
                 ),
               );
             for (let e = 0; e < this.props.video.ListSubtitles().length; e++) {
@@ -1083,8 +1083,8 @@
         (0, n.Cg)([d.oI], W.prototype, "OnMouseUp", null),
         (0, n.Cg)([o.XI], W.prototype, "SetVolumeWithCoord", null),
         (W = (0, n.Cg)([a.PA], W));
-      var q = s(15759);
-      const z = 15;
+      var z = s(15759);
+      const q = 15;
       let K = class extends i.Component {
         m_schHideControls = new m.LU();
         m_schUnmountControls = new m.LU();
@@ -1296,7 +1296,7 @@
                     this.ToggleStatsView(e);
                   },
                 },
-                (0, I.we)("#Broadcast_VideoContext_ToggleStats"),
+                (0, P.we)("#Broadcast_VideoContext_ToggleStats"),
               ),
             ),
             s &&
@@ -1311,7 +1311,7 @@
                       this.ShowStorePage(e);
                     },
                   },
-                  (0, I.we)("#Broadcast_VideoContext_OpenStore"),
+                  (0, P.we)("#Broadcast_VideoContext_OpenStore"),
                 ),
               ),
             e
@@ -1367,14 +1367,14 @@
                 i.createElement("div", {
                   key: "ChatPosToggle ChatTheaterToggle",
                   onClick: this.props.onTheaterMode,
-                  title: (0, I.we)("#Broadcast_View_Theater"),
+                  title: (0, P.we)("#Broadcast_View_Theater"),
                   className: "BroadcastTheaterToggle",
                 }),
               ),
             c.push(
               i.createElement("div", {
                 key: "FullscreenToggle",
-                title: (0, I.we)("#Broadcast_View_Fullscreen"),
+                title: (0, P.we)("#Broadcast_View_Fullscreen"),
                 onClick: this.OnToggleFullscreen,
                 className: "BroadcastFullscreenToggle",
               }),
@@ -1396,7 +1396,7 @@
               onMouseDown: this.OnMouseDown,
             },
             h && i.createElement("div", { className: B().BroadcastContext }, h),
-            n && i.createElement(G, null),
+            n && i.createElement(R, null),
             this.props.showVideoBackgroundBlur &&
               i.createElement(p, {
                 className: "videoBlur",
@@ -1448,7 +1448,7 @@
                 stats: e.GetDASHPlayerStats(),
                 closeStats: this.CloseStats,
               }),
-            i.createElement(R, { video: e }),
+            i.createElement(G, { video: e }),
             r && i.createElement(L, { video: e }),
           );
         }
@@ -1529,7 +1529,7 @@
           this.props.video.JumpTime(-15);
         }
         OnJumpForward() {
-          this.props.video.JumpTime(z);
+          this.props.video.JumpTime(q);
         }
         render() {
           let e = this.props.video,
@@ -1551,7 +1551,7 @@
                   bShowJumpAheadBox: !0,
                   bFlipHorizontal: !0,
                 }),
-                i.createElement("div", { className: "jumpAheadValue" }, z),
+                i.createElement("div", { className: "jumpAheadValue" }, q),
               ),
             i.createElement($, { video: e }),
             t &&
@@ -1567,7 +1567,7 @@
                   bShowJumpAheadBox: !0,
                   bFlipHorizontal: !1,
                 }),
-                i.createElement("div", { className: "jumpAheadValue" }, z),
+                i.createElement("div", { className: "jumpAheadValue" }, q),
               ),
             t && i.createElement(te, { video: e }),
           );
@@ -1601,7 +1601,7 @@
             i.createElement(
               "div",
               { className: "jumpGoLive" },
-              (0, I.we)(
+              (0, P.we)(
                 t ? "#DASHPlayerControls_IsLive" : "#DASHPlayerControls_GoLive",
               ),
             ),
@@ -1939,7 +1939,7 @@
                   i.createElement(se, {
                     key: "start",
                     pos: y,
-                    label: (0, I.we)("#DASHPlayerControls_Start"),
+                    label: (0, P.we)("#DASHPlayerControls_Start"),
                     onMouseEnter: this.OnMarkerMouseEnter,
                     onMouseLeave: this.OnMarkerMouseLeave,
                     onMouseDown: (e) => this.OnMouseDown(e, "start"),
@@ -1947,7 +1947,7 @@
                   i.createElement(se, {
                     key: "end",
                     pos: b,
-                    label: (0, I.we)("#DASHPlayerControls_End"),
+                    label: (0, P.we)("#DASHPlayerControls_End"),
                     onMouseEnter: this.OnMarkerMouseEnter,
                     onMouseLeave: this.OnMarkerMouseLeave,
                     onMouseDown: (e) => this.OnMouseDown(e, "end"),
@@ -2088,7 +2088,7 @@
           let { info: e } = this.state;
           if (!e) return null;
           let t = "";
-          e.m_nViewerCount && (t = (0, P.Dq)(e.m_nViewerCount));
+          e.m_nViewerCount && (t = (0, I.Dq)(e.m_nViewerCount));
           let s =
               A.td.bValid && A.td.stream && A.td.stream[e.m_steamIDBroadcast],
             n =
@@ -2141,7 +2141,7 @@
                       "div",
                       { className: "BroadcastDetailsHeader_ViewerCount" },
                       i.createElement(w.y_e, null),
-                      (0, I.Yp)("#Broadcast_ViewerCount", t),
+                      (0, P.Yp)("#Broadcast_ViewerCount", t),
                     ),
                 ),
               s &&
@@ -2183,7 +2183,7 @@
               i.createElement(
                 h.IK,
                 { key: e, onSelected: () => n(e), bChecked: e === s },
-                (0, I.we)(t[e]),
+                (0, P.we)(t[e]),
               ),
             );
           (0, r.lX)(i.createElement(h.tz, null, o), e);
@@ -2194,7 +2194,7 @@
           return i.createElement(
             "div",
             { className: "BroadcastLanguage", onClick: this.showContextMenu },
-            i.createElement("span", null, " - ", (0, I.we)(s)),
+            i.createElement("span", null, " - ", (0, P.we)(s)),
             i.createElement(
               "div",
               { className: "ContextMenuButton" },
@@ -2278,7 +2278,7 @@
               { className: "LinkOverlayValidRegion" },
               !this.props.editMode && this.props.linkRegions
                 ? this.props.linkRegions.map((e) => {
-                    const t = (0, q.p)(e.url);
+                    const t = (0, z.p)(e.url);
                     return i.createElement(
                       D.uU,
                       {
@@ -2327,7 +2327,7 @@
                 i.createElement(
                   "div",
                   { className: "AddLinkRegion", onClick: this.AddLinkRegion },
-                  (0, I.we)("#SteamTV_AddLinkRegion"),
+                  (0, P.we)("#SteamTV_AddLinkRegion"),
                 ),
             ),
             i.createElement(
@@ -2336,7 +2336,7 @@
               i.createElement(
                 "div",
                 null,
-                (0, I.we)("#SteamTV_LinkRegionReserved"),
+                (0, P.we)("#SteamTV_LinkRegionReserved"),
               ),
             ),
           );
@@ -2666,7 +2666,7 @@
         a = s(56545),
         i = s(94601),
         r = s(72839),
-        l = s(82097),
+        l = s(16021),
         u = s(81393),
         c = s(23809);
       const d = n.createContext({}),
@@ -2756,7 +2756,7 @@
     },
     60801: (e, t, s) => {
       "use strict";
-      s.d(t, { S: () => P, X: () => D });
+      s.d(t, { S: () => I, X: () => D });
       var n = s(90626),
         o = s(76217),
         a = s(61088),
@@ -2799,13 +2799,13 @@
             return s && s.length > 0 ? s[0] : void 0;
           })(t, E),
           D = (h ?? !0) && w && !w.BIsAllAges() && "masked" == E,
-          I = (0, v.AS)(),
-          [P, T] = n.useState(!1),
+          P = (0, v.AS)(),
+          [I, T] = n.useState(!1),
           [A, O] = n.useState(0),
           V = n.useRef(void 0),
           B = n.useRef(void 0),
-          [N, G] = n.useState(),
-          { bCookieLoaded: R } = (function (e, t, s) {
+          [N, R] = n.useState(),
+          { bCookieLoaded: G } = (function (e, t, s) {
             const o = n.useCallback(() => {
               const t = (0, l.VY)(e ?? f),
                 n = !(!t || "true" !== t.toLowerCase());
@@ -2819,13 +2819,13 @@
               );
             })(t, o);
           })(a, s, _),
-          L = R;
+          L = G;
         n.useEffect(() => {
           s && L && (S || r) && !D && b(!0);
         }, [S, L, s, r, D]),
           n.useEffect(() => {
-            D && y && S && I();
-          }, [y, D, S, I]);
+            D && y && S && P();
+          }, [y, D, S, P]);
         const x = (function (e, t, s, o, a) {
           return n.useCallback(() => {
             0 == e
@@ -2871,7 +2871,7 @@
             name: t.GetName(),
             trailerCategory: w?.GetTrailerCategory(),
             trailerDisplay: A,
-            mouseOver: P,
+            mouseOver: I,
           }),
           n.createElement(k, {
             eTrailerDisplay: A,
@@ -2881,10 +2881,10 @@
             refMainTrailer: B,
             loadedAndActive: L && s,
             setVideoShouldStart: b,
-            bMouseOverVideo: P,
+            bMouseOverVideo: I,
             storeItem: t,
             broadcastVideo: N,
-            fnSetBroadcastVideo: G,
+            fnSetBroadcastVideo: R,
             fnTogglePlayPause: x,
             bAutoplayVideos: S,
             bVideoShouldStart: y,
@@ -2928,23 +2928,23 @@
             broadcastVideo: w,
             fnSetBroadcastVideo: D,
             fnTogglePlayPause: k,
-            bAutoplayVideos: P,
+            bAutoplayVideos: I,
             bVideoShouldStart: M,
           } = e,
           [A, O] = n.useState(!1),
           [V, B] = n.useState(!1),
-          [N, G] = n.useState(!1),
-          [R, L] = n.useState(!1),
+          [N, R] = n.useState(!1),
+          [G, L] = n.useState(!1),
           [x, H] = n.useState(!1),
           F = (0, v.$9)(),
           U = t?.GetMicroTrailer("blocked" == F),
           Q = !!U || !!s;
         n.useEffect(() => {
           let e = !1;
-          f && N && Q && (e = 0 === h || (1 === h && !R) || (2 === h && !x)),
+          f && N && Q && (e = 0 === h || (1 === h && !G) || (2 === h && !x)),
             O(e),
-            c?.(P && e);
-        }, [c, h, x, R, f, P, N, Q]),
+            c?.(I && e);
+        }, [c, h, x, G, f, I, N, Q]),
           (function (e, t) {
             n.useEffect(() => {
               const s = e.current;
@@ -2965,7 +2965,7 @@
             M ||
               (C(0),
               O(!1),
-              G(!1),
+              R(!1),
               y.current && (y.current.pause(), (y.current.currentTime = 0)),
               _.current && (_.current.Pause(), _.current.SeekToStart()));
           }, [M, _, y, C]);
@@ -2973,7 +2973,7 @@
         return (
           n.useEffect(() => {
             if (f && 0 === h)
-              if ((G(!0), M))
+              if ((R(!0), M))
                 if (_.current) {
                   b.Debug("Starting microtrailer"), C(1);
                   const n = () =>
@@ -3009,7 +3009,7 @@
                 }, 6e3);
               return () => clearTimeout(n);
             }, [e, t]);
-          })(R, y),
+          })(G, y),
           n.useEffect(() => {
             f || E(!1);
           }, [f, E]),
@@ -3037,7 +3037,7 @@
                       : 2 == t && r && r.IsPaused() && r.Play(),
                   u(!1));
             }, [r, t, e, l, o, i, s, a]);
-          })(d, h, y.current, R, _.current, x, w),
+          })(d, h, y.current, G, _.current, x, w),
           t && t.BIsVisible()
             ? (s || a) &&
               n.createElement(
@@ -3073,7 +3073,7 @@
                   ),
                 s &&
                   !a &&
-                  n.createElement(I, {
+                  n.createElement(P, {
                     ref: _,
                     trailer: s,
                     eTrailerDisplay: h,
@@ -3096,7 +3096,7 @@
             : null
         );
       }
-      function I(e) {
+      function P(e) {
         let {
           ref: t,
           trailer: s,
@@ -3115,7 +3115,7 @@
         let l = 2 != o,
           u = T(!1, o);
         return n.createElement(
-          P,
+          I,
           null,
           n.createElement(
             "div",
@@ -3134,7 +3134,7 @@
           ),
         );
       }
-      function P(e) {
+      function I(e) {
         let { children: t } = e;
         const [s, o] = (0, m.M)(E, 0.8),
           [a, i] = (0, m.M)(w, !0);
@@ -3189,11 +3189,11 @@
     },
     38405: (e, t, s) => {
       "use strict";
-      s.d(t, { g: () => P });
+      s.d(t, { g: () => I });
       var n = s(65946),
         o = s(90626),
         a = s(30894),
-        i = s(82097),
+        i = s(16021),
         r = s(3734),
         l = s(26749),
         u = s(52038),
@@ -3338,8 +3338,8 @@
           ),
         );
       }
-      var I = s(90511);
-      function P(e) {
+      var P = s(90511);
+      function I(e) {
         return (0, l.G)()
           ? o.createElement(
               T,
@@ -3365,7 +3365,7 @@
             strQueueDescriptionOverride: s,
             ...n
           } = e,
-          { showDiscoveryQueue: a, bQueueVisible: r } = (0, I.GV)(t, n),
+          { showDiscoveryQueue: a, bQueueVisible: r } = (0, P.GV)(t, n),
           [l, u] = (function (e, t) {
             const { data: s } = (0, C.I)({
               queryKey: ["DiscoveryQueueLoader", e, t],
@@ -3373,7 +3373,7 @@
                 const { appids: s, exhausted: n } = await m.aI
                   .Get()
                   .GetDiscoveryQueueAppsOfType(e, !1, t);
-                let o = { ...I.LB, include_screenshots: !0 };
+                let o = { ...P.LB, include_screenshots: !0 };
                 return (
                   await i.A.Get().QueueMultipleAppRequests(s ?? [], o),
                   { rgDiscoveryApps: s, exhausted: n }
@@ -3430,7 +3430,7 @@
                 count: 12,
                 filters: { type_filters: { include_games: !0 } },
               },
-              { ...I.LB, include_screenshots: !0 },
+              { ...P.LB, include_screenshots: !0 },
               { reactQuery: { enabled: e, staleTime: 1 / 0 } },
             );
             return (0, o.useMemo)(
@@ -3597,28 +3597,30 @@
     60338: (e, t, s) => {
       "use strict";
       s.d(t, {
-        Gy: () => v,
-        TK: () => y,
-        W3: () => E,
-        u4: () => f,
-        y3: () => _,
+        Gy: () => y,
+        TK: () => f,
+        W3: () => D,
+        u4: () => w,
+        y3: () => b,
       });
-      var n = s(90626),
-        o = s(34418),
-        a = s.n(o),
-        i = s(52038),
-        r = s(61859),
-        l = s(76217),
-        u = s(65946),
-        c = s(91822),
-        d = s(60801),
-        m = s(30894),
-        p = s(55263),
-        h = s(78327),
-        g = s(44986),
+      var n = s(76217),
+        o = s(60014),
+        a = s(17376),
+        i = s(79969),
+        r = s(65946),
+        l = s(90626),
+        u = s(91822),
+        c = s(30894),
+        d = s(55263),
+        m = s(60801),
+        p = s(52038),
+        h = s(61859),
+        g = s(78327),
         S = s(20713),
-        C = s(60014);
-      const v = {
+        C = s(44986),
+        v = s(34418),
+        _ = s.n(v);
+      const y = {
         include_assets: !0,
         include_trailers: !0,
         include_basic_info: !0,
@@ -3628,120 +3630,118 @@
         include_screenshots: !0,
         include_reviews: !0,
       };
-      function _(e) {
+      function b(e) {
         const {
             appID: t,
             focused: s,
             skipMicroTrailer: o,
-            playWithBroadcastPlayer: u,
-            autoPlayCookieName: m,
-            showAOAutoPlayWarning: h,
-            showScreenshotInsteadOfMainCap: g,
-            fadeRatio: S,
-            fnPlayPause: C,
-            refTogglePlayPause: _,
-            bRequestPause: E,
-            fnComplete: w,
+            playWithBroadcastPlayer: a,
+            autoPlayCookieName: i,
+            showAOAutoPlayWarning: r,
+            showScreenshotInsteadOfMainCap: c,
+            fadeRatio: g,
+            fnPlayPause: S,
+            refTogglePlayPause: C,
+            bRequestPause: v,
+            fnComplete: b,
           } = e,
-          [D] = (0, p.t7)(t, v),
-          { bIsIgnored: k } = y(t),
-          { bIsWishlisted: I } = f(t),
-          [P, T] = (0, c.FD)();
-        return n.createElement(
-          l.Z,
-          { className: (0, i.A)(a().AppVideoCtn, "AppVideoCtn") },
-          n.createElement(
+          [D] = (0, d.t7)(t, y),
+          { bIsIgnored: k } = f(t),
+          { bIsWishlisted: P } = w(t),
+          [I, T] = (0, u.FD)();
+        return l.createElement(
+          n.Z,
+          { className: (0, p.A)(_().AppVideoCtn, "AppVideoCtn") },
+          l.createElement(
             "div",
-            { className: (0, i.A)(a().WishlistBadge, I && a().Active) },
-            (0, r.we)("#Sale_OnWishlist"),
+            { className: (0, p.A)(_().WishlistBadge, P && _().Active) },
+            (0, h.we)("#Sale_OnWishlist"),
           ),
-          P &&
-            n.createElement(c.Ff, {
+          I &&
+            l.createElement(u.Ff, {
               eDisplay: T,
-              className: a().DeckVerifiedLogo,
+              className: _().DeckVerifiedLogo,
               storeItem: D,
             }),
-          n.createElement(
+          l.createElement(
             "div",
-            { className: a().VideoArea },
-            n.createElement(b, { appID: t }),
-            n.createElement(d.X, {
+            { className: _().VideoArea },
+            l.createElement(E, { appID: t }),
+            l.createElement(m.X, {
               key: t,
               storeItem: D,
               bCurrentlyActive: s && !k,
               autoplayCheckboxPosition: "top",
-              autoPlayCookieName: m,
-              bShowAOAutoPlayWarning: h,
+              autoPlayCookieName: i,
+              bShowAOAutoPlayWarning: r,
               bSkipMicroTrailer: o,
-              bPlayWithBroadcastPlayer: u,
-              nFadeRatio: S,
-              showScreenshotInsteadOfMainCap: g,
-              fnPlayPause: C,
-              refTogglePlayPause: _,
-              bRequestPause: E,
-              fnComplete: w,
+              bPlayWithBroadcastPlayer: a,
+              nFadeRatio: g,
+              showScreenshotInsteadOfMainCap: c,
+              fnPlayPause: S,
+              refTogglePlayPause: C,
+              bRequestPause: v,
+              fnComplete: b,
             }),
           ),
         );
       }
-      function y(e) {
-        const t = (0, u.q3)(() => m.Fm.Get().BIsGameIgnored(e)),
-          s = (0, C.ru)(),
-          o = n.useCallback(() => {
-            m.Fm.Get().UpdateAppIgnore(e, !t, s);
+      function f(e) {
+        const t = (0, r.q3)(() => c.Fm.Get().BIsGameIgnored(e)),
+          s = (0, o.ru)(),
+          n = l.useCallback(() => {
+            c.Fm.Get().UpdateAppIgnore(e, !t, s);
           }, [e, s, t]);
-        return { bIsIgnored: t, fnUpdateIgnored: o };
+        return { bIsIgnored: t, fnUpdateIgnored: n };
       }
-      function b(e) {
+      function E(e) {
         const { appID: t } = e,
-          s = (0, h.Qn)(),
-          { bIsIgnored: o, fnUpdateIgnored: u } = y(t);
-        return n.createElement(
+          s = (0, g.Qn)(),
+          { bIsIgnored: o, fnUpdateIgnored: a } = f(t);
+        return l.createElement(
           "div",
-          { className: (0, i.A)(a().IgnoredCtn, o && a().Active) },
-          n.createElement(
+          { className: (0, p.A)(_().IgnoredCtn, o && _().Active) },
+          l.createElement(
             "div",
-            { className: (0, i.A)(a().IgnoredInfo, o && a().Active) },
-            n.createElement(
+            { className: (0, p.A)(_().IgnoredInfo, o && _().Active) },
+            l.createElement(
               "div",
-              { className: a().IgnoredTitle },
-              (0, r.we)("#SaleTrailerCarousel_Ignored"),
+              { className: _().IgnoredTitle },
+              (0, h.we)("#SaleTrailerCarousel_Ignored"),
             ),
-            n.createElement(
+            l.createElement(
               "div",
-              { className: a().IgnoredDescription },
-              (0, r.we)("#SaleTrailerCarousel_IgnoredConfirmation"),
+              { className: _().IgnoredDescription },
+              (0, h.we)("#SaleTrailerCarousel_IgnoredConfirmation"),
             ),
-            n.createElement(
-              l.Z,
+            l.createElement(
+              n.Z,
               {
-                className: (0, i.A)(a().UndoButton, a().UndoIgnoreButton),
-                onClick: u,
+                className: (0, p.A)(_().UndoButton, _().UndoIgnoreButton),
+                onClick: a,
               },
               s &&
-                n.createElement(g.$m, {
+                l.createElement(C.$m, {
                   button: S.g4.X,
-                  type: g.wt.Light,
-                  size: g.xY.Medium,
+                  type: C.wt.Light,
+                  size: C.xY.Medium,
                 }),
-              (0, r.we)("#SaleTrailerCarousel_Undo"),
+              (0, h.we)("#SaleTrailerCarousel_Undo"),
             ),
           ),
         );
       }
-      function f(e) {
-        const t = (0, u.q3)(() => m.Fm.Get().BIsGameWishlisted(e)),
-          s = (0, C.ru)(),
-          o = n.useCallback(() => {
-            m.Fm.Get().UpdateGameWishlist(e, !t, s);
-          }, [e, t, s]);
-        return { bIsWishlisted: t, fnUpdateWishlist: o };
+      function w(e) {
+        const t = Boolean((0, a.bB)(e)),
+          s = (0, o.ru)(),
+          { mutate: n } = (0, i.s)(e, !t, s);
+        return { bIsWishlisted: t, fnUpdateWishlist: n };
       }
-      function E(e) {
-        const t = m.Fm.Get().GetRecommendedTags(),
-          s = n.useMemo(() => new Map(t.map((e, t) => [e, t])), [t]),
-          o = n.useMemo(() => new Map(e.map((e, t) => [e, t])), [e]);
-        return n.useMemo(
+      function D(e) {
+        const t = c.Fm.Get().GetRecommendedTags(),
+          s = l.useMemo(() => new Map(t.map((e, t) => [e, t])), [t]),
+          n = l.useMemo(() => new Map(e.map((e, t) => [e, t])), [e]);
+        return l.useMemo(
           () =>
             e
               .slice()
@@ -3752,9 +3752,9 @@
                     ? 1
                     : s.has(e)
                       ? s.get(e) - s.get(t)
-                      : o.get(e) - o.get(t),
+                      : n.get(e) - n.get(t),
               ),
-          [o, s, e],
+          [n, s, e],
         );
       }
     },

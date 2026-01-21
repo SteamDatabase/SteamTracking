@@ -4,21 +4,21 @@
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [616],
   {
-    866: (e, t, n) => {
+    962: (e, t, n) => {
       n.d(t, { InitializeGamepadNavigation: () => V });
       var o = n(669),
         a = n.n(o),
-        s = n(565),
-        i = n(191),
-        r = n(830),
-        c = n(811),
-        l = n(437),
-        u = n(698),
-        d = n(604),
-        g = n(158),
-        b = n(206),
-        h = n(333),
-        m = n(1),
+        s = n(972),
+        i = n(152),
+        r = n(375),
+        c = n(862),
+        l = n(671),
+        u = n(871),
+        d = n(32),
+        g = n(763),
+        b = n(162),
+        h = n(198),
+        m = n(382),
         _ = n.n(m);
       function f(e) {
         let t = 0;
@@ -96,9 +96,9 @@
           OnForceMeasureFocusRing: () => s && s(),
         };
       }
-      var p = n(825),
-        S = n(382),
-        E = n(445);
+      var p = n(229),
+        S = n(917),
+        E = n(22);
       function w(e) {
         return e ? Function("event", e) : null;
       }
@@ -149,22 +149,22 @@
         }
         return !1;
       }
-      var T = n(462);
-      const A = !1;
-      function D(e) {
+      var A = n(965);
+      const D = !1;
+      function T(e) {
         const { name: t, root: n, navState: o } = e;
         o
-          ? (A && console.log(`Restore ${t} history snapshot ${(0, T.Ij)(o)}`),
-            (0, T.LU)(n, o),
+          ? (D && console.log(`Restore ${t} history snapshot ${(0, A.Ij)(o)}`),
+            (0, A.LU)(n, o),
             n.Tree.DeferredFocus.Reset())
-          : (A && console.log(`No focus state in history for ${t}`),
+          : (D && console.log(`No focus state in history for ${t}`),
             n.Tree.DeferredFocus.ExecuteQueuedFocus());
       }
       function y(e, t) {
         const n = window.history.state;
         return { name: e, root: t, navState: n?.[e] };
       }
-      const O = new (n(659).wd)("FocusNavigation").Debug;
+      const O = new (n(173).wd)("FocusNavigation").Debug;
       var k;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
@@ -227,31 +227,31 @@
               (function (e, t) {
                 if (
                   (t.Tree.DeferredFocus.SuppressFocus(),
-                  window.addEventListener("popstate", () => D(y(e, t))),
+                  window.addEventListener("popstate", () => T(y(e, t))),
                   window.history.state?.notify_focus_restore_ready)
                 ) {
-                  A &&
+                  D &&
                     console.log(
                       "waiting to restore focus until focus_restore_ready is sent",
                     );
                   var n = y(e, t);
                   window.addEventListener("focus_restore_ready", function (e) {
-                    A && console.log("focus_restore_ready received"),
+                    D && console.log("focus_restore_ready received"),
                       window.setTimeout(function () {
-                        D(n);
+                        T(n);
                       }, 100);
                   });
                 } else
-                  A && console.log("immediately restoring focus from history"),
-                    D(y(e, t));
+                  D && console.log("immediately restoring focus from history"),
+                    T(y(e, t));
                 !(function (e, t) {
                   t.Tree.WindowContext.FocusChangedCallbacks.Register(() => {
-                    A &&
+                    D &&
                       console.log(
-                        `Recording nav state for ${e}: ${(0, T.Ij)((0, T.Ze)(t))}`,
+                        `Recording nav state for ${e}: ${(0, A.Ij)((0, A.Ze)(t))}`,
                       ),
                       window.history.replaceState(
-                        { ...window.history.state, [e]: (0, T.Ze)(t) },
+                        { ...window.history.state, [e]: (0, A.Ze)(t) },
                         null,
                       );
                   });
@@ -401,9 +401,9 @@
             onCancelActionDescription: E,
             onSecondaryActionDescription: L,
             onOptionsActionDescription: C,
-            onMenuActionDescription: T,
-            actionDescriptionMap: A,
-            onOKButton: D,
+            onMenuActionDescription: A,
+            actionDescriptionMap: D,
+            onOKButton: T,
             onCancelButton: y,
             onSecondaryButton: O,
             onOptionsButton: B,
@@ -417,7 +417,7 @@
             type: Y,
             ...$
           } = r,
-          X = w(D),
+          X = w(T),
           q = w(y),
           Z = w(O),
           Q = w(B),
@@ -460,7 +460,7 @@
           q && H(t[0], (0, s.hr)(t[0], q)),
           Z && L && H(t[0], (0, s.f)(t[0], Z)),
           Q && C && H(t[0], (0, s.Ro)(t[0], Q)),
-          ee && T && H(t[0], (0, s.cR)(t[0], ee)),
+          ee && A && H(t[0], (0, s.cR)(t[0], ee)),
           te && H(t[0], (0, s.u8)(t[0], te));
         const ne = (function (e, t, n, o) {
             const a = {};
@@ -510,8 +510,8 @@
             onCancelActionDescription: E,
             onSecondaryActionDescription: L,
             onOptionsActionDescription: C,
-            onMenuActionDescription: T,
-            actionDescriptionMap: A,
+            onMenuActionDescription: A,
+            actionDescriptionMap: D,
           }),
           ...ne,
           ...$,
@@ -593,11 +593,11 @@
         },
       };
     },
-    921: (e, t, n) => {
+    64: (e, t, n) => {
       n.d(t, { A7: () => i, Vp: () => r, n4: () => c });
       var o = n(629),
-        a = n(560),
-        s = n(539);
+        a = n(369),
+        s = n(626);
       class i {
         PostMessage(e) {}
         RegisterForMessage(e) {}
@@ -664,16 +664,16 @@
       }
       (0, o.Cg)([a.o], c.prototype, "OnMessage", null);
     },
-    436: (e, t, n) => {
+    919: (e, t, n) => {
       n.d(t, { xr: () => o });
       const o = { x: "y", y: "x" };
     },
-    411: (e, t, n) => {
+    642: (e, t, n) => {
       n.d(t, { Jc: () => u, LU: () => b, YX: () => g, e0: () => h });
       var o = n(629),
-        a = n(262),
-        s = n(560),
-        i = n(23);
+        a = n(728),
+        s = n(369),
+        i = n(848);
       class r {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -752,22 +752,37 @@
       class b {
         m_schTimer;
         m_fnCallback;
+        m_fnOnCancel;
         Schedule(e, t) {
           this.IsScheduled() && this.Cancel(),
             (this.m_fnCallback = t),
             (this.m_schTimer = window.setTimeout(this.ScheduledInternal, e));
         }
+        AsyncSchedule(e, t) {
+          return new Promise((n, o) => {
+            this.Schedule(e, () => {
+              t(), n();
+            }),
+              (this.m_fnOnCancel = o);
+          });
+        }
         IsScheduled() {
           return void 0 !== this.m_schTimer;
         }
         Cancel() {
-          this.m_schTimer &&
-            (clearTimeout(this.m_schTimer), (this.m_schTimer = void 0));
+          if (this.m_schTimer) {
+            const e = this.m_fnOnCancel;
+            clearTimeout(this.m_schTimer), this.Reset(), e && e();
+          }
+        }
+        Reset() {
+          (this.m_schTimer = void 0),
+            (this.m_fnCallback = void 0),
+            (this.m_fnOnCancel = void 0);
         }
         ScheduledInternal() {
-          this.m_schTimer = void 0;
           const e = this.m_fnCallback;
-          (this.m_fnCallback = void 0), e?.();
+          this.Reset(), e?.();
         }
       }
       (0, o.Cg)([s.o], b.prototype, "ScheduledInternal", null);
@@ -789,7 +804,7 @@
       }
       (0, o.Cg)([s.o], h.prototype, "Unregister", null);
     },
-    382: (e, t, n) => {
+    917: (e, t, n) => {
       function o(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -859,10 +874,10 @@
         }
       }
     },
-    659: (e, t, n) => {
+    173: (e, t, n) => {
       n.d(t, { wd: () => l });
       var o = n(629),
-        a = n(560);
+        a = n(369);
       class s {
         async GetObject(e, t) {
           try {
@@ -888,7 +903,7 @@
         }
       }
       var r,
-        c = n(23);
+        c = n(848);
       !(function (e) {
         (e[(e.Debug = 0)] = "Debug"),
           (e[(e.Info = 1)] = "Info"),
@@ -1134,7 +1149,7 @@
         (window.EnableSteamConsole = (e = !0) =>
           u.Get().SetDebugLogEnabled("SteamClient", e));
     },
-    207: (e, t, n) => {
+    342: (e, t, n) => {
       function o(e, t) {
         return null == e || null == t
           ? e === t
@@ -1145,9 +1160,9 @@
       }
       n.d(t, { e: () => o });
     },
-    976: (e, t, n) => {
+    946: (e, t, n) => {
       n.d(t, { TS: () => c });
-      var o = n(428);
+      var o = n(319);
       function a() {
         return !!window.document;
       }

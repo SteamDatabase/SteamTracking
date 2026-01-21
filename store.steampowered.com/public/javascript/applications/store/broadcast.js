@@ -188,8 +188,8 @@
       "use strict";
       r.r(t),
         r.d(t, {
-          BroadcastEmbeddablePopoutHeader: () => ma,
-          default: () => aa,
+          BroadcastEmbeddablePopoutHeader: () => da,
+          default: () => sa,
         });
       var i,
         a,
@@ -12598,49 +12598,51 @@
         Mi = r(55963),
         wi = r(55263),
         yi = r(18654),
-        Si = r(94095),
+        Si = r(92398),
         fi = r(37076),
         zi = r(60014),
         Ci = r(22797),
         vi = r(43087),
-        Ri = r.n(vi);
-      const Ti = (0, c.PA)((e) => {
+        Ri = r.n(vi),
+        Ti = r(75279);
+      const Ii = (0, c.PA)((e) => {
         const { appid: t } = e,
           r = (0, zi.n9)(),
           i = (0, d.useRef)({ include_assets: !0, include_release: !0 }),
-          [a, s] = (0, wi.t7)(t, i.current);
-        let n = (0, Hr.A)(
+          [a, s] = (0, wi.t7)(t, i.current),
+          n = (0, Ti.DJ)(a);
+        let o = (0, Hr.A)(
             Ri().StoreSaleWidgetContainer_mini,
             "StoreSaleWidgetContainer_mini",
           ),
-          o = Ri().StoreSaleWidgetImage_mini,
-          l = Ri().StoreSaleImage_mini;
+          l = Ri().StoreSaleWidgetImage_mini,
+          c = Ri().StoreSaleImage_mini;
         if (!a && 2 != s)
           return d.createElement(
             "div",
-            { className: n },
+            { className: o },
             d.createElement(Ci.t, { size: "medium" }),
           );
         if (2 == s || !a.GetName())
           return d.createElement("div", {
             className: yi.StoreSaleWidgetEmptyContainer,
           });
-        const c = 8 != a.GetAppType(),
-          m = (0, Mi.wJ)(a.GetStorePageURL(!0), r);
+        const m = 8 != a.GetAppType(),
+          u = (0, Mi.wJ)(a.GetStorePageURL(!0), r);
         return d.createElement(
           "div",
-          { className: n },
+          { className: o },
           d.createElement(
             "a",
-            { href: m, target: Tr.TS.IN_CLIENT ? void 0 : "_blank" },
+            { href: u, target: Tr.TS.IN_CLIENT ? void 0 : "_blank" },
             d.createElement(
               fi.j,
               { type: "app", id: t },
               d.createElement(
                 "div",
-                { className: o },
+                { className: l },
                 d.createElement("img", {
-                  className: l,
+                  className: c,
                   src: a.GetAssets().GetSmallCapsuleURL(),
                 }),
               ),
@@ -12651,7 +12653,7 @@
             { className: yi.StoreSaleBroadcastWidgetRight },
             d.createElement(
               "a",
-              { href: m, target: Tr.TS.IN_CLIENT ? void 0 : "_blank" },
+              { href: u, target: Tr.TS.IN_CLIENT ? void 0 : "_blank" },
               d.createElement(
                 fi.j,
                 { type: "app", id: t },
@@ -12672,33 +12674,30 @@
               { className: yi.StoreSaleWidgetRelease },
               a.GetFormattedSteamReleaseDate(),
             ),
-            Boolean(c) &&
-              d.createElement(Si.wD, {
-                info: { id: t, type: "game" },
-                bShowDemoButton: !0,
-              }),
+            Boolean(m) &&
+              d.createElement(Si.wD, { id: n, bShowDemoButton: !0 }),
           ),
         );
       });
-      var Ii = r(22837),
-        Fi = r(31292),
-        Wi = r(34010),
-        Oi = r(69300),
-        ji = r(82097),
-        qi = r(94011),
-        Ni = r(26296),
-        Ui = r(96236),
-        Ei = r(82227),
-        xi = r(8092),
-        Di = r(53120),
-        Ai = r.n(Di);
-      const Pi = (0, c.PA)((e) => {
+      var Fi = r(22837),
+        Wi = r(31292),
+        Oi = r(34010),
+        ji = r(69300),
+        qi = r(16021),
+        Ni = r(94011),
+        Ui = r(26296),
+        Ei = r(96236),
+        xi = r(82227),
+        Di = r(8092),
+        Ai = r(53120),
+        Pi = r.n(Ai);
+      const Gi = (0, c.PA)((e) => {
         const { event: t } = e,
           r = t.clanSteamID.GetAccountID(),
           i = !t || !t.jsondata || !t.jsondata.broadcast_item_drops_enabled,
           a = (0, d.useRef)(null),
           [s, n] = (0, d.useState)(
-            t ? xi.pF.GetCreatorHome(t.clanSteamID) : null,
+            t ? Di.pF.GetCreatorHome(t.clanSteamID) : null,
           );
         if (
           ((0, d.useEffect)(() => {
@@ -12707,7 +12706,7 @@
             return (
               (async () => {
                 const t = h.b.InitFromClanID(r),
-                  i = await xi.pF.LoadCreatorHome(t, !1, e);
+                  i = await Di.pF.LoadCreatorHome(t, !1, e);
                 e.token.reason || n(i);
               })(),
               () => {
@@ -12726,7 +12725,7 @@
           t.jsondata.broadcast_item_drops_details_event_gid;
         return d.createElement(
           "div",
-          { className: Ai().item_drop_ctn },
+          { className: Pi().item_drop_ctn },
           d.createElement(
             "div",
             null,
@@ -12754,19 +12753,19 @@
           ),
         );
       });
-      var Gi = r(95695),
-        ki = r.n(Gi),
-        Vi = r(96715),
-        Li = r(10886),
-        Hi = r(19654),
-        Xi = r(3209),
-        Ji = r(51706),
-        Ki = r(14256),
-        Qi = r.n(Ki);
-      function Yi(e) {
+      var ki = r(95695),
+        Vi = r.n(ki),
+        Li = r(96715),
+        Hi = r(10886),
+        Xi = r(19654),
+        Ji = r(3209),
+        Ki = r(51706),
+        Qi = r(14256),
+        Yi = r.n(Qi);
+      function Zi(e) {
         const { steamid: t, closeModal: r } = e;
         return d.createElement(
-          Ji.o0,
+          Ki.o0,
           {
             strDescription: "",
             strTitle: (0, Rr.we)("#Button_Share"),
@@ -12775,11 +12774,11 @@
             bAlertDialog: !0,
             modalClassName: "EventDisplay_Share_Dialog",
           },
-          d.createElement(Zi, { steamid: t }),
           d.createElement($i, { steamid: t }),
+          d.createElement(ea, { steamid: t }),
         );
       }
-      function Zi(e) {
+      function $i(e) {
         const { steamid: t } = e,
           r = (function (e) {
             const t = Tr.TS.COMMUNITY_BASE_URL + "broadcast/share/" + e;
@@ -12793,8 +12792,8 @@
           "div",
           {
             className: (0, Hr.A)(
-              ki().FlexRowContainer,
-              Qi().share_controls_ctn,
+              Vi().FlexRowContainer,
+              Yi().share_controls_ctn,
             ),
           },
           d.createElement(
@@ -12802,10 +12801,10 @@
             { toolTipContent: (0, Rr.we)("#EventDisplay_Share_OnFaceBook") },
             d.createElement(
               ei.uU,
-              { href: r.strFacebookUrl, className: Qi().ShareBtn },
+              { href: r.strFacebookUrl, className: Yi().ShareBtn },
               d.createElement("img", {
-                className: (0, Hr.A)(ki().Button),
-                src: Li.A,
+                className: (0, Hr.A)(Vi().Button),
+                src: Hi.A,
               }),
             ),
           ),
@@ -12814,10 +12813,10 @@
             { toolTipContent: (0, Rr.we)("#EventDisplay_Share_OnTwitter") },
             d.createElement(
               ei.uU,
-              { href: r.strTwitterUrl, className: Qi().ShareBtn },
+              { href: r.strTwitterUrl, className: Yi().ShareBtn },
               d.createElement("img", {
-                className: (0, Hr.A)(ki().Button),
-                src: Xi.A,
+                className: (0, Hr.A)(Vi().Button),
+                src: Ji.A,
               }),
             ),
           ),
@@ -12826,16 +12825,16 @@
             { toolTipContent: (0, Rr.we)("#EventDisplay_Share_OnReddit") },
             d.createElement(
               ei.uU,
-              { href: r.strRedditUrl, className: Qi().ShareBtn },
+              { href: r.strRedditUrl, className: Yi().ShareBtn },
               d.createElement("img", {
-                className: (0, Hr.A)(ki().Button),
-                src: Hi.A,
+                className: (0, Hr.A)(Vi().Button),
+                src: Xi.A,
               }),
             ),
           ),
         );
       }
-      function $i(e) {
+      function ea(e) {
         const { steamid: t } = e,
           r = d.createRef(),
           [i, a] = d.useState(""),
@@ -12864,16 +12863,16 @@
           d.createElement(
             "div",
             {
-              className: (0, Hr.A)(ki().FlexRowContainer, Qi().linkField),
+              className: (0, Hr.A)(Vi().FlexRowContainer, Yi().linkField),
               onClick: n,
             },
             d.createElement(
               "span",
-              { className: Qi().LinkInputLabel },
+              { className: Yi().LinkInputLabel },
               (0, Rr.we)("#EventDisplay_Share_Link"),
             ),
             d.createElement("textarea", {
-              className: Qi().LinkInput,
+              className: Yi().LinkInput,
               ref: r,
               value: o,
               readOnly: !0,
@@ -12886,25 +12885,25 @@
                   "div",
                   {
                     className: (0, Hr.A)(
-                      ki().Button,
-                      ki().Icon,
-                      Qi().LinkButton,
+                      Vi().Button,
+                      Vi().Icon,
+                      Yi().LinkButton,
                     ),
                   },
                   d.createElement("img", {
-                    className: Qi().ClipboardIcon,
-                    src: Vi.A,
+                    className: Yi().ClipboardIcon,
+                    src: Li.A,
                   }),
                 ),
               ),
           ),
-          d.createElement("div", { ref: s, className: Qi().ClipboardText }, i),
+          d.createElement("div", { ref: s, className: Yi().ClipboardText }, i),
         );
       }
-      var ea = r(56011),
-        ta = r(738),
-        ra = r(23338);
-      const ia = {
+      var ta = r(56011),
+        ra = r(738),
+        ia = r(23338);
+      const aa = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
           { appid: 386360, url: "https://steam.tv/smite" },
@@ -12931,15 +12930,15 @@
           },
         ],
       };
-      function aa(e) {
+      function sa(e) {
         return (function () {
           const e = (0, Tr.Qn)();
           return !(0, Tr.Y2)() && !e;
         })()
-          ? d.createElement(sa, { ...e })
+          ? d.createElement(na, { ...e })
           : null;
       }
-      let sa = class extends d.Component {
+      let na = class extends d.Component {
         m_cancelSignal = l().CancelToken.source();
         m_bMarkedUsabilitySeen = !1;
         state = {
@@ -12959,16 +12958,16 @@
           bStartMuted: !0,
         };
         async componentDidMount() {
-          await Wi.j.Get().LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal),
+          await Oi.j.Get().LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal),
             this.m_cancelSignal.token.reason ||
               this.setState({
                 bLoadingPreference: !1,
-                bExpanded: !Wi.j
+                bExpanded: !Oi.j
                   .Get()
                   .BIsEmbeddedBroadcastHiddenByDefaultUserSettings(),
                 innerStyle: {
                   ...this.state.innerStyle,
-                  maxHeight: Wi.j
+                  maxHeight: Oi.j
                     .Get()
                     .BIsEmbeddedBroadcastHiddenByDefaultUserSettings()
                     ? "0vh"
@@ -12978,10 +12977,10 @@
             await (this.props.bIsPreview &&
             this.props.accountIDs &&
             !this.props.event.BUsesContentHubForItemSource()
-              ? Wi.j.Get().HintLoadEmbeddablePreviewStreams(this.props)
-              : Wi.j.Get().HintLoadEmbeddableStreams(this.props)),
+              ? Oi.j.Get().HintLoadEmbeddablePreviewStreams(this.props)
+              : Oi.j.Get().HintLoadEmbeddableStreams(this.props)),
             this.props.nAppIDVOD &&
-              Wi.j
+              Oi.j
                 .Get()
                 .SetupEmbeddableVOD(this.props, !this.props.bSkipPreRoll),
             window.setTimeout(() => {
@@ -12995,11 +12994,11 @@
           this.m_cancelSignal.cancel("BroadcastEmbeddable component unmounted");
         }
         ToggleBroadcastExpandShrink() {
-          let e = Wi.j.Get().GetPlayReadyStream(this.props);
+          let e = Oi.j.Get().GetPlayReadyStream(this.props);
           const t = this.state.bExpanded,
             r = Qr.es.GetOrCreateBroadcastInfo(e.steamid).m_nAppID;
-          (0, Wi.U7)(r, t ? 2 : 3, e.snr),
-            t && (0, Fi.D)() && (0, Fi.D)().AddEvent(1005),
+          (0, Oi.U7)(r, t ? 2 : 3, e.snr),
+            t && (0, Wi.D)() && (0, Wi.D)().AddEvent(1005),
             window.setTimeout(
               () =>
                 this.setState({
@@ -13012,31 +13011,31 @@
             ),
             t ||
               this.setState({ bExpanded: !this.state.bExpanded }, () =>
-                Wi.j.Get().SetEmbeddedStreamCollapsed(!this.state.bExpanded),
+                Oi.j.Get().SetEmbeddedStreamCollapsed(!this.state.bExpanded),
               );
         }
         OnShrinkTransitionEnd() {
           "0vh" === this.state.innerStyle.maxHeight &&
             this.setState({ bExpanded: !1 }, () =>
-              Wi.j.Get().SetEmbeddedStreamCollapsed(!0),
+              Oi.j.Get().SetEmbeddedStreamCollapsed(!0),
             );
         }
         async onStreamSelect(e) {
           this.setState({ bStartMuted: !1 }),
-            Wi.j.Get().GetPlayReadyStream(this.props).accountid !=
+            Oi.j.Get().GetPlayReadyStream(this.props).accountid !=
               e.accountid &&
-              (await Wi.j.Get().AttemptToPlayStream(this.props, e));
+              (await Oi.j.Get().AttemptToPlayStream(this.props, e));
         }
         async PlayNextNonVOD() {
           this.setState({ bStartMuted: !1 });
-          const e = Wi.j
+          const e = Oi.j
             .Get()
             .GetStreams(this.props)
             .filter(
               (e) =>
                 !this.props.fnFilterStreams || this.props.fnFilterStreams(e),
             );
-          await Wi.j.Get().PlayFromAvailableStreams(this.props, e, !0);
+          await Oi.j.Get().PlayFromAvailableStreams(this.props, e, !0);
         }
         ConstructSidePanels(e, t) {
           let r = {
@@ -13045,13 +13044,13 @@
             bRightPanelArtworkOrEmpty: !0,
           };
           if (this.props.bWidePlayer) return r;
-          const i = Wi.j.Get().GetConcurrentStreams(this.props) > 1;
+          const i = Oi.j.Get().GetConcurrentStreams(this.props) > 1;
           let a = Qr.es.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
-            s = d.createElement(ca, {
+            s = d.createElement(ma, {
               key: "right" + a,
               ImgUrl: e.right_panel,
             }),
-            n = d.createElement(ca, { key: "left" + a, ImgUrl: e.left_panel });
+            n = d.createElement(ma, { key: "left" + a, ImgUrl: e.left_panel });
           if (a < 11) {
             const t = Or.l.GetAppIDListForBroadcasterSteamID(e.steamid);
             t && 1 === t.length && (a = t[0]);
@@ -13066,13 +13065,13 @@
             ) ||
               (this.props.event &&
                 this.props.event.jsondata.broadcast_force_banner) ||
-              ((s = d.createElement(Ti, {
+              ((s = d.createElement(Ii, {
                 key: "mini" + e.accountid,
                 appid: a,
               })),
               (r.bRightPanelArtworkOrEmpty = !1)),
             i && !t
-              ? ((r.leftPanel = d.createElement(ua, {
+              ? ((r.leftPanel = d.createElement(Ba, {
                   broadcastEmbedContext: this.props,
                   key: "selector" + a,
                   curStream: e,
@@ -13083,7 +13082,7 @@
                 (r.rightPanel = s))
               : t
                 ? ((r.leftPanel = d.createElement("div", null)),
-                  (r.rightPanel = d.createElement(_a, {
+                  (r.rightPanel = d.createElement(pa, {
                     stream: e,
                     orientation: "rightside",
                   })),
@@ -13095,14 +13094,14 @@
         MarkBroadcastSeen() {
           this.m_bMarkedUsabilitySeen ||
             ((this.m_bMarkedUsabilitySeen = !0),
-            (0, Fi.D)() && (0, Fi.D)().AddEvent(1004));
+            (0, Wi.D)() && (0, Wi.D)().AddEvent(1004));
         }
         render() {
           if (this.state.bLoadingPreference) return null;
-          let e = Wi.j.Get().GetPlayReadyStream(this.props);
+          let e = Oi.j.Get().GetPlayReadyStream(this.props);
           if (e) {
             this.MarkBroadcastSeen();
-            let t = "show" === Wi.j.Get().GetChatVisibility();
+            let t = "show" === Oi.j.Get().GetChatVisibility();
             const {
               event: r,
               language: i,
@@ -13113,20 +13112,20 @@
                 ...e,
                 left_panel: r.GetImageURL(
                   "broadcast_left",
-                  i || (0, Ii.sf)(Tr.TS.LANGUAGE),
+                  i || (0, Fi.sf)(Tr.TS.LANGUAGE),
                 ),
                 right_panel: r.GetImageURL(
                   "broadcast_right",
-                  i || (0, Ii.sf)(Tr.TS.LANGUAGE),
+                  i || (0, Fi.sf)(Tr.TS.LANGUAGE),
                 ),
                 store_title: r.GetBroadcastTitle(
-                  i || (0, Ii.sf)(Tr.TS.LANGUAGE),
+                  i || (0, Fi.sf)(Tr.TS.LANGUAGE),
                 ),
                 broadcast_chat_visibility: r.GetBroadcastChatVisibility(),
               });
             let s = this.ConstructSidePanels(e, t),
               n = e.store_title ? e.store_title : e.title,
-              o = Wi.j.Get().GetConcurrentStreams(this.props) > 1;
+              o = Oi.j.Get().GetConcurrentStreams(this.props) > 1;
             const l = () => {
               e.nAppIDVOD && this.PlayNextNonVOD(), this.props.fnOnVideoEnd?.();
             };
@@ -13143,8 +13142,8 @@
                   "div",
                   {
                     className: (0, Hr.A)({
-                      [Ai().bordered_container]: !0,
-                      [Ai().Event]: Boolean(r),
+                      [Pi().bordered_container]: !0,
+                      [Pi().Event]: Boolean(r),
                       broadcast_brd_ctn_trgt: !0,
                     }),
                   },
@@ -13152,15 +13151,15 @@
                     "div",
                     {
                       className: (0, Hr.A)(
-                        Ai().bordered_title,
+                        Pi().bordered_title,
                         "bordered_title_trgt",
                       ),
                     },
-                    d.createElement(qi.K, null),
-                    d.createElement("div", { className: Ai().streamTitle }, n),
+                    d.createElement(Ni.K, null),
+                    d.createElement("div", { className: Pi().streamTitle }, n),
                     d.createElement(
                       "div",
-                      { className: Ai().bordered_corner_container },
+                      { className: Pi().bordered_corner_container },
                       Boolean(!this.state.bExpanded) &&
                         d.createElement(
                           oi.he,
@@ -13170,7 +13169,7 @@
                             ),
                           },
                           d.createElement("div", {
-                            className: Ai().broadcast_settings_icon,
+                            className: Pi().broadcast_settings_icon,
                             onClick: () =>
                               window.open(
                                 `${Tr.TS.STORE_BASE_URL}account/preferences/#store_broadcast_settings`,
@@ -13186,8 +13185,8 @@
                         },
                         d.createElement("div", {
                           className: this.state.bExpanded
-                            ? Ai().bordered_corner_expanded
-                            : Ai().bordered_corner_shrinked,
+                            ? Pi().bordered_corner_expanded
+                            : Pi().bordered_corner_shrinked,
                           onClick: this.ToggleBroadcastExpandShrink,
                         }),
                       ),
@@ -13195,7 +13194,7 @@
                     Boolean(e.gamedata_subtitle) &&
                       d.createElement(
                         "div",
-                        { className: Ai().bordered_subtitle },
+                        { className: Pi().bordered_subtitle },
                         e.gamedata_subtitle,
                       ),
                   ),
@@ -13204,7 +13203,7 @@
                       "div",
                       {
                         className: (0, Hr.A)({
-                          [Ai().container]: !0,
+                          [Pi().container]: !0,
                           embeddable_ctn_trgt: !0,
                           multistream: o,
                           broadcast_right_panel_simple:
@@ -13216,10 +13215,10 @@
                       },
                       d.createElement(
                         "div",
-                        { className: Ai().LeftPanelCtn },
+                        { className: Pi().LeftPanelCtn },
                         s.leftPanel,
                       ),
-                      d.createElement(na, {
+                      d.createElement(oa, {
                         stream: e,
                         bStartMuted: this.state.bStartMuted,
                         fnRenderBroadcastContext: a,
@@ -13228,11 +13227,11 @@
                       }),
                       d.createElement(
                         "div",
-                        { className: Ai().RightPanelCtn },
+                        { className: Pi().RightPanelCtn },
                         s.rightPanel,
                       ),
                       Boolean(this.state.bExpanded) &&
-                        d.createElement(la, {
+                        d.createElement(ca, {
                           stream: e,
                           bMultistream: o,
                           chatAnnouncementGivewayGID: s.rightPanel
@@ -13243,20 +13242,20 @@
                 ),
                 Boolean(
                   r && r.jsondata && r.jsondata.broadcast_item_drops_enabled,
-                ) && d.createElement(Pi, { event: r }),
-                d.createElement("div", { className: Ai().clear_div }),
+                ) && d.createElement(Gi, { event: r }),
+                d.createElement("div", { className: Pi().clear_div }),
               ),
             );
           }
           return d.createElement("div", { className: "NoBroadcastAvailable" });
         }
       };
-      (0, n.Cg)([Xr.oI], sa.prototype, "ToggleBroadcastExpandShrink", null),
-        (0, n.Cg)([Xr.oI], sa.prototype, "OnShrinkTransitionEnd", null),
-        (0, n.Cg)([Xr.oI], sa.prototype, "onStreamSelect", null),
-        (0, n.Cg)([Xr.oI], sa.prototype, "PlayNextNonVOD", null),
-        (sa = (0, n.Cg)([c.PA], sa));
-      class na extends d.Component {
+      (0, n.Cg)([Xr.oI], na.prototype, "ToggleBroadcastExpandShrink", null),
+        (0, n.Cg)([Xr.oI], na.prototype, "OnShrinkTransitionEnd", null),
+        (0, n.Cg)([Xr.oI], na.prototype, "onStreamSelect", null),
+        (0, n.Cg)([Xr.oI], na.prototype, "PlayNextNonVOD", null),
+        (na = (0, n.Cg)([c.PA], na));
+      class oa extends d.Component {
         m_iVideoContainerRef = d.createRef();
         constructor(e) {
           super(e),
@@ -13269,8 +13268,8 @@
           const e = Qr.es.GetOrCreateBroadcastInfo(
             this.props.stream.steamid,
           ).m_nAppID;
-          (0, Wi.U7)(e, 7, this.props.stream.snr),
-            (0, Fi.D)() && (0, Fi.D)().AddEvent(1006),
+          (0, Oi.U7)(e, 7, this.props.stream.snr),
+            (0, Wi.D)() && (0, Wi.D)().AddEvent(1006),
             this.setState({ bPopout: !1, bPreventPopup: !0 });
         }
         OnEnter() {
@@ -13286,9 +13285,9 @@
         render() {
           return d.createElement(
             "div",
-            { className: Ai().wrapper },
+            { className: Pi().wrapper },
             d.createElement(
-              ra.j,
+              ia.j,
               {
                 onEnter: this.OnEnter,
                 onLeave: this.OnLeave,
@@ -13296,9 +13295,9 @@
                   e.isIntersecting || this.OnLeave();
                 },
                 className: (0, Hr.A)({
-                  [Ai().video_placeholder]: !0,
+                  [Pi().video_placeholder]: !0,
                   video_placeholder_trgt: !0,
-                  [Ai().WidePlayer]: this.props.bWidePlayer,
+                  [Pi().WidePlayer]: this.props.bWidePlayer,
                 }),
                 ref: this.m_iVideoContainerRef,
               },
@@ -13306,17 +13305,17 @@
                 "div",
                 {
                   className: this.state.bPopout
-                    ? Ai().broadcast_floating
-                    : Ai().video_container,
+                    ? Pi().broadcast_floating
+                    : Pi().video_container,
                 },
                 this.state.bPopout &&
-                  d.createElement(ma, {
+                  d.createElement(da, {
                     steamIDBroadcast: this.props.stream.steamid,
                     OnPreventPopup: this.CloseBroadcastPopup,
                   }),
                 d.createElement(
                   "div",
-                  { className: Ai().BroadcastPlayerContainer },
+                  { className: Pi().BroadcastPlayerContainer },
                   d.createElement(hi.default, {
                     steamIDBroadcast: this.props.stream.steamid,
                     watchLocation: 6,
@@ -13332,11 +13331,11 @@
           );
         }
       }
-      function oa(e) {
+      function la(e) {
         const { stream: t } = e,
           [r] = (0, m.q3)(() => [t.steamid]),
           i = Qr.es.GetOrCreateBroadcastInfo(r).m_nAppID,
-          a = ia.list.find(
+          a = aa.list.find(
             (e) =>
               e.appid == i &&
               (!e.broadcasterAccountID ||
@@ -13366,37 +13365,37 @@
             },
             d.createElement(
               "a",
-              { href: e, className: Ai().external_link },
+              { href: e, className: Pi().external_link },
               d.createElement(Lr.GrD, null),
             ),
           );
         }
       }
-      (0, n.Cg)([Xr.oI], na.prototype, "CloseBroadcastPopup", null),
-        (0, n.Cg)([Xr.oI], na.prototype, "OnEnter", null),
-        (0, n.Cg)([Xr.oI], na.prototype, "OnLeave", null);
-      let la = class extends d.Component {
+      (0, n.Cg)([Xr.oI], oa.prototype, "CloseBroadcastPopup", null),
+        (0, n.Cg)([Xr.oI], oa.prototype, "OnEnter", null),
+        (0, n.Cg)([Xr.oI], oa.prototype, "OnLeave", null);
+      let ca = class extends d.Component {
         OnToggleChat(e) {
           e.preventDefault();
           const t = Qr.es.GetOrCreateBroadcastInfo(
             this.props.stream.steamid,
           ).m_nAppID;
-          (0, Wi.U7)(
+          (0, Oi.U7)(
             t,
-            "show" === Wi.j.Get().GetChatVisibility() ? 5 : 4,
+            "show" === Oi.j.Get().GetChatVisibility() ? 5 : 4,
             this.props.stream.snr,
           ),
-            Wi.j.Get().ToggleChatVisibility();
+            Oi.j.Get().ToggleChatVisibility();
         }
         onWatchBroadcastPage() {
           const e = Qr.es.GetOrCreateBroadcastInfo(
             this.props.stream.steamid,
           ).m_nAppID;
-          (0, Wi.U7)(e, 9, this.props.stream.snr);
+          (0, Oi.U7)(e, 9, this.props.stream.snr);
         }
         render() {
-          const e = "remove" != Wi.j.Get().GetChatVisibility(),
-            t = "hide" === Wi.j.Get().GetChatVisibility(),
+          const e = "remove" != Oi.j.Get().GetChatVisibility(),
+            t = "hide" === Oi.j.Get().GetChatVisibility(),
             r = !this.props.stream.nAppIDVOD,
             i = r;
           let a = Number.parseInt(
@@ -13406,25 +13405,25 @@
           );
           return d.createElement(
             "div",
-            { className: (0, Hr.A)(Ai().viewer_bar, "viewer_bar") },
+            { className: (0, Hr.A)(Pi().viewer_bar, "viewer_bar") },
             d.createElement(
               "div",
-              { className: (0, Hr.A)(Ai().viewer_count, "viewer_count") },
+              { className: (0, Hr.A)(Pi().viewer_count, "viewer_count") },
               d.createElement(Lr.y_e, null),
-              (0, Ei.Dq)(a),
+              (0, xi.Dq)(a),
             ),
             d.createElement(
               "div",
-              { className: (0, Hr.A)(Ai().viewer_links, "viewer_links") },
+              { className: (0, Hr.A)(Pi().viewer_links, "viewer_links") },
               Boolean(e && !t && this.props.bMultistream) &&
                 d.createElement(
                   "div",
-                  { className: Ai().chat_link },
+                  { className: Pi().chat_link },
                   d.createElement(
                     "a",
                     {
                       href: "#",
-                      className: Ai().ChatToggle,
+                      className: Pi().ChatToggle,
                       onClick: this.OnToggleChat,
                     },
                     (0, Rr.we)("#sale_three_section_show_streams"),
@@ -13433,13 +13432,13 @@
               e &&
                 d.createElement(
                   "div",
-                  { className: Ai().chat_link },
+                  { className: Pi().chat_link },
                   d.createElement(Lr.ROZ, null),
                   d.createElement(
                     "a",
                     {
                       href: "#",
-                      className: Ai().ChatToggle,
+                      className: Pi().ChatToggle,
                       onClick: this.OnToggleChat,
                     },
                     (0, Rr.we)(
@@ -13452,19 +13451,19 @@
               i &&
                 d.createElement(
                   "div",
-                  { className: Ai().chat_link },
+                  { className: Pi().chat_link },
                   d.createElement(Lr.SYj, null),
                   d.createElement(
                     "a",
                     {
                       href: "#",
-                      className: Ai().ChatToggle,
+                      className: Pi().ChatToggle,
                       onClick: (e) =>
-                        (0, ta.pg)(
-                          d.createElement(Yi, {
+                        (0, ra.pg)(
+                          d.createElement(Zi, {
                             steamid: this.props.stream.steamid,
                           }),
-                          (0, ea.uX)(e),
+                          (0, ta.uX)(e),
                         ),
                     },
                     (0, Rr.we)("#Broadcast_ShareBroadcast"),
@@ -13484,12 +13483,12 @@
                       Tr.TS.STORE_BASE_URL +
                       "account/preferences/#store_broadcast_settings",
                     target: Tr.TS.IN_CLIENT ? void 0 : "_blank",
-                    className: Ai().settings_link,
+                    className: Pi().settings_link,
                   },
                   d.createElement(Lr.wB_, null),
                 ),
               ),
-              r && d.createElement(oa, { ...this.props }),
+              r && d.createElement(la, { ...this.props }),
             ),
             Boolean(this.props.chatAnnouncementGivewayGID) &&
               d.createElement(ni, {
@@ -13499,41 +13498,41 @@
           );
         }
       };
-      (0, n.Cg)([Xr.oI], la.prototype, "OnToggleChat", null),
-        (0, n.Cg)([Xr.oI], la.prototype, "onWatchBroadcastPage", null),
-        (la = (0, n.Cg)([c.PA], la));
-      class ca extends d.Component {
+      (0, n.Cg)([Xr.oI], ca.prototype, "OnToggleChat", null),
+        (0, n.Cg)([Xr.oI], ca.prototype, "onWatchBroadcastPage", null),
+        (ca = (0, n.Cg)([c.PA], ca));
+      class ma extends d.Component {
         render() {
           let e = this.props.ImgUrl;
           return d.createElement(
             "div",
-            { className: Ai().SidePanelBackground },
+            { className: Pi().SidePanelBackground },
             e &&
               d.createElement("img", {
-                className: Ai().side_panels,
+                className: Pi().side_panels,
                 src: this.props.ImgUrl,
               }),
-            !e && d.createElement("div", { className: Ai().side_panels }),
+            !e && d.createElement("div", { className: Pi().side_panels }),
           );
         }
       }
-      const ma = (0, c.PA)((e) => {
+      const da = (0, c.PA)((e) => {
         const { steamIDBroadcast: t } = e;
         let r = Qr.es.GetOrCreateBroadcastInfo(t).m_nAppID;
         r = r != Qr.fO ? r : 0;
         const [i] = (0, wi.t7)(r, {});
         return d.createElement(
           "div",
-          { className: [Ai().PopOutVideoTitleBar, Ai().NoSeslect].join(" ") },
+          { className: [Pi().PopOutVideoTitleBar, Pi().NoSeslect].join(" ") },
           Boolean(i)
             ? d.createElement(
                 fi.u,
-                { type: "app", id: r, className: Ai().PopOutVideoTitleText },
+                { type: "app", id: r, className: Pi().PopOutVideoTitleText },
                 (0, Rr.we)("#StoreBroadcast_Detault_popout_Title"),
               )
             : d.createElement(
                 "div",
-                { className: Ai().PopOutVideoTitleText },
+                { className: Pi().PopOutVideoTitleText },
                 (0, Rr.we)("#StoreBroadcast_Detault_popout_Title"),
               ),
           d.createElement(
@@ -13546,7 +13545,7 @@
             d.createElement(
               "button",
               {
-                className: Ai().PopOutVideoCloseButton,
+                className: Pi().PopOutVideoCloseButton,
                 onClick: e.OnPreventPopup,
               },
               d.createElement(Lr.X, null),
@@ -13554,14 +13553,14 @@
           ),
         );
       });
-      function da(e, t) {
+      function ua(e, t) {
         const r = Qr.es.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
-          i = ji.A.Get().GetApp(r);
+          i = qi.A.Get().GetApp(r);
         return e && i?.GetAssets()?.GetHeaderURL()
-          ? parseInt(Ai().strStreamIconCapsuleArtHeight)
-          : parseInt(Ai().strStreamIconScreenshotArtHeight);
+          ? parseInt(Pi().strStreamIconCapsuleArtHeight)
+          : parseInt(Pi().strStreamIconScreenshotArtHeight);
       }
-      function ua(e) {
+      function Ba(e) {
         const {
             curStream: t,
             onStreamSelect: r,
@@ -13571,11 +13570,11 @@
           } = e,
           n = (0, d.useRef)(void 0),
           o = (0, d.useMemo)(() => {
-            const e = Wi.j
+            const e = Oi.j
               .Get()
               .GetStreams(s)
               .filter((e) => !i || i(e));
-            return (0, Wi.MU)(e), e;
+            return (0, Oi.MU)(e), e;
           }, [s, i]);
         return (
           (0, d.useEffect)(() => {
@@ -13583,14 +13582,14 @@
               const e = o
                 .map((e) => Qr.es.GetOrCreateBroadcastInfo(e.steamid).m_nAppID)
                 .filter(Boolean);
-              ji.A.Get()
+              qi.A.Get()
                 .QueueMultipleAppRequests(e, { include_assets: !0 })
                 .then(() => {
                   if (n.current) {
                     let e = 0;
                     for (const r of o) {
                       if (t.accountid == r.accountid) break;
-                      e += da(a, r);
+                      e += ua(a, r);
                     }
                     n.current.scrollTop = e;
                   }
@@ -13602,17 +13601,17 @@
             {
               ref: n,
               className: (0, Hr.A)({
-                [Ai().side_panels]: !0,
+                [Pi().side_panels]: !0,
                 side_panels: !0,
-                [Ai().multistream]: !0,
-                [Ai().scrollingstreams]: o.length > 3,
+                [Pi().multistream]: !0,
+                [Pi().scrollingstreams]: o.length > 3,
               }),
             },
             d.createElement(
               "div",
-              { className: Ai().MultiStreamCtn },
+              { className: Pi().MultiStreamCtn },
               o.map((e) =>
-                d.createElement(Ba, {
+                d.createElement(ga, {
                   key: e.accountid ?? e.steamid,
                   stream: e,
                   bSelected: t.accountid == e.accountid,
@@ -13624,7 +13623,7 @@
           )
         );
       }
-      function Ba(e) {
+      function ga(e) {
         const {
           onStreamSelect: t,
           bSelected: r,
@@ -13636,7 +13635,7 @@
         );
         s = s != Qr.fO ? s : 0;
         const [n] = (0, wi.t7)(i.nAppIDVOD ?? s, { include_assets: !0 });
-        if (!(0, Wi.fn)(i)) return null;
+        if (!(0, Oi.fn)(i)) return null;
         const o = a && n?.GetAssets().GetHeaderURL(),
           l = Number.parseInt("" + i.viewer_count),
           c = !Number.isNaN(l),
@@ -13645,26 +13644,26 @@
           "div",
           {
             className: (0, Hr.A)({
-              [Ai().stream_icon_and_viewer_container]: !0,
-              [Ai().stream_featured]:
-                i.current_selection_priority == Oi.mY.k_eFeatured,
-              [Ai().display_capsule_art]: Boolean(o),
+              [Pi().stream_icon_and_viewer_container]: !0,
+              [Pi().stream_featured]:
+                i.current_selection_priority == ji.mY.k_eFeatured,
+              [Pi().display_capsule_art]: Boolean(o),
             }),
           },
           d.createElement(
             fi.j,
-            { type: "app", id: s, hoverClassName: Ai().StreamCapsule },
+            { type: "app", id: s, hoverClassName: Pi().StreamCapsule },
             d.createElement(
-              Ui.K,
+              Ei.K,
               {
                 className: (0, Hr.A)(
-                  Ai().stream_icon_container,
-                  r && Ai().stream_selected,
+                  Pi().stream_icon_container,
+                  r && Pi().stream_selected,
                 ),
                 onClick: () => t && t(i),
                 rootMargin: "100px 0px 100px 0px",
               },
-              d.createElement(ga, {
+              d.createElement(_a, {
                 strThumbnail: i.thumbnail_http_address,
                 bSelected: r,
                 strCapsuleArtURL: o,
@@ -13673,7 +13672,7 @@
           ),
           d.createElement(
             "div",
-            { className: (0, Hr.A)(Ai().viewer_count, !c && Ai().vod_title) },
+            { className: (0, Hr.A)(Pi().viewer_count, !c && Pi().vod_title) },
             c
               ? d.createElement(
                   d.Fragment,
@@ -13681,35 +13680,35 @@
                   d.createElement(Lr.y_e, null),
                   d.createElement(
                     "div",
-                    { className: Ai().ViewerNum },
-                    (0, Ei.Dq)(l),
+                    { className: Pi().ViewerNum },
+                    (0, xi.Dq)(l),
                   ),
                 )
               : u,
           ),
         );
       }
-      function ga(e) {
+      function _a(e) {
         const { strCapsuleArtURL: t, strThumbnail: r, bSelected: i } = e,
-          a = i ? Ai().stream_icon_selected : Ai().stream_icon;
+          a = i ? Pi().stream_icon_selected : Pi().stream_icon;
         if (t) {
           const e = [t];
           return d.createElement(
             d.Fragment,
             null,
             d.createElement("img", {
-              className: (0, Hr.A)(a, Ai().stream_icon_hide_on_hover),
+              className: (0, Hr.A)(a, Pi().stream_icon_hide_on_hover),
               src: t,
             }),
-            d.createElement(Ni.o, {
-              className: (0, Hr.A)(a, Ai().stream_icon_show_on_hover),
+            d.createElement(Ui.o, {
+              className: (0, Hr.A)(a, Pi().stream_icon_show_on_hover),
               srcs: e,
             }),
           );
         }
         return d.createElement("img", { className: a, src: r });
       }
-      function _a(e) {
+      function pa(e) {
         const { stream: t, orientation: r } = e,
           i = "below" == r,
           [a, s] = (0, m.q3)(() => [
@@ -13722,16 +13721,16 @@
               "div",
               {
                 className: (0, Hr.A)({
-                  [Ai().chat_below_container]: i,
-                  [Ai().chat_rightside_container]: !i,
-                  [Ai().store_chat_ctn]: !0,
+                  [Pi().chat_below_container]: i,
+                  [Pi().chat_rightside_container]: !i,
+                  [Pi().store_chat_ctn]: !0,
                 }),
               },
               d.createElement(
                 "div",
-                { className: Ai().ChatContainer },
+                { className: Pi().ChatContainer },
                 d.createElement(ui, {
-                  emoticonStore: Wi.MX,
+                  emoticonStore: Oi.MX,
                   watchLocation: 6,
                   steamID: n,
                   broadcastID: s,
@@ -13756,7 +13755,7 @@
         o = r(88997),
         l = r(55963),
         c = r(54728),
-        m = r(82097),
+        m = r(16021),
         d = r(84933),
         u = r(6144);
       class B extends n.Component {

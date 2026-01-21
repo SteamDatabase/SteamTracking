@@ -53,6 +53,12 @@
             "#Accessibility_Feature_WithoutQuickTimeEvents",
           bAccessibilityChatTexttoSpeech: "#Accessibility_Feature_TextToSpeech",
           bAccessibilityChatSpeechtoText: "#Accessibility_Feature_SpeechToText",
+          bAccessibilityPlayableAtYourOwnPace:
+            "#Accessibility_Feature_PlayableAtYourOwnPace",
+          bAccessibilityPlayableWithoutVision:
+            "#Accessibility_Feature_PlayableWithoutVision",
+          bAccessibilityContrastControls:
+            "#Accessibility_Feature_ContrastControls",
         },
         _ = {
           bAccessibilityDifficultyLevels: "adjustable_difficulty",
@@ -72,6 +78,9 @@
             "playable_without_timed_input",
           bAccessibilityChatTexttoSpeech: "chat_text_to_speech",
           bAccessibilityChatSpeechtoText: "chat_speech_to_text",
+          bAccessibilityPlayableAtYourOwnPace: "playable_at_your_own_pace",
+          bAccessibilityPlayableWithoutVision: "playable_without_vision",
+          bAccessibilityContrastControls: "contrast_controls",
         },
         _ = {
           bAccessibilityDifficultyLevels: "gameplay",
@@ -84,12 +93,15 @@
           bAccessibilitySubtitles: "visual",
           bAccessibilityColorAlternatives: "visual",
           bAccessibilityCameraComfort: "visual",
+          bAccessibilityPlayableWithoutVision: "visual",
+          bAccessibilityContrastControls: "visual",
           bAccessibilityKeyboardOnlyOption: "input",
           bAccessibilityMouseOnlyOption: "input",
           bAccessibilityTouchOnlyOption: "input",
           bAccessibilityPlayableWithoutQuicktimeEvents: "input",
           bAccessibilityChatTexttoSpeech: "input",
           bAccessibilityChatSpeechtoText: "input",
+          bAccessibilityPlayableAtYourOwnPace: "input",
         },
         _ = {
           gameplay: "#Accessibility_Group_Gameplay",

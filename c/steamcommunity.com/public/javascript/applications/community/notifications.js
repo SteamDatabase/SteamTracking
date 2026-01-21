@@ -32,6 +32,7 @@
         Expanded: "_2hRRl_cNi9X4Veh7FeK-F4",
         CommentRadioGroup: "_2_xVHbSZ7fCv3LUz-THkR5",
         Expander: "MjW-ILAVK028V2xI8eCfW",
+        NotificationActions: "_3R-McPl3j1ANvRa0U9reMV",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -41,7 +42,6 @@
           default: () => _,
         });
       var _,
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -74,47 +74,47 @@
             }),
             (this.k_rgFilterCheckboxes = [
               {
-                type: _._.k_ESteamNotificationType_Comment,
+                type: 3,
                 display: (0, _._)("#NotificationsFilters_Comments"),
                 hash: "comments",
               },
               {
-                type: _._.k_ESteamNotificationType_Wishlist,
+                type: 8,
                 display: (0, _._)("#NotificationsFilters_Wishlist"),
                 hash: "wishlist",
               },
               {
-                type: _._.k_ESteamNotificationType_FriendInvite,
+                type: 5,
                 display: (0, _._)("#NotificationsFilters_FriendRequest"),
                 hash: "invites",
               },
               {
-                type: _._.k_ESteamNotificationType_Gift,
+                type: 2,
                 display: (0, _._)("#NotificationsFilters_Gifts"),
                 hash: "gifts",
               },
               {
-                type: _._.k_ESteamNotificationType_Item,
+                type: 4,
                 display: (0, _._)("#NotificationsFilters_Inventory"),
                 hash: "inventory",
               },
               {
-                type: _._.k_ESteamNotificationType_AsyncGame,
+                type: 12,
                 display: (0, _._)("#NotificationsFilters_AsyncGame"),
                 hash: "asyncgame",
               },
               {
-                type: _._.k_ESteamNotificationType_HelpRequest,
+                type: 11,
                 display: (0, _._)("#NotificationsFilters_HelpRequest"),
                 hash: "help",
               },
               {
-                type: _._.k_ESteamNotificationType_TradeOffer,
+                type: 9,
                 display: (0, _._)("#NotificationsFilters_TradeOffer"),
                 hash: "trade",
               },
               {
-                type: _._.k_ESteamNotificationType_General,
+                type: 10,
                 display: (0, _._)("#NotificationsFilters_General"),
                 hash: "general",
               },
@@ -159,9 +159,7 @@
               -1 !== _
                 ? this.rgFilterState.set(this.k_rgFilterCheckboxes[_].type, !0)
                 : (0, _._)(_) &&
-                  this.rgFilterState.has(
-                    _._.k_ESteamNotificationType_Comment,
-                  ) &&
+                  this.rgFilterState.has(3) &&
                   this.commentFilter.setItemTypes.add(parseInt(_));
             });
           }
@@ -172,9 +170,7 @@
             this.commentFilter.setItemTypes.clear()),
             _ &&
               (this.rgFilterState.set(_, _),
-              _ != _._.k_ESteamNotificationType_Comment ||
-                _ ||
-                this.commentFilter.setItemTypes.clear()),
+              3 != _ || _ || this.commentFilter.setItemTypes.clear()),
             this.UpdateLocationHash();
         }
         SetCommentFilter(_) {
@@ -201,7 +197,7 @@
                   ? void 0
                   : _.hash));
           }),
-            this.rgFilterState.has(_._.k_ESteamNotificationType_Comment) &&
+            this.rgFilterState.has(3) &&
               this.commentFilter.setItemTypes.forEach(
                 (_) => (_ += (_ ? "," : "") + _),
               ),
@@ -232,7 +228,7 @@
         return _.useMemo(() => {
           const _ = new Map();
           for (const _ of _.m_rgNotificationRollups.filter(
-            (_) => _.type == _._.k_ESteamNotificationType_Comment,
+            (_) => 3 == _.type,
           )) {
             const _ = (0, _._)(_);
             _.set(_.comment_type, 1 + (_.get(_.comment_type) || 0));
@@ -253,7 +249,7 @@
             if ((0, _._)(_.type, _, _)) return !1;
             if (
               _ &&
-              _.type == _._.k_ESteamNotificationType_Comment &&
+              3 == _.type &&
               (_.type != _.k_All || _.setItemTypes.size > 0)
             ) {
               const _ = (0, _._)(_);
@@ -274,6 +270,7 @@
       const _ = new _(),
         _ = new _._();
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -331,6 +328,19 @@
                         className: _().NotificationFiltersCtn,
                       },
                       _.createElement(_, null),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().NotificationActions,
+                        },
+                        _.createElement(
+                          _._,
+                          {
+                            href: "/my/moderatormessages",
+                          },
+                          (0, _._)("#CommunityActivity"),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -490,7 +500,7 @@
       function _(_) {
         const { filterOptions: _ } = _,
           { filters: __webpack_require__ } = _();
-        return _.type == _._.k_ESteamNotificationType_Comment
+        return 3 == _.type
           ? _.createElement(_, {
               filterOptions: _,
               checked: __webpack_require__.get(_.type),
@@ -573,7 +583,7 @@
               const _ = new Map();
               for (const _ of _.k_rgCommentFilters)
                 for (const _ of _.m_rgNotificationRollups.filter(
-                  (_) => _.type == _._.k_ESteamNotificationType_Comment,
+                  (_) => 3 == _.type,
                 )) {
                   const _ = (0, _._)(_);
                   __webpack_require__.fnFilter(_, _) &&
@@ -648,13 +658,9 @@
             _.MarkItemHidden(_.item.notification_id);
           }, [_.item.notification_id]);
         if (_.item.hidden) return null;
-        if (
-          _.item.hidden &&
-          _.type == _._.k_ESteamNotificationType_FriendInvite
-        ) {
+        if (_.item.hidden && 5 == _.type) {
           const _ = (0, _._)(_);
-          if ((0, _._)(_.state) || _.state == _._.k_EFriendRelationshipBlocked)
-            return null;
+          if ((0, _._)(_.state) || 1 == _.state) return null;
         }
         const _ = (0, _._)(_.type);
         return _
@@ -662,8 +668,8 @@
               _._,
               {
                 controller: "notification",
-                method: (0, _._)(_._.k_EUIMode_Web),
-                submethod: (0, _._)(_._.AllNotificationsTray),
+                method: (0, _._)(3),
+                submethod: (0, _._)(4),
               },
               _.createElement(
                 _,
@@ -675,8 +681,8 @@
                     rollup: _,
                     onNotificationClick: _,
                     onHide: _,
-                    location: _._.AllNotificationsTray,
-                    uimode: _._.k_EUIMode_Web,
+                    location: 4,
+                    uimode: 3,
                   }),
               ),
             )

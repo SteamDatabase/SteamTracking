@@ -94,6 +94,117 @@
         IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
       };
     },
+    95695: (e) => {
+      e.exports = {
+        "duration-app-launch": "800ms",
+        PartnerEventFont: "LK4bXmKAknKopK864hJFM",
+        Clear: "_3UhsQfZfx8h_mvk1qQ2E7p",
+        Divider: "_3B5HO7jdTpNaectJS1a6UZ",
+        EventDefaultRowContainer: "_3WO6cZns4r39Cg__Yd-7zn",
+        EventStartPublic: "_2LU_YLKpLTGuqBMQLckmkk",
+        EventOptions: "_2r_QeL5bd04KiohE77Gq-t",
+        EventStatusContainer: "vOPSZ6WQ2uCEbtYrtUkJ5",
+        FlexColumnContainer: "_1qhLqXcizfytm6omB4ywDD",
+        FlexRowContainer: "Ke5f13IVZVzYSmQVJgVyd",
+        Centered: "qy-9mgJyhfEb8Wt0gqzaF",
+        VCentered: "_2Ke6gF28pxI9dp-gD87LfB",
+        FlexContainSpaceBetween: "_3nPGWNNLFjqXgZ6hjwUnkf",
+        FlexRowWrapSpaceBetweenContainer: "_19CjIj6mAtlIoY_7_iyOlz",
+        FlexRowWrapFlexStartContainer: "tyP_cnaOBcolou13sADst",
+        SaveBackground: "V0mbIUnoAWzmWNmnsjwlx",
+        SupportedGroupLabel: "APmJNwEEvE9w4_JVyRQ3J",
+        LanguageWithContent: "_2Cd1uISocztoq_3uIIDOXm",
+        LargeInput: "fq68IvZbR5nyI81kv1dwh",
+        InputBorder: "ObyysoLsv_KyZYdZkoC7W",
+        RadioOption: "_3iJX1gtbWR_mkLvuDCeoNd",
+        FlexGrow: "_1KvZAJk52RAyJKIXK3-wO0",
+        EventEditorTextTitleCtn: "htm7dxJtSOP0s_Mcb3Ejx",
+        doclink: "_1-bAKvDZnkuyP6Nmt66mQB",
+        EventEditorUnpaddedTextTitle: "_9hsCLz0BkV6oeIrNt7M3D",
+        EventEditorTextTitle: "_18fHxiLGI4r8_CPauC1oep",
+        EventEditorTextTitleLengthInfo: "_2nHJ1mgbC-yNBhl6tjLgmD",
+        CollapsableSectionTitle: "_2zejQIbvaMIPvk98NrTDzs",
+        SectionTitle: "_7Qc_eWjn_s3VWDe79FmEq",
+        EventSectionTitleCtn: "onqWKRp2JgmjHjFAtHUAM",
+        EventSectionTitle: "Idd_AoQMoEWIZamI72mP7",
+        EventSectionSpacer: "_1BloexLaoA9uwhXnsLWe6M",
+        EventSectionMoreBtn: "uckBibUwkj9tX_NZHf6wN",
+        EventEditorSpacerPadding: "_1RBfNW2ja0sibxeZdEEJX",
+        EventEditorVisibilityCtn: "_1nqBhG2Wx5fvxBZz_TG7B9",
+        EventEditorTextSubTitle: "_1i_pY6xNDaeC-hpFtw_bnr",
+        FloatingTitle: "_31XRtqJrtSr23BOez9F94m",
+        EventEditorEventStatus: "_2JGoLoYTtzbQVxL0l_1m3a",
+        EventHidden: "_2H6fnGkwmWVynWQb7QvxLN",
+        EventVisible: "_3Z0QrVP5ZnTQ2dk4TtNgY2",
+        EventBarBackAndTitle: "_2rTjP81ZJlRiaauPzNG7K4",
+        EventBarTitleCtn: "WfVzeWGwNKWJkHrZGYin4",
+        EventBarTitle: "_29kVXprENYbLFAtuCiS9sQ",
+        EventEditButtons: "_3nYmf7ouiiC2Fb1BBu5Gra",
+        EventStatus: "_1sOFBLpnblzmUTv7zVK5bM",
+        EventBarBack: "s3r9bZXo9Hn_LJ2KuwEdl",
+        EditPreviewButton: "_1FhZQ0qnT9Cg5iDVCM4kUM",
+        Delete: "_32kR7vbPRNV7B8ZsiduNmF",
+        Disabled: "_2wVCx2MbxsBE0UA-mTs9GA",
+        BrowseMoreButton: "_1YrclhbHAxZpfgTuGj4VeB",
+        Button: "_1ABCOz8DSrl-YJdh1xD-m0",
+        Icon: "_1dDpSuaJBGZzS41s0SPk4c",
+        Primary: "_30iplBvtu2x5qDH5gkzuvV",
+        ClearThings: "_3x_qLReSea_Uq9nqUlRsE2",
+        OnIndicator: "_1GBsBcWhLJ4t6Fr7B5Je1z",
+        OffIndicator: "w0I94_DnBuP6_sAy2jJOL",
+        IconImage: "_2RY897Hy2yhwXPKZZIMbVc",
+        RightColumnContainer: "_30-E9De2BTSA_LQAluUDUI",
+        FloatRight: "_1bzHf_n9CdWgjfVlmRX68A",
+        TTip: "_2aWukx6Wd2nw_kXZ1FP2NP",
+        ValveSupportOnly: "wC6-UDN4iQob1NcD0Rpty",
+        ArtworkAgeNotAppropriate: "_3V64ZhKy9wBGIO4DpFne9v",
+        EventDashboardHeader: "_2kZr_0HccJXPhB1ZUZ5ouf",
+        ContainerSpaceBetween: "_3gYZGtbFQRCQssXFJTFwmV",
+        EventDashboardTitles: "_1ym4r-4rlOJQoOzRprSo8l",
+        EventDashboardActions: "_2z_02l2jZf-9jcO4USrYak",
+        EventDashboardStatsCtn: "_3IptFPCOJnBgUfgUej_jIH",
+        EventDashboardAppCtn: "_2iPrKEyo2kmzykCYxURzj3",
+        maintitle: "vEk_z-3SSNZ_QNdilG5U8",
+        AppTitle: "l-Ow7jLX9GkLm9eYHQVAP",
+        subtitle: "_2mJfcOfmivoiCR4CW-GrjN",
+        ValveOnlyText: "_206saj_KMAibQF6XQ50lq0",
+        ValveOnlyBackground: "JckrnbJXboKxpRp3fULfa",
+        ValveOnlyAdminBackground: "_3HVu1O7B4zeCZWaOaUWPCo",
+        DropDownOptionHelpLabel: "_2O-Yi5SNKU3AinaDygrO9y",
+        Columns: "_1oVIRGhMwAB3uN9G3t8kZe",
+        LeftCol: "_3PPz-6LrUAum0x5iKTRxzc",
+        RightCol: "_25xelN-JQnAHv3pp9qVrpl",
+        DropDownScroll: "_1CewBTRfw0excEQTv17oBF",
+        DropDownScrollItem: "_3D3hCqbc4w-srLqZG9Uue1",
+        CloseButton: "gR2gSLc4AtnoUyq29Np8F",
+        CloseSectionTools: "_1d0D9Wb15dNSzABGRNMKzl",
+        HalfColumn: "_3Xmp43r8PjDuBvfl8dK6Rt",
+        InsetOption: "PKGX85T0vHviq8Tm_2GeT",
+        tooltip_Ctn: "_3nqxIgL0a0DbPZHRZRzWsp",
+        SaleEditorSpacing: "_2ZGwd2fru49CK-m22nkFg3",
+        InstructionText: "ktxW5d8M1ectIDhxxa1M5",
+        BackgroundImage: "_2wlqOo3XXW1wCAxwfudaL8",
+        InEditor: "_1qfNCm-vmBy2gW4vlcWfgD",
+        Blur: "_1rJkktMMsrzAultu2NgHkZ",
+        SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
+        SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
+        SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
+        JumpToButton: "c4K67QJ5cG4Zr1eb4H_Fu",
+        QACtn: "_337X4KlsU9k5t9s423wb_I",
+        SaleSectionSubtitle: "_2rIaWN5LbF3muB3D2A-q5k",
+        SaleSectionContainer: "_3gb3JeV_1IMaIeODzBSrP3",
+        AddSectionButton: "_2_djjQBZmuIsrDz2l04Ua7",
+        EventElementRequired: "_12rm6-FOWcy0YB458vbp5l",
+        EventElementOptional: "_1mpG6blNZY9m8bmFF-Krii",
+        EventElementComplete: "_1uZCvmPkcgPb6hJYpF9IYU",
+        PixelOffsetCtn: "_3Xk96WC-5G6sSuI0Zw2aeZ",
+        PixelOffsetRow: "_2PtWb-j9bnMM467osLZO2B",
+        PixelOffsetNote: "JjEwaxBnKLv7wm8lbhcbX",
+        PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
+        Error: "mSSEDpLo6ibX1Ed5anQD_",
+        GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
+      };
+    },
     37999: (e) => {
       e.exports = {
         Loading: "_24C5lxFpKz_kHyuT-8GJKK",
@@ -290,7 +401,7 @@
     },
     92513: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => A, usePartnerDeadlines: () => k });
+      a.r(t), a.d(t, { default: () => P, usePartnerDeadlines: () => A });
       var n = a(90626),
         i = a(84811),
         r = a(2341),
@@ -303,19 +414,19 @@
         u = a(8527),
         h = a(54330),
         p = a(32179),
-        f = a(82097),
+        f = a(16021),
         y = a(55263),
         v = a(95034),
         E = a(95695),
         g = a.n(E),
         S = a(51272),
-        N = a(26408),
-        b = a(52038),
-        w = a(61859),
-        T = a(91675);
-      const _ = { include_assets: !0, include_release: !0 };
+        b = a(26408),
+        N = a(52038),
+        _ = a(61859),
+        w = a(91675);
+      const T = { include_assets: !0, include_release: !0 };
       function C() {
-        const e = k(9),
+        const e = A(9),
           [t, a] = (0, v.QD)("query", ""),
           r = (0, n.useMemo)(
             () =>
@@ -331,7 +442,7 @@
               ),
             [e],
           ),
-          s = (0, y.zX)(r, _),
+          s = (0, y.zX)(r, T),
           c = (0, p.vh)(o),
           [d, m] = (0, v.QD)("internaldate", !1),
           u = (0, n.useMemo)(() => {
@@ -364,7 +475,7 @@
                 n.createElement(
                   "button",
                   {
-                    className: (0, b.A)(g().Button),
+                    className: (0, N.A)(g().Button),
                     style: { float: "right", marginRight: "16px" },
                     onClick: (e) =>
                       (0, S.EP)(
@@ -410,7 +521,7 @@
                       "th",
                       null,
                       "Milestone ID ",
-                      n.createElement(N.o, {
+                      n.createElement(b.o, {
                         tooltip: "This is only unique within a DLC Season Pass",
                       }),
                     ),
@@ -421,7 +532,7 @@
                       "th",
                       null,
                       "Deadline Date ",
-                      n.createElement(N.o, {
+                      n.createElement(b.o, {
                         tooltip:
                           "This account for what the customrs see on the store, not their specific data",
                       }),
@@ -443,7 +554,7 @@
       }
       function x(e) {
         const { deadline: t } = e,
-          [a] = (0, y.t7)(t.data.store_item_id, _),
+          [a] = (0, y.t7)(t.data.store_item_id, T),
           [i] = (0, p.UA)(t.data.partnerid),
           r = (0, h.u)(t.data.store_item_id),
           o = r?.find((e) => e.milestone_id == Number.parseInt(t.data.gid));
@@ -489,16 +600,16 @@
           n.createElement(
             "td",
             null,
-            (0, w.TW)(a?.GetReleaseDateRTime()),
+            (0, _.TW)(a?.GetReleaseDateRTime()),
             n.createElement("span", null, " - "),
-            (0, T.KC)(a?.GetReleaseDateRTime(), { bForce24HourClock: !1 }),
+            (0, w.KC)(a?.GetReleaseDateRTime(), { bForce24HourClock: !1 }),
           ),
           n.createElement(
             "td",
             null,
-            (0, w.TW)(t.data.due_date),
+            (0, _.TW)(t.data.due_date),
             n.createElement("span", null, " - "),
-            (0, T.KC)(t.data.due_date, { bForce24HourClock: !1 }),
+            (0, w.KC)(t.data.due_date, { bForce24HourClock: !1 }),
           ),
           n.createElement(
             "td",
@@ -509,9 +620,9 @@
         );
       }
       var I = a(39700);
-      function R() {
+      function B() {
         const [e, t] = n.useState(0),
-          a = k(10, e),
+          a = A(10, e),
           i = n.useRef(0);
         n.useEffect(() => () => window.clearTimeout(i.current), []);
         const r = n.useMemo(() => {
@@ -589,7 +700,7 @@
                 Boolean(r?.size > 0) &&
                   Array.from(r?.values()).map((e, t) =>
                     e.length > 0
-                      ? n.createElement(B, {
+                      ? n.createElement(R, {
                           key: "aid_" + t,
                           actionID: e[0].gid,
                           rgDeadlines: e,
@@ -609,7 +720,7 @@
           ),
         );
       }
-      function B(e) {
+      function R(e) {
         const { actionID: t, rgDeadlines: a } = e;
         return a.length
           ? n.createElement(
@@ -617,12 +728,12 @@
               null,
               n.createElement("tr", null, n.createElement("td", null, t)),
               a.map((e, t) =>
-                n.createElement(P, { key: e.gid + "_" + t, deadline: e }),
+                n.createElement(k, { key: e.gid + "_" + t, deadline: e }),
               ),
             )
           : null;
       }
-      function P(e) {
+      function k(e) {
         const { deadline: t } = e,
           a = JSON.parse(t.description_jsondata),
           i = new Date(a.CreatedOn).toUTCString();
@@ -637,7 +748,7 @@
           n.createElement("td", null, a.Parameters?.CustomMessageBody),
         );
       }
-      function A(e) {
+      function P(e) {
         const [t, a] = n.useState((9).toString()),
           r = [
             { label: "Season Pass Milestone", data: (9).toString() },
@@ -646,7 +757,7 @@
         let s = null;
         switch (t) {
           case (10).toString():
-            s = n.createElement(R, null);
+            s = n.createElement(B, null);
             break;
           case (9).toString():
             s = n.createElement(C, null);
@@ -682,7 +793,7 @@
           ),
         );
       }
-      function k(e, t) {
+      function A(e, t) {
         const a = (0, s.I)({
           queryKey: ["partnerDeadlines", e, t],
           queryFn: async () => {
@@ -704,9 +815,9 @@
       "use strict";
       a.r(t),
         a.d(t, {
-          ContactTaxIdentityDialog: () => A,
-          default: () => k,
-          k_rgTemplateNameOptionsList: () => R,
+          ContactTaxIdentityDialog: () => P,
+          default: () => A,
+          k_rgTemplateNameOptionsList: () => B,
         });
       var n = a(90626),
         i = a(24484),
@@ -731,7 +842,7 @@
           "div",
           { className: (0, m.A)(l().NotificationContainer, c().SectionCtn) },
           n.createElement("div", null, i),
-          n.createElement(w, { ...e }),
+          n.createElement(_, { ...e }),
         );
       }
       function g() {
@@ -747,8 +858,8 @@
         );
       }
       let S = -1,
-        N = -1;
-      function b(e) {
+        b = -1;
+      function N(e) {
         const { requirement: t } = e,
           [a, i] = (0, n.useState)(""),
           [r, o] = (0, n.useState)(!1),
@@ -786,13 +897,13 @@
           ),
         );
       }
-      function w(e) {
+      function _(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
           i = a.Parameters?.Dropbox_FileRequest_Url;
         if (!i) return null;
-        if (-1 == N) N = t.index;
-        else if (N != t.index) return null;
+        if (-1 == b) b = t.index;
+        else if (b != t.index) return null;
         return n.createElement(
           "div",
           null,
@@ -839,7 +950,7 @@
           ),
         );
       }
-      function T(e) {
+      function w(e) {
         const { requirement: t } = e,
           a = (0, d.$z)(t.deadline.data.due_date),
           i = t.onboarded
@@ -866,7 +977,7 @@
           n.createElement("div", { className: l().SectionBody }, i),
         );
       }
-      function _(e) {
+      function T(e) {
         const { requirement: t } = e;
         return t.onboarded
           ? "Until your tax information has been verified, you will not be able to receive any further payments."
@@ -875,7 +986,7 @@
       var C = a(738),
         x = a(56011),
         I = a(78395);
-      const R = [
+      const B = [
           "AddressCorrection",
           "DocReq-KYC-Docs",
           "DocReq-KYC-Entity-FR",
@@ -904,7 +1015,7 @@
           "Renewal-W8-Initial",
           "Renewal-W8-Partner-Urgent",
         ],
-        B = {
+        R = {
           AddressCorrection: {
             component: function (e) {
               return n.createElement(
@@ -946,7 +1057,7 @@
                   n.createElement("br", null),
                   "The address must also include the correct postcode / zip if your country uses them.",
                 ),
-                n.createElement(b, { ...e }),
+                n.createElement(N, { ...e }),
               );
             },
           },
@@ -968,7 +1079,7 @@
                   n.createElement("p", null),
                   "Please ensure that the images are high quality, in color and are clear and in focus with no information cropped out or blocked.",
                 ),
-                n.createElement(w, { ...e }),
+                n.createElement(_, { ...e }),
               );
             },
           },
@@ -1002,7 +1113,7 @@
                   "div",
                   { className: l().SectionBody },
                   "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview. ",
-                  _(e),
+                  T(e),
                 ),
                 n.createElement(
                   "div",
@@ -1047,7 +1158,7 @@
                     ),
                   ),
                 ),
-                n.createElement(w, { ...e }),
+                n.createElement(_, { ...e }),
               );
             },
           },
@@ -1101,7 +1212,7 @@
                     "Note: screenshots of business portals are not acceptable.",
                   ),
                 ),
-                n.createElement(w, { ...e }),
+                n.createElement(_, { ...e }),
               );
             },
           },
@@ -1138,7 +1249,7 @@
                     "div",
                     { className: l().SectionBody },
                     "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview. ",
-                    _(e),
+                    T(e),
                   ),
                 ),
                 n.createElement(
@@ -1284,7 +1395,7 @@
                       ),
                     ),
                   ),
-                  n.createElement(w, { ...e }),
+                  n.createElement(_, { ...e }),
                 ),
               );
             },
@@ -1319,7 +1430,7 @@
                   { className: l().SectionBody },
                   "Show your full face, and you holding the same Identification document that you have previously provided. Please remove all hats, glasses, and other facial obstructions",
                 ),
-                n.createElement(w, { ...e }),
+                n.createElement(_, { ...e }),
               );
             },
           },
@@ -1333,7 +1444,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(T, { ...e }),
+                n.createElement(w, { ...e }),
                 n.createElement(
                   "div",
                   { className: l().SectionTitle },
@@ -1356,7 +1467,7 @@
                   n.createElement("br", null),
                   "Certification of tax Residency for Tax Treaty Purposes",
                 ),
-                n.createElement(w, { ...e }),
+                n.createElement(_, { ...e }),
               );
             },
           },
@@ -1370,7 +1481,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(T, { ...e }),
+                n.createElement(w, { ...e }),
                 n.createElement(
                   "div",
                   { className: l().SectionTitle },
@@ -1409,7 +1520,7 @@
                     ),
                   ),
                 ),
-                n.createElement(w, { ...e }),
+                n.createElement(_, { ...e }),
               );
             },
           },
@@ -1423,7 +1534,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(T, { ...e }),
+                n.createElement(w, { ...e }),
                 n.createElement(
                   "div",
                   { className: l().SectionTitle },
@@ -1458,7 +1569,7 @@
                     ),
                   ),
                 ),
-                n.createElement(w, { ...e }),
+                n.createElement(_, { ...e }),
               );
             },
           },
@@ -1472,7 +1583,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(T, { ...e }),
+                n.createElement(w, { ...e }),
                 n.createElement(
                   "div",
                   { className: l().SectionTitle },
@@ -1513,7 +1624,7 @@
                     ),
                   ),
                 ),
-                n.createElement(w, { ...e }),
+                n.createElement(_, { ...e }),
               );
             },
           },
@@ -1642,7 +1753,7 @@
                   "div",
                   { className: l().SectionBody },
                   "As per United States IRS requirements, developers are given 30 days to correct tax form issues before the initial tax form expires. This period has passed for your account. ",
-                  _(e),
+                  T(e),
                 ),
                 n.createElement(
                   "div",
@@ -1654,7 +1765,7 @@
                   { className: l().SectionBody },
                   "When you have all necessary tax information prepared, you may retake the full tax interview by clicking the button below.",
                 ),
-                n.createElement(b, { ...e }),
+                n.createElement(N, { ...e }),
               );
             },
           },
@@ -1687,7 +1798,7 @@
                   "div",
                   { className: l().SectionBody },
                   "As per United States IRS requirements, developers are given 30 days to correct tax form issues before the initial tax form expires. This period has passed for your account. ",
-                  _(e),
+                  T(e),
                 ),
                 n.createElement(
                   "div",
@@ -1699,7 +1810,7 @@
                   { className: l().SectionBody },
                   "When you have all necessary KYC and tax information prepared, you may retake the full interview by clicking the button below.",
                 ),
-                n.createElement(b, { ...e }),
+                n.createElement(N, { ...e }),
               );
             },
           },
@@ -1789,7 +1900,7 @@
                   ),
                   "Please do not give us the address of your bank or utility company.",
                 ),
-                n.createElement(w, { ...e }),
+                n.createElement(_, { ...e }),
               );
             },
           },
@@ -1840,7 +1951,7 @@
                     null,
                     "You must to correct your tax information and provide us with correct details about yourself in order for us to verify and validate your tax information. Please click the button below to restart the tax information interview.",
                   ),
-                  n.createElement(b, { ...e }),
+                  n.createElement(N, { ...e }),
                 ),
               );
             },
@@ -1873,7 +1984,7 @@
                   "div",
                   { className: l().SectionBody },
                   "Since you did not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid. ",
-                  _(e),
+                  T(e),
                 ),
                 n.createElement(
                   "div",
@@ -1885,7 +1996,7 @@
                   { className: l().SectionBody },
                   "When you have all necessary tax information prepared, you may retake the full tax interview by clicking the button below.",
                 ),
-                n.createElement(b, { ...e }),
+                n.createElement(N, { ...e }),
               );
             },
           },
@@ -1927,7 +2038,7 @@
                   "div",
                   { className: l().SectionBody },
                   "You must correct your tax information and provide us with correct details about yourself in order for us to verify and validate your tax information. Please click the button below to restart the tax information interview.",
-                  n.createElement(b, { ...e }),
+                  n.createElement(N, { ...e }),
                 ),
               );
             },
@@ -1964,7 +2075,7 @@
                       null,
                       "If your Steamworks partner legal name is correct, please retake the tax interview by clicking the button below, and then provide the requested documents in the same name that you used to sign up for your Steamworks partner account (Your current partner name is shown above in the blue bar).",
                     ),
-                    n.createElement(b, { ...e }),
+                    n.createElement(N, { ...e }),
                   ),
                 ),
                 i = n.createElement(
@@ -1994,7 +2105,7 @@
                       "li",
                       null,
                       "If your Steamworks partner legal name is correct, please retake the tax interview by clicking the button below, and then provide the requested documents in the same name that you used to sign up for your Steamworks partner account (Your current partner name is shown above in the blue bar).",
-                      n.createElement(b, { ...e }),
+                      n.createElement(N, { ...e }),
                     ),
                   ),
                 );
@@ -2072,7 +2183,7 @@
                   "div",
                   { className: l().SectionBody },
                   "If you do not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid. ",
-                  _(e),
+                  T(e),
                 ),
                 n.createElement(
                   "div",
@@ -2084,7 +2195,7 @@
                   { className: l().SectionBody },
                   "You will need to retake the tax interview using your valid taxpayer identification number.",
                 ),
-                n.createElement(b, { ...e }),
+                n.createElement(N, { ...e }),
               );
             },
           },
@@ -2129,7 +2240,7 @@
                   "div",
                   { className: l().SectionBody },
                   "If you do not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid. ",
-                  _(e),
+                  T(e),
                 ),
                 n.createElement(
                   "div",
@@ -2141,7 +2252,7 @@
                   { className: l().SectionBody },
                   "You will need to retake the tax interview using your valid taxpayer identification number.",
                 ),
-                n.createElement(b, { ...e }),
+                n.createElement(N, { ...e }),
               );
             },
           },
@@ -2174,7 +2285,7 @@
                   { className: l().SectionBody },
                   "You will need to take a tax interview which should take less than 10 minutes to complete.  Note this interview will need to be completed by a Steamworks user with Actual Authority rights.",
                 ),
-                n.createElement(b, { ...e }),
+                n.createElement(N, { ...e }),
               );
             },
           },
@@ -2212,7 +2323,7 @@
                   { className: l().SectionBody },
                   "To correct your information, you will need to retake the tax interview using your valid taxpayer identification number.",
                 ),
-                n.createElement(b, { ...e }),
+                n.createElement(N, { ...e }),
               );
             },
           },
@@ -2284,7 +2395,7 @@
                     a +
                     " , your tax information will be changed to an invalid status. In order for us to pay monthly royalties, we must have valid tax and banking information on file. Therefore, please retake the tax interview as soon as possible to avoid interruptions in payments.",
                 ),
-                n.createElement(b, { ...e }),
+                n.createElement(N, { ...e }),
               );
             },
           },
@@ -2348,12 +2459,12 @@
                   { className: l().SectionBody },
                   "In order for us to pay monthly royalties, we must have valid tax and banking information on file. Therefore, please retake the tax interview as soon as possible to avoid interruptions in payments.",
                 ),
-                n.createElement(b, { ...e }),
+                n.createElement(N, { ...e }),
               );
             },
           },
         };
-      function P() {
+      function k() {
         const [e] = (0, n.useState)(
             (0, i.Tc)("deadlines", "application_config"),
           ),
@@ -2371,7 +2482,7 @@
           );
         return [e, r, t, a, o];
       }
-      function A(e) {
+      function P(e) {
         const { closeModal: t, subject: a, publisherid: i } = e,
           [r, o] = n.useState(""),
           [s, c] = n.useState("");
@@ -2424,8 +2535,8 @@
           ),
         );
       }
-      function k(e) {
-        const [t, a, o, s, d] = P(),
+      function A(e) {
+        const [t, a, o, s, d] = k(),
           [h, f] = (function () {
             const [e] = (0, n.useState)(
                 (0, i.Tc)("testpage", "application_config"),
@@ -2563,7 +2674,7 @@
                       {
                         onClick: (e) =>
                           (0, C.pg)(
-                            n.createElement(A, { subject: E, publisherid: s }),
+                            n.createElement(P, { subject: E, publisherid: s }),
                             (0, x.uX)(e),
                           ),
                         className: l().NotificationButton,
@@ -2581,7 +2692,7 @@
         const { strTemplate: t } = e,
           [a, i] = n.useState(t || "Renewal-W8-Initial"),
           [r, o] = n.useState(!0),
-          l = R.map((e) => ({ label: e, data: e })),
+          l = B.map((e) => ({ label: e, data: e })),
           s = Date.now(),
           c = {},
           d = new Intl.DateTimeFormat(navigator.language).format(s);
@@ -2628,10 +2739,10 @@
       function q(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
-          [, i] = P(),
+          [, i] = k(),
           r = new Date(a?.CreatedOn);
         if ("ActionComplete" == a.TemplateName) return null;
-        if (!B[a.TemplateName])
+        if (!R[a.TemplateName])
           return n.createElement(
             "div",
             { className: (0, m.A)(l().NotificationContainer, c().SectionCtn) },
@@ -2642,7 +2753,7 @@
             ),
             n.createElement("div", null, "Message Not Available"),
           );
-        const o = B[a.TemplateName].component;
+        const o = R[a.TemplateName].component;
         return n.createElement(
           n.Fragment,
           null,
@@ -2660,18 +2771,17 @@
       a.d(t, {
         G6: () => s,
         Gg: () => m,
-        MS: () => f,
+        MS: () => p,
         Ow: () => d,
-        gF: () => y,
-        mZ: () => u,
+        gF: () => f,
         t7: () => c,
-        zX: () => p,
+        zX: () => h,
       });
       var n = a(41735),
         i = a.n(n),
         r = a(90626),
         o = a(73745),
-        l = a(82097);
+        l = a(16021);
       function s(e, t, a, n) {
         const s = (0, r.useRef)(void 0),
           c = (0, r.useRef)(void 0),
@@ -2687,11 +2797,11 @@
             include_trailers: E,
             include_ratings: g,
             include_tag_count: S,
-            include_reviews: N,
-            include_basic_info: b,
-            include_supported_languages: w,
-            include_full_description: T,
-            include_included_items: _,
+            include_reviews: b,
+            include_basic_info: N,
+            include_supported_languages: _,
+            include_full_description: w,
+            include_included_items: T,
             include_assets_without_overrides: C,
             apply_user_filters: x,
             include_links: I,
@@ -2707,11 +2817,11 @@
               include_trailers: E,
               include_ratings: g,
               include_tag_count: S,
-              include_reviews: N,
-              include_basic_info: b,
-              include_supported_languages: w,
-              include_full_description: T,
-              include_included_items: _,
+              include_reviews: b,
+              include_basic_info: N,
+              include_supported_languages: _,
+              include_full_description: w,
+              include_included_items: T,
               include_assets_without_overrides: C,
               apply_user_filters: x,
               include_links: I,
@@ -2731,15 +2841,15 @@
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, n, m, h, p, f, y, v, E, g, S, N, b, w, T, _, C, x, I, d]),
+          }, [e, t, n, m, h, p, f, y, v, E, g, S, b, N, _, w, T, C, x, I, d]),
           !e)
         )
           return [null, 2];
         if (!1 === m) return [void 0, 2];
         if (l.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!l.A.Get().BHasStoreItem(e, t, a)) return [void 0, 1];
-        const R = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return R ? [R, 3] : [null, 2];
+        const B = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return B ? [B, 3] : [null, 2];
       }
       function c(e, t, a) {
         return s(e, 0, t, a);
@@ -2750,17 +2860,7 @@
       function m(e, t, a) {
         return s(e, 1, t, a);
       }
-      function u(e, t, a) {
-        const [n, i] = s(e, t, a);
-        let r;
-        1 != n?.GetStoreItemType() ||
-          n.GetAssets()?.GetHeaderURL() ||
-          1 != n?.GetIncludedAppIDs().length ||
-          (r = n.GetIncludedAppIDs()[0]);
-        const [o, l] = c(r, a);
-        return r && o?.BIsVisible() ? [o, l] : [n, i];
-      }
-      function h(e, t, a, n) {
+      function u(e, t, a, n) {
         const s = (0, o.CH)(),
           {
             include_assets: c,
@@ -2775,10 +2875,10 @@
             include_basic_info: E,
             include_supported_languages: g,
             include_full_description: S,
-            include_included_items: N,
-            include_assets_without_overrides: b,
-            apply_user_filters: w,
-            include_links: T,
+            include_included_items: b,
+            include_assets_without_overrides: N,
+            apply_user_filters: _,
+            include_links: w,
           } = a;
         if (
           ((0, r.useEffect)(() => {
@@ -2796,10 +2896,10 @@
                 include_basic_info: E,
                 include_supported_languages: g,
                 include_full_description: S,
-                include_included_items: N,
-                include_assets_without_overrides: b,
-                apply_user_filters: w,
-                include_links: T,
+                include_included_items: b,
+                include_assets_without_overrides: N,
+                apply_user_filters: _,
+                include_links: w,
               },
               n = e.filter(
                 (e) =>
@@ -2817,7 +2917,7 @@
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, n, s, c, d, m, u, h, p, f, y, v, E, g, S, N, b, w, T]),
+          }, [e, t, n, s, c, d, m, u, h, p, f, y, v, E, g, S, b, N, _, w]),
           !e)
         )
           return 2;
@@ -2835,14 +2935,14 @@
           ? 3
           : 2;
       }
+      function h(e, t, a) {
+        return u(e, 0, t, a);
+      }
       function p(e, t, a) {
-        return h(e, 0, t, a);
+        return u(e, 2, t, a);
       }
       function f(e, t, a) {
-        return h(e, 2, t, a);
-      }
-      function y(e, t, a) {
-        return h(e, 1, t, a);
+        return u(e, 1, t, a);
       }
     },
     39700: (e, t, a) => {

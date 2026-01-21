@@ -1373,7 +1373,6 @@ ${STORE_BASE_URL}dlc/${}/ajaxgetdlccount
 ${STORE_BASE_URL}dlc/${}/ajaxgetdlclist
 ${STORE_BASE_URL}dlcforyou/
 ${STORE_BASE_URL}dynamicstore/userdata/
-${STORE_BASE_URL}dynamicstore/userdata/?id=${}&cc=${country_code}
 ${STORE_BASE_URL}email/PartnerAppOptIn/?
 ${STORE_BASE_URL}events
 ${STORE_BASE_URL}events/
@@ -2392,7 +2391,7 @@ https://imgur.com
 https://instagram.com/dota2
 https://itunes.apple.com/app/steam-link/id1246969117
 https://itunes.apple.com/us/app/steam-mobile/id495369748
-https://learn.microsoft.com/en-us/windows/win32/winauto/entry-uiauto-win32
+https://learn.microsoft.com/windows/win32/winauto/entry-uiauto-win32
 https://local.steam.dev:4443/wg?reqname=QuerySolr&request=${}
 https://login.steampowered.com/jwt/ajaxrefresh
 https://medal.tv/clip/${}/?autoplay=0&donate=0${_ ? _ : ""}
@@ -2531,7 +2530,6 @@ https://partner.steamgames.com/pub/ajaxgetprices/${g_nPublisherId}/
 https://partner.steamgames.com/pub/ajaxselectvalvecontactsdialog
 https://partner.steamgames.com/pub/ajaxvalvecontactchange/${publisherID}/
 https://partner.steamgames.com/public/captcha.php?gid=${gid}
-https://partner.steamgames.com/public/marketing/steam_game_templates_2023.zip
 https://partner.steamgames.com/store/ajaxcreatebetapackagefrompackage/${nPackageId}
 https://partner.steamgames.com/store/ajaxpackageaddapps/${nPackageId}
 https://partner.steamgames.com/store/ajaxpackagemanagedepots/${nPackageId}
@@ -2996,6 +2994,7 @@ https://www.dota2.com/summer2023
 https://www.dota2.com/theonetrueking
 https://www.dota2.com/wanderingwaters
 https://www.dropbox.com/s/h9gjz...
+https://www.dropbox.com/scl/fo/cvkwbosmrimklcl9h0qko/AF5IPErKP-mQM_3YO1Dw2lA?rlkey=b3ad0izykq367g4luasrinw9z&dl=0
 https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0
 https://www.example.com
 https://www.facebook.com/Steam/videos

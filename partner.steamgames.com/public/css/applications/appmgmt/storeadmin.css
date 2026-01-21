@@ -4535,7 +4535,7 @@ a._2xmH7agKi37v9kwFHi093S {
 }
 ._16ywt-UaM5pXRZAZ59hFqb {
   height: 100vh;
-  max-height: 780px;
+  max-height: 840px;
 }
 ._16ywt-UaM5pXRZAZ59hFqb > .DialogContent_InnerWidth {
   width: 900px;
@@ -4585,8 +4585,8 @@ a._2xmH7agKi37v9kwFHi093S {
   flex-basis: 0;
 }
 ._2zme0St18-D_jyf9u4x71k {
-  margin-top: 36px;
-  margin-bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 16px;
   line-height: 23px;
@@ -4703,6 +4703,35 @@ button.DialogButton._1VzLAfLRNEbppzyyYS8ueA {
   display: flex;
   align-items: center;
   justify-content: stretch;
+}
+.cCbxuWUtmnc8zsLas0fCR {
+  margin-top: 40px;
+  border: 1px solid #5a5e6c;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  padding: 18px;
+  color: #dedede;
+}
+.cCbxuWUtmnc8zsLas0fCR p {
+  color: #dedede;
+}
+.oQ2jrb8UigZeb9afK7uuf {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #dedede;
+}
+._2lvnBM3dEA_54CApZ1werw {
+  padding-top: 10px;
+  margin-inline-end: 16px;
+}
+._2M8-7e6mSLUYg6EP9U-fr- {
+  color: #a4d007;
+  font-weight: bold;
+}
+button.DialogButton._2b8NFL_UzE4xC7a-M9SXbC {
+  width: 200px;
 }
 ._2VqhO10AlkJOsh7sPoqPcp {
   width: 28px;

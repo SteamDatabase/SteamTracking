@@ -1044,11 +1044,10 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0000000000000000000000000000000000000000
-1000
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789
 0123456789ABCDEF
 0123456789abcdef
 0F`8
@@ -1065,6 +1064,7 @@ $\nY8O
 0\n,k_EPublishedFileInappropriateResult_Possible
 0\n,k_EPublishedFileInappropriateResult_Unlikely
 0x%llx
+1000
 10BlankImage
 10CBasePanel
 10CHintLabel
@@ -1455,6 +1455,7 @@ $\nY8O
 18CMsgSavePageToJPEG
 18CTextureIdProperty
 18CUtlCharConversion
+19:20:34
 19CActivationCodeInfo
 19CClientMicroTxnInfo
 19CDirContentsWatcher
@@ -1487,7 +1488,6 @@ $\nY8O
 2*.google.protobuf.FieldDescriptorProto.Type
 2+.google.protobuf.FieldDescriptorProto.Label
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
-20:29:48
 20CHTMLBaseProtoBufMsg
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJdEE
@@ -3864,7 +3864,7 @@ JSObjectProperty
 JSType
 JZJ{.
 J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
-Jan 19 2026
+Jan 20 2026
 January
 Japanese
 Javanese
@@ -6715,6 +6715,9 @@ category_77
 category_78
 category_79
 category_8
+category_80
+category_81
+category_82
 category_9
 cbActual < (uint32)nBufSizeWithTerminator
 cbToRead <= 1024 * 1024 * 1024

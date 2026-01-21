@@ -32974,7 +32974,7 @@
                     {
                       className: _().SectionBody,
                     },
-                    "Your game’s trailer is among the finalists that we are selecting from to build the official Steam Next Fest trailer. Our goal is to select a variety of trailers that represent the diverse genres, themes, and scopes of games present within Next Fest, so we’re still fine-tuning the selection of games for the final trailer.",
+                    "Your game’s trailer is among the finalists that we are reviewing to build the official Steam Next Fest trailer. Our goal is to select a variety of trailers that represent the diverse genres, themes, and scopes of games present within Next Fest, so we’re still fine-tuning the selection of games for the final trailer.",
                   ),
                   _.createElement(
                     "div",
@@ -33027,7 +33027,7 @@
                     {
                       className: _().SectionBody,
                     },
-                    "Of course, participation in this edition of Steam Next Fest with a playable demo is required in order to be featured. Please see ",
+                    "Participation in this edition of Steam Next Fest with a playable demo is required to be featured. Please see ",
                     _.createElement(
                       "a",
                       {
@@ -33036,7 +33036,7 @@
                       },
                       "full elegibility critera",
                     ),
-                    " to make sure you've got everything covered. If you can no longer participate for any reason please follow the instructions below.",
+                    " to make sure you've got everything covered. If you can no longer participate for any reason, please follow the instructions below.",
                   ),
                   _.createElement(
                     "div",
@@ -33077,7 +33077,7 @@
                     },
                     "You must opt out by ",
                     (0, _._)(_.GetCancelDate() || 0),
-                    " to ensure your trailer and/or demo is not included in our marketing materials.",
+                    " to ensure your trailer and/or demo is not included in our marketing materials if selected.",
                   ),
                 ));
               break;
@@ -34920,7 +34920,7 @@
             {
               className: _().ConfTitle,
             },
-            "Email Targetting",
+            "Email Targeting",
           ),
           _.createElement(
             "div",
@@ -76021,7 +76021,7 @@
                       _.createElement(_._, {
                         label: "Bypass Store Visibility Check?",
                         tooltip:
-                          "Note: The marketing message targetting will not be setup.",
+                          "Note: The marketing message targeting will not be setup.",
                         checked: _,
                         onChange: _,
                       }),
@@ -88451,8 +88451,9 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -88484,6 +88485,7 @@
             bUseSubscriptionLayout: _,
             bPreferAssetWithoutOverride: _,
           } = _,
+          _ = (0, _._)(_),
           [_, _] = _.useState(!1),
           _ = () => _(!_),
           _ = (0, _._)(),
@@ -88495,11 +88497,9 @@
           });
         const _ = (0, _._)(_),
           _ =
-            ((0, _._)(_.GetStorePageURL(_)),
-            _.GetName()?.length > 0 && _.GetName(),
             _ && _.HasDemoStandaloneStorePage()
               ? _.GetDemoStandaloneStorePageAppIDs()[0]
-              : _),
+              : _,
           _ = 0 == _.GetStoreItemType();
         return _.createElement(
           "div",
@@ -88541,7 +88541,7 @@
                       appids: _,
                     }),
                     _.createElement(_._, {
-                      info: _,
+                      _: _,
                       imageType: "library",
                       bPreferAssetWithoutOverride: _,
                     }),
@@ -88556,14 +88556,15 @@
                 {
                   className: _().StoreSaleWidgetCrossCenterRight,
                 },
-                _.createElement(_._, {
-                  appID: _ && _.GetAppID(),
-                  classOverride: (0, _._)(
-                    _().WishlistButtonNotTop,
-                    "WishlistButton",
-                  ),
-                  snr: _,
-                }),
+                _ &&
+                  _.createElement(_._, {
+                    _: _,
+                    classOverride: (0, _._)(
+                      _().WishlistButtonNotTop,
+                      "WishlistButton",
+                    ),
+                    snr: _,
+                  }),
                 _.createElement(
                   "div",
                   {
@@ -88642,7 +88643,7 @@
                       className: _().StoreSaleLibraryAssetWidgetRight,
                     },
                     _.createElement(_._, {
-                      info: _,
+                      _: _,
                       bPopOutTrailerPlayback: !0,
                     }),
                   ),
@@ -88670,10 +88671,10 @@
                         _.Fragment,
                         null,
                         _.createElement(_._, {
-                          item: _,
+                          _: _,
                         }),
                         _.createElement(_._, {
-                          info: _,
+                          _: _,
                           bShowDemoButton: _,
                           bHidePrice: _,
                           bShowPurchaseOptionsButton: _,
@@ -88688,7 +88689,7 @@
                     className: _().StoreSaleWidgetBgTint,
                   },
                   _.createElement(_._, {
-                    info: _,
+                    _: _,
                     bPreferAssetWithoutOverride: _,
                   }),
                   _.createElement(_._, {
@@ -88698,7 +88699,7 @@
               ),
             ),
             _.createElement(_._, {
-              storeItem: _,
+              _: _,
               bPurchaseOptionsExpanded: _,
               fnCollapseOptions: _,
               bPreferAssetWithoutOverride: _,
@@ -88707,22 +88708,24 @@
         );
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { displayStoreItem: _, displayInfo: __webpack_require__ } = (0,
-          _._)(_),
+        const { displayID: _ } = (0, _._)(_),
           {
-            bShowDemoButton: _,
+            bShowDemoButton: __webpack_require__,
             bHidePrice: _,
             bHidePlatforms: _,
             bShowDeckCompatibilityDialog: _,
             bAutoFocus: _,
           } = _,
-          _ = 0 == _.GetStoreItemType();
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = 0 == _?.item_type;
         return _.createElement(
           _._,
           {
-            appid: _ ? _.GetAppID() : void 0,
+            appid: _ ? _._ : void 0,
           },
           _.createElement(
             _._,
@@ -88730,7 +88733,7 @@
               "flow-children": "grid",
               navEntryPreferPosition: _._.PREFERRED_CHILD,
               autoFocus: _,
-              navKey: "purchase_only_" + _.GetID(),
+              navKey: "purchase_only_" + _?._,
             },
             "\t",
             _.createElement(
@@ -88748,7 +88751,7 @@
                   {
                     className: _.Name,
                   },
-                  _.GetName(),
+                  _?.name,
                 ),
               ),
               _.createElement(
@@ -88756,27 +88759,25 @@
                 {
                   className: _.PurchaseAndPlatformCtn,
                 },
-                Boolean(!_ && 10 != _.GetAppType()) &&
+                Boolean(!_ && 10 != _?.type) &&
                   _.createElement(
                     "div",
                     {
                       className: _._,
                     },
                     _.createElement(_._, {
-                      item: __webpack_require__,
+                      _: _,
                     }),
-                    Boolean(
-                      _ && 0 == _?.GetStoreItemType() && _.GetPlatforms(),
-                    ) &&
+                    Boolean(_ && 0 == _?.item_type && _) &&
                       _.createElement(_._, {
                         className: _.DeckCompatIcon,
-                        category: _.GetPlatforms().steam_deck_compat_category,
+                        category: _?.steam_deck_compat_category,
                       }),
                   ),
                 _.createElement(_._, {
-                  info: __webpack_require__,
+                  _: _,
                   className: _.PurchaseOnlyActionCtn,
-                  bShowDemoButton: _,
+                  bShowDemoButton: __webpack_require__,
                   bShowCartButton: !0,
                   bHidePrice: _,
                   bHideWishlistButton: !0,

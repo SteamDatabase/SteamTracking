@@ -29,8 +29,8 @@
         l = i(61859),
         a = i(78327),
         c = i(63404),
-        n = i.n(c);
-      const o = {
+        o = i.n(c);
+      const n = {
           bAccessibilityDifficultyLevels:
             "#Accessibility_Feature_AdjustableDifficulty",
           bAccessibilitySaveAnytime: "#Accessibility_Feature_SaveAnytime",
@@ -55,6 +55,12 @@
             "#Accessibility_Feature_WithoutQuickTimeEvents",
           bAccessibilityChatTexttoSpeech: "#Accessibility_Feature_TextToSpeech",
           bAccessibilityChatSpeechtoText: "#Accessibility_Feature_SpeechToText",
+          bAccessibilityPlayableAtYourOwnPace:
+            "#Accessibility_Feature_PlayableAtYourOwnPace",
+          bAccessibilityPlayableWithoutVision:
+            "#Accessibility_Feature_PlayableWithoutVision",
+          bAccessibilityContrastControls:
+            "#Accessibility_Feature_ContrastControls",
         },
         r = {
           bAccessibilityDifficultyLevels: "adjustable_difficulty",
@@ -74,6 +80,9 @@
             "playable_without_timed_input",
           bAccessibilityChatTexttoSpeech: "chat_text_to_speech",
           bAccessibilityChatSpeechtoText: "chat_speech_to_text",
+          bAccessibilityPlayableAtYourOwnPace: "playable_at_your_own_pace",
+          bAccessibilityPlayableWithoutVision: "playable_without_vision",
+          bAccessibilityContrastControls: "contrast_controls",
         },
         u = {
           bAccessibilityDifficultyLevels: "gameplay",
@@ -86,12 +95,15 @@
           bAccessibilitySubtitles: "visual",
           bAccessibilityColorAlternatives: "visual",
           bAccessibilityCameraComfort: "visual",
+          bAccessibilityPlayableWithoutVision: "visual",
+          bAccessibilityContrastControls: "visual",
           bAccessibilityKeyboardOnlyOption: "input",
           bAccessibilityMouseOnlyOption: "input",
           bAccessibilityTouchOnlyOption: "input",
           bAccessibilityPlayableWithoutQuicktimeEvents: "input",
           bAccessibilityChatTexttoSpeech: "input",
           bAccessibilityChatSpeechtoText: "input",
+          bAccessibilityPlayableAtYourOwnPace: "input",
         },
         b = {
           gameplay: "#Accessibility_Group_Gameplay",
@@ -102,12 +114,12 @@
       function y(e) {
         const [t, i] = (0, s.useState)(e.initialOpen ?? !1),
           c = s.useId(),
-          o = Object.entries(e.features)
+          n = Object.entries(e.features)
             .filter(([e, t]) => t)
             .map(([e]) => e);
-        if (0 === o.length) return null;
+        if (0 === n.length) return null;
         const r = {};
-        o.forEach((e) => {
+        n.forEach((e) => {
           const t = u[e];
           (r[t] ??= []), r[t].push(e);
         });
@@ -115,38 +127,38 @@
         return s.createElement(
           "details",
           {
-            className: n().Details,
+            className: o().Details,
             open: t,
             onToggle: (e) => i(e.currentTarget.open),
           },
           s.createElement(
             "summary",
             {
-              className: n().Summary,
+              className: o().Summary,
               "data-panel": '{"clickOnActivate": true}',
             },
             s.createElement(
               "div",
-              { className: n().ImageContainer },
+              { className: o().ImageContainer },
               s.createElement(m, {
-                className: n().CategoryIcon,
+                className: o().CategoryIcon,
                 "aria-label": "",
               }),
             ),
             s.createElement(
               "span",
-              { className: n().FeatureNameContainer, id: c },
+              { className: o().FeatureNameContainer, id: c },
               s.createElement(
                 "span",
-                { className: n().FeatureName },
+                { className: o().FeatureName },
                 t
                   ? (0, l.we)("#AccessibilityFeatures")
-                  : (0, l.we)("#AccessibilityFeaturesWithCount", o.length),
+                  : (0, l.we)("#AccessibilityFeaturesWithCount", n.length),
               ),
               s.createElement(
                 "a",
                 {
-                  className: n().InfoLink,
+                  className: o().InfoLink,
                   href: `${a.TS.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36`,
                   target: "_blank",
                 },
@@ -156,7 +168,7 @@
           ),
           s.createElement(
             "ul",
-            { className: n().FeatureList, "aria-labelledby": c },
+            { className: o().FeatureList, "aria-labelledby": c },
             b &&
               s.createElement(
                 s.Fragment,
@@ -165,7 +177,7 @@
                   s.createElement(
                     "li",
                     null,
-                    s.createElement(p, {
+                    s.createElement(A, {
                       group: "gameplay",
                       features: r.gameplay,
                       open: t,
@@ -175,7 +187,7 @@
                   s.createElement(
                     "li",
                     null,
-                    s.createElement(p, {
+                    s.createElement(A, {
                       group: "visual",
                       features: r.visual,
                       open: t,
@@ -185,7 +197,7 @@
                   s.createElement(
                     "li",
                     null,
-                    s.createElement(p, {
+                    s.createElement(A, {
                       group: "audio",
                       features: r.audio,
                       open: t,
@@ -195,7 +207,7 @@
                   s.createElement(
                     "li",
                     null,
-                    s.createElement(p, {
+                    s.createElement(A, {
                       group: "input",
                       features: r.input,
                       open: t,
@@ -203,11 +215,11 @@
                   ),
               ),
             !b &&
-              o.map((e) =>
+              n.map((e) =>
                 s.createElement(
                   "li",
                   { key: e },
-                  s.createElement(A, { feature: e, open: t }),
+                  s.createElement(p, { feature: e, open: t }),
                 ),
               ),
           ),
@@ -239,45 +251,45 @@
           }),
         );
       }
-      function p(e) {
+      function A(e) {
         const t = s.useId();
         return s.createElement(
           s.Fragment,
           null,
           s.createElement(
             "span",
-            { className: n().GroupLabel, id: t },
+            { className: o().GroupLabel, id: t },
             (0, l.we)(b[e.group]),
           ),
           s.createElement(
             "ul",
-            { className: n().FeatureGroupItems, "aria-labelledby": t },
+            { className: o().FeatureGroupItems, "aria-labelledby": t },
             e.features.map((t) =>
               s.createElement(
                 "li",
                 { key: t },
-                s.createElement(A, { feature: t, open: e.open }),
+                s.createElement(p, { feature: t, open: e.open }),
               ),
             ),
           ),
         );
       }
-      function A(e) {
+      function p(e) {
         return s.createElement(
           "a",
           {
             href: `${a.TS.STORE_BASE_URL}category/${r[e.feature]}`,
-            className: n().InfoRow,
+            className: o().InfoRow,
             "data-panel": '{"clickOnActivate": true}',
             "data-gp-focus-disabled": e.open ? void 0 : "true",
           },
           s.createElement(
             "span",
-            { className: n().FeatureNameContainer },
+            { className: o().FeatureNameContainer },
             s.createElement(
               "span",
-              { className: n().FeatureName },
-              (0, l.we)(o[e.feature]),
+              { className: o().FeatureName },
+              (0, l.we)(n[e.feature]),
             ),
           ),
         );

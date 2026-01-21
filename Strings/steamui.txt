@@ -12793,7 +12793,6 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9H4u|
 9IGv
 9Inventory
 9PE,$
@@ -22886,7 +22885,7 @@ J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
 J\nHBF
 J\n\tsummaries
 J\rS%H
-Jan 19 2026 20:29:52
+Jan 20 2026 19:20:39
 January
 Japanese
 Javanese
@@ -35255,6 +35254,7 @@ bHasTouchscreen
 bHasTwoFactor
 bHasUnpairedWifiAP
 bHidden
+bIMUOneEuroFilter
 bIgnoreRegistrationPrompt
 bInput
 bIsApplication
@@ -35609,6 +35609,7 @@ bio_read_intern
 bio_write_intern
 biometricInfo
 bitNum >= 0 && bitNum < this->Size()
+bitfield_supported_languages
 bitmap-location
 bitrate
 bits too small
@@ -36097,6 +36098,9 @@ category_77
 category_78
 category_79
 category_8
+category_80
+category_81
+category_82
 category_9
 category_collapse
 cbActual < (uint32)nBufSizeWithTerminator
@@ -39380,7 +39384,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen2
+ggenR
 ghost_
 gidlist
 gidparentcomment

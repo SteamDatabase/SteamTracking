@@ -15328,7 +15328,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { appid: _ } = _,
           _ = (0, _._)(),
@@ -15336,7 +15337,8 @@
             include_assets: !0,
             include_release: !0,
           }),
-          [_, _] = (0, _._)(_, _.current);
+          [_, _] = (0, _._)(_, _.current),
+          _ = (0, _._)(_);
         let _ = (0, _._)(
             _().StoreSaleWidgetContainer_mini,
             "StoreSaleWidgetContainer_mini",
@@ -15426,10 +15428,7 @@
             ),
             Boolean(_) &&
               _.createElement(_._, {
-                info: {
-                  _: _,
-                  type: "game",
-                },
+                _: _,
                 bShowDemoButton: !0,
               }),
           ),

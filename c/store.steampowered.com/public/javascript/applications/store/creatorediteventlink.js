@@ -173,6 +173,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { clanAccountID: _ } = _,
@@ -255,70 +256,84 @@
           ),
           _.createElement("h4", null, (0, _._)("#CreatorHome_EventLink_Title")),
           _.createElement("p", null, (0, _._)("#CreatorHome_EventLink_Desc")),
-          !_ &&
-            _.createElement(
-              "p",
-              null,
-              (0, _._)("#CreatorHome_EventLink_BasicActive"),
-            ),
-          _ && _.createElement(_._, null),
-          !_ &&
-            _.createElement(
-              "div",
-              {
-                className: _().ListsCtn,
-              },
-              _.length > 0 &&
+          _.createElement("br", null),
+          _.createElement(
+            "div",
+            {
+              className: _().ListsCtn,
+            },
+            !_ &&
+              _.createElement(
+                _.Fragment,
+                null,
                 _.createElement(
-                  _.Fragment,
+                  "h5",
                   null,
+                  (0, _._)("#CreatorHome_EventLink_ActiveListTitle"),
+                ),
+                _.createElement(
+                  "p",
+                  null,
+                  (0, _._)("#CreatorHome_EventLink_BasicActive"),
+                ),
+              ),
+            _ && _.createElement(_._, null),
+            !_ &&
+              _.createElement(
+                _.Fragment,
+                null,
+                _.length > 0 &&
                   _.createElement(
-                    "h5",
+                    _.Fragment,
                     null,
-                    (0, _._)("#CreatorHome_EventLink_ActiveListTitle"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().EntryList,
-                    },
-                    _.map((_) =>
-                      _.createElement(_, {
-                        key: _.GID,
-                        creatorHome: _,
-                        clanSteamID: _,
-                        eventModel: _,
-                        refetch: _,
-                      }),
+                    _.createElement(
+                      "h5",
+                      null,
+                      (0, _._)("#CreatorHome_EventLink_ActiveListTitle"),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().EntryList,
+                      },
+                      _.map((_) =>
+                        _.createElement(_, {
+                          key: _.GID,
+                          creatorHome: _,
+                          clanSteamID: _,
+                          eventModel: _,
+                          refetch: _,
+                        }),
+                      ),
                     ),
                   ),
-                ),
-              _.length > 0 &&
-                _.createElement(
-                  _.Fragment,
-                  null,
+                _.length > 0 &&
                   _.createElement(
-                    "h5",
+                    _.Fragment,
                     null,
-                    (0, _._)("#CreatorHome_EventLink_InactiveListTitle"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().EntryList,
-                    },
-                    _.map((_) =>
-                      _.createElement(_, {
-                        key: _.GID,
-                        creatorHome: _,
-                        clanSteamID: _,
-                        eventModel: _,
-                        refetch: _,
-                      }),
+                    _.createElement(
+                      "h5",
+                      null,
+                      (0, _._)("#CreatorHome_EventLink_InactiveListTitle"),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().EntryList,
+                      },
+                      _.map((_) =>
+                        _.createElement(_, {
+                          key: _.GID,
+                          creatorHome: _,
+                          clanSteamID: _,
+                          eventModel: _,
+                          refetch: _,
+                        }),
+                      ),
                     ),
                   ),
-                ),
-            ),
+              ),
+          ),
         );
       }
       function _(_) {
@@ -436,26 +451,40 @@
               ),
               !_.BIsVisibleEvent() &&
                 _.createElement(
-                  _._,
+                  "span",
                   {
                     className: _().UnpublishedState,
-                    toolTipContent: (0, _._)(
+                  },
+                  _.createElement(
+                    "span",
+                    null,
+                    (0, _._)("#CreatorHome_EventLink_Unpublished"),
+                  ),
+                  _.createElement(_._, {
+                    tooltip: (0, _._)(
                       "#CreatorHome_EventLink_Unpublished_ttip",
                     ),
-                  },
-                  (0, _._)("#CreatorHome_EventLink_Unpublished"),
+                    small: !0,
+                  }),
                 ),
               _.BIsVisibleEvent() &&
                 !_ &&
                 _.createElement(
-                  _._,
+                  "span",
                   {
                     className: _().PublishedAndNotSelectedState,
-                    toolTipContent: (0, _._)(
+                  },
+                  _.createElement(
+                    "span",
+                    null,
+                    (0, _._)("#CreatorHome_EventLink_PublishedAndNotSelected"),
+                  ),
+                  _.createElement(_._, {
+                    tooltip: (0, _._)(
                       "#CreatorHome_EventLink_PublishedAndNotSelected_ttip",
                     ),
-                  },
-                  (0, _._)("#CreatorHome_EventLink_PublishedAndNotSelected"),
+                    small: !0,
+                  }),
                 ),
               _
                 ? _.createElement(_, {
@@ -472,16 +501,12 @@
                         className: _().MustPublish,
                       },
                       (0, _._)("#CreatorHome_EventLink_MustPublish"),
-                      " ",
-                      _.createElement(
-                        _._,
-                        {
-                          toolTipContent: (0, _._)(
-                            "#CreatorHome_EventLink_MustPublish_ttip",
-                          ),
-                        },
-                        "(?)",
-                      ),
+                      _.createElement(_._, {
+                        tooltip: (0, _._)(
+                          "#CreatorHome_EventLink_MustPublish_ttip",
+                        ),
+                        small: !0,
+                      }),
                     ),
               _ &&
                 _.createElement(_, {
@@ -581,25 +606,24 @@
             window.location.assign(_);
           });
         return _.createElement(
-          _._,
+          "div",
           {
-            toolTipContent: _,
+            className: _().ManageButton,
+            onClick: _,
           },
           _.createElement(
             "div",
             {
-              className: _().ManageButton,
-              onClick: _,
+              className: _().SVGIcon,
             },
-            _.createElement(
-              "div",
-              {
-                className: _().SVGIcon,
-              },
-              _,
-            ),
-            __webpack_require__,
+            _,
           ),
+          __webpack_require__,
+          _ &&
+            _.createElement(_._, {
+              tooltip: _,
+              small: !0,
+            }),
         );
       }
     },

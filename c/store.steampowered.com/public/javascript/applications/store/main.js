@@ -758,120 +758,15 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
-        PartnerEventFont: "LK4bXmKAknKopK864hJFM",
-        Clear: "_3UhsQfZfx8h_mvk1qQ2E7p",
-        Divider: "_3B5HO7jdTpNaectJS1a6UZ",
-        EventDefaultRowContainer: "_3WO6cZns4r39Cg__Yd-7zn",
-        EventStartPublic: "_2LU_YLKpLTGuqBMQLckmkk",
-        EventOptions: "_2r_QeL5bd04KiohE77Gq-t",
-        EventStatusContainer: "vOPSZ6WQ2uCEbtYrtUkJ5",
-        FlexColumnContainer: "_1qhLqXcizfytm6omB4ywDD",
-        FlexRowContainer: "Ke5f13IVZVzYSmQVJgVyd",
-        Centered: "qy-9mgJyhfEb8Wt0gqzaF",
-        VCentered: "_2Ke6gF28pxI9dp-gD87LfB",
-        FlexContainSpaceBetween: "_3nPGWNNLFjqXgZ6hjwUnkf",
-        FlexRowWrapSpaceBetweenContainer: "_19CjIj6mAtlIoY_7_iyOlz",
-        FlexRowWrapFlexStartContainer: "tyP_cnaOBcolou13sADst",
-        SaveBackground: "V0mbIUnoAWzmWNmnsjwlx",
-        SupportedGroupLabel: "APmJNwEEvE9w4_JVyRQ3J",
-        LanguageWithContent: "_2Cd1uISocztoq_3uIIDOXm",
-        LargeInput: "fq68IvZbR5nyI81kv1dwh",
-        InputBorder: "ObyysoLsv_KyZYdZkoC7W",
-        RadioOption: "_3iJX1gtbWR_mkLvuDCeoNd",
-        FlexGrow: "_1KvZAJk52RAyJKIXK3-wO0",
-        EventEditorTextTitleCtn: "htm7dxJtSOP0s_Mcb3Ejx",
-        doclink: "_1-bAKvDZnkuyP6Nmt66mQB",
-        EventEditorUnpaddedTextTitle: "_9hsCLz0BkV6oeIrNt7M3D",
-        EventEditorTextTitle: "_18fHxiLGI4r8_CPauC1oep",
-        EventEditorTextTitleLengthInfo: "_2nHJ1mgbC-yNBhl6tjLgmD",
-        CollapsableSectionTitle: "_2zejQIbvaMIPvk98NrTDzs",
-        SectionTitle: "_7Qc_eWjn_s3VWDe79FmEq",
-        EventSectionTitleCtn: "onqWKRp2JgmjHjFAtHUAM",
-        EventSectionTitle: "Idd_AoQMoEWIZamI72mP7",
-        EventSectionSpacer: "_1BloexLaoA9uwhXnsLWe6M",
-        EventSectionMoreBtn: "uckBibUwkj9tX_NZHf6wN",
-        EventEditorSpacerPadding: "_1RBfNW2ja0sibxeZdEEJX",
-        EventEditorVisibilityCtn: "_1nqBhG2Wx5fvxBZz_TG7B9",
-        EventEditorTextSubTitle: "_1i_pY6xNDaeC-hpFtw_bnr",
-        FloatingTitle: "_31XRtqJrtSr23BOez9F94m",
-        EventEditorEventStatus: "_2JGoLoYTtzbQVxL0l_1m3a",
-        EventHidden: "_2H6fnGkwmWVynWQb7QvxLN",
-        EventVisible: "_3Z0QrVP5ZnTQ2dk4TtNgY2",
-        EventBarBackAndTitle: "_2rTjP81ZJlRiaauPzNG7K4",
-        EventBarTitleCtn: "WfVzeWGwNKWJkHrZGYin4",
-        EventBarTitle: "_29kVXprENYbLFAtuCiS9sQ",
-        EventEditButtons: "_3nYmf7ouiiC2Fb1BBu5Gra",
-        EventStatus: "_1sOFBLpnblzmUTv7zVK5bM",
-        EventBarBack: "s3r9bZXo9Hn_LJ2KuwEdl",
-        EditPreviewButton: "_1FhZQ0qnT9Cg5iDVCM4kUM",
-        Delete: "_32kR7vbPRNV7B8ZsiduNmF",
-        Disabled: "_2wVCx2MbxsBE0UA-mTs9GA",
-        BrowseMoreButton: "_1YrclhbHAxZpfgTuGj4VeB",
-        Button: "_1ABCOz8DSrl-YJdh1xD-m0",
-        Icon: "_1dDpSuaJBGZzS41s0SPk4c",
-        Primary: "_30iplBvtu2x5qDH5gkzuvV",
-        ClearThings: "_3x_qLReSea_Uq9nqUlRsE2",
-        OnIndicator: "_1GBsBcWhLJ4t6Fr7B5Je1z",
-        OffIndicator: "w0I94_DnBuP6_sAy2jJOL",
-        IconImage: "_2RY897Hy2yhwXPKZZIMbVc",
-        RightColumnContainer: "_30-E9De2BTSA_LQAluUDUI",
-        FloatRight: "_1bzHf_n9CdWgjfVlmRX68A",
-        TTip: "_2aWukx6Wd2nw_kXZ1FP2NP",
-        ValveSupportOnly: "wC6-UDN4iQob1NcD0Rpty",
-        ArtworkAgeNotAppropriate: "_3V64ZhKy9wBGIO4DpFne9v",
-        EventDashboardHeader: "_2kZr_0HccJXPhB1ZUZ5ouf",
-        ContainerSpaceBetween: "_3gYZGtbFQRCQssXFJTFwmV",
-        EventDashboardTitles: "_1ym4r-4rlOJQoOzRprSo8l",
-        EventDashboardActions: "_2z_02l2jZf-9jcO4USrYak",
-        EventDashboardStatsCtn: "_3IptFPCOJnBgUfgUej_jIH",
-        EventDashboardAppCtn: "_2iPrKEyo2kmzykCYxURzj3",
-        maintitle: "vEk_z-3SSNZ_QNdilG5U8",
-        AppTitle: "l-Ow7jLX9GkLm9eYHQVAP",
-        subtitle: "_2mJfcOfmivoiCR4CW-GrjN",
-        ValveOnlyText: "_206saj_KMAibQF6XQ50lq0",
-        ValveOnlyBackground: "JckrnbJXboKxpRp3fULfa",
-        ValveOnlyAdminBackground: "_3HVu1O7B4zeCZWaOaUWPCo",
-        DropDownOptionHelpLabel: "_2O-Yi5SNKU3AinaDygrO9y",
-        Columns: "_1oVIRGhMwAB3uN9G3t8kZe",
-        LeftCol: "_3PPz-6LrUAum0x5iKTRxzc",
-        RightCol: "_25xelN-JQnAHv3pp9qVrpl",
-        DropDownScroll: "_1CewBTRfw0excEQTv17oBF",
-        DropDownScrollItem: "_3D3hCqbc4w-srLqZG9Uue1",
-        CloseButton: "gR2gSLc4AtnoUyq29Np8F",
-        CloseSectionTools: "_1d0D9Wb15dNSzABGRNMKzl",
-        HalfColumn: "_3Xmp43r8PjDuBvfl8dK6Rt",
-        InsetOption: "PKGX85T0vHviq8Tm_2GeT",
-        tooltip_Ctn: "_3nqxIgL0a0DbPZHRZRzWsp",
-        SaleEditorSpacing: "_2ZGwd2fru49CK-m22nkFg3",
-        InstructionText: "ktxW5d8M1ectIDhxxa1M5",
-        BackgroundImage: "_2wlqOo3XXW1wCAxwfudaL8",
-        InEditor: "_1qfNCm-vmBy2gW4vlcWfgD",
-        Blur: "_1rJkktMMsrzAultu2NgHkZ",
-        SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
-        SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
-        SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
-        JumpToButton: "c4K67QJ5cG4Zr1eb4H_Fu",
-        QACtn: "_337X4KlsU9k5t9s423wb_I",
-        SaleSectionSubtitle: "_2rIaWN5LbF3muB3D2A-q5k",
-        SaleSectionContainer: "_3gb3JeV_1IMaIeODzBSrP3",
-        AddSectionButton: "_2_djjQBZmuIsrDz2l04Ua7",
-        EventElementRequired: "_12rm6-FOWcy0YB458vbp5l",
-        EventElementOptional: "_1mpG6blNZY9m8bmFF-Krii",
-        EventElementComplete: "_1uZCvmPkcgPb6hJYpF9IYU",
-        HelperTooltip: "_3T6MQlLWcGQeHZhqqOz4q-",
-        PixelOffsetCtn: "_3Xk96WC-5G6sSuI0Zw2aeZ",
-        PixelOffsetRow: "_2PtWb-j9bnMM467osLZO2B",
-        PixelOffsetNote: "JjEwaxBnKLv7wm8lbhcbX",
-        PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
-        Error: "mSSEDpLo6ibX1Ed5anQD_",
-        GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Spinner: "_3m_2lh1eA4HcHpt48En7kr",
         SpinnerSpokeFade: "_2Wg5df41BfHnoLgawx_2pb",
+        SpeakerPlaying: "_3BSOY2-GJGVqyHYdNpf0Zq",
+        SpeakerPlayingBody: "_2JUUp6uv-bsKKYWMfwwyCX",
+        SpeakerPlayingBodyAnim: "_2K65CL_7C6VuXL4jG_qp9w",
+        SpeakerPlayingWave1: "_1zw7H37bVuVoe0A1fW6cR_",
+        SpeakerPlayingWave1Anim: "_1E2Zt7i9sqP7HSjHO1pfiz",
+        SpeakerPlayingWave2: "_2YYWNEX-bFLhL8WrCZiCdP",
+        SpeakerPlayingWave2Anim: "_12Gjw5ksk8QSMgRqg7ImtG",
         WirelessConnectingActive: "cop8-_JMlxROh84HxKn1k",
         WifiBar1: "_1o6HA3kQiHOuG850embnDc",
         WifiBar1Anim: "_1PDAZ8_p3QD4UEodB33ZWN",
@@ -972,6 +867,12 @@
       module.exports = {
         TransitionGroup: "_2PuNBlNWSlrrrQJQPNBx-e",
         ContentWrapper: "MGaAv8PlvR1-fOSrJ7-Hk",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        HelperTooltip: "tRhOKu2T5OVX1RhENVwWb",
+        Small: "_1I4rqOfyNGPTkYBl3r5EHK",
       };
     },
     chunkid: (module) => {
@@ -1305,7 +1206,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1320,6 +1220,7 @@
         return !!_;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1358,7 +1259,7 @@
               }),
             _(_, _._.country_code, _, _).then(
               ([_, _]) => (
-                _(),
+                (0, _._)(),
                 1 == _
                   ? ((0, _._)(_, _, _.cart),
                     {
@@ -1384,7 +1285,7 @@
           );
         }
         return _(_, _, _).then(([_, _]) => {
-          if ((_(), _)) {
+          if (((0, _._)(), _)) {
             (0, _._)(_, _, _(_));
             const _ = (_ || []).map((_) =>
               _?.lineitems?.find((_) => _.package_item?.packageid === _),
@@ -1557,15 +1458,6 @@
               )
               .filter(_)),
           _
-        );
-      }
-      const _ = "unUserdataVersion";
-      function _() {
-        window.localStorage.setItem(
-          _,
-          (
-            Number.parseInt(window.localStorage.getItem(_) || "0") + 1
-          ).toString(),
         );
       }
     },
@@ -8491,6 +8383,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -9513,6 +9406,146 @@
         }
         getClassName() {
           return "UserContentDescriptorPreferences_ContentDescriptor";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.manufacturer || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  manufacturer: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  model: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  dx_video_card: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  dx_vendorid: {
+                    _: 4,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  dx_deviceid: {
+                    _: 5,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  num_gpu: {
+                    _: 6,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  system_ram: {
+                    _: 7,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  _: {
+                    _: 8,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  cpu_vendor: {
+                    _: 9,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  cpu_name: {
+                    _: 10,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  gaming_device_type: {
+                    _: 11,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  dx_driver_version: {
+                    _: 12,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  dx_driver_name: {
+                    _: 13,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  adapter_description: {
+                    _: 14,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  driver_version: {
+                    _: 15,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  driver_date: {
+                    _: 16,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  vram_size: {
+                    _: 17,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "UserSystemInformation";
         }
       }
     },
@@ -26328,6 +26361,11 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  game_frame_rate_reporting: {
+                    _: 14,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
                 },
               }),
             _.sm_m
@@ -38215,6 +38253,57 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            storeItem: _,
+            feature: __webpack_require__,
+            depth: _,
+            children: _,
+            noImpressionTracking: _,
+            ..._
+          } = _,
+          _ = _?.appid,
+          _ = _(_);
+        if (!_) return _;
+        const _ = _.createElement(
+          _._,
+          {
+            ..._,
+            href: _,
+          },
+          _,
+        );
+        return _ && !_
+          ? _.createElement(
+              _._,
+              {
+                appID: _,
+                feature: __webpack_require__,
+                depth: _,
+              },
+              _,
+            )
+          : _;
+      }
+      function _(_, _, _) {
+        return (0, _._)(
+          _ ? `${_._.STORE_BASE_URL}${_.store_url_path}` : void 0,
+          _,
+          _,
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -38360,6 +38449,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -38430,6 +38523,17 @@
       function _(_) {
         const _ = (0, _._)();
         return (0, _._)(
+          (function (_, _) {
+            return {
+              ..._(_, _),
+              staleTime: 6e5,
+            };
+          })(_, _),
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(
           _ && "bundleid" in _
             ? _(_, _)
             : (function (_, _) {
@@ -38454,15 +38558,39 @@
           })(_, _),
         );
       }
-      function _(_) {
+      function _(_, _ = !1) {
         const _ = (0, _._)();
-        return (0, _._)(_(_, _));
+        return (0, _._)(_ ? _(_, _) : _(_, _));
       }
       function _(_) {
         const _ = (0, _._)();
         return (0, _._)(
           (function (_, _) {
             return _(_, _, "include_screenshots", "screenshots");
+          })(_, _),
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _) {
+            return _(_, _, "include_trailers", "trailers");
+          })(_, _),
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _) {
+            return _(_, _, "include_release", "release");
+          })(_, _),
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _) {
+            return _(_, _, "top_tags", "tags");
           })(_, _),
         );
       }
@@ -38476,6 +38604,14 @@
       }
       function _(_, _) {
         return _(_, _, "include_assets", "assets");
+      }
+      function _(_, _) {
+        return _(
+          _,
+          _,
+          "include_assets_without_overrides",
+          "assets_without_overrides",
+        );
       }
       function _(_, _) {
         return _(_, _, "include_platforms", "platforms");
@@ -38870,6 +39006,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -38981,6 +39118,45 @@
         return {
           item_type: -1,
           _: _ ? parseInt(_[2]) : 0,
+        };
+      }
+      function _(_) {
+        if (_) {
+          if ("appid" in _)
+            return {
+              item_type: 0,
+              _: _.appid,
+            };
+          if ("packageid" in _)
+            return {
+              item_type: 1,
+              _: _.packageid,
+            };
+          if ("bundleid" in _)
+            return {
+              item_type: 2,
+              _: _.bundleid,
+            };
+          if ("tagid" in _)
+            return {
+              item_type: 4,
+              _: _.tagid,
+            };
+          if ("creatorid" in _)
+            return {
+              item_type: 5,
+              _: _.creatorid,
+            };
+          if ("hubcategoryid" in _)
+            return {
+              item_type: 6,
+              _: _.hubcategoryid,
+            };
+          (0, _._)(_, "Unknown store item id type");
+        }
+        return {
+          item_type: -1,
+          _: 0,
         };
       }
       function _(_) {
@@ -39993,6 +40169,27 @@
           ...__webpack_require__,
           href: _,
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      const _ = "unUserdataVersion";
+      function _(_, _, _) {
+        const _ = Number.parseInt(window.localStorage.getItem(_) || "0");
+        let _ = `${_}dynamicstore/userdata/?id=${_}&cc=${_}&origin=${self.origin}`;
+        return _ && (_ += `&v=${_}`), _;
+      }
+      function _() {
+        window.localStorage.setItem(
+          _,
+          (
+            Number.parseInt(window.localStorage.getItem(_) || "0") + 1
+          ).toString(),
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -45579,12 +45776,14 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid");
       const _ = _.createContext({
           bForceShowCompatInfo: !1,
           bSteamOS: !1,
@@ -45621,12 +45820,22 @@
             ? [!0, 1]
             : [!1, 0];
       }
+      function _(_) {
+        const { _: _, className: __webpack_require__ } = _,
+          { data: _ } = (0, _._)(_);
+        return _.createElement(_, {
+          category: _?.steam_deck_compat_category,
+          className: __webpack_require__,
+        });
+      }
       const _ = (_) => {
-          const _ = _(_.category);
+          const { category: _, className: __webpack_require__ } = _;
+          if (!_) return null;
+          const _ = _(_);
           return _.createElement(
             "div",
             {
-              className: (0, _._)(_.SteamDeckCompatInfo, _.className),
+              className: (0, _._)(_.SteamDeckCompatInfo, __webpack_require__),
             },
             _.createElement(_.lRD, null),
             _.createElement(_, {
@@ -46066,8 +46275,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -46262,9 +46469,6 @@
         }
         GetOwnedApps() {
           return this.m_setOwnedApps;
-        }
-        GetWishlistedApps() {
-          return this.m_setWishList;
         }
         async HintLoad() {
           return (
@@ -46626,24 +46830,6 @@
           [_, _.Get()]
         );
       }
-      function _(_) {
-        const [_, __webpack_require__] = _();
-        return !_ && __webpack_require__.BOwnsApp(_);
-      }
-      function _(_) {
-        const [_, __webpack_require__] = _();
-        return _
-          ? {
-              bOwnsApp: !1,
-              bFollowsApp: !1,
-              bWishlistApp: !1,
-            }
-          : {
-              bOwnsApp: __webpack_require__.BOwnsApp(_),
-              bFollowsApp: __webpack_require__.BFollowsApp(_),
-              bWishlistApp: __webpack_require__.BIsGameWishlisted(_),
-            };
-      }
       (0, _._)([_._], _.prototype, "m_setWishList", void 0),
         (0, _._)([_._], _.prototype, "m_setOwnedPackages", void 0),
         (0, _._)([_._], _.prototype, "m_setOwnedApps", void 0),
@@ -46674,8 +46860,7 @@
         _: () => _,
         _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -46827,13 +47012,13 @@
                   },
                   manifest_requests: {
                     _: 7,
-                    _,
+                    _: _,
                     _: !0,
                     _: !0,
                   },
                   package_requests: {
                     _: 8,
-                    _,
+                    _: _,
                     _: !0,
                     _: !0,
                   },
@@ -47097,6 +47282,8 @@
           return "CClientMetrics_ContentDownloadResponse_Hosts";
         }
       }
+      var _,
+        _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -48064,7 +48251,7 @@
                 fields: {
                   summary: {
                     _: 1,
-                    _: _,
+                    _,
                   },
                 },
               }),
@@ -48963,7 +49150,7 @@
                   },
                   system_info: {
                     _: 3,
-                    _: _,
+                    _: _._,
                   },
                 },
               }),
@@ -49003,111 +49190,6 @@
         }
         getClassName() {
           return "CClientMetrics_GamePerformance_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.manufacturer || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  manufacturer: {
-                    _: 1,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  model: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  dx_video_card: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  dx_vendorid: {
-                    _: 4,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  dx_deviceid: {
-                    _: 5,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  num_gpu: {
-                    _: 6,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  system_ram: {
-                    _: 7,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  _: {
-                    _: 8,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  cpu_vendor: {
-                    _: 9,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  cpu_name: {
-                    _: 10,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientMetrics_GamePerformance_Notification_SystemInformation";
         }
       }
       class _ extends _.Message {
@@ -50074,15 +50156,9 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -51086,7 +51162,61 @@
           return this.m_rgOnlyAllAgesScreenshots;
         }
       }
-      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        if (_)
+          switch (_.GetStoreItemType()) {
+            case 0:
+              return {
+                appid: _.GetAppID(),
+              };
+            case 1:
+              return {
+                packageid: _.GetID(),
+              };
+            case 2:
+              return {
+                bundleid: _.GetID(),
+              };
+            case 4:
+              return {
+                tagid: _.GetID(),
+              };
+            case 5:
+              return {
+                creatorid: _.GetID(),
+              };
+            case 6:
+              return {
+                hubcategoryid: _.GetID(),
+              };
+            case 3:
+            case -1:
+              return;
+            default:
+              return void (0, _._)(
+                _.GetStoreItemType(),
+                `Unknown EStoreItemType ${_.GetStoreItemType()} ${(0, _._)(_.GetStoreItemType())} `,
+              );
+          }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _) {
         if (!_) return _;
         if (!_) return _;
@@ -51465,7 +51595,7 @@
             case 6:
               _ = this.m_mapHubCategoriesInFlight.get(_);
           }
-          return _ && _.BDataRequestContainsOtherDataRequest(_.dataRequest, _)
+          return _ && _._.BDataRequestContainsOtherDataRequest(_.dataRequest, _)
             ? _.promise
             : null;
         }
@@ -52000,7 +52130,7 @@
           }
           let _ = _.get(_._());
           if (
-            (_ ? _.MergeData(_, _) : ((_ = new _(_, _)), _.set(_._(), _)),
+            (_ ? _.MergeData(_, _) : ((_ = new _._(_, _)), _.set(_._(), _)),
             _.include_included_items && _.included_items(!1))
           ) {
             for (const _ of _.included_items().included_apps())
@@ -61845,6 +61975,7 @@
         IrQ: () => _,
         JBW: () => _,
         Jlk: () => _,
+        Jru: () => _,
         KJW: () => _,
         KKS: () => _,
         L0X: () => _,
@@ -66223,6 +66354,29 @@
         return _.createElement(
           "svg",
           {
+            viewBox: "4 1 24 30",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ..._,
+          },
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M16.2114 23.9054C18.1701 23.9054 19.7587 25.494 19.7587 27.4527C19.7587 29.4114 18.1701 31 16.2114 31C14.2526 31 12.6641 29.4114 12.6641 27.4527C12.6641 25.494 14.2527 23.9054 16.2114 23.9054Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M7.01091 9.7964C7.11325 7.49343 8.06952 5.32707 9.69945 3.69779C11.4318 1.96544 13.7608 1 16.2108 1C18.6611 1 20.9899 1.96534 22.7222 3.69779C24.4545 5.42937 25.42 7.75911 25.42 10.2092C25.42 11.8776 24.9663 13.5012 24.109 14.9322C23.2523 16.3624 22.0178 17.5368 20.5477 18.324C20.1242 18.5512 19.761 18.8723 19.5136 19.2866C19.2654 19.7001 19.1616 20.179 19.1616 20.6579V21.3933C19.1616 21.6584 18.9457 21.8743 18.6815 21.8743H13.7404C13.4761 21.8743 13.2602 21.6584 13.2602 21.3933V20.6579C13.2602 19.1043 13.6626 17.5963 14.4611 16.2636C15.2603 14.928 16.4065 13.8673 17.7764 13.1333C18.3057 12.85 18.7488 12.4238 19.0573 11.9085C19.365 11.394 19.5178 10.8078 19.5178 10.2092C19.5178 9.32859 19.1722 8.49295 18.5496 7.87046C17.9264 7.2479 17.0914 6.90227 16.2109 6.90227C15.3303 6.90227 14.4947 7.24788 13.8722 7.87046C13.312 8.43062 12.972 9.16814 12.9131 9.9582L12.8963 10.1818C12.8774 10.4363 12.6643 10.6313 12.4091 10.6271L7.47227 10.5422C7.3377 10.5394 7.22265 10.4889 7.13086 10.3907C7.03828 10.2926 6.99482 10.1748 7.00049 10.0402L7.01104 9.79628L7.01091 9.7964Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
             fill: "none",
@@ -67320,16 +67474,31 @@
             tooltip: __webpack_require__,
             className: _,
             icon: _,
+            small: _,
           } = _,
           _ = _ ? _._ : _._;
-        return _.createElement(
-          _,
-          {
-            toolTipContent: __webpack_require__,
-            className: (0, _._)(_.HelperTooltip, "HelperTooltip", _),
-          },
-          " ",
-          _ ?? _.createElement(_._VW, null),
+        let _ = _;
+        return (
+          (_ ??= _ ? _.createElement(_.Jru, null) : void 0),
+          (_ ??= _.createElement(
+            _.Fragment,
+            null,
+            " ",
+            _.createElement(_._VW, null),
+          )),
+          _.createElement(
+            _,
+            {
+              toolTipContent: __webpack_require__,
+              className: (0, _._)(
+                _.HelperTooltip,
+                "HelperTooltip",
+                _ && _.Small,
+                _,
+              ),
+            },
+            _,
+          )
         );
       }
     },
@@ -67672,22 +67841,37 @@
       class _ {
         m_schTimer;
         m_fnCallback;
+        m_fnOnCancel;
         Schedule(_, _) {
           this.IsScheduled() && this.Cancel(),
             (this.m_fnCallback = _),
             (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _));
         }
+        AsyncSchedule(_, _) {
+          return new Promise((_, _) => {
+            this.Schedule(_, () => {
+              _(), __webpack_require__();
+            }),
+              (this.m_fnOnCancel = _);
+          });
+        }
         IsScheduled() {
           return void 0 !== this.m_schTimer;
         }
         Cancel() {
-          this.m_schTimer &&
-            (clearTimeout(this.m_schTimer), (this.m_schTimer = void 0));
+          if (this.m_schTimer) {
+            const _ = this.m_fnOnCancel;
+            clearTimeout(this.m_schTimer), this.Reset(), _ && _();
+          }
+        }
+        Reset() {
+          (this.m_schTimer = void 0),
+            (this.m_fnCallback = void 0),
+            (this.m_fnOnCancel = void 0);
         }
         ScheduledInternal() {
-          this.m_schTimer = void 0;
           const _ = this.m_fnCallback;
-          (this.m_fnCallback = void 0), _?.();
+          this.Reset(), _?.();
         }
       }
       (0, _._)([_._], _.prototype, "ScheduledInternal", null);
@@ -69763,6 +69947,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
@@ -69885,6 +70070,9 @@
             (_ = _ ? `steam://openurl_external/${_}` : `steam://openurl/${_}`),
           _
         );
+      }
+      function _(_) {
+        return _.startsWith("http://") || _.startsWith("https://");
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -73036,17 +73224,18 @@
             _._(this.m_rgGamepadNavigationTrees, _),
             this.m_rgGamepadNavigationTrees.unshift(_);
         }
-        UnregisterGamepadNavigationTree(_) {
+        async UnregisterGamepadNavigationTree(_) {
           _._(this.m_rgGamepadNavigationTrees, _),
             _(
               `(${this.m_rootWindow.name}) Unregister tree ${_?._} ${this.m_LastActiveFocusNavTree == _ ? "(was active)" : "(inactive)"}`,
             ),
+            _.SetIsEnabled(!1),
             this.m_LastActiveNavTree == _ &&
-              ((this.m_LastActiveNavTree = void 0),
               this.m_bMounted &&
-                this.m_schDeferredActivate.Schedule(1, () => {
-                  this.m_LastActiveNavTree || this.SetActiveNavTree(void 0, !0);
-                }));
+              (await this.m_schDeferredActivate.AsyncSchedule(1, () => {
+                (this.m_LastActiveNavTree && this.m_LastActiveNavTree != _) ||
+                  this.SetActiveNavTree(void 0, !0);
+              }));
         }
         get FocusChangedCallbacks() {
           return this.m_FocusChangedCallbacks;
@@ -73362,7 +73551,9 @@
               (__webpack_require__.SetActiveNavTree(_, !0),
               (this.m_LastActiveContext = this.m_ActiveContext = _)),
             () => {
-              _(), __webpack_require__.UnregisterGamepadNavigationTree(_);
+              __webpack_require__
+                .UnregisterGamepadNavigationTree(_)
+                .then(() => _());
             }
           );
         }
@@ -75422,46 +75613,8 @@
           }),
         );
       }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            storeItem: _,
-            feature: __webpack_require__,
-            depth: _,
-            children: _,
-            noImpressionTracking: _,
-            ..._
-          } = _,
-          _ = _?.appid,
-          _ = (function (_, _, _) {
-            return (0, _._)(
-              _ ? `${_._.STORE_BASE_URL}${_.store_url_path}` : void 0,
-              _,
-              _,
-            );
-          })(_);
-        if (!_) return _;
-        const _ = _.createElement(
-          _._,
-          {
-            ..._,
-            href: _,
-          },
-          _,
-        );
-        return _ && !_
-          ? _.createElement(
-              _._,
-              {
-                appID: _,
-                feature: __webpack_require__,
-                depth: _,
-              },
-              _,
-            )
-          : _;
-      }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const {
             purchaseOption: _,
@@ -75647,7 +75800,7 @@
             collapse: !0,
           },
           _.createElement(
-            _,
+            _._,
             {
               ..._,
               storeItem: _,
@@ -76394,7 +76547,7 @@
           null,
           !__webpack_require__ && ", ",
           _.createElement(
-            _,
+            _._,
             {
               className: _.TextLink,
               storeItem: _,
@@ -77212,7 +77365,7 @@
         return _ && !_.visible
           ? null
           : _.createElement(
-              _,
+              _._,
               {
                 storeItem: _,
                 feature: __webpack_require__,
@@ -78875,7 +79028,7 @@
           name: _ = _.name,
         } = _;
         return _.createElement(
-          _,
+          _._,
           {
             className: _.FeaturedHardware,
             storeItem: _,
@@ -82828,7 +82981,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 80640), _((_._ = _));
+      return (_ = 31080), _((_._ = _));
       var _;
     });
     _._();

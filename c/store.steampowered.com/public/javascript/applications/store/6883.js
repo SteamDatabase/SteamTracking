@@ -31,368 +31,230 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      var __webpack_require__, __webpack_require__;
-      function _(__webpack_require__) {
+      function _(_) {
         switch (_) {
-          case _.k_eWinUnknown:
+          case 0:
             return "Windows";
-          case _.k_eWin311:
+          case 1:
             return "Windows 3.11";
-          case _.k_eWin95:
+          case 2:
             return "Windows 95";
-          case _.k_eWin98:
+          case 3:
             return "Windows 98";
-          case _.k_eWinME:
+          case 4:
             return "Windows ME";
-          case _.k_eWinNT:
+          case 5:
             return "Windows NT";
-          case _.k_eWin2000:
+          case 6:
             return "Windows 2000";
-          case _.k_eWinXP:
+          case 7:
             return "Windows XP";
-          case _.k_eWin2003:
+          case 8:
             return "Windows 2003";
-          case _.k_eWinVista:
+          case 9:
             return "Windows Vista";
-          case _.k_eWindows7:
+          case 10:
             return "Windows 7";
-          case _.k_eWin2008:
+          case 11:
             return "Windows 2008";
-          case _.k_eWin2012:
+          case 12:
             return "Windows 2012";
-          case _.k_eWin2012R2:
+          case 15:
             return "Windows 2012 R2";
-          case _.k_eWindows8:
+          case 13:
             return "Windows 8";
-          case _.k_eWindows81:
+          case 14:
             return "Windows 8.1";
-          case _.k_eWindows10:
+          case 16:
             return "Windows 10";
-          case _.k_eWin2016:
+          case 17:
             return "Windows 2016";
-          case _.k_eWin2019:
+          case 18:
             return "Windows 2019";
-          case _.k_eWin2022:
+          case 19:
             return "Windows 2022";
-          case _.k_eWindows11:
+          case 20:
             return "Windows 11";
-          case _.k_eMacOSUnknown:
+          case -102:
             return "Mac OS";
-          case _.k_eMacOS104:
+          case -101:
             return "MacOS 10.4";
-          case _.k_eMacOS105:
+          case -100:
             return "MacOS 10.5";
-          case _.k_eMacOS1058:
+          case -99:
             return "MacOS 10.5.8";
-          case _.k_eMacOS106:
+          case -95:
             return "MacOS 10.6";
-          case _.k_eMacOS1063:
+          case -94:
             return "MacOS 10.6.3";
-          case _.k_eMacOS1064_slgu:
+          case -93:
             return "MacOS 10.6.4 with Apple's Snow Leopard Graphics Update";
-          case _.k_eMacOS1067:
+          case -92:
             return "MacOS 10.6.7";
-          case _.k_eMacOS107:
+          case -90:
             return "MacOS 10.7";
-          case _.k_eMacOS108:
+          case -89:
             return "MacOS 10.8";
-          case _.k_eMacOS109:
+          case -88:
             return "MacOS 10.9";
-          case _.k_eMacOS1010:
+          case -87:
             return "MacOS 10.10";
-          case _.k_eMacOS1011:
+          case -86:
             return "MacOS 10.11";
-          case _.k_eMacOS1012:
+          case -85:
             return "MacOS 10.12";
-          case _.k_eMacOS1013:
+          case -84:
             return "MacOS 10.13";
-          case _.k_eMacOS1014:
+          case -83:
             return "MacOS 10.14";
-          case _.k_eMacOS1015:
+          case -82:
             return "MacOS 10.15";
-          case _.k_eMacOS1016:
+          case -81:
             return "MacOS 11 (as 10.16)";
-          case _.k_eMacOS1017:
+          case -75:
             return "MacOS 12 (as 10.17)";
-          case _.k_eMacOS1018:
+          case -70:
             return "MacOS 13 (as 10.18)";
-          case _.k_eMacOS11:
+          case -80:
             return "MacOS 11";
-          case _.k_eMacOS11_1:
+          case -79:
             return "MacOS 11.1";
-          case _.k_eMacOS12:
+          case -74:
             return "MacOS 12";
-          case _.k_eMacOS13:
+          case -69:
             return "MacOS 13";
-          case _.k_eMacOS14:
+          case -68:
             return "MacOS 14";
-          case _.k_eMacOS15:
+          case -67:
             return "MacOS 15";
-          case _.k_eLinuxUnknown:
+          case -203:
             return "Linux";
-          case _.k_eLinux22:
+          case -202:
             return "Linux 2.2";
-          case _.k_eLinux24:
+          case -201:
             return "Linux 2.4";
-          case _.k_eLinux26:
+          case -200:
             return "Linux 2.6";
-          case _.k_eLinux32:
+          case -199:
             return "Linux 3.2";
-          case _.k_eLinux35:
+          case -198:
             return "Linux 3.5";
-          case _.k_eLinux36:
+          case -197:
             return "Linux 3.6";
-          case _.k_eLinux310:
+          case -196:
             return "Linux 3.10";
-          case _.k_eLinux316:
+          case -195:
             return "Linux 3.16";
-          case _.k_eLinux318:
+          case -194:
             return "Linux 3.18";
-          case _.k_eLinux3Unknown:
+          case -193:
             return "Linux 3.x";
-          case _.k_eLinux41:
+          case -191:
             return "Linux 4.1";
-          case _.k_eLinux44:
+          case -190:
             return "Linux 4.4";
-          case _.k_eLinux49:
+          case -189:
             return "Linux 4.9";
-          case _.k_eLinux414:
+          case -188:
             return "Linux 4.14";
-          case _.k_eLinux419:
+          case -187:
             return "Linux 4.19";
-          case _.k_eLinux4Unknown:
+          case -192:
             return "Linux 4.x";
-          case _.k_eLinux5Unknown:
+          case -186:
             return "Linux 5.x";
-          case _.k_eLinux54:
+          case -185:
             return "Linux 5.4";
-          case _.k_eLinux6Unknown:
+          case -184:
             return "Linux 6.x";
-          case _.k_eLinux7Unknown:
+          case -183:
             return "Linux 7.x";
-          case _.k_eLinux510:
+          case -182:
             return "Linux 5.10";
-          case _.k_eOSPS3:
+          case -300:
             return "PS3";
-          case _.k_eOSWebClient:
+          case -700:
             return "Web Client";
-          case _.k_eAndroidUnknown:
+          case -500:
             return "Android";
-          case _.k_eAndroid6:
+          case -499:
             return "Android 6.x";
-          case _.k_eAndroid7:
+          case -498:
             return "Android 7.x";
-          case _.k_eAndroid8:
+          case -497:
             return "Android 8.x";
-          case _.k_eAndroid9:
+          case -496:
             return "Android 9.x";
-          case _.k_eIOSUnknown:
+          case -600:
             return "iOS";
-          case _.k_eIOS1:
+          case -599:
             return "iOS 1";
-          case _.k_eIOS2:
+          case -598:
             return "iOS 2";
-          case _.k_eIOS3:
+          case -597:
             return "iOS 3";
-          case _.k_eIOS4:
+          case -596:
             return "iOS 4";
-          case _.k_eIOS5:
+          case -595:
             return "iOS 5";
-          case _.k_eIOS6:
+          case -594:
             return "iOS 6";
-          case _.k_eIOS6_1:
+          case -593:
             return "iOS 6.1";
-          case _.k_eIOS7:
+          case -592:
             return "iOS 7";
-          case _.k_eIOS7_1:
+          case -591:
             return "iOS 7.1";
-          case _.k_eIOS8:
+          case -590:
             return "iOS 8";
-          case _.k_eIOS8_1:
+          case -589:
             return "iOS 8.1";
-          case _.k_eIOS8_2:
+          case -588:
             return "iOS 8.2";
-          case _.k_eIOS8_3:
+          case -587:
             return "iOS 8.3";
-          case _.k_eIOS8_4:
+          case -586:
             return "iOS 8.4";
-          case _.k_eIOS9:
+          case -585:
             return "iOS 9";
-          case _.k_eIOS9_1:
+          case -584:
             return "iOS 9.1";
-          case _.k_eIOS9_2:
+          case -583:
             return "iOS 9.2";
-          case _.k_eIOS9_3:
+          case -582:
             return "iOS 9_.3";
-          case _.k_eIOS10:
+          case -581:
             return "iOS 10";
-          case _.k_eIOS10_1:
+          case -580:
             return "iOS 10.1";
-          case _.k_eIOS10_2:
+          case -579:
             return "iOS 10.2";
-          case _.k_eIOS10_3:
+          case -578:
             return "iOS 10.3";
-          case _.k_eIOS11:
+          case -577:
             return "iOS 11";
-          case _.k_eIOS11_1:
+          case -576:
             return "iOS 11.1";
-          case _.k_eIOS11_2:
+          case -575:
             return "iOS 11.2";
-          case _.k_eIOS11_3:
+          case -574:
             return "iOS 11.3";
-          case _.k_eIOS11_4:
+          case -573:
             return "iOS 11.4";
-          case _.k_eIOS12:
+          case -572:
             return "iOS 12";
-          case _.k_eIOS12_1:
+          case -571:
             return "iOS 12.1";
           default:
-          case _.k_eOSUnknown:
             return "Unknown";
         }
       }
-      __webpack_require__.__webpack_require__(module_exports, {
+      var _;
+      __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
       }),
-        (function (__webpack_require__) {
-          (_[(_.k_eOSXboxOne = -800)] = "k_eOSXboxOne"),
-            (_[(_.k_eOSWebClient = -700)] = "k_eOSWebClient"),
-            (_[(_.k_eOSEmbeddedClient = -675)] = "k_eOSEmbeddedClient"),
-            (_[(_.k_eTVOSUnknown = -650)] = "k_eTVOSUnknown"),
-            (_[(_.k_eTVOS9 = -649)] = "k_eTVOS9"),
-            (_[(_.k_eTVOS9_1 = -648)] = "k_eTVOS9_1"),
-            (_[(_.k_eTVOS9_2 = -647)] = "k_eTVOS9_2"),
-            (_[(_.k_eTVOS9_3 = -646)] = "k_eTVOS9_3"),
-            (_[(_.k_eTVOS10 = -645)] = "k_eTVOS10"),
-            (_[(_.k_eTVOS10_1 = -644)] = "k_eTVOS10_1"),
-            (_[(_.k_eTVOS10_2 = -643)] = "k_eTVOS10_2"),
-            (_[(_.k_eTVOS11 = -642)] = "k_eTVOS11"),
-            (_[(_.k_eTVOS11_1 = -641)] = "k_eTVOS11_1"),
-            (_[(_.k_eTVOS11_2 = -640)] = "k_eTVOS11_2"),
-            (_[(_.k_eTVOS11_3 = -639)] = "k_eTVOS11_3"),
-            (_[(_.k_eTVOS11_4 = -638)] = "k_eTVOS11_4"),
-            (_[(_.k_eTVOS12 = -637)] = "k_eTVOS12"),
-            (_[(_.k_eTVOS12_1 = -636)] = "k_eTVOS12_1"),
-            (_[(_.k_eIOSUnknown = -600)] = "k_eIOSUnknown"),
-            (_[(_.k_eIOS1 = -599)] = "k_eIOS1"),
-            (_[(_.k_eIOS2 = -598)] = "k_eIOS2"),
-            (_[(_.k_eIOS3 = -597)] = "k_eIOS3"),
-            (_[(_.k_eIOS4 = -596)] = "k_eIOS4"),
-            (_[(_.k_eIOS5 = -595)] = "k_eIOS5"),
-            (_[(_.k_eIOS6 = -594)] = "k_eIOS6"),
-            (_[(_.k_eIOS6_1 = -593)] = "k_eIOS6_1"),
-            (_[(_.k_eIOS7 = -592)] = "k_eIOS7"),
-            (_[(_.k_eIOS7_1 = -591)] = "k_eIOS7_1"),
-            (_[(_.k_eIOS8 = -590)] = "k_eIOS8"),
-            (_[(_.k_eIOS8_1 = -589)] = "k_eIOS8_1"),
-            (_[(_.k_eIOS8_2 = -588)] = "k_eIOS8_2"),
-            (_[(_.k_eIOS8_3 = -587)] = "k_eIOS8_3"),
-            (_[(_.k_eIOS8_4 = -586)] = "k_eIOS8_4"),
-            (_[(_.k_eIOS9 = -585)] = "k_eIOS9"),
-            (_[(_.k_eIOS9_1 = -584)] = "k_eIOS9_1"),
-            (_[(_.k_eIOS9_2 = -583)] = "k_eIOS9_2"),
-            (_[(_.k_eIOS9_3 = -582)] = "k_eIOS9_3"),
-            (_[(_.k_eIOS10 = -581)] = "k_eIOS10"),
-            (_[(_.k_eIOS10_1 = -580)] = "k_eIOS10_1"),
-            (_[(_.k_eIOS10_2 = -579)] = "k_eIOS10_2"),
-            (_[(_.k_eIOS10_3 = -578)] = "k_eIOS10_3"),
-            (_[(_.k_eIOS11 = -577)] = "k_eIOS11"),
-            (_[(_.k_eIOS11_1 = -576)] = "k_eIOS11_1"),
-            (_[(_.k_eIOS11_2 = -575)] = "k_eIOS11_2"),
-            (_[(_.k_eIOS11_3 = -574)] = "k_eIOS11_3"),
-            (_[(_.k_eIOS11_4 = -573)] = "k_eIOS11_4"),
-            (_[(_.k_eIOS12 = -572)] = "k_eIOS12"),
-            (_[(_.k_eIOS12_1 = -571)] = "k_eIOS12_1"),
-            (_[(_.k_eIOSMax = -570)] = "k_eIOSMax"),
-            (_[(_.k_eAndroidUnknown = -500)] = "k_eAndroidUnknown"),
-            (_[(_.k_eAndroid6 = -499)] = "k_eAndroid6"),
-            (_[(_.k_eAndroid7 = -498)] = "k_eAndroid7"),
-            (_[(_.k_eAndroid8 = -497)] = "k_eAndroid8"),
-            (_[(_.k_eAndroid9 = -496)] = "k_eAndroid9"),
-            (_[(_.k_eAndroidMax = -495)] = "k_eAndroidMax"),
-            (_[(_.k_eOSUMQ = -400)] = "k_eOSUMQ"),
-            (_[(_.k_eOSPS3 = -300)] = "k_eOSPS3"),
-            (_[(_.k_eLinuxUnknown = -203)] = "k_eLinuxUnknown"),
-            (_[(_.k_eLinux22 = -202)] = "k_eLinux22"),
-            (_[(_.k_eLinux24 = -201)] = "k_eLinux24"),
-            (_[(_.k_eLinux26 = -200)] = "k_eLinux26"),
-            (_[(_.k_eLinux32 = -199)] = "k_eLinux32"),
-            (_[(_.k_eLinux35 = -198)] = "k_eLinux35"),
-            (_[(_.k_eLinux36 = -197)] = "k_eLinux36"),
-            (_[(_.k_eLinux310 = -196)] = "k_eLinux310"),
-            (_[(_.k_eLinux316 = -195)] = "k_eLinux316"),
-            (_[(_.k_eLinux318 = -194)] = "k_eLinux318"),
-            (_[(_.k_eLinux3Unknown = -193)] = "k_eLinux3Unknown"),
-            (_[(_.k_eLinux4Unknown = -192)] = "k_eLinux4Unknown"),
-            (_[(_.k_eLinux41 = -191)] = "k_eLinux41"),
-            (_[(_.k_eLinux44 = -190)] = "k_eLinux44"),
-            (_[(_.k_eLinux49 = -189)] = "k_eLinux49"),
-            (_[(_.k_eLinux414 = -188)] = "k_eLinux414"),
-            (_[(_.k_eLinux419 = -187)] = "k_eLinux419"),
-            (_[(_.k_eLinux5Unknown = -186)] = "k_eLinux5Unknown"),
-            (_[(_.k_eLinux54 = -185)] = "k_eLinux54"),
-            (_[(_.k_eLinux6Unknown = -184)] = "k_eLinux6Unknown"),
-            (_[(_.k_eLinux7Unknown = -183)] = "k_eLinux7Unknown"),
-            (_[(_.k_eLinux510 = -182)] = "k_eLinux510"),
-            (_[(_.k_eLinuxMax = -103)] = "k_eLinuxMax"),
-            (_[(_.k_eMacOSUnknown = -102)] = "k_eMacOSUnknown"),
-            (_[(_.k_eMacOS104 = -101)] = "k_eMacOS104"),
-            (_[(_.k_eMacOS105 = -100)] = "k_eMacOS105"),
-            (_[(_.k_eMacOS1058 = -99)] = "k_eMacOS1058"),
-            (_[(_.k_eMacOS106_unused1 = -98)] = "k_eMacOS106_unused1"),
-            (_[(_.k_eMacOS106_unused2 = -97)] = "k_eMacOS106_unused2"),
-            (_[(_.k_eMacOS106_unused3 = -96)] = "k_eMacOS106_unused3"),
-            (_[(_.k_eMacOS106 = -95)] = "k_eMacOS106"),
-            (_[(_.k_eMacOS1063 = -94)] = "k_eMacOS1063"),
-            (_[(_.k_eMacOS1064_slgu = -93)] = "k_eMacOS1064_slgu"),
-            (_[(_.k_eMacOS1067 = -92)] = "k_eMacOS1067"),
-            (_[(_.k_eMacOS1067_unused = -91)] = "k_eMacOS1067_unused"),
-            (_[(_.k_eMacOS107 = -90)] = "k_eMacOS107"),
-            (_[(_.k_eMacOS108 = -89)] = "k_eMacOS108"),
-            (_[(_.k_eMacOS109 = -88)] = "k_eMacOS109"),
-            (_[(_.k_eMacOS1010 = -87)] = "k_eMacOS1010"),
-            (_[(_.k_eMacOS1011 = -86)] = "k_eMacOS1011"),
-            (_[(_.k_eMacOS1012 = -85)] = "k_eMacOS1012"),
-            (_[(_.k_eMacOS1013 = -84)] = "k_eMacOS1013"),
-            (_[(_.k_eMacOS1014 = -83)] = "k_eMacOS1014"),
-            (_[(_.k_eMacOS1015 = -82)] = "k_eMacOS1015"),
-            (_[(_.k_eMacOS1016 = -81)] = "k_eMacOS1016"),
-            (_[(_.k_eMacOS11 = -80)] = "k_eMacOS11"),
-            (_[(_.k_eMacOS11_1 = -79)] = "k_eMacOS11_1"),
-            (_[(_.k_eMacOS1017 = -75)] = "k_eMacOS1017"),
-            (_[(_.k_eMacOS12 = -74)] = "k_eMacOS12"),
-            (_[(_.k_eMacOS1018 = -70)] = "k_eMacOS1018"),
-            (_[(_.k_eMacOS13 = -69)] = "k_eMacOS13"),
-            (_[(_.k_eMacOS14 = -68)] = "k_eMacOS14"),
-            (_[(_.k_eMacOS15 = -67)] = "k_eMacOS15"),
-            (_[(_.k_eMacOSMax = -2)] = "k_eMacOSMax"),
-            (_[(_.k_eOSUnknown = -1)] = "k_eOSUnknown"),
-            (_[(_.k_eWinUnknown = 0)] = "k_eWinUnknown"),
-            (_[(_.k_eWin311 = 1)] = "k_eWin311"),
-            (_[(_.k_eWin95 = 2)] = "k_eWin95"),
-            (_[(_.k_eWin98 = 3)] = "k_eWin98"),
-            (_[(_.k_eWinME = 4)] = "k_eWinME"),
-            (_[(_.k_eWinNT = 5)] = "k_eWinNT"),
-            (_[(_.k_eWin2000 = 6)] = "k_eWin2000"),
-            (_[(_.k_eWinXP = 7)] = "k_eWinXP"),
-            (_[(_.k_eWin2003 = 8)] = "k_eWin2003"),
-            (_[(_.k_eWinVista = 9)] = "k_eWinVista"),
-            (_[(_.k_eWindows7 = 10)] = "k_eWindows7"),
-            (_[(_.k_eWin2008 = 11)] = "k_eWin2008"),
-            (_[(_.k_eWin2012 = 12)] = "k_eWin2012"),
-            (_[(_.k_eWindows8 = 13)] = "k_eWindows8"),
-            (_[(_.k_eWindows81 = 14)] = "k_eWindows81"),
-            (_[(_.k_eWin2012R2 = 15)] = "k_eWin2012R2"),
-            (_[(_.k_eWindows10 = 16)] = "k_eWindows10"),
-            (_[(_.k_eWin2016 = 17)] = "k_eWin2016"),
-            (_[(_.k_eWin2019 = 18)] = "k_eWin2019"),
-            (_[(_.k_eWin2022 = 19)] = "k_eWin2022"),
-            (_[(_.k_eWindows11 = 20)] = "k_eWindows11"),
-            (_[(_.k_eWinMAX = 21)] = "k_eWinMAX"),
-            (_[(_.k_eOSTypeMax = 32)] = "k_eOSTypeMax");
-        })(_ || (_ = {})),
-        (function (__webpack_require__) {
+        (function (_) {
           (_[(_.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
             (_[(_.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
             (_[(_.k_EPlatformTypeWin64 = 2)] = "k_EPlatformTypeWin64"),
@@ -413,17 +275,18 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      __webpack_require__.__webpack_require__(module_exports, {
+      __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
       });
-      var __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__.__webpack_require__(_);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _() {
         const [_, _] = _.useState(void 0),
           _ = _.useCallback(() => _(void 0), []),
@@ -439,19 +302,20 @@
           );
         return [_, _];
       }
-      function _(__webpack_require__) {
+      function _(_) {
         const { closeModal: _, rgImageURL: __webpack_require__ } = _,
           [_, _] = _.useState(0),
-          __webpack_require__ = _.useCallback(() => {
-            _(0 == _ ? __webpack_require__.length - 1 : _ - 1);
-          }, [_, __webpack_require__.length]),
-          __webpack_require__ = _.useCallback(() => {
-            _ + 1 >= __webpack_require__.length ? _(0) : _(_ + 1);
-          }, [_, __webpack_require__.length]);
+          _ = __webpack_require__?.length ?? 0,
+          _ = _.useCallback(() => {
+            _(0 == _ ? _ - 1 : _ - 1);
+          }, [_, _]),
+          _ = _.useCallback(() => {
+            _(__webpack_require__ && _ + 1 >= _ ? 0 : _ + 1);
+          }, [_, __webpack_require__, _]);
         return _.createElement(
-          _.__webpack_require__,
+          _._,
           {
-            "aria-label": null,
+            title: (0, _._)("#SaleTech_Screenshot_Viewer"),
             bAllowFullSize: !0,
             bOKDisabled: !0,
             closeModal: _,
@@ -460,7 +324,7 @@
           },
           _.createElement(_, {
             index: _,
-            numElements: __webpack_require__.length,
+            numElements: __webpack_require__?.length || 0,
             fnForward: _,
             fnBackwards: _,
             fnClose: _,
@@ -473,12 +337,12 @@
             },
             _.createElement("img", {
               className: _().PopupScreenshot,
-              src: __webpack_require__[_],
+              src: __webpack_require__?.[_],
             }),
           ),
         );
       }
-      function _(__webpack_require__) {
+      function _(_) {
         const {
           index: _,
           numElements: __webpack_require__,
@@ -487,13 +351,13 @@
           fnClose: _,
           bCircular: _,
         } = _;
-        (0, _.__webpack_require__)("ArrowLeft", _, !0, !0),
-          (0, _.__webpack_require__)("Left", _, !0, !0),
-          (0, _.__webpack_require__)("ArrowRight", _, !0, !0),
-          (0, _.__webpack_require__)("Right", _, !0, !0),
-          (0, _.__webpack_require__)("Escape", () => _ && _(), !0, !0),
-          (0, _.__webpack_require__)("Esc", () => _ && _(), !0, !0);
-        let __webpack_require__ = __webpack_require__ > 1;
+        (0, _._)("ArrowLeft", () => _?.(), !0, !0),
+          (0, _._)("Left", () => _?.(), !0, !0),
+          (0, _._)("ArrowRight", () => _?.(), !0, !0),
+          (0, _._)("Right", () => _?.(), !0, !0),
+          (0, _._)("Escape", () => _ && _(), !0, !0),
+          (0, _._)("Esc", () => _ && _(), !0, !0);
+        let _ = __webpack_require__ > 1;
         return _.createElement(
           "div",
           {
@@ -506,7 +370,7 @@
               _.createElement(
                 "div",
                 {
-                  className: (0, _.__webpack_require__)(
+                  className: (0, _._)(
                     _().ButtonIcon,
                     0 !== _ || _ ? null : _().Disabled,
                   ),
@@ -519,7 +383,7 @@
               _.createElement(
                 "div",
                 {
-                  className: (0, _.__webpack_require__)(
+                  className: (0, _._)(
                     _().ButtonIcon,
                     _ !== __webpack_require__ - 1 || _ ? null : _().Disabled,
                   ),
@@ -536,22 +400,22 @@
               className: _().ButtonIcon,
               onClick: _,
             },
-            _.createElement(_.__webpack_require__, null),
+            _.createElement(_._, null),
           ),
         );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      __webpack_require__.__webpack_require__(module_exports, {
+      __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
       });
-      var __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__("chunkid");
-      function _(__webpack_require__) {
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
         const {
             className: _,
             srcs: __webpack_require__,
@@ -567,7 +431,7 @@
           _ != __webpack_require__.length &&
             (_(__webpack_require__.length), _(0));
         }, [_, __webpack_require__.length]);
-        const __webpack_require__ = _.useCallback(() => {
+        const _ = _.useCallback(() => {
           _.onImageError && _.onImageError(_.srcs[_]),
             _ + 1 < _.srcs.length && _(_ + 1);
         }, [_, _]);
@@ -584,7 +448,7 @@
               alt: _,
             });
       }
-      function _(__webpack_require__) {
+      function _(_) {
         const [_, __webpack_require__] = _.useState(!1),
           {
             className: _,
@@ -601,27 +465,15 @@
               {
                 className: _.ErrorDiv,
               },
-              _.createElement(
-                "p",
-                null,
-                (0, _.__webpack_require__)("#Image_ErrorTitle", _),
-              ),
+              _.createElement("p", null, (0, _._)("#Image_ErrorTitle", _)),
               _.createElement(
                 "ul",
                 null,
-                _.createElement(
-                  "li",
-                  null,
-                  (0, _.__webpack_require__)("#Image_Error_msg1"),
-                ),
+                _.createElement("li", null, (0, _._)("#Image_Error_msg1")),
               ),
-              _.createElement(
-                "p",
-                null,
-                (0, _.__webpack_require__)("#Image_Error_suggestion"),
-              ),
+              _.createElement("p", null, (0, _._)("#Image_Error_suggestion")),
             )
-          : _.createElement(_.__webpack_require__, {
+          : _.createElement(_._, {
               className: _,
               src: _,
               onError: () => __webpack_require__(!0),
@@ -635,19 +487,19 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      __webpack_require__.__webpack_require__(module_exports, {
+      __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__("chunkid");
-      const __webpack_require__ = 1.3,
-        __webpack_require__ = 3,
-        __webpack_require__ = 256;
-      function _(__webpack_require__) {
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 1.3,
+        _ = 3,
+        _ = 256;
+      function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)({
             naturalWidth: 0,
@@ -655,8 +507,8 @@
             displayWidth: 0,
             displayHeight: 0,
           }),
-          __webpack_require__ = (0, _.useRef)(void 0),
-          [_, _] = (0, _.__webpack_require__)();
+          _ = (0, _.useRef)(void 0),
+          [_, _] = (0, _._)();
         return (
           (0, _.useEffect)(() => {
             if (
@@ -683,21 +535,18 @@
                 ),
                 _.createElement("img", {
                   ..._,
-                  className: (0, _.__webpack_require__)({
+                  className: (0, _._)({
                     [_.className]: Boolean(_.className),
                     [_.ExpandableHover]: !0,
                   }),
-                  onClick: (__webpack_require__) => _([_.src]),
+                  onClick: (_) => _([_.src]),
                 }),
               )
             : _.createElement("img", {
                 ..._,
                 ref: _,
-                onLoad: (__webpack_require__) => {
-                  if (
-                    !_.currentTarget.closest("a") &&
-                    !(0, _.__webpack_require__)()
-                  ) {
+                onLoad: (_) => {
+                  if (!_.currentTarget.closest("a") && !(0, _._)()) {
                     const {
                       naturalWidth: _,
                       naturalHeight: __webpack_require__,
@@ -718,19 +567,19 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      __webpack_require__.__webpack_require__(module_exports, {
+      __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
       });
-      var __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__("chunkid"),
-        __webpack_require__ = __webpack_require__.__webpack_require__(_),
-        __webpack_require__ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _() {
         return window.innerWidth < parseInt(_().strMaxMobileWidth);
       }
       function _() {
-        const __webpack_require__ = (0, _.__webpack_require__)();
+        const _ = (0, _._)();
         return (
           _.useEffect(
             () => (
@@ -745,10 +594,10 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      __webpack_require__.__webpack_require__(module_exports, {
+      __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var __webpack_require__ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       function _(_, _, _, _) {
         _.useEffect(() => {
@@ -765,11 +614,11 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      __webpack_require__.__webpack_require__(module_exports, {
+      __webpack_require__._(module_exports, {
         _: () => _,
       });
-      const __webpack_require__ =
-        __webpack_require__.__webpack_require__ +
+      const _ =
+        __webpack_require__._ +
         "images/applications/store/defaultappheader.png?v=valveisgoodatcaching";
     },
   },

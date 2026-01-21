@@ -31,510 +31,521 @@
     },
     2921: (e, t, a) => {
       "use strict";
-      a.d(t, { PE: () => U, qP: () => F, Yg: () => B });
-      var r = a(76217),
-        n = a(86927),
-        l = a(90626),
-        i = a(62792),
-        s = a(55263),
-        o = a(1078),
-        c = a(12155),
-        m = a(52038),
-        u = a(78327),
-        d = a(51706),
-        h = a(22797),
-        g = a(91970),
-        p = a.n(g),
-        E = a(18654),
-        C = a.n(E),
-        T = a(61859),
-        v = a(30470),
-        _ = a(32754),
-        f = a(24484);
-      function b(e) {
-        const { storeItem: t } = e,
-          a = (0, l.useMemo)(() => {
-            if (!t) return [];
-            const e = t.GetStoreCategories_SupportedPlayers().slice(0, 1);
+      a.d(t, { PE: () => x, qP: () => I, Yg: () => F });
+      var n = a(76217),
+        l = a(86927),
+        r = a(42834),
+        i = a(39777),
+        s = a(52541),
+        o = a(38535),
+        c = a(90626),
+        m = a(92834),
+        d = a(1078),
+        u = a(12155),
+        h = a(52038),
+        g = a(78327),
+        p = a(51706),
+        E = a(46253),
+        _ = a(22797),
+        f = a(54096),
+        v = a(91970),
+        y = a.n(v),
+        b = a(18654),
+        C = a.n(b),
+        T = a(32754),
+        M = a(61859),
+        N = a(30470),
+        P = a(24484);
+      function S(e) {
+        const { id: t } = e,
+          { data: a } = (0, i.J$)(t),
+          n = (0, c.useMemo)(() => {
+            if (!a) return [];
+            const e =
+              a.categories?.supported_player_categoryids?.slice(0, 1) || [];
             return (
-              t.GetStoreCategories_Features().forEach((t) => e.push(t)),
-              t.GetStoreCategories_Controller().forEach((t) => e.push(t)),
-              t
-                .GetStoreCategories_SupportedPlayers()
-                .slice(1)
+              a.categories?.feature_categoryids?.forEach((t) => e.push(t)),
+              a.categories?.controller_categoryids?.forEach((t) => e.push(t)),
+              a.categories?.supported_player_categoryids
+                ?.slice(1)
                 .forEach((t) => e.push(t)),
               e
             );
-          }, [t]);
-        return a && 0 != a.length
-          ? l.createElement(
+          }, [a]);
+        return n && 0 != n.length
+          ? c.createElement(
               "div",
-              { className: (0, m.A)(C().SaleTagBlockCtn, "SaleTagBlockCtn") },
-              Boolean(a?.length > 0)
-                ? l.createElement(
+              { className: (0, h.A)(C().SaleTagBlockCtn, "SaleTagBlockCtn") },
+              Boolean(n?.length > 0)
+                ? c.createElement(
                     "div",
-                    { className: (0, m.A)(C().TagBox, C().Categories) },
-                    a.map((e) =>
-                      l.createElement(M, { key: "cat_" + e, categoryID: e }),
+                    { className: (0, h.A)(C().TagBox, C().Categories) },
+                    n.map((e) =>
+                      c.createElement(A, { key: "cat_" + e, categoryID: e }),
                     ),
                   )
-                : l.createElement("div", null, (0, T.we)("#Broadcast_None")),
+                : c.createElement("div", null, (0, M.we)("#Broadcast_None")),
             )
           : null;
       }
-      class y {
+      class k {
         m_rgCategories;
         constructor() {
-          this.m_rgCategories = (0, f.Tc)(
+          this.m_rgCategories = (0, P.Tc)(
             "feature_categories",
             "application_config",
           );
         }
         static g_Self = null;
         static Get() {
-          return y.g_Self || (y.g_Self = new y()), y.g_Self;
+          return k.g_Self || (k.g_Self = new k()), k.g_Self;
         }
       }
-      function M(e) {
+      function A(e) {
         const { categoryID: t } = e,
-          a = y.Get().m_rgCategories.find((e) => e.categoryid == t);
+          a = k.Get().m_rgCategories.find((e) => e.categoryid == t);
         return a
-          ? l.createElement(
+          ? c.createElement(
               "div",
               { className: C().Category },
-              l.createElement(
-                _.he,
+              c.createElement(
+                T.he,
                 { toolTipContent: a.name },
-                l.createElement("div", {
+                c.createElement("div", {
                   className: C().CategoryIcon,
                   style: {
-                    background: `url(${v.TS.STORE_CDN_URL}/public/images/${a.image_path}) no-repeat center center/cover`,
+                    background: `url(${N.TS.STORE_CDN_URL}/public/images/${a.image_path}) no-repeat center center/cover`,
                   },
                 }),
               ),
             )
           : null;
       }
-      var G = a(99956),
-        N = a(46253),
-        S = a(38535),
-        A = a(92834),
-        P = a(54096);
-      const I = { include_trailers: !0, include_screenshots: !0 },
-        k = {
-          include_trailers: !0,
-          include_screenshots: !0,
-          include_basic_info: !0,
-          include_tag_count: 10,
-        },
-        V = {
-          include_trailers: !0,
-          include_screenshots: !0,
-          include_basic_info: !0,
-          include_tag_count: 10,
-          include_assets_without_overrides: !0,
-        };
-      function B(e) {
-        const { info: t, bPopOutTrailerPlayback: a } = e,
-          [r] = (0, s.G6)(t.id, (0, i.SW)(t.type), I),
-          [n, o] = (0, l.useState)(!1),
-          [c, d] = (0, l.useState)(!1),
-          g = (0, S.dy)(),
-          E = r?.GetAllTrailers().GetHighlightTrailers(g),
-          C = E?.length > 0 && E[0],
-          T = l.useCallback(() => {
-            C && (a ? d(!0) : o((e) => !e));
-          }, [C, a]),
-          v = C
-            ? l.createElement(x, {
-                trailer: C,
-                bPlayVideo: n,
-                fnTogglePlayTrailer: T,
-              })
-            : null;
-        return r
-          ? C || 0 !== r.GetScreenshots(g)?.length
-            ? l.createElement(
-                "div",
-                { className: (0, m.A)(p().HilightGrid, p().MediaContainer) },
-                l.createElement(L, { elFeaturedInCenter: v, storeItem: r }),
-                Boolean(a)
-                  ? l.createElement(U, {
-                      storeItem: r,
-                      bShowModal: c,
-                      hideModal: () => d(!1),
-                    })
-                  : l.createElement(D, {
-                      name: r.GetName(),
-                      trailer: C,
-                      bPlayVideo: n,
-                      fnTogglePlayTrailer: T,
-                      bControls: !0,
-                    }),
-              )
-            : (("dev" != u.TS.WEB_UNIVERSE && "beta" != u.TS.WEB_UNIVERSE) ||
-                console.log(
-                  "appCapsule for appid: " + r?.GetAppID(),
-                  r.GetScreenshots(g),
-                ),
-              null)
-          : l.createElement(
-              "div",
-              { className: (0, m.A)(p().HilightGrid, p().MediaContainer) },
-              l.createElement(h.t, { size: "medium" }),
-            );
-      }
+      var B = a(99956),
+        V = a(52471);
       function F(e) {
-        const {
-            info: t,
-            fnOnClickButton: a,
-            bLowBandwidthMode: r,
-            bUseAssetWithoutOverride: n,
-          } = e,
-          [o] = (0, s.G6)(t.id, (0, i.SW)(t.type), n ? V : k);
-        return o
-          ? l.createElement(
+        const { id: t, bPopOutTrailerPlayback: a } = e,
+          { data: n } = (0, i.Yo)(t),
+          { data: l } = (0, i.j4)(t),
+          { data: r } = (0, i.J$)(t),
+          [s, m] = (0, c.useState)(!1),
+          [d, u] = (0, c.useState)(!1),
+          g = (0, o.dy)(),
+          p = n?.highlights?.filter((e) => !g || e.all_ages),
+          E = p && p?.length > 0 ? p[0] : void 0,
+          f = c.useCallback(() => {
+            E && (a ? u(!0) : m((e) => !e));
+          }, [E, a]);
+        if (!r)
+          return c.createElement(
+            "div",
+            { className: (0, h.A)(y().HilightGrid, y().MediaContainer) },
+            c.createElement(_.t, { size: "medium" }),
+          );
+        const v = E
+          ? c.createElement(D, {
+              trailer: E,
+              bPlayVideo: s,
+              fnTogglePlayTrailer: f,
+            })
+          : null;
+        return E ||
+          (l && l.all_ages_screenshots && l.all_ages_screenshots.length > 0)
+          ? c.createElement(
               "div",
-              { className: (0, m.A)(p().HilightGrid, p().MediaContainerMM) },
-              l.createElement(L, {
-                elFeaturedInCenter: l.createElement(W, {
-                  storeItem: o,
-                  bUseAssetWithoutOverride: n,
+              { className: (0, h.A)(y().HilightGrid, y().MediaContainer) },
+              c.createElement(L, {
+                elFeaturedInCenter: v,
+                storeItemScreenshots: l,
+                trailer: E,
+                id: t,
+                name: r.name || "",
+              }),
+              Boolean(a)
+                ? c.createElement(x, {
+                    id: t,
+                    bShowModal: d,
+                    hideModal: () => u(!1),
+                  })
+                : c.createElement(O, {
+                    name: r.name || "",
+                    trailer: E,
+                    bPlayVideo: s,
+                    fnTogglePlayTrailer: f,
+                    bControls: !0,
+                  }),
+            )
+          : null;
+      }
+      function I(e) {
+        const {
+            id: t,
+            fnOnClickButton: a,
+            bLowBandwidthMode: n,
+            bUseAssetWithoutOverride: l,
+          } = e,
+          { data: r } = (0, i.Yo)(t),
+          { data: s } = (0, i.j4)(t),
+          { data: o } = (0, i.J$)(t);
+        return r && s && o
+          ? c.createElement(
+              "div",
+              { className: (0, h.A)(y().HilightGrid, y().MediaContainerMM) },
+              c.createElement(L, {
+                id: t,
+                elFeaturedInCenter: c.createElement(w, {
+                  id: t,
+                  bUseAssetWithoutOverride: Boolean(l),
                   fnOnClickButton: a,
                 }),
-                storeItem: o,
-                featureElementclassName: p().MainImage,
-                bUseTrailerAsFirstThumb: !r,
+                storeItemScreenshots: s,
+                featureElementclassName: y().MainImage,
+                bUseTrailerAsFirstThumb: !n,
                 bNoScreenShotModals: !0,
+                name: o.name || "",
               }),
             )
-          : l.createElement(
+          : c.createElement(
               "div",
-              { className: (0, m.A)(p().HilightGrid, p().MediaContainerMM) },
-              l.createElement(h.t, { size: "medium" }),
+              { className: (0, h.A)(y().HilightGrid, y().MediaContainerMM) },
+              c.createElement(_.t, { size: "medium" }),
             );
       }
       function L(e) {
         const {
             elFeaturedInCenter: t,
-            storeItem: a,
-            featureElementclassName: r,
-            bUseTrailerAsFirstThumb: n,
-            bNoScreenShotModals: i,
+            id: a,
+            name: n,
+            trailer: l,
+            storeItemScreenshots: i,
+            featureElementclassName: m,
+            bUseTrailerAsFirstThumb: u,
+            bNoScreenShotModals: g,
           } = e,
-          [s, c] = l.useState(void 0),
-          [u, d] = (0, o.XC)(),
-          h = (0, S.dy)(),
-          g = (0, l.useRef)(null),
-          [E, C] = (0, l.useState)(0),
-          T = t || (void 0 !== s && -1 !== s) ? s : 0,
-          v = new Array(),
-          _ = new Array();
-        if (n) {
-          const e = a?.GetAllTrailers().GetHighlightTrailers(h),
-            t = e?.length > 0 && e[0];
-          t &&
-            (v.push(
-              l.createElement(x, {
-                key: "trail_thumb_",
-                trailer: t,
-                bPlayVideo: !1,
-                fnTogglePlayTrailer: () => {},
-                onMouseEnter: () => c(0),
-                onMouseLeave: () => {
-                  const e = g.current;
-                  e && C(e.currentTime);
-                },
-              }),
-            ),
-            _.push(
-              l.createElement(D, {
-                key: "trail_inline",
-                ref: g,
-                name: a.GetName(),
-                trailer: t,
-                bControls: !1,
-                bPlayVideo: !0,
-                startTime: E,
-                fnTogglePlayTrailer: () => {},
-              }),
-            ));
-        }
-        const f = a.GetScreenshots(h);
+          [p, E] = c.useState(void 0),
+          [_, f] = (0, d.XC)(),
+          v = (0, o.dy)(),
+          b = (0, c.useRef)(null),
+          [C, T] = (0, c.useState)(0);
+        if (!a) return null;
+        const M = t || (void 0 !== p && -1 !== p) ? p : 0,
+          N = new Array(),
+          P = new Array();
+        u &&
+          l &&
+          (N.push(
+            c.createElement(D, {
+              key: "trail_thumb_",
+              trailer: l,
+              bPlayVideo: !1,
+              fnTogglePlayTrailer: () => {},
+              onMouseEnter: () => E(0),
+              onMouseLeave: () => {
+                const e = b.current;
+                e && T(e.currentTime);
+              },
+            }),
+          ),
+          P.push(
+            c.createElement(O, {
+              key: "trail_inline",
+              ref: b,
+              name: n,
+              trailer: l,
+              bControls: !1,
+              bPlayVideo: !0,
+              startTime: C,
+              fnTogglePlayTrailer: () => {},
+            }),
+          ));
+        const S = (
+          v ? i?.all_ages_screenshots : i?.mature_content_screenshots
+        )?.filter(Boolean);
         if (
-          (f.forEach((e, a) => {
-            if ((t || a > 0) && v.length < 3) {
-              const t = O(e, ".600x338").replace("http://", "https://"),
-                r = O(e, ".800x600").replace("http://", "https://"),
-                n = v.length;
-              v.push(
-                l.createElement(
+          (S?.forEach((e, a) => {
+            if ((t || a > 0) && N.length < 3) {
+              const t = (0, r.bu)(e, "thumb"),
+                n = (0, r.bu)(e, "full"),
+                l = N.length;
+              N.push(
+                c.createElement(
                   "div",
                   {
                     key: a + "_small_" + t,
-                    className: (0, m.A)({
-                      [p().ThumbnailCtn]: !0,
-                      [p().ThumbnialClickable]: !i,
+                    className: (0, h.A)({
+                      [y().ThumbnailCtn]: !0,
+                      [y().ThumbnialClickable]: !g,
                     }),
                   },
-                  l.createElement("img", {
+                  c.createElement("img", {
                     src: t,
-                    onClick: i
+                    onClick: g
                       ? void 0
                       : () => {
-                          const e = [...f];
-                          for (let t = 0; t < a; ++t) e.push(e.shift());
-                          u(e);
+                          const e = [...(S || [])];
+                          if (e.length > 0) {
+                            for (let t = 0; t < a; ++t) {
+                              const t = e.shift();
+                              t && e.push(t);
+                            }
+                            _(e.map((e) => (0, r.bu)(e, "full")));
+                          }
                         },
-                    onMouseEnter: () => c(n),
+                    onMouseEnter: () => E(l),
                   }),
                 ),
               ),
-                _.push(
-                  l.createElement(
+                P.push(
+                  c.createElement(
                     "div",
                     {
                       key: a + "_big_" + t,
-                      className: p().ScreenshotDisplayCtn,
+                      className: y().ScreenshotDisplayCtn,
                     },
-                    l.createElement("img", { src: r }),
+                    c.createElement("img", { src: n }),
                   ),
                 );
             }
           }),
-          !(t || (_ && 0 != _.length)))
+          !(t || (P && 0 != P.length)))
         )
           return null;
-        const b = v.slice(0, 3),
-          y = Array.from({ length: Math.max(0, 3 - b.length) });
-        return l.createElement(
-          l.Fragment,
+        const k = N.slice(0, 3),
+          A = Array.from({ length: Math.max(0, 3 - k.length) });
+        return c.createElement(
+          c.Fragment,
           null,
-          d,
-          l.createElement(
+          f,
+          c.createElement(
             "div",
-            { className: r || p().MainMediaCtn },
-            Boolean(t && (-1 === T || void 0 === T))
-              ? l.createElement(l.Fragment, null, t)
-              : l.createElement(l.Fragment, null, _[T]),
+            { className: m || y().MainMediaCtn },
+            Boolean(t && (-1 === M || void 0 === M))
+              ? c.createElement(c.Fragment, null, t)
+              : c.createElement(c.Fragment, null, void 0 !== M && P[M]),
           ),
-          Boolean(b.length > 0) &&
-            l.createElement(
+          Boolean(k.length > 0) &&
+            c.createElement(
               "div",
               {
-                className: p().ScreenshotThumbnailRow,
-                onMouseLeave: () => c(-1),
+                className: y().ScreenshotThumbnailRow,
+                onMouseLeave: () => E(-1),
               },
-              b,
-              y.map((e, t) =>
-                l.createElement("div", {
-                  key: `app_${a?.GetAppID()}_${t}`,
-                  className: p().ThumbnailCtn,
+              k,
+              A.map((e, t) =>
+                c.createElement("div", {
+                  key: `app_${(0, s.ER)(a)}_${t}`,
+                  className: y().ThumbnailCtn,
                 }),
               ),
             ),
         );
       }
-      function D(e) {
+      function O(e) {
         const {
           ref: t,
           name: a,
-          trailer: r,
-          bControls: n,
-          bPlayVideo: i,
-          fnTogglePlayTrailer: s,
-          startTime: o,
+          trailer: n,
+          bControls: l,
+          bPlayVideo: r,
+          fnTogglePlayTrailer: i,
+          startTime: s,
         } = e;
-        let d = r.GetMicroTrailer();
-        (0, l.useEffect)(() => {
-          const e = t?.current;
-          if (o > 0 && e) {
-            const t = () => {
-              e.currentTime = o;
-            };
-            return (
-              e.addEventListener("loadedmetadata", t),
-              () => {
-                e.removeEventListener("loadedmetadata", t);
-              }
-            );
-          }
-        }, [t, o]);
-        let h = (0, m.A)(p().VideoLargeContainer, i && p().videoPlaying);
-        return l.createElement(
+        if (
+          ((0, c.useEffect)(() => {
+            const e = t?.current;
+            if (null != s && s > 0 && e) {
+              const t = () => {
+                e.currentTime = s || 0;
+              };
+              return (
+                e.addEventListener("loadedmetadata", t),
+                () => {
+                  e.removeEventListener("loadedmetadata", t);
+                }
+              );
+            }
+          }, [t, s]),
+          !n)
+        )
+          return null;
+        let o = (0, h.A)(y().VideoLargeContainer, r && y().videoPlaying);
+        return c.createElement(
           "div",
-          { className: h, onClick: s },
-          l.createElement(N.h, {
+          { className: o, onClick: i },
+          c.createElement(E.h, {
             name: a,
-            trailerCategory: r.GetTrailerCategory(),
+            trailerCategory: n.trailer_category,
             trailerDisplay: 1,
             mouseOver: !1,
           }),
-          Boolean(i) &&
-            l.createElement(
+          Boolean(r && n.microtrailer) &&
+            c.createElement(
               "video",
               {
-                className: p().VideoLarge,
+                className: y().VideoLarge,
                 ref: t,
-                controls: n,
+                controls: l,
                 autoPlay: !0,
                 loop: !0,
                 muted: !0,
-                poster: o > 0 ? void 0 : r.GetScreenshot(),
+                poster: null != s && s > 0 ? void 0 : n.screenshot_full,
               },
-              l.createElement("source", {
-                src: d.strWebMURL,
-                type: "video/webm",
-              }),
-              Boolean(!u.TS.IN_CLIENT) &&
-                l.createElement("source", {
-                  src: d.strMP4URL,
-                  type: "video/mp4",
-                }),
+              n.microtrailer?.map((e) =>
+                g.TS.IN_CLIENT && "video/mp4" == e.type
+                  ? null
+                  : c.createElement("source", {
+                      key: e.filename,
+                      src: (0, V.M4)(n, e.filename || ""),
+                      type: e.type,
+                    }),
+              ),
             ),
-          n &&
-            l.createElement(
+          l &&
+            c.createElement(
               "div",
-              { onClick: s },
-              l.createElement(c.sED, null),
+              { onClick: i },
+              c.createElement(u.sED, null),
             ),
         );
       }
-      function O(e, t) {
-        const a = e.replace(/\.[^\.]+$/g, "");
-        return a + t + e.slice(a.length);
-      }
-      function U(e) {
-        const {
-            storeItem: t,
-            bShowModal: a,
-            trailerBaseID: r,
-            hideModal: n,
-          } = e,
-          i = (0, S.dy)(),
-          s = (0, l.useMemo)(() => {
-            if (r) {
-              const e = t
-                ?.GetAllTrailers()
-                ?.GetAllTrailers(i)
-                .find((e) => e.GetTrailerID() == r);
+      function x(e) {
+        const { id: t, bShowModal: a, trailerBaseID: n, hideModal: l } = e,
+          { data: r } = (0, i.Yo)(t),
+          { data: s } = (0, i.J$)(t),
+          d = (0, o.dy)(),
+          u = (0, c.useMemo)(() => {
+            if (!r) return;
+            if (n) {
+              const e = [...(r.highlights || []), ...(r.other_trailers || [])]
+                .filter(Boolean)
+                .filter((e) => !d || e.all_ages)
+                .find((e) => e.trailer_base_id == n);
               if (e) return e;
             }
-            const e = t?.GetAllTrailers()?.GetHighlightTrailers(i);
+            const e = (r.highlights || [])
+              .filter(Boolean)
+              .filter((e) => !d || e.all_ages);
             return e && e.length > 0 ? e[0] : void 0;
-          }, [i, t, r]),
-          o = l.useId(),
-          c = l.useId();
-        if (!s) return null;
-        const m = s.GetTrailersDash(),
-          u = s.GetTrailerHls();
-        return 0 == m?.length
+          }, [d, r, n]),
+          h = c.useId(),
+          g = c.useId();
+        if (!u || !u.adaptive_trailers) return null;
+        const E = u.adaptive_trailers
+            .filter(
+              (e) =>
+                ("dash_h264" == e.encoding || "dash_av1" == e.encoding) &&
+                e.cdn_path,
+            )
+            .map((e) => (0, V.q1)(u, e.cdn_path || "")),
+          _ = u.adaptive_trailers
+            .filter((e) => "hls_h264" == e.encoding && e.cdn_path)
+            .map((e) => (0, V.q1)(u, e.cdn_path || ""));
+        return 0 == E?.length
           ? null
-          : l.createElement(
-              d.EN,
+          : c.createElement(
+              p.EN,
               { active: a },
-              l.createElement(
-                d.eV,
+              c.createElement(
+                p.eV,
                 {
-                  "aria-labelledby": (0, A.q)(o, c),
+                  "aria-labelledby": (0, m.q)(h, g),
                   bAllowFullSize: !0,
                   bOKDisabled: !0,
-                  closeModal: n,
+                  closeModal: l,
                 },
-                l.createElement(
+                c.createElement(
                   "div",
-                  { className: p().VideoPopupContainers },
-                  l.createElement(P.P, {
-                    dashManifests: m || [],
-                    hlsManifest: u || "",
-                    screenshot: "",
-                    altText: "",
+                  { className: y().VideoPopupContainers },
+                  c.createElement(f.P, {
+                    dashManifests: E || [],
+                    hlsManifest: (_.length > 0 && _?.[0]) || "",
+                    screenshot: (0, V.hl)(u),
+                    altText: u.trailer_name,
                     muteWhenAutoplayBlocked: !0,
                   }),
                 ),
-                l.createElement(
+                c.createElement(
                   "div",
-                  { id: o, style: { display: "none" } },
-                  t.GetName(),
+                  { id: h, style: { display: "none" } },
+                  s?.name || "",
                 ),
-                l.createElement(
+                c.createElement(
                   "div",
-                  { id: c, style: { display: "none" } },
-                  s.GetName(),
+                  { id: g, style: { display: "none" } },
+                  u.trailer_name,
                 ),
               ),
             );
       }
-      function x(e) {
+      function D(e) {
         const {
           trailer: t,
           fnTogglePlayTrailer: a,
-          bPlayVideo: r,
-          onMouseEnter: n,
-          onMouseLeave: i,
+          bPlayVideo: n,
+          onMouseEnter: l,
+          onMouseLeave: r,
         } = e;
-        return l.createElement(
+        return c.createElement(
           "div",
           {
-            className: (0, m.A)({
-              [p().VideoThumbnail]: !r,
-              [p().videoPlaying]: r,
-              [p().ThumbnailCtn]: !0,
+            className: (0, h.A)({
+              [y().VideoThumbnail]: !n,
+              [y().videoPlaying]: n,
+              [y().ThumbnailCtn]: !0,
             }),
             onClick: a,
-            onMouseEnter: n,
-            onMouseLeave: i,
+            onMouseEnter: l,
+            onMouseLeave: r,
           },
-          l.createElement("img", { src: t.GetScreenshot() }),
-          l.createElement(
+          c.createElement("img", { src: (0, V.hl)(t) }),
+          c.createElement(
             "div",
-            { className: p().VideoPlayButton },
-            l.createElement(c.jGG, null),
+            { className: y().VideoPlayButton },
+            c.createElement(u.jGG, null),
           ),
         );
       }
-      function W(e) {
-        const {
-            storeItem: t,
-            fnOnClickButton: a,
-            bUseAssetWithoutOverride: i,
-          } = e,
-          [s, o] = (0, n.OP)(),
-          c = i
-            ? t.GetAssetsWithoutOverrides()?.GetMainCapsuleURL()
-            : t.GetAssets()?.GetMainCapsuleURL();
-        return l.createElement(
-          r.Z,
+      function w(e) {
+        const { id: t, fnOnClickButton: a, bUseAssetWithoutOverride: s } = e,
+          [o, m] = (0, l.OP)(),
+          { data: d } = (0, i.lv)(t, s),
+          { data: u } = (0, i.J$)(t),
+          { data: g } = (0, i.wl)(t),
+          { data: p } = (0, i.xz)(t);
+        if (!d || !g || !u) return null;
+        const E = (0, r.b0)(d, "main_capsule");
+        return c.createElement(
+          n.Z,
           {
             focusable: !0,
             noFocusRing: !0,
-            className: p().MainCapsuleWithHover,
-            ...o,
+            className: y().MainCapsuleWithHover,
+            ...m,
             onActivate: a,
           },
-          l.createElement("img", { className: p().MainCapsule, src: c }),
-          l.createElement(
+          c.createElement("img", { className: y().MainCapsule, src: E }),
+          c.createElement(
             "div",
-            { className: p().AppDetails },
-            l.createElement(
+            { className: y().AppDetails },
+            c.createElement(
               "div",
-              { className: (0, m.A)(p().GameName) },
-              t.GetName(),
+              { className: (0, h.A)(y().GameName) },
+              u.name || "",
             ),
-            l.createElement(
+            c.createElement(
               "div",
-              { className: p().ShortDesc },
-              t.GetShortDescription(),
+              { className: y().ShortDesc },
+              g.short_description,
               " ",
             ),
-            l.createElement(G.n, {
-              rgTagIDs: t.GetTagIDs(),
+            c.createElement(B.n, {
+              rgTagIDs: p ? p.map((e) => e.tagid || 0) : [],
               instanceNum: 0,
               bLargeText: !0,
               bHideTitle: !0,
               bNoStoreLinks: !0,
             }),
-            l.createElement(b, { storeItem: t }),
+            c.createElement(S, { id: t }),
           ),
         );
       }

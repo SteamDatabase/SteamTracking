@@ -33,6 +33,8 @@
     "Cart_GiftRecipientModal_Placeholder": "Search by friend's name...",
     "Cart_GiftRecipientModal_OwnsGameLabel": "Already owns this item",
     "Cart_GiftRecipientModal_OnWishlist": "On wishlist",
+    "Cart_GiftRecipientModal_PartialOwnsLabel": "Already owns %1$s",
+    "Cart_GiftRecipientModal_PartialWishlistLabel": "Wishes for %1$s",
     "Cart_GiftOptions": "Gift Options",
     "Cart_GiftRecipientModal_IssueLoading": "There was a problem loading eligible gift recipients. Please try again later.",
     "Cart_ContinueButton_Payment": "Continue to payment",

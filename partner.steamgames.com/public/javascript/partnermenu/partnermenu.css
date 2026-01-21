@@ -981,6 +981,59 @@ html.BPK-2blxjIY- body {
 .L8jNN5ANQPI- > path:nth-child(8) {
   animation-delay: -.4s;
 }
+.-U6NPiUFewI- > path {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.-U6NPiUFewI- .CwW-ulN-rYA- {
+  animation-name: ZKDYGRlRrAo-;
+}
+.-U6NPiUFewI- .OQepJKegtsc- {
+  animation-name: _4-u4-rIu0u4-;
+}
+.-U6NPiUFewI- ._3TSAcn-T9oQ- {
+  animation-name: jCwuxpONe1k-;
+}
+@keyframes ZKDYGRlRrAo- {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.25;
+  }
+}
+@keyframes _4-u4-rIu0u4- {
+  0% {
+    opacity: 0.25;
+  }
+  33% {
+    opacity: 0.25;
+  }
+  67% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.25;
+  }
+}
+@keyframes jCwuxpONe1k- {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0.25;
+  }
+  67% {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .X4V-4Uh6Aro- > path {
   animation-duration: 1s;
   animation-timing-function: linear;

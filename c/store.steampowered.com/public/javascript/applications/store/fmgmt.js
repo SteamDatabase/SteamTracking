@@ -4241,13 +4241,74 @@
           onChange: _,
         });
       }
+      _.set(2, 5), _.set(1, 5), _.set(4, 1), _.set(3, 4);
+      const _ = {
+        0: null,
+        1: {
+          featureDescription: "#Parental_Feature_Store",
+          requestDescription: "#Parental_FeatureRequest_Store",
+          requestDescriptionSelf: "#Parental_FeatureRequest_Store_Self",
+        },
+        2: {
+          featureDescription: "#Parental_Feature_Community",
+          requestDescription: "#Parental_FeatureRequest_Community",
+          requestDescriptionSelf: "#Parental_FeatureRequest_Community_Self",
+        },
+        3: {
+          featureDescription: "#Parental_Feature_Profile",
+          requestDescription: "#Parental_FeatureRequest_Profile",
+          requestDescriptionSelf: "#Parental_FeatureRequest_Profile_Self",
+        },
+        4: {
+          featureDescription: "#Parental_Feature_Friends",
+          requestDescription: "#Parental_FeatureRequest_Friends",
+          requestDescriptionSelf: "#Parental_FeatureRequest_Friends_Self",
+        },
+        5: {
+          featureDescription: "#Parental_Feature_News",
+          requestDescription: "#Parental_FeatureRequest_News",
+          requestDescriptionSelf: "#Parental_FeatureRequest_News_Self",
+        },
+        6: {
+          featureDescription: "#Parental_Feature_Trading",
+          requestDescription: "#Parental_FeatureRequest_Trading",
+          requestDescriptionSelf: "#Parental_FeatureRequest_Trading_Self",
+        },
+        7: {
+          featureDescription: "#Parental_Feature_Settings",
+          requestDescription: "#Parental_FeatureRequest_Settings",
+          requestDescriptionSelf: "#Parental_FeatureRequest_Settings_Self",
+        },
+        8: {
+          featureDescription: "#Parental_Feature_Console",
+          requestDescription: "#Parental_FeatureRequest_Console",
+          requestDescriptionSelf: "#Parental_FeatureRequest_Console_Self",
+        },
+        9: {
+          featureDescription: "#Parental_Feature_Browser",
+          requestDescription: "#Parental_FeatureRequest_Browser",
+          requestDescriptionSelf: "#Parental_FeatureRequest_Browser_Self",
+        },
+        10: null,
+        11: null,
+        12: null,
+        13: null,
+        14: null,
+        15: null,
+        16: {
+          featureDescription: "#Parental_Feature_Desktop",
+          requestDescription: "#Parental_FeatureRequest_Desktop",
+          requestDescriptionSelf: "#Parental_FeatureRequest_Desktop_Self",
+        },
+        17: null,
+      };
       function _(_) {
         const { steamid: _, settings: __webpack_require__ } = _,
           _ = _.useRef(__webpack_require__.enabled_features),
           _ = [1, 2, 3, 4],
           _ = [10, 11, 12, 13, 14, 15],
           _ = [];
-        for (let _ = 1; _ < 16; _++)
+        for (let _ = 1; _ < 17; _++)
           !_.includes(_) &&
             (_.includes(_) || _.current & (1 << _)) &&
             _.push(_);
@@ -4258,19 +4319,21 @@
           },
           _.createElement("hr", null),
           _.map((_) =>
-            _.createElement(
-              _.Fragment,
-              {
-                key: _,
-              },
-              _.createElement(_, {
-                steamid: _,
-                settings: __webpack_require__,
-                feature: _,
-                label: "#Parental_Feature_" + _,
-              }),
-              _.createElement("hr", null),
-            ),
+            _[_]
+              ? _.createElement(
+                  _.Fragment,
+                  {
+                    key: _,
+                  },
+                  _.createElement(_, {
+                    steamid: _,
+                    settings: __webpack_require__,
+                    feature: _,
+                    label: _[_].featureDescription,
+                  }),
+                  _.createElement("hr", null),
+                )
+              : null,
           ),
         );
       }
@@ -5474,7 +5537,6 @@
           }),
         );
       }
-      _.set(2, 5), _.set(1, 5), _.set(4, 1), _.set(3, 4);
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { familyGroupID: _, ...__webpack_require__ } = _,
@@ -5962,9 +6024,9 @@
           _ = __webpack_require__;
         for (let _ = 0; _ < 32; _++)
           if (_ & (1 << _)) {
-            const _ = "#Parental_FeatureRequest_" + _ + (_ ? "_Self" : ""),
-              _ = (0, _._)(_);
-            _ && _ != _ && _.push(_);
+            const _ = _,
+              _ = _ ? _[_]?.requestDescriptionSelf : _[_]?.requestDescription;
+            _ && _.push((0, _._)(_));
           }
         return 0 != _.length || _
           ? _.createElement(

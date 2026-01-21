@@ -70,6 +70,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor(_) {
@@ -144,9 +146,13 @@
             this.m_mapReactionConfiguration
           );
         }
+        GetAwardConfigForReaction(_) {
+          return this.GetAwardConfigurations().get(_);
+        }
         async LoadAwardsConfiguration() {
           this.m_bReactionConfigurationLoadedOrInFlight = !0;
           const _ = _._.Init(_._);
+          _.Body().set_elanguage((0, _._)(_._.LANGUAGE));
           let _ = await _._.GetReactionConfig(this.m_transport, _);
           if (1 == _.GetEResult()) {
             let _ = _.Body().toObject().reactions;
@@ -711,9 +717,6 @@
             ),
         ];
       var _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _._)(`#RewardsReaction_${_}`);
-      }
       var _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const { className: _, ...__webpack_require__ } = _;
@@ -918,6 +921,7 @@
             ugcType: _,
             initialSelectedReaction: _,
             onDismiss: _,
+            onSuccess: _,
           } = this.props;
           return _.createElement(_, {
             key: _,
@@ -1069,6 +1073,7 @@
                         selected: _ === _ && !_.get(_),
                         cost: _.get(_).points_cost,
                         alreadyAwarded: _.get(_),
+                        store: _,
                         onClick: () => {
                           _.get(_) ||
                             this.setState({
@@ -1205,7 +1210,7 @@
                                 {
                                   className: _.AwardName,
                                 },
-                                _(_),
+                                _.GetAwardConfigForReaction(_).localized_title,
                               ),
                             ),
                           ),
@@ -1612,7 +1617,7 @@
                 {
                   className: _.Label,
                 },
-                _(_),
+                this.props.store.GetAwardConfigForReaction(_).localized_title,
               ),
               _.createElement(
                 _,

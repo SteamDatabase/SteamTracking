@@ -36,8 +36,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { appid: _ } = _,
           _ = (0, _._)(),
@@ -45,14 +45,15 @@
             include_assets: !0,
             include_release: !0,
           }),
-          [_, _] = (0, _._)(_, _.current);
+          [_, _] = (0, _._)(_, _.current),
+          _ = (0, _._)(_);
         let _ = (0, _._)(
             _().StoreSaleWidgetContainer_mini,
             "StoreSaleWidgetContainer_mini",
           ),
           _ = _().StoreSaleWidgetImage_mini,
           _ = _().StoreSaleImage_mini;
-        if (!_ && _ != _._.k_EStoreItemCacheState_Unavailable)
+        if (!_ && 2 != _)
           return _.createElement(
             "div",
             {
@@ -62,11 +63,11 @@
               size: "medium",
             }),
           );
-        if (_ == _._.k_EStoreItemCacheState_Unavailable || !_.GetName())
+        if (2 == _ || !_.GetName())
           return _.createElement("div", {
             className: _.StoreSaleWidgetEmptyContainer,
           });
-        const _ = _.GetAppType() != _._.k_EStoreAppType_Series,
+        const _ = 8 != _.GetAppType(),
           _ = (0, _._)(_.GetStorePageURL(!0), _);
         return _.createElement(
           "div",
@@ -135,10 +136,7 @@
             ),
             Boolean(_) &&
               _.createElement(_._, {
-                info: {
-                  _: _,
-                  type: "game",
-                },
+                _: _,
                 bShowDemoButton: !0,
               }),
           ),
@@ -150,9 +148,6 @@
         if (_) return _();
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -519,16 +514,8 @@
           let _ = _._.Get().GetPlayReadyStream(this.props);
           const _ = this.state.bExpanded,
             _ = _._.GetOrCreateBroadcastInfo(_.steamid).m_nAppID;
-          (0, _._)(
-            _,
-            _
-              ? _._.k_EProductActionHideBroadcast
-              : _._.k_EProductActionShowBroadcast,
-            _.snr,
-          ),
-            _ &&
-              _() &&
-              _().AddEvent(_._.k_EStoreUsabilityEvent_App_BroadcastHidden),
+          (0, _._)(_, _ ? 2 : 3, _.snr),
+            _ && _() && _().AddEvent(1005),
             window.setTimeout(
               () =>
                 this.setState({
@@ -635,9 +622,7 @@
         }
         MarkBroadcastSeen() {
           this.m_bMarkedUsabilitySeen ||
-            ((this.m_bMarkedUsabilitySeen = !0),
-            _() &&
-              _().AddEvent(_._.k_EStoreUsabilityEvent_App_BroadcastPlayed));
+            ((this.m_bMarkedUsabilitySeen = !0), _() && _().AddEvent(1004));
         }
         render() {
           if (this.state.bLoadingPreference) return null;
@@ -841,13 +826,8 @@
           const _ = _._.GetOrCreateBroadcastInfo(
             this.props.stream.steamid,
           ).m_nAppID;
-          (0, _._)(
-            _,
-            _._.k_EProductActionCloseBroadcastSmallPopup,
-            this.props.stream.snr,
-          ),
-            _() &&
-              _().AddEvent(_._.k_EStoreUsabilityEvent_App_BroadcastMiniClosed),
+          (0, _._)(_, 7, this.props.stream.snr),
+            _() && _().AddEvent(1006),
             this.setState({
               bPopout: !1,
               bPreventPopup: !0,
@@ -907,7 +887,7 @@
                   },
                   _.createElement(_.default, {
                     steamIDBroadcast: this.props.stream.steamid,
-                    watchLocation: _._.k_EBroadcastWatchLocation_StoreAppPage,
+                    watchLocation: 6,
                     bStartMuted: this.props.bStartMuted,
                     fnRenderBroadcastContext:
                       this.props.fnRenderBroadcastContext,
@@ -977,9 +957,7 @@
           ).m_nAppID;
           (0, _._)(
             _,
-            "show" === _._.Get().GetChatVisibility()
-              ? _._.k_EProductActionHideBroadcastChat
-              : _._.k_EProductActionShowBroadcastChat,
+            "show" === _._.Get().GetChatVisibility() ? 5 : 4,
             this.props.stream.snr,
           ),
             _._.Get().ToggleChatVisibility();
@@ -988,11 +966,7 @@
           const _ = _._.GetOrCreateBroadcastInfo(
             this.props.stream.steamid,
           ).m_nAppID;
-          (0, _._)(
-            _,
-            _._.k_EProductActionOpenBroadcastWatchPage,
-            this.props.stream.snr,
-          );
+          (0, _._)(_, 9, this.props.stream.snr);
         }
         render() {
           const _ = "remove" != _._.Get().GetChatVisibility(),
@@ -1394,7 +1368,7 @@
                 },
                 _.createElement(_._, {
                   emoticonStore: _._,
-                  watchLocation: _._.k_EBroadcastWatchLocation_StoreAppPage,
+                  watchLocation: 6,
                   steamID: _,
                   broadcastID: _,
                 }),

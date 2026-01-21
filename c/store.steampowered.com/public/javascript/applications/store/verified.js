@@ -3226,7 +3226,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3241,6 +3240,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3266,6 +3267,7 @@
             bUseSubscriptionLayout: _,
             bPreferAssetWithoutOverride: _,
           } = _,
+          _ = (0, _._)(_),
           [_, _] = _.useState(!1),
           _ = () => _(!_),
           _ = (0, _._)(),
@@ -3277,11 +3279,9 @@
           });
         const _ = (0, _._)(_),
           _ =
-            ((0, _._)(_.GetStorePageURL(_)),
-            _.GetName()?.length > 0 && _.GetName(),
             _ && _.HasDemoStandaloneStorePage()
               ? _.GetDemoStandaloneStorePageAppIDs()[0]
-              : _),
+              : _,
           _ = 0 == _.GetStoreItemType();
         return _.createElement(
           "div",
@@ -3323,7 +3323,7 @@
                       appids: _,
                     }),
                     _.createElement(_._, {
-                      info: _,
+                      _: _,
                       imageType: "library",
                       bPreferAssetWithoutOverride: _,
                     }),
@@ -3338,14 +3338,15 @@
                 {
                   className: _().StoreSaleWidgetCrossCenterRight,
                 },
-                _.createElement(_._, {
-                  appID: _ && _.GetAppID(),
-                  classOverride: (0, _._)(
-                    _().WishlistButtonNotTop,
-                    "WishlistButton",
-                  ),
-                  snr: _,
-                }),
+                _ &&
+                  _.createElement(_._, {
+                    _: _,
+                    classOverride: (0, _._)(
+                      _().WishlistButtonNotTop,
+                      "WishlistButton",
+                    ),
+                    snr: _,
+                  }),
                 _.createElement(
                   "div",
                   {
@@ -3424,7 +3425,7 @@
                       className: _().StoreSaleLibraryAssetWidgetRight,
                     },
                     _.createElement(_._, {
-                      info: _,
+                      _: _,
                       bPopOutTrailerPlayback: !0,
                     }),
                   ),
@@ -3452,10 +3453,10 @@
                         _.Fragment,
                         null,
                         _.createElement(_._, {
-                          item: _,
+                          _: _,
                         }),
                         _.createElement(_._, {
-                          info: _,
+                          _: _,
                           bShowDemoButton: _,
                           bHidePrice: _,
                           bShowPurchaseOptionsButton: _,
@@ -3470,7 +3471,7 @@
                     className: _().StoreSaleWidgetBgTint,
                   },
                   _.createElement(_._, {
-                    info: _,
+                    _: _,
                     bPreferAssetWithoutOverride: _,
                   }),
                   _.createElement(_._, {
@@ -3480,7 +3481,7 @@
               ),
             ),
             _.createElement(_._, {
-              storeItem: _,
+              _: _,
               bPurchaseOptionsExpanded: _,
               fnCollapseOptions: _,
               bPreferAssetWithoutOverride: _,
@@ -3491,22 +3492,24 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { displayStoreItem: _, displayInfo: __webpack_require__ } = (0,
-          _._)(_),
+        const { displayID: _ } = (0, _._)(_),
           {
-            bShowDemoButton: _,
+            bShowDemoButton: __webpack_require__,
             bHidePrice: _,
             bHidePlatforms: _,
             bShowDeckCompatibilityDialog: _,
             bAutoFocus: _,
           } = _,
-          _ = 0 == _.GetStoreItemType();
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = 0 == _?.item_type;
         return _.createElement(
           _._,
           {
-            appid: _ ? _.GetAppID() : void 0,
+            appid: _ ? _._ : void 0,
           },
           _.createElement(
             _._,
@@ -3514,7 +3517,7 @@
               "flow-children": "grid",
               navEntryPreferPosition: _._.PREFERRED_CHILD,
               autoFocus: _,
-              navKey: "purchase_only_" + _.GetID(),
+              navKey: "purchase_only_" + _?._,
             },
             "\t",
             _.createElement(
@@ -3532,7 +3535,7 @@
                   {
                     className: _.Name,
                   },
-                  _.GetName(),
+                  _?.name,
                 ),
               ),
               _.createElement(
@@ -3540,27 +3543,25 @@
                 {
                   className: _.PurchaseAndPlatformCtn,
                 },
-                Boolean(!_ && 10 != _.GetAppType()) &&
+                Boolean(!_ && 10 != _?.type) &&
                   _.createElement(
                     "div",
                     {
                       className: _._,
                     },
                     _.createElement(_._, {
-                      item: __webpack_require__,
+                      _: _,
                     }),
-                    Boolean(
-                      _ && 0 == _?.GetStoreItemType() && _.GetPlatforms(),
-                    ) &&
+                    Boolean(_ && 0 == _?.item_type && _) &&
                       _.createElement(_._, {
                         className: _.DeckCompatIcon,
-                        category: _.GetPlatforms().steam_deck_compat_category,
+                        category: _?.steam_deck_compat_category,
                       }),
                   ),
                 _.createElement(_._, {
-                  info: __webpack_require__,
+                  _: _,
                   className: _.PurchaseOnlyActionCtn,
-                  bShowDemoButton: _,
+                  bShowDemoButton: __webpack_require__,
                   bShowCartButton: !0,
                   bHidePrice: _,
                   bHideWishlistButton: !0,

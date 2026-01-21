@@ -819,22 +819,37 @@
       class _ {
         m_schTimer;
         m_fnCallback;
+        m_fnOnCancel;
         Schedule(_, _) {
           this.IsScheduled() && this.Cancel(),
             (this.m_fnCallback = _),
             (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _));
         }
+        AsyncSchedule(_, _) {
+          return new Promise((_, _) => {
+            this.Schedule(_, () => {
+              _(), __webpack_require__();
+            }),
+              (this.m_fnOnCancel = _);
+          });
+        }
         IsScheduled() {
           return void 0 !== this.m_schTimer;
         }
         Cancel() {
-          this.m_schTimer &&
-            (clearTimeout(this.m_schTimer), (this.m_schTimer = void 0));
+          if (this.m_schTimer) {
+            const _ = this.m_fnOnCancel;
+            clearTimeout(this.m_schTimer), this.Reset(), _ && _();
+          }
+        }
+        Reset() {
+          (this.m_schTimer = void 0),
+            (this.m_fnCallback = void 0),
+            (this.m_fnOnCancel = void 0);
         }
         ScheduledInternal() {
-          this.m_schTimer = void 0;
           const _ = this.m_fnCallback;
-          (this.m_fnCallback = void 0), _?.();
+          this.Reset(), _?.();
         }
       }
       (0, _._)([_._], _.prototype, "ScheduledInternal", null);

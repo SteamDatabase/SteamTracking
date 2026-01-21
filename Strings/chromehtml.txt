@@ -4475,6 +4475,9 @@ category_77
 category_78
 category_79
 category_8
+category_80
+category_81
+category_82
 category_9
 cbActual < (uint32)nBufSizeWithTerminator
 cbData == sizeof(newConnection)

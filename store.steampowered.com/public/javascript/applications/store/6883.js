@@ -29,366 +29,228 @@
         strMaxTabletWidth: "1080px",
       };
     },
-    31258: (e, n, _) => {
+    31258: (e, r, t) => {
       "use strict";
-      var a, k;
-      function r(e) {
+      function n(e) {
         switch (e) {
-          case a.k_eWinUnknown:
+          case 0:
             return "Windows";
-          case a.k_eWin311:
+          case 1:
             return "Windows 3.11";
-          case a.k_eWin95:
+          case 2:
             return "Windows 95";
-          case a.k_eWin98:
+          case 3:
             return "Windows 98";
-          case a.k_eWinME:
+          case 4:
             return "Windows ME";
-          case a.k_eWinNT:
+          case 5:
             return "Windows NT";
-          case a.k_eWin2000:
+          case 6:
             return "Windows 2000";
-          case a.k_eWinXP:
+          case 7:
             return "Windows XP";
-          case a.k_eWin2003:
+          case 8:
             return "Windows 2003";
-          case a.k_eWinVista:
+          case 9:
             return "Windows Vista";
-          case a.k_eWindows7:
+          case 10:
             return "Windows 7";
-          case a.k_eWin2008:
+          case 11:
             return "Windows 2008";
-          case a.k_eWin2012:
+          case 12:
             return "Windows 2012";
-          case a.k_eWin2012R2:
+          case 15:
             return "Windows 2012 R2";
-          case a.k_eWindows8:
+          case 13:
             return "Windows 8";
-          case a.k_eWindows81:
+          case 14:
             return "Windows 8.1";
-          case a.k_eWindows10:
+          case 16:
             return "Windows 10";
-          case a.k_eWin2016:
+          case 17:
             return "Windows 2016";
-          case a.k_eWin2019:
+          case 18:
             return "Windows 2019";
-          case a.k_eWin2022:
+          case 19:
             return "Windows 2022";
-          case a.k_eWindows11:
+          case 20:
             return "Windows 11";
-          case a.k_eMacOSUnknown:
+          case -102:
             return "Mac OS";
-          case a.k_eMacOS104:
+          case -101:
             return "MacOS 10.4";
-          case a.k_eMacOS105:
+          case -100:
             return "MacOS 10.5";
-          case a.k_eMacOS1058:
+          case -99:
             return "MacOS 10.5.8";
-          case a.k_eMacOS106:
+          case -95:
             return "MacOS 10.6";
-          case a.k_eMacOS1063:
+          case -94:
             return "MacOS 10.6.3";
-          case a.k_eMacOS1064_slgu:
+          case -93:
             return "MacOS 10.6.4 with Apple's Snow Leopard Graphics Update";
-          case a.k_eMacOS1067:
+          case -92:
             return "MacOS 10.6.7";
-          case a.k_eMacOS107:
+          case -90:
             return "MacOS 10.7";
-          case a.k_eMacOS108:
+          case -89:
             return "MacOS 10.8";
-          case a.k_eMacOS109:
+          case -88:
             return "MacOS 10.9";
-          case a.k_eMacOS1010:
+          case -87:
             return "MacOS 10.10";
-          case a.k_eMacOS1011:
+          case -86:
             return "MacOS 10.11";
-          case a.k_eMacOS1012:
+          case -85:
             return "MacOS 10.12";
-          case a.k_eMacOS1013:
+          case -84:
             return "MacOS 10.13";
-          case a.k_eMacOS1014:
+          case -83:
             return "MacOS 10.14";
-          case a.k_eMacOS1015:
+          case -82:
             return "MacOS 10.15";
-          case a.k_eMacOS1016:
+          case -81:
             return "MacOS 11 (as 10.16)";
-          case a.k_eMacOS1017:
+          case -75:
             return "MacOS 12 (as 10.17)";
-          case a.k_eMacOS1018:
+          case -70:
             return "MacOS 13 (as 10.18)";
-          case a.k_eMacOS11:
+          case -80:
             return "MacOS 11";
-          case a.k_eMacOS11_1:
+          case -79:
             return "MacOS 11.1";
-          case a.k_eMacOS12:
+          case -74:
             return "MacOS 12";
-          case a.k_eMacOS13:
+          case -69:
             return "MacOS 13";
-          case a.k_eMacOS14:
+          case -68:
             return "MacOS 14";
-          case a.k_eMacOS15:
+          case -67:
             return "MacOS 15";
-          case a.k_eLinuxUnknown:
+          case -203:
             return "Linux";
-          case a.k_eLinux22:
+          case -202:
             return "Linux 2.2";
-          case a.k_eLinux24:
+          case -201:
             return "Linux 2.4";
-          case a.k_eLinux26:
+          case -200:
             return "Linux 2.6";
-          case a.k_eLinux32:
+          case -199:
             return "Linux 3.2";
-          case a.k_eLinux35:
+          case -198:
             return "Linux 3.5";
-          case a.k_eLinux36:
+          case -197:
             return "Linux 3.6";
-          case a.k_eLinux310:
+          case -196:
             return "Linux 3.10";
-          case a.k_eLinux316:
+          case -195:
             return "Linux 3.16";
-          case a.k_eLinux318:
+          case -194:
             return "Linux 3.18";
-          case a.k_eLinux3Unknown:
+          case -193:
             return "Linux 3.x";
-          case a.k_eLinux41:
+          case -191:
             return "Linux 4.1";
-          case a.k_eLinux44:
+          case -190:
             return "Linux 4.4";
-          case a.k_eLinux49:
+          case -189:
             return "Linux 4.9";
-          case a.k_eLinux414:
+          case -188:
             return "Linux 4.14";
-          case a.k_eLinux419:
+          case -187:
             return "Linux 4.19";
-          case a.k_eLinux4Unknown:
+          case -192:
             return "Linux 4.x";
-          case a.k_eLinux5Unknown:
+          case -186:
             return "Linux 5.x";
-          case a.k_eLinux54:
+          case -185:
             return "Linux 5.4";
-          case a.k_eLinux6Unknown:
+          case -184:
             return "Linux 6.x";
-          case a.k_eLinux7Unknown:
+          case -183:
             return "Linux 7.x";
-          case a.k_eLinux510:
+          case -182:
             return "Linux 5.10";
-          case a.k_eOSPS3:
+          case -300:
             return "PS3";
-          case a.k_eOSWebClient:
+          case -700:
             return "Web Client";
-          case a.k_eAndroidUnknown:
+          case -500:
             return "Android";
-          case a.k_eAndroid6:
+          case -499:
             return "Android 6.x";
-          case a.k_eAndroid7:
+          case -498:
             return "Android 7.x";
-          case a.k_eAndroid8:
+          case -497:
             return "Android 8.x";
-          case a.k_eAndroid9:
+          case -496:
             return "Android 9.x";
-          case a.k_eIOSUnknown:
+          case -600:
             return "iOS";
-          case a.k_eIOS1:
+          case -599:
             return "iOS 1";
-          case a.k_eIOS2:
+          case -598:
             return "iOS 2";
-          case a.k_eIOS3:
+          case -597:
             return "iOS 3";
-          case a.k_eIOS4:
+          case -596:
             return "iOS 4";
-          case a.k_eIOS5:
+          case -595:
             return "iOS 5";
-          case a.k_eIOS6:
+          case -594:
             return "iOS 6";
-          case a.k_eIOS6_1:
+          case -593:
             return "iOS 6.1";
-          case a.k_eIOS7:
+          case -592:
             return "iOS 7";
-          case a.k_eIOS7_1:
+          case -591:
             return "iOS 7.1";
-          case a.k_eIOS8:
+          case -590:
             return "iOS 8";
-          case a.k_eIOS8_1:
+          case -589:
             return "iOS 8.1";
-          case a.k_eIOS8_2:
+          case -588:
             return "iOS 8.2";
-          case a.k_eIOS8_3:
+          case -587:
             return "iOS 8.3";
-          case a.k_eIOS8_4:
+          case -586:
             return "iOS 8.4";
-          case a.k_eIOS9:
+          case -585:
             return "iOS 9";
-          case a.k_eIOS9_1:
+          case -584:
             return "iOS 9.1";
-          case a.k_eIOS9_2:
+          case -583:
             return "iOS 9.2";
-          case a.k_eIOS9_3:
+          case -582:
             return "iOS 9_.3";
-          case a.k_eIOS10:
+          case -581:
             return "iOS 10";
-          case a.k_eIOS10_1:
+          case -580:
             return "iOS 10.1";
-          case a.k_eIOS10_2:
+          case -579:
             return "iOS 10.2";
-          case a.k_eIOS10_3:
+          case -578:
             return "iOS 10.3";
-          case a.k_eIOS11:
+          case -577:
             return "iOS 11";
-          case a.k_eIOS11_1:
+          case -576:
             return "iOS 11.1";
-          case a.k_eIOS11_2:
+          case -575:
             return "iOS 11.2";
-          case a.k_eIOS11_3:
+          case -574:
             return "iOS 11.3";
-          case a.k_eIOS11_4:
+          case -573:
             return "iOS 11.4";
-          case a.k_eIOS12:
+          case -572:
             return "iOS 12";
-          case a.k_eIOS12_1:
+          case -571:
             return "iOS 12.1";
           default:
-          case a.k_eOSUnknown:
             return "Unknown";
         }
       }
-      _.d(n, { gU: () => r, tz: () => k }),
-        (function (e) {
-          (e[(e.k_eOSXboxOne = -800)] = "k_eOSXboxOne"),
-            (e[(e.k_eOSWebClient = -700)] = "k_eOSWebClient"),
-            (e[(e.k_eOSEmbeddedClient = -675)] = "k_eOSEmbeddedClient"),
-            (e[(e.k_eTVOSUnknown = -650)] = "k_eTVOSUnknown"),
-            (e[(e.k_eTVOS9 = -649)] = "k_eTVOS9"),
-            (e[(e.k_eTVOS9_1 = -648)] = "k_eTVOS9_1"),
-            (e[(e.k_eTVOS9_2 = -647)] = "k_eTVOS9_2"),
-            (e[(e.k_eTVOS9_3 = -646)] = "k_eTVOS9_3"),
-            (e[(e.k_eTVOS10 = -645)] = "k_eTVOS10"),
-            (e[(e.k_eTVOS10_1 = -644)] = "k_eTVOS10_1"),
-            (e[(e.k_eTVOS10_2 = -643)] = "k_eTVOS10_2"),
-            (e[(e.k_eTVOS11 = -642)] = "k_eTVOS11"),
-            (e[(e.k_eTVOS11_1 = -641)] = "k_eTVOS11_1"),
-            (e[(e.k_eTVOS11_2 = -640)] = "k_eTVOS11_2"),
-            (e[(e.k_eTVOS11_3 = -639)] = "k_eTVOS11_3"),
-            (e[(e.k_eTVOS11_4 = -638)] = "k_eTVOS11_4"),
-            (e[(e.k_eTVOS12 = -637)] = "k_eTVOS12"),
-            (e[(e.k_eTVOS12_1 = -636)] = "k_eTVOS12_1"),
-            (e[(e.k_eIOSUnknown = -600)] = "k_eIOSUnknown"),
-            (e[(e.k_eIOS1 = -599)] = "k_eIOS1"),
-            (e[(e.k_eIOS2 = -598)] = "k_eIOS2"),
-            (e[(e.k_eIOS3 = -597)] = "k_eIOS3"),
-            (e[(e.k_eIOS4 = -596)] = "k_eIOS4"),
-            (e[(e.k_eIOS5 = -595)] = "k_eIOS5"),
-            (e[(e.k_eIOS6 = -594)] = "k_eIOS6"),
-            (e[(e.k_eIOS6_1 = -593)] = "k_eIOS6_1"),
-            (e[(e.k_eIOS7 = -592)] = "k_eIOS7"),
-            (e[(e.k_eIOS7_1 = -591)] = "k_eIOS7_1"),
-            (e[(e.k_eIOS8 = -590)] = "k_eIOS8"),
-            (e[(e.k_eIOS8_1 = -589)] = "k_eIOS8_1"),
-            (e[(e.k_eIOS8_2 = -588)] = "k_eIOS8_2"),
-            (e[(e.k_eIOS8_3 = -587)] = "k_eIOS8_3"),
-            (e[(e.k_eIOS8_4 = -586)] = "k_eIOS8_4"),
-            (e[(e.k_eIOS9 = -585)] = "k_eIOS9"),
-            (e[(e.k_eIOS9_1 = -584)] = "k_eIOS9_1"),
-            (e[(e.k_eIOS9_2 = -583)] = "k_eIOS9_2"),
-            (e[(e.k_eIOS9_3 = -582)] = "k_eIOS9_3"),
-            (e[(e.k_eIOS10 = -581)] = "k_eIOS10"),
-            (e[(e.k_eIOS10_1 = -580)] = "k_eIOS10_1"),
-            (e[(e.k_eIOS10_2 = -579)] = "k_eIOS10_2"),
-            (e[(e.k_eIOS10_3 = -578)] = "k_eIOS10_3"),
-            (e[(e.k_eIOS11 = -577)] = "k_eIOS11"),
-            (e[(e.k_eIOS11_1 = -576)] = "k_eIOS11_1"),
-            (e[(e.k_eIOS11_2 = -575)] = "k_eIOS11_2"),
-            (e[(e.k_eIOS11_3 = -574)] = "k_eIOS11_3"),
-            (e[(e.k_eIOS11_4 = -573)] = "k_eIOS11_4"),
-            (e[(e.k_eIOS12 = -572)] = "k_eIOS12"),
-            (e[(e.k_eIOS12_1 = -571)] = "k_eIOS12_1"),
-            (e[(e.k_eIOSMax = -570)] = "k_eIOSMax"),
-            (e[(e.k_eAndroidUnknown = -500)] = "k_eAndroidUnknown"),
-            (e[(e.k_eAndroid6 = -499)] = "k_eAndroid6"),
-            (e[(e.k_eAndroid7 = -498)] = "k_eAndroid7"),
-            (e[(e.k_eAndroid8 = -497)] = "k_eAndroid8"),
-            (e[(e.k_eAndroid9 = -496)] = "k_eAndroid9"),
-            (e[(e.k_eAndroidMax = -495)] = "k_eAndroidMax"),
-            (e[(e.k_eOSUMQ = -400)] = "k_eOSUMQ"),
-            (e[(e.k_eOSPS3 = -300)] = "k_eOSPS3"),
-            (e[(e.k_eLinuxUnknown = -203)] = "k_eLinuxUnknown"),
-            (e[(e.k_eLinux22 = -202)] = "k_eLinux22"),
-            (e[(e.k_eLinux24 = -201)] = "k_eLinux24"),
-            (e[(e.k_eLinux26 = -200)] = "k_eLinux26"),
-            (e[(e.k_eLinux32 = -199)] = "k_eLinux32"),
-            (e[(e.k_eLinux35 = -198)] = "k_eLinux35"),
-            (e[(e.k_eLinux36 = -197)] = "k_eLinux36"),
-            (e[(e.k_eLinux310 = -196)] = "k_eLinux310"),
-            (e[(e.k_eLinux316 = -195)] = "k_eLinux316"),
-            (e[(e.k_eLinux318 = -194)] = "k_eLinux318"),
-            (e[(e.k_eLinux3Unknown = -193)] = "k_eLinux3Unknown"),
-            (e[(e.k_eLinux4Unknown = -192)] = "k_eLinux4Unknown"),
-            (e[(e.k_eLinux41 = -191)] = "k_eLinux41"),
-            (e[(e.k_eLinux44 = -190)] = "k_eLinux44"),
-            (e[(e.k_eLinux49 = -189)] = "k_eLinux49"),
-            (e[(e.k_eLinux414 = -188)] = "k_eLinux414"),
-            (e[(e.k_eLinux419 = -187)] = "k_eLinux419"),
-            (e[(e.k_eLinux5Unknown = -186)] = "k_eLinux5Unknown"),
-            (e[(e.k_eLinux54 = -185)] = "k_eLinux54"),
-            (e[(e.k_eLinux6Unknown = -184)] = "k_eLinux6Unknown"),
-            (e[(e.k_eLinux7Unknown = -183)] = "k_eLinux7Unknown"),
-            (e[(e.k_eLinux510 = -182)] = "k_eLinux510"),
-            (e[(e.k_eLinuxMax = -103)] = "k_eLinuxMax"),
-            (e[(e.k_eMacOSUnknown = -102)] = "k_eMacOSUnknown"),
-            (e[(e.k_eMacOS104 = -101)] = "k_eMacOS104"),
-            (e[(e.k_eMacOS105 = -100)] = "k_eMacOS105"),
-            (e[(e.k_eMacOS1058 = -99)] = "k_eMacOS1058"),
-            (e[(e.k_eMacOS106_unused1 = -98)] = "k_eMacOS106_unused1"),
-            (e[(e.k_eMacOS106_unused2 = -97)] = "k_eMacOS106_unused2"),
-            (e[(e.k_eMacOS106_unused3 = -96)] = "k_eMacOS106_unused3"),
-            (e[(e.k_eMacOS106 = -95)] = "k_eMacOS106"),
-            (e[(e.k_eMacOS1063 = -94)] = "k_eMacOS1063"),
-            (e[(e.k_eMacOS1064_slgu = -93)] = "k_eMacOS1064_slgu"),
-            (e[(e.k_eMacOS1067 = -92)] = "k_eMacOS1067"),
-            (e[(e.k_eMacOS1067_unused = -91)] = "k_eMacOS1067_unused"),
-            (e[(e.k_eMacOS107 = -90)] = "k_eMacOS107"),
-            (e[(e.k_eMacOS108 = -89)] = "k_eMacOS108"),
-            (e[(e.k_eMacOS109 = -88)] = "k_eMacOS109"),
-            (e[(e.k_eMacOS1010 = -87)] = "k_eMacOS1010"),
-            (e[(e.k_eMacOS1011 = -86)] = "k_eMacOS1011"),
-            (e[(e.k_eMacOS1012 = -85)] = "k_eMacOS1012"),
-            (e[(e.k_eMacOS1013 = -84)] = "k_eMacOS1013"),
-            (e[(e.k_eMacOS1014 = -83)] = "k_eMacOS1014"),
-            (e[(e.k_eMacOS1015 = -82)] = "k_eMacOS1015"),
-            (e[(e.k_eMacOS1016 = -81)] = "k_eMacOS1016"),
-            (e[(e.k_eMacOS11 = -80)] = "k_eMacOS11"),
-            (e[(e.k_eMacOS11_1 = -79)] = "k_eMacOS11_1"),
-            (e[(e.k_eMacOS1017 = -75)] = "k_eMacOS1017"),
-            (e[(e.k_eMacOS12 = -74)] = "k_eMacOS12"),
-            (e[(e.k_eMacOS1018 = -70)] = "k_eMacOS1018"),
-            (e[(e.k_eMacOS13 = -69)] = "k_eMacOS13"),
-            (e[(e.k_eMacOS14 = -68)] = "k_eMacOS14"),
-            (e[(e.k_eMacOS15 = -67)] = "k_eMacOS15"),
-            (e[(e.k_eMacOSMax = -2)] = "k_eMacOSMax"),
-            (e[(e.k_eOSUnknown = -1)] = "k_eOSUnknown"),
-            (e[(e.k_eWinUnknown = 0)] = "k_eWinUnknown"),
-            (e[(e.k_eWin311 = 1)] = "k_eWin311"),
-            (e[(e.k_eWin95 = 2)] = "k_eWin95"),
-            (e[(e.k_eWin98 = 3)] = "k_eWin98"),
-            (e[(e.k_eWinME = 4)] = "k_eWinME"),
-            (e[(e.k_eWinNT = 5)] = "k_eWinNT"),
-            (e[(e.k_eWin2000 = 6)] = "k_eWin2000"),
-            (e[(e.k_eWinXP = 7)] = "k_eWinXP"),
-            (e[(e.k_eWin2003 = 8)] = "k_eWin2003"),
-            (e[(e.k_eWinVista = 9)] = "k_eWinVista"),
-            (e[(e.k_eWindows7 = 10)] = "k_eWindows7"),
-            (e[(e.k_eWin2008 = 11)] = "k_eWin2008"),
-            (e[(e.k_eWin2012 = 12)] = "k_eWin2012"),
-            (e[(e.k_eWindows8 = 13)] = "k_eWindows8"),
-            (e[(e.k_eWindows81 = 14)] = "k_eWindows81"),
-            (e[(e.k_eWin2012R2 = 15)] = "k_eWin2012R2"),
-            (e[(e.k_eWindows10 = 16)] = "k_eWindows10"),
-            (e[(e.k_eWin2016 = 17)] = "k_eWin2016"),
-            (e[(e.k_eWin2019 = 18)] = "k_eWin2019"),
-            (e[(e.k_eWin2022 = 19)] = "k_eWin2022"),
-            (e[(e.k_eWindows11 = 20)] = "k_eWindows11"),
-            (e[(e.k_eWinMAX = 21)] = "k_eWinMAX"),
-            (e[(e.k_eOSTypeMax = 32)] = "k_eOSTypeMax");
-        })(a || (a = {})),
+      var a;
+      t.d(r, { g: () => n, t: () => a }),
         (function (e) {
           (e[(e.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
             (e[(e.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
@@ -406,260 +268,262 @@
               "k_EPlatformTypeEmbeddedClient"),
             (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
             (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
-        })(k || (k = {}));
+        })(a || (a = {}));
     },
-    1078: (e, n, _) => {
+    1078: (e, r, t) => {
       "use strict";
-      _.d(n, { XC: () => S, _G: () => O });
-      var a = _(90626),
-        k = _(12155),
-        r = _(52038),
-        t = _(44691),
-        i = _(51706),
-        c = _(39449),
-        s = _.n(c);
-      function S() {
-        const [e, n] = a.useState(void 0),
-          _ = a.useCallback(() => n(void 0), []),
-          k = a.createElement(
+      t.d(r, { XC: () => d, _G: () => E });
+      var n = t(90626),
+        a = t(12155),
+        s = t(52038),
+        c = t(44691),
+        i = t(51706),
+        u = t(39449),
+        o = t.n(u),
+        l = t(61859);
+      function d() {
+        const [e, r] = n.useState(void 0),
+          t = n.useCallback(() => r(void 0), []),
+          a = n.createElement(
             i.EN,
             { active: void 0 !== e },
-            a.createElement(u, { closeModal: _, rgImageURL: e }),
+            n.createElement(m, { closeModal: t, rgImageURL: e }),
           );
-        return [n, k];
+        return [r, a];
       }
-      function u(e) {
-        const { closeModal: n, rgImageURL: _ } = e,
-          [k, r] = a.useState(0),
-          t = a.useCallback(() => {
-            r(0 == k ? _.length - 1 : k - 1);
-          }, [k, _.length]),
-          c = a.useCallback(() => {
-            k + 1 >= _.length ? r(0) : r(k + 1);
-          }, [k, _.length]);
-        return a.createElement(
+      function m(e) {
+        const { closeModal: r, rgImageURL: t } = e,
+          [a, s] = n.useState(0),
+          c = t?.length ?? 0,
+          u = n.useCallback(() => {
+            s(0 == a ? c - 1 : a - 1);
+          }, [a, c]),
+          d = n.useCallback(() => {
+            s(t && a + 1 >= c ? 0 : a + 1);
+          }, [a, t, c]);
+        return n.createElement(
           i.eV,
           {
-            "aria-label": null,
+            title: (0, l.we)("#SaleTech_Screenshot_Viewer"),
             bAllowFullSize: !0,
             bOKDisabled: !0,
-            closeModal: n,
+            closeModal: r,
             bHideCloseIcon: !0,
-            modalClassName: s().PopupScreenshotModal,
+            modalClassName: o().PopupScreenshotModal,
           },
-          a.createElement(O, {
-            index: k,
-            numElements: _.length,
-            fnForward: c,
-            fnBackwards: t,
-            fnClose: n,
+          n.createElement(E, {
+            index: a,
+            numElements: t?.length || 0,
+            fnForward: d,
+            fnBackwards: u,
+            fnClose: r,
             bCircular: !0,
           }),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: s().PopupScreenshotContainer },
-            a.createElement("img", {
-              className: s().PopupScreenshot,
-              src: _[k],
+            { className: o().PopupScreenshotContainer },
+            n.createElement("img", {
+              className: o().PopupScreenshot,
+              src: t?.[a],
             }),
           ),
         );
       }
-      function O(e) {
+      function E(e) {
         const {
-          index: n,
-          numElements: _,
+          index: r,
+          numElements: t,
           fnForward: i,
-          fnBackwards: c,
-          fnClose: S,
-          bCircular: u,
+          fnBackwards: u,
+          fnClose: l,
+          bCircular: d,
         } = e;
-        (0, t.E)("ArrowLeft", c, !0, !0),
-          (0, t.E)("Left", c, !0, !0),
-          (0, t.E)("ArrowRight", i, !0, !0),
-          (0, t.E)("Right", i, !0, !0),
-          (0, t.E)("Escape", () => S && S(), !0, !0),
-          (0, t.E)("Esc", () => S && S(), !0, !0);
-        let O = _ > 1;
-        return a.createElement(
+        (0, c.E)("ArrowLeft", () => u?.(), !0, !0),
+          (0, c.E)("Left", () => u?.(), !0, !0),
+          (0, c.E)("ArrowRight", () => i?.(), !0, !0),
+          (0, c.E)("Right", () => i?.(), !0, !0),
+          (0, c.E)("Escape", () => l && l(), !0, !0),
+          (0, c.E)("Esc", () => l && l(), !0, !0);
+        let m = t > 1;
+        return n.createElement(
           "div",
-          { className: s().ButtonCtn },
-          O &&
-            a.createElement(
-              a.Fragment,
+          { className: o().ButtonCtn },
+          m &&
+            n.createElement(
+              n.Fragment,
               null,
-              a.createElement(
+              n.createElement(
                 "div",
                 {
-                  className: (0, r.A)(
-                    s().ButtonIcon,
-                    0 !== n || u ? null : s().Disabled,
+                  className: (0, s.A)(
+                    o().ButtonIcon,
+                    0 !== r || d ? null : o().Disabled,
                   ),
-                  onClick: c,
+                  onClick: u,
                 },
-                a.createElement(k.V5W, { angle: 270 }),
+                n.createElement(a.V5W, { angle: 270 }),
               ),
-              a.createElement(
+              n.createElement(
                 "div",
                 {
-                  className: (0, r.A)(
-                    s().ButtonIcon,
-                    n !== _ - 1 || u ? null : s().Disabled,
+                  className: (0, s.A)(
+                    o().ButtonIcon,
+                    r !== t - 1 || d ? null : o().Disabled,
                   ),
                   onClick: i,
                 },
-                a.createElement(k.V5W, { angle: 90 }),
+                n.createElement(a.V5W, { angle: 90 }),
               ),
             ),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: s().ButtonIcon, onClick: S },
-            a.createElement(k.X, null),
+            { className: o().ButtonIcon, onClick: l },
+            n.createElement(a.X, null),
           ),
         );
       }
     },
-    26296: (e, n, _) => {
+    26296: (e, r, t) => {
       "use strict";
-      _.d(n, { i: () => c, o: () => i });
-      var a = _(90626),
-        k = _(61859),
-        r = _(67523),
-        t = _(41951);
+      t.d(r, { i: () => u, o: () => i });
+      var n = t(90626),
+        a = t(61859),
+        s = t(67523),
+        c = t(41951);
       function i(e) {
         const {
-            className: n,
-            srcs: _,
-            lazyLoad: k,
-            width: r,
-            height: t,
+            className: r,
+            srcs: t,
+            lazyLoad: a,
+            width: s,
+            height: c,
             alt: i,
-            crossOrigin: c,
+            crossOrigin: u,
           } = e,
-          [s, S] = a.useState(_.length),
-          [u, O] = a.useState(0);
-        a.useEffect(() => {
-          s != _.length && (S(_.length), O(0));
-        }, [s, _.length]);
-        const o = a.useCallback(() => {
-          e.onImageError && e.onImageError(e.srcs[u]),
-            u + 1 < e.srcs.length && O(u + 1);
-        }, [u, e]);
-        return 0 == _.length
+          [o, l] = n.useState(t.length),
+          [d, m] = n.useState(0);
+        n.useEffect(() => {
+          o != t.length && (l(t.length), m(0));
+        }, [o, t.length]);
+        const E = n.useCallback(() => {
+          e.onImageError && e.onImageError(e.srcs[d]),
+            d + 1 < e.srcs.length && m(d + 1);
+        }, [d, e]);
+        return 0 == t.length
           ? null
-          : a.createElement("img", {
-              className: n,
-              src: _[u],
-              crossOrigin: c,
-              onError: o,
-              loading: k ? "lazy" : void 0,
-              width: r,
-              height: t,
+          : n.createElement("img", {
+              className: r,
+              src: t[d],
+              crossOrigin: u,
+              onError: E,
+              loading: a ? "lazy" : void 0,
+              width: s,
+              height: c,
               alt: i,
             });
       }
-      function c(e) {
-        const [n, _] = a.useState(!1),
+      function u(e) {
+        const [r, t] = n.useState(!1),
           {
             className: i,
-            src: c,
-            lazyLoad: s,
-            width: S,
-            height: u,
-            alt: O,
-            crossOrigin: o,
+            src: u,
+            lazyLoad: o,
+            width: l,
+            height: d,
+            alt: m,
+            crossOrigin: E,
           } = e;
-        return n
-          ? a.createElement(
+        return r
+          ? n.createElement(
               "div",
-              { className: r.ErrorDiv },
-              a.createElement("p", null, (0, k.we)("#Image_ErrorTitle", c)),
-              a.createElement(
+              { className: s.ErrorDiv },
+              n.createElement("p", null, (0, a.we)("#Image_ErrorTitle", u)),
+              n.createElement(
                 "ul",
                 null,
-                a.createElement("li", null, (0, k.we)("#Image_Error_msg1")),
+                n.createElement("li", null, (0, a.we)("#Image_Error_msg1")),
               ),
-              a.createElement("p", null, (0, k.we)("#Image_Error_suggestion")),
+              n.createElement("p", null, (0, a.we)("#Image_Error_suggestion")),
             )
-          : a.createElement(t.o, {
+          : n.createElement(c.o, {
               className: i,
-              src: c,
-              onError: () => _(!0),
-              crossOrigin: o,
-              loading: s ? "lazy" : void 0,
-              width: S,
-              height: u,
-              alt: O,
+              src: u,
+              onError: () => t(!0),
+              crossOrigin: E,
+              loading: o ? "lazy" : void 0,
+              width: l,
+              height: d,
+              alt: m,
             });
       }
     },
-    41951: (e, n, _) => {
+    41951: (e, r, t) => {
       "use strict";
-      _.d(n, { o: () => O });
-      var a = _(90626),
-        k = _(12155),
-        r = _(52038),
-        t = _(1078),
-        i = _(10224),
-        c = _(21038);
-      const s = 1.3,
-        S = 3,
-        u = 256;
-      function O(e) {
-        const [n, _] = (0, a.useState)(!1),
-          [O, o] = (0, a.useState)({
+      t.d(r, { o: () => m });
+      var n = t(90626),
+        a = t(12155),
+        s = t(52038),
+        c = t(1078),
+        i = t(10224),
+        u = t(21038);
+      const o = 1.3,
+        l = 3,
+        d = 256;
+      function m(e) {
+        const [r, t] = (0, n.useState)(!1),
+          [m, E] = (0, n.useState)({
             naturalWidth: 0,
             naturalHeight: 0,
             displayWidth: 0,
             displayHeight: 0,
           }),
-          l = (0, a.useRef)(void 0),
-          [d, M] = (0, t.XC)();
+          S = (0, n.useRef)(void 0),
+          [p, O] = (0, c.XC)();
         return (
-          (0, a.useEffect)(() => {
+          (0, n.useEffect)(() => {
             if (
-              O.naturalWidth > O.displayWidth * s &&
-              O.naturalHeight > O.displayHeight * s &&
-              O.naturalWidth > u
+              m.naturalWidth > m.displayWidth * o &&
+              m.naturalHeight > m.displayHeight * o &&
+              m.naturalWidth > d
             ) {
-              O.naturalWidth / O.naturalHeight < S && _(!0);
+              m.naturalWidth / m.naturalHeight < l && t(!0);
             }
-          }, [O]),
-          n
-            ? a.createElement(
+          }, [m]),
+          r
+            ? n.createElement(
                 "span",
-                { className: c.PreviewCtn },
-                M,
-                a.createElement(
+                { className: u.PreviewCtn },
+                O,
+                n.createElement(
                   "span",
-                  { className: c.SVG },
-                  a.createElement(k.YNO, null),
+                  { className: u.SVG },
+                  n.createElement(a.YNO, null),
                 ),
-                a.createElement("img", {
+                n.createElement("img", {
                   ...e,
-                  className: (0, r.A)({
+                  className: (0, s.A)({
                     [e.className]: Boolean(e.className),
-                    [c.ExpandableHover]: !0,
+                    [u.ExpandableHover]: !0,
                   }),
-                  onClick: (n) => d([e.src]),
+                  onClick: (r) => p([e.src]),
                 }),
               )
-            : a.createElement("img", {
+            : n.createElement("img", {
                 ...e,
-                ref: l,
+                ref: S,
                 onLoad: (e) => {
                   if (!e.currentTarget.closest("a") && !(0, i.c5)()) {
                     const {
-                      naturalWidth: n,
-                      naturalHeight: _,
-                      width: a,
-                      height: k,
+                      naturalWidth: r,
+                      naturalHeight: t,
+                      width: n,
+                      height: a,
                     } = e.currentTarget;
-                    o({
-                      naturalWidth: n,
-                      naturalHeight: _,
-                      displayWidth: a,
-                      displayHeight: k,
+                    E({
+                      naturalWidth: r,
+                      naturalHeight: t,
+                      displayWidth: n,
+                      displayHeight: a,
                     });
                   }
                 },
@@ -667,53 +531,53 @@
         );
       }
     },
-    10224: (e, n, _) => {
+    10224: (e, r, t) => {
       "use strict";
-      _.d(n, { c5: () => i, zI: () => c });
-      var a = _(90626),
-        k = _(45387),
-        r = _.n(k),
-        t = _(84933);
+      t.d(r, { c5: () => i, zI: () => u });
+      var n = t(90626),
+        a = t(45387),
+        s = t.n(a),
+        c = t(84933);
       function i() {
-        return window.innerWidth < parseInt(r().strMaxMobileWidth);
+        return window.innerWidth < parseInt(s().strMaxMobileWidth);
       }
-      function c() {
-        const e = (0, t.CH)();
+      function u() {
+        const e = (0, c.CH)();
         return (
-          a.useEffect(
+          n.useEffect(
             () => (
               window.addEventListener("resize", e),
               () => window.removeEventListener("resize", e)
             ),
             [e],
           ),
-          window.innerWidth < parseInt(r().strMaxMobileWidth)
+          window.innerWidth < parseInt(s().strMaxMobileWidth)
         );
       }
     },
-    44691: (e, n, _) => {
+    44691: (e, r, t) => {
       "use strict";
-      _.d(n, { E: () => k });
-      var a = _(90626);
-      _(13871);
-      function k(e, n, _, k) {
-        a.useEffect(() => {
-          const a = (a) => {
-            a.key === e &&
-              (n(a), _ && a.preventDefault(), k && a.stopPropagation());
+      t.d(r, { E: () => a });
+      var n = t(90626);
+      t(13871);
+      function a(e, r, t, a) {
+        n.useEffect(() => {
+          const n = (n) => {
+            n.key === e &&
+              (r(n), t && n.preventDefault(), a && n.stopPropagation());
           };
           return (
-            document.addEventListener("keydown", a),
-            () => document.removeEventListener("keydown", a)
+            document.addEventListener("keydown", n),
+            () => document.removeEventListener("keydown", n)
           );
-        }, [e, n, _, k]);
+        }, [e, r, t, a]);
       }
     },
-    61855: (e, n, _) => {
+    61855: (e, r, t) => {
       "use strict";
-      _.d(n, { A: () => a });
-      const a =
-        _.p +
+      t.d(r, { A: () => n });
+      const n =
+        t.p +
         "images/applications/store/defaultappheader.png?v=valveisgoodatcaching";
     },
   },

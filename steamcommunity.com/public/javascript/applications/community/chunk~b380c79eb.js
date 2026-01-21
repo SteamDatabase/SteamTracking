@@ -278,8 +278,8 @@
       t.d(r, { j: () => l });
       var s = t(90626),
         n = t(64238),
-        a = t.n(n),
-        o = t(90534),
+        o = t.n(n),
+        a = t(90534),
         i = t(83392),
         p = t(38878);
       function l(e) {
@@ -290,8 +290,8 @@
             focusable: l = !0,
             hoverable: c = !0,
             clickable: m = !0,
-            className: u,
-            children: d,
+            className: d,
+            children: u,
             beforeContent: _,
             afterContent: f,
             hasValue: g,
@@ -303,46 +303,46 @@
           {
             ...v,
             radius: y,
-            className: a()(
+            className: o()(
               p.ControlBox,
               l && p.Focusable,
               c && p.Hoverable,
               m && p.Clickable,
               p[`Variant-${r}`],
               p[`Size-${t}`],
-              u,
+              d,
             ),
             align: "center",
             "data-has-value": !!g,
           },
           _ && s.createElement(i.s, { paddingRight: "2" }, _),
-          s.createElement(o.a, { flexGrow: "1", minWidth: "0" }, d),
+          s.createElement(a.a, { flexGrow: "1", minWidth: "0" }, u),
           f && s.createElement(i.s, { paddingLeft: "2" }, f),
         );
       }
     },
     86632: (e, r, t) => {
       "use strict";
-      t.d(r, { I: () => u });
+      t.d(r, { I: () => d });
       var s = t(90626),
         n = t(61023),
-        a = t(90534),
-        o = t(81393),
+        o = t(90534),
+        a = t(81393),
         i = t(64238),
         p = t.n(i),
         l = t(53011),
         c = t(83392);
       const m = (0, s.createContext)(null);
-      function u(e) {
+      function d(e) {
         const { options: r, getOptionLabel: t = (e) => e, ...n } = e;
         return s.createElement(
-          u.Root,
+          d.Root,
           { ...n },
-          r.map((e) => s.createElement(u.Item, { value: e, key: e }, t(e))),
+          r.map((e) => s.createElement(d.Item, { value: e, key: e }, t(e))),
         );
       }
-      function d(e) {
-        return s.createElement(a.a, {
+      function u(e) {
+        return s.createElement(o.a, {
           className: l.Indicator,
           radius: e.radius,
         });
@@ -355,45 +355,45 @@
             ? 1
             : 0;
       }
-      (u.Item = function (e) {
+      (d.Item = function (e) {
         const { value: r, children: t } = e,
           n = (0, s.useContext)(m),
-          [a, o] = (0, s.useState)(),
-          { register: i, unregister: u } = n || {};
+          [o, a] = (0, s.useState)(),
+          { register: i, unregister: d } = n || {};
         if (
           ((0, s.useEffect)(
-            () => (a && i && u ? (i(a, r), () => u(a, r)) : () => {}),
-            [i, u, r, a],
+            () => (o && i && d ? (i(o, r), () => d(o, r)) : () => {}),
+            [i, d, r, o],
           ),
           !n)
         )
           return null;
-        const { value: d, onValueChange: _, radius: f, size: g } = n,
-          v = r === d,
+        const { value: u, onValueChange: _, radius: f, size: g } = n,
+          v = r === u,
           y = v ? void 0 : () => _(r),
-          x = void 0 === t ? r : t;
+          N = void 0 === t ? r : t;
         return s.createElement(
           c.s,
           {
             justify: "center",
             align: "center",
             radius: f,
-            ref: o,
+            ref: a,
             onClick: y,
             "data-selected": v ? "true" : "false",
             className: p()(l.Item, g && l[`Size-${g}`]),
           },
-          x,
+          N,
         );
       }),
-        (u.Root = function (e) {
+        (d.Root = function (e) {
           const {
               variant: r = "default",
               radius: t,
-              size: a,
+              size: o,
               children: i,
               value: c,
-              onValueChange: u,
+              onValueChange: d,
             } = e,
             [f, g] = (0, s.useState)({}),
             v = (0, s.useCallback)((e, r) => g((t) => ({ ...t, [r]: e })), []),
@@ -405,16 +405,16 @@
                 }),
               [],
             ),
-            x = (0, s.useMemo)(
+            N = (0, s.useMemo)(
               () => ({
                 value: c,
-                onValueChange: u,
+                onValueChange: d,
                 register: v,
                 unregister: y,
                 radius: t,
-                size: a,
+                size: o,
               }),
-              [c, u, v, y, t, a],
+              [c, d, v, y, t, o],
             );
           return s.createElement(
             n.j,
@@ -424,7 +424,7 @@
               focusable: !1,
               variant: r,
               radius: t,
-              size: a,
+              size: o,
               className: p()(l.SegmentedControlBox, l[`Variant-${r}`]),
               tabIndex: 0,
               onKeyDown: (e) => {
@@ -445,28 +445,28 @@
                   else {
                     const e = f[c],
                       n = t.findIndex((r) => r === e);
-                    (0, o.wT)(
+                    (0, a.wT)(
                       "number" == typeof n,
                       "Could not find current segmented value position",
                     ),
                       (s = n + r);
                   }
                   const n = t[s < 0 ? t.length + s : s % t.length],
-                    a = Object.keys(f).find((e) => f[e] === n);
-                  "string" != typeof a
+                    o = Object.keys(f).find((e) => f[e] === n);
+                  "string" != typeof o
                     ? console.error("Could not find next segmeneted value")
-                    : (u(a), e.stopPropagation(), e.preventDefault());
+                    : (d(o), e.stopPropagation(), e.preventDefault());
                 }
               },
             },
             s.createElement(
               m.Provider,
-              { value: x },
+              { value: N },
               s.createElement(
                 "div",
                 { className: l.SegmentedControl },
                 i,
-                null !== c && s.createElement(d, { radius: t }),
+                null !== c && s.createElement(u, { radius: t }),
               ),
             ),
           );
@@ -477,17 +477,17 @@
       t.d(r, { A: () => m, a: () => l });
       var s = t(90626),
         n = t(64238),
-        a = t.n(n),
-        o = t(11526),
+        o = t.n(n),
+        a = t(11526),
         i = t(75659),
         p = t(44041);
       function l(e) {
-        const r = (0, o.mz)({ ...e, className: a()(p.Box, e.className) }, c);
+        const r = (0, a.mz)({ ...e, className: o()(p.Box, e.className) }, c);
         return s.createElement("div", { ...r });
       }
       const c = i.h;
       function m(e) {
-        return (0, o.Ef)(e, i.h);
+        return (0, a.Ef)(e, i.h);
       }
     },
     83392: (e, r, t) => {
@@ -495,16 +495,16 @@
       t.d(r, { s: () => l });
       var s = t(90626),
         n = t(11526),
-        a = t(75659),
-        o = t(64238),
-        i = t.n(o),
+        o = t(75659),
+        a = t(64238),
+        i = t.n(a),
         p = t(68875);
       function l(e) {
         const r = (0, n.mz)({ ...e, className: i()(e.className, p.Flex) }, c);
         return s.createElement("div", { ...r });
       }
       const c = [
-        ...a.h,
+        ...o.h,
         {
           prop: "direction",
           responsive: !0,
@@ -555,10 +555,10 @@
     },
     75659: (e, r, t) => {
       "use strict";
-      t.d(r, { L: () => a, h: () => o });
+      t.d(r, { L: () => o, h: () => a });
       var s = t(11526),
         n = t(88122);
-      const a = [
+      const o = [
           { prop: "margin", responsive: !0, className: (e) => n[`m-${e}`] },
           { prop: "marginX", responsive: !0, className: (e) => n[`mx-${e}`] },
           { prop: "marginY", responsive: !0, className: (e) => n[`my-${e}`] },
@@ -585,8 +585,8 @@
           },
           { prop: "marginEnd", responsive: !0, className: (e) => n[`me-${e}`] },
         ],
-        o = [
-          ...a,
+        a = [
+          ...o,
           { prop: "padding", responsive: !0, className: (e) => n[`p-${e}`] },
           { prop: "paddingX", responsive: !0, className: (e) => n[`px-${e}`] },
           { prop: "paddingY", responsive: !0, className: (e) => n[`py-${e}`] },
@@ -810,7 +810,7 @@
     11526: (e, r, t) => {
       "use strict";
       t.d(r, {
-        Ef: () => o,
+        Ef: () => a,
         Fd: () => l,
         ti: () => p,
         To: () => c,
@@ -818,7 +818,7 @@
       });
       var s = t(43186),
         n = t(55348);
-      const a = {
+      const o = {
         0: !0,
         1: !0,
         2: !0,
@@ -830,7 +830,7 @@
         8: !0,
         9: !0,
       };
-      function o(e, r) {
+      function a(e, r) {
         const t = { remaining: { ...e }, extracted: {} };
         for (const e of r) {
           const r = e.prop;
@@ -842,44 +842,44 @@
       function i(e, r) {
         return (function (e, r, t) {
           const s = [],
-            a = {},
+            o = {},
             i = {},
-            { extracted: p, remaining: l } = o(e, r);
-          for (const o of r) {
-            if (!(o.prop in p)) continue;
-            let r = p[o.prop];
+            { extracted: p, remaining: l } = a(e, r);
+          for (const a of r) {
+            if (!(a.prop in p)) continue;
+            let r = p[a.prop];
             if (void 0 !== r) {
               if (
-                (o.responsive && (r = (0, n.I)(r, t.formFactor)), o.className)
+                (a.responsive && (r = (0, n.I)(r, t.formFactor)), a.className)
               ) {
                 if (
-                  !o.cssProperty &&
-                  !o.dataProperty &&
-                  "string" == typeof o.className &&
+                  !a.cssProperty &&
+                  !a.dataProperty &&
+                  "string" == typeof a.className &&
                   !r
                 )
                   continue;
                 const e =
-                  "function" == typeof o.className
-                    ? o.className(r)
-                    : o.className;
+                  "function" == typeof a.className
+                    ? a.className(r)
+                    : a.className;
                 s.push(e);
               }
-              if (o.cssProperty)
-                if ("function" == typeof o.cssProperty) {
-                  const t = o.cssProperty(r, e);
+              if (a.cssProperty)
+                if ("function" == typeof a.cssProperty) {
+                  const t = a.cssProperty(r, e);
                   if (t.length && Array.isArray(t[0]))
-                    t.forEach(([e, r]) => (a[e] = r));
+                    t.forEach(([e, r]) => (o[e] = r));
                   else {
                     const e = t;
-                    a[e[0]] = e[1];
+                    o[e[0]] = e[1];
                   }
-                } else a[o.cssProperty] = r;
-              if (o.dataProperty)
-                if ("function" == typeof o.dataProperty) {
-                  const [e, t] = o.dataProperty(r);
+                } else o[a.cssProperty] = r;
+              if (a.dataProperty)
+                if ("function" == typeof a.dataProperty) {
+                  const [e, t] = a.dataProperty(r);
                   i[`data-${e}`] = t;
-                } else i[`data-${o.dataProperty}`] = r;
+                } else i[`data-${a.dataProperty}`] = r;
             }
           }
           return (
@@ -889,14 +889,14 @@
             "style" in l &&
               l.style &&
               "object" == typeof l.style &&
-              Object.assign(a, l.style),
-            { ...i, ...l, className: s.join(" "), style: a }
+              Object.assign(o, l.style),
+            { ...i, ...l, className: s.join(" "), style: o }
           );
         })(e, r, { formFactor: (0, s.xC)() });
       }
       function p(e) {
         return (function (e) {
-          return !!a[e];
+          return !!o[e];
         })(e)
           ? `var(--spacing-${e})`
           : e;
@@ -915,23 +915,23 @@
       t.d(r, {
         cW: () => p,
         cr: () => l,
-        IE: () => o,
+        IE: () => a,
         xC: () => c,
-        LT: () => u,
+        LT: () => d,
       });
       var s = t(90626);
       function n(e) {
-        const r = "function" == typeof matchMedia ? matchMedia : a,
+        const r = "function" == typeof matchMedia ? matchMedia : o,
           t = (0, s.useMemo)(() => r(e), [e, r]),
-          [n, o] = (0, s.useState)(!!t && t.matches);
+          [n, a] = (0, s.useState)(!!t && t.matches);
         return (
           (0, s.useEffect)(() => {
             if (!t) return () => {};
             function e(e) {
-              o(e.matches);
+              a(e.matches);
             }
             return (
-              o(t.matches),
+              a(t.matches),
               t.addEventListener("change", e),
               () => t.removeEventListener("change", e)
             );
@@ -939,25 +939,25 @@
           n
         );
       }
-      function a() {
+      function o() {
         return null;
       }
-      const o = ["initial", "sm", "md", "lg"],
+      const a = ["initial", "sm", "md", "lg"],
         i = (0, s.createContext)("lg");
       function p(e) {
         const { children: r, breakpoints: t = { sm: 768, md: 940, lg: 1240 } } =
             e,
-          a = (function (e) {
+          o = (function (e) {
             const r = n(`(min-width: ${e.sm}px)`),
               t = n(`(min-width: ${e.md}px)`),
-              a = n(`(min-width: ${e.lg}px)`),
-              [o, i] = (0, s.useState)(!0);
+              o = n(`(min-width: ${e.lg}px)`),
+              [a, i] = (0, s.useState)(!0);
             return (
               (0, s.useEffect)(() => i(!0), []),
-              o ? (a ? "lg" : t ? "md" : r ? "sm" : "initial") : "lg"
+              a ? (o ? "lg" : t ? "md" : r ? "sm" : "initial") : "lg"
             );
           })(t);
-        return s.createElement(i.Provider, { value: a }, r);
+        return s.createElement(i.Provider, { value: o }, r);
       }
       function l(e) {
         const { formFactor: r, children: t } = e;
@@ -968,29 +968,29 @@
       function c() {
         return (0, s.useContext)(i);
       }
-      const m = o.reduce((e, r, t) => ((e[r] = t), e), {});
-      function u(e) {
+      const m = a.reduce((e, r, t) => ((e[r] = t), e), {});
+      function d(e) {
         const r = c();
         return m[r] >= m[e];
       }
     },
     55348: (e, r, t) => {
       "use strict";
-      t.d(r, { I: () => a, n: () => o });
+      t.d(r, { I: () => o, n: () => a });
       var s = t(43186);
       const n = s.IE.reduce((e, r, t) => ((e[r] = t), e), {});
-      function a(e, r) {
+      function o(e, r) {
         if ("object" != typeof e) return e;
         for (let t = n[r]; t >= 0; t--) if (s.IE[t] in e) return e[s.IE[t]];
         return e.initial;
       }
-      function o(e) {
-        return a(e, (0, s.xC)());
+      function a(e) {
+        return o(e, (0, s.xC)());
       }
     },
     17304: (e, r, t) => {
       "use strict";
-      t.d(r, { Y: () => d });
+      t.d(r, { Y: () => u });
       var s = t(90626);
       const n = [
         "greyneutral",
@@ -1025,40 +1025,40 @@
         "amber",
         "orange",
       ];
-      var a = t(43186);
-      const o = (0, s.createContext)({}),
+      var o = t(43186);
+      const a = (0, s.createContext)({}),
         i = (0, s.createContext)(() => {});
       function p(e) {
         const [r, t] = (0, s.useState)({});
         return s.createElement(
-          o.Provider,
+          a.Provider,
           { value: r },
           s.createElement(i.Provider, { value: t }, e.children),
         );
       }
       function l() {
-        return (0, s.useContext)(o);
+        return (0, s.useContext)(a);
       }
       var c = t(64238),
         m = t.n(c),
-        u = t(13857);
-      const d = s.memo(function (e) {
+        d = t(13857);
+      const u = s.memo(function (e) {
         const {
             defaultTextSize: r = "3",
             accentColor: t = "blue",
-            dullColor: o = "greyneutral",
+            dullColor: a = "greyneutral",
             bodyTextColor: i = "text-light",
             breakpoints: l,
             children: c,
-            zoo: d,
+            zoo: u,
           } = e,
-          [f, g] = s.useState(o),
+          [f, g] = s.useState(a),
           [v, y] = s.useState(t),
-          x = window,
-          N = (e) => (r) => {
+          N = window,
+          x = (e) => (r) => {
             n.includes(r) ? e(r) : console.error("Unknown color!");
           };
-        (x.setAccent = N(y)), (x.setDull = N(g));
+        (N.setAccent = x(y)), (N.setDull = x(g));
         const h = {
           "--default-font-size": `var(--text-size-${r})`,
           "--default-line-height": `var(--line-height-${r})`,
@@ -1070,7 +1070,7 @@
           p,
           null,
           s.createElement(
-            a.cW,
+            o.cW,
             { breakpoints: l },
             s.createElement(
               _,
@@ -1078,7 +1078,7 @@
               s.createElement(
                 "div",
                 {
-                  className: m()(u.Root, "noOpinionatedGlobalStyles"),
+                  className: m()(d.Root, "noOpinionatedGlobalStyles"),
                   style: h,
                 },
                 s.createElement(
@@ -1087,11 +1087,11 @@
                     "data-accent-color": v,
                     "data-dull-color": f,
                     "data-body-text-color": i,
-                    className: u.DataAttributes,
+                    className: d.DataAttributes,
                   },
                   s.createElement(
                     "div",
-                    { className: u.AfterDataAttributes },
+                    { className: d.AfterDataAttributes },
                     c,
                     !1,
                   ),
@@ -1104,75 +1104,7 @@
       function _(e) {
         const { children: r } = e,
           { formFactorOverride: t } = l();
-        return s.createElement(a.cr, { formFactor: t }, r);
-      }
-    },
-    42834: (e, r, t) => {
-      "use strict";
-      t.d(r, { DT: () => l, b0: () => i, bu: () => p, pd: () => c });
-      var s = t(8527),
-        n = t(39777),
-        a = t(81393),
-        o = t(38535);
-      function i(e, r) {
-        if (e[r]) {
-          if ("community_icon" == r) {
-            const t = e.asset_url_format
-              .replace(/^steam\//, "images/")
-              .replace("${FILENAME}", `${e[r]}.jpg`)
-              .replace(/\?.*$/, "");
-            return `${s.TS.MEDIA_CDN_COMMUNITY_URL}${t}`;
-          }
-          {
-            const t = e.asset_url_format.replace("${FILENAME}", e[r]);
-            return `${s.TS.STORE_ITEM_BASE_URL}${t}`;
-          }
-        }
-      }
-      function p(e, r = "full") {
-        let t = "";
-        switch (r) {
-          case "thumb":
-            t = ".116x65";
-            break;
-          case "600x338":
-            t = ".600x338";
-            break;
-          case "1920x1080":
-            t = ".1920x1080";
-            break;
-          case "full":
-            t = "";
-            break;
-          default:
-            (0, a.z_)(r, `Invalid size: ${r}`);
-        }
-        return (
-          s.TS.STORE_ITEM_BASE_URL + e.filename.replace(/\.[^.*]$/, `${t}$&`)
-        );
-      }
-      function l(e) {
-        const { data: r } = (0, n.j4)(e),
-          t = (0, o.dy)();
-        if (r)
-          return [
-            ...(r.all_ages_screenshots || []),
-            ...(!t && r.mature_content_screenshots
-              ? r.mature_content_screenshots
-              : []),
-          ].sort((e, r) => e.ordinal - r.ordinal);
-      }
-      function c(e, r = !1) {
-        const { data: t } = (0, n.lv)({ appid: e });
-        return void 0 === t
-          ? void 0
-          : null === t
-            ? null
-            : r && t.library_capsule_2x
-              ? i(t, "library_capsule_2x")
-              : t.library_capsule
-                ? i(t, "library_capsule")
-                : `${s.TS.STORE_ITEM_BASE_URL}steam/apps/${e}/portrait.png`;
+        return s.createElement(o.cr, { formFactor: t }, r);
       }
     },
   },

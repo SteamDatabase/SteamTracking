@@ -2841,10 +2841,7 @@
                 let _ = (0, _._)(_(_.args));
                 if (!_) {
                   const _ = _.children;
-                  "string" == typeof _ &&
-                    (__webpack_require__.startsWith("http://") ||
-                      __webpack_require__.startsWith("https://")) &&
-                    (_ = (0, _._)(_));
+                  "string" == typeof _ && (0, _._)(_) && (_ = (0, _._)(_));
                 }
                 const _ =
                     "button" == _(_.args, "style") ? _().LinkButton : null,

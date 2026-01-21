@@ -99,6 +99,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         let _ = _.getElementsByTagName("MPD");
@@ -182,7 +183,7 @@
         ));
       }
       function _(_) {
-        return _.startsWith("http://") || _.startsWith("https://");
+        return (0, _._)(_);
       }
       function _(_, _) {
         let _ = _;
@@ -1671,8 +1672,7 @@
                   (_.srclang = _.strLanguage),
                   (_.src = _.rgRepresentations[0].strClosedCaptionFile),
                   (this.m_nTimedText += 1),
-                  (!this.m_bAlwaysStartWithSubtitles &&
-                    _ == _._.k_Lang_English) ||
+                  (!this.m_bAlwaysStartWithSubtitles && 0 == _) ||
                     _._[_.strLanguage] != _ ||
                     ((_.default = !0),
                     (this.m_timedTextRepSelected = _.rgRepresentations[0])),
@@ -3559,7 +3559,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(() => Boolean(_)),
@@ -3590,7 +3589,7 @@
         };
       }
       function _(_, _) {
-        _ != _._.k_EResultOK ? _.fnSetError(!0) : _.fnSetSuccess(!0);
+        1 != _ ? _.fnSetError(!0) : _.fnSetSuccess(!0);
       }
       function _(_) {
         const {

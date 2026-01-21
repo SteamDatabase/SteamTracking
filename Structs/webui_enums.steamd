@@ -224,33 +224,6 @@ enum EAppAutoUpdateBehavior
 	k_EAppAutoUpdateBehaviorRegularPriority = 3;
 }
 
-enum EAppCapability
-{
-	k_EAppCapabilityNone = 0;
-	k_EAppCapabilityCommunityItems = 1;
-	k_EAppCapabilityJumboKeyRequests = 2;
-	k_EAppCapabilityKeyRequests = 3;
-	k_EAppCapabilityVetted = 4;
-	k_EAppCapabilityEligibleForUpcomingList = 5;
-	k_EAppCapabilityVettedForShowcaseItems = 6;
-	k_EAppCapabilityFishy = 7;
-}
-
-enum EAppCreationCreditStatus
-{
-	k_EAppCreationCreditStatus_Available = 0;
-	k_EAppCreationCreditStatus_Redeemed = 1;
-	k_EAppCreationCreditStatus_Revoked = 2;
-	k_EAppCreationCreditStatus_Pending = 3;
-}
-
-enum EAppCreationCreditType
-{
-	k_EAppCreationCreditType_Standard = 0;
-	k_EAppCreationCreditType_Granted = 1;
-	k_EAppCreationCreditType_Complimentary = 2;
-}
-
 enum EAppDevsRelationship
 {
 	k_EAppDevsRelationship_Unknown = 0;
@@ -300,61 +273,6 @@ enum EAppReleaseState
 	k_EAppReleaseState_Disabled = 5;
 }
 
-enum EAppReportingPlatform
-{
-	k_EAppReportingPlatform_All = 0;
-	k_EAppReportingPlatform_Windows = 1;
-	k_EAppReportingPlatform_Mac = 2;
-	k_EAppReportingPlatform_Linux = 4;
-}
-
-enum EAppShareState
-{
-	k_EAppShareState_Invalid = 0;
-	k_EAppShareState_Created = 1;
-	k_EAppShareState_AwaitingConfirmation = 2;
-	k_EAppShareState_Declined = 3;
-	k_EAppShareState_Active = 4;
-	k_EAppShareState_Canceled = 5;
-	k_EAppShareState_Expired = 6;
-	k_EAppShareState_Revoked = 7;
-	k_EAppShareState_CanceledForAppTransfer = 8;
-	k_EAppShareState_MAX = 9;
-}
-
-enum EAppTestType
-{
-	k_EAppTestType_BuildReview = 0;
-	k_EAppTestType_StorePageReview = 1;
-	k_EAppTestType_SteamChina_BuildReview = 2;
-	k_EAppTestType_SteamChina_StorePageReview = 3;
-	k_EAppTestType_SteamChinaPlatformOperator_StorePageReview = 4;
-	k_EAppTestType_SteamChinaPlatformOperator_BuildReview = 5;
-	k_EAppTestType_SteamDeckCompatibilityReview = 6;
-}
-
-enum EAppTrafficStatAttribution
-{
-	k_EAppTrafficStatAttribution_Store = 0;
-	k_EAppTrafficStatAttribution_SteamPlatform = 1;
-	k_EAppTrafficStatAttribution_External = 2;
-}
-
-enum EAppTransferState
-{
-	k_EAppTransferState_Invalid = 0;
-	k_EAppTransferState_PendingConfirmationFrom_Receiver = 1;
-	k_EAppTransferState_PendingConfirmationFrom_Sender = 2;
-	k_EAppTransferState_PendingApproval = 3;
-	k_EAppTransferState_Approved = 4;
-	k_EAppTransferState_CanceledByReceiver = 5;
-	k_EAppTransferState_CanceledBySender = 6;
-	k_EAppTransferState_Declined = 7;
-	k_EAppTransferState_RequiresEscalation = 8;
-	k_EAppTransferState_ApprovedPendingScheduledTransfer = 9;
-	k_EAppTransferState_Expired = 10;
-}
-
 enum EAppUpdateContentType
 {
 	k_EAppUpdateContentType_Content = 0;
@@ -373,15 +291,6 @@ enum EAppUpdateProgress
 	k_EAppUpdateProgress_Copying = 5;
 	k_EAppUpdateProgress_Committing = 6;
 	k_EAppUpdateProgress_Max = 7;
-}
-
-enum EAssetPropertyType
-{
-	k_EAssetPropertyType_Unknown = 0;
-	k_EAssetPropertyType_Float = 1;
-	k_EAssetPropertyType_Int = 2;
-	k_EAssetPropertyType_String = 3;
-	k_EAssetPropertyType_MAX = 4;
 }
 
 enum EAuctionBadgeLevel
@@ -417,14 +326,6 @@ enum EBannedVanityURLSource
 	k_EBannedVanityURLSource_Unknown = 0;
 	k_EBannedVanityURLSource_ResetContent = 1;
 	k_EBannedVanityURLSource_Manual = 2;
-}
-
-enum EBetaProgram
-{
-	k_EBetaProgram_Invalid = 0;
-	k_EBetaProgram_PartnerUTMStats = 1;
-	k_EBetaProgram_SteamStatsAPI = 2;
-	k_EBetaProgram_SteamLearn = 3;
 }
 
 enum EBroadcastImageType
@@ -553,14 +454,6 @@ enum ECommentReportAction
 	k_ECommentReportAction_Hidden = 3;
 	k_ECommentReportAction_ExternalDelete = 4;
 	k_ECommentReportAction_ThreadDeleted = 5;
-}
-
-enum ECommunicationInviteState
-{
-	k_ECommunicationInviteState_Invalid = 0;
-	k_ECommunicationInviteState_Pending = 1;
-	k_ECommunicationInviteState_Accepted = 2;
-	k_ECommunicationInviteState_Removed = 4;
 }
 
 enum ECommunityProfileItemProperty
@@ -725,13 +618,6 @@ enum EDiscoveryAction
 	k_EDiscoveryAction_OpenDoor = 2;
 }
 
-enum EDocumentationFileType
-{
-	k_EDocumentationFileType_Invalid = 0;
-	k_EDocumentationFileType_Download = 1;
-	k_EDocumentationFileType_Image = 2;
-}
-
 enum EDown
 {
 	k_EDownoadInvalid = 0;
@@ -805,37 +691,6 @@ enum EFamilyQuery
 	k_EFamilyQueryLoadCart = 14;
 	k_EFamilyQuerySetCooldownOverrides = 15;
 	k_EFamilyQueryResendInvite = 16;
-}
-
-enum EFeature
-{
-	k_EFeatureInvalid = 0;
-	k_EFeatureBlockNever = 0;
-	k_EFeatureStore = 1;
-	k_EFeatureCommunity = 2;
-	k_EFeatureProfile = 3;
-	k_EFeatureFriends = 4;
-	k_EFeatureNews = 5;
-	k_EFeatureTrading = 6;
-	k_EFeatureSettings = 7;
-	k_EFeatureConsole = 8;
-	k_EFeatureBrowser = 9;
-	k_EFeatureParentalSetup = 10;
-	k_EFeatureLibrary = 11;
-	k_EFeatureTest = 12;
-	k_EFeatureSiteLicense = 13;
-	k_EFeatureKioskMode_Deprecated = 14;
-	k_EFeatureBlockAlways = 15;
-	k_EFeatureMax = 16;
-}
-
-enum EFeatureBlockReason
-{
-	k_EFeatureBlockReason_NotBlocked = 0;
-	k_EFeatureBlockReason_PIN = 1;
-	k_EFeatureBlockReason_ChildAccount = 2;
-	k_EFeatureBlockReason_RemotePlay = 3;
-	k_EFeatureBlockReason_KioskMode = 4;
 }
 
 enum EFloatingGamepadTextInputModeMode
@@ -1096,55 +951,6 @@ enum ELoginUIStyle
 	k_ELoginUIStyleNew = 2;
 }
 
-enum EMarketingMessage
-{
-	k_EMarketingMessageInvalid = 0;
-	k_EMarketingMessageNowAvailable = 1;
-	k_EMarketingMessageWeekendDeal = 2;
-	k_EMarketingMessagePrePurchase = 3;
-	k_EMarketingMessagePlayNow = 4;
-	k_EMarketingMessagePreloadNow = 5;
-	k_EMarketingMessageGeneral = 6;
-	k_EMarketingMessageDemoQuit = 7;
-	k_EMarketingMessageGifting = 8;
-	k_EMarketingMessageEJsKorner = 9;
-	k_EMarketingMessageUpdate = 10;
-	k_EMarketingMessageMidweekDeal = 11;
-	k_EMarketingMessageDailyDeal = 12;
-	k_EMarketingMessageNewDLC = 13;
-	k_EMarketingMessageFreeWeekend = 14;
-	k_EMarketingMessageSalePages = 15;
-	k_EMarketingMessagePlaytestAvailable = 16;
-}
-
-enum EMarketingMessageClickLocation
-{
-	k_EMarketingMessageClickLocation_Unknown = 0;
-	k_EMarketingMessageClickLocation_Image = 1;
-	k_EMarketingMessageClickLocation_Button = 2;
-	k_EMarketingMessageClickLocation_DlcCapsule = 3;
-	k_EMarketingMessageClickLocation_HeaderArea = 4;
-	k_EMarketingMessageClickLocation_GameCapsule = 5;
-	k_EMarketingMessageClickLocation_PartnerEvent = 6;
-}
-
-enum EMarketingMessageFilterType
-{
-	k_EMarketingMessageFilterType_Invalid = 0;
-	k_EMarketingMessageFilterType_OwnsApps = 1;
-	k_EMarketingMessageFilterType_DoesNotOwnApps = 2;
-	k_EMarketingMessageFilterType_OwnsPackages = 3;
-	k_EMarketingMessageFilterType_DoesNotOwnsPackages = 4;
-	k_EMarketingMessageFilterType_WishlistsApps = 5;
-	k_EMarketingMessageFilterType_FollowsApps = 6;
-	k_EMarketingMessageFilterType_MinPlayTimeApps = 7;
-	k_EMarketingMessageFilterType_MustLaunchedApps = 8;
-	k_EMarketingMessageFilterType_RecentPlayedApps = 9;
-	k_EMarketingMessageFilterType_RetentionApps = 10;
-	k_EMarketingMessageFilterType_SimilarApps = 11;
-	k_EMarketingMessageFilterType_MAX = 12;
-}
-
 enum EMarketingMessageFlags
 {
 	k_EMarketingMessageFlagsNone = 0;
@@ -1155,84 +961,12 @@ enum EMarketingMessageFlags
 	k_EMarketingMessageFlagsPlatformRestrictions = 14;
 }
 
-enum EMarketingMessageLookup
-{
-	k_EMarketingMessageLookupInvalid = 0;
-	k_EMarketingMessageLookupByGID = 1;
-	k_EMarketingMessageLookupActive = 2;
-	k_EMarketingMessageLookupByTitleWithType = 3;
-	k_EMarketingMessageLookupByGIDList = 4;
-}
-
-enum EMarketingMessageTemplate
-{
-	k_EMarketingMessageTemplate_Unknown = 0;
-	k_EMarketingMessageTemplate_Image = 1;
-	k_EMarketingMessageTemplate_Animated = 2;
-	k_EMarketingMessageTemplate_Featured_Video = 3;
-	k_EMarketingMessageTemplate_DLC_Override = 4;
-	k_EMarketingMessageTemplate_Replay = 5;
-	k_EMarketingMessageTemplate_Event = 6;
-	k_EMarketingMessageTemplate_AutoRender = 7;
-	k_EMarketingMessageTemplate_MAX = 8;
-}
-
-enum EMarketingMessageValidRealms
-{
-	k_EMarketingMessageValidRealms_GlobalOnly = 0;
-	k_EMarketingMessageValidRealms_SteamChinaOnly = 1;
-	k_EMarketingMessageValidRealms_GlobalAndSteamChina = 2;
-}
-
-enum EMarketingMessageVisible
-{
-	k_EMarketingMessageVisibleBeta = 1;
-	k_EMarketingMessageVisiblePublic = 2;
-	k_EMarketingMessageVisibleApprovedForPublish = 3;
-}
-
-enum EMembershipEvent
-{
-	k_EMembershipEvent_Invalid = 0;
-	k_EMembershipEvent_AccountAddedToPartner = 1;
-	k_EMembershipEvent_AccountRemovedFromPartner = 2;
-	k_EMembershipEvent_GroupRightsModified = 3;
-	k_EMembershipEvent_AddedToGroup = 4;
-	k_EMembershipEvent_RemovedFromGroup = 5;
-	k_EMembershipEvent_PublisherRightsModified = 6;
-}
-
 enum EMenu
 {
 	k_EMenuButtonPress = 0;
 	k_EMenuButtonRelease = 1;
 	k_EMenuTouchRelease = 2;
 	k_EMenuTouchAlways = 3;
-}
-
-enum EMobileConfirmationAction
-{
-	k_EMobileConfirmationAction_None = 0;
-	k_EMobileConfirmationAction_Allow = 1;
-	k_EMobileConfirmationAction_Cancel = 2;
-}
-
-enum EMobileConfirmationType
-{
-	k_EMobileConfirmationType_Invalid = 0;
-	k_EMobileConfirmationType_Test = 1;
-	k_EMobileConfirmationType_Trade = 2;
-	k_EMobileConfirmationType_MarketListing = 3;
-	k_EMobileConfirmationType_FeatureOptOut = 4;
-	k_EMobileConfirmationType_PhoneNumberChange = 5;
-	k_EMobileConfirmationType_AccountRecovery = 6;
-	k_EMobileConfirmationType_BuildChangeRequest = 7;
-	k_EMobileConfirmationType_AddUser = 8;
-	k_EMobileConfirmationType_RegisterApiKey = 9;
-	k_EMobileConfirmationType_InviteToFamilyGroup = 10;
-	k_EMobileConfirmationType_JoinFamilyGroup = 11;
-	k_EMobileConfirmationType_MarketPurchase = 12;
-	k_EMobileConfirmationType_RequestRefund = 13;
 }
 
 enum EModeratorAction
@@ -1252,13 +986,6 @@ enum EModeratorAction
 	k_EModeratorAction_Classify = 12;
 	k_EModeratorAction_Blur = 13;
 	k_EModeratorAction_Unblur = 14;
-}
-
-enum ENavigationDeviceType
-{
-	k_ENavigationDeviceType_Unknown = 0;
-	k_ENavigationDeviceType_PC = 1;
-	k_ENavigationDeviceType_Mobile = 2;
 }
 
 enum ENetFakeLocalSystemState
@@ -1291,41 +1018,6 @@ enum ENotifyFlag
 	k_ENotifyFlagNone = 0;
 	k_ENotifyFlagByEmail = 1;
 	k_ENotifyFlagByPush = 2;
-}
-
-enum EOptInEmailSetting
-{
-	k_EOptInEmailSetting_None = 0;
-	k_EOptInEmailSetting_AssetKit = 1;
-	k_EOptInEmailSetting_PressPreview = 2;
-	k_EOptInEmailSetting_ScheduleWidget = 4;
-	k_EOptInEmailSetting_OptOut = 8;
-	k_EOptInEmailSetting_OptOutDemo = 16;
-	k_EOptInEmailSetting_EnterDiscount = 32;
-	k_EOptInEmailSetting_ActivateDemo = 64;
-	k_EOptInEmailSetting_ReviewCategorization = 128;
-	k_EOptInEmailSetting_DemoReview = 256;
-	k_EOptInEmailSetting_PressPreviewDetails = 512;
-	k_EOptInEmailSetting_StatsSummary = 1024;
-	k_EOptInEmailSetting_SurveyButton = 2048;
-	k_EOptInEmailSetting_DemoLaunch = 4096;
-	k_EOptInEmailSetting_CallForRegistration = 8192;
-	k_EOptInEmailSetting_SteamAwardCategories = 16384;
-	k_EOptInEmailSetting_SeasonalFeatureRequest = 32768;
-}
-
-enum EOptInEmailTarget
-{
-	k_EOptInEmailTarget_ActivatingUser = 1;
-	k_EOptInEmailTarget_DemoNotLive = 2;
-	k_EOptInEmailTarget_DiscountMissing = 4;
-	k_EOptInEmailTarget_DEPRECATED_InvitedPartners = 8;
-	k_EOptInEmailTarget_InvitedApps = 16;
-	k_EOptInEmailTarget_EligibleApps = 32;
-	k_EOptInEmailTarget_FeaturedApps = 64;
-	k_EOptInEmailTarget_FeaturedAppsMissingDate = 128;
-	k_EOptInEmailTarget_FeaturedAppsNotContacted = 256;
-	k_EOptInEmailTarget_CustomAppList = 512;
 }
 
 enum EOptInType
@@ -1361,25 +1053,6 @@ enum EOverlayToStoreFlag
 	k_EOverlayToStoreFlag_AddToCartAndShow = 2;
 }
 
-enum EPartnerAppOptInAppealState
-{
-	k_EPartnerAppOptInAppealState_Invalid = 0;
-	k_EPartnerAppOptInAppealState_Approved = 1;
-	k_EPartnerAppOptInAppealState_Denied = 2;
-}
-
-enum EPartnerAppOptInType
-{
-	k_EPartnerAppOptInType_PartnerEvent = 0;
-	k_EPartnerAppOptInType_FeatureAccess = 1;
-}
-
-enum EPartnerEmailNotifcationType
-{
-	k_EPartnerEmailNotifcationType_Invalid = 0;
-	k_EPartnerEmailNotifcationType_PartnerReminderPreRelease = 1;
-}
-
 enum EPartnerEventDisplayLocation
 {
 	k_EPartnerEventDisplayLocation_Invalid = 0;
@@ -1393,36 +1066,6 @@ enum EPartnerEventDisplayLocation
 	k_EPartnerEventDisplayLocation_NewsHub = 8;
 	k_EPartnerEventDisplayLocation_GamepadHome = 9;
 	k_EPartnerEventDisplayLocation_StoreHub = 10;
-}
-
-enum EPartnerMembershipInviteState
-{
-	k_EPartnerMembershipInviteState_Invalid = 0;
-	k_EPartnerMembershipInviteState_Sent = 1;
-	k_EPartnerMembershipInviteState_ReceiverAccepted = 2;
-	k_EPartnerMembershipInviteState_ReceiverDeclined = 3;
-	k_EPartnerMembershipInviteState_PartnerAccepted = 4;
-	k_EPartnerMembershipInviteState_PartnerDeclined = 5;
-	k_EPartnerMembershipInviteState_Canceled = 6;
-	k_EPartnerMembershipInviteState_Expired = 7;
-	k_EPartnerMembershipInviteState_MAX = 8;
-}
-
-enum EPartnerNotesType
-{
-	k_EPartnerNotesType_Misc = 0;
-	k_EPartnerNotesType_SetStatus_Active = 1;
-	k_EPartnerNotesType_SetStatus_Archived = 2;
-	k_EPartnerNotesType_SetStatus_Banned = 3;
-	k_EPartnerNotesType_Warning = 4;
-	k_EPartnerNotesType_Legacy = 5;
-	k_EPartnerNotesType_SetStatus_Retired = 6;
-}
-
-enum EPartnerOptInVisibility
-{
-	k_EPartnerOptInVisibility_Public = 0;
-	k_EPartnerOptInVisibility_InviteOnly = 1;
 }
 
 enum EPlatformType
@@ -1557,14 +1200,6 @@ enum ERegionCode
 	k_ERegionCodeMax = 5;
 }
 
-enum EReleaseRequestState
-{
-	k_EReleaseRequestStateAny = 0;
-	k_EReleaseRequestStateNotReady = 1;
-	k_EReleaseRequestStatePending = 2;
-	k_EReleaseRequestStateApproved = 3;
-}
-
 enum ERemoteClientLaunch
 {
 	k_ERemoteClientLaunchOK = 1;
@@ -1653,13 +1288,6 @@ enum ESteam
 	k_ESteamFrame = 2;
 }
 
-enum ESteamHWCompatibility
-{
-	k_ESteamHWCompatibility_None = 0;
-	k_ESteamHWCompatibility_SteamDeck = 1;
-	k_ESteamHWCompatibility_SteamOS = 2;
-}
-
 enum ESteamNetTransport
 {
 	k_ESteamNetTransport_Unknown = 0;
@@ -1670,55 +1298,6 @@ enum ESteamNetTransport
 	k_ESteamNetTransport_TURN = 5;
 	k_ESteamNetTransport_SDRP2P = 6;
 	k_ESteamNetTransport_SDRHostedServer = 7;
-}
-
-enum ESteamNotificationTarget
-{
-	k_ESteamNotificationTarget_Invalid = 0;
-	k_ESteamNotificationTarget_NotificationFeed = 1;
-	k_ESteamNotificationTarget_PushNotification = 2;
-	k_ESteamNotificationTarget_Email = 4;
-	k_ESteamNotificationTarget_Steam = 8;
-}
-
-enum ESteamNotificationTargetClientType
-{
-	k_ESteamNotificationTargetClientType_Invalid = 0;
-	k_ESteamNotificationTargetClientType_SteamMobileApp = 1;
-}
-
-enum ESteamNotificationType
-{
-	k_ESteamNotificationType_Invalid = 0;
-	k_ESteamNotificationType_Test = 1;
-	k_ESteamNotificationType_Gift = 2;
-	k_ESteamNotificationType_Comment = 3;
-	k_ESteamNotificationType_Item = 4;
-	k_ESteamNotificationType_FriendInvite = 5;
-	k_ESteamNotificationType_MajorSale = 6;
-	k_ESteamNotificationType_PreloadAvailable = 7;
-	k_ESteamNotificationType_Wishlist = 8;
-	k_ESteamNotificationType_TradeOffer = 9;
-	k_ESteamNotificationType_General = 10;
-	k_ESteamNotificationType_HelpRequest = 11;
-	k_ESteamNotificationType_AsyncGame = 12;
-	k_ESteamNotificationType_ChatMsg = 13;
-	k_ESteamNotificationType_ModeratorMsg = 14;
-	k_ESteamNotificationType_ParentalFeatureAccessRequest = 15;
-	k_ESteamNotificationType_FamilyInvite = 16;
-	k_ESteamNotificationType_FamilyPurchaseRequest = 17;
-	k_ESteamNotificationType_ParentalPlaytimeRequest = 18;
-	k_ESteamNotificationType_FamilyPurchaseRequestResponse = 19;
-	k_ESteamNotificationType_ParentalFeatureAccessResponse = 20;
-	k_ESteamNotificationType_ParentalPlaytimeResponse = 21;
-	k_ESteamNotificationType_RequestedGameAdded = 22;
-	k_ESteamNotificationType_SendToPhone = 23;
-	k_ESteamNotificationType_ClipDownloaded = 24;
-	k_ESteamNotificationType_2FAPrompt = 25;
-	k_ESteamNotificationType_MobileConfirmation = 26;
-	k_ESteamNotificationType_PartnerEvent = 27;
-	k_ESteamNotificationType_PlaytestInvite = 28;
-	k_ESteamNotificationType_TradeReversal = 29;
 }
 
 enum ESteamRealm
@@ -1807,38 +1386,6 @@ enum ETextFilterSetting
 	k_ETextFilterSettingEnabled = 1;
 	k_ETextFilterSettingEnabledAllowProfanity = 2;
 	k_ETextFilterSettingDisabled = 3;
-}
-
-enum ETF2BlogPostType
-{
-	k_ETF2BlogPostType_Blog = 0;
-	k_ETF2BlogPostType_News = 1;
-	k_ETF2BlogPostType_Updates = 2;
-	k_ETF2BlogPostType_PostID = 3;
-	k_ETF2BlogPostType_RSS = 4;
-}
-
-enum ETradeOfferConfirmationMethod
-{
-	k_ETradeOfferConfirmationMethod_Invalid = 0;
-	k_ETradeOfferConfirmationMethod_Email = 1;
-	k_ETradeOfferConfirmationMethod_MobileApp = 2;
-}
-
-enum ETradeOfferState
-{
-	k_ETradeOfferStateInvalid = 1;
-	k_ETradeOfferStateActive = 2;
-	k_ETradeOfferStateAccepted = 3;
-	k_ETradeOfferStateCountered = 4;
-	k_ETradeOfferStateExpired = 5;
-	k_ETradeOfferStateCanceled = 6;
-	k_ETradeOfferStateDeclined = 7;
-	k_ETradeOfferStateInvalidItems = 8;
-	k_ETradeOfferStateCreatedNeedsConfirmation = 9;
-	k_ETradeOfferStateCanceledBySecondFactor = 10;
-	k_ETradeOfferStateInEscrow = 11;
-	k_ETradeOfferStateReverted = 12;
 }
 
 enum ETradingCardActivity
@@ -3229,22 +2776,6 @@ enum UnnamedEnum453fb51a20bad046
 	UnsupportedMediaType = 3;
 }
 
-enum UnnamedEnum46a5ccceb5385d09
-{
-	k_ELoading = 0;
-	k_EOkToDiscount = 1;
-	k_ENeedsOptIn = 2;
-	k_EOptInOptedOut = 3;
-	k_EOptInRestricted = 4;
-	k_EOptInNoBaseAppToRegister = 5;
-	k_EJustReleased = 6;
-	k_EPriceIncreased = 7;
-	k_ECooldownWindow = 8;
-	k_EOverlapsExisting = 9;
-	k_ENoAppInRequiredList = 10;
-	k_EOptInMultiAppPackageRegisterSomeGame = 11;
-}
-
 enum UnnamedEnum47122ffa63e68b01
 {
 	Character = 0;
@@ -3808,145 +3339,6 @@ enum UnnamedEnum6bd8304631e14543
 	Info = 3;
 	Warning = 4;
 	Error = 5;
-}
-
-enum UnnamedEnum6c2ec2437252c324
-{
-	k_eOSXboxOne = -800;
-	k_eOSWebClient = -700;
-	k_eOSEmbeddedClient = -675;
-	k_eTVOSUnknown = -650;
-	k_eTVOS9 = -649;
-	k_eTVOS9_1 = -648;
-	k_eTVOS9_2 = -647;
-	k_eTVOS9_3 = -646;
-	k_eTVOS10 = -645;
-	k_eTVOS10_1 = -644;
-	k_eTVOS10_2 = -643;
-	k_eTVOS11 = -642;
-	k_eTVOS11_1 = -641;
-	k_eTVOS11_2 = -640;
-	k_eTVOS11_3 = -639;
-	k_eTVOS11_4 = -638;
-	k_eTVOS12 = -637;
-	k_eTVOS12_1 = -636;
-	k_eIOSUnknown = -600;
-	k_eIOS1 = -599;
-	k_eIOS2 = -598;
-	k_eIOS3 = -597;
-	k_eIOS4 = -596;
-	k_eIOS5 = -595;
-	k_eIOS6 = -594;
-	k_eIOS6_1 = -593;
-	k_eIOS7 = -592;
-	k_eIOS7_1 = -591;
-	k_eIOS8 = -590;
-	k_eIOS8_1 = -589;
-	k_eIOS8_2 = -588;
-	k_eIOS8_3 = -587;
-	k_eIOS8_4 = -586;
-	k_eIOS9 = -585;
-	k_eIOS9_1 = -584;
-	k_eIOS9_2 = -583;
-	k_eIOS9_3 = -582;
-	k_eIOS10 = -581;
-	k_eIOS10_1 = -580;
-	k_eIOS10_2 = -579;
-	k_eIOS10_3 = -578;
-	k_eIOS11 = -577;
-	k_eIOS11_1 = -576;
-	k_eIOS11_2 = -575;
-	k_eIOS11_3 = -574;
-	k_eIOS11_4 = -573;
-	k_eIOS12 = -572;
-	k_eIOS12_1 = -571;
-	k_eIOSMax = -570;
-	k_eAndroidUnknown = -500;
-	k_eAndroid6 = -499;
-	k_eAndroid7 = -498;
-	k_eAndroid8 = -497;
-	k_eAndroid9 = -496;
-	k_eAndroidMax = -495;
-	k_eOSUMQ = -400;
-	k_eOSPS3 = -300;
-	k_eLinuxUnknown = -203;
-	k_eLinux22 = -202;
-	k_eLinux24 = -201;
-	k_eLinux26 = -200;
-	k_eLinux32 = -199;
-	k_eLinux35 = -198;
-	k_eLinux36 = -197;
-	k_eLinux310 = -196;
-	k_eLinux316 = -195;
-	k_eLinux318 = -194;
-	k_eLinux3Unknown = -193;
-	k_eLinux4Unknown = -192;
-	k_eLinux41 = -191;
-	k_eLinux44 = -190;
-	k_eLinux49 = -189;
-	k_eLinux414 = -188;
-	k_eLinux419 = -187;
-	k_eLinux5Unknown = -186;
-	k_eLinux54 = -185;
-	k_eLinux6Unknown = -184;
-	k_eLinux7Unknown = -183;
-	k_eLinux510 = -182;
-	k_eLinuxMax = -103;
-	k_eMacOSUnknown = -102;
-	k_eMacOS104 = -101;
-	k_eMacOS105 = -100;
-	k_eMacOS1058 = -99;
-	k_eMacOS106_unused1 = -98;
-	k_eMacOS106_unused2 = -97;
-	k_eMacOS106_unused3 = -96;
-	k_eMacOS106 = -95;
-	k_eMacOS1063 = -94;
-	k_eMacOS1064_slgu = -93;
-	k_eMacOS1067 = -92;
-	k_eMacOS1067_unused = -91;
-	k_eMacOS107 = -90;
-	k_eMacOS108 = -89;
-	k_eMacOS109 = -88;
-	k_eMacOS1010 = -87;
-	k_eMacOS1011 = -86;
-	k_eMacOS1012 = -85;
-	k_eMacOS1013 = -84;
-	k_eMacOS1014 = -83;
-	k_eMacOS1015 = -82;
-	k_eMacOS1016 = -81;
-	k_eMacOS11 = -80;
-	k_eMacOS11_1 = -79;
-	k_eMacOS1017 = -75;
-	k_eMacOS12 = -74;
-	k_eMacOS1018 = -70;
-	k_eMacOS13 = -69;
-	k_eMacOS14 = -68;
-	k_eMacOS15 = -67;
-	k_eMacOSMax = -2;
-	k_eOSUnknown = -1;
-	k_eWinUnknown = 0;
-	k_eWin311 = 1;
-	k_eWin95 = 2;
-	k_eWin98 = 3;
-	k_eWinME = 4;
-	k_eWinNT = 5;
-	k_eWin2000 = 6;
-	k_eWinXP = 7;
-	k_eWin2003 = 8;
-	k_eWinVista = 9;
-	k_eWindows7 = 10;
-	k_eWin2008 = 11;
-	k_eWin2012 = 12;
-	k_eWindows8 = 13;
-	k_eWindows81 = 14;
-	k_eWin2012R2 = 15;
-	k_eWindows10 = 16;
-	k_eWin2016 = 17;
-	k_eWin2019 = 18;
-	k_eWin2022 = 19;
-	k_eWindows11 = 20;
-	k_eWinMAX = 21;
-	k_eOSTypeMax = 32;
 }
 
 enum UnnamedEnum6c76081e627d3476

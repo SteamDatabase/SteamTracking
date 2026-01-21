@@ -1544,15 +1544,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        return (0, _._)(
-          _ ? `${_._.STORE_BASE_URL}${_.store_url_path}` : void 0,
-          _,
-          _,
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         Root: function (_) {
@@ -1701,7 +1694,7 @@
               appid: _,
             }),
             _ = _ && _.community_icon ? (0, _._)(_, "community_icon") : void 0,
-            _ = _(_),
+            _ = (0, _._)(_),
             _ =
               null != __webpack_require__
                 ? __webpack_require__
@@ -10467,6 +10460,97 @@
             : _
         )();
         return ((null != _ ? _ : _).instances[_] = _), _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        if (_[_]) {
+          if ("community_icon" == _) {
+            const _ = _.asset_url_format
+              .replace(/^steam\//, "images/")
+              .replace("${FILENAME}", `${_[_]}.jpg`)
+              .replace(/\?.*$/, "");
+            return `${_._.MEDIA_CDN_COMMUNITY_URL}${_}`;
+          }
+          {
+            const _ = _.asset_url_format.replace("${FILENAME}", _[_]);
+            return `${_._.STORE_ITEM_BASE_URL}${_}`;
+          }
+        }
+      }
+      function _(_, _ = "full") {
+        let _ = "";
+        switch (_) {
+          case "thumb":
+            _ = ".116x65";
+            break;
+          case "600x338":
+            _ = ".600x338";
+            break;
+          case "1920x1080":
+            _ = ".1920x1080";
+            break;
+          case "full":
+            _ = "";
+            break;
+          default:
+            (0, _._)(_, `Invalid size: ${_}`);
+        }
+        return (
+          _._.STORE_ITEM_BASE_URL + _.filename.replace(/\.[^.*]$/, `${_}$&`)
+        );
+      }
+      function _(_) {
+        const { data: _ } = (0, _._)(_),
+          _ = (0, _._)();
+        if (_)
+          return [
+            ...(_.all_ages_screenshots || []),
+            ...(!_ && _.mature_content_screenshots
+              ? _.mature_content_screenshots
+              : []),
+          ].sort((_, _) => _.ordinal - _.ordinal);
+      }
+      function _(_, _ = !1) {
+        const { data: __webpack_require__ } = (0, _._)({
+          appid: _,
+        });
+        return void 0 === __webpack_require__
+          ? void 0
+          : null === __webpack_require__
+            ? null
+            : _ && __webpack_require__.library_capsule_2x
+              ? _(__webpack_require__, "library_capsule_2x")
+              : __webpack_require__.library_capsule
+                ? _(__webpack_require__, "library_capsule")
+                : `${_._.STORE_ITEM_BASE_URL}steam/apps/${_}/portrait.png`;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        return (0, _._)(
+          _ ? `${_._.STORE_BASE_URL}${_.store_url_path}` : void 0,
+          _,
+          _,
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -25710,7 +25710,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -26154,7 +26155,9 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       const _ = {
         include_assets: !0,
         include_trailers: !0,
@@ -26286,11 +26289,9 @@
         );
       }
       function _(_) {
-        const _ = (0, _._)(() => _._.Get().BIsGameWishlisted(_)),
+        const _ = Boolean((0, _._)(_)),
           _ = (0, _._)(),
-          _ = _.useCallback(() => {
-            _._.Get().UpdateGameWishlist(_, !_, _);
-          }, [_, _, _]);
+          { mutate: _ } = (0, _._)(_, !_, _);
         return {
           bIsWishlisted: _,
           fnUpdateWishlist: _,
@@ -28821,6 +28822,8 @@
           [_] = (0, _._)(_, _),
           [_] = (0, _._)(_.GetParentAppID(), _),
           _ = _(_, _),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ =
             null !== (_ = _.GetAssets().GetMainCapsuleURL()) && void 0 !== _
               ? _
@@ -28831,7 +28834,7 @@
               ? void 0
               : __webpack_require__.GetFormattedSteamReleaseDate(),
           _ =
-            1 != _.GetAppType() ||
+            1 != (null == _ ? void 0 : _.type) ||
             (null == _ ? void 0 : _.HasDemoStandaloneStorePage())
               ? {
                   _: _,
@@ -28867,7 +28870,7 @@
             !_ &&
               _.createElement(_._, {
                 classOverride: (0, _._)(_().AppCapsuleWishListBtn),
-                appID: _,
+                _: _,
                 snr: _,
               }),
           ),
@@ -28883,7 +28886,7 @@
                   href: _,
                   className: (0, _._)(_().AppName),
                 },
-                _.GetName(),
+                (null == _ ? void 0 : _.name) || "",
               ),
             !_ &&
               _.createElement(_, {
@@ -28948,12 +28951,9 @@
                 !_ &&
                   _ &&
                   !_ &&
-                  (_.BHasDemo() || 1 == _.GetAppType()) &&
+                  (_.BHasDemo() || 1 == (null == _ ? void 0 : _.type)) &&
                   _.createElement(_._, {
-                    info: {
-                      _: _.GetAppID(),
-                      type: (0, _._)(_.GetStoreItemType(), _.GetAppType()),
-                    },
+                    _: _,
                     className: (0, _._)(_().QueueButton, _().Demo),
                   }),
                 _.createElement(
@@ -28964,10 +28964,7 @@
                   !_ &&
                     _.createElement(_._, {
                       bSingleLineMode: !1,
-                      info: {
-                        _: _,
-                        type: (0, _._)(_.GetAppType()),
-                      },
+                      _: _,
                       bHideReleaseDate: !0,
                       bHideIfDemo: !0,
                     }),
@@ -28975,7 +28972,7 @@
                 !_ &&
                   _.createElement(_._, {
                     classOverride: (0, _._)(_().AppCapsuleWishListBtnMobile),
-                    appID: _,
+                    _: _,
                     snr: _,
                   }),
               ),
@@ -29532,6 +29529,7 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid");
       const _ = _.Fragment;
       function _(_) {
         const { section: _, language: __webpack_require__, event: _ } = _,
@@ -29558,7 +29556,8 @@
             return null === (_ = _.internal_section_data) || void 0 === _
               ? void 0
               : _.reservation_appid_wishlist;
-          });
+          }),
+          _ = (0, _._)(_);
         return 0 == _.length
           ? null
           : _.createElement(
@@ -29599,7 +29598,7 @@
                   Boolean(_) &&
                     _.createElement(_._, {
                       snr: _,
-                      appID: _,
+                      _: _,
                       classOverride: (0, _._)(
                         _().WishlistButtonNotTop,
                         "WishlistButton",
@@ -35668,6 +35667,9 @@
           );
         });
       var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         let _ = Math.floor(Date.now() / 1e3);
@@ -36315,16 +36317,24 @@
           }),
         );
       }
-      const _ = (_) => {
+      function _(_) {
+        const { eventGID: _ } = _;
+        return _ && _._.BHasClanEventModel(_)
+          ? _.createElement(_, {
+              ..._,
+            })
+          : null;
+      }
+      function _(_) {
         const {
-          eventGID: _,
-          bShowDemoButton: __webpack_require__,
-          bPreferDemoStorePage: _,
-        } = _;
-        if (!_ || !_._.BHasClanEventModel(_)) return null;
-        const _ = _._.GetClanEventModel(_),
+            eventGID: _,
+            bShowDemoButton: __webpack_require__,
+            bPreferDemoStorePage: _,
+          } = _,
+          _ = _._.GetClanEventModel(_),
           _ = _(_),
-          _ = _ && _._.Get().GetApp(_),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(_._.LANGUAGE),
           _ = _._.ParseEventModelPresenters(_, _),
           _ = (function (_, _) {
@@ -36360,17 +36370,18 @@
                   "SaleSchedDetailCtn",
                 ),
               },
-              Boolean(_)
+              _ && _
                 ? _.createElement(
                     _.Fragment,
                     null,
                     _.createElement(_, {
-                      storeItem: _,
+                      _: _,
+                      storeItemDefaultData: _,
                       bShowDemoButton: __webpack_require__,
                       bPreferDemoStorePage: _,
                     }),
                     _.createElement(_, {
-                      storeItem: _,
+                      _: _,
                     }),
                   )
                 : _.createElement(_, {
@@ -36381,7 +36392,7 @@
                 broadcastEmbedContext: _.broadcastEmbedContext,
               }),
             );
-      };
+      }
       function _(_) {
         const { event: _ } = _;
         let _ = (0, _._)(_._.LANGUAGE);
@@ -36396,95 +36407,92 @@
       }
       function _(_) {
         const {
-          storeItem: _,
-          bShowDemoButton: __webpack_require__,
-          bPreferDemoStorePage: _,
-        } = _;
-        if (!_) return null;
-        const _ = {
-          _: _.GetID(),
-          type: (0, _._)(_.GetStoreItemType(), _.GetAppType()),
-        };
-        return _.createElement(
-          "div",
-          {
-            className: _().SaleAppWideCtn,
-          },
-          _.createElement(
-            _._,
-            {
-              item: _,
-              className: _().SaleAppCapsule,
-              bPreferDemoStorePage: _,
-            },
-            _.createElement("img", {
-              className: _().WideHeader,
-              src: null == _ ? void 0 : _.GetAssets().GetMainCapsuleURL(),
-              alt: null == _ ? void 0 : _.GetName(),
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().WideDetailCtn,
-            },
-            _.createElement(
+            _: _,
+            storeItemDefaultData: __webpack_require__,
+            bShowDemoButton: _,
+            bPreferDemoStorePage: _,
+          } = _,
+          { bIsOwned: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(_);
+        return _ && _
+          ? _.createElement(
               "div",
               {
-                className: _().AppTitle,
+                className: _().SaleAppWideCtn,
               },
-              null == _ ? void 0 : _.GetName(),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().ReleaseDate,
-              },
-              null == _ ? void 0 : _.GetFormattedSteamReleaseDate(),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().GameButtons,
-            },
-            Boolean(_._.Get().BOwnsApp(null == _ ? void 0 : _.GetAppID()))
-              ? _.createElement(
-                  _._,
-                  {
-                    disabled: !0,
-                  },
-                  (0, _._)("#Sale_InLibrary"),
-                )
-              : _.createElement(
+              _.createElement(
+                _._,
+                {
+                  item: _,
+                  className: _().SaleAppCapsule,
+                  bPreferDemoStorePage: _,
+                },
+                _.createElement("img", {
+                  className: _().WideHeader,
+                  src: (0, _._)(_, "main_capsule"),
+                  alt: __webpack_require__.name || "",
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().WideDetailCtn,
+                },
+                _.createElement(
                   "div",
                   {
-                    className: _().GameButton,
+                    className: _().AppTitle,
                   },
-                  _.createElement(_._, {
-                    appid: null == _ ? void 0 : _.GetAppID(),
-                    bIsFree: null == _ ? void 0 : _.BIsFree(),
-                    bIsComingSoon: null == _ ? void 0 : _.BIsComingSoon(),
-                  }),
+                  __webpack_require__.name || "",
                 ),
-            Boolean(__webpack_require__) &&
-              _.createElement(_._, {
-                info: _,
-                className: _().DemoButton,
-              }),
-          ),
-        );
+                _.createElement(
+                  "div",
+                  {
+                    className: _().ReleaseDate,
+                  },
+                  (0, _._)(_),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().GameButtons,
+                },
+                _
+                  ? _.createElement(
+                      _._,
+                      {
+                        disabled: !0,
+                      },
+                      (0, _._)("#Sale_InLibrary"),
+                    )
+                  : _.createElement(
+                      "div",
+                      {
+                        className: _().GameButton,
+                      },
+                      _.createElement(_._, {
+                        appid: __webpack_require__.appid,
+                        bIsFree: Boolean(__webpack_require__.is_free),
+                        bIsComingSoon: Boolean(
+                          __webpack_require__.is_coming_soon,
+                        ),
+                      }),
+                    ),
+                Boolean(_) &&
+                  _.createElement(_._, {
+                    _: _,
+                    className: _().DemoButton,
+                  }),
+              ),
+            )
+          : null;
       }
       function _(_) {
-        const { storeItem: _ } = _,
-          _ = (null == _ ? void 0 : _.GetTagIDs()) || [],
-          _ = {
-            _: null == _ ? void 0 : _.GetID(),
-            type: (0, _._)(
-              null == _ ? void 0 : _.GetStoreItemType(),
-              null == _ ? void 0 : _.GetAppType(),
-            ),
-          };
+        const { _: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_);
         return _.createElement(
           "div",
           {
@@ -36495,33 +36503,29 @@
             {
               className: _().StoreSaleWidgetTags,
             },
-            __webpack_require__.map((_) =>
-              _.createElement(
-                "div",
-                {
-                  key: _,
-                  className: _().AppTag,
-                },
-                _.createElement(_, {
-                  tagid: _,
-                }),
-              ),
-            ),
+            null == __webpack_require__
+              ? void 0
+              : __webpack_require__.map((_) =>
+                  _.createElement(
+                    "div",
+                    {
+                      key: _.tagid,
+                      className: _().AppTag,
+                    },
+                    _.createElement(_, {
+                      tagid: _.tagid,
+                    }),
+                  ),
+                ),
           ),
           _.createElement(_._, {
-            item: _,
+            _: _,
           }),
         );
       }
       function _(_) {
-        const { storeItem: _ } = _,
-          _ = {
-            _: null == _ ? void 0 : _.GetID(),
-            type: (0, _._)(
-              null == _ ? void 0 : _.GetStoreItemType(),
-              null == _ ? void 0 : _.GetAppType(),
-            ),
-          };
+        const { _: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_);
         return _.createElement(
           "div",
           {
@@ -36533,16 +36537,17 @@
               className: _().StatementCtn,
             },
             _.createElement(_, {
-              storeItem: _,
+              _: _,
             }),
-            _.createElement(
-              "div",
-              null,
-              null == _ ? void 0 : _.GetShortDescription(),
-            ),
+            __webpack_require__ &&
+              _.createElement(
+                "div",
+                null,
+                __webpack_require__.short_description,
+              ),
           ),
           _.createElement(_._, {
-            info: _,
+            _: _,
             bPopOutTrailerPlayback: !0,
           }),
         );
@@ -40245,42 +40250,56 @@
                 fnResizeObserver: _,
               });
       }
-      const _ = {
-        include_trailers: !0,
-        include_assets: !0,
-      };
       function _(_) {
         const {
             trailer_display: _,
             trailer_appid: __webpack_require__,
             trailer_base_id: _,
           } = _,
-          [_, _] = (0, _._)(__webpack_require__, _),
+          _ = (0, _.useMemo)(
+            () =>
+              __webpack_require__
+                ? {
+                    appid: __webpack_require__,
+                  }
+                : void 0,
+            [__webpack_require__],
+          ),
+          { data: _ } = (0, _._)(_),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useMemo)(() => {
-            var _, _, _;
+            var _, _, _, _;
             let _ = {},
               _ = {};
-            const _ =
-              null === (_ = null == _ ? void 0 : _.GetAllTrailers()) ||
-              void 0 === _
-                ? void 0
-                : _.GetTrailerByID(_ || 0);
+            const _ = [
+              ...((null == _ ? void 0 : _.highlights) || []),
+              ...((null == _ ? void 0 : _.other_trailers) || []),
+            ].find((_) => _ && _.trailer_base_id == _);
             return (
               _ &&
-                ((_.image = _.GetScreenshot()),
+                ((_.image = _.screenshot_full),
                 (_.video_mp4_src =
-                  null === (_ = _.GetMicroTrailer()) || void 0 === _
+                  null ===
+                    (_ =
+                      null === (_ = _.microtrailer) || void 0 === _
+                        ? void 0
+                        : _.find((_) => "video/mp4" == _.type)) || void 0 === _
                     ? void 0
-                    : _.strMP4URL),
+                    : _.filename),
                 (_.video_webm_src =
-                  null === (_ = _.GetMicroTrailer()) || void 0 === _
+                  null ===
+                    (_ =
+                      null === (_ = _.microtrailer) || void 0 === _
+                        ? void 0
+                        : __webpack_require__.find(
+                            (_) => "video/webm" == _.type,
+                          )) || void 0 === _
                     ? void 0
-                    : _.strWebMURL)),
+                    : _.filename)),
               [_, _]
             );
           }, [_, _]);
-        return _ && 3 == _
+        return _
           ? _.createElement(
               _.Fragment,
               null,
@@ -40297,7 +40316,7 @@
                   onClick: () => _(!0),
                 }),
               _.createElement(_._, {
-                storeItem: _,
+                _: _,
                 bShowModal: _,
                 hideModal: () => _(!1),
               }),

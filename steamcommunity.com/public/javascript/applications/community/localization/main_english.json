@@ -1133,7 +1133,7 @@
     "PartnerEvent_Beta_UpcomingFeature": "More Coming Soon",
     "PartnerEvent_Beta_View": "While in the open beta, this view is only visible to you and your team.  Steam customers continue to see events and announcements in the existing rendering.",
     "selectimage_tips": "Tips & Specification",
-    "selectimage_downloadtemplate": "Download Templates",
+    "selectimage_downloadtemplate": "Download Event Artwork Templates",
     "selectimage_viewExamples": "Just getting started? View examples.",
     "selectimage_tip1": "%1$spx wide x %2$spx tall   %3$s",
     "selectimage_tip1_title": "Dimensions",
@@ -3009,7 +3009,6 @@
     "SummerSale2021Genre_12": "Space",
     "SummerSale2021Genre_13": "Roguelike",
     "SummerSale2021Genre_14": "Anime",
-    "dummy_for_end_of_file_convenience": "dummy",
     "AdvancedSearch_Heading": "Search Community Market",
     "AdvancedSearch_Reset": "Reset Filters",
     "AdvancedSearch_Search": "Search",
@@ -3037,5 +3036,7 @@
     "AdvancedSearch_CSContainers_Tooltip": "Weapon Cases, Sticker Capsules, Souvenir Packages, etc",
     "AdvancedSearch_TextSearch_PlaceholderWithApp": "Search in %1$s...",
     "AdvancedSearch_IncludeDescriptions": "Include descriptions in search",
-    "AdvancedSearch_IncludeDescriptions_Tooltip": "Some older items use text descriptions for meaningful item properties that are not accessible with the below filters. This option will allow your search text to be matched against the full description text instead of only the item name."
+    "AdvancedSearch_IncludeDescriptions_Tooltip": "Some older items use text descriptions for meaningful item properties that are not accessible with the below filters. This option will allow your search text to be matched against the full description text instead of only the item name.",
+    "CommunityActivity": "Community activity",
+    "dummy_for_end_of_file_convenience": "dummy"
 }
