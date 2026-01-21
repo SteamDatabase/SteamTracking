@@ -3224,12 +3224,13 @@ input.searchText
 	flex-grow: 1;
 	width: 100%;
 	height: 100%;
+	aspect-ratio: 1920/1080;
 	overflow: hidden;
 	background: #000000;
 }
 .enlarged_image_container .enlarged_image {
 	object-fit: contain;
-	overflow: hidden;
+	object-position: center;
 	min-width: 100px;
 	width: 100%;
 	height: 100%;
