@@ -3,7 +3,6 @@
 // build our menu on init
 jQuery( function($) {
 	var mqQuerySmallMode = window.matchMedia ? window.matchMedia("(max-width: 910px)") : {matches: false};
-	var mqQuerySmallModeWhenWideEnabled = window.matchMedia ? window.matchMedia("(max-width: 1200px)") : {matches: false};
 	var mqMobileMode = window.matchMedia ? window.matchMedia("(max-width: 500px)") : {matches: false};
 
 	var $HTML = $J('html');
@@ -11,7 +10,7 @@ jQuery( function($) {
 		return $HTML.hasClass( 'responsive' ) && ( mqQuerySmallMode.matches || $HTML.hasClass('touch') );
 	};
 	window.UseSmallScreenMode = function() {
-		return $HTML.hasClass( 'responsive' ) && ( mqQuerySmallModeWhenWideEnabled.matches );
+		return $HTML.hasClass( 'responsive' ) && ( mqQuerySmallMode.matches );
 	};
 	window.UseMobileScreenMode = function() {
 		return $HTML.hasClass( 'responsive' ) && mqMobileMode.matches;
@@ -692,8 +691,6 @@ function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $CtnOrFn )
 			( window.UseGamepadScreenMode && window.UseGamepadScreenMode() ) );
 	}
 
-	console.log( "SHOULD REPARENT:", fnShouldReparent() );
-	
 	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, fnShouldReparent, 'Responsive_SmallScreenModeToggled' );
 }
 
