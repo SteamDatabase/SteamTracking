@@ -7800,11 +7800,11 @@ $steammessages_parental_objects.proto"
 0000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11278,11 +11278,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
+20000
+2000000
 200M
 2019
 2048
-20000
-2000000
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -15402,6 +15402,7 @@ $steammessages_parental_objects.proto"
 5\n\vsale_filter
 5\tuy
 5ceTk
+5d1w
 5eCnK
 5mF\tfE
 5mmQ
@@ -26773,6 +26774,7 @@ Hp!v
 HqI9x
 HsP;Va\Bb"i
 HttpClientConnection (%p) now connected through %X \n
+HuERh
 Huffman code size table overflow
 Huffman table 0x%02x was not defined
 Humour
@@ -58510,7 +58512,7 @@ stderr
 stdin
 stdout
 steam
-steam Jan 20 2026 19:20:30
+steam Jan 21 2026 17:12:24
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

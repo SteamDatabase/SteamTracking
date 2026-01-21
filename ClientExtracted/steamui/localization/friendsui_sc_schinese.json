@@ -22,7 +22,7 @@
     "Chat_TextFilter_Active": "某些内容在蒸汽平台聊天中被模糊处理。您可以在[url=%1$s]聊天过滤设置[/url]中对此进行调整。",
     "Chat_Create": "创建新蒸汽平台聊天",
     "bbcode_disable_embed_inlining_steam_workshop": "%1$s（蒸汽平台创意工坊）",
-    "bbcode_steam_store_embed_Filtered": "已分享一个并未通过您所选择内容筛选器筛选的蒸汽平台产品页面。",
+    "bbcode_steam_store_embed_Filtered": "已分享一个并未通过您所选择内容筛选条件筛选的蒸汽平台产品页面。",
     "bbcode_steam_store_embed_Failed_Steam_Store": "蒸汽平台商店",
     "SuspiciousMessage_Explanation": "此聊天看起来很可疑。请勿使用此人提供的链接登录您的任何帐户（包括蒸汽平台帐户）。蒸汽平台的代表绝不会通过聊天或外部程序联系您。在关闭此消息前，链接将会被禁用。",
     "Friend_Menu_ShowInSteam": "在蒸汽平台中显示",
