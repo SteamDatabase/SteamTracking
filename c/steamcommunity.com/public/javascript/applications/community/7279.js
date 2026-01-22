@@ -165,7 +165,7 @@
 	"ContentReport_FriendOptions_RemoveDesc": "This user is still on your Friends List - you may choose to unfriend them. You'll silently disappear from their Friends List.",
 	"ContentReport_FriendOptions_RemoveSuccess": "Unfriended",
 	"ContentReport_LearnMore_Misconduct": "Learn more about addressing misconduct on Steam",
-	"moderation_subjecttype_forumpost": "Forum post",
+	"moderation_subjecttype_forumpost": "Forum thread",
 	"moderation_subjecttype_friendchatmsg": "Friend Chat Message",
 	"moderation_subjecttype_chatroommsg": "Chat Room Message",
 	"moderation_subjecttype_chatgroup": "Chat Group",
