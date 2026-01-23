@@ -70487,9 +70487,9 @@
         );
       }
       function bs(e) {
-        const t = e.Element.getBoundingClientRect(),
-          r = e.m_Parent.Element.getBoundingClientRect();
-        return t.top < r.bottom;
+        const t = e.Element?.getBoundingClientRect(),
+          r = e.m_Parent?.Element?.getBoundingClientRect();
+        return !(!t || !r) && t.top < r.bottom;
       }
       const Bs = "store_menu_categories_expanded";
       function ws() {

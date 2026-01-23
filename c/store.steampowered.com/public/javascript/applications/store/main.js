@@ -78746,9 +78746,9 @@
         );
       }
       function _(_) {
-        const _ = _.Element.getBoundingClientRect(),
-          _ = _.m_Parent.Element.getBoundingClientRect();
-        return _.top < _.bottom;
+        const _ = _.Element?.getBoundingClientRect(),
+          _ = _.m_Parent?.Element?.getBoundingClientRect();
+        return !(!_ || !_) && _.top < _.bottom;
       }
       const _ = "store_menu_categories_expanded";
       function _() {

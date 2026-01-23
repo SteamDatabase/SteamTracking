@@ -26,7 +26,7 @@ function _() {
   document.cookie = `timezoneName=${_};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`;
 }
 _();
-var _ = _(_(), 1);
+var _ = _(_());
 var _ = [
     "sc_schinese",
     "schinese",
