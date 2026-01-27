@@ -5052,6 +5052,13 @@ Windows에 관리자로 로그인해야 합니다.
 "DownloadRegion_kuwait"         "쿠웨이트"
 "DownloadRegion_ua_sevastopol"  "우크라이나 - 세바스토폴"
 "DownloadRegion_lv_riga"		"라트비아"
+"DownloadRegion_br_cuiaba"			"브라질 - 쿠이아바"
+"DownloadRegion_br_belohorizonte"		"브라질 - 벨루오리존치"
+"DownloadRegion_br_curitiba"			"브라질 - 쿠리티바"
+"DownloadRegion_br_campogrande"			"브라질 - 캄푸그란지"
+"DownloadRegion_br_manaus"			"브라질 - 마나우스"
+"DownloadRegion_br_belem"			"브라질 - 벨렝"
+"DownloadRegion_br_salvador"			"브라질 - 사우바도르"
 
 "SettingsController_AutosaveName"	"컨트롤러 구성"
 "ControllerBinding_Offline_Save"	"[오프라인 자동 저장]"

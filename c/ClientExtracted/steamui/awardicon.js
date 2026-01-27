@@ -25,33 +25,34 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ extends _.PureComponent {
-        render() {
-          const _ = (0, _._)(
-            "#RewardsReaction_Tooltip",
-            this.props.reaction.count || 0,
-            (0, _._)(this.props.reaction.reaction_type),
-          );
-          return _.createElement(
-            _._,
-            {
-              className: (0, _._)(_().InfoContainer, _().IconContainer),
-              toolTipContent: _,
-            },
-            _.createElement("img", {
-              className: _().IconImg,
-              src: (0, _._)(this.props.reaction.reaction_type, !1),
-            }),
-            this.props.reaction.count &&
-              _.createElement(
-                "div",
-                {
-                  className: _().ReactionCount,
-                },
-                this.props.reaction.count,
-              ),
-          );
-        }
+      function _(_) {
+        const { reaction: _ } = _,
+          _ = (0, _._)(_.reaction_type);
+        if (!_) return null;
+        const _ = (0, _._)(
+          "#RewardsReaction_Tooltip",
+          _.count || 0,
+          _.localized_title,
+        );
+        return _.createElement(
+          _._,
+          {
+            className: (0, _._)(_().InfoContainer, _().IconContainer),
+            toolTipContent: _,
+          },
+          _.createElement("img", {
+            className: _().IconImg,
+            src: (0, _._)(_.reaction_type, !1),
+          }),
+          _.count &&
+            _.createElement(
+              "div",
+              {
+                className: _().ReactionCount,
+              },
+              _.count,
+            ),
+        );
       }
       class _ extends _.PureComponent {
         render() {

@@ -14,6 +14,14 @@ enum ETritonPairType {
 	k_ETritonPairType_PairToPuckDocked = 6;
 }
 
+enum ETritonConnectionType {
+	k_ETritonConnectionType_Unknown = 0;
+	k_ETritonConnectionType_Puck = 1;
+	k_ETritonConnectionType_Machine = 2;
+	k_ETritonConnectionType_USB = 3;
+	k_ETritonConnectionType_BT = 4;
+}
+
 message CSteamInputService_ControllerButtonStateChanged_Notification {
 	optional uint32 controller_index = 1;
 	optional bool dpad_up = 2;
@@ -164,6 +172,10 @@ message CSteamInputService_TritonUndocked_Notification {
 	optional uint32 docked_puck_index = 1;
 }
 
+message CSteamInputService_ControllerPairingChanged_Notification {
+	optional uint32 controller_index = 1;
+}
+
 message CSteamInputService_PairDongleTritonDocked_Request {
 	optional uint32 docked_puck_index = 1;
 	optional uint32 target_dongle_index = 2;
@@ -224,6 +236,29 @@ message CSteamInputService_ControllerDisconnected_Notification {
 	optional uint32 controller_index = 1;
 }
 
+message CSteamInputService_GetTritonPairingInfo_Request {
+	optional uint32 controller_index = 1;
+}
+
+message CSteamInputService_GetTritonPairingInfo_Response {
+	message Slot {
+		optional string serial_number = 1;
+		optional bool active = 2;
+		optional .ETritonConnectionType type = 3 [default = k_ETritonConnectionType_Unknown];
+	}
+
+	repeated .CSteamInputService_GetTritonPairingInfo_Response.Slot slot = 1;
+	optional .ETritonConnectionType connection_type = 2 [default = k_ETritonConnectionType_Unknown];
+}
+
+message CSteamInputService_ForgetTritonPairingBond_Request {
+	optional uint32 controller_index = 1;
+	optional uint32 slot_index = 2;
+}
+
+message CSteamInputService_ForgetTritonPairingBond_Response {
+}
+
 service SteamInputManager {
 	option (webui_service_execution_site) = k_EClientExecutionSiteClientdll;
 
@@ -239,6 +274,7 @@ service SteamInputManager {
 	rpc NotifyTritonUndocked (.CSteamInputService_TritonUndocked_Notification) returns (.WebUINoResponse);
 	rpc NotifyTritonDonglesChanged (.CSteamInputService_TritonDonglesChanged_Notification) returns (.WebUINoResponse);
 	rpc NotifyControllerDisconnected (.CSteamInputService_ControllerDisconnected_Notification) returns (.WebUINoResponse);
+	rpc NotifyControllerPairingChanged (.CSteamInputService_ControllerPairingChanged_Notification) returns (.WebUINoResponse);
 	rpc StartControllerStateFlow (.CSteamInputService_ControllerStateFlow_Request) returns (.CSteamInputService_ControllerStateFlow_Response);
 	rpc EndControllerStateFlow (.CSteamInputService_ControllerStateFlow_Request) returns (.CSteamInputService_ControllerStateFlow_Response);
 	rpc GetControllerAccessibilityStrings (.CSteamInputService_ControllerAccessibilityStrings_Request) returns (.CSteamInputService_ControllerAccessibilityStrings_Response);
@@ -249,4 +285,6 @@ service SteamInputManager {
 	rpc GetDongles (.CSteamInputService_GetDongles_Request) returns (.CSteamInputService_GetDongles_Response);
 	rpc ShouldTritonPairInOobe (.CSteamInputService_ShouldTritonPairInOobe_Request) returns (.CSteamInputService_ShouldTritonPairInOobe_Response);
 	rpc WaitInitialControllerStateEnumerated (.CSteamInputService_WaitInitialControllerStateEnumerated_Request) returns (.CSteamInputService_WaitInitialControllerStateEnumerated_Response);
+	rpc GetTritonPairingInfo (.CSteamInputService_GetTritonPairingInfo_Request) returns (.CSteamInputService_GetTritonPairingInfo_Response);
+	rpc ForgetTritonPairingBond (.CSteamInputService_ForgetTritonPairingBond_Request) returns (.CSteamInputService_ForgetTritonPairingBond_Response);
 }

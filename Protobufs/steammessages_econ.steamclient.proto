@@ -89,6 +89,8 @@ message CEconItem_Description {
 	optional string market_sell_country_restriction = 31;
 	optional bool sealed = 32;
 	optional .CEconItem_ContainerProperties container_properties = 33;
+	optional string market_bucket_group_name = 34;
+	optional string market_bucket_group_id = 35;
 }
 
 message CEconItem_Tag {

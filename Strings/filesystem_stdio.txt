@@ -156,6 +156,7 @@ $ORIGIN
 9IValidate
 :done\n
 :error\n
+;X,ZH
 @echo off\n
 @echo on\n
 AKST
@@ -422,6 +423,8 @@ SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 StringAfterPrefix
 StringAfterPrefixCaseSensitive
+StringFindSuffix
+StringFindSuffixCaseSensitive
 Sunday
 Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 TLS init function for

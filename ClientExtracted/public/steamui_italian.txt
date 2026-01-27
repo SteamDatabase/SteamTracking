@@ -5051,6 +5051,13 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ucraina - Sebastopoli"
 "DownloadRegion_lv_riga"		"Lettonia"
+"DownloadRegion_br_cuiaba"			"Brasile - Cuiabá"
+"DownloadRegion_br_belohorizonte"		"Brasile - Belo Horizonte"
+"DownloadRegion_br_curitiba"			"Brasile - Curitiba"
+"DownloadRegion_br_campogrande"			"Brasile - Campo Grande"
+"DownloadRegion_br_manaus"			"Brasile - Manaus"
+"DownloadRegion_br_belem"			"Brasile - Belém"
+"DownloadRegion_br_salvador"			"Brasile - Salvador"
 
 "SettingsController_AutosaveName"	"Configurazione del controller"
 "ControllerBinding_Offline_Save"	"[Salvataggio automatico offline]"

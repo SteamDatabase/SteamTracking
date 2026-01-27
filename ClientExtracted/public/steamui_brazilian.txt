@@ -5046,6 +5046,13 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ucrânia — Sevastópol"
 "DownloadRegion_lv_riga"		"Letônia"
+"DownloadRegion_br_cuiaba"			"Brasil — Cuiabá"
+"DownloadRegion_br_belohorizonte"		"Brasil — Belo Horizonte"
+"DownloadRegion_br_curitiba"			"Brasil — Curitiba"
+"DownloadRegion_br_campogrande"			"Brasil — Campo Grande"
+"DownloadRegion_br_manaus"			"Brasil — Manaus"
+"DownloadRegion_br_belem"			"Brasil — Belém"
+"DownloadRegion_br_salvador"			"Brasil — Salvador"
 
 "SettingsController_AutosaveName"	"Configuração de controle"
 "ControllerBinding_Offline_Save"	"[Salvo auto. no modo off-line]"

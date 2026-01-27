@@ -33,6 +33,7 @@ $ORIGIN
 %lld
 %llu
 %llx
+%s %s %s %s
 %s overflow!\n
 %s%c.temp_write_%x
 %s.%u.tmp
@@ -41,12 +42,15 @@ $ORIGIN
 %s/.steam/steam
 %s/steamXXXXXX
 %s: __pos (which is %zu) > this->size() (which is %zu)
+%s: command exited unexpectedly: %s\n
+%s: failed to run command: %s\n
 ( CMilesAudioOutputStream * ) m_vecAudioOutputStreams[i]
 ( CMilesAudioSound * ) m_vecAudioSounds[i]
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 (anonymous namespace)
+*ZL19RunCommandGetOutput10StringViewR10CUtlStringbbEUlS_E_
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
 -0123456789
@@ -179,10 +183,12 @@ $ORIGIN
 21CUtlCStringConversion
 23CMilesAudioOutputStream
 24CDirWatcherPollingThread
+2>/dev/null
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringxi8CDefLessE
 7CUtlMapI14CBaseUtlSymbolItEPvi8CDefLessE
 9IValidate
+>/dev/null
 AIL_allocate_sample_handle
 AIL_close_digital_driver
 AIL_digital_latency
@@ -364,6 +370,9 @@ JArray
 January
 July
 June
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings node.features.audio.mono false
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings node.features.audio.mono true
 LOCK_EX
 LOCK_SH
 LoadFileRangeIntoBuffer_Internal
@@ -414,6 +423,7 @@ Ramp To
 Received pulse event with bad context: %s\n
 Received pulse event with no info: %s\n
 Received pulse event with no userdata: %s\n
+RunCommand
 SOUND
 Saturday
 Seeking to a position not supported with async io
@@ -442,6 +452,7 @@ St16__numpunct_cacheIcE
 St16__numpunct_cacheIwE
 St17__timepunct_cacheIcE
 St17__timepunct_cacheIwE
+St17bad_function_call
 St18__moneypunct_cacheIcLb0EE
 St18__moneypunct_cacheIcLb1EE
 St18__moneypunct_cacheIwLb0EE
@@ -510,6 +521,8 @@ SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 StringAfterPrefix
 StringAfterPrefixCaseSensitive
+StringFindSuffix
+StringFindSuffixCaseSensitive
 Sunday
 Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 TLS init function for
@@ -575,6 +588,8 @@ V_strnicmp
 V_strnistr
 V_vsnprintf
 V_vsnprintfRet
+Value
+Value: true
 Volume Ramp Filter
 WORKAROUND_GdbSymbolLoadHook
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
@@ -712,9 +727,11 @@ application.name
 application.process.id
 application.version
 array
+audio.channels.detected
 auto
 auto:
 availableSpace
+bad_function_call
 basic_ios::clear
 basic_iostream
 basic_istream
@@ -800,6 +817,7 @@ fdatasync
 fdopen
 feof
 fflush
+fgetc
 fgets
 fileno
 float
@@ -1204,6 +1222,7 @@ wmemcmp
 wmemcpy
 wmemmove
 wmemset
+wpctl settings node.features.audio.mono
 write
 write %s failed, errno = %d\n
 writev

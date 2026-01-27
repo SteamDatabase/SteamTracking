@@ -5055,6 +5055,13 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "DownloadRegion_kuwait"         "Koeweit"
 "DownloadRegion_ua_sevastopol"  "Oekraïne – Sebastopol"
 "DownloadRegion_lv_riga"		"Letland"
+"DownloadRegion_br_cuiaba"			"Brazilië – Cuiabá"
+"DownloadRegion_br_belohorizonte"		"Brazilië – Belo Horizonte"
+"DownloadRegion_br_curitiba"			"Brazilië – Curitiba"
+"DownloadRegion_br_campogrande"			"Brazilië – Campo Grande"
+"DownloadRegion_br_manaus"			"Brazilië – Manaus"
+"DownloadRegion_br_belem"			"Brazilië – Belém"
+"DownloadRegion_br_salvador"			"Brazilië – Salvador"
 
 "SettingsController_AutosaveName"	"Controllerconfiguratie"
 "ControllerBinding_Offline_Save"	"[Offline automatisch opslaan]"

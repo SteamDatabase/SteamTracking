@@ -134,6 +134,8 @@ message CMsgClientSettings {
 	optional bool overlay_fps_counter_fps_graph = 4030 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShowFPSGraphFPS", (setting_default_bool) = true];
 	optional bool overlay_fps_counter_cpu_graph = 4031 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShowFPSGraphCPU", (setting_default_bool) = true];
 	optional bool overlay_fps_counter_allow_km_driver = 4032 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayAllowKMDriveOnWindows", (setting_default_bool) = true];
+	optional bool achievement_notification_toast = 4033 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\AchievementNotificationToast", (setting_default_bool) = true];
+	optional bool achievement_notification_sound = 4034 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\AchievementNotificationSound", (setting_default_bool) = true];
 	optional bool smooth_scroll_webviews = 5000 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool enable_gpu_accelerated_webviews = 5001 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool enable_hardware_video_decoding = 5003 [(setting_store) = k_EClientSettingStore_CustomFunc];
@@ -145,6 +147,7 @@ message CMsgClientSettings {
 	optional bool enable_ui_sounds = 5009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\EnableUISounds", (setting_default_bool) = true];
 	optional bool enable_gamescope_composer = 5010 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\EnableGamescopeComposer", (setting_default_bool) = false];
 	optional bool enable_gamescope_composer_vr = 5011 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\EnableGamescopeComposerVR", (setting_default_bool) = true];
+	optional bool show_switch_to_desktop_at_login = 5012 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "system\\ShowSwitchToDesktopAtLogin", (setting_pre_login) = true];
 	optional bool disable_all_toasts = 6000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "DisableAllToasts"];
 	optional bool disable_toasts_in_game = 6001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "DisableToastsInGame"];
 	optional bool play_sound_on_toast = 6002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "PlaySoundOnToast", (setting_default_bool) = true];
@@ -301,6 +304,7 @@ message CMsgClientSettings {
 	optional string accessibility_color_filter_name = 26009 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/ColorFilterName", (setting_default_string) = ""];
 	optional float accessibility_desktop_ui_scale = 26010 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/DesktopUIScale", (setting_default_float) = 1];
 	optional string accessibility_screen_reader_locale = 26011 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/ScreenReaderLocale", (setting_default_string) = "auto"];
+	optional bool accessibility_mono_audio = 26012 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/MonoAudio", (setting_default_bool) = false];
 	optional bool remote_play_wifi_ap_enabled = 27000 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "streaming_v2\\WifiAPEnabled", (setting_default_bool) = true];
 	optional int32 remote_play_wifi_ap_channel_5ghz = 27001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "streaming_v2\\WifiAPChannel5GHz", (setting_default_int) = 0];
 	optional int32 remote_play_wifi_ap_channel_6ghz = 27002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "streaming_v2\\WifiAPChannel6GHz", (setting_default_int) = 0];

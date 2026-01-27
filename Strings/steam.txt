@@ -176,6 +176,8 @@
 !BUseIOCP()
 !H88p
 !IsAlive()
+!V_isempty( prefix )
+!V_isempty( suffix )
 !V_isempty( svHostname )
 !\fmHs8
 !bAsDatagram
@@ -657,7 +659,6 @@ $ffn
 %\n k_EMsgGCHAccountLockStatusChange
 %\n k_EMsgGCHRoutingRulesFromGCHtoGM
 %\n k_EMsgGCHRoutingRulesToGCHfromGM
-%\n k_EMsgGSGetUserAchievementStatus
 %\n k_EMsgRemoteClientStatusResponse
 %\n k_EMsgUCMPublishedFilePreviewAdd
 %\n k_EMsgUCMPublishedFileSubscribed
@@ -883,7 +884,6 @@ $ffn
 &\n!k_EMsgUCMPublishedFileChildRemove
 &\n!k_EMsgUCMReloadUserFileListCaches
 &\n!k_EMsgUFSMigrateFileAppIDResponse
-&\n!k_EMsgUGSGetUserAchievementStatus
 &\n!k_EMsgUGSGetUserGameStatsResponse
 &\n!k_EMsgWGConnectionLegacyWGRequest
 &\n"k_EClanESportTournamentStreamEvent
@@ -1134,6 +1134,7 @@ $ffn
 (\n#k_EMsgFBSBootstrapperPackageRequest
 (\n#k_EMsgFSAddOrRemoveFollowerResponse
 (\n#k_EMsgFSGetPendingNotificationCount
+(\n#k_EMsgGMNeedShellAndServerAddresses
 (\n#k_EMsgMDSContentServerConfigRequest
 (\n#k_EMsgPSIsValidShoppingCartResponse
 (\n#k_EMsgProvideWindowsEventLogEntries
@@ -1181,7 +1182,6 @@ $ffn
 (iub & (m_nSizeWithStack-1)) == 0
 (main)
 (merge
-(no name set)
 (none)
 (null)
 (root)
@@ -1486,7 +1486,6 @@ $ffn
 -\n(k_EMsgDRMWorkerProcessInstallAllResponse
 -\n(k_EMsgDRMWorkerProcessUnpackBlobResponse
 -\n(k_EMsgGCRegisterWebInterfaces_Deprecated
--\n(k_EMsgGSGetUserAchievementStatusResponse
 -\n(k_EMsgRemoteClientAuthorizationConfirmed
 -\n(k_EMsgUCMPublishedFilePreviewAddResponse
 -\t47Cd1z
@@ -1555,6 +1554,7 @@ $ffn
 -nocrashdialog
 -nodircheck
 -nofriendsui
+-nojsreload
 -norepairfiles
 -noverifyfiles
 -oldlib
@@ -1637,7 +1637,6 @@ $ffn
 .\n)k_EMsgEconCDKeyProcessTransactionResponse
 .\n)k_EMsgGCHAppCheersGetAllowedTypesResponse
 .\n)k_EMsgUCMPublishedFileChildRemoveResponse
-.\n)k_EMsgUGSGetUserAchievementStatusResponse
 .\n)k_EMsgUpdateScheduledTaskEnableState_TEST
 .\n*k_ESteamReviewScore_OverwhelminglyNegative
 .\n*k_ESteamReviewScore_OverwhelminglyPositive
@@ -1914,11 +1913,11 @@ $ffn
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 00003333
+0123456789.
+0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789.
-0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -2049,7 +2048,6 @@ $ffn
 10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN14CUDPConnection20ConnectPingResults_tEE
-10CUtlMemoryIN14CUtlLinkedListI10CCoroutineiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI12CWatchingLogiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI14CLogWatchParamiE10ListElem_tEE
@@ -2061,6 +2059,7 @@ $ffn
 10CUtlMemoryIN14CUtlLinkedListIN18COpenSSLConnection13JobWakeData_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN4CNet21NetConnectionWakeUp_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN7CJobMgr13JobYielding_tEiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListIP10CCoroutineiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP10CNetPacketiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP18CHTTPRequestHandleiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP22CBaseScheduledFunctioniE10ListElem_tEE
@@ -2279,7 +2278,6 @@ $ffn
 14CUtlHashMapLRUI10CIPAndPort9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS0_E11HashFunctorIS0_EE
 14CUtlHashMapLRUI10CIPAndPortN11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS0_E11HashFunctorIS0_EE
 14CUtlHashMapLRUIN11CHTTPClient12HostLookup_tENS0_20AddrConnectionInfo_tENS1_2EqENS1_4HashEE
-14CUtlLinkedListI10CCoroutineiE
 14CUtlLinkedListI10CUtlStringiE
 14CUtlLinkedListI12CWatchingLogiE
 14CUtlLinkedListI14CLogWatchParamiE
@@ -2291,6 +2289,7 @@ $ffn
 14CUtlLinkedListIN18COpenSSLConnection13JobWakeData_tEiE
 14CUtlLinkedListIN4CNet21NetConnectionWakeUp_tEiE
 14CUtlLinkedListIN7CJobMgr13JobYielding_tEiE
+14CUtlLinkedListIP10CCoroutineiE
 14CUtlLinkedListIP10CNetPacketiE
 14CUtlLinkedListIP18CHTTPRequestHandleiE
 14CUtlLinkedListIP22CBaseScheduledFunctioniE
@@ -2334,8 +2333,6 @@ $ffn
 172.16
 172.16.3.31
 172.16.3.39
-17:12:08
-17:12:15
 17CBootstrapLogFile
 17CClientWalletInfo
 17CDebugStatsSystem
@@ -2461,6 +2458,9 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
+23:51:00
+23:51:51
+23:51:52
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2625,8 +2625,6 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
-6144
-65536
 524288
 52F*
 55Ly
@@ -2649,7 +2647,9 @@ $ffn
 6*Fc7
 6-nn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
+6144
 64CK\vH
+65536
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -5108,6 +5108,7 @@ Destination buffer is too small
 Destination buffer is wrong
 Destroy window
 Details
+DetectNow failed
 Device Corrupt
 Device Error
 Device Not Found
@@ -5162,6 +5163,7 @@ Doom3 CD-Key
 Down
 Download Complete.
 Download disabled
+Download failed
 Download failed: http error %d
 Download failed: http error %d (%s%s)\n
 Download of package (%s) failed after %d bytes (%d : %d).
@@ -5557,6 +5559,9 @@ EVideoFileFormat
 EVideoPermissions
 EVideoTrackContents
 EWOULDBLOCK
+EWUCriticalUpdateCountResult
+EWUInstallCriticalUpdatesResult
+EWURequiresRebootResult
 EWalletSource
 EWorkshopFileType
 EXECUTABLE_PATH
@@ -5769,6 +5774,8 @@ Failed Dependency
 Failed loading registry KV.
 Failed loading trust store: %s\n
 Failed parsing ProtoBuf body %s out of message: %s(%d)
+Failed setting downloads
+Failed setting updates
 Failed system(%s) in execute test: %d %s\n
 Failed system(%s) in execute test: %d\n
 Failed to apply update, reverting...
@@ -5784,6 +5791,13 @@ Failed to delete unreferenced zip files, continuing anyway
 Failed to determine download location for universe %d
 Failed to encrypt outgoing data
 Failed to find time in logfile name
+Failed to get IAutomaticUpdates
+Failed to get ISystemInformation
+Failed to get IUpdateDownloader
+Failed to get IUpdateInstallationResult
+Failed to get IUpdateInstaller
+Failed to get IUpdateSearcher
+Failed to get IUpdateSession
 Failed to get details from archive item %d
 Failed to get filename from archive item %d
 Failed to get first item in archive
@@ -5791,6 +5805,8 @@ Failed to get lock after waiting in %s\n
 Failed to get public key for universe %s, encrypted connection setup failed\n
 Failed to get thread priority: foreign thread unsupported\n
 Failed to get thread priority: getpriority failed %d\n
+Failed to get update result code
+Failed to init COM
 Failed to initialize update UI - exiting
 Failed to load %s
 Failed to load %s - dlerror(): %s\n
@@ -6025,7 +6041,6 @@ GOST89MAC
 GOST94
 GOST_KX_MESSAGE
 GRAPHICSTRING
-GROUPACHIEVEMENTS
 GSc\v3
 GXqN
 Galician
@@ -6407,6 +6422,8 @@ Initialized SSL context with certificate %s\n
 Input file read error
 Insane net sends -  %u jobs sent over %d threshold and spew was rate limited since last output\n
 Insane net sends - %s job has made %u net sends so far:
+Install failed
+Install failed for one or more updates
 Install path removed
 Installing update...
 InstanceName
@@ -6616,7 +6633,7 @@ JSType
 JZJ{.
 J\nHBF
 J\rS%H
-Jan 21 2026
+Jan 26 2026
 January
 Japanese
 Job %llu (%s) aborting.  %s\n
@@ -8901,7 +8918,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jan 21 2026 17:12:15
+Startup - updater built Jan 26 2026 23:51:51
 State
 StaticFileWriterThread()
 Steam
@@ -9595,6 +9612,7 @@ Update Running
 Update Started
 Update complete, launching...
 Update required
+Update search failed
 UpdateTime
 UpdateUI CreateGlContext failed
 UpdateUI CreateGlFont light failed
@@ -13182,6 +13200,9 @@ generic cryptogram
 georgian
 german
 get raw key failed
+get_Count failed
+get_RebootRequired failed
+get_Updates failed
 get_and_lock
 get_cert_by_subject
 get_cert_verify_tbs_data
@@ -15090,12 +15111,8 @@ k_EMsgClientUCMUpdatePublishedFile
 k_EMsgClientUCMUpdatePublishedFileResponse
 k_EMsgClientUDSP2PSessionEnded
 k_EMsgClientUDSP2PSessionStarted
-k_EMsgClientUFSGetSingleFileInfo
-k_EMsgClientUFSGetSingleFileInfoResponse
 k_EMsgClientUFSGetUGCDetails
-k_EMsgClientUFSGetUGCDetailsResponse
 k_EMsgClientUFSShareFile
-k_EMsgClientUFSShareFileResponse
 k_EMsgClientUGSGetGlobalStats
 k_EMsgClientUGSGetGlobalStatsResponse
 k_EMsgClientUninstallClientApp
@@ -15264,8 +15281,6 @@ k_EMsgGSGetPlayStats
 k_EMsgGSGetPlayStatsResponse
 k_EMsgGSGetReputation
 k_EMsgGSGetReputationResponse
-k_EMsgGSGetUserAchievementStatus
-k_EMsgGSGetUserAchievementStatusResponse
 k_EMsgGSGetUserGroupStatus
 k_EMsgGSGetUserGroupStatusResponse
 k_EMsgGSKick
@@ -17344,7 +17359,6 @@ pqueue_new
 pread64
 prediction resistance not supported
 preferredDeliveryMethod
-prefix != NULL
 preloadonly
 prerelease
 presentationAddress
@@ -18577,7 +18591,7 @@ still in init
 stop using I64/I32, use lld or d respectively
 store
 store init error
-str != NULL
+str != nullptr
 str_copy
 strcasecmp
 strcasestr

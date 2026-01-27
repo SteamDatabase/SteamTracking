@@ -5,7 +5,12 @@
     82561: (e, a, n) => {
       n.r(a), n.d(a, { default: () => l });
       const l = {
-        arabic: { Language_Name: "العربية" },
+        arabic: {
+          Steam_Language_Selection_Label: "اختر اللغة",
+          Steam_Welcome: "مرحبًا",
+          OOBE_Plug_In_Controller_Alt_Text: "وصّل وحدة تحكم أو اضغط على إدخال",
+          Language_Name: "العربية",
+        },
         brazilian: {
           Steam_Language_Selection_Label: "Selecione um idioma",
           Steam_Welcome: "Boas-vindas",

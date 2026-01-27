@@ -1,0 +1,29 @@
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CUser_SaveHardwareInfo_Request {
+	optional string friendly_name = 1;
+}
+
+message CUser_SaveHardwareInfo_Response {
+	optional uint64 saved_hardware_id = 1;
+}
+
+message CUser_GetSavedHardwareInfo_Request {
+}
+
+message CUser_GetSavedHardwareInfo_Response {
+	optional string friendly_name = 1;
+	optional uint64 saved_hardware_id = 2;
+	optional .UserSystemInformation system_info = 3;
+}
+
+service User {
+	option (webui_service_execution_site) = k_EClientExecutionSiteClientdll;
+
+	rpc SaveHardwareInfo (.CUser_SaveHardwareInfo_Request) returns (.CUser_SaveHardwareInfo_Response);
+	rpc GetSavedHardwareInfo (.CUser_GetSavedHardwareInfo_Request) returns (.CUser_GetSavedHardwareInfo_Response);
+}

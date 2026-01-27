@@ -23,6 +23,8 @@
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
 !AxU
+!V_isempty( prefix )
+!V_isempty( suffix )
 !m_data.HasError()
 !m_fnGlobalChangeCallback || !callback
 !m_pInt
@@ -178,7 +180,6 @@ $\nY8O
 (anonymous namespace)
 (int)(intp)m_hParam != -1
 (main)
-(no name set)
 (none)
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
@@ -265,9 +266,9 @@ $\nY8O
 10CUtlMemoryIN10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E6Node_tEE
-10CUtlMemoryIN14CUtlLinkedListI10CCoroutineiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListIP10CCoroutineiE10ListElem_tEE
 10CUtlMemoryIN6ConVar22ConVarChangeCallback_tEE
 10CUtlMemoryIP13CCoroutineMgrE
 10CUtlMemoryIPK11CFileWriterE
@@ -293,9 +294,9 @@ $\nY8O
 11CPathString
 11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E
 12CDefaultCvar
-14CUtlLinkedListI10CCoroutineiE
 14CUtlLinkedListI10CUtlStringiE
 14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE
+14CUtlLinkedListIP10CCoroutineiE
 14ConCommandBase
 16CKeyValuesSystem
 16IKeyValuesSystem
@@ -659,7 +660,6 @@ Invalid FileWriterItem_t
 Invalid flags in %s
 Invalid index %u
 Is64BitOS
-IsInList(before)
 IsText()
 IsValidIndex( elem )
 IsValidIndex(elem)
@@ -1023,6 +1023,7 @@ String pool bytes used %u, max %u, %u pools\n
 StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
+StringFindSuffixCaseSensitive
 Sunday
 TATTOO
 TECHNOLOGY
@@ -1928,7 +1929,6 @@ popen
 posix_fadvise
 ppath
 pread64
-prefix != NULL
 print
 printf
 pstrDest[nNewLength] == '\0'
@@ -2018,7 +2018,7 @@ steam://close
 steam://close/
 steam://openurl/
 steam://openurl_external/
-str != NULL
+str != nullptr
 strcasecmp
 strcasestr
 strchr

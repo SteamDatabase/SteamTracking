@@ -98,6 +98,7 @@ enum EMsg {
 	k_EMsgGMStatsForwardToAdminConnections = 338;
 	k_EMsgGMGetModifiedConVars = 339;
 	k_EMsgGMGetModifiedConVarsResponse = 340;
+	k_EMsgGMNeedShellAndServerAddresses = 341;
 	k_EMsgBaseAIS = 400;
 	k_EMsgAISRequestContentDescription = 402;
 	k_EMsgAISGetPackageChangeNumber = 405;
@@ -320,8 +321,6 @@ enum EMsg {
 	k_EMsgGSStatusUpdate_Unused = 907;
 	k_EMsgGSServerType = 908;
 	k_EMsgGSPlayerList = 909;
-	k_EMsgGSGetUserAchievementStatus = 910;
-	k_EMsgGSGetUserAchievementStatusResponse = 911;
 	k_EMsgGSGetPlayStats = 918;
 	k_EMsgGSGetPlayStatsResponse = 919;
 	k_EMsgGSGetUserGroupStatus = 920;
@@ -671,7 +670,6 @@ enum EMsg {
 	k_EMsgAMGetCommunityPrivacyState = 4116;
 	k_EMsgAMGetCommunityPrivacyStateResponse = 4117;
 	k_EMsgAMCheckClanInviteRateLimiting = 4118;
-	k_EMsgUGSGetUserAchievementStatus = 4119;
 	k_EMsgAMGetIgnored = 4120;
 	k_EMsgAMGetIgnoredResponse = 4121;
 	k_EMsgAMSetIgnoredResponse = 4122;
@@ -696,7 +694,6 @@ enum EMsg {
 	k_EMsgAMCheckClanMembershipResponse = 4161;
 	k_EMsgAMProbeClanMembershipList = 4162;
 	k_EMsgAMProbeClanMembershipListResponse = 4163;
-	k_EMsgUGSGetUserAchievementStatusResponse = 4164;
 	k_EMsgAMGetFriendsLobbies = 4165;
 	k_EMsgAMGetFriendsLobbiesResponse = 4166;
 	k_EMsgAMGetUserFriendNewsResponse = 4172;

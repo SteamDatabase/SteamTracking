@@ -366,6 +366,7 @@ $\n k_ECommentThreadTypeQAndASession
 $\n k_ECommunityItemClass_ChatEffect
 $\n k_ECommunityItemClass_Consumable
 $\n k_ECommunityItemClass_SalienItem
+$\n k_EContentModerationSanction_MAX
 $\n k_EContentReportReason_CSAMOther
 $\n k_EContentReportReason_Derailing
 $\n k_EContentReportReason_Reposting
@@ -567,11 +568,14 @@ $\nY8O
 (\n$k_ECommentThreadTypeVideo_Deprecated
 (\n$k_ECommunityItemClass_AnimatedAvatar
 (\n$k_EContentCheckProvider_GoogleGemini
+(\n$k_EContentModerationSanction_Deleted
+(\n$k_EContentModerationSanction_Invalid
 (\n$k_EContentReportReason_Impersonation
 (\n$k_EContentReportReason_OtherOffTopic
 (\n$k_EContentReportReason_ReferralLinks
 (\n$k_EContentReportReason_TargetedAbuse
 (\n$k_EContentReportResolution_Acquitted
+(\n$k_EContentReportResolution_Sustained
 (\n$k_EContentReportSubjectAction_Locked
 (\n$k_EContentReportSubjectAction_Warned
 (\n$k_EGameRecordingType_ManualRecording
@@ -690,6 +694,7 @@ $\nY8O
 )\n%k_EContentReportReason_Discrimination
 )\n%k_EContentReportReason_OtherTerrorism
 )\n%k_EContentReportResolution_Relabelled
+)\n%k_EContentReportResolution_Sanctioned
 )\n%k_EContentReportResolution_Suspicious
 )\n%k_EContentReportResolution_Unresolved
 )\n%k_EContentReportSubjectAction_Claimed
@@ -753,6 +758,7 @@ $\nY8O
 *\n&k_EClientNotificationType_TimerExpired
 *\n&k_ECompromiseDetectionType_ApiCallRate
 *\n&k_EContentCheckProvider_GoogleVertexAI
+*\n&k_EContentModerationSanction_HubBanned
 *\n&k_EContentReportReason_GenderedDoxxing
 *\n&k_EContentReportReason_OtherDisruptive
 *\n&k_EContentReportReason_OtherHarassment
@@ -787,6 +793,7 @@ $\nY8O
 +\n'k_ECommentThreadTypeUserStatusPublished
 +\n'k_ECommunityItemClass_ProfileBackground
 +\n'k_ECompromiseDetectionType_TicketAction
++\n'k_EContentModerationSanction_Relabelled
 +\n'k_EContentReportReason_GenderedStalking
 +\n'k_EContentReportReason_NamingAndShaming
 +\n'k_EContentReportResolution_RemoveAndBan
@@ -829,6 +836,7 @@ $\nY8O
 ,\n(k_EClientNotificationType_HardwareSurvey
 ,\n(k_EClientNotificationType_PlaytestInvite
 ,\n(k_ECommentThreadTypePublishedFile_Public
+,\n(k_EContentModerationSanction_TradeBanned
 ,\n(k_EContentReportReason_AttemptedScamming
 ,\n(k_EContentReportReason_CSAMSexualContent
 ,\n(k_EContentReportReason_InauthenticReview
@@ -1171,6 +1179,7 @@ $\nY8O
 0\n,k_EClientNotificationType_GameRecordingError
 0\n,k_EClientNotificationType_GameRecordingStart
 0\n,k_EClientNotificationType_RequestedGameAdded
+0\n,k_EContentModerationSanction_CommunityBanned
 0\n,k_EContentReportReason_GenderedTargetedAbuse
 0\n,k_EContentReportReason_NonConsensualMaterial
 0\n,k_EContentReportReason_NudityOrSexualContent
@@ -1633,6 +1642,7 @@ $\nY8O
 1\n-k_EClientNotificationType_OverlaySplashScreen
 1\n-k_EClientNotificationType_TimedTrialRemaining
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
+1\n-k_EContentModerationSanction_MarkAsSuspicious
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
 1\n-k_EContentReportReason_QuotesModeratedContent
@@ -1971,6 +1981,7 @@ $\nY8O
 6\n2k_EClientNotificationType_FamilySharingStopPlaying
 6\n2k_EClientNotificationType_GameRecordingInstantClip
 6\n2k_EClientNotificationType_ParentalPlaytimeResponse
+6\n2k_EContentModerationSanction_CommentHistoryDeleted
 6\n2k_EContentReportReason_GenderedEncouragingViolence
 6\n2k_EContentReportReason_RightToBeForgottenViolation
 6\n2k_EProfileCustomizationTypeRareAchievementShowcase
@@ -3047,6 +3058,7 @@ ECommentThreadType
 ECommunityItemClass
 ECompromiseDetectionType
 EContentCheckProvider
+EContentModerationSanction
 EContentModeratorLevel
 EContentReportReason
 EContentReportResolution
@@ -4700,6 +4712,7 @@ String literals cannot cross line boundaries.
 StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
+StringFindSuffixCaseSensitive
 StringPrintfVector currently only supports up to
 SubTabPosition
 Sunday

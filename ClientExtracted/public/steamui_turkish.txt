@@ -5054,6 +5054,13 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "DownloadRegion_kuwait"         "Kuveyt"
 "DownloadRegion_ua_sevastopol"  "Ukrayna - Sivastopol"
 "DownloadRegion_lv_riga"		"Letonya"
+"DownloadRegion_br_cuiaba"			"Brezilya - Cuiabá"
+"DownloadRegion_br_belohorizonte"		"Brezilya - Belo Horizonte"
+"DownloadRegion_br_curitiba"			"Brezilya - Curitiba"
+"DownloadRegion_br_campogrande"			"Brezilya - Campo Grande"
+"DownloadRegion_br_manaus"			"Brezilya - Manaus"
+"DownloadRegion_br_belem"			"Brezilya - Belém"
+"DownloadRegion_br_salvador"			"Brezilya - Salvador"
 
 "SettingsController_AutosaveName"	"Kontrolcü Yapılandırması"
 "ControllerBinding_Offline_Save"	"[Çevrimdışı Otomatik Kayıt]"

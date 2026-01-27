@@ -9,6 +9,9 @@
         });
       const _ = {
         arabic: {
+          Steam_Language_Selection_Label: "اختر اللغة",
+          Steam_Welcome: "مرحبًا",
+          OOBE_Plug_In_Controller_Alt_Text: "وصّل وحدة تحكم أو اضغط على إدخال",
           Language_Name: "العربية",
         },
         brazilian: {

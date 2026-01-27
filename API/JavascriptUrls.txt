@@ -1302,6 +1302,7 @@ ${STORE_BASE_URL}app${appid}/landing/${sale_update_landing_page_vanity_id}
 ${STORE_BASE_URL}app/${_ ? _ : _}
 ${STORE_BASE_URL}app/${appid}
 ${STORE_BASE_URL}app/${appid}/
+${STORE_BASE_URL}app/${appid}/#app_reviews_hash
 ${STORE_BASE_URL}app/${completed_appid}
 ${STORE_BASE_URL}app/${id}
 ${STORE_BASE_URL}app/${id}/#app_reviews_hash
@@ -1441,6 +1442,7 @@ ${STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames
 ${STORE_BASE_URL}labs/trendingreviews/
 ${STORE_BASE_URL}legal/
 ${STORE_BASE_URL}login/${_ ? `?redir=${}` : ""}
+${STORE_BASE_URL}login/?redir=${}
 ${STORE_BASE_URL}login/?steamtv
 ${STORE_BASE_URL}login?redir=${}
 ${STORE_BASE_URL}login?steamtv=1

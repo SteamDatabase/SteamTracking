@@ -35,6 +35,8 @@
  transaction_safe
  volatile
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
+!V_isempty( prefix )
+!V_isempty( suffix )
 !directory.empty()
 !dumper_->IsPostMortem()
 !g_VProfile
@@ -337,7 +339,6 @@ $ORIGIN
 16CAdHocValidation
 16CBreakpadFactory
 16IBreakpadFactory
-17:12:08
 17CFileWriterThread
 17CStreamReaderBase
 18CUtlCharConversion
@@ -345,12 +346,14 @@ $ORIGIN
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
+23:51:00
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringxi8CDefLessE
 9IMemAlloc
+;lerO8
 </script>
 <empty>
 <family %u, %u bytes>
@@ -527,7 +530,7 @@ IsText()
 IsValidIndex( elem )
 IsValidIndex(elem)
 JArray
-Jan 21 2026
+Jan 26 2026
 January
 July
 June
@@ -1337,7 +1340,6 @@ posix_memalign
 ppFrames[iFrame] != NULL
 ppath
 pread64
-prefix != NULL
 print
 processor
 propack.so
@@ -1492,7 +1494,7 @@ steamservice.so
 steamui.so
 steamwebhelper
 stepping
-str != NULL
+str != nullptr
 strcasecmp
 strcasestr
 strchr

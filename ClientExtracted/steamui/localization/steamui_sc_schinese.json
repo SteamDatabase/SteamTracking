@@ -163,6 +163,7 @@
     "Settings_RemotePlay_Description_UnknownHardware": "在此设备和另一台设备之间流式传输游戏。只需在另一台计算机上登录同一蒸汽平台帐户，或在您的蒸汽平台流式应用上选择“其他计算机”即可轻松连接。",
     "Settings_RemotePlay_Pair": "配对蒸汽平台流式应用",
     "Settings_RemotePlay_ControllerOverlayHotkeySteam": "蒸汽平台键",
+    "Settings_RemotePlay_ConnectionManagement_Steam": "蒸汽平台",
     "Settings_Library_ProdKey_Activate": "在蒸汽平台上激活产品",
     "Settings_Library_SSA_Agree": "请完整阅读此协议。 您必须同意《蒸汽平台订户协议》中的所有条款才能继续。",
     "Settings_Library_ProdKey_Info_Title": "蒸汽平台产品序列号",
@@ -216,6 +217,7 @@
     "Login_ServiceUnavailable": "连接蒸汽平台服务器失败",
     "Login_Remove_Desc1": "您想移除 %1$s 吗？ 这将删除所有已保存的登录信息。以后要使用此帐户时，您将需要输入帐户名、密码和所有相关的用以确认的蒸汽平台令牌验证码。",
     "Join_New": "首次使用蒸汽平台？",
+    "Join_SiteLink_VR": "在 PC 或移动设备上访问 %1$s，以创建蒸汽平台帐户",
     "Steam_ErrorCondition_AccountDisabled": "蒸汽平台客服已冻结该帐户。\n\n造成帐户被冻结的原因通常是\n帐户遭他人访问，或者是存有支付争议。",
     "Steam_ErrorCondition_SteamGuard": "该计算机已被取消授权。您必须重新登录并输入新的蒸汽平台令牌验证码来重新授权。",
     "Steam_ErrorCondition_Offline": "当蒸汽平台处于离线模式时，无法完成此操作。",
@@ -490,7 +492,5 @@
     "ShareSheet_ShareOnSteam_PartialUploaded_Plural": "%1$s 张截图已分享至蒸汽平台，因此将跳过。",
     "Overlay_ClipHint_1": "您的剪辑已保存至您的“蒸汽平台录像及截图”中",
     "Overlay_ClipHint_2": "要管理/编辑/分享您所有的录像，请从客户端菜单转至%1$s，或在下方的蒸汽平台叠加界面菜单中选择 %2$s。",
-    "Settings_RemotePlay_ConnectionManagement_Steam": "蒸汽平台",
-    "Join_SiteLink_VR": "在 PC 或移动设备上访问 %1$s，以创建蒸汽平台帐户",
     "HardwareDeviceName_Generic": "蒸汽平台设备"
 }

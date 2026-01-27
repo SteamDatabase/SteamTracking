@@ -25,7 +25,7 @@
 "app_task_friend_status" "Trạng thái Steam"
 "app_task_exit_steam"	"Thoát Steam"
 "app_task_screenshots"	"Ảnh chụp màn hình"
-"app_task_friend_activity" "Hoạt động của bạn bè"
+"app_task_friend_activity" "Hoạt động bạn bè"
 "app_task_console"	"Console"
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"Dừng Remote Play"

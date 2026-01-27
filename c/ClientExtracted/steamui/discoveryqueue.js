@@ -170,30 +170,36 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        switch (_) {
-          case 0:
-            return "game";
-          case 6:
-            return "software";
-          case 1:
-            return "demo";
-          case 4:
-            return "dlc";
-          case 7:
-          case 3:
-            return "video";
-          case 11:
-            return "music";
-          case 12:
-            return "beta";
-          case 2:
-            return "mod";
-        }
-        return "invalid";
+        const { tagid: _, language: __webpack_require__ = _._.LANGUAGE } = _;
+        return (0, _._)(_, __webpack_require__) || String(_);
+      }
+      function _(_) {
+        const { tagID: _, className: __webpack_require__ } = _,
+          _ = (0, _._)(
+            (function (_, _ = _._.LANGUAGE) {
+              const _ = (0, _._)(_, _);
+              return `${_._.STORE_BASE_URL}tags/${(0, _._)(_)}/${_}`;
+            })(_),
+          );
+        return _.createElement(
+          _._,
+          {
+            className: __webpack_require__,
+            href: _,
+            role: "listitem",
+          },
+          _.createElement(_, {
+            tagid: _,
+          }),
+        );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -769,7 +775,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1211,6 +1217,8 @@
           }),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       const _ = {
         include_assets: !0,
         include_trailers: !0,
@@ -1342,45 +1350,15 @@
         );
       }
       function _(_) {
-        const _ = (0, _._)(() => _._.Get().BIsGameWishlisted(_)),
+        const _ = Boolean((0, _._)(_)),
           _ = (0, _._)(),
-          _ = _.useCallback(() => {
-            _._.Get().UpdateGameWishlist(_, !_, _);
-          }, [_, _, _]);
+          { mutate: _ } = (0, _._)(_, !_, _);
         return {
           bIsWishlisted: _,
           fnUpdateWishlist: _,
         };
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { tagid: _, language: __webpack_require__ = _._.LANGUAGE } = _;
-        return (0, _._)(_, __webpack_require__) || String(_);
-      }
-      function _(_) {
-        const { tagID: _, className: __webpack_require__ } = _,
-          _ = (0, _._)(
-            (function (_, _ = _._.LANGUAGE) {
-              const _ = (0, _._)(_, _);
-              return `${_._.STORE_BASE_URL}tags/${(0, _._)(_)}/${_}`;
-            })(_),
-          );
-        return _.createElement(
-          _._,
-          {
-            className: __webpack_require__,
-            href: _,
-            role: "listitem",
-          },
-          _.createElement(_, {
-            tagid: _,
-          }),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       new _._("DiscoveryQueueApp").Debug;
       function _(_) {
         const {
@@ -1510,6 +1488,7 @@
             appAriaIDs: _,
           } = _,
           [_] = (0, _._)(_, _),
+          _ = (0, _._)(_),
           { bIsIgnored: _, fnUpdateIgnored: _ } = _(_),
           { bIsWishlisted: _, fnUpdateWishlist: _ } = _(_),
           _ = _(_, _, _, _),
@@ -1561,10 +1540,7 @@
               ),
               _.createElement(_._, {
                 bSingleLineMode: !0,
-                info: {
-                  _: _,
-                  type: _(_.GetAppType()),
-                },
+                _: _,
               }),
             ),
             _.createElement(_, {
@@ -1580,10 +1556,7 @@
               _.createElement(_._, {
                 bShowTooltip: !0,
                 bTruncateTotalReviews: __webpack_require__,
-                appInfo: {
-                  _: _,
-                  type: _(_.GetAppType()),
-                },
+                _: _,
               }),
             ),
             _.createElement(
@@ -1619,10 +1592,7 @@
                   },
                   _.BHasDemo() &&
                     _.createElement(_._, {
-                      info: {
-                        _: _.GetAppID(),
-                        type: (0, _._)(_.GetStoreItemType(), _.GetAppType()),
-                      },
+                      _: _,
                       className: (0, _._)(
                         _().QueueButton,
                         _().Primary,
@@ -2084,13 +2054,13 @@
                         index: _ + _,
                         bShowMinimizedDisplay: _,
                         selectedIndex: _,
-                        bPreferDemoStorePage: _,
+                        bPreferDemoStorePage: Boolean(_),
                         mapViewedAppCount: _,
                         fnCloseModal: __webpack_require__,
                         fnLoadNextQueue: () => _(!1),
                         fnAdvance: _,
                         bSkipAppRequestPending: Boolean(0 != _),
-                        showAOAutoPlayWarning: _,
+                        showAOAutoPlayWarning: Boolean(_),
                       }),
                   ),
                 ),
@@ -2219,22 +2189,19 @@
           _ = (0, _._)(),
           _ = (0, _._)(2, _._.LANGUAGE, !1),
           [_, _] = _.useState(0),
-          [_, _] = _.useState(0);
+          [_, _] = _.useState(0),
+          { data: _ } = (0, _._)();
         _.useEffect(() => {
           _ &&
             !_ &&
+            _ &&
             _._.Get()
               .HintLoad()
               .then(() => {
                 _._.Get()
                   .LoadSkippedApps(_, _)
                   .then((_) => {
-                    _(
-                      _.reduce(
-                        (_, _) => (_._.Get().BIsGameWishlisted(_) ? _ + 1 : _),
-                        0,
-                      ),
-                    ),
+                    _(_.reduce((_, _) => (_.has(_) ? _ + 1 : _), 0)),
                       _(
                         _.reduce(
                           (_, _) => (_._.Get().BIsGameIgnored(_) ? _ + 1 : _),
@@ -2244,7 +2211,7 @@
                       _(!0);
                   });
               });
-        }, [_, _, _, _]);
+        }, [_, _, _, _, _]);
         const [_, _] = _.useState(!1),
           _ = (0, _._)(_, _),
           _ = (0, _._)("DiscoveryQueueSummary"),

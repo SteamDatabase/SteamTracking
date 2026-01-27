@@ -719,7 +719,21 @@ enum EContentReportResolution {
 	k_EContentReportResolution_RemoveAndWarn = 11;
 	k_EContentReportResolution_RemoveAndBan = 12;
 	k_EContentReportResolution_RemoveAndKick = 13;
-	k_EContentReportResolution_MAX = 14;
+	k_EContentReportResolution_Sanctioned = 14;
+	k_EContentReportResolution_Sustained = 15;
+	k_EContentReportResolution_MAX = 16;
+}
+
+enum EContentModerationSanction {
+	k_EContentModerationSanction_Invalid = 0;
+	k_EContentModerationSanction_Deleted = 1;
+	k_EContentModerationSanction_CommunityBanned = 2;
+	k_EContentModerationSanction_HubBanned = 3;
+	k_EContentModerationSanction_TradeBanned = 4;
+	k_EContentModerationSanction_CommentHistoryDeleted = 5;
+	k_EContentModerationSanction_Relabelled = 6;
+	k_EContentModerationSanction_MarkAsSuspicious = 7;
+	k_EContentModerationSanction_MAX = 8;
 }
 
 enum EContentReportSubjectAction {

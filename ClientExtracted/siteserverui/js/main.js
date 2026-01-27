@@ -406,7 +406,7 @@
             return t;
         }
       }
-      var w, B, M, k, v, T, N, I, P, R, L, z, O, F, x, A;
+      var w, B, M, k, v, T, N, P, I, R, L, z, O, F, x, A;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -501,13 +501,13 @@
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(I || (I = {})),
+        })(P || (P = {})),
         (function (e) {
           (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
             (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
               "k_ELoginUIStyleNewWithoutQRCode"),
             (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-        })(P || (P = {})),
+        })(I || (I = {})),
         (function (e) {
           (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
             "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -1376,6 +1376,7 @@
           return "CMsgProtoBufHeader";
         }
       }
+      H.Message;
       H.Message;
       H.Message;
       H.Message;
@@ -2656,20 +2657,20 @@
           return "SiteServerUI_ContentCacheStatus_Request";
         }
       }
-      class Ie extends H.Message {
+      class Pe extends H.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ie.prototype.enabled || J(Ie.M()),
+            Pe.prototype.enabled || J(Pe.M()),
             H.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Ie.sm_m ||
-              (Ie.sm_m = {
-                proto: Ie,
+            Pe.sm_m ||
+              (Pe.sm_m = {
+                proto: Pe,
                 fields: {
                   enabled: { n: 1, br: q.readBool, bw: $.writeBool },
                   port: { n: 2, br: q.readUint32, bw: $.writeUint32 },
@@ -2696,72 +2697,6 @@
                     n: 8,
                     br: q.readUint64String,
                     bw: $.writeUint64String,
-                  },
-                },
-              }),
-            Ie.sm_m
-          );
-        }
-        static MBF() {
-          return Ie.sm_mbf || (Ie.sm_mbf = K(Ie.M())), Ie.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ie.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return X(Ie.M(), e, t);
-        }
-        static fromObject(e) {
-          return Q(Ie.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (V().BinaryReader)(e),
-            r = new Ie();
-          return Ie.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return Y(Ie.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (V().BinaryWriter)();
-          return Ie.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          Z(Ie.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (V().BinaryWriter)();
-          return Ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "SiteServerUI_ContentCacheStatus_Response";
-        }
-      }
-      class Pe extends H.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Pe.prototype.enabled || J(Pe.M()),
-            H.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Pe.sm_m ||
-              (Pe.sm_m = {
-                proto: Pe,
-                fields: {
-                  enabled: { n: 1, br: q.readBool, bw: $.writeBool },
-                  port: { n: 2, br: q.readUint32, bw: $.writeUint32 },
-                  cache_location: { n: 3, br: q.readString, bw: $.writeString },
-                  max_size_gb: { n: 4, br: q.readUint32, bw: $.writeUint32 },
-                  p2p_enabled: { n: 5, br: q.readBool, bw: $.writeBool },
-                  external_process: { n: 6, br: q.readBool, bw: $.writeBool },
-                  explicit_ip_address: {
-                    n: 7,
-                    br: q.readString,
-                    bw: $.writeString,
                   },
                 },
               }),
@@ -2798,6 +2733,72 @@
         serializeBase64String() {
           var e = new (V().BinaryWriter)();
           return Pe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "SiteServerUI_ContentCacheStatus_Response";
+        }
+      }
+      class Ie extends H.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ie.prototype.enabled || J(Ie.M()),
+            H.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Ie.sm_m ||
+              (Ie.sm_m = {
+                proto: Ie,
+                fields: {
+                  enabled: { n: 1, br: q.readBool, bw: $.writeBool },
+                  port: { n: 2, br: q.readUint32, bw: $.writeUint32 },
+                  cache_location: { n: 3, br: q.readString, bw: $.writeString },
+                  max_size_gb: { n: 4, br: q.readUint32, bw: $.writeUint32 },
+                  p2p_enabled: { n: 5, br: q.readBool, bw: $.writeBool },
+                  external_process: { n: 6, br: q.readBool, bw: $.writeBool },
+                  explicit_ip_address: {
+                    n: 7,
+                    br: q.readString,
+                    bw: $.writeString,
+                  },
+                },
+              }),
+            Ie.sm_m
+          );
+        }
+        static MBF() {
+          return Ie.sm_mbf || (Ie.sm_mbf = K(Ie.M())), Ie.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ie.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return X(Ie.M(), e, t);
+        }
+        static fromObject(e) {
+          return Q(Ie.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (V().BinaryReader)(e),
+            r = new Ie();
+          return Ie.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return Y(Ie.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (V().BinaryWriter)();
+          return Ie.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          Z(Ie.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (V().BinaryWriter)();
+          return Ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "SiteServerUI_ContentCacheConfig_Request";
@@ -2983,7 +2984,7 @@
           return this.SendMsgAndAwaitResponse(e, ke, 0, "clientstatus");
         }
         GetContentCacheStatus(e) {
-          return this.SendMsgAndAwaitResponse(e, Ie, 0, "cachestatus");
+          return this.SendMsgAndAwaitResponse(e, Pe, 0, "cachestatus");
         }
         UpdateCacheConfig(e) {
           return this.SendMsgAndAwaitResponse(e, Re, 1, "cacheconfig");
@@ -3225,22 +3226,37 @@
         class {
           m_schTimer;
           m_fnCallback;
+          m_fnOnCancel;
           Schedule(e, t) {
             this.IsScheduled() && this.Cancel(),
               (this.m_fnCallback = t),
               (this.m_schTimer = window.setTimeout(this.ScheduledInternal, e));
           }
+          AsyncSchedule(e, t) {
+            return new Promise((r, a) => {
+              this.Schedule(e, () => {
+                t(), r();
+              }),
+                (this.m_fnOnCancel = a);
+            });
+          }
           IsScheduled() {
             return void 0 !== this.m_schTimer;
           }
           Cancel() {
-            this.m_schTimer &&
-              (clearTimeout(this.m_schTimer), (this.m_schTimer = void 0));
+            if (this.m_schTimer) {
+              const e = this.m_fnOnCancel;
+              clearTimeout(this.m_schTimer), this.Reset(), e && e();
+            }
+          }
+          Reset() {
+            (this.m_schTimer = void 0),
+              (this.m_fnCallback = void 0),
+              (this.m_fnOnCancel = void 0);
           }
           ScheduledInternal() {
-            this.m_schTimer = void 0;
             const e = this.m_fnCallback;
-            (this.m_fnCallback = void 0), e?.();
+            this.Reset(), e?.();
           }
         }.prototype,
         "ScheduledInternal",
@@ -4880,7 +4896,7 @@
         }
       }
       (0, i.Cg)([D], Nt.prototype, "Approve", null);
-      let It = class extends a.Component {
+      let Pt = class extends a.Component {
         constructor(e) {
           super(e);
         }
@@ -4910,10 +4926,10 @@
           );
         }
       };
-      function Pt(e) {
+      function It(e) {
         return null == e ? "" : e.toLocaleString([]);
       }
-      It = (0, i.Cg)([o.PA], It);
+      Pt = (0, i.Cg)([o.PA], Pt);
       class Rt extends a.Component {
         m_bEditDialogVisible = !1;
         m_TimerID;
@@ -4959,7 +4975,7 @@
           this.m_bEditDialogVisible = !1;
         }
         async OnUpdate(e, t, r, a, n, s, i) {
-          const o = le.Init(Pe);
+          const o = le.Init(Ie);
           o.Body().set_enabled(e),
             o.Body().set_port(t),
             o.Body().set_cache_location(r),
@@ -5081,7 +5097,7 @@
               a.createElement(
                 "label",
                 { className: "PopupGenericBodyText TextPairValue" },
-                Pt(this.state.unMaxSize),
+                It(this.state.unMaxSize),
               ),
               a.createElement(it, { strText: Ke("#Cache_MaxSizeTip") }),
             ),
@@ -5142,7 +5158,7 @@
               a.createElement(
                 "label",
                 { className: "PopupGenericBodyText TextPairValue" },
-                Pt(this.state.unCurrentSize),
+                It(this.state.unCurrentSize),
               ),
             ),
             a.createElement(
@@ -5472,7 +5488,7 @@
                 1 == e && a.createElement(St, null),
                 2 == e && a.createElement(Et, null),
                 3 == e && a.createElement(Ot, null),
-                4 == e && a.createElement(It, null),
+                4 == e && a.createElement(Pt, null),
                 a.createElement(et, null),
               ),
             )

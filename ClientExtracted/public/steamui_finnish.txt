@@ -5051,6 +5051,13 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ukraina – Sevastopol"
 "DownloadRegion_lv_riga"		"Latvia"
+"DownloadRegion_br_cuiaba"			"Brasilia – Cuiabá"
+"DownloadRegion_br_belohorizonte"		"Brasilia – Belo Horizonte"
+"DownloadRegion_br_curitiba"			"Brasilia – Curitiba"
+"DownloadRegion_br_campogrande"			"Brasilia – Campo Grande"
+"DownloadRegion_br_manaus"			"Brasilia – Manaus"
+"DownloadRegion_br_belem"			"Brasilia – Belém"
+"DownloadRegion_br_salvador"			"Brasilia – Salvador"
 
 "SettingsController_AutosaveName"	"Ohjainmääritykset"
 "ControllerBinding_Offline_Save"	"[Offline-tilan automaattitallennus]"

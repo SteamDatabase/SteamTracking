@@ -164,6 +164,8 @@
 !BUseIOCP()
 !GetRefCount()
 !H88p
+!V_isempty( prefix )
+!V_isempty( suffix )
 !V_isempty( svHostname )
 !\fmHs8
 !bAsDatagram
@@ -601,7 +603,6 @@ $ffn
 %\n k_EMsgGCHAccountLockStatusChange
 %\n k_EMsgGCHRoutingRulesFromGCHtoGM
 %\n k_EMsgGCHRoutingRulesToGCHfromGM
-%\n k_EMsgGSGetUserAchievementStatus
 %\n k_EMsgRemoteClientStatusResponse
 %\n k_EMsgUCMPublishedFilePreviewAdd
 %\n k_EMsgUCMPublishedFileSubscribed
@@ -806,7 +807,6 @@ $ffn
 &\n!k_EMsgUCMPublishedFileChildRemove
 &\n!k_EMsgUCMReloadUserFileListCaches
 &\n!k_EMsgUFSMigrateFileAppIDResponse
-&\n!k_EMsgUGSGetUserAchievementStatus
 &\n!k_EMsgUGSGetUserGameStatsResponse
 &\n!k_EMsgWGConnectionLegacyWGRequest
 &\n"k_EClanESportTournamentStreamEvent
@@ -1054,6 +1054,7 @@ $ffn
 (\n#k_EMsgFBSBootstrapperPackageRequest
 (\n#k_EMsgFSAddOrRemoveFollowerResponse
 (\n#k_EMsgFSGetPendingNotificationCount
+(\n#k_EMsgGMNeedShellAndServerAddresses
 (\n#k_EMsgMDSContentServerConfigRequest
 (\n#k_EMsgPSIsValidShoppingCartResponse
 (\n#k_EMsgProvideWindowsEventLogEntries
@@ -1097,7 +1098,6 @@ $ffn
 (main)
 (merge
 (no current pipe)
-(no name set)
 (none)
 (null)
 (root)
@@ -1384,7 +1384,6 @@ $ffn
 -\n(k_EMsgDRMWorkerProcessInstallAllResponse
 -\n(k_EMsgDRMWorkerProcessUnpackBlobResponse
 -\n(k_EMsgGCRegisterWebInterfaces_Deprecated
--\n(k_EMsgGSGetUserAchievementStatusResponse
 -\n(k_EMsgRemoteClientAuthorizationConfirmed
 -\n(k_EMsgUCMPublishedFilePreviewAddResponse
 -\t47Cd1z
@@ -1452,7 +1451,6 @@ $ffn
 .\n)k_EMsgEconCDKeyProcessTransactionResponse
 .\n)k_EMsgGCHAppCheersGetAllowedTypesResponse
 .\n)k_EMsgUCMPublishedFileChildRemoveResponse
-.\n)k_EMsgUGSGetUserAchievementStatusResponse
 .\n)k_EMsgUpdateScheduledTaskEnableState_TEST
 .\n*k_ESteamReviewScore_OverwhelminglyNegative
 .\n*k_ESteamReviewScore_OverwhelminglyPositive
@@ -1839,7 +1837,6 @@ $ffn
 10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN14CUDPConnection20ConnectPingResults_tEE
-10CUtlMemoryIN14CUtlLinkedListI10CCoroutineiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI12CWatchingLogiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI13CallbackMsg_tiE10ListElem_tEE
@@ -1853,6 +1850,7 @@ $ffn
 10CUtlMemoryIN14CUtlLinkedListIN18COpenSSLConnection13JobWakeData_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN4CNet21NetConnectionWakeUp_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN7CJobMgr13JobYielding_tEiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListIP10CCoroutineiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP10CNetPacketiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP11CServerPipeiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP18CHTTPRequestHandleiE10ListElem_tEE
@@ -2061,7 +2059,6 @@ $ffn
 14CUtlHashMapLRUI10CIPAndPort9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS0_E11HashFunctorIS0_EE
 14CUtlHashMapLRUI10CIPAndPortN11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS0_E11HashFunctorIS0_EE
 14CUtlHashMapLRUIN11CHTTPClient12HostLookup_tENS0_20AddrConnectionInfo_tENS1_2EqENS1_4HashEE
-14CUtlLinkedListI10CCoroutineiE
 14CUtlLinkedListI10CUtlStringiE
 14CUtlLinkedListI12CWatchingLogiE
 14CUtlLinkedListI13CallbackMsg_tiE
@@ -2075,6 +2072,7 @@ $ffn
 14CUtlLinkedListIN18COpenSSLConnection13JobWakeData_tEiE
 14CUtlLinkedListIN4CNet21NetConnectionWakeUp_tEiE
 14CUtlLinkedListIN7CJobMgr13JobYielding_tEiE
+14CUtlLinkedListIP10CCoroutineiE
 14CUtlLinkedListIP10CNetPacketiE
 14CUtlLinkedListIP11CServerPipeiE
 14CUtlLinkedListIP18CHTTPRequestHandleiE
@@ -2113,7 +2111,6 @@ $ffn
 16IKeyValuesSystem
 16ITCPHostCallback
 16JobStatsBucket_t
-17:12:08
 17CCrossProcessPipe
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -2239,6 +2236,7 @@ $ffn
 22CFutureSharedStateBase
 22IPCServerMapAndMutex_t
 22ISSLConnectionCallback
+23:51:00
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23IUnbufferedSendCallback
@@ -4709,6 +4707,7 @@ DescriptorProtosH
 Destination
 Destination buffer is too small
 Destination buffer is wrong
+DetectNow failed
 Device Corrupt
 Device Error
 Device Not Found
@@ -4759,6 +4758,7 @@ Don't lookup extension types if they aren't present (2).
 Doom3 CD-Key
 Down
 Download disabled
+Download failed
 Downloading
 DumpMemTrackingStats %d %d \n
 Duplicate Name
@@ -5137,6 +5137,9 @@ EVideoFileFormat
 EVideoPermissions
 EVideoTrackContents
 EWOULDBLOCK
+EWUCriticalUpdateCountResult
+EWUInstallCriticalUpdatesResult
+EWURequiresRebootResult
 EWalletSource
 EWorkshopFileType
 EXPAND_ONLY
@@ -5335,6 +5338,8 @@ Failed Dependency
 Failed loading registry KV.
 Failed loading trust store: %s\n
 Failed parsing ProtoBuf body %s out of message: %s(%d)
+Failed setting downloads
+Failed setting updates
 Failed system(%s) in execute test: %d %s\n
 Failed system(%s) in execute test: %d\n
 Failed to capture callstack
@@ -5343,10 +5348,19 @@ Failed to create first worker thread in AddWorkItem()
 Failed to create thread (error 0x%x)
 Failed to encrypt outgoing data
 Failed to find time in logfile name
+Failed to get IAutomaticUpdates
+Failed to get ISystemInformation
+Failed to get IUpdateDownloader
+Failed to get IUpdateInstallationResult
+Failed to get IUpdateInstaller
+Failed to get IUpdateSearcher
+Failed to get IUpdateSession
 Failed to get lock after waiting in %s\n
 Failed to get public key for universe %s, encrypted connection setup failed\n
 Failed to get thread priority: foreign thread unsupported\n
 Failed to get thread priority: getpriority failed %d\n
+Failed to get update result code
+Failed to init COM
 Failed to load optional module %s\n
 Failed to parse input
 Failed to parse provided range request header
@@ -5540,7 +5554,6 @@ GOST89MAC
 GOST94
 GOST_KX_MESSAGE
 GRAPHICSTRING
-GROUPACHIEVEMENTS
 GSc\v3
 GXqN
 Galician
@@ -5962,6 +5975,8 @@ Initial packet in multi-packet UDP message is too large and would exceed initial
 Initialized SSL context with certificate %s\n
 Insane net sends -  %u jobs sent over %d threshold and spew was rate limited since last output\n
 Insane net sends - %s job has made %u net sends so far:
+Install failed
+Install failed for one or more updates
 Install path removed
 Insufficient Funds
 Insufficient Privilege
@@ -6089,7 +6104,7 @@ JSType
 JZJ{.
 J\nHBF
 J\rS%H
-Jan 21 2026
+Jan 26 2026
 January
 Japanese
 Job %llu (%s) aborting.  %s\n
@@ -8868,6 +8883,7 @@ Update Required
 Update Running
 Update Started
 Update required
+Update search failed
 Updated Disabled by app
 Upgrade
 Upgrade Required
@@ -12208,6 +12224,9 @@ generic cryptogram
 georgian
 german
 get raw key failed
+get_Count failed
+get_RebootRequired failed
+get_Updates failed
 get_and_lock
 get_cert_by_subject
 get_cert_verify_tbs_data
@@ -13989,12 +14008,8 @@ k_EMsgClientUCMUpdatePublishedFile
 k_EMsgClientUCMUpdatePublishedFileResponse
 k_EMsgClientUDSP2PSessionEnded
 k_EMsgClientUDSP2PSessionStarted
-k_EMsgClientUFSGetSingleFileInfo
-k_EMsgClientUFSGetSingleFileInfoResponse
 k_EMsgClientUFSGetUGCDetails
-k_EMsgClientUFSGetUGCDetailsResponse
 k_EMsgClientUFSShareFile
-k_EMsgClientUFSShareFileResponse
 k_EMsgClientUGSGetGlobalStats
 k_EMsgClientUGSGetGlobalStatsResponse
 k_EMsgClientUninstallClientApp
@@ -14163,8 +14178,6 @@ k_EMsgGSGetPlayStats
 k_EMsgGSGetPlayStatsResponse
 k_EMsgGSGetReputation
 k_EMsgGSGetReputationResponse
-k_EMsgGSGetUserAchievementStatus
-k_EMsgGSGetUserAchievementStatusResponse
 k_EMsgGSGetUserGroupStatus
 k_EMsgGSGetUserGroupStatusResponse
 k_EMsgGSKick
@@ -16279,7 +16292,6 @@ pqueue_new
 pread64
 prediction resistance not supported
 preferredDeliveryMethod
-prefix != NULL
 preloadonly
 prerelease
 presentationAddress
@@ -17459,7 +17471,7 @@ still in init
 stop using I64/I32, use lld or d respectively
 store
 store init error
-str != NULL
+str != nullptr
 str_copy
 strcasecmp
 strcasestr

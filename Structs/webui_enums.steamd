@@ -4414,6 +4414,13 @@ enum UnnamedEnumc2b67199254beacd
 	NOTSCORED_SUSPICIOUS = 69;
 }
 
+enum UnnamedEnumc37198b75e93a002
+{
+	Bound = 0;
+	Unbound = 1;
+	Manage = 2;
+}
+
 enum UnnamedEnumc3c06b9797acb457
 {
 	k_eMouseKBOnly = 0;

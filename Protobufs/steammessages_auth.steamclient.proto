@@ -274,17 +274,6 @@ message CAuthentication_GetAuthSessionsForAccount_Response {
 	repeated uint64 client_ids = 1;
 }
 
-message CAuthentication_MigrateMobileSession_Request {
-	optional fixed64 steamid = 1;
-	optional string token = 2;
-	optional string signature = 3;
-}
-
-message CAuthentication_MigrateMobileSession_Response {
-	optional string refresh_token = 1;
-	optional string access_token = 2;
-}
-
 message CAuthentication_Token_Revoke_Request {
 	optional string token = 1;
 	optional .EAuthTokenRevokeAction revoke_action = 2 [default = k_EAuthTokenRevokePermanent];
@@ -412,7 +401,6 @@ service Authentication {
 	rpc GenerateAccessTokenForApp (.CAuthentication_AccessToken_GenerateForApp_Request) returns (.CAuthentication_AccessToken_GenerateForApp_Response);
 	rpc EnumerateTokens (.CAuthentication_RefreshToken_Enumerate_Request) returns (.CAuthentication_RefreshToken_Enumerate_Response);
 	rpc GetAuthSessionsForAccount (.CAuthentication_GetAuthSessionsForAccount_Request) returns (.CAuthentication_GetAuthSessionsForAccount_Response);
-	rpc MigrateMobileSession (.CAuthentication_MigrateMobileSession_Request) returns (.CAuthentication_MigrateMobileSession_Response);
 	rpc RevokeToken (.CAuthentication_Token_Revoke_Request) returns (.CAuthentication_Token_Revoke_Response);
 	rpc RevokeRefreshToken (.CAuthentication_RefreshToken_Revoke_Request) returns (.CAuthentication_RefreshToken_Revoke_Response);
 }

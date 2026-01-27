@@ -5052,6 +5052,13 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "DownloadRegion_kuwait"         "クウェート"
 "DownloadRegion_ua_sevastopol"  "ウクライナ－セヴァストポリ"
 "DownloadRegion_lv_riga"		"ラトビア"
+"DownloadRegion_br_cuiaba"			"ブラジル－クイアバ"
+"DownloadRegion_br_belohorizonte"		"ブラジル－ベロオリゾンテ"
+"DownloadRegion_br_curitiba"			"ブラジル－クリチバ"
+"DownloadRegion_br_campogrande"			"ブラジル－カンポグランデ"
+"DownloadRegion_br_manaus"			"ブラジル－マナウス"
+"DownloadRegion_br_belem"			"ブラジル－ベレン"
+"DownloadRegion_br_salvador"			"ブラジル－サルバドール"
 
 "SettingsController_AutosaveName"	"コントローラ設定"
 "ControllerBinding_Offline_Save"	"[オフライン自動保存]"

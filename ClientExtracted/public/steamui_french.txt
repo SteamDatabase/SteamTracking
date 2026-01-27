@@ -5052,6 +5052,13 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "DownloadRegion_kuwait"         "Koweït"
 "DownloadRegion_ua_sevastopol"  "Ukraine – Sébastopol"
 "DownloadRegion_lv_riga"		"Lettonie"
+"DownloadRegion_br_cuiaba"			"Brésil – Cuiabá"
+"DownloadRegion_br_belohorizonte"		"Brésil – Belo Horizonte"
+"DownloadRegion_br_curitiba"			"Brésil – Curitiba"
+"DownloadRegion_br_campogrande"			"Brésil – Campo Grande"
+"DownloadRegion_br_manaus"			"Brésil – Manaus"
+"DownloadRegion_br_belem"			"Brésil – Belém"
+"DownloadRegion_br_salvador"			"Brésil – Salvador"
 
 "SettingsController_AutosaveName"	"Configuration du contrôleur"
 "ControllerBinding_Offline_Save"	"[Sauvegarde automatique hors ligne]"

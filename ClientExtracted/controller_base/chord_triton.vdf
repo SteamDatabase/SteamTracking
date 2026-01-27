@@ -189,7 +189,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action brightness_up"
+							"binding"		"key_press VOLUME_UP"
 						}
 						"settings"
 						{
@@ -200,7 +200,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action brightness_up"
+							"binding"		"key_press VOLUME_UP"
 						}
 						"settings"
 						{
@@ -219,7 +219,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action brightness_down"
+							"binding"		"key_press VOLUME_DOWN"
 						}
 						"settings"
 						{
@@ -230,7 +230,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action brightness_down"
+							"binding"		"key_press VOLUME_DOWN"
 						}
 						"settings"
 						{

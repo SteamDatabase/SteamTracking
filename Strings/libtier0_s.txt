@@ -100,7 +100,7 @@ $ORIGIN
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-17:12:11
+23:51:12
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -179,7 +179,7 @@ CValidator::Pop
 CValidator::Pop()
 CValidator::Push
 CValidator::Push(char const*, void*, char const*)
-CValidator::RenderLeaks(unsigned int)
+CValidator::RenderLeaks(unsigned int, bool)
 CValidator::RenderObjects(unsigned int)
 CValidator::SetAllocSizeFilter(int)
 CValidator::UnlockValidationLocks()
@@ -298,7 +298,7 @@ IsSpewActive
 IsStackTrackingFiltered
 IsValidBoolValue
 JArray
-Jan 21 2026
+Jan 26 2026
 Jobs/Coroutines
 Leaked mem: %s %s\n
 Logger

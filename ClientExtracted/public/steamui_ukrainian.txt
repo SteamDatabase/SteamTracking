@@ -5047,6 +5047,13 @@
 "DownloadRegion_kuwait"         "Кувейт"
 "DownloadRegion_ua_sevastopol"  "Україна — Севастополь"
 "DownloadRegion_lv_riga"		"Латвія"
+"DownloadRegion_br_cuiaba"			"Бразилія — Куяба"
+"DownloadRegion_br_belohorizonte"		"Бразилія — Белу-Оризонті"
+"DownloadRegion_br_curitiba"			"Бразилія — Куритиба"
+"DownloadRegion_br_campogrande"			"Бразилія — Кампу-Гранді"
+"DownloadRegion_br_manaus"			"Бразилія — Манаус"
+"DownloadRegion_br_belem"			"Бразилія — Белен"
+"DownloadRegion_br_salvador"			"Бразилія — Салвадор"
 
 "SettingsController_AutosaveName"	"Конфігурація контролера"
 "ControllerBinding_Offline_Save"	"[Автономне автозбереження]"

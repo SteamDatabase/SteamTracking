@@ -253,6 +253,7 @@ $\n k_ECommentThreadTypeQAndASession
 $\n k_ECommunityItemClass_ChatEffect
 $\n k_ECommunityItemClass_Consumable
 $\n k_ECommunityItemClass_SalienItem
+$\n k_EContentModerationSanction_MAX
 $\n k_EContentReportReason_CSAMOther
 $\n k_EContentReportReason_Derailing
 $\n k_EContentReportReason_Reposting
@@ -370,11 +371,14 @@ $\n k_SystemAudioPortDirection_Input
 (\n$k_ECommentThreadTypeVideo_Deprecated
 (\n$k_ECommunityItemClass_AnimatedAvatar
 (\n$k_EContentCheckProvider_GoogleGemini
+(\n$k_EContentModerationSanction_Deleted
+(\n$k_EContentModerationSanction_Invalid
 (\n$k_EContentReportReason_Impersonation
 (\n$k_EContentReportReason_OtherOffTopic
 (\n$k_EContentReportReason_ReferralLinks
 (\n$k_EContentReportReason_TargetedAbuse
 (\n$k_EContentReportResolution_Acquitted
+(\n$k_EContentReportResolution_Sustained
 (\n$k_EContentReportSubjectAction_Locked
 (\n$k_EContentReportSubjectAction_Warned
 (\n$k_EGameRecordingType_ManualRecording
@@ -450,6 +454,7 @@ $\n k_SystemAudioPortDirection_Input
 )\n%k_EContentReportReason_Discrimination
 )\n%k_EContentReportReason_OtherTerrorism
 )\n%k_EContentReportResolution_Relabelled
+)\n%k_EContentReportResolution_Sanctioned
 )\n%k_EContentReportResolution_Suspicious
 )\n%k_EContentReportResolution_Unresolved
 )\n%k_EContentReportSubjectAction_Claimed
@@ -484,6 +489,7 @@ $\n k_SystemAudioPortDirection_Input
 *\n&k_EBrowserGPUStatus_DisabledCrashCount
 *\n&k_ECompromiseDetectionType_ApiCallRate
 *\n&k_EContentCheckProvider_GoogleVertexAI
+*\n&k_EContentModerationSanction_HubBanned
 *\n&k_EContentReportReason_GenderedDoxxing
 *\n&k_EContentReportReason_OtherDisruptive
 *\n&k_EContentReportReason_OtherHarassment
@@ -505,6 +511,7 @@ $\n k_SystemAudioPortDirection_Input
 +\n'k_ECommentThreadTypeUserStatusPublished
 +\n'k_ECommunityItemClass_ProfileBackground
 +\n'k_ECompromiseDetectionType_TicketAction
++\n'k_EContentModerationSanction_Relabelled
 +\n'k_EContentReportReason_GenderedStalking
 +\n'k_EContentReportReason_NamingAndShaming
 +\n'k_EContentReportResolution_RemoveAndBan
@@ -528,6 +535,7 @@ $\n k_SystemAudioPortDirection_Input
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
 ,\n(k_ECommentThreadTypePublishedFile_Public
+,\n(k_EContentModerationSanction_TradeBanned
 ,\n(k_EContentReportReason_AttemptedScamming
 ,\n(k_EContentReportReason_CSAMSexualContent
 ,\n(k_EContentReportReason_InauthenticReview
@@ -825,6 +833,7 @@ $\n k_SystemAudioPortDirection_Input
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
 0\n,k_EBrowserGPUStatus_DisabledChildCommandLine
+0\n,k_EContentModerationSanction_CommunityBanned
 0\n,k_EContentReportReason_GenderedTargetedAbuse
 0\n,k_EContentReportReason_NonConsensualMaterial
 0\n,k_EContentReportReason_NudityOrSexualContent
@@ -1033,6 +1042,7 @@ $\n k_SystemAudioPortDirection_Input
 19CUtlNoEscConversion
 19HTMLCommandBuffer_t
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
+1\n-k_EContentModerationSanction_MarkAsSuspicious
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
 1\n-k_EContentReportReason_QuotesModeratedContent
@@ -1171,6 +1181,7 @@ $\n k_SystemAudioPortDirection_Input
 5\n1k_PublishedFileQueryType_RankedByNumTimesReported
 5\n\vnested_type
 6\n2k_EBrowserGPUStatus_DisabledCompositingCommandLine
+6\n2k_EContentModerationSanction_CommentHistoryDeleted
 6\n2k_EContentReportReason_GenderedEncouragingViolence
 6\n2k_EContentReportReason_RightToBeForgottenViolation
 6\n2k_EProfileCustomizationTypeRareAchievementShowcase
@@ -2018,6 +2029,7 @@ Descending
 DescriptorProto
 DescriptorProtosH
 Destroying a held mutex\n
+DetectNow failed
 Device Corrupt
 Device Error
 Device Not Found
@@ -2060,6 +2072,7 @@ Don't lookup extension types if they aren't present (2).
 Doom3 CD-Key
 Down
 Download disabled
+Download failed
 Downloading
 DraggableRects
 Duplicate Name
@@ -2125,6 +2138,7 @@ EContentCheckProvider
 EContentCorruptionType
 EContentDownloadSourceType
 EContentDownloadType
+EContentModerationSanction
 EContentModeratorLevel
 EContentReportReason
 EContentReportResolution
@@ -2238,6 +2252,9 @@ EVideoEncryptionKeyTrackType
 EVideoFileFormat
 EVideoPermissions
 EVideoTrackContents
+EWUCriticalUpdateCountResult
+EWUInstallCriticalUpdatesResult
+EWURequiresRebootResult
 EWalletSource
 EWindowStackingOrder
 EWindowsUpdateRebootBehavior
@@ -2341,12 +2358,23 @@ Failed creating file mapping %s\n
 Failed creating read event %s\n
 Failed creating view of file for %s\n
 Failed creating write event %s\n
+Failed setting downloads
+Failed setting updates
 Failed system(%s) in execute test: %d %s\n
 Failed system(%s) in execute test: %d\n
 Failed to bind client address for shared fd id: 0x%llx\n
 Failed to bind server addres for shared fd: %d\n
 Failed to create socket for shared fd id: 0x%llx\n
 Failed to create socket for shared fd: %d\n
+Failed to get IAutomaticUpdates
+Failed to get ISystemInformation
+Failed to get IUpdateDownloader
+Failed to get IUpdateInstallationResult
+Failed to get IUpdateInstaller
+Failed to get IUpdateSearcher
+Failed to get IUpdateSession
+Failed to get update result code
+Failed to init COM
 Failed to initialize client address for shared fd id: 0x%llx\n
 Failed to initialize server address for shared fd id: 0x%llx\n
 Failed to initialize server address for shared fd: %d\n
@@ -2474,7 +2502,6 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
-GROUPACHIEVEMENTS
 G\nCk_EContentReportReason_HiddenAdvertisementOrCommercialCommunication
 Galician
 Game
@@ -2669,6 +2696,8 @@ Individual
 Indonesian
 Init
 Init Failed
+Install failed
+Install failed for one or more updates
 Install path removed
 Insufficient Funds
 Insufficient Privilege
@@ -3659,6 +3688,8 @@ String literals cannot cross line boundaries.
 StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringCompare
+StringFindSuffix
+StringFindSuffixCaseSensitive
 StringPrintfVector currently only supports up to
 Subscribed
 Subscribers
@@ -3834,6 +3865,7 @@ Update Required
 Update Running
 Update Started
 Update required
+Update search failed
 Updated Disabled by app
 Upgrade Required
 Upload Disconnected
@@ -4805,6 +4837,9 @@ georgian
 german
 gesture
 gestures
+get_Count failed
+get_RebootRequired failed
+get_Updates failed
 get_disk_info
 getc
 getcwd

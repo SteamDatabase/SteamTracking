@@ -460,6 +460,7 @@ message CStoreBrowse_GetContentHubConfig_Response {
 		repeated uint32 must_have_tags = 7;
 		repeated uint32 any_one_of_tags = 8;
 		repeated uint32 must_not_have_tags = 9;
+		optional string hub_description = 10;
 	}
 
 	repeated .CStoreBrowse_GetContentHubConfig_Response.ContentHubConfig hubconfigs = 1;

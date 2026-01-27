@@ -360,6 +360,7 @@ $\n k_ECommentThreadTypeQAndASession
 $\n k_ECommunityItemClass_ChatEffect
 $\n k_ECommunityItemClass_Consumable
 $\n k_ECommunityItemClass_SalienItem
+$\n k_EContentModerationSanction_MAX
 $\n k_EContentReportReason_CSAMOther
 $\n k_EContentReportReason_Derailing
 $\n k_EContentReportReason_Reposting
@@ -554,11 +555,14 @@ $\nY8O
 (\n$k_ECommentThreadTypeVideo_Deprecated
 (\n$k_ECommunityItemClass_AnimatedAvatar
 (\n$k_EContentCheckProvider_GoogleGemini
+(\n$k_EContentModerationSanction_Deleted
+(\n$k_EContentModerationSanction_Invalid
 (\n$k_EContentReportReason_Impersonation
 (\n$k_EContentReportReason_OtherOffTopic
 (\n$k_EContentReportReason_ReferralLinks
 (\n$k_EContentReportReason_TargetedAbuse
 (\n$k_EContentReportResolution_Acquitted
+(\n$k_EContentReportResolution_Sustained
 (\n$k_EContentReportSubjectAction_Locked
 (\n$k_EContentReportSubjectAction_Warned
 (\n$k_EGameRecordingType_ManualRecording
@@ -639,6 +643,7 @@ $\nY8O
 )\n%k_EContentReportReason_Discrimination
 )\n%k_EContentReportReason_OtherTerrorism
 )\n%k_EContentReportResolution_Relabelled
+)\n%k_EContentReportResolution_Sanctioned
 )\n%k_EContentReportResolution_Suspicious
 )\n%k_EContentReportResolution_Unresolved
 )\n%k_EContentReportSubjectAction_Claimed
@@ -684,6 +689,7 @@ $\nY8O
 *\n&k_EBrowserGPUStatus_DisabledCrashCount
 *\n&k_ECompromiseDetectionType_ApiCallRate
 *\n&k_EContentCheckProvider_GoogleVertexAI
+*\n&k_EContentModerationSanction_HubBanned
 *\n&k_EContentReportReason_GenderedDoxxing
 *\n&k_EContentReportReason_OtherDisruptive
 *\n&k_EContentReportReason_OtherHarassment
@@ -706,6 +712,7 @@ $\nY8O
 +\n'k_ECommentThreadTypeUserStatusPublished
 +\n'k_ECommunityItemClass_ProfileBackground
 +\n'k_ECompromiseDetectionType_TicketAction
++\n'k_EContentModerationSanction_Relabelled
 +\n'k_EContentReportReason_GenderedStalking
 +\n'k_EContentReportReason_NamingAndShaming
 +\n'k_EContentReportResolution_RemoveAndBan
@@ -743,6 +750,7 @@ $\nY8O
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
 ,\n(k_ECommentThreadTypePublishedFile_Public
+,\n(k_EContentModerationSanction_TradeBanned
 ,\n(k_EContentReportReason_AttemptedScamming
 ,\n(k_EContentReportReason_CSAMSexualContent
 ,\n(k_EContentReportReason_InauthenticReview
@@ -1044,17 +1052,17 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0000000000000000000000000000000000000000
-1000
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789
 0123456789ABCDEF
 0123456789abcdef
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
 0\n,k_EBrowserGPUStatus_DisabledChildCommandLine
+0\n,k_EContentModerationSanction_CommunityBanned
 0\n,k_EContentReportReason_GenderedTargetedAbuse
 0\n,k_EContentReportReason_NonConsensualMaterial
 0\n,k_EContentReportReason_NudityOrSexualContent
@@ -1065,6 +1073,7 @@ $\nY8O
 0\n,k_EPublishedFileInappropriateResult_Possible
 0\n,k_EPublishedFileInappropriateResult_Unlikely
 0x%llx
+1000
 10BlankImage
 10CBasePanel
 10CHintLabel
@@ -1420,7 +1429,6 @@ $\nY8O
 16HTMLComboBoxHost
 16IDynamicFunction
 16ListPanelDragger
-17:12:26
 17CClientWalletInfo
 17CFileWriterThread
 17CIngameFPSCPUInfo
@@ -1474,6 +1482,7 @@ $\nY8O
 19CUtlQueueDeprecatedIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES1_EE
 19CUtlQueueDeprecatedIiE
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
+1\n-k_EContentModerationSanction_MarkAsSuspicious
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
 1\n-k_EContentReportReason_QuotesModeratedContent
@@ -1532,6 +1541,7 @@ $\nY8O
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
+23:52:15
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -1647,6 +1657,7 @@ $\nY8O
 6 PQ
 6ConVar
 6\n2k_EBrowserGPUStatus_DisabledCompositingCommandLine
+6\n2k_EContentModerationSanction_CommentHistoryDeleted
 6\n2k_EContentReportReason_GenderedEncouragingViolence
 6\n2k_EContentReportReason_RightToBeForgottenViolation
 6\n2k_EProfileCustomizationTypeRareAchievementShowcase
@@ -2857,6 +2868,7 @@ DescriptorProtosH
 Deseret
 Destroying a held mutex\n
 Details
+DetectNow failed
 Detected file change in %s\n
 Detected leaked fd
 Detected possibly crashed/killed game, exiting\n
@@ -2916,6 +2928,7 @@ Don't lookup extension types if they aren't present (2).
 Doom3 CD-Key
 Down
 Download disabled
+Download failed
 Downloading
 DragDrop
 DragDrop.DragFrame
@@ -2989,6 +3002,7 @@ EContentCheckProvider
 EContentCorruptionType
 EContentDownloadSourceType
 EContentDownloadType
+EContentModerationSanction
 EContentModeratorLevel
 EContentReportReason
 EContentReportResolution
@@ -3110,6 +3124,9 @@ EVideoEncryptionKeyTrackType
 EVideoFileFormat
 EVideoPermissions
 EVideoTrackContents
+EWUCriticalUpdateCountResult
+EWUInstallCriticalUpdatesResult
+EWURequiresRebootResult
 EWalletSource
 EWindowStackingOrder
 EWindowsUpdateRebootBehavior
@@ -3273,6 +3290,8 @@ Failed during internal/external buffer swapping\n
 Failed finding game exiting event %s\n
 Failed loading registry KV.
 Failed putting data into external buffer during swapping\n
+Failed setting downloads
+Failed setting updates
 Failed system(%s) in execute test: %d %s\n
 Failed system(%s) in execute test: %d\n
 Failed to add image to avif encoder: %u
@@ -3283,6 +3302,15 @@ Failed to create socket for shared fd id: 0x%llx\n
 Failed to create socket for shared fd: %d\n
 Failed to find time in logfile name
 Failed to finish encoder: %u
+Failed to get IAutomaticUpdates
+Failed to get ISystemInformation
+Failed to get IUpdateDownloader
+Failed to get IUpdateInstallationResult
+Failed to get IUpdateInstaller
+Failed to get IUpdateSearcher
+Failed to get IUpdateSession
+Failed to get update result code
+Failed to init COM
 Failed to initialize client address for shared fd id: 0x%llx\n
 Failed to initialize server address for shared fd id: 0x%llx\n
 Failed to initialize server address for shared fd: %d\n
@@ -3470,7 +3498,6 @@ GPUUtilization
 GPUVRam
 GPUVRamWarning
 GPUVRamWarningDesaturated
-GROUPACHIEVEMENTS
 G\nCk_EContentReportReason_HiddenAdvertisementOrCommercialCommunication
 Galician
 Game
@@ -3748,6 +3775,8 @@ InputDialog
 Inscriptional_Pahlavi
 Inscriptional_Parthian
 InsertTabImage
+Install failed
+Install failed for one or more updates
 Install path removed
 InstanceName
 InstantClipKey
@@ -3864,7 +3893,7 @@ JSObjectProperty
 JSType
 JZJ{.
 J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
-Jan 21 2026
+Jan 26 2026
 January
 Japanese
 Javanese
@@ -5546,6 +5575,7 @@ StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringCompare
 StringFindSuffix
+StringFindSuffixCaseSensitive
 StringPrintfVector currently only supports up to
 StyleFlagFilter
 Styles
@@ -5834,6 +5864,7 @@ Update Required
 Update Running
 Update Started
 Update required
+Update search failed
 UpdateIMECandidates
 UpdateStats
 UpdateTime
@@ -7219,6 +7250,9 @@ georgian
 german
 gesture
 gestures
+get_Count failed
+get_RebootRequired failed
+get_Updates failed
 get_disk_info
 getaddrinfo
 getc
