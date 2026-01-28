@@ -3282,12 +3282,6 @@ enum UnnamedEnum702e80796a2bbcdf
 	LAST = 1;
 }
 
-enum UnnamedEnum70769bfde26bf2c0
-{
-	Normal = 0;
-	Urgent = 1;
-}
-
 enum UnnamedEnum71321e1d7c5f7a14
 {
 	Minimal = 1;
@@ -3862,14 +3856,6 @@ enum UnnamedEnum8ff352285a57e444
 	Word = 0;
 	Line = 1;
 	Suggest = 2;
-}
-
-enum UnnamedEnum91720dd68a673167
-{
-	All = 0;
-	Events = 1;
-	Releases = 2;
-	Dismissed = 3;
 }
 
 enum UnnamedEnum940ff890eb1bf26e

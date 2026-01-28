@@ -994,10 +994,10 @@
         return t.endsWith("/") || (t += "/"), t;
       }
     },
-    18142: (e, t, r) => {
+    85966: (e, t, r) => {
       "use strict";
       r(23808);
-      var n = r(38452),
+      var n = r(63664),
         i = r(64238),
         s = r.n(i),
         a = r(43527),
@@ -1539,55 +1539,22 @@
           (0, J.KC)(t),
         );
       }
-      const ie = [
-        "greyneutral",
-        "mauve",
-        "slate",
-        "sage",
-        "olive",
-        "sand",
-        "tomato",
-        "red",
-        "ruby",
-        "crimson",
-        "pink",
-        "plum",
-        "purple",
-        "violet",
-        "iris",
-        "indigo",
-        "blue",
-        "cyan",
-        "teal",
-        "jade",
-        "green",
-        "grass",
-        "brown",
-        "bronze",
-        "gold",
-        "sky",
-        "mint",
-        "lime",
-        "yellow",
-        "amber",
-        "orange",
-      ];
-      var se = r(43186);
-      const ae = (0, u.createContext)({}),
-        oe = (0, u.createContext)(() => {});
-      function le(e) {
+      var ie = r(43186);
+      const se = (0, u.createContext)({}),
+        ae = (0, u.createContext)(() => {});
+      function oe(e) {
         const [t, r] = (0, u.useState)({});
         return u.createElement(
-          ae.Provider,
+          se.Provider,
           { value: t },
-          u.createElement(oe.Provider, { value: r }, e.children),
+          u.createElement(ae.Provider, { value: r }, e.children),
         );
       }
-      function ce() {
-        return (0, u.useContext)(ae);
+      function le() {
+        return (0, u.useContext)(se);
       }
-      var ue = r(13857);
-      const me = u.memo(function (e) {
+      var ce = r(13857);
+      const ue = u.memo(function (e) {
         const {
             defaultTextSize: t = "3",
             accentColor: r = "blue",
@@ -1597,46 +1564,39 @@
             children: o,
             zoo: l,
           } = e,
-          [c, m] = u.useState(n),
-          [d, p] = u.useState(r),
-          h = window,
-          g = (e) => (t) => {
-            ie.includes(t) ? e(t) : console.error("Unknown color!");
+          c = {
+            "--default-font-size": `var(--text-size-${t})`,
+            "--default-line-height": `var(--line-height-${t})`,
+            "--default-letter-spacing": `var(--letter-spacing-${t})`,
+            "--color-debug": "hotpink",
+            "--color-accent-contrast": "white",
           };
-        (h.setAccent = g(p)), (h.setDull = g(m));
-        const _ = {
-          "--default-font-size": `var(--text-size-${t})`,
-          "--default-line-height": `var(--line-height-${t})`,
-          "--default-letter-spacing": `var(--letter-spacing-${t})`,
-          "--color-debug": "hotpink",
-          "--color-accent-contrast": "white",
-        };
         return u.createElement(
-          le,
+          oe,
           null,
           u.createElement(
-            se.cW,
+            ie.cW,
             { breakpoints: a },
             u.createElement(
-              de,
+              me,
               null,
               u.createElement(
                 "div",
                 {
-                  className: s()(ue.Root, "noOpinionatedGlobalStyles"),
-                  style: _,
+                  className: s()(ce.Root, "noOpinionatedGlobalStyles"),
+                  style: c,
                 },
                 u.createElement(
                   "div",
                   {
-                    "data-accent-color": d,
-                    "data-dull-color": c,
+                    "data-accent-color": r,
+                    "data-dull-color": n,
                     "data-body-text-color": i,
-                    className: ue.DataAttributes,
+                    className: ce.DataAttributes,
                   },
                   u.createElement(
                     "div",
-                    { className: ue.AfterDataAttributes },
+                    { className: ce.AfterDataAttributes },
                     o,
                     !1,
                   ),
@@ -1646,22 +1606,22 @@
           ),
         );
       });
-      function de(e) {
+      function me(e) {
         const { children: t } = e,
-          { formFactorOverride: r } = ce();
-        return u.createElement(se.cr, { formFactor: r }, t);
+          { formFactorOverride: r } = le();
+        return u.createElement(ie.cr, { formFactor: r }, t);
       }
-      const pe = u.lazy(() =>
+      const de = u.lazy(() =>
           Promise.all([r.e(316), r.e(1810), r.e(6966)]).then(r.bind(r, 90023)),
         ),
-        he = u.lazy(() => r.e(4262).then(r.bind(r, 30899))),
-        ge = u.lazy(() =>
-          Promise.all([r.e(4298), r.e(4226)]).then(r.bind(r, 23539)),
+        pe = u.lazy(() => r.e(4262).then(r.bind(r, 30899))),
+        he = u.lazy(() =>
+          Promise.all([r.e(4298), r.e(4226)]).then(r.bind(r, 35067)),
         ),
-        _e = u.lazy(() =>
+        ge = u.lazy(() =>
           Promise.all([r.e(4298), r.e(4226)]).then(r.bind(r, 34044)),
         ),
-        fe = u.lazy(() =>
+        _e = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(2300),
@@ -1675,8 +1635,47 @@
             r.e(4160),
             r.e(6700),
             r.e(8995),
+            r.e(721),
             r.e(1101),
           ]).then(r.bind(r, 25767)),
+        ),
+        fe = u.lazy(() =>
+          Promise.all([
+            r.e(1348),
+            r.e(2300),
+            r.e(316),
+            r.e(5841),
+            r.e(3864),
+            r.e(3874),
+            r.e(3516),
+            r.e(5344),
+            r.e(2924),
+            r.e(9954),
+            r.e(462),
+            r.e(1084),
+            r.e(5859),
+            r.e(9161),
+            r.e(3388),
+            r.e(9017),
+            r.e(1810),
+            r.e(725),
+            r.e(4298),
+            r.e(7267),
+            r.e(8713),
+            r.e(2012),
+            r.e(8129),
+            r.e(1853),
+            r.e(4440),
+            r.e(4160),
+            r.e(3506),
+            r.e(6700),
+            r.e(9352),
+            r.e(8995),
+            r.e(8758),
+            r.e(7352),
+            r.e(8350),
+            r.e(4268),
+          ]).then(r.bind(r, 76483)),
         ),
         we = u.lazy(() =>
           Promise.all([
@@ -1698,15 +1697,14 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(7224),
             r.e(4298),
             r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
             r.e(1853),
-            r.e(4160),
             r.e(4440),
+            r.e(4160),
             r.e(3506),
             r.e(6700),
             r.e(9352),
@@ -1715,7 +1713,7 @@
             r.e(7352),
             r.e(8350),
             r.e(4268),
-          ]).then(r.bind(r, 76483)),
+          ]).then(r.bind(r, 17788)),
         ),
         be = u.lazy(() =>
           Promise.all([
@@ -1737,15 +1735,14 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(7224),
             r.e(4298),
             r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
             r.e(1853),
-            r.e(4160),
             r.e(4440),
+            r.e(4160),
             r.e(3506),
             r.e(6700),
             r.e(9352),
@@ -1754,7 +1751,7 @@
             r.e(7352),
             r.e(8350),
             r.e(4268),
-          ]).then(r.bind(r, 17788)),
+          ]).then(r.bind(r, 90197)),
         ),
         Ce = u.lazy(() =>
           Promise.all([
@@ -1776,54 +1773,14 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(7224),
             r.e(4298),
             r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
             r.e(1853),
-            r.e(4160),
             r.e(4440),
-            r.e(3506),
-            r.e(6700),
-            r.e(9352),
-            r.e(8995),
-            r.e(8758),
-            r.e(7352),
-            r.e(8350),
-            r.e(4268),
-          ]).then(r.bind(r, 90197)),
-        ),
-        Me = u.lazy(() =>
-          Promise.all([
-            r.e(1348),
-            r.e(2300),
-            r.e(316),
-            r.e(5841),
-            r.e(3864),
-            r.e(3874),
-            r.e(3516),
-            r.e(5344),
-            r.e(2924),
-            r.e(9954),
-            r.e(462),
-            r.e(1084),
-            r.e(5859),
-            r.e(9161),
-            r.e(3388),
-            r.e(9017),
-            r.e(1810),
-            r.e(725),
-            r.e(7224),
-            r.e(4298),
-            r.e(7267),
-            r.e(8713),
-            r.e(2012),
-            r.e(8129),
-            r.e(1853),
             r.e(4160),
-            r.e(4440),
             r.e(3506),
             r.e(6700),
             r.e(9352),
@@ -1834,12 +1791,12 @@
             r.e(4268),
           ]).then(r.bind(r, 79467)),
         ),
-        Se = u.lazy(() =>
+        Me = u.lazy(() =>
           Promise.all([r.e(3864), r.e(5344), r.e(5193), r.e(5933)]).then(
             r.bind(r, 55196),
           ),
         ),
-        ve = u.lazy(() =>
+        Se = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(2300),
@@ -1856,7 +1813,7 @@
             r.e(9433),
           ]).then(r.bind(r, 55057)),
         ),
-        ye = u.lazy(() =>
+        ve = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(2300),
@@ -1872,22 +1829,22 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(7224),
             r.e(4298),
             r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
-            r.e(4160),
             r.e(4440),
+            r.e(4160),
             r.e(3506),
             r.e(8758),
+            r.e(721),
             r.e(4017),
             r.e(2455),
-          ]).then(r.bind(r, 27634)),
+          ]).then(r.bind(r, 65845)),
         ),
-        Be = u.lazy(() => r.e(5027).then(r.bind(r, 26193))),
-        Ee = u.lazy(() =>
+        ye = u.lazy(() => r.e(5027).then(r.bind(r, 26193))),
+        Be = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(2300),
@@ -1907,15 +1864,14 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(7224),
             r.e(4298),
             r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
             r.e(1853),
-            r.e(4160),
             r.e(4440),
+            r.e(4160),
             r.e(3506),
             r.e(6700),
             r.e(9352),
@@ -1926,18 +1882,17 @@
             r.e(8523),
           ]).then(r.bind(r, 53724)),
         ),
-        Re = u.lazy(() =>
+        Ee = u.lazy(() =>
           Promise.all([
             r.e(1784),
             r.e(9161),
             r.e(9017),
-            r.e(7224),
             r.e(8713),
             r.e(1853),
             r.e(6343),
           ]).then(r.bind(r, 22131)),
         ),
-        Ie = u.lazy(() =>
+        Re = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(2300),
@@ -1957,15 +1912,14 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(7224),
             r.e(4298),
             r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
             r.e(1853),
-            r.e(4160),
             r.e(4440),
+            r.e(4160),
             r.e(3506),
             r.e(6700),
             r.e(9352),
@@ -1976,7 +1930,7 @@
             r.e(7383),
           ]).then(r.bind(r, 38603)),
         ),
-        Te = u.lazy(() =>
+        Ie = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(2300),
@@ -1988,19 +1942,18 @@
             r.e(4985),
           ]).then(r.bind(r, 43709)),
         ),
-        De = u.lazy(() =>
+        Te = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(316),
             r.e(5841),
             r.e(3516),
-            r.e(4843),
+            r.e(7224),
             r.e(5859),
             r.e(9161),
             r.e(3388),
             r.e(9017),
             r.e(1810),
-            r.e(7224),
             r.e(4298),
             r.e(7267),
             r.e(2012),
@@ -2008,7 +1961,7 @@
             r.e(3025),
           ]).then(r.bind(r, 98443)),
         ),
-        Le = u.lazy(() =>
+        De = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(2300),
@@ -2028,15 +1981,14 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(7224),
             r.e(4298),
             r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
             r.e(1853),
-            r.e(4160),
             r.e(4440),
+            r.e(4160),
             r.e(3506),
             r.e(6700),
             r.e(9352),
@@ -2047,13 +1999,13 @@
             r.e(5136),
           ]).then(r.bind(r, 16340)),
         ),
-        ke = u.lazy(() =>
+        Le = u.lazy(() =>
           Promise.all([r.e(5859), r.e(9161), r.e(3350)]).then(r.bind(r, 92513)),
         ),
-        Oe = u.lazy(() =>
+        ke = u.lazy(() =>
           Promise.all([r.e(5859), r.e(9161), r.e(3350)]).then(r.bind(r, 2203)),
         ),
-        Fe = u.lazy(() =>
+        Oe = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(2300),
@@ -2066,7 +2018,6 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(7224),
             r.e(4298),
             r.e(7267),
             r.e(8713),
@@ -2079,7 +2030,7 @@
             r.e(6762),
           ]).then(r.bind(r, 36637)),
         );
-      function xe(e) {
+      function Fe(e) {
         const t = (0, g.Tc)("publisherid", "application_config"),
           r = u.useMemo(
             () => ({
@@ -2099,13 +2050,13 @@
               L.s,
               null,
               u.createElement(
-                Pe,
+                Ne,
                 null,
                 u.createElement(
                   n.V3,
                   { context: r },
                   u.createElement(
-                    me,
+                    ue,
                     null,
                     u.createElement(R.EO, null, e.children),
                   ),
@@ -2115,7 +2066,7 @@
           ),
         );
       }
-      function ze(e) {
+      function xe(e) {
         let { children: t } = e,
           r = (0, k.OU)([a.B.PricingTools(), a.B.PromotionTools()]);
         return u.createElement(
@@ -2124,7 +2075,7 @@
           t,
         );
       }
-      function Ae(e) {
+      function ze(e) {
         const [t, r] = u.useState(!1);
         return (
           u.useEffect(() => {
@@ -2139,10 +2090,10 @@
                 M.Kd,
                 { basename: (0, a.C)() },
                 u.createElement(
-                  xe,
+                  Fe,
                   null,
                   u.createElement(
-                    ze,
+                    xe,
                     null,
                     u.createElement(
                       u.Suspense,
@@ -2153,7 +2104,7 @@
                         u.createElement(S.qh, {
                           exact: !0,
                           path: "/",
-                          component: pe,
+                          component: de,
                         }),
                         u.createElement(S.qh, {
                           exact: !0,
@@ -2167,72 +2118,72 @@
                         }),
                         u.createElement(S.qh, {
                           path: a.B.SalePages(),
-                          component: Ce,
+                          component: be,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.OptInPages(),
-                          component: Me,
+                          component: Ce,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.ContentHubPages(),
-                          component: De,
+                          component: Te,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.RecapPages(),
-                          component: Le,
+                          component: De,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.DeadlinesAdmin(),
-                          component: ke,
+                          component: Le,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.StoreGameAdminRoot(),
-                          component: ye,
+                          component: ve,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.StoreAdminReviewPriceProposals(),
-                          component: ye,
+                          component: ve,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.PackageLanding(),
-                          component: ye,
+                          component: ve,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.StoreAdminRoot(),
-                          component: ye,
+                          component: ve,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.BundlesEditor(),
-                          component: ye,
+                          component: ve,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.AppCommunityItem(),
-                          component: ve,
+                          component: Se,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.AppLandingPage(),
-                          component: ve,
+                          component: Se,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.AppInstallerPage(),
-                          component: ve,
+                          component: Se,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.AppEconomyPage(),
-                          component: ve,
+                          component: Se,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.SteamML(),
-                          render: () => u.createElement(he, null),
+                          render: () => u.createElement(pe, null),
                         }),
                         u.createElement(S.qh, {
                           path: a.B.SteamLearn(),
-                          render: () => u.createElement(Se, null),
+                          render: () => u.createElement(Me, null),
                         }),
                         u.createElement(S.qh, {
                           path: a.B.BuildPatchNotes(),
                           render: (e) =>
-                            u.createElement(we, {
+                            u.createElement(fe, {
                               appId: e.match.params.appid,
                             }),
                         }),
@@ -2242,11 +2193,11 @@
                         }),
                         u.createElement(S.qh, {
                           path: a.B.PromotionTools(),
-                          component: be,
+                          component: we,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.PricingTools(),
-                          component: fe,
+                          component: _e,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.DeckVerifiedAdmin(),
@@ -2254,7 +2205,7 @@
                             u.createElement(I.X, {
                               config: {
                                 "deck-verified-results": (e) =>
-                                  u.createElement(_e, {
+                                  u.createElement(ge, {
                                     dataprops: e,
                                     results: (0, g.Tc)(
                                       "deckcompatibility",
@@ -2270,7 +2221,7 @@
                             u.createElement(I.X, {
                               config: {
                                 "deck-verified-results-inflight": (e) =>
-                                  u.createElement(_e, {
+                                  u.createElement(ge, {
                                     dataprops: e,
                                     results: (0, g.Tc)(
                                       "deckcompatibility_inflight",
@@ -2278,7 +2229,7 @@
                                     ),
                                   }),
                                 "deck-verified-results-submitted": (e) =>
-                                  u.createElement(_e, {
+                                  u.createElement(ge, {
                                     dataprops: e,
                                     results: (0, g.Tc)(
                                       "deckcompatibility_submitted",
@@ -2286,7 +2237,7 @@
                                     ),
                                   }),
                                 "deck-verified-results-published": (e) =>
-                                  u.createElement(_e, {
+                                  u.createElement(ge, {
                                     dataprops: e,
                                     results: (0, g.Tc)(
                                       "deckcompatibility_published",
@@ -2302,7 +2253,7 @@
                             u.createElement(I.X, {
                               config: {
                                 "deck-verified-results-reports": (e) =>
-                                  u.createElement(_e, {
+                                  u.createElement(ge, {
                                     dataprops: e,
                                     results: (0, g.Tc)(
                                       "deckcompatibility_reports",
@@ -2318,7 +2269,7 @@
                             u.createElement(I.X, {
                               config: {
                                 "deck-verified-results": () =>
-                                  u.createElement(ge, {
+                                  u.createElement(he, {
                                     results: (0, g.Tc)(
                                       "deckcompatibility",
                                       "application_config",
@@ -2331,7 +2282,7 @@
                         u.createElement(S.qh, {
                           path: a.B.SDRConnections(),
                           render: (e) =>
-                            u.createElement(Be, {
+                            u.createElement(ye, {
                               appId: e.match.params.appid,
                             }),
                         }),
@@ -2341,9 +2292,9 @@
                             u.createElement(I.X, {
                               config: {
                                 "publisher-dashboard": () =>
-                                  u.createElement(Ee, null),
+                                  u.createElement(Be, null),
                                 "promotion-review-dashboard": () =>
-                                  u.createElement(Ie, null),
+                                  u.createElement(Re, null),
                               },
                             }),
                         }),
@@ -2353,7 +2304,7 @@
                             u.createElement(I.X, {
                               config: {
                                 "timeline-marker-editor": () =>
-                                  u.createElement(Re, {
+                                  u.createElement(Ee, {
                                     appId: e.match.params.appid,
                                   }),
                               },
@@ -2361,7 +2312,7 @@
                         }),
                         u.createElement(S.qh, {
                           path: a.B.HardwareReservationQueueMessaging(),
-                          component: Te,
+                          component: Ie,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.KeyWizardPackagePage(),
@@ -2381,11 +2332,11 @@
                         }),
                         u.createElement(S.qh, {
                           path: a.B.TaxRequirement(),
-                          component: Oe,
+                          component: ke,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.MeetSteam(),
-                          component: Fe,
+                          component: Oe,
                         }),
                         u.createElement(S.qh, null, u.createElement(T.a, null)),
                       ),
@@ -2396,12 +2347,12 @@
             : null
         );
       }
-      function Ne() {
+      function Ae() {
         const e = (0, g.Fd)("loyalty_webapi_token", "application_config");
         return new B.D(g.TS.WEBAPI_BASE_URL, e);
       }
-      function Pe(e) {
-        const t = (0, D.bs)(Ne),
+      function Ne(e) {
+        const t = (0, D.bs)(Ae),
           r = (0, D.bs)(u.useCallback(() => new y.A(), []));
         return u.createElement(
           v.VQ,
@@ -2409,26 +2360,26 @@
           e.children,
         );
       }
-      var We = r(14947),
-        Ue = r(44844),
-        He = r(26317),
-        Ve = r(81393),
-        qe = (r(5977), r(8527));
-      function je() {
+      var Pe = r(14947),
+        We = r(44844),
+        Ue = r(26317),
+        He = r(81393),
+        Ve = (r(5977), r(8527));
+      function qe() {
         const e = [];
         return (
-          qe.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
-          qe.TS.IN_CLIENT && e.push("in_client"),
+          Ve.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
+          Ve.TS.IN_CLIENT && e.push("in_client"),
           e
         );
       }
-      (0, We.jK)({ enforceActions: "never" }),
+      (0, Pe.jK)({ enforceActions: "never" }),
         document.addEventListener("DOMContentLoaded", async function () {
           const e = document.getElementById("application_root"),
             t = e ? "application_config" : void 0;
           (0, g.XJ)(t);
           const n = new B.D(g.TS.WEBAPI_BASE_URL).GetServiceTransport();
-          (0, He.aj)().Init("Partner", CLSTAMP, n, { fnGetReportTags: je }),
+          (0, Ue.aj)().Init("Partner", CLSTAMP, n, { fnGetReportTags: qe }),
             await (async function (e) {
               const [t, n, i, s] = await Promise.all([
                   r(14919)(`./shared_${e}.json`),
@@ -2455,7 +2406,7 @@
                   h.pf.AddTokens(i, null);
             })(g.TS.LANGUAGE),
             e
-              ? Ue.createRoot(e).render(u.createElement(Ae, {}))
+              ? We.createRoot(e).render(u.createElement(ze, {}))
               : (function () {
                   let e = document.querySelectorAll(".StoreAdminReactRoot");
                   for (let t = 0; t < e.length; t++) {
@@ -2471,13 +2422,13 @@
                           );
                         break;
                       default:
-                        (0, Ve.wT)(!1, `unknown component: "${i}"`);
+                        (0, He.wT)(!1, `unknown component: "${i}"`);
                     }
                   }
                 })();
         }),
         (window.LocalizationManifestReady = function (e, t, r) {
-          (0, Ve.wT)("manifest" === t, `Expected manifest not "${t}"`),
+          (0, He.wT)("manifest" === t, `Expected manifest not "${t}"`),
             h.pf.InitDirect(r);
         });
     },
@@ -4201,12 +4152,12 @@
           const { sNavKey: n, iActiveChild: s, rgChildren: c } = t;
           n && (0, i.wT)(n == e.NavKey, "navkey mismatch"), e.SetActiveChild(s);
           const u = a.IsDebugEnabled()
-            ? (function (e) {
+            ? `[${e.Tree.id}]${(function (e) {
                 if (0 == e) return "";
                 let t = "";
                 for (let r = 0; r < e; r++) t += "*";
                 return (t += " "), t;
-              })(r)
+              })(r)}`
             : "";
           if (c && c.length) {
             const [t] = e.GetChildren();
@@ -5686,9 +5637,8 @@
         }
         FindClosestFocusableNodeToRect(e, t) {
           const r = (0, d.G4)(e),
-            n = r && s.xr[r];
-          console.log(r, n);
-          const i = [];
+            n = r && s.xr[r],
+            i = [];
           for (const e of this.m_rgChildren) {
             const r = e.GetBoundingRect();
             if (r) {
@@ -5699,10 +5649,7 @@
           }
           i.sort((e, t) =>
             e.dist != t.dist ? e.dist - t.dist : t.overlap - e.overlap,
-          ),
-            i.forEach(({ child: e, dist: t, overlap: r }) =>
-              console.log(`dist ${t} overlap ${r}`, e.Element),
-            );
+          );
           for (const { child: r } of i) {
             const n = r.FindFocusableNode(e, t);
             if (n) return n;
@@ -6349,6 +6296,13 @@
         bT: () => a,
         kf: () => c,
       });
+    },
+    91934: (e, t, r) => {
+      "use strict";
+      function n(e, t) {
+        return e.split(t);
+      }
+      r.d(t, { x: () => n });
     },
     6083: (e, t, r) => {
       "use strict";
@@ -12937,7 +12891,7 @@
         constructor(e = null) {
           super(),
             k.prototype.trailer_name || a.Sg(k.M()),
-            i.Message.initialize(this, e, 0, -1, [3, 4, 5, 6], null);
+            i.Message.initialize(this, e, 0, -1, [5, 6], null);
         }
         static sm_m;
         static sm_mbf;
@@ -12962,8 +12916,6 @@
                     br: a.qM.readEnum,
                     bw: a.gp.writeEnum,
                   },
-                  trailer_480p: { n: 3, c: D, r: !0, q: !0 },
-                  trailer_max: { n: 4, c: D, r: !0, q: !0 },
                   microtrailer: { n: 5, c: D, r: !0, q: !0 },
                   adaptive_trailers: { n: 6, c: L, r: !0, q: !0 },
                   screenshot_medium: {
@@ -17443,34 +17395,40 @@
     39777: (e, t, r) => {
       "use strict";
       r.d(t, {
+        AQ: () => y,
         EO: () => _,
+        Ec: () => E,
         J$: () => l,
         Q_: () => h,
         U2: () => c,
         Yo: () => b,
-        by: () => C,
+        by: () => M,
         f2: () => u,
+        ik: () => C,
         is: () => g,
         j4: () => w,
         lv: () => f,
-        qI: () => M,
-        vB: () => L,
+        qI: () => v,
+        rK: () => R,
+        us: () => k,
+        vB: () => x,
         wl: () => p,
+        xz: () => S,
       });
       var n = r(81393),
         i = r(20194),
         s = r(75233),
         a = r(52541),
-        o = r(38452);
+        o = r(63664);
       function l(e) {
         const t = (0, o.eG)();
-        return (0, i.I)(I(t, e));
+        return (0, i.I)(k(t, e));
       }
       function c(e) {
-        return m(e, I);
+        return m(e, k);
       }
       function u(e) {
-        return m(e, S, "include_assets");
+        return m(e, y, "include_assets");
       }
       function m(e, t, r) {
         const n = (0, o.eG)(),
@@ -17478,7 +17436,7 @@
           l = e && "packageid" in e && !!e.packageid;
         let c;
         if (l) {
-          const t = a.getQueryData(D(e, "default_info"));
+          const t = a.getQueryData(F(e, "default_info"));
           t &&
             1 == t.included_appids?.length &&
             (c = { appid: t.included_appids[0] });
@@ -17491,11 +17449,11 @@
       function d(e, t, r) {
         const n = t && "appid" in t && !!t.appid;
         return {
-          queryKey: D(t, "include_included_items"),
+          queryKey: F(t, "include_included_items"),
           queryFn: async () => {
-            r && F(e, t, r);
+            r && N(e, t, r);
             return (
-              (await F(e, t, "include_included_items")).included_appids ?? []
+              (await N(e, t, "include_included_items")).included_appids ?? []
             );
           },
           initialData: n ? [t.appid] : void 0,
@@ -17506,19 +17464,19 @@
         const t = (0, o.eG)();
         return (0, i.I)(
           (function (e, t) {
-            return E(e, t, "include_basic_info", "basic_info");
+            return D(e, t, "include_basic_info", "basic_info");
           })(t, e),
         );
       }
       function h(e) {
         const t = (0, o.eG)();
-        return (0, i.I)(T(t, e));
+        return (0, i.I)(O(t, e));
       }
       function g(e) {
         const t = (0, o.eG)();
         return (0, i.I)(
           (function (e, t) {
-            return { ...y(e, t), staleTime: 6e5 };
+            return { ...I(e, t), staleTime: 6e5 };
           })(t, e),
         );
       }
@@ -17526,10 +17484,10 @@
         const t = (0, o.eG)();
         return (0, i.I)(
           e && "bundleid" in e
-            ? T(t, e)
+            ? O(t, e)
             : (function (e, t) {
                 return {
-                  ...y(e, t),
+                  ...I(e, t),
                   select: (e) => (e ? e[0] : null),
                   staleTime: 6e5,
                 };
@@ -17538,13 +17496,13 @@
       }
       function f(e, t = !1) {
         const r = (0, o.eG)();
-        return (0, i.I)(t ? v(r, e) : S(r, e));
+        return (0, i.I)(t ? B(r, e) : y(r, e));
       }
       function w(e) {
         const t = (0, o.eG)();
         return (0, i.I)(
           (function (e, t) {
-            return E(e, t, "include_screenshots", "screenshots");
+            return D(e, t, "include_screenshots", "screenshots");
           })(t, e),
         );
       }
@@ -17552,7 +17510,7 @@
         const t = (0, o.eG)();
         return (0, i.I)(
           (function (e, t) {
-            return E(e, t, "include_trailers", "trailers");
+            return D(e, t, "include_trailers", "trailers");
           })(t, e),
         );
       }
@@ -17560,7 +17518,7 @@
         const t = (0, o.eG)();
         return (0, i.I)(
           (function (e, t) {
-            return E(e, t, "include_release", "release");
+            return D(e, t, "include_reviews", "reviews");
           })(t, e),
         );
       }
@@ -17568,25 +17526,39 @@
         const t = (0, o.eG)();
         return (0, i.I)(
           (function (e, t) {
-            return E(e, t, "include_platforms", "platforms");
+            return D(e, t, "include_release", "release");
           })(t, e),
         );
       }
-      function S(e, t) {
-        return E(e, t, "include_assets", "assets");
+      function S(e) {
+        const t = (0, o.eG)();
+        return (0, i.I)(E(t, e));
       }
-      function v(e, t) {
-        return E(
+      function v(e) {
+        const t = (0, o.eG)();
+        return (0, i.I)(R(t, e));
+      }
+      function y(e, t) {
+        return D(e, t, "include_assets", "assets");
+      }
+      function B(e, t) {
+        return D(
           e,
           t,
           "include_assets_without_overrides",
           "assets_without_overrides",
         );
       }
-      function y(e, t) {
-        return E(e, t, "include_all_purchase_options", "purchase_options");
+      function E(e, t) {
+        return D(e, t, "top_tags", "tags");
       }
-      function B(e) {
+      function R(e, t) {
+        return D(e, t, "include_platforms", "platforms");
+      }
+      function I(e, t) {
+        return D(e, t, "include_all_purchase_options", "purchase_options");
+      }
+      function T(e) {
         return (
           !!e &&
           ("appid" in e && !e.appid
@@ -17595,60 +17567,60 @@
               ((0, n.wT)(!1, "Invalid bundleid passed to useStoreItem"), !1))
         );
       }
-      function E(e, t, r, n) {
+      function D(e, t, r, n) {
         return {
-          queryKey: D(t, r),
-          queryFn: async () => (await F(e, t, r))[n] || null,
+          queryKey: F(t, r),
+          queryFn: async () => (await N(e, t, r))[n] || null,
           staleTime: 216e5,
-          enabled: B(t),
+          enabled: T(t),
         };
       }
-      function R(e, t, r, n, i) {
-        e.setQueryData(D(t, n), r[i] ?? null);
+      function L(e, t, r, n, i) {
+        e.setQueryData(F(t, n), r[i] ?? null);
       }
-      function I(e, t) {
+      function k(e, t) {
         return {
-          queryKey: D(t, "default_info"),
-          queryFn: async () => O(await F(e, t, "default_info")),
+          queryKey: F(t, "default_info"),
+          queryFn: async () => A(await N(e, t, "default_info")),
           staleTime: 216e5,
-          enabled: B(t),
+          enabled: T(t),
         };
       }
-      function T(e, t) {
+      function O(e, t) {
         return {
-          ...I(e, t),
+          ...k(e, t),
           select: (e) => e.best_purchase_option || null,
           staleTime: 6e5,
         };
       }
-      function D(e, t) {
+      function F(e, t) {
         return ["StoreItem", e && (0, a.ER)(e), t];
       }
-      function L(e, t, r) {
+      function x(e, t, r) {
         const n = (0, a.Jz)(t);
         n &&
           (!(function (e, t, r) {
-            e.setQueryData(D(t, "default_info"), O(r));
+            e.setQueryData(F(t, "default_info"), A(r));
           })(e, n, t),
           r.include_basic_info &&
             (function (e, t, r) {
-              R(e, t, r, "include_basic_info", "basic_info");
+              L(e, t, r, "include_basic_info", "basic_info");
             })(e, n, t),
           r.include_assets &&
             (function (e, t, r) {
-              R(e, t, r, "include_assets", "assets");
+              L(e, t, r, "include_assets", "assets");
             })(e, n, t),
           r.include_screenshots &&
             (function (e, t, r) {
-              R(e, t, r, "include_screenshots", "screenshots");
+              L(e, t, r, "include_screenshots", "screenshots");
             })(e, n, t),
           r.include_trailers &&
             (function (e, t, r) {
-              R(e, t, r, "include_trailers", "trailers");
+              L(e, t, r, "include_trailers", "trailers");
             })(e, n, t),
           r.include_assets_without_overrides &&
             (function (e, t, r) {
-              R(
+              L(
                 e,
                 t,
                 r,
@@ -17658,39 +17630,39 @@
             })(e, n, t),
           r.include_reviews &&
             (function (e, t, r) {
-              R(e, t, r, "include_reviews", "reviews");
+              L(e, t, r, "include_reviews", "reviews");
             })(e, n, t),
           r.include_release &&
             (function (e, t, r) {
-              R(e, t, r, "include_release", "release");
+              L(e, t, r, "include_release", "release");
             })(e, n, t),
           r.include_tag_count &&
             r.include_tag_count > 0 &&
             (function (e, t, r) {
-              R(e, t, r, "top_tags", "tags");
+              L(e, t, r, "top_tags", "tags");
             })(e, n, t),
           r.include_platforms &&
             (function (e, t, r) {
-              R(e, t, r, "include_platforms", "platforms");
+              L(e, t, r, "include_platforms", "platforms");
             })(e, n, t),
           r.apply_user_filters &&
             (function (e, t, r) {
-              R(e, t, r, "apply_user_filters", "user_filter_failure");
+              L(e, t, r, "apply_user_filters", "user_filter_failure");
             })(e, n, t),
           r.include_all_purchase_options &&
             (function (e, t, r) {
-              R(e, t, r, "include_all_purchase_options", "purchase_options");
+              L(e, t, r, "include_all_purchase_options", "purchase_options");
             })(e, n, t),
           r.include_included_items &&
             r.included_item_data_request &&
             (t.included_items?.included_apps?.forEach((t) =>
-              L(e, t, r.included_item_data_request),
+              x(e, t, r.included_item_data_request),
             ),
             t.included_items?.included_packages?.forEach((t) =>
-              L(e, t, r.included_item_data_request),
+              x(e, t, r.included_item_data_request),
             )));
       }
-      const k = [
+      const z = [
         "assets",
         "tagids",
         "tags",
@@ -17708,25 +17680,23 @@
         "platforms",
         "release",
       ];
-      function O(e) {
+      function A(e) {
         const t = { ...e };
-        for (const e of k) delete t[e];
+        for (const e of z) delete t[e];
         return t;
       }
-      async function F(e, t, r) {
+      async function N(e, t, r) {
         return await e.load(`${(0, a.ER)(t)}|${r}`);
       }
     },
-    38452: (e, t, r) => {
+    63664: (e, t, r) => {
       "use strict";
-      r.d(t, { V3: () => C, eG: () => b });
+      r.d(t, { V3: () => M, yn: () => C, eG: () => b });
       var n = r(23809),
         i = r(75233),
-        s = r(90626);
-      function a(e, t) {
-        return e.split(t);
-      }
-      var o = r(81393),
+        s = r(90626),
+        a = r(91934),
+        o = r(81393),
         l = r(56545),
         c = r(59411),
         u = r(15161),
@@ -17757,7 +17727,7 @@
             const d = {};
             if (
               (r.forEach((e) => {
-                const [t, r = "default_info"] = a(e, "|");
+                const [t, r = "default_info"] = (0, a.x)(e, "|");
                 i.add(t),
                   m.has(r) ||
                     ("top_tags" == r
@@ -17815,7 +17785,7 @@
                   });
                 })(f, m, s, n),
               r.map((e) => {
-                const [t] = a(e, "|"),
+                const [t] = (0, a.x)(e, "|"),
                   r = f.get(t);
                 return r ? r.toObject() : { ...(0, p.RH)(t), success: 2 };
               })
@@ -17829,7 +17799,10 @@
       function b() {
         return s.useContext(w).dataLoader;
       }
-      function C(e) {
+      function C() {
+        return s.useContext(w);
+      }
+      function M(e) {
         const {
             context: t,
             msDelayBatch: r,
@@ -26267,11 +26240,16 @@
           l = s.useCallback(
             (e) => {
               const r = t.current;
-              return r?.BFocusWithin() &&
-                !r.BHasFocus() &&
-                r.TakeFocus(e.detail.button)
-                ? (i && i(!1), !0)
-                : !!n && n(e);
+              return "self" != r.Node().GetFocusable()
+                ? (console.warn(
+                    "PanelGroup is not focusable - ignoring cancel action",
+                  ),
+                  !1)
+                : r.BFocusWithin() &&
+                    !r.BHasFocus() &&
+                    r.TakeFocus(e.detail.button)
+                  ? (i && i(!1), !0)
+                  : !!n && n(e);
             },
             [t, n, i],
           );
@@ -35842,25 +35820,27 @@
     56011: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Kf: () => w,
+        Kf: () => C,
         MS: () => _,
-        Mr: () => S,
+        Mr: () => y,
         NO: () => s,
         OG: () => d,
-        Oe: () => C,
+        Oe: () => S,
+        PX: () => w,
         YQ: () => p,
+        _f: () => b,
         a_: () => c,
         bZ: () => o,
         id: () => a,
         kD: () => i,
-        lc: () => M,
+        lc: () => v,
         pE: () => f,
         pd: () => l,
         qf: () => m,
         tl: () => g,
         uX: () => u,
         ww: () => h,
-        yU: () => b,
+        yU: () => M,
       });
       var n = r(66703);
       function i(e) {
@@ -36009,14 +35989,46 @@
           e
         );
       }
-      function w(e, t) {
+      function w(e, t, r) {
+        let n = t.parentElement;
+        for (; n && n !== e && !n.hasAttribute(r); ) n = n.parentElement;
+        return n || e;
+      }
+      function b(e, t) {
+        let r = e?.parentElement;
+        for (; r; ) {
+          if (i(r)) {
+            if (!t || "x" == t) {
+              const e = window.getComputedStyle(r);
+              if (
+                "scroll" == e.overflowX ||
+                "auto" == e.overflowX ||
+                "fixed" == e.position
+              )
+                break;
+            }
+            if (!t || "y" == t) {
+              const e = window.getComputedStyle(r);
+              if (
+                "scroll" == e.overflowY ||
+                "auto" == e.overflowY ||
+                "fixed" == e.position
+              )
+                break;
+            }
+          }
+          r = r.parentElement;
+        }
+        return i(r) ? r : null;
+      }
+      function C(e, t) {
         let r = e;
         for (; r; ) {
           if (t(r)) return r;
           r = r.parentElement;
         }
       }
-      function b() {
+      function M() {
         return (function (e) {
           const t = {};
           return (
@@ -36027,10 +36039,10 @@
           );
         })(document);
       }
-      function C(e, t) {
-        M(e.document, t, !0);
+      function S(e, t) {
+        v(e.document, t, !0);
       }
-      function M(e, t, r) {
+      function v(e, t, r) {
         const n = Object.assign({}, t),
           i = e.getElementsByTagName("head")[0],
           s = i.getElementsByTagName("link"),
@@ -36051,7 +36063,7 @@
         }
         return i.prepend(...o), o;
       }
-      function S(e, t, r) {
+      function y(e, t, r) {
         if ("childList" === e.type) {
           for (let r = 0; r < e.addedNodes.length; r++) {
             const n = e.addedNodes[r];
@@ -38010,7 +38022,7 @@
   },
   (e) => {
     e.O(0, [8997], () => {
-      return (t = 18142), e((e.s = t));
+      return (t = 85966), e((e.s = t));
       var t;
     });
     e.O();

@@ -259,10 +259,6 @@
         GetAppID() {
           return this.m_unAppID;
         }
-        GetAppIDToRun() {
-          const _ = this.GetParentAppID();
-          return _ && 11 != this.m_eAppType ? _ : this.GetAppID();
-        }
         GetAppType() {
           return this.m_eAppType;
         }
@@ -900,8 +896,6 @@
         m_strTrailerName;
         m_eTrailerCategory;
         m_nBaseID;
-        m_Trailer480p;
-        m_TrailerMax;
         m_MicroTrailer;
         m_rgDashTrailers;
         m_rgHlsTrailer;
@@ -915,17 +909,7 @@
           const _ = _.trailer_url_format();
           if (
             (_ &&
-              (_.trailer_480p() &&
-                (this.m_Trailer480p = this.ExtractTrailerFormats(
-                  _,
-                  _.trailer_480p(),
-                )),
-              _.trailer_max() &&
-                (this.m_TrailerMax = this.ExtractTrailerFormats(
-                  _,
-                  _.trailer_max(),
-                )),
-              _.microtrailer() &&
+              (_.microtrailer() &&
                 (this.m_MicroTrailer = this.ExtractTrailerFormats(
                   _,
                   _.microtrailer(),
@@ -959,12 +943,6 @@
         }
         GetTrailerCategory() {
           return this.m_eTrailerCategory;
-        }
-        GetTrailer480p() {
-          return this.m_Trailer480p;
-        }
-        GetTrailerMax() {
-          return this.m_TrailerMax;
         }
         GetTrailersDash() {
           return this.m_rgDashTrailers;

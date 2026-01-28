@@ -30624,20 +30624,9 @@
                       const _ = _[_],
                         _ = _._.Get().GetApp(_);
                       let _, _;
-                      if (_ == _.k_EDownloadTrailer) {
-                        const _ = _.GetAllTrailers()
-                          .GetHighlightTrailers(!1)[0]
-                          .GetTrailerMax()
-                          .strMP4URL.replace("http://", "https://");
-                        (_ = `${_._.PARTNER_BASE_URL}gfxproxy/trailergfx?appid=${_}&itype=apps`),
-                          (_ =
-                            _.GetName().replace(/[^\w\s!?]/g, "") +
-                            "_" +
-                            _ +
-                            ".mp4"),
-                          console.log("fetching indirectly ", _, _),
-                          await _(_, _, _, _, _);
-                      } else if (
+                      if (_ == _.k_EDownloadTrailer)
+                        console.assert("trailer downloads not implemented");
+                      else if (
                         _ == _.k_EDownloadAllAgeSafeScreenshots ||
                         _ == _.k_EDownloadScreenshots
                       ) {
@@ -58068,6 +58057,9 @@
             onChange: (_) => _(_.currentTarget.value),
             label: _,
             placeholder: "255,255,255",
+            style: {
+              backgroundColor: `rgba( ${__webpack_require__} )`,
+            },
           }),
           _.createElement(
             _._,
@@ -78895,7 +78887,8 @@
               }),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             planid: _,
@@ -79148,7 +79141,15 @@
                           onChange: (_) =>
                             _.SetAdminNote(_?.currentTarget?.value || ""),
                         }),
-                        _.createElement(_._, null, "Promotion Planner Notes:"),
+                        _.createElement(
+                          _._,
+                          null,
+                          "Promotion Planner Notes:",
+                          _.createElement(_._, {
+                            tooltip:
+                              "Appears in the hover in the promotion plan calendar",
+                          }),
+                        ),
                         _.createElement("textarea", {
                           className: (0, _._)(
                             "DialogTextInputBase",
@@ -87565,21 +87566,10 @@
           if (
             _._.Get()?.GetHomeView()?.games_already_in_library &&
             (function (_, _ = null) {
-              if (_?.BUsesContentHubForItemSource())
-                switch (_.GetStoreItemType()) {
-                  case 0:
-                    if (_._.Get().BIsGameOwned(_.GetAppID())) return !0;
-                    break;
-                  case 1:
-                  case 2:
-                    if (
-                      _.GetIncludedAppIDs().every((_) =>
-                        _._.Get().BIsGameOwned(_),
-                      )
-                    )
-                      return !0;
-                }
-              return !1;
+              return (
+                !!_?.BUsesContentHubForItemSource() &&
+                _._.Get().BIsStoreItemOwned(_)
+              );
             })(_, _)
           )
             return !0;
@@ -88037,6 +88027,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       (0, _._)((_) => {
         const {
@@ -88359,9 +88351,11 @@
       function _(_) {
         const { appid: _, bHidePrice: __webpack_require__ } = _,
           [_] = (0, _._)(_, _._),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
           _ = (0, _._)();
-        if (!_) return null;
+        if (!_ || !_) return null;
         const _ = _.GetBestPurchaseOption(),
           _ = _?.hide_discount_pct_for_compliance;
         return _.createElement(
@@ -88435,7 +88429,11 @@
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _, type: __webpack_require__ } = _,
-          [_] = (0, _._)(_, (0, _._)(__webpack_require__), {});
+          _ = (0, _._)({
+            _: _,
+            type: __webpack_require__,
+          }),
+          { data: _ } = (0, _._)(_);
         return _.createElement(
           "div",
           {
@@ -88445,17 +88443,22 @@
             ..._,
             bLoadShortDescription: !0,
             bShowReviewSummary: !0,
-            bShowDemoButton: _.bShowDemoButton || 1 == _?.GetAppType(),
+            bShowDemoButton: _.bShowDemoButton || 1 == _?.type,
             bPreferDemoStorePage: _.bPreferDemoStorePage,
           }),
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        static instance_count = 0;
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -88465,6 +88468,76 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            _: _,
+            bPurchaseOptionsExpanded: __webpack_require__,
+            fnCollapseOptions: _,
+            bPreferAssetWithoutOverride: _,
+          } = _,
+          { data: _ } = (0, _._)(_),
+          _ = (0, _.useRef)(null);
+        return _
+          ? _.createElement(
+              _._,
+              {
+                nodeRef: _,
+                _: __webpack_require__,
+                mountOnEnter: !0,
+                unmountOnExit: !0,
+                timeout: 2e3,
+                classNames: {
+                  enterActive: _().Expanding,
+                  enterDone: _().Expanded,
+                  exit: _().Expanded,
+                  exitActive: _().Collapsing,
+                },
+              },
+              _.createElement(
+                "div",
+                {
+                  ref: _,
+                  className: _().BundleContentsCtnTransition,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().BundleContentsCtn,
+                  },
+                  _.filter((_) => Boolean(_.packageid)).map((_) =>
+                    _.createElement(
+                      "div",
+                      {
+                        key: "purchaseitem_" + (0, _._)(_) + "_" + _.packageid,
+                        className: _().BundleContentItem,
+                      },
+                      _.createElement(_._, {
+                        _: _.packageid || 0,
+                        type: "sub",
+                        bForceSmallCapsuleArt: !0,
+                        bPreferAssetWithoutOverride: _,
+                      }),
+                    ),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    onClick: _,
+                    className: _().BundleShowButton,
+                  },
+                  _.createElement(
+                    "button",
+                    {
+                      className: _().ShowContentsButton,
+                    },
+                    (0, _._)("#Button_Close"),
+                  ),
+                ),
+              ),
+            )
+          : null;
+      }
       const _ = (0, _._)((_) => {
         const {
             myInstance: _,
@@ -88474,7 +88547,50 @@
             hoverType: _,
             nHoverId: _,
             displayInfo: _,
-          } = (0, _._)(_, {
+          } = (function (_, _) {
+            const { _: __webpack_require__, type: _ } = _,
+              _ = _
+                ? {
+                    ..._._,
+                    ..._,
+                  }
+                : _._,
+              [_, _] = (0, _.useMemo)(() => {
+                const _ = {
+                  _: __webpack_require__,
+                  type: _,
+                };
+                return [_, (0, _._)(_)];
+              }, [__webpack_require__, _]),
+              [_] = (0, _._)(__webpack_require__, (0, _._)(_), _),
+              [_, _] = (0, _.useMemo)(() => {
+                const _ = {
+                  _:
+                    (_?.GetParentAppID() != _?.GetID()
+                      ? _?.GetParentAppID()
+                      : _._) ?? _._,
+                  type: "game",
+                };
+                return [_, (0, _._)(_)];
+              }, [_]),
+              [_] = (0, _._)(_._, _),
+              [_] = (0, _.useState)(++_.instance_count),
+              [_, _] = (0, _.useState)(!1),
+              _ = (0, _._)(_);
+            return {
+              myInstance: _,
+              bIsHovered: _,
+              setIsHovered: _,
+              displayInfo: _,
+              displayID: _,
+              displayStoreItem: _,
+              baseGameStoreItem: _,
+              baseGameInfo: _,
+              baseGameID: _,
+              hoverType: _,
+              nHoverId: __webpack_require__,
+            };
+          })(_, {
             include_all_purchase_options: !0,
           }),
           {
@@ -88485,22 +88601,22 @@
             bUseSubscriptionLayout: _,
             bPreferAssetWithoutOverride: _,
           } = _,
-          _ = (0, _._)(_),
           [_, _] = _.useState(!1),
           _ = () => _(!_),
-          _ = (0, _._)(),
-          _ = _.useMemo(() => _?.GetIncludedAppIDsOrSelf(), [_]);
-        if (!_)
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(_),
+          _ = (0, _._)();
+        if (!_ || !_)
           return _.createElement(_, {
             capsules_per_row: [1],
             is_expanded_display: !0,
           });
         const _ = (0, _._)(_),
           _ =
-            _ && _.HasDemoStandaloneStorePage()
-              ? _.GetDemoStandaloneStorePageAppIDs()[0]
-              : _,
-          _ = 0 == _.GetStoreItemType();
+            (_ &&
+              _.HasDemoStandaloneStorePage() &&
+              _.GetDemoStandaloneStorePageAppIDs()[0],
+            0 == _.item_type);
         return _.createElement(
           "div",
           {
@@ -88513,7 +88629,7 @@
           _.createElement(
             _._,
             {
-              appid: _ && _.GetAppID(),
+              appid: _ ? _.appid : void 0,
             },
             _.createElement(
               "div",
@@ -88528,7 +88644,6 @@
                 _.createElement(
                   _._,
                   {
-                    type: _,
                     _: _,
                     fnHoverState: __webpack_require__,
                   },
@@ -88654,7 +88769,7 @@
                     className: _().StoreSaleItemReview,
                   },
                   _.createElement(_._, {
-                    appInfo: _,
+                    _: _,
                   }),
                 ),
                 _.createElement(
@@ -88698,7 +88813,7 @@
                 ),
               ),
             ),
-            _.createElement(_._, {
+            _.createElement(_, {
               _: _,
               bPurchaseOptionsExpanded: _,
               fnCollapseOptions: _,
@@ -88708,17 +88823,21 @@
         );
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { displayID: _ } = (0, _._)(_),
-          {
-            bShowDemoButton: __webpack_require__,
+        const {
+            _: _,
+            type: __webpack_require__,
+            bShowDemoButton: _,
             bHidePrice: _,
             bHidePlatforms: _,
             bShowDeckCompatibilityDialog: _,
             bAutoFocus: _,
           } = _,
+          _ = (0, _._)({
+            _: _,
+            type: __webpack_require__,
+          }),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           _ = 0 == _?.item_type;
@@ -88777,7 +88896,7 @@
                 _.createElement(_._, {
                   _: _,
                   className: _.PurchaseOnlyActionCtn,
-                  bShowDemoButton: __webpack_require__,
+                  bShowDemoButton: _,
                   bShowCartButton: !0,
                   bHidePrice: _,
                   bHideWishlistButton: !0,
@@ -101339,10 +101458,14 @@
               this.m_mapPrivateData.set(this.m_gidDirty, _),
                 this.DispatchUpdate(this.m_clanAccountIDDirty, this.m_gidDirty);
             }
-            (_.jsonData = _),
+            return (
+              (_.jsonData = _),
               _ && ((this.m_gidDirty = _), (this.m_clanAccountIDDirty = _)),
-              this.DispatchUpdate(_, _);
+              this.DispatchUpdate(_, _),
+              !0
+            );
           }
+          return !1;
         }
         BIsEqual(_, _) {
           return JSON.stringify(_) === JSON.stringify(_);
@@ -102045,6 +102168,60 @@
       function _(_) {
         return "mm_auto_render" == _;
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      class _ extends _._ {
+        constructor() {
+          super();
+        }
+        BTransportReady() {
+          return !0;
+        }
+        GetServerTime() {
+          return _._.PAGE_TIMESTAMP + Math.floor(performance.now() / 1e3);
+        }
+        async RequestEmoticonListInternal() {
+          let _ = [];
+          try {
+            let _ = await _().get(_._.CHAT_BASE_URL + "actions/EmoticonData", {
+              withCredentials: !0,
+            });
+            if (_.data.emoticons)
+              for (let _ of _.data.emoticons) {
+                let _ = _.name;
+                if (_.startsWith("^"))
+                  _.push({
+                    name: _,
+                  });
+                else {
+                  let _ = {
+                      name: _.substr(1, _.length - 2),
+                    },
+                    _ = _.name.toLowerCase();
+                  _ != _.name && (_.name_normalized = _),
+                    _.time_last_used && (_.last_used = _.time_last_used),
+                    _.use_count && (_.use_count = _.use_count),
+                    _.time_received && (_.time_received = _.time_received),
+                    _.appid && (_.appid = _.appid),
+                    _.push(_);
+                }
+              }
+          } catch (_) {
+            console.error("error loading emoticon list", _);
+          }
+          this.OnEmoticonListReceived(_);
+        }
+      }
+      const _ = new _();
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -108104,8 +108281,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -108168,7 +108345,6 @@
           __webpack_require__
         );
       }
-      const _ = {};
       function _(_) {
         const { appId: _, clanId: __webpack_require__, bShowRSSFeed: _ } = _,
           {
@@ -108259,7 +108435,18 @@
             _: _,
             strExtraBannerGroupStyle: _,
           } = _(_, __webpack_require__),
-          [_] = (0, _._)(_, _),
+          _ = (0, _.useMemo)(
+            () =>
+              _
+                ? {
+                    appid: _,
+                  }
+                : {
+                    creatorid: __webpack_require__,
+                  },
+            [_, __webpack_require__],
+          ),
+          { data: _ } = (0, _._)(_),
           _ = _._.Get().BOwnsApp(_);
         let _ = Boolean(_ !== _._);
         const _ = _.createElement("img", {
@@ -108304,7 +108491,6 @@
                 : _.createElement(
                     _._,
                     {
-                      type: _.appId ? "app" : "clan",
                       _: _,
                       hoverClassName: _().AppBannerLogoCtn,
                     },
@@ -108346,8 +108532,8 @@
                     },
                     _.createElement(_._, {
                       appid: _,
-                      bIsFree: _?.BIsFree(),
-                      bIsComingSoon: _?.BIsComingSoon(),
+                      bIsFree: Boolean(_?.is_free),
+                      bIsComingSoon: Boolean(_?.is_coming_soon),
                       className: (0, _._)(
                         _().ActionButton,
                         _().WishlistBtnShort,
@@ -109087,6 +109273,7 @@
         (0, _._)([_._], _.prototype, "OpenRepostDialogs", null),
         (_ = (0, _._)([_._], _));
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

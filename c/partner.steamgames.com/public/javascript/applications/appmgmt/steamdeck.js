@@ -38,14 +38,13 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
         if (_().isCancel(_))
           return {
             strErrorMsg: "Action Cancelled:" + _,
-            errorCode: _._.k_EResultCancelled,
+            errorCode: 52,
           };
         if (
           void 0 !== _.response &&
@@ -127,11 +126,11 @@
         return "object" == typeof _ && "status" in _
           ? {
               strErrorMsg: "Unknown Error: " + _ + "\nStatus Code:" + _.status,
-              errorCode: _._.k_EResultFail,
+              errorCode: 2,
             }
           : {
               strErrorMsg: "Unknown Error: " + _,
-              errorCode: _._.k_EResultFail,
+              errorCode: 2,
             };
       }
     },

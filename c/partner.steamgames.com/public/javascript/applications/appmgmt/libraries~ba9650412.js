@@ -1,7 +1,7 @@
 "use strict";
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [4843],
+  [7224],
   {
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {

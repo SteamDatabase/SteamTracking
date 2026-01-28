@@ -832,6 +832,16 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
 .wC3_c2yhq3ppKA9AKQoTy .DialogLabel {
   display: flex;
 }
+.wC3_c2yhq3ppKA9AKQoTy a,
+.wC3_c2yhq3ppKA9AKQoTy a.Link {
+  color: #fff;
+  text-decoration: underline dotted #b0e9ff 1px;
+}
+.wC3_c2yhq3ppKA9AKQoTy a:hover,
+.wC3_c2yhq3ppKA9AKQoTy a.Link:hover {
+  text-decoration-style: solid;
+  text-decoration-color: #fff;
+}
 ._3uPTh_ikegl-PIq12cfjJg {
   display: flex;
   flex-direction: row;
@@ -874,6 +884,9 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   background: #461f28;
   border: 1px solid #761f28;
   padding: 4px;
+}
+._1eWwNe3G6T8EcVRg0R5Ftj b {
+  font-weight: 600;
 }
 ._1bjwXvgQa-kJBMijOLS8X5 {
   display: flex;
@@ -987,7 +1000,7 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
 }
 ._1bjwXvgQa-kJBMijOLS8X5 ._1AqrivbzwCs57BXiugqpeA ._1eWwNe3G6T8EcVRg0R5Ftj p {
   font-size: 14px;
-  line-height: 21px;
+  line-height: 1.3;
   font-weight: 300;
   color: #dfe3e6;
 }
@@ -995,13 +1008,14 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   ._1AqrivbzwCs57BXiugqpeA
   ._1eWwNe3G6T8EcVRg0R5Ftj
   p._1WWL_09T_-Jq--HSJRhKtH {
-  font-size: 16px;
-  line-height: 21px;
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 200;
 }
 ._1bjwXvgQa-kJBMijOLS8X5 ._1AqrivbzwCs57BXiugqpeA ._1eWwNe3G6T8EcVRg0R5Ftj h1 {
   margin-bottom: 8px;
   font-size: 24px;
-  line-height: 27px;
+  line-height: 1.3;
 }
 ._1bjwXvgQa-kJBMijOLS8X5
   ._1AqrivbzwCs57BXiugqpeA
@@ -1062,7 +1076,7 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   ._3m2-TXBKQenlqzPUBuhbaD
   ._3ltg5fPzb-WsRyzI41vAv_ {
   font-size: 16px;
-  line-height: 21px;
+  line-height: 1.3;
   font-weight: 300;
   z-index: 1;
 }
@@ -1115,13 +1129,6 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   ._1eWwNe3G6T8EcVRg0R5Ftj
   ._3DyXNd5UgceEG9fcCKinvw:not(:first-child) {
   margin-top: 24px;
-}
-._1bjwXvgQa-kJBMijOLS8X5 ._3kaQhRnhNh_awrnNX90rui ._1eWwNe3G6T8EcVRg0R5Ftj a,
-._1bjwXvgQa-kJBMijOLS8X5
-  ._3kaQhRnhNh_awrnNX90rui
-  ._1eWwNe3G6T8EcVRg0R5Ftj
-  a.Link {
-  color: #fff;
 }
 ._1bjwXvgQa-kJBMijOLS8X5 ._3kaQhRnhNh_awrnNX90rui ._1eWwNe3G6T8EcVRg0R5Ftj img {
   max-width: 100%;

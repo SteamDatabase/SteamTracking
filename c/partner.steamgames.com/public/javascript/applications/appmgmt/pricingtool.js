@@ -4,21 +4,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        PriceGuidelinesPicker: "_4Xo2kBxLD3UDeZmmJU0r-",
-        GuidelinesPanel: "_1vwM_zfUBQB5iGczHvjbUv",
-        GuidelinesDescription: "_1tfKPTE7T78mXY5NZSQPQK",
-        GuidelinesGrid: "_3fwDv3EkXmKGmgu15LfFgo",
-        GridElement: "_2x-S8tOIgpJaC4ZsFg1g8d",
-        CurrentPrice: "_2AddnZ15YltINVvHy_b_Jm",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        MoreDots: "_2YpW8SafRsHDfQIUT2DzUP",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         DashboardPage: "fIACD2DrXOfPgZ6liaz8B",
         DashTitle: "_3GHz1lE76l_ye03FVZIvgV",
         FeedbackLinkCtn: "_5ZCWmtTzUDQzZXxIFLcJV",
@@ -53,34 +38,6 @@
         AutoPublish: "zbAUUiMQKPgmHThl1ulzw",
         PartnerWillPublish: "_2Wb1yEtp1QfnYnf7aMSlQV",
         ApprovedCanPublish: "_2ejxCLT6gbjeTjgoyeghPn",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        PriceCell: "_1sKIcxV1HaEWCa1x_sSuVT",
-        PricePrefix: "gPcNwuh4LJPmwRZrAbrA5",
-        PriceSuffix: "_3AEJb3AH01qQaG89JOYAh4",
-        EditablePrice: "pm5xM6Dyy-9XY0g9TpjX1",
-        PriceInput: "_1PcwXjG-2t5JOJuL7yhOYG",
-        USD: "_1C7qRJ6YdGWEwEK4QsMRUX",
-        ProposedPrice: "rVkmDwpTOXR4DqdBdbiPf",
-        ApprovedCanPublish: "_1JBd8mxmIpyOChqhkSKSUg",
-        ChangedLocally: "_5mvGWs3IDSRLfxvHx8wig",
-        WarningPrice: "_1Qd5uW_BK8PBDJiDBjDCPN",
-        SevereWarningPrice: "_1o6zP8gegcka6hdQA2lJjv",
-        BadPrice: "_18aiu0HZznAMnGQfWExtTm",
-        PriceChange: "w-K7qF60ELXWtEjymcY68",
-        NewPrice: "_3sgbtvMYimrD0kSs3VCoPx",
-        PriceAlert: "_2eadUvk4zK7FL9FFvy3Gd2",
-        PriceChangeArrow: "_1z0l2rhYAxXf6M_tgnczgZ",
-        PriceIncrease: "_2jQyP7o7hbWM4EhAkKLAks",
-        PricePopout: "_1AoyzK2lSPVwQJoIYEjFbR",
-        DetailRow: "_3P_fJH02fBcdGM2etenWu7",
-        DetailLabel: "_3RXb3FOdpsOt-aVMvfnb6W",
-        DetailPrice: "_2k3CVLd6A1QAixKOkfGx6P",
-        DetailButton: "_3ILP7OdXtGjDaSvJqI81RV",
-        Disabled: "_3mZHsQVQB8w84OblleAq68",
-        HoverToolTip: "_36qS74l1tXSXwGdyfIFQ-G",
       };
     },
     chunkid: (module) => {
@@ -132,6 +89,301 @@
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      var _ = {
+        "./af": 30911,
+        "./af.js": 30911,
+        "./ar": 63595,
+        "./ar-dz": 99358,
+        "./ar-dz.js": 99358,
+        "./ar-kw": 46830,
+        "./ar-kw.js": 46830,
+        "./ar-ly": 26067,
+        "./ar-ly.js": 26067,
+        "./ar-ma": 64154,
+        "./ar-ma.js": 64154,
+        "./ar-ps": 90753,
+        "./ar-ps.js": 90753,
+        "./ar-sa": 53616,
+        "./ar-sa.js": 53616,
+        "./ar-tn": 19026,
+        "./ar-tn.js": 19026,
+        "./ar.js": 63595,
+        "./az": 87043,
+        "./az.js": 87043,
+        "./be": 28437,
+        "./be.js": 28437,
+        "./bg": 29843,
+        "./bg.js": 29843,
+        "./bm": 39421,
+        "./bm.js": 39421,
+        "./bn": 41300,
+        "./bn-bd": 54487,
+        "./bn-bd.js": 54487,
+        "./bn.js": 41300,
+        "./bo": 40827,
+        "./bo.js": 40827,
+        "./br": 35120,
+        "./br.js": 35120,
+        "./bs": 41991,
+        "./bs.js": 41991,
+        "./ca": 47504,
+        "./ca.js": 47504,
+        "./cs": 98346,
+        "./cs.js": 98346,
+        "./cv": 17525,
+        "./cv.js": 17525,
+        "./cy": 80872,
+        "./cy.js": 80872,
+        "./da": 48787,
+        "./da.js": 48787,
+        "./de": 30199,
+        "./de-at": 33461,
+        "./de-at.js": 33461,
+        "./de-ch": 97995,
+        "./de-ch.js": 97995,
+        "./de.js": 30199,
+        "./dv": 14682,
+        "./dv.js": 14682,
+        "./el": 52549,
+        "./el.js": 52549,
+        "./en-au": 5706,
+        "./en-au.js": 5706,
+        "./en-ca": 50584,
+        "./en-ca.js": 50584,
+        "./en-gb": 41685,
+        "./en-gb.js": 41685,
+        "./en-ie": 32050,
+        "./en-ie.js": 32050,
+        "./en-il": 35545,
+        "./en-il.js": 35545,
+        "./en-in": 42551,
+        "./en-in.js": 42551,
+        "./en-nz": 10620,
+        "./en-nz.js": 10620,
+        "./en-sg": 16222,
+        "./en-sg.js": 16222,
+        "./eo": 88124,
+        "./eo.js": 88124,
+        "./es": 59784,
+        "./es-do": 30300,
+        "./es-do.js": 30300,
+        "./es-mx": 47292,
+        "./es-mx.js": 47292,
+        "./es-us": 36469,
+        "./es-us.js": 36469,
+        "./es.js": 59784,
+        "./et": 56349,
+        "./et.js": 56349,
+        "./eu": 6782,
+        "./eu.js": 6782,
+        "./fa": 86749,
+        "./fa.js": 86749,
+        "./fi": 52469,
+        "./fi.js": 52469,
+        "./fil": 2989,
+        "./fil.js": 2989,
+        "./fo": 50743,
+        "./fo.js": 50743,
+        "./fr": 34916,
+        "./fr-ca": 96853,
+        "./fr-ca.js": 96853,
+        "./fr-ch": 81566,
+        "./fr-ch.js": 81566,
+        "./fr.js": 34916,
+        "./fy": 82949,
+        "./fy.js": 82949,
+        "./ga": 80932,
+        "./ga.js": 80932,
+        "./gd": 82671,
+        "./gd.js": 82671,
+        "./gl": 95687,
+        "./gl.js": 95687,
+        "./gom-deva": 67330,
+        "./gom-deva.js": 67330,
+        "./gom-latn": 7021,
+        "./gom-latn.js": 7021,
+        "./gu": 78728,
+        "./gu.js": 78728,
+        "./he": 28211,
+        "./he.js": 28211,
+        "./hi": 15487,
+        "./hi.js": 15487,
+        "./hr": 94106,
+        "./hr.js": 94106,
+        "./hu": 14147,
+        "./hu.js": 14147,
+        "./hy-am": 23862,
+        "./hy-am.js": 23862,
+        "./id": 78825,
+        "./id.js": 78825,
+        "./is": 57612,
+        "./is.js": 57612,
+        "./it": 9497,
+        "./it-ch": 75653,
+        "./it-ch.js": 75653,
+        "./it.js": 9497,
+        "./ja": 2209,
+        "./ja.js": 2209,
+        "./jv": 85668,
+        "./jv.js": 85668,
+        "./ka": 6904,
+        "./ka.js": 6904,
+        "./kk": 2138,
+        "./kk.js": 2138,
+        "./km": 81660,
+        "./km.js": 81660,
+        "./kn": 88613,
+        "./kn.js": 88613,
+        "./ko": 57894,
+        "./ko.js": 57894,
+        "./ku": 28468,
+        "./ku-kmr": 57123,
+        "./ku-kmr.js": 57123,
+        "./ku.js": 28468,
+        "./ky": 91808,
+        "./ky.js": 91808,
+        "./lb": 47070,
+        "./lb.js": 47070,
+        "./lo": 56505,
+        "./lo.js": 56505,
+        "./lt": 53656,
+        "./lt.js": 53656,
+        "./lv": 83746,
+        "./lv.js": 83746,
+        "./me": 42486,
+        "./me.js": 42486,
+        "./mi": 82,
+        "./mi.js": 82,
+        "./mk": 14792,
+        "./mk.js": 14792,
+        "./ml": 10845,
+        "./ml.js": 10845,
+        "./mn": 46939,
+        "./mn.js": 46939,
+        "./mr": 5575,
+        "./mr.js": 5575,
+        "./ms": 81424,
+        "./ms-my": 43179,
+        "./ms-my.js": 43179,
+        "./ms.js": 81424,
+        "./mt": 30341,
+        "./mt.js": 30341,
+        "./my": 72834,
+        "./my.js": 72834,
+        "./nb": 75292,
+        "./nb.js": 75292,
+        "./ne": 23753,
+        "./ne.js": 23753,
+        "./nl": 53922,
+        "./nl-be": 77542,
+        "./nl-be.js": 77542,
+        "./nl.js": 53922,
+        "./nn": 81304,
+        "./nn.js": 81304,
+        "./oc-lnc": 41156,
+        "./oc-lnc.js": 41156,
+        "./pa-in": 17851,
+        "./pa-in.js": 17851,
+        "./pl": 66636,
+        "./pl.js": 66636,
+        "./pt": 13252,
+        "./pt-br": 95189,
+        "./pt-br.js": 95189,
+        "./pt.js": 13252,
+        "./ro": 5451,
+        "./ro.js": 5451,
+        "./ru": 981,
+        "./ru.js": 981,
+        "./sd": 49139,
+        "./sd.js": 49139,
+        "./se": 24684,
+        "./se.js": 24684,
+        "./si": 85448,
+        "./si.js": 85448,
+        "./sk": 61682,
+        "./sk.js": 61682,
+        "./sl": 17595,
+        "./sl.js": 17595,
+        "./sq": 61360,
+        "./sq.js": 61360,
+        "./sr": 45897,
+        "./sr-cyrl": 80616,
+        "./sr-cyrl.js": 80616,
+        "./sr.js": 45897,
+        "./ss": 15034,
+        "./ss.js": 15034,
+        "./sv": 78213,
+        "./sv.js": 78213,
+        "./sw": 47494,
+        "./sw.js": 47494,
+        "./ta": 48387,
+        "./ta.js": 48387,
+        "./te": 90951,
+        "./te.js": 90951,
+        "./tet": 83675,
+        "./tet.js": 83675,
+        "./tg": 99753,
+        "./tg.js": 99753,
+        "./th": 59844,
+        "./th.js": 59844,
+        "./tk": 84429,
+        "./tk.js": 84429,
+        "./tl-ph": 54645,
+        "./tl-ph.js": 54645,
+        "./tlh": 56946,
+        "./tlh.js": 56946,
+        "./tr": 8630,
+        "./tr.js": 8630,
+        "./tzl": 79480,
+        "./tzl.js": 79480,
+        "./tzm": 13839,
+        "./tzm-latn": 36313,
+        "./tzm-latn.js": 36313,
+        "./tzm.js": 13839,
+        "./ug-cn": 26648,
+        "./ug-cn.js": 26648,
+        "./uk": 24192,
+        "./uk.js": 24192,
+        "./ur": 8335,
+        "./ur.js": 8335,
+        "./uz": 21351,
+        "./uz-latn": 60785,
+        "./uz-latn.js": 60785,
+        "./uz.js": 21351,
+        "./vi": 9541,
+        "./vi.js": 9541,
+        "./x-pseudo": 309,
+        "./x-pseudo.js": 309,
+        "./yo": 21512,
+        "./yo.js": 21512,
+        "./zh-cn": 98562,
+        "./zh-cn.js": 98562,
+        "./zh-hk": 7374,
+        "./zh-hk.js": 7374,
+        "./zh-mo": 87107,
+        "./zh-mo.js": 87107,
+        "./zh-tw": 34518,
+        "./zh-tw.js": 34518,
+      };
+      function _(_) {
+        var _ = _(_);
+        return __webpack_require__(_);
+      }
+      function _(_) {
+        if (!__webpack_require__._(_, _)) {
+          var _ = new Error("Cannot find module '" + _ + "'");
+          throw ((_.code = "MODULE_NOT_FOUND"), _);
+        }
+        return _[_];
+      }
+      (_.keys = function () {
+        return Object.keys(_);
+      }),
+        (_.resolve = _),
+        (module.exports = _),
+        (_._ = 61738);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
@@ -169,7 +421,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -388,11 +639,11 @@
                   ? _(_, void 0, 6e4).then((_) => {
                       __webpack_require__(_);
                     })
-                  : __webpack_require__(_._.k_EResultOK);
+                  : __webpack_require__("chunkid");
               }, [__webpack_require__, _, _]),
               _.useMemo(() => {
                 if (void 0 === _) return null;
-                if (_ != _._.k_EResultOK)
+                if (1 != _)
                   return {
                     days: 0,
                     loadFailed: !0,
@@ -657,7 +908,7 @@
                 const _ = _[_],
                   _ = await _(_, _, _);
                 if (_.token.reason) return;
-                if (_.success != _._.k_EResultOK)
+                if (1 != _.success)
                   return void _(
                     _.msg ?? (0, _._)("#PricingDashboard_SavePricesError"),
                   );
@@ -724,7 +975,7 @@
               _
                 ? null == __webpack_require__
                   ? _.Loading
-                  : __webpack_require__ != _._.k_EResultOK
+                  : 1 != __webpack_require__
                     ? _.FailedToLoad
                     : (0, _._)(_).every(
                           (_) => _.rtStartDate > _ + _._ || _.rtEndDate < _,
@@ -739,10 +990,7 @@
               [__webpack_require__, _] = _.useState(_.Idle);
             return {
               fnPublish: _.useCallback(async () => {
-                _(_.Loading),
-                  (await _(_)).success == _._.k_EResultOK
-                    ? _(_._)
-                    : _(_.Failed);
+                _(_.Loading), 1 == (await _(_)).success ? _(_._) : _(_.Failed);
               }, [_, _, _]),
               ePublishState: __webpack_require__,
             };
@@ -974,8 +1222,7 @@
           ? ((_ = _().NeedsReview),
             (_ = (0, _._)("#PricingDashboard_PriceProposal_NeedsReview_ttip")),
             (_ = (0, _._)("#PricingDashboard_PriceProposal_NeedsReview")))
-          : _?.eState == _._.k_EPriceProposalStateActive &&
-              _.bPartnerWillPublish
+          : 1 == _?.eState && _.bPartnerWillPublish
             ? ((_ = _().PartnerWillPublish),
               (_ = (0, _._)(
                 "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip",
@@ -985,9 +1232,8 @@
               (_ = (0, _._)(
                 "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish",
               )))
-            : _?.eState != _._.k_EPriceProposalStateActive ||
-                _.bPartnerWillPublish
-              ? _?.eState == _._.k_EPriceProposalStateApproved
+            : 1 != _?.eState || _.bPartnerWillPublish
+              ? 4 == _?.eState
                 ? ((_ = _().ApprovedCanPublish),
                   (_ = (0, _._)(
                     "#PricingDashboard_PriceProposal_Approved_ttip",
@@ -1880,649 +2126,120 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = new _._("price-grid-cell-popout-elements");
-      function _(_) {
-        let { hoverKey: _, className: __webpack_require__, renderHover: _ } = _,
-          _ = (0, _._)(_().MoreDots, __webpack_require__),
-          _ = _.useRef(void 0),
-          _ = _.useCallback(() => {
-            _.HideElement(_.current.ownerDocument, _);
-          }, [_]);
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            tabIndex: -1,
-            className: _,
-            onFocus: (_) => {
-              _.target.focus();
-              let _ = _.createElement(
-                _._,
-                {
-                  target: _.current,
-                  direction: "top",
-                  bEnablePointerEvents: !0,
-                  nBodyDistance: 0,
-                  onClick: _,
-                },
-                _(),
-              );
-              _.ShowElement(_.current.ownerDocument, _, _);
-            },
-            onBlur: () => {
-              _.HideElement(_.current.ownerDocument, _, 100);
-            },
-          },
-          _.createElement(_.faJ, null),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { packageID: _ } = _,
-          _ = _.useRef(void 0);
-        return _.createElement(
-          "div",
-          {
-            className: _().PriceGuidelinesPicker,
-            onClick: (_) => {
-              const _ = {
-                bOverlapHorizontal: !0,
-                strClassName: (0, _._)(_().contextMenu, _().DropDown),
-              };
-              _.current = (0, _._)(
-                _.createElement(_, {
-                  packageID: _,
-                  fnOnClick: () => _.current.Hide(),
-                }),
-                _.currentTarget,
-                _,
-              );
-            },
-          },
-          _.createElement(_.GB9, null),
-        );
-      }
-      function _(_) {
-        const { packageID: _, fnOnClick: __webpack_require__ } = _,
-          { rgUSDPricesInCents: _, fnApplyGuidelines: _ } = (0, _._)(),
-          { nPriceInCents: _ } = (0, _._)(_, "USD");
-        return _.createElement(
-          "div",
-          {
-            className: _().GuidelinesPanel,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().GuidelinesDescription,
-            },
-            (0, _._)("#PricingDashboard_GuidelinesPickerDescription"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().GuidelinesGrid,
-            },
-            _.map((_) =>
-              _.createElement(
-                "div",
-                {
-                  key: _,
-                  onClick: () =>
-                    ((_) => {
-                      _(_, _), __webpack_require__();
-                    })(_),
-                  className: (0, _._)(
-                    _().GridElement,
-                    _ == _ && _().CurrentPrice,
-                  ),
-                },
-                (0, _._)(_, "USD"),
-              ),
-            ),
-          ),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { cell: _, row: __webpack_require__ } = _,
-          _ = __webpack_require__.original.packageID,
-          _ = _.getValue(),
-          {
-            nPriceInCents: _,
-            nPublishedPriceInCents: _,
-            nProposedPriceInCents: _,
-            fnSetPrice: _,
-          } = (0, _._)(_, _),
-          [_, _, _] = (0, _._)(_, _),
-          _ = (0, _._)(_),
-          _ = _.useRef(void 0),
-          _ = _ + _,
-          { strClassName: _ } = _(_, _),
-          _ = "USD" == _,
-          _ = _ ?? _,
-          _ = _ != _;
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            onKeyDown: _._,
-            className: _,
-          },
-          _ &&
-            _.createElement(_, {
-              nPriceInCents: _,
-              nSavedPriceInCents: _,
-            }),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().PricePrefix,
-              },
-              _,
-            ),
-          _.createElement(
-            "div",
-            {
-              className: _().EditablePrice,
-            },
-            _.createElement(_._, {
-              value: _,
-              className: _().PriceInput,
-              onChange: (_) => {
-                const _ = _.target.value.replace(/[^0-9]/g, "");
-                let _ = Number(_ || 0);
-                if (Number.isNaN(_)) return;
-                _.bWholeUnitsOnly && (_ *= 100);
-                const _ = 2147483647;
-                _ > _ && (_ = _), _(_);
-              },
-              onFocus: (_) => {
-                _.target.select(),
-                  _._.ShowElement(
-                    _.current.ownerDocument,
-                    _.createElement(
-                      _._,
-                      {
-                        target: _.current,
-                        direction: "top",
-                        bEnablePointerEvents: !0,
-                        nBodyDistance: 0,
-                      },
-                      _.createElement(_, {
-                        key: _,
-                        packageID: _,
-                        strPriceKey: _,
-                      }),
-                    ),
-                    _,
-                  );
-              },
-              onBlur: () => {
-                window.setTimeout(
-                  () =>
-                    _.current && _._.HideElement(_.current.ownerDocument, _),
-                  500,
-                );
-              },
-            }),
-          ),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().PriceSuffix,
-              },
-              _,
-            ),
-          _ &&
-            _.createElement(_, {
-              packageID: _,
-            }),
-          _.createElement(_, {
-            packageID: _,
-            strPriceKey: _,
-          }),
-        );
-      }
-      function _(_) {
-        const { packageID: _, strPriceKey: __webpack_require__ } = _,
-          {
-            strPriceWarning: _,
-            bBadPrice: _,
-            bShowWarningIcon: _,
-          } = _(_, __webpack_require__);
-        return _
-          ? _.createElement(
-              _._,
-              {
-                className: _().PriceAlert,
-                strTooltipClassname: _().HoverToolTip,
-                toolTipContent: _,
-                direction: "top",
-              },
-              _.createElement(_.eTF, {
-                color: _ ? "rgb(194, 45, 0)" : "#e5af37",
-              }),
-            )
-          : null;
-      }
-      const _ = 2;
-      function _(_, _) {
-        const {
-            nPriceInCents: __webpack_require__,
-            nPublishedPriceInCents: _,
-            nProposedPriceInCents: _,
-            nMinPriceInCents: _,
-            nMaxPriceInCents: _,
-            nMaxDiscountPercentage: _,
-            nSuggestedPriceInCents: _,
-          } = (0, _._)(_, _),
-          _ = (0, _._)(_),
-          _ = "USD" == _,
-          _ = __webpack_require__ != (_ ?? _),
-          _ = __webpack_require__ < _,
-          _ = !!_ && __webpack_require__ > _,
-          _ = !!_ && __webpack_require__ > _ * _,
-          _ = !!_ && __webpack_require__ < _ / _,
-          _ = !!_ && __webpack_require__ < _ && !!_,
-          _ =
-            (_ && (0, _._)("#PricingDashboard_PriceIncreaseDisallowed")) ||
-            (_ &&
-              (0, _._)(
-                "#PricingDashboard_PriceTooLow",
-                (0, _._)(_, _).join(""),
-              )) ||
-            (_ &&
-              (0, _._)(
-                "#PricingDashboard_PriceMuchHigherThanGuidelines",
-                (0, _._)(_, _).join(""),
-              )) ||
-            (_ &&
-              (0, _._)(
-                "#PricingDashboard_PriceMuchLowerThanGuidelines",
-                (0, _._)(_, _).join(""),
-              )) ||
-            (_ &&
-              (0, _._)(
-                "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
-                _,
-              )),
-          _ = _ || _,
-          _ = _ || _,
-          _ = _ || _ || _,
-          _ = !(_ || !_ || (_ && _ == _)),
-          _ = _?.eState == _._.k_EPriceProposalStateApproved,
-          _ = (0, _._)(
-            _().PriceCell,
-            _ && _().USD,
-            _ && _().ChangedLocally,
-            _ && _().ProposedPrice,
-            _ && _().ApprovedCanPublish,
-            _ && _().WarningPrice,
-            _ && _().SevereWarningPrice,
-            _ && _().BadPrice,
-          );
-        return _.useMemo(
-          () => ({
-            strPriceWarning: _,
-            strClassName: _,
-            bBadPrice: _,
-            bShowSevereWarning: _,
-            bShowWarningIcon: _,
-          }),
-          [_, _, _, _, _],
-        );
-      }
-      function _(_) {
-        const { nPriceInCents: _, nSavedPriceInCents: __webpack_require__ } = _;
-        let _ = null,
-          _ = null,
-          _ = null,
-          _ = null;
-        if (__webpack_require__) {
-          const _ = Math.ceil(
-              (100 * (_ - __webpack_require__)) / __webpack_require__,
-            ),
-            _ = _ > __webpack_require__;
-          (_ = _
-            ? (0, _._)("#PricingDashboard_PriceIncreaseBy", _ + "%")
-            : (0, _._)("#PricingDashboard_PriceLowerBy", _ + "%")),
-            (_ = (0, _._)(_().PriceChange, _ && _().PriceIncrease)),
-            (_ = _.createElement(
-              "div",
-              {
-                className: _().PriceChangeArrow,
-              },
-              _.createElement(_.i3G, {
-                angle: _ ? 0 : 180,
-              }),
-            )),
-            (_ = _ + "%");
-        } else
-          (_ = (0, _._)("#PricingDashboard_PriceIsNew_Short")),
-            (_ = (0, _._)(_().NewPrice));
-        return _.createElement(
-          _._,
-          {
-            className: _,
-            strTooltipClassname: _().HoverToolTip,
-            toolTipContent: _,
-            direction: "top",
-          },
-          _,
-          _,
-        );
-      }
-      function _(_) {
-        return new Date(1e3 * _).toLocaleString(_._.GetPreferredLocales(), {
-          weekday: "long",
-          month: "long",
-          day: "numeric",
-          hour: "numeric",
-          minute: "2-digit",
-        });
-      }
-      function _(_) {
-        const { packageID: _, strPriceKey: __webpack_require__ } = _,
-          {
-            nPriceInCents: _,
-            nPublishedPriceInCents: _,
-            nProposedPriceInCents: _,
-            nSuggestedPriceInCents: _,
-            fnSetPrice: _,
-          } = (0, _._)(_, __webpack_require__),
-          { nPriceInCents: _ } = (0, _._)(_, "USD"),
-          _ = !(!_ || (_ && _ == _)),
-          _ = (0, _._)(_),
-          _ = _ && _(_.rtSubmitted),
-          _ = (0, _._)(_?.submitterID),
-          _ = _ ? _.m_strPlayerName : _?.submitterID;
-        return _.createElement(
-          "div",
-          {
-            className: _().PricePopout,
-          },
-          !!_ &&
-            _.createElement(
-              _._,
-              {
-                className: _().DetailRow,
-                direction: "left",
-                toolTipContent: (0, _._)(
-                  "#PricingDashboard_CurrentPriceOnStore_ttip",
-                ),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailLabel,
-                },
-                (0, _._)("#PricingDashboard_CurrentPriceOnStore"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailPrice,
-                },
-                (0, _._)(_, __webpack_require__).join(""),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: (0, _._)(_().DetailButton, _ == _ && _().Disabled),
-                  onClick: () => _(_),
-                  bDisabled: _ == _,
-                  toolTipContent: (0, _._)(
-                    "#PricingDashboard_UseThisOldPrice_ttip",
-                  ),
-                },
-                (0, _._)("#PricingDashboard_UseThisPrice_Button"),
-              ),
-            ),
-          _ &&
-            _.createElement(
-              _._,
-              {
-                className: _().DetailRow,
-                direction: "left",
-                toolTipContent: (0, _._)(
-                  "#PricingDashboard_ProposedPrice_ttip",
-                  _,
-                  _,
-                ),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailLabel,
-                },
-                (0, _._)("#PricingDashboard_ProposedPrice"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailPrice,
-                },
-                (0, _._)(_, __webpack_require__).join(""),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: (0, _._)(_().DetailButton, _ == _ && _().Disabled),
-                  onClick: () => _(_),
-                  bDisabled: _ == _,
-                  toolTipContent: (0, _._)(
-                    "#PricingDashboard_UseThisNewPrice_ttip",
-                  ),
-                },
-                (0, _._)("#PricingDashboard_UseThisPrice_Button"),
-              ),
-            ),
-          !!_ &&
-            _.createElement(
-              _._,
-              {
-                className: _().DetailRow,
-                direction: "left",
-                toolTipContent: (0, _._)(
-                  "#PricingDashboard_SuggestedPrice_ttip",
-                  (0, _._)(_, "USD").join(""),
-                ),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailLabel,
-                },
-                (0, _._)("#PricingDashboard_SuggestedPrice"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailPrice,
-                },
-                (0, _._)(_, __webpack_require__).join(""),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: (0, _._)(_().DetailButton, _ == _ && _().Disabled),
-                  onClick: () => _(_),
-                  bDisabled: _ == _,
-                  toolTipContent: (0, _._)(
-                    "#PricingDashboard_UseThisNewPrice_ttip",
-                  ),
-                },
-                (0, _._)("#PricingDashboard_UseThisPrice_Button"),
-              ),
-            ),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 0,
-        _ = "061818254b2c99ac49e6626adb128ed1282a392f",
-        _ = 120;
       class _ {
-        m_unAppID;
-        m_bInitialized = !1;
-        m_strName;
-        m_strIconURL;
-        m_dtUpdatedFromServer;
-        m_eAppType;
-        constructor(_) {
-          this.m_unAppID = _;
+        constructor() {
+          (0, _._)(this);
         }
-        get appid() {
-          return this.m_unAppID;
+        bOpenEventLandingPage = !1;
+        bIncludeFeaturedAsGameSource = !0;
+        nOverrideDateNow = void 0;
+        get bRequireAllEventsLoadedInTimeBlock() {
+          return !1;
         }
-        get is_initialized() {
-          return this.m_bInitialized;
+        get bIsFollowingEnabled() {
+          return !(0, _._)();
         }
-        get is_valid() {
-          return this.m_bInitialized && !!this.m_strName;
+        get bIsCuratorsEnabled() {
+          return !(0, _._)();
         }
-        get name() {
-          return this.m_strName;
+        get bIncludeCurators() {
+          return !0;
         }
-        get icon_url_no_default() {
-          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, _);
+        GetTimeNowWithOverride() {
+          return this.nOverrideDateNow
+            ? this.nOverrideDateNow
+            : Math.floor(Date.now() / 1e3);
         }
-        get icon_url() {
-          return this.BuildAppURL(this.m_strIconURL, _);
+        GetTimeNowWithOverrideAsDate() {
+          return this.nOverrideDateNow
+            ? new Date(1e3 * this.nOverrideDateNow)
+            : new Date();
         }
-        get time_updated_from_server() {
-          return this.m_dtUpdatedFromServer;
+        BHasTimeOverride() {
+          return Boolean(this.nOverrideDateNow);
         }
-        get apptype() {
-          return this.m_eAppType;
+        ParseDevOverrides(_) {
+          if (!_ || 0 == _.length) return;
+          const _ = new URLSearchParams("?" == _[0] ? _.substring(1) : _);
+          if (
+            _.has("t") &&
+            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE)
+          ) {
+            const _ = _.get("t");
+            let _ = /^\d+$/.test(_ ?? "")
+              ? _().unix(Number.parseInt(_ ?? "0"))
+              : _()(_);
+            (this.nOverrideDateNow = Math.floor(__webpack_require__.unix())),
+              console.log(
+                "CEventCalendarDevFeatures overriding partner event time: " +
+                  this.nOverrideDateNow +
+                  " " +
+                  __webpack_require__.format(),
+              );
+          }
         }
-        BIsApplicationOrTool() {
-          return (
-            this.apptype == _._.k_EAppTypeTool ||
-            this.apptype == _._.k_EAppTypeApplication
-          );
-        }
-        BuildAppURL(_, _) {
-          return _
-            ? _._.MEDIA_CDN_COMMUNITY_URL +
-                "images/apps/" +
-                this.appid +
-                "/" +
-                _ +
-                ".jpg"
-            : (0, _._)(_);
-        }
-        DeserializeFromMessage(_) {
-          (this.m_bInitialized = !0),
-            (this.m_strName = _.name()),
-            (this.m_strIconURL = _.icon()),
-            (this.m_dtUpdatedFromServer = new Date()),
-            (this.m_eAppType = _.app_type());
-        }
-        DeserializeFromAppOverview(_) {
-          _.icon_hash() && _.app_type() != _._.k_EAppTypeShortcut
-            ? ((this.m_bInitialized = !0),
-              (this.m_strName = _.display_name()),
-              (this.m_strIconURL = _.icon_hash()),
-              (this.m_dtUpdatedFromServer = new Date()),
-              (this.m_eAppType = _.app_type()))
-            : (this.m_bInitialized = !1);
-        }
-        DeserializeFromCacheObject(_) {
-          try {
-            (this.m_strName = _.strName),
-              (this.m_strIconURL = _.strIconURL),
-              (this.m_dtUpdatedFromServer = new Date(_.strUpdatedFromServer)),
-              (this.m_eAppType = _.eAppType),
-              (this.m_bInitialized = !0);
-          } catch {}
-        }
-        SerializeToCacheObject() {
-          return (
-            (0, _._)(
-              this.m_bInitialized,
-              "Attempting to serialize an uninitialized AppInfo object for caching!",
-            ),
-            this.m_bInitialized
-              ? {
-                  strName: this.m_strName,
-                  strIconURL: this.m_strIconURL,
-                  strUpdatedFromServer: this.m_dtUpdatedFromServer.toJSON(),
-                  eAppType: this.m_eAppType,
-                }
-              : null
-          );
-        }
+      }
+      (0, _._)([_._], _.prototype, "nOverrideDateNow", void 0);
+      const _ = new _();
+      function _(_ = 1) {
+        const [_, __webpack_require__] = _.useState(() => _()),
+          _ = (0, _._)("useTimeNowWithOverride"),
+          _ = _.useCallback(() => {
+            _.token.reason || __webpack_require__(_());
+          }, []);
+        return (
+          _.useEffect(() => {
+            const _ = 1e3 * _,
+              _ = _ - (Date.now() % _),
+              _ = window.setTimeout(_, _);
+            return () => {
+              window.clearTimeout(_);
+            };
+          }, [_, _, _]),
+          _
+        );
+      }
+      window.g_EventCalendarDevFeatures = _;
+      const _ = new Date(),
+        _ = Math.floor(_.getTime() / 1e3);
+      function _() {
+        const _ = Math.floor(Date.now() / 1e3);
+        return _.nOverrideDateNow ? _.nOverrideDateNow + (_ - _) : _;
+      }
+      function _() {
+        return _.nOverrideDateNow ?? _;
+      }
+      function _() {
+        return _.useMemo(() => _(), []);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function _(_, _) {
-        let _ = ".jpg";
-        (_ && "0000000000000000000000000000000000000000" !== _) || (_ = _),
-          44 == _.length && ((_ = _.substr(-4)), (_ = _.substr(0, 40)));
-        let _ = _._.AVATAR_BASE_URL;
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _.useRef(_().CancelToken.source());
         return (
-          _ ||
-            ((_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (_ += _.substr(0, 2) + "/")),
-          (_ += _),
-          _ && "small" != _ && (_ += "_" + _),
-          (_ += _),
-          _
+          _.useEffect(() => {
+            const _ = _.current;
+            return () =>
+              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
+          }, [_]),
+          _.current
         );
       }
     },

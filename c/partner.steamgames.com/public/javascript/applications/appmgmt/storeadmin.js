@@ -4,49 +4,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        PriceGuidelinesPicker: "_4Xo2kBxLD3UDeZmmJU0r-",
-        GuidelinesPanel: "_1vwM_zfUBQB5iGczHvjbUv",
-        GuidelinesDescription: "_1tfKPTE7T78mXY5NZSQPQK",
-        GuidelinesGrid: "_3fwDv3EkXmKGmgu15LfFgo",
-        GridElement: "_2x-S8tOIgpJaC4ZsFg1g8d",
-        CurrentPrice: "_2AddnZ15YltINVvHy_b_Jm",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        MoreDots: "_2YpW8SafRsHDfQIUT2DzUP",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        PriceCell: "_1sKIcxV1HaEWCa1x_sSuVT",
-        PricePrefix: "gPcNwuh4LJPmwRZrAbrA5",
-        PriceSuffix: "_3AEJb3AH01qQaG89JOYAh4",
-        EditablePrice: "pm5xM6Dyy-9XY0g9TpjX1",
-        PriceInput: "_1PcwXjG-2t5JOJuL7yhOYG",
-        USD: "_1C7qRJ6YdGWEwEK4QsMRUX",
-        ProposedPrice: "rVkmDwpTOXR4DqdBdbiPf",
-        ApprovedCanPublish: "_1JBd8mxmIpyOChqhkSKSUg",
-        ChangedLocally: "_5mvGWs3IDSRLfxvHx8wig",
-        WarningPrice: "_1Qd5uW_BK8PBDJiDBjDCPN",
-        SevereWarningPrice: "_1o6zP8gegcka6hdQA2lJjv",
-        BadPrice: "_18aiu0HZznAMnGQfWExtTm",
-        PriceChange: "w-K7qF60ELXWtEjymcY68",
-        NewPrice: "_3sgbtvMYimrD0kSs3VCoPx",
-        PriceAlert: "_2eadUvk4zK7FL9FFvy3Gd2",
-        PriceChangeArrow: "_1z0l2rhYAxXf6M_tgnczgZ",
-        PriceIncrease: "_2jQyP7o7hbWM4EhAkKLAks",
-        PricePopout: "_1AoyzK2lSPVwQJoIYEjFbR",
-        DetailRow: "_3P_fJH02fBcdGM2etenWu7",
-        DetailLabel: "_3RXb3FOdpsOt-aVMvfnb6W",
-        DetailPrice: "_2k3CVLd6A1QAixKOkfGx6P",
-        DetailButton: "_3ILP7OdXtGjDaSvJqI81RV",
-        Disabled: "_3mZHsQVQB8w84OblleAq68",
-        HoverToolTip: "_36qS74l1tXSXwGdyfIFQ-G",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         "duration-app-launch": "800ms",
         ProgressBar: "_2H35Exdt_TEmnht61LT9o",
         ProgressBarComplete: "ch7u6iAsb2ympJBJjGMoi",
@@ -590,526 +547,6 @@
         _ = () => (0, _.useContext)(_);
       function _(_, _) {
         return _ ? _ + "?t=" + _ : null;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = new _._("price-grid-cell-popout-elements");
-      function _(_) {
-        let { hoverKey: _, className: __webpack_require__, renderHover: _ } = _,
-          _ = (0, _._)(_().MoreDots, __webpack_require__),
-          _ = _.useRef(void 0),
-          _ = _.useCallback(() => {
-            _.HideElement(_.current.ownerDocument, _);
-          }, [_]);
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            tabIndex: -1,
-            className: _,
-            onFocus: (_) => {
-              _.target.focus();
-              let _ = _.createElement(
-                _._,
-                {
-                  target: _.current,
-                  direction: "top",
-                  bEnablePointerEvents: !0,
-                  nBodyDistance: 0,
-                  onClick: _,
-                },
-                _(),
-              );
-              _.ShowElement(_.current.ownerDocument, _, _);
-            },
-            onBlur: () => {
-              _.HideElement(_.current.ownerDocument, _, 100);
-            },
-          },
-          _.createElement(_.faJ, null),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { packageID: _ } = _,
-          _ = _.useRef(void 0);
-        return _.createElement(
-          "div",
-          {
-            className: _().PriceGuidelinesPicker,
-            onClick: (_) => {
-              const _ = {
-                bOverlapHorizontal: !0,
-                strClassName: (0, _._)(_().contextMenu, _().DropDown),
-              };
-              _.current = (0, _._)(
-                _.createElement(_, {
-                  packageID: _,
-                  fnOnClick: () => _.current.Hide(),
-                }),
-                _.currentTarget,
-                _,
-              );
-            },
-          },
-          _.createElement(_.GB9, null),
-        );
-      }
-      function _(_) {
-        const { packageID: _, fnOnClick: __webpack_require__ } = _,
-          { rgUSDPricesInCents: _, fnApplyGuidelines: _ } = (0, _._)(),
-          { nPriceInCents: _ } = (0, _._)(_, "USD");
-        return _.createElement(
-          "div",
-          {
-            className: _().GuidelinesPanel,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().GuidelinesDescription,
-            },
-            (0, _._)("#PricingDashboard_GuidelinesPickerDescription"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().GuidelinesGrid,
-            },
-            _.map((_) =>
-              _.createElement(
-                "div",
-                {
-                  key: _,
-                  onClick: () =>
-                    ((_) => {
-                      _(_, _), __webpack_require__();
-                    })(_),
-                  className: (0, _._)(
-                    _().GridElement,
-                    _ == _ && _().CurrentPrice,
-                  ),
-                },
-                (0, _._)(_, "USD"),
-              ),
-            ),
-          ),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { cell: _, row: __webpack_require__ } = _,
-          _ = __webpack_require__.original.packageID,
-          _ = _.getValue(),
-          {
-            nPriceInCents: _,
-            nPublishedPriceInCents: _,
-            nProposedPriceInCents: _,
-            fnSetPrice: _,
-          } = (0, _._)(_, _),
-          [_, _, _] = (0, _._)(_, _),
-          _ = (0, _._)(_),
-          _ = _.useRef(void 0),
-          _ = _ + _,
-          { strClassName: _ } = _(_, _),
-          _ = "USD" == _,
-          _ = _ ?? _,
-          _ = _ != _;
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            onKeyDown: _._,
-            className: _,
-          },
-          _ &&
-            _.createElement(_, {
-              nPriceInCents: _,
-              nSavedPriceInCents: _,
-            }),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().PricePrefix,
-              },
-              _,
-            ),
-          _.createElement(
-            "div",
-            {
-              className: _().EditablePrice,
-            },
-            _.createElement(_._, {
-              value: _,
-              className: _().PriceInput,
-              onChange: (_) => {
-                const _ = _.target.value.replace(/[^0-9]/g, "");
-                let _ = Number(_ || 0);
-                if (Number.isNaN(_)) return;
-                _.bWholeUnitsOnly && (_ *= 100);
-                const _ = 2147483647;
-                _ > _ && (_ = _), _(_);
-              },
-              onFocus: (_) => {
-                _.target.select(),
-                  _._.ShowElement(
-                    _.current.ownerDocument,
-                    _.createElement(
-                      _._,
-                      {
-                        target: _.current,
-                        direction: "top",
-                        bEnablePointerEvents: !0,
-                        nBodyDistance: 0,
-                      },
-                      _.createElement(_, {
-                        key: _,
-                        packageID: _,
-                        strPriceKey: _,
-                      }),
-                    ),
-                    _,
-                  );
-              },
-              onBlur: () => {
-                window.setTimeout(
-                  () =>
-                    _.current && _._.HideElement(_.current.ownerDocument, _),
-                  500,
-                );
-              },
-            }),
-          ),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().PriceSuffix,
-              },
-              _,
-            ),
-          _ &&
-            _.createElement(_, {
-              packageID: _,
-            }),
-          _.createElement(_, {
-            packageID: _,
-            strPriceKey: _,
-          }),
-        );
-      }
-      function _(_) {
-        const { packageID: _, strPriceKey: __webpack_require__ } = _,
-          {
-            strPriceWarning: _,
-            bBadPrice: _,
-            bShowWarningIcon: _,
-          } = _(_, __webpack_require__);
-        return _
-          ? _.createElement(
-              _._,
-              {
-                className: _().PriceAlert,
-                strTooltipClassname: _().HoverToolTip,
-                toolTipContent: _,
-                direction: "top",
-              },
-              _.createElement(_.eTF, {
-                color: _ ? "rgb(194, 45, 0)" : "#e5af37",
-              }),
-            )
-          : null;
-      }
-      const _ = 2;
-      function _(_, _) {
-        const {
-            nPriceInCents: __webpack_require__,
-            nPublishedPriceInCents: _,
-            nProposedPriceInCents: _,
-            nMinPriceInCents: _,
-            nMaxPriceInCents: _,
-            nMaxDiscountPercentage: _,
-            nSuggestedPriceInCents: _,
-          } = (0, _._)(_, _),
-          _ = (0, _._)(_),
-          _ = "USD" == _,
-          _ = __webpack_require__ != (_ ?? _),
-          _ = __webpack_require__ < _,
-          _ = !!_ && __webpack_require__ > _,
-          _ = !!_ && __webpack_require__ > _ * _,
-          _ = !!_ && __webpack_require__ < _ / _,
-          _ = !!_ && __webpack_require__ < _ && !!_,
-          _ =
-            (_ && (0, _._)("#PricingDashboard_PriceIncreaseDisallowed")) ||
-            (_ &&
-              (0, _._)(
-                "#PricingDashboard_PriceTooLow",
-                (0, _._)(_, _).join(""),
-              )) ||
-            (_ &&
-              (0, _._)(
-                "#PricingDashboard_PriceMuchHigherThanGuidelines",
-                (0, _._)(_, _).join(""),
-              )) ||
-            (_ &&
-              (0, _._)(
-                "#PricingDashboard_PriceMuchLowerThanGuidelines",
-                (0, _._)(_, _).join(""),
-              )) ||
-            (_ &&
-              (0, _._)(
-                "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
-                _,
-              )),
-          _ = _ || _,
-          _ = _ || _,
-          _ = _ || _ || _,
-          _ = !(_ || !_ || (_ && _ == _)),
-          _ = 4 == _?.eState,
-          _ = (0, _._)(
-            _().PriceCell,
-            _ && _().USD,
-            _ && _().ChangedLocally,
-            _ && _().ProposedPrice,
-            _ && _().ApprovedCanPublish,
-            _ && _().WarningPrice,
-            _ && _().SevereWarningPrice,
-            _ && _().BadPrice,
-          );
-        return _.useMemo(
-          () => ({
-            strPriceWarning: _,
-            strClassName: _,
-            bBadPrice: _,
-            bShowSevereWarning: _,
-            bShowWarningIcon: _,
-          }),
-          [_, _, _, _, _],
-        );
-      }
-      function _(_) {
-        const { nPriceInCents: _, nSavedPriceInCents: __webpack_require__ } = _;
-        let _ = null,
-          _ = null,
-          _ = null,
-          _ = null;
-        if (__webpack_require__) {
-          const _ = Math.ceil(
-              (100 * (_ - __webpack_require__)) / __webpack_require__,
-            ),
-            _ = _ > __webpack_require__;
-          (_ = _
-            ? (0, _._)("#PricingDashboard_PriceIncreaseBy", _ + "%")
-            : (0, _._)("#PricingDashboard_PriceLowerBy", _ + "%")),
-            (_ = (0, _._)(_().PriceChange, _ && _().PriceIncrease)),
-            (_ = _.createElement(
-              "div",
-              {
-                className: _().PriceChangeArrow,
-              },
-              _.createElement(_.i3G, {
-                angle: _ ? 0 : 180,
-              }),
-            )),
-            (_ = _ + "%");
-        } else
-          (_ = (0, _._)("#PricingDashboard_PriceIsNew_Short")),
-            (_ = (0, _._)(_().NewPrice));
-        return _.createElement(
-          _._,
-          {
-            className: _,
-            strTooltipClassname: _().HoverToolTip,
-            toolTipContent: _,
-            direction: "top",
-          },
-          _,
-          _,
-        );
-      }
-      function _(_) {
-        return new Date(1e3 * _).toLocaleString(_._.GetPreferredLocales(), {
-          weekday: "long",
-          month: "long",
-          day: "numeric",
-          hour: "numeric",
-          minute: "2-digit",
-        });
-      }
-      function _(_) {
-        const { packageID: _, strPriceKey: __webpack_require__ } = _,
-          {
-            nPriceInCents: _,
-            nPublishedPriceInCents: _,
-            nProposedPriceInCents: _,
-            nSuggestedPriceInCents: _,
-            fnSetPrice: _,
-          } = (0, _._)(_, __webpack_require__),
-          { nPriceInCents: _ } = (0, _._)(_, "USD"),
-          _ = !(!_ || (_ && _ == _)),
-          _ = (0, _._)(_),
-          _ = _ && _(_.rtSubmitted),
-          _ = (0, _._)(_?.submitterID),
-          _ = _ ? _.m_strPlayerName : _?.submitterID;
-        return _.createElement(
-          "div",
-          {
-            className: _().PricePopout,
-          },
-          !!_ &&
-            _.createElement(
-              _._,
-              {
-                className: _().DetailRow,
-                direction: "left",
-                toolTipContent: (0, _._)(
-                  "#PricingDashboard_CurrentPriceOnStore_ttip",
-                ),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailLabel,
-                },
-                (0, _._)("#PricingDashboard_CurrentPriceOnStore"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailPrice,
-                },
-                (0, _._)(_, __webpack_require__).join(""),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: (0, _._)(_().DetailButton, _ == _ && _().Disabled),
-                  onClick: () => _(_),
-                  bDisabled: _ == _,
-                  toolTipContent: (0, _._)(
-                    "#PricingDashboard_UseThisOldPrice_ttip",
-                  ),
-                },
-                (0, _._)("#PricingDashboard_UseThisPrice_Button"),
-              ),
-            ),
-          _ &&
-            _.createElement(
-              _._,
-              {
-                className: _().DetailRow,
-                direction: "left",
-                toolTipContent: (0, _._)(
-                  "#PricingDashboard_ProposedPrice_ttip",
-                  _,
-                  _,
-                ),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailLabel,
-                },
-                (0, _._)("#PricingDashboard_ProposedPrice"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailPrice,
-                },
-                (0, _._)(_, __webpack_require__).join(""),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: (0, _._)(_().DetailButton, _ == _ && _().Disabled),
-                  onClick: () => _(_),
-                  bDisabled: _ == _,
-                  toolTipContent: (0, _._)(
-                    "#PricingDashboard_UseThisNewPrice_ttip",
-                  ),
-                },
-                (0, _._)("#PricingDashboard_UseThisPrice_Button"),
-              ),
-            ),
-          !!_ &&
-            _.createElement(
-              _._,
-              {
-                className: _().DetailRow,
-                direction: "left",
-                toolTipContent: (0, _._)(
-                  "#PricingDashboard_SuggestedPrice_ttip",
-                  (0, _._)(_, "USD").join(""),
-                ),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailLabel,
-                },
-                (0, _._)("#PricingDashboard_SuggestedPrice"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailPrice,
-                },
-                (0, _._)(_, __webpack_require__).join(""),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: (0, _._)(_().DetailButton, _ == _ && _().Disabled),
-                  onClick: () => _(_),
-                  bDisabled: _ == _,
-                  toolTipContent: (0, _._)(
-                    "#PricingDashboard_UseThisNewPrice_ttip",
-                  ),
-                },
-                (0, _._)("#PricingDashboard_UseThisPrice_Button"),
-              ),
-            ),
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -9696,6 +9133,7 @@
             ),
         });
       }
+      var _ = __webpack_require__("chunkid");
       function _() {
         const [_, _] = (0, _.useState)(() =>
           (function () {
@@ -9710,8 +9148,34 @@
         );
         return _;
       }
-      var _,
-        _ = __webpack_require__("chunkid"),
+      class _ {
+        m_mapPackageToPartners = new Map();
+        GetMap() {
+          return this.m_mapPackageToPartners;
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
+            _.s_Singleton
+          );
+        }
+        constructor() {}
+        Init() {
+          (0, _._)("package_to_paid_partners", "application_config").forEach(
+            (_) => {
+              this.m_mapPackageToPartners.has(_.packageid) ||
+                this.m_mapPackageToPartners.set(_.packageid, new Array()),
+                this.m_mapPackageToPartners.get(_.packageid).push(_.partnerid);
+            },
+          );
+        }
+      }
+      function _() {
+        const [_, _] = (0, _.useState)(() => _.Get().GetMap());
+        return _;
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9842,666 +9306,35 @@
       }
       (0, _._)([_._], _.prototype, "LoadMoreProposal", null),
         (0, _._)([_._], _.prototype, "RejectProposal", null),
-        (0, _._)([_._], _.prototype, "AcceptProposal", null),
-        (function (_) {
-          (_[(_.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
-            (_[(_.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
-            (_[(_.k_ECurrencyCodeGBP = 2)] = "k_ECurrencyCodeGBP"),
-            (_[(_.k_ECurrencyCodeEUR = 3)] = "k_ECurrencyCodeEUR"),
-            (_[(_.k_ECurrencyCodeCHF = 4)] = "k_ECurrencyCodeCHF"),
-            (_[(_.k_ECurrencyCodeRUB = 5)] = "k_ECurrencyCodeRUB"),
-            (_[(_.k_ECurrencyCodePLN = 6)] = "k_ECurrencyCodePLN"),
-            (_[(_.k_ECurrencyCodeBRL = 7)] = "k_ECurrencyCodeBRL"),
-            (_[(_.k_ECurrencyCodeJPY = 8)] = "k_ECurrencyCodeJPY"),
-            (_[(_.k_ECurrencyCodeNOK = 9)] = "k_ECurrencyCodeNOK"),
-            (_[(_.k_ECurrencyCodeIDR = 10)] = "k_ECurrencyCodeIDR"),
-            (_[(_.k_ECurrencyCodeMYR = 11)] = "k_ECurrencyCodeMYR"),
-            (_[(_.k_ECurrencyCodePHP = 12)] = "k_ECurrencyCodePHP"),
-            (_[(_.k_ECurrencyCodeSGD = 13)] = "k_ECurrencyCodeSGD"),
-            (_[(_.k_ECurrencyCodeTHB = 14)] = "k_ECurrencyCodeTHB"),
-            (_[(_.k_ECurrencyCodeVND = 15)] = "k_ECurrencyCodeVND"),
-            (_[(_.k_ECurrencyCodeKRW = 16)] = "k_ECurrencyCodeKRW"),
-            (_[(_.k_ECurrencyCodeTRY = 17)] = "k_ECurrencyCodeTRY"),
-            (_[(_.k_ECurrencyCodeUAH = 18)] = "k_ECurrencyCodeUAH"),
-            (_[(_.k_ECurrencyCodeMXN = 19)] = "k_ECurrencyCodeMXN"),
-            (_[(_.k_ECurrencyCodeCAD = 20)] = "k_ECurrencyCodeCAD"),
-            (_[(_.k_ECurrencyCodeAUD = 21)] = "k_ECurrencyCodeAUD"),
-            (_[(_.k_ECurrencyCodeNZD = 22)] = "k_ECurrencyCodeNZD"),
-            (_[(_.k_ECurrencyCodeCNY = 23)] = "k_ECurrencyCodeCNY"),
-            (_[(_.k_ECurrencyCodeINR = 24)] = "k_ECurrencyCodeINR"),
-            (_[(_.k_ECurrencyCodeCLP = 25)] = "k_ECurrencyCodeCLP"),
-            (_[(_.k_ECurrencyCodePEN = 26)] = "k_ECurrencyCodePEN"),
-            (_[(_.k_ECurrencyCodeCOP = 27)] = "k_ECurrencyCodeCOP"),
-            (_[(_.k_ECurrencyCodeZAR = 28)] = "k_ECurrencyCodeZAR"),
-            (_[(_.k_ECurrencyCodeHKD = 29)] = "k_ECurrencyCodeHKD"),
-            (_[(_.k_ECurrencyCodeTWD = 30)] = "k_ECurrencyCodeTWD"),
-            (_[(_.k_ECurrencyCodeSAR = 31)] = "k_ECurrencyCodeSAR"),
-            (_[(_.k_ECurrencyCodeAED = 32)] = "k_ECurrencyCodeAED"),
-            (_[(_.k_ECurrencyCodeSEK = 33)] = "k_ECurrencyCodeSEK"),
-            (_[(_.k_ECurrencyCodeARS = 34)] = "k_ECurrencyCodeARS"),
-            (_[(_.k_ECurrencyCodeILS = 35)] = "k_ECurrencyCodeILS"),
-            (_[(_.k_ECurrencyCodeBYN = 36)] = "k_ECurrencyCodeBYN"),
-            (_[(_.k_ECurrencyCodeKZT = 37)] = "k_ECurrencyCodeKZT"),
-            (_[(_.k_ECurrencyCodeKWD = 38)] = "k_ECurrencyCodeKWD"),
-            (_[(_.k_ECurrencyCodeQAR = 39)] = "k_ECurrencyCodeQAR"),
-            (_[(_.k_ECurrencyCodeCRC = 40)] = "k_ECurrencyCodeCRC"),
-            (_[(_.k_ECurrencyCodeUYU = 41)] = "k_ECurrencyCodeUYU"),
-            (_[(_.k_ECurrencyCodeBGN = 42)] = "k_ECurrencyCodeBGN"),
-            (_[(_.k_ECurrencyCodeHRK = 43)] = "k_ECurrencyCodeHRK"),
-            (_[(_.k_ECurrencyCodeCZK = 44)] = "k_ECurrencyCodeCZK"),
-            (_[(_.k_ECurrencyCodeDKK = 45)] = "k_ECurrencyCodeDKK"),
-            (_[(_.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
-            (_[(_.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
-            (_[(_.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
-        })(_ || (_ = {}));
-      const _ = [_.k_ECurrencyCodeTRY, _.k_ECurrencyCodeARS];
-      function _() {
-        return [
-          _.k_ECurrencyCodeUSD,
-          _.k_ECurrencyCodeGBP,
-          _.k_ECurrencyCodeEUR,
-          _.k_ECurrencyCodeCHF,
-          _.k_ECurrencyCodeRUB,
-          _.k_ECurrencyCodePLN,
-          _.k_ECurrencyCodeBRL,
-          _.k_ECurrencyCodeJPY,
-          _.k_ECurrencyCodeNOK,
-          _.k_ECurrencyCodeIDR,
-          _.k_ECurrencyCodeMYR,
-          _.k_ECurrencyCodePHP,
-          _.k_ECurrencyCodeSGD,
-          _.k_ECurrencyCodeTHB,
-          _.k_ECurrencyCodeVND,
-          _.k_ECurrencyCodeKRW,
-          _.k_ECurrencyCodeUAH,
-          _.k_ECurrencyCodeMXN,
-          _.k_ECurrencyCodeCAD,
-          _.k_ECurrencyCodeAUD,
-          _.k_ECurrencyCodeNZD,
-          _.k_ECurrencyCodeCNY,
-          _.k_ECurrencyCodeINR,
-          _.k_ECurrencyCodeCLP,
-          _.k_ECurrencyCodePEN,
-          _.k_ECurrencyCodeCOP,
-          _.k_ECurrencyCodeZAR,
-          _.k_ECurrencyCodeHKD,
-          _.k_ECurrencyCodeTWD,
-          _.k_ECurrencyCodeSAR,
-          _.k_ECurrencyCodeAED,
-          _.k_ECurrencyCodeILS,
-          _.k_ECurrencyCodeKZT,
-          _.k_ECurrencyCodeKWD,
-          _.k_ECurrencyCodeQAR,
-          _.k_ECurrencyCodeCRC,
-          _.k_ECurrencyCodeUYU,
-        ];
-      }
-      var _;
-      function _(_) {
-        switch (_) {
-          case _.k_ECurrencyCodeGBP:
-            return "GBP";
-          case _.k_ECurrencyCodeEUR:
-            return "EUR";
-          case _.k_ECurrencyCodeCHF:
-            return "CHF";
-          case _.k_ECurrencyCodeRUB:
-            return "RUB";
-          case _.k_ECurrencyCodePLN:
-            return "PLN";
-          case _.k_ECurrencyCodeBRL:
-            return "BRL";
-          case _.k_ECurrencyCodeJPY:
-            return "JPY";
-          case _.k_ECurrencyCodeNOK:
-            return "NOK";
-          case _.k_ECurrencyCodeIDR:
-            return "IDR";
-          case _.k_ECurrencyCodeMYR:
-            return "MYR";
-          case _.k_ECurrencyCodePHP:
-            return "PHP";
-          case _.k_ECurrencyCodeSGD:
-            return "SGD";
-          case _.k_ECurrencyCodeTHB:
-            return "THB";
-          case _.k_ECurrencyCodeVND:
-            return "VND";
-          case _.k_ECurrencyCodeKRW:
-            return "KRW";
-          case _.k_ECurrencyCodeTRY:
-            return "TRY";
-          case _.k_ECurrencyCodeUAH:
-            return "UAH";
-          case _.k_ECurrencyCodeMXN:
-            return "MXN";
-          case _.k_ECurrencyCodeCAD:
-            return "CAD";
-          case _.k_ECurrencyCodeAUD:
-            return "AUD";
-          case _.k_ECurrencyCodeNZD:
-            return "NZD";
-          case _.k_ECurrencyCodeCNY:
-            return "CNY";
-          case _.k_ECurrencyCodeINR:
-            return "INR";
-          case _.k_ECurrencyCodeCLP:
-            return "CLP";
-          case _.k_ECurrencyCodePEN:
-            return "PEN";
-          case _.k_ECurrencyCodeCOP:
-            return "COP";
-          case _.k_ECurrencyCodeZAR:
-            return "ZAR";
-          case _.k_ECurrencyCodeHKD:
-            return "HKD";
-          case _.k_ECurrencyCodeTWD:
-            return "TWD";
-          case _.k_ECurrencyCodeSAR:
-            return "SAR";
-          case _.k_ECurrencyCodeAED:
-            return "AED";
-          case _.k_ECurrencyCodeSEK:
-            return "SEK";
-          case _.k_ECurrencyCodeARS:
-            return "ARS";
-          case _.k_ECurrencyCodeILS:
-            return "ILS";
-          case _.k_ECurrencyCodeBYN:
-            return "BYN";
-          case _.k_ECurrencyCodeKZT:
-            return "KZT";
-          case _.k_ECurrencyCodeKWD:
-            return "KWD";
-          case _.k_ECurrencyCodeQAR:
-            return "QAR";
-          case _.k_ECurrencyCodeCRC:
-            return "CRC";
-          case _.k_ECurrencyCodeUYU:
-            return "UYU";
-          case _.k_ECurrencyCodeBGN:
-            return "BGN";
-          case _.k_ECurrencyCodeHRK:
-            return "HRK";
-          case _.k_ECurrencyCodeCZK:
-            return "CZK";
-          case _.k_ECurrencyCodeDKK:
-            return "DKK";
-          case _.k_ECurrencyCodeHUF:
-            return "HUF";
-          case _.k_ECurrencyCodeRON:
-            return "RON";
-          default:
-            return "USD";
-        }
-      }
-      function _(_) {
-        switch (_) {
-          case _.k_ECurrencyCodeUSD:
-            return "US Dollar";
-          case _.k_ECurrencyCodeGBP:
-            return "GB Pounds";
-          case _.k_ECurrencyCodeEUR:
-            return "Euros";
-          case _.k_ECurrencyCodeCHF:
-            return "Swiss Francs";
-          case _.k_ECurrencyCodeRUB:
-            return "Russian Rubles";
-          case _.k_ECurrencyCodePLN:
-            return "Polish zloty";
-          case _.k_ECurrencyCodeBRL:
-            return "Brazilian Reals";
-          case _.k_ECurrencyCodeJPY:
-            return "Japanese Yen";
-          case _.k_ECurrencyCodeNOK:
-            return "Norwegian Krone";
-          case _.k_ECurrencyCodeIDR:
-            return "Indonesian Rupiah";
-          case _.k_ECurrencyCodeMYR:
-            return "Malaysian Ringgit";
-          case _.k_ECurrencyCodePHP:
-            return "Philippine Peso";
-          case _.k_ECurrencyCodeSGD:
-            return "Singapore Dollar";
-          case _.k_ECurrencyCodeTHB:
-            return "Thai Baht";
-          case _.k_ECurrencyCodeVND:
-            return "Vietnamese Dong";
-          case _.k_ECurrencyCodeKRW:
-            return "Korean Won";
-          case _.k_ECurrencyCodeTRY:
-            return "Turkish Lira";
-          case _.k_ECurrencyCodeUAH:
-            return "Ukrainian Hryvnia";
-          case _.k_ECurrencyCodeMXN:
-            return "Mexican Peso";
-          case _.k_ECurrencyCodeCAD:
-            return "Canadian Dollar";
-          case _.k_ECurrencyCodeAUD:
-            return "Australian Dollar";
-          case _.k_ECurrencyCodeNZD:
-            return "New Zealand Dollar";
-          case _.k_ECurrencyCodeCNY:
-            return "Chinese Yuan";
-          case _.k_ECurrencyCodeINR:
-            return "Indian Rupee";
-          case _.k_ECurrencyCodeCLP:
-            return "Chilean Peso";
-          case _.k_ECurrencyCodePEN:
-            return "Peruvian Sol";
-          case _.k_ECurrencyCodeCOP:
-            return "Colombian Peso";
-          case _.k_ECurrencyCodeZAR:
-            return "South African Rand";
-          case _.k_ECurrencyCodeHKD:
-            return "Hong Kong Dollar";
-          case _.k_ECurrencyCodeTWD:
-            return "Taiwanese Dollar";
-          case _.k_ECurrencyCodeSAR:
-            return "Saudi Arabian Riyal";
-          case _.k_ECurrencyCodeAED:
-            return "Emirati Dirham";
-          case _.k_ECurrencyCodeSEK:
-            return "Swedish Krona";
-          case _.k_ECurrencyCodeARS:
-            return "Argentine Peso";
-          case _.k_ECurrencyCodeILS:
-            return "Israeli New Shequel";
-          case _.k_ECurrencyCodeBYN:
-            return "Belarusian Ruble";
-          case _.k_ECurrencyCodeKZT:
-            return "Kazakhstani Tenge";
-          case _.k_ECurrencyCodeKWD:
-            return "Kuwaiti Dinar";
-          case _.k_ECurrencyCodeQAR:
-            return "Qatari Rial";
-          case _.k_ECurrencyCodeCRC:
-            return "Costa Rican Colon";
-          case _.k_ECurrencyCodeUYU:
-            return "Uruguayan Peso";
-          case _.k_ECurrencyCodeBGN:
-            return "Bulgarian lev";
-          case _.k_ECurrencyCodeHRK:
-            return "Croatian kuna";
-          case _.k_ECurrencyCodeCZK:
-            return "Czech koruna";
-          case _.k_ECurrencyCodeDKK:
-            return "Danish krone";
-          case _.k_ECurrencyCodeHUF:
-            return "Hungarian forint";
-          case _.k_ECurrencyCodeRON:
-            return "Romanian leu";
-          default:
-            return "";
-        }
-      }
-      function _(_, _ = _.k_ERegionCodeInvalid) {
-        switch (_) {
-          case _.k_ECurrencyCodeGBP:
-            return "gbp";
-          case _.k_ECurrencyCodeEUR:
-            return "eur";
-          case _.k_ECurrencyCodeCHF:
-            return "chf";
-          case _.k_ECurrencyCodeRUB:
-            return "rub";
-          case _.k_ECurrencyCodePLN:
-            return "pln";
-          case _.k_ECurrencyCodeBRL:
-            return "brl";
-          case _.k_ECurrencyCodeJPY:
-            return "jpy";
-          case _.k_ECurrencyCodeNOK:
-            return "nok";
-          case _.k_ECurrencyCodeIDR:
-            return "idr";
-          case _.k_ECurrencyCodeMYR:
-            return "myr";
-          case _.k_ECurrencyCodePHP:
-            return "php";
-          case _.k_ECurrencyCodeSGD:
-            return "sgd";
-          case _.k_ECurrencyCodeTHB:
-            return "thb";
-          case _.k_ECurrencyCodeVND:
-            return "vnd";
-          case _.k_ECurrencyCodeKRW:
-            return "krw";
-          case _.k_ECurrencyCodeTRY:
-            return "try";
-          case _.k_ECurrencyCodeUAH:
-            return "uah";
-          case _.k_ECurrencyCodeMXN:
-            return "mxn";
-          case _.k_ECurrencyCodeCAD:
-            return "cad";
-          case _.k_ECurrencyCodeAUD:
-            return "aud";
-          case _.k_ECurrencyCodeNZD:
-            return "nzd";
-          case _.k_ECurrencyCodeCNY:
-            return "cny";
-          case _.k_ECurrencyCodeINR:
-            return "inr";
-          case _.k_ECurrencyCodeCLP:
-            return "clp";
-          case _.k_ECurrencyCodePEN:
-            return "pen";
-          case _.k_ECurrencyCodeCOP:
-            return "cop";
-          case _.k_ECurrencyCodeZAR:
-            return "zar";
-          case _.k_ECurrencyCodeHKD:
-            return "hkd";
-          case _.k_ECurrencyCodeTWD:
-            return "twd";
-          case _.k_ECurrencyCodeSAR:
-            return "sar";
-          case _.k_ECurrencyCodeAED:
-            return "aed";
-          case _.k_ECurrencyCodeSEK:
-            return "sek";
-          case _.k_ECurrencyCodeARS:
-            return "ars";
-          case _.k_ECurrencyCodeILS:
-            return "ils";
-          case _.k_ECurrencyCodeBYN:
-            return "byn";
-          case _.k_ECurrencyCodeKZT:
-            return "kzt";
-          case _.k_ECurrencyCodeKWD:
-            return "kwd";
-          case _.k_ECurrencyCodeQAR:
-            return "qar";
-          case _.k_ECurrencyCodeCRC:
-            return "crc";
-          case _.k_ECurrencyCodeUYU:
-            return "uyu";
-          case _.k_ECurrencyCodeBGN:
-            return "bgn";
-          case _.k_ECurrencyCodeHRK:
-            return "hrk";
-          case _.k_ECurrencyCodeCZK:
-            return "czk";
-          case _.k_ECurrencyCodeDKK:
-            return "dkk";
-          case _.k_ECurrencyCodeHUF:
-            return "huf";
-          case _.k_ECurrencyCodeRON:
-            return "ron";
-          default:
-            return _ == _.k_ERegionCodeCIS
-              ? "usd_cis"
-              : _ == _.k_ERegionCodeSAsia
-                ? "usd_sasia"
-                : _ == _.k_ERegionCodeLATAM
-                  ? "usd_latam"
-                  : _ == _.k_ERegionCodeMENA
-                    ? "usd_mena"
-                    : "usd";
-        }
-      }
-      function _(_) {
-        return `${_(
-          (function (_) {
-            switch (_) {
-              case "USD":
-                return _.k_ECurrencyCodeUSD;
-              case "GBP":
-                return _.k_ECurrencyCodeGBP;
-              case "EUR":
-                return _.k_ECurrencyCodeEUR;
-              case "CHF":
-                return _.k_ECurrencyCodeCHF;
-              case "RUB":
-                return _.k_ECurrencyCodeRUB;
-              case "PLN":
-                return _.k_ECurrencyCodePLN;
-              case "BRL":
-                return _.k_ECurrencyCodeBRL;
-              case "JPY":
-                return _.k_ECurrencyCodeJPY;
-              case "NOK":
-                return _.k_ECurrencyCodeNOK;
-              case "IDR":
-                return _.k_ECurrencyCodeIDR;
-              case "MYR":
-                return _.k_ECurrencyCodeMYR;
-              case "PHP":
-                return _.k_ECurrencyCodePHP;
-              case "SGD":
-                return _.k_ECurrencyCodeSGD;
-              case "THB":
-                return _.k_ECurrencyCodeTHB;
-              case "VND":
-                return _.k_ECurrencyCodeVND;
-              case "KRW":
-                return _.k_ECurrencyCodeKRW;
-              case "TRY":
-                return _.k_ECurrencyCodeTRY;
-              case "UAH":
-                return _.k_ECurrencyCodeUAH;
-              case "MXN":
-                return _.k_ECurrencyCodeMXN;
-              case "CAD":
-                return _.k_ECurrencyCodeCAD;
-              case "AUD":
-                return _.k_ECurrencyCodeAUD;
-              case "NZD":
-                return _.k_ECurrencyCodeNZD;
-              case "CNY":
-                return _.k_ECurrencyCodeCNY;
-              case "INR":
-                return _.k_ECurrencyCodeINR;
-              case "CLP":
-                return _.k_ECurrencyCodeCLP;
-              case "PEN":
-                return _.k_ECurrencyCodePEN;
-              case "COP":
-                return _.k_ECurrencyCodeCOP;
-              case "ZAR":
-                return _.k_ECurrencyCodeZAR;
-              case "HKD":
-                return _.k_ECurrencyCodeHKD;
-              case "TWD":
-                return _.k_ECurrencyCodeTWD;
-              case "SAR":
-                return _.k_ECurrencyCodeSAR;
-              case "AED":
-                return _.k_ECurrencyCodeAED;
-              case "SEK":
-                return _.k_ECurrencyCodeSEK;
-              case "ARS":
-                return _.k_ECurrencyCodeARS;
-              case "ILS":
-                return _.k_ECurrencyCodeILS;
-              case "BYN":
-                return _.k_ECurrencyCodeBYN;
-              case "KZT":
-                return _.k_ECurrencyCodeKZT;
-              case "KWD":
-                return _.k_ECurrencyCodeKWD;
-              case "QAR":
-                return _.k_ECurrencyCodeQAR;
-              case "CRC":
-                return _.k_ECurrencyCodeCRC;
-              case "UYU":
-                return _.k_ECurrencyCodeUYU;
-              case "BGN":
-                return _.k_ECurrencyCodeBGN;
-              case "HRK":
-                return _.k_ECurrencyCodeHRK;
-              case "CZK":
-                return _.k_ECurrencyCodeCZK;
-              case "DKK":
-                return _.k_ECurrencyCodeDKK;
-              case "HUF":
-                return _.k_ECurrencyCodeHUF;
-              case "RON":
-                return _.k_ECurrencyCodeRON;
-              default:
-                return _.k_ECurrencyCodeInvalid;
-            }
-          })(_.toUpperCase()),
-        )} (${_})`;
-      }
-      function _(_) {
-        switch (_) {
-          case _.k_ERegionCodeCIS:
-            return "usd_cis";
-          case _.k_ERegionCodeSAsia:
-            return "usd_sasia";
-          case _.k_ERegionCodeLATAM:
-            return "usd_latam";
-          case _.k_ERegionCodeMENA:
-            return "usd_mena";
-          default:
-            return "usd_invalid";
-        }
-      }
-      function _(_) {
-        switch (_) {
-          case _.k_ERegionCodeCIS:
-            return "CIS";
-          case _.k_ERegionCodeSAsia:
-            return "SASIA";
-          case _.k_ERegionCodeLATAM:
-            return "LATAM";
-          case _.k_ERegionCodeMENA:
-            return "MENA";
-          default:
-            return "Invalid Region";
-        }
-      }
-      function _(_) {
-        switch (_) {
-          case "CIS":
-            return _.k_ERegionCodeCIS;
-          case "SASIA":
-            return _.k_ERegionCodeSAsia;
-          case "LATAM":
-            return _.k_ERegionCodeLATAM;
-          case "MENA":
-            return _.k_ERegionCodeMENA;
-          default:
-            return _.k_ERegionCodeInvalid;
-        }
-      }
-      function _(_) {
-        switch (_) {
-          case _.k_ERegionCodeCIS:
-            return "The Commonwealth of Independent Stats";
-          case _.k_ERegionCodeSAsia:
-            return "South Asia";
-          case _.k_ERegionCodeLATAM:
-            return "Latin America";
-          case _.k_ERegionCodeMENA:
-            return "Middle East and North Africa";
-          default:
-            return "Invalid Region";
-        }
-      }
-      !(function (_) {
-        (_[(_.k_ERegionCodeInvalid = 0)] = "k_ERegionCodeInvalid"),
-          (_[(_.k_ERegionCodeCIS = 1)] = "k_ERegionCodeCIS"),
-          (_[(_.k_ERegionCodeSAsia = 2)] = "k_ERegionCodeSAsia"),
-          (_[(_.k_ERegionCodeLATAM = 3)] = "k_ERegionCodeLATAM"),
-          (_[(_.k_ERegionCodeMENA = 4)] = "k_ERegionCodeMENA"),
-          (_[(_.k_ERegionCodeMax = 5)] = "k_ERegionCodeMax");
-      })(_ || (_ = {}));
-      const _ = _(),
-        _ =
-          (_(),
-          _.k_ECurrencyCodeSEK,
-          _.k_ECurrencyCodeBGN,
-          _.k_ECurrencyCodeHRK,
-          _.k_ECurrencyCodeCZK,
-          _.k_ECurrencyCodeDKK,
-          _.k_ECurrencyCodeHUF,
-          _.k_ECurrencyCodeRON,
-          [
-            _.k_ERegionCodeCIS,
-            _.k_ERegionCodeSAsia,
-            _.k_ERegionCodeLATAM,
-            _.k_ERegionCodeMENA,
-          ]);
-      class _ {
-        m_mapUSDPrice = new Map();
-        m_mapKeyToGuidePrice = new Map();
-        GetKey(_, _, _) {
-          return `${_}_${_}_${_ || _.k_ERegionCodeInvalid}`;
-        }
-        GetAnyPricePoint() {
-          return Array.from(this.m_mapUSDPrice.values())[0];
-        }
-        GetRecommendPrice(_, _, _) {
-          const _ = this.GetKey(_, _, _);
-          return this.m_mapKeyToGuidePrice.get(_);
-        }
-        GetScaledRecommendedPrice(_, _, _) {
-          let _ = -1,
-            _ = -1;
-          for (const _ of this.m_mapUSDPrice.keys()) {
-            const _ = Math.abs(_ - _);
-            (-1 == _ || _ < _) && ((_ = _), (_ = _));
-          }
-          const _ = this.m_mapUSDPrice.get(_),
-            _ = _
-              ? _.region_prices.find((_) => _.region_code == _)
-              : _.currency_prices.find((_) => _.currency_code == _),
-            _ = _ / _;
-          return {
-            currency_code: _?.currency_code,
-            region_code: _?.region_code,
-            price: Math.ceil(_?.price * _),
-          };
-        }
-        constructor(_) {
-          _.forEach((_) => {
-            this.m_mapUSDPrice.set(_.usd_price, _),
-              _.currency_prices.forEach((_) => {
-                const _ = this.GetKey(_.usd_price, _.currency_code);
-                this.m_mapKeyToGuidePrice.set(_, _);
-              }),
-              _.region_prices.forEach((_) => {
-                const _ = this.GetKey(
-                  _.usd_price,
-                  _.currency_code,
-                  _.region_code,
-                );
-                this.m_mapKeyToGuidePrice.set(_, _);
-              });
-          });
-        }
-      }
+        (0, _._)([_._], _.prototype, "AcceptProposal", null);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         include_release: !0,
       };
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = new Array();
         return (
-          _.forEach((_) => {
+          _._.forEach((_) => {
             _.proposed_prices.base_amounts.some(
               (_) => _.amount.currency_code == _,
-            ) || _.push(_(_));
+            ) || _.push((0, _._)(_));
           }),
-          _.forEach((_) => {
-            const _ = _(_);
+          _._.forEach((_) => {
+            const _ = (0, _._)(_);
             _.proposed_prices.region_amounts.some((_) => _.name == _) ||
-              _.push(_(_));
+              _.push((0, _._)(_));
           }),
           _
         );
       }
       function _(_, _, _) {
         if (_) {
-          const _ = _(_);
+          const _ = (0, _._)(_);
           return _?.current_costs?.region_amounts?.find((_) => _.region == _)
             ?.amount.amount;
         }
@@ -10511,7 +9344,7 @@
       function _(_, _, _, _, _, _) {
         _.price * _._ < _.amount.amount
           ? _.push({
-              strCurrency: _ ? _(_) : _(_.amount.currency_code),
+              strCurrency: _ ? (0, _._)(_) : (0, _._)(_.amount.currency_code),
               nAmountCents: _.amount.amount,
               nPercent: Math.floor((_.amount.amount / _.price) * 100) - 100,
               nProposedPrice: _.amount.amount,
@@ -10520,7 +9353,7 @@
             })
           : _.price / _._ > _.amount.amount &&
             _.push({
-              strCurrency: _ ? _(_) : _(_.amount.currency_code),
+              strCurrency: _ ? (0, _._)(_) : (0, _._)(_.amount.currency_code),
               nAmountCents: _.amount.amount,
               nPercent: 100 - Math.floor((_.amount.amount / _.price) * 100),
               nProposedPrice: _.amount.amount,
@@ -10546,16 +9379,16 @@
             _(_, _, null, _, _, _);
           }),
           _.proposed_prices.region_amounts.map((_) => {
-            const _ = _(_.name),
+            const _ = (0, _._)(_.name),
               _ =
                 __webpack_require__.GetRecommendPrice(
                   _,
-                  _.k_ECurrencyCodeUSD,
+                  _._.k_ECurrencyCodeUSD,
                   _,
                 ) ||
                 __webpack_require__.GetScaledRecommendedPrice(
                   _,
-                  _.k_ECurrencyCodeUSD,
+                  _._.k_ECurrencyCodeUSD,
                   _,
                 );
             _(_, _, _, _, _, _);
@@ -10570,7 +9403,11 @@
         const _ = Math.floor(Date.now() / 1e3);
         return _.BIsReleased() && _.GetReleaseDateRTime() + 2592e3 > _;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             proposal: _,
@@ -10624,7 +9461,7 @@
                     const _ = new Array();
                     _(_).length > 0 && _.push("currency_missing");
                     const _ = _.proposed_prices.base_amounts.find(
-                        (_) => _.amount.currency_code == _.k_ECurrencyCodeUSD,
+                        (_) => _.amount.currency_code == _._.k_ECurrencyCodeUSD,
                       )?.amount.amount,
                       _ = _(_, __webpack_require__, _, _);
                     (_.rgAboveThreshold.length > 0 ||
@@ -11130,7 +9967,7 @@
           _.createElement(
             "tr",
             null,
-            _.map((_) =>
+            _._.map((_) =>
               _.createElement(
                 "td",
                 {
@@ -11139,13 +9976,13 @@
                 _.createElement(
                   _._,
                   {
-                    toolTipContent: _(_),
+                    toolTipContent: (0, _._)(_),
                   },
-                  _(_),
+                  (0, _._)(_),
                 ),
               ),
             ),
-            _.map((_) =>
+            _._.map((_) =>
               _.createElement(
                 "td",
                 {
@@ -11154,9 +9991,9 @@
                 _.createElement(
                   _._,
                   {
-                    toolTipContent: _(_),
+                    toolTipContent: (0, _._)(_),
                   },
-                  _(_),
+                  (0, _._)(_),
                 ),
               ),
             ),
@@ -11171,12 +10008,12 @@
           } = _,
           _ = _.get(_.packageid),
           _ = _.proposed_prices.base_amounts.find(
-            (_) => _.amount.currency_code == _.k_ECurrencyCodeUSD,
+            (_) => _.amount.currency_code == _._.k_ECurrencyCodeUSD,
           )?.amount.amount;
         return _.createElement(
           "tr",
           null,
-          _.map((_) => {
+          _._.map((_) => {
             const _ =
               __webpack_require__.GetRecommendPrice(_, _) ||
               __webpack_require__.GetScaledRecommendedPrice(_, _);
@@ -11188,8 +10025,8 @@
               guidePrice: _,
             });
           }),
-          _.map((_) => {
-            const _ = _.k_ECurrencyCodeUSD,
+          _._.map((_) => {
+            const _ = (0, _._)(_),
               _ =
                 __webpack_require__.GetRecommendPrice(_, _, _) ||
                 __webpack_require__.GetScaledRecommendedPrice(_, _, _);
@@ -11230,7 +10067,7 @@
             proposal: _,
             guidePrice: _,
           } = _,
-          _ = _(_),
+          _ = (0, _._)(_),
           _ = _.proposed_prices.region_amounts.find((_) => _.name == _),
           _ = __webpack_require__?.current_costs?.region_amounts.find(
             (_) => _.region == _,
@@ -11284,154 +10121,6 @@
           Boolean(!__webpack_require__) && _.createElement("div", null, "--"),
         );
       }
-      function _(_) {
-        const {
-          rgProposals: _,
-          oGuideline: __webpack_require__,
-          mapCurrentPrices: _,
-          mapPartnerPaidByPackage: _,
-        } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_, null),
-          _.createElement(_, {
-            oGuideline: __webpack_require__,
-          }),
-          _.createElement("hr", null),
-          _.createElement("hr", null),
-          _.map((_) =>
-            _.createElement(
-              "div",
-              {
-                key: _.packageid,
-              },
-              _.createElement("hr", null),
-              _.createElement(_, {
-                oGuideline: __webpack_require__,
-                proposal: _,
-                mapCurrentPrices: _,
-                mapPartnerPaidByPackage: _,
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.RowCtn, _.CurrencyHeaderRow),
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.PackageInfoColumn,
-            },
-            "Package Info",
-          ),
-          _.createElement(_, null),
-        );
-      }
-      function _(_) {
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _.RowCtn,
-            },
-            _.createElement(_, {
-              ..._,
-            }),
-            _.createElement(_, {
-              ..._,
-            }),
-          ),
-          _.createElement(_, {
-            ..._,
-          }),
-        );
-      }
-      function _(_) {
-        const { proposal: _ } = _,
-          _ = _.proposed_prices.country_amounts;
-        return _?.length > 0
-          ? _.createElement(
-              "div",
-              {
-                className: _.RowCtn,
-              },
-              _.createElement("div", null, "^^^^"),
-              __webpack_require__.map((_) =>
-                _.createElement(
-                  "div",
-                  {
-                    key: `country_${_.packageid}_${_.amount.currency_code}`,
-                  },
-                  _.name,
-                  "/",
-                  _(_.amount.currency_code),
-                  " @ ",
-                  _(_.account),
-                ),
-              ),
-            )
-          : null;
-      }
-      function _(_) {
-        return _.createElement(
-          _._,
-          {
-            title: "Legend",
-            tooltip: "Explains the color scheme per proposed pricing color",
-            bStartMinimized: !0,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.pricingLegend,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.priceChangedLower,
-              },
-              "Price Decreases",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.priceChangedHigher,
-              },
-              "Price Increases",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.priceChangedNew,
-              },
-              "Price is New",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.outofmatrix,
-              },
-              "Price is higher than guideline. Mouseover to see suggested price.",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.outofmatrixlower,
-              },
-              "Price is lower than guideline. Mouseover to see suggested price.",
-            ),
-          ),
-        );
-      }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             rgProposals: _,
@@ -11633,12 +10322,12 @@
       function _(_) {
         const { proposal: _, mapCurrentPrices: __webpack_require__ } = _,
           _ = _.proposed_prices.base_amounts.find(
-            (_) => _.amount.currency_code == _.k_ECurrencyCodeUSD,
+            (_) => _.amount.currency_code == _._.k_ECurrencyCodeUSD,
           )?.amount.amount,
           _ = __webpack_require__
             .get(_.packageid)
             ?.current_costs.base_amounts.find(
-              (_) => _.currency_code == _.k_ECurrencyCodeUSD,
+              (_) => _.currency_code == _._.k_ECurrencyCodeUSD,
             )?.amount;
         return _.createElement(
           _.Fragment,
@@ -11684,7 +10373,7 @@
                 _.length,
                 " currencies: ",
               ),
-              __webpack_require__.map(_).join(", "),
+              __webpack_require__.map(_._).join(", "),
             )
           : null;
       }
@@ -11696,7 +10385,7 @@
                 const _ = new Array();
                 return (
                   _.proposed_prices.base_amounts.forEach((_) => {
-                    _.includes(_.amount.currency_code) ||
+                    _._.includes(_.amount.currency_code) ||
                       (console.log(
                         "Unexpected currency code: " + _.amount.currency_code,
                         _,
@@ -11706,7 +10395,7 @@
                       ));
                   }),
                   _.proposed_prices.region_amounts.forEach((_) => {
-                    _.includes(_(_.name.toUpperCase())) ||
+                    _._.includes((0, _._)(_.name.toUpperCase())) ||
                       (console.log(
                         `Unexpected region code: ${_.name} and currency code ${_.amount.currency_code} with price in cents ${_.amount.amount}`,
                       ),
@@ -11732,16 +10421,16 @@
                 _.length,
                 " currencies: ",
               ),
-              __webpack_require__.map(_).join(", "),
+              __webpack_require__.map(_._).join(", "),
             )
           : null;
       }
       function _(_) {
         const { proposal: _, oGuideline: __webpack_require__ } = _,
           _ = _.proposed_prices.base_amounts.find(
-            (_) => _.amount.currency_code == _.k_ECurrencyCodeUSD,
+            (_) => _.amount.currency_code == _._.k_ECurrencyCodeUSD,
           )?.amount.amount,
-          _ = __webpack_require__.GetRecommendPrice(_, _.k_ECurrencyCodeUSD);
+          _ = __webpack_require__.GetRecommendPrice(_, _._.k_ECurrencyCodeUSD);
         return _.createElement(
           _.Fragment,
           null,
@@ -11967,7 +10656,9 @@
               "div",
               null,
               "Package has Country price overrides for Countries:",
-              _.proposed_prices.country_amounts.map((_) => _(_.name)).join(","),
+              _.proposed_prices.country_amounts
+                .map((_) => (0, _._)(_.name))
+                .join(","),
             )
           : null;
       }
@@ -12004,34 +10695,152 @@
               onChange: () => _(!0),
             });
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      class _ {
-        m_mapPackageToPartners = new Map();
-        GetMap() {
-          return this.m_mapPackageToPartners;
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
-            _.s_Singleton
-          );
-        }
-        constructor() {}
-        Init() {
-          (0, _._)("package_to_paid_partners", "application_config").forEach(
-            (_) => {
-              this.m_mapPackageToPartners.has(_.packageid) ||
-                this.m_mapPackageToPartners.set(_.packageid, new Array()),
-                this.m_mapPackageToPartners.get(_.packageid).push(_.partnerid);
-            },
-          );
-        }
+      function _(_) {
+        const {
+          rgProposals: _,
+          oGuideline: __webpack_require__,
+          mapCurrentPrices: _,
+          mapPartnerPaidByPackage: _,
+        } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_, null),
+          _.createElement(_, {
+            oGuideline: __webpack_require__,
+          }),
+          _.createElement("hr", null),
+          _.createElement("hr", null),
+          _.map((_) =>
+            _.createElement(
+              "div",
+              {
+                key: _.packageid,
+              },
+              _.createElement("hr", null),
+              _.createElement(_, {
+                oGuideline: __webpack_require__,
+                proposal: _,
+                mapCurrentPrices: _,
+                mapPartnerPaidByPackage: _,
+              }),
+            ),
+          ),
+        );
       }
-      function _() {
-        const [_, _] = (0, _.useState)(() => _.Get().GetMap());
-        return _;
+      function _(_) {
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_.RowCtn, _.CurrencyHeaderRow),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.PackageInfoColumn,
+            },
+            "Package Info",
+          ),
+          _.createElement(_, null),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _.RowCtn,
+            },
+            _.createElement(_, {
+              ..._,
+            }),
+            _.createElement(_, {
+              ..._,
+            }),
+          ),
+          _.createElement(_, {
+            ..._,
+          }),
+        );
+      }
+      function _(_) {
+        const { proposal: _ } = _,
+          _ = _.proposed_prices.country_amounts;
+        return _?.length > 0
+          ? _.createElement(
+              "div",
+              {
+                className: _.RowCtn,
+              },
+              _.createElement("div", null, "^^^^"),
+              __webpack_require__.map((_) =>
+                _.createElement(
+                  "div",
+                  {
+                    key: `country_${_.packageid}_${_.amount.currency_code}`,
+                  },
+                  _.name,
+                  "/",
+                  (0, _._)(_.amount.currency_code),
+                  " @ ",
+                  _(_.account),
+                ),
+              ),
+            )
+          : null;
+      }
+      function _(_) {
+        return _.createElement(
+          _._,
+          {
+            title: "Legend",
+            tooltip: "Explains the color scheme per proposed pricing color",
+            bStartMinimized: !0,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.pricingLegend,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.priceChangedLower,
+              },
+              "Price Decreases",
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.priceChangedHigher,
+              },
+              "Price Increases",
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.priceChangedNew,
+              },
+              "Price is New",
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.outofmatrix,
+              },
+              "Price is higher than guideline. Mouseover to see suggested price.",
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.outofmatrixlower,
+              },
+              "Price is lower than guideline. Mouseover to see suggested price.",
+            ),
+          ),
+        );
       }
       function _(_) {
         const [_] = (0, _.useState)(
@@ -12041,16 +10850,15 @@
             const [_, _] = (0, _.useState)(() => _.Get().GetProposals());
             return (0, _._)(_.Get().GetProposalListChange(), _), _;
           })(),
-          _ = (function () {
-            const [_, _] = (0, _.useState)(
-              () => new _((0, _._)("pricing_guideline", "application_config")),
-            );
-            return _;
-          })(),
+          _ = (0, _._)(),
           _ = _(),
           _ = _(),
-          [_, _] = (0, _._)("tab", "delta"),
-          _ = (_) => _(_.key),
+          [_, _] = (0, _._)("tab", "delta");
+        if (!_)
+          return _.createElement(_._, {
+            string: "Loading Pricing Guidelines",
+          });
+        const _ = (_) => _(_.key),
           _ = [
             {
               name: "Price Delta",

@@ -5,42 +5,38 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [4226],
   {
-    34044: (r, e, s) => {
-      s.r(e), s.d(e, { default: () => a });
-      var o = s(90626),
-        t = s(23539);
-      function a(r) {
-        const { dataprops: e, results: s } = r;
-        let a = null;
-        if (s && s.length > 0) {
-          const r = e.appid ?? null;
+    34044: (r, s, e) => {
+      e.r(s), e.d(s, { default: () => n });
+      var o = e(90626),
+        t = e(35067);
+      function n(r) {
+        const { dataprops: s, results: e } = r;
+        let n = null;
+        if (e && e.length > 0) {
+          const r = s.appid ?? null;
           if (r) {
-            let e = s.findIndex((e) => e.appid == r);
-            a = -1 != e ? s[e] : null;
+            let s = e.findIndex((s) => s.appid == r);
+            n = -1 != s ? e[s] : null;
           }
-          const o = e.search_id ?? null;
-          if (!a && o) {
-            let r = s.findIndex((r) => r.search_id == o);
-            a = -1 != r ? s[r] : null;
+          const o = s.search_id ?? null;
+          if (!n && o) {
+            let r = e.findIndex((r) => r.search_id == o);
+            n = -1 != r ? e[r] : null;
           }
         }
-        return a
-          ? o.createElement(t.default, { results: a, bIncludeSteamOS: !0 })
+        return n
+          ? o.createElement(t.default, { results: n, bIncludeSteamOS: !0 })
           : null;
       }
     },
-    68797: (r, e, s) => {
-      s.d(e, { H: () => d });
-      var o = s(37085),
-        t = s(41735),
-        a = s.n(t),
-        n = s(56545);
-      function d(r) {
-        if (a().isCancel(r))
-          return {
-            strErrorMsg: "Action Cancelled:" + r,
-            errorCode: o.d.k_EResultCancelled,
-          };
+    68797: (r, s, e) => {
+      e.d(s, { H: () => a });
+      var o = e(41735),
+        t = e.n(o),
+        n = e(56545);
+      function a(r) {
+        if (t().isCancel(r))
+          return { strErrorMsg: "Action Cancelled:" + r, errorCode: 52 };
         if (
           void 0 !== r.response &&
           r.response.data &&
@@ -103,12 +99,9 @@
         return "object" == typeof r && "status" in r
           ? {
               strErrorMsg: "Unknown Error: " + r + "\nStatus Code:" + r.status,
-              errorCode: o.d.k_EResultFail,
+              errorCode: 2,
             }
-          : {
-              strErrorMsg: "Unknown Error: " + r,
-              errorCode: o.d.k_EResultFail,
-            };
+          : { strErrorMsg: "Unknown Error: " + r, errorCode: 2 };
       }
     },
   },
