@@ -3651,7 +3651,7 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'spe' || method.value == 'multicaja' || method.value == 'redcompra' || method.value == 'ziraatbank' || method.value == 'vakiflarbank'
 			|| method.value == 'kuveytturkbank' || method.value == 'ekonomibank' || method.value == 'pichincha' || method.value == 'pichinchacash'
 			|| method.value == 'przelewy24' || method.value == 'trustpay' || method.value == 'poli' || method.value == 'mercadopago' || method.value == 'payu'
-			|| method.value == 'mrcash' || method.value == 'eps' || method.value == 'interac' || method.value == 'santanderrio' || method.value == 'degica_mobile'
+			|| method.value == 'mrcash' || method.value == 'eps' || method.value == 'santanderrio' || method.value == 'degica_mobile'
 			|| method.value == 'zong' || method.value == 'credit_card_japan' || method.value == 'payeasy'
 			|| method.value == 'webmoney_japan' || method.value == 'webmoney_japan_steam_card' || method.value == 'bitcash' || method.value == 'netcash'
 			|| method.value == 'nanaco' || method.value == 'culturevoucher' || method.value == 'happymoneyvoucher' || method.value == 'toss'
@@ -3702,6 +3702,11 @@ function UpdatePaymentInfoForm()
 		else if ( method.value == 'bitcoin' )
 		{
 						bShowCountryVerification = $('billing_country').value != 'US';
+		}
+		else if ( method.value == 'interac' )
+		{
+			bShowCountryVerification = true;
+      bShowPhoneNumber = true;
 		}
 		else if ( method.value == 'cafefunded' )
 		{
