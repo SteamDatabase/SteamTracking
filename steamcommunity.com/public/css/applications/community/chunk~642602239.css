@@ -1924,7 +1924,7 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   flex: 1;
   background-color: #1b1c20;
   box-shadow: inset 0px 0px 4px #000;
-  outline-width: 0px;
+  outline: none;
   color: #aaa;
   border: 0px solid transparent;
   padding-right: 2px;
@@ -1935,7 +1935,7 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   height: 42px;
   background-color: transparent;
   box-shadow: inset 0px 0px 4px transparent;
-  outline-width: 0px;
+  outline: none;
   color: #aaa;
   border: 0px solid transparent;
   font-size: 14px;

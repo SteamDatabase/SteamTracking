@@ -8311,8 +8311,8 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 ._3Byg6Wc4TX36gkUptUIk72.carousel__dot--selected {
   opacity: 1;
 }
-._3Cc2bMRML2lEkSyi2IAZ9G div {
-  outline-width: 0px;
+._3Cc2bMRML2lEkSyi2IAZ9G .carousel__slide-focus-ring {
+  outline: none;
 }
 ._3J8-bW87K3pb8EpRNYq0JG {
   transition: none;

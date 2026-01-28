@@ -5877,7 +5877,7 @@ span._2_0t_pDYqkDefMC0gDZV8G {
   flex: 1;
   background-color: #1b1c20;
   box-shadow: inset 0px 0px 4px #000;
-  outline-width: 0px;
+  outline: none;
   color: #aaa;
   border: 0px solid transparent;
   padding-right: 2px;
@@ -5888,7 +5888,7 @@ span._2_0t_pDYqkDefMC0gDZV8G {
   height: 42px;
   background-color: transparent;
   box-shadow: inset 0px 0px 4px transparent;
-  outline-width: 0px;
+  outline: none;
   color: #aaa;
   border: 0px solid transparent;
   font-size: 14px;
@@ -6615,7 +6615,7 @@ span._2_0t_pDYqkDefMC0gDZV8G {
 }
 .NENu2K19GJmLf1Asga-WF {
   border: none;
-  outline-width: 0;
+  outline: none;
   padding: 10px;
   background-color: var(--main-editor-input-bg-color);
   box-shadow: 0 0 5px #000 inset;
@@ -6634,7 +6634,7 @@ span._2_0t_pDYqkDefMC0gDZV8G {
   margin: 4px 0px;
   background-color: #1e2025;
   border: solid 1px #000;
-  outline-width: 0;
+  outline: none;
   box-shadow: 1px 1px rgba(255, 255, 255, 0.1);
   border-radius: 4px;
   color: gray;

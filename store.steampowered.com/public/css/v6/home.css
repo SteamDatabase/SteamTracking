@@ -3912,7 +3912,7 @@ body.v6 .home_page_content.deep_dive_block h2 {
 	font-style:italic;
 	border:0px;
 	background-color:transparent;
-	outline-width:0;
+	outline: none;
 }
 
 /* Discovery queue widget */

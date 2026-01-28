@@ -670,7 +670,7 @@ input.z7qI4Gjuleb-g6osRQpw2 {
   padding: 12px;
   border: none;
   background: var(#30333b);
-  outline-width: 0;
+  outline: none;
   color: var(#d3e0ea);
   font-size: 14px;
   font-weight: 200;

@@ -8879,7 +8879,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   flex: 1;
   background-color: #1b1c20;
   box-shadow: inset 0px 0px 4px #000;
-  outline-width: 0px;
+  outline: none;
   color: #aaa;
   border: 0px solid transparent;
   padding-right: 2px;
@@ -8890,7 +8890,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   height: 42px;
   background-color: transparent;
   box-shadow: inset 0px 0px 4px transparent;
-  outline-width: 0px;
+  outline: none;
   color: #aaa;
   border: 0px solid transparent;
   font-size: 14px;
@@ -39529,7 +39529,7 @@ div:hover > .BBCodeCollapseControl {
 .ClientUIControls input[type="password"]:focus {
   background-color: #2c3036;
   box-shadow: inset 0px 0px 4px #000;
-  outline-width: 0px;
+  outline: none;
   color: #aaa;
   padding-left: 12px;
   background-position: 2px;
@@ -44844,7 +44844,7 @@ body.in_global_drag .friendlist_titlebar {
 .friendSearchInput[type="text"]:focus {
   background-color: #2c3036;
   box-shadow: inset 0px 1px 4px #000000aa;
-  outline-width: 0px;
+  outline: none;
   color: #aaa;
   padding-inline-start: 22px;
   background-position: 4px 4px;
