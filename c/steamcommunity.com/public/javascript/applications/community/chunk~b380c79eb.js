@@ -1142,41 +1142,8 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      const _ = [
-        "greyneutral",
-        "mauve",
-        "slate",
-        "sage",
-        "olive",
-        "sand",
-        "tomato",
-        "red",
-        "ruby",
-        "crimson",
-        "pink",
-        "plum",
-        "purple",
-        "violet",
-        "iris",
-        "indigo",
-        "blue",
-        "cyan",
-        "teal",
-        "jade",
-        "green",
-        "grass",
-        "brown",
-        "bronze",
-        "gold",
-        "sky",
-        "mint",
-        "lime",
-        "yellow",
-        "amber",
-        "orange",
-      ];
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)({}),
         _ = (0, _.createContext)(() => {});
       function _(_) {
@@ -1211,20 +1178,13 @@
             children: _,
             zoo: _,
           } = _,
-          [_, _] = _.useState(_),
-          [_, _] = _.useState(__webpack_require__),
-          _ = window,
-          _ = (_) => (_) => {
-            _.includes(_) ? _(_) : console.error("Unknown color!");
+          _ = {
+            "--default-font-size": `var(--text-size-${_})`,
+            "--default-line-height": `var(--line-height-${_})`,
+            "--default-letter-spacing": `var(--letter-spacing-${_})`,
+            "--color-debug": "hotpink",
+            "--color-accent-contrast": "white",
           };
-        (_.setAccent = _(_)), (_.setDull = _(_));
-        const _ = {
-          "--default-font-size": `var(--text-size-${_})`,
-          "--default-line-height": `var(--line-height-${_})`,
-          "--default-letter-spacing": `var(--letter-spacing-${_})`,
-          "--color-debug": "hotpink",
-          "--color-accent-contrast": "white",
-        };
         return _.createElement(
           _,
           null,
@@ -1245,7 +1205,7 @@
                 _.createElement(
                   "div",
                   {
-                    "data-accent-color": _,
+                    "data-accent-color": __webpack_require__,
                     "data-dull-color": _,
                     "data-body-text-color": _,
                     className: _.DataAttributes,

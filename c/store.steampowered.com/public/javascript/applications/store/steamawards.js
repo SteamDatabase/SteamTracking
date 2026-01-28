@@ -296,97 +296,54 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      function _(_, _) {
-        return new (_())(
-          async (_) => {
-            const _ = [..._],
-              _ = await _._.GetPlayerLinkDetails(_, {
-                steamids: _,
-              }),
-              _ = new Map();
-            return (
-              _.Body()
-                .accounts()
-                .forEach((_) => {
-                  const _ = _.toObject();
-                  _.set(_.public_data.steamid, _);
-                }),
-              __webpack_require__.map((_) => _.get(_) ?? null)
-            );
-          },
-          {
-            maxBatchSize: 100,
-            cache: !1,
-            ..._,
-          },
-        );
+      class _ extends _._ {
+        constructor() {
+          super();
+        }
+        BTransportReady() {
+          return !0;
+        }
+        GetServerTime() {
+          return _._.PAGE_TIMESTAMP + Math.floor(performance.now() / 1e3);
+        }
+        async RequestEmoticonListInternal() {
+          let _ = [];
+          try {
+            let _ = await _().get(_._.CHAT_BASE_URL + "actions/EmoticonData", {
+              withCredentials: !0,
+            });
+            if (_.data.emoticons)
+              for (let _ of _.data.emoticons) {
+                let _ = _.name;
+                if (_.startsWith("^"))
+                  _.push({
+                    name: _,
+                  });
+                else {
+                  let _ = {
+                      name: _.substr(1, _.length - 2),
+                    },
+                    _ = _.name.toLowerCase();
+                  _ != _.name && (_.name_normalized = _),
+                    _.time_last_used && (_.last_used = _.time_last_used),
+                    _.use_count && (_.use_count = _.use_count),
+                    _.time_received && (_.time_received = _.time_received),
+                    _.appid && (_.appid = _.appid),
+                    _.push(_);
+                }
+              }
+          } catch (_) {
+            console.error("error loading emoticon list", _);
+          }
+          this.OnEmoticonListReceived(_);
+        }
       }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = _.useContext(_);
-        return (0, _._)(_(_, _, _));
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = _.useContext(_);
-        return (0, _._)({
-          queries: _.map((_) => _(_, _, _)),
-        });
-      }
-      const _ = _.createContext({
-        loadPersonaState: async (_, _) => {
-          if (null == _) return null;
-          const _ = await (function (_) {
-            return (_ ??= _(_));
-          })(_).load(_._.InitFromAccountID(_).ConvertTo64BitString());
-          return (function (_, _) {
-            let _ = new _._(_);
-            const _ = _?.public_data,
-              _ = _?.private_data;
-            (_.m_bInitialized = !!_),
-              (_.m_ePersonaState = _?.persona_state ?? 0),
-              (_.m_strAvatarHash = _?.sha_digest_avatar
-                ? (0, _._)(_.sha_digest_avatar)
-                : _._),
-              (_.m_strPlayerName = _?.persona_name ?? _.ConvertTo64BitString()),
-              (_.m_strAccountName = _?.account_name),
-              _?.persona_state_flags &&
-                (_.m_unPersonaStateFlags = _?.persona_state_flags);
-            _?.game_id && (_.m_gameid = _?.game_id);
-            _?.game_server_ip_address &&
-              (_.m_unGameServerIP = _?.game_server_ip_address);
-            _?.lobby_steam_id && (_.m_game_lobby_id = _?.lobby_steam_id);
-            _?.game_extra_info && (_.m_strGameExtraInfo = _?.game_extra_info);
-            _?.profile_url && (_.m_strProfileURL = _.profile_url);
-            return _;
-          })(_._.InitFromAccountID(_), _);
-        },
-      });
-      function _() {
-        return _.useContext(_);
-      }
-      function _(_, _, _) {
-        const _ = "string" == typeof _ ? new _._(_).GetAccountID() : _;
-        return {
-          queryKey: ["PlayerSummary", _],
-          queryFn: () => _.loadPersonaState(_, _),
-          enabled: !!_,
-        };
-      }
-      let _;
+      const _ = new _();
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -718,6 +675,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const {
@@ -1043,9 +1002,11 @@
       function _(_) {
         const { appid: _, bHidePrice: __webpack_require__ } = _,
           [_] = (0, _._)(_, _._),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
           _ = (0, _._)();
-        if (!_) return null;
+        if (!_ || !_) return null;
         const _ = _.GetBestPurchaseOption(),
           _ = _?.hide_discount_pct_for_compliance;
         return _.createElement(
@@ -1202,6 +1163,284 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {};
+      (_.arabic = () =>
+        __webpack_require__
+          ._("chunkid")
+          .then(__webpack_require__._.bind(__webpack_require__, 90902, 19))),
+        (_.brazilian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 65136, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 13199, 19))),
+        (_.czech = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 99925, 19))),
+        (_.danish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 68311, 19))),
+        (_.dutch = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 496, 19))),
+        (_.english = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 51990, 19))),
+        (_.finnish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 27637, 19))),
+        (_.french = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 21158, 19))),
+        (_.german = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 21144, 19))),
+        (_.greek = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 19930, 19))),
+        (_.hungarian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 33307, 19))),
+        (_.indonesian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 92506, 19))),
+        (_.italian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 23382, 19))),
+        (_.japanese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 83577, 19))),
+        (_.koreana = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 26305, 19))),
+        (_.latam = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 1849, 19))),
+        (_.norwegian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 63202, 19))),
+        (_.polish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 41639, 19))),
+        (_.portuguese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 46059, 19))),
+        (_.romanian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 82177, 19))),
+        (_.russian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 84227, 19))),
+        (_.schinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 3898, 19))),
+        (_.spanish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 45094, 19))),
+        (_.swedish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 50975, 19))),
+        (_.tchinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 44777, 19))),
+        (_.thai = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 22116, 19))),
+        (_.turkish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 48822, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 38016, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 72281, 19)));
+      const _ = (0, _._)(async function (_) {
+        if (_[_]) return _[_]();
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { closeModal: _ } = _;
+        return _.createElement(_._, {
+          strTitle: _.Localize("#LoginRedirect_Dialog_Title"),
+          strDescription: _.Localize("#LoginRedirect_Dialog_Description"),
+          closeModal: _,
+          onOK: () => {
+            window.location.href = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+          },
+        });
+      }
+      function _(_) {
+        const { appid: _, className: __webpack_require__, bTextMode: _ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return _.createElement(_, {
+          appid: _,
+          bIsFree: Boolean(_?.is_free),
+          bIsComingSoon: Boolean(_?.is_coming_soon),
+          bTextMode: _,
+          className: __webpack_require__,
+        });
+      }
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(!1),
+          _ = (0, _._)(),
+          {
+            appid: _,
+            bIsFree: _,
+            bIsComingSoon: _,
+            className: _,
+            bTextMode: _,
+          } = _,
+          _ = (0, _._)(_),
+          { bIsOwned: _ } = (0, _._)(_),
+          _ = (0, _._)(_),
+          { mutateAsync: _ } = (0, _._)(_, !_, (0, _._)(_)),
+          { elDialogElement: _, fnShowLogonDialog: _ } = (function () {
+            const [_, _, __webpack_require__] = (0, _._)();
+            return {
+              elDialogElement: _.createElement(
+                _._,
+                {
+                  active: _,
+                },
+                _.createElement(_, {
+                  closeModal: __webpack_require__,
+                }),
+              ),
+              fnShowLogonDialog: _,
+            };
+          })();
+        if (_ || (!_ && _))
+          return _
+            ? _.createElement(_, {
+                possibleDemoAppID: _,
+              })
+            : null;
+        let _ = null;
+        return (
+          _ && !_
+            ? (_ = _.createElement(_._, {
+                size: 18,
+              }))
+            : _
+              ? _ &&
+                (_ = _ ? (0, _._)("#OnWishlist") : _.createElement(_.qnF, null))
+              : (_ = _
+                  ? (0, _._)("#wishlist_add_to_wishlist")
+                  : _.createElement(_.T4m, null)),
+          _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              _._,
+              {
+                toolTipContent: (0, _._)("#AddToWishlist_ttip"),
+              },
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().WishList, _),
+                  onClick: async () => {
+                    _._.logged_in
+                      ? _ ||
+                        (__webpack_require__(!0),
+                        await _(),
+                        __webpack_require__(!1))
+                      : _();
+                  },
+                },
+                _,
+              ),
+            ),
+            _,
+          )
+        );
+      }
+      function _(_) {
+        const { possibleDemoAppID: _, className: __webpack_require__ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return _
+          ? (1 != _.type && 12 != _.type) || !_.related_items?.parent_appid
+            ? null
+            : _.createElement(_, {
+                parentAppID: _.related_items?.parent_appid,
+                className: __webpack_require__,
+              })
+          : null;
+      }
+      function _(_) {
+        const { parentAppID: _, className: __webpack_require__ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return _ && _
+          ? _.createElement(_, {
+              appid: _,
+              bIsComingSoon: Boolean(_.is_coming_soon),
+              bIsFree: Boolean(_.is_free),
+              className: __webpack_require__,
+            })
+          : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           default: () => _,
@@ -1211,6 +1450,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1505,7 +1747,8 @@
             eSteamAwardCategoryID: __webpack_require__,
             eNominatonSource: _,
           } = _,
-          _ = parseInt(_._);
+          _ = parseInt(_._),
+          _ = (0, _._)(_);
         return _.createElement(
           _._,
           {
@@ -1515,7 +1758,6 @@
             _._,
             {
               _: _,
-              type: "app",
             },
             _.createElement("img", {
               src: _.small_cap,
@@ -1604,7 +1846,9 @@
             eNominatonSource: _,
             nPlaytime: _,
           } = _,
-          [_] = (0, _._)(_, _);
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
         if (!_) return null;
         let _ = null;
         return (
@@ -1626,11 +1870,11 @@
               _._,
               {
                 _: _,
-                type: "app",
               },
               _.createElement("img", {
                 className: _.AppCapsuleImage,
-                src: _.GetAssetsWithoutOverrides().GetSmallCapsuleURL(),
+                src: (0, _._)(_, "small_capsule"),
+                alt: _.name || "",
               }),
             ),
             _.createElement(_, {
@@ -2147,24 +2391,24 @@
       }
       function _(_) {
         const { nomination: _, bBlurry: __webpack_require__ } = _,
-          [_] = (0, _._)(_.appid, {
-            include_basic_info: !0,
-            include_assets: !0,
-          });
+          _ = (0, _._)(_.appid),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
         return _
           ? __webpack_require__
             ? _.createElement("img", {
-                src: _.GetAssets().GetHeaderURL(),
+                src: (0, _._)(_, "header"),
+                alt: _.name,
               })
             : _.createElement(
                 _._,
                 {
                   className: _().NominatedGameCapsule,
-                  type: "app",
-                  _: _.appid,
+                  _: _,
                 },
                 _.createElement("img", {
-                  src: _.GetAssets().GetHeaderURL(),
+                  src: (0, _._)(_, "header"),
+                  alt: _.name,
                 }),
               )
           : null;

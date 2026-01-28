@@ -1592,6 +1592,7 @@
           {
             ref: _,
             className: _,
+            "data-trailer-player": !0,
           },
           _.createElement("video", {
             ref: _,
@@ -2525,7 +2526,10 @@
             showHoverThumb: _,
           } = _,
           _ = (0, _.useRef)(null),
-          [_, _] = (0, _.useState)(0);
+          [_, _] = (0, _.useState)({
+            nHoverLeft: 0,
+            bFitsInParent: !1,
+          });
         if (
           (_.useLayoutEffect(() => {
             if (!__webpack_require__ || !_.current || !_.current) return;
@@ -2537,14 +2541,29 @@
                 __webpack_require__.nTickOffset - _ / 2,
                 0 + _,
                 _ - _ - _,
-              );
-            _(_);
-          }, [__webpack_require__, _, _, _]),
+              ),
+              _ = (0, _._)(
+                _.current.ownerDocument.documentElement,
+                _.current,
+                "data-trailer-player",
+              ),
+              _ = !0;
+            if (_) {
+              let _ = _.getBoundingClientRect();
+              _ = _.top > _.top;
+            }
+            (_.nHoverLeft == _ && _.bFitsInParent == _) ||
+              _({
+                nHoverLeft: _,
+                bFitsInParent: _,
+              });
+          }, [__webpack_require__, _, _, _, _]),
           !__webpack_require__)
         )
           return null;
         let _ = {
-            left: _,
+            left: _.nHoverLeft,
+            visibility: _.bFitsInParent ? "visible" : "hidden",
           },
           _ = null,
           _ = _ ? __webpack_require__.thumbnail : null;

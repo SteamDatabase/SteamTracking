@@ -683,7 +683,102 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = "FocusNavHistoryID",
+        _ = new _._("FocusHistory").Debug;
+      function _(_) {
+        const { children: _, timeoutMS: __webpack_require__, ..._ } = _,
+          _ = (function (_ = 2) {
+            const _ = (0, _._)(),
+              _ = _.useRef(void 0),
+              _ = (0, _._)(),
+              _ = _._.IN_STEAMUI,
+              _ = (null == _ ? void 0 : _.state) && _.state[_],
+              _ = _.useRef(void 0),
+              [_, _] = _.useState(_);
+            return (
+              _.useLayoutEffect(() => {
+                if (!_.current) return;
+                const _ = _.current;
+                return _.Node().Tree.WindowContext.FocusChangedCallbacks.Register(
+                  (_, _, _) => {
+                    const _ = _.location;
+                    let _ = _.state && _.state[_];
+                    _ ||
+                      ((_ = _ ? `State_${_.key}` : `State_${_.Node().Tree._}`),
+                      (_.current = _),
+                      _.replace({
+                        ..._,
+                        state: {
+                          ..._.state,
+                          [_]: _,
+                        },
+                      })),
+                      _.current == _ &&
+                        (_
+                          ? _.SaveState(_)
+                          : window.history.replaceState(
+                              {
+                                ...window.history.state,
+                                [_]: (0, _._)(_.Node()),
+                              },
+                              "",
+                            ));
+                  },
+                ).Unregister;
+              }, [_, _]),
+              _.useLayoutEffect(() => {
+                if (_.current && _.current != _) {
+                  if (!_) return void _(void 0);
+                  const _ = _.current.NavTree().DeferredFocus;
+                  _.SuppressFocus(),
+                    _(
+                      `Start restoring history for ${_} in tree ${_.current.NavTree()._}, suppressing focus`,
+                    );
+                  const _ = window.setTimeout(() => {
+                    _(_);
+                  }, _);
+                  return () => {
+                    window.clearTimeout(_), _.ExecuteQueuedFocus();
+                  };
+                }
+              }, [_, _]),
+              _.useEffect(() => {
+                var _;
+                if (!_ || !_.current) return;
+                const _ = _
+                    ? null
+                    : null === (_ = window.history.state) || void 0 === _
+                      ? void 0
+                      : _[_],
+                  _ = _.current.NavTree().DeferredFocus;
+                let _ = !1;
+                _
+                  ? (_ = _.current.RestoreState(_, 1))
+                  : _ && ((0, _._)(_.current.Node(), _, 0), (_ = !0)),
+                  _(
+                    `Completed restoring history for state ${_} - ${_ ? "had history." : "no history for this state."}`,
+                  ),
+                  _ ? _.Reset() : _.ExecuteQueuedFocus(),
+                  (_.current = _);
+              }, [_, _, _]),
+              _
+            );
+          })(__webpack_require__);
+        return _.createElement(
+          _._,
+          {
+            ..._,
+            navRef: _,
+          },
+          _,
+        );
+      }
       const _ = _.forwardRef(function (_, _) {
         const { children: __webpack_require__, navTreeRef: _, ..._ } = _,
           _ = _.useRef(void 0),
@@ -700,11 +795,19 @@
             disabledRoot: !_,
           },
           _.createElement(
-            _._,
+            _,
             {
-              disableFocusRing: !_,
+              style: {
+                display: "contents",
+              },
             },
-            __webpack_require__,
+            _.createElement(
+              _._,
+              {
+                disableFocusRing: !_,
+              },
+              __webpack_require__,
+            ),
           ),
         );
       });

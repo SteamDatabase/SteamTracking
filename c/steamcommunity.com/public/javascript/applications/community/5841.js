@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "可能包含的内容：",
 	"Error_LoadingContent": "载入此内容时出现问题",
 	"Error_LoadingMarketItem": "请求的物品可能不存在，或可能存在暂时性问题导致此物品无法载入。请稍后重试。",
-	"ListingFilter_Title": "筛选上架物品"
+	"ListingFilter_Title": "筛选上架物品",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Mulig innhold:",
 	"Error_LoadingContent": "Det oppstod et problem med å laste innholdet",
 	"Error_LoadingMarketItem": "Den forespurte gjenstanden finnes kanskje ikke, eller det kan være et midlertidig problem som hindrer gjenstanden fra å lastes inn. Prøv igjen senere.",
-	"ListingFilter_Title": "Filtrer annonser"
+	"ListingFilter_Title": "Filtrer annonser",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

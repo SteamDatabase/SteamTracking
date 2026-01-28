@@ -7745,6 +7745,7 @@
           }),
         );
       }
+      var _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(!1),
         _ = () => (0, _.useContext)(_);
       function _() {
@@ -9396,7 +9397,7 @@
               className: _().ConfirmationContainer,
             },
             _.createElement("img", {
-              src: _,
+              src: (0, _._)(_),
             }),
             _.createElement(
               "div",

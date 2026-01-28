@@ -3,262 +3,332 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [2469],
   {
+    15631: (e) => {
+      e.exports = {
+        BackgroundImageCtn: "RdHTT3nwjIakv7OZTMNqN",
+        BackgroundImageBlurCtn: "_3vGQugNJFaL7JS8KhZhU2H",
+      };
+    },
+    67082: (e) => {
+      e.exports = {
+        AppHeader: "cCoovA8rihPiT1IZ33Cr_",
+        TitleGroup: "_2y18Xvy_xifENXqdmY3D9y",
+        SubTitle: "v_Vos0f8oAH9Im5Z1b9UU",
+        Title: "_3BjnxsXuurq9OScWV1Esvf",
+        SortOptions: "_2F9yRZTzjsLBM4QSoRoLsN",
+      };
+    },
     31960: (e) => {
       e.exports = {
         Ctn: "_2P-P0Ga6blE6d10oVWleHs",
         BackgroundImageCtn: "_3LnsTSsd5CMsXXdHZVeG9S",
         BackgroundImageBlurCtn: "_1j9oLZ84RZG44SAUdeGBbz",
-        AppHeader: "EBiK_PYat7W-Wk_zJcuFq",
-        TitleGroup: "_39vGMX3e1UOPPRyvi30wk7",
-        SubTitle: "_3o2oMRRFqgwPf42yjGG0qp",
-        Title: "_3_R7HvUJcngi4n-gCRYFkN",
-        SortOptions: "_1g7L59QP-3lRDGA0owdeWA",
         BundlesList: "qidGiQP0S4nK0GXkYOxbO",
         BundleRow: "_2-2kqczzmj6KtNObGLj6x3",
         BundlesInLibrary: "T_3MrEHN9bFK4I4FQqDC8",
+        Title: "_3_R7HvUJcngi4n-gCRYFkN",
         Subtitle: "_3Bvm26qCLKO-h1yHVlFGsS",
       };
     },
-    54847: (e, t, r) => {
+    54847: (e, t, n) => {
       "use strict";
-      r.d(t, { p: () => c });
-      var n = r(90626),
-        l = r(62792),
-        a = r(55263),
-        s = r(45359),
-        u = r(18654),
-        i = r.n(u);
+      n.d(t, { p: () => c });
+      var r = n(39777),
+        a = n(90626),
+        l = n(35380),
+        s = n(41399),
+        u = n(18654),
+        i = n.n(u);
       function c(e) {
-        const { id: t, type: r } = e,
-          [u] = (0, a.G6)(t, (0, l.SW)(r), {});
-        return n.createElement(
+        const { id: t, type: n } = e,
+          u = (0, l.rt)({ id: t, type: n }),
+          { data: c } = (0, r.J$)(u);
+        return a.createElement(
           "div",
           { className: i().SaleItemBrowserRow },
-          n.createElement(s.pb, {
+          a.createElement(s.p, {
             ...e,
             bLoadShortDescription: !0,
             bShowReviewSummary: !0,
-            bShowDemoButton: e.bShowDemoButton || 1 == u?.GetAppType(),
+            bShowDemoButton: e.bShowDemoButton || 1 == c?.type,
             bPreferDemoStorePage: e.bPreferDemoStorePage,
           }),
         );
       }
     },
-    54393: (e, t, r) => {
+    93135: (e, t, n) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => L });
-      var n,
-        l = r(90626),
-        a = r(57876),
-        s = r(75279),
-        u = r(55263),
-        i = r(84811),
-        c = r(54847),
-        d = r(37076),
-        o = r(32630),
-        m = r(52038),
-        p = r(61859),
-        B = r(31960),
-        S = r.n(B),
-        _ = r(24484),
-        G = r(16021),
-        I = r(63090),
-        b = r(30894),
-        g = r(92398),
-        E = r(22797);
-      function L(e) {
+      n.r(t), n.d(t, { default: () => T });
+      var r = n(39777),
+        a = n(15631),
+        l = n.n(a),
+        s = n(42834),
+        u = n(90626);
+      function i(e) {
+        const { id: t } = e,
+          { data: n } = (0, r.J$)(t),
+          { data: a } = (0, r.lv)(t);
+        if (!a || !n) return null;
+        const i =
+          (0, s.b0)(a, "library_hero_2x") ??
+          (0, s.b0)(a, "library_hero") ??
+          (0, s.b0)(a, "raw_page_background");
+        return i
+          ? u.createElement(
+              u.Fragment,
+              null,
+              u.createElement(
+                "div",
+                { className: l().BackgroundImageCtn },
+                u.createElement("img", { src: i, alt: n.name }),
+              ),
+              u.createElement(
+                "div",
+                { className: l().BackgroundImageBlurCtn },
+                u.createElement("img", { src: i, alt: n.name }),
+              ),
+            )
+          : null;
+      }
+      var c = n(20433),
+        d = n(3740),
+        o = n(35380),
+        m = n(67082),
+        p = n.n(m);
+      function B(e) {
+        const { appid: t, elPageSort: n, strPageSubTitle: a } = e,
+          l = (0, o.$5)(t),
+          { data: i } = (0, r.J$)(l),
+          { data: m } = (0, r.lv)(l);
+        return i
+          ? u.createElement(
+              "div",
+              { className: p().AppHeader },
+              u.createElement(
+                c.u,
+                { id: l, hoverClassName: p().PreviewItem },
+                m &&
+                  u.createElement("img", {
+                    src: (0, s.b0)(m, "header"),
+                    alt: i.name || "",
+                  }),
+              ),
+              u.createElement(
+                "div",
+                { className: p().TitleGroup },
+                a && u.createElement("div", { className: p().SubTitle }, a),
+                u.createElement("div", { className: p().Title }, i.name || ""),
+                u.createElement(d.N, { id: l }),
+              ),
+              Boolean(n) &&
+                u.createElement("div", { className: p().SortOptions }, n),
+            )
+          : null;
+      }
+      var S,
+        _ = n(57876),
+        b = n(30894),
+        g = n(75279),
+        I = n(16021),
+        h = n(55263),
+        E = n(63090),
+        v = n(84811),
+        L = n(54847),
+        N = n(32630),
+        w = n(22797),
+        G = n(52038),
+        f = n(61859),
+        P = n(24484),
+        y = n(31960),
+        D = n.n(y);
+      function T(e) {
         const {
             match: {
               params: { appid: t },
             },
           } = e,
-          r = Number.parseInt(t),
-          [n] = (0, u.t7)(r, a.Xh);
+          n = Number.parseInt(t),
+          [r] = (0, h.t7)(n, _.Xh);
         return (
-          (0, l.useEffect)(() => {
-            if (n) {
-              const e = n.GetStorePageURL().replace("/app/", "/bundlelist/");
+          (0, u.useEffect)(() => {
+            if (r) {
+              const e = r.GetStorePageURL().replace("/app/", "/bundlelist/");
               e != window.location.href &&
                 window.history.replaceState({}, "", e);
             }
-          }, [n]),
-          l.createElement(
-            o.Ay,
+          }, [r]),
+          u.createElement(
+            N.Ay,
             { method: "bundlelist" },
-            l.createElement(i.tH, null, l.createElement(h, { storeItem: n })),
+            u.createElement(v.tH, null, u.createElement(k, { storeItem: r })),
           )
         );
       }
-      function h(e) {
+      function k(e) {
         const { storeItem: t } = e,
-          [r, s] = (0, l.useState)(n.k_BundleSort_Price),
-          i = (function (e) {
-            const t = (0, l.useMemo)(
-                () => (0, _.Tc)("bundle_list", "application_config"),
+          n = (0, g.DJ)(t),
+          [r, a] = (0, u.useState)(S.k_BundleSort_Price),
+          l = (function (e) {
+            const t = (0, u.useMemo)(
+                () => (0, P.Tc)("bundle_list", "application_config"),
                 [],
               ),
-              [r] = (0, b.L2)(),
-              s = (0, u.MS)(t, a.Xh),
-              i = (0, l.useMemo)(() => {
-                if (3 != s && 2 != s) return null;
+              [n] = (0, b.L2)(),
+              r = (0, h.MS)(t, _.Xh),
+              a = (0, u.useMemo)(() => {
+                if (3 != r && 2 != r) return null;
                 {
-                  let r = t;
+                  let n = t;
                   switch (
-                    (2 == s &&
-                      (r = t.filter((e) => {
-                        const t = G.A.Get().GetBundle(e);
+                    (2 == r &&
+                      (n = t.filter((e) => {
+                        const t = I.A.Get().GetBundle(e);
                         return t?.BIsVisible();
                       })),
                     e)
                   ) {
-                    case n.k_BundleSort_Name:
-                      return [...r].sort((e, t) => {
-                        const r = G.A.Get().GetBundle(e),
-                          n = G.A.Get().GetBundle(t);
-                        return r.GetName().localeCompare(n.GetName());
+                    case S.k_BundleSort_Name:
+                      return [...n].sort((e, t) => {
+                        const n = I.A.Get().GetBundle(e),
+                          r = I.A.Get().GetBundle(t);
+                        return n.GetName().localeCompare(r.GetName());
                       });
-                    case n.k_BundleSort_Price:
-                      return [...r].sort((e, t) => {
-                        const r = G.A.Get().GetBundle(e),
-                          n = G.A.Get().GetBundle(t);
+                    case S.k_BundleSort_Price:
+                      return [...n].sort((e, t) => {
+                        const n = I.A.Get().GetBundle(e),
+                          r = I.A.Get().GetBundle(t);
                         return (
-                          r.GetBestPurchasePriceInCents() -
-                          n.GetBestPurchasePriceInCents()
+                          n.GetBestPurchasePriceInCents() -
+                          r.GetBestPurchasePriceInCents()
                         );
                       });
                     default:
-                      return r;
+                      return n;
                   }
                 }
-              }, [e, s, t]);
-            if (i && !r) {
+              }, [e, r, t]);
+            if (a && !n) {
               const e = new Array(),
                 t = new Array(),
-                r = new Array();
+                n = new Array();
               return (
-                i.forEach((n) => {
-                  const l = G.A.Get().GetBundle(n);
-                  l.GetIncludedAppIDs().some((e) => !b.Fm.Get().BOwnsApp(e))
-                    ? l.GetBestPurchaseOption().must_purchase_as_set
-                      ? r.push(n)
-                      : t.push(n)
-                    : e.push(n);
+                a.forEach((r) => {
+                  const a = I.A.Get().GetBundle(r);
+                  a.GetIncludedAppIDs().some((e) => !b.Fm.Get().BOwnsApp(e))
+                    ? a.GetBestPurchaseOption().must_purchase_as_set
+                      ? n.push(r)
+                      : t.push(r)
+                    : e.push(r);
                 }),
                 {
                   rgOwnedBundleIDList: e,
                   rgCompleteTheSetBundleIDList: t,
-                  rgMustPurchaseTogetherBundleIDList: r,
+                  rgMustPurchaseTogetherBundleIDList: n,
                 }
               );
             }
             return null;
           })(r);
-        if (!t || !i)
-          return l.createElement(E.t, {
-            string: (0, p.we)("#Loading"),
-            position: "center",
-          });
-        const c =
-          t.GetAssets().GetLibraryHeroURL_2x() ??
-          t.GetAssets().GetLibraryHeroURL() ??
-          t.GetAssets().GetRawPageBackgroundURL();
-        return l.createElement(
-          "div",
-          { className: S().Ctn },
-          l.createElement(
-            "div",
-            { className: S().BackgroundImageCtn },
-            l.createElement("img", { src: c }),
-          ),
-          l.createElement(
-            "div",
-            { className: S().BackgroundImageBlurCtn },
-            l.createElement("img", { src: c }),
-          ),
-          l.createElement(
-            "div",
-            { className: (0, m.A)("page_content") },
-            l.createElement(P, { storeItem: t, eBundleSort: r, fnSetSort: s }),
-            i.rgCompleteTheSetBundleIDList?.length > 0 &&
-              l.createElement(
+        return t && l
+          ? u.createElement(
+              "div",
+              { className: D().Ctn },
+              u.createElement(i, { id: n }),
+              u.createElement(
                 "div",
-                { className: S().BundlesInLibrary },
-                l.createElement(
-                  "div",
-                  { className: S().Title },
-                  (0, p.we)("#BundleList_CompleteTheSet"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: S().Subtitle },
-                  (0, p.we)("#BundleList_CompleteTheSetSubtitle"),
-                ),
-                l.createElement(w, {
-                  appId: t.GetAppID(),
-                  rgBundleIDs: i.rgCompleteTheSetBundleIDList,
+                { className: (0, G.A)("page_content") },
+                u.createElement(B, {
+                  appid: t.GetAppID(),
+                  elPageSort: u.createElement(O, {
+                    eBundleSort: r,
+                    fnSetSort: a,
+                  }),
+                  strPageSubTitle: (0, f.we)("#BundleList_SubTitle"),
                 }),
+                l.rgCompleteTheSetBundleIDList?.length > 0 &&
+                  u.createElement(
+                    "div",
+                    { className: D().BundlesInLibrary },
+                    u.createElement(
+                      "div",
+                      { className: D().Title },
+                      (0, f.we)("#BundleList_CompleteTheSet"),
+                    ),
+                    u.createElement(
+                      "div",
+                      { className: D().Subtitle },
+                      (0, f.we)("#BundleList_CompleteTheSetSubtitle"),
+                    ),
+                    u.createElement(A, {
+                      appId: t.GetAppID(),
+                      rgBundleIDs: l.rgCompleteTheSetBundleIDList,
+                    }),
+                  ),
+                l.rgMustPurchaseTogetherBundleIDList?.length > 0 &&
+                  u.createElement(
+                    "div",
+                    { className: D().BundlesInLibrary },
+                    u.createElement(
+                      "div",
+                      { className: D().Title },
+                      (0, f.we)("#BundleList_MustPurchaseAsSet"),
+                    ),
+                    u.createElement(
+                      "div",
+                      { className: D().Subtitle },
+                      (0, f.we)("#BundleList_MustPurchaseAsSetSubtitle"),
+                    ),
+                    u.createElement(A, {
+                      appId: t.GetAppID(),
+                      rgBundleIDs: l.rgMustPurchaseTogetherBundleIDList,
+                    }),
+                  ),
+                l.rgOwnedBundleIDList?.length > 0 &&
+                  u.createElement(
+                    "div",
+                    { className: D().BundlesInLibrary },
+                    u.createElement(
+                      "div",
+                      { className: D().Title },
+                      (0, f.we)("#BundleList_AllInLibrary"),
+                    ),
+                    u.createElement(
+                      "div",
+                      { className: D().Subtitle },
+                      (0, f.we)("#BundleList_AllInLibrarySubtitle"),
+                    ),
+                    u.createElement(A, {
+                      appId: t.GetAppID(),
+                      rgBundleIDs: l.rgOwnedBundleIDList,
+                    }),
+                  ),
               ),
-            i.rgMustPurchaseTogetherBundleIDList?.length > 0 &&
-              l.createElement(
-                "div",
-                { className: S().BundlesInLibrary },
-                l.createElement(
-                  "div",
-                  { className: S().Title },
-                  (0, p.we)("#BundleList_MustPurchaseAsSet"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: S().Subtitle },
-                  (0, p.we)("#BundleList_MustPurchaseAsSetSubtitle"),
-                ),
-                l.createElement(w, {
-                  appId: t.GetAppID(),
-                  rgBundleIDs: i.rgMustPurchaseTogetherBundleIDList,
-                }),
-              ),
-            i.rgOwnedBundleIDList?.length > 0 &&
-              l.createElement(
-                "div",
-                { className: S().BundlesInLibrary },
-                l.createElement(
-                  "div",
-                  { className: S().Title },
-                  (0, p.we)("#BundleList_AllInLibrary"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: S().Subtitle },
-                  (0, p.we)("#BundleList_AllInLibrarySubtitle"),
-                ),
-                l.createElement(w, {
-                  appId: t.GetAppID(),
-                  rgBundleIDs: i.rgOwnedBundleIDList,
-                }),
-              ),
-          ),
-        );
+            )
+          : u.createElement(w.t, {
+              string: (0, f.we)("#Loading"),
+              position: "center",
+            });
       }
-      function w(e) {
-        const { rgBundleIDs: t, appId: r } = e;
-        return l.createElement(
+      function A(e) {
+        const { rgBundleIDs: t, appId: n } = e;
+        return u.createElement(
           "div",
-          { className: S().BundlesList },
+          { className: D().BundlesList },
           t.map((e) =>
-            l.createElement(N, {
+            u.createElement(C, {
               key: "bundleDisplay_" + e,
               bundleId: e,
-              appId: r,
+              appId: n,
             }),
           ),
         );
       }
-      function N(e) {
-        const { bundleId: t, appId: r } = e;
-        return l.createElement(
+      function C(e) {
+        const { bundleId: t, appId: n } = e;
+        return u.createElement(
           "div",
-          { className: S().BundleRow },
-          l.createElement(c.p, {
+          { className: D().BundleRow },
+          u.createElement(L.p, {
             id: t,
             type: "bundle",
             bShowDeckCompatibilityDialog: !1,
@@ -266,62 +336,41 @@
           }),
         );
       }
-      function P(e) {
-        const { storeItem: t, eBundleSort: r, fnSetSort: a } = e,
-          u = (0, s.DJ)(t);
-        return l.createElement(
-          "div",
-          { className: S().AppHeader },
-          l.createElement(
-            d.u,
-            { type: "app", id: t.GetAppID(), hoverClassName: S().PreviewItem },
-            l.createElement("img", { src: t.GetAssets().GetHeaderURL() }),
-          ),
-          l.createElement(
-            "div",
-            { className: S().TitleGroup },
-            l.createElement(
+      function O(e) {
+        const { eBundleSort: t, fnSetSort: n } = e,
+          r = (0, u.useMemo)(
+            () => [
+              {
+                data: S.k_BundleSort_Name,
+                label: (0, f.we)("#BundleList_SortBy_Name"),
+              },
+              {
+                data: S.k_BundleSort_Price,
+                label: (0, f.we)("#BundleList_SortBy_Price"),
+              },
+            ],
+            [],
+          );
+        return u.createElement(E.ZU, {
+          selectedOption: t,
+          renderButtonValue: (e) =>
+            u.createElement(
               "div",
-              { className: S().SubTitle },
-              (0, p.we)("#BundleList_SubTitle"),
+              null,
+              (0, f.we)("#BundleList_SortBy"),
+              " ",
+              e,
             ),
-            l.createElement("div", { className: S().Title }, t.GetName()),
-            l.createElement(g.NF, { id: u }),
-          ),
-          l.createElement(
-            "div",
-            { className: S().SortOptions },
-            l.createElement(I.ZU, {
-              selectedOption: r,
-              renderButtonValue: (e) =>
-                l.createElement(
-                  "div",
-                  null,
-                  (0, p.we)("#BundleList_SortBy"),
-                  " ",
-                  e,
-                ),
-              rgOptions: [
-                {
-                  data: n.k_BundleSort_Name,
-                  label: (0, p.we)("#BundleList_SortBy_Name"),
-                },
-                {
-                  data: n.k_BundleSort_Price,
-                  label: (0, p.we)("#BundleList_SortBy_Price"),
-                },
-              ],
-              strDefaultLabel: (0, p.we)("#BundleList_SortBy"),
-              onChange: ({ data: e }) => a(e),
-            }),
-          ),
-        );
+          rgOptions: r,
+          strDefaultLabel: (0, f.we)("#BundleList_SortBy"),
+          onChange: ({ data: e }) => n(e),
+        });
       }
       !(function (e) {
         (e[(e.k_BundleSort_Name = 1)] = "k_BundleSort_Name"),
           (e[(e.k_BundleSort_Price = 2)] = "k_BundleSort_Price"),
           (e[(e.k_BundleSort_Popular = 3)] = "k_BundleSort_Popular");
-      })(n || (n = {}));
+      })(S || (S = {}));
     },
   },
 ]);

@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "可能な内容：",
 	"Error_LoadingContent": "このコンテンツの読み込み時に問題が発生しました",
 	"Error_LoadingMarketItem": "リクエストされたアイテムが存在しないか、一時的な問題によりアイテムを読み込めない可能性があります。後でもう一度お試しください。",
-	"ListingFilter_Title": "出品を絞り込む"
+	"ListingFilter_Title": "出品を絞り込む",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

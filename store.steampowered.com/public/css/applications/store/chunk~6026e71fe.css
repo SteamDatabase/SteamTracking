@@ -198,50 +198,6 @@
   font-weight: 600;
   padding: 0px;
 }
-._2qN9u-PUuidOe8A6u2BLnB {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  margin-top: 8px;
-}
-._2qN9u-PUuidOe8A6u2BLnB ._1UN_OM_UOz0xqO7EcRfKMv {
-  background: #000;
-  margin-left: auto;
-  display: flex;
-}
-._2uDosrOO-P5HteHs8r2DHF {
-  min-width: 80px;
-  margin-right: 10px;
-}
-._2uDosrOO-P5HteHs8r2DHF .DialogInputLabelGroup {
-  margin-bottom: 0px;
-}
-._2uDosrOO-P5HteHs8r2DHF .DialogDropDown._DialogInputContainer {
-  padding: 8px 12px;
-}
-._2uDosrOO-P5HteHs8r2DHF .DialogDropDown_Arrow {
-  top: 9px;
-  position: absolute;
-}
-._2xiHGC5uLleLI4yqeulx5a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-._2xiHGC5uLleLI4yqeulx5a a:not(.LinkButton) {
-  color: #fff;
-}
-._2xiHGC5uLleLI4yqeulx5a a._2fJMMn4OtB-DA4H4GDPp5I {
-  margin-top: 8px;
-  background: #fff;
-  padding: 4px 12px;
-  border-radius: 10px;
-  color: #000;
-}
-._2xiHGC5uLleLI4yqeulx5a a._2fJMMn4OtB-DA4H4GDPp5I:hover {
-  background: #000;
-  color: #fff;
-}
 ._49thIpYeG08pUfNc1x_w9 {
   display: flex;
   flex-direction: row;
@@ -295,6 +251,50 @@
 }
 ._2qz5D65VkY796Xw-al9f_a .SaleTagBlockCtn .TagBox {
   max-height: 38px;
+}
+._2qN9u-PUuidOe8A6u2BLnB {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+._2qN9u-PUuidOe8A6u2BLnB ._1UN_OM_UOz0xqO7EcRfKMv {
+  background: #000;
+  margin-left: auto;
+  display: flex;
+}
+._2uDosrOO-P5HteHs8r2DHF {
+  min-width: 80px;
+  margin-right: 10px;
+}
+._2uDosrOO-P5HteHs8r2DHF .DialogInputLabelGroup {
+  margin-bottom: 0px;
+}
+._2uDosrOO-P5HteHs8r2DHF .DialogDropDown._DialogInputContainer {
+  padding: 8px 12px;
+}
+._2uDosrOO-P5HteHs8r2DHF .DialogDropDown_Arrow {
+  top: 9px;
+  position: absolute;
+}
+._2xiHGC5uLleLI4yqeulx5a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+._2xiHGC5uLleLI4yqeulx5a a:not(.LinkButton) {
+  color: #fff;
+}
+._2xiHGC5uLleLI4yqeulx5a a._2fJMMn4OtB-DA4H4GDPp5I {
+  margin-top: 8px;
+  background: #fff;
+  padding: 4px 12px;
+  border-radius: 10px;
+  color: #000;
+}
+._2xiHGC5uLleLI4yqeulx5a a._2fJMMn4OtB-DA4H4GDPp5I:hover {
+  background: #000;
+  color: #fff;
 }
 ._3Kh2xkNOxK9yAzjUL6Ivgx {
   width: 100%;

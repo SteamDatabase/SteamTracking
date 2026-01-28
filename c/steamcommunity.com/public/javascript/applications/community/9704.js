@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "포함 가능 콘텐츠:",
 	"Error_LoadingContent": "콘텐츠를 불러오는 도중 오류가 발생했습니다.",
 	"Error_LoadingMarketItem": "요청하신 장터 아이템이 존재하지 않거나 해당 아이템을 불러오는 도중 일시적인 문제가 발생했을 수 있습니다. 나중에 다시 시도해 주세요.",
-	"ListingFilter_Title": "판매 등록 아이템 필터링"
+	"ListingFilter_Title": "판매 등록 아이템 필터링",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

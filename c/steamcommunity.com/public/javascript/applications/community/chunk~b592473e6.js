@@ -5,6 +5,7 @@
       module.exports = {
         EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
         EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
+        ColorPickerCtn: "_3qTvksxeNcdLlXlVi5T__3",
       };
     },
     chunkid: (module) => {
@@ -1715,6 +1716,7 @@
             },
             color: _,
             disableAlpha: _,
+            className: _().ColorPickerCtn,
           }),
           _.createElement(
             "div",

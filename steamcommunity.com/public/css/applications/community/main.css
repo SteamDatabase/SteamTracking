@@ -5157,8 +5157,10 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   gap: 8px;
   background-color: #3d4450;
   color: #fff;
-  padding: 4px 12px;
+  padding: 10px 16px;
   cursor: pointer;
+  border-radius: 2px;
+  font-weight: 400;
 }
 ._2tqpD1Hr0c3LCAUSe4r3Yp svg {
   height: 18px;
@@ -5168,15 +5170,20 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   text-decoration: none;
 }
 ._2tqpD1Hr0c3LCAUSe4r3Yp:hover {
-  background: rgba(119, 119, 119, 0.6);
+  background: #4c5461;
   transition: background-color 150ms ease-in;
 }
 ._2tqpD1Hr0c3LCAUSe4r3Yp ._1Wd-oBTdxaR4gdEOCU0Y_c {
-  font-size: 10px;
+  font-family: "Motiva Sans";
+  font-size: 12px;
+  font-style: normal;
+  line-height: normal;
   color: #b8bcbf;
 }
 ._2tqpD1Hr0c3LCAUSe4r3Yp ._3aAuWBf6nMD2HeEJd705tm {
-  color: #dcdedf;
+  color: #fff;
+  font-size: 15px;
+  font-style: normal;
 }
 ._2g3WvB3F6WH2CPUBwVzny3 {
   display: flex;
@@ -5197,13 +5204,18 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   font-weight: bold;
 }
 ._1PUlL2I2RWFcIXXAWteNhd {
-  margin-top: 12px;
+  margin-top: 6px;
   width: 98%;
   margin-left: auto;
   margin-right: auto;
   display: block;
   height: 100px;
   box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0px #45556c;
 }
 ._2cJjGYel7Z-MKjj_XD8sUo ._22q2AtdL5ktX5sVuU9sItK {
   display: flex;
@@ -5283,8 +5295,9 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-block-start: 7px;
+  padding-block-start: 12px;
   width: 100%;
+  margin-bottom: 12px;
 }
 .ovujKSqZqv7MmjE0upPcI > div {
   display: flex;
@@ -5294,8 +5307,22 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
 .ovujKSqZqv7MmjE0upPcI > div input._1PFmi6hYnRJ7C8r3naWGJw {
   margin-inline-start: 5px;
   margin-inline-end: 5px;
-  border: .66px solid #767676;
   border-radius: 0;
+  margin-top: 6px;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0px #45556c;
+}
+.ovujKSqZqv7MmjE0upPcI > div input._1PFmi6hYnRJ7C8r3naWGJw:hover {
+  background: #23262e;
 }
 .jKuCG3stJGPaWsXdU2e4E {
   position: fixed;

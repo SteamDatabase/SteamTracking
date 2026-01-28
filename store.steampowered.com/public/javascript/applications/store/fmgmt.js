@@ -729,7 +729,7 @@
       var n = a(90626),
         l = a(68950),
         r = a(45699),
-        i = a(12447),
+        i = a(75422),
         s = a(53835),
         o = a(12155),
         m = a(38135),
@@ -2427,7 +2427,7 @@
               xe.kt,
               {
                 onSelected: () => {
-                  (0, Ge.o)(t.appid);
+                  (0, Ge.o)(t.appid, t.name);
                 },
               },
               (0, d.we)("#FamilyGame_PlayGame"),

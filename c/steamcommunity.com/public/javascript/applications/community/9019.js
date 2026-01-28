@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Olası İçerik:",
 	"Error_LoadingContent": "Bu içerik yüklenirken bir sorun meydana geldi.",
 	"Error_LoadingMarketItem": "İstenen öğe mevcut olmayabilir veya öğenin yüklenmesini engelleyen geçici bir sorun olabilir. Lütfen daha sonra tekrar deneyin.",
-	"ListingFilter_Title": "İlanları Filtrele"
+	"ListingFilter_Title": "İlanları Filtrele",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

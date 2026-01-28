@@ -10,6 +10,7 @@
       module.exports = {
         EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
         EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
+        ColorPickerCtn: "_3qTvksxeNcdLlXlVi5T__3",
       };
     },
     chunkid: (module) => {
@@ -246,101 +247,6 @@
         CategoryName: "_3VNsED3Ez-vqDraw_8QWsp",
         TopLevelCategory: "_2ZYjRLgkQLHW5_cstUffIp",
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "FocusNavHistoryID",
-        _ = new _._("FocusHistory").Debug;
-      function _(_) {
-        const { children: _, timeoutMS: __webpack_require__, ..._ } = _,
-          _ = (function (_ = 2) {
-            const _ = (0, _._)(),
-              _ = _.useRef(void 0),
-              _ = (0, _._)(),
-              _ = (0, _._)(),
-              _ = _.state && _.state[_],
-              _ = _.useRef(void 0),
-              [_, _] = _.useState(_);
-            return (
-              _.useLayoutEffect(() => {
-                if (!_.current) return;
-                const _ = _.current;
-                return _.Node().Tree.WindowContext.FocusChangedCallbacks.Register(
-                  (_, _, _) => {
-                    const _ = _.location;
-                    let _ = _.state && _.state[_];
-                    _ ||
-                      ((_ = _ ? `State_${_.key}` : `State_${_.Node().Tree._}`),
-                      (_.current = _),
-                      _.replace({
-                        ..._.location,
-                        state: {
-                          ..._.state,
-                          [_]: _,
-                        },
-                      })),
-                      _.current == _ &&
-                        (_
-                          ? _.SaveState(_)
-                          : window.history.replaceState(
-                              {
-                                ...window.history.state,
-                                [_]: (0, _._)(_.Node()),
-                              },
-                              "",
-                            ));
-                  },
-                ).Unregister;
-              }, [_, _]),
-              _.useLayoutEffect(() => {
-                if (_.current && _.current != _) {
-                  if (!_) return void _(void 0);
-                  const _ = _.current.NavTree().DeferredFocus;
-                  _.SuppressFocus(),
-                    _(`Start restoring history for ${_}, suppressing focus`);
-                  const _ = window.setTimeout(() => {
-                    _(_);
-                  }, _);
-                  return () => {
-                    window.clearTimeout(_), _.ExecuteQueuedFocus();
-                  };
-                }
-              }, [_, _]),
-              _.useEffect(() => {
-                if (!_ || !_.current) return;
-                const _ = _ ? null : window.history.state?.[_],
-                  _ = _.current.NavTree().DeferredFocus;
-                let _ = !1;
-                _
-                  ? (_ = _.current.RestoreState(_, 1))
-                  : _ && ((0, _._)(_.current.Node(), _, 0), (_ = !0)),
-                  _(
-                    `Completed restoring history for state ${_} - ${_ ? "had history." : "no history for this state."}`,
-                  ),
-                  _ ? _.Reset() : _.ExecuteQueuedFocus(),
-                  (_.current = _);
-              }, [_, _, _]),
-              _
-            );
-          })(__webpack_require__);
-        return _.createElement(
-          _._,
-          {
-            ..._,
-            navRef: _,
-          },
-          _,
-        );
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1422,6 +1328,7 @@
             },
             color: _,
             disableAlpha: _,
+            className: _().ColorPickerCtn,
           }),
           _.createElement(
             "div",
@@ -5284,7 +5191,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -6011,7 +5917,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_rgSections;
@@ -6138,22 +6043,16 @@
               navTreeRef: _,
             },
             _.createElement(
-              _._,
+              "div",
               {
-                timeoutMS: 1e3,
+                className: _.CategorySectionsCtn,
               },
-              _.createElement(
-                "div",
-                {
-                  className: _.CategorySectionsCtn,
-                },
-                _.map((_, _) =>
-                  _.createElement(_, {
-                    key: "section" + _.name,
-                    section: _,
-                    autoFocus: 0 == _,
-                  }),
-                ),
+              _.map((_, _) =>
+                _.createElement(_, {
+                  key: "section" + _.name,
+                  section: _,
+                  autoFocus: 0 == _,
+                }),
               ),
             ),
           )
@@ -6167,7 +6066,6 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6253,25 +6151,19 @@
             navID: "StoreSalePageRoot",
           },
           _.createElement(
-            _._,
+            _,
             {
-              timeoutMS: 1e3,
+              eventModel: _,
             },
             _.createElement(
-              _,
-              {
+              _._,
+              null,
+              _.createElement(_._, {
+                promotionName: _,
+                language: __webpack_require__,
                 eventModel: _,
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_._, {
-                  promotionName: _,
-                  language: __webpack_require__,
-                  eventModel: _,
-                  bIsPreview: _,
-                }),
-              ),
+                bIsPreview: _,
+              }),
             ),
           ),
         );

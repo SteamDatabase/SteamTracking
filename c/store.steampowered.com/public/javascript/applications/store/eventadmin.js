@@ -4651,6 +4651,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = __webpack_require__("chunkid"),
         _ = {
@@ -5690,9 +5691,9 @@
       };
       _ = (0, _._)([_._], _);
       const _ = (0, _._)((_) => {
-        const [_, __webpack_require__] = (0, _.useState)(
-            !_._.Get().BHasApp(_.appid),
-          ),
+        const { appid: _, clanSteamID: __webpack_require__ } = _,
+          _ = (0, _._)(_),
+          [_, _] = (0, _.useState)(!_._.Get().BHasApp(_.appid)),
           _ = _.useRef(_().CancelToken.source());
         if (
           ((0, _.useEffect)(
@@ -5703,10 +5704,11 @@
             [],
           ),
           (0, _.useEffect)(() => {
-            const { appid: _, clanSteamID: _ } = _;
+            const { appid: _, clanSteamID: __webpack_require__ } = _;
             if (
               (_ && !_._.Get().BHasApp(_)) ||
-              (_ && !_._.BHasClanInfoLoaded(_))
+              (__webpack_require__ &&
+                !_._.BHasClanInfoLoaded(__webpack_require__))
             ) {
               (async () => {
                 try {
@@ -5716,7 +5718,9 @@
                       include_release: !0,
                       include_screenshots: !0,
                     }),
-                    _ ? _._.LoadClanInfoForClanSteamID(_) : void 0,
+                    __webpack_require__
+                      ? _._.LoadClanInfoForClanSteamID(__webpack_require__)
+                      : void 0,
                   ]);
                 } catch (_) {
                   const _ = (0, _._)(_);
@@ -5725,7 +5729,7 @@
                     _,
                   );
                 } finally {
-                  _.current.token.reason || __webpack_require__(!1);
+                  _.current.token.reason || _(!1);
                 }
               })();
             }
@@ -5736,7 +5740,6 @@
             size: "small",
             string: (0, _._)("#EventModTile_AppInfoLoading"),
           });
-        const { appid: _, clanSteamID: _ } = _;
         if (_) {
           const _ = _._.Get().GetApp(_);
           return _
@@ -5753,8 +5756,7 @@
                   _.createElement(
                     _._,
                     {
-                      type: "app",
-                      _: _.GetAppID(),
+                      _: _,
                     },
                     _.createElement(
                       _._,
@@ -5770,8 +5772,7 @@
                   _.createElement(
                     _._,
                     {
-                      type: "app",
-                      _: _.GetAppID(),
+                      _: _,
                     },
                     _.createElement(
                       _._,
@@ -5785,8 +5786,8 @@
               )
             : null;
         }
-        if (_) {
-          const _ = _.GetAccountID(),
+        if (__webpack_require__) {
+          const _ = __webpack_require__.GetAccountID(),
             _ = _._.GetClanInfoByClanAccountID(_);
           if (_ && _.is_curator)
             return _.createElement(

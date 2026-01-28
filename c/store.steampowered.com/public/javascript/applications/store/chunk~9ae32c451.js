@@ -3,6 +3,33 @@
   [351],
   {
     chunkid: (module, module_exports, __webpack_require__) => {
+      function _(_) {
+        switch (_) {
+          case 0:
+            return "game";
+          case 6:
+            return "software";
+          case 1:
+            return "demo";
+          case 4:
+            return "dlc";
+          case 7:
+          case 3:
+            return "video";
+          case 11:
+            return "music";
+          case 12:
+            return "beta";
+          case 2:
+            return "mod";
+        }
+        return "invalid";
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -879,6 +906,274 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            creatorID: _,
+            bShowTagline: __webpack_require__,
+            bHideCreatorType: _,
+            bSmallFormat: _,
+            bHideFollowButton: _,
+            bAddLinkToMemberList: _,
+            bMinimalDisplay: _,
+          } = _,
+          { creatorHome: _ } = (0, _._)(_.clan_account_id),
+          [_] = (0, _._)();
+        if (_ || !_)
+          return _.createElement(
+            "div",
+            {
+              className: _.DevSummaryWidgetCtn,
+            },
+            _.createElement(_._, {
+              string: (0, _._)("#Loading"),
+              size: "medium",
+              position: "center",
+            }),
+          );
+        const _ = _.type,
+          _ =
+            "developer" == _.type
+              ? (0, _._)("#CreatorHome_DevelopedBy")
+              : "publisher" == _.type
+                ? (0, _._)("#CreatorHome_PublishedBy")
+                : (0, _._)("#CreatorHome_InFranchise"),
+          _ = _.GetCreatorHomeURL(_),
+          _ = _.GetNumFollowers();
+        return _.createElement(
+          _._,
+          null,
+          _.createElement(
+            _._,
+            {
+              feature: "salecreatorhome",
+            },
+            _.createElement(
+              _._,
+              {
+                className: (0, _._)(
+                  _.DevSummaryCtn,
+                  _ ? _.SmallFormat : _.LargeFormat,
+                  _ ? _.MinimalDisplay : "",
+                ),
+                "flow-children": "row",
+              },
+              !_ &&
+                _.createElement(
+                  "span",
+                  {
+                    className: _.Title,
+                  },
+                  _,
+                ),
+              _.createElement(
+                "div",
+                {
+                  className: _.DevSummaryWidgetCtn,
+                },
+                _.createElement("div", {
+                  className: _.DevSummaryBackground,
+                  style: {
+                    backgroundImage: `url(${_.GetAvatarURLFullSize()} )`,
+                  },
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_.DevSummaryContent),
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.FlexRowContainer,
+                    },
+                    _.createElement(
+                      _._,
+                      {
+                        href: (0, _._)(_),
+                        className: _.AvatarLink,
+                        bAllowFocuseableAnchor: !0,
+                      },
+                      _.createElement("img", {
+                        className: (0, _._)(_.Avatar, "Avatar_Trgt"),
+                        src: _.GetAvatarURLFullSize(),
+                      }),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: (0, _._)(
+                          _.FlexColumnContainer,
+                          _.CreatorDescCtn,
+                        ),
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: (0, _._)(
+                            _.CreatorTitleCtn,
+                            _.FlexColumnContainer,
+                          ),
+                        },
+                        _.createElement(
+                          _._,
+                          {
+                            href: (0, _._)(_),
+                            className: _.CreatorNameName,
+                          },
+                          _.GetName(),
+                        ),
+                        Boolean(__webpack_require__) &&
+                          _.createElement(
+                            "div",
+                            {
+                              className: (0, _._)(
+                                _.FlexColumnContainer,
+                                _.CreatorTagline,
+                              ),
+                            },
+                            _.GetTagLine(),
+                          ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: (0, _._)({
+                            [_.FlexColumnContainer]: _,
+                            [_.FlexRowContainer]: !_,
+                            [_.SocialFollowersCtn]: !0,
+                          }),
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: (0, _._)(_.FollowBtnCtn),
+                          },
+                          Boolean(!_) &&
+                            _.createElement(_._, {
+                              clanAccountID: _.clan_account_id,
+                              creatorID: _,
+                            }),
+                          _.createElement(
+                            "div",
+                            {
+                              className: (0, _._)({
+                                [_.Followers]: !0,
+                              }),
+                            },
+                            _.createElement(
+                              "span",
+                              null,
+                              (0, _._)("#CreatorHome_JustFollowers"),
+                            ),
+                            _.createElement(
+                              "span",
+                              {
+                                className: _.FollowerCount,
+                              },
+                              (0, _._)(_),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Boolean(_) &&
+                    _.createElement(
+                      "a",
+                      {
+                        href:
+                          _._.COMMUNITY_BASE_URL +
+                          "gid/" +
+                          _.GetClanSteamID().ConvertTo64BitString() +
+                          "/members/",
+                        target: "_blank",
+                        className: _.MembersListLink,
+                      },
+                      (0, _._)("#ClanMembershipList"),
+                    ),
+                ),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { appid: _, bSmallFormat: __webpack_require__ } = _,
+          [_] = (0, _._)(_, {
+            include_basic_info: !0,
+          });
+        if (!_) return null;
+        if (!_)
+          return _.createElement(
+            "div",
+            {
+              className: _.DevSummaryWidgetCtn,
+            },
+            _.createElement(_._, null),
+          );
+        let _;
+        const _ = _.GetAllDeveloperCreatorClans();
+        if (_?.length > 0)
+          _ = {
+            appid: _,
+            name: "",
+            clan_account_id: _[0],
+            type: "developer",
+          };
+        else {
+          const _ = _.GetAllPublisherCreatorClans();
+          if (_?.length > 0)
+            _ = {
+              appid: _,
+              name: "",
+              clan_account_id: _[0],
+              type: "publisher",
+            };
+          else {
+            const _ = _.GetAllFranchiseCreatorClans();
+            _?.length > 0 &&
+              (_ = {
+                appid: _,
+                name: "",
+                clan_account_id: _[0],
+                type: "franchise",
+              });
+          }
+        }
+        return _
+          ? _.createElement(
+              _._,
+              null,
+              _.createElement(_, {
+                creatorID: _,
+                bSmallFormat: __webpack_require__,
+              }),
+            )
+          : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -1068,6 +1363,47 @@
         (0, _._)([_._], _.prototype, "m_jumpToSection", void 0),
         (0, _._)([_._], _.prototype, "m_jumpToSubsection", void 0),
         (0, _._)([_._], _.prototype, "HandleMessage", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          href: _,
+          children: __webpack_require__,
+          bAllowFocuseableAnchor: _,
+          ..._
+        } = _;
+        return (0, _._)()
+          ? _.createElement(
+              "div",
+              {
+                ..._,
+              },
+              __webpack_require__,
+            )
+          : _
+            ? _.createElement(
+                _._,
+                {
+                  href: _,
+                  ..._,
+                },
+                __webpack_require__,
+              )
+            : _.createElement(
+                "a",
+                {
+                  href: _,
+                  ..._,
+                },
+                __webpack_require__,
+              );
+      }
     },
   },
 ]);

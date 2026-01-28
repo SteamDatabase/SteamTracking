@@ -649,29 +649,6 @@ enum EEventState
 	k_EEventStateUnlisted = 3;
 }
 
-enum EFamilyGroupMembershipRemovalReason
-{
-	k_EFamilyGroupMembershipRemovalReason_Invalid = 0;
-	k_EFamilyGroupMembershipRemovalReason_LeftFamily = 1;
-	k_EFamilyGroupMembershipRemovalReason_KickedFromFamily = 2;
-	k_EFamilyGroupMembershipRemovalReason_DeletedFamily = 3;
-}
-
-enum EFamilyGroupRole
-{
-	k_EFamilyGroupRole_None = 0;
-	k_EFamilyGroupRole_Adult = 1;
-	k_EFamilyGroupRole_Child = 2;
-	k_EFamilyGroupRole_MAX = 3;
-}
-
-enum EFamilyGroupsTwoFactorMethod
-{
-	k_EFamilyGroupsTwoFactorMethodNone = 0;
-	k_EFamilyGroupsTwoFactorMethodMobile = 1;
-	k_EFamilyGroupsTwoFactorMethodEmail = 2;
-}
-
 enum EFamilyQuery
 {
 	k_EFamilyQueryNone = 0;
@@ -1154,16 +1131,6 @@ enum EPurchaseNoticeType
 	EPurchaseNoticeType_VRSupported = 2;
 }
 
-enum EPurchaseRequestAction
-{
-	k_EPurchaseRequestAction_None = 0;
-	k_EPurchaseRequestAction_Decline = 1;
-	k_EPurchaseRequestAction_Purchased = 2;
-	k_EPurchaseRequestAction_Abandoned = 3;
-	k_EPurchaseRequestAction_Cancel = 4;
-	k_EPurchaseRequestAction_MAX = 5;
-}
-
 enum EPurchaseReservationState
 {
 	k_EPurchaseReservationState_NotReserved = 0;
@@ -1239,39 +1206,6 @@ enum ESection
 	k_ESectionDefault = 1;
 	k_ESectionFamily = 2;
 	k_ESectionMax = 3;
-}
-
-enum ESharedLibrary
-{
-	k_ESharedLibrary_Included = 0;
-	k_ESharedLibrary_AppExcluded_ByPartner = 1;
-	k_ESharedLibrary_LicenseExcluded = 2;
-	k_ESharedLibrary_FreeGame = 3;
-	k_ESharedLibrary_LicensePrivate = 4;
-	k_ESharedLibrary_AppExcluded_WrongAppType = 6;
-	k_ESharedLibrary_AppExcluded_NonrefundableDLC = 7;
-	k_ESharedLibrary_AppExcluded_UnreleasedApp = 8;
-	k_ESharedLibrary_AppExcluded_ParentAppExcluded = 9;
-	k_ESharedLibrary_PackageExcluded_ByPartner = 10;
-	k_ESharedLibrary_PackageExcluded_Special = 11;
-	k_ESharedLibrary_PackageExcluded_Dev = 12;
-	k_ESharedLibrary_PackageExcluded_FreeWeekend = 13;
-	k_ESharedLibrary_PackageExcluded_Invalid = 15;
-	k_ESharedLibrary_PackageExcluded_RecurringLicense = 16;
-	k_ESharedLibrary_PackageExcluded_WrongLicenseType = 17;
-	k_ESharedLibrary_PackageExcluded_MasterSub = 18;
-	k_ESharedLibrary_PackageExcluded_NoShareableApps = 19;
-	k_ESharedLibrary_LicenseExcluded_PaymentMasterSub = 20;
-	k_ESharedLibrary_LicenseExcluded_PaymentFamilyGroup = 21;
-	k_ESharedLibrary_LicenseExcluded_PaymentAuthorizedDevice = 22;
-	k_ESharedLibrary_LicenseExcluded_PaymentAutoGrant = 23;
-	k_ESharedLibrary_LicenseExcluded_FlagPending = 24;
-	k_ESharedLibrary_LicenseExcluded_FlagPendingRefund = 25;
-	k_ESharedLibrary_LicenseExcluded_FlagBorrowed = 26;
-	k_ESharedLibrary_LicenseExcluded_FlagAutoGrant = 27;
-	k_ESharedLibrary_LicenseExcluded_FlagTimedTrial = 28;
-	k_ESharedLibrary_LicenseExcluded_FreeSub = 29;
-	k_ESharedLibrary_LicenseExcluded_Inactive = 30;
 }
 
 enum ESortFacets
@@ -2612,36 +2546,6 @@ enum UnnamedEnum3864c06f550e20d6
 	Ok = 2;
 	Good = 3;
 	Excellent = 4;
-}
-
-enum UnnamedEnum3879140688fe89fb
-{
-	k_InvalidChangeType = 0;
-	k_FamilyGroupCreated = 1;
-	k_FamilyGroupModified = 2;
-	k_FamilyGroupDeleted = 3;
-	k_AccountInvited = 4;
-	k_InviteDeniedByGroupSize = 5;
-	k_JoinedFamilyGroup = 6;
-	k_JoinDeniedByRegionMismatch = 7;
-	k_JoinDeniedByMissingIpAddress = 8;
-	k_JoinDeniedByFamilyCooldown = 9;
-	k_JoinDeniedByUserCooldown = 10;
-	k_JoinDeniedByOtherGroup = 11;
-	k_AccountRemoved = 12;
-	k_InviteCanceled = 13;
-	k_PurchaseRequested = 14;
-	k_ParentalSettingsEnabled = 15;
-	k_ParentalSettingsDisabled = 16;
-	k_ParentalSettingsChanged = 17;
-	k_FamilyCooldownOverridesChanged = 18;
-	k_PurchaseRequestCanceled = 19;
-	k_PurchaseRequestApproved = 20;
-	k_PurchaseRequestDeclined = 21;
-	k_CooldownSkipConsumed = 22;
-	k_FamilyGroupRestored = 23;
-	k_JoinDenied = 24;
-	k_SupportForceAcceptedInvite = 25;
 }
 
 enum UnnamedEnum39f674ba4e63a642

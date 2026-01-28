@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Möjligt innehåll:",
 	"Error_LoadingContent": "Det uppstod ett problem vid inläsningen av detta innehåll",
 	"Error_LoadingMarketItem": "Den begärda artikeln finns antingen inte eller så förhindrar ett tillfälligt problem artikeln från att läsas in. Försök igen senare.",
-	"ListingFilter_Title": "Filtrera annonser"
+	"ListingFilter_Title": "Filtrera annonser",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

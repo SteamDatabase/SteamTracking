@@ -2065,7 +2065,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(
@@ -4062,8 +4061,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { appid: _ } = _,
           _ = (0, _._)(_),
@@ -5403,7 +5402,178 @@
         let _ = (0, _.useRef)(!1);
         return _ && (_.current = !0), _.current;
       }
-      const _ = _.lazy(() =>
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { category: _ } = _;
+        return _.createElement(
+          "span",
+          {
+            className: _().CompatibilityDetailRatingDescription,
+          },
+          (0, _._)((0, _._)(_)),
+        );
+      }
+      function _(_) {
+        const { category: _ } = _;
+        return _.createElement(
+          "span",
+          {
+            className: _().CompatibilityDetailRatingDescription,
+          },
+          (0, _._)((0, _._)(_)),
+        );
+      }
+      function _(_) {
+        const {
+            results: _,
+            learnMore: __webpack_require__,
+            appName: _,
+            eStartingTab: _,
+          } = _,
+          [_, _] = (0, _.useState)(!1);
+        let _ = _.useCallback(
+          (_) => {
+            const _ = (0, _._)();
+            _ && _.AddEvent(1003), _(!0);
+          },
+          [_],
+        );
+        let _ = {
+          onOKButton: void 0,
+          onOKActionDescription: null,
+          onCancelActionDescription: (0, _._)("#Button_Close"),
+          onCancelButton: () => _(!1),
+        };
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            _._,
+            {
+              className: _().LearnMore,
+              onClick: _,
+            },
+            __webpack_require__,
+          ),
+          _.createElement(
+            _._,
+            {
+              active: _,
+              onDismiss: () => {
+                _(!1);
+              },
+              modalClassName: "DeckVerifiedModalDialog",
+            },
+            _.createElement(
+              _._,
+              null,
+              _.createElement(
+                _._,
+                {
+                  focusable: !1,
+                  "flow-children": "column",
+                  onGamepadDirection: (_) => !0,
+                },
+                _.createElement(_._, {
+                  results: _,
+                  buttonProps: _,
+                  appName: _,
+                  eStartingTab: _,
+                  autoFocus: !0,
+                }),
+              ),
+            ),
+          ),
+        );
+      }
+      const _ = function (_) {
+          const {
+              appID: _,
+              results: __webpack_require__,
+              appName: _,
+              tab: _,
+            } = _,
+            _ = (0, _._)(),
+            _ = "steamos" == _ ? 2 : 1;
+          let _, _, _;
+          2 == _
+            ? ((_ = (0, _._)(
+                "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
+              )),
+              (_ = _.createElement(_._, {
+                category: __webpack_require__.steamos_resolved_category,
+              })),
+              (_ = _.createElement(_, {
+                category: __webpack_require__.steamos_resolved_category,
+              })))
+            : ((_ = _
+                ? (0, _._)(
+                    "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+                  )
+                : (0, _._)(
+                    "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
+                  )),
+              (_ = _.createElement(_._, {
+                category: __webpack_require__.resolved_category,
+              })),
+              (_ = _.createElement(_, {
+                category: __webpack_require__.resolved_category,
+              })));
+          const _ = __webpack_require__?.steam_deck_blog_url,
+            _ = _.useId();
+          return __webpack_require__
+            ? _.createElement(
+                "div",
+                {
+                  className: _().BannerContainer,
+                  role: "group",
+                  "aria-labelledby": _,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().BannerHeader,
+                    _: _,
+                  },
+                  _,
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _ ? _().BannerContent : _().BannerContentDesktop,
+                  },
+                  _.createElement("div", null, _, _),
+                  _.createElement(_, {
+                    results: __webpack_require__,
+                    learnMore: (0, _._)(
+                      "#SteamDeckVerified_Store_CompatSection_LearnMore",
+                    ),
+                    appName: _ || "",
+                    eStartingTab: _,
+                  }),
+                  _ &&
+                    _.createElement("div", {
+                      className: _().Divider,
+                    }),
+                  _ &&
+                    _.createElement(_._, {
+                      url: __webpack_require__.steam_deck_blog_url,
+                      containerClass: _().DeveloperComments_Anchor,
+                      bIncludeIcon: !0,
+                    }),
+                ),
+              )
+            : ("dev" == _._.WEB_UNIVERSE &&
+                console.error(
+                  "deck verified banner received empty results for appid: " + _,
+                ),
+              null);
+        },
+        _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
             .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
@@ -5436,6 +5606,35 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -5443,26 +5642,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -5531,7 +5710,7 @@
                   }),
                 ),
               "deck-verified-results": (_) =>
-                _.createElement(_._, {
+                _.createElement(_, {
                   appID: _,
                   results: (0, _._)("deckcompatibility", "application_config"),
                   appName: (0, _._)("appname", "application_config"),

@@ -214,7 +214,7 @@
     4729: (t, c, n) => {
       "use strict";
       n.r(c), n.d(c, { default: () => Ft });
-      var e = n(17304),
+      var e = n(55156),
         l = n(83392),
         a = n(90534),
         r = n(48474),
@@ -2006,7 +2006,7 @@
       var e = n(90626),
         l = n(21869),
         a = n(6635),
-        r = n(17304),
+        r = n(55156),
         o = n(738),
         s = n(69818),
         i = n(78327),
@@ -4560,7 +4560,8 @@
           } else a = (0, Rt.Z)(a, (t) => t.strLabel);
         }
         if (e && 0 === r) return null;
-        if (e && e.total === r) return null;
+        if (e && e.total === r && 1 === Object.keys(e.counts[t.name]).length)
+          return null;
         return { strLabel: t.localized_name, rgOptions: a, fieldType: c };
       }
       function nc(t, c, n, e) {
@@ -8369,7 +8370,11 @@
         AppHome: (t, c) => l.Search({ ...c, search: `appid=${t}` }),
         AdvancedSearch: (t = {}) => a("advancedsearch", t),
         Search: (t = {}) => a("search", t),
-        Item: (t, c, n = {}) => a(`listings/${t}/${encodeURIComponent(c)}`, n),
+        Item: (t, c, n = {}) =>
+          a(
+            `listings/${t}/${encodeURIComponent(c)}${n.bucket ? `/${encodeURIComponent(n.bucket)}` : ""}`,
+            n,
+          ),
       };
       function a(t, c = {}) {
         let n = "";

@@ -10,6 +10,7 @@
       module.exports = {
         EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
         EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
+        ColorPickerCtn: "_3qTvksxeNcdLlXlVi5T__3",
       };
     },
     chunkid: (module) => {
@@ -1821,6 +1822,7 @@
             },
             color: _,
             disableAlpha: _,
+            className: _().ColorPickerCtn,
           }),
           _.createElement(
             "div",
@@ -5681,7 +5683,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -10090,11 +10091,17 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { Item: _ } = _,
           _ = (0, _._)(_),
@@ -10184,11 +10191,6 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _, mostPlayedOption: __webpack_require__ } = _;
         return _.createElement(
@@ -10319,7 +10321,8 @@
               __webpack_require__?.GetStoreItemType(),
               __webpack_require__?.GetAppType(),
             ),
-          };
+          },
+          _ = (0, _._)(_);
         return _.createElement(
           _.Fragment,
           null,
@@ -10379,7 +10382,7 @@
                 className: _().PriceWidget,
               },
               _.createElement(_._, {
-                info: _,
+                _: _,
               }),
             ),
           ),
@@ -11834,6 +11837,7 @@
               __webpack_require__?.GetAppType(),
             ),
           },
+          _ = (0, _._)(_),
           _ = (0, _._)(
             __webpack_require__.GetPlatforms().steam_deck_compat_category,
           );
@@ -11896,7 +11900,7 @@
                 className: _().PriceWidget,
               },
               _.createElement(_._, {
-                info: _,
+                _: _,
               }),
             ),
           ),

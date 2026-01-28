@@ -507,7 +507,7 @@
             displayWidth: 0,
             displayHeight: 0,
           }),
-          _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(null),
           [_, _] = (0, _._)();
         return (
           (0, _.useEffect)(() => {
@@ -536,10 +536,13 @@
                 _.createElement("img", {
                   ..._,
                   className: (0, _._)({
-                    [_.className]: Boolean(_.className),
-                    [_.ExpandableHover]: !0,
+                    ...(_.className && {
+                      [_.className]: !0,
+                    }),
                   }),
-                  onClick: (_) => _([_.src]),
+                  onClick: (_) => {
+                    _.src && _([_.src]);
+                  },
                 }),
               )
             : _.createElement("img", {

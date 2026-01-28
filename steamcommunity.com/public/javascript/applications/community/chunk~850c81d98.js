@@ -437,6 +437,7 @@
                     br: s.qM.readString,
                     bw: s.gp.writeString,
                   },
+                  on_market: { n: 36, br: s.qM.readBool, bw: s.gp.writeBool },
                 },
               }),
             B.sm_m

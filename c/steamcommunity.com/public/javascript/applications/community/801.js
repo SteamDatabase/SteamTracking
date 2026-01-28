@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Contenu possible :",
 	"Error_LoadingContent": "Une erreur s'est produite lors du chargement de ce contenu.",
 	"Error_LoadingMarketItem": "L'item demandé est peut-être introuvable, ou bien un problème temporaire empêche son chargement. Veuillez réessayer plus tard.",
-	"ListingFilter_Title": "Filtrer les offres…"
+	"ListingFilter_Title": "Filtrer les offres…",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

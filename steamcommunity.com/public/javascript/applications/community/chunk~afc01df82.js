@@ -860,7 +860,7 @@
     },
     35685: (e, t, a) => {
       "use strict";
-      a.d(t, { kH: () => j, rN: () => F, uY: () => z, zA: () => V });
+      a.d(t, { kH: () => Y, rN: () => z, uY: () => j, zA: () => W });
       var n = a(22837),
         l = a(41735),
         r = a.n(l),
@@ -897,8 +897,10 @@
         x = a(18654),
         M = a.n(x),
         O = a(84518),
-        P = a(38535);
-      const F = (0, o.PA)((e) => {
+        P = a(38535),
+        F = a(39777),
+        H = a(35380);
+      const z = (0, o.PA)((e) => {
           const {
               clanAccountID: t,
               gidAnnouncement: a,
@@ -1032,7 +1034,7 @@
                   navEntryPreferPosition: g.iU.PREFERRED_CHILD,
                 },
                 d.map((e) =>
-                  c.createElement(z, { key: e.AnnouncementGID, event: e }),
+                  c.createElement(j, { key: e.AnnouncementGID, event: e }),
                 ),
               ),
               Boolean(C) &&
@@ -1046,8 +1048,8 @@
             ),
           );
         }),
-        H = 30;
-      function z(e) {
+        V = 30;
+      function j(e) {
         const {
             event: t,
             imageURLOverride: a,
@@ -1088,7 +1090,7 @@
           D = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
         let N = C;
         return (
-          C && (C.length > H || p.length > H) && (N = void 0),
+          C && (C.length > V || p.length > V) && (N = void 0),
           c.createElement(
             c.Fragment,
             null,
@@ -1167,18 +1169,20 @@
               ),
             ),
             Boolean(l && t.appid) &&
-              c.createElement(V, { appid: t.appid, bHidePrice: m }),
+              c.createElement(W, { appid: t.appid, bHidePrice: m }),
           )
         );
       }
-      function V(e) {
+      function W(e) {
         const { appid: t, bHidePrice: a } = e,
           [n] = (0, I.t7)(t, s.Xh),
-          l = (0, b.n9)(),
-          r = (0, y.Qn)();
-        if (!n) return null;
-        const o = n.GetBestPurchaseOption(),
-          i = null == o ? void 0 : o.hide_discount_pct_for_compliance;
+          l = (0, H.$5)(t),
+          { data: r } = (0, F.J$)(l),
+          o = (0, b.n9)(),
+          i = (0, y.Qn)();
+        if (!n || !r) return null;
+        const g = n.GetBestPurchaseOption(),
+          d = null == g ? void 0 : g.hide_discount_pct_for_compliance;
         return c.createElement(
           O.A,
           { appID: t },
@@ -1186,7 +1190,7 @@
             m.Z,
             {
               className: (0, L.A)(G().AppCapsuleCtn, "AppCapsuleCtn"),
-              ...(0, A.S)(n, l, r, !1),
+              ...(0, A.S)(r, o, i, !1),
             },
             c.createElement(
               B.Qf,
@@ -1209,34 +1213,34 @@
                 {
                   className: (0, L.A)(
                     G().AppCapsulePrice,
-                    Boolean(null == o ? void 0 : o.discount_pct)
+                    Boolean(null == g ? void 0 : g.discount_pct)
                       ? M().Discounted
                       : "",
                   ),
                 },
-                Boolean((null == o ? void 0 : o.discount_pct) && i) &&
+                Boolean((null == g ? void 0 : g.discount_pct) && d) &&
                   c.createElement(
                     "div",
                     { className: M().DiscountIconCtn },
                     c.createElement(k.XH_, null),
                   ),
-                Boolean((null == o ? void 0 : o.discount_pct) && !i) &&
+                Boolean((null == g ? void 0 : g.discount_pct) && !d) &&
                   c.createElement(
                     "span",
                     { className: M().StoreSaleDiscountBox },
-                    `-${null == o ? void 0 : o.discount_pct}%`,
+                    `-${null == g ? void 0 : g.discount_pct}%`,
                   ),
-                Boolean(o.final_price_in_cents) &&
+                Boolean(g.final_price_in_cents) &&
                   c.createElement(
                     "span",
                     { className: M().StoreSalePriceBox },
-                    o.formatted_final_price,
+                    g.formatted_final_price,
                   ),
               ),
           ),
         );
       }
-      function j(e) {
+      function Y(e) {
         const { event: t, imageURLOverride: a, onClick: l } = e,
           r = (0, P.Zj)(t.appid),
           o = (0, n.sf)(y.TS.LANGUAGE),

@@ -2380,8 +2380,8 @@
           return (
             !_.Parent &&
               _.BIsEnabled() &&
-              (__webpack_require__.SetActiveNavTree(_, !0),
-              (this.m_LastActiveContext = this.m_ActiveContext = _)),
+              ((this.m_LastActiveContext = this.m_ActiveContext = _),
+              __webpack_require__.SetActiveNavTree(_, !0)),
             () => {
               __webpack_require__
                 .UnregisterGamepadNavigationTree(_)
@@ -4127,6 +4127,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = {
           name: "cookieSettings",
@@ -4136,6 +4137,17 @@
             path: "/",
             sameSite: "none",
             maxAge: 31536e6,
+          },
+          preferenceControls: {
+            isTechnicallyNecessary: !0,
+          },
+        },
+        _ = {
+          name: "shoppingCartGID",
+          options: {
+            path: "/",
+            secure: !0,
+            maxAge: 6048e5,
           },
           preferenceControls: {
             isTechnicallyNecessary: !0,
@@ -5313,13 +5325,16 @@
           fnOnCancelButton: _.useCallback(
             (_) => {
               const _ = _.current;
-              return (null == _
-                ? void 0
-                : __webpack_require__.BFocusWithin()) &&
-                !__webpack_require__.BHasFocus() &&
-                __webpack_require__.TakeFocus(_.detail.button)
-                ? (_ && _(!1), !0)
-                : !!_ && _(_);
+              return "self" != __webpack_require__.Node().GetFocusable()
+                ? (console.warn(
+                    "PanelGroup is not focusable - ignoring cancel action",
+                  ),
+                  !1)
+                : __webpack_require__.BFocusWithin() &&
+                    !__webpack_require__.BHasFocus() &&
+                    __webpack_require__.TakeFocus(_.detail.button)
+                  ? (_ && _(!1), !0)
+                  : !!_ && _(_);
             },
             [_, _, _],
           ),
@@ -5689,15 +5704,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new (__webpack_require__("chunkid")._)("FocusHistory"),
         _ = _.Debug;
@@ -5745,12 +5753,12 @@
           const { sNavKey: _, iActiveChild: _, rgChildren: _ } = _;
           _ && (0, _._)(_ == _.NavKey, "navkey mismatch"), _.SetActiveChild(_);
           const _ = _.IsDebugEnabled()
-            ? (function (_) {
+            ? `[${_.Tree._}]${(function (_) {
                 if (0 == _) return "";
                 let _ = "";
                 for (let _ = 0; _ < _; _++) _ += "*";
                 return (_ += " "), _;
-              })(__webpack_require__)
+              })(__webpack_require__)}`
             : "";
           if (_ && _.length) {
             const [_] = _.GetChildren();
@@ -5788,6 +5796,12 @@
           }
         }
       }
+      function _(_) {
+        return _.SerializeNavState(_, !0, !1);
+      }
+      function _(_, _, __webpack_require__ = 0) {
+        return _.RestoreSerializedNavState(_, _, __webpack_require__);
+      }
       class _ extends _ {
         constructor() {
           super(...arguments), (this.m_rgHistory = []);
@@ -5817,7 +5831,26 @@
           );
         }
       }
-      var _ = __webpack_require__("chunkid");
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _ = window) {
         return _[_];
       }
@@ -5853,14 +5886,14 @@
           return this.m_node.NavKey;
         }
         PushState() {
-          this.m_History || (this.m_History = new _(this.m_node)),
+          this.m_History || (this.m_History = new _._(this.m_node)),
             this.m_History.PushState();
         }
         PopState(_ = 0) {
           this.m_History && this.m_History.PopState(_);
         }
         SaveState(_) {
-          this.m_StateHistory || (this.m_StateHistory = new _(this.m_node)),
+          this.m_StateHistory || (this.m_StateHistory = new _._(this.m_node)),
             this.m_StateHistory.SaveState(_);
         }
         RestoreState(_, _ = 0) {
@@ -5869,13 +5902,10 @@
           );
         }
         GetFocusSnapshot() {
-          return (_ = this.m_node), _.SerializeNavState(_, !0, !1);
-          var _;
+          return (0, _._)(this.m_node);
         }
         RestoreFocusSnapshot(_, _ = 0) {
-          return (function (_, _, __webpack_require__ = 0) {
-            return _.RestoreSerializedNavState(_, _, __webpack_require__);
-          })(this.m_node, _, _);
+          return (0, _._)(this.m_node, _, _);
         }
         NavTree() {
           return this.m_node.Tree;
@@ -7466,9 +7496,8 @@
         }
         FindClosestFocusableNodeToRect(_, _) {
           const _ = (0, _._)(_),
-            _ = _ && _._[_];
-          console.log(_, _);
-          const _ = [];
+            _ = _ && _._[_],
+            _ = [];
           for (const _ of this.m_rgChildren) {
             const _ = _.GetBoundingRect();
             if (_) {
@@ -7483,10 +7512,7 @@
           }
           _.sort((_, _) =>
             _.dist != _.dist ? _.dist - _.dist : _.overlap - _.overlap,
-          ),
-            _.forEach(({ child: _, dist: _, overlap: _ }) =>
-              console.log(`dist ${_} overlap ${_}`, _.Element),
-            );
+          );
           for (const { child: _ } of _) {
             const _ = __webpack_require__.FindFocusableNode(_, _);
             if (_) return _;
@@ -30468,7 +30494,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.trailer_name || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3, 4, 5, 6], null);
+            _.Message.initialize(this, _, 0, -1, [5, 6], null);
         }
         static M() {
           return (
@@ -30490,18 +30516,6 @@
                     _: 13,
                     _: _._.readEnum,
                     _: _._.writeEnum,
-                  },
-                  trailer_480p: {
-                    _: 3,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  trailer_max: {
-                    _: 4,
-                    _: _,
-                    _: !0,
-                    _: !0,
                   },
                   microtrailer: {
                     _: 5,
@@ -35777,6 +35791,11 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -35900,25 +35919,25 @@
         const _ = (0, _._)();
         return (0, _._)(
           (function (_, _) {
+            return _(_, _, "include_reviews", "reviews");
+          })(_, _),
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _) {
             return _(_, _, "include_release", "release");
           })(_, _),
         );
       }
       function _(_) {
         const _ = (0, _._)();
-        return (0, _._)(
-          (function (_, _) {
-            return _(_, _, "top_tags", "tags");
-          })(_, _),
-        );
+        return (0, _._)(_(_, _));
       }
       function _(_) {
         const _ = (0, _._)();
-        return (0, _._)(
-          (function (_, _) {
-            return _(_, _, "include_platforms", "platforms");
-          })(_, _),
-        );
+        return (0, _._)(_(_, _));
       }
       function _(_, _) {
         return _(_, _, "include_assets", "assets");
@@ -35930,6 +35949,12 @@
           "include_assets_without_overrides",
           "assets_without_overrides",
         );
+      }
+      function _(_, _) {
+        return _(_, _, "top_tags", "tags");
+      }
+      function _(_, _) {
+        return _(_, _, "include_platforms", "platforms");
       }
       function _(_, _) {
         return _(_, _, "include_all_purchase_options", "purchase_options");
@@ -36083,6 +36108,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -36189,6 +36215,9 @@
       }
       function _() {
         return _.useContext(_).storeBrowseContext;
+      }
+      function _() {
+        return _.useContext(_);
       }
       function _(_) {
         const {
@@ -36486,6 +36515,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
@@ -37249,11 +37279,21 @@
           return _ && _.match(/^[a-zA-Z0-9\-.]*$/) ? _ : "";
         }
       }
+      function _(_) {
+        return {
+          ..._,
+          domain: _.SanitizeEventComponent(_.domain),
+          controller: _.SanitizeEventComponent(_.controller),
+          method: _.SanitizeEventComponent(_.method),
+          submethod: _.SanitizeEventComponent(_.submethod),
+          feature: _.SanitizeEventComponent(_.feature),
+          depth: _.depth || 0,
+        };
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -37303,16 +37343,15 @@
         return _.useContext(_);
       }
       function _(_, _) {
-        return _(_(), _, _);
-      }
-      function _(_, _, _) {
-        return {
-          ..._,
-          feature: _ || _.feature,
-          depth: _ || _.depth,
-          countrycode: _._.COUNTRY,
-          is_client: _._.IN_CLIENT,
-        };
+        return (function (_, _, _) {
+          return {
+            ..._,
+            feature: _ || _.feature,
+            depth: _ || _.depth,
+            countrycode: _._.COUNTRY,
+            is_client: _._.IN_CLIENT,
+          };
+        })(_(), _, _);
       }
       function _(_, _, _) {
         const _ = _();
@@ -44300,10 +44339,6 @@
         GetAppID() {
           return this.m_unAppID;
         }
-        GetAppIDToRun() {
-          const _ = this.GetParentAppID();
-          return _ && 11 != this.m_eAppType ? _ : this.GetAppID();
-        }
         GetAppType() {
           return this.m_eAppType;
         }
@@ -45165,17 +45200,7 @@
           const _ = _.trailer_url_format();
           if (
             (_ &&
-              (_.trailer_480p() &&
-                (this.m_Trailer480p = this.ExtractTrailerFormats(
-                  _,
-                  _.trailer_480p(),
-                )),
-              _.trailer_max() &&
-                (this.m_TrailerMax = this.ExtractTrailerFormats(
-                  _,
-                  _.trailer_max(),
-                )),
-              _.microtrailer() &&
+              (_.microtrailer() &&
                 (this.m_MicroTrailer = this.ExtractTrailerFormats(
                   _,
                   _.microtrailer(),
@@ -45209,12 +45234,6 @@
         }
         GetTrailerCategory() {
           return this.m_eTrailerCategory;
-        }
-        GetTrailer480p() {
-          return this.m_Trailer480p;
-        }
-        GetTrailerMax() {
-          return this.m_TrailerMax;
         }
         GetTrailersDash() {
           return this.m_rgDashTrailers;
@@ -47086,6 +47105,11 @@
                     _: 22,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  delete_reason: {
+                    _: 23,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
                   },
                 },
               }),
@@ -84508,6 +84532,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -84695,6 +84720,11 @@
           (_.name = _ || Date.now().toString()),
           _
         );
+      }
+      function _(_, _, _) {
+        let _ = _.parentElement;
+        for (; _ && _ !== _ && !_.hasAttribute(_); ) _ = _.parentElement;
+        return _ || _;
       }
       function _(_, _) {
         let _ = _;

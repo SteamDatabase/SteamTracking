@@ -14041,11 +14041,16 @@
           _ = _.useCallback(
             (_) => {
               const _ = _.current;
-              return __webpack_require__?.BFocusWithin() &&
-                !__webpack_require__.BHasFocus() &&
-                __webpack_require__.TakeFocus(_.detail.button)
-                ? (_ && _(!1), !0)
-                : !!_ && _(_);
+              return "self" != __webpack_require__.Node().GetFocusable()
+                ? (console.warn(
+                    "PanelGroup is not focusable - ignoring cancel action",
+                  ),
+                  !1)
+                : __webpack_require__.BFocusWithin() &&
+                    !__webpack_require__.BHasFocus() &&
+                    __webpack_require__.TakeFocus(_.detail.button)
+                  ? (_ && _(!1), !0)
+                  : !!_ && _(_);
             },
             [_, _, _],
           );
@@ -15459,7 +15464,7 @@
             displayWidth: 0,
             displayHeight: 0,
           }),
-          _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(null),
           [_, _] = (function () {
             const [_, _] = _.useState(void 0),
               _ = _.useCallback(() => _(void 0), []),
@@ -15502,10 +15507,13 @@
                 _.createElement("img", {
                   ..._,
                   className: (0, _._)({
-                    [_.className]: Boolean(_.className),
-                    [_.ExpandableHover]: !0,
+                    ...(_.className && {
+                      [_.className]: !0,
+                    }),
                   }),
-                  onClick: (_) => _([_.src]),
+                  onClick: (_) => {
+                    _.src && _([_.src]);
+                  },
                 }),
               )
             : _.createElement("img", {
@@ -21587,6 +21595,9 @@
                     "#AppTypeLabel_music",
                   ],
                   initially_selected_values: ["#AppTypeLabel_game"],
+                },
+                {
+                  loc_token: "#Sale_Preferences",
                 },
               ],
               initially_expanded_facets: [
@@ -32066,7 +32077,7 @@
               className: _().ConfirmationContainer,
             },
             _.createElement("img", {
-              src: _,
+              src: (0, _._)(_),
             }),
             _.createElement(
               "div",
@@ -34556,11 +34567,11 @@
         return _(
           _,
           (function (_) {
-            return [
-              _?.jsondata?.read_more_link
-                ? (0, _._)(_.jsondata.read_more_link).toLocaleLowerCase()
-                : void 0,
-            ];
+            if (!_) return;
+            let _ = _?.jsondata?.read_more_link
+              ? (0, _._)(_.jsondata.read_more_link).toLocaleLowerCase()
+              : void 0;
+            return _ ? [_] : void 0;
           })(_),
         );
       }
@@ -34588,9 +34599,11 @@
         let _,
           _ = (0, _._)(_);
         (_ = (function (_, _) {
-          return _(_, _)
-            ? (_._.IN_CLIENT ? "steam://openurl_external/" : "") + _(_)
-            : (0, _._)(_);
+          return _
+            ? (_ = _(_, _)
+                ? (_._.IN_CLIENT ? "steam://openurl_external/" : "") + _(_)
+                : (0, _._)(_))
+            : "";
         })(_, __webpack_require__)),
           _(_) && (_ = "noopener nofollow");
         const _ =
@@ -37170,12 +37183,12 @@
           const { sNavKey: _, iActiveChild: _, rgChildren: _ } = _;
           _ && (0, _._)(_ == _.NavKey, "navkey mismatch"), _.SetActiveChild(_);
           const _ = _.IsDebugEnabled()
-            ? (function (_) {
+            ? `[${_.Tree._}]${(function (_) {
                 if (0 == _) return "";
                 let _ = "";
                 for (let _ = 0; _ < _; _++) _ += "*";
                 return (_ += " "), _;
-              })(__webpack_require__)
+              })(__webpack_require__)}`
             : "";
           if (_ && _.length) {
             const [_] = _.GetChildren();
@@ -38811,9 +38824,8 @@
         }
         FindClosestFocusableNodeToRect(_, _) {
           const _ = (0, _._)(_),
-            _ = _ && _._[_];
-          console.log(_, _);
-          const _ = [];
+            _ = _ && _._[_],
+            _ = [];
           for (const _ of this.m_rgChildren) {
             const _ = _.GetBoundingRect();
             if (_) {
@@ -38828,10 +38840,7 @@
           }
           _.sort((_, _) =>
             _.dist != _.dist ? _.dist - _.dist : _.overlap - _.overlap,
-          ),
-            _.forEach(({ child: _, dist: _, overlap: _ }) =>
-              console.log(`dist ${_} overlap ${_}`, _.Element),
-            );
+          );
           for (const { child: _ } of _) {
             const _ = __webpack_require__.FindFocusableNode(_, _);
             if (_) return _;
@@ -58101,7 +58110,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.trailer_name || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3, 4, 5, 6], null);
+            _.Message.initialize(this, _, 0, -1, [5, 6], null);
         }
         static sm_m;
         static sm_mbf;
@@ -58125,18 +58134,6 @@
                     _: 13,
                     _: _._.readEnum,
                     _: _._.writeEnum,
-                  },
-                  trailer_480p: {
-                    _: 3,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  trailer_max: {
-                    _: 4,
-                    _: _,
-                    _: !0,
-                    _: !0,
                   },
                   microtrailer: {
                     _: 5,
@@ -71892,10 +71889,6 @@
         GetAppID() {
           return this.m_unAppID;
         }
-        GetAppIDToRun() {
-          const _ = this.GetParentAppID();
-          return _ && 11 != this.m_eAppType ? _ : this.GetAppID();
-        }
         GetAppType() {
           return this.m_eAppType;
         }
@@ -72533,8 +72526,6 @@
         m_strTrailerName;
         m_eTrailerCategory;
         m_nBaseID;
-        m_Trailer480p;
-        m_TrailerMax;
         m_MicroTrailer;
         m_rgDashTrailers;
         m_rgHlsTrailer;
@@ -72548,17 +72539,7 @@
           const _ = _.trailer_url_format();
           if (
             (_ &&
-              (_.trailer_480p() &&
-                (this.m_Trailer480p = this.ExtractTrailerFormats(
-                  _,
-                  _.trailer_480p(),
-                )),
-              _.trailer_max() &&
-                (this.m_TrailerMax = this.ExtractTrailerFormats(
-                  _,
-                  _.trailer_max(),
-                )),
-              _.microtrailer() &&
+              (_.microtrailer() &&
                 (this.m_MicroTrailer = this.ExtractTrailerFormats(
                   _,
                   _.microtrailer(),
@@ -72592,12 +72573,6 @@
         }
         GetTrailerCategory() {
           return this.m_eTrailerCategory;
-        }
-        GetTrailer480p() {
-          return this.m_Trailer480p;
-        }
-        GetTrailerMax() {
-          return this.m_TrailerMax;
         }
         GetTrailersDash() {
           return this.m_rgDashTrailers;

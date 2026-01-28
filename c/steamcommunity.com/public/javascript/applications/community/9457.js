@@ -55,8 +55,6 @@
 	"moderation_reportedandresolvedon": "تم الإبلاغ بتاريخ %1$s وتم الحل بتاريخ %2$s",
 	"moderation_reportedanddisputed": "تم الإبلاغ بتاريخ %1$s وتم الحل بتاريخ %2$s وتم الطعن في الحكم بتاريخ %3$s",
 	"moderation_reporteddisputeresolved": "تم الإبلاغ بتاريخ %1$s وتم الحل بتاريخ %2$s وتم الطعن في الحكم بتاريخ %3$s وتم الفصل في النزاع بتاريخ %4$s",
-	"moderation_chatreport_desc": "أُرسلت رسالة دردشة من %1$s على %2$s",
-	"moderation_chatgroupmsgreport_desc": "أُرسلت رسالة دردشة من %1$s على %2$s",
 	"moderation_reportid": "معرّف البلاغ %1$s",
 	"ReportContent_Title": "الإبلاغ عن المحتوى",
 	"ReportContent_Description": "هذا فقط للإبلاغ عن المحتوى المتكرر والإعلانات والمحتوى غير القانوني والمنشورات المسببة للمشكلات (المضايقة أو القتال أو الوقاحة).",
@@ -163,7 +161,6 @@
 	"ContentReport_FriendOptions_RemoveDesc": "لا يزال هذا المستخدم مدرجًا في قائمة أصدقائك - يمكنك اختيار إلغاء الصداقة معه. ستختفي من قائمة أصدقائه دون إبلاغه بالأمر.",
 	"ContentReport_FriendOptions_RemoveSuccess": "أُلغيت الصداقة",
 	"ContentReport_LearnMore_Misconduct": "اعرف المزيد عن التعامل مع سوء التصرف على Steam",
-	"moderation_subjecttype_forumpost": "منشور على المنتدى",
 	"moderation_subjecttype_friendchatmsg": "رسالة دردشة من صديق",
 	"moderation_subjecttype_chatroommsg": "رسالة من غرفة الدردشة",
 	"moderation_subjecttype_chatgroup": "مجموعة الدردشة",
@@ -209,7 +206,8 @@
 	"moderatormessage_count_warning": "التحذيرات: %1$s",
 	"moderatormessage_count_bannotice": "مرات الحظر: %1$s",
 	"moderatormessage_count_contentremoval": "إخطارات إزالة المحتوى: %1$s",
-	"reportforumpost_reason_notfound": "أخرى"
+	"reportforumpost_reason_notfound": "أخرى",
+	"reportedcontent_error": "حدث خطأ. يرجى المحاولة مرة أخرى لاحقًا."
 }`);
     },
   },

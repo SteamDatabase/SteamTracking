@@ -2085,6 +2085,9 @@
                   ],
                   initially_selected_values: ["#AppTypeLabel_game"],
                 },
+                {
+                  loc_token: "#Sale_Preferences",
+                },
               ],
               initially_expanded_facets: [
                 "#AppTypeLabelTitle",

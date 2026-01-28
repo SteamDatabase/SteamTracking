@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Conținut posibil:",
 	"Error_LoadingContent": "A apărut o problemă la încărcarea acestui conținut.",
 	"Error_LoadingMarketItem": "Este posibil ca obiectul solicitat să nu existe. De asemenea, poate exista o problemă temporară care împiedică încărcarea acestui obiect. Te rugăm să încerci din nou mai târziu.",
-	"ListingFilter_Title": "Filtrează listările"
+	"ListingFilter_Title": "Filtrează listările",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

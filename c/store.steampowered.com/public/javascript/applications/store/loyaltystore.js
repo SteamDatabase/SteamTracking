@@ -1224,101 +1224,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "FocusNavHistoryID",
-        _ = new _._("FocusHistory").Debug;
-      function _(_) {
-        const { children: _, timeoutMS: __webpack_require__, ..._ } = _,
-          _ = (function (_ = 2) {
-            const _ = (0, _._)(),
-              _ = _.useRef(void 0),
-              _ = (0, _._)(),
-              _ = (0, _._)(),
-              _ = _.state && _.state[_],
-              _ = _.useRef(void 0),
-              [_, _] = _.useState(_);
-            return (
-              _.useLayoutEffect(() => {
-                if (!_.current) return;
-                const _ = _.current;
-                return _.Node().Tree.WindowContext.FocusChangedCallbacks.Register(
-                  (_, _, _) => {
-                    const _ = _.location;
-                    let _ = _.state && _.state[_];
-                    _ ||
-                      ((_ = _ ? `State_${_.key}` : `State_${_.Node().Tree._}`),
-                      (_.current = _),
-                      _.replace({
-                        ..._.location,
-                        state: {
-                          ..._.state,
-                          [_]: _,
-                        },
-                      })),
-                      _.current == _ &&
-                        (_
-                          ? _.SaveState(_)
-                          : window.history.replaceState(
-                              {
-                                ...window.history.state,
-                                [_]: (0, _._)(_.Node()),
-                              },
-                              "",
-                            ));
-                  },
-                ).Unregister;
-              }, [_, _]),
-              _.useLayoutEffect(() => {
-                if (_.current && _.current != _) {
-                  if (!_) return void _(void 0);
-                  const _ = _.current.NavTree().DeferredFocus;
-                  _.SuppressFocus(),
-                    _(`Start restoring history for ${_}, suppressing focus`);
-                  const _ = window.setTimeout(() => {
-                    _(_);
-                  }, _);
-                  return () => {
-                    window.clearTimeout(_), _.ExecuteQueuedFocus();
-                  };
-                }
-              }, [_, _]),
-              _.useEffect(() => {
-                if (!_ || !_.current) return;
-                const _ = _ ? null : window.history.state?.[_],
-                  _ = _.current.NavTree().DeferredFocus;
-                let _ = !1;
-                _
-                  ? (_ = _.current.RestoreState(_, 1))
-                  : _ && ((0, _._)(_.current.Node(), _, 0), (_ = !0)),
-                  _(
-                    `Completed restoring history for state ${_} - ${_ ? "had history." : "no history for this state."}`,
-                  ),
-                  _ ? _.Reset() : _.ExecuteQueuedFocus(),
-                  (_.current = _);
-              }, [_, _, _]),
-              _
-            );
-          })(__webpack_require__);
-        return _.createElement(
-          _._,
-          {
-            ..._,
-            navRef: _,
-          },
-          _,
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
       var _ = __webpack_require__("chunkid");
       let _ = {
         success: !0,
@@ -8505,7 +8410,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _ } = _,
@@ -8525,30 +8429,24 @@
               _.createElement(
                 _._,
                 {
-                  className: (0, _._)(_.Shell),
+                  domain: "store.steampowered.com",
+                  feature: "pointsshop",
                 },
                 _.createElement(
                   _._,
                   {
-                    domain: "store.steampowered.com",
-                    feature: "pointsshop",
+                    display: "flex",
+                    flexDirection: "row",
+                    className: _.ShellScrollParent,
                   },
                   _.createElement(
                     _._,
                     {
-                      display: "flex",
-                      flexDirection: "row",
-                      className: _.ShellScrollParent,
+                      flex: "1",
+                      className: _.ShellScroll,
+                      "flow-children": "column",
                     },
-                    _.createElement(
-                      _._,
-                      {
-                        flex: "1",
-                        className: _.ShellScroll,
-                        "flow-children": "column",
-                      },
-                      _,
-                    ),
+                    _,
                   ),
                 ),
               ),

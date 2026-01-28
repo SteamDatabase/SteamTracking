@@ -1211,93 +1211,6 @@
         });
       });
     },
-    84746: (e, t, i) => {
-      "use strict";
-      i.d(t, { N: () => d });
-      var r = i(90626),
-        n = i(92757),
-        a = (i(84933), i(39575)),
-        s = i(76217),
-        o = i(79613),
-        l = i(60778);
-      const c = "FocusNavHistoryID",
-        m = new l.wd("FocusHistory").Debug;
-      function d(e) {
-        const { children: t, timeoutMS: i, ...l } = e,
-          d = (function (e = 2) {
-            const t = (0, n.W6)(),
-              i = r.useRef(void 0),
-              s = (0, n.zy)(),
-              l = (0, o.ho)(),
-              d = s.state && s.state[c],
-              u = r.useRef(void 0),
-              [p, g] = r.useState(d);
-            return (
-              r.useLayoutEffect(() => {
-                if (!i.current) return;
-                const e = i.current;
-                return e
-                  .Node()
-                  .Tree.WindowContext.FocusChangedCallbacks.Register(
-                    (i, r, n) => {
-                      const s = t.location;
-                      let o = s.state && s.state[c];
-                      o ||
-                        ((o = l
-                          ? `State_${s.key}`
-                          : `State_${e.Node().Tree.id}`),
-                        (u.current = o),
-                        t.replace({
-                          ...t.location,
-                          state: { ...s.state, [c]: o },
-                        })),
-                        u.current == o &&
-                          (l
-                            ? e.SaveState(o)
-                            : window.history.replaceState(
-                                {
-                                  ...window.history.state,
-                                  [o]: (0, a.Ze)(e.Node()),
-                                },
-                                "",
-                              ));
-                    },
-                  ).Unregister;
-              }, [t, l]),
-              r.useLayoutEffect(() => {
-                if (i.current && u.current != d) {
-                  if (!d) return void g(void 0);
-                  const t = i.current.NavTree().DeferredFocus;
-                  t.SuppressFocus(),
-                    m(`Start restoring history for ${d}, suppressing focus`);
-                  const r = window.setTimeout(() => {
-                    g(d);
-                  }, e);
-                  return () => {
-                    window.clearTimeout(r), t.ExecuteQueuedFocus();
-                  };
-                }
-              }, [d, e]),
-              r.useEffect(() => {
-                if (!p || !i.current) return;
-                const e = l ? null : window.history.state?.[p],
-                  t = i.current.NavTree().DeferredFocus;
-                let r = !1;
-                l
-                  ? (r = i.current.RestoreState(p, 1))
-                  : e && ((0, a.LU)(i.current.Node(), e, 0), (r = !0)),
-                  m(
-                    `Completed restoring history for state ${p} - ${r ? "had history." : "no history for this state."}`,
-                  ),
-                  r ? t.Reset() : t.ExecuteQueuedFocus(),
-                  (u.current = p);
-              }, [p, t, l]),
-              i
-            );
-          })(i);
-        return r.createElement(s.Z, { ...l, navRef: d }, t);
-      }
-    },
     62381: (e, t, i) => {
       "use strict";
       i.d(t, { W: () => s });
@@ -7544,52 +7457,47 @@
     },
     42626: (e, t, i) => {
       "use strict";
-      i.d(t, { L: () => u, X: () => d });
+      i.d(t, { L: () => d, X: () => m });
       var r = i(22580),
         n = i(90626),
-        a = i(12447),
-        s = i(84746),
-        o = i(52038),
-        l = i(6708),
-        c = i(99428),
-        m = i(32630);
-      function d(e) {
+        a = i(75422),
+        s = i(52038),
+        o = i(6708),
+        l = i(99428),
+        c = i(32630);
+      function m(e) {
         const { children: t } = e,
           i = n.useRef(void 0);
         return (
           n.useEffect(() => i.current?.Activate(!0), []),
           n.createElement(
-            c.Yp,
+            l.Yp,
             null,
             n.createElement(
               a.u,
               {
                 navID: "LoyaltyShell",
                 navTreeRef: i,
-                className: (0, o.A)(l.Shell),
+                className: (0, s.A)(o.Shell),
               },
               n.createElement(
-                s.N,
-                { className: (0, o.A)(l.Shell) },
+                c.Ay,
+                { domain: "store.steampowered.com", feature: "pointsshop" },
                 n.createElement(
-                  m.Ay,
-                  { domain: "store.steampowered.com", feature: "pointsshop" },
+                  l.az,
+                  {
+                    display: "flex",
+                    flexDirection: "row",
+                    className: o.ShellScrollParent,
+                  },
                   n.createElement(
-                    c.az,
+                    l.az,
                     {
-                      display: "flex",
-                      flexDirection: "row",
-                      className: l.ShellScrollParent,
+                      flex: "1",
+                      className: o.ShellScroll,
+                      "flow-children": "column",
                     },
-                    n.createElement(
-                      c.az,
-                      {
-                        flex: "1",
-                        className: l.ShellScroll,
-                        "flow-children": "column",
-                      },
-                      t,
-                    ),
+                    t,
                   ),
                 ),
               ),
@@ -7597,7 +7505,7 @@
           )
         );
       }
-      function u(e) {
+      function d(e) {
         (0, n.useEffect)(
           () => (
             r.DZ.Get().SetCurrentSearchPlaceholder(e),

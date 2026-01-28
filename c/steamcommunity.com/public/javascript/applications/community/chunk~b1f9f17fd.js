@@ -18509,7 +18509,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
@@ -26668,17 +26667,10 @@
         (0, _._)([_._], _.prototype, "TimerAction", null);
       var _ = __webpack_require__("chunkid");
       function _(_, _ = null) {
-        if (null == _ ? void 0 : _.BUsesContentHubForItemSource())
-          switch (_.GetStoreItemType()) {
-            case 0:
-              if (_._.Get().BIsGameOwned(_.GetAppID())) return !0;
-              break;
-            case 1:
-            case 2:
-              if (_.GetIncludedAppIDs().every((_) => _._.Get().BIsGameOwned(_)))
-                return !0;
-          }
-        return !1;
+        return (
+          !!(null == _ ? void 0 : _.BUsesContentHubForItemSource()) &&
+          _._.Get().BIsStoreItemOwned(_)
+        );
       }
       function _(_, _ = null) {
         var _, _;
@@ -28928,7 +28920,7 @@
                       className: _().ReviewScore,
                     },
                     _.createElement(_._, {
-                      appInfo: _,
+                      _: _,
                     }),
                   ),
               ),
@@ -34802,7 +34794,6 @@
         }
         return null;
       }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { section: _, event: __webpack_require__, language: _ } = _,
           _ = (0, _._)(),

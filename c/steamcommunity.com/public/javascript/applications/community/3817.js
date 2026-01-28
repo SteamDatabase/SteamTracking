@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Kemungkinan Isi:",
 	"Error_LoadingContent": "Terjadi kendala saat memuat konten ini",
 	"Error_LoadingMarketItem": "Item yang diminta mungkin tidak ada, atau terjadi masalah sementara yang mencegah item ini dimuat. Silakan coba lagi nanti.",
-	"ListingFilter_Title": "Filter Iklan Penjualan"
+	"ListingFilter_Title": "Filter Iklan Penjualan",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

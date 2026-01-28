@@ -1376,6 +1376,7 @@
                     br: l.qM.readString,
                     bw: l.gp.writeString,
                   },
+                  on_market: { n: 36, br: l.qM.readBool, bw: l.gp.writeBool },
                 },
               }),
             f.sm_m

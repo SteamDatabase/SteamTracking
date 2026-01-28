@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Pode conter:",
 	"Error_LoadingContent": "Houve um problema ao carregar este conteúdo",
 	"Error_LoadingMarketItem": "O item solicitado pode não existir ou um problema temporário pode estar impedindo o seu carregamento. Tente novamente mais tarde.",
-	"ListingFilter_Title": "Filtrar anúncios"
+	"ListingFilter_Title": "Filtrar anúncios",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

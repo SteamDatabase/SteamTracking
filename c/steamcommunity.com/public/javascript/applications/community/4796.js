@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Možný obsah:",
 	"Error_LoadingContent": "Při načítání tohoto obsahu došlo k chybě.",
 	"Error_LoadingMarketItem": "Požadovaná položka nemusí existovat, nebo mohla nastat dočasná chyba bránící v jejím načtení. Zkuste to později znovu.",
-	"ListingFilter_Title": "Filtrování nabídek"
+	"ListingFilter_Title": "Filtrování nabídek",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

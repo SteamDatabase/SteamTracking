@@ -239,10 +239,15 @@
 .redeem_wallet_code_form,
 .registerkey_form
 {
-	padding-left: 14px;
 	padding-right: 14px;
 	padding-top: 20px;
 	padding-bottom: 40px;
+}
+
+.redeem_wallet_code_form ::placeholder {
+	font-style: italic;
+	font-size: 13px;
+	color: #6b7378;
 }
 
 .redeem_wallet_code_login
@@ -276,13 +281,14 @@
 	padding-right: 30px;
 }
 
+.upsell_and_graphic {
+	justify-content: space-between;
+	gap: 2%;
+}
+
 .redeem_wallet_code_upsell
 {
-	padding-left: 8px;
-	padding-right: 8px;
 	padding-top: 40px;
-	padding-bottom: 380px;
-	line-height: 18px;
 }
 
 .redeem_wallet_code_upsell_header,
@@ -295,8 +301,6 @@
 .redeem_wallet_code_upsell div
 {
 	padding-top: 15px;
-	width: 450px;
-	color: #b0aeac;
 }
 
 .redeem_wallet_code_upsell a
@@ -317,6 +321,8 @@
 body.redeemwalletcode .page_content_ctn .page_content {
 	background-repeat: no-repeat;
 	background-position: bottom right;
+	display: flex;
+	flex-direction: row;
 }
 
 .redeem_wallet_conversion_box

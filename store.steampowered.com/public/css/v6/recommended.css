@@ -2329,6 +2329,18 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 	background-color: rgba( 0, 0, 0, 0.5 );
 }
 
+.review_box .reviewer_hardware_container
+{
+	padding: 4px;
+	margin: 0px 8px 8px 0px;
+	color: #AFDEFF;
+	background-color: #486582;
+}
+.review_box .reviewer_hardware_container .reviewer_hardware
+{
+	font-weight: bold;
+}
+
 .review_box .control_block {
 	margin: 8px 0;
 	display: inline-block;
@@ -2443,9 +2455,25 @@ html.gamepad .friend_reviews .review_box .review_leftcol {
 .review_received_comp {
 	margin-top: 9px;
 }
-.review_received_comp input, .enable_review_comments input {
+.review_received_comp input, .enable_review_comments input, .attached_pc_hardware input {
 	vertical-align: text-top;
 	margin-right: 4px;
+}
+
+.saved_hardware_list {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.saved_hardware {
+	padding: 10px;
+	color: #ffffff;
+	background-color: #5A616D;
+	cursor: pointer;
+}
+.saved_hardware:hover {
+	color: red;
 }
 
 #Reviewssummary0 .recent_reviews .review_box .review_rightcol {

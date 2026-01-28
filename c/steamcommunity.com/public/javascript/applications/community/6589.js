@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Mogelijke inhoud:",
 	"Error_LoadingContent": "Er is een probleem opgetreden bij het laden van deze inhoud",
 	"Error_LoadingMarketItem": "Het gevraagde voorwerp bestaat mogelijk niet of er is een tijdelijk probleem waardoor het niet geladen kan worden. Probeer het later opnieuw.",
-	"ListingFilter_Title": "Vermeldingen filteren ..."
+	"ListingFilter_Title": "Vermeldingen filteren ...",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

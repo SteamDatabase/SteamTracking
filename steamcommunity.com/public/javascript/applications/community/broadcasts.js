@@ -260,7 +260,7 @@
         I = a(95034),
         y = a(95695),
         D = a.n(y),
-        T = a(45359),
+        T = a(41399),
         N = a(9154),
         A = a(738),
         k = a(52038),
@@ -624,7 +624,7 @@
                 n.createElement(
                   "div",
                   { className: H.AppSummaryWidgetCtn },
-                  n.createElement(T.pb, {
+                  n.createElement(T.p, {
                     id: a.app_id,
                     type: "game",
                     bPreferAssetWithoutOverride: !1,
@@ -1263,7 +1263,7 @@
                   n.createElement(
                     "div",
                     { className: L.GameInfo },
-                    n.createElement(T.pb, {
+                    n.createElement(T.p, {
                       id: Number.parseInt(a.m_strAppId),
                       type: "game",
                       bPreferAssetWithoutOverride: !1,

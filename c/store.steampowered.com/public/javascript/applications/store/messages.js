@@ -4,45 +4,27 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
-        OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
-        OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
-        OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
-        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
-        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
-        OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
-        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
-        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
-        OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
-        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
-        UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
-        OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
-        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
-        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
-        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
-        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
-        HorizontalEvent: "_1ruRSreC31IK4kUGUcSRDK",
-        HorizontalSummary: "_2bTWamVtbFnHovwqhlrxiV",
-        HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
-        HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
-        HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
-        AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
-        CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
-        AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
-        AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
-        AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        TwoWidthCtn: "_49thIpYeG08pUfNc1x_w9",
-        TwoWidthCapsule: "_78Qv2C95AM2DNCuLD5o8U",
-        TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
-        Reason: "_2h0GKAYcXRP10ryZHFn79d",
-        StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
+        strMediumWidth: "800px",
+        strMaxMobileWidth: "600px",
+        MediaContainer: "-ap7mXqcxyhrxn5-5EaM8",
+        MediaContainerMM: "_1XVJzaNLt0tgl6Pq5QI2tK",
+        ScreenshotThumbnailRow: "COp9MkmgXCc5Y3ytJM70W",
+        HilightGrid: "_28DkEkOjvTWfq0sU8m_i32",
+        MainMediaCtn: "FATLceF4ncP8L8QnrQTXV",
+        VideoThumbnail: "h0pphNa_Fdu4JUevL5V9y",
+        ScreenshotDisplayCtn: "_20YpaGv3V_QArQyy15zAJc",
+        MainCapsuleWithHover: "_30BxsjSFrUWCBKntWK9hPg",
+        MainCapsule: "_2UuNsdHxhT9la27J_j3BFs",
+        AppDetails: "ETHkFxrlPF1znTFXFtjtK",
+        GameName: "udhKC-bUdlotRKphK3Fn2",
+        ShortDesc: "_2e5PhNJqb68XISttHxdVF2",
+        ThumbnialClickable: "_3B8X2c5pBF96hapgz03tC4",
+        ThumbnailCtn: "rE40TQ86G7cjVETvUYZm3",
+        videoPlaying: "_3D99vg3-OLr6XsvxrtzhZa",
+        VideoPlayButton: "_2sJlIVAVWZ2I2iA6IO4pOv",
+        VideoLargeContainer: "_3mzKCP4FLx7fUVeKrhZ1nn",
+        VideoPopupContainers: "_2LqAoKcZgpOtpoj5_URVNJ",
+        VideoLarge: "_3zPl6O67BYIiFOlq7FxlJP",
       };
     },
     chunkid: (module) => {
@@ -3660,6 +3642,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3680,301 +3663,582 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = "capsule_index_";
+      function _(_) {
+        const { _: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_),
+          _ = (0, _.useMemo)(() => {
+            if (!__webpack_require__) return [];
+            const _ =
+              __webpack_require__.categories?.supported_player_categoryids?.slice(
+                0,
+                1,
+              ) || [];
+            return (
+              __webpack_require__.categories?.feature_categoryids?.forEach(
+                (_) => _.push(_),
+              ),
+              __webpack_require__.categories?.controller_categoryids?.forEach(
+                (_) => _.push(_),
+              ),
+              __webpack_require__.categories?.supported_player_categoryids
+                ?.slice(1)
+                .forEach((_) => _.push(_)),
+              _
+            );
+          }, [__webpack_require__]);
+        return _ && 0 != _.length
+          ? _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().SaleTagBlockCtn, "SaleTagBlockCtn"),
+              },
+              Boolean(_?.length > 0)
+                ? _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_().TagBox, _().Categories),
+                    },
+                    _.map((_) =>
+                      _.createElement(_, {
+                        key: "cat_" + _,
+                        categoryID: _,
+                      }),
+                    ),
+                  )
+                : _.createElement("div", null, (0, _._)("#Broadcast_None")),
+            )
+          : null;
+      }
+      class _ {
+        m_rgCategories;
+        constructor() {
+          this.m_rgCategories = (0, _._)(
+            "feature_categories",
+            "application_config",
+          );
+        }
+        static g_Self = null;
+        static Get() {
+          return _.g_Self || (_.g_Self = new _()), _.g_Self;
+        }
+      }
+      function _(_) {
+        const { categoryID: _ } = _,
+          _ = _.Get().m_rgCategories.find((_) => _.categoryid == _);
+        return _
+          ? _.createElement(
+              "div",
+              {
+                className: _().Category,
+              },
+              _.createElement(
+                _._,
+                {
+                  toolTipContent: _.name,
+                },
+                _.createElement("div", {
+                  className: _().CategoryIcon,
+                  style: {
+                    background: `url(${_._.STORE_CDN_URL}/public/images/${_.image_path}) no-repeat center center/cover`,
+                  },
+                }),
+              ),
+            )
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _, bPopOutTrailerPlayback: __webpack_require__ } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)(),
+          _ = _?.highlights?.filter((_) => !_ || _.all_ages),
+          _ = _ && _?.length > 0 ? _[0] : void 0,
+          _ = _.useCallback(() => {
+            _ && (__webpack_require__ ? _(!0) : _((_) => !_));
+          }, [_, __webpack_require__]);
+        if (!_)
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().HilightGrid, _().MediaContainer),
+            },
+            _.createElement(_._, {
+              size: "medium",
+            }),
+          );
+        const _ = _
+          ? _.createElement(_, {
+              trailer: _,
+              bPlayVideo: _,
+              fnTogglePlayTrailer: _,
+            })
+          : null;
+        return _ ||
+          (_ && _.all_ages_screenshots && _.all_ages_screenshots.length > 0)
+          ? _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().HilightGrid, _().MediaContainer),
+              },
+              _.createElement(_, {
+                elFeaturedInCenter: _,
+                storeItemScreenshots: _,
+                trailer: _,
+                _: _,
+                name: _.name || "",
+              }),
+              Boolean(__webpack_require__)
+                ? _.createElement(_, {
+                    _: _,
+                    bShowModal: _,
+                    hideModal: () => _(!1),
+                  })
+                : _.createElement(_, {
+                    name: _.name || "",
+                    trailer: _,
+                    bPlayVideo: _,
+                    fnTogglePlayTrailer: _,
+                    bControls: !0,
+                  }),
+            )
+          : null;
+      }
       function _(_) {
         const {
-            capsule: _,
-            bShowParentApp: __webpack_require__,
-            elElementToAppendToHover: _,
-            index: _,
-            navKey: _,
-            bHideStoreHover: _,
-            onlyOneDiscountPct: _,
-            bPreferDemoStorePage: _,
-            bShowEarlyAccessBanner: _,
+            _: _,
+            fnOnClickButton: __webpack_require__,
+            bLowBandwidthMode: _,
+            bUseAssetWithoutOverride: _,
           } = _,
-          [_, _] = _.useState(!1),
-          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          [_] = (0, _._)(
-            __webpack_require__ ? _?.GetParentAppID() : void 0,
-            _._,
-          );
-        if (!_) return null;
-        const _ = Boolean(_),
-          _ = _.createElement(_, {
-            ..._,
-            strExtraParams: _.strExtraParams,
-            info: _,
-            bIsHovered: _,
-            bHasParentAppToDisplay: _,
-            onlyOneDiscountPct: _,
-            bShowEarlyAccessBanner: _,
-          });
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)({
-              [_().OuterCapsuleContainer]: !0,
-              [_ + _]: 0 == _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return _ && _ && _
+          ? _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().HilightGrid, _().MediaContainerMM),
+              },
+              _.createElement(_, {
+                _: _,
+                elFeaturedInCenter: _.createElement(_, {
+                  _: _,
+                  bUseAssetWithoutOverride: Boolean(_),
+                  fnOnClickButton: __webpack_require__,
+                }),
+                storeItemScreenshots: _,
+                featureElementclassName: _().MainImage,
+                bUseTrailerAsFirstThumb: !_,
+                bNoScreenShotModals: !0,
+                name: _.name || "",
+              }),
+            )
+          : _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().HilightGrid, _().MediaContainerMM),
+              },
+              _.createElement(_._, {
+                size: "medium",
+              }),
+            );
+      }
+      function _(_) {
+        const {
+            elFeaturedInCenter: _,
+            _: __webpack_require__,
+            name: _,
+            trailer: _,
+            storeItemScreenshots: _,
+            featureElementclassName: _,
+            bUseTrailerAsFirstThumb: _,
+            bNoScreenShotModals: _,
+          } = _,
+          [_, _] = _.useState(void 0),
+          [_, _] = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(0);
+        if (!__webpack_require__) return null;
+        const _ = _ || (void 0 !== _ && -1 !== _) ? _ : 0,
+          _ = new Array(),
+          _ = new Array();
+        _ &&
+          _ &&
+          (_.push(
+            _.createElement(_, {
+              key: "trail_thumb_",
+              trailer: _,
+              bPlayVideo: !1,
+              fnTogglePlayTrailer: () => {},
+              onMouseEnter: () => _(0),
+              onMouseLeave: () => {
+                const _ = _.current;
+                _ && _(_.currentTime);
+              },
             }),
-            navEntryPreferPosition: _._.PREFERRED_CHILD,
-            navKey: _,
-          },
-          _.createElement(
-            _._,
-            {
-              appid: _.GetAppID(),
-            },
-            Boolean(_)
-              ? _.createElement(
+          ),
+          _.push(
+            _.createElement(_, {
+              key: "trail_inline",
+              ref: _,
+              name: _,
+              trailer: _,
+              bControls: !1,
+              bPlayVideo: !0,
+              startTime: _,
+              fnTogglePlayTrailer: () => {},
+            }),
+          ));
+        const _ = (
+          _ ? _?.all_ages_screenshots : _?.mature_content_screenshots
+        )?.filter(Boolean);
+        if (
+          (_?.forEach((_, _) => {
+            if ((_ || _ > 0) && _.length < 3) {
+              const _ = (0, _._)(_, "thumb"),
+                _ = (0, _._)(_, "full"),
+                _ = _.length;
+              _.push(
+                _.createElement(
                   "div",
                   {
-                    onMouseEnter: () => _(!0),
-                    onMouseLeave: () => _(!1),
+                    key: _ + "_small_" + _,
+                    className: (0, _._)({
+                      [_().ThumbnailCtn]: !0,
+                      [_().ThumbnialClickable]: !_,
+                    }),
                   },
-                  _,
-                )
-              : _.createElement(
-                  _._,
-                  {
-                    className: _().CapsuleContainer,
-                    item: _,
-                    elElementToAppend: _.elElementToAppendToHover,
-                    bShowDemoButton: _.bShowDemoButton,
-                    bPreferDemoStorePage: _.bPreferDemoStorePage,
-                    bShowDeckCompatibilityDialog:
-                      _.bShowDeckCompatibilityDialog,
-                    bHidePrice: _.bHidePrice,
-                    bUseSubscriptionLayout: _.bUseSubscriptionLayout,
-                    strExtraParams: _.strExtraParams,
-                    nCreatorAccountID: _.creatorAccountID,
-                    nWidthMultiplier: _.nWidthMultiplier,
-                    bShowIgnoreButton: _.bShowIgnoreButton,
-                    bShowDescription: _.bShowDescriptionInHover,
-                  },
-                  _,
+                  _.createElement("img", {
+                    src: _,
+                    onClick: _
+                      ? void 0
+                      : () => {
+                          const _ = [...(_ || [])];
+                          if (_.length > 0) {
+                            for (let _ = 0; _ < _; ++_) {
+                              const _ = _.shift();
+                              _ && _.push(_);
+                            }
+                            _(_.map((_) => (0, _._)(_, "full")));
+                          }
+                        },
+                    onMouseEnter: () => _(_),
+                  }),
                 ),
-            Boolean(_) && _.createElement(_.Fragment, null, _),
+              ),
+                _.push(
+                  _.createElement(
+                    "div",
+                    {
+                      key: _ + "_big_" + _,
+                      className: _().ScreenshotDisplayCtn,
+                    },
+                    _.createElement("img", {
+                      src: _,
+                    }),
+                  ),
+                );
+            }
+          }),
+          !(_ || (_ && 0 != _.length)))
+        )
+          return null;
+        const _ = _.slice(0, 3),
+          _ = Array.from({
+            length: Math.max(0, 3 - _.length),
+          });
+        return _.createElement(
+          _.Fragment,
+          null,
+          _,
+          _.createElement(
+            "div",
+            {
+              className: _ || _().MainMediaCtn,
+            },
+            Boolean(_ && (-1 === _ || void 0 === _))
+              ? _.createElement(_.Fragment, null, _)
+              : _.createElement(_.Fragment, null, void 0 !== _ && _[_]),
           ),
-          _ &&
-            _.createElement(_, {
-              strExtraParams: _.strExtraParams,
-              parentStoreItem: _,
-              childAppType: _.GetAppType(),
-              bPreferDemoStorePage: _,
-            }),
+          Boolean(_.length > 0) &&
+            _.createElement(
+              "div",
+              {
+                className: _().ScreenshotThumbnailRow,
+                onMouseLeave: () => _(-1),
+              },
+              _,
+              _.map((_, _) =>
+                _.createElement("div", {
+                  key: `app_${(0, _._)(__webpack_require__)}_${_}`,
+                  className: _().ThumbnailCtn,
+                }),
+              ),
+            ),
         );
       }
       function _(_) {
         const {
-            strExtraParams: _,
-            parentStoreItem: __webpack_require__,
-            childAppType: _,
-            bPreferDemoStorePage: _,
+          ref: _,
+          name: __webpack_require__,
+          trailer: _,
+          bControls: _,
+          bPlayVideo: _,
+          fnTogglePlayTrailer: _,
+          startTime: _,
+        } = _;
+        if (
+          ((0, _.useEffect)(() => {
+            const _ = _?.current;
+            if (null != _ && _ > 0 && _) {
+              const _ = () => {
+                _.currentTime = _ || 0;
+              };
+              return (
+                _.addEventListener("loadedmetadata", _),
+                () => {
+                  _.removeEventListener("loadedmetadata", _);
+                }
+              );
+            }
+          }, [_, _]),
+          !_)
+        )
+          return null;
+        let _ = (0, _._)(_().VideoLargeContainer, _ && _().videoPlaying);
+        return _.createElement(
+          "div",
+          {
+            className: _,
+            onClick: _,
+          },
+          _.createElement(_._, {
+            name: __webpack_require__,
+            trailerCategory: _.trailer_category,
+            trailerDisplay: 1,
+            mouseOver: !1,
+          }),
+          Boolean(_ && _.microtrailer) &&
+            _.createElement(
+              "video",
+              {
+                className: _().VideoLarge,
+                ref: _,
+                controls: _,
+                autoPlay: !0,
+                loop: !0,
+                muted: !0,
+                poster: null != _ && _ > 0 ? void 0 : _.screenshot_full,
+              },
+              _.microtrailer?.map((_) =>
+                _._.IN_CLIENT && "video/mp4" == _.type
+                  ? null
+                  : _.createElement("source", {
+                      key: _.filename,
+                      src: (0, _._)(_, _.filename || ""),
+                      type: _.type,
+                    }),
+              ),
+            ),
+          _ &&
+            _.createElement(
+              "div",
+              {
+                onClick: _,
+              },
+              _.createElement(_.sED, null),
+            ),
+        );
+      }
+      function _(_) {
+        const {
+            _: _,
+            bShowModal: __webpack_require__,
+            trailerBaseID: _,
+            hideModal: _,
           } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
-          _ = (0, _._)();
+          _ = (0, _.useMemo)(() => {
+            if (!_) return;
+            if (_) {
+              const _ = [...(_.highlights || []), ...(_.other_trailers || [])]
+                .filter(Boolean)
+                .filter((_) => !_ || _.all_ages)
+                .find((_) => _.trailer_base_id == _);
+              if (_) return _;
+            }
+            const _ = (_.highlights || [])
+              .filter(Boolean)
+              .filter((_) => !_ || _.all_ages);
+            return _ && _.length > 0 ? _[0] : void 0;
+          }, [_, _, _]),
+          _ = _.useId(),
+          _ = _.useId();
+        if (!_ || !_.adaptive_trailers) return null;
+        const _ = _.adaptive_trailers
+            .filter(
+              (_) =>
+                ("dash_h264" == _.encoding || "dash_av1" == _.encoding) &&
+                _.cdn_path,
+            )
+            .map((_) => (0, _._)(_, _.cdn_path || "")),
+          _ = _.adaptive_trailers
+            .filter((_) => "hls_h264" == _.encoding && _.cdn_path)
+            .map((_) => (0, _._)(_, _.cdn_path || ""));
+        return 0 == _?.length
+          ? null
+          : _.createElement(
+              _._,
+              {
+                active: __webpack_require__,
+              },
+              _.createElement(
+                _._,
+                {
+                  "aria-labelledby": (0, _._)(_, _),
+                  bAllowFullSize: !0,
+                  bOKDisabled: !0,
+                  closeModal: _,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().VideoPopupContainers,
+                  },
+                  _.createElement(_._, {
+                    dashManifests: _ || [],
+                    hlsManifest: (_.length > 0 && _?.[0]) || "",
+                    screenshot: (0, _._)(_),
+                    altText: _.trailer_name,
+                    muteWhenAutoplayBlocked: !0,
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    _: _,
+                    style: {
+                      display: "none",
+                    },
+                  },
+                  _?.name || "",
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    _: _,
+                    style: {
+                      display: "none",
+                    },
+                  },
+                  _.trailer_name,
+                ),
+              ),
+            );
+      }
+      function _(_) {
+        const {
+          trailer: _,
+          fnTogglePlayTrailer: __webpack_require__,
+          bPlayVideo: _,
+          onMouseEnter: _,
+          onMouseLeave: _,
+        } = _;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)({
+              [_().VideoThumbnail]: !_,
+              [_().videoPlaying]: _,
+              [_().ThumbnailCtn]: !0,
+            }),
+            onClick: __webpack_require__,
+            onMouseEnter: _,
+            onMouseLeave: _,
+          },
+          _.createElement("img", {
+            src: (0, _._)(_),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().VideoPlayButton,
+            },
+            _.createElement(_.jGG, null),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            _: _,
+            fnOnClickButton: __webpack_require__,
+            bUseAssetWithoutOverride: _,
+          } = _,
+          [_, _] = (0, _._)(),
+          { data: _ } = (0, _._)(_, _),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        if (!_ || !_ || !_) return null;
+        const _ = (0, _._)(_, "main_capsule");
         return _.createElement(
           _._,
           {
-            className: _().CapsuleParentInfo,
-            ...(0, _._)(__webpack_require__, _, _, _, _),
+            focusable: !0,
+            noFocusRing: !0,
+            className: _().MainCapsuleWithHover,
+            ..._,
+            onActivate: __webpack_require__,
           },
+          _.createElement("img", {
+            className: _().MainCapsule,
+            src: _,
+          }),
           _.createElement(
-            _._,
+            "div",
             {
-              appid: __webpack_require__.GetAppID(),
+              className: _().AppDetails,
             },
             _.createElement(
               "div",
               {
-                className: _().ParentType,
+                className: (0, _._)(_().GameName),
               },
-              (0, _._)(
-                11 == _
-                  ? "#SalePage_ParentApp_SoundTrack"
-                  : "#SalePage_ParentApp_DLC",
-              ),
+              _.name || "",
             ),
             _.createElement(
-              _._,
+              "div",
               {
-                type: "app",
-                _: __webpack_require__.GetAppID(),
-                strExtraParams: _,
+                className: _().ShortDesc,
               },
-              _.createElement("img", {
-                loading: "lazy",
-                className: _.AppCapsuleImage,
-                alt: __webpack_require__.GetName(),
-                src: __webpack_require__.GetAssets().GetSmallCapsuleURL(),
-                ...(0, _._)(),
-              }),
+              _.short_description,
+              " ",
             ),
+            _.createElement(_._, {
+              rgTagIDs: _ ? _.map((_) => _.tagid || 0) : [],
+              instanceNum: 0,
+              bLargeText: !0,
+              bHideTitle: !0,
+              bNoStoreLinks: !0,
+            }),
+            _.createElement(_, {
+              _: _,
+            }),
           ),
         );
-      }
-      function _(_) {
-        const {
-            info: _,
-            bHideStatusBanners: __webpack_require__,
-            strExtraParams: _,
-            index: _,
-            imageType: _,
-            bHasParentAppToDisplay: _,
-            bIsHovered: _,
-            strDoubleCapsuleMessage: _,
-            bPreferDemoStorePage: _,
-            bShowEarlyAccessBanner: _,
-            bPreferAssetWithoutOverride: _,
-          } = _,
-          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          _ = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(_);
-        if (!_) return null;
-        const _ = (0, _._)(
-          (0, _._)(`${_.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
-        );
-        let _;
-        "overrideNavigation" in _ &&
-          (_ = (_) => (
-            _.overrideNavigation(_), _.preventDefault(), _.stopPropagation(), !1
-          ));
-        const _ = Boolean(_);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)({
-                [_().TwoWidthCtn]: _,
-              }),
-            },
-            _.createElement(
-              _._,
-              {
-                href: _ ? void 0 : _,
-                style: {
-                  display: "block",
-                  cursor: "pointer",
-                },
-                className: (0, _._)({
-                  [_().TwoWidthCapsule]: _,
-                }),
-                preferredFocus: _,
-                onClick: _,
-              },
-              _.createElement(_._, {
-                appids: _,
-                hide_status_banners: __webpack_require__,
-                show_early_access: _.bShowEarlyAccessBanner,
-              }),
-              "none" != _ &&
-                _.createElement(_._, {
-                  imageType: _,
-                  _: _,
-                  bPreferAssetWithoutOverride: _,
-                }),
-              _.createElement(_._, {
-                _: _,
-              }),
-              Boolean(_) &&
-                _.createElement(_._, {
-                  _: _,
-                  bIsHoverMode: !0,
-                }),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().TwoWidthSideInfo, "TwoWidthSideInfo"),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Reason,
-                  },
-                  _,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().StoreSaleItemRelease,
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    _.GetFormattedSteamReleaseDate(),
-                  ),
-                ),
-                _.createElement(_._, {
-                  bHideTitle: !0,
-                  rgTagIDs: _.GetTagIDs(),
-                  instanceNum: _,
-                }),
-              ),
-          ),
-          _.createElement(_, {
-            ..._,
-          }),
-        );
-      }
-      function _(_) {
-        const {
-            info: _,
-            bHidePriceIfOwned: __webpack_require__,
-            bHideStatusBanners: _,
-            bUseSubscriptionLayout: _,
-            elElementToAppendToHover: _,
-            bHidePrice: _,
-            bHidePlatforms: _,
-            creatorAccountID: _,
-            bIsHovered: _,
-            onlyOneDiscountPct: _,
-            strDoubleCapsuleMessage: _,
-          } = _,
-          _ = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          { bIsOwned: _ } = (0, _._)(_),
-          _ = _ && !_;
-        if (_ && _ && 0 == _.item_type && _.appid)
-          return _.createElement(_._, {
-            appid: _.appid,
-            bIsMuted: _,
-          });
-        if (_) return null;
-        const _ = Boolean(_ && __webpack_require__),
-          _ = Boolean(_);
-        return _.createElement(_._, {
-          info: _,
-          bShowAsMuted: _,
-          bHidePrice: _,
-          bShowInLibraryInsteadOfPrice: _,
-          bHidePlatforms: _,
-          creatorAccountID: _,
-          bShowName: _.bShowName,
-          onlyOneDiscountPct: _,
-          bShowWishlistButton: Boolean(_),
-        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

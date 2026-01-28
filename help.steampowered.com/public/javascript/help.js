@@ -1956,7 +1956,6 @@ HelpWizard = {
 			})
 			.done( function( data )
 			{
-				window.location.reload();
 				if ( data && data.transfer_info )
 				{
 					HelpWizard.TransferLogin( data );
@@ -1964,7 +1963,7 @@ HelpWizard = {
 				else
 				{
 					// something went wrong, but the account should have been created - redirect
-					window.location = 'https://help.steampowered.com//wizard/HelpWithPurchase';
+					window.location = 'https://help.steampowered.com/wizard/HelpWithPurchase';
 				}
 			});
 	},
@@ -2004,7 +2003,7 @@ HelpWizard = {
 			console.log( 'transfer ' + nTransferred + '/' + nFailed );
 			if ( nTransferred > 0 )
 			{
-				window.location = 'https://help.steampowered.com//wizard/HelpWithPurchase';
+				window.location = 'https://help.steampowered.com/wizard/HelpWithPurchase';
 			}
 		}).catch((e) => {
 			// this is a weird failure

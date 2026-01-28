@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Lehetséges tartalom:",
 	"Error_LoadingContent": "Probléma adódott e tartalom betöltésekor.",
 	"Error_LoadingMarketItem": "Lehet, hogy a kért elem nem létezik, vagy átmeneti probléma akadályozza az elem betöltését. Kérjük, próbáld újra később.",
-	"ListingFilter_Title": "Ajánlatok szűrése"
+	"ListingFilter_Title": "Ajánlatok szűrése",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

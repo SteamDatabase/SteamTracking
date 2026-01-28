@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Возможный контент:",
 	"Error_LoadingContent": "Не удалось загрузить этот контент",
 	"Error_LoadingMarketItem": "Запрашиваемый предмет, возможно, не существует или возникла временная проблема, которая мешает его загрузке. Повторите попытку позже.",
-	"ListingFilter_Title": "Отфильтровать заявки"
+	"ListingFilter_Title": "Отфильтровать заявки",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

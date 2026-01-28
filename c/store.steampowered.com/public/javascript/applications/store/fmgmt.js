@@ -2793,7 +2793,7 @@
               _._,
               {
                 onSelected: () => {
-                  (0, _._)(_.appid);
+                  (0, _._)(_.appid, _.name);
                 },
               },
               (0, _._)("#FamilyGame_PlayGame"),

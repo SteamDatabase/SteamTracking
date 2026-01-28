@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Possible Contents:",
 	"Error_LoadingContent": "There was a problem loading this content",
 	"Error_LoadingMarketItem": "The requested item might not exist, or there might be a temporary issue preventing this item from loading. Please try again later.",
-	"ListingFilter_Title": "Filter Listings"
+	"ListingFilter_Title": "Filter Listings",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

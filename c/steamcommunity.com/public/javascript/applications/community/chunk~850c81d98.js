@@ -562,6 +562,11 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  on_market: {
+                    _: 36,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m

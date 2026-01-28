@@ -37,6 +37,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { appid: _ } = _,
@@ -45,15 +49,18 @@
             include_assets: !0,
             include_release: !0,
           }),
-          [_, _] = (0, _._)(_, _.current),
-          _ = (0, _._)(_);
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          [_, _] = (0, _._)(_, _.current);
         let _ = (0, _._)(
             _().StoreSaleWidgetContainer_mini,
             "StoreSaleWidgetContainer_mini",
           ),
           _ = _().StoreSaleWidgetImage_mini,
           _ = _().StoreSaleImage_mini;
-        if (!_ && 2 != _)
+        if (null == _)
           return _.createElement(
             "div",
             {
@@ -63,12 +70,12 @@
               size: "medium",
             }),
           );
-        if (2 == _ || !_.GetName())
+        if (null == _ || !_.name)
           return _.createElement("div", {
             className: _.StoreSaleWidgetEmptyContainer,
           });
-        const _ = 8 != _.GetAppType(),
-          _ = (0, _._)(_.GetStorePageURL(!0), _);
+        const _ = 8 != _.type,
+          _ = (0, _._)((0, _._)(_), _);
         return _.createElement(
           "div",
           {
@@ -83,7 +90,6 @@
             _.createElement(
               _._,
               {
-                type: "app",
                 _: _,
               },
               _.createElement(
@@ -91,10 +97,12 @@
                 {
                   className: _,
                 },
-                _.createElement("img", {
-                  className: _,
-                  src: _.GetAssets().GetSmallCapsuleURL(),
-                }),
+                _ &&
+                  _.createElement("img", {
+                    className: _,
+                    src: (0, _._)(_, "small_capsule"),
+                    alt: _.name,
+                  }),
               ),
             ),
           ),
@@ -112,7 +120,6 @@
               _.createElement(
                 _._,
                 {
-                  type: "app",
                   _: _,
                 },
                 _.createElement(
@@ -123,17 +130,18 @@
                       "StoreSaleWidgetTitle",
                     ),
                   },
-                  _.GetName(),
+                  _.name,
                 ),
               ),
             ),
-            _.createElement(
-              "div",
-              {
-                className: _.StoreSaleWidgetRelease,
-              },
-              _.GetFormattedSteamReleaseDate(),
-            ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.StoreSaleWidgetRelease,
+                },
+                (0, _._)(_),
+              ),
             Boolean(_) &&
               _.createElement(_._, {
                 _: _,
@@ -148,7 +156,6 @@
         if (_) return _();
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -401,6 +408,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1114,7 +1122,8 @@
         const { steamIDBroadcast: _ } = _;
         let _ = _._.GetOrCreateBroadcastInfo(_).m_nAppID;
         _ = _ != _._ ? _ : 0;
-        const [_] = (0, _._)(_, {});
+        const _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
         return _.createElement(
           "div",
           {
@@ -1124,7 +1133,6 @@
             ? _.createElement(
                 _._,
                 {
-                  type: "app",
                   _: _,
                   className: _().PopOutVideoTitleText,
                 },
@@ -1233,10 +1241,9 @@
         );
       }
       function _(_) {
-        var _;
         const {
-          onStreamSelect: __webpack_require__,
-          bSelected: _,
+          onStreamSelect: _,
+          bSelected: __webpack_require__,
           stream: _,
           bShowCapsuleArt: _,
         } = _;
@@ -1244,17 +1251,14 @@
           () => _._.GetOrCreateBroadcastInfo(_.steamid).m_nAppID,
         );
         _ = _ != _._ ? _ : 0;
-        const [_] = (0, _._)(
-          null !== (_ = _.nAppIDVOD) && void 0 !== _ ? _ : _,
-          {
-            include_assets: !0,
-          },
-        );
+        const _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
         if (!(0, _._)(_)) return null;
-        const _ = _ && (null == _ ? void 0 : _.GetAssets().GetHeaderURL()),
+        const _ = _ && _ && (0, _._)(_, "header"),
           _ = Number.parseInt("" + _.viewer_count),
           _ = !Number.isNaN(_),
-          _ = !!_.nAppIDVOD && (null == _ ? void 0 : _.GetName());
+          _ = !!_.nAppIDVOD && (null == _ ? void 0 : _.name);
         return _.createElement(
           "div",
           {
@@ -1268,7 +1272,6 @@
           _.createElement(
             _._,
             {
-              type: "app",
               _: _,
               hoverClassName: _().StreamCapsule,
             },
@@ -1277,14 +1280,14 @@
               {
                 className: (0, _._)(
                   _().stream_icon_container,
-                  _ && _().stream_selected,
+                  __webpack_require__ && _().stream_selected,
                 ),
-                onClick: () => __webpack_require__ && __webpack_require__(_),
+                onClick: () => _ && _(_),
                 rootMargin: "100px 0px 100px 0px",
               },
               _.createElement(_, {
                 strThumbnail: _.thumbnail_http_address,
-                bSelected: _,
+                bSelected: __webpack_require__,
                 strCapsuleArtURL: _,
               }),
             ),

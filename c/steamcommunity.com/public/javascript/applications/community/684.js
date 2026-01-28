@@ -12,7 +12,10 @@
 	"ContentReportReasonCategoryDesc_Suspicious": "钓鱼、欺诈、冒充好友或蒸汽平台客服",
 	"ContentReport_LearnMore_Misconduct": "对如何处理蒸汽平台上的不当行为了解更多",
 	"moderation_resolutionstatus_harassmentstrike": "已禁用蒸汽平台社区权限",
-	"moderationaction_banned_from_community": "已实施蒸汽平台社区封禁"
+	"moderationaction_banned_from_community": "已实施蒸汽平台社区封禁",
+	"reportforumpost_description_advertising": "推广链接、竞赛、抽奖活动、赌博、买卖蒸汽平台帐户",
+	"WarnBeforeNavigatingToCopyrightReportForm": "您即将离开此页面并前往蒸汽平台版权举报表格。",
+	"WarnBeforeNavigatingToTrademarkReportForm": "您即将离开此页面并前往蒸汽平台商标举报表格。"
 }`);
     },
   },

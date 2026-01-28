@@ -5693,7 +5693,8 @@
           } else _ = (0, _._)(_, (_) => _.strLabel);
         }
         if (_ && 0 === _) return null;
-        if (_ && _.total === _) return null;
+        if (_ && _.total === _ && 1 === Object.keys(_.counts[_.name]).length)
+          return null;
         return {
           strLabel: _.localized_name,
           rgOptions: _,
@@ -10383,7 +10384,10 @@
         AdvancedSearch: (_ = {}) => _("advancedsearch", _),
         Search: (_ = {}) => _("search", _),
         Item: (_, _, __webpack_require__ = {}) =>
-          _(`listings/${_}/${encodeURIComponent(_)}`, __webpack_require__),
+          _(
+            `listings/${_}/${encodeURIComponent(_)}${__webpack_require__.bucket ? `/${encodeURIComponent(__webpack_require__.bucket)}` : ""}`,
+            __webpack_require__,
+          ),
       };
       function _(_, _ = {}) {
         let _ = "";

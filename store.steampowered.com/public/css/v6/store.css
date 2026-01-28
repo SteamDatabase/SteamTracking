@@ -217,10 +217,8 @@ body.v6 h2:not(.BB_Header2) {
 		font-weight: 300; /* light */
 
 			font-size: 14px;
-	text-transform: uppercase;
 	color: #fff;
 	margin: 0 0 10px;
-	letter-spacing: 0.03em;
 	font-weight: normal;
 	padding-top: 2px;
 }
@@ -275,11 +273,8 @@ body.v6 h2 .header_inline a:hover {
 body.v6 h2.pageheader {
 	color: #ffffff;
 	font-size: 34px;
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
-
-			text-shadow: 1px 1px 0 rgba( 0, 0, 0, 0.4 );
-	margin-top: -4px;
+	font-weight: 700;
+	text-shadow: 1px 1px 0 rgba( 0, 0, 0, 0.4 );
 }
 
 body.v6 h3 {
@@ -343,7 +338,7 @@ body.v6.explore .page_header_ctn {
 }
 
 div.leftcol {
-	width: 616px;
+	width: 65%;
 	float: left;
 }
 div.leftcol.large {
@@ -4815,10 +4810,6 @@ body.v6 {
 	background: #1b2838;
 }
 
-.page_header_ctn {
-	background: url('/public/images//v6/temp/cluster_bg_2.png' ) bottom center no-repeat;
-}
-
 div#store_controls {
 	top: 8px;
 }
@@ -6455,10 +6446,6 @@ body.v6 .page_content.middle_page {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-between;
-}
-
-.widestore .leftcol {
-	width: 65%;
 }
 
 .widestore .rightcol {

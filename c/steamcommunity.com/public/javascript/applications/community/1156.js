@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Mahdollinen sisältö:",
 	"Error_LoadingContent": "Sisällön lataaminen epäonnistui.",
 	"Error_LoadingMarketItem": "Pyydettyä esinettä ei ehkä ole olemassa tai väliaikainen ongelma saattaa estää sen näyttämisen. Yritä myöhemmin uudelleen.",
-	"ListingFilter_Title": "Suodata listauksia"
+	"ListingFilter_Title": "Suodata listauksia",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

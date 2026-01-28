@@ -896,8 +896,8 @@
       var G = n(57758),
         D = n.n(G);
       const x = 3e3,
-        O = 1e3;
-      function F(e) {
+        F = 1e3;
+      function O(e) {
         let { player: t, category: n, title: l } = e,
           a = (0, r.useRef)(void 0),
           [i, o] = (function (e, t, n) {
@@ -908,7 +908,7 @@
                 o = (0, k.BF)(t);
               (0, r.useEffect)(() => {
                 let e = i.current;
-                (i.current = !1), (!e || o) && l(!0, o ? 0 : O);
+                (i.current = !1), (!e || o) && l(!0, o ? 0 : F);
               }, [o, l, i]);
               let u = (0, r.useCallback)(
                   (e) => {
@@ -1367,7 +1367,7 @@
         let H = (0, _.A)(i().TrailerPlayer, ae);
         return r.createElement(
           "div",
-          { ref: N, className: H },
+          { ref: N, className: H, "data-trailer-player": !0 },
           r.createElement("video", {
             ref: T,
             style: B,
@@ -1394,7 +1394,7 @@
           (n && "auto" != n) ||
             (n = (0, g.$W)() ? "touch" : o ? "gamepad" : "desktop"),
           "touch" == n
-            ? r.createElement(F, { player: t, category: l, title: a })
+            ? r.createElement(O, { player: t, category: l, title: a })
             : "gamepad" == n
               ? r.createElement(J, { player: t, category: l, title: a })
               : r.createElement(R, {
@@ -1771,10 +1771,10 @@
         MT: () => x,
         Rh: () => W,
         Wc: () => R,
-        Y1: () => O,
+        Y1: () => F,
         c5: () => M,
         tS: () => V,
-        zA: () => F,
+        zA: () => O,
       });
       var r = n(90626),
         l = n(72739),
@@ -2144,21 +2144,35 @@
       function G(e) {
         let { refTimeline: t, hoverState: n, showHoverThumb: l } = e,
           a = (0, r.useRef)(null),
-          [o, u] = (0, r.useState)(0);
+          [o, u] = (0, r.useState)({ nHoverLeft: 0, bFitsInParent: !1 });
         if (
           (r.useLayoutEffect(() => {
             if (!n || !a.current || !t.current) return;
             let e = t.current.getBoundingClientRect(),
               r = a.current.getBoundingClientRect(),
               l = e.right - e.left,
-              o = r.right - r.left,
-              s = i.OQ(n.nTickOffset - o / 2, 0 + S, l - o - S);
-            u(s);
-          }, [n, a, t, u]),
+              s = r.right - r.left,
+              c = i.OQ(n.nTickOffset - s / 2, 0 + S, l - s - S),
+              d = (0, v.PX)(
+                a.current.ownerDocument.documentElement,
+                a.current,
+                "data-trailer-player",
+              ),
+              m = !0;
+            if (d) {
+              let e = d.getBoundingClientRect();
+              m = r.top > e.top;
+            }
+            (o.nHoverLeft == c && o.bFitsInParent == m) ||
+              u({ nHoverLeft: c, bFitsInParent: m });
+          }, [n, a, t, o, u]),
           !n)
         )
           return null;
-        let s = { left: o },
+        let s = {
+            left: o.nHoverLeft,
+            visibility: o.bFitsInParent ? "visible" : "hidden",
+          },
           d = null,
           f = l ? n.thumbnail : null;
         if (f) {
@@ -2214,7 +2228,7 @@
             : null
         );
       }
-      function O(e) {
+      function F(e) {
         let t,
           { player: n } = e,
           [l, a, i, u] = (0, g.qi)(n);
@@ -2224,7 +2238,7 @@
         );
         return r.createElement(M, { onActivate: u, tooltip: s }, t);
       }
-      function F(e) {
+      function O(e) {
         let { player: t } = e,
           n = (0, g.BF)(t),
           l = n ? r.createElement(u.ud, null) : r.createElement(u.E$, null),

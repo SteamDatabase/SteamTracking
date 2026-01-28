@@ -275,20 +275,20 @@
     },
     61023: (e, r, t) => {
       "use strict";
-      t.d(r, { j: () => l });
+      t.d(r, { j: () => c });
       var s = t(90626),
         n = t(64238),
         o = t.n(n),
         a = t(90534),
         i = t(83392),
         p = t(38878);
-      function l(e) {
+      function c(e) {
         const {
             variant: r = "default",
             size: t = "2",
             radius: n,
-            focusable: l = !0,
-            hoverable: c = !0,
+            focusable: c = !0,
+            hoverable: l = !0,
             clickable: m = !0,
             className: d,
             children: u,
@@ -305,8 +305,8 @@
             radius: y,
             className: o()(
               p.ControlBox,
-              l && p.Focusable,
-              c && p.Hoverable,
+              c && p.Focusable,
+              l && p.Hoverable,
               m && p.Clickable,
               p[`Variant-${r}`],
               p[`Size-${t}`],
@@ -330,8 +330,8 @@
         a = t(81393),
         i = t(64238),
         p = t.n(i),
-        l = t(53011),
-        c = t(83392);
+        c = t(53011),
+        l = t(83392);
       const m = (0, s.createContext)(null);
       function d(e) {
         const { options: r, getOptionLabel: t = (e) => e, ...n } = e;
@@ -343,7 +343,7 @@
       }
       function u(e) {
         return s.createElement(o.a, {
-          className: l.Indicator,
+          className: c.Indicator,
           radius: e.radius,
         });
       }
@@ -373,7 +373,7 @@
           y = v ? void 0 : () => _(r),
           N = void 0 === t ? r : t;
         return s.createElement(
-          c.s,
+          l.s,
           {
             justify: "center",
             align: "center",
@@ -381,7 +381,7 @@
             ref: a,
             onClick: y,
             "data-selected": v ? "true" : "false",
-            className: p()(l.Item, g && l[`Size-${g}`]),
+            className: p()(c.Item, g && c[`Size-${g}`]),
           },
           N,
         );
@@ -392,7 +392,7 @@
               radius: t,
               size: o,
               children: i,
-              value: c,
+              value: l,
               onValueChange: d,
             } = e,
             [f, g] = (0, s.useState)({}),
@@ -407,14 +407,14 @@
             ),
             N = (0, s.useMemo)(
               () => ({
-                value: c,
+                value: l,
                 onValueChange: d,
                 register: v,
                 unregister: y,
                 radius: t,
                 size: o,
               }),
-              [c, d, v, y, t, o],
+              [l, d, v, y, t, o],
             );
           return s.createElement(
             n.j,
@@ -425,7 +425,7 @@
               variant: r,
               radius: t,
               size: o,
-              className: p()(l.SegmentedControlBox, l[`Variant-${r}`]),
+              className: p()(c.SegmentedControlBox, c[`Variant-${r}`]),
               tabIndex: 0,
               onKeyDown: (e) => {
                 let r = 0;
@@ -441,9 +441,9 @@
                 if (r) {
                   const t = Array.from(Object.values(f)).sort(_);
                   let s;
-                  if (null === c) s = r > 0 ? 0 : t.length - 1;
+                  if (null === l) s = r > 0 ? 0 : t.length - 1;
                   else {
-                    const e = f[c],
+                    const e = f[l],
                       n = t.findIndex((r) => r === e);
                     (0, a.wT)(
                       "number" == typeof n,
@@ -464,9 +464,9 @@
               { value: N },
               s.createElement(
                 "div",
-                { className: l.SegmentedControl },
+                { className: c.SegmentedControl },
                 i,
-                null !== c && s.createElement(u, { radius: t }),
+                null !== l && s.createElement(u, { radius: t }),
               ),
             ),
           );
@@ -474,36 +474,36 @@
     },
     90534: (e, r, t) => {
       "use strict";
-      t.d(r, { A: () => m, a: () => l });
+      t.d(r, { A: () => m, a: () => c });
       var s = t(90626),
         n = t(64238),
         o = t.n(n),
         a = t(11526),
         i = t(75659),
         p = t(44041);
-      function l(e) {
-        const r = (0, a.mz)({ ...e, className: o()(p.Box, e.className) }, c);
+      function c(e) {
+        const r = (0, a.mz)({ ...e, className: o()(p.Box, e.className) }, l);
         return s.createElement("div", { ...r });
       }
-      const c = i.h;
+      const l = i.h;
       function m(e) {
         return (0, a.Ef)(e, i.h);
       }
     },
     83392: (e, r, t) => {
       "use strict";
-      t.d(r, { s: () => l });
+      t.d(r, { s: () => c });
       var s = t(90626),
         n = t(11526),
         o = t(75659),
         a = t(64238),
         i = t.n(a),
         p = t(68875);
-      function l(e) {
-        const r = (0, n.mz)({ ...e, className: i()(e.className, p.Flex) }, c);
+      function c(e) {
+        const r = (0, n.mz)({ ...e, className: i()(e.className, p.Flex) }, l);
         return s.createElement("div", { ...r });
       }
-      const c = [
+      const l = [
         ...o.h,
         {
           prop: "direction",
@@ -811,9 +811,9 @@
       "use strict";
       t.d(r, {
         Ef: () => a,
-        Fd: () => l,
+        Fd: () => c,
         ti: () => p,
-        To: () => c,
+        To: () => l,
         mz: () => i,
       });
       var s = t(43186),
@@ -844,7 +844,7 @@
           const s = [],
             o = {},
             i = {},
-            { extracted: p, remaining: l } = a(e, r);
+            { extracted: p, remaining: c } = a(e, r);
           for (const a of r) {
             if (!(a.prop in p)) continue;
             let r = p[a.prop];
@@ -883,14 +883,14 @@
             }
           }
           return (
-            "className" in l &&
-              "string" == typeof l.className &&
-              s.push(l.className),
-            "style" in l &&
-              l.style &&
-              "object" == typeof l.style &&
-              Object.assign(o, l.style),
-            { ...i, ...l, className: s.join(" "), style: o }
+            "className" in c &&
+              "string" == typeof c.className &&
+              s.push(c.className),
+            "style" in c &&
+              c.style &&
+              "object" == typeof c.style &&
+              Object.assign(o, c.style),
+            { ...i, ...c, className: s.join(" "), style: o }
           );
         })(e, r, { formFactor: (0, s.xC)() });
       }
@@ -901,22 +901,22 @@
           ? `var(--spacing-${e})`
           : e;
       }
-      function l(e) {
+      function c(e) {
         if (!("%" == e[e.length - 1])) return `var(--color-${e})`;
         const [r, t] = e.split(" ");
         return `rgb( from ${`var(--color-${r})`} r g b / ${t} )`;
       }
-      function c(e, r) {
-        return e.startsWith("text") ? `var(--color-${e}-${r})` : l(e);
+      function l(e, r) {
+        return e.startsWith("text") ? `var(--color-${e}-${r})` : c(e);
       }
     },
     43186: (e, r, t) => {
       "use strict";
       t.d(r, {
         cW: () => p,
-        cr: () => l,
+        cr: () => c,
         IE: () => a,
-        xC: () => c,
+        xC: () => l,
         LT: () => d,
       });
       var s = t(90626);
@@ -959,18 +959,18 @@
           })(t);
         return s.createElement(i.Provider, { value: o }, r);
       }
-      function l(e) {
+      function c(e) {
         const { formFactor: r, children: t } = e;
         return r
           ? s.createElement(i.Provider, { value: r }, t)
           : s.createElement(s.Fragment, null, t);
       }
-      function c() {
+      function l() {
         return (0, s.useContext)(i);
       }
       const m = a.reduce((e, r, t) => ((e[r] = t), e), {});
       function d(e) {
-        const r = c();
+        const r = l();
         return m[r] >= m[e];
       }
     },
@@ -988,110 +988,70 @@
         return o(e, (0, s.xC)());
       }
     },
-    17304: (e, r, t) => {
+    55156: (e, r, t) => {
       "use strict";
-      t.d(r, { Y: () => u });
-      var s = t(90626);
-      const n = [
-        "greyneutral",
-        "mauve",
-        "slate",
-        "sage",
-        "olive",
-        "sand",
-        "tomato",
-        "red",
-        "ruby",
-        "crimson",
-        "pink",
-        "plum",
-        "purple",
-        "violet",
-        "iris",
-        "indigo",
-        "blue",
-        "cyan",
-        "teal",
-        "jade",
-        "green",
-        "grass",
-        "brown",
-        "bronze",
-        "gold",
-        "sky",
-        "mint",
-        "lime",
-        "yellow",
-        "amber",
-        "orange",
-      ];
-      var o = t(43186);
-      const a = (0, s.createContext)({}),
-        i = (0, s.createContext)(() => {});
-      function p(e) {
+      t.d(r, { Y: () => d });
+      var s = t(90626),
+        n = t(43186);
+      const o = (0, s.createContext)({}),
+        a = (0, s.createContext)(() => {});
+      function i(e) {
         const [r, t] = (0, s.useState)({});
         return s.createElement(
-          a.Provider,
+          o.Provider,
           { value: r },
-          s.createElement(i.Provider, { value: t }, e.children),
+          s.createElement(a.Provider, { value: t }, e.children),
         );
       }
-      function l() {
-        return (0, s.useContext)(a);
+      function p() {
+        return (0, s.useContext)(o);
       }
       var c = t(64238),
-        m = t.n(c),
-        d = t(13857);
-      const u = s.memo(function (e) {
+        l = t.n(c),
+        m = t(13857);
+      const d = s.memo(function (e) {
         const {
             defaultTextSize: r = "3",
             accentColor: t = "blue",
-            dullColor: a = "greyneutral",
-            bodyTextColor: i = "text-light",
-            breakpoints: l,
+            dullColor: o = "greyneutral",
+            bodyTextColor: a = "text-light",
+            breakpoints: p,
             children: c,
-            zoo: u,
+            zoo: d,
           } = e,
-          [f, g] = s.useState(a),
-          [v, y] = s.useState(t),
-          N = window,
-          x = (e) => (r) => {
-            n.includes(r) ? e(r) : console.error("Unknown color!");
+          _ = {
+            "--default-font-size": `var(--text-size-${r})`,
+            "--default-line-height": `var(--line-height-${r})`,
+            "--default-letter-spacing": `var(--letter-spacing-${r})`,
+            "--color-debug": "hotpink",
+            "--color-accent-contrast": "white",
           };
-        (N.setAccent = x(y)), (N.setDull = x(g));
-        const h = {
-          "--default-font-size": `var(--text-size-${r})`,
-          "--default-line-height": `var(--line-height-${r})`,
-          "--default-letter-spacing": `var(--letter-spacing-${r})`,
-          "--color-debug": "hotpink",
-          "--color-accent-contrast": "white",
-        };
         return s.createElement(
-          p,
+          i,
           null,
           s.createElement(
-            o.cW,
-            { breakpoints: l },
+            n.cW,
+            { breakpoints: p },
             s.createElement(
-              _,
+              u,
               null,
               s.createElement(
                 "div",
                 {
-                  className: m()(d.Root, "noOpinionatedGlobalStyles"),
-                  style: h,
+                  className: l()(m.Root, "noOpinionatedGlobalStyles"),
+                  style: _,
                 },
                 s.createElement(
                   "div",
                   {
-                    "data-accent-color": v,
-                    "data-dull-color": f,
-                    "data-body-text-color": i,
-                    className: d.DataAttributes,
+                    "data-accent-color": t,
+                    "data-dull-color": o,
+                    "data-body-text-color": a,
+                    className: m.DataAttributes,
                   },
                   s.createElement(
                     "div",
-                    { className: d.AfterDataAttributes },
+                    { className: m.AfterDataAttributes },
                     c,
                     !1,
                   ),
@@ -1101,10 +1061,10 @@
           ),
         );
       });
-      function _(e) {
+      function u(e) {
         const { children: r } = e,
-          { formFactorOverride: t } = l();
-        return s.createElement(o.cr, { formFactor: t }, r);
+          { formFactorOverride: t } = p();
+        return s.createElement(n.cr, { formFactor: t }, r);
       }
     },
   },

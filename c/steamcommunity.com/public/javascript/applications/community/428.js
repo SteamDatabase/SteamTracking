@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Możliwa zawartość:",
 	"Error_LoadingContent": "Wystąpił problem podczas wczytywania tych treści",
 	"Error_LoadingMarketItem": "Żądany element może nie istnieć lub mógł wystąpić tymczasowy problem uniemożliwiający jego wczytanie. Spróbuj ponownie później.",
-	"ListingFilter_Title": "Filtruj oferty"
+	"ListingFilter_Title": "Filtruj oferty",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

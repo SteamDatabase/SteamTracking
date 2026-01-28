@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Nội dung có thể có:",
 	"Error_LoadingContent": "Có vấn đề phát sinh trong khi nạp nội dung này",
 	"Error_LoadingMarketItem": "Mục yêu cầu có thể không tồn tại, hoặc tạm thời đang gặp vấn đề ngăn quá trình nạp. Vui lòng thử lại sau.",
-	"ListingFilter_Title": "Lọc bài đăng bán"
+	"ListingFilter_Title": "Lọc bài đăng bán",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Mögliche Inhalte:",
 	"Error_LoadingContent": "Beim Laden des Inhalts ist ein Fehler aufgetreten",
 	"Error_LoadingMarketItem": "Der angeforderte Inhalt steht möglicherweise nicht zur Verfügung oder es liegt ein vorübergehendes Problem vor, das das Laden verhindert. Bitte versuchen Sie es später erneut.",
-	"ListingFilter_Title": "Angebote filtern"
+	"ListingFilter_Title": "Angebote filtern",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

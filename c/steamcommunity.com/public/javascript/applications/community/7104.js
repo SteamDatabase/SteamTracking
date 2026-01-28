@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Muligt indhold:",
 	"Error_LoadingContent": "Der opstod et problem med at indlæse dette indhold",
 	"Error_LoadingMarketItem": "Den forespurgte genstand eksisterer måske ikke, eller der kan være et midlertidigt problem, der forhindrer genstanden i at blive indlæst. Prøv igen senere.",
-	"ListingFilter_Title": "Filtrer opslag"
+	"ListingFilter_Title": "Filtrer opslag",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

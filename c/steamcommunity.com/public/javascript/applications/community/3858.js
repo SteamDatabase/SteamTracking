@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "Възможно съдържание:",
 	"Error_LoadingContent": "Имаше проблем при зареждането на това съдържание",
 	"Error_LoadingMarketItem": "Възможно е изискваният артикул да не съществува или да има временен проблем, който възпрепятства зареждането му.",
-	"ListingFilter_Title": "Филтриране на обяви"
+	"ListingFilter_Title": "Филтриране на обяви",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

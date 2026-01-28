@@ -179,24 +179,6 @@
         return !1;
       }
       var _ = __webpack_require__("chunkid");
-      const _ = !1;
-      function _(_) {
-        const { name: _, root: __webpack_require__, navState: _ } = _;
-        _
-          ? (_ && console.log(`Restore ${_} history snapshot ${(0, _._)(_)}`),
-            (0, _._)(__webpack_require__, _),
-            __webpack_require__.Tree.DeferredFocus.Reset())
-          : (_ && console.log(`No focus state in history for ${_}`),
-            __webpack_require__.Tree.DeferredFocus.ExecuteQueuedFocus());
-      }
-      function _(_, _) {
-        const _ = window.history.state;
-        return {
-          name: _,
-          root: _,
-          navState: _?.[_],
-        };
-      }
       const _ = new (__webpack_require__("chunkid")._)("FocusNavigation").Debug;
       var _;
       !(function (_) {
@@ -260,42 +242,7 @@
               subtree: !0,
             }),
               (0, _._)(!0),
-              (function (_, _) {
-                if (
-                  (_.Tree.DeferredFocus.SuppressFocus(),
-                  window.addEventListener("popstate", () => _(_(_, _))),
-                  window.history.state?.notify_focus_restore_ready)
-                ) {
-                  _ &&
-                    console.log(
-                      "waiting to restore focus until focus_restore_ready is sent",
-                    );
-                  var _ = _(_, _);
-                  window.addEventListener("focus_restore_ready", function (_) {
-                    _ && console.log("focus_restore_ready received"),
-                      window.setTimeout(function () {
-                        _(_);
-                      }, 100);
-                  });
-                } else
-                  _ && console.log("immediately restoring focus from history"),
-                    _(_(_, _));
-                !(function (_, _) {
-                  _.Tree.WindowContext.FocusChangedCallbacks.Register(() => {
-                    _ &&
-                      console.log(
-                        `Recording nav state for ${_}: ${(0, _._)((0, _._)(_))}`,
-                      ),
-                      window.history.replaceState(
-                        {
-                          ...window.history.state,
-                          [_]: (0, _._)(_),
-                        },
-                        null,
-                      );
-                  });
-                })(_, _);
-              })("legacy_web_root", _.Root),
+              (0, _._)("legacy_web_root", _.Root),
               Object.assign(window, _),
               window.dispatchEvent(new CustomEvent("vgp_gamepadnavready"));
           })(_)),

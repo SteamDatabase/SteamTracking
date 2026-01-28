@@ -12873,11 +12873,16 @@
           l = i.useCallback(
             (e) => {
               const r = t.current;
-              return r?.BFocusWithin() &&
-                !r.BHasFocus() &&
-                r.TakeFocus(e.detail.button)
-                ? (s && s(!1), !0)
-                : !!n && n(e);
+              return "self" != r.Node().GetFocusable()
+                ? (console.warn(
+                    "PanelGroup is not focusable - ignoring cancel action",
+                  ),
+                  !1)
+                : r.BFocusWithin() &&
+                    !r.BHasFocus() &&
+                    r.TakeFocus(e.detail.button)
+                  ? (s && s(!1), !0)
+                  : !!n && n(e);
             },
             [t, n, s],
           );
@@ -14209,7 +14214,7 @@
             displayWidth: 0,
             displayHeight: 0,
           }),
-          a = (0, i.useRef)(void 0),
+          a = (0, i.useRef)(null),
           [o, l] = (function () {
             const [e, t] = i.useState(void 0),
               r = i.useCallback(() => t(void 0), []),
@@ -14243,10 +14248,11 @@
                 i.createElement("img", {
                   ...e,
                   className: (0, St.A)({
-                    [e.className]: Boolean(e.className),
-                    [ya.ExpandableHover]: !0,
+                    ...(e.className && { [e.className]: !0 }),
                   }),
-                  onClick: (t) => o([e.src]),
+                  onClick: (t) => {
+                    e.src && o([e.src]);
+                  },
                 }),
               )
             : i.createElement("img", {
@@ -19584,6 +19590,7 @@
                   ],
                   initially_selected_values: ["#AppTypeLabel_game"],
                 },
+                { loc_token: "#Sale_Preferences" },
               ],
               initially_expanded_facets: [
                 "#AppTypeLabelTitle",
@@ -29060,7 +29067,7 @@
           i.createElement(
             "div",
             { className: qu().ConfirmationContainer },
-            i.createElement("img", { src: Xc }),
+            i.createElement("img", { src: (0, Wo.YJ)(Xc) }),
             i.createElement(
               "div",
               { className: qu().AwaitingMobileConfText },
@@ -31239,11 +31246,11 @@
         return Qr(
           e,
           (function (e) {
-            return [
-              e?.jsondata?.read_more_link
-                ? (0, Vr.wm)(e.jsondata.read_more_link).toLocaleLowerCase()
-                : void 0,
-            ];
+            if (!e) return;
+            let t = e?.jsondata?.read_more_link
+              ? (0, Vr.wm)(e.jsondata.read_more_link).toLocaleLowerCase()
+              : void 0;
+            return t ? [t] : void 0;
           })(t),
         );
       }
@@ -31259,9 +31266,11 @@
         let o,
           l = (0, Wa.OZ)(t);
         (l = (function (e, t) {
-          return Wp(e, t)
-            ? (s.TS.IN_CLIENT ? "steam://openurl_external/" : "") + Kr(e)
-            : (0, Vr.NT)(e);
+          return e
+            ? (e = Wp(e, t)
+                ? (s.TS.IN_CLIENT ? "steam://openurl_external/" : "") + Kr(e)
+                : (0, Vr.NT)(e))
+            : "";
         })(l, r)),
           Qr(l) && (o = "noopener nofollow");
         const c =
@@ -33535,12 +33544,12 @@
           const { sNavKey: i, iActiveChild: s, rgChildren: c } = t;
           i && (0, n.wT)(i == e.NavKey, "navkey mismatch"), e.SetActiveChild(s);
           const m = a.IsDebugEnabled()
-            ? (function (e) {
+            ? `[${e.Tree.id}]${(function (e) {
                 if (0 == e) return "";
                 let t = "";
                 for (let r = 0; r < e; r++) t += "*";
                 return (t += " "), t;
-              })(r)
+              })(r)}`
             : "";
           if (c && c.length) {
             const [t] = e.GetChildren();
@@ -35073,9 +35082,8 @@
         }
         FindClosestFocusableNodeToRect(e, t) {
           const r = (0, d.G4)(e),
-            i = r && s.xr[r];
-          console.log(r, i);
-          const n = [];
+            i = r && s.xr[r],
+            n = [];
           for (const e of this.m_rgChildren) {
             const r = e.GetBoundingRect();
             if (r) {
@@ -35086,10 +35094,7 @@
           }
           n.sort((e, t) =>
             e.dist != t.dist ? e.dist - t.dist : t.overlap - e.overlap,
-          ),
-            n.forEach(({ child: e, dist: t, overlap: r }) =>
-              console.log(`dist ${t} overlap ${r}`, e.Element),
-            );
+          );
           for (const { child: r } of n) {
             const i = r.FindFocusableNode(e, t);
             if (i) return i;
@@ -52587,7 +52592,7 @@
         constructor(e = null) {
           super(),
             O.prototype.trailer_name || a.Sg(O.M()),
-            n.Message.initialize(this, e, 0, -1, [3, 4, 5, 6], null);
+            n.Message.initialize(this, e, 0, -1, [5, 6], null);
         }
         static sm_m;
         static sm_mbf;
@@ -52612,8 +52617,6 @@
                     br: a.qM.readEnum,
                     bw: a.gp.writeEnum,
                   },
-                  trailer_480p: { n: 3, c: E, r: !0, q: !0 },
-                  trailer_max: { n: 4, c: E, r: !0, q: !0 },
                   microtrailer: { n: 5, c: E, r: !0, q: !0 },
                   adaptive_trailers: { n: 6, c: F, r: !0, q: !0 },
                   screenshot_medium: {
@@ -64537,10 +64540,6 @@
         GetAppID() {
           return this.m_unAppID;
         }
-        GetAppIDToRun() {
-          const e = this.GetParentAppID();
-          return e && 11 != this.m_eAppType ? e : this.GetAppID();
-        }
         GetAppType() {
           return this.m_eAppType;
         }
@@ -65118,8 +65117,6 @@
         m_strTrailerName;
         m_eTrailerCategory;
         m_nBaseID;
-        m_Trailer480p;
-        m_TrailerMax;
         m_MicroTrailer;
         m_rgDashTrailers;
         m_rgHlsTrailer;
@@ -65133,17 +65130,7 @@
           const t = e.trailer_url_format();
           if (
             (t &&
-              (e.trailer_480p() &&
-                (this.m_Trailer480p = this.ExtractTrailerFormats(
-                  t,
-                  e.trailer_480p(),
-                )),
-              e.trailer_max() &&
-                (this.m_TrailerMax = this.ExtractTrailerFormats(
-                  t,
-                  e.trailer_max(),
-                )),
-              e.microtrailer() &&
+              (e.microtrailer() &&
                 (this.m_MicroTrailer = this.ExtractTrailerFormats(
                   t,
                   e.microtrailer(),
@@ -65177,12 +65164,6 @@
         }
         GetTrailerCategory() {
           return this.m_eTrailerCategory;
-        }
-        GetTrailer480p() {
-          return this.m_Trailer480p;
-        }
-        GetTrailerMax() {
-          return this.m_TrailerMax;
         }
         GetTrailersDash() {
           return this.m_rgDashTrailers;

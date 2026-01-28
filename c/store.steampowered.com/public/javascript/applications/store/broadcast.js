@@ -3,6 +3,54 @@
   {
     chunkid: (module) => {
       module.exports = {
+        Bold: "_3cln317VYhwhE1fSeMCG48",
+        Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
+        Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
+        TemplateMediaTitle: "_DE_6XhnSqABczbJ55rNJ",
+        Question: "_2Hj1tfDjpLvBVTHTqAVcYB",
+        Answer: "syKgzmlrcUIJHIBfWsn4h",
+        Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
+        Header2: "_6-VR2WCBCDupCcUN5INQM",
+        Header3: "_1sGnlGwCeaGUp63h4Lx-pU",
+        Header4: "_3VHY5vmO07MFpoOgTB9eOi",
+        Header5: "_1Vk-9-C_y-lBA5ucPl6t8X",
+        CenterSpan: "zCnp-VELUMybbfxOD-ze9",
+        SmallText: "WBzrd438Bd8Z3J-j_iglW",
+        Underline: "GrhFWtBdrSZP611s1UqqT",
+        Strike: "_3pK7sh9FYdigMXxcUVI4DY",
+        Spoiler: "_3kRr4bh8twnlt_7wcEFZr3",
+        Revealed: "_3g1-8c9NBcNDwW4-6x1pM6",
+        SpoilerText: "_3r66KOH_Vckmfps3XUOVrY",
+        DisabledMouseEvents: "_1O62-3Y03GsnA0709QyJ_O",
+        BlockQuote: "_3MQ0Cuf_h-nZ81xIubg8rh",
+        QuoteAuthor: "_1MzmaZcQPMRfrTHs3k0fIZ",
+        PullQuote: "_2kA0eAmv8ifh0zphoq4ntM",
+        Code: "_2ODaX8lO7DKLKke76c2Wya",
+        CodeBlock: "_1I3OP84ayrCIMuBrCrkosi",
+        List: "_3Y-LRoi5aeZ9-3ujWjXuG3",
+        OrderedList: "DojPxwyYpx3hwuPIaJPCq",
+        ListItem: "_1iXxYKOlzzXiVr02E7n2Fe",
+        _: "-xPK0REpludHjRG8xQfih",
+        Table: "_2CAsiFd9UHbUOqzd0e7ioe",
+        NoBorder: "_1rO4D9vLxJRWz9sW4-ahSY",
+        TableRow: "_3FJk0y6E6I8nSYfCIqGP8",
+        TableCell: "_3rLIt0O8F7iG6B2RmC3cYa",
+        EqualCells: "_1CtoyG6UPAlYp7PCGLXx8L",
+        ExpandSectionBlock: "_2cmZMzZlRrszDBF97Di0cD",
+        ExpandSectionHeader: "uAvfe31kBh5TZrse069d1",
+        EmbedArrow: "_3tVf4GSoWxEOZrxL_PQ4iA",
+        ExpandSectionBody: "_33CTl_a7XYxFIng-fm4A5K",
+        ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
+        LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
+        Image: "_3K0NuxYUYncdQ-cNK7udMn",
+        PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
+        Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
+        CalendarEventContainer: "S-ElBHomDkV0L3K4XChxt",
+        CalendarEventLink: "_106tp5gLWBvoekGEC8HXQ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         strStreamIconCapsuleArtHeight: "58px",
         strStreamIconScreenshotArtHeight: "58px",
         bordered_container: "_3zXpFCyX2IiaD-MNF5KJFf",
@@ -134,6 +182,58 @@
     },
     chunkid: (module) => {
       module.exports = {
+        DynamicLinkBox: "_1IGURymjmwZOxJLS-9BWKA",
+        DynamicLink_Preview: "_3ZK9RP26kmOzqRdQKxWxsM",
+        DynamicLink_Author: "_3z0n0rpIPJRdV1QY5n0KaR",
+        DynamicLink_Description: "eMdGA7SU6zikUSu6rf7Pr",
+        DynamicLink_Content: "_2FhVXotuJg4O0NN4qA07vU",
+        DynamicLink_Name: "_1R7Ngck7T0RkTPGRUaq6Gr",
+        DynamicLink_YoutubeViews: "_3clz2a9swd9PcLG0xSDhHt",
+        Dynamiclink_Content: "_1EYgVQdGSl6VonVuGGfDuy",
+        DynamicLink_URL: "_3otyzgmxRyTsMj5ALOf07p",
+        DynamicLink_AuthorName: "_2DML9COLsaSXjOzYcbtFXP",
+        DynamicLink_Date: "_281DhmZR9c9ZDwpNqPc5_3",
+        PreviewYouTubeVideo: "rUASsQgg0rvqoACIDRygZ",
+        sizeThumb: "_3dy3KtMG10uNhU2HRfwx3A",
+        sizeFull: "_14CxWorQ1RNkZvdhXYWAh-",
+        PlaceholderImg: "LILNdsmSgG52f0MP1f2O3",
+        floatLeft: "_2OWxr5tZIjB4gTfA3vE2Gc",
+        floatRight: "om0Rs75g2ScLGnDWC76IQ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        NewEmoticonIndicator: "_5BtHMjT9usALaSWHGugdV",
+        NewEmoticonCircle: "u5Kx6dkUppvb-1qV4IIuy",
+        EmoticonSelector: "_21dGPKyxoQJmk8T757A5tl",
+        emoticon: "_1ZQW1wV5cNj3sDpibfbUqs",
+        large: "_20l1z3ShpHQ9njRDYgy1I5",
+        EmoticonSelector_Emoticons: "_1zMG_TAAO7uJ9DZvsPLfay",
+        EmoticonSelector_Separator: "_2ETbIGwtl6SLfkb48DDgvG",
+        EmoticonSelector_SeparatorBackground: "_3vIdbqkcpvxxyyRioKoQkz",
+        EmoticonSelector_Controls: "_2ncH4xow85UXkBM0hcrY8l",
+        EmoticonSelector_Item: "iSEjD9v1iZNJNbGHtDLZx",
+        EmoticonSelector_Item_New: "_1C2S6Gne45ErVlr3yX0YuG",
+        EffectHeading: "_1G4cTIWNmmp8hn-0UODGqo",
+        StickerHeading: "_2o2L-YGgH5cNuwJW9nU9dm",
+        GetFestive: "EOLiaNBZK-eUBTeiD-P4c",
+        TopDivider: "xf7hAWPD4WwXxsyXYxFFo",
+        BottomDivider: "_1gjpUnY8RyS8HpizGQvyFI",
+        StickerButton: "_2fYj8pHe3bHHxWj4FucFvj",
+        EffectButton: "_22MJpsSm-Ur5FU5WpYQKzn",
+        EmoticonHover: "W_hPU2JmhTx3oUqDN9ADo",
+        Info: "_29D_0UxbftoceIAKZktndo",
+        Name: "_3zUR2KWg7TNWOQx2nDFyoh",
+        AppName: "_2JWWOJGZuX70xQcA2QaBg",
+        StickerHoverSticker: "_1HdRqbOgpBfEQzQ2py5nq5",
+        EffectHoverEffect: "_1GZ-ESK0dV6oJBDhsU3RiH",
+        PickerTab: "VrrpBsQE4GFseDy3cTw1Q",
+        Clock: "_16xcLj__xBHmc9xDYmADhW",
+        EmoticonItem: "P1aWuK_DhstDh-M08okCK",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Container: "mKmrOjr9bGjKAolgp9NoD",
         VoteContainer: "_3Kelh1-_v6xHfRjF68n7NB",
         DiscussContainer: "_16xC0mtOWoLbvSQbmo_ycv",
@@ -168,10 +268,78 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Header1: "SPYFj8pCLpNmnuQJEDobC",
+        Header2: "QuKtTJ4LCPUlQeWYfLNyX",
+        Header3: "_3s7cUqglDds9wzcWb7OLz6",
+        Link: "_29bMZB6BOQfTQ_3za-w60I",
+        LinkHost: "_16eO9LHnJuheylkB3Fdrpn",
+        LinkButton: "_2HnDgHQT_3ehcs4WgskKG5",
+        LinkPill: "_3nRRZ1AKPWQnyWTcT1RDt9",
+        UnorderedList: "_2FoSxA1yCqpvxdOJnu8N8Z",
+        OrderedList: "vV4IwOV-RuzelptiRQ_ZS",
+        StoreWidget: "_36Y-loIMvxDKY9RIVxecCp",
+        MedalTVWidget: "_1j2vixiqbbe8GqxA-cmlhA",
+        LoyaltyRewardCtn: "_14p7R6qC1Kkyg4Qal1UJZu",
+        SaleSectionCtn: "_39HWXhhjsbML7K9sme9ItV",
+        SaleTextCtn: "_2Tqq0UDtuHw6otaE2Ww46g",
+        ReminderCtn: "_25AZkxZYa3ROp8PHchCq-k",
+        BlockQuote: "_2cY7bYMGmnuPPhM3aMQMfa",
+        SocialLink: "_2LAnc-M7XILk5D72Qy7V6q",
+        SocialIcon: "dDjYNUHT-jcb_B0VGK6CP",
+        LocalizeBlock: "_1oBceu_yGnJHhqsA8fmA7P",
+        CheckMark: "_24AtTon5otxGQGBY3P6ATR",
+        ScreenshotCarousel: "_3uA0hv9La9Do6XtRycM0RX",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        FlexColumnContainer: "_15ufNax9QUSW3N7J3t5TmY",
+        FullStartTime: "_1YLHWZHuAxRYOyv0nq0a3Z",
+        ReminderDialog: "_3YUEYUcuh0PTxYsV6Fecqq",
+        ReminderOptions: "_1Tp8K4gynWBOBpC9tS_xXV",
+        ReminderBackground: "TNf9_B9OYDQXSleTS1gAS",
+        ReminderExpandsLeft: "_38Xly-p-GTyBu1lVv1KF79",
+        ReminderOption: "_26nnhy-kEQVG1EJvwt-YOG",
+        Unverified: "_1dcmAZnqCMpEs3PXIajJIN",
+        CheckboxWrapper: "_1xuKEdr0rNMBRK_vYraObm",
+        ReminderCheckBox: "vPo2jxLA9iAVrt49Ic3c1",
+        IconMode: "_1YjsRp8XbwoXVWYYvWD7iv",
+        RemindBell: "_3-_M2IUSKHovaZaejfEH3E",
+        RemindCheck: "_2qaPrk1hI1cvMDPYnXO-kj",
+        ReminderDefault: "_19p2Qdr48bduJICtjBoXVv",
+        TextMode: "_553rCUt4qxX8_S5jBNMrv",
+        ReminderCheck: "_3fMhCIg2SQlEWyw9rHKGCe",
+        ReminderOpennedOptions: "vBuhkIZJzVjB-gDKqhho8",
+        ReminderOptionsHeader: "_2oOZCpUHJOjdt7D5zkx0Ed",
+        ReminderCalendarOptions: "VO6FStOkQjIXr-aZW1JBx",
+        ReminderSettings: "_2Pn59J0keCBE-RnAuaUUVx",
+        ReminderNotes: "_3qE0wUvpzn1HTPrT3R_wOv",
+        RpcThrobber: "_3F3aByA4Tw1mRbNiiVtXP-",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        SpeakerOuter: "_3rRqPJdGrYx9YMtQMciIFY",
+        Speaker: "_3F7-FkJu8-JstT7SouP8XJ",
+        SpeakerPopup: "_3y7kVhhGmtbSgbZdte0EuV",
+        SpeakerInfoOuter: "_1NC9nn23Pdd7FtZW6zM7he",
+        SpeakerInfoInner: "_1bMpEcCbkVkKo1Oc02WFoJ",
+        SpeakerTitle: "_2Vo0lUG19xIopljkxhtSod",
+        SpeakerBio: "_2yP7s2N28D9PFHs9yUr3jD",
+        SpeakerHover: "_16UyHpAXG98qQsfN8mBk3x",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Link: "-HlDBB290kjpl61uUmRed",
         Banner: "_2bT8irkKNnA5sxFG3MUXzH",
         Big: "sGy-bB7uqEt4Hoe7U5iA1",
         Mobile: "mhii5hgMCQvO2tXOUdWPQ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ErrorDiv: "XeZExtCZ_zIcbkPRCqsnV",
       };
     },
     chunkid: (module) => {
@@ -181,6 +349,1400 @@
         FriendListInsetShadowTop: "_1osHa9KHOmdCDNrA232z4N",
         FriendListInsetShadowBottom: "_2OoTJwlWvzvAysWOOEQaXS",
       };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        DateAndTime: "_2V6GLdiU4guy4ND3n4Usgg",
+        DateAndTimeInline: "HZ6b2d4r4EFnT_1BeU5vo",
+        _: "Fn5EUtWkwSAw_gbbiySKN",
+        ActiveEvent: "rT7EkJjqw27KBB7HxAAWk",
+        ActiveEventCallOut: "_2pJftSRjT_UngZZ4BJimwg",
+        RightSideTitles: "_4LAnPYKRPeF-QDReu_VGm",
+        DateToolTip: "_2E5LHvnVEF3dSVV3wrDflm",
+        ShortDateAndTime: "MBkkhT4wei3tWetnWbiqn",
+        ShortDateRange: "_3CN6I3krBRNzD7kCuKQ_w7",
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        reactNodes = [];
+        AppendText(_, _ = !1) {
+          _.length &&
+            (_
+              ? this.reactNodes.push(
+                  _.createElement(
+                    "span",
+                    {
+                      "data-copytext": "",
+                      "data-copystyle": "merge-adjacent",
+                      "bbcode-text": _,
+                    },
+                    _,
+                  ),
+                )
+              : this.reactNodes.push(_));
+        }
+        AppendNode(_) {
+          this.reactNodes.push(_);
+        }
+        GetElements() {
+          return this.reactNodes;
+        }
+      }
+      class _ {
+        m_decoratedAccumulator;
+        constructor(_) {
+          (0, _._)(_, "decorated accumulator cannot be null"),
+            (this.m_decoratedAccumulator = _);
+        }
+        AppendText(_, _ = !1) {
+          this.m_decoratedAccumulator.AppendText(_, _);
+        }
+        AppendNode(_) {
+          this.m_decoratedAccumulator.AppendNode(_);
+        }
+        GetElements() {
+          return this.m_decoratedAccumulator.GetElements();
+        }
+      }
+      class _ extends _ {
+        m_nStartCursor = 1;
+        constructor(_, _, _) {
+          super(_), (this.m_nStartCursor = void 0 !== _ ? _ : 1);
+        }
+        AppendText(_) {
+          let _ = _;
+          const _ = [];
+          for (
+            let _ = _.indexOf("\n", this.m_nStartCursor);
+            -1 !== _;
+            _ = _.indexOf("\n")
+          )
+            __webpack_require__.push(_.substr(0, _)),
+              __webpack_require__.push(_.createElement("br")),
+              (_ = _.substr(_ + 1));
+          _.length && __webpack_require__.push(_),
+            __webpack_require__.forEach((_) => {
+              super.AppendNode(_);
+            });
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_fnAccumulatorFactory;
+        m_dictComponents;
+        constructor(_, _) {
+          _ instanceof Map
+            ? (this.m_dictComponents = _)
+            : (this.m_dictComponents = new Map(Object.entries(_))),
+            (this.m_fnAccumulatorFactory = _);
+        }
+        Parse(_, _, __webpack_require__ = !0) {
+          const _ = (function (_, _) {
+            const _ = [];
+            let _ = {
+                type: 0,
+                text: "",
+              },
+              _ = !1,
+              _ = !1,
+              _ = !1;
+            for (let _ = 0; _ < _.length; _++) {
+              const _ = _[_];
+              switch (_.type) {
+                case 0:
+                  "[" == _
+                    ? ((_.type = 2), (_ = !0))
+                    : ((_.type = 1), "\\" == _ && _ ? (_ = !_) : (_.text += _));
+                  break;
+                case 2:
+                case 3:
+                  if ("/" == _ && _) (_.type = 3), (_.text = ""), (_ = !1);
+                  else if ("[" != _ || _)
+                    if ("]" != _ || _)
+                      "\\" == _ && _
+                        ? ((_.text += _), (_ = !_), (_ = !1))
+                        : ((_.text += _), (_ = !1), (_ = !1));
+                    else {
+                      const _ =
+                          2 == _.type &&
+                          "noparse" == _.text?.toLocaleLowerCase(),
+                        _ =
+                          3 == _.type &&
+                          "noparse" == _.text?.toLocaleLowerCase();
+                      _ || (_ && !_)
+                        ? ((_ = _(_)), (_.text += _))
+                        : _
+                          ? (_ = !0)
+                          : _ && (_ = !1),
+                        (_ = _(_, _)),
+                        (_ = !1);
+                    }
+                  else (_ = _(_, _(_), 2)), (_ = !0);
+                  break;
+                case 1:
+                  "[" != _ || _
+                    ? "\\" == _ && _
+                      ? (_ && (_.text += _), (_ = !_))
+                      : ((_.text += _), (_ = !1))
+                    : ((_ = _(_, _, 2)), (_ = !0));
+              }
+            }
+            0 != _.type &&
+              (2 == _.type || 3 == _.type
+                ? __webpack_require__.push(_(_))
+                : __webpack_require__.push({
+                    type: _.type,
+                    text: _.text ?? "",
+                  }));
+            return _;
+          })(_ || "", __webpack_require__);
+          return this.Parse_BuildElements(_, _);
+        }
+        Parse_BuildElements(_, _) {
+          let _ = this.m_fnAccumulatorFactory(void 0);
+          const _ = [],
+            _ = () => (_.length < 1 ? void 0 : _[_.length - 1]),
+            _ = this.m_dictComponents,
+            _ = (_) => !(!_.tag || !_.get(_.tag)?.autocloses);
+          let _ = !1,
+            _ = !0;
+          const _ = (_, _) => {
+            if (_ && _.node.tag === _.text && _.get(_.node.tag)) {
+              const _ = _.get(_.node.tag),
+                _ = {
+                  tagname: _.node.tag,
+                  args: _.node.args,
+                  rawargs: _.node.rawargs,
+                },
+                _ = _(_.Constructor, _, ...__webpack_require__.GetElements());
+              (_ = _.accumulator),
+                Array.isArray(_)
+                  ? _.forEach((_) => __webpack_require__.AppendNode(_))
+                  : __webpack_require__.AppendNode(_),
+                (_ = !!_.skipFollowingNewline),
+                (_ = _.bWrapTextForCopying);
+            } else if (_) {
+              const _ = _.accumulator;
+              _.AppendText("[" + _.node.text + "]", !1),
+                __webpack_require__
+                  .GetElements()
+                  .forEach((_) => _.AppendNode(_)),
+                _.AppendText("[/" + _.text + "]", !1),
+                (_ = _),
+                (_ = _.bWrapTextForCopying);
+            }
+          };
+          for (
+            _.forEach((_, _) => {
+              if (1 == _.type) {
+                const _ = _ ? _.text.replace(/^[\t\r ]*\n/g, "") : _.text;
+                __webpack_require__.AppendText(_, _), (_ = !1);
+              } else if (2 == _.type) {
+                const _ = _.get(_.tag);
+                if (_) {
+                  const _ = _();
+                  if (void 0 !== _) {
+                    const _ = _.get(_.node.tag);
+                    _ &&
+                      _.autocloses &&
+                      _.tag === _.node.tag &&
+                      _(_.pop(), _.node);
+                  }
+                  _.push({
+                    accumulator: _,
+                    node: _,
+                    bWrapTextForCopying: _,
+                  }),
+                    (_ = this.m_fnAccumulatorFactory(_)),
+                    (_ = !!_.skipInternalNewline),
+                    (_ = _.allowWrapTextForCopying ?? !1);
+                } else
+                  __webpack_require__.AppendText(
+                    "[" + _.text + "]",
+                    0 == _.length,
+                  );
+              } else if (3 == _.type) {
+                for (; _() && _().node.tag !== _.text && _(_().node); ) {
+                  const _ = _.pop();
+                  _(_, _.node);
+                }
+                if (_()?.node.tag == _.text) {
+                  const _ = _.pop();
+                  _(_, _);
+                } else
+                  __webpack_require__.AppendText(
+                    "[/" + _.text + "]",
+                    0 == _.length,
+                  );
+              }
+            });
+            _.length > 0;
+          ) {
+            const _ = _.pop();
+            _(_, _.node);
+          }
+          return __webpack_require__.GetElements();
+        }
+      }
+      function _(_, _, __webpack_require__ = 0) {
+        const { type: _, text: _ = "" } = _;
+        if (2 == _) {
+          let _ = _.indexOf("=");
+          const _ = _.indexOf(" ");
+          let _, _;
+          -1 != _ && (-1 == _ || _ < _) && (_ = _);
+          let _ = "";
+          _ > 0
+            ? ((_ = _.substr(0, _).toLocaleLowerCase()),
+              (_ = _.substr(_)),
+              (_ = (function (_) {
+                if (!_ || _.length < 1) return {};
+                const _ = {};
+                let _ = "",
+                  _ = "",
+                  _ = 0,
+                  _ = 0;
+                "=" == _[0] && (_ = 2);
+                let _ = !1;
+                for (_++; _ < _.length; _++) {
+                  const _ = _[_];
+                  let _ = !0,
+                    _ = !1;
+                  switch (_) {
+                    case 0:
+                      if ("=" == _) return {};
+                      if (" " == _) continue;
+                      _ = 1;
+                      break;
+                    case 1:
+                      ("=" != _ && " " != _) ||
+                        _ ||
+                        (" " == _ ? ((_ = 0), (_ = !0)) : (_ = 2), (_ = !1));
+                      break;
+                    case 2:
+                      " " == _
+                        ? ((_ = 0), (_ = !1), (_ = !0))
+                        : '"' == _
+                          ? ((_ = 4), (_ = !1))
+                          : (_ = 3);
+                      break;
+                    case 3:
+                    case 4:
+                      ((" " == _ && 4 != _ && !_) ||
+                        ('"' == _ && 4 == _ && !_)) &&
+                        ((_ = 0), (_ = !1), (_ = !0));
+                  }
+                  if (_)
+                    if ("\\" != _ || _)
+                      if (((_ = !1), 1 == _)) _ += _;
+                      else {
+                        if (3 != _ && 4 != _)
+                          throw new Error(
+                            "Not expecting to accumulate buffer in state " + _,
+                          );
+                        _ += _;
+                      }
+                    else _ = !0;
+                  _ && ((_[_] = _), (_ = ""), (_ = ""));
+                }
+                0 != _ && (_[_] = _);
+                return _;
+              })(_)))
+            : ((_ = {}), (_ = _.toLocaleLowerCase())),
+            _.push({
+              type: _,
+              text: _,
+              tag: _,
+              args: _,
+              rawargs: _,
+            });
+        } else
+          0 != _ &&
+            _.push({
+              type: _,
+              text: _,
+            });
+        return {
+          type: _,
+          text: "",
+        };
+      }
+      function _(_) {
+        let _ = "";
+        return (
+          3 == _.type ? (_ = "[/") : 2 == _.type && (_ = "["),
+          {
+            type: 1,
+            text: _ + (_.text ?? ""),
+          }
+        );
+      }
+      class _ extends _ {
+        m_renderingLanguage;
+        constructor(_, _, _) {
+          super(_, _ ?? (() => new _._())),
+            (this.m_renderingLanguage = "string" == typeof _ ? (0, _._)(_) : _);
+        }
+        UpdateOverrideLanguage(_) {
+          this.m_renderingLanguage = _;
+        }
+        ParseBBCode(_, _, __webpack_require__ = !0) {
+          let _ = 0;
+          const _ = this.Parse(
+            _,
+            (_, _, ..._) =>
+              _.createElement(
+                _,
+                {
+                  ..._,
+                  context: _,
+                  language: this.m_renderingLanguage,
+                  key: "bbnode_" + _++,
+                },
+                ..._,
+              ),
+            __webpack_require__,
+          );
+          return _.length > 1
+            ? _.createElement(_.Fragment, null, ..._)
+            : 1 == _.length
+              ? _[0]
+              : null;
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = new Map([
+        [
+          "b",
+          {
+            Constructor: function (_) {
+              return _.createElement(
+                "b",
+                {
+                  className: _().Bold,
+                },
+                _.children,
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "i",
+          {
+            Constructor: function (_) {
+              return _.createElement(
+                "i",
+                {
+                  className: (0, _._)(_().Italic, "BB_Italic"),
+                },
+                _.children,
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "h1",
+          {
+            Constructor: _,
+            autocloses: !1,
+            skipFollowingNewline: !0,
+          },
+        ],
+        [
+          "h2",
+          {
+            Constructor: _,
+            autocloses: !1,
+            skipFollowingNewline: !0,
+          },
+        ],
+        [
+          "h3",
+          {
+            Constructor: _,
+            autocloses: !1,
+            skipFollowingNewline: !0,
+          },
+        ],
+        [
+          "h4",
+          {
+            Constructor: function (_) {
+              return _("h4", _, (0, _._)(_().Header4, "BB_Header4"));
+            },
+            autocloses: !1,
+            skipFollowingNewline: !0,
+          },
+        ],
+        [
+          "h5",
+          {
+            Constructor: function (_) {
+              return _("h5", _, (0, _._)(_().Header5, "BB_Header5"));
+            },
+            autocloses: !1,
+            skipFollowingNewline: !0,
+          },
+        ],
+        [
+          "center",
+          {
+            Constructor: function (_) {
+              let _ = _(_.args, "id");
+              _ &&
+                "string" == typeof _ &&
+                _.length > 0 &&
+                "#" === _[0] &&
+                (_ = _.substring(1));
+              return _.createElement(
+                "span",
+                {
+                  _: _ || void 0,
+                  className: (0, _._)(_().CenterSpan, "BB_Center"),
+                },
+                _.children,
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "smalltext",
+          {
+            Constructor: function (_) {
+              return _("div", _, (0, _._)(_().SmallText, "BB_SmallText"));
+            },
+            autocloses: !1,
+            skipFollowingNewline: !0,
+          },
+        ],
+        [
+          "u",
+          {
+            Constructor: function (_) {
+              return _.createElement(
+                "u",
+                {
+                  className: _().Underline,
+                },
+                _.children,
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "strike",
+          {
+            Constructor: function (_) {
+              return _.createElement(
+                "s",
+                {
+                  className: _().Strike,
+                },
+                _.children,
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "spoiler",
+          {
+            Constructor: function (_) {
+              let [_, __webpack_require__] = _.useState(!1),
+                _ = _.useCallback(() => {
+                  __webpack_require__(!_);
+                }, [_]);
+              return _.createElement(
+                _._,
+                {
+                  className: (0, _._)(_().Spoiler, _ && _().Revealed),
+                  focusable: !0,
+                  onActivate: _,
+                  onOKActionDescription: (0, _._)(
+                    _ ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
+                  ),
+                },
+                _.createElement(
+                  "span",
+                  {
+                    className: _().SpoilerText,
+                  },
+                  _.children,
+                ),
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "hr",
+          {
+            Constructor: function (_) {
+              return _.createElement("hr", {
+                className: _()._,
+              });
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "noparse",
+          {
+            Constructor: function (_) {
+              return _.children;
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "url",
+          {
+            Constructor: function (_) {
+              let _ = (0, _._)(_(_.args));
+              if (!_) {
+                const _ = _.children;
+                "string" == typeof _ && (0, _._)(_) && (_ = (0, _._)(_));
+              }
+              const _ = "button" == _(_.args, "style") ? _().LinkButton : null,
+                _ = _ && _(_.args, "buttoncolor");
+              let _ = _(_.args, "id");
+              _ &&
+                "string" == typeof _ &&
+                _.length > 0 &&
+                "#" === _[0] &&
+                (_ = _.substring(1));
+              if (void 0 === _ && !_) return _.children || "";
+              if (
+                void 0 === _ ||
+                ("string" == typeof _ && _.length > 0 && "#" == _[0])
+              )
+                return _.createElement(
+                  "a",
+                  {
+                    href: _ ?? null,
+                    _: _,
+                  },
+                  _.children,
+                );
+              return _.createElement(
+                _,
+                {
+                  className: _,
+                  href: _,
+                  _: _,
+                  style: {
+                    backgroundColor: _,
+                  },
+                },
+                _.children,
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "quote",
+          {
+            Constructor: _,
+            autocloses: !1,
+          },
+        ],
+        [
+          "pullquote",
+          {
+            Constructor: function (_) {
+              return _.createElement(
+                "div",
+                {
+                  className: _().PullQuote,
+                },
+                _.children,
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "code",
+          {
+            Constructor: function (_) {
+              return _.createElement(
+                "code",
+                {
+                  className: _().CodeBlock,
+                },
+                _.children,
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "c",
+          {
+            Constructor: function (_) {
+              return _.createElement(
+                "code",
+                {
+                  className: _().Code,
+                },
+                _.children,
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "list",
+          {
+            Constructor: _,
+            autocloses: !1,
+            skipInternalNewline: !0,
+          },
+        ],
+        [
+          "olist",
+          {
+            Constructor: _,
+            autocloses: !1,
+            skipInternalNewline: !0,
+          },
+        ],
+        [
+          "*",
+          {
+            Constructor: _,
+            autocloses: !0,
+            skipInternalNewline: !0,
+          },
+        ],
+        [
+          "table",
+          {
+            Constructor: function (_) {
+              const _ = _(_.args, "noborder"),
+                _ = _(_.args, "equalcells"),
+                _ = _(_.args, "colwidth");
+              return _.createElement(
+                "table",
+                {
+                  className: (0, _._)(
+                    _().Table,
+                    "BB_Table",
+                    _ && _().NoBorder,
+                    _ && _().EqualCells,
+                  ),
+                },
+                _ &&
+                  _.createElement(
+                    "colgroup",
+                    null,
+                    _.split(",").map((_, _) =>
+                      _.createElement(_, {
+                        key: _,
+                        width: _,
+                      }),
+                    ),
+                  ),
+                _.createElement("tbody", null, _.children),
+              );
+            },
+            autocloses: !1,
+            skipInternalNewline: !0,
+          },
+        ],
+        [
+          "tr",
+          {
+            Constructor: function (_) {
+              return _.createElement(
+                "tr",
+                {
+                  className: (0, _._)(_().TableRow, "BB_TableRow"),
+                },
+                _.children,
+              );
+            },
+            autocloses: !1,
+            skipInternalNewline: !0,
+            skipFollowingNewline: !0,
+          },
+        ],
+        [
+          "th",
+          {
+            Constructor: function (_) {
+              return _("th", _);
+            },
+            autocloses: !1,
+            skipInternalNewline: !0,
+            skipFollowingNewline: !0,
+          },
+        ],
+        [
+          "td",
+          {
+            Constructor: function (_) {
+              return _("td", _);
+            },
+            autocloses: !1,
+            skipInternalNewline: !0,
+            skipFollowingNewline: !0,
+          },
+        ],
+        [
+          "expand",
+          {
+            Constructor: function (_) {
+              const _ = Boolean(_(_.args, "expanded")),
+                [__webpack_require__, _] = _.useState(_),
+                _ = _(_.args, "title"),
+                _ = _(_.args, "collapsed_str"),
+                _ = _(_.args, "expanded_str"),
+                _ = (function (_, _, _, _) {
+                  switch (_) {
+                    case "details":
+                      return {
+                        collapsed: "#Bbcode_Expand_Details_Collapsed",
+                        expanded: "#Bbcode_Expand_Details_Expanded",
+                        style: _().ExpandSection_Details,
+                      };
+                    case "spoiler":
+                      return {
+                        collapsed: "#Bbcode_Expand_Spoiler_Collapsed",
+                        expanded: "#Bbcode_Expand_Spoiler_Expanded",
+                        style: _().ExpandSection_Spoiler,
+                      };
+                    case "title":
+                      return {
+                        collapsed:
+                          _ || _ || "#Bbcode_Expand_ShowMore_Collapsed",
+                        expanded: _ || _ || "#Bbcode_Expand_ShowMore_Expanded",
+                        style: _().ExpandSection_WithTitle,
+                      };
+                    default:
+                      return {
+                        collapsed: "#Bbcode_Expand_ShowMore_Collapsed",
+                        expanded: "#Bbcode_Expand_ShowMore_Expanded",
+                        style: _().ExpandSection_ShowMore,
+                      };
+                  }
+                })(_(_.args, "type"), _, _, _);
+              return _.createElement(
+                "div",
+                {
+                  className: (0, _._)({
+                    [_().ExpandSectionBlock]: !0,
+                    [_.style]: null != _.style,
+                    [_().ExpandSectionExpanded]: __webpack_require__,
+                    [_().ExpandSectionCollapsed]: !__webpack_require__,
+                    BBCodeExpanded: __webpack_require__,
+                    BBCodeCollapsed: !__webpack_require__,
+                  }),
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().ExpandSectionHeader,
+                    onClick: () => _(!__webpack_require__),
+                  },
+                  (0, _._)(__webpack_require__ ? _.expanded : _.collapsed),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().EmbedArrow,
+                    },
+                    _.createElement(_.DK4, {
+                      angle: __webpack_require__ ? 180 : 0,
+                    }),
+                  ),
+                ),
+                __webpack_require__ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().ExpandSectionBody,
+                    },
+                    _.children,
+                  ),
+              );
+            },
+            autocloses: !1,
+            skipInternalNewline: !0,
+            allowWrapTextForCopying: !0,
+          },
+        ],
+        [
+          "remindme",
+          {
+            Constructor: function (_) {
+              const { event: _, showErrorInfo: __webpack_require__ } =
+                  _.context,
+                _ = _(_.args);
+              if (_)
+                return _.createElement(_._, {
+                  eventGID: _,
+                  bPreviewMode: __webpack_require__,
+                });
+              if (_) {
+                const _ = (0, _._)(_._.LANGUAGE);
+                return _.createElement(_._, {
+                  eventModel: _,
+                  lang: _,
+                });
+              }
+              return null;
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "calendarevent",
+          {
+            Constructor: function (_) {
+              const _ = _(_.args, "title"),
+                _ = _(_.args, "start") ?? _(_.args, "datetime"),
+                _ = _(_.args, "end") ?? _(_.args, "datetime"),
+                _ = _(_.args, "body") ?? null,
+                _ = _(_.args, "location") ?? null,
+                _ = _(_.args, "id") ?? "",
+                _ = new Date(_),
+                _ = _.getUTCFullYear(),
+                _ = ("0" + (_.getUTCMonth() + 1)).slice(-2),
+                _ = ("0" + _.getUTCDate()).slice(-2),
+                _ = ("0" + _.getUTCHours()).slice(-2),
+                _ = ("0" + _.getUTCMinutes()).slice(-2),
+                _ = `${_}${_}${_}T${_}${_}00Z`,
+                _ = new Date(_),
+                _ = _.getUTCFullYear(),
+                _ = ("0" + (_.getUTCMonth() + 1)).slice(-2),
+                _ = ("0" + _.getUTCDate()).slice(-2),
+                _ = ("0" + _.getUTCHours()).slice(-2),
+                _ = ("0" + _.getUTCMinutes()).slice(-2),
+                _ = `${_}${_}${_}T${_}${_}00Z`;
+              let _;
+              try {
+                let _ = "BEGIN:VCALENDAR\r\n";
+                (_ += "VERSION:2.0\r\n"),
+                  (_ += "BEGIN:VEVENT\r\n"),
+                  (_ += `DTSTART:${_}\r\n`),
+                  (_ += `DTEND:${_}\r\n`),
+                  (_ += `SUMMARY:${_.replace("\n", "\\n")}\r\n`),
+                  _ && (_ += `DESCRIPTION:${_.replace("\n", "\\n")}\r\n`),
+                  _ && (_ += `LOCATION:${_.replace("\n", "\\n")}\r\n`),
+                  (_ += "END:VEVENT\r\n"),
+                  (_ += "END:VCALENDAR\r\n"),
+                  (_ = `data:text/calendar;charset=utf-8;base64,${_._(new TextEncoder().encode(_))}`);
+              } catch (_) {
+                console.error(_);
+              }
+              let _ =
+                "https://calendar.google.com/calendar/render?action=TEMPLATE";
+              (_ += `&text=${encodeURI(_)}`),
+                (_ += `&details=${encodeURI(_)}`),
+                (_ += `&dates=${encodeURI(_ + "/" + _)}`);
+              const _ = (_) => {
+                if ("ReactNativeWebView" in window) {
+                  const _ = window.ReactNativeWebView,
+                    _ = {
+                      event_name: "addcalendarevent",
+                      tsStart: _.getTime(),
+                      tsEnd: _.getTime(),
+                      strTitle: _,
+                      strNotes: _,
+                      strLocation: _,
+                    };
+                  __webpack_require__.postMessage(JSON.stringify(_)),
+                    _.preventDefault();
+                }
+              };
+              return _.createElement(
+                "div",
+                {
+                  className: (0, _._)(
+                    "SaleSectionCalendarEventContainer",
+                    _().CalendarEventContainer,
+                  ),
+                  _: _,
+                },
+                _ &&
+                  _.createElement(
+                    "a",
+                    {
+                      className: (0, _._)(
+                        "SaleSectionCalendarEventLink",
+                        _().CalendarEventLink,
+                      ),
+                      href: _,
+                      onClick: _,
+                      download: "calendar.ics",
+                    },
+                    "Apple",
+                  ),
+                _.createElement(
+                  "a",
+                  {
+                    className: (0, _._)(
+                      "SaleSectionCalendarEventLink",
+                      _().CalendarEventLink,
+                    ),
+                    href: _,
+                  },
+                  "Google",
+                ),
+                _ &&
+                  _.createElement(
+                    "a",
+                    {
+                      className: (0, _._)(
+                        "SaleSectionCalendarEventLink",
+                        _().CalendarEventLink,
+                      ),
+                      href: _,
+                      onClick: _,
+                      download: "calendar.ics",
+                    },
+                    "Outlook",
+                  ),
+              );
+            },
+            autocloses: !0,
+          },
+        ],
+        [
+          "doclink",
+          {
+            Constructor: function (_) {
+              const _ = _(_.args),
+                _ = "button" == _(_.args, "style") ? _().LinkButton : null,
+                _ = _ && _(_.args, "buttoncolor");
+              return _.createElement(
+                _,
+                {
+                  className: _,
+                  style: {
+                    backgroundColor: _,
+                  },
+                  href: `${_._.PARTNER_BASE_URL}doc/${_}`,
+                },
+                _.children,
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "color",
+          {
+            Constructor: function (_) {
+              const _ = _(_.args);
+              return _.createElement(
+                "span",
+                {
+                  style: {
+                    color: _,
+                  },
+                },
+                _.children,
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "bgcolor",
+          {
+            Constructor: function (_) {
+              const _ = _(_.args);
+              return _.createElement(
+                "span",
+                {
+                  style: {
+                    backgroundColor: _,
+                  },
+                },
+                _.children,
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "p",
+          {
+            Constructor: function (_) {
+              return _.createElement(
+                "p",
+                {
+                  className: _().Paragraph,
+                },
+                _.children,
+                _.createElement("wbr", null),
+              );
+            },
+            autocloses: !1,
+            skipFollowingNewline: !0,
+          },
+        ],
+      ]);
+      new Map([
+        [
+          "looping_media",
+          {
+            Constructor: _,
+            autocloses: !1,
+          },
+        ],
+        [
+          "video",
+          {
+            Constructor: _,
+            autocloses: !1,
+          },
+        ],
+        [
+          "youtubeorvideo",
+          {
+            Constructor: _._,
+            autocloses: !1,
+          },
+        ],
+        [
+          "previewyoutube",
+          {
+            Constructor: _._,
+            autocloses: !1,
+          },
+        ],
+      ]);
+      function _(_, _, __webpack_require__ = 0) {
+        return _(_, _, __webpack_require__);
+      }
+      function _(_, _, __webpack_require__ = 0) {
+        if (_ && 0 != _.length) {
+          if (_?.startsWith(_._)) return _._.ReplacementTokenToClanImageURL(_);
+          if (_?.startsWith(_._)) {
+            const _ = new Array(),
+              _ = _._.GetBaseURL(),
+              _ = _.substring(_._.length + 1),
+              _ = parseInt(_.substring(0, _.indexOf("/"))),
+              _ = _.substring(_.indexOf("/") + 1),
+              _ = _._.GetHashFromHashAndExt(_),
+              _ = _._.GetExtStringFromHashAndExt(_);
+            if (null != _) {
+              let _ = (0, _._)(_);
+              _.push(
+                _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
+              ),
+                4 == _ &&
+                  ((_ = (0, _._)((0, _._)(_))),
+                  _.push(
+                    _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
+                  ));
+            }
+            return _.push(_._.GenerateURLFromHashAndExt(_, _)), _;
+          }
+          return _;
+        }
+      }
+      function _(_, _) {
+        return void 0 === _ ? _[""] : _[_];
+      }
+      function _(_, _) {
+        return (_) =>
+          _({
+            ..._,
+            className: _,
+          });
+      }
+      function _(_, _, _) {
+        let _ = _(_.args, "id");
+        return (
+          _ || (_ = _(_.args)),
+          _ &&
+            "string" == typeof _ &&
+            _.length > 0 &&
+            "#" === _[0] &&
+            (_ = _.substring(1)),
+          _.createElement(
+            _,
+            {
+              _: _ || void 0,
+              className: (0, _._)(_, _.className),
+            },
+            _.children,
+          )
+        );
+      }
+      function _(_) {
+        return _("h1", _, (0, _._)(_().Header1, "BB_Header1"));
+      }
+      function _(_) {
+        return _("h2", _, (0, _._)(_().Header2, "BB_Header2"));
+      }
+      function _(_) {
+        return _("h3", _, (0, _._)(_().Header3, "BB_Header3"));
+      }
+      const _ = (_) => {
+        const { href: _, ...__webpack_require__ } = _;
+        let _,
+          _ = (0, _._)(_);
+        (0, _._)(_)
+          ? ((_ =
+              (_._.IN_CLIENT ? "steam://openurl_external/" : "") + (0, _._)(_)),
+            (_ = "noopener nofollow"))
+          : (_ = (0, _._)(_));
+        const _ =
+          "string" == typeof _.children &&
+          _.children.length > 0 &&
+          _ &&
+          !_.startsWith("steam://")
+            ? (0, _._)(_)
+            : void 0;
+        return _.createElement(
+          _._,
+          {
+            toolTipContent: _,
+            direction: "top",
+          },
+          _.createElement(
+            _._,
+            {
+              ...__webpack_require__,
+              href: _,
+              rel: _,
+            },
+            _.children,
+          ),
+        );
+      };
+      function _(_) {
+        const _ = _(_.args, "author");
+        return _.createElement(
+          "blockquote",
+          {
+            className: (0, _._)(_().BlockQuote, _.className),
+          },
+          !!_ &&
+            _.createElement(
+              "div",
+              {
+                className: _().QuoteAuthor,
+              },
+              (0, _._)("#Bbcode_Originally_Posted_By") + " ",
+              " ",
+              _.createElement("b", null, _ + ":"),
+            ),
+          _.children,
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "ul",
+          {
+            className: (0, _._)(_().List, "bullets"),
+          },
+          _.children,
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "ol",
+          {
+            className: _().OrderedList,
+          },
+          _.children,
+        );
+      }
+      function _(_) {
+        let _ = _(_.args, "id");
+        return (
+          _ &&
+            "string" == typeof _ &&
+            _.length > 0 &&
+            "#" === _[0] &&
+            (_ = _.substring(1)),
+          _.createElement(
+            "li",
+            {
+              className: _().ListItem,
+              _: _ || void 0,
+            },
+            _.children,
+          )
+        );
+      }
+      function _(_) {
+        const { width: _ } = _;
+        let _;
+        return (
+          _ &&
+            parseInt(_) > 0 &&
+            (_ = {
+              width: `${_}px`,
+            }),
+          _.createElement("col", {
+            style: _,
+          })
+        );
+      }
+      function _(_, _) {
+        const _ = _(_.args, "width"),
+          _ = _(_.args, "colspan"),
+          _ = _(_.args, "rowspan"),
+          _ = {};
+        return (
+          _ && parseInt(_) > 1 && (_.colSpan = parseInt(_)),
+          _ && parseInt(_) > 1 && (_.rowSpan = parseInt(_)),
+          _.createElement(
+            _,
+            {
+              className: (0, _._)(_().TableCell, "td" == _ && "BB_TableData"),
+              ..._,
+              style: _ && {
+                width: _,
+              },
+            },
+            _.children,
+          )
+        );
+      }
+      function _(_) {
+        let _ = _(_, "poster");
+        _ && (_ = (0, _._)(_));
+        const _ = new Array();
+        {
+          const _ = _(_, "mp4");
+          _ &&
+            __webpack_require__.push({
+              sURL: (0, _._)(_),
+              sFormat: "video/mp4",
+            });
+          const _ = _(_, "webm");
+          _ &&
+            __webpack_require__.push({
+              sURL: (0, _._)(_),
+              sFormat: "video/webm",
+            });
+        }
+        const _ = (0, _._)(_._.LANGUAGE),
+          _ = 0 != _,
+          _ = new Array();
+        for (let _ = 0; _ < 31; _++) {
+          const _ = _(_, "sub_" + (0, _._)(_));
+          _ &&
+            _.push({
+              sURL: (0, _._)(_),
+              eLanguage: _,
+              sKind: "subtitles",
+              bDefault: _ && _ == _,
+            });
+          const _ = _(_, "cap_" + (0, _._)(_));
+          _ &&
+            _.push({
+              sURL: (0, _._)(_),
+              eLanguage: _,
+              sKind: "captions",
+              bDefault: _ && _ == _,
+            });
+        }
+        return {
+          sPoster: _,
+          rgVideoSources: _,
+          rgVideoTracks: _,
+        };
+      }
+      function _(_) {
+        const _ = _(_.args);
+        return _.createElement(_._, {
+          video: _,
+          bAutoPlay: !0,
+          bControls: !1,
+          bLoop: !0,
+        });
+      }
+      function _(_) {
+        const _ = _(_.args),
+          _ = _.children ? _.children.toString() : void 0;
+        _ &&
+          __webpack_require__.startsWith("http") &&
+          _.rgVideoSources.push({
+            sURL: (0, _._)(_),
+            sFormat: "video/webm",
+          });
+        const _ = _(_.args, "autoplay"),
+          _ = "0" !== _ && "off" !== _ && "false" !== _,
+          _ = _(_.args, "controls"),
+          _ = "0" !== _ && "off" !== _ && "false" !== _,
+          _ = _(_.args, "loop"),
+          _ = "0" !== _ && "off" !== _ && "false" !== _;
+        return _.createElement(_._, {
+          video: _,
+          bAutoPlay: _,
+          bControls: _,
+          bLoop: _ ? _ : _,
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -13608,6 +15170,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { appid: _ } = _,
@@ -13616,15 +15182,18 @@
             include_assets: !0,
             include_release: !0,
           }),
-          [_, _] = (0, _._)(_, _.current),
-          _ = (0, _._)(_);
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          [_, _] = (0, _._)(_, _.current);
         let _ = (0, _._)(
             _().StoreSaleWidgetContainer_mini,
             "StoreSaleWidgetContainer_mini",
           ),
           _ = _().StoreSaleWidgetImage_mini,
           _ = _().StoreSaleImage_mini;
-        if (!_ && 2 != _)
+        if (null == _)
           return _.createElement(
             "div",
             {
@@ -13634,12 +15203,12 @@
               size: "medium",
             }),
           );
-        if (2 == _ || !_.GetName())
+        if (null == _ || !_.name)
           return _.createElement("div", {
             className: _.StoreSaleWidgetEmptyContainer,
           });
-        const _ = 8 != _.GetAppType(),
-          _ = (0, _._)(_.GetStorePageURL(!0), _);
+        const _ = 8 != _.type,
+          _ = (0, _._)((0, _._)(_), _);
         return _.createElement(
           "div",
           {
@@ -13654,7 +15223,6 @@
             _.createElement(
               _._,
               {
-                type: "app",
                 _: _,
               },
               _.createElement(
@@ -13662,10 +15230,12 @@
                 {
                   className: _,
                 },
-                _.createElement("img", {
-                  className: _,
-                  src: _.GetAssets().GetSmallCapsuleURL(),
-                }),
+                _ &&
+                  _.createElement("img", {
+                    className: _,
+                    src: (0, _._)(_, "small_capsule"),
+                    alt: _.name,
+                  }),
               ),
             ),
           ),
@@ -13683,7 +15253,6 @@
               _.createElement(
                 _._,
                 {
-                  type: "app",
                   _: _,
                 },
                 _.createElement(
@@ -13694,17 +15263,18 @@
                       "StoreSaleWidgetTitle",
                     ),
                   },
-                  _.GetName(),
+                  _.name,
                 ),
               ),
             ),
-            _.createElement(
-              "div",
-              {
-                className: _.StoreSaleWidgetRelease,
-              },
-              _.GetFormattedSteamReleaseDate(),
-            ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.StoreSaleWidgetRelease,
+                },
+                (0, _._)(_),
+              ),
             Boolean(_) &&
               _.createElement(_._, {
                 _: _,
@@ -13714,7 +15284,6 @@
         );
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -13961,6 +15530,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
@@ -14668,7 +16238,8 @@
         const { steamIDBroadcast: _ } = _;
         let _ = _._.GetOrCreateBroadcastInfo(_).m_nAppID;
         _ = _ != _._ ? _ : 0;
-        const [_] = (0, _._)(_, {});
+        const _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
         return _.createElement(
           "div",
           {
@@ -14678,7 +16249,6 @@
             ? _.createElement(
                 _._,
                 {
-                  type: "app",
                   _: _,
                   className: _().PopOutVideoTitleText,
                 },
@@ -14791,14 +16361,14 @@
           () => _._.GetOrCreateBroadcastInfo(_.steamid).m_nAppID,
         );
         _ = _ != _._ ? _ : 0;
-        const [_] = (0, _._)(_.nAppIDVOD ?? _, {
-          include_assets: !0,
-        });
+        const _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
         if (!(0, _._)(_)) return null;
-        const _ = _ && _?.GetAssets().GetHeaderURL(),
+        const _ = _ && _ && (0, _._)(_, "header"),
           _ = Number.parseInt("" + _.viewer_count),
           _ = !Number.isNaN(_),
-          _ = !!_.nAppIDVOD && _?.GetName();
+          _ = !!_.nAppIDVOD && _?.name;
         return _.createElement(
           "div",
           {
@@ -14812,7 +16382,6 @@
           _.createElement(
             _._,
             {
-              type: "app",
               _: _,
               hoverClassName: _().StreamCapsule,
             },
@@ -14915,6 +16484,87 @@
             )
           : null;
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      _._.CHAT_BASE_URL, _._.CHAT_BASE_URL;
+      class _ {
+        bValid = !1;
+        stream = {
+          0: "#Broadcast_EnglishMain",
+        };
+        name = "";
+        appName = "";
+        appID = 0;
+        link = "";
+        linkName = "";
+        tabIcon = "";
+        offlineImage = "";
+        gidEvent = "";
+        constructor(_) {
+          (0, _._)(this), this.init(_);
+        }
+        init(_) {
+          (this.bValid = _.bValid),
+            (this.stream = _.stream),
+            (this.name = _.name),
+            (this.appName = _.appName),
+            (this.appID = _.appID),
+            (this.link = _.link),
+            (this.linkName = _.linkName),
+            (this.tabIcon = _.tabIcon),
+            (this.offlineImage = _.offlineImage),
+            (this.gidEvent = _.gidEvent);
+        }
+      }
+      (0, _._)([_._], _.prototype, "bValid", void 0),
+        (0, _._)([_._], _.prototype, "stream", void 0),
+        (0, _._)([_._], _.prototype, "name", void 0),
+        (0, _._)([_._], _.prototype, "appName", void 0),
+        (0, _._)([_._], _.prototype, "appID", void 0),
+        (0, _._)([_._], _.prototype, "link", void 0),
+        (0, _._)([_._], _.prototype, "linkName", void 0),
+        (0, _._)([_._], _.prototype, "tabIcon", void 0),
+        (0, _._)([_._], _.prototype, "offlineImage", void 0),
+        (0, _._)([_._], _.prototype, "gidEvent", void 0);
+      let _ = new _({
+        bValid: !1,
+        stream: {
+          0: "#Broadcast_EnglishMain",
+        },
+        name: "",
+        appName: "",
+        appID: 0,
+        link: "",
+        linkName: "",
+        tabIcon: "",
+        offlineImage: "",
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      var _, _;
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      }),
+        (function (_) {
+          (_[(_.Hover = 0)] = "Hover"),
+            (_[(_.ClickPopup = 1)] = "ClickPopup"),
+            (_[(_.ClickSurroundingRegion = 2)] = "ClickSurroundingRegion");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Chat = 0)] = "Chat"),
+            (_[(_.Notification = 1)] = "Notification"),
+            (_[(_.Error = 2)] = "Error");
+        })(_ || (_ = {}));
+      class _ {}
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -17388,151 +19038,2036 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
           (0, _._)(this);
         }
-        m_mapBroadcasterSteamIDToEvents = new Map();
-        m_mapBroadcasterSteamIDData = new Map();
-        static GetBBCodeParam(_, _, __webpack_require__ = "") {
-          const _ = new RegExp(`\\W${_}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(_);
-          return _ ? _[1] : __webpack_require__;
+        m_mapYouTubeVideo = new Map();
+        m_mapSharedFile = new Map();
+        async LoadYouTubeDynamicData(_, _) {
+          let _ = new Array(),
+            _ = "";
+          if (
+            (_.forEach((_, _) => {
+              this.m_mapYouTubeVideo.has(_)
+                ? __webpack_require__.push(this.m_mapYouTubeVideo.get(_))
+                : (_.length > 0 && (_ += ","), (_ += _));
+            }),
+            0 == _.length)
+          )
+            return _;
+          let _ = {
+              youtubevideoids: _,
+            },
+            _ = null;
+          return (
+            (_ = await _().get(
+              _._.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
+              {
+                params: _,
+                cancelToken: _.token,
+              },
+            )),
+            _ &&
+              _.data &&
+              _.data.youtube &&
+              (0, _._)(() => {
+                _.data.youtube.forEach((_, _) => {
+                  this.m_mapYouTubeVideo.set(_.videoid, _),
+                    __webpack_require__.push(_);
+                });
+              }),
+            _
+          );
         }
-        static ParseCalendarEventPresentersFromText(_) {
-          const _ = /\[\W*speaker(\W[\s\S]*?)\]([\s\S]*?)\[\W*\/speaker\W*\]/gi,
-            _ = new Array();
-          for (;;) {
-            const _ = _.exec(_);
-            if (null === _) break;
-            const _ = _[1],
-              _ = _[2],
-              _ = _.GetBBCodeParam(_, "steamid"),
-              _ = {
-                steamID: _ ? new _._(_) : void 0,
-                name: _.GetBBCodeParam(_, "name"),
-                title: _.GetBBCodeParam(_, "title"),
-                company: _.GetBBCodeParam(_, "company"),
-                photo: _.GetBBCodeParam(_, "photo"),
-                bio: _,
-              };
-            __webpack_require__.push(_);
-          }
-          return _;
-        }
-        static ParseEventModelPresenters(_, _) {
-          const _ = _.GetDescriptionWithFallback(_);
-          return _.ParseCalendarEventPresentersFromText(_);
-        }
-        static ParseEventAppReferencesFromText(_) {
-          const _ = /\/\/store\.steampowered\.com\/app\/(\d+)/gi,
-            _ = new Set();
-          for (;;) {
-            const _ = _.exec(_);
-            if (null === _) break;
-            const _ = _[1];
-            __webpack_require__.add(Number(_));
-          }
-          return _;
-        }
-        static ParseEventModelAppReferences(_, _) {
-          const _ = _.GetDescriptionWithFallback(_),
-            _ = _.ParseEventAppReferencesFromText(_);
-          if (_.jsondata?.referenced_appids)
-            for (const _ of _.jsondata.referenced_appids) _.add(_);
-          return _;
-        }
-        async BuildBroadcasterSteamIDToActiveEventMap(_) {
-          const _ = _._.GetTimeNowWithOverride(),
-            _ = _.GetCalendarItemsInTimeRange(_ - 3600, _);
-          for (const _ of _.rgCalendarItems)
-            _._.QueueLoadPartnerEvent(_.clanid, _.unique_id);
-          const _ = _.rgCalendarItems.map((_) =>
-              _._.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                _._.InitFromClanID(_.clanid),
-                _.unique_id,
-                0,
-              ),
-            ),
-            _ = await Promise.all(_),
-            _ = new Map();
-          for (const _ of _)
-            if (_ && !(_.endTime && _.endTime < _))
-              for (const _ of _.GetBroadcastWhitelistAsSteamIDs())
-                _.has(_) ? _.get(_).push(_) : _.set(_, [_]);
-          return _;
-        }
-        IsBroadcasterAlreadyBound(_, _) {
-          const _ = this.m_mapBroadcasterSteamIDToEvents.get(_),
-            _ = _ ? _.length : 0;
-          if ((_ ? _.length : 0) != _) return !1;
-          for (let _ = 0; _ < _; _++) if (_[_] != _[_].GID) return !1;
-          return !0;
-        }
-        static BuildSteamIDToPresenterMapFromEventList(_, _) {
-          let _ = new Map();
-          for (const _ of _) {
-            if (!_) continue;
-            const _ = _.ParseEventModelPresenters(_, _);
-            for (const _ of _)
-              _.steamID &&
-                __webpack_require__.set(_.steamID.ConvertTo64BitString(), _);
-          }
-          return _;
-        }
-        RemoveCachedDataIfNotInMap(_) {
-          const _ = new Array();
-          this.m_mapBroadcasterSteamIDToEvents.forEach((_, _) => {
-            _.has(_) || _.push(_);
-          }),
-            _.forEach((_) => {
-              this.m_mapBroadcasterSteamIDData.delete(_),
-                this.m_mapBroadcasterSteamIDToEvents.delete(_);
-            });
-        }
-        static BuildAppIDRefsForEventList(_, _) {
-          const _ = new Set();
-          for (const _ of _) {
-            _.ParseEventModelAppReferences(_, _).forEach((_) =>
-              __webpack_require__.add(_),
-            );
-          }
-          return Array.from(_);
-        }
-        UpdateCachedDataFromEvents(_, _) {
-          _.forEach((_, _) => {
-            if (this.IsBroadcasterAlreadyBound(_, _)) return;
-            const _ = {
-              m_mapPresenters: _.BuildSteamIDToPresenterMapFromEventList(_, _),
-              m_rgAppIDs: _.BuildAppIDRefsForEventList(_, _),
-            };
-            this.m_mapBroadcasterSteamIDData.set(_, _),
-              this.m_mapBroadcasterSteamIDToEvents.set(
-                _,
-                _.map((_) => _.GID),
-              );
-          });
-        }
-        async SynchronizeEventsWithBroadcasts(_, _) {
-          const _ = await this.BuildBroadcasterSteamIDToActiveEventMap(_);
-          this.RemoveCachedDataIfNotInMap(_),
-            this.UpdateCachedDataFromEvents(_, _);
-        }
-        GetPresenterMapForBroadcasterSteamID(_) {
-          return this.m_mapBroadcasterSteamIDData.get(_)?.m_mapPresenters;
-        }
-        GetAppIDListForBroadcasterSteamID(_) {
-          return this.m_mapBroadcasterSteamIDData.get(_)?.m_rgAppIDs;
+        async LoadSharedFileDynamicData(_, _) {
+          let _ = new Array(),
+            _ = "";
+          if (
+            (_.forEach((_, _) => {
+              this.m_mapSharedFile.has(_)
+                ? __webpack_require__.push(this.m_mapSharedFile.get(_))
+                : (_.length > 0 && (_ += ","), (_ += _));
+            }),
+            0 == _.length)
+          )
+            return _;
+          let _ = {
+              sharedfileids: _,
+            },
+            _ = null;
+          return (
+            (_ = await _().get(
+              _._.STORE_BASE_URL + "/events/ajaxgetdynamiceventmetadata",
+              {
+                params: _,
+                cancelToken: _.token,
+              },
+            )),
+            _ &&
+              _.data &&
+              _.data.sharedfiles &&
+              (0, _._)(() => {
+                _.data.sharedfiles.forEach((_, _) => {
+                  this.m_mapSharedFile.set(_.sharedfileid, _),
+                    __webpack_require__.push(_);
+                });
+              }),
+            _
+          );
         }
       }
-      (0, _._)([_._], _.prototype, "m_mapBroadcasterSteamIDData", void 0);
+      (0, _._)([_._], _.prototype, "m_mapYouTubeVideo", void 0),
+        (0, _._)([_._], _.prototype, "m_mapSharedFile", void 0);
       const _ = new _();
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        return [_, _, _];
+      }
+      class _ extends Error {}
+      class _ extends _._ {
+        m_appid;
+        constructor(_) {
+          super(), (this.m_appid = _ || 0);
+        }
+        GetAppID() {
+          return this.m_appid;
+        }
+        parseColor(_) {
+          if ("string" != typeof _ || !_.match(/^#[0-9a-fA-F]{6}$/))
+            throw new _("expected color string");
+          return [
+            parseInt(_.substring(1, 3), 16),
+            parseInt(_.substring(3, 5), 16),
+            parseInt(_.substring(5, 7), 16),
+          ];
+        }
+        parseString(_) {
+          if ("string" == typeof _) return _;
+          throw new _("expected string");
+        }
+        parseNumber(_) {
+          if ("number" == typeof _) return _;
+          throw new _("expected number");
+        }
+        parseDate(_) {
+          if ("number" == typeof _) return new Date(_);
+          throw new _("expected timestamp");
+        }
+        parseArray(_, _) {
+          let _ = [];
+          if ("object" != typeof _ || !Array.isArray(_))
+            throw new _("expected array");
+          let _ = _.length;
+          for (let _ = 0; _ < _; ++_)
+            try {
+              __webpack_require__.push(_(_[_]));
+            } catch (_) {
+              throw ((_.message += "\n...while parsing array element " + _), _);
+            }
+          return _;
+        }
+        parseDict(_, _) {
+          let _ = new Map();
+          if ("object" != typeof _ || Array.isArray(_))
+            throw new _("expected object");
+          for (let _ in _)
+            try {
+              __webpack_require__.set(_, _(_[_]));
+            } catch (_) {
+              throw (
+                ((_.message += "\n...while parsing dictionary element " + _), _)
+              );
+            }
+          return _;
+        }
+        parseBracket(_) {
+          let _ = {
+            name: this.parseString(_.name),
+            start: this.parseDate(_.start),
+            color: [255, 0, 255],
+          };
+          return (
+            "params" in _ &&
+              (_.params = this.parseDict(
+                _.params,
+                this.parseString.bind(this),
+              )),
+            "end" in _ && (_.end = this.parseDate(_.end)),
+            "color" in _ && (_.color = this.parseColor(_.color)),
+            _
+          );
+        }
+        parseMarker(_) {
+          let _ = {
+            time: this.parseDate(_.time),
+            color: [0, 255, 255],
+          };
+          return (
+            "name" in _ && (_.name = this.parseString(_.name)),
+            "params" in _ &&
+              (_.params = this.parseDict(
+                _.params,
+                this.parseString.bind(this),
+              )),
+            "color" in _ && (_.color = this.parseColor(_.color)),
+            _
+          );
+        }
+        parseSoundTrack(_) {
+          let _ = {};
+          return (
+            "song_title" in _ &&
+              (_.song_title = this.parseString(_.song_title)),
+            "appid" in _ && (_.appid = this.parseNumber(_.appid)),
+            "song_index" in _ &&
+              (_.song_index = this.parseNumber(_.song_index)),
+            _
+          );
+        }
+        parseBroadcastGameData(_) {
+          let _ = {
+            appid: 0,
+            brackets: [],
+            markers: [],
+          };
+          return (
+            "appid" in _ && (_.appid = this.parseNumber(_.appid)),
+            "brackets" in _ &&
+              (_.brackets = this.parseArray(
+                _.brackets,
+                this.parseBracket.bind(this),
+              )),
+            "markers" in _ &&
+              (_.markers = this.parseArray(
+                _.markers,
+                this.parseMarker.bind(this),
+              )),
+            "soundtrack" in _ &&
+              (_.soundtrack = this.parseSoundTrack(_.soundtrack)),
+            _
+          );
+        }
+        convertTime(_, _) {
+          return _ - _ / 1e3;
+        }
+        UpdateMarkers(_, _) {
+          let _ = [],
+            _ = [];
+          for (const _ of _)
+            _.persistent
+              ? (_.length > 0 &&
+                  (_[_.length - 1].nTimeEnd = this.convertTime(_.Timestamp, _)),
+                _.name.length > 0 &&
+                  _.push({
+                    strTemplateName: _.name,
+                    nTimeStart: this.convertTime(_.Timestamp, _),
+                    nTimeEnd: -1,
+                    color: _(_.color_r, _.color_g, _.color_b),
+                  }))
+              : __webpack_require__.push({
+                  strTemplateName: _.name,
+                  nTime: this.convertTime(_.Timestamp, _),
+                  color: _(_.color_r, _.color_g, _.color_b),
+                });
+          return {
+            rgMarkers: _,
+            rgSegments: _,
+          };
+        }
+        UpdateRegions(_) {
+          let _ = [];
+          for (const _ of _)
+            _.push({
+              strTemplateName: _.name,
+              min: {
+                _: _.min_x,
+                _: _.min_y,
+              },
+              max: {
+                _: _.max_x,
+                _: _.max_y,
+              },
+              behavior: _.behavior,
+            });
+          return _;
+        }
+        UpdateSoundtrack(_, _) {}
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_elVideo = null;
+        m_peerConnection = null;
+        m_strBroadcastSteamID = void 0;
+        m_ulWebRTCSessionID = void 0;
+        m_schCandidateTimer = new _._();
+        m_nHostCandidateGeneration = void 0;
+        m_nCandidateUpdateIntervalMS = void 0;
+        m_listeners = new _._();
+        m_bFirstPlay = !0;
+        m_bStatsViewVisible = !1;
+        m_schCaptureDisplayStatsTrigger = new _._();
+        m_stats = new _._();
+        constructor(_) {
+          (0, _._)(this), (this.m_elVideo = _);
+        }
+        async PlayMPD(_, _, _) {}
+        async PlayWebRTC(_, _, _, _, _) {
+          (this.m_strBroadcastSteamID = _),
+            (this.m_ulWebRTCSessionID = _),
+            (this.m_nHostCandidateGeneration = 0),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "pause",
+              this.OnVideoPause,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "resize",
+              this.OnVideoResize,
+            );
+          let _ = {
+            iceServers: [
+              {
+                urls: ["stun:" + _],
+              },
+              {
+                urls: ["turn:" + _],
+                username: _,
+                credential: _,
+              },
+            ],
+            iceTransportPolicy: "relay",
+          };
+          (this.m_peerConnection = new RTCPeerConnection(_)),
+            (this.m_peerConnection.oniceconnectionstatechange = ((_) => {
+              this.m_peerConnection &&
+                (console.log(
+                  "BroadcastWebRTC: ICE connection state changed to " +
+                    this.m_peerConnection.iceConnectionState,
+                ),
+                "failed" === this.m_peerConnection.iceConnectionState
+                  ? this.OnWebRTCConnectionFailed()
+                  : "disconnected" ===
+                      this.m_peerConnection.iceConnectionState &&
+                    this.OnWebRTCConnectionRetry());
+            }).bind(this)),
+            (this.m_peerConnection.onicecandidate = ((_) => {
+              if (_.candidate) {
+                const _ = new FormData();
+                _.append("broadcaststeamid", this.m_strBroadcastSteamID),
+                  _.append("webrtc_session_id", this.m_ulWebRTCSessionID),
+                  _.append("sdp_mid", _.candidate.sdpMid),
+                  _.append(
+                    "sdp_mline_index",
+                    String(_.candidate.sdpMLineIndex),
+                  ),
+                  _.append("candidate", _.candidate.candidate),
+                  _()
+                    .post(
+                      `${_._.CHAT_BASE_URL}broadcast/addbroadcastwebrtccandidate`,
+                      _,
+                    )
+                    .then((_) => {
+                      const _ = _.data;
+                      (_.success && 1 == _.success) ||
+                        console.log(
+                          "Failed to add a WebRTC session ICE candidate: " +
+                            String(_.success),
+                        );
+                    })
+                    .catch((_) =>
+                      console.log(
+                        "Failed to add a WebRTC session ICE candidate" + _,
+                      ),
+                    );
+              }
+            }).bind(this)),
+            (this.m_peerConnection.ontrack = ((_) => {
+              "video" === _.track.kind &&
+                ((this.m_elVideo.src = null),
+                (this.m_elVideo.srcObject = _.streams[0]),
+                this.Play());
+            }).bind(this)),
+            this.m_peerConnection
+              .setRemoteDescription({
+                type: "offer",
+                sdp: _,
+              })
+              .then(async () => {
+                await this.m_peerConnection.setLocalDescription(
+                  await this.m_peerConnection.createAnswer(),
+                );
+                const _ = new FormData();
+                _.append("broadcaststeamid", this.m_strBroadcastSteamID),
+                  _.append("webrtc_session_id", this.m_ulWebRTCSessionID),
+                  _.append(
+                    "answer",
+                    this.m_peerConnection.localDescription.sdp,
+                  );
+                try {
+                  await _()
+                    .post(
+                      `${_._.CHAT_BASE_URL}broadcast/setbroadcastwebrtcanswer`,
+                      _,
+                    )
+                    .then((_) => {
+                      const _ = _.data;
+                      if (!_.success || 1 != _.success)
+                        throw new Error(String(_.success));
+                    });
+                } catch (_) {
+                  return (
+                    console.log(
+                      "Failed to set the WebRTC session answer: " + _,
+                    ),
+                    void this.OnWebRTCConnectionRetry()
+                  );
+                }
+                (this.m_nCandidateUpdateIntervalMS = 250),
+                  this.m_schCandidateTimer.Schedule(
+                    this.m_nCandidateUpdateIntervalMS,
+                    () => this.GetHostCandidates(),
+                  );
+              });
+        }
+        async GetHostCandidates() {
+          const _ = new FormData();
+          _.append("broadcaststeamid", this.m_strBroadcastSteamID),
+            _.append("webrtc_session_id", this.m_ulWebRTCSessionID),
+            _.append(
+              "candidate_generation",
+              String(this.m_nHostCandidateGeneration),
+            );
+          try {
+            await _()
+              .post(
+                `${_._.CHAT_BASE_URL}broadcast/getbroadcastwebrtccandidates`,
+                _,
+              )
+              .then((_) => {
+                const _ = _.data,
+                  _ = _.data;
+                if (!_.success || 1 != _.success)
+                  throw new Error(String(_.success));
+                _.candidate_generation > this.m_nHostCandidateGeneration
+                  ? (_.candidates.forEach((_) => {
+                      const _ = new RTCIceCandidate({
+                        sdpMid: _.sdp_mid,
+                        sdpMLineIndex: _.sdp_mline_index,
+                        candidate: _.candidate,
+                      });
+                      this.m_peerConnection
+                        .addIceCandidate(_)
+                        .catch((_) => console.error(_));
+                    }),
+                    (this.m_nHostCandidateGeneration = _.candidate_generation))
+                  : this.m_nHostCandidateGeneration > 0 &&
+                    (this.m_nCandidateUpdateIntervalMS *= 2);
+              });
+          } catch (_) {
+            return (
+              console.log("Failed to get WebRTC session ICE candidates" + _),
+              void this.OnWebRTCConnectionRetry()
+            );
+          }
+          this.m_schCandidateTimer.Schedule(
+            this.m_nCandidateUpdateIntervalMS,
+            () => this.GetHostCandidates(),
+          );
+        }
+        DispatchEvent(_, _ = null) {
+          let _ = new CustomEvent(_, {
+            cancelable: !0,
+            bubbles: !0,
+            detail: _,
+          });
+          this.m_elVideo.dispatchEvent(_);
+        }
+        OnWebRTCConnectionRetry() {
+          this.DispatchEvent("valve-webrtcretry");
+        }
+        OnWebRTCConnectionFailed() {
+          this.DispatchEvent("valve-webrtcfailed");
+        }
+        Close() {
+          this.m_listeners.Unregister(),
+            this.m_schCandidateTimer.Cancel(),
+            this.m_schCaptureDisplayStatsTrigger.Cancel(),
+            this.m_peerConnection &&
+              (this.m_peerConnection.close(), (this.m_peerConnection = null)),
+            this.m_elVideo.pause(),
+            (this.m_elVideo.srcObject = null),
+            this.m_stats &&
+              (this.m_stats.GetFPSMonitor().Close(), (this.m_stats = null)),
+            (this.m_bFirstPlay = !0);
+        }
+        IsBuffering() {
+          return !1;
+        }
+        GetCurrentPlayTime() {
+          return 0;
+        }
+        GetLiveContentStartTime() {
+          return null;
+        }
+        GetAvailableVideoStartTime() {
+          return 0;
+        }
+        GetBufferedLiveEdgeTime() {
+          return 0;
+        }
+        IsPaused() {
+          return this.m_elVideo.paused;
+        }
+        async Play() {
+          const _ = this.m_bFirstPlay;
+          this.m_bFirstPlay = !1;
+          let _ = !1;
+          const _ = () => {
+            (_ = !0),
+              this.m_stats
+                .GetFPSMonitor()
+                .StartTracking(() =>
+                  this.m_stats.ExtractFrameInfo(this.m_elVideo),
+                );
+          };
+          try {
+            await this.m_elVideo.play(), __webpack_require__();
+          } catch (_) {
+            _.name;
+          }
+          !_ && _ && this.DispatchEvent("valve-userinputneeded");
+        }
+        Pause() {
+          this.m_elVideo.pause();
+        }
+        CanSeek() {
+          return !1;
+        }
+        SeekAndPlay(_) {
+          return this.Play(), 0;
+        }
+        Seek(_) {
+          return 0;
+        }
+        JumpTime(_) {
+          return 0;
+        }
+        IsMuted() {
+          return this.m_elVideo.muted;
+        }
+        SetMuted(_) {
+          this.m_elVideo.muted = _;
+        }
+        SetVolume(_) {
+          (_ = _._(_, 0, 1)), (this.m_elVideo.volume = _);
+        }
+        GetVolume() {
+          return this.m_elVideo.volume;
+        }
+        GetDASHPlayerStats() {
+          return this.m_stats;
+        }
+        SetStatsViewIsVisible(_) {
+          _ && !this.m_bStatsViewVisible
+            ? (this.CaptureStatsForDisplay(),
+              this.m_schCaptureDisplayStatsTrigger.Schedule(
+                250,
+                this.CaptureStatsForDisplay,
+              ))
+            : !_ &&
+              this.m_bStatsViewVisible &&
+              this.m_schCaptureDisplayStatsTrigger.Cancel(),
+            (this.m_bStatsViewVisible = _);
+        }
+        CaptureStatsForDisplay() {
+          this.m_stats.SetHTMLVideoPlayerDisplay(
+            this.m_elVideo.videoWidth,
+            this.m_elVideo.videoHeight,
+            this.m_elVideo.clientWidth,
+            this.m_elVideo.clientHeight,
+          ),
+            this.m_schCaptureDisplayStatsTrigger.Schedule(
+              250,
+              this.CaptureStatsForDisplay,
+            );
+        }
+        OnVideoPause(_) {
+          this.m_stats.GetFPSMonitor().Close();
+        }
+        OnVideoResize(_) {
+          this.m_stats.GetFPSMonitor().SetWindowResized();
+        }
+        GetVideoRepresentations() {
+          let _ = [];
+          return (
+            _.push({
+              _: "auto",
+              displayName: "Auto",
+              selected: !0,
+            }),
+            _
+          );
+        }
+        SetVideoRepresentation(_) {}
+        IsLiveContent() {
+          return !0;
+        }
+        BHasTimedText() {
+          return !1;
+        }
+      }
+      (0, _._)([_._], _.prototype, "PlayWebRTC", null),
+        (0, _._)([_._.bound], _.prototype, "CaptureStatsForDisplay", null),
+        (0, _._)([_._], _.prototype, "OnVideoPause", null),
+        (0, _._)([_._], _.prototype, "OnVideoResize", null);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 7;
+      var _, _;
+      !(function (_) {
+        (_[(_.None = 0)] = "None"),
+          (_[(_.Unlocking = 1)] = "Unlocking"),
+          (_[(_.Loading = 2)] = "Loading"),
+          (_[(_.Ready = 3)] = "Ready"),
+          (_[(_.Error = 4)] = "Error");
+      })(_ || (_ = {}));
+      class _ {
+        m_rtUnlockTime = 0;
+        m_schUnlockTimeout = new _._();
+        m_broadcast;
+        m_video;
+        UnlockH264(_, _) {
+          this.BCanUnlockH264()
+            ? (_.SetState(_.Unlocking, ""),
+              console.log("Unlocking H.264 for broadcast video playback"),
+              this.RequestUnlockH264(),
+              (this.m_broadcast = _),
+              (this.m_video = _),
+              (this.m_rtUnlockTime = Date.now()),
+              this.m_schUnlockTimeout.Schedule(100, () =>
+                this.CheckUnlockState(),
+              ))
+            : _.SetState(_.Error, (0, _._)("#BroadcastWatch_MinBrowser"));
+        }
+        BCanUnlockH264() {
+          return (0, _._)("RemotePlay.UnlockH264")
+            ? (console.log("Client supports direct H.264 unlock"), !0)
+            : (0, _._)("BrowserView.PostMessageToParent")
+              ? (console.log("Client supports browserview H.264 unlock"), !0)
+              : (console.log("Client does not support H.264 unlock"), !1);
+        }
+        RequestUnlockH264() {
+          (0, _._)("RemotePlay.UnlockH264")
+            ? (console.log("Requesting direct H.264 unlock"),
+              SteamClient.RemotePlay.UnlockH264())
+            : (0, _._)("BrowserView.PostMessageToParent")
+              ? (console.log("Requesting browserview unlock"),
+                SteamClient.BrowserView.PostMessageToParent(
+                  "UnlockH264Request",
+                  "CUnlockH264Helper",
+                ))
+              : console.log(
+                  "Failed to request H.264 unlock: no method supported",
+                );
+        }
+        CheckUnlockState() {
+          if (this.m_broadcast.m_eWatchState != _.Unlocking) return;
+          if ((0, _._)() || (0, _._)())
+            return (
+              console.log("Unlocking H.264 successful"),
+              this.m_broadcast.SetState(_.None, ""),
+              void this.m_video.Restart()
+            );
+          Date.now() - this.m_rtUnlockTime > 6e3
+            ? (console.log(
+                "Unlocking H.264 timed out (Steam client or servers offline?)",
+              ),
+              this.m_broadcast.SetState(
+                _.Error,
+                (0, _._)("#BroadcastWatch_MinBrowser"),
+              ))
+            : this.m_schUnlockTimeout.Schedule(100, () =>
+                this.CheckUnlockState(),
+              );
+        }
+      }
+      class _ {
+        constructor() {
+          (0, _._)(this);
+        }
+        m_steamIDBroadcast = "";
+        m_ulBroadcastID = "";
+        m_ulViewerToken = "";
+        m_strCDNAuthUrlParameters = void 0;
+        m_bWebRTC = !1;
+        m_data;
+        m_eWatchState = _.None;
+        m_strStateDescription = "";
+        m_rgVideos = [];
+        m_schManifestTimeout = new _._();
+        m_schHeartbeatTimeout = new _._();
+        SetState(_, _ = "") {
+          (this.m_eWatchState = _),
+            (this.m_strStateDescription = _),
+            _ == _.Error && console.log(this.m_strStateDescription);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_ulBroadcastID", void 0),
+        (0, _._)([_._], _.prototype, "m_eWatchState", void 0),
+        (0, _._)([_._], _.prototype, "m_strStateDescription", void 0),
+        (0, _._)([_._], _.prototype, "SetState", null);
+      class _ {
+        m_steamIDBroadcast = "";
+        m_bInitialized = !1;
+        m_strTitle = "";
+        m_strAppId = "" + _;
+        m_nAppID = _;
+        m_strAppTitle = "";
+        m_strThumbnailUrl = "";
+        m_nViewerCount = 0;
+        m_bIsOnline = !1;
+        m_schUpdateTimeout = new _._();
+        m_nRefCount = 0;
+        constructor(_) {
+          (0, _._)(this), (this.m_steamIDBroadcast = _);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_bInitialized", void 0),
+        (0, _._)([_._], _.prototype, "m_strTitle", void 0),
+        (0, _._)([_._], _.prototype, "m_strAppId", void 0),
+        (0, _._)([_._], _.prototype, "m_nAppID", void 0),
+        (0, _._)([_._], _.prototype, "m_strAppTitle", void 0),
+        (0, _._)([_._], _.prototype, "m_strThumbnailUrl", void 0),
+        (0, _._)([_._], _.prototype, "m_nViewerCount", void 0),
+        (0, _._)([_._], _.prototype, "m_bIsOnline", void 0);
+      class _ {
+        constructor() {
+          (0, _._)(this);
+        }
+        m_eWatchState = _.None;
+        m_strStateDescription = "";
+        m_rgVideos = [];
+        SetState(_, _ = "") {
+          (this.m_eWatchState = _),
+            (this.m_strStateDescription = _),
+            _ == _.Error && console.log(this.m_strStateDescription);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_eWatchState", void 0),
+        (0, _._)([_._], _.prototype, "m_strStateDescription", void 0),
+        (0, _._)([_._], _.prototype, "SetState", null);
+      class _ extends _ {
+        m_clipID;
+        m_data;
+      }
+      class _ extends _ {
+        m_nAppIDVOD;
+        m_manifestURL;
+      }
+      class _ {
+        m_mapBroadcasts = new Map();
+        m_mapClips = new Map();
+        m_mapVODs = new Map();
+        m_activeVideo = null;
+        m_broadcastSettings = {
+          nVolume: 1,
+          bMuted: !1,
+          ulViewerToken: "0",
+        };
+        m_schSaveSettings = new _._();
+        m_broadcastInfos = {};
+        constructor() {
+          (0, _._)(this), this.LoadBroadcastSettings();
+        }
+        GetBroadcastState(_) {
+          if (_.IsBroadcastClip()) {
+            let _ = this.m_mapClips.get(_.GetBroadcastClipID());
+            return _ ? _.m_eWatchState : _.None;
+          }
+          if (_.IsBroadcastVOD()) {
+            const _ = this.m_mapVODs.get(_.GetBroadcastAppIDVOD());
+            return _ ? _.m_eWatchState : _.None;
+          }
+          {
+            let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
+            return _ ? _.m_eWatchState : _.None;
+          }
+        }
+        GetBroadcastStateDescription(_) {
+          if (_.IsBroadcastClip()) {
+            let _ = this.m_mapClips.get(_.GetBroadcastClipID());
+            return _ ? _.m_strStateDescription : "";
+          }
+          if (_.IsBroadcastVOD()) {
+            const _ = this.m_mapVODs.get(_.GetBroadcastAppIDVOD());
+            return _ ? _.m_strStateDescription : "";
+          }
+          {
+            let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
+            return _ ? _.m_strStateDescription : "";
+          }
+        }
+        CreateBroadcastVideo(_, _, _, _) {
+          let _ = this.GetOrCreateBroadcast(_),
+            { nVolume: _, bMuted: _ } = this.m_broadcastSettings,
+            _ = new _(_, _, _, _);
+          if (
+            (_.SetBroadcastSteamID(_),
+            _.m_rgVideos.push(_),
+            (_.m_bWebRTC = _),
+            !(0, _._)() && !(0, _._)())
+          ) {
+            return new _().UnlockH264(_, _), _;
+          }
+          return _;
+        }
+        CreateClipVideo(_, _, _) {
+          let _ = this.GetOrCreateClip(_),
+            { nVolume: _, bMuted: _ } = this.m_broadcastSettings,
+            _ = new _(_, _, _, _);
+          if (
+            (_.SetBroadcastClipID(_),
+            _.m_rgVideos.push(_),
+            !(0, _._)() && !(0, _._)())
+          ) {
+            return new _().UnlockH264(_, _), _;
+          }
+          return _;
+        }
+        CreateVODVideo(_, _, _) {
+          let _ = this.GetOrCreateVOD(_),
+            { nVolume: _, bMuted: _ } = this.m_broadcastSettings,
+            _ = new _(_, _, _, _);
+          if (
+            (_.SetBroadcastAppIDVOD(_),
+            _.m_rgVideos.push(_),
+            !(0, _._)() && !(0, _._)())
+          ) {
+            return new _().UnlockH264(_, _), _;
+          }
+          return _;
+        }
+        StartVideo(_) {
+          if (_.IsBroadcastClip()) {
+            console.log(`Starting clip for ${_.GetBroadcastClipID()}`);
+            let _ = this.m_mapClips.get(_.GetBroadcastClipID());
+            if (!_) return;
+            this.SetActiveVideo(_),
+              _.m_eWatchState == _.None
+                ? this.GetClipManifest(_, _.GetWatchLocation())
+                : _.m_eWatchState == _.Ready && _.StartClip(_);
+          } else if (_.IsBroadcastVOD()) {
+            console.log(`Starting VOD for ${_.GetBroadcastAppIDVOD()}`);
+            let _ = this.m_mapVODs.get(_.GetBroadcastAppIDVOD());
+            if (!_) return;
+            this.SetActiveVideo(_),
+              _.m_eWatchState == _.None
+                ? this.GetVODManifest(_, _.GetWatchLocation())
+                : _.m_eWatchState == _.Ready && _.StartVOD(_);
+          } else {
+            let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
+            if (!_) return;
+            this.SetActiveVideo(_),
+              _.m_eWatchState == _.None
+                ? this.GetBroadcastManifest(_, _.GetWatchLocation())
+                : _.m_eWatchState == _.Ready && _.StartBroadcast(_);
+          }
+        }
+        SetActiveVideo(_) {
+          this.m_mapBroadcasts.forEach((_) => {
+            for (let _ of _.m_rgVideos)
+              _ != _ && __webpack_require__.StopPlaybackTillUserInput();
+          }),
+            this.m_mapClips.forEach((_) => {
+              for (let _ of _.m_rgVideos)
+                _ != _ && __webpack_require__.StopPlaybackTillUserInput();
+            }),
+            (this.m_activeVideo = _);
+        }
+        PauseAllVideo() {
+          this.m_mapBroadcasts.forEach((_) => {
+            for (let _ of _.m_rgVideos) _.StopPlaybackTillUserInput();
+          });
+        }
+        async StopVideo(_) {
+          let _ = _.GetBroadcastSteamID(),
+            _ = this.m_mapBroadcasts.get(_);
+          _.Stop(),
+            _ &&
+              (_.m_ulBroadcastID &&
+                (async function (_, _, _) {
+                  if (!_) return;
+                  let _ = new FormData();
+                  _.append("steamid", _),
+                    _.append("broadcastid", _),
+                    _.append("viewertoken", _);
+                  try {
+                    await _().post(
+                      _._.CHAT_BASE_URL + "broadcast/stopwatching",
+                      _,
+                    );
+                  } catch {}
+                })(
+                  _,
+                  _.m_ulBroadcastID,
+                  this.m_broadcastSettings.ulViewerToken,
+                ),
+              _._(_.m_rgVideos, (_) => _ == _),
+              this.RemoveBroadcastIfUnused(_));
+        }
+        StartInfo(_) {
+          const _ = this.GetOrCreateBroadcastInfo(_);
+          return (
+            _.m_nRefCount++,
+            (_.m_bInitialized && _.m_schUpdateTimeout.IsScheduled()) ||
+              this.LoadBroadcastInfo(_),
+            _
+          );
+        }
+        StopInfo(_) {
+          _.m_nRefCount--;
+        }
+        GetOrCreateBroadcastInfo(_) {
+          if (!_) {
+            return new _("");
+          }
+          if (!this.m_broadcastInfos[_]) {
+            const _ = (0, _._)(new _(_));
+            this.m_broadcastInfos[_] = _;
+          }
+          return this.m_broadcastInfos[_];
+        }
+        GetOrCreateBroadcast(_) {
+          let _ = this.m_mapBroadcasts.get(_);
+          return (
+            _ ||
+            ((_ = new _()),
+            (_.m_steamIDBroadcast = _),
+            (_.m_eWatchState = _.None),
+            this.m_mapBroadcasts.set(_, _),
+            _)
+          );
+        }
+        GetBroadcast(_) {
+          return this.m_mapBroadcasts.get(_);
+        }
+        GetBroadcastClip(_) {
+          return this.m_mapClips.get(_);
+        }
+        GetBroadcastVOD(_) {
+          return this.m_mapVODs.get(_);
+        }
+        RemoveBroadcastIfUnused(_) {
+          _.m_rgVideos.length ||
+            (_.m_schHeartbeatTimeout.Cancel(),
+            _.m_schManifestTimeout.Cancel(),
+            this.m_mapBroadcasts.delete(_.m_steamIDBroadcast));
+        }
+        GetOrCreateClip(_) {
+          let _ = this.m_mapClips.get(_);
+          return (
+            _ ||
+            ((_ = new _()),
+            (_.m_clipID = _),
+            (_.m_eWatchState = _.None),
+            this.m_mapClips.set(_, _),
+            _)
+          );
+        }
+        GetOrCreateVOD(_) {
+          let _ = this.m_mapVODs.get(_);
+          return (
+            _ ||
+            ((_ = new _()),
+            (_.m_nAppIDVOD = _),
+            (_.m_eWatchState = _.None),
+            this.m_mapVODs.set(_, _),
+            _)
+          );
+        }
+        async LoadBroadcastInfo(_) {
+          let _ = "0",
+            _ = this.m_mapBroadcasts.get(_.m_steamIDBroadcast);
+          if ((_ && (_ = _.m_ulBroadcastID), 0 == _.m_nRefCount)) return;
+          const _ = {
+            steamid: _.m_steamIDBroadcast,
+            broadcastid: _,
+            location:
+              _ &&
+              _.m_rgVideos &&
+              _.m_rgVideos[0] &&
+              _.m_rgVideos[0].GetWatchLocation(),
+          };
+          try {
+            const _ = await _().get(
+              `${_._.CHAT_BASE_URL}broadcast/getbroadcastinfo/`,
+              {
+                params: _,
+              },
+            );
+            if (!_ || !_.data || !_.data.success || 1 != _.data.success)
+              return void (_.m_bInitialized = !0);
+            const _ = _.data;
+            (0, _._)(() => {
+              (_.m_bInitialized = !0),
+                (_.m_strTitle = _.title),
+                (_.m_strAppId = _.appid),
+                (_.m_nAppID = Number.parseInt(_.appid)),
+                (_.m_strAppTitle = _.app_title),
+                (_.m_strThumbnailUrl = _.thumbnail_url),
+                (_.m_nViewerCount = _.viewer_count),
+                (_.m_bIsOnline = _.is_online),
+                !_.m_strTitle &&
+                  _._ &&
+                  ((_.m_strTitle = _._.name),
+                  (_.m_strAppTitle = _._.appName || _._.name));
+              const _ = _.update_interval;
+              _ &&
+                "number" == typeof _ &&
+                _.m_schUpdateTimeout.Schedule(1e3 * _, () =>
+                  this.LoadBroadcastInfo(_),
+                );
+            });
+          } catch (_) {
+            console.error(_);
+          }
+        }
+        DelayedGetBroadcastManifest(_, _, __webpack_require__ = Date.now()) {
+          _.m_schManifestTimeout.Schedule(5e3, () =>
+            this.GetBroadcastManifest(_, _, __webpack_require__),
+          );
+        }
+        async GetBroadcastManifest(_, _, __webpack_require__ = Date.now()) {
+          _.SetState(_.Loading, "");
+          let _ = {
+              steamid: _.m_steamIDBroadcast,
+              broadcastid: 0,
+              viewertoken: this.m_broadcastSettings.ulViewerToken,
+              watchlocation: _,
+              sessionid: _._.SESSIONID,
+              is_webrtc: _.m_bWebRTC,
+            },
+            _ = null;
+          try {
+            _ = await _().get(
+              _._.CHAT_BASE_URL + "broadcast/getbroadcastmpd/",
+              {
+                params: _,
+                withCredentials: !0,
+              },
+            );
+          } catch (_) {
+            let _ = (0, _._)(_);
+            console.error(
+              "Failed to get broadcast manifest!" + _.strErrorMsg,
+              _,
+            );
+          }
+          if (!_ || 200 != _.status)
+            return void _.SetState(
+              _.Error,
+              (0, _._)("#BroadcastWatch_RequestFailed"),
+            );
+          let _ = _.data;
+          _.viewertoken && this.SetViewerToken(_.viewertoken);
+          let _ = _.success;
+          if ("ready" == _)
+            _.SetState(_.Ready),
+              (_.m_ulBroadcastID = _.broadcastid),
+              (_.m_ulViewerToken = this.m_broadcastSettings.ulViewerToken),
+              (_.m_strCDNAuthUrlParameters = _.cdn_auth_url_parameters),
+              (_.m_bWebRTC = _.is_webrtc),
+              (_.m_data = _),
+              this.LoadBroadcast(_),
+              setTimeout(() => {
+                _.m_schHeartbeatTimeout.Schedule(
+                  1e3 * _.m_data.heartbeat_interval,
+                  () => this.HeartbeatBroadcast(_),
+                );
+              }, 3e4 * Math.random());
+          else if ("waiting" == _) {
+            _.SetState(
+              _.Loading,
+              (0, _._)("#BroadcastWatch_WaitingForResponse"),
+            );
+            let _ = Date.now() - __webpack_require__;
+            if (_ > 6e4)
+              return void _.SetState(
+                _.Error,
+                (0, _._)("#BroadcastWatch_NotAvailable"),
+              );
+            let _ = _ > 3e4 ? _.retry : 5e3;
+            _.m_schManifestTimeout.Schedule(_, () =>
+              this.GetBroadcastManifest(_, _, __webpack_require__),
+            );
+          } else
+            "waiting_for_start" == _
+              ? (_.SetState(
+                  _.Loading,
+                  (0, _._)("#BroadcastWatch_WaitingForStart"),
+                ),
+                _.m_schManifestTimeout.Schedule(_.retry, () =>
+                  this.GetBroadcastManifest(_, _, __webpack_require__),
+                ))
+              : "waiting_for_reconnect" == _
+                ? (_.SetState(
+                    _.Loading,
+                    (0, _._)("#BroadcastWatch_WaitingForReconnect"),
+                  ),
+                  _.m_schManifestTimeout.Schedule(_.retry, () =>
+                    this.GetBroadcastManifest(_, _, __webpack_require__),
+                  ))
+                : "end" == _
+                  ? _.SetState(
+                      _.Error,
+                      (0, _._)("#BroadcastWatch_NotAvailable"),
+                    )
+                  : "too_many_broadcasts" == _
+                    ? _.SetState(
+                        _.Error,
+                        (0, _._)("#BroadcastWatch_TooManyBroadcasts"),
+                      )
+                    : "system_not_supported" == _
+                      ? _.SetState(
+                          _.Error,
+                          (0, _._)("#BroadcastWatch_SystemNotSupported"),
+                        )
+                      : "user_restricted" == _
+                        ? _.SetState(
+                            _.Error,
+                            (0, _._)("#BroadcastWatch_UserRestricted"),
+                          )
+                        : "poor_upload_quality" == _
+                          ? _.SetState(
+                              _.Error,
+                              (0, _._)("#BroadcastWatch_PoorUploadQuality"),
+                            )
+                          : "request_failed" == _
+                            ? _.SetState(
+                                _.Error,
+                                (0, _._)("#BroadcastWatch_RequestFailed"),
+                              )
+                            : "too_many_viewers" == _
+                              ? _.SetState(
+                                  _.Error,
+                                  (0, _._)("#BroadcastWatch_TooManyViewers"),
+                                )
+                              : _.SetState(
+                                  _.Error,
+                                  (0, _._)("#BroadcastWatch_NotAvailable"),
+                                );
+        }
+        async GetClipManifest(_, _) {
+          _.SetState(_.Loading, "");
+          let _ = {
+              clipid: _.m_clipID,
+              watchlocation: _,
+              sessionid: _._.SESSIONID,
+            },
+            _ = null;
+          try {
+            _ = await _().get(_._.CHAT_BASE_URL + "broadcast/getclipdetails", {
+              params: _,
+              withCredentials: !0,
+            });
+          } catch (_) {
+            console.error(_), console.log("Failed to get clip manifest!");
+          }
+          if (!_ || 200 != _.status)
+            return void _.SetState(
+              _.Error,
+              (0, _._)("#BroadcastWatch_RequestFailed"),
+            );
+          let _ = _.data;
+          1 == _.success
+            ? (_.SetState(_.Ready), (_.m_data = _), this.LoadClip(_))
+            : _.SetState(_.Error, (0, _._)("#BroadcastWatch_RequestFailed"));
+        }
+        async GetVODManifest(_, _) {
+          _.SetState(_.Loading, "");
+          let _ = await _._.Get().LoadVODForAppID(_.m_nAppIDVOD);
+          _
+            ? (_.SetState(_.Ready),
+              (_.m_manifestURL = _.video_url),
+              this.LoadVOD(_))
+            : _.SetState(_.Error, (0, _._)("#BroadcastWatch_RequestFailed"));
+        }
+        async HeartbeatBroadcast(_) {
+          let _ = new FormData();
+          _.append("steamid", _.m_steamIDBroadcast),
+            _.append("broadcastid", _.m_ulBroadcastID),
+            _.append("viewertoken", this.m_broadcastSettings.ulViewerToken),
+            _().post(_._.CHAT_BASE_URL + "broadcast/heartbeat/", _),
+            _.m_schHeartbeatTimeout.Schedule(
+              1e3 * _.m_data.heartbeat_interval,
+              () => this.HeartbeatBroadcast(_),
+            );
+        }
+        LoadBroadcast(_) {
+          _.m_rgVideos.findIndex((_) => _ == this.m_activeVideo) >= 0 &&
+            this.m_activeVideo.StartBroadcast(_);
+        }
+        LoadClip(_) {
+          _.m_rgVideos.findIndex((_) => _ == this.m_activeVideo) >= 0 &&
+            this.m_activeVideo.StartClip(_);
+        }
+        LoadVOD(_) {
+          _.m_rgVideos.findIndex((_) => _ == this.m_activeVideo) >= 0 &&
+            this.m_activeVideo.StartVOD(_);
+        }
+        BroadcastDownloadFailed(_, _ = !0, __webpack_require__ = _._.Invalid) {
+          _.Stop();
+          let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
+          _ &&
+            _.m_eWatchState != _.Loading &&
+            (_.m_bWebRTC && _ && (_.m_bWebRTC = !1),
+            __webpack_require__ == _._.StreamGone
+              ? this.DelayedGetBroadcastManifest(_, _.GetWatchLocation())
+              : this.GetBroadcastManifest(_, _.GetWatchLocation()));
+        }
+        UserInputClickVideo(_) {
+          if (
+            this.m_activeVideo != _ &&
+            (this.PauseAllVideo(),
+            (this.m_activeVideo = _),
+            !_.IsBroadcastClip() && !_.IsBroadcastVOD())
+          ) {
+            let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
+            this.GetBroadcastManifest(_, _.GetWatchLocation());
+          }
+          _.UserInputClick();
+        }
+        LoadBroadcastSettings() {
+          if (!window.localStorage) return;
+          let _ = window.localStorage.getItem("broadcastSettings");
+          if (!_) return;
+          let _ = JSON.parse(_);
+          if (!_) return;
+          Object.assign(this.m_broadcastSettings, _);
+          let _ = this.m_broadcastSettings;
+          (_.bMuted = !!_.bMuted),
+            (_.nVolume = _._(_.nVolume, 0, 1)),
+            "string" != typeof _.ulViewerToken && (_.ulViewerToken = "0");
+        }
+        SaveBroadcastSettings() {
+          window.localStorage &&
+            this.m_schSaveSettings.Schedule(1e3, () => {
+              try {
+                window.localStorage.setItem(
+                  "broadcastSettings",
+                  JSON.stringify(this.m_broadcastSettings),
+                );
+              } catch (_) {}
+            });
+        }
+        SetViewerToken(_) {
+          this.m_broadcastSettings.ulViewerToken != _ &&
+            ((this.m_broadcastSettings.ulViewerToken = _),
+            this.SaveBroadcastSettings());
+        }
+        GetViewerToken() {
+          return this.m_broadcastSettings.ulViewerToken;
+        }
+        SaveVolumeChange(_, _) {
+          (this.m_broadcastSettings.nVolume == _ &&
+            this.m_broadcastSettings.bMuted == _) ||
+            ((this.m_broadcastSettings.nVolume = _),
+            (this.m_broadcastSettings.bMuted = _),
+            this.SaveBroadcastSettings());
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_mapBroadcasts", void 0),
+        (function (_) {
+          (_[(_.Timeline = 1)] = "Timeline"), (_[(_.Minimap = 2)] = "Minimap");
+        })(_ || (_ = {}));
+      class _ {
+        m_elVideo = null;
+        m_player = null;
+        m_listeners = new _._();
+        m_gameDataParser = null;
+        m_eWatchLocation = 0;
+        m_bStartWithSubtitles = !1;
+        m_steamIDBroadcast = null;
+        m_BroadcastInfo = null;
+        m_broadcastClipID = null;
+        m_nBroadcastAppIDVOD = null;
+        m_bPaused = !1;
+        m_nPlaybackTime = 0;
+        m_bBuffering = !1;
+        m_bOnLiveEdge = !1;
+        m_nVolume = 0;
+        m_bMuted = !1;
+        m_bUserInputNeeded = !1;
+        m_bIsReplay = !1;
+        m_nTimelineDuration = 1800;
+        m_nVideoStartPos = 0;
+        m_nVideoEndPos = 0;
+        m_editorStartTime = 0;
+        m_editorEndTime = 0;
+        m_rgMarkers = _._.array();
+        m_rgSegments = _._.array();
+        m_rgRegions = _._.array();
+        m_fnOnVideoEnd;
+        m_videoEndingTimer;
+        constructor(_, _, _, _) {
+          (0, _._)(this),
+            (this.m_elVideo = _),
+            (this.m_nVolume = _),
+            (this.m_bMuted = _),
+            (this.m_eWatchLocation = _);
+        }
+        SetBroadcastSteamID(_) {
+          this.m_steamIDBroadcast = _;
+        }
+        GetBroadcastSteamID() {
+          return this.m_steamIDBroadcast;
+        }
+        GetWatchLocation() {
+          return this.m_eWatchLocation;
+        }
+        IsPaused() {
+          return this.m_bPaused;
+        }
+        GetPlaybackTime() {
+          return this.m_nPlaybackTime;
+        }
+        SetStatsViewIsVisible(_) {
+          this.m_player && this.m_player.SetStatsViewIsVisible(_);
+        }
+        GetDASHPlayerStats() {
+          return this.m_player.GetDASHPlayerStats();
+        }
+        BHasDASHStats() {
+          return null != this.m_player;
+        }
+        IsTimelineMapActive() {
+          return !1;
+        }
+        CanSeek() {
+          return this.m_player && this.m_player.CanSeek();
+        }
+        IsBuffering() {
+          return this.m_bBuffering;
+        }
+        IsOnLiveEdge() {
+          return this.m_bOnLiveEdge;
+        }
+        GetVideoAvailableStartTime() {
+          return this.m_nVideoStartPos;
+        }
+        GetVolume() {
+          return this.m_nVolume;
+        }
+        GetUserInputNeeded() {
+          return this.m_bUserInputNeeded;
+        }
+        IsReplay() {
+          return this.m_bIsReplay;
+        }
+        IsBroadcastClip() {
+          return null != this.m_broadcastClipID;
+        }
+        SetBroadcastClipID(_) {
+          this.m_broadcastClipID = _;
+        }
+        GetBroadcastClipID() {
+          return this.m_broadcastClipID;
+        }
+        IsBroadcastVOD() {
+          return null != this.m_nBroadcastAppIDVOD;
+        }
+        SetBroadcastAppIDVOD(_) {
+          this.m_nBroadcastAppIDVOD = _;
+        }
+        GetBroadcastAppIDVOD() {
+          return this.m_nBroadcastAppIDVOD;
+        }
+        GetVideoRepresentations() {
+          return this.m_player ? this.m_player.GetVideoRepresentations() : [];
+        }
+        SetVideoRepresentation(_) {
+          this.m_player.SetVideoRepresentation(_);
+        }
+        GetBroadcastInfo() {
+          return this.m_BroadcastInfo;
+        }
+        BHasTimedText() {
+          return this.m_player?.BHasTimedText();
+        }
+        BHasPlayer() {
+          return Boolean(this.m_player);
+        }
+        ListSubtitles() {
+          return this.m_elVideo.textTracks;
+        }
+        GetSubtitles() {
+          for (let _ = 0; _ < this.m_elVideo.textTracks.length; _++) {
+            const _ = this.m_elVideo.textTracks[_];
+            if ("showing" === _.mode) return _;
+          }
+          return null;
+        }
+        SetSubtitles(_) {
+          let _ = _ ? _._[_] : -1;
+          this.m_player.SetSubtitles(_);
+        }
+        SetStartWithSubtitles(_) {
+          this.m_bStartWithSubtitles = _;
+        }
+        GetBroadcastState() {
+          return _.GetBroadcastState(this);
+        }
+        GetBroadcastStateDescription() {
+          return _.GetBroadcastStateDescription(this);
+        }
+        SetOnVideoCallback(_) {
+          this.m_fnOnVideoEnd = _;
+        }
+        InitPlayer() {
+          (0, _._)(!this.m_player, "Initialized twice?"),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "playing",
+              this.OnVideoPlaying,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "pause",
+              this.OnVideoPause,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "timeupdate",
+              this.OnVideoTimeUpdate,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "volumechange",
+              this.OnVolumeUpdated,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "valve-bufferupdate",
+              this.OnVideoTimeUpdate,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "valve-gamedataupdate",
+              this.OnGameDataUpdate,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "valve-downloadfailed",
+              this.OnDownloadFailed,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "valve-webrtcretry",
+              this.OnWebRTCRetry,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "valve-webrtcfailed",
+              this.OnWebRTCFailed,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "valve-userinputneeded",
+              this.OnUserInputNeeded,
+            ),
+            (this.m_bPaused = !1),
+            (this.m_nPlaybackTime = 0),
+            (this.m_bBuffering = !1),
+            (this.m_nTimelineDuration = 1800),
+            (this.m_nVideoStartPos = 0),
+            (this.m_nVideoEndPos = 0),
+            this.m_rgMarkers.clear(),
+            this.m_rgSegments.clear(),
+            (this.m_bUserInputNeeded = !1),
+            (this.m_bIsReplay = !1);
+        }
+        Restart() {
+          this.IsMuted() ||
+            this.IsPaused() ||
+            this.GetUserInputNeeded() ||
+            this.Play();
+        }
+        StartBroadcast(_) {
+          if ((this.InitPlayer(), _.m_data.url)) {
+            let _ = new _._(this.m_elVideo);
+            _.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+              (this.m_player = _),
+              this.m_player.PlayMPD(
+                _.m_data.url,
+                _.m_data.hls_url,
+                _.m_strCDNAuthUrlParameters,
+              );
+          } else
+            (this.m_player = new _(this.m_elVideo)),
+              this.m_player.PlayWebRTC(
+                this.m_steamIDBroadcast,
+                _.m_ulViewerToken,
+                _.m_data.webrtc_session_id,
+                _.m_data.webrtc_turn_server,
+                _.m_data.webrtc_offer_sdp,
+              );
+          this.SetVolume(this.m_nVolume), this.m_player.SetMuted(this.m_bMuted);
+          let _ = this.m_player.GetDASHPlayerStats();
+          _ &&
+            _.SetBroadcasterAndViewerInfo(
+              this.m_steamIDBroadcast,
+              _._.steamid,
+              _.m_ulBroadcastID,
+              _.m_ulViewerToken,
+              _.m_strCDNAuthUrlParameters,
+            ),
+            (this.m_BroadcastInfo = _.StartInfo(this.m_steamIDBroadcast));
+        }
+        StartClip(_) {
+          this.InitPlayer();
+          let _ = new _._(this.m_elVideo);
+          _.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+            (this.m_player = _),
+            this.m_player.PlayMPD(_.m_data.clip_url),
+            this.SetVolume(this.m_nVolume),
+            this.m_player.SetMuted(this.m_bMuted);
+        }
+        StartVOD(_) {
+          this.InitPlayer();
+          let _ = new _._(this.m_elVideo);
+          _.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+            (this.m_player = _),
+            _._.logged_in &&
+              _.m_nAppIDVOD &&
+              _.SetBookmarkAdapter(new _._(_.m_nAppIDVOD)),
+            this.m_player.PlayMPD(_.m_manifestURL),
+            this.SetVolume(this.m_nVolume),
+            this.m_player.SetMuted(this.m_bMuted);
+        }
+        Stop() {
+          this.m_listeners.Unregister(),
+            this.m_BroadcastInfo &&
+              (_.StopInfo(this.m_BroadcastInfo), (this.m_BroadcastInfo = null)),
+            (this.m_gameDataParser = null),
+            this.m_player && (this.m_player.Close(), (this.m_player = null));
+        }
+        TogglePlayPause() {
+          !this.m_player || this.m_player.IsPaused()
+            ? this.Play()
+            : this.Pause();
+        }
+        Play() {
+          const _ = this.GetBroadcastState();
+          _ == _.None || this.IsBroadcastClip()
+            ? _.StartVideo(this)
+            : _ == _.Ready &&
+              (_.SetActiveVideo(this),
+              this.m_player
+                ? this.m_player.Play()
+                : this.IsBroadcastVOD()
+                  ? this.StartVOD(_.GetBroadcastVOD(this.m_nBroadcastAppIDVOD))
+                  : this.StartBroadcast(
+                      _.GetBroadcast(this.m_steamIDBroadcast),
+                    ));
+        }
+        Pause() {
+          console.log(
+            "Pause ",
+            this.m_steamIDBroadcast,
+            this.m_nBroadcastAppIDVOD,
+            this.m_broadcastClipID,
+          ),
+            this.m_player && this.m_player.Pause();
+        }
+        JumpTime(_) {
+          this.m_player.JumpTime(_);
+        }
+        Seek(_) {
+          this.m_player?.Seek(_);
+        }
+        SeekAndPlay(_) {
+          this.m_player.SeekAndPlay(_);
+        }
+        JumpToLiveEdge() {
+          this.m_player.IsLiveContent()
+            ? this.SeekAndPlay(this.m_player.GetBufferedLiveEdgeTime())
+            : this.SeekAndPlay(this.m_player.GetAvailableVideoStartTime());
+        }
+        SetVolume(_) {
+          this.m_player && this.m_player.SetVolume(_),
+            (this.m_nVolume = this.m_player.GetVolume()),
+            _.SaveVolumeChange(_, this.m_bMuted);
+        }
+        SetMute(_) {
+          this.m_player && this.m_player.SetMuted(_),
+            (this.m_bMuted = _),
+            _.SaveVolumeChange(this.m_nVolume, _);
+        }
+        IsMuted() {
+          return this.m_bMuted;
+        }
+        OnVideoPlaying() {
+          (this.m_bPaused = !1),
+            0 === this.m_editorStartTime &&
+              0 === this.m_editorEndTime &&
+              ((this.m_editorStartTime = this.GetVideoAvailableStartTime()),
+              (this.m_editorEndTime =
+                this.GetVideoAvailableStartTime() +
+                this.GetTimelineDuration()));
+        }
+        OnVideoPause() {
+          this.m_bPaused = !0;
+        }
+        OnVideoTimeUpdate() {
+          if (
+            (window.clearTimeout(this.m_videoEndingTimer),
+            this.IsBroadcastClip())
+          )
+            (this.m_nPlaybackTime = this.m_player.GetCurrentPlayTime()),
+              (this.m_nVideoStartPos =
+                this.m_player.GetAvailableVideoStartTime()),
+              (this.m_nVideoEndPos = this.m_player.GetBufferedLiveEdgeTime()),
+              (this.m_nTimelineDuration =
+                this.m_nVideoEndPos - this.m_nVideoStartPos),
+              (this.m_bOnLiveEdge = !1),
+              (this.m_bBuffering = this.m_player.IsBuffering());
+          else {
+            if (
+              ((this.m_nPlaybackTime = this.m_player.GetCurrentPlayTime()),
+              (this.m_nVideoStartPos =
+                this.m_player.GetAvailableVideoStartTime()),
+              (this.m_nVideoEndPos = Math.max(
+                this.m_player.GetBufferedLiveEdgeTime(),
+                this.m_nPlaybackTime,
+              )),
+              this.IsBroadcastVOD() &&
+                ((this.m_nTimelineDuration = this.m_nVideoEndPos),
+                this.m_fnOnVideoEnd &&
+                  this.m_nVideoEndPos - this.m_nPlaybackTime < _._))
+            ) {
+              const _ = 400;
+              this.m_videoEndingTimer = window.setTimeout(() => {
+                this.m_fnOnVideoEnd();
+              }, _);
+            }
+            (this.m_bBuffering = this.m_player.IsBuffering()),
+              (this.m_bOnLiveEdge =
+                this.m_nVideoEndPos - this.m_nPlaybackTime < _._),
+              this.m_player.IsPaused() && (this.m_bOnLiveEdge = !1);
+          }
+        }
+        OnVolumeUpdated() {
+          (this.m_nVolume = this.m_player.GetVolume()),
+            (this.m_bMuted = this.m_player.IsMuted());
+        }
+        OnGameDataUpdate(_) {
+          let _ = _.detail;
+          if (!_ || "object" != typeof _.gamedata) return;
+          (this.m_gameDataParser &&
+            this.m_gameDataParser.GetAppID() == _.gamedata.__appid) ||
+            (this.m_gameDataParser = new _(_.gamedata.__appid));
+          const _ = this.m_player.GetLiveContentStartTime().getTime();
+          if ("timelinemarkers" in _.gamedata) {
+            const _ = this.m_gameDataParser.UpdateMarkers(
+              _.gamedata.__timelinemarkers,
+              _,
+            );
+            _ &&
+              (this.m_rgMarkers.replace(_.rgMarkers || []),
+              this.m_rgSegments.replace(_.rgSegments || []));
+            const _ = this.m_gameDataParser.UpdateRegions(_.gamedata.__regions);
+            _ && this.m_rgRegions.replace(_);
+          } else
+            "soundtrack" in _.gamedata &&
+              this.m_gameDataParser.UpdateSoundtrack(
+                this.m_steamIDBroadcast,
+                _.gamedata.soundtrack,
+              );
+        }
+        OnDownloadFailed(_) {
+          let _ = _.detail || _._.Invalid;
+          _.BroadcastDownloadFailed(this, !0, _);
+        }
+        OnWebRTCRetry() {
+          _.BroadcastDownloadFailed(this, !1);
+        }
+        OnWebRTCFailed() {
+          _.BroadcastDownloadFailed(this, !0);
+        }
+        OnUserInputNeeded() {
+          this.m_bUserInputNeeded = !0;
+        }
+        UserInputClick() {
+          (this.m_bUserInputNeeded = !1),
+            this.m_player ? this.JumpToLiveEdge() : this.Play();
+        }
+        StopPlaybackTillUserInput() {
+          this.Stop(), this.OnUserInputNeeded();
+        }
+        GetTimelineStartPos() {
+          return this.m_nVideoEndPos - this.m_nTimelineDuration;
+        }
+        GetTimelineDuration() {
+          return this.m_nTimelineDuration;
+        }
+        GetTimeAtMousePosition(_, _, _, _) {
+          let _ = _._(_, _.left, _.right, _, _);
+          return Math.floor(_ + 0.5);
+        }
+        GetPercentOffsetFromTime(_, _) {
+          let _ = 0,
+            _ = 0;
+          return (
+            _ == _.Timeline
+              ? ((_ = this.m_nVideoEndPos), (_ = _ - this.m_nTimelineDuration))
+              : ((_ = 0), (_ = 0)),
+            _._(_, _, _, 0, 100)
+          );
+        }
+        GetTimelineMarkers() {
+          return this.m_rgMarkers;
+        }
+        GetTimelineSegments() {
+          return this.m_rgSegments;
+        }
+        GetGameDataRegions() {
+          return this.m_rgRegions;
+        }
+        BHasMarkersOrSegments() {
+          return this.has_segments || this.has_markers;
+        }
+        get has_markers() {
+          return this.m_rgMarkers.length > 0;
+        }
+        get has_segments() {
+          return this.m_rgSegments.length > 0;
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_player", void 0),
+        (0, _._)([_._], _.prototype, "m_bPaused", void 0),
+        (0, _._)([_._], _.prototype, "m_nPlaybackTime", void 0),
+        (0, _._)([_._], _.prototype, "m_bBuffering", void 0),
+        (0, _._)([_._], _.prototype, "m_bOnLiveEdge", void 0),
+        (0, _._)([_._], _.prototype, "m_nVolume", void 0),
+        (0, _._)([_._], _.prototype, "m_bMuted", void 0),
+        (0, _._)([_._], _.prototype, "m_bUserInputNeeded", void 0),
+        (0, _._)([_._], _.prototype, "m_bIsReplay", void 0),
+        (0, _._)([_._], _.prototype, "m_nTimelineDuration", void 0),
+        (0, _._)([_._], _.prototype, "m_nVideoStartPos", void 0),
+        (0, _._)([_._], _.prototype, "m_nVideoEndPos", void 0),
+        (0, _._)([_._], _.prototype, "m_editorStartTime", void 0),
+        (0, _._)([_._], _.prototype, "m_editorEndTime", void 0),
+        (0, _._)([_._.bound], _.prototype, "StartBroadcast", null),
+        (0, _._)([_._.bound], _.prototype, "StartClip", null),
+        (0, _._)([_._.bound], _.prototype, "StartVOD", null),
+        (0, _._)([_._], _.prototype, "OnVideoPlaying", null),
+        (0, _._)([_._], _.prototype, "OnVideoPause", null),
+        (0, _._)([_._.bound], _.prototype, "OnVideoTimeUpdate", null),
+        (0, _._)([_._], _.prototype, "OnVolumeUpdated", null),
+        (0, _._)([_._.bound], _.prototype, "OnGameDataUpdate", null),
+        (0, _._)([_._], _.prototype, "OnDownloadFailed", null),
+        (0, _._)([_._], _.prototype, "OnWebRTCRetry", null),
+        (0, _._)([_._], _.prototype, "OnWebRTCFailed", null),
+        (0, _._)([_._], _.prototype, "OnUserInputNeeded", null);
+      const _ = new _();
+      window.uiBroadcastWatchStore = _;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      const _ = "ː",
+        _ = 604800;
+      class _ {
+        constructor() {
+          (0, _._)(this);
+        }
+        m_bEmoticonListRequested = !1;
+        m_bInitialized = !1;
+        m_rtMostRecentEmoticon = void 0;
+        static sm_EmoticonRegex = new RegExp("ː([a-zA-Z0-9_\\-]+)ː", "g");
+        static sm_UnvalidatedEmoticonRegex = new RegExp(
+          `(?:${_}|:)([a-zA-Z0-9_\\-]+)(?:${_}|:)`,
+          "g",
+        );
+        m_rgEmoticons = [];
+        m_setEmoticonOwned = new Set();
+        m_rgFlairs = [];
+        m_rgRecentEmoticons;
+        m_rgStickers = [];
+        m_rgRecentStickers;
+        m_rgEffects = [];
+        m_rtLastStickerOrEffect = Number.MIN_SAFE_INTEGER;
+        m_emoticonTrackerCallback = null;
+        m_stickerTrackerCallback = null;
+        static GetEmoticonURL(_, _) {
+          return _
+            ? _._.COMMUNITY_CDN_URL + "economy/emoticonlarge/" + _
+            : _._.COMMUNITY_CDN_URL + "economy/emoticon/" + _;
+        }
+        static GetEmoticonReplaceRegex() {
+          return _.sm_EmoticonRegex;
+        }
+        static GetUnvalidatedEmoticonReplaceRegex() {
+          return _.sm_UnvalidatedEmoticonRegex;
+        }
+        static BEmoticonFilterMatch(_, _) {
+          return (
+            -1 !== `:${_.name_normalized || _.name}:`.indexOf(_.toLowerCase())
+          );
+        }
+        static FilterEmoticons(_, _) {
+          return _ && ":" !== _
+            ? _.filter((_) => _.BEmoticonFilterMatch(_, _))
+            : _;
+        }
+        static BStickerFilterMatch(_, _) {
+          return _.name.toLowerCase().indexOf(_.toLowerCase()) > -1;
+        }
+        static FilterStickers(_, _) {
+          return _ ? _.filter((_) => _.BStickerFilterMatch(_, _)) : _;
+        }
+        SearchEmoticons(_, _ = 25, __webpack_require__ = !0) {
+          function _(_) {
+            return _.name_normalized || _.name;
+          }
+          this.UpdateEmoticonList(), (_ = _.toLocaleLowerCase());
+          let _ = this.recent_emoticons.filter((_) => !_ || _(_).startsWith(_)),
+            _ = this.recent_emoticons.filter(
+              (_) => !__webpack_require__ && -1 !== _(_).indexOf(_),
+            ),
+            _ = this.m_rgEmoticons.filter((_) => !_ || _(_).startsWith(_)),
+            _ = this.m_rgEmoticons.filter(
+              (_) => !__webpack_require__ && -1 !== _(_).indexOf(_),
+            ),
+            _ = new Set(),
+            _ = [];
+          function _(_, _, _) {
+            return (
+              !(_.length >= _) &&
+              (_.has(_) ||
+                (_.add(_),
+                _.push({
+                  name: _(_),
+                  recent: _,
+                  new: _,
+                })),
+              !0)
+            );
+          }
+          function _(_, _, _) {
+            for (let _ of _) if (!_(_, _, __webpack_require__(_))) break;
+          }
+          return (
+            _(_, !0, (_) => !(_.last_used || !_.time_received)),
+            _(_, !1, () => !1),
+            _(_, !0, (_) => !(_.last_used || !_.time_received)),
+            _(_, !1, () => !1),
+            _
+          );
+        }
+        get is_initialized() {
+          return this.m_bInitialized;
+        }
+        async BAwaitInitialized() {
+          return (
+            this.m_bInitialized ||
+              (this.UpdateEmoticonList(),
+              await (0, _._)(() => this.m_bInitialized)),
+            this.m_bInitialized
+          );
+        }
+        GetTimeReceivedNewestEmoticon() {
+          return this.UpdateEmoticonList(), this.m_rtMostRecentEmoticon;
+        }
+        GetTimeReceivedForStickerOrEffect() {
+          return this.m_rtLastStickerOrEffect;
+        }
+        UpdateEmoticonList() {
+          this.m_bInitialized || this.RequestEmoticonList();
+        }
+        get emoticon_list() {
+          return this.UpdateEmoticonList(), this.m_rgEmoticons;
+        }
+        BHasEmoticon(_) {
+          return this.m_setEmoticonOwned.has(_);
+        }
+        get flair_list() {
+          return this.UpdateEmoticonList(), this.m_rgFlairs;
+        }
+        GetStickerList() {
+          return this.m_rgStickers;
+        }
+        GetEffectList() {
+          return this.m_rgEffects;
+        }
+        GetFlairListByGroupID(_) {
+          return this.m_rgFlairs.filter((_) => _.flairGroupID === _);
+        }
+        get recent_emoticons() {
+          return (
+            this.m_rgRecentEmoticons || this.BuildRecentEmoticonList(),
+            this.m_rgRecentEmoticons
+          );
+        }
+        get recent_stickers() {
+          return (
+            this.m_rgRecentStickers || this.BuildRecentStickerList(),
+            this.m_rgRecentStickers
+          );
+        }
+        SetEmoticonTrackerCallback(_) {
+          this.m_emoticonTrackerCallback = _;
+        }
+        SetStickerTrackerCallback(_) {
+          this.m_stickerTrackerCallback = _;
+        }
+        TrackEmoticonUsage(_, _) {
+          if (!this.m_bInitialized) return;
+          this.m_emoticonTrackerCallback &&
+            this.m_emoticonTrackerCallback(_, _);
+          let _,
+            _ = new Map(),
+            _ = /\[emoticon\]([^[]*)/g;
+          for (; (_ = _.exec(_)); ) {
+            let _ = _.get(_[1]) || 0;
+            _.set(_[1], _ + 1);
+          }
+          let _ = !1;
+          if (_.size) {
+            if (void 0 !== this.m_rgRecentEmoticons)
+              for (let _ of this.m_rgRecentEmoticons)
+                _.has(_.name) &&
+                  ((_.last_used = _),
+                  (_.use_count += _.get(_.name)),
+                  _.delete(_.name),
+                  _.time_received && ((_ = !0), delete _.time_received));
+            if (_.size)
+              for (let _ of this.m_rgEmoticons)
+                _.has(_.name) &&
+                  ((_.last_used = _),
+                  (_.use_count += _.get(_.name)),
+                  delete _.time_received,
+                  void 0 !== this.m_rgRecentEmoticons &&
+                    this.m_rgRecentEmoticons.push(_));
+            if (
+              void 0 !== this.m_rgRecentEmoticons &&
+              (this.BuildRecentEmoticonList(), _)
+            ) {
+              this.m_rtMostRecentEmoticon = void 0;
+              for (let _ of this.m_rgRecentEmoticons)
+                !_.last_used &&
+                  _.time_received &&
+                  (!this.m_rtMostRecentEmoticon ||
+                    _.time_received > this.m_rtMostRecentEmoticon) &&
+                  (this.m_rtMostRecentEmoticon = _.time_received);
+            }
+          }
+        }
+        TrackStickerUsage(_, _) {
+          if (!this.m_bInitialized) return;
+          this.m_stickerTrackerCallback && this.m_stickerTrackerCallback(_, _);
+          const _ = this.m_rgStickers.find(({ name: _ }) => _ === _);
+          (_.last_used = _),
+            (_.use_count += 1),
+            delete _.time_received,
+            this.BuildRecentStickerList();
+        }
+        RequestEmoticonList() {
+          !this.m_bEmoticonListRequested &&
+            this.BTransportReady() &&
+            ((this.m_bEmoticonListRequested = !0),
+            this.RequestEmoticonListInternal());
+        }
+        BuildRecentEmoticonList() {
+          this.m_rgRecentEmoticons = this.BuildRecentList(this.m_rgEmoticons);
+        }
+        BuildRecentStickerList() {
+          this.m_rgRecentStickers = this.BuildRecentList(this.m_rgStickers);
+        }
+        BuildRecentList(_) {
+          const _ = this.GetServerTime() - _,
+            _ = _.filter(
+              ({ last_used: _, time_received: _ }) => _ || (_ && _ > _),
+            );
+          return (
+            __webpack_require__.sort(
+              (_, _) =>
+                (_.last_used || _.time_received) -
+                (_.last_used || _.time_received),
+            ),
+            __webpack_require__.slice(0, 50)
+          );
+        }
+        OnEmoticonListReceived(_) {
+          (this.m_rgFlairs = []),
+            (this.m_rgEmoticons = []),
+            (this.m_rgRecentEmoticons = void 0),
+            (this.m_rtMostRecentEmoticon = void 0);
+          let _ = this.GetServerTime() - _;
+          for (let _ of _) {
+            let _ = _.name;
+            _.startsWith("^")
+              ? this.m_rgFlairs.push({
+                  name: _.match(new RegExp(/:(.*):/))[1],
+                  flairGroupID: _.match(new RegExp(/\^(.*)\^/))[1],
+                })
+              : (!_.last_used && _.time_received > _
+                  ? (!this.m_rtMostRecentEmoticon ||
+                      _.time_received > this.m_rtMostRecentEmoticon) &&
+                    (this.m_rtMostRecentEmoticon = _.time_received)
+                  : delete _.time_received,
+                this.m_rgEmoticons.push(_));
+          }
+          (this.m_setEmoticonOwned = new Set(
+            this.m_rgEmoticons.map((_) => _.name_normalized || _.name),
+          )),
+            (this.m_bInitialized = !0),
+            (this.m_bEmoticonListRequested = !1);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_bInitialized", void 0),
+        (0, _._)([_._], _.prototype, "m_rtMostRecentEmoticon", void 0),
+        (0, _._)([_._], _.prototype, "m_rtLastStickerOrEffect", void 0),
+        (0, _._)([_._], _.prototype, "TrackEmoticonUsage", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -17776,6 +21311,1369 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_mapRegistrations = new Map();
+        m_mapLoadPromises = new Map();
+        m_mapCreatePromises = new Map();
+        m_listChangeCallback = new Map();
+        GetRegistration(_) {
+          return this.m_mapRegistrations.get(_);
+        }
+        GetRegistrationChangeCallback(_) {
+          return (
+            this.m_listChangeCallback.has(_) ||
+              this.m_listChangeCallback.set(_, new _._()),
+            this.m_listChangeCallback.get(_)
+          );
+        }
+        async LoadRegistration(_) {
+          return (
+            this.m_mapLoadPromises.has(_) ||
+              this.m_mapLoadPromises.set(_, this.InternalLoadRegistration(_)),
+            this.m_mapLoadPromises.get(_)
+          );
+        }
+        async InternalLoadRegistration(_) {
+          let _ = null;
+          try {
+            const _ =
+                _._.STORE_BASE_URL +
+                "saleaction/ajaxgetusergiveawayregistration",
+              _ = {
+                giveaway_name: _,
+                sessionid: _._.SESSIONID,
+              },
+              _ = await _().get(_, {
+                params: _,
+                withCredentials: !0,
+              });
+            if (
+              200 == _?.status &&
+              1 == _?.data?.success &&
+              _?.data?.registration
+            )
+              return (
+                this.m_mapRegistrations.set(_, _?.data?.registration),
+                this.GetRegistrationChangeCallback(_).Dispatch(
+                  _?.data?.registration,
+                ),
+                _?.data?.registration
+              );
+            _ = (0, _._)(_);
+          } catch (_) {
+            _ = (0, _._)(_);
+          }
+          return (
+            console.error(
+              "CGiveawayRegistrationStore.InternalLoadRegistration failed: on giveawayName " +
+                _ +
+                " error: " +
+                _?.strErrorMsg,
+              _,
+            ),
+            {
+              registered: !1,
+            }
+          );
+        }
+        CreateRegistration(_) {
+          return (
+            this.m_mapCreatePromises.has(_) ||
+              this.m_mapCreatePromises.set(
+                _,
+                this.InternalCreateRegistration(_),
+              ),
+            this.m_mapCreatePromises.get(_)
+          );
+        }
+        async InternalCreateRegistration(_) {
+          let _ = null;
+          try {
+            const _ =
+                _._.STORE_BASE_URL +
+                "saleaction/ajaxupdateusergiveawayregistration",
+              _ = {
+                giveaway_name: _,
+                sessionid: _._.SESSIONID,
+              },
+              _ = await _().get(_, {
+                params: _,
+                withCredentials: !0,
+              });
+            if (
+              200 == _?.status &&
+              1 == _?.data?.success &&
+              _?.data?.registration
+            )
+              return (
+                this.m_mapRegistrations.set(_, _?.data?.registration),
+                this.GetRegistrationChangeCallback(_).Dispatch(
+                  _?.data?.registration,
+                ),
+                _?.data?.registration
+              );
+            _ = (0, _._)(_);
+          } catch (_) {
+            _ = (0, _._)(_);
+          }
+          return (
+            console.error(
+              "CGiveawayRegistrationStore.InternalCreateRegistration failed: on giveawayName " +
+                _ +
+                " error: " +
+                _?.strErrorMsg,
+              _,
+            ),
+            {
+              registered: !1,
+            }
+          );
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              _.s_Singleton.Init(),
+              "dev" == _._.WEB_UNIVERSE &&
+                (window.g_SaleMiniGameItemDefStore = _.s_Singleton)),
+            _.s_Singleton
+          );
+        }
+        constructor() {}
+        Init() {}
+      }
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)(
+          _.Get().GetRegistration(_),
+        );
+        return (
+          (0, _.useEffect)(() => {
+            void 0 === _ &&
+              _.Get().LoadRegistration(_).then(__webpack_require__);
+          }, [_, _]),
+          (0, _._)(
+            _.Get().GetRegistrationChangeCallback(_),
+            __webpack_require__,
+          ),
+          _
+        );
+      }
+      function _() {
+        return {
+          fnCreateRegistration: _.Get().CreateRegistration,
+        };
+      }
+      (0, _._)([_._], _.prototype, "CreateRegistration", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return new _._(new _._(), 0);
+      }
+      function _(_) {
+        const { text: _, languageOverride: __webpack_require__ } = _,
+          [_] = (0, _.useState)(
+            new _._(
+              new Map([...Array.from(_._.entries())]),
+              _,
+              __webpack_require__,
+            ),
+          );
+        return _.createElement(_.Fragment, null, _.ParseBBCode(_, {}));
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return {
+          sizeStr: _ == _.full ? _.sizeFull : _.sizeThumb,
+          alignStr: _ == _.full ? "" : _ == _.left ? _.floatLeft : _.floatRight,
+        };
+      }
+      function _(_) {
+        if ((0, _._)()) return null;
+        let _ = (0, _._)(_.args);
+        if (_) {
+          let _ = _.split(";");
+          if (2 == _.length) {
+            let _ = _[0],
+              _ = _[1].toLocaleLowerCase();
+            const { sizeStr: _, alignStr: _ } = _(_);
+            return _.createElement(_._, {
+              videoID: _,
+              classNameAlign: _,
+              classNameSize: _,
+              bShowVideoImmediately: !0,
+            });
+          }
+        }
+        return _.createElement(_.Fragment, null);
+      }
+      function _(_) {
+        if ((0, _._)() || "CN" == _._.COUNTRY.toLocaleUpperCase())
+          return (0, _._)(_);
+        const _ = (0, _._)(_.args, "youtubeid"),
+          _ = (0, _._)(_.args, "size"),
+          _ = (0, _._)(_.args, "seconds"),
+          { sizeStr: _, alignStr: _ } = _(_);
+        return _.createElement(_._, {
+          videoID: _,
+          nStartSeconds: _ ? Number.parseInt(_) : void 0,
+          classNameAlign: _,
+          classNameSize: _,
+          bShowVideoImmediately: !0,
+        });
+      }
+      !(function (_) {
+        (_.left = "leftthumb"),
+          (_.right = "rightthumb"),
+          (_.full = "full"),
+          (_.summary = "summary");
+      })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            videoID: _,
+            bShowVideoImmediately: __webpack_require__,
+            bAutoPlay: _,
+            nStartSeconds: _,
+            classNameSize: _,
+            classNameAlign: _,
+          } = _,
+          [_, _] = (0, _.useState)(!__webpack_require__),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)("YouTubeInlineSnippet"),
+          [_, _] = (0, _.useState)({
+            title: (0, _._)("#Loading"),
+            description: "",
+            videoid: _,
+            views: "0",
+          });
+        (0, _.useEffect)(() => {
+          _ &&
+            _._.LoadYouTubeDynamicData([_], _)
+              .then((_) => {
+                !_.token.reason && _.length > 0 && (_(_[0]), _(!0));
+              })
+              .catch((_) =>
+                console.error(
+                  "YouTubeInlineSnippet: " + (0, _._)(_).strErrorMsg,
+                ),
+              );
+        }, [_, _, _]);
+        if (((0, _._)(__webpack_require__ && !0), _)) {
+          const _ = _.title,
+            _ = _.views,
+            _ = _.description;
+          return _.createElement(
+            "div",
+            {
+              className: _().DynamicLinkBox,
+              onClick: () => _(!1),
+            },
+            _.createElement("img", {
+              className: _().DynamicLink_Preview,
+              src: "https://img.youtube.com/vi/" + _ + "/0.jpg",
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _().DynamicLink_Content,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().DynamicLink_Name,
+                },
+                (0, _._)("#EventEditor_YouTubeVideoTitle", _),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().DynamicLink_YoutubeViews,
+                },
+                (0, _._)("#EventEditor_YouTubeVideoViews", (0, _._)(Number(_))),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().Dynamiclink_Content,
+                },
+                _ && _,
+                !_ &&
+                  _.createElement(_._, {
+                    size: "medium",
+                  }),
+              ),
+            ),
+          );
+        }
+        return _.createElement(
+          _._,
+          {
+            video: _,
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().PreviewYouTubeVideo, _, _),
+              _: _,
+            },
+            _.createElement("img", {
+              className: _().PlaceholderImg,
+              src:
+                _._.COMMUNITY_CDN_URL +
+                "public/shared/images/responsive/youtube_16x9_placeholder.gif",
+            }),
+            _.createElement(_._, {
+              video: _,
+              autoplay: _ ?? !1,
+              startSeconds: _,
+              controls: !0,
+              playsInline: !0,
+              autopause: !0,
+              showFullscreenBtn: !0,
+            }),
+          ),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { text: _ = "", style: __webpack_require__, children: _ } = _;
+        if (null == _) return _.createElement(_.Fragment, null, _);
+        let _;
+        if (
+          ((_ =
+            _ instanceof Array
+              ? _.map((_) => (_ ? _.toString() : ""))
+                  .filter((_) => _.length > 0)
+                  .join("\n")
+              : _.toString()),
+          1 == _.Children.count(_))
+        ) {
+          let _ = _.Children.only(_);
+          return _.cloneElement(_, {
+            "data-copystyle": __webpack_require__,
+            "data-copytext": _,
+          });
+        }
+        return (
+          console.log(
+            `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${__webpack_require__} copytext=${_}`,
+          ),
+          _.createElement(_.Fragment, null, _)
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { emoticon: _, large: __webpack_require__ } = _,
+          [_, _] = (0, _._)(),
+          [_, _] = _.useState(),
+          _ = `:${_}:`,
+          _ = _._.GetEmoticonURL(_, __webpack_require__);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _,
+            {
+              text: _,
+              style: "merge-adjacent",
+            },
+            _.createElement("img", {
+              ..._,
+              src: _,
+              className: (0, _._)(
+                _().emoticon,
+                __webpack_require__ ? _().large : void 0,
+              ),
+              "data-emoticon": _,
+              alt: _,
+              ref: _,
+            }),
+          ),
+          _ &&
+            _.createElement(_, {
+              target: _,
+              emoticon: _,
+            }),
+        );
+      }
+      function _(_) {
+        const { target: _, emoticon: __webpack_require__ } = _,
+          { data: _ } = (function (_) {
+            return (0, _._)({
+              queryKey: ["EmoticonHover", _],
+              queryFn: async () => {
+                const _ = `${_._.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(_)}?l=${encodeURIComponent(_._.LANGUAGE)}&origin=${self.origin}`,
+                  _ = await fetch(_);
+                if (200 != _.status)
+                  throw `Error fetching emoticon: ${_.status} ${_.statusText}`;
+                return await __webpack_require__.json();
+              },
+            });
+          })(__webpack_require__);
+        return _.createElement(
+          _,
+          {
+            target: _,
+            title: `:${__webpack_require__}:`,
+            subtitle: _ && _.app_name ? _.app_name : void 0,
+          },
+          _.createElement(_, {
+            emoticon: __webpack_require__,
+            large: !0,
+          }),
+        );
+      }
+      const _ = ({
+        target: _,
+        title: _,
+        subtitle: __webpack_require__,
+        children: _,
+      }) =>
+        _.createElement(
+          _._,
+          {
+            target: _,
+            style: {
+              zIndex: 1700,
+            },
+            className: _().EmoticonHover,
+          },
+          _,
+          _.createElement(
+            "div",
+            {
+              className: _().Info,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().Name,
+              },
+              _ || _.createElement("span", null, " "),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().AppName,
+              },
+              __webpack_require__ || _.createElement("span", null, " "),
+            ),
+          ),
+        );
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        if (!_) return _;
+        const _ = _.trim(),
+          _ = _.toLowerCase();
+        return __webpack_require__.startsWith("javascript:") ||
+          __webpack_require__.startsWith("data:") ||
+          __webpack_require__.startsWith("vbscript:")
+          ? ""
+          : _;
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      class _ {
+        constructor() {
+          (0, _._)(this);
+        }
+        m_bValidatedEmail = !1;
+        m_nMobileDeviceCount = 0;
+        m_bIsLoaded = !1;
+        m_promise;
+        m_bLoadedFromConfig = !1;
+        LazyInit() {
+          if (!this.m_bLoadedFromConfig) {
+            let _ = (0, _._)("notificationstore", "application_config");
+            this.ValidateStoreDefault(_) &&
+              (0, _._)(() => {
+                (this.m_bIsLoaded = !0),
+                  (this.m_bValidatedEmail = _.email_validated),
+                  (this.m_nMobileDeviceCount = _.mobile_device_count);
+              }),
+              (this.m_bLoadedFromConfig = !0);
+          }
+        }
+        ValidateStoreDefault(_) {
+          return (
+            _ &&
+            "object" == typeof _ &&
+            "number" == typeof _.mobile_device_count
+          );
+        }
+        BIsLoaded() {
+          return this.m_bIsLoaded;
+        }
+        BHasValidatedEmail() {
+          return this.m_bValidatedEmail;
+        }
+        BHasPushNotification() {
+          return this.m_nMobileDeviceCount > 0;
+        }
+        async HintLoad() {
+          return (
+            this.LazyInit(),
+            this.m_bIsLoaded
+              ? 1
+              : _._.logged_in
+                ? (this.m_promise || (this.m_promise = this.InternalLoad()),
+                  this.m_promise)
+                : 1
+          );
+        }
+        async InternalLoad() {
+          const _ = _._.STORE_BASE_URL + "notification/ajaxusersettings",
+            _ = await _().get(_, {
+              withCredentials: !0,
+            });
+          return (
+            1 == _.data.success &&
+              (0, _._)(() => {
+                (this.m_bIsLoaded = !0),
+                  (this.m_bValidatedEmail = _.data.email_validated),
+                  (this.m_nMobileDeviceCount = _.data.mobile_device_count);
+              }),
+            _.data.success
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_bValidatedEmail", void 0),
+        (0, _._)([_._], _.prototype, "m_nMobileDeviceCount", void 0);
+      let _ = new _();
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      let _ = class extends _.Component {
+        m_iMenuInstance;
+        m_elDropDownRef = _.createRef();
+        m_bLoadWasCancelled = !1;
+        state = {
+          bIsOpen: !1,
+          bIsLoadingNotificationSettings: !_.BIsLoaded(),
+        };
+        componentDidMount() {
+          this.state.bIsLoadingNotificationSettings &&
+            _.HintLoad()
+              .catch(
+                (_) => (
+                  console.error(
+                    "EventReminderWidget load fail: " + (0, _._)(_).strErrorMsg,
+                  ),
+                  2
+                ),
+              )
+              .then((_) => {
+                1 != _ ||
+                  this.m_bLoadWasCancelled ||
+                  this.setState({
+                    bIsLoadingNotificationSettings: !1,
+                  });
+              }),
+            !this.props.eventModel.appid &&
+              this.props.eventModel.clanSteamID &&
+              _._.LoadClanInfoForClanSteamID(this.props.eventModel.clanSteamID);
+        }
+        componentWillUnmount() {
+          this.m_bLoadWasCancelled = !0;
+        }
+        ToggleMenu(_) {
+          const _ = _._.Get().BIsUserLoggedIn();
+          _ || _._.IN_CLIENT
+            ? (!_ &&
+                _._.IN_CLIENT &&
+                console.log(
+                  "EventReminderWidget: In Client: Cannot use login widget. We expect to be already logged in.",
+                ),
+              this.state.bIsOpen ? this.HideMenu() : this.ShowMenu(),
+              _.stopPropagation(),
+              _.preventDefault())
+            : (0, _._)(
+                _.createElement(_._, {
+                  strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
+                  strDescription: (0, _._)(
+                    "#EventDisplay_Share_NotLoggedIn_Description",
+                  ),
+                  strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
+                  onOK: () => (0, _._)(),
+                }),
+                window,
+              );
+        }
+        ShowMenu() {
+          let _ = _.createElement(_, {
+              ...this.props,
+              fnHasReminderSet: (_) => this.BHasSomeNotificationSetting(_),
+              fnHidePanel: this.HideMenu,
+            }),
+            _ = {
+              bOverlapHorizontal: !0,
+              bOverlapVertical: !0,
+              bDisablePopTop: !0,
+              bMatchWidth: !0,
+              strClassName: (0, _._)(
+                _.ReminderDialog,
+                _.ReminderOptions,
+                _.contextMenu,
+              ),
+            };
+          (this.m_iMenuInstance = (0, _._)(_, this.m_elDropDownRef.current, _)),
+            this.m_iMenuInstance.SetOnHideCallback(this.HideMenu),
+            this.setState({
+              bIsOpen: !0,
+            }),
+            _._.RecordAppInteractionEvent(
+              this.props.eventModel.appid,
+              _._.k_eReminder_Opened,
+            );
+        }
+        HideMenu() {
+          this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
+            this.setState({
+              bIsOpen: !1,
+            });
+        }
+        BHasSomeNotificationSetting(_) {
+          const _ = _.GID;
+          return (
+            (_.BHasValidatedEmail() &&
+              _._.Get().BFollowsEventAndNotifiedBy(
+                _.clanSteamID,
+                _,
+                _._.k_ENotifyFlagByEmail,
+              )) ||
+            (_.BHasPushNotification() &&
+              _._.Get().BFollowsEventAndNotifiedBy(
+                _.clanSteamID,
+                _,
+                _._.k_ENotifyFlagByPush,
+              ))
+          );
+        }
+        render() {
+          const _ = this.props.bOnlyShowIcon && !this.state.bIsOpen,
+            _ = this.BHasSomeNotificationSetting(this.props.eventModel),
+            _ = (0, _._)();
+          return this.props.eventModel.startTime < _ ||
+            this.props.eventModel.BIsUnlistedEvent()
+            ? null
+            : _.createElement(
+                "div",
+                {
+                  className: (0, _._)({
+                    [_.ReminderCheckBox]: !0,
+                    [_().ReminderCtn]: !0,
+                    [_.IconMode]: _,
+                    [_.TextMode]: !_,
+                    ReminderSet: _,
+                    RemindMeWidget: !0,
+                  }),
+                  onClick: this.ToggleMenu,
+                  ref: this.m_elDropDownRef,
+                },
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.RemindCheck,
+                    },
+                    _.createElement(_.Jlk, null),
+                  ),
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.RemindBell,
+                    },
+                    _.createElement(_.IrQ, null),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ReminderDefault,
+                  },
+                  (0, _._)("#EventDisplay_Reminder_SetReminder"),
+                ),
+                _.createElement("div", {
+                  className: _.ReminderOptions,
+                }),
+              );
+        }
+      };
+      function _(_) {
+        const { bPreviewMode: _, eventGID: __webpack_require__, ..._ } = _,
+          _ = (0, _._)(__webpack_require__);
+        if (!_)
+          return _
+            ? _.createElement(
+                "div",
+                {
+                  className: _.ErrorDiv,
+                },
+                (0, _._)(
+                  "#EventDidplay_Reminder_EventNotVisible",
+                  __webpack_require__,
+                ),
+              )
+            : null;
+        const _ = (0, _._)(_._.LANGUAGE);
+        return _.createElement(_, {
+          lang: _,
+          ..._,
+          eventModel: _,
+        });
+      }
+      function _(_) {
+        return _.unix(_).utc().format("YYYYMMDD[T]HHmmss[Z]");
+      }
+      (0, _._)([_._], _.prototype, "ToggleMenu", null),
+        (0, _._)([_._], _.prototype, "ShowMenu", null),
+        (0, _._)([_._], _.prototype, "HideMenu", null),
+        (_ = (0, _._)([_._], _));
+      const _ = (0, _._)((_) => {
+        const {
+            eventModel: _,
+            bShowStartTime: __webpack_require__,
+            bExpandLeft: _,
+            bOnlyShowIcon: _,
+            fnHasReminderSet: _,
+            fnHidePanel: _,
+            lang: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          _ = async (_, _, _) => {
+            const _ = _?.GID;
+            if (_ && _ != _._) {
+              _(!0);
+              try {
+                await _._.Get().SetFollowOrUnfollowEvent(
+                  !_,
+                  _,
+                  _.clanSteamID,
+                  _,
+                  _,
+                ),
+                  _ &&
+                    (_ === _._.k_ENotifyFlagByEmail
+                      ? _(_._.k_eReminder_Email)
+                      : _ === _._.k_ENotifyFlagByPush &&
+                        _(_._.k_eReminder_MobilePush));
+              } catch (_) {
+                (0, _._)(
+                  _.createElement(
+                    _._,
+                    {
+                      strTitle: (0, _._)(
+                        _
+                          ? "#EventDisplay_Reminder_IgnoreEvent_Error"
+                          : "#EventDisplay_Reminder_FollowEvent_Error",
+                      ),
+                      strDescription: (0, _._)(
+                        _
+                          ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
+                          : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
+                      ),
+                    },
+                    (0, _._)(_).strErrorMsg,
+                  ),
+                  window,
+                );
+              }
+              _(!1);
+            }
+          },
+          _ = (_) => {
+            _._.RecordAppInteractionEvent(_.appid, _);
+          },
+          _ = _.jsondata.bSaleEnabled ? _._.k_eStoreSalePage : _._.k_eStoreView,
+          _ = (0, _._)(_, _, "forceAbsolute"),
+          _ = (_) => {
+            const _ = _.appid
+                ? "app/" + _.appid
+                : "group/" + _.clanSteamID.GetAccountID(),
+              _ = "l=" + (0, _._)(_);
+            return `${_._.STORE_BASE_URL}${(0, _._)()}/download/${_}/${_}/${_.GID}?${_}`;
+          },
+          _ = _.BHasValidatedEmail(),
+          _ = _.BHasPushNotification(),
+          _ = __webpack_require__ && _.GetStartTimeAndDateUnixSeconds();
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.ReminderCheckBox,
+                _ ? _.IconMode : _.TextMode,
+                "RemindMeWidget",
+              ),
+              onClick: _,
+            },
+            _(_) &&
+              _.createElement(
+                "div",
+                {
+                  className: _.RemindCheck,
+                },
+                _.createElement(_.Jlk, null),
+              ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.RemindBell,
+                },
+                _.createElement(_.IrQ, null),
+              ),
+            _.createElement(
+              "div",
+              {
+                className: _.ReminderDefault,
+              },
+              (0, _._)("#EventDisplay_Reminder_SetReminder"),
+            ),
+            _.createElement("div", {
+              className: _.ReminderOpennedOptions,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.FlexColumnContainer,
+                _.ReminderBackground,
+                _ && _.ReminderExpandsLeft,
+              ),
+            },
+            _ &&
+              _.createElement(_._, {
+                className: _.RpcThrobber,
+                size: "xlarge",
+                position: "center",
+              }),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.FullStartTime,
+                },
+                (0, _._)(
+                  "#EventDisplay_EventUpcoming_WithDateAndTime",
+                  (0, _._)(
+                    _,
+                    (0, _._)(
+                      new Date(1e3 * _),
+                      _._.GetTimeNowWithOverrideAsDate(),
+                    ),
+                  ),
+                  (0, _._)(_, !0),
+                ),
+              ),
+            _.createElement(
+              "div",
+              {
+                className: _.ReminderOptionsHeader,
+              },
+              (0, _._)("#EventDisplay_Reminder_GetNotification_Via"),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+              },
+              _.createElement(
+                _._,
+                {
+                  className: _.CheckboxWrapper,
+                  bTopmost: !0,
+                  toolTipContent: (0, _._)(
+                    _
+                      ? "#EventReminder_NotifyByEmail_ttip"
+                      : "#EventReminder_NotifyByEmail_Missing",
+                  ),
+                },
+                _.createElement(_._, {
+                  label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
+                  disabled: !_,
+                  checked: _._.Get().BFollowsEventAndNotifiedBy(
+                    _.clanSteamID,
+                    _.GID,
+                    _._.k_ENotifyFlagByEmail,
+                  ),
+                  onChange: (_) => {
+                    _(_, !1, _._.k_ENotifyFlagByEmail);
+                  },
+                }),
+              ),
+              !_ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.FlexColumnContainer,
+                  },
+                  _.createElement(
+                    "a",
+                    {
+                      href: _._.STORE_BASE_URL + "account/",
+                      target: _._.IN_CLIENT ? void 0 : "_blank",
+                      onClick: () => _(_._.k_eReminder_EmailUnverified),
+                    },
+                    (0, _._)("#EventReminder_NotifyByEmail_Missing_Add"),
+                  ),
+                ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+              },
+              _.createElement(
+                _._,
+                {
+                  className: _.CheckboxWrapper,
+                  bTopmost: !0,
+                  toolTipContent: (0, _._)(
+                    _
+                      ? "#EventReminder_NotifyByMobile_ttip"
+                      : "#EventReminder_NotifyByMobile_Missing",
+                  ),
+                },
+                _.createElement(_._, {
+                  label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
+                  disabled: !_,
+                  checked: _._.Get().BFollowsEventAndNotifiedBy(
+                    _.clanSteamID,
+                    _.GID,
+                    _._.k_ENotifyFlagByPush,
+                  ),
+                  onChange: (_) => {
+                    _(_, !1, _._.k_ENotifyFlagByPush);
+                  },
+                }),
+              ),
+              !_ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.FlexColumnContainer,
+                  },
+                  _.createElement(
+                    "a",
+                    {
+                      href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
+                      target: _._.IN_CLIENT ? void 0 : "_blank",
+                      onClick: () => _(_._.k_eReminder_MobilePushMissing),
+                    },
+                    (0, _._)("#EventReminder_NotifyByMobile_Install"),
+                  ),
+                ),
+            ),
+            _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _.ReminderOptionsHeader,
+                },
+                (0, _._)("#EventDisplay_Reminder_AddToCalendar"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.ReminderCalendarOptions,
+                },
+                _.createElement(
+                  "a",
+                  {
+                    className: _.ReminderOption,
+                    href: _("ics"),
+                    onClick: () => _(_._.k_eReminder_CalendarApple),
+                  },
+                  (0, _._)("#EventDisplay_Reminder_AppleCalendar_Short"),
+                ),
+                _.createElement(
+                  "a",
+                  {
+                    className: _.ReminderOption,
+                    target: _._.IN_CLIENT ? void 0 : "_blank",
+                    href: (() => {
+                      const _ = encodeURIComponent(
+                          (() => {
+                            const _ = _.GetNameWithFallback(_);
+                            if (
+                              _._.BHasEntityNameForID(
+                                _.appid,
+                                _.clanSteamID.GetAccountID(),
+                              )
+                            )
+                              return `${_._.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
+                            return _;
+                          })(),
+                        ),
+                        _ = encodeURIComponent(
+                          (() => {
+                            let _ = _.GetSubTitleWithLanguageFallback(_);
+                            return (
+                              (_ = _ ? `${_}\n\n\n` : ""),
+                              `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
+                            );
+                          })(),
+                        ),
+                        _ = _.GetStartTimeAndDateUnixSeconds(),
+                        _ = _(_),
+                        _ = _(
+                          _.GetEndTimeAndDateUnixSeconds() || _ + _._.PerHour,
+                        ),
+                        _ =
+                          (_._.IN_CLIENT ? "steam://openurl_external/" : "") +
+                          `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
+                      return (0, _._)(_);
+                    })(),
+                    onClick: () => _(_._.k_eReminder_CalendarGoogle),
+                  },
+                  (0, _._)("#EventDisplay_Reminder_GoogleCalendar_Short"),
+                ),
+                _.createElement(
+                  "a",
+                  {
+                    className: _.ReminderOption,
+                    href: _("outlook"),
+                    onClick: () => _(_._.k_eReminder_CalendarOutlook),
+                  },
+                  (0, _._)("#EventDisplay_Reminder_OutlookCalendar_Short"),
+                ),
+              ),
+            ),
+            !1,
+          ),
+        );
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = (0, _._)((_) => {
+        const _ = (0, _._)(_.photo, (0, _._)(_._.LANGUAGE)),
+          _ = _ ? ("string" == typeof _ ? _ : _[1]) : null,
+          _ = Boolean(_.title),
+          _ = Boolean(_.company);
+        return _.createElement(
+          "div",
+          {
+            className: _().SpeakerPopup,
+            onMouseLeave: _.fnClose,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().SpeakerInfoOuter,
+            },
+            _.photo &&
+              _.createElement("img", {
+                src: _,
+              }),
+            _.createElement(
+              "div",
+              {
+                className: _().SpeakerInfoInner,
+              },
+              _.createElement("div", null, _.name),
+              (_ || _) &&
+                _.createElement(
+                  "div",
+                  null,
+                  _ &&
+                    _.createElement(
+                      "span",
+                      {
+                        className: _().SpeakerTitle,
+                      },
+                      _.title,
+                    ),
+                  _ && _ && _.createElement("span", null, ", "),
+                  _ && _.createElement("span", null, _.company),
+                ),
+            ),
+          ),
+          _.bio &&
+            _.createElement(
+              "div",
+              {
+                className: _().SpeakerBio,
+              },
+              _.bio,
+              _.bioString &&
+                _.createElement(_._, {
+                  text: _.bioString,
+                }),
+            ),
+        );
+      });
+      class _ extends _.Component {
+        static sm_embeddedElements = new _._("presenter-hover-source-elements");
+        m_refAnchor = _.createRef();
+        m_fnHidePopup;
+        m_nScrollPosAtHoverStart;
+        ClosePopup() {
+          this.m_fnHidePopup &&
+            (this.m_fnHidePopup(),
+            (this.m_fnHidePopup = null),
+            window.removeEventListener("scroll", this.OnScroll));
+        }
+        componentWillUnmount() {
+          this.ClosePopup();
+        }
+        OnScroll() {
+          Math.abs(window.scrollY - this.m_nScrollPosAtHoverStart) > 50 &&
+            this.ClosePopup();
+        }
+        OnHover(_) {
+          const _ = this.m_refAnchor.current;
+          if (!_) return;
+          const _ = {
+              direction: "right",
+              bEnablePointerEvents: !0,
+              style: {
+                maxWidth: 640,
+                minHeight: _.clientHeight,
+              },
+              target: _,
+            },
+            _ = "presenter-hover-" + Math.floor(1e8 * Math.random());
+          (this.m_fnHidePopup = () =>
+            _.sm_embeddedElements.HideElement(_.ownerDocument, _)),
+            window.addEventListener("scroll", this.OnScroll),
+            (this.m_nScrollPosAtHoverStart = window.scrollY);
+          _.sm_embeddedElements.ShowElementDelayed(
+            _.ownerDocument,
+            150,
+            _.createElement(
+              _._,
+              {
+                ..._,
+              },
+              _.createElement(_, {
+                ...this.props,
+                fnClose: this.OnLeave,
+              }),
+            ),
+            _,
+          );
+        }
+        OnLeave(_) {
+          this.ClosePopup();
+        }
+        render() {
+          return _.createElement(
+            "div",
+            {
+              className: _().SpeakerHover,
+              ref: this.m_refAnchor,
+              onMouseEnter: this.OnHover,
+              onFocus: this.OnHover,
+              onMouseLeave: this.OnLeave,
+              onBlur: this.OnLeave,
+            },
+            this.props.children,
+          );
+        }
+      }
+      function _(_) {
+        const {
+            photo: _,
+            name: __webpack_require__,
+            title: _,
+            company: _,
+            hidePhotoInCompactView: _,
+          } = _,
+          _ = (0, _._)(_, (0, _._)(_._.LANGUAGE)),
+          _ = _ && !_ ? ("string" == typeof _ ? _ : _[1]) : null,
+          _ = Boolean(_),
+          _ = Boolean(_);
+        return _.createElement(
+          "div",
+          {
+            className: _().SpeakerOuter,
+          },
+          _.createElement(
+            _,
+            {
+              ..._,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().Speaker,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().SpeakerInfoOuter,
+                },
+                !!_ &&
+                  _.createElement("img", {
+                    src: _,
+                  }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().SpeakerInfoInner,
+                  },
+                  _.createElement("div", null, __webpack_require__),
+                  (_ || _) &&
+                    _.createElement(
+                      "div",
+                      null,
+                      _ &&
+                        _.createElement(
+                          "span",
+                          {
+                            className: _().SpeakerTitle,
+                          },
+                          _,
+                        ),
+                      _ && _ && _.createElement("span", null, ", "),
+                      _ && _.createElement("span", null, _),
+                    ),
+                ),
+              ),
+            ),
+          ),
+        );
+      }
+      (0, _._)([_._], _.prototype, "ClosePopup", null),
+        (0, _._)([_._], _.prototype, "OnScroll", null),
+        (0, _._)([_._], _.prototype, "OnHover", null),
+        (0, _._)([_._], _.prototype, "OnLeave", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -17834,6 +22732,189 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_bUserHasVolumePreference = !1;
+        m_flVolumePreference = 0;
+        BUserHasVolumePreference() {
+          return this.m_bUserHasVolumePreference;
+        }
+        SetVolumePreference(_) {
+          (this.m_flVolumePreference = _),
+            (this.m_bUserHasVolumePreference = !0);
+        }
+        GetVolumePreference() {
+          return this.m_flVolumePreference;
+        }
+        BVolumePreferenceMuted() {
+          return this.m_flVolumePreference < 0.001;
+        }
+        static s_Singleton;
+        static Get() {
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
+        }
+      }
+      (0, _._)([_._], _.prototype, "BUserHasVolumePreference", null),
+        (0, _._)([_._], _.prototype, "SetVolumePreference", null);
+      const _ = (0, _.forwardRef)(function (_, _) {
+        const {
+            video: __webpack_require__,
+            bAutoPlay: _,
+            bControls: _,
+            bLoop: _,
+            bMuted: _,
+            className: _,
+            mediaScale: _,
+            onClick: _,
+            altText: _,
+          } = _,
+          _ = (0, _.useMemo)(
+            () =>
+              Boolean(
+                __webpack_require__.rgVideoTracks?.some(
+                  (_) => "subtitles" == _.sKind || "captions" == _.sKind,
+                ),
+              ),
+            [__webpack_require__.rgVideoTracks],
+          ),
+          [_, _] = _.useState(!1);
+        if (
+          !__webpack_require__.rgVideoSources ||
+          !__webpack_require__.rgVideoSources.length
+        )
+          return null;
+        const _ = (function (_) {
+          return !(
+            !(0, _._)(_.sPoster) ||
+            (_.rgVideoSources &&
+              _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
+            (_.rgVideoTracks && _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
+          );
+        })(__webpack_require__);
+        let _;
+        (!_ || (_ && "public" == _._.WEB_UNIVERSE)) && (_ = "anonymous");
+        const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
+          _ = __webpack_require__.sPoster ? _(__webpack_require__.sPoster) : "";
+        return _.createElement(
+          "video",
+          {
+            width: "100%",
+            height: "auto",
+            autoPlay: _,
+            muted: _,
+            playsInline: !0,
+            controls: _,
+            poster: _,
+            loop: _,
+            crossOrigin: _,
+            onVolumeChange: (_) => {
+              const _ = _.target,
+                _ = _.muted ? 0 : _.volume;
+              _ && _.Get().SetVolumePreference(_);
+            },
+            onPlay: (_) => {
+              const _ = _.target,
+                _ = 0 == _.currentTime,
+                _ = _.Get().BUserHasVolumePreference();
+              if ((_(!0), _))
+                if (_ || _)
+                  _ &&
+                    ((_.volume = _.Get().GetVolumePreference()),
+                    (_.muted = _.Get().BVolumePreferenceMuted()));
+                else {
+                  const _ = _.muted ? 0 : _.volume;
+                  _.Get().SetVolumePreference(_);
+                }
+            },
+            ref: _,
+            className: _,
+            onClick: _,
+            "aria-label": _,
+            style: {
+              width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
+            },
+          },
+          _.createElement(_, {
+            rgVideoSources: __webpack_require__.rgVideoSources,
+          }),
+          _.createElement(_, {
+            rgVideoTracks: __webpack_require__.rgVideoTracks,
+          }),
+        );
+      });
+      function _(_) {
+        if (_)
+          try {
+            const _ = new URL(_);
+            return (
+              (_.search =
+                (_.search ? _.search + "&" : "?") + "origin=" + (0, _._)()),
+              _.toString()
+            );
+          } catch {
+            return _;
+          }
+      }
+      function _(_) {
+        const { rgVideoSources: _ } = _;
+        return _.filter((_) => Boolean(_.sURL)).map((_) =>
+          _.createElement("source", {
+            key: _.sURL,
+            src: _(_.sURL),
+            type: _.sFormat,
+          }),
+        );
+      }
+      function _(_) {
+        const { rgVideoTracks: _ } = _;
+        return _
+          ? _.map((_, _) =>
+              _.createElement(_, {
+                key: _,
+                track: _,
+                rgVideoTracks: _,
+              }),
+            )
+          : null;
+      }
+      function _(_) {
+        const { track: _, rgVideoTracks: __webpack_require__ } = _;
+        let _ = _.eLanguage;
+        if ((0, _._)())
+          if (_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina))
+            _ = _._.GetELanguageFallback(_);
+          else {
+            if (6 !== _) return null;
+            if (
+              __webpack_require__.find(
+                (_) => _._.GetELanguageFallback(_.eLanguage) === _,
+              )
+            )
+              return null;
+          }
+        else if (!_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmGlobal))
+          return null;
+        return _.createElement("track", {
+          src: _(_.sURL),
+          kind: _.sKind,
+          default: _.bDefault,
+          srcLang: (0, _._)(_),
+          label: (0, _._)("#language_selection_" + (0, _._)(_)),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -17864,33 +22945,529 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      const _ =
-        "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDE4MDEuNSAxNDAwIDE0MDkiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAxODAxLjUgMTQwMCAxNDA5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggaWQ9Imljb25tb25zdHItbGluay0xXzFfIiBmaWxsPSIjRkZGRkZGIiBkPSJNMzYyLjM1MywyMzEwLjU4OGMxNDguMjM1LTE0OC4yMzUsMzg3LjA2LTE0OC4yMzUsNTI3LjA2LDAKCWMxNi40NzEsMTYuNDcxLDMyLjk0MSw0MS4xNzcsNDkuNDExLDU3LjY0N0w4MDcuMDU5LDI1MDBjLTQxLjE3Ni04Mi4zNTMtMTMxLjc2NS0xMzEuNzY1LTIyMi4zNTMtMTE1LjI5NAoJYy00MS4xNzcsOC4yMzUtNzQuMTE4LDI0LjcwNi05OC44MjMsNDkuNDExbC0yNDcuMDU5LDI0Ny4wNmMtNzQuMTE4LDc0LjExNy03NC4xMTgsMTk3LjY0NiwwLDI4MAoJYzc0LjExOCw3NC4xMTcsMTk3LjY0Nyw3NC4xMTcsMjgwLDBsMCwwbDc0LjExOC03NC4xMThjNzQuMTE3LDI0LjcwNiwxNDguMjM1LDQxLjE3NywyMjIuMzUzLDMyLjk0MWwtMTcyLjk0LDE3Mi45NDEKCWMtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNiwxNDguMjM1LTUyNy4wNiwwcy0xNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5QzEwNy4wNTksMjU1Ny42NDcsMzYyLjM1MywyMzEwLjU4OCwzNjIuMzUzLDIzMTAuNTg4egoJIE03NTcuNjQ2LDE5MDcuMDU5TDU5Mi45NDEsMjA4MGM3NC4xMTctOC4yMzUsMTQ4LjIzNSw4LjIzNSwyMTQuMTE3LDMyLjk0MWw3NC4xMTgtNzQuMTE4Yzc0LjExNy03NC4xMTcsMTk3LjY0Ni03NC4xMTcsMjgwLDAKCWM4Mi4zNTMsNzQuMTE4LDc0LjExNywxOTcuNjQ3LDAsMjgwbC0yNTUuMjk0LDI0Ny4wNmMtNzQuMTE4LDc0LjExNy0xOTcuNjQ3LDc0LjExNy0yODAsMAoJYy04LjIzNS0xNi40NzEtMjQuNzA2LTQxLjE3Ny0zMi45NDEtNjUuODgzbC0xMzEuNzY1LDEzMS43NjVjMTYuNDcxLDI0LjcwNiwzMi45NCw0MS4xNzcsNDkuNDExLDU3LjY0NwoJYzE0OC4yMzUsMTQ4LjIzNSwzODcuMDU5LDE0OC4yMzUsNTI3LjA2LDBsMCwwbDI0Ny4wNTktMjQ3LjA2YzE0OC4yMzUtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5CglTOTA1Ljg4MywxNzY3LjA1OSw3NTcuNjQ2LDE5MDcuMDU5TDc1Ny42NDYsMTkwNy4wNTlMNzU3LjY0NiwxOTA3LjA1OXoiLz4KPC9zdmc+Cg==";
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Component {
+        state = {
+          bRenderChildren: !1,
+          nPrevRenderWidth: 0,
+          nPrevRenderHeight: 0,
+        };
+        m_refContainer = _.createRef();
+        BLoadAndUnload() {
+          return "LoadAndUnload" == (this.props.mode || "JustLoad");
+        }
+        OnVisibilityChange(_) {
+          let _ = this.state.bRenderChildren;
+          if (_ == _) return;
+          if (_ && !this.BLoadAndUnload()) return;
+          let _ = 0,
+            _ = 0;
+          if (this.m_refContainer.current) {
+            const _ = this.m_refContainer.current.GetBoundingClientRect();
+            _ && ((_ = _.width), (_ = _.height));
+          }
+          this.setState({
+            bRenderChildren: _,
+            nPrevRenderWidth: _,
+            nPrevRenderHeight: _,
+          }),
+            _ && this.props.onRender && this.props.onRender();
+        }
+        render() {
+          const {
+              placeholderWidth: _,
+              placeholderHeight: _,
+              holdGampadFocus: __webpack_require__,
+              onRender: _,
+              style: _,
+              mode: _,
+              ..._
+            } = this.props,
+            _ = this.state.bRenderChildren;
+          let _ = _;
+          if (!_) {
+            const _ = this.state.nPrevRenderWidth || _,
+              _ = this.state.nPrevRenderHeight || _;
+            (void 0 === _ && void 0 === _) ||
+              (_ = {
+                ..._,
+                minHeight: _,
+                minWidth: _,
+              });
+          }
+          const _ = this.BLoadAndUnload() ? "repeated" : "once";
+          let _ = _.createElement(
+            _._,
+            {
+              ref: this.m_refContainer,
+              style: _,
+              ..._,
+              onVisibilityChange: this.OnVisibilityChange,
+              trigger: _,
+            },
+            _ && this.props.children,
+          );
+          return (
+            _ &&
+              (_ = _.createElement(
+                _._,
+                {
+                  focusableIfEmpty: !0,
+                },
+                _,
+              )),
+            _
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnVisibilityChange", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNrsmz1Lw1AUhnP8qB+Qkk0pItbVxcX/IM6Cky7iFH+Jk79BwclBB3+AszgUwdVNBxFaCw1E7fW9cAep5pa0NiT3vgdeLjRJm/Ocm/NRiCilAp9tKvDcCIAACIAAsiyEzqAepCqqnvEhzHJSLGVQX7jvSKDPoYO8ADS9BUcAJNBiXgCudUjCJEgABPDLZip2v12obwIXur4DdBK+MeVrHaqJSB2KzKqT2izUgLZd2wH30CF8bFnTusgnlhdUsjmXAFxBe3Au9TEJ3hXpfNkA9M22T4v80TIBuIbzDz73ARe+9wG31pqo1DSWGNqBlgcO16oO4A3b/3XIOafQ8b9PSCWZBh8BYMMSfd3wvEPzrk6DH0OON8Z0vvLDkHAaJAACIICJJJeCy+Aa1Pnj8y+Uwa6lDOpA1S3fewSdjJJIi26EOnC0nTtKInpQalsALfn+CDQJgAA8BYDnP8IS+bwDmuNcXHQVWDURG7QUmf7ZEmV9nysZh7dcGIdbALBpAaD7h6dJDFRshQmAAAiAAAiAAAiAAAiAAAiAAAiAAAjgpyUO+ZmMAuDSIQCZvtj+E4zNuhtU98WJxDgfZ50gfHOUSZAACIAAPLZvAQYAZ32YkpymkAcAAAAASUVORK5CYII=";
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
-      const _ =
-        __webpack_require__._ +
-        "images/applications/store/reddit_large.png?v=valveisgoodatcaching";
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABApJREFUeNrsm2tIFUEUx2evRl5ISnugZuULIwoVtIykIIkgowdmERERUh9CqQ/Rh+gFCX4oKCIjyi8VQtETsoLoARViJEokRYlako9Iy4JKfLX9hz2CwXrv7t6ZvbvcPfDjwr3uzJ7/npk5c3ZUVFVlkWw+FuHmCeAJ4AngCeAJ4AkQwRbtgnucBzJALPgNPoJ28FdI6zwTdCDp4DToUvWtF1SDHIPtFUz0m5GLp9noeAw4BYZV43YFxOm05QNF4DmosirADNABMm1wPgE0qdasHWSAKJALKkAr/TYIUq0KcIAa4Y0lS3Q+HjSroVk/+Knz/eFAfQe7sfpxDckU4bYqx2opKsb6UcwIMElnLPLhsECw8xskOc9F9RPFoIaGyX/9B8oDknSWybmgHhQJXOaOSlg634AP4AH4Dm6Bh6DVzDKYE0ThSoqSUJ5+lmqPVUx0D4EioDeIygdBA8gL4UmtsiGROhcoygIJ8AUMBGk8G7wC1SDRws1lSXb+OCjngW5FgFHw0kAnCthF6ekZkGLiBhMlOT4ENoNjoW6GrpvoNAbsBW3gLtgKpgS5ZkCSAD3gpojdYA34ZmGHuQ5cpWtrSZilJNJ46w/3TksxUBbfDS4K6m+ElqdO0A3mg2WSlsFsUQLwMX4DbHLRNr/eqLCBhkAm2EgC7ABPXCRAr9E/DFQQ8YM7FK61FAUJYKELBGgTIUA3fSaDPS6rdBkWIFgm+M6lpb4mUUXRey50fhA0ihLgLBh2mQANlAkKEaCTNhNusvuiEyE/7QmyXCJAhqhJcHy+vtZMo2G0RrP3afTNEB8KBeCpwwUwnbIrJo/I8KxwJzgCUh3mfD/lLH9kRAC3eLCIabW1FWA/bTudYufNOm82AuJAF02KzIFPPw38MHuhz2Qnlxw69iutOG9lDuDDoAVMd5Dzb0EuZYBMZgRw4zV2XuoadYjz/BV5qVXnrQjA7THY7pAU+STTqtKWTQnhpCjPCy6D9DA5/wIUMq3MFhYBxtJkXncvY9pJDrusAywBX0NtSBF0VthHe4Xl9FnK5J0/6qPoaxF146Imo9dUQFkj2flCUc6LFIDvwK7RBDlbYtjzCGsW2Wiop8TyafxvA1ESx3wdKGHa+0oWTgGmgsVgNVjPtBcbMo1PUCdo8yVl2dUTYBY4BOYw7VxeLGWAKbTbUmya6d8z7aVrnVyJ9Q8ORINy0KPab31gn4DDF4YItgz66SmU2RDun0AVuAB+2ZVQGM0DeNivBFtAMZgpcBvLi5j8LfQjJur4q+REiM/2eSRIPiU+aQZzhc+UL/DS9TOmFVtHWBhNVCY4mWmnypJo2IwdjBikp8xTVl5XHGIOM8X7t7kIN08ATwBPAE8ATwBPgAi2fwIMABJGc33swO3GAAAAAElFTkSuQmCC";
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _._.guess(),
+          _ = _.unix(_)._(_),
+          _ = (0, _._)();
+        return (
+          _ && __webpack_require__.locale(_), __webpack_require__.format("LT")
+        );
+      }
+      function _(_, _) {
+        const _ = _._.guess(),
+          _ = _.unix(_)._(_),
+          _ = (0, _._)();
+        return (
+          _ && _.locale(_),
+          _.createElement(
+            _.Fragment,
+            null,
+            _.format("LT"),
+            _
+              ? _.createElement(
+                  _._,
+                  {
+                    toolTipContent: _.format("Z") + ", " + _,
+                  },
+                  _.createElement("span", null, " ", _.zoneAbbr()),
+                )
+              : null,
+          )
+        );
+      }
+      const _ = (0, _._)((_) => {
+          const {
+              dateAndTime: _,
+              bSingleLine: __webpack_require__,
+              bOnlyTime: _,
+              bOnlyDate: _,
+            } = _,
+            _ = !_ && Boolean(_),
+            _ = !_ && Boolean(_),
+            _ = _ && (0, _._)(_),
+            _ = _.stylesmodule
+              ? {
+                  ..._(),
+                  ..._.stylesmodule,
+                }
+              : _();
+          return __webpack_require__
+            ? _.createElement(
+                "span",
+                {
+                  className: _ || _ ? _.DateAndTimeInline : _.DateAndTime,
+                },
+                _ && _,
+                _ && _ ? _.createElement("span", null, " ") : void 0,
+                Boolean(_ && _) && _(_, _),
+              )
+            : _.createElement(
+                "div",
+                {
+                  className: _.DateAndTime,
+                },
+                _ &&
+                  _.createElement(
+                    _.Fragment,
+                    null,
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.LocalizedDate,
+                      },
+                      _,
+                    ),
+                    " ",
+                    _.createElement(
+                      "span",
+                      {
+                        className: _._,
+                      },
+                      (0, _._)("#EventDisplay_DateAndTimeCombiner"),
+                    ),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LocalizedTime,
+                  },
+                  Boolean(_ && _) && _(_, _),
+                ),
+              );
+        }),
+        _ = (_) => {
+          const _ = _.createElement(
+            "div",
+            {
+              className: _.stylesmodule.DateToolTip,
+            },
+            _.createElement(_, {
+              dateAndTime: _.rtFullDate,
+              bSingleLine: !0,
+              stylesmodule: _.stylesmodule,
+            }),
+          );
+          return _.createElement(
+            _._,
+            {
+              toolTipContent: _,
+              direction: "top",
+              className: _.className,
+              bTopmost: !0,
+            },
+            _.children,
+          );
+        };
+      let _ = class extends _.Component {
+        render() {
+          const { startDateAndTime: _, endDateAndTime: _ } = this.props,
+            _ = this.props.stylesmodule
+              ? {
+                  ..._(),
+                  ...this.props.stylesmodule,
+                }
+              : _();
+          let _ =
+            this.props.bHideEndTime ||
+            null == this.props.endDateAndTime ||
+            this.props.endDateAndTime < 1;
+          if (null == _ || 0 == _)
+            return _.createElement(
+              "div",
+              {
+                className: _.DateAndTime,
+              },
+              _.createElement(
+                "span",
+                {
+                  className: _.RightSideTitles,
+                },
+                (0, _._)("#EventDisplay_TimeRange"),
+              ),
+              (0, _._)("#EventDisplay_TimeDisplayNone"),
+            );
+          let _ = _._.GetTimeNowWithOverride();
+          if (_)
+            return _.createElement(
+              "div",
+              {
+                className: _.StartDate,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.RightSideTitles,
+                },
+                (0, _._)(
+                  _ < _
+                    ? "#EventDisplay_TimeInPast"
+                    : "#EventDisplay_TimeUpcoming",
+                ),
+                " ",
+              ),
+              _.createElement(_, {
+                stylesmodule: _,
+                dateAndTime: _,
+              }),
+            );
+          let _ = _ <= _ && _ <= _;
+          const _ = (0, _._)(new Date(1e3 * _), new Date(1e3 * _));
+          return _.createElement(
+            "div",
+            {
+              className: _.MultiDateAndTime,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.StartDate,
+              },
+              _.createElement(
+                "span",
+                {
+                  className: _.RightSideTitles,
+                },
+                (0, _._)(
+                  _ >= _
+                    ? "#EventDisplay_TimeBeginsOn"
+                    : _ >= _
+                      ? "#EventDisplay_TimeBeginsOn_Past"
+                      : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
+                ),
+              ),
+              _.createElement(_, {
+                stylesmodule: _,
+                bSingleLine: !0,
+                dateAndTime: _,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.EndDate,
+              },
+              _.createElement(
+                "span",
+                {
+                  className: _.RightSideTitles,
+                },
+                (0, _._)(
+                  _ < _
+                    ? "#EventDisplay_TimeEndsOn_Past"
+                    : "#EventDisplay_TimeEndsOn",
+                ),
+              ),
+              _.createElement(_, {
+                stylesmodule: _,
+                bSingleLine: !0,
+                bOnlyTime: _,
+                dateAndTime: _,
+              }),
+            ),
+            _ &&
+              _.createElement(
+                "span",
+                {
+                  className: _.ActiveEvent,
+                },
+                _.createElement(
+                  "span",
+                  {
+                    className: (0, _._)(
+                      _.RightSideTitles,
+                      _.ActiveEventCallOut,
+                    ),
+                  },
+                  (0, _._)("#Time_Now"),
+                ),
+              ),
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      let _ = class extends _.Component {
+        render() {
+          const {
+              startDateAndTime: _,
+              endDateAndTime: _,
+              bHideEndTime: __webpack_require__,
+            } = this.props,
+            _ = this.props.stylesmodule
+              ? {
+                  ..._(),
+                  ...this.props.stylesmodule,
+                }
+              : _();
+          if (null == _ || 0 == _)
+            return _.createElement(
+              "div",
+              {
+                className: _.DateAndTime,
+              },
+              _.createElement(
+                "span",
+                {
+                  className: _.RightSideTitles,
+                },
+                (0, _._)("#EventDisplay_TimeRange"),
+              ),
+              (0, _._)("#EventDisplay_TimeDisplayNone"),
+            );
+          const _ = _._.GetTimeNowWithOverrideAsDate(),
+            _ = _._.GetTimeNowWithOverride(),
+            _ = (0, _._)(new Date(1e3 * _), _),
+            _ = _.createElement(
+              "div",
+              {
+                className: _.ShortDateAndTime,
+              },
+              (0, _._)(_, _),
+            );
+          let _ = _.createElement(
+            _,
+            {
+              rtFullDate: _,
+              stylesmodule: _,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.RightSideTitles,
+              },
+              (0, _._)(
+                _ < _
+                  ? "#EventDisplay_TimeInPast"
+                  : "#EventDisplay_TimeUpcoming",
+              ),
+            ),
+            _,
+          );
+          if (
+            (_ < _ &&
+              _ < _ + _._.PerWeek &&
+              (_ = _.createElement(
+                _,
+                {
+                  rtFullDate: _,
+                  stylesmodule: _,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.RightSideTitles,
+                  },
+                  (0, _._)(
+                    "#EventDisplay_EventUpcoming_WithDateAndTime",
+                    _,
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.ShortDateAndTime,
+                      },
+                      _(_),
+                      " ",
+                    ),
+                  ),
+                ),
+              )),
+            __webpack_require__ || null == _ || _ < 1)
+          )
+            return _;
+          const _ = _ <= _ && _ <= _;
+          _ &&
+            (_ = _.createElement(
+              _,
+              {
+                rtFullDate: _,
+                className: _.ActiveEvent,
+                stylesmodule: _,
+              },
+              _.createElement(
+                "span",
+                {
+                  className: _.ActiveEventCallOut,
+                },
+                (0, _._)("#Time_Now"),
+              ),
+            ));
+          let _ = null;
+          const _ = _ ? _ - _ : _ - _;
+          if (_ <= _._.PerDay) {
+            const _ = _.createElement(
+              "div",
+              {
+                className: _.ShortDateAndTime,
+              },
+              (0, _._)(_, !0),
+            );
+            _ =
+              _ < _
+                ? _.createElement(
+                    "div",
+                    {
+                      className: _.RightSideTitles,
+                    },
+                    (0, _._)("#EventDisplay_TimeEndsOn_Ran"),
+                    _,
+                  )
+                : _.createElement(
+                    "div",
+                    {
+                      className: _.RightSideTitles,
+                    },
+                    (0, _._)(
+                      _
+                        ? "#EventDisplay_TimeLeft"
+                        : "#EventDisplay_RunsForDuration",
+                      _,
+                    ),
+                  );
+          } else {
+            const _ = _.getFullYear() == new Date(1e3 * _).getFullYear();
+            _ = _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _.RightSideTitles,
+                },
+                (0, _._)(
+                  _ < _
+                    ? "#EventDisplay_TimeEndsOn_Past"
+                    : "#EventDisplay_TimeEndsOn",
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.ShortDateAndTime,
+                },
+                (0, _._)(_, _),
+              ),
+            );
+          }
+          const _ = _.createElement(
+            _,
+            {
+              rtFullDate: _,
+              stylesmodule: _,
+            },
+            _,
+          );
+          return _.createElement(
+            "div",
+            {
+              className: _.ShortDateRange,
+            },
+            _,
+            _,
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
     },
   },
 ]);

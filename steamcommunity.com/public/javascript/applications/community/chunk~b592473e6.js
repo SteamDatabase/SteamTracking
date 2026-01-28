@@ -7,6 +7,7 @@
       e.exports = {
         EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
         EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
+        ColorPickerCtn: "_3qTvksxeNcdLlXlVi5T__3",
       };
     },
     73309: (e) => {
@@ -738,7 +739,7 @@
         n = o(64753),
         a = o(98724),
         s = o(52893),
-        l = o(49693),
+        l = o(95742),
         c = o(57053),
         i = o(81393);
       class d {
@@ -1347,7 +1348,7 @@
       var r = o(90626),
         n = o(61257),
         a = o(68255),
-        s = o(60395),
+        s = o(4869),
         l = o(32754),
         c = o(61859),
         i = o(57361),
@@ -1383,6 +1384,7 @@
             },
             color: m,
             disableAlpha: u,
+            className: d().ColorPickerCtn,
           }),
           r.createElement(
             "div",
@@ -2026,7 +2028,7 @@
         n = o(4188),
         a = o(37834),
         s = o(90626),
-        l = o(60395),
+        l = o(4869),
         c = o(17558),
         i = o(30175),
         d = o(73745);

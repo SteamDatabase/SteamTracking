@@ -197,7 +197,8 @@
 	"Container_ContentsLabel": "เนื้อหาที่เป็นไปได้:",
 	"Error_LoadingContent": "ตรวจพบปัญหาในการโหลดเนื้อหานี้",
 	"Error_LoadingMarketItem": "ไอเท็มที่ขออาจไม่มีอยู่จริง หรืออาจมีปัญหาชั่วคราวที่ทำให้ไม่สามารถโหลดไอเท็มนี้ได้ โปรดลองใหม่อีกครั้งภายหลัง",
-	"ListingFilter_Title": "รายการตัวกรอง"
+	"ListingFilter_Title": "รายการตัวกรอง",
+	"Listings_NoneFound": "No Listings Found"
 }`);
     },
   },

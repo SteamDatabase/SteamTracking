@@ -988,6 +988,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const {
@@ -1313,9 +1315,11 @@
       function _(_) {
         const { appid: _, bHidePrice: __webpack_require__ } = _,
           [_] = (0, _._)(_, _._),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
           _ = (0, _._)();
-        if (!_) return null;
+        if (!_ || !_) return null;
         const _ = _.GetBestPurchaseOption(),
           _ = null == _ ? void 0 : _.hide_discount_pct_for_compliance;
         return _.createElement(

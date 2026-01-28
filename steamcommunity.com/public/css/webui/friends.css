@@ -7235,8 +7235,10 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   gap: 8px;
   background-color: #3d4450;
   color: #fff;
-  padding: 4px 12px;
+  padding: 10px 16px;
   cursor: pointer;
+  border-radius: 2px;
+  font-weight: 400;
 }
 .contentmoderationreportdialog_BlockListItem_2tqpD svg {
   height: 18px;
@@ -7246,17 +7248,22 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-decoration: none;
 }
 .contentmoderationreportdialog_BlockListItem_2tqpD:hover {
-  background: rgba(119, 119, 119, 0.6);
+  background: #4c5461;
   transition: background-color 150ms ease-in;
 }
 .contentmoderationreportdialog_BlockListItem_2tqpD
   .contentmoderationreportdialog_BlockListDesc_1Wd-o {
-  font-size: 10px;
+  font-family: "Motiva Sans";
+  font-size: 12px;
+  font-style: normal;
+  line-height: normal;
   color: #b8bcbf;
 }
 .contentmoderationreportdialog_BlockListItem_2tqpD
   .contentmoderationreportdialog_BlockListReason_3aAuW {
-  color: #dcdedf;
+  color: #fff;
+  font-size: 15px;
+  font-style: normal;
 }
 .contentmoderationreportdialog_BottomButtons_2g3Wv {
   display: flex;
@@ -7277,13 +7284,18 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-weight: bold;
 }
 .contentmoderationreportdialog_DetailedReasonTextArea_1PUlL {
-  margin-top: 12px;
+  margin-top: 6px;
   width: 98%;
   margin-left: auto;
   margin-right: auto;
   display: block;
   height: 100px;
   box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0px #45556c;
 }
 .contentmoderationreportdialog_ChatReportSubmittedDialog_2cJjG
   .contentmoderationreportdialog_ChatReportSubmittedBody_22q2A {
@@ -7387,8 +7399,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-block-start: 7px;
+  padding-block-start: 12px;
   width: 100%;
+  margin-bottom: 12px;
 }
 .contentmoderationreportdialog_NamePanel_ovujK > div {
   display: flex;
@@ -7400,8 +7413,24 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   input.contentmoderationreportdialog_OptionalNameInput_1PFmi {
   margin-inline-start: 5px;
   margin-inline-end: 5px;
-  border: .66px solid #767676;
   border-radius: 0;
+  margin-top: 6px;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0px #45556c;
+}
+.contentmoderationreportdialog_NamePanel_ovujK
+  > div
+  input.contentmoderationreportdialog_OptionalNameInput_1PFmi:hover {
+  background: #23262e;
 }
 .chatroommenu_ChatRoomContextNoPermission_w04cA {
   opacity: 0.4;
@@ -31365,6 +31394,709 @@ div:hover > .BBCodeCollapseControl {
   .bbcode_AssociatedApp_cjQYf
   .bbcode_Name_1CWNZ {
   font-size: 14px;
+}
+.shared_svg_gamerecordings_Dummy_3d7vg {
+  color: hotpink;
+}
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn > svg {
+  height: 16px;
+  width: 16px;
+}
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn
+  .shared_svg_gamerecordings_Outer_1Zy09 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn
+  .shared_svg_gamerecordings_Inner_B70ft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.trailerplayer_TrailerPlayer_ByTa3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trailerplayer_TrailerPlayer_ByTa3 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.trailerplayer_LoadingThrobber_36zgL {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out 0ms;
+}
+.trailerplayer_LoadingThrobber_36zgL.trailerplayer_FadeIn_3wB3k {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out 0ms;
+}
+.trailerplayer_UserInputNeeded_1Y1AA {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+}
+.trailerplayer_UserInputNeeded_1Y1AA .trailerplayer_UserInputGlass_2VuwT {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trailerplayer_UserInputNeeded_1Y1AA .trailerplayer_UserInputGlass_2VuwT > svg {
+  height: 100px;
+  width: 100px;
+  transition: transform .3s ease-out, opacity .2s ease-out;
+  padding: 5px;
+}
+.trailerplayer_UserInputNeeded_1Y1AA
+  .trailerplayer_UserInputGlass_2VuwT
+  > svg
+  > path {
+  transform: translateX(1px);
+  color: #fff;
+}
+.trailerplayer_UserInputNeeded_1Y1AA
+  .trailerplayer_UserInputGlass_2VuwT.trailerplayer_Animate__9eb3
+  > svg {
+  transform: scale(1.8);
+  opacity: 0;
+}
+.trailerplayerdesktop_BackgroundClick_vXKdK {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+.trailerplayerdesktop_BackgroundClick_vXKdK.trailerplayerdesktop_Enabled_pG-0I {
+  pointer-events: auto;
+  background-color: transparent;
+}
+.trailerplayerdesktop_BackgroundClick_vXKdK .trailerplayerdesktop_Icon_2U9kj {
+  width: 100px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation-name: trailerplayerdesktop_BackgroundClickAnimation_2XYeZ;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+@keyframes trailerplayerdesktop_BackgroundClickAnimation_2XYeZ {
+  from {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+.trailerplayerdesktop_PlayerControls_-qTM6 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.trailerplayerdesktop_PlayerControls_-qTM6:not(
+    .trailerplayerdesktop_ShowControls_1Cnj-
+  ) {
+  animation: trailerplayerdesktop_DelayHideCursor_3n201 300ms forwards;
+}
+@keyframes trailerplayerdesktop_DelayHideCursor_3n201 {
+  from {
+    cursor: auto;
+  }
+  to {
+    cursor: none;
+  }
+}
+.trailerplayerdesktop_ControlGroup_39Fc5 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.trailerplayerdesktop_ControlGroup_39Fc5
+  .trailerplayerdesktop_BehindControlsFade_2vmUy {
+  opacity: 0;
+}
+.trailerplayerdesktop_PlayerControls_-qTM6.trailerplayerdesktop_ShowControls_1Cnj-
+  .trailerplayerdesktop_ControlGroup_39Fc5
+  .trailerplayerdesktop_BehindControlsFade_2vmUy {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+.trailerplayerdesktop_TitleRow_2WpHh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 80%;
+  padding: 4px 8px;
+  background: linear-gradient(135deg, #21272c94, #2a2c2f4d);
+  backdrop-filter: blur(10px);
+  border-radius: 0px 0px 4px 0px;
+  pointer-events: none;
+}
+.trailerplayerdesktop_LowerControls_aKceK {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0px 10px 6px 10px;
+}
+.trailerplayerdesktop_LowerControls_aKceK
+  .trailerplayerdesktop_ButtonRow_2gDbG {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.trailerplayerdesktop_LowerControls_aKceK
+  .trailerplayerdesktop_ButtonRow_2gDbG
+  .trailerplayerdesktop_LeftGroup_ppGte,
+.trailerplayerdesktop_LowerControls_aKceK
+  .trailerplayerdesktop_ButtonRow_2gDbG
+  .trailerplayerdesktop_RightGroup_2iPvk {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+.trailerplayerdesktop_TitleRow_2WpHh {
+  transform: translateY(-110%);
+}
+.trailerplayerdesktop_LowerControls_aKceK {
+  transform: translateY(100%);
+}
+.trailerplayerdesktop_TitleRow_2WpHh,
+.trailerplayerdesktop_LowerControls_aKceK {
+  transition: transform 300ms ease-in-out;
+}
+.trailerplayerdesktop_TitleRow_2WpHh.trailerplayerdesktop_ShowControls_1Cnj-,
+.trailerplayerdesktop_ShowControls_1Cnj-
+  .trailerplayerdesktop_LowerControls_aKceK {
+  transform: translateY(0);
+}
+.trailerplayerdesktop_BehindControlsFade_2vmUy {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent 80%);
+  pointer-events: none;
+}
+.trailerplayerdesktop_VolumeControls_1j6rW {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.DesktopUI .trailerplayerdesktop_VolumeControls_1j6rW .SliderControl {
+  min-width: 84px;
+}
+.trailerplayerdesktop_VolumeSlider_mowMY {
+  padding: 0 0 0 8px;
+  transform: translateX(0px);
+}
+.trailerplayerdesktop_VolumeSlider_mowMY .SliderTrack {
+  height: 4px;
+  --left-track-color: #b8bcbf;
+  background: #ffffff22;
+  box-shadow: inset 0 0 2px #00000033;
+}
+.trailerplayerdesktop_VolumeSlider_mowMY .SliderControl {
+  --slider-handle-width: 12px;
+  transform: all .3s ease-in-out;
+}
+.trailerplayerdesktop_VolumeSlider_mowMY .SliderControl:hover .SliderHandle {
+  height: 14px;
+  width: 14px;
+  background: #eee;
+}
+.trailerplayerdesktop_VolumeSlider_mowMY .SliderControl:hover .SliderTrack {
+  --left-track-color: #eeeeee;
+}
+.trailerplayerdesktop_VolumeSlider_mowMY .SliderHandle {
+  height: 12px;
+  width: 12px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  background: #eee;
+}
+.trailerplayerdesktop_MenuLayer_3eOkj {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 150ms ease-in, transform 150ms ease-out;
+  pointer-events: none;
+}
+.trailerplayerdesktop_MenuLayer_3eOkj:empty {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.trailerplayerdesktop_MenuLayer_3eOkj > * {
+  pointer-events: auto;
+}
+.trailerplayershared_PlaybackButton_3XkD6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition-property: color;
+  transition-duration: .08s;
+  transition-timing-function: ease-out;
+  color: #b8bcbf;
+  overflow: visible;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+}
+.trailerplayershared_PlaybackButton_3XkD6 > svg {
+  width: 100%;
+  height: 100%;
+}
+.trailerplayershared_PlaybackButton_3XkD6:hover {
+  color: #eee;
+}
+.trailerplayershared_PlaybackButton_3XkD6:hover:active {
+  color: #8b929a;
+  transform: scale(0.96);
+}
+.trailerplayershared_PlaybackTime_Ul_JQ {
+  font-size: 14px;
+  font-family: "Motiva Sans", monospace;
+  text-align: center;
+  color: #b8bcbf;
+  white-space: nowrap;
+  user-select: none;
+  align-self: center;
+  display: inline-flex;
+  gap: 4px;
+}
+.trailerplayershared_PlaybackTime_Ul_JQ .trailerplayershared_TimeDash_d5YtA {
+  color: #b8bcbf;
+}
+.trailerplayershared_SettingsButton_DpzfS {
+  transition: transform .3s ease-in-out;
+}
+.trailerplayershared_SettingsButton_DpzfS.trailerplayershared_Rotated_KQCO7 {
+  transform: rotate(90deg);
+}
+.trailerplayershared_SettingsMenu_fXwjI {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: linear-gradient(135deg, #21272c94, #2a2c2f4d);
+  backdrop-filter: blur(10px);
+  border-radius: 4px;
+  min-width: 150px;
+  width: fit-content;
+  padding: 6px;
+  align-self: center;
+  color: #eee;
+  font-family: "Motiva Sans", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: left;
+  white-space: nowrap;
+  user-select: none;
+}
+.trailerplayershared_SettingsMenu_fXwjI .trailerplayershared_MenuItem_1-NP1 {
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 2px;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+.trailerplayershared_SettingsMenu_fXwjI
+  .trailerplayershared_MenuItem_1-NP1.trailerplayershared_Checked_2BiCJ
+  svg {
+  max-width: 18px;
+}
+.trailerplayershared_SettingsMenu_fXwjI
+  .trailerplayershared_MenuItem_1-NP1:hover {
+  background-color: #1a9fff;
+}
+.trailerplayershared_SettingsMenu_fXwjI .trailerplayershared_Separator_2T8HG {
+  height: 10px;
+  position: relative;
+  width: 100%;
+}
+.trailerplayershared_SettingsMenu_fXwjI
+  .trailerplayershared_Separator_2T8HG::before,
+.trailerplayershared_SettingsMenu_fXwjI
+  .trailerplayershared_Separator_2T8HG::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+.trailerplayershared_SettingsMenu_fXwjI
+  .trailerplayershared_Separator_2T8HG::before {
+  top: 6px;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.trailerplayershared_SettingsMenu_fXwjI
+  .trailerplayershared_Separator_2T8HG::after {
+  top: 7px;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+.trailerplayershared_Timeline_2eh4i {
+  position: relative;
+  padding-top: 14px;
+  padding-bottom: 8px;
+  touch-action: none;
+}
+.trailerplayershared_Timeline_2eh4i * {
+  touch-action: none;
+}
+.trailerplayershared_Timeline_2eh4i.trailerplayershared_Hovered_1p3RP {
+  cursor: pointer;
+}
+.trailerplayershared_Timeline_2eh4i .trailerplayershared_TimelineBar_3ezjd {
+  position: relative;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.trailerplayershared_Timeline_2eh4i .trailerplayershared_Bar_1CCfD {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.trailerplayershared_Timeline_2eh4i .trailerplayershared_Buffered_3f4Y1 {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.trailerplayershared_Timeline_2eh4i .trailerplayershared_Played_3ezyM {
+  background-color: #1a9fff;
+}
+.trailerplayershared_Timeline_2eh4i .trailerplayershared_HoverTick_1DhQ7 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.trailerplayershared_Timeline_2eh4i .trailerplayershared_Hover_2Zd33 {
+  position: absolute;
+  bottom: calc(100% + 0px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  user-select: none;
+  pointer-events: none;
+}
+.trailerplayershared_Timeline_2eh4i
+  .trailerplayershared_Hover_2Zd33
+  .trailerplayershared_HoverImage_2ZYpY {
+  background-color: #fff;
+  border: 3px solid #fff;
+  border-radius: 2px;
+}
+.trailerplayershared_Timeline_2eh4i
+  .trailerplayershared_Hover_2Zd33
+  .trailerplayershared_HoverTime_qSkn0 {
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 6px 12px;
+  align-self: center;
+  color: #1b2838;
+  font-family: "Motiva Sans", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+}
+.trailerplayershared_Timeline_2eh4i
+  .trailerplayershared_Hover_2Zd33
+  .trailerplayershared_HoverTime_qSkn0::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 100%;
+  left: 50%;
+  background-color: #fff;
+  border-radius: 0px 0px 2px 0px;
+  transform: translate3d(-50%, -50%, 0) rotate(45deg);
+}
+.trailerplayershared_FatalErrorMessage_1pJhZ {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Motiva Sans", sans-serif;
+  font-size: 16px;
+}
+.trailerplayershared_FatalErrorMessage_1pJhZ span {
+  text-align: center;
+  width: 60%;
+}
+.trailerplayershared_TitleRow_3CLbN {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-family: "Motiva Sans", monospace;
+  font-weight: 400;
+  text-align: left;
+  color: #b8bcbf;
+  white-space: nowrap;
+  user-select: none;
+}
+.trailerplayershared_TitleRow_3CLbN .trailerplayershared_Category_18O6p {
+  font-weight: 500;
+  color: #dcdedf;
+}
+.trailerplayershared_TitleRow_3CLbN .trailerplayershared_Separator_2T8HG {
+  border-left: 1px solid #67707b;
+  height: 1em;
+}
+.trailerplayershared_TitleRow_3CLbN .trailerplayershared_Title_plWqY {
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+.trailerplayertouch_PlayerControls_2vG-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.trailerplayertouch_ControlGroup_2tyea {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+}
+.trailerplayertouch_ControlGroup_2tyea
+  .trailerplayertouch_GlassBackground_3Gg0K {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+.trailerplayertouch_ControlGroup_2tyea.trailerplayertouch_ShowControls_1-uJm {
+  opacity: 1;
+}
+.trailerplayertouch_ControlGroup_2tyea * {
+  pointer-events: none;
+}
+.trailerplayertouch_ControlGroup_2tyea.trailerplayertouch_ShowControls_1-uJm
+  *:not(.trailerplayertouch_GlassBackground_3Gg0K):not(
+    .trailerplayertouch_SeekThumbnail_Ngi4I
+  ) {
+  pointer-events: auto;
+}
+.trailerplayertouch_TitleRow_WqIiy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 80%;
+  padding: 4px 8px;
+  opacity: 0;
+  transition-property: background-color, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+}
+.trailerplayertouch_TitleRow_WqIiy.trailerplayertouch_ControlsVisible_2rhiB {
+  opacity: 1;
+}
+.trailerplayertouch_TitleRow_WqIiy.trailerplayertouch_FadeIn_38rU1 {
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+.trailerplayertouch_SeekThumbnail_Ngi4I {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trailerplayertouch_CenterControls_e9Voq {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.trailerplayertouch_CenterControls_e9Voq.trailerplayertouch_Hide_2WyZa {
+  display: none;
+}
+.trailerplayertouch_CenteredPlayToggle_1-CqX {
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.trailerplayertouch_LowerControls_2zXAY {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0px 10px 6px 10px;
+}
+.trailerplayertouch_LowerControls_2zXAY .trailerplayertouch_ButtonRow_2nDAS {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.trailerplayertouch_LowerControls_2zXAY
+  .trailerplayertouch_ButtonRow_2nDAS
+  .trailerplayertouch_LeftGroup_2BJQL,
+.trailerplayertouch_LowerControls_2zXAY
+  .trailerplayertouch_ButtonRow_2nDAS
+  .trailerplayertouch_RightGroup_2DMfX {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+.trailerplayergamepad_PlayerControls_3tW3Q {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.trailerplayergamepad_ControlGroup_3rbHw {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+  pointer-events: none;
+}
+.trailerplayergamepad_ControlGroup_3rbHw.trailerplayergamepad_ShowControls_3ysE_ {
+  opacity: 1;
+}
+.trailerplayergamepad_ControlGroup_3rbHw * {
+  pointer-events: none;
+}
+.trailerplayergamepad_ControlGroup_3rbHw.trailerplayergamepad_ShowControls_3ysE_
+  * {
+  pointer-events: auto;
+}
+.trailerplayergamepad_TitleRow_3-16p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 50%;
+  right: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), transparent 80%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+.trailerplayergamepad_TitleRow_3-16p.trailerplayergamepad_ShowControls_3ysE_ {
+  opacity: 1;
+}
+.trailerplayergamepad_TitleRow_3-16p .trailerplayergamepad_RowLimit_1Og_Q {
+  position: relative;
+  max-width: 80%;
+  padding: 4px 8px;
+}
+.trailerplayergamepad_LowerControls_3fTNY {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0px 18px 10px 18px;
+}
+.trailerplayergamepad_LowerControls_3fTNY
+  .trailerplayergamepad_ButtonRow_3AhvK {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.trailerplayergamepad_LowerControls_3fTNY
+  .trailerplayergamepad_ButtonRow_3AhvK
+  .trailerplayergamepad_LeftGroup_L1I7a,
+.trailerplayergamepad_LowerControls_3fTNY
+  .trailerplayergamepad_ButtonRow_3AhvK
+  .trailerplayergamepad_RightGroup_2iK1t {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+.trailerplayergamepad_BehindControlsFade_qGMBd {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent 80%);
+  pointer-events: none;
 }
 .managefriends_Heading_3kTQI {
   font-size: 17px;
