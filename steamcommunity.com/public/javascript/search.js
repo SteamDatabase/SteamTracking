@@ -19,7 +19,7 @@ var CommunitySearch = {
 		if ( e.which == 13 )
 			this.UpdateHashURL();
 		else
-			setTimeout( function() { CommunitySearch.CheckForSearchStart( time_now_ms ); }, 400 );
+			setTimeout( function() { CommunitySearch.CheckForSearchStart( time_now_ms ); }, 1000 );
 	},
 
 	CheckForSearchStart: function( time_last_keyup ) {
