@@ -584,8 +584,11 @@ background: -webkit-linear-gradient( 45deg, rgba(87, 92, 104, 0.3) 5%,rgba(87, 9
 }
 
 #RecommendationsRows.hide_owned .ds_owned,
+#RecommendationsRows.hide_owned .recommendation:has(.ds_owned),
 #RecommendationsRows.hide_ignored .ds_ignored,
-#RecommendationsRows.hide_wishlist .ds_wishlist {
+#RecommendationsRows.hide_ignored .recommendation:has(.ds_ignored),
+#RecommendationsRows.hide_wishlist .ds_wishlist
+#RecommendationsRows.hide_wishlist .recommendation:has(.ds_wishlist) {
 	display: none;
 }
 
