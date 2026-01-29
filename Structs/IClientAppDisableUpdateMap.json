@@ -1,9 +1,0 @@
-{
-    "name": "IClientAppDisableUpdateMap",
-    "functions": [ 
-        {
-            "name": "SetAppUpdateDisabledSecondsRemaining",
-            "argc": "3"
-        }
-    ]
-}
