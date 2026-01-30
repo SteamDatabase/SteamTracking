@@ -59244,7 +59244,7 @@
                 o.Body().set_steamid(e),
                   o.Body().set_gidforum(t),
                   o.Body().set_gidtopic(r),
-                  o.Body().set_gidcomment(n),
+                  null !== n && o.Body().set_gidcomment(n),
                   o.Body().set_report(s.text),
                   o.Body().set_report_reason(s.reason);
                 const l = await i.ReportPost(a, o);

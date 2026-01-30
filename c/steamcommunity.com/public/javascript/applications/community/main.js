@@ -65590,7 +65590,7 @@
                 _.Body().set_steamid(_),
                   _.Body().set_gidforum(_),
                   _.Body().set_gidtopic(_),
-                  _.Body().set_gidcomment(_),
+                  null !== _ && _.Body().set_gidcomment(_),
                   _.Body().set_report(_.text),
                   _.Body().set_report_reason(_.reason);
                 const _ = await _.ReportPost(_, _);
