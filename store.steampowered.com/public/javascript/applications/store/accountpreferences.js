@@ -961,8 +961,8 @@
         Y = a(56011),
         J = a(84811),
         X = a(22797),
-        Q = a(23310),
-        $ = a(61855);
+        $ = a(23310),
+        Q = a(61855);
       const Z = 1422450;
       function ee(e) {
         const { bShowPlaytestOverview: t } = e,
@@ -1119,7 +1119,7 @@
             f.Z,
             {
               className: F().PlaytestInvite,
-              navEntryPreferPosition: Q.iU.MAINTAIN_X,
+              navEntryPreferPosition: $.iU.MAINTAIN_X,
             },
             n.createElement(
               "div",
@@ -1171,7 +1171,7 @@
           s = t?.GetStorePageURL(),
           i = n.createElement("img", {
             className: F().SmallCap,
-            src: t?.GetAssets().GetSmallCapsuleURL() ?? $.A,
+            src: t?.GetAssets().GetSmallCapsuleURL() ?? Q.A,
           });
         return (
           c == Z && (r = "Valve"),
@@ -1930,13 +1930,13 @@
       }
       function ze(e) {
         const t = e.last_seen ?? e.first_seen;
-        if (t && t.city && t.country) {
-          return {
-            location: (0, Ee.nA)(i.TS.EREALM)
-              ? t.city
-              : t.city + ", " + t.country,
-            country: t.country,
-          };
+        if (t) {
+          if (!(0, Ee.nA)(i.TS.EREALM))
+            return {
+              location: `${t.city ? t.city + ", " : ""}${t.country}`,
+              country: t.country,
+            };
+          if (t.city) return { location: t.city, country: t.country };
         }
         return {
           location: (0, _.we)(
@@ -2159,13 +2159,13 @@
               n.createElement(
                 "div",
                 { className: Me.SteamGuardActionsCtn },
-                n.createElement(Qe, {
+                n.createElement($e, {
                   strLabel: (0, _.we)(
                     "#accountpreferences_account_security_move",
                   ),
                   href: i.TS.HELP_BASE_URL + "faqs/view/29A9-9EEE-09F0-75F9",
                 }),
-                n.createElement(Qe, {
+                n.createElement($e, {
                   strLabel: (0, _.we)(
                     "#accountpreferences_account_security_help_lost",
                   ),
@@ -2316,7 +2316,7 @@
             ),
             strText: t.GetAccountName(),
           }),
-          n.createElement(Qe, {
+          n.createElement($e, {
             strLabel: (0, _.we)(
               "#accountpreferences_account_security_change_pass",
             ),
@@ -2360,7 +2360,7 @@
           n.createElement(
             "div",
             { className: Me.EmailActions },
-            n.createElement(Qe, {
+            n.createElement($e, {
               strLabel: (0, _.we)(
                 "#accountpreferences_account_security_change_email",
               ),
@@ -2370,7 +2370,7 @@
               target: s ? "_blank" : void 0,
             }),
             r &&
-              n.createElement(Qe, {
+              n.createElement($e, {
                 strLabel: (0, _.we)(
                   "#accountpreferences_account_security_remove_email_guard",
                 ),
@@ -2395,7 +2395,7 @@
               strLabel: (0, _.we)("#accountpreferences_account_security_phone"),
               strText: a,
             }),
-            n.createElement(Qe, {
+            n.createElement($e, {
               strLabel: (0, _.we)(
                 "#accountpreferences_account_security_manage_phone",
               ),
@@ -2413,7 +2413,7 @@
               "#accountpreferences_account_security_backup_codes",
             ),
           }),
-          n.createElement(Qe, {
+          n.createElement($e, {
             strLabel: (0, _.we)(
               "#accountpreferences_account_security_get_backup_codes",
             ),
@@ -2430,7 +2430,7 @@
           !!a && n.createElement("span", null, a),
         );
       }
-      function Qe(e) {
+      function $e(e) {
         const { strLabel: t, href: a, target: c } = e;
         return n.createElement(
           "div",
@@ -2450,7 +2450,7 @@
           (e[(e.k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2)] =
             "k_ETwoFactorTokenSteamguardScheme_TwoFactor");
       })(Ue || (Ue = {}));
-      const $e = n.lazy(() =>
+      const Qe = n.lazy(() =>
           Promise.all([
             a.e(8970),
             a.e(2298),
@@ -2503,7 +2503,7 @@
               render: () =>
                 n.createElement(G.X, {
                   config: {
-                    "family-management": () => n.createElement($e, null),
+                    "family-management": () => n.createElement(Qe, null),
                   },
                 }),
             }),

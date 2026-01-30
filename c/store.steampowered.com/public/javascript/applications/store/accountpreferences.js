@@ -2254,11 +2254,17 @@
       }
       function _(_) {
         const _ = _.last_seen ?? _.first_seen;
-        if (_ && _.city && _.country) {
-          return {
-            location: (0, _._)(_._.EREALM) ? _.city : _.city + ", " + _.country,
-            country: _.country,
-          };
+        if (_) {
+          if (!(0, _._)(_._.EREALM))
+            return {
+              location: `${_.city ? _.city + ", " : ""}${_.country}`,
+              country: _.country,
+            };
+          if (_.city)
+            return {
+              location: _.city,
+              country: _.country,
+            };
         }
         return {
           location: (0, _._)(
