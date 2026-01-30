@@ -2311,9 +2311,17 @@
         if (_.encodings.some((_) => _.extension.startsWith("poster."))) {
           let _;
           if (
-            ((_ = _
-              ? _.encodings.find((_) => !_.extension.startsWith("poster."))
-              : _.encodings.find((_) => _.extension.startsWith("poster."))),
+            (_
+              ? ((_ = _.encodings.find(
+                  (_) => !_.extension.startsWith("poster."),
+                )),
+                document
+                  .createElement("video")
+                  .canPlayType("video/webm;codecs=vp9") &&
+                  (_ = _.encodings?.find((_) => "webm" === _.extension) ?? _))
+              : (_ = _.encodings.find((_) =>
+                  _.extension.startsWith("poster."),
+                )),
             _)
           )
             return {
