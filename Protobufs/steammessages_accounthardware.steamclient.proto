@@ -171,6 +171,7 @@ message CAccountHardware_GetSteamDeckComponents_Response {
 message CAccountHardware_SaveHardware_Request {
 	optional string friendly_name = 1;
 	optional .UserSystemInformation system_info = 2;
+	optional bool backfill_user_reviews = 3;
 }
 
 message CAccountHardware_SaveHardware_Response {

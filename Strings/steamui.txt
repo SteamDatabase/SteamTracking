@@ -717,6 +717,7 @@
 "3\n"CPlayer_GetGameBadgeLevels_Request
 "3\n1CFamilyGroups_ConfirmInviteToFamilyGroup_Response"^\n3CFamilyGroups_ResendInvitationToFamilyGroup_Request
 "3\n1CFamilyGroups_RespondToRequestedPurchase_Response"<\n"CFamilyGroups_GetChangeLog_Request
+"3\n1CSteamInputService_ShouldTritonPairInOobe_Request"A\n?CSteamInputService_WaitInitialControllerStateEnumerated_Request"V\n@CSteamInputService_WaitInitialControllerStateEnumerated_Response
 "3\n\rCRemoteHIDMsg
 "3ii
 "4\n!CRemoteClient_GetReplies_Response
@@ -727,7 +728,7 @@
 "4\n2CPlayer_GetMutualFriendsForIncomingInvites_Request"\\n&CPlayer_IncomingInviteMutualFriendList
 "5\n!CStore_GetMostPopularTags_Request
 "5\n"CMsgClientAddFriendToGroupResponse
-"5\n3CSteamInputService_GyroSoftwareCalibration_Response"n\n.CSteamInputService_PairDongleTritonUSB_Request
+"5\n3CSteamInputService_GyroSoftwareCalibration_Response"t\n4CSteamInputService_PairDongleTritonConnected_Request
 "6.Bl
 "6\n"CChatRoom_GetRolesForUser_Response
 "6\n%CCloud_ClientGetAppQuotaUsage_Request
@@ -766,6 +767,7 @@
 "<\n)CGameRecording_GetTimelinesForApp_Request
 "=\n$CPublishedFile_CanSubscribe_Response
 "=\n%CBroadcast_SessionClosed_Notification
+"=\n&CAccountHardware_SaveHardware_Response
 "=\n&CSteamTV_GetBroadcastChannelID_Request
 "=\n(CGameRecording_GetRecordingSize_Response
 "=\n(CParties_OnReservationCompleted_Response
@@ -3164,7 +3166,6 @@ ${LANGUAGE}
 (\r"1\n/CCommunity_PartnerEventsShowLessForApp_Response"8\n6CCommunity_ClearUserPartnerEventsAppPriorities_Request"9\n7CCommunity_ClearUserPartnerEventsAppPriorities_Response"6\n4CCommunity_GetUserPartnerEventsAppPriorities_Request"O\n#CCommunity_PartnerEventsAppPriority
 (\r"1\n/CCommunity_PartnerEventsShowMoreForApp_Response"?\n.CCommunity_PartnerEventsShowLessForApp_Request
 (\r"1\n/CSteamInputService_ControllerStateFlow_Response"\\n2CSteamInputService_GyroSoftwareCalibration_Request
-(\r"1\n/CSteamInputService_PairDongleTritonUSB_Response"6\n4CSteamInputService_TritonDonglesChanged_Notification"S\n7CSteamInputService_UnpairedTritonPluggedIn_Notification
 (\r"2\n!CTimedTrial_ResetPlaytime_Request
 (\r"2\n0CAccountHardware_SetPersonalizationFile_Response"[\n/CAccountHardware_GetPersonalizationFile_Request
 (\r"2\n0CPlayer_UpdateSteamAnnouncementLastRead_Response"$\n"CPlayer_GetPrivacySettings_Request"
@@ -3172,18 +3173,19 @@ ${LANGUAGE}
 (\r"2\n0CStore_DeleteReservationPositionMessage_Response"2\n0CStore_GetAllReservationPositionMessages_Request"c\n1CStore_GetAllReservationPositionMessages_Response
 (\r"3\n1CFamilyGroups_SetFamilyCooldownOverrides_Response"
 (\r"3\n1CMarketingMessages_PartnerPublishMessage_Response"U\n3CMarketingMessages_GetPartnerMessagePreview_Request
-(\r"3\n1CSteamInputService_ShouldTritonPairInOobe_Request"A\n?CSteamInputService_WaitInitialControllerStateEnumerated_Request"V\n@CSteamInputService_WaitInitialControllerStateEnumerated_Response
 (\r"3\n1CVideo_CommitGameRecordingSegmentsUpload_Response"R\n:CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Request
 (\r"4\n"CPlayer_DeletePostedStatus_Request
-(\r"4\n2CSteamInputService_PairDongleTritonDocked_Response"'\n%CSteamInputService_GetDongles_Request"s\n&CSteamInputService_GetDongles_Response
+(\r"4\n2CSteamInputService_PairDongleTritonDocked_Response">\n%CSteamInputService_GetDongles_Request
 (\r"5\n$CClientNotificationCloudSyncConflict
 (\r"5\n3CAccountHardware_DeRegisterSteamController_Response"t\n/CAccountHardware_SetPersonalizationFile_Request
-(\r"5\n3CSteamInputService_ForgetTritonPairingBond_Response*
+(\r"5\n3CSteamInputService_ForgetDonglePairingBond_Response"E\n,CSteamInputService_GetControllerName_Request
+(\r"5\n3CSteamInputService_ForgetTritonPairingBond_Response"J\n2CSteamInputService_ForgetDonglePairingBond_Request
 (\r"6\n\rCInputTextMsg
 (\r"7\n$CClientNotificationIncomingVoiceChat
 (\r"7\n$CStore_GetGamesFollowedCount_Request
 (\r"7\n%CSteamEngine_GetGameIDForPID_Response
 (\r"7\n&CPlayer_GetFriendsGameplayInfo_Request
+(\r"7\n5CSteamInputService_PairDongleTritonConnected_Response"6\n4CSteamInputService_TritonDonglesChanged_Notification"S\n7CSteamInputService_UnpairedTritonPluggedIn_Notification
 (\r"7\n\rCMsgWasHidden
 (\r"8\n%CGameRecording_StartRecording_Request
 (\r"8\n6CTransportValidation_RequestLargeNotification_Response"=\n-CTransportValidation_NotifyLarge_Notification
@@ -3395,6 +3397,7 @@ ${LANGUAGE}
 (\t"E\n,CTransportValidation_AppendToString_Response
 (\t"H\n$CClientNotificationDownloadCompleted
 (\t"H\n(CSteamTV_CreateBroadcastChannel_Response
+(\t"H\n-CSteamInputService_GetControllerName_Response
 (\t"J\n&CStore_GetLocalizedNameForTags_Request
 (\t"J\n-CCredentials_LastCredentialChangeTime_Request
 (\t"K\n*CContentBuilder_SignInstallScript_Response
@@ -3443,7 +3446,6 @@ ${LANGUAGE}
 (\t"i\n&CInventoryClient_NewItems_Notification
 (\t"i\n)CPublishedFile_AddAppRelationship_Request
 (\t"j\n'CClientMetrics_AppInterfaceMethodCounts
-(\t"k\n%CAccountHardware_SaveHardware_Request
 (\t"l\n7CDepotContentDetection_GetAllDetectedAppContent_Request
 (\t"m\n'CSteamTV_GetBroadcastChannelID_Response
 (\t"m\n9CAccountHardware_QueryAccountsRegisteredToSerial_Accounts
@@ -3643,6 +3645,7 @@ ${LANGUAGE}
 (\v2..CContentBuilder_CommitAppBuild_Request.Depots
 (\v2..CControllerConfigMsg.ControllerConfigResponse
 (\v2..CRemotePlayTogether_Notification.GroupUpdatedH
+(\v2..CSteamInputService_GetDongles_Response.Dongle
 (\v2..CStoreBrowse_GetPriceStops_Response.PriceStop
 (\v2..CStore_GetRecommendedTagsForUser_Response.Tag
 (\v2..CUserAccount_CreateFriendInviteToken_Response"S\n*CUserAccount_ViewFriendInviteToken_Request
@@ -5325,6 +5328,7 @@ ${LANGUAGE}
 -.CSteamDeckCompatibility_SetFeedback_Response"
 -.CSteamDeckCompatibility_ShouldPrompt_Request
 -.CSteamEngine_GetTextFilterDictionary_Request
+-.CSteamInputService_GetControllerName_Request
 -.CSteamOSManager_ApplyMandatoryUpdate_Request
 -.CSteamTV_GetBroadcastChannelProfile_Response"
 -.CSteamTV_SetBroadcastChannelProfile_Response"
@@ -5599,6 +5603,7 @@ ${LANGUAGE}
 ..CSiteLicense_ClientGetAvailableSeats_Response"
 ..CSteamDeckCompatibility_ShouldPrompt_Response"
 ..CSteamEngine_GetTextFilterDictionary_Response
+..CSteamInputService_GetControllerName_Response
 ..CSteamOSManager_ApplyMandatoryUpdate_Response
 ..CStore_SetReservationPositionMessage_Response"
 ..CTransportValidationClient_AddNumbers_Request
@@ -6287,7 +6292,6 @@ ${LANGUAGE}
 .StoreItem.Trailers.VideoSource
 .Too many IDATs found
 .UserSystemInformation
-.UserSystemInformation"=\n&CAccountHardware_SaveHardware_Response
 .UserSystemInformation"q\n.CAccountHardware_GetSavedHardwareList_Response
 .UserSystemInformation2
 .VideoBookmark":\n CVideo_UnlockedH264_Notification
@@ -6467,7 +6471,6 @@ ${LANGUAGE}
 /.CPlayer_NewSteamAnnouncementState_Notification
 /.CPublishedFile_FileDeleted_Client_Notification
 /.CSteamInputService_ControllerStateFlow_Request
-/.CSteamInputService_PairDongleTritonUSB_Request
 /.CSteamInputService_TritonUndocked_Notification
 /.CStore_MigratePartnerLinkTracking_Notification
 /.CTransportValidationClient_AddNumbers_Response
@@ -7166,7 +7169,6 @@ ${LANGUAGE}
 0.CSteamInputService_ControllerStateFlow_Response
 0.CSteamInputService_GetTritonPairingInfo_Request
 0.CSteamInputService_GyroCalibration_Notification
-0.CSteamInputService_PairDongleTritonUSB_Response
 0.CSteamOSManager_PrepareFactoryImageTest_Request
 0.CSteamTV_GetBroadcastChannelInteraction_Request
 0.CSteamTV_SetBroadcastChannelLinkRegions_Request
@@ -7179,11 +7181,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 01/01/00
 0123456789.
-0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -10354,6 +10356,7 @@ ${LANGUAGE}
 3.CPublishedFile_AreFilesInSubscriptionList_Response"
 3.CPublishedFile_GetAppRelationshipsBatched_Response"
 3.CSharedJSContext_GetDesiredSteamUIWindows_Response
+3.CSteamInputService_ForgetDonglePairingBond_Request
 3.CSteamInputService_ForgetTritonPairingBond_Request
 3.CSteamInputService_GyroSoftwareCalibration_Request
 3.CSteamInputService_PairDongleTritonDocked_Response
@@ -11246,6 +11249,7 @@ ${LANGUAGE}
 4.CPlayer_GetMutualFriendsForIncomingInvites_Response"
 4.CQueuedMatchmakingGameHost_SearchForPlayers_Request
 4.CSteamInputService_ControllerPowerMenu_Notification
+4.CSteamInputService_ForgetDonglePairingBond_Response
 4.CSteamInputService_ForgetTritonPairingBond_Response
 4.CSteamInputService_GyroSoftwareCalibration_Response
 4.CTransportValidation_TriggerSyntheticEvents_Request
@@ -11666,6 +11670,7 @@ ${LANGUAGE}
 44CSteamDeckCompatibility_SetFeedback_Response
 44CSteamDeckCompatibility_ShouldPrompt_Request
 44CSteamEngine_GetTextFilterDictionary_Request
+44CSteamInputService_GetControllerName_Request
 44CSteamOSManager_ApplyMandatoryUpdate_Request
 44CSteamTV_GetBroadcastChannelProfile_Response
 44CSteamTV_SetBroadcastChannelProfile_Response
@@ -11730,6 +11735,8 @@ ${LANGUAGE}
 45CSiteLicense_ClientGetAvailableSeats_Response
 45CSteamDeckCompatibility_ShouldPrompt_Response
 45CSteamEngine_GetTextFilterDictionary_Response
+45CSteamInputService_GetControllerName_Response
+45CSteamInputService_GetDongles_Response_Dongle
 45CSteamOSManager_ApplyMandatoryUpdate_Response
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45CStore_GetRecommendedTagsForUser_Response_Tag
@@ -11790,7 +11797,6 @@ ${LANGUAGE}
 46CPlayer_NewSteamAnnouncementState_Notification
 46CPublishedFile_FileDeleted_Client_Notification
 46CSteamInputService_ControllerStateFlow_Request
-46CSteamInputService_PairDongleTritonUSB_Request
 46CSteamInputService_TritonUndocked_Notification
 46CStore_MigratePartnerLinkTracking_Notification
 46CTransportValidationClient_AddNumbers_Response
@@ -11840,7 +11846,6 @@ ${LANGUAGE}
 47CSteamInputService_ControllerStateFlow_Response
 47CSteamInputService_GetTritonPairingInfo_Request
 47CSteamInputService_GyroCalibration_Notification
-47CSteamInputService_PairDongleTritonUSB_Response
 47CSteamOSManager_PrepareFactoryImageTest_Request
 47CSteamTV_GetBroadcastChannelInteraction_Request
 47CSteamTV_SetBroadcastChannelLinkRegions_Request
@@ -12021,6 +12026,7 @@ ${LANGUAGE}
 5.CMarketingMessages_GetPastMarketingMessages_Response"
 5.CQueuedMatchmakingGameHost_SearchForPlayers_Response
 5.CSteamEngine_UpdateTextFilterDictionary_Notification
+5.CSteamInputService_PairDongleTritonConnected_Request
 5.CSteamInputService_TritonDonglesChanged_Notification
 5.CSteamInputService_UnpairedTritonDocked_Notification
 5.CTransportValidation_TriggerSyntheticEvents_Response
@@ -12060,6 +12066,7 @@ ${LANGUAGE}
 50CPublishedFile_GetAppRelationshipsBatched_Response
 50CPublishedFile_GetChangeHistory_Response_ChangeLog
 50CSharedJSContext_GetDesiredSteamUIWindows_Response
+50CSteamInputService_ForgetDonglePairingBond_Request
 50CSteamInputService_ForgetTritonPairingBond_Request
 50CSteamInputService_GyroSoftwareCalibration_Request
 50CSteamInputService_PairDongleTritonDocked_Response
@@ -12091,6 +12098,7 @@ ${LANGUAGE}
 51CPlayer_GetMutualFriendsForIncomingInvites_Response
 51CQueuedMatchmakingGameHost_SearchForPlayers_Request
 51CSteamInputService_ControllerPowerMenu_Notification
+51CSteamInputService_ForgetDonglePairingBond_Response
 51CSteamInputService_ForgetTritonPairingBond_Response
 51CSteamInputService_GyroSoftwareCalibration_Response
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
@@ -12113,6 +12121,7 @@ ${LANGUAGE}
 52CPublishedFile_GetItemInfo_Response_WorkshopItemInfo
 52CQueuedMatchmakingGameHost_SearchForPlayers_Response
 52CSteamEngine_UpdateTextFilterDictionary_Notification
+52CSteamInputService_PairDongleTritonConnected_Request
 52CSteamInputService_TritonDonglesChanged_Notification
 52CSteamInputService_UnpairedTritonDocked_Notification
 52CTransportValidation_TriggerSyntheticEvents_Response
@@ -12138,6 +12147,7 @@ ${LANGUAGE}
 53CSteamEngine_TextFilterDictionaryChanged_Notification
 53CSteamInputService_GetTritonPairingInfo_Response_Slot
 53CSteamInputService_GyroQuaternionChanged_Notification
+53CSteamInputService_PairDongleTritonConnected_Response
 53CSteamNotification_NotificationsReceived_Notification
 53CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 53CSteamTV_SetBroadcastChannelLinkRegions_Request_Links
@@ -12350,6 +12360,7 @@ ${LANGUAGE}
 6.CSteamEngine_SetOverlayEscapeKeyHandling_Notification
 6.CSteamEngine_TextFilterDictionaryChanged_Notification
 6.CSteamInputService_GyroQuaternionChanged_Notification
+6.CSteamInputService_PairDongleTritonConnected_Response
 6.CSteamNotification_NotificationsReceived_Notification
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
@@ -17036,6 +17047,7 @@ CSteamUIInputController::OnControllerConnected
 CSteamUIInputController::OnControllerDisconnected
 CSteamUIInputController::OnControllerDisplayKeyboard
 CSteamUIInputController::OnControllerPairing
+CSteamUIInputController::OnControllerStatusFlagsChanged
 CSteamUIInputController::OnDismissModalAPIKeyboard
 CSteamUIInputController::OnDispatchDismissGamepadTextInput
 CSteamUIInputController::OnDispatchRequestDismissGamepadTextInput
@@ -18772,6 +18784,7 @@ Don't know how to check filesystem type on POSIX!
 Don't lookup extension types if they aren't present (1).
 Don't lookup extension types if they aren't present (2).
 Don't validate the SLS version before starting
+Dongle
 DontShowAgain
 Doom3 CD-Key
 Down
@@ -19444,6 +19457,8 @@ E\foD
 E\n8k_EChildProcessQueryExitCode_ErrorNotSupportedByPlatform
 E\n\nAckMessage
 E\n\rcloud_enabled
+E\n\ribex_external
+E\n\ribex_internal
 E\r\f52
 E\wn!8
 E]sv
@@ -20298,6 +20313,7 @@ Forced Off
 Forced create but already created for SharedObjectEvent\n
 Forcing screen reader to focus mode on startup
 Forget
+ForgetDonglePairingBond
 ForgetTritonPairingBond
 Format
 FormatCurrencyUTF8
@@ -21503,6 +21519,7 @@ GetConnectionType() != k_EConnectionTypeUDP
 GetConnectionType() == k_ESSLConnectionType_Client || GetConnectionType() == k_EDTLSConnectionType_Client
 GetContentDescriptors
 GetContentHubConfig
+GetControllerName
 GetCopyCount
 GetCredentialChangeTimeDetails
 GetCubBody() == 0 && m_eStatusCode >= 400 && (int)m_eStatusCode <= 600
@@ -22954,7 +22971,7 @@ J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
 J\nHBF
 J\n\tsummaries
 J\rS%H
-Jan 26 2026 23:53:24
+Jan 30 2026 23:26:18
 January
 Japanese
 Javanese
@@ -23962,6 +23979,7 @@ Method FinishUploadKVSign() not implemented.
 Method FollowBroadcastChannel() not implemented.
 Method ForceAcceptInvite() not implemented.
 Method Forget() not implemented.
+Method ForgetDonglePairingBond() not implemented.
 Method ForgetTritonPairingBond() not implemented.
 Method Format() not implemented.
 Method GenerateAccessTokenForApp() not implemented.
@@ -24034,6 +24052,7 @@ Method GetCommunityPreferences() not implemented.
 Method GetContentDescriptors() not implemented.
 Method GetContentHubConfig() not implemented.
 Method GetControllerAccessibilityStrings() not implemented.
+Method GetControllerName() not implemented.
 Method GetControllerPersonalizationFile() not implemented.
 Method GetCredentialChangeTimeDetails() not implemented.
 Method GetDLCForApps() not implemented.
@@ -24351,8 +24370,8 @@ Method OnReservationCompleted() not implemented.
 Method OnUserStatusChanged() not implemented.
 Method OptOutOfSideloadedClient() not implemented.
 Method Pair() not implemented.
+Method PairDongleTritonConnected() not implemented.
 Method PairDongleTritonDocked() not implemented.
-Method PairDongleTritonUSB() not implemented.
 Method PartnerEventsShowLessForApp() not implemented.
 Method PartnerEventsShowMoreForApp() not implemented.
 Method PollAuthSessionStatus() not implemented.
@@ -25080,6 +25099,7 @@ N23CSteamUIInputController43CCallbackInternal_OnDisplayModalAPIKeyboardE
 N23CSteamUIInputController45CCallbackInternal_OnControllerActionTriggeredE
 N23CSteamUIInputController45CCallbackInternal_OnControllerDisplayKeyboardE
 N23CSteamUIInputController47CCallbackInternal_OnShowControllerLayoutPreviewE
+N23CSteamUIInputController48CCallbackInternal_OnControllerStatusFlagsChangedE
 N23CSteamUIInputController48CCallbackInternal_OnDispatchShowGamepadTextInputE
 N23CSteamUIInputController51CCallbackInternal_OnControllerConfigSelectionChangeE
 N23CSteamUIInputController51CCallbackInternal_OnDispatchDismissGamepadTextInputE
@@ -25668,7 +25688,6 @@ NO_START_OPT)
 NSt3_V214error_categoryE
 NSt6locale5facetE
 NSt8ios_base7failureE
-NTFS
 NULL
 NULL != g_pJobCur
 NULL != m_pConnectionCallbackOrig
@@ -26853,8 +26872,8 @@ Pago Facil
 PagoEfectivo
 Pagseguro
 Pair
+PairDongleTritonConnected
 PairDongleTritonDocked
-PairDongleTritonUSB
 Pairable
 PairableTimeout
 Paired
@@ -29607,7 +29626,6 @@ SteamUI_ValveSurvey_Summary_MSAAModes
 SteamUI_ValveSurvey_Summary_Media
 SteamUI_ValveSurvey_Summary_Memory
 SteamUI_ValveSurvey_Summary_Misc
-SteamUI_ValveSurvey_Summary_NTFS
 SteamUI_ValveSurvey_Summary_NoTouchInputDevices
 SteamUI_ValveSurvey_Summary_NumberOfDisplayAdapters
 SteamUI_ValveSurvey_Summary_NumberOfDisplayAdapters_Unknown
@@ -32495,6 +32513,7 @@ Zulu
 \n%*sVersion   :
 \n%*sZone: %s, User:
 \n%12s%s
+\n%CAccountHardware_SaveHardware_Request
 \n%CChatRoom_CreateChatRoomGroup_Request
 \n%CClientMetrics_ClipRange_Notification
 \n%CClientMetrics_ClipShare_Notification
@@ -32537,6 +32556,7 @@ Zulu
 \n&CParental_ApproveFeatureAccess_Request
 \n&CPartnerApps_FinishUploadDepot_Request
 \n&CPublishedFile_GetItemChanges_Response
+\n&CSteamInputService_GetDongles_Response
 \n&CStoreBrowse_GetDLCForAppsSolr_Request
 \n&CTwoFactor_RemoveAuthenticator_Request
 \n&CUserAccount_GetWalletDetails_Response
@@ -33427,10 +33447,9 @@ Zulu
 \n\rhost_clientid
 \n\rhttps_support
 \n\rhubcategoryid
-\n\ribex_external
-\n\ribex_internal
 \n\rignore_appids
 \n\rimg_icon_hash
+\n\rinclude_bonds
 \n\rinclude_links
 \n\rincludekvtags
 \n\rinitial_width
@@ -35285,6 +35304,7 @@ bCaptureButton
 bCenterTrackpad
 bCenterTrackpadTouch
 bChangeBetaEnabled
+bCharging
 bChecking
 bChooseDirectory
 bChordInvoked
@@ -35514,6 +35534,7 @@ b\n\rResolveReport
 b]jY
 back
 backfill_source
+backfill_user_reviews
 background
 background color must be supplied to remove alpha/transparency
 background_color
@@ -37870,6 +37891,7 @@ domainComponent
 domainRelatedObject
 domains
 done
+dongle_serial_number
 doorstop
 dota2.com
 dota2launcher
@@ -39494,7 +39516,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenJ
+ggen\n
 ghost_
 gidlist
 gidparentcomment
@@ -49439,6 +49461,7 @@ pairable
 pairable-timeout
 paired
 paired_network_hash
+paired_serial_number
 pairs
 palette color-map: too few entries
 panel

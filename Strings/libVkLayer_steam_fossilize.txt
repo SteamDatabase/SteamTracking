@@ -76,6 +76,7 @@ Compute pipeline
 December
 Descriptor set layout
 DescriptorBuffer
+DescriptorHeap
 Detected sliced file. Dropping entries from here.\n
 DynamicRendering
 EngineName
@@ -103,6 +104,7 @@ Failed to parse pNext chain for sType: %d\n
 Failed to prepare database, will not dump data to database.\n
 Failed to prepare module identifier database, will not dump identifiers.\n
 Failed to prepare on-use database, will not dump those.\n
+Failed to prepare pipeline-use database_iface database, will not dump those.\n
 Failed to record YCbCr conversion, usually caused by unsupported pNext.\n
 Failed to record application info.\n
 Failed to record compute pipeline, usually caused by unsupported pNext.\n
@@ -146,6 +148,7 @@ Fossilize ERROR: Failed to parse pNext chain for sType: %d\n
 Fossilize ERROR: Failed to prepare database, will not dump data to database.\n
 Fossilize ERROR: Failed to prepare module identifier database, will not dump identifiers.\n
 Fossilize ERROR: Failed to prepare on-use database, will not dump those.\n
+Fossilize ERROR: Failed to prepare pipeline-use database_iface database, will not dump those.\n
 Fossilize ERROR: Failed to record application info.\n
 Fossilize ERROR: Failed to record physical device features.\n
 Fossilize ERROR: Failed to seek in file: %s\n
@@ -204,6 +207,7 @@ Fossilize WARN: Failed to touch last access in %s.\n
 Fossilize WARN: QA: Pipeline compilation required for pipeline, flags %08x'%08x.\n
 Fossilize WARN: Recording compute pipeline failed, usually caused by unsupported pNext.\n
 Fossilize WARN: Recording graphics pipeline failed, usually caused by unsupported pNext.\n
+Fossilize WARN: Recording pipeline use failed.\n
 Fossilize WARN: Recording ray tracing pipeline failed, usually caused by unsupported pNext.\n
 Fossilize WARN: Referenced %s %016llx, but it does not exist.\nThis can be expected when replaying an archive from Steam.\nIf replaying just the application cache, make sure to replay together with the common cache, as application cache can depend on common cache.\n
 Fossilize WARN: Referenced %s %016llx, but it is VK_NULL_HANDLE.\nThe create info was likely not supported by device.\n
@@ -244,6 +248,7 @@ N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv121__vmi_class_type_infoE
 N9Fossilize11ZipDatabaseE
 N9Fossilize13StreamArchiveE
+N9Fossilize16DumbFileDatabaseE
 N9Fossilize17DatabaseInterfaceE
 N9Fossilize18ConcurrentDatabaseE
 N9Fossilize21DumbDirectoryDatabaseE
@@ -265,6 +270,7 @@ RJqn
 Raytracing pipeline
 Recording compute pipeline failed, usually caused by unsupported pNext.\n
 Recording graphics pipeline failed, usually caused by unsupported pNext.\n
+Recording pipeline use failed.\n
 Recording ray tracing pipeline failed, usually caused by unsupported pNext.\n
 Referenced %s %016llx, but it does not exist.\nThis can be expected when replaying an archive from Steam.\nIf replaying just the application cache, make sure to replay together with the common cache, as application cache can depend on common cache.\n
 Referenced %s %016llx, but it is VK_NULL_HANDLE.\nThe create info was likely not supported by device.\n
@@ -273,6 +279,7 @@ STEAM_FOSSILIZE_DUMP_PATH
 STEAM_FOSSILIZE_DUMP_PATH_READ_ONLY
 STEAM_FOSSILIZE_IDENTIFIER_DUMP_PATH
 STEAM_FOSSILIZE_LAST_USE_TAG
+STEAM_FOSSILIZE_PIPELINE_USE_DUMP_PATH
 STEAM_FOSSILIZE_PRECOMPILE_QA
 STv/N
 Sampler
@@ -367,6 +374,7 @@ W4vC
 Wednesday
 X5AHx
 XqkY
+YDVI
 Zjz\v
 [*QmU
 [abi:
@@ -436,6 +444,7 @@ abort
 addressModeU
 addressModeV
 addressModeW
+addressOffset
 alignof
 allocation failed
 allocator
@@ -488,6 +497,7 @@ basic_string::resize
 basic_string::substr
 bind_textdomain_codeset
 binding
+bindingCount
 bindingFlags
 bindings
 bindtextdomain
@@ -542,6 +552,7 @@ computePipelines
 conservativeRasterizationMode
 const_cast
 constantID
+constantOffset
 construction vtable for
 contains
 correlatedViewMasks
@@ -592,6 +603,7 @@ descriptorBufferCaptureReplay
 descriptorBufferImageLayoutIgnored
 descriptorBufferPushDescriptors
 descriptorCount
+descriptorSet
 descriptorType
 dgettext
 digit
@@ -614,6 +626,7 @@ dynamicState
 dynamic_cast
 eax~Z
 ekhHD
+embeddedSampler
 engineFilters
 engineName
 engineVersion
@@ -642,6 +655,7 @@ file write failed
 file://
 fileno
 finalLayout
+firstBinding
 flags
 float
 fopen
@@ -684,6 +698,10 @@ guard variable for
 hGT.
 half
 hash
+heapArrayStride
+heapData
+heapIndexStride
+heapOffset
 height
 hidden alias for
 i]Wb
@@ -694,6 +712,9 @@ image2DViewOf3D
 images
 imaginary
 immutableSamplers
+indirectAddress
+indirectIndex
+indirectIndexArray
 initialLayout
 inputAssemblyState
 inputAttachmentIndex
@@ -707,6 +728,7 @@ invalid parameter
 isxdigit
 java Class for
 java resource
+json
 k*do^
 k0V(
 killpg
@@ -737,6 +759,7 @@ mSx@
 magFilter
 malloc
 mapEntries
+mappings
 maxAnisotropy
 maxDepth
 maxDepthBounds
@@ -843,7 +866,12 @@ pthread_once
 pthread_setspecific
 punct
 pure virtual method called\n
+pushAddressOffset
 pushConstantRanges
+pushDataOffset
+pushIndex
+pushOffset
+putc
 quAt
 raB3G
 rasterizationSamples
@@ -866,6 +894,7 @@ renderPasses
 renderPasses2
 requiredSubgroupSize
 resolveAttachments
+resourceMask
 rewind
 robustBufferAccess
 robustBufferAccess2
@@ -880,6 +909,12 @@ sampleLocationsPerPixel
 sampleMask
 sampleShadingEnable
 sampler2DViewOf3D
+samplerAddressOffset
+samplerHeapArrayStride
+samplerHeapIndexStride
+samplerHeapOffset
+samplerPushOffset
+samplerShaderRecordOffset
 samplers
 samples
 sched_setscheduler
@@ -892,6 +927,10 @@ setlocale
 setsid
 shaderModules
 shaderObject
+shaderRecordAddressOffset
+shaderRecordDataOffset
+shaderRecordIndex
+shaderRecordOffset
 shadingRateAttachmentTexelSize
 shm_open
 shm_unlink
@@ -902,6 +941,8 @@ size
 sizeof
 sizeof...
 socketpair
+source
+sourceData
 space
 specializationInfo
 srcAccessMask
@@ -1017,6 +1058,7 @@ unsupported feature
 unsupported method
 unsupported multidisk archive
 upper
+useCombinedImageSamplerIndex
 usleep
 utime
 uuuuuuuubtnufruuuuuuuuuuuuuuuuuu
@@ -1041,6 +1083,7 @@ viewportCount
 viewportState
 viewports
 virtual thunk to
+vkCmdBindPipeline
 vkCreateComputePipelines
 vkCreateDescriptorSetLayout
 vkCreateDevice

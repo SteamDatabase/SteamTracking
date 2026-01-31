@@ -100,7 +100,7 @@ $ORIGIN
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-23:51:12
+23:25:41
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -298,7 +298,7 @@ IsSpewActive
 IsStackTrackingFiltered
 IsValidBoolValue
 JArray
-Jan 26 2026
+Jan 30 2026
 Jobs/Coroutines
 Leaked mem: %s %s\n
 Logger

@@ -148,13 +148,13 @@ message CSteamInputService_GyroSoftwareCalibration_Request {
 message CSteamInputService_GyroSoftwareCalibration_Response {
 }
 
-message CSteamInputService_PairDongleTritonUSB_Request {
+message CSteamInputService_PairDongleTritonConnected_Request {
 	optional uint32 controller_index = 1;
 	optional uint32 dongle_index = 2;
 	optional uint32 slot = 3;
 }
 
-message CSteamInputService_PairDongleTritonUSB_Response {
+message CSteamInputService_PairDongleTritonConnected_Response {
 }
 
 message CSteamInputService_TritonDonglesChanged_Notification {
@@ -185,12 +185,20 @@ message CSteamInputService_PairDongleTritonDocked_Response {
 }
 
 message CSteamInputService_GetDongles_Request {
+	optional bool include_bonds = 1;
 }
 
 message CSteamInputService_GetDongles_Response {
+	message Dongle {
+		optional uint32 index = 1;
+		optional string dongle_serial_number = 2;
+		optional string paired_serial_number = 3;
+		optional bool paired = 4;
+	}
+
 	optional bool steam_controller_v1 = 1;
-	repeated uint32 ibex_internal = 2;
-	repeated uint32 ibex_external = 3;
+	repeated .CSteamInputService_GetDongles_Response.Dongle ibex_internal = 2;
+	repeated .CSteamInputService_GetDongles_Response.Dongle ibex_external = 3;
 }
 
 message CSteamInputService_ShouldTritonPairInOobe_Request {
@@ -259,6 +267,21 @@ message CSteamInputService_ForgetTritonPairingBond_Request {
 message CSteamInputService_ForgetTritonPairingBond_Response {
 }
 
+message CSteamInputService_ForgetDonglePairingBond_Request {
+	optional uint32 dongle_index = 1;
+}
+
+message CSteamInputService_ForgetDonglePairingBond_Response {
+}
+
+message CSteamInputService_GetControllerName_Request {
+	optional string serial_number = 1;
+}
+
+message CSteamInputService_GetControllerName_Response {
+	optional string controller_name = 1;
+}
+
 service SteamInputManager {
 	option (webui_service_execution_site) = k_EClientExecutionSiteClientdll;
 
@@ -280,11 +303,13 @@ service SteamInputManager {
 	rpc GetControllerAccessibilityStrings (.CSteamInputService_ControllerAccessibilityStrings_Request) returns (.CSteamInputService_ControllerAccessibilityStrings_Response);
 	rpc StartGyroSoftwareCalibration (.CSteamInputService_GyroSoftwareCalibration_Request) returns (.CSteamInputService_GyroSoftwareCalibration_Response);
 	rpc CancelGyroSoftwareCalibration (.CSteamInputService_GyroSoftwareCalibration_Request) returns (.CSteamInputService_GyroSoftwareCalibration_Response);
-	rpc PairDongleTritonUSB (.CSteamInputService_PairDongleTritonUSB_Request) returns (.CSteamInputService_PairDongleTritonUSB_Response);
+	rpc PairDongleTritonConnected (.CSteamInputService_PairDongleTritonConnected_Request) returns (.CSteamInputService_PairDongleTritonConnected_Response);
 	rpc PairDongleTritonDocked (.CSteamInputService_PairDongleTritonDocked_Request) returns (.CSteamInputService_PairDongleTritonDocked_Response);
 	rpc GetDongles (.CSteamInputService_GetDongles_Request) returns (.CSteamInputService_GetDongles_Response);
 	rpc ShouldTritonPairInOobe (.CSteamInputService_ShouldTritonPairInOobe_Request) returns (.CSteamInputService_ShouldTritonPairInOobe_Response);
 	rpc WaitInitialControllerStateEnumerated (.CSteamInputService_WaitInitialControllerStateEnumerated_Request) returns (.CSteamInputService_WaitInitialControllerStateEnumerated_Response);
 	rpc GetTritonPairingInfo (.CSteamInputService_GetTritonPairingInfo_Request) returns (.CSteamInputService_GetTritonPairingInfo_Response);
 	rpc ForgetTritonPairingBond (.CSteamInputService_ForgetTritonPairingBond_Request) returns (.CSteamInputService_ForgetTritonPairingBond_Response);
+	rpc ForgetDonglePairingBond (.CSteamInputService_ForgetDonglePairingBond_Request) returns (.CSteamInputService_ForgetDonglePairingBond_Response);
+	rpc GetControllerName (.CSteamInputService_GetControllerName_Request) returns (.CSteamInputService_GetControllerName_Response);
 }
