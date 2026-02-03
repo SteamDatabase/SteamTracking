@@ -17,6 +17,7 @@ const pathsToRecurse = [
 	pathResolve(__dirname, "checkout.steampowered.com/"),
 	pathResolve(__dirname, "www.dota2.com/"),
 	pathResolve(__dirname, "www.counter-strike.net/"),
+	pathResolve(__dirname, "www.playdeadlock.com/"),
 ];
 
 // Should this just be a recursive search for all webpack files?
@@ -33,6 +34,7 @@ const paths = [
 	pathResolve(__dirname, "www.dota2.com/public/javascript/applications/dpc/"),
 	pathResolve(__dirname, "www.dota2.com/public/javascript/dota_react/"),
 	pathResolve(__dirname, "www.counter-strike.net/public/javascript/csgo_react/"),
+	pathResolve(__dirname, "www.playdeadlock.com/public/javascript/react/"),
 ];
 
 /**

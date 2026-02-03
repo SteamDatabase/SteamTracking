@@ -162,8 +162,6 @@
       (0, _._)([_._], _.prototype, "m_mapProfiles", void 0);
       const _ = new _();
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         constructor() {
@@ -244,7 +242,7 @@
               _._.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
               _,
             );
-            return _ && _.data && _.data.success == _._.k_EResultOK;
+            return _ && _.data && 1 == _.data.success;
           } catch {
             return !1;
           }
@@ -255,7 +253,7 @@
           });
         }
         OnSearchKeyDown(_) {
-          _.keyCode === _._.Enter && this.OnSearchSubmit();
+          13 === _.keyCode && this.OnSearchSubmit();
         }
         OnSearchSubmit() {
           window.open(

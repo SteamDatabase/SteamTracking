@@ -21,3 +21,4 @@ store.steampowered.com/public/javascript/applications/**/*.js linguist-generated
 store.steampowered.com/public/shared/javascript/legacy_web/**/*.js linguist-generated=true
 www.counter-strike.net/**/*.js linguist-generated=true
 www.dota2.com/**/*.js linguist-generated=true
+www.playdeadlock.com/**/*.js linguist-generated=true

@@ -74,16 +74,9 @@
         }
       }
     },
-    49693: (e, t, n) => {
-      var r;
-      n.d(t, { op: () => c, CS: () => s, vE: () => l, Al: () => o }),
-        (function (e) {
-          (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
-            (e[(e.TEXT = 1)] = "TEXT"),
-            (e[(e.OPENTAG = 2)] = "OPENTAG"),
-            (e[(e.CLOSETAG = 3)] = "CLOSETAG");
-        })(r || (r = {}));
-      class o {
+    95742: (e, t, n) => {
+      n.d(t, { Al: () => r, CS: () => o, op: () => a, vE: () => c });
+      class r {
         constructor(e, t) {
           e instanceof Map
             ? (this.m_dictComponents = e)
@@ -91,265 +84,252 @@
             (this.m_fnAccumulatorFactory = t);
         }
         Parse(e, t, n = !0) {
-          const o = (function (e, t) {
-            var n, o, s;
-            const a = [];
-            let c = { type: r.UNKNOWN, text: "" },
-              l = !1,
-              p = !1,
-              d = !1;
-            for (let s = 0; s < e.length; s++) {
-              const E = e[s];
-              switch (c.type) {
-                case r.UNKNOWN:
-                  "[" == E
-                    ? ((c.type = r.OPENTAG), (p = !0))
-                    : ((c.type = r.TEXT),
-                      "\\" == E && t ? (l = !l) : (c.text += E));
+          const r = (function (e, t) {
+            var n, r, o;
+            const s = [];
+            let a = { type: 0, text: "" },
+              c = !1,
+              i = !1,
+              p = !1;
+            for (let o = 0; o < e.length; o++) {
+              const d = e[o];
+              switch (a.type) {
+                case 0:
+                  "[" == d
+                    ? ((a.type = 2), (i = !0))
+                    : ((a.type = 1), "\\" == d && t ? (c = !c) : (a.text += d));
                   break;
-                case r.OPENTAG:
-                case r.CLOSETAG:
-                  if ("/" == E && p)
-                    (c.type = r.CLOSETAG), (c.text = ""), (p = !1);
-                  else if ("[" != E || l)
-                    if ("]" != E || l)
-                      "\\" == E && t
-                        ? ((c.text += E), (l = !l), (p = !1))
-                        : ((c.text += E), (l = !1), (p = !1));
+                case 2:
+                case 3:
+                  if ("/" == d && i) (a.type = 3), (a.text = ""), (i = !1);
+                  else if ("[" != d || c)
+                    if ("]" != d || c)
+                      "\\" == d && t
+                        ? ((a.text += d), (c = !c), (i = !1))
+                        : ((a.text += d), (c = !1), (i = !1));
                     else {
                       const e =
-                          c.type == r.OPENTAG &&
+                          2 == a.type &&
                           "noparse" ==
-                            (null === (n = c.text) || void 0 === n
+                            (null === (n = a.text) || void 0 === n
                               ? void 0
                               : n.toLocaleLowerCase()),
                         t =
-                          c.type == r.CLOSETAG &&
+                          3 == a.type &&
                           "noparse" ==
-                            (null === (o = c.text) || void 0 === o
+                            (null === (r = a.text) || void 0 === r
                               ? void 0
-                              : o.toLocaleLowerCase());
-                      p || (d && !t)
-                        ? ((c = i(c)), (c.text += E))
+                              : r.toLocaleLowerCase());
+                      i || (p && !t)
+                        ? ((a = u(a)), (a.text += d))
                         : e
-                          ? (d = !0)
-                          : t && (d = !1),
-                        (c = u(a, c)),
-                        (p = !1);
+                          ? (p = !0)
+                          : t && (p = !1),
+                        (a = l(s, a)),
+                        (i = !1);
                     }
-                  else (c = u(a, i(c), r.OPENTAG)), (p = !0);
+                  else (a = l(s, u(a), 2)), (i = !0);
                   break;
-                case r.TEXT:
-                  "[" != E || l
-                    ? "\\" == E && t
-                      ? (l && (c.text += E), (l = !l))
-                      : ((c.text += E), (l = !1))
-                    : ((c = u(a, c, r.OPENTAG)), (p = !0));
+                case 1:
+                  "[" != d || c
+                    ? "\\" == d && t
+                      ? (c && (a.text += d), (c = !c))
+                      : ((a.text += d), (c = !1))
+                    : ((a = l(s, a, 2)), (i = !0));
               }
             }
-            c.type != r.UNKNOWN &&
-              (c.type == r.OPENTAG || c.type == r.CLOSETAG
-                ? a.push(i(c))
-                : a.push({
-                    type: c.type,
-                    text: null !== (s = c.text) && void 0 !== s ? s : "",
+            0 != a.type &&
+              (2 == a.type || 3 == a.type
+                ? s.push(u(a))
+                : s.push({
+                    type: a.type,
+                    text: null !== (o = a.text) && void 0 !== o ? o : "",
                   }));
-            return a;
+            return s;
           })(e || "", n);
-          return this.Parse_BuildElements(o, t);
+          return this.Parse_BuildElements(r, t);
         }
         Parse_BuildElements(e, t) {
           let n = this.m_fnAccumulatorFactory(void 0);
-          const o = [],
-            s = () => (o.length < 1 ? void 0 : o[o.length - 1]),
-            a = this.m_dictComponents,
-            c = (e) => {
+          const r = [],
+            o = () => (r.length < 1 ? void 0 : r[r.length - 1]),
+            s = this.m_dictComponents,
+            a = (e) => {
               var t;
               return !(
                 !e.tag ||
-                !(null === (t = a.get(e.tag)) || void 0 === t
+                !(null === (t = s.get(e.tag)) || void 0 === t
                   ? void 0
                   : t.autocloses)
               );
             };
-          let l = !1,
-            u = !0;
-          const i = (e, r) => {
-            if (e && e.node.tag === r.text && a.get(e.node.tag)) {
-              const r = a.get(e.node.tag),
+          let c = !1,
+            l = !0;
+          const u = (e, r) => {
+            if (e && e.node.tag === r.text && s.get(e.node.tag)) {
+              const r = s.get(e.node.tag),
                 o = {
                   tagname: e.node.tag,
                   args: e.node.args,
                   rawargs: e.node.rawargs,
                 },
-                s = t(r.Constructor, o, ...n.GetElements());
+                a = t(r.Constructor, o, ...n.GetElements());
               (n = e.accumulator),
-                Array.isArray(s)
-                  ? s.forEach((e) => n.AppendNode(e))
-                  : n.AppendNode(s),
-                (l = !!r.skipFollowingNewline),
-                (u = e.bWrapTextForCopying);
+                Array.isArray(a)
+                  ? a.forEach((e) => n.AppendNode(e))
+                  : n.AppendNode(a),
+                (c = !!r.skipFollowingNewline),
+                (l = e.bWrapTextForCopying);
             } else if (e) {
               const t = e.accumulator;
               t.AppendText("[" + e.node.text + "]", !1),
                 n.GetElements().forEach((e) => t.AppendNode(e)),
                 t.AppendText("[/" + r.text + "]", !1),
                 (n = t),
-                (u = e.bWrapTextForCopying);
+                (l = e.bWrapTextForCopying);
             }
           };
           for (
             e.forEach((e, t) => {
-              var p, d;
-              if (e.type == r.TEXT) {
-                const t = l ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                n.AppendText(t, u), (l = !1);
-              } else if (e.type == r.OPENTAG) {
-                const t = a.get(e.tag);
+              var i, p;
+              if (1 == e.type) {
+                const t = c ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                n.AppendText(t, l), (c = !1);
+              } else if (2 == e.type) {
+                const t = s.get(e.tag);
                 if (t) {
-                  const r = s();
-                  if (void 0 !== r) {
-                    const t = a.get(r.node.tag);
+                  const a = o();
+                  if (void 0 !== a) {
+                    const t = s.get(a.node.tag);
                     t &&
                       t.autocloses &&
-                      e.tag === r.node.tag &&
-                      i(o.pop(), r.node);
+                      e.tag === a.node.tag &&
+                      u(r.pop(), a.node);
                   }
-                  o.push({ accumulator: n, node: e, bWrapTextForCopying: u }),
+                  r.push({ accumulator: n, node: e, bWrapTextForCopying: l }),
                     (n = this.m_fnAccumulatorFactory(e)),
-                    (l = !!t.skipInternalNewline),
-                    (u =
-                      null !== (p = t.allowWrapTextForCopying) &&
-                      void 0 !== p &&
-                      p);
-                } else n.AppendText("[" + e.text + "]", 0 == o.length);
-              } else if (e.type == r.CLOSETAG) {
-                for (; s() && s().node.tag !== e.text && c(s().node); ) {
-                  const e = o.pop();
-                  i(e, e.node);
+                    (c = !!t.skipInternalNewline),
+                    (l =
+                      null !== (i = t.allowWrapTextForCopying) &&
+                      void 0 !== i &&
+                      i);
+                } else n.AppendText("[" + e.text + "]", 0 == r.length);
+              } else if (3 == e.type) {
+                for (; o() && o().node.tag !== e.text && a(o().node); ) {
+                  const e = r.pop();
+                  u(e, e.node);
                 }
                 if (
-                  (null === (d = s()) || void 0 === d ? void 0 : d.node.tag) ==
+                  (null === (p = o()) || void 0 === p ? void 0 : p.node.tag) ==
                   e.text
                 ) {
-                  const t = o.pop();
-                  i(t, e);
-                } else n.AppendText("[/" + e.text + "]", 0 == o.length);
+                  const t = r.pop();
+                  u(t, e);
+                } else n.AppendText("[/" + e.text + "]", 0 == r.length);
               }
             });
-            o.length > 0;
+            r.length > 0;
           ) {
-            const e = o.pop();
-            i(e, e.node);
+            const e = r.pop();
+            u(e, e.node);
           }
           return n.GetElements();
         }
       }
-      function s(e, t) {
+      function o(e, t) {
         let n = "[" + e;
-        (null == t ? void 0 : t[""]) && (n += `=${a("" + t[""])}`);
+        (null == t ? void 0 : t[""]) && (n += `=${s("" + t[""])}`);
         for (const e in t)
           "" !== e &&
-            (n += ` ${((r = e), r.replace(/(\\| |\])/g, "\\$1"))}=${a("" + t[e])}`);
+            (n += ` ${((r = e), r.replace(/(\\| |\])/g, "\\$1"))}=${s("" + t[e])}`);
         var r;
         return (n += "]"), n;
       }
-      function a(e) {
+      function s(e) {
         return `"${e.replace(/(\\|"|\])/g, "\\$1")}"`;
       }
-      function c(e) {
+      function a(e) {
         return `[/${e}]`;
       }
-      function l(e) {
+      function c(e) {
         return e.replace(/(\\|\[)/g, "\\$1");
       }
-      function u(e, t, n = r.UNKNOWN) {
-        const { type: o, text: s = "" } = t;
-        if (o == r.OPENTAG) {
-          let t = s.indexOf("=");
-          const n = s.indexOf(" ");
-          let r, a;
+      function l(e, t, n = 0) {
+        const { type: r, text: o = "" } = t;
+        if (2 == r) {
+          let t = o.indexOf("=");
+          const n = o.indexOf(" ");
+          let s, a;
           -1 != n && (-1 == t || n < t) && (t = n);
           let c = "";
           t > 0
-            ? ((r = s.substr(0, t).toLocaleLowerCase()),
-              (c = s.substr(t)),
+            ? ((s = o.substr(0, t).toLocaleLowerCase()),
+              (c = o.substr(t)),
               (a = (function (e) {
                 if (!e || e.length < 1) return {};
                 const t = {};
-                let n,
+                let n = "",
                   r = "",
-                  o = "";
-                !(function (e) {
-                  (e[(e.PRE_NAME = 0)] = "PRE_NAME"),
-                    (e[(e.IN_NAME = 1)] = "IN_NAME"),
-                    (e[(e.POST_NAME = 2)] = "POST_NAME"),
-                    (e[(e.IN_VALUE = 3)] = "IN_VALUE"),
-                    (e[(e.IN_QUOTED_VALUE = 4)] = "IN_QUOTED_VALUE");
-                })(n || (n = {}));
-                let s = n.PRE_NAME,
-                  a = 0;
-                "=" == e[0] && (s = n.POST_NAME);
-                let c = !1;
-                for (a++; a < e.length; a++) {
-                  const l = e[a];
-                  let u = !0,
-                    i = !1;
-                  switch (s) {
-                    case n.PRE_NAME:
-                      if ("=" == l) return {};
-                      if (" " == l) continue;
-                      s = n.IN_NAME;
+                  o = 0,
+                  s = 0;
+                "=" == e[0] && (o = 2);
+                let a = !1;
+                for (s++; s < e.length; s++) {
+                  const c = e[s];
+                  let l = !0,
+                    u = !1;
+                  switch (o) {
+                    case 0:
+                      if ("=" == c) return {};
+                      if (" " == c) continue;
+                      o = 1;
                       break;
-                    case n.IN_NAME:
-                      ("=" != l && " " != l) ||
-                        c ||
-                        (" " == l
-                          ? ((s = n.PRE_NAME), (i = !0))
-                          : (s = n.POST_NAME),
-                        (u = !1));
+                    case 1:
+                      ("=" != c && " " != c) ||
+                        a ||
+                        (" " == c ? ((o = 0), (u = !0)) : (o = 2), (l = !1));
                       break;
-                    case n.POST_NAME:
-                      " " == l
-                        ? ((s = n.PRE_NAME), (u = !1), (i = !0))
-                        : '"' == l
-                          ? ((s = n.IN_QUOTED_VALUE), (u = !1))
-                          : (s = n.IN_VALUE);
+                    case 2:
+                      " " == c
+                        ? ((o = 0), (l = !1), (u = !0))
+                        : '"' == c
+                          ? ((o = 4), (l = !1))
+                          : (o = 3);
                       break;
-                    case n.IN_VALUE:
-                    case n.IN_QUOTED_VALUE:
-                      ((" " == l && s != n.IN_QUOTED_VALUE && !c) ||
-                        ('"' == l && s == n.IN_QUOTED_VALUE && !c)) &&
-                        ((s = n.PRE_NAME), (u = !1), (i = !0));
+                    case 3:
+                    case 4:
+                      ((" " == c && 4 != o && !a) ||
+                        ('"' == c && 4 == o && !a)) &&
+                        ((o = 0), (l = !1), (u = !0));
                   }
-                  if (u)
-                    if ("\\" != l || c)
-                      if (((c = !1), s == n.IN_NAME)) r += l;
+                  if (l)
+                    if ("\\" != c || a)
+                      if (((a = !1), 1 == o)) n += c;
                       else {
-                        if (s != n.IN_VALUE && s != n.IN_QUOTED_VALUE)
+                        if (3 != o && 4 != o)
                           throw new Error(
-                            "Not expecting to accumulate buffer in state " + s,
+                            "Not expecting to accumulate buffer in state " + o,
                           );
-                        o += l;
+                        r += c;
                       }
-                    else c = !0;
-                  i && ((t[r] = o), (r = ""), (o = ""));
+                    else a = !0;
+                  u && ((t[n] = r), (n = ""), (r = ""));
                 }
-                s != n.PRE_NAME && (t[r] = o);
+                0 != o && (t[n] = r);
                 return t;
               })(c)))
-            : ((a = {}), (r = s.toLocaleLowerCase())),
-            e.push({ type: o, text: s, tag: r, args: a, rawargs: c });
-        } else o != r.UNKNOWN && e.push({ type: o, text: s });
+            : ((a = {}), (s = o.toLocaleLowerCase())),
+            e.push({ type: r, text: o, tag: s, args: a, rawargs: c });
+        } else 0 != r && e.push({ type: r, text: o });
         return { type: n, text: "" };
       }
-      function i(e) {
+      function u(e) {
         var t;
         let n = "";
         return (
-          e.type == r.CLOSETAG ? (n = "[/") : e.type == r.OPENTAG && (n = "["),
+          3 == e.type ? (n = "[/") : 2 == e.type && (n = "["),
           {
-            type: r.TEXT,
+            type: 1,
             text: n + (null !== (t = e.text) && void 0 !== t ? t : ""),
           }
         );
@@ -360,7 +340,7 @@
       var r = n(22837),
         o = n(90626),
         s = n(42780),
-        a = n(49693);
+        a = n(95742);
       class c extends a.Al {
         constructor(e, t, n) {
           super(e, null != t ? t : () => new s.R8()),

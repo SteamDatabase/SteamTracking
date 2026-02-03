@@ -54,7 +54,7 @@
     },
     34181: (e, t, r) => {
       "use strict";
-      r.d(t, { A: () => S, D: () => F });
+      r.d(t, { A: () => F, D: () => w });
       var i = r(34629),
         a = r(90626),
         s = r(75844),
@@ -113,24 +113,19 @@
         }
       };
       d = (0, i.Cg)([s.PA], d);
-      var g = r(95679),
-        B = r(12155),
-        y = r(70342),
-        M = r.n(y),
-        _ = r(97232);
+      var g = r(12155),
+        B = r(70342),
+        y = r.n(B),
+        M = r(97232);
       const f = (0, s.PA)((e) => {
         const { persona: t, className: r, ...i } = e;
         if (!t) return null;
         if (!t.is_online) return null;
-        const s = t.HasStateFlag(g.nE.k_EPersonaStateFlag_ClientTypeMobile),
-          m = t.HasStateFlag(g.nE.k_EPersonaStateFlag_ClientTypeVR),
-          u = t.m_eGamingDeviceType == c.zm.k_EGamingDeviceType_SteamDeck,
-          d = t.m_eGamingDeviceType == c.zm.k_EGamingDeviceType_LegionGoS,
-          y =
-            !u &&
-            !d &&
-            !m &&
-            t.HasStateFlag(g.nE.k_EPersonaStateFlag_ClientTypeTenfoot);
+        const s = t.HasStateFlag(512),
+          c = t.HasStateFlag(2048),
+          m = 544 == t.m_eGamingDeviceType,
+          u = 545 == t.m_eGamingDeviceType,
+          d = !m && !u && !c && t.HasStateFlag(1024);
         return a.createElement(
           a.Fragment,
           null,
@@ -140,59 +135,29 @@
               {
                 className: (0, o.A)(
                   r,
-                  M().PersonaStatusIcon,
-                  M().MobilePhoneIcon,
+                  y().PersonaStatusIcon,
+                  y().MobilePhoneIcon,
                   (0, l.rO)(t),
                 ),
                 title: (0, n.we)("#Platform_Hint_Mobile"),
                 ...i,
               },
-              a.createElement(_.rf, null),
+              a.createElement(M.rf, null),
             ),
-          m &&
+          c &&
             a.createElement(
               "div",
               {
                 className: (0, o.A)(
                   r,
-                  M().PersonaStatusIcon,
-                  M().VRIcon,
+                  y().PersonaStatusIcon,
+                  y().VRIcon,
                   (0, l.rO)(t),
                 ),
                 title: (0, n.we)("#Platform_Hint_VR"),
                 ...i,
               },
-              a.createElement(B.MUh, null),
-            ),
-          y &&
-            a.createElement(
-              "div",
-              {
-                className: (0, o.A)(
-                  r,
-                  M().PersonaStatusIcon,
-                  M().BigPictureIcon,
-                  (0, l.rO)(t),
-                ),
-                title: (0, n.we)("#Platform_Hint_BigPicture"),
-                ...i,
-              },
-              a.createElement(B.bPr, null),
-            ),
-          u &&
-            a.createElement(
-              "div",
-              {
-                className: (0, o.A)(
-                  r,
-                  M().PersonaStatusIcon,
-                  M().SteamDeckIcon,
-                  (0, l.rO)(t),
-                ),
-                title: (0, n.we)("#Platform_Hint_SteamDeck"),
-                ...i,
-              },
-              a.createElement(B.DQe, null),
+              a.createElement(g.MUh, null),
             ),
           d &&
             a.createElement(
@@ -200,34 +165,64 @@
               {
                 className: (0, o.A)(
                   r,
-                  M().PersonaStatusIcon,
-                  M().SteamDeckIcon,
+                  y().PersonaStatusIcon,
+                  y().BigPictureIcon,
+                  (0, l.rO)(t),
+                ),
+                title: (0, n.we)("#Platform_Hint_BigPicture"),
+                ...i,
+              },
+              a.createElement(g.bPr, null),
+            ),
+          m &&
+            a.createElement(
+              "div",
+              {
+                className: (0, o.A)(
+                  r,
+                  y().PersonaStatusIcon,
+                  y().SteamDeckIcon,
+                  (0, l.rO)(t),
+                ),
+                title: (0, n.we)("#Platform_Hint_SteamDeck"),
+                ...i,
+              },
+              a.createElement(g.DQe, null),
+            ),
+          u &&
+            a.createElement(
+              "div",
+              {
+                className: (0, o.A)(
+                  r,
+                  y().PersonaStatusIcon,
+                  y().SteamDeckIcon,
                   (0, l.rO)(t),
                 ),
                 title: (0, n.we)("#Platform_Hint_LegionGoS"),
                 ...i,
               },
-              a.createElement(B.DQe, null),
+              a.createElement(g.DQe, null),
             ),
         );
       });
       var b = r(18828),
-        p = r.n(b),
-        z = r(78327);
-      function w(e) {
+        _ = r.n(b),
+        p = r(78327);
+      function z(e) {
         return a.createElement(
           a.Fragment,
           null,
           a.createElement(
             "span",
-            { className: p().partyBeaconJoin },
+            { className: _().partyBeaconJoin },
             (0, n.we)("#User_WantsToPlay"),
           ),
           " – ",
           e.persona.GetCurrentGameName(),
         );
       }
-      let F = class extends a.Component {
+      let w = class extends a.Component {
         render() {
           const {
             className: e,
@@ -237,11 +232,11 @@
             bIsSelf: s,
             bParenthesizeNicknames: m,
             strNickname: u,
-            bCompactView: g,
+            bCompactView: B,
             bHideGameName: y,
             bHideEnhancedRichPresenceLabel: M,
-            bHideSnooze: _,
-            bHideStatus: b,
+            bHideSnooze: b,
+            bHideStatus: w,
             renderStatus: F,
             renderRichPresence: S,
             bHidePersona: h,
@@ -252,69 +247,69 @@
             ...j
           } = this.props;
           let W = null,
+            O = null,
             P = null,
-            T = null,
             C = [
               e,
-              p().personaNameAndStatusLabel,
+              _().personaNameAndStatusLabel,
               (0, l.rO)(r),
-              g && p().compactView,
-              I && p().NoMask,
+              B && _().compactView,
+              I && _().NoMask,
             ];
           R || r.has_public_party_beacon
-            ? (P = a.createElement(w, { persona: r }))
+            ? (O = a.createElement(z, { persona: r }))
             : (0, c.aP)(i)
-              ? ((P = (0, n.we)("#PersonaStateBlocked")), C.push(p().blocked))
+              ? ((O = (0, n.we)("#PersonaStateBlocked")), C.push(_().blocked))
               : r.is_ingame
-                ? ((P =
+                ? ((O =
                     !r.is_in_nonsteam_game || s || (0, c.S$)(i)
                       ? r.GetCurrentGameName()
                       : (0, n.we)("#PersonaStateInNonSteamGame")),
                   s || h
                     ? s &&
                       r.is_awayOrSnooze &&
-                      (T = (0, n.we)("#PersonaStateAway"))
-                    : (T = r.GetCurrentGameRichPresence()))
+                      (P = (0, n.we)("#PersonaStateAway"))
+                    : (P = r.GetCurrentGameRichPresence()))
                 : r.m_broadcastAccountId &&
-                  (P = (0, n.we)("#PersonaStateWatchingBroadcast")),
-            P || (P = r.GetLocalizedOnlineStatus()),
-            F && (P = F());
-          let O = !h && !_;
-          !1 === _ && (O = !0),
-            r.is_awayOrSnooze && O && (W = a.createElement(d, { persona: r }));
+                  (O = (0, n.we)("#PersonaStateWatchingBroadcast")),
+            O || (O = r.GetLocalizedOnlineStatus()),
+            F && (O = F());
+          let T = !h && !b;
+          !1 === b && (T = !0),
+            r.is_awayOrSnooze && T && (W = a.createElement(d, { persona: r }));
           let E = null;
           t
             ? (E = a.createElement(
                 "div",
                 { className: "ContextMenuButton", onClick: t },
-                a.createElement(B.GB9, null),
+                a.createElement(g.GB9, null),
               ))
-            : C.push(p().noContextMenu),
-            h && C.push(p().hidePersona),
-            S && (T = S()),
-            (!y && T) || C.push(p().twoLine);
-          const L = !r.is_ingame && !b,
-            k = !M && T,
-            G = P && (!y || !k),
-            q = (0, c.ID)(z.TS.LAUNCHER_TYPE);
+            : C.push(_().noContextMenu),
+            h && C.push(_().hidePersona),
+            S && (P = S()),
+            (!y && P) || C.push(_().twoLine);
+          const L = !r.is_ingame && !w,
+            G = !M && P,
+            q = O && (!y || !G),
+            k = (0, c.ID)(p.TS.LAUNCHER_TYPE);
           let x = u && !m,
             A = x ? u : r.m_strPlayerName,
-            D = !h && (G || L) && k;
+            U = !h && (q || L) && G;
           return a.createElement(
             "div",
             { ...j, className: (0, o.A)(...C), onContextMenu: t },
             a.createElement(
               "div",
-              { className: (0, o.A)(p().statusAndName, D && p().threeLines) },
+              { className: (0, o.A)(_().statusAndName, U && _().threeLines) },
               a.createElement(
                 "div",
-                { className: p().playerName },
+                { className: _().playerName },
                 A || " ",
                 m &&
                   u &&
                   a.createElement(
                     "span",
-                    { className: p().playerNickname },
+                    { className: _().playerNickname },
                     "(",
                     u,
                     ")",
@@ -324,16 +319,16 @@
                 a.createElement(
                   "div",
                   {
-                    className: p().DNDContainer,
+                    className: _().DNDContainer,
                     title: (0, n.we)("#User_ToggleDoNotDisturb"),
                   },
-                  a.createElement(B.Aj0, null),
+                  a.createElement(g.Aj0, null),
                 ),
               x &&
                 a.createElement(
                   "span",
                   {
-                    className: p().playerNicknameBracket,
+                    className: _().playerNicknameBracket,
                     title: (0, n.we)("#isNickname"),
                   },
                   " *",
@@ -341,29 +336,29 @@
               a.createElement(f, { persona: r }),
               W,
               (r.m_bPlayerNamePending || r.m_bAvatarPending) &&
-                q &&
+                k &&
                 a.createElement(
                   "div",
                   {
-                    className: p().PendingPersona,
+                    className: _().PendingPersona,
                     title: (0, n.we)("#SteamChina_PendingPersonaName"),
                   },
-                  a.createElement(B.zD7, null),
+                  a.createElement(g.zD7, null),
                 ),
               E,
             ),
             !h &&
               a.createElement(
                 "div",
-                { className: p().richPresenceContainer },
-                (G || L) &&
+                { className: _().richPresenceContainer },
+                (q || L) &&
                   a.createElement(
                     "div",
                     {
                       className: (0, o.A)(
-                        p().gameName,
-                        D && p().threeLines,
-                        p().richPresenceLabel,
+                        _().gameName,
+                        U && _().threeLines,
+                        _().richPresenceLabel,
                         "no-drag",
                       ),
                     },
@@ -371,26 +366,26 @@
                       a.createElement(
                         "div",
                         {
-                          className: p().gameIsPrivateIcon,
+                          className: _().gameIsPrivateIcon,
                           title: (0, n.we)("#User_GameInfoHidden"),
                         },
-                        a.createElement(B.jZl, null),
+                        a.createElement(g.jZl, null),
                       ),
-                    P,
+                    O,
                   ),
-                k &&
+                G &&
                   a.createElement(
                     "div",
-                    { className: (0, o.A)(p().richPresenceLabel, "no-drag") },
-                    T,
+                    { className: (0, o.A)(_().richPresenceLabel, "no-drag") },
+                    P,
                     " ",
                   ),
               ),
           );
         }
       };
-      F = (0, i.Cg)([s.PA], F);
-      const S = (0, s.PA)((e) => {
+      w = (0, i.Cg)([s.PA], w);
+      const F = (0, s.PA)((e) => {
         const {
           persona: t,
           bParenthesizeNicknames: r,
@@ -407,19 +402,19 @@
             ...m,
             className: (0, o.A)(
               c,
-              n && p().DisableColoring,
+              n && _().DisableColoring,
               !s && (0, l.rO)(t),
             ),
           },
           a.createElement(
             "span",
-            { className: p().playerName },
+            { className: _().playerName },
             u || " ",
             r &&
               i &&
               a.createElement(
                 "span",
-                { className: p().playerNickname },
+                { className: _().playerNickname },
                 "(",
                 i,
                 ")",
@@ -431,11 +426,11 @@
     26505: (e, t, r) => {
       "use strict";
       r.d(t, {
-        M8: () => O,
-        d0: () => j,
-        Dv: () => W,
-        Nd: () => k,
-        EW: () => T,
+        M8: () => C,
+        d0: () => I,
+        Dv: () => j,
+        Nd: () => L,
+        EW: () => O,
       });
       var i,
         a,
@@ -688,71 +683,19 @@
           return "CFriendsListCategory";
         }
       }
-      class _ extends u.Message {
+      class f extends u.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), u.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return _.toObject(e, this);
+          return f.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new _();
-        }
-        static deserializeBinary(e) {
-          let t = new (d().BinaryReader)(e),
-            r = new _();
-          return _.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new (d().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new (d().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetCategories_Request";
-        }
-      }
-      class f extends u.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            f.prototype.categories || g.Sg(f.M()),
-            u.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            f.sm_m ||
-              (f.sm_m = {
-                proto: f,
-                fields: { categories: { n: 1, c: M, r: !0, q: !0 } },
-              }),
-            f.sm_m
-          );
-        }
-        static MBF() {
-          return f.sm_mbf || (f.sm_mbf = g.w0(f.M())), f.sm_mbf;
-        }
-        toObject(e = !1) {
-          return f.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return g.BT(f.M(), e, t);
-        }
-        static fromObject(e) {
-          return g.Uq(f.M(), e);
+          return new f();
         }
         static deserializeBinary(e) {
           let t = new (d().BinaryReader)(e),
@@ -760,29 +703,27 @@
           return f.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return g.zj(f.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new (d().BinaryWriter)();
           return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          g.i0(f.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new (d().BinaryWriter)();
           return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CFriendsList_GetCategories_Response";
+          return "CFriendsList_GetCategories_Request";
         }
       }
       class b extends u.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            b.prototype.accountid || g.Sg(b.M()),
-            u.Message.initialize(this, e, 0, -1, void 0, null);
+            b.prototype.categories || g.Sg(b.M()),
+            u.Message.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -791,19 +732,7 @@
             b.sm_m ||
               (b.sm_m = {
                 proto: b,
-                fields: {
-                  accountid: {
-                    n: 1,
-                    br: g.qM.readUint32,
-                    bw: g.gp.writeUint32,
-                  },
-                  clanid: { n: 2, br: g.qM.readUint32, bw: g.gp.writeUint32 },
-                  chat_group_id: {
-                    n: 3,
-                    br: g.qM.readUint64String,
-                    bw: g.gp.writeUint64String,
-                  },
-                },
+                fields: { categories: { n: 1, c: M, r: !0, q: !0 } },
               }),
             b.sm_m
           );
@@ -838,6 +767,72 @@
         serializeBase64String() {
           var e = new (d().BinaryWriter)();
           return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetCategories_Response";
+        }
+      }
+      class _ extends u.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            _.prototype.accountid || g.Sg(_.M()),
+            u.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  accountid: {
+                    n: 1,
+                    br: g.qM.readUint32,
+                    bw: g.gp.writeUint32,
+                  },
+                  clanid: { n: 2, br: g.qM.readUint32, bw: g.gp.writeUint32 },
+                  chat_group_id: {
+                    n: 3,
+                    br: g.qM.readUint64String,
+                    bw: g.gp.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = g.w0(_.M())), _.sm_mbf;
+        }
+        toObject(e = !1) {
+          return _.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return g.BT(_.M(), e, t);
+        }
+        static fromObject(e) {
+          return g.Uq(_.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (d().BinaryReader)(e),
+            r = new _();
+          return _.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return g.zj(_.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (d().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          g.i0(_.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (d().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CFriendsListFavoriteEntry";
@@ -892,7 +887,7 @@
             z.sm_m ||
               (z.sm_m = {
                 proto: z,
-                fields: { favorites: { n: 1, c: b, r: !0, q: !0 } },
+                fields: { favorites: { n: 1, c: _, r: !0, q: !0 } },
               }),
             z.sm_m
           );
@@ -946,7 +941,7 @@
             w.sm_m ||
               (w.sm_m = {
                 proto: w,
-                fields: { favorites: { n: 1, c: b, r: !0, q: !0 } },
+                fields: { favorites: { n: 1, c: _, r: !0, q: !0 } },
               }),
             w.sm_m
           );
@@ -1035,7 +1030,7 @@
             S.sm_m ||
               (S.sm_m = {
                 proto: S,
-                fields: { favorites: { n: 1, c: b, r: !0, q: !0 } },
+                fields: { favorites: { n: 1, c: _, r: !0, q: !0 } },
               }),
             S.sm_m
           );
@@ -1163,7 +1158,7 @@
       }
       !(function (e) {
         (e.GetCategories = function (e, t) {
-          return e.SendMsg("FriendsList.GetCategories#1", (0, o.I8)(_, t), f, {
+          return e.SendMsg("FriendsList.GetCategories#1", (0, o.I8)(f, t), b, {
             bConstMethod: !0,
             ePrivilege: 1,
           });
@@ -1195,22 +1190,21 @@
           };
         })(a || (a = {}));
       var R = r(37735),
-        N = r(22837),
-        I = r(14336);
-      function j(e) {
+        N = r(14336);
+      function I(e) {
         const t = (0, n.KV)(),
           r = (0, s.LH)(),
-          i = (0, I.tb)(),
+          i = (0, N.tb)(),
           a = (0, c.jE)();
         let o = { loadNicknames: !1, loadFavorites: !1, ...e };
         return (0, l.I)({
           queryKey: ["FriendsList", r, o],
           queryFn: async () => {
-            const e = a.fetchQuery(P(t, r)),
-              s = o.loadNicknames ? a.fetchQuery(C(t, r)) : void 0,
-              n = o.loadFavorites ? a.fetchQuery(E(t, r)) : void 0,
+            const e = a.fetchQuery(W(t, r)),
+              s = o.loadNicknames ? a.fetchQuery(P(t, r)) : void 0,
+              n = o.loadFavorites ? a.fetchQuery(T(t, r)) : void 0,
               c = await e,
-              l = new Map(c.map((e) => [e, a.fetchQuery((0, I.mK)(i, t, e))]));
+              l = new Map(c.map((e) => [e, a.fetchQuery((0, N.mK)(i, t, e))]));
             let u;
             if (s) {
               const e = (await s).nicknames;
@@ -1234,12 +1228,12 @@
           staleTime: 12e4,
         });
       }
-      function W() {
+      function j() {
         const e = (0, n.KV)(),
           t = (0, s.LH)();
-        return (0, l.I)(P(e, t));
+        return (0, l.I)(W(e, t));
       }
-      function P(e, t) {
+      function W(e, t) {
         return {
           queryKey: ["GetFriendsList", t],
           queryFn: async () => {
@@ -1252,10 +1246,8 @@
               ?.filter((e) => {
                 const t = new m.b(e.ulfriendid());
                 return (
-                  (e.efriendrelationship() ==
-                    N.SX.k_EFriendRelationshipFriend ||
-                    e.efriendrelationship() ==
-                      N.SX.k_EFriendRelationshipIgnoredFriend) &&
+                  (3 == e.efriendrelationship() ||
+                    6 == e.efriendrelationship()) &&
                   t.BIsIndividualAccount()
                 );
               })
@@ -1263,7 +1255,7 @@
           },
         };
       }
-      function T() {
+      function O() {
         const e = (0, n.KV)(),
           t = (0, s.LH)();
         return (0, l.I)({
@@ -1278,10 +1270,8 @@
               ?.filter((e) => {
                 const t = new m.b(e.ulfriendid());
                 return (
-                  (e.efriendrelationship() ==
-                    N.SX.k_EFriendRelationshipIgnored ||
-                    e.efriendrelationship() ==
-                      N.SX.k_EFriendRelationshipIgnoredFriend) &&
+                  (5 == e.efriendrelationship() ||
+                    6 == e.efriendrelationship()) &&
                   t.BIsIndividualAccount()
                 );
               })
@@ -1289,7 +1279,7 @@
           },
         });
       }
-      function C(e, t) {
+      function P(e, t) {
         return {
           queryKey: ["GetFriendNicknameList", t],
           queryFn: async () => {
@@ -1298,18 +1288,18 @@
           },
         };
       }
-      function O(e = {}) {
+      function C(e = {}) {
         return (function (e = {}) {
           const t = (0, n.KV)(),
             r = (0, s.LH)();
-          return (0, l.I)({ ...C(t, r), ...e });
+          return (0, l.I)({ ...P(t, r), ...e });
         })({
           ...e,
           select: (e) =>
             new Map(e.nicknames.map((e) => [e.accountid, e.nickname])),
         });
       }
-      function E(e, t) {
+      function T(e, t) {
         return {
           queryKey: ["GetFriendFavorites", t],
           queryFn: async () => {
@@ -1321,7 +1311,7 @@
           },
         };
       }
-      async function L(e, t) {
+      async function E(e, t) {
         const r = o.w.Init(R.tl);
         r.Body().set_appid(t);
         const i = await R.xt.GetFriendsGameplayInfo(e, r);
@@ -1331,12 +1321,12 @@
           i.Body().toObject()
         );
       }
-      function k(e, t = {}) {
+      function L(e, t = {}) {
         const r = (0, n.KV)(),
           i = (0, s.LH)();
         return (0, l.I)({
           queryKey: [`GameplayInfo_${i}_${e}`],
-          queryFn: async () => await L(r, e),
+          queryFn: async () => await E(r, e),
           ...t,
         });
       }
@@ -1346,7 +1336,7 @@
       r.d(t, { Jl: () => c, nl: () => o, rf: () => l });
       var i = r(90626),
         a = r(12155),
-        s = r(60395),
+        s = r(4869),
         n = r(78327);
       function c(e) {
         return (0, n.Qn)()

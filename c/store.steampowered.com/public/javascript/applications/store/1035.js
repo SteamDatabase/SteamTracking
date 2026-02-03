@@ -23,8 +23,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         let _ = "offline";
@@ -42,7 +40,7 @@
       class _ {
         m_steamid;
         m_bInitialized = !1;
-        m_ePersonaState = _._.k_EPersonaStateOffline;
+        m_ePersonaState = 0;
         m_unGamePlayedAppID = 0;
         m_gameid = "0";
         m_unPersonaStateFlags = 0;
@@ -62,7 +60,7 @@
         m_broadcastViewerCount = void 0;
         m_strBroadcastTitle = void 0;
         m_bCommunityBanned = void 0;
-        m_eGamingDeviceType = _._.k_EGamingDeviceType_Unknown;
+        m_eGamingDeviceType = 0;
         m_mapRichPresence = _._.map();
         m_bNameInitialized = !1;
         m_bStatusInitialized = !1;
@@ -71,7 +69,7 @@
           (0, _._)(this), (this.m_steamid = _);
         }
         Reset() {
-          (this.m_ePersonaState = _._.k_EPersonaStateOffline),
+          (this.m_ePersonaState = 0),
             (this.m_unGamePlayedAppID = 0),
             (this.m_gameid = "0"),
             (this.m_strGameExtraInfo = ""),
@@ -84,16 +82,13 @@
             (this.m_broadcastAppId = void 0),
             (this.m_broadcastViewerCount = void 0),
             (this.m_strBroadcastTitle = void 0),
-            (this.m_eGamingDeviceType = _._.k_EGamingDeviceType_Unknown);
+            (this.m_eGamingDeviceType = 0);
         }
         GetAccountID() {
           return this.m_steamid.GetAccountID();
         }
         get is_online() {
-          return (
-            this.m_ePersonaState != _._.k_EPersonaStateOffline &&
-            this.m_ePersonaState != _._.k_EPersonaStateInvisible
-          );
+          return 0 != this.m_ePersonaState && 7 != this.m_ePersonaState;
         }
         get is_ingame() {
           return (
@@ -115,11 +110,7 @@
           );
         }
         get has_joinable_game_flag() {
-          return (
-            0 !=
-            ((this.m_unPersonaStateFlags ?? 0) &
-              _._.k_EPersonaStateFlag_InJoinableGame)
-          );
+          return 0 != (2 & (this.m_unPersonaStateFlags ?? 0));
         }
         get connect_string() {
           return this.m_mapRichPresence.get("connect");
@@ -131,10 +122,7 @@
           return 0 != this.m_unGameServerIP;
         }
         get is_awayOrSnooze() {
-          return (
-            this.m_ePersonaState == _._.k_EPersonaStateAway ||
-            this.m_ePersonaState == _._.k_EPersonaStateSnooze
-          );
+          return 3 == this.m_ePersonaState || 4 == this.m_ePersonaState;
         }
         HasStateFlag(_) {
           return 0 != ((this.m_unPersonaStateFlags ?? 0) & _);
@@ -143,10 +131,10 @@
           return this.m_rtLastSeenOnline;
         }
         ClearStateOnDisconnect() {
-          this.m_ePersonaState != _._.k_EPersonaStateOffline && this.Reset();
+          0 != this.m_ePersonaState && this.Reset();
         }
         get is_golden() {
-          return this.HasStateFlag(_._.k_EPersonaStateFlag_Golden);
+          return this.HasStateFlag(4);
         }
         GetCurrentGameName() {
           return this.m_strGameExtraInfo
@@ -183,9 +171,7 @@
               let _ = this.m_mapRichPresence.get("steam_display");
               return _.Localize(_, this.m_mapRichPresence);
             }
-          } else if (
-            this.HasStateFlag(_._.k_EPersonaStateFlag_RemotePlayTogether)
-          )
+          } else if (this.HasStateFlag(8))
             return (0, _._)("#PersonaStateRemotePlayTogether");
           return "";
         }
@@ -215,20 +201,20 @@
         }
         GetLocalizedOnlineStatus() {
           switch (this.m_ePersonaState) {
-            case _._.k_EPersonaStateOffline:
-            case _._.k_EPersonaStateInvisible:
+            case 0:
+            case 7:
               return this.GetOfflineStatusTime();
-            case _._.k_EPersonaStateOnline:
+            case 1:
               return (0, _._)("#PersonaStateOnline");
-            case _._.k_EPersonaStateBusy:
+            case 2:
               return (0, _._)("#PersonaStateBusy");
-            case _._.k_EPersonaStateAway:
+            case 3:
               return (0, _._)("#PersonaStateAway");
-            case _._.k_EPersonaStateSnooze:
+            case 4:
               return (0, _._)("#PersonaStateSnooze");
-            case _._.k_EPersonaStateLookingToTrade:
+            case 5:
               return (0, _._)("#PersonaStateLookingToTrade");
-            case _._.k_EPersonaStateLookingToPlay:
+            case 6:
               return (0, _._)("#PersonaStateLookingToPlay");
             default:
               return "";

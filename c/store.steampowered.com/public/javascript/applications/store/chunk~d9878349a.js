@@ -21,7 +21,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -863,7 +862,7 @@
         m_Transport = null;
         m_Storage = null;
         m_TextFilterPreferences = {
-          eTextFilterSetting: _._.k_ETextFilterSettingDisabled,
+          eTextFilterSetting: 3,
           bIgnoreFriends: !1,
         };
         m_TextFilterWords;
@@ -922,7 +921,7 @@
             this.m_bInitialized
               ? this.InitFiltersWithRetry()
               : (this.m_bFilterChangedWhileLoading = !0),
-            _._.k_EResultOK
+            1
           );
         }
         async InitFiltersWithRetry() {
@@ -1219,10 +1218,10 @@
             _ = [],
             _ = [];
           switch (this.m_TextFilterPreferences.eTextFilterSetting) {
-            case _._.k_ETextFilterSettingSteamLabOptedOut:
-            case _._.k_ETextFilterSettingDisabled:
+            case 0:
+            case 3:
               break;
-            case _._.k_ETextFilterSettingEnabledAllowProfanity:
+            case 2:
               _ = _.concat(this.m_strBannedWords.split(_));
               break;
             default:

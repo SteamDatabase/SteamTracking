@@ -241,8 +241,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         let _ = "offline";
@@ -260,7 +258,7 @@
       class _ {
         m_steamid;
         m_bInitialized = !1;
-        m_ePersonaState = _._.k_EPersonaStateOffline;
+        m_ePersonaState = 0;
         m_unGamePlayedAppID = 0;
         m_gameid = "0";
         m_unPersonaStateFlags = 0;
@@ -280,7 +278,7 @@
         m_broadcastViewerCount = void 0;
         m_strBroadcastTitle = void 0;
         m_bCommunityBanned = void 0;
-        m_eGamingDeviceType = _._.k_EGamingDeviceType_Unknown;
+        m_eGamingDeviceType = 0;
         m_mapRichPresence = _._.map();
         m_bNameInitialized = !1;
         m_bStatusInitialized = !1;
@@ -289,7 +287,7 @@
           (0, _._)(this), (this.m_steamid = _);
         }
         Reset() {
-          (this.m_ePersonaState = _._.k_EPersonaStateOffline),
+          (this.m_ePersonaState = 0),
             (this.m_unGamePlayedAppID = 0),
             (this.m_gameid = "0"),
             (this.m_strGameExtraInfo = ""),
@@ -302,16 +300,13 @@
             (this.m_broadcastAppId = void 0),
             (this.m_broadcastViewerCount = void 0),
             (this.m_strBroadcastTitle = void 0),
-            (this.m_eGamingDeviceType = _._.k_EGamingDeviceType_Unknown);
+            (this.m_eGamingDeviceType = 0);
         }
         GetAccountID() {
           return this.m_steamid.GetAccountID();
         }
         get is_online() {
-          return (
-            this.m_ePersonaState != _._.k_EPersonaStateOffline &&
-            this.m_ePersonaState != _._.k_EPersonaStateInvisible
-          );
+          return 0 != this.m_ePersonaState && 7 != this.m_ePersonaState;
         }
         get is_ingame() {
           return (
@@ -333,11 +328,7 @@
           );
         }
         get has_joinable_game_flag() {
-          return (
-            0 !=
-            ((this.m_unPersonaStateFlags ?? 0) &
-              _._.k_EPersonaStateFlag_InJoinableGame)
-          );
+          return 0 != (2 & (this.m_unPersonaStateFlags ?? 0));
         }
         get connect_string() {
           return this.m_mapRichPresence.get("connect");
@@ -349,10 +340,7 @@
           return 0 != this.m_unGameServerIP;
         }
         get is_awayOrSnooze() {
-          return (
-            this.m_ePersonaState == _._.k_EPersonaStateAway ||
-            this.m_ePersonaState == _._.k_EPersonaStateSnooze
-          );
+          return 3 == this.m_ePersonaState || 4 == this.m_ePersonaState;
         }
         HasStateFlag(_) {
           return 0 != ((this.m_unPersonaStateFlags ?? 0) & _);
@@ -361,10 +349,10 @@
           return this.m_rtLastSeenOnline;
         }
         ClearStateOnDisconnect() {
-          this.m_ePersonaState != _._.k_EPersonaStateOffline && this.Reset();
+          0 != this.m_ePersonaState && this.Reset();
         }
         get is_golden() {
-          return this.HasStateFlag(_._.k_EPersonaStateFlag_Golden);
+          return this.HasStateFlag(4);
         }
         GetCurrentGameName() {
           return this.m_strGameExtraInfo
@@ -401,9 +389,7 @@
               let _ = this.m_mapRichPresence.get("steam_display");
               return _.Localize(_, this.m_mapRichPresence);
             }
-          } else if (
-            this.HasStateFlag(_._.k_EPersonaStateFlag_RemotePlayTogether)
-          )
+          } else if (this.HasStateFlag(8))
             return (0, _._)("#PersonaStateRemotePlayTogether");
           return "";
         }
@@ -433,20 +419,20 @@
         }
         GetLocalizedOnlineStatus() {
           switch (this.m_ePersonaState) {
-            case _._.k_EPersonaStateOffline:
-            case _._.k_EPersonaStateInvisible:
+            case 0:
+            case 7:
               return this.GetOfflineStatusTime();
-            case _._.k_EPersonaStateOnline:
+            case 1:
               return (0, _._)("#PersonaStateOnline");
-            case _._.k_EPersonaStateBusy:
+            case 2:
               return (0, _._)("#PersonaStateBusy");
-            case _._.k_EPersonaStateAway:
+            case 3:
               return (0, _._)("#PersonaStateAway");
-            case _._.k_EPersonaStateSnooze:
+            case 4:
               return (0, _._)("#PersonaStateSnooze");
-            case _._.k_EPersonaStateLookingToTrade:
+            case 5:
               return (0, _._)("#PersonaStateLookingToTrade");
-            case _._.k_EPersonaStateLookingToPlay:
+            case 6:
               return (0, _._)("#PersonaStateLookingToPlay");
             default:
               return "";
@@ -557,7 +543,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_, _) {
         return new (_())(
@@ -607,8 +592,7 @@
             const _ = _?.public_data,
               _ = _?.private_data;
             (_.m_bInitialized = !!_),
-              (_.m_ePersonaState =
-                _?.persona_state ?? _._.k_EPersonaStateOffline),
+              (_.m_ePersonaState = _?.persona_state ?? 0),
               (_.m_strAvatarHash = _?.sha_digest_avatar
                 ? (0, _._)(_.sha_digest_avatar)
                 : _._),
@@ -662,9 +646,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -699,9 +681,9 @@
           _ = _,
           _ = _().PinnedTemplate;
         return (
-          _ == _._.k_EUIMode_DesktopUI
+          7 == _
             ? (_ = _().PinnedTemplateDesktop)
-            : _ == _._.k_EUIMode_Web && (_ = _().PinnedTemplateWeb),
+            : 3 == _ && (_ = _().PinnedTemplateWeb),
           (_ = (0, _._)(_, _)),
           _.createElement(
             _._,
@@ -783,8 +765,8 @@
             _ &&
             _ > 0 &&
             _ !== _().Unread &&
-            __webpack_require__ != _._.DesktopToast &&
-            __webpack_require__ != _._.GamepadToast
+            2 != __webpack_require__ &&
+            1 != __webpack_require__
               ? _(_().Unread)
               : _ || _ != _().Unread || _(_().MarkedRead);
           }, [_, __webpack_require__, _]);
@@ -792,17 +774,16 @@
         _ || (_ = () => console.log("Missing activate function")),
           _ == _.loadingActive && (_ = void 0);
         let _ = _().StandardTemplate;
-        __webpack_require__ == _._.AllNotificationsTray
+        4 == __webpack_require__
           ? (_ = _().AllNotificationsTemplate)
-          : __webpack_require__ == _._.DesktopToast
+          : 2 == __webpack_require__
             ? (_ = _().DesktopToastTemplate)
-            : (_ != _._.k_EUIMode_DesktopUI && _ != _._.k_EUIMode_Web) ||
-              (_ = _().StandardTemplateDesktop);
+            : (7 != _ && 3 != _) || (_ = _().StandardTemplateDesktop);
         let _ = null;
         if (
           _ != _.none &&
-          __webpack_require__ != _._.DesktopToast &&
-          __webpack_require__ != _._.GamepadToast
+          2 != __webpack_require__ &&
+          1 != __webpack_require__
         ) {
           let _ = _ == _.loadingComplete ? _().Hide : null;
           _ = _.createElement(
@@ -869,7 +850,7 @@
       }
       function _(_) {
         const { location: _ } = _;
-        return _ && _ == _._.Tray
+        return _ && 3 == _
           ? _.createElement(
               "div",
               {
@@ -887,10 +868,10 @@
           location: _,
           fnRenderTimestamp: _,
         } = _;
-        const _ = !!_ && (_ == _._.Tray || _ == _._.AllNotificationsTray);
+        const _ = !!_ && (3 == _ || 4 == _);
         let _;
         return (
-          (_ = _ == _._.AllNotificationsTray ? _ : (_ ?? _)),
+          (_ = 4 == _ ? _ : (_ ?? _)),
           _.createElement(
             "div",
             {
@@ -990,10 +971,9 @@
           (_[(_.loadingActive = 1)] = "loadingActive"),
           (_[(_.loadingComplete = 2)] = "loadingComplete");
       })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
-        return _ == _._.GamepadToast;
+        return 1 == _;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -1078,9 +1058,9 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
-          case _._.k_ESteamNotificationType_MajorSale:
+          case 6:
             return _.createElement(_.ilR, null);
-          case _._.k_ESteamNotificationType_HelpRequest:
+          case 11:
             return _.createElement(_.Cv4, null);
           default:
             return _.createElement(_.Qte, null);
@@ -1326,11 +1306,11 @@
         } = _;
         const _ = _(_);
         let _ = "";
-        _ && _.state == _._.k_EFriendRelationshipRequestRecipient
+        _ && 2 == _.state
           ? (_ = (0, _._)(
               "#SteamNotifications_FriendInvite_Description_AwaitingResponse",
             ))
-          : _ && _.state == _._.k_EFriendRelationshipFriend
+          : _ && 3 == _.state
             ? (_ = (0, _._)(
                 "#SteamNotifications_FriendInvite_Description_Friends",
               ))
@@ -1340,9 +1320,7 @@
           _ = () => _(!0);
         let _ = _;
         if (__webpack_require__ && !_) {
-          const _ =
-              _.state == _._.k_EFriendRelationshipFriend &&
-              _ != _._.GamepadToast,
+          const _ = 3 == _.state && 1 != _,
             _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           _ = _.createElement(
             _._,
@@ -1534,7 +1512,7 @@
           _ = !__webpack_require__;
         let _ = "";
         return (
-          _.state == _._.k_EAsyncGameSessionUserStateReadyForAction
+          1 == _.state
             ? (_ =
                 _ && __webpack_require__?.GetName()
                   ? (0, _._)(
@@ -1542,7 +1520,7 @@
                       __webpack_require__.GetName(),
                     )
                   : (0, _._)("#SteamNotification_AsyncGame_Action"))
-            : _.state == _._.k_EAsyncGameSessionUserStateDone &&
+            : 2 == _.state &&
               (_ =
                 _ && __webpack_require__?.GetName()
                   ? (0, _._)(
@@ -1687,14 +1665,14 @@
           ),
           _ = (0, _._)(_) ? _ : null,
           _ = (0, _._)(_) ? _ : null;
-        _.comment_type == _._.k_ECommentThreadTypeProfile
+        10 == _.comment_type
           ? (_ =
               _.owner_steam_id?.ConvertTo64BitString() == _
-                ? _ == _._.AllNotificationsTray && _
+                ? 4 == _ && _
                   ? (0, _._)("#SteamNotifications_Comment_Your_Profile_By", _)
                   : (0, _._)("#SteamNotifications_Comment_Your_Profile")
                 : _
-                  ? _ == _._.AllNotificationsTray && _
+                  ? 4 == _ && _
                     ? (0, _._)(
                         "#SteamNotifications_Comment_Player_Profile_By",
                         _,
@@ -1702,8 +1680,7 @@
                       )
                     : (0, _._)("#SteamNotifications_Comment_Player_Profile", _)
                   : (0, _._)("#SteamNotifications_Comment_Profile"))
-          : _.comment_type == _._.k_ECommentThreadTypePublishedFile_Public &&
-              _.json_data?.file_type == _._.k_EWorkshopFileTypeScreenshot
+          : 5 == _.comment_type && 5 == _.json_data?.file_type
             ? (_ =
                 _.owner_steam_id?.ConvertTo64BitString() == _
                   ? _
@@ -1721,9 +1698,7 @@
             : !_ && _.json_data?.title && (_ = _.json_data.title);
         let _ = null;
         _ =
-          _.comment_type == _._.k_ECommentThreadTypeForumTopic &&
-          _.bis_forum &&
-          _
+          7 == _.comment_type && _.bis_forum && _
             ? _.createElement(
                 _,
                 null,
@@ -1734,7 +1709,7 @@
           _ = null;
         if (void 0 !== _ && _ > 1) {
           const _ = "+" + (_ - 1);
-          _ == _._.AllNotificationsTray
+          4 == _
             ? (_ = _.createElement(
                 "div",
                 {
@@ -1748,7 +1723,7 @@
         if (!_) {
           const _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           if (_ && (0, _._)(_)) {
-            const _ = _.bhas_friend && _ != _._.GamepadToast;
+            const _ = _.bhas_friend && 1 != _;
             _ = _.createElement(
               "div",
               {
@@ -2195,35 +2170,6 @@
             })
           : null;
       }
-      const _ = (_) => {
-        const {
-            rollup: _,
-            onNotificationClick: __webpack_require__,
-            location: _,
-            uimode: _,
-            onHide: _,
-          } = _,
-          _ = `${_._.COMMUNITY_BASE_URL}my/tradehistory`;
-        return _.createElement(
-          "a",
-          {
-            href: _,
-            onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-          },
-          _.createElement(_, {
-            logo: _.createElement(_.Qte, null),
-            icon: _.createElement(_.h20, null),
-            onActivate: () =>
-              __webpack_require__(() => window.location.assign(_), _.item),
-            location: _,
-            eUIMode: _,
-            timestamp: _.timestamp,
-            nUnread: _.rgunread.length,
-            bNewIndicator: (0, _._)(_.item),
-            onHide: _,
-          }),
-        );
-      };
       function _(_) {
         const {
             url: _,
@@ -2247,21 +2193,21 @@
                   count: __webpack_require__,
                   onActivate: () => window.location.assign(_),
                   strLocToken: _,
-                  eUIMode: _._.k_EUIMode_Web,
+                  eUIMode: 3,
                   visible: !0,
                 }),
               )
           : null;
       }
       const _ = {
-        [_._.k_ESteamNotificationType_Comment]: function (_) {
+        chunkid: function (module) {
           const {
               rollup: _,
-              onNotificationClick: __webpack_require__,
+              onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = _(_),
             _ = (0, _._)(),
             _ = _._.COMMUNITY_BASE_URL + _.url,
@@ -2310,14 +2256,14 @@
             }),
           );
         },
-        [_._.k_ESteamNotificationType_Wishlist]: function (_) {
+        chunkid: function (module) {
           const {
               rollup: _,
-              onNotificationClick: __webpack_require__,
+              onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = _(_),
             [_] = (0, _._)(_.appid, {
               include_assets: !0,
@@ -2361,14 +2307,14 @@
             )
           );
         },
-        [_._.k_ESteamNotificationType_FriendInvite]: function (_) {
+        chunkid: function (module) {
           const {
               rollup: _,
-              onNotificationClick: __webpack_require__,
+              onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = (0, _._)(),
             _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/friends/pending`,
             _ = _(_),
@@ -2396,14 +2342,14 @@
             }),
           );
         },
-        [_._.k_ESteamNotificationType_Item]: function (_) {
+        chunkid: function (module) {
           const {
               rollup: _,
-              onNotificationClick: __webpack_require__,
+              onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = (0, _._)(),
             _ = (0, _._)(),
             _ = (0, _._)(_.item, _, _),
@@ -2431,14 +2377,14 @@
             }),
           );
         },
-        [_._.k_ESteamNotificationType_Gift]: function (_) {
+        chunkid: function (module) {
           const {
               rollup: _,
-              onNotificationClick: __webpack_require__,
+              onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = (0, _._)(),
             _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/inventory/#pending_gifts`,
             _ = _(_),
@@ -2465,14 +2411,14 @@
             }),
           );
         },
-        [_._.k_ESteamNotificationType_TradeOffer]: function (_) {
+        chunkid: function (module) {
           const {
               rollup: _,
-              onNotificationClick: __webpack_require__,
+              onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = (0, _._)(),
             _ = _(_),
             _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/tradeoffers`,
@@ -2499,14 +2445,14 @@
             }),
           );
         },
-        [_._.k_ESteamNotificationType_AsyncGame]: function (_) {
+        chunkid: function (module) {
           const {
               rollup: _,
-              onNotificationClick: __webpack_require__,
+              onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = `${_._.COMMUNITY_BASE_URL}my/gamenotifications/`,
             _ = _(_),
             [_] = (0, _._)(_.appid, {
@@ -2534,21 +2480,18 @@
             }),
           );
         },
-        [_._.k_ESteamNotificationType_RequestedGameAdded]: function (_) {
+        chunkid: function (module) {
           const {
               rollup: _,
-              onNotificationClick: __webpack_require__,
+              onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = _,
+            } = module,
             _ = _(_),
             { data: _ } = (0, _._)(_.responder_steamid),
             _ = _.package_id > 0 ? _.package_id : _.bundle_id,
-            _ =
-              _.package_id > 0
-                ? _._.k_EStoreItemType_Package
-                : _._.k_EStoreItemType_Bundle,
+            _ = _.package_id > 0 ? 1 : 2,
             [_] = (0, _._)(_, _, {
               include_basic_info: !0,
               include_assets: !0,
@@ -2586,7 +2529,35 @@
             }),
           );
         },
-        [_._.k_ESteamNotificationType_TradeReversal]: _,
+        chunkid: (module) => {
+          const {
+              rollup: _,
+              onNotificationClick: _,
+              location: _,
+              uimode: _,
+              onHide: _,
+            } = module,
+            _ = `${_._.COMMUNITY_BASE_URL}my/tradehistory`;
+          return _.createElement(
+            "a",
+            {
+              href: _,
+              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            },
+            _.createElement(_, {
+              logo: _.createElement(_.Qte, null),
+              icon: _.createElement(_.h20, null),
+              onActivate: () =>
+                __webpack_require__(() => window.location.assign(_), _.item),
+              location: _,
+              eUIMode: _,
+              timestamp: _.timestamp,
+              nUnread: _.rgunread.length,
+              bNewIndicator: (0, _._)(_.item),
+              onHide: _,
+            }),
+          );
+        },
       };
       var _ = __webpack_require__("chunkid");
       const _ = new _._(),
@@ -2811,8 +2782,8 @@
                   key: _,
                   rollup: _,
                   onNotificationClick: _,
-                  uimode: _._.k_EUIMode_Web,
-                  location: _._.Tray,
+                  uimode: 3,
+                  location: 3,
                 }),
               ),
             );
@@ -2824,7 +2795,7 @@
           countItem: "pending_gifts",
           icon: _._,
           strLocToken: "#Notification_NewGiftsPinned_Body",
-          feature: _._.k_EFeatureStore,
+          feature: 1,
         },
         {
           fnUrl: () =>
@@ -2832,7 +2803,7 @@
           countItem: "pending_invites",
           icon: _.sdo,
           strLocToken: "#Notification_FriendInvitePinned_Body",
-          feature: _._.k_EFeatureFriends,
+          feature: 4,
         },
         {
           fnUrl: () =>
@@ -2840,7 +2811,7 @@
           countItem: "comments",
           icon: _.MwB,
           strLocToken: "#Notification_NewCommentPinned_Body",
-          feature: _._.k_EFeatureCommunity,
+          feature: 2,
         },
         {
           fnUrl: () =>
@@ -2848,7 +2819,7 @@
           countItem: "inventory_items",
           icon: _.rI_,
           strLocToken: "#Notification_NewItemAnnouncementPinned_Body",
-          feature: _._.k_EFeatureProfile,
+          feature: 3,
         },
         {
           fnUrl: () =>
@@ -2856,7 +2827,7 @@
           countItem: "trade_offers",
           icon: _.h20,
           strLocToken: "#Notification_NewTradeOffersPinned_Body",
-          feature: _._.k_EFeatureTrading,
+          feature: 6,
         },
         {
           fnUrl: () =>
@@ -2870,7 +2841,7 @@
           countItem: "moderator_messages",
           icon: _.hJ4,
           strLocToken: "#Notification_NewModeratorMessagePinned_Body",
-          feature: _._.k_EFeatureCommunity,
+          feature: 2,
         },
         {
           fnUrl: () => `${_._.HELP_BASE_URL}wizard/HelpRequests`,

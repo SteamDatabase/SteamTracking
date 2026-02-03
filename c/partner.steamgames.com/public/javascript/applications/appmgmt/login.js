@@ -14,7 +14,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         return (
@@ -59,7 +58,7 @@
           _
             ? _.createElement(_._, null)
             : _.createElement(_._, {
-                platform: _._.k_EAuthTokenPlatformType_WebBrowser,
+                platform: 2,
                 transport: _,
                 onComplete: (_) => {
                   _ == _._.k_PrimaryDomainFail

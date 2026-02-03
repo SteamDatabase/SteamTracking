@@ -411,29 +411,28 @@
     },
     82477: (e, t, s) => {
       "use strict";
-      s.d(t, { vg: () => u });
+      s.d(t, { vg: () => d });
       var n = s(90626),
         a = s(738),
         r = s(61859),
         l = s(78327),
         i = s(97436),
-        o = s(21565),
-        m = s(96059),
-        c = s(28240);
+        o = s(96059),
+        m = s(28240);
       s(9154);
-      function d(e) {
+      function c(e) {
         return n.createElement(
           a.x_,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          n.createElement(j, {
+          n.createElement(u, {
             redirectURL: e.redirectURL,
             guestOption: e.guestOption,
           }),
         );
       }
-      function u() {
+      function d() {
         (0, a.pg)(
-          n.createElement(d, {
+          n.createElement(c, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -441,12 +440,12 @@
           { strTitle: (0, r.we)("#Login_SignInTitle") },
         );
       }
-      function j(e) {
+      function u(e) {
         const { redirectURL: t, guestOption: s } = e,
           [a] = (0, n.useState)(
-            new m.D(l.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+            new o.D(l.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [r, d] = (0, n.useState)(!1);
+          [r, c] = (0, n.useState)(!1);
         return n.createElement(
           "div",
           null,
@@ -457,10 +456,10 @@
                 {
                   autoFocus: !0,
                   transport: a,
-                  platform: o.SS.k_EAuthTokenPlatformType_WebBrowser,
+                  platform: 2,
                   onComplete: (e) => {
-                    e == c.wI.k_PrimaryDomainFail
-                      ? d(!0)
+                    e == m.wI.k_PrimaryDomainFail
+                      ? c(!0)
                       : window.location.assign(t);
                   },
                   redirectUrl: t,

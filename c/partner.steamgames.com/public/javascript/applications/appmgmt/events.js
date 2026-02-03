@@ -57,7 +57,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         const _ = _ && _.length > _ ? [..._] : (0, _._)(_ || [], _ + 1, "");
@@ -69,7 +68,7 @@
       function _(_, _) {
         let _ = !1,
           _ = !1;
-        for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; _++) {
+        for (let _ = 0; _ < 31; _++) {
           const _ = _(_, _).trim(),
             _ = _(_, _).trim();
           if (!_ && !_) continue;
@@ -81,7 +80,7 @@
             return (0, _._)("#BuildNotes_Error_TitleTooLong", _);
           if (_.length > 32768)
             return (0, _._)("#BuildNotes_Error_DescriptionTooLong", _);
-          _ === _._.k_Lang_English && (_ = !0);
+          0 === _ && (_ = !0);
         }
         return _
           ? _
@@ -125,7 +124,7 @@
         }
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(_._.k_Lang_English),
+        const [_, __webpack_require__] = _.useState(0),
           [_, _] = _.useState(null),
           [_, _] = _.useState(null),
           [_, _] = _.useState(null),
@@ -224,12 +223,8 @@
                           (_.clanSteamID = new _._(_._.steamid)),
                           (_.postTime = Date.now() / 1e3),
                           (_.startTime = Date.now() / 1e3),
-                          (_.type = _._.k_ESmallUpdateEvent);
-                        for (
-                          let _ = _._.k_Lang_English;
-                          _ < _._.k_Lang_MAX;
-                          _++
-                        )
+                          (_.type = 12);
+                        for (let _ = 0; _ < 31; _++)
                           _.name.set(_, _(_, _)), _.description.set(_, _(_, _));
                         return _;
                       })(_, _),
@@ -270,9 +265,7 @@
                 _(null), _("submitting");
                 const _ = await (async function (_, _, _) {
                   if (_(_, _)) return null;
-                  const _ = Boolean(
-                      _(_, _._.k_Lang_SteamChina_SChinese).trim(),
-                    ),
+                  const _ = Boolean(_(_, 29).trim()),
                     _ = new FormData();
                   _.append("sessionid", _._.SESSIONID),
                     _.append("appid", "" + _),
@@ -288,7 +281,7 @@
                     const _ = await _().post(_, _, {
                       withCredentials: !0,
                     });
-                    if (_?.data?.success == _._.k_EResultOK) return _.data;
+                    if (1 == _?.data?.success) return _.data;
                     console.error(
                       "buildpatchnotes: OnSubmitCreateEvent error code  " +
                         _?.data?.success +
@@ -341,7 +334,7 @@
           } = _;
           let _ = "";
           if (_.includes(_._.k_ESteamRealmChina)) {
-            const _ = "" !== _(_._.k_Lang_SteamChina_SChinese).trim();
+            const _ = "" !== _(29).trim();
             _ = (0, _._)(
               _
                 ? "#BuildNotes_SteamChina_Provided"
@@ -377,7 +370,7 @@
                       const _ = new _._(),
                         _ = (0, _._)("#BuildNotes_SampleTitle"),
                         _ = (0, _._)("#BuildNotes_SampleDescription");
-                      for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; _++)
+                      for (let _ = 0; _ < 31; _++)
                         _.SetLocalization("Title", _, _),
                           _.SetLocalization("Description", _, _);
                       (0, _._)(

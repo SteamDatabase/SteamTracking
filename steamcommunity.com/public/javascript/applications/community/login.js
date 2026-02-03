@@ -8,32 +8,31 @@
     },
     42144: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => u });
+      n.r(t), n.d(t, { default: () => l });
       var r = n(90626),
-        o = n(97436),
-        a = n(21565),
-        i = n(96059),
-        s = n(78327),
-        c = n(28240),
-        l = n(9211);
-      function u(e) {
-        const { redirectUrl: t = s.TS.COMMUNITY_BASE_URL } = e,
+        a = n(97436),
+        o = n(96059),
+        i = n(78327),
+        s = n(28240),
+        c = n(9211);
+      function l(e) {
+        const { redirectUrl: t = i.TS.COMMUNITY_BASE_URL } = e,
           [n] = (0, r.useState)(
-            new i.D(s.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+            new o.D(i.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [u, m] = (0, r.useState)(!1);
+          [l, u] = (0, r.useState)(!1);
         return r.createElement(
           "div",
-          { className: l.LoginContainer },
-          u
-            ? r.createElement(o.Fn, null)
-            : r.createElement(o.YN, {
+          { className: c.LoginContainer },
+          l
+            ? r.createElement(a.Fn, null)
+            : r.createElement(a.YN, {
                 autoFocus: !0,
                 transport: n,
-                platform: a.SS.k_EAuthTokenPlatformType_WebBrowser,
+                platform: 2,
                 onComplete: (e) => {
-                  e == c.wI.k_PrimaryDomainFail
-                    ? m(!0)
+                  e == s.wI.k_PrimaryDomainFail
+                    ? u(!0)
                     : window.location.assign(t);
                 },
                 redirectUrl: t,

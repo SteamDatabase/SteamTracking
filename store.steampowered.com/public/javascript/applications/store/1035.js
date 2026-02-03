@@ -14,17 +14,15 @@
     },
     10622: (e, t, a) => {
       "use strict";
-      a.d(t, { Z: () => h, dV: () => l.d, rO: () => _ });
+      a.d(t, { Z: () => p, dV: () => A.d, rO: () => l });
       var r = a(34629),
         s = a(14947),
         i = a(31561),
         n = a(51006),
         o = a(61859),
-        m = a(22837),
-        A = a(95679),
-        p = a(78327),
-        l = a(85044);
-      function _(e) {
+        m = a(78327),
+        A = a(85044);
+      function l(e) {
         let t = "offline";
         return (
           e &&
@@ -37,15 +35,15 @@
           t
         );
       }
-      class h {
+      class p {
         m_steamid;
         m_bInitialized = !1;
-        m_ePersonaState = m.p2.k_EPersonaStateOffline;
+        m_ePersonaState = 0;
         m_unGamePlayedAppID = 0;
         m_gameid = "0";
         m_unPersonaStateFlags = 0;
         m_strPlayerName = "";
-        m_strAvatarHash = l.d;
+        m_strAvatarHash = A.d;
         m_strAccountName = "";
         m_rtLastSeenOnline = 0;
         m_strGameExtraInfo = "";
@@ -60,7 +58,7 @@
         m_broadcastViewerCount = void 0;
         m_strBroadcastTitle = void 0;
         m_bCommunityBanned = void 0;
-        m_eGamingDeviceType = m.zm.k_EGamingDeviceType_Unknown;
+        m_eGamingDeviceType = 0;
         m_mapRichPresence = s.sH.map();
         m_bNameInitialized = !1;
         m_bStatusInitialized = !1;
@@ -69,7 +67,7 @@
           (0, s.Gn)(this), (this.m_steamid = e);
         }
         Reset() {
-          (this.m_ePersonaState = m.p2.k_EPersonaStateOffline),
+          (this.m_ePersonaState = 0),
             (this.m_unGamePlayedAppID = 0),
             (this.m_gameid = "0"),
             (this.m_strGameExtraInfo = ""),
@@ -82,16 +80,13 @@
             (this.m_broadcastAppId = void 0),
             (this.m_broadcastViewerCount = void 0),
             (this.m_strBroadcastTitle = void 0),
-            (this.m_eGamingDeviceType = m.zm.k_EGamingDeviceType_Unknown);
+            (this.m_eGamingDeviceType = 0);
         }
         GetAccountID() {
           return this.m_steamid.GetAccountID();
         }
         get is_online() {
-          return (
-            this.m_ePersonaState != m.p2.k_EPersonaStateOffline &&
-            this.m_ePersonaState != m.p2.k_EPersonaStateInvisible
-          );
+          return 0 != this.m_ePersonaState && 7 != this.m_ePersonaState;
         }
         get is_ingame() {
           return (
@@ -113,11 +108,7 @@
           );
         }
         get has_joinable_game_flag() {
-          return (
-            0 !=
-            ((this.m_unPersonaStateFlags ?? 0) &
-              A.nE.k_EPersonaStateFlag_InJoinableGame)
-          );
+          return 0 != (2 & (this.m_unPersonaStateFlags ?? 0));
         }
         get connect_string() {
           return this.m_mapRichPresence.get("connect");
@@ -129,10 +120,7 @@
           return 0 != this.m_unGameServerIP;
         }
         get is_awayOrSnooze() {
-          return (
-            this.m_ePersonaState == m.p2.k_EPersonaStateAway ||
-            this.m_ePersonaState == m.p2.k_EPersonaStateSnooze
-          );
+          return 3 == this.m_ePersonaState || 4 == this.m_ePersonaState;
         }
         HasStateFlag(e) {
           return 0 != ((this.m_unPersonaStateFlags ?? 0) & e);
@@ -141,10 +129,10 @@
           return this.m_rtLastSeenOnline;
         }
         ClearStateOnDisconnect() {
-          this.m_ePersonaState != m.p2.k_EPersonaStateOffline && this.Reset();
+          0 != this.m_ePersonaState && this.Reset();
         }
         get is_golden() {
-          return this.HasStateFlag(A.nE.k_EPersonaStateFlag_Golden);
+          return this.HasStateFlag(4);
         }
         GetCurrentGameName() {
           return this.m_strGameExtraInfo
@@ -181,9 +169,7 @@
               let t = this.m_mapRichPresence.get("steam_display");
               return e.Localize(t, this.m_mapRichPresence);
             }
-          } else if (
-            this.HasStateFlag(A.nE.k_EPersonaStateFlag_RemotePlayTogether)
-          )
+          } else if (this.HasStateFlag(8))
             return (0, o.we)("#PersonaStateRemotePlayTogether");
           return "";
         }
@@ -205,7 +191,7 @@
           if (0 == this.last_seen_online)
             return (0, o.we)("#PersonaStateOffline");
           let e = this.GetOfflineStatusUpdateRate();
-          (!p.TS.IN_MOBILE || e <= 60) && (0, i.tB)(e);
+          (!m.TS.IN_MOBILE || e <= 60) && (0, i.tB)(e);
           let t = n.Vw.CMInterface.GetServerRTime32() - this.last_seen_online;
           return t < 60
             ? (0, o.we)("#PersonaStateLastSeen_JustNow")
@@ -213,20 +199,20 @@
         }
         GetLocalizedOnlineStatus() {
           switch (this.m_ePersonaState) {
-            case m.p2.k_EPersonaStateOffline:
-            case m.p2.k_EPersonaStateInvisible:
+            case 0:
+            case 7:
               return this.GetOfflineStatusTime();
-            case m.p2.k_EPersonaStateOnline:
+            case 1:
               return (0, o.we)("#PersonaStateOnline");
-            case m.p2.k_EPersonaStateBusy:
+            case 2:
               return (0, o.we)("#PersonaStateBusy");
-            case m.p2.k_EPersonaStateAway:
+            case 3:
               return (0, o.we)("#PersonaStateAway");
-            case m.p2.k_EPersonaStateSnooze:
+            case 4:
               return (0, o.we)("#PersonaStateSnooze");
-            case m.p2.k_EPersonaStateLookingToTrade:
+            case 5:
               return (0, o.we)("#PersonaStateLookingToTrade");
-            case m.p2.k_EPersonaStateLookingToPlay:
+            case 6:
               return (0, o.we)("#PersonaStateLookingToPlay");
             default:
               return "";
@@ -257,16 +243,16 @@
             : "offline";
         }
         BHasAvatarSet() {
-          return this.m_strAvatarHash != l.d;
+          return this.m_strAvatarHash != A.d;
         }
         get avatar_url() {
-          return (0, l.t)(this.m_strAvatarHash);
+          return (0, A.t)(this.m_strAvatarHash);
         }
         get avatar_url_medium() {
-          return (0, l.t)(this.m_strAvatarHash, "medium");
+          return (0, A.t)(this.m_strAvatarHash, "medium");
         }
         get avatar_url_full() {
-          return (0, l.t)(this.m_strAvatarHash, "full");
+          return (0, A.t)(this.m_strAvatarHash, "full");
         }
         static SortStatusComparator(e, t, a) {
           if (t.has_public_party_beacon) {
@@ -292,33 +278,33 @@
         }
         GetCommunityProfileURL() {
           return this.m_strProfileURL
-            ? `${p.TS.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
-            : `${p.TS.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
+            ? `${m.TS.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
+            : `${m.TS.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
         }
       }
-      (0, r.Cg)([s.sH], h.prototype, "m_bInitialized", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_ePersonaState", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_unGamePlayedAppID", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_gameid", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_unPersonaStateFlags", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_strPlayerName", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_strAvatarHash", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_strAccountName", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_rtLastSeenOnline", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_strGameExtraInfo", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_unGameServerIP", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_unGameServerPort", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_game_lobby_id", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_bPlayerNamePending", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_bAvatarPending", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_broadcastId", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_broadcastAccountId", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_broadcastAppId", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_broadcastViewerCount", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_strBroadcastTitle", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_bCommunityBanned", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_eGamingDeviceType", void 0),
-        (0, r.Cg)([s.sH], h.prototype, "m_bNameInitialized", void 0);
+      (0, r.Cg)([s.sH], p.prototype, "m_bInitialized", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_ePersonaState", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_unGamePlayedAppID", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_gameid", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_unPersonaStateFlags", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_strPlayerName", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_strAvatarHash", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_strAccountName", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_rtLastSeenOnline", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_strGameExtraInfo", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_unGameServerIP", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_unGameServerPort", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_game_lobby_id", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_bPlayerNamePending", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_bAvatarPending", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_broadcastId", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_broadcastAccountId", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_broadcastAppId", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_broadcastViewerCount", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_strBroadcastTitle", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_bCommunityBanned", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_eGamingDeviceType", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_bNameInitialized", void 0);
     },
     1035: (e, t, a) => {
       "use strict";
@@ -330,14 +316,14 @@
         o = a(52038),
         m = a(78327),
         A = a(3088);
-      const p =
+      const l =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
-        l =
+        p =
           a.p +
           "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var _ = a(43047),
-        h = a.n(_),
-        c = a(81393);
+      var h = a(43047),
+        c = a.n(h),
+        _ = a(81393);
       const u = s.memo(function (e) {
         const {
             strAvatarURL: t,
@@ -346,7 +332,7 @@
             statusStyle: i,
             statusPosition: n,
             children: m,
-            ..._
+            ...h
           } = e,
           u = s.useMemo(() => {
             const e = [];
@@ -360,13 +346,13 @@
                       return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
                     case "Medium":
                     case "MediumLarge":
-                      return p;
+                      return l;
                     case "Large":
                     case "X-Large":
                     case "FillArea":
-                      return l;
+                      return p;
                     default:
-                      return (0, c.z_)(e, `Unhandled size ${e}`), p;
+                      return (0, _.z_)(e, `Unhandled size ${e}`), l;
                   }
                 })(a),
               ),
@@ -377,20 +363,20 @@
           "div",
           {
             className: (0, o.A)(
-              h().avatarHolder,
+              c().avatarHolder,
               "avatarHolder",
               "no-drag",
               a,
               r,
             ),
-            ..._,
+            ...h,
           },
           s.createElement("div", {
-            className: (0, o.A)(h().avatarStatus, "avatarStatus", n),
+            className: (0, o.A)(c().avatarStatus, "avatarStatus", n),
             style: i,
           }),
           s.createElement(A.c, {
-            className: (0, o.A)(h().avatar, "avatar"),
+            className: (0, o.A)(c().avatar, "avatar"),
             rgSources: u,
             draggable: !1,
           }),
@@ -407,19 +393,19 @@
             strBackupAvatarURL: i,
             ...A
           } = this.props;
-          let p = "";
+          let l = "";
           return (
             a && a.image_small && 0 != a.image_small.length
-              ? (p = m.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + a.image_small)
+              ? (l = m.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + a.image_small)
               : e
-                ? ((p = e.avatar_url_medium),
+                ? ((l = e.avatar_url_medium),
                   "Small" == t || "X-Small" == t
-                    ? (p = e.avatar_url)
+                    ? (l = e.avatar_url)
                     : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
-                      (p = e.avatar_url_full))
-                : i && (p = i),
+                      (l = e.avatar_url_full))
+                : i && (l = i),
             s.createElement(u, {
-              strAvatarURL: p,
+              strAvatarURL: l,
               size: t,
               className: (0, o.A)((0, n.rO)(e), r),
               ...A,
@@ -438,8 +424,8 @@
             (n = m.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + n),
           s.createElement(
             "div",
-            { className: (0, o.A)(h().avatarFrame, a, "avatarFrame"), ...i },
-            s.createElement("img", { className: h().avatarFrameImg, src: n }),
+            { className: (0, o.A)(c().avatarFrame, a, "avatarFrame"), ...i },
+            s.createElement("img", { className: c().avatarFrameImg, src: n }),
           )
         );
       });

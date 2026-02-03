@@ -30,7 +30,7 @@
     },
     42519: (e, t, a) => {
       "use strict";
-      a.d(t, { p: () => h, s: () => A });
+      a.d(t, { p: () => h, s: () => p });
       var n = a(90626),
         o = a(68255),
         l = a(95695),
@@ -38,56 +38,56 @@
         r = a(64846),
         c = a(26408),
         s = a(61859),
-        g = a(91126),
-        m = a.n(g),
-        u = a(41756),
+        m = a(91126),
+        u = a.n(m),
+        g = a(41756),
         d = a(22837),
-        L = a(83882),
-        E = a(22797),
-        _ = a(12155);
-      function A(e) {
+        E = a(83882),
+        L = a(22797),
+        A = a(12155);
+      function p(e) {
         var t, a;
-        const { editModel: g } = e,
-          [A, p] = n.useState(d.gS.k_Lang_German),
-          [w, S] = n.useState(!1),
-          [v, C] = n.useState(null),
-          f = g.GetClanSteamID(),
-          k = g.GetGID(),
-          z = (0, u.Wj)(f, k),
-          [, I] = n.useReducer((e) => e + 1, 0),
-          D =
-            z.isSuccess &&
-            (null === (t = z.data) || void 0 === t
+        const { editModel: m } = e,
+          [p, _] = n.useState(1),
+          [w, v] = n.useState(!1),
+          [C, S] = n.useState(null),
+          f = m.GetClanSteamID(),
+          z = m.GetGID(),
+          I = (0, g.Wj)(f, z),
+          [, D] = n.useReducer((e) => e + 1, 0),
+          G =
+            I.isSuccess &&
+            (null === (t = I.data) || void 0 === t
               ? void 0
               : t.crowdin_project_id) &&
-            (null === (a = z.data) || void 0 === a ? void 0 : a.crowdin_file_id)
-              ? `https://valve.crowdin.com/editor/${z.data.crowdin_project_id}/${z.data.crowdin_file_id}`
+            (null === (a = I.data) || void 0 === a ? void 0 : a.crowdin_file_id)
+              ? `https://valve.crowdin.com/editor/${I.data.crowdin_project_id}/${I.data.crowdin_file_id}`
               : null,
-          G = (0, u.IW)(f.ConvertTo64BitString(), k, A);
-        return z.isLoading
+          R = (0, g.IW)(f.ConvertTo64BitString(), z, p);
+        return I.isLoading
           ? null
           : n.createElement(
               r.E,
               { clanSteamID: e.editModel.GetClanSteamID() },
-              n.createElement(L.mt, { active: w }, n.createElement(E.t, null)),
+              n.createElement(E.mt, { active: w }, n.createElement(L.t, null)),
               n.createElement(
                 "div",
-                { className: m().ValveCrowdInSyncCtn },
+                { className: u().ValveCrowdInSyncCtn },
                 n.createElement(o.J0, {
-                  value: g.BPushUpdatesToCrowdInAutomatically(),
+                  value: m.BPushUpdatesToCrowdInAutomatically(),
                   onChange: (e) => {
-                    g.SetPushSourceToCrowdInAutomatically(e), I();
+                    m.SetPushSourceToCrowdInAutomatically(e), D();
                   },
                 }),
                 n.createElement(
                   "div",
-                  { className: m().ValveCrowdInSyncLabel },
+                  { className: u().ValveCrowdInSyncLabel },
                   (0, s.we)(
                     "#EventEditor_Localization_AutomaticallyPushChangesToCrowdIn",
                   ),
                   " (",
-                  D
-                    ? n.createElement("a", { href: D }, D)
+                  G
+                    ? n.createElement("a", { href: G }, G)
                     : (0, s.we)("#EventEditor_Localization_NotMappedToCrowdIn"),
                   ")",
                   n.createElement(c.o, {
@@ -104,10 +104,10 @@
                 n.createElement(h, {
                   onChange: (e) => {
                     const t = e.target.value;
-                    if ("all" === t) p(d.gS.k_Lang_None);
+                    if ("all" === t) _(-1);
                     else {
                       const e = (0, d.sf)(t);
-                      p(e);
+                      _(e);
                     }
                   },
                 }),
@@ -116,30 +116,30 @@
                   {
                     className: i().EditPreviewButton,
                     onClick: () => {
-                      S(!0),
-                        G.mutateAsync()
+                      v(!0),
+                        R.mutateAsync()
                           .then(() => window.location.reload())
                           .catch((e) => {
-                            C(e.toString()), S(!1);
+                            S(e.toString()), v(!1);
                           })
                           .then(() => {
-                            C(null);
+                            S(null);
                           });
                     },
                   },
                   (0, s.we)("#EventEditor_Localization_FetchLocalization"),
                 ),
               ),
-              v &&
+              C &&
                 n.createElement(
                   n.Fragment,
                   null,
                   n.createElement(
                     "div",
-                    { className: m().SyncPanelError },
-                    n.createElement(_.X, null),
+                    { className: u().SyncPanelError },
+                    n.createElement(A.X, null),
                     " ",
-                    v,
+                    C,
                   ),
                 ),
             );
@@ -167,7 +167,7 @@
     },
     25228: (e, t, a) => {
       "use strict";
-      a.d(t, { Yg: () => w, t3: () => S });
+      a.d(t, { Yg: () => w, t3: () => v });
       var n = a(40323),
         o = a.n(n),
         l = a(90626),
@@ -175,16 +175,16 @@
         r = a(2160),
         c = a(69343),
         s = a(68255),
-        g = a(95695),
-        m = a(9154),
-        u = a(738),
+        m = a(95695),
+        u = a(9154),
+        g = a(738),
         d = a(22797),
-        L = a(68797),
-        E = a(52038),
-        _ = a(61859),
-        A = a(87669),
+        E = a(68797),
+        L = a(52038),
+        A = a(61859),
+        p = a(87669),
         h = a(32754),
-        p = a(96471);
+        _ = a(96471);
       const w = (e) => {
           const t = (t, a) => {
             t.preventDefault();
@@ -195,26 +195,26 @@
                 lang: r,
               } = e,
               c = n(),
-              s = new A.s();
-            let g = l ? l + "_localization" : "localization";
+              s = new p.s();
+            let m = l ? l + "_localization" : "localization";
             switch (a) {
               case "csv_row":
-                s.WriteLocalizationData_CSV_LanguageRows(c, g + ".csv");
+                s.WriteLocalizationData_CSV_LanguageRows(c, m + ".csv");
                 break;
               case "csv_column":
-                s.WriteLocalizationData_CSV_LanguageColumns(c, g + ".csv");
+                s.WriteLocalizationData_CSV_LanguageColumns(c, m + ".csv");
                 break;
               case "csv_token":
                 s.WriteLocalizationData_CSV_TokenAndLanguageColumns(
                   c,
-                  g + ".csv",
+                  m + ".csv",
                 );
                 break;
               case "xml":
                 s.WriteLocalizationData_XML_SingleLanguage(
                   c,
                   r,
-                  g + "_" + (0, i.x6)((0, i.Lg)(r)) + ".xml",
+                  m + "_" + (0, i.x6)((0, i.Lg)(r)) + ".xml",
                 );
             }
             o && o();
@@ -229,28 +229,28 @@
                 l.createElement(
                   s.jn,
                   { onClick: (e) => t(e, "csv_row") },
-                  (0, _.we)("#Localization_Export_Btn_RowLanguages"),
+                  (0, A.we)("#Localization_Export_Btn_RowLanguages"),
                 ),
                 l.createElement(
                   s.jn,
                   { onClick: (e) => t(e, "csv_column") },
-                  (0, _.we)("#Localization_Export_Btn_ColumnLanguages"),
+                  (0, A.we)("#Localization_Export_Btn_ColumnLanguages"),
                 ),
                 l.createElement(
                   s.jn,
                   { onClick: (e) => t(e, "csv_token") },
-                  (0, _.we)("#Localization_Export_Btn_TokenLanguages"),
+                  (0, A.we)("#Localization_Export_Btn_TokenLanguages"),
                 ),
               ),
             Boolean(e.bShowXML) &&
               l.createElement(
                 s.jn,
                 { onClick: (e) => t(e, "xml") },
-                (0, _.we)("#Localization_Export_Btn_XML"),
+                (0, A.we)("#Localization_Export_Btn_XML"),
               ),
           );
         },
-        S = (e) => {
+        v = (e) => {
           const [t, a] = (0, l.useState)(!1),
             n = (e, t) => {
               a(!1),
@@ -259,9 +259,9 @@
                     e.message,
                   e,
                 ),
-                (0, u.pg)(
+                (0, g.pg)(
                   l.createElement(
-                    m.KG,
+                    u.KG,
                     null,
                     l.createElement(
                       "div",
@@ -269,7 +269,7 @@
                       l.createElement(
                         "p",
                         null,
-                        (0, _.we)("#Localization_Error_Input"),
+                        (0, A.we)("#Localization_Error_Input"),
                       ),
                       l.createElement("p", null, e.message),
                     ),
@@ -282,23 +282,23 @@
               let t = "";
               e.forEach((e) => {
                 t.length > 0 && (t += ", "),
-                  (t += (0, _.we)("#Language_" + (0, i.Lg)(e)));
+                  (t += (0, A.we)("#Language_" + (0, i.Lg)(e)));
               }),
-                (0, u.pg)(
+                (0, g.pg)(
                   l.createElement(
-                    m.o0,
+                    u.o0,
                     {
-                      strTitle: (0, _.we)("#EventDisplay_Share_Success"),
+                      strTitle: (0, A.we)("#EventDisplay_Share_Success"),
                       bAlertDialog: !0,
                     },
                     l.createElement(
                       "div",
                       null,
                       0 == t.length
-                        ? (0, _.we)(
+                        ? (0, A.we)(
                             "#Localization_Success_ImportComplete_NoChange",
                           )
-                        : (0, _.we)("#Localization_Success_ImportComplete", t),
+                        : (0, A.we)("#Localization_Success_ImportComplete", t),
                     ),
                   ),
                   window,
@@ -309,14 +309,14 @@
               if (l && l.length > 0) {
                 a(!0);
                 let t = new Array(),
-                  g = new A.s();
+                  i = new p.s();
                 for (let a = 0; a < l.length; ++a)
                   if (l[a]) {
                     if (l[a].name.toLocaleLowerCase().endsWith(".csv"))
                       return void o().parse(l[0], {
                         header: !0,
                         complete: (t) => {
-                          let a = new A.s().DetectAndFormatCSV(t);
+                          let a = new p.s().DetectAndFormatCSV(t);
                           if (!a)
                             return void n({
                               code: "",
@@ -324,7 +324,7 @@
                               row: 0,
                               type: "filenameerror",
                             });
-                          const o = _.A0.GetLanguageListForRealms([
+                          const o = A.A0.GetLanguageListForRealms([
                               r.TU.k_ESteamRealmGlobal,
                             ]),
                             l = e.fnOnImportLocData(a, o);
@@ -333,14 +333,11 @@
                         error: n,
                       });
                     if (l[a].name.toLocaleLowerCase().endsWith(".xml")) {
-                      let { language: o } = (0, c.jj)(
-                        l[a].name,
-                        i.gS.k_Lang_None,
-                      );
-                      if (null == o || o == i.gS.k_Lang_None)
+                      let { language: o } = (0, c.jj)(l[a].name, -1);
+                      if (null == o || -1 == o)
                         return void n({
                           code: "",
-                          message: (0, _.we)(
+                          message: (0, A.we)(
                             "#Localization_Error_FileLangauage",
                             l[a].name,
                           ),
@@ -349,7 +346,7 @@
                         });
                       try {
                         const n =
-                          await g.ReadLocalizationData_XML_SingleLanguage(
+                          await i.ReadLocalizationData_XML_SingleLanguage(
                             l[a],
                             o,
                           );
@@ -357,10 +354,10 @@
                           -1 == t.indexOf(e) && t.push(e);
                         });
                       } catch (e) {
-                        let t = (0, L.H)(e);
+                        let t = (0, E.H)(e);
                         return void n({
                           code: "",
-                          message: (0, _.we)(
+                          message: (0, A.we)(
                             "#Localization_Error_XMLParseError",
                             t.strErrorMsg,
                           ),
@@ -371,7 +368,7 @@
                     } else
                       n({
                         code: "",
-                        message: (0, _.we)(
+                        message: (0, A.we)(
                           "#Localization_Error_FileExtention",
                           l[a].name,
                         ),
@@ -385,23 +382,23 @@
           return l.createElement(
             h.he,
             {
-              className: (0, E.A)(
-                e.className ? e.className : g.EditPreviewButton,
+              className: (0, L.A)(
+                e.className ? e.className : m.EditPreviewButton,
               ),
               toolTipContent: e.strToolTip,
             },
             l.createElement(
               "label",
-              { className: p.ImportButton, htmlFor: "importlocalization" },
+              { className: _.ImportButton, htmlFor: "importlocalization" },
               t && l.createElement(d.t, { size: "small" }),
               l.createElement(
                 "div",
-                { className: p.Label },
-                (0, _.we)(e.strLabel ? e.strLabel : "#Localization_Import_Btn"),
+                { className: _.Label },
+                (0, A.we)(e.strLabel ? e.strLabel : "#Localization_Import_Btn"),
               ),
               l.createElement("input", {
                 id: "importlocalization",
-                className: p.ImportButton,
+                className: _.ImportButton,
                 style: { display: "none" },
                 type: "file",
                 onSubmit: w,
@@ -429,11 +426,9 @@
           if (a && a[t]) return a[t];
         }
         SetLocalization(e, t, a) {
-          let o = this.m_mapTokens.get(e);
-          o ||
-            ((o = (0, l.$Y)([], n.gS.k_Lang_MAX, null)),
-            this.m_mapTokens.set(e, o)),
-            (o[t] = a);
+          let n = this.m_mapTokens.get(e);
+          n || ((n = (0, l.$Y)([], 31, null)), this.m_mapTokens.set(e, n)),
+            (n[t] = a);
         }
         GetSortedTokenList() {
           let e = [];
@@ -500,8 +495,7 @@
                     ? void 0
                     : l.length) >= 2 &&
                   "field" === e.meta.fields[0] &&
-                  (0, n.sf)(e.meta.fields[1], n.gS.k_Lang_None) !=
-                    n.gS.k_Lang_None
+                  -1 != (0, n.sf)(e.meta.fields[1], -1)
                 ? (c = this.ReadLocalizationData_CSV_LanguageColumns(e))
                 : (null ===
                     (r =
@@ -546,7 +540,7 @@
           return (
             e.data.forEach((e) => {
               const a = e.field;
-              for (let o = n.gS.k_Lang_English; o < n.gS.k_Lang_MAX; ++o) {
+              for (let o = 0; o < 31; ++o) {
                 const l = (0, n.x6)((0, n.Lg)(o));
                 t.SetLocalization(a, o, e[l]);
               }
@@ -558,8 +552,8 @@
           const t = new c();
           return (
             e.data.forEach((e) => {
-              const a = (0, n.sf)(e.language, n.gS.k_Lang_MAX);
-              if (a !== n.gS.k_Lang_MAX)
+              const a = (0, n.sf)(e.language, 31);
+              if (31 !== a)
                 for (const [n, o] of Object.entries(e))
                   "language" !== n &&
                     "string" == typeof o &&

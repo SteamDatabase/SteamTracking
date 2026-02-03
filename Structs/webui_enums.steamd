@@ -125,16 +125,6 @@ enum DOTA_GAMEMODE
 	DOTA_GAMEMODE_COACHES_CHALLENGE = 25;
 }
 
-enum EAbuseNotificationType
-{
-	k_EAbuseNotificationType_Invalid = 0;
-	k_EAbuseNotificationType_TradeBan = 1;
-	k_EAbuseNotificationType_Profile = 2;
-	k_EAbuseNotificationType_Group = 3;
-	k_EAbuseNotificationType_Comment = 4;
-	k_EAbuseNotificationType_Forum = 5;
-}
-
 enum EAccountFlag
 {
 	k_EAccountFlagNormalUser = 0;
@@ -174,22 +164,6 @@ enum EActivateGameOverlayToWebPageMode
 	k_EActivateGameOverlayToWebPageMode_Modal = 1;
 }
 
-enum EActorAffiliation
-{
-	k_EActorAffiliation_Unknown = 0;
-	k_EActorAffiliation_Valve = 1;
-	k_EActorAffiliation_Keywords = 2;
-	k_EActorAffiliation_TaskUs = 3;
-	k_EActorAffiliation_Volunteer = 4;
-}
-
-enum EAgreementType
-{
-	k_EAgreementType_Invalid = -1;
-	k_EAgreementType_GlobalSSA = 0;
-	k_EAgreementType_ChinaSSA = 1;
-}
-
 enum EAllowShareIP
 {
 	k_EAllowShareIP_Invalid = -1;
@@ -197,70 +171,6 @@ enum EAllowShareIP
 	k_EAllowShareIP_Never = 1;
 	k_EAllowShareIP_FriendsOnly = 2;
 	k_EAllowShareIP_Anyone = 3;
-}
-
-enum EAnswerActorRank
-{
-	k_EAnswerActorRank_None = 0;
-	k_EAnswerActorRank_Valve = 1;
-	k_EAnswerActorRank_GlobalMod = 2;
-	k_EAnswerActorRank_Developer = 3;
-	k_EAnswerActorRank_Moderator = 4;
-	k_EAnswerActorRank_OP = 5;
-}
-
-enum EAppAllowDownloadsWhileRunningBehavior
-{
-	k_EAppAllowDownloadsWhileRunningBehaviorUseGlobal = 0;
-	k_EAppAllowDownloadsWhileRunningBehaviorAlwaysAllow = 1;
-	k_EAppAllowDownloadsWhileRunningBehaviorNeverAllow = 2;
-}
-
-enum EAppAutoUpdateBehavior
-{
-	k_EAppAutoUpdateBehaviorUseGlobal = 0;
-	k_EAppAutoUpdateBehaviorDoNotUpdate = 1;
-	k_EAppAutoUpdateBehaviorHighPriority = 2;
-	k_EAppAutoUpdateBehaviorRegularPriority = 3;
-}
-
-enum EAppDevsRelationship
-{
-	k_EAppDevsRelationship_Unknown = 0;
-	k_EAppDevsRelationship_Publisher = 1;
-	k_EAppDevsRelationship_Developer = 2;
-	k_EAppDevsRelationship_Publisher_Developer = 3;
-	k_EAppDevsRelationship_MacPortDeveloper = 4;
-	k_EAppDevsRelationship_LinuxPortDeveloper = 5;
-	k_EAppDevsRelationship_Franchise = 6;
-	k_EAppDevsRelationship_MAX = 7;
-}
-
-enum EAppOwnershipFlags
-{
-	k_EAppOwnershipFlags_None = 0;
-	k_EAppOwnershipFlags_OwnsLicense = 1;
-	k_EAppOwnershipFlags_FreeLicense = 2;
-	k_EAppOwnershipFlags_RegionRestricted = 4;
-	k_EAppOwnershipFlags_LowViolence = 8;
-	k_EAppOwnershipFlags_InvalidPlatform = 16;
-	k_EAppOwnershipFlags_SharedLicense = 32;
-	k_EAppOwnershipFlags_FreeWeekend = 64;
-	k_EAppOwnershipFlags_RetailLicense = 128;
-	k_EAppOwnershipFlags_LicenseLocked = 256;
-	k_EAppOwnershipFlags_LicensePending = 512;
-	k_EAppOwnershipFlags_LicenseExpired = 1024;
-	k_EAppOwnershipFlags_LicensePermanent = 2048;
-	k_EAppOwnershipFlags_LicenseRecurring = 4096;
-	k_EAppOwnershipFlags_LicenseCanceled = 8192;
-	k_EAppOwnershipFlags_AutoGrant = 16384;
-	k_EAppOwnershipFlags_PendingGift = 32768;
-	k_EAppOwnershipFlags_RentalNotActivated = 65536;
-	k_EAppOwnershipFlags_Rental = 131072;
-	k_EAppOwnershipFlags_SiteLicense = 262144;
-	k_EAppOwnershipFlags_LegacyFreeSub = 524288;
-	k_EAppOwnershipFlags_InvalidOSType = 1048576;
-	k_EAppOwnershipFlags_TimedTrial = 2097152;
 }
 
 enum EAppReleaseState
@@ -293,50 +203,10 @@ enum EAppUpdateProgress
 	k_EAppUpdateProgress_Max = 7;
 }
 
-enum EAuctionBadgeLevel
-{
-	k_EAuctionBadgeLevel_Invalid = 0;
-	k_EAuctionBadgeLevel_MadeGoo = 1;
-	k_EAuctionBadgeLevel_BidInAuction = 2;
-	k_EAuctionBadgeLevel_WonInAuction = 3;
-}
-
 enum EAudioStreamType
 {
 	k_EAudioStreamType_Microphone = 1;
 	k_EAudioStreamType_IncomingStream = 2;
-}
-
-enum EAvatarState
-{
-	k_EAvatarState_Unknown = 0;
-	k_EAvatarState_Approved = 1;
-	k_EAvatarState_Denied = 2;
-}
-
-enum EBannedVanityURLAction
-{
-	k_EBannedVanityURLAction_Invalid = 0;
-	k_EBannedVanityURLAction_Add = 1;
-	k_EBannedVanityURLAction_Remove = 2;
-}
-
-enum EBannedVanityURLSource
-{
-	k_EBannedVanityURLSource_Unknown = 0;
-	k_EBannedVanityURLSource_ResetContent = 1;
-	k_EBannedVanityURLSource_Manual = 2;
-}
-
-enum EBroadcastImageType
-{
-	k_EBroadcastImageType_None = 0;
-	k_EBroadcastImageType_Offline = 1;
-	k_EBroadcastImageType_Standby = 2;
-	k_EBroadcastImageType_Avatar = 3;
-	k_EBroadcastImageType_Summary = 4;
-	k_EBroadcastImageType_Background = 5;
-	k_EBroadcastImageType_Emoticon = 6;
 }
 
 enum EBrowserType
@@ -385,41 +255,6 @@ enum EChatFontSize
 	k_EChatFontSizeLarge = 3;
 }
 
-enum EClanAccountFlag
-{
-	k_EClanAccountFlag_None = 0;
-	k_EClanAccountFlag_TrustedPress = 1;
-	k_EClanAccountFlag_AllowClanImages = 2;
-	k_EClanAccountFlag_AllowRSSFeed = 4;
-	k_EClanAccountFlag_AllowPartnerEventEditor = 8;
-	k_EClanAccountFlag_AllowFAQEditing = 16;
-	k_EClanAccountFlag_AllowSalePageEditing = 32;
-	k_EClanAccountFlag_AllowSalePagePublishWithoutReview = 64;
-	k_EClanAccountFlag_AllowInSteamChina = 128;
-}
-
-enum EClanImageFileType
-{
-	k_EClanImageFileType_Unknown = 0;
-	k_EClanImageFileType_JPEG = 1;
-	k_EClanImageFileType_GIF = 2;
-	k_EClanImageFileType_PNG = 3;
-	k_EClanImageFileType_MP4 = 4;
-	k_EClanImageFileType_WEBM = 5;
-	k_EClanImageFileType_VTT = 6;
-	k_EClanImageFileType_SRT = 7;
-	k_EClanImageFileType_SVG = 8;
-	k_EClanImageFileType_XML = 9;
-	k_EClanImageFileType_WEBP = 10;
-}
-
-enum EClanImageGroup
-{
-	k_EClanImageGroup_None = 0;
-	k_EClanImageGroup_Announcement = 1;
-	k_EClanImageGroup_Curator = 2;
-}
-
 enum EClientUINotification
 {
 	k_EClientUINotificationGroupChatMessage = 1;
@@ -433,27 +268,6 @@ enum EClientUsedInputType
 	k_EClientUsedInputTypeMouse = 1;
 	k_EClientUsedInputTypeController = 2;
 	k_EClientUsedInputTypeMax = 3;
-}
-
-enum ECommentDeleteReason
-{
-	k_ECommentDeleteReason_Invalid = 0;
-	k_ECommentDeleteReason_User = 1;
-	k_ECommentDeleteReason_ThreadOwner = 2;
-	k_ECommentDeleteReason_Moderator = 3;
-	k_ECommentDeleteReason_Support = 4;
-	k_ECommentDeleteReason_Spam = 5;
-	k_ECommentDeleteReason_AccountDeletion = 6;
-}
-
-enum ECommentReportAction
-{
-	k_ECommentReportAction_Invalid = 0;
-	k_ECommentReportAction_NoAction = 1;
-	k_ECommentReportAction_Deleted = 2;
-	k_ECommentReportAction_Hidden = 3;
-	k_ECommentReportAction_ExternalDelete = 4;
-	k_ECommentReportAction_ThreadDeleted = 5;
 }
 
 enum ECommunityProfileItemProperty
@@ -470,42 +284,6 @@ enum ECommunityProfileItemProperty
 	k_ECommunityProfileItemProperty_MovieMP4 = 9;
 	k_ECommunityProfileItemProperty_MovieWebMSmall = 10;
 	k_ECommunityProfileItemProperty_MovieMP4Small = 11;
-}
-
-enum ECommunityWordFilterReason
-{
-	k_ECommunityWordFilterReason_Invalid = 0;
-	k_ECommunityWordFilterReason_Phishing = 1;
-	k_ECommunityWordFilterReason_Spam = 2;
-	k_ECommunityWordFilterReason_AdultContent = 3;
-	k_ECommunityWordFilterReason_Cheat = 4;
-	k_ECommunityWordFilterReason_Referral = 5;
-	k_ECommunityWordFilterReason_InappropriateLanguageStrongProfanity = 6;
-	k_ECommunityWordFilterReason_Piracy = 7;
-	k_ECommunityWordFilterReason_Scam = 8;
-	k_ECommunityWordFilterReason_Malware = 9;
-	k_ECommunityWordFilterReason_FreeTLD = 10;
-	k_ECommunityWordFilterReason_Harassment = 11;
-	k_ECommunityWordFilterReason_URLShortener = 12;
-	k_ECommunityWordFilterReason_InappropriateLanguageSlur = 13;
-	k_ECommunityWordFilterReason_InappropriateLanguageOther = 14;
-	k_ECommunityWordFilterReason_InappropriateLanguageMildProfanity = 15;
-	k_ECommunityWordFilterReason_InappropriateLanguageHateSpeech = 16;
-	k_ECommunityWordFilterReason_Max = 17;
-}
-
-enum ECommunityWordFilterType
-{
-	k_ECommunityWordFilterTypeInvalid = 0;
-	k_ECommunityWordFilterTypeBadWords = 1;
-	k_ECommunityWordFilterTypeBlacklistedURLs = 2;
-	k_ECommunityWordFilterTypeWhitelistedGreenlightURLs = 3;
-	k_ECommunityWordFilterTypeBlacklistOverrideDomains = 4;
-	k_ECommunityWordFilterTypeBadWordsInChina = 5;
-	k_ECommunityWordFilterTypeCleanWords = 6;
-	k_ECommunityWordFilterTypeCleanWordsComplete = 7;
-	k_ECommunityWordFilterTypeBadNames = 8;
-	k_ECommunityWordFilterTypeGoodNames = 9;
 }
 
 enum EComputerActiveState
@@ -749,22 +527,6 @@ enum EGamingDeviceType
 	k_EGamingDeviceType_SteamDeck = 544;
 }
 
-enum EGetChannelsAlgorithm
-{
-	k_EGetChannelsAlgorithm_Default = 1;
-	k_EGetChannelsAlgorithm_Friends = 2;
-	k_EGetChannelsAlgorithm_Featured = 3;
-	k_EGetChannelsAlgorithm_Developer = 4;
-	k_EGetChannelsAlgorithm_Following = 5;
-}
-
-enum EGetGamesAlgorithm
-{
-	k_EGetGamesAlgorithm_Default = 1;
-	k_EGetGamesAlgorithm_MostPlayed = 2;
-	k_EGetGamesAlgorithm_PopularNew = 3;
-}
-
 enum EHide
 {
 	k_EHideOwnedItems = 0;
@@ -946,25 +708,6 @@ enum EMenu
 	k_EMenuTouchAlways = 3;
 }
 
-enum EModeratorAction
-{
-	k_EModeratorAction_Resolve = 0;
-	k_EModeratorAction_Ban = 1;
-	k_EModeratorAction_Unban = 2;
-	k_EModeratorAction_Hide = 3;
-	k_EModeratorAction_Unhide = 4;
-	k_EModeratorAction_Lock = 5;
-	k_EModeratorAction_Delete = 6;
-	k_EModeratorAction_Undelete = 7;
-	k_EModeratorAction_MassReset = 8;
-	k_EModeratorAction_Unlock = 9;
-	k_EModeratorAction_Warn = 10;
-	k_EModeratorAction_Move = 11;
-	k_EModeratorAction_Classify = 12;
-	k_EModeratorAction_Blur = 13;
-	k_EModeratorAction_Unblur = 14;
-}
-
 enum ENetFakeLocalSystemState
 {
 	k_ENetFakeLocalSystemState_Normal = 0;
@@ -981,13 +724,6 @@ enum ENoiseGateLevel
 	k_ENoiseGateLevel_Low = 1;
 	k_ENoiseGateLevel_Medium = 2;
 	k_ENoiseGateLevel_High = 3;
-}
-
-enum ENotificationSetting
-{
-	k_ENotificationSettingNotifyUseDefault = 0;
-	k_ENotificationSettingAlways = 1;
-	k_ENotificationSettingNever = 2;
 }
 
 enum ENotifyFlag
@@ -1030,21 +766,6 @@ enum EOverlayToStoreFlag
 	k_EOverlayToStoreFlag_AddToCartAndShow = 2;
 }
 
-enum EPartnerEventDisplayLocation
-{
-	k_EPartnerEventDisplayLocation_Invalid = 0;
-	k_EPartnerEventDisplayLocation_AppDetailsSpotlight = 1;
-	k_EPartnerEventDisplayLocation_LibraryOverview = 2;
-	k_EPartnerEventDisplayLocation_StoreAppPage = 3;
-	k_EPartnerEventDisplayLocation_EventScroller = 4;
-	k_EPartnerEventDisplayLocation_AppDetailsActivity = 5;
-	k_EPartnerEventDisplayLocation_CommunityHub = 6;
-	k_EPartnerEventDisplayLocation_StoreFrontPage = 7;
-	k_EPartnerEventDisplayLocation_NewsHub = 8;
-	k_EPartnerEventDisplayLocation_GamepadHome = 9;
-	k_EPartnerEventDisplayLocation_StoreHub = 10;
-}
-
 enum EPlatformType
 {
 	k_EPlatformTypeUnknown = 0;
@@ -1080,50 +801,6 @@ enum EPreviewMode
 	EPreviewMode_EditBackground = 3;
 }
 
-enum EPriceProposalState
-{
-	k_EPriceProposalStateInvalid = 0;
-	k_EPriceProposalStateActive = 1;
-	k_EPriceProposalStateCanceled = 2;
-	k_EPriceProposalStateApplied = 3;
-	k_EPriceProposalStateApproved = 4;
-}
-
-enum EProfileColorStyle
-{
-	k_EProfileColorStyle_Invalid = 0;
-	k_EProfileColorStyle_BackgroundGradient_Left = 1;
-	k_EProfileColorStyle_BackgroundGradient_Right = 2;
-	k_EProfileColorStyle_BackgroundGradient_Center = 3;
-	k_EProfileColorStyle_ShowcaseGradient_Left = 4;
-	k_EProfileColorStyle_ShowcaseGradient_Right = 5;
-}
-
-enum EProfileCooldown
-{
-	k_EProfileCooldown_Unknown = 0;
-	k_EProfileCooldown_PersonaName = 1;
-	k_EProfileCooldown_ProfileSummary = 2;
-}
-
-enum EProfileCustomizationStyle
-{
-	k_EProfileCustomizationStyleDefault = 0;
-	k_EProfileCustomizationStyleSelected = 1;
-	k_EProfileCustomizationStyleRarest = 2;
-	k_EProfileCustomizationStyleMostRecent = 3;
-	k_EProfileCustomizationStyleRandom = 4;
-	k_EProfileCustomizationStyleHighestRated = 5;
-}
-
-enum EProfileModerationState
-{
-	k_EProfileModerationState_Unassigned = 0;
-	k_EProfileModerationState_Assigned = 1;
-	k_EProfileModerationState_Escalated = 2;
-	k_EProfileModerationState_Resolved = 3;
-}
-
 enum EPurchaseNoticeType
 {
 	EPurchaseNoticeType_ControllerRequired = 0;
@@ -1140,14 +817,6 @@ enum EPurchaseReservationState
 	k_EPurchaseReservationState_Consumed = 4;
 	k_EPurchaseReservationState_CancelPendingRefund = 5;
 	k_EPurchaseReservationState_UnavailableRegion = 6;
-}
-
-enum EPushUpdatesToCrowdIn
-{
-	k_EPushUpdatesToCrowdIn_Invalid = 0;
-	k_EPushUpdatesToCrowdIn_Never = 1;
-	k_EPushUpdatesToCrowdIn_OnEnglishChanged = 2;
-	k_EPushUpdatesToCrowdIn_Always = 3;
 }
 
 enum ERaiseGameWindowResult
@@ -1241,43 +910,6 @@ enum ESteamRealm
 	k_ESteamRealmChina = 2;
 }
 
-enum ESteamTVContentTemplate
-{
-	k_ESteamTVContentTemplate_Invalid = 0;
-	k_ESteamTVContentTemplate_Takeover = 1;
-	k_ESteamTVContentTemplate_SingleGame = 2;
-	k_ESteamTVContentTemplate_GameList = 3;
-	k_ESteamTVContentTemplate_QuickExplore = 4;
-	k_ESteamTVContentTemplate_ConveyorBelt = 5;
-	k_ESteamTVContentTemplate_WatchParty = 6;
-	k_ESteamTVContentTemplate_Developer = 7;
-	k_ESteamTVContentTemplate_Event = 8;
-}
-
-enum EStoreCuratorListState
-{
-	k_EStoreCuratorListState_Hidden = 0;
-	k_EStoreCuratorListState_Public = 1;
-	k_EStoreCuratorListState_Featured = 2;
-}
-
-enum EStoreCuratorListType
-{
-	k_EStoreCuratorListType_Unknown = 0;
-	k_EStoreCuratorListType_Grid = 1;
-	k_EStoreCuratorListType_Ordered = 2;
-	k_EStoreCuratorListType_AutoDLC = 3;
-	k_EStoreCuratorListType_SaleList = 4;
-}
-
-enum EStoreCuratorRecommendationState
-{
-	k_EStoreCuratorRecommendationState_Recommended = 0;
-	k_EStoreCuratorRecommendationState_NotRecommended = 1;
-	k_EStoreCuratorRecommendationState_Informative = 2;
-	k_EStoreCuratorRecommendationState_CreatedApp = 3;
-}
-
 enum EStoreFilterClauseType
 {
 	k_EStoreFilterClauseTypeOr = 0;
@@ -1290,13 +922,6 @@ enum EStoreFilterClauseType
 	k_EStoreFilterClauseTypeAppType = 7;
 }
 
-enum EStoreItemCacheState
-{
-	k_EStoreItemCacheState_Loading = 1;
-	k_EStoreItemCacheState_Unavailable = 2;
-	k_EStoreItemCacheState_Found = 3;
-}
-
 enum ESuspendResumeProgressState
 {
 	k_ESuspendResumeProgressState_Invalid = 0;
@@ -1305,21 +930,6 @@ enum ESuspendResumeProgressState
 	k_ESuspendResumeProgressState_LoggingIn = 3;
 	k_ESuspendResumeProgressState_WaitingForApp = 4;
 	k_ESuspendResumeProgressState_Working = 5;
-}
-
-enum ETextFilterOperation
-{
-	k_ETextFilterOperationAddWords = 0;
-	k_ETextFilterOperationRemoveWords = 1;
-	k_ETextFilterOperationReplaceWords = 2;
-}
-
-enum ETextFilterSetting
-{
-	k_ETextFilterSettingSteamLabOptedOut = 0;
-	k_ETextFilterSettingEnabled = 1;
-	k_ETextFilterSettingEnabledAllowProfanity = 2;
-	k_ETextFilterSettingDisabled = 3;
 }
 
 enum ETradingCardActivity
@@ -1335,81 +945,6 @@ enum ETwoFactorTokenSteamguardScheme
 	k_ETwoFactorTokenSteamguardScheme_None = 0;
 	k_ETwoFactorTokenSteamguardScheme_Email = 1;
 	k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2;
-}
-
-enum EUserBadge
-{
-	k_EUserBadgeInvalid = 0;
-	k_EUserBadgeYearsOfService = 1;
-	k_EUserBadgeCommunity = 2;
-	k_EUserBadgePortal2PotatoARG = 3;
-	k_EUserBadgeTreasureHunt = 4;
-	k_EUserBadgeSummerSale2011 = 5;
-	k_EUserBadgeWinterSale2011 = 6;
-	k_EUserBadgeSummerSale2012 = 7;
-	k_EUserBadgeWinterSale2012 = 8;
-	k_EUserBadgeCommunityTranslator = 9;
-	k_EUserBadgeCommunityModerator = 10;
-	k_EUserBadgeValveEmployee = 11;
-	k_EUserBadgeGameDeveloper = 12;
-	k_EUserBadgeGameCollector = 13;
-	k_EUserBadgeTradingCardBetaParticipant = 14;
-	k_EUserBadgeSteamBoxBeta = 15;
-	k_EUserBadgeSummer2014RedTeam = 16;
-	k_EUserBadgeSummer2014BlueTeam = 17;
-	k_EUserBadgeSummer2014PinkTeam = 18;
-	k_EUserBadgeSummer2014GreenTeam = 19;
-	k_EUserBadgeSummer2014PurpleTeam = 20;
-	k_EUserBadgeAuction2014 = 21;
-	k_EUserBadgeGoldenProfile2014 = 22;
-	k_EUserBadgeTowerAttackMiniGame = 23;
-	k_EUserBadgeWinter2015ARG_RedHerring = 24;
-	k_EUserBadgeSteamAwards2016Nominations = 25;
-	k_EUserBadgeStickerCompletionist2017 = 26;
-	k_EUserBadgeSteamAwards2017Nominations = 27;
-	k_EUserBadgeSpringCleaning2018 = 28;
-	k_EUserBadgeSalien = 29;
-	k_EUserBadgeRetiredModerator = 30;
-	k_EUserBadgeSteamAwards2018Nominations = 31;
-	k_EUserBadgeValveModerator = 32;
-	k_EUserBadgeWinterSale2018 = 33;
-	k_EUserBadgeLunarNewYearSale2019 = 34;
-	k_EUserBadgeLunarNewYearSale2019GoldenProfile = 35;
-	k_EUserBadgeSpringCleaning2019 = 36;
-	k_EUserBadgeSummerSale2019 = 37;
-	k_EUserBadgeSummerSale2019_TeamHare = 38;
-	k_EUserBadgeSummerSale2019_TeamTortoise = 39;
-	k_EUserBadgeSummerSale2019_TeamCorgi = 40;
-	k_EUserBadgeSummerSale2019_TeamCockatiel = 41;
-	k_EUserBadgeSummerSale2019_TeamPig = 42;
-	k_EUserBadgeSteamAwards2019Nominations = 43;
-	k_EUserBadgeWinterSaleEvent2019 = 44;
-	k_EUserBadgeWinterSale2019Steamville = 45;
-	k_EUserBadgeLunarNewYearSale2020 = 46;
-	k_EUserBadgeSpringCleaning2020 = 47;
-	k_EUserBadgeAwardsCommunityContributor = 48;
-	k_EUserBadgeAwardsCommunityPatron = 49;
-	k_EUserBadgeSteamAwards2020Nominations = 50;
-	k_EUserBadgeSummerSale2021_MaskedAvenger = 51;
-	k_EUserBadgeSummerSale2021_TrailblazingExplorer = 52;
-	k_EUserBadgeSummerSale2021_GorillaScientist = 53;
-	k_EUserBadgeSummerSale2021_ParanormalProfessor = 54;
-	k_EUserBadgeSummerSale2021_GhostDetective = 55;
-	k_EUserBadgeSteamAwards2021Nominations = 56;
-	k_EUserBadgeSteamAwards2021NominationsClassic = 57;
-	k_EUserBadgeRetiredCommunityTranslator = 58;
-	k_EUserBadgeRacingSale2022 = 59;
-	k_EUserBadgeNextFestSummer2022 = 60;
-	k_EUserBadgeSummerMiniGame2022 = 61;
-	k_EUserBadgeNextFestAutumn2022 = 62;
-	k_EUserBadgeSteamAwards2022Nominations = 63;
-	k_EUserBadgeReplay2022 = 64;
-	k_EUserBadgeSteamAwards2023Nominations = 65;
-	k_EUserBadgeYearInReview2023 = 66;
-	k_EUserBadgeSteamAwards2024Nominations = 67;
-	k_EUserBadgeYearInReview2024 = 68;
-	k_EUserBadgeYearInReview2025 = 69;
-	k_EUserBadgeSteamAwards2025Nominations = 70;
 }
 
 enum EVoiceCallState
@@ -1595,13 +1130,6 @@ enum Load
 	k_Loading = 0;
 	k_LoadSuccess = 1;
 	k_LoadFailure = 2;
-}
-
-enum nAppMappingPriority
-{
-	k_nAppMappingPriorityLow = 75;
-	k_nAppMappingPriorityDefault = 100;
-	k_nAppMappingPriorityUserSpecified = 250;
 }
 
 enum Notification
@@ -2199,14 +1727,6 @@ enum UnnamedEnum1b2e013c09afd423
 	SendFailure = 3;
 }
 
-enum UnnamedEnum1e5291df888dba39
-{
-	UNKNOWN = 0;
-	TEXT = 1;
-	OPENTAG = 2;
-	CLOSETAG = 3;
-}
-
 enum UnnamedEnum1e6f97ac4db559c6
 {
 	k_BlockDate = 1;
@@ -2589,15 +2109,6 @@ enum UnnamedEnum3dd1c4581017d7dd
 	MAINTAIN_X = 2;
 	MAINTAIN_Y = 3;
 	PREFERRED_CHILD = 4;
-}
-
-enum UnnamedEnum3fcaac8de59d5e7c
-{
-	PRE_NAME = 0;
-	IN_NAME = 1;
-	POST_NAME = 2;
-	IN_VALUE = 3;
-	IN_QUOTED_VALUE = 4;
 }
 
 enum UnnamedEnum417b0cbbb904eb0c
@@ -3243,13 +2754,6 @@ enum UnnamedEnum6bd8304631e14543
 	Info = 3;
 	Warning = 4;
 	Error = 5;
-}
-
-enum UnnamedEnum6c76081e627d3476
-{
-	Sale = 0;
-	UpdateLandingPage = 1;
-	CreatorHome = 2;
 }
 
 enum UnnamedEnum6d0c4a4e51ce607a
@@ -4579,19 +4083,6 @@ enum UnnamedEnumd9756707c458b640
 	FIRST = 1;
 	SECOND = 2;
 	LAST = 3;
-}
-
-enum UnnamedEnumdafb6d37579e0926
-{
-	k_EFaqID = 0;
-	k_EName = 1;
-	k_EDraftTimestamp = 2;
-	k_EUpdatedDrafts = 3;
-	k_EStaleDrafts = 4;
-	k_EPublished = 5;
-	k_ENeedPublish = 6;
-	k_EGlobalVisible = 7;
-	k_ESteamChinaVisible = 8;
 }
 
 enum UnnamedEnumdb303c21506dd3e7

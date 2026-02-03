@@ -154,155 +154,44 @@
       "use strict";
       o.r(t),
         o.d(t, {
-          Init_LibraryLogoEditor: () => pe,
-          LogoEditor: () => ge,
-          LogoEditorPopup: () => ce,
+          Init_LibraryLogoEditor: () => ne,
+          LogoEditor: () => re,
+          LogoEditorPopup: () => se,
         });
-      var n,
-        s,
-        i,
-        r,
-        a,
-        l,
-        p = o(34629),
-        c = o(90626),
-        g = o(44844),
-        m = o(41735),
-        h = o.n(m),
-        d = o(75844),
-        u = o(80724),
-        _ = o(73745),
-        E = o(3088),
-        L = o(81393),
-        P = o(52038),
-        f = o(81363),
-        A = o(6144);
-      !(function (e) {
-        (e.k_EAppActionPlayGame = "Play"),
-          (e.k_EAppActionLaunchApp = "Launch"),
-          (e.k_EAppActionCancelLaunch = "Cancel"),
-          (e.k_EAppActionShutdownApp = "Stop"),
-          (e.k_EAppActionPause = "Pause"),
-          (e.k_EAppActionResume = "Resume"),
-          (e.k_EAppActionDownload = "Download"),
-          (e.k_EAppActionUpdate = "Update"),
-          (e.k_EAppActionPreload = "PreLoad"),
-          (e.k_EAppActionInstall = "Install"),
-          (e.k_EAppActionUninstall = "Uninstall"),
-          (e.k_EAppActionRemoveShortcut = "RemoveShortcut"),
-          (e.k_EAppActionBorrowApp = "BorrowApp"),
-          (e.k_EAppActionShowStore = "PurchaseApp"),
-          (e.k_EAppActionShowProperties = "GameProperties"),
-          (e.k_EAppActionCreateDesktopShortcut = "CreateDesktopShortcut"),
-          (e.k_EAppActionBackUpFiles = "BackUpFiles"),
-          (e.k_EAppActionStreamGame = "Stream"),
-          (e.k_EAppActionConnectToGame = "Connect"),
-          (e.k_EAppActionPlayMusic = "PlayMusic"),
-          (e.k_EAppActionBrowseLocalFiles = "BrowseLocalFiles"),
-          (e.k_EAppActionLaunching = "Launching"),
-          (e.k_EAppActionTerminating = "Terminating"),
-          (e.k_EAppActionResumeGameInProgress = "ResumeGameInProgress");
-      })(n || (n = {})),
-        (function (e) {
-          (e[(e.k_nAppMappingPriorityLow = 75)] = "k_nAppMappingPriorityLow"),
-            (e[(e.k_nAppMappingPriorityDefault = 100)] =
-              "k_nAppMappingPriorityDefault"),
-            (e[(e.k_nAppMappingPriorityUserSpecified = 250)] =
-              "k_nAppMappingPriorityUserSpecified");
-        })(s || (s = {})),
-        (function (e) {
-          (e[(e.k_EAppAutoUpdateBehaviorUseGlobal = 0)] =
-            "k_EAppAutoUpdateBehaviorUseGlobal"),
-            (e[(e.k_EAppAutoUpdateBehaviorDoNotUpdate = 1)] =
-              "k_EAppAutoUpdateBehaviorDoNotUpdate"),
-            (e[(e.k_EAppAutoUpdateBehaviorHighPriority = 2)] =
-              "k_EAppAutoUpdateBehaviorHighPriority"),
-            (e[(e.k_EAppAutoUpdateBehaviorRegularPriority = 3)] =
-              "k_EAppAutoUpdateBehaviorRegularPriority");
-        })(i || (i = {})),
-        (function (e) {
-          (e[(e.k_EAppAllowDownloadsWhileRunningBehaviorUseGlobal = 0)] =
-            "k_EAppAllowDownloadsWhileRunningBehaviorUseGlobal"),
-            (e[(e.k_EAppAllowDownloadsWhileRunningBehaviorAlwaysAllow = 1)] =
-              "k_EAppAllowDownloadsWhileRunningBehaviorAlwaysAllow"),
-            (e[(e.k_EAppAllowDownloadsWhileRunningBehaviorNeverAllow = 2)] =
-              "k_EAppAllowDownloadsWhileRunningBehaviorNeverAllow");
-        })(r || (r = {})),
-        (function (e) {
-          (e[(e.k_EAppOwnershipFlags_None = 0)] = "k_EAppOwnershipFlags_None"),
-            (e[(e.k_EAppOwnershipFlags_OwnsLicense = 1)] =
-              "k_EAppOwnershipFlags_OwnsLicense"),
-            (e[(e.k_EAppOwnershipFlags_FreeLicense = 2)] =
-              "k_EAppOwnershipFlags_FreeLicense"),
-            (e[(e.k_EAppOwnershipFlags_RegionRestricted = 4)] =
-              "k_EAppOwnershipFlags_RegionRestricted"),
-            (e[(e.k_EAppOwnershipFlags_LowViolence = 8)] =
-              "k_EAppOwnershipFlags_LowViolence"),
-            (e[(e.k_EAppOwnershipFlags_InvalidPlatform = 16)] =
-              "k_EAppOwnershipFlags_InvalidPlatform"),
-            (e[(e.k_EAppOwnershipFlags_SharedLicense = 32)] =
-              "k_EAppOwnershipFlags_SharedLicense"),
-            (e[(e.k_EAppOwnershipFlags_FreeWeekend = 64)] =
-              "k_EAppOwnershipFlags_FreeWeekend"),
-            (e[(e.k_EAppOwnershipFlags_RetailLicense = 128)] =
-              "k_EAppOwnershipFlags_RetailLicense"),
-            (e[(e.k_EAppOwnershipFlags_LicenseLocked = 256)] =
-              "k_EAppOwnershipFlags_LicenseLocked"),
-            (e[(e.k_EAppOwnershipFlags_LicensePending = 512)] =
-              "k_EAppOwnershipFlags_LicensePending"),
-            (e[(e.k_EAppOwnershipFlags_LicenseExpired = 1024)] =
-              "k_EAppOwnershipFlags_LicenseExpired"),
-            (e[(e.k_EAppOwnershipFlags_LicensePermanent = 2048)] =
-              "k_EAppOwnershipFlags_LicensePermanent"),
-            (e[(e.k_EAppOwnershipFlags_LicenseRecurring = 4096)] =
-              "k_EAppOwnershipFlags_LicenseRecurring"),
-            (e[(e.k_EAppOwnershipFlags_LicenseCanceled = 8192)] =
-              "k_EAppOwnershipFlags_LicenseCanceled"),
-            (e[(e.k_EAppOwnershipFlags_AutoGrant = 16384)] =
-              "k_EAppOwnershipFlags_AutoGrant"),
-            (e[(e.k_EAppOwnershipFlags_PendingGift = 32768)] =
-              "k_EAppOwnershipFlags_PendingGift"),
-            (e[(e.k_EAppOwnershipFlags_RentalNotActivated = 65536)] =
-              "k_EAppOwnershipFlags_RentalNotActivated"),
-            (e[(e.k_EAppOwnershipFlags_Rental = 131072)] =
-              "k_EAppOwnershipFlags_Rental"),
-            (e[(e.k_EAppOwnershipFlags_SiteLicense = 262144)] =
-              "k_EAppOwnershipFlags_SiteLicense"),
-            (e[(e.k_EAppOwnershipFlags_LegacyFreeSub = 524288)] =
-              "k_EAppOwnershipFlags_LegacyFreeSub"),
-            (e[(e.k_EAppOwnershipFlags_InvalidOSType = 1048576)] =
-              "k_EAppOwnershipFlags_InvalidOSType"),
-            (e[(e.k_EAppOwnershipFlags_TimedTrial = 2097152)] =
-              "k_EAppOwnershipFlags_TimedTrial");
-        })(a || (a = {})),
-        (function (e) {
-          (e.UpperLeft = "UpperLeft"),
-            (e.BottomLeft = "BottomLeft"),
-            (e.UpperCenter = "UpperCenter"),
-            (e.CenterCenter = "CenterCenter"),
-            (e.BottomCenter = "BottomCenter");
-        })(l || (l = {}));
-      var C = o(20521),
-        B = o.n(C),
-        v = o(48077),
-        I = o.n(v),
-        S = o(51272),
-        O = o(97875),
-        k = o(10050),
-        w = o(25489);
-      const R = {
-          exit: B().FullscreenExitStart,
-          exitActive: B().FullscreenExitActive,
-          exitDone: B().FullscreenExitDone,
-          enter: B().FullscreenEnterStart,
-          enterDone: B().FullscreenEnterDone,
-          enterActive: B().FullscreenEnterActive,
+      var n = o(34629),
+        s = o(90626),
+        r = o(44844),
+        i = o(41735),
+        a = o.n(i),
+        l = o(75844),
+        c = o(80724),
+        m = o(73745),
+        p = o(3088),
+        g = o(81393),
+        d = o(52038),
+        h = o(81363),
+        u = o(6144);
+      var L = o(20521),
+        P = o.n(L),
+        f = o(48077),
+        E = o.n(f),
+        C = o(51272),
+        _ = o(97875),
+        B = o(10050),
+        I = o(25489);
+      const v = {
+          exit: P().FullscreenExitStart,
+          exitActive: P().FullscreenExitActive,
+          exitDone: P().FullscreenExitDone,
+          enter: P().FullscreenEnterStart,
+          enterDone: P().FullscreenEnterDone,
+          enterActive: P().FullscreenEnterActive,
         },
-        y = (0, S.i_)(I()["duration-app-launch"]),
-        b = { pinnedPosition: l.BottomLeft, nWidthPct: 50, nHeightPct: 50 },
-        N = c.createContext({ bFullscreen: !1 });
-      class T extends c.Component {
-        m_refTopCapsule = c.createRef();
+        S = (0, C.i_)(E()["duration-app-launch"]),
+        b = { pinnedPosition: "BottomLeft", nWidthPct: 50, nHeightPct: 50 },
+        N = s.createContext({ bFullscreen: !1 });
+      class O extends s.Component {
+        m_refTopCapsule = s.createRef();
         constructor(e) {
           super(e), (this.state = { logoPosition: void 0 });
         }
@@ -352,10 +241,10 @@
         }
         render() {
           if (!this.props.editMode)
-            return c.createElement(
+            return s.createElement(
               N.Provider,
               { value: { bFullscreen: this.props.bFullscreen } },
-              c.createElement(D, { ref: this.m_refTopCapsule, ...this.props }),
+              s.createElement(y, { ref: this.m_refTopCapsule, ...this.props }),
             );
           const {
               children: e,
@@ -363,37 +252,37 @@
               editMode: o,
               ...n
             } = this.props,
-            s = this.GetLogoPosition();
-          return c.createElement(
+            r = this.GetLogoPosition();
+          return s.createElement(
             N.Provider,
             { value: { bFullscreen: this.props.bFullscreen } },
-            c.createElement(
-              D,
+            s.createElement(
+              y,
               {
                 ref: this.m_refTopCapsule,
                 ...n,
                 editMode: !0,
-                logoPosition: s,
+                logoPosition: r,
                 fnOnPositionChanged: this.OnPositionChanged,
               },
-              c.createElement("div", {
-                className: `${B().PinBox} ${B().BottomLeft}`,
-                onClick: () => this.SetPinnedPosition(l.BottomLeft),
+              s.createElement("div", {
+                className: `${P().PinBox} ${P().BottomLeft}`,
+                onClick: () => this.SetPinnedPosition("BottomLeft"),
                 title: "Pin to Bottom Left",
               }),
-              c.createElement("div", {
-                className: `${B().PinBox} ${B().UpperCenter}`,
-                onClick: () => this.SetPinnedPosition(l.UpperCenter),
+              s.createElement("div", {
+                className: `${P().PinBox} ${P().UpperCenter}`,
+                onClick: () => this.SetPinnedPosition("UpperCenter"),
                 title: "Pin to Top Center",
               }),
-              c.createElement("div", {
-                className: `${B().PinBox} ${B().CenterCenter}`,
-                onClick: () => this.SetPinnedPosition(l.CenterCenter),
+              s.createElement("div", {
+                className: `${P().PinBox} ${P().CenterCenter}`,
+                onClick: () => this.SetPinnedPosition("CenterCenter"),
                 title: "Pin to Center",
               }),
-              c.createElement("div", {
-                className: `${B().PinBox} ${B().BottomCenter}`,
-                onClick: () => this.SetPinnedPosition(l.BottomCenter),
+              s.createElement("div", {
+                className: `${P().PinBox} ${P().BottomCenter}`,
+                onClick: () => this.SetPinnedPosition("BottomCenter"),
                 title: "Pin to Bottom Center",
               }),
               e,
@@ -401,15 +290,15 @@
           );
         }
       }
-      (0, p.Cg)([_.oI], T.prototype, "SetDimensions", null),
-        (0, p.Cg)([_.oI], T.prototype, "OnPositionChanged", null),
-        (0, p.Cg)([_.oI], T.prototype, "PostPositionChangeCallback", null);
-      let D = class extends c.Component {
-        m_refBackgroundImage = c.createRef();
-        m_refLogoImage = c.createRef();
+      (0, n.Cg)([m.oI], O.prototype, "SetDimensions", null),
+        (0, n.Cg)([m.oI], O.prototype, "OnPositionChanged", null),
+        (0, n.Cg)([m.oI], O.prototype, "PostPositionChangeCallback", null);
+      let y = class extends s.Component {
+        m_refBackgroundImage = s.createRef();
+        m_refLogoImage = s.createRef();
         constructor(e) {
           super(e),
-            (0, L.wT)(
+            (0, g.wT)(
               !e.editMode || e.rgLogoImages.length <= 1,
               "Can't use multiple logo images in edit mode",
             ),
@@ -476,33 +365,33 @@
               editMode: t,
               logoPosition: o,
               className: n,
-              classNameNoLogo: s,
+              classNameNoLogo: r,
               fnOnPositionChanged: i,
-              height: r,
+              height: a,
             } = this.props,
-            { bHasLogoImage: a } = this.state,
-            l = 1 == this.props.rgHeaderImages.length,
-            p = (0, P.A)(
-              B().TopCapsule,
+            { bHasLogoImage: l } = this.state,
+            c = 1 == this.props.rgHeaderImages.length,
+            m = (0, d.A)(
+              P().TopCapsule,
               n,
-              !this.state.bHasHeaderImage && B().NoArt,
-              (!this.props.hasHeroImage || l) && B().FallbackArt,
-              !a && s,
+              !this.state.bHasHeaderImage && P().NoArt,
+              (!this.props.hasHeroImage || c) && P().FallbackArt,
+              !l && r,
             ),
-            g = { "--header-height": null == r ? void 0 : r + "px" };
-          return c.createElement(
-            k.M,
+            g = { "--header-height": null == a ? void 0 : a + "px" };
+          return s.createElement(
+            B.M,
             {
-              timeout: y,
+              timeout: S,
               appear: !0,
               in: this.props.bFullscreen,
-              classNames: R,
+              classNames: v,
             },
             (n) =>
-              c.createElement(
+              s.createElement(
                 "div",
-                { ref: n, className: p, style: g },
-                c.createElement(M, {
+                { ref: n, className: m, style: g },
+                s.createElement(R, {
                   ref: this.m_refBackgroundImage,
                   bLowPerfMode: this.props.bLowPerfMode,
                   appid: this.props.appid,
@@ -512,10 +401,10 @@
                   onError: this.OnHeaderError,
                   onLoad: this.OnLoaded,
                 }),
-                a &&
+                l &&
                   null !== o &&
-                  c.createElement(
-                    x,
+                  s.createElement(
+                    A,
                     {
                       key: e[0],
                       strLogoImageURL: e[0],
@@ -524,11 +413,11 @@
                       fnOnPositionChanged: t && i,
                       fullscreen: this.props.bFullscreen,
                     },
-                    c.createElement(E.c, {
+                    s.createElement(p.c, {
                       ref: this.m_refLogoImage,
-                      className: (0, P.A)(
-                        B().TitleLogo,
-                        this.state.bLogoLoaded && B().Loaded,
+                      className: (0, d.A)(
+                        P().TitleLogo,
+                        this.state.bLogoLoaded && P().Loaded,
                       ),
                       rgSources: e,
                       onLoad: this.OnLogoLoad,
@@ -537,19 +426,19 @@
                     }),
                   ),
                 this.props.children,
-                c.createElement("div", { className: B().TopGradient }),
+                s.createElement("div", { className: P().TopGradient }),
               ),
           );
         }
       };
-      (0, p.Cg)([_.oI], D.prototype, "OnHeaderError", null),
-        (0, p.Cg)([_.oI], D.prototype, "OnIncrementalLogoError", null),
-        (0, p.Cg)([_.oI], D.prototype, "OnLogoError", null),
-        (0, p.Cg)([_.oI], D.prototype, "OnLogoLoad", null),
-        (0, p.Cg)([_.oI], D.prototype, "OnLoaded", null),
-        (D = (0, p.Cg)([d.PA], D));
-      class M extends c.Component {
-        m_refBackgroundImage = c.createRef();
+      (0, n.Cg)([m.oI], y.prototype, "OnHeaderError", null),
+        (0, n.Cg)([m.oI], y.prototype, "OnIncrementalLogoError", null),
+        (0, n.Cg)([m.oI], y.prototype, "OnLogoError", null),
+        (0, n.Cg)([m.oI], y.prototype, "OnLogoLoad", null),
+        (0, n.Cg)([m.oI], y.prototype, "OnLoaded", null),
+        (y = (0, n.Cg)([l.PA], y));
+      class R extends s.Component {
+        m_refBackgroundImage = s.createRef();
         m_refCanvasBlurImage;
         constructor(e) {
           super(e),
@@ -615,29 +504,29 @@
         render() {
           let e = null;
           return (
-            (e = c.createElement(
-              c.Fragment,
+            (e = s.createElement(
+              s.Fragment,
               null,
               !this.state.bUseCanvasBlur &&
                 this.state.bBackgroundLoaded &&
                 this.props.rgBlurImages[this.state.nBlurImageIndex] &&
-                c.createElement("img", {
+                s.createElement("img", {
                   src: this.props.rgBlurImages[this.state.nBlurImageIndex],
-                  className: (0, P.A)(
-                    B().ImgSrc,
-                    B().ImgBlur,
-                    B().ImgBlurBackdrop,
+                  className: (0, d.A)(
+                    P().ImgSrc,
+                    P().ImgBlur,
+                    P().ImgBlurBackdrop,
                   ),
                   onError: this.OnBlurImageFailed,
                 }),
               this.state.bUseCanvasBlur &&
                 this.state.bBackgroundLoaded &&
                 !this.props.bLowPerfMode &&
-                c.createElement(f.m, {
-                  className: (0, P.A)(
-                    B().ImgSrc,
-                    B().ImgBlur,
-                    B().ImgBlurBackdrop,
+                s.createElement(h.m, {
+                  className: (0, d.A)(
+                    P().ImgSrc,
+                    P().ImgBlur,
+                    P().ImgBlurBackdrop,
                   ),
                   elementRef: this.m_refCanvasBlurImage,
                   updateRate: 0,
@@ -647,35 +536,35 @@
                   blurAmount: 3,
                 }),
             )),
-            c.createElement(N.Consumer, null, (t) =>
-              c.createElement(
-                k.M,
-                { timeout: y, appear: !0, in: t.bFullscreen, classNames: R },
+            s.createElement(N.Consumer, null, (t) =>
+              s.createElement(
+                B.M,
+                { timeout: S, appear: !0, in: t.bFullscreen, classNames: v },
                 (t) =>
-                  c.createElement(
+                  s.createElement(
                     "div",
                     {
                       ref: t,
-                      className: (0, P.A)(
-                        B().HeaderBackgroundImage,
-                        B().Glassy,
+                      className: (0, d.A)(
+                        P().HeaderBackgroundImage,
+                        P().Glassy,
                       ),
                     },
                     !this.state.bUseCanvasBlur &&
                       this.state.bBackgroundLoaded &&
                       this.props.rgBlurImages[this.state.nBlurImageIndex] &&
-                      c.createElement("img", {
+                      s.createElement("img", {
                         src: this.props.rgBlurImages[
                           this.state.nBlurImageIndex
                         ],
-                        className: (0, P.A)(B().ImgSrc, B().ImgBlur),
+                        className: (0, d.A)(P().ImgSrc, P().ImgBlur),
                         onError: this.OnBlurImageFailed,
                       }),
                     this.state.bUseCanvasBlur &&
                       this.state.bBackgroundLoaded &&
                       !this.props.bLowPerfMode &&
-                      c.createElement(f.m, {
-                        className: (0, P.A)(B().ImgSrc, B().ImgBlur),
+                      s.createElement(h.m, {
+                        className: (0, d.A)(P().ImgSrc, P().ImgBlur),
                         elementRef: this.m_refCanvasBlurImage,
                         updateRate: 0,
                         width: 192,
@@ -683,14 +572,14 @@
                         reductionFactor: 10,
                         blurAmount: 3,
                       }),
-                    c.createElement(
+                    s.createElement(
                       "div",
-                      { className: B().ImgContainer },
+                      { className: P().ImgContainer },
                       this.HasHeaderImages() &&
-                        c.createElement(E.c, {
+                        s.createElement(p.c, {
                           ref: this.m_refBackgroundImage,
                           rgSources: this.props.rgHeaderImages,
-                          className: B().ImgSrc,
+                          className: P().ImgSrc,
                           onLoad: this.OnHeaderLoad,
                           onIncrementalError: this.OnIncrementalError,
                           onError: this.props.onError,
@@ -703,93 +592,93 @@
           );
         }
       }
-      function x(e) {
+      function A(e) {
         const {
             logoPosition: t,
             strLogoImageURL: o,
             children: n,
-            fnOnPositionChanged: s,
+            fnOnPositionChanged: r,
             fullscreen: i,
           } = e,
           {
-            nBottomPct: r,
-            nTopPct: a,
-            nLeftPct: l,
-            nRightPct: p,
-          } = U(t.pinnedPosition, t.nWidthPct, t.nHeightPct),
-          g =
-            (c.useContext(N),
+            nBottomPct: a,
+            nTopPct: l,
+            nLeftPct: c,
+            nRightPct: m,
+          } = T(t.pinnedPosition, t.nWidthPct, t.nHeightPct),
+          p =
+            (s.useContext(N),
             {
-              left: `${l}%`,
-              top: `${a}%`,
+              left: `${c}%`,
+              top: `${l}%`,
               width: `${t.nWidthPct}%`,
               height: `${t.nHeightPct}%`,
             }),
-          m = (0, P.A)(B().BoxSizer, B()[t.pinnedPosition]);
-        return c.createElement(
+          g = (0, d.A)(P().BoxSizer, P()[t.pinnedPosition]);
+        return s.createElement(
           "div",
-          { className: B().BoxSizerContainer },
-          c.createElement(
+          { className: P().BoxSizerContainer },
+          s.createElement(
             "div",
-            { className: B().BoxSizerValidRegion },
+            { className: P().BoxSizerValidRegion },
             !e.editMode &&
-              c.createElement(
+              s.createElement(
                 "div",
-                { className: m, style: g },
-                c.createElement(
-                  k.M,
-                  { timeout: y, appear: !0, in: i, classNames: R },
+                { className: g, style: p },
+                s.createElement(
+                  B.M,
+                  { timeout: S, appear: !0, in: i, classNames: v },
                   (e) =>
-                    c.createElement(
+                    s.createElement(
                       "div",
-                      { ref: e, className: B().TitleImageContainer },
+                      { ref: e, className: P().TitleImageContainer },
                       n,
                     ),
                 ),
               ),
             e.editMode &&
-              c.createElement(
-                H,
+              s.createElement(
+                M,
                 {
                   id: o,
                   pinType: t.pinnedPosition,
                   index: 0,
                   widthPct: t.nWidthPct,
                   heightPct: t.nHeightPct,
-                  fnOnPositionChanged: s,
+                  fnOnPositionChanged: r,
                 },
                 n,
               ),
           ),
         );
       }
-      function U(e, t, o) {
-        let n, s, i, r;
+      function T(e, t, o) {
+        let n, s, r, i;
         switch (e) {
-          case l.BottomLeft:
-            (n = 0), (s = 100 - o), (i = 0), (r = 100 - t);
+          case "BottomLeft":
+            (n = 0), (s = 100 - o), (r = 0), (i = 100 - t);
             break;
-          case l.UpperLeft:
-            (n = 100 - o), (s = 0), (i = 0), (r = 100 - t);
+          case "UpperLeft":
+            (n = 100 - o), (s = 0), (r = 0), (i = 100 - t);
             break;
-          case l.CenterCenter:
+          case "CenterCenter":
             (n = (100 - o) / 2),
               (s = (100 - o) / 2),
-              (i = (100 - t) / 2),
-              (r = (100 - t) / 2);
+              (r = (100 - t) / 2),
+              (i = (100 - t) / 2);
             break;
-          case l.UpperCenter:
-            (n = 100 - o), (s = 0), (i = (100 - t) / 2), (r = (100 - t) / 2);
+          case "UpperCenter":
+            (n = 100 - o), (s = 0), (r = (100 - t) / 2), (i = (100 - t) / 2);
             break;
-          case l.BottomCenter:
-            (n = 0), (s = 100 - o), (i = (100 - t) / 2), (r = (100 - t) / 2);
+          case "BottomCenter":
+            (n = 0), (s = 100 - o), (r = (100 - t) / 2), (i = (100 - t) / 2);
         }
-        return { nBottomPct: n, nTopPct: s, nLeftPct: i, nRightPct: r };
+        return { nBottomPct: n, nTopPct: s, nLeftPct: r, nRightPct: i };
       }
-      var F;
-      (0, p.Cg)([_.oI], M.prototype, "OnIncrementalError", null),
-        (0, p.Cg)([_.oI], M.prototype, "OnHeaderLoad", null),
-        (0, p.Cg)([_.oI], M.prototype, "OnBlurImageFailed", null),
+      var x;
+      (0, n.Cg)([m.oI], R.prototype, "OnIncrementalError", null),
+        (0, n.Cg)([m.oI], R.prototype, "OnHeaderLoad", null),
+        (0, n.Cg)([m.oI], R.prototype, "OnBlurImageFailed", null),
         (function (e) {
           (e.topleft = "Topleft"),
             (e.top = "Top"),
@@ -800,15 +689,15 @@
             (e.bottomleft = "BottomLeft"),
             (e.bottom = "Bottom"),
             (e.bottomright = "BottomRight");
-        })(F || (F = {}));
-      class H extends c.Component {
+        })(x || (x = {}));
+      class M extends s.Component {
         m_rectLinkRegion;
         m_elLinkRegionBox;
         m_nLocalOffsetXPct;
         m_nLocalOffsetYPct;
         m_fnMouseUp = null;
         m_fnMouseMove = null;
-        m_listeners = new A.Ji();
+        m_listeners = new u.Ji();
         m_pinType;
         constructor(e) {
           super(e), (this.state = {});
@@ -823,20 +712,20 @@
             this.UpdateBoxPosition());
         }
         static getDerivedStateFromProps(e, t) {
-          const { pinType: o, widthPct: n, heightPct: s, id: i } = e;
-          if (t && t.id == i) return null;
+          const { pinType: o, widthPct: n, heightPct: s, id: r } = e;
+          if (t && t.id == r) return null;
           const {
-            nBottomPct: r,
+            nBottomPct: i,
             nTopPct: a,
             nLeftPct: l,
-            nRightPct: p,
-          } = U(o, n, s);
+            nRightPct: c,
+          } = T(o, n, s);
           return {
-            id: i,
-            curBottomPosPct: r,
+            id: r,
+            curBottomPosPct: i,
             curTopPosPct: a,
             curLeftPosPct: l,
-            curRightPosPct: p,
+            curRightPosPct: c,
             curWidthPct: n,
             curHeightPct: s,
             EdgeDown: null,
@@ -885,7 +774,7 @@
             nTopPct: t,
             nLeftPct: o,
             nRightPct: n,
-          } = U(
+          } = T(
             this.m_pinType,
             this.state.curWidthPct,
             this.state.curHeightPct,
@@ -904,23 +793,23 @@
             curTopPosPct: o,
             curRightPosPct: n,
             curBottomPosPct: s,
-            curLeftPosPct: i,
+            curLeftPosPct: r,
           } = this.state;
-          const r = (e) => {
+          const i = (e) => {
               let t =
                 ((e - this.m_rectLinkRegion.left) /
                   (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
                   100 -
                 this.m_nLocalOffsetXPct;
               if (
-                this.props.pinType == l.UpperLeft ||
-                this.props.pinType == l.BottomLeft
+                "UpperLeft" == this.props.pinType ||
+                "BottomLeft" == this.props.pinType
               )
                 return 0;
               if (
-                this.props.pinType == l.CenterCenter ||
-                this.props.pinType == l.BottomCenter ||
-                this.props.pinType == l.UpperCenter
+                "CenterCenter" == this.props.pinType ||
+                "BottomCenter" == this.props.pinType ||
+                "UpperCenter" == this.props.pinType
               ) {
                 let e = Math.min(Math.max(t, 0), 45);
                 return (n = e), e;
@@ -935,27 +824,27 @@
                   100 +
                   (this.state.curWidthPct - this.m_nLocalOffsetXPct));
               if (
-                this.props.pinType == l.CenterCenter ||
-                this.props.pinType == l.BottomCenter ||
-                this.props.pinType == l.UpperCenter
+                "CenterCenter" == this.props.pinType ||
+                "BottomCenter" == this.props.pinType ||
+                "UpperCenter" == this.props.pinType
               ) {
                 let e = Math.min(Math.max(t, 0), 45);
-                return (i = e), e;
+                return (r = e), e;
               }
               return t;
             },
-            p = (e) => {
+            l = (e) => {
               let t =
                 ((e - this.m_rectLinkRegion.top) /
                   (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
                   100 -
                 this.m_nLocalOffsetYPct;
               if (
-                this.props.pinType == l.UpperCenter ||
-                this.props.pinType == l.UpperLeft
+                "UpperCenter" == this.props.pinType ||
+                "UpperLeft" == this.props.pinType
               )
                 return 0;
-              if (this.props.pinType == l.CenterCenter) {
+              if ("CenterCenter" == this.props.pinType) {
                 let e = Math.min(Math.max(t, 0), 45);
                 return (s = e), e;
               }
@@ -969,75 +858,75 @@
                   100 +
                   (this.state.curHeightPct - this.m_nLocalOffsetYPct));
               if (
-                this.props.pinType == l.BottomLeft ||
-                this.props.pinType == l.BottomCenter
+                "BottomLeft" == this.props.pinType ||
+                "BottomCenter" == this.props.pinType
               )
                 return 0;
-              if (this.props.pinType == l.CenterCenter) {
+              if ("CenterCenter" == this.props.pinType) {
                 let e = Math.min(Math.max(t, 0), 45);
                 return (o = e), e;
               }
               return t;
             };
-          function g() {
+          function m() {
             s = Math.min(s, 98 - o);
           }
-          function m() {
-            n = Math.min(n, 99 - i);
+          function p() {
+            n = Math.min(n, 99 - r);
           }
-          function h() {
+          function g() {
             o = Math.min(o, 98 - s);
           }
           function d() {
-            i = Math.min(i, 99 - n);
+            r = Math.min(r, 99 - n);
           }
           switch (t) {
-            case F.left:
-              (i = r(e.clientX)), d();
+            case x.left:
+              (r = i(e.clientX)), d();
               break;
-            case F.right:
-              (n = a(e.clientX)), m();
+            case x.right:
+              (n = a(e.clientX)), p();
               break;
-            case F.top:
-              (o = p(e.clientY)), h();
+            case x.top:
+              (o = l(e.clientY)), g();
               break;
-            case F.bottom:
-              (s = c(e.clientY)), g();
+            case x.bottom:
+              (s = c(e.clientY)), m();
               break;
-            case F.topleft:
-              (o = p(e.clientY)), (i = r(e.clientX)), h(), d();
+            case x.topleft:
+              (o = l(e.clientY)), (r = i(e.clientX)), g(), d();
               break;
-            case F.topright:
-              (o = p(e.clientY)), (n = a(e.clientX)), h(), m();
+            case x.topright:
+              (o = l(e.clientY)), (n = a(e.clientX)), g(), p();
               break;
-            case F.bottomleft:
-              (s = c(e.clientY)), (i = r(e.clientX)), g(), d();
+            case x.bottomleft:
+              (s = c(e.clientY)), (r = i(e.clientX)), m(), d();
               break;
-            case F.bottomright:
-              (s = c(e.clientY)), (n = a(e.clientX)), g(), m();
+            case x.bottomright:
+              (s = c(e.clientY)), (n = a(e.clientX)), m(), p();
               break;
-            case F.middle:
+            case x.middle:
               (n = a(e.clientX)),
                 (s = c(e.clientY)),
-                this.state.pinType != l.CenterCenter && (o = p(e.clientY)),
-                this.state.pinType != l.CenterCenter &&
-                  this.state.pinType != l.BottomCenter &&
-                  this.state.pinType != l.UpperCenter &&
-                  (i = r(e.clientX)),
-                h(),
+                "CenterCenter" != this.state.pinType && (o = l(e.clientY)),
+                "CenterCenter" != this.state.pinType &&
+                  "BottomCenter" != this.state.pinType &&
+                  "UpperCenter" != this.state.pinType &&
+                  (r = i(e.clientX)),
                 g(),
+                m(),
                 d(),
-                m();
+                p();
           }
-          (o = (0, w.OQ)(o, 0, 98)),
-            (s = (0, w.OQ)(s, 0, 98)),
-            (i = (0, w.OQ)(i, 0, 99)),
-            (n = (0, w.OQ)(n, 0, 99)),
+          (o = (0, I.OQ)(o, 0, 98)),
+            (s = (0, I.OQ)(s, 0, 98)),
+            (r = (0, I.OQ)(r, 0, 99)),
+            (n = (0, I.OQ)(n, 0, 99)),
             this.setState({
               curTopPosPct: o,
               curRightPosPct: n,
               curBottomPosPct: s,
-              curLeftPosPct: i,
+              curLeftPosPct: r,
             }),
             e.preventDefault(),
             e.stopPropagation();
@@ -1070,13 +959,13 @@
               right: this.state.curRightPosPct + "%",
               bottom: this.state.curBottomPosPct + "%",
             },
-            t = (0, P.A)(
-              B().BoxSizerDragBox,
+            t = (0, d.A)(
+              P().BoxSizerDragBox,
               this.state.EdgeDown &&
-                (0, P.A)(B().EdgeDown, B()[this.state.EdgeDown]),
-              B()[this.props.pinType],
+                (0, d.A)(P().EdgeDown, P()[this.state.EdgeDown]),
+              P()[this.props.pinType],
             );
-          return c.createElement(
+          return s.createElement(
             "div",
             {
               className: t,
@@ -1084,76 +973,76 @@
               ref: this.LinkRegionBoxRef,
               draggable: !1,
             },
-            c.createElement(
+            s.createElement(
               "div",
-              { className: B().BoxSizerGridBox },
-              c.createElement("div", {
-                className: `${B().BoxSizerEdge} ${B().TopLeft}`,
+              { className: P().BoxSizerGridBox },
+              s.createElement("div", {
+                className: `${P().BoxSizerEdge} ${P().TopLeft}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, F.topleft);
+                  this.OnMouseDown(e, x.topleft);
                 },
                 draggable: !1,
               }),
-              c.createElement("div", {
-                className: `${B().BoxSizerEdge} ${B().Top}`,
+              s.createElement("div", {
+                className: `${P().BoxSizerEdge} ${P().Top}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, F.top);
+                  this.OnMouseDown(e, x.top);
                 },
               }),
-              c.createElement("div", {
-                className: `${B().BoxSizerEdge} ${B().TopRight}`,
+              s.createElement("div", {
+                className: `${P().BoxSizerEdge} ${P().TopRight}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, F.topright);
-                },
-                draggable: !1,
-              }),
-              c.createElement("div", {
-                className: `${B().BoxSizerEdge} ${B().Left}`,
-                onMouseDown: (e) => {
-                  this.OnMouseDown(e, F.left);
+                  this.OnMouseDown(e, x.topright);
                 },
                 draggable: !1,
               }),
-              c.createElement(
+              s.createElement("div", {
+                className: `${P().BoxSizerEdge} ${P().Left}`,
+                onMouseDown: (e) => {
+                  this.OnMouseDown(e, x.left);
+                },
+                draggable: !1,
+              }),
+              s.createElement(
                 "div",
                 {
-                  className: `${B().BoxSizerEdge} ${B().Middle}`,
+                  className: `${P().BoxSizerEdge} ${P().Middle}`,
                   onMouseDown: (e) => {
-                    this.OnMouseDown(e, F.middle);
+                    this.OnMouseDown(e, x.middle);
                   },
                   draggable: !1,
                 },
-                c.createElement(
+                s.createElement(
                   "div",
-                  { className: B().TitleImageContainer },
+                  { className: P().TitleImageContainer },
                   this.props.children,
                 ),
               ),
-              c.createElement("div", {
-                className: `${B().BoxSizerEdge} ${B().Right}`,
+              s.createElement("div", {
+                className: `${P().BoxSizerEdge} ${P().Right}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, F.right);
+                  this.OnMouseDown(e, x.right);
                 },
                 draggable: !1,
               }),
-              c.createElement("div", {
-                className: `${B().BoxSizerEdge} ${B().BottomLeft}`,
+              s.createElement("div", {
+                className: `${P().BoxSizerEdge} ${P().BottomLeft}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, F.bottomleft);
+                  this.OnMouseDown(e, x.bottomleft);
                 },
                 draggable: !1,
               }),
-              c.createElement("div", {
-                className: `${B().BoxSizerEdge} ${B().Bottom}`,
+              s.createElement("div", {
+                className: `${P().BoxSizerEdge} ${P().Bottom}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, F.bottom);
+                  this.OnMouseDown(e, x.bottom);
                 },
                 draggable: !1,
               }),
-              c.createElement("div", {
-                className: `${B().BoxSizerEdge} ${B().BottomRight}`,
+              s.createElement("div", {
+                className: `${P().BoxSizerEdge} ${P().BottomRight}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, F.bottomright);
+                  this.OnMouseDown(e, x.bottomright);
                 },
                 draggable: !1,
               }),
@@ -1161,42 +1050,42 @@
           );
         }
       }
-      (0, p.Cg)([_.oI], H.prototype, "LinkRegionBoxRef", null),
-        (0, p.Cg)([_.oI], H.prototype, "OnMouseDown", null),
-        (0, p.Cg)([_.oI], H.prototype, "UpdateBoxPosition", null),
-        (0, p.Cg)([_.oI], H.prototype, "OnMouseMove", null),
-        (0, p.Cg)([_.oI], H.prototype, "OnMouseUp", null),
-        (0, p.Cg)([_.oI], H.prototype, "OnResizeComplete", null);
-      const G = (e) => {
+      (0, n.Cg)([m.oI], M.prototype, "LinkRegionBoxRef", null),
+        (0, n.Cg)([m.oI], M.prototype, "OnMouseDown", null),
+        (0, n.Cg)([m.oI], M.prototype, "UpdateBoxPosition", null),
+        (0, n.Cg)([m.oI], M.prototype, "OnMouseMove", null),
+        (0, n.Cg)([m.oI], M.prototype, "OnMouseUp", null),
+        (0, n.Cg)([m.oI], M.prototype, "OnResizeComplete", null);
+      const D = (e) => {
         const { title: t, className: o } = e;
         let n = 26;
         t.length > 8 && (n = Math.max(n - (t.length - 5) / 2, 5.8));
-        const [s, i] = (0, O.l)();
-        return c.createElement(
+        const [r, i] = (0, _.l)();
+        return s.createElement(
           "svg",
-          { className: (0, P.A)(B().SVGTitle, o), viewBox: "0 0 300 14" },
-          c.createElement(
+          { className: (0, d.A)(P().SVGTitle, o), viewBox: "0 0 300 14" },
+          s.createElement(
             "defs",
             null,
-            c.createElement(
+            s.createElement(
               "linearGradient",
               {
-                id: s,
+                id: r,
                 x1: "0",
                 x2: "0",
                 y1: "0",
                 y2: "100%",
                 gradientUnits: "userSpaceOnUse",
               },
-              c.createElement("stop", { stopColor: "#fff", offset: "0%" }),
-              c.createElement("stop", { stopColor: "#fff", offset: "20%" }),
-              c.createElement("stop", { stopColor: "#fff", offset: "40%" }),
-              c.createElement("stop", { stopColor: "#eee", offset: "60%" }),
-              c.createElement("stop", { stopColor: "#ddd", offset: "80%" }),
-              c.createElement("stop", { stopColor: "#ccc", offset: "100%" }),
+              s.createElement("stop", { stopColor: "#fff", offset: "0%" }),
+              s.createElement("stop", { stopColor: "#fff", offset: "20%" }),
+              s.createElement("stop", { stopColor: "#fff", offset: "40%" }),
+              s.createElement("stop", { stopColor: "#eee", offset: "60%" }),
+              s.createElement("stop", { stopColor: "#ddd", offset: "80%" }),
+              s.createElement("stop", { stopColor: "#ccc", offset: "100%" }),
             ),
           ),
-          c.createElement(
+          s.createElement(
             "text",
             {
               x: "-1",
@@ -1210,36 +1099,36 @@
           ),
         );
       };
-      function z(e) {
+      function k(e) {
         const { title: t, children: o } = e,
-          n = c.useContext(N),
-          s = c.useRef(null);
-        return c.createElement(
-          u.A,
+          n = s.useContext(N),
+          r = s.useRef(null);
+        return s.createElement(
+          c.A,
           {
-            nodeRef: s,
-            timeout: y,
+            nodeRef: r,
+            timeout: S,
             appear: !0,
             in: n.bFullscreen,
-            classNames: R,
+            classNames: v,
           },
-          c.createElement(
+          s.createElement(
             "div",
             {
-              ref: s,
-              className: (0, P.A)(B().TitleSection, t ? B().NoLogo : ""),
+              ref: r,
+              className: (0, d.A)(P().TitleSection, t ? P().NoLogo : ""),
             },
-            c.createElement(
+            s.createElement(
               "div",
-              { className: B().TextNameSpace },
-              !!t && c.createElement(G, { title: t }),
+              { className: P().TextNameSpace },
+              !!t && s.createElement(D, { title: t }),
             ),
-            c.createElement("div", { className: B().Features }, o),
+            s.createElement("div", { className: P().Features }, o),
           ),
         );
       }
-      var W = o(14947);
-      class J {
+      var w = o(14947);
+      class H {
         m_strLibraryLogoURL;
         m_strLibraryHeroURL;
         m_unAppID;
@@ -1247,7 +1136,7 @@
         m_logoPosition = void 0;
         m_strSaveURL;
         constructor(e) {
-          (0, W.Gn)(this),
+          (0, w.Gn)(this),
             (this.m_strLibraryHeroURL = e.strLibraryHeroURL),
             (this.m_strLibraryLogoURL = e.strLibraryLogoURL),
             (this.m_unAppID = e.unAppID),
@@ -1283,44 +1172,44 @@
           return this.m_strSaveURL;
         }
       }
-      (0, p.Cg)([W.sH], J.prototype, "m_logoPosition", void 0);
-      var Y = o(41983),
-        X = o.n(Y),
-        V = o(17221),
-        j = o.n(V),
-        K = o(12155);
-      function Q() {
-        return c.createElement(
-          c.Fragment,
+      (0, n.Cg)([w.sH], H.prototype, "m_logoPosition", void 0);
+      var U = o(41983),
+        G = o.n(U),
+        F = o(17221),
+        z = o.n(F),
+        W = o(12155);
+      function J() {
+        return s.createElement(
+          s.Fragment,
           null,
-          c.createElement("span", { style: { fontSize: 0 } }),
-          c.createElement(
+          s.createElement("span", { style: { fontSize: 0 } }),
+          s.createElement(
             "div",
-            { className: (0, P.A)(j().Container) },
-            c.createElement(
+            { className: (0, d.A)(z().Container) },
+            s.createElement(
               "div",
-              { className: j().Row },
-              c.createElement(ee, null),
-              c.createElement(Z, null),
-              c.createElement(
+              { className: z().Row },
+              s.createElement(j, null),
+              s.createElement(Y, null),
+              s.createElement(
                 "div",
-                { className: j().RightControls },
-                c.createElement(
+                { className: z().RightControls },
+                s.createElement(
                   "div",
-                  { className: j().AppButtonsContainer },
-                  c.createElement(
+                  { className: z().AppButtonsContainer },
+                  s.createElement(
                     "div",
-                    { className: j().MenuButton },
-                    c.createElement(K.wB_, null),
+                    { className: z().MenuButton },
+                    s.createElement(W.wB_, null),
                   ),
-                  c.createElement(
+                  s.createElement(
                     "div",
-                    { className: j().GameInfoButton },
+                    { className: z().GameInfoButton },
                     "Game Info",
-                    c.createElement(
+                    s.createElement(
                       "div",
-                      { className: j().Arrow },
-                      c.createElement(K.V5W, { angle: 180 }),
+                      { className: z().Arrow },
+                      s.createElement(W.V5W, { angle: 180 }),
                     ),
                   ),
                 ),
@@ -1329,137 +1218,137 @@
           ),
         );
       }
-      function Z() {
-        return c.createElement(
+      function Y() {
+        return s.createElement(
           "div",
-          { className: (0, P.A)(j().StatusAndStats) },
-          c.createElement(q, null),
+          { className: (0, d.A)(z().StatusAndStats) },
+          s.createElement(X, null),
         );
       }
-      function q() {
-        return c.createElement(
+      function X() {
+        return s.createElement(
           "div",
-          { className: j().GameStatsSection },
-          c.createElement(
+          { className: z().GameStatsSection },
+          s.createElement(
             "div",
-            { className: j().LastPlayed },
-            c.createElement(
+            { className: z().LastPlayed },
+            s.createElement(
               "div",
-              { className: j().LastPlayedRight },
-              c.createElement(
+              { className: z().LastPlayedRight },
+              s.createElement(
                 "div",
-                { className: j().LastPlayedLabel },
+                { className: z().LastPlayedLabel },
                 "LAST PLAYED",
               ),
-              c.createElement(
+              s.createElement(
                 "div",
-                { className: j().LastPlayedInfo },
+                { className: z().LastPlayedInfo },
                 "Mar 24",
               ),
             ),
           ),
-          c.createElement(
+          s.createElement(
             "div",
-            { className: j().Playtime },
-            c.createElement("div", { className: j().PlaytimeLeft }),
-            c.createElement(
+            { className: z().Playtime },
+            s.createElement("div", { className: z().PlaytimeLeft }),
+            s.createElement(
               "div",
-              { className: j().PlaytimeRight },
-              c.createElement(
+              { className: z().PlaytimeRight },
+              s.createElement(
                 "div",
-                { className: j().PlaytimeLabel },
+                { className: z().PlaytimeLabel },
                 "PLAY TIME",
               ),
-              c.createElement(
+              s.createElement(
                 "div",
-                { className: j().PlaytimeInfo },
+                { className: z().PlaytimeInfo },
                 "37 hours",
               ),
             ),
           ),
-          c.createElement(
+          s.createElement(
             "div",
-            { className: j().MiniAchievements },
-            c.createElement("div", { className: j().AchievementLeft }),
-            c.createElement(
+            { className: z().MiniAchievements },
+            s.createElement("div", { className: z().AchievementLeft }),
+            s.createElement(
               "div",
-              { className: j().AchievementRight },
-              c.createElement(
+              { className: z().AchievementRight },
+              s.createElement(
                 "div",
-                { className: j().AchievementLabel },
+                { className: z().AchievementLabel },
                 "ACHIEVEMENTS",
               ),
-              c.createElement(
+              s.createElement(
                 "div",
-                { className: j().AchievementProgressRow },
-                c.createElement(
+                { className: z().AchievementProgressRow },
+                s.createElement(
                   "div",
-                  { className: j().AchievementCountLabel },
+                  { className: z().AchievementCountLabel },
                   "30/47",
                 ),
-                c.createElement($, { progressPct: 3e3 / 47 }),
+                s.createElement(V, { progressPct: 3e3 / 47 }),
               ),
             ),
           ),
         );
       }
-      class $ extends c.Component {
+      class V extends s.Component {
         render() {
-          return c.createElement(
+          return s.createElement(
             "div",
-            { className: j().DetailsProgressContainer },
-            c.createElement("div", {
-              className: j().DetailsProgressBar,
+            { className: z().DetailsProgressContainer },
+            s.createElement("div", {
+              className: z().DetailsProgressBar,
               style: { width: this.props.progressPct + "%" },
             }),
           );
         }
       }
-      function ee() {
-        return c.createElement(
+      function j() {
+        return s.createElement(
           "div",
-          { className: j().ActionSection },
-          c.createElement(
+          { className: z().ActionSection },
+          s.createElement(
             "div",
-            { className: j().PlayButtonContainer },
-            c.createElement(
+            { className: z().PlayButtonContainer },
+            s.createElement(
               "div",
-              { className: (0, P.A)(j().PlayButton, j().Green) },
-              c.createElement("div", { className: j().ButtonText }, "PLAY"),
+              { className: (0, d.A)(z().PlayButton, z().Green) },
+              s.createElement("div", { className: z().ButtonText }, "PLAY"),
             ),
           ),
         );
       }
-      var te = o(79058),
-        oe = o.n(te);
-      const ne = JSON.parse(
+      var K = o(79058),
+        Q = o.n(K);
+      const Z = JSON.parse(
         '["Apex Legends™","Baldur\'s Gate 3","Battlefield™ 6","Black Desert","Black Myth: Wukong","Borderlands 4","Clair Obscur: Expedition 33","Counter-Strike 2","Cronos: The New Dawn","Crusader Kings III","Cyberpunk 2077","Dead by Daylight","Delta Force","Destiny 2","Dota 2","Dune: Awakening","Dying Light: The Beast","EA SPORTS FC™ 26","ELDEN RING","ELDEN RING NIGHTREIGN","Euro Truck Simulator 2","F1® 25","FINAL FANTASY XIV Online","Forza Horizon 5","Grand Theft Auto V Enhanced","Grounded 2","HELLDIVERS™ 2","Hollow Knight","Hollow Knight: Silksong","Killing Floor 3","Kingdom Come: Deliverance II","Limbus Company","Lost Ark","METAL GEAR SOLID Δ: SNAKE EATER","Madden NFL 26","Mafia: The Old Country","Mage Arena","Magic: The Gathering Arena","Marvel Rivals","NARAKA: BLADEPOINT","NBA 2K26","No Man\'s Sky","Once Human","Overwatch® 2","PEAK","PUBG: BATTLEGROUNDS","Path of Exile 2","R.E.P.O.","Ready or Not","Red Dead Redemption 2","RimWorld","Rust","Schedule I","Shape of Dreams","Split Fiction","Stardew Valley","Street Fighter™ 6","THE FINALS","THRONE AND LIBERTY","Team Fortress 2","The Elder Scrolls® Online","The First Descendant","The Sims™ 4","Titan Quest II","Tom Clancy\'s Rainbow Six® Siege X","Umamusume: Pretty Derby","WUCHANG: Fallen Feathers","Wallpaper Engine","War Thunder","Warframe","Warhammer 40,000: Dawn of War - Definitive Edition","Warhammer 40,000: Space Marine 2","Wuthering Waves","Yu-Gi-Oh! Master Duel","雀魂麻將(MahjongSoul)"]',
       );
-      function se(e) {
+      function q(e) {
         const { highlightedName: t } = e,
-          o = c.useCallback(
+          o = s.useCallback(
             (e) => e && e.scrollIntoView({ block: "center" }),
             [],
           ),
-          n = c.useMemo(() => {
-            if (-1 !== ne.indexOf(t)) return ne;
+          n = s.useMemo(() => {
+            if (-1 !== Z.indexOf(t)) return Z;
             {
-              const e = [...ne, t];
+              const e = [...Z, t];
               return e.sort(), e;
             }
           }, [t]);
-        return c.createElement(
+        return s.createElement(
           "div",
-          { className: oe().GameList },
+          { className: Q().GameList },
           n.map((e) => {
             let n = t === e;
-            return c.createElement(
+            return s.createElement(
               "div",
               {
                 key: e,
-                className: (0, P.A)(
-                  oe().GameListEntry,
-                  n ? oe().Selected : oe().Uninstalled,
+                className: (0, d.A)(
+                  Q().GameListEntry,
+                  n ? Q().Selected : Q().Uninstalled,
                 ),
                 ref: n ? o : void 0,
               },
@@ -1468,18 +1357,18 @@
           }),
         );
       }
-      var ie = o(61859),
-        re = o(78327),
-        ae = o(22797),
-        le = o(16676);
-      function pe(e, t) {
-        const o = (0, re.Tc)("editorconfig", t);
-        let n = new J(o);
-        g.createRoot(t).render(
-          c.createElement(e ? ce : ge, { LogoEditorStore: n }),
+      var $ = o(61859),
+        ee = o(78327),
+        te = o(22797),
+        oe = o(16676);
+      function ne(e, t) {
+        const o = (0, ee.Tc)("editorconfig", t);
+        let n = new H(o);
+        r.createRoot(t).render(
+          s.createElement(e ? se : re, { LogoEditorStore: n }),
         );
       }
-      class ce extends c.Component {
+      class se extends s.Component {
         constructor(e) {
           super(e),
             (this.state = { saving: !1, saved: !1, unsavedChanges: !1 });
@@ -1505,7 +1394,7 @@
               try {
                 let o = new FormData();
                 o.append("json", "1"),
-                  o.append("sessionid", re.TS.SESSIONID),
+                  o.append("sessionid", ee.TS.SESSIONID),
                   o.append(
                     "app[assets][library_logo][logo_position][pinned_position]",
                     t.pinnedPosition,
@@ -1518,7 +1407,7 @@
                     "app[assets][library_logo][logo_position][height_pct]",
                     "" + t.nHeightPct,
                   );
-                await h().post(e.GetSaveURL(), o);
+                await a().post(e.GetSaveURL(), o);
                 this.setState({ saving: !1, saved: !0, unsavedChanges: !1 });
               } catch (e) {
                 console.error(e),
@@ -1528,7 +1417,7 @@
             } else
               window.opener &&
                 window.opener.postMessage(
-                  { appid: e.GetAppID(), ...(0, W.HO)(e.GetLogoPosition()) },
+                  { appid: e.GetAppID(), ...(0, w.HO)(e.GetLogoPosition()) },
                   "*",
                 ),
                 this.OnCancel();
@@ -1543,56 +1432,56 @@
             this.setState({ unsavedChanges: !0, saved: !1 });
         }
         render() {
-          return c.createElement(
-            c.Fragment,
+          return s.createElement(
+            s.Fragment,
             null,
-            c.createElement(
+            s.createElement(
               "div",
               {
-                className: (0, P.A)(
-                  X().LogoEditorPopup,
-                  this.state.saving && X().Saving,
+                className: (0, d.A)(
+                  G().LogoEditorPopup,
+                  this.state.saving && G().Saving,
                 ),
               },
-              c.createElement(
+              s.createElement(
                 "div",
-                { className: X().LogoEditorSaveActions },
-                c.createElement(
+                { className: G().LogoEditorSaveActions },
+                s.createElement(
                   "div",
                   {
-                    className: (0, P.A)(
-                      X().LogoEditorSavedMessage,
-                      this.state.saved && X().Saved,
+                    className: (0, d.A)(
+                      G().LogoEditorSavedMessage,
+                      this.state.saved && G().Saved,
                     ),
                   },
-                  (0, ie.we)("#StoreAdmin_LibraryPlacementTool_ChangesSaved"),
+                  (0, $.we)("#StoreAdmin_LibraryPlacementTool_ChangesSaved"),
                 ),
-                c.createElement(
+                s.createElement(
                   "div",
-                  { className: X().LogoEditorButtons },
-                  c.createElement(
-                    le.jn,
-                    { onClick: this.OnOK, className: X().LogoEditorButton },
-                    (0, ie.we)("#Button_Save"),
+                  { className: G().LogoEditorButtons },
+                  s.createElement(
+                    oe.jn,
+                    { onClick: this.OnOK, className: G().LogoEditorButton },
+                    (0, $.we)("#Button_Save"),
                   ),
-                  c.createElement(
-                    le.$n,
-                    { onClick: this.OnCancel, className: X().LogoEditorButton },
+                  s.createElement(
+                    oe.$n,
+                    { onClick: this.OnCancel, className: G().LogoEditorButton },
                     this.state.unsavedChanges
-                      ? (0, ie.we)("#Button_Cancel")
-                      : (0, ie.we)("#Button_Close"),
+                      ? (0, $.we)("#Button_Cancel")
+                      : (0, $.we)("#Button_Close"),
                   ),
                 ),
               ),
-              c.createElement(
+              s.createElement(
                 "div",
-                { className: X().SavingThrobberContainer },
-                c.createElement(ae.t, {
+                { className: G().SavingThrobberContainer },
+                s.createElement(te.t, {
                   size: "xlarge",
-                  className: X().SavingThrobber,
+                  className: G().SavingThrobber,
                 }),
               ),
-              c.createElement(ge, {
+              s.createElement(re, {
                 ...this.props,
                 fnOnPositionChanged: this.OnPositionChanged,
               }),
@@ -1600,11 +1489,11 @@
           );
         }
       }
-      (0, p.Cg)([_.oI], ce.prototype, "OnBeforeUnload", null),
-        (0, p.Cg)([_.oI], ce.prototype, "OnOK", null),
-        (0, p.Cg)([_.oI], ce.prototype, "OnCancel", null),
-        (0, p.Cg)([_.oI], ce.prototype, "OnPositionChanged", null);
-      class ge extends c.Component {
+      (0, n.Cg)([m.oI], se.prototype, "OnBeforeUnload", null),
+        (0, n.Cg)([m.oI], se.prototype, "OnOK", null),
+        (0, n.Cg)([m.oI], se.prototype, "OnCancel", null),
+        (0, n.Cg)([m.oI], se.prototype, "OnPositionChanged", null);
+      class re extends s.Component {
         constructor(e) {
           super(e), (this.state = { bEditModeEnabled: !0 });
         }
@@ -1615,69 +1504,69 @@
         render() {
           const { LogoEditorStore: e } = this.props;
           let t = !!e.GetLogoURL();
-          return c.createElement(
+          return s.createElement(
             "div",
-            { className: X().LogoEditorContainer },
-            c.createElement(
+            { className: G().LogoEditorContainer },
+            s.createElement(
               "div",
-              { className: X().LogoEditorGameListContainer },
-              c.createElement(se, { highlightedName: e.GetAppName() }),
+              { className: G().LogoEditorGameListContainer },
+              s.createElement(q, { highlightedName: e.GetAppName() }),
             ),
-            c.createElement("div", { className: X().ListDivider }),
-            c.createElement(
+            s.createElement("div", { className: G().ListDivider }),
+            s.createElement(
               "div",
-              { className: X().LogoEditorDetailsContainer },
-              c.createElement(me, { LogoEditorStore: e }),
-              c.createElement(
+              { className: G().LogoEditorDetailsContainer },
+              s.createElement(ie, { LogoEditorStore: e }),
+              s.createElement(
                 "div",
-                { className: X().LogoEditorHeaderContainer },
-                c.createElement(
-                  T,
+                { className: G().LogoEditorHeaderContainer },
+                s.createElement(
+                  O,
                   {
                     editMode: t && this.state.bEditModeEnabled,
                     hasHeroImage: !0,
                     rgHeaderImages: [e.GetHeroURL()],
                     rgLogoImages: t ? [e.GetLogoURL()] : [],
-                    classNameNoLogo: X().NoLogoImage,
+                    classNameNoLogo: G().NoLogoImage,
                     fnOnPositionChanged: this.OnPositionChanged,
                     logoPosition: e.GetLogoPosition(),
                   },
-                  c.createElement(z, {
+                  s.createElement(k, {
                     title: e.GetLogoURL() ? "" : e.GetAppName(),
                   }),
                 ),
               ),
-              c.createElement(Q, null),
-              c.createElement(
+              s.createElement(J, null),
+              s.createElement(
                 "div",
-                { className: X().DetailsArea },
-                c.createElement("br", null),
-                c.createElement("br", null),
-                c.createElement("br", null),
-                c.createElement("br", null),
-                c.createElement("br", null),
+                { className: G().DetailsArea },
+                s.createElement("br", null),
+                s.createElement("br", null),
+                s.createElement("br", null),
+                s.createElement("br", null),
+                s.createElement("br", null),
               ),
             ),
           );
         }
       }
-      (0, p.Cg)([_.oI], ge.prototype, "OnPositionChanged", null);
-      const me = (0, d.PA)((e) => {
+      (0, n.Cg)([m.oI], re.prototype, "OnPositionChanged", null);
+      const ie = (0, l.PA)((e) => {
         const t = e.LogoEditorStore.GetLogoPosition();
-        return c.createElement(
-          c.Fragment,
+        return s.createElement(
+          s.Fragment,
           null,
-          c.createElement("input", {
+          s.createElement("input", {
             type: "hidden",
             name: "app[assets][library_logo][logo_position][pinned_position]",
             value: t.pinnedPosition,
           }),
-          c.createElement("input", {
+          s.createElement("input", {
             type: "hidden",
             name: "app[assets][library_logo][logo_position][width_pct]",
             value: t.nWidthPct,
           }),
-          c.createElement("input", {
+          s.createElement("input", {
             type: "hidden",
             name: "app[assets][library_logo][logo_position][height_pct]",
             value: t.nHeightPct,
@@ -1690,12 +1579,12 @@
       o.d(t, { m: () => a });
       var n = o(34629),
         s = o(90626),
-        i = o(73745),
-        r = o(6144);
+        r = o(73745),
+        i = o(6144);
       class a extends s.Component {
         m_elCanvas;
         m_Context;
-        m_schUpdate = new r.LU();
+        m_schUpdate = new i.LU();
         m_bSetupComplete = !1;
         componentDidMount() {
           0 == this.props.updateRate && this.updateCanvas();
@@ -1730,11 +1619,11 @@
             (this.m_elCanvas.height = s),
             this.props.blurAmount > 0 &&
               (this.m_Context.filter = "blur(" + this.props.blurAmount + "px)");
-          let i = () => {
+          let r = () => {
             this.m_Context.drawImage(t, 0, 0, n * e[0], s * e[1]),
-              o > 0 && this.m_schUpdate.Schedule(o, i);
+              o > 0 && this.m_schUpdate.Schedule(o, r);
           };
-          i(), (this.m_bSetupComplete = !0);
+          r(), (this.m_bSetupComplete = !0);
         }
         render() {
           return s.createElement("canvas", {
@@ -1746,27 +1635,27 @@
           });
         }
       }
-      (0, n.Cg)([i.oI], a.prototype, "BindCanvasRef", null),
-        (0, n.Cg)([i.oI], a.prototype, "updateCanvas", null);
+      (0, n.Cg)([r.oI], a.prototype, "BindCanvasRef", null),
+        (0, n.Cg)([r.oI], a.prototype, "updateCanvas", null);
     },
     10050: (e, t, o) => {
       "use strict";
-      o.d(t, { M: () => i });
+      o.d(t, { M: () => r });
       var n = o(90626),
         s = o(80724);
-      function i(e) {
+      function r(e) {
         const { children: t, ...o } = e,
-          i = n.useRef(null);
-        return n.createElement(s.A, { nodeRef: i, ...o }, e.children(i));
+          r = n.useRef(null);
+        return n.createElement(s.A, { nodeRef: r, ...o }, e.children(r));
       }
     },
     3088: (e, t, o) => {
       "use strict";
-      o.d(t, { c: () => r });
+      o.d(t, { c: () => i });
       var n = o(34629),
         s = o(90626),
-        i = o(73745);
-      class r extends s.Component {
+        r = o(73745);
+      class i extends s.Component {
         m_refImage = s.createRef();
         constructor(e) {
           super(e), (this.state = { nImage: 0, nPropChangeCounter: 0 });
@@ -1817,21 +1706,21 @@
               onIncrementalError: t,
               onError: o,
               strAltText: n,
-              ...i
+              ...r
             } = this.props,
-            r = this.src,
+            i = this.src,
             a = this.state.nPropChangeCounter;
           return s.createElement("img", {
             key: a,
             ref: this.m_refImage,
-            ...i,
-            src: r,
+            ...r,
+            src: i,
             onError: this.OnImageError,
             alt: n,
           });
         }
       }
-      (0, n.Cg)([i.oI], r.prototype, "OnImageError", null);
+      (0, n.Cg)([r.oI], i.prototype, "OnImageError", null);
     },
   },
 ]);

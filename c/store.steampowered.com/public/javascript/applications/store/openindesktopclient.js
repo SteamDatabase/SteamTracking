@@ -17,11 +17,10 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       let _ = {
         success: !0,
-        result: _._.k_EResultOK,
+        result: 1,
       };
       class _ {
         m_mapWaitingCallbacks = new Map();
@@ -112,7 +111,7 @@
                   message: "GetClientInfo",
                 })
                   .then((_) => {
-                    _.success == _._.k_EResultOK
+                    1 == _.success
                       ? ((this.m_ClientInfo.ulVersion = _.clientversion),
                         (this.m_ClientInfo.bFriendsUIEnabled = !!_.friendsui),
                         (this.m_ClientInfo.unAccountID = _.accountid),
@@ -141,7 +140,7 @@
       }
       let _ = new (class {
         m_connection = new _();
-        FailureResult(_ = _._.k_EResultFail) {
+        FailureResult(_ = 2) {
           let _ = {
             success: !1,
             result: _,
@@ -153,7 +152,7 @@
             this.m_connection &&
               !this.m_connection.connected_to_client &&
               (_.connect_failed = !0),
-            _ == _._.k_EResultInvalidProtocolVer && (_.call_unsupported = !0),
+            7 == _ && (_.call_unsupported = !0),
             _
           );
         }
@@ -208,7 +207,7 @@
           };
           return this.GenericEResultCall(_, !0).then((_) => {
             if (_.connect_failed) return;
-            let _ = _.result == _._.k_EResultOK;
+            let _ = 1 == _.result;
             return this.m_mapCacheSubscribedApp.set(_, _), _;
           });
         }
@@ -237,15 +236,13 @@
               _ && !this.BClientAccountMatches()
                 ? {
                     success: !1,
-                    result: _._.k_EResultInvalidSteamID,
+                    result: 19,
                     account_mismatch: !0,
                   }
                 : this.m_connection
                     .SendMsgAndAwaitResponse(_)
                     .then((_) =>
-                      _.success === _._.k_EResultOK
-                        ? _
-                        : this.FailureResult(_.success),
+                      1 === _.success ? _ : this.FailureResult(_.success),
                     ),
             )
             .catch(() => this.FailureResult());
@@ -267,17 +264,16 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)(function (_) {
-          const [_, __webpack_require__] = _.useState(_._.k_EResultPending);
+          const [_, __webpack_require__] = _.useState(22);
           _.useEffect(() => {
             _._.IN_CLIENT ||
               _._.IN_MOBILE ||
               _._.IN_MOBILE_WEBVIEW ||
               _._.BClientConnectedAndSupportsMessage("OpenSteamURL").then(
                 (_) => {
-                  __webpack_require__(_ ? _._.k_EResultOK : _._.k_EResultFail);
+                  __webpack_require__(_ ? 1 : 2);
                 },
               );
           }, []);
@@ -290,9 +286,7 @@
               _.set("utm_bid", _),
                 (_ += _.origin + _.pathname + "?" + _.toString() + _.hash);
             } else _ += window.location.href;
-            _ == _._.k_EResultOK
-              ? _._.OpenSteamURL(_)
-              : (window.location.href = _);
+            1 == _ ? _._.OpenSteamURL(_) : (window.location.href = _);
           }, [_]);
           return _.createElement(
             "div",

@@ -47,7 +47,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -301,8 +300,8 @@
                   key: _,
                   rollup: _,
                   onNotificationClick: _,
-                  uimode: _._.k_EUIMode_Web,
-                  location: _._.Tray,
+                  uimode: 3,
+                  location: 3,
                 }),
               ),
             );
@@ -314,7 +313,7 @@
           countItem: "pending_gifts",
           icon: _._,
           strLocToken: "#Notification_NewGiftsPinned_Body",
-          feature: _._.k_EFeatureStore,
+          feature: 1,
         },
         {
           fnUrl: () =>
@@ -322,7 +321,7 @@
           countItem: "pending_invites",
           icon: _.sdo,
           strLocToken: "#Notification_FriendInvitePinned_Body",
-          feature: _._.k_EFeatureFriends,
+          feature: 4,
         },
         {
           fnUrl: () =>
@@ -330,7 +329,7 @@
           countItem: "comments",
           icon: _.MwB,
           strLocToken: "#Notification_NewCommentPinned_Body",
-          feature: _._.k_EFeatureCommunity,
+          feature: 2,
         },
         {
           fnUrl: () =>
@@ -338,7 +337,7 @@
           countItem: "inventory_items",
           icon: _.rI_,
           strLocToken: "#Notification_NewItemAnnouncementPinned_Body",
-          feature: _._.k_EFeatureProfile,
+          feature: 3,
         },
         {
           fnUrl: () =>
@@ -346,7 +345,7 @@
           countItem: "trade_offers",
           icon: _.h20,
           strLocToken: "#Notification_NewTradeOffersPinned_Body",
-          feature: _._.k_EFeatureTrading,
+          feature: 6,
         },
         {
           fnUrl: () =>
@@ -360,7 +359,7 @@
           countItem: "moderator_messages",
           icon: _.hJ4,
           strLocToken: "#Notification_NewModeratorMessagePinned_Body",
-          feature: _._.k_EFeatureCommunity,
+          feature: 2,
         },
         {
           fnUrl: () => `${_._.HELP_BASE_URL}wizard/HelpRequests`,

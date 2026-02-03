@@ -26,9 +26,7 @@ https://steamcommunity.com/public/css/applications/community/main.css?__TIME__&_
 https://steamcommunity.com/public/css/applications/community/managefriends.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/applications/community/profile.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/applications/community/qanda.css?__TIME__&__CDN__
-https://steamcommunity.com/public/css/community_tablet.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/friendsv2.css?__TIME__&__CDN__
-https://steamcommunity.com/public/css/friendsv2_tablet.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/globalv2.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/mobile/styles_mobileconf.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/mobile/styles_profile.css?__TIME__&__CDN__
@@ -42,7 +40,6 @@ https://steamcommunity.com/public/css/skin_1/apphub_workshop.css?__TIME__&__CDN_
 https://steamcommunity.com/public/css/skin_1/apphubs.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/auction.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/badges.css?__TIME__&__CDN__
-https://steamcommunity.com/public/css/skin_1/badges_tablet.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/broadcast_announce.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/broadcast_upload.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/chat.css?__TIME__&__CDN__
@@ -78,26 +75,22 @@ https://steamcommunity.com/public/css/skin_1/news.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/openid.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/parental.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/playerstats_generic.css?__TIME__&__CDN__
-https://steamcommunity.com/public/css/skin_1/playerstats_generic_tablet.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile_commentnotifications.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile_edit.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile_editv2.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile_friendactivity.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile_friends_list.css?__TIME__&__CDN__
-https://steamcommunity.com/public/css/skin_1/profile_friends_list_tablet.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile_friends_list_self.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile_gamenotifications.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile_gamenotificationsettings.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile_games_list.css?__TIME__&__CDN__
-https://steamcommunity.com/public/css/skin_1/profile_games_list_tablet.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile_recommended.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile_reviews.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile_sharedfiles.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile_tradeoffers.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profile_videos.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/profilev2.css?__TIME__&__CDN__
-https://steamcommunity.com/public/css/skin_1/profilev2_tablet.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/reportphishing.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/search.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/sharedfiles_guide.css?__TIME__&__CDN__
@@ -121,17 +114,14 @@ https://steamcommunity.com/public/css/skin_1/workshop_managecollection.css?__TIM
 https://steamcommunity.com/public/css/skin_1/workshop_userfiles.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/webui/friends.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/apphub.css?__TIME__&__CDN__
-https://steamcommunity.com/public/shared/css/apphub_tablet.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/apphub_images.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/buttons.css?__TIME__&__CDN__
-https://steamcommunity.com/public/shared/css/buttons_tablet.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/dash_player.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/joinsteam.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/login.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/shared_global.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/shared_mobile.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/shared_responsive.css?__TIME__&__CDN__
-https://steamcommunity.com/public/shared/css/shared_tablet.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/skin_1/broadcast_watch.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/store_game_shared.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/user_reviews.css?__TIME__&__CDN__
@@ -140,7 +130,6 @@ https://store.steampowered.com/public/css/applications/store/accountpreferences.
 https://store.steampowered.com/public/css/applications/store/curatorreviewlistlanding.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/applications/store/eventadmin.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/applications/store/events.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/applications/store/interactiverecommender.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/applications/store/login.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/applications/store/loyaltystore.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/applications/store/main.css?__TIME__&__CDN__
@@ -156,7 +145,6 @@ https://store.steampowered.com/public/css/promo/remote_play_together.css?__TIME_
 https://store.steampowered.com/public/css/promo/storev6.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/promo/styles_earlyaccess.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/promo/styles_streaming.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/store_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/styles_about.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/styles_aboutv5.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/styles_hwsurvey.css?__TIME__&__CDN__
@@ -172,59 +160,43 @@ https://store.steampowered.com/public/css/styles_video.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/styles_video_watch.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/styles_widget.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/account.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/account_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/browse.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/cart.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/cart_tablet.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/checkout_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/contenthub.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/contenthub_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/creator_hub.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/curator_admin.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/curator_announcements.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/curator_announcements_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/curator_list.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/curator_list_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/curator_recommendations.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/curator_recommendations_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/curators_browse.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/curators_browse_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/curators_common.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/curators_common_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/curators_home.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/curators_home_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/digitalgiftcards.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/digitalgiftcards_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/discoveryqueue.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/explore_queue.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/game.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/game_mob.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/game_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/genre.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/home.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/home_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/itemstore.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/library_update.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/news.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/promo/sale_4grid.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/promo/sale_n_section.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/recommended.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/recommended_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/sale.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/search.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/search_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/steamaccount.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/steamaccount_tablet.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/steamaccount_sale_tokens.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/steamlink_connect.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/store.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/store_browse_experiment.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/tags.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/v6/updated_apps.css?__TIME__&__CDN__
-https://store.steampowered.com/public/css/v6/wishlist_tablet.css?__TIME__&__CDN__
 https://www.dota2.com/public/css/applications/dpc/main.css?__TIME__&__CDN__
 https://www.dota2.com/public/css/dota_react/main.css?__TIME__&__CDN__
 https://www.counter-strike.net/public/css/csgo_react/main.css?__TIME__&__CDN__
+https://www.playdeadlock.com/public/css/react/main.css?__TIME__&__CDN__
 
 //
 // Javascript
@@ -388,7 +360,6 @@ https://store.steampowered.com/public/javascript/applications/store/accountprefe
 https://store.steampowered.com/public/javascript/applications/store/curatorreviewlistlanding.js?__TIME__&l=english&__CDN__
 https://store.steampowered.com/public/javascript/applications/store/eventadmin.js?__TIME__&l=english&__CDN__
 https://store.steampowered.com/public/javascript/applications/store/events.js?__TIME__&l=english&__CDN__
-https://store.steampowered.com/public/javascript/applications/store/interactiverecommender.js?__TIME__&l=english&__CDN__
 https://store.steampowered.com/public/javascript/applications/store/login.js?__TIME__&l=english&__CDN__
 https://store.steampowered.com/public/javascript/applications/store/loyalty_english-json.js?__TIME__&l=english&__CDN__
 https://store.steampowered.com/public/javascript/applications/store/loyaltystore.js?__TIME__&l=english&__CDN__
@@ -452,6 +423,8 @@ https://www.dota2.com/public/javascript/dota_react/AdminPages.js?__TIME__&__CDN_
 https://www.counter-strike.net/public/javascript/csgo_react/manifest.js?__TIME__&l=english&__CDN__
 https://www.counter-strike.net/public/javascript/csgo_react/main.js?__TIME__&l=english&__CDN__
 https://www.counter-strike.net/public/javascript/csgo_react/main_english-json.js?__TIME__&__CDN__
+https://www.playdeadlock.com/public/javascript/react/manifest.js?__TIME__&__CDN__
+https://www.playdeadlock.com/public/javascript/react/main.js?__TIME__&__CDN__
 
 //
 // =============================================================================
@@ -464,9 +437,6 @@ ClientManifest/steam_client_ubuntu12            @ https://client-update.fastly.s
 ClientManifest/steam_client_win64               @ https://client-update.fastly.steamstatic.com/steam_client_win64?__TIME__
 ClientManifest/steam_client_osx                 @ https://client-update.fastly.steamstatic.com/steam_client_osx?__TIME__
 ClientManifest/steamdeck_stable                 @ https://client-update.fastly.steamstatic.com/steam_client_steamdeck_stable_ubuntu12?__TIME__
-ClientManifest/csgo_launcher_win64              @ https://client-update.fastly.steamstatic.com/csgo_launcher_win64?__TIME__
-ClientManifest/dota2_launcher_win64             @ https://client-update.fastly.steamstatic.com/dota2_launcher_win64?__TIME__
-ClientManifest/dota2_launcher_nexon_win64       @ https://client-update.fastly.steamstatic.com/dota2_launcher_nexon_win64?__TIME__
 
 //
 // Beta Client Manifests

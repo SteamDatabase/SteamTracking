@@ -70,7 +70,7 @@ License: MIT
                     (e = [...e.split(t).slice(n)].join(t));
                 }
                 this.isFirstChunk &&
-                  k(this._config.beforeFirstChunk) &&
+                  v(this._config.beforeFirstChunk) &&
                   void 0 !== (s = this._config.beforeFirstChunk(e)) &&
                   (e = s),
                   (this.isFirstChunk = !1),
@@ -97,7 +97,7 @@ License: MIT
                       workerId: o.WORKER_ID,
                       finished: n,
                     });
-                  else if (k(this._config.chunk) && !t) {
+                  else if (v(this._config.chunk) && !t) {
                     if (
                       (this._config.chunk(s, this._handle),
                       this._handle.paused() || this._handle.aborted())
@@ -115,7 +115,7 @@ License: MIT
                       (this._completeResults.meta = s.meta)),
                     this._completed ||
                       !n ||
-                      !k(this._config.complete) ||
+                      !v(this._config.complete) ||
                       (s && s.meta.aborted) ||
                       (this._config.complete(
                         this._completeResults,
@@ -129,7 +129,7 @@ License: MIT
                 this._halted = !0;
               }),
               (this._sendError = function (e) {
-                k(this._config.error)
+                v(this._config.error)
                   ? this._config.error(e)
                   : r &&
                     this._config.error &&
@@ -347,11 +347,11 @@ License: MIT
                 ? "" === t.join("").trim()
                 : 1 === t.length && 0 === t[0].length;
             }
-            function v() {
+            function k() {
               if (
                 (y &&
                   n &&
-                  (b(
+                  (R(
                     "Delimiter",
                     "UndetectableDelimiter",
                     "Unable to auto-detect delimiting character; defaulted to '" +
@@ -363,16 +363,16 @@ License: MIT
                   (y.data = y.data.filter(function (e) {
                     return !E(e);
                   })),
-                R())
+                b())
               ) {
                 if (y)
                   if (Array.isArray(y.data[0])) {
-                    for (var t = 0; R() && t < y.data.length; t++)
+                    for (var t = 0; b() && t < y.data.length; t++)
                       y.data[t].forEach(i);
                     y.data.splice(0, 1);
                   } else y.data.forEach(i);
                 function i(t, i) {
-                  k(e.transformHeader) && (t = e.transformHeader(t, i)),
+                  v(e.transformHeader) && (t = e.transformHeader(t, i)),
                     _.push(t);
                 }
               }
@@ -419,7 +419,7 @@ License: MIT
                 return (
                   e.header &&
                     (r > _.length
-                      ? b(
+                      ? R(
                           "FieldMismatch",
                           "TooManyFields",
                           "Too many fields: expected " +
@@ -429,7 +429,7 @@ License: MIT
                           c + i,
                         )
                       : r < _.length &&
-                        b(
+                        R(
                           "FieldMismatch",
                           "TooFewFields",
                           "Too few fields: expected " +
@@ -451,21 +451,21 @@ License: MIT
                 e.header && y.meta && (y.meta.fields = _),
                 (c += l));
             }
-            function R() {
+            function b() {
               return e.header && 0 === _.length;
             }
-            function b(e, t, i, n) {
+            function R(e, t, i, n) {
               (e = { type: e, code: t, message: i }),
                 void 0 !== n && (e.row = n),
                 y.errors.push(e);
             }
-            k(e.step) &&
+            v(e.step) &&
               ((r = e.step),
               (e.step = function (t) {
                 (y = t),
-                  R()
-                    ? v()
-                    : (v(),
+                  b()
+                    ? k()
+                    : (k(),
                       0 !== y.data.length &&
                         ((d += t.data.length),
                         e.preview && d > e.preview
@@ -478,7 +478,7 @@ License: MIT
                   e.newline || (e.newline = this.guessLineEndings(r, u)),
                   (n = !1),
                   e.delimiter
-                    ? k(e.delimiter) &&
+                    ? v(e.delimiter) &&
                       ((e.delimiter = e.delimiter(r)),
                       (y.meta.delimiter = e.delimiter))
                     : ((u = ((t, i, n, r, s) => {
@@ -541,7 +541,7 @@ License: MIT
                   (t = r),
                   (i = new g(u)),
                   (y = i.parse(t, s, a)),
-                  v(),
+                  k(),
                   f ? { meta: { paused: !0 } } : y || { meta: { paused: !1 } }
                 );
               }),
@@ -551,7 +551,7 @@ License: MIT
               (this.pause = function () {
                 (f = !0),
                   i.abort(),
-                  (t = k(e.chunk) ? "" : t.substring(i.getCharIndex()));
+                  (t = v(e.chunk) ? "" : t.substring(i.getCharIndex()));
               }),
               (this.resume = function () {
                 l.streamer._halted
@@ -565,7 +565,7 @@ License: MIT
                 (m = !0),
                   i.abort(),
                   (y.meta.aborted = !0),
-                  k(e.complete) && e.complete(y),
+                  v(e.complete) && e.complete(y),
                   (t = "");
               }),
               (this.guessLineEndings = function (e, t) {
@@ -619,9 +619,9 @@ License: MIT
                 y = t.length,
                 w = i.length,
                 E = n.length,
-                v = k(r),
-                R = [],
+                k = v(r),
                 b = [],
+                R = [],
                 A = [],
                 I = (c = 0);
               if (!o) return G();
@@ -631,17 +631,17 @@ License: MIT
                     c += i.length;
                   else if (m) return G();
                   if (!n || A.substring(0, E) !== n) {
-                    if (v) {
-                      if (((R = []), L(A.split(t)), z(), f)) return G();
+                    if (k) {
+                      if (((b = []), L(A.split(t)), z(), f)) return G();
                     } else L(A.split(t));
-                    if (s && s <= C) return (R = R.slice(0, s)), G(!0);
+                    if (s && s <= C) return (b = b.slice(0, s)), G(!0);
                   }
                 }
                 return G();
               }
               for (
-                var O = o.indexOf(t, c),
-                  D = o.indexOf(i, c),
+                var D = o.indexOf(t, c),
+                  O = o.indexOf(i, c),
                   T = new RegExp(p(d) + p(l), "g"),
                   F = o.indexOf(l, c);
                 ;
@@ -651,73 +651,73 @@ License: MIT
                     if (-1 === (F = o.indexOf(l, F + 1)))
                       return (
                         m ||
-                          b.push({
+                          R.push({
                             type: "Quotes",
                             code: "MissingQuotes",
                             message: "Quoted field unterminated",
-                            row: R.length,
+                            row: b.length,
                             index: c,
                           }),
-                        B()
+                        M()
                       );
-                    if (F === _ - 1) return B(o.substring(c, F).replace(T, l));
+                    if (F === _ - 1) return M(o.substring(c, F).replace(T, l));
                     if (l === d && o[F + 1] === d) F++;
                     else if (l === d || 0 === F || o[F - 1] !== d) {
-                      -1 !== O && O < F + 1 && (O = o.indexOf(t, F + 1));
-                      var x = M(
+                      -1 !== D && D < F + 1 && (D = o.indexOf(t, F + 1));
+                      var x = B(
                         -1 ===
-                          (D = -1 !== D && D < F + 1 ? o.indexOf(i, F + 1) : D)
-                          ? O
-                          : Math.min(O, D),
+                          (O = -1 !== O && O < F + 1 ? o.indexOf(i, F + 1) : O)
+                          ? D
+                          : Math.min(D, O),
                       );
                       if (o.substr(F + 1 + x, y) === t) {
                         A.push(o.substring(c, F).replace(T, l)),
                           o[(c = F + 1 + x + y)] !== l && (F = o.indexOf(l, c)),
-                          (O = o.indexOf(t, c)),
-                          (D = o.indexOf(i, c));
+                          (D = o.indexOf(t, c)),
+                          (O = o.indexOf(i, c));
                         break;
                       }
                       if (
-                        ((x = M(D)),
+                        ((x = B(O)),
                         o.substring(F + 1 + x, F + 1 + x + w) === i)
                       ) {
                         if (
                           (A.push(o.substring(c, F).replace(T, l)),
                           j(F + 1 + x + w),
-                          (O = o.indexOf(t, c)),
+                          (D = o.indexOf(t, c)),
                           (F = o.indexOf(l, c)),
-                          v && (z(), f))
+                          k && (z(), f))
                         )
                           return G();
-                        if (s && R.length >= s) return G(!0);
+                        if (s && b.length >= s) return G(!0);
                         break;
                       }
-                      b.push({
+                      R.push({
                         type: "Quotes",
                         code: "InvalidQuotes",
                         message: "Trailing quote on quoted field is malformed",
-                        row: R.length,
+                        row: b.length,
                         index: c,
                       }),
                         F++;
                     }
                   }
                 else if (n && 0 === A.length && o.substring(c, c + E) === n) {
-                  if (-1 === D) return G();
-                  (c = D + w), (D = o.indexOf(i, c)), (O = o.indexOf(t, c));
-                } else if (-1 !== O && (O < D || -1 === D))
-                  A.push(o.substring(c, O)), (c = O + y), (O = o.indexOf(t, c));
+                  if (-1 === O) return G();
+                  (c = O + w), (O = o.indexOf(i, c)), (D = o.indexOf(t, c));
+                } else if (-1 !== D && (D < O || -1 === O))
+                  A.push(o.substring(c, D)), (c = D + y), (D = o.indexOf(t, c));
                 else {
-                  if (-1 === D) break;
-                  if ((A.push(o.substring(c, D)), j(D + w), v && (z(), f)))
+                  if (-1 === O) break;
+                  if ((A.push(o.substring(c, O)), j(O + w), k && (z(), f)))
                     return G();
-                  if (s && R.length >= s) return G(!0);
+                  if (s && b.length >= s) return G(!0);
                 }
-              return B();
+              return M();
               function L(e) {
-                R.push(e), (I = c);
+                b.push(e), (I = c);
               }
-              function M(e) {
+              function B(e) {
                 var t = 0;
                 return -1 !== e &&
                   (e = o.substring(F + 1, e)) &&
@@ -725,23 +725,23 @@ License: MIT
                   ? e.length
                   : t;
               }
-              function B(e) {
+              function M(e) {
                 return (
                   m ||
                     (void 0 === e && (e = o.substring(c)),
                     A.push(e),
                     (c = _),
                     L(A),
-                    v && z()),
+                    k && z()),
                   G()
                 );
               }
               function j(e) {
-                (c = e), L(A), (A = []), (D = o.indexOf(i, c));
+                (c = e), L(A), (A = []), (O = o.indexOf(i, c));
               }
               function G(n) {
-                if (e.header && !g && R.length && !h) {
-                  var r = R[0],
+                if (e.header && !g && b.length && !h) {
+                  var r = b[0],
                     s = Object.create(null),
                     a = new Set(r);
                   let t = !1;
@@ -749,7 +749,7 @@ License: MIT
                     let n = r[i];
                     if (
                       s[
-                        (n = k(e.transformHeader) ? e.transformHeader(n, i) : n)
+                        (n = v(e.transformHeader) ? e.transformHeader(n, i) : n)
                       ]
                     ) {
                       let e,
@@ -767,8 +767,8 @@ License: MIT
                     (h = !0);
                 }
                 return {
-                  data: R,
-                  errors: b,
+                  data: b,
+                  errors: R,
                   meta: {
                     delimiter: t,
                     linebreak: i,
@@ -780,7 +780,7 @@ License: MIT
                 };
               }
               function z() {
-                r(G()), (R = []), (b = []);
+                r(G()), (b = []), (R = []);
               }
             }),
               (this.abort = function () {
@@ -808,7 +808,7 @@ License: MIT
                 pause: y,
                 resume: y,
               };
-              if (k(i.userStep)) {
+              if (v(i.userStep)) {
                 for (
                   var a = 0;
                   a < t.results.data.length &&
@@ -825,14 +825,14 @@ License: MIT
                 );
                 delete t.results;
               } else
-                k(i.userChunk) &&
+                v(i.userChunk) &&
                   (i.userChunk(t.results, r, t.file), delete t.results);
             }
             t.finished && !n && _(t.workerId, t.results);
           }
           function _(e, t) {
             var i = s[e];
-            k(i.userComplete) && i.userComplete(t), i.terminate(), delete s[e];
+            v(i.userComplete) && i.userComplete(t), i.terminate(), delete s[e];
           }
           function y() {
             throw new Error("Not implemented.");
@@ -849,16 +849,16 @@ License: MIT
               e.apply(t, arguments);
             };
           }
-          function k(e) {
+          function v(e) {
             return "function" == typeof e;
           }
           return (
             (o.parse = function (t, n) {
               var r = (n = n || {}).dynamicTyping || !1;
               if (
-                (k(r) && ((n.dynamicTypingFunction = r), (r = {})),
+                (v(r) && ((n.dynamicTypingFunction = r), (r = {})),
                 (n.dynamicTyping = r),
-                (n.transform = !!k(n.transform) && n.transform),
+                (n.transform = !!v(n.transform) && n.transform),
                 !n.worker || !o.WORKERS_SUPPORTED)
               )
                 return (
@@ -868,7 +868,7 @@ License: MIT
                     ? ((t = ((e) =>
                         65279 !== e.charCodeAt(0) ? e : e.slice(1))(t)),
                       (r = new (n.download ? h : d)(n)))
-                    : !0 === t.readable && k(t.read) && k(t.on)
+                    : !0 === t.readable && v(t.read) && v(t.on)
                       ? (r = new c(n))
                       : ((i.File && t instanceof File) ||
                           t instanceof Object) &&
@@ -905,10 +905,10 @@ License: MIT
                 (r.userChunk = n.chunk),
                 (r.userComplete = n.complete),
                 (r.userError = n.error),
-                (n.step = k(n.step)),
-                (n.chunk = k(n.chunk)),
-                (n.complete = k(n.complete)),
-                (n.error = k(n.error)),
+                (n.step = v(n.step)),
+                (n.chunk = v(n.chunk)),
+                (n.complete = v(n.complete)),
+                (n.error = v(n.error)),
                 delete n.worker,
                 r.postMessage({ input: t, config: n, workerId: r.id });
             }),
@@ -1090,14 +1090,14 @@ License: MIT
                   this
                 );
                 function s() {
-                  if (0 === r.length) k(e.complete) && e.complete();
+                  if (0 === r.length) v(e.complete) && e.complete();
                   else {
                     var i,
                       n,
                       s,
                       u,
                       h = r[0];
-                    if (k(e.before)) {
+                    if (v(e.before)) {
                       var l = e.before(h.file, h.inputElem);
                       if ("object" == typeof l) {
                         if ("abort" === l.action)
@@ -1106,7 +1106,7 @@ License: MIT
                             (n = h.file),
                             (s = h.inputElem),
                             (u = l.reason),
-                            void (k(e.error) && e.error({ name: i }, n, s, u))
+                            void (v(e.error) && e.error({ name: i }, n, s, u))
                           );
                         if ("skip" === l.action) return void a();
                         "object" == typeof l.config &&
@@ -1118,7 +1118,7 @@ License: MIT
                     }
                     var d = h.instanceConfig.complete;
                     (h.instanceConfig.complete = function (e) {
-                      k(d) && d(e, h.file, h.inputElem), a();
+                      v(d) && d(e, h.file, h.inputElem), a();
                     }),
                       o.parse(h.file, h.instanceConfig);
                   }
@@ -1159,82 +1159,79 @@ License: MIT
     41756: (e, t, i) => {
       "use strict";
       i.d(t, {
-        IB: () => c,
-        IW: () => m,
-        Wj: () => l,
-        X0: () => f,
-        r$: () => g,
-        yW: () => p,
+        IB: () => d,
+        IW: () => g,
+        Wj: () => h,
+        X0: () => c,
+        r$: () => p,
+        yW: () => f,
       });
-      var n = i(37085),
-        r = i(56545),
-        s = i(88942),
-        a = i(61739),
-        o = i(23809),
-        u = i(37403),
-        h = i(90626);
-      function l(e, t) {
-        const i = (0, o.KV)();
-        return (0, s.I)({
+      var n = i(56545),
+        r = i(88942),
+        s = i(61739),
+        a = i(23809),
+        o = i(37403),
+        u = i(90626);
+      function h(e, t) {
+        const i = (0, a.KV)();
+        return (0, r.I)({
           queryKey: [
             "crowdin_metadata_for_clan_event",
             e.ConvertTo64BitString(),
             t,
           ],
           queryFn: async () => {
-            const s = r.w.Init(u.$5);
-            s.Body().set_steamid(e.ConvertTo64BitString()),
-              s.Body().set_itemid(t);
-            const a = await u.BE.GetClanEventCrowdInMetadata(i, s);
-            return a.GetEResult() != n.d.k_EResultOK
-              ? null
-              : a.Body().toObject();
+            const r = n.w.Init(o.$5);
+            r.Body().set_steamid(e.ConvertTo64BitString()),
+              r.Body().set_itemid(t);
+            const s = await o.BE.GetClanEventCrowdInMetadata(i, r);
+            return 1 != s.GetEResult() ? null : s.Body().toObject();
           },
         });
       }
-      async function d(e, t) {
-        const i = r.w.Init(u.hA);
+      async function l(e, t) {
+        const i = n.w.Init(o.hA);
         i.Body().set_steamid(t);
-        const s = await u.BE.GetClanCrowdInMetadata(e, i);
-        if (s.GetEResult() === n.d.k_EResultNoMatch)
+        const r = await o.BE.GetClanCrowdInMetadata(e, i);
+        if (42 === r.GetEResult())
           return {
             crowdin_project_id: null,
             crowdin_directory_id: null,
             push_by_default: !1,
           };
-        if (s.GetEResult() !== n.d.k_EResultOK) throw s.GetEResult();
-        return s.Body().toObject();
+        if (1 !== r.GetEResult()) throw r.GetEResult();
+        return r.Body().toObject();
       }
-      function c(e) {
-        const t = (0, o.KV)();
-        return (0, s.I)({
+      function d(e) {
+        const t = (0, a.KV)();
+        return (0, r.I)({
           queryKey: ["clan_crowdin_mapping", e],
-          queryFn: async () => await d(t, e),
+          queryFn: async () => await l(t, e),
         });
       }
-      function f(e) {
+      function c(e) {
         return (function (e) {
-          const t = (0, o.KV)(),
-            i = (0, s.I)({
+          const t = (0, a.KV)(),
+            i = (0, r.I)({
               queryKey: e.queryKey,
               queryFn: async () => e.queryFn(t, ...e.args),
             });
           return e.children(i);
         })({
           queryKey: ["clan_crowdin_mapping", e.clanSteamId],
-          queryFn: d,
+          queryFn: l,
           args: [e.clanSteamId],
           children: e.children,
         });
       }
-      const p = (0, h.createContext)(null);
-      function g(e) {
-        const t = c(e.clanInfo.clanSteamID.ConvertTo64BitString());
+      const f = (0, u.createContext)(null);
+      function p(e) {
+        const t = d(e.clanInfo.clanSteamID.ConvertTo64BitString());
         let i = !1;
         return (
           t.isSuccess && (i = t.data.push_by_default),
-          h.createElement(
-            p.Provider,
+          u.createElement(
+            f.Provider,
             {
               value: {
                 clanSteamId: e.clanInfo.clanSteamID,
@@ -1245,23 +1242,23 @@ License: MIT
           )
         );
       }
-      function m(e, t, i) {
-        const s = (0, o.KV)();
-        return (0, a.n)({
+      function g(e, t, i) {
+        const r = (0, a.KV)();
+        return (0, s.n)({
           mutationKey: ["fetch_translation_for_clan_event", e, t, i],
           mutationFn: async function () {
-            return await (async function (e, t, i, s) {
-              const a = r.w.Init(u.v7);
-              a.Body().set_language(s),
-                a.Body().set_steamid(t),
-                a.Body().set_itemid(i);
-              const o = await u.BE.FetchTranslationFromCrowdIn(e, a);
-              if (o.GetEResult() != n.d.k_EResultOK)
+            return await (async function (e, t, i, r) {
+              const s = n.w.Init(o.v7);
+              s.Body().set_language(r),
+                s.Body().set_steamid(t),
+                s.Body().set_itemid(i);
+              const a = await o.BE.FetchTranslationFromCrowdIn(e, s);
+              if (1 != a.GetEResult())
                 throw new Error(
-                  `Error from FetchLocalizationForClanEventFromCrowdIn: ${o.GetErrorMessage()} (${o.GetEResult()})`,
+                  `Error from FetchLocalizationForClanEventFromCrowdIn: ${a.GetErrorMessage()} (${a.GetEResult()})`,
                 );
-              return o.Body().toObject();
-            })(s, e, t, i);
+              return a.Body().toObject();
+            })(r, e, t, i);
           },
           retry: !1,
         });

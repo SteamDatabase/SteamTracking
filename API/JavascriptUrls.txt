@@ -5,7 +5,6 @@ ${BASE_URL_SHARED_CDN}app_config/timeline/${}/${}
 ${BASE_URL_SHARED_CDN}community_assets/
 ${BASE_URL_SHARED_CDN}social_sharing/
 ${BASE_URL_SHARED_CDN}store_item_assets/
-${BASE_URL_SHARED_CDN}store_item_assets/${asset_url_format}
 ${BASE_URL_SHARED_CDN}store_item_assets/assetportal/preview//${}/${}/${}
 ${BASE_URL_SHARED_CDN}store_item_assets/mm/${}/${}/${path}${}
 ${BASE_URL_SHARED_CDN}store_item_assets/optin/${}/${}/${}
@@ -153,7 +152,6 @@ ${COMMUNITY_BASE_URL}/gid/${}/partnerevents/edit/${}
 ${COMMUNITY_BASE_URL}/gid/${}/resizeimage/
 ${COMMUNITY_BASE_URL}/ogg/${}/partnerevents
 ${COMMUNITY_BASE_URL}/profiles/${id}
-${COMMUNITY_BASE_URL}/profiles/${}/ajaxgetbadgeinfo/${}
 ${COMMUNITY_BASE_URL}?subsection=workshop
 ${COMMUNITY_BASE_URL}actions/AddFriendAjax
 ${COMMUNITY_BASE_URL}actions/FileUploader/
@@ -289,7 +287,6 @@ ${COMMUNITY_BASE_URL}my/itemcollection
 ${COMMUNITY_BASE_URL}my/moderatormessages
 ${COMMUNITY_BASE_URL}my/moderatormessages/${msgid}
 ${COMMUNITY_BASE_URL}my/tradehistory
-${COMMUNITY_BASE_URL}notes/app/${appid}/
 ${COMMUNITY_BASE_URL}ogg/${appId}/partnerevents/create/
 ${COMMUNITY_BASE_URL}ogg/${}/ajaxgetappbranches
 ${COMMUNITY_BASE_URL}ogg/${}/ajaxgetappvisibilityrounds
@@ -355,7 +352,6 @@ ${COMMUNITY_BASE_URL}sale/ajaxoptineventdetail
 ${COMMUNITY_BASE_URL}sale/ajaxoptinsummary
 ${COMMUNITY_BASE_URL}saleoptin/ajaxgetactiveoptins
 ${COMMUNITY_BASE_URL}saleoptin/ajaxgetoptintagids
-${COMMUNITY_BASE_URL}search/groups/?text=${}
 ${COMMUNITY_BASE_URL}search/users
 ${COMMUNITY_BASE_URL}search/users/
 ${COMMUNITY_BASE_URL}search/users/#text=${}
@@ -363,8 +359,6 @@ ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${published_file_id}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${url}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${}
 ${COMMUNITY_BASE_URL}sharedfiles/reportitem
-${COMMUNITY_BASE_URL}stats/${appid}/achievements/
-${COMMUNITY_BASE_URL}stats/${appid}/leaderboards/
 ${COMMUNITY_BASE_URL}tempcloud/beginfileupload/
 ${COMMUNITY_BASE_URL}tempcloud/commitfileupload/
 ${COMMUNITY_BASE_URL}textfilter/ajaxgetcommunitypreferences
@@ -836,8 +830,6 @@ ${IMG_URL}yearinreview/screenshot_placeholder.png
 ${IMG_URL}yearinreview/streak_bg.jpg
 ${IMG_URL}yearinreview/vr_background6.webp
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
-${IN_CLIENT ? "steam://openurl_external/" : ""}${STORE_BASE_URL}appofficialsite/${appid}
-${IN_CLIENT ? "steam://openurl_external/" : ""}${STORE_BASE_URL}forum/${appid}
 ${LOGIN_BASE_URL}jwt/ajaxrefresh
 ${LOGIN_BASE_URL}jwt/checkdevice/${m_steamid}
 ${LOGIN_BASE_URL}jwt/finalizelogin
@@ -1213,22 +1205,10 @@ ${ProfileURL}ajaxgroupinvite?select_primary=1&json=1
 ${ProfileURL}ajaxsetprivacy/
 ${ProfileURL}edit/
 ${ProfileURL}edit/info
-${ProfileURL}edit/settings
-${ProfileURL}followedgames
-${ProfileURL}friendsthatplay/${appid}
-${ProfileURL}gamecards/${appid}
-${ProfileURL}games/?tab=${tab}
-${ProfileURL}gcpd/${appid}/
 ${ProfileURL}inventory/
 ${ProfileURL}inventory/#753_6
 ${ProfileURL}myworkshopfiles/
-${ProfileURL}recommended/${appid}
-${ProfileURL}reviews
 ${ProfileURL}screenshots/
-${ProfileURL}screenshots/?appid=${appid}
-${ProfileURL}stats/${appid}/?tab=achievements
-${ProfileURL}stats/${appid}/?tab=leaderboards
-${ProfileURL}wishlist
 ${STATS_BASE_URL}app/details/${}/${}
 ${STATS_BASE_URL}app/wishlist/${}/?dateStart=${}&dateEnd=${}
 ${STATS_BASE_URL}bundles/details/${}/${}
@@ -1465,7 +1445,6 @@ ${STORE_BASE_URL}mobile?show=steamapp
 ${STORE_BASE_URL}news/
 ${STORE_BASE_URL}news/${}
 ${STORE_BASE_URL}news/${}/view/${announcement_gid}
-${STORE_BASE_URL}news/?appids=${appid}
 ${STORE_BASE_URL}news/app/${appid}?emclan=${}&emgid=${GID}
 ${STORE_BASE_URL}news/app/${parentAppID}/view/${completed_event_gid}
 ${STORE_BASE_URL}news/app/${}/view/${event_gid}
@@ -1621,7 +1600,6 @@ ${STORE_CHECKOUT_BASE_URL}checkout?purchasetype=self&cart=${}
 ${STORE_CHECKOUT_BASE_URL}parental/ajaxunlock/
 ${STORE_ICON_BASE_URL}${}/
 ${STORE_ICON_BASE_URL}${}/header.jpg
-${STORE_ICON_BASE_URL}/${appid}/${}
 ${STORE_ITEM_BASE_URL}${filename}
 ${STORE_ITEM_BASE_URL}${}
 ${STORE_ITEM_BASE_URL}steam/apps/${}/portrait.png
