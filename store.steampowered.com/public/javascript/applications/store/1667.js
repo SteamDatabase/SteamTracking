@@ -1,0 +1,13 @@
+/**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
+ ****/
+"use strict";
+(self.webpackChunkstore = self.webpackChunkstore || []).push([
+  [1667],
+  {
+    11667: (e) => {
+      e.exports = JSON.parse(
+        '{"language":"ukrainian","LoginRedirect_Dialog_Title":"Увійдіть","LoginRedirect_Dialog_Description":"Увійдіть до акаунта, щоби додати цей продукт до списку бажаного чи позначити як ігнорований. Клацнувши «Гаразд», вас буде переспрямовано на сторінку входу до акаунта.","Dummy":"dummy"}',
+      );
+    },
+  },
+]);

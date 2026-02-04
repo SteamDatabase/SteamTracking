@@ -110,18 +110,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = {
           [_._.k_ECurrencyCodeInvalid]: {},
@@ -406,6 +394,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -658,129 +647,130 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
         __webpack_require__
           ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 88650, 19))),
+          .then(__webpack_require__._.bind(__webpack_require__, 46873, 19))),
         (_.brazilian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 25980, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 1365, 19))),
         (_.bulgarian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 78539, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 83966, 19))),
         (_.czech = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 75369, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 51360, 19))),
         (_.danish = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 76235, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 98292, 19))),
         (_.dutch = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 7956, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 44993, 19))),
         (_.english = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 92962, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 3703, 19))),
         (_.finnish = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 88777, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 86376, 19))),
         (_.french = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 37970, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 67325, 19))),
         (_.german = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 63612, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 69263, 19))),
         (_.greek = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 48846, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 14399, 19))),
         (_.hungarian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 19812, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 91706, 19))),
         (_.indonesian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 42334, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 69341, 19))),
         (_.italian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 50874, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 97511, 19))),
         (_.japanese = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 30853, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 40330, 19))),
         (_.koreana = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 6309, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 96252, 19))),
         (_.latam = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 61805, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 90204, 19))),
         (_.norwegian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 27406, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 40839, 19))),
         (_.polish = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 91259, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 78816, 19))),
         (_.portuguese = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 66551, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 98160, 19))),
         (_.romanian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 1317, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 73546, 19))),
         (_.russian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 23471, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 84302, 19))),
         (_.schinese = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 67350, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 46461, 19))),
         (_.spanish = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 91594, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 18167, 19))),
         (_.swedish = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 47491, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 22438, 19))),
         (_.tchinese = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 75965, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 46006, 19))),
         (_.thai = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 2912, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 96727, 19))),
         (_.turkish = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 4546, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 51639, 19))),
         (_.ukrainian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 73444, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 21973, 19))),
         (_.vietnamese = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 72469, 19)));
+            .then(__webpack_require__._.bind(__webpack_require__, 53946, 19)));
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
@@ -849,6 +839,16 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { cell: _, row: __webpack_require__ } = _,
           _ = __webpack_require__.original.packageID,
@@ -953,12 +953,10 @@
       }
       function _(_) {
         const { packageID: _ } = _,
-          { fnApplyGuidelines: __webpack_require__ } = (0, _._)();
+          { fnApplyGuidelines: __webpack_require__ } = (0, _._)((0, _._)());
         return _.createElement(_, {
           fnGetUSDPriceInCents: () => (0, _._)(_, "USD"),
-          fnOnUpdate: (_) => {
-            __webpack_require__(_, _);
-          },
+          fnOnUpdate: (_) => __webpack_require__(_, _),
           strDescription: (0, _._)(
             "#PricingDashboard_GuidelinesPickerDescription",
           ),
@@ -1241,230 +1239,13 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      var _;
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-      }),
-        (function (_) {
-          (_[(_.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
-            (_[(_.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
-            (_[(_.k_ECurrencyCodeGBP = 2)] = "k_ECurrencyCodeGBP"),
-            (_[(_.k_ECurrencyCodeEUR = 3)] = "k_ECurrencyCodeEUR"),
-            (_[(_.k_ECurrencyCodeCHF = 4)] = "k_ECurrencyCodeCHF"),
-            (_[(_.k_ECurrencyCodeRUB = 5)] = "k_ECurrencyCodeRUB"),
-            (_[(_.k_ECurrencyCodePLN = 6)] = "k_ECurrencyCodePLN"),
-            (_[(_.k_ECurrencyCodeBRL = 7)] = "k_ECurrencyCodeBRL"),
-            (_[(_.k_ECurrencyCodeJPY = 8)] = "k_ECurrencyCodeJPY"),
-            (_[(_.k_ECurrencyCodeNOK = 9)] = "k_ECurrencyCodeNOK"),
-            (_[(_.k_ECurrencyCodeIDR = 10)] = "k_ECurrencyCodeIDR"),
-            (_[(_.k_ECurrencyCodeMYR = 11)] = "k_ECurrencyCodeMYR"),
-            (_[(_.k_ECurrencyCodePHP = 12)] = "k_ECurrencyCodePHP"),
-            (_[(_.k_ECurrencyCodeSGD = 13)] = "k_ECurrencyCodeSGD"),
-            (_[(_.k_ECurrencyCodeTHB = 14)] = "k_ECurrencyCodeTHB"),
-            (_[(_.k_ECurrencyCodeVND = 15)] = "k_ECurrencyCodeVND"),
-            (_[(_.k_ECurrencyCodeKRW = 16)] = "k_ECurrencyCodeKRW"),
-            (_[(_.k_ECurrencyCodeTRY = 17)] = "k_ECurrencyCodeTRY"),
-            (_[(_.k_ECurrencyCodeUAH = 18)] = "k_ECurrencyCodeUAH"),
-            (_[(_.k_ECurrencyCodeMXN = 19)] = "k_ECurrencyCodeMXN"),
-            (_[(_.k_ECurrencyCodeCAD = 20)] = "k_ECurrencyCodeCAD"),
-            (_[(_.k_ECurrencyCodeAUD = 21)] = "k_ECurrencyCodeAUD"),
-            (_[(_.k_ECurrencyCodeNZD = 22)] = "k_ECurrencyCodeNZD"),
-            (_[(_.k_ECurrencyCodeCNY = 23)] = "k_ECurrencyCodeCNY"),
-            (_[(_.k_ECurrencyCodeINR = 24)] = "k_ECurrencyCodeINR"),
-            (_[(_.k_ECurrencyCodeCLP = 25)] = "k_ECurrencyCodeCLP"),
-            (_[(_.k_ECurrencyCodePEN = 26)] = "k_ECurrencyCodePEN"),
-            (_[(_.k_ECurrencyCodeCOP = 27)] = "k_ECurrencyCodeCOP"),
-            (_[(_.k_ECurrencyCodeZAR = 28)] = "k_ECurrencyCodeZAR"),
-            (_[(_.k_ECurrencyCodeHKD = 29)] = "k_ECurrencyCodeHKD"),
-            (_[(_.k_ECurrencyCodeTWD = 30)] = "k_ECurrencyCodeTWD"),
-            (_[(_.k_ECurrencyCodeSAR = 31)] = "k_ECurrencyCodeSAR"),
-            (_[(_.k_ECurrencyCodeAED = 32)] = "k_ECurrencyCodeAED"),
-            (_[(_.k_ECurrencyCodeSEK = 33)] = "k_ECurrencyCodeSEK"),
-            (_[(_.k_ECurrencyCodeARS = 34)] = "k_ECurrencyCodeARS"),
-            (_[(_.k_ECurrencyCodeILS = 35)] = "k_ECurrencyCodeILS"),
-            (_[(_.k_ECurrencyCodeBYN = 36)] = "k_ECurrencyCodeBYN"),
-            (_[(_.k_ECurrencyCodeKZT = 37)] = "k_ECurrencyCodeKZT"),
-            (_[(_.k_ECurrencyCodeKWD = 38)] = "k_ECurrencyCodeKWD"),
-            (_[(_.k_ECurrencyCodeQAR = 39)] = "k_ECurrencyCodeQAR"),
-            (_[(_.k_ECurrencyCodeCRC = 40)] = "k_ECurrencyCodeCRC"),
-            (_[(_.k_ECurrencyCodeUYU = 41)] = "k_ECurrencyCodeUYU"),
-            (_[(_.k_ECurrencyCodeBGN = 42)] = "k_ECurrencyCodeBGN"),
-            (_[(_.k_ECurrencyCodeHRK = 43)] = "k_ECurrencyCodeHRK"),
-            (_[(_.k_ECurrencyCodeCZK = 44)] = "k_ECurrencyCodeCZK"),
-            (_[(_.k_ECurrencyCodeDKK = 45)] = "k_ECurrencyCodeDKK"),
-            (_[(_.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
-            (_[(_.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
-            (_[(_.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
-        })(_ || (_ = {}));
-      const _ = [_.k_ECurrencyCodeTRY, _.k_ECurrencyCodeARS];
-      function _() {
-        return [
-          _.k_ECurrencyCodeUSD,
-          _.k_ECurrencyCodeGBP,
-          _.k_ECurrencyCodeEUR,
-          _.k_ECurrencyCodeCHF,
-          _.k_ECurrencyCodeRUB,
-          _.k_ECurrencyCodePLN,
-          _.k_ECurrencyCodeBRL,
-          _.k_ECurrencyCodeJPY,
-          _.k_ECurrencyCodeNOK,
-          _.k_ECurrencyCodeIDR,
-          _.k_ECurrencyCodeMYR,
-          _.k_ECurrencyCodePHP,
-          _.k_ECurrencyCodeSGD,
-          _.k_ECurrencyCodeTHB,
-          _.k_ECurrencyCodeVND,
-          _.k_ECurrencyCodeKRW,
-          _.k_ECurrencyCodeUAH,
-          _.k_ECurrencyCodeMXN,
-          _.k_ECurrencyCodeCAD,
-          _.k_ECurrencyCodeAUD,
-          _.k_ECurrencyCodeNZD,
-          _.k_ECurrencyCodeCNY,
-          _.k_ECurrencyCodeINR,
-          _.k_ECurrencyCodeCLP,
-          _.k_ECurrencyCodePEN,
-          _.k_ECurrencyCodeCOP,
-          _.k_ECurrencyCodeZAR,
-          _.k_ECurrencyCodeHKD,
-          _.k_ECurrencyCodeTWD,
-          _.k_ECurrencyCodeSAR,
-          _.k_ECurrencyCodeAED,
-          _.k_ECurrencyCodeILS,
-          _.k_ECurrencyCodeKZT,
-          _.k_ECurrencyCodeKWD,
-          _.k_ECurrencyCodeQAR,
-          _.k_ECurrencyCodeCRC,
-          _.k_ECurrencyCodeUYU,
-        ];
-      }
-      function _() {
-        return [
-          ..._(),
-          ..._,
-          _.k_ECurrencyCodeSEK,
-          _.k_ECurrencyCodeBGN,
-          _.k_ECurrencyCodeHRK,
-          _.k_ECurrencyCodeCZK,
-          _.k_ECurrencyCodeDKK,
-          _.k_ECurrencyCodeHUF,
-          _.k_ECurrencyCodeRON,
-        ];
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      class _ {
-        m_mapUSDPrice = new Map();
-        m_mapKeyToGuidePrice = new Map();
-        m_rgUSDPricePointInCents = [];
-        GetKey(_, _, _, _ = 1) {
-          return `${_}_${_}_${_ || _._.k_ERegionCodeInvalid}_${_}`;
-        }
-        GetAnyPricePoint() {
-          return Array.from(this.m_mapUSDPrice.get(1)?.values() || [])[0];
-        }
-        GetRecommendPrice(_, _, _, _ = 1) {
-          const _ = this.GetKey(_, _, _, _);
-          return this.m_mapKeyToGuidePrice.get(_);
-        }
-        GetScaledRecommendedPrice(_, _, _, _ = 1) {
-          let _ = -1,
-            _ = -1;
-          for (const _ of this.m_mapUSDPrice.get(_).keys()) {
-            const _ = Math.abs(_ - _);
-            (-1 == _ || _ < _) && ((_ = _), (_ = _));
-          }
-          const _ = this.m_mapUSDPrice.get(_).get(_),
-            _ = _
-              ? _.region_prices.find((_) => _.region_code == _)
-              : _.currency_prices.find((_) => _.currency_code == _),
-            _ = _ / _;
-          return {
-            currency_code: _?.currency_code,
-            region_code: _?.region_code,
-            price: Math.ceil((_?.price || 0) * _),
-          };
-        }
-        GetUSDPricePointsInCents() {
-          return this.m_rgUSDPricePointInCents;
-        }
-        constructor(_) {
-          let _ = new Set();
-          _.forEach((_) => {
-            const _ = _.conversion_method ?? 1;
-            this.m_mapUSDPrice.has(_) || this.m_mapUSDPrice.set(_, new Map());
-            this.m_mapUSDPrice.get(_).set(_.usd_price, _),
-              _.add(_.usd_price),
-              _.currency_prices.forEach((_) => {
-                const _ = this.GetKey(
-                  _.usd_price,
-                  _.currency_code,
-                  _._.k_ERegionCodeInvalid,
-                  _.conversion_method || 1,
-                );
-                this.m_mapKeyToGuidePrice.set(_, _);
-              }),
-              _.region_prices.forEach((_) => {
-                const _ = this.GetKey(
-                  _.usd_price,
-                  _.currency_code,
-                  _.region_code,
-                  _.conversion_method || 1,
-                );
-                this.m_mapKeyToGuidePrice.set(_, _);
-              });
-          }),
-            (this.m_rgUSDPricePointInCents = Array.from(_.keys()));
-        }
-      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
-      function _() {
-        const _ = (0, _._)({
-          queryKey: ["PricingGuideline"],
-          queryFn: async () =>
-            await (function () {
-              let _ = (0, _._)("pricing_guideline", "application_config");
-              if (_) return Promise.resolve(_);
-              {
-                const _ = _._.getQueryData(["PricingGuideline"]);
-                return Promise.resolve(_ ?? null);
-              }
-            })(),
-        });
-        return _.data ? new _(_.data) : null;
-      }
-      function _() {
-        return ["PricingGuideline"];
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _._,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
@@ -1664,7 +1445,7 @@
             return "";
         }
       }
-      function _(_, _ = _.k_ERegionCodeInvalid) {
+      function _(_, _ = _._.k_ERegionCodeInvalid) {
         switch (_) {
           case _._.k_ECurrencyCodeGBP:
             return "gbp";
@@ -1759,13 +1540,13 @@
           case _._.k_ECurrencyCodeRON:
             return "ron";
           default:
-            return _ == _.k_ERegionCodeCIS
+            return _ == _._.k_ERegionCodeCIS
               ? "usd_cis"
-              : _ == _.k_ERegionCodeSAsia
+              : _ == _._.k_ERegionCodeSAsia
                 ? "usd_sasia"
-                : _ == _.k_ERegionCodeLATAM
+                : _ == _._.k_ERegionCodeLATAM
                   ? "usd_latam"
-                  : _ == _.k_ERegionCodeMENA
+                  : _ == _._.k_ERegionCodeMENA
                     ? "usd_mena"
                     : "usd";
         }
@@ -1874,18 +1655,379 @@
           })(_.toUpperCase()),
         )} (${_})`;
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      var _;
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      }),
+        (function (_) {
+          (_[(_.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
+            (_[(_.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
+            (_[(_.k_ECurrencyCodeGBP = 2)] = "k_ECurrencyCodeGBP"),
+            (_[(_.k_ECurrencyCodeEUR = 3)] = "k_ECurrencyCodeEUR"),
+            (_[(_.k_ECurrencyCodeCHF = 4)] = "k_ECurrencyCodeCHF"),
+            (_[(_.k_ECurrencyCodeRUB = 5)] = "k_ECurrencyCodeRUB"),
+            (_[(_.k_ECurrencyCodePLN = 6)] = "k_ECurrencyCodePLN"),
+            (_[(_.k_ECurrencyCodeBRL = 7)] = "k_ECurrencyCodeBRL"),
+            (_[(_.k_ECurrencyCodeJPY = 8)] = "k_ECurrencyCodeJPY"),
+            (_[(_.k_ECurrencyCodeNOK = 9)] = "k_ECurrencyCodeNOK"),
+            (_[(_.k_ECurrencyCodeIDR = 10)] = "k_ECurrencyCodeIDR"),
+            (_[(_.k_ECurrencyCodeMYR = 11)] = "k_ECurrencyCodeMYR"),
+            (_[(_.k_ECurrencyCodePHP = 12)] = "k_ECurrencyCodePHP"),
+            (_[(_.k_ECurrencyCodeSGD = 13)] = "k_ECurrencyCodeSGD"),
+            (_[(_.k_ECurrencyCodeTHB = 14)] = "k_ECurrencyCodeTHB"),
+            (_[(_.k_ECurrencyCodeVND = 15)] = "k_ECurrencyCodeVND"),
+            (_[(_.k_ECurrencyCodeKRW = 16)] = "k_ECurrencyCodeKRW"),
+            (_[(_.k_ECurrencyCodeTRY = 17)] = "k_ECurrencyCodeTRY"),
+            (_[(_.k_ECurrencyCodeUAH = 18)] = "k_ECurrencyCodeUAH"),
+            (_[(_.k_ECurrencyCodeMXN = 19)] = "k_ECurrencyCodeMXN"),
+            (_[(_.k_ECurrencyCodeCAD = 20)] = "k_ECurrencyCodeCAD"),
+            (_[(_.k_ECurrencyCodeAUD = 21)] = "k_ECurrencyCodeAUD"),
+            (_[(_.k_ECurrencyCodeNZD = 22)] = "k_ECurrencyCodeNZD"),
+            (_[(_.k_ECurrencyCodeCNY = 23)] = "k_ECurrencyCodeCNY"),
+            (_[(_.k_ECurrencyCodeINR = 24)] = "k_ECurrencyCodeINR"),
+            (_[(_.k_ECurrencyCodeCLP = 25)] = "k_ECurrencyCodeCLP"),
+            (_[(_.k_ECurrencyCodePEN = 26)] = "k_ECurrencyCodePEN"),
+            (_[(_.k_ECurrencyCodeCOP = 27)] = "k_ECurrencyCodeCOP"),
+            (_[(_.k_ECurrencyCodeZAR = 28)] = "k_ECurrencyCodeZAR"),
+            (_[(_.k_ECurrencyCodeHKD = 29)] = "k_ECurrencyCodeHKD"),
+            (_[(_.k_ECurrencyCodeTWD = 30)] = "k_ECurrencyCodeTWD"),
+            (_[(_.k_ECurrencyCodeSAR = 31)] = "k_ECurrencyCodeSAR"),
+            (_[(_.k_ECurrencyCodeAED = 32)] = "k_ECurrencyCodeAED"),
+            (_[(_.k_ECurrencyCodeSEK = 33)] = "k_ECurrencyCodeSEK"),
+            (_[(_.k_ECurrencyCodeARS = 34)] = "k_ECurrencyCodeARS"),
+            (_[(_.k_ECurrencyCodeILS = 35)] = "k_ECurrencyCodeILS"),
+            (_[(_.k_ECurrencyCodeBYN = 36)] = "k_ECurrencyCodeBYN"),
+            (_[(_.k_ECurrencyCodeKZT = 37)] = "k_ECurrencyCodeKZT"),
+            (_[(_.k_ECurrencyCodeKWD = 38)] = "k_ECurrencyCodeKWD"),
+            (_[(_.k_ECurrencyCodeQAR = 39)] = "k_ECurrencyCodeQAR"),
+            (_[(_.k_ECurrencyCodeCRC = 40)] = "k_ECurrencyCodeCRC"),
+            (_[(_.k_ECurrencyCodeUYU = 41)] = "k_ECurrencyCodeUYU"),
+            (_[(_.k_ECurrencyCodeBGN = 42)] = "k_ECurrencyCodeBGN"),
+            (_[(_.k_ECurrencyCodeHRK = 43)] = "k_ECurrencyCodeHRK"),
+            (_[(_.k_ECurrencyCodeCZK = 44)] = "k_ECurrencyCodeCZK"),
+            (_[(_.k_ECurrencyCodeDKK = 45)] = "k_ECurrencyCodeDKK"),
+            (_[(_.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
+            (_[(_.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
+            (_[(_.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
+        })(_ || (_ = {}));
+      const _ = [_.k_ECurrencyCodeTRY, _.k_ECurrencyCodeARS];
+      function _() {
+        return [
+          _.k_ECurrencyCodeUSD,
+          _.k_ECurrencyCodeGBP,
+          _.k_ECurrencyCodeEUR,
+          _.k_ECurrencyCodeCHF,
+          _.k_ECurrencyCodeRUB,
+          _.k_ECurrencyCodePLN,
+          _.k_ECurrencyCodeBRL,
+          _.k_ECurrencyCodeJPY,
+          _.k_ECurrencyCodeNOK,
+          _.k_ECurrencyCodeIDR,
+          _.k_ECurrencyCodeMYR,
+          _.k_ECurrencyCodePHP,
+          _.k_ECurrencyCodeSGD,
+          _.k_ECurrencyCodeTHB,
+          _.k_ECurrencyCodeVND,
+          _.k_ECurrencyCodeKRW,
+          _.k_ECurrencyCodeUAH,
+          _.k_ECurrencyCodeMXN,
+          _.k_ECurrencyCodeCAD,
+          _.k_ECurrencyCodeAUD,
+          _.k_ECurrencyCodeNZD,
+          _.k_ECurrencyCodeCNY,
+          _.k_ECurrencyCodeINR,
+          _.k_ECurrencyCodeCLP,
+          _.k_ECurrencyCodePEN,
+          _.k_ECurrencyCodeCOP,
+          _.k_ECurrencyCodeZAR,
+          _.k_ECurrencyCodeHKD,
+          _.k_ECurrencyCodeTWD,
+          _.k_ECurrencyCodeSAR,
+          _.k_ECurrencyCodeAED,
+          _.k_ECurrencyCodeILS,
+          _.k_ECurrencyCodeKZT,
+          _.k_ECurrencyCodeKWD,
+          _.k_ECurrencyCodeQAR,
+          _.k_ECurrencyCodeCRC,
+          _.k_ECurrencyCodeUYU,
+        ];
+      }
+      function _() {
+        return [
+          ..._(),
+          ..._,
+          _.k_ECurrencyCodeSEK,
+          _.k_ECurrencyCodeBGN,
+          _.k_ECurrencyCodeHRK,
+          _.k_ECurrencyCodeCZK,
+          _.k_ECurrencyCodeDKK,
+          _.k_ECurrencyCodeHUF,
+          _.k_ECurrencyCodeRON,
+        ];
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      var _;
+      function _() {
+        return [
+          _.k_ERegionCodeCIS,
+          _.k_ERegionCodeSAsia,
+          _.k_ERegionCodeLATAM,
+          _.k_ERegionCodeMENA,
+        ];
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      }),
+        (function (_) {
+          (_[(_.k_ERegionCodeInvalid = 0)] = "k_ERegionCodeInvalid"),
+            (_[(_.k_ERegionCodeCIS = 1)] = "k_ERegionCodeCIS"),
+            (_[(_.k_ERegionCodeSAsia = 2)] = "k_ERegionCodeSAsia"),
+            (_[(_.k_ERegionCodeLATAM = 3)] = "k_ERegionCodeLATAM"),
+            (_[(_.k_ERegionCodeMENA = 4)] = "k_ERegionCodeMENA"),
+            (_[(_.k_ERegionCodeMax = 5)] = "k_ERegionCodeMax");
+        })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        eConversionMethod: 1,
+        setConversionMethod: (_) => {},
+        rgAvailableConversionMethods: [],
+      });
+      function _(_) {
+        const { eInitialConversionMethod: _ } = _,
+          _ = (0, _._)(),
+          [_, _] = _.useState(_ || 1),
+          _ = _.useMemo(() => {
+            const _ = _
+              ? __webpack_require__.GetAvailableConversionMethods()
+              : [];
+            return {
+              eConversionMethod: _,
+              setConversionMethod: _,
+              rgAvailableConversionMethods: _,
+            };
+          }, [_, _, _]);
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _.children,
+        );
+      }
+      function _() {
+        return _.useContext(_).eConversionMethod;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_mapUSDPrice = new Map();
+        m_mapKeyToGuidePrice = new Map();
+        m_rgUSDPricePointInCents = [];
+        m_setConversionMethod = new Set();
+        GetKey(_, _, _, _ = 1) {
+          return `${_}_${_}_${_ || _._.k_ERegionCodeInvalid}_${_}`;
+        }
+        GetAvailableConversionMethods() {
+          return Array.from(this.m_setConversionMethod).sort();
+        }
+        GetAnyPricePoint() {
+          return Array.from(this.m_mapUSDPrice.get(1)?.values() || [])[0];
+        }
+        GetRecommendPrice(_, _, _, _ = 1) {
+          const _ = this.GetKey(_, _, _, _);
+          return this.m_mapKeyToGuidePrice.get(_);
+        }
+        GetScaledRecommendedPrice(_, _, _, _ = 1) {
+          let _ = -1,
+            _ = -1;
+          for (const _ of this.m_mapUSDPrice.get(_).keys()) {
+            const _ = Math.abs(_ - _);
+            (-1 == _ || _ < _) && ((_ = _), (_ = _));
+          }
+          const _ = this.m_mapUSDPrice.get(_).get(_),
+            _ = _
+              ? _.region_prices.find((_) => _.region_code == _)
+              : _.currency_prices.find((_) => _.currency_code == _),
+            _ = _ / _;
+          return {
+            currency_code: _?.currency_code,
+            region_code: _?.region_code,
+            price: Math.ceil((_?.price || 0) * _),
+          };
+        }
+        GetUSDPricePointsInCents() {
+          return this.m_rgUSDPricePointInCents;
+        }
+        constructor(_) {
+          let _ = new Set();
+          _.forEach((_) => {
+            const _ = _.convert_method ?? 1;
+            this.m_setConversionMethod.add(_),
+              this.m_mapUSDPrice.has(_) || this.m_mapUSDPrice.set(_, new Map());
+            this.m_mapUSDPrice.get(_).set(_.usd_price, _),
+              _.add(_.usd_price),
+              _.currency_prices.forEach((_) => {
+                const _ = this.GetKey(
+                  _.usd_price,
+                  _.currency_code,
+                  _._.k_ERegionCodeInvalid,
+                  _.convert_method || 1,
+                );
+                this.m_mapKeyToGuidePrice.set(_, _);
+              }),
+              _.region_prices.forEach((_) => {
+                const _ = this.GetKey(
+                  _.usd_price,
+                  _.currency_code,
+                  _.region_code,
+                  _.convert_method || 1,
+                );
+                if (
+                  (this.m_mapKeyToGuidePrice.set(_, _),
+                  this.m_setConversionMethod.has(3))
+                ) {
+                  const _ = {
+                      currency_code: _._.k_ECurrencyCodeUSD,
+                      price: _.usd_price,
+                      region_code: _.region_code,
+                    },
+                    _ = this.GetKey(
+                      _.usd_price,
+                      _._.k_ECurrencyCodeUSD,
+                      _.region_code,
+                      3,
+                    );
+                  this.m_mapKeyToGuidePrice.set(_, _);
+                }
+              });
+          }),
+            (this.m_rgUSDPricePointInCents = Array.from(_.keys()));
+        }
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = (0, _._)({
+          queryKey: ["PricingGuideline"],
+          queryFn: async () =>
+            await (function () {
+              let _ = (0, _._)("pricing_guideline", "application_config");
+              if (_) return Promise.resolve(_);
+              {
+                const _ = _._.getQueryData(["PricingGuideline"]);
+                return Promise.resolve(_ ?? null);
+              }
+            })(),
+        });
+        return (0, _.useMemo)(() => (_.data ? new _(_.data) : null), [_.data]);
+      }
+      function _() {
+        return ["PricingGuideline"];
+      }
+      function _(_) {
+        const _ = _(),
+          _ = (0, _._)();
+        return {
+          fnApplyGuidelines: (0, _.useCallback)(
+            (_, _) => {
+              if (
+                ((0, _._)(
+                  _,
+                  "Pricing Guideline Not Initialized by time conversion being triggered",
+                ),
+                _)
+              ) {
+                for (
+                  let _ = _._.k_ECurrencyCodeUSD;
+                  _ < _._.k_ECurrencyCodeMax;
+                  ++_
+                ) {
+                  const _ = _.GetRecommendPrice(_, _, void 0, _)?.price;
+                  if (_ && _ > 0) {
+                    const _ = (0, _._)(_);
+                    _(_, _, _);
+                  }
+                }
+                for (
+                  let _ = _._.k_ERegionCodeCIS;
+                  _ < _._.k_ERegionCodeMax;
+                  ++_
+                ) {
+                  const _ = _._.k_ECurrencyCodeUSD,
+                    _ = _.GetRecommendPrice(_, _, _, _)?.price;
+                  if (_ && _ > 0) {
+                    const _ = (0, _._)(_, _).toUpperCase();
+                    _(_, _, _);
+                  }
+                }
+              }
+            },
+            [_, _, _],
+          ),
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         return _._.k_ECurrencyCodeUSD;
       }
       function _(_) {
         switch (_) {
-          case _.k_ERegionCodeCIS:
+          case _._.k_ERegionCodeCIS:
             return "usd_cis";
-          case _.k_ERegionCodeSAsia:
+          case _._.k_ERegionCodeSAsia:
             return "usd_sasia";
-          case _.k_ERegionCodeLATAM:
+          case _._.k_ERegionCodeLATAM:
             return "usd_latam";
-          case _.k_ERegionCodeMENA:
+          case _._.k_ERegionCodeMENA:
             return "usd_mena";
           default:
             return "usd_invalid";
@@ -1893,13 +2035,13 @@
       }
       function _(_) {
         switch (_) {
-          case _.k_ERegionCodeCIS:
+          case _._.k_ERegionCodeCIS:
             return "CIS";
-          case _.k_ERegionCodeSAsia:
+          case _._.k_ERegionCodeSAsia:
             return "SASIA";
-          case _.k_ERegionCodeLATAM:
+          case _._.k_ERegionCodeLATAM:
             return "LATAM";
-          case _.k_ERegionCodeMENA:
+          case _._.k_ERegionCodeMENA:
             return "MENA";
           default:
             return "Invalid Region";
@@ -1908,48 +2050,34 @@
       function _(_) {
         switch (_) {
           case "CIS":
-            return _.k_ERegionCodeCIS;
+            return _._.k_ERegionCodeCIS;
           case "SASIA":
-            return _.k_ERegionCodeSAsia;
+            return _._.k_ERegionCodeSAsia;
           case "LATAM":
-            return _.k_ERegionCodeLATAM;
+            return _._.k_ERegionCodeLATAM;
           case "MENA":
-            return _.k_ERegionCodeMENA;
+            return _._.k_ERegionCodeMENA;
           default:
-            return _.k_ERegionCodeInvalid;
+            return _._.k_ERegionCodeInvalid;
         }
       }
       function _(_) {
         switch (_) {
-          case _.k_ERegionCodeCIS:
+          case _._.k_ERegionCodeCIS:
             return "The Commonwealth of Independent Stats";
-          case _.k_ERegionCodeSAsia:
+          case _._.k_ERegionCodeSAsia:
             return "South Asia";
-          case _.k_ERegionCodeLATAM:
+          case _._.k_ERegionCodeLATAM:
             return "Latin America";
-          case _.k_ERegionCodeMENA:
+          case _._.k_ERegionCodeMENA:
             return "Middle East and North Africa";
           default:
             return "Invalid Region";
         }
       }
-      !(function (_) {
-        (_[(_.k_ERegionCodeInvalid = 0)] = "k_ERegionCodeInvalid"),
-          (_[(_.k_ERegionCodeCIS = 1)] = "k_ERegionCodeCIS"),
-          (_[(_.k_ERegionCodeSAsia = 2)] = "k_ERegionCodeSAsia"),
-          (_[(_.k_ERegionCodeLATAM = 3)] = "k_ERegionCodeLATAM"),
-          (_[(_.k_ERegionCodeMENA = 4)] = "k_ERegionCodeMENA"),
-          (_[(_.k_ERegionCodeMax = 5)] = "k_ERegionCodeMax");
-      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid");
       const _ = (0, _._)(),
-        _ =
-          ((0, _._)(),
-          [
-            _.k_ERegionCodeCIS,
-            _.k_ERegionCodeSAsia,
-            _.k_ERegionCodeLATAM,
-            _.k_ERegionCodeMENA,
-          ]);
+        _ = ((0, _._)(), (0, _._)());
     },
   },
 ]);

@@ -266,13 +266,6 @@
         TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
       };
     },
-    chunkid: (module) => {
-      module.exports = {
-        Root: "_2KPA3I9eXE9r251_-GX_iv",
-        DataAttributes: "_1tmKnx6V_8Ez9jIC5eMgat",
-        AfterDataAttributes: "_3BGADF5vKbdAji-Xj65xxm",
-      };
-    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
@@ -566,6 +559,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -576,9 +570,13 @@
           },
           _,
         );
-        return _.createElement("div", {
-          ..._,
-        });
+        return _.createElement(
+          _._,
+          null,
+          _.createElement("div", {
+            ..._,
+          }),
+        );
       }
       const _ = [
         ..._._,
@@ -1043,88 +1041,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = "function" == typeof matchMedia ? matchMedia : _,
-          _ = (0, _.useMemo)(() => _(_), [_, _]),
-          [_, _] = (0, _.useState)(!!_ && _.matches);
-        return (
-          (0, _.useEffect)(() => {
-            if (!_) return () => {};
-            function _(_) {
-              _(_.matches);
-            }
-            return (
-              _(_.matches),
-              __webpack_require__.addEventListener("change", _),
-              () => __webpack_require__.removeEventListener("change", _)
-            );
-          }, [_]),
-          _
-        );
-      }
-      function _() {
-        return null;
-      }
-      const _ = ["initial", "sm", "md", "lg"],
-        _ = (0, _.createContext)("lg");
-      function _(_) {
-        const {
-            children: _,
-            breakpoints: __webpack_require__ = {
-              _: 768,
-              _: 940,
-              _: 1240,
-            },
-          } = _,
-          _ = (function (_) {
-            const _ = _(`(min-width: ${_._}px)`),
-              _ = _(`(min-width: ${_._}px)`),
-              _ = _(`(min-width: ${_._}px)`),
-              [_, _] = (0, _.useState)(!0);
-            return (
-              (0, _.useEffect)(() => _(!0), []),
-              _ ? (_ ? "lg" : _ ? "md" : _ ? "sm" : "initial") : "lg"
-            );
-          })(__webpack_require__);
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
-      }
-      function _(_) {
-        const { formFactor: _, children: __webpack_require__ } = _;
-        return _
-          ? _.createElement(
-              _.Provider,
-              {
-                value: _,
-              },
-              __webpack_require__,
-            )
-          : _.createElement(_.Fragment, null, __webpack_require__);
-      }
-      function _() {
-        return (0, _.useContext)(_);
-      }
-      const _ = _.reduce((_, _, _) => ((_[_] = _), _), {});
-      function _(_) {
-        const _ = _();
-        return _[_] >= _[_];
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = _._.reduce((_, _, _) => ((_[_] = _), _), {});
@@ -1143,96 +1059,29 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = (0, _.createContext)({}),
-        _ = (0, _.createContext)(() => {});
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)({});
+        var _;
+        const { children: __webpack_require__, "flow-children": _, ..._ } = _;
+        _ && (_.layout = (0, _._)(_));
+        const { ref: _, node: _ } = (0, _._)(_),
+          _ = (0, _._)(
+            _,
+            null === (_ = __webpack_require__.props) || void 0 === _
+              ? void 0
+              : _.ref,
+          );
         return _.createElement(
-          _.Provider,
+          _._.Provider,
           {
             value: _,
           },
-          _.createElement(
-            _.Provider,
-            {
-              value: __webpack_require__,
-            },
-            _.children,
-          ),
-        );
-      }
-      function _() {
-        return (0, _.useContext)(_);
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = _.memo(function (_) {
-        const {
-            defaultTextSize: _ = "3",
-            accentColor: __webpack_require__ = "blue",
-            dullColor: _ = "greyneutral",
-            bodyTextColor: _ = "text-light",
-            breakpoints: _,
-            children: _,
-            zoo: _,
-          } = _,
-          _ = {
-            "--default-font-size": `var(--text-size-${_})`,
-            "--default-line-height": `var(--line-height-${_})`,
-            "--default-letter-spacing": `var(--letter-spacing-${_})`,
-            "--color-debug": "hotpink",
-            "--color-accent-contrast": "white",
-          };
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            _._,
-            {
-              breakpoints: _,
-            },
-            _.createElement(
-              _,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _()(_.Root, "noOpinionatedGlobalStyles"),
-                  style: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    "data-accent-color": __webpack_require__,
-                    "data-dull-color": _,
-                    "data-body-text-color": _,
-                    className: _.DataAttributes,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.AfterDataAttributes,
-                    },
-                    _,
-                    !1,
-                  ),
-                ),
-              ),
-            ),
-          ),
-        );
-      });
-      function _(_) {
-        const { children: _ } = _,
-          { formFactorOverride: __webpack_require__ } = _();
-        return _.createElement(
-          _._,
-          {
-            formFactor: __webpack_require__,
-          },
-          _,
+          _.cloneElement(__webpack_require__, {
+            ...__webpack_require__.props,
+            ref: _,
+          }),
         );
       }
     },

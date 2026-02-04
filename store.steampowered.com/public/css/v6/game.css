@@ -3963,6 +3963,18 @@ div.early_access_header .devnotes > .likely_stale {
 	font-style: normal;
 }
 
+div.early_access_header .leaving_early_access {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 14px;
+	color: #F4D4A0;
+	padding: 10px;
+	font-style: normal;
+	background: linear-gradient(to right, #27475d, #4e81ae);
+	border-bottom: 1px solid #4e81ae;
+}
+
 
 div.early_access_header .devnotes > div {
 			font-family: "Motiva Sans", Sans-serif;

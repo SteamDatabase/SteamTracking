@@ -746,6 +746,7 @@
           : ["", _, _.strSymbolAndNumberSeparator + _.strSymbol];
       }
       (0, _._)([_._], _.prototype, "m_mapOverridesPerPriceKey", void 0),
+        (0, _._)([_._], _.prototype, "OverridePrice", null),
         (0, _._)([_._], _.prototype, "UpdateOverridesPerPriceKey", null);
       const _ = new Map([
         ["USD", "@1"],
@@ -997,23 +998,7 @@
         return _.useCallback(() => _.Get().DiscardAllLocalPriceOverrides(), []);
       }
       function _() {
-        const _ = [],
-          _ = _.useRef(new Map());
-        _.Get().m_mapPriceGuidelines.forEach((_, _) => {
-          const _ = __webpack_require__.get("USD");
-          _.push(_), _.current.set(_, _);
-        }),
-          _.sort((_, _) => _ - _);
-        const _ = _.useCallback((_, _) => {
-          const _ = _.current.get(_);
-          _.Get()
-            .m_mapPriceGuidelines.get(_)
-            .forEach((_, _) => _.Get().OverridePrice(_, _, _));
-        }, []);
-        return {
-          rgUSDPricesInCents: _,
-          fnApplyGuidelines: _,
-        };
+        return _.Get().OverridePrice;
       }
       function _() {
         return _.useCallback(

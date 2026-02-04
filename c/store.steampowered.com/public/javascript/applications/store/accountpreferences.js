@@ -39,6 +39,7 @@
         AllButton: "_24Y_0sMrz5EywcAsFUstI1",
         ButtonHighlight: "_3OVHZhM_IefZqAOIsPxatj",
         CookieSettingsHeader: "_3R3iiUuAhP-0M-rdtCANeY",
+        DataCollectionSettingsHeader: "-N7TxEZXL1e7VIKEfBOds",
         ButtonGroup: "YPn6VOod44mu0w34xdzDC",
         CookieGroup: "_25H3qBQ1Lfsfq8nwc3M0Fk",
         CookieSection: "_3IKt4dLdwzyZtMqAwvawdG",
@@ -46,6 +47,14 @@
         NecessaryGroup: "_24o8cEsvGK0bE4hHyUGhfh",
         NecessaryTitle: "_3if8ZNUUN7eSTxlCJbdgav",
         NecessaryDesc: "_9NmWi9VzZyFLjcu_GW_70",
+        SavedHardwareList: "_3cKa2WCkwVF9l83qdejZnW",
+        SavedHardware: "rH2OfMey8m_-tFha6mSo3",
+        FriendlyName: "_33i2P3K0jts8t9ZvEucxHX",
+        Details: "_1rRiE6QmvGsMc-qivc5Xp1",
+        SavedHardwareControls: "_24azLL9qdi04Bq8Q6NT3pc",
+        DeleteButton: "kwiQ_gtacj8i38Yf6HMLh",
+        RenameButton: "_1uhme8b0f9MEqNEEMZTVIt",
+        SavedHardwareAddPCButton: "_1h6y7HfPp9ZETEt3vGYcIa",
       };
     },
     chunkid: (module) => {
@@ -60,6 +69,9 @@
         NotificationPrefDetails: "_152HTE3xZ88Xk7LEEPFE68",
         PrefDetailsToggle: "_3XAMDDm5D1pSZpakvjyRPk",
         Selected: "_3yrEIJRje6XiWe9BiIGY7P",
+        Account_manage_container_inner: "_2NBAZEDaX1dPJTQImo4BFa",
+        Account_manage_link: "_1FcUl9nMRyQ6UUDHtWT_TR",
+        Account_settings_notifications_extrapadding: "LKNSqnZGtL7Z-k7LqX8i0",
       };
     },
     chunkid: (module) => {
@@ -386,21 +398,362 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      let _;
+      class _ {
+        m_Preferences = void 0;
+        constructor(_) {
+          (0, _._)(this), (this.m_Preferences = _);
+        }
+        SetDeckFeedback(_) {
+          (this.m_Preferences.provide_deck_feedback = _),
+            this.PostStorePreferences();
+        }
+        SetGameFrameRateReporting(_) {
+          (this.m_Preferences.game_frame_rate_reporting = _),
+            this.PostStorePreferences();
+        }
+        GetProvideDeckFeedbackEnabled() {
+          return 1 == this.m_Preferences.provide_deck_feedback;
+        }
+        GetGameFrameRateReportingEnabled() {
+          return 2 == this.m_Preferences.game_frame_rate_reporting;
+        }
+        ToggleProvideDeckFeeback() {
+          (this.m_Preferences.provide_deck_feedback =
+            1 == this.m_Preferences.provide_deck_feedback ? 2 : 1),
+            this.PostStorePreferences();
+        }
+        ToggleGameFrameRateReporting() {
+          (this.m_Preferences.game_frame_rate_reporting =
+            2 == this.m_Preferences.game_frame_rate_reporting ? 1 : 2),
+            this.PostStorePreferences();
+        }
+        async PostStorePreferences() {
+          const _ = _._.STORE_BASE_URL + "account/savepreferences",
+            _ = new FormData();
+          _.set("sessionid", _._.SESSIONID),
+            _.set(
+              "game_frame_rate_reporting",
+              this.m_Preferences.game_frame_rate_reporting.toString(),
+            );
+          try {
+            let _ = await _().post(_, _, {
+              withCredentials: !0,
+            });
+            (200 == _.status && 1 == _?.data?.success) ||
+              window.ShowAlertDialog(
+                (0, _._)("#DataCollectionPref_Error"),
+                (0, _._)("#DataCollectionPref_ErrorNotSaved"),
+              );
+          } catch (_) {
+            0,
+              window.ShowAlertDialog(
+                (0, _._)("#DataCollectionPref_Error"),
+                (0, _._)("#DataCollectionPref_ErrorNotSaved"),
+              );
+          }
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_Preferences", void 0);
+      var _ = __webpack_require__("chunkid");
+      class _ {
+        m_rgSavedHardware = [];
+        static s_AccountSavedHardwareStore;
+        constructor() {
+          (0, _._)(this);
+        }
+        static Get() {
+          return (
+            _.s_AccountSavedHardwareStore ||
+              ((_.s_AccountSavedHardwareStore = new _()),
+              _.s_AccountSavedHardwareStore.Init()),
+            _.s_AccountSavedHardwareStore
+          );
+        }
+        Init() {
+          this.m_rgSavedHardware = (0, _._)(
+            "saved_hardware",
+            "application_config",
+          );
+        }
+        GetSavedHardware() {
+          return this.m_rgSavedHardware;
+        }
+        async PostRequest(_, _) {
+          try {
+            let _ = await _().post(_, _, {
+              withCredentials: !0,
+            });
+            return (
+              (200 == _.status && 1 == _?.data?.success) ||
+              (window.ShowAlertDialog(
+                (0, _._)("#SavedHardware_Error_Title"),
+                (0, _._)("#SavedHardware_Error_Desc"),
+              ),
+              !1)
+            );
+          } catch (_) {
+            return (
+              window.ShowAlertDialog(
+                (0, _._)("#SavedHardware_Error_Title"),
+                (0, _._)("#SavedHardware_Error_Desc"),
+              ),
+              !1
+            );
+          }
+        }
+        async RenameHardware(_, _) {
+          const _ = _._.STORE_BASE_URL + "account/ajaxhardwarerename",
+            _ = new FormData();
+          _.set("sessionid", _._.SESSIONID),
+            _.set("savedHardwareID", _),
+            _.set("strFriendlyName", _);
+          if (await this.PostRequest(_, _))
+            for (let _ = 0; _ < this.m_rgSavedHardware.length; ++_)
+              this.m_rgSavedHardware[_].hardware_id == _ &&
+                (this.m_rgSavedHardware[_].friendly_name = _);
+        }
+        async DeleteHardware(_) {
+          const _ = _._.STORE_BASE_URL + "account/ajaxhardwaredelete",
+            _ = new FormData();
+          __webpack_require__.set("sessionid", _._.SESSIONID),
+            __webpack_require__.set("savedHardwareID", _);
+          if (await this.PostRequest(_, _))
+            for (let _ = 0; _ < this.m_rgSavedHardware.length; ++_)
+              if (this.m_rgSavedHardware[_].hardware_id == _)
+                return void this.m_rgSavedHardware.splice(_, 1);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_rgSavedHardware", void 0);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _, closeModal: __webpack_require__ } = _,
+          _ = _.useCallback(() => {
+            _.Get().DeleteHardware(_.hardware_id), __webpack_require__();
+          }, [__webpack_require__, _.hardware_id]);
+        return _.createElement(
+          _._,
+          {
+            bDisableBackgroundDismiss: !0,
+            strTitle: (0, _._)("#SavedHardware_Delete_Confirm_Title"),
+            onCancel: __webpack_require__,
+            onOK: _,
+            strOKButtonText: (0, _._)("#SavedHardware_Delete"),
+          },
+          (0, _._)("#SavedHardware_Delete_Confirm_Desc", _.friendly_name),
+        );
+      }
+      function _(_) {
+        const { _: _, closeModal: __webpack_require__ } = _,
+          [_, _] = _.useState(_.friendly_name),
+          _ = _.useCallback(() => {
+            _.Get().RenameHardware(_.hardware_id, _.trim()),
+              __webpack_require__();
+          }, [_, __webpack_require__, _.hardware_id]);
+        return _.createElement(
+          _._,
+          {
+            bDisableBackgroundDismiss: !0,
+            strTitle: (0, _._)("#SavedHardware_Rename_Confirm_Title"),
+            onCancel: __webpack_require__,
+            onOK: _,
+            bOKDisabled: 0 == _.trim().length,
+            strOKButtonText: (0, _._)("#SavedHardware_Rename"),
+          },
+          _.createElement(_._, {
+            label: (0, _._)("#SavedHardware_Rename_Confirm_Label"),
+            value: _,
+            onChange: (_) => {
+              _(_.target.value);
+            },
+            maxLength: 100,
+          }),
+        );
+      }
+      const _ = (0, _._)((_) => {
+        const { _: _ } = _;
+        let _;
+        switch (_.system_info.gaming_device_type) {
+          case 544:
+            _ = (0, _._)("#HardwareVariant_SteamDeck");
+            break;
+          case 545:
+            _ = (0, _._)("#HardwareVariant_LegionGoS");
+            break;
+          case 546:
+            _ = (0, _._)("#HardwareVariant_SteamMachine");
+        }
+        return _.createElement(
+          "div",
+          {
+            className: _.SavedHardware,
+          },
+          _.createElement(
+            "div",
+            null,
+            _.createElement(
+              "div",
+              {
+                className: _.FriendlyName,
+              },
+              _.friendly_name,
+              " ",
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Details,
+              },
+              _ && _.createElement("div", null, _),
+              _.createElement("div", null, _.system_info._),
+              _.createElement(
+                "div",
+                null,
+                _.system_info.cpu_name,
+                " - ",
+                (0, _._)(1024 * parseInt(_.system_info.system_ram) * 1024, 0),
+              ),
+              _.createElement(
+                "div",
+                null,
+                _.system_info.adapter_description,
+                " - ",
+                (0, _._)(1024 * _.system_info.vram_size * 1024, 0),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Timestamp,
+              },
+              (0, _._)(
+                "#SavedHardware_Timestamp",
+                (0, _._)(_.timestamp_created),
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.SavedHardwareControls,
+            },
+            _.createElement(
+              _._,
+              {
+                className: _.RenameButton,
+                onClick: (_) =>
+                  (0, _._)(
+                    _.createElement(_, {
+                      _: _,
+                    }),
+                    (0, _._)(_),
+                  ),
+              },
+              (0, _._)("#SavedHardware_Rename"),
+            ),
+            _.createElement(
+              _._,
+              {
+                className: _.DeleteButton,
+                onClick: (_) =>
+                  (0, _._)(
+                    _.createElement(_, {
+                      _: _,
+                    }),
+                    (0, _._)(_),
+                  ),
+              },
+              (0, _._)("#SavedHardware_Delete"),
+            ),
+          ),
+        );
+      });
+      (0, _._)(() => {
+        const _ = _.Get().GetSavedHardware(),
+          _ = "undefined" != typeof SteamClient,
+          _ = _.useCallback(() => {
+            window.location.reload();
+          }, []),
+          _ = _.useCallback(() => {
+            window.SteamClient.BrowserView.RegisterForMessageFromParent(_),
+              SteamClient.BrowserView.PostMessageToParent(
+                "ShowSavedHardwareDialog",
+                "",
+              );
+          }, [_]);
+        return _.createElement(
+          "div",
+          {
+            className: _.CookieGroup,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.CookieSection,
+            },
+            _.createElement("h2", null, (0, _._)("#SavedHardware_Title")),
+            _.createElement(
+              "p",
+              {
+                className: _.SectionDescription,
+              },
+              (0, _._)("#SavedHardware_Desc"),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.SavedHardwareList,
+            },
+            _.map((_) =>
+              _.createElement(_, {
+                key: _.hardware_id,
+                _: _,
+              }),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.SavedHardwareControls,
+            },
+            _ &&
+              _.createElement(
+                _._,
+                {
+                  className: _.SavedHardwareAddPCButton,
+                  onClick: _,
+                },
+                (0, _._)("#SavedHardware_AddNew"),
+                " ",
+              ),
+          ),
+        );
+      });
+      let _ = null,
+        _ = null;
       const _ = (0, _._)(() => {
-          let _ = (function () {
-            if (!_) {
-              let _ = (0, _._)("cookiepreferences", "application_config");
-              _ = new _(_);
-            }
-            return _;
-          })();
-          const _ = (0, _.useCallback)(() => {
+          const [_, _] = (function () {
+              if (!_) {
+                let _ = (0, _._)("cookiepreferences", "application_config");
+                _ = new _(_);
+              }
+              if (!_) {
+                let _ = (0, _._)("storedatapreferences", "application_config");
+                _ = new _(_);
+              }
+              return [_, _];
+            })(),
+            _ = (0, _.useCallback)(() => {
               _.SetPreferenceState(1);
             }, [_]),
             _ = (0, _.useCallback)(() => {
               _.SetPreferenceState(2);
-            }, [_]);
+            }, [_]),
+            _ = (0, _._)();
           return _.createElement(
             _._,
             {
@@ -678,6 +1031,34 @@
                 settings: _,
               }),
             ),
+            !!_ &&
+              _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(
+                      _.DataCollectionSettingsHeader,
+                      "account_header_line noicon",
+                    ),
+                  },
+                  _.createElement(
+                    "div",
+                    null,
+                    (0, _._)("#DataPreferences_Header"),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: "account_settings_container",
+                  },
+                  _.createElement(_, {
+                    settings: _,
+                  }),
+                ),
+              ),
             null,
           );
         }),
@@ -872,6 +1253,52 @@
               }),
             ),
           );
+        }),
+        _ = (0, _._)((_) => {
+          const { settings: _ } = _,
+            _ = (0, _.useCallback)(() => {
+              _.ToggleProvideDeckFeeback();
+            }, [_]);
+          (0, _.useCallback)(() => {
+            _.ToggleGameFrameRateReporting();
+          }, [_]);
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              "div",
+              {
+                className: _.CookieGroup,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CookieSection,
+                },
+                _.createElement(
+                  "h2",
+                  null,
+                  (0, _._)("#DataPreferences_Provide_SteamOS_Feedback_Title"),
+                ),
+                _.createElement(
+                  "p",
+                  {
+                    className: _.SectionDescription,
+                  },
+                  (0, _._)("#DataPreferences_Provide_SteamOS_Feedback_Desc"),
+                ),
+                _.createElement(_._, {
+                  onChange: _,
+                  checked: _.GetProvideDeckFeedbackEnabled(),
+                  description: (0, _._)(
+                    "#DataPreferences_Provide_SteamOS_Feedback_Label",
+                  ),
+                }),
+              ),
+            ),
+            !1,
+            !1,
+          );
         });
       class _ {
         m_Preferences = void 0;
@@ -952,50 +1379,101 @@
             },
             _.createElement(
               "div",
-              {
-                className: (0, _._)(
-                  _.NotificationSettingsHeader,
-                  "account_header_line noicon",
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(
+                    _.NotificationSettingsHeader,
+                    "account_header_line noicon",
+                  ),
+                },
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)("#NotificationSettings_Email_Title"),
                 ),
-              },
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#NotificationSettings_Title"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: "account_settings_container",
-              },
-              _.createElement(
-                "p",
-                {
-                  className: _.SectionDescription,
-                },
-                (0, _._)("#NotificationSettings_Desc1"),
-              ),
-              _.createElement(
-                "p",
-                {
-                  className: _.SectionDescription,
-                },
-                (0, _._)("#NotificationSettings_Desc2"),
               ),
               _.createElement(
                 "div",
                 {
-                  className: "notification_settings_container",
+                  className: (0, _._)(
+                    "account_settings_container",
+                    _.Account_settings_notifications_extrapadding,
+                  ),
                 },
                 _.createElement(
                   "div",
                   {
-                    className: _.NotificationSendWhen,
+                    className: _.Account_manage_container_inner,
                   },
-                  (0, _._)("#NotificationSettings_SendMeWhen"),
+                  _.createElement(
+                    _._,
+                    {
+                      className: _.Account_manage_link,
+                      onClick: () =>
+                        (document.location =
+                          _._.STORE_BASE_URL + "account/emailoptout"),
+                    },
+                    _.createElement(
+                      "div",
+                      null,
+                      (0, _._)("#NotificationSettings_Email_Button"),
+                    ),
+                  ),
                 ),
-                _,
+              ),
+            ),
+            _.createElement(
+              "div",
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(
+                    _.NotificationSettingsHeader,
+                    "account_header_line noicon",
+                  ),
+                },
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)("#NotificationSettings_Title"),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: "account_settings_container",
+                },
+                _.createElement(
+                  "p",
+                  {
+                    className: _.SectionDescription,
+                  },
+                  (0, _._)("#NotificationSettings_Desc1"),
+                ),
+                _.createElement(
+                  "p",
+                  {
+                    className: _.SectionDescription,
+                  },
+                  (0, _._)("#NotificationSettings_Desc2"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: "notification_settings_container",
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NotificationSendWhen,
+                    },
+                    (0, _._)("#NotificationSettings_SendMeWhen"),
+                  ),
+                  _,
+                ),
               ),
             ),
           );
@@ -1096,7 +1574,6 @@
         _ = __webpack_require__("chunkid");
       const _ = "PlaytestInvites";
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1611,7 +2088,6 @@
           __webpack_require__._ +
           "images/applications/store/steam_mobile_qr_code.png?v=valveisgoodatcaching";
       var _,
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

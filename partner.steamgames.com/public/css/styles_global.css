@@ -497,7 +497,7 @@ a.contentsLink.updated::after {
 
 /* Do not use :not() on this selector, It will end up more specific than other selectors. */
 input, select , textarea, button, .likeButton {
-	background-color:#33383d;
+	background-color: #ffffff1f;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 

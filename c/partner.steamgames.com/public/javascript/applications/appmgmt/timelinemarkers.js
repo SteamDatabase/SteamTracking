@@ -765,6 +765,7 @@
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
         SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
         SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
+        JumpToButtonCtn: "_19bDhRwBW1auKJVn5jamrh",
         JumpToButton: "c4K67QJ5cG4Zr1eb4H_Fu",
         QACtn: "_337X4KlsU9k5t9s423wb_I",
         SaleSectionSubtitle: "_2rIaWN5LbF3muB3D2A-q5k",
@@ -9787,7 +9788,7 @@
       class _ {
         m_tours = {};
         m_strActiveTour = "";
-        m_storage;
+        m_storage = void 0;
         m_bReady = !1;
         constructor() {
           (0, _._)(this);

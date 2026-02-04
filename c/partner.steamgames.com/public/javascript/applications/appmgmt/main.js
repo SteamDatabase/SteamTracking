@@ -163,8 +163,8 @@
     },
     chunkid: (module) => {
       module.exports = {
+        RootDataAttributes: "_3zHvvIxS4vSW6Qh5GqLflX",
         Root: "_2KPA3I9eXE9r251_-GX_iv",
-        DataAttributes: "_1tmKnx6V_8Ez9jIC5eMgat",
         AfterDataAttributes: "_3BGADF5vKbdAji-Xj65xxm",
       };
     },
@@ -1654,58 +1654,60 @@
       var _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const {
-            defaultTextSize: _ = "3",
-            accentColor: __webpack_require__ = "blue",
-            dullColor: _ = "greyneutral",
-            bodyTextColor: _ = "text-light",
-            breakpoints: _,
-            children: _,
-            zoo: _,
-          } = _,
-          _ = {
-            "--default-font-size": `var(--text-size-${_})`,
-            "--default-line-height": `var(--line-height-${_})`,
-            "--default-letter-spacing": `var(--letter-spacing-${_})`,
-            "--color-debug": "hotpink",
-            "--color-accent-contrast": "white",
-          };
-        return _.createElement(
-          _,
-          null,
+          defaultTextSize: _,
+          accentColor: __webpack_require__ = "blue",
+          dullColor: _ = "greyneutral",
+          bodyTextColor: _ = "text-light",
+          breakpoints: _,
+          children: _,
+          zoo: _,
+        } = _;
+        let _;
+        return (
+          _ &&
+            (_ = {
+              "--default-font-size": `var(--text-size-${_})`,
+              "--default-line-height": `var(--line-height-${_})`,
+              "--default-letter-spacing": `var(--letter-spacing-${_})`,
+            }),
           _.createElement(
-            _._,
-            {
-              breakpoints: _,
-            },
+            _,
+            null,
             _.createElement(
-              _,
-              null,
+              _._,
+              {
+                breakpoints: _,
+              },
               _.createElement(
-                "div",
-                {
-                  className: _()(_.Root, "noOpinionatedGlobalStyles"),
-                  style: _,
-                },
+                _,
+                null,
                 _.createElement(
                   "div",
                   {
-                    "data-accent-color": __webpack_require__,
-                    "data-dull-color": _,
-                    "data-body-text-color": _,
-                    className: _.DataAttributes,
+                    className: _()(_.Root, "noOpinionatedGlobalStyles"),
+                    style: _,
                   },
                   _.createElement(
                     "div",
                     {
-                      className: _.AfterDataAttributes,
+                      "data-accent-color": __webpack_require__,
+                      "data-dull-color": _,
+                      "data-body-text-color": _,
+                      className: _.RootDataAttributes,
                     },
-                    _,
-                    !1,
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.AfterDataAttributes,
+                      },
+                      _,
+                      !1,
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
+          )
         );
       });
       function _(_) {
@@ -2173,7 +2175,6 @@
             () => ({
               country: _._.COUNTRY,
               language: _._.LANGUAGE,
-              realm: _._.EREALM,
             }),
             [],
           );
@@ -3403,6 +3404,7 @@
         bActiveTree: !1,
         bActiveTreeWithinContext: !1,
         bDisableFocusClasses: !1,
+        bIsMounted: !1,
       });
       function _(_) {
         const {
@@ -3411,7 +3413,8 @@
             children: _,
           } = _,
           [_, _] = _.useState(_?.BIsActive() || !1),
-          [_, _] = _.useState(_?.BIsActiveWithinContext() || !1);
+          [_, _] = _.useState(_?.BIsActiveWithinContext() || !1),
+          _ = (0, _._)(_?.SubscribableIsMounted) ?? !1;
         _.useEffect(
           () =>
             _
@@ -3428,8 +3431,9 @@
             bActiveTree: _,
             bActiveTreeWithinContext: _,
             bDisableFocusClasses: __webpack_require__,
+            bIsMounted: _,
           }),
-          [_, __webpack_require__, _],
+          [_, __webpack_require__, _, _],
         );
         return _.createElement(
           _.Provider,
@@ -3646,9 +3650,10 @@
               bActiveTree: _,
               bActiveTreeWithinContext: _,
               bDisableFocusClasses: _,
+              bIsMounted: _,
             } = (0, _._)(),
             _ = _ && !_,
-            _ = !_ && (void 0 !== _ || _);
+            _ = _ && !_ && (void 0 !== _ || _);
           return _.createElement(
             _,
             {
@@ -13302,6 +13307,16 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  release_from_early_access_date: {
+                    _: 11,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  release_from_early_access_style: {
+                    _: 12,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                   is_coming_soon: {
                     _: 4,
                     _: _._.readBool,
@@ -14705,11 +14720,6 @@
                     _: 3,
                     _: _._.readString,
                     _: _._.writeString,
-                  },
-                  steam_realm: {
-                    _: 4,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
                   },
                 },
               }),
@@ -19540,7 +19550,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       function _(_, _) {
@@ -19548,9 +19557,7 @@
           (function (_) {
             const _ = new _._();
             _.bUsePartnerAPI || _.set_country_code(_.country);
-            _.set_language(_.language),
-              _.realm != _._.k_ESteamRealmUnknown && _.set_steam_realm(_.realm);
-            return _;
+            return _.set_language(_.language), _;
           })(_),
         );
       }
@@ -19665,15 +19672,14 @@
             [_, _],
           ),
           _ = _ || _,
-          { country: _, language: _, realm: _, bUsePartnerAPI: _ } = _,
+          { country: _, language: _, bUsePartnerAPI: _ } = _,
           _ = _.useMemo(
             () => ({
               country: _,
               language: _,
-              realm: _,
               bUsePartnerAPI: _,
             }),
-            [_, _, _, _],
+            [_, _, _],
           ),
           _ = _.useMemo(() => {
             const _ = __webpack_require__
@@ -33405,6 +33411,7 @@
             onMiddleButton: _,
             bAlertDialog: _,
             bProgressDialog: _,
+            focusButton: _,
             children: _,
             ..._
           } = _,
@@ -33415,6 +33422,7 @@
           strOKText: _,
           onCancel: _(_.onCancel),
           strCancelText: _,
+          focusButton: _,
         });
         _
           ? (_ = void 0)

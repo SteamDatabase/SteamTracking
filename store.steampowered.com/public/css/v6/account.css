@@ -286,6 +286,21 @@
 	gap: 2%;
 }
 
+.upsell_and_graphic img {
+	width: 100%;
+	height: 100%;
+	max-width: 50vw;
+}
+
+@media screen and (max-width: 910px) {
+	html.responsive body.v6 .page_content.upsell_and_graphic {
+		flex-direction: column;
+	}
+	html.responsive body.v6 .page_content.upsell_and_graphic img {
+		max-width: 95vw;
+	}
+}
+
 .redeem_wallet_code_upsell
 {
 	padding-top: 40px;
@@ -318,9 +333,7 @@
 	color: #ffffff;
 }
 
-body.redeemwalletcode .page_content_ctn .page_content {
-	background-repeat: no-repeat;
-	background-position: bottom right;
+body.redeemwalletcode .page_content_ctn .upsell_and_graphic  {
 	display: flex;
 	flex-direction: row;
 }
@@ -1098,10 +1111,18 @@ td.wht_total {
 	color: #97a0ab;
 	display: block;
 	margin-left: 21px;
-	margin-top: -1px;
+	margin-top: 6px;
 	margin-bottom: 10px;
 	font-size: 12px;
 	line-height: 16px;
+}
+
+.account_manage_subtitle {
+	color: #fff;
+    margin: 5px 0 0px;
+    font-size: 15px;
+    text-transform: none;
+    font-weight: 500;
 }
 
 .account_manage_link {

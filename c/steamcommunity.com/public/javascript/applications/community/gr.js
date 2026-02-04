@@ -9694,6 +9694,7 @@
         constructor() {
           (this.m_tours = {}),
             (this.m_strActiveTour = ""),
+            (this.m_storage = void 0),
             (this.m_bReady = !1),
             (0, _._)(this);
         }

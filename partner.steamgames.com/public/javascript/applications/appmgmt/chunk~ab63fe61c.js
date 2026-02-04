@@ -6,25 +6,22 @@
   [5859],
   {
     72839: (e, t, s) => {
-      s.d(t, { Bn: () => u, hS: () => o, rV: () => n });
+      s.d(t, { Bn: () => o, hS: () => n, rV: () => i });
       var r = s(15161),
-        a = s(78327),
-        i = s(2160);
+        a = s(78327);
       s(94601);
-      function n(e, t) {
-        e.Body().set_context(o(t));
+      function i(e, t) {
+        e.Body().set_context(n(t));
       }
-      function o(e) {
+      function n(e) {
         let t = new r.TS();
         return (
           e || t.set_country_code(a.TS.COUNTRY),
           t.set_language(a.TS.LANGUAGE),
-          a.TS.EREALM != i.TU.k_ESteamRealmUnknown &&
-            t.set_steam_realm(a.TS.EREALM),
           t
         );
       }
-      function u(e, t) {
+      function o(e, t) {
         e.Body().set_data_request(r.gn.fromObject(t));
       }
     },

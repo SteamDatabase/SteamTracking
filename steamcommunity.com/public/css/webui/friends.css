@@ -7209,7 +7209,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   max-width: 490px;
 }
 @media screen and (max-width: 500px) {
-  html:not(.force_desktop):not(.force_desktop)
+  html.responsive.responsive
     .contentmoderationreportdialog_ContentReportDialog_1nRyg {
     box-sizing: border-box;
     left: 0;
@@ -12626,6 +12626,7 @@ html:not(.touch)
 .partnereventshared_EventDefaultRowContainer_3WO6c.partnereventshared_EventStartPublic_2LU_Y {
   border-left: 1px solid #a3cf06;
   display: flex;
+  flex-direction: column;
 }
 .partnereventshared_EventOptions_2r_Qe {
   margin-left: 10px;
@@ -13350,16 +13351,24 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   initial-value: #0094a2;
   inherits: false;
 }
+.partnereventshared_JumpToButtonCtn_19bDh {
+  position: absolute;
+  top: -4px;
+  left: -10px;
+  z-index: 100;
+}
 .partnereventshared_JumpToButton_c4K67 {
   font-size: 12px;
+  line-height: 2;
   background: linear-gradient(
     136deg,
     var(--GradientColor1) 8%,
     var(--GradientColor2) 90.05%
   );
   border: none;
+  padding-left: 12px;
+  padding-right: 12px;
   border-radius: 3px;
-  margin-left: 8px;
   color: #fff;
   cursor: pointer;
   transition: --GradientColor1 .3s ease-in, --GradientColor2 .3s ease-in;
@@ -21811,6 +21820,9 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .errorDisconnected .chatnotice_DisconnectBlocker_3RYtb {
   display: block;
 }
+.gamepadicons_PillShapedIcon_Jz6GF {
+  height: 30px;
+}
 @keyframes pagedcontent_BackgroundAnimation_1XVbj {
   from {
     background-position: 0 100%;
@@ -25602,19 +25614,30 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   margin: 7px 7px 0px 7px;
   opacity: 0.4;
 }
+.friendslist_TabBumper_3Jr0A.GamepadMode img,
 .friendslist_TabBumper_3Jr0A.GamepadMode svg,
+.GamepadMode .friendslist_TabBumper_3Jr0A img,
 .GamepadMode .friendslist_TabBumper_3Jr0A svg {
   overflow: visible;
 }
+.friendslist_TabBumper_3Jr0A.GamepadMode img path:first-of-type,
 .friendslist_TabBumper_3Jr0A.GamepadMode svg path:first-of-type,
+.GamepadMode .friendslist_TabBumper_3Jr0A img path:first-of-type,
 .GamepadMode .friendslist_TabBumper_3Jr0A svg path:first-of-type {
   stroke: #3d4450;
   stroke-width: 2px;
   fill: none;
 }
+.friendslist_TabBumper_3Jr0A.GamepadMode img path,
 .friendslist_TabBumper_3Jr0A.GamepadMode svg path,
+.GamepadMode .friendslist_TabBumper_3Jr0A img path,
 .GamepadMode .friendslist_TabBumper_3Jr0A svg path {
   fill: #3d4450;
+}
+.friendslist_TabBumper_3Jr0A.GamepadMode .friendslist_BumperIcon_3gtyH,
+.GamepadMode .friendslist_TabBumper_3Jr0A .friendslist_BumperIcon_3gtyH {
+  width: auto;
+  height: 22px;
 }
 #QuickAccess-Menu .friendslist_TabBumper_3Jr0A.GamepadMode,
 #QuickAccess-Menu .GamepadMode .friendslist_TabBumper_3Jr0A {
@@ -27408,36 +27431,6 @@ svg.reorderablelist_ReorderArrow_1jEeo {
     .gpfocus
   ) {
   background: #23262e;
-}
-.footericons_Dark_2UAf_ .footericons_Background_yjs9m {
-  color: #0e141b;
-}
-.footericons_Dark_2UAf_ .footericons_Foreground_JgT6Z {
-  color: #fff;
-}
-.footericons_Light_1LgIo .footericons_Background_yjs9m {
-  color: #fff;
-}
-.footericons_Light_1LgIo .footericons_Foreground_JgT6Z {
-  color: #0e141b;
-}
-.footericons_Knockout_3BGwJ {
-  color: #fff;
-}
-.footericons_SizeSmall_1Zc5j {
-  width: auto;
-  height: 16px;
-}
-.footericons_SizeMedium_12wgo {
-  width: auto;
-  height: 22px;
-}
-.footericons_SizeLarge_3E-9r {
-  width: auto;
-  height: 36px;
-}
-.footericons_ChordSummary_2NB_h.footericons_SizeSmall_1Zc5j {
-  margin-right: 20px;
 }
 @keyframes recentchatssteamdeck_BackgroundAnimation_v87rF {
   from {
@@ -44017,6 +44010,36 @@ body.in_global_drag .friendlist_titlebar {
 }
 .FriendChatTypingNotification.FriendIsTyping {
   opacity: 1;
+}
+.RadialMenuExplainerText {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+  align-content: center;
+  width: calc(100% - 32px);
+  color: #d3d3d3;
+  font-weight: 400;
+  text-shadow: none;
+  z-index: 12;
+  position: absolute;
+  bottom: 0px;
+  inset-inline-start: 0px;
+  padding: 18px 10px 4px 10px;
+  margin-inline-end: 6px;
+  opacity: 1;
+  transition: opacity .4s ease-in-out;
+  pointer-events: none;
+  text-align: center;
+}
+.RadialMenuExplainerText.FriendIsTyping {
+  opacity: 0;
+}
+.RadialMenuExplainerText img {
+  align-self: center;
+  width: auto;
+  height: 20px;
 }
 .LoadingOlderMessages {
   pointer-events: none;

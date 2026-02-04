@@ -299,7 +299,7 @@
         (0, r.Cg)([n.sH], c.prototype, "m_bNameInitialized", void 0);
     },
     14336: (e, t, a) => {
-      a.d(t, { z0: () => S, DW: () => y, js: () => h, hW: () => g });
+      a.d(t, { z0: () => P, DW: () => y, js: () => h, hW: () => g });
       var r = a(90626),
         n = a(20194),
         s = a(54806),
@@ -333,7 +333,7 @@
       }
       function h(e) {
         const t = (0, i.KV)(),
-          a = r.useContext(P);
+          a = r.useContext(S);
         return (0, n.I)(f(a, t, e));
       }
       function g(e) {
@@ -349,13 +349,13 @@
       }
       function y(e) {
         const t = (0, i.KV)(),
-          a = r.useContext(P);
+          a = r.useContext(S);
         return (0, s.E)({ queries: e.map((e) => f(a, t, e)) });
       }
-      function S(e) {
+      function P(e) {
         return u.L.getQueryData(["PlayerSummary", e]);
       }
-      const P = r.createContext({
+      const S = r.createContext({
         loadPersonaState: async (e, t) => {
           if (null == e) return null;
           const a = await (function (e) {
@@ -424,7 +424,6 @@
             () => ({
               country: o.TS.COUNTRY,
               language: o.TS.LANGUAGE,
-              realm: o.TS.EREALM,
               bUsePartnerAPI: !0,
             }),
             [],

@@ -411,7 +411,7 @@ span._2_0t_pDYqkDefMC0gDZV8G {
   flex: 1;
   background-color: #1b1c20;
   box-shadow: inset 0px 0px 4px #000;
-  outline-width: 0px;
+  outline: none;
   color: #aaa;
   border: 0px solid transparent;
   padding-right: 2px;
@@ -422,7 +422,7 @@ span._2_0t_pDYqkDefMC0gDZV8G {
   height: 42px;
   background-color: transparent;
   box-shadow: inset 0px 0px 4px transparent;
-  outline-width: 0px;
+  outline: none;
   color: #aaa;
   border: 0px solid transparent;
   font-size: 14px;
@@ -8392,6 +8392,7 @@ html.responsive.touch ._3xpkvUfVoGX-QZFAF9bHX1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 ._30RNOxqk1P9UdZBI76xoIw ._1lQ-aevm7UP_kMSNv9AKJf ._2mQ7KlByQfige-eSdZ7h3j {
   font-size: 14px;
@@ -9185,7 +9186,7 @@ textarea.VaLwylBilZSHWeTdxBQQC {
 }
 .NENu2K19GJmLf1Asga-WF {
   border: none;
-  outline-width: 0;
+  outline: none;
   padding: 10px;
   background-color: var(--main-editor-input-bg-color);
   box-shadow: 0 0 5px #000 inset;
@@ -9204,7 +9205,7 @@ textarea.VaLwylBilZSHWeTdxBQQC {
   margin: 4px 0px;
   background-color: #1e2025;
   border: solid 1px #000;
-  outline-width: 0;
+  outline: none;
   box-shadow: 1px 1px rgba(255, 255, 255, 0.1);
   border-radius: 4px;
   color: gray;
@@ -9593,7 +9594,7 @@ textarea.VaLwylBilZSHWeTdxBQQC {
 ._2yL7JZ7leAVvBHmRcwl_mJ textarea._3UtWXZ3dOC0Y-WnrNRdrpP {
   resize: vertical;
   width: calc(100% - 20px);
-  outline-width: 0;
+  outline: none;
   padding: 10px;
   color: var(--main-editor-text-color);
   font-size: 14px;
@@ -14549,9 +14550,9 @@ p a:hover {
 ._2I9RguJSPMrFA3BaCYsTDC .Shared_Radio_Group {
   background-color: #171a21;
 }
-.yvFKrzh7VyheJNXRPEfQZ {
+._2ccZfvQh1ch-oiFuEFDXQ- {
   display: flex;
-  gap: 10px;
+  gap: 5px;
 }
 ._1M---DuBLBmJ3wziNwQwZK {
   height: 15px;
@@ -14566,6 +14567,7 @@ p a:hover {
 ._3U67RyuXYHsatAXXRaSRRI {
   display: flex;
   flex-direction: row;
+  gap: 10px;
 }
 ._30VSH__WuOtSV8EJQP9z2y {
   align-self: flex-end;
@@ -14583,12 +14585,6 @@ p a:hover {
 }
 ._3VeD7VChLkhnsovYYTLDmw {
   color: #929396;
-}
-.cafiKhILOJzW-NM9HdlLr {
-  background-color: #222;
-  color: #fff;
-  padding: 10px;
-  border: 1px solid #000;
 }
 ._3MD3z-ZmuI3BKmLDDS67RG {
   overflow: scroll;

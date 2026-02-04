@@ -10,7 +10,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       function _(_, _) {
@@ -19,11 +18,7 @@
       function _(_) {
         let _ = new _._();
         return (
-          _ || _.set_country_code(_._.COUNTRY),
-          _.set_language(_._.LANGUAGE),
-          _._.EREALM != _._.k_ESteamRealmUnknown &&
-            _.set_steam_realm(_._.EREALM),
-          _
+          _ || _.set_country_code(_._.COUNTRY), _.set_language(_._.LANGUAGE), _
         );
       }
       function _(_, _) {

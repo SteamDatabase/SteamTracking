@@ -200,7 +200,7 @@ function ViewTestingReports( appid, test_type, start, count )
 					btnForceFail.click( 
 						( function(specificReport, specificAppName, specificTestType ) {
 							return function() {
-								ForceSubmitAppTestingReport( specificReport['appid'], specificAppName, specificTestType, false );
+								ForceSubmitAppTestingReport( specificReport['appid'], specificAppName, specificTestType, false, true /* force reload on success */ );
 							};
 						} )( report, appName, test_type )
 					);
@@ -373,7 +373,7 @@ function NotifyPartnerOfTestResults( appid, name, test_type )
 	);
 }
 
-function ForceSubmitAppTestingReport( appid, appName, testType, bPass )
+function ForceSubmitAppTestingReport( appid, appName, testType, bPass, bReloadOnSuccess = false )
 {
 	var dialog = ShowPromptWithTextAreaDialog( 'Force ' + ( bPass ? 'Pass' : 'Fail' ) + ' Testing Report for App: ' + appName, "", "OK", null, 5000 );
 
@@ -398,6 +398,10 @@ function ForceSubmitAppTestingReport( appid, appName, testType, bPass )
 			switch ( json.success )
 			{
 				case 1:
+					if ( bReloadOnSuccess )
+					{
+						window.location.reload();
+					}
 					break;
 				default:
 					ShowAlertDialog( 'Error', "An unknown error occurred." );

@@ -63,7 +63,7 @@
         let { hoverKey: r, className: n, renderHover: t } = e,
           a = (0, C.A)(c().MoreDots, n),
           d = o.useRef(void 0),
-          y = o.useCallback(() => {
+          l = o.useCallback(() => {
             i.HideElement(d.current.ownerDocument, r);
           }, [r]);
         return o.createElement(
@@ -81,7 +81,7 @@
                   direction: "top",
                   bEnablePointerEvents: !0,
                   nBodyDistance: 0,
-                  onClick: y,
+                  onClick: l,
                 },
                 t(),
               );
@@ -100,31 +100,19 @@
       n.d(r, {
         mK: () => O,
         Gy: () => Y,
-        sh: () => L,
+        sh: () => G,
         T6: () => x,
         Oo: () => W,
       });
-      var o = n(69423),
-        t = n(9554),
-        c = n(90626),
-        u = n(6336),
-        C = n(14336),
-        a = n(16676),
-        s = n(12155),
-        i = n(32754),
-        d = n(52038),
-        y = n(61859),
-        l = n(74267),
-        E = n(96434),
-        _ = n.n(E),
-        k = n(88267);
-      const A = {
-          [k.AI.k_ECurrencyCodeInvalid]: {},
-          [k.AI.k_ECurrencyCodeUSD]: { strSymbol: "$" },
-          [k.AI.k_ECurrencyCodeGBP]: { strSymbol: "£" },
-          [k.AI.k_ECurrencyCodeEUR]: { strSymbol: "€" },
-          [k.AI.k_ECurrencyCodeCHF]: { strSymbol: "CHF" },
-          [k.AI.k_ECurrencyCodeRUB]: {
+      var o = n(48174),
+        t = n(88267);
+      const c = {
+          [t.AI.k_ECurrencyCodeInvalid]: {},
+          [t.AI.k_ECurrencyCodeUSD]: { strSymbol: "$" },
+          [t.AI.k_ECurrencyCodeGBP]: { strSymbol: "£" },
+          [t.AI.k_ECurrencyCodeEUR]: { strSymbol: "€" },
+          [t.AI.k_ECurrencyCodeCHF]: { strSymbol: "CHF" },
+          [t.AI.k_ECurrencyCodeRUB]: {
             strSymbol: "руб.",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
@@ -132,405 +120,406 @@
             strDecimalSymbol: ",",
             strThousandsSeparator: "",
           },
-          [k.AI.k_ECurrencyCodePLN]: {
+          [t.AI.k_ECurrencyCodePLN]: {
             strSymbol: "zł",
             bSuffixSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [k.AI.k_ECurrencyCodeBRL]: {
+          [t.AI.k_ECurrencyCodeBRL]: {
             strSymbol: "R$",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [k.AI.k_ECurrencyCodeJPY]: {
+          [t.AI.k_ECurrencyCodeJPY]: {
             strSymbol: "¥",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
           },
-          [k.AI.k_ECurrencyCodeNOK]: {
+          [t.AI.k_ECurrencyCodeNOK]: {
             strSymbol: "kr",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [k.AI.k_ECurrencyCodeIDR]: {
+          [t.AI.k_ECurrencyCodeIDR]: {
             strSymbol: "Rp",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ".",
             strThousandsSeparator: " ",
           },
-          [k.AI.k_ECurrencyCodeMYR]: { strSymbol: "RM" },
-          [k.AI.k_ECurrencyCodePHP]: { strSymbol: "P" },
-          [k.AI.k_ECurrencyCodeSGD]: { strSymbol: "S$" },
-          [k.AI.k_ECurrencyCodeTHB]: { strSymbol: "฿" },
-          [k.AI.k_ECurrencyCodeVND]: {
+          [t.AI.k_ECurrencyCodeMYR]: { strSymbol: "RM" },
+          [t.AI.k_ECurrencyCodePHP]: { strSymbol: "P" },
+          [t.AI.k_ECurrencyCodeSGD]: { strSymbol: "S$" },
+          [t.AI.k_ECurrencyCodeTHB]: { strSymbol: "฿" },
+          [t.AI.k_ECurrencyCodeVND]: {
             strSymbol: "₫",
             bWholeUnitsOnly: !0,
             bSuffixSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [k.AI.k_ECurrencyCodeKRW]: {
+          [t.AI.k_ECurrencyCodeKRW]: {
             strSymbol: "₩",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
           },
-          [k.AI.k_ECurrencyCodeTRY]: {
+          [t.AI.k_ECurrencyCodeTRY]: {
             strSymbol: "TL",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [k.AI.k_ECurrencyCodeUAH]: {
+          [t.AI.k_ECurrencyCodeUAH]: {
             strSymbol: "₴",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [k.AI.k_ECurrencyCodeMXN]: { strSymbol: "Mex$", bSpaceForSymbol: !0 },
-          [k.AI.k_ECurrencyCodeCAD]: { strSymbol: "CDN$", bSpaceForSymbol: !0 },
-          [k.AI.k_ECurrencyCodeAUD]: { strSymbol: "A$", bSpaceForSymbol: !0 },
-          [k.AI.k_ECurrencyCodeNZD]: { strSymbol: "NZ$", bSpaceForSymbol: !0 },
-          [k.AI.k_ECurrencyCodeCNY]: { strSymbol: "¥", bSpaceForSymbol: !0 },
-          [k.AI.k_ECurrencyCodeINR]: {
+          [t.AI.k_ECurrencyCodeMXN]: { strSymbol: "Mex$", bSpaceForSymbol: !0 },
+          [t.AI.k_ECurrencyCodeCAD]: { strSymbol: "CDN$", bSpaceForSymbol: !0 },
+          [t.AI.k_ECurrencyCodeAUD]: { strSymbol: "A$", bSpaceForSymbol: !0 },
+          [t.AI.k_ECurrencyCodeNZD]: { strSymbol: "NZ$", bSpaceForSymbol: !0 },
+          [t.AI.k_ECurrencyCodeCNY]: { strSymbol: "¥", bSpaceForSymbol: !0 },
+          [t.AI.k_ECurrencyCodeINR]: {
             strSymbol: "₹",
             bSpaceForSymbol: !0,
             bWholeUnitsOnly: !0,
           },
-          [k.AI.k_ECurrencyCodeCLP]: {
+          [t.AI.k_ECurrencyCodeCLP]: {
             strSymbol: "CLP$",
             bSpaceForSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [k.AI.k_ECurrencyCodePEN]: { strSymbol: "S/." },
-          [k.AI.k_ECurrencyCodeCOP]: {
+          [t.AI.k_ECurrencyCodePEN]: { strSymbol: "S/." },
+          [t.AI.k_ECurrencyCodeCOP]: {
             strSymbol: "COL$",
             bSpaceForSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [k.AI.k_ECurrencyCodeZAR]: {
+          [t.AI.k_ECurrencyCodeZAR]: {
             strSymbol: "R",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ".",
             strThousandsSeparator: " ",
           },
-          [k.AI.k_ECurrencyCodeHKD]: { strSymbol: "HK$", bSpaceForSymbol: !0 },
-          [k.AI.k_ECurrencyCodeTWD]: {
+          [t.AI.k_ECurrencyCodeHKD]: { strSymbol: "HK$", bSpaceForSymbol: !0 },
+          [t.AI.k_ECurrencyCodeTWD]: {
             strSymbol: "NT$",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
           },
-          [k.AI.k_ECurrencyCodeSAR]: {
+          [t.AI.k_ECurrencyCodeSAR]: {
             strSymbol: "SR",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [k.AI.k_ECurrencyCodeAED]: {
+          [t.AI.k_ECurrencyCodeAED]: {
             strSymbol: "AED",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [k.AI.k_ECurrencyCodeSEK]: {
+          [t.AI.k_ECurrencyCodeSEK]: {
             strSymbol: "kr",
             bSpaceForSymbol: !0,
             bSuffixSymbol: !0,
           },
-          [k.AI.k_ECurrencyCodeARS]: {
+          [t.AI.k_ECurrencyCodeARS]: {
             strSymbol: "ARS$",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [k.AI.k_ECurrencyCodeILS]: { strSymbol: "₪" },
-          [k.AI.k_ECurrencyCodeBYN]: { strSymbol: "Br" },
-          [k.AI.k_ECurrencyCodeKZT]: {
+          [t.AI.k_ECurrencyCodeILS]: { strSymbol: "₪" },
+          [t.AI.k_ECurrencyCodeBYN]: { strSymbol: "Br" },
+          [t.AI.k_ECurrencyCodeKZT]: {
             strSymbol: "₸",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [k.AI.k_ECurrencyCodeKWD]: {
+          [t.AI.k_ECurrencyCodeKWD]: {
             strSymbol: "KD",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [k.AI.k_ECurrencyCodeQAR]: {
+          [t.AI.k_ECurrencyCodeQAR]: {
             strSymbol: "QR",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [k.AI.k_ECurrencyCodeCRC]: {
+          [t.AI.k_ECurrencyCodeCRC]: {
             strSymbol: "₡",
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [k.AI.k_ECurrencyCodeUYU]: {
+          [t.AI.k_ECurrencyCodeUYU]: {
             strSymbol: "$U",
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [k.AI.k_ECurrencyCodeBGN]: {
+          [t.AI.k_ECurrencyCodeBGN]: {
             strSymbol: "лв",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [k.AI.k_ECurrencyCodeHRK]: {
+          [t.AI.k_ECurrencyCodeHRK]: {
             strSymbol: "kn",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [k.AI.k_ECurrencyCodeCZK]: {
+          [t.AI.k_ECurrencyCodeCZK]: {
             strSymbol: "Kč",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [k.AI.k_ECurrencyCodeDKK]: {
+          [t.AI.k_ECurrencyCodeDKK]: {
             strSymbol: "kr.",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [k.AI.k_ECurrencyCodeHUF]: {
+          [t.AI.k_ECurrencyCodeHUF]: {
             strSymbol: "Ft",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [k.AI.k_ECurrencyCodeRON]: {
+          [t.AI.k_ECurrencyCodeRON]: {
             strSymbol: "lei",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [k.AI.k_ECurrencyCodeMax]: {},
+          [t.AI.k_ECurrencyCodeMax]: {},
         },
-        m = {
+        u = {
           strSymbol: "",
           bSuffixSymbol: !1,
           bSpaceForSymbol: !1,
           bWholeUnitsOnly: !1,
-          eCurrency: k.AI.k_ECurrencyCodeInvalid,
+          eCurrency: t.AI.k_ECurrencyCodeInvalid,
           strDecimalSymbol: ".",
           strThousandsSeparator: ",",
         };
-      function I(e, r) {
+      function C(e, r) {
         const n = (function (e) {
-            return { ...m, ...A[e], eCurrency: e };
+            return { ...u, ...c[e], eCurrency: e };
           })(r),
           {
             strSymbol: o,
             bSuffixSymbol: t,
-            bSpaceForSymbol: c,
-            bWholeUnitsOnly: u,
-            strDecimalSymbol: C,
-            strThousandsSeparator: a,
+            bSpaceForSymbol: C,
+            bWholeUnitsOnly: a,
+            strDecimalSymbol: s,
+            strThousandsSeparator: i,
           } = n,
-          s = e < 0,
-          i = u && e % 100 == 0;
-        s && (e = -e);
-        const d = [];
+          d = e < 0,
+          l = a && e % 100 == 0;
+        d && (e = -e);
+        const y = [];
         for (let r = 0; r < 2; r++)
-          i || d.push(e % 10), (e = Math.floor(e / 10));
-        !i && C && d.push(C);
-        let y = 0;
+          l || y.push(e % 10), (e = Math.floor(e / 10));
+        !l && s && y.push(s);
+        let E = 0;
         do {
-          y++ % 3 == 0 && y > 2 && a && d.push(a),
-            d.push(e % 10),
+          E++ % 3 == 0 && E > 2 && i && y.push(i),
+            y.push(e % 10),
             (e = Math.floor(e / 10));
         } while (e > 0);
-        const l = d.reverse().join(""),
-          E = c ? " " : "",
-          _ = s ? "-" : "";
-        return t ? `${_}${l}${E}${o}` : `${_}${o}${E}${l}`;
+        const _ = y.reverse().join(""),
+          k = C ? " " : "",
+          A = d ? "-" : "";
+        return t ? `${A}${_}${k}${o}` : `${A}${o}${k}${_}`;
       }
-      var S = n(91934),
-        b = n(64238),
-        P = n.n(b),
-        D = n(56011),
-        h = n(65697);
-      function R(e) {
+      var a = n(91934),
+        s = n(64238),
+        i = n.n(s),
+        d = n(90626),
+        l = n(56011),
+        y = n(65697);
+      function E(e) {
         const {
             direction: r,
             ignoreHorizontal: n,
             ignoreVertical: o,
             dismissOnClick: t,
-            interactionMode: u = 0,
+            interactionMode: c = 0,
           } = e,
-          C = (0, c.useRef)(null),
-          a = (0, c.useRef)(!1),
-          s = (0, c.useRef)(!1),
-          i = (0, c.useRef)(null),
-          [d, y] = (0, c.useState)(!1),
-          [l, E] = (0, c.useMemo)(
+          u = (0, d.useRef)(null),
+          C = (0, d.useRef)(!1),
+          s = (0, d.useRef)(!1),
+          i = (0, d.useRef)(null),
+          [E, _] = (0, d.useState)(!1),
+          [k, A] = (0, d.useMemo)(
             () =>
               (function (e) {
-                const [r, n] = (0, S.x)(e, "-");
+                const [r, n] = (0, a.x)(e, "-");
                 return "left" === r || "right" === r ? [void 0, r] : [r, n];
               })(r),
             [r],
           ),
-          _ = (0, c.useCallback)(() => {
-            if (!i.current || !C.current) return;
+          m = (0, d.useCallback)(() => {
+            if (!i.current || !u.current) return;
             const e = i.current.getBoundingClientRect();
-            let r = E;
+            let r = A;
             const t = i.current.matches(":dir(rtl)");
-            t && ("left" === E ? (r = "right") : "right" === E && (r = "left")),
-              C.current.style.setProperty("--parentWidth", `${e.width}px`),
-              C.current.style.setProperty("--parentHeight", `${e.height}px`),
+            t && ("left" === A ? (r = "right") : "right" === A && (r = "left")),
+              u.current.style.setProperty("--parentWidth", `${e.width}px`),
+              u.current.style.setProperty("--parentHeight", `${e.height}px`),
               n ||
                 ("left" === r
-                  ? l
-                    ? ((C.current.style.left = "unset"),
-                      (C.current.style.right =
+                  ? k
+                    ? ((u.current.style.left = "unset"),
+                      (u.current.style.right =
                         document.documentElement.clientWidth - e.right + "px"))
-                    : ((C.current.style.left = "unset"),
-                      (C.current.style.right =
+                    : ((u.current.style.left = "unset"),
+                      (u.current.style.right =
                         document.documentElement.clientWidth - e.left + "px"))
                   : "right" === r
-                    ? l
-                      ? ((C.current.style.left = `${e.left}px`),
-                        (C.current.style.right = "unset"))
-                      : ((C.current.style.left = `${e.right}px`),
-                        (C.current.style.right = "unset"))
+                    ? k
+                      ? ((u.current.style.left = `${e.left}px`),
+                        (u.current.style.right = "unset"))
+                      : ((u.current.style.left = `${e.right}px`),
+                        (u.current.style.right = "unset"))
                     : void 0 === r &&
                       (t
-                        ? ((C.current.style.left = "unset"),
-                          (C.current.style.right =
+                        ? ((u.current.style.left = "unset"),
+                          (u.current.style.right =
                             document.documentElement.clientWidth -
                             e.right +
                             "px"))
-                        : ((C.current.style.left = `${e.left}px`),
-                          (C.current.style.right = "unset")))),
+                        : ((u.current.style.left = `${e.left}px`),
+                          (u.current.style.right = "unset")))),
               o ||
-                ("down" === l
-                  ? ((C.current.style.top = `${e.bottom}px`),
-                    (C.current.style.bottom = "unset"),
-                    C.current.style.setProperty(
+                ("down" === k
+                  ? ((u.current.style.top = `${e.bottom}px`),
+                    (u.current.style.bottom = "unset"),
+                    u.current.style.setProperty(
                       "--availableHeight",
                       document.documentElement.clientHeight - e.bottom + "px",
                     ))
-                  : "up" === l
-                    ? ((C.current.style.top = "unset"),
-                      (C.current.style.bottom =
+                  : "up" === k
+                    ? ((u.current.style.top = "unset"),
+                      (u.current.style.bottom =
                         document.documentElement.clientHeight - e.top + "px"),
-                      C.current.style.setProperty(
+                      u.current.style.setProperty(
                         "--availableHeight",
                         `${e.top}px`,
                       ))
-                    : void 0 === l &&
-                      ((C.current.style.top = `${e.top}px`),
-                      (C.current.style.bottom = "unset"),
-                      C.current.style.setProperty(
+                    : void 0 === k &&
+                      ((u.current.style.top = `${e.top}px`),
+                      (u.current.style.bottom = "unset"),
+                      u.current.style.setProperty(
                         "--availableHeight",
                         document.documentElement.clientHeight - e.top + "px",
                       )));
-          }, [E, n, o, l]),
-          k = (0, c.useMemo)(() => {
-            if (i.current) return (0, D._f)(i.current);
+          }, [A, n, o, k]),
+          I = (0, d.useMemo)(() => {
+            if (i.current) return (0, l._f)(i.current);
           }, [i.current]);
-        (0, c.useEffect)(
+        (0, d.useEffect)(
           () =>
-            d
-              ? (C.current?.showPopover(),
-                k?.addEventListener("scroll", _),
-                () => k?.removeEventListener("scroll", _))
+            E
+              ? (u.current?.showPopover(),
+                I?.addEventListener("scroll", m),
+                () => I?.removeEventListener("scroll", m))
               : ("true" !=
                   window.sessionStorage.getItem("DEBUG_StickyContextMenus") &&
-                  C.current?.hidePopover(),
+                  u.current?.hidePopover(),
                 () => {}),
-          [d, _, k],
+          [E, m, I],
         );
-        const A = (0, c.useCallback)(() => {
-            _(), y(!0), (s.current = !0);
-          }, [_]),
-          m = (0, c.useCallback)(() => {
-            (s.current = !1), a.current || y(!1);
+        const S = (0, d.useCallback)(() => {
+            m(), _(!0), (s.current = !0);
+          }, [m]),
+          b = (0, d.useCallback)(() => {
+            (s.current = !1), C.current || _(!1);
           }, []),
-          I = (0, c.useCallback)(() => {
-            (a.current = !0), y(!0);
+          P = (0, d.useCallback)(() => {
+            (C.current = !0), _(!0);
           }, []),
-          b = (0, c.useCallback)(() => {
-            (a.current = !1), s.current || y(!1);
+          h = (0, d.useCallback)(() => {
+            (C.current = !1), s.current || _(!1);
           }, []),
-          P = (0, c.useCallback)(() => {
-            b(), m();
-          }, [b, m]),
-          R = (0, c.useCallback)(
+          R = (0, d.useCallback)(() => {
+            h(), b();
+          }, [h, b]),
+          D = (0, d.useCallback)(
             (e) => {
-              "Enter" === e.key && (e.preventDefault(), d ? m() : A());
+              "Enter" === e.key && (e.preventDefault(), E ? b() : S());
             },
-            [m, A, d],
+            [b, S, E],
           ),
-          p = (0, c.useCallback)(
+          p = (0, d.useCallback)(
             (e) => {
               e.currentTarget.contains(e.relatedTarget) ||
-                C.current?.contains(e.relatedTarget) ||
-                m();
-            },
-            [m],
-          ),
-          g = (0, c.useCallback)(
-            (e) => {
-              const r =
-                  e.relatedTarget && !e.currentTarget.contains(e.relatedTarget),
-                n = !e.relatedTarget && !a.current;
-              (r || n) && (b(), y(!1));
+                u.current?.contains(e.relatedTarget) ||
+                b();
             },
             [b],
           ),
-          f = (0, c.useCallback)(() => {
-            d && t ? P() : A();
-          }, [P, t, d, A]),
-          N = (0, c.useCallback)(
+          g = (0, d.useCallback)(
             (e) => {
-              "Enter" === e.key && d && t ? P() : A(),
-                "Escape" === e.key && d && (P(), e.stopPropagation());
+              const r =
+                  e.relatedTarget && !e.currentTarget.contains(e.relatedTarget),
+                n = !e.relatedTarget && !C.current;
+              (r || n) && (h(), _(!1));
             },
-            [P, t, d, A],
+            [h],
           ),
-          K = 0 === u;
-        let U;
-        K && !d
-          ? (U = (e) => {
-              e.preventDefault(), A();
+          f = (0, d.useCallback)(() => {
+            E && t ? R() : S();
+          }, [R, t, E, S]),
+          N = (0, d.useCallback)(
+            (e) => {
+              "Enter" === e.key && E && t ? R() : S(),
+                "Escape" === e.key && E && (R(), e.stopPropagation());
+            },
+            [R, t, E, S],
+          ),
+          U = 0 === c;
+        let K;
+        U && !E
+          ? (K = (e) => {
+              e.preventDefault(), S();
             })
-          : K || (U = d ? m : A);
-        const T = {
-            "aria-expanded": d,
+          : U || (K = E ? b : S);
+        const v = {
+            "aria-expanded": E,
             role: "button",
-            onMouseEnter: K ? A : void 0,
-            onMouseLeave: K ? m : void 0,
-            onClick: U,
+            onMouseEnter: U ? S : void 0,
+            onMouseLeave: U ? b : void 0,
+            onClick: K,
             ref: i,
-            onKeyDown: R,
+            onKeyDown: D,
             onBlur: p,
           },
-          v = {
+          T = {
             popover: "manual",
-            ref: C,
-            onMouseEnter: I,
-            onMouseLeave: b,
-            onFocus: I,
+            ref: u,
+            onMouseEnter: P,
+            onMouseLeave: h,
+            onFocus: P,
             onBlur: g,
             onClick: f,
             onKeyDown: N,
-            className: h.PopoverMenu,
+            className: y.PopoverMenu,
           };
         return {
-          isShowingMenu: d,
-          triggerProps: T,
-          menuProps: v,
-          closeMenu: P,
+          isShowingMenu: E,
+          triggerProps: v,
+          menuProps: T,
+          closeMenu: R,
         };
       }
       !(async function () {
@@ -542,252 +531,261 @@
           (await n.e(8433).then(n.bind(n, 8433))).apply();
         }
       })();
-      var p = n(7445),
-        g = n(76217);
-      function f(e, r) {
+      var _ = n(7445),
+        k = n(76217);
+      function A(e, r) {
         return (n) => {
           e?.(n), r?.(n);
         };
       }
-      function N(e) {
+      function m(e) {
         const {
             direction: r,
             interactionMode: n = 0,
             ignoreHorizontal: o,
             ignoreVertical: t,
-            dismissOnClick: u,
-            menuTarget: C,
-            className: a,
-            children: s,
-            renderWhenClosed: i = !0,
-            ...d
+            dismissOnClick: c,
+            menuTarget: u,
+            className: C,
+            children: a,
+            renderWhenClosed: s = !0,
+            ...l
           } = e,
           {
             isShowingMenu: y,
-            triggerProps: l,
-            menuProps: E,
-            closeMenu: _,
-          } = R(e),
-          k = c.useRef(null),
-          A = c.useRef(null);
+            triggerProps: m,
+            menuProps: I,
+            closeMenu: S,
+          } = E(e),
+          b = d.useRef(null),
+          P = d.useRef(null);
         return (
-          c.useEffect(() => {
+          d.useEffect(() => {
             y
-              ? A.current?.TakeFocus()
-              : A.current?.BFocusWithin() && k.current?.TakeFocus();
+              ? P.current?.TakeFocus()
+              : P.current?.BFocusWithin() && b.current?.TakeFocus();
           }, [y]),
-          c.createElement(
-            c.Fragment,
+          d.createElement(
+            d.Fragment,
             null,
-            c.cloneElement(C, {
-              ...l,
-              onMouseEnter: f(C.props.onMouseEnter, l.onMouseEnter),
-              onMouseLeave: f(C.props.onMouseLeave, l.onMouseLeave),
-              navRef: k,
+            d.cloneElement(u, {
+              ...m,
+              onMouseEnter: A(u.props.onMouseEnter, m.onMouseEnter),
+              onMouseLeave: A(u.props.onMouseLeave, m.onMouseLeave),
+              navRef: b,
             }),
-            c.createElement(
-              g.Z,
+            d.createElement(
+              k.Z,
               {
-                ...d,
-                ...E,
-                className: P()(E.className, a),
-                navRef: A,
-                onCancel: _,
-                onFocusWithin: (e) => !e && _(),
+                ...l,
+                ...I,
+                className: i()(I.className, C),
+                navRef: P,
+                onCancel: S,
+                onFocusWithin: (e) => !e && S(),
                 childFocusDisabled: !y,
               },
-              c.createElement(p.q, null, (i || y) && s),
+              d.createElement(_.q, null, (s || y) && a),
             ),
           )
         );
       }
-      var K = n(48174),
-        U = n(31389),
-        T = n.n(U),
-        v = n(42475);
-      const w = {};
-      (w.arabic = () => n.e(8650).then(n.t.bind(n, 88650, 19))),
-        (w.brazilian = () => n.e(5980).then(n.t.bind(n, 25980, 19))),
-        (w.bulgarian = () => n.e(8539).then(n.t.bind(n, 78539, 19))),
-        (w.czech = () => n.e(5369).then(n.t.bind(n, 75369, 19))),
-        (w.danish = () => n.e(6235).then(n.t.bind(n, 76235, 19))),
-        (w.dutch = () => n.e(7956).then(n.t.bind(n, 7956, 19))),
-        (w.english = () => n.e(2962).then(n.t.bind(n, 92962, 19))),
-        (w.finnish = () => n.e(8777).then(n.t.bind(n, 88777, 19))),
-        (w.french = () => n.e(7970).then(n.t.bind(n, 37970, 19))),
-        (w.german = () => n.e(3612).then(n.t.bind(n, 63612, 19))),
-        (w.greek = () => n.e(8846).then(n.t.bind(n, 48846, 19))),
-        (w.hungarian = () => n.e(7431).then(n.t.bind(n, 19812, 19))),
-        (w.indonesian = () => n.e(2334).then(n.t.bind(n, 42334, 19))),
-        (w.italian = () => n.e(874).then(n.t.bind(n, 50874, 19))),
-        (w.japanese = () => n.e(853).then(n.t.bind(n, 30853, 19))),
-        (w.koreana = () => n.e(6309).then(n.t.bind(n, 6309, 19))),
-        (w.latam = () => n.e(1805).then(n.t.bind(n, 61805, 19))),
-        (w.norwegian = () => n.e(7406).then(n.t.bind(n, 27406, 19))),
-        (w.polish = () => n.e(1259).then(n.t.bind(n, 91259, 19))),
-        (w.portuguese = () => n.e(6551).then(n.t.bind(n, 66551, 19))),
-        (w.romanian = () => n.e(1317).then(n.t.bind(n, 1317, 19))),
-        (w.russian = () => n.e(3471).then(n.t.bind(n, 23471, 19))),
-        (w.schinese = () => n.e(7350).then(n.t.bind(n, 67350, 19))),
-        (w.spanish = () => n.e(1594).then(n.t.bind(n, 91594, 19))),
-        (w.swedish = () => n.e(7491).then(n.t.bind(n, 47491, 19))),
-        (w.tchinese = () => n.e(5965).then(n.t.bind(n, 75965, 19))),
-        (w.thai = () => n.e(2912).then(n.t.bind(n, 2912, 19))),
-        (w.turkish = () => n.e(4546).then(n.t.bind(n, 4546, 19))),
-        (w.ukrainian = () => n.e(3444).then(n.t.bind(n, 73444, 19))),
-        (w.vietnamese = () => n.e(2469).then(n.t.bind(n, 72469, 19)));
-      const H = (0, v.l)(async function (e) {
-        if (w[e]) return w[e]();
+      var I = n(12155),
+        S = n(52038),
+        b = n(31389),
+        P = n.n(b),
+        h = n(42475);
+      const R = {};
+      (R.arabic = () => n.e(6873).then(n.t.bind(n, 46873, 19))),
+        (R.brazilian = () => n.e(1365).then(n.t.bind(n, 1365, 19))),
+        (R.bulgarian = () => n.e(3966).then(n.t.bind(n, 83966, 19))),
+        (R.czech = () => n.e(1360).then(n.t.bind(n, 51360, 19))),
+        (R.danish = () => n.e(8292).then(n.t.bind(n, 98292, 19))),
+        (R.dutch = () => n.e(4993).then(n.t.bind(n, 44993, 19))),
+        (R.english = () => n.e(3703).then(n.t.bind(n, 3703, 19))),
+        (R.finnish = () => n.e(6376).then(n.t.bind(n, 86376, 19))),
+        (R.french = () => n.e(7325).then(n.t.bind(n, 67325, 19))),
+        (R.german = () => n.e(9263).then(n.t.bind(n, 69263, 19))),
+        (R.greek = () => n.e(4399).then(n.t.bind(n, 14399, 19))),
+        (R.hungarian = () => n.e(1706).then(n.t.bind(n, 91706, 19))),
+        (R.indonesian = () => n.e(9341).then(n.t.bind(n, 69341, 19))),
+        (R.italian = () => n.e(7511).then(n.t.bind(n, 97511, 19))),
+        (R.japanese = () => n.e(330).then(n.t.bind(n, 40330, 19))),
+        (R.koreana = () => n.e(6252).then(n.t.bind(n, 96252, 19))),
+        (R.latam = () => n.e(204).then(n.t.bind(n, 90204, 19))),
+        (R.norwegian = () => n.e(839).then(n.t.bind(n, 40839, 19))),
+        (R.polish = () => n.e(8816).then(n.t.bind(n, 78816, 19))),
+        (R.portuguese = () => n.e(8160).then(n.t.bind(n, 98160, 19))),
+        (R.romanian = () => n.e(3546).then(n.t.bind(n, 73546, 19))),
+        (R.russian = () => n.e(4302).then(n.t.bind(n, 84302, 19))),
+        (R.schinese = () => n.e(6461).then(n.t.bind(n, 46461, 19))),
+        (R.spanish = () => n.e(8167).then(n.t.bind(n, 18167, 19))),
+        (R.swedish = () => n.e(2438).then(n.t.bind(n, 22438, 19))),
+        (R.tchinese = () => n.e(6006).then(n.t.bind(n, 46006, 19))),
+        (R.thai = () => n.e(6727).then(n.t.bind(n, 96727, 19))),
+        (R.turkish = () => n.e(1639).then(n.t.bind(n, 51639, 19))),
+        (R.ukrainian = () => n.e(4354).then(n.t.bind(n, 21973, 19))),
+        (R.vietnamese = () => n.e(3946).then(n.t.bind(n, 53946, 19)));
+      const D = (0, h.l)(async function (e) {
+        if (R[e]) return R[e]();
       });
-      function M(e) {
-        const r = c.createElement(
+      function p(e) {
+        const r = d.createElement(
           "button",
-          { className: T().PriceGuidelinesPicker },
-          c.createElement(s.GB9, null),
+          { className: P().PriceGuidelinesPicker },
+          d.createElement(I.GB9, null),
         );
-        return c.createElement(
-          N,
+        return d.createElement(
+          m,
           {
             menuTarget: r,
             direction: "down",
             interactionMode: 1,
             dismissOnClick: !0,
           },
-          c.createElement(B, { ...e }),
+          d.createElement(g, { ...e }),
         );
       }
-      function B(e) {
-        const { fnGetUSDPriceInCents: r, fnOnUpdate: n, strDescription: o } = e,
-          t = (0, K.cT)(),
-          u = r();
-        if (!t) return null;
-        const C = t.GetUSDPricePointsInCents();
-        return c.createElement(
+      function g(e) {
+        const { fnGetUSDPriceInCents: r, fnOnUpdate: n, strDescription: c } = e,
+          u = (0, o.cT)(),
+          a = r();
+        if (!u) return null;
+        const s = u.GetUSDPricePointsInCents();
+        return d.createElement(
           "div",
-          { className: T().GuidelinesPanel },
-          c.createElement(
+          { className: P().GuidelinesPanel },
+          d.createElement(
             "div",
-            { className: T().GuidelinesDescription },
-            o || H.Localize("#PricingGuideline_Default"),
+            { className: P().GuidelinesDescription },
+            c || D.Localize("#PricingGuideline_Default"),
           ),
-          c.createElement(
+          d.createElement(
             "div",
-            { className: T().GuidelinesGrid },
-            C.map((e) =>
-              c.createElement(
+            { className: P().GuidelinesGrid },
+            s.map((e) =>
+              d.createElement(
                 "button",
                 {
                   key: e,
                   onClick: () => n(e),
-                  className: (0, d.A)(
-                    T().GridElement,
-                    u == e && T().CurrentPrice,
+                  className: (0, S.A)(
+                    P().GridElement,
+                    a == e && P().CurrentPrice,
                   ),
                 },
-                I(e, k.AI.k_ECurrencyCodeUSD),
+                C(e, t.AI.k_ECurrencyCodeUSD),
               ),
             ),
           ),
         );
       }
-      function L(e) {
+      var f = n(69423),
+        N = n(9554),
+        U = n(6336),
+        K = n(14336),
+        v = n(16676),
+        T = n(32754),
+        M = n(61859),
+        w = n(74267),
+        H = n(96434),
+        B = n.n(H);
+      function G(e) {
         const { cell: r, row: n } = e,
-          C = n.original.packageID,
-          s = r.getValue(),
+          o = n.original.packageID,
+          t = r.getValue(),
           {
-            nPriceInCents: i,
-            nPublishedPriceInCents: d,
-            nProposedPriceInCents: y,
-            fnSetPrice: E,
-          } = (0, o.xQ)(C, s),
-          [k, A, m] = (0, o.Wx)(i, s),
-          I = (0, o.Gs)(s),
-          S = c.useRef(void 0),
-          b = C + s,
-          { strClassName: P } = F(C, s),
-          D = "USD" == s,
-          h = y ?? d,
-          R = i != h;
-        return c.createElement(
+            nPriceInCents: c,
+            nPublishedPriceInCents: u,
+            nProposedPriceInCents: C,
+            fnSetPrice: a,
+          } = (0, f.xQ)(o, t),
+          [s, i, l] = (0, f.Wx)(c, t),
+          y = (0, f.Gs)(t),
+          E = d.useRef(void 0),
+          _ = o + t,
+          { strClassName: k } = F(o, t),
+          A = "USD" == t,
+          m = C ?? u,
+          I = c != m;
+        return d.createElement(
           "div",
-          { ref: S, onKeyDown: t.nm, className: P },
-          R && c.createElement(Y, { nPriceInCents: i, nSavedPriceInCents: h }),
-          k && c.createElement("div", { className: _().PricePrefix }, k),
-          c.createElement(
+          { ref: E, onKeyDown: N.nm, className: k },
+          I && d.createElement(Y, { nPriceInCents: c, nSavedPriceInCents: m }),
+          s && d.createElement("div", { className: B().PricePrefix }, s),
+          d.createElement(
             "div",
-            { className: _().EditablePrice },
-            c.createElement(a.pd, {
-              value: A,
-              className: _().PriceInput,
+            { className: B().EditablePrice },
+            d.createElement(v.pd, {
+              value: i,
+              className: B().PriceInput,
               onChange: (e) => {
                 const r = e.target.value.replace(/[^0-9]/g, "");
                 let n = Number(r || 0);
                 if (Number.isNaN(n)) return;
-                I.bWholeUnitsOnly && (n *= 100);
+                y.bWholeUnitsOnly && (n *= 100);
                 const o = 2147483647;
-                n > o && (n = o), E(n);
+                n > o && (n = o), a(n);
               },
               onFocus: (e) => {
                 e.target.select(),
-                  l.L.ShowElement(
-                    S.current.ownerDocument,
-                    c.createElement(
-                      u.g,
+                  w.L.ShowElement(
+                    E.current.ownerDocument,
+                    d.createElement(
+                      U.g,
                       {
-                        target: S.current,
+                        target: E.current,
                         direction: "top",
                         bEnablePointerEvents: !0,
                         nBodyDistance: 0,
                       },
-                      c.createElement(Z, {
-                        key: b,
-                        packageID: C,
-                        strPriceKey: s,
+                      d.createElement(Z, {
+                        key: _,
+                        packageID: o,
+                        strPriceKey: t,
                       }),
                     ),
-                    b,
+                    _,
                   );
               },
               onBlur: () => {
                 window.setTimeout(
                   () =>
-                    S.current && l.L.HideElement(S.current.ownerDocument, b),
+                    E.current && w.L.HideElement(E.current.ownerDocument, _),
                   500,
                 );
               },
             }),
           ),
-          m && c.createElement("div", { className: _().PriceSuffix }, m),
-          D && c.createElement(G, { packageID: C }),
-          c.createElement(x, { packageID: C, strPriceKey: s }),
+          l && d.createElement("div", { className: B().PriceSuffix }, l),
+          A && d.createElement(L, { packageID: o }),
+          d.createElement(x, { packageID: o, strPriceKey: t }),
         );
       }
-      function G(e) {
+      function L(e) {
         const { packageID: r } = e,
-          { fnApplyGuidelines: n } = (0, o.XE)();
-        return c.createElement(M, {
-          fnGetUSDPriceInCents: () => (0, o.FR)(r, "USD"),
-          fnOnUpdate: (e) => {
-            n(r, e);
-          },
-          strDescription: (0, y.we)(
+          { fnApplyGuidelines: n } = (0, o.gC)((0, f.$i)());
+        return d.createElement(p, {
+          fnGetUSDPriceInCents: () => (0, f.FR)(r, "USD"),
+          fnOnUpdate: (e) => n(r, e),
+          strDescription: (0, M.we)(
             "#PricingDashboard_GuidelinesPickerDescription",
           ),
         });
       }
       function x(e) {
         const { packageID: r, strPriceKey: n } = e,
-          { strPriceWarning: o, bBadPrice: t, bShowWarningIcon: u } = F(r, n);
-        return u
-          ? c.createElement(
-              i.he,
+          { strPriceWarning: o, bBadPrice: t, bShowWarningIcon: c } = F(r, n);
+        return c
+          ? d.createElement(
+              T.he,
               {
-                className: _().PriceAlert,
-                strTooltipClassname: _().HoverToolTip,
+                className: B().PriceAlert,
+                strTooltipClassname: B().HoverToolTip,
                 toolTipContent: o,
                 direction: "top",
               },
-              c.createElement(s.eTF, {
+              d.createElement(I.eTF, {
                 color: t ? "rgb(194, 45, 0)" : "#e5af37",
               }),
             )
@@ -797,97 +795,97 @@
       function F(e, r) {
         const {
             nPriceInCents: n,
-            nPublishedPriceInCents: t,
-            nProposedPriceInCents: u,
-            nMinPriceInCents: C,
-            nMaxPriceInCents: a,
-            nMaxDiscountPercentage: s,
-            nSuggestedPriceInCents: i,
-          } = (0, o.xQ)(e, r),
-          l = (0, o.d$)(e),
-          E = "USD" == r,
-          k = n != (u ?? t),
-          A = n < C,
-          m = !!a && n > a,
-          I = !!i && n > i * W,
-          S = !!i && n < i / W,
-          b = !!i && n < i && !!s,
-          P =
-            (m && (0, y.we)("#PricingDashboard_PriceIncreaseDisallowed")) ||
-            (A &&
-              (0, y.we)(
+            nPublishedPriceInCents: o,
+            nProposedPriceInCents: t,
+            nMinPriceInCents: c,
+            nMaxPriceInCents: u,
+            nMaxDiscountPercentage: C,
+            nSuggestedPriceInCents: a,
+          } = (0, f.xQ)(e, r),
+          s = (0, f.d$)(e),
+          i = "USD" == r,
+          l = n != (t ?? o),
+          y = n < c,
+          E = !!u && n > u,
+          _ = !!a && n > a * W,
+          k = !!a && n < a / W,
+          A = !!a && n < a && !!C,
+          m =
+            (E && (0, M.we)("#PricingDashboard_PriceIncreaseDisallowed")) ||
+            (y &&
+              (0, M.we)(
                 "#PricingDashboard_PriceTooLow",
-                (0, o.Wx)(C, r).join(""),
+                (0, f.Wx)(c, r).join(""),
               )) ||
-            (I &&
-              (0, y.we)(
+            (_ &&
+              (0, M.we)(
                 "#PricingDashboard_PriceMuchHigherThanGuidelines",
-                (0, o.Wx)(i, r).join(""),
+                (0, f.Wx)(a, r).join(""),
               )) ||
-            (S &&
-              (0, y.we)(
+            (k &&
+              (0, M.we)(
                 "#PricingDashboard_PriceMuchLowerThanGuidelines",
-                (0, o.Wx)(i, r).join(""),
+                (0, f.Wx)(a, r).join(""),
               )) ||
-            (b &&
-              (0, y.we)(
+            (A &&
+              (0, M.we)(
                 "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
-                s,
+                C,
               )),
-          D = m || A,
-          h = I || S,
-          R = D || h || b,
-          p = !(k || !u || (t && u == t)),
-          g = 4 == l?.eState,
-          f = (0, d.A)(
-            _().PriceCell,
-            E && _().USD,
-            k && _().ChangedLocally,
-            p && _().ProposedPrice,
-            g && _().ApprovedCanPublish,
-            R && _().WarningPrice,
-            h && _().SevereWarningPrice,
-            D && _().BadPrice,
+          I = E || y,
+          b = _ || k,
+          P = I || b || A,
+          h = !(l || !t || (o && t == o)),
+          R = 4 == s?.eState,
+          D = (0, S.A)(
+            B().PriceCell,
+            i && B().USD,
+            l && B().ChangedLocally,
+            h && B().ProposedPrice,
+            R && B().ApprovedCanPublish,
+            P && B().WarningPrice,
+            b && B().SevereWarningPrice,
+            I && B().BadPrice,
           );
-        return c.useMemo(
+        return d.useMemo(
           () => ({
-            strPriceWarning: P,
-            strClassName: f,
-            bBadPrice: D,
-            bShowSevereWarning: h,
-            bShowWarningIcon: R,
+            strPriceWarning: m,
+            strClassName: D,
+            bBadPrice: I,
+            bShowSevereWarning: b,
+            bShowWarningIcon: P,
           }),
-          [P, f, D, h, R],
+          [m, D, I, b, P],
         );
       }
       function Y(e) {
         const { nPriceInCents: r, nSavedPriceInCents: n } = e;
         let o = null,
           t = null,
-          u = null,
-          C = null;
+          c = null,
+          u = null;
         if (n) {
           const e = Math.ceil((100 * (r - n)) / n),
-            a = r > n;
-          (u = a
-            ? (0, y.we)("#PricingDashboard_PriceIncreaseBy", e + "%")
-            : (0, y.we)("#PricingDashboard_PriceLowerBy", e + "%")),
-            (C = (0, d.A)(_().PriceChange, a && _().PriceIncrease)),
-            (t = c.createElement(
+            C = r > n;
+          (c = C
+            ? (0, M.we)("#PricingDashboard_PriceIncreaseBy", e + "%")
+            : (0, M.we)("#PricingDashboard_PriceLowerBy", e + "%")),
+            (u = (0, S.A)(B().PriceChange, C && B().PriceIncrease)),
+            (t = d.createElement(
               "div",
-              { className: _().PriceChangeArrow },
-              c.createElement(s.i3G, { angle: a ? 0 : 180 }),
+              { className: B().PriceChangeArrow },
+              d.createElement(I.i3G, { angle: C ? 0 : 180 }),
             )),
             (o = e + "%");
         } else
-          (o = (0, y.we)("#PricingDashboard_PriceIsNew_Short")),
-            (C = (0, d.A)(_().NewPrice));
-        return c.createElement(
-          i.he,
+          (o = (0, M.we)("#PricingDashboard_PriceIsNew_Short")),
+            (u = (0, S.A)(B().NewPrice));
+        return d.createElement(
+          T.he,
           {
-            className: C,
-            strTooltipClassname: _().HoverToolTip,
-            toolTipContent: u,
+            className: u,
+            strTooltipClassname: B().HoverToolTip,
+            toolTipContent: c,
             direction: "top",
           },
           t,
@@ -895,7 +893,7 @@
         );
       }
       function O(e) {
-        return new Date(1e3 * e).toLocaleString(y.pf.GetPreferredLocales(), {
+        return new Date(1e3 * e).toLocaleString(M.pf.GetPreferredLocales(), {
           weekday: "long",
           month: "long",
           day: "numeric",
@@ -906,124 +904,538 @@
       function Z(e) {
         const { packageID: r, strPriceKey: n } = e,
           {
-            nPriceInCents: t,
-            nPublishedPriceInCents: u,
-            nProposedPriceInCents: a,
-            nSuggestedPriceInCents: s,
-            fnSetPrice: l,
-          } = (0, o.xQ)(r, n),
-          { nPriceInCents: E } = (0, o.xQ)(r, "USD"),
-          k = !(!a || (u && a == u)),
-          A = (0, o.d$)(r),
-          m = A && O(A.rtSubmitted),
-          I = (0, C.z0)(A?.submitterID),
-          S = I ? I.m_strPlayerName : A?.submitterID;
-        return c.createElement(
+            nPriceInCents: o,
+            nPublishedPriceInCents: t,
+            nProposedPriceInCents: c,
+            nSuggestedPriceInCents: u,
+            fnSetPrice: C,
+          } = (0, f.xQ)(r, n),
+          { nPriceInCents: a } = (0, f.xQ)(r, "USD"),
+          s = !(!c || (t && c == t)),
+          i = (0, f.d$)(r),
+          l = i && O(i.rtSubmitted),
+          y = (0, K.z0)(i?.submitterID),
+          E = y ? y.m_strPlayerName : i?.submitterID;
+        return d.createElement(
           "div",
-          { className: _().PricePopout },
-          !!u &&
-            c.createElement(
-              i.he,
+          { className: B().PricePopout },
+          !!t &&
+            d.createElement(
+              T.he,
               {
-                className: _().DetailRow,
+                className: B().DetailRow,
                 direction: "left",
-                toolTipContent: (0, y.we)(
+                toolTipContent: (0, M.we)(
                   "#PricingDashboard_CurrentPriceOnStore_ttip",
                 ),
               },
-              c.createElement(
+              d.createElement(
                 "div",
-                { className: _().DetailLabel },
-                (0, y.we)("#PricingDashboard_CurrentPriceOnStore"),
+                { className: B().DetailLabel },
+                (0, M.we)("#PricingDashboard_CurrentPriceOnStore"),
               ),
-              c.createElement(
+              d.createElement(
                 "div",
-                { className: _().DetailPrice },
-                (0, o.Wx)(u, n).join(""),
+                { className: B().DetailPrice },
+                (0, f.Wx)(t, n).join(""),
               ),
-              c.createElement(
-                i.he,
+              d.createElement(
+                T.he,
                 {
-                  className: (0, d.A)(_().DetailButton, u == t && _().Disabled),
-                  onClick: () => l(u),
-                  bDisabled: u == t,
-                  toolTipContent: (0, y.we)(
+                  className: (0, S.A)(B().DetailButton, t == o && B().Disabled),
+                  onClick: () => C(t),
+                  bDisabled: t == o,
+                  toolTipContent: (0, M.we)(
                     "#PricingDashboard_UseThisOldPrice_ttip",
                   ),
                 },
-                (0, y.we)("#PricingDashboard_UseThisPrice_Button"),
+                (0, M.we)("#PricingDashboard_UseThisPrice_Button"),
               ),
             ),
-          k &&
-            c.createElement(
-              i.he,
+          s &&
+            d.createElement(
+              T.he,
               {
-                className: _().DetailRow,
+                className: B().DetailRow,
                 direction: "left",
-                toolTipContent: (0, y.we)(
+                toolTipContent: (0, M.we)(
                   "#PricingDashboard_ProposedPrice_ttip",
-                  S,
-                  m,
+                  E,
+                  l,
                 ),
               },
-              c.createElement(
+              d.createElement(
                 "div",
-                { className: _().DetailLabel },
-                (0, y.we)("#PricingDashboard_ProposedPrice"),
+                { className: B().DetailLabel },
+                (0, M.we)("#PricingDashboard_ProposedPrice"),
               ),
-              c.createElement(
+              d.createElement(
                 "div",
-                { className: _().DetailPrice },
-                (0, o.Wx)(a, n).join(""),
+                { className: B().DetailPrice },
+                (0, f.Wx)(c, n).join(""),
               ),
-              c.createElement(
-                i.he,
+              d.createElement(
+                T.he,
                 {
-                  className: (0, d.A)(_().DetailButton, a == t && _().Disabled),
-                  onClick: () => l(a),
-                  bDisabled: a == t,
-                  toolTipContent: (0, y.we)(
+                  className: (0, S.A)(B().DetailButton, c == o && B().Disabled),
+                  onClick: () => C(c),
+                  bDisabled: c == o,
+                  toolTipContent: (0, M.we)(
                     "#PricingDashboard_UseThisNewPrice_ttip",
                   ),
                 },
-                (0, y.we)("#PricingDashboard_UseThisPrice_Button"),
+                (0, M.we)("#PricingDashboard_UseThisPrice_Button"),
               ),
             ),
-          !!s &&
-            c.createElement(
-              i.he,
+          !!u &&
+            d.createElement(
+              T.he,
               {
-                className: _().DetailRow,
+                className: B().DetailRow,
                 direction: "left",
-                toolTipContent: (0, y.we)(
+                toolTipContent: (0, M.we)(
                   "#PricingDashboard_SuggestedPrice_ttip",
-                  (0, o.Wx)(E, "USD").join(""),
+                  (0, f.Wx)(a, "USD").join(""),
                 ),
               },
-              c.createElement(
+              d.createElement(
                 "div",
-                { className: _().DetailLabel },
-                (0, y.we)("#PricingDashboard_SuggestedPrice"),
+                { className: B().DetailLabel },
+                (0, M.we)("#PricingDashboard_SuggestedPrice"),
               ),
-              c.createElement(
+              d.createElement(
                 "div",
-                { className: _().DetailPrice },
-                (0, o.Wx)(s, n).join(""),
+                { className: B().DetailPrice },
+                (0, f.Wx)(u, n).join(""),
               ),
-              c.createElement(
-                i.he,
+              d.createElement(
+                T.he,
                 {
-                  className: (0, d.A)(_().DetailButton, s == t && _().Disabled),
-                  onClick: () => l(s),
-                  bDisabled: s == t,
-                  toolTipContent: (0, y.we)(
+                  className: (0, S.A)(B().DetailButton, u == o && B().Disabled),
+                  onClick: () => C(u),
+                  bDisabled: u == o,
+                  toolTipContent: (0, M.we)(
                     "#PricingDashboard_UseThisNewPrice_ttip",
                   ),
                 },
-                (0, y.we)("#PricingDashboard_UseThisPrice_Button"),
+                (0, M.we)("#PricingDashboard_UseThisPrice_Button"),
               ),
             ),
         );
+      }
+    },
+    72255: (e, r, n) => {
+      "use strict";
+      n.d(r, { M1: () => c, Ug: () => u, pd: () => C, t_: () => a });
+      var o = n(88267),
+        t = n(29848);
+      function c(e) {
+        switch (e) {
+          case o.AI.k_ECurrencyCodeGBP:
+            return "GBP";
+          case o.AI.k_ECurrencyCodeEUR:
+            return "EUR";
+          case o.AI.k_ECurrencyCodeCHF:
+            return "CHF";
+          case o.AI.k_ECurrencyCodeRUB:
+            return "RUB";
+          case o.AI.k_ECurrencyCodePLN:
+            return "PLN";
+          case o.AI.k_ECurrencyCodeBRL:
+            return "BRL";
+          case o.AI.k_ECurrencyCodeJPY:
+            return "JPY";
+          case o.AI.k_ECurrencyCodeNOK:
+            return "NOK";
+          case o.AI.k_ECurrencyCodeIDR:
+            return "IDR";
+          case o.AI.k_ECurrencyCodeMYR:
+            return "MYR";
+          case o.AI.k_ECurrencyCodePHP:
+            return "PHP";
+          case o.AI.k_ECurrencyCodeSGD:
+            return "SGD";
+          case o.AI.k_ECurrencyCodeTHB:
+            return "THB";
+          case o.AI.k_ECurrencyCodeVND:
+            return "VND";
+          case o.AI.k_ECurrencyCodeKRW:
+            return "KRW";
+          case o.AI.k_ECurrencyCodeTRY:
+            return "TRY";
+          case o.AI.k_ECurrencyCodeUAH:
+            return "UAH";
+          case o.AI.k_ECurrencyCodeMXN:
+            return "MXN";
+          case o.AI.k_ECurrencyCodeCAD:
+            return "CAD";
+          case o.AI.k_ECurrencyCodeAUD:
+            return "AUD";
+          case o.AI.k_ECurrencyCodeNZD:
+            return "NZD";
+          case o.AI.k_ECurrencyCodeCNY:
+            return "CNY";
+          case o.AI.k_ECurrencyCodeINR:
+            return "INR";
+          case o.AI.k_ECurrencyCodeCLP:
+            return "CLP";
+          case o.AI.k_ECurrencyCodePEN:
+            return "PEN";
+          case o.AI.k_ECurrencyCodeCOP:
+            return "COP";
+          case o.AI.k_ECurrencyCodeZAR:
+            return "ZAR";
+          case o.AI.k_ECurrencyCodeHKD:
+            return "HKD";
+          case o.AI.k_ECurrencyCodeTWD:
+            return "TWD";
+          case o.AI.k_ECurrencyCodeSAR:
+            return "SAR";
+          case o.AI.k_ECurrencyCodeAED:
+            return "AED";
+          case o.AI.k_ECurrencyCodeSEK:
+            return "SEK";
+          case o.AI.k_ECurrencyCodeARS:
+            return "ARS";
+          case o.AI.k_ECurrencyCodeILS:
+            return "ILS";
+          case o.AI.k_ECurrencyCodeBYN:
+            return "BYN";
+          case o.AI.k_ECurrencyCodeKZT:
+            return "KZT";
+          case o.AI.k_ECurrencyCodeKWD:
+            return "KWD";
+          case o.AI.k_ECurrencyCodeQAR:
+            return "QAR";
+          case o.AI.k_ECurrencyCodeCRC:
+            return "CRC";
+          case o.AI.k_ECurrencyCodeUYU:
+            return "UYU";
+          case o.AI.k_ECurrencyCodeBGN:
+            return "BGN";
+          case o.AI.k_ECurrencyCodeHRK:
+            return "HRK";
+          case o.AI.k_ECurrencyCodeCZK:
+            return "CZK";
+          case o.AI.k_ECurrencyCodeDKK:
+            return "DKK";
+          case o.AI.k_ECurrencyCodeHUF:
+            return "HUF";
+          case o.AI.k_ECurrencyCodeRON:
+            return "RON";
+          default:
+            return "USD";
+        }
+      }
+      function u(e) {
+        switch (e) {
+          case o.AI.k_ECurrencyCodeUSD:
+            return "US Dollar";
+          case o.AI.k_ECurrencyCodeGBP:
+            return "GB Pounds";
+          case o.AI.k_ECurrencyCodeEUR:
+            return "Euros";
+          case o.AI.k_ECurrencyCodeCHF:
+            return "Swiss Francs";
+          case o.AI.k_ECurrencyCodeRUB:
+            return "Russian Rubles";
+          case o.AI.k_ECurrencyCodePLN:
+            return "Polish zloty";
+          case o.AI.k_ECurrencyCodeBRL:
+            return "Brazilian Reals";
+          case o.AI.k_ECurrencyCodeJPY:
+            return "Japanese Yen";
+          case o.AI.k_ECurrencyCodeNOK:
+            return "Norwegian Krone";
+          case o.AI.k_ECurrencyCodeIDR:
+            return "Indonesian Rupiah";
+          case o.AI.k_ECurrencyCodeMYR:
+            return "Malaysian Ringgit";
+          case o.AI.k_ECurrencyCodePHP:
+            return "Philippine Peso";
+          case o.AI.k_ECurrencyCodeSGD:
+            return "Singapore Dollar";
+          case o.AI.k_ECurrencyCodeTHB:
+            return "Thai Baht";
+          case o.AI.k_ECurrencyCodeVND:
+            return "Vietnamese Dong";
+          case o.AI.k_ECurrencyCodeKRW:
+            return "Korean Won";
+          case o.AI.k_ECurrencyCodeTRY:
+            return "Turkish Lira";
+          case o.AI.k_ECurrencyCodeUAH:
+            return "Ukrainian Hryvnia";
+          case o.AI.k_ECurrencyCodeMXN:
+            return "Mexican Peso";
+          case o.AI.k_ECurrencyCodeCAD:
+            return "Canadian Dollar";
+          case o.AI.k_ECurrencyCodeAUD:
+            return "Australian Dollar";
+          case o.AI.k_ECurrencyCodeNZD:
+            return "New Zealand Dollar";
+          case o.AI.k_ECurrencyCodeCNY:
+            return "Chinese Yuan";
+          case o.AI.k_ECurrencyCodeINR:
+            return "Indian Rupee";
+          case o.AI.k_ECurrencyCodeCLP:
+            return "Chilean Peso";
+          case o.AI.k_ECurrencyCodePEN:
+            return "Peruvian Sol";
+          case o.AI.k_ECurrencyCodeCOP:
+            return "Colombian Peso";
+          case o.AI.k_ECurrencyCodeZAR:
+            return "South African Rand";
+          case o.AI.k_ECurrencyCodeHKD:
+            return "Hong Kong Dollar";
+          case o.AI.k_ECurrencyCodeTWD:
+            return "Taiwanese Dollar";
+          case o.AI.k_ECurrencyCodeSAR:
+            return "Saudi Arabian Riyal";
+          case o.AI.k_ECurrencyCodeAED:
+            return "Emirati Dirham";
+          case o.AI.k_ECurrencyCodeSEK:
+            return "Swedish Krona";
+          case o.AI.k_ECurrencyCodeARS:
+            return "Argentine Peso";
+          case o.AI.k_ECurrencyCodeILS:
+            return "Israeli New Shequel";
+          case o.AI.k_ECurrencyCodeBYN:
+            return "Belarusian Ruble";
+          case o.AI.k_ECurrencyCodeKZT:
+            return "Kazakhstani Tenge";
+          case o.AI.k_ECurrencyCodeKWD:
+            return "Kuwaiti Dinar";
+          case o.AI.k_ECurrencyCodeQAR:
+            return "Qatari Rial";
+          case o.AI.k_ECurrencyCodeCRC:
+            return "Costa Rican Colon";
+          case o.AI.k_ECurrencyCodeUYU:
+            return "Uruguayan Peso";
+          case o.AI.k_ECurrencyCodeBGN:
+            return "Bulgarian lev";
+          case o.AI.k_ECurrencyCodeHRK:
+            return "Croatian kuna";
+          case o.AI.k_ECurrencyCodeCZK:
+            return "Czech koruna";
+          case o.AI.k_ECurrencyCodeDKK:
+            return "Danish krone";
+          case o.AI.k_ECurrencyCodeHUF:
+            return "Hungarian forint";
+          case o.AI.k_ECurrencyCodeRON:
+            return "Romanian leu";
+          default:
+            return "";
+        }
+      }
+      function C(e, r = t.R.k_ERegionCodeInvalid) {
+        switch (e) {
+          case o.AI.k_ECurrencyCodeGBP:
+            return "gbp";
+          case o.AI.k_ECurrencyCodeEUR:
+            return "eur";
+          case o.AI.k_ECurrencyCodeCHF:
+            return "chf";
+          case o.AI.k_ECurrencyCodeRUB:
+            return "rub";
+          case o.AI.k_ECurrencyCodePLN:
+            return "pln";
+          case o.AI.k_ECurrencyCodeBRL:
+            return "brl";
+          case o.AI.k_ECurrencyCodeJPY:
+            return "jpy";
+          case o.AI.k_ECurrencyCodeNOK:
+            return "nok";
+          case o.AI.k_ECurrencyCodeIDR:
+            return "idr";
+          case o.AI.k_ECurrencyCodeMYR:
+            return "myr";
+          case o.AI.k_ECurrencyCodePHP:
+            return "php";
+          case o.AI.k_ECurrencyCodeSGD:
+            return "sgd";
+          case o.AI.k_ECurrencyCodeTHB:
+            return "thb";
+          case o.AI.k_ECurrencyCodeVND:
+            return "vnd";
+          case o.AI.k_ECurrencyCodeKRW:
+            return "krw";
+          case o.AI.k_ECurrencyCodeTRY:
+            return "try";
+          case o.AI.k_ECurrencyCodeUAH:
+            return "uah";
+          case o.AI.k_ECurrencyCodeMXN:
+            return "mxn";
+          case o.AI.k_ECurrencyCodeCAD:
+            return "cad";
+          case o.AI.k_ECurrencyCodeAUD:
+            return "aud";
+          case o.AI.k_ECurrencyCodeNZD:
+            return "nzd";
+          case o.AI.k_ECurrencyCodeCNY:
+            return "cny";
+          case o.AI.k_ECurrencyCodeINR:
+            return "inr";
+          case o.AI.k_ECurrencyCodeCLP:
+            return "clp";
+          case o.AI.k_ECurrencyCodePEN:
+            return "pen";
+          case o.AI.k_ECurrencyCodeCOP:
+            return "cop";
+          case o.AI.k_ECurrencyCodeZAR:
+            return "zar";
+          case o.AI.k_ECurrencyCodeHKD:
+            return "hkd";
+          case o.AI.k_ECurrencyCodeTWD:
+            return "twd";
+          case o.AI.k_ECurrencyCodeSAR:
+            return "sar";
+          case o.AI.k_ECurrencyCodeAED:
+            return "aed";
+          case o.AI.k_ECurrencyCodeSEK:
+            return "sek";
+          case o.AI.k_ECurrencyCodeARS:
+            return "ars";
+          case o.AI.k_ECurrencyCodeILS:
+            return "ils";
+          case o.AI.k_ECurrencyCodeBYN:
+            return "byn";
+          case o.AI.k_ECurrencyCodeKZT:
+            return "kzt";
+          case o.AI.k_ECurrencyCodeKWD:
+            return "kwd";
+          case o.AI.k_ECurrencyCodeQAR:
+            return "qar";
+          case o.AI.k_ECurrencyCodeCRC:
+            return "crc";
+          case o.AI.k_ECurrencyCodeUYU:
+            return "uyu";
+          case o.AI.k_ECurrencyCodeBGN:
+            return "bgn";
+          case o.AI.k_ECurrencyCodeHRK:
+            return "hrk";
+          case o.AI.k_ECurrencyCodeCZK:
+            return "czk";
+          case o.AI.k_ECurrencyCodeDKK:
+            return "dkk";
+          case o.AI.k_ECurrencyCodeHUF:
+            return "huf";
+          case o.AI.k_ECurrencyCodeRON:
+            return "ron";
+          default:
+            return r == t.R.k_ERegionCodeCIS
+              ? "usd_cis"
+              : r == t.R.k_ERegionCodeSAsia
+                ? "usd_sasia"
+                : r == t.R.k_ERegionCodeLATAM
+                  ? "usd_latam"
+                  : r == t.R.k_ERegionCodeMENA
+                    ? "usd_mena"
+                    : "usd";
+        }
+      }
+      function a(e) {
+        return `${u(
+          (function (e) {
+            switch (e) {
+              case "USD":
+                return o.AI.k_ECurrencyCodeUSD;
+              case "GBP":
+                return o.AI.k_ECurrencyCodeGBP;
+              case "EUR":
+                return o.AI.k_ECurrencyCodeEUR;
+              case "CHF":
+                return o.AI.k_ECurrencyCodeCHF;
+              case "RUB":
+                return o.AI.k_ECurrencyCodeRUB;
+              case "PLN":
+                return o.AI.k_ECurrencyCodePLN;
+              case "BRL":
+                return o.AI.k_ECurrencyCodeBRL;
+              case "JPY":
+                return o.AI.k_ECurrencyCodeJPY;
+              case "NOK":
+                return o.AI.k_ECurrencyCodeNOK;
+              case "IDR":
+                return o.AI.k_ECurrencyCodeIDR;
+              case "MYR":
+                return o.AI.k_ECurrencyCodeMYR;
+              case "PHP":
+                return o.AI.k_ECurrencyCodePHP;
+              case "SGD":
+                return o.AI.k_ECurrencyCodeSGD;
+              case "THB":
+                return o.AI.k_ECurrencyCodeTHB;
+              case "VND":
+                return o.AI.k_ECurrencyCodeVND;
+              case "KRW":
+                return o.AI.k_ECurrencyCodeKRW;
+              case "TRY":
+                return o.AI.k_ECurrencyCodeTRY;
+              case "UAH":
+                return o.AI.k_ECurrencyCodeUAH;
+              case "MXN":
+                return o.AI.k_ECurrencyCodeMXN;
+              case "CAD":
+                return o.AI.k_ECurrencyCodeCAD;
+              case "AUD":
+                return o.AI.k_ECurrencyCodeAUD;
+              case "NZD":
+                return o.AI.k_ECurrencyCodeNZD;
+              case "CNY":
+                return o.AI.k_ECurrencyCodeCNY;
+              case "INR":
+                return o.AI.k_ECurrencyCodeINR;
+              case "CLP":
+                return o.AI.k_ECurrencyCodeCLP;
+              case "PEN":
+                return o.AI.k_ECurrencyCodePEN;
+              case "COP":
+                return o.AI.k_ECurrencyCodeCOP;
+              case "ZAR":
+                return o.AI.k_ECurrencyCodeZAR;
+              case "HKD":
+                return o.AI.k_ECurrencyCodeHKD;
+              case "TWD":
+                return o.AI.k_ECurrencyCodeTWD;
+              case "SAR":
+                return o.AI.k_ECurrencyCodeSAR;
+              case "AED":
+                return o.AI.k_ECurrencyCodeAED;
+              case "SEK":
+                return o.AI.k_ECurrencyCodeSEK;
+              case "ARS":
+                return o.AI.k_ECurrencyCodeARS;
+              case "ILS":
+                return o.AI.k_ECurrencyCodeILS;
+              case "BYN":
+                return o.AI.k_ECurrencyCodeBYN;
+              case "KZT":
+                return o.AI.k_ECurrencyCodeKZT;
+              case "KWD":
+                return o.AI.k_ECurrencyCodeKWD;
+              case "QAR":
+                return o.AI.k_ECurrencyCodeQAR;
+              case "CRC":
+                return o.AI.k_ECurrencyCodeCRC;
+              case "UYU":
+                return o.AI.k_ECurrencyCodeUYU;
+              case "BGN":
+                return o.AI.k_ECurrencyCodeBGN;
+              case "HRK":
+                return o.AI.k_ECurrencyCodeHRK;
+              case "CZK":
+                return o.AI.k_ECurrencyCodeCZK;
+              case "DKK":
+                return o.AI.k_ECurrencyCodeDKK;
+              case "HUF":
+                return o.AI.k_ECurrencyCodeHUF;
+              case "RON":
+                return o.AI.k_ECurrencyCodeRON;
+              default:
+                return o.AI.k_ECurrencyCodeInvalid;
+            }
+          })(e.toUpperCase()),
+        )} (${e})`;
       }
     },
     88267: (e, r, n) => {
@@ -1137,16 +1549,70 @@
         ];
       }
     },
+    29848: (e, r, n) => {
+      "use strict";
+      var o;
+      function t() {
+        return [
+          o.k_ERegionCodeCIS,
+          o.k_ERegionCodeSAsia,
+          o.k_ERegionCodeLATAM,
+          o.k_ERegionCodeMENA,
+        ];
+      }
+      n.d(r, { R: () => o, i: () => t }),
+        (function (e) {
+          (e[(e.k_ERegionCodeInvalid = 0)] = "k_ERegionCodeInvalid"),
+            (e[(e.k_ERegionCodeCIS = 1)] = "k_ERegionCodeCIS"),
+            (e[(e.k_ERegionCodeSAsia = 2)] = "k_ERegionCodeSAsia"),
+            (e[(e.k_ERegionCodeLATAM = 3)] = "k_ERegionCodeLATAM"),
+            (e[(e.k_ERegionCodeMENA = 4)] = "k_ERegionCodeMENA"),
+            (e[(e.k_ERegionCodeMax = 5)] = "k_ERegionCodeMax");
+        })(o || (o = {}));
+    },
+    87700: (e, r, n) => {
+      "use strict";
+      n.d(r, { Bb: () => C, jY: () => u });
+      var o = n(90626),
+        t = n(48174);
+      const c = o.createContext({
+        eConversionMethod: 1,
+        setConversionMethod: (e) => {},
+        rgAvailableConversionMethods: [],
+      });
+      function u(e) {
+        const { eInitialConversionMethod: r } = e,
+          n = (0, t.cT)(),
+          [u, C] = o.useState(r || 1),
+          a = o.useMemo(() => {
+            const e = n ? n.GetAvailableConversionMethods() : [];
+            return {
+              eConversionMethod: u,
+              setConversionMethod: C,
+              rgAvailableConversionMethods: e,
+            };
+          }, [u, C, n]);
+        return o.createElement(c.Provider, { value: a }, e.children);
+      }
+      function C() {
+        return o.useContext(c).eConversionMethod;
+      }
+    },
     48174: (e, r, n) => {
       "use strict";
-      n.d(r, { mj: () => s, cT: () => a });
-      var o = n(27863);
-      class t {
+      n.d(r, { mj: () => _, gC: () => k, cT: () => E });
+      var o = n(90626),
+        t = n(79450);
+      class c {
         m_mapUSDPrice = new Map();
         m_mapKeyToGuidePrice = new Map();
         m_rgUSDPricePointInCents = [];
-        GetKey(e, r, n, t = 1) {
-          return `${e}_${r}_${n || o.Rm.k_ERegionCodeInvalid}_${t}`;
+        m_setConversionMethod = new Set();
+        GetKey(e, r, n, o = 1) {
+          return `${e}_${r}_${n || t.Rm.k_ERegionCodeInvalid}_${o}`;
+        }
+        GetAvailableConversionMethods() {
+          return Array.from(this.m_setConversionMethod).sort();
         }
         GetAnyPricePoint() {
           return Array.from(this.m_mapUSDPrice.get(1)?.values() || [])[0];
@@ -1179,16 +1645,17 @@
         constructor(e) {
           let r = new Set();
           e.forEach((e) => {
-            const n = e.conversion_method ?? 1;
-            this.m_mapUSDPrice.has(n) || this.m_mapUSDPrice.set(n, new Map());
+            const n = e.convert_method ?? 1;
+            this.m_setConversionMethod.add(n),
+              this.m_mapUSDPrice.has(n) || this.m_mapUSDPrice.set(n, new Map());
             this.m_mapUSDPrice.get(n).set(e.usd_price, e),
               r.add(e.usd_price),
               e.currency_prices.forEach((r) => {
                 const n = this.GetKey(
                   e.usd_price,
                   r.currency_code,
-                  o.Rm.k_ERegionCodeInvalid,
-                  e.conversion_method || 1,
+                  t.Rm.k_ERegionCodeInvalid,
+                  e.convert_method || 1,
                 );
                 this.m_mapKeyToGuidePrice.set(n, r);
               }),
@@ -1197,539 +1664,180 @@
                   e.usd_price,
                   r.currency_code,
                   r.region_code,
-                  e.conversion_method || 1,
+                  e.convert_method || 1,
                 );
-                this.m_mapKeyToGuidePrice.set(n, r);
+                if (
+                  (this.m_mapKeyToGuidePrice.set(n, r),
+                  this.m_setConversionMethod.has(3))
+                ) {
+                  const n = {
+                      currency_code: t.AI.k_ECurrencyCodeUSD,
+                      price: e.usd_price,
+                      region_code: r.region_code,
+                    },
+                    o = this.GetKey(
+                      e.usd_price,
+                      t.AI.k_ECurrencyCodeUSD,
+                      r.region_code,
+                      3,
+                    );
+                  this.m_mapKeyToGuidePrice.set(o, n);
+                }
               });
           }),
             (this.m_rgUSDPricePointInCents = Array.from(r.keys()));
         }
       }
-      var c = n(7860),
-        u = n(24484);
-      var C = n(20194);
-      function a() {
-        const e = (0, C.I)({
+      var u = n(7860),
+        C = n(24484);
+      var a = n(87700),
+        s = n(20194),
+        i = n(81393),
+        d = n(88267),
+        l = n(72255),
+        y = n(29848);
+      function E() {
+        const e = (0, s.I)({
           queryKey: ["PricingGuideline"],
           queryFn: async () =>
             await (function () {
-              let e = (0, u.Fd)("pricing_guideline", "application_config");
+              let e = (0, C.Fd)("pricing_guideline", "application_config");
               if (e) return Promise.resolve(e);
               {
-                const e = c.L.getQueryData(["PricingGuideline"]);
+                const e = u.L.getQueryData(["PricingGuideline"]);
                 return Promise.resolve(e ?? null);
               }
             })(),
         });
-        return e.data ? new t(e.data) : null;
+        return (0, o.useMemo)(() => (e.data ? new c(e.data) : null), [e.data]);
       }
-      function s() {
+      function _() {
         return ["PricingGuideline"];
       }
+      function k(e) {
+        const r = E(),
+          n = (0, a.Bb)();
+        return {
+          fnApplyGuidelines: (0, o.useCallback)(
+            (o, t) => {
+              if (
+                ((0, i.wT)(
+                  r,
+                  "Pricing Guideline Not Initialized by time conversion being triggered",
+                ),
+                r)
+              ) {
+                for (
+                  let c = d.AI.k_ECurrencyCodeUSD;
+                  c < d.AI.k_ECurrencyCodeMax;
+                  ++c
+                ) {
+                  const u = r.GetRecommendPrice(t, c, void 0, n)?.price;
+                  if (u && u > 0) {
+                    const r = (0, l.M1)(c);
+                    e(o, r, u);
+                  }
+                }
+                for (
+                  let c = y.R.k_ERegionCodeCIS;
+                  c < y.R.k_ERegionCodeMax;
+                  ++c
+                ) {
+                  const u = d.AI.k_ECurrencyCodeUSD,
+                    C = r.GetRecommendPrice(t, u, c, n)?.price;
+                  if (C && C > 0) {
+                    const r = (0, l.pd)(u, c).toUpperCase();
+                    e(o, r, C);
+                  }
+                }
+              }
+            },
+            [n, e, r],
+          ),
+        };
+      }
     },
-    27863: (e, r, n) => {
+    79450: (e, r, n) => {
       "use strict";
       n.d(r, {
-        AI: () => t.AI,
-        M1: () => c,
-        Ug: () => u,
-        pd: () => C,
-        Rm: () => o,
-        k8: () => i,
-        j4: () => l,
-        de: () => d,
-        bS: () => s,
-        t_: () => a,
-        uF: () => y,
-        JA: () => E,
-        iy: () => _,
+        AI: () => o.AI,
+        M1: () => i.M1,
+        Ug: () => i.Ug,
+        pd: () => i.pd,
+        Rm: () => t.R,
+        k8: () => u,
+        j4: () => s,
+        de: () => C,
+        bS: () => c,
+        t_: () => i.t_,
+        uF: () => a,
+        JA: () => d,
+        iy: () => l,
       });
-      var o,
-        t = n(88267);
+      var o = n(88267),
+        t = n(29848);
       function c(e) {
-        switch (e) {
-          case t.AI.k_ECurrencyCodeGBP:
-            return "GBP";
-          case t.AI.k_ECurrencyCodeEUR:
-            return "EUR";
-          case t.AI.k_ECurrencyCodeCHF:
-            return "CHF";
-          case t.AI.k_ECurrencyCodeRUB:
-            return "RUB";
-          case t.AI.k_ECurrencyCodePLN:
-            return "PLN";
-          case t.AI.k_ECurrencyCodeBRL:
-            return "BRL";
-          case t.AI.k_ECurrencyCodeJPY:
-            return "JPY";
-          case t.AI.k_ECurrencyCodeNOK:
-            return "NOK";
-          case t.AI.k_ECurrencyCodeIDR:
-            return "IDR";
-          case t.AI.k_ECurrencyCodeMYR:
-            return "MYR";
-          case t.AI.k_ECurrencyCodePHP:
-            return "PHP";
-          case t.AI.k_ECurrencyCodeSGD:
-            return "SGD";
-          case t.AI.k_ECurrencyCodeTHB:
-            return "THB";
-          case t.AI.k_ECurrencyCodeVND:
-            return "VND";
-          case t.AI.k_ECurrencyCodeKRW:
-            return "KRW";
-          case t.AI.k_ECurrencyCodeTRY:
-            return "TRY";
-          case t.AI.k_ECurrencyCodeUAH:
-            return "UAH";
-          case t.AI.k_ECurrencyCodeMXN:
-            return "MXN";
-          case t.AI.k_ECurrencyCodeCAD:
-            return "CAD";
-          case t.AI.k_ECurrencyCodeAUD:
-            return "AUD";
-          case t.AI.k_ECurrencyCodeNZD:
-            return "NZD";
-          case t.AI.k_ECurrencyCodeCNY:
-            return "CNY";
-          case t.AI.k_ECurrencyCodeINR:
-            return "INR";
-          case t.AI.k_ECurrencyCodeCLP:
-            return "CLP";
-          case t.AI.k_ECurrencyCodePEN:
-            return "PEN";
-          case t.AI.k_ECurrencyCodeCOP:
-            return "COP";
-          case t.AI.k_ECurrencyCodeZAR:
-            return "ZAR";
-          case t.AI.k_ECurrencyCodeHKD:
-            return "HKD";
-          case t.AI.k_ECurrencyCodeTWD:
-            return "TWD";
-          case t.AI.k_ECurrencyCodeSAR:
-            return "SAR";
-          case t.AI.k_ECurrencyCodeAED:
-            return "AED";
-          case t.AI.k_ECurrencyCodeSEK:
-            return "SEK";
-          case t.AI.k_ECurrencyCodeARS:
-            return "ARS";
-          case t.AI.k_ECurrencyCodeILS:
-            return "ILS";
-          case t.AI.k_ECurrencyCodeBYN:
-            return "BYN";
-          case t.AI.k_ECurrencyCodeKZT:
-            return "KZT";
-          case t.AI.k_ECurrencyCodeKWD:
-            return "KWD";
-          case t.AI.k_ECurrencyCodeQAR:
-            return "QAR";
-          case t.AI.k_ECurrencyCodeCRC:
-            return "CRC";
-          case t.AI.k_ECurrencyCodeUYU:
-            return "UYU";
-          case t.AI.k_ECurrencyCodeBGN:
-            return "BGN";
-          case t.AI.k_ECurrencyCodeHRK:
-            return "HRK";
-          case t.AI.k_ECurrencyCodeCZK:
-            return "CZK";
-          case t.AI.k_ECurrencyCodeDKK:
-            return "DKK";
-          case t.AI.k_ECurrencyCodeHUF:
-            return "HUF";
-          case t.AI.k_ECurrencyCodeRON:
-            return "RON";
-          default:
-            return "USD";
-        }
+        return o.AI.k_ECurrencyCodeUSD;
       }
       function u(e) {
         switch (e) {
-          case t.AI.k_ECurrencyCodeUSD:
-            return "US Dollar";
-          case t.AI.k_ECurrencyCodeGBP:
-            return "GB Pounds";
-          case t.AI.k_ECurrencyCodeEUR:
-            return "Euros";
-          case t.AI.k_ECurrencyCodeCHF:
-            return "Swiss Francs";
-          case t.AI.k_ECurrencyCodeRUB:
-            return "Russian Rubles";
-          case t.AI.k_ECurrencyCodePLN:
-            return "Polish zloty";
-          case t.AI.k_ECurrencyCodeBRL:
-            return "Brazilian Reals";
-          case t.AI.k_ECurrencyCodeJPY:
-            return "Japanese Yen";
-          case t.AI.k_ECurrencyCodeNOK:
-            return "Norwegian Krone";
-          case t.AI.k_ECurrencyCodeIDR:
-            return "Indonesian Rupiah";
-          case t.AI.k_ECurrencyCodeMYR:
-            return "Malaysian Ringgit";
-          case t.AI.k_ECurrencyCodePHP:
-            return "Philippine Peso";
-          case t.AI.k_ECurrencyCodeSGD:
-            return "Singapore Dollar";
-          case t.AI.k_ECurrencyCodeTHB:
-            return "Thai Baht";
-          case t.AI.k_ECurrencyCodeVND:
-            return "Vietnamese Dong";
-          case t.AI.k_ECurrencyCodeKRW:
-            return "Korean Won";
-          case t.AI.k_ECurrencyCodeTRY:
-            return "Turkish Lira";
-          case t.AI.k_ECurrencyCodeUAH:
-            return "Ukrainian Hryvnia";
-          case t.AI.k_ECurrencyCodeMXN:
-            return "Mexican Peso";
-          case t.AI.k_ECurrencyCodeCAD:
-            return "Canadian Dollar";
-          case t.AI.k_ECurrencyCodeAUD:
-            return "Australian Dollar";
-          case t.AI.k_ECurrencyCodeNZD:
-            return "New Zealand Dollar";
-          case t.AI.k_ECurrencyCodeCNY:
-            return "Chinese Yuan";
-          case t.AI.k_ECurrencyCodeINR:
-            return "Indian Rupee";
-          case t.AI.k_ECurrencyCodeCLP:
-            return "Chilean Peso";
-          case t.AI.k_ECurrencyCodePEN:
-            return "Peruvian Sol";
-          case t.AI.k_ECurrencyCodeCOP:
-            return "Colombian Peso";
-          case t.AI.k_ECurrencyCodeZAR:
-            return "South African Rand";
-          case t.AI.k_ECurrencyCodeHKD:
-            return "Hong Kong Dollar";
-          case t.AI.k_ECurrencyCodeTWD:
-            return "Taiwanese Dollar";
-          case t.AI.k_ECurrencyCodeSAR:
-            return "Saudi Arabian Riyal";
-          case t.AI.k_ECurrencyCodeAED:
-            return "Emirati Dirham";
-          case t.AI.k_ECurrencyCodeSEK:
-            return "Swedish Krona";
-          case t.AI.k_ECurrencyCodeARS:
-            return "Argentine Peso";
-          case t.AI.k_ECurrencyCodeILS:
-            return "Israeli New Shequel";
-          case t.AI.k_ECurrencyCodeBYN:
-            return "Belarusian Ruble";
-          case t.AI.k_ECurrencyCodeKZT:
-            return "Kazakhstani Tenge";
-          case t.AI.k_ECurrencyCodeKWD:
-            return "Kuwaiti Dinar";
-          case t.AI.k_ECurrencyCodeQAR:
-            return "Qatari Rial";
-          case t.AI.k_ECurrencyCodeCRC:
-            return "Costa Rican Colon";
-          case t.AI.k_ECurrencyCodeUYU:
-            return "Uruguayan Peso";
-          case t.AI.k_ECurrencyCodeBGN:
-            return "Bulgarian lev";
-          case t.AI.k_ECurrencyCodeHRK:
-            return "Croatian kuna";
-          case t.AI.k_ECurrencyCodeCZK:
-            return "Czech koruna";
-          case t.AI.k_ECurrencyCodeDKK:
-            return "Danish krone";
-          case t.AI.k_ECurrencyCodeHUF:
-            return "Hungarian forint";
-          case t.AI.k_ECurrencyCodeRON:
-            return "Romanian leu";
-          default:
-            return "";
-        }
-      }
-      function C(e, r = o.k_ERegionCodeInvalid) {
-        switch (e) {
-          case t.AI.k_ECurrencyCodeGBP:
-            return "gbp";
-          case t.AI.k_ECurrencyCodeEUR:
-            return "eur";
-          case t.AI.k_ECurrencyCodeCHF:
-            return "chf";
-          case t.AI.k_ECurrencyCodeRUB:
-            return "rub";
-          case t.AI.k_ECurrencyCodePLN:
-            return "pln";
-          case t.AI.k_ECurrencyCodeBRL:
-            return "brl";
-          case t.AI.k_ECurrencyCodeJPY:
-            return "jpy";
-          case t.AI.k_ECurrencyCodeNOK:
-            return "nok";
-          case t.AI.k_ECurrencyCodeIDR:
-            return "idr";
-          case t.AI.k_ECurrencyCodeMYR:
-            return "myr";
-          case t.AI.k_ECurrencyCodePHP:
-            return "php";
-          case t.AI.k_ECurrencyCodeSGD:
-            return "sgd";
-          case t.AI.k_ECurrencyCodeTHB:
-            return "thb";
-          case t.AI.k_ECurrencyCodeVND:
-            return "vnd";
-          case t.AI.k_ECurrencyCodeKRW:
-            return "krw";
-          case t.AI.k_ECurrencyCodeTRY:
-            return "try";
-          case t.AI.k_ECurrencyCodeUAH:
-            return "uah";
-          case t.AI.k_ECurrencyCodeMXN:
-            return "mxn";
-          case t.AI.k_ECurrencyCodeCAD:
-            return "cad";
-          case t.AI.k_ECurrencyCodeAUD:
-            return "aud";
-          case t.AI.k_ECurrencyCodeNZD:
-            return "nzd";
-          case t.AI.k_ECurrencyCodeCNY:
-            return "cny";
-          case t.AI.k_ECurrencyCodeINR:
-            return "inr";
-          case t.AI.k_ECurrencyCodeCLP:
-            return "clp";
-          case t.AI.k_ECurrencyCodePEN:
-            return "pen";
-          case t.AI.k_ECurrencyCodeCOP:
-            return "cop";
-          case t.AI.k_ECurrencyCodeZAR:
-            return "zar";
-          case t.AI.k_ECurrencyCodeHKD:
-            return "hkd";
-          case t.AI.k_ECurrencyCodeTWD:
-            return "twd";
-          case t.AI.k_ECurrencyCodeSAR:
-            return "sar";
-          case t.AI.k_ECurrencyCodeAED:
-            return "aed";
-          case t.AI.k_ECurrencyCodeSEK:
-            return "sek";
-          case t.AI.k_ECurrencyCodeARS:
-            return "ars";
-          case t.AI.k_ECurrencyCodeILS:
-            return "ils";
-          case t.AI.k_ECurrencyCodeBYN:
-            return "byn";
-          case t.AI.k_ECurrencyCodeKZT:
-            return "kzt";
-          case t.AI.k_ECurrencyCodeKWD:
-            return "kwd";
-          case t.AI.k_ECurrencyCodeQAR:
-            return "qar";
-          case t.AI.k_ECurrencyCodeCRC:
-            return "crc";
-          case t.AI.k_ECurrencyCodeUYU:
-            return "uyu";
-          case t.AI.k_ECurrencyCodeBGN:
-            return "bgn";
-          case t.AI.k_ECurrencyCodeHRK:
-            return "hrk";
-          case t.AI.k_ECurrencyCodeCZK:
-            return "czk";
-          case t.AI.k_ECurrencyCodeDKK:
-            return "dkk";
-          case t.AI.k_ECurrencyCodeHUF:
-            return "huf";
-          case t.AI.k_ECurrencyCodeRON:
-            return "ron";
-          default:
-            return r == o.k_ERegionCodeCIS
-              ? "usd_cis"
-              : r == o.k_ERegionCodeSAsia
-                ? "usd_sasia"
-                : r == o.k_ERegionCodeLATAM
-                  ? "usd_latam"
-                  : r == o.k_ERegionCodeMENA
-                    ? "usd_mena"
-                    : "usd";
-        }
-      }
-      function a(e) {
-        return `${u(
-          (function (e) {
-            switch (e) {
-              case "USD":
-                return t.AI.k_ECurrencyCodeUSD;
-              case "GBP":
-                return t.AI.k_ECurrencyCodeGBP;
-              case "EUR":
-                return t.AI.k_ECurrencyCodeEUR;
-              case "CHF":
-                return t.AI.k_ECurrencyCodeCHF;
-              case "RUB":
-                return t.AI.k_ECurrencyCodeRUB;
-              case "PLN":
-                return t.AI.k_ECurrencyCodePLN;
-              case "BRL":
-                return t.AI.k_ECurrencyCodeBRL;
-              case "JPY":
-                return t.AI.k_ECurrencyCodeJPY;
-              case "NOK":
-                return t.AI.k_ECurrencyCodeNOK;
-              case "IDR":
-                return t.AI.k_ECurrencyCodeIDR;
-              case "MYR":
-                return t.AI.k_ECurrencyCodeMYR;
-              case "PHP":
-                return t.AI.k_ECurrencyCodePHP;
-              case "SGD":
-                return t.AI.k_ECurrencyCodeSGD;
-              case "THB":
-                return t.AI.k_ECurrencyCodeTHB;
-              case "VND":
-                return t.AI.k_ECurrencyCodeVND;
-              case "KRW":
-                return t.AI.k_ECurrencyCodeKRW;
-              case "TRY":
-                return t.AI.k_ECurrencyCodeTRY;
-              case "UAH":
-                return t.AI.k_ECurrencyCodeUAH;
-              case "MXN":
-                return t.AI.k_ECurrencyCodeMXN;
-              case "CAD":
-                return t.AI.k_ECurrencyCodeCAD;
-              case "AUD":
-                return t.AI.k_ECurrencyCodeAUD;
-              case "NZD":
-                return t.AI.k_ECurrencyCodeNZD;
-              case "CNY":
-                return t.AI.k_ECurrencyCodeCNY;
-              case "INR":
-                return t.AI.k_ECurrencyCodeINR;
-              case "CLP":
-                return t.AI.k_ECurrencyCodeCLP;
-              case "PEN":
-                return t.AI.k_ECurrencyCodePEN;
-              case "COP":
-                return t.AI.k_ECurrencyCodeCOP;
-              case "ZAR":
-                return t.AI.k_ECurrencyCodeZAR;
-              case "HKD":
-                return t.AI.k_ECurrencyCodeHKD;
-              case "TWD":
-                return t.AI.k_ECurrencyCodeTWD;
-              case "SAR":
-                return t.AI.k_ECurrencyCodeSAR;
-              case "AED":
-                return t.AI.k_ECurrencyCodeAED;
-              case "SEK":
-                return t.AI.k_ECurrencyCodeSEK;
-              case "ARS":
-                return t.AI.k_ECurrencyCodeARS;
-              case "ILS":
-                return t.AI.k_ECurrencyCodeILS;
-              case "BYN":
-                return t.AI.k_ECurrencyCodeBYN;
-              case "KZT":
-                return t.AI.k_ECurrencyCodeKZT;
-              case "KWD":
-                return t.AI.k_ECurrencyCodeKWD;
-              case "QAR":
-                return t.AI.k_ECurrencyCodeQAR;
-              case "CRC":
-                return t.AI.k_ECurrencyCodeCRC;
-              case "UYU":
-                return t.AI.k_ECurrencyCodeUYU;
-              case "BGN":
-                return t.AI.k_ECurrencyCodeBGN;
-              case "HRK":
-                return t.AI.k_ECurrencyCodeHRK;
-              case "CZK":
-                return t.AI.k_ECurrencyCodeCZK;
-              case "DKK":
-                return t.AI.k_ECurrencyCodeDKK;
-              case "HUF":
-                return t.AI.k_ECurrencyCodeHUF;
-              case "RON":
-                return t.AI.k_ECurrencyCodeRON;
-              default:
-                return t.AI.k_ECurrencyCodeInvalid;
-            }
-          })(e.toUpperCase()),
-        )} (${e})`;
-      }
-      function s(e) {
-        return t.AI.k_ECurrencyCodeUSD;
-      }
-      function i(e) {
-        switch (e) {
-          case o.k_ERegionCodeCIS:
+          case t.R.k_ERegionCodeCIS:
             return "usd_cis";
-          case o.k_ERegionCodeSAsia:
+          case t.R.k_ERegionCodeSAsia:
             return "usd_sasia";
-          case o.k_ERegionCodeLATAM:
+          case t.R.k_ERegionCodeLATAM:
             return "usd_latam";
-          case o.k_ERegionCodeMENA:
+          case t.R.k_ERegionCodeMENA:
             return "usd_mena";
           default:
             return "usd_invalid";
         }
       }
-      function d(e) {
+      function C(e) {
         switch (e) {
-          case o.k_ERegionCodeCIS:
+          case t.R.k_ERegionCodeCIS:
             return "CIS";
-          case o.k_ERegionCodeSAsia:
+          case t.R.k_ERegionCodeSAsia:
             return "SASIA";
-          case o.k_ERegionCodeLATAM:
+          case t.R.k_ERegionCodeLATAM:
             return "LATAM";
-          case o.k_ERegionCodeMENA:
+          case t.R.k_ERegionCodeMENA:
             return "MENA";
           default:
             return "Invalid Region";
         }
       }
-      function y(e) {
+      function a(e) {
         switch (e) {
           case "CIS":
-            return o.k_ERegionCodeCIS;
+            return t.R.k_ERegionCodeCIS;
           case "SASIA":
-            return o.k_ERegionCodeSAsia;
+            return t.R.k_ERegionCodeSAsia;
           case "LATAM":
-            return o.k_ERegionCodeLATAM;
+            return t.R.k_ERegionCodeLATAM;
           case "MENA":
-            return o.k_ERegionCodeMENA;
+            return t.R.k_ERegionCodeMENA;
           default:
-            return o.k_ERegionCodeInvalid;
+            return t.R.k_ERegionCodeInvalid;
         }
       }
-      function l(e) {
+      function s(e) {
         switch (e) {
-          case o.k_ERegionCodeCIS:
+          case t.R.k_ERegionCodeCIS:
             return "The Commonwealth of Independent Stats";
-          case o.k_ERegionCodeSAsia:
+          case t.R.k_ERegionCodeSAsia:
             return "South Asia";
-          case o.k_ERegionCodeLATAM:
+          case t.R.k_ERegionCodeLATAM:
             return "Latin America";
-          case o.k_ERegionCodeMENA:
+          case t.R.k_ERegionCodeMENA:
             return "Middle East and North Africa";
           default:
             return "Invalid Region";
         }
       }
-      !(function (e) {
-        (e[(e.k_ERegionCodeInvalid = 0)] = "k_ERegionCodeInvalid"),
-          (e[(e.k_ERegionCodeCIS = 1)] = "k_ERegionCodeCIS"),
-          (e[(e.k_ERegionCodeSAsia = 2)] = "k_ERegionCodeSAsia"),
-          (e[(e.k_ERegionCodeLATAM = 3)] = "k_ERegionCodeLATAM"),
-          (e[(e.k_ERegionCodeMENA = 4)] = "k_ERegionCodeMENA"),
-          (e[(e.k_ERegionCodeMax = 5)] = "k_ERegionCodeMax");
-      })(o || (o = {}));
-      const E = (0, t.yv)(),
-        _ =
-          ((0, t.X5)(),
-          [
-            o.k_ERegionCodeCIS,
-            o.k_ERegionCodeSAsia,
-            o.k_ERegionCodeLATAM,
-            o.k_ERegionCodeMENA,
-          ]);
+      var i = n(72255);
+      const d = (0, o.yv)(),
+        l = ((0, o.X5)(), (0, t.i)());
     },
   },
 ]);

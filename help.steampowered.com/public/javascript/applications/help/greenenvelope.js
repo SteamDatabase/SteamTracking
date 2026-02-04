@@ -4188,7 +4188,11 @@
                     br: _.qM.readString,
                     bw: _.gp.writeString,
                   },
-                  on_market: { n: 36, br: _.qM.readBool, bw: _.gp.writeBool },
+                  sealed_type: {
+                    n: 37,
+                    br: _.qM.readUint32,
+                    bw: _.gp.writeUint32,
+                  },
                 },
               }),
             Ee.sm_m

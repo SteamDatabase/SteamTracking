@@ -304,8 +304,8 @@
     },
     chunkid: (module) => {
       module.exports = {
+        RootDataAttributes: "_3zHvvIxS4vSW6Qh5GqLflX",
         Root: "_2KPA3I9eXE9r251_-GX_iv",
-        DataAttributes: "_1tmKnx6V_8Ez9jIC5eMgat",
         AfterDataAttributes: "_3BGADF5vKbdAji-Xj65xxm",
       };
     },
@@ -4229,58 +4229,60 @@
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const {
-            defaultTextSize: _ = "3",
-            accentColor: __webpack_require__ = "blue",
-            dullColor: _ = "greyneutral",
-            bodyTextColor: _ = "text-light",
-            breakpoints: _,
-            children: _,
-            zoo: _,
-          } = _,
-          _ = {
-            "--default-font-size": `var(--text-size-${_})`,
-            "--default-line-height": `var(--line-height-${_})`,
-            "--default-letter-spacing": `var(--letter-spacing-${_})`,
-            "--color-debug": "hotpink",
-            "--color-accent-contrast": "white",
-          };
-        return _.createElement(
-          _,
-          null,
+          defaultTextSize: _,
+          accentColor: __webpack_require__ = "blue",
+          dullColor: _ = "greyneutral",
+          bodyTextColor: _ = "text-light",
+          breakpoints: _,
+          children: _,
+          zoo: _,
+        } = _;
+        let _;
+        return (
+          _ &&
+            (_ = {
+              "--default-font-size": `var(--text-size-${_})`,
+              "--default-line-height": `var(--line-height-${_})`,
+              "--default-letter-spacing": `var(--letter-spacing-${_})`,
+            }),
           _.createElement(
             _,
-            {
-              breakpoints: _,
-            },
+            null,
             _.createElement(
               _,
-              null,
+              {
+                breakpoints: _,
+              },
               _.createElement(
-                "div",
-                {
-                  className: _()(_.Root, "noOpinionatedGlobalStyles"),
-                  style: _,
-                },
+                _,
+                null,
                 _.createElement(
                   "div",
                   {
-                    "data-accent-color": __webpack_require__,
-                    "data-dull-color": _,
-                    "data-body-text-color": _,
-                    className: _.DataAttributes,
+                    className: _()(_.Root, "noOpinionatedGlobalStyles"),
+                    style: _,
                   },
                   _.createElement(
                     "div",
                     {
-                      className: _.AfterDataAttributes,
+                      "data-accent-color": __webpack_require__,
+                      "data-dull-color": _,
+                      "data-body-text-color": _,
+                      className: _.RootDataAttributes,
                     },
-                    _,
-                    !1,
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.AfterDataAttributes,
+                      },
+                      _,
+                      !1,
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
+          )
         );
       });
       function _(_) {
@@ -4292,6 +4294,25 @@
             formFactor: __webpack_require__,
           },
           _,
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, "flow-children": __webpack_require__, ..._ } = _;
+        __webpack_require__ && (_.layout = (0, _._)(__webpack_require__));
+        const { ref: _, node: _ } = (0, _._)(_),
+          _ = (0, _._)(_, _.props?.ref);
+        return _.createElement(
+          _._.Provider,
+          {
+            value: _,
+          },
+          _.cloneElement(_, {
+            ..._.props,
+            ref: _,
+          }),
         );
       }
       const _ = _.reduce((_, _, _) => ((_[_] = _), _), {});
@@ -4688,9 +4709,13 @@
           },
           _,
         );
-        return _.createElement("div", {
-          ..._,
-        });
+        return _.createElement(
+          _,
+          null,
+          _.createElement("div", {
+            ..._,
+          }),
+        );
       }
       const _ = [
         ..._,
@@ -5045,7 +5070,6 @@
         },
       );
       var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
       (0, _.createContext)(null);
       function _(_) {
         const { gutter: _ = 0 } = _;

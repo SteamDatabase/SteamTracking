@@ -3460,7 +3460,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -3738,10 +3737,14 @@
               : "#EventEditor_EventVisibleAndStarted";
           _ = (0, _._)(
             _,
-            _.createElement(_._, {
-              dateAndTime: __webpack_require__,
-              bSingleLine: !0,
-            }),
+            _.createElement(
+              "strong",
+              null,
+              _.createElement(_._, {
+                dateAndTime: __webpack_require__,
+                bSingleLine: !0,
+              }),
+            ),
           );
         } else if (!_ && (__webpack_require__ === _ || _ < 1)) {
           const _ =
@@ -3750,27 +3753,42 @@
               : "#EventEditor_EventStartedAndPublishedFuture";
           _ = (0, _._)(
             _,
-            _.createElement(_._, {
-              dateAndTime: __webpack_require__,
-              bSingleLine: !0,
-            }),
-          );
-        } else {
-          let _ = "#EventEditor_EventPublishedThenStarted";
-          _ > _
-            ? (_ = "#EventEditor_EventPublishedThenStartedBothFuture")
-            : __webpack_require__ > _ &&
-              (_ = "#EventEditor_EventPublishedThenStartedStartFuture"),
-            (_ = (0, _._)(
-              _,
-              _.createElement(_._, {
-                dateAndTime: _,
-                bSingleLine: !0,
-              }),
+            _.createElement(
+              "strong",
+              null,
               _.createElement(_._, {
                 dateAndTime: __webpack_require__,
                 bSingleLine: !0,
               }),
+            ),
+          );
+        } else {
+          let _ = "#EventEditor_EventPublishedThenStarted";
+          _ === __webpack_require__
+            ? (_ = "#EventEditor_EventWasPosted")
+            : _ > _
+              ? (_ = "#EventEditor_EventPublishedThenStartedBothFuture")
+              : __webpack_require__ > _ &&
+                (_ = "#EventEditor_EventPublishedThenStartedStartFuture"),
+            (_ = (0, _._)(
+              _,
+              _.createElement(
+                "strong",
+                null,
+                _.createElement(_._, {
+                  dateAndTime: _,
+                  bSingleLine: !0,
+                }),
+              ),
+              _.createElement(
+                "strong",
+                null,
+                _.createElement(_._, {
+                  dateAndTime: __webpack_require__,
+                  bSingleLine: !0,
+                }),
+              ),
+              _.createElement("br", null),
             ));
         }
         return _.createElement(
@@ -3784,13 +3802,9 @@
           _,
           " ",
           _.createElement(
-            _._,
-            {
-              toolTipContent: (0, _._)(
-                "#EventEditor_EventStartedAndPublished_ttip",
-              ),
-            },
-            " (?)",
+            "div",
+            null,
+            (0, _._)("#EventEditor_EventStartedAndPublished_ttip"),
           ),
         );
       }
@@ -22719,6 +22733,7 @@
               controller_category: Number(_) || void 0,
               bUseCreatorHomeApps:
                 36 == (null == _ ? void 0 : _.GetEventType()),
+              bAllowDemos: 36 == (null == _ ? void 0 : _.GetEventType()),
             };
             if (
               ((_ = await _().get(_, {
@@ -38387,8 +38402,7 @@
               _.Body()
                 .context()
                 .set_elanguage((0, _._)(_._.LANGUAGE)),
-              _.Body().context().set_country_code(_._.COUNTRY),
-              _.Body().context().set_steam_realm(_._.EREALM);
+              _.Body().context().set_country_code(_._.COUNTRY);
             for (const _ of _) _.Body().add_appids(_);
             if (
               (_.Body().set_flavor(_.strFlavor || "popular"),

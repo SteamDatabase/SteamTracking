@@ -5,9 +5,9 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [1639],
   {
-    41639: (a) => {
-      a.exports = JSON.parse(
-        '{"language":"polish","LoginRedirect_Dialog_Title":"Zaloguj","LoginRedirect_Dialog_Description":"Zaloguj się, aby dodać tę pozycję do listy życzeń, zacząć ją obserwować lub oznaczyć jako ignorowaną. Kliknięcie „OK” przekieruje cię na stronę logowania.","Dummy":"dummy"}',
+    51639: (e) => {
+      e.exports = JSON.parse(
+        '{"PricingGuideline_Default":"Aşağıdan bir USD fiyatı seçin","ConversionMethod_Title":"Dönüştürme Yöntemi (%1$s)","ConversionMethod_Link":"Detayları Görüntüle","empty_no_trailing_comma":""}',
       );
     },
   },

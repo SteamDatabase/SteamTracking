@@ -11400,6 +11400,7 @@
                 Boolean(_) || Boolean(_?.jsondata?.optin_only) || void 0,
               controller_category: Number(_) || void 0,
               bUseCreatorHomeApps: 36 == _?.GetEventType(),
+              bAllowDemos: 36 == _?.GetEventType(),
             };
             if (
               ((_ = await _().get(_, {
@@ -24882,8 +24883,7 @@
               _.Body()
                 .context()
                 .set_elanguage((0, _._)(_._.LANGUAGE)),
-              _.Body().context().set_country_code(_._.COUNTRY),
-              _.Body().context().set_steam_realm(_._.EREALM);
+              _.Body().context().set_country_code(_._.COUNTRY);
             for (const _ of _) _.Body().add_appids(_);
             if (
               (_.Body().set_flavor(_.strFlavor || "popular"),

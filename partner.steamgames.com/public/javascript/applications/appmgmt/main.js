@@ -161,8 +161,8 @@
     },
     13857: (e) => {
       e.exports = {
+        RootDataAttributes: "_3zHvvIxS4vSW6Qh5GqLflX",
         Root: "_2KPA3I9eXE9r251_-GX_iv",
-        DataAttributes: "_1tmKnx6V_8Ez9jIC5eMgat",
         AfterDataAttributes: "_3BGADF5vKbdAji-Xj65xxm",
       };
     },
@@ -1556,54 +1556,56 @@
       var ce = r(13857);
       const ue = u.memo(function (e) {
         const {
-            defaultTextSize: t = "3",
-            accentColor: r = "blue",
-            dullColor: n = "greyneutral",
-            bodyTextColor: i = "text-light",
-            breakpoints: a,
-            children: o,
-            zoo: l,
-          } = e,
-          c = {
-            "--default-font-size": `var(--text-size-${t})`,
-            "--default-line-height": `var(--line-height-${t})`,
-            "--default-letter-spacing": `var(--letter-spacing-${t})`,
-            "--color-debug": "hotpink",
-            "--color-accent-contrast": "white",
-          };
-        return u.createElement(
-          oe,
-          null,
+          defaultTextSize: t,
+          accentColor: r = "blue",
+          dullColor: n = "greyneutral",
+          bodyTextColor: i = "text-light",
+          breakpoints: a,
+          children: o,
+          zoo: l,
+        } = e;
+        let c;
+        return (
+          t &&
+            (c = {
+              "--default-font-size": `var(--text-size-${t})`,
+              "--default-line-height": `var(--line-height-${t})`,
+              "--default-letter-spacing": `var(--letter-spacing-${t})`,
+            }),
           u.createElement(
-            ie.cW,
-            { breakpoints: a },
+            oe,
+            null,
             u.createElement(
-              me,
-              null,
+              ie.cW,
+              { breakpoints: a },
               u.createElement(
-                "div",
-                {
-                  className: s()(ce.Root, "noOpinionatedGlobalStyles"),
-                  style: c,
-                },
+                me,
+                null,
                 u.createElement(
                   "div",
                   {
-                    "data-accent-color": r,
-                    "data-dull-color": n,
-                    "data-body-text-color": i,
-                    className: ce.DataAttributes,
+                    className: s()(ce.Root, "noOpinionatedGlobalStyles"),
+                    style: c,
                   },
                   u.createElement(
                     "div",
-                    { className: ce.AfterDataAttributes },
-                    o,
-                    !1,
+                    {
+                      "data-accent-color": r,
+                      "data-dull-color": n,
+                      "data-body-text-color": i,
+                      className: ce.RootDataAttributes,
+                    },
+                    u.createElement(
+                      "div",
+                      { className: ce.AfterDataAttributes },
+                      o,
+                      !1,
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
+          )
         );
       });
       function me(e) {
@@ -1637,7 +1639,7 @@
             r.e(8995),
             r.e(721),
             r.e(1101),
-          ]).then(r.bind(r, 25767)),
+          ]).then(r.bind(r, 28098)),
         ),
         fe = u.lazy(() =>
           Promise.all([
@@ -1959,7 +1961,7 @@
             r.e(2012),
             r.e(7352),
             r.e(3025),
-          ]).then(r.bind(r, 98443)),
+          ]).then(r.bind(r, 49659)),
         ),
         De = u.lazy(() =>
           Promise.all([
@@ -2033,11 +2035,7 @@
       function Fe(e) {
         const t = (0, g.Tc)("publisherid", "application_config"),
           r = u.useMemo(
-            () => ({
-              country: g.TS.COUNTRY,
-              language: g.TS.LANGUAGE,
-              realm: g.TS.EREALM,
-            }),
+            () => ({ country: g.TS.COUNTRY, language: g.TS.LANGUAGE }),
             [],
           );
         return u.createElement(
@@ -3165,31 +3163,34 @@
         bActiveTree: !1,
         bActiveTreeWithinContext: !1,
         bDisableFocusClasses: !1,
+        bIsMounted: !1,
       });
       function h(e) {
-        const { tree: t, disableFocusClasses: r = !1, children: n } = e,
-          [i, a] = s.useState(t?.BIsActive() || !1),
-          [o, l] = s.useState(t?.BIsActiveWithinContext() || !1);
+        const { tree: t, disableFocusClasses: r = !1, children: i } = e,
+          [a, o] = s.useState(t?.BIsActive() || !1),
+          [l, c] = s.useState(t?.BIsActiveWithinContext() || !1),
+          u = (0, n.gc)(t?.SubscribableIsMounted) ?? !1;
         s.useEffect(
           () =>
             t
-              ? (a(t.BIsActive()),
-                l(t.BIsActiveWithinContext()),
+              ? (o(t.BIsActive()),
+                c(t.BIsActiveWithinContext()),
                 t.OnActiveStateChangedCallbacks.Register(() => {
-                  a(t.BIsActive()), l(t.BIsActiveWithinContext());
+                  o(t.BIsActive()), c(t.BIsActiveWithinContext());
                 }).Unregister)
-              : (a(!1), void l(!1)),
+              : (o(!1), void c(!1)),
           [t],
         );
-        const c = s.useMemo(
+        const m = s.useMemo(
           () => ({
-            bActiveTree: i,
-            bActiveTreeWithinContext: o,
+            bActiveTree: a,
+            bActiveTreeWithinContext: l,
             bDisableFocusClasses: r,
+            bIsMounted: u,
           }),
-          [i, r, o],
+          [a, r, l, u],
         );
-        return s.createElement(p.Provider, { value: c }, n);
+        return s.createElement(p.Provider, { value: m }, i);
       }
       function g() {
         return s.useContext(p);
@@ -3385,15 +3386,16 @@
               bActiveTree: b,
               bActiveTreeWithinContext: C,
               bDisableFocusClasses: M,
+              bIsMounted: S,
             } = (0, _.qR)(),
-            S = b && !M,
-            v = !C && (void 0 !== d || s);
+            v = b && !M,
+            y = S && !C && (void 0 !== d || s);
           return o.createElement(
             e,
             {
               ...h,
-              className: a()(l, f && S && r, w && S && i),
-              tabIndex: v ? -1 : d,
+              className: a()(l, f && v && r, w && v && i),
+              tabIndex: y ? -1 : d,
               ref: c,
             },
             p,
@@ -12078,6 +12080,16 @@
                     br: a.qM.readUint32,
                     bw: a.gp.writeUint32,
                   },
+                  release_from_early_access_date: {
+                    n: 11,
+                    br: a.qM.readUint32,
+                    bw: a.gp.writeUint32,
+                  },
+                  release_from_early_access_style: {
+                    n: 12,
+                    br: a.qM.readUint32,
+                    bw: a.gp.writeUint32,
+                  },
                   is_coming_soon: {
                     n: 4,
                     br: a.qM.readBool,
@@ -13321,11 +13333,6 @@
                     n: 3,
                     br: a.qM.readString,
                     bw: a.gp.writeString,
-                  },
-                  steam_realm: {
-                    n: 4,
-                    br: a.qM.readInt32,
-                    bw: a.gp.writeInt32,
                   },
                 },
               }),
@@ -17691,7 +17698,7 @@
     },
     63664: (e, t, r) => {
       "use strict";
-      r.d(t, { V3: () => M, yn: () => C, eG: () => b });
+      r.d(t, { V3: () => C, yn: () => b, eG: () => w });
       var n = r(23809),
         i = r(75233),
         s = r(90626),
@@ -17702,22 +17709,18 @@
         u = r(15161),
         m = r(58632),
         d = r.n(m),
-        p = r(52541),
-        h = r(2160);
+        p = r(52541);
       r(94601);
-      function g(e, t) {
+      function h(e, t) {
         t.Body().set_context(
           (function (e) {
             const t = new u.TS();
             e.bUsePartnerAPI || t.set_country_code(e.country);
-            t.set_language(e.language),
-              e.realm != h.TU.k_ESteamRealmUnknown &&
-                t.set_steam_realm(e.realm);
-            return t;
+            return t.set_language(e.language), t;
           })(e),
         );
       }
-      function _(e, t, r, n) {
+      function g(e, t, r, n) {
         return new (d())(
           async (r) => {
             const i = new Set(),
@@ -17742,23 +17745,23 @@
               const { include_included_items: e, ...t } = d;
               d.included_item_data_request = t;
             }
-            const h = l.w.Init(u.eE);
+            const g = l.w.Init(u.eE);
             let _;
             if (
-              (g(t, h),
+              (h(t, g),
               (function (e, t) {
                 e.Body().set_data_request(u.gn.fromObject(t));
-              })(h, d),
+              })(g, d),
               i.forEach((e) => {
                 const t = (0, p.zj)(e);
-                t && h.Body().add_ids(u.O4.fromObject(t));
+                t && g.Body().add_ids(u.O4.fromObject(t));
               }),
               t.bUsePartnerAPI)
             ) {
               const t = l.w.Init(c.St);
-              t.Body().set_getitems_request(h.Body()),
+              t.Body().set_getitems_request(g.Body()),
                 (_ = await c.BT.GetItems(e, t));
-            } else _ = await u.$4.GetItems(e, h);
+            } else _ = await u.$4.GetItems(e, g);
             const f = new Map();
             return (
               _.Body()
@@ -17794,15 +17797,15 @@
           { maxBatchSize: 500, cache: !1, ...r },
         );
       }
-      var f = r(39777);
-      const w = s.createContext({});
+      var _ = r(39777);
+      const f = s.createContext({});
+      function w() {
+        return s.useContext(f).dataLoader;
+      }
       function b() {
-        return s.useContext(w).dataLoader;
+        return s.useContext(f);
       }
-      function C() {
-        return s.useContext(w);
-      }
-      function M(e) {
+      function C(e) {
         const {
             context: t,
             msDelayBatch: r,
@@ -17814,17 +17817,17 @@
           u = (0, i.jE)(),
           m = s.useCallback(
             (e, t) => {
-              (0, f.vB)(u, e.toObject(), t), o && o(e, t);
+              (0, _.vB)(u, e.toObject(), t), o && o(e, t);
             },
             [u, o],
           ),
           d = a || c,
-          { country: p, language: h, realm: g, bUsePartnerAPI: b } = t,
-          C = s.useMemo(
-            () => ({ country: p, language: h, realm: g, bUsePartnerAPI: b }),
-            [p, h, g, b],
+          { country: p, language: h, bUsePartnerAPI: w } = t,
+          b = s.useMemo(
+            () => ({ country: p, language: h, bUsePartnerAPI: w }),
+            [p, h, w],
           ),
-          M = s.useMemo(() => {
+          C = s.useMemo(() => {
             const e = r
               ? (function (e) {
                   let t = 0;
@@ -17838,17 +17841,17 @@
                   };
                 })(r)
               : void 0;
-            return _(d, C, { cache: !1, batchScheduleFn: e }, m);
-          }, [d, m, C, r]),
-          S = s.useMemo(
+            return g(d, b, { cache: !1, batchScheduleFn: e }, m);
+          }, [d, m, b, r]),
+          M = s.useMemo(
             () => ({
-              dataLoader: M,
-              storeBrowseContext: C,
+              dataLoader: C,
+              storeBrowseContext: b,
               cacheStoreItemData: m,
             }),
-            [M, C, m],
+            [C, b, m],
           );
-        return s.createElement(w.Provider, { value: S }, l);
+        return s.createElement(f.Provider, { value: M }, l);
       }
     },
     52541: (e, t, r) => {
@@ -30325,23 +30328,25 @@
             onMiddleButton: d,
             bAlertDialog: p,
             bProgressDialog: h,
-            children: g,
-            ..._
+            focusButton: g,
+            children: _,
+            ...f
           } = e,
-          f = l || (0, a.we)("#Button_Close");
-        let w = n.createElement(i.CB, {
+          w = l || (0, a.we)("#Button_Close");
+        let b = n.createElement(i.CB, {
           bOKDisabled: e.bOKDisabled,
           bCancelDisabled: e.bCancelDisabled,
           strOKText: l,
           onCancel: t(e.onCancel),
           strCancelText: c,
+          focusButton: g,
         });
         h
-          ? (w = void 0)
+          ? (b = void 0)
           : p
-            ? (w = n.createElement(i.jn, null, f))
+            ? (b = n.createElement(i.jn, null, w))
             : d &&
-              (w = n.createElement(i.VQ, {
+              (b = n.createElement(i.VQ, {
                 bOKDisabled: e.bOKDisabled,
                 bCancelDisabled: e.bCancelDisabled,
                 strOKText: l,
@@ -30353,13 +30358,13 @@
                 strUpdateText: m,
                 bUpdateDisabled: e.bMiddleDisabled,
               }));
-        const b = n.useId();
+        const C = n.useId();
         return n.createElement(
           o.eV,
           {
-            ..._,
+            ...f,
             title: r || n.createElement(n.Fragment, null, " "),
-            "aria-describedby": b,
+            "aria-describedby": C,
           },
           n.createElement(
             i.f3,
@@ -30369,12 +30374,12 @@
               null,
               n.createElement(
                 "div",
-                { id: b, style: { display: "contents" } },
+                { id: C, style: { display: "contents" } },
                 s,
               ),
-              g,
+              _,
             ),
-            n.createElement(i.wi, null, w),
+            n.createElement(i.wi, null, b),
           ),
         );
       }

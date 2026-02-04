@@ -1153,6 +1153,92 @@
       __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
+      const _ = (_) => null;
+      function _(_) {
+        const {
+            bCompactMode: _,
+            setCompactMode: __webpack_require__,
+            rgGridData: _,
+            strPackageFilter: _,
+            setPackageFilter: _,
+            bFilterToBelowMinPrice: _,
+            setFilterToBelowMinPrice: _,
+          } = _,
+          _ = (0, _.useMemo)(
+            () => _.filter((_) => (0, _._)(_.packageID)).length,
+            [_],
+          );
+        let _ = _.useCallback(
+          (_) => {
+            _(_.data);
+          },
+          [_],
+        );
+        const _ = _.useMemo(
+          () => [
+            {
+              label: (0, _._)("#PricingDashboard_ShowOnlyReleasedPackages"),
+              data: "released",
+            },
+            {
+              label: (0, _._)("#PricingDashboard_ShowAllPackages"),
+              data: "all",
+            },
+            {
+              label: (0, _._)("#PricingDashboard_ShowOnlyUnreleasedPackages"),
+              data: "unreleased",
+            },
+            {
+              label: (0, _._)("#PricingDashboard_ShowOnlyChangedPackages"),
+              data: "changed",
+            },
+            {
+              label: (0, _._)("#PricingDashboard_ShowProposedChanges"),
+              data: "proposed",
+            },
+          ],
+          [],
+        );
+        return _.createElement(
+          "div",
+          {
+            className: _().GridHeaderButtons,
+          },
+          _.createElement(_._, {
+            rgOptions: _,
+            selectedOption: _,
+            strDropDownClassName: _().Test,
+            onChange: _,
+            contextMenuPositionOptions: {
+              bMatchWidth: !1,
+            },
+          }),
+          Boolean(_ || _) &&
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().OptionCtn, _().PriceLowOption),
+              },
+              _.createElement(_._, {
+                checked: _,
+                onChange: _,
+                label: (0, _._)("#PricingDashboard_FilterToLowPrice", _),
+              }),
+            ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().OptionCtn, _().CompactOption),
+            },
+            _.createElement(_._, {
+              checked: _,
+              onChange: __webpack_require__,
+              label: (0, _._)("#PricingDashboard_ShowCompactModeCheckBoxLabel"),
+            }),
+          ),
+          _.createElement(_, null),
+        );
+      }
       function _(_) {
         return _.contains_game && _.contains_dlc
           ? "BOTH"
@@ -1358,11 +1444,11 @@
       const _ = _.memo(function (_) {
         const { packageData: _ } = _,
           [__webpack_require__, _] = _.useState(!1),
-          [_, _] = (0, _._)("filter_below_min_price", !1),
           _ = _.useRef(null),
           [_, _] = (0, _._)("filter", "released");
         "dev" == _._.WEB_UNIVERSE && (window.g_PricingGridTableRef = _);
-        const _ = new URLSearchParams(window.location.search),
+        const [_, _] = (0, _._)("filter_below_min_price", !1),
+          _ = new URLSearchParams(window.location.search),
           _ = _.has(_._) ? decodeURIComponent(_.get(_._)) : "",
           _ = _(__webpack_require__),
           _ = (function (_, _, _) {
@@ -1413,14 +1499,8 @@
             strSearchStringFromURL: _,
           }),
           _ = (0, _._)(),
-          _ = () => _(_.current);
-        let _ = _.useCallback(
-          (_) => {
-            _(_.data);
-          },
-          [_],
-        );
-        const _ = (0, _._)(),
+          _ = () => _(_.current),
+          _ = (0, _._)(),
           _ = _.useCallback(
             (_, _) =>
               (0, _._)(
@@ -1431,148 +1511,93 @@
               ),
             [],
           );
-        ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-          console.log("Rendering grid", _);
-        const _ = (0, _.useMemo)(
-            () => _.filter((_) => (0, _._)(_.packageID)).length,
-            [_],
-          ),
-          _ = _.useMemo(
-            () => [
-              {
-                label: (0, _._)("#PricingDashboard_ShowOnlyReleasedPackages"),
-                data: "released",
-              },
-              {
-                label: (0, _._)("#PricingDashboard_ShowAllPackages"),
-                data: "all",
-              },
-              {
-                label: (0, _._)("#PricingDashboard_ShowOnlyUnreleasedPackages"),
-                data: "unreleased",
-              },
-              {
-                label: (0, _._)("#PricingDashboard_ShowOnlyChangedPackages"),
-                data: "changed",
-              },
-              {
-                label: (0, _._)("#PricingDashboard_ShowProposedChanges"),
-                data: "proposed",
-              },
-            ],
-            [],
-          );
-        return _.createElement(
-          _.Fragment,
-          null,
+        return (
+          ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+            console.log("Rendering grid", _),
           _.createElement(
-            "div",
-            {
-              className: _().GridHeaderButtons,
-            },
-            _.createElement(_._, {
-              rgOptions: _,
-              selectedOption: _,
-              strDropDownClassName: _().Test,
-              onChange: _,
-              contextMenuPositionOptions: {
-                bMatchWidth: !1,
-              },
+            _.Fragment,
+            null,
+            _.createElement(_, {
+              bCompactMode: __webpack_require__,
+              setCompactMode: _,
+              rgGridData: _,
+              strPackageFilter: _,
+              setPackageFilter: _,
+              bFilterToBelowMinPrice: _,
+              setFilterToBelowMinPrice: _,
             }),
-            Boolean(_ || _) &&
+            _.createElement(
+              "div",
+              {
+                className: _().PricingGridWrapper,
+              },
               _.createElement(
                 "div",
                 {
-                  className: (0, _._)(_().OptionCtn, _().PriceLowOption),
+                  className: (0, _._)(
+                    _().PricingGrid,
+                    __webpack_require__ && "CompactMode",
+                  ),
                 },
-                _.createElement(_._, {
-                  checked: _,
-                  onChange: _,
-                  label: (0, _._)("#PricingDashboard_FilterToLowPrice", _),
-                }),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().OptionCtn, _().CompactOption),
-              },
-              _.createElement(_._, {
-                checked: __webpack_require__,
-                onChange: _,
-                label: (0, _._)(
-                  "#PricingDashboard_ShowCompactModeCheckBoxLabel",
-                ),
-              }),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().PricingGridWrapper,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().PricingGrid,
-                  __webpack_require__ && "CompactMode",
-                ),
-              },
-              _.createElement(
-                _._,
-                null,
                 _.createElement(
                   _._,
-                  {
-                    fnBLocalChangesExist: _,
-                    fnWarnUser: _,
-                  },
-                  _.createElement(_._, {
-                    ref: _,
-                    className: _()(_().PricingGridTable, "noGlobalButtonStyle"),
-                    columns: _,
-                    data: _,
-                    getRowKey: (_, _) => _.packageID,
-                    stickyHeader: !0,
-                    nItemHeight: 43,
-                    nHeaderHeight: 63,
-                    overscan: 12,
-                    initialExpanded: !0,
-                    initialSorting: [
-                      {
-                        _: "appName",
-                        desc: !1,
-                      },
-                    ],
-                    initialColumnFilters: [
-                      {
-                        _: "packageName",
-                        value: _,
-                      },
-                    ],
-                    initialGrouping: ["appName"],
-                    initialColumnVisibility: {
-                      packageType: !1,
-                      appids: !1,
+                  null,
+                  _.createElement(
+                    _._,
+                    {
+                      fnBLocalChangesExist: _,
+                      fnWarnUser: _,
                     },
-                    initialColumnPinning: {
-                      left: [
-                        "packageID",
-                        "appName",
-                        "packageName",
-                        "proposalState",
-                        "USD",
+                    _.createElement(_._, {
+                      ref: _,
+                      className: _()(
+                        _().PricingGridTable,
+                        "noGlobalButtonStyle",
+                      ),
+                      columns: _,
+                      data: _,
+                      getRowKey: (_, _) => _.packageID,
+                      stickyHeader: !0,
+                      nItemHeight: 43,
+                      nHeaderHeight: 63,
+                      overscan: 12,
+                      initialExpanded: !0,
+                      initialSorting: [
+                        {
+                          _: "appName",
+                          desc: !1,
+                        },
                       ],
-                    },
-                    onGroupingChange: _,
-                    onVisibleRowsChange: _,
-                    renderGroup: _._,
-                  }),
+                      initialColumnFilters: [
+                        {
+                          _: "packageName",
+                          value: _,
+                        },
+                      ],
+                      initialGrouping: ["appName"],
+                      initialColumnVisibility: {
+                        packageType: !1,
+                        appids: !1,
+                      },
+                      initialColumnPinning: {
+                        left: [
+                          "packageID",
+                          "appName",
+                          "packageName",
+                          "proposalState",
+                          "USD",
+                        ],
+                      },
+                      onGroupingChange: _,
+                      onVisibleRowsChange: _,
+                      renderGroup: _._,
+                    }),
+                  ),
+                  _.createElement("br", null),
                 ),
-                _.createElement("br", null),
               ),
             ),
-          ),
+          )
         );
       });
       function _(_) {
@@ -2084,7 +2109,8 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = {
         PricingDashboard: () => "/dashboard/:publisherid(\\d*)",
       };
@@ -2094,28 +2120,32 @@
           null,
           _.createElement(
             _._,
-            {
-              basename: (0, _._)() + "pricing/",
-            },
+            null,
             _.createElement(
               _._,
-              null,
-              _.createElement(_._, {
-                exact: !0,
-                path: _._.DiagData(),
-                render: (_) =>
-                  _.createElement(_._, {
-                    ..._,
-                    strConfigID: "application_config",
-                  }),
-              }),
-              _.createElement(_._, {
-                path: _.PricingDashboard(),
-                render: (_) => _.createElement(_, null),
-              }),
-              _.createElement(_._, {
-                component: _._,
-              }),
+              {
+                basename: (0, _._)() + "pricing/",
+              },
+              _.createElement(
+                _._,
+                null,
+                _.createElement(_._, {
+                  exact: !0,
+                  path: _._.DiagData(),
+                  render: (_) =>
+                    _.createElement(_._, {
+                      ..._,
+                      strConfigID: "application_config",
+                    }),
+                }),
+                _.createElement(_._, {
+                  path: _.PricingDashboard(),
+                  render: (_) => _.createElement(_, null),
+                }),
+                _.createElement(_._, {
+                  component: _._,
+                }),
+              ),
             ),
           ),
         );

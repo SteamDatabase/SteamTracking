@@ -2539,50 +2539,6 @@ enum UnnamedEnum57bf92e3de997183
 	MID = 4;
 }
 
-enum UnnamedEnum58ce59ee5ea1de37
-{
-	k_Custom = 0;
-	k_AssetKit = 1;
-	k_DemoPressPreview = 2;
-	k_ScheduleLiveStream = 3;
-	k_CancelSection = 4;
-	k_DemoNotReady = 5;
-	k_ReviewCategorization = 6;
-	k_DemoReview = 7;
-	k_PressPreviewDetails = 8;
-	k_StatsSummary = 9;
-	k_SurveyButton = 10;
-	k_DemoLaunch = 11;
-	k_CallForRegistration = 12;
-	k_EnterDiscount = 13;
-	k_EnterDiscountReminder = 14;
-	k_LearnMore = 15;
-	k_MediaUsePermission = 16;
-	k_MeasureResults = 17;
-	k_TrailerOrDemoPermissions = 18;
-	k_NextFestQASession = 19;
-	k_NextFestReturns = 20;
-	k_NextFestWhatNext = 21;
-	k_NextFestTips = 22;
-	k_NextFestStartsNow = 23;
-	k_MeasureResultsFree = 24;
-	k_NextFestThankYou = 25;
-	k_MediaPermissionReminder = 26;
-	k_SaleThankYou = 27;
-	k_NextFestMediaUsageIntended = 28;
-	k_GenericActionLink = 29;
-	k_SteamAwardsCategories = 30;
-	k_NextFestMediaUsageIntendedTrailer = 31;
-	k_NextFestMediaUsageIntendedLivestream = 32;
-	k_NextFestTopGameWrapUp = 33;
-	k_ImageBoxSection = 34;
-	k_MeasureResultsNextFest = 35;
-	k_SeasonalFeatureRequest = 36;
-	k_SeasonalFeatureDiscount = 37;
-	k_GenericActionButton = 38;
-	k_NextFestRegisteredWhatNext = 39;
-}
-
 enum UnnamedEnum59717e0405bef96b
 {
 	VALID = 0;
@@ -2878,6 +2834,16 @@ enum UnnamedEnum80fde622b7ffb8a2
 {
 	Timeline = 1;
 	Minimap = 2;
+}
+
+enum UnnamedEnum814cba7b873843ae
+{
+	SELECTING = 0;
+	CONFIRM = 1;
+	SUBMITTING = 2;
+	DONE = 3;
+	ERROR = 4;
+	LOADING_ERROR = 5;
 }
 
 enum UnnamedEnum832449b80e67603d
@@ -3458,6 +3424,51 @@ enum UnnamedEnum9c19a486ce41ad6d
 	SHUTDOWN = 1;
 }
 
+enum UnnamedEnum9d7ad1fa316f69ce
+{
+	k_Custom = 0;
+	k_AssetKit = 1;
+	k_DemoPressPreview = 2;
+	k_ScheduleLiveStream = 3;
+	k_CancelSection = 4;
+	k_DemoNotReady = 5;
+	k_ReviewCategorization = 6;
+	k_DemoReview = 7;
+	k_PressPreviewDetails = 8;
+	k_StatsSummary = 9;
+	k_SurveyButton = 10;
+	k_DemoLaunch = 11;
+	k_CallForRegistration = 12;
+	k_EnterDiscount = 13;
+	k_EnterDiscountReminder = 14;
+	k_LearnMore = 15;
+	k_MediaUsePermission = 16;
+	k_MeasureResults = 17;
+	k_TrailerOrDemoPermissions = 18;
+	k_NextFestQASession = 19;
+	k_NextFestReturns = 20;
+	k_NextFestWhatNext = 21;
+	k_NextFestTips = 22;
+	k_NextFestStartsNow = 23;
+	k_MeasureResultsFree = 24;
+	k_NextFestThankYou = 25;
+	k_MediaPermissionReminder = 26;
+	k_SaleThankYou = 27;
+	k_NextFestMediaUsageIntended = 28;
+	k_GenericActionLink = 29;
+	k_SteamAwardsCategories = 30;
+	k_NextFestMediaUsageIntendedTrailer = 31;
+	k_NextFestMediaUsageIntendedLivestream = 32;
+	k_NextFestTopGameWrapUp = 33;
+	k_ImageBoxSection = 34;
+	k_MeasureResultsNextFest = 35;
+	k_SeasonalFeatureRequest = 36;
+	k_SeasonalFeatureDiscount = 37;
+	k_GenericActionButton = 38;
+	k_NextFestRegisteredWhatNext = 39;
+	k_NextFestMediaUsageConfirmationTrailer = 40;
+}
+
 enum UnnamedEnum9d93397a59dbdedb
 {
 	Hidden = 0;
@@ -3565,6 +3576,22 @@ enum UnnamedEnumac9ccfed4f769533
 	k_Suggested = 1;
 	k_Required = 2;
 	k_Requested = 3;
+}
+
+enum UnnamedEnumad5f244ec47c479c
+{
+	k_RegistrationConfirmation = 0;
+	k_Reminder = 1;
+	k_Invite = 2;
+	k_Followup = 3;
+	k_Starting = 4;
+	k_InviteReminder = 5;
+	k_Update = 6;
+	k_PermissionRequest = 7;
+	k_MediaUsageNotification = 8;
+	k_GeneralCommunication = 9;
+	k_SteamAwardFinalists = 10;
+	k_MediaUsageConfirmation = 11;
 }
 
 enum UnnamedEnumad989ac806e57514
@@ -4293,21 +4320,6 @@ enum UnnamedEnumf126cd872c06e76e
 	jsondata_broadcast = 256;
 	jsondata_sales = 512;
 	jsondata_schedule = 1024;
-}
-
-enum UnnamedEnumf148f58a11f3d661
-{
-	k_RegistrationConfirmation = 0;
-	k_Reminder = 1;
-	k_Invite = 2;
-	k_Followup = 3;
-	k_Starting = 4;
-	k_InviteReminder = 5;
-	k_Update = 6;
-	k_PermissionRequest = 7;
-	k_MediaUsageNotification = 8;
-	k_GeneralCommunication = 9;
-	k_SteamAwardFinalists = 10;
 }
 
 enum UnnamedEnumf26944e1770e4a69

@@ -1246,6 +1246,8 @@ ${STORE_BASE_URL}about/
 ${STORE_BASE_URL}account
 ${STORE_BASE_URL}account/
 ${STORE_BASE_URL}account/ajaxgetcontrollersused
+${STORE_BASE_URL}account/ajaxhardwaredelete
+${STORE_BASE_URL}account/ajaxhardwarerename
 ${STORE_BASE_URL}account/ajaxsetcookiepreferences
 ${STORE_BASE_URL}account/ajaxsetnotificationsettings
 ${STORE_BASE_URL}account/cookiepreferences
@@ -1265,6 +1267,7 @@ ${STORE_BASE_URL}account/preferences
 ${STORE_BASE_URL}account/preferences#CommunityContentPreferences
 ${STORE_BASE_URL}account/preferences/
 ${STORE_BASE_URL}account/preferences/#store_broadcast_settings
+${STORE_BASE_URL}account/savepreferences
 ${STORE_BASE_URL}account/subscriptions/
 ${STORE_BASE_URL}actions/ajaxgetdiscounts
 ${STORE_BASE_URL}actions/ajaxgetdynamicsaleitems
@@ -2449,6 +2452,7 @@ https://partner.steamgames.com/doc/${url_slug}?beta=1&language=${}
 https://partner.steamgames.com/doc/${url_slug}?beta=1&language=${}&version=${}
 https://partner.steamgames.com/doc/${url_slug}?language=${}
 https://partner.steamgames.com/doc/marketing/event_tools
+https://partner.steamgames.com/doc/marketing/event_tools/creatorhome/tools
 https://partner.steamgames.com/doc/marketing/event_tools/event_examples
 https://partner.steamgames.com/doc/marketing/event_tools/import
 https://partner.steamgames.com/doc/marketing/event_tools/sales/tools

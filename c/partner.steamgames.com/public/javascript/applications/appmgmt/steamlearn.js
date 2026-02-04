@@ -5066,6 +5066,11 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  is_set: {
+                    _: 10,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -33361,6 +33366,28 @@
                       : (0, _._)("#SteamLearn_No"),
                   ),
                 ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_TokenTransformer_Set"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.token_transformer().is_set()
+                      ? (0, _._)("#SteamLearn_Yes")
+                      : (0, _._)("#SteamLearn_No"),
+                  ),
+                ),
               ),
             ),
             _.map((_, _) => {
@@ -33424,7 +33451,8 @@
                 .transformer_dropout_pct()
                 .toString() || "30",
             ),
-            [_, _] = _.useState(_.msgNode.token_transformer().is_causal());
+            [_, _] = _.useState(_.msgNode.token_transformer().is_causal()),
+            [_, _] = _.useState(_.msgNode.token_transformer()?.is_set() ?? !1);
           _.useEffect(() => {
             _(_.msgNode.comment()),
               _(
@@ -33443,7 +33471,8 @@
                   .transformer_dropout_pct()
                   .toString(),
               ),
-              _(_.msgNode.token_transformer().is_causal());
+              _(_.msgNode.token_transformer().is_causal()),
+              _(_.msgNode.token_transformer()?.is_set() ?? !1);
           }, [_]);
           return _.createElement(
             _._,
@@ -33775,6 +33804,48 @@
               _.createElement("div", {
                 className: _.Separator,
               }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_TokenTransformer_Set"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_TokenTransformer_SetDesc"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CheckboxWithLabel,
+                  },
+                  _.createElement("input", {
+                    type: "checkbox",
+                    _: "editset",
+                    checked: _,
+                    onChange: () => _(!_),
+                  }),
+                  _.createElement(
+                    "label",
+                    {
+                      htmlFor: "editset",
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_TokenTransformer_Set"),
+                  ),
+                ),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
             ),
             _.createElement(
               "div",
@@ -33816,6 +33887,7 @@
                         .token_transformer()
                         .set_transformer_dropout_pct(parseInt(_)),
                       _.msgNode.token_transformer().set_is_causal(_),
+                      _.msgNode.token_transformer().set_is_set(_),
                       _.msgNode.set_comment(__webpack_require__),
                       _(_),
                       _.fnSetPopupVisible(!1);

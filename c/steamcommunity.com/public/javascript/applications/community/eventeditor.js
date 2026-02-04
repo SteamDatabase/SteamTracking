@@ -5795,6 +5795,11 @@
           } = _,
           _ = (0, _._)(() => __webpack_require__ && (0, _._)(_));
         if (_ && !(0, _._)(_, _)) return null;
+        const _ = __webpack_require__
+          ? (_) => {
+              (0, _._)(_), _.preventDefault(), _.stopPropagation();
+            }
+          : void 0;
         return _.createElement(
           _,
           {
@@ -5812,13 +5817,8 @@
             _.createElement(
               "div",
               {
-                className: _.Title,
-                onDoubleClick: (_) => {
-                  (0, _._)(_), _.preventDefault(), _.stopPropagation();
-                },
-                onMouseDown: (_) => {
-                  _.detail > 1 && _.preventDefault();
-                },
+                className: (0, _._)(_.Title, __webpack_require__ && _.HasHover),
+                onClick: _,
               },
               _,
               _ &&
@@ -12305,9 +12305,47 @@
               className: _.ExplanationCtn,
             },
             _.createElement(
-              "div",
+              "h2",
               null,
-              (0, _._)("#EventEditor_Event_CreatorHome_Explanation"),
+              (0, _._)("#EventEditor_CreatorHome_Intro_Welcome"),
+            ),
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#EventEditor_CreatorHome_Intro_Desc1",
+                _.createElement("strong", null),
+              ),
+            ),
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#EventEditor_CreatorHome_Intro_Desc2",
+                _.createElement("strong", null),
+                _.createElement("a", {
+                  href: "https://partner.steamgames.com/doc/store/creator_homepage",
+                }),
+              ),
+            ),
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#EventEditor_CreatorHome_Intro_Desc3",
+                _.createElement("strong", null),
+              ),
+            ),
+            _.createElement(
+              "p",
+              null,
+              _.createElement(
+                "a",
+                {
+                  href: "https://partner.steamgames.com/doc/marketing/event_tools/creatorhome/tools",
+                },
+                (0, _._)("#EventEditor_CreatorHome_Intro_Documentation"),
+              ),
             ),
           ),
         );

@@ -11,6 +11,7 @@
 
 .giftcard_content {
     font-family: "Motiva Sans", Sans-serif;
+    padding-top: 24px;
 }
 
 .giftcard_title {
@@ -23,13 +24,13 @@
 .giftcard_available {
     text-align: center;
     font-size: 20px;
-    font-weight: bolder;
-    color: rgba(255,255,255,0.75);
+    font-weight: 600;
+    color: #C6D4DF;
     margin-bottom: 20px;
 }
 
 .giftcard_howwork {
-    width: 580px;
+    max-width: 580px;
     text-align: center;
     font-size: 16px;
     color: #C6D4DF;
@@ -40,7 +41,12 @@
 .giftcard_home_cont {
     border-radius: 10px;
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.35);
-    padding: 10px;
+    padding: 10px 20px 10px 0;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .giftcard_home_cont_digital {
@@ -66,7 +72,7 @@
 .giftcard_subtitle_inner {
     font-weight: bolder;
     font-size: 24px;
-    color: #FFFFFF;
+    color: #C6D4DF;
 }
 
 .giftcard_text_inner {
@@ -75,12 +81,14 @@
 }
 
 .giftcard_subtext_inner {
-    font-size: 14px;
+    font-size: 12px;
     color: rgba(198,212,223,0.5);
+    padding-top: 6px;
 }
 
 .giftcard_buttons {
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .giftcard_addfunds_link {
@@ -178,17 +186,12 @@
 .block_content {
     border: 1px solid #28394d;
     border-radius: 2px;
-
 }
 
 .block_content_inner
 {
     padding: 4px 4px 4px 4px;
     overflow: hidden;
-}
-
-.block.accountInfoBlock {
-    margin-bottom: 20px;
 }
 
 .accountInfoBlock .addfunds_accountBalance {
@@ -323,12 +326,11 @@
 
 .giftcard_inner_leftcol {
     float:left;
-    width: 30%;
+    width: 28%;
 }
 
 .giftcard_inner_rightcol {
     float:right;
-    margin-top: 30px;
     width: 70%;
 }
 
@@ -343,6 +345,49 @@
     max-width: 466px;
 }
 
+@media screen and (max-width: 540px) {
+
+    html.responsive .giftcard_home_cont {
+        padding: 20px;
+    }
+
+    html.responsive .giftcard_available {
+        font-size: 16px;
+    }
+
+   html.responsive .giftcard_howwork {
+        max-width: 90%;
+        font-size: 14px;
+    }
+
+    html.responsive .giftcard_subtitle_inner {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    html.responsive .giftcard_inner_leftcol {
+        display: none;
+    }
+
+    html.responsive .giftcard_inner_rightcol {
+        margin-top: 0px;
+    }
+
+    html.responsive .giftcard_buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    html.responsive .giftcard_addfunds_link {
+        margin-left: unset;
+    }
+
+    html.responsive .giftcard_buttons {
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 800px)
 {
     html.responsive .giftcard_leftcol {
@@ -353,6 +398,8 @@
     html.responsive .giftcard_rightcol {
         max-width: none;
         margin-left: 0;
+        margin-top: 0px;
+        display: none;
     }
 
     html.responsive .giftcard_home_image {
@@ -369,13 +416,14 @@
 
     html.responsive .giftcard_inner_rightcol {
         width: 100%;
+        margin-top: 0px;
     }
 
     html.responsive .giftcard_inner_leftcol {
-        position: absolute;
+        display: none;
     }
 
     html.responsive .giftcard_home_cont {
-        position:relative;
+        padding: 20px;
     }
 }

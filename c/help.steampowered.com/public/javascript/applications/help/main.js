@@ -809,6 +809,7 @@
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
         SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
         SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
+        JumpToButtonCtn: "_19bDhRwBW1auKJVn5jamrh",
         JumpToButton: "c4K67QJ5cG4Zr1eb4H_Fu",
         QACtn: "_337X4KlsU9k5t9s423wb_I",
         SaleSectionSubtitle: "_2rIaWN5LbF3muB3D2A-q5k",
@@ -5882,9 +5883,7 @@
           (function (_) {
             const _ = new _._();
             _.bUsePartnerAPI || _.set_country_code(_.country);
-            _.set_language(_.language),
-              _.realm != _._.k_ESteamRealmUnknown && _.set_steam_realm(_.realm);
-            return _;
+            return _.set_language(_.language), _;
           })(_),
         );
       }
@@ -6185,15 +6184,14 @@
             [_, _],
           ),
           _ = _ || _,
-          { country: _, language: _, realm: _, bUsePartnerAPI: _ } = _,
+          { country: _, language: _, bUsePartnerAPI: _ } = _,
           _ = _.useMemo(
             () => ({
               country: _,
               language: _,
-              realm: _,
               bUsePartnerAPI: _,
             }),
-            [_, _, _, _],
+            [_, _, _],
           ),
           _ = _.useMemo(() => {
             const _ = __webpack_require__
@@ -6244,7 +6242,6 @@
             () => ({
               country: _._.COUNTRY,
               language: _._.LANGUAGE,
-              realm: _._.EREALM,
             }),
             [],
           );
@@ -12553,6 +12550,7 @@
             onMiddleButton: _,
             bAlertDialog: _,
             bProgressDialog: _,
+            focusButton: _,
             children: _,
             ..._
           } = _,
@@ -12563,6 +12561,7 @@
           strOKText: _,
           onCancel: _(_.onCancel),
           strCancelText: _,
+          focusButton: _,
         });
         _
           ? (_ = void 0)
@@ -36357,6 +36356,7 @@
         bActiveTree: !1,
         bActiveTreeWithinContext: !1,
         bDisableFocusClasses: !1,
+        bIsMounted: !1,
       });
       function _(_) {
         const {
@@ -36365,7 +36365,8 @@
             children: _,
           } = _,
           [_, _] = _.useState(_?.BIsActive() || !1),
-          [_, _] = _.useState(_?.BIsActiveWithinContext() || !1);
+          [_, _] = _.useState(_?.BIsActiveWithinContext() || !1),
+          _ = (0, _._)(_?.SubscribableIsMounted) ?? !1;
         _.useEffect(
           () =>
             _
@@ -36382,8 +36383,9 @@
             bActiveTree: _,
             bActiveTreeWithinContext: _,
             bDisableFocusClasses: __webpack_require__,
+            bIsMounted: _,
           }),
-          [_, __webpack_require__, _],
+          [_, __webpack_require__, _, _],
         );
         return _.createElement(
           _.Provider,
@@ -36684,9 +36686,10 @@
               bActiveTree: _,
               bActiveTreeWithinContext: _,
               bDisableFocusClasses: _,
+              bIsMounted: _,
             } = (0, _._)(),
             _ = _ && !_,
-            _ = !_ && (void 0 !== _ || _);
+            _ = _ && !_ && (void 0 !== _ || _);
           return _.createElement(
             _,
             {
@@ -57194,6 +57197,16 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  release_from_early_access_date: {
+                    _: 11,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  release_from_early_access_style: {
+                    _: 12,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                   is_coming_soon: {
                     _: 4,
                     _: _._.readBool,
@@ -58597,11 +58610,6 @@
                     _: 3,
                     _: _._.readString,
                     _: _._.writeString,
-                  },
-                  steam_realm: {
-                    _: 4,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
                   },
                 },
               }),
@@ -71591,7 +71599,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       function _(_, _) {
@@ -71600,11 +71607,7 @@
       function _(_) {
         let _ = new _._();
         return (
-          _ || _.set_country_code(_._.COUNTRY),
-          _.set_language(_._.LANGUAGE),
-          _._.EREALM != _._.k_ESteamRealmUnknown &&
-            _.set_steam_realm(_._.EREALM),
-          _
+          _ || _.set_country_code(_._.COUNTRY), _.set_language(_._.LANGUAGE), _
         );
       }
       function _(_, _) {

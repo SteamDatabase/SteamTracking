@@ -562,10 +562,10 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
-                  on_market: {
-                    _: 36,
-                    _: _._.readBool,
-                    _: _._.writeBool,
+                  sealed_type: {
+                    _: 37,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),

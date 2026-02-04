@@ -4528,6 +4528,7 @@
                     bw: u.gp.writeString,
                   },
                   is_causal: { n: 9, br: u.qM.readBool, bw: u.gp.writeBool },
+                  is_set: { n: 10, br: u.qM.readBool, bw: u.gp.writeBool },
                 },
               }),
             be.sm_m
@@ -28661,6 +28662,22 @@
                       : (0, l.we)("#SteamLearn_No"),
                   ),
                 ),
+                i.createElement(
+                  "div",
+                  { className: Qn.LabelValue },
+                  i.createElement(
+                    "div",
+                    { className: Qn.Label },
+                    (0, l.we)("#SteamLearn_Config_Node_TokenTransformer_Set"),
+                  ),
+                  i.createElement(
+                    "div",
+                    { className: Qn.Value },
+                    n.token_transformer().is_set()
+                      ? (0, l.we)("#SteamLearn_Yes")
+                      : (0, l.we)("#SteamLearn_No"),
+                  ),
+                ),
               ),
             ),
             o.map((e, t) => {
@@ -28720,7 +28737,8 @@
                 .transformer_dropout_pct()
                 .toString() || "30",
             ),
-            [w, v] = i.useState(e.msgNode.token_transformer().is_causal());
+            [w, v] = i.useState(e.msgNode.token_transformer().is_causal()),
+            [E, B] = i.useState(e.msgNode.token_transformer()?.is_set() ?? !1);
           i.useEffect(() => {
             r(e.msgNode.comment()),
               s(
@@ -28739,7 +28757,8 @@
                   .transformer_dropout_pct()
                   .toString(),
               ),
-              v(e.msgNode.token_transformer().is_causal());
+              v(e.msgNode.token_transformer().is_causal()),
+              B(e.msgNode.token_transformer()?.is_set() ?? !1);
           }, [e]);
           return i.createElement(
             cn.mt,
@@ -29001,6 +29020,36 @@
                 ),
               ),
               i.createElement("div", { className: Qn.Separator }),
+              i.createElement(
+                "div",
+                { className: Qn.NodeOptionBlock },
+                i.createElement(
+                  "div",
+                  { className: Qn.NodeOptionHeader },
+                  (0, l.we)("#SteamLearn_Config_Node_TokenTransformer_Set"),
+                ),
+                i.createElement(
+                  "div",
+                  { className: Qn.NodeOptionDesc },
+                  (0, l.we)("#SteamLearn_Config_Node_TokenTransformer_SetDesc"),
+                ),
+                i.createElement(
+                  "div",
+                  { className: Qn.CheckboxWithLabel },
+                  i.createElement("input", {
+                    type: "checkbox",
+                    id: "editset",
+                    checked: E,
+                    onChange: () => B(!E),
+                  }),
+                  i.createElement(
+                    "label",
+                    { htmlFor: "editset" },
+                    (0, l.we)("#SteamLearn_Config_Node_TokenTransformer_Set"),
+                  ),
+                ),
+              ),
+              i.createElement("div", { className: Qn.Separator }),
             ),
             i.createElement(
               "div",
@@ -29040,6 +29089,7 @@
                         .token_transformer()
                         .set_transformer_dropout_pct(parseInt(N)),
                       e.msgNode.token_transformer().set_is_causal(w),
+                      e.msgNode.token_transformer().set_is_set(E),
                       e.msgNode.set_comment(a),
                       qr(t),
                       e.fnSetPopupVisible(!1);

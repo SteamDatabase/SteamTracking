@@ -45070,10 +45070,10 @@ var CLSTAMP = "steamdb";
                     _: _._.readString,
                     _: _._.writeString,
                   },
-                  on_market: {
-                    _: 36,
-                    _: _._.readBool,
-                    _: _._.writeBool,
+                  sealed_type: {
+                    _: 37,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -80336,6 +80336,16 @@ var CLSTAMP = "steamdb";
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  release_from_early_access_date: {
+                    _: 11,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  release_from_early_access_style: {
+                    _: 12,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                   is_coming_soon: {
                     _: 4,
                     _: _._.readBool,
@@ -81739,11 +81749,6 @@ var CLSTAMP = "steamdb";
                     _: 3,
                     _: _._.readString,
                     _: _._.writeString,
-                  },
-                  steam_realm: {
-                    _: 4,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
                   },
                 },
               }),

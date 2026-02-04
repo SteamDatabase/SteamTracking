@@ -409,6 +409,7 @@
         ValveOnlySettingsCtn: "_1BYwQZp6shKNH0VRbfMpSK",
         Title: "_11Euz25nnnBcr_xnv98CCB",
         SettingCtn: "_32UTRO0ud-qo-tcbUAeBHU",
+        HasHover: "_2geQJT3hw8RUY-b7M1tU7R",
         Columns: "_1uTkjwnWPXF_R8vXGwy_dv",
         LeftCol: "_3CdECK4uuvdzqmWlb3GpJC",
         RightCol: "ly_n82GOycBlJCw0VxsT3",
@@ -21021,7 +21022,7 @@
           _.createElement(
             "p",
             null,
-            (0, _._)("#Sale_ImageBuilder_description"),
+            (0, _._)("#Sale_ImageBuilder_description", "1200px"),
           ),
           _.createElement(_._, {
             items: _,
@@ -28742,6 +28743,33 @@
                 }),
                 onAnimationEnd: () => _(!1),
               },
+              _ &&
+                _ &&
+                !__webpack_require__.hide_section &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.JumpToButtonCtn,
+                  },
+                  _.createElement(
+                    _._,
+                    {
+                      toolTipContent: (0, _._)(
+                        "#Sale_Debug_LivePreview_GoTo_ttip",
+                      ),
+                    },
+                    _.createElement(
+                      "button",
+                      {
+                        className: _.JumpToButton,
+                        onClick: (_) => {
+                          _(), _.stopPropagation();
+                        },
+                      },
+                      (0, _._)("#Sale_Debug_LivePreview_GoTo"),
+                    ),
+                  ),
+                ),
               _.createElement("div", {
                 className: (0, _._)(
                   _.BackgroundImage,
@@ -28792,27 +28820,6 @@
                       visible: !_,
                     }),
                   ),
-                  _ &&
-                    _ &&
-                    !__webpack_require__.hide_section &&
-                    _.createElement(
-                      _._,
-                      {
-                        toolTipContent: (0, _._)(
-                          "#Sale_Debug_LivePreview_GoTo_ttip",
-                        ),
-                      },
-                      _.createElement(
-                        "button",
-                        {
-                          className: _.JumpToButton,
-                          onClick: (_) => {
-                            _(), _.stopPropagation();
-                          },
-                        },
-                        (0, _._)("#Sale_Debug_LivePreview_GoTo"),
-                      ),
-                    ),
                 ),
                 _.createElement(_._, {
                   editModel: _,
@@ -29247,7 +29254,9 @@
               {
                 label: (0, _._)("#Sale_Links"),
                 data: "links",
-                tooltip: (0, _._)("#Sale_Links_ttip"),
+                tooltip: (0, _._)(
+                  _ ? "#Sale_Links_noURL_ttip" : "#Sale_Links_ttip",
+                ),
               },
               {
                 label: (0, _._)("#Sale_DiscoveryQueue"),
@@ -29423,35 +29432,38 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -31575,6 +31587,18 @@
           menuPlacement: "bottom",
         });
       }
+      function _(_) {
+        const { editModel: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(
+            (0, _._)(_.GetCurEditLanguage()),
+          ),
+          _ = (0, _._)();
+        return _.createElement(_, {
+          ..._,
+          mapLocalizedTags: __webpack_require__,
+          fnUpdateDefaultTagsForItems: _,
+        });
+      }
       (0, _._)([_._], _.prototype, "OnApplyFilter", null),
         (0, _._)([_._], _.prototype, "OnPopulateFromFilter", null),
         (0, _._)([_._], _.prototype, "RemoveTag", null),
@@ -31585,15 +31609,36 @@
         (_ = (0, _._)([_._], _));
       class _ extends _.Component {
         constructor() {
-          super(...arguments), (this.state = this.GenerateInitialState());
+          super(...arguments),
+            (this.state = this.GenerateInitialState()),
+            (this.m_abort = new AbortController());
         }
-        componentDidMount() {
-          _(this.props.editModel, _._.k_ETaggedItems) ||
-            this.LoadDropdownOptions().then((_) => {
-              this.setState({
-                tagDropdownOptions: _,
-                bDropdownOptionsLoaded: !0,
-              });
+        async componentDidMount() {
+          if (!_(this.props.editModel, _._.k_ETaggedItems)) {
+            const _ = await this.LoadDropdownOptions();
+            if (this.m_abort.signal.aborted) return;
+            this.setState({
+              tagDropdownOptions: _,
+              bDropdownOptionsLoaded: !0,
+            });
+          }
+          const _ = await this.ComputeFilterItemsSource();
+          this.m_abort.signal.aborted ||
+            this.setState({
+              filteredItemsSource: _,
+              bInitialFilteredItemsSourceLoadComplete: !0,
+            });
+        }
+        componentWillUnmount() {
+          this.m_abort.abort();
+        }
+        componentDidUpdate(_, _) {
+          _.filteredItemsSource != this.state.filteredItemsSource &&
+            this.setState({
+              ...this.CalculateItemsAndTags(
+                this.state.currentFilter,
+                this.state.startingUnreferencedItems,
+              ),
             });
         }
         async LoadDropdownOptions() {
@@ -31672,13 +31717,49 @@
             showMode: "active",
             strSearch: "",
             startingUnreferencedItems: _,
-            ...this.CalcualateItemsAndTags(_, _),
+            ...this.CalculateItemsAndTags(_, _),
           };
         }
-        GetFilteredItems() {
+        async ComputeFilterItemsSource() {
+          if (36 == this.props.editModel.GetEventType()) {
+            const _ = await _._.fetchQuery(
+              (0, _._)(this.props.editModel.GetClanAccountID()),
+            );
+            if (!_) return [];
+            await _._.Get().QueueMultipleAppRequests(_.GetAppIDList(), {
+              include_basic_info: !0,
+            });
+            const _ = _.GetAppIDList().map((_) => {
+              const _ = _._.Get().GetApp(_);
+              return {
+                capsule: {
+                  _: _,
+                  type: (0, _._)(_.GetStoreItemType(), _.GetAppType()),
+                },
+                tags: [],
+              };
+            });
+            return (
+              await this.props.fnUpdateDefaultTagsForItems(
+                this.props.editModel,
+                _,
+              ),
+              _
+            );
+          }
           return this.props.ignoreEventFilter
             ? this.props.editModel.GetEventModel().GetTaggedItems()
             : (0, _._)(this.props.editModel);
+        }
+        GetFilteredItems() {
+          var _, _;
+          return null !==
+            (_ =
+              null === (_ = this.state) || void 0 === _
+                ? void 0
+                : _.filteredItemsSource) && void 0 !== _
+            ? _
+            : [];
         }
         GenerateStartingUnreferencedItems() {
           const { editModel: _ } = this.props,
@@ -31694,12 +31775,11 @@
               for (const _ of _.capsules) _.delete(_.type + _._);
           return Array.from(_.values());
         }
-        CalcualateItemsAndTags(_, _) {
-          const { editModel: __webpack_require__ } = this.props,
-            _ = this.GetFilteredItems(),
+        CalculateItemsAndTags(_, _) {
+          const _ = this.GetFilteredItems(),
             _ = (0, _._)(_, _),
             _ = new Set(_),
-            _ = _.filter((_) => !_.has(_)),
+            _ = __webpack_require__.filter((_) => !_.has(_)),
             _ = _.filter((_) => !_.has(_));
           return {
             activeItems: _,
@@ -31983,7 +32063,7 @@
           _(_),
             this.setState({
               currentFilter: _,
-              ...this.CalcualateItemsAndTags(
+              ...this.CalculateItemsAndTags(
                 _,
                 this.state.startingUnreferencedItems,
               ),
@@ -32031,7 +32111,7 @@
           const _ = this.GenerateStartingUnreferencedItems();
           this.setState({
             startingUnreferencedItems: _,
-            ...this.CalcualateItemsAndTags(this.state.currentFilter, _),
+            ...this.CalculateItemsAndTags(this.state.currentFilter, _),
           });
         }
         UpdateSearchText(_) {
@@ -32168,6 +32248,7 @@
                     _.createElement(_._, {
                       rgOptions: _,
                       selectedOption: _,
+                      controlled: !0,
                       onChange: (_) => this.OnSetViewMode(_.data),
                     }),
                   ),
@@ -32207,13 +32288,16 @@
                     {
                       className: _.MatchingItemsCtn,
                     },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ItemList,
-                      },
-                      _,
-                    ),
+                    !this.state.bInitialFilteredItemsSourceLoadComplete &&
+                      _.createElement(_._, null),
+                    this.state.bInitialFilteredItemsSourceLoadComplete &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _.ItemList,
+                        },
+                        _,
+                      ),
                   ),
                   this.RenderTagBreakdown(_.length, _),
                 ),
@@ -32243,6 +32327,7 @@
         }
       }
       function _(_, _) {
+        if (36 == _.GetEventType()) return _ == _._.k_EContentHub;
         const _ = _.GetEventModel().jsondata.item_source_type;
         return (_ === _._.k_ETaggedItems && null == _) || _ === _;
       }

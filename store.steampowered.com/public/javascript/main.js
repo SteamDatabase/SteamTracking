@@ -2297,7 +2297,7 @@ function PreloadImages( elElement )
 var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnClickThumb, bNoWrap )
 {
 	this.$elContainer = $elContainer;
-	this.nSpeed = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? undefined : nSpeed;
+	this.nSpeed = nSpeed;
 	this.fnOnFocus = fnOnFocus;
 	this.fnOnBlur = fnOnBlur;
 	this.fnClickThumb = fnClickThumb;
@@ -2536,8 +2536,8 @@ CGenericCarousel.prototype.Advance = function( nNewIndex, bApplyFocus )
 		return;
 
 	this.fnOnBlur( this.nIndex );
-	this.fnOnFocus( nNextIndex );
 	this.nIndex = nNextIndex;
+	this.fnOnFocus( nNextIndex );
 
 	if ( bApplyFocus && typeof GPNavFocusChild !== 'undefined' )
 		GPNavFocusChild( this.$elItems[this.nIndex] );

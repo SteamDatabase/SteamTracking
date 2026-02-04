@@ -98,6 +98,7 @@
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
         SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
         SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
+        JumpToButtonCtn: "_19bDhRwBW1auKJVn5jamrh",
         JumpToButton: "c4K67QJ5cG4Zr1eb4H_Fu",
         QACtn: "_337X4KlsU9k5t9s423wb_I",
         SaleSectionSubtitle: "_2rIaWN5LbF3muB3D2A-q5k",
@@ -160,8 +161,8 @@
             include_tag_count: g,
             include_reviews: b,
             include_basic_info: C,
-            include_supported_languages: I,
-            include_full_description: h,
+            include_supported_languages: h,
+            include_full_description: I,
             include_included_items: B,
             include_assets_without_overrides: T,
             apply_user_filters: A,
@@ -180,8 +181,8 @@
               include_tag_count: g,
               include_reviews: b,
               include_basic_info: C,
-              include_supported_languages: I,
-              include_full_description: h,
+              include_supported_languages: h,
+              include_full_description: I,
               include_included_items: B,
               include_assets_without_overrides: T,
               apply_user_filters: A,
@@ -202,7 +203,7 @@
                   })),
               () => l?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, _, m, p, E, v, f, S, k, g, b, C, I, h, B, T, A, w, u]),
+          }, [e, t, r, _, m, p, E, v, f, S, k, g, b, C, h, I, B, T, A, w, u]),
           !e)
         )
           return [null, 2];
@@ -248,8 +249,8 @@
             include_full_description: g,
             include_included_items: b,
             include_assets_without_overrides: C,
-            apply_user_filters: I,
-            include_links: h,
+            apply_user_filters: h,
+            include_links: I,
           } = n;
         if (
           ((0, l.useEffect)(() => {
@@ -269,8 +270,8 @@
                 include_full_description: g,
                 include_included_items: b,
                 include_assets_without_overrides: C,
-                apply_user_filters: I,
-                include_links: h,
+                apply_user_filters: h,
+                include_links: I,
               },
               r = e.filter(
                 (e) =>
@@ -288,7 +289,7 @@
               }),
               () => l.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, s, o, u, _, d, m, p, E, v, f, S, k, g, b, C, I, h]),
+          }, [e, t, r, s, o, u, _, d, m, p, E, v, f, S, k, g, b, C, h, I]),
           !e)
         )
           return 2;
@@ -474,7 +475,7 @@
                     key: "app_social_link_" + t + "_" + e.link_type,
                     social: e,
                   })
-                : r.createElement(I, {
+                : r.createElement(h, {
                     key:
                       "app_social_text_" + t + "_" + e.link_type + "_" + e.text,
                     social: e,
@@ -495,12 +496,12 @@
               r.createElement(
                 m.he,
                 { toolTipContent: t.url },
-                r.createElement(h, { social: t }),
+                r.createElement(I, { social: t }),
               ),
             )
           : null;
       }
-      function I(e) {
+      function h(e) {
         const { social: t } = e;
         return r.createElement(
           "div",
@@ -508,12 +509,12 @@
           r.createElement(
             m.he,
             { toolTipContent: t.text },
-            r.createElement(h, { social: t }),
+            r.createElement(I, { social: t }),
           ),
           r.createElement("div", { className: E().AppSocialText }, t.text),
         );
       }
-      function h(e) {
+      function I(e) {
         const { social: t } = e;
         return r.createElement(B, {
           linkType: t.link_type || 0,

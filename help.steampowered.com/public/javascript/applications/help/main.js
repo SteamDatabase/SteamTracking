@@ -803,6 +803,7 @@
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
         SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
         SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
+        JumpToButtonCtn: "_19bDhRwBW1auKJVn5jamrh",
         JumpToButton: "c4K67QJ5cG4Zr1eb4H_Fu",
         QACtn: "_337X4KlsU9k5t9s423wb_I",
         SaleSectionSubtitle: "_2rIaWN5LbF3muB3D2A-q5k",
@@ -5656,10 +5657,7 @@
           (function (e) {
             const t = new Me.TS();
             e.bUsePartnerAPI || t.set_country_code(e.country);
-            t.set_language(e.language),
-              e.realm != S.TU.k_ESteamRealmUnknown &&
-                t.set_steam_realm(e.realm);
-            return t;
+            return t.set_language(e.language), t;
           })(e),
         );
       }
@@ -5926,12 +5924,12 @@
             [l, s],
           ),
           m = n || o,
-          { country: u, language: d, realm: p, bUsePartnerAPI: _ } = t,
-          h = i.useMemo(
-            () => ({ country: u, language: d, realm: p, bUsePartnerAPI: _ }),
-            [u, d, p, _],
+          { country: u, language: d, bUsePartnerAPI: p } = t,
+          _ = i.useMemo(
+            () => ({ country: u, language: d, bUsePartnerAPI: p }),
+            [u, d, p],
           ),
-          f = i.useMemo(() => {
+          h = i.useMemo(() => {
             const e = r
               ? (function (e) {
                   let t = 0;
@@ -5945,17 +5943,17 @@
                   };
                 })(r)
               : void 0;
-            return ze(m, h, { cache: !1, batchScheduleFn: e }, c);
-          }, [m, c, h, r]),
-          b = i.useMemo(
+            return ze(m, _, { cache: !1, batchScheduleFn: e }, c);
+          }, [m, c, _, r]),
+          f = i.useMemo(
             () => ({
-              dataLoader: f,
-              storeBrowseContext: h,
+              dataLoader: h,
+              storeBrowseContext: _,
               cacheStoreItemData: c,
             }),
-            [f, h, c],
+            [h, _, c],
           );
-        return i.createElement(ke.Provider, { value: b }, a);
+        return i.createElement(ke.Provider, { value: f }, a);
       }
       var Ue = r(3729),
         je = r(470);
@@ -5963,11 +5961,7 @@
         const { msDelayBatch: t, children: r } = e,
           n = (0, g.KV)(),
           s = i.useMemo(
-            () => ({
-              country: je.TS.COUNTRY,
-              language: je.TS.LANGUAGE,
-              realm: je.TS.EREALM,
-            }),
+            () => ({ country: je.TS.COUNTRY, language: je.TS.LANGUAGE }),
             [],
           );
         return (
@@ -11610,23 +11604,25 @@
             onMiddleButton: c,
             bAlertDialog: m,
             bProgressDialog: u,
-            children: d,
-            ...p
+            focusButton: d,
+            children: p,
+            ...g
           } = e,
-          g = s || (0, rt.we)("#Button_Close");
-        let _ = i.createElement(Si, {
+          _ = s || (0, rt.we)("#Button_Close");
+        let h = i.createElement(Si, {
           bOKDisabled: e.bOKDisabled,
           bCancelDisabled: e.bCancelDisabled,
           strOKText: s,
           onCancel: t(e.onCancel),
           strCancelText: a,
+          focusButton: d,
         });
         u
-          ? (_ = void 0)
+          ? (h = void 0)
           : m
-            ? (_ = i.createElement(wi, null, g))
+            ? (h = i.createElement(wi, null, _))
             : c &&
-              (_ = i.createElement(vi, {
+              (h = i.createElement(vi, {
                 bOKDisabled: e.bOKDisabled,
                 bCancelDisabled: e.bCancelDisabled,
                 strOKText: s,
@@ -11638,13 +11634,13 @@
                 strUpdateText: l,
                 bUpdateDisabled: e.bMiddleDisabled,
               }));
-        const h = i.useId();
+        const f = i.useId();
         return i.createElement(
           Kn,
           {
-            ...p,
+            ...g,
             title: r || i.createElement(i.Fragment, null, " "),
-            "aria-describedby": h,
+            "aria-describedby": f,
           },
           i.createElement(
             di,
@@ -11654,12 +11650,12 @@
               null,
               i.createElement(
                 "div",
-                { id: h, style: { display: "contents" } },
+                { id: f, style: { display: "contents" } },
                 n,
               ),
-              d,
+              p,
             ),
-            i.createElement(ci, null, _),
+            i.createElement(ci, null, h),
           ),
         );
       }
@@ -32793,31 +32789,34 @@
         bActiveTree: !1,
         bActiveTreeWithinContext: !1,
         bDisableFocusClasses: !1,
+        bIsMounted: !1,
       });
       function p(e) {
-        const { tree: t, disableFocusClasses: r = !1, children: i } = e,
-          [n, a] = s.useState(t?.BIsActive() || !1),
-          [o, l] = s.useState(t?.BIsActiveWithinContext() || !1);
+        const { tree: t, disableFocusClasses: r = !1, children: n } = e,
+          [a, o] = s.useState(t?.BIsActive() || !1),
+          [l, c] = s.useState(t?.BIsActiveWithinContext() || !1),
+          m = (0, i.gc)(t?.SubscribableIsMounted) ?? !1;
         s.useEffect(
           () =>
             t
-              ? (a(t.BIsActive()),
-                l(t.BIsActiveWithinContext()),
+              ? (o(t.BIsActive()),
+                c(t.BIsActiveWithinContext()),
                 t.OnActiveStateChangedCallbacks.Register(() => {
-                  a(t.BIsActive()), l(t.BIsActiveWithinContext());
+                  o(t.BIsActive()), c(t.BIsActiveWithinContext());
                 }).Unregister)
-              : (a(!1), void l(!1)),
+              : (o(!1), void c(!1)),
           [t],
         );
-        const c = s.useMemo(
+        const u = s.useMemo(
           () => ({
-            bActiveTree: n,
-            bActiveTreeWithinContext: o,
+            bActiveTree: a,
+            bActiveTreeWithinContext: l,
             bDisableFocusClasses: r,
+            bIsMounted: m,
           }),
-          [n, r, o],
+          [a, r, l, m],
         );
-        return s.createElement(d.Provider, { value: c }, i);
+        return s.createElement(d.Provider, { value: u }, n);
       }
       function g() {
         return s.useContext(d);
@@ -33097,15 +33096,16 @@
               bActiveTree: y,
               bActiveTreeWithinContext: B,
               bDisableFocusClasses: w,
+              bIsMounted: M,
             } = (0, f.qR)(),
-            M = y && !w,
-            S = !B && (void 0 !== d || s);
+            S = y && !w,
+            v = M && !B && (void 0 !== d || s);
           return o.createElement(
             e,
             {
               ...g,
-              className: a()(l, h && M && r, b && M && n),
-              tabIndex: S ? -1 : d,
+              className: a()(l, h && S && r, b && S && n),
+              tabIndex: v ? -1 : d,
               ref: c,
             },
             p,
@@ -51779,6 +51779,16 @@
                     br: a.qM.readUint32,
                     bw: a.gp.writeUint32,
                   },
+                  release_from_early_access_date: {
+                    n: 11,
+                    br: a.qM.readUint32,
+                    bw: a.gp.writeUint32,
+                  },
+                  release_from_early_access_style: {
+                    n: 12,
+                    br: a.qM.readUint32,
+                    bw: a.gp.writeUint32,
+                  },
                   is_coming_soon: {
                     n: 4,
                     br: a.qM.readBool,
@@ -53022,11 +53032,6 @@
                     n: 3,
                     br: a.qM.readString,
                     bw: a.gp.writeString,
-                  },
-                  steam_realm: {
-                    n: 4,
-                    br: a.qM.readInt32,
-                    bw: a.gp.writeInt32,
                   },
                 },
               }),
@@ -64234,7 +64239,7 @@
     },
     3729: (e, t, r) => {
       "use strict";
-      r.d(t, { A: () => E });
+      r.d(t, { A: () => z });
       var i,
         n = r(4629),
         s = r(4947),
@@ -64244,23 +64249,20 @@
         c = r(5161),
         m = r(1393),
         u = r(8797),
-        d = r(8272),
-        p = r(2160);
+        d = r(8272);
       r(4601);
-      function g(e, t) {
-        e.Body().set_context(_(t));
+      function p(e, t) {
+        e.Body().set_context(g(t));
       }
-      function _(e) {
+      function g(e) {
         let t = new c.TS();
         return (
           e || t.set_country_code(d.TS.COUNTRY),
           t.set_language(d.TS.LANGUAGE),
-          d.TS.EREALM != p.TU.k_ESteamRealmUnknown &&
-            t.set_steam_realm(d.TS.EREALM),
           t
         );
       }
-      function h(e, t) {
+      function _(e, t) {
         e.Body().set_data_request(c.gn.fromObject(t));
       }
       !(function (e) {
@@ -64287,23 +64289,23 @@
           (e[(e.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
           (e[(e.k_RejectAO = 19)] = "k_RejectAO");
       })(i || (i = {}));
-      var f = r(1859),
-        b = r(1675);
-      function y(e) {
+      var h = r(1859),
+        f = r(1675);
+      function b(e) {
         return (function (e, t, r, i) {
           switch (e) {
             case "date_full":
-              return (0, f.$z)(t);
+              return (0, h.$z)(t);
             case "date_month":
-              return (0, b.sq)(new Date(1e3 * t));
+              return (0, f.sq)(new Date(1e3 * t));
             case "date_quarter":
-              return (0, b.u6)(new Date(1e3 * t), i);
+              return (0, f.u6)(new Date(1e3 * t), i);
             case "date_year":
-              return (0, b.vl)(new Date(1e3 * t));
+              return (0, f.vl)(new Date(1e3 * t));
             case "text_comingsoon":
-              return r || (0, f.we)("#Store_ComingSoon_ComingSoon");
+              return r || (0, h.we)("#Store_ComingSoon_ComingSoon");
             case "text_tba":
-              return r || (0, f.we)("#Store_ComingSoon_TBA");
+              return r || (0, h.we)("#Store_ComingSoon_TBA");
             default:
               return "";
           }
@@ -64313,8 +64315,8 @@
           e.custom_release_date_message,
         );
       }
-      var B = r(2490);
-      class w {
+      var y = r(2490);
+      class B {
         m_eItemType;
         m_unID;
         m_bVisible = !1;
@@ -64382,11 +64384,11 @@
         MergeData(e, t) {
           t.include_assets &&
             !this.m_Assets &&
-            ((this.m_Assets = new S(e.assets(), e.id())),
+            ((this.m_Assets = new M(e.assets(), e.id())),
             (this.m_DataRequested.include_assets = !0)),
             t.include_assets_without_overrides &&
               !this.m_AssetsWithoutOverrides &&
-              ((this.m_AssetsWithoutOverrides = new S(
+              ((this.m_AssetsWithoutOverrides = new M(
                 e.assets_without_overrides(),
                 e.id(),
               )),
@@ -64407,11 +64409,11 @@
               (this.m_DataRequested.include_all_purchase_options = !0)),
             t.include_screenshots &&
               !this.m_Screenshots &&
-              ((this.m_Screenshots = new R(e.screenshots())),
+              ((this.m_Screenshots = new C(e.screenshots())),
               (this.m_DataRequested.include_screenshots = !0)),
             t.include_trailers &&
               !this.m_Trailers &&
-              ((this.m_Trailers = new v(e.trailers())),
+              ((this.m_Trailers = new S(e.trailers())),
               (this.m_DataRequested.include_trailers = !0)),
             t.include_tag_count &&
               t.include_tag_count > this.m_rgStoreTags.length &&
@@ -64467,7 +64469,7 @@
           );
         }
         BContainDataRequest(e) {
-          return w.BDataRequestContainsOtherDataRequest(
+          return B.BDataRequestContainsOtherDataRequest(
             this.m_DataRequested,
             e,
           );
@@ -64690,7 +64692,7 @@
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
             this.m_BasicInfo
-              ? M([
+              ? w([
                   ...this.m_BasicInfo.developers,
                   ...this.m_BasicInfo.publishers,
                   ...this.m_BasicInfo.franchises,
@@ -64701,19 +64703,19 @@
         GetAllPublisherCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? M(this.m_BasicInfo.publishers) : []
+            this.m_BasicInfo ? w(this.m_BasicInfo.publishers) : []
           );
         }
         GetAllDeveloperCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? M(this.m_BasicInfo.developers) : []
+            this.m_BasicInfo ? w(this.m_BasicInfo.developers) : []
           );
         }
         GetAllFranchiseCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? M(this.m_BasicInfo.franchises) : []
+            this.m_BasicInfo ? w(this.m_BasicInfo.franchises) : []
           );
         }
         GetCapsuleHeadline() {
@@ -64774,18 +64776,18 @@
             this.m_ReleaseInfo?.is_coming_soon)
           ) {
             if (this.m_ReleaseInfo?.coming_soon_display)
-              return y(this.m_ReleaseInfo);
+              return b(this.m_ReleaseInfo);
             if (this.m_ReleaseInfo?.custom_release_date_message)
               return this.m_ReleaseInfo.custom_release_date_message;
             const e = this.m_ReleaseInfo?.steam_release_date;
             return e
               ? this.m_ReleaseInfo?.is_abridged_release_date
-                ? (0, b.sq)(new Date(1e3 * e))
-                : (0, f.$z)(e)
+                ? (0, f.sq)(new Date(1e3 * e))
+                : (0, h.$z)(e)
               : "";
           }
           const e = this.GetReleaseDateRTime();
-          return e ? (0, f.$z)(e) : "";
+          return e ? (0, h.$z)(e) : "";
         }
         BIsComingSoon() {
           return this.m_bIsComingSoon;
@@ -64939,12 +64941,12 @@
           return this.m_strInternalName;
         }
       }
-      function M(e) {
+      function w(e) {
         if (!e?.length) return [];
         const t = e.map((e) => e.creator_clan_account_id).filter((e) => !!e);
         return Array.from(new Set(t));
       }
-      class S {
+      class M {
         m_strMainCapsuleURL;
         m_strSmallCapsuleURL;
         m_strHeaderURL;
@@ -65070,7 +65072,7 @@
           return this.m_strCommunityIcon_Full;
         }
       }
-      class v {
+      class S {
         m_mapTrailer;
         m_highlightTrailers;
         m_highlightTrailersAllAges;
@@ -65078,12 +65080,12 @@
         m_otherTrailersAllAges;
         constructor(e) {
           (this.m_highlightTrailers =
-            e.highlights()?.map((e) => new C(e)) ?? []),
+            e.highlights()?.map((e) => new v(e)) ?? []),
             (this.m_highlightTrailersAllAges = this.m_highlightTrailers.filter(
               (e) => e.BIsAllAges(),
             )),
             (this.m_otherTrailers =
-              e.other_trailers()?.map((e) => new C(e)) ?? []),
+              e.other_trailers()?.map((e) => new v(e)) ?? []),
             (this.m_otherTrailersAllAges = this.m_otherTrailers.filter((e) =>
               e.BIsAllAges(),
             )),
@@ -65113,7 +65115,7 @@
           return this.m_mapTrailer.get(e);
         }
       }
-      class C {
+      class v {
         m_strTrailerName;
         m_eTrailerCategory;
         m_nBaseID;
@@ -65201,7 +65203,7 @@
             ),
             n = i.findIndex((e) => e.encoding().endsWith("_av1"));
           return (
-            n > 0 && B.yY(i, n, 0),
+            n > 0 && y.yY(i, n, 0),
             i.map((e) => this.ConstructAssetURL(e.cdn_path(), ""))
           );
         }
@@ -65220,7 +65222,7 @@
           );
         }
       }
-      class R {
+      class C {
         m_rgAllScreenshots;
         m_rgOnlyAllAgesScreenshots;
         constructor(e) {
@@ -65240,8 +65242,8 @@
           return this.m_rgOnlyAllAgesScreenshots;
         }
       }
-      var I = r(6419);
-      function T(e, t) {
+      var R = r(6419);
+      function I(e, t) {
         if (!e) return t;
         if (!t) return e;
         return {
@@ -65271,12 +65273,12 @@
           include_links: e.include_links || t.include_links,
         };
       }
-      async function z(e, t) {
+      async function T(e, t) {
         const r = await e,
           i = await t;
         return 1 != r ? r : i;
       }
-      class E {
+      class z {
         k_QueueWaitUntilRequestMS = 5;
         k_nMaxBatchSize = 250;
         m_bReturnUnavailableItems = !1;
@@ -65321,14 +65323,14 @@
         static sm_instance;
         static Get() {
           return (
-            E.sm_instance ||
-              ((E.sm_instance = new E()),
-              (window.StoreItemCache = E.sm_instance)),
-            E.sm_instance
+            z.sm_instance ||
+              ((z.sm_instance = new z()),
+              (window.StoreItemCache = z.sm_instance)),
+            z.sm_instance
           );
         }
         static Initialize(e, t) {
-          const r = E.Get();
+          const r = z.Get();
           return (
             (0, m.wT)(
               !r.m_bInitialized,
@@ -65387,7 +65389,7 @@
             (this.m_bActivelyResettingCache = !1);
         }
         static BIsInitialized() {
-          return E.Get().m_bInitialized;
+          return z.Get().m_bInitialized;
         }
         static k_DataRequest_CommonOnly = {};
         static k_DataRequest_BasicInfo = { include_basic_info: !0 };
@@ -65495,7 +65497,7 @@
         async QueueStoreItemRequest(e, t, r) {
           if (
             ((0, m.wT)(
-              E.ValidateDataRequest(r),
+              z.ValidateDataRequest(r),
               "Invalid Data Request: " + JSON.stringify(r),
             ),
             "string" == typeof e && (e = parseInt(e)),
@@ -65526,7 +65528,7 @@
                 () => this.FlushPendingInfo(),
                 this.k_QueueWaitUntilRequestMS,
               ))),
-            (this.m_setPendingDataRequest = T(this.m_setPendingDataRequest, r)),
+            (this.m_setPendingDataRequest = I(this.m_setPendingDataRequest, r)),
             t)
           ) {
             case 0:
@@ -65615,7 +65617,7 @@
             case 6:
               i = this.m_mapHubCategoriesInFlight.get(e);
           }
-          return i && w.BDataRequestContainsOtherDataRequest(i.dataRequest, r)
+          return i && B.BDataRequestContainsOtherDataRequest(i.dataRequest, r)
             ? i.promise
             : null;
         }
@@ -65629,12 +65631,12 @@
             if (t) u.push(t);
             else {
               m.push(c.O4.fromObject({ appid: e }));
-              let t = T(this.GetStoreItemDataRequest(e, 0), a);
+              let t = I(this.GetStoreItemDataRequest(e, 0), a);
               const r = this.m_mapAppsInFlight.get(e);
-              (t = T(r?.dataRequest, t)),
+              (t = I(r?.dataRequest, t)),
                 r && u.push(r.promise),
                 this.m_mapAppsInFlight.set(e, {
-                  promise: r ? z(r.promise, l) : l,
+                  promise: r ? T(r.promise, l) : l,
                   dataRequest: t,
                 });
             }
@@ -65644,12 +65646,12 @@
               if (t) u.push(t);
               else {
                 m.push(c.O4.fromObject({ packageid: e }));
-                let t = T(this.GetStoreItemDataRequest(e, 1), a);
+                let t = I(this.GetStoreItemDataRequest(e, 1), a);
                 const r = this.m_mapPackageInFlight.get(e);
-                (t = T(r?.dataRequest, t)),
+                (t = I(r?.dataRequest, t)),
                   r && u.push(r.promise),
                   this.m_mapPackageInFlight.set(e, {
-                    promise: r ? z(r.promise, l) : l,
+                    promise: r ? T(r.promise, l) : l,
                     dataRequest: t,
                   });
               }
@@ -65659,12 +65661,12 @@
               if (t) u.push(t);
               else {
                 m.push(c.O4.fromObject({ bundleid: e }));
-                let t = T(this.GetStoreItemDataRequest(e, 2), a);
+                let t = I(this.GetStoreItemDataRequest(e, 2), a);
                 const r = this.m_mapBundleInFlight.get(e);
-                (t = T(r?.dataRequest, t)),
+                (t = I(r?.dataRequest, t)),
                   r && u.push(r.promise),
                   this.m_mapBundleInFlight.set(e, {
-                    promise: r ? z(r.promise, l) : l,
+                    promise: r ? T(r.promise, l) : l,
                     dataRequest: t,
                   });
               }
@@ -65674,12 +65676,12 @@
               if (t) u.push(t);
               else {
                 m.push(c.O4.fromObject({ tagid: e }));
-                let t = T(this.GetStoreItemDataRequest(e, 4), a);
+                let t = I(this.GetStoreItemDataRequest(e, 4), a);
                 const r = this.m_mapTagsInFlight.get(e);
-                (t = T(r?.dataRequest, t)),
+                (t = I(r?.dataRequest, t)),
                   r && u.push(r.promise),
                   this.m_mapTagsInFlight.set(e, {
-                    promise: r ? z(r.promise, l) : l,
+                    promise: r ? T(r.promise, l) : l,
                     dataRequest: t,
                   });
               }
@@ -65689,12 +65691,12 @@
               if (t) u.push(t);
               else {
                 m.push(c.O4.fromObject({ creatorid: e }));
-                let t = T(this.GetStoreItemDataRequest(e, 5), a);
+                let t = I(this.GetStoreItemDataRequest(e, 5), a);
                 const r = this.m_mapCreatorsInFlight.get(e);
-                (t = T(r?.dataRequest, t)),
+                (t = I(r?.dataRequest, t)),
                   r && u.push(r.promise),
                   this.m_mapCreatorsInFlight.set(e, {
-                    promise: r ? z(r.promise, l) : l,
+                    promise: r ? T(r.promise, l) : l,
                     dataRequest: t,
                   });
               }
@@ -65704,12 +65706,12 @@
               if (t) u.push(t);
               else {
                 m.push(c.O4.fromObject({ hubcategoryid: e }));
-                let t = T(this.GetStoreItemDataRequest(e, 6), a);
+                let t = I(this.GetStoreItemDataRequest(e, 6), a);
                 const r = this.m_mapHubCategoriesInFlight.get(e);
-                (t = T(r?.dataRequest, t)),
+                (t = I(r?.dataRequest, t)),
                   r && u.push(r.promise),
                   this.m_mapHubCategoriesInFlight.set(e, {
-                    promise: r ? z(r.promise, l) : l,
+                    promise: r ? T(r.promise, l) : l,
                     dataRequest: t,
                   });
               }
@@ -65816,14 +65818,14 @@
                 const e = a.w.Init(l.St);
                 e.Body().set_include_unpublished(!1);
                 const i = e.Body().getitems_request(!0);
-                i.set_context(_(this.m_bUsePartnerAPI)),
+                i.set_context(g(this.m_bUsePartnerAPI)),
                   i.set_data_request(c.gn.fromObject(t)),
                   i.set_ids(r),
                   n.push(l.BT.GetItems(this.GetServiceTransport(), e));
               } else {
                 const e = a.w.Init(c.eE);
-                g(e, this.m_bUsePartnerAPI),
-                  h(e, t),
+                p(e, this.m_bUsePartnerAPI),
+                  _(e, t),
                   e.Body().set_ids(r),
                   n.push(c.$4.GetItems(this.GetServiceTransport(), e));
               }
@@ -66121,7 +66123,7 @@
           }
           let n = i.get(e.id());
           if (
-            (n ? n.MergeData(e, t) : ((n = new w(e, t)), i.set(e.id(), n)),
+            (n ? n.MergeData(e, t) : ((n = new B(e, t)), i.set(e.id(), n)),
             t.include_included_items && e.included_items(!1))
           ) {
             for (const r of e.included_items().included_apps())
@@ -66132,7 +66134,7 @@
           return n;
         }
       }
-      (0, n.Cg)([I.o], E.prototype, "ReadItem", null);
+      (0, n.Cg)([R.o], z.prototype, "ReadItem", null);
     },
     5263: (e, t, r) => {
       "use strict";

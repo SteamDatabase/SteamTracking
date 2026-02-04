@@ -1,4 +1,15 @@
 
+
+ :root {
+	--subtle-text: #afb4b6;
+	--primary-text: #ffffff;
+	--basic-background: #282b31;
+ }
+
+ html body {
+	 color: var(--subtle-text)
+ }
+
 .AdminPageContent {
 	padding: 0 46px;
 	position: relative;
@@ -605,6 +616,8 @@ select.hourselect,  select.minuteselect {
 	margin-top: 42px;
 	width: unset;
 	position: relative;
+	flex-grow: 1;
+	flex-basis: 1px;
 }
 
 .newformrow.widelabel.EarlyAccess .formlabel .ea_question {
@@ -622,6 +635,17 @@ select.hourselect,  select.minuteselect {
 }
 .newformrow.widelabel.EarlyAccess .formdata {
 	margin-left: unset;
+	flex-grow: 1;
+	flex-basis: 1px;
+}
+
+.newformrow.widelabel.EarlyAccess .formdata .dateentry {
+	margin-top: 42px;
+	display: inline-block;
+}
+
+.newformrow.widelabel.EarlyAccess .formdata #app_content_earlyaccess_style__entry {
+	width: 300px;
 }
 
 .localized_image_picker_ctn {
@@ -3075,12 +3099,12 @@ div.image_all_ages_appropriate
 .movie_label
 {
 	margin-right: 10px;
-	color: #ddd;
+	color: var(--primary-text);
 	min-width: 100px;
 }
 
 .movie_label span {
-	color: #9e9e9e;
+	color: var(--subtle-text);
 }
 
 .movie_label.small {
@@ -3110,7 +3134,6 @@ div.image_all_ages_appropriate
 .movie_name_input
 {
 	width: 100%;
-	max-width: 600px;
 }
 
 .movie_highlighted_row
@@ -3149,7 +3172,7 @@ div.image_all_ages_appropriate
 .movie_group form
 {
 	border: 1px solid #373737;
-	background-color: #323233;
+	background-color: var(--basic-background);
 	margin:0;
 	padding:0;
 	display: block;
@@ -3217,7 +3240,7 @@ div.image_all_ages_appropriate
 
 .movie_create_area
 {
-	background-color: #323233;
+	background-color: var(--basic-background);
 	border: 1px solid #373737;
 	display: inline-block;
 	padding: 8px;
@@ -3484,11 +3507,6 @@ div.image_all_ages_appropriate
 	font-size: 14px;
 	color: white;
 	min-width: 175px;
-}
-
-.launchOptionArea input:not(.btn_small_thin), .launchOptionArea select {
-    width: 300px;
-    box-sizing: border-box;
 }
 
 .launchOptionArea tr td {

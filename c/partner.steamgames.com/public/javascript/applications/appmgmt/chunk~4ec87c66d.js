@@ -740,7 +740,7 @@
         SelectedTags: "G4ZLNqu2ItSLt2a4nyywL",
         ButtonRemove: "_33l2PQpdFV5xTe1VnUD3vr",
         CuratedPromoFinderCtn: "_2I9RguJSPMrFA3BaCYsTDC",
-        ModRankHeaderContent: "yvFKrzh7VyheJNXRPEfQZ",
+        RankHeaderContent: "_2ccZfvQh1ch-oiFuEFDXQ-",
         HeaderDownArrowSVG: "_1M---DuBLBmJ3wziNwQwZK",
         FeaturingFinderDropDown: "_19yKcT-6yXGzPTnwowUH_p",
         FeaturingFinderGOButton: "_8VJYI1VS6M0clgIu1wQbl",
@@ -750,7 +750,6 @@
         ReviewScoreMixed: "Idb19U4Ktfzxd8P6lTHzl",
         ReviewScoreNegative: "_2A2AaRA9OeBWaHmR_itQ26",
         ReviewScoreNone: "_3VeD7VChLkhnsovYYTLDmw",
-        TooltipContainer: "cafiKhILOJzW-NM9HdlLr",
       };
     },
     chunkid: (module) => {
@@ -3729,7 +3728,8 @@
           (_[(_.k_PermissionRequest = 7)] = "k_PermissionRequest"),
           (_[(_.k_MediaUsageNotification = 8)] = "k_MediaUsageNotification"),
           (_[(_.k_GeneralCommunication = 9)] = "k_GeneralCommunication"),
-          (_[(_.k_SteamAwardFinalists = 10)] = "k_SteamAwardFinalists");
+          (_[(_.k_SteamAwardFinalists = 10)] = "k_SteamAwardFinalists"),
+          (_[(_.k_MediaUsageConfirmation = 11)] = "k_MediaUsageConfirmation");
       })(_ || (_ = {}));
       const _ = [
         _.k_Invite,
@@ -3741,6 +3741,7 @@
         _.k_Followup,
         _.k_PermissionRequest,
         _.k_MediaUsageNotification,
+        _.k_MediaUsageConfirmation,
         _.k_GeneralCommunication,
         _.k_SteamAwardFinalists,
       ];
@@ -3764,6 +3765,8 @@
             return "Media Permission Request";
           case _.k_MediaUsageNotification:
             return "Media Usage Notification";
+          case _.k_MediaUsageConfirmation:
+            return "Media Usage Confirmation";
           case _.k_GeneralCommunication:
             return "Game Specific General Communication";
           case _.k_SteamAwardFinalists:
@@ -3786,6 +3789,7 @@
           case _.k_Followup:
           case _.k_PermissionRequest:
           case _.k_MediaUsageNotification:
+          case _.k_MediaUsageConfirmation:
           case _.k_GeneralCommunication:
             return null;
           case _.k_SteamAwardFinalists:
@@ -3839,7 +3843,9 @@
           (_[(_.k_SeasonalFeatureDiscount = 37)] = "k_SeasonalFeatureDiscount"),
           (_[(_.k_GenericActionButton = 38)] = "k_GenericActionButton"),
           (_[(_.k_NextFestRegisteredWhatNext = 39)] =
-            "k_NextFestRegisteredWhatNext");
+            "k_NextFestRegisteredWhatNext"),
+          (_[(_.k_NextFestMediaUsageConfirmationTrailer = 40)] =
+            "k_NextFestMediaUsageConfirmationTrailer");
       })(_ || (_ = {}));
       const _ = [
         _.k_Custom,
@@ -3872,6 +3878,7 @@
         _.k_NextFestThankYou,
         _.k_NextFestMediaUsageIntended,
         _.k_NextFestMediaUsageIntendedTrailer,
+        _.k_NextFestMediaUsageConfirmationTrailer,
         _.k_NextFestMediaUsageIntendedLivestream,
         _.k_NextFestTopGameWrapUp,
         _.k_MediaPermissionReminder,
@@ -3939,6 +3946,8 @@
             return "Next Fest: We Intend To Feature Your Game";
           case _.k_NextFestMediaUsageIntendedTrailer:
             return "Next Fest: We Intend To Feature Your Game in Trailer";
+          case _.k_NextFestMediaUsageConfirmationTrailer:
+            return "Next Fest: We Will Be Featuring Your Game in Our Trailer";
           case _.k_NextFestMediaUsageIntendedLivestream:
             return "Next Fest: We Intend To Feature Your Game in Livestream";
           case _.k_NextFestStartsNow:
@@ -33070,6 +33079,116 @@
                   ),
                 ));
               break;
+            case _._.k_NextFestMediaUsageConfirmationTrailer:
+              (_ = "We need to know if you won’t be able to participate"),
+                (_ = _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().SectionBody,
+                    },
+                    "Your game’s trailer has made the final cut for the official Steam Next Fest trailer. We need to make sure we know that you’ll still be participating in this edition of Next Fest.",
+                    _.createElement("br", null),
+                    _.createElement(
+                      "ul",
+                      null,
+                      _.createElement(
+                        "li",
+                        null,
+                        "If you are still planning to participate, then no action is necessary",
+                      ),
+                      _.createElement(
+                        "li",
+                        null,
+                        "If your plans have changed and you won’t be able to participate, please see 'Need to opt out or cancel?' below.",
+                      ),
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().SectionBody,
+                    },
+                    "The main event trailer will be available on the ",
+                    _.createElement(
+                      "a",
+                      {
+                        href: "https://www.youtube.com/c/SteamYT",
+                      },
+                      "Steam YouTube channel",
+                    ),
+                    " ",
+                    (0, _._)(_.GetTrailerLaunchDate() || 0),
+                    " sometime after 10am Pacific Time.",
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().SectionTitle,
+                    },
+                    "Event participation is required for featuring",
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().SectionBody,
+                    },
+                    "Participation in this edition of Steam Next Fest with a playable demo is required to be featured. Please see ",
+                    _.createElement(
+                      "a",
+                      {
+                        href: "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest#trailer",
+                        target: "_blank",
+                      },
+                      "full elegibility critera",
+                    ),
+                    " to make sure you've got everything covered. If you can no longer participate for any reason, please follow the instructions below.",
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().SectionTitle,
+                    },
+                    "Need to opt out or cancel? Please do so ASAP!",
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().SectionBody,
+                    },
+                    "If your plans have changed and you no longer intend to participate in this edition, or you would like to opt out of trailer inclusion, please ",
+                    _.createElement(
+                      "a",
+                      {
+                        href: "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=932",
+                        target: "_blank",
+                      },
+                      "contact us",
+                    ),
+                    " immediately and return to ",
+                    _.createElement(
+                      "a",
+                      {
+                        href: _,
+                        target: "_blank",
+                      },
+                      "your game's registration page",
+                    ),
+                    " to update your selections for featuring permission and/or event registration as relevant.",
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().SectionBody,
+                    },
+                    "You must opt out by ",
+                    (0, _._)(_.GetCancelDate() || 0),
+                    " to ensure your trailer and/or demo is not included in our marketing materials if selected.",
+                  ),
+                ));
+              break;
             case _._.k_NextFestMediaUsageIntendedLivestream:
               (_ = "We Need To Know If You Are Still In"),
                 (_ = _.createElement(
@@ -33740,6 +33859,7 @@
                 " in our marketing for this event:",
               );
             case _._.k_MediaUsageNotification:
+            case _._.k_MediaUsageConfirmation:
               return _.createElement(
                 _.Fragment,
                 null,
@@ -33928,6 +34048,8 @@
                             return "WE'D LIKE YOUR PERMISSION";
                           case _._.k_MediaUsageNotification:
                             return "YOUR GAME IS ON THE SHORT LIST FOR FEATURING";
+                          case _._.k_MediaUsageConfirmation:
+                            return "WE'RE GOING TO FEATURE YOUR TRAILER!";
                           case _._.k_GeneralCommunication:
                           case _._.k_SteamAwardFinalists:
                             return null;
@@ -34191,6 +34313,7 @@
           "#OptIn_EmailSubject_NF_Preview_Short",
           "#OptIn_EmailSubject_NF_MarketingRequest",
           "#OptIn_EmailSubject_NF_Featuring",
+          "#OptIn_EmailSubject_NF_FeaturingConfirmed",
           "#OptIn_EmailSubject_NF_Assets",
           "#OptIn_EmailSubject_NF_StartsToday",
           "#OptIn_EmailSubject_NF_TopPlayed",
@@ -34839,6 +34962,7 @@
                   (_.bNeedWikiDocumentation = !0);
                 break;
               case _._.k_NextFestMediaUsageIntendedTrailer:
+              case _._.k_NextFestMediaUsageConfirmationTrailer:
                 (_.bNeedTrailerLaunchDate = !0), (_.bNeedCancelDate = !0);
                 break;
               case _._.k_NextFestMediaUsageIntendedLivestream:
@@ -35269,7 +35393,7 @@
                     {
                       const _ = {
                           unique_id: _(),
-                          type: _._.k_Update,
+                          type: _._.k_MediaUsageNotification,
                           internal_name: "Heads-up to featured apps - Trailer",
                           sections: [],
                           subject_token: "#OptIn_EmailSubject_NF_Featuring",
@@ -35277,6 +35401,20 @@
                         },
                         _ = _._.Get().AddEmailDraft(_);
                       _.AddSection(_._.k_NextFestMediaUsageIntendedTrailer),
+                        _.AddSection(_._.k_LearnMore);
+                    }
+                    {
+                      const _ = {
+                          unique_id: _(),
+                          type: _._.k_MediaUsageConfirmation,
+                          internal_name: "We're going to use your trailer",
+                          sections: [],
+                          subject_token:
+                            "#OptIn_EmailSubject_NF_FeaturingConfirmed",
+                          targeting: 512,
+                        },
+                        _ = _._.Get().AddEmailDraft(_);
+                      _.AddSection(_._.k_NextFestMediaUsageConfirmationTrailer),
                         _.AddSection(_._.k_LearnMore);
                     }
                     {
@@ -67534,8 +67672,7 @@
               _.Body()
                 .context()
                 .set_elanguage((0, _._)(_._.LANGUAGE)),
-              _.Body().context().set_country_code(_._.COUNTRY),
-              _.Body().context().set_steam_realm(_._.EREALM);
+              _.Body().context().set_country_code(_._.COUNTRY);
             for (const _ of _) _.Body().add_appids(_);
             if (
               (_.Body().set_flavor(_.strFlavor || "popular"),
@@ -71683,8 +71820,8 @@
             () =>
               [..._].sort(
                 (_, _) =>
-                  (_.modified_sales_rank > 0 ? _.modified_sales_rank : 1e5) -
-                  (_.modified_sales_rank > 0 ? _.modified_sales_rank : 1e5),
+                  (_.long_term_sales_rank > 0 ? _.long_term_sales_rank : 1e5) -
+                  (_.long_term_sales_rank > 0 ? _.long_term_sales_rank : 1e5),
               ),
             [_],
           ),
@@ -71797,9 +71934,7 @@
             (_ && _ ? "&rt_feature_start=" + _ + "&rt_feature_end=" + _ : ""),
           _ = _.createElement(
             "div",
-            {
-              className: _().TooltipContainer,
-            },
+            null,
             "Only shows games that meet deep discount featuring criteria:",
             _.createElement("br", null),
             "- Has run at least 65% discount",
@@ -71904,27 +72039,15 @@
                 tooltip:
                   "Only shows games that do not have an active discount cooldown.",
               }),
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: _,
+              _.createElement(_._, {
+                label: "Deep Discount Eligible",
+                className: _().Filter,
+                checked: _,
+                onChange: (_) => {
+                  _(_), window.location.reload();
                 },
-                _.createElement(_._, {
-                  label: _.createElement(
-                    "span",
-                    {
-                      className: _().HelperTooltip,
-                    },
-                    "Deep Discount Eligible",
-                    _.createElement(_._VW, null),
-                  ),
-                  className: _().Filter,
-                  checked: _,
-                  onChange: (_) => {
-                    _(_), window.location.reload();
-                  },
-                }),
-              ),
+                tooltip: _,
+              }),
             ),
             _.createElement(
               "div",
@@ -72218,16 +72341,15 @@
             _.createElement(
               "tr",
               null,
-              _.createElement("th", null, "Rank"),
               _.createElement(
                 "th",
                 null,
                 _.createElement(
                   "div",
                   {
-                    className: _().ModRankHeaderContent,
+                    className: _().RankHeaderContent,
                   },
-                  "Mod Rank ",
+                  "Rank ",
                   _.createElement(
                     "div",
                     {
@@ -72237,6 +72359,7 @@
                   ),
                 ),
               ),
+              _.createElement("th", null, "Mod Rank"),
               _.createElement("th", null, "Game"),
               _.createElement("th", null, "Last Discount and Featuring"),
               _.createElement("th", null, "Deepest Discount"),

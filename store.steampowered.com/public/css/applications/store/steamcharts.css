@@ -3099,14 +3099,12 @@ p a:hover {
   transform: scale(1.04) rotateZ(-9deg);
 }
 @media screen and (max-width: 500px) {
-  html:not(.force_desktop):not(.force_desktop) ._3Qf-XadcjXMDgnu95-quHx {
+  html.responsive.responsive ._3Qf-XadcjXMDgnu95-quHx {
     flex-direction: column;
     text-align: center;
     justify-content: space-around;
   }
-  html:not(.force_desktop):not(.force_desktop)
-    ._3Qf-XadcjXMDgnu95-quHx
-    ._2TEWmnx8AyVWR6eUSiFGUq {
+  html.responsive.responsive ._3Qf-XadcjXMDgnu95-quHx ._2TEWmnx8AyVWR6eUSiFGUq {
     flex-basis: 0;
   }
 }

@@ -2438,13 +2438,8 @@ a:link {
   background: -webkit-linear-gradient(150deg, #417a9b 5%, #67c1f5 95%);
   background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%);
 }
-._2KPA3I9eXE9r251_-GX_iv {
-  display: contents;
-  font-family: "Motiva Sans", Twemoji, "Noto Sans", Helvetica, sans-serif;
+:root {
   --font-family: "Motiva Sans", Twemoji, "Noto Sans", Helvetica, sans-serif;
-  font-size: var(--default-font-size);
-  line-height: var(--default-line-height);
-  letter-spacing: var(--default-letter-spacing);
   --box-shadow-elevation--1: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) inset;
   --box-shadow-elevation-0: none;
   --box-shadow-elevation-1: 2px 2px 4px rgba(0, 0, 0, 0.25);
@@ -2912,8 +2907,14 @@ a:link {
   --heading-letter-spacing-7: 0em;
   --heading-letter-spacing-8: 0em;
   --heading-letter-spacing-9: 0em;
+  --default-font-size: var(--text-size-3);
+  --default-line-height: var(--line-height-3);
+  --default-letter-spacing: var(--letter-spacing-3);
+  --color-debug: hotpink;
+  --color-accent-contrast: white;
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="greyneutral"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="greyneutral"]),
+:root [data-accent-color="greyneutral"] {
   --color-accent-1: var(--color-greyneutral-1);
   --color-accent-2: var(--color-greyneutral-2);
   --color-accent-3: var(--color-greyneutral-3);
@@ -2927,7 +2928,8 @@ a:link {
   --color-accent-11: var(--color-greyneutral-11);
   --color-accent-12: var(--color-greyneutral-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="greyneutral"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="greyneutral"]),
+:root [data-dull-color="greyneutral"] {
   --color-dull-1: var(--color-greyneutral-1);
   --color-dull-2: var(--color-greyneutral-2);
   --color-dull-3: var(--color-greyneutral-3);
@@ -2941,7 +2943,8 @@ a:link {
   --color-dull-11: var(--color-greyneutral-11);
   --color-dull-12: var(--color-greyneutral-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="mauve"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="mauve"]),
+:root [data-accent-color="mauve"] {
   --color-accent-1: var(--color-mauve-1);
   --color-accent-2: var(--color-mauve-2);
   --color-accent-3: var(--color-mauve-3);
@@ -2955,7 +2958,8 @@ a:link {
   --color-accent-11: var(--color-mauve-11);
   --color-accent-12: var(--color-mauve-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="mauve"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="mauve"]),
+:root [data-dull-color="mauve"] {
   --color-dull-1: var(--color-mauve-1);
   --color-dull-2: var(--color-mauve-2);
   --color-dull-3: var(--color-mauve-3);
@@ -2969,7 +2973,8 @@ a:link {
   --color-dull-11: var(--color-mauve-11);
   --color-dull-12: var(--color-mauve-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="slate"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="slate"]),
+:root [data-accent-color="slate"] {
   --color-accent-1: var(--color-slate-1);
   --color-accent-2: var(--color-slate-2);
   --color-accent-3: var(--color-slate-3);
@@ -2983,7 +2988,8 @@ a:link {
   --color-accent-11: var(--color-slate-11);
   --color-accent-12: var(--color-slate-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="slate"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="slate"]),
+:root [data-dull-color="slate"] {
   --color-dull-1: var(--color-slate-1);
   --color-dull-2: var(--color-slate-2);
   --color-dull-3: var(--color-slate-3);
@@ -2997,7 +3003,8 @@ a:link {
   --color-dull-11: var(--color-slate-11);
   --color-dull-12: var(--color-slate-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="sage"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="sage"]),
+:root [data-accent-color="sage"] {
   --color-accent-1: var(--color-sage-1);
   --color-accent-2: var(--color-sage-2);
   --color-accent-3: var(--color-sage-3);
@@ -3011,7 +3018,8 @@ a:link {
   --color-accent-11: var(--color-sage-11);
   --color-accent-12: var(--color-sage-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="sage"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="sage"]),
+:root [data-dull-color="sage"] {
   --color-dull-1: var(--color-sage-1);
   --color-dull-2: var(--color-sage-2);
   --color-dull-3: var(--color-sage-3);
@@ -3025,7 +3033,8 @@ a:link {
   --color-dull-11: var(--color-sage-11);
   --color-dull-12: var(--color-sage-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="olive"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="olive"]),
+:root [data-accent-color="olive"] {
   --color-accent-1: var(--color-olive-1);
   --color-accent-2: var(--color-olive-2);
   --color-accent-3: var(--color-olive-3);
@@ -3039,7 +3048,8 @@ a:link {
   --color-accent-11: var(--color-olive-11);
   --color-accent-12: var(--color-olive-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="olive"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="olive"]),
+:root [data-dull-color="olive"] {
   --color-dull-1: var(--color-olive-1);
   --color-dull-2: var(--color-olive-2);
   --color-dull-3: var(--color-olive-3);
@@ -3053,7 +3063,8 @@ a:link {
   --color-dull-11: var(--color-olive-11);
   --color-dull-12: var(--color-olive-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="sand"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="sand"]),
+:root [data-accent-color="sand"] {
   --color-accent-1: var(--color-sand-1);
   --color-accent-2: var(--color-sand-2);
   --color-accent-3: var(--color-sand-3);
@@ -3067,7 +3078,8 @@ a:link {
   --color-accent-11: var(--color-sand-11);
   --color-accent-12: var(--color-sand-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="sand"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="sand"]),
+:root [data-dull-color="sand"] {
   --color-dull-1: var(--color-sand-1);
   --color-dull-2: var(--color-sand-2);
   --color-dull-3: var(--color-sand-3);
@@ -3081,7 +3093,8 @@ a:link {
   --color-dull-11: var(--color-sand-11);
   --color-dull-12: var(--color-sand-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="tomato"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="tomato"]),
+:root [data-accent-color="tomato"] {
   --color-accent-1: var(--color-tomato-1);
   --color-accent-2: var(--color-tomato-2);
   --color-accent-3: var(--color-tomato-3);
@@ -3095,7 +3108,8 @@ a:link {
   --color-accent-11: var(--color-tomato-11);
   --color-accent-12: var(--color-tomato-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="tomato"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="tomato"]),
+:root [data-dull-color="tomato"] {
   --color-dull-1: var(--color-tomato-1);
   --color-dull-2: var(--color-tomato-2);
   --color-dull-3: var(--color-tomato-3);
@@ -3109,7 +3123,8 @@ a:link {
   --color-dull-11: var(--color-tomato-11);
   --color-dull-12: var(--color-tomato-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="red"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="red"]),
+:root [data-accent-color="red"] {
   --color-accent-1: var(--color-red-1);
   --color-accent-2: var(--color-red-2);
   --color-accent-3: var(--color-red-3);
@@ -3123,7 +3138,8 @@ a:link {
   --color-accent-11: var(--color-red-11);
   --color-accent-12: var(--color-red-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="red"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="red"]),
+:root [data-dull-color="red"] {
   --color-dull-1: var(--color-red-1);
   --color-dull-2: var(--color-red-2);
   --color-dull-3: var(--color-red-3);
@@ -3137,7 +3153,8 @@ a:link {
   --color-dull-11: var(--color-red-11);
   --color-dull-12: var(--color-red-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="ruby"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="ruby"]),
+:root [data-accent-color="ruby"] {
   --color-accent-1: var(--color-ruby-1);
   --color-accent-2: var(--color-ruby-2);
   --color-accent-3: var(--color-ruby-3);
@@ -3151,7 +3168,8 @@ a:link {
   --color-accent-11: var(--color-ruby-11);
   --color-accent-12: var(--color-ruby-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="ruby"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="ruby"]),
+:root [data-dull-color="ruby"] {
   --color-dull-1: var(--color-ruby-1);
   --color-dull-2: var(--color-ruby-2);
   --color-dull-3: var(--color-ruby-3);
@@ -3165,7 +3183,8 @@ a:link {
   --color-dull-11: var(--color-ruby-11);
   --color-dull-12: var(--color-ruby-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="crimson"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="crimson"]),
+:root [data-accent-color="crimson"] {
   --color-accent-1: var(--color-crimson-1);
   --color-accent-2: var(--color-crimson-2);
   --color-accent-3: var(--color-crimson-3);
@@ -3179,7 +3198,8 @@ a:link {
   --color-accent-11: var(--color-crimson-11);
   --color-accent-12: var(--color-crimson-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="crimson"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="crimson"]),
+:root [data-dull-color="crimson"] {
   --color-dull-1: var(--color-crimson-1);
   --color-dull-2: var(--color-crimson-2);
   --color-dull-3: var(--color-crimson-3);
@@ -3193,7 +3213,8 @@ a:link {
   --color-dull-11: var(--color-crimson-11);
   --color-dull-12: var(--color-crimson-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="pink"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="pink"]),
+:root [data-accent-color="pink"] {
   --color-accent-1: var(--color-pink-1);
   --color-accent-2: var(--color-pink-2);
   --color-accent-3: var(--color-pink-3);
@@ -3207,7 +3228,8 @@ a:link {
   --color-accent-11: var(--color-pink-11);
   --color-accent-12: var(--color-pink-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="pink"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="pink"]),
+:root [data-dull-color="pink"] {
   --color-dull-1: var(--color-pink-1);
   --color-dull-2: var(--color-pink-2);
   --color-dull-3: var(--color-pink-3);
@@ -3221,7 +3243,8 @@ a:link {
   --color-dull-11: var(--color-pink-11);
   --color-dull-12: var(--color-pink-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="plum"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="plum"]),
+:root [data-accent-color="plum"] {
   --color-accent-1: var(--color-plum-1);
   --color-accent-2: var(--color-plum-2);
   --color-accent-3: var(--color-plum-3);
@@ -3235,7 +3258,8 @@ a:link {
   --color-accent-11: var(--color-plum-11);
   --color-accent-12: var(--color-plum-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="plum"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="plum"]),
+:root [data-dull-color="plum"] {
   --color-dull-1: var(--color-plum-1);
   --color-dull-2: var(--color-plum-2);
   --color-dull-3: var(--color-plum-3);
@@ -3249,7 +3273,8 @@ a:link {
   --color-dull-11: var(--color-plum-11);
   --color-dull-12: var(--color-plum-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="purple"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="purple"]),
+:root [data-accent-color="purple"] {
   --color-accent-1: var(--color-purple-1);
   --color-accent-2: var(--color-purple-2);
   --color-accent-3: var(--color-purple-3);
@@ -3263,7 +3288,8 @@ a:link {
   --color-accent-11: var(--color-purple-11);
   --color-accent-12: var(--color-purple-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="purple"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="purple"]),
+:root [data-dull-color="purple"] {
   --color-dull-1: var(--color-purple-1);
   --color-dull-2: var(--color-purple-2);
   --color-dull-3: var(--color-purple-3);
@@ -3277,7 +3303,8 @@ a:link {
   --color-dull-11: var(--color-purple-11);
   --color-dull-12: var(--color-purple-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="violet"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="violet"]),
+:root [data-accent-color="violet"] {
   --color-accent-1: var(--color-violet-1);
   --color-accent-2: var(--color-violet-2);
   --color-accent-3: var(--color-violet-3);
@@ -3291,7 +3318,8 @@ a:link {
   --color-accent-11: var(--color-violet-11);
   --color-accent-12: var(--color-violet-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="violet"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="violet"]),
+:root [data-dull-color="violet"] {
   --color-dull-1: var(--color-violet-1);
   --color-dull-2: var(--color-violet-2);
   --color-dull-3: var(--color-violet-3);
@@ -3305,7 +3333,8 @@ a:link {
   --color-dull-11: var(--color-violet-11);
   --color-dull-12: var(--color-violet-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="iris"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="iris"]),
+:root [data-accent-color="iris"] {
   --color-accent-1: var(--color-iris-1);
   --color-accent-2: var(--color-iris-2);
   --color-accent-3: var(--color-iris-3);
@@ -3319,7 +3348,8 @@ a:link {
   --color-accent-11: var(--color-iris-11);
   --color-accent-12: var(--color-iris-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="iris"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="iris"]),
+:root [data-dull-color="iris"] {
   --color-dull-1: var(--color-iris-1);
   --color-dull-2: var(--color-iris-2);
   --color-dull-3: var(--color-iris-3);
@@ -3333,7 +3363,8 @@ a:link {
   --color-dull-11: var(--color-iris-11);
   --color-dull-12: var(--color-iris-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="indigo"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="indigo"]),
+:root [data-accent-color="indigo"] {
   --color-accent-1: var(--color-indigo-1);
   --color-accent-2: var(--color-indigo-2);
   --color-accent-3: var(--color-indigo-3);
@@ -3347,7 +3378,8 @@ a:link {
   --color-accent-11: var(--color-indigo-11);
   --color-accent-12: var(--color-indigo-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="indigo"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="indigo"]),
+:root [data-dull-color="indigo"] {
   --color-dull-1: var(--color-indigo-1);
   --color-dull-2: var(--color-indigo-2);
   --color-dull-3: var(--color-indigo-3);
@@ -3361,7 +3393,8 @@ a:link {
   --color-dull-11: var(--color-indigo-11);
   --color-dull-12: var(--color-indigo-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="blue"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="blue"]),
+:root [data-accent-color="blue"] {
   --color-accent-1: var(--color-blue-1);
   --color-accent-2: var(--color-blue-2);
   --color-accent-3: var(--color-blue-3);
@@ -3375,7 +3408,8 @@ a:link {
   --color-accent-11: var(--color-blue-11);
   --color-accent-12: var(--color-blue-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="blue"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="blue"]),
+:root [data-dull-color="blue"] {
   --color-dull-1: var(--color-blue-1);
   --color-dull-2: var(--color-blue-2);
   --color-dull-3: var(--color-blue-3);
@@ -3389,7 +3423,8 @@ a:link {
   --color-dull-11: var(--color-blue-11);
   --color-dull-12: var(--color-blue-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="cyan"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="cyan"]),
+:root [data-accent-color="cyan"] {
   --color-accent-1: var(--color-cyan-1);
   --color-accent-2: var(--color-cyan-2);
   --color-accent-3: var(--color-cyan-3);
@@ -3403,7 +3438,8 @@ a:link {
   --color-accent-11: var(--color-cyan-11);
   --color-accent-12: var(--color-cyan-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="cyan"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="cyan"]),
+:root [data-dull-color="cyan"] {
   --color-dull-1: var(--color-cyan-1);
   --color-dull-2: var(--color-cyan-2);
   --color-dull-3: var(--color-cyan-3);
@@ -3417,7 +3453,8 @@ a:link {
   --color-dull-11: var(--color-cyan-11);
   --color-dull-12: var(--color-cyan-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="teal"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="teal"]),
+:root [data-accent-color="teal"] {
   --color-accent-1: var(--color-teal-1);
   --color-accent-2: var(--color-teal-2);
   --color-accent-3: var(--color-teal-3);
@@ -3431,7 +3468,8 @@ a:link {
   --color-accent-11: var(--color-teal-11);
   --color-accent-12: var(--color-teal-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="teal"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="teal"]),
+:root [data-dull-color="teal"] {
   --color-dull-1: var(--color-teal-1);
   --color-dull-2: var(--color-teal-2);
   --color-dull-3: var(--color-teal-3);
@@ -3445,7 +3483,8 @@ a:link {
   --color-dull-11: var(--color-teal-11);
   --color-dull-12: var(--color-teal-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="jade"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="jade"]),
+:root [data-accent-color="jade"] {
   --color-accent-1: var(--color-jade-1);
   --color-accent-2: var(--color-jade-2);
   --color-accent-3: var(--color-jade-3);
@@ -3459,7 +3498,8 @@ a:link {
   --color-accent-11: var(--color-jade-11);
   --color-accent-12: var(--color-jade-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="jade"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="jade"]),
+:root [data-dull-color="jade"] {
   --color-dull-1: var(--color-jade-1);
   --color-dull-2: var(--color-jade-2);
   --color-dull-3: var(--color-jade-3);
@@ -3473,7 +3513,8 @@ a:link {
   --color-dull-11: var(--color-jade-11);
   --color-dull-12: var(--color-jade-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="green"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="green"]),
+:root [data-accent-color="green"] {
   --color-accent-1: var(--color-green-1);
   --color-accent-2: var(--color-green-2);
   --color-accent-3: var(--color-green-3);
@@ -3487,7 +3528,8 @@ a:link {
   --color-accent-11: var(--color-green-11);
   --color-accent-12: var(--color-green-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="green"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="green"]),
+:root [data-dull-color="green"] {
   --color-dull-1: var(--color-green-1);
   --color-dull-2: var(--color-green-2);
   --color-dull-3: var(--color-green-3);
@@ -3501,7 +3543,8 @@ a:link {
   --color-dull-11: var(--color-green-11);
   --color-dull-12: var(--color-green-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="grass"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="grass"]),
+:root [data-accent-color="grass"] {
   --color-accent-1: var(--color-grass-1);
   --color-accent-2: var(--color-grass-2);
   --color-accent-3: var(--color-grass-3);
@@ -3515,7 +3558,8 @@ a:link {
   --color-accent-11: var(--color-grass-11);
   --color-accent-12: var(--color-grass-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="grass"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="grass"]),
+:root [data-dull-color="grass"] {
   --color-dull-1: var(--color-grass-1);
   --color-dull-2: var(--color-grass-2);
   --color-dull-3: var(--color-grass-3);
@@ -3529,7 +3573,8 @@ a:link {
   --color-dull-11: var(--color-grass-11);
   --color-dull-12: var(--color-grass-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="brown"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="brown"]),
+:root [data-accent-color="brown"] {
   --color-accent-1: var(--color-brown-1);
   --color-accent-2: var(--color-brown-2);
   --color-accent-3: var(--color-brown-3);
@@ -3543,7 +3588,8 @@ a:link {
   --color-accent-11: var(--color-brown-11);
   --color-accent-12: var(--color-brown-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="brown"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="brown"]),
+:root [data-dull-color="brown"] {
   --color-dull-1: var(--color-brown-1);
   --color-dull-2: var(--color-brown-2);
   --color-dull-3: var(--color-brown-3);
@@ -3557,7 +3603,8 @@ a:link {
   --color-dull-11: var(--color-brown-11);
   --color-dull-12: var(--color-brown-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="bronze"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="bronze"]),
+:root [data-accent-color="bronze"] {
   --color-accent-1: var(--color-bronze-1);
   --color-accent-2: var(--color-bronze-2);
   --color-accent-3: var(--color-bronze-3);
@@ -3571,7 +3618,8 @@ a:link {
   --color-accent-11: var(--color-bronze-11);
   --color-accent-12: var(--color-bronze-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="bronze"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="bronze"]),
+:root [data-dull-color="bronze"] {
   --color-dull-1: var(--color-bronze-1);
   --color-dull-2: var(--color-bronze-2);
   --color-dull-3: var(--color-bronze-3);
@@ -3585,7 +3633,8 @@ a:link {
   --color-dull-11: var(--color-bronze-11);
   --color-dull-12: var(--color-bronze-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="gold"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="gold"]),
+:root [data-accent-color="gold"] {
   --color-accent-1: var(--color-gold-1);
   --color-accent-2: var(--color-gold-2);
   --color-accent-3: var(--color-gold-3);
@@ -3599,7 +3648,8 @@ a:link {
   --color-accent-11: var(--color-gold-11);
   --color-accent-12: var(--color-gold-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="gold"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="gold"]),
+:root [data-dull-color="gold"] {
   --color-dull-1: var(--color-gold-1);
   --color-dull-2: var(--color-gold-2);
   --color-dull-3: var(--color-gold-3);
@@ -3613,7 +3663,8 @@ a:link {
   --color-dull-11: var(--color-gold-11);
   --color-dull-12: var(--color-gold-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="sky"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="sky"]),
+:root [data-accent-color="sky"] {
   --color-accent-1: var(--color-sky-1);
   --color-accent-2: var(--color-sky-2);
   --color-accent-3: var(--color-sky-3);
@@ -3627,7 +3678,8 @@ a:link {
   --color-accent-11: var(--color-sky-11);
   --color-accent-12: var(--color-sky-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="sky"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="sky"]),
+:root [data-dull-color="sky"] {
   --color-dull-1: var(--color-sky-1);
   --color-dull-2: var(--color-sky-2);
   --color-dull-3: var(--color-sky-3);
@@ -3641,7 +3693,8 @@ a:link {
   --color-dull-11: var(--color-sky-11);
   --color-dull-12: var(--color-sky-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="mint"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="mint"]),
+:root [data-accent-color="mint"] {
   --color-accent-1: var(--color-mint-1);
   --color-accent-2: var(--color-mint-2);
   --color-accent-3: var(--color-mint-3);
@@ -3655,7 +3708,8 @@ a:link {
   --color-accent-11: var(--color-mint-11);
   --color-accent-12: var(--color-mint-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="mint"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="mint"]),
+:root [data-dull-color="mint"] {
   --color-dull-1: var(--color-mint-1);
   --color-dull-2: var(--color-mint-2);
   --color-dull-3: var(--color-mint-3);
@@ -3669,7 +3723,8 @@ a:link {
   --color-dull-11: var(--color-mint-11);
   --color-dull-12: var(--color-mint-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="lime"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="lime"]),
+:root [data-accent-color="lime"] {
   --color-accent-1: var(--color-lime-1);
   --color-accent-2: var(--color-lime-2);
   --color-accent-3: var(--color-lime-3);
@@ -3683,7 +3738,8 @@ a:link {
   --color-accent-11: var(--color-lime-11);
   --color-accent-12: var(--color-lime-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="lime"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="lime"]),
+:root [data-dull-color="lime"] {
   --color-dull-1: var(--color-lime-1);
   --color-dull-2: var(--color-lime-2);
   --color-dull-3: var(--color-lime-3);
@@ -3697,7 +3753,8 @@ a:link {
   --color-dull-11: var(--color-lime-11);
   --color-dull-12: var(--color-lime-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="yellow"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="yellow"]),
+:root [data-accent-color="yellow"] {
   --color-accent-1: var(--color-yellow-1);
   --color-accent-2: var(--color-yellow-2);
   --color-accent-3: var(--color-yellow-3);
@@ -3711,7 +3768,8 @@ a:link {
   --color-accent-11: var(--color-yellow-11);
   --color-accent-12: var(--color-yellow-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="yellow"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="yellow"]),
+:root [data-dull-color="yellow"] {
   --color-dull-1: var(--color-yellow-1);
   --color-dull-2: var(--color-yellow-2);
   --color-dull-3: var(--color-yellow-3);
@@ -3725,7 +3783,8 @@ a:link {
   --color-dull-11: var(--color-yellow-11);
   --color-dull-12: var(--color-yellow-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="amber"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="amber"]),
+:root [data-accent-color="amber"] {
   --color-accent-1: var(--color-amber-1);
   --color-accent-2: var(--color-amber-2);
   --color-accent-3: var(--color-amber-3);
@@ -3739,7 +3798,8 @@ a:link {
   --color-accent-11: var(--color-amber-11);
   --color-accent-12: var(--color-amber-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="amber"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="amber"]),
+:root [data-dull-color="amber"] {
   --color-dull-1: var(--color-amber-1);
   --color-dull-2: var(--color-amber-2);
   --color-dull-3: var(--color-amber-3);
@@ -3753,7 +3813,8 @@ a:link {
   --color-dull-11: var(--color-amber-11);
   --color-dull-12: var(--color-amber-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="orange"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-accent-color="orange"]),
+:root [data-accent-color="orange"] {
   --color-accent-1: var(--color-orange-1);
   --color-accent-2: var(--color-orange-2);
   --color-accent-3: var(--color-orange-3);
@@ -3767,7 +3828,8 @@ a:link {
   --color-accent-11: var(--color-orange-11);
   --color-accent-12: var(--color-orange-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="orange"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-dull-color="orange"]),
+:root [data-dull-color="orange"] {
   --color-dull-1: var(--color-orange-1);
   --color-dull-2: var(--color-orange-2);
   --color-dull-3: var(--color-orange-3);
@@ -3781,7 +3843,7 @@ a:link {
   --color-dull-11: var(--color-orange-11);
   --color-dull-12: var(--color-orange-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-accent-color="dull"] {
+:root [data-accent-color="dull"] {
   --color-accent-1: var(--color-dull-1);
   --color-accent-2: var(--color-dull-2);
   --color-accent-3: var(--color-dull-3);
@@ -3795,7 +3857,7 @@ a:link {
   --color-accent-11: var(--color-dull-11);
   --color-accent-12: var(--color-dull-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-dull-color="accent"] {
+:root [data-dull-color="accent"] {
   --color-dull-1: var(--color-accent-1);
   --color-dull-2: var(--color-accent-2);
   --color-dull-3: var(--color-accent-3);
@@ -3809,28 +3871,34 @@ a:link {
   --color-dull-11: var(--color-accent-11);
   --color-dull-12: var(--color-accent-12);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-body-text-color="text-light"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-body-text-color="text-light"]),
+:root [data-body-text-color="text-light"] {
   --color-text-body-title: var(--color-text-light-title);
   --color-text-body-subtitle: var(--color-text-light-subtitle);
   --color-text-body-body: var(--color-text-light-body);
   --color-text-body-description: var(--color-text-light-description);
   --color-text-body-note: var(--color-text-light-note);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-body-text-color="text-red"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-body-text-color="text-red"]),
+:root [data-body-text-color="text-red"] {
   --color-text-body-title: var(--color-text-red-title);
   --color-text-body-subtitle: var(--color-text-red-subtitle);
   --color-text-body-body: var(--color-text-red-body);
   --color-text-body-description: var(--color-text-red-description);
   --color-text-body-note: var(--color-text-red-note);
 }
-._2KPA3I9eXE9r251_-GX_iv [data-body-text-color="text-green"] {
+:root:has(._3zHvvIxS4vSW6Qh5GqLflX[data-body-text-color="text-green"]),
+:root [data-body-text-color="text-green"] {
   --color-text-body-title: var(--color-text-green-title);
   --color-text-body-subtitle: var(--color-text-green-subtitle);
   --color-text-body-body: var(--color-text-green-body);
   --color-text-body-description: var(--color-text-green-description);
   --color-text-body-note: var(--color-text-green-note);
 }
-._1tmKnx6V_8Ez9jIC5eMgat {
+._2KPA3I9eXE9r251_-GX_iv {
+  display: contents;
+}
+._3zHvvIxS4vSW6Qh5GqLflX {
   display: contents;
 }
 ._3BGADF5vKbdAji-Xj65xxm {

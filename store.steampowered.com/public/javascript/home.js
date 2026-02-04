@@ -723,8 +723,54 @@ GHomepage = {
 
 		GDynamicStore.DecorateDynamicItems( $CapTarget );
 
-		GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), 5 );
+		if ( $Parent.hasClass( 'v2' ) )
+		{
+			GHomepage.MainCapCarousel = GHomepage.CreateMainCapCarousel( $J('#home_maincap_v7') );
+		}
+		else
+		{
+			GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), 5 );
+		}
+
 		$Parent.css( 'minHeight', '' );
+	},
+
+	CreateMainCapCarousel: function ( $elContainer )
+	{
+		var fnOnFocus = function( nNewIndex )
+		{
+			this.$elThumbs.removeClass( 'focus' );
+			this.$elItems.removeClass( 'focus' );
+			this.$elItems.removeClass( 'next' );
+			this.$elItems.removeClass( 'prev' );
+
+			const nNextIndex = this.GetNextValidIndex();
+			PreloadImages( this.$elItems[ nNextIndex ] );
+			$J( this.$elItems[ nNextIndex ] ).addClass( 'next' );
+
+			const nPrevIndex = this.GetNextValidIndex( -1 );
+			PreloadImages( this.$elItems[ nPrevIndex ] );
+			$J( this.$elItems[ nPrevIndex ] ).addClass('prev');
+
+			$J( this.$elThumbs[nNewIndex] ).addClass('focus');
+			$J( this.$elItems[nNewIndex] ).addClass('focus');
+			if ( typeof GDynamicStore != 'undefined' && GDynamicStore.m_bLoadComplete ) {
+				GDynamicStore.s_ImpressionTracker.TrackAppearanceIfVisible(this.$elItems[nNewIndex]);
+			}
+		}
+
+		var fnOnBlur = function(  nOldIndex ) {};
+
+		var fnMouseOverThumb = function( index, element )
+		{
+			this.Advance(index);
+		};
+
+		let elLastItem = $elContainer.find( '.carousel_items' ).children().last();
+		elLastItem.addClass( 'prev' );
+		PreloadImages( elLastItem );
+
+		return new CGenericCarousel( $elContainer, 5, fnOnFocus, fnOnBlur, fnMouseOverThumb );
 	},
 
 	GetRecommendationReasons: function( oItem )
@@ -1112,6 +1158,8 @@ GHomepage = {
 		var $CapCtn = $J('<a/>', params );
 		$CapCtn.data('hoverDisableScreenshots', true );
 		GStoreItemData.BindHoverEventsForItem( $CapCtn, rgItem );
+
+		$CapCtn.append( $J( '<div/>', { 'class': 'main_capsule_overlay' } ) );
 
 		var $ImgCtn = $J('<div class="capsule capsule_image_ctn main_capsule"/>');
 		if ( rgItemData.main_capsule_2x )
@@ -2773,16 +2821,18 @@ GHomepage = {
 			oFilterOptions = { ...oFilterOptions, has_discount: true };
 		}
 
-		var rgUnder10Filtered = GHomepage.FilterItemsForDisplay( GHomepage.oDisplayLists.under10, 'home', 4, 12, oFilterOptions );
+		const k_nMinCapsules = 5;
 
-		rgUnder10Filtered.splice( rgUnder10Filtered.length - ( rgUnder10Filtered.length % 4 ) );
-		if ( rgUnder10Filtered.length >= 4 )
+		var rgUnder10Filtered = GHomepage.FilterItemsForDisplay( GHomepage.oDisplayLists.under10, 'home', k_nMinCapsules, 12, oFilterOptions );
+
+		rgUnder10Filtered.splice( rgUnder10Filtered.length - ( rgUnder10Filtered.length % k_nMinCapsules ) );
+		if ( rgUnder10Filtered.length >= k_nMinCapsules )
 		{
 			GHomepage.FillPagedCapsuleCarousel( rgUnder10Filtered, $Parent.find('.carousel_container'), function( oItem, strFeature, rgOptions, nDepth ) {
 				return GHomepage.BuildHomePageCapsule( oItem, 'under10', { 'disable_autosizer': true } );
-			} , 'under10', 4 );
+			} , 'under10', k_nMinCapsules );
 
-			GDynamicStore.MarkAppDisplayed ( rgUnder10Filtered, 4 );
+			GDynamicStore.MarkAppDisplayed ( rgUnder10Filtered, k_nMinCapsules );
 			$Parent.show();
 		}
 	},

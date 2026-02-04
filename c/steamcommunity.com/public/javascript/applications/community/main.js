@@ -99,6 +99,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        RootDataAttributes: "_3zHvvIxS4vSW6Qh5GqLflX",
+        Root: "_2KPA3I9eXE9r251_-GX_iv",
+        AfterDataAttributes: "_3BGADF5vKbdAji-Xj65xxm",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         FocusRingRoot: "_3FIjYetykQsFYR08l1v7Ls",
         FocusRing: "_1wPplsegQqCoe06wXPhzKT",
         flash: "_1RqM3Kl3-lPbdsdw6xcEm9",
@@ -572,6 +579,7 @@
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
         SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
         SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
+        JumpToButtonCtn: "_19bDhRwBW1auKJVn5jamrh",
         JumpToButton: "c4K67QJ5cG4Zr1eb4H_Fu",
         QACtn: "_337X4KlsU9k5t9s423wb_I",
         SaleSectionSubtitle: "_2rIaWN5LbF3muB3D2A-q5k",
@@ -936,7 +944,6 @@
             () => ({
               country: _._.COUNTRY,
               language: _._.LANGUAGE,
-              realm: _._.EREALM,
             }),
             [],
           );
@@ -1490,7 +1497,7 @@
       class _ {
         constructor(_, _, _, _) {
           (this.m_rgChildNavTrees = []),
-            (this.m_bIsMounted = !1),
+            (this.m_valueIsMounted = (0, _._)(!1)),
             (this.m_bIsEnabled = !1),
             (this.m_onActivateCallbacks = new _._()),
             (this.m_onDeactivateCallbacks = new _._()),
@@ -1561,7 +1568,7 @@
           return _.OnMount(_), () => _.OnUnmount();
         }
         OnChildActivated(_) {
-          this.m_bIsMounted &&
+          this.m_valueIsMounted.Value &&
             this.m_Controller.OnGamepadNavigationTreeFocused(this, _);
         }
         GetLastFocusedNode() {
@@ -1625,21 +1632,25 @@
         BIsEnabled() {
           return this.m_bIsEnabled;
         }
+        get SubscribableIsMounted() {
+          return this.m_valueIsMounted;
+        }
         BIsActive() {
           return (
-            this.m_bIsMounted &&
+            this.m_valueIsMounted.Value &&
             (this.m_Controller.IsActiveNavTree(this) ||
               this.m_Controller.IsActiveFocusNavTree(this))
           );
         }
         BIsActiveFocus() {
           return (
-            this.m_bIsMounted && this.m_Controller.IsActiveFocusNavTree(this)
+            this.m_valueIsMounted.Value &&
+            this.m_Controller.IsActiveFocusNavTree(this)
           );
         }
         BIsActiveWithinContext() {
           return (
-            this.m_bIsMounted &&
+            this.m_valueIsMounted.Value &&
             (this.m_context.m_LastActiveNavTree == this ||
               this.m_context.m_LastActiveFocusNavTree == this)
           );
@@ -1652,12 +1663,12 @@
           const _ = this.m_Root.Element;
           (_.__nav_tree = this),
             _.__nav_wrapper && _.__nav_wrapper.BindTree(this),
-            (this.m_bIsMounted = !0);
+            this.m_valueIsMounted.Set(!0);
           const _ = this.m_ParentNavTree
             ? this.m_ParentNavTree.AddChildNavTree(this)
             : void 0;
           return () => {
-            (this.m_bIsMounted = !1), _ && __webpack_require__();
+            this.m_valueIsMounted.Set(!1), _ && __webpack_require__();
           };
         }
         SetIsEnabled(_) {
@@ -2059,6 +2070,9 @@
             this.m_FocusChangedCallbacks.Dispatch(_, __webpack_require__, _);
           }
         }
+        get NavigationSourceGlyphInfo() {
+          return this.m_controller.NavigationSourceGlyphInfo;
+        }
       }
       const _ = new _._("FocusNavigation").Debug,
         _ = new _._("FocusNavigation").Assert,
@@ -2096,6 +2110,10 @@
                   _._.KEYBOARD_SIMULATOR,
             )),
             (this.m_bShowDebugFocusRing = (0, _._)(!1)),
+            (this.m_glyphInfo = (0, _._)({
+              nControllerType: 4,
+              nControllerStyle: 100,
+            })),
             (this.m_bRestoringHistory = !1),
             (this.m_fnGamepadEventUpdateBatcher = (_) => _()),
             (window.FocusNavController = this);
@@ -2211,6 +2229,9 @@
         get NavigationSourceSupportsFocus() {
           return this.m_navigationSourceSupportsFocus;
         }
+        get NavigationSourceGlyphInfo() {
+          return this.m_glyphInfo;
+        }
         DispatchVirtualButtonClick(_, _) {
           var _;
           let _;
@@ -2219,8 +2240,28 @@
               null !== (_ = this.GetActiveContext()) && void 0 !== _
                 ? _
                 : this.FindAnActiveContext()),
-            this.OnButtonDown(_, _._.GAMEPAD, -1, void 0, _, _, !0),
-            this.OnButtonUp(_, _._.GAMEPAD, -1, void 0, _, _, !0);
+            this.OnButtonDown(
+              _,
+              _._.GAMEPAD,
+              -1,
+              void 0,
+              void 0,
+              void 0,
+              _,
+              _,
+              !0,
+            ),
+            this.OnButtonUp(
+              _,
+              _._.GAMEPAD,
+              -1,
+              void 0,
+              void 0,
+              void 0,
+              _,
+              _,
+              !0,
+            );
         }
         DispatchVirtualGamepad(_, _) {
           switch (_) {
@@ -2284,7 +2325,7 @@
           }
           return [_, _];
         }
-        ChangeNavigationSource(_, _) {
+        ChangeNavigationSource(_, _, _, _) {
           let _ = this.m_navigationSource.Value,
             _ = _.nLastActiveGamepadIndex;
           return (
@@ -2296,13 +2337,19 @@
               nActiveGamepadIndex: _,
               nLastActiveGamepadIndex: _,
             }),
+            _ &&
+              _ &&
+              this.m_glyphInfo.Set({
+                nControllerType: _,
+                nControllerStyle: _,
+              }),
             _ != _._.MOUSE &&
               (0, _._)("Browser.HideCursorUntilMouseEvent") &&
               SteamClient.Browser.HideCursorUntilMouseEvent(),
             _.eActivationSourceType != _
           );
         }
-        OnButtonActionInternal(_, _, _, _, _, _, _, _) {
+        OnButtonActionInternal(_, _, _, _, _, _, _, _, _, _) {
           var _, _;
           if (this.m_fnCatchAllGamepadInput && this.m_fnCatchAllGamepadInput(_))
             return void (
@@ -2319,7 +2366,7 @@
             _ = _;
           (null != _ && null != _) || ([_, _] = this.GetEventTarget(_, _, _)),
             !(null == _ ? void 0 : _.BIsGamepadInputSuppressed()) || _
-              ? (this.ChangeNavigationSource(_, _),
+              ? (this.ChangeNavigationSource(_, _, _, _),
                 _ &&
                   _(
                     `Firing ${_._[_]} in tree ${null === (_ = null == _ ? void 0 : _.m_LastActiveNavTree) || void 0 === _ ? void 0 : _._} at `,
@@ -2336,11 +2383,11 @@
                   `Suppressing ${_._[_]} input on element ${null == _ ? void 0 : _.className} because tree ${null === (_ = null == _ ? void 0 : _.m_LastActiveNavTree) || void 0 === _ ? void 0 : _._} has it disabled`,
                 );
         }
-        OnButtonDown(_, _, _, _, _, _, _) {
-          this.OnButtonActionInternal(!0, _, _, _, _, _, _, _);
+        OnButtonDown(_, _, _, _, _, _, _, _, _) {
+          this.OnButtonActionInternal(!0, _, _, _, _, _, _, _, _, _);
         }
-        OnButtonUp(_, _, _, _, _, _, _) {
-          this.OnButtonActionInternal(!1, _, _, _, !1, _, _, _);
+        OnButtonUp(_, _, _, _, _, _, _, _, _) {
+          this.OnButtonActionInternal(!1, _, _, _, !1, _, _, _, _, _);
         }
         BatchedUpdate(_) {
           this.m_fnGamepadEventUpdateBatcher(_);
@@ -2668,6 +2715,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
@@ -3383,9 +3431,13 @@
                   _,
                   null,
                   _.createElement(
-                    _,
+                    _._,
                     null,
-                    _.createElement(_, null, _.children),
+                    _.createElement(
+                      _,
+                      null,
+                      _.createElement(_, null, _.children),
+                    ),
                   ),
                 ),
               ),
@@ -3594,6 +3646,189 @@
             (_.LocalizationManifestReady = _),
             (_.g_rgPendingLocManifests = void 0);
         })();
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = "function" == typeof matchMedia ? matchMedia : _,
+          _ = (0, _.useMemo)(() => _(_), [_, _]),
+          [_, _] = (0, _.useState)(!!_ && _.matches);
+        return (
+          (0, _.useEffect)(() => {
+            if (!_) return () => {};
+            function _(_) {
+              _(_.matches);
+            }
+            return (
+              _(_.matches),
+              __webpack_require__.addEventListener("change", _),
+              () => __webpack_require__.removeEventListener("change", _)
+            );
+          }, [_]),
+          _
+        );
+      }
+      function _() {
+        return null;
+      }
+      const _ = ["initial", "sm", "md", "lg"],
+        _ = (0, _.createContext)("lg");
+      function _(_) {
+        const {
+            children: _,
+            breakpoints: __webpack_require__ = {
+              _: 768,
+              _: 940,
+              _: 1240,
+            },
+          } = _,
+          _ = (function (_) {
+            const _ = _(`(min-width: ${_._}px)`),
+              _ = _(`(min-width: ${_._}px)`),
+              _ = _(`(min-width: ${_._}px)`),
+              [_, _] = (0, _.useState)(!0);
+            return (
+              (0, _.useEffect)(() => _(!0), []),
+              _ ? (_ ? "lg" : _ ? "md" : _ ? "sm" : "initial") : "lg"
+            );
+          })(__webpack_require__);
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _,
+        );
+      }
+      function _(_) {
+        const { formFactor: _, children: __webpack_require__ } = _;
+        return _
+          ? _.createElement(
+              _.Provider,
+              {
+                value: _,
+              },
+              __webpack_require__,
+            )
+          : _.createElement(_.Fragment, null, __webpack_require__);
+      }
+      function _() {
+        return (0, _.useContext)(_);
+      }
+      const _ = _.reduce((_, _, _) => ((_[_] = _), _), {});
+      function _(_) {
+        const _ = _();
+        return _[_] >= _[_];
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)({}),
+        _ = (0, _.createContext)(() => {});
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)({});
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _.createElement(
+            _.Provider,
+            {
+              value: __webpack_require__,
+            },
+            _.children,
+          ),
+        );
+      }
+      function _() {
+        return (0, _.useContext)(_);
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = _.memo(function (_) {
+        const {
+          defaultTextSize: _,
+          accentColor: __webpack_require__ = "blue",
+          dullColor: _ = "greyneutral",
+          bodyTextColor: _ = "text-light",
+          breakpoints: _,
+          children: _,
+          zoo: _,
+        } = _;
+        let _;
+        return (
+          _ &&
+            (_ = {
+              "--default-font-size": `var(--text-size-${_})`,
+              "--default-line-height": `var(--line-height-${_})`,
+              "--default-letter-spacing": `var(--letter-spacing-${_})`,
+            }),
+          _.createElement(
+            _,
+            null,
+            _.createElement(
+              _._,
+              {
+                breakpoints: _,
+              },
+              _.createElement(
+                _,
+                null,
+                _.createElement(
+                  "div",
+                  {
+                    className: _()(_.Root, "noOpinionatedGlobalStyles"),
+                    style: _,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      "data-accent-color": __webpack_require__,
+                      "data-dull-color": _,
+                      "data-body-text-color": _,
+                      className: _.RootDataAttributes,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.AfterDataAttributes,
+                      },
+                      _,
+                      !1,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          )
+        );
+      });
+      function _(_) {
+        const { children: _ } = _,
+          { formFactorOverride: __webpack_require__ } = _();
+        return _.createElement(
+          _._,
+          {
+            formFactor: __webpack_require__,
+          },
+          _,
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -4445,35 +4680,56 @@
         bActiveTree: !1,
         bActiveTreeWithinContext: !1,
         bDisableFocusClasses: !1,
+        bIsMounted: !1,
       });
       function _(_) {
+        var _;
         const {
-            tree: _,
-            disableFocusClasses: __webpack_require__ = !1,
+            tree: __webpack_require__,
+            disableFocusClasses: _ = !1,
             children: _,
           } = _,
-          [_, _] = _.useState((null == _ ? void 0 : _.BIsActive()) || !1),
           [_, _] = _.useState(
-            (null == _ ? void 0 : _.BIsActiveWithinContext()) || !1,
-          );
+            (null == __webpack_require__
+              ? void 0
+              : __webpack_require__.BIsActive()) || !1,
+          ),
+          [_, _] = _.useState(
+            (null == __webpack_require__
+              ? void 0
+              : __webpack_require__.BIsActiveWithinContext()) || !1,
+          ),
+          _ =
+            null !==
+              (_ = (0, _._)(
+                null == __webpack_require__
+                  ? void 0
+                  : __webpack_require__.SubscribableIsMounted,
+              )) &&
+            void 0 !== _ &&
+            _;
         _.useEffect(
           () =>
-            _
-              ? (_(_.BIsActive()),
-                _(_.BIsActiveWithinContext()),
-                _.OnActiveStateChangedCallbacks.Register(() => {
-                  _(_.BIsActive()), _(_.BIsActiveWithinContext());
-                }).Unregister)
+            __webpack_require__
+              ? (_(__webpack_require__.BIsActive()),
+                _(__webpack_require__.BIsActiveWithinContext()),
+                __webpack_require__.OnActiveStateChangedCallbacks.Register(
+                  () => {
+                    _(__webpack_require__.BIsActive()),
+                      _(__webpack_require__.BIsActiveWithinContext());
+                  },
+                ).Unregister)
               : (_(!1), void _(!1)),
-          [_],
+          [__webpack_require__],
         );
         const _ = _.useMemo(
           () => ({
             bActiveTree: _,
             bActiveTreeWithinContext: _,
-            bDisableFocusClasses: __webpack_require__,
+            bDisableFocusClasses: _,
+            bIsMounted: _,
           }),
-          [_, __webpack_require__, _],
+          [_, _, _, _],
         );
         return _.createElement(
           _.Provider,
@@ -4700,9 +4956,10 @@
               bActiveTree: _,
               bActiveTreeWithinContext: _,
               bDisableFocusClasses: _,
+              bIsMounted: _,
             } = (0, _._)(),
             _ = _ && !_,
-            _ = !_ && (void 0 !== _ || _);
+            _ = _ && !_ && (void 0 !== _ || _);
           return _.createElement(
             _,
             {
@@ -29598,6 +29855,16 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  release_from_early_access_date: {
+                    _: 11,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  release_from_early_access_style: {
+                    _: 12,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                   is_coming_soon: {
                     _: 4,
                     _: _._.readBool,
@@ -30969,11 +31236,6 @@
                     _: 3,
                     _: _._.readString,
                     _: _._.writeString,
-                  },
-                  steam_realm: {
-                    _: 4,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
                   },
                 },
               }),
@@ -36236,15 +36498,14 @@
             [_, _],
           ),
           _ = _ || _,
-          { country: _, language: _, realm: _, bUsePartnerAPI: _ } = _,
+          { country: _, language: _, bUsePartnerAPI: _ } = _,
           _ = _.useMemo(
             () => ({
               country: _,
               language: _,
-              realm: _,
               bUsePartnerAPI: _,
             }),
-            [_, _, _, _],
+            [_, _, _],
           ),
           _ = _.useMemo(() => {
             const _ = __webpack_require__
@@ -36494,17 +36755,14 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       function _(_, _) {
         _.Body().set_context(
           (function (_) {
             const _ = new _._();
             _.bUsePartnerAPI || _.set_country_code(_.country);
-            _.set_language(_.language),
-              _.realm != _._.k_ESteamRealmUnknown && _.set_steam_realm(_.realm);
-            return _;
+            return _.set_language(_.language), _;
           })(_),
         );
       }
@@ -44102,7 +44360,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       function _(_, _) {
@@ -44111,11 +44368,7 @@
       function _(_) {
         let _ = new _._();
         return (
-          _ || _.set_country_code(_._.COUNTRY),
-          _.set_language(_._.LANGUAGE),
-          _._.EREALM != _._.k_ESteamRealmUnknown &&
-            _.set_steam_realm(_._.EREALM),
-          _
+          _ || _.set_country_code(_._.COUNTRY), _.set_language(_._.LANGUAGE), _
         );
       }
       function _(_, _) {
@@ -64966,127 +65219,127 @@
       (_.arabic = () =>
         __webpack_require__
           ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 59457, 19))),
+          .then(__webpack_require__._.bind(__webpack_require__, 61970, 19))),
         (_.brazilian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 95725, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 80308, 19))),
         (_.bulgarian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 96950, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 51715, 19))),
         (_.czech = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 7464, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 66865, 19))),
         (_.danish = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 77788, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 18579, 19))),
         (_.dutch = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 4473, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 46220, 19))),
         (_.english = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 77279, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 3818, 19))),
         (_.finnish = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 54976, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 79841, 19))),
         (_.french = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 95893, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 4586, 19))),
         (_.german = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 31252, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 80916, 19))),
         (_.greek = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 88855, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 98150, 19))),
         (_.hungarian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 79746, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 63839, 19))),
         (_.indonesian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 277, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 2934, 19))),
         (_.italian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 31087, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 20738, 19))),
         (_.japanese = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 81954, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 96509, 19))),
         (_.koreana = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 11316, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 87261, 19))),
         (_.latam = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 96196, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 37429, 19))),
         (_.norwegian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 98703, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 41814, 19))),
         (_.polish = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 22520, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 83187, 19))),
         (_.portuguese = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 76920, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 3519, 19))),
         (_.romanian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 53778, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 10765, 19))),
         (_.russian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 54006, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 62391, 19))),
         (_.sc_schinese = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 70684, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 2525, 19))),
         (_.schinese = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 84421, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 99774, 19))),
         (_.spanish = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 92687, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 42082, 19))),
         (_.swedish = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 5358, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 52747, 19))),
         (_.tchinese = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 382, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 56997, 19))),
         (_.thai = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 70191, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 90392, 19))),
         (_.turkish = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 66447, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 27194, 19))),
         (_.ukrainian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 75725, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 38396, 19))),
         (_.vietnamese = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 68930, 19)));
+            .then(__webpack_require__._.bind(__webpack_require__, 88157, 19)));
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
@@ -77085,6 +77338,7 @@
             onMiddleButton: _,
             bAlertDialog: _,
             bProgressDialog: _,
+            focusButton: _,
             children: _,
             ..._
           } = _,
@@ -77095,6 +77349,7 @@
           strOKText: _,
           onCancel: _(_.onCancel),
           strCancelText: _,
+          focusButton: _,
         });
         _
           ? (_ = void 0)

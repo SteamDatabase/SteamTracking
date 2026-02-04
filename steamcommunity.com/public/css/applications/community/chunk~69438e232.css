@@ -537,6 +537,7 @@ html.touch ._3NbZqMjO0na446Hl2elpae ._1gTs9_O1m2-Sibih5GJ43d,
   background: linear-gradient(to bottom, #0000006e 5%, #000000 95%);
   border-top-right-radius: 5px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  margin: 0 8px;
 }
 .ScrollSnapCarousel ._2hhNOdcC6yLwL_rugP3YLf.PZY_7wH_NY7OgzH9MBiB8 {
   width: 80vw;
@@ -1902,7 +1903,10 @@ html.touch ._3NbZqMjO0na446Hl2elpae ._1gTs9_O1m2-Sibih5GJ43d,
 }
 ._2xO8H8kHMGocbbjupWJ7Nt {
   width: 100%;
+  max-width: max-content;
   display: block;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 }
 ._2erfWpFrn1tZTPEbq97SuW {
   display: flex;

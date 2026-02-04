@@ -3158,7 +3158,7 @@
     },
     13899: (e, t, a) => {
       "use strict";
-      a.d(t, { u: () => f, z: () => I });
+      a.d(t, { u: () => b, z: () => M });
       var n = a(69001),
         r = a(25918),
         i = a(65946),
@@ -3169,16 +3169,15 @@
         d = a.n(c),
         u = a(99637),
         m = a(76684),
-        _ = a(32754),
-        p = a(52038),
-        g = a(61859),
-        v = a(27543),
-        h = a(78327),
-        S = a(10282),
-        y = a.n(S),
-        E = a(61098),
-        b = a(26408);
-      function f(e) {
+        _ = a(52038),
+        p = a(61859),
+        g = a(27543),
+        v = a(78327),
+        h = a(10282),
+        S = a.n(h),
+        y = a(61098),
+        E = a(26408);
+      function b(e) {
         const { editModel: t, bHideEndRange: a } = e,
           [n, r] = (0, i.q3)(() => [
             t.GetEventModel().BIsVisibleEvent(),
@@ -3188,7 +3187,7 @@
         return s.createElement(
           s.Fragment,
           null,
-          s.createElement(T, { editModel: t }),
+          s.createElement(B, { editModel: t }),
           !a &&
             s.createElement(
               "div",
@@ -3196,15 +3195,15 @@
               s.createElement(
                 "div",
                 { className: d().EventEditorTextTitle },
-                (0, g.we)("#EventEditor_EndEvent_Title"),
+                (0, p.we)("#EventEditor_EndEvent_Title"),
               ),
               Boolean(o)
-                ? s.createElement(B, { editModel: t })
-                : s.createElement(w, { editModel: t }),
+                ? s.createElement(C, { editModel: t })
+                : s.createElement(f, { editModel: t }),
             ),
         );
       }
-      function w(e) {
+      function f(e) {
         const { editModel: t } = e,
           a = new Array(),
           r = new Array();
@@ -3212,7 +3211,7 @@
           label: s.createElement(
             "div",
             { key: "durtypehour" },
-            (0, g.we)("#EventEditor_Hour"),
+            (0, p.we)("#EventEditor_Hour"),
           ),
           data: n.IT.k_EHour,
         }),
@@ -3220,7 +3219,7 @@
             label: s.createElement(
               "div",
               { key: "durtypeday" },
-              (0, g.we)("#EventEditor_Day"),
+              (0, p.we)("#EventEditor_Day"),
             ),
             data: n.IT.k_EDay,
           }),
@@ -3228,7 +3227,7 @@
             label: s.createElement(
               "div",
               { key: "durtypeweek" },
-              (0, g.we)("#EventEditor_Week"),
+              (0, p.we)("#EventEditor_Week"),
             ),
             data: n.IT.k_EWeek,
           }),
@@ -3236,7 +3235,7 @@
             label: s.createElement(
               "div",
               { key: "durtypehours" },
-              (0, g.we)("#EventEditor_Hours"),
+              (0, p.we)("#EventEditor_Hours"),
             ),
             data: n.IT.k_EHour,
           }),
@@ -3244,7 +3243,7 @@
             label: s.createElement(
               "div",
               { key: "durtypedays" },
-              (0, g.we)("#EventEditor_Days"),
+              (0, p.we)("#EventEditor_Days"),
             ),
             data: n.IT.k_EDay,
           }),
@@ -3252,11 +3251,11 @@
             label: s.createElement(
               "div",
               { key: "durtypeweeks" },
-              (0, g.we)("#EventEditor_Weeks"),
+              (0, p.we)("#EventEditor_Weeks"),
             ),
             data: n.IT.k_EWeek,
           });
-        const [o, c, _, v, h, S, f] = (0, i.q3)(() => [
+        const [o, c, g, v, h, b, f] = (0, i.q3)(() => [
             t.GetEndTimeEditChoice() == n.Kl.k_EDuration,
             t.GetEndTimeEditChoice() == n.Kl.k_ESpecified,
             t.GetEndEditDurationValue(),
@@ -3265,22 +3264,22 @@
             t.GetLatestEndTimeForEdit(),
             t.GetAllTags(),
           ]),
-          w = _ > 1,
+          w = g > 1,
           C = (0, i.q3)(() => t.ComputeDurationBasedRoundedEndTime()),
-          B = (0, E.mv)(f);
+          B = (0, y.mv)(f);
         return s.createElement(
           "div",
           {
-            className: (0, p.A)(d().FlexColumnContainer, y().TimeRowContainer),
+            className: (0, _.A)(d().FlexColumnContainer, S().TimeRowContainer),
           },
           s.createElement(
             "div",
             { className: d().EventEditorTextSubTitle },
-            (0, g.we)("#EventEditor_EndEvent_Subtitle2"),
+            (0, p.we)("#EventEditor_EndEvent_Subtitle2"),
           ),
           s.createElement(
             "div",
-            { className: (0, p.A)(d().FlexRowContainer, d().RadioOption) },
+            { className: (0, _.A)(d().FlexRowContainer, d().RadioOption) },
             s.createElement("input", {
               type: "radio",
               name: "EndDateRadio",
@@ -3292,19 +3291,19 @@
             s.createElement(
               "label",
               { htmlFor: "EventEditor_EndEvent_EndDropDown" },
-              (0, g.we)("#EventEditor_EndEvent_EndDropDown"),
+              (0, p.we)("#EventEditor_EndEvent_EndDropDown"),
             ),
           ),
           o &&
             s.createElement(
               "div",
-              { className: y().TimeRowDropDown },
+              { className: S().TimeRowDropDown },
               s.createElement(
                 "div",
                 {
-                  className: (0, p.A)(
+                  className: (0, _.A)(
                     "EndDateAmount_Ctn",
-                    y().EndDateAmountCtn,
+                    S().EndDateAmountCtn,
                   ),
                 },
                 s.createElement(
@@ -3315,7 +3314,7 @@
                     min: "1",
                     max: "31",
                     step: "1",
-                    value: _,
+                    value: g,
                     onChange: (e) =>
                       t.SetEndEditDurationValue(
                         Number.parseInt(e.target.value),
@@ -3332,8 +3331,8 @@
               C &&
                 s.createElement(
                   "div",
-                  { className: y().EndRound },
-                  (0, g.PP)(
+                  { className: S().EndRound },
+                  (0, p.PP)(
                     "#EventEditor_EndEvent_EndDropDown_Round",
                     s.createElement(m.K4, {
                       bSingleLine: !0,
@@ -3345,7 +3344,7 @@
             ),
           s.createElement(
             "div",
-            { className: (0, p.A)(d().FlexRowContainer, d().RadioOption) },
+            { className: (0, _.A)(d().FlexRowContainer, d().RadioOption) },
             s.createElement("input", {
               type: "radio",
               name: "EndDateRadio",
@@ -3360,7 +3359,7 @@
               s.createElement(
                 "span",
                 null,
-                (0, g.we)("#EventEditor_EndEvent_Specified"),
+                (0, p.we)("#EventEditor_EndEvent_Specified"),
               ),
             ),
           ),
@@ -3368,35 +3367,35 @@
             s.createElement(
               "div",
               {
-                className: (0, p.A)(
+                className: (0, _.A)(
                   "EndDateSpecific_Ctn",
-                  y().TimeRowDropDown,
-                  y().EndDateSpecificCtn,
+                  S().TimeRowDropDown,
+                  S().EndDateSpecificCtn,
                 ),
               },
               s.createElement(
                 "div",
                 { className: d().EventEditorTextSubTitle },
-                (0, g.we)("#EventEditor_EndDate"),
-                s.createElement(b.o, {
-                  tooltip: (0, g.we)("#EventEditor_EndDate_ttip"),
+                (0, p.we)("#EventEditor_EndDate"),
+                s.createElement(E.o, {
+                  tooltip: (0, p.we)("#EventEditor_EndDate_ttip"),
                 }),
               ),
               s.createElement(u.K, {
                 strDescription: "",
                 nEarliestTime: h,
-                nLatestTime: S,
+                nLatestTime: b,
                 fnGetTimeToUpdate: t.GetEventEndTime,
                 fnSetTimeToUpdate: t.SetEventEndTime,
                 fnIsValidDateTime: () => {
                   const e = t.IsValidEndTimeForEdit();
-                  return !0 === e ? I(null, t.GetEventEndTime(), B) : e;
+                  return !0 === e ? M(null, t.GetEventEndTime(), B) : e;
                 },
               }),
             ),
         );
       }
-      function C(e) {
+      function w(e) {
         const {
             eventVisibilityStartTime: t,
             eventStartTime: a,
@@ -3409,35 +3408,54 @@
             a > r
               ? "#EventEditor_EventVisibleButWillStartFuture"
               : "#EventEditor_EventVisibleAndStarted";
-          i = (0, g.PP)(
+          i = (0, p.PP)(
             e,
-            s.createElement(m.K4, { dateAndTime: a, bSingleLine: !0 }),
+            s.createElement(
+              "strong",
+              null,
+              s.createElement(m.K4, { dateAndTime: a, bSingleLine: !0 }),
+            ),
           );
         } else if (!n && (a === t || t < 1)) {
           const e =
             r >= a
               ? "#EventEditor_EventStartedAndPublished"
               : "#EventEditor_EventStartedAndPublishedFuture";
-          i = (0, g.PP)(
+          i = (0, p.PP)(
             e,
-            s.createElement(m.K4, { dateAndTime: a, bSingleLine: !0 }),
+            s.createElement(
+              "strong",
+              null,
+              s.createElement(m.K4, { dateAndTime: a, bSingleLine: !0 }),
+            ),
           );
         } else {
           let e = "#EventEditor_EventPublishedThenStarted";
-          t > r
-            ? (e = "#EventEditor_EventPublishedThenStartedBothFuture")
-            : a > r &&
-              (e = "#EventEditor_EventPublishedThenStartedStartFuture"),
-            (i = (0, g.PP)(
+          t === a
+            ? (e = "#EventEditor_EventWasPosted")
+            : t > r
+              ? (e = "#EventEditor_EventPublishedThenStartedBothFuture")
+              : a > r &&
+                (e = "#EventEditor_EventPublishedThenStartedStartFuture"),
+            (i = (0, p.PP)(
               e,
-              s.createElement(m.K4, { dateAndTime: t, bSingleLine: !0 }),
-              s.createElement(m.K4, { dateAndTime: a, bSingleLine: !0 }),
+              s.createElement(
+                "strong",
+                null,
+                s.createElement(m.K4, { dateAndTime: t, bSingleLine: !0 }),
+              ),
+              s.createElement(
+                "strong",
+                null,
+                s.createElement(m.K4, { dateAndTime: a, bSingleLine: !0 }),
+              ),
+              s.createElement("br", null),
             ));
         }
         return s.createElement(
           "div",
           {
-            className: (0, p.A)(
+            className: (0, _.A)(
               d().EventDefaultRowContainer,
               d().EventStartPublic,
             ),
@@ -3445,22 +3463,18 @@
           i,
           " ",
           s.createElement(
-            _.he,
-            {
-              toolTipContent: (0, g.we)(
-                "#EventEditor_EventStartedAndPublished_ttip",
-              ),
-            },
-            " (?)",
+            "div",
+            null,
+            (0, p.we)("#EventEditor_EventStartedAndPublished_ttip"),
           ),
         );
       }
-      const B = (e) => {
+      const C = (e) => {
         const { editModel: t } = e;
         return s.createElement(
           "div",
           {
-            className: (0, p.A)(
+            className: (0, _.A)(
               d().EventDefaultRowContainer,
               d().EventStartPublic,
             ),
@@ -3468,7 +3482,7 @@
           s.createElement(
             "div",
             null,
-            (0, g.PP)(
+            (0, p.PP)(
               "#EventEditor_EventOver",
               s.createElement(m.K4, {
                 dateAndTime: t.GetEventModel().GetEndTimeAndDateUnixSeconds(),
@@ -3478,7 +3492,7 @@
           ),
         );
       };
-      function T(e) {
+      function B(e) {
         const { editModel: t } = e,
           [a, n, r] = (0, i.q3)(() => [
             t.GetCategoryAsType(),
@@ -3494,31 +3508,31 @@
             { className: d().EventEditorTextTitleCtn },
             s.createElement(
               "span",
-              { className: (0, p.A)(d().EventEditorTextTitle, d().FlexGrow) },
+              { className: (0, _.A)(d().EventEditorTextTitle, d().FlexGrow) },
               28 == a
-                ? (0, g.we)("#EventEditor_StartNewsTitle")
-                : (0, g.we)("#EventEditor_StartEvemtTitle"),
+                ? (0, p.we)("#EventEditor_StartNewsTitle")
+                : (0, p.we)("#EventEditor_StartEvemtTitle"),
             ),
             s.createElement(
               "a",
               {
                 href: "https://partner.steamgames.com/doc/marketing/event_tools",
                 className: d().doclink,
-                target: h.TS.IN_CLIENT ? void 0 : "_blank",
+                target: v.TS.IN_CLIENT ? void 0 : "_blank",
               },
-              s.createElement("span", null, (0, g.we)("#EventGeneric_SeeDocs")),
+              s.createElement("span", null, (0, p.we)("#EventGeneric_SeeDocs")),
             ),
           ),
           o
-            ? s.createElement(C, {
+            ? s.createElement(w, {
                 eventVisibilityStartTime: r,
                 eventStartTime: n,
                 bVisibleNow: o,
               })
-            : s.createElement(M, { editModel: t }),
+            : s.createElement(T, { editModel: t }),
         );
       }
-      function M(e) {
+      function T(e) {
         const { editModel: t } = e,
           [a, r, l, c, u] = (0, i.q3)(() => [
             t.GetCategoryAsType(),
@@ -3528,24 +3542,24 @@
             t.GetStartTimeEditChoice() == n.z8.k_ESpecified,
           ]),
           m = !r || r < o.HD.GetTimeNowWithOverride(),
-          _ = (0, i.q3)(() => t.BPublished());
+          g = (0, i.q3)(() => t.BPublished());
         return s.createElement(
           "div",
           {
-            className: (0, p.A)(d().FlexColumnContainer, y().TimeRowContainer),
+            className: (0, _.A)(d().FlexColumnContainer, S().TimeRowContainer),
           },
           s.createElement(
             "div",
             { className: d().EventEditorTextSubTitle },
-            (0, g.we)("#EventEditor_Timezone_ttip"),
+            (0, p.we)("#EventEditor_Timezone_ttip"),
           ),
-          !_ &&
+          !g &&
             s.createElement(
               s.Fragment,
               null,
               s.createElement(
                 "div",
-                { className: (0, p.A)(d().FlexRowContainer, d().RadioOption) },
+                { className: (0, _.A)(d().FlexRowContainer, d().RadioOption) },
                 s.createElement("input", {
                   type: "radio",
                   name: "StartDateRadio",
@@ -3566,14 +3580,14 @@
                     "span",
                     null,
                     28 == a
-                      ? (0, g.we)("#EventEditor_StartNews_Now")
-                      : (0, g.we)("#EventEditor_StartEvent_Now"),
+                      ? (0, p.we)("#EventEditor_StartNews_Now")
+                      : (0, p.we)("#EventEditor_StartEvent_Now"),
                   ),
                 ),
               ),
               s.createElement(
                 "div",
-                { className: (0, p.A)(d().FlexRowContainer, d().RadioOption) },
+                { className: (0, _.A)(d().FlexRowContainer, d().RadioOption) },
                 s.createElement("input", {
                   type: "radio",
                   name: "StartDateRadio",
@@ -3589,32 +3603,32 @@
                     "span",
                     null,
                     28 == a
-                      ? (0, g.we)("#EventEditor_StartNews_Specified")
-                      : (0, g.we)("#EventEditor_StartEvent_Specified"),
+                      ? (0, p.we)("#EventEditor_StartNews_Specified")
+                      : (0, p.we)("#EventEditor_StartEvent_Specified"),
                   ),
                 ),
               ),
             ),
           u &&
-            s.createElement(A, {
+            s.createElement(I, {
               editModel: t,
               nEarliestTime: r,
               nLatestTime: l,
-              bShowIndent: !_,
+              bShowIndent: !g,
             }),
         );
       }
-      function I(e, t, a) {
+      function M(e, t, a) {
         if ((null == a ? void 0 : a.length) > 0)
           for (let n = 0; n < a.length; ++n) {
             const r = a[n];
             if ((e && e < r.event_rt_start) || (t && t < r.event_rt_start))
-              return (0, g.we)(
+              return (0, p.we)(
                 "#EventEditor_Date_OptInBefore",
                 r.localized_event_name,
               );
             if ((e && e >= r.event_rt_end) || (e && t >= r.event_rt_end))
-              return (0, g.we)(
+              return (0, p.we)(
                 "#EventEditor_Date_OptInAfter",
                 r.localized_event_name,
               );
@@ -3626,19 +3640,19 @@
             );
             if ((null == i ? void 0 : i.length) > 0)
               return i[0].localized_block_reason
-                ? (0, g.we)(
+                ? (0, p.we)(
                     "#EventEditor_Date_Blocked",
                     r.localized_event_name,
                     i[0].localized_block_reason,
                   )
-                : (0, g.we)(
+                : (0, p.we)(
                     "#EventEditor_Date_Blocked_Generic",
                     r.localized_event_name,
                   );
           }
         return !0;
       }
-      function A(e) {
+      function I(e) {
         const {
             editModel: t,
             nEarliestTime: a,
@@ -3647,16 +3661,16 @@
           } = e,
           [l, c] = (0, i.q3)(() => [t.GetCategoryAsType(), t.GetAllTags()]),
           m = (0, o.f1)(),
-          _ = (0, E.mv)(c),
-          h = (0, v.rQ)(l),
-          S = a && a > m ? a : m;
+          v = (0, y.mv)(c),
+          h = (0, g.rQ)(l),
+          E = a && a > m ? a : m;
         return s.createElement(
           "div",
-          { className: r ? y().TimeRowDropDown : "" },
+          { className: r ? S().TimeRowDropDown : "" },
           s.createElement(
             "div",
             { className: d().EventEditorTextSubTitle },
-            (0, g.we)(
+            (0, p.we)(
               h
                 ? "#EventEditor_StartEvent_Scheduled"
                 : "#EventEditor_StartEvent_Post_Scheduled",
@@ -3665,14 +3679,14 @@
           s.createElement(
             "div",
             {
-              className: (0, p.A)(
+              className: (0, _.A)(
                 d().FlexColumnContainer,
-                y().TimeRowContainer,
+                S().TimeRowContainer,
               ),
             },
             s.createElement(u.K, {
-              strDescription: (0, g.we)("#EventEditor_Starts"),
-              nEarliestTime: S,
+              strDescription: (0, p.we)("#EventEditor_Starts"),
+              nEarliestTime: E,
               nLatestTime: n,
               fnGetTimeToUpdate: t.GetEventStartTime,
               fnSetTimeToUpdate: (e) => {
@@ -3680,14 +3694,14 @@
               },
               fnIsValidDateTime: () => {
                 const e = t.IsValidStartTimeForEdit();
-                return !0 === e ? I(t.GetEventStartTime(), null, _) : e;
+                return !0 === e ? M(t.GetEventStartTime(), null, v) : e;
               },
             }),
           ),
-          h && s.createElement(D, { editModel: t }),
+          h && s.createElement(A, { editModel: t }),
         );
       }
-      function D(e) {
+      function A(e) {
         const { editModel: t } = e,
           [a, o, l] = (0, i.q3)(() => [
             t.GetVisibilityPublishingSetup(),
@@ -3705,8 +3719,8 @@
                     s.createElement(
                       "span",
                       {
-                        className: (0, p.A)(
-                          y().EventVisibilityItem,
+                        className: (0, _.A)(
+                          S().EventVisibilityItem,
                           d().RadioOption,
                         ),
                         key: "visibility_radio_" + i,
@@ -3727,11 +3741,11 @@
                       s.createElement(
                         "label",
                         { htmlFor: "visibility_radio_" + i },
-                        (0, g.we)("#EventEditor_Visibility_" + i),
+                        (0, p.we)("#EventEditor_Visibility_" + i),
                       ),
-                      s.createElement(b.o, {
+                      s.createElement(E.o, {
                         className: d().FloatRight,
-                        tooltip: (0, g.we)("#EventEditor_Visibility_ttip_" + i),
+                        tooltip: (0, p.we)("#EventEditor_Visibility_ttip_" + i),
                       }),
                     ),
                   );
@@ -3745,21 +3759,21 @@
           s.createElement(
             "div",
             { className: d().EventEditorTextSubTitle },
-            (0, g.we)("#EventEditor_Visibility_Subtitle"),
+            (0, p.we)("#EventEditor_Visibility_Subtitle"),
           ),
           s.createElement(
             "div",
-            { className: y().VisibilityItems },
+            { className: S().VisibilityItems },
             s.createElement(
               "div",
-              { className: y().VisibilityItemList },
+              { className: S().VisibilityItemList },
               c,
               a == n.Fl.specified_time
                 ? s.createElement(
                     "div",
-                    { className: y().EventPublishTimeCtn },
+                    { className: S().EventPublishTimeCtn },
                     s.createElement(u.K, {
-                      strDescription: (0, g.we)(
+                      strDescription: (0, p.we)(
                         "#EventEditor_Publish_CustomTimeTitle",
                       ),
                       nEarliestTime: l,
@@ -3771,7 +3785,7 @@
                 : s.createElement("input", {
                     type: "text",
                     disabled: !0,
-                    placeholder: (0, g.we)(
+                    placeholder: (0, p.we)(
                       "#EventEditor_Publish_ForCustomPublishTime",
                     ),
                   }),
@@ -20566,6 +20580,7 @@
               controller_category: Number(v) || void 0,
               bUseCreatorHomeApps:
                 36 == (null == r ? void 0 : r.GetEventType()),
+              bAllowDemos: 36 == (null == r ? void 0 : r.GetEventType()),
             };
             if (
               ((l = await C().get(e, {
@@ -34646,8 +34661,7 @@
                 .Body()
                 .context()
                 .set_elanguage((0, Xe.sf)(E.TS.LANGUAGE)),
-              r.Body().context().set_country_code(E.TS.COUNTRY),
-              r.Body().context().set_steam_realm(E.TS.EREALM);
+              r.Body().context().set_country_code(E.TS.COUNTRY);
             for (const t of e) r.Body().add_appids(t);
             if (
               (r.Body().set_flavor(t.strFlavor || "popular"),

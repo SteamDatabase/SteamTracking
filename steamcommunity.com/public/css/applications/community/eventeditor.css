@@ -811,7 +811,6 @@
 }
 ._2uGI1RkZsAgH5FJJPm48Mk {
   display: flex;
-  height: 200px;
 }
 .VbOoix4tAefx_Ubkf3VXl a {
   text-decoration: underline;
@@ -861,7 +860,8 @@
 ._3rgjlem-dIfIrDEOWm6NLp {
   margin-top: 8px;
   padding: 12px;
-  background: #4f5962;
+  background: #4e5362;
+  border-top: 2px solid #3998ec;
   font-size: 16px;
   color: #f5f5f5;
   gap: 6px;

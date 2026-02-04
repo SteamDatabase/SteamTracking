@@ -845,8 +845,8 @@
           },
         },
       );
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       (0, _.createContext)(null);
       function _(_) {
         const { gutter: _ = 0 } = _;
@@ -1006,6 +1006,24 @@
             _,
           );
         };
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, "flow-children": __webpack_require__, ..._ } = _;
+        __webpack_require__ && (_.layout = (0, _._)(__webpack_require__));
+        const { ref: _, node: _ } = (0, _._)(_),
+          _ = (0, _._)(_, _.props?.ref);
+        return _.createElement(
+          _._.Provider,
+          {
+            value: _,
+          },
+          _.cloneElement(_, {
+            ..._.props,
+            ref: _,
+          }),
+        );
+      }
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _(
@@ -1015,9 +1033,13 @@
           },
           _,
         );
-        return _.createElement("div", {
-          ..._,
-        });
+        return _.createElement(
+          _,
+          null,
+          _.createElement("div", {
+            ..._,
+          }),
+        );
       }
       const _ = [
         ..._,

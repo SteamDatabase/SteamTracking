@@ -128,6 +128,7 @@
     69423: (e, r, t) => {
       "use strict";
       t.d(r, {
+        $i: () => q,
         Bt: () => z,
         Ci: () => H,
         FR: () => y,
@@ -140,8 +141,7 @@
         U3: () => N,
         Wx: () => k,
         XB: () => x,
-        XE: () => q,
-        XK: () => A,
+        XK: () => V,
         Y5: () => L,
         YB: () => Z,
         Zz: () => Y,
@@ -152,7 +152,7 @@
         h4: () => X,
         hm: () => O,
         iy: () => j,
-        mP: () => V,
+        mP: () => A,
         nT: () => E,
         oj: () => b,
         tn: () => w,
@@ -729,6 +729,7 @@
           : ["", i, t.strSymbolAndNumberSeparator + t.strSymbol];
       }
       (0, i.Cg)([n.sH], h.prototype, "m_mapOverridesPerPriceKey", void 0),
+        (0, i.Cg)([p.oI], h.prototype, "OverridePrice", null),
         (0, i.Cg)([n.XI], h.prototype, "UpdateOverridesPerPriceKey", null);
       const G = new Map([
         ["USD", "@1"],
@@ -910,11 +911,11 @@
       function N() {
         return h.Get().m_rgKnownPriceKeys;
       }
-      function A(e) {
+      function V(e) {
         let r = h.Get().m_mapPriceKeyDescriptions.get(e);
         return r ? r.strDescription : "";
       }
-      function V(e) {
+      function A(e) {
         return c.useCallback(() => {
           h.Get().DiscardAllLocalPriceOverridesForKey(e);
         }, [e]);
@@ -966,20 +967,7 @@
         return c.useCallback(() => h.Get().DiscardAllLocalPriceOverrides(), []);
       }
       function q() {
-        const e = [],
-          r = c.useRef(new Map());
-        h.Get().m_mapPriceGuidelines.forEach((t, i) => {
-          const a = t.get("USD");
-          e.push(a), r.current.set(a, i);
-        }),
-          e.sort((e, r) => e - r);
-        const t = c.useCallback((e, t) => {
-          const i = r.current.get(t);
-          h.Get()
-            .m_mapPriceGuidelines.get(i)
-            .forEach((r, t) => h.Get().OverridePrice(e, t, r));
-        }, []);
-        return { rgUSDPricesInCents: e, fnApplyGuidelines: t };
+        return h.Get().OverridePrice;
       }
       function z() {
         return c.useCallback(

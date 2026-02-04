@@ -455,16 +455,6 @@ td.rdtYear:hover {
 .wC3_c2yhq3ppKA9AKQoTy .DialogLabel {
   display: flex;
 }
-.wC3_c2yhq3ppKA9AKQoTy a,
-.wC3_c2yhq3ppKA9AKQoTy a.Link {
-  color: #fff;
-  text-decoration: underline dotted #b0e9ff 1px;
-}
-.wC3_c2yhq3ppKA9AKQoTy a:hover,
-.wC3_c2yhq3ppKA9AKQoTy a.Link:hover {
-  text-decoration-style: solid;
-  text-decoration-color: #fff;
-}
 ._3uPTh_ikegl-PIq12cfjJg {
   display: flex;
   flex-direction: row;
@@ -520,6 +510,16 @@ td.rdtYear:hover {
   ._1bjwXvgQa-kJBMijOLS8X5 {
     flex-direction: column;
   }
+}
+._1bjwXvgQa-kJBMijOLS8X5 p a,
+._1bjwXvgQa-kJBMijOLS8X5 p a.Link {
+  color: #fff;
+  text-decoration: underline dotted #b0e9ff 1px;
+}
+._1bjwXvgQa-kJBMijOLS8X5 p a:hover,
+._1bjwXvgQa-kJBMijOLS8X5 p a.Link:hover {
+  text-decoration-style: solid;
+  text-decoration-color: #fff;
 }
 ._1bjwXvgQa-kJBMijOLS8X5 ._1AqrivbzwCs57BXiugqpeA {
   width: 60%;
