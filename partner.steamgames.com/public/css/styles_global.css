@@ -508,6 +508,11 @@ input, select , textarea, button, .likeButton {
 	box-shadow: 1px 1px 0px #39393a;
 	padding: 3px;
 }
+
+select {
+	background-color: #33383d;
+}
+
 input:disabled, select:disabled, textarea:disabled {
     background-color: rgba(0,0,0,0.5);
 		font-family: "Motiva Sans", Sans-serif;
