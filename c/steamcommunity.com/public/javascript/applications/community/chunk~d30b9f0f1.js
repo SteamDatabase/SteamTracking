@@ -1229,6 +1229,28 @@
                     carousel_rows: 1,
                     disable_background: !0,
                   },
+                  {
+                    ..._(),
+                    section_type: "items",
+                    smart_section: !0,
+                    smart_section_type: "all_released",
+                    default_label: "#Sale_default_label_215",
+                    capsules_per_row_array: [4],
+                    carousel_rows: 1,
+                    sale_tag_filter: {
+                      clauses: [
+                        {
+                          type: "Must have",
+                          or_tags: ["[AppType] demo"],
+                        },
+                      ],
+                    },
+                    store_filter: {
+                      type: 7,
+                      value: "demo",
+                    },
+                    disable_background: !0,
+                  },
                 ],
               };
             })(),
