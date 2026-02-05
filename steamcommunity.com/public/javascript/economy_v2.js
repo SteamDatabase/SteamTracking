@@ -53,7 +53,7 @@ function InitInventoryPage( bHasPendingGifts, showAppId, bShowTradableItemsOnly 
 		Filter.InitFilter( $('filter_control') );
 
 	// decide what page we're going to start with
-	// 	priority: hash params > cookie > first non-empty inventory > first inventory
+	// 	priority: hash params > first non-empty inventory > first inventory
 	var oHashParams = ReadInventoryHash( window.location.hash );
 	var oCookieParams = ReadInventoryCookie( GetCookie( 'strInventoryLastContext' ) );
 
@@ -1202,17 +1202,17 @@ CInventory.prototype.BuildItemElement = function( asset, $Item )
 	$Item.append( $Link );
 	this.BindMouseEvents( $Link, $Item, asset );
 
-			if ( description.sealed )
-		{
-			$Item.addClass('provisional_item');
+		if ( description.sealed )
+	{
+		$Item.addClass('provisional_item');
 
-			var $SealedItemBadge = $J( '<div />', {'class': 'provisional_item_badge', 'data-tooltip-text': 'Trade protected items cannot be modified, consumed, or transferred.' } );
-			$Item.append( $SealedItemBadge );
+		var $SealedItemBadge = $J( '<div />', {'class': 'provisional_item_badge', 'data-tooltip-text': 'Trade protected items cannot be modified, consumed, or transferred.' } );
+		$Item.append( $SealedItemBadge );
 
-			// InitInventoryPage runs DisableTooltipMutationObserver, so bind the tooltip manually
-			BindTooltips( $Item, { tooltipCSSClass: 'community_tooltip'} );
-		}
-		
+		// InitInventoryPage runs DisableTooltipMutationObserver, so bind the tooltip manually
+		BindTooltips( $Item, { tooltipCSSClass: 'community_tooltip'} );
+	}
+
 	if ( description.fraudwarnings )
 	{
 		var $FraudWarningIcon = $J( '<div/>', {'class': 'slot_app_fraudwarning' } );
@@ -2913,12 +2913,9 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 		return;
 	}
 
-	if ( !contextid )
+	if ( g_ActiveUser.BIsSingleContextApp( appid ) || !contextid )
 	{
-		if ( g_ActiveUser.BIsSingleContextApp( appid ) )
-			contextid = g_ActiveUser.GetFirstContextForApp( appid ).id;
-		else
-			contextid = APPWIDE_CONTEXT;
+		contextid = g_ActiveUser.rgContextIdsByApp[appid][0];
 	}
 
 	var lastAppId = g_ActiveInventory ? g_ActiveInventory.appid : null;
