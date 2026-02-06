@@ -562,7 +562,7 @@
 "%\n#CPublishedFile_RemoveChild_Response"h\n,CPublishedFile_SetCollectionChildren_Request
 "%\n#CPublishedFile_Unsubscribe_Response">\n#CPublishedFile_CanSubscribe_Request
 "%s" = "%s"\n
-"&\n$CRemoteClient_CancelPairing_Response"i\n/CRemoteClient_RegisterStatusUpdate_Notification
+"&\n$CRemoteClient_CancelPairing_Response"
 "&\n$CShader_ReportExternalBuild_Response2
 "&\n$CStorageDeviceManager_Adopt_Response"?\n$CStorageDeviceManager_Format_Request
 "&\n\fCMsgStopLoad
@@ -580,6 +580,7 @@
 "(\n&CFriendMessages_ResolveReport_Response"u\n1CFriendMessages_DismissSessionNotice_Notification
 "(\n&CGameRecording_StartRecording_Response"7\n$CGameRecording_StopRecording_Request
 "(\n&CParental_SetParentalSettings_Response"7\n
+"(\n&CRemoteClient_GetRecentClients_Request"X\n'CRemoteClient_GetRecentClients_Response
 "(\n&CStorageDeviceManager_GetState_Request"U\n'CStorageDeviceManager_GetState_Response
 ") is not compatible with this reflection object (which is for type "
 ") to start from the outermost scope.
@@ -875,7 +876,6 @@
 "W\n#CInventory_PurchaseFinalize_Request
 "W\n'CGameRecording_ClipCreated_Notification
 "W\n2CGameRecording_OpenOverlayToGamePhase_Notification
-"X\n'CRemoteClient_GetRecentClients_Response
 "X\n1CRemoteClient_UnregisterStatusUpdate_Notification
 "X\n3CContentServerDirectory_GetPeerContentInfo_Response
 "Y\n$CFamilyGroups_GetFamilyGroup_Request
@@ -3516,6 +3516,7 @@ ${LANGUAGE}
 (\v2#.CMsgBluetoothManagerAdapterDetails"8\n*CBluetoothManager_GetDeviceDetails_Request
 (\v2#.CMsgStorageDevicesData.BlockDevice
 (\v2#.CMsgSystemAudioVolume.ChannelEntry
+(\v2#.CRemoteClient_Offline_NotificationH
 (\v2#.CRemoteClient_StartPairing_RequestH
 (\v2#.CSteamTV_HomePageTemplate_GameList
 (\v2#.CSteamTV_HomePageTemplate_Takeover
@@ -5921,7 +5922,7 @@ ${LANGUAGE}
 .CRemoteClient_ClientDetails"g\n
 .CRemoteClient_DeviceDetails
 .CRemoteClient_DeviceDetails"
-.CRemoteClient_DeviceDetails"(\n&CRemoteClient_GetRecentClients_Request"}\n
+.CRemoteClient_DeviceDetails"c\n"CRemoteClient_Offline_Notification
 .CRemoteClient_Task"&\n$CRemoteClient_AddClientTask_Response"f\n#CRemoteClient_TaskList_Notification
 .CRemoteClient_Task"g\n&CRemoteClient_MarkTaskComplete_Request
 .CRemoteHIDMsgH
@@ -6857,7 +6858,7 @@ ${LANGUAGE}
 /data/src/steamUI/gamestream/nvencwrapper.cpp
 /data/src/steamUI/gamestream/vrstreamthread.cpp
 /data/src/steamUI/gamestream/x264wrapper.cpp
-/data/src/steamUI/hardwareupdatecontroller.cpp:287
+/data/src/steamUI/hardwareupdatecontroller.cpp:263
 /data/src/steamUI/installfoldercontroller.cpp
 /data/src/steamUI/ledcontroller.cpp
 /data/src/steamUI/libraryassetcache.cpp
@@ -7089,7 +7090,6 @@ ${LANGUAGE}
 /usr/lib/jupiter-dock-updater/jupiter-dock-updater-mock.sh
 /usr/lib/os-release
 /usr/lib/systemd/system-sleep/modules-reload.sh
-/usr/lib/udev/rules.d/70-steam-jupiter-input.rules
 /usr/local/ssl
 /usr/local/ssl/cert.pem
 /usr/local/ssl/certs
@@ -7182,10 +7182,10 @@ ${LANGUAGE}
 000000001532
 00003333
 00:00:00
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 01/01/00
 0123456789.
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -8526,6 +8526,7 @@ ${LANGUAGE}
 14VideoClip_Stub
 1536
 15000
+1558-AFCM-4577
 15AccountHardware
 15BroadcastClient
 15CBaseGameAction
@@ -10516,6 +10517,7 @@ ${LANGUAGE}
 31ControllerPersonalizationData_t
 31FamilyGroupPendingInviteForUser
 31IGlibObjectManagerEventListener
+32-bit Windows
 32:B\n
 32CBluetoothManager_Forget_Request
 32CBroadcast_WebRTCStopped_Request
@@ -10741,6 +10743,7 @@ ${LANGUAGE}
 34CPublishedFile_RemoveChild_Request
 34CPublishedFile_Unsubscribe_Request
 34CRemoteClient_AllocateSDR_Response
+34CRemoteClient_Offline_Notification
 34CRemoteClient_StartPairing_Request
 34CRemotePlay_SessionStarted_Request
 34CShader_GetBucketManifest_Response
@@ -12838,6 +12841,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
+9Hle|
 9IGv
 9Inventory
 9PE,$
@@ -16792,7 +16796,6 @@ CRemotePlayController::OnRemotePlayTogetherPlayerLeft
 CRemotePlayController::OnStreamingClientConnected
 CRemotePlayController::OnStreamingClientDisconnected
 CRemotePlayController::OnStreamingClientUsedInput
-CRemoteSteamAppClient::OnAppEventStateChange
 CRemoteSteamAppMgr::OnAppEventStateChange
 CRemoteSteamAppMgr::OnRemoteClientAppStateChanged
 CRemoteSteamAppMgr::OnRemoteClientAppUpdateInfoChanged
@@ -19206,6 +19209,7 @@ ENetFakeLocalSystemState
 ENetQOSLevel
 ENewSteamAnnouncementState
 ENotificationSetting
+EOL timestamp set without support link ostype:%d
 EOSType
 EOverlayToggleBarLocation
 EParentalFeature
@@ -20185,6 +20189,7 @@ FbRK10CUtlStringE
 Feature Disabled
 Feature support: %s: supported
 Feature support: %s: unavailable - property not supported
+Feb  5 2026 21:53:03
 February
 Feel free to add support for more if you need it.
 FetchTranslationFromCrowdIn
@@ -22971,7 +22976,6 @@ J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
 J\nHBF
 J\n\tsummaries
 J\rS%H
-Jan 30 2026 23:26:18
 January
 Japanese
 Javanese
@@ -25023,7 +25027,6 @@ N21CRemotePlayController57CCallbackInternal_OnRemoteClientRemotePlayQualityOverr
 N21CRemotePlayController58CCallbackInternal_OnRemoteClientRemotePlayClearControllersE
 N21CRemotePlayController60CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSetE
 N21CRemotePlayController69CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilizationE
-N21CRemoteSteamAppClient39CCallbackInternal_OnAppEventStateChangeE
 N21CSteamUIAppController16AppDetailsData_tE
 N21CSteamUIAppController21ScreenShotCallbacks_tE
 N21CSteamUIAppController25PendingScreenshotAction_tE
@@ -26221,6 +26224,7 @@ OSSL_STORE_expect
 OSSL_STORE_find
 OSSL_STORE_open
 OSType
+OSTypesAreCompatible
 OSVersion
 OSX1010
 OTHERNAME
@@ -27540,7 +27544,7 @@ Received packet with expected sequence %llu, dropped, failed HMAC calculation.\n
 Received packet with expected sequence %llu, dropped, failed HMAC comparison.\n
 Received packet with expected sequence %llu, dropped, failed decryption.\n
 Received packet with expected sequence %llu, dropped, too short.\n
-Received post-logon callback: L=%u,P=%u,A=%u,R=%u,C=%u,I=%u
+Received post-logon callback: L=%u,P=%u,A=%u,R=%u,C=%u,I=%u,CM=%u
 ReceivedNewGame
 ReceivedP2PCustomSignal failed
 ReceivedP2PCustomSignal returned false!  Bad signal?\n
@@ -28408,7 +28412,6 @@ STREAM_CLOSED
 STREAM_OLDER_PACKET_ID( m_ReliableState.m_nPendingAckID, nPendingAckID )
 STRENGTH
 STRING
-SUBSYSTEMS=="usb", TAG+="uaccess"
 SUITEB128
 SUITEB128C2
 SUITEB128ONLY
@@ -31686,7 +31689,6 @@ WindowMaximized
 WindowRestored
 Windowed
 Windows
-Windows 10 32-bit
 WindowsEndSession
 Wired
 Wireless
@@ -32759,6 +32761,7 @@ Zulu
 \n/CGameServers_ReportServerPingReply_Notification
 \n/CMarketingMessages_MarkMessageSeen_Notification
 \n/CPublishedFile_UpdateContentDescriptors_Request
+\n/CRemoteClient_RegisterStatusUpdate_Notification
 \n/CSiteManagerClient_TrackedPayments_Notification
 \n/CSteamInputService_GyroCalibration_Notification
 \n/CSteamTV_SetBroadcastChannelLinkRegions_Request
@@ -35433,7 +35436,7 @@ bNotifications_EventsAndAnnouncements
 bNotifications_ShowIngame
 bNotifications_ShowMessage
 bNotifications_ShowOnline
-bOSWillBeUnsupported
+bOSIsUnsupported
 bOfficial
 bOptionsButton
 bOutputMuted
@@ -36657,8 +36660,6 @@ compression_method
 compute_file_sha
 compute_key
 computed
-computed/NumNonVRLaunchOptions
-computed/NumVRLaunchOptions
 computer
 conditional group contains more than two branches
 config
@@ -37761,6 +37762,7 @@ disable_client_cursor
 disable_embed_inlining
 disable_intel_hardware_encoding
 disable_license
+disable_polling
 disable_refresh_rate_management
 disable_steam_store
 disable_toasts_in_game
@@ -38073,6 +38075,7 @@ eKeyType == k_ECryptoKeyTypeRSAPublic
 eKeyboardMode
 eMsg != k_EMsgInvalid
 eNULL
+eOSType
 ePlaybackStatus
 ePlayerSlotLEDSetting
 ePrivacy
@@ -39516,7 +39519,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen\n
+ggen*
 ghost_
 gidlist
 gidparentcomment
@@ -44763,6 +44766,7 @@ k_EMsgBoxMonitorReportResponse
 k_EMsgCEGPropStatusDRMSRequest
 k_EMsgCEGPropStatusDRMSResponse
 k_EMsgCMGetSecrets
+k_EMsgCMRemotePlayOffline
 k_EMsgCMRemotePlayReplyPacket
 k_EMsgCMSessionRejected
 k_EMsgCMSetAllowState
@@ -49100,7 +49104,6 @@ originator
 originatorInfo
 originatorSignatureValue
 orkut.com
-osType
 osWK
 os_linux
 os_mac
@@ -50987,6 +50990,8 @@ sPLT chunk requires too much memory
 sPLT chunk too long
 sPLT out of memory
 sPLT: invalid keyword
+sProductSerialNumber
+sProductVendor
 sRGB
 sRawName
 sSteamAPI

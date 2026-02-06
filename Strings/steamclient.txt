@@ -803,7 +803,7 @@
 "%\n#CPlayer_DeletePostedStatus_Response"=\n"CPlayer_GetLastPlayedTimes_Request
 "%\n#CPublishedFile_RemoveChild_Response"h\n,CPublishedFile_SetCollectionChildren_Request
 "%\n#CPublishedFile_Unsubscribe_Response">\n#CPublishedFile_CanSubscribe_Request
-"&\n$CRemoteClient_CancelPairing_Response"i\n/CRemoteClient_RegisterStatusUpdate_Notification
+"&\n$CRemoteClient_CancelPairing_Response"
 "&\n$CShader_ReportExternalBuild_Response2
 "&\n$CStorageDeviceManager_Adopt_Response"?\n$CStorageDeviceManager_Format_Request
 "&\n\fCMsgStopLoad
@@ -820,6 +820,7 @@
 "(\n&CFriendMessages_ResolveReport_Response"u\n1CFriendMessages_DismissSessionNotice_Notification
 "(\n&CGameRecording_StartRecording_Response"7\n$CGameRecording_StopRecording_Request
 "(\n&CParental_SetParentalSettings_Response"7\n
+"(\n&CRemoteClient_GetRecentClients_Request"X\n'CRemoteClient_GetRecentClients_Response
 "(\n&CStorageDeviceManager_GetState_Request"U\n'CStorageDeviceManager_GetState_Response
 ") is not compatible with this reflection object (which is for type "
 ") to start from the outermost scope.
@@ -1119,7 +1120,6 @@
 "W\n#CInventory_PurchaseFinalize_Request
 "W\n'CGameRecording_ClipCreated_Notification
 "W\n2CGameRecording_OpenOverlayToGamePhase_Notification
-"X\n'CRemoteClient_GetRecentClients_Response
 "X\n1CRemoteClient_UnregisterStatusUpdate_Notification
 "X\n3CContentServerDirectory_GetPeerContentInfo_Response
 "Y\n$CFamilyGroups_GetFamilyGroup_Request
@@ -2594,6 +2594,7 @@ $steammessages_parental_objects.proto"
 %s: failed to create a glib context
 %s: failed to create connection
 %s: failed to initialize network device
+%s: failed to launch compat processing job
 %s: failed to remove exising connection, possible duplicates may arise
 %s: failed to retrieve device list from NetworkManager
 %s: failed to retrieve system version details\n
@@ -2640,6 +2641,8 @@ $steammessages_parental_objects.proto"
 %s: suppressing update check due to pending restart: %d
 %s: switch perf overlay level: %d
 %s: system() failed, errno %d\n
+%s: timed out waiting for app state
+%s: timed out waiting for compat manager
 %s: timed out waiting for detected headset, app %u\n
 %s: trying to find modeid that matches: %dx%d@%f
 %s: up to date
@@ -2651,6 +2654,8 @@ $steammessages_parental_objects.proto"
 %s: update check success: available:%d
 %s: using config fan mode: %d
 %s: using current fan mode: %d
+%s: waiting for app state timed out, proceeding anyways but library may be inconsistent.
+%s: waiting for compat manager timed out, proceeding anyways but library may be inconsistent.
 %s: we already know a client update is available
 %s: wrong order chunk index %u in file "%s", depotID %u
 %s:%d %s %.2f %s %s
@@ -3371,7 +3376,6 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
-(1BQQ
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -3995,6 +3999,7 @@ $steammessages_parental_objects.proto"
 (\v2#.CMsgSteamDatagramP2PRoutingSummary"6\n\nERelayMode
 (\v2#.CMsgStorageDevicesData.BlockDevice
 (\v2#.CMsgSystemAudioVolume.ChannelEntry
+(\v2#.CRemoteClient_Offline_NotificationH
 (\v2#.CRemoteClient_StartPairing_RequestH
 (\v2#.CSteamTV_HomePageTemplate_GameList
 (\v2#.CSteamTV_HomePageTemplate_Takeover
@@ -4764,24 +4769,24 @@ $steammessages_parental_objects.proto"
 *18CWebUIMsgLambdaJobIZN12CSteamEngine4InitE12EAccountTypejE53CWebUISteamEngineSearchAppDataCacheByStoreKeywordsJob54CSteamEngine_SearchAppDataCacheByStoreKeywords_Request55CSteamEngine_SearchAppDataCacheByStoreKeywords_ResponseE
 *18CWebUIMsgLambdaJobIZN14CSystemManagerC4EvE31CWebUISystemManagerHibernateJob32CSystemManager_Hibernate_Request33CSystemManager_Hibernate_ResponseE
 *18CWebUIMsgLambdaJobIZN14CSystemManagerC4EvE31CWebUISystemManagerWriteFileJob32CSystemManager_WriteFile_Request33CSystemManager_WriteFile_ResponseE
-*18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE36CWebUISteamInputManagerGetDonglesJob37CSteamInputService_GetDongles_Request38CSteamInputService_GetDongles_ResponseE
-*18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE43CWebUISteamInputManagerGetControllerNameJob44CSteamInputService_GetControllerName_Request45CSteamInputService_GetControllerName_ResponseE
-*18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE46CWebUISteamInputManagerGetTritonPairingInfoJob47CSteamInputService_GetTritonPairingInfo_Request48CSteamInputService_GetTritonPairingInfo_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerEndControllerStateFlowJob46CSteamInputService_ControllerStateFlow_Request47CSteamInputService_ControllerStateFlow_ResponseE
-*18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerPairDongleTritonDockedJob49CSteamInputService_PairDongleTritonDocked_Request50CSteamInputService_PairDongleTritonDocked_ResponseE
-*18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerShouldTritonPairInOobeJob49CSteamInputService_ShouldTritonPairInOobe_Request50CSteamInputService_ShouldTritonPairInOobe_ResponseE
-*18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE49CWebUISteamInputManagerForgetDonglePairingBondJob50CSteamInputService_ForgetDonglePairingBond_Request51CSteamInputService_ForgetDonglePairingBond_ResponseE
-*18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE49CWebUISteamInputManagerForgetTritonPairingBondJob50CSteamInputService_ForgetTritonPairingBond_Request51CSteamInputService_ForgetTritonPairingBond_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE50CWebUISteamInputManagerStartControllerStateFlowJob46CSteamInputService_ControllerStateFlow_Request47CSteamInputService_ControllerStateFlow_ResponseE
-*18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE51CWebUISteamInputManagerPairDongleTritonConnectedJob52CSteamInputService_PairDongleTritonConnected_Request53CSteamInputService_PairDongleTritonConnected_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE54CWebUISteamInputManagerStartGyroSoftwareCalibrationJob50CSteamInputService_GyroSoftwareCalibration_Request51CSteamInputService_GyroSoftwareCalibration_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE55CWebUISteamInputManagerCancelGyroSoftwareCalibrationJob50CSteamInputService_GyroSoftwareCalibration_Request51CSteamInputService_GyroSoftwareCalibration_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE59CWebUISteamInputManagerGetControllerAccessibilityStringsJob57CSteamInputService_ControllerAccessibilityStrings_Request58CSteamInputService_ControllerAccessibilityStrings_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE62CWebUISteamInputManagerWaitInitialControllerStateEnumeratedJob63CSteamInputService_WaitInitialControllerStateEnumerated_Request64CSteamInputService_WaitInitialControllerStateEnumerated_ResponseE
+*18CWebUIMsgLambdaJobIZN17CTritonControllerC4EP16CSteamControllerE36CWebUISteamInputManagerGetDonglesJob37CSteamInputService_GetDongles_Request38CSteamInputService_GetDongles_ResponseE
+*18CWebUIMsgLambdaJobIZN17CTritonControllerC4EP16CSteamControllerE43CWebUISteamInputManagerGetControllerNameJob44CSteamInputService_GetControllerName_Request45CSteamInputService_GetControllerName_ResponseE
+*18CWebUIMsgLambdaJobIZN17CTritonControllerC4EP16CSteamControllerE46CWebUISteamInputManagerGetTritonPairingInfoJob47CSteamInputService_GetTritonPairingInfo_Request48CSteamInputService_GetTritonPairingInfo_ResponseE
+*18CWebUIMsgLambdaJobIZN17CTritonControllerC4EP16CSteamControllerE48CWebUISteamInputManagerPairDongleTritonDockedJob49CSteamInputService_PairDongleTritonDocked_Request50CSteamInputService_PairDongleTritonDocked_ResponseE
+*18CWebUIMsgLambdaJobIZN17CTritonControllerC4EP16CSteamControllerE48CWebUISteamInputManagerShouldTritonPairInOobeJob49CSteamInputService_ShouldTritonPairInOobe_Request50CSteamInputService_ShouldTritonPairInOobe_ResponseE
+*18CWebUIMsgLambdaJobIZN17CTritonControllerC4EP16CSteamControllerE49CWebUISteamInputManagerForgetDonglePairingBondJob50CSteamInputService_ForgetDonglePairingBond_Request51CSteamInputService_ForgetDonglePairingBond_ResponseE
+*18CWebUIMsgLambdaJobIZN17CTritonControllerC4EP16CSteamControllerE49CWebUISteamInputManagerForgetTritonPairingBondJob50CSteamInputService_ForgetTritonPairingBond_Request51CSteamInputService_ForgetTritonPairingBond_ResponseE
+*18CWebUIMsgLambdaJobIZN17CTritonControllerC4EP16CSteamControllerE51CWebUISteamInputManagerPairDongleTritonConnectedJob52CSteamInputService_PairDongleTritonConnected_Request53CSteamInputService_PairDongleTritonConnected_ResponseE
 *18CWebUIMsgLambdaJobIZN5CUserC4EiE29CWebUIUserSaveHardwareInfoJob30CUser_SaveHardwareInfo_Request31CUser_SaveHardwareInfo_ResponseE
 *18CWebUIMsgLambdaJobIZN5CUserC4EiE33CWebUIUserGetSavedHardwareInfoJob34CUser_GetSavedHardwareInfo_Request35CUser_GetSavedHardwareInfo_ResponseE
 *20SteamClientJobLambdaIZN12CUserFriends25GetLocalizedDisplayStringEjP10ClFriend_tEUlvE_E
-*20SteamClientJobLambdaIZN19CRemoteClientDongle28EnsureFirmwareDepotInstalledEvEUlvE_E
+*20SteamClientJobLambdaIZN19CRemoteClientDongle32EnsureDongleDriverDepotInstalledEvEUlvE_E
 *20SteamClientJobLambdaIZN20CRemoteClientManager20StopStreamingSessionEjEUlvE_E
 *20SteamClientJobLambdaIZN20CRemoteClientManager21JoinRemotePlaySessionE8CSteamIDPKcEUlvE_E
 *20SteamClientJobLambdaIZN20CRemoteClientManager28ProcessStreamClientConnectedEj18RemotePlayPlayer_t22ESteamDeviceFormFactorEUlvE_E
@@ -4825,7 +4830,7 @@ $steammessages_parental_objects.proto"
 *23CInternalLambdaWorkItemIZN4CNet24YieldingIPAddrToHostNameE10CIPAddressPcjEUlvE_vE
 *23CInternalLambdaWorkItemIZN4CNet26YieldingHostStringToNetAdrEPKcR10CIPAndPortEUlvE_S3_E
 *23CInternalLambdaWorkItemIZN5CUser12SpawnProcessEPKcS2_S2_7CGameIDS2_jj13ELaunchSourcejRjiEUlvE_vE
-*23CInternalLambdaWorkItemIZZN19CRemoteClientDongle19FirmwareUpdateCheckEvENKUlvE_clEvEUlvE_vE
+*23CInternalLambdaWorkItemIZZN19CRemoteClientDongle23DongleDriverUpdateCheckEvENKUlvE_clEvEUlvE_vE
 *23CInternalLambdaWorkItemIZZN21CNetworkManagerClient23RequestUpdateDeviceDataEjENKUlvE_clEvEUlvE_bE
 *5KS
 *7CUtlMapIPKc8CAutoPtrIN12_GLOBAL__N_115CachedSDRConfigEEi22CDefCaselessStringLessE
@@ -4938,34 +4943,34 @@ $steammessages_parental_objects.proto"
 *ZN16CSteamController23RegisterForIMUJerkEventEjEUlP22IControllerAbstractionE_
 *ZN16CSteamController25UnregisterForIMUJerkEventEjEUlP22IControllerAbstractionE_
 *ZN16CSteamController26SetGyroOneEuroFilterActiveEjbEUlP22IControllerAbstractionE_
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE36CWebUISteamInputManagerGetDonglesJob
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE43CWebUISteamInputManagerGetControllerNameJob
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE46CWebUISteamInputManagerGetTritonPairingInfoJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerEndControllerStateFlowJob
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerPairDongleTritonDockedJob
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerShouldTritonPairInOobeJob
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE49CWebUISteamInputManagerForgetDonglePairingBondJob
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE49CWebUISteamInputManagerForgetTritonPairingBondJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE50CWebUISteamInputManagerStartControllerStateFlowJob
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE51CWebUISteamInputManagerPairDongleTritonConnectedJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE54CWebUISteamInputManagerStartGyroSoftwareCalibrationJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE55CWebUISteamInputManagerCancelGyroSoftwareCalibrationJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE59CWebUISteamInputManagerGetControllerAccessibilityStringsJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE62CWebUISteamInputManagerWaitInitialControllerStateEnumeratedJob
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK37CSteamInputService_GetDongles_RequestR38CSteamInputService_GetDongles_ResponseE6_
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK44CSteamInputService_GetControllerName_RequestR45CSteamInputService_GetControllerName_ResponseE12_
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK46CSteamInputService_ControllerStateFlow_RequestR47CSteamInputService_ControllerStateFlow_ResponseE0_
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK46CSteamInputService_ControllerStateFlow_RequestR47CSteamInputService_ControllerStateFlow_ResponseE_
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK47CSteamInputService_GetTritonPairingInfo_RequestR48CSteamInputService_GetTritonPairingInfo_ResponseE9_
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK49CSteamInputService_PairDongleTritonDocked_RequestR50CSteamInputService_PairDongleTritonDocked_ResponseE5_
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK49CSteamInputService_ShouldTritonPairInOobe_RequestR50CSteamInputService_ShouldTritonPairInOobe_ResponseE7_
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK50CSteamInputService_ForgetDonglePairingBond_RequestR51CSteamInputService_ForgetDonglePairingBond_ResponseE11_
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK50CSteamInputService_ForgetTritonPairingBond_RequestR51CSteamInputService_ForgetTritonPairingBond_ResponseE10_
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK50CSteamInputService_GyroSoftwareCalibration_RequestR51CSteamInputService_GyroSoftwareCalibration_ResponseE2_
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK50CSteamInputService_GyroSoftwareCalibration_RequestR51CSteamInputService_GyroSoftwareCalibration_ResponseE3_
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK52CSteamInputService_PairDongleTritonConnected_RequestR53CSteamInputService_PairDongleTritonConnected_ResponseE4_
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK57CSteamInputService_ControllerAccessibilityStrings_RequestR58CSteamInputService_ControllerAccessibilityStrings_ResponseE1_
-*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK63CSteamInputService_WaitInitialControllerStateEnumerated_RequestR64CSteamInputService_WaitInitialControllerStateEnumerated_ResponseE8_
+*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK63CSteamInputService_WaitInitialControllerStateEnumerated_RequestR64CSteamInputService_WaitInitialControllerStateEnumerated_ResponseE4_
+*ZN17CTritonControllerC4EP16CSteamControllerE36CWebUISteamInputManagerGetDonglesJob
+*ZN17CTritonControllerC4EP16CSteamControllerE43CWebUISteamInputManagerGetControllerNameJob
+*ZN17CTritonControllerC4EP16CSteamControllerE46CWebUISteamInputManagerGetTritonPairingInfoJob
+*ZN17CTritonControllerC4EP16CSteamControllerE48CWebUISteamInputManagerPairDongleTritonDockedJob
+*ZN17CTritonControllerC4EP16CSteamControllerE48CWebUISteamInputManagerShouldTritonPairInOobeJob
+*ZN17CTritonControllerC4EP16CSteamControllerE49CWebUISteamInputManagerForgetDonglePairingBondJob
+*ZN17CTritonControllerC4EP16CSteamControllerE49CWebUISteamInputManagerForgetTritonPairingBondJob
+*ZN17CTritonControllerC4EP16CSteamControllerE51CWebUISteamInputManagerPairDongleTritonConnectedJob
+*ZN17CTritonControllerC4EP16CSteamControllerEUlRK37CSteamInputService_GetDongles_RequestR38CSteamInputService_GetDongles_ResponseE1_
+*ZN17CTritonControllerC4EP16CSteamControllerEUlRK44CSteamInputService_GetControllerName_RequestR45CSteamInputService_GetControllerName_ResponseE6_
+*ZN17CTritonControllerC4EP16CSteamControllerEUlRK47CSteamInputService_GetTritonPairingInfo_RequestR48CSteamInputService_GetTritonPairingInfo_ResponseE3_
+*ZN17CTritonControllerC4EP16CSteamControllerEUlRK49CSteamInputService_PairDongleTritonDocked_RequestR50CSteamInputService_PairDongleTritonDocked_ResponseE0_
+*ZN17CTritonControllerC4EP16CSteamControllerEUlRK49CSteamInputService_ShouldTritonPairInOobe_RequestR50CSteamInputService_ShouldTritonPairInOobe_ResponseE2_
+*ZN17CTritonControllerC4EP16CSteamControllerEUlRK50CSteamInputService_ForgetDonglePairingBond_RequestR51CSteamInputService_ForgetDonglePairingBond_ResponseE5_
+*ZN17CTritonControllerC4EP16CSteamControllerEUlRK50CSteamInputService_ForgetTritonPairingBond_RequestR51CSteamInputService_ForgetTritonPairingBond_ResponseE4_
+*ZN17CTritonControllerC4EP16CSteamControllerEUlRK52CSteamInputService_PairDongleTritonConnected_RequestR53CSteamInputService_PairDongleTritonConnected_ResponseE_
 *ZN18CControllerMapping20CreateDigitalBindingEPK15BindingAction_tPKcP17IconBindingData_tEUlR22ControllerActionData_tE_
 *ZN18CControllerMapping20CreateDigitalBindingEPKc8PresetIdRK10CUtlVectorI6ASetId10CUtlMemoryIS4_EEEUlR22ControllerActionData_tE0_
 *ZN18CControllerMapping20CreateDigitalBindingEPKc8PresetIdRK10CUtlVectorI6ASetId10CUtlMemoryIS4_EEEUlR22ControllerActionData_tE1_
@@ -4979,7 +4984,7 @@ $steammessages_parental_objects.proto"
 *ZN18CSiteLicenseClient36YldStartConnectToSiteLicenseProviderERK10CIPAndPortRK8CSteamIDyE17RawSocketCallback
 *ZN18CSystemPerfManager27OnSystemDisplayStateChangedEP34SystemDisplayManagerStateUpdated_tEUlvE_
 *ZN19CRemoteClientDongle14RunDongleCheckEvEUlvE_
-*ZN19CRemoteClientDongle19FirmwareUpdateCheckEvEUlvE_
+*ZN19CRemoteClientDongle23DongleDriverUpdateCheckEvEUlvE_
 *ZN19CRemoteClientSoftAP19ScheduledStateCheckEvEUlvE_
 *ZN19CRemoteClientSoftAP21NotifySettingsChangedERK10CUtlStringEUlvE_
 *ZN19CRemoteClientSoftAP24SetPairedSSIDAndPasswordERK10CUtlStringS2_EUlvE_
@@ -5014,6 +5019,7 @@ $steammessages_parental_objects.proto"
 *ZN29CRemoteStorageFileSyncContext21EYieldingDownloadFileERK20RemoteFileCacheKey_tEUlP18CHTTPRequestHandleR10CUtlBufferE_
 *ZN31CSteamEngineHTTPResponseHandler5ResetEvEUlP18CHTTPRequestHandleE_
 *ZN4CNet26CallbackDeleteOnCompletionEvE39CUnbufferedSendCallbackDeleteOnComplete
+*ZN5CUser12LogOnOfflineEbEUlvE_
 *ZN5CUserC4EiE29CWebUIUserSaveHardwareInfoJob
 *ZN5CUserC4EiE33CWebUIUserGetSavedHardwareInfoJob
 *ZN5CUserC4EiEUlRK30CUser_SaveHardwareInfo_RequestR31CUser_SaveHardwareInfo_ResponseE_
@@ -6445,7 +6451,7 @@ $steammessages_parental_objects.proto"
 .CRemoteClient_ClientDetails"g\n
 .CRemoteClient_DeviceDetails
 .CRemoteClient_DeviceDetails"
-.CRemoteClient_DeviceDetails"(\n&CRemoteClient_GetRecentClients_Request"}\n
+.CRemoteClient_DeviceDetails"c\n"CRemoteClient_Offline_Notification
 .CRemoteClient_Task"&\n$CRemoteClient_AddClientTask_Response"f\n#CRemoteClient_TaskList_Notification
 .CRemoteClient_Task"g\n&CRemoteClient_MarkTaskComplete_Request
 .CRemoteHIDMsgH
@@ -7162,6 +7168,8 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/controller_mode.cpp
 /data/src/clientdll/controller_modes/gyroenablebutton_util.cpp
 /data/src/clientdll/controller_modes/mode_gyroto2d.cpp
+/data/src/clientdll/controller_modes/mode_gyrotojoystickcamera.cpp
+/data/src/clientdll/controller_modes/mode_gyrotojoystickdeflection.cpp
 /data/src/clientdll/controller_modes/responsecurve.cpp
 /data/src/clientdll/controller_source.cpp
 /data/src/clientdll/controller_sources/controller_source_gyro.cpp
@@ -7169,6 +7177,7 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/controller_sources/controller_source_trackpad.cpp
 /data/src/clientdll/controllerabstraction.cpp
 /data/src/clientdll/controllervirtualsocket.cpp
+/data/src/clientdll/controllerworkitem.cpp
 /data/src/clientdll/controllerxinput_linux.cpp
 /data/src/clientdll/csinterface.cpp
 /data/src/clientdll/depotbuild.cpp
@@ -7196,8 +7205,8 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/music/playbackcontroller.cpp
 /data/src/clientdll/networkdevicemanager.cpp
 /data/src/clientdll/networkdevicemanager_linux.cpp
-/data/src/clientdll/networkdevicemanager_linux.cpp:2533
-/data/src/clientdll/networkdevicemanager_linux.cpp:2798
+/data/src/clientdll/networkdevicemanager_linux.cpp:2534
+/data/src/clientdll/networkdevicemanager_linux.cpp:2799
 /data/src/clientdll/p2pnetworkingsession.cpp
 /data/src/clientdll/peercontentserver.cpp
 /data/src/clientdll/pipewirecontext.cpp
@@ -7244,6 +7253,7 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/systemperfmanager_linux.cpp:1394
 /data/src/clientdll/systemperfmanager_linux.cpp:1520
 /data/src/clientdll/systemperfmanager_linux.cpp:303
+/data/src/clientdll/tritoncontroller.cpp
 /data/src/clientdll/udevcontext.cpp
 /data/src/clientdll/ugcmanager.cpp
 /data/src/clientdll/unified_messages_client.cpp
@@ -7839,8 +7849,12 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 0000000000000000
 00000001
+00003333
 00:00:00
 01/01/00
+0123456789.
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -7992,13 +8006,9 @@ $steammessages_parental_objects.proto"
 100.64.0.0/10
 1000
 1024
-00003333
 10000
 1000000
 10000000
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 10ByteReader
 10CClientJob
 10CClientUGC
@@ -8089,6 +8099,7 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryI23AchievementLookupInfo_tE
 10CUtlMemoryI23ControllerAccountPair_tE
 10CUtlMemoryI23NetConnectPingResults_tE
+10CUtlMemoryI23VRHMDHardwareDetected_tE
 10CUtlMemoryI24ClientServiceMethodReg_tE
 10CUtlMemoryI24EControllerConfigFeatureE
 10CUtlMemoryI24SubscribedWorkshopFile_tE
@@ -8592,6 +8603,7 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN18CUtlSparse2DVectorIsyE14CUtlSparseNodeEE
 10CUtlMemoryIN20CRemoteClientManager14ResendStatus_tEE
 10CUtlMemoryIN20CRemoteClientManager20RemoteClientWaitUI_tEE
+10CUtlMemoryIN20CRemoteClientManager22StatusUpdateListener_tEE
 10CUtlMemoryIN20CRemoteClientManager24StreamingSessionRecord_tEE
 10CUtlMemoryIN20CRemoteClientManager26QueuedSteamToSteamPacket_tEE
 10CUtlMemoryIN21CP2PNetworkingSession16IncomingPacket_tEE
@@ -8945,6 +8957,7 @@ $steammessages_parental_objects.proto"
 10CUtlVectorI23AchievementLookupInfo_t10CUtlMemoryIS0_EE
 10CUtlVectorI23ControllerAccountPair_t10CUtlMemoryIS0_EE
 10CUtlVectorI23NetConnectPingResults_t10CUtlMemoryIS0_EE
+10CUtlVectorI23VRHMDHardwareDetected_t10CUtlMemoryIS0_EE
 10CUtlVectorI24ClientServiceMethodReg_t10CUtlMemoryIS0_EE
 10CUtlVectorI24EControllerConfigFeature10CUtlMemoryIS0_EE
 10CUtlVectorI24SubscribedWorkshopFile_t10CUtlMemoryIS0_EE
@@ -9098,6 +9111,7 @@ $steammessages_parental_objects.proto"
 10CUtlVectorIN18CSiteLicenseClient19WalletFundPayment_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN20CRemoteClientManager14ResendStatus_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN20CRemoteClientManager20RemoteClientWaitUI_tE10CUtlMemoryIS1_EE
+10CUtlVectorIN20CRemoteClientManager22StatusUpdateListener_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN20CRemoteClientManager24StreamingSessionRecord_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN20CRemoteClientManager26QueuedSteamToSteamPacket_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN21CP2PNetworkingSession16IncomingPacket_tE10CUtlMemoryIS1_EE
@@ -10794,6 +10808,7 @@ $steammessages_parental_objects.proto"
 17CStreamReaderBase
 17CStreamVideoLimit
 17CSystemSuspendMsg
+17CTritonController
 17CUploadShadersJob
 17CUtlPriorityQueueIN21CScheduledFunctionMgr15ScheduledItem_tEPFbRKS1_S3_E32CDefUtlPriorityQueueSetIndexFuncIS1_EE
 17CUtlPriorityQueueIN7CJobMgr12JobTimeout_tEPFbRKS1_S3_ENS0_15TimeoutSetIndexEE
@@ -10947,10 +10962,10 @@ $steammessages_parental_objects.proto"
 18CScheduledFunctionI14CUDPConnectionE
 18CScheduledFunctionI14CUserShortcutsE
 18CScheduledFunctionI16CScreenSaverDBusE
-18CScheduledFunctionI16CSteamControllerE
 18CScheduledFunctionI16CUserMatchmakingE
 18CScheduledFunctionI16CUserScreenshotsE
 18CScheduledFunctionI17CDepotDownloadMgrE
+18CScheduledFunctionI17CTritonControllerE
 18CScheduledFunctionI18COpenSSLConnectionE
 18CScheduledFunctionI18CSiteLicenseClientE
 18CScheduledFunctionI19CRemoteClientDongleE
@@ -11328,11 +11343,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-20000
-2000000
 200M
 2019
 2048
+20000
+2000000
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -11519,6 +11534,7 @@ $steammessages_parental_objects.proto"
 21CHTMLPageSecurityInfo
 21CHTTPClientConnection
 21CHTTPClientWorkThread
+21CHapticScriptWorkItem
 21CInternalCallbackBase
 21CLoadLocalToolListJob
 21CLogFileAsyncCallback
@@ -13631,6 +13647,7 @@ $steammessages_parental_objects.proto"
 34CPublishedFile_Unsubscribe_Request
 34CRemoteClientJobHandleProofRequest
 34CRemoteClient_AllocateSDR_Response
+34CRemoteClient_Offline_Notification
 34CRemoteClient_StartPairing_Request
 34CRemotePlay_SessionStarted_Request
 34CSetDualSenseTriggerEffectWorkItem
@@ -17877,7 +17894,7 @@ BReceiveFile
 BRecvCryptoHandshake
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
 BRemoteClientCanPairViaWifiAP
-BRemoteClientCanSteamVR
+BRemoteClientCanStreamSteamVR
 BRemoteClientConnectedToWifiAP
 BRemoteClientHasLocalConnection
 BRemoteClientHasStreamingEnabled
@@ -18844,6 +18861,9 @@ CClientJobPersonaState clan
 CClientJobPersonaState individual
 CClientJobPersonaState self
 CClientJobPostLogon
+CClientJobPostLogon: Failed to launch compat processing job
+CClientJobPostLogon: failed to process compat data. Game install state may be inconsistent.
+CClientJobPostLogon: timed out waiting for compat manager
 CClientJobPrecacheAchievementIcons
 CClientJobPrepareForSuspend
 CClientJobPublishedFileUpdated
@@ -19065,7 +19085,6 @@ CCompatManager::InternalSpecifyCompatTool
 CCompatManager::LoadPlatformOverrideCache
 CCompatManager::OnAppConfigInitialized
 CCompatManager::OnAppEventStateChange
-CCompatManager::OnAppManagerComplete
 CCompatManager::OnLicensesUpdated
 CCompatManager::OnPostLogonState
 CCompatManager::RunCacheOffJob
@@ -21307,7 +21326,6 @@ CUserStats::GetNumAchievedAchievements
 CUserStats::GetNumAchievements
 CUserStats::LoadStatsFromDisk( %d ) failed to deserialize stats file\n
 CUserStats::RequestCurrentStats
-CUserStats::SaveStatsToDisk( %d ) failed to write schema data to disk\n
 CUserStats::SaveStatsToDisk( %d ) failed to write stats data to disk for user %s\n
 CUserWorkshopItems::GetSubscribedItems: appID mismatch : requested %u, in file %u
 CUser_OnRemoteClientConnected_AssociateUser
@@ -21880,8 +21898,8 @@ City
 CityName
 ClChatMember
 ClUserGameStats
+ClUserGameStats static
 ClUserGameStats::InitFromKV
-ClUserGameStatsSchema::InitFromBuffer
 Claiming protocol V%u now, but earlier was using V%u
 Clan
 ClanData
@@ -24274,6 +24292,7 @@ Error: DisplayManagerInit: failed to query version
 Error: DisplayManagerInit: unsupported version
 Error: Failed to determine mangoapp config path
 Error: Received data from a controller which isn't in Connected State!\n
+Error: Waiting for compat in post-logon timed out
 Error: failed to disable wireless power management: %d\n
 Error: failed to set TDP limit
 Error: pipewire: failed to initialize object: id:%u type:%s/%d
@@ -25403,6 +25422,7 @@ GSc\v3
 GScheduledFunctionMgr()
 GSteamClient()
 GSteamEngine()
+GSteamEngine().GetAppManager().BHasLoadAppStateJobRan()
 GSteamEngine().GetCellID() < 500
 GSteamEngine().GetConnectedUniverse() > k_EUniverseInvalid && GSteamEngine().GetConnectedUniverse() < k_EUniverseMax
 GSteamEngine().IsEngineThreadRunning()
@@ -27413,6 +27433,7 @@ InitBroadcastAudio
 InitBroadcastVideo
 InitDepotBuild
 InitFilterText
+InitFromBuffer
 InitGameServer failed but didn't provide an error message why
 InitGameServer failed.  %s\n
 InitGameServerSerialized
@@ -28416,6 +28437,7 @@ LaunchAppResult
 LaunchAppResultRequestLaunchOption
 LaunchApplication
 LaunchGameMsgReceived_t
+LaunchLogOnCompatProcessingJob
 LaunchOptions
 LaunchShortcut
 Launched
@@ -28535,7 +28557,6 @@ LoadLocalFileInfoCache
 LoadModule
 LoadRemotePlayControllerPersonalizationVDF
 LoadShortcuts: rejecting attempt to load shortcuts: invalid account ID
-LoadStatsFromDisk called from invalid user: %s
 LoadTGA: Only type 2 and 10 targa RGB images supported\n
 Loaded %u apps from install folder "%s".
 Loaded Steam library folders configuration: %s
@@ -28609,6 +28630,7 @@ LogOn() called; not connected yet, scheduling connection. Schedule init returned
 LogOn() called; we were connected, but already sent logoff, aborted existing connection, scheduling new connection and logon. Schedule init returned %d
 LogOnAnonymous
 LogOnOffline
+LogOnOffline: timed out waiting for library dependencies
 Logged In Elsewhere
 Logged Off
 Logged On
@@ -31401,7 +31423,6 @@ OnAppEventStateChange
 OnAppLicensesChanged
 OnAppLifetimeNotification: appID %u has no associated session information
 OnAppLifetimeNotification: release session(s) for appID %u
-OnAppManagerComplete
 OnAppRunningEvent
 OnBeginAvoidServer
 OnBigPictureForStreamingDone
@@ -31454,7 +31475,6 @@ OnPipewireEventObjectParam
 OnPlaceholderStateChanged
 OnPortDestroyed
 OnPortReady
-OnPostLogonState
 OnReadPacket
 OnReadableState
 OnReceiveDataMsg() on socket #%d discarding message, not connected\n
@@ -35396,10 +35416,12 @@ Stat
 Stat "%s" not found in progress block for achievement "%s"
 Stat "%s" unexpected type %d in progress block for achievement "%s"
 State
+State JSON parse error: "%s"
 State Remote Host              Timeout Sec Num Req SSL       Virtual Host                   Request\n
 State flags
 StateFlags
 StateName
+StaticEmptyKeyValues()
 StaticFileWriterThread()
 Stats
 Stats Session Created %llu
@@ -37865,6 +37887,9 @@ Waited %f seconds for game mapping!\n
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 Waiting
 Waiting for Steam login
+Waiting for compat in post-logon timed out
+Waiting for compat in post-logon took: %fs
+Waiting for compat manager in post-logon took longer than expected: %fs
 Waiting for confirmation
 Waiting for disk
 Waiting for shared fd client failed\n
@@ -38443,6 +38468,7 @@ YieldingWriteToDisk
 YldCheckForClientUpdate
 YldCreateEmptyFilesAndFolders
 YldDoesGamePhaseRecordingExist
+YldEnsureCompatManagerReadyWithLimit
 YldFileDeleteInternal
 YldFilterDictionaryDownloaded
 YldFirmwareCheckForUpdate
@@ -38462,10 +38488,13 @@ YldResolveStunAndRelayAddress
 YldSaveClip
 YldSetCurrentMode
 YldSetMode
+YldSignalLibraryReadyOfflineMode
 YldStartRequestProcessorIfNeeded
 YldUpdateDownloadSourceList
 YldUpdateFPSLimitIfNecessary
 YldUpdateUsageReportIfNecessary
+YldWaitForAppStateLoaded
+YldWaitForLibraryReadyOfflineMode
 YldWriteCacheDirectoryToFile
 YnFpW
 YooMoney
@@ -38518,6 +38547,7 @@ ZF]:Ba?
 ZINT32
 ZINT64
 ZLIB
+ZN19CClientJobPostLogon33YldWaitForCompatManagerProcessingEvEUlyE_
 ZN21CWorkItemFormatSDCard13ThreadProcessEP11CWorkThreadEUl10StringViewE_
 ZN24CUnbufferedFileProcessor19BForEachFileSegmentESt8functionIFbPKhjEEEUlvE_
 ZN25CHTTPResponseHandlerFuncs5ResetEvEUlP18CHTTPRequestHandleE2_
@@ -38902,6 +38932,7 @@ Zulu
 [AppID %u] Backup of AutoCloud files in preparation for path changes: starting. . .
 [AppID %u] CAPIJobRequestUserStats - failed to init schema KV with data from server
 [AppID %u] CAPIJobRequestUserStats - failed to login and send message or get a reply
+[AppID %u] CAPIJobRequestUserStats - failed to write schema to disk
 [AppID %u] CAPIJobRequestUserStats - missing schema in response!
 [AppID %u] CAPIJobRequestUserStats - no connection to Steam
 [AppID %u] CAPIJobRequestUserStats - no stats data in server response, we must be up to date
@@ -39761,6 +39792,7 @@ Zulu
 \n/CGameServers_ReportServerPingReply_Notification
 \n/CMarketingMessages_MarkMessageSeen_Notification
 \n/CPublishedFile_UpdateContentDescriptors_Request
+\n/CRemoteClient_RegisterStatusUpdate_Notification
 \n/CSiteManagerClient_TrackedPayments_Notification
 \n/CSteamInputService_GyroCalibration_Notification
 \n/CSteamTV_SetBroadcastChannelLinkRegions_Request
@@ -45044,6 +45076,7 @@ disable_client_cursor
 disable_embed_inlining
 disable_intel_hardware_encoding
 disable_partner_autogrants
+disable_polling
 disable_refresh_rate_management
 disable_steam_store
 disabled
@@ -46828,7 +46861,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggenf
 ghjkl
 gidlist
 gidparentcomment
@@ -49565,6 +49598,7 @@ k_EMsgBoxMonitorReportResponse
 k_EMsgCEGPropStatusDRMSRequest
 k_EMsgCEGPropStatusDRMSResponse
 k_EMsgCMGetSecrets
+k_EMsgCMRemotePlayOffline
 k_EMsgCMRemotePlayReplyPacket
 k_EMsgCMSessionRejected
 k_EMsgCMSetAllowState
@@ -51331,19 +51365,19 @@ low-pri yield - /data/src/clientdll/autocloud.cpp:591
 low-pri yield - /data/src/clientdll/autocloud.cpp:670
 low-pri yield - /data/src/clientdll/autocloud.cpp:845
 low-pri yield - /data/src/clientdll/autocloud.cpp:936
-low-pri yield - /data/src/clientdll/clientjob.cpp:439
-low-pri yield - /data/src/clientdll/clientjob.cpp:470
-low-pri yield - /data/src/clientdll/clientjob.cpp:779
+low-pri yield - /data/src/clientdll/clientjob.cpp:440
+low-pri yield - /data/src/clientdll/clientjob.cpp:471
+low-pri yield - /data/src/clientdll/clientjob.cpp:780
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6886
 low-pri yield - /data/src/clientdll/compatmanager.cpp:1949
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2220
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2491
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3165
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3197
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3210
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3262
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3869
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2208
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2475
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3149
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3181
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3194
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3246
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3853
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3071
@@ -52723,6 +52757,7 @@ m_pTransportP2PSDR == nullptr
 m_pTransportWebUI
 m_pTreeInUseConnections
 m_pTreeWaitingConnections
+m_pTritonController
 m_pUIVisualizationMapping
 m_pUpdateState
 m_pUser
@@ -53409,6 +53444,7 @@ m_vecGuestPassesToRedeem
 m_vecHServerPipeChatDestination
 m_vecHTTPRequestJobs
 m_vecHTTPResponseHandlers
+m_vecHardwareDetectedToEmit
 m_vecHashBuckets
 m_vecHistory
 m_vecIPAddresses
@@ -56869,7 +56905,6 @@ rc5-ecb
 rc5-ofb
 rc5_ctrl
 rcbuf->ref > 0
-re-entrant UpdateInvalidPlatformTracking (AppID %u) depth check: %d\n
 reaction
 reactor
 reactors
@@ -58666,7 +58701,7 @@ stderr
 stdin
 stdout
 steam
-steam Jan 30 2026 23:26:18
+steam Feb  5 2026 21:53:42
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

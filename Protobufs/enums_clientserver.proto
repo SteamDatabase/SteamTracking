@@ -507,6 +507,7 @@ enum EMsg {
 	k_EMsgCMSetSecrets = 1704;
 	k_EMsgCMGetSecrets = 1705;
 	k_EMsgCMRemotePlayReplyPacket = 1706;
+	k_EMsgCMRemotePlayOffline = 1707;
 	k_EMsgBaseGC = 2200;
 	k_EMsgGCCmdRevive = 2203;
 	k_EMsgGCCmdDown = 2206;

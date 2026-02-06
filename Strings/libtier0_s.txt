@@ -100,7 +100,7 @@ $ORIGIN
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-23:25:41
+21:52:16
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -244,6 +244,7 @@ Failed to set thread local value
 Fatal Assertion Failed:
 Fatal assert
 Fatal assert; application exiting
+Feb  5 2026
 FileSystem
 FoCLcx
 FreeCrashMemoryReserve
@@ -298,7 +299,6 @@ IsSpewActive
 IsStackTrackingFiltered
 IsValidBoolValue
 JArray
-Jan 30 2026
 Jobs/Coroutines
 Leaked mem: %s %s\n
 Logger

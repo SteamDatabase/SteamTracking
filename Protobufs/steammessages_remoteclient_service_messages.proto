@@ -52,6 +52,7 @@ message CRemoteClient_RegisterStatusUpdate_Notification {
 	optional fixed64 session_id = 1;
 	optional fixed64 steamid = 2;
 	optional fixed64 device_id = 3;
+	optional bool disable_polling = 4;
 }
 
 message CRemoteClient_UnregisterStatusUpdate_Notification {
@@ -71,7 +72,10 @@ message CRemoteClient_Online_Notification {
 	optional .CRemoteClient_DeviceDetails device_details = 3;
 }
 
-message CRemoteClient_GetRecentClients_Request {
+message CRemoteClient_Offline_Notification {
+	optional fixed64 session_id = 1;
+	optional fixed64 steamid = 2;
+	optional fixed64 remote_client_id = 3;
 }
 
 message CRemoteClient_ClientLogin {
@@ -88,6 +92,9 @@ message CRemoteClient_ClientDetails {
 	optional string state = 6;
 	optional string country = 7;
 	optional bool is_online = 8;
+}
+
+message CRemoteClient_GetRecentClients_Request {
 }
 
 message CRemoteClient_GetRecentClients_Response {
@@ -276,5 +283,6 @@ message CCMRemoteClient_ServerMessage {
 		.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;
 		.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;
 		.CRemoteClient_GetReplies_Response reply_packet = 6;
+		.CRemoteClient_Offline_Notification offline = 7;
 	}
 }

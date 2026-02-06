@@ -2846,6 +2846,16 @@ enum UnnamedEnum814cba7b873843ae
 	LOADING_ERROR = 5;
 }
 
+enum UnnamedEnum8179ed4cb88f3597
+{
+	UpdateDongle = 0;
+	UpdateDongleNereid = 1;
+	UpdateUSB = 2;
+	PlugInWireless = 3;
+	Success = 4;
+	Error = 5;
+}
+
 enum UnnamedEnum832449b80e67603d
 {
 	acceptSuggestionOnCommitCharacter = 0;

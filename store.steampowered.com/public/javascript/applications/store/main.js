@@ -35079,7 +35079,7 @@
         }
         const { data: u } = (0, n.I)({ ...d(i, e, r), enabled: l && !c });
         u && 1 == u.length && (c = { appid: u[0] });
-        const m = l ? c : e;
+        const m = l && c ? c : e;
         return (0, n.I)(t(i, m));
       }
       function d(e, t, r) {
