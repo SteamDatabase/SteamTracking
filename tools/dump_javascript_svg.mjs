@@ -118,7 +118,7 @@ for (const file of await GetFilesToParse()) {
 					let extension;
 					if (header === "data:image/png") {
 						extension = "png";
-					} else if (header === "data:image/jpeg") {
+					} else if (header === "data:image/jpeg" || header === "data:image/jpg") {
 						extension = "jpg";
 					} else if (header === "data:image/gif") {
 						extension = "gif";
