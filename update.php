@@ -556,9 +556,10 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 				$this->ETags[ $HashPath ] = $Hash;
 
 				// Extract json so it gets pretty printed from the json.parse
-				if( str_ends_with( $File, 'english-json.js' ) && preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) )
+				//TODO: left json preg match is for older strings files (cs2 blog), to be looked back for removal in a couple of weeks (sept 2026)
+				if( str_ends_with( $File, 'english-json.js' ) && ( preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) || preg_match( "/exports=JSON\.parse\(`(.*)`\)/", $Data, $Matches ) || preg_match( "/exports=JSON\.parse\('(.*)'\)/", $Data, $Matches ) ) )
 				{
-					$Data = stripcslashes( $Matches[ 1 ] );
+					$Data = $this->StringUnescape( $Matches[ 1 ] );
 					$Data = json_decode( $Data, true );
 					$Data = json_encode( $Data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . PHP_EOL;
 
@@ -568,9 +569,10 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 				}
 
 				// Extract json from numeric localization chunks
-				if( preg_match( '/[0-9]+\.js$/', $File ) && preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) )
+				//TODO: left json preg match is for older chunks, to be looked back for removal in a couple of weeks (sept 2026)
+				if( preg_match( '/[0-9]+\.js$/', $File ) && ( preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) || preg_match( "/exports=JSON\.parse\(`(.+)`\)/", $Data, $Matches ) || preg_match( "/exports=JSON\.parse\('(.+)'\)/", $Data, $Matches ) ) )
 				{
-					$JsonData = stripcslashes( $Matches[ 1 ] );
+					$JsonData = $this->StringUnescape( $Matches[ 1 ] );
 					$JsonData = json_decode( $JsonData, true );
 
 					if( $JsonData !== null )
@@ -1225,5 +1227,29 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 			echo $Log;
 		}
+
+		// Fixes valve being unable to send a proper utf-8 file
+		private function StringUnescape( $str )
+        {
+            return preg_replace_callback( '/\\\\(\\\\|x[0-9A-Fa-f]{2}|\')/',
+				function( $m )
+				{
+					$esc = $m[ 1 ];
+
+					if( $esc === '\\' )
+					{
+						return '\\';
+					}
+
+					if( $esc[ 0 ] === 'x' )
+					{
+						return '\u00' . substr( $esc, 1 );
+					}
+
+					return "'";
+				},
+				$str
+        );
+    }
 	}
 
