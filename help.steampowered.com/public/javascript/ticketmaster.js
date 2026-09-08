@@ -310,7 +310,7 @@ function SubmitReplyForm_Internal( form, extraFormData )
 		return;
 	}
 
-	var regexProcessReplacementText = /(?:^|\p{Po}| )⭈[\w\-]+(?: |\p{Po}|$)/iu;
+	var regexProcessReplacementText = /[⭈⭊]/u;
 
 	if ( regexProcessReplacementText.exec( strReply ) )
 	{

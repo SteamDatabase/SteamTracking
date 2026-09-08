@@ -148,6 +148,7 @@
     "Wishlist_Controls_Categories_Header_Other": "Mis otras categorías",
     "Wishlist_Controls_Categories_Header_Suggested": "Categorías sugeridas",
     "Wishlist_Categories_Max_Per_App_Reached": "Este artículo de la lista de deseados ha alcanzado el límite de %1$s categorías.",
+    "Wishlist_Categories_Dialog_Advanced": "Configuración avanzada...",
     "Price_History_Normal_Price": "NORMAL",
     "Price_History_Recent_Low_Price": "MÁS BAJO (30 DÍAS)",
     "Price_History_Recent_Low_Price_Ttip": "Este juego estuvo en oferta por %1$s en los últimos %2$s días",
@@ -158,9 +159,9 @@
     "PersonalCalendar_Subtitle": "Una lista personalizada para ti de juegos nuevos y próximos lanzamientos",
     "PersonalCalendar_More": "y %1$s más",
     "PersonalCalendar_Full": "Explora tu calendario personal completo",
-    "PersonalCalendar_Explore": "Explore more",
+    "PersonalCalendar_Explore": "Explorar más",
     "PersonalCalendar_EmptyDay": "No tenemos ningún lanzamiento nuevo que recomendarte en este día. <1>¡Consulta el resto de tu calendario!</1>",
-    "NewBadge": "NUEVA",
+    "NewBadge": "NUEVO",
     "Time_Today": "Hoy",
     "store_ui_dummy": "dont translate"
 }

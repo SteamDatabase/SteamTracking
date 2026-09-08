@@ -43,6 +43,8 @@ message CClientMetrics_ReportLinuxStats_Notification {
 	optional int32 launcher_type = 4;
 	optional int32 game_server_appid = 5;
 	optional string process_name = 6;
+	optional int32 kernel_version_major = 7;
+	optional int32 kernel_version_minor = 8;
 }
 
 message CClientMetrics_ReportReactUsage_Notification {

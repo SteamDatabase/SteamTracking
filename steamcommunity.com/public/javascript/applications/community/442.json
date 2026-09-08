@@ -330,7 +330,7 @@
     "RepriceListing_Dialog_CurrentPrice": "Preço atual",
     "RepriceListing_Dialog_BuyerPays": "O comprador paga",
     "RepriceListing_Dialog_YouReceive": "Tu recebes",
-    "RepriceListing_Dialog_PerUnit": "Este é o preço de um dos %1$s que tens à venda. Em conjunto, o preço total é de %2$s.",
+    "RepriceListing_Dialog_PerUnit": "Este é o preço de uma das %1$s unidades que tens à venda. O preço total de todas as unidades juntas é de %2$s.",
     "RepriceListing_Dialog_DecreaseNeedsConfirmation": "Como medida de segurança, reduzir o preço de um anúncio requer confirmação adicional",
     "RepriceListing_Dialog_Submit": "Alterar preço",
     "RepriceListing_Dialog_Cancel": "Cancelar",

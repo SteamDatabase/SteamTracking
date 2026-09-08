@@ -69,7 +69,6 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -262,6 +261,7 @@
       }
       (0, _._)([_._], _.prototype, "m_curDebugInfo", void 0);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1446,39 +1446,26 @@
             ],
           });
         });
-      var _ = __webpack_require__("chunkid");
       let _ = {
         BroadcastWatch: (_) => `/broadcast/(watch|watchnew)/${_}`,
       };
       function _(_) {
-        const [_, _] = _.useState(!0);
-        return (
-          (0, _.useEffect)(() => {
-            _ && _._.InitGlobal().then(() => __webpack_require__(!1));
-          }, [_]),
-          _
-            ? (0, _.jsx)(_._, {
-                string: (0, _._)("#Loading"),
-                position: "center",
-                size: "medium",
-              })
-            : (0, _.jsx)(_.Fragment, {
-                children: (0, _.jsxs)(_._, {
-                  children: [
-                    (0, _.jsx)(_._, {
-                      path: _.BroadcastWatch(":steamid_or_user_vanity"),
-                      render: (_) =>
-                        (0, _.jsx)(_, {
-                          strSteamID: _.match.params.steamid_or_user_vanity,
-                        }),
-                    }),
-                    (0, _.jsx)(_._, {
-                      component: _._,
-                    }),
-                  ],
-                }),
-              })
-        );
+        return (0, _.jsx)(_.Fragment, {
+          children: (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsx)(_._, {
+                path: _.BroadcastWatch(":steamid_or_user_vanity"),
+                render: (_) =>
+                  (0, _.jsx)(_, {
+                    strSteamID: _.match.params.steamid_or_user_vanity,
+                  }),
+              }),
+              (0, _.jsx)(_._, {
+                component: _._,
+              }),
+            ],
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

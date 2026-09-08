@@ -1,33 +1,31 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 "use strict";
-(() => {
-  (self.webpackChunkappmgmt_storeadmin =
-    self.webpackChunkappmgmt_storeadmin || []).push([
-    [4226],
-    {
-      18243: (f, d, n) => {
-        n.r(d), n.d(d, { default: () => p });
-        var m = n(7850),
-          r = n(51409);
-        function p(c) {
-          const { dataprops: i, results: t } = c;
-          let e = null;
-          if (t && t.length > 0) {
-            const a = i.appid ?? null;
-            if (a) {
-              let l = t.findIndex((s) => s.appid == a);
-              e = l != -1 ? t[l] : null;
-            }
-            const u = i.search_id ?? null;
-            if (!e && u) {
-              let l = t.findIndex((s) => s.search_id == u);
-              e = l != -1 ? t[l] : null;
-            }
+(self.webpackChunkappmgmt_storeadmin =
+  self.webpackChunkappmgmt_storeadmin || []).push([
+  [4226],
+  {
+    34044: (l, n, e) => {
+      e.r(n), e.d(n, { default: () => u });
+      var t = e(7850),
+        s = e(39891);
+      function u(l) {
+        const { dataprops: n, results: e } = l;
+        let u = null;
+        if (e && e.length > 0) {
+          const l = n.appid ?? null;
+          if (l) {
+            let n = e.findIndex((n) => n.appid == l);
+            u = -1 != n ? e[n] : null;
           }
-          return e ? (0, m.jsx)(r.default, { results: e }) : null;
+          const t = n.search_id ?? null;
+          if (!u && t) {
+            let l = e.findIndex((l) => l.search_id == t);
+            u = -1 != l ? e[l] : null;
+          }
         }
-      },
+        return u ? (0, t.jsx)(s.default, { results: u }) : null;
+      }
     },
-  ]);
-})();
+  },
+]);

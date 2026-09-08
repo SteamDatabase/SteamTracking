@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10961770";
+var CLSTAMP = "10976753";
 (() => {
   var e,
     t,
@@ -3239,7 +3239,7 @@ var CLSTAMP = "10961770";
           (e.exports = i),
           (i.id = 61738);
       },
-      24071: (e, t, n) => {
+      54835: (e, t, n) => {
         "use strict";
         n.d(t, {
           QO: () => s.QO,
@@ -3249,9 +3249,9 @@ var CLSTAMP = "10961770";
           iA: () => s.iA,
           xv: () => s.xv,
         });
-        var s = n(21571);
+        var s = n(28703);
       },
-      71812: (e, t, n) => {
+      43120: (e, t, n) => {
         "use strict";
         n.d(t, { K: () => s, S: () => i });
         const s = { STEAM_TV: !1 };
@@ -3265,31 +3265,31 @@ var CLSTAMP = "10961770";
             }
         }
       },
-      74481: (e, t, n) => {
+      47675: (e, t, n) => {
         "use strict";
-        var s = n(24071),
-          i = n(72297),
-          o = n(53959),
-          r = n(26036),
-          a = n(25647),
-          l = n(64567),
+        var s = n(54835),
+          i = n(40384),
+          o = n(94027),
+          r = n(57724),
+          a = n(12867),
+          l = n(59587),
           c = n(34629),
           d = n(37322),
-          h = n(21571),
-          u = n(52077),
-          m = n(85164),
-          p = n(39610),
-          _ = n(18553),
-          g = n(49506),
+          h = n(28703),
+          u = n(63129),
+          m = n(41824),
+          p = n(38150),
+          _ = n(30565),
+          g = n(72350),
           C = n(89193),
-          f = n(73561),
-          S = n(32561),
-          v = n(46998),
-          b = n(7254),
-          I = n(76493),
-          y = n(74005),
-          w = n(19596),
-          x = n(44240);
+          f = n(29085),
+          S = n(96757),
+          v = n(61586),
+          b = n(91762),
+          I = n(62848),
+          y = n(81289),
+          w = n(73960),
+          x = n(41428);
         class A {
           m_bRunOnce = !1;
           m_ClientConnectionCallbacks = new w.lu();
@@ -3625,8 +3625,8 @@ var CLSTAMP = "10961770";
           ),
           (0, c.Cg)([C.XI], R.prototype, "DispatchMessage", null),
           (0, c.Cg)([C.XI], R.prototype, "OnDisconnect", null);
-        var M = n(42603),
-          T = n(58135);
+        var M = n(56999),
+          T = n(93851);
         class D extends R {
           m_hSharedConnection;
           m_hEMsgRegistrationObserver;
@@ -3833,7 +3833,7 @@ var CLSTAMP = "10961770";
             null,
           );
         var k = n(53048),
-          P = n(29634),
+          P = n(28744),
           L = n(83957),
           G = n.n(L);
         const F = !1,
@@ -4337,9 +4337,9 @@ var CLSTAMP = "10961770";
         (0, c.Cg)([C.XI], j.prototype, "DecodeAndDispatchMultiMsg", null);
         n(70734), n(22386);
         new Map();
-        var V = n(959),
-          U = n(91960),
-          H = (n(83508), n(65070), n(71812));
+        var V = n(99787),
+          U = n(15388),
+          H = (n(33992), n(65070), n(43120));
         (0, C.jK)({ enforceActions: "never" }),
           (window.AssertMsg = y.wT),
           document.addEventListener("DOMContentLoaded", async function () {
@@ -4368,7 +4368,7 @@ var CLSTAMP = "10961770";
                         n.e(9489),
                         n.e(1068),
                         n.e(7653),
-                      ]).then(n.bind(n, 89958));
+                      ]).then(n.bind(n, 22908));
                       new e().Init(() => {
                         window.location.reload();
                       });
@@ -4394,7 +4394,7 @@ var CLSTAMP = "10961770";
                 })();
           });
       },
-      72297: (e, t, n) => {
+      40384: (e, t, n) => {
         "use strict";
         n.d(t, {
           YO: () => P,
@@ -4415,19 +4415,19 @@ var CLSTAMP = "10961770";
           AM: () => D,
         });
         var s = n(34629),
-          i = n(7254),
+          i = n(91762),
           o = n(83957),
           r = n.n(o),
-          a = n(52077),
-          l = n(18553),
-          c = n(73561),
-          d = n(87885),
-          h = n(24071),
+          a = n(63129),
+          l = n(30565),
+          c = n(29085),
+          d = n(74257),
+          h = n(54835),
           u = n(89193),
-          m = n(28540),
-          p = n(32561),
-          _ = n(85164),
-          g = n(74005);
+          m = n(78104),
+          p = n(96757),
+          _ = n(41824),
+          g = n(81289);
         const C = 1,
           f = 2,
           S = 3,
@@ -4652,21 +4652,21 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([d.oI], P.prototype, "OnCMDisconnected", null),
           (0, s.Cg)([d.oI], P.prototype, "OnCMLoggedOn", null);
       },
-      17760: (e, t, n) => {
+      56436: (e, t, n) => {
         "use strict";
         n.d(t, { o: () => v });
         var s = n(34629),
-          i = n(24071),
-          o = n(87014),
-          r = n(7578),
-          a = n(77620),
+          i = n(54835),
+          o = n(46186),
+          r = n(89822),
+          a = n(24272),
           l = n(89193),
-          c = n(32561),
-          d = n(73561),
-          h = n(97385),
-          u = n(74005),
-          m = n(92246),
-          p = n(58135);
+          c = n(96757),
+          d = n(29085),
+          h = n(2849),
+          u = n(81289),
+          m = n(33154),
+          p = n(93851);
         class _ {
           static k_QueueForEffect = {
             snowball: "snowball",
@@ -4771,7 +4771,7 @@ var CLSTAMP = "10961770";
           }
         }
         (0, s.Cg)([l.sH], g.prototype, "m_rgRunningEffects", void 0);
-        var C = n(51655);
+        var C = n(82361);
         const f = p.Kp.PerMinute,
           S = 6 * p.Kp.PerHour;
         class v {
@@ -5385,14 +5385,14 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([l.XI], v.prototype, "AddLocalMsg", null),
           (0, s.Cg)([l.XI], v.prototype, "AddNewServerMsg", null);
       },
-      97740: (e, t, n) => {
+      63792: (e, t, n) => {
         "use strict";
         n.d(t, { w: () => l });
         var s = n(34629),
-          i = n(25275),
+          i = n(28047),
           o = n(89193),
-          r = n(25647),
-          a = n(85164);
+          r = n(12867),
+          a = n(41824);
         class l extends i.Q {
           m_steamID;
           m_tabset;
@@ -5416,7 +5416,7 @@ var CLSTAMP = "10961770";
               n.e(9489),
               n.e(1068),
               n.e(7653),
-            ]).then(n.bind(n, 54479));
+            ]).then(n.bind(n, 70808));
             return e;
           }
           GetSteamID() {
@@ -5468,7 +5468,7 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([o.XI], l.prototype, "ShowWatchPromptDialog", null),
           (0, s.Cg)([o.XI], l.prototype, "HideWatchPromptDialog", null);
       },
-      47257: (e, t, n) => {
+      39868: (e, t, n) => {
         "use strict";
         n.d(t, {
           CF: () => O.CF,
@@ -5478,9 +5478,9 @@ var CLSTAMP = "10961770";
           eW: () => F.eW,
         });
         var s = n(34629),
-          i = n(24071),
-          o = n(7578),
-          r = n(51655),
+          i = n(54835),
+          o = n(89822),
+          r = n(82361),
           a = n(89193);
         class l {
           bCollapsed = !1;
@@ -5556,21 +5556,21 @@ var CLSTAMP = "10961770";
               this.SaveEmbedData(e, t, i);
           }
         }
-        var h = n(74890),
-          u = n(46064),
-          m = n(18912),
-          p = n(75888),
-          _ = n(91822),
-          g = n(73561),
-          C = n(32561),
-          f = n(52077),
-          S = n(85164),
-          v = n(42603),
-          b = n(97385),
-          I = n(10275),
-          y = n(42981),
-          w = n(18553),
-          x = n(49506);
+        var h = n(33158),
+          u = n(67796),
+          m = n(55972),
+          p = n(85470),
+          _ = n(45570),
+          g = n(29085),
+          C = n(96757),
+          f = n(63129),
+          S = n(41824),
+          v = n(56999),
+          b = n(2849),
+          I = n(21791),
+          y = n(73385),
+          w = n(30565),
+          x = n(72350);
         class A extends y.pN {
           m_CMInterface;
           Init(e) {
@@ -5632,7 +5632,7 @@ var CLSTAMP = "10961770";
             });
           }
         }
-        var R = n(64076);
+        var R = n(36095);
         class M extends R.s {
           m_CMInterface;
           async InitCM(e, t) {
@@ -5663,9 +5663,9 @@ var CLSTAMP = "10961770";
                 ));
           }
         }
-        var T = n(31174),
-          D = n(74005),
-          k = n(959);
+        var T = n(62770),
+          D = n(81289),
+          k = n(99787);
         function P(e, t) {
           if (!e || !t) return [];
           let n = [],
@@ -5678,8 +5678,8 @@ var CLSTAMP = "10961770";
           const n = Math.floor(Math.random() * t * 1e3);
           return await new Promise((e) => setTimeout(e, n)), e();
         }
-        var G = n(58135),
-          F = n(87014);
+        var G = n(93851),
+          F = n(46186);
         class B {
           static strSettingsStorageKey = "RecentChats.HiddenItems";
           m_storage;
@@ -5772,9 +5772,9 @@ var CLSTAMP = "10961770";
           }
         }
         (0, s.Cg)([a.sH], B.prototype, "m_bReady", void 0);
-        var O = n(82478),
-          N = n(19596);
-        n(17760);
+        var O = n(55282),
+          N = n(73960);
+        n(56436);
         class E {
           m_FriendStore;
           m_CMInterface;
@@ -6684,7 +6684,7 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([a.EW], E.prototype, "currentChatRoomGroups", null),
           (0, s.Cg)([a.EW], E.prototype, "ClanChatRooms", null);
       },
-      7578: (e, t, n) => {
+      89822: (e, t, n) => {
         "use strict";
         n.d(t, {
           $F: () => _,
@@ -6703,12 +6703,12 @@ var CLSTAMP = "10961770";
           xN: () => S,
         });
         var s = n(34629),
-          i = n(97385),
+          i = n(2849),
           o = n(89193),
-          r = n(73561),
-          a = n(51655),
-          l = n(21571),
-          c = n(28540);
+          r = n(29085),
+          a = n(82361),
+          l = n(28703),
+          c = n(78104);
         const d = {
           "/me": {
             strDescriptionToken: "#SlashCommandDescription_Me",
@@ -7181,7 +7181,7 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([o.sH.shallow], R.prototype, "m_nextBlock", void 0),
           (0, s.Cg)([o.XI], R.prototype, "CreateVirtualSplitOnTimestamp", null);
       },
-      25275: (e, t, n) => {
+      28047: (e, t, n) => {
         "use strict";
         n.d(t, { Q: () => s });
         class s {
@@ -7204,7 +7204,7 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      87014: (e, t, n) => {
+      46186: (e, t, n) => {
         "use strict";
         n.d(t, {
           Lv: () => a,
@@ -7219,21 +7219,21 @@ var CLSTAMP = "10961770";
           r = 3,
           a = 4;
       },
-      82478: (e, t, n) => {
+      55282: (e, t, n) => {
         "use strict";
         n.d(t, { CF: () => g, JB: () => _ });
         var s = n(34629),
-          i = n(77620),
+          i = n(24272),
           o = n(89193),
-          r = n(31174),
-          a = n(19596),
-          l = n(21571),
-          c = n(42441),
-          d = n(63840),
-          h = n(91822),
-          u = n(51655),
-          m = n(25275),
-          p = n(87014);
+          r = n(62770),
+          a = n(73960),
+          l = n(28703),
+          c = n(90277),
+          d = n(2276),
+          h = n(45570),
+          u = n(82361),
+          m = n(28047),
+          p = n(46186);
         class _ extends m.Q {
           m_tabset;
           m_chat;
@@ -7476,14 +7476,14 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      74890: (e, t, n) => {
+      33158: (e, t, n) => {
         "use strict";
         n.d(t, { e7: () => m, xE: () => c });
         var s = n(34629),
-          i = n(85164),
-          o = n(51655),
-          r = n(62646),
-          a = n(24071),
+          i = n(41824),
+          o = n(82361),
+          r = n(94458),
+          a = n(54835),
           l = n(89193);
         function c(e, t, n, s, o) {
           let r,
@@ -7625,19 +7625,19 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      46064: (e, t, n) => {
+      67796: (e, t, n) => {
         "use strict";
         n.d(t, { F2: () => _, oX: () => p });
         var s = n(34629),
           i = n(89193),
-          o = n(97385),
-          r = n(52077),
-          a = n(85164),
-          l = n(73561),
-          c = n(32561),
-          d = n(51655),
-          h = n(72444),
-          u = n(959);
+          o = n(2849),
+          r = n(63129),
+          a = n(41824),
+          l = n(29085),
+          c = n(96757),
+          d = n(82361),
+          h = n(2520),
+          u = n(99787);
         class m extends h.w {
           constructor(e) {
             super(e), (0, i.Gn)(this);
@@ -7803,7 +7803,7 @@ var CLSTAMP = "10961770";
               : null;
         }
       },
-      18912: (e, t, n) => {
+      55972: (e, t, n) => {
         "use strict";
         function s(e) {
           return (
@@ -7913,13 +7913,13 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      72444: (e, t, n) => {
+      2520: (e, t, n) => {
         "use strict";
         n.d(t, { u: () => a, w: () => r });
         var s = n(34629),
           i = n(89193),
-          o = n(73561);
-        n(24071);
+          o = n(29085);
+        n(54835);
         class r {
           m_strInviteCode;
           m_bReady = !1;
@@ -7989,33 +7989,33 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([i.XI], r.prototype, "InitInvalid", null),
           (0, s.Cg)([i.XI], r.prototype, "InitDirectInvite", null);
       },
-      42441: (e, t, n) => {
+      90277: (e, t, n) => {
         "use strict";
         n.d(t, { d: () => R });
         var s = n(34629),
-          i = n(65820),
-          o = n(24071),
-          r = n(52077),
-          a = n(97385),
-          l = n(77620),
+          i = n(12168),
+          o = n(54835),
+          r = n(63129),
+          a = n(2849),
+          l = n(24272),
           c = n(89193),
-          d = n(32561),
-          h = n(959),
-          u = n(92246),
-          m = n(17760),
-          p = n(47257),
-          _ = n(76769),
-          g = n(51655),
-          C = n(87885),
-          f = n(7578),
-          S = n(72444),
-          v = n(93456),
-          b = n(74005),
-          I = n(18912),
-          y = n(42603),
-          w = n(91836),
-          x = n(19596),
-          A = n(98267);
+          d = n(96757),
+          h = n(99787),
+          u = n(33154),
+          m = n(56436),
+          p = n(39868),
+          _ = n(58013),
+          g = n(82361),
+          C = n(74257),
+          f = n(89822),
+          S = n(2520),
+          v = n(51332),
+          b = n(81289),
+          I = n(55972),
+          y = n(56999),
+          w = n(90984),
+          x = n(73960),
+          A = n(53479);
         class R extends m.o {
           LOG = new u.wd("ChatRoom", () => this.unique_id).Debug;
           m_group;
@@ -8819,27 +8819,27 @@ var CLSTAMP = "10961770";
             null,
           );
       },
-      75888: (e, t, n) => {
+      85470: (e, t, n) => {
         "use strict";
         n.d(t, { L2: () => M, a$: () => A, A: () => k, $C: () => R });
         var s = n(34629),
-          i = n(31174),
+          i = n(62770),
           o = n(37976),
-          r = n(92246),
-          a = n(47257),
-          l = n(42441),
-          c = n(85164),
+          r = n(33154),
+          a = n(39868),
+          l = n(90277),
+          c = n(41824),
           d = n(89193),
-          h = n(959),
-          u = n(52077),
-          m = n(97385),
-          p = n(32561),
-          _ = n(54704),
-          g = n(51655),
-          C = n(39610),
-          f = n(24071),
-          S = n(74005),
-          v = n(87885);
+          h = n(99787),
+          u = n(63129),
+          m = n(2849),
+          p = n(96757),
+          _ = n(47857),
+          g = n(82361),
+          C = n(38150),
+          f = n(54835),
+          S = n(81289),
+          v = n(74257);
         class b {
           static sm_ulNextViewID = 1;
           m_ulChatRoomGroupID;
@@ -9150,8 +9150,8 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([d.sH], b.prototype, "m_cMemberSummaryInGame", void 0),
           (0, s.Cg)([d.XI], b.prototype, "ApplyUpdates", null),
           (0, s.Cg)([d.XI], b.prototype, "OnServerUpdate", null);
-        var I = n(77620),
-          y = n(25275);
+        var I = n(24272),
+          y = n(28047);
         class w {
           m_rank = void 0;
           m_role_ids = void 0;
@@ -11467,7 +11467,7 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([d.EW], P.prototype, "member_list", null),
           (0, s.Cg)([d.EW], P.prototype, "member_list_unsorted", null);
       },
-      54704: (e, t, n) => {
+      47857: (e, t, n) => {
         "use strict";
         n.d(t, {
           VT: () => $,
@@ -11478,15 +11478,15 @@ var CLSTAMP = "10961770";
           uR: () => q,
         });
         var s = n(34629),
-          i = n(24071),
-          o = n(52077),
-          r = n(10317),
-          a = n(39610),
-          l = n(25647),
-          c = n(9234),
-          d = n(73561),
-          h = n(85164),
-          u = n(58368);
+          i = n(54835),
+          o = n(63129),
+          r = n(48441),
+          a = n(38150),
+          l = n(12867),
+          c = n(27022),
+          d = n(29085),
+          h = n(41824),
+          u = n(58572);
         class m extends r.Z {
           UpdateFromMessage(e, t) {
             if (
@@ -11560,21 +11560,21 @@ var CLSTAMP = "10961770";
                 (this.m_bAvatarPending = t.avatar_pending_review());
           }
         }
-        var p = n(18553),
-          _ = n(97385),
-          g = n(49506),
-          C = n(76493),
-          f = n(74156),
-          S = n(7508),
-          v = n(33383),
-          b = n(10275),
-          I = n(86971),
-          y = n(35779),
-          w = n(62368),
-          x = n(51655),
+        var p = n(30565),
+          _ = n(2849),
+          g = n(72350),
+          C = n(62848),
+          f = n(53464),
+          S = n(17880),
+          v = n(39819),
+          b = n(21791),
+          I = n(6815),
+          y = n(17695),
+          w = n(81644),
+          x = n(82361),
           A = n(89193),
-          R = n(32561),
-          M = n(74005);
+          R = n(96757),
+          M = n(81289);
         class T {
           m_bInitialized = !1;
           m_bGotInitialState = !1;
@@ -11886,15 +11886,15 @@ var CLSTAMP = "10961770";
         }
         (0, s.Cg)([A.EW], D.prototype, "clan_invite_count", null),
           (0, s.Cg)([A.EW], D.prototype, "clan_invites", null);
-        var k = n(76769),
-          P = n(12021),
-          L = n(19596),
-          G = n(93456),
-          F = n(959),
-          B = n(87885),
+        var k = n(58013),
+          P = n(22137),
+          L = n(73960),
+          G = n(51332),
+          F = n(99787),
+          B = n(74257),
           O = n(83957),
           N = n.n(O),
-          E = n(96393);
+          E = n(37973);
         class j {
           m_numStartingTokens = 0;
           m_numTokensPerMillisecond = 0;
@@ -11928,9 +11928,9 @@ var CLSTAMP = "10961770";
             );
           }
         }
-        var V = n(42603),
-          U = n(39530);
-        const H = new (n(92246).wd)("FriendsUI").Debug;
+        var V = n(56999),
+          U = n(8590);
+        const H = new (n(33154).wd)("FriendsUI").Debug;
         class W {
           Notifications_ShowInGame = b.Bwb.OD;
           Notifications_ShowOnline = b.Bwb.OD;
@@ -13655,30 +13655,30 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([A.XI], $.prototype, "InviteToLobby", null),
           (0, s.Cg)([A.XI], $.prototype, "InviteToWatch", null);
       },
-      91822: (e, t, n) => {
+      45570: (e, t, n) => {
         "use strict";
         n.d(t, { b: () => A, s: () => R });
         var s = n(34629),
-          i = n(76693),
-          o = n(24071),
-          r = n(52077),
-          a = n(85164),
-          l = n(91836),
-          c = n(54704),
-          d = n(51655),
+          i = n(66745),
+          o = n(54835),
+          r = n(63129),
+          a = n(41824),
+          l = n(90984),
+          c = n(47857),
+          d = n(82361),
           h = n(89193),
-          u = n(73561),
-          m = n(65820),
-          p = n(32561),
-          _ = n(959),
-          g = n(17760),
-          C = n(47257),
-          f = n(7578),
-          S = n(87885),
-          v = n(93456),
-          b = n(58135),
-          I = n(92246),
-          y = n(18912);
+          u = n(29085),
+          m = n(12168),
+          p = n(96757),
+          _ = n(99787),
+          g = n(56436),
+          C = n(39868),
+          f = n(89822),
+          S = n(74257),
+          v = n(51332),
+          b = n(93851),
+          I = n(33154),
+          y = n(55972);
         const w = new I.wd("Chat");
         const x = "FriendRecentChats";
         class A {
@@ -14583,24 +14583,24 @@ var CLSTAMP = "10961770";
           async UpdateLastMessage() {}
         }
       },
-      76769: (e, t, n) => {
+      58013: (e, t, n) => {
         "use strict";
         n.d(t, { Oz: () => P, o_: () => f, oy: () => S, uZ: () => v });
         var s = n(34629),
-          i = n(31174),
-          o = n(52077),
-          r = n(85164),
-          a = n(18553),
-          l = n(49506),
-          c = n(10275),
-          d = n(51655),
+          i = n(62770),
+          o = n(63129),
+          r = n(41824),
+          a = n(30565),
+          l = n(72350),
+          c = n(21791),
+          d = n(82361),
           h = n(89193),
-          u = n(32561),
-          m = n(73561),
-          p = n(959),
-          _ = n(54704),
-          g = n(33383),
-          C = n(25647);
+          u = n(96757),
+          m = n(29085),
+          p = n(99787),
+          _ = n(47857),
+          g = n(39819),
+          C = n(12867);
         const f = -6;
         var S;
         !(function (e) {
@@ -15330,19 +15330,19 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([h.XI], P.prototype, "RecvCategoriesList", null),
           (0, s.Cg)([h.XI], P.prototype, "TransferFriendFromToGroup", null);
       },
-      12021: (e, t, n) => {
+      22137: (e, t, n) => {
         "use strict";
         n.d(t, { f: () => m, x: () => p });
         var s = n(34629),
-          i = n(52077),
-          o = n(33383),
-          r = n(51655),
+          i = n(63129),
+          o = n(39819),
+          r = n(82361),
           a = n(89193),
-          l = n(32561),
-          c = n(73561),
-          d = n(31174),
-          h = n(74005),
-          u = n(82791);
+          l = n(96757),
+          c = n(29085),
+          d = n(62770),
+          h = n(81289),
+          u = n(83153);
         function m(e, t) {
           return (
             e == t ||
@@ -15469,7 +15469,7 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([a.XI], p.prototype, "OnFriendRemoved", null),
           (0, s.Cg)([a.XI], p.prototype, "ReadFavorites", null);
       },
-      53959: (e, t, n) => {
+      94027: (e, t, n) => {
         "use strict";
         n.d(t, {
           kP: () => Oi,
@@ -15484,10 +15484,10 @@ var CLSTAMP = "10961770";
           PJ: () => zi,
         });
         var s = n(34629),
-          i = n(73561),
-          o = n(37023),
-          r = n(24071),
-          a = n(19160);
+          i = n(29085),
+          o = n(58659),
+          r = n(54835),
+          a = n(2980);
         class l {
           AddTrackedWindow(e) {}
           BIsUserIdle(e) {
@@ -15516,8 +15516,8 @@ var CLSTAMP = "10961770";
                 );
           }
         }
-        var c = n(87885),
-          d = n(31174);
+        var c = n(74257),
+          d = n(62770);
         class h extends l {
           m_msUserLastAction;
           m_rgWindows = [];
@@ -15618,7 +15618,7 @@ var CLSTAMP = "10961770";
         (0, s.Cg)([c.oI], u.prototype, "OnComputerActiveStateChange", null),
           (0, s.Cg)([c.oI], u.prototype, "UpdateStillActive", null);
         var m,
-          p = n(51655);
+          p = n(82361);
         class _ {
           m_FriendStore;
           constructor(e) {
@@ -15678,7 +15678,7 @@ var CLSTAMP = "10961770";
             return Promise.resolve();
           }
         }
-        var C = n(62646);
+        var C = n(94458);
         class f extends _ {
           GetNotificationPermissionLevel() {
             if ("undefined" == typeof Notification) return "unsupported";
@@ -15727,10 +15727,10 @@ var CLSTAMP = "10961770";
                   });
           }
         }
-        var S = n(97740),
-          v = n(21839),
-          b = n(19596),
-          I = n(74005);
+        var S = n(63792),
+          v = n(83859),
+          b = n(73960),
+          I = n(81289);
         class y {
           m_data;
           m_bDropConsumed = !1;
@@ -15786,9 +15786,9 @@ var CLSTAMP = "10961770";
             return this.m_onDropCompleteCallbacks.Register(e);
           }
         }
-        var w = n(97385),
-          x = n(32561),
-          A = n(52077),
+        var w = n(2849),
+          x = n(96757),
+          A = n(63129),
           R = n(89193);
         class M {
           m_fnFillAppUsabilityMetrics;
@@ -15824,7 +15824,7 @@ var CLSTAMP = "10961770";
               );
           }
         }
-        var T = n(73134);
+        var T = n(36386);
         class D {
           m_mapBrowserInfo = new Map();
           m_hOverlayChatBrowserInfoChanged = null;
@@ -15913,18 +15913,18 @@ var CLSTAMP = "10961770";
           }
         }
         (0, s.Cg)([c.oI], D.prototype, "OnOverlayChatBrowserInfoChanged", null);
-        var k = n(82791),
+        var k = n(83153),
           P = n(62540),
           L = n(83957),
           G = n.n(L),
           F = n(41230),
           B = n(63696),
-          O = n(959),
-          N = n(11581),
-          E = n(6893),
-          j = n(87269),
-          V = n(16159),
-          U = n(42603);
+          O = n(99787),
+          N = n(16161),
+          E = n(55641),
+          j = n(42177),
+          V = n(68611),
+          U = n(56999);
         let H = class extends B.Component {
           constructor(e) {
             super(e),
@@ -16094,7 +16094,7 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([c.oI], H.prototype, "OnOpen", null),
           (0, s.Cg)([c.oI], H.prototype, "ShowThumbnail", null),
           (H = (0, s.Cg)([F.PA], H));
-        var W = n(38250);
+        var W = n(78998);
         let z = class extends B.Component {
           m_pollTimeout = void 0;
           m_broadcastid = void 0;
@@ -16327,10 +16327,10 @@ var CLSTAMP = "10961770";
         }
         (0, s.Cg)([c.oI], q.prototype, "OnWatch", null),
           (0, s.Cg)([c.oI], q.prototype, "ShowThumbnail", null);
-        var K = n(47893),
-          Z = n(28326),
-          X = n(30826),
-          Q = n(539);
+        var K = n(45071),
+          Z = n(22418),
+          X = n(71998),
+          Q = n(68935);
         function $(e) {
           const { appID: t } = e,
             [n] = (0, Q.t7)(t, { include_assets_without_overrides: !0 }),
@@ -16653,10 +16653,10 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([c.oI], Y.prototype, "DismissInvite", null),
           (0, s.Cg)([c.oI], Y.prototype, "OnShowGameContextMenu", null),
           (Y = (0, s.Cg)([F.PA], Y));
-        var J = n(73148),
-          ee = n(98434),
-          te = n(26487),
-          ne = n(21571),
+        var J = n(9025),
+          ee = n(29150),
+          te = n(89875),
+          ne = n(28703),
           se = n(93039);
         function ie(e) {
           const { inviter: t, inviteTarget: n, appID: s } = e,
@@ -16757,11 +16757,11 @@ var CLSTAMP = "10961770";
             s = t?.GetAssetsWithoutOverrides()?.GetHeaderURL();
           return s ? (0, P.jsx)("img", { src: s, className: n }) : null;
         }
-        var re = n(46064),
-          ae = n(71773),
-          le = n(30733),
-          ce = n(39358),
-          de = n(15982);
+        var re = n(67796),
+          ae = n(45465),
+          le = n(46801),
+          ce = n(37706),
+          de = n(86502);
         const he = (0, p.zy)(function (e, t, n) {
           (0, ce.HT)(
             (0, P.jsx)(pe, { ...e, bIsInviteDialog: !0 }),
@@ -17189,7 +17189,7 @@ var CLSTAMP = "10961770";
                 }),
               }),
             });
-        var Ie = n(77620),
+        var Ie = n(24272),
           ye = n(90095);
         const we = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
         function xe(e) {
@@ -17204,24 +17204,24 @@ var CLSTAMP = "10961770";
             n
           );
         }
-        var Ae = n(85164),
-          Re = (n(64567), n(18553)),
-          Me = n(35779),
-          Te = n(91219),
-          De = n(62250),
-          ke = n(80481),
-          Pe = n(36439),
-          Le = n(15695),
-          Ge = n(80020),
-          Fe = n(93456),
-          Be = n(76693),
-          Oe = n(30940),
-          Ne = n(58292),
-          Ee = n(93778),
+        var Ae = n(41824),
+          Re = (n(59587), n(30565)),
+          Me = n(17695),
+          Te = n(16423),
+          De = n(14202),
+          ke = n(93605),
+          Pe = n(67806),
+          Le = n(587),
+          Ge = n(27464),
+          Fe = n(51332),
+          Be = n(66745),
+          Oe = n(45904),
+          Ne = n(50376),
+          Ee = n(88809),
           je = n(70757),
           Ve = n.n(je),
-          Ue = n(91822),
-          He = n(74890);
+          Ue = n(45570),
+          He = n(33158);
         function We(e) {
           if (e.context.chat instanceof Ue.s) {
             let t = e.args.appid,
@@ -17363,7 +17363,7 @@ var CLSTAMP = "10961770";
             return { body: (0, O.we)(e, n.display_name) };
           };
         }
-        var et = n(78383);
+        var et = n(88671);
         function tt(e) {
           const {
             href: t,
@@ -17409,19 +17409,19 @@ var CLSTAMP = "10961770";
                 ? i()
                 : (0, P.jsx)(tt, { href: s, children: s });
         }
-        var st = n(72923),
-          it = n(12001),
-          ot = n(91422),
-          rt = n(24816),
-          at = n(85877),
-          lt = n(28534),
-          ct = n(41880),
-          dt = n(84475),
+        var st = n(76839),
+          it = n(46829),
+          ot = n(90378),
+          rt = n(84884),
+          at = n(71417),
+          lt = n(91146),
+          ct = n(31110),
+          dt = n(69679),
           ht = n(67056),
-          ut = n(80506),
+          ut = n(53470),
           mt = n(65627),
           pt = n.n(mt),
-          _t = n(59996);
+          _t = n(10854);
         const gt = (0, B.createContext)({});
         function Ct() {
           return (0, B.useContext)(gt);
@@ -17805,8 +17805,8 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([c.oI], St.prototype, "UserInputReceived", null),
           (0, s.Cg)([R.XI.bound], St.prototype, "SetMuteInternal", null),
           (0, s.Cg)([c.oI], St.prototype, "SendStats", null);
-        var vt = n(7227),
-          bt = n(96275);
+        var vt = n(5663),
+          bt = n(17910);
         function It(e, t) {
           if (!e) return;
           if ((0, te.ww)(e)) return;
@@ -17924,8 +17924,8 @@ var CLSTAMP = "10961770";
             e && (e.strMode != t ? e.fnSetMode(t) : e.fnSetMode("none"));
           }, [e, t]);
         }
-        var Tt = n(14561),
-          Dt = n(9241),
+        var Tt = n(47829),
+          Dt = n(51037),
           kt = n(2965),
           Pt = n.n(kt);
         const Lt = (0, B.forwardRef)(function (e, t) {
@@ -18168,9 +18168,9 @@ var CLSTAMP = "10961770";
         }
         var Kt = n(16026),
           Zt = n.n(Kt),
-          Xt = n(93086),
-          Qt = n(43639),
-          $t = n(85397);
+          Xt = n(82194),
+          Qt = n(90115),
+          $t = n(64073);
         const Yt = {};
         (Yt.arabic = () => n.e(7247).then(n.t.bind(n, 67247, 19))),
           (Yt.brazilian = () => n.e(947).then(n.t.bind(n, 60947, 19))),
@@ -18210,7 +18210,7 @@ var CLSTAMP = "10961770";
         var en = n(78325),
           tn = n(41981),
           nn = n.n(tn),
-          sn = n(34590);
+          sn = n(6370);
         const on = parseInt(nn().nContextMenuEdgePadding),
           rn = parseInt(nn().nContextMenuVerticalGap);
         function an(e) {
@@ -18840,7 +18840,7 @@ var CLSTAMP = "10961770";
             ("once" != e || !a.current) && ("active" == i || n)
           );
         }
-        var Tn = n(35843);
+        var Tn = n(1719);
         function Dn(e) {
           let { player: t, category: n, title: s, focus: i } = e,
             o = (0, B.useRef)(null),
@@ -19259,7 +19259,7 @@ var CLSTAMP = "10961770";
         }
         var Hn = n(80478),
           Wn = n.n(Hn),
-          zn = n(41930);
+          zn = n(24334);
         function qn(e) {
           let { player: t, category: n, title: s } = e,
             [i, o] = (function (e) {
@@ -19657,11 +19657,11 @@ var CLSTAMP = "10961770";
           );
         }
         var es,
-          ts = n(3753),
-          ns = n(3877),
-          ss = n(7295);
+          ts = n(56237),
+          ns = n(84160),
+          ss = n(62401);
         const is = B.lazy(() =>
-          Promise.all([n.e(9489), n.e(4949), n.e(7462)]).then(n.bind(n, 28945)),
+          Promise.all([n.e(9489), n.e(201), n.e(7462)]).then(n.bind(n, 5072)),
         );
         function os(e) {
           return (0, P.jsx)(B.Suspense, {
@@ -22987,10 +22987,10 @@ var CLSTAMP = "10961770";
         }
         (0, s.Cg)([c.oI], ci.prototype, "OnMouseOver", null),
           (0, s.Cg)([c.oI], ci.prototype, "OnMouseOut", null);
-        var hi = n(27631),
-          ui = n(26036),
-          mi = n(46352),
-          pi = n(92246);
+        var hi = n(22153),
+          ui = n(57724),
+          mi = n(91852),
+          pi = n(33154);
         const _i =
             n.p +
             "javascript/webui/noisegate-audio-worklet.js?contenthash=ef007c9e0249549f997c",
@@ -23277,7 +23277,7 @@ var CLSTAMP = "10961770";
         }
         (0, s.Cg)([R.XI.bound], fi.prototype, "OnFailure", null),
           (0, s.Cg)([R.XI.bound], fi.prototype, "OnPlaybackEnded", null);
-        var Si = n(41359);
+        var Si = n(25851);
         class vi extends Si.P {
           async GetString(e) {
             try {
@@ -23297,13 +23297,13 @@ var CLSTAMP = "10961770";
             return SteamClient.Storage.DeleteKey(e), Promise.resolve();
           }
         }
-        var bi = n(95267),
+        var bi = n(45607),
           Ii = n(7470),
-          yi = n(24476),
-          wi = n(40381),
+          yi = n(40680),
+          wi = n(58678),
           xi = n(32621),
           Ai = n.n(xi),
-          Ri = n(17082);
+          Ri = n(61758);
         class Mi {
           m_VoiceChatStore;
           m_CMInterface;
@@ -24511,7 +24511,7 @@ var CLSTAMP = "10961770";
           qi(e.window, e.browser_info ?? C.m);
         });
       },
-      51655: (e, t, n) => {
+      82361: (e, t, n) => {
         "use strict";
         n.d(t, {
           iw: () => Z,
@@ -24524,14 +24524,14 @@ var CLSTAMP = "10961770";
           TN: () => J,
         });
         var s = n(34629),
-          i = n(24071),
+          i = n(54835),
           o = n(89193),
-          r = n(38250),
-          a = n(32561),
-          l = n(52077),
-          c = n(85164),
-          d = n(97356),
-          h = n(42603);
+          r = n(78998),
+          a = n(96757),
+          l = n(63129),
+          c = n(41824),
+          d = n(30486),
+          h = n(56999);
         class u {
           constructor() {
             (0, o.Gn)(this);
@@ -24732,9 +24732,9 @@ var CLSTAMP = "10961770";
         (0, s.Cg)([o.sH], m.prototype, "m_bExpired", void 0),
           (0, s.Cg)([o.sH], m.prototype, "m_strThumbnail", void 0),
           (0, s.Cg)([o.sH], m.prototype, "m_nThumbnailCount", void 0);
-        var p = n(47257),
-          _ = n(82478),
-          g = n(91219);
+        var p = n(39868),
+          _ = n(55282),
+          g = n(16423);
         class C {
           m_CMInterface;
           m_strTradeOfferToken;
@@ -24771,13 +24771,13 @@ var CLSTAMP = "10961770";
             return `${i.TS.COMMUNITY_BASE_URL}tradeoffer/new/?partner=${e}&token=${encodeURIComponent(this.m_strTradeOfferToken)}`;
           }
         }
-        var f = n(54704),
-          S = n(1378),
-          v = n(27183),
-          b = n(73561);
+        var f = n(47857),
+          S = n(82974),
+          v = n(42139),
+          b = n(29085);
         const I = { locked: !1 };
-        var y = n(78290),
-          w = n(21571);
+        var y = n(66686),
+          w = n(28703);
         class x {
           m_ParentalSettings = { is_enabled: !1 };
           m_ParentalState = I;
@@ -24937,11 +24937,11 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([o.EW], x.prototype, "isEnabled", null),
           (0, s.Cg)([o.EW], x.prototype, "isLocked", null),
           (0, s.Cg)([o.EW], x.prototype, "locked", null);
-        var A = n(63676),
-          R = n(65820),
-          M = n(10275),
-          T = n(28667),
-          D = n(74005);
+        var A = n(8296),
+          R = n(12168),
+          M = n(21791),
+          T = n(66903),
+          D = n(81289);
         class k {
           m_bReady = !1;
           m_FriendsSettings = void 0;
@@ -25328,7 +25328,7 @@ var CLSTAMP = "10961770";
             );
           }
         }
-        var F = n(82791);
+        var F = n(83153);
         class B {
           constructor() {
             (0, o.Gn)(this);
@@ -25368,17 +25368,17 @@ var CLSTAMP = "10961770";
           }
         }
         (0, s.Cg)([o.sH], B.prototype, "m_PrivacySettings", void 0);
-        var O = n(46878),
-          N = n(70167),
-          E = n(75888),
-          j = n(62646),
-          V = n(39109);
+        var O = n(52279),
+          N = n(39998),
+          E = n(85470),
+          j = n(94458),
+          V = n(25409);
         function U(e, t) {
           return `${e} - ${((n = performance.now() - t), n.toLocaleString((0, V.J)()))}ms`;
           var n;
         }
         var H = n(90095);
-        const W = new (n(92246).wd)("FriendsUI").Debug;
+        const W = new (n(33154).wd)("FriendsUI").Debug;
         function z(e, t) {
           return function (...t) {
             $.ready_to_render
@@ -25525,6 +25525,7 @@ var CLSTAMP = "10961770";
                   this.VoiceStore.GetUseSteamAudioSpatialization(),
                 SetUseSteamAudioSpatialization: (e) =>
                   this.VoiceStore.SetUseSteamAudioSpatialization(e),
+                ResetSettings: () => this.VoiceStore.ResetSettings(),
               });
           }
           InitInternal(e, t, n = []) {
@@ -25805,20 +25806,20 @@ var CLSTAMP = "10961770";
         (0, s.Cg)([o.sH], Q.prototype, "m_bReadyToRender", void 0),
           (0, s.Cg)([o.EW], Q.prototype, "ready_to_render", null);
       },
-      1378: (e, t, n) => {
+      82974: (e, t, n) => {
         "use strict";
         n.d(t, { fW: () => p, me: () => f, rV: () => g });
         var s = n(34629),
-          i = n(31174),
-          o = n(87885),
-          r = n(54704),
-          a = n(51655),
-          l = n(959),
-          c = n(92246),
-          d = n(76769),
+          i = n(62770),
+          o = n(74257),
+          r = n(47857),
+          a = n(82361),
+          l = n(99787),
+          c = n(33154),
+          d = n(58013),
           h = n(89193),
-          u = n(74005),
-          m = n(73561);
+          u = n(81289),
+          m = n(29085);
         const p = -1,
           _ = -2;
         class g {
@@ -26356,20 +26357,20 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([o.oI], f.prototype, "OnPersonaStateChanged", null),
           (0, s.Cg)([o.oI], f.prototype, "OnPartyBeaconsUpdated", null);
       },
-      73134: (e, t, n) => {
+      36386: (e, t, n) => {
         "use strict";
         n.d(t, { DH: () => p, JD: () => _, ol: () => g });
         var s = n(34629),
-          i = n(82609),
+          i = n(53684),
           o = n(63696),
           r = n(89193),
-          a = n(24071),
-          l = n(95863),
-          c = n(87885),
-          d = n(77960),
-          h = n(31174),
-          u = n(53959),
-          m = n(51655);
+          a = n(54835),
+          l = n(36803),
+          c = n(74257),
+          d = n(81694),
+          h = n(62770),
+          u = n(94027),
+          m = n(82361);
         class p {
           m_mapHovers = new WeakMap();
           GetHover(e) {
@@ -26535,23 +26536,23 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([c.oI], g.prototype, "Hide", null),
           (0, s.Cg)([c.oI], g.prototype, "OnContextMenu", null);
       },
-      63676: (e, t, n) => {
+      8296: (e, t, n) => {
         "use strict";
         n.d(t, { D2: () => v, Fp: () => f });
         var s = n(34629),
-          i = n(51655),
-          o = n(17196),
+          i = n(82361),
+          o = n(83281),
           r = n(89193),
-          a = n(19160),
-          l = n(37023),
-          c = n(32561),
-          d = n(85164),
-          h = n(24071),
-          u = n(42603),
-          m = n(87885),
-          p = n(26487),
-          _ = n(92246),
-          g = n(62646);
+          a = n(2980),
+          l = n(58659),
+          c = n(96757),
+          d = n(41824),
+          h = n(54835),
+          u = n(56999),
+          m = n(74257),
+          p = n(89875),
+          _ = n(33154),
+          g = n(94458);
         const C = new _.wd("FriendsUI/RemotePlay"),
           f = 4;
         class S {
@@ -27346,16 +27347,16 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([m.oI], v.prototype, "HandleGroupDisbanded", null),
           (0, s.Cg)([m.oI], v.prototype, "HandleRemoteClientStopped", null);
       },
-      82791: (e, t, n) => {
+      83153: (e, t, n) => {
         "use strict";
         n.d(t, { TP: () => x, Vi: () => w, Jw: () => I, OC: () => y });
         var s = n(34629),
-          i = n(24071),
-          o = n(51655),
+          i = n(54835),
+          o = n(82361),
           r = n(89193),
-          a = n(42603),
-          l = n(31174),
-          c = n(959);
+          a = n(56999),
+          l = n(62770),
+          c = n(99787);
         let d = 0;
         class h {
           m_id = void 0;
@@ -27529,15 +27530,15 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([r.XI], h.prototype, "RemoveTab", null),
           (0, s.Cg)([r.XI], h.prototype, "OnPopupClosed", null),
           (0, s.Cg)([r.XI], h.prototype, "CloseAllTabs", null);
-        var u = n(42441),
-          m = n(62646),
-          p = n(73561),
-          _ = n(24476),
-          g = n(74005),
-          C = n(19596),
-          f = n(87885),
-          S = n(21571),
-          v = n(71812);
+        var u = n(90277),
+          m = n(94458),
+          p = n(29085),
+          _ = n(40680),
+          g = n(81289),
+          C = n(73960),
+          f = n(74257),
+          S = n(28703),
+          v = n(43120);
         const b = "ChatStorePopupState";
         var I, y;
         !(function (e) {
@@ -28559,17 +28560,17 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([r.sH], R.prototype, "m_bFriendsListSingleWindow", void 0),
           (0, s.Cg)([r.sH], R.prototype, "m_bFriendsListCollapsed", void 0);
       },
-      46878: (e, t, n) => {
+      52279: (e, t, n) => {
         "use strict";
         n.d(t, { F$: () => ae, HT: () => j });
         var s = n(34629),
-          i = n(24071),
-          o = n(52077),
+          i = n(54835),
+          o = n(63129),
           r = n(58663),
-          a = n(37127),
-          l = n(39610),
-          c = n(19596),
-          d = n(92246);
+          a = n(27411),
+          l = n(38150),
+          c = n(73960),
+          d = n(33154);
         const h = new d.wd("VRMessages");
         let u = new (class {
           m_socket;
@@ -28770,8 +28771,8 @@ var CLSTAMP = "10961770";
             this.m_socket && this.m_socket.close();
           }
         })();
-        var m = n(47806),
-          p = n(63598);
+        var m = n(31594),
+          p = n(23445);
         const _ = 2 ** 32 - 1;
         function g(e) {
           try {
@@ -29369,10 +29370,10 @@ var CLSTAMP = "10961770";
           }
         })();
         const w = y;
-        var x = n(51655),
-          A = n(85164),
-          R = n(65877),
-          M = n(87885),
+        var x = n(82361),
+          A = n(41824),
+          R = n(38609),
+          M = n(74257),
           T = n(89193);
         class D {
           m_Supplier;
@@ -29701,7 +29702,7 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([T.XI.bound], D.prototype, "OnSetSpatialAudioSource", null),
           (0, s.Cg)([M.oI], D.prototype, "SendReadyNotification", null);
         let k = new D();
-        var P = n(94972);
+        var P = n(58536);
         class L {
           m_Supplier;
           m_Disposer;
@@ -29966,9 +29967,9 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([T.XI.bound], L.prototype, "OnDataChannelError", null),
           (0, s.Cg)([T.XI.bound], L.prototype, "OnDisconnect", null);
         let G = new L();
-        var F = n(97385),
-          B = n(65012),
-          O = n(48667);
+        var F = n(2849),
+          B = n(5368),
+          O = n(94335);
         class N {
           constructor(e, t) {
             if (!(e instanceof BaseAudioContext))
@@ -30141,11 +30142,11 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([T.XI.bound], E.prototype, "UpdateVolume", null),
           (0, s.Cg)([T.XI.bound], E.prototype, "stop", null);
         var j,
-          V = n(32561),
-          U = n(93456),
-          H = n(959),
+          V = n(96757),
+          U = n(51332),
+          H = n(99787),
           W = n(6660),
-          z = n(74005);
+          z = n(81289);
         !(function (e) {
           (e[(e.k_ENoiseGateLevel_Off = 0)] = "k_ENoiseGateLevel_Off"),
             (e[(e.k_ENoiseGateLevel_Low = 1)] = "k_ENoiseGateLevel_Low"),
@@ -30154,7 +30155,7 @@ var CLSTAMP = "10961770";
         })(j || (j = {}));
         var q,
           K,
-          Z = n(42603);
+          Z = n(56999);
         !(function (e) {
           (e[(e.k_EAudioStreamType_Microphone = 1)] =
             "k_EAudioStreamType_Microphone"),
@@ -30351,6 +30352,9 @@ var CLSTAMP = "10961770";
           m_SettingsStore;
           constructor(e) {
             (0, T.Gn)(this), (this.m_SettingsStore = e);
+          }
+          RemoveSettingsFromLocalStorage() {
+            this.m_SettingsStore.StoreObjectInLocalStorage(ne, {});
           }
           SaveToLocalStorage() {
             this.m_SettingsStore.StoreObjectInLocalStorage(ne, {
@@ -33701,6 +33705,25 @@ var CLSTAMP = "10961770";
                   ? this.InitiateOneOnOneVoiceChat(e)
                   : this.InitiateChatRoomVoice()));
           }
+          async BShouldUseEchoCancellation() {
+            if (i.TS.ON_FRAME && (0, Z.Dp)("System.Audio.GetDevices")) {
+              const e = await SteamClient?.System?.Audio?.GetDevices();
+              let t = "",
+                n = "";
+              if (e)
+                for (const s of e.vecDevices)
+                  s.id == e.activeInputDeviceId && (t = s.sName),
+                    s.id == e.activeOutputDeviceId && (n = s.sName);
+              if ("Built-in Audio" == t && "Built-in Audio" == n)
+                return (
+                  console.log(
+                    "Using built-in input and output devices, skipping echo cancellation (will use system-level echo cancellation).",
+                  ),
+                  !1
+                );
+            }
+            return !0;
+          }
           OnRequestMicrophoneAccess() {
             if (
               this.m_VoiceCallState.m_eState >
@@ -33717,40 +33740,6 @@ var CLSTAMP = "10961770";
               (this.m_AudioContext = x.xm.AudioPlaybackManager.context);
             let e = {
               optional: [
-                {
-                  echoCancellation: this.m_Settings.m_VoiceUseEchoCancellation,
-                },
-                {
-                  googEchoCancellation:
-                    this.m_Settings.m_VoiceUseEchoCancellation,
-                },
-                {
-                  googEchoCancellation2:
-                    this.m_Settings.m_VoiceUseEchoCancellation,
-                },
-                {
-                  googNoiseSupression:
-                    this.m_Settings.m_VoiceUseNoiseCancellation,
-                },
-                {
-                  googNoiseSupression2:
-                    this.m_Settings.m_VoiceUseNoiseCancellation,
-                },
-                {
-                  mozNoiseSuppression:
-                    this.m_Settings.m_VoiceUseNoiseCancellation,
-                },
-                {
-                  googAutoGainControl:
-                    this.m_Settings.m_VoiceUseAutoGainControl,
-                },
-                {
-                  googAutoGainControl2:
-                    this.m_Settings.m_VoiceUseAutoGainControl,
-                },
-                {
-                  mozAutoGainControl: this.m_Settings.m_VoiceUseAutoGainControl,
-                },
                 { googHighpassFilter: !0 },
                 { googAudioMirroring: !1 },
               ],
@@ -33778,13 +33767,57 @@ var CLSTAMP = "10961770";
                 t.webkitGetUserMedia ||
                 t.mozGetUserMedia ||
                 t.msGetUserMedia),
-              t.getUserMedia(
-                { audio: e, video: this.m_bSendVideo || this.m_bReceiveVideo },
-                (e) => {
-                  this.OnGetUserMediaSuccess(e);
-                },
-                this.OnGetUserMediaFailure,
-              );
+              this.BShouldUseEchoCancellation().then((n) => {
+                n &&
+                  (e.optional = e.optional.concat([
+                    {
+                      echoCancellation:
+                        this.m_Settings.m_VoiceUseEchoCancellation,
+                    },
+                    {
+                      googEchoCancellation:
+                        this.m_Settings.m_VoiceUseEchoCancellation,
+                    },
+                    {
+                      googEchoCancellation2:
+                        this.m_Settings.m_VoiceUseEchoCancellation,
+                    },
+                    {
+                      googNoiseSupression:
+                        this.m_Settings.m_VoiceUseNoiseCancellation,
+                    },
+                    {
+                      googNoiseSupression2:
+                        this.m_Settings.m_VoiceUseNoiseCancellation,
+                    },
+                    {
+                      mozNoiseSuppression:
+                        this.m_Settings.m_VoiceUseNoiseCancellation,
+                    },
+                    {
+                      googAutoGainControl:
+                        this.m_Settings.m_VoiceUseAutoGainControl,
+                    },
+                    {
+                      googAutoGainControl2:
+                        this.m_Settings.m_VoiceUseAutoGainControl,
+                    },
+                    {
+                      mozAutoGainControl:
+                        this.m_Settings.m_VoiceUseAutoGainControl,
+                    },
+                  ])),
+                  t.getUserMedia(
+                    {
+                      audio: e,
+                      video: this.m_bSendVideo || this.m_bReceiveVideo,
+                    },
+                    (e) => {
+                      this.OnGetUserMediaSuccess(e);
+                    },
+                    this.OnGetUserMediaFailure,
+                  );
+              });
           }
           ScheduleClientVoiceLogsUpload(e) {
             if ("" == this.m_VoiceCallState.m_voiceChatID) return;
@@ -34046,6 +34079,10 @@ var CLSTAMP = "10961770";
                   : this.m_VoiceCallState.m_chatRoom &&
                     e.ui_state().set_in_group_voice_chat(!0));
           }
+          ResetSettings() {
+            console.log("Removing voice chat settings from local storage."),
+              this.m_Settings.RemoveSettingsFromLocalStorage();
+          }
         }
         (0, s.Cg)([T.sH], ae.prototype, "m_VoiceCallState", void 0),
           (0, s.Cg)([T.sH], ae.prototype, "m_bPushToTalkEnabled", void 0),
@@ -34234,14 +34271,14 @@ var CLSTAMP = "10961770";
             null,
           );
       },
-      30844: (e, t, n) => {
+      63392: (e, t, n) => {
         "use strict";
         n.d(t, { D: () => c, T: () => l });
         var s = n(62540),
-          i = n(53959),
+          i = n(94027),
           o = n(63696),
-          r = n(87269),
-          a = n(26487);
+          r = n(42177),
+          a = n(89875);
         const l = o.forwardRef(function (e, t) {
             const {
                 rgAcceptedTypes: n,
@@ -34380,7 +34417,7 @@ var CLSTAMP = "10961770";
           };
         }
       },
-      8771: (e, t, n) => {
+      54610: (e, t, n) => {
         "use strict";
         n.d(t, {
           Ko: () => Se,
@@ -34396,15 +34433,15 @@ var CLSTAMP = "10961770";
         });
         var s = n(34629),
           i = n(62540),
-          o = n(24071),
-          r = n(42441),
-          a = n(75888),
-          l = n(54704),
-          c = n(91822),
-          d = n(51655),
-          h = n(53959),
-          u = n(30844),
-          m = n(37542),
+          o = n(54835),
+          r = n(90277),
+          a = n(85470),
+          l = n(47857),
+          c = n(45570),
+          d = n(82361),
+          h = n(94027),
+          u = n(63392),
+          m = n(98842),
           p = n(30543),
           _ = n.n(p);
         const g = ({ message: e, name: t, renderImage: n, ...s }) =>
@@ -34442,48 +34479,48 @@ var CLSTAMP = "10961770";
             },
             "inviteDrop",
           );
-        var C = n(71773),
-          f = n(51217),
-          S = n(52838),
-          v = n(30733),
+        var C = n(45465),
+          f = n(51589),
+          S = n(63034),
+          v = n(46801),
           b = n(41230),
           I = n(90095),
           y = n(63696),
-          w = n(58316),
-          x = n(25767),
-          A = n(39267),
-          R = n(6893),
-          M = n(62250),
-          T = n(84719),
-          D = n(39358),
-          k = n(16159),
-          P = n(74005),
-          L = n(98434),
-          G = n(26487),
-          F = n(959),
-          B = n(87885),
-          O = n(87269),
-          N = n(82205),
-          E = n(27631),
-          j = n(56786),
-          V = n(77960),
-          U = n(43808),
+          w = n(91408),
+          x = n(45931),
+          A = n(21189),
+          R = n(55641),
+          M = n(14202),
+          T = n(49667),
+          D = n(37706),
+          k = n(68611),
+          P = n(81289),
+          L = n(29150),
+          G = n(89875),
+          F = n(99787),
+          B = n(74257),
+          O = n(42177),
+          N = n(75463),
+          E = n(22153),
+          j = n(73938),
+          V = n(81694),
+          U = n(50148),
           H = n(23038),
-          W = n(85164),
-          z = n(97356),
-          q = n(76693),
-          K = n(95331),
-          Z = n(65780),
-          X = n(91962),
-          Q = n(11581),
-          $ = n(93778),
-          Y = n(64567),
-          J = n(73561),
-          ee = n(8182),
-          te = n(21839),
-          ne = n(47893);
+          W = n(41824),
+          z = n(30486),
+          q = n(66745),
+          K = n(96324),
+          Z = n(91240),
+          X = n(99630),
+          Q = n(16161),
+          $ = n(88809),
+          Y = n(59587),
+          J = n(29085),
+          ee = n(16805),
+          te = n(83859),
+          ne = n(45071);
         const se = y.lazy(() =>
-          Promise.all([n.e(9489), n.e(1068), n.e(7653)]).then(n.bind(n, 54989)),
+          Promise.all([n.e(9489), n.e(1068), n.e(7653)]).then(n.bind(n, 39954)),
         );
         let ie = class extends y.Component {
           static contextType = o.QO;
@@ -35225,11 +35262,11 @@ var CLSTAMP = "10961770";
         };
         (0, s.Cg)([B.oI], le.prototype, "OnClick", null),
           (le = (0, s.Cg)([b.PA], le));
-        var ce = n(27659),
-          de = n(7797),
-          he = n(25728);
+        var ce = n(47709),
+          de = n(45137),
+          he = n(26092);
         const ue = y.lazy(() =>
-          Promise.all([n.e(9489), n.e(1068), n.e(7653)]).then(n.bind(n, 22560)),
+          Promise.all([n.e(9489), n.e(1068), n.e(7653)]).then(n.bind(n, 45940)),
         );
         let me = class extends y.Component {
           m_refChatTabs;
@@ -36316,38 +36353,38 @@ var CLSTAMP = "10961770";
         }
         ye = (0, s.Cg)([b.PA], ye);
       },
-      7295: (e, t, n) => {
+      62401: (e, t, n) => {
         "use strict";
         n.d(t, { bX: () => Q, kQ: () => Y, J0: () => $ });
         var s = n(62540),
-          i = n(73561),
-          o = n(42441),
-          r = n(51655),
-          a = n(85164),
+          i = n(29085),
+          o = n(90277),
+          r = n(82361),
+          a = n(41824),
           l = n(63696),
-          c = n(959),
+          c = n(99787),
           d = n(53612),
           h = n.n(d),
-          u = n(25767),
-          m = n(62250),
-          p = n(16159),
+          u = n(45931),
+          m = n(14202),
+          p = n(68611),
           _ = n(12008),
           g = n.n(_),
-          C = n(98434),
-          f = n(8662),
-          S = n(2888),
-          v = n(52077),
-          b = (n(78846), n(16717)),
+          C = n(29150),
+          f = n(20482),
+          S = n(56348),
+          v = n(63129),
+          b = (n(8490), n(29817)),
           I = n(18397),
-          y = n(32561),
-          w = (n(62962), n(87269)),
-          x = n(38100),
-          A = n(91836),
-          R = n(97385),
-          M = n(21571),
-          T = n(74005),
-          D = n(34164),
-          k = n(85397);
+          y = n(96757),
+          w = (n(56352), n(42177)),
+          x = n(96633),
+          A = n(90984),
+          R = n(2849),
+          M = n(28703),
+          T = n(81289),
+          D = n(90080),
+          k = n(64073);
         const P = {};
         (P.arabic = () => n.e(9457).then(n.t.bind(n, 59457, 19))),
           (P.brazilian = () => n.e(8106).then(n.t.bind(n, 95725, 19))),
@@ -36772,7 +36809,7 @@ var CLSTAMP = "10961770";
           }
         }
         f.lN, f.Uw, f.hP, f.z8, f.NC;
-        var H = n(9241);
+        var H = n(51037);
         function W(e) {
           const {
               unAccountIDSender: t,
@@ -37372,28 +37409,28 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      56786: (e, t, n) => {
+      73938: (e, t, n) => {
         "use strict";
         n.d(t, { oi: () => le, xH: () => _e, w4: () => ge });
         var s = n(34629),
           i = n(62540),
           o = n(83957),
           r = n.n(o),
-          a = n(24071),
-          l = n(7578),
-          c = n(42441),
-          d = n(54704),
-          h = n(91822),
-          u = n(51655),
-          m = n(53959),
+          a = n(54835),
+          l = n(89822),
+          c = n(90277),
+          d = n(47857),
+          h = n(45570),
+          u = n(82361),
+          m = n(94027),
           p = n(63696),
-          _ = n(63840),
+          _ = n(2276),
           g = n(41230),
-          C = n(87885),
-          f = n(16159),
-          S = n(62250),
-          v = n(959),
-          b = n(87269);
+          C = n(74257),
+          f = n(68611),
+          S = n(14202),
+          v = n(99787),
+          b = n(42177);
         let I = class extends p.Component {
           render() {
             const { fileUploadManager: e } = this.props;
@@ -37561,21 +37598,21 @@ var CLSTAMP = "10961770";
         (0, s.Cg)([C.oI], x.prototype, "ClearErrorState", null),
           (0, s.Cg)([C.oI], x.prototype, "OnRetryClick", null),
           (x = (0, s.Cg)([g.PA], x));
-        var A = n(91962),
-          R = n(28540),
-          M = n(3753),
-          T = n(58316),
-          D = n(25767),
+        var A = n(99630),
+          R = n(78104),
+          M = n(56237),
+          T = n(91408),
+          D = n(45931),
           k = n(80611),
           P = n.n(k),
-          L = n(3877),
-          G = n(75663),
-          F = n(80481),
-          B = n(36439),
+          L = n(84160),
+          G = n(1555),
+          F = n(93605),
+          B = n(67806),
           O = n(89193),
           N = n(13991),
           E = n.n(N),
-          j = n(98434);
+          j = n(29150);
         class V extends p.Component {
           m_strLastSearch;
           m_rgCurrentMatches = [];
@@ -37842,21 +37879,21 @@ var CLSTAMP = "10961770";
             return Number.MAX_VALUE;
           }
         };
-        var K = n(26487),
-          Z = n(93086),
-          X = n(27659),
-          Q = n(47893),
-          $ = n(39358),
-          Y = n(82205),
-          J = n(21571),
-          ee = n(46352),
-          te = n(8182),
-          ne = n(41930),
-          se = n(73561),
-          ie = n(32561),
-          oe = n(42603);
+        var K = n(89875),
+          Z = n(82194),
+          X = n(47709),
+          Q = n(45071),
+          $ = n(37706),
+          Y = n(75463),
+          J = n(28703),
+          ee = n(91852),
+          te = n(16805),
+          ne = n(24334),
+          se = n(29085),
+          ie = n(96757),
+          oe = n(56999);
         const re = p.lazy(() =>
-          Promise.all([n.e(9489), n.e(4949), n.e(7462)]).then(n.bind(n, 74095)),
+          Promise.all([n.e(9489), n.e(201), n.e(7462)]).then(n.bind(n, 77125)),
         );
         function ae(e) {
           return (0, i.jsx)(p.Suspense, {
@@ -38976,28 +39013,28 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      65780: (e, t, n) => {
+      91240: (e, t, n) => {
         "use strict";
         n.d(t, { Ln: () => x, cX: () => w, lU: () => y });
         var s = n(62540),
-          i = n(24071),
-          o = n(91822),
-          r = n(51655),
-          a = n(7295),
-          l = n(11581),
-          c = n(25767),
-          d = n(87269),
+          i = n(54835),
+          o = n(45570),
+          r = n(82361),
+          a = n(62401),
+          l = n(16161),
+          c = n(45931),
+          d = n(42177),
           h = n(4452),
           u = n.n(h),
           m = n(90095),
           p = n(63696),
-          _ = n(62250),
-          g = n(38100),
-          C = n(39358),
-          f = n(16159),
-          S = n(74005),
-          v = n(26487),
-          b = n(959),
+          _ = n(14202),
+          g = n(96633),
+          C = n(37706),
+          f = n(68611),
+          S = n(81289),
+          v = n(89875),
+          b = n(99787),
           I = n(47062);
         function y(e) {
           const { chatView: t, friend: n } = e;
@@ -39246,7 +39283,7 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      71773: (e, t, n) => {
+      45465: (e, t, n) => {
         "use strict";
         n.d(t, {
           I: () => z,
@@ -39259,32 +39296,32 @@ var CLSTAMP = "10961770";
           i = n(62540),
           o = n(11057),
           r = n.n(o),
-          a = n(53959),
-          l = n(26487),
-          c = n(51655),
-          d = n(2176),
-          h = n(37832),
-          u = n(14461),
-          m = n(30733),
+          a = n(94027),
+          l = n(89875),
+          c = n(82361),
+          d = n(57516),
+          h = n(56637),
+          u = n(91553),
+          m = n(46801),
           p = n(41230),
           _ = n(63696),
-          g = n(16159),
-          C = n(959),
-          f = n(87885),
-          S = n(93086),
-          v = n(51217),
-          b = n(54479),
-          I = n(69334),
-          y = n(98434),
-          w = n(85164),
-          x = n(3877),
-          A = n(3753),
-          R = n(87269),
-          M = n(39358),
-          T = n(82205),
-          D = n(11581),
-          k = n(539),
-          P = n(30940);
+          g = n(68611),
+          C = n(99787),
+          f = n(74257),
+          S = n(82194),
+          v = n(51589),
+          b = n(70808),
+          I = n(34074),
+          y = n(29150),
+          w = n(41824),
+          x = n(84160),
+          A = n(56237),
+          R = n(42177),
+          M = n(37706),
+          T = n(75463),
+          D = n(16161),
+          k = n(68935),
+          P = n(45904);
         const L = ["148618792083695825", "76561197960266962"];
         let G = class extends _.Component {
           InviteFriend(e) {
@@ -39805,31 +39842,31 @@ var CLSTAMP = "10961770";
         }
         z = (0, s.Cg)([p.PA], z);
       },
-      82205: (e, t, n) => {
+      75463: (e, t, n) => {
         "use strict";
         n.d(t, { vY: () => ye, LC: () => xe, _1: () => Ae });
         var s = n(34629),
           i = n(62540),
-          o = n(62250),
-          r = n(39358),
-          a = n(38100),
-          l = n(15982),
-          c = n(24071),
-          d = n(42441),
-          h = n(51655),
-          u = n(53959),
-          m = n(30844),
+          o = n(14202),
+          r = n(37706),
+          a = n(96633),
+          l = n(86502),
+          c = n(54835),
+          d = n(90277),
+          h = n(82361),
+          u = n(94027),
+          m = n(63392),
           p = n(63696),
-          _ = n(16159),
+          _ = n(68611),
           g = n(41230),
-          C = n(54704),
-          f = n(87885),
-          S = n(97385),
-          v = n(73561),
-          b = n(47893),
+          C = n(47857),
+          f = n(74257),
+          S = n(2849),
+          v = n(29085),
+          b = n(45071),
           I = n(52445),
           y = n(55700),
-          w = n(1378);
+          w = n(82974);
         class x extends p.Component {
           m_elContainer = null;
           m_resizeObserver = null;
@@ -39897,13 +39934,13 @@ var CLSTAMP = "10961770";
         }
         (0, s.Cg)([f.oI], x.prototype, "BindContainerRef", null),
           (0, s.Cg)([f.oI], x.prototype, "OnResize", null);
-        var A = n(959),
-          R = n(58316),
-          M = n(98434),
-          T = n(87269),
-          D = n(25767),
-          k = n(12001),
-          P = n(46246);
+        var A = n(99787),
+          R = n(91408),
+          M = n(29150),
+          T = n(42177),
+          D = n(45931),
+          k = n(46829),
+          P = n(62178);
         const L = (e) =>
           c.TS.IN_CLIENT ? (0, i.jsx)(x, { ...e }) : (0, i.jsx)(I.Ay, { ...e });
         let G = class extends p.Component {
@@ -40764,35 +40801,35 @@ var CLSTAMP = "10961770";
         }
         (0, s.Cg)([f.oI], K.prototype, "ItemKey", null),
           (0, s.Cg)([f.oI], K.prototype, "CalculateItemHeight", null);
-        var Z = n(56786),
-          X = n(43808),
-          Q = n(71773),
-          $ = n(3009),
+        var Z = n(73938),
+          X = n(50148),
+          Q = n(45465),
+          $ = n(4589),
           Y = n(90095),
           J = n(23038),
-          ee = n(27083),
-          te = n(26487),
-          ne = n(97356),
-          se = n(74005),
-          ie = n(76693),
-          oe = n(93778),
-          re = n(8771),
-          ae = n(79621),
-          le = n(95331),
-          ce = n(51217),
-          de = n(37832),
-          he = n(14461),
-          ue = n(62646),
+          ee = n(34836),
+          te = n(89875),
+          ne = n(30486),
+          se = n(81289),
+          ie = n(66745),
+          oe = n(88809),
+          re = n(54610),
+          ae = n(91737),
+          le = n(96324),
+          ce = n(51589),
+          de = n(56637),
+          he = n(91553),
+          ue = n(94458),
           me = n(11057),
           pe = n.n(me),
-          _e = n(58366),
-          ge = n(8182),
-          Ce = n(21571),
-          fe = n(21839),
-          Se = n(71812);
+          _e = n(91538),
+          ge = n(16805),
+          Ce = n(28703),
+          fe = n(83859),
+          Se = n(43120);
         const ve = p.lazy(() =>
             Promise.all([n.e(9489), n.e(1068), n.e(7653)]).then(
-              n.bind(n, 40612),
+              n.bind(n, 92467),
             ),
           ),
           be = 1e4,
@@ -42052,7 +42089,7 @@ var CLSTAMP = "10961770";
               }),
             });
       },
-      79621: (e, t, n) => {
+      91737: (e, t, n) => {
         "use strict";
         n.d(t, {
           Ey: () => L,
@@ -42065,31 +42102,31 @@ var CLSTAMP = "10961770";
           i = n(62540),
           o = n(63696),
           r = n(23038),
-          a = n(62250),
-          l = n(16159),
-          c = n(53959),
-          d = n(51655),
-          h = n(30844),
-          u = n(2176),
-          m = n(30733),
-          p = n(39358),
-          _ = n(87269),
+          a = n(14202),
+          l = n(68611),
+          c = n(94027),
+          d = n(82361),
+          h = n(63392),
+          u = n(57516),
+          m = n(46801),
+          p = n(37706),
+          _ = n(42177),
           g = n(89193),
           C = n(41230),
-          f = n(3753),
-          S = n(58316),
-          v = n(3877),
-          b = n(959),
-          I = n(87885),
-          y = n(47893),
-          w = n(3009),
-          x = n(8771),
-          A = n(26487),
-          R = n(51217),
-          M = n(74005),
-          T = n(19596),
-          D = n(21571),
-          k = n(37542);
+          f = n(56237),
+          S = n(91408),
+          v = n(84160),
+          b = n(99787),
+          I = n(74257),
+          y = n(45071),
+          w = n(4589),
+          x = n(54610),
+          A = n(89875),
+          R = n(51589),
+          M = n(81289),
+          T = n(73960),
+          D = n(28703),
+          k = n(98842);
         let P = class extends o.Component {
           m_schHoverDelay = new T.LU();
           constructor(e) {
@@ -42842,40 +42879,40 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([I.oI], E.prototype, "OnBlur", null),
           (E = (0, s.Cg)([C.PA], E));
       },
-      3009: (e, t, n) => {
+      4589: (e, t, n) => {
         "use strict";
         n.d(t, { AX: () => F, IV: () => G, RB: () => N });
         var s = n(34629),
           i = n(62540),
-          o = n(28540),
-          r = n(24071),
-          a = n(54704),
-          l = n(53959),
-          c = n(51655),
-          d = n(71773),
-          h = n(79621),
-          u = n(2176),
-          m = n(11581),
-          p = n(77620),
+          o = n(78104),
+          r = n(54835),
+          a = n(47857),
+          l = n(94027),
+          c = n(82361),
+          d = n(45465),
+          h = n(91737),
+          u = n(57516),
+          m = n(16161),
+          p = n(24272),
           _ = n(41230),
           g = n(63696),
           C = n(23038),
-          f = n(87269),
-          S = n(36878),
-          v = n(85164),
-          b = n(54479),
-          I = n(62250),
-          y = n(16159),
-          w = n(98434),
-          x = n(26487),
-          A = n(959),
-          R = n(87885),
-          M = n(21571),
-          T = n(52838),
-          D = n(47893),
-          k = n(37542),
-          P = n(41600),
-          L = n(21839);
+          f = n(42177),
+          S = n(36714),
+          v = n(41824),
+          b = n(70808),
+          I = n(14202),
+          y = n(68611),
+          w = n(29150),
+          x = n(89875),
+          A = n(99787),
+          R = n(74257),
+          M = n(28703),
+          T = n(63034),
+          D = n(45071),
+          k = n(98842),
+          P = n(51268),
+          L = n(83859);
         let G = class extends g.Component {
           static contextType = M.QO;
           m_elDiv;
@@ -43321,33 +43358,33 @@ var CLSTAMP = "10961770";
           };
         U = (0, s.Cg)([_.PA], U);
       },
-      2176: (e, t, n) => {
+      57516: (e, t, n) => {
         "use strict";
         n.d(t, { Tz: () => R, ae: () => P, fM: () => M });
         var s = n(34629),
           i = n(62540),
-          o = n(24071),
-          r = n(53959),
-          a = n(26487),
-          l = n(51655),
-          c = n(71773),
-          d = n(30733),
-          h = n(77960),
-          u = n(39358),
-          m = n(11581),
+          o = n(54835),
+          r = n(94027),
+          a = n(89875),
+          l = n(82361),
+          c = n(45465),
+          d = n(46801),
+          h = n(81694),
+          u = n(37706),
+          m = n(16161),
           p = n(41230),
           _ = n(63696),
-          g = n(3753),
-          C = n(3877),
-          f = n(62250),
-          S = n(959),
-          v = n(87885),
-          b = n(16159),
-          I = n(51217),
+          g = n(56237),
+          C = n(84160),
+          f = n(14202),
+          S = n(99787),
+          v = n(74257),
+          b = n(68611),
+          I = n(51589),
           y = n(33310),
           w = n.n(y),
-          x = n(24816),
-          A = n(21571);
+          x = n(84884),
+          A = n(28703);
         function R(e, t, n) {
           let s,
             o = (0, r.CO)(e);
@@ -43801,33 +43838,33 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([v.oI], G.prototype, "HandleSubmit", null),
           (G = (0, s.Cg)([p.PA], G));
       },
-      27631: (e, t, n) => {
+      22153: (e, t, n) => {
         "use strict";
         n.d(t, { sU: () => H, dH: () => V, XX: () => X });
         var s = n(34629),
           i = n(62540),
-          o = n(24071),
-          r = n(42441),
-          a = n(75888),
-          l = n(91822),
-          c = n(51655),
-          d = n(53959),
-          h = n(82791),
-          u = n(71773),
-          m = n(2176),
-          p = n(77960),
+          o = n(54835),
+          r = n(90277),
+          a = n(85470),
+          l = n(45570),
+          c = n(82361),
+          d = n(94027),
+          h = n(83153),
+          u = n(45465),
+          m = n(57516),
+          p = n(81694),
           _ = n(89193),
           g = n(41230),
           C = n(63696),
           f = n(23038),
-          S = n(25647),
-          v = n(3753),
-          b = n(87269),
-          I = n(3877),
-          y = n(62250),
-          w = n(84719),
-          x = n(87885),
-          A = n(81313);
+          S = n(12867),
+          v = n(56237),
+          b = n(42177),
+          I = n(84160),
+          y = n(14202),
+          w = n(49667),
+          x = n(74257),
+          A = n(68749);
         class R extends C.Component {
           m_elScroll;
           m_animation;
@@ -43967,19 +44004,19 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([x.oI], R.prototype, "OnSlideLeftClick", null),
           (0, s.Cg)([x.oI], R.prototype, "OnSlideRightClick", null),
           (0, s.Cg)([x.oI], R.prototype, "OnWheel", null);
-        var M = n(39358),
-          T = n(16159),
-          D = n(30234),
-          k = n(31174),
-          P = n(98434),
-          L = n(959),
+        var M = n(37706),
+          T = n(68611),
+          D = n(20166),
+          k = n(62770),
+          P = n(29150),
+          L = n(99787),
           G = n(58574),
           F = n.n(G),
-          B = n(47893),
-          O = n(21571),
-          N = n(62646),
-          E = n(37542),
-          j = n(8182);
+          B = n(45071),
+          O = n(28703),
+          N = n(94458),
+          E = n(98842),
+          j = n(16805);
         let V = class extends C.Component {
           static contextType = O.QO;
           m_mapTabs = new Map();
@@ -44890,28 +44927,28 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([x.oI], Q.prototype, "OnManualVoiceChatExit", null),
           (Q = (0, s.Cg)([g.PA], Q));
       },
-      51217: (e, t, n) => {
+      51589: (e, t, n) => {
         "use strict";
         n.d(t, { E5: () => I, Rf: () => w, jv: () => y });
         var s = n(34629),
           i = n(62540),
-          o = n(21571),
-          r = n(53959),
-          a = n(51655),
-          l = n(30844),
-          c = n(71773),
-          d = n(79975),
-          h = n(47893),
-          u = n(39358),
+          o = n(28703),
+          r = n(94027),
+          a = n(82361),
+          l = n(63392),
+          c = n(45465),
+          d = n(22556),
+          h = n(45071),
+          u = n(37706),
           m = n(41230),
           p = n(63696),
-          _ = n(62250),
-          g = n(16159),
-          C = n(959),
-          f = n(87885),
-          S = n(74005),
-          v = n(87269),
-          b = n(12001);
+          _ = n(14202),
+          g = n(68611),
+          C = n(99787),
+          f = n(74257),
+          S = n(81289),
+          v = n(42177),
+          b = n(46829);
         function I(e, t, n, s, i) {
           y(e, t, n, s, !1, i);
         }
@@ -45272,42 +45309,42 @@ var CLSTAMP = "10961770";
           }),
         );
       },
-      37832: (e, t, n) => {
+      56637: (e, t, n) => {
         "use strict";
         n.d(t, { hI: () => z });
         var s = n(34629),
           i = n(62540),
           o = n(83957),
           r = n.n(o),
-          a = n(24071),
-          l = n(97385),
-          c = n(75888),
-          d = n(53959),
-          h = n(51655),
-          u = n(79621),
-          m = n(51217),
-          p = n(30733),
-          _ = n(47893),
-          g = n(39358),
-          C = n(87269),
+          a = n(54835),
+          l = n(2849),
+          c = n(85470),
+          d = n(94027),
+          h = n(82361),
+          u = n(91737),
+          m = n(51589),
+          p = n(46801),
+          _ = n(45071),
+          g = n(37706),
+          C = n(42177),
           f = n(89193),
           S = n(41230),
           v = n(63696),
-          b = n(32561),
-          I = n(62250),
-          y = n(16159),
-          w = n(15982),
-          x = n(26487),
-          A = n(31174),
-          R = n(959),
-          M = n(87885),
-          T = n(72444),
-          D = n(11581),
-          k = n(85164),
-          P = n(74005),
+          b = n(96757),
+          I = n(14202),
+          y = n(68611),
+          w = n(86502),
+          x = n(89875),
+          A = n(62770),
+          R = n(99787),
+          M = n(74257),
+          T = n(2520),
+          D = n(16161),
+          k = n(41824),
+          P = n(81289),
           L = n(84512),
           G = n.n(L),
-          F = n(98434);
+          F = n(29150);
         function B(e) {
           const {
               title: t,
@@ -45371,7 +45408,7 @@ var CLSTAMP = "10961770";
           };
         var U = n(86275),
           H = n.n(U),
-          W = n(21571);
+          W = n(28703);
         function z(e, t) {
           (0, g.HT)(
             (0, i.jsx)(q, { groupView: t }),
@@ -47337,24 +47374,24 @@ var CLSTAMP = "10961770";
             ],
           });
       },
-      14461: (e, t, n) => {
+      91553: (e, t, n) => {
         "use strict";
         n.d(t, { lV: () => v, yi: () => b });
         var s = n(34629),
           i = n(62540),
           o = n(63696),
-          r = n(24071),
-          a = n(62250),
-          l = n(53959),
-          c = n(39358),
-          d = n(87269),
-          h = n(959),
-          u = n(87885),
-          m = n(97385),
-          p = n(51655),
+          r = n(54835),
+          a = n(14202),
+          l = n(94027),
+          c = n(37706),
+          d = n(42177),
+          h = n(99787),
+          u = n(74257),
+          m = n(2849),
+          p = n(82361),
           _ = n(41230),
-          g = n(27659),
-          C = n(74005),
+          g = n(47709),
+          C = n(81289),
           f = n(78161),
           S = n.n(f);
         function v(e, t) {
@@ -47693,26 +47730,26 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([u.oI], w.prototype, "OnShowUnreadIndicatorChanged", null),
           (w = (0, s.Cg)([_.PA], w));
       },
-      52838: (e, t, n) => {
+      63034: (e, t, n) => {
         "use strict";
         n.d(t, { UA: () => v, eJ: () => b, zw: () => I });
         var s = n(34629),
           i = n(62540),
-          o = n(51655),
+          o = n(82361),
           r = n(41230),
-          a = n(39358),
+          a = n(37706),
           l = n(63696),
-          c = n(54704),
-          d = n(87885),
-          h = n(959),
-          u = n(62250),
-          m = n(87269),
-          p = n(79975),
-          _ = n(53959),
-          g = n(26487),
-          C = n(47893),
-          f = n(16159),
-          S = n(30733);
+          c = n(47857),
+          d = n(74257),
+          h = n(99787),
+          u = n(14202),
+          m = n(42177),
+          p = n(22556),
+          _ = n(94027),
+          g = n(89875),
+          C = n(45071),
+          f = n(68611),
+          S = n(46801);
         function v(e, t, n, s = !1, o) {
           (0, a.HT)(
             (0, i.jsx)(I, {
@@ -47928,26 +47965,26 @@ var CLSTAMP = "10961770";
           }),
         );
       },
-      79975: (e, t, n) => {
+      22556: (e, t, n) => {
         "use strict";
         n.d(t, { ro: () => x, dG: () => y, c3: () => I, mo: () => w });
         var s = n(62540),
           i = n(63696),
-          o = n(87269),
-          r = n(24936),
-          a = n(54704),
-          l = n(51655),
-          c = n(47893),
-          d = n(58316),
-          h = n(62250),
-          u = n(959),
-          m = n(16159),
-          p = n(98434),
-          _ = n(13285),
-          g = n(12001),
-          C = n(21571),
-          f = n(87885),
-          S = n(8182),
+          o = n(42177),
+          r = n(22084),
+          a = n(47857),
+          l = n(82361),
+          c = n(45071),
+          d = n(91408),
+          h = n(14202),
+          u = n(99787),
+          m = n(68611),
+          p = n(29150),
+          _ = n(61645),
+          g = n(46829),
+          C = n(28703),
+          f = n(74257),
+          S = n(16805),
           v = n(28790),
           b = n.n(v);
         const I = 0,
@@ -48185,7 +48222,7 @@ var CLSTAMP = "10961770";
               }),
             });
       },
-      91962: (e, t, n) => {
+      99630: (e, t, n) => {
         "use strict";
         n.d(t, {
           IW: () => y,
@@ -48198,19 +48235,19 @@ var CLSTAMP = "10961770";
           i = n(34629),
           o = n(62540),
           r = n(63696),
-          a = n(73561),
-          l = n(62250),
-          c = n(24071),
+          a = n(29085),
+          l = n(14202),
+          c = n(54835),
           d = n(41230),
-          h = n(87885),
-          u = n(959),
-          m = n(10317),
-          p = n(39267),
-          _ = n(64505),
-          g = n(85164),
-          C = n(53959),
-          f = n(51655),
-          S = n(11581);
+          h = n(74257),
+          u = n(99787),
+          m = n(48441),
+          p = n(21189),
+          _ = n(16389),
+          g = n(41824),
+          C = n(94027),
+          f = n(82361),
+          S = n(16161);
         class v extends r.Component {
           m_bSettingsChanged = !1;
           m_bCommunityPreferencesChanged = !1;
@@ -48599,23 +48636,23 @@ var CLSTAMP = "10961770";
         };
         w = (0, i.Cg)([d.PA], w);
       },
-      90164: (e, t, n) => {
+      68658: (e, t, n) => {
         "use strict";
         n.d(t, { Ov: () => tt });
         var s = n(62540),
           i = n(63696),
-          o = n(17196),
+          o = n(83281),
           r = n(41230),
           a = n(90095),
-          l = n(51655),
-          c = n(63676),
-          d = n(62250),
-          h = n(9241),
-          u = n(27971),
-          m = n(32561),
-          p = n(39358),
-          _ = n(98434),
-          g = n(959),
+          l = n(82361),
+          c = n(8296),
+          d = n(14202),
+          h = n(51037),
+          u = n(18127),
+          m = n(96757),
+          p = n(37706),
+          _ = n(29150),
+          g = n(99787),
           C = n(91744),
           f = n.n(C);
         function S(e) {
@@ -48635,32 +48672,32 @@ var CLSTAMP = "10961770";
             ],
           });
         }
-        const v = (0, n(34164).Ri)(f().PanelSectionRow);
+        const v = (0, n(90080).Ri)(f().PanelSectionRow);
         var b = n(72754),
-          I = n(46878),
-          y = n(16159),
-          w = n(53959),
-          x = n(10317),
-          A = n(30844),
-          R = n(21571),
-          M = n(11581),
-          T = n(3753),
-          D = n(3877),
-          k = n(87885);
+          I = n(52279),
+          y = n(68611),
+          w = n(94027),
+          x = n(48441),
+          A = n(63392),
+          R = n(28703),
+          M = n(16161),
+          T = n(56237),
+          D = n(84160),
+          k = n(74257);
         function P(e) {
           return Number.isFinite(e) && e >= 0 && e < u.n4;
         }
         function L(e) {
           return P(e) ? e : Number.MAX_SAFE_INTEGER;
         }
-        var G = n(38100),
-          F = n(87269),
-          B = n(41930),
+        var G = n(96633),
+          F = n(42177),
+          B = n(24334),
           O = n(20788),
           N = n.n(O),
-          E = n(8182),
-          j = n(46366),
-          V = n(85190);
+          E = n(16805),
+          j = n(69298),
+          V = n(51842);
         function U(...e) {
           return e.join(" ");
         }
@@ -48903,12 +48940,12 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        var q = n(79975),
-          K = n(26487),
-          Z = n(97638),
-          X = n(28326),
-          Q = n(91422),
-          $ = n(85312);
+        var q = n(22556),
+          K = n(89875),
+          Z = n(12370),
+          X = n(22418),
+          Q = n(90378),
+          $ = n(7980);
         (0, r.PA)(function (e) {
           const t = Array.from(l.xm.RemotePlayStore.groups),
             n = (0, l.LC)(),
@@ -50899,29 +50936,29 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      27659: (e, t, n) => {
+      47709: (e, t, n) => {
         "use strict";
         n.d(t, { T: () => T });
         var s = n(34629),
           i = n(62540),
-          o = n(51655),
-          r = n(53959),
-          a = n(24071),
-          l = n(39358),
+          o = n(82361),
+          r = n(94027),
+          a = n(54835),
+          l = n(37706),
           c = n(63696),
           d = n(41230),
-          h = n(91962),
-          u = n(87885),
-          m = n(959),
-          p = n(62250),
-          _ = n(46878),
-          g = n(47893),
-          C = n(16159),
+          h = n(99630),
+          u = n(74257),
+          m = n(99787),
+          p = n(14202),
+          _ = n(52279),
+          g = n(45071),
+          C = n(68611),
           f = n(10893),
           S = n.n(f),
-          v = n(98434),
-          b = n(26487),
-          I = n(42603);
+          v = n(29150),
+          b = n(89875),
+          I = n(56999);
         function y(e) {
           const {
               bPushToTalkAvailable: t,
@@ -51530,8 +51567,8 @@ var CLSTAMP = "10961770";
             ],
           });
         });
-        var R = n(65820),
-          M = n(14461);
+        var R = n(12168),
+          M = n(91553);
         function T(e, t, n) {
           (0, l.HT)(
             (0, i.jsx)(D, { browserContext: e, startingPage: n }),
@@ -51767,7 +51804,7 @@ var CLSTAMP = "10961770";
         (0, s.Cg)([u.oI], k.prototype, "FriendsSettingsNotificationRow", null),
           (k = (0, s.Cg)([d.PA], k));
       },
-      30733: (e, t, n) => {
+      46801: (e, t, n) => {
         "use strict";
         n.d(t, {
           Ci: () => l,
@@ -51777,11 +51814,11 @@ var CLSTAMP = "10961770";
           dt: () => m,
           hr: () => c,
         });
-        var s = n(39358),
-          i = n(53959),
-          o = n(51655),
-          r = n(959),
-          a = n(38100);
+        var s = n(37706),
+          i = n(94027),
+          o = n(82361),
+          r = n(99787),
+          a = n(96633);
         function l(e, t, n, o, l = (0, r.we)("#Button_Cancel"), c, d, h) {
           return (0, a.ZH)(
             (n) => {
@@ -51836,33 +51873,33 @@ var CLSTAMP = "10961770";
             : null;
         }
       },
-      82609: (e, t, n) => {
+      53684: (e, t, n) => {
         "use strict";
         n.d(t, { Io: () => j, Rg: () => F, A6: () => N });
         var s = n(34629),
           i = n(62540),
-          o = n(76769),
+          o = n(58013),
           r = n(41230),
           a = n(63696),
           l = n(7470),
-          c = n(21839),
-          d = n(26487),
-          h = n(959),
-          u = n(87885),
-          m = n(51655),
-          p = n(54479),
-          _ = n(85164),
-          g = n(69334),
-          C = n(56411),
-          f = n(98434),
-          S = n(69529),
+          c = n(83859),
+          d = n(89875),
+          h = n(99787),
+          u = n(74257),
+          m = n(82361),
+          p = n(70808),
+          _ = n(41824),
+          g = n(34074),
+          C = n(15039),
+          f = n(29150),
+          S = n(73469),
           v = n(94599),
           b = n.n(v),
-          I = n(10317),
-          y = n(39267),
-          w = n(539),
-          x = n(73561);
-        n(39530);
+          I = n(48441),
+          y = n(21189),
+          w = n(68935),
+          x = n(29085);
+        n(8590);
         let A = class extends a.Component {
           render() {
             const { community_data: e } = this.props;
@@ -52293,7 +52330,7 @@ var CLSTAMP = "10961770";
               ? (0, i.jsx)(y.Ul, { ...o, strAvatarURL: a, ...l, children: r })
               : (0, i.jsx)(y.i8, { persona: t, ...o, ...l, children: r });
           };
-        var G = n(6516);
+        var G = n(57688);
         function F(e) {
           return (0, i.jsx)(G.g, {
             target: e.target,
@@ -52609,7 +52646,7 @@ var CLSTAMP = "10961770";
         (0, s.Cg)([u.oI], V.prototype, "bindHover", null),
           (V = (0, s.Cg)([r.PA], V));
       },
-      77960: (e, t, n) => {
+      81694: (e, t, n) => {
         "use strict";
         n.d(t, {
           HS: () => be,
@@ -52621,15 +52658,15 @@ var CLSTAMP = "10961770";
         });
         var s = n(34629),
           i = n(62540),
-          o = n(51655),
-          r = n(53959),
+          o = n(82361),
+          r = n(94027),
           a = n(41230),
-          l = n(39358),
+          l = n(37706),
           c = n(63696),
-          d = n(87885),
-          h = n(32561),
-          u = n(959),
-          m = n(62250);
+          d = n(74257),
+          h = n(96757),
+          u = n(99787),
+          m = n(14202);
         function p(e, t, n) {
           (0, l.HT)(
             (0, i.jsx)(_, { player: t }),
@@ -52754,10 +52791,10 @@ var CLSTAMP = "10961770";
         (0, s.Cg)([d.oI], _.prototype, "HandleTextEntry", null),
           (0, s.Cg)([d.oI], _.prototype, "HandleSubmit", null),
           (_ = (0, s.Cg)([a.PA], _));
-        var g = n(79975),
-          C = n(85164),
-          f = n(26487),
-          S = n(47893),
+        var g = n(22556),
+          C = n(41824),
+          f = n(89875),
+          S = n(45071),
           v = n(89193);
         function b(e, t, n) {
           let s = n ? [n.accountid] : [];
@@ -53026,21 +53063,21 @@ var CLSTAMP = "10961770";
         (0, s.Cg)([d.oI], x.prototype, "OnToggle", null),
           (0, s.Cg)([d.oI], x.prototype, "OnContextMenu", null),
           (x = (0, s.Cg)([a.PA], x));
-        var A = n(3753),
-          R = n(3877),
-          M = n(54704),
-          T = n(91822),
-          D = n(42441),
-          k = n(24071),
-          P = n(11581),
-          L = n(73561),
-          G = n(28540),
-          F = n(30733),
-          B = n(16159),
-          O = n(46878),
+        var A = n(56237),
+          R = n(84160),
+          M = n(47857),
+          T = n(45570),
+          D = n(90277),
+          k = n(54835),
+          P = n(16161),
+          L = n(29085),
+          G = n(78104),
+          F = n(46801),
+          B = n(68611),
+          O = n(52279),
           N = n(83957),
           E = n.n(N),
-          j = n(21571);
+          j = n(28703);
         let V = class extends c.Component {
           constructor(e) {
             super(e);
@@ -53187,11 +53224,11 @@ var CLSTAMP = "10961770";
         (0, s.Cg)([d.oI], V.prototype, "HandleTextEntry", null),
           (0, s.Cg)([d.oI], V.prototype, "HandleSubmit", null),
           (V = (0, s.Cg)([a.PA], V));
-        var U = n(8771),
-          H = n(65820),
-          W = n(10275),
-          z = n(10317),
-          q = n(39267);
+        var U = n(54610),
+          H = n(12168),
+          W = n(21791),
+          z = n(48441),
+          q = n(21189);
         let K = class extends c.Component {
           constructor(e) {
             super(e),
@@ -53481,15 +53518,15 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([d.oI], K.prototype, "NotificationRow", null),
           (0, s.Cg)([d.oI], K.prototype, "OnDefaultToggled", null),
           (K = (0, s.Cg)([a.PA], K));
-        var Z = n(34164),
-          X = n(64567),
-          Q = n(24816),
-          $ = n(74890),
-          Y = n(38100),
-          J = n(15982),
-          ee = n(42603),
-          te = n(539),
-          ne = n(7295);
+        var Z = n(90080),
+          X = n(59587),
+          Q = n(84884),
+          $ = n(33158),
+          Y = n(96633),
+          J = n(86502),
+          ee = n(56999),
+          te = n(68935),
+          ne = n(62401);
         function se(e, t, n, s) {
           return (0, A.lX)(
             (0, i.jsx)(le, {
@@ -55399,7 +55436,7 @@ var CLSTAMP = "10961770";
           );
         });
       },
-      47893: (e, t, n) => {
+      45071: (e, t, n) => {
         "use strict";
         n.d(t, {
           lg: () => Ne,
@@ -55414,34 +55451,34 @@ var CLSTAMP = "10961770";
         });
         var s = n(34629),
           i = n(62540),
-          o = n(24071),
-          r = n(75888),
-          a = n(42441),
-          l = n(54704),
-          c = n(91822),
-          d = n(76769),
-          h = n(53959),
-          u = n(51655),
-          m = n(30844),
-          p = n(30733),
-          _ = n(77960),
-          g = n(12021),
-          C = n(71773),
-          f = n(3009),
-          S = n(2176),
+          o = n(54835),
+          r = n(85470),
+          a = n(90277),
+          l = n(47857),
+          c = n(45570),
+          d = n(58013),
+          h = n(94027),
+          u = n(82361),
+          m = n(63392),
+          p = n(46801),
+          _ = n(81694),
+          g = n(22137),
+          C = n(45465),
+          f = n(4589),
+          S = n(57516),
           v = n(89193),
           b = n(41230),
           I = n(90095),
           y = n(63696),
-          w = n(87269),
-          x = n(36878),
-          A = n(69529),
-          R = n(39267),
-          M = n(26487),
-          T = n(959),
-          D = n(87885),
-          k = n(21839),
-          P = n(62646);
+          w = n(42177),
+          x = n(36714),
+          A = n(73469),
+          R = n(21189),
+          M = n(89875),
+          T = n(99787),
+          D = n(74257),
+          k = n(83859),
+          P = n(94458);
         let L = class extends y.Component {
           m_rgFavoriteElementRefs = [];
           constructor(e) {
@@ -56013,25 +56050,25 @@ var CLSTAMP = "10961770";
         (0, s.Cg)([D.oI], N.prototype, "OnDragStart", null),
           (0, s.Cg)([D.oI], N.prototype, "OnDragEnd", null),
           (N = (0, s.Cg)([b.PA], N));
-        n(8771);
-        var E = n(11581),
+        n(54610);
+        var E = n(16161),
           j = n(23038),
-          V = n(73561),
-          U = n(3753),
-          H = n(58316),
-          W = n(3877),
-          z = n(16159),
-          q = (n(9241), n(80020)),
-          K = n(76693),
-          Z = n(52838),
-          X = n(27659),
-          Q = (n(39358), n(62250)),
-          $ = n(31174);
+          V = n(29085),
+          U = n(56237),
+          H = n(91408),
+          W = n(84160),
+          z = n(68611),
+          q = (n(51037), n(27464)),
+          K = n(66745),
+          Z = n(63034),
+          X = n(47709),
+          Q = (n(37706), n(14202)),
+          $ = n(62770);
         const Y = "DEBUG_LogCMTraffic";
-        var J = n(15982),
-          ee = n(82609),
-          te = n(73134),
-          ne = (n(92246), n(38100), n(36642), n(52757));
+        var J = n(86502),
+          ee = n(53684),
+          te = n(36386),
+          ne = (n(33154), n(96633), n(36642), n(41769));
         y.Component;
         class se extends y.Component {
           m_rgSelectOptions = [
@@ -56398,24 +56435,24 @@ var CLSTAMP = "10961770";
           }
         }
         (0, s.Cg)([D.oI], ae.prototype, "OnSearchInput", null);
-        var le = n(10317),
-          ce = n(30234),
-          de = n(85164),
-          he = n(64567),
-          ue = n(74005),
-          me = n(64505),
-          pe = n(98434),
-          _e = n(43808),
+        var le = n(48441),
+          ce = n(20166),
+          de = n(41824),
+          he = n(59587),
+          ue = n(81289),
+          me = n(16389),
+          pe = n(29150),
+          _e = n(50148),
           ge = n(31857),
-          Ce = n(90164),
-          fe = n(25767),
-          Se = n(8182),
-          ve = n(41930),
-          be = n(51470),
-          Ie = n(7797),
-          ye = n(82791),
+          Ce = n(68658),
+          fe = n(45931),
+          Se = n(16805),
+          ve = n(24334),
+          be = n(418),
+          Ie = n(45137),
+          ye = n(83153),
           we = n(68189),
-          xe = n(43639);
+          xe = n(90115);
         const Ae = (0, b.PA)(function (e) {
           const t = u.xm.ChatStore.GetRecentChats(),
             n = (0, k.R7)(),
@@ -56527,15 +56564,15 @@ var CLSTAMP = "10961770";
             }),
           });
         });
-        var Re = n(77620),
-          Me = n(11851);
+        var Re = n(24272),
+          Me = n(78111);
         var Te,
-          De = n(21571),
-          ke = n(53095),
-          Pe = n(42500),
-          Le = n(37542),
-          Ge = n(25728),
-          Fe = n(56786);
+          De = n(28703),
+          ke = n(94491),
+          Pe = n(95952),
+          Le = n(98842),
+          Ge = n(26092),
+          Fe = n(73938);
         let Be = class extends y.Component {
           constructor(e) {
             super(e);
@@ -60465,27 +60502,27 @@ var CLSTAMP = "10961770";
         (0, s.Cg)([D.oI], It.prototype, "OnHeaderClick", null),
           (It = (0, s.Cg)([b.PA], It));
       },
-      58366: (e, t, n) => {
+      91538: (e, t, n) => {
         "use strict";
         n.d(t, { A: () => b });
         var s = n(62540),
-          i = (n(42441), n(91822), n(41230)),
+          i = (n(90277), n(45570), n(41230)),
           o = n(63696),
-          r = n(87269),
-          a = n(98434),
-          l = n(959),
-          c = n(47893),
+          r = n(42177),
+          a = n(29150),
+          l = n(99787),
+          c = n(45071),
           d = n(51234),
           h = n.n(d),
-          u = n(16159),
-          m = (n(71773), n(51655)),
-          p = n(24936),
-          _ = n(62250),
-          g = (n(46878), n(30733)),
-          C = n(26487),
-          f = n(39358),
-          S = n(21571);
-        n(21839);
+          u = n(68611),
+          m = (n(45465), n(82361)),
+          p = n(22084),
+          _ = n(14202),
+          g = (n(52279), n(46801)),
+          C = n(89875),
+          f = n(37706),
+          S = n(28703);
+        n(83859);
         const v = (e) => {
             const t = o.useRef(void 0);
             return (0, s.jsx)(f.x_, {
@@ -60679,7 +60716,7 @@ var CLSTAMP = "10961770";
             });
           });
       },
-      95331: (e, t, n) => {
+      96324: (e, t, n) => {
         "use strict";
         n.d(t, { D: () => Ke });
         var s = n(34629),
@@ -60687,48 +60724,48 @@ var CLSTAMP = "10961770";
           o = n(89193),
           r = n(41230),
           a = n(63696),
-          l = n(87885),
-          c = n(81313),
-          d = n(92246),
-          h = n(21571),
-          u = n(51655),
-          m = n(91962),
-          p = n(24936),
-          _ = n(8182),
-          g = n(43808),
-          C = n(74005),
-          f = n(959),
-          S = n(8771),
-          v = n(16159),
-          b = n(73561),
-          I = n(97385),
-          y = n(7295),
-          w = n(47257),
-          x = n(42441),
-          A = n(7578),
-          R = n(26487),
-          M = n(93086),
-          T = n(87269),
-          D = n(11581),
-          k = n(24071),
-          P = n(77620),
-          L = n(54704),
-          G = n(47893),
-          F = n(6893),
-          B = n(85325);
-        var O = n(98434),
+          l = n(74257),
+          c = n(68749),
+          d = n(33154),
+          h = n(28703),
+          u = n(82361),
+          m = n(99630),
+          p = n(22084),
+          _ = n(16805),
+          g = n(50148),
+          C = n(81289),
+          f = n(99787),
+          S = n(54610),
+          v = n(68611),
+          b = n(29085),
+          I = n(2849),
+          y = n(62401),
+          w = n(39868),
+          x = n(90277),
+          A = n(89822),
+          R = n(89875),
+          M = n(82194),
+          T = n(42177),
+          D = n(16161),
+          k = n(54835),
+          P = n(24272),
+          L = n(47857),
+          G = n(45071),
+          F = n(55641),
+          B = n(70049);
+        var O = n(29150),
           N = n(94712),
           E = n.n(N),
-          j = n(39267),
+          j = n(21189),
           V = n(78325),
           U = n(90095),
-          H = n(6516),
-          W = n(42981),
-          z = n(3753),
-          q = n(36439),
+          H = n(57688),
+          W = n(73385),
+          z = n(56237),
+          q = n(67806),
           K = n(68628),
-          Z = n(91836),
-          X = n(58292);
+          Z = n(90984),
+          X = n(50376);
         const Q = (0, r.PA)((e) => {
           const { msg: t, chat: n } = e,
             { showPicker: s } = ne(n, t);
@@ -60971,14 +61008,14 @@ var CLSTAMP = "10961770";
           );
           return (0, i.jsx)("span", { className: K.ReactorName, children: t });
         }
-        var re = n(30733),
-          ae = n(32561),
-          le = n(3877),
-          ce = n(62646),
-          de = n(53959),
-          he = n(21839),
-          ue = n(54292),
-          me = n(39358);
+        var re = n(46801),
+          ae = n(96757),
+          le = n(84160),
+          ce = n(94458),
+          de = n(94027),
+          he = n(83859),
+          ue = n(77648),
+          me = n(37706);
         function pe(e) {
           const { reason: t } = e;
           let n;
@@ -61909,7 +61946,7 @@ var CLSTAMP = "10961770";
           }
         };
         Le = (0, s.Cg)([r.PA], Le);
-        var Ge = n(65780);
+        var Ge = n(91240);
         let Fe = class extends a.Component {
           componentDidUpdate() {
             this.props.onUpdate(
@@ -63010,7 +63047,7 @@ var CLSTAMP = "10961770";
         };
         Xe = (0, s.Cg)([r.PA], Xe);
       },
-      26036: (e, t, n) => {
+      57724: (e, t, n) => {
         "use strict";
         n.d(t, {
           IO: () => Xe,
@@ -63022,24 +63059,24 @@ var CLSTAMP = "10961770";
         });
         var s = n(34629),
           i = n(62540),
-          o = n(24071),
-          r = n(72297),
-          a = n(51655),
-          l = n(53959),
-          c = n(82791),
-          d = n(30844),
-          h = n(8771),
-          u = (n(90164), n(63696)),
+          o = n(54835),
+          r = n(40384),
+          a = n(82361),
+          l = n(94027),
+          c = n(83153),
+          d = n(63392),
+          h = n(54610),
+          u = (n(68658), n(63696)),
           m = n(41230),
-          p = n(26487),
+          p = n(89875),
           _ = n(83957),
           g = n.n(_),
           C = n(89193),
-          f = n(58368),
-          S = n(85164),
-          v = n(74005),
-          b = n(96393),
-          I = n(21571);
+          f = n(58572),
+          S = n(41824),
+          v = n(81289),
+          b = n(37973),
+          I = n(28703);
         class y {
           constructor() {
             (0, C.Gn)(this);
@@ -63150,15 +63187,15 @@ var CLSTAMP = "10961770";
             );
           })(u.useMemo(() => (e ? S.b.InitFromAccountID(e) : null), [e]));
         }
-        var A = n(87885),
-          R = n(62250),
-          M = n(959),
+        var A = n(74257),
+          R = n(14202),
+          M = n(99787),
           T = n(96655),
           D = n.n(T),
-          k = n(32561),
-          P = n(16159),
-          L = n(58316),
-          G = n(25767);
+          k = n(96757),
+          P = n(68611),
+          L = n(91408),
+          G = n(45931);
         class F extends u.Component {
           state = {
             invite_token: "",
@@ -63558,16 +63595,16 @@ var CLSTAMP = "10961770";
               })
             : null;
         };
-        var N = n(30733),
-          E = n(77960),
-          j = n(73561),
-          V = n(38100),
-          U = n(15982),
-          H = n(87269),
-          W = n(47893),
-          z = n(93086),
-          q = n(39358),
-          K = n(11581),
+        var N = n(46801),
+          E = n(81694),
+          j = n(29085),
+          V = n(96633),
+          U = n(86502),
+          H = n(42177),
+          W = n(45071),
+          z = n(82194),
+          q = n(37706),
+          K = n(16161),
           Z = n(65226);
         function X(e, t, n, s) {
           (0, E.tj)(e, { friendGroup: t }, n, s);
@@ -64025,8 +64062,8 @@ var CLSTAMP = "10961770";
             })
           );
         });
-        n(58366), n(58135), n(75888), n(91822), n(96009);
-        n(42441), n(71773), n(89106);
+        n(91538), n(93851), n(85470), n(45570), n(96009);
+        n(90277), n(45465), n(89106);
         class re extends u.Component {
           m_refTextInput = null;
           constructor(e) {
@@ -64099,23 +64136,23 @@ var CLSTAMP = "10961770";
         var ae = n(7470),
           le = n(78325),
           ce = n(23038),
-          de = n(24476),
-          he = n(28540),
-          ue = n(16717),
-          me = n(95267),
-          pe = n(21839),
-          _e = (n(51365), n(3877)),
-          ge = n(84719),
-          Ce = n(12735),
-          fe = n(30234),
-          Se = n(94083),
-          ve = n(98434),
-          be = n(76693),
-          Ie = n(51424),
+          de = n(40680),
+          he = n(78104),
+          ue = n(29817),
+          me = n(45607),
+          pe = n(83859),
+          _e = (n(66025), n(84160)),
+          ge = n(49667),
+          Ce = n(31472),
+          fe = n(20166),
+          Se = n(88767),
+          ve = n(29150),
+          be = n(66745),
+          Ie = n(86540),
           ye = n(98077),
           we = n.n(ye),
-          xe = n(83786),
-          Ae = n(42500);
+          xe = n(44382),
+          Ae = n(95952);
         const Re = u.memo(function () {
           const e = (0, Ae.UL)();
           return (
@@ -64138,10 +64175,10 @@ var CLSTAMP = "10961770";
             null
           );
         });
-        var Me = n(37542),
-          Te = n(78130),
-          De = n(92592),
-          ke = n(45442);
+        var Me = n(98842),
+          Te = n(11534),
+          De = n(74709),
+          ke = n(94606);
         function Pe(e) {
           const { msDelayBatch: t, children: n } = e,
             s = (0, ue.KV)(),
@@ -64159,7 +64196,7 @@ var CLSTAMP = "10961770";
             })
           );
         }
-        var Le = n(42603);
+        var Le = n(56999);
         function Ge(e, t, n) {
           const s = window,
             o = (0, l._k)(s);
@@ -65186,7 +65223,7 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([A.oI], Ye.prototype, "OnLoginClick", null),
           (Ye = (0, s.Cg)([m.PA], Ye));
       },
-      11581: (e, t, n) => {
+      16161: (e, t, n) => {
         "use strict";
         n.d(t, {
           DH: () => d.W4,
@@ -65198,12 +65235,12 @@ var CLSTAMP = "10961770";
         });
         var s = n(34629),
           i = n(62540),
-          o = n(53959),
-          r = n(85325),
+          o = n(94027),
+          r = n(70049),
           a = n(41230),
           l = n(63696),
-          c = n(42603),
-          d = n(34164);
+          c = n(56999),
+          d = n(90080);
         function h(e) {
           return "currentTarget" in e
             ? e.currentTarget.ownerDocument.defaultView
@@ -65253,7 +65290,7 @@ var CLSTAMP = "10961770";
         };
         g = (0, s.Cg)([a.PA], g);
       },
-      77620: (e, t, n) => {
+      24272: (e, t, n) => {
         "use strict";
         n.d(t, {
           Hd: () => c,
@@ -65266,8 +65303,8 @@ var CLSTAMP = "10961770";
           wr: () => a,
         });
         var s = n(63696),
-          i = n(74005),
-          o = n(98267);
+          i = n(81289),
+          o = n(53479);
         class r extends s.Component {
           GetArgument(e, t = !1) {
             return !e || (t && void 0 === this.props.args[e])
@@ -65581,11 +65618,11 @@ var CLSTAMP = "10961770";
           return t;
         }
       },
-      85325: (e, t, n) => {
+      70049: (e, t, n) => {
         "use strict";
         n.d(t, { j: () => a });
-        var s = n(51655),
-          i = n(959);
+        var s = n(82361),
+          i = n(99787);
         let o = {
             TimeOfDay: new Intl.DateTimeFormat(i.pf.GetPreferredLocales(), {
               hour: "numeric",
@@ -65696,7 +65733,7 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      98267: (e, t, n) => {
+      53479: (e, t, n) => {
         "use strict";
         n.d(t, { gb: () => r, iT: () => s, j_: () => i, oZ: () => o });
         const s = 0,
@@ -65704,19 +65741,19 @@ var CLSTAMP = "10961770";
           o = 2,
           r = 3;
       },
-      51104: (e, t, n) => {
+      10310: (e, t, n) => {
         "use strict";
         n.d(t, { zU: () => f, z5: () => g });
         const s = "{STEAM_CLAN_IMAGE}",
           i = "{STEAM_CLAN_LOC_IMAGE}";
-        var o = n(49137),
-          r = n(73561),
-          a = n(32561);
-        var l = n(35279),
-          c = n(85164),
-          d = n(74005),
-          h = n(96393);
-        var u = n(71926),
+        var o = n(22957),
+          r = n(29085),
+          a = n(96757);
+        var l = n(28003),
+          c = n(41824),
+          d = n(81289),
+          h = n(37973);
+        var u = n(76410),
           m = (n(62540), n(63696));
         function p(e, t) {
           return `${e}/${t}`;
@@ -65938,7 +65975,7 @@ var CLSTAMP = "10961770";
             e.file_type == l.bg.nn || e.file_type == l.bg.pJ,
         };
       },
-      49137: (e, t, n) => {
+      22957: (e, t, n) => {
         "use strict";
         n.d(t, { pb: () => i, wI: () => s });
         var s;
@@ -65959,13 +65996,13 @@ var CLSTAMP = "10961770";
           "localized_background_art",
         ];
       },
-      12495: (e, t, n) => {
+      91723: (e, t, n) => {
         "use strict";
         n.d(t, { GU: () => s, WN: () => i });
         const s = 39049601,
           i = [4145017, 35143931, s, 4, 41316928];
       },
-      28540: (e, t, n) => {
+      78104: (e, t, n) => {
         "use strict";
         var s;
         function i(e) {
@@ -65978,7 +66015,7 @@ var CLSTAMP = "10961770";
               (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
           })(s || (s = {}));
       },
-      73561: (e, t, n) => {
+      29085: (e, t, n) => {
         "use strict";
         n.d(t, {
           $l2: () => Dt,
@@ -66879,7 +66916,7 @@ var CLSTAMP = "10961770";
               "k_ETwoFactorTokenSteamguardScheme_TwoFactor");
         })(Yt || (Yt = {}));
       },
-      24476: (e, t, n) => {
+      40680: (e, t, n) => {
         "use strict";
         n.d(t, { BK: () => r, W: () => s });
         var s, i, o;
@@ -66931,7 +66968,7 @@ var CLSTAMP = "10961770";
             (e[(e.OverlayVRGamepadUI = 9)] = "OverlayVRGamepadUI");
         })(a || (a = {}));
       },
-      38250: (e, t, n) => {
+      78998: (e, t, n) => {
         "use strict";
         n.d(t, { i_: () => i, vV: () => s });
         const s = {
@@ -66949,7 +66986,7 @@ var CLSTAMP = "10961770";
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(i || (i = {}));
       },
-      27971: (e, t, n) => {
+      18127: (e, t, n) => {
         "use strict";
         n.d(t, {
           $9: () => B,
@@ -66984,8 +67021,8 @@ var CLSTAMP = "10961770";
           uh: () => w,
           vy: () => P,
         });
-        var s = n(26704);
-        n(85312);
+        var s = n(95188);
+        n(7980);
         const i = -1,
           o = 0,
           r = 2,
@@ -67237,10 +67274,31 @@ var CLSTAMP = "10961770";
         const N = 20,
           E = -1;
       },
-      37023: (e, t, n) => {
+      58659: (e, t, n) => {
         "use strict";
-        var s;
-        n.d(t, { l: () => s }),
+        var s, i;
+        n.d(t, { l: () => i }),
+          (function (e) {
+            (e[(e.k_ERemoteClientInstallOK = 1)] = "k_ERemoteClientInstallOK"),
+              (e[(e.k_ERemoteClientInstallFail = 2)] =
+                "k_ERemoteClientInstallFail"),
+              (e[(e.k_ERemoteClientInstallNoSpace = 3)] =
+                "k_ERemoteClientInstallNoSpace"),
+              (e[(e.k_ERemoteClientInstallDownloadFiltered = 4)] =
+                "k_ERemoteClientInstallDownloadFiltered"),
+              (e[(e.k_ERemoteClientInstallRequiresUI = 5)] =
+                "k_ERemoteClientInstallRequiresUI"),
+              (e[(e.k_ERemoteClientInstallRequiresEULA = 6)] =
+                "k_ERemoteClientInstallRequiresEULA"),
+              (e[(e.k_ERemoteClientInstallAlreadyInstalled = 7)] =
+                "k_ERemoteClientInstallAlreadyInstalled"),
+              (e[(e.k_ERemoteClientInstallTimeout = 8)] =
+                "k_ERemoteClientInstallTimeout"),
+              (e[(e.k_ERemoteClientInstallAccessDenied = 9)] =
+                "k_ERemoteClientInstallAccessDenied"),
+              (e[(e.k_ERemoteClientInstallNetworkError = 10)] =
+                "k_ERemoteClientInstallNetworkError");
+          })(s || (s = {})),
           (function (e) {
             (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
               (e[(e.k_ERemoteClientLaunchFail = 2)] =
@@ -67301,9 +67359,9 @@ var CLSTAMP = "10961770";
                 "k_ERemoteClientLaunchUnauthorized"),
               (e[(e.k_ERemoteClientLaunchCaptureBusy = 30)] =
                 "k_ERemoteClientLaunchCaptureBusy");
-          })(s || (s = {}));
+          })(i || (i = {}));
       },
-      65820: (e, t, n) => {
+      12168: (e, t, n) => {
         "use strict";
         n.d(t, { gy: () => o, qY: () => i, uL: () => r, zX: () => s });
         const s = 0,
@@ -67342,7 +67400,7 @@ var CLSTAMP = "10961770";
           };
         }
       },
-      19160: (e, t, n) => {
+      2980: (e, t, n) => {
         "use strict";
         var s;
         n.d(t, { GQ: () => i, YI: () => o }),
@@ -67403,10 +67461,10 @@ var CLSTAMP = "10961770";
                 "k_EClientUsedInputTypeMax");
           })(o || (o = {}));
       },
-      37993: (e, t, n) => {
+      68933: (e, t, n) => {
         "use strict";
         n.d(t, { J_: () => s, TP: () => i });
-        n(88743);
+        n(73723);
         const s = {
             name: "cookieSettings",
             options: {
@@ -67424,7 +67482,7 @@ var CLSTAMP = "10961770";
             preferenceControls: { isTechnicallyNecessary: !0 },
           };
       },
-      30977: (e, t, n) => {
+      32709: (e, t, n) => {
         "use strict";
         function s(e) {
           if (!document.cookie) return;
@@ -67433,7 +67491,7 @@ var CLSTAMP = "10961770";
         }
         n.d(t, { j_: () => s });
       },
-      59996: (e, t, n) => {
+      10854: (e, t, n) => {
         "use strict";
         n.d(t, { Zn: () => Z, N_: () => W, lU: () => z, Br: () => U });
         var s,
@@ -67441,17 +67499,17 @@ var CLSTAMP = "10961770";
           o = n(83957),
           r = n.n(o),
           a = n(89193),
-          l = n(73561),
-          c = n(74005),
-          d = n(19596),
-          h = n(959),
-          u = n(76693),
-          m = n(85519),
-          p = n(58135),
-          _ = n(21571),
-          g = n(95980),
-          C = n(39292),
-          f = n(30940);
+          l = n(29085),
+          c = n(81289),
+          d = n(73960),
+          h = n(99787),
+          u = n(66745),
+          m = n(11883),
+          p = n(93851),
+          _ = n(28703),
+          g = n(71944),
+          C = n(5448),
+          f = n(45904);
         function S(e, t) {
           let n = e.getElementsByTagName("MPD");
           return n && 1 == n.length ? n[0] : null;
@@ -68864,8 +68922,8 @@ var CLSTAMP = "10961770";
           (0, i.Cg)([m.o], E.prototype, "DownloadFailed", null),
           (0, i.Cg)([m.o], E.prototype, "DownloadGone", null),
           (0, i.Cg)([m.o], E.prototype, "CurrentTimeChanged", null);
-        var j = n(34590),
-          V = n(87885);
+        var j = n(6370),
+          V = n(74257);
         const U = 5;
         var H, W, z, q;
         function K(e) {
@@ -70357,19 +70415,19 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      39292: (e, t, n) => {
+      5448: (e, t, n) => {
         "use strict";
         n.d(t, { _L: () => C });
         var s = n(34629),
           i = n(89193),
           o = n(83957),
           r = n.n(o),
-          a = n(85164),
-          l = n(95980),
-          c = n(21571),
-          d = n(19596),
-          h = n(959),
-          u = n(69623);
+          a = n(41824),
+          l = n(71944),
+          c = n(28703),
+          d = n(73960),
+          h = n(99787),
+          u = n(99755);
         const m = 1e6;
         class p {
           steamid = "";
@@ -71132,7 +71190,7 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([i.sH], v.prototype, "m_nCurrentFPS", void 0),
           (0, s.Cg)([i.XI.bound], v.prototype, "TakeReading", null);
       },
-      34590: (e, t, n) => {
+      6370: (e, t, n) => {
         "use strict";
         n.d(t, { Y: () => s, n: () => i });
         const s = "auto";
@@ -71140,7 +71198,7 @@ var CLSTAMP = "10961770";
           return e.id == s;
         }
       },
-      25767: (e, t, n) => {
+      45931: (e, t, n) => {
         "use strict";
         n.d(t, {
           BA: () => h,
@@ -71152,7 +71210,7 @@ var CLSTAMP = "10961770";
         });
         var s = n(62540),
           i = n(63696),
-          o = n(22653);
+          o = n(71892);
         function r() {
           return i.createRef();
         }
@@ -71180,12 +71238,12 @@ var CLSTAMP = "10961770";
           (0, o.HR)("summary", { bActivateByDefault: !0 }),
           (0, o.HR)("details", { bFocusableByDefault: !1 });
       },
-      58717: (e, t, n) => {
+      67753: (e, t, n) => {
         "use strict";
         n.d(t, { QI: () => a, Vu: () => r });
         n(62540);
         var s = n(63696),
-          i = n(52757);
+          i = n(41769);
         const o = s.createContext(void 0);
         function r() {
           return s.useContext(o);
@@ -71194,18 +71252,18 @@ var CLSTAMP = "10961770";
           return (0, i.gc)(r()?.GetShowDebugFocusRing()) ?? !1;
         }
       },
-      48117: (e, t, n) => {
+      54777: (e, t, n) => {
         "use strict";
         n.d(t, { qR: () => _ });
         var s = n(62540),
-          i = n(52757),
-          o = n(7227),
+          i = n(41769),
+          o = n(5663),
           r = n(63696),
-          a = n(22653),
-          l = n(75381),
-          c = n(58717),
-          d = n(32321),
-          h = n(39686);
+          a = n(71892),
+          l = n(40713),
+          c = n(67753),
+          d = n(89645),
+          h = n(74170);
         r.forwardRef(function (e, t) {
           const {
               navID: n,
@@ -71383,12 +71441,12 @@ var CLSTAMP = "10961770";
           return r.useContext(m);
         }
       },
-      32321: (e, t, n) => {
+      89645: (e, t, n) => {
         "use strict";
         n.d(t, { bJ: () => r, nN: () => o });
         n(62540);
         var s = n(63696);
-        n(21571);
+        n(28703);
         const i = s.createContext({ focusNavWindow: null, bSupportsFocus: !0 });
         function o() {
           return s.useContext(i)?.focusNavWindow;
@@ -71397,7 +71455,7 @@ var CLSTAMP = "10961770";
           return s.useContext(i)?.bSupportsFocus ?? e;
         }
       },
-      22653: (e, t, n) => {
+      71892: (e, t, n) => {
         "use strict";
         n.d(t, {
           C7: () => y,
@@ -71411,17 +71469,17 @@ var CLSTAMP = "10961770";
           BT: () => I,
         });
         var s = n(62540),
-          i = n(52757),
-          o = n(7227),
+          i = n(41769),
+          o = n(5663),
           r = n(4452),
           a = n.n(r),
           l = n(63696),
-          c = n(46366),
-          d = n(26487),
-          h = n(39686),
-          u = n(36878),
-          m = n(79513),
-          p = n(75381);
+          c = n(69298),
+          d = n(89875),
+          h = n(74170),
+          u = n(36714),
+          m = n(35141),
+          p = n(40713);
         const _ = l.createContext(function (e) {
           return {
             ShowVirtualKeyboard: () => {},
@@ -71509,8 +71567,8 @@ var CLSTAMP = "10961770";
             d
           );
         }
-        var C = n(48117),
-          f = n(32321);
+        var C = n(54777),
+          f = n(89645);
         const S = l.createContext(null),
           v = l.createContext(m.CZ);
         function b(e) {
@@ -71816,23 +71874,23 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      12001: (e, t, n) => {
+      46829: (e, t, n) => {
         "use strict";
         n.d(t, { g: () => b, q: () => f });
         var s = n(63696),
           i = n(62540),
           o = n(4452),
           r = n.n(o),
-          a = n(92246),
-          l = n(21571),
-          c = n(79513),
-          d = n(32321),
-          h = n(58717),
-          u = n(22653),
+          a = n(33154),
+          l = n(28703),
+          c = n(35141),
+          d = n(89645),
+          h = n(67753),
+          u = n(71892),
           m = n(13987),
           p = n.n(m),
-          _ = n(7227),
-          g = n(48117);
+          _ = n(5663),
+          g = n(54777);
         const C = new a.wd("FocusNavigation").Debug;
         function f(e) {
           const { children: t, disableFocusRing: n, ...o } = e,
@@ -72034,13 +72092,13 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      39686: (e, t, n) => {
+      74170: (e, t, n) => {
         "use strict";
         n.d(t, { KF: () => c, Ui: () => a });
         n(62540);
         var s = n(63696),
-          i = n(92246),
-          o = n(36878);
+          i = n(33154),
+          o = n(36714);
         const r = new i.wd("GamepadEvents").Debug;
         function a(e, t, n) {
           void 0 === n &&
@@ -72116,19 +72174,19 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      87269: (e, t, n) => {
+      42177: (e, t, n) => {
         "use strict";
         n.d(t, { Z: () => p });
         var s = n(62540),
-          i = n(7227),
+          i = n(5663),
           o = n(4452),
           r = n.n(o),
           a = n(63696),
-          l = n(22653),
-          c = n(8182),
-          d = n(75381),
-          h = n(32321),
-          u = n(39686);
+          l = n(71892),
+          c = n(16805),
+          d = n(40713),
+          h = n(89645),
+          u = n(74170);
         const m = a.createContext({ Component: l.D0 });
         function p(e) {
           const {
@@ -72176,14 +72234,14 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      24936: (e, t, n) => {
+      22084: (e, t, n) => {
         "use strict";
         n.d(t, { YZ: () => l });
         var s = n(62540),
-          i = n(7227),
+          i = n(5663),
           o = n(63696),
-          r = n(87269),
-          a = n(13285);
+          r = n(42177),
+          a = n(61645);
         const l = o.forwardRef(function (e, t) {
           const {
               onExplicitFocusLevelChanged: n,
@@ -72279,12 +72337,12 @@ var CLSTAMP = "10961770";
           return e.ChildTakeFocus(t);
         }
       },
-      13285: (e, t, n) => {
+      61645: (e, t, n) => {
         "use strict";
         n.d(t, { MS: () => I, Qg: () => y });
         var s = n(62540),
-          i = n(74005),
-          o = n(7227),
+          i = n(81289),
+          o = n(5663),
           r = n(4452),
           a = n.n(r),
           l = n(63696),
@@ -72321,11 +72379,11 @@ var CLSTAMP = "10961770";
             [r, u]
           );
         }
-        var h = n(8182),
-          u = n(81313),
-          m = n(92246),
-          p = n(7124),
-          _ = n(41930);
+        var h = n(16805),
+          u = n(68749),
+          m = n(33154),
+          p = n(60624),
+          _ = n(24334);
         const g = new m.wd("ScrollSnap").Debug;
         function C(e, t = "smooth", n, s) {
           const i = (n ?? 30) / 100,
@@ -72417,8 +72475,8 @@ var CLSTAMP = "10961770";
             [s, e, t, i, c, a],
           );
         }
-        var f = n(12001),
-          S = n(87269),
+        var f = n(46829),
+          S = n(42177),
           v = n(8804),
           b = n.n(v);
         const I = l.forwardRef(function (e, t) {
@@ -72565,7 +72623,7 @@ var CLSTAMP = "10961770";
           return l.useMemo(() => a(C, f), [C, f, a]);
         }
       },
-      36878: (e, t, n) => {
+      36714: (e, t, n) => {
         "use strict";
         n.d(t, {
           D$: () => s,
@@ -72584,7 +72642,7 @@ var CLSTAMP = "10961770";
           u8: () => _,
         });
         var s,
-          i = n(41930);
+          i = n(24334);
         n(63696);
         function o(e) {
           return "object" == typeof e && null !== e && "value" in e;
@@ -72672,7 +72730,7 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      41930: (e, t, n) => {
+      24334: (e, t, n) => {
         "use strict";
         var s, i;
         n.d(t, { pR: () => s }),
@@ -72718,7 +72776,7 @@ var CLSTAMP = "10961770";
               (e[(e.RPAD = 6)] = "RPAD");
           })(i || (i = {}));
       },
-      11851: (e, t, n) => {
+      78111: (e, t, n) => {
         "use strict";
         n.d(t, {
           Er: () => a,
@@ -72728,9 +72786,9 @@ var CLSTAMP = "10961770";
           Ze: () => d,
           nv: () => u,
         });
-        var s = n(74005),
-          i = n(36878);
-        const o = new (n(92246).wd)("FocusHistory"),
+        var s = n(81289),
+          i = n(36714);
+        const o = new (n(33154).wd)("FocusHistory"),
           r = o.Debug,
           a = 0,
           l = 2;
@@ -72849,7 +72907,7 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      79513: (e, t, n) => {
+      35141: (e, t, n) => {
         "use strict";
         n.d(t, {
           CZ: () => p,
@@ -72862,11 +72920,11 @@ var CLSTAMP = "10961770";
           lr: () => h,
           xb: () => m,
         });
-        var s = n(41930),
-          i = n(74005),
-          o = n(36878),
-          r = n(11851),
-          a = n(8182);
+        var s = n(24334),
+          i = n(81289),
+          o = n(36714),
+          r = n(78111),
+          a = n(16805);
         class l {
           m_node;
           m_History;
@@ -73014,21 +73072,21 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      8182: (e, t, n) => {
+      16805: (e, t, n) => {
         "use strict";
         n.d(t, { $C: () => z, xj: () => U, iU: () => H, Yo: () => W });
         var s = n(34629),
-          i = n(97150),
-          o = n(74005),
-          r = n(85519),
-          a = n(54292),
-          l = n(32093),
-          c = n(19596),
-          d = n(92246);
-        var h = n(36878),
-          u = n(41930),
-          m = n(79513),
-          p = n(26487);
+          i = n(93642),
+          o = n(81289),
+          r = n(11883),
+          a = n(77648),
+          l = n(44369),
+          c = n(73960),
+          d = n(33154);
+        var h = n(36714),
+          u = n(24334),
+          m = n(35141),
+          p = n(89875);
         function _(e, t, n) {
           const s = [],
             [i, o] = e.GetChildren(),
@@ -73136,7 +73194,7 @@ var CLSTAMP = "10961770";
             distance: o,
           };
         }
-        var S = n(76693);
+        var S = n(66745);
         class v {
           m_options;
           m_msStart;
@@ -74639,11 +74697,11 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([r.o], q.prototype, "OnDOMBlur", null),
           (0, s.Cg)([r.o], q.prototype, "OnNavigationEvent", null);
       },
-      75381: (e, t, n) => {
+      40713: (e, t, n) => {
         "use strict";
         n.d(t, { O: () => o });
-        var s = n(8182),
-          i = n(74005);
+        var s = n(16805),
+          i = n(81289);
         function o(e) {
           if (!e) return s.xj.NONE;
           switch (e) {
@@ -74664,7 +74722,7 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      46352: (e, t, n) => {
+      91852: (e, t, n) => {
         "use strict";
         n.d(t, {
           Fc: () => S,
@@ -74686,15 +74744,15 @@ var CLSTAMP = "10961770";
         var s = n(63696),
           i = n(90095),
           o = n(89193),
-          r = n(48983);
+          r = n(35691);
         function a() {
           return window.g_GRS;
         }
         async function l(e, t, s) {
           if (!a()) {
             const [{ CGameRecordingStore: i }] = await Promise.all([
-              Promise.all([n.e(9489), n.e(4949), n.e(7411)]).then(
-                n.bind(n, 17411),
+              Promise.all([n.e(9489), n.e(201), n.e(9803)]).then(
+                n.bind(n, 89803),
               ),
             ]);
             s && (0, r.V)(s);
@@ -74776,7 +74834,7 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      31174: (e, t, n) => {
+      62770: (e, t, n) => {
         "use strict";
         function s(e, t = 0, n = Math.random) {
           if (e?.length > 1) {
@@ -74852,7 +74910,7 @@ var CLSTAMP = "10961770";
           yY: () => i,
         });
       },
-      74005: (e, t, n) => {
+      81289: (e, t, n) => {
         "use strict";
         function s(e, t, ...n) {
           console.assert
@@ -74866,7 +74924,7 @@ var CLSTAMP = "10961770";
         }
         n.d(t, { wT: () => s, z_: () => i });
       },
-      85519: (e, t, n) => {
+      11883: (e, t, n) => {
         "use strict";
         function s(e, t, n) {
           return {
@@ -74882,7 +74940,7 @@ var CLSTAMP = "10961770";
         }
         n.d(t, { o: () => s });
       },
-      32561: (e, t, n) => {
+      96757: (e, t, n) => {
         "use strict";
         n.d(t, {
           $U: () => u,
@@ -74971,7 +75029,7 @@ var CLSTAMP = "10961770";
           H = 116,
           W = 118;
       },
-      41261: (e, t, n) => {
+      81922: (e, t, n) => {
         "use strict";
         async function s(e, t = "SHA-256") {
           let n;
@@ -74988,8 +75046,8 @@ var CLSTAMP = "10961770";
           })(await window.crypto.subtle.digest(t, n));
         }
         n.d(t, { aj: () => w });
-        var i = n(52077),
-          o = n(58952),
+        var i = n(63129),
+          o = n(7928),
           r = n(63696);
         const a =
           window.addEventListener ||
@@ -75383,10 +75441,10 @@ var CLSTAMP = "10961770";
           return 1e4;
         }
       },
-      97150: (e, t, n) => {
+      93642: (e, t, n) => {
         "use strict";
         n.d(t, { l: () => i });
-        var s = n(31174);
+        var s = n(62770);
         class i {
           m_vecCallbacks = [];
           Register(e) {
@@ -75417,7 +75475,7 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      76693: (e, t, n) => {
+      66745: (e, t, n) => {
         "use strict";
         function s(e, t) {
           return (
@@ -75462,14 +75520,14 @@ var CLSTAMP = "10961770";
           kf: () => l,
         });
       },
-      83467: (e, t, n) => {
+      13023: (e, t, n) => {
         "use strict";
         n.d(t, { p: () => s });
         function s() {
           return !1;
         }
       },
-      9977: (e, t, n) => {
+      293: (e, t, n) => {
         "use strict";
         n.d(t, { S: () => i });
         const s = /^(steam|ftp|https?):\/\//;
@@ -75477,11 +75535,11 @@ var CLSTAMP = "10961770";
           return s.test(e) ? e : "https://" + e;
         }
       },
-      39109: (e, t, n) => {
+      25409: (e, t, n) => {
         "use strict";
         n.d(t, { J: () => o });
-        var s = n(71926),
-          i = n(85397);
+        var s = n(76410),
+          i = n(64073);
         function o() {
           return (0, i.A)().languages.map((e) => {
             return 2 == (t = e.strISOCode).length && s.TS.COUNTRY
@@ -75491,7 +75549,7 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      46246: (e, t, n) => {
+      62178: (e, t, n) => {
         "use strict";
         n.d(t, { Lg: () => l, VD: () => i, mR: () => a, yc: () => r });
         const s = new Set([
@@ -75579,22 +75637,22 @@ var CLSTAMP = "10961770";
         r.set("sc_schinese", r.get("schinese")),
           r.set("korean", r.get("koreana"));
       },
-      93522: (e, t, n) => {
+      59742: (e, t, n) => {
         "use strict";
         n.d(t, { vC: () => s });
         const s = 5;
       },
-      85397: (e, t, n) => {
+      64073: (e, t, n) => {
         "use strict";
         n.d(t, { A: () => u, l: () => h });
-        var s = n(71926),
+        var s = n(76410),
           i = n(63696),
-          o = n(46246),
-          r = n(93522),
-          a = n(15747),
-          l = n(77640),
-          c = n(73148),
-          d = n(41261);
+          o = n(62178),
+          r = n(59742),
+          a = n(48855),
+          l = n(28668),
+          c = n(9025),
+          d = n(81922);
         function h(e) {
           const t = new Map();
           const n = (async function () {
@@ -75609,7 +75667,10 @@ var CLSTAMP = "10961770";
             return Promise.all(
               Array.from(i).map((n) =>
                 e(n).then((e) => {
-                  if (!e) return;
+                  if (!e)
+                    return void console.error(
+                      `Project loc failed to load language ${n}, got ${e}`,
+                    );
                   const s = new Map();
                   for (const [t, n] of Object.entries(e)) s.set("#" + t, n);
                   t.set(n, s);
@@ -75617,14 +75678,22 @@ var CLSTAMP = "10961770";
               ),
             );
           })();
-          let r = !1;
-          function h(e, s) {
+          let r = !1,
+            h = !1;
+          function m(e, s) {
             const [i, ...a] = s,
               l =
                 t.get(i.strLanguage)?.get(e) ??
                 t.get((0, o.mR)(i.strLanguage) ?? "english")?.get(e);
             if (void 0 !== l) return l;
             if (0 === a.length) {
+              if (h)
+                return (
+                  console.warn(
+                    `Couldn't find localization key ${e} after erroring loading strings`,
+                  ),
+                  e
+                );
               if (!r) throw n;
               return (
                 (0, d.aj)().ReportError(
@@ -75635,17 +75704,21 @@ var CLSTAMP = "10961770";
                 e
               );
             }
-            return h(e, a);
+            return m(e, a);
           }
-          function m(e, ...t) {
-            const n = h(e, u().languages);
+          function p(e, ...t) {
+            const n = m(e, u().languages);
             return (0, a.X)(n, ...t);
           }
           return (
-            n.then(() => (r = !0)),
+            n
+              .then(() => (r = !0))
+              .catch((e) => {
+                console.error("LoadStrings error", e), (h = !0);
+              }),
             (0, l.n)(n),
             {
-              Localize: (e, ...t) => m(e, ...t),
+              Localize: (e, ...t) => p(e, ...t),
               LocalizeReact(e, ...t) {
                 const n = this.Localize(e);
                 if (n === e) return n;
@@ -75664,8 +75737,8 @@ var CLSTAMP = "10961770";
               },
               LocalizePlural: (e, t, ...n) =>
                 1 === t || "1" === t
-                  ? m(e, t, ...n)
-                  : m(e + "_Plural", t, ...n),
+                  ? p(e, t, ...n)
+                  : p(e + "_Plural", t, ...n),
               GetAppTypeLocKey(e, t) {
                 switch (t) {
                   case c.uE.XP:
@@ -75699,7 +75772,7 @@ var CLSTAMP = "10961770";
                 }
               },
               LocalizeInSpecificLang(e, t, ...n) {
-                const s = h(t, [e]);
+                const s = m(t, [e]);
                 return (0, a.X)(s, ...n);
               },
               Ready: () => n,
@@ -75734,7 +75807,7 @@ var CLSTAMP = "10961770";
           };
         }
       },
-      77640: (e, t, n) => {
+      28668: (e, t, n) => {
         "use strict";
         let s;
         n.d(t, { n: () => o }), (s ??= new Set());
@@ -75743,7 +75816,7 @@ var CLSTAMP = "10961770";
           (s ??= new Set()), s.add(e), (i = Promise.all(s));
         }
       },
-      15747: (e, t, n) => {
+      48855: (e, t, n) => {
         "use strict";
         function s(e, ...t) {
           return 0 == t.length
@@ -75758,15 +75831,15 @@ var CLSTAMP = "10961770";
         }
         n.d(t, { X: () => s });
       },
-      52077: (e, t, n) => {
+      63129: (e, t, n) => {
         "use strict";
         n.d(t, { I8: () => h, lI: () => c, w: () => d });
-        var s = n(41261),
-          i = n(32561),
+        var s = n(81922),
+          i = n(96757),
           o = n(58663),
-          r = n(18553),
-          a = n(29634),
-          l = n(39610);
+          r = n(30565),
+          a = n(28744),
+          l = n(38150);
         class c {
           static InitHeaderFromPacket(e) {
             return new c(void 0, e);
@@ -75942,7 +76015,7 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      78952: (e, t, n) => {
+      27588: (e, t, n) => {
         "use strict";
         n.d(t, {
           BT: () => l,
@@ -76110,7 +76183,7 @@ var CLSTAMP = "10961770";
               };
         }
       },
-      39610: (e, t, n) => {
+      38150: (e, t, n) => {
         "use strict";
         n.d(t, { Kx: () => o, pV: () => s, w: () => r });
         class s {
@@ -76218,7 +76291,7 @@ var CLSTAMP = "10961770";
           return t;
         }
       },
-      95620: (e, t, n) => {
+      53848: (e, t, n) => {
         "use strict";
         n.d(t, { OI: () => i });
         const s = new (class {
@@ -76249,7 +76322,7 @@ var CLSTAMP = "10961770";
           return s;
         }
       },
-      54292: (e, t, n) => {
+      77648: (e, t, n) => {
         "use strict";
         function s(e) {
           return null != e && void 0 !== e.focus;
@@ -76304,7 +76377,7 @@ var CLSTAMP = "10961770";
           return "auto" === s || "scroll" === s;
         }
       },
-      35843: (e, t, n) => {
+      1719: (e, t, n) => {
         "use strict";
         n.d(t, {
           ML: () => o,
@@ -76316,7 +76389,7 @@ var CLSTAMP = "10961770";
           xA: () => r,
         });
         var s = n(63696),
-          i = n(7227);
+          i = n(5663);
         function o(e, t, n, i) {
           s.useEffect(() => {
             const s = e && "current" in e ? e.current : e;
@@ -76395,7 +76468,7 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      52757: (e, t, n) => {
+      41769: (e, t, n) => {
         "use strict";
         n.d(t, {
           CH: () => a,
@@ -76417,7 +76490,7 @@ var CLSTAMP = "10961770";
           xA: () => i.xA,
         });
         var s = n(63696),
-          i = n(35843);
+          i = n(1719);
         function o(e, t, n = !0, i = !1) {
           const o = s.useRef(t);
           o.current = t;
@@ -76573,7 +76646,7 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      7227: (e, t, n) => {
+      5663: (e, t, n) => {
         "use strict";
         n.d(t, {
           D5: () => c,
@@ -76625,11 +76698,11 @@ var CLSTAMP = "10961770";
             }, [e, t]);
         }
       },
-      41600: (e, t, n) => {
+      51268: (e, t, n) => {
         "use strict";
         n.d(t, { OO: () => r });
         var s = n(63696),
-          i = n(7227);
+          i = n(5663);
         function o(e, t) {
           return (0, i.QS)(
             (n) => {
@@ -76657,13 +76730,13 @@ var CLSTAMP = "10961770";
           }, t);
         }
       },
-      51470: (e, t, n) => {
+      418: (e, t, n) => {
         "use strict";
         n.d(t, { Y: () => a, j: () => l });
         var s = n(62540),
           i = n(63696),
-          o = n(41600),
-          r = n(7227);
+          o = n(51268),
+          r = n(5663);
         function a(e) {
           const t = (0, o.OO)(e, e.options);
           return (0, s.jsx)("span", { ref: t, style: { fontSize: 0 } });
@@ -76675,11 +76748,11 @@ var CLSTAMP = "10961770";
           return (0, s.jsx)("div", { ref: d, ...l });
         });
       },
-      71926: (e, t, n) => {
+      76410: (e, t, n) => {
         "use strict";
         n.d(t, { Ki: () => l, TS: () => r, YJ: () => o, iA: () => a });
-        var s = n(45442),
-          i = n(576);
+        var s = n(94606),
+          i = n(37788);
         function o(e) {
           return e;
         }
@@ -76689,7 +76762,7 @@ var CLSTAMP = "10961770";
         window.Config && Object.assign(s.TS, window.Config),
           window.UserConfig && Object.assign(s.iA, window.UserConfig);
       },
-      51424: (e, t, n) => {
+      86540: (e, t, n) => {
         "use strict";
         n.d(t, { L: () => c, s: () => a });
         var s = n(63696),
@@ -76725,7 +76798,7 @@ var CLSTAMP = "10961770";
         const l = { queries: { staleTime: 1 / 0 } },
           c = new o.E({ defaultOptions: l });
       },
-      17082: (e, t, n) => {
+      61758: (e, t, n) => {
         "use strict";
         n.d(t, { LH: () => r, Rh: () => o });
         var s = n(63696);
@@ -76740,7 +76813,7 @@ var CLSTAMP = "10961770";
           return e.useActiveAccount();
         }
       },
-      16717: (e, t, n) => {
+      29817: (e, t, n) => {
         "use strict";
         n.d(t, {
           KV: () => c,
@@ -76751,7 +76824,7 @@ var CLSTAMP = "10961770";
           zv: () => m,
         });
         var s = n(63696),
-          i = n(74005);
+          i = n(81289);
         const o = s.createContext(void 0),
           r = o.Provider,
           a = () => {
@@ -76801,20 +76874,20 @@ var CLSTAMP = "10961770";
             return e();
           };
       },
-      91960: (e, t, n) => {
+      15388: (e, t, n) => {
         "use strict";
         n.d(t, { Z: () => o });
-        var s = n(85397),
+        var s = n(64073),
           i = n(11621);
         const o = (0, s.l)(i.A);
       },
-      28534: (e, t, n) => {
+      91146: (e, t, n) => {
         "use strict";
         n.d(t, { DT: () => c, b0: () => a, bu: () => l });
-        var s = n(71926),
-          i = n(85877),
-          o = n(74005),
-          r = n(76083);
+        var s = n(76410),
+          i = n(71417),
+          o = n(81289),
+          r = n(65551);
         function a(e, t) {
           if (e[t]) {
             if ("community_icon" == t) {
@@ -76865,7 +76938,7 @@ var CLSTAMP = "10961770";
             ].sort((e, t) => e.ordinal - t.ordinal);
         }
       },
-      84475: (e, t, n) => {
+      69679: (e, t, n) => {
         "use strict";
         n.d(t, {
           M4: () => h,
@@ -76877,9 +76950,9 @@ var CLSTAMP = "10961770";
           kB: () => a,
         });
         var s = n(62540),
-          i = n(71926),
-          o = n(85877),
-          r = n(76083);
+          i = n(76410),
+          o = n(71417),
+          r = n(65551);
         function a(e, t) {
           const { data: n } = (0, o.Yo)(e),
             s = (0, r.dy)();
@@ -76941,11 +77014,11 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      41880: (e, t, n) => {
+      31110: (e, t, n) => {
         "use strict";
-        n.d(t, { CC: () => u, Wn: () => c });
+        n.d(t, { CC: () => h, Wn: () => c });
         var s,
-          i = n(39109);
+          i = n(25409);
         function o(e, t) {
           const n = { year: "numeric", month: "short", day: "numeric", ...t };
           return new Date(1e3 * e).toLocaleDateString((0, i.J)(), n);
@@ -76955,16 +77028,16 @@ var CLSTAMP = "10961770";
             (e[(e.Ago = 1)] = "Ago"),
             (e[(e.Remaining = 2)] = "Remaining");
         })(s || (s = {}));
-        var r = n(91960),
-          a = n(60997);
+        var r = n(15388),
+          a = n(63649);
         function l(e) {
           return e?.is_coming_soon
             ? (function (e, t, n) {
                 switch (e) {
                   case "date_full":
-                    return d(t);
+                    return o(t);
                   case "date_month":
-                    return h(new Date(1e3 * t));
+                    return d(new Date(1e3 * t));
                   case "date_quarter":
                     return (function (e) {
                       switch (e.getUTCMonth()) {
@@ -77013,22 +77086,21 @@ var CLSTAMP = "10961770";
                 e.custom_release_date_message,
               )
             : e?.steam_release_date
-              ? d(e.steam_release_date)
+              ? ((t = e.steam_release_date),
+                new Date(1e3 * t).toLocaleDateString((0, i.J)()))
               : "";
+          var t;
         }
         function c(e) {
           return l(e.releaseInfo);
         }
         function d(e) {
-          return new Date(1e3 * e).toLocaleDateString((0, i.J)());
-        }
-        function h(e) {
           return e.toLocaleDateString((0, i.J)(), {
             month: "long",
             year: "numeric",
           });
         }
-        function u(e) {
+        function h(e) {
           if (!e) return "";
           if (e && e.is_coming_soon) {
             if (e.coming_soon_display) return (0, a.d)(e);
@@ -77037,7 +77109,7 @@ var CLSTAMP = "10961770";
             const t = e.steam_release_date;
             return t
               ? e.is_abridged_release_date
-                ? h(new Date(1e3 * t))
+                ? d(new Date(1e3 * t))
                 : o(t)
               : "";
           }
@@ -77045,7 +77117,7 @@ var CLSTAMP = "10961770";
           return t || (t = e.original_release_date), t ? o(t) : "";
         }
       },
-      85877: (e, t, n) => {
+      71417: (e, t, n) => {
         "use strict";
         n.d(t, {
           AQ: () => w,
@@ -77068,11 +77140,11 @@ var CLSTAMP = "10961770";
           wl: () => m,
           xz: () => b,
         });
-        var s = n(74005),
+        var s = n(81289),
           i = n(61416),
           o = n(3715),
-          r = n(16161),
-          a = n(78130);
+          r = n(75429),
+          a = n(11534);
         function l(e) {
           const t = (0, a.eG)();
           return (0, i.I)(k(t, e));
@@ -77390,6 +77462,7 @@ var CLSTAMP = "10961770";
           "platforms",
           "release",
           "package_groups",
+          "extra_details",
         ];
         function O(e) {
           const t = { ...e };
@@ -77400,16 +77473,16 @@ var CLSTAMP = "10961770";
           return await e.load(`${(0, r.ER)(t)}|${n}`);
         }
       },
-      78130: (e, t, n) => {
+      11534: (e, t, n) => {
         "use strict";
         n.d(t, { V3: () => m, eG: () => h, yn: () => u });
         var s = n(62540),
-          i = n(16717),
+          i = n(29817),
           o = n(3715),
           r = n(63696),
-          a = n(5474),
-          l = n(19946),
-          c = n(85877);
+          a = n(34814),
+          l = n(44829),
+          c = n(71417);
         const d = r.createContext({});
         function h() {
           return r.useContext(d).dataLoader;
@@ -77477,7 +77550,7 @@ var CLSTAMP = "10961770";
           return (0, s.jsx)(d.Provider, { value: x, children: m });
         }
       },
-      16161: (e, t, n) => {
+      75429: (e, t, n) => {
         "use strict";
         n.d(t, {
           ER: () => o,
@@ -77486,8 +77559,8 @@ var CLSTAMP = "10961770";
           RH: () => c,
           zj: () => l,
         });
-        var s = n(73148),
-          i = n(74005);
+        var s = n(9025),
+          i = n(81289);
         function o(e) {
           return "appid" in e
             ? `app_${e.appid}`
@@ -77603,11 +77676,11 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      5474: (e, t, n) => {
+      34814: (e, t, n) => {
         "use strict";
         n.d(t, { Bn: () => r, Y7: () => i, rV: () => o });
-        var s = n(73148);
-        n(37882);
+        var s = n(9025);
+        n(24028);
         function i(e) {
           return e.bIncludeUnpublished
             ? "partner-unpublished"
@@ -77628,21 +77701,21 @@ var CLSTAMP = "10961770";
           e.Body().set_data_request(s.gn.fromObject(t));
         }
       },
-      19946: (e, t, n) => {
+      44829: (e, t, n) => {
         "use strict";
         n.d(t, { n: () => m });
-        var s = n(74005);
+        var s = n(81289);
         function i(e, t) {
           return e.split(t);
         }
-        var o = n(32561),
-          r = n(52077),
-          a = n(89639),
-          l = n(73148),
+        var o = n(96757),
+          r = n(63129),
+          a = n(219),
+          l = n(9025),
           c = n(11682),
           d = n.n(c),
-          h = n(16161),
-          u = n(5474);
+          h = n(75429),
+          u = n(34814);
         function m(e, t, n, c) {
           (0, s.wT)(
             !t.bIncludeUnpublished || !!t.bUsePartnerAPI,
@@ -77725,14 +77798,14 @@ var CLSTAMP = "10961770";
           return (m.cacheScope = (0, u.Y7)(t)), m;
         }
       },
-      88721: (e, t, n) => {
+      87866: (e, t, n) => {
         "use strict";
         n.d(t, { R: () => a, A: () => r });
-        var s = n(9977);
+        var s = n(293);
         const i = JSON.parse(
           '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"stats":26,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"recommendations":70,"categories":71,"hardware":72,"waystoplay":73,"specialsections":74,"more":75,"big-category-link":76,"small-category-link":77,"package-purchase-recommendations":78,"popular":79,"recent":80,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"demo-parent-app-link":415,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"monthlytopreleases":7011,"bestofyear":7012,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749,"topnewreleases":100750,"newreleases":100751,"salebrowsetrendingfree":100752,"trendingfree":100753,"reactroot":100754,"bundlelist":100755,"verifiedprogram":100756,"trailercarousel":100757,"personalcalendar-lastmonth":100800,"personalcalendar-lastweek":100801,"personalcalendar-calendar":100802,"personalcalendar-homepage":100803,"greatonframe":100804}',
         );
-        var o = n(12495);
+        var o = n(91723);
         class r {
           static InstrumentLink(e, t, n = null) {
             const s = r.GetSNRLinkParam(t, n),
@@ -77822,7 +77895,7 @@ var CLSTAMP = "10961770";
           };
         }
       },
-      274: (e, t, n) => {
+      16022: (e, t, n) => {
         "use strict";
         n.d(t, {
           Gd: () => l,
@@ -77833,8 +77906,8 @@ var CLSTAMP = "10961770";
         });
         n(62540);
         var s = n(63696),
-          i = n(88721),
-          o = n(71926);
+          i = n(87866),
+          o = n(76410);
         const r = s.createContext({});
         s.createContext(void 0);
         function a() {
@@ -77868,16 +77941,16 @@ var CLSTAMP = "10961770";
           return i.A.AddNavParamToURL(t, o, r);
         }
       },
-      78383: (e, t, n) => {
+      88671: (e, t, n) => {
         "use strict";
         n.d(t, { Rp: () => m });
-        var s = n(28540);
+        var s = n(78104);
         const i = JSON.parse(
           '{"h":{"countries":{"AF":"Afghanistan","AX":"Aland Islands","AL":"Albania","DZ":"Algeria","AS":"American Samoa","AD":"Andorra","AO":"Angola","AI":"Anguilla","AQ":"Antarctica","AG":"Antigua and Barbuda","AR":"Argentina","AM":"Armenia","AW":"Aruba","AU":"Australia","AT":"Austria","AZ":"Azerbaijan","BS":"Bahamas","BH":"Bahrain","BD":"Bangladesh","BB":"Barbados","BY":"Belarus","BE":"Belgium","BZ":"Belize","BJ":"Benin","BM":"Bermuda","BT":"Bhutan","BO":"Bolivia","BA":"Bosnia and Herzegovina","BW":"Botswana","BV":"Bouvet Island","BR":"Brazil","IO":"British Indian Ocean Territory","BN":"Brunei Darussalam","BG":"Bulgaria","BF":"Burkina Faso","BI":"Burundi","KH":"Cambodia","CM":"Cameroon","CA":"Canada","CV":"Cabo Verde","KY":"Cayman Islands","CF":"Central African Republic","TD":"Chad","CL":"Chile","CN":"China","XC":"China","CX":"Christmas Island","CC":"Cocos (Keeling) Islands","CO":"Colombia","KM":"Comoros","CG":"Congo","CD":"Congo, the Democratic Republic of the","CK":"Cook Islands","CR":"Costa Rica","CI":"Cote d\'Ivoire","HR":"Croatia","CY":"Cyprus","CZ":"Czech Republic","DK":"Denmark","DJ":"Djibouti","DM":"Dominica","DO":"Dominican Republic","EC":"Ecuador","EG":"Egypt","SV":"El Salvador","GQ":"Equatorial Guinea","ER":"Eritrea","EE":"Estonia","ET":"Ethiopia","FK":"Falkland Islands (Malvinas)","FO":"Faroe Islands","FJ":"Fiji","FI":"Finland","FR":"France","GF":"French Guiana","PF":"French Polynesia","TF":"French Southern Territories","GA":"Gabon","GM":"Gambia","GE":"Georgia","DE":"Germany","GH":"Ghana","GI":"Gibraltar","GR":"Greece","GL":"Greenland","GD":"Grenada","GP":"Guadeloupe","GU":"Guam","GT":"Guatemala","GN":"Guinea","GW":"Guinea-Bissau","GG":"Guernsey","GY":"Guyana","HT":"Haiti","HM":"Heard and Mc Donald Islands","VA":"Holy See(Vatican City State)","HN":"Honduras","HK":"Hong Kong","HU":"Hungary","IS":"Iceland","IN":"India","ID":"Indonesia","IQ":"Iraq","IE":"Ireland","IM":"Isle of Man","IL":"Israel","IT":"Italy","JM":"Jamaica","JP":"Japan","JE":"Jersey","JO":"Jordan","KZ":"Kazakhstan","KE":"Kenya","KI":"Kiribati","KR":"Korea, Republic of","KW":"Kuwait","KG":"Kyrgyzstan","LA":"Lao People\'s Democratic Republic","LV":"Latvia","LB":"Lebanon","LS":"Lesotho","LR":"Liberia","LI":"Liechtenstein","LT":"Lithuania","LU":"Luxembourg","LY":"Libya","MO":"Macau","MK":"North Macedonia, Republic of","MG":"Madagascar","MW":"Malawi","MY":"Malaysia","MV":"Maldives","ML":"Mali","MT":"Malta","MH":"Marshall Islands","MQ":"Martinique","MR":"Mauritania","MU":"Mauritius","YT":"Mayotte","MX":"Mexico","FM":"Micronesia, Federated States of","MD":"Moldova, Republic of","MC":"Monaco","MN":"Mongolia","ME":"Montenegro","MS":"Montserrat","MA":"Morocco","MZ":"Mozambique","MM":"Myanmar","NA":"Namibia","NR":"Nauru","NP":"Nepal","NL":"Netherlands","AN":"Netherlands Antilles","NC":"New Caledonia","NZ":"New Zealand","NI":"Nicaragua","NE":"Niger","NG":"Nigeria","NU":"Niue","NF":"Norfolk Island","MP":"Northern Mariana Islands","NO":"Norway","OM":"Oman","PK":"Pakistan","PW":"Palau","PS":"Palestinian Territory, Occupied","PA":"Panama","PG":"Papua New Guinea","PY":"Paraguay","PE":"Peru","PH":"Philippines","PN":"Pitcairn","PL":"Poland","PT":"Portugal","PR":"Puerto Rico","QA":"Qatar","RE":"Reunion","RO":"Romania","RU":"Russian Federation","RW":"Rwanda","SH":"Saint Helena","KN":"Saint Kitts and Nevis","LC":"Saint Lucia","PM":"Saint Pierre and Miquelon","VC":"Saint Vincent and the Grenadines","WS":"Samoa","SM":"San Marino","ST":"Sao Tome and Principe","SA":"Saudi Arabia","SN":"Senegal","RS":"Serbia","SC":"Seychelles","SL":"Sierra Leone","SG":"Singapore","SK":"Slovakia","SI":"Slovenia","SB":"Solomon Islands","SO":"Somalia","ZA":"South Africa","GS":"South Georgia and the South Sandwich Islands","ES":"Spain","LK":"Sri Lanka","SD":"Sudan","SR":"Suriname","SJ":"Svalbard and Jan Mayen","SY":"Syria","SZ":"Eswatini","SE":"Sweden","CH":"Switzerland","TW":"Taiwan","TJ":"Tajikistan","TZ":"Tanzania, United Republic of","TH":"Thailand","TL":"Timor-Leste","TG":"Togo","TK":"Tokelau","TO":"Tonga","TT":"Trinidad and Tobago","TN":"Tunisia","TR":"Turkey","TM":"Turkmenistan","TC":"Turks and Caicos Islands","TV":"Tuvalu","UG":"Uganda","UA":"Ukraine","AE":"United Arab Emirates","GB":"United Kingdom","US":"United States","UM":"United States Minor Outlying Islands","UY":"Uruguay","UZ":"Uzbekistan","VU":"Vanuatu","VE":"Venezuela","VN":"Viet Nam","VG":"Virgin Islands, British","VI":"Virgin Islands, U.S.","WF":"Wallis and Futuna","EH":"Western Sahara","YE":"Yemen","ZM":"Zambia","ZW":"Zimbabwe"},"eucountries":{"AT":"Austria","BE":"Belgium","BG":"Bulgaria","HR":"Croatia","CY":"Cyprus","CZ":"Czech Republic","DK":"Denmark","EE":"Estonia","FI":"Finland","FR":"France","DE":"Germany","GR":"Greece","HU":"Hungary","IE":"Ireland","IT":"Italy","LV":"Latvia","LT":"Lithuania","LU":"Luxembourg","MT":"Malta","NL":"Netherlands","PL":"Poland","PT":"Portugal","RO":"Romania","SK":"Slovakia","SI":"Slovenia","ES":"Spain","SE":"Sweden","GB":"United Kingdom"},"eeacountries":{"NO":"Norway","IS":"Iceland","LI":"Liechtenstein"},"usstates":{"AL":"Alabama","AK":"Alaska","AS":"American Samoa","AZ":"Arizona","AR":"Arkansas","CA":"California","CO":"Colorado","CT":"Connecticut","DE":"Delaware","DC":"District of Columbia","FM":"Federated States of Micronesia","FL":"Florida","GA":"Georgia","GU":"Guam","HI":"Hawaii","ID":"Idaho","IL":"Illinois","IN":"Indiana","IA":"Iowa","KS":"Kansas","KY":"Kentucky","LA":"Louisiana","ME":"Maine","MH":"Marshall Islands","MD":"Maryland","MA":"Massachusetts","MI":"Michigan","MN":"Minnesota","MS":"Mississippi","MO":"Missouri","MT":"Montana","NE":"Nebraska","NV":"Nevada","NH":"New Hampshire","NJ":"New Jersey","NM":"New Mexico","NY":"New York","NC":"North Carolina","ND":"North Dakota","MP":"Northern Mariana Islands","OH":"Ohio","OK":"Oklahoma","OR":"Oregon","PW":"Palau","PA":"Pennsylvania","PR":"Puerto Rico","RI":"Rhode Island","SC":"South Carolina","SD":"South Dakota","TN":"Tennessee","TX":"Texas","UT":"Utah","VT":"Vermont","VI":"U.S. Virgin Islands","VA":"Virginia","WA":"Washington","WV":"West Virginia","WI":"Wisconsin","WY":"Wyoming","AA":"Armed Forces Americas","AE":"Armed Forces","AP":"Armed Forces Pacific"}}}',
         ).h;
-        var o = n(88743),
-          r = n(37993),
-          a = n(30977);
+        var o = n(73723),
+          r = n(68933),
+          a = n(32709);
         async function l(e, t, n, l) {
           if ((0, s.nA)(l))
             return { version: o.ie.mO, preference_state: o.CY.__ };
@@ -77899,8 +77972,8 @@ var CLSTAMP = "10961770";
             : { version: o.ie.mO, preference_state: o.CY.__ };
         }
         var c = n(61416),
-          d = n(16717),
-          h = n(71926);
+          d = n(29817),
+          h = n(76410);
         function u() {
           const e = (0, d.KV)();
           return (0, c.I)(
@@ -77939,14 +78012,14 @@ var CLSTAMP = "10961770";
             : void 0;
         }
       },
-      42500: (e, t, n) => {
+      95952: (e, t, n) => {
         "use strict";
         n.d(t, { UL: () => f, Uy: () => C });
-        var s = n(41261),
-          i = n(52077),
-          o = n(83786),
-          r = n(71926),
-          a = n(16717),
+        var s = n(81922),
+          i = n(63129),
+          o = n(44382),
+          r = n(76410),
+          a = n(29817),
           l = n(61416),
           c = n(3715),
           d = n(18397);
@@ -78027,14 +78100,14 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      76083: (e, t, n) => {
+      65551: (e, t, n) => {
         "use strict";
         n.d(t, { dy: () => h });
         var s = n(63696),
-          i = n(45442),
-          o = n(7354),
-          r = n(58135),
-          a = n(49055),
+          i = n(94606),
+          o = n(53062),
+          r = n(93851),
+          a = n(3771),
           l = n(61416);
         const c = s.createContext({ eAdultOnlyMediaBehavior: "masked" });
         function d() {
@@ -78076,7 +78149,7 @@ var CLSTAMP = "10961770";
           return 0 != t ? t : null;
         }
       },
-      27083: (e, t, n) => {
+      34836: (e, t, n) => {
         "use strict";
         n.d(t, { I: () => Rs });
         var s = n(34629),
@@ -78085,22 +78158,22 @@ var CLSTAMP = "10961770";
           r = n(41230),
           a = n(90095),
           l = n(63696),
-          c = n(3753),
-          d = n(97356),
+          c = n(56237),
+          d = n(30486),
           h = n(83957),
           u = n.n(h),
-          m = n(81631),
-          p = n(32561),
-          _ = n(52077),
-          g = n(95267),
-          C = n(83081),
-          f = n(85164),
-          S = n(41106),
-          v = n(85519),
-          b = n(19596),
-          I = n(959),
-          y = n(21571),
-          w = n(64076);
+          m = n(67827),
+          p = n(96757),
+          _ = n(63129),
+          g = n(45607),
+          C = n(55693),
+          f = n(41824),
+          S = n(75230),
+          v = n(11883),
+          b = n(73960),
+          I = n(99787),
+          y = n(28703),
+          w = n(36095);
         class x {
           m_mapChats = new Map();
           GetChat(e, t) {
@@ -78783,9 +78856,9 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([v.o], A.prototype, "RequestLoop", null),
           (0, s.Cg)([v.o], A.prototype, "MuteUserForSession", null);
         n(42689);
-        var R = n(85057),
-          M = n(43590),
-          T = n(43360);
+        var R = n(19109),
+          M = n(41738),
+          T = n(24052);
         const D = new (class {
           bIncludeFeaturedAsGameSource = !0;
           get nOverrideDateNow() {
@@ -78817,7 +78890,7 @@ var CLSTAMP = "10961770";
         (0, T.V)("g_EventCalendarDevFeatures", D);
         const k = new Date();
         Math.floor(k.getTime() / 1e3);
-        var P = n(28151);
+        var P = n(79695);
         class L {
           constructor() {
             (0, o.Gn)(this);
@@ -78959,17 +79032,17 @@ var CLSTAMP = "10961770";
         const G = new L();
         var F = n(80611),
           B = n.n(F),
-          O = n(3877),
-          N = n(62250),
-          E = n(80481),
-          j = n(75663),
-          V = n(39358),
-          U = n(28540),
-          H = n(73561),
-          W = n(24544),
+          O = n(84160),
+          N = n(14202),
+          E = n(93605),
+          j = n(1555),
+          V = n(37706),
+          U = n(78104),
+          H = n(29085),
+          W = n(24087),
           z = n(41659);
-        var q = n(21839),
-          K = n(92246);
+        var q = n(83859),
+          K = n(33154);
         const Z = n(36500).A,
           X = new K.wd("Login"),
           Q = X.Info,
@@ -78980,12 +79053,12 @@ var CLSTAMP = "10961770";
             s = Z.encrypt(e, n);
           return !1 === s ? null : s;
         }
-        var ee = n(40036),
-          te = n(84719),
-          ne = n(93550),
-          se = n(25767),
-          ie = n(87269),
-          oe = n(98434),
+        var ee = n(58272),
+          te = n(49667),
+          ne = n(55538),
+          se = n(45931),
+          ie = n(42177),
+          oe = n(29150),
           re = n(43132),
           ae = n.n(re);
         function le(e) {
@@ -79101,11 +79174,11 @@ var CLSTAMP = "10961770";
         }
         var ce,
           de,
-          he = n(16159),
-          ue = (n(53095), n(15982)),
-          me = n(91422),
-          pe = n(87885),
-          _e = n(18553),
+          he = n(68611),
+          ue = (n(94491), n(86502)),
+          me = n(90378),
+          pe = n(74257),
+          _e = n(30565),
           ge = n(37322);
         !(function (e) {
           (e[(e.None = 0)] = "None"),
@@ -79334,8 +79407,8 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([o.sH], Ce.prototype, "m_strExtendedErrorMessage", void 0),
           (0, s.Cg)([v.o], Ce.prototype, "PollForUpdate", null),
           (0, s.Cg)([v.o], Ce.prototype, "SetTokenToRevoke", null);
-        var Se = n(21780),
-          ve = n(39211);
+        var Se = n(28384),
+          ve = n(28207);
         const be = 10,
           Ie = 11;
         class ye extends Ce {
@@ -79992,7 +80065,7 @@ var CLSTAMP = "10961770";
           Pe = n.n(ke),
           Le = n(48755),
           Ge = n.n(Le),
-          Fe = n(74005),
+          Fe = n(81289),
           Be = n(40657),
           Oe = n.n(Be);
         function Ne(e) {
@@ -80264,7 +80337,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        var Ke = n(71926);
+        var Ke = n(76410);
         const Ze = (0, l.createContext)(!1),
           Xe = () => (0, l.useContext)(Ze);
         function Qe() {
@@ -81889,7 +81962,7 @@ var CLSTAMP = "10961770";
             children: (0, i.jsx)(ue.t, {}),
           });
         }
-        n(38100);
+        n(96633);
         function tn(e) {
           return (0, i.jsx)(V.x_, {
             onEscKeypress: e.closeModal,
@@ -81934,10 +82007,10 @@ var CLSTAMP = "10961770";
                 }),
           });
         }
-        var on = n(51104),
-          rn = n(95863),
-          an = n(6516),
-          ln = n(83467);
+        var on = n(10310),
+          rn = n(36803),
+          an = n(57688),
+          ln = n(13023);
         class cn {
           reactNodes = [];
           AppendText(e, t = !1) {
@@ -81996,7 +82069,7 @@ var CLSTAMP = "10961770";
               });
           }
         }
-        var un = n(98267);
+        var un = n(53479);
         class mn {
           m_fnAccumulatorFactory;
           m_dictComponents;
@@ -82251,9 +82324,9 @@ var CLSTAMP = "10961770";
         }
         var Cn = n(95606),
           fn = n.n(Cn),
-          Sn = n(72923),
-          vn = n(64567),
-          bn = n(30940);
+          Sn = n(76839),
+          vn = n(59587),
+          bn = n(45904);
         class In {
           m_bUserHasVolumePreference = !1;
           m_flVolumePreference = 0;
@@ -82288,10 +82361,11 @@ var CLSTAMP = "10961770";
                 bMuted: a,
                 className: c,
                 mediaScale: d,
-                onClick: h,
-                altText: u,
+                flAspectRatio: h,
+                onClick: u,
+                altText: m,
               } = e,
-              m = (0, l.useMemo)(
+              p = (0, l.useMemo)(
                 () =>
                   Boolean(
                     n.rgVideoTracks?.some(
@@ -82300,42 +82374,42 @@ var CLSTAMP = "10961770";
                   ),
                 [n.rgVideoTracks],
               ),
-              [p, _] = l.useState(!1),
-              g = xn();
+              [_, g] = l.useState(!1),
+              C = xn();
             if (!n.rgVideoSources || !n.rgVideoSources.length) return null;
-            const C = (function (e) {
+            const f = (function (e) {
               return !(
-                !(0, bn.ZF)(e.sPoster) ||
+                (!(0, bn._1)(e.sPoster) && !(0, bn.ZF)(e.sPoster)) ||
                 (e.rgVideoSources &&
                   e.rgVideoSources.some((e) => !(0, bn.ZF)(e.sURL))) ||
                 (e.rgVideoTracks &&
                   e.rgVideoTracks.some((e) => !(0, bn.ZF)(e.sURL)))
               );
             })(n);
-            let f;
-            (!C || (m && Ke.TS.EUNIVERSE == H.wLO)) && (f = "anonymous");
-            const S = a || (s && In.Get().BVolumePreferenceMuted()),
-              v = n.sPoster ? An(n.sPoster, g) : "";
+            let S;
+            (!f || (p && Ke.TS.EUNIVERSE == H.wLO)) && (S = "anonymous");
+            const v = a || (s && In.Get().BVolumePreferenceMuted()),
+              b = n.sPoster ? An(n.sPoster, C) : "";
             return (0, i.jsxs)("video", {
               width: "100%",
               height: "auto",
               autoPlay: s,
-              muted: S,
+              muted: v,
               playsInline: !0,
               controls: o,
-              poster: v,
+              poster: b,
               loop: r,
-              crossOrigin: f,
+              crossOrigin: S,
               onVolumeChange: (e) => {
                 const t = e.target,
                   n = t.muted ? 0 : t.volume;
-                p && In.Get().SetVolumePreference(n);
+                _ && In.Get().SetVolumePreference(n);
               },
               onPlay: (e) => {
                 const t = e.target,
                   n = 0 == t.currentTime,
                   i = In.Get().BUserHasVolumePreference();
-                if ((_(!0), n))
+                if ((g(!0), n))
                   if (i || s)
                     i &&
                       ((t.volume = In.Get().GetVolumePreference()),
@@ -82347,9 +82421,12 @@ var CLSTAMP = "10961770";
               },
               ref: t,
               className: c,
-              onClick: h,
-              "aria-label": u,
-              style: { width: d && d >= 1 && d < 100 ? `${d}%` : void 0 },
+              onClick: u,
+              "aria-label": m,
+              style: {
+                width: d && d >= 1 && d < 100 ? `${d}%` : void 0,
+                aspectRatio: h || void 0,
+              },
               children: [
                 (0, i.jsx)(Rn, { rgVideoSources: n.rgVideoSources }),
                 (0, i.jsx)(Mn, { rgVideoTracks: n.rgVideoTracks }),
@@ -82361,7 +82438,8 @@ var CLSTAMP = "10961770";
           return l.useContext(wn) || (0, y.xv)();
         }
         function An(e, t) {
-          if (e)
+          if (e) {
+            if ((0, bn._1)(e)) return e;
             try {
               const n = new URL(e);
               return (
@@ -82371,6 +82449,7 @@ var CLSTAMP = "10961770";
             } catch {
               return e;
             }
+          }
         }
         function Rn(e) {
           const { rgVideoSources: t } = e,
@@ -82413,7 +82492,7 @@ var CLSTAMP = "10961770";
             label: (0, I.uD)(o),
           });
         }
-        var Dn = n(45442);
+        var Dn = n(94606);
         function kn(e) {
           let t = Jn(e, "poster");
           t && (t = (0, bn.L$)(t));
@@ -82533,9 +82612,9 @@ var CLSTAMP = "10961770";
         (0, s.Cg)([o.sH], Ln.prototype, "m_mapYouTubeVideo", void 0),
           (0, s.Cg)([o.sH], Ln.prototype, "m_mapSharedFile", void 0);
         const Gn = new Ln();
-        var Fn = n(96393),
-          Bn = n(69623),
-          On = n(15695),
+        var Fn = n(37973),
+          Bn = n(99755),
+          On = n(587),
           Nn = n(64409),
           En = n.n(Nn),
           jn = n(14033);
@@ -83567,10 +83646,10 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([pe.oI], cs.prototype, "OnScroll", null),
           (0, s.Cg)([pe.oI], cs.prototype, "OnHover", null),
           (0, s.Cg)([pe.oI], cs.prototype, "OnLeave", null);
-        var ds = n(43808),
+        var ds = n(50148),
           hs = n(63437),
           us = n.n(hs);
-        n(54479);
+        n(70808);
         class ms {
           constructor() {
             (0, o.Gn)(this);
@@ -83795,7 +83874,7 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([v.o], _s.prototype, "ClearCountDown", null),
           (0, s.Cg)([v.o], _s.prototype, "SetupRefreshDataInterval", null),
           (0, s.Cg)([v.o], _s.prototype, "SetupCountDown", null);
-        var fs = n(34164),
+        var fs = n(90080),
           Ss = n(16910),
           vs = n.n(Ss);
         function bs(e) {
@@ -84499,12 +84578,12 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      25647: (e, t, n) => {
+      12867: (e, t, n) => {
         "use strict";
         n.d(t, { dP: () => c, td: () => l });
         var s = n(34629),
           i = n(89193),
-          o = n(21571);
+          o = n(28703);
         o.TS.CHAT_BASE_URL;
         const r = o.TS.CHAT_BASE_URL + "public/images/broadcast/yule_30x30.png";
         class a {
@@ -84586,7 +84665,7 @@ var CLSTAMP = "10961770";
               });
         }
       },
-      81631: (e, t, n) => {
+      67827: (e, t, n) => {
         "use strict";
         var s, i;
         n.d(t, { J8: () => o, X8: () => i }),
@@ -84602,7 +84681,7 @@ var CLSTAMP = "10961770";
           })(i || (i = {}));
         class o {}
       },
-      95980: (e, t, n) => {
+      71944: (e, t, n) => {
         "use strict";
         n.d(t, {
           Mc: () => a,
@@ -84611,7 +84690,7 @@ var CLSTAMP = "10961770";
           ap: () => r,
           q_: () => i,
         });
-        const s = new (n(92246).wd)("video"),
+        const s = new (n(33154).wd)("video"),
           i = (s.Info, s.Debug),
           o = s.Error;
         s.Warning;
@@ -84645,7 +84724,7 @@ var CLSTAMP = "10961770";
           return "probably" === e || "maybe" === e;
         }
       },
-      41359: (e, t, n) => {
+      25851: (e, t, n) => {
         "use strict";
         n.d(t, { P: () => s });
         class s {
@@ -84662,10 +84741,10 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      95267: (e, t, n) => {
+      45607: (e, t, n) => {
         "use strict";
         n.d(t, { A: () => i });
-        var s = n(41359);
+        var s = n(25851);
         class i extends s.P {
           GetString(e) {
             return Promise.resolve(localStorage.getItem(e));
@@ -84678,7 +84757,7 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      62646: (e, t, n) => {
+      94458: (e, t, n) => {
         "use strict";
         function s(e, t) {
           return e.m_unPID == t.m_unPID && e.m_nBrowserID == t.m_nBrowserID;
@@ -84686,12 +84765,12 @@ var CLSTAMP = "10961770";
         n.d(t, { m: () => i, u: () => s });
         const i = { m_unPID: 0, m_nBrowserID: -1 };
       },
-      3753: (e, t, n) => {
+      56237: (e, t, n) => {
         "use strict";
         n.d(t, { Bk: () => s.Bk, XX: () => r, jb: () => s.jb, lX: () => a });
-        var s = n(88586),
-          i = n(63496),
-          o = n(74005);
+        var s = n(96126),
+          i = n(23532),
+          o = n(81289);
         const r = new (class {
           m_mapManagers = new WeakMap();
           GetContextMenuManagerFromWindow(e) {
@@ -84740,13 +84819,13 @@ var CLSTAMP = "10961770";
           return l.Show(), n?.bCreateHidden && l.Hide(), l;
         }
       },
-      88586: (e, t, n) => {
+      96126: (e, t, n) => {
         "use strict";
         n.d(t, { Bk: () => l, HP: () => d, jb: () => a });
         var s = n(34629),
           i = n(89193),
-          o = n(26487),
-          r = (n(3877), n(73561));
+          o = n(89875),
+          r = (n(84160), n(29085));
         const a = 0,
           l = 1;
         class c {
@@ -85016,13 +85095,13 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      63496: (e, t, n) => {
+      23532: (e, t, n) => {
         "use strict";
         n.d(t, { z: () => a });
-        var s = n(88586),
-          i = n(74005),
-          o = n(19596),
-          r = n(31174);
+        var s = n(96126),
+          i = n(81289),
+          o = n(73960),
+          r = n(62770);
         class a {
           m_callbacksMenusChanged = new o.lu();
           m_ActiveMenu;
@@ -85111,7 +85190,7 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      58316: (e, t, n) => {
+      91408: (e, t, n) => {
         "use strict";
         n.d(t, {
           $R: () => i,
@@ -85144,11 +85223,11 @@ var CLSTAMP = "10961770";
           _ = 40,
           g = 46;
       },
-      95863: (e, t, n) => {
+      36803: (e, t, n) => {
         "use strict";
         n.d(t, { MX: () => a });
         var s = n(7470),
-          i = n(26487);
+          i = n(89875);
         class o {
           activeObject;
           instance;
@@ -85244,7 +85323,7 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      21839: (e, t, n) => {
+      83859: (e, t, n) => {
         "use strict";
         n.d(t, {
           gs: () => v,
@@ -85259,19 +85338,19 @@ var CLSTAMP = "10961770";
           k5: () => R,
         });
         var s = n(34629),
-          i = n(73561),
-          o = n(24476),
+          i = n(29085),
+          o = n(40680),
           r = n(89193),
           a = n(63696),
-          l = n(62646),
-          c = n(42603),
-          d = n(74005),
-          h = n(93456),
-          u = n(26487),
-          m = n(959),
-          p = (n(87885), n(21571)),
-          _ = n(85519),
-          g = n(31174);
+          l = n(94458),
+          c = n(56999),
+          d = n(81289),
+          h = n(51332),
+          u = n(89875),
+          m = n(99787),
+          p = (n(74257), n(28703)),
+          _ = n(11883),
+          g = n(62770);
         class C {
           m_fnRender;
           m_rgLoadingLinks = [];
@@ -85313,8 +85392,8 @@ var CLSTAMP = "10961770";
           }
         }
         (0, s.Cg)([_.o], C.prototype, "OnLinkLoad", null);
-        var f = n(97150),
-          S = n(46246);
+        var f = n(93642),
+          S = n(62178);
         const v = (0, a.createContext)({ ownerWindow: window }),
           b = () => (0, a.useContext)(v);
         function I(e) {
@@ -86058,7 +86137,7 @@ var CLSTAMP = "10961770";
         const k = new D();
         window.g_PopupManager = k;
       },
-      51365: (e, t, n) => {
+      66025: (e, t, n) => {
         "use strict";
         n.d(t, { W: () => o });
         n(62540);
@@ -86068,16 +86147,16 @@ var CLSTAMP = "10961770";
           return s.useContext(i);
         }
       },
-      40381: (e, t, n) => {
+      58678: (e, t, n) => {
         "use strict";
         n.d(t, { OJ: () => u, h3: () => p });
         var s,
           i = n(63696),
-          o = n(21839),
-          r = n(51365),
-          a = n(73561),
-          l = n(98434),
-          c = n(17082);
+          o = n(83859),
+          r = n(66025),
+          a = n(29085),
+          l = n(29150),
+          c = n(61758);
         !(function (e) {
           (e[(e.k_EAccountFlagNormalUser = 0)] = "k_EAccountFlagNormalUser"),
             (e[(e.k_EAccountFlagPersonaNameSet = 1)] =
@@ -86438,7 +86517,7 @@ var CLSTAMP = "10961770";
             : null;
         }
       },
-      85057: (e, t, n) => {
+      19109: (e, t, n) => {
         "use strict";
         n.d(t, { Gw: () => a, Lk: () => l, ai: () => r, mm: () => o });
         var s = n(89193);
@@ -86458,14 +86537,14 @@ var CLSTAMP = "10961770";
           return e ? new Date(1e3 * e) : new Date();
         }
       },
-      86474: (e, t, n) => {
+      52830: (e, t, n) => {
         "use strict";
         n.d(t, { RR: () => a, hE: () => l });
         var s = n(63696),
-          i = n(28151),
-          o = n(43590),
-          r = (n(85164), n(21571), n(28326), n(959));
-        n(83957), n(96393);
+          i = n(79695),
+          o = n(41738),
+          r = (n(41824), n(28703), n(22418), n(99787));
+        n(83957), n(37973);
         function a(e) {
           const [t, n] = (0, s.useState)(() => i.O3.GetClanEventModel(e)),
             r = (0, o.m)("usePartnerEventByEventGID");
@@ -86491,23 +86570,23 @@ var CLSTAMP = "10961770";
           return e != n && (t += "_" + n), t;
         }
       },
-      83081: (e, t, n) => {
+      55693: (e, t, n) => {
         "use strict";
         n.d(t, { D: () => v });
         var s = n(34629),
           i = n(37322),
           o = n(58663),
-          r = n(52077),
-          a = n(85519),
+          r = n(63129),
+          a = n(11883),
           l = n(83957),
           c = n.n(l),
-          d = n(32561),
-          h = n(73561),
-          u = n(39610),
-          m = n(18553),
-          p = n(85164),
-          _ = n(99678),
-          g = n(93086);
+          d = n(96757),
+          h = n(29085),
+          u = n(38150),
+          m = n(30565),
+          p = n(41824),
+          _ = n(10770),
+          g = n(82194);
         function C(e) {
           try {
             if (!e || "string" != typeof e) return null;
@@ -86531,7 +86610,7 @@ var CLSTAMP = "10961770";
         function f(e) {
           return e ? e.body.exp : 0;
         }
-        var S = n(49055);
+        var S = n(3771);
         class v {
           m_ServiceTransport;
           m_AnonymousServiceTransport;
@@ -86736,13 +86815,13 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([a.o], v.prototype, "SendNotification", null),
           (0, s.Cg)([a.o], v.prototype, "Send", null);
       },
-      28326: (e, t, n) => {
+      22418: (e, t, n) => {
         "use strict";
         n.d(t, { IU: () => c, by: () => d, sc: () => a });
-        var s = n(21571),
-          i = n(58368),
-          o = n(74005),
-          r = n(30826);
+        var s = n(28703),
+          i = n(58572),
+          o = n(81289),
+          r = n(71998);
         const a = 0,
           l = "061818254b2c99ac49e6626adb128ed1282a392f",
           c = 120;
@@ -86836,16 +86915,16 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      70167: (e, t, n) => {
+      39998: (e, t, n) => {
         "use strict";
         n.d(t, { Vw: () => f });
         var s = n(34629),
           i = n(89193),
-          o = n(73561),
-          r = n(32561),
-          a = n(52077),
-          l = n(28326),
-          c = n(21571);
+          o = n(29085),
+          r = n(96757),
+          a = n(63129),
+          l = n(22418),
+          c = n(28703);
         class d {
           m_nLastUpdated = 0;
           m_mapLanguages = i.sH.map();
@@ -86943,9 +87022,9 @@ var CLSTAMP = "10961770";
             }
           return e;
         }
-        var p = n(35279),
-          _ = n(74005),
-          g = n(19596);
+        var p = n(28003),
+          _ = n(81289),
+          g = n(73960);
         class C {
           m_CMInterface;
           m_mapAppInfo = i.sH.map();
@@ -87226,14 +87305,14 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([i.XI], C.prototype, "OnRichPresenceLocUpdate", null);
         const f = new C();
       },
-      69529: (e, t, n) => {
+      73469: (e, t, n) => {
         "use strict";
         n.d(t, { p: () => d });
         var s = n(34629),
           i = n(62540),
           o = n(63696),
           r = n(41230),
-          a = n(98434),
+          a = n(29150),
           l = n(97931),
           c = n.n(l);
         let d = class extends o.Component {
@@ -87287,13 +87366,13 @@ var CLSTAMP = "10961770";
         };
         d = (0, s.Cg)([r.PA], d);
       },
-      97638: (e, t, n) => {
+      12370: (e, t, n) => {
         "use strict";
         n.d(t, { VS: () => a });
         var s = n(37976),
-          i = n(73561),
-          o = n(28326),
-          r = n(74005);
+          i = n(29085),
+          o = n(22418),
+          r = n(81289);
         class a {
           m_ulGameID;
           constructor(e, t, n) {
@@ -87352,12 +87431,12 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      6516: (e, t, n) => {
+      57688: (e, t, n) => {
         "use strict";
         n.d(t, { g: () => l });
         var s = n(62540),
           i = n(63696),
-          o = n(98434),
+          o = n(29150),
           r = n(85326),
           a = n.n(r);
         function l(e) {
@@ -87550,20 +87629,20 @@ var CLSTAMP = "10961770";
           return Math.max(0, Math.min(1, s)) * (t - n) + e;
         }
       },
-      40036: (e, t, n) => {
+      58272: (e, t, n) => {
         "use strict";
         n.d(t, { q: () => o });
-        var s = n(21571),
-          i = n(73561);
+        var s = n(28703),
+          i = n(29085);
         function o() {
           return s.TS.IN_CLIENT && (0, i.DOG)(s.TS.LAUNCHER_TYPE);
         }
       },
-      72923: (e, t, n) => {
+      76839: (e, t, n) => {
         "use strict";
         n.d(t, { E: () => o, p: () => r });
-        var s = n(71926),
-          i = n(30940);
+        var s = n(76410),
+          i = n(45904);
         function o(e) {
           return (
             s.TS.COMMUNITY_BASE_URL + "linkfilter/?u=" + encodeURIComponent(e)
@@ -87588,15 +87667,15 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      39530: (e, t, n) => {
+      8590: (e, t, n) => {
         "use strict";
         n.d(t, { n: () => d });
         var s = n(34629),
           i = n(83957),
           o = n.n(i),
           r = n(89193),
-          a = n(58135),
-          l = n(21571);
+          a = n(93851),
+          l = n(28703);
         const c = a.Kp.PerMinute;
         class d {
           m_accountid;
@@ -87657,18 +87736,18 @@ var CLSTAMP = "10961770";
         }
         (0, s.Cg)([r.sH], d.prototype, "m_communityData", void 0);
       },
-      10317: (e, t, n) => {
+      48441: (e, t, n) => {
         "use strict";
         n.d(t, { Z: () => m, dV: () => h.d, rO: () => u, tp: () => h.t });
         var s = n(34629),
           i = n(89193),
           o = n(59351),
-          r = n(70167),
-          a = n(959),
-          l = n(73561),
-          c = n(59520),
-          d = n(21571),
-          h = n(58368);
+          r = n(39998),
+          a = n(99787),
+          l = n(29085),
+          c = n(64564),
+          d = n(28703),
+          h = n(58572);
         function u(e) {
           let t = "offline";
           return (
@@ -87961,23 +88040,23 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([i.sH], m.prototype, "m_eGamingDeviceType", void 0),
           (0, s.Cg)([i.sH], m.prototype, "m_bNameInitialized", void 0);
       },
-      64505: (e, t, n) => {
+      16389: (e, t, n) => {
         "use strict";
         n.d(t, { D: () => f });
         var s = n(34629),
           i = n(62540),
           o = n(63696),
           r = n(41230),
-          a = n(959),
-          l = n(73561),
-          c = n(10317),
-          d = n(69529),
-          h = n(56411),
-          u = n(16159),
-          m = n(98434),
+          a = n(99787),
+          l = n(29085),
+          c = n(48441),
+          d = n(73469),
+          h = n(15039),
+          u = n(68611),
+          m = n(29150),
           p = n(88903),
           _ = n.n(p),
-          g = n(21571);
+          g = n(28703);
         function C(e) {
           return (0, i.jsxs)(o.Fragment, {
             children: [
@@ -88187,21 +88266,21 @@ var CLSTAMP = "10961770";
           });
         });
       },
-      56411: (e, t, n) => {
+      15039: (e, t, n) => {
         "use strict";
         n.d(t, { X: () => _ });
         var s = n(62540),
           i = n(63696),
           o = n(41230),
-          r = n(959),
-          a = n(59520),
-          l = n(10317),
-          c = n(98434),
-          d = n(16159),
+          r = n(99787),
+          a = n(64564),
+          l = n(48441),
+          c = n(29150),
+          d = n(68611),
           h = n(17089),
           u = n.n(h),
-          m = n(49916),
-          p = n(73561);
+          m = n(9656),
+          p = n(29085);
         const _ = (0, o.PA)((e) => {
           const { persona: t, className: n, ...o } = e;
           if (!t) return null;
@@ -88277,10 +88356,10 @@ var CLSTAMP = "10961770";
           });
         });
       },
-      58368: (e, t, n) => {
+      58572: (e, t, n) => {
         "use strict";
         n.d(t, { d: () => i, t: () => o });
-        var s = n(21571);
+        var s = n(28703);
         const i = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
         function o(e, t) {
           let n = ".jpg";
@@ -88298,16 +88377,16 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      39267: (e, t, n) => {
+      21189: (e, t, n) => {
         "use strict";
         n.d(t, { Ul: () => _, xz: () => f, i8: () => g });
         var s = n(34629),
           i = n(62540),
           o = n(63696),
           r = n(41230),
-          a = n(10317),
-          l = n(98434),
-          c = n(21571);
+          a = n(48441),
+          l = n(29150),
+          c = n(28703);
         function d(e) {
           const {
               rgSources: t,
@@ -88362,7 +88441,7 @@ var CLSTAMP = "10961770";
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
         var u = n(47814),
           m = n.n(u),
-          p = n(74005);
+          p = n(81289);
         const _ = o.memo(function (e) {
           const {
               strAvatarURL: t,
@@ -88562,12 +88641,12 @@ var CLSTAMP = "10961770";
         };
         f = (0, s.Cg)([r.PA], f);
       },
-      85164: (e, t, n) => {
+      41824: (e, t, n) => {
         "use strict";
         n.d(t, { b: () => r });
         var s = n(37976),
-          i = n(73561),
-          o = n(21571);
+          i = n(29085),
+          o = n(28703);
         class r {
           m_ulSteamID;
           constructor(e = 0, t, n, i) {
@@ -88735,7 +88814,7 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      64567: (e, t, n) => {
+      59587: (e, t, n) => {
         "use strict";
         n.d(t, {
           Ay: () => g,
@@ -88746,13 +88825,13 @@ var CLSTAMP = "10961770";
           k2: () => d,
           wJ: () => u,
         });
-        var s = n(274),
-          i = n(88721),
-          o = n(74005),
-          r = n(30940),
-          a = n(45442),
+        var s = n(16022),
+          i = n(87866),
+          o = n(81289),
+          r = n(45904),
+          a = n(94606),
           l = n(63696),
-          c = n(9977);
+          c = n(293);
         function d(e, t = "", n = null) {
           return g.InstrumentLink(e, t, n);
         }
@@ -88848,7 +88927,7 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      42603: (e, t, n) => {
+      56999: (e, t, n) => {
         "use strict";
         function s(e) {
           return (function (e, t) {
@@ -88877,15 +88956,15 @@ var CLSTAMP = "10961770";
         }
         n.d(t, { Dp: () => o, Fj: () => i, L: () => s });
       },
-      44240: (e, t, n) => {
+      41428: (e, t, n) => {
         "use strict";
         n.d(t, { $: () => c });
         var s = n(34629),
-          i = n(52077),
-          o = n(18553),
+          i = n(63129),
+          o = n(30565),
           r = n(89193),
-          a = n(32561),
-          l = n(41261);
+          a = n(96757),
+          l = n(81922);
         class c {
           constructor() {
             (0, r.Gn)(this);
@@ -89071,11 +89150,11 @@ var CLSTAMP = "10961770";
             void 0,
           );
       },
-      46366: (e, t, n) => {
+      69298: (e, t, n) => {
         "use strict";
         n.d(t, { PN: () => s, eZ: () => o });
         var s,
-          i = n(19596);
+          i = n(73960);
         !(function (e) {
           (e[(e.LaunchGame = 0)] = "LaunchGame"),
             (e[(e.FriendMessage = 1)] = "FriendMessage"),
@@ -89124,20 +89203,20 @@ var CLSTAMP = "10961770";
           }
         })();
       },
-      54479: (e, t, n) => {
+      70808: (e, t, n) => {
         "use strict";
         n.d(t, {
-          BroadcastWatchStore: () => q,
-          fK: () => B,
-          a0: () => O,
-          fO: () => F,
+          BroadcastWatchStore: () => Z,
+          fK: () => N,
+          a0: () => E,
+          fO: () => O,
         });
         var s = n(34629),
           i = n(83957),
           o = n.n(i),
           r = n(89193),
-          a = n(25647),
-          l = n(81631);
+          a = n(12867),
+          l = n(67827);
         function c(e, t, n) {
           return [e, t, n];
         }
@@ -89301,15 +89380,15 @@ var CLSTAMP = "10961770";
           }
           UpdateSoundtrack(e, t) {}
         }
-        var u = n(95980),
-          m = n(59996),
-          p = n(76693),
-          _ = n(21571),
-          g = n(85519),
-          C = n(39292),
-          f = n(34590),
-          S = n(19596),
-          v = n(32561);
+        var u = n(71944),
+          m = n(10854),
+          p = n(66745),
+          _ = n(28703),
+          g = n(11883),
+          C = n(5448),
+          f = n(6370),
+          S = n(73960),
+          v = n(96757);
         class b {
           m_elVideo;
           m_peerConnection = null;
@@ -89615,22 +89694,23 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([r.XI.bound], b.prototype, "CaptureStatsForDisplay", null),
           (0, s.Cg)([g.o], b.prototype, "OnVideoPause", null),
           (0, s.Cg)([g.o], b.prototype, "OnVideoResize", null);
-        var I = n(73561),
-          y = n(97356),
-          w = n(31174),
-          x = n(74005),
-          A = n(959),
-          R = n(96393),
-          M = n(52077),
-          T = n(83081),
-          D = n(42709);
-        class k {
+        var I = n(29085),
+          y = n(30486),
+          w = n(62770),
+          x = n(81289),
+          A = n(99787),
+          R = n(37973),
+          M = n(86540),
+          T = n(63129),
+          D = n(55693),
+          k = n(85417);
+        class P {
           static s_VODStore;
           m_transport = null;
           m_mapBookmarks = new Map();
           SetBookmarkForApp(e, t) {
             this.ValidateBookmarkData(t)
-              ? this.m_mapBookmarks.set(e, D.s3.fromObject(t))
+              ? this.m_mapBookmarks.set(e, k.s3.fromObject(t))
               : this.InitializeBookmarkForApp(e);
           }
           ValidateBookmarkData(e) {
@@ -89652,7 +89732,7 @@ var CLSTAMP = "10961770";
                 hide_from_watch_history: !1,
                 hide_from_library: !1,
               };
-              this.m_mapBookmarks.set(e, new D.s3(t));
+              this.m_mapBookmarks.set(e, new k.s3(t));
             }
           }
           GetBookmarkPlayTimeInSeconds(e) {
@@ -89669,7 +89749,7 @@ var CLSTAMP = "10961770";
               return void console.warn(
                 "CVideoBookmarkStore:SetBookMark no auth token / transport",
               );
-            const o = M.w.Init(D.DB);
+            const o = T.w.Init(k.DB);
             let r = this.m_mapBookmarks.get(e);
             if (r) {
               let a = !1;
@@ -89684,13 +89764,13 @@ var CLSTAMP = "10961770";
                   (r.set_timedtext_track_id(i), (a = !0)),
                 a &&
                   (o.Body().add_bookmarks(r),
-                  D.rs.SetVideoBookmark(this.m_transport, o));
+                  k.rs.SetVideoBookmark(this.m_transport, o));
             }
           }
           static Get() {
             return (
-              k.s_VODStore || ((k.s_VODStore = new k()), k.s_VODStore.Init()),
-              k.s_VODStore
+              P.s_VODStore || ((P.s_VODStore = new P()), P.s_VODStore.Init()),
+              P.s_VODStore
             );
           }
           Init() {
@@ -89711,7 +89791,7 @@ var CLSTAMP = "10961770";
                 n.data.success == v.R &&
                 n.data.webapi_token
               )
-                return void (this.m_transport = new T.D(
+                return void (this.m_transport = new D.D(
                   _.TS.WEBAPI_BASE_URL,
                   n.data.webapi_token,
                 ).GetServiceTransport());
@@ -89725,99 +89805,73 @@ var CLSTAMP = "10961770";
             }
           }
         }
-        class P {
+        class L {
           m_appid;
           constructor(e) {
             this.m_appid = e;
           }
           async SetBookmark(e, t, n, s) {
             _.iA.logged_in &&
-              k
-                .Get()
-                .SendBookMarkedTimeToServer(
-                  this.m_appid,
-                  Math.floor(e),
-                  t,
-                  n,
-                  s,
-                );
+              P.Get().SendBookMarkedTimeToServer(
+                this.m_appid,
+                Math.floor(e),
+                t,
+                n,
+                s,
+              );
           }
           GetBeginPlaytime() {
             return _.iA.logged_in
-              ? k.Get().GetBookmarkPlayTimeInSeconds(this.m_appid)
+              ? P.Get().GetBookmarkPlayTimeInSeconds(this.m_appid)
               : 0;
           }
         }
-        class L {
-          static s_VODStore;
-          m_mapAppToVOD = new Map();
-          GetVODForAppID(e) {
-            return this.m_mapAppToVOD.get(e);
-          }
-          async LoadVODForAppID(e, t) {
-            if (this.m_mapAppToVOD.has(e)) return this.m_mapAppToVOD.get(e);
-            const n = _.TS.STORE_BASE_URL + "video/details/" + e + "/0",
-              s = {};
-            try {
-              let i = await o().get(n, {
-                params: s,
-                withCredentials: !0,
-                cancelToken: t ? t.token : void 0,
-              });
-              if (t && t.token.reason) return;
-              if (
-                i &&
-                200 == i.status &&
-                i.data &&
-                (i.data.success == v.R || "ready" == i.data.success)
-              ) {
-                let t = (0, r.sH)({
-                  appid: e,
-                  video_url: i.data.video_url,
-                  bookmark: i.data.bookmark,
-                });
-                return (
-                  i.data.bookmark
-                    ? k.Get().SetBookmarkForApp(e, i.data.bookmark)
-                    : k.Get().InitializeBookmarkForApp(e),
-                  this.m_mapAppToVOD.set(e, t),
-                  t
-                );
-              }
-            } catch (e) {
-              let t = (0, R.H)(e);
-              console.error(
-                "CVideoOnDemandStore:LoadVODForAppID: Failed " + t.strErrorMsg,
-                t,
-              );
-            }
-          }
-          static Get() {
-            return (
-              L.s_VODStore || ((L.s_VODStore = new L()), L.s_VODStore.Init()),
-              L.s_VODStore
-            );
-          }
-          Init() {}
+        function G(e) {
+          return ["video", "vod", e];
         }
-        var G = n(42603);
-        const F = 7;
-        var B, O;
+        function F(e) {
+          return {
+            queryKey: G(e),
+            queryFn: ({ signal: t }) =>
+              (async function (e, t) {
+                const n = _.TS.STORE_BASE_URL + "video/details/" + e + "/0",
+                  s = await fetch(n, { credentials: "include", signal: t });
+                if (!s.ok) throw new Error(n + " answered " + s.status);
+                const i = await s.json();
+                if (i?.success != v.R && "ready" != i?.success)
+                  throw new Error(
+                    "video/details on " + e + " answered " + i?.success,
+                  );
+                i.bookmark
+                  ? P.Get().SetBookmarkForApp(e, i.bookmark)
+                  : P.Get().InitializeBookmarkForApp(e);
+                return {
+                  appid: e,
+                  video_url: i.video_url,
+                  bookmark: i.bookmark,
+                };
+              })(e, t),
+            retry: !1,
+          };
+        }
+        var B = n(56999);
+        const O = 7;
+        var N, E;
         !(function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Unlocking = 1)] = "Unlocking"),
             (e[(e.Loading = 2)] = "Loading"),
             (e[(e.Ready = 3)] = "Ready"),
             (e[(e.Error = 4)] = "Error");
-        })(B || (B = {}));
-        class N {
+        })(N || (N = {}));
+        class j {
           m_rtUnlockTime = 0;
           m_schUnlockTimeout = new S.LU();
           m_broadcast;
           m_video;
           UnlockH264(e, t) {
             this.BCanUnlockH264()
-              ? (e.SetState(B.Unlocking, ""),
+              ? (e.SetState(N.Unlocking, ""),
                 console.log("Unlocking H.264 for broadcast video playback"),
                 this.RequestUnlockH264(),
                 (this.m_broadcast = e),
@@ -89826,20 +89880,20 @@ var CLSTAMP = "10961770";
                 this.m_schUnlockTimeout.Schedule(100, () =>
                   this.CheckUnlockState(),
                 ))
-              : e.SetState(B.Error, (0, A.we)("#BroadcastWatch_MinBrowser"));
+              : e.SetState(N.Error, (0, A.we)("#BroadcastWatch_MinBrowser"));
           }
           BCanUnlockH264() {
-            return (0, G.Dp)("RemotePlay.UnlockH264")
+            return (0, B.Dp)("RemotePlay.UnlockH264")
               ? (console.log("Client supports direct H.264 unlock"), !0)
-              : (0, G.Dp)("BrowserView.PostMessageToParent")
+              : (0, B.Dp)("BrowserView.PostMessageToParent")
                 ? (console.log("Client supports browserview H.264 unlock"), !0)
                 : (console.log("Client does not support H.264 unlock"), !1);
           }
           RequestUnlockH264() {
-            (0, G.Dp)("RemotePlay.UnlockH264")
+            (0, B.Dp)("RemotePlay.UnlockH264")
               ? (console.log("Requesting direct H.264 unlock"),
                 SteamClient.RemotePlay.UnlockH264())
-              : (0, G.Dp)("BrowserView.PostMessageToParent")
+              : (0, B.Dp)("BrowserView.PostMessageToParent")
                 ? (console.log("Requesting browserview unlock"),
                   SteamClient.BrowserView.PostMessageToParent(
                     "UnlockH264Request",
@@ -89850,11 +89904,11 @@ var CLSTAMP = "10961770";
                   );
           }
           CheckUnlockState() {
-            if (this.m_broadcast.m_eWatchState != B.Unlocking) return;
+            if (this.m_broadcast.m_eWatchState != N.Unlocking) return;
             if ((0, u.Mc)() || (0, u.aM)())
               return (
                 console.log("Unlocking H.264 successful"),
-                this.m_broadcast.SetState(B.None, ""),
+                this.m_broadcast.SetState(N.None, ""),
                 void this.m_video.Restart()
               );
             Date.now() - this.m_rtUnlockTime > 6e3
@@ -89862,7 +89916,7 @@ var CLSTAMP = "10961770";
                   "Unlocking H.264 timed out (Steam client or servers offline?)",
                 ),
                 this.m_broadcast.SetState(
-                  B.Error,
+                  N.Error,
                   (0, A.we)("#BroadcastWatch_MinBrowser"),
                 ))
               : this.m_schUnlockTimeout.Schedule(100, () =>
@@ -89870,7 +89924,7 @@ var CLSTAMP = "10961770";
                 );
           }
         }
-        class E {
+        class V {
           constructor() {
             (0, r.Gn)(this);
           }
@@ -89880,7 +89934,7 @@ var CLSTAMP = "10961770";
           m_strCDNAuthUrlParameters = void 0;
           m_bWebRTC = !1;
           m_data;
-          m_eWatchState = B.None;
+          m_eWatchState = N.None;
           m_strStateDescription = "";
           m_rgVideos = [];
           m_schManifestTimeout = new S.LU();
@@ -89888,19 +89942,19 @@ var CLSTAMP = "10961770";
           SetState(e, t = "") {
             (this.m_eWatchState = e),
               (this.m_strStateDescription = t),
-              e == B.Error && console.log(this.m_strStateDescription);
+              e == N.Error && console.log(this.m_strStateDescription);
           }
         }
-        (0, s.Cg)([r.sH], E.prototype, "m_ulBroadcastID", void 0),
-          (0, s.Cg)([r.sH], E.prototype, "m_eWatchState", void 0),
-          (0, s.Cg)([r.sH], E.prototype, "m_strStateDescription", void 0),
-          (0, s.Cg)([r.XI], E.prototype, "SetState", null);
-        class j {
+        (0, s.Cg)([r.sH], V.prototype, "m_ulBroadcastID", void 0),
+          (0, s.Cg)([r.sH], V.prototype, "m_eWatchState", void 0),
+          (0, s.Cg)([r.sH], V.prototype, "m_strStateDescription", void 0),
+          (0, s.Cg)([r.XI], V.prototype, "SetState", null);
+        class U {
           m_steamIDBroadcast = "";
           m_bInitialized = !1;
           m_strTitle = "";
-          m_strAppId = "" + F;
-          m_nAppID = F;
+          m_strAppId = "" + O;
+          m_nAppID = O;
           m_strAppTitle = "";
           m_strThumbnailUrl = "";
           m_nViewerCount = 0;
@@ -89911,39 +89965,39 @@ var CLSTAMP = "10961770";
             (0, r.Gn)(this), (this.m_steamIDBroadcast = e);
           }
         }
-        (0, s.Cg)([r.sH], j.prototype, "m_bInitialized", void 0),
-          (0, s.Cg)([r.sH], j.prototype, "m_strTitle", void 0),
-          (0, s.Cg)([r.sH], j.prototype, "m_strAppId", void 0),
-          (0, s.Cg)([r.sH], j.prototype, "m_nAppID", void 0),
-          (0, s.Cg)([r.sH], j.prototype, "m_strAppTitle", void 0),
-          (0, s.Cg)([r.sH], j.prototype, "m_strThumbnailUrl", void 0),
-          (0, s.Cg)([r.sH], j.prototype, "m_nViewerCount", void 0),
-          (0, s.Cg)([r.sH], j.prototype, "m_bIsOnline", void 0);
-        class V {
+        (0, s.Cg)([r.sH], U.prototype, "m_bInitialized", void 0),
+          (0, s.Cg)([r.sH], U.prototype, "m_strTitle", void 0),
+          (0, s.Cg)([r.sH], U.prototype, "m_strAppId", void 0),
+          (0, s.Cg)([r.sH], U.prototype, "m_nAppID", void 0),
+          (0, s.Cg)([r.sH], U.prototype, "m_strAppTitle", void 0),
+          (0, s.Cg)([r.sH], U.prototype, "m_strThumbnailUrl", void 0),
+          (0, s.Cg)([r.sH], U.prototype, "m_nViewerCount", void 0),
+          (0, s.Cg)([r.sH], U.prototype, "m_bIsOnline", void 0);
+        class H {
           constructor() {
             (0, r.Gn)(this);
           }
-          m_eWatchState = B.None;
+          m_eWatchState = N.None;
           m_strStateDescription = "";
           m_rgVideos = [];
           SetState(e, t = "") {
             (this.m_eWatchState = e),
               (this.m_strStateDescription = t),
-              e == B.Error && console.log(this.m_strStateDescription);
+              e == N.Error && console.log(this.m_strStateDescription);
           }
         }
-        (0, s.Cg)([r.sH], V.prototype, "m_eWatchState", void 0),
-          (0, s.Cg)([r.sH], V.prototype, "m_strStateDescription", void 0),
-          (0, s.Cg)([r.XI], V.prototype, "SetState", null);
-        class U extends V {
+        (0, s.Cg)([r.sH], H.prototype, "m_eWatchState", void 0),
+          (0, s.Cg)([r.sH], H.prototype, "m_strStateDescription", void 0),
+          (0, s.Cg)([r.XI], H.prototype, "SetState", null);
+        class W extends H {
           m_clipID;
           m_data;
         }
-        class H extends V {
+        class z extends H {
           m_nAppIDVOD;
           m_manifestURL;
         }
-        class W {
+        class q {
           m_mapBroadcasts = new Map();
           m_mapClips = new Map();
           m_mapVODs = new Map();
@@ -89957,15 +90011,15 @@ var CLSTAMP = "10961770";
           GetBroadcastState(e) {
             if (e.IsBroadcastClip()) {
               let t = this.m_mapClips.get(e.GetBroadcastClipID());
-              return t ? t.m_eWatchState : B.None;
+              return t ? t.m_eWatchState : N.None;
             }
             if (e.IsBroadcastVOD()) {
               const t = this.m_mapVODs.get(e.GetBroadcastAppIDVOD());
-              return t ? t.m_eWatchState : B.None;
+              return t ? t.m_eWatchState : N.None;
             }
             {
               let t = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
-              return t ? t.m_eWatchState : B.None;
+              return t ? t.m_eWatchState : N.None;
             }
           }
           GetBroadcastStateDescription(e) {
@@ -89985,40 +90039,40 @@ var CLSTAMP = "10961770";
           CreateBroadcastVideo(e, t, n, s) {
             let i = this.GetOrCreateBroadcast(t),
               { nVolume: o, bMuted: r } = this.m_broadcastSettings,
-              a = new z(e, o, r, n);
+              a = new K(e, o, r, n);
             if (
               (a.SetBroadcastSteamID(t),
               i.m_rgVideos.push(a),
               (i.m_bWebRTC = s),
               !(0, u.Mc)() && !(0, u.aM)())
             ) {
-              return new N().UnlockH264(i, a), a;
+              return new j().UnlockH264(i, a), a;
             }
             return a;
           }
           CreateClipVideo(e, t, n) {
             let s = this.GetOrCreateClip(t),
               { nVolume: i, bMuted: o } = this.m_broadcastSettings,
-              r = new z(e, i, o, n);
+              r = new K(e, i, o, n);
             if (
               (r.SetBroadcastClipID(t),
               s.m_rgVideos.push(r),
               !(0, u.Mc)() && !(0, u.aM)())
             ) {
-              return new N().UnlockH264(s, r), r;
+              return new j().UnlockH264(s, r), r;
             }
             return r;
           }
           CreateVODVideo(e, t, n) {
             let s = this.GetOrCreateVOD(t),
               { nVolume: i, bMuted: o } = this.m_broadcastSettings,
-              r = new z(e, i, o, n);
+              r = new K(e, i, o, n);
             if (
               (r.SetBroadcastAppIDVOD(t),
               s.m_rgVideos.push(r),
               !(0, u.Mc)() && !(0, u.aM)())
             ) {
-              return new N().UnlockH264(s, r), r;
+              return new j().UnlockH264(s, r), r;
             }
             return r;
           }
@@ -90028,24 +90082,24 @@ var CLSTAMP = "10961770";
               let t = this.m_mapClips.get(e.GetBroadcastClipID());
               if (!t) return;
               this.SetActiveVideo(e),
-                t.m_eWatchState == B.None
+                t.m_eWatchState == N.None
                   ? this.GetClipManifest(t, e.GetWatchLocation())
-                  : t.m_eWatchState == B.Ready && e.StartClip(t);
+                  : t.m_eWatchState == N.Ready && e.StartClip(t);
             } else if (e.IsBroadcastVOD()) {
               console.log(`Starting VOD for ${e.GetBroadcastAppIDVOD()}`);
               let t = this.m_mapVODs.get(e.GetBroadcastAppIDVOD());
               if (!t) return;
               this.SetActiveVideo(e),
-                t.m_eWatchState == B.None
+                t.m_eWatchState == N.None
                   ? this.GetVODManifest(t, e.GetWatchLocation())
-                  : t.m_eWatchState == B.Ready && e.StartVOD(t);
+                  : t.m_eWatchState == N.Ready && e.StartVOD(t);
             } else {
               let t = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
               if (!t) return;
               this.SetActiveVideo(e),
-                t.m_eWatchState == B.None
+                t.m_eWatchState == N.None
                   ? this.GetBroadcastManifest(t, e.GetWatchLocation())
-                  : t.m_eWatchState == B.Ready && e.StartBroadcast(t);
+                  : t.m_eWatchState == N.Ready && e.StartBroadcast(t);
             }
           }
           SetActiveVideo(e) {
@@ -90104,10 +90158,10 @@ var CLSTAMP = "10961770";
           }
           GetOrCreateBroadcastInfo(e) {
             if (!e) {
-              return new j("");
+              return new U("");
             }
             if (!this.m_broadcastInfos[e]) {
-              const t = (0, r.sH)(new j(e));
+              const t = (0, r.sH)(new U(e));
               this.m_broadcastInfos[e] = t;
             }
             return this.m_broadcastInfos[e];
@@ -90116,9 +90170,9 @@ var CLSTAMP = "10961770";
             let t = this.m_mapBroadcasts.get(e);
             return (
               t ||
-              ((t = new E()),
+              ((t = new V()),
               (t.m_steamIDBroadcast = e),
-              (t.m_eWatchState = B.None),
+              (t.m_eWatchState = N.None),
               this.m_mapBroadcasts.set(e, t),
               t)
             );
@@ -90142,9 +90196,9 @@ var CLSTAMP = "10961770";
             let t = this.m_mapClips.get(e);
             return (
               t ||
-              ((t = new U()),
+              ((t = new W()),
               (t.m_clipID = e),
-              (t.m_eWatchState = B.None),
+              (t.m_eWatchState = N.None),
               this.m_mapClips.set(e, t),
               t)
             );
@@ -90153,9 +90207,9 @@ var CLSTAMP = "10961770";
             let t = this.m_mapVODs.get(e);
             return (
               t ||
-              ((t = new H()),
+              ((t = new z()),
               (t.m_nAppIDVOD = e),
-              (t.m_eWatchState = B.None),
+              (t.m_eWatchState = N.None),
               this.m_mapVODs.set(e, t),
               t)
             );
@@ -90211,7 +90265,7 @@ var CLSTAMP = "10961770";
             );
           }
           async GetBroadcastManifest(e, t, n = Date.now()) {
-            e.SetState(B.Loading, "");
+            e.SetState(N.Loading, "");
             let s = {
                 steamid: e.m_steamIDBroadcast,
                 broadcastid: 0,
@@ -90235,14 +90289,14 @@ var CLSTAMP = "10961770";
             }
             if (!i || 200 != i.status)
               return void e.SetState(
-                B.Error,
+                N.Error,
                 (0, A.we)("#BroadcastWatch_RequestFailed"),
               );
             let r = i.data;
             r.viewertoken && this.SetViewerToken(r.viewertoken);
             let a = r.success;
             if ("ready" == a)
-              e.SetState(B.Ready),
+              e.SetState(N.Ready),
                 (e.m_ulBroadcastID = r.broadcastid),
                 (e.m_ulViewerToken = this.m_broadcastSettings.ulViewerToken),
                 (e.m_strCDNAuthUrlParameters = r.cdn_auth_url_parameters),
@@ -90257,13 +90311,13 @@ var CLSTAMP = "10961770";
                 }, 3e4 * Math.random());
             else if ("waiting" == a) {
               e.SetState(
-                B.Loading,
+                N.Loading,
                 (0, A.we)("#BroadcastWatch_WaitingForResponse"),
               );
               let s = Date.now() - n;
               if (s > 6e4)
                 return void e.SetState(
-                  B.Error,
+                  N.Error,
                   (0, A.we)("#BroadcastWatch_NotAvailable"),
                 );
               let i = s > 3e4 ? r.retry : 5e3;
@@ -90273,7 +90327,7 @@ var CLSTAMP = "10961770";
             } else
               "waiting_for_start" == a
                 ? (e.SetState(
-                    B.Loading,
+                    N.Loading,
                     (0, A.we)("#BroadcastWatch_WaitingForStart"),
                   ),
                   e.m_schManifestTimeout.Schedule(r.retry, () =>
@@ -90281,7 +90335,7 @@ var CLSTAMP = "10961770";
                   ))
                 : "waiting_for_reconnect" == a
                   ? (e.SetState(
-                      B.Loading,
+                      N.Loading,
                       (0, A.we)("#BroadcastWatch_WaitingForReconnect"),
                     ),
                     e.m_schManifestTimeout.Schedule(r.retry, () =>
@@ -90289,46 +90343,46 @@ var CLSTAMP = "10961770";
                     ))
                   : "end" == a
                     ? e.SetState(
-                        B.Error,
+                        N.Error,
                         (0, A.we)("#BroadcastWatch_NotAvailable"),
                       )
                     : "too_many_broadcasts" == a
                       ? e.SetState(
-                          B.Error,
+                          N.Error,
                           (0, A.we)("#BroadcastWatch_TooManyBroadcasts"),
                         )
                       : "system_not_supported" == a
                         ? e.SetState(
-                            B.Error,
+                            N.Error,
                             (0, A.we)("#BroadcastWatch_SystemNotSupported"),
                           )
                         : "user_restricted" == a
                           ? e.SetState(
-                              B.Error,
+                              N.Error,
                               (0, A.we)("#BroadcastWatch_UserRestricted"),
                             )
                           : "poor_upload_quality" == a
                             ? e.SetState(
-                                B.Error,
+                                N.Error,
                                 (0, A.we)("#BroadcastWatch_PoorUploadQuality"),
                               )
                             : "request_failed" == a
                               ? e.SetState(
-                                  B.Error,
+                                  N.Error,
                                   (0, A.we)("#BroadcastWatch_RequestFailed"),
                                 )
                               : "too_many_viewers" == a
                                 ? e.SetState(
-                                    B.Error,
+                                    N.Error,
                                     (0, A.we)("#BroadcastWatch_TooManyViewers"),
                                   )
                                 : e.SetState(
-                                    B.Error,
+                                    N.Error,
                                     (0, A.we)("#BroadcastWatch_NotAvailable"),
                                   );
           }
           async GetClipManifest(e, t) {
-            e.SetState(B.Loading, "");
+            e.SetState(N.Loading, "");
             let n = {
                 clipid: e.m_clipID,
                 watchlocation: t,
@@ -90345,22 +90399,28 @@ var CLSTAMP = "10961770";
             }
             if (!s || 200 != s.status)
               return void e.SetState(
-                B.Error,
+                N.Error,
                 (0, A.we)("#BroadcastWatch_RequestFailed"),
               );
             let i = s.data;
             i.success == v.R
-              ? (e.SetState(B.Ready), (e.m_data = i), this.LoadClip(e))
-              : e.SetState(B.Error, (0, A.we)("#BroadcastWatch_RequestFailed"));
+              ? (e.SetState(N.Ready), (e.m_data = i), this.LoadClip(e))
+              : e.SetState(N.Error, (0, A.we)("#BroadcastWatch_RequestFailed"));
           }
           async GetVODManifest(e, t) {
-            e.SetState(B.Loading, "");
-            let n = await L.Get().LoadVODForAppID(e.m_nAppIDVOD);
+            e.SetState(N.Loading, "");
+            let n = await M.L.fetchQuery(F(e.m_nAppIDVOD)).catch((t) => {
+              console.error(
+                "BroadcastWatchStore:GetVODManifest: Failed to load VOD " +
+                  e.m_nAppIDVOD,
+                t,
+              );
+            });
             n
-              ? (e.SetState(B.Ready),
+              ? (e.SetState(N.Ready),
                 (e.m_manifestURL = n.video_url),
                 this.LoadVOD(e))
-              : e.SetState(B.Error, (0, A.we)("#BroadcastWatch_RequestFailed"));
+              : e.SetState(N.Error, (0, A.we)("#BroadcastWatch_RequestFailed"));
           }
           async HeartbeatBroadcast(e) {
             let t = new FormData();
@@ -90391,7 +90451,7 @@ var CLSTAMP = "10961770";
             e.Stop();
             let s = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
             s &&
-              s.m_eWatchState != B.Loading &&
+              s.m_eWatchState != N.Loading &&
               (s.m_bWebRTC && t && (s.m_bWebRTC = !1),
               n == m.N_.StreamGone
                 ? this.DelayedGetBroadcastManifest(s, e.GetWatchLocation())
@@ -90448,12 +90508,12 @@ var CLSTAMP = "10961770";
               this.SaveBroadcastSettings());
           }
         }
-        (0, s.Cg)([r.sH], W.prototype, "m_mapBroadcasts", void 0),
+        (0, s.Cg)([r.sH], q.prototype, "m_mapBroadcasts", void 0),
           (function (e) {
             (e[(e.Timeline = 1)] = "Timeline"),
               (e[(e.Minimap = 2)] = "Minimap");
-          })(O || (O = {}));
-        class z {
+          })(E || (E = {}));
+        class K {
           m_elVideo;
           m_player = null;
           m_listeners = new S.Ji();
@@ -90588,10 +90648,10 @@ var CLSTAMP = "10961770";
             this.m_bStartWithSubtitles = e;
           }
           GetBroadcastState() {
-            return q.GetBroadcastState(this);
+            return Z.GetBroadcastState(this);
           }
           GetBroadcastStateDescription() {
-            return q.GetBroadcastStateDescription(this);
+            return Z.GetBroadcastStateDescription(this);
           }
           SetOnVideoCallback(e) {
             this.m_fnOnVideoEnd = e;
@@ -90697,7 +90757,7 @@ var CLSTAMP = "10961770";
                 e.m_ulBroadcastID,
                 e.m_ulViewerToken,
               ),
-              (this.m_BroadcastInfo = q.StartInfo(this.m_steamIDBroadcast));
+              (this.m_BroadcastInfo = Z.StartInfo(this.m_steamIDBroadcast));
           }
           StartClip(e) {
             this.InitPlayer();
@@ -90715,7 +90775,7 @@ var CLSTAMP = "10961770";
               (this.m_player = t),
               _.iA.logged_in &&
                 e.m_nAppIDVOD &&
-                t.SetBookmarkAdapter(new P(e.m_nAppIDVOD)),
+                t.SetBookmarkAdapter(new L(e.m_nAppIDVOD)),
               e.m_manifestURL && t.PlayMPD(e.m_manifestURL),
               this.SetVolume(this.m_nVolume),
               this.m_player?.SetMuted(this.m_bMuted);
@@ -90723,7 +90783,7 @@ var CLSTAMP = "10961770";
           Stop() {
             this.m_listeners.Unregister(),
               this.m_BroadcastInfo &&
-                (q.StopInfo(this.m_BroadcastInfo),
+                (Z.StopInfo(this.m_BroadcastInfo),
                 (this.m_BroadcastInfo = null)),
               (this.m_gameDataParser = null),
               this.m_player && (this.m_player.Close(), (this.m_player = null));
@@ -90735,14 +90795,14 @@ var CLSTAMP = "10961770";
           }
           Play() {
             const e = this.GetBroadcastState();
-            if (e == B.None || this.IsBroadcastClip()) q.StartVideo(this);
-            else if (e == B.Ready)
-              if ((q.SetActiveVideo(this), this.m_player)) this.m_player.Play();
+            if (e == N.None || this.IsBroadcastClip()) Z.StartVideo(this);
+            else if (e == N.Ready)
+              if ((Z.SetActiveVideo(this), this.m_player)) this.m_player.Play();
               else if (this.IsBroadcastVOD()) {
-                const e = q.GetBroadcastVOD(this.m_nBroadcastAppIDVOD);
+                const e = Z.GetBroadcastVOD(this.m_nBroadcastAppIDVOD);
                 e && this.StartVOD(e);
               } else {
-                const e = q.GetBroadcast(this.m_steamIDBroadcast);
+                const e = Z.GetBroadcast(this.m_steamIDBroadcast);
                 e && this.StartBroadcast(e);
               }
           }
@@ -90775,12 +90835,12 @@ var CLSTAMP = "10961770";
             this.m_player &&
               (this.m_player.SetVolume(e),
               (this.m_nVolume = this.m_player.GetVolume())),
-              q.SaveVolumeChange(e, this.m_bMuted);
+              Z.SaveVolumeChange(e, this.m_bMuted);
           }
           SetMute(e) {
             this.m_player && this.m_player.SetMuted(e),
               (this.m_bMuted = e),
-              q.SaveVolumeChange(this.m_nVolume, e);
+              Z.SaveVolumeChange(this.m_nVolume, e);
           }
           IsMuted() {
             return this.m_bMuted;
@@ -90867,13 +90927,13 @@ var CLSTAMP = "10961770";
           }
           OnDownloadFailed(e) {
             let t = e.detail || m.N_.Invalid;
-            q.BroadcastDownloadFailed(this, !0, t);
+            Z.BroadcastDownloadFailed(this, !0, t);
           }
           OnWebRTCRetry() {
-            q.BroadcastDownloadFailed(this, !1);
+            Z.BroadcastDownloadFailed(this, !1);
           }
           OnWebRTCFailed() {
-            q.BroadcastDownloadFailed(this, !0);
+            Z.BroadcastDownloadFailed(this, !0);
           }
           OnUserInputNeeded() {
             this.m_bUserInputNeeded = !0;
@@ -90899,7 +90959,7 @@ var CLSTAMP = "10961770";
             let n = 0,
               s = 0;
             return (
-              t == O.Timeline
+              t == E.Timeline
                 ? ((s = this.m_nVideoEndPos),
                   (n = s - this.m_nTimelineDuration))
                 : ((n = 0), (s = 0)),
@@ -90925,36 +90985,36 @@ var CLSTAMP = "10961770";
             return this.m_rgSegments.length > 0;
           }
         }
-        (0, s.Cg)([r.sH], z.prototype, "m_player", void 0),
-          (0, s.Cg)([r.sH], z.prototype, "m_bPaused", void 0),
-          (0, s.Cg)([r.sH], z.prototype, "m_nPlaybackTime", void 0),
-          (0, s.Cg)([r.sH], z.prototype, "m_bBuffering", void 0),
-          (0, s.Cg)([r.sH], z.prototype, "m_bOnLiveEdge", void 0),
-          (0, s.Cg)([r.sH], z.prototype, "m_nVolume", void 0),
-          (0, s.Cg)([r.sH], z.prototype, "m_bMuted", void 0),
-          (0, s.Cg)([r.sH], z.prototype, "m_bUserInputNeeded", void 0),
-          (0, s.Cg)([r.sH], z.prototype, "m_bIsReplay", void 0),
-          (0, s.Cg)([r.sH], z.prototype, "m_nTimelineDuration", void 0),
-          (0, s.Cg)([r.sH], z.prototype, "m_nVideoStartPos", void 0),
-          (0, s.Cg)([r.sH], z.prototype, "m_nVideoEndPos", void 0),
-          (0, s.Cg)([r.sH], z.prototype, "m_editorStartTime", void 0),
-          (0, s.Cg)([r.sH], z.prototype, "m_editorEndTime", void 0),
-          (0, s.Cg)([r.XI.bound], z.prototype, "StartBroadcast", null),
-          (0, s.Cg)([r.XI.bound], z.prototype, "StartClip", null),
-          (0, s.Cg)([r.XI.bound], z.prototype, "StartVOD", null),
-          (0, s.Cg)([g.o], z.prototype, "OnVideoPlaying", null),
-          (0, s.Cg)([g.o], z.prototype, "OnVideoPause", null),
-          (0, s.Cg)([r.XI.bound], z.prototype, "OnVideoTimeUpdate", null),
-          (0, s.Cg)([g.o], z.prototype, "OnVolumeUpdated", null),
-          (0, s.Cg)([r.XI.bound], z.prototype, "OnGameDataUpdate", null),
-          (0, s.Cg)([g.o], z.prototype, "OnDownloadFailed", null),
-          (0, s.Cg)([g.o], z.prototype, "OnWebRTCRetry", null),
-          (0, s.Cg)([g.o], z.prototype, "OnWebRTCFailed", null),
-          (0, s.Cg)([g.o], z.prototype, "OnUserInputNeeded", null);
-        const q = new W();
-        window.uiBroadcastWatchStore = q;
+        (0, s.Cg)([r.sH], K.prototype, "m_player", void 0),
+          (0, s.Cg)([r.sH], K.prototype, "m_bPaused", void 0),
+          (0, s.Cg)([r.sH], K.prototype, "m_nPlaybackTime", void 0),
+          (0, s.Cg)([r.sH], K.prototype, "m_bBuffering", void 0),
+          (0, s.Cg)([r.sH], K.prototype, "m_bOnLiveEdge", void 0),
+          (0, s.Cg)([r.sH], K.prototype, "m_nVolume", void 0),
+          (0, s.Cg)([r.sH], K.prototype, "m_bMuted", void 0),
+          (0, s.Cg)([r.sH], K.prototype, "m_bUserInputNeeded", void 0),
+          (0, s.Cg)([r.sH], K.prototype, "m_bIsReplay", void 0),
+          (0, s.Cg)([r.sH], K.prototype, "m_nTimelineDuration", void 0),
+          (0, s.Cg)([r.sH], K.prototype, "m_nVideoStartPos", void 0),
+          (0, s.Cg)([r.sH], K.prototype, "m_nVideoEndPos", void 0),
+          (0, s.Cg)([r.sH], K.prototype, "m_editorStartTime", void 0),
+          (0, s.Cg)([r.sH], K.prototype, "m_editorEndTime", void 0),
+          (0, s.Cg)([r.XI.bound], K.prototype, "StartBroadcast", null),
+          (0, s.Cg)([r.XI.bound], K.prototype, "StartClip", null),
+          (0, s.Cg)([r.XI.bound], K.prototype, "StartVOD", null),
+          (0, s.Cg)([g.o], K.prototype, "OnVideoPlaying", null),
+          (0, s.Cg)([g.o], K.prototype, "OnVideoPause", null),
+          (0, s.Cg)([r.XI.bound], K.prototype, "OnVideoTimeUpdate", null),
+          (0, s.Cg)([g.o], K.prototype, "OnVolumeUpdated", null),
+          (0, s.Cg)([r.XI.bound], K.prototype, "OnGameDataUpdate", null),
+          (0, s.Cg)([g.o], K.prototype, "OnDownloadFailed", null),
+          (0, s.Cg)([g.o], K.prototype, "OnWebRTCRetry", null),
+          (0, s.Cg)([g.o], K.prototype, "OnWebRTCFailed", null),
+          (0, s.Cg)([g.o], K.prototype, "OnUserInputNeeded", null);
+        const Z = new q();
+        window.uiBroadcastWatchStore = Z;
       },
-      63840: (e, t, n) => {
+      2276: (e, t, n) => {
         "use strict";
         n.d(t, {
           $D: () => h,
@@ -90969,10 +91029,10 @@ var CLSTAMP = "10961770";
           i = n(83957),
           o = n.n(i),
           r = n(89193),
-          a = n(32561),
-          l = n(74005),
-          c = n(959),
-          d = n(21571);
+          a = n(96757),
+          l = n(81289),
+          c = n(99787),
+          d = n(28703);
         const h = 0,
           u = 1,
           m = 3,
@@ -91445,12 +91505,12 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([r.XI], f.prototype, "ClearFileUploadError", null),
           (0, s.Cg)([r.XI], f.prototype, "Reset", null);
       },
-      42981: (e, t, n) => {
+      73385: (e, t, n) => {
         "use strict";
         n.d(t, { pN: () => l });
         var s = n(34629),
           i = n(89193),
-          o = n(38186);
+          o = n(558);
         n(63696);
         const r = "ː",
           a = 604800;
@@ -91716,7 +91776,7 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([i.sH], l.prototype, "m_rtLastStickerOrEffect", void 0),
           (0, s.Cg)([i.XI], l.prototype, "TrackEmoticonUsage", null);
       },
-      48983: (e, t, n) => {
+      35691: (e, t, n) => {
         "use strict";
         n.d(t, { T: () => o, V: () => i });
         let s = null;
@@ -91734,7 +91794,7 @@ var CLSTAMP = "10961770";
               null);
         }
       },
-      28151: (e, t, n) => {
+      79695: (e, t, n) => {
         "use strict";
         n.d(t, { O3: () => ae });
         var s = n(34629),
@@ -91742,8 +91802,8 @@ var CLSTAMP = "10961770";
           o = n.n(i),
           r = n(89193),
           a = n(59351),
-          l = n(73561),
-          c = n(32561);
+          l = n(29085),
+          c = n(96757);
         const d = [
             "p",
             "h1",
@@ -91826,8 +91886,8 @@ var CLSTAMP = "10961770";
           const s = "\\[\\/?(?:" + m(t) + "){1,}.*?]";
           return e.replace(new RegExp(s, "gi"), n);
         }
-        var _ = n(28540),
-          g = n(7757);
+        var _ = n(78104),
+          g = n(9329);
         const C = {
           bBroadcastEnabled: !1,
           broadcastChatSetting: "hide",
@@ -91837,18 +91897,18 @@ var CLSTAMP = "10961770";
           localized_broadcast_right_image: new Array(l.bP9),
           broadcast_whitelist: [],
         };
-        var f = n(85164),
-          S = n(51104),
-          v = n(49137),
-          b = n(12495),
-          I = n(85057),
-          y = n(74005),
-          w = n(959),
-          x = n(76693),
-          A = n(91960);
-        var R = n(93086),
-          M = n(58135),
-          T = n(85519);
+        var f = n(41824),
+          S = n(10310),
+          v = n(22957),
+          b = n(91723),
+          I = n(19109),
+          y = n(81289),
+          w = n(99787),
+          x = n(66745),
+          A = n(15388);
+        var R = n(82194),
+          M = n(93851),
+          T = n(11883);
         (0, s.Cg)(
           [T.o],
           class {
@@ -91873,7 +91933,7 @@ var CLSTAMP = "10961770";
         !(function (e) {
           (e.Random = "r"), (e.Personalized = "p");
         })(k || (k = {}));
-        var P = n(71926);
+        var P = n(76410);
         l.u0,
           l.zeJ,
           l.Fa4,
@@ -93209,12 +93269,12 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([r.sH], X.prototype, "video_preview_type", void 0),
           (0, s.Cg)([r.sH], X.prototype, "video_preview_id", void 0),
           (0, s.Cg)([r.sH], X.prototype, "m_overrideCurrentDay", void 0);
-        var Q = n(31174),
-          $ = n(96393),
-          Y = n(19596),
-          J = n(21571),
-          ee = n(87885),
-          te = n(86474);
+        var Q = n(62770),
+          $ = n(37973),
+          Y = n(73960),
+          J = n(28703),
+          ee = n(74257),
+          te = n(52830);
         function ne(e) {
           return (
             (null == e.gid || null == e.gid || "0" == e.gid) &&
@@ -93225,7 +93285,7 @@ var CLSTAMP = "10961770";
         function se(e) {
           return ne(e) ? z + e.announcement_body?.gid : e.gid;
         }
-        var ie = n(43360);
+        var ie = n(24052);
         class oe {
           appid;
           date;
@@ -94369,15 +94429,15 @@ var CLSTAMP = "10961770";
         const le = new re(!0);
         (0, ie.V)("g_PartnerEventSummaryStore", le);
       },
-      248: (e, t, n) => {
+      50244: (e, t, n) => {
         "use strict";
         n.d(t, { y: () => u });
         var s = n(34629),
-          i = n(52077),
-          o = n(58952),
-          r = n(92246),
-          a = n(58135),
-          l = n(85519);
+          i = n(63129),
+          o = n(7928),
+          r = n(33154),
+          a = n(93851),
+          l = n(11883);
         const c = new r.wd("ReactUsageReporting").Debug,
           d = 1e3 * a.Kp.PerMinute;
         class h {
@@ -94454,12 +94514,12 @@ var CLSTAMP = "10961770";
         (0, s.Cg)([l.o], h.prototype, "CheckSend", null);
         const u = new h();
       },
-      98276: (e, t, n) => {
+      57684: (e, t, n) => {
         "use strict";
         n.d(t, { Ay: () => u, QO: () => f });
         var s,
-          i = n(73148);
-        n(94266);
+          i = n(9025);
+        n(88758);
         !(function (e) {
           (e[(e.k_NotRejected = -1)] = "k_NotRejected"),
             (e[(e.k_RejectNoMainCap = 0)] = "k_RejectNoMainCap"),
@@ -94485,13 +94545,13 @@ var CLSTAMP = "10961770";
             (e[(e.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
             (e[(e.k_RejectAO = 19)] = "k_RejectAO");
         })(s || (s = {}));
-        var o = n(959),
-          r = n(43639),
-          a = n(21571),
-          l = n(60997),
-          c = n(31174),
-          d = n(74005),
-          h = n(84475);
+        var o = n(99787),
+          r = n(90115),
+          a = n(28703),
+          l = n(63649),
+          c = n(62770),
+          d = n(81289),
+          h = n(69679);
         class u {
           m_eItemType;
           m_unID;
@@ -95464,21 +95524,21 @@ var CLSTAMP = "10961770";
             }
         }
       },
-      92592: (e, t, n) => {
+      74709: (e, t, n) => {
         "use strict";
         n.d(t, { A: () => I });
         var s = n(34629),
           i = n(89193),
-          o = n(32561),
-          r = n(73561),
-          a = n(52077),
-          l = n(83081),
-          c = n(89639),
-          d = n(73148),
-          h = n(74005),
-          u = n(96393),
-          m = n(21571);
-        n(37882);
+          o = n(96757),
+          r = n(29085),
+          a = n(63129),
+          l = n(55693),
+          c = n(219),
+          d = n(9025),
+          h = n(81289),
+          u = n(37973),
+          m = n(28703);
+        n(24028);
         function p(e, t) {
           e.Body().set_context(_(t));
         }
@@ -95493,9 +95553,9 @@ var CLSTAMP = "10961770";
         function g(e, t) {
           e.Body().set_data_request(d.gn.fromObject(t));
         }
-        var C = n(98276),
-          f = n(85519),
-          S = n(43360);
+        var C = n(57684),
+          f = n(11883),
+          S = n(24052);
         function v(e, t) {
           if (!e) return t;
           if (!t) return e;
@@ -96408,16 +96468,16 @@ var CLSTAMP = "10961770";
         }
         (0, s.Cg)([f.o], I.prototype, "ReadItem", null);
       },
-      539: (e, t, n) => {
+      68935: (e, t, n) => {
         "use strict";
         n.d(t, { t7: () => p });
         var s = n(83957),
           i = n.n(s),
           o = n(63696),
-          r = n(32561),
-          a = n(73148),
-          l = n(87885),
-          c = n(92592);
+          r = n(96757),
+          a = n(9025),
+          l = n(74257),
+          c = n(74709);
         const d = 1,
           h = 2,
           u = 3;
@@ -96519,11 +96579,11 @@ var CLSTAMP = "10961770";
           return m(e, a.c6.qI, t, n);
         }
       },
-      60997: (e, t, n) => {
+      63649: (e, t, n) => {
         "use strict";
         n.d(t, { d: () => o });
-        var s = n(959),
-          i = n(43639);
+        var s = n(99787),
+          i = n(90115);
         function o(e) {
           return (function (e, t, n, o) {
             switch (e) {
@@ -96549,7 +96609,7 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      64076: (e, t, n) => {
+      36095: (e, t, n) => {
         "use strict";
         n.d(t, { s: () => G, Q: () => B });
         var s = n(34629),
@@ -96557,25 +96617,25 @@ var CLSTAMP = "10961770";
           o = n.n(i),
           r = n(37322),
           a = n(89193),
-          l = n(32561),
-          c = n(73561),
-          d = n(52077),
-          h = n(85164),
-          u = n(10275),
-          m = n(21571),
-          p = n(41261),
-          _ = n(74005),
-          g = n(18990),
-          C = n(87885),
-          f = n(39610),
-          S = n(95620),
-          v = n(18553),
-          b = n(92246),
-          I = n(80887),
-          y = n(44240),
-          w = n(3167),
-          x = n(45442),
-          A = n(76693);
+          l = n(96757),
+          c = n(29085),
+          d = n(63129),
+          h = n(41824),
+          u = n(21791),
+          m = n(28703),
+          p = n(81922),
+          _ = n(81289),
+          g = n(84898),
+          C = n(74257),
+          f = n(38150),
+          S = n(53848),
+          v = n(30565),
+          b = n(33154),
+          I = n(74699),
+          y = n(41428),
+          w = n(13875),
+          x = n(94606),
+          A = n(66745);
         class R {
           m_socket = null;
           m_sName;
@@ -97076,7 +97136,7 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([C.oI], T.prototype, "OnWebsocketMessage", null),
           (0, s.Cg)([C.oI], T.prototype, "OnStartShutdown", null);
         const D = new T();
-        var k = n(85519);
+        var k = n(11883);
         function P() {
           return m.TS.IN_MOBILE ? m.NQ : (0, m.xv)();
         }
@@ -97573,16 +97633,16 @@ var CLSTAMP = "10961770";
           (0, s.Cg)([a.XI], G.prototype, "UpdateCommunityPreferences", null),
           (0, s.Cg)([a.XI], G.prototype, "BRebuildFilter", null);
       },
-      7797: (e, t, n) => {
+      45137: (e, t, n) => {
         "use strict";
         n.d(t, { g4: () => s });
         var s,
           i = n(34629),
-          o = n(36878),
-          r = n(41930),
-          a = n(19596),
-          l = n(92246),
-          c = n(87885);
+          o = n(36714),
+          r = n(24334),
+          a = n(73960),
+          l = n(33154),
+          c = n(74257);
         function d(e) {
           switch (e) {
             case r.pR.OK:
@@ -97809,12 +97869,12 @@ var CLSTAMP = "10961770";
           (0, i.Cg)([c.oI], h.prototype, "OnActiveNavTreeChanged", null),
           (0, i.Cg)([c.oI], h.prototype, "SetActionDescriptionsFromMap", null);
       },
-      6893: (e, t, n) => {
+      55641: (e, t, n) => {
         "use strict";
         n.d(t, { JO: () => a, pM: () => l, xh: () => r });
         var s = n(62540),
           i = n(63696),
-          o = n(26487);
+          o = n(89875);
         function r(e) {
           const { text: t = "", style: n, children: o } = e;
           if (null == t) return (0, s.jsx)(i.Fragment, { children: o });
@@ -97919,7 +97979,7 @@ var CLSTAMP = "10961770";
             })(t);
         }
       },
-      3877: (e, t, n) => {
+      84160: (e, t, n) => {
         "use strict";
         n.d(t, {
           IK: () => D,
@@ -97936,10 +97996,10 @@ var CLSTAMP = "10961770";
         });
         var s = n(34629),
           i = n(62540),
-          o = n(25767),
-          r = n(87269),
-          a = n(8182),
-          l = n(36878);
+          o = n(45931),
+          r = n(42177),
+          a = n(16805),
+          l = n(36714);
         const c = Object.seal({ onMoveUp: d, onMoveDown: d });
         Object.seal({ onMoveRight: d, onMoveLeft: d });
         function d(e, t) {
@@ -97951,17 +98011,17 @@ var CLSTAMP = "10961770";
         }
         var h = n(41230),
           u = n(63696),
-          m = n(3753),
-          p = n(58316),
-          _ = n(42603),
-          g = n(20812),
-          C = n(16159),
-          f = n(98434),
-          S = n(93456),
-          v = n(26487),
-          b = n(959),
-          I = n(87885),
-          y = n(21571),
+          m = n(56237),
+          p = n(91408),
+          _ = n(56999),
+          g = n(13408),
+          C = n(68611),
+          f = n(29150),
+          S = n(51332),
+          v = n(89875),
+          b = n(99787),
+          I = n(74257),
+          y = n(28703),
           w = n(26765),
           x = n.n(w);
         const A = u.createContext(null);
@@ -98772,12 +98832,12 @@ var CLSTAMP = "10961770";
             : window.sessionStorage.removeItem(E);
         }
       },
-      20812: (e, t, n) => {
+      13408: (e, t, n) => {
         "use strict";
         n.d(t, { D: () => l, n: () => c });
         var s = n(62540),
           i = n(63696),
-          o = n(98434),
+          o = n(29150),
           r = n(26765),
           a = n.n(r);
         const l = i.forwardRef((e, t) => {
@@ -98806,14 +98866,14 @@ var CLSTAMP = "10961770";
         }
         l.displayName = "MenuItem";
       },
-      69334: (e, t, n) => {
+      34074: (e, t, n) => {
         "use strict";
         n.d(t, { y: () => d });
         var s = n(62540),
           i = n(63696),
           o = n(23038),
           r = n(61726),
-          a = n(98434);
+          a = n(29150);
         const l = 500;
         class c extends i.Component {
           render() {
@@ -98857,7 +98917,7 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      37542: (e, t, n) => {
+      98842: (e, t, n) => {
         "use strict";
         n.d(t, { M: () => r });
         var s = n(62540),
@@ -98869,7 +98929,7 @@ var CLSTAMP = "10961770";
           return (0, s.jsx)(o.A, { nodeRef: r, ...n, children: e.children(r) });
         }
       },
-      61029: (e, t, n) => {
+      25361: (e, t, n) => {
         "use strict";
         n.d(t, { Ce: () => i, Zt: () => r, a_: () => o, xv: () => a });
         var s = n(63696);
@@ -98883,7 +98943,7 @@ var CLSTAMP = "10961770";
           return !!e && e.bClassicMode;
         }
       },
-      85190: (e, t, n) => {
+      51842: (e, t, n) => {
         "use strict";
         n.d(t, {
           $n: () => O,
@@ -98916,17 +98976,17 @@ var CLSTAMP = "10961770";
         var s = n(34629),
           i = n(62540),
           o = n(63696),
-          r = n(58316),
-          a = n(25767),
-          l = n(87269),
-          c = n(16159),
-          d = n(34164),
-          h = n(85519),
-          u = n(98434),
-          m = n(959),
-          p = n(90052),
-          _ = n(61029),
-          g = n(10657);
+          r = n(91408),
+          a = n(45931),
+          l = n(42177),
+          c = n(68611),
+          d = n(90080),
+          h = n(11883),
+          u = n(29150),
+          m = n(99787),
+          p = n(92208),
+          _ = n(25361),
+          g = n(97669);
         function C(e) {
           return o.forwardRef(function (t, n) {
             return (0, i.jsx)(l.Z, {
@@ -99421,7 +99481,7 @@ var CLSTAMP = "10961770";
         (0, s.Cg)([h.o], q.prototype, "OnOffKeyDown", null),
           (0, s.Cg)([h.o], q.prototype, "OnNewUIToggle", null);
       },
-      62250: (e, t, n) => {
+      14202: (e, t, n) => {
         "use strict";
         n.d(t, {
           Xg: () => Ke,
@@ -99477,20 +99537,20 @@ var CLSTAMP = "10961770";
           Zy: () => b,
           QS: () => g.xv,
         });
-        var s = n(85190),
+        var s = n(51842),
           i = n(34629),
           o = n(62540),
           r = n(63696),
-          a = n(25767),
-          l = n(87269),
-          c = n(16159),
-          d = n(74005),
-          h = n(98434),
-          u = n(959),
-          m = n(87885),
-          p = n(80020),
-          _ = n(90052),
-          g = n(61029);
+          a = n(45931),
+          l = n(42177),
+          c = n(68611),
+          d = n(81289),
+          h = n(29150),
+          u = n(99787),
+          m = n(74257),
+          p = n(27464),
+          _ = n(92208),
+          g = n(25361);
         const C = r.forwardRef(function (e, t) {
           const n = (0, g.Zt)("InputElement", a.BA);
           return (0, o.jsx)(n, { ...e, ref: t });
@@ -99885,7 +99945,7 @@ var CLSTAMP = "10961770";
         (0, i.Cg)([m.oI], S.prototype, "OnBackgroundClick", null),
           (0, i.Cg)([m.oI], S.prototype, "OnInputFocus", null),
           (0, i.Cg)([m.oI], S.prototype, "OnInputBlur", null);
-        var v = n(58316);
+        var v = n(91408);
         const b = (e, t) =>
             "" +
             (null != e ? Number.parseFloat(e.toFixed(3)) : null) +
@@ -100072,7 +100132,7 @@ var CLSTAMP = "10961770";
           (0, i.Cg)([m.oI], M.prototype, "OnTouchMove", null),
           (0, i.Cg)([m.oI], M.prototype, "OnTouchEnd", null),
           (0, i.Cg)([m.oI], M.prototype, "OnKeyDown", null);
-        var T = n(10657),
+        var T = n(97669),
           D = n(82472),
           k = n.n(D);
         const P = r.createContext({ setValue: () => {} });
@@ -100113,15 +100173,17 @@ var CLSTAMP = "10961770";
           const { value: t, children: n, role: s = "radio", ...i } = e,
             { value: l, setValue: c, disabled: d } = r.useContext(P);
           let u = c;
-          const m = t === l;
+          const m = r.useId(),
+            p = t === l;
           return (0, o.jsx)(a.ml, {
+            focusRingSizeElementID: e.bSetFocusRingSizeElementID ? m : void 0,
             role: s,
-            "aria-checked": m,
-            "aria-selected": m,
+            "aria-checked": p,
+            "aria-selected": p,
             className: (0, h.A)(
               k().Button,
               "RadioButton",
-              m && k().Active,
+              p && k().Active,
               d && k().Disabled,
             ),
             onClick: d ? void 0 : () => u(t),
@@ -100129,8 +100191,8 @@ var CLSTAMP = "10961770";
             children: n,
           });
         }
-        var F = n(3753),
-          B = n(91422),
+        var F = n(56237),
+          B = n(90378),
           O = n(65092),
           N = n.n(O);
         function E(e) {
@@ -100531,10 +100593,10 @@ var CLSTAMP = "10961770";
         (0, i.Cg)([m.oI], te.prototype, "OnMenuOpened", null);
         n(27998);
         var ne = n(89193),
-          se = n(95863),
-          ie = n(31174),
-          oe = n(76693);
-        const re = new (n(92246).wd)("DragDrop").Debug;
+          se = n(36803),
+          ie = n(62770),
+          oe = n(66745);
+        const re = new (n(33154).wd)("DragDrop").Debug;
         function ae(e) {
           return e.children;
         }
@@ -101162,11 +101224,11 @@ var CLSTAMP = "10961770";
             );
           }
         }
-        var ge = n(41930),
-          Ce = n(8182),
-          fe = n(46366),
-          Se = n(9241),
-          ve = n(84719),
+        var ge = n(24334),
+          Ce = n(16805),
+          fe = n(69298),
+          Se = n(51037),
+          ve = n(49667),
           be = n(80583),
           Ie = n.n(be);
         const ye = "separator",
@@ -101618,8 +101680,8 @@ var CLSTAMP = "10961770";
           (0, i.Cg)([m.oI], Oe.prototype, "OnCut", null);
         var Ne = n(12008),
           Ee = n.n(Ne),
-          je = n(21839),
-          Ve = n(21191);
+          je = n(83859),
+          Ve = n(71171);
         function Ue(e) {
           return e ? e + "_Label" : void 0;
         }
@@ -101903,9 +101965,9 @@ var CLSTAMP = "10961770";
         r.createContext(null);
         var $e = n(28825),
           Ye = n.n($e),
-          Je = n(3877),
-          et = n(22653),
-          tt = n(21571);
+          Je = n(84160),
+          et = n(71892),
+          tt = n(28703);
         function nt(e) {
           const {
               label: t,
@@ -102100,9 +102162,9 @@ var CLSTAMP = "10961770";
         var ot,
           rt = n(6541),
           at = n.n(rt),
-          lt = n(32093),
-          ct = n(24936),
-          dt = n(34164);
+          lt = n(44369),
+          ct = n(22084),
+          dt = n(90080);
         !(function (e) {
           (e[(e.Invalid = 0)] = "Invalid"),
             (e[(e.TrackingSystemName_String = 1e3)] =
@@ -102593,7 +102655,7 @@ var CLSTAMP = "10961770";
           (function (e) {
             (e[(e.Default = 0)] = "Default"), (e[(e.Aurora = 1)] = "Aurora");
           })(Tt || (Tt = {}));
-        var Dt = n(26487);
+        var Dt = n(89875);
         const kt = 1,
           Pt = (0, dt.i_)(at()["error-shake-duration"]);
         function Lt(e, t) {
@@ -103694,12 +103756,12 @@ var CLSTAMP = "10961770";
         }
         (0, i.Cg)([m.oI], zt.prototype, "OnToggleChange", null);
       },
-      10657: (e, t, n) => {
+      97669: (e, t, n) => {
         "use strict";
         n.d(t, { P8: () => d, _H: () => l });
         var s = n(62540),
-          i = n(98434),
-          o = n(61029),
+          i = n(29150),
+          o = n(25361),
           r = n(24977),
           a = n.n(r);
         function l(e) {
@@ -103746,24 +103808,24 @@ var CLSTAMP = "10961770";
           });
         };
       },
-      75663: (e, t, n) => {
+      1555: (e, t, n) => {
         "use strict";
         n.d(t, { A: () => v });
         var s = n(34629),
           i = n(62540),
           o = n(63696),
           r = n(41230),
-          a = n(87885),
-          l = n(25767),
-          c = n(87269),
-          d = n(3753),
-          h = n(36439),
-          u = n(959),
-          m = n(98434),
+          a = n(74257),
+          l = n(45931),
+          c = n(42177),
+          d = n(56237),
+          h = n(67806),
+          u = n(99787),
+          m = n(29150),
           p = n(80611),
           _ = n.n(p),
-          g = n(49916),
-          C = n(91422);
+          g = n(9656),
+          C = n(90378);
         const f = 1576780700;
         let S = class extends o.Component {
           OnEmoticonClick(e) {
@@ -103890,7 +103952,7 @@ var CLSTAMP = "10961770";
           (S = (0, s.Cg)([r.PA], S));
         const v = S;
       },
-      36439: (e, t, n) => {
+      67806: (e, t, n) => {
         "use strict";
         n.d(t, {
           Q4: () => B,
@@ -103905,16 +103967,16 @@ var CLSTAMP = "10961770";
           o = n(89193),
           r = n(41230),
           a = n(63696),
-          l = n(42981),
-          c = n(539),
-          d = n(3877),
-          h = n(98434),
-          u = n(959),
-          m = n(58292),
-          p = n(21571),
-          _ = n(62250),
-          g = n(87269),
-          C = n(41930),
+          l = n(73385),
+          c = n(68935),
+          d = n(84160),
+          h = n(29150),
+          u = n(99787),
+          m = n(50376),
+          p = n(28703),
+          _ = n(14202),
+          g = n(42177),
+          C = n(24334),
           f = n(80825);
         class S extends a.Component {
           constructor(e) {
@@ -104102,8 +104164,8 @@ var CLSTAMP = "10961770";
         }
         var T = n(23489),
           D = n.n(T),
-          k = n(34164),
-          P = n(80481);
+          k = n(90080),
+          P = n(93605);
         function L(e) {
           return e.recent_emoticons;
         }
@@ -104850,20 +104912,20 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      80481: (e, t, n) => {
+      93605: (e, t, n) => {
         "use strict";
         n.d(t, { c: () => g, n: () => p });
         var s = n(62540),
           i = n(63696),
-          o = n(6516),
-          r = n(38186),
-          a = n(6893),
-          l = n(98434),
+          o = n(57688),
+          r = n(558),
+          a = n(55641),
+          l = n(29150),
           c = n(23489),
           d = n.n(c),
-          h = n(35843),
+          h = n(1719),
           u = n(61416),
-          m = n(45442);
+          m = n(94606);
         function p(e) {
           const { emoticon: t, large: n } = e,
             [o, c] = (0, h.OP)(),
@@ -104932,24 +104994,24 @@ var CLSTAMP = "10961770";
             ],
           });
       },
-      38186: (e, t, n) => {
+      558: (e, t, n) => {
         "use strict";
         n.d(t, { G: () => i });
-        var s = n(71926);
+        var s = n(76410);
         function i(e, t) {
           return t
             ? s.TS.COMMUNITY_CDN_URL + "economy/emoticonlarge/" + e
             : s.TS.COMMUNITY_CDN_URL + "economy/emoticon/" + e;
         }
       },
-      84719: (e, t, n) => {
+      49667: (e, t, n) => {
         "use strict";
         n.d(t, { tH: () => c, wC: () => l });
         var s = n(34629),
           i = n(62540),
           o = n(63696),
-          r = n(41261),
-          a = n(87885);
+          r = n(81922),
+          a = n(74257);
         function l(e) {
           return (0, i.jsx)(i.Fragment, {
             children: o.Children.map(e.children, (e) =>
@@ -105067,7 +105129,7 @@ var CLSTAMP = "10961770";
               children: e,
             });
       },
-      93550: (e, t, n) => {
+      55538: (e, t, n) => {
         "use strict";
         n.d(t, { Bm: () => i, f3: () => s });
         n(63696);
@@ -105099,13 +105161,13 @@ var CLSTAMP = "10961770";
             : e.push(`?${i.toString()}`);
         }
       },
-      49916: (e, t, n) => {
+      9656: (e, t, n) => {
         "use strict";
         n.d(t, { nl: () => l, rf: () => a });
         var s = n(62540),
-          i = n(16159),
-          o = n(9241),
-          r = n(21571);
+          i = n(68611),
+          o = n(51037),
+          r = n(28703);
         function a() {
           return (0, s.jsx)(i.rfv, {});
         }
@@ -105113,20 +105175,20 @@ var CLSTAMP = "10961770";
           return (0, r.Qn)() ? (0, s.jsx)(o.nl, {}) : (0, s.jsx)(i.jZW, {});
         }
       },
-      25728: (e, t, n) => {
+      26092: (e, t, n) => {
         "use strict";
         n.d(t, { Bh: () => g });
         var s = n(62540),
-          i = n(98434),
+          i = n(29150),
           o = n(8770),
           r = n.n(o),
-          a = n(27971),
-          l = n(31704),
-          c = n(83596),
-          d = n(26704),
-          h = n(7797),
-          u = n(32321),
-          m = n(71926);
+          a = n(18127),
+          l = n(56244),
+          c = n(75536),
+          d = n(95188),
+          h = n(45137),
+          u = n(89645),
+          m = n(76410);
         const p = {
           [a.rb]: [
             {
@@ -111233,7 +111295,7 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      9241: (e, t, n) => {
+      51037: (e, t, n) => {
         "use strict";
         n.d(t, {
           CeX: () => G,
@@ -111266,12 +111328,12 @@ var CLSTAMP = "10961770";
           y$y: () => D,
         });
         var s = n(62540),
-          i = (n(63696), n(27971)),
+          i = (n(63696), n(18127)),
           o = n(73151),
           r = n.n(o),
-          a = n(53095),
-          l = n(98434),
-          c = n(26704);
+          a = n(94491),
+          l = n(29150),
+          c = n(95188);
         function d(e) {
           const { direction: t } = e;
           let n;
@@ -111424,41 +111486,24 @@ var CLSTAMP = "10961770";
                     }),
                   ],
                 })
-              : "xbox" == t
-                ? n
-                  ? (0, s.jsxs)("svg", {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      version: "1.1",
-                      id: "Layer_1",
-                      x: "0px",
-                      y: "0px",
-                      viewBox: "0 0 36 36",
-                      ...i,
-                      children: [
-                        (0, s.jsx)("path", {
-                          fill: "currentColor",
-                          opacity: "0.5",
-                          d: "M12.9,6.2c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1  c-0.4,0.3-0.8,0.7-1.1,1C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2  c0.8-0.3,4.4-0.4,7.9-0.4V6.2H12.9z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8  c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1  c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z",
-                        }),
-                        (0, s.jsx)("path", {
-                          fill: "currentColor",
-                          d: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H18v17.6c3.5,0,7,0.1,7.9,0.4c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M27.6,8.7  c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2  s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4  C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4C31.5,13.4,30.9,14.1,30.1,14.1z",
-                        }),
-                      ],
-                    })
-                  : (0, s.jsx)("svg", {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      viewBox: "0 0 36 36",
-                      fill: "none",
-                      ...i,
-                      children: (0, s.jsx)("path", {
-                        fill: "currentColor",
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        d: "M11.25 5.625C11.909 5.625 12.182 5.81802 12.4081 5.97792C12.568 6.09099 12.7045 6.1875 12.9375 6.1875H23.0625C23.2955 6.1875 23.432 6.09099 23.5919 5.97792C23.818 5.81802 24.091 5.625 24.75 5.625C25.875 5.625 29.25 6.75 29.8125 7.3125C30.375 7.875 30.375 8.4375 30.375 8.4375V8.5803C30.8163 8.91923 31.1986 9.26106 31.5 9.5625C32.625 10.6875 36 20.25 36 25.3125C36 30.375 32.625 30.9375 32.625 30.9375C31.7178 30.9375 30.323 29.1494 28.9649 27.4083C27.7966 25.9106 26.6553 24.4476 25.875 24.1875C24.1875 23.625 11.8125 23.625 10.125 24.1875C9.34465 24.4476 8.20344 25.9106 7.03512 27.4083C5.67696 29.1494 4.28215 30.9375 3.375 30.9375C3.375 30.9375 0 30.375 0 25.3125C0 20.25 3.375 10.6875 4.5 9.5625C4.80144 9.26106 5.18366 8.91923 5.625 8.5803V8.4375C5.625 8.4375 5.625 7.875 6.1875 7.3125C6.75 6.75 10.125 5.625 11.25 5.625ZM27.5625 8.71875C28.3392 8.71875 28.9688 9.34835 28.9688 10.125C28.9688 10.9017 28.3392 11.5312 27.5625 11.5312C26.7858 11.5312 26.1562 10.9017 26.1562 10.125C26.1562 9.34835 26.7858 8.71875 27.5625 8.71875ZM8.4375 14.625C9.68014 14.625 10.6875 13.6176 10.6875 12.375C10.6875 11.1324 9.68014 10.125 8.4375 10.125C7.19486 10.125 6.1875 11.1324 6.1875 12.375C6.1875 13.6176 7.19486 14.625 8.4375 14.625ZM23.0625 20.25C24.3051 20.25 25.3125 19.2426 25.3125 18C25.3125 16.7574 24.3051 15.75 23.0625 15.75C21.8199 15.75 20.8125 16.7574 20.8125 18C20.8125 19.2426 21.8199 20.25 23.0625 20.25ZM12.0938 17.1562V16.3125C12.0938 16.0018 12.3456 15.75 12.6562 15.75H13.7812C14.0919 15.75 14.3438 16.0018 14.3438 16.3125V17.1562H15.1875C15.4982 17.1562 15.75 17.4081 15.75 17.7188V18.8438C15.75 19.1544 15.4982 19.4062 15.1875 19.4062H14.3438V20.25C14.3438 20.5607 14.0919 20.8125 13.7812 20.8125H12.6562C12.3456 20.8125 12.0938 20.5607 12.0938 20.25V19.4062H11.25C10.9393 19.4062 10.6875 19.1544 10.6875 18.8438V17.7188C10.6875 17.4081 10.9393 17.1562 11.25 17.1562H12.0938ZM25.0312 14.0625C25.8079 14.0625 26.4375 13.4329 26.4375 12.6562C26.4375 11.8796 25.8079 11.25 25.0312 11.25C24.2546 11.25 23.625 11.8796 23.625 12.6562C23.625 13.4329 24.2546 14.0625 25.0312 14.0625ZM31.5 12.6562C31.5 13.4329 30.8704 14.0625 30.0938 14.0625C29.3171 14.0625 28.6875 13.4329 28.6875 12.6562C28.6875 11.8796 29.3171 11.25 30.0938 11.25C30.8704 11.25 31.5 11.8796 31.5 12.6562ZM28.9688 15.1875C28.9688 14.4108 28.3392 13.7812 27.5625 13.7812C26.7858 13.7812 26.1562 14.4108 26.1562 15.1875C26.1562 15.9642 26.7858 16.5938 27.5625 16.5938C28.3392 16.5938 28.9688 15.9642 28.9688 15.1875Z",
+              : "steamframe" == t
+                ? (0, s.jsxs)("svg", {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    viewBox: "0 0 595 397",
+                    fill: "none",
+                    ...i,
+                    children: [
+                      (0, s.jsx)("path", {
+                        fill: "white",
+                        d: "M104.789 78.6405H129.852C131.696 78.6405 133.203 77.1359 133.203 75.2934C133.203 73.451 131.696 71.9464 129.852 71.9464H104.789C102.945 71.9464 101.439 73.451 101.439 75.2934C101.439 77.1359 102.945 78.6405 104.789 78.6405ZM132.895 140.351C132.895 126.165 144.453 114.619 158.654 114.619C172.856 114.619 184.414 126.165 184.414 140.351C184.414 154.538 172.856 166.084 158.654 166.084C144.453 166.084 132.895 154.538 132.895 140.351ZM140.201 140.351C140.201 150.526 148.459 158.775 158.644 158.775C168.829 158.775 177.088 150.526 177.088 140.351C177.088 130.177 168.829 121.927 158.644 121.927C148.459 121.927 140.201 130.177 140.201 140.351ZM111.101 179.707C111.101 177.947 109.677 176.524 107.915 176.524C106.152 176.524 104.728 177.947 104.728 179.707C104.728 181.468 106.152 182.891 107.915 182.891C109.677 182.891 111.101 181.468 111.101 179.707ZM158.644 152.634C165.427 152.634 170.94 147.127 170.94 140.351C170.94 133.575 165.427 128.068 158.644 128.068C151.861 128.068 146.349 133.575 146.349 140.351C146.349 147.127 151.861 152.634 158.644 152.634ZM158.573 259.402H158.614C158.614 259.402 162.179 256.659 165.745 255.472C169.311 254.284 178.338 251.684 180.223 249.688C182.119 247.693 182.447 245.533 181.955 242.564C181.473 239.596 177.58 230.845 175.797 224.857C175.735 224.662 175.674 224.458 175.612 224.243C167.856 228.48 159.669 231.838 151.164 234.274C148.798 258.921 157.855 259.402 158.573 259.402ZM166.329 260.17C164.28 261.04 162.148 262.493 161.421 263.046C160.673 263.629 159.751 263.967 158.798 264.008H158.573C157.517 264.008 153.849 263.711 150.724 259.812C146.974 255.144 145.549 247.007 146.441 235.522C137.024 237.825 127.27 239.002 117.321 239.002C90.8851 239.002 65.7406 230.66 44.8893 215.225C45.1762 215.798 45.4631 216.361 45.7295 216.924C68.6403 265.288 88.0469 397 141.656 397C161.155 397 187.959 382.752 181.043 336.538C181.043 336.538 173.245 297.458 166.329 260.17ZM98.4879 124.179C99.2462 124.179 99.8712 123.565 99.8712 122.797V108.723C99.8712 107.966 99.2564 107.341 98.4879 107.341H85.8849C80.8335 107.341 76.7349 103.237 76.7349 98.2008V84.0961C76.7349 83.3387 76.1201 82.7143 75.3517 82.7143H58.2198C57.4615 82.7143 56.8365 83.3284 56.8365 84.0961V98.2008C56.8365 103.247 52.7277 107.341 47.6865 107.341H35.0835C34.3253 107.341 33.7002 107.955 33.7002 108.723V122.797C33.7002 123.555 34.315 124.179 35.0835 124.179H47.6865C52.738 124.179 56.8365 128.283 56.8365 133.319V147.424C56.8365 148.182 57.4513 148.806 58.2198 148.806H75.3517C76.1099 148.806 76.7349 148.192 76.7349 147.424V133.319C76.7349 128.273 80.8437 124.179 85.8849 124.179H98.4879ZM117.321 234.396C52.5228 234.396 0 181.928 0 117.198C0 52.468 52.5228 0 117.321 0C182.119 0 234.641 52.4782 234.641 117.198C234.641 159.645 212.058 196.811 178.235 217.385C176.893 218.204 175.53 218.992 174.157 219.739C167.108 223.659 159.607 226.863 151.759 229.258C150.16 229.76 148.552 230.21 146.933 230.63C137.475 233.086 127.547 234.396 117.321 234.396ZM158.644 108.477C141.021 108.477 126.737 122.746 126.737 140.351C126.737 157.957 141.021 172.225 158.644 172.225C176.268 172.225 190.551 157.957 190.551 140.351C190.551 122.746 176.268 108.477 158.644 108.477ZM111.685 51.2806C111.685 54.3922 114.206 56.9102 117.321 56.9102C120.436 56.9102 122.956 54.3922 122.956 51.2806C122.956 48.169 120.436 45.651 117.321 45.651C114.206 45.651 111.685 48.169 111.685 51.2806ZM95.2911 75.2934C95.2911 80.5341 99.5433 84.7819 104.789 84.7819H129.852C135.098 84.7819 139.35 80.5341 139.35 75.2934C139.35 70.0528 135.098 65.805 129.852 65.805H104.789C99.5433 65.805 95.2911 70.0528 95.2911 75.2934ZM85.8849 130.32H98.4879C102.648 130.32 106.019 126.953 106.019 122.797V108.723C106.019 104.567 102.648 101.2 98.4879 101.2H85.8849C84.225 101.2 82.8827 99.859 82.8827 98.2008V84.0961C82.8827 79.9404 79.5117 76.5729 75.3517 76.5729H58.2198C54.0598 76.5729 50.6887 79.9404 50.6887 84.0961V98.2008C50.6887 99.859 49.3464 101.2 47.6865 101.2H35.0835C30.9235 101.2 27.5524 104.567 27.5524 108.723V122.797C27.5524 126.953 30.9235 130.32 35.0835 130.32H47.6865C49.3464 130.32 50.6887 131.661 50.6887 133.319V147.424C50.6887 151.58 54.0598 154.947 58.2198 154.947H75.3517C79.5117 154.947 82.8827 151.58 82.8827 147.424V133.319C82.8827 131.661 84.225 130.32 85.8849 130.32ZM119.206 184.047C119.206 174.743 111.654 167.21 102.351 167.21C93.0471 167.21 86.2435 174.027 85.5468 182.696L94.5841 186.432C95.3525 185.91 96.2747 185.603 97.2686 185.603C97.3608 185.603 97.4428 185.603 97.535 185.603L101.552 179.789C101.552 179.789 101.552 179.738 101.552 179.707C101.552 176.207 104.4 173.351 107.915 173.351C111.429 173.351 114.267 176.197 114.267 179.707C114.267 183.218 111.419 186.064 107.915 186.064C107.863 186.064 107.822 186.064 107.771 186.064L102.043 190.148C102.043 190.219 102.043 190.301 102.043 190.373C102.043 193.003 99.9019 195.143 97.2686 195.143C94.9632 195.143 93.0266 193.495 92.586 191.315L86.1206 188.643C88.1186 195.716 94.6251 200.895 102.341 200.895C111.654 200.895 119.196 193.351 119.196 184.057L119.206 184.047ZM99.5536 191.345C98.99 192.686 97.4531 193.321 96.1005 192.768L94.0308 191.918C94.3996 192.686 95.0349 193.321 95.8751 193.669C97.699 194.426 99.7995 193.566 100.558 191.745C100.927 190.864 100.927 189.892 100.558 189.012C100.189 188.131 99.5023 187.435 98.6211 187.067C97.7399 186.698 96.8075 186.719 95.9776 187.026L98.1191 187.906C99.4613 188.469 100.097 190.004 99.5433 191.356L99.5536 191.345ZM107.904 183.945C110.24 183.945 112.136 182.051 112.136 179.718C112.136 177.384 110.24 175.49 107.904 175.49C105.568 175.49 103.673 177.384 103.673 179.718C103.673 182.051 105.578 183.945 107.904 183.945Z",
                       }),
-                    })
-                : "ps4" == t
+                      (0, s.jsx)("path", {
+                        fill: "white",
+                        d: "M461.638 75.2934C461.638 73.451 463.144 71.9464 464.988 71.9464H490.051C491.895 71.9464 493.401 73.451 493.401 75.2934C493.401 77.1359 491.895 78.6405 490.051 78.6405H464.988C463.144 78.6405 461.638 77.1359 461.638 75.2934ZM501.188 179.707C501.188 177.947 499.764 176.524 498.002 176.524C496.24 176.524 494.815 177.947 494.815 179.707C494.815 181.468 496.24 182.891 498.002 182.891C499.764 182.891 501.188 181.468 501.188 179.707ZM436.196 127.966C429.413 127.966 423.9 133.473 423.9 140.249C423.9 147.025 429.413 152.532 436.196 152.532C442.979 152.532 448.492 147.025 448.492 140.249C448.492 133.473 442.979 127.966 436.196 127.966ZM503.504 124.281C508.207 124.281 512.029 120.463 512.029 115.765C512.029 111.067 508.207 107.249 503.504 107.249C498.801 107.249 494.979 111.067 494.979 115.765C494.979 120.463 498.801 124.281 503.504 124.281ZM528.054 99.7567C532.758 99.7567 536.579 95.9388 536.579 91.2406C536.579 86.5424 532.758 82.7245 528.054 82.7245C523.351 82.7245 519.53 86.5424 519.53 91.2406C519.53 95.9388 523.351 99.7567 528.054 99.7567ZM461.945 140.351C461.945 154.538 450.387 166.084 436.186 166.084C421.984 166.084 410.426 154.538 410.426 140.351C410.426 126.165 421.984 114.619 436.186 114.619C450.387 114.619 461.945 126.165 461.945 140.351ZM454.639 140.249C454.639 130.075 446.381 121.825 436.196 121.825C426.011 121.825 417.752 130.075 417.752 140.249C417.752 150.423 426.011 158.673 436.196 158.673C446.381 158.673 454.639 150.423 454.639 140.249ZM447.908 230.63C446.289 230.21 444.68 229.76 443.081 229.258C435.233 226.863 427.732 223.659 420.683 219.739C419.31 218.992 417.947 218.204 416.605 217.385C382.782 196.811 360.199 159.645 360.199 117.198C360.199 52.4782 412.732 0 477.519 0C542.307 0 594.84 52.4782 594.84 117.198C594.84 181.918 542.317 234.396 477.519 234.396C467.294 234.396 457.365 233.086 447.908 230.63ZM509.293 184.047C509.293 174.743 501.742 167.21 492.438 167.21C483.134 167.21 476.331 174.027 475.634 182.696L484.671 186.432C485.44 185.91 486.362 185.603 487.356 185.603C487.448 185.603 487.53 185.603 487.622 185.603L491.639 179.789C491.639 179.789 491.639 179.738 491.639 179.707C491.639 176.207 494.487 173.351 498.002 173.351C501.516 173.351 504.355 176.197 504.355 179.707C504.355 183.218 501.506 186.064 498.002 186.064C497.951 186.064 497.91 186.064 497.858 186.064L492.131 190.148C492.131 190.219 492.131 190.301 492.131 190.373C492.131 193.003 489.989 195.143 487.356 195.143C485.05 195.143 483.114 193.495 482.673 191.315L476.208 188.643C478.206 195.716 484.712 200.895 492.428 200.895C501.742 200.895 509.283 193.351 509.283 184.057L509.293 184.047ZM489.651 191.345C489.088 192.686 487.551 193.321 486.198 192.768L484.128 191.918C484.497 192.686 485.132 193.321 485.973 193.669C487.797 194.426 489.897 193.566 490.655 191.745C491.024 190.864 491.024 189.892 490.655 189.012C490.286 188.131 489.6 187.435 488.719 187.067C487.838 186.698 486.905 186.719 486.075 187.026L488.217 187.906C489.559 188.469 490.194 190.004 489.641 191.356L489.651 191.345ZM498.002 183.945C500.338 183.945 502.234 182.051 502.234 179.718C502.234 177.384 500.338 175.49 498.002 175.49C495.666 175.49 493.77 177.384 493.77 179.718C493.77 182.051 495.676 183.945 498.002 183.945ZM542.727 140.29C542.727 132.193 536.159 125.632 528.054 125.632C519.95 125.632 513.382 132.193 513.382 140.29C513.382 148.386 519.95 154.947 528.054 154.947C536.159 154.947 542.727 148.386 542.727 140.29ZM552.605 101.098C544.5 101.098 537.932 107.659 537.932 115.755C537.932 123.851 544.5 130.412 552.605 130.412C560.71 130.412 567.277 123.851 567.277 115.755C567.277 107.659 560.71 101.098 552.605 101.098ZM513.371 91.2304C513.371 99.3268 519.939 105.888 528.044 105.888C536.149 105.888 542.717 99.3268 542.717 91.2304C542.717 83.134 536.149 76.5729 528.044 76.5729C519.939 76.5729 513.371 83.134 513.371 91.2304ZM503.504 101.098C495.399 101.098 488.831 107.659 488.831 115.755C488.831 123.851 495.399 130.412 503.504 130.412C511.609 130.412 518.177 123.851 518.177 115.755C518.177 107.659 511.609 101.098 503.504 101.098ZM471.884 51.2806C471.884 54.3922 474.405 56.9102 477.519 56.9102C480.634 56.9102 483.155 54.3922 483.155 51.2806C483.155 48.169 480.634 45.651 477.519 45.651C474.405 45.651 471.884 48.169 471.884 51.2806ZM455.49 75.2934C455.49 80.5341 459.742 84.7819 464.988 84.7819H490.051C495.297 84.7819 499.549 80.5341 499.549 75.2934C499.549 70.0528 495.297 65.805 490.051 65.805H464.988C459.742 65.805 455.49 70.0528 455.49 75.2934ZM468.093 140.351C468.093 122.746 453.809 108.477 436.186 108.477C418.562 108.477 404.278 122.746 404.278 140.351C404.278 157.957 418.562 172.225 436.186 172.225C453.809 172.225 468.093 157.957 468.093 140.351ZM477.519 239.002C467.581 239.002 457.826 237.825 448.41 235.533C449.291 247.017 447.866 255.144 444.116 259.812C440.991 263.711 437.323 264.008 436.278 264.008H436.042C435.089 263.967 434.177 263.629 433.419 263.056C432.692 262.504 430.571 261.04 428.511 260.17C421.595 297.458 413.797 336.538 413.797 336.538C406.881 382.742 433.686 397 453.184 397C506.783 397 526.2 265.288 549.111 216.924C549.377 216.361 549.654 215.798 549.951 215.225C529.1 230.671 503.955 239.002 477.519 239.002ZM552.605 124.281C557.308 124.281 561.13 120.463 561.13 115.765C561.13 111.067 557.308 107.249 552.605 107.249C547.902 107.249 544.08 111.067 544.08 115.765C544.08 120.463 547.902 124.281 552.605 124.281ZM433.993 257.887C435.335 258.716 436.227 259.402 436.227 259.402H436.278C436.995 259.402 446.053 258.921 443.676 234.274C435.171 231.838 426.984 228.48 419.228 224.243C419.166 224.458 419.105 224.662 419.044 224.857C417.261 230.845 413.377 239.596 412.885 242.564C412.404 245.533 412.722 247.693 414.617 249.688C416.502 251.684 425.529 254.284 429.095 255.472C430.878 256.065 432.661 257.048 433.993 257.887ZM528.054 131.764C523.351 131.764 519.53 135.581 519.53 140.28C519.53 144.978 523.351 148.796 528.054 148.796C532.758 148.796 536.579 144.978 536.579 140.28C536.579 135.581 532.758 131.764 528.054 131.764Z",
+                      }),
+                    ],
+                  })
+                : "xbox" == t
                   ? n
                     ? (0, s.jsxs)("svg", {
                         xmlns: "http://www.w3.org/2000/svg",
@@ -111472,63 +111517,27 @@ var CLSTAMP = "10961770";
                           (0, s.jsx)("path", {
                             fill: "currentColor",
                             opacity: "0.5",
-                            d: "M12.9,13.7c-0.6,0-1.1-0.5-1.1-1.1V8l-1.7,0L9.6,7.5c0,0-0.1,0-0.2,0C9.3,7.3,9.2,7.1,9,6.9  C6.7,6.5,5.2,7.1,4.7,7.4c-0.1,0-0.1,0.1-0.2,0.1C3.9,8,2.8,10.3,2.8,10.3C2.2,12,0.6,17,0,23.8c0,0-0.6,5.1,3.4,5.6  c3.5,0.4,4.6-4.1,5.2-6.5c0.2-0.7,0.3-1.2,0.4-1.4c0.3-0.3,0.7-0.5,0.9-0.5c0.6,0.7,1.5,1.1,2.5,1.1c1,0,1.9-0.4,2.5-1.1H18v-7.3  H12.9z M5.6,10.8c0-0.3,0.2-0.5,0.5-0.5h1.2c0.3,0,0.5,0.2,0.5,0.5v1c0,0.1-0.1,0.3-0.1,0.4l-0.6,0.6c-0.2,0.2-0.5,0.2-0.7,0  l-0.6-0.6c-0.1-0.1-0.1-0.2-0.1-0.4V10.8z M5.1,14.5h-1c-0.3,0-0.5-0.2-0.5-0.5v-1.2c0-0.3,0.2-0.5,0.5-0.5h1c0.1,0,0.3,0.1,0.4,0.1  L6.1,13c0.2,0.2,0.2,0.5,0,0.7l-0.6,0.6C5.4,14.4,5.3,14.5,5.1,14.5z M7.9,16c0,0.3-0.2,0.5-0.5,0.5H6.1c-0.3,0-0.5-0.2-0.5-0.5v-1  c0-0.1,0.1-0.3,0.1-0.4L6.4,14c0.2-0.2,0.5-0.2,0.7,0l0.6,0.6c0.1,0.1,0.1,0.2,0.1,0.4V16z M9.8,14c0,0.3-0.2,0.5-0.5,0.5h-1  c-0.1,0-0.3-0.1-0.4-0.1l-0.6-0.6c-0.2-0.2-0.2-0.5,0-0.7L8,12.4c0.1-0.1,0.2-0.1,0.4-0.1h1c0.3,0,0.5,0.2,0.5,0.5V14z M12.1,20.4  c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C14.4,19.4,13.4,20.4,12.1,20.4z",
+                            d: "M12.9,6.2c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1  c-0.4,0.3-0.8,0.7-1.1,1C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2  c0.8-0.3,4.4-0.4,7.9-0.4V6.2H12.9z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8  c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1  c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z",
                           }),
                           (0, s.jsx)("path", {
                             fill: "currentColor",
-                            d: "M36,23.8C35.4,17,33.8,12,33.2,10.3c0,0-1.1-2.2-1.7-2.8c0,0-0.1-0.1-0.2-0.1c-0.5-0.3-2-0.9-4.3-0.5  c-0.2,0.2-0.3,0.4-0.4,0.5c-0.1,0-0.2,0-0.2,0L25.9,8l-1.7,0v4.5c0,0.6-0.5,1.1-1.1,1.1H18V21h3.1c0.6,0.7,1.5,1.1,2.5,1.1  c1,0,1.9-0.4,2.5-1.1c0.2,0.1,0.6,0.2,0.9,0.5c0.1,0.1,0.3,0.7,0.4,1.4c0.6,2.4,1.7,6.9,5.2,6.5C36.6,28.8,36,23.8,36,23.8z   M23.6,20.4c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C25.9,19.4,24.9,20.4,23.6,20.4z M26.7,14.5  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C27.8,14,27.3,14.5,26.7,14.5z M29.2,17  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,16.5,29.9,17,29.2,17z M29.2,12c-0.6,0-1.1-0.5-1.1-1.1  c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,11.5,29.9,12,29.2,12z M31.8,14.5c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1  c0.6,0,1.1,0.5,1.1,1.1C32.9,14,32.4,14.5,31.8,14.5z",
-                          }),
-                          (0, s.jsx)("rect", {
-                            fill: "currentColor",
-                            opacity: "0.5",
-                            x: "12.9",
-                            y: "8",
-                            width: "5.1",
-                            height: "4.5",
-                          }),
-                          (0, s.jsx)("rect", {
-                            fill: "currentColor",
-                            x: "18",
-                            y: "8",
-                            width: "5.1",
-                            height: "4.5",
+                            d: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H18v17.6c3.5,0,7,0.1,7.9,0.4c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M27.6,8.7  c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2  s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4  C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4C31.5,13.4,30.9,14.1,30.1,14.1z",
                           }),
                         ],
                       })
-                    : (0, s.jsxs)("svg", {
+                    : (0, s.jsx)("svg", {
                         xmlns: "http://www.w3.org/2000/svg",
                         viewBox: "0 0 36 36",
                         fill: "none",
                         ...i,
-                        children: [
-                          (0, s.jsxs)("g", {
-                            clipPath: r,
-                            children: [
-                              (0, s.jsx)("path", {
-                                fill: "currentColor",
-                                fillRule: "evenodd",
-                                clipRule: "evenodd",
-                                d: "M4.49995 7.47C3.93745 8.0325 2.81244 10.2825 2.81244 10.2825C2.24993 11.97 0.562445 17.0325 -5.43911e-05 23.7825C-5.43911e-05 23.7825 -0.562553 28.845 3.37495 29.4075C6.832 29.8396 7.9652 25.2921 8.55982 22.9059C8.73921 22.186 8.86958 21.6629 8.99995 21.5325C9.33789 21.1945 9.67584 21.0596 9.89181 21.0058C10.5086 21.6754 11.3928 22.095 12.3749 22.095C13.3745 22.095 14.2726 21.6605 14.8906 20.97H21.1093C21.7273 21.6605 22.6254 22.095 23.6249 22.095C24.6071 22.095 25.4913 21.6754 26.1081 21.0058C26.3241 21.0596 26.662 21.1945 27 21.5325C27.1303 21.6629 27.2607 22.186 27.4401 22.9059C28.0347 25.2921 29.1679 29.8396 32.625 29.4075C36.5625 28.845 36 23.7825 36 23.7825C35.4375 17.0325 33.75 11.97 33.1875 10.2825C33.1875 10.2825 32.0625 8.03251 31.4999 7.47C31.4575 7.42758 31.3927 7.39155 31.3091 7.36121C30.794 7.09333 29.2603 6.45543 26.9999 6.9075C26.8121 7.09539 26.6869 7.28328 26.6036 7.45021C26.4971 7.46255 26.4375 7.47001 26.4375 7.47001L25.875 8.0325L24.1874 8.03251V12.5325C24.1874 13.1538 23.6838 13.6575 23.0624 13.6575H12.9374C12.3161 13.6575 11.8124 13.1538 11.8124 12.5325V8.03251L10.1249 8.03249L9.56245 7.47C9.56245 7.47 9.50277 7.46254 9.39629 7.4502C9.31296 7.28328 9.18783 7.09539 8.99995 6.9075C6.73958 6.45543 5.20586 7.09333 4.6908 7.36121C4.60721 7.39155 4.54237 7.42759 4.49995 7.47ZM14.3999 18.1575C14.3999 19.4002 13.3926 20.4075 12.1499 20.4075C10.9073 20.4075 9.89995 19.4002 9.89995 18.1575C9.89995 16.9149 10.9073 15.9075 12.1499 15.9075C13.3926 15.9075 14.3999 16.9149 14.3999 18.1575ZM23.6249 20.4075C24.8676 20.4075 25.8749 19.4002 25.8749 18.1575C25.8749 16.9149 24.8676 15.9075 23.6249 15.9075C22.3823 15.9075 21.3749 16.9149 21.3749 18.1575C21.3749 19.4002 22.3823 20.4075 23.6249 20.4075ZM30.3749 10.845C30.3749 11.4663 29.8713 11.97 29.2499 11.97C28.6286 11.97 28.1249 11.4663 28.1249 10.845C28.1249 10.2237 28.6286 9.72001 29.2499 9.72001C29.8713 9.72001 30.3749 10.2237 30.3749 10.845ZM29.2499 17.0325C29.8713 17.0325 30.3749 16.5288 30.3749 15.9075C30.3749 15.2862 29.8713 14.7825 29.2499 14.7825C28.6286 14.7825 28.1249 15.2862 28.1249 15.9075C28.1249 16.5288 28.6286 17.0325 29.2499 17.0325ZM26.7187 12.2513C27.34 12.2513 27.8437 12.7549 27.8437 13.3763C27.8437 13.9976 27.34 14.5013 26.7187 14.5013C26.0974 14.5013 25.5937 13.9976 25.5937 13.3763C25.5937 12.7549 26.0974 12.2513 26.7187 12.2513ZM32.9062 13.3763C32.9062 12.7549 32.4025 12.2513 31.7812 12.2513C31.1599 12.2513 30.6562 12.7549 30.6562 13.3763C30.6562 13.9976 31.1599 14.5013 31.7812 14.5013C32.4025 14.5013 32.9062 13.9976 32.9062 13.3763ZM5.62495 10.7825C5.62495 10.5064 5.8488 10.2825 6.12495 10.2825H7.37495C7.65109 10.2825 7.87495 10.5064 7.87495 10.7825V11.7629C7.87495 11.8955 7.82227 12.0227 7.7285 12.1165L7.1035 12.7415C6.90824 12.9367 6.59166 12.9367 6.39639 12.7415L5.77139 12.1165C5.67763 12.0227 5.62495 11.8955 5.62495 11.7629V10.7825ZM6.12495 16.47C5.8488 16.47 5.62495 16.2462 5.62495 15.97V14.9896C5.62495 14.857 5.67763 14.7298 5.77139 14.6361L6.39639 14.0111C6.59166 13.8158 6.90824 13.8158 7.1035 14.0111L7.7285 14.6361C7.82227 14.7298 7.87495 14.857 7.87495 14.9896V15.97C7.87495 16.2462 7.65109 16.47 7.37495 16.47H6.12495ZM4.1562 14.5013C3.88006 14.5013 3.6562 14.2774 3.6562 14.0013V12.7513C3.6562 12.4751 3.88006 12.2513 4.1562 12.2513H5.13659C5.2692 12.2513 5.39638 12.3039 5.49014 12.3977L6.11514 13.0227C6.31041 13.218 6.31041 13.5346 6.11514 13.7298L5.49014 14.3548C5.39638 14.4486 5.2692 14.5013 5.13659 14.5013H4.1562ZM9.8437 14.0013C9.8437 14.2774 9.61984 14.5013 9.3437 14.5013H8.36331C8.2307 14.5013 8.10352 14.4486 8.00975 14.3548L7.38475 13.7298C7.18949 13.5346 7.18949 13.218 7.38475 13.0227L8.00975 12.3977C8.10352 12.3039 8.2307 12.2513 8.36331 12.2513H9.3437C9.61984 12.2513 9.8437 12.4751 9.8437 12.7513V14.0013Z",
-                              }),
-                              (0, s.jsx)("path", {
-                                fill: "currentColor",
-                                d: "M23.0624 8.03251L12.9374 8.03251V12.5325H23.0624V8.03251Z",
-                              }),
-                            ],
-                          }),
-                          (0, s.jsx)("defs", {
-                            children: (0, s.jsx)("clipPath", {
-                              id: o,
-                              children: (0, s.jsx)("rect", {
-                                fill: "currentColor",
-                                width: "36",
-                                height: "36",
-                              }),
-                            }),
-                          }),
-                        ],
+                        children: (0, s.jsx)("path", {
+                          fill: "currentColor",
+                          fillRule: "evenodd",
+                          clipRule: "evenodd",
+                          d: "M11.25 5.625C11.909 5.625 12.182 5.81802 12.4081 5.97792C12.568 6.09099 12.7045 6.1875 12.9375 6.1875H23.0625C23.2955 6.1875 23.432 6.09099 23.5919 5.97792C23.818 5.81802 24.091 5.625 24.75 5.625C25.875 5.625 29.25 6.75 29.8125 7.3125C30.375 7.875 30.375 8.4375 30.375 8.4375V8.5803C30.8163 8.91923 31.1986 9.26106 31.5 9.5625C32.625 10.6875 36 20.25 36 25.3125C36 30.375 32.625 30.9375 32.625 30.9375C31.7178 30.9375 30.323 29.1494 28.9649 27.4083C27.7966 25.9106 26.6553 24.4476 25.875 24.1875C24.1875 23.625 11.8125 23.625 10.125 24.1875C9.34465 24.4476 8.20344 25.9106 7.03512 27.4083C5.67696 29.1494 4.28215 30.9375 3.375 30.9375C3.375 30.9375 0 30.375 0 25.3125C0 20.25 3.375 10.6875 4.5 9.5625C4.80144 9.26106 5.18366 8.91923 5.625 8.5803V8.4375C5.625 8.4375 5.625 7.875 6.1875 7.3125C6.75 6.75 10.125 5.625 11.25 5.625ZM27.5625 8.71875C28.3392 8.71875 28.9688 9.34835 28.9688 10.125C28.9688 10.9017 28.3392 11.5312 27.5625 11.5312C26.7858 11.5312 26.1562 10.9017 26.1562 10.125C26.1562 9.34835 26.7858 8.71875 27.5625 8.71875ZM8.4375 14.625C9.68014 14.625 10.6875 13.6176 10.6875 12.375C10.6875 11.1324 9.68014 10.125 8.4375 10.125C7.19486 10.125 6.1875 11.1324 6.1875 12.375C6.1875 13.6176 7.19486 14.625 8.4375 14.625ZM23.0625 20.25C24.3051 20.25 25.3125 19.2426 25.3125 18C25.3125 16.7574 24.3051 15.75 23.0625 15.75C21.8199 15.75 20.8125 16.7574 20.8125 18C20.8125 19.2426 21.8199 20.25 23.0625 20.25ZM12.0938 17.1562V16.3125C12.0938 16.0018 12.3456 15.75 12.6562 15.75H13.7812C14.0919 15.75 14.3438 16.0018 14.3438 16.3125V17.1562H15.1875C15.4982 17.1562 15.75 17.4081 15.75 17.7188V18.8438C15.75 19.1544 15.4982 19.4062 15.1875 19.4062H14.3438V20.25C14.3438 20.5607 14.0919 20.8125 13.7812 20.8125H12.6562C12.3456 20.8125 12.0938 20.5607 12.0938 20.25V19.4062H11.25C10.9393 19.4062 10.6875 19.1544 10.6875 18.8438V17.7188C10.6875 17.4081 10.9393 17.1562 11.25 17.1562H12.0938ZM25.0312 14.0625C25.8079 14.0625 26.4375 13.4329 26.4375 12.6562C26.4375 11.8796 25.8079 11.25 25.0312 11.25C24.2546 11.25 23.625 11.8796 23.625 12.6562C23.625 13.4329 24.2546 14.0625 25.0312 14.0625ZM31.5 12.6562C31.5 13.4329 30.8704 14.0625 30.0938 14.0625C29.3171 14.0625 28.6875 13.4329 28.6875 12.6562C28.6875 11.8796 29.3171 11.25 30.0938 11.25C30.8704 11.25 31.5 11.8796 31.5 12.6562ZM28.9688 15.1875C28.9688 14.4108 28.3392 13.7812 27.5625 13.7812C26.7858 13.7812 26.1562 14.4108 26.1562 15.1875C26.1562 15.9642 26.7858 16.5938 27.5625 16.5938C28.3392 16.5938 28.9688 15.9642 28.9688 15.1875Z",
+                        }),
                       })
-                  : "ps5" == t
+                  : "ps4" == t
                     ? n
                       ? (0, s.jsxs)("svg", {
                           xmlns: "http://www.w3.org/2000/svg",
@@ -111542,29 +111551,26 @@ var CLSTAMP = "10961770";
                             (0, s.jsx)("path", {
                               fill: "currentColor",
                               opacity: "0.5",
-                              d: "M4.7,25.2c0.5-1.7,1.2-3.4,1.8-4.5c0.9-1.6,2.4-3.3,3.5-4.5c0.9-1,1.4-2.4,1.1-3.8l-0.7-3.8  c-0.1-0.4,0-0.7,0.3-0.9l0,0c-0.4,0-0.8,0.1-1.1,0.1V7.3c0,0,0-0.6-1.7-0.6c-1.3,0-2.6,0.7-3.1,1C4.6,7.8,4.5,8,4.5,8.2v0.6  C4.3,8.9,4.1,8.9,3.9,9C2.8,9.6,0,18,0,23.1c0,2.7,0.5,4.6,0.9,5.8c0.2,0.6,0.7,1.1,1.2,1.4l0.1,0c0.5,0.2,1-0.1,1.1-0.6  C3.7,28.6,4.1,26.9,4.7,25.2z M7.9,16.3c0,0.3-0.3,0.6-0.6,0.6H6.2c-0.3,0-0.6-0.3-0.6-0.6v-0.9c0-0.1,0.1-0.3,0.2-0.4l0.6-0.6  c0.2-0.2,0.6-0.2,0.8,0L7.7,15c0.1,0.1,0.2,0.2,0.2,0.4V16.3z M9,9.1c0.3-0.1,0.6,0,0.8,0.3l0.3,0.6c0.1,0.3,0,0.6-0.3,0.8  c-0.3,0.1-0.6,0-0.8-0.3L8.8,9.8C8.6,9.5,8.8,9.2,9,9.1z M8,12.8c0.1-0.1,0.2-0.2,0.4-0.2h0.9c0.3,0,0.6,0.3,0.6,0.6v1.1  c0,0.3-0.3,0.6-0.6,0.6H8.4c-0.1,0-0.3-0.1-0.4-0.2l-0.6-0.6c-0.2-0.2-0.2-0.6,0-0.8L8,12.8z M5.6,11.2c0-0.3,0.3-0.6,0.6-0.6h1.1  c0.3,0,0.6,0.3,0.6,0.6v0.9c0,0.1-0.1,0.3-0.2,0.4l-0.6,0.6c-0.2,0.2-0.6,0.2-0.8,0l-0.6-0.6c-0.1-0.1-0.2-0.2-0.2-0.4V11.2z   M3.7,13.2c0-0.3,0.3-0.6,0.6-0.6h0.9c0.1,0,0.3,0.1,0.4,0.2l0.6,0.6c0.2,0.2,0.2,0.6,0,0.8l-0.6,0.6c-0.1,0.1-0.2,0.2-0.4,0.2H4.2  c-0.3,0-0.6-0.3-0.6-0.6V13.2z",
+                              d: "M12.9,13.7c-0.6,0-1.1-0.5-1.1-1.1V8l-1.7,0L9.6,7.5c0,0-0.1,0-0.2,0C9.3,7.3,9.2,7.1,9,6.9  C6.7,6.5,5.2,7.1,4.7,7.4c-0.1,0-0.1,0.1-0.2,0.1C3.9,8,2.8,10.3,2.8,10.3C2.2,12,0.6,17,0,23.8c0,0-0.6,5.1,3.4,5.6  c3.5,0.4,4.6-4.1,5.2-6.5c0.2-0.7,0.3-1.2,0.4-1.4c0.3-0.3,0.7-0.5,0.9-0.5c0.6,0.7,1.5,1.1,2.5,1.1c1,0,1.9-0.4,2.5-1.1H18v-7.3  H12.9z M5.6,10.8c0-0.3,0.2-0.5,0.5-0.5h1.2c0.3,0,0.5,0.2,0.5,0.5v1c0,0.1-0.1,0.3-0.1,0.4l-0.6,0.6c-0.2,0.2-0.5,0.2-0.7,0  l-0.6-0.6c-0.1-0.1-0.1-0.2-0.1-0.4V10.8z M5.1,14.5h-1c-0.3,0-0.5-0.2-0.5-0.5v-1.2c0-0.3,0.2-0.5,0.5-0.5h1c0.1,0,0.3,0.1,0.4,0.1  L6.1,13c0.2,0.2,0.2,0.5,0,0.7l-0.6,0.6C5.4,14.4,5.3,14.5,5.1,14.5z M7.9,16c0,0.3-0.2,0.5-0.5,0.5H6.1c-0.3,0-0.5-0.2-0.5-0.5v-1  c0-0.1,0.1-0.3,0.1-0.4L6.4,14c0.2-0.2,0.5-0.2,0.7,0l0.6,0.6c0.1,0.1,0.1,0.2,0.1,0.4V16z M9.8,14c0,0.3-0.2,0.5-0.5,0.5h-1  c-0.1,0-0.3-0.1-0.4-0.1l-0.6-0.6c-0.2-0.2-0.2-0.5,0-0.7L8,12.4c0.1-0.1,0.2-0.1,0.4-0.1h1c0.3,0,0.5,0.2,0.5,0.5V14z M12.1,20.4  c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C14.4,19.4,13.4,20.4,12.1,20.4z",
                             }),
                             (0, s.jsx)("path", {
                               fill: "currentColor",
-                              d: "M23.8,13.5l0.6-2l0.5-3c0-0.2,0-0.3-0.1-0.4c-0.1-0.1-0.4-0.3-0.7-0.4c-0.1,0-0.2-0.1-0.3-0.1c-1.7-0.1-3.7-0.2-5.9-0.2v7.6  h4C22.8,14.9,23.6,14.3,23.8,13.5z",
+                              d: "M36,23.8C35.4,17,33.8,12,33.2,10.3c0,0-1.1-2.2-1.7-2.8c0,0-0.1-0.1-0.2-0.1c-0.5-0.3-2-0.9-4.3-0.5  c-0.2,0.2-0.3,0.4-0.4,0.5c-0.1,0-0.2,0-0.2,0L25.9,8l-1.7,0v4.5c0,0.6-0.5,1.1-1.1,1.1H18V21h3.1c0.6,0.7,1.5,1.1,2.5,1.1  c1,0,1.9-0.4,2.5-1.1c0.2,0.1,0.6,0.2,0.9,0.5c0.1,0.1,0.3,0.7,0.4,1.4c0.6,2.4,1.7,6.9,5.2,6.5C36.6,28.8,36,23.8,36,23.8z   M23.6,20.4c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C25.9,19.4,24.9,20.4,23.6,20.4z M26.7,14.5  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C27.8,14,27.3,14.5,26.7,14.5z M29.2,17  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,16.5,29.9,17,29.2,17z M29.2,12c-0.6,0-1.1-0.5-1.1-1.1  c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,11.5,29.9,12,29.2,12z M31.8,14.5c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1  c0.6,0,1.1,0.5,1.1,1.1C32.9,14,32.4,14.5,31.8,14.5z",
                             }),
-                            (0, s.jsx)("path", {
-                              fill: "currentColor",
-                              opacity: "0.5",
-                              d: "M12,7.5c-0.1,0-0.1,0-0.2,0.1c-0.3,0.1-0.5,0.3-0.7,0.4C11,8.2,11,8.3,11,8.5l0.5,2.9l0.6,2.1  c0.3,0.8,1,1.4,1.9,1.4h4V7.3C15.8,7.3,13.7,7.4,12,7.5z",
-                            }),
-                            (0, s.jsx)("path", {
+                            (0, s.jsx)("rect", {
                               fill: "currentColor",
                               opacity: "0.5",
-                              d: "M14,15.5c-1,0-2-0.6-2.4-1.6c-0.2,1-0.6,1.9-1.3,2.7C9.3,17.8,7.9,19.4,7,21c-0.6,1-1.2,2.7-1.8,4.4  c-0.5,1.7-1,3.4-1.3,4.5c-0.1,0.4-0.3,0.7-0.6,0.8l0,0c1,0.2,2-0.4,2.3-1.3l1.9-4.7c0.5-1.3,1.8-2.1,3.1-2.1H18v-7H14z M12.4,21.4  c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S13.6,21.4,12.4,21.4z",
+                              x: "12.9",
+                              y: "8",
+                              width: "5.1",
+                              height: "4.5",
                             }),
-                            (0, s.jsx)("path", {
+                            (0, s.jsx)("rect", {
                               fill: "currentColor",
-                              d: "M32.1,29.8c-0.3-1.1-0.7-2.8-1.3-4.5C30.2,23.6,29.6,22,29,21c-0.9-1.5-2.3-3.2-3.4-4.4c-0.7-0.8-1.1-1.7-1.3-2.7  c-0.4,1-1.3,1.6-2.4,1.6h-4v7h7.3c1.4,0,2.6,0.8,3.1,2.1l1.9,4.7c0.4,0.9,1.3,1.5,2.3,1.3l0,0C32.4,30.5,32.2,30.2,32.1,29.8z   M23.6,21.4c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S24.9,21.4,23.6,21.4z",
-                            }),
-                            (0, s.jsx)("path", {
-                              fill: "currentColor",
-                              d: "M32.1,9c-0.1-0.1-0.3-0.1-0.6-0.2V8.2c0-0.2-0.1-0.4-0.3-0.5c-0.5-0.3-1.8-1-3.1-1c-1.7,0-1.7,0.6-1.7,0.6v0.5  c-0.4,0-0.8-0.1-1.2-0.1l0,0c0.2,0.2,0.3,0.6,0.3,0.9l-0.5,3l0,0l0,0l-0.1,0.7c-0.2,1.4,0.2,2.8,1.1,3.8c1.1,1.2,2.5,3,3.5,4.5  c0.6,1.1,1.3,2.8,1.8,4.5c0.5,1.7,1,3.4,1.3,4.5c0.1,0.5,0.6,0.8,1.1,0.6l0.1,0c0.5-0.3,1-0.8,1.2-1.4c0.4-1.2,0.9-3.1,0.9-5.8  C36,18,33.2,9.6,32.1,9z M29.2,10.1c0.6,0,1.1,0.5,1.1,1.1s-0.5,1.1-1.1,1.1s-1.1-0.5-1.1-1.1S28.6,10.1,29.2,10.1z M25.9,9.9  l0.3-0.6C26.4,9,26.7,8.9,27,9.1c0.3,0.1,0.4,0.5,0.3,0.8l-0.3,0.6c-0.1,0.3-0.5,0.4-0.8,0.3C25.9,10.5,25.8,10.2,25.9,9.9z   M27,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S27.6,14.6,27,14.6z M29.2,16.9c-0.6,0-1.1-0.5-1.1-1.1  s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S29.9,16.9,29.2,16.9z M31.5,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1  S32.1,14.6,31.5,14.6z",
+                              x: "18",
+                              y: "8",
+                              width: "5.1",
+                              height: "4.5",
                             }),
                           ],
                         })
@@ -111574,102 +111580,149 @@ var CLSTAMP = "10961770";
                           fill: "none",
                           ...i,
                           children: [
-                            (0, s.jsx)("path", {
-                              fill: "currentColor",
-                              fillRule: "evenodd",
-                              clipRule: "evenodd",
-                              d: "M4.5 8.77962V8.17604C4.5 7.98797 4.59324 7.8129 4.75606 7.71875C5.29052 7.40971 6.58276 6.75 7.875 6.75C9.5625 6.75 9.5625 7.3125 9.5625 7.3125V7.79346C9.92732 7.74841 10.3079 7.7053 10.7038 7.66469L10.7001 7.66881C10.4768 7.91891 10.3639 8.22982 10.4289 8.58762L11.114 12.3555C11.3614 13.7163 10.9231 15.1154 9.99052 16.155C8.88458 17.3878 7.44481 19.1078 6.50883 20.6678C5.85918 21.7505 5.21964 23.4605 4.67636 25.1549C4.13086 26.8562 3.67463 28.5672 3.3961 29.6673C3.27268 30.1547 2.76181 30.4366 2.2902 30.2794L2.14425 30.2308C1.59878 29.9208 1.15999 29.4611 0.929107 28.8508C0.480791 27.6656 0 25.7647 0 23.0625C0 18 2.8125 9.5625 3.9375 9C4.07055 8.93348 4.25867 8.85908 4.5 8.77962ZM5.625 11.25C5.625 10.9393 5.87684 10.6875 6.1875 10.6875H7.3125C7.62316 10.6875 7.875 10.9393 7.875 11.25V12.142C7.875 12.2912 7.81574 12.4343 7.71025 12.5398L7.14775 13.1023C6.92808 13.3219 6.57192 13.3219 6.35225 13.1023L5.78975 12.5398C5.68426 12.4343 5.625 12.2912 5.625 12.142V11.25ZM5.625 16.3125C5.625 16.6232 5.87684 16.875 6.1875 16.875H7.3125C7.62316 16.875 7.875 16.6232 7.875 16.3125V15.4205C7.875 15.2713 7.81574 15.1282 7.71025 15.0227L7.14775 14.4602C6.92808 14.2406 6.57192 14.2406 6.35225 14.4602L5.78975 15.0227C5.68426 15.1282 5.625 15.2713 5.625 15.4205V16.3125ZM9.84375 14.3438C9.84375 14.6544 9.59191 14.9062 9.28125 14.9062H8.38924C8.24006 14.9062 8.09699 14.847 7.9915 14.7415L7.429 14.179C7.20933 13.9593 7.20933 13.6032 7.429 13.3835L7.9915 12.821C8.09699 12.7155 8.24006 12.6562 8.38925 12.6562H9.28125C9.59191 12.6562 9.84375 12.9081 9.84375 13.2188V14.3438ZM4.21875 14.9062C3.90809 14.9062 3.65625 14.6544 3.65625 14.3438V13.2188C3.65625 12.9081 3.90809 12.6562 4.21875 12.6562H5.11076C5.25994 12.6562 5.40301 12.7155 5.5085 12.821L6.071 13.3835C6.29067 13.6032 6.29067 13.9593 6.071 14.179L5.5085 14.7415C5.40301 14.847 5.25994 14.9062 5.11076 14.9062H4.21875ZM9.0297 9.05937C9.30756 8.92044 9.64544 9.03307 9.78437 9.31093L10.0656 9.87343C10.2046 10.1513 10.0919 10.4892 9.81406 10.6281C9.5362 10.767 9.19832 10.6544 9.05939 10.3765L8.77814 9.81404C8.63921 9.53618 8.75183 9.1983 9.0297 9.05937Z",
+                            (0, s.jsxs)("g", {
+                              clipPath: r,
+                              children: [
+                                (0, s.jsx)("path", {
+                                  fill: "currentColor",
+                                  fillRule: "evenodd",
+                                  clipRule: "evenodd",
+                                  d: "M4.49995 7.47C3.93745 8.0325 2.81244 10.2825 2.81244 10.2825C2.24993 11.97 0.562445 17.0325 -5.43911e-05 23.7825C-5.43911e-05 23.7825 -0.562553 28.845 3.37495 29.4075C6.832 29.8396 7.9652 25.2921 8.55982 22.9059C8.73921 22.186 8.86958 21.6629 8.99995 21.5325C9.33789 21.1945 9.67584 21.0596 9.89181 21.0058C10.5086 21.6754 11.3928 22.095 12.3749 22.095C13.3745 22.095 14.2726 21.6605 14.8906 20.97H21.1093C21.7273 21.6605 22.6254 22.095 23.6249 22.095C24.6071 22.095 25.4913 21.6754 26.1081 21.0058C26.3241 21.0596 26.662 21.1945 27 21.5325C27.1303 21.6629 27.2607 22.186 27.4401 22.9059C28.0347 25.2921 29.1679 29.8396 32.625 29.4075C36.5625 28.845 36 23.7825 36 23.7825C35.4375 17.0325 33.75 11.97 33.1875 10.2825C33.1875 10.2825 32.0625 8.03251 31.4999 7.47C31.4575 7.42758 31.3927 7.39155 31.3091 7.36121C30.794 7.09333 29.2603 6.45543 26.9999 6.9075C26.8121 7.09539 26.6869 7.28328 26.6036 7.45021C26.4971 7.46255 26.4375 7.47001 26.4375 7.47001L25.875 8.0325L24.1874 8.03251V12.5325C24.1874 13.1538 23.6838 13.6575 23.0624 13.6575H12.9374C12.3161 13.6575 11.8124 13.1538 11.8124 12.5325V8.03251L10.1249 8.03249L9.56245 7.47C9.56245 7.47 9.50277 7.46254 9.39629 7.4502C9.31296 7.28328 9.18783 7.09539 8.99995 6.9075C6.73958 6.45543 5.20586 7.09333 4.6908 7.36121C4.60721 7.39155 4.54237 7.42759 4.49995 7.47ZM14.3999 18.1575C14.3999 19.4002 13.3926 20.4075 12.1499 20.4075C10.9073 20.4075 9.89995 19.4002 9.89995 18.1575C9.89995 16.9149 10.9073 15.9075 12.1499 15.9075C13.3926 15.9075 14.3999 16.9149 14.3999 18.1575ZM23.6249 20.4075C24.8676 20.4075 25.8749 19.4002 25.8749 18.1575C25.8749 16.9149 24.8676 15.9075 23.6249 15.9075C22.3823 15.9075 21.3749 16.9149 21.3749 18.1575C21.3749 19.4002 22.3823 20.4075 23.6249 20.4075ZM30.3749 10.845C30.3749 11.4663 29.8713 11.97 29.2499 11.97C28.6286 11.97 28.1249 11.4663 28.1249 10.845C28.1249 10.2237 28.6286 9.72001 29.2499 9.72001C29.8713 9.72001 30.3749 10.2237 30.3749 10.845ZM29.2499 17.0325C29.8713 17.0325 30.3749 16.5288 30.3749 15.9075C30.3749 15.2862 29.8713 14.7825 29.2499 14.7825C28.6286 14.7825 28.1249 15.2862 28.1249 15.9075C28.1249 16.5288 28.6286 17.0325 29.2499 17.0325ZM26.7187 12.2513C27.34 12.2513 27.8437 12.7549 27.8437 13.3763C27.8437 13.9976 27.34 14.5013 26.7187 14.5013C26.0974 14.5013 25.5937 13.9976 25.5937 13.3763C25.5937 12.7549 26.0974 12.2513 26.7187 12.2513ZM32.9062 13.3763C32.9062 12.7549 32.4025 12.2513 31.7812 12.2513C31.1599 12.2513 30.6562 12.7549 30.6562 13.3763C30.6562 13.9976 31.1599 14.5013 31.7812 14.5013C32.4025 14.5013 32.9062 13.9976 32.9062 13.3763ZM5.62495 10.7825C5.62495 10.5064 5.8488 10.2825 6.12495 10.2825H7.37495C7.65109 10.2825 7.87495 10.5064 7.87495 10.7825V11.7629C7.87495 11.8955 7.82227 12.0227 7.7285 12.1165L7.1035 12.7415C6.90824 12.9367 6.59166 12.9367 6.39639 12.7415L5.77139 12.1165C5.67763 12.0227 5.62495 11.8955 5.62495 11.7629V10.7825ZM6.12495 16.47C5.8488 16.47 5.62495 16.2462 5.62495 15.97V14.9896C5.62495 14.857 5.67763 14.7298 5.77139 14.6361L6.39639 14.0111C6.59166 13.8158 6.90824 13.8158 7.1035 14.0111L7.7285 14.6361C7.82227 14.7298 7.87495 14.857 7.87495 14.9896V15.97C7.87495 16.2462 7.65109 16.47 7.37495 16.47H6.12495ZM4.1562 14.5013C3.88006 14.5013 3.6562 14.2774 3.6562 14.0013V12.7513C3.6562 12.4751 3.88006 12.2513 4.1562 12.2513H5.13659C5.2692 12.2513 5.39638 12.3039 5.49014 12.3977L6.11514 13.0227C6.31041 13.218 6.31041 13.5346 6.11514 13.7298L5.49014 14.3548C5.39638 14.4486 5.2692 14.5013 5.13659 14.5013H4.1562ZM9.8437 14.0013C9.8437 14.2774 9.61984 14.5013 9.3437 14.5013H8.36331C8.2307 14.5013 8.10352 14.4486 8.00975 14.3548L7.38475 13.7298C7.18949 13.5346 7.18949 13.218 7.38475 13.0227L8.00975 12.3977C8.10352 12.3039 8.2307 12.2513 8.36331 12.2513H9.3437C9.61984 12.2513 9.8437 12.4751 9.8437 12.7513V14.0013Z",
+                                }),
+                                (0, s.jsx)("path", {
+                                  fill: "currentColor",
+                                  d: "M23.0624 8.03251L12.9374 8.03251V12.5325H23.0624V8.03251Z",
+                                }),
+                              ],
                             }),
-                            (0, s.jsx)("path", {
-                              fill: "currentColor",
-                              d: "M18 7.3125C15.7603 7.3125 13.748 7.4035 11.9892 7.54668C11.9209 7.57082 11.8551 7.59586 11.7919 7.62185C11.4768 7.75142 11.2526 7.89452 11.1197 8.04343C10.9961 8.18189 10.9523 8.32182 10.9824 8.48699L11.5138 11.4097L12.1573 13.5129C12.4103 14.3408 13.1744 14.9062 14.0401 14.9062H21.9642C22.8281 14.9062 23.591 14.3431 23.8456 13.5176L24.4729 11.483L25.0176 8.48699C25.0463 8.32909 25.0039 8.1935 24.8798 8.05684C24.7463 7.90988 24.5214 7.76808 24.2057 7.6392C24.1215 7.60486 24.0327 7.57213 23.9398 7.54094C22.1978 7.40107 20.2096 7.3125 18 7.3125Z",
-                            }),
-                            (0, s.jsx)("path", {
-                              fill: "currentColor",
-                              fillRule: "evenodd",
-                              clipRule: "evenodd",
-                              d: "M3.37124 30.6556L3.34019 30.6503C3.62833 30.4606 3.84996 30.1665 3.94139 29.8054C4.2185 28.7109 4.67149 27.0124 5.212 25.3266C5.75474 23.6339 6.37801 21.9791 6.99117 20.9572C7.89825 19.4454 9.30802 17.7581 10.4092 16.5306C11.085 15.7773 11.5326 14.8493 11.6859 13.8677C12.0647 14.8275 12.9948 15.4687 14.0401 15.4687H21.9642C23.0065 15.4687 23.9345 14.8312 24.3153 13.8755C24.4698 14.8543 24.9168 15.7794 25.5908 16.5306C26.692 17.7581 28.1017 19.4454 29.0088 20.9572C29.622 21.9791 30.2453 23.6339 30.788 25.3266C31.3285 27.0124 31.7815 28.7109 32.0586 29.8054C32.15 30.1664 32.3717 30.4606 32.6598 30.6503L32.6288 30.6556C31.6413 30.8202 30.6725 30.275 30.3007 29.3455L28.4111 24.6216C27.8986 23.3402 26.6576 22.5 25.2775 22.5H10.7225C9.34243 22.5 8.10142 23.3402 7.58888 24.6216L5.69928 29.3455C5.3275 30.275 4.35868 30.8202 3.37124 30.6556ZM25.875 19.125C25.875 20.3676 24.8676 21.375 23.625 21.375C22.3824 21.375 21.375 20.3676 21.375 19.125C21.375 17.8824 22.3824 16.875 23.625 16.875C24.8676 16.875 25.875 17.8824 25.875 19.125ZM12.375 21.375C13.6176 21.375 14.625 20.3676 14.625 19.125C14.625 17.8824 13.6176 16.875 12.375 16.875C11.1324 16.875 10.125 17.8824 10.125 19.125C10.125 20.3676 11.1324 21.375 12.375 21.375Z",
-                            }),
-                            (0, s.jsx)("path", {
-                              fill: "currentColor",
-                              fillRule: "evenodd",
-                              clipRule: "evenodd",
-                              d: "M33.7098 30.2794L33.8557 30.2308C34.4012 29.9208 34.84 29.4611 35.0709 28.8508C35.5192 27.6656 36 25.7647 36 23.0625C36 18 33.1875 9.5625 32.0625 9C31.9295 8.93348 31.7413 8.85908 31.5 8.77962V8.17604C31.5 7.98797 31.4068 7.8129 31.2439 7.71875C30.7095 7.40971 29.4172 6.75 28.125 6.75C26.4375 6.75 26.4375 7.3125 26.4375 7.3125V7.79346C26.0683 7.74787 25.683 7.70427 25.282 7.66324L25.2962 7.67864C25.52 7.92502 25.6356 8.23268 25.5711 8.58762L25.0274 11.5776L25.0319 11.579L25.0203 11.6166L24.886 12.3555C24.6386 13.7163 25.0769 15.1154 26.0095 16.155C27.1154 17.3878 28.5552 19.1078 29.4912 20.6678C30.1408 21.7505 30.7804 23.4605 31.3236 25.1549C31.8691 26.8562 32.3254 28.5672 32.6039 29.6673C32.7273 30.1547 33.2382 30.4366 33.7098 30.2794ZM26.2156 9.31093C26.3546 9.03307 26.6924 8.92044 26.9703 9.05937C27.2482 9.1983 27.3608 9.53618 27.2219 9.81404L26.9406 10.3765C26.8017 10.6544 26.4638 10.767 26.1859 10.6281C25.9081 10.4892 25.7954 10.1513 25.9344 9.87343L26.2156 9.31093ZM30.375 15.75C30.375 16.3713 29.8713 16.875 29.25 16.875C28.6287 16.875 28.125 16.3713 28.125 15.75C28.125 15.1287 28.6287 14.625 29.25 14.625C29.8713 14.625 30.375 15.1287 30.375 15.75ZM31.5 14.625C32.1213 14.625 32.625 14.1213 32.625 13.5C32.625 12.8787 32.1213 12.375 31.5 12.375C30.8787 12.375 30.375 12.8787 30.375 13.5C30.375 14.1213 30.8787 14.625 31.5 14.625ZM30.375 11.25C30.375 11.8713 29.8713 12.375 29.25 12.375C28.6287 12.375 28.125 11.8713 28.125 11.25C28.125 10.6287 28.6287 10.125 29.25 10.125C29.8713 10.125 30.375 10.6287 30.375 11.25ZM27 14.625C27.6213 14.625 28.125 14.1213 28.125 13.5C28.125 12.8787 27.6213 12.375 27 12.375C26.3787 12.375 25.875 12.8787 25.875 13.5C25.875 14.1213 26.3787 14.625 27 14.625Z",
-                            }),
-                          ],
-                        })
-                    : "switchpro" == t
-                      ? (0, s.jsxs)("svg", {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          viewBox: "0 0 36 36",
-                          fill: "none",
-                          ...i,
-                          children: [
-                            (0, s.jsx)("path", {
-                              fill: "currentColor",
-                              d: "M3.375 30.375C0 30.375 0 25.875 0 25.875C0 25.875 0.679114 19.5689 1.65511 14.6014C2.11919 15.2235 2.72448 16.0277 3.42078 16.936C4.97674 18.9655 6.99227 21.5211 8.90421 23.7256C8.37233 24.3118 7.95006 25.2335 7.50451 26.2061C6.59778 28.1853 5.59464 30.375 3.375 30.375Z",
-                            }),
-                            (0, s.jsx)("path", {
-                              fill: "currentColor",
-                              fillRule: "evenodd",
-                              clipRule: "evenodd",
-                              d: "M9.94135 23.2037C10.5784 23.0625 11.25 23.0625 11.25 23.0625H24.75C24.75 23.0625 25.4216 23.0625 26.0586 23.2037C28.0029 20.9779 30.0841 18.3414 31.6864 16.2515C32.493 15.1994 33.1768 14.2877 33.6589 13.639C33.8038 13.444 33.9305 13.2728 34.0368 13.1288C33.6024 11.1876 33.1223 9.62156 32.625 8.99998C30.9375 6.75 24.75 6.75 24.75 6.75H11.25C11.25 6.75 5.0625 6.75 3.375 8.99998C2.87774 9.62156 2.39764 11.1876 1.96319 13.1288C2.06947 13.2728 2.19616 13.444 2.34111 13.639C2.82318 14.2877 3.50702 15.1994 4.31359 16.2515C5.91589 18.3414 7.99714 20.9779 9.94135 23.2037ZM27.5062 9.11247C28.2829 9.11247 28.9125 9.74207 28.9125 10.5187C28.9125 11.2954 28.2829 11.925 27.5062 11.925C26.7296 11.925 26.1 11.2954 26.1 10.5187C26.1 9.74207 26.7296 9.11247 27.5062 9.11247ZM8.1 15.1875C9.34264 15.1875 10.35 14.1801 10.35 12.9375C10.35 11.6949 9.34264 10.6875 8.1 10.6875C6.85736 10.6875 5.85 11.6949 5.85 12.9375C5.85 14.1801 6.85736 15.1875 8.1 15.1875ZM22.725 20.25C23.9676 20.25 24.975 19.2426 24.975 18C24.975 16.7574 23.9676 15.75 22.725 15.75C21.4824 15.75 20.475 16.7574 20.475 18C20.475 19.2426 21.4824 20.25 22.725 20.25ZM31.725 13.1063C31.725 13.8829 31.0954 14.5125 30.3187 14.5125C29.5421 14.5125 28.9125 13.8829 28.9125 13.1063C28.9125 12.3296 29.5421 11.7 30.3187 11.7C31.0954 11.7 31.725 12.3296 31.725 13.1063ZM24.6937 14.5125C25.4704 14.5125 26.1 13.8829 26.1 13.1063C26.1 12.3296 25.4704 11.7 24.6937 11.7C23.9171 11.7 23.2875 12.3296 23.2875 13.1063C23.2875 13.8829 23.9171 14.5125 24.6937 14.5125ZM28.9125 15.4688C28.9125 14.6921 28.2829 14.0625 27.5062 14.0625C26.7296 14.0625 26.1 14.6921 26.1 15.4688C26.1 16.2454 26.7296 16.875 27.5062 16.875C28.2829 16.875 28.9125 16.2454 28.9125 15.4688ZM11.5312 17.1562V16.3125C11.5312 16.0018 11.7831 15.75 12.0938 15.75H13.2188C13.5294 15.75 13.7812 16.0018 13.7812 16.3125V17.1562H14.625C14.9357 17.1562 15.1875 17.4081 15.1875 17.7188V18.8438C15.1875 19.1544 14.9357 19.4062 14.625 19.4062H13.7812V20.25C13.7812 20.5607 13.5294 20.8125 13.2188 20.8125H12.0938C11.7831 20.8125 11.5312 20.5607 11.5312 20.25V19.4062H10.6875C10.3768 19.4062 10.125 19.1544 10.125 18.8438V17.7188C10.125 17.4081 10.3768 17.1562 10.6875 17.1562H11.5312Z",
-                            }),
-                            (0, s.jsx)("path", {
-                              fill: "currentColor",
-                              d: "M34.3449 14.6014C33.8808 15.2235 33.2755 16.0277 32.5792 16.936C31.0233 18.9655 29.0077 21.5211 27.0958 23.7256C27.6277 24.3118 28.0499 25.2335 28.4955 26.2061C29.4022 28.1853 30.4054 30.375 32.625 30.375C36 30.375 36 25.875 36 25.875C36 25.875 35.3209 19.5689 34.3449 14.6014Z",
+                            (0, s.jsx)("defs", {
+                              children: (0, s.jsx)("clipPath", {
+                                id: o,
+                                children: (0, s.jsx)("rect", {
+                                  fill: "currentColor",
+                                  width: "36",
+                                  height: "36",
+                                }),
+                              }),
                             }),
                           ],
                         })
-                      : "hori" == t
-                        ? (0, s.jsx)("svg", {
+                    : "ps5" == t
+                      ? n
+                        ? (0, s.jsxs)("svg", {
                             xmlns: "http://www.w3.org/2000/svg",
-                            viewBox: "0 0 279 190",
+                            version: "1.1",
+                            id: "Layer_1",
+                            x: "0px",
+                            y: "0px",
+                            viewBox: "0 0 36 36",
+                            ...i,
+                            children: [
+                              (0, s.jsx)("path", {
+                                fill: "currentColor",
+                                opacity: "0.5",
+                                d: "M4.7,25.2c0.5-1.7,1.2-3.4,1.8-4.5c0.9-1.6,2.4-3.3,3.5-4.5c0.9-1,1.4-2.4,1.1-3.8l-0.7-3.8  c-0.1-0.4,0-0.7,0.3-0.9l0,0c-0.4,0-0.8,0.1-1.1,0.1V7.3c0,0,0-0.6-1.7-0.6c-1.3,0-2.6,0.7-3.1,1C4.6,7.8,4.5,8,4.5,8.2v0.6  C4.3,8.9,4.1,8.9,3.9,9C2.8,9.6,0,18,0,23.1c0,2.7,0.5,4.6,0.9,5.8c0.2,0.6,0.7,1.1,1.2,1.4l0.1,0c0.5,0.2,1-0.1,1.1-0.6  C3.7,28.6,4.1,26.9,4.7,25.2z M7.9,16.3c0,0.3-0.3,0.6-0.6,0.6H6.2c-0.3,0-0.6-0.3-0.6-0.6v-0.9c0-0.1,0.1-0.3,0.2-0.4l0.6-0.6  c0.2-0.2,0.6-0.2,0.8,0L7.7,15c0.1,0.1,0.2,0.2,0.2,0.4V16.3z M9,9.1c0.3-0.1,0.6,0,0.8,0.3l0.3,0.6c0.1,0.3,0,0.6-0.3,0.8  c-0.3,0.1-0.6,0-0.8-0.3L8.8,9.8C8.6,9.5,8.8,9.2,9,9.1z M8,12.8c0.1-0.1,0.2-0.2,0.4-0.2h0.9c0.3,0,0.6,0.3,0.6,0.6v1.1  c0,0.3-0.3,0.6-0.6,0.6H8.4c-0.1,0-0.3-0.1-0.4-0.2l-0.6-0.6c-0.2-0.2-0.2-0.6,0-0.8L8,12.8z M5.6,11.2c0-0.3,0.3-0.6,0.6-0.6h1.1  c0.3,0,0.6,0.3,0.6,0.6v0.9c0,0.1-0.1,0.3-0.2,0.4l-0.6,0.6c-0.2,0.2-0.6,0.2-0.8,0l-0.6-0.6c-0.1-0.1-0.2-0.2-0.2-0.4V11.2z   M3.7,13.2c0-0.3,0.3-0.6,0.6-0.6h0.9c0.1,0,0.3,0.1,0.4,0.2l0.6,0.6c0.2,0.2,0.2,0.6,0,0.8l-0.6,0.6c-0.1,0.1-0.2,0.2-0.4,0.2H4.2  c-0.3,0-0.6-0.3-0.6-0.6V13.2z",
+                              }),
+                              (0, s.jsx)("path", {
+                                fill: "currentColor",
+                                d: "M23.8,13.5l0.6-2l0.5-3c0-0.2,0-0.3-0.1-0.4c-0.1-0.1-0.4-0.3-0.7-0.4c-0.1,0-0.2-0.1-0.3-0.1c-1.7-0.1-3.7-0.2-5.9-0.2v7.6  h4C22.8,14.9,23.6,14.3,23.8,13.5z",
+                              }),
+                              (0, s.jsx)("path", {
+                                fill: "currentColor",
+                                opacity: "0.5",
+                                d: "M12,7.5c-0.1,0-0.1,0-0.2,0.1c-0.3,0.1-0.5,0.3-0.7,0.4C11,8.2,11,8.3,11,8.5l0.5,2.9l0.6,2.1  c0.3,0.8,1,1.4,1.9,1.4h4V7.3C15.8,7.3,13.7,7.4,12,7.5z",
+                              }),
+                              (0, s.jsx)("path", {
+                                fill: "currentColor",
+                                opacity: "0.5",
+                                d: "M14,15.5c-1,0-2-0.6-2.4-1.6c-0.2,1-0.6,1.9-1.3,2.7C9.3,17.8,7.9,19.4,7,21c-0.6,1-1.2,2.7-1.8,4.4  c-0.5,1.7-1,3.4-1.3,4.5c-0.1,0.4-0.3,0.7-0.6,0.8l0,0c1,0.2,2-0.4,2.3-1.3l1.9-4.7c0.5-1.3,1.8-2.1,3.1-2.1H18v-7H14z M12.4,21.4  c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S13.6,21.4,12.4,21.4z",
+                              }),
+                              (0, s.jsx)("path", {
+                                fill: "currentColor",
+                                d: "M32.1,29.8c-0.3-1.1-0.7-2.8-1.3-4.5C30.2,23.6,29.6,22,29,21c-0.9-1.5-2.3-3.2-3.4-4.4c-0.7-0.8-1.1-1.7-1.3-2.7  c-0.4,1-1.3,1.6-2.4,1.6h-4v7h7.3c1.4,0,2.6,0.8,3.1,2.1l1.9,4.7c0.4,0.9,1.3,1.5,2.3,1.3l0,0C32.4,30.5,32.2,30.2,32.1,29.8z   M23.6,21.4c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S24.9,21.4,23.6,21.4z",
+                              }),
+                              (0, s.jsx)("path", {
+                                fill: "currentColor",
+                                d: "M32.1,9c-0.1-0.1-0.3-0.1-0.6-0.2V8.2c0-0.2-0.1-0.4-0.3-0.5c-0.5-0.3-1.8-1-3.1-1c-1.7,0-1.7,0.6-1.7,0.6v0.5  c-0.4,0-0.8-0.1-1.2-0.1l0,0c0.2,0.2,0.3,0.6,0.3,0.9l-0.5,3l0,0l0,0l-0.1,0.7c-0.2,1.4,0.2,2.8,1.1,3.8c1.1,1.2,2.5,3,3.5,4.5  c0.6,1.1,1.3,2.8,1.8,4.5c0.5,1.7,1,3.4,1.3,4.5c0.1,0.5,0.6,0.8,1.1,0.6l0.1,0c0.5-0.3,1-0.8,1.2-1.4c0.4-1.2,0.9-3.1,0.9-5.8  C36,18,33.2,9.6,32.1,9z M29.2,10.1c0.6,0,1.1,0.5,1.1,1.1s-0.5,1.1-1.1,1.1s-1.1-0.5-1.1-1.1S28.6,10.1,29.2,10.1z M25.9,9.9  l0.3-0.6C26.4,9,26.7,8.9,27,9.1c0.3,0.1,0.4,0.5,0.3,0.8l-0.3,0.6c-0.1,0.3-0.5,0.4-0.8,0.3C25.9,10.5,25.8,10.2,25.9,9.9z   M27,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S27.6,14.6,27,14.6z M29.2,16.9c-0.6,0-1.1-0.5-1.1-1.1  s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S29.9,16.9,29.2,16.9z M31.5,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1  S32.1,14.6,31.5,14.6z",
+                              }),
+                            ],
+                          })
+                        : (0, s.jsxs)("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 36 36",
                             fill: "none",
                             ...i,
-                            children: (0, s.jsx)("path", {
-                              fill: "currentColor",
-                              d: "M276.557 118.966L276.377 117.587C276.377 117.575 274.727 107.206 273.807 102.575C269.077 78.747 262.957 53.718 255.596 28.199C255.448 27.679 255.207 27.26 255.037 26.988C254.957 26.869 254.867 26.759 254.766 26.658C254.766 26.658 249.118 21.029 248.778 20.67C248.038 19.889 247.266 19.08 246.438 18.549C246.297 18.459 245.557 18.139 245.288 18.01C244.495 17.629 243.956 17.379 243.556 17.209C243.546 17.17 243.536 17.129 243.527 17.09C243.496 17.01 243.476 16.94 243.447 16.86C243.426 16.819 243.406 16.78 243.386 16.751C242.585 15.05 241.675 13.36 240.796 11.72L240.505 11.159C240.386 10.94 240.263 10.751 240.073 10.591C239.891 10.402 239.675 10.28 239.565 10.21C239.545 10.2 239.276 10.03 239.165 9.98C233.625 7.511 222.858 3.701 222.846 3.701C219.718 2.41 216.278 1.191 212.038 -0.149C210.688 -0.579 208.877 -1.079 206.926 -1.079C206.127 -1.079 205.346 -0.989 204.617 -0.819C202.926 -1.13 201.287 -1.409 199.717 -1.639C199.688 -1.649 197.457 -1.94 197.197 -1.969C197.047 -1.998 196.916 -1.998 196.787 -1.998C196.057 -1.998 195.346 -1.719 194.807 -1.219C194.647 -1.1 194.516 -0.949 194.397 -0.78C194.137 -0.44 192.708 1.441 191.688 2.762C177.307 1.89 161.506 1.431 142.077 1.332C142.067 1.332 126.397 1.41 126.097 1.41C126.097 1.41 106.898 1.832 98.2062 2.192C96.7762 2.262 95.4972 2.311 94.2672 2.362C91.9492 2.442 89.7382 2.522 87.0972 2.741C86.2072 1.568 85.1272 0.138 84.3972 -0.842C84.2972 -0.981 84.1762 -1.102 84.0472 -1.201C83.5862 -1.592 82.8462 -2 81.7762 -2C81.1862 -2 80.6712 -1.873 80.2082 -1.791C79.9482 -1.744 75.8272 -1.121 74.1872 -0.82C73.4472 -0.99 72.6672 -1.08 71.8472 -1.08C70.7772 -1.08 69.6172 -0.932 68.4272 -0.631C68.3982 -0.621 68.3662 -0.621 68.3372 -0.611C64.0462 0.649 59.8762 2.1 55.9682 3.69C55.9472 3.7 55.9272 3.71 55.9072 3.719C50.6372 5.408 45.1672 7.51 39.6372 9.979C39.3262 10.12 39.0262 10.35 38.8262 10.629L38.7172 10.779C38.7172 10.779 38.4242 11.22 38.2662 11.439C36.8362 13.548 35.8972 15.429 35.4162 17.148C34.9962 17.308 34.4262 17.58 33.5252 18.009C33.2552 18.138 32.7962 18.339 32.7752 18.349C32.0862 18.599 31.5152 19.148 30.6562 20.038C30.5062 20.188 30.4062 20.308 30.3362 20.368C30.3162 20.388 28.7562 21.948 28.7562 21.948C28.0572 22.657 26.4672 24.237 26.4362 24.268C26.2172 24.508 25.8872 24.817 25.5462 25.147C24.8362 25.829 24.1162 26.518 23.6062 27.249C23.5462 27.339 23.4972 27.429 23.4472 27.519C23.4072 27.619 23.3562 27.738 23.3272 27.839C22.5872 30.359 21.8172 33.038 21.1062 35.577C19.0462 42.827 16.9662 50.677 14.5372 60.247C10.0162 78.858 5.34716 98.065 2.43616 117.526C2.43616 117.546 2.33616 118.296 2.33616 118.296C0.536161 131.837 -1.33384 145.837 1.32616 159.616C2.81616 167.177 5.24616 173.155 8.77516 177.915C12.3162 182.905 17.4162 186.677 23.0952 188.507C26.2162 189.446 29.3752 189.927 32.5352 189.927C38.5052 189.927 44.0242 188.245 48.4852 185.075C59.3742 177.235 65.4952 162.106 70.8852 148.757C71.9242 146.187 73.9052 141.437 73.9142 141.405C74.1642 140.745 74.4532 139.995 74.7732 139.266C74.9942 138.846 75.9742 137.455 76.1442 137.196C76.3042 137.016 76.9842 136.257 77.1542 136.065C79.5332 133.805 82.6482 132.481 85.7182 132.45C85.7182 132.45 85.8862 132.448 86.1632 132.427H188.003C189.583 132.427 191.153 132.427 192.714 132.437C196.464 132.447 200.064 134.107 202.343 136.857C203.105 137.796 203.663 138.607 204.083 139.377C204.083 139.377 206.903 146.246 207.954 148.848C213.263 161.996 219.294 176.897 230.013 184.858C234.542 188.178 240.152 189.938 246.254 189.938C249.404 189.938 252.574 189.458 255.674 188.518C261.225 186.717 266.235 183.077 269.805 178.247C273.616 173.108 276.225 166.667 277.555 159.099C280.077 145.726 278.288 132.117 276.557 118.966ZM59.3422 67.242C51.7742 67.242 45.6172 61.086 45.6172 53.519C45.6172 45.951 51.7732 39.796 59.3422 39.796C66.9082 39.796 73.0652 45.95 73.0652 53.519C73.0652 61.085 66.9092 67.242 59.3422 67.242ZM121.963 93.212C121.965 93.267 121.955 93.294 121.947 93.335C121.586 95.048 120.058 96.29 118.31 96.29H108.806C108.769 96.29 108.755 96.292 108.701 96.29C108.453 96.347 108.267 96.546 108.267 96.811L108.3 106.147C108.3 106.182 108.302 106.217 108.302 106.258C108.302 108.006 107.062 109.535 105.349 109.893C105.337 109.897 105.324 109.899 105.312 109.899C103.865 110.2 102.408 110.35 100.951 110.35C99.4922 110.35 98.0332 110.198 96.5842 109.897C96.5742 109.897 96.5642 109.895 96.5552 109.893C94.8522 109.538 93.6142 108.022 93.6022 106.282V106.276V96.831C93.6022 96.788 93.6062 96.802 93.6022 96.759C93.5862 96.519 93.3872 96.325 93.1512 96.29C93.1162 96.292 93.0962 96.29 93.0632 96.29H83.6492C83.6452 96.29 83.6372 96.29 83.6332 96.29C81.8832 96.29 80.3562 95.048 79.9962 93.335C79.9922 93.323 79.9922 93.312 79.9902 93.3C79.3882 90.404 79.3882 87.47 79.9922 84.575C79.9922 84.563 79.9942 84.552 79.9962 84.54C80.3552 82.829 81.8812 81.622 83.6292 81.622C83.6762 81.622 83.7112 81.626 83.7642 81.624H93.0632C93.3482 81.624 93.5752 81.433 93.6272 81.179C93.6352 81.138 93.6312 81.113 93.6312 81.079L93.6022 71.6C93.6022 69.834 94.8442 68.303 96.5552 67.946C96.6062 67.936 96.6332 67.928 96.6862 67.919C99.5162 67.345 102.403 67.343 105.235 67.919C105.309 67.939 105.309 67.939 105.35 67.948C107.063 68.303 108.26 69.835 108.26 71.583C108.26 71.63 108.27 71.665 108.268 71.714V81.066C108.268 81.375 108.518 81.625 108.825 81.625L118.198 81.594C118.255 81.594 118.272 81.588 118.311 81.588C120.059 81.588 121.532 82.83 121.891 84.541C121.901 84.59 121.914 84.621 121.936 84.697C122.51 87.527 122.541 90.38 121.963 93.212ZM139.012 41.652C132.371 41.652 126.967 36.25 126.967 29.608C126.967 22.965 132.371 17.561 139.012 17.561C145.657 17.561 151.059 22.965 151.059 29.608C151.059 36.249 145.657 41.652 139.012 41.652ZM177.129 102.644C169.563 102.644 163.406 96.488 163.406 88.921C163.406 81.353 169.562 75.198 177.129 75.198C184.697 75.198 190.854 81.352 190.854 88.921C190.854 96.488 184.698 102.644 177.129 102.644ZM201.75 62.714C196.811 62.714 192.791 58.694 192.791 53.755C192.791 48.816 196.811 44.794 201.75 44.794C206.691 44.794 210.711 48.815 210.711 53.755C210.711 58.695 206.692 62.714 201.75 62.714ZM222.356 82.827C217.417 82.827 213.397 78.811 213.397 73.87C213.397 68.929 217.417 64.909 222.356 64.909C227.297 64.909 231.316 68.929 231.316 73.87C231.316 78.811 227.297 82.827 222.356 82.827ZM222.356 41.673C217.417 41.673 213.397 37.653 213.397 32.715C213.397 27.774 217.417 23.756 222.356 23.756C227.297 23.756 231.316 27.774 231.316 32.715C231.317 37.654 227.297 41.673 222.356 41.673ZM242.657 62.714C237.715 62.714 233.696 58.694 233.696 53.755C233.696 48.816 237.716 44.794 242.657 44.794C247.598 44.794 251.618 48.815 251.618 53.755C251.618 58.695 247.598 62.714 242.657 62.714Z",
-                            }),
+                            children: [
+                              (0, s.jsx)("path", {
+                                fill: "currentColor",
+                                fillRule: "evenodd",
+                                clipRule: "evenodd",
+                                d: "M4.5 8.77962V8.17604C4.5 7.98797 4.59324 7.8129 4.75606 7.71875C5.29052 7.40971 6.58276 6.75 7.875 6.75C9.5625 6.75 9.5625 7.3125 9.5625 7.3125V7.79346C9.92732 7.74841 10.3079 7.7053 10.7038 7.66469L10.7001 7.66881C10.4768 7.91891 10.3639 8.22982 10.4289 8.58762L11.114 12.3555C11.3614 13.7163 10.9231 15.1154 9.99052 16.155C8.88458 17.3878 7.44481 19.1078 6.50883 20.6678C5.85918 21.7505 5.21964 23.4605 4.67636 25.1549C4.13086 26.8562 3.67463 28.5672 3.3961 29.6673C3.27268 30.1547 2.76181 30.4366 2.2902 30.2794L2.14425 30.2308C1.59878 29.9208 1.15999 29.4611 0.929107 28.8508C0.480791 27.6656 0 25.7647 0 23.0625C0 18 2.8125 9.5625 3.9375 9C4.07055 8.93348 4.25867 8.85908 4.5 8.77962ZM5.625 11.25C5.625 10.9393 5.87684 10.6875 6.1875 10.6875H7.3125C7.62316 10.6875 7.875 10.9393 7.875 11.25V12.142C7.875 12.2912 7.81574 12.4343 7.71025 12.5398L7.14775 13.1023C6.92808 13.3219 6.57192 13.3219 6.35225 13.1023L5.78975 12.5398C5.68426 12.4343 5.625 12.2912 5.625 12.142V11.25ZM5.625 16.3125C5.625 16.6232 5.87684 16.875 6.1875 16.875H7.3125C7.62316 16.875 7.875 16.6232 7.875 16.3125V15.4205C7.875 15.2713 7.81574 15.1282 7.71025 15.0227L7.14775 14.4602C6.92808 14.2406 6.57192 14.2406 6.35225 14.4602L5.78975 15.0227C5.68426 15.1282 5.625 15.2713 5.625 15.4205V16.3125ZM9.84375 14.3438C9.84375 14.6544 9.59191 14.9062 9.28125 14.9062H8.38924C8.24006 14.9062 8.09699 14.847 7.9915 14.7415L7.429 14.179C7.20933 13.9593 7.20933 13.6032 7.429 13.3835L7.9915 12.821C8.09699 12.7155 8.24006 12.6562 8.38925 12.6562H9.28125C9.59191 12.6562 9.84375 12.9081 9.84375 13.2188V14.3438ZM4.21875 14.9062C3.90809 14.9062 3.65625 14.6544 3.65625 14.3438V13.2188C3.65625 12.9081 3.90809 12.6562 4.21875 12.6562H5.11076C5.25994 12.6562 5.40301 12.7155 5.5085 12.821L6.071 13.3835C6.29067 13.6032 6.29067 13.9593 6.071 14.179L5.5085 14.7415C5.40301 14.847 5.25994 14.9062 5.11076 14.9062H4.21875ZM9.0297 9.05937C9.30756 8.92044 9.64544 9.03307 9.78437 9.31093L10.0656 9.87343C10.2046 10.1513 10.0919 10.4892 9.81406 10.6281C9.5362 10.767 9.19832 10.6544 9.05939 10.3765L8.77814 9.81404C8.63921 9.53618 8.75183 9.1983 9.0297 9.05937Z",
+                              }),
+                              (0, s.jsx)("path", {
+                                fill: "currentColor",
+                                d: "M18 7.3125C15.7603 7.3125 13.748 7.4035 11.9892 7.54668C11.9209 7.57082 11.8551 7.59586 11.7919 7.62185C11.4768 7.75142 11.2526 7.89452 11.1197 8.04343C10.9961 8.18189 10.9523 8.32182 10.9824 8.48699L11.5138 11.4097L12.1573 13.5129C12.4103 14.3408 13.1744 14.9062 14.0401 14.9062H21.9642C22.8281 14.9062 23.591 14.3431 23.8456 13.5176L24.4729 11.483L25.0176 8.48699C25.0463 8.32909 25.0039 8.1935 24.8798 8.05684C24.7463 7.90988 24.5214 7.76808 24.2057 7.6392C24.1215 7.60486 24.0327 7.57213 23.9398 7.54094C22.1978 7.40107 20.2096 7.3125 18 7.3125Z",
+                              }),
+                              (0, s.jsx)("path", {
+                                fill: "currentColor",
+                                fillRule: "evenodd",
+                                clipRule: "evenodd",
+                                d: "M3.37124 30.6556L3.34019 30.6503C3.62833 30.4606 3.84996 30.1665 3.94139 29.8054C4.2185 28.7109 4.67149 27.0124 5.212 25.3266C5.75474 23.6339 6.37801 21.9791 6.99117 20.9572C7.89825 19.4454 9.30802 17.7581 10.4092 16.5306C11.085 15.7773 11.5326 14.8493 11.6859 13.8677C12.0647 14.8275 12.9948 15.4687 14.0401 15.4687H21.9642C23.0065 15.4687 23.9345 14.8312 24.3153 13.8755C24.4698 14.8543 24.9168 15.7794 25.5908 16.5306C26.692 17.7581 28.1017 19.4454 29.0088 20.9572C29.622 21.9791 30.2453 23.6339 30.788 25.3266C31.3285 27.0124 31.7815 28.7109 32.0586 29.8054C32.15 30.1664 32.3717 30.4606 32.6598 30.6503L32.6288 30.6556C31.6413 30.8202 30.6725 30.275 30.3007 29.3455L28.4111 24.6216C27.8986 23.3402 26.6576 22.5 25.2775 22.5H10.7225C9.34243 22.5 8.10142 23.3402 7.58888 24.6216L5.69928 29.3455C5.3275 30.275 4.35868 30.8202 3.37124 30.6556ZM25.875 19.125C25.875 20.3676 24.8676 21.375 23.625 21.375C22.3824 21.375 21.375 20.3676 21.375 19.125C21.375 17.8824 22.3824 16.875 23.625 16.875C24.8676 16.875 25.875 17.8824 25.875 19.125ZM12.375 21.375C13.6176 21.375 14.625 20.3676 14.625 19.125C14.625 17.8824 13.6176 16.875 12.375 16.875C11.1324 16.875 10.125 17.8824 10.125 19.125C10.125 20.3676 11.1324 21.375 12.375 21.375Z",
+                              }),
+                              (0, s.jsx)("path", {
+                                fill: "currentColor",
+                                fillRule: "evenodd",
+                                clipRule: "evenodd",
+                                d: "M33.7098 30.2794L33.8557 30.2308C34.4012 29.9208 34.84 29.4611 35.0709 28.8508C35.5192 27.6656 36 25.7647 36 23.0625C36 18 33.1875 9.5625 32.0625 9C31.9295 8.93348 31.7413 8.85908 31.5 8.77962V8.17604C31.5 7.98797 31.4068 7.8129 31.2439 7.71875C30.7095 7.40971 29.4172 6.75 28.125 6.75C26.4375 6.75 26.4375 7.3125 26.4375 7.3125V7.79346C26.0683 7.74787 25.683 7.70427 25.282 7.66324L25.2962 7.67864C25.52 7.92502 25.6356 8.23268 25.5711 8.58762L25.0274 11.5776L25.0319 11.579L25.0203 11.6166L24.886 12.3555C24.6386 13.7163 25.0769 15.1154 26.0095 16.155C27.1154 17.3878 28.5552 19.1078 29.4912 20.6678C30.1408 21.7505 30.7804 23.4605 31.3236 25.1549C31.8691 26.8562 32.3254 28.5672 32.6039 29.6673C32.7273 30.1547 33.2382 30.4366 33.7098 30.2794ZM26.2156 9.31093C26.3546 9.03307 26.6924 8.92044 26.9703 9.05937C27.2482 9.1983 27.3608 9.53618 27.2219 9.81404L26.9406 10.3765C26.8017 10.6544 26.4638 10.767 26.1859 10.6281C25.9081 10.4892 25.7954 10.1513 25.9344 9.87343L26.2156 9.31093ZM30.375 15.75C30.375 16.3713 29.8713 16.875 29.25 16.875C28.6287 16.875 28.125 16.3713 28.125 15.75C28.125 15.1287 28.6287 14.625 29.25 14.625C29.8713 14.625 30.375 15.1287 30.375 15.75ZM31.5 14.625C32.1213 14.625 32.625 14.1213 32.625 13.5C32.625 12.8787 32.1213 12.375 31.5 12.375C30.8787 12.375 30.375 12.8787 30.375 13.5C30.375 14.1213 30.8787 14.625 31.5 14.625ZM30.375 11.25C30.375 11.8713 29.8713 12.375 29.25 12.375C28.6287 12.375 28.125 11.8713 28.125 11.25C28.125 10.6287 28.6287 10.125 29.25 10.125C29.8713 10.125 30.375 10.6287 30.375 11.25ZM27 14.625C27.6213 14.625 28.125 14.1213 28.125 13.5C28.125 12.8787 27.6213 12.375 27 12.375C26.3787 12.375 25.875 12.8787 25.875 13.5C25.875 14.1213 26.3787 14.625 27 14.625Z",
+                              }),
+                            ],
                           })
-                        : "gamecube" == t
+                      : "switchpro" == t
+                        ? (0, s.jsxs)("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 36 36",
+                            fill: "none",
+                            ...i,
+                            children: [
+                              (0, s.jsx)("path", {
+                                fill: "currentColor",
+                                d: "M3.375 30.375C0 30.375 0 25.875 0 25.875C0 25.875 0.679114 19.5689 1.65511 14.6014C2.11919 15.2235 2.72448 16.0277 3.42078 16.936C4.97674 18.9655 6.99227 21.5211 8.90421 23.7256C8.37233 24.3118 7.95006 25.2335 7.50451 26.2061C6.59778 28.1853 5.59464 30.375 3.375 30.375Z",
+                              }),
+                              (0, s.jsx)("path", {
+                                fill: "currentColor",
+                                fillRule: "evenodd",
+                                clipRule: "evenodd",
+                                d: "M9.94135 23.2037C10.5784 23.0625 11.25 23.0625 11.25 23.0625H24.75C24.75 23.0625 25.4216 23.0625 26.0586 23.2037C28.0029 20.9779 30.0841 18.3414 31.6864 16.2515C32.493 15.1994 33.1768 14.2877 33.6589 13.639C33.8038 13.444 33.9305 13.2728 34.0368 13.1288C33.6024 11.1876 33.1223 9.62156 32.625 8.99998C30.9375 6.75 24.75 6.75 24.75 6.75H11.25C11.25 6.75 5.0625 6.75 3.375 8.99998C2.87774 9.62156 2.39764 11.1876 1.96319 13.1288C2.06947 13.2728 2.19616 13.444 2.34111 13.639C2.82318 14.2877 3.50702 15.1994 4.31359 16.2515C5.91589 18.3414 7.99714 20.9779 9.94135 23.2037ZM27.5062 9.11247C28.2829 9.11247 28.9125 9.74207 28.9125 10.5187C28.9125 11.2954 28.2829 11.925 27.5062 11.925C26.7296 11.925 26.1 11.2954 26.1 10.5187C26.1 9.74207 26.7296 9.11247 27.5062 9.11247ZM8.1 15.1875C9.34264 15.1875 10.35 14.1801 10.35 12.9375C10.35 11.6949 9.34264 10.6875 8.1 10.6875C6.85736 10.6875 5.85 11.6949 5.85 12.9375C5.85 14.1801 6.85736 15.1875 8.1 15.1875ZM22.725 20.25C23.9676 20.25 24.975 19.2426 24.975 18C24.975 16.7574 23.9676 15.75 22.725 15.75C21.4824 15.75 20.475 16.7574 20.475 18C20.475 19.2426 21.4824 20.25 22.725 20.25ZM31.725 13.1063C31.725 13.8829 31.0954 14.5125 30.3187 14.5125C29.5421 14.5125 28.9125 13.8829 28.9125 13.1063C28.9125 12.3296 29.5421 11.7 30.3187 11.7C31.0954 11.7 31.725 12.3296 31.725 13.1063ZM24.6937 14.5125C25.4704 14.5125 26.1 13.8829 26.1 13.1063C26.1 12.3296 25.4704 11.7 24.6937 11.7C23.9171 11.7 23.2875 12.3296 23.2875 13.1063C23.2875 13.8829 23.9171 14.5125 24.6937 14.5125ZM28.9125 15.4688C28.9125 14.6921 28.2829 14.0625 27.5062 14.0625C26.7296 14.0625 26.1 14.6921 26.1 15.4688C26.1 16.2454 26.7296 16.875 27.5062 16.875C28.2829 16.875 28.9125 16.2454 28.9125 15.4688ZM11.5312 17.1562V16.3125C11.5312 16.0018 11.7831 15.75 12.0938 15.75H13.2188C13.5294 15.75 13.7812 16.0018 13.7812 16.3125V17.1562H14.625C14.9357 17.1562 15.1875 17.4081 15.1875 17.7188V18.8438C15.1875 19.1544 14.9357 19.4062 14.625 19.4062H13.7812V20.25C13.7812 20.5607 13.5294 20.8125 13.2188 20.8125H12.0938C11.7831 20.8125 11.5312 20.5607 11.5312 20.25V19.4062H10.6875C10.3768 19.4062 10.125 19.1544 10.125 18.8438V17.7188C10.125 17.4081 10.3768 17.1562 10.6875 17.1562H11.5312Z",
+                              }),
+                              (0, s.jsx)("path", {
+                                fill: "currentColor",
+                                d: "M34.3449 14.6014C33.8808 15.2235 33.2755 16.0277 32.5792 16.936C31.0233 18.9655 29.0077 21.5211 27.0958 23.7256C27.6277 24.3118 28.0499 25.2335 28.4955 26.2061C29.4022 28.1853 30.4054 30.375 32.625 30.375C36 30.375 36 25.875 36 25.875C36 25.875 35.3209 19.5689 34.3449 14.6014Z",
+                              }),
+                            ],
+                          })
+                        : "hori" == t
                           ? (0, s.jsx)("svg", {
-                              viewBox: "0 0 36 26",
-                              fill: "none",
                               xmlns: "http://www.w3.org/2000/svg",
+                              viewBox: "0 0 279 190",
+                              fill: "none",
                               ...i,
                               children: (0, s.jsx)("path", {
                                 fill: "currentColor",
-                                d: "M16.1827 0.0781004C17.6081 -0.0426998 19.0335 -0.0183863 20.4571 0.121069C23.1735 0.386856 25.7983 1.04207 28.3604 1.96775C28.3933 1.97962 28.4272 1.98854 28.4707 2.00193C28.4909 1.96528 28.5193 1.93316 28.5264 1.89744C28.5625 1.71211 28.6809 1.67014 28.8555 1.66892C29.6045 1.66433 30.3068 1.85492 30.9815 2.16013C31.946 2.59683 32.798 3.20275 33.5821 3.90916C33.6515 3.97184 33.6587 4.0229 33.6211 4.10544C33.5517 4.25805 33.4959 4.41663 33.4317 4.5781C33.8532 4.96729 34.223 5.39899 34.5352 5.87986C35.1214 6.78349 35.4179 7.78243 35.5371 8.84568C35.7968 11.1614 35.9333 13.4849 35.9893 15.8135C36.0312 17.563 35.9522 19.308 35.7452 21.0459C35.6396 21.9318 35.484 22.8097 35.1397 23.6406C34.9085 24.1987 34.6002 24.7018 34.0889 25.0547C33.3268 25.5809 31.8525 25.6874 31.0977 24.4013C30.7916 23.8796 30.6396 23.3065 30.5069 22.7236C30.164 21.2205 29.8132 19.7187 29.4649 18.2168C29.3652 17.7865 29.2627 17.3565 29.1563 16.9033C28.9289 17.0598 28.7547 17.247 28.6407 17.4707C28.4287 17.8872 28.233 18.3132 28.0498 18.7431C27.8101 19.3059 27.5943 19.8836 27.1934 20.3554C25.8977 21.881 23.8114 22.5708 21.6748 21.6279C20.7231 21.2077 19.9131 20.6151 19.417 19.6777C18.6868 18.2976 18.5895 16.8836 19.337 15.4814C19.7143 14.7738 20.2355 14.1607 20.8174 13.6045C20.9131 13.513 21.0054 13.4171 21.0987 13.3232C21.1053 13.3165 21.1081 13.3056 21.125 13.2715C19.0201 12.8742 16.9252 12.8754 14.7891 13.2461C14.8996 13.3584 14.9835 13.4489 15.0733 13.5332C15.6865 14.109 16.2264 14.7504 16.6319 15.4853C17.252 16.6089 17.2713 17.7935 16.8594 18.9892C16.4264 20.2467 15.5363 21.0751 14.3409 21.6045C13.0659 22.169 11.7798 22.2381 10.4932 21.6592C9.31318 21.1283 8.49376 20.2528 8.03227 19.0361C7.8451 18.5422 7.62199 18.0604 7.39262 17.584C7.24337 17.2739 7.00619 17.0271 6.70317 16.8174C6.62981 17.1331 6.55966 17.4332 6.49027 17.7334C6.16674 19.1315 5.84402 20.5299 5.51957 21.9277C5.38381 22.5117 5.2609 23.1001 5.1016 23.6777C4.99151 24.0771 4.78572 24.4377 4.51078 24.7549C3.77431 25.6032 2.45123 25.5179 1.74027 24.9228C1.27551 24.5338 0.998936 24.0235 0.790079 23.4697C0.51363 22.7361 0.370845 21.9703 0.275431 21.1963C0.0625906 19.4694 -0.0391154 17.7349 0.0146884 15.9961C0.0639243 14.4025 0.145108 12.8095 0.239298 11.2177C0.293428 10.303 0.380001 9.38862 0.487345 8.47849C0.644598 7.14865 1.20265 5.99432 2.10746 5.00876C2.25884 4.84393 2.42083 4.68749 2.58598 4.53611C2.65364 4.47384 2.67533 4.42018 2.62895 4.3408C2.61888 4.32371 2.61641 4.30211 2.60941 4.28318C2.46019 3.87647 2.45845 3.87395 2.80668 3.60154C3.75687 2.85869 4.77722 2.24333 5.95219 1.92283C6.43149 1.79205 6.91854 1.72986 7.41801 1.7656C7.56878 1.7763 7.65507 1.82431 7.68168 1.97263C7.6861 1.9963 7.70206 2.01729 7.70024 2.01365H7.70121C8.85964 1.6644 9.99349 1.30045 11.1397 0.982397C12.7909 0.524039 14.4739 0.222765 16.1827 0.0781004ZM11.6436 14.5459C11.5481 14.5459 11.4554 14.584 11.3877 14.6513C11.3203 14.7187 11.2825 14.8109 11.2823 14.9062V16.5761H9.60942C9.51394 16.5762 9.42124 16.6143 9.35356 16.6816C9.28616 16.749 9.24829 16.8412 9.24809 16.9365V17.8388C9.24816 17.9343 9.2861 18.0262 9.35356 18.0937C9.42128 18.1613 9.51371 18.1992 9.60942 18.1992H11.2823V19.8681C11.2823 19.9637 11.3202 20.0564 11.3877 20.124C11.4555 20.1915 11.5479 20.2294 11.6436 20.2295H12.5469L12.6182 20.2226C12.6874 20.2088 12.7521 20.1745 12.8028 20.124C12.8702 20.0564 12.9082 19.9636 12.9082 19.8681V18.1992H14.5811L14.6524 18.1924C14.7216 18.1785 14.7863 18.1443 14.837 18.0937C14.9043 18.0262 14.9423 17.9342 14.9424 17.8388V16.9365C14.9422 16.8412 14.9044 16.749 14.837 16.6816C14.7693 16.6143 14.6766 16.5762 14.5811 16.5761H12.9082V14.9062C12.908 14.8109 12.8703 14.7187 12.8028 14.6513C12.7351 14.584 12.6424 14.5459 12.5469 14.5459H11.6436ZM23.6299 16.0361C22.8392 16.0362 22.1979 16.6768 22.1973 17.4668C22.1973 18.2572 22.8389 18.8984 23.6299 18.8984C24.4208 18.8981 25.0625 18.2571 25.0625 17.4668C25.0619 16.6769 24.4204 16.0364 23.6299 16.0361ZM24.9141 10.0381C24.1027 10.0382 23.4448 10.6961 23.4444 11.5068C23.4446 12.3176 24.1026 12.9745 24.9141 12.9746C25.7257 12.9746 26.3836 12.3177 26.3838 11.5068C26.3834 10.6961 25.7256 10.0381 24.9141 10.0381ZM29.0166 7.02048C27.7316 7.02074 26.6898 8.06175 26.6895 9.34568C26.6895 10.6298 27.7314 11.6706 29.0166 11.6709C30.3019 11.6707 31.3447 10.6299 31.3448 9.34568C31.3445 8.06172 30.3017 7.0207 29.0166 7.02048ZM7.16703 7.51755C6.06435 7.51791 5.17021 8.41113 5.16996 9.51267C5.17006 10.6143 6.06425 11.5074 7.16703 11.5078C8.27012 11.5078 9.16498 10.6146 9.16508 9.51267C9.16483 8.41091 8.27002 7.51755 7.16703 7.51755ZM32.4268 5.96091C32.1773 5.89397 31.9081 5.92981 31.6358 6.12107L31.6875 6.19529L31.6348 6.12009L31.625 6.12888C31.3844 6.3549 31.2555 6.56575 31.2139 6.77048C31.1722 6.97658 31.2224 7.16409 31.3106 7.33689C31.3977 7.50721 31.5271 7.67288 31.6495 7.83396C31.7732 7.99695 31.8926 8.15982 31.9766 8.33494C32.0646 8.56462 32.0999 8.79776 32.1211 9.02244C32.1419 9.24271 32.1507 9.46898 32.1866 9.65818C32.2233 9.85102 32.2925 10.0294 32.4493 10.1562C32.6054 10.2822 32.8337 10.3456 33.1602 10.3457H33.1661C33.5007 10.3247 33.7197 10.1432 33.8516 9.88669C33.9805 9.63579 34.0277 9.31221 34.0313 8.99021C34.0348 8.66633 33.9945 8.33347 33.9434 8.05955C33.8927 7.7881 33.8297 7.56499 33.7832 7.46189C33.6977 7.27222 33.4405 6.75768 33.0733 6.37888C32.8896 6.18958 32.6713 6.02681 32.4268 5.96091ZM28.626 4.45212C28.3017 4.44856 27.9687 4.48892 27.6944 4.54001C27.4226 4.59065 27.2 4.6538 27.0967 4.70017C26.9075 4.78524 26.3924 5.04199 26.0127 5.40915C25.8229 5.59275 25.6598 5.81104 25.5938 6.05564C25.5267 6.30496 25.5625 6.57357 25.7539 6.84568L25.7627 6.85544C25.9891 7.09596 26.1994 7.22518 26.4043 7.26658C26.611 7.30822 26.7985 7.25829 26.9717 7.1699C27.1424 7.08278 27.3074 6.95331 27.4688 6.83103C27.5919 6.73776 27.7148 6.64721 27.8428 6.57224L27.9737 6.5029C28.2026 6.41596 28.4344 6.38139 28.6582 6.36033C28.8788 6.33958 29.1046 6.33173 29.294 6.29587C29.4874 6.25918 29.6659 6.18939 29.793 6.0322C29.8876 5.91515 29.947 5.75785 29.9707 5.5488L29.9834 5.32224L29.9825 5.31638C29.9613 4.98226 29.7801 4.76252 29.5235 4.63083C29.2723 4.50218 28.9483 4.45568 28.626 4.45212Z",
+                                d: "M276.557 118.966L276.377 117.587C276.377 117.575 274.727 107.206 273.807 102.575C269.077 78.747 262.957 53.718 255.596 28.199C255.448 27.679 255.207 27.26 255.037 26.988C254.957 26.869 254.867 26.759 254.766 26.658C254.766 26.658 249.118 21.029 248.778 20.67C248.038 19.889 247.266 19.08 246.438 18.549C246.297 18.459 245.557 18.139 245.288 18.01C244.495 17.629 243.956 17.379 243.556 17.209C243.546 17.17 243.536 17.129 243.527 17.09C243.496 17.01 243.476 16.94 243.447 16.86C243.426 16.819 243.406 16.78 243.386 16.751C242.585 15.05 241.675 13.36 240.796 11.72L240.505 11.159C240.386 10.94 240.263 10.751 240.073 10.591C239.891 10.402 239.675 10.28 239.565 10.21C239.545 10.2 239.276 10.03 239.165 9.98C233.625 7.511 222.858 3.701 222.846 3.701C219.718 2.41 216.278 1.191 212.038 -0.149C210.688 -0.579 208.877 -1.079 206.926 -1.079C206.127 -1.079 205.346 -0.989 204.617 -0.819C202.926 -1.13 201.287 -1.409 199.717 -1.639C199.688 -1.649 197.457 -1.94 197.197 -1.969C197.047 -1.998 196.916 -1.998 196.787 -1.998C196.057 -1.998 195.346 -1.719 194.807 -1.219C194.647 -1.1 194.516 -0.949 194.397 -0.78C194.137 -0.44 192.708 1.441 191.688 2.762C177.307 1.89 161.506 1.431 142.077 1.332C142.067 1.332 126.397 1.41 126.097 1.41C126.097 1.41 106.898 1.832 98.2062 2.192C96.7762 2.262 95.4972 2.311 94.2672 2.362C91.9492 2.442 89.7382 2.522 87.0972 2.741C86.2072 1.568 85.1272 0.138 84.3972 -0.842C84.2972 -0.981 84.1762 -1.102 84.0472 -1.201C83.5862 -1.592 82.8462 -2 81.7762 -2C81.1862 -2 80.6712 -1.873 80.2082 -1.791C79.9482 -1.744 75.8272 -1.121 74.1872 -0.82C73.4472 -0.99 72.6672 -1.08 71.8472 -1.08C70.7772 -1.08 69.6172 -0.932 68.4272 -0.631C68.3982 -0.621 68.3662 -0.621 68.3372 -0.611C64.0462 0.649 59.8762 2.1 55.9682 3.69C55.9472 3.7 55.9272 3.71 55.9072 3.719C50.6372 5.408 45.1672 7.51 39.6372 9.979C39.3262 10.12 39.0262 10.35 38.8262 10.629L38.7172 10.779C38.7172 10.779 38.4242 11.22 38.2662 11.439C36.8362 13.548 35.8972 15.429 35.4162 17.148C34.9962 17.308 34.4262 17.58 33.5252 18.009C33.2552 18.138 32.7962 18.339 32.7752 18.349C32.0862 18.599 31.5152 19.148 30.6562 20.038C30.5062 20.188 30.4062 20.308 30.3362 20.368C30.3162 20.388 28.7562 21.948 28.7562 21.948C28.0572 22.657 26.4672 24.237 26.4362 24.268C26.2172 24.508 25.8872 24.817 25.5462 25.147C24.8362 25.829 24.1162 26.518 23.6062 27.249C23.5462 27.339 23.4972 27.429 23.4472 27.519C23.4072 27.619 23.3562 27.738 23.3272 27.839C22.5872 30.359 21.8172 33.038 21.1062 35.577C19.0462 42.827 16.9662 50.677 14.5372 60.247C10.0162 78.858 5.34716 98.065 2.43616 117.526C2.43616 117.546 2.33616 118.296 2.33616 118.296C0.536161 131.837 -1.33384 145.837 1.32616 159.616C2.81616 167.177 5.24616 173.155 8.77516 177.915C12.3162 182.905 17.4162 186.677 23.0952 188.507C26.2162 189.446 29.3752 189.927 32.5352 189.927C38.5052 189.927 44.0242 188.245 48.4852 185.075C59.3742 177.235 65.4952 162.106 70.8852 148.757C71.9242 146.187 73.9052 141.437 73.9142 141.405C74.1642 140.745 74.4532 139.995 74.7732 139.266C74.9942 138.846 75.9742 137.455 76.1442 137.196C76.3042 137.016 76.9842 136.257 77.1542 136.065C79.5332 133.805 82.6482 132.481 85.7182 132.45C85.7182 132.45 85.8862 132.448 86.1632 132.427H188.003C189.583 132.427 191.153 132.427 192.714 132.437C196.464 132.447 200.064 134.107 202.343 136.857C203.105 137.796 203.663 138.607 204.083 139.377C204.083 139.377 206.903 146.246 207.954 148.848C213.263 161.996 219.294 176.897 230.013 184.858C234.542 188.178 240.152 189.938 246.254 189.938C249.404 189.938 252.574 189.458 255.674 188.518C261.225 186.717 266.235 183.077 269.805 178.247C273.616 173.108 276.225 166.667 277.555 159.099C280.077 145.726 278.288 132.117 276.557 118.966ZM59.3422 67.242C51.7742 67.242 45.6172 61.086 45.6172 53.519C45.6172 45.951 51.7732 39.796 59.3422 39.796C66.9082 39.796 73.0652 45.95 73.0652 53.519C73.0652 61.085 66.9092 67.242 59.3422 67.242ZM121.963 93.212C121.965 93.267 121.955 93.294 121.947 93.335C121.586 95.048 120.058 96.29 118.31 96.29H108.806C108.769 96.29 108.755 96.292 108.701 96.29C108.453 96.347 108.267 96.546 108.267 96.811L108.3 106.147C108.3 106.182 108.302 106.217 108.302 106.258C108.302 108.006 107.062 109.535 105.349 109.893C105.337 109.897 105.324 109.899 105.312 109.899C103.865 110.2 102.408 110.35 100.951 110.35C99.4922 110.35 98.0332 110.198 96.5842 109.897C96.5742 109.897 96.5642 109.895 96.5552 109.893C94.8522 109.538 93.6142 108.022 93.6022 106.282V106.276V96.831C93.6022 96.788 93.6062 96.802 93.6022 96.759C93.5862 96.519 93.3872 96.325 93.1512 96.29C93.1162 96.292 93.0962 96.29 93.0632 96.29H83.6492C83.6452 96.29 83.6372 96.29 83.6332 96.29C81.8832 96.29 80.3562 95.048 79.9962 93.335C79.9922 93.323 79.9922 93.312 79.9902 93.3C79.3882 90.404 79.3882 87.47 79.9922 84.575C79.9922 84.563 79.9942 84.552 79.9962 84.54C80.3552 82.829 81.8812 81.622 83.6292 81.622C83.6762 81.622 83.7112 81.626 83.7642 81.624H93.0632C93.3482 81.624 93.5752 81.433 93.6272 81.179C93.6352 81.138 93.6312 81.113 93.6312 81.079L93.6022 71.6C93.6022 69.834 94.8442 68.303 96.5552 67.946C96.6062 67.936 96.6332 67.928 96.6862 67.919C99.5162 67.345 102.403 67.343 105.235 67.919C105.309 67.939 105.309 67.939 105.35 67.948C107.063 68.303 108.26 69.835 108.26 71.583C108.26 71.63 108.27 71.665 108.268 71.714V81.066C108.268 81.375 108.518 81.625 108.825 81.625L118.198 81.594C118.255 81.594 118.272 81.588 118.311 81.588C120.059 81.588 121.532 82.83 121.891 84.541C121.901 84.59 121.914 84.621 121.936 84.697C122.51 87.527 122.541 90.38 121.963 93.212ZM139.012 41.652C132.371 41.652 126.967 36.25 126.967 29.608C126.967 22.965 132.371 17.561 139.012 17.561C145.657 17.561 151.059 22.965 151.059 29.608C151.059 36.249 145.657 41.652 139.012 41.652ZM177.129 102.644C169.563 102.644 163.406 96.488 163.406 88.921C163.406 81.353 169.562 75.198 177.129 75.198C184.697 75.198 190.854 81.352 190.854 88.921C190.854 96.488 184.698 102.644 177.129 102.644ZM201.75 62.714C196.811 62.714 192.791 58.694 192.791 53.755C192.791 48.816 196.811 44.794 201.75 44.794C206.691 44.794 210.711 48.815 210.711 53.755C210.711 58.695 206.692 62.714 201.75 62.714ZM222.356 82.827C217.417 82.827 213.397 78.811 213.397 73.87C213.397 68.929 217.417 64.909 222.356 64.909C227.297 64.909 231.316 68.929 231.316 73.87C231.316 78.811 227.297 82.827 222.356 82.827ZM222.356 41.673C217.417 41.673 213.397 37.653 213.397 32.715C213.397 27.774 217.417 23.756 222.356 23.756C227.297 23.756 231.316 27.774 231.316 32.715C231.317 37.654 227.297 41.673 222.356 41.673ZM242.657 62.714C237.715 62.714 233.696 58.694 233.696 53.755C233.696 48.816 237.716 44.794 242.657 44.794C247.598 44.794 251.618 48.815 251.618 53.755C251.618 58.695 247.598 62.714 242.657 62.714Z",
                               }),
                             })
-                          : "8bitdo_sn30" == t
-                            ? (0, s.jsxs)("svg", {
-                                viewBox: "0 0 36 36",
+                          : "gamecube" == t
+                            ? (0, s.jsx)("svg", {
+                                viewBox: "0 0 36 26",
                                 fill: "none",
                                 xmlns: "http://www.w3.org/2000/svg",
                                 ...i,
-                                children: [
-                                  (0, s.jsx)("g", {
-                                    clipPath: r,
-                                    children: (0, s.jsx)("path", {
-                                      fill: "currentColor",
-                                      d: "M11.2168 10.004C11.2667 10.004 11.3173 10.0048 11.3672 10.007C11.5907 10.0171 11.7075 10.136 11.7139 10.3605V10.5197H11.8965C15.9638 10.5197 20.0313 10.5188 24.0986 10.5226C24.239 10.5226 24.2877 10.4877 24.2861 10.3439C24.2837 10.1215 24.407 10.0095 24.6426 10.0079C25.5809 10.0033 26.5196 9.99799 27.458 10.0021C27.9951 10.0045 28.534 9.99883 29.0683 10.0431C30.1561 10.133 31.1802 10.4534 32.1455 10.965C32.3761 11.0871 32.5061 11.2487 32.4639 11.5187C32.4349 11.7034 32.5097 11.814 32.668 11.9269C34.3326 13.1148 35.399 14.705 35.8115 16.714C36.1472 18.3488 36.0615 19.9547 35.3359 21.4796C34.1526 23.9665 32.214 25.5049 29.4902 26.0021C28.1318 26.2499 26.8154 26.0562 25.5508 25.5109C25.3928 25.4427 25.2679 25.4444 25.1074 25.5246C23.4412 26.358 21.4298 25.8397 20.3681 24.3107C20.3086 24.2249 20.2442 24.1962 20.1426 24.1964C18.7123 24.1994 17.2818 24.2 15.8515 24.1964C15.7425 24.1962 15.6803 24.2342 15.6191 24.3224C14.5809 25.825 12.5275 26.3527 10.8974 25.5314C10.7321 25.4481 10.5977 25.4363 10.4277 25.5109C9.50667 25.9146 8.54336 26.127 7.53514 26.0997C5.65293 26.0489 4.00893 25.3806 2.60643 24.1339C1.39697 23.0585 0.587029 21.7317 0.197251 20.1554C-0.0490111 19.1589 -0.0459867 18.154 0.103501 17.1447C0.327081 15.6367 0.938596 14.308 1.94139 13.1603C2.37813 12.6607 2.87171 12.2238 3.42186 11.8527C3.50003 11.7999 3.52651 11.7413 3.52733 11.6505C3.52983 11.2987 3.69023 11.0423 4.00877 10.882C5.17119 10.2965 6.40354 10.0013 7.70506 10.0001C8.87562 9.99932 10.0462 10.0024 11.2168 10.004ZM12.5498 20.5704C11.7008 20.5706 11.0121 21.2596 11.0117 22.1085C11.0117 22.9578 11.7006 23.6465 12.5498 23.6466C13.399 23.6465 14.0879 22.9578 14.0879 22.1085C14.0874 21.2596 13.3988 20.5706 12.5498 20.5704ZM23.4736 20.5704C22.6246 20.5706 21.936 21.2596 21.9355 22.1085C21.9355 22.9578 22.6244 23.6465 23.4736 23.6466C24.3228 23.6465 25.0117 22.9578 25.0117 22.1085C25.0113 21.2596 24.3226 20.5706 23.4736 20.5704ZM28.6064 17.8507C27.9106 17.8511 27.3461 18.4157 27.3457 19.1115C27.3457 19.8076 27.9103 20.3728 28.6064 20.3732C29.3028 20.3732 29.8681 19.8079 29.8681 19.1115C29.8677 18.4154 29.3025 17.8507 28.6064 17.8507ZM6.7119 13.465C6.53797 13.4652 6.39674 13.6065 6.39647 13.7804V15.3331C6.39645 15.4095 6.33405 15.4707 6.25877 15.4708H4.70604C4.53211 15.471 4.39093 15.6124 4.39061 15.7863V17.1974C4.39084 17.3714 4.53205 17.5117 4.70604 17.5119H6.25877C6.33487 17.512 6.39602 17.5746 6.39647 17.6496V19.2033C6.39665 19.3773 6.53791 19.5185 6.7119 19.5187H8.12303C8.29688 19.5183 8.43731 19.3772 8.43748 19.2033V17.6496C8.43793 17.5736 8.50031 17.5122 8.57518 17.5119H10.1289C10.3027 17.5115 10.4441 17.3713 10.4443 17.1974V15.7863C10.444 15.6125 10.3027 15.4712 10.1289 15.4708H8.57518C8.50006 15.4705 8.4375 15.4094 8.43748 15.3331V13.7804C8.43721 13.6066 8.29682 13.4654 8.12303 13.465H6.7119ZM25.5478 15.2316C24.8521 15.2321 24.2875 15.7966 24.2871 16.4923C24.2871 17.1884 24.8519 17.7536 25.5478 17.754C26.2442 17.754 26.8095 17.1887 26.8096 16.4923C26.8091 15.7963 26.244 15.2316 25.5478 15.2316ZM31.667 15.2316C30.9711 15.2319 30.4067 15.7965 30.4062 16.4923C30.4063 17.1885 30.9709 17.7537 31.667 17.754C32.3633 17.7539 32.9287 17.1886 32.9287 16.4923C32.9283 15.7964 32.363 15.2317 31.667 15.2316ZM28.6064 12.5988C27.9106 12.5991 27.3461 13.1637 27.3457 13.8595C27.3458 14.5556 27.9104 15.1209 28.6064 15.1212C29.3027 15.1212 29.868 14.5558 29.8681 13.8595C29.8677 13.1635 29.3025 12.5988 28.6064 12.5988Z",
-                                    }),
-                                  }),
-                                  (0, s.jsx)("defs", {
-                                    children: (0, s.jsx)("clipPath", {
-                                      id: o,
-                                      children: (0, s.jsx)("rect", {
-                                        fill: "currentColor",
-                                        width: "36",
-                                        height: "36",
-                                      }),
-                                    }),
-                                  }),
-                                ],
+                                children: (0, s.jsx)("path", {
+                                  fill: "currentColor",
+                                  d: "M16.1827 0.0781004C17.6081 -0.0426998 19.0335 -0.0183863 20.4571 0.121069C23.1735 0.386856 25.7983 1.04207 28.3604 1.96775C28.3933 1.97962 28.4272 1.98854 28.4707 2.00193C28.4909 1.96528 28.5193 1.93316 28.5264 1.89744C28.5625 1.71211 28.6809 1.67014 28.8555 1.66892C29.6045 1.66433 30.3068 1.85492 30.9815 2.16013C31.946 2.59683 32.798 3.20275 33.5821 3.90916C33.6515 3.97184 33.6587 4.0229 33.6211 4.10544C33.5517 4.25805 33.4959 4.41663 33.4317 4.5781C33.8532 4.96729 34.223 5.39899 34.5352 5.87986C35.1214 6.78349 35.4179 7.78243 35.5371 8.84568C35.7968 11.1614 35.9333 13.4849 35.9893 15.8135C36.0312 17.563 35.9522 19.308 35.7452 21.0459C35.6396 21.9318 35.484 22.8097 35.1397 23.6406C34.9085 24.1987 34.6002 24.7018 34.0889 25.0547C33.3268 25.5809 31.8525 25.6874 31.0977 24.4013C30.7916 23.8796 30.6396 23.3065 30.5069 22.7236C30.164 21.2205 29.8132 19.7187 29.4649 18.2168C29.3652 17.7865 29.2627 17.3565 29.1563 16.9033C28.9289 17.0598 28.7547 17.247 28.6407 17.4707C28.4287 17.8872 28.233 18.3132 28.0498 18.7431C27.8101 19.3059 27.5943 19.8836 27.1934 20.3554C25.8977 21.881 23.8114 22.5708 21.6748 21.6279C20.7231 21.2077 19.9131 20.6151 19.417 19.6777C18.6868 18.2976 18.5895 16.8836 19.337 15.4814C19.7143 14.7738 20.2355 14.1607 20.8174 13.6045C20.9131 13.513 21.0054 13.4171 21.0987 13.3232C21.1053 13.3165 21.1081 13.3056 21.125 13.2715C19.0201 12.8742 16.9252 12.8754 14.7891 13.2461C14.8996 13.3584 14.9835 13.4489 15.0733 13.5332C15.6865 14.109 16.2264 14.7504 16.6319 15.4853C17.252 16.6089 17.2713 17.7935 16.8594 18.9892C16.4264 20.2467 15.5363 21.0751 14.3409 21.6045C13.0659 22.169 11.7798 22.2381 10.4932 21.6592C9.31318 21.1283 8.49376 20.2528 8.03227 19.0361C7.8451 18.5422 7.62199 18.0604 7.39262 17.584C7.24337 17.2739 7.00619 17.0271 6.70317 16.8174C6.62981 17.1331 6.55966 17.4332 6.49027 17.7334C6.16674 19.1315 5.84402 20.5299 5.51957 21.9277C5.38381 22.5117 5.2609 23.1001 5.1016 23.6777C4.99151 24.0771 4.78572 24.4377 4.51078 24.7549C3.77431 25.6032 2.45123 25.5179 1.74027 24.9228C1.27551 24.5338 0.998936 24.0235 0.790079 23.4697C0.51363 22.7361 0.370845 21.9703 0.275431 21.1963C0.0625906 19.4694 -0.0391154 17.7349 0.0146884 15.9961C0.0639243 14.4025 0.145108 12.8095 0.239298 11.2177C0.293428 10.303 0.380001 9.38862 0.487345 8.47849C0.644598 7.14865 1.20265 5.99432 2.10746 5.00876C2.25884 4.84393 2.42083 4.68749 2.58598 4.53611C2.65364 4.47384 2.67533 4.42018 2.62895 4.3408C2.61888 4.32371 2.61641 4.30211 2.60941 4.28318C2.46019 3.87647 2.45845 3.87395 2.80668 3.60154C3.75687 2.85869 4.77722 2.24333 5.95219 1.92283C6.43149 1.79205 6.91854 1.72986 7.41801 1.7656C7.56878 1.7763 7.65507 1.82431 7.68168 1.97263C7.6861 1.9963 7.70206 2.01729 7.70024 2.01365H7.70121C8.85964 1.6644 9.99349 1.30045 11.1397 0.982397C12.7909 0.524039 14.4739 0.222765 16.1827 0.0781004ZM11.6436 14.5459C11.5481 14.5459 11.4554 14.584 11.3877 14.6513C11.3203 14.7187 11.2825 14.8109 11.2823 14.9062V16.5761H9.60942C9.51394 16.5762 9.42124 16.6143 9.35356 16.6816C9.28616 16.749 9.24829 16.8412 9.24809 16.9365V17.8388C9.24816 17.9343 9.2861 18.0262 9.35356 18.0937C9.42128 18.1613 9.51371 18.1992 9.60942 18.1992H11.2823V19.8681C11.2823 19.9637 11.3202 20.0564 11.3877 20.124C11.4555 20.1915 11.5479 20.2294 11.6436 20.2295H12.5469L12.6182 20.2226C12.6874 20.2088 12.7521 20.1745 12.8028 20.124C12.8702 20.0564 12.9082 19.9636 12.9082 19.8681V18.1992H14.5811L14.6524 18.1924C14.7216 18.1785 14.7863 18.1443 14.837 18.0937C14.9043 18.0262 14.9423 17.9342 14.9424 17.8388V16.9365C14.9422 16.8412 14.9044 16.749 14.837 16.6816C14.7693 16.6143 14.6766 16.5762 14.5811 16.5761H12.9082V14.9062C12.908 14.8109 12.8703 14.7187 12.8028 14.6513C12.7351 14.584 12.6424 14.5459 12.5469 14.5459H11.6436ZM23.6299 16.0361C22.8392 16.0362 22.1979 16.6768 22.1973 17.4668C22.1973 18.2572 22.8389 18.8984 23.6299 18.8984C24.4208 18.8981 25.0625 18.2571 25.0625 17.4668C25.0619 16.6769 24.4204 16.0364 23.6299 16.0361ZM24.9141 10.0381C24.1027 10.0382 23.4448 10.6961 23.4444 11.5068C23.4446 12.3176 24.1026 12.9745 24.9141 12.9746C25.7257 12.9746 26.3836 12.3177 26.3838 11.5068C26.3834 10.6961 25.7256 10.0381 24.9141 10.0381ZM29.0166 7.02048C27.7316 7.02074 26.6898 8.06175 26.6895 9.34568C26.6895 10.6298 27.7314 11.6706 29.0166 11.6709C30.3019 11.6707 31.3447 10.6299 31.3448 9.34568C31.3445 8.06172 30.3017 7.0207 29.0166 7.02048ZM7.16703 7.51755C6.06435 7.51791 5.17021 8.41113 5.16996 9.51267C5.17006 10.6143 6.06425 11.5074 7.16703 11.5078C8.27012 11.5078 9.16498 10.6146 9.16508 9.51267C9.16483 8.41091 8.27002 7.51755 7.16703 7.51755ZM32.4268 5.96091C32.1773 5.89397 31.9081 5.92981 31.6358 6.12107L31.6875 6.19529L31.6348 6.12009L31.625 6.12888C31.3844 6.3549 31.2555 6.56575 31.2139 6.77048C31.1722 6.97658 31.2224 7.16409 31.3106 7.33689C31.3977 7.50721 31.5271 7.67288 31.6495 7.83396C31.7732 7.99695 31.8926 8.15982 31.9766 8.33494C32.0646 8.56462 32.0999 8.79776 32.1211 9.02244C32.1419 9.24271 32.1507 9.46898 32.1866 9.65818C32.2233 9.85102 32.2925 10.0294 32.4493 10.1562C32.6054 10.2822 32.8337 10.3456 33.1602 10.3457H33.1661C33.5007 10.3247 33.7197 10.1432 33.8516 9.88669C33.9805 9.63579 34.0277 9.31221 34.0313 8.99021C34.0348 8.66633 33.9945 8.33347 33.9434 8.05955C33.8927 7.7881 33.8297 7.56499 33.7832 7.46189C33.6977 7.27222 33.4405 6.75768 33.0733 6.37888C32.8896 6.18958 32.6713 6.02681 32.4268 5.96091ZM28.626 4.45212C28.3017 4.44856 27.9687 4.48892 27.6944 4.54001C27.4226 4.59065 27.2 4.6538 27.0967 4.70017C26.9075 4.78524 26.3924 5.04199 26.0127 5.40915C25.8229 5.59275 25.6598 5.81104 25.5938 6.05564C25.5267 6.30496 25.5625 6.57357 25.7539 6.84568L25.7627 6.85544C25.9891 7.09596 26.1994 7.22518 26.4043 7.26658C26.611 7.30822 26.7985 7.25829 26.9717 7.1699C27.1424 7.08278 27.3074 6.95331 27.4688 6.83103C27.5919 6.73776 27.7148 6.64721 27.8428 6.57224L27.9737 6.5029C28.2026 6.41596 28.4344 6.38139 28.6582 6.36033C28.8788 6.33958 29.1046 6.33173 29.294 6.29587C29.4874 6.25918 29.6659 6.18939 29.793 6.0322C29.8876 5.91515 29.947 5.75785 29.9707 5.5488L29.9834 5.32224L29.9825 5.31638C29.9613 4.98226 29.7801 4.76252 29.5235 4.63083C29.2723 4.50218 28.9483 4.45568 28.626 4.45212Z",
+                                }),
                               })
-                            : "8bitdo_pro" == t
+                            : "8bitdo_sn30" == t
                               ? (0, s.jsxs)("svg", {
                                   viewBox: "0 0 36 36",
                                   fill: "none",
@@ -111680,7 +111733,7 @@ var CLSTAMP = "10961770";
                                       clipPath: r,
                                       children: (0, s.jsx)("path", {
                                         fill: "currentColor",
-                                        d: "M27.7734 6.01249C28.9788 6.03744 30.1205 6.33782 31.1855 6.91483C31.3082 6.98141 31.3941 7.0615 31.4326 7.16971H31.0996V7.17362H31.4335C31.4524 7.22852 31.4594 7.29064 31.4521 7.3621C31.4407 7.47552 31.4843 7.54171 31.5859 7.60721C33.2663 8.68591 34.2958 10.2253 34.7167 12.1609C35.0706 13.7884 35.3234 15.4352 35.5361 17.0877C35.7469 18.7244 35.8609 20.3682 35.9335 22.0154C35.9671 22.7781 36.004 23.542 35.9999 24.3055C35.9944 25.303 35.8569 26.2831 35.4531 27.2088C34.9562 28.347 34.1485 29.1542 32.9384 29.5017C31.6727 29.8653 30.6028 29.5341 29.7509 28.5262C29.2715 27.9585 28.9464 27.3013 28.7177 26.6014C28.5088 25.9616 28.344 25.3077 28.1474 24.6639C27.6047 22.8866 26.5032 21.5482 24.9238 20.5887C24.9213 20.5871 24.9184 20.5862 24.916 20.5848L25.1503 20.2723L25.1718 20.2469L25.1728 20.2478L25.1904 20.2273C25.2862 20.2759 25.3768 20.3034 25.4365 20.323L25.7773 20.4256C25.8937 20.4577 26.012 20.487 26.124 20.5115L26.4384 20.573C27.1766 20.6984 27.9391 20.7019 28.6767 20.5828L28.6757 20.5818C31.2157 20.1944 33.4046 18.277 34.166 15.8308L34.165 15.8299C35.6102 11.3723 32.3235 6.65548 27.5917 6.65506V6.65409H8.4062V6.65506C5.37767 6.6497 2.70335 8.67037 1.81049 11.5506C1.00503 14.1045 1.74193 16.9571 3.68745 18.7879L3.87983 18.9617C4.91492 19.8713 6.23159 20.462 7.60053 20.6228H7.60151C8.67153 20.7459 9.79336 20.6306 10.8066 20.2273C10.8114 20.2327 10.8176 20.2378 10.8222 20.243L10.8886 20.1834L10.8222 20.2439L10.8271 20.2488L10.833 20.2557C10.8366 20.2598 10.842 20.2657 10.8476 20.2723C10.8594 20.2862 10.8744 20.3052 10.8915 20.326C10.9263 20.3681 10.9694 20.4197 11.0126 20.4724C11.0418 20.508 11.072 20.5445 11.0996 20.5779C11.0938 20.581 11.0879 20.5842 11.082 20.5877C9.89406 21.2973 8.98056 22.2657 8.32905 23.4842C8.03441 24.0355 7.85478 24.6298 7.69721 25.2303C7.50206 25.9733 7.29989 26.7134 6.96284 27.408C6.64138 28.0702 6.24258 28.6754 5.63471 29.1131C4.81567 29.7026 3.91714 29.77 2.98042 29.4724C1.77578 29.0895 0.984754 28.2619 0.511667 27.1101C0.206212 26.3666 0.0705524 25.5865 0.0243618 24.7879C-0.046774 23.562 0.0538517 22.3407 0.122018 21.1189C0.161122 20.4188 0.195563 19.7179 0.265573 19.0203C0.368012 18.003 0.474778 16.9846 0.627877 15.9744C0.821202 14.6994 1.02971 13.4249 1.29194 12.1629C1.69465 10.2234 2.74378 8.70172 4.4062 7.61405C4.51078 7.54554 4.57148 7.47897 4.55659 7.3494C4.53428 7.15242 4.62772 7.02617 4.79975 6.93046C5.59838 6.48682 6.45226 6.20819 7.35444 6.09159C7.80468 6.03349 8.26203 6.01478 8.71674 6.00956C9.68191 5.99838 10.6481 6.00686 11.6132 6.0076C11.6623 6.00761 11.7116 6.00867 11.7607 6.01053C12.0309 6.02025 12.1172 6.09801 12.1552 6.37186V6.37088H23.8154C23.8752 6.26485 23.9075 6.14249 23.9863 6.08768C24.0726 6.02812 24.2031 6.01093 24.3144 6.01053C25.4672 6.00532 26.621 5.98866 27.7734 6.01249ZM27.5878 7.23026L27.9902 7.24296C31.9701 7.49058 34.7257 11.4172 33.7294 15.2713L33.6171 15.656L33.6152 15.659C32.9396 17.8298 31.0302 19.5502 28.8037 19.9764L28.5878 20.0135H28.5849C27.9099 20.1225 27.211 20.1195 26.5351 20.0047L26.247 19.949C26.0499 19.9059 25.8293 19.8435 25.6337 19.7801C26.2276 19.1014 26.5334 18.1831 26.4589 17.283H26.4599C26.3463 15.5899 24.908 14.1684 23.207 14.1199H23.041C21.3039 14.1281 19.8318 15.5696 19.7148 17.283H19.7158C19.6765 17.7706 19.7462 18.2662 19.914 18.7244V18.7254L19.9277 18.7674L19.9287 18.7713L19.9423 18.8123L19.9521 18.8435L19.9648 18.8963L19.9716 18.9441H19.9726L19.9765 18.9793V18.9812L19.9804 19.0144L19.9824 19.0428V19.0603L19.9814 19.073L19.9804 19.0955V19.1033L19.9277 19.2693L20.2021 19.3562L20.2548 19.3728V19.4764H20.2568L20.3339 19.3982L20.4765 19.4432L20.5292 19.2781L20.5302 19.2693L20.5322 19.2703L20.5341 19.2644L20.5371 19.2488L20.538 19.2469L20.5507 19.1873L20.5527 19.1697V19.1668L20.5546 19.1473L20.5566 19.1189V19.1033L20.5576 19.0916L20.5585 19.0701V19.0428L20.5576 19.0242L20.5537 18.9627L20.5527 18.9471L20.5449 18.8807L20.5429 18.867L20.5312 18.7937L20.5263 18.7683L20.5068 18.6902H20.5078L20.5039 18.6775L20.4921 18.6385L20.4892 18.6307L20.4755 18.5896L20.4628 18.5506H20.4638L20.4589 18.5379L20.4091 18.3914C20.3029 18.0482 20.2617 17.6837 20.291 17.326L20.0136 17.3025L20.289 17.3221C20.3864 15.8966 21.6228 14.7 23.0488 14.6961L23.0546 14.6951C24.5067 14.66 25.787 15.8694 25.8847 17.3211V17.3269C25.9568 18.1839 25.6106 19.0661 24.9697 19.6355L25.1601 19.8504L24.9687 19.6346L24.9609 19.6433L24.9042 19.698L24.8515 19.7478L24.8437 19.7557L24.7949 19.8064L24.791 19.8113L24.748 19.8582L24.7451 19.8611L24.7128 19.8982L24.6962 19.9168L24.4111 20.2976L24.3974 20.3142L24.3857 20.3299L24.3935 20.3357L24.3544 20.3758L24.3525 20.3797L24.5966 20.5017L24.6025 20.5125L24.6415 20.5906C23.0992 21.3439 21.1855 20.8778 20.166 19.4949C20.1056 19.4133 20.0441 19.3832 19.9443 19.3836C18.6485 19.3869 17.3524 19.387 16.0566 19.3855C15.9769 19.3855 15.9142 19.394 15.8613 19.4685C14.9119 20.8074 12.9767 21.3814 11.3662 20.5935L11.4335 20.5242L11.6328 20.3162C11.6285 20.3115 11.6106 20.2916 11.5771 20.2517C11.5429 20.211 11.5006 20.1592 11.458 20.1072C11.3816 20.0142 11.2904 19.9026 11.2539 19.8621H11.2548C11.1885 19.787 11.1037 19.7023 11.0273 19.6346H11.0263C10.3864 19.0651 10.0392 18.1831 10.1113 17.3269L10.1123 17.324C10.2204 15.8833 11.4308 14.7105 12.872 14.6961L12.874 14.6951C14.3453 14.6707 15.5979 15.855 15.708 17.324V17.325C15.7357 17.6841 15.6956 18.0487 15.5898 18.3914L15.54 18.5379L15.538 18.5428C15.4742 18.7262 15.4041 18.9852 15.4599 19.2488L15.7421 19.1883L15.7695 19.1824L15.7441 19.1902L15.4687 19.2752L15.5195 19.4402L16.0703 19.2723L16.0214 19.114C16.0052 19.0154 16.0275 18.8903 16.08 18.7381C16.2308 18.3318 16.3013 17.8967 16.291 17.4646L16.2822 17.2801C16.15 15.5194 14.6532 14.0912 12.8662 14.1199H12.8642C11.1679 14.1378 9.75791 15.4668 9.55366 17.1199L9.53706 17.281C9.46215 18.1795 9.76702 19.0975 10.3583 19.7762C9.50533 20.0699 8.57082 20.1545 7.66694 20.0506H7.66596C6.49271 19.9124 5.35766 19.4282 4.4394 18.6814L4.25874 18.5281H4.25776C2.34413 16.8601 1.59604 14.1449 2.35932 11.7244L2.3603 11.7224L2.44135 11.4773C3.33297 8.9628 5.72246 7.22514 8.4062 7.23026H27.5878ZM12.8828 15.7625C12.0828 15.7627 11.4339 16.4123 11.4335 17.2127C11.4335 18.0134 12.0825 18.6627 12.8828 18.6629C13.6832 18.6629 14.332 18.0136 14.332 17.2127C14.3316 16.4121 13.6829 15.7625 12.8828 15.7625ZM23.1162 15.7625C22.3163 15.7629 21.6673 16.4123 21.6669 17.2127C21.6669 18.0133 22.316 18.6625 23.1162 18.6629C23.9166 18.6629 24.5654 18.0136 24.5654 17.2127C24.565 16.4121 23.9163 15.7625 23.1162 15.7625ZM27.8808 13.1892C27.1708 13.1893 26.5948 13.7659 26.5947 14.4764C26.5947 15.1868 27.1708 15.7624 27.8808 15.7625C28.5908 15.7623 29.1669 15.1868 29.1669 14.4764C29.1668 13.766 28.5908 13.1894 27.8808 13.1892ZM7.45405 9.20682C7.28806 9.20699 7.1525 9.34261 7.15229 9.50858V10.9764C7.15205 11.0454 7.09514 11.1031 7.02631 11.1033H5.55952C5.39342 11.1034 5.25786 11.239 5.25776 11.4051V12.7381C5.258 12.904 5.39351 13.0397 5.55952 13.0398H7.02631C7.09523 13.04 7.15219 13.0977 7.15229 13.1668V14.6346C7.15264 14.8004 7.28815 14.9362 7.45405 14.9363H8.78706C8.9528 14.936 9.08749 14.8003 9.08784 14.6346V13.1668C9.08794 13.0976 9.14581 13.0399 9.21479 13.0398H10.6816C10.8474 13.0395 10.9821 12.9039 10.9824 12.7381V11.4051C10.9823 11.2401 10.8491 11.1052 10.6845 11.1033L10.6796 11.1014H9.21284C9.14395 11.1013 9.08808 11.0454 9.08784 10.9764V9.50858C9.08763 9.34273 8.95288 9.20717 8.78706 9.20682H7.45405ZM25.0615 10.7459C24.3517 10.7462 23.7756 11.3228 23.7753 12.033C23.7754 12.7433 24.3516 13.3188 25.0615 13.3191C25.7716 13.3191 26.3475 12.7435 26.3476 12.033C26.3474 11.3226 25.7715 10.7459 25.0615 10.7459ZM30.6874 10.7459C29.9775 10.746 29.4016 11.3227 29.4013 12.033C29.4014 12.7435 29.9774 13.319 30.6874 13.3191C31.3976 13.3191 31.9735 12.7435 31.9736 12.033C31.9733 11.3226 31.3974 10.7459 30.6874 10.7459ZM27.8808 8.28788C27.1708 8.28797 26.5948 8.86454 26.5947 9.57499C26.5949 10.2853 27.1709 10.861 27.8808 10.8611C28.5907 10.8609 29.1667 10.2852 29.1669 9.57499C29.1668 8.8646 28.5908 8.28807 27.8808 8.28788Z",
+                                        d: "M11.2168 10.004C11.2667 10.004 11.3173 10.0048 11.3672 10.007C11.5907 10.0171 11.7075 10.136 11.7139 10.3605V10.5197H11.8965C15.9638 10.5197 20.0313 10.5188 24.0986 10.5226C24.239 10.5226 24.2877 10.4877 24.2861 10.3439C24.2837 10.1215 24.407 10.0095 24.6426 10.0079C25.5809 10.0033 26.5196 9.99799 27.458 10.0021C27.9951 10.0045 28.534 9.99883 29.0683 10.0431C30.1561 10.133 31.1802 10.4534 32.1455 10.965C32.3761 11.0871 32.5061 11.2487 32.4639 11.5187C32.4349 11.7034 32.5097 11.814 32.668 11.9269C34.3326 13.1148 35.399 14.705 35.8115 16.714C36.1472 18.3488 36.0615 19.9547 35.3359 21.4796C34.1526 23.9665 32.214 25.5049 29.4902 26.0021C28.1318 26.2499 26.8154 26.0562 25.5508 25.5109C25.3928 25.4427 25.2679 25.4444 25.1074 25.5246C23.4412 26.358 21.4298 25.8397 20.3681 24.3107C20.3086 24.2249 20.2442 24.1962 20.1426 24.1964C18.7123 24.1994 17.2818 24.2 15.8515 24.1964C15.7425 24.1962 15.6803 24.2342 15.6191 24.3224C14.5809 25.825 12.5275 26.3527 10.8974 25.5314C10.7321 25.4481 10.5977 25.4363 10.4277 25.5109C9.50667 25.9146 8.54336 26.127 7.53514 26.0997C5.65293 26.0489 4.00893 25.3806 2.60643 24.1339C1.39697 23.0585 0.587029 21.7317 0.197251 20.1554C-0.0490111 19.1589 -0.0459867 18.154 0.103501 17.1447C0.327081 15.6367 0.938596 14.308 1.94139 13.1603C2.37813 12.6607 2.87171 12.2238 3.42186 11.8527C3.50003 11.7999 3.52651 11.7413 3.52733 11.6505C3.52983 11.2987 3.69023 11.0423 4.00877 10.882C5.17119 10.2965 6.40354 10.0013 7.70506 10.0001C8.87562 9.99932 10.0462 10.0024 11.2168 10.004ZM12.5498 20.5704C11.7008 20.5706 11.0121 21.2596 11.0117 22.1085C11.0117 22.9578 11.7006 23.6465 12.5498 23.6466C13.399 23.6465 14.0879 22.9578 14.0879 22.1085C14.0874 21.2596 13.3988 20.5706 12.5498 20.5704ZM23.4736 20.5704C22.6246 20.5706 21.936 21.2596 21.9355 22.1085C21.9355 22.9578 22.6244 23.6465 23.4736 23.6466C24.3228 23.6465 25.0117 22.9578 25.0117 22.1085C25.0113 21.2596 24.3226 20.5706 23.4736 20.5704ZM28.6064 17.8507C27.9106 17.8511 27.3461 18.4157 27.3457 19.1115C27.3457 19.8076 27.9103 20.3728 28.6064 20.3732C29.3028 20.3732 29.8681 19.8079 29.8681 19.1115C29.8677 18.4154 29.3025 17.8507 28.6064 17.8507ZM6.7119 13.465C6.53797 13.4652 6.39674 13.6065 6.39647 13.7804V15.3331C6.39645 15.4095 6.33405 15.4707 6.25877 15.4708H4.70604C4.53211 15.471 4.39093 15.6124 4.39061 15.7863V17.1974C4.39084 17.3714 4.53205 17.5117 4.70604 17.5119H6.25877C6.33487 17.512 6.39602 17.5746 6.39647 17.6496V19.2033C6.39665 19.3773 6.53791 19.5185 6.7119 19.5187H8.12303C8.29688 19.5183 8.43731 19.3772 8.43748 19.2033V17.6496C8.43793 17.5736 8.50031 17.5122 8.57518 17.5119H10.1289C10.3027 17.5115 10.4441 17.3713 10.4443 17.1974V15.7863C10.444 15.6125 10.3027 15.4712 10.1289 15.4708H8.57518C8.50006 15.4705 8.4375 15.4094 8.43748 15.3331V13.7804C8.43721 13.6066 8.29682 13.4654 8.12303 13.465H6.7119ZM25.5478 15.2316C24.8521 15.2321 24.2875 15.7966 24.2871 16.4923C24.2871 17.1884 24.8519 17.7536 25.5478 17.754C26.2442 17.754 26.8095 17.1887 26.8096 16.4923C26.8091 15.7963 26.244 15.2316 25.5478 15.2316ZM31.667 15.2316C30.9711 15.2319 30.4067 15.7965 30.4062 16.4923C30.4063 17.1885 30.9709 17.7537 31.667 17.754C32.3633 17.7539 32.9287 17.1886 32.9287 16.4923C32.9283 15.7964 32.363 15.2317 31.667 15.2316ZM28.6064 12.5988C27.9106 12.5991 27.3461 13.1637 27.3457 13.8595C27.3458 14.5556 27.9104 15.1209 28.6064 15.1212C29.3027 15.1212 29.868 14.5558 29.8681 13.8595C29.8677 13.1635 29.3025 12.5988 28.6064 12.5988Z",
                                       }),
                                     }),
                                     (0, s.jsx)("defs", {
@@ -111695,7 +111748,7 @@ var CLSTAMP = "10961770";
                                     }),
                                   ],
                                 })
-                              : "8bitdo_ultimate" == t
+                              : "8bitdo_pro" == t
                                 ? (0, s.jsxs)("svg", {
                                     viewBox: "0 0 36 36",
                                     fill: "none",
@@ -111706,7 +111759,7 @@ var CLSTAMP = "10961770";
                                         clipPath: r,
                                         children: (0, s.jsx)("path", {
                                           fill: "currentColor",
-                                          d: "M25.3865 5.11825C26.755 4.90005 28.1094 4.97923 29.4236 5.39462C30.4285 5.71216 31.3614 6.19989 32.1726 6.89462C32.3276 7.02768 32.4119 7.17257 32.408 7.37704C32.4056 7.49827 32.4255 7.61963 32.4314 7.69345C32.5721 7.80286 32.6969 7.87505 32.7898 7.97567C33.7307 8.99583 34.2022 10.2489 34.5398 11.5626C34.9787 13.2716 35.2054 15.0185 35.4158 16.7657C35.5919 18.2301 35.751 19.6978 35.8796 21.1671C36.0269 22.851 36.0917 24.5378 35.7634 26.212C35.5761 27.1675 35.2593 28.0684 34.5789 28.7999C33.9668 29.458 33.1821 29.8296 32.3533 30.1241C31.7359 30.3438 31.5771 30.317 31.2107 29.7599C30.651 28.9095 30.1303 28.0326 29.5935 27.1671C28.9629 26.149 28.3487 25.1202 27.6961 24.1163C27.2547 23.4372 26.6937 22.8717 25.8972 22.6016C25.2789 22.3918 24.6367 22.3551 23.991 22.3556C19.8645 22.3575 15.7376 22.3624 11.6111 22.3614C10.178 22.3614 9.04967 22.9302 8.28492 24.1524C7.43808 25.5056 6.61368 26.8734 5.77515 28.2325C5.46691 28.7316 5.1469 29.2242 4.82887 29.7169C4.76726 29.8121 4.68876 29.8965 4.61695 29.9845C4.40805 30.2398 4.16884 30.3079 3.84058 30.1925C2.86063 29.848 1.9303 29.4329 1.25465 28.5997C0.678281 27.8888 0.403921 27.0492 0.233162 26.169C-0.034456 24.7888 -0.0493176 23.3911 0.0759357 22.0011C0.277018 19.7696 0.510949 17.5401 0.783944 15.3165C0.992378 13.6187 1.26467 11.9263 1.85328 10.3067C2.16201 9.45791 2.57326 8.66447 3.19508 7.99716C3.29517 7.88989 3.42374 7.80944 3.57496 7.68954C3.49832 7.16883 3.8053 6.87846 4.18922 6.60555C6.15956 5.20425 8.33914 4.74637 10.7107 5.12997C11.05 5.18473 11.0504 5.18936 11.4265 5.58016C11.5389 5.56107 11.6476 5.52694 11.7566 5.52645C14.8635 5.51177 17.97 5.49081 21.0769 5.49227C22.2174 5.49277 23.3574 5.5474 24.4978 5.57235C24.5492 5.57333 24.6169 5.53872 24.6502 5.49813C24.842 5.26328 25.09 5.16571 25.3865 5.11825ZM12.2996 14.6524C12.1182 14.6524 11.9696 14.8002 11.9695 14.9815V16.6192C11.9695 16.7005 11.9009 16.7683 11.8181 16.7686H10.1697C9.98837 16.7687 9.8397 16.9165 9.83961 17.0977V18.586C9.83976 18.7673 9.98841 18.914 10.1697 18.9141H11.8181C11.9008 18.9145 11.9693 18.9825 11.9695 19.0636V20.7022C11.9696 20.8836 12.1182 21.0304 12.2996 21.0304H13.7976C13.9786 21.0298 14.1276 20.8832 14.1277 20.7022V19.0636C14.1279 18.9823 14.1952 18.9142 14.2781 18.9141H15.9265C16.1076 18.9138 16.2564 18.7671 16.2566 18.586V17.0977C16.2565 16.9175 16.1094 16.7704 15.9295 16.7686L15.9246 16.7667H14.2761C14.193 16.7667 14.1277 16.7007 14.1277 16.6192V14.9815C14.1276 14.8005 13.9786 14.653 13.7976 14.6524H12.2996ZM22.9158 15.9591C21.8797 15.9591 21.0382 16.7996 21.0378 17.835C21.0379 18.8707 21.8795 19.711 22.9158 19.711C23.9516 19.7105 24.7927 18.8704 24.7927 17.835C24.7924 16.7999 23.9514 15.9596 22.9158 15.9591ZM28.3132 13.3809C27.6194 13.3809 27.0564 13.9433 27.0564 14.6368C27.0564 15.3303 27.6194 15.8927 28.3132 15.8927C29.0066 15.8922 29.5691 15.3299 29.5691 14.6368C29.5691 13.9436 29.0066 13.3814 28.3132 13.3809ZM7.63648 10.2296C6.60034 10.2296 5.75873 11.07 5.75855 12.1056C5.75883 13.141 6.6004 13.9815 7.63648 13.9815C8.67212 13.981 9.51316 13.1407 9.51344 12.1056C9.51326 11.0703 8.67218 10.2301 7.63648 10.2296ZM25.7566 10.8233C25.0622 10.8233 24.4999 11.3851 24.4998 12.0792C24.4998 12.7733 25.0621 13.335 25.7566 13.335C26.4507 13.3346 27.0124 12.773 27.0125 12.0792C27.0124 11.3854 26.4507 10.8238 25.7566 10.8233ZM30.8826 10.8233C30.1888 10.8233 29.6258 11.3858 29.6257 12.0792C29.6258 12.7726 30.1888 13.335 30.8826 13.335C31.5761 13.3347 32.1384 12.7724 32.1384 12.0792C32.1383 11.386 31.576 10.8237 30.8826 10.8233ZM28.3289 8.26376C27.635 8.26376 27.072 8.82614 27.072 9.51962C27.0722 10.2129 27.6352 10.7755 28.3289 10.7755C29.0221 10.775 29.5845 10.2126 29.5847 9.51962C29.5847 8.82643 29.0223 8.26424 28.3289 8.26376Z",
+                                          d: "M27.7734 6.01249C28.9788 6.03744 30.1205 6.33782 31.1855 6.91483C31.3082 6.98141 31.3941 7.0615 31.4326 7.16971H31.0996V7.17362H31.4335C31.4524 7.22852 31.4594 7.29064 31.4521 7.3621C31.4407 7.47552 31.4843 7.54171 31.5859 7.60721C33.2663 8.68591 34.2958 10.2253 34.7167 12.1609C35.0706 13.7884 35.3234 15.4352 35.5361 17.0877C35.7469 18.7244 35.8609 20.3682 35.9335 22.0154C35.9671 22.7781 36.004 23.542 35.9999 24.3055C35.9944 25.303 35.8569 26.2831 35.4531 27.2088C34.9562 28.347 34.1485 29.1542 32.9384 29.5017C31.6727 29.8653 30.6028 29.5341 29.7509 28.5262C29.2715 27.9585 28.9464 27.3013 28.7177 26.6014C28.5088 25.9616 28.344 25.3077 28.1474 24.6639C27.6047 22.8866 26.5032 21.5482 24.9238 20.5887C24.9213 20.5871 24.9184 20.5862 24.916 20.5848L25.1503 20.2723L25.1718 20.2469L25.1728 20.2478L25.1904 20.2273C25.2862 20.2759 25.3768 20.3034 25.4365 20.323L25.7773 20.4256C25.8937 20.4577 26.012 20.487 26.124 20.5115L26.4384 20.573C27.1766 20.6984 27.9391 20.7019 28.6767 20.5828L28.6757 20.5818C31.2157 20.1944 33.4046 18.277 34.166 15.8308L34.165 15.8299C35.6102 11.3723 32.3235 6.65548 27.5917 6.65506V6.65409H8.4062V6.65506C5.37767 6.6497 2.70335 8.67037 1.81049 11.5506C1.00503 14.1045 1.74193 16.9571 3.68745 18.7879L3.87983 18.9617C4.91492 19.8713 6.23159 20.462 7.60053 20.6228H7.60151C8.67153 20.7459 9.79336 20.6306 10.8066 20.2273C10.8114 20.2327 10.8176 20.2378 10.8222 20.243L10.8886 20.1834L10.8222 20.2439L10.8271 20.2488L10.833 20.2557C10.8366 20.2598 10.842 20.2657 10.8476 20.2723C10.8594 20.2862 10.8744 20.3052 10.8915 20.326C10.9263 20.3681 10.9694 20.4197 11.0126 20.4724C11.0418 20.508 11.072 20.5445 11.0996 20.5779C11.0938 20.581 11.0879 20.5842 11.082 20.5877C9.89406 21.2973 8.98056 22.2657 8.32905 23.4842C8.03441 24.0355 7.85478 24.6298 7.69721 25.2303C7.50206 25.9733 7.29989 26.7134 6.96284 27.408C6.64138 28.0702 6.24258 28.6754 5.63471 29.1131C4.81567 29.7026 3.91714 29.77 2.98042 29.4724C1.77578 29.0895 0.984754 28.2619 0.511667 27.1101C0.206212 26.3666 0.0705524 25.5865 0.0243618 24.7879C-0.046774 23.562 0.0538517 22.3407 0.122018 21.1189C0.161122 20.4188 0.195563 19.7179 0.265573 19.0203C0.368012 18.003 0.474778 16.9846 0.627877 15.9744C0.821202 14.6994 1.02971 13.4249 1.29194 12.1629C1.69465 10.2234 2.74378 8.70172 4.4062 7.61405C4.51078 7.54554 4.57148 7.47897 4.55659 7.3494C4.53428 7.15242 4.62772 7.02617 4.79975 6.93046C5.59838 6.48682 6.45226 6.20819 7.35444 6.09159C7.80468 6.03349 8.26203 6.01478 8.71674 6.00956C9.68191 5.99838 10.6481 6.00686 11.6132 6.0076C11.6623 6.00761 11.7116 6.00867 11.7607 6.01053C12.0309 6.02025 12.1172 6.09801 12.1552 6.37186V6.37088H23.8154C23.8752 6.26485 23.9075 6.14249 23.9863 6.08768C24.0726 6.02812 24.2031 6.01093 24.3144 6.01053C25.4672 6.00532 26.621 5.98866 27.7734 6.01249ZM27.5878 7.23026L27.9902 7.24296C31.9701 7.49058 34.7257 11.4172 33.7294 15.2713L33.6171 15.656L33.6152 15.659C32.9396 17.8298 31.0302 19.5502 28.8037 19.9764L28.5878 20.0135H28.5849C27.9099 20.1225 27.211 20.1195 26.5351 20.0047L26.247 19.949C26.0499 19.9059 25.8293 19.8435 25.6337 19.7801C26.2276 19.1014 26.5334 18.1831 26.4589 17.283H26.4599C26.3463 15.5899 24.908 14.1684 23.207 14.1199H23.041C21.3039 14.1281 19.8318 15.5696 19.7148 17.283H19.7158C19.6765 17.7706 19.7462 18.2662 19.914 18.7244V18.7254L19.9277 18.7674L19.9287 18.7713L19.9423 18.8123L19.9521 18.8435L19.9648 18.8963L19.9716 18.9441H19.9726L19.9765 18.9793V18.9812L19.9804 19.0144L19.9824 19.0428V19.0603L19.9814 19.073L19.9804 19.0955V19.1033L19.9277 19.2693L20.2021 19.3562L20.2548 19.3728V19.4764H20.2568L20.3339 19.3982L20.4765 19.4432L20.5292 19.2781L20.5302 19.2693L20.5322 19.2703L20.5341 19.2644L20.5371 19.2488L20.538 19.2469L20.5507 19.1873L20.5527 19.1697V19.1668L20.5546 19.1473L20.5566 19.1189V19.1033L20.5576 19.0916L20.5585 19.0701V19.0428L20.5576 19.0242L20.5537 18.9627L20.5527 18.9471L20.5449 18.8807L20.5429 18.867L20.5312 18.7937L20.5263 18.7683L20.5068 18.6902H20.5078L20.5039 18.6775L20.4921 18.6385L20.4892 18.6307L20.4755 18.5896L20.4628 18.5506H20.4638L20.4589 18.5379L20.4091 18.3914C20.3029 18.0482 20.2617 17.6837 20.291 17.326L20.0136 17.3025L20.289 17.3221C20.3864 15.8966 21.6228 14.7 23.0488 14.6961L23.0546 14.6951C24.5067 14.66 25.787 15.8694 25.8847 17.3211V17.3269C25.9568 18.1839 25.6106 19.0661 24.9697 19.6355L25.1601 19.8504L24.9687 19.6346L24.9609 19.6433L24.9042 19.698L24.8515 19.7478L24.8437 19.7557L24.7949 19.8064L24.791 19.8113L24.748 19.8582L24.7451 19.8611L24.7128 19.8982L24.6962 19.9168L24.4111 20.2976L24.3974 20.3142L24.3857 20.3299L24.3935 20.3357L24.3544 20.3758L24.3525 20.3797L24.5966 20.5017L24.6025 20.5125L24.6415 20.5906C23.0992 21.3439 21.1855 20.8778 20.166 19.4949C20.1056 19.4133 20.0441 19.3832 19.9443 19.3836C18.6485 19.3869 17.3524 19.387 16.0566 19.3855C15.9769 19.3855 15.9142 19.394 15.8613 19.4685C14.9119 20.8074 12.9767 21.3814 11.3662 20.5935L11.4335 20.5242L11.6328 20.3162C11.6285 20.3115 11.6106 20.2916 11.5771 20.2517C11.5429 20.211 11.5006 20.1592 11.458 20.1072C11.3816 20.0142 11.2904 19.9026 11.2539 19.8621H11.2548C11.1885 19.787 11.1037 19.7023 11.0273 19.6346H11.0263C10.3864 19.0651 10.0392 18.1831 10.1113 17.3269L10.1123 17.324C10.2204 15.8833 11.4308 14.7105 12.872 14.6961L12.874 14.6951C14.3453 14.6707 15.5979 15.855 15.708 17.324V17.325C15.7357 17.6841 15.6956 18.0487 15.5898 18.3914L15.54 18.5379L15.538 18.5428C15.4742 18.7262 15.4041 18.9852 15.4599 19.2488L15.7421 19.1883L15.7695 19.1824L15.7441 19.1902L15.4687 19.2752L15.5195 19.4402L16.0703 19.2723L16.0214 19.114C16.0052 19.0154 16.0275 18.8903 16.08 18.7381C16.2308 18.3318 16.3013 17.8967 16.291 17.4646L16.2822 17.2801C16.15 15.5194 14.6532 14.0912 12.8662 14.1199H12.8642C11.1679 14.1378 9.75791 15.4668 9.55366 17.1199L9.53706 17.281C9.46215 18.1795 9.76702 19.0975 10.3583 19.7762C9.50533 20.0699 8.57082 20.1545 7.66694 20.0506H7.66596C6.49271 19.9124 5.35766 19.4282 4.4394 18.6814L4.25874 18.5281H4.25776C2.34413 16.8601 1.59604 14.1449 2.35932 11.7244L2.3603 11.7224L2.44135 11.4773C3.33297 8.9628 5.72246 7.22514 8.4062 7.23026H27.5878ZM12.8828 15.7625C12.0828 15.7627 11.4339 16.4123 11.4335 17.2127C11.4335 18.0134 12.0825 18.6627 12.8828 18.6629C13.6832 18.6629 14.332 18.0136 14.332 17.2127C14.3316 16.4121 13.6829 15.7625 12.8828 15.7625ZM23.1162 15.7625C22.3163 15.7629 21.6673 16.4123 21.6669 17.2127C21.6669 18.0133 22.316 18.6625 23.1162 18.6629C23.9166 18.6629 24.5654 18.0136 24.5654 17.2127C24.565 16.4121 23.9163 15.7625 23.1162 15.7625ZM27.8808 13.1892C27.1708 13.1893 26.5948 13.7659 26.5947 14.4764C26.5947 15.1868 27.1708 15.7624 27.8808 15.7625C28.5908 15.7623 29.1669 15.1868 29.1669 14.4764C29.1668 13.766 28.5908 13.1894 27.8808 13.1892ZM7.45405 9.20682C7.28806 9.20699 7.1525 9.34261 7.15229 9.50858V10.9764C7.15205 11.0454 7.09514 11.1031 7.02631 11.1033H5.55952C5.39342 11.1034 5.25786 11.239 5.25776 11.4051V12.7381C5.258 12.904 5.39351 13.0397 5.55952 13.0398H7.02631C7.09523 13.04 7.15219 13.0977 7.15229 13.1668V14.6346C7.15264 14.8004 7.28815 14.9362 7.45405 14.9363H8.78706C8.9528 14.936 9.08749 14.8003 9.08784 14.6346V13.1668C9.08794 13.0976 9.14581 13.0399 9.21479 13.0398H10.6816C10.8474 13.0395 10.9821 12.9039 10.9824 12.7381V11.4051C10.9823 11.2401 10.8491 11.1052 10.6845 11.1033L10.6796 11.1014H9.21284C9.14395 11.1013 9.08808 11.0454 9.08784 10.9764V9.50858C9.08763 9.34273 8.95288 9.20717 8.78706 9.20682H7.45405ZM25.0615 10.7459C24.3517 10.7462 23.7756 11.3228 23.7753 12.033C23.7754 12.7433 24.3516 13.3188 25.0615 13.3191C25.7716 13.3191 26.3475 12.7435 26.3476 12.033C26.3474 11.3226 25.7715 10.7459 25.0615 10.7459ZM30.6874 10.7459C29.9775 10.746 29.4016 11.3227 29.4013 12.033C29.4014 12.7435 29.9774 13.319 30.6874 13.3191C31.3976 13.3191 31.9735 12.7435 31.9736 12.033C31.9733 11.3226 31.3974 10.7459 30.6874 10.7459ZM27.8808 8.28788C27.1708 8.28797 26.5948 8.86454 26.5947 9.57499C26.5949 10.2853 27.1709 10.861 27.8808 10.8611C28.5907 10.8609 29.1667 10.2852 29.1669 9.57499C29.1668 8.8646 28.5908 8.28807 27.8808 8.28788Z",
                                         }),
                                       }),
                                       (0, s.jsx)("defs", {
@@ -111721,63 +111774,89 @@ var CLSTAMP = "10961770";
                                       }),
                                     ],
                                   })
-                                : "mobile_touch" == t
+                                : "8bitdo_ultimate" == t
                                   ? (0, s.jsxs)("svg", {
-                                      viewBox: "0 0 64 64",
-                                      transform:
-                                        "matrix(1, 0, 0, 1, 0, 0)rotate(270)",
+                                      viewBox: "0 0 36 36",
+                                      fill: "none",
                                       xmlns: "http://www.w3.org/2000/svg",
                                       ...i,
                                       children: [
-                                        (0, s.jsx)("rect", {
-                                          fill: "none",
-                                          stroke: "currentColor",
-                                          strokeLinecap: "round",
-                                          strokeLinejoin: "round",
-                                          strokeWidth: "3px",
-                                          height: "60.54",
-                                          rx: "5.09",
-                                          ry: "5.09",
-                                          width: "32.11",
-                                          x: "15.94",
-                                          y: "1.62",
+                                        (0, s.jsx)("g", {
+                                          clipPath: r,
+                                          children: (0, s.jsx)("path", {
+                                            fill: "currentColor",
+                                            d: "M25.3865 5.11825C26.755 4.90005 28.1094 4.97923 29.4236 5.39462C30.4285 5.71216 31.3614 6.19989 32.1726 6.89462C32.3276 7.02768 32.4119 7.17257 32.408 7.37704C32.4056 7.49827 32.4255 7.61963 32.4314 7.69345C32.5721 7.80286 32.6969 7.87505 32.7898 7.97567C33.7307 8.99583 34.2022 10.2489 34.5398 11.5626C34.9787 13.2716 35.2054 15.0185 35.4158 16.7657C35.5919 18.2301 35.751 19.6978 35.8796 21.1671C36.0269 22.851 36.0917 24.5378 35.7634 26.212C35.5761 27.1675 35.2593 28.0684 34.5789 28.7999C33.9668 29.458 33.1821 29.8296 32.3533 30.1241C31.7359 30.3438 31.5771 30.317 31.2107 29.7599C30.651 28.9095 30.1303 28.0326 29.5935 27.1671C28.9629 26.149 28.3487 25.1202 27.6961 24.1163C27.2547 23.4372 26.6937 22.8717 25.8972 22.6016C25.2789 22.3918 24.6367 22.3551 23.991 22.3556C19.8645 22.3575 15.7376 22.3624 11.6111 22.3614C10.178 22.3614 9.04967 22.9302 8.28492 24.1524C7.43808 25.5056 6.61368 26.8734 5.77515 28.2325C5.46691 28.7316 5.1469 29.2242 4.82887 29.7169C4.76726 29.8121 4.68876 29.8965 4.61695 29.9845C4.40805 30.2398 4.16884 30.3079 3.84058 30.1925C2.86063 29.848 1.9303 29.4329 1.25465 28.5997C0.678281 27.8888 0.403921 27.0492 0.233162 26.169C-0.034456 24.7888 -0.0493176 23.3911 0.0759357 22.0011C0.277018 19.7696 0.510949 17.5401 0.783944 15.3165C0.992378 13.6187 1.26467 11.9263 1.85328 10.3067C2.16201 9.45791 2.57326 8.66447 3.19508 7.99716C3.29517 7.88989 3.42374 7.80944 3.57496 7.68954C3.49832 7.16883 3.8053 6.87846 4.18922 6.60555C6.15956 5.20425 8.33914 4.74637 10.7107 5.12997C11.05 5.18473 11.0504 5.18936 11.4265 5.58016C11.5389 5.56107 11.6476 5.52694 11.7566 5.52645C14.8635 5.51177 17.97 5.49081 21.0769 5.49227C22.2174 5.49277 23.3574 5.5474 24.4978 5.57235C24.5492 5.57333 24.6169 5.53872 24.6502 5.49813C24.842 5.26328 25.09 5.16571 25.3865 5.11825ZM12.2996 14.6524C12.1182 14.6524 11.9696 14.8002 11.9695 14.9815V16.6192C11.9695 16.7005 11.9009 16.7683 11.8181 16.7686H10.1697C9.98837 16.7687 9.8397 16.9165 9.83961 17.0977V18.586C9.83976 18.7673 9.98841 18.914 10.1697 18.9141H11.8181C11.9008 18.9145 11.9693 18.9825 11.9695 19.0636V20.7022C11.9696 20.8836 12.1182 21.0304 12.2996 21.0304H13.7976C13.9786 21.0298 14.1276 20.8832 14.1277 20.7022V19.0636C14.1279 18.9823 14.1952 18.9142 14.2781 18.9141H15.9265C16.1076 18.9138 16.2564 18.7671 16.2566 18.586V17.0977C16.2565 16.9175 16.1094 16.7704 15.9295 16.7686L15.9246 16.7667H14.2761C14.193 16.7667 14.1277 16.7007 14.1277 16.6192V14.9815C14.1276 14.8005 13.9786 14.653 13.7976 14.6524H12.2996ZM22.9158 15.9591C21.8797 15.9591 21.0382 16.7996 21.0378 17.835C21.0379 18.8707 21.8795 19.711 22.9158 19.711C23.9516 19.7105 24.7927 18.8704 24.7927 17.835C24.7924 16.7999 23.9514 15.9596 22.9158 15.9591ZM28.3132 13.3809C27.6194 13.3809 27.0564 13.9433 27.0564 14.6368C27.0564 15.3303 27.6194 15.8927 28.3132 15.8927C29.0066 15.8922 29.5691 15.3299 29.5691 14.6368C29.5691 13.9436 29.0066 13.3814 28.3132 13.3809ZM7.63648 10.2296C6.60034 10.2296 5.75873 11.07 5.75855 12.1056C5.75883 13.141 6.6004 13.9815 7.63648 13.9815C8.67212 13.981 9.51316 13.1407 9.51344 12.1056C9.51326 11.0703 8.67218 10.2301 7.63648 10.2296ZM25.7566 10.8233C25.0622 10.8233 24.4999 11.3851 24.4998 12.0792C24.4998 12.7733 25.0621 13.335 25.7566 13.335C26.4507 13.3346 27.0124 12.773 27.0125 12.0792C27.0124 11.3854 26.4507 10.8238 25.7566 10.8233ZM30.8826 10.8233C30.1888 10.8233 29.6258 11.3858 29.6257 12.0792C29.6258 12.7726 30.1888 13.335 30.8826 13.335C31.5761 13.3347 32.1384 12.7724 32.1384 12.0792C32.1383 11.386 31.576 10.8237 30.8826 10.8233ZM28.3289 8.26376C27.635 8.26376 27.072 8.82614 27.072 9.51962C27.0722 10.2129 27.6352 10.7755 28.3289 10.7755C29.0221 10.775 29.5845 10.2126 29.5847 9.51962C29.5847 8.82643 29.0223 8.26424 28.3289 8.26376Z",
+                                          }),
                                         }),
-                                        (0, s.jsx)("line", {
-                                          fill: "none",
-                                          stroke: "currentColor",
-                                          strokeLinecap: "round",
-                                          strokeLinejoin: "round",
-                                          strokeWidth: "3px",
-                                          x1: "15.94",
-                                          x2: "48.06",
-                                          y1: "8.75",
-                                          y2: "8.75",
-                                        }),
-                                        (0, s.jsx)("line", {
-                                          fill: "none",
-                                          stroke: "currentColor",
-                                          strokeLinecap: "round",
-                                          strokeLinejoin: "round",
-                                          strokeWidth: "3px",
-                                          x1: "15.94",
-                                          x2: "48.06",
-                                          y1: "54.42",
-                                          y2: "54.42",
-                                        }),
-                                        (0, s.jsx)("line", {
-                                          fill: "none",
-                                          stroke: "currentColor",
-                                          strokeLinecap: "round",
-                                          strokeLinejoin: "round",
-                                          strokeWidth: "3px",
-                                          x1: "29.83",
-                                          x2: "33.68",
-                                          y1: "57.83",
-                                          y2: "57.83",
+                                        (0, s.jsx)("defs", {
+                                          children: (0, s.jsx)("clipPath", {
+                                            id: o,
+                                            children: (0, s.jsx)("rect", {
+                                              fill: "currentColor",
+                                              width: "36",
+                                              height: "36",
+                                            }),
+                                          }),
                                         }),
                                       ],
                                     })
-                                  : (0, s.jsx)(u, { ...i });
+                                  : "mobile_touch" == t
+                                    ? (0, s.jsxs)("svg", {
+                                        viewBox: "0 0 64 64",
+                                        transform:
+                                          "matrix(1, 0, 0, 1, 0, 0)rotate(270)",
+                                        xmlns: "http://www.w3.org/2000/svg",
+                                        ...i,
+                                        children: [
+                                          (0, s.jsx)("rect", {
+                                            fill: "none",
+                                            stroke: "currentColor",
+                                            strokeLinecap: "round",
+                                            strokeLinejoin: "round",
+                                            strokeWidth: "3px",
+                                            height: "60.54",
+                                            rx: "5.09",
+                                            ry: "5.09",
+                                            width: "32.11",
+                                            x: "15.94",
+                                            y: "1.62",
+                                          }),
+                                          (0, s.jsx)("line", {
+                                            fill: "none",
+                                            stroke: "currentColor",
+                                            strokeLinecap: "round",
+                                            strokeLinejoin: "round",
+                                            strokeWidth: "3px",
+                                            x1: "15.94",
+                                            x2: "48.06",
+                                            y1: "8.75",
+                                            y2: "8.75",
+                                          }),
+                                          (0, s.jsx)("line", {
+                                            fill: "none",
+                                            stroke: "currentColor",
+                                            strokeLinecap: "round",
+                                            strokeLinejoin: "round",
+                                            strokeWidth: "3px",
+                                            x1: "15.94",
+                                            x2: "48.06",
+                                            y1: "54.42",
+                                            y2: "54.42",
+                                          }),
+                                          (0, s.jsx)("line", {
+                                            fill: "none",
+                                            stroke: "currentColor",
+                                            strokeLinecap: "round",
+                                            strokeLinejoin: "round",
+                                            strokeWidth: "3px",
+                                            x1: "29.83",
+                                            x2: "33.68",
+                                            y1: "57.83",
+                                            y2: "57.83",
+                                          }),
+                                        ],
+                                      })
+                                    : (0, s.jsx)(u, { ...i });
         }
         function p(e) {
           const { controllerType: t, controllerStyle: n, ...o } = e;
@@ -111809,6 +111888,8 @@ var CLSTAMP = "10961770";
               return (0, s.jsx)(m, { type: "hori", ...o });
             case i.kL:
               return (0, s.jsx)(m, { type: "mobile_touch", ...o });
+            case i.My:
+              return (0, s.jsx)(m, { type: "steamframe", ...o });
             default:
               return n == c.Tq
                 ? (0, s.jsx)(m, { type: "gamecube", ...o })
@@ -112371,7 +112452,7 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      43808: (e, t, n) => {
+      50148: (e, t, n) => {
         "use strict";
         n.d(t, { H: () => r, P: () => a });
         var s = n(62540),
@@ -112392,7 +112473,7 @@ var CLSTAMP = "10961770";
               }),
             });
       },
-      96275: (e, t, n) => {
+      17910: (e, t, n) => {
         "use strict";
         n.d(t, { L: () => A, Y: () => x });
         var s = n(62540),
@@ -112408,15 +112489,15 @@ var CLSTAMP = "10961770";
             t ? e.children : (e.fallback ?? null)
           );
         }
-        var r = n(21839),
-          a = n(84719),
+        var r = n(83859),
+          a = n(49667),
           l = n(78325),
-          c = n(35843),
-          d = n(40381),
-          h = n(3877),
-          u = n(12735),
-          m = n(30234),
-          p = n(21571);
+          c = n(1719),
+          d = n(58678),
+          h = n(84160),
+          u = n(31472),
+          m = n(20166),
+          p = n(28703);
         function _(e) {
           const { Modal: t } = e,
             { name: n, modalProps: o, options: a } = t,
@@ -112581,10 +112662,10 @@ var CLSTAMP = "10961770";
             })
           );
         }
-        var v = n(98434),
-          b = n(87885),
-          I = n(19541),
-          y = n(6146),
+        var v = n(29150),
+          b = n(74257),
+          I = n(83073),
+          y = n(50214),
           w = n(79880);
         function x(e) {
           i.useEffect(() => {
@@ -112782,15 +112863,15 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      21191: (e, t, n) => {
+      71171: (e, t, n) => {
         "use strict";
         n.d(t, { ZH: () => c, Zw: () => m, nd: () => d, o0: () => h });
         var s = n(62540),
           i = n(63696),
-          o = n(62250),
-          r = n(39358),
-          a = n(959),
-          l = n(10431);
+          o = n(14202),
+          r = n(37706),
+          a = n(99787),
+          l = n(72099);
         function c(e, t, n, i, o, r, a) {
           return new Promise((l, c) => {
             e(
@@ -112911,16 +112992,16 @@ var CLSTAMP = "10961770";
           (0, r.pg)((0, s.jsx)(u, { strTitle: e, strDescription: t }), n);
         }
       },
-      10431: (e, t, n) => {
+      72099: (e, t, n) => {
         "use strict";
         n.d(t, { eV: () => h });
         var s = n(62540),
           i = n(63696),
-          o = n(62250),
-          r = n(74005),
-          a = n(98434),
-          l = n(21571),
-          c = n(35202);
+          o = n(14202),
+          r = n(81289),
+          a = n(29150),
+          l = n(28703),
+          c = n(20582);
         function d(e) {
           const {
               className: t,
@@ -112984,7 +113065,7 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      38100: (e, t, n) => {
+      96633: (e, t, n) => {
         "use strict";
         n.d(t, {
           mt: () => c,
@@ -112997,18 +113078,18 @@ var CLSTAMP = "10961770";
         });
         var s = n(62540),
           i = n(63696),
-          o = n(62250),
-          r = n(3561),
-          a = n(35202);
+          o = n(14202),
+          r = n(70933),
+          a = n(20582);
         n(78325),
-          n(21839),
-          n(40381),
-          n(3877),
-          n(12735),
-          n(30234),
-          n(94083),
-          n(87885),
-          n(21571);
+          n(83859),
+          n(58678),
+          n(84160),
+          n(31472),
+          n(20166),
+          n(88767),
+          n(74257),
+          n(28703);
         function l(e) {
           const { labelledBy: t } = e || {},
             [n, s] = i.useState(void 0);
@@ -113049,17 +113130,17 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        n(96275);
-        var d = n(21191),
-          h = n(10431);
-        n(6146);
+        n(17910);
+        var d = n(71171),
+          h = n(72099);
+        n(50214);
       },
-      19541: (e, t, n) => {
+      83073: (e, t, n) => {
         "use strict";
         n.d(t, { $9: () => l, IA: () => c, _F: () => a });
         var s = n(34629),
-          i = n(85519),
-          o = n(19596);
+          i = n(11883),
+          o = n(73960);
         class r {
           key;
           static sm_lastKey = 0;
@@ -113119,17 +113200,17 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      12735: (e, t, n) => {
+      31472: (e, t, n) => {
         "use strict";
         n.d(t, { EO: () => T, uH: () => P, oJ: () => k, yk: () => D });
         var s = n(62540),
-          i = n(7227),
+          i = n(5663),
           o = n(63696),
           r = n(78325),
-          a = n(3753),
-          l = n(63496),
-          c = n(21839),
-          d = n(87885);
+          a = n(56237),
+          l = n(23532),
+          c = n(83859),
+          d = n(74257);
         const h = o.createContext(null);
         function u(e) {
           const {
@@ -113156,15 +113237,15 @@ var CLSTAMP = "10961770";
             (0, s.jsx)(h.Provider, { value: m.current, children: i })
           );
         }
-        var m = n(73561),
-          p = n(88586),
-          _ = n(40381),
-          g = n(3877),
+        var m = n(29085),
+          p = n(96126),
+          _ = n(58678),
+          g = n(84160),
           C = n(26765),
           f = n.n(C),
-          S = n(84719),
-          v = n(98434),
-          b = n(26487);
+          S = n(49667),
+          v = n(29150),
+          b = n(89875);
         function I(e) {
           const { managerOverride: t, bSuppressMouseOverlay: n } = e,
             i = (0, d.CH)(),
@@ -113307,8 +113388,8 @@ var CLSTAMP = "10961770";
               : null
           );
         }
-        var A = n(96275),
-          R = n(6146);
+        var A = n(17910),
+          R = n(50214);
         const M = o.createContext({}),
           T = o.memo(function (e) {
             const {
@@ -113371,14 +113452,14 @@ var CLSTAMP = "10961770";
           }, [e, t]);
         }
       },
-      6146: (e, t, n) => {
+      50214: (e, t, n) => {
         "use strict";
         n.d(t, { BR: () => a, SZ: () => r, tx: () => l });
         n(63696);
-        var s = n(74005),
-          i = n(19596),
-          o = (n(87885), n(19541));
-        n(12735);
+        var s = n(81289),
+          i = n(73960),
+          o = (n(74257), n(83073));
+        n(31472);
         class r {
           m_bUsePopups = !0;
           m_bOnlyPopups = !1;
@@ -113607,15 +113688,15 @@ var CLSTAMP = "10961770";
           return a.GetModalManager(e);
         }
       },
-      35202: (e, t, n) => {
+      20582: (e, t, n) => {
         "use strict";
         n.d(t, { x_: () => h });
         var s = n(62540),
           i = n(63696),
-          o = n(58316),
-          r = n(84719),
-          a = n(16159),
-          l = n(26487);
+          o = n(91408),
+          r = n(49667),
+          a = n(68611),
+          l = n(89875);
         const c = i.createContext({}),
           d = () => i.useContext(c);
         function h(e) {
@@ -113669,14 +113750,14 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      3561: (e, t, n) => {
+      70933: (e, t, n) => {
         "use strict";
         n.d(t, { E: () => l });
         var s = n(62540),
           i = n(63696),
           o = n(78325),
-          r = n(12735),
-          a = n(6146);
+          r = n(31472),
+          a = n(50214);
         function l(e) {
           const { active: t, children: n } = e,
             l = (0, r.yk)() || (0, a.tx)(window),
@@ -113713,16 +113794,16 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      39358: (e, t, n) => {
+      37706: (e, t, n) => {
         "use strict";
         n.d(t, { HT: () => u, mK: () => d, pg: () => h, x_: () => r.x_ });
         var s = n(62540),
           i = n(63696),
-          o = n(6146),
-          r = n(35202),
-          a = n(74005),
-          l = n(959),
-          c = n(21571);
+          o = n(50214),
+          r = n(20582),
+          a = n(81289),
+          l = n(99787),
+          c = n(28703);
         async function d(e, t, n) {
           const s = (0, o.tx)(t),
             r = n?.bForcePopOut || p(s);
@@ -113798,71 +113879,71 @@ var CLSTAMP = "10961770";
           return e.BOnlyPopups && e.BOnlyPopups();
         }
       },
-      80506: (e, t, n) => {
+      53470: (e, t, n) => {
         "use strict";
         n.d(t, {
-          AY: () => u,
-          B1: () => L,
-          E$: () => J,
-          FE: () => T,
-          FW: () => q,
-          Hs: () => K,
-          JB: () => G,
-          KJ: () => O,
-          LB: () => E,
-          M4: () => I,
-          M6: () => k,
-          MG: () => m,
-          Mj: () => p,
-          Ml: () => w,
-          Nm: () => se,
-          O5: () => re,
-          OY: () => C,
-          O_: () => Z,
-          Od: () => $,
-          Oe: () => f,
-          Oi: () => c,
-          QY: () => _,
-          R2: () => d,
-          Rm: () => B,
-          Ss: () => H,
-          WO: () => M,
-          Wd: () => ie,
-          Wq: () => N,
-          X: () => z,
-          Xh: () => R,
-          YJ: () => F,
-          Z3: () => b,
-          ai: () => o,
-          bL: () => S,
-          eT: () => r,
-          ff: () => A,
-          gD: () => a,
-          i7: () => le,
-          jl: () => D,
-          k8: () => V,
-          lM: () => P,
-          lN: () => v,
-          lQ: () => W,
-          mc: () => ee,
-          mr: () => x,
-          nf: () => te,
-          pH: () => l,
-          po: () => j,
-          pw: () => X,
-          ry: () => y,
-          t4: () => U,
-          tS: () => ne,
-          ud: () => Y,
-          wN: () => ae,
-          xA: () => oe,
-          y$: () => h,
-          y4: () => g,
-          zP: () => Q,
+          AY: () => h,
+          B1: () => P,
+          E$: () => Y,
+          FE: () => M,
+          FW: () => z,
+          Hs: () => q,
+          JB: () => L,
+          KJ: () => B,
+          LB: () => N,
+          M4: () => b,
+          M6: () => D,
+          MG: () => u,
+          Mj: () => m,
+          Ml: () => y,
+          Nm: () => ne,
+          O5: () => oe,
+          OY: () => g,
+          O_: () => K,
+          Od: () => Q,
+          Oe: () => C,
+          Oi: () => l,
+          QY: () => p,
+          R2: () => c,
+          Rm: () => F,
+          Ss: () => U,
+          WO: () => R,
+          Wd: () => se,
+          Wq: () => O,
+          X: () => W,
+          Xh: () => A,
+          YJ: () => G,
+          Z3: () => v,
+          ai: () => i,
+          bL: () => f,
+          eT: () => o,
+          ff: () => x,
+          gD: () => r,
+          i7: () => ae,
+          jl: () => T,
+          k8: () => j,
+          lM: () => k,
+          lN: () => S,
+          lQ: () => H,
+          mc: () => J,
+          mr: () => w,
+          nf: () => ee,
+          pH: () => a,
+          po: () => E,
+          pw: () => Z,
+          ry: () => I,
+          t4: () => V,
+          tS: () => te,
+          ud: () => $,
+          wN: () => re,
+          xA: () => ie,
+          y$: () => d,
+          y4: () => _,
+          zP: () => X,
         });
-        var s = n(62540),
-          i = n(91938);
-        function o(e) {
+        var s = n(62540);
+        n(91938);
+        function i(e) {
           return (0, s.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -113880,7 +113961,7 @@ var CLSTAMP = "10961770";
             ],
           });
         }
-        function r(e) {
+        function o(e) {
           return (0, s.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -113894,7 +113975,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function a(e) {
+        function r(e) {
           return (0, s.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -113928,7 +114009,7 @@ var CLSTAMP = "10961770";
             ],
           });
         }
-        function l(e) {
+        function a(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -113944,7 +114025,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function c(e) {
+        function l(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -113958,7 +114039,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function d(e) {
+        function c(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -113974,7 +114055,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function h(e) {
+        function d(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -113988,7 +114069,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function u(e) {
+        function h(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114004,7 +114085,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function m(e) {
+        function u(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114018,7 +114099,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function p(e) {
+        function m(e) {
           return (0, s.jsxs)("svg", {
             width: "36",
             height: "36",
@@ -114050,7 +114131,7 @@ var CLSTAMP = "10961770";
             ],
           });
         }
-        function _(e) {
+        function p(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114066,7 +114147,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function g(e) {
+        function _(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114080,7 +114161,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function C(e) {
+        function g(e) {
           return (0, s.jsxs)("svg", {
             width: "36",
             height: "36",
@@ -114100,7 +114181,7 @@ var CLSTAMP = "10961770";
             ],
           });
         }
-        function f(e) {
+        function C(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114114,7 +114195,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function S(e) {
+        function f(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114128,7 +114209,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function v(e) {
+        function S(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114142,7 +114223,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function b(e) {
+        function v(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114156,7 +114237,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function I(e) {
+        function b(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114170,7 +114251,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function y(e) {
+        function I(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114186,7 +114267,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function w(e) {
+        function y(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114200,7 +114281,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function x(e) {
+        function w(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114214,7 +114295,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function A(e) {
+        function x(e) {
           return (0, s.jsxs)("svg", {
             width: "36",
             height: "36",
@@ -114234,7 +114315,7 @@ var CLSTAMP = "10961770";
             ],
           });
         }
-        function R(e) {
+        function A(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114248,7 +114329,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function M(e) {
+        function R(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114262,7 +114343,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function T(e) {
+        function M(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114276,7 +114357,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function D(e) {
+        function T(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114292,7 +114373,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function k(e) {
+        function D(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114309,7 +114390,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function P(e) {
+        function k(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114325,7 +114406,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function L(e) {
+        function P(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114339,7 +114420,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function G(e) {
+        function L(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114353,7 +114434,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function F(e) {
+        function G(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114367,7 +114448,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function B(e) {
+        function F(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114381,7 +114462,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function O(e) {
+        function B(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114395,7 +114476,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function N(e) {
+        function O(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114409,7 +114490,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function E(e) {
+        function N(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114425,7 +114506,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function j(e) {
+        function E(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114439,7 +114520,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function V(e) {
+        function j(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114455,7 +114536,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function U(e) {
+        function V(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114469,7 +114550,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function H(e) {
+        function U(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114485,7 +114566,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function W(e) {
+        function H(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114499,7 +114580,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function z(e) {
+        function W(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114513,7 +114594,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function q(e) {
+        function z(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114527,7 +114608,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function K(e) {
+        function q(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114541,7 +114622,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function Z(e) {
+        function K(e) {
           return (0, s.jsxs)("svg", {
             width: "32",
             height: "32",
@@ -114565,7 +114646,7 @@ var CLSTAMP = "10961770";
             ],
           });
         }
-        function X(e) {
+        function Z(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114579,7 +114660,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function Q(e) {
+        function X(e) {
           return (0, s.jsxs)("svg", {
             width: "36",
             height: "36",
@@ -114599,7 +114680,7 @@ var CLSTAMP = "10961770";
             ],
           });
         }
-        function $(e) {
+        function Q(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114615,9 +114696,8 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function Y(e) {
+        function $(e) {
           return (0, s.jsx)("svg", {
-            style: i,
             className: "SVGIcon_Button",
             width: "36",
             height: "36",
@@ -114631,7 +114711,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function J(e) {
+        function Y(e) {
           return (0, s.jsx)("svg", {
             className: "SVGIcon_Button",
             width: "36",
@@ -114646,7 +114726,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function ee(e) {
+        function J(e) {
           return (0, s.jsx)("svg", {
             className: "SVGIcon_Button",
             width: "36",
@@ -114657,6 +114737,19 @@ var CLSTAMP = "10961770";
             ...e,
             children: (0, s.jsx)("path", {
               d: "M4 4H14V8H8V14H4V4ZM22 4V8H28V14H32V4H22ZM28 28H22V32H32V22H28V28ZM8 22H4V32H14V28H8V22Z",
+              fill: "currentColor",
+            }),
+          });
+        }
+        function ee(e) {
+          return (0, s.jsx)("svg", {
+            width: "128",
+            height: "128",
+            viewBox: "0 0 128 128",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, s.jsx)("path", {
+              d: "M12 88H116V40H12V88ZM128 94C128 97.3137 125.314 100 122 100H6C2.78979 100 0.168429 97.4789 0.0078125 94.3086L0 94V34C0 30.6863 2.68629 28 6 28H122C125.314 28 128 30.6863 128 34V94Z",
               fill: "currentColor",
             }),
           });
@@ -114675,19 +114768,6 @@ var CLSTAMP = "10961770";
           });
         }
         function ne(e) {
-          return (0, s.jsx)("svg", {
-            width: "128",
-            height: "128",
-            viewBox: "0 0 128 128",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            children: (0, s.jsx)("path", {
-              d: "M12 88H116V40H12V88ZM128 94C128 97.3137 125.314 100 122 100H6C2.78979 100 0.168429 97.4789 0.0078125 94.3086L0 94V34C0 30.6863 2.68629 28 6 28H122C125.314 28 128 30.6863 128 34V94Z",
-              fill: "currentColor",
-            }),
-          });
-        }
-        function se(e) {
           let { direction: t, ...n } = e,
             i = { transform: `scaleX( ${"right" == t ? "-1" : "1"} )` };
           return (0, s.jsxs)("svg", {
@@ -114741,7 +114821,7 @@ var CLSTAMP = "10961770";
             ],
           });
         }
-        function ie(e) {
+        function se(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114755,7 +114835,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function oe(e) {
+        function ie(e) {
           return (0, s.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -114775,7 +114855,7 @@ var CLSTAMP = "10961770";
             ],
           });
         }
-        function re(e) {
+        function oe(e) {
           return (0, s.jsx)("svg", {
             width: "24",
             height: "24",
@@ -114789,7 +114869,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function ae(e) {
+        function re(e) {
           return (0, s.jsx)("svg", {
             width: "36",
             height: "36",
@@ -114808,7 +114888,7 @@ var CLSTAMP = "10961770";
             }),
           });
         }
-        function le(e) {
+        function ae(e) {
           return (0, s.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -114823,7 +114903,7 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      16159: (e, t, n) => {
+      68611: (e, t, n) => {
         "use strict";
         n.d(t, {
           $$j: () => Be,
@@ -114935,11 +115015,11 @@ var CLSTAMP = "10961770";
         });
         var s = n(62540),
           i = n(63696),
-          o = n(98434),
+          o = n(29150),
           r = n(75223),
           a = n.n(r),
-          l = n(21571),
-          c = n(53095);
+          l = n(28703),
+          c = n(94491);
         function d(e) {
           const [t, n] = (0, c.l)();
           return (0, s.jsxs)("svg", {
@@ -118369,7 +118449,7 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      53095: (e, t, n) => {
+      94491: (e, t, n) => {
         "use strict";
         n.d(t, { l: () => o });
         var s = n(63696);
@@ -118382,17 +118462,17 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      15982: (e, t, n) => {
+      86502: (e, t, n) => {
         "use strict";
         n.d(t, { t: () => h });
         var s = n(62540),
           i = n(63696),
-          o = n(98434),
+          o = n(29150),
           r = n(97671),
           a = n.n(r);
         const l = n.p + "images/webui/8669e97b288da32670e77181618c3dfb.png";
-        var c = n(40036),
-          d = n(71926);
+        var c = n(58272),
+          d = n(76410);
         const h = i.memo(function (e) {
           const {
             className: t,
@@ -118725,16 +118805,16 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      30234: (e, t, n) => {
+      20166: (e, t, n) => {
         "use strict";
         n.d(t, { c: () => p });
         var s = n(62540),
           i = n(63696),
-          o = n(42603),
-          r = n(16159),
-          a = n(98434),
-          l = n(46024),
-          c = n(21571);
+          o = n(56999),
+          r = n(68611),
+          a = n(29150),
+          l = n(57908),
+          c = n(28703);
         function d(e) {
           const { popup: t, onMaximize: n, bOSX: c } = e,
             d = (0, l.GD)(t),
@@ -118852,16 +118932,16 @@ var CLSTAMP = "10961770";
           });
         }
       },
-      91422: (e, t, n) => {
+      90378: (e, t, n) => {
         "use strict";
         n.d(t, { Gq: () => _, fS: () => f, he: () => m, m9: () => p });
         var s = n(62540),
-          i = n(25767),
-          o = n(83467),
+          i = n(45931),
+          o = n(13023),
           r = n(63696),
-          a = n(6516),
-          l = n(98434),
-          c = n(959),
+          a = n(57688),
+          l = n(29150),
+          c = n(99787),
           d = n(1150),
           h = n.n(d),
           u = n(78325);
@@ -119013,7 +119093,7 @@ var CLSTAMP = "10961770";
           return i ? u.createPortal(p, n.ownerDocument.body) : p;
         }
       },
-      34164: (e, t, n) => {
+      90080: (e, t, n) => {
         "use strict";
         n.d(t, {
           AJ: () => C,
@@ -119031,13 +119111,13 @@ var CLSTAMP = "10961770";
           i = n(62540),
           o = n(89193),
           r = n(63696),
-          a = n(3753),
-          l = n(72923),
-          c = n(42603),
-          d = n(98434),
-          h = n(26487),
-          u = n(959),
-          m = n(3877);
+          a = n(56237),
+          l = n(76839),
+          c = n(56999),
+          d = n(29150),
+          h = n(89875),
+          u = n(99787),
+          m = n(84160);
         function p(e, t) {
           let n;
           (n =
@@ -119209,12 +119289,12 @@ var CLSTAMP = "10961770";
           void 0,
         );
       },
-      24816: (e, t, n) => {
+      84884: (e, t, n) => {
         "use strict";
         n.d(t, { L: () => a, p: () => r });
         var s = n(62540),
           i = n(63696),
-          o = n(248);
+          o = n(50244);
         function r(e) {
           const { children: t, name: n } = e;
           var r;
@@ -119230,14 +119310,14 @@ var CLSTAMP = "10961770";
           o.y.ReportTrackedAction(e);
         }
       },
-      90052: (e, t, n) => {
+      92208: (e, t, n) => {
         "use strict";
         n.d(t, { o: () => l });
         var s = n(62540),
-          i = n(91422),
+          i = n(90378),
           o = n(32172),
-          r = n(16159),
-          a = n(98434);
+          r = n(68611),
+          a = n(29150);
         function l(e) {
           const {
               customTooltip: t,
@@ -119266,14 +119346,14 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      94083: (e, t, n) => {
+      88767: (e, t, n) => {
         "use strict";
         n.d(t, { Z: () => l });
         var s = n(62540),
           i = n(63696),
-          o = n(42603),
-          r = n(98434),
-          a = n(46024);
+          o = n(56999),
+          r = n(29150),
+          a = n(57908);
         function l(e) {
           const { popup: t, className: n, ...l } = e,
             c = (0, a.GD)(t),
@@ -119308,22 +119388,22 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      15695: (e, t, n) => {
+      587: (e, t, n) => {
         "use strict";
         n.d(t, { N1: () => b, fm: () => w, gZ: () => I });
         var s,
           i = n(34629),
           o = n(62540),
           r = n(63696),
-          a = n(31174),
-          l = n(87885),
-          c = n(98434),
-          d = n(15982),
-          h = n(78383),
-          u = n(959),
-          m = n(51470),
-          p = n(7227),
-          _ = n(41600);
+          a = n(62770),
+          l = n(74257),
+          c = n(29150),
+          d = n(86502),
+          h = n(88671),
+          u = n(99787),
+          m = n(418),
+          p = n(5663),
+          _ = n(51268);
         !(function (e) {
           (e[(e.NotLoaded = 0)] = "NotLoaded"),
             (e[(e.Loading = 1)] = "Loading"),
@@ -119381,10 +119461,16 @@ var CLSTAMP = "10961770";
                 n.forcePause != e.forcePause);
           }
           componentDidUpdate(e) {
-            e.forcePause != this.props.forcePause &&
+            e.forcePause != this.props.forcePause && this.ApplyForcePause();
+          }
+          ApplyForcePause() {
+            this.m_player &&
+              this.m_bPlayerReady &&
               (this.props.forcePause
-                ? this.m_player?.pauseVideo()
-                : this.m_player?.playVideo());
+                ? "function" == typeof this.m_player.pauseVideo &&
+                  this.m_player.pauseVideo()
+                : "function" == typeof this.m_player.playVideo &&
+                  this.m_player.playVideo());
           }
           DestroyPlayer() {
             if (this.m_player)
@@ -119397,10 +119483,11 @@ var CLSTAMP = "10961770";
               }
           }
           BindPlayerContainer(e) {
-            this.m_playerContainer != e &&
+            e &&
+              this.m_playerContainer != e &&
               ((this.m_playerContainer = e),
               this.DestroyPlayer(),
-              this.m_playerContainer && f(this.OnYoutubeScriptsReady));
+              f(this.OnYoutubeScriptsReady));
           }
           OnYoutubeScriptsReady() {
             this.CreatePlayer(this.props);
@@ -119453,7 +119540,9 @@ var CLSTAMP = "10961770";
             this.props.width &&
               this.props.height &&
               this.m_player?.setSize(this.props.width, this.props.height),
-              this.props.autoplay && this.m_player?.playVideo(),
+              this.props.forcePause
+                ? this.ApplyForcePause()
+                : this.props.autoplay && this.m_player?.playVideo(),
               this.props.onPlayerReady && this.props.onPlayerReady();
           }
           OnPlayerStateChange(e) {
@@ -119572,7 +119661,7 @@ var CLSTAMP = "10961770";
           (0, i.Cg)([l.oI], b.prototype, "OnPlayerLeftView", null),
           (0, i.Cg)([l.oI], b.prototype, "PlayVideo", null);
       },
-      43590: (e, t, n) => {
+      41738: (e, t, n) => {
         "use strict";
         n.d(t, { m: () => r });
         var s = n(83957),
@@ -119589,7 +119678,7 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      32093: (e, t, n) => {
+      44369: (e, t, n) => {
         "use strict";
         n.d(t, { D0: () => i, Fg: () => r, LD: () => a, xr: () => s });
         const s = { x: "y", y: "x" };
@@ -119607,10 +119696,10 @@ var CLSTAMP = "10961770";
           return Math.sqrt(o(n, n));
         }
       },
-      81313: (e, t, n) => {
+      68749: (e, t, n) => {
         "use strict";
         n.d(t, { JV: () => o, S2: () => i });
-        var s = n(26487);
+        var s = n(89875);
         class i {
           m_options;
           m_msStart;
@@ -119707,13 +119796,13 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      96393: (e, t, n) => {
+      37973: (e, t, n) => {
         "use strict";
         n.d(t, { H: () => a });
-        var s = n(32561),
+        var s = n(96757),
           i = n(83957),
           o = n.n(i),
-          r = n(52077);
+          r = n(63129);
         function a(e) {
           if (o().isCancel(e))
             return { strErrorMsg: "Action Cancelled:" + e, errorCode: s.e9 };
@@ -119785,7 +119874,7 @@ var CLSTAMP = "10961770";
             : { strErrorMsg: "Unknown Error: " + e, errorCode: s.zi };
         }
       },
-      19596: (e, t, n) => {
+      73960: (e, t, n) => {
         "use strict";
         n.d(t, {
           Jc: () => d,
@@ -119795,9 +119884,9 @@ var CLSTAMP = "10961770";
           lu: () => r.l,
         });
         var s = n(34629),
-          i = n(31174),
-          o = n(85519),
-          r = n(97150);
+          i = n(62770),
+          o = n(11883),
+          r = n(93642);
         class a {
           SyncStore(e) {
             return this.Subscribe(e).Unsubscribe;
@@ -119905,7 +119994,7 @@ var CLSTAMP = "10961770";
         }
         (0, s.Cg)([o.o], m.prototype, "Unregister", null);
       },
-      98434: (e, t, n) => {
+      29150: (e, t, n) => {
         "use strict";
         function s(...e) {
           return e.reduce(
@@ -119932,7 +120021,7 @@ var CLSTAMP = "10961770";
         }
         n.d(t, { A: () => s });
       },
-      49055: (e, t, n) => {
+      3771: (e, t, n) => {
         "use strict";
         function s(e) {
           if (!o() || !window.document.cookie) return null;
@@ -119961,14 +120050,14 @@ var CLSTAMP = "10961770";
         }
         n.d(t, { VY: () => s, kI: () => o, lc: () => i });
       },
-      43360: (e, t, n) => {
+      24052: (e, t, n) => {
         "use strict";
         function s(e, t) {
           "undefined" != typeof window && (window[e] = t);
         }
         n.d(t, { V: () => s });
       },
-      93456: (e, t, n) => {
+      51332: (e, t, n) => {
         "use strict";
         function s(e, t = !0) {
           return function (n, s, i) {
@@ -119991,7 +120080,7 @@ var CLSTAMP = "10961770";
         }
         n.d(t, { s: () => s });
       },
-      26487: (e, t, n) => {
+      89875: (e, t, n) => {
         "use strict";
         n.d(t, {
           MS: () => I,
@@ -120020,7 +120109,7 @@ var CLSTAMP = "10961770";
           ww: () => v,
           yU: () => A,
         });
-        var s = n(42603);
+        var s = n(56999);
         function i(e) {
           return null != e && void 0 !== e.focus;
         }
@@ -120275,7 +120364,7 @@ var CLSTAMP = "10961770";
           return i.prepend(...a), a;
         }
       },
-      959: (e, t, n) => {
+      99787: (e, t, n) => {
         "use strict";
         n.d(t, {
           $z: () => u.$z,
@@ -120293,21 +120382,22 @@ var CLSTAMP = "10961770";
           we: () => p,
         });
         var s = n(63696),
-          i = n(73561),
-          o = n(28540),
-          r = n(21571),
-          a = n(31174),
-          l = n(74005),
-          c = n(41261),
-          d = n(19596),
-          h = n(91960),
-          u = n(43639);
+          i = n(29085),
+          o = n(78104),
+          r = n(28703),
+          a = n(62770),
+          l = n(81289),
+          c = n(81922),
+          d = n(73960),
+          h = n(15388),
+          u = n(90115);
         class m {
           m_mapTokens = new Map();
           m_mapFallbackTokens = new Map();
           m_cbkTokensChanged = new d.lu();
           m_rgLocalesToUse;
           m_bReportIndividualMissingTokens = !0;
+          m_bReady = !1;
           static GetLanguageFallback(e) {
             return "sc_schinese" === e ? "schinese" : "english";
           }
@@ -120341,6 +120431,9 @@ var CLSTAMP = "10961770";
               this.m_mapFallbackTokens.clear(),
               this.AddTokens(e, t),
               this.m_cbkTokensChanged.Dispatch();
+          }
+          SetReady(e) {
+            this.m_bReady = e;
           }
           AddTokens(e, t) {
             Object.keys(e).forEach((t) => {
@@ -120395,13 +120488,13 @@ var CLSTAMP = "10961770";
                 : void (0 === this.m_mapTokens.size
                     ? (0, l.wT)(
                         !1,
-                        `Attempting to localize token '${e}' with no tokens in our map.`,
+                        `Attempting to localize token '${e}' with no tokens in our map for language '${r.TS.LANGUAGE}'. SharedLoc ready: ${h.Z.IsReady()}. site has inited: ${this.m_bReady}`,
                       )
                     : !t &&
                       this.m_bReportIndividualMissingTokens &&
                       (0, c.aj)().ReportError(
                         new Error(
-                          `Unable to find localization token '${e}' for language '${r.TS.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
+                          `Unable to find localization token '${e}' for language '${r.TS.LANGUAGE}', ${this.m_mapTokens.size} tokens in map. SharedLoc ready: ${h.Z.IsReady()}. site has inited: ${this.m_bReady}`,
                         ),
                         { bIncludeMessageInIdentifier: !0 },
                       ))
@@ -120610,102 +120703,103 @@ var CLSTAMP = "10961770";
         const x = new m();
         window.LocalizationManager = x;
       },
-      43639: (e, t, n) => {
+      90115: (e, t, n) => {
         "use strict";
         n.d(t, {
-          $z: () => c,
-          Hq: () => l,
-          KC: () => h,
-          _l: () => m,
-          dt: () => R,
-          lQ: () => p,
-          qZ: () => M,
-          sq: () => y,
-          u6: () => w,
-          vl: () => I,
+          $z: () => d,
+          Hq: () => c,
+          KC: () => u,
+          _l: () => p,
+          dt: () => M,
+          lQ: () => _,
+          qZ: () => T,
+          sq: () => w,
+          u6: () => x,
+          vl: () => y,
         });
-        var s,
-          i = n(59351),
-          o = n(959),
-          r = n(58135),
-          a = n(91960);
-        function l(e, t, n) {
-          let i;
+        var s = n(59351),
+          i = n(99787),
+          o = n(93851),
+          r = n(15388);
+        const a = 2147483647;
+        var l;
+        function c(e, t, n) {
+          let s;
           if ("boolean" == typeof t) {
-            i = {
-              eSuffix: t ? s.None : s.Ago,
+            s = {
+              eSuffix: t ? l.None : l.Ago,
               bForceSingleUnits: n,
               bHighGranularity: !1,
             };
           } else
-            i = {
-              eSuffix: s.Ago,
+            s = {
+              eSuffix: l.Ago,
               bForceSingleUnits: !1,
               bHighGranularity: !1,
               ...t,
             };
-          let a = "#TimeInterval_";
-          i.eSuffix == s.Ago
-            ? (a = "#TimeSince_")
-            : i.eSuffix == s.Remaining && (a = "#TimeRemaining_");
-          let l = (e) => Math.floor(e);
+          let r = "#TimeInterval_";
+          s.eSuffix == l.Ago
+            ? (r = "#TimeSince_")
+            : s.eSuffix == l.Remaining && (r = "#TimeRemaining_");
+          let a = (e) => Math.floor(e);
           if (
-            (i.bAllowDecimal && (l = (e) => Math.round(10 * e) / 10),
-            e >= 2 * r.Kp.PerYear)
+            (s.bAllowDecimal && (a = (e) => Math.round(10 * e) / 10),
+            e >= 2 * o.Kp.PerYear)
           )
-            return (0, o.we)(a + "XYears", l(e / r.Kp.PerYear));
-          if (e >= r.Kp.PerYear)
-            return (e -= r.Kp.PerYear) >= 2 * r.Kp.PerMonth &&
-              !i.bForceSingleUnits
-              ? (0, o.we)(a + "1YearXMonths", l(e / r.Kp.PerMonth))
-              : (0, o.we)(a + "1Year");
-          if (e >= 2 * r.Kp.PerMonth)
-            return (0, o.we)(a + "XMonths", l(e / r.Kp.PerMonth));
-          if (e >= 2 * r.Kp.PerWeek)
-            return (0, o.we)(a + "XWeeks", l(e / r.Kp.PerWeek));
-          if (e >= r.Kp.PerWeek)
-            return (0, o.we)(a + "1Week", l(e / r.Kp.PerWeek));
-          if (e >= 2 * r.Kp.PerDay)
-            return (0, o.we)(a + "XDays", l(e / r.Kp.PerDay));
-          if (e >= r.Kp.PerDay)
-            return (e -= r.Kp.PerDay) >= 2 * r.Kp.PerHour &&
-              !i.bForceSingleUnits
-              ? (0, o.we)(a + "1DayXHours", l(e / r.Kp.PerHour))
-              : (0, o.we)(a + "1Day");
-          if (e >= 2 * r.Kp.PerHour)
-            return (0, o.we)(a + "XHours", l(e / r.Kp.PerHour));
-          if (e >= r.Kp.PerHour)
-            return (e -= r.Kp.PerHour) >= 2 * r.Kp.PerMinute &&
-              !i.bForceSingleUnits
-              ? (0, o.we)(a + "1HourXMinutes", l(e / r.Kp.PerMinute))
-              : (0, o.we)(a + "1Hour");
-          if (e >= 2 * r.Kp.PerMinute) {
-            const t = Math.floor(e / r.Kp.PerMinute),
-              n = e % r.Kp.PerMinute;
-            return i.bHighGranularity && 0 != n
+            return (0, i.we)(r + "XYears", a(e / o.Kp.PerYear));
+          if (e >= o.Kp.PerYear)
+            return (e -= o.Kp.PerYear) >= 2 * o.Kp.PerMonth &&
+              !s.bForceSingleUnits
+              ? (0, i.we)(r + "1YearXMonths", a(e / o.Kp.PerMonth))
+              : (0, i.we)(r + "1Year");
+          if (e >= 2 * o.Kp.PerMonth)
+            return (0, i.we)(r + "XMonths", a(e / o.Kp.PerMonth));
+          if (e >= 2 * o.Kp.PerWeek)
+            return (0, i.we)(r + "XWeeks", a(e / o.Kp.PerWeek));
+          if (e >= o.Kp.PerWeek)
+            return (0, i.we)(r + "1Week", a(e / o.Kp.PerWeek));
+          if (e >= 2 * o.Kp.PerDay)
+            return (0, i.we)(r + "XDays", a(e / o.Kp.PerDay));
+          if (e >= o.Kp.PerDay)
+            return (e -= o.Kp.PerDay) >= 2 * o.Kp.PerHour &&
+              !s.bForceSingleUnits
+              ? (0, i.we)(r + "1DayXHours", a(e / o.Kp.PerHour))
+              : (0, i.we)(r + "1Day");
+          if (e >= 2 * o.Kp.PerHour)
+            return (0, i.we)(r + "XHours", a(e / o.Kp.PerHour));
+          if (e >= o.Kp.PerHour)
+            return (e -= o.Kp.PerHour) >= 2 * o.Kp.PerMinute &&
+              !s.bForceSingleUnits
+              ? (0, i.we)(r + "1HourXMinutes", a(e / o.Kp.PerMinute))
+              : (0, i.we)(r + "1Hour");
+          if (e >= 2 * o.Kp.PerMinute) {
+            const t = Math.floor(e / o.Kp.PerMinute),
+              n = e % o.Kp.PerMinute;
+            return s.bHighGranularity && 0 != n
               ? 1 == n
-                ? (0, o.we)(a + "XMinutes1Second", t)
-                : (0, o.we)(a + "XMinutesXSeconds", t, n)
-              : (0, o.we)(a + "XMinutes", l(e / r.Kp.PerMinute));
+                ? (0, i.we)(r + "XMinutes1Second", t)
+                : (0, i.we)(r + "XMinutesXSeconds", t, n)
+              : (0, i.we)(r + "XMinutes", a(e / o.Kp.PerMinute));
           }
-          if (e >= r.Kp.PerMinute) {
-            const t = e % r.Kp.PerMinute;
-            return i.bHighGranularity && 0 != t
+          if (e >= o.Kp.PerMinute) {
+            const t = e % o.Kp.PerMinute;
+            return s.bHighGranularity && 0 != t
               ? 1 == t
-                ? (0, o.we)(a + "1Minute1Second")
-                : (0, o.we)(a + "1MinuteXSeconds", t)
-              : (0, o.we)(a + "1Minute");
+                ? (0, i.we)(r + "1Minute1Second")
+                : (0, i.we)(r + "1MinuteXSeconds", t)
+              : (0, i.we)(r + "1Minute");
           }
-          return i.bHighGranularity
+          return s.bHighGranularity
             ? 1 == e
-              ? (0, o.we)(a + "1Second")
-              : (0, o.we)(a + "XSeconds", e)
-            : (0, o.we)(a + "LessThanAMinute");
+              ? (0, i.we)(r + "1Second")
+              : (0, i.we)(r + "XSeconds", e)
+            : (0, i.we)(r + "LessThanAMinute");
         }
-        function c(e, t) {
+        function d(e, t) {
           const n = { year: "numeric", month: "short", day: "numeric", ...t };
           return new Date(1e3 * e).toLocaleDateString(
-            o.pf.GetPreferredLocales(),
+            i.pf.GetPreferredLocales(),
             n,
           );
         }
@@ -120713,15 +120807,15 @@ var CLSTAMP = "10961770";
           (e[(e.None = 0)] = "None"),
             (e[(e.Ago = 1)] = "Ago"),
             (e[(e.Remaining = 2)] = "Remaining");
-        })(s || (s = {}));
-        const d = new Map();
-        function h(e, t, n) {
+        })(l || (l = {}));
+        const h = new Map();
+        function u(e, t, n) {
           const s = new Date(1e3 * e),
-            i = o.pf.GetPreferredLocales(),
+            o = i.pf.GetPreferredLocales(),
             r = {
               ...(t?.bForce24HourClock ||
               (function (e) {
-                let t = d.get(e);
+                let t = h.get(e);
                 if (!0 === t || !1 === t) return t;
                 const n = new Date();
                 return (
@@ -120729,46 +120823,46 @@ var CLSTAMP = "10961770";
                   (t =
                     n.toLocaleTimeString(e, { hour: "numeric" }) ==
                     n.toLocaleTimeString(e, { hour: "numeric", hour12: !1 })),
-                  d.set(e, t),
+                  h.set(e, t),
                   t
                 );
-              })(i[0])
+              })(o[0])
                 ? { hour: "numeric", minute: "2-digit", hourCycle: "h23" }
                 : { hour: "numeric", minute: "2-digit" }),
               ...n,
             };
-          return s.toLocaleTimeString(i, r);
+          return s.toLocaleTimeString(o, r);
         }
-        const u = new Map();
-        function m(e, t, n = !0, s = !0, r = !1) {
+        const m = new Map();
+        function p(e, t, n = !0, o = !0, r = !1) {
           const a = new Date(),
             l = new Date(1e3 * e);
-          if (l.getFullYear() != a.getFullYear()) return c(e);
-          s && i.tB(new Date().setHours(24, 0, 0, 0) - a.getTime());
-          const d = new Date();
-          if ((d.setHours(0, 0, 0, 0), n))
-            if (l >= d) {
-              if ((d.setDate(d.getDate() + 1), l < d))
-                return (0, o.we)("#Time_Today");
-              if ((d.setDate(d.getDate() + 1), l < d))
-                return (0, o.we)("#Time_Tomorrow");
-            } else if ((d.setDate(d.getDate() - 1), l >= d))
-              return (0, o.we)("#Time_Yesterday");
+          if (l.getFullYear() != a.getFullYear()) return d(e);
+          o && s.tB(new Date().setHours(24, 0, 0, 0) - a.getTime());
+          const c = new Date();
+          if ((c.setHours(0, 0, 0, 0), n))
+            if (l >= c) {
+              if ((c.setDate(c.getDate() + 1), l < c))
+                return (0, i.we)("#Time_Today");
+              if ((c.setDate(c.getDate() + 1), l < c))
+                return (0, i.we)("#Time_Tomorrow");
+            } else if ((c.setDate(c.getDate() - 1), l >= c))
+              return (0, i.we)("#Time_Yesterday");
           const h = { month: t ? "long" : "short", day: "numeric" };
           r && (h.weekday = "long");
-          const m = l.setHours(0, 0, 0, 0) + h.month;
-          let p = u.get(m);
+          const u = l.setHours(0, 0, 0, 0) + h.month;
+          let p = m.get(u);
           return (
             p ||
-            ((p = l.toLocaleDateString(o.pf.GetPreferredLocales(), h)),
-            u.set(m, p),
+            ((p = l.toLocaleDateString(i.pf.GetPreferredLocales(), h)),
+            m.set(u, p),
             p)
           );
         }
-        function p(e, t) {
+        function _(e, t) {
           const n = new Date(1e3 * e),
-            s = new Date(),
-            a = {
+            r = new Date(),
+            l = {
               bGranularFutureTime: !1,
               bGranularTodayTimeOnly: !1,
               bGranularToday: !1,
@@ -120779,63 +120873,63 @@ var CLSTAMP = "10961770";
               bForce24HourClock: !1,
               ...t,
             };
-          if (n > s) {
-            if (!a.bGranularFutureTime)
+          if (n > r) {
+            if (!l.bGranularFutureTime)
               return (
-                i.tB(n.getTime() - s.getTime()),
-                n.getFullYear() == s.getFullYear() ? b(n) : y(n)
+                s.tB(Math.min(n.getTime() - r.getTime(), a)),
+                n.getFullYear() == r.getFullYear() ? I(n) : w(n)
               );
-            i.tB(new Date().setHours(24, 0, 0, 0) - s.getTime());
+            s.tB(new Date().setHours(24, 0, 0, 0) - r.getTime());
             let e = new Date();
             return (
               e.setHours(0, 0, 0, 0),
               e.setDate(e.getDate() + 1),
               n < e
-                ? (0, o.we)("#Time_Today")
+                ? (0, i.we)("#Time_Today")
                 : (e.setDate(e.getDate() + 1),
                   n < e
-                    ? (0, o.we)("#Time_Tomorrow")
+                    ? (0, i.we)("#Time_Tomorrow")
                     : (e.setDate(e.getDate() + 5),
                       n < e
                         ? (function (e) {
-                            let t = _.get(e.getDay());
+                            let t = g.get(e.getDay());
                             return (
                               t ||
                               ((t = e.toLocaleDateString(
-                                o.pf.GetPreferredLocales(),
+                                i.pf.GetPreferredLocales(),
                                 { weekday: "long" },
                               )),
-                              _.set(e.getDay(), t),
+                              g.set(e.getDay(), t),
                               t)
                             );
                           })(n)
-                        : v(n, !0, a.bAbbreviateDayOfWeek)))
+                        : b(n, !0, l.bAbbreviateDayOfWeek)))
             );
           }
-          i.tB(new Date().setHours(24, 0, 0, 0) - s.getTime());
-          let l = new Date();
-          if ((l.setHours(0, 0, 0, 0), n >= l))
-            return a.bGranularToday
-              ? a.bGranularTodayTimeOnly
-                ? h(e, { bForce24HourClock: a.bForce24HourClock })
-                : (0, o.we)(
+          s.tB(new Date().setHours(24, 0, 0, 0) - r.getTime());
+          let c = new Date();
+          if ((c.setHours(0, 0, 0, 0), n >= c))
+            return l.bGranularToday
+              ? l.bGranularTodayTimeOnly
+                ? u(e, { bForce24HourClock: l.bForce24HourClock })
+                : (0, i.we)(
                     "#Time_Today_At",
-                    h(e, { bForce24HourClock: a.bForce24HourClock }),
+                    u(e, { bForce24HourClock: l.bForce24HourClock }),
                   )
-              : (0, o.we)("#Time_Today");
-          if ((l.setDate(s.getDate() - 1), n >= l))
-            return a.bGranularYesterday
-              ? (0, o.we)(
+              : (0, i.we)("#Time_Today");
+          if ((c.setDate(r.getDate() - 1), n >= c))
+            return l.bGranularYesterday
+              ? (0, i.we)(
                   "#Time_Yesterday_At",
-                  h(e, { bForce24HourClock: a.bForce24HourClock }),
+                  u(e, { bForce24HourClock: l.bForce24HourClock }),
                 )
-              : (0, o.we)("#Time_Yesterday");
-          l.setDate(s.getDate() - 6);
-          const c = new Date(l);
-          if (a.bGranularWeek && n >= c)
-            return v(n, !1, !a.bAbbreviateDayOfWeek);
-          if (a.bGranularPast)
-            return (0, o.we)(
+              : (0, i.we)("#Time_Yesterday");
+          c.setDate(r.getDate() - 6);
+          const d = new Date(c);
+          if (l.bGranularWeek && n >= d)
+            return b(n, !1, !l.bAbbreviateDayOfWeek);
+          if (l.bGranularPast)
+            return (0, i.we)(
               "#Time_Past_At",
               (function (e, t, n) {
                 let s;
@@ -120846,7 +120940,7 @@ var CLSTAMP = "10961770";
                         year: t ? void 0 : "numeric",
                       }
                     : t;
-                let i = new Date(1e3 * e);
+                let o = new Date(1e3 * e);
                 const r = {
                   weekday: "short",
                   month: "long",
@@ -120854,90 +120948,90 @@ var CLSTAMP = "10961770";
                   year: "numeric",
                   ...s,
                 };
-                return i.toLocaleDateString(o.pf.GetPreferredLocales(), r);
+                return o.toLocaleDateString(i.pf.GetPreferredLocales(), r);
               })(
                 e,
-                n.getFullYear() == s.getFullYear(),
-                !a.bAbbreviateDayOfWeek,
+                n.getFullYear() == r.getFullYear(),
+                !l.bAbbreviateDayOfWeek,
               ),
-              h(e, { bForce24HourClock: a.bForce24HourClock }),
+              u(e, { bForce24HourClock: l.bForce24HourClock }),
             );
-          if (n >= c) return (0, o.we)("#TimeSince_ThisWeek");
+          if (n >= d) return (0, i.we)("#TimeSince_ThisWeek");
           if (
-            n.getMonth() == s.getMonth() &&
-            n.getFullYear() == s.getFullYear()
+            n.getMonth() == r.getMonth() &&
+            n.getFullYear() == r.getFullYear()
           ) {
             const e =
-              Math.floor((c.valueOf() - n.valueOf()) / (1e3 * r.Kp.PerWeek)) +
+              Math.floor((d.valueOf() - n.valueOf()) / (1e3 * o.Kp.PerWeek)) +
               1;
             return 1 == e
-              ? (0, o.we)("#TimeSince_1Week")
-              : (0, o.we)("#TimeSince_XWeeks", e);
+              ? (0, i.we)("#TimeSince_1Week")
+              : (0, i.we)("#TimeSince_XWeeks", e);
           }
-          return n.getFullYear() == s.getFullYear() ? b(n) : y(n);
+          return n.getFullYear() == r.getFullYear() ? I(n) : w(n);
         }
-        const _ = new Map(),
-          g = new Map(),
+        const g = new Map(),
           C = new Map(),
           f = new Map(),
-          S = new Map();
+          S = new Map(),
+          v = new Map();
         new Map();
-        function v(e, t = !1, n = !0) {
+        function b(e, t = !1, n = !0) {
           const s = {
               weekday: n ? "long" : "short",
               day: "numeric",
               month: t ? "long" : "short",
             },
-            i = e.setHours(0, 0, 0, 0) + s.weekday + s.month;
-          let r = S.get(i);
+            o = e.setHours(0, 0, 0, 0) + s.weekday + s.month;
+          let r = v.get(o);
           return (
             r ||
-            ((r = e.toLocaleDateString(o.pf.GetPreferredLocales(), s)),
-            S.set(i, r),
+            ((r = e.toLocaleDateString(i.pf.GetPreferredLocales(), s)),
+            v.set(o, r),
             r)
           );
         }
-        function b(e) {
-          let t = g.get(e.getMonth());
+        function I(e) {
+          let t = C.get(e.getMonth());
           return (
             t ||
-            ((t = e.toLocaleDateString(o.pf.GetPreferredLocales(), {
+            ((t = e.toLocaleDateString(i.pf.GetPreferredLocales(), {
               month: "long",
             })),
-            g.set(e.getMonth(), t),
-            t)
-          );
-        }
-        function I(e) {
-          let t = C.get(e.getFullYear());
-          return (
-            t ||
-            ((t = e.toLocaleDateString(o.pf.GetPreferredLocales(), {
-              year: "numeric",
-            })),
-            C.set(e.getFullYear(), t),
+            C.set(e.getMonth(), t),
             t)
           );
         }
         function y(e) {
+          let t = f.get(e.getFullYear());
+          return (
+            t ||
+            ((t = e.toLocaleDateString(i.pf.GetPreferredLocales(), {
+              year: "numeric",
+            })),
+            f.set(e.getFullYear(), t),
+            t)
+          );
+        }
+        function w(e) {
           const t = e.getMonth() + 12 * e.getFullYear();
-          let n = f.get(t);
+          let n = S.get(t);
           return (
             n ||
-            ((n = e.toLocaleDateString(o.pf.GetPreferredLocales(), {
+            ((n = e.toLocaleDateString(i.pf.GetPreferredLocales(), {
               month: "long",
               year: "numeric",
             })),
-            f.set(t, n),
+            S.set(t, n),
             n)
           );
         }
-        function w(e, t) {
+        function x(e, t) {
           switch (e.getUTCMonth()) {
             case 0:
             case 1:
             case 2:
-              return (0, o.we)(
+              return (0, i.we)(
                 t
                   ? "#Time_QuarterOfYear_Expanded_Q1"
                   : "#Time_QuarterOfYear_Q1",
@@ -120946,7 +121040,7 @@ var CLSTAMP = "10961770";
             case 3:
             case 4:
             case 5:
-              return (0, o.we)(
+              return (0, i.we)(
                 t
                   ? "#Time_QuarterOfYear_Expanded_Q2"
                   : "#Time_QuarterOfYear_Q2",
@@ -120955,14 +121049,14 @@ var CLSTAMP = "10961770";
             case 6:
             case 7:
             case 8:
-              return (0, o.we)(
+              return (0, i.we)(
                 t
                   ? "#Time_QuarterOfYear_Expanded_Q3"
                   : "#Time_QuarterOfYear_Q3",
                 e.getUTCFullYear(),
               );
             default:
-              return (0, o.we)(
+              return (0, i.we)(
                 t
                   ? "#Time_QuarterOfYear_Expanded_Q4"
                   : "#Time_QuarterOfYear_Q4",
@@ -120970,11 +121064,11 @@ var CLSTAMP = "10961770";
               );
           }
         }
-        function x(e, t, n) {
+        function A(e, t, n) {
           for (; e.length < t; ) e = n + e;
           return e;
         }
-        function A(e) {
+        function R(e) {
           return (
             (void 0 === e || isNaN(e)) && (e = 0),
             {
@@ -120985,85 +121079,85 @@ var CLSTAMP = "10961770";
             }
           );
         }
-        function R(e, t, n) {
+        function M(e, t, n) {
           let s = e < 0;
-          const i = A((e = s ? 0 - e : e)),
-            r = i.fraction.toFixed(2).split(".")[1],
+          const o = R((e = s ? 0 - e : e)),
+            r = o.fraction.toFixed(2).split(".")[1],
             a = t ?? !0;
           let l = !a || "00" == r;
           s &&
-            0 == i.hours &&
-            0 == i.minutes &&
-            0 == i.seconds &&
+            0 == o.hours &&
+            0 == o.minutes &&
+            0 == o.seconds &&
             l &&
             (s = !1);
           let c = "";
-          if (i.hours) {
-            const e = i.hours.toString(),
-              t = x(i.minutes.toString(), 2, "0"),
-              n = x(i.seconds.toString(), 2, "0"),
+          if (o.hours) {
+            const e = o.hours.toString(),
+              t = A(o.minutes.toString(), 2, "0"),
+              n = A(o.seconds.toString(), 2, "0"),
               s = a
                 ? "#Duration_Abbreviation_HourMinuteSecondMillisecond"
                 : "#Duration_Abbreviation_HourMinuteSecond";
-            c = (0, o.we)(s, e, t, n, r);
-          } else if (i.minutes) {
-            const e = i.minutes.toString(),
-              t = x(i.seconds.toString(), 2, "0"),
+            c = (0, i.we)(s, e, t, n, r);
+          } else if (o.minutes) {
+            const e = o.minutes.toString(),
+              t = A(o.seconds.toString(), 2, "0"),
               n = a
                 ? "#Duration_Abbreviation_MinuteSecondMillisecond"
                 : "#Duration_Abbreviation_MinuteSecond";
-            c = (0, o.we)(n, e, t, r);
-          } else if (i.seconds) {
-            const e = i.seconds.toString(),
+            c = (0, i.we)(n, e, t, r);
+          } else if (o.seconds) {
+            const e = o.seconds.toString(),
               t = a
                 ? "#Duration_Abbreviation_SecondMillisecond"
                 : "#Duration_Abbreviation_Second";
-            c = (0, o.we)(t, e, r);
+            c = (0, i.we)(t, e, r);
           }
           return (
-            s && (c = n ? (0, o.we)("#Duration_WrittenNegation", c) : "-" + c),
+            s && (c = n ? (0, i.we)("#Duration_WrittenNegation", c) : "-" + c),
             c
           );
         }
-        function M(e, t, n) {
+        function T(e, t, n) {
           let s = e < 0;
-          const i = A((e = s ? 0 - e : e)),
-            r = x(i.seconds.toString(), 2, "0"),
-            l = i.fraction.toFixed(2).split(".")[1],
+          const o = R((e = s ? 0 - e : e)),
+            a = A(o.seconds.toString(), 2, "0"),
+            l = o.fraction.toFixed(2).split(".")[1],
             c = t ?? !0;
           let d = !c || "00" == l;
           s &&
-            0 == i.hours &&
-            0 == i.minutes &&
-            0 == i.seconds &&
+            0 == o.hours &&
+            0 == o.minutes &&
+            0 == o.seconds &&
             d &&
             (s = !1);
           let h = "";
-          if (i.hours) {
-            const e = x(i.minutes.toString(), 2, "0"),
+          if (o.hours) {
+            const e = A(o.minutes.toString(), 2, "0"),
               t = c
                 ? "#Duration_HourMinuteSecondMillisecond"
                 : "#Duration_HourMinuteSecond";
-            h = (0, o.we)(t, i.hours, e, r, l);
+            h = (0, i.we)(t, o.hours, e, a, l);
           } else {
-            const e = i.minutes.toString(),
+            const e = o.minutes.toString(),
               t = c
                 ? "#Duration_MinuteSecondMillisecond"
                 : "#Duration_MinuteSecond";
-            h = a.Z.Localize(t, e, r, l);
+            h = r.Z.Localize(t, e, a, l);
           }
           return (
             s &&
-              (h = n ? a.Z.Localize("#Duration_WrittenNegation", h) : "-" + h),
+              (h = n ? r.Z.Localize("#Duration_WrittenNegation", h) : "-" + h),
             h
           );
         }
       },
-      69623: (e, t, n) => {
+      99755: (e, t, n) => {
         "use strict";
         n.d(t, { Dq: () => r, dm: () => o });
-        var s = n(39109),
-          i = n(91960);
+        var s = n(25409),
+          i = n(15388);
         function o(e, t, n, o) {
           let r = t;
           r =
@@ -121115,13 +121209,13 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      92246: (e, t, n) => {
+      33154: (e, t, n) => {
         "use strict";
         n.d(t, { fi: () => l, wd: () => a });
         var s,
           i = n(34629),
-          o = n(85519),
-          r = n(97150);
+          o = n(11883),
+          r = n(93642);
         !(function (e) {
           (e[(e.Debug = 0)] = "Debug"),
             (e[(e.Info = 1)] = "Info"),
@@ -121410,7 +121504,7 @@ var CLSTAMP = "10961770";
           (window.EnableSteamConsole = (e = !0) =>
             l.Get().SetDebugLogEnabled("SteamClient", e));
       },
-      87885: (e, t, n) => {
+      74257: (e, t, n) => {
         "use strict";
         n.d(t, {
           CH: () => s.CH,
@@ -121438,21 +121532,21 @@ var CLSTAMP = "10961770";
           wY: () => o.wY,
           xA: () => s.xA,
         });
-        var s = n(52757),
-          i = n(7227),
-          o = n(7124),
-          r = (n(74887), n(9953)),
-          a = (n(66215), n(85519));
+        var s = n(41769),
+          i = n(5663),
+          o = n(60624),
+          r = (n(3803), n(76957)),
+          a = (n(84179), n(11883));
       },
-      66215: (e, t, n) => {
+      84179: (e, t, n) => {
         "use strict";
-        n(63696), n(7124);
+        n(63696), n(60624);
       },
-      80020: (e, t, n) => {
+      27464: (e, t, n) => {
         "use strict";
         n.d(t, { w: () => o });
-        var s = n(26487),
-          i = n(81313);
+        var s = n(89875),
+          i = n(68749);
         class o extends i.S2 {
           m_component;
           m_propTargets;
@@ -121489,11 +121583,11 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      9953: (e, t, n) => {
+      76957: (e, t, n) => {
         "use strict";
         n.d(t, { X: () => o });
         var s = n(63696),
-          i = n(7124);
+          i = n(60624);
         function o() {
           const [e, t] = s.useState(0),
             n = s.useCallback(
@@ -121509,12 +121603,12 @@ var CLSTAMP = "10961770";
           };
         }
       },
-      7124: (e, t, n) => {
+      60624: (e, t, n) => {
         "use strict";
         n.d(t, { BL: () => l, Fd: () => c, wY: () => a });
         var s = n(63696),
-          i = n(74005),
-          o = n(7227);
+          i = n(81289),
+          o = n(5663);
         function r(e, t) {
           return (0, o.QS)(
             (n) => {
@@ -121555,11 +121649,11 @@ var CLSTAMP = "10961770";
           return n.observe(e), n;
         }
       },
-      74887: (e, t, n) => {
+      3803: (e, t, n) => {
         "use strict";
-        n(63696), n(7124);
+        n(63696), n(60624);
       },
-      93086: (e, t, n) => {
+      82194: (e, t, n) => {
         "use strict";
         function s(e, t) {
           return e < t ? -1 : e > t ? 1 : 0;
@@ -121699,7 +121793,7 @@ var CLSTAMP = "10961770";
           tV: () => a,
         });
       },
-      58135: (e, t, n) => {
+      93851: (e, t, n) => {
         "use strict";
         n.d(t, { IP: () => i, Kp: () => s, _2: () => o });
         const s = {
@@ -121717,7 +121811,7 @@ var CLSTAMP = "10961770";
           return Math.floor(Date.now() / 1e3);
         }
       },
-      30940: (e, t, n) => {
+      45904: (e, t, n) => {
         "use strict";
         n.d(t, {
           DZ: () => p,
@@ -121726,13 +121820,14 @@ var CLSTAMP = "10961770";
           NT: () => m,
           Qz: () => l,
           ZF: () => h,
+          _1: () => _,
           k2: () => u,
           wm: () => a,
         });
-        var s = n(71926),
-          i = n(21571),
-          o = n(73561),
-          r = (n(959), n(74005));
+        var s = n(76410),
+          i = n(28703),
+          o = n(29085),
+          r = (n(99787), n(81289));
         function a(e) {
           if (void 0 === e)
             return console.error("Cannot GetHostname on empty URL"), "";
@@ -121863,20 +121958,23 @@ var CLSTAMP = "10961770";
         function p(e) {
           return e.startsWith("http://") || e.startsWith("https://");
         }
+        function _(e) {
+          return Boolean(e?.startsWith("data:"));
+        }
       },
-      58292: (e, t, n) => {
+      50376: (e, t, n) => {
         "use strict";
         function s(e, t, n = !1) {
           return `${e}economy/sticker${n ? "static" : ""}/${encodeURIComponent(t)}`;
         }
         n.d(t, { G: () => s });
       },
-      46024: (e, t, n) => {
+      57908: (e, t, n) => {
         "use strict";
         n.d(t, { GD: () => r, jt: () => a });
         var s = n(63696),
-          i = n(42603),
-          o = n(87885);
+          i = n(56999),
+          o = n(74257);
         function r(e) {
           const [t, n] = s.useState(!1),
             r = s.useCallback(() => {
@@ -121918,18 +122016,18 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      93778: (e, t, n) => {
+      88809: (e, t, n) => {
         "use strict";
         n.d(t, { B: () => Z, Y: () => X });
         var s = n(34629),
           i = n(62540),
           o = n(63696),
-          r = n(93086),
+          r = n(82194),
           a = n(41230),
           l = n(52124),
           c = n.n(l),
-          d = n(21571),
-          h = n(76693);
+          d = n(28703),
+          h = n(66745);
         function u(e, t, n) {
           return (
             d.TS.COMMUNITY_CDN_ASSET_URL + e + "/roomeffects/" + t + "/" + n
@@ -122677,7 +122775,7 @@ var CLSTAMP = "10961770";
             );
           }
         }
-        var O = n(31174);
+        var O = n(62770);
         function N(e) {
           const t = e.data,
             n = u(e.sale, e.effect.name, `${t.strImage}.png`);
@@ -122792,7 +122890,7 @@ var CLSTAMP = "10961770";
             });
           }
         }
-        var j = n(98434);
+        var j = n(29150);
         class V {
           m_seed;
           constructor(e) {
@@ -122907,7 +123005,7 @@ var CLSTAMP = "10961770";
         };
         X = (0, s.Cg)([a.PA], X);
       },
-      21571: (e, t, n) => {
+      28703: (e, t, n) => {
         "use strict";
         n.d(t, {
           CI: () => f,
@@ -122933,11 +123031,11 @@ var CLSTAMP = "10961770";
           yK: () => w,
         });
         var s = n(63696),
-          i = n(28540),
-          o = n(74005),
-          r = n(45442),
-          a = n(14561),
-          l = n(576);
+          i = n(78104),
+          o = n(81289),
+          r = n(94606),
+          a = n(47829),
+          l = n(37788);
         const c = s.createContext({}),
           d = (e) => {
             const t = s.useContext(c);
@@ -123031,7 +123129,7 @@ var CLSTAMP = "10961770";
           return "friendsui";
         }
       },
-      45442: (e, t, n) => {
+      94606: (e, t, n) => {
         "use strict";
         n.d(t, {
           GP: () => r,
@@ -123040,7 +123138,7 @@ var CLSTAMP = "10961770";
           UF: () => a,
           iA: () => o,
         });
-        var s = n(7354);
+        var s = n(53062);
         const i = {
             EUNIVERSE: 0,
             LANGUAGE: "english",
@@ -123135,10 +123233,10 @@ var CLSTAMP = "10961770";
           },
           l = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
       },
-      17717: (e, t, n) => {
+      57185: (e, t, n) => {
         "use strict";
         n.d(t, { Fd: () => r, OW: () => i, Tc: () => o });
-        var s = n(45442);
+        var s = n(94606);
         const i = "webui_config";
         function o(e, t = i) {
           return a(e, t, !0);
@@ -123179,7 +123277,7 @@ var CLSTAMP = "10961770";
           else n && console.error("Missing config element #", t);
         }
       },
-      576: (e, t, n) => {
+      37788: (e, t, n) => {
         "use strict";
         n.d(t, {
           Fd: () => r.Fd,
@@ -123188,10 +123286,10 @@ var CLSTAMP = "10961770";
           XJ: () => d,
           bd: () => m,
         });
-        var s = n(76693),
-          i = n(49055),
-          o = n(45442),
-          r = n(17717);
+        var s = n(66745),
+          i = n(3771),
+          o = n(94606),
+          r = n(57185);
         let a;
         function l() {
           if (!(0, i.kI)()) return a || (a = c()), a;
@@ -123244,7 +123342,7 @@ var CLSTAMP = "10961770";
         }
         const p = "presentation_mode";
       },
-      83508: (e, t, n) => {
+      33992: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -123254,7 +123352,7 @@ var CLSTAMP = "10961770";
           123 !== Array.from(new Set([123]))[0] &&
             console.error("Should not include prototypejs.");
       },
-      14561: (e, t, n) => {
+      47829: (e, t, n) => {
         "use strict";
         n.d(t, { $W: () => d, OO: () => h });
         let s = !1,
@@ -124537,23 +124635,24 @@ var CLSTAMP = "10961770";
         43: "b98e0f420add57691fc2",
         133: "82545716ea1a8b82e4d9",
         191: "f3d164bc18e6e4eb035c",
-        200: "2f085440862fb215c3fb",
+        200: "f70dc77df2b44c5b6c28",
+        201: "b6b37d62603ade488f3b",
         277: "8ac481477d17b71a308e",
-        295: "5381a9c91407f08953f0",
+        295: "30a1b0feb050dde520dd",
         316: "b4a4125ab8550ef83a0b",
         382: "57763f481aca5421fdcc",
         474: "6a9d0b4e2892dded462e",
         496: "fb606fd9941402c4c9fd",
-        559: "5353922810b1052db615",
+        559: "e8fd6d4fe87221a119fa",
         684: "7b7abc722226e7196944",
         762: "6381bf741535ad65d4e3",
-        815: "b87cd99e1b8dea577e42",
+        815: "c7a18e80878daf8f54e1",
         898: "b6a64c82dc169d24fab2",
         902: "55c8b333a5261e9183dc",
         947: "77123a0d43c051462d19",
         975: "3a1c568c77dec2962779",
         1087: "e11786deaa8b241d4432",
-        1136: "e1ca9c0db741e83dd2b9",
+        1136: "5f832a08c3bef135c68e",
         1144: "896ffa5dbc529d9c48a5",
         1158: "20c08adf29ac06b096f3",
         1224: "8cf7b28930c7b7c56321",
@@ -124563,19 +124662,19 @@ var CLSTAMP = "10961770";
         1571: "301c37a370bcf304422d",
         1639: "48a7008667f0f9b1d559",
         1849: "c211a47bad2b684320fd",
-        1864: "3517b502c7008587fe01",
+        1864: "f2b9178068767b40d428",
         1954: "ce875dc43cc518068eea",
         1990: "f85ce9a0d9c8bd0dcdf2",
         2116: "9caf93966dc0a0c7202f",
         2177: "77c78758e314a85bc85e",
-        2269: "03376b6d240fcc05831d",
+        2269: "913b2ce129ee42bef5df",
         2281: "6496f3d7e4ce6308483c",
         2292: "2648171bbf7a4e541935",
         2506: "3995fb6cb9c524d2af74",
         2520: "5bfbaedd17d68216d8eb",
         2532: "a9d9f49d622113e7237a",
         2687: "105bc40c10c3eaf266d1",
-        2889: "1ebc2a4dd324ce073709",
+        2889: "7370f87b7e9e453eb0eb",
         2945: "b1bb49c86e94db92dee9",
         2993: "e6827764a5e82e106259",
         3e3: "1b03996604202ef27322",
@@ -124589,85 +124688,83 @@ var CLSTAMP = "10961770";
         3485: "08349ebcf15f4d7c2342",
         3577: "2337465c4bd74edf3412",
         3723: "a69634b2de1f3fa5dba5",
-        3778: "86f150aa8008de678956",
+        3778: "f10ff9679525e51d3ee7",
         3789: "7576118cdc2ea612c555",
-        3800: "72b30e8b034fdc624d30",
+        3800: "29f495d97b5169da720b",
         3810: "e5049fe30dd9a6434d81",
         3875: "f4eb6016a7ef30ff0ad4",
         3898: "90846a9e84c0e34eca45",
-        3907: "0d5aaa5bfaf5af96cfdb",
+        3907: "3dea78f6a4155105eeaa",
         4006: "0652b75ab14e56a841e7",
         4154: "ab85015c1182c53c2a07",
         4227: "b9f7e2337d2bec4eff82",
-        4230: "6d34cf433db410c0f53c",
-        4289: "a824167cb2edb8fb1b56",
+        4230: "163b24575a8590b5dd57",
+        4289: "b1ffb8ea3b089c182e85",
         4295: "e2c54df00cd7fc6e55c9",
         4302: "127bac547ebe35debb6e",
         4352: "de92a58e851fd1f40a2a",
-        4419: "4ea565754e3b324d1e3c",
+        4419: "a0af6463f1a69b1adf58",
         4421: "9fa6f4e86d1f195ce124",
         4434: "7042d1e1cb05e782371a",
         4473: "a4086781f9cbe6881139",
         4488: "ecc72b7e73d0d3a37046",
-        4625: "49cb83ff4c8913db7a14",
-        4750: "906f94c7bcf2b7ba17d5",
+        4625: "b3f0a685e298e07970f2",
+        4750: "2f714d699e60e9e5441a",
         4776: "642916fbd7a977b50de9",
         4777: "040c37a660c26d77931d",
         4779: "909f21776039059914ce",
         4787: "ef50a874abefeb603b11",
-        4792: "8e054a3b680966459a06",
+        4792: "f9a55c905cc523f64b44",
         4844: "9b0a060abc338b33c9ea",
-        4949: "51b4735f68d14f15d5ac",
         4976: "793b1acb4211f3513c7c",
-        4978: "cdaf6719aa622dfb47ce",
-        5040: "5c42e6b4e364624dcec0",
+        4978: "4253d6570728d8675048",
+        5040: "f96790d344ca1985baf6",
         5094: "d15c06f400812c0725f0",
         5136: "d873a49dcff7475852a5",
-        5191: "2b05651ee419b8a1483a",
-        5233: "98659f40adb485e8859d",
+        5191: "8aa4a92e8e0301626e83",
+        5233: "536bb318dfdd1d48eca4",
         5341: "d01dc36adbf1ed0dc168",
         5358: "cc380c8f3bae9ea254d4",
-        5436: "fa5e231597e7cb4f991f",
+        5436: "7a51987a0662bd324382",
         5480: "aa8842d2e7d72dad67c5",
         5522: "43ef07153506837b9ad7",
         5536: "67277551d20afcb0ab7a",
         5617: "6d58f25bd9f169dac32a",
         5725: "0107f56cf91554afee1b",
-        5777: "2d841b81f44b4ef9dd97",
+        5777: "a0cbe768cbe83f6a2a8d",
         5893: "2b48f5504e36c140ac9d",
         6059: "e0d80564c1174fd84376",
         6127: "4882c58af191aaf74128",
-        6170: "5ef9bd4aab5b2d232d16",
+        6170: "0a707b61824222356e7e",
         6196: "2858ceca5518092425bd",
         6305: "10b03bb6a5af6137fa3d",
         6385: "e5f8cfa9b62ae2ae5efe",
         6447: "531013264cfebd28a7ca",
-        6512: "dd9bf4f63eb4876c1c0a",
+        6512: "91ee6858d882af1c5e62",
         6518: "1367c553cc7eccd07bc4",
         6609: "fc94f8d39971c6671379",
         6637: "bee05b6c76a9dd2fe06d",
-        6736: "d07aca8d48e418556f55",
+        6736: "17e2509232d2db22d939",
         6888: "c50f7606409776b647a0",
         6905: "d9316fc5a220e6b4c416",
         6920: "2de6a783e3834bed04fa",
-        6950: "162f2e5fc0667df14a98",
+        6950: "82d3f20014a5cee7d6d4",
         6971: "e7f4af03b6ba3a7fa534",
-        7246: "88e8f90490afd2e430d2",
+        7246: "167c8393e8c49711acd7",
         7247: "7021b7a5aaf6d7ee9806",
-        7263: "57fd1bc74fb5378c01f0",
+        7263: "99f6d1aa488039ff2230",
         7279: "ec928a0879ed71ee39f4",
         7365: "7dc558a369acfb0ec614",
-        7411: "c3f906374713af0274e3",
         7418: "7680875bb68efceaf698",
-        7462: "6cb60abf6b616a08cdcf",
+        7462: "96ae9ff51ddd76328172",
         7464: "7e61c51d834807ecd2b7",
         7468: "53e0875c52dff3de164a",
         7487: "8efea89904c72e8440e5",
         7637: "4d32b59b329ef468b7d5",
-        7653: "43b4fea7266d4a836df8",
+        7653: "ffdc1cbee59e2843374f",
         7673: "065a311d75b3213d4f15",
         7788: "204929add0c27533aa2a",
-        7861: "44fa0f0437edc987c68a",
+        7861: "5edde2f8fc8a9ec95168",
         7904: "116aefb93e005baea38e",
         8016: "f51fbdb9a370ce988f71",
         8106: "56f522e6cd550a1bfbfa",
@@ -124676,11 +124773,11 @@ var CLSTAMP = "10961770";
         8246: "d8dd4a47668b5bf225ab",
         8311: "410eff68de4d1e8b26d0",
         8366: "fbd35ad496eb7892a424",
-        8476: "c251df4ddd5eff9c465f",
+        8476: "1ddeaaa684b3b1ffb95c",
         8566: "cd93e0bf03daf5972185",
         8703: "fc28c3b359e195fe803f",
         8759: "73a7657685d5198e1a73",
-        8766: "edb10b7fe5264a3a29a3",
+        8766: "0447dd79b31a8fe64ce1",
         8822: "f6e77bc2564a0557665b",
         8833: "0db29dc3b45b31acb4a4",
         8855: "cb5af29a40dad01a9fb6",
@@ -124689,14 +124786,15 @@ var CLSTAMP = "10961770";
         9273: "702b2119e94a4b56417e",
         9401: "0c0cd9c24baf6ebde222",
         9457: "32ab60ec18bedaed3503",
-        9574: "f15767185ae74791c457",
-        9668: "f1098596b07b75583cb4",
+        9574: "a1c254a386aa01497b75",
+        9668: "67e32057588ddc9e6d12",
         9746: "3679c8e2ce76e34b2ccf",
+        9803: "32852806286117ca1cd6",
         9808: "51bb932b4ac14b5211d4",
-        9863: "ce61843aa55e021bb70f",
+        9863: "e0e594dbfb4435361da5",
         9925: "77586f22def2595b9c64",
         9930: "f92544de12d0462e95d3",
-        9947: "d9c947dafcea91c90eac",
+        9947: "db121efc3d24d771a8f9",
       }[e]),
     (a.miniCssF = (e) =>
       "css/webui/" +
@@ -124921,6 +125019,6 @@ var CLSTAMP = "10961770";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var l = a.O(void 0, [3987, 9489, 1068], () => a(74481));
+  var l = a.O(void 0, [3987, 9489, 1068], () => a(47675));
   l = a.O(l);
 })();

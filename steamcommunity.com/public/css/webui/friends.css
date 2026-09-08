@@ -11738,6 +11738,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   min-width: 10px;
   padding: 5px 5px 2px 5px;
   background: none;
+  display: flex;
 }
 .qrlogin_Overlay_464mF .qrlogin_Box_2ltn2 button.DialogButton.gpfocus,
 .qrlogin_Overlay_464mF .qrlogin_Box_2ltn2 button.DialogButton:enabled.gpfocus,

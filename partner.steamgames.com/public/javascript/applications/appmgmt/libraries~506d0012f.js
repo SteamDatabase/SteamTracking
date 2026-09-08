@@ -1,1749 +1,2030 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 "use strict";
-(() => {
-  (self.webpackChunkappmgmt_storeadmin =
-    self.webpackChunkappmgmt_storeadmin || []).push([
-    [4568],
-    {
-      67796: (Ve, b, D) => {
-        D.d(b, { Kv: () => ee, N4: () => Z });
-        var T = D(90626),
-          A = D(16666); /**
-         * react-table
-         *
-         * Copyright (c) TanStack
-         *
-         * This source code is licensed under the MIT license found in the
-         * LICENSE.md file in the root directory of this source tree.
-         *
-         * @license MIT
-         */
-        function ee(p, h) {
-          return p ? (G(p) ? T.createElement(p, h) : p) : null;
-        }
-        function G(p) {
-          return N(p) || typeof p == "function" || W(p);
-        }
-        function N(p) {
-          return (
-            typeof p == "function" &&
-            (() => {
-              const h = Object.getPrototypeOf(p);
-              return h.prototype && h.prototype.isReactComponent;
-            })()
-          );
-        }
-        function W(p) {
-          return (
-            typeof p == "object" &&
-            typeof p.$$typeof == "symbol" &&
-            ["react.memo", "react.forward_ref"].includes(p.$$typeof.description)
-          );
-        }
-        function Z(p) {
-          const h = {
-              state: {},
-              onStateChange: () => {},
-              renderFallbackValue: null,
-              ...p,
-            },
-            [X] = T.useState(() => ({ current: (0, A.ZR)(h) })),
-            [te, y] = T.useState(() => X.current.initialState);
-          return (
-            X.current.setOptions((q) => ({
-              ...q,
-              ...p,
-              state: { ...te, ...p.state },
-              onStateChange: (J) => {
-                y(J), p.onStateChange == null || p.onStateChange(J);
-              },
-            })),
-            X.current
-          );
-        }
-      },
-      16666: (Ve, b, D) => {
-        D.d(b, {
-          FB: () => T,
-          HT: () => Ye,
-          ZR: () => Je,
-          cU: () => nt,
-          h5: () => rt,
-          hM: () => tt,
-        }); /**
-         * table-core
-         *
-         * Copyright (c) TanStack
-         *
-         * This source code is licensed under the MIT license found in the
-         * LICENSE.md file in the root directory of this source tree.
-         *
-         * @license MIT
-         */
-        function T() {
-          return {
-            accessor: (e, o) =>
-              typeof e == "function"
-                ? { ...o, accessorFn: e }
-                : { ...o, accessorKey: e },
-            display: (e) => e,
-            group: (e) => e,
-          };
-        }
-        function A(e, o) {
-          return typeof e == "function" ? e(o) : e;
-        }
-        function ee() {}
-        function G(e, o) {
-          return (t) => {
-            o.setState((n) => ({ ...n, [e]: A(t, n[e]) }));
-          };
-        }
-        function N(e) {
-          return e instanceof Function;
-        }
-        function W(e) {
-          return Array.isArray(e) && e.every((o) => typeof o == "number");
-        }
-        function Z(e, o) {
-          const t = [],
-            n = (r) => {
-              r.forEach((i) => {
-                t.push(i);
-                const l = o(i);
-                l != null && l.length && n(l);
-              });
-            };
-          return n(e), t;
-        }
-        function p(e, o, t) {
-          let n = [],
-            r;
-          return (i) => {
-            let l;
-            t.key && t.debug && (l = Date.now());
-            const s = e(i);
-            if (!(s.length !== n.length || s.some((c, S) => n[S] !== c)))
-              return r;
-            n = s;
-            let g;
-            if (
-              (t.key && t.debug && (g = Date.now()),
-              (r = o(...s)),
-              t == null || t.onChange == null || t.onChange(r),
-              t.key && t.debug && t != null && t.debug())
-            ) {
-              const c = Math.round((Date.now() - l) * 100) / 100,
-                S = Math.round((Date.now() - g) * 100) / 100,
-                d = S / 16,
-                u = (f, m) => {
-                  for (f = String(f); f.length < m; ) f = " " + f;
-                  return f;
-                };
-              console.info(
-                `%c\u23F1 ${u(S, 5)} /${u(c, 5)} ms`,
-                `
-            font-size: .6rem;
-            font-weight: bold;
-            color: hsl(${Math.max(0, Math.min(120 - 120 * d, 120))}deg 100% 31%);`,
-                t?.key,
+(self.webpackChunkappmgmt_storeadmin =
+  self.webpackChunkappmgmt_storeadmin || []).push([
+  [4568],
+  {
+    67796: (e, t, n) => {
+      n.d(t, { Kv: () => i, N4: () => r });
+      var l = n(90626),
+        o = n(16666);
+      /**
+       * react-table
+       *
+       * Copyright (c) TanStack
+       *
+       * This source code is licensed under the MIT license found in the
+       * LICENSE.md file in the root directory of this source tree.
+       *
+       * @license MIT
+       */
+      function i(e, t) {
+        return e
+          ? (function (e) {
+              return (
+                "function" == typeof e &&
+                (() => {
+                  const t = Object.getPrototypeOf(e);
+                  return t.prototype && t.prototype.isReactComponent;
+                })()
               );
-            }
-            return r;
-          };
-        }
-        function h(e, o, t, n) {
-          return {
-            debug: () => {
-              var r;
-              return (r = e?.debugAll) != null ? r : e[o];
+            })((n = e)) ||
+            "function" == typeof n ||
+            (function (e) {
+              return (
+                "object" == typeof e &&
+                "symbol" == typeof e.$$typeof &&
+                ["react.memo", "react.forward_ref"].includes(
+                  e.$$typeof.description,
+                )
+              );
+            })(n)
+            ? l.createElement(e, t)
+            : e
+          : null;
+        var n;
+      }
+      function r(e) {
+        const t = {
+            state: {},
+            onStateChange: () => {},
+            renderFallbackValue: null,
+            ...e,
+          },
+          [n] = l.useState(() => ({ current: (0, o.ZR)(t) })),
+          [i, r] = l.useState(() => n.current.initialState);
+        return (
+          n.current.setOptions((t) => ({
+            ...t,
+            ...e,
+            state: { ...i, ...e.state },
+            onStateChange: (t) => {
+              r(t), null == e.onStateChange || e.onStateChange(t);
             },
-            key: !1,
-            onChange: n,
+          })),
+          n.current
+        );
+      }
+    },
+    16666: (e, t, n) => {
+      /**
+       * table-core
+       *
+       * Copyright (c) TanStack
+       *
+       * This source code is licensed under the MIT license found in the
+       * LICENSE.md file in the root directory of this source tree.
+       *
+       * @license MIT
+       */
+      function l() {
+        return {
+          accessor: (e, t) =>
+            "function" == typeof e
+              ? { ...t, accessorFn: e }
+              : { ...t, accessorKey: e },
+          display: (e) => e,
+          group: (e) => e,
+        };
+      }
+      function o(e, t) {
+        return "function" == typeof e ? e(t) : e;
+      }
+      function i(e, t) {
+        return (n) => {
+          t.setState((t) => ({ ...t, [e]: o(n, t[e]) }));
+        };
+      }
+      function r(e) {
+        return e instanceof Function;
+      }
+      function u(e, t) {
+        const n = [],
+          l = (e) => {
+            e.forEach((e) => {
+              n.push(e);
+              const o = t(e);
+              null != o && o.length && l(o);
+            });
           };
-        }
-        function X(e, o, t, n) {
-          const r = () => {
-              var l;
-              return (l = i.getValue()) != null
-                ? l
-                : e.options.renderFallbackValue;
-            },
-            i = {
-              id: `${o.id}_${t.id}`,
-              row: o,
-              column: t,
-              getValue: () => o.getValue(n),
-              renderValue: r,
-              getContext: p(
-                () => [e, t, o, i],
-                (l, s, a, g) => ({
-                  table: l,
-                  column: s,
-                  row: a,
-                  cell: g,
-                  getValue: g.getValue,
-                  renderValue: g.renderValue,
-                }),
-                h(e.options, "debugCells", "cell.getContext"),
-              ),
-            };
-          return (
-            e._features.forEach((l) => {
-              l.createCell == null || l.createCell(i, t, o, e);
-            }, {}),
-            i
-          );
-        }
-        function te(e, o, t, n) {
-          var r, i;
-          const s = { ...e._getDefaultColumnDef(), ...o },
-            a = s.accessorKey;
-          let g =
-              (r =
-                (i = s.id) != null
-                  ? i
-                  : a
-                    ? typeof String.prototype.replaceAll == "function"
-                      ? a.replaceAll(".", "_")
-                      : a.replace(/\./g, "_")
-                    : void 0) != null
-                ? r
-                : typeof s.header == "string"
-                  ? s.header
-                  : void 0,
-            c;
+        return l(e), n;
+      }
+      function s(e, t, n) {
+        let l,
+          o = [];
+        return (i) => {
+          let r;
+          n.key && n.debug && (r = Date.now());
+          const u = e(i);
+          if (!(u.length !== o.length || u.some((e, t) => o[t] !== e)))
+            return l;
+          let s;
           if (
-            (s.accessorFn
-              ? (c = s.accessorFn)
-              : a &&
-                (a.includes(".")
-                  ? (c = (d) => {
-                      let u = d;
-                      for (const m of a.split(".")) {
-                        var f;
-                        u = (f = u) == null ? void 0 : f[m];
-                      }
-                      return u;
-                    })
-                  : (c = (d) => d[s.accessorKey])),
-            !g)
-          )
-            throw new Error();
-          let S = {
-            id: `${String(g)}`,
-            accessorFn: c,
-            parent: n,
-            depth: t,
-            columnDef: s,
-            columns: [],
-            getFlatColumns: p(
-              () => [!0],
-              () => {
-                var d;
-                return [
-                  S,
-                  ...((d = S.columns) == null
-                    ? void 0
-                    : d.flatMap((u) => u.getFlatColumns())),
-                ];
-              },
-              h(e.options, "debugColumns", "column.getFlatColumns"),
-            ),
-            getLeafColumns: p(
-              () => [e._getOrderColumnsFn()],
-              (d) => {
-                var u;
-                if ((u = S.columns) != null && u.length) {
-                  let f = S.columns.flatMap((m) => m.getLeafColumns());
-                  return d(f);
-                }
-                return [S];
-              },
-              h(e.options, "debugColumns", "column.getLeafColumns"),
-            ),
-          };
-          for (const d of e._features)
-            d.createColumn == null || d.createColumn(S, e);
-          return S;
-        }
-        const y = "debugHeaders";
-        function q(e, o, t) {
-          var n;
-          let i = {
-            id: (n = t.id) != null ? n : o.id,
-            column: o,
-            index: t.index,
-            isPlaceholder: !!t.isPlaceholder,
-            placeholderId: t.placeholderId,
-            depth: t.depth,
-            subHeaders: [],
-            colSpan: 0,
-            rowSpan: 0,
-            headerGroup: null,
-            getLeafHeaders: () => {
-              const l = [],
-                s = (a) => {
-                  a.subHeaders && a.subHeaders.length && a.subHeaders.map(s),
-                    l.push(a);
-                };
-              return s(i), l;
+            ((o = u),
+            n.key && n.debug && (s = Date.now()),
+            (l = t(...u)),
+            null == n || null == n.onChange || n.onChange(l),
+            n.key && n.debug && null != n && n.debug())
+          ) {
+            const e = Math.round(100 * (Date.now() - r)) / 100,
+              t = Math.round(100 * (Date.now() - s)) / 100,
+              l = t / 16,
+              o = (e, t) => {
+                for (e = String(e); e.length < t; ) e = " " + e;
+                return e;
+              };
+            console.info(
+              `%c⏱ ${o(t, 5)} /${o(e, 5)} ms`,
+              `\n            font-size: .6rem;\n            font-weight: bold;\n            color: hsl(${Math.max(0, Math.min(120 - 120 * l, 120))}deg 100% 31%);`,
+              null == n ? void 0 : n.key,
+            );
+          }
+          return l;
+        };
+      }
+      function a(e, t, n, l) {
+        return {
+          debug: () => {
+            var n;
+            return null != (n = null == e ? void 0 : e.debugAll) ? n : e[t];
+          },
+          key: !1,
+          onChange: l,
+        };
+      }
+      n.d(t, {
+        FB: () => l,
+        HT: () => Z,
+        ZR: () => K,
+        cU: () => Y,
+        h5: () => ee,
+        hM: () => W,
+      });
+      const g = "debugHeaders";
+      function d(e, t, n) {
+        var l;
+        let o = {
+          id: null != (l = n.id) ? l : t.id,
+          column: t,
+          index: n.index,
+          isPlaceholder: !!n.isPlaceholder,
+          placeholderId: n.placeholderId,
+          depth: n.depth,
+          subHeaders: [],
+          colSpan: 0,
+          rowSpan: 0,
+          headerGroup: null,
+          getLeafHeaders: () => {
+            const e = [],
+              t = (n) => {
+                n.subHeaders && n.subHeaders.length && n.subHeaders.map(t),
+                  e.push(n);
+              };
+            return t(o), e;
+          },
+          getContext: () => ({ table: e, header: o, column: t }),
+        };
+        return (
+          e._features.forEach((t) => {
+            null == t.createHeader || t.createHeader(o, e);
+          }),
+          o
+        );
+      }
+      const c = {
+        createTable: (e) => {
+          (e.getHeaderGroups = s(
+            () => [
+              e.getAllColumns(),
+              e.getVisibleLeafColumns(),
+              e.getState().columnPinning.left,
+              e.getState().columnPinning.right,
+            ],
+            (t, n, l, o) => {
+              var i, r;
+              const u =
+                  null !=
+                  (i =
+                    null == l
+                      ? void 0
+                      : l.map((e) => n.find((t) => t.id === e)).filter(Boolean))
+                    ? i
+                    : [],
+                s =
+                  null !=
+                  (r =
+                    null == o
+                      ? void 0
+                      : o.map((e) => n.find((t) => t.id === e)).filter(Boolean))
+                    ? r
+                    : [];
+              return p(
+                t,
+                [
+                  ...u,
+                  ...n.filter(
+                    (e) =>
+                      !(
+                        (null != l && l.includes(e.id)) ||
+                        (null != o && o.includes(e.id))
+                      ),
+                  ),
+                  ...s,
+                ],
+                e,
+              );
             },
-            getContext: () => ({ table: e, header: i, column: o }),
-          };
-          return (
-            e._features.forEach((l) => {
-              l.createHeader == null || l.createHeader(i, e);
-            }),
-            i
-          );
-        }
-        const J = {
-          createTable: (e) => {
-            (e.getHeaderGroups = p(
+            a(e.options, g),
+          )),
+            (e.getCenterHeaderGroups = s(
               () => [
                 e.getAllColumns(),
                 e.getVisibleLeafColumns(),
                 e.getState().columnPinning.left,
                 e.getState().columnPinning.right,
               ],
-              (o, t, n, r) => {
-                var i, l;
-                const s =
-                    (i = n
-                      ?.map((S) => t.find((d) => d.id === S))
-                      .filter(Boolean)) != null
-                      ? i
-                      : [],
-                  a =
-                    (l = r
-                      ?.map((S) => t.find((d) => d.id === S))
-                      .filter(Boolean)) != null
-                      ? l
-                      : [],
-                  g = t.filter(
-                    (S) =>
-                      !(n != null && n.includes(S.id)) &&
-                      !(r != null && r.includes(S.id)),
-                  );
-                return Y(o, [...s, ...g, ...a], e);
-              },
-              h(e.options, y, "getHeaderGroups"),
-            )),
-              (e.getCenterHeaderGroups = p(
-                () => [
-                  e.getAllColumns(),
-                  e.getVisibleLeafColumns(),
-                  e.getState().columnPinning.left,
-                  e.getState().columnPinning.right,
-                ],
-                (o, t, n, r) => (
-                  (t = t.filter(
-                    (i) =>
-                      !(n != null && n.includes(i.id)) &&
-                      !(r != null && r.includes(i.id)),
+              (t, n, l, o) =>
+                p(
+                  t,
+                  (n = n.filter(
+                    (e) =>
+                      !(
+                        (null != l && l.includes(e.id)) ||
+                        (null != o && o.includes(e.id))
+                      ),
                   )),
-                  Y(o, t, e, "center")
+                  e,
+                  "center",
                 ),
-                h(e.options, y, "getCenterHeaderGroups"),
-              )),
-              (e.getLeftHeaderGroups = p(
-                () => [
-                  e.getAllColumns(),
-                  e.getVisibleLeafColumns(),
-                  e.getState().columnPinning.left,
-                ],
-                (o, t, n) => {
-                  var r;
-                  const i =
-                    (r = n
-                      ?.map((l) => t.find((s) => s.id === l))
-                      .filter(Boolean)) != null
-                      ? r
-                      : [];
-                  return Y(o, i, e, "left");
-                },
-                h(e.options, y, "getLeftHeaderGroups"),
-              )),
-              (e.getRightHeaderGroups = p(
-                () => [
-                  e.getAllColumns(),
-                  e.getVisibleLeafColumns(),
-                  e.getState().columnPinning.right,
-                ],
-                (o, t, n) => {
-                  var r;
-                  const i =
-                    (r = n
-                      ?.map((l) => t.find((s) => s.id === l))
-                      .filter(Boolean)) != null
-                      ? r
-                      : [];
-                  return Y(o, i, e, "right");
-                },
-                h(e.options, y, "getRightHeaderGroups"),
-              )),
-              (e.getFooterGroups = p(
-                () => [e.getHeaderGroups()],
-                (o) => [...o].reverse(),
-                h(e.options, y, "getFooterGroups"),
-              )),
-              (e.getLeftFooterGroups = p(
-                () => [e.getLeftHeaderGroups()],
-                (o) => [...o].reverse(),
-                h(e.options, y, "getLeftFooterGroups"),
-              )),
-              (e.getCenterFooterGroups = p(
-                () => [e.getCenterHeaderGroups()],
-                (o) => [...o].reverse(),
-                h(e.options, y, "getCenterFooterGroups"),
-              )),
-              (e.getRightFooterGroups = p(
-                () => [e.getRightHeaderGroups()],
-                (o) => [...o].reverse(),
-                h(e.options, y, "getRightFooterGroups"),
-              )),
-              (e.getFlatHeaders = p(
-                () => [e.getHeaderGroups()],
-                (o) => o.map((t) => t.headers).flat(),
-                h(e.options, y, "getFlatHeaders"),
-              )),
-              (e.getLeftFlatHeaders = p(
-                () => [e.getLeftHeaderGroups()],
-                (o) => o.map((t) => t.headers).flat(),
-                h(e.options, y, "getLeftFlatHeaders"),
-              )),
-              (e.getCenterFlatHeaders = p(
-                () => [e.getCenterHeaderGroups()],
-                (o) => o.map((t) => t.headers).flat(),
-                h(e.options, y, "getCenterFlatHeaders"),
-              )),
-              (e.getRightFlatHeaders = p(
-                () => [e.getRightHeaderGroups()],
-                (o) => o.map((t) => t.headers).flat(),
-                h(e.options, y, "getRightFlatHeaders"),
-              )),
-              (e.getCenterLeafHeaders = p(
-                () => [e.getCenterFlatHeaders()],
-                (o) =>
-                  o.filter((t) => {
-                    var n;
-                    return !((n = t.subHeaders) != null && n.length);
-                  }),
-                h(e.options, y, "getCenterLeafHeaders"),
-              )),
-              (e.getLeftLeafHeaders = p(
-                () => [e.getLeftFlatHeaders()],
-                (o) =>
-                  o.filter((t) => {
-                    var n;
-                    return !((n = t.subHeaders) != null && n.length);
-                  }),
-                h(e.options, y, "getLeftLeafHeaders"),
-              )),
-              (e.getRightLeafHeaders = p(
-                () => [e.getRightFlatHeaders()],
-                (o) =>
-                  o.filter((t) => {
-                    var n;
-                    return !((n = t.subHeaders) != null && n.length);
-                  }),
-                h(e.options, y, "getRightLeafHeaders"),
-              )),
-              (e.getLeafHeaders = p(
-                () => [
-                  e.getLeftHeaderGroups(),
-                  e.getCenterHeaderGroups(),
-                  e.getRightHeaderGroups(),
-                ],
-                (o, t, n) => {
-                  var r, i, l, s, a, g;
-                  return [
-                    ...((r = (i = o[0]) == null ? void 0 : i.headers) != null
-                      ? r
-                      : []),
-                    ...((l = (s = t[0]) == null ? void 0 : s.headers) != null
-                      ? l
-                      : []),
-                    ...((a = (g = n[0]) == null ? void 0 : g.headers) != null
-                      ? a
-                      : []),
-                  ]
-                    .map((c) => c.getLeafHeaders())
-                    .flat();
-                },
-                h(e.options, y, "getLeafHeaders"),
-              ));
-          },
-        };
-        function Y(e, o, t, n) {
-          var r, i;
-          let l = 0;
-          const s = function (d, u) {
-            u === void 0 && (u = 1),
-              (l = Math.max(l, u)),
-              d
-                .filter((f) => f.getIsVisible())
-                .forEach((f) => {
-                  var m;
-                  (m = f.columns) != null && m.length && s(f.columns, u + 1);
-                }, 0);
-          };
-          s(e);
-          let a = [];
-          const g = (d, u) => {
-              const f = {
-                  depth: u,
-                  id: [n, `${u}`].filter(Boolean).join("_"),
-                  headers: [],
-                },
-                m = [];
-              d.forEach((C) => {
-                const R = [...m].reverse()[0],
-                  _ = C.column.depth === f.depth;
-                let M,
-                  B = !1;
-                if (
-                  (_ && C.column.parent
-                    ? (M = C.column.parent)
-                    : ((M = C.column), (B = !0)),
-                  R && R?.column === M)
-                )
-                  R.subHeaders.push(C);
-                else {
-                  const P = q(t, M, {
-                    id: [n, u, M.id, C?.id].filter(Boolean).join("_"),
-                    isPlaceholder: B,
-                    placeholderId: B
-                      ? `${m.filter(($) => $.column === M).length}`
-                      : void 0,
-                    depth: u,
-                    index: m.length,
-                  });
-                  P.subHeaders.push(C), m.push(P);
-                }
-                f.headers.push(C), (C.headerGroup = f);
-              }),
-                a.push(f),
-                u > 0 && g(m, u - 1);
-            },
-            c = o.map((d, u) => q(t, d, { depth: l, index: u }));
-          g(c, l - 1), a.reverse();
-          const S = (d) =>
-            d
-              .filter((f) => f.column.getIsVisible())
-              .map((f) => {
-                let m = 0,
-                  C = 0,
-                  R = [0];
-                f.subHeaders && f.subHeaders.length
-                  ? ((R = []),
-                    S(f.subHeaders).forEach((M) => {
-                      let { colSpan: B, rowSpan: P } = M;
-                      (m += B), R.push(P);
-                    }))
-                  : (m = 1);
-                const _ = Math.min(...R);
-                return (
-                  (C = C + _),
-                  (f.colSpan = m),
-                  (f.rowSpan = C),
-                  { colSpan: m, rowSpan: C }
+              a(e.options, g),
+            )),
+            (e.getLeftHeaderGroups = s(
+              () => [
+                e.getAllColumns(),
+                e.getVisibleLeafColumns(),
+                e.getState().columnPinning.left,
+              ],
+              (t, n, l) => {
+                var o;
+                return p(
+                  t,
+                  null !=
+                    (o =
+                      null == l
+                        ? void 0
+                        : l
+                            .map((e) => n.find((t) => t.id === e))
+                            .filter(Boolean))
+                    ? o
+                    : [],
+                  e,
+                  "left",
                 );
-              });
-          return (
-            S((r = (i = a[0]) == null ? void 0 : i.headers) != null ? r : []), a
-          );
-        }
-        const w = (e, o, t, n, r, i, l) => {
-            let s = {
-              id: o,
-              index: n,
-              original: t,
-              depth: r,
-              parentId: l,
-              _valuesCache: {},
-              _uniqueValuesCache: {},
-              getValue: (a) => {
-                if (s._valuesCache.hasOwnProperty(a)) return s._valuesCache[a];
-                const g = e.getColumn(a);
-                if (g != null && g.accessorFn)
-                  return (
-                    (s._valuesCache[a] = g.accessorFn(s.original, n)),
-                    s._valuesCache[a]
-                  );
               },
-              getUniqueValues: (a) => {
-                if (s._uniqueValuesCache.hasOwnProperty(a))
-                  return s._uniqueValuesCache[a];
-                const g = e.getColumn(a);
-                if (g != null && g.accessorFn)
-                  return g.columnDef.getUniqueValues
-                    ? ((s._uniqueValuesCache[a] = g.columnDef.getUniqueValues(
-                        s.original,
-                        n,
-                      )),
-                      s._uniqueValuesCache[a])
-                    : ((s._uniqueValuesCache[a] = [s.getValue(a)]),
-                      s._uniqueValuesCache[a]);
+              a(e.options, g),
+            )),
+            (e.getRightHeaderGroups = s(
+              () => [
+                e.getAllColumns(),
+                e.getVisibleLeafColumns(),
+                e.getState().columnPinning.right,
+              ],
+              (t, n, l) => {
+                var o;
+                return p(
+                  t,
+                  null !=
+                    (o =
+                      null == l
+                        ? void 0
+                        : l
+                            .map((e) => n.find((t) => t.id === e))
+                            .filter(Boolean))
+                    ? o
+                    : [],
+                  e,
+                  "right",
+                );
               },
-              renderValue: (a) => {
-                var g;
-                return (g = s.getValue(a)) != null
-                  ? g
-                  : e.options.renderFallbackValue;
+              a(e.options, g),
+            )),
+            (e.getFooterGroups = s(
+              () => [e.getHeaderGroups()],
+              (e) => [...e].reverse(),
+              a(e.options, g),
+            )),
+            (e.getLeftFooterGroups = s(
+              () => [e.getLeftHeaderGroups()],
+              (e) => [...e].reverse(),
+              a(e.options, g),
+            )),
+            (e.getCenterFooterGroups = s(
+              () => [e.getCenterHeaderGroups()],
+              (e) => [...e].reverse(),
+              a(e.options, g),
+            )),
+            (e.getRightFooterGroups = s(
+              () => [e.getRightHeaderGroups()],
+              (e) => [...e].reverse(),
+              a(e.options, g),
+            )),
+            (e.getFlatHeaders = s(
+              () => [e.getHeaderGroups()],
+              (e) => e.map((e) => e.headers).flat(),
+              a(e.options, g),
+            )),
+            (e.getLeftFlatHeaders = s(
+              () => [e.getLeftHeaderGroups()],
+              (e) => e.map((e) => e.headers).flat(),
+              a(e.options, g),
+            )),
+            (e.getCenterFlatHeaders = s(
+              () => [e.getCenterHeaderGroups()],
+              (e) => e.map((e) => e.headers).flat(),
+              a(e.options, g),
+            )),
+            (e.getRightFlatHeaders = s(
+              () => [e.getRightHeaderGroups()],
+              (e) => e.map((e) => e.headers).flat(),
+              a(e.options, g),
+            )),
+            (e.getCenterLeafHeaders = s(
+              () => [e.getCenterFlatHeaders()],
+              (e) =>
+                e.filter((e) => {
+                  var t;
+                  return !(null != (t = e.subHeaders) && t.length);
+                }),
+              a(e.options, g),
+            )),
+            (e.getLeftLeafHeaders = s(
+              () => [e.getLeftFlatHeaders()],
+              (e) =>
+                e.filter((e) => {
+                  var t;
+                  return !(null != (t = e.subHeaders) && t.length);
+                }),
+              a(e.options, g),
+            )),
+            (e.getRightLeafHeaders = s(
+              () => [e.getRightFlatHeaders()],
+              (e) =>
+                e.filter((e) => {
+                  var t;
+                  return !(null != (t = e.subHeaders) && t.length);
+                }),
+              a(e.options, g),
+            )),
+            (e.getLeafHeaders = s(
+              () => [
+                e.getLeftHeaderGroups(),
+                e.getCenterHeaderGroups(),
+                e.getRightHeaderGroups(),
+              ],
+              (e, t, n) => {
+                var l, o, i, r, u, s;
+                return [
+                  ...(null != (l = null == (o = e[0]) ? void 0 : o.headers)
+                    ? l
+                    : []),
+                  ...(null != (i = null == (r = t[0]) ? void 0 : r.headers)
+                    ? i
+                    : []),
+                  ...(null != (u = null == (s = n[0]) ? void 0 : s.headers)
+                    ? u
+                    : []),
+                ]
+                  .map((e) => e.getLeafHeaders())
+                  .flat();
               },
-              subRows: i ?? [],
-              getLeafRows: () => Z(s.subRows, (a) => a.subRows),
-              getParentRow: () =>
-                s.parentId ? e.getRow(s.parentId, !0) : void 0,
-              getParentRows: () => {
-                let a = [],
-                  g = s;
-                for (;;) {
-                  const c = g.getParentRow();
-                  if (!c) break;
-                  a.push(c), (g = c);
-                }
-                return a.reverse();
+              a(e.options, g),
+            ));
+        },
+      };
+      function p(e, t, n, l) {
+        var o, i;
+        let r = 0;
+        const u = function (e, t) {
+          void 0 === t && (t = 1),
+            (r = Math.max(r, t)),
+            e
+              .filter((e) => e.getIsVisible())
+              .forEach((e) => {
+                var n;
+                null != (n = e.columns) && n.length && u(e.columns, t + 1);
+              }, 0);
+        };
+        u(e);
+        let s = [];
+        const a = (e, t) => {
+            const o = {
+                depth: t,
+                id: [l, `${t}`].filter(Boolean).join("_"),
+                headers: [],
               },
-              getAllCells: p(
-                () => [e.getAllLeafColumns()],
-                (a) => a.map((g) => X(e, s, g, g.id)),
-                h(e.options, "debugRows", "getAllCells"),
-              ),
-              _getAllCellsByColumnId: p(
-                () => [s.getAllCells()],
-                (a) => a.reduce((g, c) => ((g[c.column.id] = c), g), {}),
-                h(e.options, "debugRows", "getAllCellsByColumnId"),
-              ),
-            };
-            for (let a = 0; a < e._features.length; a++) {
-              const g = e._features[a];
-              g == null || g.createRow == null || g.createRow(s, e);
-            }
-            return s;
-          },
-          v = {
-            createColumn: (e, o) => {
-              (e._getFacetedRowModel =
-                o.options.getFacetedRowModel &&
-                o.options.getFacetedRowModel(o, e.id)),
-                (e.getFacetedRowModel = () =>
-                  e._getFacetedRowModel
-                    ? e._getFacetedRowModel()
-                    : o.getPreFilteredRowModel()),
-                (e._getFacetedUniqueValues =
-                  o.options.getFacetedUniqueValues &&
-                  o.options.getFacetedUniqueValues(o, e.id)),
-                (e.getFacetedUniqueValues = () =>
-                  e._getFacetedUniqueValues
-                    ? e._getFacetedUniqueValues()
-                    : new Map()),
-                (e._getFacetedMinMaxValues =
-                  o.options.getFacetedMinMaxValues &&
-                  o.options.getFacetedMinMaxValues(o, e.id)),
-                (e.getFacetedMinMaxValues = () => {
-                  if (e._getFacetedMinMaxValues)
-                    return e._getFacetedMinMaxValues();
+              i = [];
+            e.forEach((e) => {
+              const r = [...i].reverse()[0];
+              let u,
+                s = !1;
+              if (
+                (e.column.depth === o.depth && e.column.parent
+                  ? (u = e.column.parent)
+                  : ((u = e.column), (s = !0)),
+                r && (null == r ? void 0 : r.column) === u)
+              )
+                r.subHeaders.push(e);
+              else {
+                const o = d(n, u, {
+                  id: [l, t, u.id, null == e ? void 0 : e.id]
+                    .filter(Boolean)
+                    .join("_"),
+                  isPlaceholder: s,
+                  placeholderId: s
+                    ? `${i.filter((e) => e.column === u).length}`
+                    : void 0,
+                  depth: t,
+                  index: i.length,
                 });
-            },
-          },
-          V = (e, o, t) => {
-            var n, r;
-            const i =
-              t == null || (n = t.toString()) == null
-                ? void 0
-                : n.toLowerCase();
-            return !!(
-              !(
-                (r = e.getValue(o)) == null ||
-                (r = r.toString()) == null ||
-                (r = r.toLowerCase()) == null
-              ) && r.includes(i)
-            );
-          };
-        V.autoRemove = (e) => z(e);
-        const F = (e, o, t) => {
-          var n;
-          return !!(
-            !((n = e.getValue(o)) == null || (n = n.toString()) == null) &&
-            n.includes(t)
-          );
-        };
-        F.autoRemove = (e) => z(e);
-        const x = (e, o, t) => {
-          var n;
-          return (
-            ((n = e.getValue(o)) == null || (n = n.toString()) == null
-              ? void 0
-              : n.toLowerCase()) === t?.toLowerCase()
-          );
-        };
-        x.autoRemove = (e) => z(e);
-        const I = (e, o, t) => {
-          var n;
-          return (n = e.getValue(o)) == null ? void 0 : n.includes(t);
-        };
-        I.autoRemove = (e) => z(e) || !(e != null && e.length);
-        const L = (e, o, t) =>
-          !t.some((n) => {
-            var r;
-            return !((r = e.getValue(o)) != null && r.includes(n));
-          });
-        L.autoRemove = (e) => z(e) || !(e != null && e.length);
-        const O = (e, o, t) =>
-          t.some((n) => {
-            var r;
-            return (r = e.getValue(o)) == null ? void 0 : r.includes(n);
-          });
-        O.autoRemove = (e) => z(e) || !(e != null && e.length);
-        const E = (e, o, t) => e.getValue(o) === t;
-        E.autoRemove = (e) => z(e);
-        const Q = (e, o, t) => e.getValue(o) == t;
-        Q.autoRemove = (e) => z(e);
-        const ne = (e, o, t) => {
-          let [n, r] = t;
-          const i = e.getValue(o);
-          return i >= n && i <= r;
-        };
-        (ne.resolveFilterValue = (e) => {
-          let [o, t] = e,
-            n = typeof o != "number" ? parseFloat(o) : o,
-            r = typeof t != "number" ? parseFloat(t) : t,
-            i = o === null || Number.isNaN(n) ? -1 / 0 : n,
-            l = t === null || Number.isNaN(r) ? 1 / 0 : r;
-          if (i > l) {
-            const s = i;
-            (i = l), (l = s);
-          }
-          return [i, l];
-        }),
-          (ne.autoRemove = (e) => z(e) || (z(e[0]) && z(e[1])));
-        const U = {
-          includesString: V,
-          includesStringSensitive: F,
-          equalsString: x,
-          arrIncludes: I,
-          arrIncludesAll: L,
-          arrIncludesSome: O,
-          equals: E,
-          weakEquals: Q,
-          inNumberRange: ne,
-        };
-        function z(e) {
-          return e == null || e === "";
-        }
-        const se = {
-          getDefaultColumnDef: () => ({ filterFn: "auto" }),
-          getInitialState: (e) => ({ columnFilters: [], ...e }),
-          getDefaultOptions: (e) => ({
-            onColumnFiltersChange: G("columnFilters", e),
-            filterFromLeafRows: !1,
-            maxLeafRowFilterDepth: 100,
-          }),
-          createColumn: (e, o) => {
-            (e.getAutoFilterFn = () => {
-              const t = o.getCoreRowModel().flatRows[0],
-                n = t?.getValue(e.id);
-              return typeof n == "string"
-                ? U.includesString
-                : typeof n == "number"
-                  ? U.inNumberRange
-                  : typeof n == "boolean" ||
-                      (n !== null && typeof n == "object")
-                    ? U.equals
-                    : Array.isArray(n)
-                      ? U.arrIncludes
-                      : U.weakEquals;
+                o.subHeaders.push(e), i.push(o);
+              }
+              o.headers.push(e), (e.headerGroup = o);
             }),
-              (e.getFilterFn = () => {
-                var t, n;
-                return N(e.columnDef.filterFn)
-                  ? e.columnDef.filterFn
-                  : e.columnDef.filterFn === "auto"
-                    ? e.getAutoFilterFn()
-                    : (t =
-                          (n = o.options.filterFns) == null
-                            ? void 0
-                            : n[e.columnDef.filterFn]) != null
-                      ? t
-                      : U[e.columnDef.filterFn];
-              }),
-              (e.getCanFilter = () => {
-                var t, n, r;
-                return (
-                  ((t = e.columnDef.enableColumnFilter) != null ? t : !0) &&
-                  ((n = o.options.enableColumnFilters) != null ? n : !0) &&
-                  ((r = o.options.enableFilters) != null ? r : !0) &&
-                  !!e.accessorFn
-                );
-              }),
-              (e.getIsFiltered = () => e.getFilterIndex() > -1),
-              (e.getFilterValue = () => {
-                var t;
-                return (t = o.getState().columnFilters) == null ||
-                  (t = t.find((n) => n.id === e.id)) == null
-                  ? void 0
-                  : t.value;
-              }),
-              (e.getFilterIndex = () => {
-                var t, n;
-                return (t =
-                  (n = o.getState().columnFilters) == null
-                    ? void 0
-                    : n.findIndex((r) => r.id === e.id)) != null
-                  ? t
-                  : -1;
-              }),
-              (e.setFilterValue = (t) => {
-                o.setColumnFilters((n) => {
-                  const r = e.getFilterFn(),
-                    i = n?.find((c) => c.id === e.id),
-                    l = A(t, i ? i.value : void 0);
-                  if (H(r, l, e)) {
-                    var s;
-                    return (s = n?.filter((c) => c.id !== e.id)) != null
-                      ? s
-                      : [];
-                  }
-                  const a = { id: e.id, value: l };
-                  if (i) {
-                    var g;
-                    return (g = n?.map((c) => (c.id === e.id ? a : c))) != null
-                      ? g
-                      : [];
-                  }
-                  return n != null && n.length ? [...n, a] : [a];
-                });
+              s.push(o),
+              t > 0 && a(i, t - 1);
+          },
+          g = t.map((e, t) => d(n, e, { depth: r, index: t }));
+        a(g, r - 1), s.reverse();
+        const c = (e) =>
+          e
+            .filter((e) => e.column.getIsVisible())
+            .map((e) => {
+              let t = 0,
+                n = 0,
+                l = [0];
+              e.subHeaders && e.subHeaders.length
+                ? ((l = []),
+                  c(e.subHeaders).forEach((e) => {
+                    let { colSpan: n, rowSpan: o } = e;
+                    (t += n), l.push(o);
+                  }))
+                : (t = 1);
+              return (
+                (n += Math.min(...l)),
+                (e.colSpan = t),
+                (e.rowSpan = n),
+                { colSpan: t, rowSpan: n }
+              );
+            });
+        return (
+          c(null != (o = null == (i = s[0]) ? void 0 : i.headers) ? o : []), s
+        );
+      }
+      const f = (e, t, n, l, o, i, r) => {
+          let g = {
+            id: t,
+            index: l,
+            original: n,
+            depth: o,
+            parentId: r,
+            _valuesCache: {},
+            _uniqueValuesCache: {},
+            getValue: (t) => {
+              if (g._valuesCache.hasOwnProperty(t)) return g._valuesCache[t];
+              const n = e.getColumn(t);
+              return null != n && n.accessorFn
+                ? ((g._valuesCache[t] = n.accessorFn(g.original, l)),
+                  g._valuesCache[t])
+                : void 0;
+            },
+            getUniqueValues: (t) => {
+              if (g._uniqueValuesCache.hasOwnProperty(t))
+                return g._uniqueValuesCache[t];
+              const n = e.getColumn(t);
+              return null != n && n.accessorFn
+                ? n.columnDef.getUniqueValues
+                  ? ((g._uniqueValuesCache[t] = n.columnDef.getUniqueValues(
+                      g.original,
+                      l,
+                    )),
+                    g._uniqueValuesCache[t])
+                  : ((g._uniqueValuesCache[t] = [g.getValue(t)]),
+                    g._uniqueValuesCache[t])
+                : void 0;
+            },
+            renderValue: (t) => {
+              var n;
+              return null != (n = g.getValue(t))
+                ? n
+                : e.options.renderFallbackValue;
+            },
+            subRows: null != i ? i : [],
+            getLeafRows: () => u(g.subRows, (e) => e.subRows),
+            getParentRow: () =>
+              g.parentId ? e.getRow(g.parentId, !0) : void 0,
+            getParentRows: () => {
+              let e = [],
+                t = g;
+              for (;;) {
+                const n = t.getParentRow();
+                if (!n) break;
+                e.push(n), (t = n);
+              }
+              return e.reverse();
+            },
+            getAllCells: s(
+              () => [e.getAllLeafColumns()],
+              (t) =>
+                t.map((t) =>
+                  (function (e, t, n, l) {
+                    const o = {
+                      id: `${t.id}_${n.id}`,
+                      row: t,
+                      column: n,
+                      getValue: () => t.getValue(l),
+                      renderValue: () => {
+                        var t;
+                        return null != (t = o.getValue())
+                          ? t
+                          : e.options.renderFallbackValue;
+                      },
+                      getContext: s(
+                        () => [e, n, t, o],
+                        (e, t, n, l) => ({
+                          table: e,
+                          column: t,
+                          row: n,
+                          cell: l,
+                          getValue: l.getValue,
+                          renderValue: l.renderValue,
+                        }),
+                        a(e.options, "debugCells"),
+                      ),
+                    };
+                    return (
+                      e._features.forEach((l) => {
+                        null == l.createCell || l.createCell(o, n, t, e);
+                      }, {}),
+                      o
+                    );
+                  })(e, g, t, t.id),
+                ),
+              a(e.options, "debugRows"),
+            ),
+            _getAllCellsByColumnId: s(
+              () => [g.getAllCells()],
+              (e) => e.reduce((e, t) => ((e[t.column.id] = t), e), {}),
+              a(e.options, "debugRows"),
+            ),
+          };
+          for (let t = 0; t < e._features.length; t++) {
+            const n = e._features[t];
+            null == n || null == n.createRow || n.createRow(g, e);
+          }
+          return g;
+        },
+        m = {
+          createColumn: (e, t) => {
+            (e._getFacetedRowModel =
+              t.options.getFacetedRowModel &&
+              t.options.getFacetedRowModel(t, e.id)),
+              (e.getFacetedRowModel = () =>
+                e._getFacetedRowModel
+                  ? e._getFacetedRowModel()
+                  : t.getPreFilteredRowModel()),
+              (e._getFacetedUniqueValues =
+                t.options.getFacetedUniqueValues &&
+                t.options.getFacetedUniqueValues(t, e.id)),
+              (e.getFacetedUniqueValues = () =>
+                e._getFacetedUniqueValues
+                  ? e._getFacetedUniqueValues()
+                  : new Map()),
+              (e._getFacetedMinMaxValues =
+                t.options.getFacetedMinMaxValues &&
+                t.options.getFacetedMinMaxValues(t, e.id)),
+              (e.getFacetedMinMaxValues = () => {
+                if (e._getFacetedMinMaxValues)
+                  return e._getFacetedMinMaxValues();
               });
           },
-          createRow: (e, o) => {
-            (e.columnFilters = {}), (e.columnFiltersMeta = {});
+        },
+        h = (e, t, n) => {
+          var l, o;
+          const i =
+            null == n || null == (l = n.toString()) ? void 0 : l.toLowerCase();
+          return Boolean(
+            null == (o = e.getValue(t)) ||
+              null == (o = o.toString()) ||
+              null == (o = o.toLowerCase())
+              ? void 0
+              : o.includes(i),
+          );
+        };
+      h.autoRemove = (e) => P(e);
+      const w = (e, t, n) => {
+        var l;
+        return Boolean(
+          null == (l = e.getValue(t)) || null == (l = l.toString())
+            ? void 0
+            : l.includes(n),
+        );
+      };
+      w.autoRemove = (e) => P(e);
+      const v = (e, t, n) => {
+        var l;
+        return (
+          (null == (l = e.getValue(t)) || null == (l = l.toString())
+            ? void 0
+            : l.toLowerCase()) === (null == n ? void 0 : n.toLowerCase())
+        );
+      };
+      v.autoRemove = (e) => P(e);
+      const C = (e, t, n) => {
+        var l;
+        return null == (l = e.getValue(t)) ? void 0 : l.includes(n);
+      };
+      C.autoRemove = (e) => P(e) || !(null != e && e.length);
+      const b = (e, t, n) =>
+        !n.some((n) => {
+          var l;
+          return !(null != (l = e.getValue(t)) && l.includes(n));
+        });
+      b.autoRemove = (e) => P(e) || !(null != e && e.length);
+      const S = (e, t, n) =>
+        n.some((n) => {
+          var l;
+          return null == (l = e.getValue(t)) ? void 0 : l.includes(n);
+        });
+      S.autoRemove = (e) => P(e) || !(null != e && e.length);
+      const R = (e, t, n) => e.getValue(t) === n;
+      R.autoRemove = (e) => P(e);
+      const F = (e, t, n) => e.getValue(t) == n;
+      F.autoRemove = (e) => P(e);
+      const M = (e, t, n) => {
+        let [l, o] = n;
+        const i = e.getValue(t);
+        return i >= l && i <= o;
+      };
+      (M.resolveFilterValue = (e) => {
+        let [t, n] = e,
+          l = "number" != typeof t ? parseFloat(t) : t,
+          o = "number" != typeof n ? parseFloat(n) : n,
+          i = null === t || Number.isNaN(l) ? -1 / 0 : l,
+          r = null === n || Number.isNaN(o) ? 1 / 0 : o;
+        if (i > r) {
+          const e = i;
+          (i = r), (r = e);
+        }
+        return [i, r];
+      }),
+        (M.autoRemove = (e) => P(e) || (P(e[0]) && P(e[1])));
+      const V = {
+        includesString: h,
+        includesStringSensitive: w,
+        equalsString: v,
+        arrIncludes: C,
+        arrIncludesAll: b,
+        arrIncludesSome: S,
+        equals: R,
+        weakEquals: F,
+        inNumberRange: M,
+      };
+      function P(e) {
+        return null == e || "" === e;
+      }
+      const I = {
+        getDefaultColumnDef: () => ({ filterFn: "auto" }),
+        getInitialState: (e) => ({ columnFilters: [], ...e }),
+        getDefaultOptions: (e) => ({
+          onColumnFiltersChange: i("columnFilters", e),
+          filterFromLeafRows: !1,
+          maxLeafRowFilterDepth: 100,
+        }),
+        createColumn: (e, t) => {
+          (e.getAutoFilterFn = () => {
+            const n = t.getCoreRowModel().flatRows[0],
+              l = null == n ? void 0 : n.getValue(e.id);
+            return "string" == typeof l
+              ? V.includesString
+              : "number" == typeof l
+                ? V.inNumberRange
+                : "boolean" == typeof l || (null !== l && "object" == typeof l)
+                  ? V.equals
+                  : Array.isArray(l)
+                    ? V.arrIncludes
+                    : V.weakEquals;
+          }),
+            (e.getFilterFn = () => {
+              var n, l;
+              return r(e.columnDef.filterFn)
+                ? e.columnDef.filterFn
+                : "auto" === e.columnDef.filterFn
+                  ? e.getAutoFilterFn()
+                  : null !=
+                      (n =
+                        null == (l = t.options.filterFns)
+                          ? void 0
+                          : l[e.columnDef.filterFn])
+                    ? n
+                    : V[e.columnDef.filterFn];
+            }),
+            (e.getCanFilter = () => {
+              var n, l, o;
+              return (
+                (null == (n = e.columnDef.enableColumnFilter) || n) &&
+                (null == (l = t.options.enableColumnFilters) || l) &&
+                (null == (o = t.options.enableFilters) || o) &&
+                !!e.accessorFn
+              );
+            }),
+            (e.getIsFiltered = () => e.getFilterIndex() > -1),
+            (e.getFilterValue = () => {
+              var n;
+              return null == (n = t.getState().columnFilters) ||
+                null == (n = n.find((t) => t.id === e.id))
+                ? void 0
+                : n.value;
+            }),
+            (e.getFilterIndex = () => {
+              var n, l;
+              return null !=
+                (n =
+                  null == (l = t.getState().columnFilters)
+                    ? void 0
+                    : l.findIndex((t) => t.id === e.id))
+                ? n
+                : -1;
+            }),
+            (e.setFilterValue = (n) => {
+              t.setColumnFilters((t) => {
+                const l = e.getFilterFn(),
+                  i = null == t ? void 0 : t.find((t) => t.id === e.id),
+                  r = o(n, i ? i.value : void 0);
+                var u;
+                if (_(l, r, e))
+                  return null !=
+                    (u = null == t ? void 0 : t.filter((t) => t.id !== e.id))
+                    ? u
+                    : [];
+                const s = { id: e.id, value: r };
+                var a;
+                return i
+                  ? null !=
+                    (a =
+                      null == t
+                        ? void 0
+                        : t.map((t) => (t.id === e.id ? s : t)))
+                    ? a
+                    : []
+                  : null != t && t.length
+                    ? [...t, s]
+                    : [s];
+              });
+            });
+        },
+        createRow: (e, t) => {
+          (e.columnFilters = {}), (e.columnFiltersMeta = {});
+        },
+        createTable: (e) => {
+          (e.setColumnFilters = (t) => {
+            const n = e.getAllLeafColumns();
+            null == e.options.onColumnFiltersChange ||
+              e.options.onColumnFiltersChange((e) => {
+                var l;
+                return null == (l = o(t, e))
+                  ? void 0
+                  : l.filter((e) => {
+                      const t = n.find((t) => t.id === e.id);
+                      if (t) {
+                        if (_(t.getFilterFn(), e.value, t)) return !1;
+                      }
+                      return !0;
+                    });
+              });
+          }),
+            (e.resetColumnFilters = (t) => {
+              var n, l;
+              e.setColumnFilters(
+                t
+                  ? []
+                  : null !=
+                      (n =
+                        null == (l = e.initialState) ? void 0 : l.columnFilters)
+                    ? n
+                    : [],
+              );
+            }),
+            (e.getPreFilteredRowModel = () => e.getCoreRowModel()),
+            (e.getFilteredRowModel = () => (
+              !e._getFilteredRowModel &&
+                e.options.getFilteredRowModel &&
+                (e._getFilteredRowModel = e.options.getFilteredRowModel(e)),
+              e.options.manualFiltering || !e._getFilteredRowModel
+                ? e.getPreFilteredRowModel()
+                : e._getFilteredRowModel()
+            ));
+        },
+      };
+      function _(e, t, n) {
+        return (
+          (!(!e || !e.autoRemove) && e.autoRemove(t, n)) ||
+          void 0 === t ||
+          ("string" == typeof t && !t)
+        );
+      }
+      const x = {
+          sum: (e, t, n) =>
+            n.reduce((t, n) => {
+              const l = n.getValue(e);
+              return t + ("number" == typeof l ? l : 0);
+            }, 0),
+          min: (e, t, n) => {
+            let l;
+            return (
+              n.forEach((t) => {
+                const n = t.getValue(e);
+                null != n && (l > n || (void 0 === l && n >= n)) && (l = n);
+              }),
+              l
+            );
+          },
+          max: (e, t, n) => {
+            let l;
+            return (
+              n.forEach((t) => {
+                const n = t.getValue(e);
+                null != n && (l < n || (void 0 === l && n >= n)) && (l = n);
+              }),
+              l
+            );
+          },
+          extent: (e, t, n) => {
+            let l, o;
+            return (
+              n.forEach((t) => {
+                const n = t.getValue(e);
+                null != n &&
+                  (void 0 === l
+                    ? n >= n && (l = o = n)
+                    : (l > n && (l = n), o < n && (o = n)));
+              }),
+              [l, o]
+            );
+          },
+          mean: (e, t) => {
+            let n = 0,
+              l = 0;
+            if (
+              (t.forEach((t) => {
+                let o = t.getValue(e);
+                null != o && (o = +o) >= o && (++n, (l += o));
+              }),
+              n)
+            )
+              return l / n;
+          },
+          median: (e, t) => {
+            if (!t.length) return;
+            const n = t.map((t) => t.getValue(e));
+            if (
+              ((l = n),
+              !Array.isArray(l) || !l.every((e) => "number" == typeof e))
+            )
+              return;
+            var l;
+            if (1 === n.length) return n[0];
+            const o = Math.floor(n.length / 2),
+              i = n.sort((e, t) => e - t);
+            return n.length % 2 != 0 ? i[o] : (i[o - 1] + i[o]) / 2;
+          },
+          unique: (e, t) =>
+            Array.from(new Set(t.map((t) => t.getValue(e))).values()),
+          uniqueCount: (e, t) => new Set(t.map((t) => t.getValue(e))).size,
+          count: (e, t) => t.length,
+        },
+        y = {
+          getDefaultColumnDef: () => ({
+            aggregatedCell: (e) => {
+              var t, n;
+              return null !=
+                (t =
+                  null == (n = e.getValue()) || null == n.toString
+                    ? void 0
+                    : n.toString())
+                ? t
+                : null;
+            },
+            aggregationFn: "auto",
+          }),
+          getInitialState: (e) => ({ grouping: [], ...e }),
+          getDefaultOptions: (e) => ({
+            onGroupingChange: i("grouping", e),
+            groupedColumnMode: "reorder",
+          }),
+          createColumn: (e, t) => {
+            (e.toggleGrouping = () => {
+              t.setGrouping((t) =>
+                null != t && t.includes(e.id)
+                  ? t.filter((t) => t !== e.id)
+                  : [...(null != t ? t : []), e.id],
+              );
+            }),
+              (e.getCanGroup = () => {
+                var n, l;
+                return (
+                  (null == (n = e.columnDef.enableGrouping) || n) &&
+                  (null == (l = t.options.enableGrouping) || l) &&
+                  (!!e.accessorFn || !!e.columnDef.getGroupingValue)
+                );
+              }),
+              (e.getIsGrouped = () => {
+                var n;
+                return null == (n = t.getState().grouping)
+                  ? void 0
+                  : n.includes(e.id);
+              }),
+              (e.getGroupedIndex = () => {
+                var n;
+                return null == (n = t.getState().grouping)
+                  ? void 0
+                  : n.indexOf(e.id);
+              }),
+              (e.getToggleGroupingHandler = () => {
+                const t = e.getCanGroup();
+                return () => {
+                  t && e.toggleGrouping();
+                };
+              }),
+              (e.getAutoAggregationFn = () => {
+                const n = t.getCoreRowModel().flatRows[0],
+                  l = null == n ? void 0 : n.getValue(e.id);
+                return "number" == typeof l
+                  ? x.sum
+                  : "[object Date]" === Object.prototype.toString.call(l)
+                    ? x.extent
+                    : void 0;
+              }),
+              (e.getAggregationFn = () => {
+                var n, l;
+                if (!e) throw new Error();
+                return r(e.columnDef.aggregationFn)
+                  ? e.columnDef.aggregationFn
+                  : "auto" === e.columnDef.aggregationFn
+                    ? e.getAutoAggregationFn()
+                    : null !=
+                        (n =
+                          null == (l = t.options.aggregationFns)
+                            ? void 0
+                            : l[e.columnDef.aggregationFn])
+                      ? n
+                      : x[e.columnDef.aggregationFn];
+              });
           },
           createTable: (e) => {
-            (e.setColumnFilters = (o) => {
-              const t = e.getAllLeafColumns(),
-                n = (r) => {
-                  var i;
-                  return (i = A(o, r)) == null
-                    ? void 0
-                    : i.filter((l) => {
-                        const s = t.find((a) => a.id === l.id);
-                        if (s) {
-                          const a = s.getFilterFn();
-                          if (H(a, l.value, s)) return !1;
-                        }
-                        return !0;
-                      });
-                };
-              e.options.onColumnFiltersChange == null ||
-                e.options.onColumnFiltersChange(n);
-            }),
-              (e.resetColumnFilters = (o) => {
-                var t, n;
-                e.setColumnFilters(
-                  o
+            (e.setGrouping = (t) =>
+              null == e.options.onGroupingChange
+                ? void 0
+                : e.options.onGroupingChange(t)),
+              (e.resetGrouping = (t) => {
+                var n, l;
+                e.setGrouping(
+                  t
                     ? []
-                    : (t =
-                          (n = e.initialState) == null
-                            ? void 0
-                            : n.columnFilters) != null
-                      ? t
+                    : null !=
+                        (n = null == (l = e.initialState) ? void 0 : l.grouping)
+                      ? n
                       : [],
                 );
               }),
-              (e.getPreFilteredRowModel = () => e.getCoreRowModel()),
-              (e.getFilteredRowModel = () => (
-                !e._getFilteredRowModel &&
-                  e.options.getFilteredRowModel &&
-                  (e._getFilteredRowModel = e.options.getFilteredRowModel(e)),
-                e.options.manualFiltering || !e._getFilteredRowModel
-                  ? e.getPreFilteredRowModel()
-                  : e._getFilteredRowModel()
+              (e.getPreGroupedRowModel = () => e.getFilteredRowModel()),
+              (e.getGroupedRowModel = () => (
+                !e._getGroupedRowModel &&
+                  e.options.getGroupedRowModel &&
+                  (e._getGroupedRowModel = e.options.getGroupedRowModel(e)),
+                e.options.manualGrouping || !e._getGroupedRowModel
+                  ? e.getPreGroupedRowModel()
+                  : e._getGroupedRowModel()
               ));
           },
-        };
-        function H(e, o, t) {
-          return (
-            (e && e.autoRemove ? e.autoRemove(o, t) : !1) ||
-            typeof o > "u" ||
-            (typeof o == "string" && !o)
-          );
-        }
-        const fe = {
-            sum: (e, o, t) =>
-              t.reduce((n, r) => {
-                const i = r.getValue(e);
-                return n + (typeof i == "number" ? i : 0);
-              }, 0),
-            min: (e, o, t) => {
-              let n;
-              return (
-                t.forEach((r) => {
-                  const i = r.getValue(e);
-                  i != null && (n > i || (n === void 0 && i >= i)) && (n = i);
-                }),
-                n
-              );
-            },
-            max: (e, o, t) => {
-              let n;
-              return (
-                t.forEach((r) => {
-                  const i = r.getValue(e);
-                  i != null && (n < i || (n === void 0 && i >= i)) && (n = i);
-                }),
-                n
-              );
-            },
-            extent: (e, o, t) => {
-              let n, r;
-              return (
-                t.forEach((i) => {
-                  const l = i.getValue(e);
-                  l != null &&
-                    (n === void 0
-                      ? l >= l && (n = r = l)
-                      : (n > l && (n = l), r < l && (r = l)));
-                }),
-                [n, r]
-              );
-            },
-            mean: (e, o) => {
-              let t = 0,
-                n = 0;
-              if (
-                (o.forEach((r) => {
-                  let i = r.getValue(e);
-                  i != null && (i = +i) >= i && (++t, (n += i));
-                }),
-                t)
-              )
-                return n / t;
-            },
-            median: (e, o) => {
-              if (!o.length) return;
-              const t = o.map((i) => i.getValue(e));
-              if (!W(t)) return;
-              if (t.length === 1) return t[0];
-              const n = Math.floor(t.length / 2),
-                r = t.sort((i, l) => i - l);
-              return t.length % 2 !== 0 ? r[n] : (r[n - 1] + r[n]) / 2;
-            },
-            unique: (e, o) =>
-              Array.from(new Set(o.map((t) => t.getValue(e))).values()),
-            uniqueCount: (e, o) => new Set(o.map((t) => t.getValue(e))).size,
-            count: (e, o) => o.length,
+          createRow: (e, t) => {
+            (e.getIsGrouped = () => !!e.groupingColumnId),
+              (e.getGroupingValue = (n) => {
+                if (e._groupingValuesCache.hasOwnProperty(n))
+                  return e._groupingValuesCache[n];
+                const l = t.getColumn(n);
+                return null != l && l.columnDef.getGroupingValue
+                  ? ((e._groupingValuesCache[n] = l.columnDef.getGroupingValue(
+                      e.original,
+                    )),
+                    e._groupingValuesCache[n])
+                  : e.getValue(n);
+              }),
+              (e._groupingValuesCache = {});
           },
-          Ee = {
-            getDefaultColumnDef: () => ({
-              aggregatedCell: (e) => {
-                var o, t;
-                return (o =
-                  (t = e.getValue()) == null || t.toString == null
-                    ? void 0
-                    : t.toString()) != null
-                  ? o
-                  : null;
-              },
-              aggregationFn: "auto",
-            }),
-            getInitialState: (e) => ({ grouping: [], ...e }),
-            getDefaultOptions: (e) => ({
-              onGroupingChange: G("grouping", e),
-              groupedColumnMode: "reorder",
-            }),
-            createColumn: (e, o) => {
-              (e.toggleGrouping = () => {
-                o.setGrouping((t) =>
-                  t != null && t.includes(e.id)
-                    ? t.filter((n) => n !== e.id)
-                    : [...(t ?? []), e.id],
+          createCell: (e, t, n, l) => {
+            (e.getIsGrouped = () =>
+              t.getIsGrouped() && t.id === n.groupingColumnId),
+              (e.getIsPlaceholder = () =>
+                !e.getIsGrouped() && t.getIsGrouped()),
+              (e.getIsAggregated = () => {
+                var t;
+                return (
+                  !e.getIsGrouped() &&
+                  !e.getIsPlaceholder() &&
+                  !(null == (t = n.subRows) || !t.length)
+                );
+              });
+          },
+        };
+      const E = {
+          getInitialState: (e) => ({ columnOrder: [], ...e }),
+          getDefaultOptions: (e) => ({
+            onColumnOrderChange: i("columnOrder", e),
+          }),
+          createColumn: (e, t) => {
+            (e.getIndex = s(
+              (e) => [D(t, e)],
+              (t) => t.findIndex((t) => t.id === e.id),
+              a(t.options, "debugColumns"),
+            )),
+              (e.getIsFirstColumn = (n) => {
+                var l;
+                return (null == (l = D(t, n)[0]) ? void 0 : l.id) === e.id;
+              }),
+              (e.getIsLastColumn = (n) => {
+                var l;
+                const o = D(t, n);
+                return (null == (l = o[o.length - 1]) ? void 0 : l.id) === e.id;
+              });
+          },
+          createTable: (e) => {
+            (e.setColumnOrder = (t) =>
+              null == e.options.onColumnOrderChange
+                ? void 0
+                : e.options.onColumnOrderChange(t)),
+              (e.resetColumnOrder = (t) => {
+                var n;
+                e.setColumnOrder(
+                  t ? [] : null != (n = e.initialState.columnOrder) ? n : [],
                 );
               }),
-                (e.getCanGroup = () => {
-                  var t, n;
-                  return (
-                    ((t = e.columnDef.enableGrouping) != null ? t : !0) &&
-                    ((n = o.options.enableGrouping) != null ? n : !0) &&
-                    (!!e.accessorFn || !!e.columnDef.getGroupingValue)
-                  );
-                }),
-                (e.getIsGrouped = () => {
-                  var t;
-                  return (t = o.getState().grouping) == null
-                    ? void 0
-                    : t.includes(e.id);
-                }),
-                (e.getGroupedIndex = () => {
-                  var t;
-                  return (t = o.getState().grouping) == null
-                    ? void 0
-                    : t.indexOf(e.id);
-                }),
-                (e.getToggleGroupingHandler = () => {
-                  const t = e.getCanGroup();
-                  return () => {
-                    t && e.toggleGrouping();
-                  };
-                }),
-                (e.getAutoAggregationFn = () => {
-                  const t = o.getCoreRowModel().flatRows[0],
-                    n = t?.getValue(e.id);
-                  if (typeof n == "number") return fe.sum;
-                  if (Object.prototype.toString.call(n) === "[object Date]")
-                    return fe.extent;
-                }),
-                (e.getAggregationFn = () => {
-                  var t, n;
-                  if (!e) throw new Error();
-                  return N(e.columnDef.aggregationFn)
-                    ? e.columnDef.aggregationFn
-                    : e.columnDef.aggregationFn === "auto"
-                      ? e.getAutoAggregationFn()
-                      : (t =
-                            (n = o.options.aggregationFns) == null
-                              ? void 0
-                              : n[e.columnDef.aggregationFn]) != null
-                        ? t
-                        : fe[e.columnDef.aggregationFn];
-                });
-            },
-            createTable: (e) => {
-              (e.setGrouping = (o) =>
-                e.options.onGroupingChange == null
-                  ? void 0
-                  : e.options.onGroupingChange(o)),
-                (e.resetGrouping = (o) => {
-                  var t, n;
-                  e.setGrouping(
-                    o
-                      ? []
-                      : (t =
-                            (n = e.initialState) == null
-                              ? void 0
-                              : n.grouping) != null
-                        ? t
-                        : [],
-                  );
-                }),
-                (e.getPreGroupedRowModel = () => e.getFilteredRowModel()),
-                (e.getGroupedRowModel = () => (
-                  !e._getGroupedRowModel &&
-                    e.options.getGroupedRowModel &&
-                    (e._getGroupedRowModel = e.options.getGroupedRowModel(e)),
-                  e.options.manualGrouping || !e._getGroupedRowModel
-                    ? e.getPreGroupedRowModel()
-                    : e._getGroupedRowModel()
-                ));
-            },
-            createRow: (e, o) => {
-              (e.getIsGrouped = () => !!e.groupingColumnId),
-                (e.getGroupingValue = (t) => {
-                  if (e._groupingValuesCache.hasOwnProperty(t))
-                    return e._groupingValuesCache[t];
-                  const n = o.getColumn(t);
-                  return n != null && n.columnDef.getGroupingValue
-                    ? ((e._groupingValuesCache[t] =
-                        n.columnDef.getGroupingValue(e.original)),
-                      e._groupingValuesCache[t])
-                    : e.getValue(t);
-                }),
-                (e._groupingValuesCache = {});
-            },
-            createCell: (e, o, t, n) => {
-              (e.getIsGrouped = () =>
-                o.getIsGrouped() && o.id === t.groupingColumnId),
-                (e.getIsPlaceholder = () =>
-                  !e.getIsGrouped() && o.getIsGrouped()),
-                (e.getIsAggregated = () => {
-                  var r;
-                  return (
-                    !e.getIsGrouped() &&
-                    !e.getIsPlaceholder() &&
-                    !!((r = t.subRows) != null && r.length)
-                  );
-                });
-            },
-          };
-        function De(e, o, t) {
-          if (!(o != null && o.length) || !t) return e;
-          const n = e.filter((i) => !o.includes(i.id));
-          return t === "remove"
-            ? n
-            : [
-                ...o.map((i) => e.find((l) => l.id === i)).filter(Boolean),
-                ...n,
-              ];
-        }
-        const Ge = {
-            getInitialState: (e) => ({ columnOrder: [], ...e }),
-            getDefaultOptions: (e) => ({
-              onColumnOrderChange: G("columnOrder", e),
-            }),
-            createColumn: (e, o) => {
-              (e.getIndex = p(
-                (t) => [oe(o, t)],
-                (t) => t.findIndex((n) => n.id === e.id),
-                h(o.options, "debugColumns", "getIndex"),
-              )),
-                (e.getIsFirstColumn = (t) => {
-                  var n;
-                  return ((n = oe(o, t)[0]) == null ? void 0 : n.id) === e.id;
-                }),
-                (e.getIsLastColumn = (t) => {
-                  var n;
-                  const r = oe(o, t);
-                  return (
-                    ((n = r[r.length - 1]) == null ? void 0 : n.id) === e.id
-                  );
-                });
-            },
-            createTable: (e) => {
-              (e.setColumnOrder = (o) =>
-                e.options.onColumnOrderChange == null
-                  ? void 0
-                  : e.options.onColumnOrderChange(o)),
-                (e.resetColumnOrder = (o) => {
-                  var t;
-                  e.setColumnOrder(
-                    o ? [] : (t = e.initialState.columnOrder) != null ? t : [],
-                  );
-                }),
-                (e._getOrderColumnsFn = p(
-                  () => [
-                    e.getState().columnOrder,
-                    e.getState().grouping,
-                    e.options.groupedColumnMode,
-                  ],
-                  (o, t, n) => (r) => {
-                    let i = [];
-                    if (!(o != null && o.length)) i = r;
-                    else {
-                      const l = [...o],
-                        s = [...r];
-                      for (; s.length && l.length; ) {
-                        const a = l.shift(),
-                          g = s.findIndex((c) => c.id === a);
-                        g > -1 && i.push(s.splice(g, 1)[0]);
-                      }
-                      i = [...i, ...s];
+              (e._getOrderColumnsFn = s(
+                () => [
+                  e.getState().columnOrder,
+                  e.getState().grouping,
+                  e.options.groupedColumnMode,
+                ],
+                (e, t, n) => (l) => {
+                  let o = [];
+                  if (null != e && e.length) {
+                    const t = [...e],
+                      n = [...l];
+                    for (; n.length && t.length; ) {
+                      const e = t.shift(),
+                        l = n.findIndex((t) => t.id === e);
+                      l > -1 && o.push(n.splice(l, 1)[0]);
                     }
-                    return De(i, t, n);
-                  },
-                  h(e.options, "debugTable", "_getOrderColumnsFn"),
-                ));
-            },
+                    o = [...o, ...n];
+                  } else o = l;
+                  return (function (e, t, n) {
+                    if (null == t || !t.length || !n) return e;
+                    const l = e.filter((e) => !t.includes(e.id));
+                    return "remove" === n
+                      ? l
+                      : [
+                          ...t
+                            .map((t) => e.find((e) => e.id === t))
+                            .filter(Boolean),
+                          ...l,
+                        ];
+                  })(o, t, n);
+                },
+                a(e.options, "debugTable"),
+              ));
           },
-          ce = () => ({ left: [], right: [] }),
-          He = {
-            getInitialState: (e) => ({ columnPinning: ce(), ...e }),
-            getDefaultOptions: (e) => ({
-              onColumnPinningChange: G("columnPinning", e),
-            }),
-            createColumn: (e, o) => {
-              (e.pin = (t) => {
-                const n = e
-                  .getLeafColumns()
-                  .map((r) => r.id)
-                  .filter(Boolean);
-                o.setColumnPinning((r) => {
-                  var i, l;
-                  if (t === "right") {
-                    var s, a;
-                    return {
-                      left: ((s = r?.left) != null ? s : []).filter(
-                        (S) => !(n != null && n.includes(S)),
-                      ),
-                      right: [
-                        ...((a = r?.right) != null ? a : []).filter(
-                          (S) => !(n != null && n.includes(S)),
-                        ),
-                        ...n,
-                      ],
-                    };
-                  }
-                  if (t === "left") {
-                    var g, c;
-                    return {
-                      left: [
-                        ...((g = r?.left) != null ? g : []).filter(
-                          (S) => !(n != null && n.includes(S)),
-                        ),
-                        ...n,
-                      ],
-                      right: ((c = r?.right) != null ? c : []).filter(
-                        (S) => !(n != null && n.includes(S)),
-                      ),
-                    };
-                  }
-                  return {
-                    left: ((i = r?.left) != null ? i : []).filter(
-                      (S) => !(n != null && n.includes(S)),
-                    ),
-                    right: ((l = r?.right) != null ? l : []).filter(
-                      (S) => !(n != null && n.includes(S)),
-                    ),
-                  };
-                });
-              }),
-                (e.getCanPin = () =>
-                  e.getLeafColumns().some((n) => {
-                    var r, i, l;
-                    return (
-                      ((r = n.columnDef.enablePinning) != null ? r : !0) &&
-                      ((i =
-                        (l = o.options.enableColumnPinning) != null
-                          ? l
-                          : o.options.enablePinning) != null
+        },
+        G = {
+          getInitialState: (e) => ({
+            columnPinning: { left: [], right: [] },
+            ...e,
+          }),
+          getDefaultOptions: (e) => ({
+            onColumnPinningChange: i("columnPinning", e),
+          }),
+          createColumn: (e, t) => {
+            (e.pin = (n) => {
+              const l = e
+                .getLeafColumns()
+                .map((e) => e.id)
+                .filter(Boolean);
+              t.setColumnPinning((e) => {
+                var t, o, i, r, u, s;
+                return "right" === n
+                  ? {
+                      left: (null != (i = null == e ? void 0 : e.left)
                         ? i
-                        : !0)
-                    );
-                  })),
-                (e.getIsPinned = () => {
-                  const t = e.getLeafColumns().map((s) => s.id),
-                    { left: n, right: r } = o.getState().columnPinning,
-                    i = t.some((s) => n?.includes(s)),
-                    l = t.some((s) => r?.includes(s));
-                  return i ? "left" : l ? "right" : !1;
-                }),
-                (e.getPinnedIndex = () => {
-                  var t, n;
-                  const r = e.getIsPinned();
-                  return r
-                    ? (t =
-                        (n = o.getState().columnPinning) == null ||
-                        (n = n[r]) == null
-                          ? void 0
-                          : n.indexOf(e.id)) != null
-                      ? t
-                      : -1
-                    : 0;
-                });
-            },
-            createRow: (e, o) => {
-              (e.getCenterVisibleCells = p(
+                        : []
+                      ).filter((e) => !(null != l && l.includes(e))),
+                      right: [
+                        ...(null != (r = null == e ? void 0 : e.right)
+                          ? r
+                          : []
+                        ).filter((e) => !(null != l && l.includes(e))),
+                        ...l,
+                      ],
+                    }
+                  : "left" === n
+                    ? {
+                        left: [
+                          ...(null != (u = null == e ? void 0 : e.left)
+                            ? u
+                            : []
+                          ).filter((e) => !(null != l && l.includes(e))),
+                          ...l,
+                        ],
+                        right: (null != (s = null == e ? void 0 : e.right)
+                          ? s
+                          : []
+                        ).filter((e) => !(null != l && l.includes(e))),
+                      }
+                    : {
+                        left: (null != (t = null == e ? void 0 : e.left)
+                          ? t
+                          : []
+                        ).filter((e) => !(null != l && l.includes(e))),
+                        right: (null != (o = null == e ? void 0 : e.right)
+                          ? o
+                          : []
+                        ).filter((e) => !(null != l && l.includes(e))),
+                      };
+              });
+            }),
+              (e.getCanPin = () =>
+                e.getLeafColumns().some((e) => {
+                  var n, l, o;
+                  return (
+                    (null == (n = e.columnDef.enablePinning) || n) &&
+                    (null ==
+                      (l =
+                        null != (o = t.options.enableColumnPinning)
+                          ? o
+                          : t.options.enablePinning) ||
+                      l)
+                  );
+                })),
+              (e.getIsPinned = () => {
+                const n = e.getLeafColumns().map((e) => e.id),
+                  { left: l, right: o } = t.getState().columnPinning,
+                  i = n.some((e) => (null == l ? void 0 : l.includes(e))),
+                  r = n.some((e) => (null == o ? void 0 : o.includes(e)));
+                return i ? "left" : !!r && "right";
+              }),
+              (e.getPinnedIndex = () => {
+                var n, l;
+                const o = e.getIsPinned();
+                return o
+                  ? null !=
+                    (n =
+                      null == (l = t.getState().columnPinning) ||
+                      null == (l = l[o])
+                        ? void 0
+                        : l.indexOf(e.id))
+                    ? n
+                    : -1
+                  : 0;
+              });
+          },
+          createRow: (e, t) => {
+            (e.getCenterVisibleCells = s(
+              () => [
+                e._getAllVisibleCells(),
+                t.getState().columnPinning.left,
+                t.getState().columnPinning.right,
+              ],
+              (e, t, n) => {
+                const l = [...(null != t ? t : []), ...(null != n ? n : [])];
+                return e.filter((e) => !l.includes(e.column.id));
+              },
+              a(t.options, "debugRows"),
+            )),
+              (e.getLeftVisibleCells = s(
                 () => [
                   e._getAllVisibleCells(),
-                  o.getState().columnPinning.left,
-                  o.getState().columnPinning.right,
+                  t.getState().columnPinning.left,
                 ],
-                (t, n, r) => {
-                  const i = [...(n ?? []), ...(r ?? [])];
-                  return t.filter((l) => !i.includes(l.column.id));
-                },
-                h(o.options, "debugRows", "getCenterVisibleCells"),
+                (e, t) =>
+                  (null != t ? t : [])
+                    .map((t) => e.find((e) => e.column.id === t))
+                    .filter(Boolean)
+                    .map((e) => ({ ...e, position: "left" })),
+                a(t.options, "debugRows"),
               )),
-                (e.getLeftVisibleCells = p(
-                  () => [
-                    e._getAllVisibleCells(),
-                    o.getState().columnPinning.left,
-                  ],
-                  (t, n) =>
-                    (n ?? [])
-                      .map((i) => t.find((l) => l.column.id === i))
-                      .filter(Boolean)
-                      .map((i) => ({ ...i, position: "left" })),
-                  h(o.options, "debugRows", "getLeftVisibleCells"),
-                )),
-                (e.getRightVisibleCells = p(
-                  () => [
-                    e._getAllVisibleCells(),
-                    o.getState().columnPinning.right,
-                  ],
-                  (t, n) =>
-                    (n ?? [])
-                      .map((i) => t.find((l) => l.column.id === i))
-                      .filter(Boolean)
-                      .map((i) => ({ ...i, position: "right" })),
-                  h(o.options, "debugRows", "getRightVisibleCells"),
-                ));
-            },
-            createTable: (e) => {
-              (e.setColumnPinning = (o) =>
-                e.options.onColumnPinningChange == null
-                  ? void 0
-                  : e.options.onColumnPinningChange(o)),
-                (e.resetColumnPinning = (o) => {
-                  var t, n;
-                  return e.setColumnPinning(
-                    o
-                      ? ce()
-                      : (t =
-                            (n = e.initialState) == null
-                              ? void 0
-                              : n.columnPinning) != null
-                        ? t
-                        : ce(),
-                  );
-                }),
-                (e.getIsSomeColumnsPinned = (o) => {
-                  var t;
-                  const n = e.getState().columnPinning;
-                  if (!o) {
-                    var r, i;
-                    return !!(
-                      ((r = n.left) != null && r.length) ||
-                      ((i = n.right) != null && i.length)
-                    );
-                  }
-                  return !!((t = n[o]) != null && t.length);
-                }),
-                (e.getLeftLeafColumns = p(
-                  () => [
-                    e.getAllLeafColumns(),
-                    e.getState().columnPinning.left,
-                  ],
-                  (o, t) =>
-                    (t ?? [])
-                      .map((n) => o.find((r) => r.id === n))
-                      .filter(Boolean),
-                  h(e.options, "debugColumns", "getLeftLeafColumns"),
-                )),
-                (e.getRightLeafColumns = p(
-                  () => [
-                    e.getAllLeafColumns(),
-                    e.getState().columnPinning.right,
-                  ],
-                  (o, t) =>
-                    (t ?? [])
-                      .map((n) => o.find((r) => r.id === n))
-                      .filter(Boolean),
-                  h(e.options, "debugColumns", "getRightLeafColumns"),
-                )),
-                (e.getCenterLeafColumns = p(
-                  () => [
-                    e.getAllLeafColumns(),
-                    e.getState().columnPinning.left,
-                    e.getState().columnPinning.right,
-                  ],
-                  (o, t, n) => {
-                    const r = [...(t ?? []), ...(n ?? [])];
-                    return o.filter((i) => !r.includes(i.id));
-                  },
-                  h(e.options, "debugColumns", "getCenterLeafColumns"),
-                ));
-            },
-          },
-          ue = { size: 150, minSize: 20, maxSize: Number.MAX_SAFE_INTEGER },
-          pe = () => ({
-            startOffset: null,
-            startSize: null,
-            deltaOffset: null,
-            deltaPercentage: null,
-            isResizingColumn: !1,
-            columnSizingStart: [],
-          }),
-          Le = {
-            getDefaultColumnDef: () => ue,
-            getInitialState: (e) => ({
-              columnSizing: {},
-              columnSizingInfo: pe(),
-              ...e,
-            }),
-            getDefaultOptions: (e) => ({
-              columnResizeMode: "onEnd",
-              columnResizeDirection: "ltr",
-              onColumnSizingChange: G("columnSizing", e),
-              onColumnSizingInfoChange: G("columnSizingInfo", e),
-            }),
-            createColumn: (e, o) => {
-              (e.getSize = () => {
-                var t, n, r;
-                const i = o.getState().columnSizing[e.id];
-                return Math.min(
-                  Math.max(
-                    (t = e.columnDef.minSize) != null ? t : ue.minSize,
-                    (n = i ?? e.columnDef.size) != null ? n : ue.size,
-                  ),
-                  (r = e.columnDef.maxSize) != null ? r : ue.maxSize,
-                );
-              }),
-                (e.getStart = p(
-                  (t) => [t, oe(o, t), o.getState().columnSizing],
-                  (t, n) =>
-                    n
-                      .slice(0, e.getIndex(t))
-                      .reduce((r, i) => r + i.getSize(), 0),
-                  h(o.options, "debugColumns", "getStart"),
-                )),
-                (e.getAfter = p(
-                  (t) => [t, oe(o, t), o.getState().columnSizing],
-                  (t, n) =>
-                    n
-                      .slice(e.getIndex(t) + 1)
-                      .reduce((r, i) => r + i.getSize(), 0),
-                  h(o.options, "debugColumns", "getAfter"),
-                )),
-                (e.resetSize = () => {
-                  o.setColumnSizing((t) => {
-                    let { [e.id]: n, ...r } = t;
-                    return r;
-                  });
-                }),
-                (e.getCanResize = () => {
-                  var t, n;
-                  return (
-                    ((t = e.columnDef.enableResizing) != null ? t : !0) &&
-                    ((n = o.options.enableColumnResizing) != null ? n : !0)
-                  );
-                }),
-                (e.getIsResizing = () =>
-                  o.getState().columnSizingInfo.isResizingColumn === e.id);
-            },
-            createHeader: (e, o) => {
-              (e.getSize = () => {
-                let t = 0;
-                const n = (r) => {
-                  if (r.subHeaders.length) r.subHeaders.forEach(n);
-                  else {
-                    var i;
-                    t += (i = r.column.getSize()) != null ? i : 0;
-                  }
-                };
-                return n(e), t;
-              }),
-                (e.getStart = () => {
-                  if (e.index > 0) {
-                    const t = e.headerGroup.headers[e.index - 1];
-                    return t.getStart() + t.getSize();
-                  }
-                  return 0;
-                }),
-                (e.getResizeHandler = (t) => {
-                  const n = o.getColumn(e.column.id),
-                    r = n?.getCanResize();
-                  return (i) => {
-                    if (
-                      !n ||
-                      !r ||
-                      (i.persist == null || i.persist(),
-                      me(i) && i.touches && i.touches.length > 1)
-                    )
-                      return;
-                    const l = e.getSize(),
-                      s = e
-                        ? e
-                            .getLeafHeaders()
-                            .map((R) => [R.column.id, R.column.getSize()])
-                        : [[n.id, n.getSize()]],
-                      a = me(i) ? Math.round(i.touches[0].clientX) : i.clientX,
-                      g = {},
-                      c = (R, _) => {
-                        typeof _ == "number" &&
-                          (o.setColumnSizingInfo((M) => {
-                            var B, P;
-                            const $ =
-                                o.options.columnResizeDirection === "rtl"
-                                  ? -1
-                                  : 1,
-                              ie =
-                                (_ - ((B = M?.startOffset) != null ? B : 0)) *
-                                $,
-                              le = Math.max(
-                                ie / ((P = M?.startSize) != null ? P : 0),
-                                -0.999999,
-                              );
-                            return (
-                              M.columnSizingStart.forEach((ge) => {
-                                let [it, Ie] = ge;
-                                g[it] =
-                                  Math.round(Math.max(Ie + Ie * le, 0) * 100) /
-                                  100;
-                              }),
-                              { ...M, deltaOffset: ie, deltaPercentage: le }
-                            );
-                          }),
-                          (o.options.columnResizeMode === "onChange" ||
-                            R === "end") &&
-                            o.setColumnSizing((M) => ({ ...M, ...g })));
-                      },
-                      S = (R) => c("move", R),
-                      d = (R) => {
-                        c("end", R),
-                          o.setColumnSizingInfo((_) => ({
-                            ..._,
-                            isResizingColumn: !1,
-                            startOffset: null,
-                            startSize: null,
-                            deltaOffset: null,
-                            deltaPercentage: null,
-                            columnSizingStart: [],
-                          }));
-                      },
-                      u = t || typeof document < "u" ? document : null,
-                      f = {
-                        moveHandler: (R) => S(R.clientX),
-                        upHandler: (R) => {
-                          u?.removeEventListener("mousemove", f.moveHandler),
-                            u?.removeEventListener("mouseup", f.upHandler),
-                            d(R.clientX);
-                        },
-                      },
-                      m = {
-                        moveHandler: (R) => (
-                          R.cancelable &&
-                            (R.preventDefault(), R.stopPropagation()),
-                          S(R.touches[0].clientX),
-                          !1
-                        ),
-                        upHandler: (R) => {
-                          var _;
-                          u?.removeEventListener("touchmove", m.moveHandler),
-                            u?.removeEventListener("touchend", m.upHandler),
-                            R.cancelable &&
-                              (R.preventDefault(), R.stopPropagation()),
-                            d((_ = R.touches[0]) == null ? void 0 : _.clientX);
-                        },
-                      },
-                      C = Ae() ? { passive: !1 } : !1;
-                    me(i)
-                      ? (u?.addEventListener("touchmove", m.moveHandler, C),
-                        u?.addEventListener("touchend", m.upHandler, C))
-                      : (u?.addEventListener("mousemove", f.moveHandler, C),
-                        u?.addEventListener("mouseup", f.upHandler, C)),
-                      o.setColumnSizingInfo((R) => ({
-                        ...R,
-                        startOffset: a,
-                        startSize: l,
-                        deltaOffset: 0,
-                        deltaPercentage: 0,
-                        columnSizingStart: s,
-                        isResizingColumn: n.id,
-                      }));
-                  };
-                });
-            },
-            createTable: (e) => {
-              (e.setColumnSizing = (o) =>
-                e.options.onColumnSizingChange == null
-                  ? void 0
-                  : e.options.onColumnSizingChange(o)),
-                (e.setColumnSizingInfo = (o) =>
-                  e.options.onColumnSizingInfoChange == null
-                    ? void 0
-                    : e.options.onColumnSizingInfoChange(o)),
-                (e.resetColumnSizing = (o) => {
-                  var t;
-                  e.setColumnSizing(
-                    o ? {} : (t = e.initialState.columnSizing) != null ? t : {},
-                  );
-                }),
-                (e.resetHeaderSizeInfo = (o) => {
-                  var t;
-                  e.setColumnSizingInfo(
-                    o
-                      ? pe()
-                      : (t = e.initialState.columnSizingInfo) != null
-                        ? t
-                        : pe(),
-                  );
-                }),
-                (e.getTotalSize = () => {
-                  var o, t;
-                  return (o =
-                    (t = e.getHeaderGroups()[0]) == null
-                      ? void 0
-                      : t.headers.reduce((n, r) => n + r.getSize(), 0)) != null
-                    ? o
-                    : 0;
-                }),
-                (e.getLeftTotalSize = () => {
-                  var o, t;
-                  return (o =
-                    (t = e.getLeftHeaderGroups()[0]) == null
-                      ? void 0
-                      : t.headers.reduce((n, r) => n + r.getSize(), 0)) != null
-                    ? o
-                    : 0;
-                }),
-                (e.getCenterTotalSize = () => {
-                  var o, t;
-                  return (o =
-                    (t = e.getCenterHeaderGroups()[0]) == null
-                      ? void 0
-                      : t.headers.reduce((n, r) => n + r.getSize(), 0)) != null
-                    ? o
-                    : 0;
-                }),
-                (e.getRightTotalSize = () => {
-                  var o, t;
-                  return (o =
-                    (t = e.getRightHeaderGroups()[0]) == null
-                      ? void 0
-                      : t.headers.reduce((n, r) => n + r.getSize(), 0)) != null
-                    ? o
-                    : 0;
-                });
-            },
-          };
-        let ae = null;
-        function Ae() {
-          if (typeof ae == "boolean") return ae;
-          let e = !1;
-          try {
-            const o = {
-                get passive() {
-                  return (e = !0), !1;
-                },
-              },
-              t = () => {};
-            window.addEventListener("test", t, o),
-              window.removeEventListener("test", t);
-          } catch {
-            e = !1;
-          }
-          return (ae = e), ae;
-        }
-        function me(e) {
-          return e.type === "touchstart";
-        }
-        const Oe = {
-          getInitialState: (e) => ({ columnVisibility: {}, ...e }),
-          getDefaultOptions: (e) => ({
-            onColumnVisibilityChange: G("columnVisibility", e),
-          }),
-          createColumn: (e, o) => {
-            (e.toggleVisibility = (t) => {
-              e.getCanHide() &&
-                o.setColumnVisibility((n) => ({
-                  ...n,
-                  [e.id]: t ?? !e.getIsVisible(),
-                }));
-            }),
-              (e.getIsVisible = () => {
-                var t, n;
-                const r = e.columns;
-                return (t = r.length
-                  ? r.some((i) => i.getIsVisible())
-                  : (n = o.getState().columnVisibility) == null
-                    ? void 0
-                    : n[e.id]) != null
-                  ? t
-                  : !0;
-              }),
-              (e.getCanHide = () => {
-                var t, n;
-                return (
-                  ((t = e.columnDef.enableHiding) != null ? t : !0) &&
-                  ((n = o.options.enableHiding) != null ? n : !0)
-                );
-              }),
-              (e.getToggleVisibilityHandler = () => (t) => {
-                e.toggleVisibility == null ||
-                  e.toggleVisibility(t.target.checked);
-              });
-          },
-          createRow: (e, o) => {
-            (e._getAllVisibleCells = p(
-              () => [e.getAllCells(), o.getState().columnVisibility],
-              (t) => t.filter((n) => n.column.getIsVisible()),
-              h(o.options, "debugRows", "_getAllVisibleCells"),
-            )),
-              (e.getVisibleCells = p(
+              (e.getRightVisibleCells = s(
                 () => [
-                  e.getLeftVisibleCells(),
-                  e.getCenterVisibleCells(),
-                  e.getRightVisibleCells(),
+                  e._getAllVisibleCells(),
+                  t.getState().columnPinning.right,
                 ],
-                (t, n, r) => [...t, ...n, ...r],
-                h(o.options, "debugRows", "getVisibleCells"),
+                (e, t) =>
+                  (null != t ? t : [])
+                    .map((t) => e.find((e) => e.column.id === t))
+                    .filter(Boolean)
+                    .map((e) => ({ ...e, position: "right" })),
+                a(t.options, "debugRows"),
               ));
           },
           createTable: (e) => {
-            const o = (t, n) =>
-              p(
-                () => [
-                  n(),
-                  n()
-                    .filter((r) => r.getIsVisible())
-                    .map((r) => r.id)
-                    .join("_"),
-                ],
-                (r) =>
-                  r.filter((i) =>
-                    i.getIsVisible == null ? void 0 : i.getIsVisible(),
-                  ),
-                h(e.options, "debugColumns", t),
-              );
-            (e.getVisibleFlatColumns = o("getVisibleFlatColumns", () =>
-              e.getAllFlatColumns(),
-            )),
-              (e.getVisibleLeafColumns = o("getVisibleLeafColumns", () =>
-                e.getAllLeafColumns(),
-              )),
-              (e.getLeftVisibleLeafColumns = o(
-                "getLeftVisibleLeafColumns",
-                () => e.getLeftLeafColumns(),
-              )),
-              (e.getRightVisibleLeafColumns = o(
-                "getRightVisibleLeafColumns",
-                () => e.getRightLeafColumns(),
-              )),
-              (e.getCenterVisibleLeafColumns = o(
-                "getCenterVisibleLeafColumns",
-                () => e.getCenterLeafColumns(),
-              )),
-              (e.setColumnVisibility = (t) =>
-                e.options.onColumnVisibilityChange == null
-                  ? void 0
-                  : e.options.onColumnVisibilityChange(t)),
-              (e.resetColumnVisibility = (t) => {
-                var n;
-                e.setColumnVisibility(
+            (e.setColumnPinning = (t) =>
+              null == e.options.onColumnPinningChange
+                ? void 0
+                : e.options.onColumnPinningChange(t)),
+              (e.resetColumnPinning = (t) => {
+                var n, l;
+                return e.setColumnPinning(
                   t
-                    ? {}
-                    : (n = e.initialState.columnVisibility) != null
+                    ? { left: [], right: [] }
+                    : null !=
+                        (n =
+                          null == (l = e.initialState)
+                            ? void 0
+                            : l.columnPinning)
                       ? n
-                      : {},
+                      : { left: [], right: [] },
                 );
               }),
-              (e.toggleAllColumnsVisible = (t) => {
+              (e.getIsSomeColumnsPinned = (t) => {
                 var n;
-                (t = (n = t) != null ? n : !e.getIsAllColumnsVisible()),
-                  e.setColumnVisibility(
-                    e
-                      .getAllLeafColumns()
-                      .reduce(
-                        (r, i) => ({
-                          ...r,
-                          [i.id]:
-                            t || !(i.getCanHide != null && i.getCanHide()),
+                const l = e.getState().columnPinning;
+                var o, i;
+                return t
+                  ? Boolean(null == (n = l[t]) ? void 0 : n.length)
+                  : Boolean(
+                      (null == (o = l.left) ? void 0 : o.length) ||
+                        (null == (i = l.right) ? void 0 : i.length),
+                    );
+              }),
+              (e.getLeftLeafColumns = s(
+                () => [e.getAllLeafColumns(), e.getState().columnPinning.left],
+                (e, t) =>
+                  (null != t ? t : [])
+                    .map((t) => e.find((e) => e.id === t))
+                    .filter(Boolean),
+                a(e.options, "debugColumns"),
+              )),
+              (e.getRightLeafColumns = s(
+                () => [e.getAllLeafColumns(), e.getState().columnPinning.right],
+                (e, t) =>
+                  (null != t ? t : [])
+                    .map((t) => e.find((e) => e.id === t))
+                    .filter(Boolean),
+                a(e.options, "debugColumns"),
+              )),
+              (e.getCenterLeafColumns = s(
+                () => [
+                  e.getAllLeafColumns(),
+                  e.getState().columnPinning.left,
+                  e.getState().columnPinning.right,
+                ],
+                (e, t, n) => {
+                  const l = [...(null != t ? t : []), ...(null != n ? n : [])];
+                  return e.filter((e) => !l.includes(e.id));
+                },
+                a(e.options, "debugColumns"),
+              ));
+          },
+        },
+        z = { size: 150, minSize: 20, maxSize: Number.MAX_SAFE_INTEGER },
+        A = {
+          getDefaultColumnDef: () => z,
+          getInitialState: (e) => ({
+            columnSizing: {},
+            columnSizingInfo: {
+              startOffset: null,
+              startSize: null,
+              deltaOffset: null,
+              deltaPercentage: null,
+              isResizingColumn: !1,
+              columnSizingStart: [],
+            },
+            ...e,
+          }),
+          getDefaultOptions: (e) => ({
+            columnResizeMode: "onEnd",
+            columnResizeDirection: "ltr",
+            onColumnSizingChange: i("columnSizing", e),
+            onColumnSizingInfoChange: i("columnSizingInfo", e),
+          }),
+          createColumn: (e, t) => {
+            (e.getSize = () => {
+              var n, l, o;
+              const i = t.getState().columnSizing[e.id];
+              return Math.min(
+                Math.max(
+                  null != (n = e.columnDef.minSize) ? n : z.minSize,
+                  null != (l = null != i ? i : e.columnDef.size) ? l : z.size,
+                ),
+                null != (o = e.columnDef.maxSize) ? o : z.maxSize,
+              );
+            }),
+              (e.getStart = s(
+                (e) => [e, D(t, e), t.getState().columnSizing],
+                (t, n) =>
+                  n
+                    .slice(0, e.getIndex(t))
+                    .reduce((e, t) => e + t.getSize(), 0),
+                a(t.options, "debugColumns"),
+              )),
+              (e.getAfter = s(
+                (e) => [e, D(t, e), t.getState().columnSizing],
+                (t, n) =>
+                  n
+                    .slice(e.getIndex(t) + 1)
+                    .reduce((e, t) => e + t.getSize(), 0),
+                a(t.options, "debugColumns"),
+              )),
+              (e.resetSize = () => {
+                t.setColumnSizing((t) => {
+                  let { [e.id]: n, ...l } = t;
+                  return l;
+                });
+              }),
+              (e.getCanResize = () => {
+                var n, l;
+                return (
+                  (null == (n = e.columnDef.enableResizing) || n) &&
+                  (null == (l = t.options.enableColumnResizing) || l)
+                );
+              }),
+              (e.getIsResizing = () =>
+                t.getState().columnSizingInfo.isResizingColumn === e.id);
+          },
+          createHeader: (e, t) => {
+            (e.getSize = () => {
+              let t = 0;
+              const n = (e) => {
+                var l;
+                e.subHeaders.length
+                  ? e.subHeaders.forEach(n)
+                  : (t += null != (l = e.column.getSize()) ? l : 0);
+              };
+              return n(e), t;
+            }),
+              (e.getStart = () => {
+                if (e.index > 0) {
+                  const t = e.headerGroup.headers[e.index - 1];
+                  return t.getStart() + t.getSize();
+                }
+                return 0;
+              }),
+              (e.getResizeHandler = (n) => {
+                const l = t.getColumn(e.column.id),
+                  o = null == l ? void 0 : l.getCanResize();
+                return (i) => {
+                  if (!l || !o) return;
+                  if (
+                    (null == i.persist || i.persist(),
+                    L(i) && i.touches && i.touches.length > 1)
+                  )
+                    return;
+                  const r = e.getSize(),
+                    u = e
+                      ? e
+                          .getLeafHeaders()
+                          .map((e) => [e.column.id, e.column.getSize()])
+                      : [[l.id, l.getSize()]],
+                    s = L(i) ? Math.round(i.touches[0].clientX) : i.clientX,
+                    a = {},
+                    g = (e, n) => {
+                      "number" == typeof n &&
+                        (t.setColumnSizingInfo((e) => {
+                          var l, o;
+                          const i =
+                              "rtl" === t.options.columnResizeDirection
+                                ? -1
+                                : 1,
+                            r =
+                              (n -
+                                (null !=
+                                (l = null == e ? void 0 : e.startOffset)
+                                  ? l
+                                  : 0)) *
+                              i,
+                            u = Math.max(
+                              r /
+                                (null != (o = null == e ? void 0 : e.startSize)
+                                  ? o
+                                  : 0),
+                              -0.999999,
+                            );
+                          return (
+                            e.columnSizingStart.forEach((e) => {
+                              let [t, n] = e;
+                              a[t] =
+                                Math.round(100 * Math.max(n + n * u, 0)) / 100;
+                            }),
+                            { ...e, deltaOffset: r, deltaPercentage: u }
+                          );
                         }),
-                        {},
+                        ("onChange" !== t.options.columnResizeMode &&
+                          "end" !== e) ||
+                          t.setColumnSizing((e) => ({ ...e, ...a })));
+                    },
+                    d = (e) => g("move", e),
+                    c = (e) => {
+                      g("end", e),
+                        t.setColumnSizingInfo((e) => ({
+                          ...e,
+                          isResizingColumn: !1,
+                          startOffset: null,
+                          startSize: null,
+                          deltaOffset: null,
+                          deltaPercentage: null,
+                          columnSizingStart: [],
+                        }));
+                    },
+                    p = n || "undefined" != typeof document ? document : null,
+                    f = {
+                      moveHandler: (e) => d(e.clientX),
+                      upHandler: (e) => {
+                        null == p ||
+                          p.removeEventListener("mousemove", f.moveHandler),
+                          null == p ||
+                            p.removeEventListener("mouseup", f.upHandler),
+                          c(e.clientX);
+                      },
+                    },
+                    m = {
+                      moveHandler: (e) => (
+                        e.cancelable &&
+                          (e.preventDefault(), e.stopPropagation()),
+                        d(e.touches[0].clientX),
+                        !1
                       ),
-                  );
-              }),
-              (e.getIsAllColumnsVisible = () =>
-                !e
-                  .getAllLeafColumns()
-                  .some((t) => !(t.getIsVisible != null && t.getIsVisible()))),
-              (e.getIsSomeColumnsVisible = () =>
-                e
-                  .getAllLeafColumns()
-                  .some((t) =>
-                    t.getIsVisible == null ? void 0 : t.getIsVisible(),
-                  )),
-              (e.getToggleAllColumnsVisibilityHandler = () => (t) => {
+                      upHandler: (e) => {
+                        var t;
+                        null == p ||
+                          p.removeEventListener("touchmove", m.moveHandler),
+                          null == p ||
+                            p.removeEventListener("touchend", m.upHandler),
+                          e.cancelable &&
+                            (e.preventDefault(), e.stopPropagation()),
+                          c(null == (t = e.touches[0]) ? void 0 : t.clientX);
+                      },
+                    },
+                    h = !!(function () {
+                      if ("boolean" == typeof O) return O;
+                      let e = !1;
+                      try {
+                        const t = {
+                            get passive() {
+                              return (e = !0), !1;
+                            },
+                          },
+                          n = () => {};
+                        window.addEventListener("test", n, t),
+                          window.removeEventListener("test", n);
+                      } catch (t) {
+                        e = !1;
+                      }
+                      return (O = e), O;
+                    })() && { passive: !1 };
+                  L(i)
+                    ? (null == p ||
+                        p.addEventListener("touchmove", m.moveHandler, h),
+                      null == p ||
+                        p.addEventListener("touchend", m.upHandler, h))
+                    : (null == p ||
+                        p.addEventListener("mousemove", f.moveHandler, h),
+                      null == p ||
+                        p.addEventListener("mouseup", f.upHandler, h)),
+                    t.setColumnSizingInfo((e) => ({
+                      ...e,
+                      startOffset: s,
+                      startSize: r,
+                      deltaOffset: 0,
+                      deltaPercentage: 0,
+                      columnSizingStart: u,
+                      isResizingColumn: l.id,
+                    }));
+                };
+              });
+          },
+          createTable: (e) => {
+            (e.setColumnSizing = (t) =>
+              null == e.options.onColumnSizingChange
+                ? void 0
+                : e.options.onColumnSizingChange(t)),
+              (e.setColumnSizingInfo = (t) =>
+                null == e.options.onColumnSizingInfoChange
+                  ? void 0
+                  : e.options.onColumnSizingInfoChange(t)),
+              (e.resetColumnSizing = (t) => {
                 var n;
-                e.toggleAllColumnsVisible(
-                  (n = t.target) == null ? void 0 : n.checked,
+                e.setColumnSizing(
+                  t ? {} : null != (n = e.initialState.columnSizing) ? n : {},
                 );
+              }),
+              (e.resetHeaderSizeInfo = (t) => {
+                var n;
+                e.setColumnSizingInfo(
+                  t
+                    ? {
+                        startOffset: null,
+                        startSize: null,
+                        deltaOffset: null,
+                        deltaPercentage: null,
+                        isResizingColumn: !1,
+                        columnSizingStart: [],
+                      }
+                    : null != (n = e.initialState.columnSizingInfo)
+                      ? n
+                      : {
+                          startOffset: null,
+                          startSize: null,
+                          deltaOffset: null,
+                          deltaPercentage: null,
+                          isResizingColumn: !1,
+                          columnSizingStart: [],
+                        },
+                );
+              }),
+              (e.getTotalSize = () => {
+                var t, n;
+                return null !=
+                  (t =
+                    null == (n = e.getHeaderGroups()[0])
+                      ? void 0
+                      : n.headers.reduce((e, t) => e + t.getSize(), 0))
+                  ? t
+                  : 0;
+              }),
+              (e.getLeftTotalSize = () => {
+                var t, n;
+                return null !=
+                  (t =
+                    null == (n = e.getLeftHeaderGroups()[0])
+                      ? void 0
+                      : n.headers.reduce((e, t) => e + t.getSize(), 0))
+                  ? t
+                  : 0;
+              }),
+              (e.getCenterTotalSize = () => {
+                var t, n;
+                return null !=
+                  (t =
+                    null == (n = e.getCenterHeaderGroups()[0])
+                      ? void 0
+                      : n.headers.reduce((e, t) => e + t.getSize(), 0))
+                  ? t
+                  : 0;
+              }),
+              (e.getRightTotalSize = () => {
+                var t, n;
+                return null !=
+                  (t =
+                    null == (n = e.getRightHeaderGroups()[0])
+                      ? void 0
+                      : n.headers.reduce((e, t) => e + t.getSize(), 0))
+                  ? t
+                  : 0;
               });
           },
         };
-        function oe(e, o) {
-          return o
-            ? o === "center"
-              ? e.getCenterVisibleLeafColumns()
-              : o === "left"
-                ? e.getLeftVisibleLeafColumns()
-                : e.getRightVisibleLeafColumns()
-            : e.getVisibleLeafColumns();
+      let O = null;
+      function L(e) {
+        return "touchstart" === e.type;
+      }
+      function D(e, t) {
+        return t
+          ? "center" === t
+            ? e.getCenterVisibleLeafColumns()
+            : "left" === t
+              ? e.getLeftVisibleLeafColumns()
+              : e.getRightVisibleLeafColumns()
+          : e.getVisibleLeafColumns();
+      }
+      const H = {
+          getInitialState: (e) => ({ rowSelection: {}, ...e }),
+          getDefaultOptions: (e) => ({
+            onRowSelectionChange: i("rowSelection", e),
+            enableRowSelection: !0,
+            enableMultiRowSelection: !0,
+            enableSubRowSelection: !0,
+          }),
+          createTable: (e) => {
+            (e.setRowSelection = (t) =>
+              null == e.options.onRowSelectionChange
+                ? void 0
+                : e.options.onRowSelectionChange(t)),
+              (e.resetRowSelection = (t) => {
+                var n;
+                return e.setRowSelection(
+                  t ? {} : null != (n = e.initialState.rowSelection) ? n : {},
+                );
+              }),
+              (e.toggleAllRowsSelected = (t) => {
+                e.setRowSelection((n) => {
+                  t = void 0 !== t ? t : !e.getIsAllRowsSelected();
+                  const l = { ...n },
+                    o = e.getPreGroupedRowModel().flatRows;
+                  return (
+                    t
+                      ? o.forEach((e) => {
+                          e.getCanSelect() && (l[e.id] = !0);
+                        })
+                      : o.forEach((e) => {
+                          delete l[e.id];
+                        }),
+                    l
+                  );
+                });
+              }),
+              (e.toggleAllPageRowsSelected = (t) =>
+                e.setRowSelection((n) => {
+                  const l = void 0 !== t ? t : !e.getIsAllPageRowsSelected(),
+                    o = { ...n };
+                  return (
+                    e.getRowModel().rows.forEach((t) => {
+                      B(o, t.id, l, !0, e);
+                    }),
+                    o
+                  );
+                })),
+              (e.getPreSelectedRowModel = () => e.getCoreRowModel()),
+              (e.getSelectedRowModel = s(
+                () => [e.getState().rowSelection, e.getCoreRowModel()],
+                (t, n) =>
+                  Object.keys(t).length
+                    ? q(e, n)
+                    : { rows: [], flatRows: [], rowsById: {} },
+                a(e.options, "debugTable"),
+              )),
+              (e.getFilteredSelectedRowModel = s(
+                () => [e.getState().rowSelection, e.getFilteredRowModel()],
+                (t, n) =>
+                  Object.keys(t).length
+                    ? q(e, n)
+                    : { rows: [], flatRows: [], rowsById: {} },
+                a(e.options, "debugTable"),
+              )),
+              (e.getGroupedSelectedRowModel = s(
+                () => [e.getState().rowSelection, e.getSortedRowModel()],
+                (t, n) =>
+                  Object.keys(t).length
+                    ? q(e, n)
+                    : { rows: [], flatRows: [], rowsById: {} },
+                a(e.options, "debugTable"),
+              )),
+              (e.getIsAllRowsSelected = () => {
+                const t = e.getFilteredRowModel().flatRows,
+                  { rowSelection: n } = e.getState();
+                let l = Boolean(t.length && Object.keys(n).length);
+                return (
+                  l && t.some((e) => e.getCanSelect() && !n[e.id]) && (l = !1),
+                  l
+                );
+              }),
+              (e.getIsAllPageRowsSelected = () => {
+                const t = e
+                    .getPaginationRowModel()
+                    .flatRows.filter((e) => e.getCanSelect()),
+                  { rowSelection: n } = e.getState();
+                let l = !!t.length;
+                return l && t.some((e) => !n[e.id]) && (l = !1), l;
+              }),
+              (e.getIsSomeRowsSelected = () => {
+                var t;
+                const n = Object.keys(
+                  null != (t = e.getState().rowSelection) ? t : {},
+                ).length;
+                return n > 0 && n < e.getFilteredRowModel().flatRows.length;
+              }),
+              (e.getIsSomePageRowsSelected = () => {
+                const t = e.getPaginationRowModel().flatRows;
+                return (
+                  !e.getIsAllPageRowsSelected() &&
+                  t
+                    .filter((e) => e.getCanSelect())
+                    .some((e) => e.getIsSelected() || e.getIsSomeSelected())
+                );
+              }),
+              (e.getToggleAllRowsSelectedHandler = () => (t) => {
+                e.toggleAllRowsSelected(t.target.checked);
+              }),
+              (e.getToggleAllPageRowsSelectedHandler = () => (t) => {
+                e.toggleAllPageRowsSelected(t.target.checked);
+              });
+          },
+          createRow: (e, t) => {
+            (e.toggleSelected = (n, l) => {
+              const o = e.getIsSelected();
+              t.setRowSelection((i) => {
+                var r;
+                if (((n = void 0 !== n ? n : !o), e.getCanSelect() && o === n))
+                  return i;
+                const u = { ...i };
+                return (
+                  B(
+                    u,
+                    e.id,
+                    n,
+                    null == (r = null == l ? void 0 : l.selectChildren) || r,
+                    t,
+                  ),
+                  u
+                );
+              });
+            }),
+              (e.getIsSelected = () => {
+                const { rowSelection: n } = t.getState();
+                return T(e, n);
+              }),
+              (e.getIsSomeSelected = () => {
+                const { rowSelection: n } = t.getState();
+                return "some" === k(e, n);
+              }),
+              (e.getIsAllSubRowsSelected = () => {
+                const { rowSelection: n } = t.getState();
+                return "all" === k(e, n);
+              }),
+              (e.getCanSelect = () => {
+                var n;
+                return "function" == typeof t.options.enableRowSelection
+                  ? t.options.enableRowSelection(e)
+                  : null == (n = t.options.enableRowSelection) || n;
+              }),
+              (e.getCanSelectSubRows = () => {
+                var n;
+                return "function" == typeof t.options.enableSubRowSelection
+                  ? t.options.enableSubRowSelection(e)
+                  : null == (n = t.options.enableSubRowSelection) || n;
+              }),
+              (e.getCanMultiSelect = () => {
+                var n;
+                return "function" == typeof t.options.enableMultiRowSelection
+                  ? t.options.enableMultiRowSelection(e)
+                  : null == (n = t.options.enableMultiRowSelection) || n;
+              }),
+              (e.getToggleSelectedHandler = () => {
+                const t = e.getCanSelect();
+                return (n) => {
+                  var l;
+                  t &&
+                    e.toggleSelected(
+                      null == (l = n.target) ? void 0 : l.checked,
+                    );
+                };
+              });
+          },
+        },
+        B = (e, t, n, l, o) => {
+          var i;
+          const r = o.getRow(t, !0);
+          n
+            ? (r.getCanMultiSelect() ||
+                Object.keys(e).forEach((t) => delete e[t]),
+              r.getCanSelect() && (e[t] = !0))
+            : delete e[t],
+            l &&
+              null != (i = r.subRows) &&
+              i.length &&
+              r.getCanSelectSubRows() &&
+              r.subRows.forEach((t) => B(e, t.id, n, l, o));
+        };
+      function q(e, t) {
+        const n = e.getState().rowSelection,
+          l = [],
+          o = {},
+          i = function (e, t) {
+            return e
+              .map((e) => {
+                var t;
+                const r = T(e, n);
+                if (
+                  (r && (l.push(e), (o[e.id] = e)),
+                  null != (t = e.subRows) &&
+                    t.length &&
+                    (e = { ...e, subRows: i(e.subRows) }),
+                  r)
+                )
+                  return e;
+              })
+              .filter(Boolean);
+          };
+        return { rows: i(t.rows), flatRows: l, rowsById: o };
+      }
+      function T(e, t) {
+        var n;
+        return null != (n = t[e.id]) && n;
+      }
+      function k(e, t, n) {
+        var l;
+        if (null == (l = e.subRows) || !l.length) return !1;
+        let o = !0,
+          i = !1;
+        return (
+          e.subRows.forEach((e) => {
+            if (
+              (!i || o) &&
+              (e.getCanSelect() && (T(e, t) ? (i = !0) : (o = !1)),
+              e.subRows && e.subRows.length)
+            ) {
+              const n = k(e, t);
+              "all" === n
+                ? (i = !0)
+                : "some" === n
+                  ? ((i = !0), (o = !1))
+                  : (o = !1);
+            }
+          }),
+          o ? "all" : !!i && "some"
+        );
+      }
+      const j = /([0-9]+)/gm;
+      function N(e, t) {
+        return e === t ? 0 : e > t ? 1 : -1;
+      }
+      function U(e) {
+        return "number" == typeof e
+          ? isNaN(e) || e === 1 / 0 || e === -1 / 0
+            ? ""
+            : String(e)
+          : "string" == typeof e
+            ? e
+            : "";
+      }
+      function $(e, t) {
+        const n = e.split(j).filter(Boolean),
+          l = t.split(j).filter(Boolean);
+        for (; n.length && l.length; ) {
+          const e = n.shift(),
+            t = l.shift(),
+            o = parseInt(e, 10),
+            i = parseInt(t, 10),
+            r = [o, i].sort();
+          if (isNaN(r[0])) {
+            if (e > t) return 1;
+            if (t > e) return -1;
+          } else {
+            if (isNaN(r[1])) return isNaN(o) ? -1 : 1;
+            if (o > i) return 1;
+            if (i > o) return -1;
+          }
         }
-        const ze = {
+        return n.length - l.length;
+      }
+      const Q = {
+          alphanumeric: (e, t, n) =>
+            $(U(e.getValue(n)).toLowerCase(), U(t.getValue(n)).toLowerCase()),
+          alphanumericCaseSensitive: (e, t, n) =>
+            $(U(e.getValue(n)), U(t.getValue(n))),
+          text: (e, t, n) =>
+            N(U(e.getValue(n)).toLowerCase(), U(t.getValue(n)).toLowerCase()),
+          textCaseSensitive: (e, t, n) => N(U(e.getValue(n)), U(t.getValue(n))),
+          datetime: (e, t, n) => {
+            const l = e.getValue(n),
+              o = t.getValue(n);
+            return l > o ? 1 : l < o ? -1 : 0;
+          },
+          basic: (e, t, n) => N(e.getValue(n), t.getValue(n)),
+        },
+        X = [
+          c,
+          {
+            getInitialState: (e) => ({ columnVisibility: {}, ...e }),
+            getDefaultOptions: (e) => ({
+              onColumnVisibilityChange: i("columnVisibility", e),
+            }),
+            createColumn: (e, t) => {
+              (e.toggleVisibility = (n) => {
+                e.getCanHide() &&
+                  t.setColumnVisibility((t) => ({
+                    ...t,
+                    [e.id]: null != n ? n : !e.getIsVisible(),
+                  }));
+              }),
+                (e.getIsVisible = () => {
+                  var n, l;
+                  const o = e.columns;
+                  return (
+                    null ==
+                      (n = o.length
+                        ? o.some((e) => e.getIsVisible())
+                        : null == (l = t.getState().columnVisibility)
+                          ? void 0
+                          : l[e.id]) || n
+                  );
+                }),
+                (e.getCanHide = () => {
+                  var n, l;
+                  return (
+                    (null == (n = e.columnDef.enableHiding) || n) &&
+                    (null == (l = t.options.enableHiding) || l)
+                  );
+                }),
+                (e.getToggleVisibilityHandler = () => (t) => {
+                  null == e.toggleVisibility ||
+                    e.toggleVisibility(t.target.checked);
+                });
+            },
+            createRow: (e, t) => {
+              (e._getAllVisibleCells = s(
+                () => [e.getAllCells(), t.getState().columnVisibility],
+                (e) => e.filter((e) => e.column.getIsVisible()),
+                a(t.options, "debugRows"),
+              )),
+                (e.getVisibleCells = s(
+                  () => [
+                    e.getLeftVisibleCells(),
+                    e.getCenterVisibleCells(),
+                    e.getRightVisibleCells(),
+                  ],
+                  (e, t, n) => [...e, ...t, ...n],
+                  a(t.options, "debugRows"),
+                ));
+            },
+            createTable: (e) => {
+              const t = (t, n) =>
+                s(
+                  () => [
+                    n(),
+                    n()
+                      .filter((e) => e.getIsVisible())
+                      .map((e) => e.id)
+                      .join("_"),
+                  ],
+                  (e) =>
+                    e.filter((e) =>
+                      null == e.getIsVisible ? void 0 : e.getIsVisible(),
+                    ),
+                  a(e.options, "debugColumns"),
+                );
+              (e.getVisibleFlatColumns = t(0, () => e.getAllFlatColumns())),
+                (e.getVisibleLeafColumns = t(0, () => e.getAllLeafColumns())),
+                (e.getLeftVisibleLeafColumns = t(0, () =>
+                  e.getLeftLeafColumns(),
+                )),
+                (e.getRightVisibleLeafColumns = t(0, () =>
+                  e.getRightLeafColumns(),
+                )),
+                (e.getCenterVisibleLeafColumns = t(0, () =>
+                  e.getCenterLeafColumns(),
+                )),
+                (e.setColumnVisibility = (t) =>
+                  null == e.options.onColumnVisibilityChange
+                    ? void 0
+                    : e.options.onColumnVisibilityChange(t)),
+                (e.resetColumnVisibility = (t) => {
+                  var n;
+                  e.setColumnVisibility(
+                    t
+                      ? {}
+                      : null != (n = e.initialState.columnVisibility)
+                        ? n
+                        : {},
+                  );
+                }),
+                (e.toggleAllColumnsVisible = (t) => {
+                  var n;
+                  (t = null != (n = t) ? n : !e.getIsAllColumnsVisible()),
+                    e.setColumnVisibility(
+                      e
+                        .getAllLeafColumns()
+                        .reduce(
+                          (e, n) => ({
+                            ...e,
+                            [n.id]:
+                              t || !(null != n.getCanHide && n.getCanHide()),
+                          }),
+                          {},
+                        ),
+                    );
+                }),
+                (e.getIsAllColumnsVisible = () =>
+                  !e
+                    .getAllLeafColumns()
+                    .some(
+                      (e) => !(null != e.getIsVisible && e.getIsVisible()),
+                    )),
+                (e.getIsSomeColumnsVisible = () =>
+                  e
+                    .getAllLeafColumns()
+                    .some((e) =>
+                      null == e.getIsVisible ? void 0 : e.getIsVisible(),
+                    )),
+                (e.getToggleAllColumnsVisibilityHandler = () => (t) => {
+                  var n;
+                  e.toggleAllColumnsVisible(
+                    null == (n = t.target) ? void 0 : n.checked,
+                  );
+                });
+            },
+          },
+          E,
+          G,
+          m,
+          I,
+          {
             createTable: (e) => {
               (e._getGlobalFacetedRowModel =
                 e.options.getFacetedRowModel &&
@@ -1768,148 +2049,345 @@
                 });
             },
           },
-          Be = {
+          {
             getInitialState: (e) => ({ globalFilter: void 0, ...e }),
             getDefaultOptions: (e) => ({
-              onGlobalFilterChange: G("globalFilter", e),
+              onGlobalFilterChange: i("globalFilter", e),
               globalFilterFn: "auto",
-              getColumnCanGlobalFilter: (o) => {
-                var t;
-                const n =
-                  (t = e.getCoreRowModel().flatRows[0]) == null ||
-                  (t = t._getAllCellsByColumnId()[o.id]) == null
+              getColumnCanGlobalFilter: (t) => {
+                var n;
+                const l =
+                  null == (n = e.getCoreRowModel().flatRows[0]) ||
+                  null == (n = n._getAllCellsByColumnId()[t.id])
                     ? void 0
-                    : t.getValue();
-                return typeof n == "string" || typeof n == "number";
+                    : n.getValue();
+                return "string" == typeof l || "number" == typeof l;
               },
             }),
-            createColumn: (e, o) => {
+            createColumn: (e, t) => {
               e.getCanGlobalFilter = () => {
-                var t, n, r, i;
+                var n, l, o, i;
                 return (
-                  ((t = e.columnDef.enableGlobalFilter) != null ? t : !0) &&
-                  ((n = o.options.enableGlobalFilter) != null ? n : !0) &&
-                  ((r = o.options.enableFilters) != null ? r : !0) &&
-                  ((i =
-                    o.options.getColumnCanGlobalFilter == null
-                      ? void 0
-                      : o.options.getColumnCanGlobalFilter(e)) != null
-                    ? i
-                    : !0) &&
+                  (null == (n = e.columnDef.enableGlobalFilter) || n) &&
+                  (null == (l = t.options.enableGlobalFilter) || l) &&
+                  (null == (o = t.options.enableFilters) || o) &&
+                  (null ==
+                    (i =
+                      null == t.options.getColumnCanGlobalFilter
+                        ? void 0
+                        : t.options.getColumnCanGlobalFilter(e)) ||
+                    i) &&
                   !!e.accessorFn
                 );
               };
             },
             createTable: (e) => {
-              (e.getGlobalAutoFilterFn = () => U.includesString),
+              (e.getGlobalAutoFilterFn = () => V.includesString),
                 (e.getGlobalFilterFn = () => {
-                  var o, t;
-                  const { globalFilterFn: n } = e.options;
-                  return N(n)
-                    ? n
-                    : n === "auto"
+                  var t, n;
+                  const { globalFilterFn: l } = e.options;
+                  return r(l)
+                    ? l
+                    : "auto" === l
                       ? e.getGlobalAutoFilterFn()
-                      : (o =
-                            (t = e.options.filterFns) == null
-                              ? void 0
-                              : t[n]) != null
-                        ? o
-                        : U[n];
+                      : null !=
+                          (t =
+                            null == (n = e.options.filterFns) ? void 0 : n[l])
+                        ? t
+                        : V[l];
                 }),
-                (e.setGlobalFilter = (o) => {
-                  e.options.onGlobalFilterChange == null ||
-                    e.options.onGlobalFilterChange(o);
+                (e.setGlobalFilter = (t) => {
+                  null == e.options.onGlobalFilterChange ||
+                    e.options.onGlobalFilterChange(t);
                 }),
-                (e.resetGlobalFilter = (o) => {
-                  e.setGlobalFilter(o ? void 0 : e.initialState.globalFilter);
+                (e.resetGlobalFilter = (t) => {
+                  e.setGlobalFilter(t ? void 0 : e.initialState.globalFilter);
                 });
             },
           },
-          Te = {
+          {
+            getInitialState: (e) => ({ sorting: [], ...e }),
+            getDefaultColumnDef: () => ({
+              sortingFn: "auto",
+              sortUndefined: 1,
+            }),
+            getDefaultOptions: (e) => ({
+              onSortingChange: i("sorting", e),
+              isMultiSortEvent: (e) => e.shiftKey,
+            }),
+            createColumn: (e, t) => {
+              (e.getAutoSortingFn = () => {
+                const n = t.getFilteredRowModel().flatRows.slice(10);
+                let l = !1;
+                for (const t of n) {
+                  const n = null == t ? void 0 : t.getValue(e.id);
+                  if ("[object Date]" === Object.prototype.toString.call(n))
+                    return Q.datetime;
+                  if ("string" == typeof n && ((l = !0), n.split(j).length > 1))
+                    return Q.alphanumeric;
+                }
+                return l ? Q.text : Q.basic;
+              }),
+                (e.getAutoSortDir = () => {
+                  const n = t.getFilteredRowModel().flatRows[0];
+                  return "string" ==
+                    typeof (null == n ? void 0 : n.getValue(e.id))
+                    ? "asc"
+                    : "desc";
+                }),
+                (e.getSortingFn = () => {
+                  var n, l;
+                  if (!e) throw new Error();
+                  return r(e.columnDef.sortingFn)
+                    ? e.columnDef.sortingFn
+                    : "auto" === e.columnDef.sortingFn
+                      ? e.getAutoSortingFn()
+                      : null !=
+                          (n =
+                            null == (l = t.options.sortingFns)
+                              ? void 0
+                              : l[e.columnDef.sortingFn])
+                        ? n
+                        : Q[e.columnDef.sortingFn];
+                }),
+                (e.toggleSorting = (n, l) => {
+                  const o = e.getNextSortingOrder(),
+                    i = null != n;
+                  t.setSorting((r) => {
+                    const u = null == r ? void 0 : r.find((t) => t.id === e.id),
+                      s =
+                        null == r ? void 0 : r.findIndex((t) => t.id === e.id);
+                    let a,
+                      g = [],
+                      d = i ? n : "desc" === o;
+                    var c;
+                    ((a =
+                      null != r && r.length && e.getCanMultiSort() && l
+                        ? u
+                          ? "toggle"
+                          : "add"
+                        : null != r && r.length && s !== r.length - 1
+                          ? "replace"
+                          : u
+                            ? "toggle"
+                            : "replace"),
+                    "toggle" === a && (i || o || (a = "remove")),
+                    "add" === a)
+                      ? ((g = [...r, { id: e.id, desc: d }]),
+                        g.splice(
+                          0,
+                          g.length -
+                            (null != (c = t.options.maxMultiSortColCount)
+                              ? c
+                              : Number.MAX_SAFE_INTEGER),
+                        ))
+                      : (g =
+                          "toggle" === a
+                            ? r.map((t) =>
+                                t.id === e.id ? { ...t, desc: d } : t,
+                              )
+                            : "remove" === a
+                              ? r.filter((t) => t.id !== e.id)
+                              : [{ id: e.id, desc: d }]);
+                    return g;
+                  });
+                }),
+                (e.getFirstSortDir = () => {
+                  var n, l;
+                  return (
+                    null !=
+                    (n =
+                      null != (l = e.columnDef.sortDescFirst)
+                        ? l
+                        : t.options.sortDescFirst)
+                      ? n
+                      : "desc" === e.getAutoSortDir()
+                  )
+                    ? "desc"
+                    : "asc";
+                }),
+                (e.getNextSortingOrder = (n) => {
+                  var l, o;
+                  const i = e.getFirstSortDir(),
+                    r = e.getIsSorted();
+                  return r
+                    ? !!(
+                        r === i ||
+                        (null != (l = t.options.enableSortingRemoval) && !l) ||
+                        (n && null != (o = t.options.enableMultiRemove) && !o)
+                      ) && ("desc" === r ? "asc" : "desc")
+                    : i;
+                }),
+                (e.getCanSort = () => {
+                  var n, l;
+                  return (
+                    (null == (n = e.columnDef.enableSorting) || n) &&
+                    (null == (l = t.options.enableSorting) || l) &&
+                    !!e.accessorFn
+                  );
+                }),
+                (e.getCanMultiSort = () => {
+                  var n, l;
+                  return null !=
+                    (n =
+                      null != (l = e.columnDef.enableMultiSort)
+                        ? l
+                        : t.options.enableMultiSort)
+                    ? n
+                    : !!e.accessorFn;
+                }),
+                (e.getIsSorted = () => {
+                  var n;
+                  const l =
+                    null == (n = t.getState().sorting)
+                      ? void 0
+                      : n.find((t) => t.id === e.id);
+                  return !!l && (l.desc ? "desc" : "asc");
+                }),
+                (e.getSortIndex = () => {
+                  var n, l;
+                  return null !=
+                    (n =
+                      null == (l = t.getState().sorting)
+                        ? void 0
+                        : l.findIndex((t) => t.id === e.id))
+                    ? n
+                    : -1;
+                }),
+                (e.clearSorting = () => {
+                  t.setSorting((t) =>
+                    null != t && t.length ? t.filter((t) => t.id !== e.id) : [],
+                  );
+                }),
+                (e.getToggleSortingHandler = () => {
+                  const n = e.getCanSort();
+                  return (l) => {
+                    n &&
+                      (null == l.persist || l.persist(),
+                      null == e.toggleSorting ||
+                        e.toggleSorting(
+                          void 0,
+                          !!e.getCanMultiSort() &&
+                            (null == t.options.isMultiSortEvent
+                              ? void 0
+                              : t.options.isMultiSortEvent(l)),
+                        ));
+                  };
+                });
+            },
+            createTable: (e) => {
+              (e.setSorting = (t) =>
+                null == e.options.onSortingChange
+                  ? void 0
+                  : e.options.onSortingChange(t)),
+                (e.resetSorting = (t) => {
+                  var n, l;
+                  e.setSorting(
+                    t
+                      ? []
+                      : null !=
+                          (n =
+                            null == (l = e.initialState) ? void 0 : l.sorting)
+                        ? n
+                        : [],
+                  );
+                }),
+                (e.getPreSortedRowModel = () => e.getGroupedRowModel()),
+                (e.getSortedRowModel = () => (
+                  !e._getSortedRowModel &&
+                    e.options.getSortedRowModel &&
+                    (e._getSortedRowModel = e.options.getSortedRowModel(e)),
+                  e.options.manualSorting || !e._getSortedRowModel
+                    ? e.getPreSortedRowModel()
+                    : e._getSortedRowModel()
+                ));
+            },
+          },
+          y,
+          {
             getInitialState: (e) => ({ expanded: {}, ...e }),
             getDefaultOptions: (e) => ({
-              onExpandedChange: G("expanded", e),
+              onExpandedChange: i("expanded", e),
               paginateExpandedRows: !0,
             }),
             createTable: (e) => {
-              let o = !1,
-                t = !1;
+              let t = !1,
+                n = !1;
               (e._autoResetExpanded = () => {
-                var n, r;
-                if (!o) {
+                var l, o;
+                if (t) {
+                  if (
+                    null !=
+                    (l =
+                      null != (o = e.options.autoResetAll)
+                        ? o
+                        : e.options.autoResetExpanded)
+                      ? l
+                      : !e.options.manualExpanding
+                  ) {
+                    if (n) return;
+                    (n = !0),
+                      e._queue(() => {
+                        e.resetExpanded(), (n = !1);
+                      });
+                  }
+                } else
                   e._queue(() => {
-                    o = !0;
+                    t = !0;
                   });
-                  return;
-                }
-                if (
-                  (n =
-                    (r = e.options.autoResetAll) != null
-                      ? r
-                      : e.options.autoResetExpanded) != null
-                    ? n
-                    : !e.options.manualExpanding
-                ) {
-                  if (t) return;
-                  (t = !0),
-                    e._queue(() => {
-                      e.resetExpanded(), (t = !1);
-                    });
-                }
               }),
-                (e.setExpanded = (n) =>
-                  e.options.onExpandedChange == null
+                (e.setExpanded = (t) =>
+                  null == e.options.onExpandedChange
                     ? void 0
-                    : e.options.onExpandedChange(n)),
-                (e.toggleAllRowsExpanded = (n) => {
-                  (n ?? !e.getIsAllRowsExpanded())
+                    : e.options.onExpandedChange(t)),
+                (e.toggleAllRowsExpanded = (t) => {
+                  (null != t ? t : !e.getIsAllRowsExpanded())
                     ? e.setExpanded(!0)
                     : e.setExpanded({});
                 }),
-                (e.resetExpanded = (n) => {
-                  var r, i;
+                (e.resetExpanded = (t) => {
+                  var n, l;
                   e.setExpanded(
-                    n
+                    t
                       ? {}
-                      : (r =
-                            (i = e.initialState) == null
-                              ? void 0
-                              : i.expanded) != null
-                        ? r
+                      : null !=
+                          (n =
+                            null == (l = e.initialState) ? void 0 : l.expanded)
+                        ? n
                         : {},
                   );
                 }),
                 (e.getCanSomeRowsExpand = () =>
                   e
                     .getPrePaginationRowModel()
-                    .flatRows.some((n) => n.getCanExpand())),
-                (e.getToggleAllRowsExpandedHandler = () => (n) => {
-                  n.persist == null || n.persist(), e.toggleAllRowsExpanded();
+                    .flatRows.some((e) => e.getCanExpand())),
+                (e.getToggleAllRowsExpandedHandler = () => (t) => {
+                  null == t.persist || t.persist(), e.toggleAllRowsExpanded();
                 }),
                 (e.getIsSomeRowsExpanded = () => {
-                  const n = e.getState().expanded;
-                  return n === !0 || Object.values(n).some(Boolean);
+                  const t = e.getState().expanded;
+                  return !0 === t || Object.values(t).some(Boolean);
                 }),
                 (e.getIsAllRowsExpanded = () => {
-                  const n = e.getState().expanded;
-                  return typeof n == "boolean"
-                    ? n === !0
-                    : !(
-                        !Object.keys(n).length ||
-                        e.getRowModel().flatRows.some((r) => !r.getIsExpanded())
-                      );
+                  const t = e.getState().expanded;
+                  return "boolean" == typeof t
+                    ? !0 === t
+                    : !!Object.keys(t).length &&
+                        !e
+                          .getRowModel()
+                          .flatRows.some((e) => !e.getIsExpanded());
                 }),
                 (e.getExpandedDepth = () => {
-                  let n = 0;
+                  let t = 0;
                   return (
-                    (e.getState().expanded === !0
+                    (!0 === e.getState().expanded
                       ? Object.keys(e.getRowModel().rowsById)
                       : Object.keys(e.getState().expanded)
-                    ).forEach((i) => {
-                      const l = i.split(".");
-                      n = Math.max(n, l.length);
+                    ).forEach((e) => {
+                      const n = e.split(".");
+                      t = Math.max(t, n.length);
                     }),
-                    n
+                    t
                   );
                 }),
                 (e.getPreExpandedRowModel = () => e.getSortedRowModel()),
@@ -1922,55 +2400,57 @@
                     : e._getExpandedRowModel()
                 ));
             },
-            createRow: (e, o) => {
-              (e.toggleExpanded = (t) => {
-                o.setExpanded((n) => {
-                  var r;
-                  const i = n === !0 ? !0 : !!(n != null && n[e.id]);
-                  let l = {};
+            createRow: (e, t) => {
+              (e.toggleExpanded = (n) => {
+                t.setExpanded((l) => {
+                  var o;
+                  const i = !0 === l || !(null == l || !l[e.id]);
+                  let r = {};
                   if (
-                    (n === !0
-                      ? Object.keys(o.getRowModel().rowsById).forEach((s) => {
-                          l[s] = !0;
+                    (!0 === l
+                      ? Object.keys(t.getRowModel().rowsById).forEach((e) => {
+                          r[e] = !0;
                         })
-                      : (l = n),
-                    (t = (r = t) != null ? r : !i),
-                    !i && t)
+                      : (r = l),
+                    (n = null != (o = n) ? o : !i),
+                    !i && n)
                   )
-                    return { ...l, [e.id]: !0 };
-                  if (i && !t) {
-                    const { [e.id]: s, ...a } = l;
-                    return a;
+                    return { ...r, [e.id]: !0 };
+                  if (i && !n) {
+                    const { [e.id]: t, ...n } = r;
+                    return n;
                   }
-                  return n;
+                  return l;
                 });
               }),
                 (e.getIsExpanded = () => {
-                  var t;
-                  const n = o.getState().expanded;
-                  return !!((t =
-                    o.options.getIsRowExpanded == null
+                  var n;
+                  const l = t.getState().expanded;
+                  return !!(null !=
+                  (n =
+                    null == t.options.getIsRowExpanded
                       ? void 0
-                      : o.options.getIsRowExpanded(e)) != null
-                    ? t
-                    : n === !0 || n?.[e.id]);
+                      : t.options.getIsRowExpanded(e))
+                    ? n
+                    : !0 === l || (null == l ? void 0 : l[e.id]));
                 }),
                 (e.getCanExpand = () => {
-                  var t, n, r;
-                  return (t =
-                    o.options.getRowCanExpand == null
-                      ? void 0
-                      : o.options.getRowCanExpand(e)) != null
-                    ? t
-                    : ((n = o.options.enableExpanding) != null ? n : !0) &&
-                        !!((r = e.subRows) != null && r.length);
+                  var n, l, o;
+                  return null !=
+                    (n =
+                      null == t.options.getRowCanExpand
+                        ? void 0
+                        : t.options.getRowCanExpand(e))
+                    ? n
+                    : (null == (l = t.options.enableExpanding) || l) &&
+                        !(null == (o = e.subRows) || !o.length);
                 }),
                 (e.getIsAllParentsExpanded = () => {
-                  let t = !0,
-                    n = e;
-                  for (; t && n.parentId; )
-                    (n = o.getRow(n.parentId, !0)), (t = n.getIsExpanded());
-                  return t;
+                  let n = !0,
+                    l = e;
+                  for (; n && l.parentId; )
+                    (l = t.getRow(l.parentId, !0)), (n = l.getIsExpanded());
+                  return n;
                 }),
                 (e.getToggleExpandedHandler = () => {
                   const t = e.getCanExpand();
@@ -1980,139 +2460,140 @@
                 });
             },
           },
-          Se = 0,
-          he = 10,
-          Re = () => ({ pageIndex: Se, pageSize: he }),
-          qe = {
+          {
             getInitialState: (e) => ({
               ...e,
-              pagination: { ...Re(), ...e?.pagination },
+              pagination: {
+                pageIndex: 0,
+                pageSize: 10,
+                ...(null == e ? void 0 : e.pagination),
+              },
             }),
             getDefaultOptions: (e) => ({
-              onPaginationChange: G("pagination", e),
+              onPaginationChange: i("pagination", e),
             }),
             createTable: (e) => {
-              let o = !1,
-                t = !1;
+              let t = !1,
+                n = !1;
               (e._autoResetPageIndex = () => {
-                var n, r;
-                if (!o) {
+                var l, o;
+                if (t) {
+                  if (
+                    null !=
+                    (l =
+                      null != (o = e.options.autoResetAll)
+                        ? o
+                        : e.options.autoResetPageIndex)
+                      ? l
+                      : !e.options.manualPagination
+                  ) {
+                    if (n) return;
+                    (n = !0),
+                      e._queue(() => {
+                        e.resetPageIndex(), (n = !1);
+                      });
+                  }
+                } else
                   e._queue(() => {
-                    o = !0;
+                    t = !0;
                   });
-                  return;
-                }
-                if (
-                  (n =
-                    (r = e.options.autoResetAll) != null
-                      ? r
-                      : e.options.autoResetPageIndex) != null
-                    ? n
-                    : !e.options.manualPagination
-                ) {
-                  if (t) return;
-                  (t = !0),
-                    e._queue(() => {
-                      e.resetPageIndex(), (t = !1);
-                    });
-                }
               }),
-                (e.setPagination = (n) => {
-                  const r = (i) => A(n, i);
-                  return e.options.onPaginationChange == null
+                (e.setPagination = (t) =>
+                  null == e.options.onPaginationChange
                     ? void 0
-                    : e.options.onPaginationChange(r);
-                }),
-                (e.resetPagination = (n) => {
-                  var r;
+                    : e.options.onPaginationChange((e) => o(t, e))),
+                (e.resetPagination = (t) => {
+                  var n;
                   e.setPagination(
-                    n
-                      ? Re()
-                      : (r = e.initialState.pagination) != null
-                        ? r
-                        : Re(),
+                    t
+                      ? { pageIndex: 0, pageSize: 10 }
+                      : null != (n = e.initialState.pagination)
+                        ? n
+                        : { pageIndex: 0, pageSize: 10 },
                   );
                 }),
-                (e.setPageIndex = (n) => {
-                  e.setPagination((r) => {
-                    let i = A(n, r.pageIndex);
-                    const l =
-                      typeof e.options.pageCount > "u" ||
-                      e.options.pageCount === -1
+                (e.setPageIndex = (t) => {
+                  e.setPagination((n) => {
+                    let l = o(t, n.pageIndex);
+                    const i =
+                      void 0 === e.options.pageCount ||
+                      -1 === e.options.pageCount
                         ? Number.MAX_SAFE_INTEGER
                         : e.options.pageCount - 1;
                     return (
-                      (i = Math.max(0, Math.min(i, l))), { ...r, pageIndex: i }
+                      (l = Math.max(0, Math.min(l, i))), { ...n, pageIndex: l }
                     );
                   });
                 }),
-                (e.resetPageIndex = (n) => {
-                  var r, i;
+                (e.resetPageIndex = (t) => {
+                  var n, l;
                   e.setPageIndex(
-                    n
-                      ? Se
-                      : (r =
-                            (i = e.initialState) == null ||
-                            (i = i.pagination) == null
+                    t
+                      ? 0
+                      : null !=
+                          (n =
+                            null == (l = e.initialState) ||
+                            null == (l = l.pagination)
                               ? void 0
-                              : i.pageIndex) != null
-                        ? r
-                        : Se,
+                              : l.pageIndex)
+                        ? n
+                        : 0,
                   );
                 }),
-                (e.resetPageSize = (n) => {
-                  var r, i;
+                (e.resetPageSize = (t) => {
+                  var n, l;
                   e.setPageSize(
-                    n
-                      ? he
-                      : (r =
-                            (i = e.initialState) == null ||
-                            (i = i.pagination) == null
+                    t
+                      ? 10
+                      : null !=
+                          (n =
+                            null == (l = e.initialState) ||
+                            null == (l = l.pagination)
                               ? void 0
-                              : i.pageSize) != null
-                        ? r
-                        : he,
+                              : l.pageSize)
+                        ? n
+                        : 10,
                   );
                 }),
-                (e.setPageSize = (n) => {
-                  e.setPagination((r) => {
-                    const i = Math.max(1, A(n, r.pageSize)),
-                      l = r.pageSize * r.pageIndex,
-                      s = Math.floor(l / i);
-                    return { ...r, pageIndex: s, pageSize: i };
+                (e.setPageSize = (t) => {
+                  e.setPagination((e) => {
+                    const n = Math.max(1, o(t, e.pageSize)),
+                      l = e.pageSize * e.pageIndex,
+                      i = Math.floor(l / n);
+                    return { ...e, pageIndex: i, pageSize: n };
                   });
                 }),
-                (e.setPageCount = (n) =>
-                  e.setPagination((r) => {
-                    var i;
-                    let l = A(n, (i = e.options.pageCount) != null ? i : -1);
+                (e.setPageCount = (t) =>
+                  e.setPagination((n) => {
+                    var l;
+                    let i = o(t, null != (l = e.options.pageCount) ? l : -1);
                     return (
-                      typeof l == "number" && (l = Math.max(-1, l)),
-                      { ...r, pageCount: l }
+                      "number" == typeof i && (i = Math.max(-1, i)),
+                      { ...n, pageCount: i }
                     );
                   })),
-                (e.getPageOptions = p(
+                (e.getPageOptions = s(
                   () => [e.getPageCount()],
-                  (n) => {
-                    let r = [];
+                  (e) => {
+                    let t = [];
                     return (
-                      n &&
-                        n > 0 &&
-                        (r = [...new Array(n)].fill(null).map((i, l) => l)),
-                      r
+                      e &&
+                        e > 0 &&
+                        (t = [...new Array(e)].fill(null).map((e, t) => t)),
+                      t
                     );
                   },
-                  h(e.options, "debugTable", "getPageOptions"),
+                  a(e.options, "debugTable"),
                 )),
                 (e.getCanPreviousPage = () =>
                   e.getState().pagination.pageIndex > 0),
                 (e.getCanNextPage = () => {
-                  const { pageIndex: n } = e.getState().pagination,
-                    r = e.getPageCount();
-                  return r === -1 ? !0 : r === 0 ? !1 : n < r - 1;
+                  const { pageIndex: t } = e.getState().pagination,
+                    n = e.getPageCount();
+                  return -1 === n || (0 !== n && t < n - 1);
                 }),
-                (e.previousPage = () => e.setPageIndex((n) => n - 1)),
-                (e.nextPage = () => e.setPageIndex((n) => n + 1)),
+                (e.previousPage = () => e.setPageIndex((e) => e - 1)),
+                (e.nextPage = () => e.setPageIndex((e) => e + 1)),
                 (e.firstPage = () => e.setPageIndex(0)),
                 (e.lastPage = () => e.setPageIndex(e.getPageCount() - 1)),
                 (e.getPrePaginationRowModel = () => e.getExpandedRowModel()),
@@ -2126,1599 +2607,1020 @@
                     : e._getPaginationRowModel()
                 )),
                 (e.getPageCount = () => {
-                  var n;
-                  return (n = e.options.pageCount) != null
-                    ? n
+                  var t;
+                  return null != (t = e.options.pageCount)
+                    ? t
                     : Math.ceil(
                         e.getRowCount() / e.getState().pagination.pageSize,
                       );
                 }),
                 (e.getRowCount = () => {
-                  var n;
-                  return (n = e.options.rowCount) != null
-                    ? n
+                  var t;
+                  return null != (t = e.options.rowCount)
+                    ? t
                     : e.getPrePaginationRowModel().rows.length;
                 });
             },
           },
-          Ce = () => ({ top: [], bottom: [] }),
-          Ue = {
-            getInitialState: (e) => ({ rowPinning: Ce(), ...e }),
-            getDefaultOptions: (e) => ({
-              onRowPinningChange: G("rowPinning", e),
+          {
+            getInitialState: (e) => ({
+              rowPinning: { top: [], bottom: [] },
+              ...e,
             }),
-            createRow: (e, o) => {
-              (e.pin = (t, n, r) => {
-                const i = n
-                    ? e.getLeafRows().map((a) => {
-                        let { id: g } = a;
-                        return g;
+            getDefaultOptions: (e) => ({
+              onRowPinningChange: i("rowPinning", e),
+            }),
+            createRow: (e, t) => {
+              (e.pin = (n, l, o) => {
+                const i = l
+                    ? e.getLeafRows().map((e) => {
+                        let { id: t } = e;
+                        return t;
                       })
                     : [],
-                  l = r
-                    ? e.getParentRows().map((a) => {
-                        let { id: g } = a;
-                        return g;
+                  r = o
+                    ? e.getParentRows().map((e) => {
+                        let { id: t } = e;
+                        return t;
                       })
                     : [],
-                  s = new Set([...l, e.id, ...i]);
-                o.setRowPinning((a) => {
-                  var g, c;
-                  if (t === "bottom") {
-                    var S, d;
-                    return {
-                      top: ((S = a?.top) != null ? S : []).filter(
-                        (m) => !(s != null && s.has(m)),
-                      ),
-                      bottom: [
-                        ...((d = a?.bottom) != null ? d : []).filter(
-                          (m) => !(s != null && s.has(m)),
-                        ),
-                        ...Array.from(s),
-                      ],
-                    };
-                  }
-                  if (t === "top") {
-                    var u, f;
-                    return {
-                      top: [
-                        ...((u = a?.top) != null ? u : []).filter(
-                          (m) => !(s != null && s.has(m)),
-                        ),
-                        ...Array.from(s),
-                      ],
-                      bottom: ((f = a?.bottom) != null ? f : []).filter(
-                        (m) => !(s != null && s.has(m)),
-                      ),
-                    };
-                  }
-                  return {
-                    top: ((g = a?.top) != null ? g : []).filter(
-                      (m) => !(s != null && s.has(m)),
-                    ),
-                    bottom: ((c = a?.bottom) != null ? c : []).filter(
-                      (m) => !(s != null && s.has(m)),
-                    ),
-                  };
+                  u = new Set([...r, e.id, ...i]);
+                t.setRowPinning((e) => {
+                  var t, l, o, i, r, s;
+                  return "bottom" === n
+                    ? {
+                        top: (null != (o = null == e ? void 0 : e.top)
+                          ? o
+                          : []
+                        ).filter((e) => !(null != u && u.has(e))),
+                        bottom: [
+                          ...(null != (i = null == e ? void 0 : e.bottom)
+                            ? i
+                            : []
+                          ).filter((e) => !(null != u && u.has(e))),
+                          ...Array.from(u),
+                        ],
+                      }
+                    : "top" === n
+                      ? {
+                          top: [
+                            ...(null != (r = null == e ? void 0 : e.top)
+                              ? r
+                              : []
+                            ).filter((e) => !(null != u && u.has(e))),
+                            ...Array.from(u),
+                          ],
+                          bottom: (null != (s = null == e ? void 0 : e.bottom)
+                            ? s
+                            : []
+                          ).filter((e) => !(null != u && u.has(e))),
+                        }
+                      : {
+                          top: (null != (t = null == e ? void 0 : e.top)
+                            ? t
+                            : []
+                          ).filter((e) => !(null != u && u.has(e))),
+                          bottom: (null != (l = null == e ? void 0 : e.bottom)
+                            ? l
+                            : []
+                          ).filter((e) => !(null != u && u.has(e))),
+                        };
                 });
               }),
                 (e.getCanPin = () => {
-                  var t;
-                  const { enableRowPinning: n, enablePinning: r } = o.options;
-                  return typeof n == "function"
-                    ? n(e)
-                    : (t = n ?? r) != null
-                      ? t
-                      : !0;
+                  var n;
+                  const { enableRowPinning: l, enablePinning: o } = t.options;
+                  return "function" == typeof l
+                    ? l(e)
+                    : null == (n = null != l ? l : o) || n;
                 }),
                 (e.getIsPinned = () => {
-                  const t = [e.id],
-                    { top: n, bottom: r } = o.getState().rowPinning,
-                    i = t.some((s) => n?.includes(s)),
-                    l = t.some((s) => r?.includes(s));
-                  return i ? "top" : l ? "bottom" : !1;
+                  const n = [e.id],
+                    { top: l, bottom: o } = t.getState().rowPinning,
+                    i = n.some((e) => (null == l ? void 0 : l.includes(e))),
+                    r = n.some((e) => (null == o ? void 0 : o.includes(e)));
+                  return i ? "top" : !!r && "bottom";
                 }),
                 (e.getPinnedIndex = () => {
-                  var t, n;
-                  const r = e.getIsPinned();
-                  if (!r) return -1;
+                  var n, l;
+                  const o = e.getIsPinned();
+                  if (!o) return -1;
                   const i =
-                    (t = r === "top" ? o.getTopRows() : o.getBottomRows()) ==
-                    null
+                    null ==
+                    (n = "top" === o ? t.getTopRows() : t.getBottomRows())
                       ? void 0
-                      : t.map((l) => {
-                          let { id: s } = l;
-                          return s;
+                      : n.map((e) => {
+                          let { id: t } = e;
+                          return t;
                         });
-                  return (n = i?.indexOf(e.id)) != null ? n : -1;
+                  return null != (l = null == i ? void 0 : i.indexOf(e.id))
+                    ? l
+                    : -1;
                 });
             },
             createTable: (e) => {
-              (e.setRowPinning = (o) =>
-                e.options.onRowPinningChange == null
+              (e.setRowPinning = (t) =>
+                null == e.options.onRowPinningChange
                   ? void 0
-                  : e.options.onRowPinningChange(o)),
-                (e.resetRowPinning = (o) => {
-                  var t, n;
+                  : e.options.onRowPinningChange(t)),
+                (e.resetRowPinning = (t) => {
+                  var n, l;
                   return e.setRowPinning(
-                    o
-                      ? Ce()
-                      : (t =
-                            (n = e.initialState) == null
+                    t
+                      ? { top: [], bottom: [] }
+                      : null !=
+                          (n =
+                            null == (l = e.initialState)
                               ? void 0
-                              : n.rowPinning) != null
-                        ? t
-                        : Ce(),
+                              : l.rowPinning)
+                        ? n
+                        : { top: [], bottom: [] },
                   );
                 }),
-                (e.getIsSomeRowsPinned = (o) => {
-                  var t;
-                  const n = e.getState().rowPinning;
-                  if (!o) {
-                    var r, i;
-                    return !!(
-                      ((r = n.top) != null && r.length) ||
-                      ((i = n.bottom) != null && i.length)
-                    );
-                  }
-                  return !!((t = n[o]) != null && t.length);
+                (e.getIsSomeRowsPinned = (t) => {
+                  var n;
+                  const l = e.getState().rowPinning;
+                  var o, i;
+                  return t
+                    ? Boolean(null == (n = l[t]) ? void 0 : n.length)
+                    : Boolean(
+                        (null == (o = l.top) ? void 0 : o.length) ||
+                          (null == (i = l.bottom) ? void 0 : i.length),
+                      );
                 }),
-                (e._getPinnedRows = (o, t, n) => {
-                  var r;
+                (e._getPinnedRows = (t, n, l) => {
+                  var o;
                   return (
-                    (r = e.options.keepPinnedRows) == null || r
-                      ? (t ?? []).map((l) => {
-                          const s = e.getRow(l, !0);
-                          return s.getIsAllParentsExpanded() ? s : null;
+                    null == (o = e.options.keepPinnedRows) || o
+                      ? (null != n ? n : []).map((t) => {
+                          const n = e.getRow(t, !0);
+                          return n.getIsAllParentsExpanded() ? n : null;
                         })
-                      : (t ?? []).map((l) => o.find((s) => s.id === l))
+                      : (null != n ? n : []).map((e) =>
+                          t.find((t) => t.id === e),
+                        )
                   )
                     .filter(Boolean)
-                    .map((l) => ({ ...l, position: n }));
+                    .map((e) => ({ ...e, position: l }));
                 }),
-                (e.getTopRows = p(
+                (e.getTopRows = s(
                   () => [e.getRowModel().rows, e.getState().rowPinning.top],
-                  (o, t) => e._getPinnedRows(o, t, "top"),
-                  h(e.options, "debugRows", "getTopRows"),
+                  (t, n) => e._getPinnedRows(t, n, "top"),
+                  a(e.options, "debugRows"),
                 )),
-                (e.getBottomRows = p(
+                (e.getBottomRows = s(
                   () => [e.getRowModel().rows, e.getState().rowPinning.bottom],
-                  (o, t) => e._getPinnedRows(o, t, "bottom"),
-                  h(e.options, "debugRows", "getBottomRows"),
+                  (t, n) => e._getPinnedRows(t, n, "bottom"),
+                  a(e.options, "debugRows"),
                 )),
-                (e.getCenterRows = p(
+                (e.getCenterRows = s(
                   () => [
                     e.getRowModel().rows,
                     e.getState().rowPinning.top,
                     e.getState().rowPinning.bottom,
                   ],
-                  (o, t, n) => {
-                    const r = new Set([...(t ?? []), ...(n ?? [])]);
-                    return o.filter((i) => !r.has(i.id));
+                  (e, t, n) => {
+                    const l = new Set([
+                      ...(null != t ? t : []),
+                      ...(null != n ? n : []),
+                    ]);
+                    return e.filter((e) => !l.has(e.id));
                   },
-                  h(e.options, "debugRows", "getCenterRows"),
+                  a(e.options, "debugRows"),
                 ));
             },
           },
-          ke = {
-            getInitialState: (e) => ({ rowSelection: {}, ...e }),
-            getDefaultOptions: (e) => ({
-              onRowSelectionChange: G("rowSelection", e),
-              enableRowSelection: !0,
-              enableMultiRowSelection: !0,
-              enableSubRowSelection: !0,
-            }),
-            createTable: (e) => {
-              (e.setRowSelection = (o) =>
-                e.options.onRowSelectionChange == null
-                  ? void 0
-                  : e.options.onRowSelectionChange(o)),
-                (e.resetRowSelection = (o) => {
-                  var t;
-                  return e.setRowSelection(
-                    o ? {} : (t = e.initialState.rowSelection) != null ? t : {},
-                  );
-                }),
-                (e.toggleAllRowsSelected = (o) => {
-                  e.setRowSelection((t) => {
-                    o = typeof o < "u" ? o : !e.getIsAllRowsSelected();
-                    const n = { ...t },
-                      r = e.getPreGroupedRowModel().flatRows;
-                    return (
-                      o
-                        ? r.forEach((i) => {
-                            i.getCanSelect() && (n[i.id] = !0);
-                          })
-                        : r.forEach((i) => {
-                            delete n[i.id];
-                          }),
-                      n
-                    );
-                  });
-                }),
-                (e.toggleAllPageRowsSelected = (o) =>
-                  e.setRowSelection((t) => {
-                    const n =
-                        typeof o < "u" ? o : !e.getIsAllPageRowsSelected(),
-                      r = { ...t };
-                    return (
-                      e.getRowModel().rows.forEach((i) => {
-                        we(r, i.id, n, !0, e);
-                      }),
-                      r
-                    );
-                  })),
-                (e.getPreSelectedRowModel = () => e.getCoreRowModel()),
-                (e.getSelectedRowModel = p(
-                  () => [e.getState().rowSelection, e.getCoreRowModel()],
-                  (o, t) =>
-                    Object.keys(o).length
-                      ? ve(e, t)
-                      : { rows: [], flatRows: [], rowsById: {} },
-                  h(e.options, "debugTable", "getSelectedRowModel"),
-                )),
-                (e.getFilteredSelectedRowModel = p(
-                  () => [e.getState().rowSelection, e.getFilteredRowModel()],
-                  (o, t) =>
-                    Object.keys(o).length
-                      ? ve(e, t)
-                      : { rows: [], flatRows: [], rowsById: {} },
-                  h(e.options, "debugTable", "getFilteredSelectedRowModel"),
-                )),
-                (e.getGroupedSelectedRowModel = p(
-                  () => [e.getState().rowSelection, e.getSortedRowModel()],
-                  (o, t) =>
-                    Object.keys(o).length
-                      ? ve(e, t)
-                      : { rows: [], flatRows: [], rowsById: {} },
-                  h(e.options, "debugTable", "getGroupedSelectedRowModel"),
-                )),
-                (e.getIsAllRowsSelected = () => {
-                  const o = e.getFilteredRowModel().flatRows,
-                    { rowSelection: t } = e.getState();
-                  let n = !!(o.length && Object.keys(t).length);
-                  return (
-                    n &&
-                      o.some((r) => r.getCanSelect() && !t[r.id]) &&
-                      (n = !1),
-                    n
-                  );
-                }),
-                (e.getIsAllPageRowsSelected = () => {
-                  const o = e
-                      .getPaginationRowModel()
-                      .flatRows.filter((r) => r.getCanSelect()),
-                    { rowSelection: t } = e.getState();
-                  let n = !!o.length;
-                  return n && o.some((r) => !t[r.id]) && (n = !1), n;
-                }),
-                (e.getIsSomeRowsSelected = () => {
-                  var o;
-                  const t = Object.keys(
-                    (o = e.getState().rowSelection) != null ? o : {},
-                  ).length;
-                  return t > 0 && t < e.getFilteredRowModel().flatRows.length;
-                }),
-                (e.getIsSomePageRowsSelected = () => {
-                  const o = e.getPaginationRowModel().flatRows;
-                  return e.getIsAllPageRowsSelected()
-                    ? !1
-                    : o
-                        .filter((t) => t.getCanSelect())
-                        .some(
-                          (t) => t.getIsSelected() || t.getIsSomeSelected(),
-                        );
-                }),
-                (e.getToggleAllRowsSelectedHandler = () => (o) => {
-                  e.toggleAllRowsSelected(o.target.checked);
-                }),
-                (e.getToggleAllPageRowsSelectedHandler = () => (o) => {
-                  e.toggleAllPageRowsSelected(o.target.checked);
-                });
-            },
-            createRow: (e, o) => {
-              (e.toggleSelected = (t, n) => {
-                const r = e.getIsSelected();
-                o.setRowSelection((i) => {
-                  var l;
-                  if (
-                    ((t = typeof t < "u" ? t : !r), e.getCanSelect() && r === t)
-                  )
-                    return i;
-                  const s = { ...i };
-                  return (
-                    we(s, e.id, t, (l = n?.selectChildren) != null ? l : !0, o),
-                    s
-                  );
-                });
-              }),
-                (e.getIsSelected = () => {
-                  const { rowSelection: t } = o.getState();
-                  return _e(e, t);
-                }),
-                (e.getIsSomeSelected = () => {
-                  const { rowSelection: t } = o.getState();
-                  return Fe(e, t) === "some";
-                }),
-                (e.getIsAllSubRowsSelected = () => {
-                  const { rowSelection: t } = o.getState();
-                  return Fe(e, t) === "all";
-                }),
-                (e.getCanSelect = () => {
-                  var t;
-                  return typeof o.options.enableRowSelection == "function"
-                    ? o.options.enableRowSelection(e)
-                    : (t = o.options.enableRowSelection) != null
-                      ? t
-                      : !0;
-                }),
-                (e.getCanSelectSubRows = () => {
-                  var t;
-                  return typeof o.options.enableSubRowSelection == "function"
-                    ? o.options.enableSubRowSelection(e)
-                    : (t = o.options.enableSubRowSelection) != null
-                      ? t
-                      : !0;
-                }),
-                (e.getCanMultiSelect = () => {
-                  var t;
-                  return typeof o.options.enableMultiRowSelection == "function"
-                    ? o.options.enableMultiRowSelection(e)
-                    : (t = o.options.enableMultiRowSelection) != null
-                      ? t
-                      : !0;
-                }),
-                (e.getToggleSelectedHandler = () => {
-                  const t = e.getCanSelect();
-                  return (n) => {
-                    var r;
-                    t &&
-                      e.toggleSelected(
-                        (r = n.target) == null ? void 0 : r.checked,
-                      );
-                  };
-                });
-            },
-          },
-          we = (e, o, t, n, r) => {
-            var i;
-            const l = r.getRow(o, !0);
-            t
-              ? (l.getCanMultiSelect() ||
-                  Object.keys(e).forEach((s) => delete e[s]),
-                l.getCanSelect() && (e[o] = !0))
-              : delete e[o],
-              n &&
-                (i = l.subRows) != null &&
-                i.length &&
-                l.getCanSelectSubRows() &&
-                l.subRows.forEach((s) => we(e, s.id, t, n, r));
-          };
-        function ve(e, o) {
-          const t = e.getState().rowSelection,
-            n = [],
-            r = {},
-            i = function (l, s) {
-              return l
-                .map((a) => {
-                  var g;
-                  const c = _e(a, t);
-                  if (
-                    (c && (n.push(a), (r[a.id] = a)),
-                    (g = a.subRows) != null &&
-                      g.length &&
-                      (a = { ...a, subRows: i(a.subRows) }),
-                    c)
-                  )
-                    return a;
-                })
-                .filter(Boolean);
-            };
-          return { rows: i(o.rows), flatRows: n, rowsById: r };
-        }
-        function _e(e, o) {
+          H,
+          A,
+        ];
+      function K(e) {
+        var t, n;
+        const l = [...X, ...(null != (t = e._features) ? t : [])];
+        let i = { _features: l };
+        const r = i._features.reduce(
+          (e, t) =>
+            Object.assign(
+              e,
+              null == t.getDefaultOptions ? void 0 : t.getDefaultOptions(i),
+            ),
+          {},
+        );
+        let u = { ...(null != (n = e.initialState) ? n : {}) };
+        i._features.forEach((e) => {
           var t;
-          return (t = o[e.id]) != null ? t : !1;
-        }
-        function Fe(e, o, t) {
-          var n;
-          if (!((n = e.subRows) != null && n.length)) return !1;
-          let r = !0,
-            i = !1;
-          return (
-            e.subRows.forEach((l) => {
-              if (
-                !(i && !r) &&
-                (l.getCanSelect() && (_e(l, o) ? (i = !0) : (r = !1)),
-                l.subRows && l.subRows.length)
-              ) {
-                const s = Fe(l, o);
-                s === "all" ? (i = !0) : (s === "some" && (i = !0), (r = !1));
-              }
-            }),
-            r ? "all" : i ? "some" : !1
-          );
-        }
-        const $e = /([0-9]+)/gm,
-          je = (e, o, t) =>
-            Pe(K(e.getValue(t)).toLowerCase(), K(o.getValue(t)).toLowerCase()),
-          Ne = (e, o, t) => Pe(K(e.getValue(t)), K(o.getValue(t))),
-          Qe = (e, o, t) =>
-            Me(K(e.getValue(t)).toLowerCase(), K(o.getValue(t)).toLowerCase()),
-          Ke = (e, o, t) => Me(K(e.getValue(t)), K(o.getValue(t))),
-          Xe = (e, o, t) => {
-            const n = e.getValue(t),
-              r = o.getValue(t);
-            return n > r ? 1 : n < r ? -1 : 0;
-          },
-          We = (e, o, t) => Me(e.getValue(t), o.getValue(t));
-        function Me(e, o) {
-          return e === o ? 0 : e > o ? 1 : -1;
-        }
-        function K(e) {
-          return typeof e == "number"
-            ? isNaN(e) || e === 1 / 0 || e === -1 / 0
-              ? ""
-              : String(e)
-            : typeof e == "string"
-              ? e
-              : "";
-        }
-        function Pe(e, o) {
-          const t = e.split($e).filter(Boolean),
-            n = o.split($e).filter(Boolean);
-          for (; t.length && n.length; ) {
-            const r = t.shift(),
-              i = n.shift(),
-              l = parseInt(r, 10),
-              s = parseInt(i, 10),
-              a = [l, s].sort();
-            if (isNaN(a[0])) {
-              if (r > i) return 1;
-              if (i > r) return -1;
-              continue;
-            }
-            if (isNaN(a[1])) return isNaN(l) ? -1 : 1;
-            if (l > s) return 1;
-            if (s > l) return -1;
-          }
-          return t.length - n.length;
-        }
-        const re = {
-            alphanumeric: je,
-            alphanumericCaseSensitive: Ne,
-            text: Qe,
-            textCaseSensitive: Ke,
-            datetime: Xe,
-            basic: We,
-          },
-          Ze = [
-            J,
-            Oe,
-            Ge,
-            He,
-            v,
-            se,
-            ze,
-            Be,
-            {
-              getInitialState: (e) => ({ sorting: [], ...e }),
-              getDefaultColumnDef: () => ({
-                sortingFn: "auto",
-                sortUndefined: 1,
-              }),
-              getDefaultOptions: (e) => ({
-                onSortingChange: G("sorting", e),
-                isMultiSortEvent: (o) => o.shiftKey,
-              }),
-              createColumn: (e, o) => {
-                (e.getAutoSortingFn = () => {
-                  const t = o.getFilteredRowModel().flatRows.slice(10);
-                  let n = !1;
-                  for (const r of t) {
-                    const i = r?.getValue(e.id);
-                    if (Object.prototype.toString.call(i) === "[object Date]")
-                      return re.datetime;
-                    if (
-                      typeof i == "string" &&
-                      ((n = !0), i.split($e).length > 1)
-                    )
-                      return re.alphanumeric;
-                  }
-                  return n ? re.text : re.basic;
-                }),
-                  (e.getAutoSortDir = () => {
-                    const t = o.getFilteredRowModel().flatRows[0];
-                    return typeof t?.getValue(e.id) == "string"
-                      ? "asc"
-                      : "desc";
-                  }),
-                  (e.getSortingFn = () => {
-                    var t, n;
-                    if (!e) throw new Error();
-                    return N(e.columnDef.sortingFn)
-                      ? e.columnDef.sortingFn
-                      : e.columnDef.sortingFn === "auto"
-                        ? e.getAutoSortingFn()
-                        : (t =
-                              (n = o.options.sortingFns) == null
-                                ? void 0
-                                : n[e.columnDef.sortingFn]) != null
-                          ? t
-                          : re[e.columnDef.sortingFn];
-                  }),
-                  (e.toggleSorting = (t, n) => {
-                    const r = e.getNextSortingOrder(),
-                      i = typeof t < "u" && t !== null;
-                    o.setSorting((l) => {
-                      const s = l?.find((u) => u.id === e.id),
-                        a = l?.findIndex((u) => u.id === e.id);
-                      let g = [],
-                        c,
-                        S = i ? t : r === "desc";
-                      if (
-                        (l != null && l.length && e.getCanMultiSort() && n
-                          ? s
-                            ? (c = "toggle")
-                            : (c = "add")
-                          : l != null && l.length && a !== l.length - 1
-                            ? (c = "replace")
-                            : s
-                              ? (c = "toggle")
-                              : (c = "replace"),
-                        c === "toggle" && (i || r || (c = "remove")),
-                        c === "add")
-                      ) {
-                        var d;
-                        (g = [...l, { id: e.id, desc: S }]),
-                          g.splice(
-                            0,
-                            g.length -
-                              ((d = o.options.maxMultiSortColCount) != null
-                                ? d
-                                : Number.MAX_SAFE_INTEGER),
-                          );
-                      } else
-                        c === "toggle"
-                          ? (g = l.map((u) =>
-                              u.id === e.id ? { ...u, desc: S } : u,
-                            ))
-                          : c === "remove"
-                            ? (g = l.filter((u) => u.id !== e.id))
-                            : (g = [{ id: e.id, desc: S }]);
-                      return g;
-                    });
-                  }),
-                  (e.getFirstSortDir = () => {
-                    var t, n;
-                    return (
-                      (t =
-                        (n = e.columnDef.sortDescFirst) != null
-                          ? n
-                          : o.options.sortDescFirst) != null
-                        ? t
-                        : e.getAutoSortDir() === "desc"
-                    )
-                      ? "desc"
-                      : "asc";
-                  }),
-                  (e.getNextSortingOrder = (t) => {
-                    var n, r;
-                    const i = e.getFirstSortDir(),
-                      l = e.getIsSorted();
-                    return l
-                      ? l !== i &&
-                        ((n = o.options.enableSortingRemoval) == null || n) &&
-                        (!(t && (r = o.options.enableMultiRemove) != null) || r)
-                        ? !1
-                        : l === "desc"
-                          ? "asc"
-                          : "desc"
-                      : i;
-                  }),
-                  (e.getCanSort = () => {
-                    var t, n;
-                    return (
-                      ((t = e.columnDef.enableSorting) != null ? t : !0) &&
-                      ((n = o.options.enableSorting) != null ? n : !0) &&
-                      !!e.accessorFn
-                    );
-                  }),
-                  (e.getCanMultiSort = () => {
-                    var t, n;
-                    return (t =
-                      (n = e.columnDef.enableMultiSort) != null
-                        ? n
-                        : o.options.enableMultiSort) != null
-                      ? t
-                      : !!e.accessorFn;
-                  }),
-                  (e.getIsSorted = () => {
-                    var t;
-                    const n =
-                      (t = o.getState().sorting) == null
-                        ? void 0
-                        : t.find((r) => r.id === e.id);
-                    return n ? (n.desc ? "desc" : "asc") : !1;
-                  }),
-                  (e.getSortIndex = () => {
-                    var t, n;
-                    return (t =
-                      (n = o.getState().sorting) == null
-                        ? void 0
-                        : n.findIndex((r) => r.id === e.id)) != null
-                      ? t
-                      : -1;
-                  }),
-                  (e.clearSorting = () => {
-                    o.setSorting((t) =>
-                      t != null && t.length
-                        ? t.filter((n) => n.id !== e.id)
-                        : [],
-                    );
-                  }),
-                  (e.getToggleSortingHandler = () => {
-                    const t = e.getCanSort();
-                    return (n) => {
-                      t &&
-                        (n.persist == null || n.persist(),
-                        e.toggleSorting == null ||
-                          e.toggleSorting(
-                            void 0,
-                            e.getCanMultiSort()
-                              ? o.options.isMultiSortEvent == null
-                                ? void 0
-                                : o.options.isMultiSortEvent(n)
-                              : !1,
-                          ));
-                    };
-                  });
-              },
-              createTable: (e) => {
-                (e.setSorting = (o) =>
-                  e.options.onSortingChange == null
-                    ? void 0
-                    : e.options.onSortingChange(o)),
-                  (e.resetSorting = (o) => {
-                    var t, n;
-                    e.setSorting(
-                      o
-                        ? []
-                        : (t =
-                              (n = e.initialState) == null
-                                ? void 0
-                                : n.sorting) != null
-                          ? t
-                          : [],
-                    );
-                  }),
-                  (e.getPreSortedRowModel = () => e.getGroupedRowModel()),
-                  (e.getSortedRowModel = () => (
-                    !e._getSortedRowModel &&
-                      e.options.getSortedRowModel &&
-                      (e._getSortedRowModel = e.options.getSortedRowModel(e)),
-                    e.options.manualSorting || !e._getSortedRowModel
-                      ? e.getPreSortedRowModel()
-                      : e._getSortedRowModel()
-                  ));
-              },
-            },
-            Ee,
-            Te,
-            qe,
-            Ue,
-            ke,
-            Le,
-          ];
-        function Je(e) {
-          var o, t;
-          const n = [...Ze, ...((o = e._features) != null ? o : [])];
-          let r = { _features: n };
-          const i = r._features.reduce(
-              (d, u) =>
-                Object.assign(
-                  d,
-                  u.getDefaultOptions == null ? void 0 : u.getDefaultOptions(r),
-                ),
-              {},
-            ),
-            l = (d) =>
-              r.options.mergeOptions
-                ? r.options.mergeOptions(i, d)
-                : { ...i, ...d };
-          let a = { ...{}, ...((t = e.initialState) != null ? t : {}) };
-          r._features.forEach((d) => {
-            var u;
-            a =
-              (u = d.getInitialState == null ? void 0 : d.getInitialState(a)) !=
-              null
-                ? u
-                : a;
-          });
-          const g = [];
-          let c = !1;
-          const S = {
-            _features: n,
-            options: { ...i, ...e },
-            initialState: a,
-            _queue: (d) => {
-              g.push(d),
-                c ||
-                  ((c = !0),
-                  Promise.resolve()
-                    .then(() => {
-                      for (; g.length; ) g.shift()();
-                      c = !1;
-                    })
-                    .catch((u) =>
-                      setTimeout(() => {
-                        throw u;
-                      }),
-                    ));
-            },
-            reset: () => {
-              r.setState(r.initialState);
-            },
-            setOptions: (d) => {
-              const u = A(d, r.options);
-              r.options = l(u);
-            },
-            getState: () => r.options.state,
-            setState: (d) => {
-              r.options.onStateChange == null || r.options.onStateChange(d);
-            },
-            _getRowId: (d, u, f) => {
-              var m;
-              return (m =
-                r.options.getRowId == null
-                  ? void 0
-                  : r.options.getRowId(d, u, f)) != null
-                ? m
-                : `${f ? [f.id, u].join(".") : u}`;
-            },
-            getCoreRowModel: () => (
-              r._getCoreRowModel ||
-                (r._getCoreRowModel = r.options.getCoreRowModel(r)),
-              r._getCoreRowModel()
-            ),
-            getRowModel: () => r.getPaginationRowModel(),
-            getRow: (d, u) => {
-              let f = (u ? r.getPrePaginationRowModel() : r.getRowModel())
-                .rowsById[d];
-              if (!f && ((f = r.getCoreRowModel().rowsById[d]), !f))
-                throw new Error();
-              return f;
-            },
-            _getDefaultColumnDef: p(
-              () => [r.options.defaultColumn],
-              (d) => {
-                var u;
-                return (
-                  (d = (u = d) != null ? u : {}),
-                  {
-                    header: (f) => {
-                      const m = f.header.column.columnDef;
-                      return m.accessorKey
-                        ? m.accessorKey
-                        : m.accessorFn
-                          ? m.id
-                          : null;
-                    },
-                    cell: (f) => {
-                      var m, C;
-                      return (m =
-                        (C = f.renderValue()) == null || C.toString == null
-                          ? void 0
-                          : C.toString()) != null
-                        ? m
-                        : null;
-                    },
-                    ...r._features.reduce(
-                      (f, m) =>
-                        Object.assign(
-                          f,
-                          m.getDefaultColumnDef == null
-                            ? void 0
-                            : m.getDefaultColumnDef(),
-                        ),
-                      {},
-                    ),
-                    ...d,
-                  }
-                );
-              },
-              h(e, "debugColumns", "_getDefaultColumnDef"),
-            ),
-            _getColumnDefs: () => r.options.columns,
-            getAllColumns: p(
-              () => [r._getColumnDefs()],
-              (d) => {
-                const u = function (f, m, C) {
-                  return (
-                    C === void 0 && (C = 0),
-                    f.map((R) => {
-                      const _ = te(r, R, C, m),
-                        M = R;
-                      return (
-                        (_.columns = M.columns ? u(M.columns, _, C + 1) : []), _
-                      );
-                    })
-                  );
-                };
-                return u(d);
-              },
-              h(e, "debugColumns", "getAllColumns"),
-            ),
-            getAllFlatColumns: p(
-              () => [r.getAllColumns()],
-              (d) => d.flatMap((u) => u.getFlatColumns()),
-              h(e, "debugColumns", "getAllFlatColumns"),
-            ),
-            _getAllFlatColumnsById: p(
-              () => [r.getAllFlatColumns()],
-              (d) => d.reduce((u, f) => ((u[f.id] = f), u), {}),
-              h(e, "debugColumns", "getAllFlatColumnsById"),
-            ),
-            getAllLeafColumns: p(
-              () => [r.getAllColumns(), r._getOrderColumnsFn()],
-              (d, u) => {
-                let f = d.flatMap((m) => m.getLeafColumns());
-                return u(f);
-              },
-              h(e, "debugColumns", "getAllLeafColumns"),
-            ),
-            getColumn: (d) => r._getAllFlatColumnsById()[d],
-          };
-          Object.assign(r, S);
-          for (let d = 0; d < r._features.length; d++) {
-            const u = r._features[d];
-            u == null || u.createTable == null || u.createTable(r);
-          }
-          return r;
-        }
-        function Ye() {
-          return (e) =>
-            p(
-              () => [e.options.data],
-              (o) => {
-                const t = { rows: [], flatRows: [], rowsById: {} },
-                  n = function (r, i, l) {
-                    i === void 0 && (i = 0);
-                    const s = [];
-                    for (let g = 0; g < r.length; g++) {
-                      const c = w(
-                        e,
-                        e._getRowId(r[g], g, l),
-                        r[g],
-                        g,
-                        i,
-                        void 0,
-                        l?.id,
-                      );
-                      if (
-                        (t.flatRows.push(c),
-                        (t.rowsById[c.id] = c),
-                        s.push(c),
-                        e.options.getSubRows)
-                      ) {
-                        var a;
-                        (c.originalSubRows = e.options.getSubRows(r[g], g)),
-                          (a = c.originalSubRows) != null &&
-                            a.length &&
-                            (c.subRows = n(c.originalSubRows, i + 1, c));
-                      }
-                    }
-                    return s;
-                  };
-                return (t.rows = n(o)), t;
-              },
-              h(e.options, "debugTable", "getRowModel", () =>
-                e._autoResetPageIndex(),
-              ),
-            );
-        }
-        function ct() {
-          return (e) =>
-            p(
-              () => [
-                e.getState().expanded,
-                e.getPreExpandedRowModel(),
-                e.options.paginateExpandedRows,
-              ],
-              (o, t, n) =>
-                !t.rows.length ||
-                (o !== !0 && !Object.keys(o ?? {}).length) ||
-                !n
-                  ? t
-                  : xe(t),
-              h(e.options, "debugTable", "getExpandedRowModel"),
-            );
-        }
-        function xe(e) {
-          const o = [],
-            t = (n) => {
-              var r;
-              o.push(n),
-                (r = n.subRows) != null &&
-                  r.length &&
-                  n.getIsExpanded() &&
-                  n.subRows.forEach(t);
-            };
-          return (
-            e.rows.forEach(t),
-            { rows: o, flatRows: e.flatRows, rowsById: e.rowsById }
-          );
-        }
-        function pt() {
-          return (e, o) =>
-            p(
-              () => {
-                var t;
-                return [
-                  (t = e.getColumn(o)) == null
-                    ? void 0
-                    : t.getFacetedRowModel(),
-                ];
-              },
-              (t) => {
-                if (!t) return;
-                const n = t.flatRows
-                  .flatMap((l) => {
-                    var s;
-                    return (s = l.getUniqueValues(o)) != null ? s : [];
+          u =
+            null !=
+            (t = null == e.getInitialState ? void 0 : e.getInitialState(u))
+              ? t
+              : u;
+        });
+        const g = [];
+        let d = !1;
+        const c = {
+          _features: l,
+          options: { ...r, ...e },
+          initialState: u,
+          _queue: (e) => {
+            g.push(e),
+              d ||
+                ((d = !0),
+                Promise.resolve()
+                  .then(() => {
+                    for (; g.length; ) g.shift()();
+                    d = !1;
                   })
-                  .map(Number)
-                  .filter((l) => !Number.isNaN(l));
-                if (!n.length) return;
-                let r = n[0],
-                  i = n[n.length - 1];
-                for (const l of n) l < r ? (r = l) : l > i && (i = l);
-                return [r, i];
-              },
-              h(e.options, "debugTable", "getFacetedMinMaxValues"),
-            );
-        }
-        function ye(e, o, t) {
-          return t.options.filterFromLeafRows ? be(e, o, t) : et(e, o, t);
-        }
-        function be(e, o, t) {
-          var n;
-          const r = [],
-            i = {},
-            l = (n = t.options.maxLeafRowFilterDepth) != null ? n : 100,
-            s = function (a, g) {
-              g === void 0 && (g = 0);
-              const c = [];
-              for (let d = 0; d < a.length; d++) {
-                var S;
-                let u = a[d];
-                const f = w(
-                  t,
-                  u.id,
-                  u.original,
-                  u.index,
-                  u.depth,
-                  void 0,
-                  u.parentId,
-                );
-                if (
-                  ((f.columnFilters = u.columnFilters),
-                  (S = u.subRows) != null && S.length && g < l)
-                ) {
-                  if (
-                    ((f.subRows = s(u.subRows, g + 1)),
-                    (u = f),
-                    o(u) && !f.subRows.length)
-                  ) {
-                    c.push(u), (i[u.id] = u), r.push(u);
-                    continue;
-                  }
-                  if (o(u) || f.subRows.length) {
-                    c.push(u), (i[u.id] = u), r.push(u);
-                    continue;
-                  }
-                } else (u = f), o(u) && (c.push(u), (i[u.id] = u), r.push(u));
-              }
-              return c;
-            };
-          return { rows: s(e), flatRows: r, rowsById: i };
-        }
-        function et(e, o, t) {
-          var n;
-          const r = [],
-            i = {},
-            l = (n = t.options.maxLeafRowFilterDepth) != null ? n : 100,
-            s = function (a, g) {
-              g === void 0 && (g = 0);
-              const c = [];
-              for (let d = 0; d < a.length; d++) {
-                let u = a[d];
-                if (o(u)) {
-                  var S;
-                  if ((S = u.subRows) != null && S.length && g < l) {
-                    const m = w(
-                      t,
-                      u.id,
-                      u.original,
-                      u.index,
-                      u.depth,
-                      void 0,
-                      u.parentId,
-                    );
-                    (m.subRows = s(u.subRows, g + 1)), (u = m);
-                  }
-                  c.push(u), r.push(u), (i[u.id] = u);
-                }
-              }
-              return c;
-            };
-          return { rows: s(e), flatRows: r, rowsById: i };
-        }
-        function mt() {
-          return (e, o) =>
-            p(
-              () => [
-                e.getPreFilteredRowModel(),
-                e.getState().columnFilters,
-                e.getState().globalFilter,
-                e.getFilteredRowModel(),
-              ],
-              (t, n, r) => {
-                if (!t.rows.length || (!(n != null && n.length) && !r))
-                  return t;
-                const i = [
-                    ...n.map((s) => s.id).filter((s) => s !== o),
-                    r ? "__global__" : void 0,
-                  ].filter(Boolean),
-                  l = (s) => {
-                    for (let a = 0; a < i.length; a++)
-                      if (s.columnFilters[i[a]] === !1) return !1;
-                    return !0;
-                  };
-                return ye(t.rows, l, e);
-              },
-              h(e.options, "debugTable", "getFacetedRowModel"),
-            );
-        }
-        function St() {
-          return (e, o) =>
-            p(
-              () => {
-                var t;
-                return [
-                  (t = e.getColumn(o)) == null
-                    ? void 0
-                    : t.getFacetedRowModel(),
-                ];
-              },
-              (t) => {
-                if (!t) return new Map();
-                let n = new Map();
-                for (let i = 0; i < t.flatRows.length; i++) {
-                  const l = t.flatRows[i].getUniqueValues(o);
-                  for (let s = 0; s < l.length; s++) {
-                    const a = l[s];
-                    if (n.has(a)) {
-                      var r;
-                      n.set(a, ((r = n.get(a)) != null ? r : 0) + 1);
-                    } else n.set(a, 1);
-                  }
-                }
-                return n;
-              },
-              h(e.options, "debugTable", `getFacetedUniqueValues_${o}`),
-            );
-        }
-        function tt() {
-          return (e) =>
-            p(
-              () => [
-                e.getPreFilteredRowModel(),
-                e.getState().columnFilters,
-                e.getState().globalFilter,
-              ],
-              (o, t, n) => {
-                if (!o.rows.length || (!(t != null && t.length) && !n)) {
-                  for (let d = 0; d < o.flatRows.length; d++)
-                    (o.flatRows[d].columnFilters = {}),
-                      (o.flatRows[d].columnFiltersMeta = {});
-                  return o;
-                }
-                const r = [],
-                  i = [];
-                (t ?? []).forEach((d) => {
-                  var u;
-                  const f = e.getColumn(d.id);
-                  if (!f) return;
-                  const m = f.getFilterFn();
-                  m &&
-                    r.push({
-                      id: d.id,
-                      filterFn: m,
-                      resolvedValue:
-                        (u =
-                          m.resolveFilterValue == null
-                            ? void 0
-                            : m.resolveFilterValue(d.value)) != null
-                          ? u
-                          : d.value,
-                    });
-                });
-                const l = (t ?? []).map((d) => d.id),
-                  s = e.getGlobalFilterFn(),
-                  a = e
-                    .getAllLeafColumns()
-                    .filter((d) => d.getCanGlobalFilter());
-                n &&
-                  s &&
-                  a.length &&
-                  (l.push("__global__"),
-                  a.forEach((d) => {
-                    var u;
-                    i.push({
-                      id: d.id,
-                      filterFn: s,
-                      resolvedValue:
-                        (u =
-                          s.resolveFilterValue == null
-                            ? void 0
-                            : s.resolveFilterValue(n)) != null
-                          ? u
-                          : n,
-                    });
-                  }));
-                let g, c;
-                for (let d = 0; d < o.flatRows.length; d++) {
-                  const u = o.flatRows[d];
-                  if (((u.columnFilters = {}), r.length))
-                    for (let f = 0; f < r.length; f++) {
-                      g = r[f];
-                      const m = g.id;
-                      u.columnFilters[m] = g.filterFn(
-                        u,
-                        m,
-                        g.resolvedValue,
-                        (C) => {
-                          u.columnFiltersMeta[m] = C;
-                        },
-                      );
-                    }
-                  if (i.length) {
-                    for (let f = 0; f < i.length; f++) {
-                      c = i[f];
-                      const m = c.id;
-                      if (
-                        c.filterFn(u, m, c.resolvedValue, (C) => {
-                          u.columnFiltersMeta[m] = C;
-                        })
-                      ) {
-                        u.columnFilters.__global__ = !0;
-                        break;
-                      }
-                    }
-                    u.columnFilters.__global__ !== !0 &&
-                      (u.columnFilters.__global__ = !1);
-                  }
-                }
-                const S = (d) => {
-                  for (let u = 0; u < l.length; u++)
-                    if (d.columnFilters[l[u]] === !1) return !1;
-                  return !0;
-                };
-                return ye(o.rows, S, e);
-              },
-              h(e.options, "debugTable", "getFilteredRowModel", () =>
-                e._autoResetPageIndex(),
-              ),
-            );
-        }
-        function nt() {
-          return (e) =>
-            p(
-              () => [e.getState().grouping, e.getPreGroupedRowModel()],
-              (o, t) => {
-                if (!t.rows.length || !o.length)
-                  return (
-                    t.rows.forEach((a) => {
-                      (a.depth = 0), (a.parentId = void 0);
+                  .catch((e) =>
+                    setTimeout(() => {
+                      throw e;
                     }),
-                    t
-                  );
-                const n = o.filter((a) => e.getColumn(a)),
-                  r = [],
-                  i = {},
-                  l = function (a, g, c) {
-                    if ((g === void 0 && (g = 0), g >= n.length))
-                      return a.map(
-                        (f) => (
-                          (f.depth = g),
-                          r.push(f),
-                          (i[f.id] = f),
-                          f.subRows && (f.subRows = l(f.subRows, g + 1, f.id)),
-                          f
-                        ),
-                      );
-                    const S = n[g],
-                      d = ot(a, S);
-                    return Array.from(d.entries()).map((f, m) => {
-                      let [C, R] = f,
-                        _ = `${S}:${C}`;
-                      _ = c ? `${c}>${_}` : _;
-                      const M = l(R, g + 1, _);
-                      M.forEach(($) => {
-                        $.parentId = _;
-                      });
-                      const B = g ? Z(R, ($) => $.subRows) : R,
-                        P = w(e, _, B[0].original, m, g, void 0, c);
-                      return (
-                        Object.assign(P, {
-                          groupingColumnId: S,
-                          groupingValue: C,
-                          subRows: M,
-                          leafRows: B,
-                          getValue: ($) => {
-                            if (n.includes($)) {
-                              if (P._valuesCache.hasOwnProperty($))
-                                return P._valuesCache[$];
-                              if (R[0]) {
-                                var ie;
-                                P._valuesCache[$] =
-                                  (ie = R[0].getValue($)) != null ? ie : void 0;
+                  ));
+          },
+          reset: () => {
+            i.setState(i.initialState);
+          },
+          setOptions: (e) => {
+            const t = o(e, i.options);
+            i.options = ((e) =>
+              i.options.mergeOptions
+                ? i.options.mergeOptions(r, e)
+                : { ...r, ...e })(t);
+          },
+          getState: () => i.options.state,
+          setState: (e) => {
+            null == i.options.onStateChange || i.options.onStateChange(e);
+          },
+          _getRowId: (e, t, n) => {
+            var l;
+            return null !=
+              (l =
+                null == i.options.getRowId
+                  ? void 0
+                  : i.options.getRowId(e, t, n))
+              ? l
+              : `${n ? [n.id, t].join(".") : t}`;
+          },
+          getCoreRowModel: () => (
+            i._getCoreRowModel ||
+              (i._getCoreRowModel = i.options.getCoreRowModel(i)),
+            i._getCoreRowModel()
+          ),
+          getRowModel: () => i.getPaginationRowModel(),
+          getRow: (e, t) => {
+            let n = (t ? i.getPrePaginationRowModel() : i.getRowModel())
+              .rowsById[e];
+            if (!n && ((n = i.getCoreRowModel().rowsById[e]), !n))
+              throw new Error();
+            return n;
+          },
+          _getDefaultColumnDef: s(
+            () => [i.options.defaultColumn],
+            (e) => {
+              var t;
+              return (
+                (e = null != (t = e) ? t : {}),
+                {
+                  header: (e) => {
+                    const t = e.header.column.columnDef;
+                    return t.accessorKey
+                      ? t.accessorKey
+                      : t.accessorFn
+                        ? t.id
+                        : null;
+                  },
+                  cell: (e) => {
+                    var t, n;
+                    return null !=
+                      (t =
+                        null == (n = e.renderValue()) || null == n.toString
+                          ? void 0
+                          : n.toString())
+                      ? t
+                      : null;
+                  },
+                  ...i._features.reduce(
+                    (e, t) =>
+                      Object.assign(
+                        e,
+                        null == t.getDefaultColumnDef
+                          ? void 0
+                          : t.getDefaultColumnDef(),
+                      ),
+                    {},
+                  ),
+                  ...e,
+                }
+              );
+            },
+            a(e, "debugColumns"),
+          ),
+          _getColumnDefs: () => i.options.columns,
+          getAllColumns: s(
+            () => [i._getColumnDefs()],
+            (e) => {
+              const t = function (e, n, l) {
+                return (
+                  void 0 === l && (l = 0),
+                  e.map((e) => {
+                    const o = (function (e, t, n, l) {
+                        var o, i;
+                        const r = { ...e._getDefaultColumnDef(), ...t },
+                          u = r.accessorKey;
+                        let g,
+                          d =
+                            null !=
+                            (o =
+                              null != (i = r.id)
+                                ? i
+                                : u
+                                  ? "function" ==
+                                    typeof String.prototype.replaceAll
+                                    ? u.replaceAll(".", "_")
+                                    : u.replace(/\./g, "_")
+                                  : void 0)
+                              ? o
+                              : "string" == typeof r.header
+                                ? r.header
+                                : void 0;
+                        if (
+                          (r.accessorFn
+                            ? (g = r.accessorFn)
+                            : u &&
+                              (g = u.includes(".")
+                                ? (e) => {
+                                    let t = e;
+                                    for (const e of u.split(".")) {
+                                      var n;
+                                      t = null == (n = t) ? void 0 : n[e];
+                                    }
+                                    return t;
+                                  }
+                                : (e) => e[r.accessorKey]),
+                          !d)
+                        )
+                          throw new Error();
+                        let c = {
+                          id: `${String(d)}`,
+                          accessorFn: g,
+                          parent: l,
+                          depth: n,
+                          columnDef: r,
+                          columns: [],
+                          getFlatColumns: s(
+                            () => [!0],
+                            () => {
+                              var e;
+                              return [
+                                c,
+                                ...(null == (e = c.columns)
+                                  ? void 0
+                                  : e.flatMap((e) => e.getFlatColumns())),
+                              ];
+                            },
+                            a(e.options, "debugColumns"),
+                          ),
+                          getLeafColumns: s(
+                            () => [e._getOrderColumnsFn()],
+                            (e) => {
+                              var t;
+                              if (null != (t = c.columns) && t.length) {
+                                let t = c.columns.flatMap((e) =>
+                                  e.getLeafColumns(),
+                                );
+                                return e(t);
                               }
-                              return P._valuesCache[$];
+                              return [c];
+                            },
+                            a(e.options, "debugColumns"),
+                          ),
+                        };
+                        for (const t of e._features)
+                          null == t.createColumn || t.createColumn(c, e);
+                        return c;
+                      })(i, e, l, n),
+                      r = e;
+                    return (
+                      (o.columns = r.columns ? t(r.columns, o, l + 1) : []), o
+                    );
+                  })
+                );
+              };
+              return t(e);
+            },
+            a(e, "debugColumns"),
+          ),
+          getAllFlatColumns: s(
+            () => [i.getAllColumns()],
+            (e) => e.flatMap((e) => e.getFlatColumns()),
+            a(e, "debugColumns"),
+          ),
+          _getAllFlatColumnsById: s(
+            () => [i.getAllFlatColumns()],
+            (e) => e.reduce((e, t) => ((e[t.id] = t), e), {}),
+            a(e, "debugColumns"),
+          ),
+          getAllLeafColumns: s(
+            () => [i.getAllColumns(), i._getOrderColumnsFn()],
+            (e, t) => t(e.flatMap((e) => e.getLeafColumns())),
+            a(e, "debugColumns"),
+          ),
+          getColumn: (e) => i._getAllFlatColumnsById()[e],
+        };
+        Object.assign(i, c);
+        for (let e = 0; e < i._features.length; e++) {
+          const t = i._features[e];
+          null == t || null == t.createTable || t.createTable(i);
+        }
+        return i;
+      }
+      function Z() {
+        return (e) =>
+          s(
+            () => [e.options.data],
+            (t) => {
+              const n = { rows: [], flatRows: [], rowsById: {} },
+                l = function (t, o, i) {
+                  void 0 === o && (o = 0);
+                  const r = [];
+                  for (let s = 0; s < t.length; s++) {
+                    const a = f(
+                      e,
+                      e._getRowId(t[s], s, i),
+                      t[s],
+                      s,
+                      o,
+                      void 0,
+                      null == i ? void 0 : i.id,
+                    );
+                    var u;
+                    if (
+                      (n.flatRows.push(a),
+                      (n.rowsById[a.id] = a),
+                      r.push(a),
+                      e.options.getSubRows)
+                    )
+                      (a.originalSubRows = e.options.getSubRows(t[s], s)),
+                        null != (u = a.originalSubRows) &&
+                          u.length &&
+                          (a.subRows = l(a.originalSubRows, o + 1, a));
+                  }
+                  return r;
+                };
+              return (n.rows = l(t)), n;
+            },
+            a(e.options, "debugTable", 0, () => e._autoResetPageIndex()),
+          );
+      }
+      function J(e, t, n) {
+        return n.options.filterFromLeafRows
+          ? (function (e, t, n) {
+              var l;
+              const o = [],
+                i = {},
+                r = null != (l = n.options.maxLeafRowFilterDepth) ? l : 100,
+                u = function (e, l) {
+                  void 0 === l && (l = 0);
+                  const s = [];
+                  for (let g = 0; g < e.length; g++) {
+                    var a;
+                    let d = e[g];
+                    const c = f(
+                      n,
+                      d.id,
+                      d.original,
+                      d.index,
+                      d.depth,
+                      void 0,
+                      d.parentId,
+                    );
+                    if (
+                      ((c.columnFilters = d.columnFilters),
+                      null != (a = d.subRows) && a.length && l < r)
+                    ) {
+                      if (
+                        ((c.subRows = u(d.subRows, l + 1)),
+                        (d = c),
+                        t(d) && !c.subRows.length)
+                      ) {
+                        s.push(d), (i[d.id] = d), o.push(d);
+                        continue;
+                      }
+                      if (t(d) || c.subRows.length) {
+                        s.push(d), (i[d.id] = d), o.push(d);
+                        continue;
+                      }
+                    } else
+                      (d = c), t(d) && (s.push(d), (i[d.id] = d), o.push(d));
+                  }
+                  return s;
+                };
+              return { rows: u(e), flatRows: o, rowsById: i };
+            })(e, t, n)
+          : (function (e, t, n) {
+              var l;
+              const o = [],
+                i = {},
+                r = null != (l = n.options.maxLeafRowFilterDepth) ? l : 100,
+                u = function (e, l) {
+                  void 0 === l && (l = 0);
+                  const s = [];
+                  for (let g = 0; g < e.length; g++) {
+                    let d = e[g];
+                    if (t(d)) {
+                      var a;
+                      if (null != (a = d.subRows) && a.length && l < r) {
+                        const e = f(
+                          n,
+                          d.id,
+                          d.original,
+                          d.index,
+                          d.depth,
+                          void 0,
+                          d.parentId,
+                        );
+                        (e.subRows = u(d.subRows, l + 1)), (d = e);
+                      }
+                      s.push(d), o.push(d), (i[d.id] = d);
+                    }
+                  }
+                  return s;
+                };
+              return { rows: u(e), flatRows: o, rowsById: i };
+            })(e, t, n);
+      }
+      function W() {
+        return (e) =>
+          s(
+            () => [
+              e.getPreFilteredRowModel(),
+              e.getState().columnFilters,
+              e.getState().globalFilter,
+            ],
+            (t, n, l) => {
+              if (!t.rows.length || ((null == n || !n.length) && !l)) {
+                for (let e = 0; e < t.flatRows.length; e++)
+                  (t.flatRows[e].columnFilters = {}),
+                    (t.flatRows[e].columnFiltersMeta = {});
+                return t;
+              }
+              const o = [],
+                i = [];
+              (null != n ? n : []).forEach((t) => {
+                var n;
+                const l = e.getColumn(t.id);
+                if (!l) return;
+                const i = l.getFilterFn();
+                i &&
+                  o.push({
+                    id: t.id,
+                    filterFn: i,
+                    resolvedValue:
+                      null !=
+                      (n =
+                        null == i.resolveFilterValue
+                          ? void 0
+                          : i.resolveFilterValue(t.value))
+                        ? n
+                        : t.value,
+                  });
+              });
+              const r = (null != n ? n : []).map((e) => e.id),
+                u = e.getGlobalFilterFn(),
+                s = e.getAllLeafColumns().filter((e) => e.getCanGlobalFilter());
+              let a, g;
+              l &&
+                u &&
+                s.length &&
+                (r.push("__global__"),
+                s.forEach((e) => {
+                  var t;
+                  i.push({
+                    id: e.id,
+                    filterFn: u,
+                    resolvedValue:
+                      null !=
+                      (t =
+                        null == u.resolveFilterValue
+                          ? void 0
+                          : u.resolveFilterValue(l))
+                        ? t
+                        : l,
+                  });
+                }));
+              for (let e = 0; e < t.flatRows.length; e++) {
+                const n = t.flatRows[e];
+                if (((n.columnFilters = {}), o.length))
+                  for (let e = 0; e < o.length; e++) {
+                    a = o[e];
+                    const t = a.id;
+                    n.columnFilters[t] = a.filterFn(
+                      n,
+                      t,
+                      a.resolvedValue,
+                      (e) => {
+                        n.columnFiltersMeta[t] = e;
+                      },
+                    );
+                  }
+                if (i.length) {
+                  for (let e = 0; e < i.length; e++) {
+                    g = i[e];
+                    const t = g.id;
+                    if (
+                      g.filterFn(n, t, g.resolvedValue, (e) => {
+                        n.columnFiltersMeta[t] = e;
+                      })
+                    ) {
+                      n.columnFilters.__global__ = !0;
+                      break;
+                    }
+                  }
+                  !0 !== n.columnFilters.__global__ &&
+                    (n.columnFilters.__global__ = !1);
+                }
+              }
+              return J(
+                t.rows,
+                (e) => {
+                  for (let t = 0; t < r.length; t++)
+                    if (!1 === e.columnFilters[r[t]]) return !1;
+                  return !0;
+                },
+                e,
+              );
+            },
+            a(e.options, "debugTable", 0, () => e._autoResetPageIndex()),
+          );
+      }
+      function Y() {
+        return (e) =>
+          s(
+            () => [e.getState().grouping, e.getPreGroupedRowModel()],
+            (t, n) => {
+              if (!n.rows.length || !t.length)
+                return (
+                  n.rows.forEach((e) => {
+                    (e.depth = 0), (e.parentId = void 0);
+                  }),
+                  n
+                );
+              const l = t.filter((t) => e.getColumn(t)),
+                o = [],
+                i = {},
+                r = function (t, n, s) {
+                  if ((void 0 === n && (n = 0), n >= l.length))
+                    return t.map(
+                      (e) => (
+                        (e.depth = n),
+                        o.push(e),
+                        (i[e.id] = e),
+                        e.subRows && (e.subRows = r(e.subRows, n + 1, e.id)),
+                        e
+                      ),
+                    );
+                  const a = l[n],
+                    g = (function (e, t) {
+                      const n = new Map();
+                      return e.reduce((e, n) => {
+                        const l = `${n.getGroupingValue(t)}`,
+                          o = e.get(l);
+                        return o ? o.push(n) : e.set(l, [n]), e;
+                      }, n);
+                    })(t, a),
+                    d = Array.from(g.entries()).map((t, g) => {
+                      let [d, c] = t,
+                        p = `${a}:${d}`;
+                      p = s ? `${s}>${p}` : p;
+                      const m = r(c, n + 1, p);
+                      m.forEach((e) => {
+                        e.parentId = p;
+                      });
+                      const h = n ? u(c, (e) => e.subRows) : c,
+                        w = f(e, p, h[0].original, g, n, void 0, s);
+                      return (
+                        Object.assign(w, {
+                          groupingColumnId: a,
+                          groupingValue: d,
+                          subRows: m,
+                          leafRows: h,
+                          getValue: (t) => {
+                            if (l.includes(t)) {
+                              if (w._valuesCache.hasOwnProperty(t))
+                                return w._valuesCache[t];
+                              var n;
+                              if (c[0])
+                                w._valuesCache[t] =
+                                  null != (n = c[0].getValue(t)) ? n : void 0;
+                              return w._valuesCache[t];
                             }
-                            if (P._groupingValuesCache.hasOwnProperty($))
-                              return P._groupingValuesCache[$];
-                            const le = e.getColumn($),
-                              ge = le?.getAggregationFn();
-                            if (ge)
-                              return (
-                                (P._groupingValuesCache[$] = ge($, B, R)),
-                                P._groupingValuesCache[$]
-                              );
+                            if (w._groupingValuesCache.hasOwnProperty(t))
+                              return w._groupingValuesCache[t];
+                            const o = e.getColumn(t),
+                              i = null == o ? void 0 : o.getAggregationFn();
+                            return i
+                              ? ((w._groupingValuesCache[t] = i(t, h, c)),
+                                w._groupingValuesCache[t])
+                              : void 0;
                           },
                         }),
-                        M.forEach(($) => {
-                          r.push($), (i[$.id] = $);
+                        m.forEach((e) => {
+                          o.push(e), (i[e.id] = e);
                         }),
-                        P
+                        w
                       );
                     });
-                  },
-                  s = l(t.rows, 0);
-                return (
-                  s.forEach((a) => {
-                    r.push(a), (i[a.id] = a);
-                  }),
-                  { rows: s, flatRows: r, rowsById: i }
-                );
-              },
-              h(e.options, "debugTable", "getGroupedRowModel", () => {
-                e._queue(() => {
-                  e._autoResetExpanded(), e._autoResetPageIndex();
-                });
-              }),
-            );
-        }
-        function ot(e, o) {
-          const t = new Map();
-          return e.reduce((n, r) => {
-            const i = `${r.getGroupingValue(o)}`,
-              l = n.get(i);
-            return l ? l.push(r) : n.set(i, [r]), n;
-          }, t);
-        }
-        function ht(e) {
-          return (o) =>
-            p(
-              () => [
-                o.getState().pagination,
-                o.getPrePaginationRowModel(),
-                o.options.paginateExpandedRows ? void 0 : o.getState().expanded,
-              ],
-              (t, n) => {
-                if (!n.rows.length) return n;
-                const { pageSize: r, pageIndex: i } = t;
-                let { rows: l, flatRows: s, rowsById: a } = n;
-                const g = r * i,
-                  c = g + r;
-                l = l.slice(g, c);
-                let S;
-                o.options.paginateExpandedRows
-                  ? (S = { rows: l, flatRows: s, rowsById: a })
-                  : (S = xe({ rows: l, flatRows: s, rowsById: a })),
-                  (S.flatRows = []);
-                const d = (u) => {
-                  S.flatRows.push(u), u.subRows.length && u.subRows.forEach(d);
-                };
-                return S.rows.forEach(d), S;
-              },
-              h(o.options, "debugTable", "getPaginationRowModel"),
-            );
-        }
-        function rt() {
-          return (e) =>
-            p(
-              () => [e.getState().sorting, e.getPreSortedRowModel()],
-              (o, t) => {
-                if (!t.rows.length || !(o != null && o.length)) return t;
-                const n = e.getState().sorting,
-                  r = [],
-                  i = n.filter((a) => {
-                    var g;
-                    return (g = e.getColumn(a.id)) == null
-                      ? void 0
-                      : g.getCanSort();
-                  }),
-                  l = {};
-                i.forEach((a) => {
-                  const g = e.getColumn(a.id);
-                  g &&
-                    (l[a.id] = {
-                      sortUndefined: g.columnDef.sortUndefined,
-                      invertSorting: g.columnDef.invertSorting,
-                      sortingFn: g.getSortingFn(),
-                    });
-                });
-                const s = (a) => {
-                  const g = a.map((c) => ({ ...c }));
-                  return (
-                    g.sort((c, S) => {
-                      for (let u = 0; u < i.length; u += 1) {
-                        var d;
-                        const f = i[u],
-                          m = l[f.id],
-                          C = m.sortUndefined,
-                          R = (d = f?.desc) != null ? d : !1;
-                        let _ = 0;
-                        if (C) {
-                          const M = c.getValue(f.id),
-                            B = S.getValue(f.id),
-                            P = M === void 0,
-                            $ = B === void 0;
-                          if (P || $) {
-                            if (C === "first") return P ? -1 : 1;
-                            if (C === "last") return P ? 1 : -1;
-                            _ = P && $ ? 0 : P ? C : -C;
-                          }
-                        }
-                        if ((_ === 0 && (_ = m.sortingFn(c, S, f.id)), _ !== 0))
-                          return (
-                            R && (_ *= -1), m.invertSorting && (_ *= -1), _
-                          );
-                      }
-                      return c.index - S.index;
-                    }),
-                    g.forEach((c) => {
-                      var S;
-                      r.push(c),
-                        (S = c.subRows) != null &&
-                          S.length &&
-                          (c.subRows = s(c.subRows));
-                    }),
-                    g
-                  );
-                };
-                return { rows: s(t.rows), flatRows: r, rowsById: t.rowsById };
-              },
-              h(e.options, "debugTable", "getSortedRowModel", () =>
-                e._autoResetPageIndex(),
-              ),
-            );
-        }
-      },
-      54806: (Ve, b, D) => {
-        D.d(b, { E: () => Y });
-        var T = D(90626),
-          A = D(86709),
-          ee = D(45747),
-          G = D(74500),
-          N = D(57168);
-        function W(w, v) {
-          return w.filter((V) => !v.includes(V));
-        }
-        function Z(w, v, V) {
-          const F = w.slice(0);
-          return (F[v] = V), F;
-        }
-        var p = class extends G.Q {
-            #r;
-            #e;
-            #o;
-            #i;
-            #t;
-            #n;
-            #s;
-            #u;
-            constructor(w, v, V) {
-              super(),
-                (this.#r = w),
-                (this.#i = V),
-                (this.#o = []),
-                (this.#t = []),
-                (this.#e = []),
-                this.setQueries(v);
-            }
-            onSubscribe() {
-              this.listeners.size === 1 &&
-                this.#t.forEach((w) => {
-                  w.subscribe((v) => {
-                    this.#d(w, v);
-                  });
-                });
-            }
-            onUnsubscribe() {
-              this.listeners.size || this.destroy();
-            }
-            destroy() {
-              (this.listeners = new Set()),
-                this.#t.forEach((w) => {
-                  w.destroy();
-                });
-            }
-            setQueries(w, v, V) {
-              (this.#o = w),
-                (this.#i = v),
-                A.j.batch(() => {
-                  const F = this.#t,
-                    x = this.#l(this.#o);
-                  x.forEach((E) =>
-                    E.observer.setOptions(E.defaultedQueryOptions, V),
-                  );
-                  const I = x.map((E) => E.observer),
-                    L = I.map((E) => E.getCurrentResult()),
-                    O = I.some((E, Q) => E !== F[Q]);
-                  (F.length === I.length && !O) ||
-                    ((this.#t = I),
-                    (this.#e = L),
-                    this.hasListeners() &&
-                      (W(F, I).forEach((E) => {
-                        E.destroy();
-                      }),
-                      W(I, F).forEach((E) => {
-                        E.subscribe((Q) => {
-                          this.#d(E, Q);
-                        });
-                      }),
-                      this.#f()));
-                });
-            }
-            getCurrentResult() {
-              return this.#e;
-            }
-            getQueries() {
-              return this.#t.map((w) => w.getCurrentQuery());
-            }
-            getObservers() {
-              return this.#t;
-            }
-            getOptimisticResult(w, v) {
-              const F = this.#l(w).map((x) =>
-                x.observer.getOptimisticResult(x.defaultedQueryOptions),
-              );
-              return [F, (x) => this.#g(x ?? F, v), () => this.#a(F, w)];
-            }
-            #a(w, v) {
-              const V = this.#l(v);
-              return V.map((F, x) => {
-                const I = w[x];
-                return F.defaultedQueryOptions.notifyOnChangeProps
-                  ? I
-                  : F.observer.trackResult(I, (L) => {
-                      V.forEach((O) => {
-                        O.observer.trackProp(L);
-                      });
-                    });
-              });
-            }
-            #g(w, v) {
-              return v
-                ? ((!this.#n || this.#e !== this.#u || v !== this.#s) &&
-                    ((this.#s = v),
-                    (this.#u = this.#e),
-                    (this.#n = (0, N.BH)(this.#n, v(w)))),
-                  this.#n)
-                : w;
-            }
-            #l(w) {
-              const v = new Map(this.#t.map((F) => [F.options.queryHash, F])),
-                V = [];
+                  return d;
+                },
+                s = r(n.rows, 0);
               return (
-                w.forEach((F) => {
-                  const x = this.#r.defaultQueryOptions(F),
-                    I = v.get(x.queryHash);
-                  I
-                    ? V.push({ defaultedQueryOptions: x, observer: I })
-                    : V.push({
-                        defaultedQueryOptions: x,
-                        observer: new ee.$(this.#r, x),
-                      });
+                s.forEach((e) => {
+                  o.push(e), (i[e.id] = e);
                 }),
-                V
+                { rows: s, flatRows: o, rowsById: i }
               );
-            }
-            #d(w, v) {
-              const V = this.#t.indexOf(w);
-              V !== -1 && ((this.#e = Z(this.#e, V, v)), this.#f());
-            }
-            #f() {
-              if (this.hasListeners()) {
-                const w = this.#n,
-                  v = this.#g(this.#a(this.#e, this.#o), this.#i?.combine);
-                w !== v &&
-                  A.j.batch(() => {
-                    this.listeners.forEach((V) => {
-                      V(this.#e);
+            },
+            a(e.options, "debugTable", 0, () => {
+              e._queue(() => {
+                e._autoResetExpanded(), e._autoResetPageIndex();
+              });
+            }),
+          );
+      }
+      function ee() {
+        return (e) =>
+          s(
+            () => [e.getState().sorting, e.getPreSortedRowModel()],
+            (t, n) => {
+              if (!n.rows.length || null == t || !t.length) return n;
+              const l = e.getState().sorting,
+                o = [],
+                i = l.filter((t) => {
+                  var n;
+                  return null == (n = e.getColumn(t.id))
+                    ? void 0
+                    : n.getCanSort();
+                }),
+                r = {};
+              i.forEach((t) => {
+                const n = e.getColumn(t.id);
+                n &&
+                  (r[t.id] = {
+                    sortUndefined: n.columnDef.sortUndefined,
+                    invertSorting: n.columnDef.invertSorting,
+                    sortingFn: n.getSortingFn(),
+                  });
+              });
+              const u = (e) => {
+                const t = e.map((e) => ({ ...e }));
+                return (
+                  t.sort((e, t) => {
+                    for (let l = 0; l < i.length; l += 1) {
+                      var n;
+                      const o = i[l],
+                        u = r[o.id],
+                        s = u.sortUndefined,
+                        a = null != (n = null == o ? void 0 : o.desc) && n;
+                      let g = 0;
+                      if (s) {
+                        const n = void 0 === e.getValue(o.id),
+                          l = void 0 === t.getValue(o.id);
+                        if (n || l) {
+                          if ("first" === s) return n ? -1 : 1;
+                          if ("last" === s) return n ? 1 : -1;
+                          g = n && l ? 0 : n ? s : -s;
+                        }
+                      }
+                      if ((0 === g && (g = u.sortingFn(e, t, o.id)), 0 !== g))
+                        return a && (g *= -1), u.invertSorting && (g *= -1), g;
+                    }
+                    return e.index - t.index;
+                  }),
+                  t.forEach((e) => {
+                    var t;
+                    o.push(e),
+                      null != (t = e.subRows) &&
+                        t.length &&
+                        (e.subRows = u(e.subRows));
+                  }),
+                  t
+                );
+              };
+              return { rows: u(n.rows), flatRows: o, rowsById: n.rowsById };
+            },
+            a(e.options, "debugTable", 0, () => e._autoResetPageIndex()),
+          );
+      }
+    },
+    54806: (e, t, n) => {
+      n.d(t, { E: () => h });
+      var l = n(90626),
+        o = n(86709),
+        i = n(45747),
+        r = n(74500),
+        u = n(57168);
+      function s(e, t) {
+        return e.filter((e) => !t.includes(e));
+      }
+      var a = class extends r.Q {
+          #e;
+          #t;
+          #n;
+          #l;
+          #o;
+          #i;
+          #r;
+          #u;
+          constructor(e, t, n) {
+            super(),
+              (this.#e = e),
+              (this.#l = n),
+              (this.#n = []),
+              (this.#o = []),
+              (this.#t = []),
+              this.setQueries(t);
+          }
+          onSubscribe() {
+            1 === this.listeners.size &&
+              this.#o.forEach((e) => {
+                e.subscribe((t) => {
+                  this.#s(e, t);
+                });
+              });
+          }
+          onUnsubscribe() {
+            this.listeners.size || this.destroy();
+          }
+          destroy() {
+            (this.listeners = new Set()),
+              this.#o.forEach((e) => {
+                e.destroy();
+              });
+          }
+          setQueries(e, t, n) {
+            (this.#n = e),
+              (this.#l = t),
+              o.j.batch(() => {
+                const e = this.#o,
+                  t = this.#a(this.#n);
+                t.forEach((e) =>
+                  e.observer.setOptions(e.defaultedQueryOptions, n),
+                );
+                const l = t.map((e) => e.observer),
+                  o = l.map((e) => e.getCurrentResult()),
+                  i = l.some((t, n) => t !== e[n]);
+                (e.length !== l.length || i) &&
+                  ((this.#o = l),
+                  (this.#t = o),
+                  this.hasListeners() &&
+                    (s(e, l).forEach((e) => {
+                      e.destroy();
+                    }),
+                    s(l, e).forEach((e) => {
+                      e.subscribe((t) => {
+                        this.#s(e, t);
+                      });
+                    }),
+                    this.#g()));
+              });
+          }
+          getCurrentResult() {
+            return this.#t;
+          }
+          getQueries() {
+            return this.#o.map((e) => e.getCurrentQuery());
+          }
+          getObservers() {
+            return this.#o;
+          }
+          getOptimisticResult(e, t) {
+            const n = this.#a(e).map((e) =>
+              e.observer.getOptimisticResult(e.defaultedQueryOptions),
+            );
+            return [n, (e) => this.#d(e ?? n, t), () => this.#c(n, e)];
+          }
+          #c(e, t) {
+            const n = this.#a(t);
+            return n.map((t, l) => {
+              const o = e[l];
+              return t.defaultedQueryOptions.notifyOnChangeProps
+                ? o
+                : t.observer.trackResult(o, (e) => {
+                    n.forEach((t) => {
+                      t.observer.trackProp(e);
                     });
                   });
-              }
-            }
-          },
-          h = D(75233),
-          X = D(22730),
-          te = D(43424),
-          y = D(19086),
-          q = D(44407),
-          J = D(19866);
-        function Y({ queries: w, ...v }, V) {
-          const F = (0, h.jE)(V),
-            x = (0, X.w)(),
-            I = (0, te.h)(),
-            L = T.useMemo(
-              () =>
-                w.map((H) => {
-                  const j = F.defaultQueryOptions(H);
-                  return (
-                    (j._optimisticResults = x ? "isRestoring" : "optimistic"), j
-                  );
-                }),
-              [w, F, x],
-            );
-          L.forEach((H) => {
-            (0, q.jv)(H), (0, y.LJ)(H, I);
-          }),
-            (0, y.wZ)(I);
-          const [O] = T.useState(() => new p(F, L, v)),
-            [E, Q, ne] = O.getOptimisticResult(L, v.combine);
-          T.useSyncExternalStore(
-            T.useCallback(
-              (H) => (x ? J.l : O.subscribe(A.j.batchCalls(H))),
-              [O, x],
-            ),
-            () => O.getCurrentResult(),
-            () => O.getCurrentResult(),
-          ),
-            T.useEffect(() => {
-              O.setQueries(L, v, { listeners: !1 });
-            }, [L, v, O]);
-          const z = E.some((H, j) => (0, q.EU)(L[j], H))
-            ? E.flatMap((H, j) => {
-                const k = L[j];
-                if (k) {
-                  const de = new ee.$(F, k);
-                  if ((0, q.EU)(k, H)) return (0, q.iL)(k, de, I);
-                  (0, q.nE)(H, x) && (0, q.iL)(k, de, I);
-                }
-                return [];
-              })
-            : [];
-          if (z.length > 0) throw Promise.all(z);
-          const se = E.find((H, j) => {
-            const k = L[j];
+            });
+          }
+          #d(e, t) {
+            return t
+              ? ((this.#i && this.#t === this.#u && t === this.#r) ||
+                  ((this.#r = t),
+                  (this.#u = this.#t),
+                  (this.#i = (0, u.BH)(this.#i, t(e)))),
+                this.#i)
+              : e;
+          }
+          #a(e) {
+            const t = new Map(this.#o.map((e) => [e.options.queryHash, e])),
+              n = [];
             return (
-              k &&
-              (0, y.$1)({
-                result: H,
-                errorResetBoundary: I,
-                throwOnError: k.throwOnError,
-                query: F.getQueryCache().get(k.queryHash),
-              })
+              e.forEach((e) => {
+                const l = this.#e.defaultQueryOptions(e),
+                  o = t.get(l.queryHash);
+                o
+                  ? n.push({ defaultedQueryOptions: l, observer: o })
+                  : n.push({
+                      defaultedQueryOptions: l,
+                      observer: new i.$(this.#e, l),
+                    });
+              }),
+              n
             );
-          });
-          if (se?.error) throw se.error;
-          return Q(ne());
-        }
-      },
+          }
+          #s(e, t) {
+            const n = this.#o.indexOf(e);
+            -1 !== n &&
+              ((this.#t = (function (e, t, n) {
+                const l = e.slice(0);
+                return (l[t] = n), l;
+              })(this.#t, n, t)),
+              this.#g());
+          }
+          #g() {
+            if (this.hasListeners()) {
+              this.#i !==
+                this.#d(this.#c(this.#t, this.#n), this.#l?.combine) &&
+                o.j.batch(() => {
+                  this.listeners.forEach((e) => {
+                    e(this.#t);
+                  });
+                });
+            }
+          }
+        },
+        g = n(75233),
+        d = n(22730),
+        c = n(43424),
+        p = n(19086),
+        f = n(44407),
+        m = n(19866);
+      function h({ queries: e, ...t }, n) {
+        const r = (0, g.jE)(n),
+          u = (0, d.w)(),
+          s = (0, c.h)(),
+          h = l.useMemo(
+            () =>
+              e.map((e) => {
+                const t = r.defaultQueryOptions(e);
+                return (
+                  (t._optimisticResults = u ? "isRestoring" : "optimistic"), t
+                );
+              }),
+            [e, r, u],
+          );
+        h.forEach((e) => {
+          (0, f.jv)(e), (0, p.LJ)(e, s);
+        }),
+          (0, p.wZ)(s);
+        const [w] = l.useState(() => new a(r, h, t)),
+          [v, C, b] = w.getOptimisticResult(h, t.combine);
+        l.useSyncExternalStore(
+          l.useCallback(
+            (e) => (u ? m.l : w.subscribe(o.j.batchCalls(e))),
+            [w, u],
+          ),
+          () => w.getCurrentResult(),
+          () => w.getCurrentResult(),
+        ),
+          l.useEffect(() => {
+            w.setQueries(h, t, { listeners: !1 });
+          }, [h, t, w]);
+        const S = v.some((e, t) => (0, f.EU)(h[t], e))
+          ? v.flatMap((e, t) => {
+              const n = h[t];
+              if (n) {
+                const t = new i.$(r, n);
+                if ((0, f.EU)(n, e)) return (0, f.iL)(n, t, s);
+                (0, f.nE)(e, u) && (0, f.iL)(n, t, s);
+              }
+              return [];
+            })
+          : [];
+        if (S.length > 0) throw Promise.all(S);
+        const R = v.find((e, t) => {
+          const n = h[t];
+          return (
+            n &&
+            (0, p.$1)({
+              result: e,
+              errorResetBoundary: s,
+              throwOnError: n.throwOnError,
+              query: r.getQueryCache().get(n.queryHash),
+            })
+          );
+        });
+        if (R?.error) throw R.error;
+        return C(b());
+      }
     },
-  ]);
-})();
+  },
+]);

@@ -98,7 +98,7 @@
     "ReviewFilters_PurchaseTypeOther": "Jokin muu",
     "ReviewFilters_PurchaseTypeOtherTooltip": "Näiden arvostelujen kirjoittajat eivät ole ostaneet peliä Steamistä. (He ovat voineet saada sen hyväksytyllä tavalla digitaalisesta liikkeestä tai jälleenmyyjältä tai tuotteen testaus- tai arvostelutarkoituksessa. Peli on voitu myös saada sääntöjenvastaisella tavalla esimerkiksi vastineeksi arvostelujen kirjoittamisesta.)",
     "ReviewFilters_PurchaseTypeOtherForFilter": "Ostettu Steamin ulkopuolelta",
-    "ReviewFilters_Language": "Sopimatonta kielenkäyttöä",
+    "ReviewFilters_Language": "Kieli",
     "ReviewFilters_LanguageAll": "Kaikki kielet",
     "ReviewFilters_LanguageYours": "Omat kielet",
     "ReviewFilters_LanguageYoursTooltip_Line1": "Asetuksesi on tällä hetkellä määritetty näyttämään näillä kielillä luotua sisältöä: %1$s.",

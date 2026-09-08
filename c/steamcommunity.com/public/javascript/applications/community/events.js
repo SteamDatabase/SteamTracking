@@ -49,7 +49,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -539,9 +538,7 @@
           _.useEffect(() => {
             _._.Init(new _._(_._.WEBAPI_BASE_URL)),
               _._.Init(),
-              Promise.all([_._.InitGlobal()]).then(() =>
-                __webpack_require__(!1),
-              );
+              __webpack_require__(!1);
           }, []),
           _
             ? null

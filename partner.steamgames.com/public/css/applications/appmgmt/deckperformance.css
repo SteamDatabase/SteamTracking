@@ -7,8 +7,8 @@
 }
 ._3cVL8Lt1OMroMTVCMlr_1o,
 ._3iH3NPfTuZEgKkeMZSIHMN {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background: #323539;
   color: #fff;
   font-size: 14px;
@@ -18,7 +18,6 @@
 ._3iH3NPfTuZEgKkeMZSIHMN ._1XOEGQOlJQVwkWxEVhS-U2 {
   display: flex;
   flex-direction: column;
-  width: 800px;
   margin-right: 10px;
 }
 ._3cVL8Lt1OMroMTVCMlr_1o ._1XOEGQOlJQVwkWxEVhS-U2 ._1C4uPBMaD8hewNntz_uA3F,
@@ -125,4 +124,72 @@
 }
 ._2WkkV2Wg0u_3QDy9g6Q4yY ._78FuQRakVNuz-fNPKM9m_ {
   border-bottom-color: #67c1f5;
+}
+._3WBxQEY65qUzlWxin28Vtk {
+  margin-left: 40px;
+}
+._3WBxQEY65qUzlWxin28Vtk ._1MTZOaNYA30CHWXAvcI8gL {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  height: 200px;
+}
+._3WBxQEY65qUzlWxin28Vtk ._1MTZOaNYA30CHWXAvcI8gL ._1Xg8jwpB60j3CS1RAvy12d {
+  background-image: linear-gradient(45deg, #185a89, #1a9fff);
+  width: 16px;
+  transition-property: height, margin-top;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+._3WBxQEY65qUzlWxin28Vtk
+  ._1MTZOaNYA30CHWXAvcI8gL
+  ._1Xg8jwpB60j3CS1RAvy12d
+  ._2nV2VeXYF3zU1RRW-66tLK {
+  font-size: 12px;
+  color: #000;
+  transform: rotate(-90deg) translateX(-38px);
+  transform-origin: top left;
+  width: 16px;
+}
+._3WBxQEY65qUzlWxin28Vtk ._27ILhiLpeZOcytOo5xl-ul {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  gap: 2px;
+  height: 40px;
+  border-top: 1px solid gray;
+}
+._3WBxQEY65qUzlWxin28Vtk ._27ILhiLpeZOcytOo5xl-ul ._1VQCzz-bKmYHtp8Tm5KQzP {
+  flex: 0 0 16px;
+}
+._3WBxQEY65qUzlWxin28Vtk
+  ._27ILhiLpeZOcytOo5xl-ul
+  ._1VQCzz-bKmYHtp8Tm5KQzP
+  ._2qB7E_nIxNYaX35EBnRISc {
+  width: 1px;
+  height: 6px;
+  margin: 0 auto;
+  background-color: gray;
+}
+._3WBxQEY65qUzlWxin28Vtk
+  ._27ILhiLpeZOcytOo5xl-ul
+  ._1VQCzz-bKmYHtp8Tm5KQzP
+  ._1Ep0gM0lRnWp7uhUCmssnW {
+  visibility: hidden;
+}
+._3WBxQEY65qUzlWxin28Vtk
+  ._27ILhiLpeZOcytOo5xl-ul
+  ._1VQCzz-bKmYHtp8Tm5KQzP
+  ._317oB8prBfarBhyivc4bkB {
+  font-size: 12px;
+  transform: rotate(-90deg) translateX(-28px);
+  transform-origin: top left;
+  width: 16px;
+}
+._3WBxQEY65qUzlWxin28Vtk ._12RkB0ye7r5ZCa4og8tbWC {
+  font-size: 20px;
+  text-align: center;
+}
+.GBy50vuPi8ifA3M3YvGUB {
+  color: red;
 }

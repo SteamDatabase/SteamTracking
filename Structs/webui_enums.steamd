@@ -21,6 +21,13 @@ enum BundleSort
 	k_BundleSort_Popular = 3;
 }
 
+enum by
+{
+	by_player = 1;
+	by_wishlist = 2;
+	by_play_wish = 3;
+}
+
 enum ckP
 {
 	k_EConnectivityTestResult_Unknown = 0;
@@ -54,6 +61,45 @@ enum CM_TYPEFLAG
 	CM_TYPEFLAG_MEDIA = 8;
 	CM_TYPEFLAG_SELECTION = 16;
 	CM_TYPEFLAG_EDITABLE = 32;
+}
+
+enum ConfigPage
+{
+	k_ConfigPage_Takeover = 1;
+	k_ConfigPage_Takeunder = 2;
+	k_ConfigPage_TakeoverSteamChina = 3;
+	k_ConfigPage_Spotlight = 4;
+	k_ConfigPage_EarlyAccess_Takeover = 5;
+	k_ConfigPage_FreeToPlay_Takeover = 6;
+	k_ConfigPage_GreatOnDeck_Takeover = 7;
+	k_ConfigPage_Category_Action_Takeover = 8;
+	k_ConfigPage_Category_Multiplayer_Takeover = 9;
+	k_ConfigPage_Demo_Hub_Takeover = 10;
+	k_ConfigPage_RPG_Tag_Hub_Takeover = 11;
+	k_ConfigPage_Racing_Tag_Hub_Takeover = 12;
+	k_ConfigPage_VR_Hub_Takeover = 13;
+	k_ConfigPage_Casual_Tag_Hub_Takeover = 14;
+}
+
+enum CreatorHome
+{
+	k_CreatorHomeNone = 0;
+	k_CreatorHomeAll = -1;
+}
+
+enum Display
+{
+	k_DisplayAll = 0;
+	k_DisplayPublic = 1;
+	k_DisplayStaged = 2;
+	k_DisplayBeta = 3;
+	k_DisplayBetaPastStart = 4;
+	k_DisplayGift = 5;
+	k_DisplayAprrovedForPublishing = 6;
+	k_DisplayActiveAndUpcoming = 0;
+	k_DisplayActive = 1;
+	k_DisplayUpcoming = 2;
+	k_DisplayExpired = 3;
 }
 
 enum DOTA_ACCESS_TOURNAMENT
@@ -234,12 +280,20 @@ enum EButton
 	k_EButton_Max = 64;
 }
 
+enum ECartDisplayType
+{
+	k_ECartDisplayType_Unknown = 0;
+	k_ECartDisplayType_Modal = 1;
+	k_ECartDisplayType_FullPage = 2;
+}
+
 enum ECategoryButtonAction
 {
 	k_ECategoryButtonAction_None = 0;
 	k_ECategoryButtonAction_Filter = 1;
 	k_ECategoryButtonAction_Add = 2;
 	k_ECategoryButtonAction_Remove = 3;
+	k_ECategoryButtonAction_Select = 4;
 }
 
 enum EChatFontSize
@@ -336,12 +390,31 @@ enum EControllerOutputAxis
 	k_EControllerOutputAxisBoth = 2;
 }
 
+enum ECountryTarget
+{
+	k_ECountryTarget_AllowList = 1;
+	k_ECountryTarget_DenyList = 2;
+}
+
 enum ECurator
 {
 	k_ECuratorFollow = 1;
 	k_ECuratorUnfollow = 2;
 	k_ECuratorIgnore = 3;
 	k_ECuratorUnignore = 4;
+}
+
+enum EDown
+{
+	k_EDownoadInvalid = 0;
+	k_EDownloadTrailer = 1;
+	k_EDownloadHeader = 2;
+	k_EDownloadSmallCapsule = 3;
+	k_EDownloadMainCapsule = 4;
+	k_EDownloadVerticalCapsule = 5;
+	k_EDownloadPageBackground = 6;
+	k_EDownloadAllAgeSafeScreenshots = 7;
+	k_EDownloadScreenshots = 8;
 }
 
 enum EDownloadSection
@@ -625,6 +698,16 @@ enum ELoginUIStyle
 	k_ELoginUIStyleNew = 2;
 }
 
+enum EMarketingMessageFlags
+{
+	k_EMarketingMessageFlagsNone = 0;
+	k_EMarketingMessageFlagsHighPriority = 1;
+	k_EMarketingMessageFlagsPlatformWindows = 2;
+	k_EMarketingMessageFlagsPlatformMac = 4;
+	k_EMarketingMessageFlagsPlatformLinux = 8;
+	k_EMarketingMessageFlagsPlatformRestrictions = 14;
+}
+
 enum EMenu
 {
 	k_EMenuButtonPress = 0;
@@ -684,6 +767,18 @@ enum ENotifyFlag
 	k_ENotifyFlagNone = 0;
 	k_ENotifyFlagByEmail = 1;
 	k_ENotifyFlagByPush = 2;
+}
+
+enum EOptInType
+{
+	k_EOptInType_EventRegistration = 0;
+	k_EOptInType_RecommendedAction = 1;
+}
+
+enum EOptInVisibility
+{
+	k_EOptInVisibility_Public = 0;
+	k_EOptInVisibility_InviteOnly = 1;
 }
 
 enum EOutputAxis
@@ -790,6 +885,13 @@ enum EPreviewMode
 	EPreviewMode_EditBackground = 3;
 }
 
+enum EPurchaseNoticeType
+{
+	EPurchaseNoticeType_ControllerRequired = 0;
+	EPurchaseNoticeType_VRRequired = 1;
+	EPurchaseNoticeType_VRSupported = 2;
+}
+
 enum EPurchaseReservationState
 {
 	k_EPurchaseReservationState_NotReserved = 0;
@@ -806,6 +908,20 @@ enum ERaiseGameWindowResult
 	k_ERaiseGameWindowResult_NotRunning = 1;
 	k_ERaiseGameWindowResult_Success = 2;
 	k_ERaiseGameWindowResult_Failure = 3;
+}
+
+enum ERemoteClientInstall
+{
+	k_ERemoteClientInstallOK = 1;
+	k_ERemoteClientInstallFail = 2;
+	k_ERemoteClientInstallNoSpace = 3;
+	k_ERemoteClientInstallDownloadFiltered = 4;
+	k_ERemoteClientInstallRequiresUI = 5;
+	k_ERemoteClientInstallRequiresEULA = 6;
+	k_ERemoteClientInstallAlreadyInstalled = 7;
+	k_ERemoteClientInstallTimeout = 8;
+	k_ERemoteClientInstallAccessDenied = 9;
+	k_ERemoteClientInstallNetworkError = 10;
 }
 
 enum ERemoteClientLaunch
@@ -1210,6 +1326,13 @@ enum Notification
 	Notification_Destroyed = 603;
 }
 
+enum Preview
+{
+	k_PreviewDesktop = 1;
+	k_PreviewMobile = 2;
+	k_PreviewGamepad = 3;
+}
+
 enum Rhn
 {
 	k_EGameIDTypeApp = 0;
@@ -1227,6 +1350,12 @@ enum ShowGripButtons
 	k_ShowGripButtons_All = 15;
 }
 
+enum SortBy
+{
+	k_SortByPriority = 0;
+	k_SortByStartDate = 1;
+}
+
 enum SSr
 {
 	k_EOverlayToStoreFlag_None = 0;
@@ -1238,6 +1367,16 @@ enum STORAGE
 {
 	STORAGE_DOES_NOT_EXIST = 0;
 	STORAGE_IN_MEMORY = 1;
+}
+
+enum Store
+{
+	k_StoreInvalidState = 0;
+	k_StoreUnavailable = 1;
+	k_StorePrePurchase = 2;
+	k_StoreComingSoon = 3;
+	k_StoreEarlyAccess = 4;
+	k_StoreGeneralAvailability = 5;
 }
 
 enum Sxg
@@ -1386,6 +1525,15 @@ enum UnnamedEnum0730ad4114e80088
 	INTERNATIONAL_2026 = 25;
 }
 
+enum UnnamedEnum0731ad10e9d10396
+{
+	Idle = 0;
+	Loading = 1;
+	OK = 2;
+	FailedToLoad = 3;
+	RequiresCooldown = 4;
+}
+
 enum UnnamedEnum07fc2c3567eb7e19
 {
 	Idle = 0;
@@ -1397,6 +1545,13 @@ enum UnnamedEnum082dd12e6086021e
 	Neutral = 0;
 	Up = 1;
 	Down = 2;
+}
+
+enum UnnamedEnum08a7599cef1b51d6
+{
+	Summary = 0;
+	Sales = 1;
+	Marketing = 2;
 }
 
 enum UnnamedEnum0a1393e07211be99
@@ -1509,6 +1664,14 @@ enum UnnamedEnum103c46b6e6314ec9
 	k_EUpdatesDisabledByUser = 9;
 	k_EUpdatesDisabledByApp = 10;
 	k_ECompleted = 11;
+}
+
+enum UnnamedEnum10fca4e49733d28f
+{
+	k_ECanRequest = 0;
+	k_EIsNotChild = 1;
+	k_EInvalidCartType = 2;
+	k_ENonGiftableItemPresent = 3;
 }
 
 enum UnnamedEnum11b0fa7d9ee589b2
@@ -1832,6 +1995,12 @@ enum UnnamedEnum1b2e013c09afd423
 	SendFailure = 3;
 }
 
+enum UnnamedEnum1e6f97ac4db559c6
+{
+	k_BlockDate = 1;
+	k_ScheduleSlot = 2;
+}
+
 enum UnnamedEnum1eb9732e676a1f8b
 {
 	Loaded = 0;
@@ -2133,6 +2302,15 @@ enum UnnamedEnum258d6841bf5f8ea0
 	Prompt = 1;
 }
 
+enum UnnamedEnum25bb92eddba41afe
+{
+	Invalid = 0;
+	Input = 1;
+	Preprocessing = 2;
+	Keras = 3;
+	Train = 4;
+}
+
 enum UnnamedEnum26b26332fa565251
 {
 	BackSpace = 65288;
@@ -2140,6 +2318,13 @@ enum UnnamedEnum26b26332fa565251
 	Return = 65293;
 	Page_Up = 65365;
 	Page_Down = 65366;
+}
+
+enum UnnamedEnum274d8518ea2b5142
+{
+	NotRequired = 0;
+	NotSetUp = 1;
+	SetUp = 2;
 }
 
 enum UnnamedEnum27cbc52f3d26b7db
@@ -2180,6 +2365,19 @@ enum UnnamedEnum2c41fa064d91dbff
 	k_EPushToMute = 2;
 }
 
+enum UnnamedEnum2c763df13954ae16
+{
+	Unknown = 0;
+	Cancelled = 1;
+	InviteActive = 2;
+	InviteExpired = 3;
+	InviteAccepted = 4;
+	DealReady = 5;
+	DealLive = 6;
+	DealCompleted = 7;
+	DealFailed = 8;
+}
+
 enum UnnamedEnum2de1caa33e895f3d
 {
 	Unnecessary = 1;
@@ -2197,6 +2395,14 @@ enum UnnamedEnum2e964de28043db37
 	Purple = 6;
 	Brown = 7;
 	Gray = 8;
+}
+
+enum UnnamedEnum304f4bcd9d879629
+{
+	Idle = 0;
+	Loading = 1;
+	OK = 2;
+	Failed = 3;
 }
 
 enum UnnamedEnum31519674c5008bd3
@@ -2231,6 +2437,13 @@ enum UnnamedEnum323da3ee58c3d5c9
 	StreamingAvailable = 2;
 	ActiveSingleLink = 3;
 	ActiveMultiLink = 4;
+}
+
+enum UnnamedEnum32d9c79bb287cb61
+{
+	Hidden = 0;
+	Create = 1;
+	Edit = 2;
 }
 
 enum UnnamedEnum336a74c93bcf88cc
@@ -2344,6 +2557,13 @@ enum UnnamedEnum3a1537825edcb481
 	OUTSIDE_EDITOR = 13;
 }
 
+enum UnnamedEnum3bfd44005cf37904
+{
+	k_Optional = 0;
+	k_Suggested = 1;
+	k_Required = 2;
+}
+
 enum UnnamedEnum3dd1c4581017d7dd
 {
 	FIRST = 0;
@@ -2353,13 +2573,12 @@ enum UnnamedEnum3dd1c4581017d7dd
 	PREFERRED_CHILD = 4;
 }
 
-enum UnnamedEnum3fcaac8de59d5e7c
+enum UnnamedEnum417b0cbbb904eb0c
 {
-	PRE_NAME = 0;
-	IN_NAME = 1;
-	POST_NAME = 2;
-	IN_VALUE = 3;
-	IN_QUOTED_VALUE = 4;
+	NONE = 0;
+	MAIN = 1;
+	FETCH_WORKERS = 2;
+	GPU = 3;
 }
 
 enum UnnamedEnum41ef8b0e788e0224
@@ -2827,6 +3046,15 @@ enum UnnamedEnum5b3ee43818cae779
 	k_ShuttingDown = 2;
 }
 
+enum UnnamedEnum5b8032725cc6864d
+{
+	k_AwaitingPartner = 0;
+	k_AssetSubmitted = 1;
+	k_DeliveryReviewed = 2;
+	k_DesignComplete = 3;
+	k_LocalizationDone = 4;
+}
+
 enum UnnamedEnum5e14c6d1b71a889d
 {
 	LeftTop = 0;
@@ -2874,6 +3102,13 @@ enum UnnamedEnum6010fbb978b95cf2
 	Disabled = 0;
 	EnabledForActive = 1;
 	Enabled = 2;
+}
+
+enum UnnamedEnum633870f64a8b01c1
+{
+	NoRecipientSelected = 0;
+	AccountSelected = 1;
+	EmailSelected = 2;
 }
 
 enum UnnamedEnum6645bbd3618ce340
@@ -3106,6 +3341,12 @@ enum UnnamedEnum7cd98891c307c5cf
 	Login = 3;
 	WaitingForLibrary = 4;
 	EnterPin = 5;
+}
+
+enum UnnamedEnum8007cbba74d1848c
+{
+	None = 0;
+	InvalidCode = 1;
 }
 
 enum UnnamedEnum80fbd0ff3a6fe079
@@ -3471,6 +3712,13 @@ enum UnnamedEnum909cfb3b97589424
 	SteamGuidedTourFinished = 10;
 }
 
+enum UnnamedEnum91788a9e6e102512
+{
+	Client = 0;
+	GameServer = 1;
+	OfficialGameServer = 2;
+}
+
 enum UnnamedEnum940ff890eb1bf26e
 {
 	POPULAR = 1;
@@ -3482,6 +3730,15 @@ enum UnnamedEnum9524e4d523009738
 {
 	Inline = 1;
 	Gutter = 2;
+}
+
+enum UnnamedEnum953b696abb380ac4
+{
+	Invalid = 0;
+	AccountName = 1;
+	EmailCode = 2;
+	TwoFactorCode = 3;
+	Complete = 4;
 }
 
 enum UnnamedEnum95c6d1aa56bc1dce
@@ -3562,6 +3819,51 @@ enum UnnamedEnum9c19a486ce41ad6d
 {
 	NONE = 0;
 	SHUTDOWN = 1;
+}
+
+enum UnnamedEnum9d7ad1fa316f69ce
+{
+	k_Custom = 0;
+	k_AssetKit = 1;
+	k_DemoPressPreview = 2;
+	k_ScheduleLiveStream = 3;
+	k_CancelSection = 4;
+	k_DemoNotReady = 5;
+	k_ReviewCategorization = 6;
+	k_DemoReview = 7;
+	k_PressPreviewDetails = 8;
+	k_StatsSummary = 9;
+	k_SurveyButton = 10;
+	k_DemoLaunch = 11;
+	k_CallForRegistration = 12;
+	k_EnterDiscount = 13;
+	k_EnterDiscountReminder = 14;
+	k_LearnMore = 15;
+	k_MediaUsePermission = 16;
+	k_MeasureResults = 17;
+	k_TrailerOrDemoPermissions = 18;
+	k_NextFestQASession = 19;
+	k_NextFestReturns = 20;
+	k_NextFestWhatNext = 21;
+	k_NextFestTips = 22;
+	k_NextFestStartsNow = 23;
+	k_MeasureResultsFree = 24;
+	k_NextFestThankYou = 25;
+	k_MediaPermissionReminder = 26;
+	k_SaleThankYou = 27;
+	k_NextFestMediaUsageIntended = 28;
+	k_GenericActionLink = 29;
+	k_SteamAwardsCategories = 30;
+	k_NextFestMediaUsageIntendedTrailer = 31;
+	k_NextFestMediaUsageIntendedLivestream = 32;
+	k_NextFestTopGameWrapUp = 33;
+	k_ImageBoxSection = 34;
+	k_MeasureResultsNextFest = 35;
+	k_SeasonalFeatureRequest = 36;
+	k_SeasonalFeatureDiscount = 37;
+	k_GenericActionButton = 38;
+	k_NextFestRegisteredWhatNext = 39;
+	k_NextFestMediaUsageConfirmationTrailer = 40;
 }
 
 enum UnnamedEnum9d93397a59dbdedb
@@ -3729,6 +4031,22 @@ enum UnnamedEnumacc9a67b80433cd5
 	TheaterSlow = 1;
 }
 
+enum UnnamedEnumad5f244ec47c479c
+{
+	k_RegistrationConfirmation = 0;
+	k_Reminder = 1;
+	k_Invite = 2;
+	k_Followup = 3;
+	k_Starting = 4;
+	k_InviteReminder = 5;
+	k_Update = 6;
+	k_PermissionRequest = 7;
+	k_MediaUsageNotification = 8;
+	k_GeneralCommunication = 9;
+	k_SteamAwardFinalists = 10;
+	k_MediaUsageConfirmation = 11;
+}
+
 enum UnnamedEnumad6b0ba9e64c3c66
 {
 	AnyController = 0;
@@ -3834,6 +4152,13 @@ enum UnnamedEnumb4c56acde5c1c2a0
 	TextDefined = 0;
 	LF = 1;
 	CRLF = 2;
+}
+
+enum UnnamedEnumb4d6addf724df0d6
+{
+	Info = 0;
+	Positive = 1;
+	Negative = 2;
 }
 
 enum UnnamedEnumb58cf35b311fefd7
@@ -3943,6 +4268,12 @@ enum UnnamedEnumbf94e43b6037649d
 	OpenLinkInNewTab = 26503;
 }
 
+enum UnnamedEnumc0b496922a237a5b
+{
+	k_eSteamInputAPISupport = 0;
+	k_eNoSteamInputAPISupport = 1;
+}
+
 enum UnnamedEnumc0d3181531d6b6e5
 {
 	Unknown = 0;
@@ -3961,6 +4292,28 @@ enum UnnamedEnumc2b67199254beacd
 	NOTSCORED_NEVER_STARTED = 67;
 	NOTSCORED_CANCELED = 68;
 	NOTSCORED_SUSPICIOUS = 69;
+}
+
+enum UnnamedEnumc3c06b9797acb457
+{
+	k_eMouseKBOnly = 0;
+	k_eGamepadAndMouse = 1;
+	k_eGamepadPreferred = 2;
+	k_eGamepadRequired = 3;
+}
+
+enum UnnamedEnumc3e92156fdf20f6c
+{
+	k_ParentalFeature = 0;
+	k_ParentalPlaytime = 1;
+	k_PurchaseRequest = 2;
+}
+
+enum UnnamedEnumc4470fbad2c31445
+{
+	Show = 0;
+	Only = 1;
+	Hide = 2;
 }
 
 enum UnnamedEnumc44bf4cf244e5406
@@ -4213,6 +4566,12 @@ enum UnnamedEnumd8b0cee91fc2961d
 	DUMMY_INPUT = 29;
 }
 
+enum UnnamedEnumd97103ae663c8a09
+{
+	k_eFullXboxControllerSupport = 0;
+	k_ePartialXboxControllerSupport = 1;
+}
+
 enum UnnamedEnumd9756707c458b640
 {
 	NONE = 0;
@@ -4348,6 +4707,17 @@ enum UnnamedEnumeb660645b84e5c96
 	Collapsed = 1;
 	PreserveOrExpanded = 2;
 	PreserveOrCollapsed = 3;
+}
+
+enum UnnamedEnumec319d06f27559b4
+{
+	BuildReview = 0;
+	StorePageReview = 1;
+	SteamChina_BuildReview = 2;
+	SteamChina_StorePageReview = 3;
+	SteamChinaPlatformOperator_StorePageReview = 4;
+	SteamChinaPlatformOperator_BuildReview = 5;
+	SteamDeckCompatibilityReview = 6;
 }
 
 enum UnnamedEnumed37b551cf653bf6

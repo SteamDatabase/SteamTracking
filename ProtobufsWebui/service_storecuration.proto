@@ -1,9 +1,5 @@
+import "common.proto";
 import "common_base.proto";
-
-message CLocalizationToken {
-	optional uint32 language = 1;
-	optional string localized_string = 2;
-}
 
 message CStoreCuration_GetListDetails_Request {
 	optional fixed64 steamid = 1;

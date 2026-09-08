@@ -1,60 +1,51 @@
-(() => {
-  (self.webpackChunkappmgmt_storeadmin =
-    self.webpackChunkappmgmt_storeadmin || []).push([
-    [3667],
-    {
-      chunkid: (module) => {
-        "use strict";
-        module.exports = function _(_, _) {
-          if (_ === _) return !0;
-          if (_ && _ && typeof _ == "object" && typeof _ == "object") {
-            if (_.constructor !== _.constructor) return !1;
-            var _, _, _;
-            if (Array.isArray(_)) {
-              if (((_ = _.length), _ != _.length)) return !1;
-              for (_ = _; _-- !== 0; ) if (!_(_[_], _[_])) return !1;
-              return !0;
-            }
-            if (_.constructor === RegExp)
-              return _.source === _.source && _.flags === _.flags;
-            if (_.valueOf !== Object.prototype.valueOf)
-              return _.valueOf() === _.valueOf();
-            if (_.toString !== Object.prototype.toString)
-              return _.toString() === _.toString();
-            if (
-              ((_ = Object.keys(_)),
-              (_ = _.length),
-              _ !== Object.keys(_).length)
-            )
-              return !1;
-            for (_ = _; _-- !== 0; )
-              if (!Object.prototype.hasOwnProperty.call(_, _[_])) return !1;
-            for (_ = _; _-- !== 0; ) {
-              var _ = _[_];
-              if (!_(_[_], _[_])) return !1;
-            }
+(self.webpackChunkappmgmt_storeadmin =
+  self.webpackChunkappmgmt_storeadmin || []).push([
+  [3667],
+  {
+    chunkid: (module) => {
+      "use strict";
+      module.exports = function _(_, _) {
+        if (_ === _) return !0;
+        if (_ && _ && "object" == typeof _ && "object" == typeof _) {
+          if (_.constructor !== _.constructor) return !1;
+          var _, _, _;
+          if (Array.isArray(_)) {
+            if ((_ = _.length) != _.length) return !1;
+            for (_ = _; 0 !== _--; ) if (!_(_[_], _[_])) return !1;
             return !0;
           }
-          return _ !== _ && _ !== _;
-        };
-      },
-      chunkid: function (_, _) {
-        var _, _, _;
-        ((_, _) => {
-          (_ = []),
-            (_ = _),
-            (_ = typeof _ == "function" ? _.apply(_, _) : _),
-            _ !== void 0 && (_.exports = _);
-        })(this, function _() {
-          var _ =
-              typeof self < "u"
+          if (_.constructor === RegExp)
+            return _.source === _.source && _.flags === _.flags;
+          if (_.valueOf !== Object.prototype.valueOf)
+            return _.valueOf() === _.valueOf();
+          if (_.toString !== Object.prototype.toString)
+            return _.toString() === _.toString();
+          if ((_ = (_ = Object.keys(_)).length) !== Object.keys(_).length)
+            return !1;
+          for (_ = _; 0 !== _--; )
+            if (!Object.prototype.hasOwnProperty.call(_, _[_])) return !1;
+          for (_ = _; 0 !== _--; ) {
+            var _ = _[_];
+            if (!_(_[_], _[_])) return !1;
+          }
+          return !0;
+        }
+        return _ != _ && _ != _;
+      };
+    },
+    chunkid: function (_, _) {
+      var _, _, _;
+      (_ = []),
+        (_ = function _() {
+          var _,
+            _ =
+              "undefined" != typeof self
                 ? self
-                : typeof window < "u"
+                : "undefined" != typeof window
                   ? window
-                  : _ !== void 0
+                  : void 0 !== _
                     ? _
                     : {},
-            _,
             _ = !_.document && !!_.postMessage,
             _ = _.IS_PAPA_WORKER || !1,
             _ = {},
@@ -95,25 +86,25 @@
                 }
                 this.isFirstChunk &&
                   _(this._config.beforeFirstChunk) &&
-                  (_ = this._config.beforeFirstChunk(_)) !== void 0 &&
+                  void 0 !== (_ = this._config.beforeFirstChunk(_)) &&
                   (_ = _),
                   (this.isFirstChunk = !1),
-                  (this._halted = !1);
-                var _ = this._partialLine + _,
-                  _ =
-                    ((this._partialLine = ""),
-                    this._handle.parse(_, this._baseIndex, !this._finished));
+                  (this._halted = !1),
+                  (_ = this._partialLine + _);
+                var _ =
+                  ((this._partialLine = ""),
+                  this._handle.parse(_, this._baseIndex, !this._finished));
                 if (!this._handle.paused() && !this._handle.aborted()) {
                   if (
                     ((_ = _.meta.cursor),
+                    this._finished ||
+                      ((this._partialLine = _.substring(_ - this._baseIndex)),
+                      (this._baseIndex = _)),
+                    _ && _.data && (this._rowCount += _.data.length),
                     (_ =
-                      (this._finished ||
-                        ((this._partialLine = _.substring(_ - this._baseIndex)),
-                        (this._baseIndex = _)),
-                      _ && _.data && (this._rowCount += _.data.length),
                       this._finished ||
-                        (this._config.preview &&
-                          this._rowCount >= this._config.preview))),
+                      (this._config.preview &&
+                        this._rowCount >= this._config.preview)),
                     _)
                   )
                     _.postMessage({
@@ -211,11 +202,11 @@
                   } catch (_) {
                     this._chunkError(_.message);
                   }
-                  _ && _.status === 0 && this._chunkError();
+                  _ && 0 === _.status && this._chunkError();
                 }
               }),
               (this._chunkLoaded = function () {
-                _.readyState === 4 &&
+                4 === _.readyState &&
                   (_.status < 200 || 400 <= _.status
                     ? this._chunkError()
                     : ((this._start +=
@@ -224,7 +215,7 @@
                         !this._config.chunkSize ||
                         this._start >=
                           ((_) =>
-                            (_ = _.getResponseHeader("Content-Range")) !== null
+                            null !== (_ = _.getResponseHeader("Content-Range"))
                               ? parseInt(_.substring(_.lastIndexOf("/") + 1))
                               : -1)(_)),
                       this.parseChunk(_.responseText)));
@@ -238,7 +229,7 @@
               _.call(this, _);
             var _,
               _,
-              _ = typeof FileReader < "u";
+              _ = "undefined" != typeof FileReader;
             (this.stream = function (_) {
               (this._input = _),
                 (_ = _.slice || _.webkitSlice || _.mozSlice),
@@ -321,7 +312,7 @@
                   this._input._("error", this._streamError);
               }),
               (this._checkIsFinished = function () {
-                _ && _.length === 1 && (this._finished = !0);
+                _ && 1 === _.length && (this._finished = !0);
               }),
               (this._nextChunk = function () {
                 this._checkIsFinished(),
@@ -330,7 +321,7 @@
               (this._streamData = _(function (_) {
                 try {
                   _.push(
-                    typeof _ == "string"
+                    "string" == typeof _
                       ? _
                       : _.toString(this._config.encoding),
                   ),
@@ -376,9 +367,9 @@
                 meta: {},
               };
             function _(_) {
-              return _.skipEmptyLines === "greedy"
-                ? _.join("").trim() === ""
-                : _.length === 1 && _[0].length === 0;
+              return "greedy" === _.skipEmptyLines
+                ? "" === _.join("").trim()
+                : 1 === _.length && 0 === _[0].length;
             }
             function _() {
               if (
@@ -398,57 +389,56 @@
                   })),
                 _())
               ) {
-                let _ = function (_, _) {
-                  _(_.transformHeader) && (_ = _.transformHeader(_, _)),
-                    _.push(_);
-                };
-                var _ = _;
                 if (_)
                   if (Array.isArray(_.data[0])) {
                     for (var _ = 0; _() && _ < _.data.length; _++)
                       _.data[_].forEach(_);
                     _.data.splice(0, 1);
                   } else _.data.forEach(_);
+                function _(_, _) {
+                  _(_.transformHeader) && (_ = _.transformHeader(_, _)),
+                    _.push(_);
+                }
               }
               function _(_, _) {
                 for (var _ = _.header ? {} : [], _ = 0; _ < _.length; _++) {
                   var _ = _,
-                    _ = _[_],
-                    _ = ((_, _) =>
-                      ((_) => (
-                        _.dynamicTypingFunction &&
-                          _.dynamicTyping[_] === void 0 &&
-                          (_.dynamicTyping[_] = _.dynamicTypingFunction(_)),
-                        (_.dynamicTyping[_] || _.dynamicTyping) === !0
-                      ))(_)
-                        ? _ === "true" ||
-                          _ === "TRUE" ||
-                          (_ !== "false" &&
-                            _ !== "FALSE" &&
-                            (((_) => {
-                              if (
-                                _.test(_) &&
-                                ((_ = parseFloat(_)), _ < _ && _ < _)
-                              )
-                                return 1;
-                            })(_)
-                              ? parseFloat(_)
-                              : _.test(_)
-                                ? new Date(_)
-                                : _ === ""
-                                  ? null
-                                  : _))
-                        : _)(
-                      (_ = _.header
-                        ? _ >= _.length
-                          ? "__parsed_extra"
-                          : _[_]
-                        : _),
-                      (_ = _.transform ? _.transform(_, _) : _),
-                    );
-                  _ === "__parsed_extra"
-                    ? ((_[_] = _[_] || []), _[_].push(_))
-                    : (_[_] = _);
+                    _ = _[_];
+                  (_ = ((_, _) =>
+                    ((_) => (
+                      _.dynamicTypingFunction &&
+                        void 0 === _.dynamicTyping[_] &&
+                        (_.dynamicTyping[_] = _.dynamicTypingFunction(_)),
+                      !0 === (_.dynamicTyping[_] || _.dynamicTyping)
+                    ))(_)
+                      ? "true" === _ ||
+                        "TRUE" === _ ||
+                        ("false" !== _ &&
+                          "FALSE" !== _ &&
+                          (((_) => {
+                            if (
+                              _.test(_) &&
+                              ((_ = parseFloat(_)), _ < _ && _ < _)
+                            )
+                              return 1;
+                          })(_)
+                            ? parseFloat(_)
+                            : _.test(_)
+                              ? new Date(_)
+                              : "" === _
+                                ? null
+                                : _))
+                      : _)(
+                    (_ = _.header
+                      ? _ >= _.length
+                        ? "__parsed_extra"
+                        : _[_]
+                      : _),
+                    (_ = _.transform ? _.transform(_, _) : _),
+                  )),
+                    "__parsed_extra" === _
+                      ? ((_[_] = _[_] || []), _[_].push(_))
+                      : (_[_] = _);
                 }
                 return (
                   _.header &&
@@ -486,7 +476,7 @@
                 (_ += _));
             }
             function _() {
-              return _.header && _.length === 0;
+              return _.header && 0 === _.length;
             }
             function _(_, _, _, _) {
               (_ = {
@@ -494,7 +484,7 @@
                 code: _,
                 message: _,
               }),
-                _ !== void 0 && (_.row = _),
+                void 0 !== _ && (_.row = _),
                 _.errors.push(_);
             }
             _(_.step) &&
@@ -504,80 +494,77 @@
                   _()
                     ? _()
                     : (_(),
-                      _.data.length !== 0 &&
+                      0 !== _.data.length &&
                         ((_ += _.data.length),
                         _.preview && _ > _.preview
                           ? _.abort()
                           : ((_.data = _.data[0]), _(_, _))));
               })),
               (this.parse = function (_, _, _) {
-                var _ = _.quoteChar || '"',
-                  _ =
-                    (_.newline || (_.newline = this.guessLineEndings(_, _)),
-                    (_ = !1),
-                    _.delimiter
-                      ? _(_.delimiter) &&
-                        ((_.delimiter = _.delimiter(_)),
-                        (_.meta.delimiter = _.delimiter))
-                      : ((_ = ((_, _, _, _, _) => {
-                          var _, _, _, _;
-                          _ = _ || [
-                            ",",
-                            "	",
-                            "|",
-                            ";",
-                            _.RECORD_SEP,
-                            _.UNIT_SEP,
-                          ];
-                          for (var _ = 0; _ < _.length; _++) {
-                            for (
-                              var _,
-                                _ = _[_],
-                                _ = 0,
-                                _ = 0,
-                                _ = 0,
-                                _ =
-                                  ((_ = void 0),
-                                  new _({
-                                    comments: _,
-                                    delimiter: _,
-                                    newline: _,
-                                    preview: 10,
-                                  }).parse(_)),
-                                _ = 0;
-                              _ < _.data.length;
-                              _++
-                            )
-                              _ && _(_.data[_])
-                                ? _++
-                                : ((_ = _.data[_].length),
-                                  (_ += _),
-                                  _ === void 0
-                                    ? (_ = _)
-                                    : 0 < _ &&
-                                      ((_ += Math.abs(_ - _)), (_ = _)));
-                            0 < _.data.length && (_ /= _.data.length - _),
-                              (_ === void 0 || _ <= _) &&
-                                (_ === void 0 || _ < _) &&
-                                1.99 < _ &&
-                                ((_ = _), (_ = _), (_ = _));
-                          }
-                          return {
-                            successful: !!(_.delimiter = _),
-                            bestDelimiter: _,
-                          };
-                        })(
-                          _,
-                          _.newline,
-                          _.skipEmptyLines,
-                          _.comments,
-                          _.delimitersToGuess,
-                        )).successful
-                          ? (_.delimiter = _.bestDelimiter)
-                          : ((_ = !0), (_.delimiter = _.DefaultDelimiter)),
-                        (_.meta.delimiter = _.delimiter)),
-                    _(_));
+                var _ = _.quoteChar || '"';
                 return (
+                  _.newline || (_.newline = this.guessLineEndings(_, _)),
+                  (_ = !1),
+                  _.delimiter
+                    ? _(_.delimiter) &&
+                      ((_.delimiter = _.delimiter(_)),
+                      (_.meta.delimiter = _.delimiter))
+                    : ((_ = ((_, _, _, _, _) => {
+                        var _, _, _, _;
+                        _ = _ || [
+                          ",",
+                          "\t",
+                          "|",
+                          ";",
+                          _.RECORD_SEP,
+                          _.UNIT_SEP,
+                        ];
+                        for (var _ = 0; _ < _.length; _++) {
+                          for (
+                            var _,
+                              _ = _[_],
+                              _ = 0,
+                              _ = 0,
+                              _ = 0,
+                              _ =
+                                ((_ = void 0),
+                                new _({
+                                  comments: _,
+                                  delimiter: _,
+                                  newline: _,
+                                  preview: 10,
+                                }).parse(_)),
+                              _ = 0;
+                            _ < _.data.length;
+                            _++
+                          )
+                            _ && _(_.data[_])
+                              ? _++
+                              : ((_ += _ = _.data[_].length),
+                                void 0 === _
+                                  ? (_ = _)
+                                  : 0 < _ && ((_ += Math.abs(_ - _)), (_ = _)));
+                          0 < _.data.length && (_ /= _.data.length - _),
+                            (void 0 === _ || _ <= _) &&
+                              (void 0 === _ || _ < _) &&
+                              1.99 < _ &&
+                              ((_ = _), (_ = _), (_ = _));
+                        }
+                        return {
+                          successful: !!(_.delimiter = _),
+                          bestDelimiter: _,
+                        };
+                      })(
+                        _,
+                        _.newline,
+                        _.skipEmptyLines,
+                        _.comments,
+                        _.delimitersToGuess,
+                      )).successful
+                        ? (_.delimiter = _.bestDelimiter)
+                        : ((_ = !0), (_.delimiter = _.DefaultDelimiter)),
+                      (_.meta.delimiter = _.delimiter)),
+                  (_ = _(_)),
                   _.preview && _.header && _.preview++,
                   (_ = _),
                   (_ = new _(_)),
@@ -620,23 +607,19 @@
                   (_ = "");
               }),
               (this.guessLineEndings = function (_, _) {
-                _ = _.substring(0, 1048576);
-                var _ = new RegExp(_(_) + "([^]*?)" + _(_), "gm"),
-                  _ = (_ = _.replace(_, "")).split("\r"),
-                  _ = _.split(`
-`),
-                  _ = 1 < _.length && _[0].length < _[0].length;
-                if (_.length === 1 || _)
-                  return `
-`;
+                (_ = _.substring(0, 1048576)),
+                  (_ = new RegExp(_(_) + "([^]*?)" + _(_), "gm"));
+                var _ = (_ = _.replace(_, "")).split("\r");
+                if (
+                  ((_ =
+                    1 < (_ = _.split("\n")).length &&
+                    _[0].length < _[0].length),
+                  1 === _.length || _)
+                )
+                  return "\n";
                 for (var _ = 0, _ = 0; _ < _.length; _++)
-                  _[_][0] ===
-                    `
-` && _++;
-                return _ >= _.length / 2
-                  ? `\r
-`
-                  : "\r";
+                  "\n" === _[_][0] && _++;
+                return _ >= _.length / 2 ? "\r\n" : "\r";
               });
           }
           function _(_) {
@@ -651,32 +634,24 @@
               _ = _.fastMode,
               _ = null,
               _ = !1,
-              _ = _.quoteChar == null ? '"' : _.quoteChar,
+              _ = null == _.quoteChar ? '"' : _.quoteChar,
               _ = _;
             if (
-              (_.escapeChar !== void 0 && (_ = _.escapeChar),
-              (typeof _ != "string" || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
+              (void 0 !== _.escapeChar && (_ = _.escapeChar),
+              ("string" != typeof _ || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
                 (_ = ","),
               _ === _)
             )
               throw new Error("Comment character same as delimiter");
-            _ === !0
+            !0 === _
               ? (_ = "#")
-              : (typeof _ != "string" || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
+              : ("string" != typeof _ || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
                 (_ = !1),
-              _ !==
-                `
-` &&
-                _ !== "\r" &&
-                _ !==
-                  `\r
-` &&
-                (_ = `
-`);
+              "\n" !== _ && "\r" !== _ && "\r\n" !== _ && (_ = "\n");
             var _ = 0,
               _ = !1;
             (this.parse = function (_, _, _) {
-              if (typeof _ != "string")
+              if ("string" != typeof _)
                 throw new Error("Input must be a string");
               var _ = _.length,
                 _ = _.length,
@@ -688,7 +663,7 @@
                 _ = [],
                 _ = (_ = 0);
               if (!_) return _();
-              if (_ || (_ !== !1 && _.indexOf(_) === -1)) {
+              if (_ || (!1 !== _ && -1 === _.indexOf(_))) {
                 for (var _ = _.split(_), _ = 0; _ < _.length; _++) {
                   if (((_ = _[_]), (_ += _.length), _ !== _.length - 1))
                     _ += _.length;
@@ -711,7 +686,7 @@
               )
                 if (_[_] === _)
                   for (_ = _, _++; ; ) {
-                    if ((_ = _.indexOf(_, _ + 1)) === -1)
+                    if (-1 === (_ = _.indexOf(_, _ + 1)))
                       return (
                         _ ||
                           _.push({
@@ -725,12 +700,11 @@
                       );
                     if (_ === _ - 1) return _(_.substring(_, _).replace(_, _));
                     if (_ === _ && _[_ + 1] === _) _++;
-                    else if (_ === _ || _ === 0 || _[_ - 1] !== _) {
-                      _ !== -1 && _ < _ + 1 && (_ = _.indexOf(_, _ + 1));
+                    else if (_ === _ || 0 === _ || _[_ - 1] !== _) {
+                      -1 !== _ && _ < _ + 1 && (_ = _.indexOf(_, _ + 1));
                       var _ = _(
-                        (_ =
-                          _ !== -1 && _ < _ + 1 ? _.indexOf(_, _ + 1) : _) ===
-                          -1
+                        -1 ===
+                          (_ = -1 !== _ && _ < _ + 1 ? _.indexOf(_, _ + 1) : _)
                           ? _
                           : Math.min(_, _),
                       );
@@ -766,13 +740,13 @@
                         _++;
                     }
                   }
-                else if (_ && _.length === 0 && _.substring(_, _ + _) === _) {
-                  if (_ === -1) return _();
+                else if (_ && 0 === _.length && _.substring(_, _ + _) === _) {
+                  if (-1 === _) return _();
                   (_ = _ + _), (_ = _.indexOf(_, _)), (_ = _.indexOf(_, _));
-                } else if (_ !== -1 && (_ < _ || _ === -1))
+                } else if (-1 !== _ && (_ < _ || -1 === _))
                   _.push(_.substring(_, _)), (_ = _ + _), (_ = _.indexOf(_, _));
                 else {
-                  if (_ === -1) break;
+                  if (-1 === _) break;
                   if ((_.push(_.substring(_, _)), _(_ + _), _ && (_(), _)))
                     return _();
                   if (_ && _.length >= _) return _(!0);
@@ -783,15 +757,16 @@
               }
               function _(_) {
                 var _ = 0;
-                return (_ =
-                  _ !== -1 && (_ = _.substring(_ + 1, _)) && _.trim() === ""
-                    ? _.length
-                    : _);
+                return -1 !== _ &&
+                  (_ = _.substring(_ + 1, _)) &&
+                  "" === _.trim()
+                  ? _.length
+                  : _;
               }
               function _(_) {
                 return (
                   _ ||
-                    (_ === void 0 && (_ = _.substring(_)),
+                    (void 0 === _ && (_ = _.substring(_)),
                     _.push(_),
                     (_ = _),
                     _(_),
@@ -822,7 +797,7 @@
                         (_[_] = _),
                         _[_]++,
                         (_ = !0),
-                        ((_ = _ === null ? {} : _)[_] = _);
+                        ((_ = null === _ ? {} : _)[_] = _);
                     } else (_[_] = 1), (_[_] = _);
                     _.add(_);
                   }
@@ -903,7 +878,7 @@
             throw new Error("Not implemented.");
           }
           function _(_) {
-            if (typeof _ != "object" || _ === null) return _;
+            if ("object" != typeof _ || null === _) return _;
             var _,
               _ = Array.isArray(_) ? [] : {};
             for (_ in _) _[_] = _(_[_]);
@@ -915,7 +890,7 @@
             };
           }
           function _(_) {
-            return typeof _ == "function";
+            return "function" == typeof _;
           }
           return (
             (_.parse = function (_, _) {
@@ -929,11 +904,11 @@
                 return (
                   (_ = null),
                   _.NODE_STREAM_INPUT,
-                  typeof _ == "string"
+                  "string" == typeof _
                     ? ((_ = ((_) =>
-                        _.charCodeAt(0) !== 65279 ? _ : _.slice(1))(_)),
+                        65279 !== _.charCodeAt(0) ? _ : _.slice(1))(_)),
                       (_ = new (_.download ? _ : _)(_)))
-                    : _.readable === !0 && _(_.read) && _(_._)
+                    : !0 === _.readable && _(_.read) && _(_._)
                       ? (_ = new _(_))
                       : ((_.File && _ instanceof File) ||
                           _ instanceof Object) &&
@@ -987,8 +962,7 @@
               var _ = !1,
                 _ = !0,
                 _ = ",",
-                _ = `\r
-`,
+                _ = "\r\n",
                 _ = '"',
                 _ = _ + _,
                 _ = !1,
@@ -996,57 +970,57 @@
                 _ = !1,
                 _ =
                   ((() => {
-                    if (typeof _ == "object") {
+                    if ("object" == typeof _) {
                       if (
-                        (typeof _.delimiter != "string" ||
+                        ("string" != typeof _.delimiter ||
                           _.BAD_DELIMITERS.filter(function (_) {
-                            return _.delimiter.indexOf(_) !== -1;
+                            return -1 !== _.delimiter.indexOf(_);
                           }).length ||
                           (_ = _.delimiter),
-                        (typeof _.quotes != "boolean" &&
-                          typeof _.quotes != "function" &&
+                        ("boolean" != typeof _.quotes &&
+                          "function" != typeof _.quotes &&
                           !Array.isArray(_.quotes)) ||
                           (_ = _.quotes),
-                        (typeof _.skipEmptyLines != "boolean" &&
-                          typeof _.skipEmptyLines != "string") ||
+                        ("boolean" != typeof _.skipEmptyLines &&
+                          "string" != typeof _.skipEmptyLines) ||
                           (_ = _.skipEmptyLines),
-                        typeof _.newline == "string" && (_ = _.newline),
-                        typeof _.quoteChar == "string" && (_ = _.quoteChar),
-                        typeof _.header == "boolean" && (_ = _.header),
+                        "string" == typeof _.newline && (_ = _.newline),
+                        "string" == typeof _.quoteChar && (_ = _.quoteChar),
+                        "boolean" == typeof _.header && (_ = _.header),
                         Array.isArray(_.columns))
                       ) {
-                        if (_.columns.length === 0)
+                        if (0 === _.columns.length)
                           throw new Error("Option columns is empty");
                         _ = _.columns;
                       }
-                      _.escapeChar !== void 0 && (_ = _.escapeChar + _),
+                      void 0 !== _.escapeChar && (_ = _.escapeChar + _),
                         _.escapeFormulae instanceof RegExp
                           ? (_ = _.escapeFormulae)
-                          : typeof _.escapeFormulae == "boolean" &&
+                          : "boolean" == typeof _.escapeFormulae &&
                             _.escapeFormulae &&
                             (_ = /^[=+\-@\t\r].*$/);
                     }
                   })(),
                   new RegExp(_(_), "g"));
               if (
-                (typeof _ == "string" && (_ = JSON.parse(_)), Array.isArray(_))
+                ("string" == typeof _ && (_ = JSON.parse(_)), Array.isArray(_))
               ) {
                 if (!_.length || Array.isArray(_[0])) return _(null, _, _);
-                if (typeof _[0] == "object")
+                if ("object" == typeof _[0])
                   return _(_ || Object.keys(_[0]), _, _);
-              } else if (typeof _ == "object")
+              } else if ("object" == typeof _)
                 return (
-                  typeof _.data == "string" && (_.data = JSON.parse(_.data)),
+                  "string" == typeof _.data && (_.data = JSON.parse(_.data)),
                   Array.isArray(_.data) &&
                     (_.fields || (_.fields = (_.meta && _.meta.fields) || _),
                     _.fields ||
                       (_.fields = Array.isArray(_.data[0])
                         ? _.fields
-                        : typeof _.data[0] == "object"
+                        : "object" == typeof _.data[0]
                           ? Object.keys(_.data[0])
                           : []),
                     Array.isArray(_.data[0]) ||
-                      typeof _.data[0] == "object" ||
+                      "object" == typeof _.data[0] ||
                       (_.data = [_.data])),
                   _(_.fields || [], _.data || [], _)
                 );
@@ -1054,8 +1028,8 @@
               function _(_, _, _) {
                 var _ = "",
                   _ =
-                    (typeof _ == "string" && (_ = JSON.parse(_)),
-                    typeof _ == "string" && (_ = JSON.parse(_)),
+                    ("string" == typeof _ && (_ = JSON.parse(_)),
+                    "string" == typeof _ && (_ = JSON.parse(_)),
                     Array.isArray(_) && 0 < _.length),
                   _ = !Array.isArray(_[0]);
                 if (_ && _) {
@@ -1066,21 +1040,21 @@
                 for (var _ = 0; _ < _.length; _++) {
                   var _ = (_ ? _ : _[_]).length,
                     _ = !1,
-                    _ = _ ? Object.keys(_[_]).length === 0 : _[_].length === 0;
+                    _ = _ ? 0 === Object.keys(_[_]).length : 0 === _[_].length;
                   if (
                     (_ &&
                       !_ &&
                       (_ =
-                        _ === "greedy"
-                          ? _[_].join("").trim() === ""
-                          : _[_].length === 1 && _[_][0].length === 0),
-                    _ === "greedy" && _)
+                        "greedy" === _
+                          ? "" === _[_].join("").trim()
+                          : 1 === _[_].length && 0 === _[_][0].length),
+                    "greedy" === _ && _)
                   ) {
                     for (var _ = [], _ = 0; _ < _; _++) {
                       var _ = _ ? _[_] : _;
                       _.push(_[_][_]);
                     }
-                    _ = _.join("").trim() === "";
+                    _ = "" === _.join("").trim();
                   }
                   if (!_) {
                     for (var _ = 0; _ < _; _++) {
@@ -1095,20 +1069,20 @@
               }
               function _(_, _) {
                 var _, _;
-                return _ == null
+                return null == _
                   ? ""
                   : _.constructor === Date
                     ? JSON.stringify(_).slice(1, 25)
                     : ((_ = !1),
                       _ &&
-                        typeof _ == "string" &&
+                        "string" == typeof _ &&
                         _.test(_) &&
                         ((_ = "'" + _), (_ = !0)),
                       (_ = _.toString().replace(_, _)),
                       (_ =
                         _ ||
-                        _ === !0 ||
-                        (typeof _ == "function" && _(_, _)) ||
+                        !0 === _ ||
+                        ("function" == typeof _ && _(_, _)) ||
                         (Array.isArray(_) && _[_]) ||
                         ((_, _) => {
                           for (var _ = 0; _ < _.length; _++)
@@ -1116,22 +1090,16 @@
                           return !1;
                         })(_, _.BAD_DELIMITERS) ||
                         -1 < _.indexOf(_) ||
-                        _.charAt(0) === " " ||
-                        _.charAt(_.length - 1) === " ")
+                        " " === _.charAt(0) ||
+                        " " === _.charAt(_.length - 1))
                         ? _ + _ + _
                         : _);
               }
             }),
-            (_.RECORD_SEP = ""),
-            (_.UNIT_SEP = ""),
-            (_.BYTE_ORDER_MARK = "\uFEFF"),
-            (_.BAD_DELIMITERS = [
-              "\r",
-              `
-`,
-              '"',
-              _.BYTE_ORDER_MARK,
-            ]),
+            (_.RECORD_SEP = String.fromCharCode(30)),
+            (_.UNIT_SEP = String.fromCharCode(31)),
+            (_.BYTE_ORDER_MARK = "\ufeff"),
+            (_.BAD_DELIMITERS = ["\r", "\n", '"', _.BYTE_ORDER_MARK]),
             (_.WORKERS_SUPPORTED = !_ && !!_.Worker),
             (_.NODE_STREAM_INPUT = 1),
             (_.LocalChunkSize = 10485760),
@@ -1150,13 +1118,11 @@
                 return (
                   this.each(function (_) {
                     if (
-                      !(
-                        _(this).prop("tagName").toUpperCase() === "INPUT" &&
-                        _(this).attr("type").toLowerCase() === "file" &&
-                        _.FileReader
-                      ) ||
+                      "INPUT" !== _(this).prop("tagName").toUpperCase() ||
+                      "file" !== _(this).attr("type").toLowerCase() ||
+                      !_.FileReader ||
                       !this.files ||
-                      this.files.length === 0
+                      0 === this.files.length
                     )
                       return !0;
                     for (var _ = 0; _ < this.files.length; _++)
@@ -1170,7 +1136,7 @@
                   this
                 );
                 function _() {
-                  if (_.length === 0) _(_.complete) && _.complete();
+                  if (0 === _.length) _(_.complete) && _.complete();
                   else {
                     var _,
                       _,
@@ -1179,8 +1145,8 @@
                       _ = _[0];
                     if (_(_.before)) {
                       var _ = _.before(_.file, _.inputElem);
-                      if (typeof _ == "object") {
-                        if (_.action === "abort")
+                      if ("object" == typeof _) {
+                        if ("abort" === _.action)
                           return (
                             (_ = "AbortError"),
                             (_ = _.file),
@@ -1198,13 +1164,13 @@
                               )
                             )
                           );
-                        if (_.action === "skip") return void _();
-                        typeof _.config == "object" &&
+                        if ("skip" === _.action) return void _();
+                        "object" == typeof _.config &&
                           (_.instanceConfig = _.extend(
                             _.instanceConfig,
                             _.config,
                           ));
-                      } else if (_ === "skip") return void _();
+                      } else if ("skip" === _) return void _();
                     }
                     var _ = _.instanceConfig.complete;
                     (_.instanceConfig.complete = function (_) {
@@ -1220,8 +1186,8 @@
             _ &&
               (_.onmessage = function (_) {
                 (_ = _.data),
-                  _.WORKER_ID === void 0 && _ && (_.WORKER_ID = _.workerId),
-                  typeof _.input == "string"
+                  void 0 === _.WORKER_ID && _ && (_.WORKER_ID = _.workerId),
+                  "string" == typeof _.input
                     ? _.postMessage({
                         workerId: _.WORKER_ID,
                         results: _.parse(_.input, _.config),
@@ -1242,8 +1208,9 @@
             ((_.prototype = Object.create(_.prototype)).constructor = _),
             _
           );
-        });
-      },
+        }),
+        void 0 === (_ = "function" == typeof _ ? _.apply(_, _) : _) ||
+          (_.exports = _);
     },
-  ]);
-})();
+  },
+]);

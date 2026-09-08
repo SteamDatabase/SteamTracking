@@ -773,7 +773,7 @@ message CMsgSteamLearnDataSource {
 	optional .CMsgSteamLearnDataSourceDescObject structure = 5;
 	optional uint32 structure_crc = 6;
 	optional uint32 cache_duration_seconds = 7;
-	optional int32 key_type = 8 [default = Identifier, (.description) = "enum"];
+	optional int32 key_type = 8 [default = 1, (.description) = "enum"];
 	optional bool supports_auto_snapshots = 9;
 }
 

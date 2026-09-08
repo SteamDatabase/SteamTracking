@@ -1,5 +1,5 @@
-import "common_base.proto";
 import "common.proto";
+import "common_base.proto";
 
 message CSteamCharts_GetBestOfYearPages_Request {
 }

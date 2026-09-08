@@ -552,6 +552,7 @@ body.v6 .account_settings_container .h3_content {
     min-width: 35%;
 }
 
+
 @media screen and (max-width: 910px)
 {
 	.account_settings_container blockquote {
@@ -559,8 +560,6 @@ body.v6 .account_settings_container .h3_content {
 	}
 
 	.account_settings_container .half {
-		display: flex;
-		flex: 1;
 		margin-right: 10px;
 		min-width: 35%;
 	}

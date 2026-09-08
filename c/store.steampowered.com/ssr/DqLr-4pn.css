@@ -1,0 +1,121 @@
+.xocgTD9wQ3w- {
+  flex-direction: row;
+  min-width: 0;
+  display: flex;
+}
+.JmLh4Njn6Xg- {
+  color: #9dacbc;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-inline-end: 1ch;
+  padding-top: 4px;
+  font-size: 11px;
+}
+.rmHEjg6CZ-g- {
+  scrollbar-width: none;
+  flex-flow: row;
+  flex: 1;
+  gap: 4px;
+  min-width: 0;
+  display: flex;
+  overflow: auto hidden;
+}
+.rmHEjg6CZ-g-::-webkit-scrollbar {
+  display: none;
+}
+.rmHEjg6CZ-g-._46OW7mZHHFo- {
+  scrollbar-width: unset;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  max-height: 160px;
+  scroll-padding: 2px 0;
+  overflow: hidden auto;
+}
+.rmHEjg6CZ-g-._46OW7mZHHFo-::-webkit-scrollbar {
+  display: unset;
+}
+.GamepadMode .rmHEjg6CZ-g-._46OW7mZHHFo-::-webkit-scrollbar {
+  display: none;
+}
+.rmHEjg6CZ-g-._46OW7mZHHFo- {
+  padding-bottom: 3px;
+  padding-inline-end: 0;
+}
+@media screen and (width <= 910px) {
+  html.responsive .rmHEjg6CZ-g-._46OW7mZHHFo-:not(.kWXOGlWVyq8-) {
+    max-height: 100px;
+  }
+}
+.rmHEjg6CZ-g-._46OW7mZHHFo-.L5m8ABbykWU- {
+  max-height: 100px;
+}
+.Vy3rNuKLunU- {
+  cursor: pointer;
+  color: #9dacbc;
+  white-space: nowrap;
+  background: 0 0;
+  border: 1px solid #485d77;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  max-width: 30ch;
+  padding: 5px 8px;
+  font-size: 11px;
+  display: flex;
+  overflow: hidden;
+}
+.Vy3rNuKLunU-.UEN4zIBtlPk- {
+  cursor: default;
+}
+.Vy3rNuKLunU- .CHs77VjeBtU- {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  display: block;
+  overflow: hidden;
+}
+.Vy3rNuKLunU-:focus {
+  outline: none;
+}
+.Vy3rNuKLunU-:hover,
+.Vy3rNuKLunU-.Nd9ijC9o-tY- {
+  color: #fff;
+  background-color: #485d77;
+}
+.Vy3rNuKLunU-:hover svg,
+.Vy3rNuKLunU-.Nd9ijC9o-tY- svg {
+  fill: #fff;
+}
+.Vy3rNuKLunU-._8hEc07LCoLU- {
+  color: #1f2a39;
+  background-color: #89acd1;
+}
+.Vy3rNuKLunU-._8hEc07LCoLU-:hover {
+  background-color: #9cc3ed;
+}
+.Vy3rNuKLunU-.hVIpsPsRhsA- svg {
+  fill: #9dacbc;
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  margin-inline-start: 2px;
+}
+@media screen and (width <= 768px) {
+  .Vy3rNuKLunU- {
+    max-width: 20ch;
+  }
+}
+.EEBSJHM2XHw- {
+  background: #2c4562;
+  align-items: center;
+  height: 24px;
+  margin-inline-start: 2px;
+  display: flex;
+}
+.EEBSJHM2XHw- svg {
+  width: 12px;
+  height: 12px;
+}

@@ -1,821 +1,803 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 "use strict";
-(() => {
-  (self.webpackChunkstore = self.webpackChunkstore || []).push([
-    [70576],
-    {
-      88268: (K, _, y) => {
-        y.d(_, { Te: () => H, XW: () => U });
-        var w = y(90626),
-          F = y(72739);
-        function p(o, l, e) {
-          let t = e.initialDeps ?? [],
-            s;
-          function n() {
-            var i, r, a, c;
-            let h;
-            e.key && (i = e.debug) != null && i.call(e) && (h = Date.now());
-            const u = o();
-            if (!(u.length !== t.length || u.some((f, g) => t[g] !== f)))
-              return s;
-            t = u;
-            let m;
-            if (
-              (e.key && (r = e.debug) != null && r.call(e) && (m = Date.now()),
-              (s = l(...u)),
-              e.key && (a = e.debug) != null && a.call(e))
-            ) {
-              const f = Math.round((Date.now() - h) * 100) / 100,
-                g = Math.round((Date.now() - m) * 100) / 100,
-                z = g / 16,
-                S = (v, q) => {
-                  for (v = String(v); v.length < q; ) v = " " + v;
-                  return v;
-                };
-              console.info(
-                `%c\u23F1 ${S(g, 5)} /${S(f, 5)} ms`,
-                `
-            font-size: .6rem;
-            font-weight: bold;
-            color: hsl(${Math.max(0, Math.min(120 - 120 * z, 120))}deg 100% 31%);`,
-                e?.key,
+(self.webpackChunkstore = self.webpackChunkstore || []).push([
+  [70576],
+  {
+    88268: (e, t, s) => {
+      s.d(t, { Te: () => z, XW: () => M });
+      var n = s(90626),
+        i = s(72739);
+      function o(e, t, s) {
+        let n,
+          i = s.initialDeps ?? [];
+        function o() {
+          var o, r, l, a;
+          let h;
+          s.key &&
+            (null == (o = s.debug) ? void 0 : o.call(s)) &&
+            (h = Date.now());
+          const c = e();
+          if (!(c.length !== i.length || c.some((e, t) => i[t] !== e)))
+            return n;
+          let d;
+          if (
+            ((i = c),
+            s.key &&
+              (null == (r = s.debug) ? void 0 : r.call(s)) &&
+              (d = Date.now()),
+            (n = t(...c)),
+            s.key && (null == (l = s.debug) ? void 0 : l.call(s)))
+          ) {
+            const e = Math.round(100 * (Date.now() - h)) / 100,
+              t = Math.round(100 * (Date.now() - d)) / 100,
+              n = t / 16,
+              i = (e, t) => {
+                for (e = String(e); e.length < t; ) e = " " + e;
+                return e;
+              };
+            console.info(
+              `%c⏱ ${i(t, 5)} /${i(e, 5)} ms`,
+              `\n            font-size: .6rem;\n            font-weight: bold;\n            color: hsl(${Math.max(0, Math.min(120 - 120 * n, 120))}deg 100% 31%);`,
+              null == s ? void 0 : s.key,
+            );
+          }
+          return (
+            null == (a = null == s ? void 0 : s.onChange) || a.call(s, n), n
+          );
+        }
+        return (
+          (o.updateDeps = (e) => {
+            i = e;
+          }),
+          o
+        );
+      }
+      function r(e, t) {
+        if (void 0 === e)
+          throw new Error("Unexpected undefined" + (t ? `: ${t}` : ""));
+        return e;
+      }
+      const l = (e, t, s) => {
+          let n;
+          return function (...i) {
+            e.clearTimeout(n), (n = e.setTimeout(() => t.apply(this, i), s));
+          };
+        },
+        a = (e) => {
+          const { offsetWidth: t, offsetHeight: s } = e;
+          return { width: t, height: s };
+        },
+        h = (e) => e,
+        c = (e) => {
+          const t = Math.max(e.startIndex - e.overscan, 0),
+            s = Math.min(e.endIndex + e.overscan, e.count - 1),
+            n = [];
+          for (let e = t; e <= s; e++) n.push(e);
+          return n;
+        },
+        d = (e, t) => {
+          const s = e.scrollElement;
+          if (!s) return;
+          const n = e.targetWindow;
+          if (!n) return;
+          const i = (e) => {
+            const { width: s, height: n } = e;
+            t({ width: Math.round(s), height: Math.round(n) });
+          };
+          if ((i(a(s)), !n.ResizeObserver)) return () => {};
+          const o = new n.ResizeObserver((t) => {
+            const n = () => {
+              const e = t[0];
+              if (null == e ? void 0 : e.borderBoxSize) {
+                const t = e.borderBoxSize[0];
+                if (t)
+                  return void i({ width: t.inlineSize, height: t.blockSize });
+              }
+              i(a(s));
+            };
+            e.options.useAnimationFrameWithResizeObserver
+              ? requestAnimationFrame(n)
+              : n();
+          });
+          return (
+            o.observe(s, { box: "border-box" }),
+            () => {
+              o.unobserve(s);
+            }
+          );
+        },
+        u = { passive: !0 },
+        f = (e, t) => {
+          const s = e.scrollElement;
+          if (!s) return;
+          const n = () => {
+            t({ width: s.innerWidth, height: s.innerHeight });
+          };
+          return (
+            n(),
+            s.addEventListener("resize", n, u),
+            () => {
+              s.removeEventListener("resize", n);
+            }
+          );
+        },
+        m = "undefined" == typeof window || "onscrollend" in window,
+        g = (e, t) => {
+          const s = e.scrollElement;
+          if (!s) return;
+          const n = e.targetWindow;
+          if (!n) return;
+          let i = 0;
+          const o =
+              e.options.useScrollendEvent && m
+                ? () => {}
+                : l(
+                    n,
+                    () => {
+                      t(i, !1);
+                    },
+                    e.options.isScrollingResetDelay,
+                  ),
+            r = (n) => () => {
+              const { horizontal: r, isRtl: l } = e.options;
+              (i = r ? s.scrollLeft * (l ? -1 : 1) : s.scrollTop), o(), t(i, n);
+            },
+            a = r(!0),
+            h = r(!1);
+          h(), s.addEventListener("scroll", a, u);
+          const c = e.options.useScrollendEvent && m;
+          return (
+            c && s.addEventListener("scrollend", h, u),
+            () => {
+              s.removeEventListener("scroll", a),
+                c && s.removeEventListener("scrollend", h);
+            }
+          );
+        },
+        p = (e, t) => {
+          const s = e.scrollElement;
+          if (!s) return;
+          const n = e.targetWindow;
+          if (!n) return;
+          let i = 0;
+          const o =
+              e.options.useScrollendEvent && m
+                ? () => {}
+                : l(
+                    n,
+                    () => {
+                      t(i, !1);
+                    },
+                    e.options.isScrollingResetDelay,
+                  ),
+            r = (n) => () => {
+              (i = s[e.options.horizontal ? "scrollX" : "scrollY"]),
+                o(),
+                t(i, n);
+            },
+            a = r(!0),
+            h = r(!1);
+          h(), s.addEventListener("scroll", a, u);
+          const c = e.options.useScrollendEvent && m;
+          return (
+            c && s.addEventListener("scrollend", h, u),
+            () => {
+              s.removeEventListener("scroll", a),
+                c && s.removeEventListener("scrollend", h);
+            }
+          );
+        },
+        v = (e, t, s) => {
+          if (null == t ? void 0 : t.borderBoxSize) {
+            const e = t.borderBoxSize[0];
+            if (e) {
+              return Math.round(
+                e[s.options.horizontal ? "inlineSize" : "blockSize"],
               );
             }
-            return (c = e?.onChange) == null || c.call(e, s), s;
           }
-          return (
-            (n.updateDeps = (i) => {
-              t = i;
-            }),
-            n
-          );
-        }
-        function M(o, l) {
-          if (o === void 0)
-            throw new Error(`Unexpected undefined${l ? `: ${l}` : ""}`);
-          return o;
-        }
-        const k = (o, l) => Math.abs(o - l) < 1.01,
-          x = (o, l, e) => {
-            let t;
-            return function (...s) {
-              o.clearTimeout(t), (t = o.setTimeout(() => l.apply(this, s), e));
-            };
-          },
-          O = (o) => {
-            const { offsetWidth: l, offsetHeight: e } = o;
-            return { width: l, height: e };
-          },
-          T = (o) => o,
-          W = (o) => {
-            const l = Math.max(o.startIndex - o.overscan, 0),
-              e = Math.min(o.endIndex + o.overscan, o.count - 1),
-              t = [];
-            for (let s = l; s <= e; s++) t.push(s);
-            return t;
-          },
-          A = (o, l) => {
-            const e = o.scrollElement;
-            if (!e) return;
-            const t = o.targetWindow;
-            if (!t) return;
-            const s = (i) => {
-              const { width: r, height: a } = i;
-              l({ width: Math.round(r), height: Math.round(a) });
-            };
-            if ((s(O(e)), !t.ResizeObserver)) return () => {};
-            const n = new t.ResizeObserver((i) => {
-              const r = () => {
-                const a = i[0];
-                if (a?.borderBoxSize) {
-                  const c = a.borderBoxSize[0];
-                  if (c) {
-                    s({ width: c.inlineSize, height: c.blockSize });
-                    return;
-                  }
-                }
-                s(O(e));
-              };
-              o.options.useAnimationFrameWithResizeObserver
-                ? requestAnimationFrame(r)
-                : r();
+          return e[s.options.horizontal ? "offsetWidth" : "offsetHeight"];
+        },
+        b = (e, { adjustments: t = 0, behavior: s }, n) => {
+          var i, o;
+          const r = e + t;
+          null == (o = null == (i = n.scrollElement) ? void 0 : i.scrollTo) ||
+            o.call(i, {
+              [n.options.horizontal ? "left" : "top"]: r,
+              behavior: s,
             });
-            return (
-              n.observe(e, { box: "border-box" }),
-              () => {
-                n.unobserve(e);
-              }
-            );
-          },
-          b = { passive: !0 },
-          D = (o, l) => {
-            const e = o.scrollElement;
-            if (!e) return;
-            const t = () => {
-              l({ width: e.innerWidth, height: e.innerHeight });
-            };
-            return (
-              t(),
-              e.addEventListener("resize", t, b),
-              () => {
-                e.removeEventListener("resize", t);
-              }
-            );
-          },
-          E = typeof window > "u" ? !0 : "onscrollend" in window,
-          L = (o, l) => {
-            const e = o.scrollElement;
-            if (!e) return;
-            const t = o.targetWindow;
-            if (!t) return;
-            let s = 0;
-            const n =
-                o.options.useScrollendEvent && E
-                  ? () => {}
-                  : x(
-                      t,
-                      () => {
-                        l(s, !1);
-                      },
-                      o.options.isScrollingResetDelay,
-                    ),
-              i = (h) => () => {
-                const { horizontal: u, isRtl: d } = o.options;
-                (s = u ? e.scrollLeft * ((d && -1) || 1) : e.scrollTop),
-                  n(),
-                  l(s, h);
-              },
-              r = i(!0),
-              a = i(!1);
-            a(), e.addEventListener("scroll", r, b);
-            const c = o.options.useScrollendEvent && E;
-            return (
-              c && e.addEventListener("scrollend", a, b),
-              () => {
-                e.removeEventListener("scroll", r),
-                  c && e.removeEventListener("scrollend", a);
-              }
-            );
-          },
-          j = (o, l) => {
-            const e = o.scrollElement;
-            if (!e) return;
-            const t = o.targetWindow;
-            if (!t) return;
-            let s = 0;
-            const n =
-                o.options.useScrollendEvent && E
-                  ? () => {}
-                  : x(
-                      t,
-                      () => {
-                        l(s, !1);
-                      },
-                      o.options.isScrollingResetDelay,
-                    ),
-              i = (h) => () => {
-                (s = e[o.options.horizontal ? "scrollX" : "scrollY"]),
-                  n(),
-                  l(s, h);
-              },
-              r = i(!0),
-              a = i(!1);
-            a(), e.addEventListener("scroll", r, b);
-            const c = o.options.useScrollendEvent && E;
-            return (
-              c && e.addEventListener("scrollend", a, b),
-              () => {
-                e.removeEventListener("scroll", r),
-                  c && e.removeEventListener("scrollend", a);
-              }
-            );
-          },
-          P = (o, l, e) => {
-            if (l?.borderBoxSize) {
-              const t = l.borderBoxSize[0];
-              if (t)
-                return Math.round(
-                  t[e.options.horizontal ? "inlineSize" : "blockSize"],
-                );
-            }
-            return o[e.options.horizontal ? "offsetWidth" : "offsetHeight"];
-          },
-          V = (o, { adjustments: l = 0, behavior: e }, t) => {
-            var s, n;
-            const i = o + l;
-            (n = (s = t.scrollElement) == null ? void 0 : s.scrollTo) == null ||
-              n.call(s, {
-                [t.options.horizontal ? "left" : "top"]: i,
-                behavior: e,
-              });
-          },
-          B = (o, { adjustments: l = 0, behavior: e }, t) => {
-            var s, n;
-            const i = o + l;
-            (n = (s = t.scrollElement) == null ? void 0 : s.scrollTo) == null ||
-              n.call(s, {
-                [t.options.horizontal ? "left" : "top"]: i,
-                behavior: e,
-              });
-          };
-        class N {
-          constructor(l) {
-            (this.unsubs = []),
-              (this.scrollElement = null),
-              (this.targetWindow = null),
-              (this.isScrolling = !1),
-              (this.measurementsCache = []),
-              (this.itemSizeCache = new Map()),
-              (this.pendingMeasuredCacheIndexes = []),
-              (this.scrollRect = null),
-              (this.scrollOffset = null),
-              (this.scrollDirection = null),
-              (this.scrollAdjustments = 0),
-              (this.elementsCache = new Map()),
-              (this.observer = (() => {
-                let e = null;
-                const t = () =>
-                  e ||
-                  (!this.targetWindow || !this.targetWindow.ResizeObserver
-                    ? null
-                    : (e = new this.targetWindow.ResizeObserver((s) => {
-                        s.forEach((n) => {
-                          const i = () => {
-                            this._measureElement(n.target, n);
-                          };
-                          this.options.useAnimationFrameWithResizeObserver
-                            ? requestAnimationFrame(i)
-                            : i();
-                        });
-                      })));
-                return {
-                  disconnect: () => {
-                    var s;
-                    (s = t()) == null || s.disconnect(), (e = null);
-                  },
-                  observe: (s) => {
-                    var n;
-                    return (n = t()) == null
-                      ? void 0
-                      : n.observe(s, { box: "border-box" });
-                  },
-                  unobserve: (s) => {
-                    var n;
-                    return (n = t()) == null ? void 0 : n.unobserve(s);
-                  },
-                };
-              })()),
-              (this.range = null),
-              (this.setOptions = (e) => {
-                Object.entries(e).forEach(([t, s]) => {
-                  typeof s > "u" && delete e[t];
-                }),
-                  (this.options = {
-                    debug: !1,
-                    initialOffset: 0,
-                    overscan: 1,
-                    paddingStart: 0,
-                    paddingEnd: 0,
-                    scrollPaddingStart: 0,
-                    scrollPaddingEnd: 0,
-                    horizontal: !1,
-                    getItemKey: T,
-                    rangeExtractor: W,
-                    onChange: () => {},
-                    measureElement: P,
-                    initialRect: { width: 0, height: 0 },
-                    scrollMargin: 0,
-                    gap: 0,
-                    indexAttribute: "data-index",
-                    initialMeasurementsCache: [],
-                    lanes: 1,
-                    isScrollingResetDelay: 150,
-                    enabled: !0,
-                    isRtl: !1,
-                    useScrollendEvent: !1,
-                    useAnimationFrameWithResizeObserver: !1,
-                    ...e,
-                  });
-              }),
-              (this.notify = (e) => {
-                var t, s;
-                (s = (t = this.options).onChange) == null || s.call(t, this, e);
-              }),
-              (this.maybeNotify = p(
-                () => (
-                  this.calculateRange(),
-                  [
-                    this.isScrolling,
-                    this.range ? this.range.startIndex : null,
-                    this.range ? this.range.endIndex : null,
-                  ]
-                ),
-                (e) => {
-                  this.notify(e);
-                },
-                {
-                  key: !1,
-                  debug: () => this.options.debug,
-                  initialDeps: [
-                    this.isScrolling,
-                    this.range ? this.range.startIndex : null,
-                    this.range ? this.range.endIndex : null,
-                  ],
-                },
-              )),
-              (this.cleanup = () => {
-                this.unsubs.filter(Boolean).forEach((e) => e()),
-                  (this.unsubs = []),
-                  this.observer.disconnect(),
-                  (this.scrollElement = null),
-                  (this.targetWindow = null);
-              }),
-              (this._didMount = () => () => {
-                this.cleanup();
-              }),
-              (this._willUpdate = () => {
-                var e;
-                const t = this.options.enabled
-                  ? this.options.getScrollElement()
-                  : null;
-                if (this.scrollElement !== t) {
-                  if ((this.cleanup(), !t)) {
-                    this.maybeNotify();
-                    return;
-                  }
-                  (this.scrollElement = t),
-                    this.scrollElement && "ownerDocument" in this.scrollElement
-                      ? (this.targetWindow =
-                          this.scrollElement.ownerDocument.defaultView)
-                      : (this.targetWindow =
-                          ((e = this.scrollElement) == null
-                            ? void 0
-                            : e.window) ?? null),
-                    this.elementsCache.forEach((s) => {
-                      this.observer.observe(s);
-                    }),
-                    this._scrollToOffset(this.getScrollOffset(), {
-                      adjustments: void 0,
-                      behavior: void 0,
-                    }),
-                    this.unsubs.push(
-                      this.options.observeElementRect(this, (s) => {
-                        (this.scrollRect = s), this.maybeNotify();
-                      }),
-                    ),
-                    this.unsubs.push(
-                      this.options.observeElementOffset(this, (s, n) => {
-                        (this.scrollAdjustments = 0),
-                          (this.scrollDirection = n
-                            ? this.getScrollOffset() < s
-                              ? "forward"
-                              : "backward"
-                            : null),
-                          (this.scrollOffset = s),
-                          (this.isScrolling = n),
-                          this.maybeNotify();
-                      }),
-                    );
-                }
-              }),
-              (this.getSize = () =>
-                this.options.enabled
-                  ? ((this.scrollRect =
-                      this.scrollRect ?? this.options.initialRect),
-                    this.scrollRect[
-                      this.options.horizontal ? "width" : "height"
-                    ])
-                  : ((this.scrollRect = null), 0)),
-              (this.getScrollOffset = () =>
-                this.options.enabled
-                  ? ((this.scrollOffset =
-                      this.scrollOffset ??
-                      (typeof this.options.initialOffset == "function"
-                        ? this.options.initialOffset()
-                        : this.options.initialOffset)),
-                    this.scrollOffset)
-                  : ((this.scrollOffset = null), 0)),
-              (this.getFurthestMeasurement = (e, t) => {
-                const s = new Map(),
-                  n = new Map();
-                for (let i = t - 1; i >= 0; i--) {
-                  const r = e[i];
-                  if (s.has(r.lane)) continue;
-                  const a = n.get(r.lane);
-                  if (
-                    (a == null || r.end > a.end
-                      ? n.set(r.lane, r)
-                      : r.end < a.end && s.set(r.lane, !0),
-                    s.size === this.options.lanes)
-                  )
-                    break;
-                }
-                return n.size === this.options.lanes
-                  ? Array.from(n.values()).sort((i, r) =>
-                      i.end === r.end ? i.index - r.index : i.end - r.end,
-                    )[0]
-                  : void 0;
-              }),
-              (this.getMeasurementOptions = p(
-                () => [
-                  this.options.count,
-                  this.options.paddingStart,
-                  this.options.scrollMargin,
-                  this.options.getItemKey,
-                  this.options.enabled,
-                ],
-                (e, t, s, n, i) => (
-                  (this.pendingMeasuredCacheIndexes = []),
-                  {
-                    count: e,
-                    paddingStart: t,
-                    scrollMargin: s,
-                    getItemKey: n,
-                    enabled: i,
-                  }
-                ),
-                { key: !1 },
-              )),
-              (this.getMeasurements = p(
-                () => [this.getMeasurementOptions(), this.itemSizeCache],
-                (
-                  {
-                    count: e,
-                    paddingStart: t,
-                    scrollMargin: s,
-                    getItemKey: n,
-                    enabled: i,
-                  },
-                  r,
-                ) => {
-                  if (!i)
-                    return (
-                      (this.measurementsCache = []),
-                      this.itemSizeCache.clear(),
-                      []
-                    );
-                  this.measurementsCache.length === 0 &&
-                    ((this.measurementsCache =
-                      this.options.initialMeasurementsCache),
-                    this.measurementsCache.forEach((h) => {
-                      this.itemSizeCache.set(h.key, h.size);
-                    }));
-                  const a =
-                    this.pendingMeasuredCacheIndexes.length > 0
-                      ? Math.min(...this.pendingMeasuredCacheIndexes)
-                      : 0;
-                  this.pendingMeasuredCacheIndexes = [];
-                  const c = this.measurementsCache.slice(0, a);
-                  for (let h = a; h < e; h++) {
-                    const u = n(h),
-                      d =
-                        this.options.lanes === 1
-                          ? c[h - 1]
-                          : this.getFurthestMeasurement(c, h),
-                      m = d ? d.end + this.options.gap : t + s,
-                      f = r.get(u),
-                      g =
-                        typeof f == "number" ? f : this.options.estimateSize(h),
-                      z = m + g,
-                      S = d ? d.lane : h % this.options.lanes;
-                    c[h] = {
-                      index: h,
-                      start: m,
-                      size: g,
-                      end: z,
-                      key: u,
-                      lane: S,
-                    };
-                  }
-                  return (this.measurementsCache = c), c;
-                },
-                { key: !1, debug: () => this.options.debug },
-              )),
-              (this.calculateRange = p(
-                () => [
-                  this.getMeasurements(),
-                  this.getSize(),
-                  this.getScrollOffset(),
-                  this.options.lanes,
-                ],
-                (e, t, s, n) =>
-                  (this.range =
-                    e.length > 0 && t > 0
-                      ? $({
-                          measurements: e,
-                          outerSize: t,
-                          scrollOffset: s,
-                          lanes: n,
-                        })
-                      : null),
-                { key: !1, debug: () => this.options.debug },
-              )),
-              (this.getVirtualIndexes = p(
-                () => {
-                  let e = null,
-                    t = null;
-                  const s = this.calculateRange();
-                  return (
-                    s && ((e = s.startIndex), (t = s.endIndex)),
-                    this.maybeNotify.updateDeps([this.isScrolling, e, t]),
-                    [
-                      this.options.rangeExtractor,
-                      this.options.overscan,
-                      this.options.count,
-                      e,
-                      t,
-                    ]
-                  );
-                },
-                (e, t, s, n, i) =>
-                  n === null || i === null
-                    ? []
-                    : e({ startIndex: n, endIndex: i, overscan: t, count: s }),
-                { key: !1, debug: () => this.options.debug },
-              )),
-              (this.indexFromElement = (e) => {
-                const t = this.options.indexAttribute,
-                  s = e.getAttribute(t);
-                return s
-                  ? parseInt(s, 10)
-                  : (console.warn(
-                      `Missing attribute name '${t}={index}' on measured element.`,
-                    ),
-                    -1);
-              }),
-              (this._measureElement = (e, t) => {
-                const s = this.indexFromElement(e),
-                  n = this.measurementsCache[s];
-                if (!n) return;
-                const i = n.key,
-                  r = this.elementsCache.get(i);
-                r !== e &&
-                  (r && this.observer.unobserve(r),
-                  this.observer.observe(e),
-                  this.elementsCache.set(i, e)),
-                  e.isConnected &&
-                    this.resizeItem(s, this.options.measureElement(e, t, this));
-              }),
-              (this.resizeItem = (e, t) => {
-                const s = this.measurementsCache[e];
-                if (!s) return;
-                const n = this.itemSizeCache.get(s.key) ?? s.size,
-                  i = t - n;
-                i !== 0 &&
-                  ((this.shouldAdjustScrollPositionOnItemSizeChange !== void 0
-                    ? this.shouldAdjustScrollPositionOnItemSizeChange(
-                        s,
-                        i,
-                        this,
-                      )
-                    : s.start <
-                      this.getScrollOffset() + this.scrollAdjustments) &&
-                    this._scrollToOffset(this.getScrollOffset(), {
-                      adjustments: (this.scrollAdjustments += i),
-                      behavior: void 0,
-                    }),
-                  this.pendingMeasuredCacheIndexes.push(s.index),
-                  (this.itemSizeCache = new Map(
-                    this.itemSizeCache.set(s.key, t),
-                  )),
-                  this.notify(!1));
-              }),
-              (this.measureElement = (e) => {
-                if (!e) {
-                  this.elementsCache.forEach((t, s) => {
-                    t.isConnected ||
-                      (this.observer.unobserve(t),
-                      this.elementsCache.delete(s));
-                  });
-                  return;
-                }
-                this._measureElement(e, void 0);
-              }),
-              (this.getVirtualItems = p(
-                () => [this.getVirtualIndexes(), this.getMeasurements()],
-                (e, t) => {
-                  const s = [];
-                  for (let n = 0, i = e.length; n < i; n++) {
-                    const r = e[n],
-                      a = t[r];
-                    s.push(a);
-                  }
-                  return s;
-                },
-                { key: !1, debug: () => this.options.debug },
-              )),
-              (this.getVirtualItemForOffset = (e) => {
-                const t = this.getMeasurements();
-                if (t.length !== 0)
-                  return M(t[C(0, t.length - 1, (s) => M(t[s]).start, e)]);
-              }),
-              (this.getOffsetForAlignment = (e, t, s = 0) => {
-                const n = this.getSize(),
-                  i = this.getScrollOffset();
-                t === "auto" && (t = e >= i + n ? "end" : "start"),
-                  t === "center" ? (e += (s - n) / 2) : t === "end" && (e -= n);
-                const r = this.getTotalSize() + this.options.scrollMargin - n;
-                return Math.max(Math.min(r, e), 0);
-              }),
-              (this.getOffsetForIndex = (e, t = "auto") => {
-                e = Math.max(0, Math.min(e, this.options.count - 1));
-                const s = this.measurementsCache[e];
-                if (!s) return;
-                const n = this.getSize(),
-                  i = this.getScrollOffset();
-                if (t === "auto")
-                  if (s.end >= i + n - this.options.scrollPaddingEnd) t = "end";
-                  else if (s.start <= i + this.options.scrollPaddingStart)
-                    t = "start";
-                  else return [i, t];
-                const r =
-                  t === "end"
-                    ? s.end + this.options.scrollPaddingEnd
-                    : s.start - this.options.scrollPaddingStart;
-                return [this.getOffsetForAlignment(r, t, s.size), t];
-              }),
-              (this.isDynamicMode = () => this.elementsCache.size > 0),
-              (this.scrollToOffset = (
-                e,
-                { align: t = "start", behavior: s } = {},
-              ) => {
-                s === "smooth" &&
-                  this.isDynamicMode() &&
-                  console.warn(
-                    "The `smooth` scroll behavior is not fully supported with dynamic size.",
-                  ),
-                  this._scrollToOffset(this.getOffsetForAlignment(e, t), {
-                    adjustments: void 0,
-                    behavior: s,
-                  });
-              }),
-              (this.scrollToIndex = (
-                e,
-                { align: t = "auto", behavior: s } = {},
-              ) => {
-                s === "smooth" &&
-                  this.isDynamicMode() &&
-                  console.warn(
-                    "The `smooth` scroll behavior is not fully supported with dynamic size.",
-                  ),
-                  (e = Math.max(0, Math.min(e, this.options.count - 1)));
-                let n = 0;
-                const i = 10,
-                  r = (c) => {
-                    if (!this.targetWindow) return;
-                    const h = this.getOffsetForIndex(e, c);
-                    if (!h) {
-                      console.warn("Failed to get offset for index:", e);
-                      return;
-                    }
-                    const [u, d] = h;
-                    this._scrollToOffset(u, {
-                      adjustments: void 0,
-                      behavior: s,
-                    }),
-                      this.targetWindow.requestAnimationFrame(() => {
-                        const m = this.getScrollOffset(),
-                          f = this.getOffsetForIndex(e, d);
-                        if (!f) {
-                          console.warn("Failed to get offset for index:", e);
-                          return;
-                        }
-                        k(f[0], m) || a(d);
-                      });
-                  },
-                  a = (c) => {
-                    this.targetWindow &&
-                      (n++,
-                      n < i
-                        ? this.targetWindow.requestAnimationFrame(() => r(c))
-                        : console.warn(
-                            `Failed to scroll to index ${e} after ${i} attempts.`,
-                          ));
-                  };
-                r(t);
-              }),
-              (this.scrollBy = (e, { behavior: t } = {}) => {
-                t === "smooth" &&
-                  this.isDynamicMode() &&
-                  console.warn(
-                    "The `smooth` scroll behavior is not fully supported with dynamic size.",
-                  ),
-                  this._scrollToOffset(this.getScrollOffset() + e, {
-                    adjustments: void 0,
-                    behavior: t,
-                  });
-              }),
-              (this.getTotalSize = () => {
-                var e;
-                const t = this.getMeasurements();
-                let s;
-                if (t.length === 0) s = this.options.paddingStart;
-                else if (this.options.lanes === 1)
-                  s = ((e = t[t.length - 1]) == null ? void 0 : e.end) ?? 0;
-                else {
-                  const n = Array(this.options.lanes).fill(null);
-                  let i = t.length - 1;
-                  for (; i >= 0 && n.some((r) => r === null); ) {
-                    const r = t[i];
-                    n[r.lane] === null && (n[r.lane] = r.end), i--;
-                  }
-                  s = Math.max(...n.filter((r) => r !== null));
-                }
-                return Math.max(
-                  s - this.options.scrollMargin + this.options.paddingEnd,
-                  0,
-                );
-              }),
-              (this._scrollToOffset = (e, { adjustments: t, behavior: s }) => {
-                this.options.scrollToFn(
-                  e,
-                  { behavior: s, adjustments: t },
-                  this,
-                );
-              }),
-              (this.measure = () => {
-                (this.itemSizeCache = new Map()), this.notify(!1);
-              }),
-              this.setOptions(l);
-          }
-        }
-        const C = (o, l, e, t) => {
-          for (; o <= l; ) {
-            const s = ((o + l) / 2) | 0,
-              n = e(s);
-            if (n < t) o = s + 1;
-            else if (n > t) l = s - 1;
-            else return s;
-          }
-          return o > 0 ? o - 1 : 0;
+        },
+        w = (e, { adjustments: t = 0, behavior: s }, n) => {
+          var i, o;
+          const r = e + t;
+          null == (o = null == (i = n.scrollElement) ? void 0 : i.scrollTo) ||
+            o.call(i, {
+              [n.options.horizontal ? "left" : "top"]: r,
+              behavior: s,
+            });
         };
-        function $({
-          measurements: o,
-          outerSize: l,
-          scrollOffset: e,
-          lanes: t,
-        }) {
-          const s = o.length - 1,
-            n = (a) => o[a].start;
-          if (o.length <= t) return { startIndex: 0, endIndex: s };
-          let i = C(0, s, n, e),
-            r = i;
-          if (t === 1) for (; r < s && o[r].end < e + l; ) r++;
-          else if (t > 1) {
-            const a = Array(t).fill(0);
-            for (; r < s && a.some((h) => h < e + l); ) {
-              const h = o[r];
-              (a[h.lane] = h.end), r++;
-            }
-            const c = Array(t).fill(e + l);
-            for (; i >= 0 && c.some((h) => h >= e); ) {
-              const h = o[i];
-              (c[h.lane] = h.start), i--;
-            }
-            (i = Math.max(0, i - (i % t))),
-              (r = Math.min(s, r + (t - 1 - (r % t))));
-          }
-          return { startIndex: i, endIndex: r };
-        }
-        const I = typeof document < "u" ? w.useLayoutEffect : w.useEffect;
-        function R(o) {
-          const l = w.useReducer(() => ({}), {})[1],
-            e = {
-              ...o,
-              onChange: (s, n) => {
-                var i;
-                n ? (0, F.flushSync)(l) : l(),
-                  (i = o.onChange) == null || i.call(o, s, n);
+      class S {
+        constructor(e) {
+          (this.unsubs = []),
+            (this.scrollElement = null),
+            (this.targetWindow = null),
+            (this.isScrolling = !1),
+            (this.measurementsCache = []),
+            (this.itemSizeCache = new Map()),
+            (this.pendingMeasuredCacheIndexes = []),
+            (this.scrollRect = null),
+            (this.scrollOffset = null),
+            (this.scrollDirection = null),
+            (this.scrollAdjustments = 0),
+            (this.elementsCache = new Map()),
+            (this.observer = (() => {
+              let e = null;
+              const t = () =>
+                e ||
+                (this.targetWindow && this.targetWindow.ResizeObserver
+                  ? (e = new this.targetWindow.ResizeObserver((e) => {
+                      e.forEach((e) => {
+                        const t = () => {
+                          this._measureElement(e.target, e);
+                        };
+                        this.options.useAnimationFrameWithResizeObserver
+                          ? requestAnimationFrame(t)
+                          : t();
+                      });
+                    }))
+                  : null);
+              return {
+                disconnect: () => {
+                  var s;
+                  null == (s = t()) || s.disconnect(), (e = null);
+                },
+                observe: (e) => {
+                  var s;
+                  return null == (s = t())
+                    ? void 0
+                    : s.observe(e, { box: "border-box" });
+                },
+                unobserve: (e) => {
+                  var s;
+                  return null == (s = t()) ? void 0 : s.unobserve(e);
+                },
+              };
+            })()),
+            (this.range = null),
+            (this.setOptions = (e) => {
+              Object.entries(e).forEach(([t, s]) => {
+                void 0 === s && delete e[t];
+              }),
+                (this.options = {
+                  debug: !1,
+                  initialOffset: 0,
+                  overscan: 1,
+                  paddingStart: 0,
+                  paddingEnd: 0,
+                  scrollPaddingStart: 0,
+                  scrollPaddingEnd: 0,
+                  horizontal: !1,
+                  getItemKey: h,
+                  rangeExtractor: c,
+                  onChange: () => {},
+                  measureElement: v,
+                  initialRect: { width: 0, height: 0 },
+                  scrollMargin: 0,
+                  gap: 0,
+                  indexAttribute: "data-index",
+                  initialMeasurementsCache: [],
+                  lanes: 1,
+                  isScrollingResetDelay: 150,
+                  enabled: !0,
+                  isRtl: !1,
+                  useScrollendEvent: !1,
+                  useAnimationFrameWithResizeObserver: !1,
+                  ...e,
+                });
+            }),
+            (this.notify = (e) => {
+              var t, s;
+              null == (s = (t = this.options).onChange) || s.call(t, this, e);
+            }),
+            (this.maybeNotify = o(
+              () => (
+                this.calculateRange(),
+                [
+                  this.isScrolling,
+                  this.range ? this.range.startIndex : null,
+                  this.range ? this.range.endIndex : null,
+                ]
+              ),
+              (e) => {
+                this.notify(e);
               },
+              {
+                key: !1,
+                debug: () => this.options.debug,
+                initialDeps: [
+                  this.isScrolling,
+                  this.range ? this.range.startIndex : null,
+                  this.range ? this.range.endIndex : null,
+                ],
+              },
+            )),
+            (this.cleanup = () => {
+              this.unsubs.filter(Boolean).forEach((e) => e()),
+                (this.unsubs = []),
+                this.observer.disconnect(),
+                (this.scrollElement = null),
+                (this.targetWindow = null);
+            }),
+            (this._didMount = () => () => {
+              this.cleanup();
+            }),
+            (this._willUpdate = () => {
+              var e;
+              const t = this.options.enabled
+                ? this.options.getScrollElement()
+                : null;
+              if (this.scrollElement !== t) {
+                if ((this.cleanup(), !t)) return void this.maybeNotify();
+                (this.scrollElement = t),
+                  this.scrollElement && "ownerDocument" in this.scrollElement
+                    ? (this.targetWindow =
+                        this.scrollElement.ownerDocument.defaultView)
+                    : (this.targetWindow =
+                        (null == (e = this.scrollElement)
+                          ? void 0
+                          : e.window) ?? null),
+                  this.elementsCache.forEach((e) => {
+                    this.observer.observe(e);
+                  }),
+                  this._scrollToOffset(this.getScrollOffset(), {
+                    adjustments: void 0,
+                    behavior: void 0,
+                  }),
+                  this.unsubs.push(
+                    this.options.observeElementRect(this, (e) => {
+                      (this.scrollRect = e), this.maybeNotify();
+                    }),
+                  ),
+                  this.unsubs.push(
+                    this.options.observeElementOffset(this, (e, t) => {
+                      (this.scrollAdjustments = 0),
+                        (this.scrollDirection = t
+                          ? this.getScrollOffset() < e
+                            ? "forward"
+                            : "backward"
+                          : null),
+                        (this.scrollOffset = e),
+                        (this.isScrolling = t),
+                        this.maybeNotify();
+                    }),
+                  );
+              }
+            }),
+            (this.getSize = () =>
+              this.options.enabled
+                ? ((this.scrollRect =
+                    this.scrollRect ?? this.options.initialRect),
+                  this.scrollRect[this.options.horizontal ? "width" : "height"])
+                : ((this.scrollRect = null), 0)),
+            (this.getScrollOffset = () =>
+              this.options.enabled
+                ? ((this.scrollOffset =
+                    this.scrollOffset ??
+                    ("function" == typeof this.options.initialOffset
+                      ? this.options.initialOffset()
+                      : this.options.initialOffset)),
+                  this.scrollOffset)
+                : ((this.scrollOffset = null), 0)),
+            (this.getFurthestMeasurement = (e, t) => {
+              const s = new Map(),
+                n = new Map();
+              for (let i = t - 1; i >= 0; i--) {
+                const t = e[i];
+                if (s.has(t.lane)) continue;
+                const o = n.get(t.lane);
+                if (
+                  (null == o || t.end > o.end
+                    ? n.set(t.lane, t)
+                    : t.end < o.end && s.set(t.lane, !0),
+                  s.size === this.options.lanes)
+                )
+                  break;
+              }
+              return n.size === this.options.lanes
+                ? Array.from(n.values()).sort((e, t) =>
+                    e.end === t.end ? e.index - t.index : e.end - t.end,
+                  )[0]
+                : void 0;
+            }),
+            (this.getMeasurementOptions = o(
+              () => [
+                this.options.count,
+                this.options.paddingStart,
+                this.options.scrollMargin,
+                this.options.getItemKey,
+                this.options.enabled,
+              ],
+              (e, t, s, n, i) => (
+                (this.pendingMeasuredCacheIndexes = []),
+                {
+                  count: e,
+                  paddingStart: t,
+                  scrollMargin: s,
+                  getItemKey: n,
+                  enabled: i,
+                }
+              ),
+              { key: !1 },
+            )),
+            (this.getMeasurements = o(
+              () => [this.getMeasurementOptions(), this.itemSizeCache],
+              (
+                {
+                  count: e,
+                  paddingStart: t,
+                  scrollMargin: s,
+                  getItemKey: n,
+                  enabled: i,
+                },
+                o,
+              ) => {
+                if (!i)
+                  return (
+                    (this.measurementsCache = []),
+                    this.itemSizeCache.clear(),
+                    []
+                  );
+                0 === this.measurementsCache.length &&
+                  ((this.measurementsCache =
+                    this.options.initialMeasurementsCache),
+                  this.measurementsCache.forEach((e) => {
+                    this.itemSizeCache.set(e.key, e.size);
+                  }));
+                const r =
+                  this.pendingMeasuredCacheIndexes.length > 0
+                    ? Math.min(...this.pendingMeasuredCacheIndexes)
+                    : 0;
+                this.pendingMeasuredCacheIndexes = [];
+                const l = this.measurementsCache.slice(0, r);
+                for (let i = r; i < e; i++) {
+                  const e = n(i),
+                    r =
+                      1 === this.options.lanes
+                        ? l[i - 1]
+                        : this.getFurthestMeasurement(l, i),
+                    a = r ? r.end + this.options.gap : t + s,
+                    h = o.get(e),
+                    c = "number" == typeof h ? h : this.options.estimateSize(i),
+                    d = a + c,
+                    u = r ? r.lane : i % this.options.lanes;
+                  l[i] = {
+                    index: i,
+                    start: a,
+                    size: c,
+                    end: d,
+                    key: e,
+                    lane: u,
+                  };
+                }
+                return (this.measurementsCache = l), l;
+              },
+              { key: !1, debug: () => this.options.debug },
+            )),
+            (this.calculateRange = o(
+              () => [
+                this.getMeasurements(),
+                this.getSize(),
+                this.getScrollOffset(),
+                this.options.lanes,
+              ],
+              (e, t, s, n) =>
+                (this.range =
+                  e.length > 0 && t > 0
+                    ? (function ({
+                        measurements: e,
+                        outerSize: t,
+                        scrollOffset: s,
+                        lanes: n,
+                      }) {
+                        const i = e.length - 1,
+                          o = (t) => e[t].start;
+                        if (e.length <= n)
+                          return { startIndex: 0, endIndex: i };
+                        let r = E(0, i, o, s),
+                          l = r;
+                        if (1 === n) for (; l < i && e[l].end < s + t; ) l++;
+                        else if (n > 1) {
+                          const o = Array(n).fill(0);
+                          for (; l < i && o.some((e) => e < s + t); ) {
+                            const t = e[l];
+                            (o[t.lane] = t.end), l++;
+                          }
+                          const a = Array(n).fill(s + t);
+                          for (; r >= 0 && a.some((e) => e >= s); ) {
+                            const t = e[r];
+                            (a[t.lane] = t.start), r--;
+                          }
+                          (r = Math.max(0, r - (r % n))),
+                            (l = Math.min(i, l + (n - 1 - (l % n))));
+                        }
+                        return { startIndex: r, endIndex: l };
+                      })({
+                        measurements: e,
+                        outerSize: t,
+                        scrollOffset: s,
+                        lanes: n,
+                      })
+                    : null),
+              { key: !1, debug: () => this.options.debug },
+            )),
+            (this.getVirtualIndexes = o(
+              () => {
+                let e = null,
+                  t = null;
+                const s = this.calculateRange();
+                return (
+                  s && ((e = s.startIndex), (t = s.endIndex)),
+                  this.maybeNotify.updateDeps([this.isScrolling, e, t]),
+                  [
+                    this.options.rangeExtractor,
+                    this.options.overscan,
+                    this.options.count,
+                    e,
+                    t,
+                  ]
+                );
+              },
+              (e, t, s, n, i) =>
+                null === n || null === i
+                  ? []
+                  : e({ startIndex: n, endIndex: i, overscan: t, count: s }),
+              { key: !1, debug: () => this.options.debug },
+            )),
+            (this.indexFromElement = (e) => {
+              const t = this.options.indexAttribute,
+                s = e.getAttribute(t);
+              return s
+                ? parseInt(s, 10)
+                : (console.warn(
+                    `Missing attribute name '${t}={index}' on measured element.`,
+                  ),
+                  -1);
+            }),
+            (this._measureElement = (e, t) => {
+              const s = this.indexFromElement(e),
+                n = this.measurementsCache[s];
+              if (!n) return;
+              const i = n.key,
+                o = this.elementsCache.get(i);
+              o !== e &&
+                (o && this.observer.unobserve(o),
+                this.observer.observe(e),
+                this.elementsCache.set(i, e)),
+                e.isConnected &&
+                  this.resizeItem(s, this.options.measureElement(e, t, this));
+            }),
+            (this.resizeItem = (e, t) => {
+              const s = this.measurementsCache[e];
+              if (!s) return;
+              const n = t - (this.itemSizeCache.get(s.key) ?? s.size);
+              0 !== n &&
+                ((void 0 !== this.shouldAdjustScrollPositionOnItemSizeChange
+                  ? this.shouldAdjustScrollPositionOnItemSizeChange(s, n, this)
+                  : s.start <
+                    this.getScrollOffset() + this.scrollAdjustments) &&
+                  this._scrollToOffset(this.getScrollOffset(), {
+                    adjustments: (this.scrollAdjustments += n),
+                    behavior: void 0,
+                  }),
+                this.pendingMeasuredCacheIndexes.push(s.index),
+                (this.itemSizeCache = new Map(
+                  this.itemSizeCache.set(s.key, t),
+                )),
+                this.notify(!1));
+            }),
+            (this.measureElement = (e) => {
+              e
+                ? this._measureElement(e, void 0)
+                : this.elementsCache.forEach((e, t) => {
+                    e.isConnected ||
+                      (this.observer.unobserve(e),
+                      this.elementsCache.delete(t));
+                  });
+            }),
+            (this.getVirtualItems = o(
+              () => [this.getVirtualIndexes(), this.getMeasurements()],
+              (e, t) => {
+                const s = [];
+                for (let n = 0, i = e.length; n < i; n++) {
+                  const i = t[e[n]];
+                  s.push(i);
+                }
+                return s;
+              },
+              { key: !1, debug: () => this.options.debug },
+            )),
+            (this.getVirtualItemForOffset = (e) => {
+              const t = this.getMeasurements();
+              if (0 !== t.length)
+                return r(t[E(0, t.length - 1, (e) => r(t[e]).start, e)]);
+            }),
+            (this.getOffsetForAlignment = (e, t, s = 0) => {
+              const n = this.getSize(),
+                i = this.getScrollOffset();
+              "auto" === t && (t = e >= i + n ? "end" : "start"),
+                "center" === t ? (e += (s - n) / 2) : "end" === t && (e -= n);
+              const o = this.getTotalSize() + this.options.scrollMargin - n;
+              return Math.max(Math.min(o, e), 0);
+            }),
+            (this.getOffsetForIndex = (e, t = "auto") => {
+              e = Math.max(0, Math.min(e, this.options.count - 1));
+              const s = this.measurementsCache[e];
+              if (!s) return;
+              const n = this.getSize(),
+                i = this.getScrollOffset();
+              if ("auto" === t)
+                if (s.end >= i + n - this.options.scrollPaddingEnd) t = "end";
+                else {
+                  if (!(s.start <= i + this.options.scrollPaddingStart))
+                    return [i, t];
+                  t = "start";
+                }
+              const o =
+                "end" === t
+                  ? s.end + this.options.scrollPaddingEnd
+                  : s.start - this.options.scrollPaddingStart;
+              return [this.getOffsetForAlignment(o, t, s.size), t];
+            }),
+            (this.isDynamicMode = () => this.elementsCache.size > 0),
+            (this.scrollToOffset = (
+              e,
+              { align: t = "start", behavior: s } = {},
+            ) => {
+              "smooth" === s &&
+                this.isDynamicMode() &&
+                console.warn(
+                  "The `smooth` scroll behavior is not fully supported with dynamic size.",
+                ),
+                this._scrollToOffset(this.getOffsetForAlignment(e, t), {
+                  adjustments: void 0,
+                  behavior: s,
+                });
+            }),
+            (this.scrollToIndex = (
+              e,
+              { align: t = "auto", behavior: s } = {},
+            ) => {
+              "smooth" === s &&
+                this.isDynamicMode() &&
+                console.warn(
+                  "The `smooth` scroll behavior is not fully supported with dynamic size.",
+                ),
+                (e = Math.max(0, Math.min(e, this.options.count - 1)));
+              let n = 0;
+              const i = (t) => {
+                  if (!this.targetWindow) return;
+                  const n = this.getOffsetForIndex(e, t);
+                  if (!n)
+                    return void console.warn(
+                      "Failed to get offset for index:",
+                      e,
+                    );
+                  const [i, r] = n;
+                  this._scrollToOffset(i, { adjustments: void 0, behavior: s }),
+                    this.targetWindow.requestAnimationFrame(() => {
+                      const t = this.getScrollOffset(),
+                        s = this.getOffsetForIndex(e, r);
+                      var n, i;
+                      s
+                        ? ((n = s[0]), (i = t), Math.abs(n - i) < 1.01 || o(r))
+                        : console.warn("Failed to get offset for index:", e);
+                    });
+                },
+                o = (t) => {
+                  this.targetWindow &&
+                    (n++,
+                    n < 10
+                      ? this.targetWindow.requestAnimationFrame(() => i(t))
+                      : console.warn(
+                          `Failed to scroll to index ${e} after 10 attempts.`,
+                        ));
+                };
+              i(t);
+            }),
+            (this.scrollBy = (e, { behavior: t } = {}) => {
+              "smooth" === t &&
+                this.isDynamicMode() &&
+                console.warn(
+                  "The `smooth` scroll behavior is not fully supported with dynamic size.",
+                ),
+                this._scrollToOffset(this.getScrollOffset() + e, {
+                  adjustments: void 0,
+                  behavior: t,
+                });
+            }),
+            (this.getTotalSize = () => {
+              var e;
+              const t = this.getMeasurements();
+              let s;
+              if (0 === t.length) s = this.options.paddingStart;
+              else if (1 === this.options.lanes)
+                s = (null == (e = t[t.length - 1]) ? void 0 : e.end) ?? 0;
+              else {
+                const e = Array(this.options.lanes).fill(null);
+                let n = t.length - 1;
+                for (; n >= 0 && e.some((e) => null === e); ) {
+                  const s = t[n];
+                  null === e[s.lane] && (e[s.lane] = s.end), n--;
+                }
+                s = Math.max(...e.filter((e) => null !== e));
+              }
+              return Math.max(
+                s - this.options.scrollMargin + this.options.paddingEnd,
+                0,
+              );
+            }),
+            (this._scrollToOffset = (e, { adjustments: t, behavior: s }) => {
+              this.options.scrollToFn(e, { behavior: s, adjustments: t }, this);
+            }),
+            (this.measure = () => {
+              (this.itemSizeCache = new Map()), this.notify(!1);
+            }),
+            this.setOptions(e);
+        }
+      }
+      const E = (e, t, s, n) => {
+        for (; e <= t; ) {
+          const i = ((e + t) / 2) | 0,
+            o = s(i);
+          if (o < n) e = i + 1;
+          else {
+            if (!(o > n)) return i;
+            t = i - 1;
+          }
+        }
+        return e > 0 ? e - 1 : 0;
+      };
+      const y =
+        "undefined" != typeof document ? n.useLayoutEffect : n.useEffect;
+      function x(e) {
+        const t = n.useReducer(() => ({}), {})[1],
+          s = {
+            ...e,
+            onChange: (s, n) => {
+              var o;
+              n ? (0, i.flushSync)(t) : t(),
+                null == (o = e.onChange) || o.call(e, s, n);
             },
-            [t] = w.useState(() => new N(e));
-          return (
-            t.setOptions(e),
-            I(() => t._didMount(), []),
-            I(() => t._willUpdate()),
-            t
-          );
-        }
-        function H(o) {
-          return R({
-            observeElementRect: A,
-            observeElementOffset: L,
-            scrollToFn: B,
-            ...o,
-          });
-        }
-        function U(o) {
-          return R({
-            getScrollElement: () => (typeof document < "u" ? window : null),
-            observeElementRect: D,
-            observeElementOffset: j,
-            scrollToFn: V,
-            initialOffset: () => (typeof document < "u" ? window.scrollY : 0),
-            ...o,
-          });
-        }
-      },
+          },
+          [o] = n.useState(() => new S(s));
+        return (
+          o.setOptions(s),
+          y(() => o._didMount(), []),
+          y(() => o._willUpdate()),
+          o
+        );
+      }
+      function z(e) {
+        return x({
+          observeElementRect: d,
+          observeElementOffset: g,
+          scrollToFn: w,
+          ...e,
+        });
+      }
+      function M(e) {
+        return x({
+          getScrollElement: () =>
+            "undefined" != typeof document ? window : null,
+          observeElementRect: f,
+          observeElementOffset: p,
+          scrollToFn: b,
+          initialOffset: () =>
+            "undefined" != typeof document ? window.scrollY : 0,
+          ...e,
+        });
+      }
     },
-  ]);
-})();
+  },
+]);

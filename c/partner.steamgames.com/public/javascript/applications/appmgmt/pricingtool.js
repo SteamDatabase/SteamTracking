@@ -1,1047 +1,111 @@
-(() => {
-  (self.webpackChunkappmgmt_storeadmin =
-    self.webpackChunkappmgmt_storeadmin || []).push([
-    [1101],
-    {
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports),
-          __webpack_require__._(module_exports, {
-            PricingRoutes: () => _,
-            default: () => _,
-          });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const {
-              bCompactMode: _,
-              setCompactMode: _,
-              rgGridData: _,
-              strPackageFilter: _,
-              setPackageFilter: _,
-              bFilterToBelowMinPrice: _,
-              setFilterToBelowMinPrice: _,
-            } = _,
-            _ = (0, _.useMemo)(
-              () => _.filter((_) => (0, _._)(_.packageID)).length,
-              [_],
-            );
-          let _ = _.useCallback(
-            (_) => {
-              _(_.data);
-            },
-            [_],
-          );
-          const _ = _.useMemo(
-              () => [
-                {
-                  label: (0, _._)("#PricingDashboard_ShowOnlyReleasedPackages"),
-                  data: "released",
-                },
-                {
-                  label: (0, _._)("#PricingDashboard_ShowAllPackages"),
-                  data: "all",
-                },
-                {
-                  label: (0, _._)(
-                    "#PricingDashboard_ShowOnlyUnreleasedPackages",
-                  ),
-                  data: "unreleased",
-                },
-                {
-                  label: (0, _._)("#PricingDashboard_ShowOnlyChangedPackages"),
-                  data: "changed",
-                },
-                {
-                  label: (0, _._)("#PricingDashboard_ShowSubmittedChanges"),
-                  data: "proposed",
-                },
-              ],
-              [],
-            ),
-            [_, _, _] = (0, _._)();
-          return (0, _.jsxs)("div", {
-            className: _().GridHeaderButtons,
-            children: [
-              (0, _.jsx)(_._, {
-                rgOptions: _,
-                selectedOption: _,
-                strDropDownClassName: _().Test,
-                onChange: _,
-                contextMenuPositionOptions: {
-                  bMatchWidth: !1,
-                },
-              }),
-              !!(_ || _) &&
-                (0, _.jsx)("div", {
-                  className: (0, _._)(_().OptionCtn, _().PriceLowOption),
-                  children: (0, _.jsx)(_._, {
-                    checked: _,
-                    onChange: _,
-                    label: (0, _._)("#PricingDashboard_FilterToLowPrice", _),
-                  }),
-                }),
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().OptionCtn, _().CompactOption),
-                children: (0, _.jsx)(_._, {
-                  checked: _,
-                  onChange: _,
-                  label: (0, _._)(
-                    "#PricingDashboard_ShowCompactModeCheckBoxLabel",
-                  ),
-                }),
-              }),
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().OptionCtn),
-                children: (0, _.jsx)(_._, {}),
-              }),
-              (0, _.jsxs)("div", {
-                className: (0, _._)(_().OptionCtn),
-                children: [
-                  (0, _.jsx)(_._, {
-                    onClick: _,
-                    children: (0, _._)(
-                      "#PricingDashboard_ApplyGuidelinesDialog_Button",
-                    ),
-                  }),
-                  (0, _.jsx)(_._, {
-                    active: _,
-                    children: (0, _.jsx)(_._, {
-                      closeModal: _,
-                    }),
-                  }),
-                ],
-              }),
-            ],
-          });
-        }
-        var _ = __webpack_require__("chunkid");
-        function _(_) {
-          return _.contains_game && _.contains_dlc
-            ? "BOTH"
-            : _.contains_game
-              ? "GAME"
-              : _.contains_dlc
-                ? "DLC"
-                : null;
-        }
-        function _(_, _, _) {
-          const { rgSupportedPriceKeys: _ } = (0, _._)();
-          return _.useMemo(() => {
-            const _ = [];
-            for (const _ of _) {
-              const _ = /^-?[0-9]+$/.test(_.strSearchStringFromURL)
-                ? parseInt(_.strSearchStringFromURL)
-                : 0;
-              if (_.packageid !== _) {
-                if (_ == "changed") {
-                  if (!(0, _._)(_.packageid)) continue;
-                } else if (_ == "proposed") {
-                  if (!(0, _._)(_.packageid)) continue;
-                } else if (_ == "released") {
-                  if (!_.released) continue;
-                } else if (_ == "unreleased" && _.released) continue;
-                if (_?.bFilterToOnlyBelowMinimumPrice && !(0, _._)(_.packageid))
-                  continue;
-              }
-              let _ = _.grouped_app_name;
-              _ ||
-                (_.appids.length > 1
-                  ? (_ = (0, _._)(
-                      "#PackageGrid_MultipleBaseGamesFoundForPackage",
-                    ))
-                  : (_ = (0, _._)("#PackageGrid_NoBaseGameFoundForPackage")));
-              const _ = {
-                appids: _.appids.sort(),
-                appName: _,
-                packageID: _.packageid,
-                packageName: _.package_name || "",
-                packageType: _(_),
-                released: _.released,
-              };
-              for (const _ of _) _[_] = _;
-              _.push(_);
-            }
-            return _;
-          }, [_, _, _, _]);
-        }
-        function _(_) {
-          const { column: _ } = _,
-            _ = _._,
-            _ = (0, _._)(_),
-            _ = (0, _._)(_);
-          let _ = () =>
-            (0, _.jsx)(_, {
-              priceKey: _,
-            });
-          return (0, _.jsxs)("div", {
-            className: _().CurrencyHeader,
-            children: [
-              (0, _.jsx)(_._, {
-                toolTipContent: _,
-                direction: "top",
-                className: _().CurrencyAbbreviation,
-                strTooltipClassname: _().HoverToolTip,
-                children: (0, _.jsxs)("div", {
-                  className: _().CurrencyNameCtn,
-                  children: [
-                    _,
-                    (0, _.jsx)("span", {
-                      className: _().CurrencyName,
-                      children: _,
-                    }),
-                  ],
-                }),
-              }),
-              _ > 0 &&
-                (0, _.jsx)(_._, {
-                  hoverKey: _,
-                  className: _().CurrencyMore,
-                  renderHover: _,
-                }),
-            ],
-          });
-        }
-        function _(_) {
-          const { row: _ } = _;
-          return (0, _.jsx)(_._, {
-            packageID: _.original.packageID,
-            bShowCancel: !0,
-          });
-        }
-        function _() {
-          return _.useMemo(
-            () =>
-              (0, _._)().accessor("proposalState", {
-                header: (0, _._)("#PricingDashboard_Column_PriceProposalState"),
-                enableSorting: !1,
-                cell: _,
-                size: 200,
-                meta: {
-                  strHeaderTooltip: (0, _._)(
-                    "#PricingDashboard_Column_PriceProposalState_ttip",
-                  ),
-                },
-              }),
-            [],
-          );
-        }
-        function _(_) {
-          const _ = (0, _._)(),
-            _ = (0, _._)(),
-            _ = (0, _._)(),
-            _ = (0, _._)(),
-            _ = (0, _._)(!1),
-            _ = _(),
-            { rgSupportedPriceKeys: _ } = (0, _._)();
-          return _.useMemo(() => {
-            const _ = [_, _, _, _, _, _];
-            for (const _ of _)
-              _.push({
-                accessorKey: _,
-                size: _ ? 72 : 200,
-                enableSorting: !1,
-                header: _,
-                cell: _._,
-              });
-            return _;
-          }, [_, _, _, _, _, _, _, _]);
-        }
-        function _(_) {
-          const _ = (0, _._)()?.length ?? 0;
-          return (0, _.jsx)("div", {
-            className: (0, _._)(_().PricingGridCtn, _ > 0 && "PendingVisible"),
-            children: (0, _.jsx)(_, {
-              ..._,
-            }),
-          });
-        }
-        const _ = _.memo(function (_) {
-          const { packageData: _ } = _,
-            [_, _] = _.useState(!1),
-            _ = _.useRef(null),
-            [_, _] = (0, _._)("filter", "released"),
-            [_, _] = (0, _._)("filter_below_min_price", !1),
-            _ = new URLSearchParams(window.location.search),
-            _ = _.has(_._) ? decodeURIComponent(_.get(_._)) : "",
-            _ = _(_),
-            _ = _(_, _, {
-              bFilterToOnlyBelowMinimumPrice: _,
-              strSearchStringFromURL: _,
-            }),
-            _ = (0, _._)(),
-            _ = () => _(_.current),
-            _ = (0, _._)(),
-            _ = (0, _._)();
-          return (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_, {
-                bCompactMode: _,
-                setCompactMode: _,
-                rgGridData: _,
-                strPackageFilter: _,
-                setPackageFilter: _,
-                bFilterToBelowMinPrice: _,
-                setFilterToBelowMinPrice: _,
-              }),
-              (0, _.jsx)("div", {
-                className: _().PricingGridWrapper,
-                children: (0, _.jsx)("div", {
-                  className: (0, _._)(_().PricingGrid, _ && "CompactMode"),
-                  children: (0, _.jsxs)(_._, {
-                    children: [
-                      (0, _.jsx)(_._, {
-                        fnBLocalChangesExist: _,
-                        fnWarnUser: _,
-                        children: (0, _.jsx)(_._, {
-                          ref: _,
-                          className: _()(
-                            _().PricingGridTable,
-                            "noGlobalButtonStyle",
-                          ),
-                          columns: _,
-                          data: _,
-                          getRowKey: (_, _) => _.packageID,
-                          stickyHeader: !0,
-                          nItemHeight: 43,
-                          nHeaderHeight: 63,
-                          overscan: 12,
-                          initialExpanded: !0,
-                          initialSorting: [
-                            {
-                              _: "appName",
-                              desc: !1,
-                            },
-                          ],
-                          initialColumnFilters: [
-                            {
-                              _: "packageName",
-                              value: _,
-                            },
-                          ],
-                          initialGrouping: ["appName"],
-                          initialColumnVisibility: {
-                            packageType: !1,
-                            appids: !1,
-                          },
-                          initialColumnPinning: {
-                            left: [
-                              "packageID",
-                              "appName",
-                              "packageName",
-                              "proposalState",
-                              "USD",
-                            ],
-                          },
-                          onGroupingChange: _,
-                          onVisibleRowsChange: _,
-                          renderGroup: _._,
-                        }),
-                      }),
-                      (0, _.jsx)("br", {}),
-                    ],
-                  }),
-                }),
-              }),
-            ],
-          });
-        });
-        function _(_) {
-          const { priceKey: _ } = _,
-            _ = (0, _._)(_);
-          let _ = (0, _._)(_);
-          return (0, _.jsx)("div", {
-            className: _().PricePopout,
-            children: (0, _.jsx)("div", {
-              className: _().DetailRow,
-              children: (0, _.jsx)("div", {
-                className: _().DetailLabel,
-                onClick: _,
-                children: (0, _._)("#PricingDashboard_RevertAllCurrency", _),
-              }),
-            }),
-          });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        function _(_) {
-          const { closeModal: _ } = _,
-            _ = (0, _._)(),
-            _ = _()().format("YYYY-MM-DDTHH-mm-ss"),
-            _ = (0, _._)(),
-            _ = (0, _._)(),
-            _ = `prices_all_${_}_${_}.csv`,
-            _ = `prices_${_}_${_}.csv`,
-            _ = _.length == 0;
-          return (0, _.jsxs)(_._, {
-            bAllowFullSize: !1,
-            closeModal: _,
-            bAlertDialog: !0,
-            strTitle: (0, _._)("#PricingDashboard_ImportExportHeader"),
-            children: [
-              (0, _._)("#PricingDashboard_ImportExport_GeneralInstructions"),
-              (0, _.jsx)("br", {}),
-              (0, _.jsx)("a", {
-                href: _._.PARTNER_BASE_URL + "doc/store/pricing/csv",
-                target: "_blank",
-                children: (0, _._)("#PricingDashboard_ImportExport_DocLink"),
-              }),
-              (0, _.jsx)("br", {}),
-              (0, _.jsx)("br", {}),
-              (0, _.jsx)("h3", {
-                children: (0, _._)("#PricingDashboard_SubtitleExport"),
-              }),
-              (0, _.jsx)("div", {
-                className: _().Instructions,
-                children: (0, _._)(
-                  "#PricingDashboard_ImportExport_DownloadInstructions",
-                ),
-              }),
-              (0, _.jsxs)("div", {
-                className: _().ButtonRows,
-                children: [
-                  _.length != _.length &&
-                    (0, _.jsxs)("div", {
-                      className: _().OptionCtn,
-                      children: [
-                        (0, _.jsx)("span", {
-                          className: _().OptionDesc,
-                          children: (0, _._)(
-                            "#PricingDashboard_ImportExport_DownloadVisible_Desc",
-                          ),
-                        }),
-                        (0, _.jsxs)(_._, {
-                          className: _().Button,
-                          disabled: _,
-                          onClick: () => _(_, _),
-                          children: [
-                            (0, _._)(
-                              "#PricingDashboard_ImportExport_DownloadVisible_Button",
-                            ),
-                            (0, _.jsx)("span", {
-                              children: (0, _._)(
-                                "#PricingDashboard_PackageCount",
-                                _.length,
-                              ),
-                            }),
-                          ],
-                        }),
-                      ],
-                    }),
-                  (0, _.jsxs)("div", {
-                    className: _().OptionCtn,
-                    children: [
-                      (0, _.jsx)("span", {
-                        className: _().OptionDesc,
-                        children: (0, _._)(
-                          "#PricingDashboard_ImportExport_DownloadAll_Desc",
-                        ),
-                      }),
-                      (0, _.jsxs)(_._, {
-                        className: _().Button,
-                        disabled: _,
-                        onClick: () => _(_, _),
-                        children: [
-                          (0, _._)(
-                            "#PricingDashboard_ImportExport_DownloadAll_Button",
-                          ),
-                          (0, _.jsx)("span", {
-                            children: (0, _._)(
-                              "#PricingDashboard_PackageCount",
-                              _.length,
-                            ),
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-              (0, _.jsx)("br", {}),
-              (0, _.jsx)("br", {}),
-              (0, _.jsx)("h3", {
-                children: (0, _._)("#PricingDashboard_SubtitleImport"),
-              }),
-              (0, _.jsx)("div", {
-                className: _().Instructions,
-                children: (0, _._)(
-                  "#PricingDashboard_ImportExport_UploadInstructions",
-                ),
-              }),
-              (0, _.jsx)("div", {
-                className: _().ButtonRows,
-                children: (0, _.jsxs)("div", {
-                  className: _().OptionCtn,
-                  children: [
-                    (0, _.jsx)("span", {
-                      className: _().OptionDesc,
-                      children: (0, _._)(
-                        "#PricingDashboard_ImportExport_Upload_Desc",
-                      ),
-                    }),
-                    (0, _.jsx)(_._, {
-                      className: _().Button,
-                      disabled: _,
-                      children: (0, _.jsxs)("label", {
-                        className: _().ImportButtonLabel,
-                        htmlFor: "import-price-input",
-                        children: [
-                          (0, _._)(
-                            "#PricingDashboard_ImportExport_Upload_Button",
-                          ),
-                          (0, _.jsx)("input", {
-                            _: "import-price-input",
-                            type: "file",
-                            style: {
-                              display: "none",
-                            },
-                            onChange: (_) => _(_, _),
-                          }),
-                        ],
-                      }),
-                    }),
-                  ],
-                }),
-              }),
-            ],
-          });
-        }
-        function _(_, _) {
-          const _ = [],
-            _ = (0, _._)(),
-            _ = [(0, _._)("#PackageGrid_Column_PackageName"), "ID"];
-          for (const _ of _) _.push(_);
-          _.push(_);
-          for (const _ of _) {
-            const _ = [(0, _._)(_), _.toString()];
-            for (const _ of _) {
-              const _ = (0, _._)(_, _),
-                _ = _ ? (_ / 100).toString() : "";
-              _.push(_);
-            }
-            _.push(_);
-          }
-          _._.WriteCSVToFile(_, _);
-        }
-        async function _(_, _) {
-          if (_.target.files.length >= 1) {
-            const _ = (0, _._)(_),
-              _ = _.target.files[0],
-              _ = await _._.ParseCSVFile(_);
-            (0, _._)(
-              (0, _.jsx)(_, {
-                strFilename: _.name,
-                parseResult: _,
-              }),
-              _,
-            ),
-              _();
-          }
-        }
-        function _(_, _) {
-          let _ = Number(_);
-          return Number.isNaN(_) ? null : Math.round(_ * 100);
-        }
-        function _(_, _, _, _) {
-          const _ = [],
-            _ = new Set(_),
-            _ = [];
-          for (const _ of _.data ?? []) {
-            const _ = Number(_._);
-            if (_.has(_)) {
-              _.push(_);
-              for (const _ of _) {
-                const _ = _[_],
-                  _ = !!_?.length && _(_, _);
-                if (!_?.length || Number.isNaN(_)) continue;
-                const _ = _(_, _, _);
-                _ && _.push(_);
-              }
-            }
-          }
-          return {
-            rgPriceChanges: _,
-            nPackagesImported: _.length,
-          };
-        }
-        function _(_) {
-          const { closeModal: _, strFilename: _, parseResult: _ } = _,
-            _ = (0, _._)(),
-            _ = (0, _._)(),
-            _ = (0, _._)(),
-            [_, _] = _.useState(null),
-            [_, _] = _.useState();
-          if (
-            (_.useEffect(() => {
-              const { rgPriceChanges: _, nPackagesImported: _ } = _(_, _, _, _);
-              _(_), _(_);
-            }, [_, _, _, _]),
-            _ === null)
-          )
-            return (0, _.jsx)(_._, {
-              position: "center",
-            });
-          const _ = _.length > 0,
-            _ = _
-              ? (0, _._)("#PackageGrid_SaveChangesDialogButton")
-              : (0, _._)("#Button_Close"),
-            _ = () => {
-              _ && (0, _._)((0, _.jsx)(_._, {}), window);
-            };
-          return (0, _.jsxs)(_._, {
-            strTitle: (0, _._)(
-              "#PricingDashboard_ImportExport_UploadProgressTitle",
-            ),
-            strDescription: (0, _._)(
-              "#PricingDashboard_ImportExport_UploadProgressDetails",
-              _,
-            ),
-            bAlertDialog: !_,
-            strOKButtonText: _,
-            onOK: _,
-            strCancelButtonText: (0, _._)("#Button_OK"),
-            closeModal: _,
-            children: [
-              (0, _.jsx)("div", {
-                className: _().ParseResultCount,
-                children: (0, _._)(
-                  "#PricingDashboard_ImportExport_UploadResults",
-                  _.length,
-                ),
-              }),
-              _ &&
-                (0, _._)(
-                  "#PricingDashboard_ImportExport_UploadNextStepInstructions",
-                ),
-              !!_.errors?.length &&
-                (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().ErrorHeader,
-                      children: (0, _._)(
-                        "#PricingDashboard_ImportExport_UploadErrorsHeader",
-                        _.errors?.length,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _().ParseErrors,
-                      children: _.errors.map((_, _) =>
-                        (0, _.jsx)(
-                          "div",
-                          {
-                            className: _().Error,
-                            children: `${_.row ?? "-"} ${_.message}`,
-                          },
-                          `${_.message}-${_}`,
-                        ),
-                      ),
-                    }),
-                  ],
-                }),
-            ],
-          });
-        }
-        function _(_) {
-          (0, _._)((0, _._)());
-          const _ = (0, _._)(),
-            _ = "https://steamcommunity.com/groups/steamworks/discussions/29/",
-            _ = _._.PARTNER_BASE_URL + "doc/store/pricing",
-            _ = _._.HELP_BASE_URL + "wizard/HelpWithPublishing?issueid=920",
-            _ = (0, _._)(),
-            _ = (0, _.useMemo)(
-              () => Array.from(new Set(_.map((_) => _.submitterID))),
-              [_],
-            ),
-            _ = (0, _._)(_);
-          return (0, _.jsxs)("div", {
-            className: _().DashboardPage,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().DashTitle,
-                children: [
-                  (0, _._)("#PricingDashboard_Title"),
-                  (0, _.jsx)("div", {
-                    className: _().FeedbackLinkCtn,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _().ButtonGroup,
-                    children: [
-                      (0, _.jsx)(_._, {
-                        onClick: (_) =>
-                          (0, _._)((0, _.jsx)(_, {}), (0, _._)(_)),
-                        children: (0, _._)(
-                          "#PricingDashboard_ImportExportButton",
-                        ),
-                      }),
-                      (0, _.jsx)(_._, {
-                        onClick: (_) => (0, _._)(_, _),
-                        children: (0, _._)(
-                          "#PricingDashboard_DocumentationButton",
-                        ),
-                      }),
-                      (0, _.jsx)(_._, {
-                        onClick: (_) => (0, _._)(_, _),
-                        children: (0, _._)("#PricingDashboard_ContactUsButton"),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-              _.length == 0 &&
-                (0, _.jsx)("div", {
-                  className: _().ErrorMessage,
-                  children: (0, _._)("#PricingDashboard_Error_NoPackages"),
-                }),
-              _.length > 0 &&
-                (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)(_, {
-                      packageData: _,
-                    }),
-                    (0, _.jsx)(_._, {
-                      bReloadPageOnSave: !1,
-                    }),
-                  ],
-                }),
-            ],
-          });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = {
-          PricingDashboard: () => "/dashboard/:publisherid(\\d*)",
-        };
-        function _(_) {
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_._, {
-              children: (0, _.jsx)(_._, {
-                basename: (0, _._)() + "pricing/",
-                children: (0, _.jsxs)(_._, {
-                  children: [
-                    (0, _.jsx)(_._, {
-                      exact: !0,
-                      path: _._.DiagData(),
-                      render: (_) =>
-                        (0, _.jsx)(_._, {
-                          ..._,
-                          strConfigID: "application_config",
-                        }),
-                    }),
-                    (0, _.jsx)(_._, {
-                      path: _.PricingDashboard(),
-                      render: (_) => (0, _.jsx)(_, {}),
-                    }),
-                    (0, _.jsx)(_._, {
-                      component: _._,
-                    }),
-                  ],
-                }),
-              }),
-            }),
-          });
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const [_, _] = (0, _.useState)(!1),
-            [_] = (0, _.useState)(() => _()),
-            _ = (0, _.useMemo)(
-              () => ({
-                country: _._.COUNTRY,
-                language: _._.LANGUAGE,
-                bUsePartnerAPI: !0,
-              }),
-              [],
-            );
-          return (
-            (0, _.useEffect)(() => (_(!0), _(_)), [_]),
-            _
-              ? (0, _.createElement)(_._, {
-                  context: _,
-                  serviceTransportOverride: _.GetServiceTransport(),
-                  children: _.children,
-                })
-              : null
-          );
-        }
-        function _(_) {
-          const [_] = (0, _.useState)(() => _()),
-            _ = (0, _.useMemo)(
-              () => ({
-                country: _._.COUNTRY,
-                language: _._.LANGUAGE,
-                bUsePartnerAPI: !0,
-                bIncludeUnpublished: _.bIncludeUnpublished,
-              }),
-              [_.bIncludeUnpublished],
-            );
-          return (0, _.createElement)(_._, {
-            context: _,
-            serviceTransportOverride: _.GetServiceTransport(),
-            children: _.children,
-          });
-        }
-        function _() {
-          const _ = (0, _._)(
-            "partnerbrowse_webapi_token",
-            "application_config",
-          );
-          return (
-            (0, _._)(!!_, "require partnerbrowse_webapi_token"),
-            new _._(_._.WEBAPI_BASE_URL, _)
-          );
-        }
-        function _(_) {
-          return _._.Initialize(_.GetServiceTransport(), _._.is_partner_member);
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        class _ {
-          static ParseCSVFile(_, _) {
-            return new Promise((_, _) => {
-              const _ = {
-                header: !0,
-                skipEmptyLines: "greedy",
-                complete: _,
-                error: (_) =>
-                  _({
-                    errors: [_],
-                  }),
-                transformHeader: _,
-              };
-              _().parse(_, _);
-            });
-          }
-          static ReadFile(_) {
-            return new Promise((_, _) => {
-              const _ = new FileReader();
-              (_.onload = (_) => _(_.result)), _.readAsText(_);
-            });
-          }
-          static WriteFile(_, _) {
-            let _ = document.createElement("a");
-            if (navigator.msSaveBlob) navigator.msSaveBlob(_, _);
-            else {
-              const _ = window.URL.createObjectURL(_);
-              _.href = _;
-            }
-            _.setAttribute("download", _), _.click();
-            try {
-              document.removeChild(_);
-            } catch {}
-          }
-          static WriteCSVToFile(_, _, _, _) {
-            const _ = _
-                ? _().unparse(
-                    {
-                      fields: _,
-                      data: _,
-                    },
-                    {
-                      header: !0,
-                    },
-                  )
-                : _().unparse(_, {
-                    header: !0,
-                  }),
-              _ = _ == !0 ? ["\uFEFF" + _] : [_];
-            _.WriteFile(
-              new Blob(_, {
-                type: "text/csv:charset=utf-8;",
-              }),
-              _,
-            );
-          }
-          static m_DummyValueForQuestionHack = 0;
-          static WriteXMLToFile(_, _) {
-            const _ = () =>
-              this.m_DummyValueForQuestionHack ? "never returned" : "?";
-            let _ =
-              "<" +
-              _() +
-              'xml version="1.0" encoding="UTF-8" ' +
-              _() +
-              `>
-`;
-            (_ += new XMLSerializer().serializeToString(_)),
-              _.WriteFile(
-                new Blob([_], {
-                  type: "application/xml:charset=utf-8;",
-                }),
-                _,
-              );
-          }
-        }
-      },
-      chunkid: (module) => {
-        module.exports = {
-          DashboardPage: "_353rnPLVzyQBQhakxhkl7u",
-          DashTitleBar: "_2m-_VofgoRb-uGQMrewYq3",
-          DashTitle: "_1FK58fndqHlADYEX-58V0C",
-          ConfidentialBanner: "_2H9KzQ8SQGvqGhbWidWzf4",
-          Throbber: "_21EsxksQjCwl-Xz3TNuoPc",
-          ErrorMessage: "_190uxu3FVS6Fx-IbDsfCyd",
-          ButtonGroup: "_2peTiEFo27_zkZA0TzjnD4",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          EventDetails: "_3LMXjfy-EuA2ZWoW660vuc",
-          Active: "_2BLece8YI3va6GD9JEUxjL",
-          RestrictedEligibility: "_2lxTisamKtJUowDlNKSrzG",
-          CollisionFreeDiscountEvent: "_15fBcZwmM-nap1QbkpRc2G",
-          EventName: "_2bJFFj7RfHL_P4P-MJlzK4",
-          EditEventLink: "_1XHd3t0XU1SfpsraST5Ovy",
-          EventDates: "_2kY09NU8R-tjOVYmIwZ98B",
-          EventDateRange: "_312igBJXB0MifodN4IBq1i",
-          EventNumDays: "OAAVWKvssJLy0QM6mVcw6",
-          EventLink: "VZ3pVxXbvFNzdGOkOrNGU",
-          EventParticipationCtn: "_2iuUu1K5b1e71DnJKkBtHH",
-          ParticipationDetails: "_2tr5XTQIvHNQiu4IZKMi7Z",
-          Title: "_3mO71T0Q_migmtLfYRFb-6",
-          Count: "_1pDZ1lHiN5RohGZxcDAyCK",
-          Selected: "_36G76FOe3fZ8csab26PcL8",
-          ParticipationToolTip: "_36hxaHrRvc7ct9bb0Aeza3",
-          AppLink: "_3RF-6YnSS_2OpJmOo0BV6_",
-          BasePrice: "_1a_LwvXaB11PNusz9GPz98",
-          RelatedDiscount: "_12zwKFzckK0AkG-lS95iTK",
-          DiscountGridDataColumn: "_1yW70vcAdwnrMIrVE8y03S",
-          GridRowLoadingThrobber: "r2FLR3ukmK3cVbBV-j8Aa",
-          CurrencyPicker: "_2Z65Kc_3FxlP0E15rMFuVC",
-          RelatedInfoPicker: "O-95g3EzyTgFwNJ8ATC-e",
-          RelatedInfoPickerCtn: "_2nnB1eMYflFLLmMAi7_jJV",
-          CurrencyDropDown: "_2gGuz_TA8axLQOqAtwurFU",
-          RelatedInfoDropDown: "_1jj2uEuCns_K_cIfGZcKl6",
-          CurrencyDropDownItem: "_3wPHxQWhohHATqjvN6B2l3",
-          RelatedInfoDropDownItem: "_1ORamDcYtEN8wS1voTsWE",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          PricingGridCtn: "_2j-z9aXG_KoPSY-SYZ0fkF",
-          PricingGridWrapper: "_185dckQ4O6j7fFSauUkttX",
-          PricingGrid: "fKA16ZB7sn97FP66zTggw",
-          PricingGridDataColumn: "OVDCtDCCkCZr1my3nFNXX",
-          GridHeaderButtons: "_1Z7LLb7cP6pLH8XwOgDkP",
-          OptionCtn: "_1PrsCGcbjJ61fDm8stNJd2",
-          PriceLowOption: "_39j_Zq7q7VRXEb-7tZMUSx",
-          CurrencyHeader: "_1kvIFs23dRUETqkaH0d_RW",
-          CurrencyNameCtn: "_1eoBYSPbVZ6MoUNDkL_xbp",
-          CurrencyName: "_3ffEWbT5mrSdmmCBQsjpmC",
-          CurrencyMore: "MltPJcBZanYmXvQaiTTTg",
-          PricingGridTable: "_2xa-P-_4oTPXUvGstrnphV",
-          HoverToolTip: "_1OS2vdfTf7vsWj8VhNKlXu",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          Instructions: "_2A9meAsgvbqtRE-WwcWklJ",
-          ButtonRows: "_3BpoblG0qqkekq9SESFn1s",
-          Button: "_3u7Vn4B-hH3ntVFvWBlMWP",
-          ImportButtonLabel: "_3OJwY0KsAdtSzzFuOdWl8l",
-          OptionCtn: "_3zj1IiybB-MxMlHawZLJeQ",
-          OptionDesc: "_2QfyWyy2Z0gPCqVTApBKNV",
-          ParseResultCount: "_1P_KJVQc3vmgxCssmhFas0",
-          ErrorHeader: "_289pBSstep6RsTe3aedebA",
-          ParseErrors: "_1VTD4841BG3WozX_i1yNEd",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          _: "_2LxgdMcpWJRjkxZKbmeEEb",
-          SubText: "vg0EOhKTLB3tLvshHMr7l",
-          AvatarImageContainer: "_33hdFBTwBs64Fcp-bPdf4E",
-          GameImageContainer: "_2OYADGuBPiyF7h50OJ0P1B",
-          AvatarImage: "_2CQYcCggCXwVzZj2GWng5-",
-          STV_HomeGridPreviewDetails: "Yncr-T63YFSJ46cq4Z2BJ",
-          ChatAvatarImage: "_1cUR_vD8IvfJgOK1r89j4o",
-          EditButton: "VsZ-bdWSNpnM9Vg6gkSyD",
-          Small: "_3M4j828iWSVEZZAkypcBi1",
-          FlexCenter: "_1R3ycnbAGUAy01o0TW7NNo",
-          ThrobberCtn: "_3m7p67FD1Ynjm3BnyyjSSS",
-          MarkdownLink: "_1WqumifyJucGDxm2oI6yRQ",
-          SummaryTextArea: "cNMZ-dcMVhaQJFes_Ivwo",
-          RemoveIcon: "_3NeLW5LAka4S9__PaMFE_J",
-        };
-      },
-      chunkid: function (_, _) {
-        var _, _, _;
-        ((_, _) => {
-          (_ = []),
-            (_ = _),
-            (_ = typeof _ == "function" ? __webpack_require__.apply(_, _) : _),
-            _ !== void 0 && (_.exports = _);
-        })(this, function _() {
-          var _ =
-              typeof self < "u"
+(self.webpackChunkappmgmt_storeadmin =
+  self.webpackChunkappmgmt_storeadmin || []).push([
+  [1101],
+  {
+    chunkid: (module) => {
+      module.exports = {
+        DashboardPage: "_353rnPLVzyQBQhakxhkl7u",
+        DashTitleBar: "_2m-_VofgoRb-uGQMrewYq3",
+        DashTitle: "_1FK58fndqHlADYEX-58V0C",
+        ConfidentialBanner: "_2H9KzQ8SQGvqGhbWidWzf4",
+        Throbber: "_21EsxksQjCwl-Xz3TNuoPc",
+        ErrorMessage: "_190uxu3FVS6Fx-IbDsfCyd",
+        ButtonGroup: "_2peTiEFo27_zkZA0TzjnD4",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        EventDetails: "_3LMXjfy-EuA2ZWoW660vuc",
+        Active: "_2BLece8YI3va6GD9JEUxjL",
+        RestrictedEligibility: "_2lxTisamKtJUowDlNKSrzG",
+        CollisionFreeDiscountEvent: "_15fBcZwmM-nap1QbkpRc2G",
+        EventName: "_2bJFFj7RfHL_P4P-MJlzK4",
+        EditEventLink: "_1XHd3t0XU1SfpsraST5Ovy",
+        EventDates: "_2kY09NU8R-tjOVYmIwZ98B",
+        EventDateRange: "_312igBJXB0MifodN4IBq1i",
+        EventNumDays: "OAAVWKvssJLy0QM6mVcw6",
+        EventLink: "VZ3pVxXbvFNzdGOkOrNGU",
+        EventParticipationCtn: "_2iuUu1K5b1e71DnJKkBtHH",
+        ParticipationDetails: "_2tr5XTQIvHNQiu4IZKMi7Z",
+        Title: "_3mO71T0Q_migmtLfYRFb-6",
+        Count: "_1pDZ1lHiN5RohGZxcDAyCK",
+        Selected: "_36G76FOe3fZ8csab26PcL8",
+        ParticipationToolTip: "_36hxaHrRvc7ct9bb0Aeza3",
+        AppLink: "_3RF-6YnSS_2OpJmOo0BV6_",
+        BasePrice: "_1a_LwvXaB11PNusz9GPz98",
+        RelatedDiscount: "_12zwKFzckK0AkG-lS95iTK",
+        DiscountGridDataColumn: "_1yW70vcAdwnrMIrVE8y03S",
+        GridRowLoadingThrobber: "r2FLR3ukmK3cVbBV-j8Aa",
+        CurrencyPicker: "_2Z65Kc_3FxlP0E15rMFuVC",
+        RelatedInfoPicker: "O-95g3EzyTgFwNJ8ATC-e",
+        RelatedInfoPickerCtn: "_2nnB1eMYflFLLmMAi7_jJV",
+        CurrencyDropDown: "_2gGuz_TA8axLQOqAtwurFU",
+        RelatedInfoDropDown: "_1jj2uEuCns_K_cIfGZcKl6",
+        CurrencyDropDownItem: "_3wPHxQWhohHATqjvN6B2l3",
+        RelatedInfoDropDownItem: "_1ORamDcYtEN8wS1voTsWE",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        PricingGridCtn: "_2j-z9aXG_KoPSY-SYZ0fkF",
+        PricingGridWrapper: "_185dckQ4O6j7fFSauUkttX",
+        PricingGrid: "fKA16ZB7sn97FP66zTggw",
+        PricingGridDataColumn: "OVDCtDCCkCZr1my3nFNXX",
+        GridHeaderButtons: "_1Z7LLb7cP6pLH8XwOgDkP",
+        OptionCtn: "_1PrsCGcbjJ61fDm8stNJd2",
+        PriceLowOption: "_39j_Zq7q7VRXEb-7tZMUSx",
+        CurrencyHeader: "_1kvIFs23dRUETqkaH0d_RW",
+        CurrencyNameCtn: "_1eoBYSPbVZ6MoUNDkL_xbp",
+        CurrencyName: "_3ffEWbT5mrSdmmCBQsjpmC",
+        CurrencyMore: "MltPJcBZanYmXvQaiTTTg",
+        PricingGridTable: "_2xa-P-_4oTPXUvGstrnphV",
+        HoverToolTip: "_1OS2vdfTf7vsWj8VhNKlXu",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Instructions: "_2A9meAsgvbqtRE-WwcWklJ",
+        ButtonRows: "_3BpoblG0qqkekq9SESFn1s",
+        Button: "_3u7Vn4B-hH3ntVFvWBlMWP",
+        ImportButtonLabel: "_3OJwY0KsAdtSzzFuOdWl8l",
+        OptionCtn: "_3zj1IiybB-MxMlHawZLJeQ",
+        OptionDesc: "_2QfyWyy2Z0gPCqVTApBKNV",
+        ParseResultCount: "_1P_KJVQc3vmgxCssmhFas0",
+        ErrorHeader: "_289pBSstep6RsTe3aedebA",
+        ParseErrors: "_1VTD4841BG3WozX_i1yNEd",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        _: "_2LxgdMcpWJRjkxZKbmeEEb",
+        SubText: "vg0EOhKTLB3tLvshHMr7l",
+        AvatarImageContainer: "_33hdFBTwBs64Fcp-bPdf4E",
+        GameImageContainer: "_2OYADGuBPiyF7h50OJ0P1B",
+        AvatarImage: "_2CQYcCggCXwVzZj2GWng5-",
+        STV_HomeGridPreviewDetails: "Yncr-T63YFSJ46cq4Z2BJ",
+        ChatAvatarImage: "_1cUR_vD8IvfJgOK1r89j4o",
+        EditButton: "VsZ-bdWSNpnM9Vg6gkSyD",
+        Small: "_3M4j828iWSVEZZAkypcBi1",
+        FlexCenter: "_1R3ycnbAGUAy01o0TW7NNo",
+        ThrobberCtn: "_3m7p67FD1Ynjm3BnyyjSSS",
+        MarkdownLink: "_1WqumifyJucGDxm2oI6yRQ",
+        SummaryTextArea: "cNMZ-dcMVhaQJFes_Ivwo",
+        RemoveIcon: "_3NeLW5LAka4S9__PaMFE_J",
+      };
+    },
+    chunkid: function (_, _) {
+      var _, _, _;
+      (_ = []),
+        (_ = function _() {
+          var _,
+            _ =
+              "undefined" != typeof self
                 ? self
-                : typeof window < "u"
+                : "undefined" != typeof window
                   ? window
-                  : _ !== void 0
+                  : void 0 !== _
                     ? _
                     : {},
-            _,
             _ = !_.document && !!_.postMessage,
             _ = _.IS_PAPA_WORKER || !1,
             _ = {},
@@ -1082,28 +146,28 @@
                 }
                 this.isFirstChunk &&
                   _(this._config.beforeFirstChunk) &&
-                  (_ = this._config.beforeFirstChunk(_)) !== void 0 &&
+                  void 0 !== (_ = this._config.beforeFirstChunk(_)) &&
                   (_ = _),
                   (this.isFirstChunk = !1),
-                  (this._halted = !1);
-                var _ = this._partialLine + _,
-                  _ =
-                    ((this._partialLine = ""),
-                    this._handle.parse(_, this._baseIndex, !this._finished));
+                  (this._halted = !1),
+                  (_ = this._partialLine + _);
+                var _ =
+                  ((this._partialLine = ""),
+                  this._handle.parse(_, this._baseIndex, !this._finished));
                 if (!this._handle.paused() && !this._handle.aborted()) {
                   if (
                     ((_ = _.meta.cursor),
+                    this._finished ||
+                      ((this._partialLine = _.substring(_ - this._baseIndex)),
+                      (this._baseIndex = _)),
+                    _ && _.data && (this._rowCount += _.data.length),
                     (_ =
-                      (this._finished ||
-                        ((this._partialLine = _.substring(_ - this._baseIndex)),
-                        (this._baseIndex = _)),
-                      _ && _.data && (this._rowCount += _.data.length),
                       this._finished ||
-                        (this._config.preview &&
-                          this._rowCount >= this._config.preview))),
+                      (this._config.preview &&
+                        this._rowCount >= this._config.preview)),
                     _)
                   )
-                    _.postMessage({
+                    __webpack_require__.postMessage({
                       results: _,
                       workerId: _.WORKER_ID,
                       finished: _,
@@ -1144,7 +208,7 @@
                   ? this._config.error(_)
                   : _ &&
                     this._config.error &&
-                    _.postMessage({
+                    __webpack_require__.postMessage({
                       workerId: _.WORKER_ID,
                       error: _,
                       finished: !1,
@@ -1198,11 +262,11 @@
                   } catch (_) {
                     this._chunkError(_.message);
                   }
-                  _ && _.status === 0 && this._chunkError();
+                  _ && 0 === _.status && this._chunkError();
                 }
               }),
               (this._chunkLoaded = function () {
-                _.readyState === 4 &&
+                4 === _.readyState &&
                   (_.status < 200 || 400 <= _.status
                     ? this._chunkError()
                     : ((this._start +=
@@ -1211,7 +275,7 @@
                         !this._config.chunkSize ||
                         this._start >=
                           ((_) =>
-                            (_ = _.getResponseHeader("Content-Range")) !== null
+                            null !== (_ = _.getResponseHeader("Content-Range"))
                               ? parseInt(_.substring(_.lastIndexOf("/") + 1))
                               : -1)(_)),
                       this.parseChunk(_.responseText)));
@@ -1225,7 +289,7 @@
               _.call(this, _);
             var _,
               _,
-              _ = typeof FileReader < "u";
+              _ = "undefined" != typeof FileReader;
             (this.stream = function (_) {
               (this._input = _),
                 (_ = _.slice || _.webkitSlice || _.mozSlice),
@@ -1252,7 +316,7 @@
                         this._start + this._config.chunkSize,
                         this._input.size,
                       )),
-                      (_ = _.call(_, this._start, _))),
+                      (_ = __webpack_require__.call(_, this._start, _))),
                     _.readAsText(_, this._config.encoding));
                 _ ||
                   this._chunkLoaded({
@@ -1308,7 +372,7 @@
                   this._input._("error", this._streamError);
               }),
               (this._checkIsFinished = function () {
-                _ && _.length === 1 && (this._finished = !0);
+                _ && 1 === _.length && (this._finished = !0);
               }),
               (this._nextChunk = function () {
                 this._checkIsFinished(),
@@ -1317,7 +381,7 @@
               (this._streamData = _(function (_) {
                 try {
                   _.push(
-                    typeof _ == "string"
+                    "string" == typeof _
                       ? _
                       : _.toString(this._config.encoding),
                   ),
@@ -1363,9 +427,9 @@
                 meta: {},
               };
             function _(_) {
-              return _.skipEmptyLines === "greedy"
-                ? _.join("").trim() === ""
-                : _.length === 1 && _[0].length === 0;
+              return "greedy" === _.skipEmptyLines
+                ? "" === _.join("").trim()
+                : 1 === _.length && 0 === _[0].length;
             }
             function _() {
               if (
@@ -1385,57 +449,56 @@
                   })),
                 _())
               ) {
-                let _ = function (_, _) {
-                  _(_.transformHeader) && (_ = _.transformHeader(_, _)),
-                    _.push(_);
-                };
-                var _ = _;
                 if (_)
                   if (Array.isArray(_.data[0])) {
                     for (var _ = 0; _() && _ < _.data.length; _++)
                       _.data[_].forEach(_);
                     _.data.splice(0, 1);
                   } else _.data.forEach(_);
+                function _(_, _) {
+                  _(_.transformHeader) && (_ = _.transformHeader(_, _)),
+                    _.push(_);
+                }
               }
               function _(_, _) {
                 for (var _ = _.header ? {} : [], _ = 0; _ < _.length; _++) {
                   var _ = _,
-                    _ = _[_],
-                    _ = ((_, _) =>
-                      ((_) => (
-                        _.dynamicTypingFunction &&
-                          _.dynamicTyping[_] === void 0 &&
-                          (_.dynamicTyping[_] = _.dynamicTypingFunction(_)),
-                        (_.dynamicTyping[_] || _.dynamicTyping) === !0
-                      ))(_)
-                        ? _ === "true" ||
-                          _ === "TRUE" ||
-                          (_ !== "false" &&
-                            _ !== "FALSE" &&
-                            (((_) => {
-                              if (
-                                _.test(_) &&
-                                ((_ = parseFloat(_)), _ < _ && _ < _)
-                              )
-                                return 1;
-                            })(_)
-                              ? parseFloat(_)
-                              : _.test(_)
-                                ? new Date(_)
-                                : _ === ""
-                                  ? null
-                                  : _))
-                        : _)(
-                      (_ = _.header
-                        ? _ >= _.length
-                          ? "__parsed_extra"
-                          : _[_]
-                        : _),
-                      (_ = _.transform ? _.transform(_, _) : _),
-                    );
-                  _ === "__parsed_extra"
-                    ? ((_[_] = _[_] || []), _[_].push(_))
-                    : (_[_] = _);
+                    _ = _[_];
+                  (_ = ((_, _) =>
+                    ((_) => (
+                      _.dynamicTypingFunction &&
+                        void 0 === _.dynamicTyping[_] &&
+                        (_.dynamicTyping[_] = _.dynamicTypingFunction(_)),
+                      !0 === (_.dynamicTyping[_] || _.dynamicTyping)
+                    ))(_)
+                      ? "true" === _ ||
+                        "TRUE" === _ ||
+                        ("false" !== _ &&
+                          "FALSE" !== _ &&
+                          (((_) => {
+                            if (
+                              _.test(_) &&
+                              ((_ = parseFloat(_)), _ < _ && _ < _)
+                            )
+                              return 1;
+                          })(_)
+                            ? parseFloat(_)
+                            : _.test(_)
+                              ? new Date(_)
+                              : "" === _
+                                ? null
+                                : _))
+                      : _)(
+                    (_ = _.header
+                      ? _ >= _.length
+                        ? "__parsed_extra"
+                        : _[_]
+                      : _),
+                    (_ = _.transform ? _.transform(_, _) : _),
+                  )),
+                    "__parsed_extra" === _
+                      ? ((_[_] = _[_] || []), _[_].push(_))
+                      : (_[_] = _);
                 }
                 return (
                   _.header &&
@@ -1473,7 +536,7 @@
                 (_ += _));
             }
             function _() {
-              return _.header && _.length === 0;
+              return _.header && 0 === _.length;
             }
             function _(_, _, _, _) {
               (_ = {
@@ -1481,7 +544,7 @@
                 code: _,
                 message: _,
               }),
-                _ !== void 0 && (_.row = _),
+                void 0 !== _ && (_.row = _),
                 _.errors.push(_);
             }
             _(_.step) &&
@@ -1491,84 +554,81 @@
                   _()
                     ? _()
                     : (_(),
-                      _.data.length !== 0 &&
+                      0 !== _.data.length &&
                         ((_ += _.data.length),
                         _.preview && _ > _.preview
-                          ? _.abort()
+                          ? __webpack_require__.abort()
                           : ((_.data = _.data[0]), _(_, _))));
               })),
               (this.parse = function (_, _, _) {
-                var _ = _.quoteChar || '"',
-                  _ =
-                    (_.newline || (_.newline = this.guessLineEndings(_, _)),
-                    (_ = !1),
-                    _.delimiter
-                      ? _(_.delimiter) &&
-                        ((_.delimiter = _.delimiter(_)),
-                        (_.meta.delimiter = _.delimiter))
-                      : ((_ = ((_, _, _, _, _) => {
-                          var _, _, _, _;
-                          _ = _ || [
-                            ",",
-                            "	",
-                            "|",
-                            ";",
-                            _.RECORD_SEP,
-                            _.UNIT_SEP,
-                          ];
-                          for (var _ = 0; _ < _.length; _++) {
-                            for (
-                              var _,
-                                _ = _[_],
-                                _ = 0,
-                                _ = 0,
-                                _ = 0,
-                                _ =
-                                  ((_ = void 0),
-                                  new _({
-                                    comments: _,
-                                    delimiter: _,
-                                    newline: _,
-                                    preview: 10,
-                                  }).parse(_)),
-                                _ = 0;
-                              _ < _.data.length;
-                              _++
-                            )
-                              _ && _(_.data[_])
-                                ? _++
-                                : ((_ = _.data[_].length),
-                                  (_ += _),
-                                  _ === void 0
-                                    ? (_ = _)
-                                    : 0 < _ &&
-                                      ((_ += Math.abs(_ - _)), (_ = _)));
-                            0 < _.data.length && (_ /= _.data.length - _),
-                              (_ === void 0 || _ <= _) &&
-                                (_ === void 0 || _ < _) &&
-                                1.99 < _ &&
-                                ((_ = _), (_ = _), (_ = _));
-                          }
-                          return {
-                            successful: !!(_.delimiter = _),
-                            bestDelimiter: _,
-                          };
-                        })(
-                          _,
-                          _.newline,
-                          _.skipEmptyLines,
-                          _.comments,
-                          _.delimitersToGuess,
-                        )).successful
-                          ? (_.delimiter = _.bestDelimiter)
-                          : ((_ = !0), (_.delimiter = _.DefaultDelimiter)),
-                        (_.meta.delimiter = _.delimiter)),
-                    _(_));
+                var _ = _.quoteChar || '"';
                 return (
+                  _.newline || (_.newline = this.guessLineEndings(_, _)),
+                  (_ = !1),
+                  _.delimiter
+                    ? _(_.delimiter) &&
+                      ((_.delimiter = _.delimiter(_)),
+                      (_.meta.delimiter = _.delimiter))
+                    : ((_ = ((_, _, _, _, _) => {
+                        var _, _, _, _;
+                        _ = _ || [
+                          ",",
+                          "\t",
+                          "|",
+                          ";",
+                          _.RECORD_SEP,
+                          _.UNIT_SEP,
+                        ];
+                        for (var _ = 0; _ < _.length; _++) {
+                          for (
+                            var _,
+                              _ = _[_],
+                              _ = 0,
+                              _ = 0,
+                              _ = 0,
+                              _ =
+                                ((_ = void 0),
+                                new _({
+                                  comments: _,
+                                  delimiter: _,
+                                  newline: _,
+                                  preview: 10,
+                                }).parse(_)),
+                              _ = 0;
+                            _ < _.data.length;
+                            _++
+                          )
+                            _ && _(_.data[_])
+                              ? _++
+                              : ((_ += _ = _.data[_].length),
+                                void 0 === _
+                                  ? (_ = _)
+                                  : 0 < _ && ((_ += Math.abs(_ - _)), (_ = _)));
+                          0 < _.data.length && (_ /= _.data.length - _),
+                            (void 0 === _ || _ <= _) &&
+                              (void 0 === _ || _ < _) &&
+                              1.99 < _ &&
+                              ((_ = _), (_ = _), (_ = _));
+                        }
+                        return {
+                          successful: !!(_.delimiter = _),
+                          bestDelimiter: _,
+                        };
+                      })(
+                        _,
+                        _.newline,
+                        _.skipEmptyLines,
+                        _.comments,
+                        _.delimitersToGuess,
+                      )).successful
+                        ? (_.delimiter = _.bestDelimiter)
+                        : ((_ = !0), (_.delimiter = _.DefaultDelimiter)),
+                      (_.meta.delimiter = _.delimiter)),
+                  (_ = _(_)),
                   _.preview && _.header && _.preview++,
                   (_ = _),
                   (_ = new _(_)),
-                  (_ = _.parse(_, _, _)),
+                  (_ = __webpack_require__.parse(_, _, _)),
                   _(),
                   _
                     ? {
@@ -1588,8 +648,10 @@
               }),
               (this.pause = function () {
                 (_ = !0),
-                  _.abort(),
-                  (_ = _(_.chunk) ? "" : _.substring(_.getCharIndex()));
+                  __webpack_require__.abort(),
+                  (_ = _(_.chunk)
+                    ? ""
+                    : _.substring(__webpack_require__.getCharIndex()));
               }),
               (this.resume = function () {
                 _.streamer._halted
@@ -1601,29 +663,25 @@
               }),
               (this.abort = function () {
                 (_ = !0),
-                  _.abort(),
+                  __webpack_require__.abort(),
                   (_.meta.aborted = !0),
                   _(_.complete) && _.complete(_),
                   (_ = "");
               }),
               (this.guessLineEndings = function (_, _) {
-                _ = _.substring(0, 1048576);
-                var _ = new RegExp(_(_) + "([^]*?)" + _(_), "gm"),
-                  _ = (_ = _.replace(_, "")).split("\r"),
-                  _ = _.split(`
-`),
-                  _ = 1 < _.length && _[0].length < _[0].length;
-                if (_.length === 1 || _)
-                  return `
-`;
+                (_ = _.substring(0, 1048576)),
+                  (_ = new RegExp(_(_) + "([^]*?)" + _(_), "gm"));
+                var _ = (_ = _.replace(_, "")).split("\r");
+                if (
+                  ((_ =
+                    1 < (_ = _.split("\n")).length &&
+                    _[0].length < _[0].length),
+                  1 === _.length || _)
+                )
+                  return "\n";
                 for (var _ = 0, _ = 0; _ < _.length; _++)
-                  _[_][0] ===
-                    `
-` && _++;
-                return _ >= _.length / 2
-                  ? `\r
-`
-                  : "\r";
+                  "\n" === _[_][0] && _++;
+                return _ >= _.length / 2 ? "\r\n" : "\r";
               });
           }
           function _(_) {
@@ -1638,32 +696,24 @@
               _ = _.fastMode,
               _ = null,
               _ = !1,
-              _ = _.quoteChar == null ? '"' : _.quoteChar,
+              _ = null == _.quoteChar ? '"' : _.quoteChar,
               _ = _;
             if (
-              (_.escapeChar !== void 0 && (_ = _.escapeChar),
-              (typeof _ != "string" || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
+              (void 0 !== _.escapeChar && (_ = _.escapeChar),
+              ("string" != typeof _ || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
                 (_ = ","),
               _ === _)
             )
               throw new Error("Comment character same as delimiter");
-            _ === !0
+            !0 === _
               ? (_ = "#")
-              : (typeof _ != "string" || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
+              : ("string" != typeof _ || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
                 (_ = !1),
-              _ !==
-                `
-` &&
-                _ !== "\r" &&
-                _ !==
-                  `\r
-` &&
-                (_ = `
-`);
+              "\n" !== _ && "\r" !== _ && "\r\n" !== _ && (_ = "\n");
             var _ = 0,
               _ = !1;
             (this.parse = function (_, _, _) {
-              if (typeof _ != "string")
+              if ("string" != typeof _)
                 throw new Error("Input must be a string");
               var _ = _.length,
                 _ = _.length,
@@ -1675,7 +725,7 @@
                 _ = [],
                 _ = (_ = 0);
               if (!_) return _();
-              if (_ || (_ !== !1 && _.indexOf(_) === -1)) {
+              if (_ || (!1 !== _ && -1 === _.indexOf(_))) {
                 for (var _ = _.split(_), _ = 0; _ < _.length; _++) {
                   if (((_ = _[_]), (_ += _.length), _ !== _.length - 1))
                     _ += _.length;
@@ -1698,7 +748,7 @@
               )
                 if (_[_] === _)
                   for (_ = _, _++; ; ) {
-                    if ((_ = _.indexOf(_, _ + 1)) === -1)
+                    if (-1 === (_ = _.indexOf(_, _ + 1)))
                       return (
                         _ ||
                           _.push({
@@ -1712,12 +762,11 @@
                       );
                     if (_ === _ - 1) return _(_.substring(_, _).replace(_, _));
                     if (_ === _ && _[_ + 1] === _) _++;
-                    else if (_ === _ || _ === 0 || _[_ - 1] !== _) {
-                      _ !== -1 && _ < _ + 1 && (_ = _.indexOf(_, _ + 1));
+                    else if (_ === _ || 0 === _ || _[_ - 1] !== _) {
+                      -1 !== _ && _ < _ + 1 && (_ = _.indexOf(_, _ + 1));
                       var _ = _(
-                        (_ =
-                          _ !== -1 && _ < _ + 1 ? _.indexOf(_, _ + 1) : _) ===
-                          -1
+                        -1 ===
+                          (_ = -1 !== _ && _ < _ + 1 ? _.indexOf(_, _ + 1) : _)
                           ? _
                           : Math.min(_, _),
                       );
@@ -1753,13 +802,13 @@
                         _++;
                     }
                   }
-                else if (_ && _.length === 0 && _.substring(_, _ + _) === _) {
-                  if (_ === -1) return _();
+                else if (_ && 0 === _.length && _.substring(_, _ + _) === _) {
+                  if (-1 === _) return _();
                   (_ = _ + _), (_ = _.indexOf(_, _)), (_ = _.indexOf(_, _));
-                } else if (_ !== -1 && (_ < _ || _ === -1))
+                } else if (-1 !== _ && (_ < _ || -1 === _))
                   _.push(_.substring(_, _)), (_ = _ + _), (_ = _.indexOf(_, _));
                 else {
-                  if (_ === -1) break;
+                  if (-1 === _) break;
                   if ((_.push(_.substring(_, _)), _(_ + _), _ && (_(), _)))
                     return _();
                   if (_ && _.length >= _) return _(!0);
@@ -1770,15 +819,16 @@
               }
               function _(_) {
                 var _ = 0;
-                return (_ =
-                  _ !== -1 && (_ = _.substring(_ + 1, _)) && _.trim() === ""
-                    ? _.length
-                    : _);
+                return -1 !== _ &&
+                  (_ = _.substring(_ + 1, _)) &&
+                  "" === _.trim()
+                  ? _.length
+                  : _;
               }
               function _(_) {
                 return (
                   _ ||
-                    (_ === void 0 && (_ = _.substring(_)),
+                    (void 0 === _ && (_ = _.substring(_)),
                     _.push(_),
                     (_ = _),
                     _(_),
@@ -1809,7 +859,7 @@
                         (_[_] = _),
                         _[_]++,
                         (_ = !0),
-                        ((_ = _ === null ? {} : _)[_] = _);
+                        ((_ = null === _ ? {} : _)[_] = _);
                     } else (_[_] = 1), (_[_] = _);
                     _.add(_);
                   }
@@ -1844,7 +894,7 @@
             var _ = _.data,
               _ = _[_.workerId],
               _ = !1;
-            if (_.error) _.userError(_.error, _.file);
+            if (_.error) __webpack_require__.userError(_.error, _.file);
             else if (_.results && _.results.data) {
               var _ = {
                 abort: function () {
@@ -1864,7 +914,7 @@
                 for (
                   var _ = 0;
                   _ < _.results.data.length &&
-                  (_.userStep(
+                  (__webpack_require__.userStep(
                     {
                       data: _.results.data[_],
                       errors: _.results.errors,
@@ -1878,19 +928,22 @@
                 delete _.results;
               } else
                 _(_.userChunk) &&
-                  (_.userChunk(_.results, _, _.file), delete _.results);
+                  (__webpack_require__.userChunk(_.results, _, _.file),
+                  delete _.results);
             }
             _.finished && !_ && _(_.workerId, _.results);
           }
           function _(_, _) {
             var _ = _[_];
-            _(_.userComplete) && _.userComplete(_), _.terminate(), delete _[_];
+            _(_.userComplete) && __webpack_require__.userComplete(_),
+              __webpack_require__.terminate(),
+              delete _[_];
           }
           function _() {
             throw new Error("Not implemented.");
           }
           function _(_) {
-            if (typeof _ != "object" || _ === null) return _;
+            if ("object" != typeof _ || null === _) return _;
             var _,
               _ = Array.isArray(_) ? [] : {};
             for (_ in _) _[_] = _(_[_]);
@@ -1902,7 +955,7 @@
             };
           }
           function _(_) {
-            return typeof _ == "function";
+            return "function" == typeof _;
           }
           return (
             (_.parse = function (_, _) {
@@ -1916,11 +969,11 @@
                 return (
                   (_ = null),
                   _.NODE_STREAM_INPUT,
-                  typeof _ == "string"
+                  "string" == typeof _
                     ? ((_ = ((_) =>
-                        _.charCodeAt(0) !== 65279 ? _ : _.slice(1))(_)),
+                        65279 !== _.charCodeAt(0) ? _ : _.slice(1))(_)),
                       (_ = new (_.download ? _ : _)(_)))
-                    : _.readable === !0 && _(_.read) && _(_._)
+                    : !0 === _.readable && _(_.read) && _(_._)
                       ? (_ = new _(_))
                       : ((_.File && _ instanceof File) ||
                           _ instanceof Object) &&
@@ -1974,8 +1027,7 @@
               var _ = !1,
                 _ = !0,
                 _ = ",",
-                _ = `\r
-`,
+                _ = "\r\n",
                 _ = '"',
                 _ = _ + _,
                 _ = !1,
@@ -1983,57 +1035,57 @@
                 _ = !1,
                 _ =
                   ((() => {
-                    if (typeof _ == "object") {
+                    if ("object" == typeof _) {
                       if (
-                        (typeof _.delimiter != "string" ||
+                        ("string" != typeof _.delimiter ||
                           _.BAD_DELIMITERS.filter(function (_) {
-                            return _.delimiter.indexOf(_) !== -1;
+                            return -1 !== _.delimiter.indexOf(_);
                           }).length ||
                           (_ = _.delimiter),
-                        (typeof _.quotes != "boolean" &&
-                          typeof _.quotes != "function" &&
+                        ("boolean" != typeof _.quotes &&
+                          "function" != typeof _.quotes &&
                           !Array.isArray(_.quotes)) ||
                           (_ = _.quotes),
-                        (typeof _.skipEmptyLines != "boolean" &&
-                          typeof _.skipEmptyLines != "string") ||
+                        ("boolean" != typeof _.skipEmptyLines &&
+                          "string" != typeof _.skipEmptyLines) ||
                           (_ = _.skipEmptyLines),
-                        typeof _.newline == "string" && (_ = _.newline),
-                        typeof _.quoteChar == "string" && (_ = _.quoteChar),
-                        typeof _.header == "boolean" && (_ = _.header),
+                        "string" == typeof _.newline && (_ = _.newline),
+                        "string" == typeof _.quoteChar && (_ = _.quoteChar),
+                        "boolean" == typeof _.header && (_ = _.header),
                         Array.isArray(_.columns))
                       ) {
-                        if (_.columns.length === 0)
+                        if (0 === _.columns.length)
                           throw new Error("Option columns is empty");
                         _ = _.columns;
                       }
-                      _.escapeChar !== void 0 && (_ = _.escapeChar + _),
+                      void 0 !== _.escapeChar && (_ = _.escapeChar + _),
                         _.escapeFormulae instanceof RegExp
                           ? (_ = _.escapeFormulae)
-                          : typeof _.escapeFormulae == "boolean" &&
+                          : "boolean" == typeof _.escapeFormulae &&
                             _.escapeFormulae &&
                             (_ = /^[=+\-@\t\r].*$/);
                     }
                   })(),
                   new RegExp(_(_), "g"));
               if (
-                (typeof _ == "string" && (_ = JSON.parse(_)), Array.isArray(_))
+                ("string" == typeof _ && (_ = JSON.parse(_)), Array.isArray(_))
               ) {
                 if (!_.length || Array.isArray(_[0])) return _(null, _, _);
-                if (typeof _[0] == "object")
+                if ("object" == typeof _[0])
                   return _(_ || Object.keys(_[0]), _, _);
-              } else if (typeof _ == "object")
+              } else if ("object" == typeof _)
                 return (
-                  typeof _.data == "string" && (_.data = JSON.parse(_.data)),
+                  "string" == typeof _.data && (_.data = JSON.parse(_.data)),
                   Array.isArray(_.data) &&
                     (_.fields || (_.fields = (_.meta && _.meta.fields) || _),
                     _.fields ||
                       (_.fields = Array.isArray(_.data[0])
                         ? _.fields
-                        : typeof _.data[0] == "object"
+                        : "object" == typeof _.data[0]
                           ? Object.keys(_.data[0])
                           : []),
                     Array.isArray(_.data[0]) ||
-                      typeof _.data[0] == "object" ||
+                      "object" == typeof _.data[0] ||
                       (_.data = [_.data])),
                   _(_.fields || [], _.data || [], _)
                 );
@@ -2041,8 +1093,8 @@
               function _(_, _, _) {
                 var _ = "",
                   _ =
-                    (typeof _ == "string" && (_ = JSON.parse(_)),
-                    typeof _ == "string" && (_ = JSON.parse(_)),
+                    ("string" == typeof _ && (_ = JSON.parse(_)),
+                    "string" == typeof _ && (_ = JSON.parse(_)),
                     Array.isArray(_) && 0 < _.length),
                   _ = !Array.isArray(_[0]);
                 if (_ && _) {
@@ -2053,21 +1105,21 @@
                 for (var _ = 0; _ < _.length; _++) {
                   var _ = (_ ? _ : _[_]).length,
                     _ = !1,
-                    _ = _ ? Object.keys(_[_]).length === 0 : _[_].length === 0;
+                    _ = _ ? 0 === Object.keys(_[_]).length : 0 === _[_].length;
                   if (
                     (_ &&
                       !_ &&
                       (_ =
-                        _ === "greedy"
-                          ? _[_].join("").trim() === ""
-                          : _[_].length === 1 && _[_][0].length === 0),
-                    _ === "greedy" && _)
+                        "greedy" === _
+                          ? "" === _[_].join("").trim()
+                          : 1 === _[_].length && 0 === _[_][0].length),
+                    "greedy" === _ && _)
                   ) {
                     for (var _ = [], _ = 0; _ < _; _++) {
                       var _ = _ ? _[_] : _;
                       _.push(_[_][_]);
                     }
-                    _ = _.join("").trim() === "";
+                    _ = "" === _.join("").trim();
                   }
                   if (!_) {
                     for (var _ = 0; _ < _; _++) {
@@ -2082,20 +1134,20 @@
               }
               function _(_, _) {
                 var _, _;
-                return _ == null
+                return null == _
                   ? ""
                   : _.constructor === Date
                     ? JSON.stringify(_).slice(1, 25)
                     : ((_ = !1),
                       _ &&
-                        typeof _ == "string" &&
+                        "string" == typeof _ &&
                         _.test(_) &&
                         ((_ = "'" + _), (_ = !0)),
                       (_ = _.toString().replace(_, _)),
                       (_ =
                         _ ||
-                        _ === !0 ||
-                        (typeof _ == "function" && _(_, _)) ||
+                        !0 === _ ||
+                        ("function" == typeof _ && __webpack_require__(_, _)) ||
                         (Array.isArray(_) && _[_]) ||
                         ((_, _) => {
                           for (var _ = 0; _ < _.length; _++)
@@ -2103,22 +1155,16 @@
                           return !1;
                         })(_, _.BAD_DELIMITERS) ||
                         -1 < _.indexOf(_) ||
-                        _.charAt(0) === " " ||
-                        _.charAt(_.length - 1) === " ")
+                        " " === _.charAt(0) ||
+                        " " === _.charAt(_.length - 1))
                         ? _ + _ + _
                         : _);
               }
             }),
-            (_.RECORD_SEP = ""),
-            (_.UNIT_SEP = ""),
-            (_.BYTE_ORDER_MARK = "\uFEFF"),
-            (_.BAD_DELIMITERS = [
-              "\r",
-              `
-`,
-              '"',
-              _.BYTE_ORDER_MARK,
-            ]),
+            (_.RECORD_SEP = String.fromCharCode(30)),
+            (_.UNIT_SEP = String.fromCharCode(31)),
+            (_.BYTE_ORDER_MARK = "\ufeff"),
+            (_.BAD_DELIMITERS = ["\r", "\n", '"', _.BYTE_ORDER_MARK]),
             (_.WORKERS_SUPPORTED = !_ && !!_.Worker),
             (_.NODE_STREAM_INPUT = 1),
             (_.LocalChunkSize = 10485760),
@@ -2137,13 +1183,11 @@
                 return (
                   this.each(function (_) {
                     if (
-                      !(
-                        _(this).prop("tagName").toUpperCase() === "INPUT" &&
-                        _(this).attr("type").toLowerCase() === "file" &&
-                        _.FileReader
-                      ) ||
+                      "INPUT" !== _(this).prop("tagName").toUpperCase() ||
+                      "file" !== _(this).attr("type").toLowerCase() ||
+                      !_.FileReader ||
                       !this.files ||
-                      this.files.length === 0
+                      0 === this.files.length
                     )
                       return !0;
                     for (var _ = 0; _ < this.files.length; _++)
@@ -2157,7 +1201,7 @@
                   this
                 );
                 function _() {
-                  if (_.length === 0) _(_.complete) && _.complete();
+                  if (0 === _.length) _(_.complete) && _.complete();
                   else {
                     var _,
                       _,
@@ -2166,8 +1210,8 @@
                       _ = _[0];
                     if (_(_.before)) {
                       var _ = _.before(_.file, _.inputElem);
-                      if (typeof _ == "object") {
-                        if (_.action === "abort")
+                      if ("object" == typeof _) {
+                        if ("abort" === _.action)
                           return (
                             (_ = "AbortError"),
                             (_ = _.file),
@@ -2185,13 +1229,13 @@
                               )
                             )
                           );
-                        if (_.action === "skip") return void _();
-                        typeof _.config == "object" &&
+                        if ("skip" === _.action) return void _();
+                        "object" == typeof _.config &&
                           (_.instanceConfig = _.extend(
                             _.instanceConfig,
                             _.config,
                           ));
-                      } else if (_ === "skip") return void _();
+                      } else if ("skip" === _) return void _();
                     }
                     var _ = _.instanceConfig.complete;
                     (_.instanceConfig.complete = function (_) {
@@ -2207,9 +1251,9 @@
             _ &&
               (_.onmessage = function (_) {
                 (_ = _.data),
-                  _.WORKER_ID === void 0 && _ && (_.WORKER_ID = _.workerId),
-                  typeof _.input == "string"
-                    ? _.postMessage({
+                  void 0 === _.WORKER_ID && _ && (_.WORKER_ID = _.workerId),
+                  "string" == typeof _.input
+                    ? __webpack_require__.postMessage({
                         workerId: _.WORKER_ID,
                         results: _.parse(_.input, _.config),
                         finished: !0,
@@ -2217,7 +1261,7 @@
                     : ((_.File && _.input instanceof File) ||
                         _.input instanceof Object) &&
                       (_ = _.parse(_.input, _.config)) &&
-                      _.postMessage({
+                      __webpack_require__.postMessage({
                         workerId: _.WORKER_ID,
                         results: _,
                         finished: !0,
@@ -2229,8 +1273,944 @@
             ((_.prototype = Object.create(_.prototype)).constructor = _),
             _
           );
-        });
-      },
+        }),
+        void 0 ===
+          (_ = "function" == typeof _ ? __webpack_require__.apply(_, _) : _) ||
+          (_.exports = _);
     },
-  ]);
-})();
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports),
+        __webpack_require__._(module_exports, {
+          PricingRoutes: () => _,
+          default: () => _,
+        });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            bCompactMode: _,
+            setCompactMode: _,
+            rgGridData: _,
+            strPackageFilter: _,
+            setPackageFilter: _,
+            bFilterToBelowMinPrice: _,
+            setFilterToBelowMinPrice: _,
+          } = _,
+          _ = (0, _.useMemo)(
+            () => _.filter((_) => (0, _._)(_.packageID)).length,
+            [_],
+          );
+        let _ = _.useCallback(
+          (_) => {
+            _(_.data);
+          },
+          [_],
+        );
+        const _ = _.useMemo(
+            () => [
+              {
+                label: (0, _._)("#PricingDashboard_ShowOnlyReleasedPackages"),
+                data: "released",
+              },
+              {
+                label: (0, _._)("#PricingDashboard_ShowAllPackages"),
+                data: "all",
+              },
+              {
+                label: (0, _._)("#PricingDashboard_ShowOnlyUnreleasedPackages"),
+                data: "unreleased",
+              },
+              {
+                label: (0, _._)("#PricingDashboard_ShowOnlyChangedPackages"),
+                data: "changed",
+              },
+              {
+                label: (0, _._)("#PricingDashboard_ShowSubmittedChanges"),
+                data: "proposed",
+              },
+            ],
+            [],
+          ),
+          [_, _, _] = (0, _._)();
+        return (0, _.jsxs)("div", {
+          className: _().GridHeaderButtons,
+          children: [
+            (0, _.jsx)(_._, {
+              rgOptions: _,
+              selectedOption: _,
+              strDropDownClassName: _().Test,
+              onChange: _,
+              contextMenuPositionOptions: {
+                bMatchWidth: !1,
+              },
+            }),
+            Boolean(_ || _) &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().OptionCtn, _().PriceLowOption),
+                children: (0, _.jsx)(_._, {
+                  checked: _,
+                  onChange: _,
+                  label: (0, _._)("#PricingDashboard_FilterToLowPrice", _),
+                }),
+              }),
+            (0, _.jsx)("div", {
+              className: (0, _._)(_().OptionCtn, _().CompactOption),
+              children: (0, _.jsx)(_._, {
+                checked: _,
+                onChange: _,
+                label: (0, _._)(
+                  "#PricingDashboard_ShowCompactModeCheckBoxLabel",
+                ),
+              }),
+            }),
+            (0, _.jsx)("div", {
+              className: (0, _._)(_().OptionCtn),
+              children: (0, _.jsx)(_._, {}),
+            }),
+            (0, _.jsxs)("div", {
+              className: (0, _._)(_().OptionCtn),
+              children: [
+                (0, _.jsx)(_._, {
+                  onClick: _,
+                  children: (0, _._)(
+                    "#PricingDashboard_ApplyGuidelinesDialog_Button",
+                  ),
+                }),
+                (0, _.jsx)(_._, {
+                  active: _,
+                  children: (0, _.jsx)(_._, {
+                    closeModal: _,
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.contains_game && _.contains_dlc
+          ? "BOTH"
+          : _.contains_game
+            ? "GAME"
+            : _.contains_dlc
+              ? "DLC"
+              : null;
+      }
+      function _(_) {
+        const { column: _ } = _,
+          _ = _._,
+          _ = (0, _._)(_),
+          _ = (0, _._)(_);
+        return (0, _.jsxs)("div", {
+          className: _().CurrencyHeader,
+          children: [
+            (0, _.jsx)(_._, {
+              toolTipContent: _,
+              direction: "top",
+              className: _().CurrencyAbbreviation,
+              strTooltipClassname: _().HoverToolTip,
+              children: (0, _.jsxs)("div", {
+                className: _().CurrencyNameCtn,
+                children: [
+                  _,
+                  (0, _.jsx)("span", {
+                    className: _().CurrencyName,
+                    children: _,
+                  }),
+                ],
+              }),
+            }),
+            _ > 0 &&
+              (0, _.jsx)(_._, {
+                hoverKey: _,
+                className: _().CurrencyMore,
+                renderHover: () =>
+                  (0, _.jsx)(_, {
+                    priceKey: _,
+                  }),
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { row: _ } = _;
+        return (0, _.jsx)(_._, {
+          packageID: _.original.packageID,
+          bShowCancel: !0,
+        });
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(!1),
+          _ = _.useMemo(
+            () =>
+              (0, _._)().accessor("proposalState", {
+                header: (0, _._)("#PricingDashboard_Column_PriceProposalState"),
+                enableSorting: !1,
+                cell: _,
+                size: 200,
+                meta: {
+                  strHeaderTooltip: (0, _._)(
+                    "#PricingDashboard_Column_PriceProposalState_ttip",
+                  ),
+                },
+              }),
+            [],
+          ),
+          { rgSupportedPriceKeys: _ } = (0, _._)();
+        return _.useMemo(() => {
+          const _ = [_, _, _, _, _, _];
+          for (const _ of _)
+            _.push({
+              accessorKey: _,
+              size: _ ? 72 : 200,
+              enableSorting: !1,
+              header: _,
+              cell: _._,
+            });
+          return _;
+        }, [_, _, _, _, _, _, _, _]);
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = _?.length ?? 0;
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().PricingGridCtn, _ > 0 && "PendingVisible"),
+          children: (0, _.jsx)(_, {
+            ..._,
+          }),
+        });
+      }
+      const _ = _.memo(function (_) {
+        const { packageData: _ } = _,
+          [_, _] = _.useState(!1),
+          _ = _.useRef(null),
+          [_, _] = (0, _._)("filter", "released");
+        const [_, _] = (0, _._)("filter_below_min_price", !1),
+          _ = new URLSearchParams(window.location.search),
+          _ = _.has(_._) ? decodeURIComponent(_.get(_._)) : "",
+          _ = _(_),
+          _ = (function (_, _, _) {
+            const { rgSupportedPriceKeys: _ } = (0, _._)();
+            return _.useMemo(() => {
+              const _ = [];
+              for (const _ of _) {
+                const _ = /^-?[0-9]+$/.test(_.strSearchStringFromURL)
+                  ? parseInt(_.strSearchStringFromURL)
+                  : 0;
+                if (_.packageid !== _) {
+                  if ("changed" == _) {
+                    if (!(0, _._)(_.packageid)) continue;
+                  } else if ("proposed" == _) {
+                    if (!(0, _._)(_.packageid)) continue;
+                  } else if ("released" == _) {
+                    if (!_.released) continue;
+                  } else if ("unreleased" == _ && _.released) continue;
+                  if (
+                    _?.bFilterToOnlyBelowMinimumPrice &&
+                    !(0, _._)(_.packageid)
+                  )
+                    continue;
+                }
+                let _ = _.grouped_app_name;
+                _ ||
+                  (_ =
+                    _.appids.length > 1
+                      ? (0, _._)(
+                          "#PackageGrid_MultipleBaseGamesFoundForPackage",
+                        )
+                      : (0, _._)("#PackageGrid_NoBaseGameFoundForPackage"));
+                const _ = {
+                  appids: _.appids.sort(),
+                  appName: _,
+                  packageID: _.packageid,
+                  packageName: _.package_name || "",
+                  packageType: _(_),
+                  released: _.released,
+                };
+                for (const _ of _) _[_] = _;
+                _.push(_);
+              }
+              return _;
+            }, [_, _, _, _]);
+          })(_, _, {
+            bFilterToOnlyBelowMinimumPrice: _,
+            strSearchStringFromURL: _,
+          }),
+          _ = (0, _._)(),
+          _ = () => _(_.current),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              bCompactMode: _,
+              setCompactMode: _,
+              rgGridData: _,
+              strPackageFilter: _,
+              setPackageFilter: _,
+              bFilterToBelowMinPrice: _,
+              setFilterToBelowMinPrice: _,
+            }),
+            (0, _.jsx)("div", {
+              className: _().PricingGridWrapper,
+              children: (0, _.jsx)("div", {
+                className: (0, _._)(_().PricingGrid, _ && "CompactMode"),
+                children: (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      fnBLocalChangesExist: _,
+                      fnWarnUser: _,
+                      children: (0, _.jsx)(_._, {
+                        ref: _,
+                        className: _()(
+                          _().PricingGridTable,
+                          "noGlobalButtonStyle",
+                        ),
+                        columns: _,
+                        data: _,
+                        getRowKey: (_, _) => _.packageID,
+                        stickyHeader: !0,
+                        nItemHeight: 43,
+                        nHeaderHeight: 63,
+                        overscan: 12,
+                        initialExpanded: !0,
+                        initialSorting: [
+                          {
+                            _: "appName",
+                            desc: !1,
+                          },
+                        ],
+                        initialColumnFilters: [
+                          {
+                            _: "packageName",
+                            value: _,
+                          },
+                        ],
+                        initialGrouping: ["appName"],
+                        initialColumnVisibility: {
+                          packageType: !1,
+                          appids: !1,
+                        },
+                        initialColumnPinning: {
+                          left: [
+                            "packageID",
+                            "appName",
+                            "packageName",
+                            "proposalState",
+                            "USD",
+                          ],
+                        },
+                        onGroupingChange: _,
+                        onVisibleRowsChange: _,
+                        renderGroup: _._,
+                      }),
+                    }),
+                    (0, _.jsx)("br", {}),
+                  ],
+                }),
+              }),
+            }),
+          ],
+        });
+      });
+      function _(_) {
+        const { priceKey: _ } = _,
+          _ = (0, _._)(_);
+        let _ = (0, _._)(_);
+        return (0, _.jsx)("div", {
+          className: _().PricePopout,
+          children: (0, _.jsx)("div", {
+            className: _().DetailRow,
+            children: (0, _.jsx)("div", {
+              className: _().DetailLabel,
+              onClick: _,
+              children: (0, _._)("#PricingDashboard_RevertAllCurrency", _),
+            }),
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { closeModal: _ } = _,
+          _ = (0, _._)(),
+          _ = _()().format("YYYY-MM-DDTHH-mm-ss"),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = `prices_all_${_}_${_}.csv`,
+          _ = `prices_${_}_${_}.csv`,
+          _ = 0 == _.length;
+        return (0, _.jsxs)(_._, {
+          bAllowFullSize: !1,
+          closeModal: _,
+          bAlertDialog: !0,
+          strTitle: (0, _._)("#PricingDashboard_ImportExportHeader"),
+          children: [
+            (0, _._)("#PricingDashboard_ImportExport_GeneralInstructions"),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("a", {
+              href: _._.PARTNER_BASE_URL + "doc/store/pricing/csv",
+              target: "_blank",
+              children: (0, _._)("#PricingDashboard_ImportExport_DocLink"),
+            }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("h3", {
+              children: (0, _._)("#PricingDashboard_SubtitleExport"),
+            }),
+            (0, _.jsx)("div", {
+              className: _().Instructions,
+              children: (0, _._)(
+                "#PricingDashboard_ImportExport_DownloadInstructions",
+              ),
+            }),
+            (0, _.jsxs)("div", {
+              className: _().ButtonRows,
+              children: [
+                _.length != _.length &&
+                  (0, _.jsxs)("div", {
+                    className: _().OptionCtn,
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _().OptionDesc,
+                        children: (0, _._)(
+                          "#PricingDashboard_ImportExport_DownloadVisible_Desc",
+                        ),
+                      }),
+                      (0, _.jsxs)(_._, {
+                        className: _().Button,
+                        disabled: _,
+                        onClick: () => _(_, _),
+                        children: [
+                          (0, _._)(
+                            "#PricingDashboard_ImportExport_DownloadVisible_Button",
+                          ),
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(
+                              "#PricingDashboard_PackageCount",
+                              _.length,
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                (0, _.jsxs)("div", {
+                  className: _().OptionCtn,
+                  children: [
+                    (0, _.jsx)("span", {
+                      className: _().OptionDesc,
+                      children: (0, _._)(
+                        "#PricingDashboard_ImportExport_DownloadAll_Desc",
+                      ),
+                    }),
+                    (0, _.jsxs)(_._, {
+                      className: _().Button,
+                      disabled: _,
+                      onClick: () => _(_, _),
+                      children: [
+                        (0, _._)(
+                          "#PricingDashboard_ImportExport_DownloadAll_Button",
+                        ),
+                        (0, _.jsx)("span", {
+                          children: (0, _._)(
+                            "#PricingDashboard_PackageCount",
+                            _.length,
+                          ),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("h3", {
+              children: (0, _._)("#PricingDashboard_SubtitleImport"),
+            }),
+            (0, _.jsx)("div", {
+              className: _().Instructions,
+              children: (0, _._)(
+                "#PricingDashboard_ImportExport_UploadInstructions",
+              ),
+            }),
+            (0, _.jsx)("div", {
+              className: _().ButtonRows,
+              children: (0, _.jsxs)("div", {
+                className: _().OptionCtn,
+                children: [
+                  (0, _.jsx)("span", {
+                    className: _().OptionDesc,
+                    children: (0, _._)(
+                      "#PricingDashboard_ImportExport_Upload_Desc",
+                    ),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _().Button,
+                    disabled: _,
+                    children: (0, _.jsxs)("label", {
+                      className: _().ImportButtonLabel,
+                      htmlFor: "import-price-input",
+                      children: [
+                        (0, _._)(
+                          "#PricingDashboard_ImportExport_Upload_Button",
+                        ),
+                        (0, _.jsx)("input", {
+                          _: "import-price-input",
+                          type: "file",
+                          style: {
+                            display: "none",
+                          },
+                          onChange: (_) =>
+                            (async function (_, _) {
+                              if (_.target.files.length >= 1) {
+                                const _ = (0, _._)(_),
+                                  _ = _.target.files[0],
+                                  _ = await _._.ParseCSVFile(_);
+                                (0, _._)(
+                                  (0, _.jsx)(_, {
+                                    strFilename: _.name,
+                                    parseResult: _,
+                                  }),
+                                  _,
+                                ),
+                                  _();
+                              }
+                            })(_, _),
+                        }),
+                      ],
+                    }),
+                  }),
+                ],
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_, _) {
+        const _ = [],
+          _ = (0, _._)(),
+          _ = [(0, _._)("#PackageGrid_Column_PackageName"), "ID"];
+        for (const _ of _) _.push(_);
+        __webpack_require__.push(_);
+        for (const _ of _) {
+          const _ = [(0, _._)(_), _.toString()];
+          for (const _ of _) {
+            const _ = (0, _._)(_, _),
+              _ = _ ? (_ / 100).toString() : "";
+            _.push(_);
+          }
+          __webpack_require__.push(_);
+        }
+        _._.WriteCSVToFile(_, _);
+      }
+      function _(_, _) {
+        let _ = Number(_);
+        return Number.isNaN(_) ? null : Math.round(100 * _);
+      }
+      function _(_) {
+        const { closeModal: _, strFilename: _, parseResult: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          [_, _] = _.useState(null),
+          [_, _] = _.useState();
+        if (
+          (_.useEffect(() => {
+            const { rgPriceChanges: _, nPackagesImported: _ } = (function (
+              _,
+              _,
+              _,
+              _,
+            ) {
+              const _ = [],
+                _ = new Set(_),
+                _ = [];
+              for (const _ of _.data ?? []) {
+                const _ = Number(_._);
+                if (_.has(_)) {
+                  _.push(_);
+                  for (const _ of _) {
+                    const _ = _[_],
+                      _ = !!_?.length && _(_);
+                    if (!_?.length || Number.isNaN(_)) continue;
+                    const _ = _(_, _, _);
+                    _ && _.push(_);
+                  }
+                }
+              }
+              return {
+                rgPriceChanges: _,
+                nPackagesImported: _.length,
+              };
+            })(_, _, _, _);
+            _(_), _(_);
+          }, [_, _, _, _]),
+          null === _)
+        )
+          return (0, _.jsx)(_._, {
+            position: "center",
+          });
+        const _ = _.length > 0,
+          _ = _
+            ? (0, _._)("#PackageGrid_SaveChangesDialogButton")
+            : (0, _._)("#Button_Close");
+        return (0, _.jsxs)(_._, {
+          strTitle: (0, _._)(
+            "#PricingDashboard_ImportExport_UploadProgressTitle",
+          ),
+          strDescription: (0, _._)(
+            "#PricingDashboard_ImportExport_UploadProgressDetails",
+            _,
+          ),
+          bAlertDialog: !_,
+          strOKButtonText: _,
+          onOK: () => {
+            _ && (0, _._)((0, _.jsx)(_._, {}), window);
+          },
+          strCancelButtonText: (0, _._)("#Button_OK"),
+          closeModal: _,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().ParseResultCount,
+              children: (0, _._)(
+                "#PricingDashboard_ImportExport_UploadResults",
+                _.length,
+              ),
+            }),
+            _ &&
+              (0, _._)(
+                "#PricingDashboard_ImportExport_UploadNextStepInstructions",
+              ),
+            !!_.errors?.length &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().ErrorHeader,
+                    children: (0, _._)(
+                      "#PricingDashboard_ImportExport_UploadErrorsHeader",
+                      _.errors?.length,
+                    ),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().ParseErrors,
+                    children: _.errors.map((_, _) =>
+                      (0, _.jsx)(
+                        "div",
+                        {
+                          className: _().Error,
+                          children: `${_.row ?? "-"} ${_.message}`,
+                        },
+                        `${_.message}-${_}`,
+                      ),
+                    ),
+                  }),
+                ],
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        (0, _._)((0, _._)());
+        const _ = (0, _._)(),
+          _ = _._.PARTNER_BASE_URL + "doc/store/pricing",
+          _ = _._.HELP_BASE_URL + "wizard/HelpWithPublishing?issueid=920",
+          _ = (0, _._)(),
+          _ = (0, _.useMemo)(
+            () => Array.from(new Set(_.map((_) => _.submitterID))),
+            [_],
+          );
+        (0, _._)(_);
+        return (0, _.jsxs)("div", {
+          className: _().DashboardPage,
+          children: [
+            (0, _.jsxs)("div", {
+              className: _().DashTitle,
+              children: [
+                (0, _._)("#PricingDashboard_Title"),
+                (0, _.jsx)("div", {
+                  className: _().FeedbackLinkCtn,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().ButtonGroup,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      onClick: (_) => (0, _._)((0, _.jsx)(_, {}), (0, _._)(_)),
+                      children: (0, _._)(
+                        "#PricingDashboard_ImportExportButton",
+                      ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onClick: (_) => (0, _._)(_, _),
+                      children: (0, _._)(
+                        "#PricingDashboard_DocumentationButton",
+                      ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onClick: (_) => (0, _._)(_, _),
+                      children: (0, _._)("#PricingDashboard_ContactUsButton"),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            0 == _.length &&
+              (0, _.jsx)("div", {
+                className: _().ErrorMessage,
+                children: (0, _._)("#PricingDashboard_Error_NoPackages"),
+              }),
+            _.length > 0 &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_, {
+                    packageData: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    bReloadPageOnSave: !1,
+                  }),
+                ],
+              }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        PricingDashboard: () => "/dashboard/:publisherid(\\d*)",
+      };
+      function _(_) {
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
+              basename: (0, _._)() + "pricing/",
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    exact: !0,
+                    path: _._.DiagData(),
+                    render: (_) =>
+                      (0, _.jsx)(_._, {
+                        ..._,
+                        strConfigID: "application_config",
+                      }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    path: _.PricingDashboard(),
+                    render: (_) => (0, _.jsx)(_, {}),
+                  }),
+                  (0, _.jsx)(_._, {
+                    component: _._,
+                  }),
+                ],
+              }),
+            }),
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const [_, _] = (0, _.useState)(!1),
+          [_] = (0, _.useState)(() => _()),
+          _ = (0, _.useMemo)(
+            () => ({
+              country: _._.COUNTRY,
+              language: _._.LANGUAGE,
+              bUsePartnerAPI: !0,
+            }),
+            [],
+          );
+        return (
+          (0, _.useEffect)(
+            () => (
+              __webpack_require__(!0),
+              (function (_) {
+                return _._.Initialize(
+                  _.GetServiceTransport(),
+                  _._.is_partner_member,
+                );
+              })(_)
+            ),
+            [_],
+          ),
+          _
+            ? (0, _.createElement)(_._, {
+                context: _,
+                serviceTransportOverride: _.GetServiceTransport(),
+                children: _.children,
+              })
+            : null
+        );
+      }
+      function _(_) {
+        const [_] = (0, _.useState)(() => _()),
+          _ = (0, _.useMemo)(
+            () => ({
+              country: _._.COUNTRY,
+              language: _._.LANGUAGE,
+              bUsePartnerAPI: !0,
+              bIncludeUnpublished: _.bIncludeUnpublished,
+            }),
+            [_.bIncludeUnpublished],
+          );
+        return (0, _.createElement)(_._, {
+          context: _,
+          serviceTransportOverride: _.GetServiceTransport(),
+          children: _.children,
+        });
+      }
+      function _() {
+        const _ = (0, _._)("partnerbrowse_webapi_token", "application_config");
+        (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
+        return new _._(_._.WEBAPI_BASE_URL, _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      class _ {
+        static ParseCSVFile(_, _) {
+          return new Promise((_, _) => {
+            const _ = {
+              header: !0,
+              skipEmptyLines: "greedy",
+              complete: _,
+              error: (_) =>
+                _({
+                  errors: [_],
+                }),
+              transformHeader: _,
+            };
+            _().parse(_, _);
+          });
+        }
+        static ReadFile(_) {
+          return new Promise((_, _) => {
+            const _ = new FileReader();
+            (_.onload = (_) => _(_.result)), _.readAsText(_);
+          });
+        }
+        static WriteFile(_, _) {
+          let _ = document.createElement("a");
+          if (navigator.msSaveBlob) navigator.msSaveBlob(_, _);
+          else {
+            const _ = window.URL.createObjectURL(_);
+            _.href = _;
+          }
+          __webpack_require__.setAttribute("download", _),
+            __webpack_require__.click();
+          try {
+            document.removeChild(_);
+          } catch (_) {}
+        }
+        static WriteCSVToFile(_, _, _, _) {
+          const _ = _
+              ? _().unparse(
+                  {
+                    fields: _,
+                    data: _,
+                  },
+                  {
+                    header: !0,
+                  },
+                )
+              : _().unparse(_, {
+                  header: !0,
+                }),
+            _ = 1 == _ ? ["\ufeff" + _] : [_];
+          _.WriteFile(
+            new Blob(_, {
+              type: "text/csv:charset=utf-8;",
+            }),
+            _,
+          );
+        }
+        static m_DummyValueForQuestionHack = 0;
+        static WriteXMLToFile(_, _) {
+          const _ = () =>
+            this.m_DummyValueForQuestionHack ? "never returned" : "?";
+          let _ =
+            "<" +
+            __webpack_require__() +
+            'xml version="1.0" encoding="UTF-8" ' +
+            __webpack_require__() +
+            ">\n";
+          (_ += new XMLSerializer().serializeToString(_)),
+            _.WriteFile(
+              new Blob([_], {
+                type: "application/xml:charset=utf-8;",
+              }),
+              _,
+            );
+        }
+      }
+    },
+  },
+]);

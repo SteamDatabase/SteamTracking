@@ -1,7291 +1,5938 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(() => {
-  (self.webpackChunkstore = self.webpackChunkstore || []).push([
-    [50970],
-    {
-      71698: (re, Ae, i) => {
-        "use strict";
-        i.d(Ae, { H: () => s, s: () => j });
-        var e = i(90626),
-          P = i(41623);
-        let S = 0;
-        function s(ce, k) {
-          (0, e.useEffect)(() => {
-            if (!(ce || k))
-              return (
-                S++,
-                () => {
-                  --S == 0 && (0, P.s)();
-                }
-              );
-          }, [ce, k]);
+(self.webpackChunkstore = self.webpackChunkstore || []).push([
+  [50970],
+  {
+    61311: (e) => {
+      e.exports = {
+        ModeratorAuditActionCtn: "f6z__AuHw6SOG9zsY2oKr",
+        ExpandModActions: "_3nNMeqxuySIiNcmt7YEXb7",
+      };
+    },
+    12037: (e) => {
+      e.exports = {
+        "duration-app-launch": "800ms",
+        Container: "_2Jd3MGaOu0C9Ydswf8Q4Tn",
+        SectionButton: "_3n8swQFM3I_ARVM_5bPhAs",
+        StoreHeaderAdjust: "_3YyCpH32HRhZtt4BOM5wM5",
+        EventsSummariesCtn: "_1snIw0RvJduvDtqpmwtKJ9",
+        LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
+        LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
+        LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
+        BackgroundAnimation: "_295HzH0_Gg7fchG1zO9Km7",
+        "ItemFocusAnim-darkerGrey-nocolor": "_291aUneSnsR7SSD43BPEYt",
+        "ItemFocusAnim-darkerGrey": "_3T-aeBZd_novjXZhPEqJ_L",
+        "ItemFocusAnim-darkGreySettings": "ekd5ku98aKtUXOuTnlUpj",
+        "ItemFocusAnim-darkGrey": "peNld_fsioxlGFxQfdd8I",
+        "ItemFocusAnim-grey": "_1433gddOHXCko3qPvXFRFS",
+        "ItemFocusAnim-translucent-white-10": "_3ZEmb3nXVV6Jl3vO3gd3n2",
+        "ItemFocusAnim-translucent-white-20": "EoCuk2lmX0KUPR7Ja5J0J",
+        "ItemFocusAnimBorder-darkGrey": "_3FtKchinLpLv8OXrbvS81w",
+        "ItemFocusAnim-green": "_23vh8vhEvEmJ5bnq2YZfx8",
+        focusAnimation: "wTWp1KqP_zaAfiOc2ovCo",
+        hoverAnimation: "_2knkM4Dk-kiPNpW81PgE0Y",
+      };
+    },
+    71909: (e) => {
+      e.exports = {
+        Ctn: "_1cSpOjJvmGfNyu_HSwichZ",
+        RssInput: "_8NQ9LUIbLO71H08qAYXDd",
+        PreviewListCtn: "HRcOMhFkaVvhc6JpjMSNL",
+        PostCtn: "_3MI2hkWsuzXcyDAibpwe7B",
+        PostTitle: "_1ZsnsCKJmsJuCu04nd93lM",
+        ActivePost: "h-qBFnVYUuO1I4P-cSkTz",
+        PostDate: "_2vXmupKkh6p2BaA0K6CB5O",
+        ErrorPost: "aBLy2PQkdVwQn6JBG8BN8",
+        PostDraft: "_10_gLIbT6bnwWVSfTW2WSX",
+        PostStaged: "nNzd6ujTYg6p9F7pRvFWy",
+        PreviewListBtn: "_3NT8sO_AexM1KIu_MODBhK",
+        PreviewButtons: "_3lbycruUbHtprPAsZH1xvl",
+        UrlSettingCtn: "iN4AtnUn7apNTMq-bbs1m",
+        Error: "_1ZZ510SPBPFH5AkrGEHFfu",
+        DialogPostTitle: "_1XamDYGOmN-CAK2C5na9a5",
+        DashboardBtn: "_2Hlrm7BUntwygz545o3zQI",
+        RawRSS: "_2mOAhPzeuYmAf5zGBOdp7F",
+        ButtonCtn: "_13jSBmDO_a-9t1cIUiiQGm",
+        PreviewBtn: "_3HssDlgWiXjyOyu8qdcc-K",
+        ViewRaw: "_2jvHrB2MnyHMk3_BUfXjgt",
+        LanguageRow: "g_9tLawSDdTk6NiUPTRzd",
+        LanguageTitle: "_2jkBiax2j-5uGiCq-TfyS0",
+        LanguageSet: "_2zsMrGyxcvlo1yieM1i0d8",
+      };
+    },
+    52081: (e) => {
+      e.exports = {
+        SectionContainer: "_3P-ffy_ncZSHdpLyO6f0qi",
+        ModSectionTitle: "_2lc8mXoJp_A_p2dgalucda",
+        ResizeButton: "_29RNNuE5kdZltMEtl37JLr",
+        TileContainer: "_2D4XHyOtJNCevYR8usMUTn",
+        CreatorCtn: "GKustVJ6kwH-yfSnQEsoc",
+        TileSpread: "_1s_ElWG5sLvC6jn5bmx5lY",
+      };
+    },
+    45559: (e) => {
+      e.exports = { Error: "_1eWgIJNhXTPC8_jGAIqKPo" };
+    },
+    961: (e) => {
+      e.exports = {
+        AnalysisCtn: "_1YGfWUDh8ed60wRQsWWNIF",
+        AnalysisMissing: "rH1DtJyqgJLBkBSxST7Pr",
+        ModerationContainer: "_4HRKpSC9YY7qtf41FvW0t",
+        FilterContainer: "qY07Ts46PtC9f_CkGYbuw",
+        Tile: "_3oU1yN2Yb-ZuT2P5rHAev9",
+        DetailsMiddle: "VcJpZMvg6yg6gvjet_lOL",
+        EventModerateMarkReview: "_1RqKA7hTv6bcBGrMlmJBgz",
+        EventModerateMarkReReview: "qd-K7NHXOsYzDV3efizgo",
+        HalloweenEvent: "_34-bq70a3KzZ-vVd1v8whZ",
+        TileEventOtherType: "_3LUrW7wuVtojLL2n5z-MO5",
+        TileCapsule: "_36tP88olexdONuQPMAH7wS",
+        NoCapsuleFallback: "_16oQL8__nFx7gB4SyJaXss",
+        NoCapsule: "_1onVFUCJL4w1GOc9-5H6Me",
+        TileDetails: "_2mRup7CUbcaFul1JHh9EZE",
+        DetailsLeft: "_1O0y5744ePZj3bJR1znj1i",
+        EventTitle: "_3ahHdkXDTdAX8N8qrlTO2A",
+        DetailsRight: "_2BaxWyhld4ybAPEQ6OWPMr",
+        ArtHeader: "_38IkFA1-NC1J4Nksi3nRFA",
+        ArtSpotlight: "_2oUPYZHA2_Ta4GuTcTZbgd",
+        ModeratedFlagCtn: "_2JGGc489-CEXdtyThZ-oQB",
+        TitleLink: "_1OG__rbIbfwvZHVxRtcncy",
+        TileAppInfo: "_2IJ__vdWVbYb-buHnhzfnA",
+        TileAppInfoTitle: "_2X75q8B3vbGNtefxcW3jV7",
+        TileAppInfoImage: "_1rVmL1div0uHwyMqwlJixh",
+        TileSplit: "aaFuCFgI5Fl32h2pWEEfN",
+        TileTitle: "yJw1iGP3a49nfGpsJLTX",
+        TimeWidth: "xSOgV1OP-kC1LOJB_U6Lh",
+        CategoryChangeDialog: "_1VSAjVr5FVxM5XYWbK0drT",
+        Button: "wu9KrcTvKBuVbK28hlB7O",
+        RightSideTitles: "XDAwDPCqcUwPgADyyo1I3",
+        DateAndTime: "_2cW9NG6Q7uWRVnhAwe3juu",
+        StoreHeaderAdjust: "_3U7jaAVOEBb0gDtFK1AkVR",
+        LastUpdateTime: "_2x7zHBXixihuRXX3Rjt_0s",
+        EventTimingBlock: "_31d_RSG49SZFyfID3s5Z4G",
+        TileEventType: "_1z1xtCOtqCzGGGDRR-dRFr",
+        ChannelInfo: "H__RKLMfFToIYF83TuW3k",
+        HasAdultContent: "_2PcmCd2KPADlMtBUq-mAxi",
+      };
+    },
+    70903: (e, t, n) => {
+      "use strict";
+      n.d(t, {
+        w2: () => c,
+        wN: () => C,
+        Dw: () => p,
+        vB: () => S,
+        D$: () => s,
+        bH: () => M,
+      });
+      var s = {};
+      n.r(s), n.d(s, { w4: () => l });
+      var a = n(80613),
+        r = n.n(a),
+        i = n(89068),
+        o = n(56545);
+      const l = 0;
+      class d extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            d.prototype.gid || i.Sg(d.M()),
+            a.Message.initialize(this, e, 0, -1, [5], null);
         }
-        function j(ce) {
-          const [k, V] = (0, e.useState)(!1);
-          (0, e.useEffect)(() => {
-            const K = window.setTimeout(() => V(!0), ce);
-            return () => window.clearTimeout(K);
-          }, [ce]),
-            s(k);
-        }
-      },
-      94699: (re, Ae, i) => {
-        "use strict";
-        i.d(Ae, {
-          w2: () => x,
-          wN: () => T,
-          Dw: () => O,
-          vB: () => N,
-          D$: () => e,
-          bH: () => w,
-        });
-        var e = {};
-        i.r(e), i.d(e, { w4: () => ce });
-        var P = i(80613),
-          S = i.n(P),
-          s = i(75245),
-          j = i(35038);
-        const ce = 0,
-          k = 1,
-          V = 2,
-          K = 3;
-        function me(m) {
-          return "unknown ENewsRecommendationState ( " + m + " )";
-        }
-        class U extends P.Message {
-          static ImplementsStaticInterface() {}
-          constructor(t = null) {
-            super(),
-              U.prototype.gid || s.Sg(U.M()),
-              P.Message.initialize(this, t, 0, -1, [5], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              U.sm_m ||
-                (U.sm_m = {
-                  proto: U,
-                  fields: {
-                    gid: {
-                      n: 1,
-                      br: s.qM.readFixed64String,
-                      bw: s.gp.writeFixed64String,
-                    },
-                    name: { n: 2, br: s.qM.readString, bw: s.gp.writeString },
-                    type: {
-                      n: 3,
-                      d: 0,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    url: { n: 4, br: s.qM.readString, bw: s.gp.writeString },
-                    associated_apps: {
-                      n: 5,
-                      r: !0,
-                      q: !0,
-                      br: s.qM.readUint32,
-                      pbr: s.qM.readPackedUint32,
-                      bw: s.gp.writeRepeatedUint32,
-                    },
-                    poll_interval: {
-                      n: 6,
-                      d: 300,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    kv_description: {
-                      n: 7,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
-                    kv_filter: {
-                      n: 8,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
-                    publish_to_clan_account_id: {
-                      n: 9,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    language: {
-                      n: 10,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    last_error: {
-                      n: 11,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    last_update: {
-                      n: 12,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    last_checked: {
-                      n: 13,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            d.sm_m ||
+              (d.sm_m = {
+                proto: d,
+                fields: {
+                  gid: {
+                    n: 1,
+                    br: i.qM.readFixed64String,
+                    bw: i.gp.writeFixed64String,
                   },
-                }),
-              U.sm_m
-            );
-          }
-          static MBF() {
-            return U.sm_mbf || (U.sm_mbf = s.w0(U.M())), U.sm_mbf;
-          }
-          toObject(t = !1) {
-            return U.toObject(t, this);
-          }
-          static toObject(t, l) {
-            return s.BT(U.M(), t, l);
-          }
-          static fromObject(t) {
-            return s.Uq(U.M(), t);
-          }
-          static deserializeBinary(t) {
-            let l = new (S().BinaryReader)(t),
-              p = new U();
-            return U.deserializeBinaryFromReader(p, l);
-          }
-          static deserializeBinaryFromReader(t, l) {
-            return s.zj(U.MBF(), t, l);
-          }
-          serializeBinary() {
-            var t = new (S().BinaryWriter)();
-            return U.serializeBinaryToWriter(this, t), t.getResultBuffer();
-          }
-          static serializeBinaryToWriter(t, l) {
-            s.i0(U.M(), t, l);
-          }
-          serializeBase64String() {
-            var t = new (S().BinaryWriter)();
-            return (
-              U.serializeBinaryToWriter(this, t), t.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNewsFeedDef";
-          }
-        }
-        class x extends P.Message {
-          static ImplementsStaticInterface() {}
-          constructor(t = null) {
-            super(),
-              x.prototype.gid || s.Sg(x.M()),
-              P.Message.initialize(this, t, 0, -1, [11], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              x.sm_m ||
-                (x.sm_m = {
-                  proto: x,
-                  fields: {
-                    gid: {
-                      n: 1,
-                      br: s.qM.readFixed64String,
-                      bw: s.gp.writeFixed64String,
-                    },
-                    news_feed_gid: {
-                      n: 2,
-                      br: s.qM.readFixed64String,
-                      bw: s.gp.writeFixed64String,
-                    },
-                    title: { n: 3, br: s.qM.readString, bw: s.gp.writeString },
-                    url: { n: 4, br: s.qM.readString, bw: s.gp.writeString },
-                    author: { n: 5, br: s.qM.readString, bw: s.gp.writeString },
-                    rtime_date: {
-                      n: 6,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    contents: {
-                      n: 7,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
-                    commited: { n: 8, br: s.qM.readBool, bw: s.gp.writeBool },
-                    deleted: { n: 9, br: s.qM.readBool, bw: s.gp.writeBool },
-                    tags: { n: 10, br: s.qM.readString, bw: s.gp.writeString },
-                    appids: {
-                      n: 11,
-                      r: !0,
-                      q: !0,
-                      br: s.qM.readUint32,
-                      pbr: s.qM.readPackedUint32,
-                      bw: s.gp.writeRepeatedUint32,
-                    },
-                    recommendation_state: {
-                      n: 12,
-                      br: s.qM.readEnum,
-                      bw: s.gp.writeEnum,
-                    },
-                    received_compensation: {
-                      n: 13,
-                      br: s.qM.readBool,
-                      bw: s.gp.writeBool,
-                    },
-                    received_for_free: {
-                      n: 14,
-                      br: s.qM.readBool,
-                      bw: s.gp.writeBool,
-                    },
-                    blurb: { n: 15, br: s.qM.readString, bw: s.gp.writeString },
-                    event_subtitle: {
-                      n: 16,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
-                    event_summary: {
-                      n: 17,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
+                  name: { n: 2, br: i.qM.readString, bw: i.gp.writeString },
+                  type: {
+                    n: 3,
+                    d: 0,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
                   },
-                }),
-              x.sm_m
-            );
-          }
-          static MBF() {
-            return x.sm_mbf || (x.sm_mbf = s.w0(x.M())), x.sm_mbf;
-          }
-          toObject(t = !1) {
-            return x.toObject(t, this);
-          }
-          static toObject(t, l) {
-            return s.BT(x.M(), t, l);
-          }
-          static fromObject(t) {
-            return s.Uq(x.M(), t);
-          }
-          static deserializeBinary(t) {
-            let l = new (S().BinaryReader)(t),
-              p = new x();
-            return x.deserializeBinaryFromReader(p, l);
-          }
-          static deserializeBinaryFromReader(t, l) {
-            return s.zj(x.MBF(), t, l);
-          }
-          serializeBinary() {
-            var t = new (S().BinaryWriter)();
-            return x.serializeBinaryToWriter(this, t), t.getResultBuffer();
-          }
-          static serializeBinaryToWriter(t, l) {
-            s.i0(x.M(), t, l);
-          }
-          serializeBase64String() {
-            var t = new (S().BinaryWriter)();
-            return (
-              x.serializeBinaryToWriter(this, t), t.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNewsFeedPostDef";
-          }
-        }
-        class z extends P.Message {
-          static ImplementsStaticInterface() {}
-          constructor(t = null) {
-            super(),
-              z.prototype.content || s.Sg(z.M()),
-              P.Message.initialize(this, t, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              z.sm_m ||
-                (z.sm_m = {
-                  proto: z,
-                  fields: {
-                    content: {
-                      n: 1,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
-                    preserve_newlines: {
-                      n: 2,
-                      d: !1,
-                      br: s.qM.readBool,
-                      bw: s.gp.writeBool,
-                    },
+                  url: { n: 4, br: i.qM.readString, bw: i.gp.writeString },
+                  associated_apps: {
+                    n: 5,
+                    r: !0,
+                    q: !0,
+                    br: i.qM.readUint32,
+                    pbr: i.qM.readPackedUint32,
+                    bw: i.gp.writeRepeatedUint32,
                   },
-                }),
-              z.sm_m
-            );
-          }
-          static MBF() {
-            return z.sm_mbf || (z.sm_mbf = s.w0(z.M())), z.sm_mbf;
-          }
-          toObject(t = !1) {
-            return z.toObject(t, this);
-          }
-          static toObject(t, l) {
-            return s.BT(z.M(), t, l);
-          }
-          static fromObject(t) {
-            return s.Uq(z.M(), t);
-          }
-          static deserializeBinary(t) {
-            let l = new (S().BinaryReader)(t),
-              p = new z();
-            return z.deserializeBinaryFromReader(p, l);
-          }
-          static deserializeBinaryFromReader(t, l) {
-            return s.zj(z.MBF(), t, l);
-          }
-          serializeBinary() {
-            var t = new (S().BinaryWriter)();
-            return z.serializeBinaryToWriter(this, t), t.getResultBuffer();
-          }
-          static serializeBinaryToWriter(t, l) {
-            s.i0(z.M(), t, l);
-          }
-          serializeBase64String() {
-            var t = new (S().BinaryWriter)();
-            return (
-              z.serializeBinaryToWriter(this, t), t.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_ConvertHTMLToBBCode_Request";
-          }
-        }
-        class H extends P.Message {
-          static ImplementsStaticInterface() {}
-          constructor(t = null) {
-            super(),
-              H.prototype.converted_content || s.Sg(H.M()),
-              P.Message.initialize(this, t, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              H.sm_m ||
-                (H.sm_m = {
-                  proto: H,
-                  fields: {
-                    converted_content: {
-                      n: 1,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
-                    found_html: { n: 2, br: s.qM.readBool, bw: s.gp.writeBool },
+                  poll_interval: {
+                    n: 6,
+                    d: 300,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
                   },
-                }),
-              H.sm_m
-            );
-          }
-          static MBF() {
-            return H.sm_mbf || (H.sm_mbf = s.w0(H.M())), H.sm_mbf;
-          }
-          toObject(t = !1) {
-            return H.toObject(t, this);
-          }
-          static toObject(t, l) {
-            return s.BT(H.M(), t, l);
-          }
-          static fromObject(t) {
-            return s.Uq(H.M(), t);
-          }
-          static deserializeBinary(t) {
-            let l = new (S().BinaryReader)(t),
-              p = new H();
-            return H.deserializeBinaryFromReader(p, l);
-          }
-          static deserializeBinaryFromReader(t, l) {
-            return s.zj(H.MBF(), t, l);
-          }
-          serializeBinary() {
-            var t = new (S().BinaryWriter)();
-            return H.serializeBinaryToWriter(this, t), t.getResultBuffer();
-          }
-          static serializeBinaryToWriter(t, l) {
-            s.i0(H.M(), t, l);
-          }
-          serializeBase64String() {
-            var t = new (S().BinaryWriter)();
-            return (
-              H.serializeBinaryToWriter(this, t), t.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_ConvertHTMLToBBCode_Response";
-          }
-        }
-        class B extends P.Message {
-          static ImplementsStaticInterface() {}
-          constructor(t = null) {
-            super(),
-              B.prototype.rss_message || s.Sg(B.M()),
-              P.Message.initialize(this, t, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              B.sm_m ||
-                (B.sm_m = {
-                  proto: B,
-                  fields: {
-                    rss_message: {
-                      n: 1,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
-                    unique_id: {
-                      n: 2,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
-                    title: { n: 3, br: s.qM.readString, bw: s.gp.writeString },
-                    desc: { n: 4, br: s.qM.readString, bw: s.gp.writeString },
-                    jsondata: {
-                      n: 5,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
-                    post: { n: 6, c: x },
-                    valid_post: { n: 7, br: s.qM.readBool, bw: s.gp.writeBool },
-                    post_error_msg: {
-                      n: 8,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
+                  kv_description: {
+                    n: 7,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
                   },
-                }),
-              B.sm_m
-            );
-          }
-          static MBF() {
-            return B.sm_mbf || (B.sm_mbf = s.w0(B.M())), B.sm_mbf;
-          }
-          toObject(t = !1) {
-            return B.toObject(t, this);
-          }
-          static toObject(t, l) {
-            return s.BT(B.M(), t, l);
-          }
-          static fromObject(t) {
-            return s.Uq(B.M(), t);
-          }
-          static deserializeBinary(t) {
-            let l = new (S().BinaryReader)(t),
-              p = new B();
-            return B.deserializeBinaryFromReader(p, l);
-          }
-          static deserializeBinaryFromReader(t, l) {
-            return s.zj(B.MBF(), t, l);
-          }
-          serializeBinary() {
-            var t = new (S().BinaryWriter)();
-            return B.serializeBinaryToWriter(this, t), t.getResultBuffer();
-          }
-          static serializeBinaryToWriter(t, l) {
-            s.i0(B.M(), t, l);
-          }
-          serializeBase64String() {
-            var t = new (S().BinaryWriter)();
-            return (
-              B.serializeBinaryToWriter(this, t), t.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNewsPartnerEventPreview";
-          }
-        }
-        class O extends P.Message {
-          static ImplementsStaticInterface() {}
-          constructor(t = null) {
-            super(),
-              O.prototype.rss_url || s.Sg(O.M()),
-              P.Message.initialize(this, t, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              O.sm_m ||
-                (O.sm_m = {
-                  proto: O,
-                  fields: {
-                    rss_url: {
-                      n: 1,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
-                    lang: { n: 2, br: s.qM.readUint32, bw: s.gp.writeUint32 },
+                  kv_filter: {
+                    n: 8,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
                   },
-                }),
-              O.sm_m
-            );
-          }
-          static MBF() {
-            return O.sm_mbf || (O.sm_mbf = s.w0(O.M())), O.sm_mbf;
-          }
-          toObject(t = !1) {
-            return O.toObject(t, this);
-          }
-          static toObject(t, l) {
-            return s.BT(O.M(), t, l);
-          }
-          static fromObject(t) {
-            return s.Uq(O.M(), t);
-          }
-          static deserializeBinary(t) {
-            let l = new (S().BinaryReader)(t),
-              p = new O();
-            return O.deserializeBinaryFromReader(p, l);
-          }
-          static deserializeBinaryFromReader(t, l) {
-            return s.zj(O.MBF(), t, l);
-          }
-          serializeBinary() {
-            var t = new (S().BinaryWriter)();
-            return O.serializeBinaryToWriter(this, t), t.getResultBuffer();
-          }
-          static serializeBinaryToWriter(t, l) {
-            s.i0(O.M(), t, l);
-          }
-          serializeBase64String() {
-            var t = new (S().BinaryWriter)();
-            return (
-              O.serializeBinaryToWriter(this, t), t.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_PreviewPartnerEvents_Request";
-          }
-        }
-        class Q extends P.Message {
-          static ImplementsStaticInterface() {}
-          constructor(t = null) {
-            super(),
-              Q.prototype.rss_url || s.Sg(Q.M()),
-              P.Message.initialize(this, t, 0, -1, [2], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              Q.sm_m ||
-                (Q.sm_m = {
-                  proto: Q,
-                  fields: {
-                    rss_url: {
-                      n: 1,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
-                    results: { n: 2, c: B, r: !0, q: !0 },
-                    error_msg: {
-                      n: 3,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
+                  publish_to_clan_account_id: {
+                    n: 9,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
                   },
-                }),
-              Q.sm_m
-            );
-          }
-          static MBF() {
-            return Q.sm_mbf || (Q.sm_mbf = s.w0(Q.M())), Q.sm_mbf;
-          }
-          toObject(t = !1) {
-            return Q.toObject(t, this);
-          }
-          static toObject(t, l) {
-            return s.BT(Q.M(), t, l);
-          }
-          static fromObject(t) {
-            return s.Uq(Q.M(), t);
-          }
-          static deserializeBinary(t) {
-            let l = new (S().BinaryReader)(t),
-              p = new Q();
-            return Q.deserializeBinaryFromReader(p, l);
-          }
-          static deserializeBinaryFromReader(t, l) {
-            return s.zj(Q.MBF(), t, l);
-          }
-          serializeBinary() {
-            var t = new (S().BinaryWriter)();
-            return Q.serializeBinaryToWriter(this, t), t.getResultBuffer();
-          }
-          static serializeBinaryToWriter(t, l) {
-            s.i0(Q.M(), t, l);
-          }
-          serializeBase64String() {
-            var t = new (S().BinaryWriter)();
-            return (
-              Q.serializeBinaryToWriter(this, t), t.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_PreviewPartnerEvents_Response";
-          }
-        }
-        class _ extends P.Message {
-          static ImplementsStaticInterface() {}
-          constructor(t = null) {
-            super(),
-              _.prototype.clan_account_id || s.Sg(_.M()),
-              P.Message.initialize(this, t, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    clan_account_id: {
-                      n: 1,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
+                  language: {
+                    n: 10,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
                   },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = s.w0(_.M())), _.sm_mbf;
-          }
-          toObject(t = !1) {
-            return _.toObject(t, this);
-          }
-          static toObject(t, l) {
-            return s.BT(_.M(), t, l);
-          }
-          static fromObject(t) {
-            return s.Uq(_.M(), t);
-          }
-          static deserializeBinary(t) {
-            let l = new (S().BinaryReader)(t),
-              p = new _();
-            return _.deserializeBinaryFromReader(p, l);
-          }
-          static deserializeBinaryFromReader(t, l) {
-            return s.zj(_.MBF(), t, l);
-          }
-          serializeBinary() {
-            var t = new (S().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, t), t.getResultBuffer();
-          }
-          static serializeBinaryToWriter(t, l) {
-            s.i0(_.M(), t, l);
-          }
-          serializeBase64String() {
-            var t = new (S().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, t), t.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_GetNewsFeedByRepublishClan_Request";
-          }
-        }
-        class J extends P.Message {
-          static ImplementsStaticInterface() {}
-          constructor(t = null) {
-            super(),
-              J.prototype.feeds || s.Sg(J.M()),
-              P.Message.initialize(this, t, 0, -1, [1], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              J.sm_m ||
-                (J.sm_m = {
-                  proto: J,
-                  fields: { feeds: { n: 1, c: U, r: !0, q: !0 } },
-                }),
-              J.sm_m
-            );
-          }
-          static MBF() {
-            return J.sm_mbf || (J.sm_mbf = s.w0(J.M())), J.sm_mbf;
-          }
-          toObject(t = !1) {
-            return J.toObject(t, this);
-          }
-          static toObject(t, l) {
-            return s.BT(J.M(), t, l);
-          }
-          static fromObject(t) {
-            return s.Uq(J.M(), t);
-          }
-          static deserializeBinary(t) {
-            let l = new (S().BinaryReader)(t),
-              p = new J();
-            return J.deserializeBinaryFromReader(p, l);
-          }
-          static deserializeBinaryFromReader(t, l) {
-            return s.zj(J.MBF(), t, l);
-          }
-          serializeBinary() {
-            var t = new (S().BinaryWriter)();
-            return J.serializeBinaryToWriter(this, t), t.getResultBuffer();
-          }
-          static serializeBinaryToWriter(t, l) {
-            s.i0(J.M(), t, l);
-          }
-          serializeBase64String() {
-            var t = new (S().BinaryWriter)();
-            return (
-              J.serializeBinaryToWriter(this, t), t.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_GetNewsFeedByRepublishClan_Response";
-          }
-        }
-        class N extends P.Message {
-          static ImplementsStaticInterface() {}
-          constructor(t = null) {
-            super(),
-              N.prototype.post || s.Sg(N.M()),
-              P.Message.initialize(this, t, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              N.sm_m ||
-                (N.sm_m = {
-                  proto: N,
-                  fields: {
-                    post: { n: 1, c: x },
-                    draft: { n: 2, br: s.qM.readBool, bw: s.gp.writeBool },
+                  last_error: {
+                    n: 11,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
                   },
-                }),
-              N.sm_m
-            );
-          }
-          static MBF() {
-            return N.sm_mbf || (N.sm_mbf = s.w0(N.M())), N.sm_mbf;
-          }
-          toObject(t = !1) {
-            return N.toObject(t, this);
-          }
-          static toObject(t, l) {
-            return s.BT(N.M(), t, l);
-          }
-          static fromObject(t) {
-            return s.Uq(N.M(), t);
-          }
-          static deserializeBinary(t) {
-            let l = new (S().BinaryReader)(t),
-              p = new N();
-            return N.deserializeBinaryFromReader(p, l);
-          }
-          static deserializeBinaryFromReader(t, l) {
-            return s.zj(N.MBF(), t, l);
-          }
-          serializeBinary() {
-            var t = new (S().BinaryWriter)();
-            return N.serializeBinaryToWriter(this, t), t.getResultBuffer();
-          }
-          static serializeBinaryToWriter(t, l) {
-            s.i0(N.M(), t, l);
-          }
-          serializeBase64String() {
-            var t = new (S().BinaryWriter)();
-            return (
-              N.serializeBinaryToWriter(this, t), t.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_PublishPartnerEvent_Request";
-          }
-        }
-        class I extends P.Message {
-          static ImplementsStaticInterface() {}
-          constructor(t = null) {
-            super(),
-              I.prototype.clan_event_gid || s.Sg(I.M()),
-              P.Message.initialize(this, t, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              I.sm_m ||
-                (I.sm_m = {
-                  proto: I,
-                  fields: {
-                    clan_event_gid: {
-                      n: 1,
-                      br: s.qM.readFixed64String,
-                      bw: s.gp.writeFixed64String,
-                    },
-                    news_post_gid: {
-                      n: 2,
-                      br: s.qM.readFixed64String,
-                      bw: s.gp.writeFixed64String,
-                    },
+                  last_update: {
+                    n: 12,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
                   },
-                }),
-              I.sm_m
-            );
-          }
-          static MBF() {
-            return I.sm_mbf || (I.sm_mbf = s.w0(I.M())), I.sm_mbf;
-          }
-          toObject(t = !1) {
-            return I.toObject(t, this);
-          }
-          static toObject(t, l) {
-            return s.BT(I.M(), t, l);
-          }
-          static fromObject(t) {
-            return s.Uq(I.M(), t);
-          }
-          static deserializeBinary(t) {
-            let l = new (S().BinaryReader)(t),
-              p = new I();
-            return I.deserializeBinaryFromReader(p, l);
-          }
-          static deserializeBinaryFromReader(t, l) {
-            return s.zj(I.MBF(), t, l);
-          }
-          serializeBinary() {
-            var t = new (S().BinaryWriter)();
-            return I.serializeBinaryToWriter(this, t), t.getResultBuffer();
-          }
-          static serializeBinaryToWriter(t, l) {
-            s.i0(I.M(), t, l);
-          }
-          serializeBase64String() {
-            var t = new (S().BinaryWriter)();
-            return (
-              I.serializeBinaryToWriter(this, t), t.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_PublishPartnerEvent_Response";
-          }
-        }
-        class T extends P.Message {
-          static ImplementsStaticInterface() {}
-          constructor(t = null) {
-            super(),
-              T.prototype.news_feed_gid || s.Sg(T.M()),
-              P.Message.initialize(this, t, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              T.sm_m ||
-                (T.sm_m = {
-                  proto: T,
-                  fields: {
-                    news_feed_gid: {
-                      n: 1,
-                      br: s.qM.readFixed64String,
-                      bw: s.gp.writeFixed64String,
-                    },
-                    start_index: {
-                      n: 2,
-                      d: 0,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    amount: {
-                      n: 3,
-                      d: 100,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
+                  last_checked: {
+                    n: 13,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
                   },
-                }),
-              T.sm_m
-            );
-          }
-          static MBF() {
-            return T.sm_mbf || (T.sm_mbf = s.w0(T.M())), T.sm_mbf;
-          }
-          toObject(t = !1) {
-            return T.toObject(t, this);
-          }
-          static toObject(t, l) {
-            return s.BT(T.M(), t, l);
-          }
-          static fromObject(t) {
-            return s.Uq(T.M(), t);
-          }
-          static deserializeBinary(t) {
-            let l = new (S().BinaryReader)(t),
-              p = new T();
-            return T.deserializeBinaryFromReader(p, l);
-          }
-          static deserializeBinaryFromReader(t, l) {
-            return s.zj(T.MBF(), t, l);
-          }
-          serializeBinary() {
-            var t = new (S().BinaryWriter)();
-            return T.serializeBinaryToWriter(this, t), t.getResultBuffer();
-          }
-          static serializeBinaryToWriter(t, l) {
-            s.i0(T.M(), t, l);
-          }
-          serializeBase64String() {
-            var t = new (S().BinaryWriter)();
-            return (
-              T.serializeBinaryToWriter(this, t), t.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_GetBatchPublishedPartnerEvent_Request";
-          }
+                },
+              }),
+            d.sm_m
+          );
         }
-        class g extends P.Message {
-          static ImplementsStaticInterface() {}
-          constructor(t = null) {
-            super(),
-              g.prototype.clan_account_id || s.Sg(g.M()),
-              P.Message.initialize(this, t, 0, -1, [3, 4, 5], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              g.sm_m ||
-                (g.sm_m = {
-                  proto: g,
-                  fields: {
-                    clan_account_id: {
-                      n: 1,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    news_feed_gid: {
-                      n: 2,
-                      br: s.qM.readFixed64String,
-                      bw: s.gp.writeFixed64String,
-                    },
-                    clan_event_gid: {
-                      n: 3,
-                      r: !0,
-                      q: !0,
-                      br: s.qM.readFixed64String,
-                      pbr: s.qM.readPackedFixed64String,
-                      bw: s.gp.writeRepeatedFixed64String,
-                    },
-                    news_post_gid: {
-                      n: 4,
-                      r: !0,
-                      q: !0,
-                      br: s.qM.readFixed64String,
-                      pbr: s.qM.readPackedFixed64String,
-                      bw: s.gp.writeRepeatedFixed64String,
-                    },
-                    news_url: {
-                      n: 5,
-                      r: !0,
-                      q: !0,
-                      br: s.qM.readString,
-                      bw: s.gp.writeRepeatedString,
-                    },
+        static MBF() {
+          return d.sm_mbf || (d.sm_mbf = i.w0(d.M())), d.sm_mbf;
+        }
+        toObject(e = !1) {
+          return d.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.BT(d.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.Uq(d.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (r().BinaryReader)(e),
+            n = new d();
+          return d.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.zj(d.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (r().BinaryWriter)();
+          return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.i0(d.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (r().BinaryWriter)();
+          return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNewsFeedDef";
+        }
+      }
+      class c extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            c.prototype.gid || i.Sg(c.M()),
+            a.Message.initialize(this, e, 0, -1, [11], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            c.sm_m ||
+              (c.sm_m = {
+                proto: c,
+                fields: {
+                  gid: {
+                    n: 1,
+                    br: i.qM.readFixed64String,
+                    bw: i.gp.writeFixed64String,
                   },
-                }),
-              g.sm_m
-            );
-          }
-          static MBF() {
-            return g.sm_mbf || (g.sm_mbf = s.w0(g.M())), g.sm_mbf;
-          }
-          toObject(t = !1) {
-            return g.toObject(t, this);
-          }
-          static toObject(t, l) {
-            return s.BT(g.M(), t, l);
-          }
-          static fromObject(t) {
-            return s.Uq(g.M(), t);
-          }
-          static deserializeBinary(t) {
-            let l = new (S().BinaryReader)(t),
-              p = new g();
-            return g.deserializeBinaryFromReader(p, l);
-          }
-          static deserializeBinaryFromReader(t, l) {
-            return s.zj(g.MBF(), t, l);
-          }
-          serializeBinary() {
-            var t = new (S().BinaryWriter)();
-            return g.serializeBinaryToWriter(this, t), t.getResultBuffer();
-          }
-          static serializeBinaryToWriter(t, l) {
-            s.i0(g.M(), t, l);
-          }
-          serializeBase64String() {
-            var t = new (S().BinaryWriter)();
-            return (
-              g.serializeBinaryToWriter(this, t), t.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_GetBatchPublishedPartnerEvent_Response";
-          }
+                  news_feed_gid: {
+                    n: 2,
+                    br: i.qM.readFixed64String,
+                    bw: i.gp.writeFixed64String,
+                  },
+                  title: { n: 3, br: i.qM.readString, bw: i.gp.writeString },
+                  url: { n: 4, br: i.qM.readString, bw: i.gp.writeString },
+                  author: { n: 5, br: i.qM.readString, bw: i.gp.writeString },
+                  rtime_date: {
+                    n: 6,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
+                  },
+                  contents: { n: 7, br: i.qM.readString, bw: i.gp.writeString },
+                  commited: { n: 8, br: i.qM.readBool, bw: i.gp.writeBool },
+                  deleted: { n: 9, br: i.qM.readBool, bw: i.gp.writeBool },
+                  tags: { n: 10, br: i.qM.readString, bw: i.gp.writeString },
+                  appids: {
+                    n: 11,
+                    r: !0,
+                    q: !0,
+                    br: i.qM.readUint32,
+                    pbr: i.qM.readPackedUint32,
+                    bw: i.gp.writeRepeatedUint32,
+                  },
+                  recommendation_state: {
+                    n: 12,
+                    br: i.qM.readEnum,
+                    bw: i.gp.writeEnum,
+                  },
+                  received_compensation: {
+                    n: 13,
+                    br: i.qM.readBool,
+                    bw: i.gp.writeBool,
+                  },
+                  received_for_free: {
+                    n: 14,
+                    br: i.qM.readBool,
+                    bw: i.gp.writeBool,
+                  },
+                  blurb: { n: 15, br: i.qM.readString, bw: i.gp.writeString },
+                  event_subtitle: {
+                    n: 16,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
+                  },
+                  event_summary: {
+                    n: 17,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
+                  },
+                },
+              }),
+            c.sm_m
+          );
         }
-        var w;
-        ((m) => {
-          function t($, ue, ve) {
-            return $.SendMsg(
-              "News.ConvertHTMLToBBCode#1",
-              (0, j.I8)(z, ue, ve),
-              H,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
-            );
-          }
-          m.ConvertHTMLToBBCode = t;
-          function l($, ue, ve) {
-            return $.SendMsg(
+        static MBF() {
+          return c.sm_mbf || (c.sm_mbf = i.w0(c.M())), c.sm_mbf;
+        }
+        toObject(e = !1) {
+          return c.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.BT(c.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.Uq(c.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (r().BinaryReader)(e),
+            n = new c();
+          return c.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.zj(c.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (r().BinaryWriter)();
+          return c.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.i0(c.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (r().BinaryWriter)();
+          return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNewsFeedPostDef";
+        }
+      }
+      class h extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            h.prototype.content || i.Sg(h.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: {
+                  content: { n: 1, br: i.qM.readString, bw: i.gp.writeString },
+                  preserve_newlines: {
+                    n: 2,
+                    d: !1,
+                    br: i.qM.readBool,
+                    bw: i.gp.writeBool,
+                  },
+                },
+              }),
+            h.sm_m
+          );
+        }
+        static MBF() {
+          return h.sm_mbf || (h.sm_mbf = i.w0(h.M())), h.sm_mbf;
+        }
+        toObject(e = !1) {
+          return h.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.BT(h.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.Uq(h.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (r().BinaryReader)(e),
+            n = new h();
+          return h.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.zj(h.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (r().BinaryWriter)();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.i0(h.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (r().BinaryWriter)();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNews_ConvertHTMLToBBCode_Request";
+        }
+      }
+      class u extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            u.prototype.converted_content || i.Sg(u.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            u.sm_m ||
+              (u.sm_m = {
+                proto: u,
+                fields: {
+                  converted_content: {
+                    n: 1,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
+                  },
+                  found_html: { n: 2, br: i.qM.readBool, bw: i.gp.writeBool },
+                },
+              }),
+            u.sm_m
+          );
+        }
+        static MBF() {
+          return u.sm_mbf || (u.sm_mbf = i.w0(u.M())), u.sm_mbf;
+        }
+        toObject(e = !1) {
+          return u.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.BT(u.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.Uq(u.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (r().BinaryReader)(e),
+            n = new u();
+          return u.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.zj(u.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (r().BinaryWriter)();
+          return u.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.i0(u.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (r().BinaryWriter)();
+          return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNews_ConvertHTMLToBBCode_Response";
+        }
+      }
+      class m extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            m.prototype.rss_message || i.Sg(m.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            m.sm_m ||
+              (m.sm_m = {
+                proto: m,
+                fields: {
+                  rss_message: {
+                    n: 1,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
+                  },
+                  unique_id: {
+                    n: 2,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
+                  },
+                  title: { n: 3, br: i.qM.readString, bw: i.gp.writeString },
+                  desc: { n: 4, br: i.qM.readString, bw: i.gp.writeString },
+                  jsondata: { n: 5, br: i.qM.readString, bw: i.gp.writeString },
+                  post: { n: 6, c },
+                  valid_post: { n: 7, br: i.qM.readBool, bw: i.gp.writeBool },
+                  post_error_msg: {
+                    n: 8,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
+                  },
+                },
+              }),
+            m.sm_m
+          );
+        }
+        static MBF() {
+          return m.sm_mbf || (m.sm_mbf = i.w0(m.M())), m.sm_mbf;
+        }
+        toObject(e = !1) {
+          return m.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.BT(m.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.Uq(m.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (r().BinaryReader)(e),
+            n = new m();
+          return m.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.zj(m.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (r().BinaryWriter)();
+          return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.i0(m.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (r().BinaryWriter)();
+          return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNewsPartnerEventPreview";
+        }
+      }
+      class p extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            p.prototype.rss_url || i.Sg(p.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            p.sm_m ||
+              (p.sm_m = {
+                proto: p,
+                fields: {
+                  rss_url: { n: 1, br: i.qM.readString, bw: i.gp.writeString },
+                  lang: { n: 2, br: i.qM.readUint32, bw: i.gp.writeUint32 },
+                },
+              }),
+            p.sm_m
+          );
+        }
+        static MBF() {
+          return p.sm_mbf || (p.sm_mbf = i.w0(p.M())), p.sm_mbf;
+        }
+        toObject(e = !1) {
+          return p.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.BT(p.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.Uq(p.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (r().BinaryReader)(e),
+            n = new p();
+          return p.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.zj(p.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (r().BinaryWriter)();
+          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.i0(p.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (r().BinaryWriter)();
+          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNews_PreviewPartnerEvents_Request";
+        }
+      }
+      class g extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            g.prototype.rss_url || i.Sg(g.M()),
+            a.Message.initialize(this, e, 0, -1, [2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            g.sm_m ||
+              (g.sm_m = {
+                proto: g,
+                fields: {
+                  rss_url: { n: 1, br: i.qM.readString, bw: i.gp.writeString },
+                  results: { n: 2, c: m, r: !0, q: !0 },
+                  error_msg: {
+                    n: 3,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
+                  },
+                },
+              }),
+            g.sm_m
+          );
+        }
+        static MBF() {
+          return g.sm_mbf || (g.sm_mbf = i.w0(g.M())), g.sm_mbf;
+        }
+        toObject(e = !1) {
+          return g.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.BT(g.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.Uq(g.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (r().BinaryReader)(e),
+            n = new g();
+          return g.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.zj(g.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (r().BinaryWriter)();
+          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.i0(g.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (r().BinaryWriter)();
+          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNews_PreviewPartnerEvents_Response";
+        }
+      }
+      class _ extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            _.prototype.clan_account_id || i.Sg(_.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  clan_account_id: {
+                    n: 1,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = i.w0(_.M())), _.sm_mbf;
+        }
+        toObject(e = !1) {
+          return _.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.BT(_.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.Uq(_.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (r().BinaryReader)(e),
+            n = new _();
+          return _.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.zj(_.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (r().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.i0(_.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (r().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNews_GetNewsFeedByRepublishClan_Request";
+        }
+      }
+      class v extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            v.prototype.feeds || i.Sg(v.M()),
+            a.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            v.sm_m ||
+              (v.sm_m = {
+                proto: v,
+                fields: { feeds: { n: 1, c: d, r: !0, q: !0 } },
+              }),
+            v.sm_m
+          );
+        }
+        static MBF() {
+          return v.sm_mbf || (v.sm_mbf = i.w0(v.M())), v.sm_mbf;
+        }
+        toObject(e = !1) {
+          return v.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.BT(v.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.Uq(v.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (r().BinaryReader)(e),
+            n = new v();
+          return v.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.zj(v.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (r().BinaryWriter)();
+          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.i0(v.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (r().BinaryWriter)();
+          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNews_GetNewsFeedByRepublishClan_Response";
+        }
+      }
+      class S extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            S.prototype.post || i.Sg(S.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            S.sm_m ||
+              (S.sm_m = {
+                proto: S,
+                fields: {
+                  post: { n: 1, c },
+                  draft: { n: 2, br: i.qM.readBool, bw: i.gp.writeBool },
+                },
+              }),
+            S.sm_m
+          );
+        }
+        static MBF() {
+          return S.sm_mbf || (S.sm_mbf = i.w0(S.M())), S.sm_mbf;
+        }
+        toObject(e = !1) {
+          return S.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.BT(S.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.Uq(S.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (r().BinaryReader)(e),
+            n = new S();
+          return S.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.zj(S.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (r().BinaryWriter)();
+          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.i0(S.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (r().BinaryWriter)();
+          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNews_PublishPartnerEvent_Request";
+        }
+      }
+      class w extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            w.prototype.clan_event_gid || i.Sg(w.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            w.sm_m ||
+              (w.sm_m = {
+                proto: w,
+                fields: {
+                  clan_event_gid: {
+                    n: 1,
+                    br: i.qM.readFixed64String,
+                    bw: i.gp.writeFixed64String,
+                  },
+                  news_post_gid: {
+                    n: 2,
+                    br: i.qM.readFixed64String,
+                    bw: i.gp.writeFixed64String,
+                  },
+                },
+              }),
+            w.sm_m
+          );
+        }
+        static MBF() {
+          return w.sm_mbf || (w.sm_mbf = i.w0(w.M())), w.sm_mbf;
+        }
+        toObject(e = !1) {
+          return w.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.BT(w.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.Uq(w.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (r().BinaryReader)(e),
+            n = new w();
+          return w.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.zj(w.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (r().BinaryWriter)();
+          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.i0(w.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (r().BinaryWriter)();
+          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNews_PublishPartnerEvent_Response";
+        }
+      }
+      class C extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            C.prototype.news_feed_gid || i.Sg(C.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            C.sm_m ||
+              (C.sm_m = {
+                proto: C,
+                fields: {
+                  news_feed_gid: {
+                    n: 1,
+                    br: i.qM.readFixed64String,
+                    bw: i.gp.writeFixed64String,
+                  },
+                  start_index: {
+                    n: 2,
+                    d: 0,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
+                  },
+                  amount: {
+                    n: 3,
+                    d: 100,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
+                  },
+                },
+              }),
+            C.sm_m
+          );
+        }
+        static MBF() {
+          return C.sm_mbf || (C.sm_mbf = i.w0(C.M())), C.sm_mbf;
+        }
+        toObject(e = !1) {
+          return C.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.BT(C.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.Uq(C.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (r().BinaryReader)(e),
+            n = new C();
+          return C.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.zj(C.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (r().BinaryWriter)();
+          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.i0(C.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (r().BinaryWriter)();
+          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNews_GetBatchPublishedPartnerEvent_Request";
+        }
+      }
+      class b extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            b.prototype.clan_account_id || i.Sg(b.M()),
+            a.Message.initialize(this, e, 0, -1, [3, 4, 5], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            b.sm_m ||
+              (b.sm_m = {
+                proto: b,
+                fields: {
+                  clan_account_id: {
+                    n: 1,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
+                  },
+                  news_feed_gid: {
+                    n: 2,
+                    br: i.qM.readFixed64String,
+                    bw: i.gp.writeFixed64String,
+                  },
+                  clan_event_gid: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: i.qM.readFixed64String,
+                    pbr: i.qM.readPackedFixed64String,
+                    bw: i.gp.writeRepeatedFixed64String,
+                  },
+                  news_post_gid: {
+                    n: 4,
+                    r: !0,
+                    q: !0,
+                    br: i.qM.readFixed64String,
+                    pbr: i.qM.readPackedFixed64String,
+                    bw: i.gp.writeRepeatedFixed64String,
+                  },
+                  news_url: {
+                    n: 5,
+                    r: !0,
+                    q: !0,
+                    br: i.qM.readString,
+                    bw: i.gp.writeRepeatedString,
+                  },
+                },
+              }),
+            b.sm_m
+          );
+        }
+        static MBF() {
+          return b.sm_mbf || (b.sm_mbf = i.w0(b.M())), b.sm_mbf;
+        }
+        toObject(e = !1) {
+          return b.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.BT(b.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.Uq(b.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (r().BinaryReader)(e),
+            n = new b();
+          return b.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.zj(b.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (r().BinaryWriter)();
+          return b.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.i0(b.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (r().BinaryWriter)();
+          return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNews_GetBatchPublishedPartnerEvent_Response";
+        }
+      }
+      var M;
+      !(function (e) {
+        (e.ConvertHTMLToBBCode = function (e, t, n) {
+          return e.SendMsg(
+            "News.ConvertHTMLToBBCode#1",
+            (0, o.I8)(h, t, n),
+            u,
+            { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+          );
+        }),
+          (e.PreviewPartnerEvents = function (e, t, n) {
+            return e.SendMsg(
               "News.PreviewPartnerEvents#1",
-              (0, j.I8)(O, ue, ve),
-              Q,
-              { bConstMethod: !0, ePrivilege: 1 },
-            );
-          }
-          m.PreviewPartnerEvents = l;
-          function p($, ue, ve) {
-            return $.SendMsg(
-              "News.GetNewsFeedByRepublishClan#1",
-              (0, j.I8)(_, ue, ve),
-              J,
-              { bConstMethod: !0, ePrivilege: 1 },
-            );
-          }
-          m.GetNewsFeedByRepublishClan = p;
-          function A($, ue, ve) {
-            return $.SendMsg(
-              "News.PublishPartnerEvent#1",
-              (0, j.I8)(N, ue, ve),
-              I,
-              { ePrivilege: 1 },
-            );
-          }
-          m.PublishPartnerEvent = A;
-          function Y($, ue, ve) {
-            return $.SendMsg(
-              "News.GetBatchPublishedPartnerEvent#1",
-              (0, j.I8)(T, ue, ve),
+              (0, o.I8)(p, t, n),
               g,
               { bConstMethod: !0, ePrivilege: 1 },
             );
-          }
-          m.GetBatchPublishedPartnerEvent = Y;
-        })(w || (w = {}));
-      },
-      37656: (re, Ae, i) => {
-        "use strict";
-        i.d(Ae, { w: () => I });
-        var e = i(41735),
-          P = i.n(e),
-          S = i(14947),
-          s = i(65946),
-          j = i(90626),
-          ce = i(27066),
-          k = i(8323),
-          V = i(30096),
-          K = i(3166),
-          me = Object.defineProperty,
-          U = Object.getOwnPropertyDescriptor,
-          x = (T, g, w, m) => {
-            for (
-              var t = m > 1 ? void 0 : m ? U(g, w) : g, l = T.length - 1, p;
-              l >= 0;
-              l--
-            )
-              (p = T[l]) && (t = (m ? p(g, w, t) : p(t)) || t);
-            return m && t && me(g, w, t), t;
-          };
-        const z = class $t {
-          constructor() {
-            (0, S.Gn)(this);
-          }
-          giveaway_id = void 0;
-          seconds_until_drawing = void 0;
-          rtime_start = void 0;
-          rtime_end = void 0;
-          closed = void 0;
-          winner_count = void 0;
-          BIsValid() {
-            return this.giveaway_id !== void 0 && this.giveaway_id !== null;
-          }
-          BStarted() {
-            return (
-              this.BIsValid() &&
-              (this.seconds_until_drawing >= 0 || this.winner_count > 0)
+          }),
+          (e.GetNewsFeedByRepublishClan = function (e, t, n) {
+            return e.SendMsg(
+              "News.GetNewsFeedByRepublishClan#1",
+              (0, o.I8)(_, t, n),
+              v,
+              { bConstMethod: !0, ePrivilege: 1 },
             );
-          }
-          clone() {
-            const g = new $t();
-            return (
-              (g.giveaway_id = this.giveaway_id),
-              (g.seconds_until_drawing = this.seconds_until_drawing),
-              (g.rtime_start = this.rtime_start),
-              (g.rtime_end = this.rtime_end),
-              (g.closed = this.closed),
-              (g.winner_count = this.winner_count),
-              g
+          }),
+          (e.PublishPartnerEvent = function (e, t, n) {
+            return e.SendMsg(
+              "News.PublishPartnerEvent#1",
+              (0, o.I8)(S, t, n),
+              w,
+              { ePrivilege: 1 },
             );
-          }
-        };
-        x([S.sH], z.prototype, "giveaway_id", 2),
-          x([S.sH], z.prototype, "seconds_until_drawing", 2),
-          x([S.sH], z.prototype, "rtime_start", 2),
-          x([S.sH], z.prototype, "rtime_end", 2),
-          x([S.sH], z.prototype, "closed", 2),
-          x([S.sH], z.prototype, "winner_count", 2);
-        let H = z;
-        const B = class Je {
-          constructor() {
-            (0, S.Gn)(this);
-          }
-          m_mapGiveawayIDToNextDrawInfo = new Map();
-          m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map();
-          m_bLoadedFromConfig = !1;
-          m_mapNextDrawChangeCallback = new Map();
-          GetKey(g, w) {
-            return g + "_" + w;
-          }
-          GetInfoByInstance(g, w) {
-            return this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(
-              this.GetKey(g, w),
+          }),
+          (e.GetBatchPublishedPartnerEvent = function (e, t, n) {
+            return e.SendMsg(
+              "News.GetBatchPublishedPartnerEvent#1",
+              (0, o.I8)(C, t, n),
+              b,
+              { bConstMethod: !0, ePrivilege: 1 },
             );
-          }
-          GetNextDrawChangeCallback(g) {
+          });
+      })(M || (M = {}));
+    },
+    98130: (e, t, n) => {
+      "use strict";
+      n.d(t, { A: () => S });
+      var s = n(34629),
+        a = n(41735),
+        r = n.n(a),
+        i = n(14947),
+        o = n(78327),
+        l = n(72034),
+        d = n(56545),
+        c = n(70903),
+        h = n(22837),
+        u = n(37085),
+        m = n(17720),
+        p = n(6379);
+      var g = n(81393),
+        _ = n(68797);
+      class v {
+        m_clanAccountID;
+        m_clanSteamID;
+        m_strRSSFeedURL = void 0;
+        m_strRSSGID = void 0;
+        m_rtimeRSSLastChecked = void 0;
+        m_nPollIntervalSeconds = void 0;
+        m_eRSSFeedLanguage = void 0;
+        m_eCuratorLanguage = void 0;
+        m_mapURLToPosted = new Map();
+        constructor(e) {
+          (0, i.Gn)(this),
+            (this.m_clanAccountID = e.clanid),
+            (this.m_clanSteamID = m.b.InitFromClanID(this.m_clanAccountID)),
+            (this.m_strRSSFeedURL = e.rss_feed_url),
+            (this.m_strRSSGID = e.rss_feed_gid),
+            (this.m_eRSSFeedLanguage = e.rss_feed_language),
+            (this.m_rtimeRSSLastChecked = e.rss_feed_last_checked),
+            (this.m_nPollIntervalSeconds = e.poll_interval),
+            (this.m_eCuratorLanguage = e.curation_language);
+        }
+        GetFeedLanguageHandleUnset() {
+          return this.m_eRSSFeedLanguage == h.xPp
+            ? this.m_eCuratorLanguage == h.xPp
+              ? h.Bhc
+              : this.m_eCuratorLanguage
+            : this.m_eRSSFeedLanguage;
+        }
+        GetCuratorLanguage() {
+          return this.m_eCuratorLanguage == h.xPp
+            ? h.Bhc
+            : this.m_eCuratorLanguage;
+        }
+        BHasSavedRSSURL() {
+          return Boolean(this.m_strRSSFeedURL);
+        }
+        GetRSSUrl() {
+          return this.m_strRSSFeedURL ? this.m_strRSSFeedURL : "";
+        }
+        GetRSSLastRtimeChecked() {
+          return this.m_rtimeRSSLastChecked;
+        }
+        GetClanSteamID() {
+          return this.m_clanSteamID;
+        }
+        GetClanAccountID() {
+          return this.m_clanAccountID;
+        }
+        BHasSetupFeed(e) {
+          return Boolean(this.m_strRSSGID) && this.m_strRSSFeedURL === e;
+        }
+        BIsAutomationEnabled() {
+          return Boolean(this.m_nPollIntervalSeconds > 0);
+        }
+        BHasFeedGID() {
+          return Boolean(this.m_strRSSGID);
+        }
+        async PreviewPartnerEventsFromRSSFeed(e) {
+          if (!this.BIsLoggedIn())
             return (
-              this.m_mapNextDrawChangeCallback.has(g) ||
-                this.m_mapNextDrawChangeCallback.set(g, new k.lu()),
-              this.m_mapNextDrawChangeCallback.get(g)
-            );
-          }
-          CopyToGiveaway(g, w) {
-            w.closed != g.closed && (w.closed = g.closed),
-              w.giveaway_id != g.giveaway_id && (w.giveaway_id = g.giveaway_id),
-              w.rtime_start != g.rtime_start && (w.rtime_start = g.rtime_start),
-              w.rtime_end != g.rtime_end && (w.rtime_end = g.rtime_end),
-              w.winner_count != g.winner_count &&
-                (w.winner_count = g.winner_count),
-              w.seconds_until_drawing != g.seconds_until_drawing &&
-                (w.seconds_until_drawing = g.seconds_until_drawing);
-          }
-          async ReloadGiveaway(g, w) {
-            if (!g) return null;
-            let m = K.TS.STORE_BASE_URL + "prizes/nextdraw/" + g,
-              t = null,
-              l = { origin: self.origin };
-            return (
-              (t = await P().get(m, { params: l })),
-              (0, S.h5)(() => {
-                if (
-                  (this.m_mapGiveawayIDToNextDrawInfo.has(g) ||
-                    this.m_mapGiveawayIDToNextDrawInfo.set(g, new H()),
-                  this.CopyToGiveaway(
-                    t.data,
-                    this.m_mapGiveawayIDToNextDrawInfo.get(g),
-                  ),
-                  w !== void 0)
-                ) {
-                  const p = this.GetKey(g, w);
-                  this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(p) ||
-                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(
-                      p,
-                      new H(),
-                    ),
-                    this.CopyToGiveaway(
-                      t.data,
-                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(p),
-                    );
-                }
-              }),
-              this.GetNextDrawChangeCallback(g).Dispatch(
-                this.m_mapGiveawayIDToNextDrawInfo.get(g),
+              console.error(
+                "PreviewPartnerEventsFromRSSFeed: User not logged in",
               ),
-              this.m_mapGiveawayIDToNextDrawInfo.get(g)
+              null
             );
-          }
-          static s_Singleton;
-          static Get() {
-            return (
-              Je.s_Singleton ||
-                ((Je.s_Singleton = new Je()), Je.s_Singleton.Init()),
-              Je.s_Singleton
-            );
-          }
-          Init() {
-            if (!this.m_bLoadedFromConfig) {
-              let g = (0, K.Tc)("giveawaynextdraw", "application_config");
-              if (g && g.giveaway_id) {
-                let w = new H();
-                this.CopyToGiveaway(g, w),
-                  this.m_mapGiveawayIDToNextDrawInfo.set(g.giveaway_id, w);
-              }
-              this.m_bLoadedFromConfig = !0;
-            }
-          }
-        };
-        x([S.sH], B.prototype, "m_mapGiveawayIDToNextDrawInfo", 2),
-          x([S.XI], B.prototype, "CopyToGiveaway", 1);
-        let O = B;
-        const Q = class Vt {
-          m_intervalID;
-          m_intervalCountDownID;
-          static s_GlobalInstance = 0;
-          m_myInstanceNumber = 0;
-          constructor() {
-            (this.m_myInstanceNumber = Vt.s_GlobalInstance),
-              (Vt.s_GlobalInstance += 1);
-          }
-          ClearRefreshInterval() {
-            this.m_intervalID &&
-              (window.clearInterval(this.m_intervalID),
-              (this.m_intervalID = void 0));
-          }
-          ClearCountDown() {
-            this.m_intervalCountDownID &&
-              (window.clearInterval(this.m_intervalCountDownID),
-              (this.m_intervalCountDownID = void 0));
-          }
-          SetupRefreshDataInterval(g, w) {
-            if ((this.ClearRefreshInterval(), !g.closed)) {
-              let m =
-                g.seconds_until_drawing <= 0 && g.winner_count == 0 ? 6e4 : 5e3;
-              this.m_intervalID = window.setInterval(w, m);
-            }
-          }
-          SetupCountDown(g, w) {
-            g > 0 && (this.m_intervalCountDownID = window.setInterval(w, 1e3));
-          }
-        };
-        x([ce.o], Q.prototype, "ClearRefreshInterval", 1),
-          x([ce.o], Q.prototype, "ClearCountDown", 1),
-          x([ce.o], Q.prototype, "SetupRefreshDataInterval", 1),
-          x([ce.o], Q.prototype, "SetupCountDown", 1);
-        let _ = Q;
-        function J(T, g) {
-          const w = O.Get().GetInfoByInstance(T, g.m_myInstanceNumber);
-          (w.seconds_until_drawing -= 1),
-            w.seconds_until_drawing == 0 && g.ClearCountDown();
-        }
-        function N(T, g) {
-          const w = O.Get().GetInfoByInstance(T, g.m_myInstanceNumber);
-          w &&
-            w.BIsValid() &&
-            w.seconds_until_drawing <= 0 &&
-            !w.closed &&
-            (g.ClearCountDown(),
-            O.Get()
-              .ReloadGiveaway(T, g.m_myInstanceNumber)
-              .then((m) => {
-                g.SetupCountDown(m.seconds_until_drawing, () => J(T, g));
-              }));
-        }
-        function I(T) {
-          const [g] = (0, j.useState)(new _()),
-            w = (0, V.CH)();
-          (0, j.useEffect)(
-            () => (
-              O.Get()
-                .ReloadGiveaway(T, g.m_myInstanceNumber)
-                .then((A) => {
-                  g.SetupRefreshDataInterval(A, () => N(T, g)),
-                    g.SetupCountDown(A.seconds_until_drawing, () => J(T, g)),
-                    w();
-                }),
-              () => {
-                g.ClearRefreshInterval(), g.ClearCountDown();
-              }
-            ),
-            [g, T, w],
+          const t = d.w.Init(c.Dw);
+          t.Body().set_rss_url(e),
+            t.Body().set_lang(this.GetFeedLanguageHandleUnset());
+          let n = await c.bH.PreviewPartnerEvents(
+            S.Get().GetCuratorTransport(),
+            t,
           );
-          const m = O.Get().GetInfoByInstance(T, g.m_myInstanceNumber),
-            [t, l, p] = (0, s.q3)(() => [
-              m?.winner_count,
-              m?.closed,
-              m?.seconds_until_drawing,
-            ]);
-          return {
-            bLoadingGiveawayInfo:
-              !m || m.giveaway_id == null || !m.BStarted() || t === void 0,
-            winner_count: t,
-            closed: l,
-            seconds_until_drawing: p,
-          };
+          return (
+            n.GetEResult() != u.R &&
+              console.error(
+                "PreviewPartnerEventsFromRSSFeed error: " +
+                  n.GetEMsg() +
+                  " " +
+                  n.GetEResult(),
+              ),
+            n
+          );
         }
-      },
-      57223: (re, Ae, i) => {
-        "use strict";
-        i.d(Ae, { A: () => m });
-        var e = i(41735),
-          P = i.n(e),
-          S = i(14947),
-          s = i(3166),
-          j = i(3685),
-          ce = i(35038),
-          k = i(94699),
-          V = i(99412),
-          K = i(72604),
-          me = i(76559),
-          U = i(79118);
-        function x(t) {
-          return "unknown EMsg ( " + t + " )";
-        }
-        function z(t) {
-          return "unknown EClientPersonaStateFlag ( " + t + " )";
-        }
-        function H(t) {
-          return "unknown EMsgClanAccountFlags ( " + t + " )";
-        }
-        function B(t) {
-          return "unknown ESteamReviewScore ( " + t + " )";
-        }
-        function O(t) {
-          return "unknown ECodecUsagePlatform ( " + t + " )";
-        }
-        function Q(t) {
-          return "unknown ECodecUsageReason ( " + t + " )";
-        }
-        var _ = i(71742),
-          J = i(34592),
-          N = Object.defineProperty,
-          I = Object.getOwnPropertyDescriptor,
-          T = (t, l, p, A) => {
-            for (
-              var Y = A > 1 ? void 0 : A ? I(l, p) : l, $ = t.length - 1, ue;
-              $ >= 0;
-              $--
-            )
-              (ue = t[$]) && (Y = (A ? ue(l, p, Y) : ue(Y)) || Y);
-            return A && Y && N(l, p, Y), Y;
-          };
-        class g {
-          m_clanAccountID;
-          m_clanSteamID;
-          m_strRSSFeedURL = void 0;
-          m_strRSSGID = void 0;
-          m_rtimeRSSLastChecked = void 0;
-          m_nPollIntervalSeconds = void 0;
-          m_eRSSFeedLanguage = void 0;
-          m_eCuratorLanguage = void 0;
-          m_mapURLToPosted = new Map();
-          constructor(l) {
-            (0, S.Gn)(this),
-              (this.m_clanAccountID = l.clanid),
-              (this.m_clanSteamID = me.b.InitFromClanID(this.m_clanAccountID)),
-              (this.m_strRSSFeedURL = l.rss_feed_url),
-              (this.m_strRSSGID = l.rss_feed_gid),
-              (this.m_eRSSFeedLanguage = l.rss_feed_language),
-              (this.m_rtimeRSSLastChecked = l.rss_feed_last_checked),
-              (this.m_nPollIntervalSeconds = l.poll_interval),
-              (this.m_eCuratorLanguage = l.curation_language);
-          }
-          GetFeedLanguageHandleUnset() {
-            return this.m_eRSSFeedLanguage == V.xPp
-              ? this.m_eCuratorLanguage == V.xPp
-                ? V.Bhc
-                : this.m_eCuratorLanguage
-              : this.m_eRSSFeedLanguage;
-          }
-          GetCuratorLanguage() {
-            return this.m_eCuratorLanguage == V.xPp
-              ? V.Bhc
-              : this.m_eCuratorLanguage;
-          }
-          BHasSavedRSSURL() {
-            return !!this.m_strRSSFeedURL;
-          }
-          GetRSSUrl() {
-            return this.m_strRSSFeedURL ? this.m_strRSSFeedURL : "";
-          }
-          GetRSSLastRtimeChecked() {
-            return this.m_rtimeRSSLastChecked;
-          }
-          GetClanSteamID() {
-            return this.m_clanSteamID;
-          }
-          GetClanAccountID() {
-            return this.m_clanAccountID;
-          }
-          BHasSetupFeed(l) {
-            return !!this.m_strRSSGID && this.m_strRSSFeedURL === l;
-          }
-          BIsAutomationEnabled() {
-            return this.m_nPollIntervalSeconds > 0;
-          }
-          BHasFeedGID() {
-            return !!this.m_strRSSGID;
-          }
-          async PreviewPartnerEventsFromRSSFeed(l) {
-            if (!this.BIsLoggedIn())
-              return (
-                console.error(
-                  "PreviewPartnerEventsFromRSSFeed: User not logged in",
-                ),
-                null
-              );
-            const p = ce.w.Init(k.Dw);
-            p.Body().set_rss_url(l),
-              p.Body().set_lang(this.GetFeedLanguageHandleUnset());
-            let A = await k.bH.PreviewPartnerEvents(
-              m.Get().GetCuratorTransport(),
-              p,
-            );
+        async FetchPublishedEvents(e = 100) {
+          if (!this.BIsLoggedIn())
             return (
-              A.GetEResult() != K.R &&
-                console.error(
-                  "PreviewPartnerEventsFromRSSFeed error: " +
-                    A.GetEMsg() +
-                    " " +
-                    A.GetEResult(),
-                ),
-              A
+              console.error("FetchPublishedEvents: User not logged in"), null
             );
-          }
-          async FetchPublishedEvents(l = 100) {
-            if (!this.BIsLoggedIn())
-              return (
-                console.error("FetchPublishedEvents: User not logged in"), null
-              );
-            if (!this.m_strRSSGID)
-              return (
-                console.error(
-                  "FetchPublishedEvents: Need to create a news feed first",
-                ),
-                null
-              );
-            const p = ce.w.Init(k.wN);
-            p.Body().set_news_feed_gid(this.m_strRSSGID),
-              p.Body().set_amount(l);
-            let A = await k.bH.GetBatchPublishedPartnerEvent(
-              m.Get().GetCuratorTransport(),
-              p,
-            );
+          if (!this.m_strRSSGID)
             return (
-              A.GetEResult() != K.R
-                ? console.error(
-                    "FetchPublishedEvents error: EMsg:" +
-                      x(A.GetEMsg()) +
-                      " EResult:" +
-                      A.GetEResult() +
-                      " msg:" +
-                      A.Hdr().error_message(),
-                  )
-                : (0, S.h5)(() => {
-                    for (let Y = 0; Y < A.Body().clan_event_gid().length; ++Y) {
-                      let $ = {
-                        url: A.Body().news_url()[Y],
-                        clan_event_gid: A.Body().clan_event_gid()[Y],
-                        news_post_gid: A.Body().news_post_gid()[Y],
-                      };
-                      this.m_mapURLToPosted.set($.url, $);
-                    }
-                  }),
-              A
+              console.error(
+                "FetchPublishedEvents: Need to create a news feed first",
+              ),
+              null
             );
-          }
-          MapArticleURLToClanEventGID(l) {
-            let p = this.m_mapURLToPosted.get(l);
-            if (p) return p.clan_event_gid;
-          }
-          BIsLoggedIn() {
-            return s.iA.logged_in;
-          }
-          async CreateOrUpdateRSSNewFeed(l, p = 0) {
-            let A = new FormData();
-            A.append("sessionid", (0, s.KC)()),
-              A.append("gid", this.m_strRSSGID),
-              A.append("lang", "" + this.GetCuratorLanguage()),
-              A.append("rss_url", l),
-              A.append("polling_interval", "" + p);
-            const Y =
-              s.TS.STORE_BASE_URL +
+          const t = d.w.Init(c.wN);
+          t.Body().set_news_feed_gid(this.m_strRSSGID), t.Body().set_amount(e);
+          let n = await c.bH.GetBatchPublishedPartnerEvent(
+            S.Get().GetCuratorTransport(),
+            t,
+          );
+          return (
+            n.GetEResult() != u.R
+              ? console.error(
+                  "FetchPublishedEvents error: EMsg:" +
+                    ("unknown EMsg ( " + n.GetEMsg() + " ) EResult:") +
+                    n.GetEResult() +
+                    " msg:" +
+                    n.Hdr().error_message(),
+                )
+              : (0, i.h5)(() => {
+                  for (let e = 0; e < n.Body().clan_event_gid().length; ++e) {
+                    let t = {
+                      url: n.Body().news_url()[e],
+                      clan_event_gid: n.Body().clan_event_gid()[e],
+                      news_post_gid: n.Body().news_post_gid()[e],
+                    };
+                    this.m_mapURLToPosted.set(t.url, t);
+                  }
+                }),
+            n
+          );
+        }
+        MapArticleURLToClanEventGID(e) {
+          let t = this.m_mapURLToPosted.get(e);
+          if (t) return t.clan_event_gid;
+        }
+        BIsLoggedIn() {
+          return o.iA.logged_in;
+        }
+        async CreateOrUpdateRSSNewFeed(e, t = 0) {
+          let n = new FormData();
+          n.append("sessionid", (0, o.KC)()),
+            n.append("gid", this.m_strRSSGID),
+            n.append("lang", "" + this.GetCuratorLanguage()),
+            n.append("rss_url", e),
+            n.append("polling_interval", "" + t);
+          const s =
+            o.TS.STORE_BASE_URL +
+            "curator/" +
+            this.m_clanAccountID +
+            "/admin/ajaxmanagerssfeed";
+          let a = await r().post(s, n, { withCredentials: !0 });
+          return (
+            a.data.success == u.R &&
+              (0, i.h5)(() => {
+                (this.m_strRSSGID = a.data.gid),
+                  (this.m_strRSSFeedURL = e),
+                  (this.m_nPollIntervalSeconds = t);
+              }),
+            a.data
+          );
+        }
+        async UpdateAutomation(e) {
+          return this.CreateOrUpdateRSSNewFeed(
+            this.m_strRSSFeedURL,
+            e ? 300 : 0,
+          );
+        }
+        async CheckForNewUpdate() {
+          if (this.m_strRSSGID) {
+            let e = new FormData();
+            e.append("sessionid", (0, o.KC)()),
+              e.append("gid", this.m_strRSSGID);
+            const t =
+              o.TS.STORE_BASE_URL +
               "curator/" +
               this.m_clanAccountID +
-              "/admin/ajaxmanagerssfeed";
-            let $ = await P().post(Y, A, { withCredentials: !0 });
-            return (
-              $.data.success == K.R &&
-                (0, S.h5)(() => {
-                  (this.m_strRSSGID = $.data.gid),
-                    (this.m_strRSSFeedURL = l),
-                    (this.m_nPollIntervalSeconds = p);
-                }),
-              $.data
-            );
-          }
-          async UpdateAutomation(l) {
-            return this.CreateOrUpdateRSSNewFeed(
-              this.m_strRSSFeedURL,
-              l ? 300 : 0,
-            );
-          }
-          async CheckForNewUpdate() {
-            if (this.m_strRSSGID) {
-              let l = new FormData();
-              l.append("sessionid", (0, s.KC)()),
-                l.append("gid", this.m_strRSSGID);
-              const p =
-                s.TS.STORE_BASE_URL +
-                "curator/" +
-                this.m_clanAccountID +
-                "/admin/ajaxcheckfornews";
-              await P().post(p, l, { withCredentials: !0 });
-            }
-          }
-          async CreatePost(l, p) {
-            if (!this.BIsLoggedIn())
-              return (
-                console.error(
-                  "CreatePartnerFromPreviewPost: User not logged in",
-                ),
-                null
-              );
-            if (!this.m_strRSSGID)
-              return (
-                console.error(
-                  "CreatePartnerFromPreviewPost: Need to create a news feed first",
-                ),
-                null
-              );
-            let A = new k.w2();
-            A.set_gid(l.post.gid),
-              A.set_news_feed_gid(this.m_strRSSGID),
-              A.set_title(l.post.title),
-              A.set_url(l.post.url),
-              A.set_author(l.post.author),
-              A.set_rtime_date(l.post.rtime_date),
-              A.set_contents(l.post.contents),
-              A.set_commited(l.post.commited),
-              A.set_deleted(l.post.deleted),
-              A.set_tags(l.post.tags),
-              A.set_appids(l.post.appids),
-              A.set_recommendation_state(l.post.recommendation_state),
-              A.set_received_for_free(l.post.received_for_free),
-              A.set_received_compensation(l.post.received_compensation),
-              A.set_blurb(l.post.blurb);
-            const Y = ce.w.Init(k.vB);
-            Y.Body().set_post(A), Y.Body().set_draft(p);
-            let $ = await k.bH.PublishPartnerEvent(
-              m.Get().GetCuratorTransport(),
-              Y,
-            );
-            return (
-              $.GetEResult() != K.R
-                ? console.error(
-                    "CreatePost error: " + $.GetEMsg() + " " + $.GetEResult(),
-                  )
-                : ((0, S.h5)(() => {
-                    let ue = {
-                      url: l.post.url,
-                      clan_event_gid: $.Body().clan_event_gid(),
-                      news_post_gid: $.Body().news_post_gid(),
-                    };
-                    this.m_mapURLToPosted.set(l.post.url, ue);
-                  }),
-                  U.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                    this.m_clanSteamID,
-                    $.Body().clan_event_gid(),
-                    0,
-                  )),
-              $
-            );
+              "/admin/ajaxcheckfornews";
+            await r().post(t, e, { withCredentials: !0 });
           }
         }
-        T([S.sH], g.prototype, "m_strRSSFeedURL", 2),
-          T([S.sH], g.prototype, "m_strRSSGID", 2),
-          T([S.sH], g.prototype, "m_rtimeRSSLastChecked", 2),
-          T([S.sH], g.prototype, "m_nPollIntervalSeconds", 2),
-          T([S.sH], g.prototype, "m_eRSSFeedLanguage", 2),
-          T([S.sH], g.prototype, "m_eCuratorLanguage", 2),
-          T([S.sH], g.prototype, "m_mapURLToPosted", 2);
-        const w = class Ze {
-          constructor() {
-            (0, S.Gn)(this);
-          }
-          static s_CuratorAdminStore;
-          m_transport;
-          m_mapClanAccountToAdmin = new Map();
-          m_defaultAdmin = void 0;
-          m_mapClanToEventRSSStats = new Map();
-          m_setPendingClanInfo = new Set();
-          m_PendingClanInfoPromise;
-          m_PendingClanInfoResolve;
-          m_cClanInfoRequestsInFlight = 0;
-          GetCuratorTransport() {
+        async CreatePost(e, t) {
+          if (!this.BIsLoggedIn())
             return (
-              (0, _.wT)(
-                this.m_transport,
-                "Expects Transpoate to be initialized but it is now",
+              console.error("CreatePartnerFromPreviewPost: User not logged in"),
+              null
+            );
+          if (!this.m_strRSSGID)
+            return (
+              console.error(
+                "CreatePartnerFromPreviewPost: Need to create a news feed first",
               ),
-              this.m_transport
+              null
             );
-          }
-          GetDefaultAdmin() {
-            return this.m_defaultAdmin;
-          }
-          GetRSSAdminStats(l) {
-            return this.m_mapClanToEventRSSStats.get(l);
-          }
-          static Get() {
-            return (
-              Ze.s_CuratorAdminStore ||
-                ((Ze.s_CuratorAdminStore = new Ze()),
-                Ze.s_CuratorAdminStore.Init()),
-              Ze.s_CuratorAdminStore
-            );
-          }
-          Init() {
-            let l = (0, s.Tc)("curatoradmin", "application_config");
-            this.ValidateStoreDefault(l) &&
-              ((this.m_defaultAdmin = new g(l)),
-              this.m_mapClanAccountToAdmin.set(l.clanid, this.m_defaultAdmin)),
-              this.ValidateWebAPI(l) &&
-                (this.m_transport = new j.D(
-                  s.TS.WEBAPI_BASE_URL,
-                  l.webapi_token,
-                ).GetServiceTransport());
-          }
-          ValidateStoreDefault(l) {
-            const p = l;
-            return p && typeof p == "object" && typeof p.clanid == "number";
-          }
-          ValidateWebAPI(l) {
-            const p = l;
-            return p && typeof p.webapi_token == "string";
-          }
-          BIsLoggedIn() {
-            return s.iA.logged_in;
-          }
-          BHavePendingInfoRequests() {
-            return (
-              this.m_setPendingClanInfo.size > 0 ||
-              this.m_cClanInfoRequestsInFlight > 0
-            );
-          }
-          BIsLoadingClanID(l) {
-            return this.m_setPendingClanInfo.has(l);
-          }
-          BHasClanIDLoaded(l) {
-            return this.m_mapClanAccountToAdmin.has(l);
-          }
-          GetRSSAdminForClanAccountID(l) {
-            return this.m_mapClanAccountToAdmin.get(l);
-          }
-          async QueueCuratorAdminInfoLoad(l) {
-            return l
-              ? this.m_mapClanAccountToAdmin.has(l)
-                ? Promise.resolve()
-                : (this.m_setPendingClanInfo.size ||
-                    ((this.m_PendingClanInfoPromise = new Promise(
-                      (p) => (this.m_PendingClanInfoResolve = p),
-                    )),
-                    window.setTimeout(() => this.FlushPendingClanInfo(), 25)),
-                  this.m_setPendingClanInfo.add(l),
-                  this.m_PendingClanInfoPromise)
-              : ((0, _.wT)(!l, "unexpected clanid of zero or undefined: " + l),
-                Promise.resolve());
-          }
-          async FlushPendingClanInfo() {
-            const l = this.m_PendingClanInfoResolve,
-              p = Array.from(this.m_setPendingClanInfo);
-            (this.m_PendingClanInfoPromise = void 0),
-              (this.m_PendingClanInfoResolve = void 0),
-              this.m_setPendingClanInfo.clear(),
-              await this.LoadBatchedClanRSSAdminInfo(p),
-              l();
-          }
-          EnsureClanInfoLoaded(l) {
-            const p = l.filter(
-              (A) =>
-                !this.m_mapClanAccountToAdmin.has(A) &&
-                this.m_setPendingClanInfo.has(A),
-            );
-            return (
-              p.forEach((A) => this.QueueCuratorAdminInfoLoad(A)),
-              p.length > 0 && this.m_PendingClanInfoPromise
-                ? this.m_PendingClanInfoPromise
-                : Promise.resolve()
-            );
-          }
-          async LoadBatchedClanRSSAdminInfo(l) {
-            this.m_cClanInfoRequestsInFlight++;
-            let p = l.filter((Y) => !this.m_mapClanAccountToAdmin.has(Y));
-            const A = 50;
-            for (; p.length > 0; ) {
-              const Y = Math.min(A, p.length),
-                $ = p.slice(0, Y);
-              p = p.slice(Y);
-              try {
-                const ue =
-                    s.TS.STORE_BASE_URL + "events_admin/ajaxgetrssadmininfo",
-                  ve = { clanids: l },
-                  xe = await P().get(ue, { params: ve, withCredentials: !0 });
-                if (
-                  xe &&
-                  xe.data &&
-                  xe.data.success == K.R &&
-                  xe.data.rss_admin_infos &&
-                  Array.isArray(xe.data.rss_admin_infos)
-                )
-                  (0, S.h5)(() => {
-                    xe.data.rss_admin_infos.forEach((Ie) => {
-                      this.m_mapClanAccountToAdmin.set(Ie.clanid, new g(Ie));
-                    }),
-                      xe.data.rss_event_stats.forEach((Ie) => {
-                        this.m_mapClanToEventRSSStats.set(
-                          Ie.clan_account_id,
-                          Ie,
-                        );
-                      });
-                  });
-                else {
-                  const Ie = (0, J.H)(xe.data || {});
-                  console.error(
-                    "LoadBatchedClanRSSAdminInfo error:" + Ie.strErrorMsg,
-                    Ie,
-                  );
-                }
-              } catch (ue) {
-                const ve = (0, J.H)(ue);
-                console.error(
-                  "LoadBatchedClanRSSAdminInfo catched error:" + ve.strErrorMsg,
-                  ve,
-                );
-              }
-            }
-            this.m_cClanInfoRequestsInFlight--;
-          }
-        };
-        T([S.sH.shallow], w.prototype, "m_mapClanAccountToAdmin", 2),
-          T([S.sH.shallow], w.prototype, "m_mapClanToEventRSSStats", 2);
-        let m = w;
-      },
-      82559: (re, Ae, i) => {
-        "use strict";
-        i.d(Ae, { q: () => ae, A: () => we });
-        var e = i(7850),
-          P = i(41735),
-          S = i.n(P),
-          s = i(57223),
-          j = i(3166),
-          ce = i(76559);
-        class k {
-          static s_CuratorStore;
-          m_mapClanToRecommendation = new Map();
-          static Get() {
-            return (
-              k.s_CuratorStore ||
-                ((k.s_CuratorStore = new k()),
-                k.s_CuratorStore.Init(),
-                (window.g_CuratorRecommendationStore = k.s_CuratorStore)),
-              k.s_CuratorStore
-            );
-          }
-          Init() {}
-          GetReviewForApp(y, L) {
-            if (this.m_mapClanToRecommendation.has(y.GetAccountID()))
-              return this.m_mapClanToRecommendation
-                .get(y.GetAccountID())
-                .get(L);
-          }
-          BHasReviewForApp(y, L) {
-            return !!this.GetReviewForApp(y, L);
-          }
-          BHasReviewForAppByClanAccount(y, L) {
-            let E = ce.b.InitFromClanID(y);
-            return !!this.GetReviewForApp(E, L);
-          }
-          async LoadAppRecommendation(y, L) {
-            this.m_mapClanToRecommendation.has(y.GetAccountID()) ||
-              this.m_mapClanToRecommendation.set(y.GetAccountID(), new Map());
-            let E = this.m_mapClanToRecommendation.get(y.GetAccountID());
-            const Z = [];
-            if (
-              (L.forEach((oe) => {
-                E.has(oe) || Z.push(oe);
-              }),
-              Z.length > 0)
-            ) {
-              const oe =
-                  j.TS.STORE_BASE_URL +
-                  "curator/" +
-                  y.GetAccountID() +
-                  "/admin/ajaxgetrecbyapps",
-                fe = await S().get(oe, {
-                  params: {
-                    appids: Z,
-                    cc: j.TS.COUNTRY || "US",
-                    l: j.TS.LANGUAGE,
-                  },
-                }),
-                ge = fe && fe.data;
-              ge &&
-                ge.rec_app &&
-                ge.rec_app.forEach((he) => {
-                  E.set(Number(he.appid), he);
-                });
-            }
-          }
-        }
-        var V = i(75844),
-          K = i(90626),
-          me = i(99412),
-          U = i(72604),
-          x = i(73259),
-          z = i(94699),
-          H = i(79118),
-          B = i(16412),
-          O = i(91424),
-          Q = i(95695),
-          _ = i.n(Q),
-          J = i(12037),
-          N = i(96538),
-          I = i(88003),
-          T = i(85599),
-          g = i(53107),
-          w = i(36707),
-          m = i(82734),
-          t = i(18210),
-          l = i(34592),
-          p = i(30096),
-          A = i(71909),
-          Y = i(41635),
-          $ = i(48473),
-          ue = i(56330),
-          ve = i.n(ue),
-          xe = i(53113),
-          Ie = i(92264),
-          Ne = Object.defineProperty,
-          qe = Object.getOwnPropertyDescriptor,
-          ee = (M, y, L, E) => {
-            for (
-              var Z = E > 1 ? void 0 : E ? qe(y, L) : y, oe = M.length - 1, fe;
-              oe >= 0;
-              oe--
-            )
-              (fe = M[oe]) && (Z = (E ? fe(y, L, Z) : fe(Z)) || Z);
-            return E && Z && Ne(y, L, Z), Z;
-          };
-        let we = class extends K.Component {
-          state = { strRssURL: s.A.Get().GetDefaultAdmin().GetRSSUrl() };
-          m_Admin = s.A.Get().GetDefaultAdmin();
-          OnChangeActualRSSURL(M) {
-            this.setState({ strRssURL: M.target.value });
-          }
-          OnCreateOrSaveFeed(M) {
-            M.preventDefault(),
-              (0, I.pg)(
-                (0, e.jsx)(We, {
-                  strRSSUrl: this.state.strRssURL,
-                  admin: this.m_Admin,
-                }),
-                (0, m.uX)(M),
-              );
-          }
-          OnRevert(M) {
-            M.preventDefault(),
-              this.setState({ strRssURL: this.m_Admin.GetRSSUrl() });
-          }
-          render() {
-            let M = this.state.strRssURL === this.m_Admin.GetRSSUrl();
-            if (window.Prototype !== void 0)
-              return window.location.reload(), null;
-            const y = (0, me.x6o)(
-                (0, me.LgB)(this.m_Admin.GetFeedLanguageHandleUnset()),
-              ),
-              L = s.A.Get().GetDefaultAdmin();
-            return (0, e.jsxs)("div", {
-              className: (0, w.A)(A.Ctn),
-              children: [
-                (0, e.jsxs)("div", {
-                  className: "titleframe",
-                  children: [
-                    (0, e.jsx)("h4", {
-                      children: (0, t.we)("#CuratorAdmin_RSSFeed_title"),
-                    }),
-                    (0, e.jsx)("p", {
-                      className: "subtitle",
-                      children: (0, t.we)("#CuratorAdmin_RSSFeed_desc"),
-                    }),
-                    (0, e.jsx)("p", {
-                      children: (0, t.PP)(
-                        "#CuratorAdmin_RSSFeed_doc_link",
-                        (0, e.jsx)("a", {
-                          href: "https://partner.steamgames.com/doc/store/news/rss",
-                          target: "_blank",
-                          children: (0, t.we)(
-                            "#CuratorAdmin_RSSFeed_doc_link_text",
-                          ),
-                        }),
-                      ),
-                    }),
-                    (0, e.jsx)("p", {
-                      className: A.DashboardBtn,
-                      children: (0, e.jsx)(g.uU, {
-                        href:
-                          j.TS.COMMUNITY_BASE_URL +
-                          "gid/" +
-                          this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
-                          "/partnerevents/",
-                        className: (0, w.A)(_().Button, _().Primary),
-                        children: (0, t.we)("#RSSManager_EventDashBoard"),
-                      }),
-                    }),
-                  ],
-                }),
-                (0, e.jsxs)("div", {
-                  className: "darkframe",
-                  children: [
-                    (0, e.jsxs)("div", {
-                      className: A.LanguageRow,
-                      children: [
-                        (0, e.jsx)("span", {
-                          className: A.LanguageTitle,
-                          children: (0, t.we)(
-                            "#CuratorAdmin_RSSFeed_lang_only",
-                          ),
-                        }),
-                        (0, e.jsx)("span", {
-                          className: A.LanguageSet,
-                          children: y,
-                        }),
-                        (0, e.jsx)("a", {
-                          href:
-                            j.TS.COMMUNITY_BASE_URL +
-                            "gid/" +
-                            this.m_Admin
-                              .GetClanSteamID()
-                              .ConvertTo64BitString() +
-                            "/edit ",
-                          target: "_blank",
-                          className: (0, w.A)(_().Button, A.PreviewBtn),
-                          children: (0, t.we)(
-                            "#CuratorAdmin_RSSFeed_edit_language",
-                          ),
-                        }),
-                      ],
-                    }),
-                    this.m_Admin.GetFeedLanguageHandleUnset() !=
-                      this.m_Admin.GetCuratorLanguage() &&
-                      (0, e.jsx)("div", {
-                        className: (0, w.A)(
-                          A.LanguageRow,
-                          ve().WarningIconLayout,
-                        ),
-                        children: (0, e.jsx)("span", {
-                          className: A.LanguageTitle,
-                          children: (0, t.we)(
-                            "#CuratorAdmin_Curator_lang_only",
-                            (0, t.we)(
-                              "#Language_" +
-                                (0, me.LgB)(this.m_Admin.GetCuratorLanguage()),
-                            ),
-                            y,
-                          ),
-                        }),
-                      }),
-                    (0, e.jsxs)("div", {
-                      className: (0, w.A)(
-                        _().FlexRowContainer,
-                        A.UrlSettingCtn,
-                      ),
-                      children: [
-                        (0, e.jsx)(B.pd, {
-                          className: A.RssInpu,
-                          type: "text",
-                          name: "link_url",
-                          id: "link_url",
-                          value: this.state.strRssURL,
-                          label: (0, t.we)("#CuratorAdmin_RSSFeed"),
-                          placeholder: (0, t.we)(
-                            "#CuratorAdmin_RSSFeed_placeholder",
-                          ),
-                          onChange: this.OnChangeActualRSSURL,
-                          mustBeURL: !0,
-                        }),
-                        (0, e.jsx)("a", {
-                          className: "btn_green_white_innerfade btn_medium",
-                          onClick: this.OnCreateOrSaveFeed,
-                          children: (0, e.jsx)("span", {
-                            children: (0, t.we)(
-                              M ? "#Button_Saved" : "#Button_Save",
-                            ),
-                          }),
-                        }),
-                        !M &&
-                          (0, e.jsx)("a", {
-                            onClick: this.OnRevert,
-                            className: "btn_grey_white_innerfade btn_medium",
-                            children: (0, t.we)("#Button_Revert"),
-                          }),
-                      ],
-                    }),
-                    (0, e.jsx)(se, { admin: L }),
-                    (0, e.jsx)("br", {}),
-                    (0, e.jsx)(ae, {
-                      strRssURL: this.state.strRssURL,
-                      admin: L,
-                    }),
-                  ],
-                }),
-              ],
-            });
-          }
-        };
-        ee([p.oI], we.prototype, "OnChangeActualRSSURL", 1),
-          ee([p.oI], we.prototype, "OnCreateOrSaveFeed", 1),
-          ee([p.oI], we.prototype, "OnRevert", 1),
-          (we = ee([V.PA], we));
-        let ae = class extends K.Component {
-          state = { strParseRssURL: this.props.strRssURL, bLoadingPreview: !1 };
-          m_cancelSignal = S().CancelToken.source();
-          componentDidMount() {
-            const { admin: M } = this.props;
-            M.BHasFeedGID() &&
-              M.BHasSavedRSSURL() &&
-              M.GetRSSUrl() == this.props.strRssURL &&
-              this.OnLoadPreview();
-          }
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "PreviewRSSViewAndControl component unmounted",
-            );
-          }
-          RenderPreviews() {
-            let M = this.props.admin,
-              y = new Array();
-            if (this.state.previews) {
-              let L = this.state.previews;
-              (L = L.sort((E, Z) => {
-                let oe = M.MapArticleURLToClanEventGID(E.post.url),
-                  fe = M.MapArticleURLToClanEventGID(Z.post.url),
-                  ge = oe ? H.O3.GetClanEventModel(oe) : null,
-                  he = fe ? H.O3.GetClanEventModel(fe) : null;
-                return ge && he
-                  ? he.postTime - ge.postTime
-                  : ge
-                    ? -1
-                    : he
-                      ? 1
-                      : Z.post.rtime_date - E.post.rtime_date;
-              })),
-                L.forEach((E) => {
-                  y.push(
-                    (0, e.jsx)(
-                      X,
-                      {
-                        newsData: E,
-                        admin: M,
-                        clanSteamID: M.GetClanSteamID(),
-                        fnGetRSSUrl: this.GetRSSPreviewURL,
-                      },
-                      "id: " + E.unique_id,
-                    ),
-                  );
-                });
-            }
-            return y;
-          }
-          GetRSSPreviewURL() {
-            return this.state.strParseRssURL;
-          }
-          OnLoadPreview() {
-            this.setState(
-              {
-                bLoadingPreview: !0,
-                previews: void 0,
-                strPreviewURL: this.props.strRssURL,
-                strPreviewErrorMsg: void 0,
-              },
-              this.DoLoadPreview,
-            );
-          }
-          async DoLoadPreview() {
-            let M = this.props.admin,
-              y = await M.PreviewPartnerEventsFromRSSFeed(this.props.strRssURL);
-            if (y && y.GetEResult() == U.R) {
-              let L = y.Body().toObject();
-              this.setState(
-                { strParseRssURL: L.rss_url, bLoadingPreview: !0 },
-                async () => {
-                  await M.FetchPublishedEvents(Math.max(100, L.results.length));
-                  let E = new Array(),
-                    Z = new Array();
-                  if (
-                    (L.results.forEach((oe) => {
-                      let fe = M.MapArticleURLToClanEventGID(oe.post.url);
-                      fe && E.push(fe),
-                        oe.post.appids &&
-                          oe.post.appids.length === 1 &&
-                          oe.post.recommendation_state !== z.D$.w4 &&
-                          Z.push(oe.post.appids[0]);
-                    }),
-                    E.length > 0 &&
-                      (await H.O3.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
-                        E,
-                        null,
-                        this.m_cancelSignal,
-                      )),
-                    Z.length > 0)
-                  ) {
-                    const oe = M.GetClanSteamID();
-                    await k.Get().LoadAppRecommendation(oe, Z);
-                  }
-                  this.setState({
-                    previews: L.results,
-                    bLoadingPreview: void 0,
-                  });
-                },
-              );
-            } else
-              this.setState({
-                bLoadingPreview: void 0,
-                strPreviewErrorMsg: (0, t.we)(
-                  "#Error_Description",
-                  y.GetEResult(),
-                  y.Hdr().error_message(),
-                ),
-              });
-          }
-          render() {
-            const M = this.RenderPreviews();
-            let y = this.props.admin;
-            return (0, e.jsxs)("div", {
-              children: [
-                !this.state.bLoadingPreview &&
-                  this.state.strPreviewURL !== this.props.strRssURL &&
-                  (0, e.jsx)("div", {
-                    className: A.PreviewListBtn,
-                    children: (0, e.jsx)(B.$n, {
-                      disabled: !B.pd.validateUrl(this.props.strRssURL),
-                      onClick: this.OnLoadPreview,
-                      children: (0, t.we)("#CuratorAdmin_RSSFeed_preview"),
-                    }),
-                  }),
-                this.state.bLoadingPreview &&
-                  (0, e.jsx)(T.t, {
-                    string: (0, t.we)("#Loading"),
-                    size: "medium",
-                    position: "center",
-                  }),
-                this.state.strPreviewErrorMsg &&
-                  (0, e.jsx)("div", {
-                    className: _().ErrorMsg,
-                    children: this.state.strPreviewErrorMsg,
-                  }),
-                M.length > 0 &&
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("p", {
-                        children: (0, t.we)(
-                          "#RSSManager_PreviewInfo",
-                          this.state.strPreviewURL,
-                        ),
-                      }),
-                      (0, e.jsx)("div", {
-                        className: A.PreviewListCtn,
-                        children: M,
-                      }),
-                      (0, e.jsx)("p", {
-                        className: A.DashboardBtn,
-                        children: (0, e.jsx)(g.uU, {
-                          href:
-                            j.TS.COMMUNITY_BASE_URL +
-                            "gid/" +
-                            y.GetClanSteamID().ConvertTo64BitString() +
-                            "/partnerevents/",
-                          className: (0, w.A)(_().Button, _().Primary),
-                          children: (0, t.we)("#RSSManager_EventDashBoard"),
-                        }),
-                      }),
-                    ],
-                  }),
-              ],
-            });
-          }
-        };
-        ee([p.oI], ae.prototype, "GetRSSPreviewURL", 1),
-          ee([p.oI], ae.prototype, "OnLoadPreview", 1),
-          (ae = ee([V.PA], ae));
-        let se = class extends K.Component {
-          state = {};
-          OnToggleChannelAutomation(M) {
-            M
-              ? (this.setState({ strErrorMessage: void 0 }),
-                (0, I.pg)(
-                  (0, e.jsx)(We, {
-                    strRSSUrl: this.props.admin.GetRSSUrl(),
-                    admin: this.props.admin,
-                    bActivatePooling: !0,
-                  }),
-                  window,
-                ))
-              : this.setState(
-                  {
-                    strErrorMessage: void 0,
-                    strReasonWaiting: (0, t.we)("#Saving"),
-                  },
-                  this.BDisableAutomation,
-                );
-          }
-          async BDisableAutomation() {
-            this.props.admin
-              .UpdateAutomation(!1)
-              .catch(() =>
-                this.setState({
-                  strErrorMessage: (0, t.we)(
-                    "#RSSManager_Status_Automation_DisableFailed",
-                  ),
-                }),
-              )
-              .finally(() => this.setState({ strReasonWaiting: void 0 }));
-          }
-          async OnQueueScan(M) {
-            this.setState({
-              strReasonWaiting: (0, t.we)("#CuratorAdmin_RSSFeed_scannow"),
-            }),
-              this.props.admin
-                .CheckForNewUpdate()
-                .then(() =>
-                  (0, I.pg)(
-                    (0, e.jsx)(N.o0, {
-                      strTitle: (0, t.we)("#CuratorAdmin_RSSFeed_scannow"),
-                      strDescription: (0, t.we)("#CuratorAdmin_RSSFeed_queued"),
-                    }),
-                    (0, m.uX)(M),
-                  ),
-                )
-                .catch((y) =>
-                  (0, I.pg)(
-                    (0, e.jsx)(N.KG, {
-                      strTitle: (0, t.we)("#CuratorAdmin_RSSFeed_scannow"),
-                      strDescription: (0, l.H)(y).strErrorMsg,
-                    }),
-                    (0, m.uX)(M),
-                  ),
-                )
-                .finally(() => this.setState({ strReasonWaiting: void 0 }));
-          }
-          render() {
-            return this.props.admin.BHasSavedRSSURL()
-              ? (0, e.jsxs)("div", {
-                  children: [
-                    !!this.state.strReasonWaiting &&
-                      (0, e.jsx)(T.t, {
-                        size: "medium",
-                        string: this.state.strReasonWaiting,
-                      }),
-                    !!this.state.strErrorMessage &&
-                      (0, e.jsx)("div", {
-                        className: A.Error,
-                        children: this.state.strErrorMessage,
-                      }),
-                    (0, e.jsx)(B.RF, {
-                      onChange: this.OnToggleChannelAutomation,
-                      label: (0, t.we)("#RSSManager_Status_Automation_Desc"),
-                      checked: this.props.admin.BIsAutomationEnabled(),
-                      description: "",
-                    }),
-                    this.props.admin.BIsAutomationEnabled() &&
-                      (0, e.jsxs)("p", {
-                        children: [
-                          (0, t.we)("#CuratorAdmin_RSSFeed_lastscanned"),
-                          "\xA0",
-                          (0, t.TW)(
-                            this.props.admin.GetRSSLastRtimeChecked(),
-                            !1,
-                          ),
-                          "\xA0 @ ",
-                          (0, Ie.KC)(
-                            this.props.admin.GetRSSLastRtimeChecked(),
-                            { bForce24HourClock: !1 },
-                          ),
-                          "\xA0",
-                          (0, e.jsx)("a", {
-                            onClick: this.OnQueueScan,
-                            children: (0, e.jsx)("span", {
-                              children: (0, t.we)(
-                                "#CuratorAdmin_RSSFeed_scannow",
-                              ),
-                            }),
-                          }),
-                        ],
-                      }),
-                  ],
-                })
-              : null;
-          }
-        };
-        ee([p.oI], se.prototype, "OnToggleChannelAutomation", 1),
-          ee([p.oI], se.prototype, "OnQueueScan", 1),
-          (se = ee([V.PA], se));
-        let X = class extends K.Component {
-          state = {
-            clan_event_gid: this.props.admin.MapArticleURLToClanEventGID(
-              this.props.newsData.post.url,
-            ),
-            bLoadingPartnerEvent:
-              !!this.props.admin.MapArticleURLToClanEventGID(
-                this.props.newsData.post.url,
-              ),
-          };
-          componentDidMount() {
-            this.DoPartnerEventLoad();
-          }
-          async DoPartnerEventLoad() {
-            if (this.state.clan_event_gid) {
-              let M = this.props.admin.GetClanSteamID(),
-                y = H.O3.GetClanEventModel(this.state.clan_event_gid);
-              y ||
-                (y = await H.O3.LoadHiddenPartnerEvent(
-                  M,
-                  this.state.clan_event_gid,
-                )),
-                this.setState({
-                  bLoadingPartnerEvent: !1,
-                  existingEventModel: y,
-                });
-            }
-          }
-          OnOpenPreviewAsPartnerEvent(M) {
-            const { newsData: y, clanSteamID: L } = this.props;
-            let E = new x.lh();
-            (E.GID = "PreviewPartnerEventRow_0"),
-              (E.clanSteamID = L),
-              (E.postTime = Date.now() / 1e3),
-              (E.startTime = Date.now() / 1e3),
-              (E.type = me.uYK),
-              E.vecTags.push("auto_rssfeed"),
-              E.vecTags.push("curator"),
-              E.vecTags.push("curator_public"),
-              E.name.set(me.Bhc, y.title),
-              E.description.set(me.Bhc, y.desc),
-              this.ValidateJSONDefault(y.jsondata) && (E.jsondata = y.jsondata),
-              E.jsondata.read_more_link ||
-                (E.jsondata.read_more_link = y.unique_id);
-            let Z = this.props.admin.GetFeedLanguageHandleUnset();
-            !E.jsondata.localized_summary &&
-              y.post.event_summary &&
-              ((E.jsondata.localized_summary = (0, Y.$Y)(
-                E.jsondata.localized_summary,
-                me.bP9,
-                null,
-              )),
-              (E.jsondata.localized_summary[me.Bhc] = y.post.event_summary),
-              Z != me.Bhc &&
-                (E.jsondata.localized_summary[Z] = y.post.event_summary)),
-              !E.jsondata.localized_subtitle &&
-                y.post.event_subtitle &&
-                ((E.jsondata.localized_subtitle = (0, Y.$Y)(
-                  E.jsondata.localized_subtitle,
-                  me.bP9,
-                  null,
-                )),
-                (E.jsondata.localized_subtitle[me.Bhc] = y.post.event_subtitle),
-                Z != me.Bhc &&
-                  (E.jsondata.localized_subtitle[Z] = y.post.event_subtitle)),
-              this.ShowModalEvent(E);
-          }
-          OnViewEvent() {
-            this.ShowModalEvent(
-              H.O3.GetClanEventModel(this.state.clan_event_gid),
-            );
-          }
-          ShowModalEvent(M) {
-            let y = document.getElementById("curator_header_area_ctn_id");
-            y &&
-              (M
-                ? y.classList.add("curator_header_area_ctn_hideme")
-                : y.classList.remove("curator_header_area_ctn_hideme")),
-              this.setState({ eventModelForPreviewNow: M });
-          }
-          ValidateJSONDefault(M) {
-            const y = M;
-            return !!(y && !Array.isArray(y) && typeof y == "object");
-          }
-          OnPostNewsEvent(M) {
-            const { newsData: y, fnGetRSSUrl: L } = this.props;
-            (0, I.pg)(
-              (0, e.jsx)(We, {
-                newsData: y,
-                admin: this.props.admin,
-                strRSSUrl: L(),
-                fnClanEventGID: this.OnClanEventCreateSuccess,
-              }),
-              (0, m.uX)(M),
-            );
-          }
-          OnUpdateNewsEvent(M) {
-            const { newsData: y, fnGetRSSUrl: L } = this.props;
-            (0, I.pg)(
-              (0, e.jsx)(We, {
-                newsData: y,
-                strRSSUrl: L(),
-                admin: this.props.admin,
-                fnClanEventGID: this.OnClanEventCreateSuccess,
-                bUpdatePost: !0,
-              }),
-              (0, m.uX)(M),
-            );
-          }
-          HideModalEvent() {
-            this.state.eventModelForPreviewNow && this.ShowModalEvent(void 0);
-          }
-          OnClanEventCreateSuccess(M) {
-            this.setState(
-              { clan_event_gid: M, bLoadingPartnerEvent: !0 },
-              this.DoPartnerEventLoad,
-            );
-          }
-          OnShowRawRSS(M) {
-            const y = this.props.newsData.rss_message,
-              L = (() => {
-                const E = y.match(/<entry[^>]*>([\s\S]*)<\/entry>/m);
-                if (!E) return y;
-                const Z = E[1].match(/<content[^>]*>[\s\S]*<\/content>/m);
-                return Z ? (0, $.EK)(Z[0]) : E[0];
-              })();
-            (0, I.pg)(
-              (0, e.jsx)(N.o0, {
-                bAlertDialog: !0,
-                strTitle: (0, t.we)("#RSSManager_PostEvent_ViewRaw"),
-                children: (0, e.jsx)("textarea", {
-                  className: A.RawRSS,
-                  value: L,
-                  disabled: !0,
-                }),
-              }),
-              (0, m.uX)(M),
-            );
-          }
-          render() {
-            const { newsData: M } = this.props,
-              {
-                clan_event_gid: y,
-                existingEventModel: L,
-                bLoadingPartnerEvent: E,
-              } = this.state;
-            let Z = this.props.admin,
-              oe = Z.GetClanSteamID(),
-              fe = L && L.BIsStagedEvent(),
-              ge =
-                M.post.appids && M.post.appids.length == 1 && M.post.appids[0],
-              he =
-                M.post.recommendation_state !== z.D$.w4 &&
-                ge &&
-                k.Get().BHasReviewForApp(oe, ge),
-              le = "";
-            if (L) {
-              const Qe =
-                L.GetVisibilityStartTimeAndDateUnixSeconds() ||
-                L.GetPostTimeAndDateUnixSeconds();
-              le =
-                (0, t.$z)(Qe) +
-                " @ " +
-                (0, Ie.KC)(Qe, { bForce24HourClock: !1 });
-            }
-            return (0, e.jsxs)("div", {
-              className: (0, w.A)(
-                A.PostCtn,
-                y ? A.ActivePost : "",
-                M.valid_post ? "" : A.ErrorPost,
-              ),
-              children: [
-                (0, e.jsx)("span", {
-                  className: A.PostTitle,
-                  children: M.title,
-                }),
-                (0, e.jsx)("br", {}),
-                !!L &&
-                  (0, e.jsxs)(K.Fragment, {
-                    children: [
-                      !!L.BIsVisibleEvent() &&
-                        (0, e.jsx)("span", {
-                          className: A.PostDate,
-                          children: (0, t.we)(
-                            "#RSSManager_PostEvent_PostedDate",
-                            le,
-                          ),
-                        }),
-                      !L.BIsVisibleEvent() &&
-                        (0, e.jsx)("span", {
-                          className: (0, w.A)(
-                            A.PostDraft,
-                            fe ? A.PostStaged : "",
-                          ),
-                          children: (0, t.we)(
-                            fe
-                              ? "#RSSManager_PostEvent_Staged"
-                              : "#RSSManager_PostEvent_Draft",
-                            le,
-                          ),
-                        }),
-                    ],
-                  }),
-                !!(!M.valid_post && M.post_error_msg) &&
-                  (0, e.jsxs)("div", {
-                    className: ve().ErrorStylesBackground,
-                    children: [
-                      (0, t.we)("#Error_Generic_Label"),
-                      " ",
-                      (0, t.we)(M.post_error_msg),
-                    ],
-                  }),
-                (0, e.jsxs)("div", {
-                  className: A.ButtonCtn,
-                  children: [
-                    y
-                      ? (0, e.jsxs)(K.Fragment, {
-                          children: [
-                            E
-                              ? (0, e.jsx)(T.t, {
-                                  string: (0, t.we)("#Loading"),
-                                  size: "small",
-                                  position: "center",
-                                })
-                              : (0, e.jsx)("div", {
-                                  onClick: this.OnViewEvent,
-                                  className: (0, w.A)(_().Button, A.PreviewBtn),
-                                  children: (0, t.we)(
-                                    "#RSSManager_PostEvent_ViewEvent",
-                                  ),
-                                }),
-                            (0, e.jsx)("a", {
-                              className: (0, w.A)(_().Button, A.PreviewBtn),
-                              href:
-                                j.TS.COMMUNITY_BASE_URL +
-                                "gid/" +
-                                Z.GetClanSteamID().ConvertTo64BitString() +
-                                "/partnerevents/edit/" +
-                                this.state.clan_event_gid,
-                              children: (0, t.we)(
-                                "#RSSManager_PostEvent_EditEvent",
-                              ),
-                            }),
-                            (0, e.jsx)("div", {
-                              onClick: this.OnUpdateNewsEvent,
-                              className: (0, w.A)(_().Button, A.PreviewBtn),
-                              children: (0, t.we)(
-                                "#RSSManager_PostEvent_UpdateEvent",
-                              ),
-                            }),
-                            he &&
-                              (0, e.jsx)("a", {
-                                className: (0, w.A)(_().Button, A.PreviewBtn),
-                                href: (0, xe.k2)(
-                                  j.TS.STORE_BASE_URL +
-                                    "app/" +
-                                    M.post.appids[0] +
-                                    "/?curator_clanid=" +
-                                    oe.GetAccountID(),
-                                ),
-                                children: (0, t.we)("#RSSManager_SeeReview"),
-                              }),
-                          ],
-                        })
-                      : (0, e.jsxs)(K.Fragment, {
-                          children: [
-                            (0, e.jsx)("div", {
-                              onClick: this.OnOpenPreviewAsPartnerEvent,
-                              className: (0, w.A)(_().Button, A.PreviewBtn),
-                              children: (0, t.we)(
-                                "#CuratorAdmin_RSSFeed_col_preview_event",
-                              ),
-                            }),
-                            (0, e.jsx)("div", {
-                              onClick: this.OnPostNewsEvent,
-                              className: (0, w.A)(_().Button, A.PreviewBtn),
-                              children: (0, t.we)(
-                                "#CuratorAdmin_RSSFeed_col_create_event",
-                              ),
-                            }),
-                          ],
-                        }),
-                    !!(M.rss_message && M.rss_message.length > 0) &&
-                      (0, e.jsx)("div", {
-                        onClick: this.OnShowRawRSS,
-                        className: A.ViewRaw,
-                        children: (0, t.we)("#RSSManager_PostEvent_ViewRaw"),
-                      }),
-                    !!this.state.eventModelForPreviewNow &&
-                      (0, e.jsx)(N.of, {
-                        className: J.StoreHeaderAdjust,
-                        children: (0, e.jsx)("div", {
-                          children: (0, e.jsx)(O.H, {
-                            event: this.state.eventModelForPreviewNow,
-                            fnClose: this.HideModalEvent,
-                          }),
-                        }),
-                      }),
-                  ],
-                }),
-              ],
-            });
-          }
-        };
-        ee([p.oI], X.prototype, "DoPartnerEventLoad", 1),
-          ee([p.oI], X.prototype, "OnOpenPreviewAsPartnerEvent", 1),
-          ee([p.oI], X.prototype, "OnViewEvent", 1),
-          ee([p.oI], X.prototype, "OnPostNewsEvent", 1),
-          ee([p.oI], X.prototype, "OnUpdateNewsEvent", 1),
-          ee([p.oI], X.prototype, "HideModalEvent", 1),
-          ee([p.oI], X.prototype, "OnClanEventCreateSuccess", 1),
-          ee([p.oI], X.prototype, "OnShowRawRSS", 1),
-          (X = ee([V.PA], X));
-        const W = class Kt extends K.Component {
-          state = {
-            initialState: Kt.DetermineStartState(this.props),
-            step: Kt.DetermineStartState(this.props),
-            bDraftMode: !0,
-          };
-          static DetermineStartState(y) {
-            let L = y.admin.BHasSetupFeed(y.strRSSUrl);
-            return !y.newsData || !L
-              ? y.bActivatePooling
-                ? "activate_feed"
-                : y.admin.BHasSavedRSSURL()
-                  ? "update_feed"
-                  : "feed_missing"
-              : y.bUpdatePost
-                ? "update_post"
-                : "create_post";
-          }
-          OnCreateNewsFeed() {
-            this.setState({ step: "creating_feed" }, this.DoCreateNewsFeed);
-          }
-          async DoCreateNewsFeed() {
-            let y = await this.props.admin.CreateOrUpdateRSSNewFeed(
-              this.props.strRSSUrl,
-              this.props.bActivatePooling ? 300 : 0,
-            );
-            y.success != U.R
-              ? this.setState({
-                  step: "failure",
-                  eResult: y.success,
-                  strErrorMessage: (0, t.we)("#RSSManager_PostEvent_Failure"),
-                })
-              : this.setState({
-                  step: this.props.newsData ? "create_post" : "success",
-                });
-          }
-          OnCreatePost() {
-            this.setState({ step: "waiting_post" }, this.DoCreatePost);
-          }
-          async DoCreatePost() {
-            let y = await this.props.admin.CreatePost(
-              this.props.newsData,
-              !!this.state.bDraftMode,
-            );
-            y.GetEResult() != U.R
-              ? this.setState({
-                  step: "failure",
-                  eResult: y.GetEResult(),
-                  strErrorMessage: (0, t.we)("#RSSManager_PostEvent_Failure"),
-                })
-              : (this.props.fnClanEventGID &&
-                  this.props.fnClanEventGID(y.Body().clan_event_gid()),
-                this.setState({
-                  step: "success",
-                  eventGID: y.Body().clan_event_gid(),
-                }));
-          }
-          OnChangeDraftMode(y) {
-            this.setState({ bDraftMode: y });
-          }
-          OnChangePermissionsCreateFeed(y) {
-            this.setState({ bPermissions: y });
-          }
-          OnChangeConductCreateFeed(y) {
-            this.setState({ bConduct: y });
-          }
-          GetStrTitle() {
-            if (this.props.newsData)
-              return (0, t.we)(
-                this.props.bUpdatePost
-                  ? "#RSSManager_PostEvent_UpdateEvent"
-                  : "#RSSManager_PostEvent_Tilte",
-              );
-            switch (this.state.initialState) {
-              case "feed_missing":
-                return (0, t.we)("#RSSManager_PostEvent_CreateFeedTitle");
-              default:
-              case "update_feed":
-                return (0, t.we)("#RSSManager_PostEvent_UpdateFeedTitle");
-              case "activate_feed":
-                return (0, t.we)("#RSSManager_Status_Automation_Activate");
-            }
-          }
-          render() {
-            const { strRSSUrl: y } = this.props;
-            switch (this.state.step) {
-              case "feed_missing":
-              case "activate_feed":
-              case "update_feed":
-              default:
-                return (0, e.jsx)(N.eV, {
-                  title: this.GetStrTitle(),
-                  children: (0, e.jsxs)(B.nB, {
-                    children: [
-                      (0, e.jsxs)(B.a3, {
-                        children: [
-                          this.props.newsData &&
-                            (0, e.jsx)("div", {
-                              children: (0, t.we)(
-                                "#RSSManager_PostEvent_CreateFeed_DuringPost",
-                              ),
-                            }),
-                          this.state.step !== "activate_feed" &&
-                            (0, e.jsx)("div", {
-                              children: (0, t.we)(
-                                "#RSSManager_PostEvent_CreateFeed_Desc",
-                                y,
-                              ),
-                            }),
-                          (0, e.jsx)("div", {
-                            children: (0, t.we)(
-                              "#RSSManager_CreateFeed_Review",
-                            ),
-                          }),
-                          (0, e.jsx)("div", {
-                            children: (0, e.jsx)(B.Yh, {
-                              label: (0, t.we)(
-                                "#RSSManager_CreateFeed_Permissions_v1",
-                              ),
-                              onChange: this.OnChangePermissionsCreateFeed,
-                              checked: !!this.state.bPermissions,
-                            }),
-                          }),
-                          (0, e.jsxs)("div", {
-                            children: [
-                              (0, e.jsx)(B.Yh, {
-                                label: (0, t.we)(
-                                  "#RSSManager_CreateFeed_Conduct_v1",
-                                ),
-                                onChange: this.OnChangeConductCreateFeed,
-                                checked: !!this.state.bConduct,
-                              }),
-                              (0, e.jsx)(g.uU, {
-                                href: j.TS.STORE_BASE_URL + "online_conduct/",
-                                children: (0, t.we)(
-                                  "#RSSManager_CreateFeed_Conduct_Link",
-                                ),
-                              }),
-                            ],
-                          }),
-                        ],
-                      }),
-                      (0, e.jsx)(B.wi, {
-                        children: (0, e.jsx)(B.CB, {
-                          bOKDisabled: !(
-                            this.state.bPermissions && this.state.bConduct
-                          ),
-                          onOK: this.OnCreateNewsFeed,
-                          onCancel: this.props.closeModal,
-                        }),
-                      }),
-                    ],
-                  }),
-                });
-              case "failure":
-                return (0, e.jsx)(N.KG, {
-                  strDescription: (0, t.we)("#RSSManager_PostEvent_Failure"),
-                  closeModal: this.props.closeModal,
-                  children: (0, e.jsx)("div", {
-                    children: (0, t.we)(
-                      "#Error_Description",
-                      this.state.eResult,
-                      this.state.strErrorMessage,
-                    ),
-                  }),
-                });
-              case "creating_feed":
-              case "waiting_post":
-                return (0, e.jsx)(N.o0, {
-                  strTitle: this.GetStrTitle(),
-                  strDescription: (0, t.we)("#RSSManager_PostEvent_InFlight"),
-                  closeModal: this.props.closeModal,
-                  children: (0, e.jsx)(T.t, { position: "center" }),
-                });
-              case "create_post":
-                return (0, e.jsx)(N.eV, {
-                  title: this.GetStrTitle(),
-                  children: (0, e.jsxs)(B.nB, {
-                    children: [
-                      (0, e.jsx)(B.a3, {
-                        children: (0, e.jsxs)("div", {
-                          children: [
-                            (0, e.jsx)("div", {
-                              children: (0, t.we)(
-                                "#RSSManager_PostEvent_CreatePost",
-                              ),
-                            }),
-                            (0, e.jsx)("div", {
-                              className: A.DialogPostTitle,
-                              children: this.props.newsData.title,
-                            }),
-                            (0, e.jsx)("br", {}),
-                            (0, e.jsx)("div", {
-                              children: (0, e.jsx)(B.Yh, {
-                                label: (0, t.we)(
-                                  "#RSSManager_PostEvent_CreatePost_Draft",
-                                ),
-                                onChange: this.OnChangeDraftMode,
-                                checked: !!this.state.bDraftMode,
-                              }),
-                            }),
-                          ],
-                        }),
-                      }),
-                      (0, e.jsx)(B.wi, {
-                        children: (0, e.jsx)(B.CB, {
-                          onOK: this.OnCreatePost,
-                          onCancel: this.props.closeModal,
-                        }),
-                      }),
-                    ],
-                  }),
-                });
-              case "update_post":
-                return (0, e.jsx)(N.eV, {
-                  title: this.GetStrTitle(),
-                  children: (0, e.jsxs)(B.nB, {
-                    children: [
-                      (0, e.jsx)(B.a3, {
-                        children: (0, e.jsxs)("div", {
-                          children: [
-                            (0, e.jsx)("div", {
-                              children: (0, t.we)(
-                                "#RSSManager_PostEvent_UpdatePost",
-                              ),
-                            }),
-                            (0, e.jsx)("br", {}),
-                            (0, e.jsx)("div", {
-                              className: A.DialogPostTitle,
-                              children: this.props.newsData.title,
-                            }),
-                            (0, e.jsx)("br", {}),
-                          ],
-                        }),
-                      }),
-                      (0, e.jsx)(B.wi, {
-                        children: (0, e.jsx)(B.CB, {
-                          onOK: this.OnCreatePost,
-                          onCancel: this.props.closeModal,
-                        }),
-                      }),
-                    ],
-                  }),
-                });
-              case "success":
-                return (0, e.jsx)(N.o0, {
-                  strTitle: this.GetStrTitle(),
-                  strDescription: (0, t.we)(
-                    this.props.newsData
-                      ? "#RSSManager_PostEvent_Success"
-                      : "#RSSManager_PostEvent_Success_feed",
-                  ),
-                  closeModal: this.props.closeModal,
-                  bAlertDialog: !0,
-                  children:
-                    !!this.state.eventGID &&
-                    (0, e.jsx)("a", {
-                      href:
-                        j.TS.COMMUNITY_BASE_URL +
-                        "gid/" +
-                        this.props.admin
-                          .GetClanSteamID()
-                          .ConvertTo64BitString() +
-                        "/partnerevents/edit/" +
-                        this.state.eventGID,
-                      children: (0, t.we)("#RSSManager_PostEvent_EventLink"),
-                    }),
-                });
-            }
-          }
-        };
-        ee([p.oI], W.prototype, "OnCreateNewsFeed", 1),
-          ee([p.oI], W.prototype, "DoCreateNewsFeed", 1),
-          ee([p.oI], W.prototype, "OnCreatePost", 1),
-          ee([p.oI], W.prototype, "DoCreatePost", 1),
-          ee([p.oI], W.prototype, "OnChangeDraftMode", 1),
-          ee([p.oI], W.prototype, "OnChangePermissionsCreateFeed", 1),
-          ee([p.oI], W.prototype, "OnChangeConductCreateFeed", 1),
-          ee([p.oI], W.prototype, "GetStrTitle", 1);
-        let We = W;
-      },
-      17809: (re, Ae, i) => {
-        "use strict";
-        i.d(Ae, { d: () => Ht });
-        var e = i(7850),
-          P = i(19367),
-          S = i(90626),
-          s = i(3685),
-          j = i(85528),
-          ce = i(7638),
-          k = i(79118),
-          V = i(18210),
-          K = i(3166),
-          me = i(75779),
-          U = i(80902),
-          x = i(72604),
-          z = i(72609);
-        function H() {
-          return typeof self < "u" ? self.origin : "store";
-        }
-        async function B() {
-          const v = new URLSearchParams(),
-            h = H();
-          h && v.set("origin", h);
-          const b = `${z.TS.STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatcounts?${v}`,
-            R = await fetch(b);
-          if (!R.ok) throw new Error(`${b} answered ${R.status}`);
-          const G = await R.json();
-          if (G?.success != x.R || !G.counts)
-            throw new Error(`${b} answered EResult ${G?.success}`);
-          return G.counts;
-        }
-        const O = 300 * 1e3;
-        function Q() {
-          return ["DeckCompatCounts"];
-        }
-        function _() {
-          return { queryKey: Q(), queryFn: () => B(), staleTime: O, retry: !1 };
-        }
-        function J() {
-          const { data: v } = (0, U.I)(_());
-          return v;
-        }
-        function N(v, h) {
-          switch (h) {
-            case me.sd:
-              return v?.playable;
-            case me.V8:
-              return v?.unsupported;
-            default:
-              return v?.verified;
-          }
-        }
-        var I = i(70187),
-          T = i(7379),
-          g = i(64703),
-          w = i(6878),
-          m = i(99412),
-          t = i(47610),
-          l = i(18860),
-          p = i(41635),
-          A = i(25792),
-          Y = i(85599),
-          $ = i(5565);
-        const ue = S.Fragment;
-        function ve(v) {
-          const {
-              reservationPackageID: h,
-              depositPackageID: b,
-              bIsPreview: R,
-              psuLessPackageID: G,
-              strOutOfStockOverride: q,
-              strDeliveryOverride: te,
-              bDeliveryOverrideOnlyIfOutOfStock: Me,
-              section: Be,
-            } = v,
-            { data: pe } = (0, t.DR)(h),
-            { data: Ce } = (0, t.DR)(G),
-            Pe = (0, S.useMemo)(
-              () => [
-                {
-                  unique_id: "reservation_bbcode_" + h,
-                  reservation_package: h,
-                  deposit_package: b,
-                  localized_reservation_desc: (0, p.$Y)([], m.bP9, null),
-                  localized_out_of_stock_override: (0, p.$Y)(
-                    [q || null],
-                    m.bP9,
-                    null,
-                  ),
-                  localized_delivery_override_desc: (0, p.$Y)(
-                    [te || null],
-                    m.bP9,
-                    null,
-                  ),
-                  override_delivery_only_out_of_stock: !!Me,
-                  psu_less_package: G,
-                },
-              ],
-              [h, b, q, te, Me, G],
-            );
-          if (!pe || (G && !Ce))
-            return (0, e.jsx)(Y.t, {
-              string: (0, V.we)("#Loading"),
-              size: "small",
-              position: "center",
-            });
-          const Ve = !z.iA.logged_in || !pe.account_restricted_from_purchasing,
-            De =
-              pe.reservation_state == l.G.k_EPurchaseReservationState_Reserved
-                ? pe
-                : void 0;
-          return (0, e.jsxs)(A.tH, {
-            children: [
-              (0, e.jsx)(S.Suspense, {
-                fallback: null,
-                children: (0, e.jsx)(ue, {
-                  bIsPreview: !!R,
-                  rgReservationDef: Pe,
-                }),
-              }),
-              !!pe.allow_purchase_in_country &&
-                (0, e.jsxs)("div", {
-                  className: Pe[0].unique_id,
-                  children: [
-                    (0, e.jsx)($.bk, {
-                      reservationDef: Pe[0],
-                      hardwareDetail: pe,
-                      bPSULessModel: !1,
-                      reservedHardwareDetail: De,
-                    }),
-                    Ve &&
-                      (0, e.jsx)($.pc, {
-                        section: Be,
-                        reservationDef: Pe[0],
-                        hardwareDetail: pe,
-                        reservedHardwareDetail: De,
-                      }),
-                    Ce &&
-                      Ce?.allow_purchase_in_country &&
-                      (0, e.jsx)($.bk, {
-                        reservationDef: Pe[0],
-                        hardwareDetail: Ce,
-                        bPSULessModel: !0,
-                        reservedHardwareDetail: void 0,
-                      }),
-                  ],
-                }),
-            ],
-          });
-        }
-        function xe(v) {
-          if (v?.bDepositRequired) {
-            if (
-              v.rgDepositPackageInfo &&
-              v.rgDepositPackageInfo?.length > 0 &&
-              v.rgDepositPackageInfo.filter((h) => h.bVisible).length == 0 &&
-              v?.rgReservationPackageInfo &&
-              v?.rgReservationPackageInfo?.length > 0 &&
-              v?.rgReservationPackageInfo.filter((h) => h.bVisible).length == 0
-            )
-              return !1;
-          } else if (
-            v?.rgReservationPackageInfo &&
-            v?.rgReservationPackageInfo?.length > 0 &&
-            v?.rgReservationPackageInfo.filter((h) => h.bVisible).length == 0
-          )
-            return !1;
-          return !0;
-        }
-        var Ie = i(21035),
-          Ne = i(72865),
-          qe = i(73371),
-          ee = i.n(qe),
-          we = i(36707),
-          ae = i(53041),
-          se = i(10026),
-          X = i.n(se),
-          W = i(19298),
-          We = i(11996),
-          M = i(19047),
-          y = i(36118),
-          L = i(47689),
-          E = i(89926),
-          Z = i(32545),
-          oe = i.n(Z);
-        function fe(v) {
-          const { appID: h, classOverride: b, styleOverride: R } = v,
-            [G, q] = (0, S.useState)(!1),
-            te = (0, L.m)("GameHoverFollowButton"),
-            { elDialogElement: Me, fnShowLogonDialog: Be } = (0, E.l)(),
-            pe = (0, We.Fh)(h),
-            { mutateAsync: Ce } = (0, M.L)(h, !pe, void 0),
-            Pe = async (Ve) => {
-              Ve.preventDefault(),
-                Ve.stopPropagation(),
-                K.iA.logged_in
-                  ? (q(!0), await Ce(), te.token.reason || q(!1))
-                  : Be();
-            };
-          return (0, e.jsxs)(W.Z, {
-            className: (0, we.A)(oe().FollowButton, b),
-            onClick: Pe,
-            style: R,
-            children: [
-              pe ? (0, e.jsx)(y.pPV, {}) : (0, e.jsx)(y.c9e, {}),
-              (0, e.jsx)("div", {
-                className: (0, we.A)(
-                  oe().FollowButtonText,
-                  G && oe().FollowLoadingText,
-                  "FollowGameButton",
-                ),
-                children: (0, V.we)(
-                  pe ? "#Sale_StopFollowingGame" : "#Sale_FollowGame",
-                ),
-              }),
-              Me,
-            ],
-          });
-        }
-        function ge(v) {
-          const { appid: h, color: b, bgcolor: R } = v,
-            G = (0, Ne.n9)();
-          return (0, e.jsx)(fe, {
-            appID: h,
-            classOverride: (0, we.A)(
-              ee().FollowGameButtonNotTop,
-              X().BBCodeFollowButton,
-            ),
-            styleOverride: { color: b, backgroundColor: R },
-          });
-        }
-        function he(v) {
-          const h = Number(v.args.appid);
-          if (!h) return null;
-          const b = (0, ae.O)(v.args.color, "black"),
-            R = (0, ae.O)(v.args.bgcolor, "white");
-          return (0, e.jsx)(ge, { appid: h, color: b, bgcolor: R });
-        }
-        var le = i(20681),
-          Qe = i(18657),
-          mt = i.n(Qe),
-          ut = i(63026);
-        function St(v) {
-          const { clanAccountID: h, color: b, bgcolor: R } = v;
-          (0, le.mx)();
-          const [G, q] = S.useState(!1);
-          return (0, e.jsx)("div", {
-            className: (0, we.A)(mt().BBCodeFollowButton, G && mt().isHovered),
-            onMouseEnter: () => q(!0),
-            onMouseLeave: () => q(!1),
-            children: (0, e.jsx)(ut.Q, {
-              nCreatorAccountID: h,
-              classOverride: ee().FollowGameButtonNotTop,
-              styleOverride: { color: b, backgroundColor: R },
-              followType: "group",
-            }),
-          });
-        }
-        function yt(v) {
-          const { event: h } = v.context,
-            b = Number(v.args.groupid) || h?.clanSteamID.GetAccountID();
-          if (!b) return null;
-          const R = (0, ae.O)(v.args.color, "black"),
-            G = (0, ae.O)(v.args.bgcolor, "white");
-          return (0, e.jsx)(St, { clanAccountID: b, color: R, bgcolor: G });
-        }
-        var Ye = i(83482),
-          gt = i(44267),
-          At = i(9202),
-          ht = i.n(At),
-          et = i(29522);
-        function xt(v) {
-          const { appid: h, color: b, bgcolor: R } = v,
-            G = (0, Ne.n9)(),
-            q = (0, et.$5)(h),
-            te = (0, Ye.L3)(G);
-          return (0, e.jsx)("div", {
-            className: ht().WishlistHoverCtn,
-            children: (0, e.jsx)(gt.E, {
-              snr: te,
-              id: q,
-              classOverride: (0, we.A)(
-                ee().WishlistButtonNotTop,
-                ht().BBCodeWishlistButton,
-                "WishlistButton",
-              ),
-              styleOverride: { color: b, backgroundColor: R },
-              bShowInGamepadUI: !0,
-            }),
-          });
-        }
-        function It(v) {
-          const h = Number(v.args.appid);
-          if (!h) return null;
-          const b = (0, ae.O)(v.args.color, "black"),
-            R = (0, ae.O)(v.args.bgcolor, "white");
-          return (0, e.jsx)(xt, { appid: h, color: b, bgcolor: R });
-        }
-        let ze = null;
-        function wt() {
+          let n = new c.w2();
+          n.set_gid(e.post.gid),
+            n.set_news_feed_gid(this.m_strRSSGID),
+            n.set_title(e.post.title),
+            n.set_url(e.post.url),
+            n.set_author(e.post.author),
+            n.set_rtime_date(e.post.rtime_date),
+            n.set_contents(e.post.contents),
+            n.set_commited(e.post.commited),
+            n.set_deleted(e.post.deleted),
+            n.set_tags(e.post.tags),
+            n.set_appids(e.post.appids),
+            n.set_recommendation_state(e.post.recommendation_state),
+            n.set_received_for_free(e.post.received_for_free),
+            n.set_received_compensation(e.post.received_compensation),
+            n.set_blurb(e.post.blurb);
+          const s = d.w.Init(c.vB);
+          s.Body().set_post(n), s.Body().set_draft(t);
+          let a = await c.bH.PublishPartnerEvent(
+            S.Get().GetCuratorTransport(),
+            s,
+          );
           return (
-            ze == null &&
-              (ze = new Map([
-                ["wishlist", { Constructor: It, autocloses: !1 }],
-                ["followgroup", { Constructor: yt, autocloses: !1 }],
-              ])),
-            ze
+            a.GetEResult() != u.R
+              ? console.error(
+                  "CreatePost error: " + a.GetEMsg() + " " + a.GetEResult(),
+                )
+              : ((0, i.h5)(() => {
+                  let t = {
+                    url: e.post.url,
+                    clan_event_gid: a.Body().clan_event_gid(),
+                    news_post_gid: a.Body().news_post_gid(),
+                  };
+                  this.m_mapURLToPosted.set(e.post.url, t);
+                }),
+                p.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                  this.m_clanSteamID,
+                  a.Body().clan_event_gid(),
+                  0,
+                )),
+            a
           );
         }
-        var Mt = i(37656),
-          Re = i(29868),
-          Le = i(24642);
-        function Fe(v) {
-          return v < 10 ? "0" + v : v;
+      }
+      (0, s.Cg)([i.sH], v.prototype, "m_strRSSFeedURL", void 0),
+        (0, s.Cg)([i.sH], v.prototype, "m_strRSSGID", void 0),
+        (0, s.Cg)([i.sH], v.prototype, "m_rtimeRSSLastChecked", void 0),
+        (0, s.Cg)([i.sH], v.prototype, "m_nPollIntervalSeconds", void 0),
+        (0, s.Cg)([i.sH], v.prototype, "m_eRSSFeedLanguage", void 0),
+        (0, s.Cg)([i.sH], v.prototype, "m_eCuratorLanguage", void 0),
+        (0, s.Cg)([i.sH], v.prototype, "m_mapURLToPosted", void 0);
+      class S {
+        constructor() {
+          (0, i.Gn)(this);
         }
-        function Ke(v) {
-          const { giveawayid: h } = v,
-            b = (0, Mt.w)(h),
-            {
-              bLoadingGiveawayInfo: R,
-              winner_count: G,
-              closed: q,
-              seconds_until_drawing: te,
-            } = b;
-          return R
-            ? null
-            : (0, e.jsxs)("div", {
-                className: Re.countdownCtn,
+        static s_CuratorAdminStore;
+        m_transport;
+        m_mapClanAccountToAdmin = new Map();
+        m_defaultAdmin = void 0;
+        m_mapClanToEventRSSStats = new Map();
+        m_setPendingClanInfo = new Set();
+        m_PendingClanInfoPromise;
+        m_PendingClanInfoResolve;
+        m_cClanInfoRequestsInFlight = 0;
+        GetCuratorTransport() {
+          return (
+            (0, g.wT)(
+              this.m_transport,
+              "Expects Transpoate to be initialized but it is now",
+            ),
+            this.m_transport
+          );
+        }
+        GetDefaultAdmin() {
+          return this.m_defaultAdmin;
+        }
+        GetRSSAdminStats(e) {
+          return this.m_mapClanToEventRSSStats.get(e);
+        }
+        static Get() {
+          return (
+            S.s_CuratorAdminStore ||
+              ((S.s_CuratorAdminStore = new S()), S.s_CuratorAdminStore.Init()),
+            S.s_CuratorAdminStore
+          );
+        }
+        Init() {
+          let e = (0, o.Tc)("curatoradmin", "application_config");
+          this.ValidateStoreDefault(e) &&
+            ((this.m_defaultAdmin = new v(e)),
+            this.m_mapClanAccountToAdmin.set(e.clanid, this.m_defaultAdmin)),
+            this.ValidateWebAPI(e) &&
+              (this.m_transport = new l.D(
+                o.TS.WEBAPI_BASE_URL,
+                e.webapi_token,
+              ).GetServiceTransport());
+        }
+        ValidateStoreDefault(e) {
+          return e && "object" == typeof e && "number" == typeof e.clanid;
+        }
+        ValidateWebAPI(e) {
+          return e && "string" == typeof e.webapi_token;
+        }
+        BIsLoggedIn() {
+          return o.iA.logged_in;
+        }
+        BHavePendingInfoRequests() {
+          return (
+            this.m_setPendingClanInfo.size > 0 ||
+            this.m_cClanInfoRequestsInFlight > 0
+          );
+        }
+        BIsLoadingClanID(e) {
+          return this.m_setPendingClanInfo.has(e);
+        }
+        BHasClanIDLoaded(e) {
+          return this.m_mapClanAccountToAdmin.has(e);
+        }
+        GetRSSAdminForClanAccountID(e) {
+          return this.m_mapClanAccountToAdmin.get(e);
+        }
+        async QueueCuratorAdminInfoLoad(e) {
+          return e
+            ? this.m_mapClanAccountToAdmin.has(e)
+              ? Promise.resolve()
+              : (this.m_setPendingClanInfo.size ||
+                  ((this.m_PendingClanInfoPromise = new Promise(
+                    (e) => (this.m_PendingClanInfoResolve = e),
+                  )),
+                  window.setTimeout(() => this.FlushPendingClanInfo(), 25)),
+                this.m_setPendingClanInfo.add(e),
+                this.m_PendingClanInfoPromise)
+            : ((0, g.wT)(!e, "unexpected clanid of zero or undefined: " + e),
+              Promise.resolve());
+        }
+        async FlushPendingClanInfo() {
+          const e = this.m_PendingClanInfoResolve,
+            t = Array.from(this.m_setPendingClanInfo);
+          (this.m_PendingClanInfoPromise = void 0),
+            (this.m_PendingClanInfoResolve = void 0),
+            this.m_setPendingClanInfo.clear(),
+            await this.LoadBatchedClanRSSAdminInfo(t),
+            e();
+        }
+        EnsureClanInfoLoaded(e) {
+          const t = e.filter(
+            (e) =>
+              !this.m_mapClanAccountToAdmin.has(e) &&
+              this.m_setPendingClanInfo.has(e),
+          );
+          return (
+            t.forEach((e) => this.QueueCuratorAdminInfoLoad(e)),
+            t.length > 0 && this.m_PendingClanInfoPromise
+              ? this.m_PendingClanInfoPromise
+              : Promise.resolve()
+          );
+        }
+        async LoadBatchedClanRSSAdminInfo(e) {
+          this.m_cClanInfoRequestsInFlight++;
+          let t = e.filter((e) => !this.m_mapClanAccountToAdmin.has(e));
+          for (; t.length > 0; ) {
+            const n = Math.min(50, t.length);
+            t.slice(0, n);
+            t = t.slice(n);
+            try {
+              const t =
+                  o.TS.STORE_BASE_URL + "events_admin/ajaxgetrssadmininfo",
+                n = { clanids: e },
+                s = await r().get(t, { params: n, withCredentials: !0 });
+              if (
+                s &&
+                s.data &&
+                s.data.success == u.R &&
+                s.data.rss_admin_infos &&
+                Array.isArray(s.data.rss_admin_infos)
+              )
+                (0, i.h5)(() => {
+                  s.data.rss_admin_infos.forEach((e) => {
+                    this.m_mapClanAccountToAdmin.set(e.clanid, new v(e));
+                  }),
+                    s.data.rss_event_stats.forEach((e) => {
+                      this.m_mapClanToEventRSSStats.set(e.clan_account_id, e);
+                    });
+                });
+              else {
+                const e = (0, _.H)(s.data || {});
+                console.error(
+                  "LoadBatchedClanRSSAdminInfo error:" + e.strErrorMsg,
+                  e,
+                );
+              }
+            } catch (e) {
+              const t = (0, _.H)(e);
+              console.error(
+                "LoadBatchedClanRSSAdminInfo catched error:" + t.strErrorMsg,
+                t,
+              );
+            }
+          }
+          this.m_cClanInfoRequestsInFlight--;
+        }
+      }
+      (0, s.Cg)([i.sH.shallow], S.prototype, "m_mapClanAccountToAdmin", void 0),
+        (0, s.Cg)(
+          [i.sH.shallow],
+          S.prototype,
+          "m_mapClanToEventRSSStats",
+          void 0,
+        );
+    },
+    63585: (e, t, n) => {
+      "use strict";
+      n.d(t, { q: () => H, A: () => O });
+      var s = n(34629),
+        a = n(7850),
+        r = n(41735),
+        i = n.n(r),
+        o = n(98130),
+        l = n(78327),
+        d = n(17720);
+      class c {
+        static s_CuratorStore;
+        m_mapClanToRecommendation = new Map();
+        static Get() {
+          return (
+            c.s_CuratorStore ||
+              ((c.s_CuratorStore = new c()),
+              c.s_CuratorStore.Init(),
+              (window.g_CuratorRecommendationStore = c.s_CuratorStore)),
+            c.s_CuratorStore
+          );
+        }
+        Init() {}
+        GetReviewForApp(e, t) {
+          if (this.m_mapClanToRecommendation.has(e.GetAccountID())) {
+            return this.m_mapClanToRecommendation.get(e.GetAccountID()).get(t);
+          }
+        }
+        BHasReviewForApp(e, t) {
+          return Boolean(this.GetReviewForApp(e, t));
+        }
+        BHasReviewForAppByClanAccount(e, t) {
+          let n = d.b.InitFromClanID(e);
+          return Boolean(this.GetReviewForApp(n, t));
+        }
+        async LoadAppRecommendation(e, t) {
+          this.m_mapClanToRecommendation.has(e.GetAccountID()) ||
+            this.m_mapClanToRecommendation.set(e.GetAccountID(), new Map());
+          let n = this.m_mapClanToRecommendation.get(e.GetAccountID());
+          const s = [];
+          if (
+            (t.forEach((e) => {
+              n.has(e) || s.push(e);
+            }),
+            s.length > 0)
+          ) {
+            const t =
+                l.TS.STORE_BASE_URL +
+                "curator/" +
+                e.GetAccountID() +
+                "/admin/ajaxgetrecbyapps",
+              a = await i().get(t, {
+                params: {
+                  appids: s,
+                  cc: l.TS.COUNTRY || "US",
+                  l: l.TS.LANGUAGE,
+                },
+              }),
+              r = a && a.data;
+            r &&
+              r.rec_app &&
+              r.rec_app.forEach((e) => {
+                n.set(Number(e.appid), e);
+              });
+          }
+        }
+      }
+      var h = n(75844),
+        u = n(90626),
+        m = n(22837),
+        p = n(37085),
+        g = n(62641),
+        _ = n(70903),
+        v = n(6379),
+        S = n(56283),
+        w = n(81301),
+        C = n(95695),
+        b = n.n(C),
+        M = n(12037),
+        E = n(74568),
+        A = n(738),
+        R = n(22797),
+        f = n(51272),
+        y = n(52038),
+        B = n(56011),
+        T = n(61859),
+        x = n(68797),
+        j = n(84933),
+        I = n(71909),
+        P = n(62490),
+        D = n(41338),
+        F = n(56330),
+        G = n.n(F),
+        L = n(61336),
+        k = n(91675);
+      let U = class extends u.Component {
+        state = { strRssURL: o.A.Get().GetDefaultAdmin().GetRSSUrl() };
+        m_Admin = o.A.Get().GetDefaultAdmin();
+        OnChangeActualRSSURL(e) {
+          this.setState({ strRssURL: e.target.value });
+        }
+        OnCreateOrSaveFeed(e) {
+          e.preventDefault(),
+            (0, A.pg)(
+              (0, a.jsx)(q, {
+                strRSSUrl: this.state.strRssURL,
+                admin: this.m_Admin,
+              }),
+              (0, B.uX)(e),
+            );
+        }
+        OnRevert(e) {
+          e.preventDefault(),
+            this.setState({ strRssURL: this.m_Admin.GetRSSUrl() });
+        }
+        render() {
+          let e = Boolean(this.state.strRssURL === this.m_Admin.GetRSSUrl());
+          if (void 0 !== window.Prototype)
+            return window.location.reload(), null;
+          const t = (0, m.x6o)(
+              (0, m.LgB)(this.m_Admin.GetFeedLanguageHandleUnset()),
+            ),
+            n = o.A.Get().GetDefaultAdmin();
+          return (0, a.jsxs)("div", {
+            className: (0, y.A)(I.Ctn),
+            children: [
+              (0, a.jsxs)("div", {
+                className: "titleframe",
                 children: [
-                  !!q &&
-                    (0, e.jsx)("div", {
-                      className: Re.Closed,
-                      children:
-                        G > 0
-                          ? (0, V.we)("#Giveaway_Closed", (0, Le.D)(G))
-                          : (0, V.we)("#Giveaway_Closed_NoWinnerInfo"),
+                  (0, a.jsx)("h4", {
+                    children: (0, T.we)("#CuratorAdmin_RSSFeed_title"),
+                  }),
+                  (0, a.jsx)("p", {
+                    className: "subtitle",
+                    children: (0, T.we)("#CuratorAdmin_RSSFeed_desc"),
+                  }),
+                  (0, a.jsx)("p", {
+                    children: (0, T.PP)(
+                      "#CuratorAdmin_RSSFeed_doc_link",
+                      (0, a.jsx)("a", {
+                        href: "https://partner.steamgames.com/doc/store/news/rss",
+                        target: "_blank",
+                        children: (0, T.we)(
+                          "#CuratorAdmin_RSSFeed_doc_link_text",
+                        ),
+                      }),
+                    ),
+                  }),
+                  (0, a.jsx)("p", {
+                    className: I.DashboardBtn,
+                    children: (0, a.jsx)(f.uU, {
+                      href:
+                        l.TS.COMMUNITY_BASE_URL +
+                        "gid/" +
+                        this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
+                        "/partnerevents/",
+                      className: (0, y.A)(b().Button, b().Primary),
+                      children: (0, T.we)("#RSSManager_EventDashBoard"),
                     }),
-                  !q &&
-                    (0, e.jsxs)(S.Fragment, {
+                  }),
+                ],
+              }),
+              (0, a.jsxs)("div", {
+                className: "darkframe",
+                children: [
+                  (0, a.jsxs)("div", {
+                    className: I.LanguageRow,
+                    children: [
+                      (0, a.jsx)("span", {
+                        className: I.LanguageTitle,
+                        children: (0, T.we)("#CuratorAdmin_RSSFeed_lang_only"),
+                      }),
+                      (0, a.jsx)("span", {
+                        className: I.LanguageSet,
+                        children: t,
+                      }),
+                      (0, a.jsx)("a", {
+                        href:
+                          l.TS.COMMUNITY_BASE_URL +
+                          "gid/" +
+                          this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
+                          "/edit ",
+                        target: "_blank",
+                        className: (0, y.A)(b().Button, I.PreviewBtn),
+                        children: (0, T.we)(
+                          "#CuratorAdmin_RSSFeed_edit_language",
+                        ),
+                      }),
+                    ],
+                  }),
+                  Boolean(
+                    this.m_Admin.GetFeedLanguageHandleUnset() !=
+                      this.m_Admin.GetCuratorLanguage(),
+                  ) &&
+                    (0, a.jsx)("div", {
+                      className: (0, y.A)(I.LanguageRow, G().WarningIconLayout),
+                      children: (0, a.jsx)("span", {
+                        className: I.LanguageTitle,
+                        children: (0, T.we)(
+                          "#CuratorAdmin_Curator_lang_only",
+                          (0, T.we)(
+                            "#Language_" +
+                              (0, m.LgB)(this.m_Admin.GetCuratorLanguage()),
+                          ),
+                          t,
+                        ),
+                      }),
+                    }),
+                  (0, a.jsxs)("div", {
+                    className: (0, y.A)(b().FlexRowContainer, I.UrlSettingCtn),
+                    children: [
+                      (0, a.jsx)(S.pd, {
+                        className: I.RssInpu,
+                        type: "text",
+                        name: "link_url",
+                        id: "link_url",
+                        value: this.state.strRssURL,
+                        label: (0, T.we)("#CuratorAdmin_RSSFeed"),
+                        placeholder: (0, T.we)(
+                          "#CuratorAdmin_RSSFeed_placeholder",
+                        ),
+                        onChange: this.OnChangeActualRSSURL,
+                        mustBeURL: !0,
+                      }),
+                      (0, a.jsx)("a", {
+                        className: "btn_green_white_innerfade btn_medium",
+                        onClick: this.OnCreateOrSaveFeed,
+                        children: (0, a.jsx)("span", {
+                          children: (0, T.we)(
+                            e ? "#Button_Saved" : "#Button_Save",
+                          ),
+                        }),
+                      }),
+                      !e &&
+                        (0, a.jsx)("a", {
+                          onClick: this.OnRevert,
+                          className: "btn_grey_white_innerfade btn_medium",
+                          children: (0, T.we)("#Button_Revert"),
+                        }),
+                    ],
+                  }),
+                  (0, a.jsx)(z, { admin: n }),
+                  (0, a.jsx)("br", {}),
+                  (0, a.jsx)(H, { strRssURL: this.state.strRssURL, admin: n }),
+                ],
+              }),
+            ],
+          });
+        }
+      };
+      (0, s.Cg)([j.oI], U.prototype, "OnChangeActualRSSURL", null),
+        (0, s.Cg)([j.oI], U.prototype, "OnCreateOrSaveFeed", null),
+        (0, s.Cg)([j.oI], U.prototype, "OnRevert", null),
+        (U = (0, s.Cg)([h.PA], U));
+      const O = U;
+      let H = class extends u.Component {
+        state = { strParseRssURL: this.props.strRssURL, bLoadingPreview: !1 };
+        m_cancelSignal = i().CancelToken.source();
+        componentDidMount() {
+          const { admin: e } = this.props;
+          e.BHasFeedGID() &&
+            e.BHasSavedRSSURL() &&
+            e.GetRSSUrl() == this.props.strRssURL &&
+            this.OnLoadPreview();
+        }
+        componentWillUnmount() {
+          this.m_cancelSignal.cancel(
+            "PreviewRSSViewAndControl component unmounted",
+          );
+        }
+        RenderPreviews() {
+          let e = this.props.admin,
+            t = new Array();
+          if (this.state.previews) {
+            let n = this.state.previews;
+            (n = n.sort((t, n) => {
+              let s = e.MapArticleURLToClanEventGID(t.post.url),
+                a = e.MapArticleURLToClanEventGID(n.post.url),
+                r = s ? v.O3.GetClanEventModel(s) : null,
+                i = a ? v.O3.GetClanEventModel(a) : null;
+              return r && i
+                ? i.postTime - r.postTime
+                : r
+                  ? -1
+                  : i
+                    ? 1
+                    : n.post.rtime_date - t.post.rtime_date;
+            })),
+              n.forEach((n) => {
+                t.push(
+                  (0, a.jsx)(
+                    N,
+                    {
+                      newsData: n,
+                      admin: e,
+                      clanSteamID: e.GetClanSteamID(),
+                      fnGetRSSUrl: this.GetRSSPreviewURL,
+                    },
+                    "id: " + n.unique_id,
+                  ),
+                );
+              });
+          }
+          return t;
+        }
+        GetRSSPreviewURL() {
+          return this.state.strParseRssURL;
+        }
+        OnLoadPreview() {
+          this.setState(
+            {
+              bLoadingPreview: !0,
+              previews: void 0,
+              strPreviewURL: this.props.strRssURL,
+              strPreviewErrorMsg: void 0,
+            },
+            this.DoLoadPreview,
+          );
+        }
+        async DoLoadPreview() {
+          let e = this.props.admin,
+            t = await e.PreviewPartnerEventsFromRSSFeed(this.props.strRssURL);
+          if (t && t.GetEResult() == p.R) {
+            let n = t.Body().toObject();
+            this.setState(
+              { strParseRssURL: n.rss_url, bLoadingPreview: !0 },
+              async () => {
+                await e.FetchPublishedEvents(Math.max(100, n.results.length));
+                let t = new Array(),
+                  s = new Array();
+                if (
+                  (n.results.forEach((n) => {
+                    let a = e.MapArticleURLToClanEventGID(n.post.url);
+                    a && t.push(a),
+                      n.post.appids &&
+                        1 === n.post.appids.length &&
+                        n.post.recommendation_state !== _.D$.w4 &&
+                        s.push(n.post.appids[0]);
+                  }),
+                  t.length > 0 &&
+                    (await v.O3.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
+                      t,
+                      null,
+                      this.m_cancelSignal,
+                    )),
+                  s.length > 0)
+                ) {
+                  const t = e.GetClanSteamID();
+                  await c.Get().LoadAppRecommendation(t, s);
+                }
+                this.setState({ previews: n.results, bLoadingPreview: void 0 });
+              },
+            );
+          } else
+            this.setState({
+              bLoadingPreview: void 0,
+              strPreviewErrorMsg: (0, T.we)(
+                "#Error_Description",
+                t.GetEResult(),
+                t.Hdr().error_message(),
+              ),
+            });
+        }
+        render() {
+          const e = this.RenderPreviews();
+          let t = this.props.admin;
+          return (0, a.jsxs)("div", {
+            children: [
+              Boolean(
+                !this.state.bLoadingPreview &&
+                  this.state.strPreviewURL !== this.props.strRssURL,
+              ) &&
+                (0, a.jsx)("div", {
+                  className: I.PreviewListBtn,
+                  children: (0, a.jsx)(S.$n, {
+                    disabled: !S.pd.validateUrl(this.props.strRssURL),
+                    onClick: this.OnLoadPreview,
+                    children: (0, T.we)("#CuratorAdmin_RSSFeed_preview"),
+                  }),
+                }),
+              this.state.bLoadingPreview &&
+                (0, a.jsx)(R.t, {
+                  string: (0, T.we)("#Loading"),
+                  size: "medium",
+                  position: "center",
+                }),
+              this.state.strPreviewErrorMsg &&
+                (0, a.jsx)("div", {
+                  className: b().ErrorMsg,
+                  children: this.state.strPreviewErrorMsg,
+                }),
+              Boolean(e.length > 0) &&
+                (0, a.jsxs)("div", {
+                  children: [
+                    (0, a.jsx)("p", {
+                      children: (0, T.we)(
+                        "#RSSManager_PreviewInfo",
+                        this.state.strPreviewURL,
+                      ),
+                    }),
+                    (0, a.jsx)("div", {
+                      className: I.PreviewListCtn,
+                      children: e,
+                    }),
+                    (0, a.jsx)("p", {
+                      className: I.DashboardBtn,
+                      children: (0, a.jsx)(f.uU, {
+                        href:
+                          l.TS.COMMUNITY_BASE_URL +
+                          "gid/" +
+                          t.GetClanSteamID().ConvertTo64BitString() +
+                          "/partnerevents/",
+                        className: (0, y.A)(b().Button, b().Primary),
+                        children: (0, T.we)("#RSSManager_EventDashBoard"),
+                      }),
+                    }),
+                  ],
+                }),
+            ],
+          });
+        }
+      };
+      (0, s.Cg)([j.oI], H.prototype, "GetRSSPreviewURL", null),
+        (0, s.Cg)([j.oI], H.prototype, "OnLoadPreview", null),
+        (H = (0, s.Cg)([h.PA], H));
+      let z = class extends u.Component {
+        state = {};
+        OnToggleChannelAutomation(e) {
+          e
+            ? (this.setState({ strErrorMessage: void 0 }),
+              (0, A.pg)(
+                (0, a.jsx)(q, {
+                  strRSSUrl: this.props.admin.GetRSSUrl(),
+                  admin: this.props.admin,
+                  bActivatePooling: !0,
+                }),
+                window,
+              ))
+            : this.setState(
+                {
+                  strErrorMessage: void 0,
+                  strReasonWaiting: (0, T.we)("#Saving"),
+                },
+                this.BDisableAutomation,
+              );
+        }
+        async BDisableAutomation() {
+          this.props.admin
+            .UpdateAutomation(!1)
+            .catch(() =>
+              this.setState({
+                strErrorMessage: (0, T.we)(
+                  "#RSSManager_Status_Automation_DisableFailed",
+                ),
+              }),
+            )
+            .finally(() => this.setState({ strReasonWaiting: void 0 }));
+        }
+        async OnQueueScan(e) {
+          this.setState({
+            strReasonWaiting: (0, T.we)("#CuratorAdmin_RSSFeed_scannow"),
+          }),
+            this.props.admin
+              .CheckForNewUpdate()
+              .then(() =>
+                (0, A.pg)(
+                  (0, a.jsx)(E.o0, {
+                    strTitle: (0, T.we)("#CuratorAdmin_RSSFeed_scannow"),
+                    strDescription: (0, T.we)("#CuratorAdmin_RSSFeed_queued"),
+                  }),
+                  (0, B.uX)(e),
+                ),
+              )
+              .catch((t) =>
+                (0, A.pg)(
+                  (0, a.jsx)(E.KG, {
+                    strTitle: (0, T.we)("#CuratorAdmin_RSSFeed_scannow"),
+                    strDescription: (0, x.H)(t).strErrorMsg,
+                  }),
+                  (0, B.uX)(e),
+                ),
+              )
+              .finally(() => this.setState({ strReasonWaiting: void 0 }));
+        }
+        render() {
+          return this.props.admin.BHasSavedRSSURL()
+            ? (0, a.jsxs)("div", {
+                children: [
+                  Boolean(this.state.strReasonWaiting) &&
+                    (0, a.jsx)(R.t, {
+                      size: "medium",
+                      string: this.state.strReasonWaiting,
+                    }),
+                  Boolean(this.state.strErrorMessage) &&
+                    (0, a.jsx)("div", {
+                      className: I.Error,
+                      children: this.state.strErrorMessage,
+                    }),
+                  (0, a.jsx)(S.RF, {
+                    onChange: this.OnToggleChannelAutomation,
+                    label: (0, T.we)("#RSSManager_Status_Automation_Desc"),
+                    checked: this.props.admin.BIsAutomationEnabled(),
+                    description: "",
+                  }),
+                  this.props.admin.BIsAutomationEnabled() &&
+                    (0, a.jsxs)("p", {
                       children: [
-                        te <= 0
-                          ? (0, e.jsxs)("div", {
-                              className: Re.Throbber,
+                        (0, T.we)("#CuratorAdmin_RSSFeed_lastscanned"),
+                        " ",
+                        (0, T.TW)(
+                          this.props.admin.GetRSSLastRtimeChecked(),
+                          !1,
+                        ),
+                        "  @ ",
+                        (0, k.KC)(this.props.admin.GetRSSLastRtimeChecked(), {
+                          bForce24HourClock: !1,
+                        }),
+                        " ",
+                        (0, a.jsx)("a", {
+                          onClick: this.OnQueueScan,
+                          children: (0, a.jsx)("span", {
+                            children: (0, T.we)(
+                              "#CuratorAdmin_RSSFeed_scannow",
+                            ),
+                          }),
+                        }),
+                      ],
+                    }),
+                ],
+              })
+            : null;
+        }
+      };
+      (0, s.Cg)([j.oI], z.prototype, "OnToggleChannelAutomation", null),
+        (0, s.Cg)([j.oI], z.prototype, "OnQueueScan", null),
+        (z = (0, s.Cg)([h.PA], z));
+      let N = class extends u.Component {
+        state = {
+          clan_event_gid: this.props.admin.MapArticleURLToClanEventGID(
+            this.props.newsData.post.url,
+          ),
+          bLoadingPartnerEvent: Boolean(
+            this.props.admin.MapArticleURLToClanEventGID(
+              this.props.newsData.post.url,
+            ),
+          ),
+        };
+        componentDidMount() {
+          this.DoPartnerEventLoad();
+        }
+        async DoPartnerEventLoad() {
+          if (this.state.clan_event_gid) {
+            let e = this.props.admin.GetClanSteamID(),
+              t = v.O3.GetClanEventModel(this.state.clan_event_gid);
+            t ||
+              (t = await v.O3.LoadHiddenPartnerEvent(
+                e,
+                this.state.clan_event_gid,
+              )),
+              this.setState({
+                bLoadingPartnerEvent: !1,
+                existingEventModel: t,
+              });
+          }
+        }
+        OnOpenPreviewAsPartnerEvent(e) {
+          const { newsData: t, clanSteamID: n } = this.props;
+          let s = new g.lh();
+          (s.GID = "PreviewPartnerEventRow_0"),
+            (s.clanSteamID = n),
+            (s.postTime = Date.now() / 1e3),
+            (s.startTime = Date.now() / 1e3),
+            (s.type = m.uYK),
+            s.vecTags.push("auto_rssfeed"),
+            s.vecTags.push("curator"),
+            s.vecTags.push("curator_public"),
+            s.name.set(m.Bhc, t.title),
+            s.description.set(m.Bhc, t.desc),
+            this.ValidateJSONDefault(t.jsondata) && (s.jsondata = t.jsondata),
+            s.jsondata.read_more_link ||
+              (s.jsondata.read_more_link = t.unique_id);
+          let a = this.props.admin.GetFeedLanguageHandleUnset();
+          !s.jsondata.localized_summary &&
+            t.post.event_summary &&
+            ((s.jsondata.localized_summary = (0, P.$Y)(
+              s.jsondata.localized_summary,
+              m.bP9,
+              null,
+            )),
+            (s.jsondata.localized_summary[m.Bhc] = t.post.event_summary),
+            a != m.Bhc &&
+              (s.jsondata.localized_summary[a] = t.post.event_summary)),
+            !s.jsondata.localized_subtitle &&
+              t.post.event_subtitle &&
+              ((s.jsondata.localized_subtitle = (0, P.$Y)(
+                s.jsondata.localized_subtitle,
+                m.bP9,
+                null,
+              )),
+              (s.jsondata.localized_subtitle[m.Bhc] = t.post.event_subtitle),
+              a != m.Bhc &&
+                (s.jsondata.localized_subtitle[a] = t.post.event_subtitle)),
+            this.ShowModalEvent(s);
+        }
+        OnViewEvent() {
+          this.ShowModalEvent(
+            v.O3.GetClanEventModel(this.state.clan_event_gid),
+          );
+        }
+        ShowModalEvent(e) {
+          let t = document.getElementById("curator_header_area_ctn_id");
+          t &&
+            (e
+              ? t.classList.add("curator_header_area_ctn_hideme")
+              : t.classList.remove("curator_header_area_ctn_hideme")),
+            this.setState({ eventModelForPreviewNow: e });
+        }
+        ValidateJSONDefault(e) {
+          const t = e;
+          return !(!t || Array.isArray(t) || "object" != typeof t);
+        }
+        OnPostNewsEvent(e) {
+          const { newsData: t, fnGetRSSUrl: n } = this.props;
+          (0, A.pg)(
+            (0, a.jsx)(q, {
+              newsData: t,
+              admin: this.props.admin,
+              strRSSUrl: n(),
+              fnClanEventGID: this.OnClanEventCreateSuccess,
+            }),
+            (0, B.uX)(e),
+          );
+        }
+        OnUpdateNewsEvent(e) {
+          const { newsData: t, fnGetRSSUrl: n } = this.props;
+          (0, A.pg)(
+            (0, a.jsx)(q, {
+              newsData: t,
+              strRSSUrl: n(),
+              admin: this.props.admin,
+              fnClanEventGID: this.OnClanEventCreateSuccess,
+              bUpdatePost: !0,
+            }),
+            (0, B.uX)(e),
+          );
+        }
+        HideModalEvent() {
+          this.state.eventModelForPreviewNow && this.ShowModalEvent(void 0);
+        }
+        OnClanEventCreateSuccess(e) {
+          this.setState(
+            { clan_event_gid: e, bLoadingPartnerEvent: !0 },
+            this.DoPartnerEventLoad,
+          );
+        }
+        OnShowRawRSS(e) {
+          const t = this.props.newsData.rss_message,
+            n = (() => {
+              const e = t.match(/<entry[^>]*>([\s\S]*)<\/entry>/m);
+              if (!e) return t;
+              const n = e[1].match(/<content[^>]*>[\s\S]*<\/content>/m);
+              return n ? (0, D.EK)(n[0]) : e[0];
+            })();
+          (0, A.pg)(
+            (0, a.jsx)(E.o0, {
+              bAlertDialog: !0,
+              strTitle: (0, T.we)("#RSSManager_PostEvent_ViewRaw"),
+              children: (0, a.jsx)("textarea", {
+                className: I.RawRSS,
+                value: n,
+                disabled: !0,
+              }),
+            }),
+            (0, B.uX)(e),
+          );
+        }
+        render() {
+          const { newsData: e } = this.props,
+            {
+              clan_event_gid: t,
+              existingEventModel: n,
+              bLoadingPartnerEvent: s,
+            } = this.state;
+          let r = this.props.admin,
+            i = r.GetClanSteamID(),
+            o = n && n.BIsStagedEvent(),
+            d = e.post.appids && 1 == e.post.appids.length && e.post.appids[0],
+            h =
+              e.post.recommendation_state !== _.D$.w4 &&
+              d &&
+              c.Get().BHasReviewForApp(i, d),
+            m = "";
+          if (n) {
+            const e =
+              n.GetVisibilityStartTimeAndDateUnixSeconds() ||
+              n.GetPostTimeAndDateUnixSeconds();
+            m = (0, T.$z)(e) + " @ " + (0, k.KC)(e, { bForce24HourClock: !1 });
+          }
+          return (0, a.jsxs)("div", {
+            className: (0, y.A)(
+              I.PostCtn,
+              Boolean(t) ? I.ActivePost : "",
+              Boolean(e.valid_post) ? "" : I.ErrorPost,
+            ),
+            children: [
+              (0, a.jsx)("span", { className: I.PostTitle, children: e.title }),
+              (0, a.jsx)("br", {}),
+              Boolean(n) &&
+                (0, a.jsxs)(u.Fragment, {
+                  children: [
+                    Boolean(n.BIsVisibleEvent()) &&
+                      (0, a.jsx)("span", {
+                        className: I.PostDate,
+                        children: (0, T.we)(
+                          "#RSSManager_PostEvent_PostedDate",
+                          m,
+                        ),
+                      }),
+                    Boolean(!n.BIsVisibleEvent()) &&
+                      (0, a.jsx)("span", {
+                        className: (0, y.A)(I.PostDraft, o ? I.PostStaged : ""),
+                        children: (0, T.we)(
+                          o
+                            ? "#RSSManager_PostEvent_Staged"
+                            : "#RSSManager_PostEvent_Draft",
+                          m,
+                        ),
+                      }),
+                  ],
+                }),
+              Boolean(!e.valid_post && e.post_error_msg) &&
+                (0, a.jsxs)("div", {
+                  className: G().ErrorStylesBackground,
+                  children: [
+                    (0, T.we)("#Error_Generic_Label"),
+                    " ",
+                    (0, T.we)(e.post_error_msg),
+                  ],
+                }),
+              (0, a.jsxs)("div", {
+                className: I.ButtonCtn,
+                children: [
+                  Boolean(t)
+                    ? (0, a.jsxs)(u.Fragment, {
+                        children: [
+                          Boolean(s)
+                            ? (0, a.jsx)(R.t, {
+                                string: (0, T.we)("#Loading"),
+                                size: "small",
+                                position: "center",
+                              })
+                            : (0, a.jsx)("div", {
+                                onClick: this.OnViewEvent,
+                                className: (0, y.A)(b().Button, I.PreviewBtn),
+                                children: (0, T.we)(
+                                  "#RSSManager_PostEvent_ViewEvent",
+                                ),
+                              }),
+                          (0, a.jsx)("a", {
+                            className: (0, y.A)(b().Button, I.PreviewBtn),
+                            href:
+                              l.TS.COMMUNITY_BASE_URL +
+                              "gid/" +
+                              r.GetClanSteamID().ConvertTo64BitString() +
+                              "/partnerevents/edit/" +
+                              this.state.clan_event_gid,
+                            children: (0, T.we)(
+                              "#RSSManager_PostEvent_EditEvent",
+                            ),
+                          }),
+                          (0, a.jsx)("div", {
+                            onClick: this.OnUpdateNewsEvent,
+                            className: (0, y.A)(b().Button, I.PreviewBtn),
+                            children: (0, T.we)(
+                              "#RSSManager_PostEvent_UpdateEvent",
+                            ),
+                          }),
+                          h &&
+                            (0, a.jsx)("a", {
+                              className: (0, y.A)(b().Button, I.PreviewBtn),
+                              href: (0, L.k2)(
+                                l.TS.STORE_BASE_URL +
+                                  "app/" +
+                                  e.post.appids[0] +
+                                  "/?curator_clanid=" +
+                                  i.GetAccountID(),
+                              ),
+                              children: (0, T.we)("#RSSManager_SeeReview"),
+                            }),
+                        ],
+                      })
+                    : (0, a.jsxs)(u.Fragment, {
+                        children: [
+                          (0, a.jsx)("div", {
+                            onClick: this.OnOpenPreviewAsPartnerEvent,
+                            className: (0, y.A)(b().Button, I.PreviewBtn),
+                            children: (0, T.we)(
+                              "#CuratorAdmin_RSSFeed_col_preview_event",
+                            ),
+                          }),
+                          (0, a.jsx)("div", {
+                            onClick: this.OnPostNewsEvent,
+                            className: (0, y.A)(b().Button, I.PreviewBtn),
+                            children: (0, T.we)(
+                              "#CuratorAdmin_RSSFeed_col_create_event",
+                            ),
+                          }),
+                        ],
+                      }),
+                  Boolean(e.rss_message && e.rss_message.length > 0) &&
+                    (0, a.jsx)("div", {
+                      onClick: this.OnShowRawRSS,
+                      className: I.ViewRaw,
+                      children: (0, T.we)("#RSSManager_PostEvent_ViewRaw"),
+                    }),
+                  Boolean(this.state.eventModelForPreviewNow) &&
+                    (0, a.jsx)(E.of, {
+                      className: M.StoreHeaderAdjust,
+                      children: (0, a.jsx)("div", {
+                        children: (0, a.jsx)(w.H, {
+                          event: this.state.eventModelForPreviewNow,
+                          fnClose: this.HideModalEvent,
+                        }),
+                      }),
+                    }),
+                ],
+              }),
+            ],
+          });
+        }
+      };
+      (0, s.Cg)([j.oI], N.prototype, "DoPartnerEventLoad", null),
+        (0, s.Cg)([j.oI], N.prototype, "OnOpenPreviewAsPartnerEvent", null),
+        (0, s.Cg)([j.oI], N.prototype, "OnViewEvent", null),
+        (0, s.Cg)([j.oI], N.prototype, "OnPostNewsEvent", null),
+        (0, s.Cg)([j.oI], N.prototype, "OnUpdateNewsEvent", null),
+        (0, s.Cg)([j.oI], N.prototype, "HideModalEvent", null),
+        (0, s.Cg)([j.oI], N.prototype, "OnClanEventCreateSuccess", null),
+        (0, s.Cg)([j.oI], N.prototype, "OnShowRawRSS", null),
+        (N = (0, s.Cg)([h.PA], N));
+      class q extends u.Component {
+        state = {
+          initialState: q.DetermineStartState(this.props),
+          step: q.DetermineStartState(this.props),
+          bDraftMode: !0,
+        };
+        static DetermineStartState(e) {
+          let t = e.admin.BHasSetupFeed(e.strRSSUrl);
+          return e.newsData && t
+            ? e.bUpdatePost
+              ? "update_post"
+              : "create_post"
+            : e.bActivatePooling
+              ? "activate_feed"
+              : e.admin.BHasSavedRSSURL()
+                ? "update_feed"
+                : "feed_missing";
+        }
+        OnCreateNewsFeed() {
+          this.setState({ step: "creating_feed" }, this.DoCreateNewsFeed);
+        }
+        async DoCreateNewsFeed() {
+          let e = await this.props.admin.CreateOrUpdateRSSNewFeed(
+            this.props.strRSSUrl,
+            this.props.bActivatePooling ? 300 : 0,
+          );
+          e.success != p.R
+            ? this.setState({
+                step: "failure",
+                eResult: e.success,
+                strErrorMessage: (0, T.we)("#RSSManager_PostEvent_Failure"),
+              })
+            : this.setState({
+                step: this.props.newsData ? "create_post" : "success",
+              });
+        }
+        OnCreatePost() {
+          this.setState({ step: "waiting_post" }, this.DoCreatePost);
+        }
+        async DoCreatePost() {
+          let e = await this.props.admin.CreatePost(
+            this.props.newsData,
+            Boolean(this.state.bDraftMode),
+          );
+          e.GetEResult() != p.R
+            ? this.setState({
+                step: "failure",
+                eResult: e.GetEResult(),
+                strErrorMessage: (0, T.we)("#RSSManager_PostEvent_Failure"),
+              })
+            : (this.props.fnClanEventGID &&
+                this.props.fnClanEventGID(e.Body().clan_event_gid()),
+              this.setState({
+                step: "success",
+                eventGID: e.Body().clan_event_gid(),
+              }));
+        }
+        OnChangeDraftMode(e) {
+          this.setState({ bDraftMode: e });
+        }
+        OnChangePermissionsCreateFeed(e) {
+          this.setState({ bPermissions: e });
+        }
+        OnChangeConductCreateFeed(e) {
+          this.setState({ bConduct: e });
+        }
+        GetStrTitle() {
+          if (this.props.newsData)
+            return (0, T.we)(
+              this.props.bUpdatePost
+                ? "#RSSManager_PostEvent_UpdateEvent"
+                : "#RSSManager_PostEvent_Tilte",
+            );
+          switch (this.state.initialState) {
+            case "feed_missing":
+              return (0, T.we)("#RSSManager_PostEvent_CreateFeedTitle");
+            default:
+            case "update_feed":
+              return (0, T.we)("#RSSManager_PostEvent_UpdateFeedTitle");
+            case "activate_feed":
+              return (0, T.we)("#RSSManager_Status_Automation_Activate");
+          }
+        }
+        render() {
+          const { strRSSUrl: e } = this.props;
+          switch (this.state.step) {
+            case "feed_missing":
+            case "activate_feed":
+            case "update_feed":
+            default:
+              return (0, a.jsx)(E.eV, {
+                title: this.GetStrTitle(),
+                children: (0, a.jsxs)(S.nB, {
+                  children: [
+                    (0, a.jsxs)(S.a3, {
+                      children: [
+                        this.props.newsData &&
+                          (0, a.jsx)("div", {
+                            children: (0, T.we)(
+                              "#RSSManager_PostEvent_CreateFeed_DuringPost",
+                            ),
+                          }),
+                        Boolean("activate_feed" !== this.state.step) &&
+                          (0, a.jsx)("div", {
+                            children: (0, T.we)(
+                              "#RSSManager_PostEvent_CreateFeed_Desc",
+                              e,
+                            ),
+                          }),
+                        (0, a.jsx)("div", {
+                          children: (0, T.we)("#RSSManager_CreateFeed_Review"),
+                        }),
+                        (0, a.jsx)("div", {
+                          children: (0, a.jsx)(S.Yh, {
+                            label: (0, T.we)(
+                              "#RSSManager_CreateFeed_Permissions_v1",
+                            ),
+                            onChange: this.OnChangePermissionsCreateFeed,
+                            checked: Boolean(this.state.bPermissions),
+                          }),
+                        }),
+                        (0, a.jsxs)("div", {
+                          children: [
+                            (0, a.jsx)(S.Yh, {
+                              label: (0, T.we)(
+                                "#RSSManager_CreateFeed_Conduct_v1",
+                              ),
+                              onChange: this.OnChangeConductCreateFeed,
+                              checked: Boolean(this.state.bConduct),
+                            }),
+                            (0, a.jsx)(f.uU, {
+                              href: l.TS.STORE_BASE_URL + "online_conduct/",
+                              children: (0, T.we)(
+                                "#RSSManager_CreateFeed_Conduct_Link",
+                              ),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, a.jsx)(S.wi, {
+                      children: (0, a.jsx)(S.CB, {
+                        bOKDisabled: !Boolean(
+                          this.state.bPermissions && this.state.bConduct,
+                        ),
+                        onOK: this.OnCreateNewsFeed,
+                        onCancel: this.props.closeModal,
+                      }),
+                    }),
+                  ],
+                }),
+              });
+            case "failure":
+              return (0, a.jsx)(E.KG, {
+                strDescription: (0, T.we)("#RSSManager_PostEvent_Failure"),
+                closeModal: this.props.closeModal,
+                children: (0, a.jsx)("div", {
+                  children: (0, T.we)(
+                    "#Error_Description",
+                    this.state.eResult,
+                    this.state.strErrorMessage,
+                  ),
+                }),
+              });
+            case "creating_feed":
+            case "waiting_post":
+              return (0, a.jsx)(E.o0, {
+                strTitle: this.GetStrTitle(),
+                strDescription: (0, T.we)("#RSSManager_PostEvent_InFlight"),
+                closeModal: this.props.closeModal,
+                children: (0, a.jsx)(R.t, { position: "center" }),
+              });
+            case "create_post":
+              return (0, a.jsx)(E.eV, {
+                title: this.GetStrTitle(),
+                children: (0, a.jsxs)(S.nB, {
+                  children: [
+                    (0, a.jsx)(S.a3, {
+                      children: (0, a.jsxs)("div", {
+                        children: [
+                          (0, a.jsx)("div", {
+                            children: (0, T.we)(
+                              "#RSSManager_PostEvent_CreatePost",
+                            ),
+                          }),
+                          (0, a.jsx)("div", {
+                            className: I.DialogPostTitle,
+                            children: this.props.newsData.title,
+                          }),
+                          (0, a.jsx)("br", {}),
+                          (0, a.jsx)("div", {
+                            children: (0, a.jsx)(S.Yh, {
+                              label: (0, T.we)(
+                                "#RSSManager_PostEvent_CreatePost_Draft",
+                              ),
+                              onChange: this.OnChangeDraftMode,
+                              checked: Boolean(this.state.bDraftMode),
+                            }),
+                          }),
+                        ],
+                      }),
+                    }),
+                    (0, a.jsx)(S.wi, {
+                      children: (0, a.jsx)(S.CB, {
+                        onOK: this.OnCreatePost,
+                        onCancel: this.props.closeModal,
+                      }),
+                    }),
+                  ],
+                }),
+              });
+            case "update_post":
+              return (0, a.jsx)(E.eV, {
+                title: this.GetStrTitle(),
+                children: (0, a.jsxs)(S.nB, {
+                  children: [
+                    (0, a.jsx)(S.a3, {
+                      children: (0, a.jsxs)("div", {
+                        children: [
+                          (0, a.jsx)("div", {
+                            children: (0, T.we)(
+                              "#RSSManager_PostEvent_UpdatePost",
+                            ),
+                          }),
+                          (0, a.jsx)("br", {}),
+                          (0, a.jsx)("div", {
+                            className: I.DialogPostTitle,
+                            children: this.props.newsData.title,
+                          }),
+                          (0, a.jsx)("br", {}),
+                        ],
+                      }),
+                    }),
+                    (0, a.jsx)(S.wi, {
+                      children: (0, a.jsx)(S.CB, {
+                        onOK: this.OnCreatePost,
+                        onCancel: this.props.closeModal,
+                      }),
+                    }),
+                  ],
+                }),
+              });
+            case "success":
+              return (0, a.jsx)(E.o0, {
+                strTitle: this.GetStrTitle(),
+                strDescription: (0, T.we)(
+                  this.props.newsData
+                    ? "#RSSManager_PostEvent_Success"
+                    : "#RSSManager_PostEvent_Success_feed",
+                ),
+                closeModal: this.props.closeModal,
+                bAlertDialog: !0,
+                children:
+                  Boolean(this.state.eventGID) &&
+                  (0, a.jsx)("a", {
+                    href:
+                      l.TS.COMMUNITY_BASE_URL +
+                      "gid/" +
+                      this.props.admin.GetClanSteamID().ConvertTo64BitString() +
+                      "/partnerevents/edit/" +
+                      this.state.eventGID,
+                    children: (0, T.we)("#RSSManager_PostEvent_EventLink"),
+                  }),
+              });
+          }
+        }
+      }
+      (0, s.Cg)([j.oI], q.prototype, "OnCreateNewsFeed", null),
+        (0, s.Cg)([j.oI], q.prototype, "DoCreateNewsFeed", null),
+        (0, s.Cg)([j.oI], q.prototype, "OnCreatePost", null),
+        (0, s.Cg)([j.oI], q.prototype, "DoCreatePost", null),
+        (0, s.Cg)([j.oI], q.prototype, "OnChangeDraftMode", null),
+        (0, s.Cg)([j.oI], q.prototype, "OnChangePermissionsCreateFeed", null),
+        (0, s.Cg)([j.oI], q.prototype, "OnChangeConductCreateFeed", null),
+        (0, s.Cg)([j.oI], q.prototype, "GetStrTitle", null);
+    },
+    34568: (e, t, n) => {
+      "use strict";
+      n.r(t), n.d(t, { default: () => d });
+      var s = n(7850),
+        a = n(90626),
+        r = n(92757),
+        i = n(63585),
+        o = n(98130),
+        l = n(84811);
+      class d extends a.Component {
+        state = { bIsLoading: !0 };
+        componentDidMount() {
+          o.A.Get(), this.setState({ bIsLoading: !1 });
+        }
+        render() {
+          return this.state.bIsLoading
+            ? null
+            : (0, s.jsx)(l.tH, {
+                children: (0, s.jsxs)(r.dO, {
+                  children: [
+                    (0, s.jsx)(r.qh, {
+                      exact: !0,
+                      path: "/:prefix(curator|pub|publisher|dev|developer|franchise)/:curatorVanity/admin/manage_rss",
+                      component: i.A,
+                    }),
+                    (0, s.jsx)(r.qh, { children: !1 }),
+                  ],
+                }),
+              });
+        }
+      }
+    },
+    58426: (e, t, n) => {
+      "use strict";
+      n.r(t), n.d(t, { default: () => it });
+      var s = n(7850),
+        a = n(43527),
+        r = n(98130),
+        i = n(37085),
+        o = n(78327),
+        l = n(41735),
+        d = n.n(l),
+        c = n(68797);
+      class h {
+        static s_Singleton;
+        m_rgRSSEnabledClans = [];
+        GetAllRSSEnabledClans() {
+          return this.m_rgRSSEnabledClans;
+        }
+        GetTrustedEnabledClans(e) {
+          return this.m_rgRSSEnabledClans
+            .filter((t) => t.is_trusted_press == e)
+            .map((e) => e.clan_accoundid);
+        }
+        static Get() {
+          return (
+            h.s_Singleton || ((h.s_Singleton = new h()), h.s_Singleton.Init()),
+            h.s_Singleton
+          );
+        }
+        Init() {
+          let e = (0, o.Tc)("rssaccountinfo", "application_config");
+          this.ValidateRSSAccountConfig(e) && (this.m_rgRSSEnabledClans = e);
+        }
+        ValidateRSSAccountConfig(e) {
+          const t = e;
+          return (
+            t &&
+            Array.isArray(t) &&
+            t.length > 0 &&
+            "object" == typeof t[0] &&
+            "number" == typeof t[0].clan_accoundid
+          );
+        }
+        async LoadKnownAllRSSInfo() {
+          const e = new Array(),
+            t = r.A.Get();
+          this.m_rgRSSEnabledClans.forEach((n) => {
+            t.BHasClanIDLoaded(n.clan_accoundid) ||
+              e.push(t.QueueCuratorAdminInfoLoad(n.clan_accoundid));
+          }),
+            await Promise.all(e);
+        }
+        ExtractWithoutRSSAutomation() {
+          const e = [],
+            t = r.A.Get();
+          return (
+            this.m_rgRSSEnabledClans.forEach((n) => {
+              const s = t.GetRSSAdminForClanAccountID(n.clan_accoundid);
+              s && !s.BIsAutomationEnabled() && e.push(n.clan_accoundid);
+            }),
+            e
+          );
+        }
+        async HintLoadAccounts() {}
+        async ReindexClanEventsAndReloadAccount(e) {
+          const t = o.TS.STORE_BASE_URL + "events_admin/ajaxflushandreindexrss",
+            n = new FormData();
+          n.set("sessionid", (0, o.KC)()), n.append("clanids", "" + e);
+          try {
+            let e = await d().post(t, n, { withCredentials: !0 });
+            if (e?.data?.success == i.R) return !0;
+          } catch (e) {
+            const t = (0, c.H)(e);
+            console.error(
+              "Failed to ReindexClanEventsAndReloadAccount: " + t.strErrorMsg,
+              t,
+            );
+          }
+          return !1;
+        }
+      }
+      var u = n(63585),
+        m = n(75844),
+        p = n(90626),
+        g = n(92757),
+        _ = n(17720),
+        v = n(4796),
+        S = n(56283),
+        w = n(84811),
+        C = n(94333),
+        b = n(738),
+        M = n(12155),
+        E = n(22797),
+        A = n(32754),
+        R = n(52038),
+        f = n(56011),
+        y = n(61859),
+        B = n(52081),
+        T = n.n(B),
+        x = n(74568),
+        j = n(40236),
+        I = n(6083);
+      const P = (0, g.y)((e) => {
+          const [t, n] = (0, p.useState)(!0);
+          if (
+            ((0, p.useEffect)(() => {
+              (async () => {
+                v.ac.Init(), await h.Get().HintLoadAccounts(), n(!1);
+              })();
+            }, []),
+            t)
+          )
+            return (0, s.jsx)(E.t, {
+              string: (0, y.we)("#Loading"),
+              size: "medium",
+            });
+          const a = h.Get().GetTrustedEnabledClans(!0),
+            r = h.Get().GetTrustedEnabledClans(!1);
+          return (0, s.jsx)("div", {
+            children: (0, s.jsxs)(w.tH, {
+              children: [
+                (0, s.jsx)("h1", {
+                  children: (0, y.we)("#RSSModeration_Title"),
+                }),
+                (0, s.jsx)(D, {}),
+                (0, s.jsx)(U, {
+                  rgClanIDs: h
+                    .Get()
+                    .GetAllRSSEnabledClans()
+                    .map((e) => e.clan_accoundid),
+                }),
+                (0, s.jsx)(F, {
+                  rgClanIDs: a,
+                  strTitle: (0, y.we)("#RSSModeration_TrustTitle"),
+                }),
+                (0, s.jsx)(F, {
+                  rgClanIDs: r,
+                  strTitle: (0, y.we)("#RSSModeration_RestTitle"),
+                }),
+              ],
+            }),
+          });
+        }),
+        D = (0, m.PA)((e) => {
+          const [t, n] = (0, p.useState)(!1),
+            [a, r] = (0, p.useState)(void 0);
+          return t
+            ? (0, s.jsx)(E.t, { string: (0, y.we)("#Loading"), size: "medium" })
+            : void 0 !== a
+              ? Boolean(a.length > 0)
+                ? (0, s.jsx)(F, {
+                    rgClanIDs: a,
+                    strTitle: (0, y.we)("#RSSModeration_InactiveAutomation"),
+                  })
+                : (0, s.jsx)("div", {
+                    children: (0, y.we)("#RSSModreation_AllAutomationEnabled"),
+                  })
+              : (0, s.jsxs)(S.$n, {
+                  onClick: async () => {
+                    n(!0),
+                      await h.Get().LoadKnownAllRSSInfo(),
+                      r(h.Get().ExtractWithoutRSSAutomation()),
+                      n(!1);
+                  },
+                  children: [(0, y.we)("#RSSModeration_FindInActive"), " "],
+                });
+        }),
+        F = (e) => {
+          const { rgClanIDs: t, strTitle: n } = e,
+            [a, r] = (0, p.useState)(!1);
+          let i = null;
+          return (
+            a || (i = t.map((e) => (0, s.jsx)(G, { clanAccountID: e }, e))),
+            (0, s.jsxs)("div", {
+              className: (0, R.A)(T().SectionContainer),
+              children: [
+                (0, s.jsxs)("h2", {
+                  className: (0, R.A)(T().ModSectionTitle),
+                  onDoubleClick: () => r(!a),
+                  children: [
+                    n,
+                    (0, s.jsx)("span", { children: " " }),
+                    (0, s.jsx)(S.$n, {
+                      className: T().ResizeButton,
+                      onClick: () => r(!a),
+                      children: a
+                        ? (0, s.jsx)(M.hz4, {})
+                        : (0, s.jsx)(M.Xjb, {}),
+                    }),
+                  ],
+                }),
+                a &&
+                  (0, s.jsx)(S.$n, {
+                    onClick: () => r(!1),
+                    children: (0, y.we)("#Sale_ShowContents"),
+                  }),
+                i,
+              ],
+            })
+          );
+        },
+        G = (0, m.PA)((e) => {
+          const { clanAccountID: t } = e;
+          return v.ac.BHasClanInfoLoadedByAccountID(t) &&
+            r.A.Get().BHasClanIDLoaded(t)
+            ? (0, s.jsx)(k, {
+                clanInfo: v.ac.GetClanInfoByClanAccountID(t),
+                rssAdminInfo: r.A.Get().GetRSSAdminForClanAccountID(t),
+              })
+            : (0, s.jsx)(L, { clanAccountID: t });
+        }),
+        L = (e) => {
+          const { clanAccountID: t } = e,
+            n = "500px",
+            a = (0, j.OO)(
+              {
+                onEnter: async () => {
+                  const e = _.b.InitFromClanID(t);
+                  await Promise.all([
+                    v.ac.LoadClanInfoForClanSteamID(e),
+                    r.A.Get().QueueCuratorAdminInfoLoad(t),
+                  ]);
+                },
+              },
+              { rootMargin: `${n} 0px ${n} 0px` },
+            );
+          return (0, s.jsx)("div", {
+            ref: a,
+            className: T().TileContainer,
+            children: (0, s.jsxs)("div", {
+              children: [(0, y.we)("#Loading"), " - ", t],
+            }),
+          });
+        },
+        k = (e) => {
+          const { clanInfo: t, rssAdminInfo: n } = e,
+            [a, i] = (0, p.useState)(!1),
+            l = o.TS.STORE_BASE_URL + "newshub/group/" + t.clanAccountID,
+            d =
+              o.TS.STORE_BASE_URL +
+              "curator/" +
+              t.clanAccountID +
+              "/admin/manage_rss",
+            c = o.TS.COMMUNITY_BASE_URL + "group/" + t.clanAccountID,
+            h =
+              "https://steamsupport.valvesoftware.com/clan/overview/" +
+              _.b.InitFromClanID(t.clanAccountID).ConvertTo64BitString(),
+            m = r.A.Get().GetRSSAdminStats(t.clanAccountID);
+          return (0, s.jsxs)("div", {
+            className: (0, R.A)(T().TileContainer),
+            children: [
+              (0, s.jsxs)("div", {
+                className: (0, R.A)(T().TileSpread),
+                children: [
+                  (0, s.jsxs)("div", {
+                    children: [
+                      (0, s.jsxs)("div", {
+                        children: [t.group_name, " - ", t.clanAccountID],
+                      }),
+                      (0, s.jsxs)("div", {
+                        children: [
+                          (0, s.jsxs)("div", {
+                            children: [(0, y.we)("#CuratorAdmin_RSSFeed"), ":"],
+                          }),
+                          (0, s.jsx)("a", {
+                            href: n.GetRSSUrl(),
+                            children: n.GetRSSUrl(),
+                          }),
+                        ],
+                      }),
+                      Boolean(m) &&
+                        (0, s.jsxs)("div", {
+                          children: [
+                            (0, s.jsx)("div", {
+                              children: (0, y.we)(
+                                "#RSSModeration_TotalEvents",
+                                (0, I.D)(m.total_event_count),
+                              ),
+                            }),
+                            (0, s.jsx)("div", {
+                              children: (0, y.we)(
+                                "#RSSModeration_RSSEvents",
+                                (0, I.D)(m.rss_event_count),
+                              ),
+                            }),
+                          ],
+                        }),
+                      (0, s.jsx)(S.$n, {
+                        onClick: () => i(!a),
+                        children: (0, y.we)(
+                          a
+                            ? "#Bbcode_Expand_Details_Expanded"
+                            : "#Bbcode_Expand_Details_Collapsed",
+                        ),
+                      }),
+                    ],
+                  }),
+                  (0, s.jsx)("div", {
+                    children: (0, s.jsxs)("ul", {
+                      children: [
+                        (0, s.jsx)("li", {
+                          children: (0, s.jsx)("a", {
+                            href: l,
+                            children: (0, y.we)(
+                              "#EventDisplay_NewsHubSubtitle",
+                            ),
+                          }),
+                        }),
+                        (0, s.jsx)("li", {
+                          children: (0, s.jsx)("a", {
+                            href: d,
+                            children: (0, y.we)("#CuratorAdmin_RSSFeed_title"),
+                          }),
+                        }),
+                        (0, s.jsx)("li", {
+                          children: (0, s.jsx)("a", {
+                            href: c,
+                            children: (0, y.we)("#RSSModeration_GroupPage"),
+                          }),
+                        }),
+                        (0, s.jsx)("li", {
+                          children: (0, s.jsx)("a", {
+                            href: h,
+                            children: (0, y.we)("#RSSModeration_SupportPage"),
+                          }),
+                        }),
+                        (0, s.jsx)("li", {
+                          children: (0, s.jsx)(U, {
+                            rgClanIDs: [t.clanAccountID],
+                          }),
+                        }),
+                      ],
+                    }),
+                  }),
+                  (0, s.jsx)("div", {
+                    className: T().CreatorCtn,
+                    children: (0, s.jsx)(C.hA, {
+                      bHideCreatorType: !0,
+                      creatorID: {
+                        name: null,
+                        clan_account_id: t.clanAccountID,
+                        type: "developer",
+                      },
+                      bSmallFormat: !0,
+                    }),
+                  }),
+                ],
+              }),
+              Boolean(a) &&
+                (0, s.jsx)(s.Fragment, {
+                  children: Boolean(n.BHasSavedRSSURL())
+                    ? (0, s.jsx)(u.q, { strRssURL: n.GetRSSUrl(), admin: n })
+                    : (0, s.jsx)("div", {
+                        children: (0, y.we)("#RSSModeration_NoRSSFeed"),
+                      }),
+                }),
+            ],
+          });
+        },
+        U = (e) =>
+          (0, s.jsx)(A.he, {
+            toolTipContent: (0, y.we)("#RSSModeration_ReindexAndReload_ttip"),
+            children: (0, s.jsx)(S.$n, {
+              onClick: (t) => {
+                (0, b.pg)((0, s.jsx)(O, { ...e }), (0, f.uX)(t));
+              },
+              children: (0, y.we)("#RSSModeration_ReindexAndReload"),
+            }),
+          }),
+        O = (e) => {
+          const [t, n] = (0, p.useState)(void 0),
+            [a, r] = (0, p.useState)(!1),
+            [i, o] = (0, p.useState)(void 0),
+            l = () => e.closeModal && e.closeModal();
+          return (0, s.jsx)(x.x_, {
+            onEscKeypress: l,
+            children: (0, s.jsxs)(S.UC, {
+              children: [
+                (0, s.jsxs)(S.Y9, {
+                  children: [
+                    " ",
+                    (0, y.we)("#RSSModeration_ReindexAndReload"),
+                    " ",
+                  ],
+                }),
+                (0, s.jsxs)(S.nB, {
+                  children: [
+                    (0, s.jsxs)(S.a3, {
+                      children: [
+                        void 0 === t
+                          ? (0, s.jsxs)(s.Fragment, {
                               children: [
-                                (0, e.jsx)(Y.t, { size: "small" }),
-                                (0, e.jsx)("div", {
-                                  children: (0, V.we)("#Giveaway_RandomDraw"),
+                                (0, s.jsx)("span", {
+                                  children: (0, y.we)(
+                                    "#RSSModeration_Reindex_Verify",
+                                    e.rgClanIDs.length,
+                                  ),
+                                }),
+                                (0, s.jsx)(S.jn, {
+                                  onClick: async () => {
+                                    let t = 0;
+                                    n(t);
+                                    for (
+                                      let s = 0;
+                                      s < e.rgClanIDs.length;
+                                      ++s
+                                    ) {
+                                      let a = e.rgClanIDs[s];
+                                      if (
+                                        !(await h
+                                          .Get()
+                                          .ReindexClanEventsAndReloadAccount(a))
+                                      ) {
+                                        o((0, y.we)("#Error_Generic_Label"));
+                                        break;
+                                      }
+                                      (t += 1), n(t);
+                                    }
+                                    r(!0);
+                                  },
+                                  children: (0, y.we)("#Button_Continue"),
                                 }),
                               ],
                             })
-                          : (0, e.jsxs)("div", {
-                              className: Re.CountDownCtn,
+                          : (0, s.jsxs)(s.Fragment, {
                               children: [
-                                (0, e.jsx)("div", {
-                                  className: Re.CountDownTime,
-                                  children:
-                                    Fe(Math.floor(te / 60)) + ":" + Fe(te % 60),
+                                (0, s.jsx)("span", {
+                                  children: (0, y.we)(
+                                    "#RSSModeration_Reindex_Action",
+                                    t,
+                                    e.rgClanIDs.length,
+                                  ),
                                 }),
-                                (0, e.jsxs)("div", {
-                                  className: Re.CountDownText,
-                                  children: [
-                                    (0, V.we)("#Giveaway_CountDown2"),
-                                    " ",
-                                    (0, V.we)("#Giveaway_KeepWatching"),
-                                  ],
-                                }),
+                                a
+                                  ? (0, s.jsx)("span", {
+                                      children: (0, y.we)(
+                                        "#EventEditor_ImportFromHTML_ConvertFinished",
+                                      ),
+                                    })
+                                  : (0, s.jsx)(E.t, {
+                                      size: "small",
+                                      string: (0, y.we)("#Updating"),
+                                    }),
                               ],
                             }),
-                        G > 0 &&
-                          (0, e.jsxs)("div", {
-                            className: Re.WinnerInfo,
-                            children: [
-                              (0, e.jsx)("div", {
-                                className: Re.WinnerCount,
-                                children: (0, Le.D)(G),
-                              }),
-                              (0, e.jsx)("div", {
-                                className: Re.WinnerText,
-                                children: (0, V.we)("#Giveaway_Congratulation"),
-                              }),
-                            ],
-                          }),
+                        Boolean(i) &&
+                          (0, s.jsxs)("span", { children: [i, " "] }),
                       ],
                     }),
-                ],
+                    (0, s.jsx)(S.wi, {
+                      children: (0, s.jsx)(S.$n, {
+                        onClick: l,
+                        children: (0, y.we)(
+                          a ? "#Button_OK" : "#Button_Cancel",
+                        ),
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        };
+      var H = n(34629),
+        z = n(6379),
+        N = n(84933),
+        q = n(22837),
+        W = n(14947);
+      class V {
+        static s_Singleton;
+        m_mapEventGIDToSolrData = new Map();
+        m_listEvents = new Array();
+        BHasSolrEvent(e) {
+          return this.m_mapEventGIDToSolrData.has(e);
+        }
+        GetAllSolrEvents() {
+          return this.m_listEvents;
+        }
+        static Get() {
+          return V.s_Singleton || (V.s_Singleton = new V()), V.s_Singleton;
+        }
+        constructor() {
+          (0, W.Gn)(this);
+        }
+        ClearAllSolrEvents() {
+          (this.m_mapEventGIDToSolrData = new Map()),
+            (this.m_listEvents = new Array());
+        }
+        async LoadPartnerEventForQueryIncremental(
+          e,
+          t = 0,
+          n = 10,
+          s,
+          a,
+          r,
+          i,
+          o,
+          l,
+        ) {
+          const d = await this.GetLatestPartnerEvents(
+            e,
+            t,
+            n,
+            s,
+            a,
+            r,
+            i,
+            o,
+            l,
+          );
+          let c = new Array();
+          return (
+            (0, W.h5)(() => {
+              d.forEach((e) => {
+                this.m_mapEventGIDToSolrData.has(e.unique_id) ||
+                  (c.push(e),
+                  this.m_mapEventGIDToSolrData.set(e.unique_id, e),
+                  this.m_listEvents.push(e));
+              });
+            }),
+            c
+          );
+        }
+        async GetLatestPartnerEvents(
+          e,
+          t = 0,
+          n = 10,
+          s,
+          a,
+          r,
+          i,
+          l,
+          c,
+          h,
+          u,
+          m,
+          p,
+        ) {
+          const g =
+              o.TS.STORE_BASE_URL + "events_admin/ajaxgetlatestpartnerevents",
+            _ = {
+              page: t,
+              count: n,
+              date: i,
+              appids: void 0 === s ? void 0 : s.join(","),
+              required_tags: void 0 === a ? void 0 : a.join(","),
+              exclude_tags: void 0 === r ? void 0 : r.join(","),
+              eventtypefilter: void 0 === l ? void 0 : l.join(","),
+              orderByVisibility: c || void 0,
+              creator_home_clan_id: void 0 === h ? void 0 : h.join(","),
+              showUnpublished: void 0 === m ? void 0 : m,
+              sale_only: void 0 === p ? void 0 : p,
+              term: void 0 === u ? void 0 : u,
+            },
+            v = await d().get(g, {
+              params: _,
+              withCredentials: !0,
+              cancelToken: e ? e.token : void 0,
+            });
+          return v.data ? v.data.docs : [];
+        }
+      }
+      (0, H.Cg)([W.sH], V.prototype, "m_mapEventGIDToSolrData", void 0),
+        (0, H.Cg)([W.sH], V.prototype, "m_listEvents", void 0),
+        (0, H.Cg)([W.XI], V.prototype, "ClearAllSolrEvents", null);
+      var K = n(7221);
+      class Y {
+        constructor() {
+          (0, W.Gn)(this);
+        }
+        m_backfill = void 0;
+        m_mapEventGIDProcessed = new Map();
+        m_vecEventGID = new Array();
+        m_bBackfillInProgress = !1;
+        m_nProcessed = 0;
+        m_nSuccesses = 0;
+        m_nFailures = 0;
+        m_nWarning = 0;
+        m_nSkipped = 0;
+        GetBackfill() {
+          return this.m_backfill;
+        }
+        SetBackfill(e) {
+          this.m_backfill = e;
+        }
+        StartBackfill(e) {
+          (this.m_backfill = e), (this.m_bBackfillInProgress = !0);
+        }
+        CompleteBackfill(e) {
+          (this.m_backfill = void 0), (this.m_bBackfillInProgress = !1);
+        }
+        BIsBackkFillInProgress() {
+          return this.m_bBackfillInProgress;
+        }
+        GetEventBackfillProgress() {
+          return this.m_mapEventGIDProcessed;
+        }
+        CreateOrGetBackfillProgess(e) {
+          return (
+            this.m_mapEventGIDProcessed.has(e) ||
+              (this.m_mapEventGIDProcessed.set(e, { bProcessing: !1 }),
+              this.m_vecEventGID.push(e)),
+            this.m_mapEventGIDProcessed.get(e)
+          );
+        }
+        BHasProgress(e) {
+          return this.m_mapEventGIDProcessed.has(e);
+        }
+        GetBackfillGIDs() {
+          return this.m_vecEventGID;
+        }
+        CloseProgress(e, t) {
+          (this.m_nProcessed += 1),
+            t.bAlreadyProcessed || t.bSkipped
+              ? (this.m_nSkipped += 1)
+              : t.bSucceeded
+                ? (this.m_nSuccesses += 1)
+                : t.bFailed && (this.m_nFailures += 1),
+            t.bWarning && (this.m_nWarning += 1),
+            this.m_mapEventGIDProcessed.set(e, t);
+        }
+      }
+      (0, H.Cg)([W.sH], Y.prototype, "m_backfill", void 0),
+        (0, H.Cg)([W.sH], Y.prototype, "m_mapEventGIDProcessed", void 0),
+        (0, H.Cg)([W.sH], Y.prototype, "m_bBackfillInProgress", void 0),
+        (0, H.Cg)([W.sH], Y.prototype, "m_nProcessed", void 0),
+        (0, H.Cg)([W.sH], Y.prototype, "m_nSuccesses", void 0),
+        (0, H.Cg)([W.sH], Y.prototype, "m_nFailures", void 0),
+        (0, H.Cg)([W.sH], Y.prototype, "m_nWarning", void 0),
+        (0, H.Cg)([W.sH], Y.prototype, "m_nSkipped", void 0),
+        (0, H.Cg)([W.XI], Y.prototype, "StartBackfill", null),
+        (0, H.Cg)([W.XI], Y.prototype, "CompleteBackfill", null),
+        (0, H.Cg)([W.XI], Y.prototype, "CloseProgress", null);
+      const X = new Y();
+      var Q = n(45559),
+        J = n(73744),
+        Z = n(32803),
+        $ = n(28954),
+        ee = n(64953),
+        te = n(17267),
+        ne = n(82705);
+      let se = class extends p.Component {
+        m_cancelSignal = d().CancelToken.source();
+        m_nImageID = 0;
+        m_mapArtworkResizeSuccess = new Map();
+        state = { eBackfillState: void 0 };
+        componentWillUnmount() {
+          this.m_cancelSignal.cancel(
+            "EventBackfillLanding component unmounted",
+          );
+        }
+        OnArtworkResizeBackfill() {
+          null == this.state.eBackfillState &&
+            this.setState(
+              { eBackfillState: "started" },
+              this.BeginArtworkResize,
+            );
+        }
+        BeginArtworkResize() {
+          this.m_mapArtworkResizeSuccess.set("capsule", 0),
+            this.m_mapArtworkResizeSuccess.set("spotlight", 0),
+            this.m_mapArtworkResizeSuccess.set("background", 0),
+            this.RunArtworkResizeBackfill()
+              .then(() => this.setState({ eBackfillState: "success" }))
+              .catch((e) => {
+                let t = (0, c.H)(e);
+                console.error(
+                  "EventBackfillLanding: error " + t.strErrorMsg,
+                  t,
+                ),
+                  this.setState({ eBackfillState: "error" });
               });
         }
-        var tt = i(57646);
-        function bt(v) {
-          const h = Number(v.args.packageid);
-          return h
-            ? (0, e.jsx)(tt.eF, {
-                packageID: h,
-                display_style: (0, tt._w)(v.args.display),
-              })
-            : null;
+        async GetImageInfo(e, t, n = "") {
+          const s = (0, ne.yh)(t),
+            a = te.zU.GetHashFromHashAndExt(t) + n;
+          return te.zU.AsyncGetImageResolution(
+            e,
+            a,
+            s,
+            this.m_cancelSignal,
+            !0,
+          );
         }
-        function Ue(v) {
-          const h = Number(v.args.packageid),
-            b = Number(v.args.compareid);
-          return !h || !b
-            ? null
-            : (0, e.jsx)(tt.hJ, { packageID: h, compareID: b });
+        HandleErrorFatal(e, t, n, s) {
+          let a = (0, c.H)(t),
+            r =
+              "EventBackfillLanding: " +
+              n +
+              " on GID " +
+              e +
+              " : " +
+              a.strErrorMsg;
+          console.error(r, a),
+            s
+              ? ((s.bFailed = !0), (s.strMessage = r), X.CloseProgress(e, s))
+              : X.CompleteBackfill("resize_image");
         }
-        var jt = i(88245),
-          Et = i(35702),
-          Dt = i(16412),
-          Oe = i(92757),
-          He = i(39256),
-          Tt = i(4720),
-          Bt = i(75110),
-          nt = i(57810),
-          je = i(36631),
-          at = i(25533),
-          Ge = i(81416);
-        function Xe(v) {
-          const { eventModel: h, nEventBadgeID: b } = v,
-            R = (0, Et.fy)(b);
-          if (R?.level > 0) {
-            let G = R.level;
-            if (h?.BHasSaleEnabled()) {
-              const q = h.GetSaleSectionsByType("badge_progress");
-              if (q?.length == 1) {
-                const te = q[0].badge_progress;
-                if (te?.event_badgeid == b && te?.granted_by_discovery_queue) {
-                  const Me = te.levels[te.levels.length - 1].level;
-                  return (0, e.jsx)(_e, {
-                    eventModel: h,
-                    nBadgeLevel: G,
-                    nMaxLevel: Me,
-                  });
-                }
-              }
+        async HandleResizeForImageType(e, t, n, s, a) {
+          for (let r = q.Bhc; r < e.length && r < q.bP9; ++r)
+            if (e[r] && e[r].length > 0) {
+              let o = e[r],
+                l = (0, ne.yh)(o);
+              const d = new _.b(t.clan_steamid);
+              if (l) {
+                let e = await this.GetImageInfo(d, o).catch(
+                  (e) => (
+                    this.HandleErrorFatal(null, e, "GetImageInfo Original", n),
+                    { height: 0, width: 0, success: i.zi }
+                  ),
+                );
+                if (e.success == i.R && (0, J.yu)(e.width, e.height, s, !0)) {
+                  if (
+                    (
+                      await this.GetImageInfo(d, o, a).catch(
+                        (e) => (
+                          this.HandleErrorFatal(
+                            null,
+                            e,
+                            "GetImageInfo Resize",
+                            n,
+                          ),
+                          { height: 0, width: 0, success: i.zi }
+                        ),
+                      )
+                    ).success == i.R
+                  )
+                    n.bAlreadyProcessed = !0;
+                  else {
+                    n.bProcessing = !0;
+                    let e = te.zU.GetHashFromHashAndExt(o),
+                      t = te.zU.GetExtStringFromHashAndExt(o),
+                      a = (0, ee.K_)(s);
+                    if (a)
+                      try {
+                        const r = await (0, $.bT)(
+                          this.m_cancelSignal.token,
+                          d,
+                          e,
+                          t,
+                          a,
+                        );
+                        console.log("success on the resize request"),
+                          r == a.length
+                            ? ((n.bSucceeded = !0),
+                              this.m_mapArtworkResizeSuccess.set(
+                                s,
+                                this.m_mapArtworkResizeSuccess.get(s) + 1,
+                              ))
+                            : ((n.bFailed = !0),
+                              (n.strMessage =
+                                "Did not resize all: " +
+                                s +
+                                " " +
+                                r +
+                                " / " +
+                                a.length));
+                      } catch (e) {
+                        n.bFailed = !0;
+                        let t = (0, c.H)(e);
+                        (n.strMessage = t.strErrorMsg),
+                          console.error("Resize: " + t.strErrorMsg, t);
+                      }
+                    else
+                      (n.bFailed = !0),
+                        console.error(
+                          "Resize: resize request couldn't be determined from the artwork type",
+                        );
+                  }
+                } else n.bSkipped = !0;
+              } else n.bSkipped = !0;
             }
-            return (0, e.jsx)("span", {
-              className: "DisplayBadgeProgress",
-              children: (0, Le.D)(G),
-            });
-          }
-          return null;
         }
-        function _e(v) {
-          const { eventModel: h, nBadgeLevel: b, nMaxLevel: R } = v,
-            G = S.useMemo(() => {
-              const pe = h
-                .GetSaleSections()
-                .filter((Ce) => Ce.section_type == "discoveryqueue");
-              return pe?.length > 0 ? pe[0] : null;
-            }, [h]),
-            { storePageFilter: q, eStoreDiscoveryQueueType: te } = S.useMemo(
-              () => (0, Bt.lx)(h, G),
-              [h, G],
-            ),
-            Me = (0, nt.Uf)(te, q),
-            Be = Math.min(b + Me, R);
-          return (0, e.jsx)("span", {
-            className: "DisplayBadgeProgress",
-            children: (0, Le.D)(Be),
-          });
-        }
-        function Se(v) {
-          const { event: h } = v.context,
-            b = Number.parseInt((0, I.j$)(v.args, "eventid"));
-          return K.iA.logged_in && b
-            ? (0, e.jsx)(Xe, { nEventBadgeID: b, eventModel: h })
-            : null;
-        }
-        function Ct(v) {
-          const { nDoorIndex: h, children: b } = v,
-            R = (0, g.OM)(h),
-            { fnOpenDoor: G } = (0, g.OC)(),
-            [q, te] = S.useState(!1),
-            [Me, Be] = S.useState(!1),
-            { elDialogElement: pe, fnShowLogonDialog: Ce } = (0, E.l)();
-          return (0, e.jsxs)(e.Fragment, {
-            children: [
-              (0, e.jsx)(Dt.$n, {
-                disabled: R,
-                onClick: (Pe) => {
-                  q ||
-                    (K.iA.logged_in
-                      ? (te(!0),
-                        G(h, !0, null, !1)
-                          .then((Ve) => {
-                            Ve || Be(!0), te(!1);
-                          })
-                          .catch(() => {
-                            Be(!0), te(!1);
-                          }))
-                      : Ce());
-                },
-                children: Me
-                  ? (0, e.jsx)("div", {
-                      children: (0, V.we)("#GrantAwardError_Busy"),
-                    })
-                  : (0, e.jsxs)(e.Fragment, {
-                      children: [
-                        !!q && (0, e.jsx)(Y.t, { size: "small" }),
-                        !!R && (0, e.jsx)(y.Jlk, {}),
-                        b,
-                      ],
+        async RunArtworkResizeBackfill() {
+          X.StartBackfill("resize_image");
+          let e = 0;
+          for (; X.BIsBackkFillInProgress(); ) {
+            let t = await V.Get()
+              .LoadPartnerEventForQueryIncremental(this.m_cancelSignal, e, 25)
+              .catch((e) =>
+                this.HandleErrorFatal(
+                  null,
+                  e,
+                  "LoadPartnerEventForQueryIncremental",
+                ),
+              );
+            if (!t || 0 == t.length) {
+              X.CompleteBackfill("resize_image"),
+                console.log("Compelted the backfill");
+              break;
+            }
+            e += t.length;
+            for (let e = 0; e < t.length; ++e) {
+              let n = t[e],
+                s = X.CreateOrGetBackfillProgess(n.unique_id);
+              if (!n.announcement_gid || 0 == n.announcement_gid.length) {
+                (s.bSkipped = !0),
+                  (s.bWarning = !0),
+                  X.CloseProgress(n.unique_id, s);
+                continue;
+              }
+              if (
+                (await z.O3.LoadPartnerEventFromAnnoucementGID(
+                  Number(n.appid),
+                  n.announcement_gid,
+                  100,
+                ).catch((e) => {
+                  this.HandleErrorFatal(
+                    n.announcement_gid,
+                    e,
+                    "LoadPartnerEventFromAnnoucementGID",
+                    s,
+                  );
+                }),
+                s.bFailed)
+              )
+                continue;
+              let a = z.O3.GetClanEventFromAnnouncementGID(n.announcement_gid);
+              if (a)
+                if (s.bSucceeded || s.bFailed || s.bAlreadyProcessed)
+                  (s.bAlreadyProcessed = !0), X.CloseProgress(n.unique_id, s);
+                else {
+                  if (
+                    ((s.bAnalysing = !0),
+                    this.setState({
+                      strInfo:
+                        "Processing " +
+                        X.GetBackfillGIDs().length +
+                        " Appid: " +
+                        a.appid +
+                        " Event " +
+                        a.GID +
+                        " Title: " +
+                        a.GetNameWithFallback(q.Bhc),
                     }),
+                    a.jsondata && a.jsondata.localized_capsule_image)
+                  ) {
+                    let e = a.jsondata.localized_capsule_image;
+                    await this.HandleResizeForImageType(
+                      e,
+                      n,
+                      s,
+                      "capsule",
+                      K.wI.capsule_main,
+                    ).catch((e) =>
+                      this.HandleErrorFatal(
+                        null,
+                        e,
+                        "HandleResizeForImageType capsule",
+                        s,
+                      ),
+                    );
+                  }
+                  if (a.jsondata && a.jsondata.localized_title_image) {
+                    let e = a.jsondata.localized_title_image;
+                    await this.HandleResizeForImageType(
+                      e,
+                      n,
+                      s,
+                      "background",
+                      K.wI.background_mini,
+                    ).catch((e) =>
+                      this.HandleErrorFatal(
+                        null,
+                        e,
+                        "HandleResizeForImageType background",
+                        s,
+                      ),
+                    );
+                  }
+                  if (a.jsondata && a.jsondata.localized_spotlight_image) {
+                    let e = a.jsondata.localized_spotlight_image;
+                    await this.HandleResizeForImageType(
+                      e,
+                      n,
+                      s,
+                      "spotlight",
+                      K.wI.spotlight_main,
+                    ).catch((e) =>
+                      this.HandleErrorFatal(
+                        null,
+                        e,
+                        "HandleResizeForImageType spotlight",
+                        s,
+                      ),
+                    );
+                  }
+                  if (
+                    (X.CloseProgress(n.unique_id, s),
+                    !X.BIsBackkFillInProgress())
+                  )
+                    break;
+                }
+              else
+                (s.bFailed = !0),
+                  (s.strMessage = "Failed to load the event: " + n.unique_id),
+                  X.CloseProgress(n.unique_id, s);
+            }
+            if (X.m_nFailures > 5e3) {
+              console.log("Hit too many errors, stoppinng the backfill");
+              break;
+            }
+          }
+        }
+        RenderFailure() {
+          let e = new Array();
+          return (
+            X.m_nFailures > 0 &&
+              X.GetBackfillGIDs().forEach((t) => {
+                let n = X.GetEventBackfillProgress().get(t);
+                if (n && n.bFailed) {
+                  let a = z.O3.GetClanEventModel(t);
+                  a &&
+                    e.push(
+                      (0, s.jsxs)(
+                        "div",
+                        {
+                          children: [
+                            (0, s.jsx)(Z.tj, {
+                              eventModel: a,
+                              route: Z.PH.k_eView,
+                              children: a.GetNameWithFallback(q.Bhc),
+                            }),
+                            (0, s.jsx)("div", {
+                              className: Q.Error,
+                              children: n.strMessage,
+                            }),
+                          ],
+                        },
+                        t,
+                      ),
+                    );
+                }
               }),
-              pe,
+            e
+          );
+        }
+        RenderResizeProgress() {
+          let e = new Array();
+          return (
+            e.push(
+              (0, s.jsxs)(
+                "div",
+                {
+                  children: [
+                    "Capsule Resized: ",
+                    this.m_mapArtworkResizeSuccess.get("capsule"),
+                    " ",
+                  ],
+                },
+                "res_capsule",
+              ),
+            ),
+            e.push(
+              (0, s.jsxs)(
+                "div",
+                {
+                  children: [
+                    "Header Resized: ",
+                    this.m_mapArtworkResizeSuccess.get("background"),
+                    " ",
+                  ],
+                },
+                "res_header",
+              ),
+            ),
+            e.push(
+              (0, s.jsxs)(
+                "div",
+                {
+                  children: [
+                    "Spotlight Resized: ",
+                    this.m_mapArtworkResizeSuccess.get("spotlight"),
+                    " ",
+                  ],
+                },
+                "res_spotlightr",
+              ),
+            ),
+            e
+          );
+        }
+        render() {
+          let e = this.RenderFailure(),
+            t = this.m_mapArtworkResizeSuccess.has("capsule")
+              ? this.RenderResizeProgress()
+              : void 0;
+          return (0, s.jsxs)("div", {
+            children: [
+              (0, s.jsx)("h2", {
+                children: "Partner Events Backfill Processing Page",
+              }),
+              null == this.state.eBackfillState &&
+                (0, s.jsx)("div", {
+                  children: (0, s.jsx)("button", {
+                    onClick: this.OnArtworkResizeBackfill,
+                    children: "Begin Artwork Resize Backfill",
+                  }),
+                }),
+              (0, s.jsx)("div", {
+                children: (0, s.jsx)("button", {
+                  onClick: () => X.CompleteBackfill("resize_image"),
+                  children: "Stop Backfill",
+                }),
+              }),
+              this.state.strInfo &&
+                (0, s.jsxs)("div", {
+                  children: ["Processing: ", this.state.strInfo],
+                }),
+              (0, s.jsxs)("div", {
+                children: ["Events Processed: ", X.m_nProcessed],
+              }),
+              (0, s.jsxs)("div", {
+                children: ["Events Succeeded: ", X.m_nSuccesses],
+              }),
+              (0, s.jsxs)("div", {
+                children: ["Events Warning: ", X.m_nWarning],
+              }),
+              (0, s.jsxs)("div", {
+                children: ["Events Failed: ", X.m_nFailures],
+              }),
+              (0, s.jsxs)("div", {
+                children: ["Events Skipped: ", X.m_nSkipped],
+              }),
+              e.length > 0 &&
+                (0, s.jsxs)(p.Fragment, {
+                  children: [(0, s.jsx)("h2", { children: "Failure Info" }), e],
+                }),
+              Boolean(t) &&
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsx)("h2", { children: "Resizing Actions" }),
+                    t,
+                  ],
+                }),
+              "started" == this.state.eBackfillState &&
+                (0, s.jsx)(E.t, {
+                  size: "medium",
+                  position: "center",
+                  string: "Backfill In Progress",
+                }),
             ],
           });
         }
-        function vt(v) {
-          const h = Number.parseInt((0, I.j$)(v.args)) || 0;
-          return h >= 0 && h < 32
-            ? (0, e.jsx)(Ct, { nDoorIndex: h, children: v.children })
-            : null;
+      };
+      (0, H.Cg)([N.oI], se.prototype, "OnArtworkResizeBackfill", null),
+        (0, H.Cg)([N.oI], se.prototype, "BeginArtworkResize", null),
+        (se = (0, H.Cg)([m.PA], se));
+      var ae = n(65946),
+        re = n(92298),
+        ie = n.n(re),
+        oe = n(5634),
+        le = n(62641),
+        de = n(27543);
+      const ce = n(87937),
+        he = ["mod_reviewed", "auto_migrated"];
+      class ue {
+        static s_Singleton;
+        selectedTags = void 0;
+        excludedTags = void 0;
+        filterDate = void 0;
+        filterDateAsString = void 0;
+        eventsToLoadPerPaging = 20;
+        filterEventTypes = void 0;
+        bOrderByVisibilityStartTime = !1;
+        bUseCustomQuery = !1;
+        static Get() {
+          return ue.s_Singleton || (ue.s_Singleton = new ue()), ue.s_Singleton;
         }
-        const Ee = (0, Oe.y)(at.H);
-        function Rt(v) {
-          const h = Number.parseInt((0, I.j$)(v.args)),
-            { event: b, showErrorInfo: R } = v.context;
-          if (h) {
-            const G = b?.jsondata?.sale_sections?.findIndex(
-              (q) => q.unique_id == h,
-            );
-            if (G >= 0) {
-              const q = b.GetDayIndexFromEventStart();
-              return (0, e.jsx)(je.Cs, {
-                location: R ? je.HY : je.bs,
-                children: (0, e.jsx)(Ee, {
-                  event: b,
-                  section: b.jsondata.sale_sections[G],
-                  activeTab: new Tt.y(null, q),
-                  language: v.language,
-                  nSaleDayIndex: q,
-                  promotionName: "",
-                  appVisibilityTracker: null,
-                  ePreviewMode: R
-                    ? Ge.S.EPreviewMode_Enabled
-                    : Ge.S.EPreviewMode_Disabled,
-                }),
-              });
-            } else if (R)
-              return (0, e.jsxs)("div", {
-                className: He.ErrorDiv,
-                children: ["Error could not find sale section ", h],
-              });
-          }
-          return null;
+        constructor() {
+          (0, W.Gn)(this);
         }
-        let rt = null;
-        function Lt() {
-          return (
-            rt == null &&
-              (rt = new Map([
-                ...Array.from(wt().entries()),
-                [
-                  "itemdef",
-                  {
-                    Constructor: Ot,
-                    autocloses: !1,
-                    skipInternalNewline: !0,
-                    allowWrapTextForCopying: !0,
-                  },
-                ],
-                ["followgame", { Constructor: he, autocloses: !1 }],
-                ["deckcompatcount", { Constructor: Gt, autocloses: !1 }],
-                [
-                  "deckcompatuserlibrarycount",
-                  { Constructor: Ft, autocloses: !1 },
-                ],
-                ["giveawayinfo", { Constructor: C, autocloses: !1 }],
-                ["price", { Constructor: bt, autocloses: !1 }],
-                ["pricesavings", { Constructor: Ue, autocloses: !1 }],
-                ["eventdoorvisibility", { Constructor: ke, autocloses: !1 }],
-                ["chooseaccount", { Constructor: Ut, autocloses: !1 }],
-                ["badgecurrentlevel", { Constructor: Se, autocloses: !1 }],
-                ["optindoorquest", { Constructor: vt, autocloses: !1 }],
-                ["classname", { Constructor: st, autocloses: !1 }],
-                ["localize", { Constructor: $e, autocloses: !1 }],
-                ["salesection", { Constructor: Rt, autocloses: !1 }],
-                ["reservationbutton", { Constructor: ft, autocloses: !1 }],
-              ])),
-            rt
-          );
-        }
-        function Ot(v) {
-          const { event: h } = v.context,
-            b = Number.parseInt((0, I.j$)(v.args, "appid")),
-            R = Number.parseInt((0, I.j$)(v.args, "itemdefid")),
-            G = Number.parseInt((0, I.j$)(v.args, "maxquantity")),
-            q = (0, I.j$)(v.args, "calltoaction");
-          return !(0, jt.gS)(b, R, !1) || !h
-            ? (0, e.jsx)(Y.t, {
-                size: "small",
-                position: "center",
-                string: (0, V.we)("#Loading"),
-              })
-            : (0, e.jsx)(Ie.f, {
-                language: v.language,
-                clanAccountID: h.clanSteamID.GetAccountID(),
-                itemDefSetting: { nAppID: b, nItemDefID: R, max_quantity: G },
-                strCallToAction: q,
-              });
-        }
-        function Gt(v) {
-          const h = J();
-          if (!h) return (0, e.jsx)(Y.t, { size: "small" });
-          const b = Number.parseInt((0, I.j$)(v.args));
-          return (0, e.jsx)("span", { children: (0, Le.D)(Number(N(h, b))) });
-        }
-        function Ft(v) {
-          const h = (0, T.j)(K.iA.accountid, "library");
-          if (!h) return (0, e.jsx)(Y.t, { size: "small" });
-          const b = Number.parseInt((0, I.j$)(v.args));
-          let R = h.verifiedList?.length || 0;
-          switch (b) {
-            case me.sd:
-              R = h.playableList?.length || 0;
-              break;
-            case me.V8:
-              R = h.unsupportedList?.length || 0;
-              break;
-            case me.YX:
-              R = h.unknownList?.length || 0;
-              break;
-          }
-          return (0, e.jsx)("span", { children: (0, Le.D)(Number(R)) });
-        }
-        function ke(v) {
-          const h = Number.parseInt((0, I.j$)(v.args)),
-            b =
-              "hide" in v.args && !!Number.parseInt((0, I.j$)(v.args, "hide"));
-          return h >= 0
-            ? (0, e.jsx)(pt, { nDoorIndex: h, bHide: b, children: v.children })
-            : null;
-        }
-        function pt(v) {
-          const { nDoorIndex: h, bHide: b, children: R } = v,
-            G = (0, g.OM)(h);
-          return G == null
-            ? null
-            : (G && !b) || (!G && b)
-              ? (0, e.jsx)(e.Fragment, { children: v.children })
-              : null;
-        }
-        function Ut(v) {
-          if (K.iA.logged_in) {
-            const h = Number.parseInt((0, I.j$)(v.args)),
-              b = Number.parseInt((0, I.j$)(v.args, "mod"));
-            if (b > 0 && h < b && K.iA.accountid % b == h) return v.children;
-          }
-          return null;
-        }
-        function st(v) {
-          const h = (0, I.j$)(v.args);
-          return h?.trim().length > 0
-            ? (0, e.jsx)("div", { className: h.trim(), children: v.children })
-            : (0, e.jsx)(e.Fragment, { children: v.children });
-        }
-        function $e(v) {
-          return (0, e.jsx)("span", {
-            className: w.LocalizeBlock,
-            children: (0, V.oW)(
-              v.children,
-              (0, e.jsx)("b", {}),
-              (0, e.jsx)("b", {}),
-              (0, e.jsx)("b", {}),
-              (0, e.jsx)("b", {}),
-            ),
-          });
-        }
-        function C(v) {
-          let h = (0, I.j$)(v.args);
-          return h
-            ? (0, e.jsx)(Ke, { giveawayid: h })
-            : (0, e.jsx)(S.Fragment, {});
-        }
-        function ft(v) {
-          const { showErrorInfo: h, event: b } = v.context,
-            R = Number.parseInt((0, I.j$)(v.args)),
-            G = S.useMemo(() => {
-              if (b)
-                return b.jsondata.sale_sections?.find(
-                  (q) =>
-                    q.section_type == "vo_internal" &&
-                    (q.internal_section_data?.internal_type ==
-                      "reservation_widget" ||
-                      q.internal_section_data?.internal_type ==
-                        "while_supplies_last"),
-                );
-            }, [b]);
-          if (R && G) {
-            const q = Number.parseInt((0, I.j$)(v.args, "depositpackageid")),
-              te = Number.parseInt((0, I.j$)(v.args, "psulesspackageid")),
-              Me = (0, I.j$)(v.args, "out_of_stock_override"),
-              Be = (0, I.j$)(v.args, "delivery_override"),
-              pe = (0, I.j$)(v.args, "delivery_override_out_of_stock");
-            return (0, e.jsx)(ve, {
-              section: G,
-              reservationPackageID: R,
-              depositPackageID: q,
-              psuLessPackageID: te,
-              strOutOfStockOverride: Me,
-              strDeliveryOverride: pe || Be,
-              bDeliveryOverrideOnlyIfOutOfStock: !!pe,
+        Init(e) {
+          const t = new URLSearchParams(window.location.search);
+          let n;
+          t.has("selectedTags") &&
+            (n = t
+              .getAll("selectedTags")
+              .filter(Boolean)
+              .map((e) => ({ label: e, value: e })));
+          let s,
+            a,
+            r = !1,
+            i = he.map((e) => ({ label: e, value: e }));
+          t.has("excludedTags") &&
+            ((i = t
+              .getAll("excludedTags")
+              .filter(Boolean)
+              .map((e) => ({ label: e, value: e }))),
+            (r = i?.length > 0)),
+            t.has("eventtype") &&
+              (s = t
+                .getAll("eventtype")
+                .filter(Boolean)
+                .map((e) => {
+                  const n = Number.parseInt(t.get("eventtype"));
+                  return { label: (0, de.rG)(n), value: n };
+                })),
+            t.has("filterDate") &&
+              t.get("filterDate")?.length > 0 &&
+              (a = ce.unix(Number(t.get("filterDate"))));
+          let o = !1;
+          t.has("orderByVisibility") &&
+            t.get("orderByVisibility")?.length > 0 &&
+            (o = Boolean(t.get("orderByVisibility"))),
+            (0, W.h5)(() => {
+              (this.selectedTags = n),
+                (this.excludedTags = i),
+                (this.filterEventTypes = s),
+                (this.filterDate = a),
+                (this.bOrderByVisibilityStartTime = o),
+                (this.bUseCustomQuery =
+                  (n && n.length > 0) || r || (s && s.length > 0));
             });
-          }
-          return (0, e.jsx)(e.Fragment, {});
         }
-        var Pt = i(71698),
-          zt = i(82206);
-        function Ht(v) {
-          const { bSalePage: h } = v,
-            [b, R] = S.useState(ce.KN.IsInitialized());
-          return (
-            (0, Pt.H)(b, h),
-            S.useEffect(() => {
-              j.Vw.Init(new s.D(K.TS.WEBAPI_BASE_URL)),
-                k.O3.Init(),
-                ce.KN.InitGlobal().then(() => R(!0));
-            }, []),
-            S.useEffect(() => {
-              const G = (0, V.l4)();
-              G && P.locale(G);
-            }, []),
-            b
-              ? h
-                ? (0, e.jsx)(zt.d3, { dictionary: Lt(), children: v.children })
-                : v.children
-              : null
-          );
-        }
-      },
-      52671: (re, Ae, i) => {
-        "use strict";
-        i.r(Ae), i.d(Ae, { default: () => V });
-        var e = i(7850),
-          P = i(90626),
-          S = i(92757),
-          s = i(82559),
-          j = i(57223),
-          ce = i(25792),
-          k = i(7638);
-        class V extends P.Component {
-          state = { bIsLoading: !0 };
-          async componentDidMount() {
-            j.A.Get(),
-              await k.KN.InitGlobal(),
-              this.setState({ bIsLoading: !1 });
-          }
-          render() {
-            return this.state.bIsLoading
-              ? null
-              : (0, e.jsx)(ce.tH, {
-                  children: (0, e.jsxs)(S.dO, {
-                    children: [
-                      (0, e.jsx)(S.qh, {
-                        exact: !0,
-                        path: "/:prefix(curator|pub|publisher|dev|developer|franchise)/:curatorVanity/admin/manage_rss",
-                        component: s.A,
-                      }),
-                      (0, e.jsx)(S.qh, { children: !1 }),
-                    ],
-                  }),
-                });
-          }
-        }
-      },
-      87278: (re, Ae, i) => {
-        "use strict";
-        i.r(Ae), i.d(Ae, { default: () => ln });
-        var e = i(7850),
-          P = i(58732),
-          S = i(57223),
-          s = i(72604),
-          j = i(3166),
-          ce = i(41735),
-          k = i.n(ce),
-          V = i(34592);
-        class K {
-          static s_Singleton;
-          m_rgRSSEnabledClans = [];
-          GetAllRSSEnabledClans() {
-            return this.m_rgRSSEnabledClans;
-          }
-          GetTrustedEnabledClans(n) {
-            return this.m_rgRSSEnabledClans
-              .filter((r) => r.is_trusted_press == n)
-              .map((r) => r.clan_accoundid);
-          }
-          static Get() {
-            return (
-              K.s_Singleton ||
-                ((K.s_Singleton = new K()), K.s_Singleton.Init()),
-              K.s_Singleton
-            );
-          }
-          Init() {
-            let n = (0, j.Tc)("rssaccountinfo", "application_config");
-            this.ValidateRSSAccountConfig(n) && (this.m_rgRSSEnabledClans = n);
-          }
-          ValidateRSSAccountConfig(n) {
-            const r = n;
-            return (
-              r &&
-              Array.isArray(r) &&
-              r.length > 0 &&
-              typeof r[0] == "object" &&
-              typeof r[0].clan_accoundid == "number"
-            );
-          }
-          async LoadKnownAllRSSInfo() {
-            const n = new Array(),
-              r = S.A.Get();
-            this.m_rgRSSEnabledClans.forEach((o) => {
-              r.BHasClanIDLoaded(o.clan_accoundid) ||
-                n.push(r.QueueCuratorAdminInfoLoad(o.clan_accoundid));
-            }),
-              await Promise.all(n);
-          }
-          ExtractWithoutRSSAutomation() {
-            const n = [],
-              r = S.A.Get();
-            return (
-              this.m_rgRSSEnabledClans.forEach((o) => {
-                const d = r.GetRSSAdminForClanAccountID(o.clan_accoundid);
-                d && !d.BIsAutomationEnabled() && n.push(o.clan_accoundid);
-              }),
-              n
-            );
-          }
-          async HintLoadAccounts() {}
-          async ReindexClanEventsAndReloadAccount(n) {
-            const r =
-                j.TS.STORE_BASE_URL + "events_admin/ajaxflushandreindexrss",
-              o = new FormData();
-            o.set("sessionid", (0, j.KC)()), o.append("clanids", "" + n);
-            try {
-              if (
-                (await k().post(r, o, { withCredentials: !0 }))?.data
-                  ?.success == s.R
-              )
-                return !0;
-            } catch (d) {
-              const c = (0, V.H)(d);
-              console.error(
-                "Failed to ReindexClanEventsAndReloadAccount: " + c.strErrorMsg,
-                c,
-              );
-            }
-            return !1;
-          }
-        }
-        var me = i(82559),
-          U = i(75844),
-          x = i(90626),
-          z = i(92757),
-          H = i(76559),
-          B = i(813),
-          O = i(16412),
-          Q = i(25792),
-          _ = i(60655),
-          J = i(88003),
-          N = i(36118),
-          I = i(85599),
-          T = i(71421),
-          g = i(36707),
-          w = i(82734),
-          m = i(18210),
-          t = i(52081),
-          l = i.n(t),
-          p = i(96538),
-          A = i(2259),
-          Y = i(24642);
-        const $ = (a) => {
-            const [n, r] = (0, x.useState)(!0);
-            if (
-              ((0, x.useEffect)(() => {
-                (async () => (
-                  B.ac.Init(), await K.Get().HintLoadAccounts(), r(!1)
-                ))();
-              }, []),
-              n)
-            )
-              return (0, e.jsx)(I.t, {
-                string: (0, m.we)("#Loading"),
-                size: "medium",
-              });
-            const o = K.Get().GetTrustedEnabledClans(!0),
-              d = K.Get().GetTrustedEnabledClans(!1);
-            return (0, e.jsx)("div", {
-              children: (0, e.jsxs)(Q.tH, {
-                children: [
-                  (0, e.jsx)("h1", {
-                    children: (0, m.we)("#RSSModeration_Title"),
-                  }),
-                  (0, e.jsx)(ve, {}),
-                  (0, e.jsx)(ee, {
-                    rgClanIDs: K.Get()
-                      .GetAllRSSEnabledClans()
-                      .map((c) => c.clan_accoundid),
-                  }),
-                  (0, e.jsx)(xe, {
-                    rgClanIDs: o,
-                    strTitle: (0, m.we)("#RSSModeration_TrustTitle"),
-                  }),
-                  (0, e.jsx)(xe, {
-                    rgClanIDs: d,
-                    strTitle: (0, m.we)("#RSSModeration_RestTitle"),
-                  }),
-                ],
-              }),
-            });
-          },
-          ue = (0, z.y)($),
-          ve = (0, U.PA)((a) => {
-            const [n, r] = (0, x.useState)(!1),
-              [o, d] = (0, x.useState)(void 0);
-            return n
-              ? (0, e.jsx)(I.t, {
-                  string: (0, m.we)("#Loading"),
-                  size: "medium",
-                })
-              : o !== void 0
-                ? o.length > 0
-                  ? (0, e.jsx)(xe, {
-                      rgClanIDs: o,
-                      strTitle: (0, m.we)("#RSSModeration_InactiveAutomation"),
-                    })
-                  : (0, e.jsx)("div", {
-                      children: (0, m.we)(
-                        "#RSSModreation_AllAutomationEnabled",
-                      ),
-                    })
-                : (0, e.jsxs)(O.$n, {
-                    onClick: async () => {
-                      r(!0),
-                        await K.Get().LoadKnownAllRSSInfo(),
-                        d(K.Get().ExtractWithoutRSSAutomation()),
-                        r(!1);
-                    },
-                    children: [(0, m.we)("#RSSModeration_FindInActive"), " "],
-                  });
-          }),
-          xe = (a) => {
-            const { rgClanIDs: n, strTitle: r } = a,
-              [o, d] = (0, x.useState)(!1);
-            let c = null;
-            return (
-              o || (c = n.map((u) => (0, e.jsx)(Ie, { clanAccountID: u }, u))),
-              (0, e.jsxs)("div", {
-                className: (0, g.A)(l().SectionContainer),
-                children: [
-                  (0, e.jsxs)("h2", {
-                    className: (0, g.A)(l().ModSectionTitle),
-                    onDoubleClick: () => d(!o),
-                    children: [
-                      r,
-                      (0, e.jsx)("span", { children: "\xA0" }),
-                      (0, e.jsx)(O.$n, {
-                        className: l().ResizeButton,
-                        onClick: () => d(!o),
-                        children: o
-                          ? (0, e.jsx)(N.hz4, {})
-                          : (0, e.jsx)(N.Xjb, {}),
-                      }),
-                    ],
-                  }),
-                  o &&
-                    (0, e.jsx)(O.$n, {
-                      onClick: () => d(!1),
-                      children: (0, m.we)("#Sale_ShowContents"),
-                    }),
-                  c,
-                ],
-              })
-            );
-          },
-          Ie = (0, U.PA)((a) => {
-            const { clanAccountID: n } = a;
-            return B.ac.BHasClanInfoLoadedByAccountID(n) &&
-              S.A.Get().BHasClanIDLoaded(n)
-              ? (0, e.jsx)(qe, {
-                  clanInfo: B.ac.GetClanInfoByClanAccountID(n),
-                  rssAdminInfo: S.A.Get().GetRSSAdminForClanAccountID(n),
-                })
-              : (0, e.jsx)(Ne, { clanAccountID: n });
-          }),
-          Ne = (a) => {
-            const { clanAccountID: n } = a,
-              r = "500px",
-              o = async () => {
-                const c = H.b.InitFromClanID(n);
-                await Promise.all([
-                  B.ac.LoadClanInfoForClanSteamID(c),
-                  S.A.Get().QueueCuratorAdminInfoLoad(n),
-                ]);
-              },
-              d = (0, A.OO)(
-                { onEnter: o },
-                { rootMargin: `${r} 0px ${r} 0px` },
-              );
-            return (0, e.jsx)("div", {
-              ref: d,
-              className: l().TileContainer,
-              children: (0, e.jsxs)("div", {
-                children: [(0, m.we)("#Loading"), " - ", n],
-              }),
-            });
-          },
-          qe = (a) => {
-            const { clanInfo: n, rssAdminInfo: r } = a,
-              [o, d] = (0, x.useState)(!1),
-              c = j.TS.STORE_BASE_URL + "newshub/group/" + n.clanAccountID,
-              u =
-                j.TS.STORE_BASE_URL +
-                "curator/" +
-                n.clanAccountID +
-                "/admin/manage_rss",
-              f = j.TS.COMMUNITY_BASE_URL + "group/" + n.clanAccountID,
-              F =
-                "https://steamsupport.valvesoftware.com/clan/overview/" +
-                H.b.InitFromClanID(n.clanAccountID).ConvertTo64BitString(),
-              ie = S.A.Get().GetRSSAdminStats(n.clanAccountID);
-            return (0, e.jsxs)("div", {
-              className: (0, g.A)(l().TileContainer),
-              children: [
-                (0, e.jsxs)("div", {
-                  className: (0, g.A)(l().TileSpread),
-                  children: [
-                    (0, e.jsxs)("div", {
-                      children: [
-                        (0, e.jsxs)("div", {
-                          children: [n.group_name, " - ", n.clanAccountID],
-                        }),
-                        (0, e.jsxs)("div", {
-                          children: [
-                            (0, e.jsxs)("div", {
-                              children: [
-                                (0, m.we)("#CuratorAdmin_RSSFeed"),
-                                ":",
-                              ],
-                            }),
-                            (0, e.jsx)("a", {
-                              href: r.GetRSSUrl(),
-                              children: r.GetRSSUrl(),
-                            }),
-                          ],
-                        }),
-                        !!ie &&
-                          (0, e.jsxs)("div", {
-                            children: [
-                              (0, e.jsx)("div", {
-                                children: (0, m.we)(
-                                  "#RSSModeration_TotalEvents",
-                                  (0, Y.D)(ie.total_event_count),
-                                ),
-                              }),
-                              (0, e.jsx)("div", {
-                                children: (0, m.we)(
-                                  "#RSSModeration_RSSEvents",
-                                  (0, Y.D)(ie.rss_event_count),
-                                ),
-                              }),
-                            ],
-                          }),
-                        (0, e.jsx)(O.$n, {
-                          onClick: () => d(!o),
-                          children: (0, m.we)(
-                            o
-                              ? "#Bbcode_Expand_Details_Expanded"
-                              : "#Bbcode_Expand_Details_Collapsed",
-                          ),
-                        }),
-                      ],
-                    }),
-                    (0, e.jsx)("div", {
-                      children: (0, e.jsxs)("ul", {
-                        children: [
-                          (0, e.jsx)("li", {
-                            children: (0, e.jsx)("a", {
-                              href: c,
-                              children: (0, m.we)(
-                                "#EventDisplay_NewsHubSubtitle",
-                              ),
-                            }),
-                          }),
-                          (0, e.jsx)("li", {
-                            children: (0, e.jsx)("a", {
-                              href: u,
-                              children: (0, m.we)(
-                                "#CuratorAdmin_RSSFeed_title",
-                              ),
-                            }),
-                          }),
-                          (0, e.jsx)("li", {
-                            children: (0, e.jsx)("a", {
-                              href: f,
-                              children: (0, m.we)("#RSSModeration_GroupPage"),
-                            }),
-                          }),
-                          (0, e.jsx)("li", {
-                            children: (0, e.jsx)("a", {
-                              href: F,
-                              children: (0, m.we)("#RSSModeration_SupportPage"),
-                            }),
-                          }),
-                          (0, e.jsx)("li", {
-                            children: (0, e.jsx)(ee, {
-                              rgClanIDs: [n.clanAccountID],
-                            }),
-                          }),
-                        ],
-                      }),
-                    }),
-                    (0, e.jsx)("div", {
-                      className: l().CreatorCtn,
-                      children: (0, e.jsx)(_.hA, {
-                        bHideCreatorType: !0,
-                        creatorID: {
-                          name: null,
-                          clan_account_id: n.clanAccountID,
-                          type: "developer",
-                        },
-                        bSmallFormat: !0,
-                      }),
-                    }),
-                  ],
-                }),
-                !!o &&
-                  (0, e.jsx)(e.Fragment, {
-                    children: r.BHasSavedRSSURL()
-                      ? (0, e.jsx)(me.q, { strRssURL: r.GetRSSUrl(), admin: r })
-                      : (0, e.jsx)("div", {
-                          children: (0, m.we)("#RSSModeration_NoRSSFeed"),
-                        }),
-                  }),
-              ],
-            });
-          },
-          ee = (a) => {
-            const n = (r) => {
-              (0, J.pg)((0, e.jsx)(we, { ...a }), (0, w.uX)(r));
-            };
-            return (0, e.jsx)(T.he, {
-              toolTipContent: (0, m.we)("#RSSModeration_ReindexAndReload_ttip"),
-              children: (0, e.jsx)(O.$n, {
-                onClick: n,
-                children: (0, m.we)("#RSSModeration_ReindexAndReload"),
-              }),
-            });
-          },
-          we = (a) => {
-            const [n, r] = (0, x.useState)(void 0),
-              [o, d] = (0, x.useState)(!1),
-              [c, u] = (0, x.useState)(void 0),
-              f = () => a.closeModal && a.closeModal(),
-              D = async () => {
-                let F = 0;
-                r(F);
-                for (let ie = 0; ie < a.rgClanIDs.length; ++ie) {
-                  let ne = a.rgClanIDs[ie];
-                  if (await K.Get().ReindexClanEventsAndReloadAccount(ne))
-                    (F += 1), r(F);
-                  else {
-                    u((0, m.we)("#Error_Generic_Label"));
-                    break;
-                  }
-                }
-                d(!0);
-              };
-            return (0, e.jsx)(p.x_, {
-              onEscKeypress: f,
-              children: (0, e.jsxs)(O.UC, {
-                children: [
-                  (0, e.jsxs)(O.Y9, {
-                    children: [
-                      " ",
-                      (0, m.we)("#RSSModeration_ReindexAndReload"),
-                      " ",
-                    ],
-                  }),
-                  (0, e.jsxs)(O.nB, {
-                    children: [
-                      (0, e.jsxs)(O.a3, {
-                        children: [
-                          n === void 0
-                            ? (0, e.jsxs)(e.Fragment, {
-                                children: [
-                                  (0, e.jsx)("span", {
-                                    children: (0, m.we)(
-                                      "#RSSModeration_Reindex_Verify",
-                                      a.rgClanIDs.length,
-                                    ),
-                                  }),
-                                  (0, e.jsx)(O.jn, {
-                                    onClick: D,
-                                    children: (0, m.we)("#Button_Continue"),
-                                  }),
-                                ],
-                              })
-                            : (0, e.jsxs)(e.Fragment, {
-                                children: [
-                                  (0, e.jsx)("span", {
-                                    children: (0, m.we)(
-                                      "#RSSModeration_Reindex_Action",
-                                      n,
-                                      a.rgClanIDs.length,
-                                    ),
-                                  }),
-                                  o
-                                    ? (0, e.jsx)("span", {
-                                        children: (0, m.we)(
-                                          "#EventEditor_ImportFromHTML_ConvertFinished",
-                                        ),
-                                      })
-                                    : (0, e.jsx)(I.t, {
-                                        size: "small",
-                                        string: (0, m.we)("#Updating"),
-                                      }),
-                                ],
-                              }),
-                          !!c && (0, e.jsxs)("span", { children: [c, " "] }),
-                        ],
-                      }),
-                      (0, e.jsx)(O.wi, {
-                        children: (0, e.jsx)(O.$n, {
-                          onClick: f,
-                          children: (0, m.we)(
-                            o ? "#Button_OK" : "#Button_Cancel",
-                          ),
-                        }),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-            });
-          };
-        var ae = i(79118),
-          se = i(30096),
-          X = i(99412),
-          W = i(14947),
-          We = Object.defineProperty,
-          M = Object.getOwnPropertyDescriptor,
-          y = (a, n, r, o) => {
-            for (
-              var d = o > 1 ? void 0 : o ? M(n, r) : n, c = a.length - 1, u;
-              c >= 0;
-              c--
-            )
-              (u = a[c]) && (d = (o ? u(n, r, d) : u(d)) || d);
-            return o && d && We(n, r, d), d;
-          };
-        const L = class lt {
-          static s_Singleton;
-          m_mapEventGIDToSolrData = new Map();
-          m_listEvents = new Array();
-          BHasSolrEvent(n) {
-            return this.m_mapEventGIDToSolrData.has(n);
-          }
-          GetAllSolrEvents() {
-            return this.m_listEvents;
-          }
-          static Get() {
-            return (
-              lt.s_Singleton || (lt.s_Singleton = new lt()), lt.s_Singleton
-            );
-          }
-          constructor() {
-            (0, W.Gn)(this);
-          }
-          ClearAllSolrEvents() {
-            (this.m_mapEventGIDToSolrData = new Map()),
-              (this.m_listEvents = new Array());
-          }
-          async LoadPartnerEventForQueryIncremental(
-            n,
-            r = 0,
-            o = 10,
-            d,
-            c,
-            u,
-            f,
-            D,
-            F,
-          ) {
-            const ie = await this.GetLatestPartnerEvents(
-              n,
-              r,
-              o,
-              d,
-              c,
-              u,
-              f,
-              D,
-              F,
-            );
-            let ne = new Array();
-            return (
-              (0, W.h5)(() => {
-                ie.forEach((ye) => {
-                  this.m_mapEventGIDToSolrData.has(ye.unique_id) ||
-                    (ne.push(ye),
-                    this.m_mapEventGIDToSolrData.set(ye.unique_id, ye),
-                    this.m_listEvents.push(ye));
-                });
-              }),
-              ne
-            );
-          }
-          async GetLatestPartnerEvents(
-            n,
-            r = 0,
-            o = 10,
-            d,
-            c,
-            u,
-            f,
-            D,
-            F,
-            ie,
-            ne,
-            ye,
-            de,
-          ) {
-            const be =
-                j.TS.STORE_BASE_URL + "events_admin/ajaxgetlatestpartnerevents",
-              Te = {
-                page: r,
-                count: o,
-                date: f,
-                appids: d === void 0 ? void 0 : d.join(","),
-                required_tags: c === void 0 ? void 0 : c.join(","),
-                exclude_tags: u === void 0 ? void 0 : u.join(","),
-                eventtypefilter: D === void 0 ? void 0 : D.join(","),
-                orderByVisibility: F || void 0,
-                creator_home_clan_id: ie === void 0 ? void 0 : ie.join(","),
-                showUnpublished: ye === void 0 ? void 0 : ye,
-                sale_only: de === void 0 ? void 0 : de,
-                term: ne === void 0 ? void 0 : ne,
-              },
-              kt = await k().get(be, {
-                params: Te,
-                withCredentials: !0,
-                cancelToken: n ? n.token : void 0,
-              });
-            return kt.data ? kt.data.docs : [];
-          }
-        };
-        y([W.sH], L.prototype, "m_mapEventGIDToSolrData", 2),
-          y([W.sH], L.prototype, "m_listEvents", 2),
-          y([W.XI], L.prototype, "ClearAllSolrEvents", 1);
-        let E = L;
-        var Z = i(9046),
-          oe = Object.defineProperty,
-          fe = Object.getOwnPropertyDescriptor,
-          ge = (a, n, r, o) => {
-            for (
-              var d = o > 1 ? void 0 : o ? fe(n, r) : n, c = a.length - 1, u;
-              c >= 0;
-              c--
-            )
-              (u = a[c]) && (d = (o ? u(n, r, d) : u(d)) || d);
-            return o && d && oe(n, r, d), d;
-          };
-        class he {
-          constructor() {
-            (0, W.Gn)(this);
-          }
-          m_backfill = void 0;
-          m_mapEventGIDProcessed = new Map();
-          m_vecEventGID = new Array();
-          m_bBackfillInProgress = !1;
-          m_nProcessed = 0;
-          m_nSuccesses = 0;
-          m_nFailures = 0;
-          m_nWarning = 0;
-          m_nSkipped = 0;
-          GetBackfill() {
-            return this.m_backfill;
-          }
-          SetBackfill(n) {
-            this.m_backfill = n;
-          }
-          StartBackfill(n) {
-            (this.m_backfill = n), (this.m_bBackfillInProgress = !0);
-          }
-          CompleteBackfill(n) {
-            (this.m_backfill = void 0), (this.m_bBackfillInProgress = !1);
-          }
-          BIsBackkFillInProgress() {
-            return this.m_bBackfillInProgress;
-          }
-          GetEventBackfillProgress() {
-            return this.m_mapEventGIDProcessed;
-          }
-          CreateOrGetBackfillProgess(n) {
-            return (
-              this.m_mapEventGIDProcessed.has(n) ||
-                (this.m_mapEventGIDProcessed.set(n, { bProcessing: !1 }),
-                this.m_vecEventGID.push(n)),
-              this.m_mapEventGIDProcessed.get(n)
-            );
-          }
-          BHasProgress(n) {
-            return this.m_mapEventGIDProcessed.has(n);
-          }
-          GetBackfillGIDs() {
-            return this.m_vecEventGID;
-          }
-          CloseProgress(n, r) {
-            (this.m_nProcessed += 1),
-              r.bAlreadyProcessed || r.bSkipped
-                ? (this.m_nSkipped += 1)
-                : r.bSucceeded
-                  ? (this.m_nSuccesses += 1)
-                  : r.bFailed && (this.m_nFailures += 1),
-              r.bWarning && (this.m_nWarning += 1),
-              this.m_mapEventGIDProcessed.set(n, r);
-          }
-        }
-        ge([W.sH], he.prototype, "m_backfill", 2),
-          ge([W.sH], he.prototype, "m_mapEventGIDProcessed", 2),
-          ge([W.sH], he.prototype, "m_bBackfillInProgress", 2),
-          ge([W.sH], he.prototype, "m_nProcessed", 2),
-          ge([W.sH], he.prototype, "m_nSuccesses", 2),
-          ge([W.sH], he.prototype, "m_nFailures", 2),
-          ge([W.sH], he.prototype, "m_nWarning", 2),
-          ge([W.sH], he.prototype, "m_nSkipped", 2),
-          ge([W.XI], he.prototype, "StartBackfill", 1),
-          ge([W.XI], he.prototype, "CompleteBackfill", 1),
-          ge([W.XI], he.prototype, "CloseProgress", 1);
-        const le = new he();
-        var Qe = i(45559),
-          mt = i(25279),
-          ut = i(56492),
-          St = i(75909),
-          yt = i(64),
-          Ye = i(29630),
-          gt = i(6658),
-          At = Object.defineProperty,
-          ht = Object.getOwnPropertyDescriptor,
-          et = (a, n, r, o) => {
-            for (
-              var d = o > 1 ? void 0 : o ? ht(n, r) : n, c = a.length - 1, u;
-              c >= 0;
-              c--
-            )
-              (u = a[c]) && (d = (o ? u(n, r, d) : u(d)) || d);
-            return o && d && At(n, r, d), d;
-          };
-        const xt = 25,
-          It = 5e3;
-        let ze = class extends x.Component {
-          m_cancelSignal = k().CancelToken.source();
-          m_nImageID = 0;
-          m_mapArtworkResizeSuccess = new Map();
-          state = { eBackfillState: void 0 };
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "EventBackfillLanding component unmounted",
-            );
-          }
-          OnArtworkResizeBackfill() {
-            this.state.eBackfillState == null &&
-              this.setState(
-                { eBackfillState: "started" },
-                this.BeginArtworkResize,
-              );
-          }
-          BeginArtworkResize() {
-            this.m_mapArtworkResizeSuccess.set("capsule", 0),
-              this.m_mapArtworkResizeSuccess.set("spotlight", 0),
-              this.m_mapArtworkResizeSuccess.set("background", 0),
-              this.RunArtworkResizeBackfill()
-                .then(() => this.setState({ eBackfillState: "success" }))
-                .catch((a) => {
-                  let n = (0, V.H)(a);
-                  console.error(
-                    "EventBackfillLanding: error " + n.strErrorMsg,
-                    n,
-                  ),
-                    this.setState({ eBackfillState: "error" });
-                });
-          }
-          async GetImageInfo(a, n, r = "") {
-            const o = (0, gt.yh)(n),
-              d = Ye.zU.GetHashFromHashAndExt(n) + r;
-            return Ye.zU.AsyncGetImageResolution(
-              a,
-              d,
-              o,
-              this.m_cancelSignal,
-              !0,
-            );
-          }
-          HandleErrorFatal(a, n, r, o) {
-            let d = (0, V.H)(n),
-              c =
-                "EventBackfillLanding: " +
-                r +
-                " on GID " +
-                a +
-                " : " +
-                d.strErrorMsg;
-            console.error(c, d),
-              o
-                ? ((o.bFailed = !0), (o.strMessage = c), le.CloseProgress(a, o))
-                : le.CompleteBackfill("resize_image");
-          }
-          async HandleResizeForImageType(a, n, r, o, d) {
-            for (let c = X.Bhc; c < a.length && c < X.bP9; ++c)
-              if (a[c] && a[c].length > 0) {
-                let u = a[c],
-                  f = (0, gt.yh)(u);
-                const D = new H.b(n.clan_steamid);
-                if (f) {
-                  let F = await this.GetImageInfo(D, u).catch(
-                    (ie) => (
-                      this.HandleErrorFatal(
-                        null,
-                        ie,
-                        "GetImageInfo Original",
-                        r,
-                      ),
-                      { height: 0, width: 0, success: s.zi }
-                    ),
-                  );
-                  if (F.success == s.R && (0, mt.yu)(F.width, F.height, o, !0))
-                    if (
-                      (
-                        await this.GetImageInfo(D, u, d).catch(
-                          (ne) => (
-                            this.HandleErrorFatal(
-                              null,
-                              ne,
-                              "GetImageInfo Resize",
-                              r,
-                            ),
-                            { height: 0, width: 0, success: s.zi }
-                          ),
-                        )
-                      ).success == s.R
-                    )
-                      r.bAlreadyProcessed = !0;
-                    else {
-                      r.bProcessing = !0;
-                      let ne = Ye.zU.GetHashFromHashAndExt(u),
-                        ye = Ye.zU.GetExtStringFromHashAndExt(u),
-                        de = (0, yt.K_)(o);
-                      if (de)
-                        try {
-                          const be = await (0, St.bT)(
-                            this.m_cancelSignal.token,
-                            D,
-                            ne,
-                            ye,
-                            de,
-                          );
-                          console.log("success on the resize request"),
-                            be == de.length
-                              ? ((r.bSucceeded = !0),
-                                this.m_mapArtworkResizeSuccess.set(
-                                  o,
-                                  this.m_mapArtworkResizeSuccess.get(o) + 1,
-                                ))
-                              : ((r.bFailed = !0),
-                                (r.strMessage =
-                                  "Did not resize all: " +
-                                  o +
-                                  " " +
-                                  be +
-                                  " / " +
-                                  de.length));
-                        } catch (be) {
-                          r.bFailed = !0;
-                          let Te = (0, V.H)(be);
-                          (r.strMessage = Te.strErrorMsg),
-                            console.error("Resize: " + Te.strErrorMsg, Te);
-                        }
-                      else
-                        (r.bFailed = !0),
-                          console.error(
-                            "Resize: resize request couldn't be determined from the artwork type",
-                          );
-                    }
-                  else r.bSkipped = !0;
-                } else r.bSkipped = !0;
-              }
-          }
-          async RunArtworkResizeBackfill() {
-            le.StartBackfill("resize_image");
-            let a = 0;
-            for (; le.BIsBackkFillInProgress(); ) {
-              let n = await E.Get()
-                .LoadPartnerEventForQueryIncremental(this.m_cancelSignal, a, xt)
-                .catch((r) =>
-                  this.HandleErrorFatal(
-                    null,
-                    r,
-                    "LoadPartnerEventForQueryIncremental",
-                  ),
-                );
-              if (!n || n.length == 0) {
-                le.CompleteBackfill("resize_image"),
-                  console.log("Compelted the backfill");
-                break;
-              }
-              a += n.length;
-              for (let r = 0; r < n.length; ++r) {
-                let o = n[r],
-                  d = le.CreateOrGetBackfillProgess(o.unique_id);
-                if (!o.announcement_gid || o.announcement_gid.length == 0) {
-                  (d.bSkipped = !0),
-                    (d.bWarning = !0),
-                    le.CloseProgress(o.unique_id, d);
-                  continue;
-                }
-                if (
-                  (await ae.O3.LoadPartnerEventFromAnnoucementGID(
-                    Number(o.appid),
-                    o.announcement_gid,
-                    100,
-                  ).catch((u) => {
-                    this.HandleErrorFatal(
-                      o.announcement_gid,
-                      u,
-                      "LoadPartnerEventFromAnnoucementGID",
-                      d,
-                    );
-                  }),
-                  d.bFailed)
-                )
-                  continue;
-                let c = ae.O3.GetClanEventFromAnnouncementGID(
-                  o.announcement_gid,
-                );
-                if (!c) {
-                  (d.bFailed = !0),
-                    (d.strMessage = "Failed to load the event: " + o.unique_id),
-                    le.CloseProgress(o.unique_id, d);
-                  continue;
-                }
-                if (d.bSucceeded || d.bFailed || d.bAlreadyProcessed) {
-                  (d.bAlreadyProcessed = !0), le.CloseProgress(o.unique_id, d);
-                  continue;
-                }
-                if (
-                  ((d.bAnalysing = !0),
-                  this.setState({
-                    strInfo:
-                      "Processing " +
-                      le.GetBackfillGIDs().length +
-                      " Appid: " +
-                      c.appid +
-                      " Event " +
-                      c.GID +
-                      " Title: " +
-                      c.GetNameWithFallback(X.Bhc),
-                  }),
-                  c.jsondata && c.jsondata.localized_capsule_image)
-                ) {
-                  let u = c.jsondata.localized_capsule_image;
-                  await this.HandleResizeForImageType(
-                    u,
-                    o,
-                    d,
-                    "capsule",
-                    Z.wI.capsule_main,
-                  ).catch((f) =>
-                    this.HandleErrorFatal(
-                      null,
-                      f,
-                      "HandleResizeForImageType capsule",
-                      d,
-                    ),
-                  );
-                }
-                if (c.jsondata && c.jsondata.localized_title_image) {
-                  let u = c.jsondata.localized_title_image;
-                  await this.HandleResizeForImageType(
-                    u,
-                    o,
-                    d,
-                    "background",
-                    Z.wI.background_mini,
-                  ).catch((f) =>
-                    this.HandleErrorFatal(
-                      null,
-                      f,
-                      "HandleResizeForImageType background",
-                      d,
-                    ),
-                  );
-                }
-                if (c.jsondata && c.jsondata.localized_spotlight_image) {
-                  let u = c.jsondata.localized_spotlight_image;
-                  await this.HandleResizeForImageType(
-                    u,
-                    o,
-                    d,
-                    "spotlight",
-                    Z.wI.spotlight_main,
-                  ).catch((f) =>
-                    this.HandleErrorFatal(
-                      null,
-                      f,
-                      "HandleResizeForImageType spotlight",
-                      d,
-                    ),
-                  );
-                }
-                if (
-                  (le.CloseProgress(o.unique_id, d),
-                  !le.BIsBackkFillInProgress())
-                )
-                  break;
-              }
-              if (le.m_nFailures > It) {
-                console.log("Hit too many errors, stoppinng the backfill");
-                break;
-              }
-            }
-          }
-          RenderFailure() {
-            let a = new Array();
-            return (
-              le.m_nFailures > 0 &&
-                le.GetBackfillGIDs().forEach((n) => {
-                  let r = le.GetEventBackfillProgress().get(n);
-                  if (r && r.bFailed) {
-                    let o = ae.O3.GetClanEventModel(n);
-                    o &&
-                      a.push(
-                        (0, e.jsxs)(
-                          "div",
-                          {
-                            children: [
-                              (0, e.jsx)(ut.tj, {
-                                eventModel: o,
-                                route: ut.PH.k_eView,
-                                children: o.GetNameWithFallback(X.Bhc),
-                              }),
-                              (0, e.jsx)("div", {
-                                className: Qe.Error,
-                                children: r.strMessage,
-                              }),
-                            ],
-                          },
-                          n,
-                        ),
-                      );
-                  }
-                }),
-              a
-            );
-          }
-          RenderResizeProgress() {
-            let a = new Array();
-            return (
-              a.push(
-                (0, e.jsxs)(
-                  "div",
-                  {
-                    children: [
-                      "Capsule Resized: ",
-                      this.m_mapArtworkResizeSuccess.get("capsule"),
-                      " ",
-                    ],
-                  },
-                  "res_capsule",
-                ),
-              ),
-              a.push(
-                (0, e.jsxs)(
-                  "div",
-                  {
-                    children: [
-                      "Header Resized: ",
-                      this.m_mapArtworkResizeSuccess.get("background"),
-                      " ",
-                    ],
-                  },
-                  "res_header",
-                ),
-              ),
-              a.push(
-                (0, e.jsxs)(
-                  "div",
-                  {
-                    children: [
-                      "Spotlight Resized: ",
-                      this.m_mapArtworkResizeSuccess.get("spotlight"),
-                      " ",
-                    ],
-                  },
-                  "res_spotlightr",
-                ),
-              ),
-              a
-            );
-          }
-          render() {
-            let a = this.RenderFailure(),
-              n = this.m_mapArtworkResizeSuccess.has("capsule")
-                ? this.RenderResizeProgress()
-                : void 0;
-            return (0, e.jsxs)("div", {
-              children: [
-                (0, e.jsx)("h2", {
-                  children: "Partner Events Backfill Processing Page",
-                }),
-                this.state.eBackfillState == null &&
-                  (0, e.jsx)("div", {
-                    children: (0, e.jsx)("button", {
-                      onClick: this.OnArtworkResizeBackfill,
-                      children: "Begin Artwork Resize Backfill",
-                    }),
-                  }),
-                (0, e.jsx)("div", {
-                  children: (0, e.jsx)("button", {
-                    onClick: () => le.CompleteBackfill("resize_image"),
-                    children: "Stop Backfill",
-                  }),
-                }),
-                this.state.strInfo &&
-                  (0, e.jsxs)("div", {
-                    children: ["Processing: ", this.state.strInfo],
-                  }),
-                (0, e.jsxs)("div", {
-                  children: ["Events Processed: ", le.m_nProcessed],
-                }),
-                (0, e.jsxs)("div", {
-                  children: ["Events Succeeded: ", le.m_nSuccesses],
-                }),
-                (0, e.jsxs)("div", {
-                  children: ["Events Warning: ", le.m_nWarning],
-                }),
-                (0, e.jsxs)("div", {
-                  children: ["Events Failed: ", le.m_nFailures],
-                }),
-                (0, e.jsxs)("div", {
-                  children: ["Events Skipped: ", le.m_nSkipped],
-                }),
-                a.length > 0 &&
-                  (0, e.jsxs)(x.Fragment, {
-                    children: [
-                      (0, e.jsx)("h2", { children: "Failure Info" }),
-                      a,
-                    ],
-                  }),
-                !!n &&
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("h2", { children: "Resizing Actions" }),
-                      n,
-                    ],
-                  }),
-                this.state.eBackfillState == "started" &&
-                  (0, e.jsx)(I.t, {
-                    size: "medium",
-                    position: "center",
-                    string: "Backfill In Progress",
-                  }),
-              ],
-            });
-          }
-        };
-        et([se.oI], ze.prototype, "OnArtworkResizeBackfill", 1),
-          et([se.oI], ze.prototype, "BeginArtworkResize", 1),
-          (ze = et([U.PA], ze));
-        var wt = i(65946),
-          Mt = i(92298),
-          Re = i.n(Mt),
-          Le = i(5634),
-          Fe = i(73259),
-          Ke = i(71684),
-          tt = Object.defineProperty,
-          bt = Object.getOwnPropertyDescriptor,
-          Ue = (a, n, r, o) => {
-            for (
-              var d = o > 1 ? void 0 : o ? bt(n, r) : n, c = a.length - 1, u;
-              c >= 0;
-              c--
-            )
-              (u = a[c]) && (d = (o ? u(n, r, d) : u(d)) || d);
-            return o && d && tt(n, r, d), d;
-          };
-        const jt = i(87937),
-          Et = ["mod_reviewed", "auto_migrated"],
-          Dt = 20,
-          Oe = class dt {
-            static s_Singleton;
-            selectedTags = void 0;
-            excludedTags = void 0;
-            filterDate = void 0;
-            filterDateAsString = void 0;
-            eventsToLoadPerPaging = Dt;
-            filterEventTypes = void 0;
-            bOrderByVisibilityStartTime = !1;
-            bUseCustomQuery = !1;
-            static Get() {
-              return (
-                dt.s_Singleton || (dt.s_Singleton = new dt()), dt.s_Singleton
-              );
-            }
-            constructor() {
-              (0, W.Gn)(this);
-            }
-            Init(n) {
-              const r = new URLSearchParams(window.location.search);
-              let o;
-              r.has("selectedTags") &&
-                (o = r
-                  .getAll("selectedTags")
-                  .filter(Boolean)
-                  .map((F) => ({ label: F, value: F })));
-              let d = !1,
-                c = Et.map((F) => ({ label: F, value: F }));
-              r.has("excludedTags") &&
-                ((c = r
-                  .getAll("excludedTags")
-                  .filter(Boolean)
-                  .map((F) => ({ label: F, value: F }))),
-                (d = c?.length > 0));
-              let u;
-              r.has("eventtype") &&
-                (u = r
-                  .getAll("eventtype")
-                  .filter(Boolean)
-                  .map((F) => {
-                    const ie = Number.parseInt(r.get("eventtype"));
-                    return { label: (0, Ke.rG)(ie), value: ie };
-                  }));
-              let f;
-              r.has("filterDate") &&
-                r.get("filterDate")?.length > 0 &&
-                (f = jt.unix(Number(r.get("filterDate"))));
-              let D = !1;
-              r.has("orderByVisibility") &&
-                r.get("orderByVisibility")?.length > 0 &&
-                (D = !!r.get("orderByVisibility")),
-                (0, W.h5)(() => {
-                  (this.selectedTags = o),
-                    (this.excludedTags = c),
-                    (this.filterEventTypes = u),
-                    (this.filterDate = f),
-                    (this.bOrderByVisibilityStartTime = D),
-                    (this.bUseCustomQuery =
-                      (o && o.length > 0) || d || (u && u.length > 0));
-                });
-            }
-          };
-        Ue([W.sH], Oe.prototype, "selectedTags", 2),
-          Ue([W.sH], Oe.prototype, "excludedTags", 2),
-          Ue([W.sH], Oe.prototype, "filterDate", 2),
-          Ue([W.sH], Oe.prototype, "filterDateAsString", 2),
-          Ue([W.sH], Oe.prototype, "eventsToLoadPerPaging", 2),
-          Ue([W.sH], Oe.prototype, "filterEventTypes", 2),
-          Ue([W.sH], Oe.prototype, "bOrderByVisibilityStartTime", 2),
-          Ue([W.sH], Oe.prototype, "bUseCustomQuery", 2);
-        let He = Oe;
-        var Tt = Object.defineProperty,
-          Bt = Object.getOwnPropertyDescriptor,
-          nt = (a, n, r, o) => {
-            for (
-              var d = o > 1 ? void 0 : o ? Bt(n, r) : n, c = a.length - 1, u;
-              c >= 0;
-              c--
-            )
-              (u = a[c]) && (d = (o ? u(n, r, d) : u(d)) || d);
-            return o && d && Tt(n, r, d), d;
-          },
-          je = ((a) => (
-            (a[(a.k_ModReviewed = 0)] = "k_ModReviewed"),
-            (a[(a.k_ModUnreviewed = 1)] = "k_ModUnreviewed"),
-            (a[(a.k_ChangeEventType = 2)] = "k_ChangeEventType"),
-            (a[(a.k_UpdateSeasonTags = 3)] = "k_UpdateSeasonTags"),
-            (a[(a.k_ModReReviewed = 4)] = "k_ModReReviewed"),
-            (a[(a.k_ModRemovedFromSteamChina = 5)] =
+      }
+      var me;
+      (0, H.Cg)([W.sH], ue.prototype, "selectedTags", void 0),
+        (0, H.Cg)([W.sH], ue.prototype, "excludedTags", void 0),
+        (0, H.Cg)([W.sH], ue.prototype, "filterDate", void 0),
+        (0, H.Cg)([W.sH], ue.prototype, "filterDateAsString", void 0),
+        (0, H.Cg)([W.sH], ue.prototype, "eventsToLoadPerPaging", void 0),
+        (0, H.Cg)([W.sH], ue.prototype, "filterEventTypes", void 0),
+        (0, H.Cg)([W.sH], ue.prototype, "bOrderByVisibilityStartTime", void 0),
+        (0, H.Cg)([W.sH], ue.prototype, "bUseCustomQuery", void 0),
+        (function (e) {
+          (e[(e.k_ModReviewed = 0)] = "k_ModReviewed"),
+            (e[(e.k_ModUnreviewed = 1)] = "k_ModUnreviewed"),
+            (e[(e.k_ChangeEventType = 2)] = "k_ChangeEventType"),
+            (e[(e.k_UpdateSeasonTags = 3)] = "k_UpdateSeasonTags"),
+            (e[(e.k_ModReReviewed = 4)] = "k_ModReReviewed"),
+            (e[(e.k_ModRemovedFromSteamChina = 5)] =
               "k_ModRemovedFromSteamChina"),
-            (a[(a.k_ModFlagAdultOnlyContent = 6)] =
+            (e[(e.k_ModFlagAdultOnlyContent = 6)] =
               "k_ModFlagAdultOnlyContent"),
-            (a[(a.k_ModRemoveAdultOnlyContent = 7)] =
+            (e[(e.k_ModRemoveAdultOnlyContent = 7)] =
               "k_ModRemoveAdultOnlyContent"),
-            (a[(a.k_ModFlagHalloweenEvent = 8)] = "k_ModFlagHalloweenEvent"),
-            (a[(a.k_ModRemoveHalloweenEvent = 9)] =
-              "k_ModRemoveHalloweenEvent"),
-            a
-          ))(je || {});
-        const at = "ModAct";
-        class Ge {
-          m_moderator;
-          m_rtWhen;
-          m_action;
-          m_newEventType;
-          m_newTagAdded;
-          ToModString() {
-            let n =
-              at +
-              "_" +
-              this.m_moderator +
-              "_" +
-              Math.floor(this.m_rtWhen) +
-              "_" +
-              this.m_action;
-            switch (this.m_action) {
-              case 2:
-                n += "_" + this.m_newEventType;
-                break;
-              case 3:
-                n += "_" + this.m_newTagAdded;
-                break;
-            }
-            return n;
+            (e[(e.k_ModFlagHalloweenEvent = 8)] = "k_ModFlagHalloweenEvent"),
+            (e[(e.k_ModRemoveHalloweenEvent = 9)] =
+              "k_ModRemoveHalloweenEvent");
+        })(me || (me = {}));
+      const pe = "ModAct";
+      class ge {
+        m_moderator;
+        m_rtWhen;
+        m_action;
+        m_newEventType;
+        m_newTagAdded;
+        ToModString() {
+          let e =
+            pe +
+            "_" +
+            this.m_moderator +
+            "_" +
+            Math.floor(this.m_rtWhen) +
+            "_" +
+            this.m_action;
+          switch (this.m_action) {
+            case me.k_ChangeEventType:
+              e += "_" + this.m_newEventType;
+              break;
+            case me.k_UpdateSeasonTags:
+              e += "_" + this.m_newTagAdded;
           }
-          FromString(n) {
-            let r = n.split("_");
-            if (!r || r[0] !== at) return !1;
-            switch (
-              ((this.m_moderator = Number(r[1])),
-              (this.m_rtWhen = Number(r[2])),
-              (this.m_action = Number(r[3])),
-              this.m_action)
-            ) {
-              case 2:
-                this.m_newEventType = Number(r[4]);
-                break;
-              case 3:
-                this.m_newTagAdded = r.slice(4).join("_");
-                break;
-            }
-            return !0;
-          }
-          SetActionChangeEvent(n) {
-            return (
-              (this.m_moderator = j.iA.accountid),
-              (this.m_rtWhen = Date.now() / 1e3),
-              (this.m_action = 2),
-              (this.m_newEventType = n),
-              this
-            );
-          }
-          SetReviewAction(n) {
-            return (
-              (this.m_moderator = j.iA.accountid),
-              (this.m_rtWhen = Date.now() / 1e3),
-              (this.m_action = n ? 0 : 1),
-              this
-            );
-          }
-          SetAdultOnlyContentAction(n) {
-            return (
-              (this.m_moderator = j.iA.accountid),
-              (this.m_rtWhen = Date.now() / 1e3),
-              (this.m_action = n ? 6 : 7),
-              this
-            );
-          }
-          SetHalloweenEventTypeAction(n) {
-            return (
-              (this.m_moderator = j.iA.accountid),
-              (this.m_rtWhen = Date.now() / 1e3),
-              (this.m_action = n ? 8 : 9),
-              this
-            );
-          }
-          SetReReviewAction(n) {
-            return (
-              (this.m_moderator = j.iA.accountid),
-              (this.m_rtWhen = Date.now() / 1e3),
-              (this.m_action = n ? 4 : 1),
-              this
-            );
-          }
-          static IsAuditAction(n) {
-            return n.startsWith(at);
-          }
-          SetUpdateSeasonalTags(n) {
-            return (
-              (this.m_moderator = j.iA.accountid),
-              (this.m_rtWhen = Date.now() / 1e3),
-              (this.m_action = 3),
-              (this.m_newTagAdded = n),
-              this
-            );
-          }
+          return e;
         }
-        const Xe = class ct {
-          static s_Singleton;
-          m_mapEventGIDToSolrData = new Map();
-          m_listEvents = new Array();
-          BHasSolrEvent(n) {
-            return this.m_mapEventGIDToSolrData.has(n);
+        FromString(e) {
+          let t = e.split("_");
+          if (!t || t[0] !== pe) return !1;
+          switch (
+            ((this.m_moderator = Number(t[1])),
+            (this.m_rtWhen = Number(t[2])),
+            (this.m_action = Number(t[3])),
+            this.m_action)
+          ) {
+            case me.k_ChangeEventType:
+              this.m_newEventType = Number(t[4]);
+              break;
+            case me.k_UpdateSeasonTags:
+              this.m_newTagAdded = t.slice(4).join("_");
           }
-          GetAllSolrEvents() {
-            return this.m_listEvents;
-          }
-          static Get() {
-            return (
-              ct.s_Singleton || (ct.s_Singleton = new ct()), ct.s_Singleton
-            );
-          }
-          constructor() {
-            (0, W.Gn)(this);
-          }
-          ClearAllSolrEvents() {
-            (this.m_mapEventGIDToSolrData = new Map()),
-              (this.m_listEvents = new Array());
-          }
-          async LoadPartnerEventForModerationIncremental(n, r = 30) {
-            const o =
-              j.TS.STORE_BASE_URL +
-              "events_admin/ajaxgetmoderationspecificpartnerevents";
-            let d = 0;
-            this.m_listEvents?.length &&
-              (this.m_listEvents.forEach(
-                (f) =>
-                  (d = Math.max(
-                    d,
-                    Math.floor(Date.parse(f.last_modified_date) / 1e3),
-                  )),
-              ),
-              this.m_listEvents.filter(
-                (f) => Math.floor(Date.parse(f.last_modified_date) / 1e3) == d,
-              ).length >= r && d++);
-            const c = { start_time: d, count: r };
-            try {
-              const u = await k().get(o, {
-                params: c,
-                withCredentials: !0,
-                cancelToken: n ? n.token : void 0,
-              });
-              if (n && n.token.reason) return [];
-              if (u && u.data) {
-                let f = new Array();
-                return (
-                  (0, W.h5)(() => {
-                    u.data.docs.forEach((D) => {
-                      this.m_mapEventGIDToSolrData.has(D.unique_id) ||
-                        (f.push(D),
-                        this.m_mapEventGIDToSolrData.set(D.unique_id, D),
-                        this.m_listEvents.push(D));
-                    });
-                  }),
-                  f
-                );
-              }
-            } catch (u) {
-              const f = (0, V.H)(u);
-              console.error(
-                "LoadPartnerEventForModerationIncremental failed:" +
-                  f.strErrorMsg,
-                f,
-              );
-            }
-            return [];
-          }
-          async UpdateTagsOnPartnerEvent(n, r, o, d, c, u) {
-            const f = j.TS.STORE_BASE_URL + "events_admin/ajaxupdatetags";
-            let D = d.join(",");
-            u && (d.length > 0 && (D += ","), (D += u.ToModString()));
-            const F = new FormData();
-            return (
-              F.append("sessionid", (0, j.KC)()),
-              F.append("clan_accountid", "" + r.GetAccountID()),
-              F.append("gid_announcement", o),
-              F.append("add_tags", D),
-              F.append("remove_tags", c.join(",")),
-              (
-                await k().post(f, F, {
-                  withCredentials: !0,
-                  cancelToken: n.token,
-                })
-              ).data.tags
-            );
-          }
-          async UpdatePartnerEventType(n, r, o, d) {
-            const c = j.TS.STORE_BASE_URL + "events_admin/ajaxupdateeventtype",
-              u = new FormData();
-            u.append("sessionid", (0, j.KC)()),
-              u.append("clan_accountid", "" + r.GetAccountID()),
-              u.append("gid_event", o),
-              u.append("new_event_type", "" + d),
-              await k().post(c, u, {
-                withCredentials: !0,
-                cancelToken: n.token,
-              });
-          }
-        };
-        nt([W.sH], Xe.prototype, "m_mapEventGIDToSolrData", 2),
-          nt([W.sH], Xe.prototype, "m_listEvents", 2),
-          nt([W.XI], Xe.prototype, "ClearAllSolrEvents", 1);
-        let _e = Xe;
-        var Se = i(10142),
-          Ct = i(91424),
-          vt = i(92264),
-          Ee = i(61311),
-          Rt = i(35098);
-        function rt(a) {
-          const { accountID: n, locToken: r } = a,
-            o = x.useMemo(() => H.b.InitFromAccountID(n), [n]),
-            { data: d } = (0, Rt.js)(n);
-          let c =
-            "https://steamsupport.valvesoftware.com/account/overview/" +
-            o.ConvertTo64BitString();
-          return (0, e.jsx)("div", {
-            children: (0, m.PP)(
-              r,
-              (0, e.jsx)("a", {
-                href: c,
-                target: j.TS.IN_CLIENT ? void 0 : "_blank",
-                children: d
-                  ? (0, e.jsx)(x.Fragment, { children: d.m_strPlayerName })
-                  : (0, e.jsx)(x.Fragment, {
-                      children: (0, e.jsx)("span", { children: n }),
-                    }),
-              }),
-            ),
-          });
+          return !0;
         }
-        function Lt(a) {
-          const { modAction: n } = a,
-            r =
-              (0, m.TW)(n.m_rtWhen) +
-              " @ " +
-              (0, vt.KC)(n.m_rtWhen, { bForce24HourClock: !1 }),
-            o = (0, e.jsx)(rt, {
-              locToken: "#EventModTile_Moderator",
-              accountID: n.m_moderator,
+        SetActionChangeEvent(e) {
+          return (
+            (this.m_moderator = o.iA.accountid),
+            (this.m_rtWhen = Date.now() / 1e3),
+            (this.m_action = me.k_ChangeEventType),
+            (this.m_newEventType = e),
+            this
+          );
+        }
+        SetReviewAction(e) {
+          return (
+            (this.m_moderator = o.iA.accountid),
+            (this.m_rtWhen = Date.now() / 1e3),
+            (this.m_action = e ? me.k_ModReviewed : me.k_ModUnreviewed),
+            this
+          );
+        }
+        SetAdultOnlyContentAction(e) {
+          return (
+            (this.m_moderator = o.iA.accountid),
+            (this.m_rtWhen = Date.now() / 1e3),
+            (this.m_action = e
+              ? me.k_ModFlagAdultOnlyContent
+              : me.k_ModRemoveAdultOnlyContent),
+            this
+          );
+        }
+        SetHalloweenEventTypeAction(e) {
+          return (
+            (this.m_moderator = o.iA.accountid),
+            (this.m_rtWhen = Date.now() / 1e3),
+            (this.m_action = e
+              ? me.k_ModFlagHalloweenEvent
+              : me.k_ModRemoveHalloweenEvent),
+            this
+          );
+        }
+        SetReReviewAction(e) {
+          return (
+            (this.m_moderator = o.iA.accountid),
+            (this.m_rtWhen = Date.now() / 1e3),
+            (this.m_action = e ? me.k_ModReReviewed : me.k_ModUnreviewed),
+            this
+          );
+        }
+        static IsAuditAction(e) {
+          return e.startsWith(pe);
+        }
+        SetUpdateSeasonalTags(e) {
+          return (
+            (this.m_moderator = o.iA.accountid),
+            (this.m_rtWhen = Date.now() / 1e3),
+            (this.m_action = me.k_UpdateSeasonTags),
+            (this.m_newTagAdded = e),
+            this
+          );
+        }
+      }
+      class _e {
+        static s_Singleton;
+        m_mapEventGIDToSolrData = new Map();
+        m_listEvents = new Array();
+        BHasSolrEvent(e) {
+          return this.m_mapEventGIDToSolrData.has(e);
+        }
+        GetAllSolrEvents() {
+          return this.m_listEvents;
+        }
+        static Get() {
+          return _e.s_Singleton || (_e.s_Singleton = new _e()), _e.s_Singleton;
+        }
+        constructor() {
+          (0, W.Gn)(this);
+        }
+        ClearAllSolrEvents() {
+          (this.m_mapEventGIDToSolrData = new Map()),
+            (this.m_listEvents = new Array());
+        }
+        async LoadPartnerEventForModerationIncremental(e, t = 30) {
+          const n =
+            o.TS.STORE_BASE_URL +
+            "events_admin/ajaxgetmoderationspecificpartnerevents";
+          let s = 0;
+          if (this.m_listEvents?.length) {
+            this.m_listEvents.forEach(
+              (e) =>
+                (s = Math.max(
+                  s,
+                  Math.floor(Date.parse(e.last_modified_date) / 1e3),
+                )),
+            );
+            this.m_listEvents.filter(
+              (e) => Math.floor(Date.parse(e.last_modified_date) / 1e3) == s,
+            ).length >= t && s++;
+          }
+          const a = { start_time: s, count: t };
+          try {
+            const t = await d().get(n, {
+              params: a,
+              withCredentials: !0,
+              cancelToken: e ? e.token : void 0,
             });
-          switch (n.m_action) {
-            case je.k_ModReviewed:
-              return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
-                children: (0, m.PP)(
-                  "#EventModTile_Action_Reviewed",
-                  (0, e.jsx)("span", { children: r }),
-                  o,
-                ),
-              });
-            case je.k_ModUnreviewed:
-              return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
-                children: (0, m.PP)(
-                  "#EventModTile_Action_UnReviewed",
-                  (0, e.jsx)("span", { children: r }),
-                  o,
-                ),
-              });
-            case je.k_ChangeEventType:
-              return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
-                children: (0, m.PP)(
-                  "#EventModTile_Action_NewEventType",
-                  (0, e.jsx)("span", { children: r }),
-                  o,
-                  (0, Ke.rG)(n.m_newEventType),
-                ),
-              });
-            case je.k_UpdateSeasonTags:
-              return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
-                children: (0, m.PP)(
-                  "#EventModTile_Action_SeasonTagUpdate",
-                  (0, e.jsx)("span", { children: r }),
-                  o,
-                  n.m_newTagAdded,
-                ),
-              });
-            case je.k_ModReReviewed:
-              return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
-                children: (0, m.PP)(
-                  "#EventModTile_Action_ReReviewed",
-                  (0, e.jsx)("span", { children: r }),
-                  o,
-                ),
-              });
-            case je.k_ModRemovedFromSteamChina:
-              return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
-                children: (0, m.PP)(
-                  "#EventModTile_Action_RemoveFromSC",
-                  (0, e.jsx)("span", { children: r }),
-                  o,
-                ),
-              });
-            case je.k_ModFlagAdultOnlyContent:
-              return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
-                children: (0, m.PP)(
-                  "#EventModTile_Action_FlagAdultContent",
-                  (0, e.jsx)("span", { children: r }),
-                  o,
-                ),
-              });
-            case je.k_ModRemoveAdultOnlyContent:
-              return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
-                children: (0, m.PP)(
-                  "#EventModTile_Action_RemoveAdultContent",
-                  (0, e.jsx)("span", { children: r }),
-                  o,
-                ),
-              });
-            default:
-              return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
-                children: n.ToModString(),
-              });
-          }
-        }
-        function Ot(a) {
-          const [n, r] = x.useState(!0),
-            o = 3,
-            d = (F) => {
-              const { eventModel: ie } = a;
-              return F.map((ne) => {
-                const ye = new Ge();
-                return (
-                  ye.FromString(ne),
-                  (0, e.jsx)(Lt, { modAction: ye }, ie.GID + ne)
-                );
-              });
-            },
-            { eventModel: c } = a;
-          let u = c
-            .GetAllTags()
-            .filter((F) => Ge.IsAuditAction(F))
-            .reverse();
-          const f = u.length,
-            D = u.length > o && n;
-          return u.length == 0
-            ? null
-            : (D && (u = u.splice(0, o)),
-              (0, e.jsxs)("div", {
-                children: [
-                  (0, e.jsx)("h4", {
-                    children: (0, m.we)("#EventModTile_Action_Title"),
-                  }),
-                  d(u),
-                  D &&
-                    (0, e.jsx)("a", {
-                      onClick: () => r(!1),
-                      className: Ee.ExpandModActions,
-                      children: (0, m.we)("#EventModTile_Action_More", f - o),
-                    }),
-                  !D &&
-                    f > o &&
-                    (0, e.jsx)("a", {
-                      onClick: () => r(!0),
-                      className: Ee.ExpandModActions,
-                      children: (0, m.we)("#EventModTile_Action_Hide"),
-                    }),
-                ],
-              }));
-        }
-        var Gt = i(91376),
-          Ft = i(95695),
-          ke = i.n(Ft),
-          pt = i(95414),
-          Ut = i(13465),
-          st = i(53107),
-          $e = i(53113),
-          C = i(961),
-          ft = i(7582),
-          Pt = i(29522),
-          zt = i(88812),
-          Ht = Object.defineProperty,
-          v = Object.getOwnPropertyDescriptor,
-          h = (a, n, r, o) => {
-            for (
-              var d = o > 1 ? void 0 : o ? v(n, r) : n, c = a.length - 1, u;
-              c >= 0;
-              c--
-            )
-              (u = a[c]) && (d = (o ? u(n, r, d) : u(d)) || d);
-            return o && d && Ht(n, r, d), d;
-          };
-        const b = i(87937),
-          R = 500,
-          G = 50,
-          q = {
-            bExhaustedEventList: !1,
-            bInfiniteScrollLoading: !0,
-            nLastFetchCompletedMS: 0,
-          };
-        let te = class extends x.Component {
-          m_cancelSignal = k().CancelToken.source();
-          m_refScroll = x.createRef();
-          m_IntervalTimer = void 0;
-          state = {
-            bInfiniteScrollLoading: !1,
-            bExhaustedEventList: !1,
-            nLastFetchCompletedMS: 0,
-          };
-          m_nPage = 0;
-          componentDidMount() {
-            this.setState(
-              { bInfiniteScrollLoading: !0 },
-              this.LoadMoreModerationEvents,
-            ),
-              window.addEventListener("scroll", this.OnScroll, !0),
-              He.Get().Init(this.props.history.location.search);
-          }
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "EventModerationLanding component unmounted",
-            ),
-              window.removeEventListener("scroll", this.OnScroll),
-              this.ClearTimer();
-          }
-          HandleUpdateQueryParameter() {
-            const a = He.Get();
-            if (a.bUseCustomQuery) {
-              const {
-                selectedTags: n,
-                excludedTags: r,
-                filterEventTypes: o,
-                filterDate: d,
-                bOrderByVisibilityStartTime: c,
-              } = a;
-              if (n || r || o || d || c) {
-                const u = new URLSearchParams();
-                n?.forEach((f) => u.append("selectedTags", f.value)),
-                  r?.forEach((f) => u.append("excludedTags", f.value)),
-                  o?.forEach((f) => u.append("eventtype", "" + f.value)),
-                  d?.unix() > 0 && u.append("filterDate", "" + d.unix()),
-                  c && u.append("orderByVisibility", "1"),
-                  this.props.history.push(`?${u.toString()}`);
-              } else this.props.history.push("?");
-            }
-          }
-          ClearTimer() {
-            this.m_IntervalTimer &&
-              (window.clearInterval(this.m_IntervalTimer),
-              (this.m_IntervalTimer = void 0));
-          }
-          HandleError(a) {
-            let n = (0, V.H)(a);
-            console.error("EventModerationLanding error: " + n.strErrorMsg, n),
-              this.setState({
-                bInfiniteScrollLoading: !1,
-                bExhaustedEventList: !0,
-                nLastFetchCompletedMS: Date.now(),
-              });
-          }
-          async LoadMorePublicEventWithDelay() {
-            this.m_IntervalTimer = window.setInterval(
-              this.LoadMoreModerationEvents,
-              R,
-            );
-          }
-          LoadMoreModerationEvents() {
-            if ((this.ClearTimer(), this.state.bInfiniteScrollLoading)) {
-              let a;
-              const n = He.Get();
-              if (n.bUseCustomQuery) {
-                let r = n.filterEventTypes
-                    ? n.filterEventTypes.map((c) => c.value)
-                    : void 0,
-                  o = n.selectedTags
-                    ? n.selectedTags.map((c) => c.value)
-                    : void 0,
-                  d = n.excludedTags
-                    ? n.excludedTags.map((c) => c.value)
-                    : void 0;
-                a = E.Get().LoadPartnerEventForQueryIncremental(
-                  this.m_cancelSignal,
-                  this.m_nPage,
-                  n.eventsToLoadPerPaging,
-                  [this.props.appid],
-                  o,
-                  d,
-                  n.filterDate,
-                  r,
-                  n.bOrderByVisibilityStartTime,
-                );
-              } else
-                a = _e
-                  .Get()
-                  .LoadPartnerEventForModerationIncremental(
-                    this.m_cancelSignal,
-                    n.eventsToLoadPerPaging,
-                  );
-              a.then((r) => {
-                (this.m_nPage += n.eventsToLoadPerPaging),
-                  this.setState({
-                    bInfiniteScrollLoading: !1,
-                    bExhaustedEventList: r.length == 0,
-                    nLastFetchCompletedMS: Date.now(),
+            if (e && e.token.reason) return [];
+            if (t && t.data) {
+              let e = new Array();
+              return (
+                (0, W.h5)(() => {
+                  t.data.docs.forEach((t) => {
+                    this.m_mapEventGIDToSolrData.has(t.unique_id) ||
+                      (e.push(t),
+                      this.m_mapEventGIDToSolrData.set(t.unique_id, t),
+                      this.m_listEvents.push(t));
                   });
-              }).catch((r) => this.HandleError(r));
+                }),
+                e
+              );
             }
-          }
-          UpdateQueryParametersAndLoadMoreEvents() {
-            this.HandleUpdateQueryParameter(), this.LoadMoreModerationEvents();
-          }
-          RenderTiles() {
-            let a = new Array();
-            return (
-              (He.Get().bUseCustomQuery
-                ? E.Get().GetAllSolrEvents()
-                : _e.Get().GetAllSolrEvents()
-              ).forEach((o) => {
-                a.push((0, e.jsx)(De, { solrData: o }, o.unique_id));
-              }),
-              a
+          } catch (e) {
+            const t = (0, c.H)(e);
+            console.error(
+              "LoadPartnerEventForModerationIncremental failed:" +
+                t.strErrorMsg,
+              t,
             );
           }
-          OnScroll() {
-            if (!this.m_refScroll || !this.m_refScroll.current) return;
-            let a = this.m_refScroll.current;
-            a &&
-              (this.state.bExhaustedEventList ||
-                this.state.bInfiniteScrollLoading ||
-                (a.getBoundingClientRect().bottom <= window.innerHeight + G &&
-                  (this.state.nLastFetchCompletedMS + R < Date.now()
-                    ? this.setState(
-                        { bInfiniteScrollLoading: !0 },
-                        this.LoadMorePublicEventWithDelay,
-                      )
-                    : this.setState(
-                        { bInfiniteScrollLoading: !0 },
-                        this.LoadMoreModerationEvents,
-                      ))));
-          }
-          RefetchAllEventTiles() {
-            (this.m_nPage = 0),
-              _e.Get().ClearAllSolrEvents(),
-              E.Get().ClearAllSolrEvents(),
-              this.setState(
-                { ...q },
-                this.UpdateQueryParametersAndLoadMoreEvents,
-              );
-          }
-          render() {
-            let a = this.RenderTiles();
-            const n = He.Get();
-            return (0, e.jsxs)("div", {
-              className: C.ModerationContainer,
-              ref: this.m_refScroll,
+          return [];
+        }
+        async UpdateTagsOnPartnerEvent(e, t, n, s, a, r) {
+          const i = o.TS.STORE_BASE_URL + "events_admin/ajaxupdatetags";
+          let l = s.join(",");
+          r && (s.length > 0 && (l += ","), (l += r.ToModString()));
+          const c = new FormData();
+          c.append("sessionid", (0, o.KC)()),
+            c.append("clan_accountid", "" + t.GetAccountID()),
+            c.append("gid_announcement", n),
+            c.append("add_tags", l),
+            c.append("remove_tags", a.join(","));
+          return (
+            await d().post(i, c, { withCredentials: !0, cancelToken: e.token })
+          ).data.tags;
+        }
+        async UpdatePartnerEventType(e, t, n, s) {
+          const a = o.TS.STORE_BASE_URL + "events_admin/ajaxupdateeventtype",
+            r = new FormData();
+          r.append("sessionid", (0, o.KC)()),
+            r.append("clan_accountid", "" + t.GetAccountID()),
+            r.append("gid_event", n),
+            r.append("new_event_type", "" + s),
+            await d().post(a, r, { withCredentials: !0, cancelToken: e.token });
+        }
+      }
+      (0, H.Cg)([W.sH], _e.prototype, "m_mapEventGIDToSolrData", void 0),
+        (0, H.Cg)([W.sH], _e.prototype, "m_listEvents", void 0),
+        (0, H.Cg)([W.XI], _e.prototype, "ClearAllSolrEvents", null);
+      var ve = n(16021),
+        Se = n(81301),
+        we = n(91675),
+        Ce = n(61311),
+        be = n(41471);
+      function Me(e) {
+        const { accountID: t, locToken: n } = e,
+          a = p.useMemo(() => _.b.InitFromAccountID(t), [t]),
+          { data: r } = (0, be.js)(t);
+        let i =
+          "https://steamsupport.valvesoftware.com/account/overview/" +
+          a.ConvertTo64BitString();
+        return (0, s.jsx)("div", {
+          children: (0, y.PP)(
+            n,
+            (0, s.jsx)("a", {
+              href: i,
+              target: o.TS.IN_CLIENT ? void 0 : "_blank",
+              children: Boolean(r)
+                ? (0, s.jsx)(p.Fragment, { children: r.m_strPlayerName })
+                : (0, s.jsx)(p.Fragment, {
+                    children: (0, s.jsx)("span", { children: t }),
+                  }),
+            }),
+          ),
+        });
+      }
+      function Ee(e) {
+        const { modAction: t } = e,
+          n =
+            (0, y.TW)(t.m_rtWhen) +
+            " @ " +
+            (0, we.KC)(t.m_rtWhen, { bForce24HourClock: !1 }),
+          a = (0, s.jsx)(Me, {
+            locToken: "#EventModTile_Moderator",
+            accountID: t.m_moderator,
+          });
+        switch (t.m_action) {
+          case me.k_ModReviewed:
+            return (0, s.jsx)("div", {
+              className: Ce.ModeratorAuditActionCtn,
+              children: (0, y.PP)(
+                "#EventModTile_Action_Reviewed",
+                (0, s.jsx)("span", { children: n }),
+                a,
+              ),
+            });
+          case me.k_ModUnreviewed:
+            return (0, s.jsx)("div", {
+              className: Ce.ModeratorAuditActionCtn,
+              children: (0, y.PP)(
+                "#EventModTile_Action_UnReviewed",
+                (0, s.jsx)("span", { children: n }),
+                a,
+              ),
+            });
+          case me.k_ChangeEventType:
+            return (0, s.jsx)("div", {
+              className: Ce.ModeratorAuditActionCtn,
+              children: (0, y.PP)(
+                "#EventModTile_Action_NewEventType",
+                (0, s.jsx)("span", { children: n }),
+                a,
+                (0, de.rG)(t.m_newEventType),
+              ),
+            });
+          case me.k_UpdateSeasonTags:
+            return (0, s.jsx)("div", {
+              className: Ce.ModeratorAuditActionCtn,
+              children: (0, y.PP)(
+                "#EventModTile_Action_SeasonTagUpdate",
+                (0, s.jsx)("span", { children: n }),
+                a,
+                t.m_newTagAdded,
+              ),
+            });
+          case me.k_ModReReviewed:
+            return (0, s.jsx)("div", {
+              className: Ce.ModeratorAuditActionCtn,
+              children: (0, y.PP)(
+                "#EventModTile_Action_ReReviewed",
+                (0, s.jsx)("span", { children: n }),
+                a,
+              ),
+            });
+          case me.k_ModRemovedFromSteamChina:
+            return (0, s.jsx)("div", {
+              className: Ce.ModeratorAuditActionCtn,
+              children: (0, y.PP)(
+                "#EventModTile_Action_RemoveFromSC",
+                (0, s.jsx)("span", { children: n }),
+                a,
+              ),
+            });
+          case me.k_ModFlagAdultOnlyContent:
+            return (0, s.jsx)("div", {
+              className: Ce.ModeratorAuditActionCtn,
+              children: (0, y.PP)(
+                "#EventModTile_Action_FlagAdultContent",
+                (0, s.jsx)("span", { children: n }),
+                a,
+              ),
+            });
+          case me.k_ModRemoveAdultOnlyContent:
+            return (0, s.jsx)("div", {
+              className: Ce.ModeratorAuditActionCtn,
+              children: (0, y.PP)(
+                "#EventModTile_Action_RemoveAdultContent",
+                (0, s.jsx)("span", { children: n }),
+                a,
+              ),
+            });
+          default:
+            return (0, s.jsx)("div", {
+              className: Ce.ModeratorAuditActionCtn,
+              children: t.ToModString(),
+            });
+        }
+      }
+      function Ae(e) {
+        const [t, n] = p.useState(!0),
+          { eventModel: a } = e;
+        let r = a
+          .GetAllTags()
+          .filter((e) => ge.IsAuditAction(e))
+          .reverse();
+        const i = r.length,
+          o = r.length > 3 && t;
+        return 0 == r.length
+          ? null
+          : (o && (r = r.splice(0, 3)),
+            (0, s.jsxs)("div", {
               children: [
-                (0, e.jsxs)("div", {
-                  children: [
-                    (0, e.jsx)("h2", {
-                      children: (0, m.we)("#EventModeration_Title"),
-                    }),
-                    (0, e.jsx)(Q.tH, {
-                      children: (0, e.jsxs)("div", {
-                        className: (0, g.A)(ke().FlexRowContainer),
-                        children: [
-                          (0, e.jsx)(Be, {
+                (0, s.jsx)("h4", {
+                  children: (0, y.we)("#EventModTile_Action_Title"),
+                }),
+                ((t) => {
+                  const { eventModel: n } = e;
+                  return t.map((e) => {
+                    const t = new ge();
+                    return (
+                      t.FromString(e),
+                      (0, s.jsx)(Ee, { modAction: t }, n.GID + e)
+                    );
+                  });
+                })(r),
+                o &&
+                  (0, s.jsx)("a", {
+                    onClick: () => n(!1),
+                    className: Ce.ExpandModActions,
+                    children: (0, y.we)("#EventModTile_Action_More", i - 3),
+                  }),
+                Boolean(!o && i > 3) &&
+                  (0, s.jsx)("a", {
+                    onClick: () => n(!0),
+                    className: Ce.ExpandModActions,
+                    children: (0, y.we)("#EventModTile_Action_Hide"),
+                  }),
+              ],
+            }));
+      }
+      var Re = n(95695),
+        fe = n.n(Re),
+        ye = n(20433),
+        Be = n(3088),
+        Te = n(51272),
+        xe = n(61336),
+        je = n(961),
+        Ie = n(44165),
+        Pe = n(14987),
+        De = n(4703),
+        Fe = n(59975);
+      const Ge = n(87937),
+        Le = {
+          bExhaustedEventList: !1,
+          bInfiniteScrollLoading: !0,
+          nLastFetchCompletedMS: 0,
+        };
+      let ke = class extends p.Component {
+        m_cancelSignal = d().CancelToken.source();
+        m_refScroll = p.createRef();
+        m_IntervalTimer = void 0;
+        state = {
+          bInfiniteScrollLoading: !1,
+          bExhaustedEventList: !1,
+          nLastFetchCompletedMS: 0,
+        };
+        m_nPage = 0;
+        componentDidMount() {
+          this.setState(
+            { bInfiniteScrollLoading: !0 },
+            this.LoadMoreModerationEvents,
+          ),
+            window.addEventListener("scroll", this.OnScroll, !0),
+            ue.Get().Init(this.props.history.location.search);
+        }
+        componentWillUnmount() {
+          this.m_cancelSignal.cancel(
+            "EventModerationLanding component unmounted",
+          ),
+            window.removeEventListener("scroll", this.OnScroll),
+            this.ClearTimer();
+        }
+        HandleUpdateQueryParameter() {
+          const e = ue.Get();
+          if (e.bUseCustomQuery) {
+            const {
+              selectedTags: t,
+              excludedTags: n,
+              filterEventTypes: s,
+              filterDate: a,
+              bOrderByVisibilityStartTime: r,
+            } = e;
+            if (t || n || s || a || r) {
+              const e = new URLSearchParams();
+              t?.forEach((t) => e.append("selectedTags", t.value)),
+                n?.forEach((t) => e.append("excludedTags", t.value)),
+                s?.forEach((t) => e.append("eventtype", "" + t.value)),
+                a?.unix() > 0 && e.append("filterDate", "" + a.unix()),
+                r && e.append("orderByVisibility", "1"),
+                this.props.history.push(`?${e.toString()}`);
+            } else this.props.history.push("?");
+          }
+        }
+        ClearTimer() {
+          this.m_IntervalTimer &&
+            (window.clearInterval(this.m_IntervalTimer),
+            (this.m_IntervalTimer = void 0));
+        }
+        HandleError(e) {
+          let t = (0, c.H)(e);
+          console.error("EventModerationLanding error: " + t.strErrorMsg, t),
+            this.setState({
+              bInfiniteScrollLoading: !1,
+              bExhaustedEventList: !0,
+              nLastFetchCompletedMS: Date.now(),
+            });
+        }
+        async LoadMorePublicEventWithDelay() {
+          this.m_IntervalTimer = window.setInterval(
+            this.LoadMoreModerationEvents,
+            500,
+          );
+        }
+        LoadMoreModerationEvents() {
+          if ((this.ClearTimer(), this.state.bInfiniteScrollLoading)) {
+            let e;
+            const t = ue.Get();
+            if (t.bUseCustomQuery) {
+              let n = t.filterEventTypes
+                  ? t.filterEventTypes.map((e) => e.value)
+                  : void 0,
+                s = t.selectedTags
+                  ? t.selectedTags.map((e) => e.value)
+                  : void 0,
+                a = t.excludedTags
+                  ? t.excludedTags.map((e) => e.value)
+                  : void 0;
+              e = V.Get().LoadPartnerEventForQueryIncremental(
+                this.m_cancelSignal,
+                this.m_nPage,
+                t.eventsToLoadPerPaging,
+                [this.props.appid],
+                s,
+                a,
+                t.filterDate,
+                n,
+                t.bOrderByVisibilityStartTime,
+              );
+            } else
+              e = _e
+                .Get()
+                .LoadPartnerEventForModerationIncremental(
+                  this.m_cancelSignal,
+                  t.eventsToLoadPerPaging,
+                );
+            e.then((e) => {
+              (this.m_nPage += t.eventsToLoadPerPaging),
+                this.setState({
+                  bInfiniteScrollLoading: !1,
+                  bExhaustedEventList: 0 == e.length,
+                  nLastFetchCompletedMS: Date.now(),
+                });
+            }).catch((e) => this.HandleError(e));
+          }
+        }
+        UpdateQueryParametersAndLoadMoreEvents() {
+          this.HandleUpdateQueryParameter(), this.LoadMoreModerationEvents();
+        }
+        RenderTiles() {
+          let e = new Array();
+          return (
+            (ue.Get().bUseCustomQuery
+              ? V.Get().GetAllSolrEvents()
+              : _e.Get().GetAllSolrEvents()
+            ).forEach((t) => {
+              e.push((0, s.jsx)(We, { solrData: t }, t.unique_id));
+            }),
+            e
+          );
+        }
+        OnScroll() {
+          if (!this.m_refScroll || !this.m_refScroll.current) return;
+          let e = this.m_refScroll.current;
+          e &&
+            (this.state.bExhaustedEventList ||
+              this.state.bInfiniteScrollLoading ||
+              (e.getBoundingClientRect().bottom <= window.innerHeight + 50 &&
+                (this.state.nLastFetchCompletedMS + 500 < Date.now()
+                  ? this.setState(
+                      { bInfiniteScrollLoading: !0 },
+                      this.LoadMorePublicEventWithDelay,
+                    )
+                  : this.setState(
+                      { bInfiniteScrollLoading: !0 },
+                      this.LoadMoreModerationEvents,
+                    ))));
+        }
+        RefetchAllEventTiles() {
+          (this.m_nPage = 0),
+            _e.Get().ClearAllSolrEvents(),
+            V.Get().ClearAllSolrEvents(),
+            this.setState(
+              { ...Le },
+              this.UpdateQueryParametersAndLoadMoreEvents,
+            );
+        }
+        render() {
+          let e = this.RenderTiles();
+          const t = ue.Get();
+          return (0, s.jsxs)("div", {
+            className: je.ModerationContainer,
+            ref: this.m_refScroll,
+            children: [
+              (0, s.jsxs)("div", {
+                children: [
+                  (0, s.jsx)("h2", {
+                    children: (0, y.we)("#EventModeration_Title"),
+                  }),
+                  (0, s.jsx)(w.tH, {
+                    children: (0, s.jsxs)("div", {
+                      className: (0, R.A)(fe().FlexRowContainer),
+                      children: [
+                        (0, s.jsx)(Oe, {
+                          fnRequireRefetchEvents: this.RefetchAllEventTiles,
+                        }),
+                        Boolean(t.bUseCustomQuery) &&
+                          (0, s.jsx)(He, {
                             fnRequireRefetchEvents: this.RefetchAllEventTiles,
                           }),
-                          !!n.bUseCustomQuery &&
-                            (0, e.jsx)(pe, {
-                              fnRequireRefetchEvents: this.RefetchAllEventTiles,
-                            }),
-                        ],
-                      }),
-                    }),
-                  ],
-                }),
-                (0, e.jsx)(Q.tH, { children: a }),
-                this.state.bInfiniteScrollLoading &&
-                  (0, e.jsx)(I.t, {
-                    position: "center",
-                    size: "medium",
-                    string: (0, m.we)("#Loading"),
-                  }),
-              ],
-            });
-          }
-        };
-        h([se.oI], te.prototype, "HandleError", 1),
-          h([se.oI], te.prototype, "LoadMorePublicEventWithDelay", 1),
-          h([se.oI], te.prototype, "LoadMoreModerationEvents", 1),
-          h([se.oI], te.prototype, "UpdateQueryParametersAndLoadMoreEvents", 1),
-          h([se.oI], te.prototype, "OnScroll", 1),
-          h([se.oI], te.prototype, "RefetchAllEventTiles", 1),
-          (te = h([U.PA], te));
-        const Me = (0, z.y)(te),
-          Be = (0, U.PA)((a) => {
-            const n = He.Get(),
-              { fnRequireRefetchEvents: r } = a;
-            return (0, e.jsxs)(e.Fragment, {
-              children: [
-                (0, e.jsx)("div", {
-                  className: C.FilterContainer,
-                  children: (0, e.jsx)(T.he, {
-                    toolTipContent: (0, m.we)(
-                      "#EventModeration_ShowCustomFilter_ttip",
-                    ),
-                    children: (0, e.jsx)(O.Yh, {
-                      label: (0, m.we)("#EventModeration_ShowCustomFilter"),
-                      checked: n.bUseCustomQuery,
-                      onChange: (o) => {
-                        (n.bUseCustomQuery = o), r();
-                      },
+                      ],
                     }),
                   }),
+                ],
+              }),
+              (0, s.jsx)(w.tH, { children: e }),
+              this.state.bInfiniteScrollLoading &&
+                (0, s.jsx)(E.t, {
+                  position: "center",
+                  size: "medium",
+                  string: (0, y.we)("#Loading"),
                 }),
-                (0, e.jsxs)("div", {
-                  className: C.FilterContainer,
-                  children: [
-                    (0, e.jsx)("label", {
-                      htmlFor: "EventPerLoad",
-                      children: (0, m.we)("#EventModeration_PerPageLoad"),
-                    }),
-                    (0, e.jsx)("div", {
-                      children: (0, e.jsx)("input", {
-                        type: "number",
-                        id: "EventPerLoad",
-                        min: "10",
-                        max: "200",
-                        value: n.eventsToLoadPerPaging,
-                        onChange: (o) => {
-                          let d = Number.parseInt(o.currentTarget.value);
-                          d &&
-                            d > 0 &&
-                            d != n.eventsToLoadPerPaging &&
-                            (n.eventsToLoadPerPaging = d);
-                        },
-                      }),
-                    }),
-                  ],
-                }),
-              ],
-            });
-          }),
-          pe = (0, U.PA)((a) => {
-            const n = He.Get(),
-              { fnRequireRefetchEvents: r } = a,
-              o = X.Zi8.map((f) => ({ value: f, label: (0, Ke.rG)(f) })).sort(
-                (f, D) => f.label.localeCompare(D.label),
-              ),
-              d = Fe.FZ.map((f) => ({ value: f, label: f })).sort((f, D) =>
-                f.label.localeCompare(D.label),
-              ),
-              c = { option: (f) => ({ ...f, color: "#444444" }) },
-              u = (f) => {
-                let D = new Date();
-                return (
-                  f.unix() <
-                  b
-                    .unix(D.getTime() / 1e3 + 3600 * 24)
-                    .hour(0)
-                    .seconds(0)
-                    .minute(0)
-                    .unix()
-                );
-              };
-            return (0, e.jsxs)(e.Fragment, {
-              children: [
-                (0, e.jsxs)("div", {
-                  className: C.FilterContainer,
-                  children: [
-                    (0, e.jsx)("span", {
-                      children: (0, m.we)("#EventModeration_FilterByTag"),
-                    }),
-                    (0, e.jsx)(Le.Ay, {
-                      isSearchable: !0,
-                      isMulti: !0,
-                      onChange: (f) => {
-                        (n.selectedTags = f), r();
-                      },
-                      value: n.selectedTags,
-                      options: d,
-                      styles: c,
-                    }),
-                  ],
-                }),
-                (0, e.jsxs)("div", {
-                  className: C.FilterContainer,
-                  children: [
-                    (0, e.jsx)("span", {
-                      children: (0, m.we)(
-                        "#EventModeration_FilterExcludeByTag",
-                      ),
-                    }),
-                    (0, e.jsx)(Le.Ay, {
-                      isSearchable: !0,
-                      isMulti: !0,
-                      onChange: (f) => {
-                        (n.excludedTags = f), r();
-                      },
-                      value: n.excludedTags,
-                      options: d,
-                      styles: c,
-                    }),
-                  ],
-                }),
-                (0, e.jsxs)("div", {
-                  className: C.FilterContainer,
-                  children: [
-                    (0, e.jsx)("span", {
-                      children: (0, m.we)("#EventModeration_FilterToType"),
-                    }),
-                    (0, e.jsx)(Le.Ay, {
-                      isSearchable: !0,
-                      isMulti: !0,
-                      onChange: (f) => {
-                        (n.filterEventTypes = f), r();
-                      },
-                      value: n.filterEventTypes,
-                      options: o,
-                      styles: c,
-                    }),
-                  ],
-                }),
-                (0, e.jsxs)("div", {
-                  className: C.FilterContainer,
-                  children: [
-                    (0, e.jsx)("span", {
-                      children: (0, m.we)("#EventModeration_FilterToDate"),
-                    }),
-                    (0, e.jsx)(Re(), {
-                      timeFormat: !1,
-                      onChange: (f) => {
-                        if (typeof f == "string") {
-                          let D = b(f, "M/D/YYYY", !0);
-                          if (!D.isValid()) {
-                            n.filterDateAsString = f;
-                            return;
-                          }
-                          f = D;
-                        }
-                        n.filterDate != f &&
-                          ((n.filterDateAsString = void 0),
-                          (n.filterDate = f),
-                          r());
-                      },
-                      value: n.filterDate,
-                      isValidDate: u,
-                      inputProps: {
-                        placeholder: (0, m.we)("#EventModeration_PickDatee"),
-                        className: C.TimeWidth,
-                      },
-                    }),
-                  ],
-                }),
-                (0, e.jsxs)("div", {
-                  className: C.FilterContainer,
-                  children: [
-                    (0, e.jsx)("input", {
-                      type: "checkbox",
-                      id: "VisibilityStart",
-                      checked: n.bOrderByVisibilityStartTime,
-                      onChange: (f) => {
-                        (n.bOrderByVisibilityStartTime =
-                          f.currentTarget.checked),
-                          r();
-                      },
-                    }),
-                    (0, e.jsx)("label", {
-                      htmlFor: "VisibilityStart",
-                      children: (0, m.we)(
-                        "#EventModeration_OrderByFirstVisible",
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            });
-          }),
-          Ce = (0, U.PA)((a) => {
-            const { onClick: n, event: r, bSaving: o } = a;
-            let d = (0, m.we)("#EventModTile_Moderate_ClearReviewed"),
-              c = C.EventModerateClearReview,
-              u = !1;
-            return (
-              (0, Fe.Xx)(r) ||
-                ((d = (0, m.we)("#EventModTile_Moderate_MarkReviewed")),
-                (c = C.EventModerateMarkReview),
-                (u = !0)),
-              o &&
-                ((d = (0, m.we)("#EventModTile_Moderate_Saving")),
-                (c = C.EventModerateSaving)),
-              (0, e.jsxs)("button", {
-                className: (0, g.A)(ke().Button, C.Button, c),
-                onClick: () => n(u),
-                disabled: o,
-                children: [o && (0, e.jsx)(I.t, { size: "small" }), d],
-              })
-            );
-          }),
-          Pe = (0, U.PA)((a) => {
-            const { onClick: n, event: r, bSaving: o } = a,
-              d = r.BHasTag("adult_only_content");
-            let c = (0, m.we)(
-              d
-                ? "#EventModTile_Moderate_RemoveAdultContent"
-                : "#EventModTile_Moderate_FlagAdultContent",
-            );
-            return (
-              o && (c = (0, m.we)("#EventModTile_Moderate_Saving")),
-              (0, e.jsxs)("button", {
-                className: (0, g.A)(ke().Button, C.Button),
-                onClick: () => n(!d),
-                disabled: o,
-                children: [o && (0, e.jsx)(I.t, { size: "small" }), c],
-              })
-            );
+            ],
           });
-        function Ve(a) {
-          const { onClick: n, event: r, bSaving: o } = a,
-            d = (0, wt.q3)(() => r.BHasTag("halloween"));
-          let c = (0, m.we)(
-            d
-              ? "#EventModTile_Moderate_RemoveHalloweenFlag"
-              : "#EventModTile_Moderate_FlagHalloween",
-          );
-          o && (c = (0, m.we)("#EventModTile_Moderate_Saving"));
-          const u = ft.HD.GetTimeNowWithOverrideAsDate();
-          return u.getMonth() >= 8 && u.getMonth() <= 10
-            ? (0, e.jsxs)("button", {
-                className: (0, g.A)(ke().Button, C.Button),
-                onClick: () => n(!d),
-                disabled: o,
-                children: [o && (0, e.jsx)(I.t, { size: "small" }), c],
-              })
-            : null;
         }
-        let De = class extends x.Component {
-          state = {
-            bLoadingEvent: !ae.O3.BHasClanEventModel(
-              this.props.solrData.unique_id,
-            ),
-            bShowAsModal: !1,
-            bSavingModeration: !1,
-          };
-          m_cancelSignal = k().CancelToken.source();
-          componentDidMount() {
-            const { solrData: a } = this.props,
-              n = a.unique_id;
-            ae.O3.BHasClanEventModel(n) ||
-              ae.O3.LoadHiddenPartnerEvent(new H.b(a.clan_steamid), n)
-                .then(() => this.setState({ bLoadingEvent: !1 }))
-                .catch((r) => {
-                  const o = (0, V.H)(r);
-                  console.error(
-                    "EventModerationTile: Event Load: " + o.strErrorMsg,
-                    o,
+      };
+      (0, H.Cg)([N.oI], ke.prototype, "HandleError", null),
+        (0, H.Cg)([N.oI], ke.prototype, "LoadMorePublicEventWithDelay", null),
+        (0, H.Cg)([N.oI], ke.prototype, "LoadMoreModerationEvents", null),
+        (0, H.Cg)(
+          [N.oI],
+          ke.prototype,
+          "UpdateQueryParametersAndLoadMoreEvents",
+          null,
+        ),
+        (0, H.Cg)([N.oI], ke.prototype, "OnScroll", null),
+        (0, H.Cg)([N.oI], ke.prototype, "RefetchAllEventTiles", null),
+        (ke = (0, H.Cg)([m.PA], ke));
+      const Ue = (0, g.y)(ke),
+        Oe = (0, m.PA)((e) => {
+          const t = ue.Get(),
+            { fnRequireRefetchEvents: n } = e;
+          return (0, s.jsxs)(s.Fragment, {
+            children: [
+              (0, s.jsx)("div", {
+                className: je.FilterContainer,
+                children: (0, s.jsx)(A.he, {
+                  toolTipContent: (0, y.we)(
+                    "#EventModeration_ShowCustomFilter_ttip",
                   ),
-                    this.setState({ bLoadingEvent: !1 });
-                });
-          }
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "EventModerationTile component unmounted",
-            );
-          }
-          ShowModalEvent(a) {
-            const { solrData: n } = this.props,
-              r = n.unique_id;
-            !this.state.bLoadingEvent &&
-              ae.O3.BHasClanEventModel(r) &&
-              this.setState({ bShowAsModal: !0 }),
-              a.preventDefault(),
-              a.stopPropagation();
-          }
-          HideModalEvent() {
-            this.state.bShowAsModal && this.setState({ bShowAsModal: !1 });
-          }
-          SetAdultContentState(a) {
-            if (this.state.bSavingModeration) return;
-            const { solrData: n } = this.props,
-              r = n.unique_id,
-              o = ae.O3.GetClanEventModel(r);
-            if (!o) return;
-            const d = o.BHasTag("adult_only_content");
-            if (a === d) return;
-            const c = new Array(),
-              u = new Array();
-            let f = new Ge().SetAdultOnlyContentAction(a);
-            a ? c.push("adult_only_content") : u.push("adult_only_content"),
-              this.UpdateTagsOnEvent(r, c, u, f);
-          }
-          SetHalloweenEventState(a) {
-            if (this.state.bSavingModeration) return;
-            const { solrData: n } = this.props,
-              r = n.unique_id,
-              o = ae.O3.GetClanEventModel(r);
-            if (!o) return;
-            const d = o.BHasTag("halloween");
-            if (a === d) return;
-            const c = new Array(),
-              u = new Array();
-            let f = new Ge().SetHalloweenEventTypeAction(a);
-            a ? c.push("halloween") : u.push("halloween"),
-              this.UpdateTagsOnEvent(r, c, u, f);
-          }
-          SetModeratedState(a) {
-            if (this.state.bSavingModeration) return;
-            const { solrData: n } = this.props,
-              r = n.unique_id,
-              o = ae.O3.GetClanEventModel(r);
-            if (!o) return;
-            const d = (0, Fe.Xx)(o);
-            if (a === d) return;
-            const c = new Array(),
-              u = new Array();
-            let f = new Ge().SetReviewAction(a);
-            a
-              ? (c.push("mod_reviewed"),
-                u.push("mod_require_rereview"),
-                o.BHasTag("mod_require_rereview") && f.SetReReviewAction(a))
-              : c.push("mod_require_rereview"),
-              this.UpdateTagsOnEvent(r, c, u, f);
-          }
-          UpdateTagsOnEvent(a, n, r, o) {
-            const d = async () => {
-              let c = ae.O3.GetClanEventModel(a);
+                  children: (0, s.jsx)(S.Yh, {
+                    label: (0, y.we)("#EventModeration_ShowCustomFilter"),
+                    checked: t.bUseCustomQuery,
+                    onChange: (e) => {
+                      (t.bUseCustomQuery = e), n();
+                    },
+                  }),
+                }),
+              }),
+              (0, s.jsxs)("div", {
+                className: je.FilterContainer,
+                children: [
+                  (0, s.jsx)("label", {
+                    htmlFor: "EventPerLoad",
+                    children: (0, y.we)("#EventModeration_PerPageLoad"),
+                  }),
+                  (0, s.jsx)("div", {
+                    children: (0, s.jsx)("input", {
+                      type: "number",
+                      id: "EventPerLoad",
+                      min: "10",
+                      max: "200",
+                      value: t.eventsToLoadPerPaging,
+                      onChange: (e) => {
+                        let n = Number.parseInt(e.currentTarget.value);
+                        n &&
+                          n > 0 &&
+                          n != t.eventsToLoadPerPaging &&
+                          (t.eventsToLoadPerPaging = n);
+                      },
+                    }),
+                  }),
+                ],
+              }),
+            ],
+          });
+        }),
+        He = (0, m.PA)((e) => {
+          const t = ue.Get(),
+            { fnRequireRefetchEvents: n } = e,
+            a = q.Zi8.map((e) => ({ value: e, label: (0, de.rG)(e) })).sort(
+              (e, t) => e.label.localeCompare(t.label),
+            ),
+            r = le.FZ.map((e) => ({ value: e, label: e })).sort((e, t) =>
+              e.label.localeCompare(t.label),
+            ),
+            i = { option: (e) => ({ ...e, color: "#444444" }) };
+          return (0, s.jsxs)(s.Fragment, {
+            children: [
+              (0, s.jsxs)("div", {
+                className: je.FilterContainer,
+                children: [
+                  (0, s.jsx)("span", {
+                    children: (0, y.we)("#EventModeration_FilterByTag"),
+                  }),
+                  (0, s.jsx)(oe.Ay, {
+                    isSearchable: !0,
+                    isMulti: !0,
+                    onChange: (e) => {
+                      (t.selectedTags = e), n();
+                    },
+                    value: t.selectedTags,
+                    options: r,
+                    styles: i,
+                  }),
+                ],
+              }),
+              (0, s.jsxs)("div", {
+                className: je.FilterContainer,
+                children: [
+                  (0, s.jsx)("span", {
+                    children: (0, y.we)("#EventModeration_FilterExcludeByTag"),
+                  }),
+                  (0, s.jsx)(oe.Ay, {
+                    isSearchable: !0,
+                    isMulti: !0,
+                    onChange: (e) => {
+                      (t.excludedTags = e), n();
+                    },
+                    value: t.excludedTags,
+                    options: r,
+                    styles: i,
+                  }),
+                ],
+              }),
+              (0, s.jsxs)("div", {
+                className: je.FilterContainer,
+                children: [
+                  (0, s.jsx)("span", {
+                    children: (0, y.we)("#EventModeration_FilterToType"),
+                  }),
+                  (0, s.jsx)(oe.Ay, {
+                    isSearchable: !0,
+                    isMulti: !0,
+                    onChange: (e) => {
+                      (t.filterEventTypes = e), n();
+                    },
+                    value: t.filterEventTypes,
+                    options: a,
+                    styles: i,
+                  }),
+                ],
+              }),
+              (0, s.jsxs)("div", {
+                className: je.FilterContainer,
+                children: [
+                  (0, s.jsx)("span", {
+                    children: (0, y.we)("#EventModeration_FilterToDate"),
+                  }),
+                  (0, s.jsx)(ie(), {
+                    timeFormat: !1,
+                    onChange: (e) => {
+                      if ("string" == typeof e) {
+                        let n = Ge(e, "M/D/YYYY", !0);
+                        if (!n.isValid())
+                          return void (t.filterDateAsString = e);
+                        e = n;
+                      }
+                      t.filterDate != e &&
+                        ((t.filterDateAsString = void 0),
+                        (t.filterDate = e),
+                        n());
+                    },
+                    value: t.filterDate,
+                    isValidDate: (e) => {
+                      let t = new Date();
+                      return (
+                        e.unix() <
+                        Ge.unix(t.getTime() / 1e3 + 86400)
+                          .hour(0)
+                          .seconds(0)
+                          .minute(0)
+                          .unix()
+                      );
+                    },
+                    inputProps: {
+                      placeholder: (0, y.we)("#EventModeration_PickDatee"),
+                      className: je.TimeWidth,
+                    },
+                  }),
+                ],
+              }),
+              (0, s.jsxs)("div", {
+                className: je.FilterContainer,
+                children: [
+                  (0, s.jsx)("input", {
+                    type: "checkbox",
+                    id: "VisibilityStart",
+                    checked: t.bOrderByVisibilityStartTime,
+                    onChange: (e) => {
+                      (t.bOrderByVisibilityStartTime = e.currentTarget.checked),
+                        n();
+                    },
+                  }),
+                  (0, s.jsx)("label", {
+                    htmlFor: "VisibilityStart",
+                    children: (0, y.we)("#EventModeration_OrderByFirstVisible"),
+                  }),
+                ],
+              }),
+            ],
+          });
+        }),
+        ze = (0, m.PA)((e) => {
+          const { onClick: t, event: n, bSaving: a } = e;
+          let r = (0, y.we)("#EventModTile_Moderate_ClearReviewed"),
+            i = je.EventModerateClearReview,
+            o = !1;
+          return (
+            (0, le.Xx)(n) ||
+              ((r = (0, y.we)("#EventModTile_Moderate_MarkReviewed")),
+              (i = je.EventModerateMarkReview),
+              (o = !0)),
+            a &&
+              ((r = (0, y.we)("#EventModTile_Moderate_Saving")),
+              (i = je.EventModerateSaving)),
+            (0, s.jsxs)("button", {
+              className: (0, R.A)(fe().Button, je.Button, i),
+              onClick: () => t(o),
+              disabled: a,
+              children: [a && (0, s.jsx)(E.t, { size: "small" }), r],
+            })
+          );
+        }),
+        Ne = (0, m.PA)((e) => {
+          const { onClick: t, event: n, bSaving: a } = e,
+            r = n.BHasTag("adult_only_content");
+          let i = (0, y.we)(
+            r
+              ? "#EventModTile_Moderate_RemoveAdultContent"
+              : "#EventModTile_Moderate_FlagAdultContent",
+          );
+          return (
+            a && (i = (0, y.we)("#EventModTile_Moderate_Saving")),
+            (0, s.jsxs)("button", {
+              className: (0, R.A)(fe().Button, je.Button),
+              onClick: () => t(!r),
+              disabled: a,
+              children: [a && (0, s.jsx)(E.t, { size: "small" }), i],
+            })
+          );
+        });
+      function qe(e) {
+        const { onClick: t, event: n, bSaving: a } = e,
+          r = (0, ae.q3)(() => n.BHasTag("halloween"));
+        let i = (0, y.we)(
+          r
+            ? "#EventModTile_Moderate_RemoveHalloweenFlag"
+            : "#EventModTile_Moderate_FlagHalloween",
+        );
+        a && (i = (0, y.we)("#EventModTile_Moderate_Saving"));
+        const o = Ie.HD.GetTimeNowWithOverrideAsDate();
+        return o.getMonth() >= 8 && o.getMonth() <= 10
+          ? (0, s.jsxs)("button", {
+              className: (0, R.A)(fe().Button, je.Button),
+              onClick: () => t(!r),
+              disabled: a,
+              children: [a && (0, s.jsx)(E.t, { size: "small" }), i],
+            })
+          : null;
+      }
+      let We = class extends p.Component {
+        state = {
+          bLoadingEvent: !z.O3.BHasClanEventModel(
+            this.props.solrData.unique_id,
+          ),
+          bShowAsModal: !1,
+          bSavingModeration: !1,
+        };
+        m_cancelSignal = d().CancelToken.source();
+        componentDidMount() {
+          const { solrData: e } = this.props,
+            t = e.unique_id;
+          z.O3.BHasClanEventModel(t) ||
+            z.O3.LoadHiddenPartnerEvent(new _.b(e.clan_steamid), t)
+              .then(() => this.setState({ bLoadingEvent: !1 }))
+              .catch((e) => {
+                const t = (0, c.H)(e);
+                console.error(
+                  "EventModerationTile: Event Load: " + t.strErrorMsg,
+                  t,
+                ),
+                  this.setState({ bLoadingEvent: !1 });
+              });
+        }
+        componentWillUnmount() {
+          this.m_cancelSignal.cancel("EventModerationTile component unmounted");
+        }
+        ShowModalEvent(e) {
+          const { solrData: t } = this.props,
+            n = t.unique_id;
+          !this.state.bLoadingEvent &&
+            z.O3.BHasClanEventModel(n) &&
+            this.setState({ bShowAsModal: !0 }),
+            e.preventDefault(),
+            e.stopPropagation();
+        }
+        HideModalEvent() {
+          this.state.bShowAsModal && this.setState({ bShowAsModal: !1 });
+        }
+        SetAdultContentState(e) {
+          if (this.state.bSavingModeration) return;
+          const { solrData: t } = this.props,
+            n = t.unique_id,
+            s = z.O3.GetClanEventModel(n);
+          if (!s) return;
+          if (e === s.BHasTag("adult_only_content")) return;
+          const a = new Array(),
+            r = new Array();
+          let i = new ge().SetAdultOnlyContentAction(e);
+          e ? a.push("adult_only_content") : r.push("adult_only_content"),
+            this.UpdateTagsOnEvent(n, a, r, i);
+        }
+        SetHalloweenEventState(e) {
+          if (this.state.bSavingModeration) return;
+          const { solrData: t } = this.props,
+            n = t.unique_id,
+            s = z.O3.GetClanEventModel(n);
+          if (!s) return;
+          if (e === s.BHasTag("halloween")) return;
+          const a = new Array(),
+            r = new Array();
+          let i = new ge().SetHalloweenEventTypeAction(e);
+          e ? a.push("halloween") : r.push("halloween"),
+            this.UpdateTagsOnEvent(n, a, r, i);
+        }
+        SetModeratedState(e) {
+          if (this.state.bSavingModeration) return;
+          const { solrData: t } = this.props,
+            n = t.unique_id,
+            s = z.O3.GetClanEventModel(n);
+          if (!s) return;
+          if (e === (0, le.Xx)(s)) return;
+          const a = new Array(),
+            r = new Array();
+          let i = new ge().SetReviewAction(e);
+          e
+            ? (a.push("mod_reviewed"),
+              r.push("mod_require_rereview"),
+              s.BHasTag("mod_require_rereview") && i.SetReReviewAction(e))
+            : a.push("mod_require_rereview"),
+            this.UpdateTagsOnEvent(n, a, r, i);
+        }
+        UpdateTagsOnEvent(e, t, n, s) {
+          this.state.bSavingModeration ||
+            this.setState({ bSavingModeration: !0 }, async () => {
+              let a = z.O3.GetClanEventModel(e);
               try {
-                let u = await _e
+                let e = await _e
                   .Get()
                   .UpdateTagsOnPartnerEvent(
                     this.m_cancelSignal,
-                    c.clanSteamID,
-                    c.AnnouncementGID,
+                    a.clanSteamID,
+                    a.AnnouncementGID,
+                    t,
                     n,
-                    r,
-                    o,
+                    s,
                   );
-                c.vecTags = u;
-              } catch (u) {
-                let f = (0, V.H)(u);
-                console.error("UpdateTagsOnPartnerEvent " + f.strErrorMsg, f);
+                a.vecTags = e;
+              } catch (e) {
+                let t = (0, c.H)(e);
+                console.error("UpdateTagsOnPartnerEvent " + t.strErrorMsg, t);
               }
               this.setState({ bSavingModeration: !1 });
-            };
-            this.state.bSavingModeration ||
-              this.setState({ bSavingModeration: !0 }, d);
-          }
-          OnChangeCategory(a) {
-            const { solrData: n } = this.props;
-            let r = ae.O3.GetClanEventModel(n.unique_id);
-            (0, J.pg)((0, e.jsx)(it, { eventModel: r }), (0, w.uX)(a));
-          }
-          OnUpdateSeasonalTag(a) {
-            const { solrData: n } = this.props;
-            let r = ae.O3.GetClanEventModel(n.unique_id);
-            (0, J.pg)((0, e.jsx)(ot, { eventModel: r }), (0, w.uX)(a));
-          }
-          render() {
-            const { solrData: a } = this.props,
-              n = a.unique_id,
-              r = Number(a.appid);
-            let o,
-              d = (0, X.sfN)(j.TS.LANGUAGE),
-              c = ae.O3.GetClanEventModel(n),
-              u = null;
-            c
-              ? (this.state.bShowAsModal &&
-                  (u = (0, e.jsx)(p.of, {
-                    className: C.StoreHeaderAdjust,
-                    children: (0, e.jsx)("div", {
-                      children: (0, e.jsx)(Ct.H, {
-                        event: c,
-                        fnClose: this.HideModalEvent,
-                      }),
+            });
+        }
+        OnChangeCategory(e) {
+          const { solrData: t } = this.props;
+          let n = z.O3.GetClanEventModel(t.unique_id);
+          (0, b.pg)((0, s.jsx)(Qe, { eventModel: n }), (0, f.uX)(e));
+        }
+        OnUpdateSeasonalTag(e) {
+          const { solrData: t } = this.props;
+          let n = z.O3.GetClanEventModel(t.unique_id);
+          (0, b.pg)((0, s.jsx)(Je, { eventModel: n }), (0, f.uX)(e));
+        }
+        render() {
+          const { solrData: e } = this.props,
+            t = e.unique_id,
+            n = Number(e.appid);
+          let a,
+            r = (0, q.sfN)(o.TS.LANGUAGE),
+            i = z.O3.GetClanEventModel(t),
+            l = null;
+          i
+            ? (this.state.bShowAsModal &&
+                (l = (0, s.jsx)(x.of, {
+                  className: je.StoreHeaderAdjust,
+                  children: (0, s.jsx)("div", {
+                    children: (0, s.jsx)(Se.H, {
+                      event: i,
+                      fnClose: this.HideModalEvent,
                     }),
-                  })),
-                (o = (0, e.jsx)(Nt, { eventModel: c, lang: d })))
-              : (o = (0, m.we)("#Loading"));
-            const f = a.last_modified_date
-                ? Date.parse(a.last_modified_date) / 1e3
-                : 0,
-              D = c ? c.type : Number(a.event_type),
-              F = new H.b(a.clan_steamid),
-              ie = r ? `app/${r}` : `group/${F.GetAccountID()}`,
-              ne = `${j.TS.STORE_BASE_URL}news/${ie}/view/${a.announcement_gid}`,
-              ye = !!(c && c.BHasTag("adult_only_content")),
-              de = !!(c && c.BHasTag("halloween"));
-            return (0, e.jsxs)(Q.tH, {
-              children: [
-                u,
-                (0, e.jsxs)("div", {
-                  className: (0, g.A)({ [C.Tile]: !0, [C.HalloweenEvent]: de }),
-                  children: [
-                    (0, e.jsx)("a", {
-                      href: ne,
-                      className: C.TileCapsule,
-                      onClick: this.ShowModalEvent,
-                      children: o,
-                    }),
-                    (0, e.jsxs)("div", {
-                      className: C.TileDetails,
-                      children: [
-                        (0, e.jsxs)("div", {
-                          className: C.DetailsLeft,
-                          children: [
-                            (0, e.jsx)("a", {
-                              className: C.EventTitle,
-                              href: ne,
-                              onClick: this.ShowModalEvent,
-                              children: a.event_name,
-                            }),
-                            (0, e.jsx)("div", {
-                              className: (0, g.A)(
-                                C.TileEventType,
-                                D == X.DRF ? C.TileEventOtherType : "",
+                  }),
+                })),
+              (a = (0, s.jsx)(Ve, { eventModel: i, lang: r })))
+            : (a = (0, y.we)("#Loading"));
+          const d = e.last_modified_date
+              ? Date.parse(e.last_modified_date) / 1e3
+              : 0,
+            c = i ? i.type : Number(e.event_type),
+            h = new _.b(e.clan_steamid),
+            u = n ? `app/${n}` : `group/${h.GetAccountID()}`,
+            m = `${o.TS.STORE_BASE_URL}news/${u}/view/${e.announcement_gid}`,
+            g = Boolean(i && i.BHasTag("adult_only_content")),
+            v = Boolean(i && i.BHasTag("halloween"));
+          return (0, s.jsxs)(w.tH, {
+            children: [
+              l,
+              (0, s.jsxs)("div", {
+                className: (0, R.A)({ [je.Tile]: !0, [je.HalloweenEvent]: v }),
+                children: [
+                  (0, s.jsx)("a", {
+                    href: m,
+                    className: je.TileCapsule,
+                    onClick: this.ShowModalEvent,
+                    children: a,
+                  }),
+                  (0, s.jsxs)("div", {
+                    className: je.TileDetails,
+                    children: [
+                      (0, s.jsxs)("div", {
+                        className: je.DetailsLeft,
+                        children: [
+                          (0, s.jsx)("a", {
+                            className: je.EventTitle,
+                            href: m,
+                            onClick: this.ShowModalEvent,
+                            children: e.event_name,
+                          }),
+                          (0, s.jsx)("div", {
+                            className: (0, R.A)(
+                              je.TileEventType,
+                              c == q.DRF ? je.TileEventOtherType : "",
+                            ),
+                            children: i
+                              ? i.GetCategoryAsString()
+                              : e.event_type,
+                          }),
+                          g &&
+                            (0, s.jsx)("div", {
+                              className: je.HasAdultContent,
+                              children: (0, y.we)(
+                                "#EventModTile_HasAdultContent",
                               ),
-                              children: c
-                                ? c.GetCategoryAsString()
-                                : a.event_type,
                             }),
-                            ye &&
-                              (0, e.jsx)("div", {
-                                className: C.HasAdultContent,
-                                children: (0, m.we)(
-                                  "#EventModTile_HasAdultContent",
+                          this.state.bLoadingEvent &&
+                            (0, s.jsx)(E.t, {
+                              size: "small",
+                              string: (0, y.we)("#Loading"),
+                            }),
+                          (0, s.jsx)("div", {
+                            className: je.ChannelInfo,
+                            children: (0, s.jsx)(Ye, {
+                              appid: n,
+                              clanSteamID: new _.b(e.clan_steamid),
+                            }),
+                          }),
+                        ],
+                      }),
+                      (0, s.jsx)("div", {
+                        className: je.DetailsMiddle,
+                        children:
+                          i &&
+                          (0, s.jsxs)(p.Fragment, {
+                            children: [
+                              (0, s.jsx)(ze, {
+                                onClick: this.SetModeratedState,
+                                bSaving: this.state.bSavingModeration,
+                                event: i,
+                              }),
+                              (0, s.jsx)("button", {
+                                className: (0, R.A)(fe().Button, je.Button),
+                                onClick: this.OnChangeCategory,
+                                children: (0, y.we)(
+                                  "#EventModTile_ChangeEventType",
                                 ),
                               }),
-                            this.state.bLoadingEvent &&
-                              (0, e.jsx)(I.t, {
-                                size: "small",
-                                string: (0, m.we)("#Loading"),
+                              (0, s.jsx)(Ne, {
+                                onClick: this.SetAdultContentState,
+                                bSaving: this.state.bSavingModeration,
+                                event: i,
                               }),
-                            (0, e.jsx)("div", {
-                              className: C.ChannelInfo,
-                              children: (0, e.jsx)(Jt, {
-                                appid: r,
-                                clanSteamID: new H.b(a.clan_steamid),
+                              (0, s.jsx)(qe, {
+                                onClick: this.SetHalloweenEventState,
+                                bSaving: this.state.bSavingModeration,
+                                event: i,
                               }),
-                            }),
-                          ],
-                        }),
-                        (0, e.jsx)("div", {
-                          className: C.DetailsMiddle,
-                          children:
-                            c &&
-                            (0, e.jsxs)(x.Fragment, {
-                              children: [
-                                (0, e.jsx)(Ce, {
-                                  onClick: this.SetModeratedState,
-                                  bSaving: this.state.bSavingModeration,
-                                  event: c,
-                                }),
-                                (0, e.jsx)("button", {
-                                  className: (0, g.A)(ke().Button, C.Button),
-                                  onClick: this.OnChangeCategory,
-                                  children: (0, m.we)(
-                                    "#EventModTile_ChangeEventType",
+                              Boolean(i.BHasTag("halloween2019candidate")) &&
+                                (0, s.jsx)("button", {
+                                  className: (0, R.A)(fe().Button),
+                                  onClick: this.OnUpdateSeasonalTag,
+                                  children: (0, y.we)(
+                                    "#EventModTile_SeasonalTag",
                                   ),
                                 }),
-                                (0, e.jsx)(Pe, {
-                                  onClick: this.SetAdultContentState,
-                                  bSaving: this.state.bSavingModeration,
-                                  event: c,
+                              (0, s.jsx)(Ae, { eventModel: i }),
+                            ],
+                          }),
+                      }),
+                      (0, s.jsxs)("div", {
+                        className: je.DetailsRight,
+                        children: [
+                          (0, s.jsxs)("div", {
+                            className: je.EventTimingBlock,
+                            children: [
+                              Boolean(d) &&
+                                (0, s.jsx)("div", {
+                                  className: je.LastUpdateTime,
+                                  children: (0, y.we)(
+                                    "#EventModTile_LastModified",
+                                    (0, y.TW)(d) +
+                                      "@" +
+                                      (0, we.KC)(d, { bForce24HourClock: !1 }),
+                                  ),
                                 }),
-                                (0, e.jsx)(Ve, {
-                                  onClick: this.SetHalloweenEventState,
-                                  bSaving: this.state.bSavingModeration,
-                                  event: c,
+                              i &&
+                                (0, s.jsx)(Fe.j, {
+                                  event: i,
+                                  stylesmodule: je,
+                                  nOverrideEndTime:
+                                    i.GetEndTimeAndDateUnixSeconds(),
+                                  nOverrideStartTime:
+                                    i.GetStartTimeAndDateUnixSeconds(),
                                 }),
-                                !!c.BHasTag("halloween2019candidate") &&
-                                  (0, e.jsx)("button", {
-                                    className: (0, g.A)(ke().Button),
-                                    onClick: this.OnUpdateSeasonalTag,
-                                    children: (0, m.we)(
-                                      "#EventModTile_SeasonalTag",
-                                    ),
-                                  }),
-                                (0, e.jsx)(Ot, { eventModel: c }),
-                              ],
+                            ],
+                          }),
+                          i &&
+                            (0, s.jsx)(Xe, {
+                              event: i,
+                              hidden: e.hidden,
+                              published: e.published,
                             }),
-                        }),
-                        (0, e.jsxs)("div", {
-                          className: C.DetailsRight,
-                          children: [
-                            (0, e.jsxs)("div", {
-                              className: C.EventTimingBlock,
-                              children: [
-                                !!f &&
-                                  (0, e.jsx)("div", {
-                                    className: C.LastUpdateTime,
-                                    children: (0, m.we)(
-                                      "#EventModTile_LastModified",
-                                      (0, m.TW)(f) +
-                                        "@" +
-                                        (0, vt.KC)(f, {
-                                          bForce24HourClock: !1,
-                                        }),
-                                    ),
-                                  }),
-                                c &&
-                                  (0, e.jsx)(Gt.j, {
-                                    event: c,
-                                    stylesmodule: C,
-                                    nOverrideEndTime:
-                                      c.GetEndTimeAndDateUnixSeconds(),
-                                    nOverrideStartTime:
-                                      c.GetStartTimeAndDateUnixSeconds(),
-                                  }),
-                              ],
-                            }),
-                            c &&
-                              (0, e.jsx)(_t, {
-                                event: c,
-                                hidden: a.hidden,
-                                published: a.published,
-                              }),
-                          ],
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              ],
-            });
-          }
-        };
-        h([se.oI], De.prototype, "ShowModalEvent", 1),
-          h([se.oI], De.prototype, "HideModalEvent", 1),
-          h([se.oI], De.prototype, "SetAdultContentState", 1),
-          h([se.oI], De.prototype, "SetHalloweenEventState", 1),
-          h([se.oI], De.prototype, "SetModeratedState", 1),
-          h([se.oI], De.prototype, "OnChangeCategory", 1),
-          h([se.oI], De.prototype, "OnUpdateSeasonalTag", 1),
-          (De = h([U.PA], De));
-        function Nt(a) {
-          const { eventModel: n, lang: r } = a,
-            o = (0, zt.WC)(n, "capsule", r, Z.wI.capsule_main),
-            d = n.BImageNeedScreenshotFallback("capsule", r);
-          return o && o.length > 0
-            ? (0, e.jsxs)(e.Fragment, {
-                children: [
-                  (0, e.jsx)(Ut.c, { rgSources: o }),
-                  d &&
-                    (0, e.jsx)("div", {
-                      className: C.NoCapsuleFallback,
-                      children: (0, m.we)("#EventModTile_FallbackImageText"),
-                    }),
+                        ],
+                      }),
+                    ],
+                  }),
                 ],
-              })
-            : (0, e.jsx)("div", {
-                className: C.NoCapsule,
-                children: (0, m.we)("#EventModTile_NoCapsule"),
-              });
+              }),
+            ],
+          });
         }
-        let Qt = class extends x.Component {
-          state = { bDownloadingImages: !1, nLocLanguages: 0 };
-          m_cancelSignal = k().CancelToken.source();
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "ChangeEventTypeDialog component unmounted",
-            );
-          }
-          CountLanguages(a) {
-            let n = 0;
-            if (a && a.length > 0)
-              for (let r = 0; r < a.length && r < X.bP9; ++r)
-                a[r] && a[r].length > 0 && (n += 1);
-            return n;
-          }
-          componentDidMount() {
-            const { event: a } = this.props;
-            ae.O3.LoadClanEventLocalizationFromAnnouncementGID(
-              a.clanSteamID,
-              a.AnnouncementGID,
-            )
-              .then((n) => {
-                this.m_cancelSignal.token.reason ||
-                  this.setState({ nLocLanguages: n.length });
-              })
-              .catch((n) => {
-                let r = (0, V.H)(n);
-                console.error(
-                  "EventInspection.LoadLoc : error " + r.strErrorMsg,
-                  r,
-                ),
-                  this.m_cancelSignal.token.reason ||
-                    this.setState({ nLocLanguages: -1 });
-              });
-          }
-          render() {
-            const { event: a } = this.props;
-            let n = this.CountLanguages(a.jsondata.localized_title_image),
-              r = this.CountLanguages(a.jsondata.localized_capsule_image),
-              o = this.CountLanguages(a.jsondata.localized_spotlight_image),
-              d = Math.max(
-                this.CountLanguages(a.jsondata.localized_broadcast_left_image),
-                this.CountLanguages(a.jsondata.localized_broadcast_right_image),
-              ),
-              c = n + r + o + d,
-              u = this.CountLanguages(a.jsondata.localized_summary),
-              f = this.CountLanguages(a.jsondata.localized_subtitle);
-            return (0, e.jsxs)("div", {
-              className: C.AnalysisCtn,
+      };
+      function Ve(e) {
+        const { eventModel: t, lang: n } = e,
+          a = (0, De.WC)(t, "capsule", n, K.wI.capsule_main),
+          r = t.BImageNeedScreenshotFallback("capsule", n);
+        return a && a.length > 0
+          ? (0, s.jsxs)(s.Fragment, {
               children: [
-                (0, e.jsx)("div", {
-                  className: C.TileTitle,
-                  children: (0, m.we)("#EventModTile_Analysis"),
-                }),
-                (0, e.jsx)("div", {
-                  children: (0, m.we)(
-                    "#EventModTile_Stats_Comments",
-                    a.nCommentCount,
-                  ),
-                }),
-                (0, e.jsx)("div", {
-                  children: (0, m.we)("#EventModTile_Stats_VoteUp", a.nVotesUp),
-                }),
-                (0, e.jsx)("div", {
-                  children: (0, m.we)(
-                    "#EventModTile_Stats_VoteDown",
-                    a.nVotesDown,
-                  ),
-                }),
-                !!n &&
-                  (0, e.jsxs)("div", {
-                    className: C.ArtHeader,
-                    children: [
-                      (0, m.we)("#EventModTile_ImageAnalysis_Header", n),
-                      " ",
-                    ],
-                  }),
-                !!r &&
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, m.we)("#EventModTile_ImageAnalysis_Capsule", r),
-                      " ",
-                    ],
-                  }),
-                !!o &&
-                  (0, e.jsxs)("div", {
-                    className: C.ArtSpotlight,
-                    children: [
-                      (0, m.we)("#EventModTile_ImageAnalysis_Spotlight", o),
-                      " ",
-                    ],
-                  }),
-                !!d &&
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, m.we)("#EventModTile_ImageAnalysis_Broadcast", d),
-                      " ",
-                    ],
-                  }),
-                c == 0 &&
-                  (0, e.jsxs)("div", {
-                    className: C.AnalysisMissing,
-                    children: [
-                      (0, m.we)("#EventModTile_ImageAnalysis_None"),
-                      " ",
-                    ],
-                  }),
-                this.state.nLocLanguages == 0 &&
-                  (0, e.jsx)(I.t, {
-                    size: "small",
-                    string: (0, m.we)("#EventModTile_LoadingLocs"),
-                  }),
-                this.state.nLocLanguages > 0 &&
-                  (0, e.jsx)("div", {
-                    children: (0, m.we)(
-                      "#EventModTile_Languages",
-                      this.state.nLocLanguages,
-                    ),
-                  }),
-                !!u &&
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, m.we)("#EventModTile_Languages_Summary", u),
-                      " ",
-                    ],
-                  }),
-                !!f &&
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, m.we)("#EventModTile_Languages_Subtitle", f),
-                      " ",
-                    ],
+                (0, s.jsx)(Be.c, { rgSources: a }),
+                r &&
+                  (0, s.jsx)("div", {
+                    className: je.NoCapsuleFallback,
+                    children: (0, y.we)("#EventModTile_FallbackImageText"),
                   }),
               ],
+            })
+          : (0, s.jsx)("div", {
+              className: je.NoCapsule,
+              children: (0, y.we)("#EventModTile_NoCapsule"),
             });
-          }
-        };
-        Qt = h([U.PA], Qt);
-        const Jt = (0, U.PA)((a) => {
-          const { appid: n, clanSteamID: r } = a,
-            o = (0, Pt.$5)(n),
-            [d, c] = (0, x.useState)(!Se.A.Get().BHasApp(a.appid)),
-            u = x.useRef(k().CancelToken.source());
-          if (
-            ((0, x.useEffect)(
-              () => () =>
-                u.current.cancel(
-                  "EventModerationChannelInfo component unmounted",
-                ),
-              [],
-            ),
-            (0, x.useEffect)(() => {
-              const { appid: f, clanSteamID: D } = a;
-              ((f && !Se.A.Get().BHasApp(f)) ||
-                (D && !B.ac.BHasClanInfoLoaded(D))) &&
-                (async () => {
-                  try {
-                    await Promise.all([
-                      Se.A.Get().QueueAppRequest(f, {
-                        include_assets: !0,
-                        include_release: !0,
-                        include_screenshots: !0,
-                      }),
-                      D ? B.ac.LoadClanInfoForClanSteamID(D) : void 0,
-                    ]);
-                  } catch (ie) {
-                    const ne = (0, V.H)(ie);
-                    console.error(
-                      "EventModerationChannelInfo: App Load: " + ne.strErrorMsg,
-                      ne,
-                    );
-                  } finally {
-                    u.current.token.reason || c(!1);
-                  }
-                })();
-            }, [a]),
-            d)
+      }
+      (0, H.Cg)([N.oI], We.prototype, "ShowModalEvent", null),
+        (0, H.Cg)([N.oI], We.prototype, "HideModalEvent", null),
+        (0, H.Cg)([N.oI], We.prototype, "SetAdultContentState", null),
+        (0, H.Cg)([N.oI], We.prototype, "SetHalloweenEventState", null),
+        (0, H.Cg)([N.oI], We.prototype, "SetModeratedState", null),
+        (0, H.Cg)([N.oI], We.prototype, "OnChangeCategory", null),
+        (0, H.Cg)([N.oI], We.prototype, "OnUpdateSeasonalTag", null),
+        (We = (0, H.Cg)([m.PA], We));
+      let Ke = class extends p.Component {
+        state = { bDownloadingImages: !1, nLocLanguages: 0 };
+        m_cancelSignal = d().CancelToken.source();
+        componentWillUnmount() {
+          this.m_cancelSignal.cancel(
+            "ChangeEventTypeDialog component unmounted",
+          );
+        }
+        CountLanguages(e) {
+          let t = 0;
+          if (e && e.length > 0)
+            for (let n = 0; n < e.length && n < q.bP9; ++n)
+              e[n] && e[n].length > 0 && (t += 1);
+          return t;
+        }
+        componentDidMount() {
+          const { event: e } = this.props;
+          z.O3.LoadClanEventLocalizationFromAnnouncementGID(
+            e.clanSteamID,
+            e.AnnouncementGID,
           )
-            return (0, e.jsx)(I.t, {
-              size: "small",
-              string: (0, m.we)("#EventModTile_AppInfoLoading"),
+            .then((e) => {
+              this.m_cancelSignal.token.reason ||
+                this.setState({ nLocLanguages: e.length });
+            })
+            .catch((e) => {
+              let t = (0, c.H)(e);
+              console.error(
+                "EventInspection.LoadLoc : error " + t.strErrorMsg,
+                t,
+              ),
+                this.m_cancelSignal.token.reason ||
+                  this.setState({ nLocLanguages: -1 });
             });
-          if (n) {
-            const f = Se.A.Get().GetApp(n);
-            return f
-              ? (0, e.jsx)("div", {
-                  className: C.TileAppInfo,
-                  children: (0, e.jsxs)("div", {
-                    className: C.TileAppInfoTitle,
-                    children: [
-                      (0, e.jsx)(pt.j, {
-                        id: o,
-                        children: (0, e.jsx)(st.uU, {
-                          href: (0, $e.k2)(f.GetStorePageURL()),
-                          children: (0, e.jsx)("img", {
-                            className: C.TileAppInfoImage,
-                            src: f.GetAssets().GetMainCapsuleURL(),
-                          }),
-                        }),
-                      }),
-                      (0, e.jsx)(pt.j, {
-                        id: o,
-                        children: (0, e.jsx)(st.uU, {
-                          href: (0, $e.k2)(f.GetStorePageURL()),
-                          children: (0, e.jsx)("div", {
-                            children: f.GetName(),
-                          }),
-                        }),
-                      }),
-                    ],
-                  }),
-                })
-              : null;
-          } else if (r) {
-            const f = r.GetAccountID(),
-              D = B.ac.GetClanInfoByClanAccountID(f);
-            if (D && D.is_curator)
-              return (0, e.jsx)("div", {
-                className: C.TileAppInfo,
-                children: (0, e.jsx)("div", {
-                  className: C.TileAppInfoTitle,
-                  children: (0, e.jsxs)(st.uU, {
-                    href: (0, $e.k2)(
-                      j.TS.STORE_BASE_URL + "/curator/" + f + "/",
-                    ),
-                    children: [
-                      (0, e.jsx)("img", {
-                        className: C.TileAppInfoImage,
-                        src: D.avatar_full_url,
-                      }),
-                      (0, e.jsx)("div", {
-                        children: (0, m.we)(
-                          "#EventModTile_CuratorName",
-                          D.group_name,
-                        ),
-                      }),
-                    ],
-                  }),
-                }),
-              });
-          }
-          return null;
-        });
-        let _t = class extends x.Component {
-          render() {
-            const { event: a, hidden: n, published: r } = this.props,
-              o = n
-                ? r
-                  ? (0, m.we)("#EVentModTile_State_Staged")
-                  : (0, m.we)("#EVentModTile_State_Draft")
-                : (0, m.we)("#EVentModTile_State_Published"),
-              d = (0, Fe.iy)(a),
-              c = (0, Fe.A4)(a),
-              u = (0, Fe.ZA)(a);
-            let f =
-                u && !a.BHasTag("hide_store") && !a.BHasTag("mod_hide_store"),
-              D =
-                d &&
-                !a.BHasTag("hide_library_overview") &&
-                !a.BHasTag("mod_hide_library_overview"),
-              F =
-                c &&
-                !a.BHasTag("hide_library_detail") &&
-                !a.BHasTag("mod_hide_library_detail");
-            return (0, e.jsxs)("div", {
-              className: C.VisibiltyCtn,
-              children: [
-                (0, e.jsx)("div", { className: C.TileTitle, children: o }),
-                (0, e.jsx)("div", {
-                  children: (0, m.we)(
-                    "#EventModTile_Store_Visibility",
-                    f
-                      ? (0, m.we)("#WriteReview_Dialog_Yes")
-                      : (0, m.we)("#WriteReview_Dialog_No"),
-                    f
-                      ? ""
-                      : u
-                        ? (0, m.we)(
-                            "#EventModTime_Hidden_EventType",
-                            a.GetEventTypeAsString(),
-                          )
-                        : a.BHasTag("hide_store")
-                          ? (0, m.we)("#EventModTime_Hidden_OptOut")
-                          : (0, m.we)("#EventModTime_Hidden_Moderator"),
-                  ),
-                }),
-                (0, e.jsx)("div", {
-                  children: (0, m.we)(
-                    "#EventModTile_LibraryHome_Visibility",
-                    D
-                      ? (0, m.we)("#WriteReview_Dialog_Yes")
-                      : (0, m.we)("#WriteReview_Dialog_No"),
-                    D
-                      ? ""
-                      : u
-                        ? (0, m.we)(
-                            "#EventModTime_Hidden_EventType",
-                            a.GetEventTypeAsString(),
-                          )
-                        : a.BHasTag("hide_library_overview")
-                          ? (0, m.we)("#EventModTime_Hidden_OptOut")
-                          : (0, m.we)("#EventModTime_Hidden_Moderator"),
-                  ),
-                }),
-                (0, e.jsx)("div", {
-                  children: (0, m.we)(
-                    "#EventModTile_LibraryDetail_Visibility",
-                    F
-                      ? (0, m.we)("#WriteReview_Dialog_Yes")
-                      : (0, m.we)("#WriteReview_Dialog_No"),
-                    F
-                      ? ""
-                      : u
-                        ? (0, m.we)(
-                            "#EventModTime_Hidden_EventType",
-                            a.GetEventTypeAsString(),
-                          )
-                        : a.BHasTag("hide_library_detail")
-                          ? (0, m.we)("#EventModTime_Hidden_OptOut")
-                          : (0, m.we)("#EventModTime_Hidden_Moderator"),
-                  ),
-                }),
-                a.BHasTag("enable_steam_china") &&
-                  (0, e.jsx)("div", {
-                    children: (0, m.we)("#EventModTile_SteamChina_Visibility"),
-                  }),
-                a.BHasTag("disable_steam_global") &&
-                  (0, e.jsx)("div", {
-                    children: (0, m.we)("#EventModTile_SteamGlobal_Hidden"),
-                  }),
-              ],
-            });
-          }
-        };
-        _t = h([U.PA], _t);
-        let it = class extends x.Component {
-          state = {
-            bUpdating: !1,
-            newCategoryOption: {
-              label: (0, Ke.rG)(X.HFK),
-              value: { eventType: X.HFK },
-            },
-          };
-          m_cancelSignal = k().CancelToken.source();
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "ChangeEventTypeDialog component unmounted",
-            );
-          }
-          async ChangeCategoryForEvent() {
-            const { eventModel: a, closeModal: n } = this.props;
-            try {
-              const r = this.state.newCategoryOption,
-                o = r.value.eventType;
-              await _e
-                .Get()
-                .UpdatePartnerEventType(
-                  this.m_cancelSignal,
-                  a.clanSteamID,
-                  a.GID,
-                  o,
-                );
-              const d = Fe.Ac,
-                c = [];
-              r.value.tags &&
-                r.value.tags.forEach((f) => {
-                  c.push(f);
-                  const D = new Ge().SetUpdateSeasonalTags(f).ToModString();
-                  c.push(D);
-                });
-              const u = await _e
-                .Get()
-                .UpdateTagsOnPartnerEvent(
-                  this.m_cancelSignal,
-                  a.clanSteamID,
-                  a.GetAnnouncementGID(),
-                  c,
-                  d,
-                  new Ge().SetActionChangeEvent(o),
-                );
-              (0, W.h5)(() => {
-                (a.type = o), (a.vecTags = u);
+        }
+        render() {
+          const { event: e } = this.props;
+          let t = this.CountLanguages(e.jsondata.localized_title_image),
+            n = this.CountLanguages(e.jsondata.localized_capsule_image),
+            a = this.CountLanguages(e.jsondata.localized_spotlight_image),
+            r = Math.max(
+              this.CountLanguages(e.jsondata.localized_broadcast_left_image),
+              this.CountLanguages(e.jsondata.localized_broadcast_right_image),
+            ),
+            i = t + n + a + r,
+            o = this.CountLanguages(e.jsondata.localized_summary),
+            l = this.CountLanguages(e.jsondata.localized_subtitle);
+          return (0, s.jsxs)("div", {
+            className: je.AnalysisCtn,
+            children: [
+              (0, s.jsx)("div", {
+                className: je.TileTitle,
+                children: (0, y.we)("#EventModTile_Analysis"),
               }),
-                this.setState({ bUpdating: !1 }, n);
-            } catch (r) {
-              const o = (0, V.H)(r);
-              console.error("ChangeEventTypeDialog error " + o.strErrorMsg, o),
-                this.setState({ bUpdating: !1, strErrorMsg: o.strErrorMsg });
-            }
-          }
-          OnChangeSelection(a) {
-            this.setState({ newCategoryOption: a });
-          }
-          render() {
-            const { eventModel: a, closeModal: n } = this.props,
-              r = X.Zi8.filter(
-                (c) => c == X.DRF || c == X.Y3j || c >= X.L0X,
-              ).map((c) => {
-                const u = { eventType: c };
-                return (
-                  c == X.Fwr && (u.tags = ["patchnotes"]),
-                  { label: (0, Ke.rG)(c), value: u }
-                );
-              });
-            r.push({
-              label: (0, m.we)("#PartnerEvent_Curator_Group_Members"),
-              value: {
-                eventType: X.uYK,
-                tags: ["curator", "curator_group_members"],
-              },
-            }),
-              r.push({
-                label: (0, m.we)("#PartnerEvent_Curator_Public"),
-                value: {
-                  eventType: X.uYK,
-                  tags: ["curator", "curator_public"],
-                },
-              }),
-              r.push({
-                label: (0, m.we)("#PartnerEvent_SteamAwardNominations"),
-                value: {
-                  eventType: X.uYK,
-                  tags: [
-                    "steam_award_nomination_request",
-                    "mod_hide_library_overview",
-                  ],
-                },
-              }),
-              r.push({
-                label: (0, m.we)("#PartnerEvent_SteamAwardVoteRequest"),
-                value: {
-                  eventType: X.uYK,
-                  tags: [
-                    "steam_award_vote_request",
-                    "mod_hide_library_overview",
-                  ],
-                },
-              });
-            const o = [
-                {
-                  value: { eventType: X.f4X, tags: ["halloween"] },
-                  label: "Halloween: " + (0, m.we)("#PartnerEvent_15"),
-                },
-                {
-                  value: { eventType: X.zA, tags: ["halloween"] },
-                  label: "Halloween: " + (0, m.we)("#PartnerEvent_22"),
-                },
-                {
-                  value: { eventType: X.y6, tags: ["halloween"] },
-                  label: "Halloween: " + (0, m.we)("#PartnerEvent_23"),
-                },
-                {
-                  value: { eventType: X.hGl, tags: ["halloween"] },
-                  label: "Halloween: " + (0, m.we)("#PartnerEvent_24"),
-                },
-                {
-                  value: { eventType: X.WNR, tags: ["halloween"] },
-                  label: "Halloween: " + (0, m.we)("#PartnerEvent_35"),
-                },
-              ],
-              d = ft.HD.GetTimeNowWithOverrideAsDate();
-            return (
-              d.getMonth() == 8 || d.getMonth() == 9
-                ? r.unshift(...o)
-                : r.push(...o),
-              (0, e.jsx)(p.o0, {
-                strTitle: (0, m.we)("#EventModTile_ChangeEventType"),
-                strDescription: (0, m.we)(
-                  "#EventModTile_ChangeEventType_Desc",
-                  a.GetEventTypeAsString(),
+              (0, s.jsx)("div", {
+                children: (0, y.we)(
+                  "#EventModTile_Stats_Comments",
+                  e.nCommentCount,
                 ),
-                onCancel: n,
-                onOK: () =>
-                  this.setState({ bUpdating: !0 }, this.ChangeCategoryForEvent),
-                children: (0, e.jsx)(x.Fragment, {
-                  children: (0, e.jsxs)("div", {
-                    className: C.CategoryChangeDialog,
-                    children: [
-                      (0, e.jsx)("br", {}),
-                      this.state.bUpdating &&
-                        (0, e.jsx)(I.t, { size: "small" }),
-                      this.state.strErrorMsg &&
-                        (0, e.jsxs)("div", {
-                          children: [
-                            (0, m.we)("#Chat_Settings_Error_ServerError"),
-                            (0, e.jsx)("br", {}),
-                            this.state.strErrorMsg,
-                          ],
+              }),
+              (0, s.jsx)("div", {
+                children: (0, y.we)("#EventModTile_Stats_VoteUp", e.nVotesUp),
+              }),
+              (0, s.jsx)("div", {
+                children: (0, y.we)(
+                  "#EventModTile_Stats_VoteDown",
+                  e.nVotesDown,
+                ),
+              }),
+              Boolean(t) &&
+                (0, s.jsxs)("div", {
+                  className: je.ArtHeader,
+                  children: [
+                    (0, y.we)("#EventModTile_ImageAnalysis_Header", t),
+                    " ",
+                  ],
+                }),
+              Boolean(n) &&
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, y.we)("#EventModTile_ImageAnalysis_Capsule", n),
+                    " ",
+                  ],
+                }),
+              Boolean(a) &&
+                (0, s.jsxs)("div", {
+                  className: je.ArtSpotlight,
+                  children: [
+                    (0, y.we)("#EventModTile_ImageAnalysis_Spotlight", a),
+                    " ",
+                  ],
+                }),
+              Boolean(r) &&
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, y.we)("#EventModTile_ImageAnalysis_Broadcast", r),
+                    " ",
+                  ],
+                }),
+              0 == i &&
+                (0, s.jsxs)("div", {
+                  className: je.AnalysisMissing,
+                  children: [
+                    (0, y.we)("#EventModTile_ImageAnalysis_None"),
+                    " ",
+                  ],
+                }),
+              0 == this.state.nLocLanguages &&
+                (0, s.jsx)(E.t, {
+                  size: "small",
+                  string: (0, y.we)("#EventModTile_LoadingLocs"),
+                }),
+              this.state.nLocLanguages > 0 &&
+                (0, s.jsx)("div", {
+                  children: (0, y.we)(
+                    "#EventModTile_Languages",
+                    this.state.nLocLanguages,
+                  ),
+                }),
+              Boolean(o) &&
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, y.we)("#EventModTile_Languages_Summary", o),
+                    " ",
+                  ],
+                }),
+              Boolean(l) &&
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, y.we)("#EventModTile_Languages_Subtitle", l),
+                    " ",
+                  ],
+                }),
+            ],
+          });
+        }
+      };
+      Ke = (0, H.Cg)([m.PA], Ke);
+      const Ye = (0, m.PA)((e) => {
+        const { appid: t, clanSteamID: n } = e,
+          a = (0, Pe.$5)(t),
+          [r, i] = (0, p.useState)(!ve.A.Get().BHasApp(e.appid)),
+          l = p.useRef(d().CancelToken.source());
+        if (
+          ((0, p.useEffect)(
+            () => () =>
+              l.current.cancel(
+                "EventModerationChannelInfo component unmounted",
+              ),
+            [],
+          ),
+          (0, p.useEffect)(() => {
+            const { appid: t, clanSteamID: n } = e;
+            if (
+              (t && !ve.A.Get().BHasApp(t)) ||
+              (n && !v.ac.BHasClanInfoLoaded(n))
+            ) {
+              (async () => {
+                try {
+                  await Promise.all([
+                    ve.A.Get().QueueAppRequest(t, {
+                      include_assets: !0,
+                      include_release: !0,
+                      include_screenshots: !0,
+                    }),
+                    n ? v.ac.LoadClanInfoForClanSteamID(n) : void 0,
+                  ]);
+                } catch (e) {
+                  const t = (0, c.H)(e);
+                  console.error(
+                    "EventModerationChannelInfo: App Load: " + t.strErrorMsg,
+                    t,
+                  );
+                } finally {
+                  l.current.token.reason || i(!1);
+                }
+              })();
+            }
+          }, [e]),
+          r)
+        )
+          return (0, s.jsx)(E.t, {
+            size: "small",
+            string: (0, y.we)("#EventModTile_AppInfoLoading"),
+          });
+        if (t) {
+          const e = ve.A.Get().GetApp(t);
+          return e
+            ? (0, s.jsx)("div", {
+                className: je.TileAppInfo,
+                children: (0, s.jsxs)("div", {
+                  className: je.TileAppInfoTitle,
+                  children: [
+                    (0, s.jsx)(ye.j, {
+                      id: a,
+                      children: (0, s.jsx)(Te.uU, {
+                        href: (0, xe.k2)(e.GetStorePageURL()),
+                        children: (0, s.jsx)("img", {
+                          className: je.TileAppInfoImage,
+                          src: e.GetAssets().GetMainCapsuleURL(),
                         }),
-                      (0, e.jsx)(Le.Ay, {
-                        isSearchable: !0,
-                        onChange: this.OnChangeSelection,
-                        value: this.state.newCategoryOption,
-                        options: r,
                       }),
-                    ],
-                  }),
+                    }),
+                    (0, s.jsx)(ye.j, {
+                      id: a,
+                      children: (0, s.jsx)(Te.uU, {
+                        href: (0, xe.k2)(e.GetStorePageURL()),
+                        children: (0, s.jsx)("div", { children: e.GetName() }),
+                      }),
+                    }),
+                  ],
                 }),
               })
-            );
-          }
-        };
-        h([se.oI], it.prototype, "ChangeCategoryForEvent", 1),
-          h([se.oI], it.prototype, "OnChangeSelection", 1),
-          (it = h([U.PA], it));
-        class ot extends x.Component {
-          state = {
-            bUpdating: !1,
-            bAccept: this.props.eventModel.BHasTag("halloween2019"),
-            bHorror: this.props.eventModel.BHasTag("horror"),
-            bCute: this.props.eventModel.BHasTag("cute"),
-          };
-          m_cancelSignal = k().CancelToken.source();
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "UpdateSeasonalTagDialog component unmounted",
-            );
-          }
-          ChangeAcceptance() {
-            this.setState({ bAccept: !this.state.bAccept });
-          }
-          ChangeHorror() {
-            this.setState({ bHorror: !this.state.bHorror });
-          }
-          ChangeCute() {
-            this.setState({ bCute: !this.state.bCute });
-          }
-          async ApplyAction() {
-            let n = new Array(),
-              r = new Array();
-            this.state.bAccept
-              ? (n.push("halloween2019"), r.push("halloween2019reviewed"))
-              : (r.push("halloween2019"), n.push("halloween2019reviewed")),
-              this.state.bCute ? n.push("cute") : r.push("cute"),
-              this.state.bHorror ? n.push("horror") : r.push("horror");
-            try {
-              const { eventModel: o } = this.props;
-              let d = await _e
-                .Get()
-                .UpdateTagsOnPartnerEvent(
-                  this.m_cancelSignal,
-                  o.clanSteamID,
-                  o.AnnouncementGID,
-                  n,
-                  r,
-                  new Ge().SetUpdateSeasonalTags(
-                    this.state.bAccept
-                      ? "halloween2019"
-                      : "halloween2019reviewed",
-                  ),
-                );
-              (o.vecTags = d), this.props.closeModal();
-            } catch (o) {
-              let d = (0, V.H)(o);
-              console.error("EventModerationTile " + d.strErrorMsg, d),
-                this.setState({ strErrorMsg: d.strErrorMsg });
-            }
-          }
-          render() {
-            const { eventModel: n, closeModal: r } = this.props;
-            return (0, e.jsx)(p.o0, {
-              strTitle: (0, m.we)("#EventModTile_SeasonalTag"),
-              onCancel: r,
-              onOK: () => this.setState({ bUpdating: !0 }, this.ApplyAction),
-              children: (0, e.jsx)(x.Fragment, {
-                children: (0, e.jsxs)("div", {
-                  className: C.CategoryChangeDialog,
+            : null;
+        }
+        if (n) {
+          const e = n.GetAccountID(),
+            t = v.ac.GetClanInfoByClanAccountID(e);
+          if (t && t.is_curator)
+            return (0, s.jsx)("div", {
+              className: je.TileAppInfo,
+              children: (0, s.jsx)("div", {
+                className: je.TileAppInfoTitle,
+                children: (0, s.jsxs)(Te.uU, {
+                  href: (0, xe.k2)(o.TS.STORE_BASE_URL + "/curator/" + e + "/"),
                   children: [
-                    (0, e.jsx)("input", {
-                      id: "Acceptance",
-                      type: "checkbox",
-                      checked: this.state.bAccept,
-                      onChange: this.ChangeAcceptance,
+                    (0, s.jsx)("img", {
+                      className: je.TileAppInfoImage,
+                      src: t.avatar_full_url,
                     }),
-                    (0, e.jsx)("label", {
-                      htmlFor: "Acceptance",
-                      children: (0, m.we)("#EventModTile_SeasonalTag_Desc"),
-                    }),
-                    (0, e.jsx)("div", {
-                      children: (0, m.we)(
-                        "#EventModTile_SeasonalTag_Desc_Secondary",
+                    (0, s.jsx)("div", {
+                      children: (0, y.we)(
+                        "#EventModTile_CuratorName",
+                        t.group_name,
                       ),
                     }),
-                    (0, e.jsx)("input", {
-                      id: "Horror",
-                      type: "checkbox",
-                      checked: this.state.bHorror,
-                      onChange: this.ChangeHorror,
-                    }),
-                    (0, e.jsx)("label", {
-                      htmlFor: "Horror",
-                      children: "Horror Tag",
-                    }),
-                    (0, e.jsx)("input", {
-                      id: "Cute",
-                      type: "checkbox",
-                      checked: this.state.bCute,
-                      onChange: this.ChangeCute,
-                    }),
-                    (0, e.jsx)("label", {
-                      htmlFor: "Cute",
-                      children: "Cute Tag",
-                    }),
-                    this.state.bUpdating && (0, e.jsx)(I.t, { size: "small" }),
+                  ],
+                }),
+              }),
+            });
+        }
+        return null;
+      });
+      let Xe = class extends p.Component {
+        render() {
+          const { event: e, hidden: t, published: n } = this.props,
+            a = t
+              ? n
+                ? (0, y.we)("#EVentModTile_State_Staged")
+                : (0, y.we)("#EVentModTile_State_Draft")
+              : (0, y.we)("#EVentModTile_State_Published"),
+            r = (0, le.iy)(e),
+            i = (0, le.A4)(e),
+            o = (0, le.ZA)(e);
+          let l = o && !e.BHasTag("hide_store") && !e.BHasTag("mod_hide_store"),
+            d =
+              r &&
+              !e.BHasTag("hide_library_overview") &&
+              !e.BHasTag("mod_hide_library_overview"),
+            c =
+              i &&
+              !e.BHasTag("hide_library_detail") &&
+              !e.BHasTag("mod_hide_library_detail");
+          return (0, s.jsxs)("div", {
+            className: je.VisibiltyCtn,
+            children: [
+              (0, s.jsx)("div", { className: je.TileTitle, children: a }),
+              (0, s.jsx)("div", {
+                children: (0, y.we)(
+                  "#EventModTile_Store_Visibility",
+                  l
+                    ? (0, y.we)("#WriteReview_Dialog_Yes")
+                    : (0, y.we)("#WriteReview_Dialog_No"),
+                  l
+                    ? ""
+                    : o
+                      ? (0, y.we)(
+                          "#EventModTime_Hidden_EventType",
+                          e.GetEventTypeAsString(),
+                        )
+                      : e.BHasTag("hide_store")
+                        ? (0, y.we)("#EventModTime_Hidden_OptOut")
+                        : (0, y.we)("#EventModTime_Hidden_Moderator"),
+                ),
+              }),
+              (0, s.jsx)("div", {
+                children: (0, y.we)(
+                  "#EventModTile_LibraryHome_Visibility",
+                  d
+                    ? (0, y.we)("#WriteReview_Dialog_Yes")
+                    : (0, y.we)("#WriteReview_Dialog_No"),
+                  d
+                    ? ""
+                    : o
+                      ? (0, y.we)(
+                          "#EventModTime_Hidden_EventType",
+                          e.GetEventTypeAsString(),
+                        )
+                      : e.BHasTag("hide_library_overview")
+                        ? (0, y.we)("#EventModTime_Hidden_OptOut")
+                        : (0, y.we)("#EventModTime_Hidden_Moderator"),
+                ),
+              }),
+              (0, s.jsx)("div", {
+                children: (0, y.we)(
+                  "#EventModTile_LibraryDetail_Visibility",
+                  c
+                    ? (0, y.we)("#WriteReview_Dialog_Yes")
+                    : (0, y.we)("#WriteReview_Dialog_No"),
+                  c
+                    ? ""
+                    : o
+                      ? (0, y.we)(
+                          "#EventModTime_Hidden_EventType",
+                          e.GetEventTypeAsString(),
+                        )
+                      : e.BHasTag("hide_library_detail")
+                        ? (0, y.we)("#EventModTime_Hidden_OptOut")
+                        : (0, y.we)("#EventModTime_Hidden_Moderator"),
+                ),
+              }),
+              e.BHasTag("enable_steam_china") &&
+                (0, s.jsx)("div", {
+                  children: (0, y.we)("#EventModTile_SteamChina_Visibility"),
+                }),
+              e.BHasTag("disable_steam_global") &&
+                (0, s.jsx)("div", {
+                  children: (0, y.we)("#EventModTile_SteamGlobal_Hidden"),
+                }),
+            ],
+          });
+        }
+      };
+      Xe = (0, H.Cg)([m.PA], Xe);
+      let Qe = class extends p.Component {
+        state = {
+          bUpdating: !1,
+          newCategoryOption: {
+            label: (0, de.rG)(q.HFK),
+            value: { eventType: q.HFK },
+          },
+        };
+        m_cancelSignal = d().CancelToken.source();
+        componentWillUnmount() {
+          this.m_cancelSignal.cancel(
+            "ChangeEventTypeDialog component unmounted",
+          );
+        }
+        async ChangeCategoryForEvent() {
+          const { eventModel: e, closeModal: t } = this.props;
+          try {
+            const n = this.state.newCategoryOption,
+              s = n.value.eventType;
+            await _e
+              .Get()
+              .UpdatePartnerEventType(
+                this.m_cancelSignal,
+                e.clanSteamID,
+                e.GID,
+                s,
+              );
+            const a = le.Ac,
+              r = [];
+            n.value.tags &&
+              n.value.tags.forEach((e) => {
+                r.push(e);
+                const t = new ge().SetUpdateSeasonalTags(e).ToModString();
+                r.push(t);
+              });
+            const i = await _e
+              .Get()
+              .UpdateTagsOnPartnerEvent(
+                this.m_cancelSignal,
+                e.clanSteamID,
+                e.GetAnnouncementGID(),
+                r,
+                a,
+                new ge().SetActionChangeEvent(s),
+              );
+            (0, W.h5)(() => {
+              (e.type = s), (e.vecTags = i);
+            }),
+              this.setState({ bUpdating: !1 }, t);
+          } catch (e) {
+            const t = (0, c.H)(e);
+            console.error("ChangeEventTypeDialog error " + t.strErrorMsg, t),
+              this.setState({ bUpdating: !1, strErrorMsg: t.strErrorMsg });
+          }
+        }
+        OnChangeSelection(e) {
+          this.setState({ newCategoryOption: e });
+        }
+        render() {
+          const { eventModel: e, closeModal: t } = this.props,
+            n = q.Zi8.filter((e) => e == q.DRF || e == q.Y3j || e >= q.L0X).map(
+              (e) => {
+                const t = { eventType: e };
+                return (
+                  e == q.Fwr && (t.tags = ["patchnotes"]),
+                  { label: (0, de.rG)(e), value: t }
+                );
+              },
+            );
+          n.push({
+            label: (0, y.we)("#PartnerEvent_Curator_Group_Members"),
+            value: {
+              eventType: q.uYK,
+              tags: ["curator", "curator_group_members"],
+            },
+          }),
+            n.push({
+              label: (0, y.we)("#PartnerEvent_Curator_Public"),
+              value: { eventType: q.uYK, tags: ["curator", "curator_public"] },
+            }),
+            n.push({
+              label: (0, y.we)("#PartnerEvent_SteamAwardNominations"),
+              value: {
+                eventType: q.uYK,
+                tags: [
+                  "steam_award_nomination_request",
+                  "mod_hide_library_overview",
+                ],
+              },
+            }),
+            n.push({
+              label: (0, y.we)("#PartnerEvent_SteamAwardVoteRequest"),
+              value: {
+                eventType: q.uYK,
+                tags: ["steam_award_vote_request", "mod_hide_library_overview"],
+              },
+            });
+          const a = [
+              {
+                value: { eventType: q.f4X, tags: ["halloween"] },
+                label: "Halloween: " + (0, y.we)("#PartnerEvent_15"),
+              },
+              {
+                value: { eventType: q.zA, tags: ["halloween"] },
+                label: "Halloween: " + (0, y.we)("#PartnerEvent_22"),
+              },
+              {
+                value: { eventType: q.y6, tags: ["halloween"] },
+                label: "Halloween: " + (0, y.we)("#PartnerEvent_23"),
+              },
+              {
+                value: { eventType: q.hGl, tags: ["halloween"] },
+                label: "Halloween: " + (0, y.we)("#PartnerEvent_24"),
+              },
+              {
+                value: { eventType: q.WNR, tags: ["halloween"] },
+                label: "Halloween: " + (0, y.we)("#PartnerEvent_35"),
+              },
+            ],
+            r = Ie.HD.GetTimeNowWithOverrideAsDate();
+          return (
+            8 == r.getMonth() || 9 == r.getMonth()
+              ? n.unshift(...a)
+              : n.push(...a),
+            (0, s.jsx)(x.o0, {
+              strTitle: (0, y.we)("#EventModTile_ChangeEventType"),
+              strDescription: (0, y.we)(
+                "#EventModTile_ChangeEventType_Desc",
+                e.GetEventTypeAsString(),
+              ),
+              onCancel: t,
+              onOK: () =>
+                this.setState({ bUpdating: !0 }, this.ChangeCategoryForEvent),
+              children: (0, s.jsx)(p.Fragment, {
+                children: (0, s.jsxs)("div", {
+                  className: je.CategoryChangeDialog,
+                  children: [
+                    (0, s.jsx)("br", {}),
+                    this.state.bUpdating && (0, s.jsx)(E.t, { size: "small" }),
                     this.state.strErrorMsg &&
-                      (0, e.jsxs)("div", {
+                      (0, s.jsxs)("div", {
                         children: [
-                          (0, m.we)("#Chat_Settings_Error_ServerError"),
-                          (0, e.jsx)("br", {}),
+                          (0, y.we)("#Chat_Settings_Error_ServerError"),
+                          (0, s.jsx)("br", {}),
                           this.state.strErrorMsg,
                         ],
                       }),
+                    (0, s.jsx)(oe.Ay, {
+                      isSearchable: !0,
+                      onChange: this.OnChangeSelection,
+                      value: this.state.newCategoryOption,
+                      options: n,
+                    }),
                   ],
                 }),
               }),
-            });
-          }
+            })
+          );
         }
-        h([se.oI], ot.prototype, "ChangeAcceptance", 1),
-          h([se.oI], ot.prototype, "ChangeHorror", 1),
-          h([se.oI], ot.prototype, "ChangeCute", 1),
-          h([se.oI], ot.prototype, "ApplyAction", 1);
-        var Yt = i(56062),
-          Zt = Object.defineProperty,
-          qt = Object.getOwnPropertyDescriptor,
-          en = (a, n, r, o) => {
-            for (
-              var d = o > 1 ? void 0 : o ? qt(n, r) : n, c = a.length - 1, u;
-              c >= 0;
-              c--
-            )
-              (u = a[c]) && (d = (o ? u(n, r, d) : u(d)) || d);
-            return o && d && Zt(n, r, d), d;
-          };
-        let Wt = class extends x.Component {
-          state = { bLoadingEvent: !0 };
-          m_cancelSignal = k().CancelToken.source();
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "SteamGameFestivalStoreDebug to unload ",
-            );
-          }
-          async componentDidMount() {
-            const { clanEventGID: a, clanAccountID: n } = this.props;
-            if (
-              (console.log(a, n, typeof a, typeof n),
-              a && !ae.O3.BHasClanEventModel(a))
-            ) {
-              let r = H.b.InitFromClanID(Number.parseInt(n)),
-                o = await ae.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                  r,
-                  a,
-                  0,
-                ),
-                d = new Array(),
-                c = new Array();
-              if (o.BHasSaleEnabled()) {
-                this.setState({
-                  event: o,
-                  bLoadingEvent: !1,
-                  bLoadingApps: !0,
-                  bLoadingDemos: !0,
-                  bLoadingAssociatedDemoInfo: !0,
-                });
-                let u = new Map();
-                o.jsondata.sale_sections.forEach((F) => {
-                  F.section_type == "tabs" &&
-                    F.tabs.forEach((ie) => {
-                      ie.capsules.forEach((ne) => {
-                        ne.type == "game" ||
-                        ne.type == "application" ||
-                        ne.type == "software"
-                          ? u.has(ne.id) || (u.set(ne.id, !0), d.push(ne.id))
-                          : u.has(ne.id) || (u.set(ne.id, !0), c.push(ne.id));
-                      });
-                    });
-                });
-                const f = {
-                  include_assets: !0,
-                  include_screenshots: !0,
-                  include_release: !0,
-                };
-                await Se.A.Get().QueueMultipleAppRequests(d, f),
-                  this.setState({
-                    rgAppIDs: d,
-                    rgUnknownTypeAppIDs: c,
-                    bLoadingApps: !1,
-                  }),
-                  await Se.A.Get().QueueMultipleAppRequests(d, f),
-                  this.setState({ bLoadingAssociatedDemoInfo: !1 });
-                const D = d.flatMap(
-                  (F) => Se.A.Get().GetApp(F)?.GetDemoAppIDs() ?? [],
-                );
-                await Se.A.Get().QueueMultipleAppRequests(D, f),
-                  this.setState({ bLoadingDemos: !1 });
-              } else this.setState({ bLoadingEvent: !1, rgAppIDs: d });
-            } else this.setState({ bLoadingEvent: !1 });
-          }
-          render() {
-            if (
-              this.state.bLoadingEvent ||
-              this.state.bLoadingDemos ||
-              this.state.bLoadingApps ||
-              this.state.bLoadingAssociatedDemoInfo
-            )
-              return (0, e.jsx)(I.t, {
-                string:
-                  (0, m.we)("#Loading") +
-                  (this.state.bLoadingEvent
-                    ? " Events"
-                    : this.state.bLoadingApps
-                      ? " Apps"
-                      : this.state.bLoadingAssociatedDemoInfo
-                        ? " Associated Demo Info"
-                        : this.state.bLoadingDemos
-                          ? " Demos"
-                          : "done"),
-                position: "center",
-              });
-            if (!this.state.event)
-              return (0, e.jsx)("div", { children: " Failed to load event" });
-            const { event: a } = this.state;
-            if (!a.jsondata.bSaleEnabled)
-              return (0, e.jsx)("div", { children: "Not a sale event" });
-            let n = new Array(),
-              r = new Array();
-            this.state.rgAppIDs
-              .filter((de) => !Se.A.Get().GetApp(de))
-              .forEach((de) => {
-                n.push(
-                  (0, e.jsx)(
-                    "div",
-                    {
-                      children: (0, e.jsx)("a", {
-                        href: j.TS.STORE_BASE_URL + "app/" + de + "/?beta=1",
-                        target: "_blank",
-                        children: de,
-                      }),
-                    },
-                    "missing: " + de,
-                  ),
-                ),
-                  r.push(de);
-              });
-            const o = this.state.rgAppIDs.reduce(
-                (de, be) => de + (Se.A.Get().GetApp(be)?.BHasDemo() ? 1 : 0),
-                0,
-              ),
-              d = new Array();
-            this.state.rgAppIDs.forEach((de) => {
-              const be = Se.A.Get().GetApp(de);
-              if (be && !be.BHasDemo()) {
-                let Te = Se.A.Get().GetApp(de);
-                d.push(
-                  (0, e.jsxs)(
-                    "div",
-                    {
-                      children: [
-                        Te?.GetAppType() == Yt.uE.ue &&
-                          (0, e.jsx)("b", {
-                            children:
-                              "--Error: Sale Page has Demo AppID, based game --\xA0",
-                          }),
-                        Te?.GetName(),
-                        " (",
-                        de,
-                        ")",
-                        (0, e.jsx)("a", {
-                          href: (0, $e.k2)(Te.GetStorePageURL() + "?beta=0"),
-                          target: "_blank",
-                          children: "Store Page",
-                        }),
-                        "\xA0",
-                        (0, e.jsx)("a", {
-                          href: j.TS.PARTNER_BASE_URL + "apps/landing/" + de,
-                          target: "_blank",
-                          children: "App Landing Page",
-                        }),
-                      ],
-                    },
-                    "missingdemo_" + de,
-                  ),
-                );
-              }
-            });
-            let c = 0,
-              u = 0,
-              f = 0,
-              D = 0,
-              F = 0,
-              ie = 0;
-            this.state.rgAppIDs.forEach((de) => {
-              let be = !1;
-              const Te = Se.A.Get().GetApp(de);
-              Te &&
-                Te.BHasDemo() &&
-                (Se.A.Get().GetApp(Te.GetDemoAppIDs()[0]).BIsComingSoon()
-                  ? ((f += 1), (be = !0))
-                  : (D += 1));
-            });
-            let ne = new Array(),
-              ye = 0;
-            return (
-              this.state.rgAppIDs.forEach((de) => {
-                Se.A.Get().GetApp(de)?.GetAppType() != Yt.uE.ue && (ye += 1);
-              }),
-              (0, e.jsxs)(Q.tH, {
-                children: [
-                  (0, e.jsx)("h1", {
-                    children: a.GetNameWithFallback((0, X.sfN)(j.TS.LANGUAGE)),
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("b", { children: "Unique AppIDs:" }),
-                      " ",
-                      this.state.rgAppIDs.length,
-                      " ",
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsxs)("b", {
-                        children: ["Visible Apps in ", j.TS.COUNTRY, ":"],
-                      }),
-                      " ",
-                      ye,
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("b", { children: "Unknown AppID types:" }),
-                      " ",
-                      this.state.rgUnknownTypeAppIDs.length,
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("b", { children: "Missing AppIDs:" }),
-                      " ",
-                      " ",
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [(0, e.jsx)("b", { children: "Demos:" }), " ", o],
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("b", {
-                        children: "Visible apps missing demo store:",
-                      }),
-                      " ",
-                      d.length,
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("b", { children: "CApplications Loaded:" }),
-                      " ",
-                      " ",
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("b", {
-                        children: "CApplication with Associated Demos:",
-                      }),
-                      " ",
-                      c,
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("b", {
-                        children:
-                          "\xA0\xA0Associated with store page but not released: ",
-                      }),
-                      " ",
-                      F,
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("b", {
-                        children: "CApplication with demo without association:",
-                      }),
-                      " ",
-                      u,
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("b", {
-                        children:
-                          "\xA0\xA0Released but not associated with store page: ",
-                      }),
-                      " ",
-                      ie,
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("b", { children: "CApplication missing:" }),
-                      " ",
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("b", {
-                        children:
-                          "CApplication without demo store and demo associations:",
-                      }),
-                      " ",
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("b", { children: "Released Demo: " }),
-                      D,
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    children: [
-                      (0, e.jsx)("b", { children: "Unreleased Demo: " }),
-                      f,
-                    ],
-                  }),
-                  (0, e.jsx)("hr", {}),
-                  (0, e.jsx)("h2", { children: "Missing Appids:" }),
-                  n,
-                  (0, e.jsx)("h2", {
-                    children:
-                      "Missing BOTH demo list and associated demo on product page:",
-                  }),
-                  ne,
-                  (0, e.jsx)("h2", {
-                    children:
-                      "Missing Demos for Visible Appids via Demo Store (missing in link on Sale Page):",
-                  }),
-                  d,
-                ],
-              })
-            );
-          }
+      };
+      (0, H.Cg)([N.oI], Qe.prototype, "ChangeCategoryForEvent", null),
+        (0, H.Cg)([N.oI], Qe.prototype, "OnChangeSelection", null),
+        (Qe = (0, H.Cg)([m.PA], Qe));
+      class Je extends p.Component {
+        state = {
+          bUpdating: !1,
+          bAccept: this.props.eventModel.BHasTag("halloween2019"),
+          bHorror: this.props.eventModel.BHasTag("horror"),
+          bCute: this.props.eventModel.BHasTag("cute"),
         };
-        Wt = en([U.PA], Wt);
-        var tn = i(3685),
-          nn = i(71742),
-          an = i(5827);
-        function rn(a) {
-          const [n, r] = (0, x.useState)(!1),
-            [o] = (0, x.useState)(() => Xt()),
-            d = (0, x.useMemo)(
-              () => ({
-                country: j.TS.COUNTRY,
-                language: j.TS.LANGUAGE,
-                bUsePartnerAPI: !0,
-              }),
-              [],
-            );
-          return (
-            (0, x.useEffect)(() => (r(!0), sn(o)), [o]),
-            n
-              ? (0, x.createElement)(an.V3, {
-                  context: d,
-                  serviceTransportOverride: o.GetServiceTransport(),
-                  children: a.children,
-                })
-              : null
+        m_cancelSignal = d().CancelToken.source();
+        componentWillUnmount() {
+          this.m_cancelSignal.cancel(
+            "UpdateSeasonalTagDialog component unmounted",
           );
         }
-        function dn(a) {
-          const [n] = useState(() => Xt()),
-            r = useMemo(
-              () => ({
-                country: Config.COUNTRY,
-                language: Config.LANGUAGE,
-                bUsePartnerAPI: !0,
-                bIncludeUnpublished: a.bIncludeUnpublished,
-              }),
-              [a.bIncludeUnpublished],
-            );
-          return createElement(StoreBrowseLoaderRoot, {
-            context: r,
-            serviceTransportOverride: n.GetServiceTransport(),
-            children: a.children,
-          });
+        ChangeAcceptance() {
+          this.setState({ bAccept: !this.state.bAccept });
         }
-        function Xt() {
-          const a = (0, j.Tc)(
-            "partnerbrowse_webapi_token",
-            "application_config",
-          );
-          return (
-            (0, nn.wT)(!!a, "require partnerbrowse_webapi_token"),
-            new tn.D(j.TS.WEBAPI_BASE_URL, a)
-          );
+        ChangeHorror() {
+          this.setState({ bHorror: !this.state.bHorror });
         }
-        function sn(a) {
-          return Se.A.Initialize(
-            a.GetServiceTransport(),
-            j.iA.is_partner_member,
-          );
+        ChangeCute() {
+          this.setState({ bCute: !this.state.bCute });
         }
-        var on = i(17809);
-        const ln = () =>
-          (0, e.jsx)(rn, {
-            children: (0, e.jsx)(on.d, {
-              children: (0, e.jsxs)(z.dO, {
+        async ApplyAction() {
+          let e = new Array(),
+            t = new Array();
+          this.state.bAccept
+            ? (e.push("halloween2019"), t.push("halloween2019reviewed"))
+            : (t.push("halloween2019"), e.push("halloween2019reviewed")),
+            this.state.bCute ? e.push("cute") : t.push("cute"),
+            this.state.bHorror ? e.push("horror") : t.push("horror");
+          try {
+            const { eventModel: n } = this.props;
+            let s = await _e
+              .Get()
+              .UpdateTagsOnPartnerEvent(
+                this.m_cancelSignal,
+                n.clanSteamID,
+                n.AnnouncementGID,
+                e,
+                t,
+                new ge().SetUpdateSeasonalTags(
+                  this.state.bAccept
+                    ? "halloween2019"
+                    : "halloween2019reviewed",
+                ),
+              );
+            (n.vecTags = s), this.props.closeModal();
+          } catch (e) {
+            let t = (0, c.H)(e);
+            console.error("EventModerationTile " + t.strErrorMsg, t),
+              this.setState({ strErrorMsg: t.strErrorMsg });
+          }
+        }
+        render() {
+          const { eventModel: e, closeModal: t } = this.props;
+          return (0, s.jsx)(x.o0, {
+            strTitle: (0, y.we)("#EventModTile_SeasonalTag"),
+            onCancel: t,
+            onOK: () => this.setState({ bUpdating: !0 }, this.ApplyAction),
+            children: (0, s.jsx)(p.Fragment, {
+              children: (0, s.jsxs)("div", {
+                className: je.CategoryChangeDialog,
                 children: [
-                  (0, e.jsx)(z.qh, {
-                    path: P.B.EventGameFestivalDebug(),
-                    render: (a) =>
-                      (0, e.jsx)(Wt, {
-                        ...a,
-                        clanAccountID: a.match.params.clanacountid,
-                        clanEventGID: a.match.params.claneventgid,
-                      }),
+                  (0, s.jsx)("input", {
+                    id: "Acceptance",
+                    type: "checkbox",
+                    checked: this.state.bAccept,
+                    onChange: this.ChangeAcceptance,
                   }),
-                  (0, e.jsx)(z.qh, {
-                    exact: !0,
-                    path: P.B.EventBackfill(),
-                    render: (a) => (0, e.jsx)(ze, { ...a }),
+                  (0, s.jsx)("label", {
+                    htmlFor: "Acceptance",
+                    children: (0, y.we)("#EventModTile_SeasonalTag_Desc"),
                   }),
-                  (0, e.jsx)(z.qh, {
-                    path: P.B.EventRSSModeration(),
-                    render: (a) => (0, e.jsx)(ue, { ...a }),
+                  (0, s.jsx)("div", {
+                    children: (0, y.we)(
+                      "#EventModTile_SeasonalTag_Desc_Secondary",
+                    ),
                   }),
-                  (0, e.jsx)(z.qh, {
-                    path: P.B.EventModeration(),
-                    render: (a) =>
-                      (0, e.jsx)(Me, {
-                        ...a,
-                        appid:
-                          a.match.params.appid &&
-                          Number.parseInt(a.match.params.appid),
-                      }),
+                  (0, s.jsx)("input", {
+                    id: "Horror",
+                    type: "checkbox",
+                    checked: this.state.bHorror,
+                    onChange: this.ChangeHorror,
                   }),
+                  (0, s.jsx)("label", {
+                    htmlFor: "Horror",
+                    children: "Horror Tag",
+                  }),
+                  (0, s.jsx)("input", {
+                    id: "Cute",
+                    type: "checkbox",
+                    checked: this.state.bCute,
+                    onChange: this.ChangeCute,
+                  }),
+                  (0, s.jsx)("label", {
+                    htmlFor: "Cute",
+                    children: "Cute Tag",
+                  }),
+                  this.state.bUpdating && (0, s.jsx)(E.t, { size: "small" }),
+                  this.state.strErrorMsg &&
+                    (0, s.jsxs)("div", {
+                      children: [
+                        (0, y.we)("#Chat_Settings_Error_ServerError"),
+                        (0, s.jsx)("br", {}),
+                        this.state.strErrorMsg,
+                      ],
+                    }),
                 ],
               }),
             }),
           });
-      },
-      32545: (re) => {
-        re.exports = {
-          "duration-app-launch": "800ms",
-          FollowButton: "c-TDTqD2D5mBLfTqn3fSV",
-          FollowButtonText: "_2PmgMkPwEgmuCJVZLTGSPi",
-          FollowLoadingText: "_2XN3sBlgsLE3n5WrKOkWxi",
-          BackgroundAnimation: "uyy8KyiiqaQ8u9bMDwblz",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1ZwgsD1DzopaHZlXaaWS7B",
-          "ItemFocusAnim-darkerGrey": "_1sm-Ag9q7YyfjTirEAUKbD",
-          "ItemFocusAnim-darkGreySettings": "Y4bvEiSraTDYjd2Nd9Mwc",
-          "ItemFocusAnim-darkGrey": "J6U-QgbF3DbDkS-3DeQdU",
-          "ItemFocusAnim-grey": "_377hQ8s9afH681BN_ZEsfJ",
-          "ItemFocusAnim-translucent-white-10": "_3ztC4gHbTuhtfBA2YmQnsW",
-          "ItemFocusAnim-translucent-white-20": "pjQnWETBI391eZg-gLCoU",
-          "ItemFocusAnimBorder-darkGrey": "_35tkELTOnZffhYZXF6IM5p",
-          "ItemFocusAnim-green": "ubgODmIok4_aHDeaT6Dpl",
-          focusAnimation: "_3hPkc-RJEDgRJ0ItWpPsP9",
-          hoverAnimation: "_3cu-nLm0UDnrFRy4HkVrO8",
-        };
-      },
-      61311: (re) => {
-        re.exports = {
-          ModeratorAuditActionCtn: "f6z__AuHw6SOG9zsY2oKr",
-          ExpandModActions: "_3nNMeqxuySIiNcmt7YEXb7",
-        };
-      },
-      10026: (re) => {
-        re.exports = { BBCodeFollowButton: "NVuxjpTCUClP-4RsNDDvk" };
-      },
-      18657: (re) => {
-        re.exports = {
-          BBCodeFollowButton: "BwHJdoHlv8wy5OypqL_b7",
-          isHovered: "_2EcgCb9lHfl7I_MlirYLZL",
-        };
-      },
-      29868: (re) => {
-        re.exports = {
-          countdownCtn: "GWWacIf04lQysYMFJma0A",
-          Closed: "ATX_xEE69rX8wVxQvONEx",
-          CountDownCtn: "_11RwPICMOmmvNXkOq9bjPc",
-          CountDownTime: "eh0pMnSr-nk203Ealq_Rq",
-          CountDownText: "_3VKQ3h7Z4wO_U-Z_vXUZkk",
-          LearnMore: "_1q98mjxkCUwQuFALsiNtD7",
-          Throbber: "bEkRtFmRUW_smWksM-k9g",
-          WinnerInfo: "_2LTFl4ZFuL1BeNbqYPExWv",
-          WinnerCount: "Z7ScP-i1XHPQn4eeFdJ3g",
-          WinnerText: "chkuqox_QD6U5ID_AHTLk",
-        };
-      },
-      12037: (re) => {
-        re.exports = {
-          "duration-app-launch": "800ms",
-          Container: "_2Jd3MGaOu0C9Ydswf8Q4Tn",
-          SectionButton: "_3n8swQFM3I_ARVM_5bPhAs",
-          StoreHeaderAdjust: "_3YyCpH32HRhZtt4BOM5wM5",
-          EventsSummariesCtn: "_1snIw0RvJduvDtqpmwtKJ9",
-          LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
-          LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
-          LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
-          BackgroundAnimation: "_295HzH0_Gg7fchG1zO9Km7",
-          "ItemFocusAnim-darkerGrey-nocolor": "_291aUneSnsR7SSD43BPEYt",
-          "ItemFocusAnim-darkerGrey": "_3T-aeBZd_novjXZhPEqJ_L",
-          "ItemFocusAnim-darkGreySettings": "ekd5ku98aKtUXOuTnlUpj",
-          "ItemFocusAnim-darkGrey": "peNld_fsioxlGFxQfdd8I",
-          "ItemFocusAnim-grey": "_1433gddOHXCko3qPvXFRFS",
-          "ItemFocusAnim-translucent-white-10": "_3ZEmb3nXVV6Jl3vO3gd3n2",
-          "ItemFocusAnim-translucent-white-20": "EoCuk2lmX0KUPR7Ja5J0J",
-          "ItemFocusAnimBorder-darkGrey": "_3FtKchinLpLv8OXrbvS81w",
-          "ItemFocusAnim-green": "_23vh8vhEvEmJ5bnq2YZfx8",
-          focusAnimation: "wTWp1KqP_zaAfiOc2ovCo",
-          hoverAnimation: "_2knkM4Dk-kiPNpW81PgE0Y",
-        };
-      },
-      9202: (re) => {
-        re.exports = {
-          "duration-app-launch": "800ms",
-          storeMenuResponsiveModeWidth: "730px",
-          SuppressScrollOnBody: "_1FFwlWIoDrtb0qdN9YUwHs",
-          WishlistHoverCtn: "GXjJQihysg6S5INBKClED",
-          BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
-          BackgroundAnimation: "Auhol3RHXIE3fQUoyOoWR",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2b6SJAbnZzhfHFRjTpAhNy",
-          "ItemFocusAnim-darkerGrey": "XywxBIK9eHokhhsZGNBan",
-          "ItemFocusAnim-darkGreySettings": "_2kXRPMPgy0P9b0CoapcXw7",
-          "ItemFocusAnim-darkGrey": "_3eSI5prhRv2g28mH4BvfI1",
-          "ItemFocusAnim-grey": "SwPqPFwuEkTnSchUdaYfU",
-          "ItemFocusAnim-translucent-white-10": "oXUFMy_wfkldK82-xV12m",
-          "ItemFocusAnim-translucent-white-20": "_3s81IjXe5IWP8-T018RCQq",
-          "ItemFocusAnimBorder-darkGrey": "_1Zq30UmvKFxqjOzEaqp0l",
-          "ItemFocusAnim-green": "_3G3OfrZkx3Nt3Q_A9oFTkP",
-          focusAnimation: "N5bN0xQL6oj7EZSzAeJ-B",
-          hoverAnimation: "_2MUmffXlPUO3g7xxum02Qa",
-        };
-      },
-      71909: (re) => {
-        re.exports = {
-          Ctn: "_1cSpOjJvmGfNyu_HSwichZ",
-          RssInput: "_8NQ9LUIbLO71H08qAYXDd",
-          PreviewListCtn: "HRcOMhFkaVvhc6JpjMSNL",
-          PostCtn: "_3MI2hkWsuzXcyDAibpwe7B",
-          PostTitle: "_1ZsnsCKJmsJuCu04nd93lM",
-          ActivePost: "h-qBFnVYUuO1I4P-cSkTz",
-          PostDate: "_2vXmupKkh6p2BaA0K6CB5O",
-          ErrorPost: "aBLy2PQkdVwQn6JBG8BN8",
-          PostDraft: "_10_gLIbT6bnwWVSfTW2WSX",
-          PostStaged: "nNzd6ujTYg6p9F7pRvFWy",
-          PreviewListBtn: "_3NT8sO_AexM1KIu_MODBhK",
-          PreviewButtons: "_3lbycruUbHtprPAsZH1xvl",
-          UrlSettingCtn: "iN4AtnUn7apNTMq-bbs1m",
-          Error: "_1ZZ510SPBPFH5AkrGEHFfu",
-          DialogPostTitle: "_1XamDYGOmN-CAK2C5na9a5",
-          DashboardBtn: "_2Hlrm7BUntwygz545o3zQI",
-          RawRSS: "_2mOAhPzeuYmAf5zGBOdp7F",
-          ButtonCtn: "_13jSBmDO_a-9t1cIUiiQGm",
-          PreviewBtn: "_3HssDlgWiXjyOyu8qdcc-K",
-          ViewRaw: "_2jvHrB2MnyHMk3_BUfXjgt",
-          LanguageRow: "g_9tLawSDdTk6NiUPTRzd",
-          LanguageTitle: "_2jkBiax2j-5uGiCq-TfyS0",
-          LanguageSet: "_2zsMrGyxcvlo1yieM1i0d8",
-        };
-      },
-      52081: (re) => {
-        re.exports = {
-          SectionContainer: "_3P-ffy_ncZSHdpLyO6f0qi",
-          ModSectionTitle: "_2lc8mXoJp_A_p2dgalucda",
-          ResizeButton: "_29RNNuE5kdZltMEtl37JLr",
-          TileContainer: "_2D4XHyOtJNCevYR8usMUTn",
-          CreatorCtn: "GKustVJ6kwH-yfSnQEsoc",
-          TileSpread: "_1s_ElWG5sLvC6jn5bmx5lY",
-        };
-      },
-      45559: (re) => {
-        re.exports = { Error: "_1eWgIJNhXTPC8_jGAIqKPo" };
-      },
-      961: (re) => {
-        re.exports = {
-          AnalysisCtn: "_1YGfWUDh8ed60wRQsWWNIF",
-          AnalysisMissing: "rH1DtJyqgJLBkBSxST7Pr",
-          ModerationContainer: "_4HRKpSC9YY7qtf41FvW0t",
-          FilterContainer: "qY07Ts46PtC9f_CkGYbuw",
-          Tile: "_3oU1yN2Yb-ZuT2P5rHAev9",
-          DetailsMiddle: "VcJpZMvg6yg6gvjet_lOL",
-          EventModerateMarkReview: "_1RqKA7hTv6bcBGrMlmJBgz",
-          EventModerateMarkReReview: "qd-K7NHXOsYzDV3efizgo",
-          HalloweenEvent: "_34-bq70a3KzZ-vVd1v8whZ",
-          TileEventOtherType: "_3LUrW7wuVtojLL2n5z-MO5",
-          TileCapsule: "_36tP88olexdONuQPMAH7wS",
-          NoCapsuleFallback: "_16oQL8__nFx7gB4SyJaXss",
-          NoCapsule: "_1onVFUCJL4w1GOc9-5H6Me",
-          TileDetails: "_2mRup7CUbcaFul1JHh9EZE",
-          DetailsLeft: "_1O0y5744ePZj3bJR1znj1i",
-          EventTitle: "_3ahHdkXDTdAX8N8qrlTO2A",
-          DetailsRight: "_2BaxWyhld4ybAPEQ6OWPMr",
-          ArtHeader: "_38IkFA1-NC1J4Nksi3nRFA",
-          ArtSpotlight: "_2oUPYZHA2_Ta4GuTcTZbgd",
-          ModeratedFlagCtn: "_2JGGc489-CEXdtyThZ-oQB",
-          TitleLink: "_1OG__rbIbfwvZHVxRtcncy",
-          TileAppInfo: "_2IJ__vdWVbYb-buHnhzfnA",
-          TileAppInfoTitle: "_2X75q8B3vbGNtefxcW3jV7",
-          TileAppInfoImage: "_1rVmL1div0uHwyMqwlJixh",
-          TileSplit: "aaFuCFgI5Fl32h2pWEEfN",
-          TileTitle: "yJw1iGP3a49nfGpsJLTX",
-          TimeWidth: "xSOgV1OP-kC1LOJB_U6Lh",
-          CategoryChangeDialog: "_1VSAjVr5FVxM5XYWbK0drT",
-          Button: "wu9KrcTvKBuVbK28hlB7O",
-          RightSideTitles: "XDAwDPCqcUwPgADyyo1I3",
-          DateAndTime: "_2cW9NG6Q7uWRVnhAwe3juu",
-          StoreHeaderAdjust: "_3U7jaAVOEBb0gDtFK1AkVR",
-          LastUpdateTime: "_2x7zHBXixihuRXX3Rjt_0s",
-          EventTimingBlock: "_31d_RSG49SZFyfID3s5Z4G",
-          TileEventType: "_1z1xtCOtqCzGGGDRR-dRFr",
-          ChannelInfo: "H__RKLMfFToIYF83TuW3k",
-          HasAdultContent: "_2PcmCd2KPADlMtBUq-mAxi",
-        };
-      },
+        }
+      }
+      (0, H.Cg)([N.oI], Je.prototype, "ChangeAcceptance", null),
+        (0, H.Cg)([N.oI], Je.prototype, "ChangeHorror", null),
+        (0, H.Cg)([N.oI], Je.prototype, "ChangeCute", null),
+        (0, H.Cg)([N.oI], Je.prototype, "ApplyAction", null);
+      var Ze = n(95578);
+      let $e = class extends p.Component {
+        state = { bLoadingEvent: !0 };
+        m_cancelSignal = d().CancelToken.source();
+        componentWillUnmount() {
+          this.m_cancelSignal.cancel("SteamGameFestivalStoreDebug to unload ");
+        }
+        async componentDidMount() {
+          const { clanEventGID: e, clanAccountID: t } = this.props;
+          if (
+            (console.log(e, t, typeof e, typeof t),
+            e && !z.O3.BHasClanEventModel(e))
+          ) {
+            let n = _.b.InitFromClanID(Number.parseInt(t)),
+              s = await z.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                n,
+                e,
+                0,
+              ),
+              a = new Array(),
+              r = new Array();
+            if (s.BHasSaleEnabled()) {
+              this.setState({
+                event: s,
+                bLoadingEvent: !1,
+                bLoadingApps: !0,
+                bLoadingDemos: !0,
+                bLoadingAssociatedDemoInfo: !0,
+              });
+              let e = new Map();
+              s.jsondata.sale_sections.forEach((t) => {
+                "tabs" == t.section_type &&
+                  t.tabs.forEach((t) => {
+                    t.capsules.forEach((t) => {
+                      "game" == t.type ||
+                      "application" == t.type ||
+                      "software" == t.type
+                        ? e.has(t.id) || (e.set(t.id, !0), a.push(t.id))
+                        : e.has(t.id) || (e.set(t.id, !0), r.push(t.id));
+                    });
+                  });
+              });
+              const t = {
+                include_assets: !0,
+                include_screenshots: !0,
+                include_release: !0,
+              };
+              await ve.A.Get().QueueMultipleAppRequests(a, t),
+                this.setState({
+                  rgAppIDs: a,
+                  rgUnknownTypeAppIDs: r,
+                  bLoadingApps: !1,
+                }),
+                await ve.A.Get().QueueMultipleAppRequests(a, t),
+                this.setState({ bLoadingAssociatedDemoInfo: !1 });
+              const n = a.flatMap(
+                (e) => ve.A.Get().GetApp(e)?.GetDemoAppIDs() ?? [],
+              );
+              await ve.A.Get().QueueMultipleAppRequests(n, t),
+                this.setState({ bLoadingDemos: !1 });
+            } else this.setState({ bLoadingEvent: !1, rgAppIDs: a });
+          } else this.setState({ bLoadingEvent: !1 });
+        }
+        render() {
+          if (
+            this.state.bLoadingEvent ||
+            this.state.bLoadingDemos ||
+            this.state.bLoadingApps ||
+            this.state.bLoadingAssociatedDemoInfo
+          )
+            return (0, s.jsx)(E.t, {
+              string:
+                (0, y.we)("#Loading") +
+                (this.state.bLoadingEvent
+                  ? " Events"
+                  : this.state.bLoadingApps
+                    ? " Apps"
+                    : this.state.bLoadingAssociatedDemoInfo
+                      ? " Associated Demo Info"
+                      : this.state.bLoadingDemos
+                        ? " Demos"
+                        : "done"),
+              position: "center",
+            });
+          if (!this.state.event)
+            return (0, s.jsx)("div", { children: " Failed to load event" });
+          const { event: e } = this.state;
+          if (!e.jsondata.bSaleEnabled)
+            return (0, s.jsx)("div", { children: "Not a sale event" });
+          let t = new Array(),
+            n = new Array();
+          this.state.rgAppIDs
+            .filter((e) => !ve.A.Get().GetApp(e))
+            .forEach((e) => {
+              t.push(
+                (0, s.jsx)(
+                  "div",
+                  {
+                    children: (0, s.jsx)("a", {
+                      href: o.TS.STORE_BASE_URL + "app/" + e + "/?beta=1",
+                      target: "_blank",
+                      children: e,
+                    }),
+                  },
+                  "missing: " + e,
+                ),
+              ),
+                n.push(e);
+            });
+          const a = this.state.rgAppIDs.reduce(
+              (e, t) => e + (ve.A.Get().GetApp(t)?.BHasDemo() ? 1 : 0),
+              0,
+            ),
+            r = new Array();
+          this.state.rgAppIDs.forEach((e) => {
+            const t = ve.A.Get().GetApp(e);
+            if (t && !t.BHasDemo()) {
+              let t = ve.A.Get().GetApp(e);
+              r.push(
+                (0, s.jsxs)(
+                  "div",
+                  {
+                    children: [
+                      t?.GetAppType() == Ze.uE.ue &&
+                        (0, s.jsx)("b", {
+                          children:
+                            "--Error: Sale Page has Demo AppID, based game -- ",
+                        }),
+                      t?.GetName(),
+                      " (",
+                      e,
+                      ")",
+                      (0, s.jsx)("a", {
+                        href: (0, xe.k2)(t.GetStorePageURL() + "?beta=0"),
+                        target: "_blank",
+                        children: "Store Page",
+                      }),
+                      " ",
+                      (0, s.jsx)("a", {
+                        href: o.TS.PARTNER_BASE_URL + "apps/landing/" + e,
+                        target: "_blank",
+                        children: "App Landing Page",
+                      }),
+                    ],
+                  },
+                  "missingdemo_" + e,
+                ),
+              );
+            }
+          });
+          let i = 0,
+            l = 0;
+          this.state.rgAppIDs.forEach((e) => {
+            let t = !1;
+            const n = ve.A.Get().GetApp(e);
+            if (n && n.BHasDemo()) {
+              ve.A.Get().GetApp(n.GetDemoAppIDs()[0]).BIsComingSoon()
+                ? ((i += 1), (t = !0))
+                : (l += 1);
+            }
+          });
+          let d = new Array(),
+            c = 0;
+          return (
+            this.state.rgAppIDs.forEach((e) => {
+              const t = ve.A.Get().GetApp(e);
+              t?.GetAppType() != Ze.uE.ue && (c += 1);
+            }),
+            (0, s.jsxs)(w.tH, {
+              children: [
+                (0, s.jsx)("h1", {
+                  children: e.GetNameWithFallback((0, q.sfN)(o.TS.LANGUAGE)),
+                }),
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsx)("b", { children: "Unique AppIDs:" }),
+                    " ",
+                    this.state.rgAppIDs.length,
+                    " ",
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsxs)("b", {
+                      children: ["Visible Apps in ", o.TS.COUNTRY, ":"],
+                    }),
+                    " ",
+                    c,
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsx)("b", { children: "Unknown AppID types:" }),
+                    " ",
+                    this.state.rgUnknownTypeAppIDs.length,
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsx)("b", { children: "Missing AppIDs:" }),
+                    " ",
+                    " ",
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  children: [(0, s.jsx)("b", { children: "Demos:" }), " ", a],
+                }),
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsx)("b", {
+                      children: "Visible apps missing demo store:",
+                    }),
+                    " ",
+                    r.length,
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsx)("b", { children: "CApplications Loaded:" }),
+                    " ",
+                    " ",
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsx)("b", {
+                      children: "CApplication with Associated Demos:",
+                    }),
+                    " ",
+                    0,
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsx)("b", {
+                      children:
+                        "  Associated with store page but not released: ",
+                    }),
+                    " ",
+                    0,
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsx)("b", {
+                      children: "CApplication with demo without association:",
+                    }),
+                    " ",
+                    0,
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsx)("b", {
+                      children:
+                        "  Released but not associated with store page: ",
+                    }),
+                    " ",
+                    0,
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsx)("b", { children: "CApplication missing:" }),
+                    " ",
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsx)("b", {
+                      children:
+                        "CApplication without demo store and demo associations:",
+                    }),
+                    " ",
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsx)("b", { children: "Released Demo: " }),
+                    l,
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  children: [
+                    (0, s.jsx)("b", { children: "Unreleased Demo: " }),
+                    i,
+                  ],
+                }),
+                (0, s.jsx)("hr", {}),
+                (0, s.jsx)("h2", { children: "Missing Appids:" }),
+                t,
+                (0, s.jsx)("h2", {
+                  children:
+                    "Missing BOTH demo list and associated demo on product page:",
+                }),
+                d,
+                (0, s.jsx)("h2", {
+                  children:
+                    "Missing Demos for Visible Appids via Demo Store (missing in link on Sale Page):",
+                }),
+                r,
+              ],
+            })
+          );
+        }
+      };
+      $e = (0, H.Cg)([m.PA], $e);
+      var et = n(72034),
+        tt = n(81393),
+        nt = n(9006);
+      function st(e) {
+        const [t, n] = (0, p.useState)(!1),
+          [s] = (0, p.useState)(() => at()),
+          a = (0, p.useMemo)(
+            () => ({
+              country: o.TS.COUNTRY,
+              language: o.TS.LANGUAGE,
+              bUsePartnerAPI: !0,
+            }),
+            [],
+          );
+        return (
+          (0, p.useEffect)(
+            () => (
+              n(!0),
+              (function (e) {
+                return ve.A.Initialize(
+                  e.GetServiceTransport(),
+                  o.iA.is_partner_member,
+                );
+              })(s)
+            ),
+            [s],
+          ),
+          t
+            ? (0, p.createElement)(nt.V3, {
+                context: a,
+                serviceTransportOverride: s.GetServiceTransport(),
+                children: e.children,
+              })
+            : null
+        );
+      }
+      function at() {
+        const e = (0, o.Tc)("partnerbrowse_webapi_token", "application_config");
+        (0, tt.wT)(Boolean(e), "require partnerbrowse_webapi_token");
+        return new et.D(o.TS.WEBAPI_BASE_URL, e);
+      }
+      var rt = n(84173);
+      const it = () =>
+        (0, s.jsx)(st, {
+          children: (0, s.jsx)(rt.d, {
+            children: (0, s.jsxs)(g.dO, {
+              children: [
+                (0, s.jsx)(g.qh, {
+                  path: a.B.EventGameFestivalDebug(),
+                  render: (e) =>
+                    (0, s.jsx)($e, {
+                      ...e,
+                      clanAccountID: e.match.params.clanacountid,
+                      clanEventGID: e.match.params.claneventgid,
+                    }),
+                }),
+                (0, s.jsx)(g.qh, {
+                  exact: !0,
+                  path: a.B.EventBackfill(),
+                  render: (e) => (0, s.jsx)(se, { ...e }),
+                }),
+                (0, s.jsx)(g.qh, {
+                  path: a.B.EventRSSModeration(),
+                  render: (e) => (0, s.jsx)(P, { ...e }),
+                }),
+                (0, s.jsx)(g.qh, {
+                  path: a.B.EventModeration(),
+                  render: (e) =>
+                    (0, s.jsx)(Ue, {
+                      ...e,
+                      appid:
+                        e.match.params.appid &&
+                        Number.parseInt(e.match.params.appid),
+                    }),
+                }),
+              ],
+            }),
+          }),
+        });
     },
-  ]);
-})();
+  },
+]);

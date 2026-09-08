@@ -58,6 +58,7 @@ message ContentDescriptorSurvey {
 	optional bool started_from_scratch = 18;
 	optional .ContentSurveyAuxData survey_aux_data = 19;
 	optional int32 source = 20 [(.description) = "enum"];
+	optional uint64 flags = 21;
 }
 
 message ContentSurveyAuxData {

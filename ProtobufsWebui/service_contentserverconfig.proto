@@ -145,6 +145,7 @@ message CContentServerConfig_GetSteamCacheNames_Response_ConfigNames {
 	optional bool serve_broadcast = 9;
 	optional bool serve_chat = 10;
 	optional string https_support = 11;
+	optional string cache_group = 12;
 }
 
 message CContentServerConfig_GetSteamCacheNodeParams_Request {

@@ -2081,41 +2081,6 @@ function ShareDialogCopyToClipboard()
 	document.getSelection().removeAllRanges();
 }
 
-// A very basic scroll helper which only supports vertical scrolling
-// Added to translate gamepad navigation events into scroll up/down
-function ScrollElement( elementID, nAmount )
-{
-	var element = $J( elementID )[0];
-	if ( !element )
-		return false;
-
-	if ( nAmount > 0 && element.scrollTop + element.clientHeight < element.scrollHeight )
-		element.scrollBy( 0, nAmount );
-	else if ( nAmount < 0 && element.scrollTop > 0 )
-		element.scrollBy( 0, nAmount );
-	else
-		return false;
-
-	return true;
-}
-
-// initially only used by tablet
-function ShowEarlyAccessModal( contentID )
-{
-	var $Content = $J( contentID );
-	$Content.detach();
-	$Content.show();
-
-	ShowDialog( "Early Access Software", $Content ).always(
-		function() {
-
-			// save it away again for later
-			$Content.hide();
-			$J( document.body ).append( $Content );
-		}
-	);
-}
-
 // applies layout changes for mobile and gamepad screens
 function ReparentAppLandingPageForSmallScreens()
 {
@@ -2138,24 +2103,10 @@ function ReparentAppLandingPageForSmallScreens()
 
 	var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
 
-	ReparentPurchaseOptionsForGamepad( '#purchaseOptionsContent' );
-
 		var fn_reparent = bUseGamepadScreenMode ? Responsive_ReparentItemsInGamepadMode : Responsive_ReparentItemsInMobileMode;
 
-	if ( bUseGamepadScreenMode )
-	{
-		// move the page header image to the top of purchase options
-		fn_reparent( $J('#page_header_img'), $J('#purchaseOptionsContent') );
-	}
-
 	// move early access content into the purchase options parent
-	if ( bUseGamepadScreenMode )
-	{
-		// on tablet we provide a learn more link which opens a dialog containing early access details
-		fn_reparent( $J('#earlyAccessBody'), $J('#earlyAccessTabletDialogContent') );
-		fn_reparent( $J('#earlyAccessTabletContent'), $J('#earlyAccessHeader_Gamepad') );
-	}
-	else
+	if ( !bUseGamepadScreenMode )
 	{
 		fn_reparent( '.early_access_header', $J('#purchaseOptionsContent') );
 	}
@@ -2252,40 +2203,7 @@ function ReparentAppLandingPageForSmallScreens()
 		$J('#languageTable').css('display', bUseNewUX ? 'none' : defaultLanguageTableDisplay );
 	});
 	$J(window).trigger( msgWatch );
-
-	// the vertical space available to display purchase options can change when the page scrolls.  Check if we need to update the height.
-	if ( bUseGamepadScreenMode )
-		$J(window).on( 'scroll', UpdateGamepadPurchaseOptionsHeight );
 }
-
-// Update the height of the sticky, scrollable purchase options container.
-function UpdateGamepadPurchaseOptionsHeight()
-{
-	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() )
-	{
-		let $purchaseContentHeight = parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() ) - parseInt( $J('#purchaseOptionsContentTablet')[0].getBoundingClientRect().top );
-		$purchaseContentHeight += 'px';
-		let $stickyDiv = $J('#purchaseOptionsContentTablet');
-		if ( $stickyDiv && $stickyDiv.css( 'height') != $purchaseContentHeight )
-		{
-			$stickyDiv.css( 'height', $purchaseContentHeight );
-		}
-	}
-}
-
-function ReparentPurchaseOptionsForGamepad( idPurchaseOptions )
-{
-	// gamepad has its own purchase options container (shown on right side of screen)
-	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() )
-	{
-		Responsive_ReparentItemsInGamepadMode( idPurchaseOptions, $J('#purchaseOptionsContentTablet') );
-
-		$J('#purchaseOptionsContentTablet').css('top', parseInt( GetResponsiveHeaderFixedOffsetAdjustment() ) + 'px' );
-		$J('#purchaseOptionsContentTablet').css('scrollTop', 0);
-		UpdateGamepadPurchaseOptionsHeight();
-	}
-}
-
 
 // called by Mobile UX to show a settings dialog with Review filters
 var g_reviewSettingsPopup = null;
@@ -2312,16 +2230,6 @@ function BindFocusVideoOnTablet()
 	$J( '.highlight_movie' ).on( "focusout", function( event ) {
 		this.pause();
 	} );
-}
-
-function AddRightNavStickyPaddingOnTablet()
-{
-	const elSticky = document.querySelector('.purchase_options_content_tablet' );
-	const observer = new IntersectionObserver(
-		([e]) => e.target.classList.toggle('isCurrentlySticky', e.isIntersecting ),
-		{threshold: [1]}
-	);
-	observer.observe( elSticky )
 }
 
 function ToggleShowAllPackageContentsText( event )

@@ -4951,25 +4951,26 @@
     24864: (e, t, r) => {
       "use strict";
       r.d(t, {
-        tE: () => Re,
-        kL: () => Me,
-        _X: () => he,
-        HD: () => Se,
-        i8: () => ze,
+        tE: () => je,
+        kL: () => ye,
+        _X: () => Be,
+        HD: () => ve,
+        i8: () => Re,
         rb: () => de,
         AE: () => me,
         VD: () => ge,
-        MW: () => je,
-        OG: () => be,
-        Lr: () => fe,
-        HH: () => we,
-        gW: () => Be,
+        My: () => pe,
+        MW: () => Te,
+        OG: () => we,
+        Lr: () => Me,
+        HH: () => fe,
+        gW: () => be,
         rm: () => ue,
-        D$: () => pe,
-        Ri: () => ve,
-        Oh: () => _e,
-        uh: () => Ce,
-        Hi: () => ye,
+        D$: () => _e,
+        Ri: () => Ce,
+        Oh: () => he,
+        uh: () => ze,
+        Hi: () => Se,
       });
       var i,
         n = r(80613),
@@ -9532,22 +9533,23 @@
         de = 2,
         me = 4,
         ge = 10,
-        pe = 31,
-        _e = 32,
-        he = 34,
-        Be = 38,
-        be = 39,
-        we = 40,
-        fe = 41,
-        Me = 43,
-        ye = 44,
-        Se = 45,
-        ve = 46,
-        Ce = 47,
-        ze = 48,
-        Re = 49,
-        je = 51;
-      var Te;
+        pe = 21,
+        _e = 31,
+        he = 32,
+        Be = 34,
+        be = 38,
+        we = 39,
+        fe = 40,
+        Me = 41,
+        ye = 43,
+        Se = 44,
+        ve = 45,
+        Ce = 46,
+        ze = 47,
+        Re = 48,
+        je = 49,
+        Te = 51;
+      var Ie;
       !(function (e) {
         (e[(e.k_EControllerBindingType_None = 0)] =
           "k_EControllerBindingType_None"),
@@ -9565,7 +9567,7 @@
             "k_EControllerBindingType_GameAction"),
           (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
             "k_EControllerBindingType_ControllerAction");
-      })(Te || (Te = {}));
+      })(Ie || (Ie = {}));
       BigInt(1),
         BigInt(0),
         BigInt(1),
@@ -9646,7 +9648,7 @@
         BigInt(38),
         BigInt(1),
         BigInt(39);
-      var Ie;
+      var Fe;
       !(function (e) {
         (e[(e.GAMEPAD_BUTTON_A = 0)] = "GAMEPAD_BUTTON_A"),
           (e[(e.GAMEPAD_BUTTON_B = 1)] = "GAMEPAD_BUTTON_B"),
@@ -9705,7 +9707,7 @@
           (e[(e.GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR = 49)] =
             "GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR"),
           (e[(e.GAMEPAD_ANALOG_LAST = 50)] = "GAMEPAD_ANALOG_LAST");
-      })(Ie || (Ie = {}));
+      })(Fe || (Fe = {}));
     },
     9344: (e, t, r) => {
       "use strict";
@@ -14677,7 +14679,7 @@
             }));
       }
       var l = r(92724),
-        c = r(6824),
+        c = r(30570),
         u = r(45754);
       function d(e) {
         const t = new Map();
@@ -14693,7 +14695,10 @@
           return Promise.all(
             Array.from(n).map((r) =>
               e(r).then((e) => {
-                if (!e) return;
+                if (!e)
+                  return void console.error(
+                    `Project loc failed to load language ${r}, got ${e}`,
+                  );
                 const i = new Map();
                 for (const [t, r] of Object.entries(e)) i.set("#" + t, r);
                 t.set(r, i);
@@ -14701,11 +14706,12 @@
             ),
           );
         })();
-        let a = !1;
-        function d(e, i) {
+        let a = !1,
+          d = !1;
+        function g(e, i) {
           var n, o, l, c;
-          const [m, ...g] = i,
-            p =
+          const [m, ...p] = i,
+            _ =
               null !==
                 (o =
                   null === (n = t.get(m.strLanguage)) || void 0 === n
@@ -14720,8 +14726,15 @@
                       )) || void 0 === c
                   ? void 0
                   : c.get(e);
-          if (void 0 !== p) return p;
-          if (0 === g.length) {
+          if (void 0 !== _) return _;
+          if (0 === p.length) {
+            if (d)
+              return (
+                console.warn(
+                  `Couldn't find localization key ${e} after erroring loading strings`,
+                ),
+                e
+              );
             if (!a) throw r;
             return (
               (0, u.aj)().ReportError(
@@ -14732,16 +14745,20 @@
               e
             );
           }
-          return d(e, g);
+          return g(e, p);
         }
-        function g(e, ...t) {
-          return o(d(e, m().languages), ...t);
+        function p(e, ...t) {
+          return o(g(e, m().languages), ...t);
         }
         return (
-          r.then(() => (a = !0)),
+          r
+            .then(() => (a = !0))
+            .catch((e) => {
+              console.error("LoadStrings error", e), (d = !0);
+            }),
           (0, l.n)(r),
           {
-            Localize: (e, ...t) => g(e, ...t),
+            Localize: (e, ...t) => p(e, ...t),
             LocalizeReact(e, ...t) {
               const r = this.Localize(e);
               if (r === e) return r;
@@ -14759,7 +14776,7 @@
               );
             },
             LocalizePlural: (e, t, ...r) =>
-              1 === t || "1" === t ? g(e, t, ...r) : g(e + "_Plural", t, ...r),
+              1 === t || "1" === t ? p(e, t, ...r) : p(e + "_Plural", t, ...r),
             GetAppTypeLocKey(e, t) {
               switch (t) {
                 case c.uE.XP:
@@ -14792,7 +14809,7 @@
                   return e;
               }
             },
-            LocalizeInSpecificLang: (e, t, ...r) => o(d(t, [e]), ...r),
+            LocalizeInSpecificLang: (e, t, ...r) => o(g(t, [e]), ...r),
             Ready: () => r,
             IsReady: () => a,
             HasKey(e) {
@@ -15636,47 +15653,44 @@
         }
       }
     },
-    67718: (e, t, r) => {
+    91397: (e, t, r) => {
       "use strict";
-      r.d(t, { DW: () => u, No: () => d, uU: () => c });
+      r.d(t, { DW: () => c, No: () => u, uU: () => l });
       var i = r(66418),
         n = r(88942),
-        s = r(7860);
-      function a(e) {
-        return s.L;
-      }
-      function o() {
+        s = r(40471);
+      function a() {
         return new Set();
       }
-      function l(e) {
+      function o(e) {
         return ["PartnerEventReadState", e];
       }
-      function c(e) {
+      function l(e) {
         const { data: t } = (0, n.I)({
-          queryKey: l(i.iA.accountid),
-          queryFn: o,
-          initialData: o,
+          queryKey: o(i.iA.accountid),
+          queryFn: a,
+          initialData: a,
           staleTime: 1 / 0,
           gcTime: 1 / 0,
         });
-        return m(null != t ? t : o(), e);
+        return d(null != t ? t : a(), e);
+      }
+      function c(e, t) {
+        const r = null != t ? t : (0, s.X)("BEventHasBeenRead");
+        if (!r) return !1;
+        const n = r.getQueryData(o(i.iA.accountid));
+        return d(null != n ? n : a(), e);
       }
       function u(e, t) {
-        const r = null != t ? t : a();
-        if (!r) return !1;
-        const n = r.getQueryData(l(i.iA.accountid));
-        return m(null != n ? n : o(), e);
-      }
-      function d(e, t) {
         if (0 == e.length) return;
-        const r = null != t ? t : a();
+        const r = null != t ? t : (0, s.X)("MarkEventsAsRead");
         r &&
-          r.setQueryData(l(i.iA.accountid), (t) => {
+          r.setQueryData(o(i.iA.accountid), (t) => {
             const r = new Set(t);
             return e.forEach((e) => r.add(e)), r;
           });
       }
-      function m(e, t) {
+      function d(e, t) {
         return void 0 !== t && e.has(t);
       }
     },
@@ -15695,6 +15709,14 @@
       function c() {
         const e = a.useContext(o);
         return e || (0, s.K)();
+      }
+    },
+    40471: (e, t, r) => {
+      "use strict";
+      r.d(t, { X: () => n });
+      var i = r(7860);
+      function n(e) {
+        return i.L;
       }
     },
     28220: (e, t, r) => {
@@ -15719,7 +15741,7 @@
         u = r(41735),
         d = r.n(u),
         m = r(68797),
-        g = r(67718);
+        g = r(91397);
       class p {
         constructor(e) {
           (this.m_setShownEvents = new Set()),
@@ -20487,6 +20509,11 @@
                     bw: a.gp.writeUint32,
                   },
                   game_settings: { n: 5, c: g.mb },
+                  seconds_since_active: {
+                    n: 6,
+                    br: a.qM.readUint32,
+                    bw: a.gp.writeUint32,
+                  },
                 },
               }),
             A.sm_m
@@ -20748,6 +20775,16 @@
                     n: 6,
                     br: a.qM.readString,
                     bw: a.gp.writeString,
+                  },
+                  kernel_version_major: {
+                    n: 7,
+                    br: a.qM.readInt32,
+                    bw: a.gp.writeInt32,
+                  },
+                  kernel_version_minor: {
+                    n: 8,
+                    br: a.qM.readInt32,
+                    bw: a.gp.writeInt32,
                   },
                 },
               }),
@@ -21482,13 +21519,11 @@
         zQ: () => z,
         _z: () => v,
         Vc: () => ne,
-        $Y: () => X,
         hA: () => We,
         $5: () => xe,
         ZP: () => I,
         wS: () => ve,
         kZ: () => Ce,
-        QU: () => $,
         Er: () => U,
         u6: () => L,
         Vi: () => Ve,
@@ -30581,6 +30616,11 @@
                     br: a.qM.readUint32,
                     bw: a.gp.writeUint32,
                   },
+                  published_file_id: {
+                    n: 13,
+                    br: a.qM.readUint64String,
+                    bw: a.gp.writeUint64String,
+                  },
                 },
               }),
             je.sm_m
@@ -30867,7 +30907,7 @@
               "ContentModeration.UpdateReporterCooldown#1",
               (0, o.I8)($, t, r),
               Q,
-              { ePrivilege: 1 },
+              { ePrivilege: 5 },
             );
           }),
           (e.GetReporterCooldown = function (e, t, r) {
@@ -32442,25 +32482,21 @@
                     br: a.qM.readFixed64String,
                     bw: a.gp.writeFixed64String,
                   },
-                  comment_thread_type: {
+                  gidforum: {
                     n: 2,
-                    br: a.qM.readEnum,
-                    bw: a.gp.writeEnum,
+                    br: a.qM.readUint64String,
+                    bw: a.gp.writeUint64String,
                   },
-                  gidfeature: {
+                  gidtopic: {
                     n: 3,
                     br: a.qM.readUint64String,
                     bw: a.gp.writeUint64String,
                   },
-                  gidfeature2: {
-                    n: 4,
-                    br: a.qM.readUint64String,
-                    bw: a.gp.writeUint64String,
-                  },
-                  gidcomment: {
+                  locked: { n: 4, br: a.qM.readBool, bw: a.gp.writeBool },
+                  audit_note: {
                     n: 5,
-                    br: a.qM.readUint64String,
-                    bw: a.gp.writeUint64String,
+                    br: a.qM.readString,
+                    bw: a.gp.writeString,
                   },
                 },
               }),
@@ -32499,7 +32535,7 @@
           return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CForums_UndeleteDisputedComment_Request";
+          return "CForums_SetTopicLocked_Request";
         }
       }
       class I extends n.Message {
@@ -32532,223 +32568,6 @@
         serializeBase64String() {
           var e = new (s().BinaryWriter)();
           return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CForums_UndeleteDisputedComment_Response";
-        }
-      }
-      class F extends n.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            F.prototype.steamid || a.Sg(F.M()),
-            n.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: a.qM.readFixed64String,
-                    bw: a.gp.writeFixed64String,
-                  },
-                  comment_thread_type: {
-                    n: 2,
-                    br: a.qM.readEnum,
-                    bw: a.gp.writeEnum,
-                  },
-                  gidfeature: {
-                    n: 3,
-                    br: a.qM.readUint64String,
-                    bw: a.gp.writeUint64String,
-                  },
-                  gidfeature2: {
-                    n: 4,
-                    br: a.qM.readUint64String,
-                    bw: a.gp.writeUint64String,
-                  },
-                },
-              }),
-            F.sm_m
-          );
-        }
-        static MBF() {
-          return F.sm_mbf || (F.sm_mbf = a.w0(F.M())), F.sm_mbf;
-        }
-        toObject(e = !1) {
-          return F.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return a.BT(F.M(), e, t);
-        }
-        static fromObject(e) {
-          return a.Uq(F.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (s().BinaryReader)(e),
-            r = new F();
-          return F.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return a.zj(F.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (s().BinaryWriter)();
-          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          a.i0(F.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (s().BinaryWriter)();
-          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CForums_UndeleteDisputedTopic_Request";
-        }
-      }
-      class x extends n.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), n.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return x.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new x();
-        }
-        static deserializeBinary(e) {
-          let t = new (s().BinaryReader)(e),
-            r = new x();
-          return x.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new (s().BinaryWriter)();
-          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new (s().BinaryWriter)();
-          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CForums_UndeleteDisputedTopic_Response";
-        }
-      }
-      class O extends n.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            O.prototype.steamid || a.Sg(O.M()),
-            n.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: a.qM.readFixed64String,
-                    bw: a.gp.writeFixed64String,
-                  },
-                  gidforum: {
-                    n: 2,
-                    br: a.qM.readUint64String,
-                    bw: a.gp.writeUint64String,
-                  },
-                  gidtopic: {
-                    n: 3,
-                    br: a.qM.readUint64String,
-                    bw: a.gp.writeUint64String,
-                  },
-                  locked: { n: 4, br: a.qM.readBool, bw: a.gp.writeBool },
-                  audit_note: {
-                    n: 5,
-                    br: a.qM.readString,
-                    bw: a.gp.writeString,
-                  },
-                },
-              }),
-            O.sm_m
-          );
-        }
-        static MBF() {
-          return O.sm_mbf || (O.sm_mbf = a.w0(O.M())), O.sm_mbf;
-        }
-        toObject(e = !1) {
-          return O.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return a.BT(O.M(), e, t);
-        }
-        static fromObject(e) {
-          return a.Uq(O.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (s().BinaryReader)(e),
-            r = new O();
-          return O.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return a.zj(O.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (s().BinaryWriter)();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          a.i0(O.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (s().BinaryWriter)();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CForums_SetTopicLocked_Request";
-        }
-      }
-      class W extends n.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), n.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return W.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new W();
-        }
-        static deserializeBinary(e) {
-          let t = new (s().BinaryReader)(e),
-            r = new W();
-          return W.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new (s().BinaryWriter)();
-          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new (s().BinaryWriter)();
-          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CForums_SetTopicLocked_Response";
@@ -32809,24 +32628,8 @@
               { ePrivilege: 1 },
             );
           }),
-          (e.UndeleteDisputedComment = function (e, t, r) {
-            return e.SendMsg(
-              "Forums.UndeleteDisputedComment#1",
-              (0, o.I8)(T, t, r),
-              I,
-              { ePrivilege: 1 },
-            );
-          }),
-          (e.UndeleteDisputedTopic = function (e, t, r) {
-            return e.SendMsg(
-              "Forums.UndeleteDisputedTopic#1",
-              (0, o.I8)(F, t, r),
-              x,
-              { ePrivilege: 1 },
-            );
-          }),
           (e.SetTopicLocked = function (e, t, r) {
-            return e.SendMsg("Forums.SetTopicLocked#1", (0, o.I8)(O, t, r), W, {
+            return e.SendMsg("Forums.SetTopicLocked#1", (0, o.I8)(T, t, r), I, {
               ePrivilege: 1,
             });
           });
@@ -32840,7 +32643,7 @@
         s = r.n(n),
         a = r(89068),
         o = r(56545),
-        l = r(6824);
+        l = r(30570);
       class c extends n.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -42977,115 +42780,115 @@
             });
         })(gr || (gr = {}));
     },
-    6824: (e, t, r) => {
+    30570: (e, t, r) => {
       "use strict";
       r.d(t, {
-        UK: () => yt,
-        Qv: () => xt,
-        eW: () => qt,
-        eE: () => Bt,
-        yE: () => bt,
+        UK: () => Rt,
+        Qv: () => Lt,
+        eW: () => Dt,
+        eE: () => yt,
+        yE: () => St,
         uE: () => n,
         hQ: () => l,
         c6: () => i,
-        md: () => Fe,
+        md: () => qe,
         jL: () => a,
         $m: () => o,
         j6: () => s,
-        TS: () => _t,
-        gn: () => pt,
-        $4: () => Pt,
-        vB: () => Oe,
-        O4: () => ht,
+        TS: () => ft,
+        gn: () => wt,
+        $4: () => Gt,
+        vB: () => Le,
+        O4: () => Mt,
       });
       var i = {};
       r.r(i),
         r.d(i, {
-          qI: () => B,
-          xO: () => w,
-          tp: () => y,
-          wn: () => S,
-          Ep: () => h,
-          Eb: () => f,
-          RD: () => b,
-          Xj: () => v,
-          je: () => M,
+          qI: () => M,
+          xO: () => S,
+          tp: () => z,
+          wn: () => R,
+          Ep: () => f,
+          Eb: () => v,
+          RD: () => y,
+          Xj: () => j,
+          je: () => C,
         });
       var n = {};
       r.r(n),
         r.d(n, {
-          pl: () => P,
-          Vi: () => L,
-          _i: () => T,
-          ue: () => z,
-          ID: () => W,
-          HT: () => C,
-          XP: () => I,
-          Hk: () => q,
-          RA: () => R,
-          FS: () => j,
-          Ov: () => U,
-          gQ: () => O,
-          Sv: () => F,
-          Lj: () => k,
-          Wz: () => x,
+          pl: () => N,
+          Vi: () => A,
+          _i: () => O,
+          ue: () => I,
+          ID: () => k,
+          HT: () => T,
+          XP: () => W,
+          Hk: () => P,
+          RA: () => F,
+          FS: () => x,
+          Ov: () => D,
+          gQ: () => L,
+          Sv: () => q,
+          Lj: () => E,
+          Wz: () => U,
         });
       var s = {};
       r.r(s),
         r.d(s, {
-          hc: () => G,
-          $L: () => N,
-          lo: () => H,
-          VI: () => E,
-          Fd: () => D,
-          T4: () => K,
-          NG: () => V,
-          rP: () => A,
-          R0: () => Z,
+          hc: () => K,
+          $L: () => Z,
+          lo: () => $,
+          VI: () => V,
+          Fd: () => G,
+          T4: () => Y,
+          NG: () => Q,
+          rP: () => H,
+          R0: () => X,
         });
       var a = {};
       r.r(a),
         r.d(a, {
-          Ow: () => ie,
-          H5: () => _e,
-          Eb: () => ee,
-          qe: () => pe,
-          GO: () => X,
-          sP: () => ae,
-          EM: () => de,
-          wu: () => fe,
-          Xm: () => he,
-          I0: () => $,
-          EK: () => te,
-          $3: () => be,
-          M0: () => ge,
-          Lk: () => we,
-          uw: () => se,
-          JN: () => ue,
-          DB: () => Be,
-          db: () => le,
-          Yu: () => ce,
-          u5: () => oe,
-          F7: () => J,
-          jG: () => Y,
-          a$: () => re,
-          Or: () => me,
-          Ib: () => ne,
-          lQ: () => Q,
+          Ow: () => oe,
+          H5: () => we,
+          Eb: () => ne,
+          qe: () => be,
+          GO: () => te,
+          sP: () => ue,
+          EM: () => _e,
+          wu: () => ve,
+          Xm: () => fe,
+          I0: () => J,
+          EK: () => se,
+          $3: () => ye,
+          M0: () => Be,
+          Lk: () => Se,
+          uw: () => ce,
+          JN: () => pe,
+          DB: () => Me,
+          db: () => me,
+          Yu: () => ge,
+          u5: () => de,
+          F7: () => ie,
+          jG: () => re,
+          a$: () => ae,
+          Or: () => he,
+          Ib: () => le,
+          lQ: () => ee,
         });
       var o = {};
       r.r(o),
         r.d(o, {
-          TR: () => ze,
-          t7: () => ve,
-          oe: () => ye,
-          rh: () => Re,
-          $z: () => Me,
-          mD: () => Se,
-          nw: () => Ce,
+          TR: () => Ie,
+          t7: () => je,
+          oe: () => ze,
+          rh: () => Fe,
+          $z: () => Ce,
+          mD: () => Re,
+          nw: () => Te,
         });
       var l = {};
-      r.r(l), r.d(l, { ar: () => je, ir: () => Ie, Zy: () => Te });
+      r.r(l), r.d(l, { ar: () => xe, ir: () => We, Zy: () => Oe });
       var c = r(80613),
         u = r.n(c),
         d = r(89068),
@@ -43200,91 +43003,290 @@
           return "SteamAward";
         }
       }
-      var _ = r(45706);
-      const h = -1,
-        B = 0,
-        b = 1,
-        w = 2,
-        f = 3,
-        M = 4,
-        y = 5,
-        S = 6,
-        v = 7,
-        C = 0,
-        z = 1,
-        R = 2,
-        j = 3,
-        T = 4,
-        I = 5,
-        F = 6,
-        x = 7,
-        O = 8,
-        W = 9,
-        q = 10,
-        U = 11,
-        L = 12,
-        k = 13,
-        P = 14,
-        D = 1,
-        A = 2,
-        E = 3,
-        N = 4,
-        G = 5,
-        H = 6,
-        V = 7,
-        Z = 8,
-        K = 9,
-        $ = 0,
-        Q = 1,
-        X = 2,
-        Y = 3,
-        J = 4,
-        ee = 5,
-        te = 6,
-        re = 7,
-        ie = 8,
-        ne = 9,
-        se = 10,
-        ae = 11,
-        oe = 12,
-        le = 13,
-        ce = 14,
-        ue = 15,
-        de = 16,
-        me = 17,
-        ge = 18,
-        pe = 19,
-        _e = 20,
-        he = 21,
-        Be = 22,
-        be = 23,
-        we = 24,
-        fe = 25,
-        Me = 0,
-        ye = 1,
-        Se = 2,
-        ve = 3,
-        Ce = 4,
-        ze = 5,
-        Re = 6,
-        je = 0,
-        Te = 40,
-        Ie = 50;
-      function Fe(e) {
-        return "unknown EStoreItemType ( " + e + " )";
-      }
-      class xe extends c.Message {
+      var _ = r(46483);
+      class h extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            xe.prototype.type || d.Sg(xe.M()),
+            h.prototype.rtime || d.Sg(h.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: {
+                  rtime: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  coming_soon_display_type: {
+                    n: 2,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                },
+              }),
+            h.sm_m
+          );
+        }
+        static MBF() {
+          return h.sm_mbf || (h.sm_mbf = d.w0(h.M())), h.sm_mbf;
+        }
+        toObject(e = !1) {
+          return h.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(h.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(h.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new h();
+          return h.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(h.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(h.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSeasonPassDateAndDisplay";
+        }
+      }
+      class B extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            B.prototype.milestone_id || d.Sg(B.M()),
+            c.Message.initialize(this, e, 0, -1, [2, 5, 9, 10], null);
+        }
+        static M() {
+          return (
+            B.sm_m ||
+              (B.sm_m = {
+                proto: B,
+                fields: {
+                  milestone_id: {
+                    n: 1,
+                    br: d.qM.readInt32,
+                    bw: d.gp.writeInt32,
+                  },
+                  title: { n: 2, c: _.O2, r: !0, q: !0 },
+                  appid: { n: 3, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  event_gid: {
+                    n: 4,
+                    br: d.qM.readFixed64String,
+                    bw: d.gp.writeFixed64String,
+                  },
+                  dates: { n: 5, c: h, r: !0, q: !0 },
+                  shipped: { n: 6, br: d.qM.readBool, bw: d.gp.writeBool },
+                  rtime_complete: {
+                    n: 7,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
+                  milestone_desc: { n: 9, c: _.O2, r: !0, q: !0 },
+                  image: { n: 10, c: _.O2, r: !0, q: !0 },
+                  backfilled_release: {
+                    n: 11,
+                    br: d.qM.readBool,
+                    bw: d.gp.writeBool,
+                  },
+                  coming_soon_appid: {
+                    n: 12,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
+                },
+              }),
+            B.sm_m
+          );
+        }
+        static MBF() {
+          return B.sm_mbf || (B.sm_mbf = d.w0(B.M())), B.sm_mbf;
+        }
+        toObject(e = !1) {
+          return B.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(B.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(B.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new B();
+          return B.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(B.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(B.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSeasonPassMilestone";
+        }
+      }
+      class b extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            b.prototype.appid || d.Sg(b.M()),
+            c.Message.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            b.sm_m ||
+              (b.sm_m = {
+                proto: b,
+                fields: {
+                  appid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  milestones: { n: 2, c: B, r: !0, q: !0 },
+                },
+              }),
+            b.sm_m
+          );
+        }
+        static MBF() {
+          return b.sm_mbf || (b.sm_mbf = d.w0(b.M())), b.sm_mbf;
+        }
+        toObject(e = !1) {
+          return b.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(b.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(b.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new b();
+          return b.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(b.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return b.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(b.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSeasonPass";
+        }
+      }
+      var w = r(45706);
+      const f = -1,
+        M = 0,
+        y = 1,
+        S = 2,
+        v = 3,
+        C = 4,
+        z = 5,
+        R = 6,
+        j = 7,
+        T = 0,
+        I = 1,
+        F = 2,
+        x = 3,
+        O = 4,
+        W = 5,
+        q = 6,
+        U = 7,
+        L = 8,
+        k = 9,
+        P = 10,
+        D = 11,
+        A = 12,
+        E = 13,
+        N = 14,
+        G = 1,
+        H = 2,
+        V = 3,
+        Z = 4,
+        K = 5,
+        $ = 6,
+        Q = 7,
+        X = 8,
+        Y = 9,
+        J = 0,
+        ee = 1,
+        te = 2,
+        re = 3,
+        ie = 4,
+        ne = 5,
+        se = 6,
+        ae = 7,
+        oe = 8,
+        le = 9,
+        ce = 10,
+        ue = 11,
+        de = 12,
+        me = 13,
+        ge = 14,
+        pe = 15,
+        _e = 16,
+        he = 17,
+        Be = 18,
+        be = 19,
+        we = 20,
+        fe = 21,
+        Me = 22,
+        ye = 23,
+        Se = 24,
+        ve = 25,
+        Ce = 0,
+        ze = 1,
+        Re = 2,
+        je = 3,
+        Te = 4,
+        Ie = 5,
+        Fe = 6,
+        xe = 0,
+        Oe = 40,
+        We = 50;
+      function qe(e) {
+        return "unknown EStoreItemType ( " + e + " )";
+      }
+      class Ue extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ue.prototype.type || d.Sg(Ue.M()),
             c.Message.initialize(this, e, 0, -1, [3, 9], null);
         }
         static M() {
           return (
-            xe.sm_m ||
-              (xe.sm_m = {
-                proto: xe,
+            Ue.sm_m ||
+              (Ue.sm_m = {
+                proto: Ue,
                 fields: {
                   type: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
                   rating: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
@@ -43342,49 +43344,49 @@
                   },
                 },
               }),
-            xe.sm_m
+            Ue.sm_m
           );
         }
         static MBF() {
-          return xe.sm_mbf || (xe.sm_mbf = d.w0(xe.M())), xe.sm_mbf;
+          return Ue.sm_mbf || (Ue.sm_mbf = d.w0(Ue.M())), Ue.sm_mbf;
         }
         toObject(e = !1) {
-          return xe.toObject(e, this);
+          return Ue.toObject(e, this);
         }
         static toObject(e, t) {
-          return d.BT(xe.M(), e, t);
+          return d.BT(Ue.M(), e, t);
         }
         static fromObject(e) {
-          return d.Uq(xe.M(), e);
+          return d.Uq(Ue.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (u().BinaryReader)(e),
-            r = new xe();
-          return xe.deserializeBinaryFromReader(r, t);
+            r = new Ue();
+          return Ue.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return d.zj(xe.MBF(), e, t);
+          return d.zj(Ue.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (u().BinaryWriter)();
-          return xe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Ue.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          d.i0(xe.M(), e, t);
+          d.i0(Ue.M(), e, t);
         }
         serializeBase64String() {
           var e = new (u().BinaryWriter)();
-          return xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Ue.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreGameRating";
         }
       }
-      class Oe extends c.Message {
+      class Le extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Oe.prototype.item_type || d.Sg(Oe.M()),
+            Le.prototype.item_type || d.Sg(Le.M()),
             c.Message.initialize(
               this,
               e,
@@ -43396,9 +43398,9 @@
         }
         static M() {
           return (
-            Oe.sm_m ||
-              (Oe.sm_m = {
-                proto: Oe,
+            Le.sm_m ||
+              (Le.sm_m = {
+                proto: Le,
                 fields: {
                   item_type: { n: 1, br: d.qM.readEnum, bw: d.gp.writeEnum },
                   id: { n: 2, br: d.qM.readUint32, bw: d.gp.writeUint32 },
@@ -43449,8 +43451,8 @@
                     br: d.qM.readBool,
                     bw: d.gp.writeBool,
                   },
-                  related_items: { n: 15, c: Le },
-                  included_items: { n: 16, c: ke },
+                  related_items: { n: 15, c: Ae },
+                  included_items: { n: 16, c: Ee },
                   content_descriptorids: {
                     n: 20,
                     r: !0,
@@ -43467,31 +43469,31 @@
                     pbr: d.qM.readPackedUint32,
                     bw: d.gp.writeRepeatedUint32,
                   },
-                  categories: { n: 22, c: Pe },
-                  reviews: { n: 23, c: De },
-                  basic_info: { n: 24, c: Ee },
-                  tags: { n: 25, c: Ge, r: !0, q: !0 },
-                  assets: { n: 30, c: He },
-                  release: { n: 31, c: Ve },
-                  platforms: { n: 32, c: Ze },
-                  game_rating: { n: 33, c: xe },
+                  categories: { n: 22, c: Ne },
+                  reviews: { n: 23, c: Ge },
+                  basic_info: { n: 24, c: Ve },
+                  tags: { n: 25, c: Ke, r: !0, q: !0 },
+                  assets: { n: 30, c: $e },
+                  release: { n: 31, c: Qe },
+                  platforms: { n: 32, c: Xe },
+                  game_rating: { n: 33, c: Ue },
                   is_coming_soon: {
                     n: 34,
                     br: d.qM.readBool,
                     bw: d.gp.writeBool,
                   },
-                  best_purchase_option: { n: 40, c: $e },
-                  purchase_options: { n: 41, c: $e, r: !0, q: !0 },
-                  self_purchase_option: { n: 43, c: $e },
-                  screenshots: { n: 50, c: Ye },
-                  trailers: { n: 51, c: et },
-                  supported_languages: { n: 52, c: nt, r: !0, q: !0 },
+                  best_purchase_option: { n: 40, c: Je },
+                  purchase_options: { n: 41, c: Je, r: !0, q: !0 },
+                  self_purchase_option: { n: 43, c: Je },
+                  screenshots: { n: 50, c: rt },
+                  trailers: { n: 51, c: nt },
+                  supported_languages: { n: 52, c: lt, r: !0, q: !0 },
                   store_url_path_override: {
                     n: 53,
                     br: d.qM.readString,
                     bw: d.gp.writeString,
                   },
-                  free_weekend: { n: 54, c: st },
+                  free_weekend: { n: 54, c: ct },
                   unlisted: { n: 55, br: d.qM.readBool, bw: d.gp.writeBool },
                   game_count: {
                     n: 56,
@@ -43513,281 +43515,16 @@
                     br: d.qM.readBool,
                     bw: d.gp.writeBool,
                   },
-                  assets_without_overrides: { n: 60, c: He },
-                  user_filter_failure: { n: 70, c: kt },
-                  links: { n: 71, c: at, r: !0, q: !0 },
+                  assets_without_overrides: { n: 60, c: $e },
+                  user_filter_failure: { n: 70, c: Nt },
+                  links: { n: 71, c: ut, r: !0, q: !0 },
                   purchase_description_bbcode: {
                     n: 72,
                     br: d.qM.readString,
                     bw: d.gp.writeString,
                   },
-                  package_groups: { n: 74, c: ot, r: !0, q: !0 },
-                  extra_details: { n: 75, c: gt },
-                },
-              }),
-            Oe.sm_m
-          );
-        }
-        static MBF() {
-          return Oe.sm_mbf || (Oe.sm_mbf = d.w0(Oe.M())), Oe.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Oe.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(Oe.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(Oe.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new Oe();
-          return Oe.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(Oe.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return Oe.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(Oe.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return Oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem";
-        }
-      }
-      class We extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            We.prototype.appid || d.Sg(We.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            We.sm_m ||
-              (We.sm_m = {
-                proto: We,
-                fields: {
-                  appid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
-                  label: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
-                  show_above_purchase: {
-                    n: 3,
-                    br: d.qM.readBool,
-                    bw: d.gp.writeBool,
-                  },
-                },
-              }),
-            We.sm_m
-          );
-        }
-        static MBF() {
-          return We.sm_mbf || (We.sm_mbf = d.w0(We.M())), We.sm_mbf;
-        }
-        toObject(e = !1) {
-          return We.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(We.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(We.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new We();
-          return We.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(We.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return We.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(We.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return We.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem_Demo";
-        }
-      }
-      class qe extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            qe.prototype.appid || d.Sg(qe.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            qe.sm_m ||
-              (qe.sm_m = {
-                proto: qe,
-                fields: {
-                  appid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
-                  is_open: { n: 2, br: d.qM.readBool, bw: d.gp.writeBool },
-                },
-              }),
-            qe.sm_m
-          );
-        }
-        static MBF() {
-          return qe.sm_mbf || (qe.sm_mbf = d.w0(qe.M())), qe.sm_mbf;
-        }
-        toObject(e = !1) {
-          return qe.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(qe.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(qe.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new qe();
-          return qe.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(qe.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return qe.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(qe.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return qe.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem_Playtest";
-        }
-      }
-      class Ue extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Ue.prototype.appid || d.Sg(Ue.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Ue.sm_m ||
-              (Ue.sm_m = {
-                proto: Ue,
-                fields: {
-                  appid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
-                  header_text: {
-                    n: 2,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  description_text: {
-                    n: 3,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                },
-              }),
-            Ue.sm_m
-          );
-        }
-        static MBF() {
-          return Ue.sm_mbf || (Ue.sm_mbf = d.w0(Ue.M())), Ue.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ue.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(Ue.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(Ue.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new Ue();
-          return Ue.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(Ue.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return Ue.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(Ue.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return Ue.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem_RelatedF2P";
-        }
-      }
-      class Le extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Le.prototype.parent_appid || d.Sg(Le.M()),
-            c.Message.initialize(this, e, 0, -1, [2, 3, 4, 5, 6, 9], null);
-        }
-        static M() {
-          return (
-            Le.sm_m ||
-              (Le.sm_m = {
-                proto: Le,
-                fields: {
-                  parent_appid: {
-                    n: 1,
-                    br: d.qM.readUint32,
-                    bw: d.gp.writeUint32,
-                  },
-                  demo_appid: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: d.qM.readUint32,
-                    pbr: d.qM.readPackedUint32,
-                    bw: d.gp.writeRepeatedUint32,
-                  },
-                  standalone_demo_appid: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: d.qM.readUint32,
-                    pbr: d.qM.readPackedUint32,
-                    bw: d.gp.writeRepeatedUint32,
-                  },
-                  demos: { n: 4, c: We, r: !0, q: !0 },
-                  standalone_demos: { n: 5, c: We, r: !0, q: !0 },
-                  playtests: { n: 6, c: qe, r: !0, q: !0 },
-                  related_f2p: { n: 7, c: Ue },
-                  dlc_parent_appids: {
-                    n: 9,
-                    r: !0,
-                    q: !0,
-                    br: d.qM.readUint32,
-                    pbr: d.qM.readPackedUint32,
-                    bw: d.gp.writeRepeatedUint32,
-                  },
+                  package_groups: { n: 74, c: dt, r: !0, q: !0 },
+                  extra_details: { n: 75, c: mt },
                 },
               }),
             Le.sm_m
@@ -43825,15 +43562,15 @@
           return Le.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_RelatedItems";
+          return "StoreItem";
         }
       }
       class ke extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ke.prototype.included_apps || d.Sg(ke.M()),
-            c.Message.initialize(this, e, 0, -1, [1, 2, 3], null);
+            ke.prototype.appid || d.Sg(ke.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -43841,9 +43578,13 @@
               (ke.sm_m = {
                 proto: ke,
                 fields: {
-                  included_apps: { n: 1, c: Oe, r: !0, q: !0 },
-                  included_packages: { n: 2, c: Oe, r: !0, q: !0 },
-                  included_bundles: { n: 3, c: Oe, r: !0, q: !0 },
+                  appid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  label: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
+                  show_above_purchase: {
+                    n: 3,
+                    br: d.qM.readBool,
+                    bw: d.gp.writeBool,
+                  },
                 },
               }),
             ke.sm_m
@@ -43881,15 +43622,15 @@
           return ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_IncludedItems";
+          return "StoreItem_Demo";
         }
       }
       class Pe extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Pe.prototype.supported_player_categoryids || d.Sg(Pe.M()),
-            c.Message.initialize(this, e, 0, -1, [2, 3, 4], null);
+            Pe.prototype.appid || d.Sg(Pe.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -43897,30 +43638,8 @@
               (Pe.sm_m = {
                 proto: Pe,
                 fields: {
-                  supported_player_categoryids: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: d.qM.readUint32,
-                    pbr: d.qM.readPackedUint32,
-                    bw: d.gp.writeRepeatedUint32,
-                  },
-                  feature_categoryids: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: d.qM.readUint32,
-                    pbr: d.qM.readPackedUint32,
-                    bw: d.gp.writeRepeatedUint32,
-                  },
-                  controller_categoryids: {
-                    n: 4,
-                    r: !0,
-                    q: !0,
-                    br: d.qM.readUint32,
-                    pbr: d.qM.readPackedUint32,
-                    bw: d.gp.writeRepeatedUint32,
-                  },
+                  appid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  is_open: { n: 2, br: d.qM.readBool, bw: d.gp.writeBool },
                 },
               }),
             Pe.sm_m
@@ -43958,14 +43677,14 @@
           return Pe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_Categories";
+          return "StoreItem_Playtest";
         }
       }
       class De extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            De.prototype.summary_filtered || d.Sg(De.M()),
+            De.prototype.appid || d.Sg(De.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -43974,9 +43693,17 @@
               (De.sm_m = {
                 proto: De,
                 fields: {
-                  summary_filtered: { n: 1, c: Ae },
-                  summary_unfiltered: { n: 2, c: Ae },
-                  summary_language_specific: { n: 3, c: Ae },
+                  appid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  header_text: {
+                    n: 2,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  description_text: {
+                    n: 3,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
                 },
               }),
             De.sm_m
@@ -44014,15 +43741,15 @@
           return De.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_Reviews";
+          return "StoreItem_RelatedF2P";
         }
       }
       class Ae extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ae.prototype.review_count || d.Sg(Ae.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
+            Ae.prototype.parent_appid || d.Sg(Ae.M()),
+            c.Message.initialize(this, e, 0, -1, [2, 3, 4, 5, 6, 9], null);
         }
         static M() {
           return (
@@ -44030,21 +43757,38 @@
               (Ae.sm_m = {
                 proto: Ae,
                 fields: {
-                  review_count: {
+                  parent_appid: {
                     n: 1,
                     br: d.qM.readUint32,
                     bw: d.gp.writeUint32,
                   },
-                  percent_positive: {
+                  demo_appid: {
                     n: 2,
-                    br: d.qM.readInt32,
-                    bw: d.gp.writeInt32,
+                    r: !0,
+                    q: !0,
+                    br: d.qM.readUint32,
+                    pbr: d.qM.readPackedUint32,
+                    bw: d.gp.writeRepeatedUint32,
                   },
-                  review_score: { n: 3, br: d.qM.readEnum, bw: d.gp.writeEnum },
-                  review_score_label: {
-                    n: 4,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
+                  standalone_demo_appid: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: d.qM.readUint32,
+                    pbr: d.qM.readPackedUint32,
+                    bw: d.gp.writeRepeatedUint32,
+                  },
+                  demos: { n: 4, c: ke, r: !0, q: !0 },
+                  standalone_demos: { n: 5, c: ke, r: !0, q: !0 },
+                  playtests: { n: 6, c: Pe, r: !0, q: !0 },
+                  related_f2p: { n: 7, c: De },
+                  dlc_parent_appids: {
+                    n: 9,
+                    r: !0,
+                    q: !0,
+                    br: d.qM.readUint32,
+                    pbr: d.qM.readPackedUint32,
+                    bw: d.gp.writeRepeatedUint32,
                   },
                 },
               }),
@@ -44083,15 +43827,15 @@
           return Ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_Reviews_StoreReviewSummary";
+          return "StoreItem_RelatedItems";
         }
       }
       class Ee extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ee.prototype.short_description || d.Sg(Ee.M()),
-            c.Message.initialize(this, e, 0, -1, [2, 3, 4], null);
+            Ee.prototype.included_apps || d.Sg(Ee.M()),
+            c.Message.initialize(this, e, 0, -1, [1, 2, 3], null);
         }
         static M() {
           return (
@@ -44099,19 +43843,9 @@
               (Ee.sm_m = {
                 proto: Ee,
                 fields: {
-                  short_description: {
-                    n: 1,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  publishers: { n: 2, c: Ne, r: !0, q: !0 },
-                  developers: { n: 3, c: Ne, r: !0, q: !0 },
-                  franchises: { n: 4, c: Ne, r: !0, q: !0 },
-                  capsule_headline: {
-                    n: 5,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
+                  included_apps: { n: 1, c: Le, r: !0, q: !0 },
+                  included_packages: { n: 2, c: Le, r: !0, q: !0 },
+                  included_bundles: { n: 3, c: Le, r: !0, q: !0 },
                 },
               }),
             Ee.sm_m
@@ -44149,15 +43883,15 @@
           return Ee.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_BasicInfo";
+          return "StoreItem_IncludedItems";
         }
       }
       class Ne extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ne.prototype.name || d.Sg(Ne.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
+            Ne.prototype.supported_player_categoryids || d.Sg(Ne.M()),
+            c.Message.initialize(this, e, 0, -1, [2, 3, 4], null);
         }
         static M() {
           return (
@@ -44165,11 +43899,29 @@
               (Ne.sm_m = {
                 proto: Ne,
                 fields: {
-                  name: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
-                  creator_clan_account_id: {
+                  supported_player_categoryids: {
                     n: 2,
+                    r: !0,
+                    q: !0,
                     br: d.qM.readUint32,
-                    bw: d.gp.writeUint32,
+                    pbr: d.qM.readPackedUint32,
+                    bw: d.gp.writeRepeatedUint32,
+                  },
+                  feature_categoryids: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: d.qM.readUint32,
+                    pbr: d.qM.readPackedUint32,
+                    bw: d.gp.writeRepeatedUint32,
+                  },
+                  controller_categoryids: {
+                    n: 4,
+                    r: !0,
+                    q: !0,
+                    br: d.qM.readUint32,
+                    pbr: d.qM.readPackedUint32,
+                    bw: d.gp.writeRepeatedUint32,
                   },
                 },
               }),
@@ -44208,14 +43960,14 @@
           return Ne.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_BasicInfo_CreatorHomeLink";
+          return "StoreItem_Categories";
         }
       }
       class Ge extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ge.prototype.tagid || d.Sg(Ge.M()),
+            Ge.prototype.summary_filtered || d.Sg(Ge.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -44224,8 +43976,9 @@
               (Ge.sm_m = {
                 proto: Ge,
                 fields: {
-                  tagid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
-                  weight: { n: 2, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  summary_filtered: { n: 1, c: He },
+                  summary_unfiltered: { n: 2, c: He },
+                  summary_language_specific: { n: 3, c: He },
                 },
               }),
             Ge.sm_m
@@ -44263,14 +44016,14 @@
           return Ge.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_Tag";
+          return "StoreItem_Reviews";
         }
       }
       class He extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            He.prototype.asset_url_format || d.Sg(He.M()),
+            He.prototype.review_count || d.Sg(He.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -44278,6 +44031,255 @@
             He.sm_m ||
               (He.sm_m = {
                 proto: He,
+                fields: {
+                  review_count: {
+                    n: 1,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
+                  percent_positive: {
+                    n: 2,
+                    br: d.qM.readInt32,
+                    bw: d.gp.writeInt32,
+                  },
+                  review_score: { n: 3, br: d.qM.readEnum, bw: d.gp.writeEnum },
+                  review_score_label: {
+                    n: 4,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                },
+              }),
+            He.sm_m
+          );
+        }
+        static MBF() {
+          return He.sm_mbf || (He.sm_mbf = d.w0(He.M())), He.sm_mbf;
+        }
+        toObject(e = !1) {
+          return He.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(He.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(He.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new He();
+          return He.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(He.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return He.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(He.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return He.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_Reviews_StoreReviewSummary";
+        }
+      }
+      class Ve extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ve.prototype.short_description || d.Sg(Ve.M()),
+            c.Message.initialize(this, e, 0, -1, [2, 3, 4], null);
+        }
+        static M() {
+          return (
+            Ve.sm_m ||
+              (Ve.sm_m = {
+                proto: Ve,
+                fields: {
+                  short_description: {
+                    n: 1,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  publishers: { n: 2, c: Ze, r: !0, q: !0 },
+                  developers: { n: 3, c: Ze, r: !0, q: !0 },
+                  franchises: { n: 4, c: Ze, r: !0, q: !0 },
+                  capsule_headline: {
+                    n: 5,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                },
+              }),
+            Ve.sm_m
+          );
+        }
+        static MBF() {
+          return Ve.sm_mbf || (Ve.sm_mbf = d.w0(Ve.M())), Ve.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ve.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(Ve.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(Ve.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new Ve();
+          return Ve.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(Ve.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return Ve.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(Ve.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return Ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_BasicInfo";
+        }
+      }
+      class Ze extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ze.prototype.name || d.Sg(Ze.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Ze.sm_m ||
+              (Ze.sm_m = {
+                proto: Ze,
+                fields: {
+                  name: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
+                  creator_clan_account_id: {
+                    n: 2,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
+                },
+              }),
+            Ze.sm_m
+          );
+        }
+        static MBF() {
+          return Ze.sm_mbf || (Ze.sm_mbf = d.w0(Ze.M())), Ze.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ze.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(Ze.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(Ze.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new Ze();
+          return Ze.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(Ze.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return Ze.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(Ze.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return Ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_BasicInfo_CreatorHomeLink";
+        }
+      }
+      class Ke extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ke.prototype.tagid || d.Sg(Ke.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Ke.sm_m ||
+              (Ke.sm_m = {
+                proto: Ke,
+                fields: {
+                  tagid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  weight: { n: 2, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                },
+              }),
+            Ke.sm_m
+          );
+        }
+        static MBF() {
+          return Ke.sm_mbf || (Ke.sm_mbf = d.w0(Ke.M())), Ke.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ke.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(Ke.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(Ke.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new Ke();
+          return Ke.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(Ke.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return Ke.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(Ke.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return Ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_Tag";
+        }
+      }
+      class $e extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            $e.prototype.asset_url_format || d.Sg($e.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            $e.sm_m ||
+              ($e.sm_m = {
+                proto: $e,
                 fields: {
                   asset_url_format: {
                     n: 1,
@@ -44382,56 +44384,56 @@
                   },
                 },
               }),
-            He.sm_m
+            $e.sm_m
           );
         }
         static MBF() {
-          return He.sm_mbf || (He.sm_mbf = d.w0(He.M())), He.sm_mbf;
+          return $e.sm_mbf || ($e.sm_mbf = d.w0($e.M())), $e.sm_mbf;
         }
         toObject(e = !1) {
-          return He.toObject(e, this);
+          return $e.toObject(e, this);
         }
         static toObject(e, t) {
-          return d.BT(He.M(), e, t);
+          return d.BT($e.M(), e, t);
         }
         static fromObject(e) {
-          return d.Uq(He.M(), e);
+          return d.Uq($e.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (u().BinaryReader)(e),
-            r = new He();
-          return He.deserializeBinaryFromReader(r, t);
+            r = new $e();
+          return $e.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return d.zj(He.MBF(), e, t);
+          return d.zj($e.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (u().BinaryWriter)();
-          return He.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return $e.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          d.i0(He.M(), e, t);
+          d.i0($e.M(), e, t);
         }
         serializeBase64String() {
           var e = new (u().BinaryWriter)();
-          return He.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return $e.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreItem_Assets";
         }
       }
-      class Ve extends c.Message {
+      class Qe extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ve.prototype.steam_release_date || d.Sg(Ve.M()),
+            Qe.prototype.steam_release_date || d.Sg(Qe.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            Ve.sm_m ||
-              (Ve.sm_m = {
-                proto: Ve,
+            Qe.sm_m ||
+              (Qe.sm_m = {
+                proto: Qe,
                 fields: {
                   steam_release_date: {
                     n: 1,
@@ -44506,56 +44508,56 @@
                   },
                 },
               }),
-            Ve.sm_m
+            Qe.sm_m
           );
         }
         static MBF() {
-          return Ve.sm_mbf || (Ve.sm_mbf = d.w0(Ve.M())), Ve.sm_mbf;
+          return Qe.sm_mbf || (Qe.sm_mbf = d.w0(Qe.M())), Qe.sm_mbf;
         }
         toObject(e = !1) {
-          return Ve.toObject(e, this);
+          return Qe.toObject(e, this);
         }
         static toObject(e, t) {
-          return d.BT(Ve.M(), e, t);
+          return d.BT(Qe.M(), e, t);
         }
         static fromObject(e) {
-          return d.Uq(Ve.M(), e);
+          return d.Uq(Qe.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (u().BinaryReader)(e),
-            r = new Ve();
-          return Ve.deserializeBinaryFromReader(r, t);
+            r = new Qe();
+          return Qe.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return d.zj(Ve.MBF(), e, t);
+          return d.zj(Qe.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (u().BinaryWriter)();
-          return Ve.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Qe.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          d.i0(Ve.M(), e, t);
+          d.i0(Qe.M(), e, t);
         }
         serializeBase64String() {
           var e = new (u().BinaryWriter)();
-          return Ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Qe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreItem_ReleaseInfo";
         }
       }
-      class Ze extends c.Message {
+      class Xe extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ze.prototype.windows || d.Sg(Ze.M()),
+            Xe.prototype.windows || d.Sg(Xe.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            Ze.sm_m ||
-              (Ze.sm_m = {
-                proto: Ze,
+            Xe.sm_m ||
+              (Xe.sm_m = {
+                proto: Xe,
                 fields: {
                   windows: { n: 1, br: d.qM.readBool, bw: d.gp.writeBool },
                   mac: { n: 2, br: d.qM.readBool, bw: d.gp.writeBool },
@@ -44564,7 +44566,7 @@
                     br: d.qM.readBool,
                     bw: d.gp.writeBool,
                   },
-                  vr_support: { n: 10, c: Ke },
+                  vr_support: { n: 10, c: Ye },
                   steam_deck_compat_category: {
                     n: 11,
                     br: d.qM.readEnum,
@@ -44587,56 +44589,56 @@
                   },
                 },
               }),
-            Ze.sm_m
+            Xe.sm_m
           );
         }
         static MBF() {
-          return Ze.sm_mbf || (Ze.sm_mbf = d.w0(Ze.M())), Ze.sm_mbf;
+          return Xe.sm_mbf || (Xe.sm_mbf = d.w0(Xe.M())), Xe.sm_mbf;
         }
         toObject(e = !1) {
-          return Ze.toObject(e, this);
+          return Xe.toObject(e, this);
         }
         static toObject(e, t) {
-          return d.BT(Ze.M(), e, t);
+          return d.BT(Xe.M(), e, t);
         }
         static fromObject(e) {
-          return d.Uq(Ze.M(), e);
+          return d.Uq(Xe.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (u().BinaryReader)(e),
-            r = new Ze();
-          return Ze.deserializeBinaryFromReader(r, t);
+            r = new Xe();
+          return Xe.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return d.zj(Ze.MBF(), e, t);
+          return d.zj(Xe.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (u().BinaryWriter)();
-          return Ze.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Xe.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          d.i0(Ze.M(), e, t);
+          d.i0(Xe.M(), e, t);
         }
         serializeBase64String() {
           var e = new (u().BinaryWriter)();
-          return Ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreItem_Platforms";
         }
       }
-      class Ke extends c.Message {
+      class Ye extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ke.prototype.vrhmd || d.Sg(Ke.M()),
+            Ye.prototype.vrhmd || d.Sg(Ye.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            Ke.sm_m ||
-              (Ke.sm_m = {
-                proto: Ke,
+            Ye.sm_m ||
+              (Ye.sm_m = {
+                proto: Ye,
                 fields: {
                   vrhmd: { n: 1, br: d.qM.readBool, bw: d.gp.writeBool },
                   vrhmd_only: { n: 2, br: d.qM.readBool, bw: d.gp.writeBool },
@@ -44646,56 +44648,56 @@
                   valve_index: { n: 43, br: d.qM.readBool, bw: d.gp.writeBool },
                 },
               }),
-            Ke.sm_m
+            Ye.sm_m
           );
         }
         static MBF() {
-          return Ke.sm_mbf || (Ke.sm_mbf = d.w0(Ke.M())), Ke.sm_mbf;
+          return Ye.sm_mbf || (Ye.sm_mbf = d.w0(Ye.M())), Ye.sm_mbf;
         }
         toObject(e = !1) {
-          return Ke.toObject(e, this);
+          return Ye.toObject(e, this);
         }
         static toObject(e, t) {
-          return d.BT(Ke.M(), e, t);
+          return d.BT(Ye.M(), e, t);
         }
         static fromObject(e) {
-          return d.Uq(Ke.M(), e);
+          return d.Uq(Ye.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (u().BinaryReader)(e),
-            r = new Ke();
-          return Ke.deserializeBinaryFromReader(r, t);
+            r = new Ye();
+          return Ye.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return d.zj(Ke.MBF(), e, t);
+          return d.zj(Ye.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (u().BinaryWriter)();
-          return Ke.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Ye.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          d.i0(Ke.M(), e, t);
+          d.i0(Ye.M(), e, t);
         }
         serializeBase64String() {
           var e = new (u().BinaryWriter)();
-          return Ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Ye.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreItem_Platforms_VRSupport";
         }
       }
-      class $e extends c.Message {
+      class Je extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            $e.prototype.packageid || d.Sg($e.M()),
+            Je.prototype.packageid || d.Sg(Je.M()),
             c.Message.initialize(this, e, 0, -1, [20], null);
         }
         static M() {
           return (
-            $e.sm_m ||
-              ($e.sm_m = {
-                proto: $e,
+            Je.sm_m ||
+              (Je.sm_m = {
+                proto: Je,
                 fields: {
                   packageid: { n: 1, br: d.qM.readInt32, bw: d.gp.writeInt32 },
                   bundleid: { n: 2, br: d.qM.readInt32, bw: d.gp.writeInt32 },
@@ -44749,7 +44751,7 @@
                     br: d.qM.readString,
                     bw: d.gp.writeString,
                   },
-                  active_discounts: { n: 20, c: Qe, r: !0, q: !0 },
+                  active_discounts: { n: 20, c: et, r: !0, q: !0 },
                   user_can_purchase_as_gift: {
                     n: 31,
                     br: d.qM.readBool,
@@ -44787,7 +44789,7 @@
                     br: d.qM.readBool,
                     bw: d.gp.writeBool,
                   },
-                  recurrence_info: { n: 46, c: Xe },
+                  recurrence_info: { n: 46, c: tt },
                   free_to_keep_ends: {
                     n: 47,
                     br: d.qM.readUint32,
@@ -44834,268 +44836,6 @@
                   },
                 },
               }),
-            $e.sm_m
-          );
-        }
-        static MBF() {
-          return $e.sm_mbf || ($e.sm_mbf = d.w0($e.M())), $e.sm_mbf;
-        }
-        toObject(e = !1) {
-          return $e.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT($e.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq($e.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new $e();
-          return $e.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj($e.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return $e.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0($e.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return $e.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem_PurchaseOption";
-        }
-      }
-      class Qe extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Qe.prototype.discount_amount || d.Sg(Qe.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Qe.sm_m ||
-              (Qe.sm_m = {
-                proto: Qe,
-                fields: {
-                  discount_amount: {
-                    n: 1,
-                    br: d.qM.readInt64String,
-                    bw: d.gp.writeInt64String,
-                  },
-                  discount_description: {
-                    n: 2,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  discount_end_date: {
-                    n: 3,
-                    br: d.qM.readUint32,
-                    bw: d.gp.writeUint32,
-                  },
-                  master_sub_appid: {
-                    n: 4,
-                    br: d.qM.readUint32,
-                    bw: d.gp.writeUint32,
-                  },
-                },
-              }),
-            Qe.sm_m
-          );
-        }
-        static MBF() {
-          return Qe.sm_mbf || (Qe.sm_mbf = d.w0(Qe.M())), Qe.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Qe.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(Qe.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(Qe.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new Qe();
-          return Qe.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(Qe.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return Qe.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(Qe.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return Qe.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem_PurchaseOption_Discount";
-        }
-      }
-      class Xe extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Xe.prototype.packageid || d.Sg(Xe.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Xe.sm_m ||
-              (Xe.sm_m = {
-                proto: Xe,
-                fields: {
-                  packageid: { n: 1, br: d.qM.readInt32, bw: d.gp.writeInt32 },
-                  billing_agreement_type: {
-                    n: 2,
-                    br: d.qM.readInt32,
-                    bw: d.gp.writeInt32,
-                  },
-                  renewal_time_unit: {
-                    n: 3,
-                    br: d.qM.readInt32,
-                    bw: d.gp.writeInt32,
-                  },
-                  renewal_time_period: {
-                    n: 4,
-                    br: d.qM.readInt32,
-                    bw: d.gp.writeInt32,
-                  },
-                  renewal_price_in_cents: {
-                    n: 5,
-                    br: d.qM.readInt64String,
-                    bw: d.gp.writeInt64String,
-                  },
-                  formatted_renewal_price: {
-                    n: 6,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                },
-              }),
-            Xe.sm_m
-          );
-        }
-        static MBF() {
-          return Xe.sm_mbf || (Xe.sm_mbf = d.w0(Xe.M())), Xe.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Xe.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(Xe.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(Xe.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new Xe();
-          return Xe.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(Xe.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return Xe.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(Xe.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return Xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem_PurchaseOption_RecurrenceInfo";
-        }
-      }
-      class Ye extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Ye.prototype.all_ages_screenshots || d.Sg(Ye.M()),
-            c.Message.initialize(this, e, 0, -1, [2, 3], null);
-        }
-        static M() {
-          return (
-            Ye.sm_m ||
-              (Ye.sm_m = {
-                proto: Ye,
-                fields: {
-                  all_ages_screenshots: { n: 2, c: Je, r: !0, q: !0 },
-                  mature_content_screenshots: { n: 3, c: Je, r: !0, q: !0 },
-                },
-              }),
-            Ye.sm_m
-          );
-        }
-        static MBF() {
-          return Ye.sm_mbf || (Ye.sm_mbf = d.w0(Ye.M())), Ye.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ye.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(Ye.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(Ye.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new Ye();
-          return Ye.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(Ye.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return Ye.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(Ye.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return Ye.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem_Screenshots";
-        }
-      }
-      class Je extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Je.prototype.filename || d.Sg(Je.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Je.sm_m ||
-              (Je.sm_m = {
-                proto: Je,
-                fields: {
-                  filename: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
-                  ordinal: { n: 2, br: d.qM.readInt32, bw: d.gp.writeInt32 },
-                },
-              }),
             Je.sm_m
           );
         }
@@ -45131,15 +44871,15 @@
           return Je.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_Screenshots_Screenshot";
+          return "StoreItem_PurchaseOption";
         }
       }
       class et extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            et.prototype.highlights || d.Sg(et.M()),
-            c.Message.initialize(this, e, 0, -1, [1, 2], null);
+            et.prototype.discount_amount || d.Sg(et.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -45147,8 +44887,26 @@
               (et.sm_m = {
                 proto: et,
                 fields: {
-                  highlights: { n: 1, c: it, r: !0, q: !0 },
-                  other_trailers: { n: 2, c: it, r: !0, q: !0 },
+                  discount_amount: {
+                    n: 1,
+                    br: d.qM.readInt64String,
+                    bw: d.gp.writeInt64String,
+                  },
+                  discount_description: {
+                    n: 2,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  discount_end_date: {
+                    n: 3,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
+                  master_sub_appid: {
+                    n: 4,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
                 },
               }),
             et.sm_m
@@ -45186,14 +44944,14 @@
           return et.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_Trailers";
+          return "StoreItem_PurchaseOption_Discount";
         }
       }
       class tt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            tt.prototype.filename || d.Sg(tt.M()),
+            tt.prototype.packageid || d.Sg(tt.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -45202,8 +44960,32 @@
               (tt.sm_m = {
                 proto: tt,
                 fields: {
-                  filename: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
-                  type: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
+                  packageid: { n: 1, br: d.qM.readInt32, bw: d.gp.writeInt32 },
+                  billing_agreement_type: {
+                    n: 2,
+                    br: d.qM.readInt32,
+                    bw: d.gp.writeInt32,
+                  },
+                  renewal_time_unit: {
+                    n: 3,
+                    br: d.qM.readInt32,
+                    bw: d.gp.writeInt32,
+                  },
+                  renewal_time_period: {
+                    n: 4,
+                    br: d.qM.readInt32,
+                    bw: d.gp.writeInt32,
+                  },
+                  renewal_price_in_cents: {
+                    n: 5,
+                    br: d.qM.readInt64String,
+                    bw: d.gp.writeInt64String,
+                  },
+                  formatted_renewal_price: {
+                    n: 6,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
                 },
               }),
             tt.sm_m
@@ -45241,15 +45023,15 @@
           return tt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_Trailers_VideoSource";
+          return "StoreItem_PurchaseOption_RecurrenceInfo";
         }
       }
       class rt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            rt.prototype.cdn_path || d.Sg(rt.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
+            rt.prototype.all_ages_screenshots || d.Sg(rt.M()),
+            c.Message.initialize(this, e, 0, -1, [2, 3], null);
         }
         static M() {
           return (
@@ -45257,8 +45039,8 @@
               (rt.sm_m = {
                 proto: rt,
                 fields: {
-                  cdn_path: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
-                  encoding: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
+                  all_ages_screenshots: { n: 2, c: it, r: !0, q: !0 },
+                  mature_content_screenshots: { n: 3, c: it, r: !0, q: !0 },
                 },
               }),
             rt.sm_m
@@ -45296,15 +45078,15 @@
           return rt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_Trailers_AdaptiveTrailer";
+          return "StoreItem_Screenshots";
         }
       }
       class it extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            it.prototype.trailer_name || d.Sg(it.M()),
-            c.Message.initialize(this, e, 0, -1, [5, 6], null);
+            it.prototype.filename || d.Sg(it.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -45312,44 +45094,8 @@
               (it.sm_m = {
                 proto: it,
                 fields: {
-                  trailer_name: {
-                    n: 1,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  trailer_url_format: {
-                    n: 2,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  trailer_category: {
-                    n: 13,
-                    br: d.qM.readEnum,
-                    bw: d.gp.writeEnum,
-                  },
-                  microtrailer: { n: 5, c: tt, r: !0, q: !0 },
-                  adaptive_trailers: { n: 6, c: rt, r: !0, q: !0 },
-                  captions_manifest: {
-                    n: 7,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  screenshot_medium: {
-                    n: 10,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  screenshot_full: {
-                    n: 11,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  trailer_base_id: {
-                    n: 12,
-                    br: d.qM.readInt32,
-                    bw: d.gp.writeInt32,
-                  },
-                  all_ages: { n: 14, br: d.qM.readBool, bw: d.gp.writeBool },
+                  filename: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
+                  ordinal: { n: 2, br: d.qM.readInt32, bw: d.gp.writeInt32 },
                 },
               }),
             it.sm_m
@@ -45387,15 +45133,15 @@
           return it.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_Trailers_Trailer";
+          return "StoreItem_Screenshots_Screenshot";
         }
       }
       class nt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            nt.prototype.elanguage || d.Sg(nt.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
+            nt.prototype.highlights || d.Sg(nt.M()),
+            c.Message.initialize(this, e, 0, -1, [1, 2], null);
         }
         static M() {
           return (
@@ -45403,21 +45149,8 @@
               (nt.sm_m = {
                 proto: nt,
                 fields: {
-                  elanguage: {
-                    n: 1,
-                    d: -1,
-                    br: d.qM.readInt32,
-                    bw: d.gp.writeInt32,
-                  },
-                  eadditionallanguage: {
-                    n: 5,
-                    d: -1,
-                    br: d.qM.readInt32,
-                    bw: d.gp.writeInt32,
-                  },
-                  supported: { n: 2, br: d.qM.readBool, bw: d.gp.writeBool },
-                  full_audio: { n: 3, br: d.qM.readBool, bw: d.gp.writeBool },
-                  subtitles: { n: 4, br: d.qM.readBool, bw: d.gp.writeBool },
+                  highlights: { n: 1, c: ot, r: !0, q: !0 },
+                  other_trailers: { n: 2, c: ot, r: !0, q: !0 },
                 },
               }),
             nt.sm_m
@@ -45455,14 +45188,14 @@
           return nt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_SupportedLanguage";
+          return "StoreItem_Trailers";
         }
       }
       class st extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            st.prototype.start_time || d.Sg(st.M()),
+            st.prototype.filename || d.Sg(st.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -45471,14 +45204,8 @@
               (st.sm_m = {
                 proto: st,
                 fields: {
-                  start_time: {
-                    n: 1,
-                    br: d.qM.readUint32,
-                    bw: d.gp.writeUint32,
-                  },
-                  end_time: { n: 2, br: d.qM.readUint32, bw: d.gp.writeUint32 },
-                  text: { n: 3, br: d.qM.readString, bw: d.gp.writeString },
-                  appid: { n: 4, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  filename: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
+                  type: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
                 },
               }),
             st.sm_m
@@ -45516,14 +45243,14 @@
           return st.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_FreeWeekend";
+          return "StoreItem_Trailers_VideoSource";
         }
       }
       class at extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            at.prototype.link_type || d.Sg(at.M()),
+            at.prototype.cdn_path || d.Sg(at.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -45532,9 +45259,8 @@
               (at.sm_m = {
                 proto: at,
                 fields: {
-                  link_type: { n: 1, br: d.qM.readEnum, bw: d.gp.writeEnum },
-                  url: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
-                  text: { n: 3, br: d.qM.readString, bw: d.gp.writeString },
+                  cdn_path: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
+                  encoding: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
                 },
               }),
             at.sm_m
@@ -45572,15 +45298,15 @@
           return at.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_Link";
+          return "StoreItem_Trailers_AdaptiveTrailer";
         }
       }
       class ot extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ot.prototype.name || d.Sg(ot.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
+            ot.prototype.trailer_name || d.Sg(ot.M()),
+            c.Message.initialize(this, e, 0, -1, [5, 6], null);
         }
         static M() {
           return (
@@ -45588,19 +45314,44 @@
               (ot.sm_m = {
                 proto: ot,
                 fields: {
-                  name: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
-                  heading: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
-                  display_type: { n: 3, br: d.qM.readEnum, bw: d.gp.writeEnum },
-                  dropdown_title: {
-                    n: 4,
+                  trailer_name: {
+                    n: 1,
                     br: d.qM.readString,
                     bw: d.gp.writeString,
                   },
-                  dropdown_description_bbcode: {
-                    n: 5,
+                  trailer_url_format: {
+                    n: 2,
                     br: d.qM.readString,
                     bw: d.gp.writeString,
                   },
+                  trailer_category: {
+                    n: 13,
+                    br: d.qM.readEnum,
+                    bw: d.gp.writeEnum,
+                  },
+                  microtrailer: { n: 5, c: st, r: !0, q: !0 },
+                  adaptive_trailers: { n: 6, c: at, r: !0, q: !0 },
+                  captions_manifest: {
+                    n: 7,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  screenshot_medium: {
+                    n: 10,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  screenshot_full: {
+                    n: 11,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  trailer_base_id: {
+                    n: 12,
+                    br: d.qM.readInt32,
+                    bw: d.gp.writeInt32,
+                  },
+                  all_ages: { n: 14, br: d.qM.readBool, bw: d.gp.writeBool },
                 },
               }),
             ot.sm_m
@@ -45638,14 +45389,14 @@
           return ot.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_PackageGroup";
+          return "StoreItem_Trailers_Trailer";
         }
       }
       class lt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            lt.prototype.kernel_mode || d.Sg(lt.M()),
+            lt.prototype.elanguage || d.Sg(lt.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -45654,24 +45405,21 @@
               (lt.sm_m = {
                 proto: lt,
                 fields: {
-                  kernel_mode: { n: 1, br: d.qM.readBool, bw: d.gp.writeBool },
-                  uninstall_completely: {
-                    n: 2,
-                    br: d.qM.readBool,
-                    bw: d.gp.writeBool,
+                  elanguage: {
+                    n: 1,
+                    d: -1,
+                    br: d.qM.readInt32,
+                    bw: d.gp.writeInt32,
                   },
-                  boot_protection: {
-                    n: 3,
-                    br: d.qM.readBool,
-                    bw: d.gp.writeBool,
+                  eadditionallanguage: {
+                    n: 5,
+                    d: -1,
+                    br: d.qM.readInt32,
+                    bw: d.gp.writeInt32,
                   },
-                  boot_protection_name: {
-                    n: 4,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  name: { n: 5, br: d.qM.readString, bw: d.gp.writeString },
-                  name_loc: { n: 6, br: d.qM.readString, bw: d.gp.writeString },
+                  supported: { n: 2, br: d.qM.readBool, bw: d.gp.writeBool },
+                  full_audio: { n: 3, br: d.qM.readBool, bw: d.gp.writeBool },
+                  subtitles: { n: 4, br: d.qM.readBool, bw: d.gp.writeBool },
                 },
               }),
             lt.sm_m
@@ -45709,14 +45457,14 @@
           return lt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_Anticheat";
+          return "StoreItem_SupportedLanguage";
         }
       }
       class ct extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ct.prototype.name || d.Sg(ct.M()),
+            ct.prototype.start_time || d.Sg(ct.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -45725,8 +45473,14 @@
               (ct.sm_m = {
                 proto: ct,
                 fields: {
-                  name: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
-                  url: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
+                  start_time: {
+                    n: 1,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
+                  end_time: { n: 2, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  text: { n: 3, br: d.qM.readString, bw: d.gp.writeString },
+                  appid: { n: 4, br: d.qM.readUint32, bw: d.gp.writeUint32 },
                 },
               }),
             ct.sm_m
@@ -45764,14 +45518,14 @@
           return ct.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_Eula";
+          return "StoreItem_FreeWeekend";
         }
       }
       class ut extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ut.prototype.name || d.Sg(ut.M()),
+            ut.prototype.link_type || d.Sg(ut.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -45780,8 +45534,9 @@
               (ut.sm_m = {
                 proto: ut,
                 fields: {
-                  name: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
+                  link_type: { n: 1, br: d.qM.readEnum, bw: d.gp.writeEnum },
                   url: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
+                  text: { n: 3, br: d.qM.readString, bw: d.gp.writeString },
                 },
               }),
             ut.sm_m
@@ -45819,14 +45574,14 @@
           return ut.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_AIGeneratedContentService";
+          return "StoreItem_Link";
         }
       }
       class dt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            dt.prototype.label || d.Sg(dt.M()),
+            dt.prototype.name || d.Sg(dt.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -45835,13 +45590,19 @@
               (dt.sm_m = {
                 proto: dt,
                 fields: {
-                  label: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
-                  content_bbcode: {
-                    n: 2,
+                  name: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
+                  heading: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
+                  display_type: { n: 3, br: d.qM.readEnum, bw: d.gp.writeEnum },
+                  dropdown_title: {
+                    n: 4,
                     br: d.qM.readString,
                     bw: d.gp.writeString,
                   },
-                  banner: { n: 3, br: d.qM.readEnum, bw: d.gp.writeEnum },
+                  dropdown_description_bbcode: {
+                    n: 5,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
                 },
               }),
             dt.sm_m
@@ -45879,15 +45640,15 @@
           return dt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_PageSection";
+          return "StoreItem_PackageGroup";
         }
       }
       class mt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            mt.prototype.quote || d.Sg(mt.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
+            mt.prototype.steam_award || d.Sg(mt.M()),
+            c.Message.initialize(this, e, 0, -1, [1, 10, 13, 15, 18], null);
         }
         static M() {
           return (
@@ -45895,10 +45656,78 @@
               (mt.sm_m = {
                 proto: mt,
                 fields: {
-                  quote: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
-                  score: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
-                  site: { n: 3, br: d.qM.readString, bw: d.gp.writeString },
-                  url: { n: 4, br: d.qM.readString, bw: d.gp.writeString },
+                  steam_award: { n: 1, c: p, r: !0, q: !0 },
+                  vetted: { n: 2, br: d.qM.readBool, bw: d.gp.writeBool },
+                  no_mouse_keyboard_support: {
+                    n: 3,
+                    br: d.qM.readBool,
+                    bw: d.gp.writeBool,
+                  },
+                  controller_wizard_complete: {
+                    n: 4,
+                    br: d.qM.readBool,
+                    bw: d.gp.writeBool,
+                  },
+                  drm_third_party_type: {
+                    n: 5,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  drm_activation_limit: {
+                    n: 6,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  user_account_third_party: {
+                    n: 7,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  user_account_third_party_link_to_steam: {
+                    n: 8,
+                    br: d.qM.readBool,
+                    bw: d.gp.writeBool,
+                  },
+                  anticheat: { n: 9, c: gt },
+                  eula: { n: 10, c: pt, r: !0, q: !0 },
+                  ai_generation_service: { n: 11, c: _t },
+                  refund_checks_ea_playtime: {
+                    n: 12,
+                    br: d.qM.readBool,
+                    bw: d.gp.writeBool,
+                  },
+                  section: { n: 13, c: ht, r: !0, q: !0 },
+                  legal_notice_bbcode: {
+                    n: 14,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  interactive_elements: {
+                    n: 15,
+                    r: !0,
+                    q: !0,
+                    br: d.qM.readEnum,
+                    pbr: d.qM.readPackedEnum,
+                    bw: d.gp.writeRepeatedEnum,
+                  },
+                  content_survey_notes: {
+                    n: 16,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  content_survey_ai_notes: {
+                    n: 17,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  press_review: { n: 18, c: Bt, r: !0, q: !0 },
+                  partner_awards_bbcode: {
+                    n: 19,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  early_access: { n: 20, c: bt },
+                  season_pass: { n: 21, c: b },
                 },
               }),
             mt.sm_m
@@ -45936,15 +45765,15 @@
           return mt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_PressReview";
+          return "StoreItem_ExtraDetails";
         }
       }
       class gt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            gt.prototype.steam_award || d.Sg(gt.M()),
-            c.Message.initialize(this, e, 0, -1, [1, 10, 13, 15, 18], null);
+            gt.prototype.kernel_mode || d.Sg(gt.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -45952,76 +45781,24 @@
               (gt.sm_m = {
                 proto: gt,
                 fields: {
-                  steam_award: { n: 1, c: p, r: !0, q: !0 },
-                  vetted: { n: 2, br: d.qM.readBool, bw: d.gp.writeBool },
-                  no_mouse_keyboard_support: {
+                  kernel_mode: { n: 1, br: d.qM.readBool, bw: d.gp.writeBool },
+                  uninstall_completely: {
+                    n: 2,
+                    br: d.qM.readBool,
+                    bw: d.gp.writeBool,
+                  },
+                  boot_protection: {
                     n: 3,
                     br: d.qM.readBool,
                     bw: d.gp.writeBool,
                   },
-                  controller_wizard_complete: {
+                  boot_protection_name: {
                     n: 4,
-                    br: d.qM.readBool,
-                    bw: d.gp.writeBool,
-                  },
-                  drm_third_party_type: {
-                    n: 5,
                     br: d.qM.readString,
                     bw: d.gp.writeString,
                   },
-                  drm_activation_limit: {
-                    n: 6,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  user_account_third_party: {
-                    n: 7,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  user_account_third_party_link_to_steam: {
-                    n: 8,
-                    br: d.qM.readBool,
-                    bw: d.gp.writeBool,
-                  },
-                  anticheat: { n: 9, c: lt },
-                  eula: { n: 10, c: ct, r: !0, q: !0 },
-                  ai_generation_service: { n: 11, c: ut },
-                  refund_checks_ea_playtime: {
-                    n: 12,
-                    br: d.qM.readBool,
-                    bw: d.gp.writeBool,
-                  },
-                  section: { n: 13, c: dt, r: !0, q: !0 },
-                  legal_notice_bbcode: {
-                    n: 14,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  interactive_elements: {
-                    n: 15,
-                    r: !0,
-                    q: !0,
-                    br: d.qM.readEnum,
-                    pbr: d.qM.readPackedEnum,
-                    bw: d.gp.writeRepeatedEnum,
-                  },
-                  content_survey_notes: {
-                    n: 16,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  content_survey_ai_notes: {
-                    n: 17,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  press_review: { n: 18, c: mt, r: !0, q: !0 },
-                  partner_awards_bbcode: {
-                    n: 19,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
+                  name: { n: 5, br: d.qM.readString, bw: d.gp.writeString },
+                  name_loc: { n: 6, br: d.qM.readString, bw: d.gp.writeString },
                 },
               }),
             gt.sm_m
@@ -46059,14 +45836,14 @@
           return gt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "StoreItem_ExtraDetails";
+          return "StoreItem_ExtraDetails_Anticheat";
         }
       }
       class pt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            pt.prototype.include_assets || d.Sg(pt.M()),
+            pt.prototype.name || d.Sg(pt.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -46074,6 +45851,321 @@
             pt.sm_m ||
               (pt.sm_m = {
                 proto: pt,
+                fields: {
+                  name: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
+                  url: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
+                },
+              }),
+            pt.sm_m
+          );
+        }
+        static MBF() {
+          return pt.sm_mbf || (pt.sm_mbf = d.w0(pt.M())), pt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return pt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(pt.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(pt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new pt();
+          return pt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(pt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return pt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(pt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return pt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_ExtraDetails_Eula";
+        }
+      }
+      class _t extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            _t.prototype.name || d.Sg(_t.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _t.sm_m ||
+              (_t.sm_m = {
+                proto: _t,
+                fields: {
+                  name: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
+                  url: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
+                },
+              }),
+            _t.sm_m
+          );
+        }
+        static MBF() {
+          return _t.sm_mbf || (_t.sm_mbf = d.w0(_t.M())), _t.sm_mbf;
+        }
+        toObject(e = !1) {
+          return _t.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(_t.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(_t.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new _t();
+          return _t.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(_t.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return _t.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(_t.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return _t.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_ExtraDetails_AIGeneratedContentService";
+        }
+      }
+      class ht extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            ht.prototype.label || d.Sg(ht.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            ht.sm_m ||
+              (ht.sm_m = {
+                proto: ht,
+                fields: {
+                  label: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
+                  content_bbcode: {
+                    n: 2,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  banner: { n: 3, br: d.qM.readEnum, bw: d.gp.writeEnum },
+                },
+              }),
+            ht.sm_m
+          );
+        }
+        static MBF() {
+          return ht.sm_mbf || (ht.sm_mbf = d.w0(ht.M())), ht.sm_mbf;
+        }
+        toObject(e = !1) {
+          return ht.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(ht.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(ht.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new ht();
+          return ht.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(ht.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return ht.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(ht.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return ht.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_ExtraDetails_PageSection";
+        }
+      }
+      class Bt extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Bt.prototype.quote || d.Sg(Bt.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Bt.sm_m ||
+              (Bt.sm_m = {
+                proto: Bt,
+                fields: {
+                  quote: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
+                  score: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
+                  site: { n: 3, br: d.qM.readString, bw: d.gp.writeString },
+                  url: { n: 4, br: d.qM.readString, bw: d.gp.writeString },
+                },
+              }),
+            Bt.sm_m
+          );
+        }
+        static MBF() {
+          return Bt.sm_mbf || (Bt.sm_mbf = d.w0(Bt.M())), Bt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Bt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(Bt.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(Bt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new Bt();
+          return Bt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(Bt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return Bt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(Bt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return Bt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_ExtraDetails_PressReview";
+        }
+      }
+      class bt extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            bt.prototype.why_bbcode || d.Sg(bt.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            bt.sm_m ||
+              (bt.sm_m = {
+                proto: bt,
+                fields: {
+                  why_bbcode: {
+                    n: 1,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  how_long_bbcode: {
+                    n: 2,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  full_version_bbcode: {
+                    n: 3,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  current_state_bbcode: {
+                    n: 4,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  pricing_bbcode: {
+                    n: 5,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  community_bbcode: {
+                    n: 6,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  description_bbcode: {
+                    n: 7,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                },
+              }),
+            bt.sm_m
+          );
+        }
+        static MBF() {
+          return bt.sm_mbf || (bt.sm_mbf = d.w0(bt.M())), bt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return bt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(bt.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(bt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new bt();
+          return bt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(bt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return bt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(bt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return bt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_ExtraDetails_EarlyAccess";
+        }
+      }
+      class wt extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            wt.prototype.include_assets || d.Sg(wt.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            wt.sm_m ||
+              (wt.sm_m = {
+                proto: wt,
                 fields: {
                   include_assets: {
                     n: 1,
@@ -46140,7 +46232,7 @@
                     br: d.qM.readBool,
                     bw: d.gp.writeBool,
                   },
-                  included_item_data_request: { n: 14, c: pt },
+                  included_item_data_request: { n: 14, c: wt },
                   include_assets_without_overrides: {
                     n: 15,
                     br: d.qM.readBool,
@@ -46166,310 +46258,6 @@
                     d: !0,
                     br: d.qM.readBool,
                     bw: d.gp.writeBool,
-                  },
-                },
-              }),
-            pt.sm_m
-          );
-        }
-        static MBF() {
-          return pt.sm_mbf || (pt.sm_mbf = d.w0(pt.M())), pt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return pt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(pt.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(pt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new pt();
-          return pt.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(pt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return pt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(pt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return pt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreBrowseItemDataRequest";
-        }
-      }
-      class _t extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            _t.prototype.language || d.Sg(_t.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            _t.sm_m ||
-              (_t.sm_m = {
-                proto: _t,
-                fields: {
-                  language: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
-                  elanguage: { n: 2, br: d.qM.readInt32, bw: d.gp.writeInt32 },
-                  country_code: {
-                    n: 3,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                },
-              }),
-            _t.sm_m
-          );
-        }
-        static MBF() {
-          return _t.sm_mbf || (_t.sm_mbf = d.w0(_t.M())), _t.sm_mbf;
-        }
-        toObject(e = !1) {
-          return _t.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(_t.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(_t.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new _t();
-          return _t.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(_t.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return _t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(_t.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return _t.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreBrowseContext";
-        }
-      }
-      class ht extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            ht.prototype.appid || d.Sg(ht.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            ht.sm_m ||
-              (ht.sm_m = {
-                proto: ht,
-                fields: {
-                  appid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
-                  packageid: {
-                    n: 2,
-                    br: d.qM.readUint32,
-                    bw: d.gp.writeUint32,
-                  },
-                  bundleid: { n: 3, br: d.qM.readUint32, bw: d.gp.writeUint32 },
-                  tagid: { n: 4, br: d.qM.readUint32, bw: d.gp.writeUint32 },
-                  creatorid: {
-                    n: 5,
-                    br: d.qM.readUint32,
-                    bw: d.gp.writeUint32,
-                  },
-                  hubcategoryid: {
-                    n: 6,
-                    br: d.qM.readUint32,
-                    bw: d.gp.writeUint32,
-                  },
-                  salepagegid: {
-                    n: 7,
-                    br: d.qM.readFixed64String,
-                    bw: d.gp.writeFixed64String,
-                  },
-                },
-              }),
-            ht.sm_m
-          );
-        }
-        static MBF() {
-          return ht.sm_mbf || (ht.sm_mbf = d.w0(ht.M())), ht.sm_mbf;
-        }
-        toObject(e = !1) {
-          return ht.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(ht.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(ht.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new ht();
-          return ht.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(ht.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return ht.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(ht.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return ht.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItemID";
-        }
-      }
-      class Bt extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Bt.prototype.ids || d.Sg(Bt.M()),
-            c.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            Bt.sm_m ||
-              (Bt.sm_m = {
-                proto: Bt,
-                fields: {
-                  ids: { n: 1, c: ht, r: !0, q: !0 },
-                  context: { n: 2, c: _t },
-                  data_request: { n: 3, c: pt },
-                },
-              }),
-            Bt.sm_m
-          );
-        }
-        static MBF() {
-          return Bt.sm_mbf || (Bt.sm_mbf = d.w0(Bt.M())), Bt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Bt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(Bt.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(Bt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new Bt();
-          return Bt.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(Bt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return Bt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(Bt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return Bt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetItems_Request";
-        }
-      }
-      class bt extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            bt.prototype.store_items || d.Sg(bt.M()),
-            c.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            bt.sm_m ||
-              (bt.sm_m = {
-                proto: bt,
-                fields: { store_items: { n: 1, c: Oe, r: !0, q: !0 } },
-              }),
-            bt.sm_m
-          );
-        }
-        static MBF() {
-          return bt.sm_mbf || (bt.sm_mbf = d.w0(bt.M())), bt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return bt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(bt.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(bt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new bt();
-          return bt.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(bt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return bt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(bt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return bt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetItems_Response";
-        }
-      }
-      class wt extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            wt.prototype.language || d.Sg(wt.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            wt.sm_m ||
-              (wt.sm_m = {
-                proto: wt,
-                fields: {
-                  language: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
-                  elanguage: {
-                    n: 2,
-                    d: -1,
-                    br: d.qM.readInt32,
-                    bw: d.gp.writeInt32,
                   },
                 },
               }),
@@ -46508,22 +46296,30 @@
           return wt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetStoreCategories_Request";
+          return "StoreBrowseItemDataRequest";
         }
       }
       class ft extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ft.prototype.categories || d.Sg(ft.M()),
-            c.Message.initialize(this, e, 0, -1, [1], null);
+            ft.prototype.language || d.Sg(ft.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             ft.sm_m ||
               (ft.sm_m = {
                 proto: ft,
-                fields: { categories: { n: 1, c: Mt, r: !0, q: !0 } },
+                fields: {
+                  language: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
+                  elanguage: { n: 2, br: d.qM.readInt32, bw: d.gp.writeInt32 },
+                  country_code: {
+                    n: 3,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                },
               }),
             ft.sm_m
           );
@@ -46560,14 +46356,14 @@
           return ft.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetStoreCategories_Response";
+          return "StoreBrowseContext";
         }
       }
       class Mt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Mt.prototype.categoryid || d.Sg(Mt.M()),
+            Mt.prototype.appid || d.Sg(Mt.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -46576,38 +46372,28 @@
               (Mt.sm_m = {
                 proto: Mt,
                 fields: {
-                  categoryid: {
-                    n: 1,
+                  appid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  packageid: {
+                    n: 2,
                     br: d.qM.readUint32,
                     bw: d.gp.writeUint32,
                   },
-                  type: { n: 2, br: d.qM.readEnum, bw: d.gp.writeEnum },
-                  internal_name: {
-                    n: 3,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  display_name: {
-                    n: 4,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  image_url: {
+                  bundleid: { n: 3, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  tagid: { n: 4, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  creatorid: {
                     n: 5,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  show_in_search: {
-                    n: 6,
-                    br: d.qM.readBool,
-                    bw: d.gp.writeBool,
-                  },
-                  computed: { n: 7, br: d.qM.readBool, bw: d.gp.writeBool },
-                  edit_url: { n: 8, br: d.qM.readString, bw: d.gp.writeString },
-                  edit_sort_order: {
-                    n: 9,
                     br: d.qM.readUint32,
                     bw: d.gp.writeUint32,
+                  },
+                  hubcategoryid: {
+                    n: 6,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
+                  salepagegid: {
+                    n: 7,
+                    br: d.qM.readFixed64String,
+                    bw: d.gp.writeFixed64String,
                   },
                 },
               }),
@@ -46646,15 +46432,15 @@
           return Mt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetStoreCategories_Response_Category";
+          return "StoreItemID";
         }
       }
       class yt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            yt.prototype.context || d.Sg(yt.M()),
-            c.Message.initialize(this, e, 0, -1, [2], null);
+            yt.prototype.ids || d.Sg(yt.M()),
+            c.Message.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -46662,15 +46448,9 @@
               (yt.sm_m = {
                 proto: yt,
                 fields: {
-                  context: { n: 1, c: _t },
-                  excluded_content_descriptorids: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: d.qM.readEnum,
-                    pbr: d.qM.readPackedEnum,
-                    bw: d.gp.writeRepeatedEnum,
-                  },
+                  ids: { n: 1, c: Mt, r: !0, q: !0 },
+                  context: { n: 2, c: ft },
+                  data_request: { n: 3, c: wt },
                 },
               }),
             yt.sm_m
@@ -46708,14 +46488,14 @@
           return yt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetContentHubConfig_Request";
+          return "CStoreBrowse_GetItems_Request";
         }
       }
       class St extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            St.prototype.hubconfigs || d.Sg(St.M()),
+            St.prototype.store_items || d.Sg(St.M()),
             c.Message.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
@@ -46723,7 +46503,7 @@
             St.sm_m ||
               (St.sm_m = {
                 proto: St,
-                fields: { hubconfigs: { n: 1, c: vt, r: !0, q: !0 } },
+                fields: { store_items: { n: 1, c: Le, r: !0, q: !0 } },
               }),
             St.sm_m
           );
@@ -46760,21 +46540,333 @@
           return St.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetContentHubConfig_Response";
+          return "CStoreBrowse_GetItems_Response";
         }
       }
       class vt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            vt.prototype.hubcategoryid || d.Sg(vt.M()),
-            c.Message.initialize(this, e, 0, -1, [6, 7, 8, 9], null);
+            vt.prototype.language || d.Sg(vt.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             vt.sm_m ||
               (vt.sm_m = {
                 proto: vt,
+                fields: {
+                  language: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
+                  elanguage: {
+                    n: 2,
+                    d: -1,
+                    br: d.qM.readInt32,
+                    bw: d.gp.writeInt32,
+                  },
+                },
+              }),
+            vt.sm_m
+          );
+        }
+        static MBF() {
+          return vt.sm_mbf || (vt.sm_mbf = d.w0(vt.M())), vt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return vt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(vt.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(vt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new vt();
+          return vt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(vt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return vt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(vt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return vt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetStoreCategories_Request";
+        }
+      }
+      class Ct extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ct.prototype.categories || d.Sg(Ct.M()),
+            c.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            Ct.sm_m ||
+              (Ct.sm_m = {
+                proto: Ct,
+                fields: { categories: { n: 1, c: zt, r: !0, q: !0 } },
+              }),
+            Ct.sm_m
+          );
+        }
+        static MBF() {
+          return Ct.sm_mbf || (Ct.sm_mbf = d.w0(Ct.M())), Ct.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ct.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(Ct.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(Ct.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new Ct();
+          return Ct.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(Ct.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return Ct.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(Ct.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return Ct.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetStoreCategories_Response";
+        }
+      }
+      class zt extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            zt.prototype.categoryid || d.Sg(zt.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            zt.sm_m ||
+              (zt.sm_m = {
+                proto: zt,
+                fields: {
+                  categoryid: {
+                    n: 1,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
+                  type: { n: 2, br: d.qM.readEnum, bw: d.gp.writeEnum },
+                  internal_name: {
+                    n: 3,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  display_name: {
+                    n: 4,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  image_url: {
+                    n: 5,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  show_in_search: {
+                    n: 6,
+                    br: d.qM.readBool,
+                    bw: d.gp.writeBool,
+                  },
+                  computed: { n: 7, br: d.qM.readBool, bw: d.gp.writeBool },
+                  edit_url: { n: 8, br: d.qM.readString, bw: d.gp.writeString },
+                  edit_sort_order: {
+                    n: 9,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
+                },
+              }),
+            zt.sm_m
+          );
+        }
+        static MBF() {
+          return zt.sm_mbf || (zt.sm_mbf = d.w0(zt.M())), zt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return zt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(zt.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(zt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new zt();
+          return zt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(zt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return zt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(zt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return zt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetStoreCategories_Response_Category";
+        }
+      }
+      class Rt extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Rt.prototype.context || d.Sg(Rt.M()),
+            c.Message.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            Rt.sm_m ||
+              (Rt.sm_m = {
+                proto: Rt,
+                fields: {
+                  context: { n: 1, c: ft },
+                  excluded_content_descriptorids: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: d.qM.readEnum,
+                    pbr: d.qM.readPackedEnum,
+                    bw: d.gp.writeRepeatedEnum,
+                  },
+                },
+              }),
+            Rt.sm_m
+          );
+        }
+        static MBF() {
+          return Rt.sm_mbf || (Rt.sm_mbf = d.w0(Rt.M())), Rt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Rt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(Rt.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(Rt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new Rt();
+          return Rt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(Rt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return Rt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(Rt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return Rt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetContentHubConfig_Request";
+        }
+      }
+      class jt extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            jt.prototype.hubconfigs || d.Sg(jt.M()),
+            c.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            jt.sm_m ||
+              (jt.sm_m = {
+                proto: jt,
+                fields: { hubconfigs: { n: 1, c: Tt, r: !0, q: !0 } },
+              }),
+            jt.sm_m
+          );
+        }
+        static MBF() {
+          return jt.sm_mbf || (jt.sm_mbf = d.w0(jt.M())), jt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return jt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(jt.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(jt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new jt();
+          return jt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(jt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return jt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(jt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return jt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetContentHubConfig_Response";
+        }
+      }
+      class Tt extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Tt.prototype.hubcategoryid || d.Sg(Tt.M()),
+            c.Message.initialize(this, e, 0, -1, [6, 7, 8, 9], null);
+        }
+        static M() {
+          return (
+            Tt.sm_m ||
+              (Tt.sm_m = {
+                proto: Tt,
                 fields: {
                   hubcategoryid: {
                     n: 1,
@@ -46828,307 +46920,6 @@
                   },
                 },
               }),
-            vt.sm_m
-          );
-        }
-        static MBF() {
-          return vt.sm_mbf || (vt.sm_mbf = d.w0(vt.M())), vt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return vt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(vt.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(vt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new vt();
-          return vt.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(vt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return vt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(vt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return vt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetContentHubConfig_Response_ContentHubConfig";
-        }
-      }
-      class Ct extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Ct.prototype.country_code || d.Sg(Ct.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Ct.sm_m ||
-              (Ct.sm_m = {
-                proto: Ct,
-                fields: {
-                  country_code: {
-                    n: 1,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  currency_code: {
-                    n: 2,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                },
-              }),
-            Ct.sm_m
-          );
-        }
-        static MBF() {
-          return Ct.sm_mbf || (Ct.sm_mbf = d.w0(Ct.M())), Ct.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ct.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(Ct.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(Ct.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new Ct();
-          return Ct.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(Ct.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return Ct.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(Ct.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return Ct.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetPriceStops_Request";
-        }
-      }
-      class zt extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            zt.prototype.price_stops || d.Sg(zt.M()),
-            c.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            zt.sm_m ||
-              (zt.sm_m = {
-                proto: zt,
-                fields: {
-                  price_stops: { n: 1, c: Rt, r: !0, q: !0 },
-                  currency_code: {
-                    n: 2,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                },
-              }),
-            zt.sm_m
-          );
-        }
-        static MBF() {
-          return zt.sm_mbf || (zt.sm_mbf = d.w0(zt.M())), zt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return zt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(zt.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(zt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new zt();
-          return zt.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(zt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return zt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(zt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return zt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetPriceStops_Response";
-        }
-      }
-      class Rt extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Rt.prototype.formatted_amount || d.Sg(Rt.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Rt.sm_m ||
-              (Rt.sm_m = {
-                proto: Rt,
-                fields: {
-                  formatted_amount: {
-                    n: 1,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  amount_in_cents: {
-                    n: 2,
-                    br: d.qM.readInt64String,
-                    bw: d.gp.writeInt64String,
-                  },
-                },
-              }),
-            Rt.sm_m
-          );
-        }
-        static MBF() {
-          return Rt.sm_mbf || (Rt.sm_mbf = d.w0(Rt.M())), Rt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Rt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(Rt.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(Rt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new Rt();
-          return Rt.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(Rt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return Rt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(Rt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return Rt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetPriceStops_Response_PriceStop";
-        }
-      }
-      class jt extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            jt.prototype.context || d.Sg(jt.M()),
-            c.Message.initialize(this, e, 0, -1, [3], null);
-        }
-        static M() {
-          return (
-            jt.sm_m ||
-              (jt.sm_m = {
-                proto: jt,
-                fields: {
-                  context: { n: 1, c: _t },
-                  store_page_filter: { n: 2, c: _.S7 },
-                  appids: { n: 3, c: ht, r: !0, q: !0 },
-                  steamid: {
-                    n: 4,
-                    br: d.qM.readUint64String,
-                    bw: d.gp.writeUint64String,
-                  },
-                },
-              }),
-            jt.sm_m
-          );
-        }
-        static MBF() {
-          return jt.sm_mbf || (jt.sm_mbf = d.w0(jt.M())), jt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return jt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(jt.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(jt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            r = new jt();
-          return jt.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(jt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return jt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(jt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return jt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetDLCForApps_Request";
-        }
-      }
-      class Tt extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Tt.prototype.dlc_data || d.Sg(Tt.M()),
-            c.Message.initialize(this, e, 0, -1, [1, 2], null);
-        }
-        static M() {
-          return (
-            Tt.sm_m ||
-              (Tt.sm_m = {
-                proto: Tt,
-                fields: {
-                  dlc_data: { n: 1, c: It, r: !0, q: !0 },
-                  playtime: { n: 2, c: Ft, r: !0, q: !0 },
-                },
-              }),
             Tt.sm_m
           );
         }
@@ -47164,14 +46955,14 @@
           return Tt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetDLCForApps_Response";
+          return "CStoreBrowse_GetContentHubConfig_Response_ContentHubConfig";
         }
       }
       class It extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            It.prototype.appid || d.Sg(It.M()),
+            It.prototype.country_code || d.Sg(It.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -47180,25 +46971,16 @@
               (It.sm_m = {
                 proto: It,
                 fields: {
-                  appid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
-                  parentappid: {
+                  country_code: {
+                    n: 1,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  currency_code: {
                     n: 2,
-                    br: d.qM.readUint32,
-                    bw: d.gp.writeUint32,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
                   },
-                  release_date: {
-                    n: 3,
-                    br: d.qM.readUint32,
-                    bw: d.gp.writeUint32,
-                  },
-                  coming_soon: { n: 4, br: d.qM.readBool, bw: d.gp.writeBool },
-                  price: {
-                    n: 5,
-                    br: d.qM.readInt64String,
-                    bw: d.gp.writeInt64String,
-                  },
-                  discount: { n: 6, br: d.qM.readUint32, bw: d.gp.writeUint32 },
-                  free: { n: 7, br: d.qM.readBool, bw: d.gp.writeBool },
                 },
               }),
             It.sm_m
@@ -47236,15 +47018,15 @@
           return It.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetDLCForApps_Response_DLCData";
+          return "CStoreBrowse_GetPriceStops_Request";
         }
       }
       class Ft extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ft.prototype.appid || d.Sg(Ft.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
+            Ft.prototype.price_stops || d.Sg(Ft.M()),
+            c.Message.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -47252,12 +47034,11 @@
               (Ft.sm_m = {
                 proto: Ft,
                 fields: {
-                  appid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
-                  playtime: { n: 2, br: d.qM.readUint32, bw: d.gp.writeUint32 },
-                  last_played: {
-                    n: 3,
-                    br: d.qM.readUint32,
-                    bw: d.gp.writeUint32,
+                  price_stops: { n: 1, c: xt, r: !0, q: !0 },
+                  currency_code: {
+                    n: 2,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
                   },
                 },
               }),
@@ -47296,15 +47077,15 @@
           return Ft.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetDLCForApps_Response_PlaytimeForApp";
+          return "CStoreBrowse_GetPriceStops_Response";
         }
       }
       class xt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            xt.prototype.context || d.Sg(xt.M()),
-            c.Message.initialize(this, e, 0, -1, [2], null);
+            xt.prototype.formatted_amount || d.Sg(xt.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -47312,18 +47093,16 @@
               (xt.sm_m = {
                 proto: xt,
                 fields: {
-                  context: { n: 1, c: _t },
-                  appids: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: d.qM.readUint32,
-                    pbr: d.qM.readPackedUint32,
-                    bw: d.gp.writeRepeatedUint32,
+                  formatted_amount: {
+                    n: 1,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
                   },
-                  flavor: { n: 3, br: d.qM.readString, bw: d.gp.writeString },
-                  count: { n: 4, br: d.qM.readUint32, bw: d.gp.writeUint32 },
-                  store_page_filter: { n: 5, c: _.S7 },
+                  amount_in_cents: {
+                    n: 2,
+                    br: d.qM.readInt64String,
+                    bw: d.gp.writeInt64String,
+                  },
                 },
               }),
             xt.sm_m
@@ -47361,22 +47140,31 @@
           return xt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetDLCForAppsSolr_Request";
+          return "CStoreBrowse_GetPriceStops_Response_PriceStop";
         }
       }
       class Ot extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ot.prototype.dlc_lists || d.Sg(Ot.M()),
-            c.Message.initialize(this, e, 0, -1, [1], null);
+            Ot.prototype.context || d.Sg(Ot.M()),
+            c.Message.initialize(this, e, 0, -1, [3], null);
         }
         static M() {
           return (
             Ot.sm_m ||
               (Ot.sm_m = {
                 proto: Ot,
-                fields: { dlc_lists: { n: 1, c: Wt, r: !0, q: !0 } },
+                fields: {
+                  context: { n: 1, c: ft },
+                  store_page_filter: { n: 2, c: w.S7 },
+                  appids: { n: 3, c: Mt, r: !0, q: !0 },
+                  steamid: {
+                    n: 4,
+                    br: d.qM.readUint64String,
+                    bw: d.gp.writeUint64String,
+                  },
+                },
               }),
             Ot.sm_m
           );
@@ -47413,15 +47201,15 @@
           return Ot.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetDLCForAppsSolr_Response";
+          return "CStoreBrowse_GetDLCForApps_Request";
         }
       }
       class Wt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Wt.prototype.parent_appid || d.Sg(Wt.M()),
-            c.Message.initialize(this, e, 0, -1, [2], null);
+            Wt.prototype.dlc_data || d.Sg(Wt.M()),
+            c.Message.initialize(this, e, 0, -1, [1, 2], null);
         }
         static M() {
           return (
@@ -47429,19 +47217,8 @@
               (Wt.sm_m = {
                 proto: Wt,
                 fields: {
-                  parent_appid: {
-                    n: 1,
-                    br: d.qM.readUint32,
-                    bw: d.gp.writeUint32,
-                  },
-                  dlc_appids: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: d.qM.readUint32,
-                    pbr: d.qM.readPackedUint32,
-                    bw: d.gp.writeRepeatedUint32,
-                  },
+                  dlc_data: { n: 1, c: qt, r: !0, q: !0 },
+                  playtime: { n: 2, c: Ut, r: !0, q: !0 },
                 },
               }),
             Wt.sm_m
@@ -47479,15 +47256,15 @@
           return Wt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetDLCForAppsSolr_Response_DLCList";
+          return "CStoreBrowse_GetDLCForApps_Response";
         }
       }
       class qt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            qt.prototype.packageid || d.Sg(qt.M()),
-            c.Message.initialize(this, e, 0, -1, [1], null);
+            qt.prototype.appid || d.Sg(qt.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -47495,15 +47272,25 @@
               (qt.sm_m = {
                 proto: qt,
                 fields: {
-                  packageid: {
-                    n: 1,
-                    r: !0,
-                    q: !0,
+                  appid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  parentappid: {
+                    n: 2,
                     br: d.qM.readUint32,
-                    pbr: d.qM.readPackedUint32,
-                    bw: d.gp.writeRepeatedUint32,
+                    bw: d.gp.writeUint32,
                   },
-                  context: { n: 2, c: _t },
+                  release_date: {
+                    n: 3,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
+                  coming_soon: { n: 4, br: d.qM.readBool, bw: d.gp.writeBool },
+                  price: {
+                    n: 5,
+                    br: d.qM.readInt64String,
+                    bw: d.gp.writeInt64String,
+                  },
+                  discount: { n: 6, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  free: { n: 7, br: d.qM.readBool, bw: d.gp.writeBool },
                 },
               }),
             qt.sm_m
@@ -47541,14 +47328,14 @@
           return qt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreBrowse_GetHardwareItems_Request";
+          return "CStoreBrowse_GetDLCForApps_Response_DLCData";
         }
       }
       class Ut extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ut.prototype.packageid || d.Sg(Ut.M()),
+            Ut.prototype.appid || d.Sg(Ut.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -47556,6 +47343,311 @@
             Ut.sm_m ||
               (Ut.sm_m = {
                 proto: Ut,
+                fields: {
+                  appid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  playtime: { n: 2, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  last_played: {
+                    n: 3,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
+                },
+              }),
+            Ut.sm_m
+          );
+        }
+        static MBF() {
+          return Ut.sm_mbf || (Ut.sm_mbf = d.w0(Ut.M())), Ut.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ut.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(Ut.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(Ut.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new Ut();
+          return Ut.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(Ut.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return Ut.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(Ut.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return Ut.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetDLCForApps_Response_PlaytimeForApp";
+        }
+      }
+      class Lt extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Lt.prototype.context || d.Sg(Lt.M()),
+            c.Message.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            Lt.sm_m ||
+              (Lt.sm_m = {
+                proto: Lt,
+                fields: {
+                  context: { n: 1, c: ft },
+                  appids: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: d.qM.readUint32,
+                    pbr: d.qM.readPackedUint32,
+                    bw: d.gp.writeRepeatedUint32,
+                  },
+                  flavor: { n: 3, br: d.qM.readString, bw: d.gp.writeString },
+                  count: { n: 4, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  store_page_filter: { n: 5, c: w.S7 },
+                },
+              }),
+            Lt.sm_m
+          );
+        }
+        static MBF() {
+          return Lt.sm_mbf || (Lt.sm_mbf = d.w0(Lt.M())), Lt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Lt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(Lt.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(Lt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new Lt();
+          return Lt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(Lt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return Lt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(Lt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return Lt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetDLCForAppsSolr_Request";
+        }
+      }
+      class kt extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            kt.prototype.dlc_lists || d.Sg(kt.M()),
+            c.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            kt.sm_m ||
+              (kt.sm_m = {
+                proto: kt,
+                fields: { dlc_lists: { n: 1, c: Pt, r: !0, q: !0 } },
+              }),
+            kt.sm_m
+          );
+        }
+        static MBF() {
+          return kt.sm_mbf || (kt.sm_mbf = d.w0(kt.M())), kt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return kt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(kt.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(kt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new kt();
+          return kt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(kt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return kt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(kt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return kt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetDLCForAppsSolr_Response";
+        }
+      }
+      class Pt extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Pt.prototype.parent_appid || d.Sg(Pt.M()),
+            c.Message.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            Pt.sm_m ||
+              (Pt.sm_m = {
+                proto: Pt,
+                fields: {
+                  parent_appid: {
+                    n: 1,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
+                  dlc_appids: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: d.qM.readUint32,
+                    pbr: d.qM.readPackedUint32,
+                    bw: d.gp.writeRepeatedUint32,
+                  },
+                },
+              }),
+            Pt.sm_m
+          );
+        }
+        static MBF() {
+          return Pt.sm_mbf || (Pt.sm_mbf = d.w0(Pt.M())), Pt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Pt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(Pt.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(Pt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new Pt();
+          return Pt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(Pt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return Pt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(Pt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return Pt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetDLCForAppsSolr_Response_DLCList";
+        }
+      }
+      class Dt extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Dt.prototype.packageid || d.Sg(Dt.M()),
+            c.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            Dt.sm_m ||
+              (Dt.sm_m = {
+                proto: Dt,
+                fields: {
+                  packageid: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: d.qM.readUint32,
+                    pbr: d.qM.readPackedUint32,
+                    bw: d.gp.writeRepeatedUint32,
+                  },
+                  context: { n: 2, c: ft },
+                },
+              }),
+            Dt.sm_m
+          );
+        }
+        static MBF() {
+          return Dt.sm_mbf || (Dt.sm_mbf = d.w0(Dt.M())), Dt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Dt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(Dt.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(Dt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            r = new Dt();
+          return Dt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(Dt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return Dt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(Dt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return Dt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetHardwareItems_Request";
+        }
+      }
+      class At extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            At.prototype.packageid || d.Sg(At.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            At.sm_m ||
+              (At.sm_m = {
+                proto: At,
                 fields: {
                   packageid: {
                     n: 1,
@@ -47685,112 +47777,112 @@
                   },
                 },
               }),
-            Ut.sm_m
+            At.sm_m
           );
         }
         static MBF() {
-          return Ut.sm_mbf || (Ut.sm_mbf = d.w0(Ut.M())), Ut.sm_mbf;
+          return At.sm_mbf || (At.sm_mbf = d.w0(At.M())), At.sm_mbf;
         }
         toObject(e = !1) {
-          return Ut.toObject(e, this);
+          return At.toObject(e, this);
         }
         static toObject(e, t) {
-          return d.BT(Ut.M(), e, t);
+          return d.BT(At.M(), e, t);
         }
         static fromObject(e) {
-          return d.Uq(Ut.M(), e);
+          return d.Uq(At.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (u().BinaryReader)(e),
-            r = new Ut();
-          return Ut.deserializeBinaryFromReader(r, t);
+            r = new At();
+          return At.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return d.zj(Ut.MBF(), e, t);
+          return d.zj(At.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (u().BinaryWriter)();
-          return Ut.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return At.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          d.i0(Ut.M(), e, t);
+          d.i0(At.M(), e, t);
         }
         serializeBase64String() {
           var e = new (u().BinaryWriter)();
-          return Ut.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return At.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CHardwarePackageDetails";
         }
       }
-      class Lt extends c.Message {
+      class Et extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Lt.prototype.details || d.Sg(Lt.M()),
+            Et.prototype.details || d.Sg(Et.M()),
             c.Message.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            Lt.sm_m ||
-              (Lt.sm_m = {
-                proto: Lt,
-                fields: { details: { n: 1, c: Ut, r: !0, q: !0 } },
+            Et.sm_m ||
+              (Et.sm_m = {
+                proto: Et,
+                fields: { details: { n: 1, c: At, r: !0, q: !0 } },
               }),
-            Lt.sm_m
+            Et.sm_m
           );
         }
         static MBF() {
-          return Lt.sm_mbf || (Lt.sm_mbf = d.w0(Lt.M())), Lt.sm_mbf;
+          return Et.sm_mbf || (Et.sm_mbf = d.w0(Et.M())), Et.sm_mbf;
         }
         toObject(e = !1) {
-          return Lt.toObject(e, this);
+          return Et.toObject(e, this);
         }
         static toObject(e, t) {
-          return d.BT(Lt.M(), e, t);
+          return d.BT(Et.M(), e, t);
         }
         static fromObject(e) {
-          return d.Uq(Lt.M(), e);
+          return d.Uq(Et.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (u().BinaryReader)(e),
-            r = new Lt();
-          return Lt.deserializeBinaryFromReader(r, t);
+            r = new Et();
+          return Et.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return d.zj(Lt.MBF(), e, t);
+          return d.zj(Et.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (u().BinaryWriter)();
-          return Lt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Et.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          d.i0(Lt.M(), e, t);
+          d.i0(Et.M(), e, t);
         }
         serializeBase64String() {
           var e = new (u().BinaryWriter)();
-          return Lt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Et.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStoreBrowse_GetHardwareItems_Response";
         }
       }
-      class kt extends c.Message {
+      class Nt extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            kt.prototype.filter_failure || d.Sg(kt.M()),
+            Nt.prototype.filter_failure || d.Sg(Nt.M()),
             c.Message.initialize(this, e, 0, -1, [21, 30], null);
         }
         static M() {
           return (
-            kt.sm_m ||
-              (kt.sm_m = {
-                proto: kt,
+            Nt.sm_m ||
+              (Nt.sm_m = {
+                proto: Nt,
                 fields: {
                   filter_failure: {
                     n: 1,
-                    d: je,
+                    d: xe,
                     br: d.qM.readEnum,
                     bw: d.gp.writeEnum,
                   },
@@ -47859,48 +47951,48 @@
                   },
                 },
               }),
-            kt.sm_m
+            Nt.sm_m
           );
         }
         static MBF() {
-          return kt.sm_mbf || (kt.sm_mbf = d.w0(kt.M())), kt.sm_mbf;
+          return Nt.sm_mbf || (Nt.sm_mbf = d.w0(Nt.M())), Nt.sm_mbf;
         }
         toObject(e = !1) {
-          return kt.toObject(e, this);
+          return Nt.toObject(e, this);
         }
         static toObject(e, t) {
-          return d.BT(kt.M(), e, t);
+          return d.BT(Nt.M(), e, t);
         }
         static fromObject(e) {
-          return d.Uq(kt.M(), e);
+          return d.Uq(Nt.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (u().BinaryReader)(e),
-            r = new kt();
-          return kt.deserializeBinaryFromReader(r, t);
+            r = new Nt();
+          return Nt.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return d.zj(kt.MBF(), e, t);
+          return d.zj(Nt.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (u().BinaryWriter)();
-          return kt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Nt.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          d.i0(kt.M(), e, t);
+          d.i0(Nt.M(), e, t);
         }
         serializeBase64String() {
           var e = new (u().BinaryWriter)();
-          return kt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Nt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreBrowseFilterFailure";
         }
       }
-      var Pt;
+      var Gt;
       !(function (e) {
         (e.GetItems = function (e, t, r) {
-          return e.SendMsg("StoreBrowse.GetItems#1", (0, m.I8)(Bt, t, r), bt, {
+          return e.SendMsg("StoreBrowse.GetItems#1", (0, m.I8)(yt, t, r), St, {
             bConstMethod: !0,
             ePrivilege: 1,
             eWebAPIKeyRequirement: 1,
@@ -47909,52 +48001,52 @@
           (e.GetStoreCategories = function (e, t, r) {
             return e.SendMsg(
               "StoreBrowse.GetStoreCategories#1",
-              (0, m.I8)(wt, t, r),
-              ft,
+              (0, m.I8)(vt, t, r),
+              Ct,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetContentHubConfig = function (e, t, r) {
             return e.SendMsg(
               "StoreBrowse.GetContentHubConfig#1",
-              (0, m.I8)(yt, t, r),
-              St,
+              (0, m.I8)(Rt, t, r),
+              jt,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetPriceStops = function (e, t, r) {
             return e.SendMsg(
               "StoreBrowse.GetPriceStops#1",
-              (0, m.I8)(Ct, t, r),
-              zt,
+              (0, m.I8)(It, t, r),
+              Ft,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetDLCForApps = function (e, t, r) {
             return e.SendMsg(
               "StoreBrowse.GetDLCForApps#1",
-              (0, m.I8)(jt, t, r),
-              Tt,
+              (0, m.I8)(Ot, t, r),
+              Wt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetDLCForAppsSolr = function (e, t, r) {
             return e.SendMsg(
               "StoreBrowse.GetDLCForAppsSolr#1",
-              (0, m.I8)(xt, t, r),
-              Ot,
+              (0, m.I8)(Lt, t, r),
+              kt,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetHardwareItems = function (e, t, r) {
             return e.SendMsg(
               "StoreBrowse.GetHardwareItems#1",
-              (0, m.I8)(qt, t, r),
-              Lt,
+              (0, m.I8)(Dt, t, r),
+              Et,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           });
-      })(Pt || (Pt = {}));
+      })(Gt || (Gt = {}));
     },
     38516: (e, t, r) => {
       "use strict";
@@ -47983,7 +48075,7 @@
         a = r(89068),
         o = r(56545),
         l = r(45706),
-        c = r(6824);
+        c = r(30570);
       const u = 0,
         d = 1,
         m = 11,
@@ -51408,6 +51500,7 @@
         "platforms",
         "release",
         "package_groups",
+        "extra_details",
       ];
       function N(e) {
         const t = { ...e };
@@ -51431,7 +51524,7 @@
         u = r(37085),
         d = r(56545),
         m = r(59411),
-        g = r(6824),
+        g = r(30570),
         p = r(58632),
         _ = r.n(p),
         h = r(52541);
@@ -51604,7 +51697,7 @@
         RH: () => c,
         zj: () => l,
       });
-      var i = r(6824),
+      var i = r(30570),
         n = r(81393);
       function s(e) {
         return "appid" in e
@@ -51740,7 +51833,7 @@
     58214: (e, t, r) => {
       "use strict";
       r.d(t, { Bn: () => a, Y7: () => n, rV: () => s });
-      var i = r(6824);
+      var i = r(30570);
       r(38516);
       function n(e) {
         return e.bIncludeUnpublished
@@ -57440,7 +57533,7 @@
     72839: (e, t, r) => {
       "use strict";
       r.d(t, { Bn: () => o, hS: () => a, rV: () => s });
-      var i = r(6824),
+      var i = r(30570),
         n = r(78327);
       r(38516);
       function s(e, t) {
@@ -57461,7 +57554,7 @@
     75279: (e, t, r) => {
       "use strict";
       r.d(t, { Ay: () => d, QO: () => B });
-      var i = r(6824),
+      var i = r(30570),
         n = (r(97471), r(61859)),
         s = r(91675),
         a = r(78327),
@@ -58624,7 +58717,7 @@
         o = r(56545),
         l = r(96059),
         c = r(59411),
-        u = r(6824),
+        u = r(30570),
         d = r(81393),
         m = r(68797),
         g = r(78327),
@@ -59560,7 +59653,7 @@
         n = r.n(i),
         s = r(89068),
         a = r(56545),
-        o = r(6824);
+        o = r(30570);
       class l extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -77000,15 +77093,17 @@
         const { value: t, children: r, role: i = "radio", ...n } = e,
           { value: l, setValue: c, disabled: u } = a.useContext(O);
         let m = c;
-        const g = t === l;
+        const g = a.useId(),
+          p = t === l;
         return (0, s.jsx)(o.ml, {
+          focusRingSizeElementID: e.bSetFocusRingSizeElementID ? g : void 0,
           role: i,
-          "aria-checked": g,
-          "aria-selected": g,
+          "aria-checked": p,
+          "aria-selected": p,
           className: (0, d.A)(
             x().Button,
             "RadioButton",
-            g && x().Active,
+            p && x().Active,
             u && x().Disabled,
           ),
           onClick: u ? void 0 : () => m(t),
@@ -80675,7 +80770,7 @@
       r.d(t, { lS: () => w, lz: () => M, wo: () => f });
       var i = r(7850),
         n = r(2160),
-        s = r(6824),
+        s = r(30570),
         a = r(90626);
       function o(e) {
         switch (e) {
@@ -80920,94 +81015,95 @@
     4869: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $0s: () => G,
-        BPi: () => re,
-        Bal: () => X,
-        BlK: () => je,
-        CeX: () => A,
-        DEV: () => He,
-        EZL: () => ke,
-        Epp: () => K,
-        FId: () => Me,
-        Gj3: () => Ge,
-        Hsy: () => U,
-        JPq: () => J,
-        JaO: () => N,
-        K6w: () => Ce,
+        $0s: () => H,
+        BPi: () => ie,
+        Bal: () => Y,
+        BlK: () => Te,
+        CeX: () => E,
+        DEV: () => Ve,
+        EZL: () => Pe,
+        Epp: () => $,
+        FId: () => ye,
+        Gj3: () => He,
+        Hsy: () => L,
+        JPq: () => ee,
+        JaO: () => G,
+        K6w: () => ze,
         K9I: () => f,
-        LSz: () => ye,
+        LSz: () => Se,
         MGO: () => h,
-        Maz: () => ue,
-        O7b: () => Ve,
-        OMN: () => C,
-        Q9b: () => Z,
-        Rkk: () => F,
+        Maz: () => de,
+        O7b: () => Ze,
+        OMN: () => z,
+        Q9b: () => K,
+        Rkk: () => x,
         TPi: () => b,
-        UKJ: () => Se,
-        VBK: () => qe,
-        VnB: () => Q,
+        UKJ: () => ve,
+        VBK: () => Ue,
+        VnB: () => X,
         W8t: () => M,
-        XW_: () => ne,
-        YNO: () => x,
-        YqK: () => ve,
-        ZyV: () => V,
+        XW_: () => se,
+        YNO: () => O,
+        YqK: () => Ce,
+        ZyV: () => Z,
         _3Z: () => B,
-        _Q2: () => te,
-        _V3: () => D,
+        _Q2: () => re,
+        _V3: () => A,
         a_4: () => w,
         b8_: () => v,
-        bb4: () => Fe,
-        bm: () => z,
-        bmT: () => ge,
-        cKB: () => j,
+        bb4: () => xe,
+        bm: () => R,
+        bmT: () => pe,
+        cKB: () => T,
         cLJ: () => u,
-        dWO: () => ze,
-        dyV: () => oe,
-        fG_: () => ie,
-        fQB: () => E,
-        ffu: () => I,
-        gat: () => Pe,
-        hJ4: () => P,
-        iDD: () => T,
-        iYj: () => Ee,
-        id: () => Ie,
-        jE0: () => ee,
-        jRw: () => _e,
-        jXA: () => we,
-        jvG: () => $,
-        kNE: () => pe,
+        dWO: () => Re,
+        dyV: () => le,
+        fG_: () => ne,
+        fQB: () => N,
+        ffu: () => F,
+        gat: () => De,
+        hJ4: () => D,
+        iDD: () => I,
+        iYj: () => Ne,
+        id: () => Fe,
+        jE0: () => te,
+        jGG: () => C,
+        jRw: () => he,
+        jXA: () => fe,
+        jvG: () => Q,
+        kNE: () => _e,
         l1R: () => y,
-        l26: () => se,
-        l4n: () => Y,
-        lGP: () => Ue,
-        lMJ: () => q,
-        mLi: () => le,
-        nl: () => L,
-        o5t: () => We,
-        p71: () => xe,
+        l26: () => ae,
+        l4n: () => J,
+        lGP: () => Le,
+        lMJ: () => U,
+        mLi: () => ce,
+        nl: () => k,
+        o5t: () => qe,
+        p71: () => Oe,
         pcV: () => p,
-        q8c: () => Re,
-        qOW: () => he,
-        qY3: () => De,
-        qzO: () => be,
-        r7n: () => fe,
-        rlm: () => O,
-        rnq: () => me,
-        rxV: () => H,
-        sED: () => k,
-        sXN: () => ce,
-        tI4: () => Ne,
+        q8c: () => je,
+        qOW: () => Be,
+        qY3: () => Ae,
+        qzO: () => we,
+        r7n: () => Me,
+        rlm: () => W,
+        rnq: () => ge,
+        rxV: () => V,
+        sED: () => P,
+        sXN: () => ue,
+        tI4: () => Ge,
         u49: () => S,
-        ur3: () => ae,
-        vB9: () => de,
-        vIU: () => Te,
-        vbm: () => Le,
-        vsW: () => Oe,
+        ur3: () => oe,
+        vB9: () => me,
+        vIU: () => Ie,
+        vbm: () => ke,
+        vsW: () => We,
         wB_: () => d,
-        x7X: () => Be,
-        y$y: () => W,
-        yUV: () => R,
-        ycU: () => Ae,
+        x7X: () => be,
+        y$y: () => q,
+        yUV: () => j,
+        ycU: () => Ee,
       });
       var i = r(7850),
         n = (r(90626), r(24864)),
@@ -81168,41 +81264,24 @@
                   }),
                 ],
               })
-            : "xbox" == t
-              ? r
-                ? (0, i.jsxs)("svg", {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    version: "1.1",
-                    id: "Layer_1",
-                    x: "0px",
-                    y: "0px",
-                    viewBox: "0 0 36 36",
-                    ...n,
-                    children: [
-                      (0, i.jsx)("path", {
-                        fill: "currentColor",
-                        opacity: "0.5",
-                        d: "M12.9,6.2c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1  c-0.4,0.3-0.8,0.7-1.1,1C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2  c0.8-0.3,4.4-0.4,7.9-0.4V6.2H12.9z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8  c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1  c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z",
-                      }),
-                      (0, i.jsx)("path", {
-                        fill: "currentColor",
-                        d: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H18v17.6c3.5,0,7,0.1,7.9,0.4c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M27.6,8.7  c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2  s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4  C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4C31.5,13.4,30.9,14.1,30.1,14.1z",
-                      }),
-                    ],
-                  })
-                : (0, i.jsx)("svg", {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 36 36",
-                    fill: "none",
-                    ...n,
-                    children: (0, i.jsx)("path", {
-                      fill: "currentColor",
-                      fillRule: "evenodd",
-                      clipRule: "evenodd",
-                      d: "M11.25 5.625C11.909 5.625 12.182 5.81802 12.4081 5.97792C12.568 6.09099 12.7045 6.1875 12.9375 6.1875H23.0625C23.2955 6.1875 23.432 6.09099 23.5919 5.97792C23.818 5.81802 24.091 5.625 24.75 5.625C25.875 5.625 29.25 6.75 29.8125 7.3125C30.375 7.875 30.375 8.4375 30.375 8.4375V8.5803C30.8163 8.91923 31.1986 9.26106 31.5 9.5625C32.625 10.6875 36 20.25 36 25.3125C36 30.375 32.625 30.9375 32.625 30.9375C31.7178 30.9375 30.323 29.1494 28.9649 27.4083C27.7966 25.9106 26.6553 24.4476 25.875 24.1875C24.1875 23.625 11.8125 23.625 10.125 24.1875C9.34465 24.4476 8.20344 25.9106 7.03512 27.4083C5.67696 29.1494 4.28215 30.9375 3.375 30.9375C3.375 30.9375 0 30.375 0 25.3125C0 20.25 3.375 10.6875 4.5 9.5625C4.80144 9.26106 5.18366 8.91923 5.625 8.5803V8.4375C5.625 8.4375 5.625 7.875 6.1875 7.3125C6.75 6.75 10.125 5.625 11.25 5.625ZM27.5625 8.71875C28.3392 8.71875 28.9688 9.34835 28.9688 10.125C28.9688 10.9017 28.3392 11.5312 27.5625 11.5312C26.7858 11.5312 26.1562 10.9017 26.1562 10.125C26.1562 9.34835 26.7858 8.71875 27.5625 8.71875ZM8.4375 14.625C9.68014 14.625 10.6875 13.6176 10.6875 12.375C10.6875 11.1324 9.68014 10.125 8.4375 10.125C7.19486 10.125 6.1875 11.1324 6.1875 12.375C6.1875 13.6176 7.19486 14.625 8.4375 14.625ZM23.0625 20.25C24.3051 20.25 25.3125 19.2426 25.3125 18C25.3125 16.7574 24.3051 15.75 23.0625 15.75C21.8199 15.75 20.8125 16.7574 20.8125 18C20.8125 19.2426 21.8199 20.25 23.0625 20.25ZM12.0938 17.1562V16.3125C12.0938 16.0018 12.3456 15.75 12.6562 15.75H13.7812C14.0919 15.75 14.3438 16.0018 14.3438 16.3125V17.1562H15.1875C15.4982 17.1562 15.75 17.4081 15.75 17.7188V18.8438C15.75 19.1544 15.4982 19.4062 15.1875 19.4062H14.3438V20.25C14.3438 20.5607 14.0919 20.8125 13.7812 20.8125H12.6562C12.3456 20.8125 12.0938 20.5607 12.0938 20.25V19.4062H11.25C10.9393 19.4062 10.6875 19.1544 10.6875 18.8438V17.7188C10.6875 17.4081 10.9393 17.1562 11.25 17.1562H12.0938ZM25.0312 14.0625C25.8079 14.0625 26.4375 13.4329 26.4375 12.6562C26.4375 11.8796 25.8079 11.25 25.0312 11.25C24.2546 11.25 23.625 11.8796 23.625 12.6562C23.625 13.4329 24.2546 14.0625 25.0312 14.0625ZM31.5 12.6562C31.5 13.4329 30.8704 14.0625 30.0938 14.0625C29.3171 14.0625 28.6875 13.4329 28.6875 12.6562C28.6875 11.8796 29.3171 11.25 30.0938 11.25C30.8704 11.25 31.5 11.8796 31.5 12.6562ZM28.9688 15.1875C28.9688 14.4108 28.3392 13.7812 27.5625 13.7812C26.7858 13.7812 26.1562 14.4108 26.1562 15.1875C26.1562 15.9642 26.7858 16.5938 27.5625 16.5938C28.3392 16.5938 28.9688 15.9642 28.9688 15.1875Z",
+            : "steamframe" == t
+              ? (0, i.jsxs)("svg", {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 595 397",
+                  fill: "none",
+                  ...n,
+                  children: [
+                    (0, i.jsx)("path", {
+                      fill: "white",
+                      d: "M104.789 78.6405H129.852C131.696 78.6405 133.203 77.1359 133.203 75.2934C133.203 73.451 131.696 71.9464 129.852 71.9464H104.789C102.945 71.9464 101.439 73.451 101.439 75.2934C101.439 77.1359 102.945 78.6405 104.789 78.6405ZM132.895 140.351C132.895 126.165 144.453 114.619 158.654 114.619C172.856 114.619 184.414 126.165 184.414 140.351C184.414 154.538 172.856 166.084 158.654 166.084C144.453 166.084 132.895 154.538 132.895 140.351ZM140.201 140.351C140.201 150.526 148.459 158.775 158.644 158.775C168.829 158.775 177.088 150.526 177.088 140.351C177.088 130.177 168.829 121.927 158.644 121.927C148.459 121.927 140.201 130.177 140.201 140.351ZM111.101 179.707C111.101 177.947 109.677 176.524 107.915 176.524C106.152 176.524 104.728 177.947 104.728 179.707C104.728 181.468 106.152 182.891 107.915 182.891C109.677 182.891 111.101 181.468 111.101 179.707ZM158.644 152.634C165.427 152.634 170.94 147.127 170.94 140.351C170.94 133.575 165.427 128.068 158.644 128.068C151.861 128.068 146.349 133.575 146.349 140.351C146.349 147.127 151.861 152.634 158.644 152.634ZM158.573 259.402H158.614C158.614 259.402 162.179 256.659 165.745 255.472C169.311 254.284 178.338 251.684 180.223 249.688C182.119 247.693 182.447 245.533 181.955 242.564C181.473 239.596 177.58 230.845 175.797 224.857C175.735 224.662 175.674 224.458 175.612 224.243C167.856 228.48 159.669 231.838 151.164 234.274C148.798 258.921 157.855 259.402 158.573 259.402ZM166.329 260.17C164.28 261.04 162.148 262.493 161.421 263.046C160.673 263.629 159.751 263.967 158.798 264.008H158.573C157.517 264.008 153.849 263.711 150.724 259.812C146.974 255.144 145.549 247.007 146.441 235.522C137.024 237.825 127.27 239.002 117.321 239.002C90.8851 239.002 65.7406 230.66 44.8893 215.225C45.1762 215.798 45.4631 216.361 45.7295 216.924C68.6403 265.288 88.0469 397 141.656 397C161.155 397 187.959 382.752 181.043 336.538C181.043 336.538 173.245 297.458 166.329 260.17ZM98.4879 124.179C99.2462 124.179 99.8712 123.565 99.8712 122.797V108.723C99.8712 107.966 99.2564 107.341 98.4879 107.341H85.8849C80.8335 107.341 76.7349 103.237 76.7349 98.2008V84.0961C76.7349 83.3387 76.1201 82.7143 75.3517 82.7143H58.2198C57.4615 82.7143 56.8365 83.3284 56.8365 84.0961V98.2008C56.8365 103.247 52.7277 107.341 47.6865 107.341H35.0835C34.3253 107.341 33.7002 107.955 33.7002 108.723V122.797C33.7002 123.555 34.315 124.179 35.0835 124.179H47.6865C52.738 124.179 56.8365 128.283 56.8365 133.319V147.424C56.8365 148.182 57.4513 148.806 58.2198 148.806H75.3517C76.1099 148.806 76.7349 148.192 76.7349 147.424V133.319C76.7349 128.273 80.8437 124.179 85.8849 124.179H98.4879ZM117.321 234.396C52.5228 234.396 0 181.928 0 117.198C0 52.468 52.5228 0 117.321 0C182.119 0 234.641 52.4782 234.641 117.198C234.641 159.645 212.058 196.811 178.235 217.385C176.893 218.204 175.53 218.992 174.157 219.739C167.108 223.659 159.607 226.863 151.759 229.258C150.16 229.76 148.552 230.21 146.933 230.63C137.475 233.086 127.547 234.396 117.321 234.396ZM158.644 108.477C141.021 108.477 126.737 122.746 126.737 140.351C126.737 157.957 141.021 172.225 158.644 172.225C176.268 172.225 190.551 157.957 190.551 140.351C190.551 122.746 176.268 108.477 158.644 108.477ZM111.685 51.2806C111.685 54.3922 114.206 56.9102 117.321 56.9102C120.436 56.9102 122.956 54.3922 122.956 51.2806C122.956 48.169 120.436 45.651 117.321 45.651C114.206 45.651 111.685 48.169 111.685 51.2806ZM95.2911 75.2934C95.2911 80.5341 99.5433 84.7819 104.789 84.7819H129.852C135.098 84.7819 139.35 80.5341 139.35 75.2934C139.35 70.0528 135.098 65.805 129.852 65.805H104.789C99.5433 65.805 95.2911 70.0528 95.2911 75.2934ZM85.8849 130.32H98.4879C102.648 130.32 106.019 126.953 106.019 122.797V108.723C106.019 104.567 102.648 101.2 98.4879 101.2H85.8849C84.225 101.2 82.8827 99.859 82.8827 98.2008V84.0961C82.8827 79.9404 79.5117 76.5729 75.3517 76.5729H58.2198C54.0598 76.5729 50.6887 79.9404 50.6887 84.0961V98.2008C50.6887 99.859 49.3464 101.2 47.6865 101.2H35.0835C30.9235 101.2 27.5524 104.567 27.5524 108.723V122.797C27.5524 126.953 30.9235 130.32 35.0835 130.32H47.6865C49.3464 130.32 50.6887 131.661 50.6887 133.319V147.424C50.6887 151.58 54.0598 154.947 58.2198 154.947H75.3517C79.5117 154.947 82.8827 151.58 82.8827 147.424V133.319C82.8827 131.661 84.225 130.32 85.8849 130.32ZM119.206 184.047C119.206 174.743 111.654 167.21 102.351 167.21C93.0471 167.21 86.2435 174.027 85.5468 182.696L94.5841 186.432C95.3525 185.91 96.2747 185.603 97.2686 185.603C97.3608 185.603 97.4428 185.603 97.535 185.603L101.552 179.789C101.552 179.789 101.552 179.738 101.552 179.707C101.552 176.207 104.4 173.351 107.915 173.351C111.429 173.351 114.267 176.197 114.267 179.707C114.267 183.218 111.419 186.064 107.915 186.064C107.863 186.064 107.822 186.064 107.771 186.064L102.043 190.148C102.043 190.219 102.043 190.301 102.043 190.373C102.043 193.003 99.9019 195.143 97.2686 195.143C94.9632 195.143 93.0266 193.495 92.586 191.315L86.1206 188.643C88.1186 195.716 94.6251 200.895 102.341 200.895C111.654 200.895 119.196 193.351 119.196 184.057L119.206 184.047ZM99.5536 191.345C98.99 192.686 97.4531 193.321 96.1005 192.768L94.0308 191.918C94.3996 192.686 95.0349 193.321 95.8751 193.669C97.699 194.426 99.7995 193.566 100.558 191.745C100.927 190.864 100.927 189.892 100.558 189.012C100.189 188.131 99.5023 187.435 98.6211 187.067C97.7399 186.698 96.8075 186.719 95.9776 187.026L98.1191 187.906C99.4613 188.469 100.097 190.004 99.5433 191.356L99.5536 191.345ZM107.904 183.945C110.24 183.945 112.136 182.051 112.136 179.718C112.136 177.384 110.24 175.49 107.904 175.49C105.568 175.49 103.673 177.384 103.673 179.718C103.673 182.051 105.578 183.945 107.904 183.945Z",
                     }),
-                  })
-              : "ps4" == t
+                    (0, i.jsx)("path", {
+                      fill: "white",
+                      d: "M461.638 75.2934C461.638 73.451 463.144 71.9464 464.988 71.9464H490.051C491.895 71.9464 493.401 73.451 493.401 75.2934C493.401 77.1359 491.895 78.6405 490.051 78.6405H464.988C463.144 78.6405 461.638 77.1359 461.638 75.2934ZM501.188 179.707C501.188 177.947 499.764 176.524 498.002 176.524C496.24 176.524 494.815 177.947 494.815 179.707C494.815 181.468 496.24 182.891 498.002 182.891C499.764 182.891 501.188 181.468 501.188 179.707ZM436.196 127.966C429.413 127.966 423.9 133.473 423.9 140.249C423.9 147.025 429.413 152.532 436.196 152.532C442.979 152.532 448.492 147.025 448.492 140.249C448.492 133.473 442.979 127.966 436.196 127.966ZM503.504 124.281C508.207 124.281 512.029 120.463 512.029 115.765C512.029 111.067 508.207 107.249 503.504 107.249C498.801 107.249 494.979 111.067 494.979 115.765C494.979 120.463 498.801 124.281 503.504 124.281ZM528.054 99.7567C532.758 99.7567 536.579 95.9388 536.579 91.2406C536.579 86.5424 532.758 82.7245 528.054 82.7245C523.351 82.7245 519.53 86.5424 519.53 91.2406C519.53 95.9388 523.351 99.7567 528.054 99.7567ZM461.945 140.351C461.945 154.538 450.387 166.084 436.186 166.084C421.984 166.084 410.426 154.538 410.426 140.351C410.426 126.165 421.984 114.619 436.186 114.619C450.387 114.619 461.945 126.165 461.945 140.351ZM454.639 140.249C454.639 130.075 446.381 121.825 436.196 121.825C426.011 121.825 417.752 130.075 417.752 140.249C417.752 150.423 426.011 158.673 436.196 158.673C446.381 158.673 454.639 150.423 454.639 140.249ZM447.908 230.63C446.289 230.21 444.68 229.76 443.081 229.258C435.233 226.863 427.732 223.659 420.683 219.739C419.31 218.992 417.947 218.204 416.605 217.385C382.782 196.811 360.199 159.645 360.199 117.198C360.199 52.4782 412.732 0 477.519 0C542.307 0 594.84 52.4782 594.84 117.198C594.84 181.918 542.317 234.396 477.519 234.396C467.294 234.396 457.365 233.086 447.908 230.63ZM509.293 184.047C509.293 174.743 501.742 167.21 492.438 167.21C483.134 167.21 476.331 174.027 475.634 182.696L484.671 186.432C485.44 185.91 486.362 185.603 487.356 185.603C487.448 185.603 487.53 185.603 487.622 185.603L491.639 179.789C491.639 179.789 491.639 179.738 491.639 179.707C491.639 176.207 494.487 173.351 498.002 173.351C501.516 173.351 504.355 176.197 504.355 179.707C504.355 183.218 501.506 186.064 498.002 186.064C497.951 186.064 497.91 186.064 497.858 186.064L492.131 190.148C492.131 190.219 492.131 190.301 492.131 190.373C492.131 193.003 489.989 195.143 487.356 195.143C485.05 195.143 483.114 193.495 482.673 191.315L476.208 188.643C478.206 195.716 484.712 200.895 492.428 200.895C501.742 200.895 509.283 193.351 509.283 184.057L509.293 184.047ZM489.651 191.345C489.088 192.686 487.551 193.321 486.198 192.768L484.128 191.918C484.497 192.686 485.132 193.321 485.973 193.669C487.797 194.426 489.897 193.566 490.655 191.745C491.024 190.864 491.024 189.892 490.655 189.012C490.286 188.131 489.6 187.435 488.719 187.067C487.838 186.698 486.905 186.719 486.075 187.026L488.217 187.906C489.559 188.469 490.194 190.004 489.641 191.356L489.651 191.345ZM498.002 183.945C500.338 183.945 502.234 182.051 502.234 179.718C502.234 177.384 500.338 175.49 498.002 175.49C495.666 175.49 493.77 177.384 493.77 179.718C493.77 182.051 495.676 183.945 498.002 183.945ZM542.727 140.29C542.727 132.193 536.159 125.632 528.054 125.632C519.95 125.632 513.382 132.193 513.382 140.29C513.382 148.386 519.95 154.947 528.054 154.947C536.159 154.947 542.727 148.386 542.727 140.29ZM552.605 101.098C544.5 101.098 537.932 107.659 537.932 115.755C537.932 123.851 544.5 130.412 552.605 130.412C560.71 130.412 567.277 123.851 567.277 115.755C567.277 107.659 560.71 101.098 552.605 101.098ZM513.371 91.2304C513.371 99.3268 519.939 105.888 528.044 105.888C536.149 105.888 542.717 99.3268 542.717 91.2304C542.717 83.134 536.149 76.5729 528.044 76.5729C519.939 76.5729 513.371 83.134 513.371 91.2304ZM503.504 101.098C495.399 101.098 488.831 107.659 488.831 115.755C488.831 123.851 495.399 130.412 503.504 130.412C511.609 130.412 518.177 123.851 518.177 115.755C518.177 107.659 511.609 101.098 503.504 101.098ZM471.884 51.2806C471.884 54.3922 474.405 56.9102 477.519 56.9102C480.634 56.9102 483.155 54.3922 483.155 51.2806C483.155 48.169 480.634 45.651 477.519 45.651C474.405 45.651 471.884 48.169 471.884 51.2806ZM455.49 75.2934C455.49 80.5341 459.742 84.7819 464.988 84.7819H490.051C495.297 84.7819 499.549 80.5341 499.549 75.2934C499.549 70.0528 495.297 65.805 490.051 65.805H464.988C459.742 65.805 455.49 70.0528 455.49 75.2934ZM468.093 140.351C468.093 122.746 453.809 108.477 436.186 108.477C418.562 108.477 404.278 122.746 404.278 140.351C404.278 157.957 418.562 172.225 436.186 172.225C453.809 172.225 468.093 157.957 468.093 140.351ZM477.519 239.002C467.581 239.002 457.826 237.825 448.41 235.533C449.291 247.017 447.866 255.144 444.116 259.812C440.991 263.711 437.323 264.008 436.278 264.008H436.042C435.089 263.967 434.177 263.629 433.419 263.056C432.692 262.504 430.571 261.04 428.511 260.17C421.595 297.458 413.797 336.538 413.797 336.538C406.881 382.742 433.686 397 453.184 397C506.783 397 526.2 265.288 549.111 216.924C549.377 216.361 549.654 215.798 549.951 215.225C529.1 230.671 503.955 239.002 477.519 239.002ZM552.605 124.281C557.308 124.281 561.13 120.463 561.13 115.765C561.13 111.067 557.308 107.249 552.605 107.249C547.902 107.249 544.08 111.067 544.08 115.765C544.08 120.463 547.902 124.281 552.605 124.281ZM433.993 257.887C435.335 258.716 436.227 259.402 436.227 259.402H436.278C436.995 259.402 446.053 258.921 443.676 234.274C435.171 231.838 426.984 228.48 419.228 224.243C419.166 224.458 419.105 224.662 419.044 224.857C417.261 230.845 413.377 239.596 412.885 242.564C412.404 245.533 412.722 247.693 414.617 249.688C416.502 251.684 425.529 254.284 429.095 255.472C430.878 256.065 432.661 257.048 433.993 257.887ZM528.054 131.764C523.351 131.764 519.53 135.581 519.53 140.28C519.53 144.978 523.351 148.796 528.054 148.796C532.758 148.796 536.579 144.978 536.579 140.28C536.579 135.581 532.758 131.764 528.054 131.764Z",
+                    }),
+                  ],
+                })
+              : "xbox" == t
                 ? r
                   ? (0, i.jsxs)("svg", {
                       xmlns: "http://www.w3.org/2000/svg",
@@ -81216,63 +81295,27 @@
                         (0, i.jsx)("path", {
                           fill: "currentColor",
                           opacity: "0.5",
-                          d: "M12.9,13.7c-0.6,0-1.1-0.5-1.1-1.1V8l-1.7,0L9.6,7.5c0,0-0.1,0-0.2,0C9.3,7.3,9.2,7.1,9,6.9  C6.7,6.5,5.2,7.1,4.7,7.4c-0.1,0-0.1,0.1-0.2,0.1C3.9,8,2.8,10.3,2.8,10.3C2.2,12,0.6,17,0,23.8c0,0-0.6,5.1,3.4,5.6  c3.5,0.4,4.6-4.1,5.2-6.5c0.2-0.7,0.3-1.2,0.4-1.4c0.3-0.3,0.7-0.5,0.9-0.5c0.6,0.7,1.5,1.1,2.5,1.1c1,0,1.9-0.4,2.5-1.1H18v-7.3  H12.9z M5.6,10.8c0-0.3,0.2-0.5,0.5-0.5h1.2c0.3,0,0.5,0.2,0.5,0.5v1c0,0.1-0.1,0.3-0.1,0.4l-0.6,0.6c-0.2,0.2-0.5,0.2-0.7,0  l-0.6-0.6c-0.1-0.1-0.1-0.2-0.1-0.4V10.8z M5.1,14.5h-1c-0.3,0-0.5-0.2-0.5-0.5v-1.2c0-0.3,0.2-0.5,0.5-0.5h1c0.1,0,0.3,0.1,0.4,0.1  L6.1,13c0.2,0.2,0.2,0.5,0,0.7l-0.6,0.6C5.4,14.4,5.3,14.5,5.1,14.5z M7.9,16c0,0.3-0.2,0.5-0.5,0.5H6.1c-0.3,0-0.5-0.2-0.5-0.5v-1  c0-0.1,0.1-0.3,0.1-0.4L6.4,14c0.2-0.2,0.5-0.2,0.7,0l0.6,0.6c0.1,0.1,0.1,0.2,0.1,0.4V16z M9.8,14c0,0.3-0.2,0.5-0.5,0.5h-1  c-0.1,0-0.3-0.1-0.4-0.1l-0.6-0.6c-0.2-0.2-0.2-0.5,0-0.7L8,12.4c0.1-0.1,0.2-0.1,0.4-0.1h1c0.3,0,0.5,0.2,0.5,0.5V14z M12.1,20.4  c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C14.4,19.4,13.4,20.4,12.1,20.4z",
+                          d: "M12.9,6.2c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1  c-0.4,0.3-0.8,0.7-1.1,1C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2  c0.8-0.3,4.4-0.4,7.9-0.4V6.2H12.9z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8  c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1  c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z",
                         }),
                         (0, i.jsx)("path", {
                           fill: "currentColor",
-                          d: "M36,23.8C35.4,17,33.8,12,33.2,10.3c0,0-1.1-2.2-1.7-2.8c0,0-0.1-0.1-0.2-0.1c-0.5-0.3-2-0.9-4.3-0.5  c-0.2,0.2-0.3,0.4-0.4,0.5c-0.1,0-0.2,0-0.2,0L25.9,8l-1.7,0v4.5c0,0.6-0.5,1.1-1.1,1.1H18V21h3.1c0.6,0.7,1.5,1.1,2.5,1.1  c1,0,1.9-0.4,2.5-1.1c0.2,0.1,0.6,0.2,0.9,0.5c0.1,0.1,0.3,0.7,0.4,1.4c0.6,2.4,1.7,6.9,5.2,6.5C36.6,28.8,36,23.8,36,23.8z   M23.6,20.4c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C25.9,19.4,24.9,20.4,23.6,20.4z M26.7,14.5  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C27.8,14,27.3,14.5,26.7,14.5z M29.2,17  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,16.5,29.9,17,29.2,17z M29.2,12c-0.6,0-1.1-0.5-1.1-1.1  c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,11.5,29.9,12,29.2,12z M31.8,14.5c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1  c0.6,0,1.1,0.5,1.1,1.1C32.9,14,32.4,14.5,31.8,14.5z",
-                        }),
-                        (0, i.jsx)("rect", {
-                          fill: "currentColor",
-                          opacity: "0.5",
-                          x: "12.9",
-                          y: "8",
-                          width: "5.1",
-                          height: "4.5",
-                        }),
-                        (0, i.jsx)("rect", {
-                          fill: "currentColor",
-                          x: "18",
-                          y: "8",
-                          width: "5.1",
-                          height: "4.5",
+                          d: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H18v17.6c3.5,0,7,0.1,7.9,0.4c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M27.6,8.7  c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2  s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4  C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4C31.5,13.4,30.9,14.1,30.1,14.1z",
                         }),
                       ],
                     })
-                  : (0, i.jsxs)("svg", {
+                  : (0, i.jsx)("svg", {
                       xmlns: "http://www.w3.org/2000/svg",
                       viewBox: "0 0 36 36",
                       fill: "none",
                       ...n,
-                      children: [
-                        (0, i.jsxs)("g", {
-                          clipPath: a,
-                          children: [
-                            (0, i.jsx)("path", {
-                              fill: "currentColor",
-                              fillRule: "evenodd",
-                              clipRule: "evenodd",
-                              d: "M4.49995 7.47C3.93745 8.0325 2.81244 10.2825 2.81244 10.2825C2.24993 11.97 0.562445 17.0325 -5.43911e-05 23.7825C-5.43911e-05 23.7825 -0.562553 28.845 3.37495 29.4075C6.832 29.8396 7.9652 25.2921 8.55982 22.9059C8.73921 22.186 8.86958 21.6629 8.99995 21.5325C9.33789 21.1945 9.67584 21.0596 9.89181 21.0058C10.5086 21.6754 11.3928 22.095 12.3749 22.095C13.3745 22.095 14.2726 21.6605 14.8906 20.97H21.1093C21.7273 21.6605 22.6254 22.095 23.6249 22.095C24.6071 22.095 25.4913 21.6754 26.1081 21.0058C26.3241 21.0596 26.662 21.1945 27 21.5325C27.1303 21.6629 27.2607 22.186 27.4401 22.9059C28.0347 25.2921 29.1679 29.8396 32.625 29.4075C36.5625 28.845 36 23.7825 36 23.7825C35.4375 17.0325 33.75 11.97 33.1875 10.2825C33.1875 10.2825 32.0625 8.03251 31.4999 7.47C31.4575 7.42758 31.3927 7.39155 31.3091 7.36121C30.794 7.09333 29.2603 6.45543 26.9999 6.9075C26.8121 7.09539 26.6869 7.28328 26.6036 7.45021C26.4971 7.46255 26.4375 7.47001 26.4375 7.47001L25.875 8.0325L24.1874 8.03251V12.5325C24.1874 13.1538 23.6838 13.6575 23.0624 13.6575H12.9374C12.3161 13.6575 11.8124 13.1538 11.8124 12.5325V8.03251L10.1249 8.03249L9.56245 7.47C9.56245 7.47 9.50277 7.46254 9.39629 7.4502C9.31296 7.28328 9.18783 7.09539 8.99995 6.9075C6.73958 6.45543 5.20586 7.09333 4.6908 7.36121C4.60721 7.39155 4.54237 7.42759 4.49995 7.47ZM14.3999 18.1575C14.3999 19.4002 13.3926 20.4075 12.1499 20.4075C10.9073 20.4075 9.89995 19.4002 9.89995 18.1575C9.89995 16.9149 10.9073 15.9075 12.1499 15.9075C13.3926 15.9075 14.3999 16.9149 14.3999 18.1575ZM23.6249 20.4075C24.8676 20.4075 25.8749 19.4002 25.8749 18.1575C25.8749 16.9149 24.8676 15.9075 23.6249 15.9075C22.3823 15.9075 21.3749 16.9149 21.3749 18.1575C21.3749 19.4002 22.3823 20.4075 23.6249 20.4075ZM30.3749 10.845C30.3749 11.4663 29.8713 11.97 29.2499 11.97C28.6286 11.97 28.1249 11.4663 28.1249 10.845C28.1249 10.2237 28.6286 9.72001 29.2499 9.72001C29.8713 9.72001 30.3749 10.2237 30.3749 10.845ZM29.2499 17.0325C29.8713 17.0325 30.3749 16.5288 30.3749 15.9075C30.3749 15.2862 29.8713 14.7825 29.2499 14.7825C28.6286 14.7825 28.1249 15.2862 28.1249 15.9075C28.1249 16.5288 28.6286 17.0325 29.2499 17.0325ZM26.7187 12.2513C27.34 12.2513 27.8437 12.7549 27.8437 13.3763C27.8437 13.9976 27.34 14.5013 26.7187 14.5013C26.0974 14.5013 25.5937 13.9976 25.5937 13.3763C25.5937 12.7549 26.0974 12.2513 26.7187 12.2513ZM32.9062 13.3763C32.9062 12.7549 32.4025 12.2513 31.7812 12.2513C31.1599 12.2513 30.6562 12.7549 30.6562 13.3763C30.6562 13.9976 31.1599 14.5013 31.7812 14.5013C32.4025 14.5013 32.9062 13.9976 32.9062 13.3763ZM5.62495 10.7825C5.62495 10.5064 5.8488 10.2825 6.12495 10.2825H7.37495C7.65109 10.2825 7.87495 10.5064 7.87495 10.7825V11.7629C7.87495 11.8955 7.82227 12.0227 7.7285 12.1165L7.1035 12.7415C6.90824 12.9367 6.59166 12.9367 6.39639 12.7415L5.77139 12.1165C5.67763 12.0227 5.62495 11.8955 5.62495 11.7629V10.7825ZM6.12495 16.47C5.8488 16.47 5.62495 16.2462 5.62495 15.97V14.9896C5.62495 14.857 5.67763 14.7298 5.77139 14.6361L6.39639 14.0111C6.59166 13.8158 6.90824 13.8158 7.1035 14.0111L7.7285 14.6361C7.82227 14.7298 7.87495 14.857 7.87495 14.9896V15.97C7.87495 16.2462 7.65109 16.47 7.37495 16.47H6.12495ZM4.1562 14.5013C3.88006 14.5013 3.6562 14.2774 3.6562 14.0013V12.7513C3.6562 12.4751 3.88006 12.2513 4.1562 12.2513H5.13659C5.2692 12.2513 5.39638 12.3039 5.49014 12.3977L6.11514 13.0227C6.31041 13.218 6.31041 13.5346 6.11514 13.7298L5.49014 14.3548C5.39638 14.4486 5.2692 14.5013 5.13659 14.5013H4.1562ZM9.8437 14.0013C9.8437 14.2774 9.61984 14.5013 9.3437 14.5013H8.36331C8.2307 14.5013 8.10352 14.4486 8.00975 14.3548L7.38475 13.7298C7.18949 13.5346 7.18949 13.218 7.38475 13.0227L8.00975 12.3977C8.10352 12.3039 8.2307 12.2513 8.36331 12.2513H9.3437C9.61984 12.2513 9.8437 12.4751 9.8437 12.7513V14.0013Z",
-                            }),
-                            (0, i.jsx)("path", {
-                              fill: "currentColor",
-                              d: "M23.0624 8.03251L12.9374 8.03251V12.5325H23.0624V8.03251Z",
-                            }),
-                          ],
-                        }),
-                        (0, i.jsx)("defs", {
-                          children: (0, i.jsx)("clipPath", {
-                            id: s,
-                            children: (0, i.jsx)("rect", {
-                              fill: "currentColor",
-                              width: "36",
-                              height: "36",
-                            }),
-                          }),
-                        }),
-                      ],
+                      children: (0, i.jsx)("path", {
+                        fill: "currentColor",
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        d: "M11.25 5.625C11.909 5.625 12.182 5.81802 12.4081 5.97792C12.568 6.09099 12.7045 6.1875 12.9375 6.1875H23.0625C23.2955 6.1875 23.432 6.09099 23.5919 5.97792C23.818 5.81802 24.091 5.625 24.75 5.625C25.875 5.625 29.25 6.75 29.8125 7.3125C30.375 7.875 30.375 8.4375 30.375 8.4375V8.5803C30.8163 8.91923 31.1986 9.26106 31.5 9.5625C32.625 10.6875 36 20.25 36 25.3125C36 30.375 32.625 30.9375 32.625 30.9375C31.7178 30.9375 30.323 29.1494 28.9649 27.4083C27.7966 25.9106 26.6553 24.4476 25.875 24.1875C24.1875 23.625 11.8125 23.625 10.125 24.1875C9.34465 24.4476 8.20344 25.9106 7.03512 27.4083C5.67696 29.1494 4.28215 30.9375 3.375 30.9375C3.375 30.9375 0 30.375 0 25.3125C0 20.25 3.375 10.6875 4.5 9.5625C4.80144 9.26106 5.18366 8.91923 5.625 8.5803V8.4375C5.625 8.4375 5.625 7.875 6.1875 7.3125C6.75 6.75 10.125 5.625 11.25 5.625ZM27.5625 8.71875C28.3392 8.71875 28.9688 9.34835 28.9688 10.125C28.9688 10.9017 28.3392 11.5312 27.5625 11.5312C26.7858 11.5312 26.1562 10.9017 26.1562 10.125C26.1562 9.34835 26.7858 8.71875 27.5625 8.71875ZM8.4375 14.625C9.68014 14.625 10.6875 13.6176 10.6875 12.375C10.6875 11.1324 9.68014 10.125 8.4375 10.125C7.19486 10.125 6.1875 11.1324 6.1875 12.375C6.1875 13.6176 7.19486 14.625 8.4375 14.625ZM23.0625 20.25C24.3051 20.25 25.3125 19.2426 25.3125 18C25.3125 16.7574 24.3051 15.75 23.0625 15.75C21.8199 15.75 20.8125 16.7574 20.8125 18C20.8125 19.2426 21.8199 20.25 23.0625 20.25ZM12.0938 17.1562V16.3125C12.0938 16.0018 12.3456 15.75 12.6562 15.75H13.7812C14.0919 15.75 14.3438 16.0018 14.3438 16.3125V17.1562H15.1875C15.4982 17.1562 15.75 17.4081 15.75 17.7188V18.8438C15.75 19.1544 15.4982 19.4062 15.1875 19.4062H14.3438V20.25C14.3438 20.5607 14.0919 20.8125 13.7812 20.8125H12.6562C12.3456 20.8125 12.0938 20.5607 12.0938 20.25V19.4062H11.25C10.9393 19.4062 10.6875 19.1544 10.6875 18.8438V17.7188C10.6875 17.4081 10.9393 17.1562 11.25 17.1562H12.0938ZM25.0312 14.0625C25.8079 14.0625 26.4375 13.4329 26.4375 12.6562C26.4375 11.8796 25.8079 11.25 25.0312 11.25C24.2546 11.25 23.625 11.8796 23.625 12.6562C23.625 13.4329 24.2546 14.0625 25.0312 14.0625ZM31.5 12.6562C31.5 13.4329 30.8704 14.0625 30.0938 14.0625C29.3171 14.0625 28.6875 13.4329 28.6875 12.6562C28.6875 11.8796 29.3171 11.25 30.0938 11.25C30.8704 11.25 31.5 11.8796 31.5 12.6562ZM28.9688 15.1875C28.9688 14.4108 28.3392 13.7812 27.5625 13.7812C26.7858 13.7812 26.1562 14.4108 26.1562 15.1875C26.1562 15.9642 26.7858 16.5938 27.5625 16.5938C28.3392 16.5938 28.9688 15.9642 28.9688 15.1875Z",
+                      }),
                     })
-                : "ps5" == t
+                : "ps4" == t
                   ? r
                     ? (0, i.jsxs)("svg", {
                         xmlns: "http://www.w3.org/2000/svg",
@@ -81286,29 +81329,26 @@
                           (0, i.jsx)("path", {
                             fill: "currentColor",
                             opacity: "0.5",
-                            d: "M4.7,25.2c0.5-1.7,1.2-3.4,1.8-4.5c0.9-1.6,2.4-3.3,3.5-4.5c0.9-1,1.4-2.4,1.1-3.8l-0.7-3.8  c-0.1-0.4,0-0.7,0.3-0.9l0,0c-0.4,0-0.8,0.1-1.1,0.1V7.3c0,0,0-0.6-1.7-0.6c-1.3,0-2.6,0.7-3.1,1C4.6,7.8,4.5,8,4.5,8.2v0.6  C4.3,8.9,4.1,8.9,3.9,9C2.8,9.6,0,18,0,23.1c0,2.7,0.5,4.6,0.9,5.8c0.2,0.6,0.7,1.1,1.2,1.4l0.1,0c0.5,0.2,1-0.1,1.1-0.6  C3.7,28.6,4.1,26.9,4.7,25.2z M7.9,16.3c0,0.3-0.3,0.6-0.6,0.6H6.2c-0.3,0-0.6-0.3-0.6-0.6v-0.9c0-0.1,0.1-0.3,0.2-0.4l0.6-0.6  c0.2-0.2,0.6-0.2,0.8,0L7.7,15c0.1,0.1,0.2,0.2,0.2,0.4V16.3z M9,9.1c0.3-0.1,0.6,0,0.8,0.3l0.3,0.6c0.1,0.3,0,0.6-0.3,0.8  c-0.3,0.1-0.6,0-0.8-0.3L8.8,9.8C8.6,9.5,8.8,9.2,9,9.1z M8,12.8c0.1-0.1,0.2-0.2,0.4-0.2h0.9c0.3,0,0.6,0.3,0.6,0.6v1.1  c0,0.3-0.3,0.6-0.6,0.6H8.4c-0.1,0-0.3-0.1-0.4-0.2l-0.6-0.6c-0.2-0.2-0.2-0.6,0-0.8L8,12.8z M5.6,11.2c0-0.3,0.3-0.6,0.6-0.6h1.1  c0.3,0,0.6,0.3,0.6,0.6v0.9c0,0.1-0.1,0.3-0.2,0.4l-0.6,0.6c-0.2,0.2-0.6,0.2-0.8,0l-0.6-0.6c-0.1-0.1-0.2-0.2-0.2-0.4V11.2z   M3.7,13.2c0-0.3,0.3-0.6,0.6-0.6h0.9c0.1,0,0.3,0.1,0.4,0.2l0.6,0.6c0.2,0.2,0.2,0.6,0,0.8l-0.6,0.6c-0.1,0.1-0.2,0.2-0.4,0.2H4.2  c-0.3,0-0.6-0.3-0.6-0.6V13.2z",
+                            d: "M12.9,13.7c-0.6,0-1.1-0.5-1.1-1.1V8l-1.7,0L9.6,7.5c0,0-0.1,0-0.2,0C9.3,7.3,9.2,7.1,9,6.9  C6.7,6.5,5.2,7.1,4.7,7.4c-0.1,0-0.1,0.1-0.2,0.1C3.9,8,2.8,10.3,2.8,10.3C2.2,12,0.6,17,0,23.8c0,0-0.6,5.1,3.4,5.6  c3.5,0.4,4.6-4.1,5.2-6.5c0.2-0.7,0.3-1.2,0.4-1.4c0.3-0.3,0.7-0.5,0.9-0.5c0.6,0.7,1.5,1.1,2.5,1.1c1,0,1.9-0.4,2.5-1.1H18v-7.3  H12.9z M5.6,10.8c0-0.3,0.2-0.5,0.5-0.5h1.2c0.3,0,0.5,0.2,0.5,0.5v1c0,0.1-0.1,0.3-0.1,0.4l-0.6,0.6c-0.2,0.2-0.5,0.2-0.7,0  l-0.6-0.6c-0.1-0.1-0.1-0.2-0.1-0.4V10.8z M5.1,14.5h-1c-0.3,0-0.5-0.2-0.5-0.5v-1.2c0-0.3,0.2-0.5,0.5-0.5h1c0.1,0,0.3,0.1,0.4,0.1  L6.1,13c0.2,0.2,0.2,0.5,0,0.7l-0.6,0.6C5.4,14.4,5.3,14.5,5.1,14.5z M7.9,16c0,0.3-0.2,0.5-0.5,0.5H6.1c-0.3,0-0.5-0.2-0.5-0.5v-1  c0-0.1,0.1-0.3,0.1-0.4L6.4,14c0.2-0.2,0.5-0.2,0.7,0l0.6,0.6c0.1,0.1,0.1,0.2,0.1,0.4V16z M9.8,14c0,0.3-0.2,0.5-0.5,0.5h-1  c-0.1,0-0.3-0.1-0.4-0.1l-0.6-0.6c-0.2-0.2-0.2-0.5,0-0.7L8,12.4c0.1-0.1,0.2-0.1,0.4-0.1h1c0.3,0,0.5,0.2,0.5,0.5V14z M12.1,20.4  c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C14.4,19.4,13.4,20.4,12.1,20.4z",
                           }),
                           (0, i.jsx)("path", {
                             fill: "currentColor",
-                            d: "M23.8,13.5l0.6-2l0.5-3c0-0.2,0-0.3-0.1-0.4c-0.1-0.1-0.4-0.3-0.7-0.4c-0.1,0-0.2-0.1-0.3-0.1c-1.7-0.1-3.7-0.2-5.9-0.2v7.6  h4C22.8,14.9,23.6,14.3,23.8,13.5z",
+                            d: "M36,23.8C35.4,17,33.8,12,33.2,10.3c0,0-1.1-2.2-1.7-2.8c0,0-0.1-0.1-0.2-0.1c-0.5-0.3-2-0.9-4.3-0.5  c-0.2,0.2-0.3,0.4-0.4,0.5c-0.1,0-0.2,0-0.2,0L25.9,8l-1.7,0v4.5c0,0.6-0.5,1.1-1.1,1.1H18V21h3.1c0.6,0.7,1.5,1.1,2.5,1.1  c1,0,1.9-0.4,2.5-1.1c0.2,0.1,0.6,0.2,0.9,0.5c0.1,0.1,0.3,0.7,0.4,1.4c0.6,2.4,1.7,6.9,5.2,6.5C36.6,28.8,36,23.8,36,23.8z   M23.6,20.4c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C25.9,19.4,24.9,20.4,23.6,20.4z M26.7,14.5  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C27.8,14,27.3,14.5,26.7,14.5z M29.2,17  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,16.5,29.9,17,29.2,17z M29.2,12c-0.6,0-1.1-0.5-1.1-1.1  c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,11.5,29.9,12,29.2,12z M31.8,14.5c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1  c0.6,0,1.1,0.5,1.1,1.1C32.9,14,32.4,14.5,31.8,14.5z",
                           }),
-                          (0, i.jsx)("path", {
-                            fill: "currentColor",
-                            opacity: "0.5",
-                            d: "M12,7.5c-0.1,0-0.1,0-0.2,0.1c-0.3,0.1-0.5,0.3-0.7,0.4C11,8.2,11,8.3,11,8.5l0.5,2.9l0.6,2.1  c0.3,0.8,1,1.4,1.9,1.4h4V7.3C15.8,7.3,13.7,7.4,12,7.5z",
-                          }),
-                          (0, i.jsx)("path", {
+                          (0, i.jsx)("rect", {
                             fill: "currentColor",
                             opacity: "0.5",
-                            d: "M14,15.5c-1,0-2-0.6-2.4-1.6c-0.2,1-0.6,1.9-1.3,2.7C9.3,17.8,7.9,19.4,7,21c-0.6,1-1.2,2.7-1.8,4.4  c-0.5,1.7-1,3.4-1.3,4.5c-0.1,0.4-0.3,0.7-0.6,0.8l0,0c1,0.2,2-0.4,2.3-1.3l1.9-4.7c0.5-1.3,1.8-2.1,3.1-2.1H18v-7H14z M12.4,21.4  c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S13.6,21.4,12.4,21.4z",
+                            x: "12.9",
+                            y: "8",
+                            width: "5.1",
+                            height: "4.5",
                           }),
-                          (0, i.jsx)("path", {
+                          (0, i.jsx)("rect", {
                             fill: "currentColor",
-                            d: "M32.1,29.8c-0.3-1.1-0.7-2.8-1.3-4.5C30.2,23.6,29.6,22,29,21c-0.9-1.5-2.3-3.2-3.4-4.4c-0.7-0.8-1.1-1.7-1.3-2.7  c-0.4,1-1.3,1.6-2.4,1.6h-4v7h7.3c1.4,0,2.6,0.8,3.1,2.1l1.9,4.7c0.4,0.9,1.3,1.5,2.3,1.3l0,0C32.4,30.5,32.2,30.2,32.1,29.8z   M23.6,21.4c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S24.9,21.4,23.6,21.4z",
-                          }),
-                          (0, i.jsx)("path", {
-                            fill: "currentColor",
-                            d: "M32.1,9c-0.1-0.1-0.3-0.1-0.6-0.2V8.2c0-0.2-0.1-0.4-0.3-0.5c-0.5-0.3-1.8-1-3.1-1c-1.7,0-1.7,0.6-1.7,0.6v0.5  c-0.4,0-0.8-0.1-1.2-0.1l0,0c0.2,0.2,0.3,0.6,0.3,0.9l-0.5,3l0,0l0,0l-0.1,0.7c-0.2,1.4,0.2,2.8,1.1,3.8c1.1,1.2,2.5,3,3.5,4.5  c0.6,1.1,1.3,2.8,1.8,4.5c0.5,1.7,1,3.4,1.3,4.5c0.1,0.5,0.6,0.8,1.1,0.6l0.1,0c0.5-0.3,1-0.8,1.2-1.4c0.4-1.2,0.9-3.1,0.9-5.8  C36,18,33.2,9.6,32.1,9z M29.2,10.1c0.6,0,1.1,0.5,1.1,1.1s-0.5,1.1-1.1,1.1s-1.1-0.5-1.1-1.1S28.6,10.1,29.2,10.1z M25.9,9.9  l0.3-0.6C26.4,9,26.7,8.9,27,9.1c0.3,0.1,0.4,0.5,0.3,0.8l-0.3,0.6c-0.1,0.3-0.5,0.4-0.8,0.3C25.9,10.5,25.8,10.2,25.9,9.9z   M27,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S27.6,14.6,27,14.6z M29.2,16.9c-0.6,0-1.1-0.5-1.1-1.1  s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S29.9,16.9,29.2,16.9z M31.5,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1  S32.1,14.6,31.5,14.6z",
+                            x: "18",
+                            y: "8",
+                            width: "5.1",
+                            height: "4.5",
                           }),
                         ],
                       })
@@ -81318,102 +81358,149 @@
                         fill: "none",
                         ...n,
                         children: [
-                          (0, i.jsx)("path", {
-                            fill: "currentColor",
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M4.5 8.77962V8.17604C4.5 7.98797 4.59324 7.8129 4.75606 7.71875C5.29052 7.40971 6.58276 6.75 7.875 6.75C9.5625 6.75 9.5625 7.3125 9.5625 7.3125V7.79346C9.92732 7.74841 10.3079 7.7053 10.7038 7.66469L10.7001 7.66881C10.4768 7.91891 10.3639 8.22982 10.4289 8.58762L11.114 12.3555C11.3614 13.7163 10.9231 15.1154 9.99052 16.155C8.88458 17.3878 7.44481 19.1078 6.50883 20.6678C5.85918 21.7505 5.21964 23.4605 4.67636 25.1549C4.13086 26.8562 3.67463 28.5672 3.3961 29.6673C3.27268 30.1547 2.76181 30.4366 2.2902 30.2794L2.14425 30.2308C1.59878 29.9208 1.15999 29.4611 0.929107 28.8508C0.480791 27.6656 0 25.7647 0 23.0625C0 18 2.8125 9.5625 3.9375 9C4.07055 8.93348 4.25867 8.85908 4.5 8.77962ZM5.625 11.25C5.625 10.9393 5.87684 10.6875 6.1875 10.6875H7.3125C7.62316 10.6875 7.875 10.9393 7.875 11.25V12.142C7.875 12.2912 7.81574 12.4343 7.71025 12.5398L7.14775 13.1023C6.92808 13.3219 6.57192 13.3219 6.35225 13.1023L5.78975 12.5398C5.68426 12.4343 5.625 12.2912 5.625 12.142V11.25ZM5.625 16.3125C5.625 16.6232 5.87684 16.875 6.1875 16.875H7.3125C7.62316 16.875 7.875 16.6232 7.875 16.3125V15.4205C7.875 15.2713 7.81574 15.1282 7.71025 15.0227L7.14775 14.4602C6.92808 14.2406 6.57192 14.2406 6.35225 14.4602L5.78975 15.0227C5.68426 15.1282 5.625 15.2713 5.625 15.4205V16.3125ZM9.84375 14.3438C9.84375 14.6544 9.59191 14.9062 9.28125 14.9062H8.38924C8.24006 14.9062 8.09699 14.847 7.9915 14.7415L7.429 14.179C7.20933 13.9593 7.20933 13.6032 7.429 13.3835L7.9915 12.821C8.09699 12.7155 8.24006 12.6562 8.38925 12.6562H9.28125C9.59191 12.6562 9.84375 12.9081 9.84375 13.2188V14.3438ZM4.21875 14.9062C3.90809 14.9062 3.65625 14.6544 3.65625 14.3438V13.2188C3.65625 12.9081 3.90809 12.6562 4.21875 12.6562H5.11076C5.25994 12.6562 5.40301 12.7155 5.5085 12.821L6.071 13.3835C6.29067 13.6032 6.29067 13.9593 6.071 14.179L5.5085 14.7415C5.40301 14.847 5.25994 14.9062 5.11076 14.9062H4.21875ZM9.0297 9.05937C9.30756 8.92044 9.64544 9.03307 9.78437 9.31093L10.0656 9.87343C10.2046 10.1513 10.0919 10.4892 9.81406 10.6281C9.5362 10.767 9.19832 10.6544 9.05939 10.3765L8.77814 9.81404C8.63921 9.53618 8.75183 9.1983 9.0297 9.05937Z",
+                          (0, i.jsxs)("g", {
+                            clipPath: a,
+                            children: [
+                              (0, i.jsx)("path", {
+                                fill: "currentColor",
+                                fillRule: "evenodd",
+                                clipRule: "evenodd",
+                                d: "M4.49995 7.47C3.93745 8.0325 2.81244 10.2825 2.81244 10.2825C2.24993 11.97 0.562445 17.0325 -5.43911e-05 23.7825C-5.43911e-05 23.7825 -0.562553 28.845 3.37495 29.4075C6.832 29.8396 7.9652 25.2921 8.55982 22.9059C8.73921 22.186 8.86958 21.6629 8.99995 21.5325C9.33789 21.1945 9.67584 21.0596 9.89181 21.0058C10.5086 21.6754 11.3928 22.095 12.3749 22.095C13.3745 22.095 14.2726 21.6605 14.8906 20.97H21.1093C21.7273 21.6605 22.6254 22.095 23.6249 22.095C24.6071 22.095 25.4913 21.6754 26.1081 21.0058C26.3241 21.0596 26.662 21.1945 27 21.5325C27.1303 21.6629 27.2607 22.186 27.4401 22.9059C28.0347 25.2921 29.1679 29.8396 32.625 29.4075C36.5625 28.845 36 23.7825 36 23.7825C35.4375 17.0325 33.75 11.97 33.1875 10.2825C33.1875 10.2825 32.0625 8.03251 31.4999 7.47C31.4575 7.42758 31.3927 7.39155 31.3091 7.36121C30.794 7.09333 29.2603 6.45543 26.9999 6.9075C26.8121 7.09539 26.6869 7.28328 26.6036 7.45021C26.4971 7.46255 26.4375 7.47001 26.4375 7.47001L25.875 8.0325L24.1874 8.03251V12.5325C24.1874 13.1538 23.6838 13.6575 23.0624 13.6575H12.9374C12.3161 13.6575 11.8124 13.1538 11.8124 12.5325V8.03251L10.1249 8.03249L9.56245 7.47C9.56245 7.47 9.50277 7.46254 9.39629 7.4502C9.31296 7.28328 9.18783 7.09539 8.99995 6.9075C6.73958 6.45543 5.20586 7.09333 4.6908 7.36121C4.60721 7.39155 4.54237 7.42759 4.49995 7.47ZM14.3999 18.1575C14.3999 19.4002 13.3926 20.4075 12.1499 20.4075C10.9073 20.4075 9.89995 19.4002 9.89995 18.1575C9.89995 16.9149 10.9073 15.9075 12.1499 15.9075C13.3926 15.9075 14.3999 16.9149 14.3999 18.1575ZM23.6249 20.4075C24.8676 20.4075 25.8749 19.4002 25.8749 18.1575C25.8749 16.9149 24.8676 15.9075 23.6249 15.9075C22.3823 15.9075 21.3749 16.9149 21.3749 18.1575C21.3749 19.4002 22.3823 20.4075 23.6249 20.4075ZM30.3749 10.845C30.3749 11.4663 29.8713 11.97 29.2499 11.97C28.6286 11.97 28.1249 11.4663 28.1249 10.845C28.1249 10.2237 28.6286 9.72001 29.2499 9.72001C29.8713 9.72001 30.3749 10.2237 30.3749 10.845ZM29.2499 17.0325C29.8713 17.0325 30.3749 16.5288 30.3749 15.9075C30.3749 15.2862 29.8713 14.7825 29.2499 14.7825C28.6286 14.7825 28.1249 15.2862 28.1249 15.9075C28.1249 16.5288 28.6286 17.0325 29.2499 17.0325ZM26.7187 12.2513C27.34 12.2513 27.8437 12.7549 27.8437 13.3763C27.8437 13.9976 27.34 14.5013 26.7187 14.5013C26.0974 14.5013 25.5937 13.9976 25.5937 13.3763C25.5937 12.7549 26.0974 12.2513 26.7187 12.2513ZM32.9062 13.3763C32.9062 12.7549 32.4025 12.2513 31.7812 12.2513C31.1599 12.2513 30.6562 12.7549 30.6562 13.3763C30.6562 13.9976 31.1599 14.5013 31.7812 14.5013C32.4025 14.5013 32.9062 13.9976 32.9062 13.3763ZM5.62495 10.7825C5.62495 10.5064 5.8488 10.2825 6.12495 10.2825H7.37495C7.65109 10.2825 7.87495 10.5064 7.87495 10.7825V11.7629C7.87495 11.8955 7.82227 12.0227 7.7285 12.1165L7.1035 12.7415C6.90824 12.9367 6.59166 12.9367 6.39639 12.7415L5.77139 12.1165C5.67763 12.0227 5.62495 11.8955 5.62495 11.7629V10.7825ZM6.12495 16.47C5.8488 16.47 5.62495 16.2462 5.62495 15.97V14.9896C5.62495 14.857 5.67763 14.7298 5.77139 14.6361L6.39639 14.0111C6.59166 13.8158 6.90824 13.8158 7.1035 14.0111L7.7285 14.6361C7.82227 14.7298 7.87495 14.857 7.87495 14.9896V15.97C7.87495 16.2462 7.65109 16.47 7.37495 16.47H6.12495ZM4.1562 14.5013C3.88006 14.5013 3.6562 14.2774 3.6562 14.0013V12.7513C3.6562 12.4751 3.88006 12.2513 4.1562 12.2513H5.13659C5.2692 12.2513 5.39638 12.3039 5.49014 12.3977L6.11514 13.0227C6.31041 13.218 6.31041 13.5346 6.11514 13.7298L5.49014 14.3548C5.39638 14.4486 5.2692 14.5013 5.13659 14.5013H4.1562ZM9.8437 14.0013C9.8437 14.2774 9.61984 14.5013 9.3437 14.5013H8.36331C8.2307 14.5013 8.10352 14.4486 8.00975 14.3548L7.38475 13.7298C7.18949 13.5346 7.18949 13.218 7.38475 13.0227L8.00975 12.3977C8.10352 12.3039 8.2307 12.2513 8.36331 12.2513H9.3437C9.61984 12.2513 9.8437 12.4751 9.8437 12.7513V14.0013Z",
+                              }),
+                              (0, i.jsx)("path", {
+                                fill: "currentColor",
+                                d: "M23.0624 8.03251L12.9374 8.03251V12.5325H23.0624V8.03251Z",
+                              }),
+                            ],
                           }),
-                          (0, i.jsx)("path", {
-                            fill: "currentColor",
-                            d: "M18 7.3125C15.7603 7.3125 13.748 7.4035 11.9892 7.54668C11.9209 7.57082 11.8551 7.59586 11.7919 7.62185C11.4768 7.75142 11.2526 7.89452 11.1197 8.04343C10.9961 8.18189 10.9523 8.32182 10.9824 8.48699L11.5138 11.4097L12.1573 13.5129C12.4103 14.3408 13.1744 14.9062 14.0401 14.9062H21.9642C22.8281 14.9062 23.591 14.3431 23.8456 13.5176L24.4729 11.483L25.0176 8.48699C25.0463 8.32909 25.0039 8.1935 24.8798 8.05684C24.7463 7.90988 24.5214 7.76808 24.2057 7.6392C24.1215 7.60486 24.0327 7.57213 23.9398 7.54094C22.1978 7.40107 20.2096 7.3125 18 7.3125Z",
-                          }),
-                          (0, i.jsx)("path", {
-                            fill: "currentColor",
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M3.37124 30.6556L3.34019 30.6503C3.62833 30.4606 3.84996 30.1665 3.94139 29.8054C4.2185 28.7109 4.67149 27.0124 5.212 25.3266C5.75474 23.6339 6.37801 21.9791 6.99117 20.9572C7.89825 19.4454 9.30802 17.7581 10.4092 16.5306C11.085 15.7773 11.5326 14.8493 11.6859 13.8677C12.0647 14.8275 12.9948 15.4687 14.0401 15.4687H21.9642C23.0065 15.4687 23.9345 14.8312 24.3153 13.8755C24.4698 14.8543 24.9168 15.7794 25.5908 16.5306C26.692 17.7581 28.1017 19.4454 29.0088 20.9572C29.622 21.9791 30.2453 23.6339 30.788 25.3266C31.3285 27.0124 31.7815 28.7109 32.0586 29.8054C32.15 30.1664 32.3717 30.4606 32.6598 30.6503L32.6288 30.6556C31.6413 30.8202 30.6725 30.275 30.3007 29.3455L28.4111 24.6216C27.8986 23.3402 26.6576 22.5 25.2775 22.5H10.7225C9.34243 22.5 8.10142 23.3402 7.58888 24.6216L5.69928 29.3455C5.3275 30.275 4.35868 30.8202 3.37124 30.6556ZM25.875 19.125C25.875 20.3676 24.8676 21.375 23.625 21.375C22.3824 21.375 21.375 20.3676 21.375 19.125C21.375 17.8824 22.3824 16.875 23.625 16.875C24.8676 16.875 25.875 17.8824 25.875 19.125ZM12.375 21.375C13.6176 21.375 14.625 20.3676 14.625 19.125C14.625 17.8824 13.6176 16.875 12.375 16.875C11.1324 16.875 10.125 17.8824 10.125 19.125C10.125 20.3676 11.1324 21.375 12.375 21.375Z",
-                          }),
-                          (0, i.jsx)("path", {
-                            fill: "currentColor",
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M33.7098 30.2794L33.8557 30.2308C34.4012 29.9208 34.84 29.4611 35.0709 28.8508C35.5192 27.6656 36 25.7647 36 23.0625C36 18 33.1875 9.5625 32.0625 9C31.9295 8.93348 31.7413 8.85908 31.5 8.77962V8.17604C31.5 7.98797 31.4068 7.8129 31.2439 7.71875C30.7095 7.40971 29.4172 6.75 28.125 6.75C26.4375 6.75 26.4375 7.3125 26.4375 7.3125V7.79346C26.0683 7.74787 25.683 7.70427 25.282 7.66324L25.2962 7.67864C25.52 7.92502 25.6356 8.23268 25.5711 8.58762L25.0274 11.5776L25.0319 11.579L25.0203 11.6166L24.886 12.3555C24.6386 13.7163 25.0769 15.1154 26.0095 16.155C27.1154 17.3878 28.5552 19.1078 29.4912 20.6678C30.1408 21.7505 30.7804 23.4605 31.3236 25.1549C31.8691 26.8562 32.3254 28.5672 32.6039 29.6673C32.7273 30.1547 33.2382 30.4366 33.7098 30.2794ZM26.2156 9.31093C26.3546 9.03307 26.6924 8.92044 26.9703 9.05937C27.2482 9.1983 27.3608 9.53618 27.2219 9.81404L26.9406 10.3765C26.8017 10.6544 26.4638 10.767 26.1859 10.6281C25.9081 10.4892 25.7954 10.1513 25.9344 9.87343L26.2156 9.31093ZM30.375 15.75C30.375 16.3713 29.8713 16.875 29.25 16.875C28.6287 16.875 28.125 16.3713 28.125 15.75C28.125 15.1287 28.6287 14.625 29.25 14.625C29.8713 14.625 30.375 15.1287 30.375 15.75ZM31.5 14.625C32.1213 14.625 32.625 14.1213 32.625 13.5C32.625 12.8787 32.1213 12.375 31.5 12.375C30.8787 12.375 30.375 12.8787 30.375 13.5C30.375 14.1213 30.8787 14.625 31.5 14.625ZM30.375 11.25C30.375 11.8713 29.8713 12.375 29.25 12.375C28.6287 12.375 28.125 11.8713 28.125 11.25C28.125 10.6287 28.6287 10.125 29.25 10.125C29.8713 10.125 30.375 10.6287 30.375 11.25ZM27 14.625C27.6213 14.625 28.125 14.1213 28.125 13.5C28.125 12.8787 27.6213 12.375 27 12.375C26.3787 12.375 25.875 12.8787 25.875 13.5C25.875 14.1213 26.3787 14.625 27 14.625Z",
-                          }),
-                        ],
-                      })
-                  : "switchpro" == t
-                    ? (0, i.jsxs)("svg", {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        viewBox: "0 0 36 36",
-                        fill: "none",
-                        ...n,
-                        children: [
-                          (0, i.jsx)("path", {
-                            fill: "currentColor",
-                            d: "M3.375 30.375C0 30.375 0 25.875 0 25.875C0 25.875 0.679114 19.5689 1.65511 14.6014C2.11919 15.2235 2.72448 16.0277 3.42078 16.936C4.97674 18.9655 6.99227 21.5211 8.90421 23.7256C8.37233 24.3118 7.95006 25.2335 7.50451 26.2061C6.59778 28.1853 5.59464 30.375 3.375 30.375Z",
-                          }),
-                          (0, i.jsx)("path", {
-                            fill: "currentColor",
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M9.94135 23.2037C10.5784 23.0625 11.25 23.0625 11.25 23.0625H24.75C24.75 23.0625 25.4216 23.0625 26.0586 23.2037C28.0029 20.9779 30.0841 18.3414 31.6864 16.2515C32.493 15.1994 33.1768 14.2877 33.6589 13.639C33.8038 13.444 33.9305 13.2728 34.0368 13.1288C33.6024 11.1876 33.1223 9.62156 32.625 8.99998C30.9375 6.75 24.75 6.75 24.75 6.75H11.25C11.25 6.75 5.0625 6.75 3.375 8.99998C2.87774 9.62156 2.39764 11.1876 1.96319 13.1288C2.06947 13.2728 2.19616 13.444 2.34111 13.639C2.82318 14.2877 3.50702 15.1994 4.31359 16.2515C5.91589 18.3414 7.99714 20.9779 9.94135 23.2037ZM27.5062 9.11247C28.2829 9.11247 28.9125 9.74207 28.9125 10.5187C28.9125 11.2954 28.2829 11.925 27.5062 11.925C26.7296 11.925 26.1 11.2954 26.1 10.5187C26.1 9.74207 26.7296 9.11247 27.5062 9.11247ZM8.1 15.1875C9.34264 15.1875 10.35 14.1801 10.35 12.9375C10.35 11.6949 9.34264 10.6875 8.1 10.6875C6.85736 10.6875 5.85 11.6949 5.85 12.9375C5.85 14.1801 6.85736 15.1875 8.1 15.1875ZM22.725 20.25C23.9676 20.25 24.975 19.2426 24.975 18C24.975 16.7574 23.9676 15.75 22.725 15.75C21.4824 15.75 20.475 16.7574 20.475 18C20.475 19.2426 21.4824 20.25 22.725 20.25ZM31.725 13.1063C31.725 13.8829 31.0954 14.5125 30.3187 14.5125C29.5421 14.5125 28.9125 13.8829 28.9125 13.1063C28.9125 12.3296 29.5421 11.7 30.3187 11.7C31.0954 11.7 31.725 12.3296 31.725 13.1063ZM24.6937 14.5125C25.4704 14.5125 26.1 13.8829 26.1 13.1063C26.1 12.3296 25.4704 11.7 24.6937 11.7C23.9171 11.7 23.2875 12.3296 23.2875 13.1063C23.2875 13.8829 23.9171 14.5125 24.6937 14.5125ZM28.9125 15.4688C28.9125 14.6921 28.2829 14.0625 27.5062 14.0625C26.7296 14.0625 26.1 14.6921 26.1 15.4688C26.1 16.2454 26.7296 16.875 27.5062 16.875C28.2829 16.875 28.9125 16.2454 28.9125 15.4688ZM11.5312 17.1562V16.3125C11.5312 16.0018 11.7831 15.75 12.0938 15.75H13.2188C13.5294 15.75 13.7812 16.0018 13.7812 16.3125V17.1562H14.625C14.9357 17.1562 15.1875 17.4081 15.1875 17.7188V18.8438C15.1875 19.1544 14.9357 19.4062 14.625 19.4062H13.7812V20.25C13.7812 20.5607 13.5294 20.8125 13.2188 20.8125H12.0938C11.7831 20.8125 11.5312 20.5607 11.5312 20.25V19.4062H10.6875C10.3768 19.4062 10.125 19.1544 10.125 18.8438V17.7188C10.125 17.4081 10.3768 17.1562 10.6875 17.1562H11.5312Z",
-                          }),
-                          (0, i.jsx)("path", {
-                            fill: "currentColor",
-                            d: "M34.3449 14.6014C33.8808 15.2235 33.2755 16.0277 32.5792 16.936C31.0233 18.9655 29.0077 21.5211 27.0958 23.7256C27.6277 24.3118 28.0499 25.2335 28.4955 26.2061C29.4022 28.1853 30.4054 30.375 32.625 30.375C36 30.375 36 25.875 36 25.875C36 25.875 35.3209 19.5689 34.3449 14.6014Z",
+                          (0, i.jsx)("defs", {
+                            children: (0, i.jsx)("clipPath", {
+                              id: s,
+                              children: (0, i.jsx)("rect", {
+                                fill: "currentColor",
+                                width: "36",
+                                height: "36",
+                              }),
+                            }),
                           }),
                         ],
                       })
-                    : "hori" == t
-                      ? (0, i.jsx)("svg", {
+                  : "ps5" == t
+                    ? r
+                      ? (0, i.jsxs)("svg", {
                           xmlns: "http://www.w3.org/2000/svg",
-                          viewBox: "0 0 279 190",
+                          version: "1.1",
+                          id: "Layer_1",
+                          x: "0px",
+                          y: "0px",
+                          viewBox: "0 0 36 36",
+                          ...n,
+                          children: [
+                            (0, i.jsx)("path", {
+                              fill: "currentColor",
+                              opacity: "0.5",
+                              d: "M4.7,25.2c0.5-1.7,1.2-3.4,1.8-4.5c0.9-1.6,2.4-3.3,3.5-4.5c0.9-1,1.4-2.4,1.1-3.8l-0.7-3.8  c-0.1-0.4,0-0.7,0.3-0.9l0,0c-0.4,0-0.8,0.1-1.1,0.1V7.3c0,0,0-0.6-1.7-0.6c-1.3,0-2.6,0.7-3.1,1C4.6,7.8,4.5,8,4.5,8.2v0.6  C4.3,8.9,4.1,8.9,3.9,9C2.8,9.6,0,18,0,23.1c0,2.7,0.5,4.6,0.9,5.8c0.2,0.6,0.7,1.1,1.2,1.4l0.1,0c0.5,0.2,1-0.1,1.1-0.6  C3.7,28.6,4.1,26.9,4.7,25.2z M7.9,16.3c0,0.3-0.3,0.6-0.6,0.6H6.2c-0.3,0-0.6-0.3-0.6-0.6v-0.9c0-0.1,0.1-0.3,0.2-0.4l0.6-0.6  c0.2-0.2,0.6-0.2,0.8,0L7.7,15c0.1,0.1,0.2,0.2,0.2,0.4V16.3z M9,9.1c0.3-0.1,0.6,0,0.8,0.3l0.3,0.6c0.1,0.3,0,0.6-0.3,0.8  c-0.3,0.1-0.6,0-0.8-0.3L8.8,9.8C8.6,9.5,8.8,9.2,9,9.1z M8,12.8c0.1-0.1,0.2-0.2,0.4-0.2h0.9c0.3,0,0.6,0.3,0.6,0.6v1.1  c0,0.3-0.3,0.6-0.6,0.6H8.4c-0.1,0-0.3-0.1-0.4-0.2l-0.6-0.6c-0.2-0.2-0.2-0.6,0-0.8L8,12.8z M5.6,11.2c0-0.3,0.3-0.6,0.6-0.6h1.1  c0.3,0,0.6,0.3,0.6,0.6v0.9c0,0.1-0.1,0.3-0.2,0.4l-0.6,0.6c-0.2,0.2-0.6,0.2-0.8,0l-0.6-0.6c-0.1-0.1-0.2-0.2-0.2-0.4V11.2z   M3.7,13.2c0-0.3,0.3-0.6,0.6-0.6h0.9c0.1,0,0.3,0.1,0.4,0.2l0.6,0.6c0.2,0.2,0.2,0.6,0,0.8l-0.6,0.6c-0.1,0.1-0.2,0.2-0.4,0.2H4.2  c-0.3,0-0.6-0.3-0.6-0.6V13.2z",
+                            }),
+                            (0, i.jsx)("path", {
+                              fill: "currentColor",
+                              d: "M23.8,13.5l0.6-2l0.5-3c0-0.2,0-0.3-0.1-0.4c-0.1-0.1-0.4-0.3-0.7-0.4c-0.1,0-0.2-0.1-0.3-0.1c-1.7-0.1-3.7-0.2-5.9-0.2v7.6  h4C22.8,14.9,23.6,14.3,23.8,13.5z",
+                            }),
+                            (0, i.jsx)("path", {
+                              fill: "currentColor",
+                              opacity: "0.5",
+                              d: "M12,7.5c-0.1,0-0.1,0-0.2,0.1c-0.3,0.1-0.5,0.3-0.7,0.4C11,8.2,11,8.3,11,8.5l0.5,2.9l0.6,2.1  c0.3,0.8,1,1.4,1.9,1.4h4V7.3C15.8,7.3,13.7,7.4,12,7.5z",
+                            }),
+                            (0, i.jsx)("path", {
+                              fill: "currentColor",
+                              opacity: "0.5",
+                              d: "M14,15.5c-1,0-2-0.6-2.4-1.6c-0.2,1-0.6,1.9-1.3,2.7C9.3,17.8,7.9,19.4,7,21c-0.6,1-1.2,2.7-1.8,4.4  c-0.5,1.7-1,3.4-1.3,4.5c-0.1,0.4-0.3,0.7-0.6,0.8l0,0c1,0.2,2-0.4,2.3-1.3l1.9-4.7c0.5-1.3,1.8-2.1,3.1-2.1H18v-7H14z M12.4,21.4  c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S13.6,21.4,12.4,21.4z",
+                            }),
+                            (0, i.jsx)("path", {
+                              fill: "currentColor",
+                              d: "M32.1,29.8c-0.3-1.1-0.7-2.8-1.3-4.5C30.2,23.6,29.6,22,29,21c-0.9-1.5-2.3-3.2-3.4-4.4c-0.7-0.8-1.1-1.7-1.3-2.7  c-0.4,1-1.3,1.6-2.4,1.6h-4v7h7.3c1.4,0,2.6,0.8,3.1,2.1l1.9,4.7c0.4,0.9,1.3,1.5,2.3,1.3l0,0C32.4,30.5,32.2,30.2,32.1,29.8z   M23.6,21.4c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S24.9,21.4,23.6,21.4z",
+                            }),
+                            (0, i.jsx)("path", {
+                              fill: "currentColor",
+                              d: "M32.1,9c-0.1-0.1-0.3-0.1-0.6-0.2V8.2c0-0.2-0.1-0.4-0.3-0.5c-0.5-0.3-1.8-1-3.1-1c-1.7,0-1.7,0.6-1.7,0.6v0.5  c-0.4,0-0.8-0.1-1.2-0.1l0,0c0.2,0.2,0.3,0.6,0.3,0.9l-0.5,3l0,0l0,0l-0.1,0.7c-0.2,1.4,0.2,2.8,1.1,3.8c1.1,1.2,2.5,3,3.5,4.5  c0.6,1.1,1.3,2.8,1.8,4.5c0.5,1.7,1,3.4,1.3,4.5c0.1,0.5,0.6,0.8,1.1,0.6l0.1,0c0.5-0.3,1-0.8,1.2-1.4c0.4-1.2,0.9-3.1,0.9-5.8  C36,18,33.2,9.6,32.1,9z M29.2,10.1c0.6,0,1.1,0.5,1.1,1.1s-0.5,1.1-1.1,1.1s-1.1-0.5-1.1-1.1S28.6,10.1,29.2,10.1z M25.9,9.9  l0.3-0.6C26.4,9,26.7,8.9,27,9.1c0.3,0.1,0.4,0.5,0.3,0.8l-0.3,0.6c-0.1,0.3-0.5,0.4-0.8,0.3C25.9,10.5,25.8,10.2,25.9,9.9z   M27,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S27.6,14.6,27,14.6z M29.2,16.9c-0.6,0-1.1-0.5-1.1-1.1  s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S29.9,16.9,29.2,16.9z M31.5,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1  S32.1,14.6,31.5,14.6z",
+                            }),
+                          ],
+                        })
+                      : (0, i.jsxs)("svg", {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 36 36",
                           fill: "none",
                           ...n,
-                          children: (0, i.jsx)("path", {
-                            fill: "currentColor",
-                            d: "M276.557 118.966L276.377 117.587C276.377 117.575 274.727 107.206 273.807 102.575C269.077 78.747 262.957 53.718 255.596 28.199C255.448 27.679 255.207 27.26 255.037 26.988C254.957 26.869 254.867 26.759 254.766 26.658C254.766 26.658 249.118 21.029 248.778 20.67C248.038 19.889 247.266 19.08 246.438 18.549C246.297 18.459 245.557 18.139 245.288 18.01C244.495 17.629 243.956 17.379 243.556 17.209C243.546 17.17 243.536 17.129 243.527 17.09C243.496 17.01 243.476 16.94 243.447 16.86C243.426 16.819 243.406 16.78 243.386 16.751C242.585 15.05 241.675 13.36 240.796 11.72L240.505 11.159C240.386 10.94 240.263 10.751 240.073 10.591C239.891 10.402 239.675 10.28 239.565 10.21C239.545 10.2 239.276 10.03 239.165 9.98C233.625 7.511 222.858 3.701 222.846 3.701C219.718 2.41 216.278 1.191 212.038 -0.149C210.688 -0.579 208.877 -1.079 206.926 -1.079C206.127 -1.079 205.346 -0.989 204.617 -0.819C202.926 -1.13 201.287 -1.409 199.717 -1.639C199.688 -1.649 197.457 -1.94 197.197 -1.969C197.047 -1.998 196.916 -1.998 196.787 -1.998C196.057 -1.998 195.346 -1.719 194.807 -1.219C194.647 -1.1 194.516 -0.949 194.397 -0.78C194.137 -0.44 192.708 1.441 191.688 2.762C177.307 1.89 161.506 1.431 142.077 1.332C142.067 1.332 126.397 1.41 126.097 1.41C126.097 1.41 106.898 1.832 98.2062 2.192C96.7762 2.262 95.4972 2.311 94.2672 2.362C91.9492 2.442 89.7382 2.522 87.0972 2.741C86.2072 1.568 85.1272 0.138 84.3972 -0.842C84.2972 -0.981 84.1762 -1.102 84.0472 -1.201C83.5862 -1.592 82.8462 -2 81.7762 -2C81.1862 -2 80.6712 -1.873 80.2082 -1.791C79.9482 -1.744 75.8272 -1.121 74.1872 -0.82C73.4472 -0.99 72.6672 -1.08 71.8472 -1.08C70.7772 -1.08 69.6172 -0.932 68.4272 -0.631C68.3982 -0.621 68.3662 -0.621 68.3372 -0.611C64.0462 0.649 59.8762 2.1 55.9682 3.69C55.9472 3.7 55.9272 3.71 55.9072 3.719C50.6372 5.408 45.1672 7.51 39.6372 9.979C39.3262 10.12 39.0262 10.35 38.8262 10.629L38.7172 10.779C38.7172 10.779 38.4242 11.22 38.2662 11.439C36.8362 13.548 35.8972 15.429 35.4162 17.148C34.9962 17.308 34.4262 17.58 33.5252 18.009C33.2552 18.138 32.7962 18.339 32.7752 18.349C32.0862 18.599 31.5152 19.148 30.6562 20.038C30.5062 20.188 30.4062 20.308 30.3362 20.368C30.3162 20.388 28.7562 21.948 28.7562 21.948C28.0572 22.657 26.4672 24.237 26.4362 24.268C26.2172 24.508 25.8872 24.817 25.5462 25.147C24.8362 25.829 24.1162 26.518 23.6062 27.249C23.5462 27.339 23.4972 27.429 23.4472 27.519C23.4072 27.619 23.3562 27.738 23.3272 27.839C22.5872 30.359 21.8172 33.038 21.1062 35.577C19.0462 42.827 16.9662 50.677 14.5372 60.247C10.0162 78.858 5.34716 98.065 2.43616 117.526C2.43616 117.546 2.33616 118.296 2.33616 118.296C0.536161 131.837 -1.33384 145.837 1.32616 159.616C2.81616 167.177 5.24616 173.155 8.77516 177.915C12.3162 182.905 17.4162 186.677 23.0952 188.507C26.2162 189.446 29.3752 189.927 32.5352 189.927C38.5052 189.927 44.0242 188.245 48.4852 185.075C59.3742 177.235 65.4952 162.106 70.8852 148.757C71.9242 146.187 73.9052 141.437 73.9142 141.405C74.1642 140.745 74.4532 139.995 74.7732 139.266C74.9942 138.846 75.9742 137.455 76.1442 137.196C76.3042 137.016 76.9842 136.257 77.1542 136.065C79.5332 133.805 82.6482 132.481 85.7182 132.45C85.7182 132.45 85.8862 132.448 86.1632 132.427H188.003C189.583 132.427 191.153 132.427 192.714 132.437C196.464 132.447 200.064 134.107 202.343 136.857C203.105 137.796 203.663 138.607 204.083 139.377C204.083 139.377 206.903 146.246 207.954 148.848C213.263 161.996 219.294 176.897 230.013 184.858C234.542 188.178 240.152 189.938 246.254 189.938C249.404 189.938 252.574 189.458 255.674 188.518C261.225 186.717 266.235 183.077 269.805 178.247C273.616 173.108 276.225 166.667 277.555 159.099C280.077 145.726 278.288 132.117 276.557 118.966ZM59.3422 67.242C51.7742 67.242 45.6172 61.086 45.6172 53.519C45.6172 45.951 51.7732 39.796 59.3422 39.796C66.9082 39.796 73.0652 45.95 73.0652 53.519C73.0652 61.085 66.9092 67.242 59.3422 67.242ZM121.963 93.212C121.965 93.267 121.955 93.294 121.947 93.335C121.586 95.048 120.058 96.29 118.31 96.29H108.806C108.769 96.29 108.755 96.292 108.701 96.29C108.453 96.347 108.267 96.546 108.267 96.811L108.3 106.147C108.3 106.182 108.302 106.217 108.302 106.258C108.302 108.006 107.062 109.535 105.349 109.893C105.337 109.897 105.324 109.899 105.312 109.899C103.865 110.2 102.408 110.35 100.951 110.35C99.4922 110.35 98.0332 110.198 96.5842 109.897C96.5742 109.897 96.5642 109.895 96.5552 109.893C94.8522 109.538 93.6142 108.022 93.6022 106.282V106.276V96.831C93.6022 96.788 93.6062 96.802 93.6022 96.759C93.5862 96.519 93.3872 96.325 93.1512 96.29C93.1162 96.292 93.0962 96.29 93.0632 96.29H83.6492C83.6452 96.29 83.6372 96.29 83.6332 96.29C81.8832 96.29 80.3562 95.048 79.9962 93.335C79.9922 93.323 79.9922 93.312 79.9902 93.3C79.3882 90.404 79.3882 87.47 79.9922 84.575C79.9922 84.563 79.9942 84.552 79.9962 84.54C80.3552 82.829 81.8812 81.622 83.6292 81.622C83.6762 81.622 83.7112 81.626 83.7642 81.624H93.0632C93.3482 81.624 93.5752 81.433 93.6272 81.179C93.6352 81.138 93.6312 81.113 93.6312 81.079L93.6022 71.6C93.6022 69.834 94.8442 68.303 96.5552 67.946C96.6062 67.936 96.6332 67.928 96.6862 67.919C99.5162 67.345 102.403 67.343 105.235 67.919C105.309 67.939 105.309 67.939 105.35 67.948C107.063 68.303 108.26 69.835 108.26 71.583C108.26 71.63 108.27 71.665 108.268 71.714V81.066C108.268 81.375 108.518 81.625 108.825 81.625L118.198 81.594C118.255 81.594 118.272 81.588 118.311 81.588C120.059 81.588 121.532 82.83 121.891 84.541C121.901 84.59 121.914 84.621 121.936 84.697C122.51 87.527 122.541 90.38 121.963 93.212ZM139.012 41.652C132.371 41.652 126.967 36.25 126.967 29.608C126.967 22.965 132.371 17.561 139.012 17.561C145.657 17.561 151.059 22.965 151.059 29.608C151.059 36.249 145.657 41.652 139.012 41.652ZM177.129 102.644C169.563 102.644 163.406 96.488 163.406 88.921C163.406 81.353 169.562 75.198 177.129 75.198C184.697 75.198 190.854 81.352 190.854 88.921C190.854 96.488 184.698 102.644 177.129 102.644ZM201.75 62.714C196.811 62.714 192.791 58.694 192.791 53.755C192.791 48.816 196.811 44.794 201.75 44.794C206.691 44.794 210.711 48.815 210.711 53.755C210.711 58.695 206.692 62.714 201.75 62.714ZM222.356 82.827C217.417 82.827 213.397 78.811 213.397 73.87C213.397 68.929 217.417 64.909 222.356 64.909C227.297 64.909 231.316 68.929 231.316 73.87C231.316 78.811 227.297 82.827 222.356 82.827ZM222.356 41.673C217.417 41.673 213.397 37.653 213.397 32.715C213.397 27.774 217.417 23.756 222.356 23.756C227.297 23.756 231.316 27.774 231.316 32.715C231.317 37.654 227.297 41.673 222.356 41.673ZM242.657 62.714C237.715 62.714 233.696 58.694 233.696 53.755C233.696 48.816 237.716 44.794 242.657 44.794C247.598 44.794 251.618 48.815 251.618 53.755C251.618 58.695 247.598 62.714 242.657 62.714Z",
-                          }),
+                          children: [
+                            (0, i.jsx)("path", {
+                              fill: "currentColor",
+                              fillRule: "evenodd",
+                              clipRule: "evenodd",
+                              d: "M4.5 8.77962V8.17604C4.5 7.98797 4.59324 7.8129 4.75606 7.71875C5.29052 7.40971 6.58276 6.75 7.875 6.75C9.5625 6.75 9.5625 7.3125 9.5625 7.3125V7.79346C9.92732 7.74841 10.3079 7.7053 10.7038 7.66469L10.7001 7.66881C10.4768 7.91891 10.3639 8.22982 10.4289 8.58762L11.114 12.3555C11.3614 13.7163 10.9231 15.1154 9.99052 16.155C8.88458 17.3878 7.44481 19.1078 6.50883 20.6678C5.85918 21.7505 5.21964 23.4605 4.67636 25.1549C4.13086 26.8562 3.67463 28.5672 3.3961 29.6673C3.27268 30.1547 2.76181 30.4366 2.2902 30.2794L2.14425 30.2308C1.59878 29.9208 1.15999 29.4611 0.929107 28.8508C0.480791 27.6656 0 25.7647 0 23.0625C0 18 2.8125 9.5625 3.9375 9C4.07055 8.93348 4.25867 8.85908 4.5 8.77962ZM5.625 11.25C5.625 10.9393 5.87684 10.6875 6.1875 10.6875H7.3125C7.62316 10.6875 7.875 10.9393 7.875 11.25V12.142C7.875 12.2912 7.81574 12.4343 7.71025 12.5398L7.14775 13.1023C6.92808 13.3219 6.57192 13.3219 6.35225 13.1023L5.78975 12.5398C5.68426 12.4343 5.625 12.2912 5.625 12.142V11.25ZM5.625 16.3125C5.625 16.6232 5.87684 16.875 6.1875 16.875H7.3125C7.62316 16.875 7.875 16.6232 7.875 16.3125V15.4205C7.875 15.2713 7.81574 15.1282 7.71025 15.0227L7.14775 14.4602C6.92808 14.2406 6.57192 14.2406 6.35225 14.4602L5.78975 15.0227C5.68426 15.1282 5.625 15.2713 5.625 15.4205V16.3125ZM9.84375 14.3438C9.84375 14.6544 9.59191 14.9062 9.28125 14.9062H8.38924C8.24006 14.9062 8.09699 14.847 7.9915 14.7415L7.429 14.179C7.20933 13.9593 7.20933 13.6032 7.429 13.3835L7.9915 12.821C8.09699 12.7155 8.24006 12.6562 8.38925 12.6562H9.28125C9.59191 12.6562 9.84375 12.9081 9.84375 13.2188V14.3438ZM4.21875 14.9062C3.90809 14.9062 3.65625 14.6544 3.65625 14.3438V13.2188C3.65625 12.9081 3.90809 12.6562 4.21875 12.6562H5.11076C5.25994 12.6562 5.40301 12.7155 5.5085 12.821L6.071 13.3835C6.29067 13.6032 6.29067 13.9593 6.071 14.179L5.5085 14.7415C5.40301 14.847 5.25994 14.9062 5.11076 14.9062H4.21875ZM9.0297 9.05937C9.30756 8.92044 9.64544 9.03307 9.78437 9.31093L10.0656 9.87343C10.2046 10.1513 10.0919 10.4892 9.81406 10.6281C9.5362 10.767 9.19832 10.6544 9.05939 10.3765L8.77814 9.81404C8.63921 9.53618 8.75183 9.1983 9.0297 9.05937Z",
+                            }),
+                            (0, i.jsx)("path", {
+                              fill: "currentColor",
+                              d: "M18 7.3125C15.7603 7.3125 13.748 7.4035 11.9892 7.54668C11.9209 7.57082 11.8551 7.59586 11.7919 7.62185C11.4768 7.75142 11.2526 7.89452 11.1197 8.04343C10.9961 8.18189 10.9523 8.32182 10.9824 8.48699L11.5138 11.4097L12.1573 13.5129C12.4103 14.3408 13.1744 14.9062 14.0401 14.9062H21.9642C22.8281 14.9062 23.591 14.3431 23.8456 13.5176L24.4729 11.483L25.0176 8.48699C25.0463 8.32909 25.0039 8.1935 24.8798 8.05684C24.7463 7.90988 24.5214 7.76808 24.2057 7.6392C24.1215 7.60486 24.0327 7.57213 23.9398 7.54094C22.1978 7.40107 20.2096 7.3125 18 7.3125Z",
+                            }),
+                            (0, i.jsx)("path", {
+                              fill: "currentColor",
+                              fillRule: "evenodd",
+                              clipRule: "evenodd",
+                              d: "M3.37124 30.6556L3.34019 30.6503C3.62833 30.4606 3.84996 30.1665 3.94139 29.8054C4.2185 28.7109 4.67149 27.0124 5.212 25.3266C5.75474 23.6339 6.37801 21.9791 6.99117 20.9572C7.89825 19.4454 9.30802 17.7581 10.4092 16.5306C11.085 15.7773 11.5326 14.8493 11.6859 13.8677C12.0647 14.8275 12.9948 15.4687 14.0401 15.4687H21.9642C23.0065 15.4687 23.9345 14.8312 24.3153 13.8755C24.4698 14.8543 24.9168 15.7794 25.5908 16.5306C26.692 17.7581 28.1017 19.4454 29.0088 20.9572C29.622 21.9791 30.2453 23.6339 30.788 25.3266C31.3285 27.0124 31.7815 28.7109 32.0586 29.8054C32.15 30.1664 32.3717 30.4606 32.6598 30.6503L32.6288 30.6556C31.6413 30.8202 30.6725 30.275 30.3007 29.3455L28.4111 24.6216C27.8986 23.3402 26.6576 22.5 25.2775 22.5H10.7225C9.34243 22.5 8.10142 23.3402 7.58888 24.6216L5.69928 29.3455C5.3275 30.275 4.35868 30.8202 3.37124 30.6556ZM25.875 19.125C25.875 20.3676 24.8676 21.375 23.625 21.375C22.3824 21.375 21.375 20.3676 21.375 19.125C21.375 17.8824 22.3824 16.875 23.625 16.875C24.8676 16.875 25.875 17.8824 25.875 19.125ZM12.375 21.375C13.6176 21.375 14.625 20.3676 14.625 19.125C14.625 17.8824 13.6176 16.875 12.375 16.875C11.1324 16.875 10.125 17.8824 10.125 19.125C10.125 20.3676 11.1324 21.375 12.375 21.375Z",
+                            }),
+                            (0, i.jsx)("path", {
+                              fill: "currentColor",
+                              fillRule: "evenodd",
+                              clipRule: "evenodd",
+                              d: "M33.7098 30.2794L33.8557 30.2308C34.4012 29.9208 34.84 29.4611 35.0709 28.8508C35.5192 27.6656 36 25.7647 36 23.0625C36 18 33.1875 9.5625 32.0625 9C31.9295 8.93348 31.7413 8.85908 31.5 8.77962V8.17604C31.5 7.98797 31.4068 7.8129 31.2439 7.71875C30.7095 7.40971 29.4172 6.75 28.125 6.75C26.4375 6.75 26.4375 7.3125 26.4375 7.3125V7.79346C26.0683 7.74787 25.683 7.70427 25.282 7.66324L25.2962 7.67864C25.52 7.92502 25.6356 8.23268 25.5711 8.58762L25.0274 11.5776L25.0319 11.579L25.0203 11.6166L24.886 12.3555C24.6386 13.7163 25.0769 15.1154 26.0095 16.155C27.1154 17.3878 28.5552 19.1078 29.4912 20.6678C30.1408 21.7505 30.7804 23.4605 31.3236 25.1549C31.8691 26.8562 32.3254 28.5672 32.6039 29.6673C32.7273 30.1547 33.2382 30.4366 33.7098 30.2794ZM26.2156 9.31093C26.3546 9.03307 26.6924 8.92044 26.9703 9.05937C27.2482 9.1983 27.3608 9.53618 27.2219 9.81404L26.9406 10.3765C26.8017 10.6544 26.4638 10.767 26.1859 10.6281C25.9081 10.4892 25.7954 10.1513 25.9344 9.87343L26.2156 9.31093ZM30.375 15.75C30.375 16.3713 29.8713 16.875 29.25 16.875C28.6287 16.875 28.125 16.3713 28.125 15.75C28.125 15.1287 28.6287 14.625 29.25 14.625C29.8713 14.625 30.375 15.1287 30.375 15.75ZM31.5 14.625C32.1213 14.625 32.625 14.1213 32.625 13.5C32.625 12.8787 32.1213 12.375 31.5 12.375C30.8787 12.375 30.375 12.8787 30.375 13.5C30.375 14.1213 30.8787 14.625 31.5 14.625ZM30.375 11.25C30.375 11.8713 29.8713 12.375 29.25 12.375C28.6287 12.375 28.125 11.8713 28.125 11.25C28.125 10.6287 28.6287 10.125 29.25 10.125C29.8713 10.125 30.375 10.6287 30.375 11.25ZM27 14.625C27.6213 14.625 28.125 14.1213 28.125 13.5C28.125 12.8787 27.6213 12.375 27 12.375C26.3787 12.375 25.875 12.8787 25.875 13.5C25.875 14.1213 26.3787 14.625 27 14.625Z",
+                            }),
+                          ],
                         })
-                      : "gamecube" == t
+                    : "switchpro" == t
+                      ? (0, i.jsxs)("svg", {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 36 36",
+                          fill: "none",
+                          ...n,
+                          children: [
+                            (0, i.jsx)("path", {
+                              fill: "currentColor",
+                              d: "M3.375 30.375C0 30.375 0 25.875 0 25.875C0 25.875 0.679114 19.5689 1.65511 14.6014C2.11919 15.2235 2.72448 16.0277 3.42078 16.936C4.97674 18.9655 6.99227 21.5211 8.90421 23.7256C8.37233 24.3118 7.95006 25.2335 7.50451 26.2061C6.59778 28.1853 5.59464 30.375 3.375 30.375Z",
+                            }),
+                            (0, i.jsx)("path", {
+                              fill: "currentColor",
+                              fillRule: "evenodd",
+                              clipRule: "evenodd",
+                              d: "M9.94135 23.2037C10.5784 23.0625 11.25 23.0625 11.25 23.0625H24.75C24.75 23.0625 25.4216 23.0625 26.0586 23.2037C28.0029 20.9779 30.0841 18.3414 31.6864 16.2515C32.493 15.1994 33.1768 14.2877 33.6589 13.639C33.8038 13.444 33.9305 13.2728 34.0368 13.1288C33.6024 11.1876 33.1223 9.62156 32.625 8.99998C30.9375 6.75 24.75 6.75 24.75 6.75H11.25C11.25 6.75 5.0625 6.75 3.375 8.99998C2.87774 9.62156 2.39764 11.1876 1.96319 13.1288C2.06947 13.2728 2.19616 13.444 2.34111 13.639C2.82318 14.2877 3.50702 15.1994 4.31359 16.2515C5.91589 18.3414 7.99714 20.9779 9.94135 23.2037ZM27.5062 9.11247C28.2829 9.11247 28.9125 9.74207 28.9125 10.5187C28.9125 11.2954 28.2829 11.925 27.5062 11.925C26.7296 11.925 26.1 11.2954 26.1 10.5187C26.1 9.74207 26.7296 9.11247 27.5062 9.11247ZM8.1 15.1875C9.34264 15.1875 10.35 14.1801 10.35 12.9375C10.35 11.6949 9.34264 10.6875 8.1 10.6875C6.85736 10.6875 5.85 11.6949 5.85 12.9375C5.85 14.1801 6.85736 15.1875 8.1 15.1875ZM22.725 20.25C23.9676 20.25 24.975 19.2426 24.975 18C24.975 16.7574 23.9676 15.75 22.725 15.75C21.4824 15.75 20.475 16.7574 20.475 18C20.475 19.2426 21.4824 20.25 22.725 20.25ZM31.725 13.1063C31.725 13.8829 31.0954 14.5125 30.3187 14.5125C29.5421 14.5125 28.9125 13.8829 28.9125 13.1063C28.9125 12.3296 29.5421 11.7 30.3187 11.7C31.0954 11.7 31.725 12.3296 31.725 13.1063ZM24.6937 14.5125C25.4704 14.5125 26.1 13.8829 26.1 13.1063C26.1 12.3296 25.4704 11.7 24.6937 11.7C23.9171 11.7 23.2875 12.3296 23.2875 13.1063C23.2875 13.8829 23.9171 14.5125 24.6937 14.5125ZM28.9125 15.4688C28.9125 14.6921 28.2829 14.0625 27.5062 14.0625C26.7296 14.0625 26.1 14.6921 26.1 15.4688C26.1 16.2454 26.7296 16.875 27.5062 16.875C28.2829 16.875 28.9125 16.2454 28.9125 15.4688ZM11.5312 17.1562V16.3125C11.5312 16.0018 11.7831 15.75 12.0938 15.75H13.2188C13.5294 15.75 13.7812 16.0018 13.7812 16.3125V17.1562H14.625C14.9357 17.1562 15.1875 17.4081 15.1875 17.7188V18.8438C15.1875 19.1544 14.9357 19.4062 14.625 19.4062H13.7812V20.25C13.7812 20.5607 13.5294 20.8125 13.2188 20.8125H12.0938C11.7831 20.8125 11.5312 20.5607 11.5312 20.25V19.4062H10.6875C10.3768 19.4062 10.125 19.1544 10.125 18.8438V17.7188C10.125 17.4081 10.3768 17.1562 10.6875 17.1562H11.5312Z",
+                            }),
+                            (0, i.jsx)("path", {
+                              fill: "currentColor",
+                              d: "M34.3449 14.6014C33.8808 15.2235 33.2755 16.0277 32.5792 16.936C31.0233 18.9655 29.0077 21.5211 27.0958 23.7256C27.6277 24.3118 28.0499 25.2335 28.4955 26.2061C29.4022 28.1853 30.4054 30.375 32.625 30.375C36 30.375 36 25.875 36 25.875C36 25.875 35.3209 19.5689 34.3449 14.6014Z",
+                            }),
+                          ],
+                        })
+                      : "hori" == t
                         ? (0, i.jsx)("svg", {
-                            viewBox: "0 0 36 26",
-                            fill: "none",
                             xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 279 190",
+                            fill: "none",
                             ...n,
                             children: (0, i.jsx)("path", {
                               fill: "currentColor",
-                              d: "M16.1827 0.0781004C17.6081 -0.0426998 19.0335 -0.0183863 20.4571 0.121069C23.1735 0.386856 25.7983 1.04207 28.3604 1.96775C28.3933 1.97962 28.4272 1.98854 28.4707 2.00193C28.4909 1.96528 28.5193 1.93316 28.5264 1.89744C28.5625 1.71211 28.6809 1.67014 28.8555 1.66892C29.6045 1.66433 30.3068 1.85492 30.9815 2.16013C31.946 2.59683 32.798 3.20275 33.5821 3.90916C33.6515 3.97184 33.6587 4.0229 33.6211 4.10544C33.5517 4.25805 33.4959 4.41663 33.4317 4.5781C33.8532 4.96729 34.223 5.39899 34.5352 5.87986C35.1214 6.78349 35.4179 7.78243 35.5371 8.84568C35.7968 11.1614 35.9333 13.4849 35.9893 15.8135C36.0312 17.563 35.9522 19.308 35.7452 21.0459C35.6396 21.9318 35.484 22.8097 35.1397 23.6406C34.9085 24.1987 34.6002 24.7018 34.0889 25.0547C33.3268 25.5809 31.8525 25.6874 31.0977 24.4013C30.7916 23.8796 30.6396 23.3065 30.5069 22.7236C30.164 21.2205 29.8132 19.7187 29.4649 18.2168C29.3652 17.7865 29.2627 17.3565 29.1563 16.9033C28.9289 17.0598 28.7547 17.247 28.6407 17.4707C28.4287 17.8872 28.233 18.3132 28.0498 18.7431C27.8101 19.3059 27.5943 19.8836 27.1934 20.3554C25.8977 21.881 23.8114 22.5708 21.6748 21.6279C20.7231 21.2077 19.9131 20.6151 19.417 19.6777C18.6868 18.2976 18.5895 16.8836 19.337 15.4814C19.7143 14.7738 20.2355 14.1607 20.8174 13.6045C20.9131 13.513 21.0054 13.4171 21.0987 13.3232C21.1053 13.3165 21.1081 13.3056 21.125 13.2715C19.0201 12.8742 16.9252 12.8754 14.7891 13.2461C14.8996 13.3584 14.9835 13.4489 15.0733 13.5332C15.6865 14.109 16.2264 14.7504 16.6319 15.4853C17.252 16.6089 17.2713 17.7935 16.8594 18.9892C16.4264 20.2467 15.5363 21.0751 14.3409 21.6045C13.0659 22.169 11.7798 22.2381 10.4932 21.6592C9.31318 21.1283 8.49376 20.2528 8.03227 19.0361C7.8451 18.5422 7.62199 18.0604 7.39262 17.584C7.24337 17.2739 7.00619 17.0271 6.70317 16.8174C6.62981 17.1331 6.55966 17.4332 6.49027 17.7334C6.16674 19.1315 5.84402 20.5299 5.51957 21.9277C5.38381 22.5117 5.2609 23.1001 5.1016 23.6777C4.99151 24.0771 4.78572 24.4377 4.51078 24.7549C3.77431 25.6032 2.45123 25.5179 1.74027 24.9228C1.27551 24.5338 0.998936 24.0235 0.790079 23.4697C0.51363 22.7361 0.370845 21.9703 0.275431 21.1963C0.0625906 19.4694 -0.0391154 17.7349 0.0146884 15.9961C0.0639243 14.4025 0.145108 12.8095 0.239298 11.2177C0.293428 10.303 0.380001 9.38862 0.487345 8.47849C0.644598 7.14865 1.20265 5.99432 2.10746 5.00876C2.25884 4.84393 2.42083 4.68749 2.58598 4.53611C2.65364 4.47384 2.67533 4.42018 2.62895 4.3408C2.61888 4.32371 2.61641 4.30211 2.60941 4.28318C2.46019 3.87647 2.45845 3.87395 2.80668 3.60154C3.75687 2.85869 4.77722 2.24333 5.95219 1.92283C6.43149 1.79205 6.91854 1.72986 7.41801 1.7656C7.56878 1.7763 7.65507 1.82431 7.68168 1.97263C7.6861 1.9963 7.70206 2.01729 7.70024 2.01365H7.70121C8.85964 1.6644 9.99349 1.30045 11.1397 0.982397C12.7909 0.524039 14.4739 0.222765 16.1827 0.0781004ZM11.6436 14.5459C11.5481 14.5459 11.4554 14.584 11.3877 14.6513C11.3203 14.7187 11.2825 14.8109 11.2823 14.9062V16.5761H9.60942C9.51394 16.5762 9.42124 16.6143 9.35356 16.6816C9.28616 16.749 9.24829 16.8412 9.24809 16.9365V17.8388C9.24816 17.9343 9.2861 18.0262 9.35356 18.0937C9.42128 18.1613 9.51371 18.1992 9.60942 18.1992H11.2823V19.8681C11.2823 19.9637 11.3202 20.0564 11.3877 20.124C11.4555 20.1915 11.5479 20.2294 11.6436 20.2295H12.5469L12.6182 20.2226C12.6874 20.2088 12.7521 20.1745 12.8028 20.124C12.8702 20.0564 12.9082 19.9636 12.9082 19.8681V18.1992H14.5811L14.6524 18.1924C14.7216 18.1785 14.7863 18.1443 14.837 18.0937C14.9043 18.0262 14.9423 17.9342 14.9424 17.8388V16.9365C14.9422 16.8412 14.9044 16.749 14.837 16.6816C14.7693 16.6143 14.6766 16.5762 14.5811 16.5761H12.9082V14.9062C12.908 14.8109 12.8703 14.7187 12.8028 14.6513C12.7351 14.584 12.6424 14.5459 12.5469 14.5459H11.6436ZM23.6299 16.0361C22.8392 16.0362 22.1979 16.6768 22.1973 17.4668C22.1973 18.2572 22.8389 18.8984 23.6299 18.8984C24.4208 18.8981 25.0625 18.2571 25.0625 17.4668C25.0619 16.6769 24.4204 16.0364 23.6299 16.0361ZM24.9141 10.0381C24.1027 10.0382 23.4448 10.6961 23.4444 11.5068C23.4446 12.3176 24.1026 12.9745 24.9141 12.9746C25.7257 12.9746 26.3836 12.3177 26.3838 11.5068C26.3834 10.6961 25.7256 10.0381 24.9141 10.0381ZM29.0166 7.02048C27.7316 7.02074 26.6898 8.06175 26.6895 9.34568C26.6895 10.6298 27.7314 11.6706 29.0166 11.6709C30.3019 11.6707 31.3447 10.6299 31.3448 9.34568C31.3445 8.06172 30.3017 7.0207 29.0166 7.02048ZM7.16703 7.51755C6.06435 7.51791 5.17021 8.41113 5.16996 9.51267C5.17006 10.6143 6.06425 11.5074 7.16703 11.5078C8.27012 11.5078 9.16498 10.6146 9.16508 9.51267C9.16483 8.41091 8.27002 7.51755 7.16703 7.51755ZM32.4268 5.96091C32.1773 5.89397 31.9081 5.92981 31.6358 6.12107L31.6875 6.19529L31.6348 6.12009L31.625 6.12888C31.3844 6.3549 31.2555 6.56575 31.2139 6.77048C31.1722 6.97658 31.2224 7.16409 31.3106 7.33689C31.3977 7.50721 31.5271 7.67288 31.6495 7.83396C31.7732 7.99695 31.8926 8.15982 31.9766 8.33494C32.0646 8.56462 32.0999 8.79776 32.1211 9.02244C32.1419 9.24271 32.1507 9.46898 32.1866 9.65818C32.2233 9.85102 32.2925 10.0294 32.4493 10.1562C32.6054 10.2822 32.8337 10.3456 33.1602 10.3457H33.1661C33.5007 10.3247 33.7197 10.1432 33.8516 9.88669C33.9805 9.63579 34.0277 9.31221 34.0313 8.99021C34.0348 8.66633 33.9945 8.33347 33.9434 8.05955C33.8927 7.7881 33.8297 7.56499 33.7832 7.46189C33.6977 7.27222 33.4405 6.75768 33.0733 6.37888C32.8896 6.18958 32.6713 6.02681 32.4268 5.96091ZM28.626 4.45212C28.3017 4.44856 27.9687 4.48892 27.6944 4.54001C27.4226 4.59065 27.2 4.6538 27.0967 4.70017C26.9075 4.78524 26.3924 5.04199 26.0127 5.40915C25.8229 5.59275 25.6598 5.81104 25.5938 6.05564C25.5267 6.30496 25.5625 6.57357 25.7539 6.84568L25.7627 6.85544C25.9891 7.09596 26.1994 7.22518 26.4043 7.26658C26.611 7.30822 26.7985 7.25829 26.9717 7.1699C27.1424 7.08278 27.3074 6.95331 27.4688 6.83103C27.5919 6.73776 27.7148 6.64721 27.8428 6.57224L27.9737 6.5029C28.2026 6.41596 28.4344 6.38139 28.6582 6.36033C28.8788 6.33958 29.1046 6.33173 29.294 6.29587C29.4874 6.25918 29.6659 6.18939 29.793 6.0322C29.8876 5.91515 29.947 5.75785 29.9707 5.5488L29.9834 5.32224L29.9825 5.31638C29.9613 4.98226 29.7801 4.76252 29.5235 4.63083C29.2723 4.50218 28.9483 4.45568 28.626 4.45212Z",
+                              d: "M276.557 118.966L276.377 117.587C276.377 117.575 274.727 107.206 273.807 102.575C269.077 78.747 262.957 53.718 255.596 28.199C255.448 27.679 255.207 27.26 255.037 26.988C254.957 26.869 254.867 26.759 254.766 26.658C254.766 26.658 249.118 21.029 248.778 20.67C248.038 19.889 247.266 19.08 246.438 18.549C246.297 18.459 245.557 18.139 245.288 18.01C244.495 17.629 243.956 17.379 243.556 17.209C243.546 17.17 243.536 17.129 243.527 17.09C243.496 17.01 243.476 16.94 243.447 16.86C243.426 16.819 243.406 16.78 243.386 16.751C242.585 15.05 241.675 13.36 240.796 11.72L240.505 11.159C240.386 10.94 240.263 10.751 240.073 10.591C239.891 10.402 239.675 10.28 239.565 10.21C239.545 10.2 239.276 10.03 239.165 9.98C233.625 7.511 222.858 3.701 222.846 3.701C219.718 2.41 216.278 1.191 212.038 -0.149C210.688 -0.579 208.877 -1.079 206.926 -1.079C206.127 -1.079 205.346 -0.989 204.617 -0.819C202.926 -1.13 201.287 -1.409 199.717 -1.639C199.688 -1.649 197.457 -1.94 197.197 -1.969C197.047 -1.998 196.916 -1.998 196.787 -1.998C196.057 -1.998 195.346 -1.719 194.807 -1.219C194.647 -1.1 194.516 -0.949 194.397 -0.78C194.137 -0.44 192.708 1.441 191.688 2.762C177.307 1.89 161.506 1.431 142.077 1.332C142.067 1.332 126.397 1.41 126.097 1.41C126.097 1.41 106.898 1.832 98.2062 2.192C96.7762 2.262 95.4972 2.311 94.2672 2.362C91.9492 2.442 89.7382 2.522 87.0972 2.741C86.2072 1.568 85.1272 0.138 84.3972 -0.842C84.2972 -0.981 84.1762 -1.102 84.0472 -1.201C83.5862 -1.592 82.8462 -2 81.7762 -2C81.1862 -2 80.6712 -1.873 80.2082 -1.791C79.9482 -1.744 75.8272 -1.121 74.1872 -0.82C73.4472 -0.99 72.6672 -1.08 71.8472 -1.08C70.7772 -1.08 69.6172 -0.932 68.4272 -0.631C68.3982 -0.621 68.3662 -0.621 68.3372 -0.611C64.0462 0.649 59.8762 2.1 55.9682 3.69C55.9472 3.7 55.9272 3.71 55.9072 3.719C50.6372 5.408 45.1672 7.51 39.6372 9.979C39.3262 10.12 39.0262 10.35 38.8262 10.629L38.7172 10.779C38.7172 10.779 38.4242 11.22 38.2662 11.439C36.8362 13.548 35.8972 15.429 35.4162 17.148C34.9962 17.308 34.4262 17.58 33.5252 18.009C33.2552 18.138 32.7962 18.339 32.7752 18.349C32.0862 18.599 31.5152 19.148 30.6562 20.038C30.5062 20.188 30.4062 20.308 30.3362 20.368C30.3162 20.388 28.7562 21.948 28.7562 21.948C28.0572 22.657 26.4672 24.237 26.4362 24.268C26.2172 24.508 25.8872 24.817 25.5462 25.147C24.8362 25.829 24.1162 26.518 23.6062 27.249C23.5462 27.339 23.4972 27.429 23.4472 27.519C23.4072 27.619 23.3562 27.738 23.3272 27.839C22.5872 30.359 21.8172 33.038 21.1062 35.577C19.0462 42.827 16.9662 50.677 14.5372 60.247C10.0162 78.858 5.34716 98.065 2.43616 117.526C2.43616 117.546 2.33616 118.296 2.33616 118.296C0.536161 131.837 -1.33384 145.837 1.32616 159.616C2.81616 167.177 5.24616 173.155 8.77516 177.915C12.3162 182.905 17.4162 186.677 23.0952 188.507C26.2162 189.446 29.3752 189.927 32.5352 189.927C38.5052 189.927 44.0242 188.245 48.4852 185.075C59.3742 177.235 65.4952 162.106 70.8852 148.757C71.9242 146.187 73.9052 141.437 73.9142 141.405C74.1642 140.745 74.4532 139.995 74.7732 139.266C74.9942 138.846 75.9742 137.455 76.1442 137.196C76.3042 137.016 76.9842 136.257 77.1542 136.065C79.5332 133.805 82.6482 132.481 85.7182 132.45C85.7182 132.45 85.8862 132.448 86.1632 132.427H188.003C189.583 132.427 191.153 132.427 192.714 132.437C196.464 132.447 200.064 134.107 202.343 136.857C203.105 137.796 203.663 138.607 204.083 139.377C204.083 139.377 206.903 146.246 207.954 148.848C213.263 161.996 219.294 176.897 230.013 184.858C234.542 188.178 240.152 189.938 246.254 189.938C249.404 189.938 252.574 189.458 255.674 188.518C261.225 186.717 266.235 183.077 269.805 178.247C273.616 173.108 276.225 166.667 277.555 159.099C280.077 145.726 278.288 132.117 276.557 118.966ZM59.3422 67.242C51.7742 67.242 45.6172 61.086 45.6172 53.519C45.6172 45.951 51.7732 39.796 59.3422 39.796C66.9082 39.796 73.0652 45.95 73.0652 53.519C73.0652 61.085 66.9092 67.242 59.3422 67.242ZM121.963 93.212C121.965 93.267 121.955 93.294 121.947 93.335C121.586 95.048 120.058 96.29 118.31 96.29H108.806C108.769 96.29 108.755 96.292 108.701 96.29C108.453 96.347 108.267 96.546 108.267 96.811L108.3 106.147C108.3 106.182 108.302 106.217 108.302 106.258C108.302 108.006 107.062 109.535 105.349 109.893C105.337 109.897 105.324 109.899 105.312 109.899C103.865 110.2 102.408 110.35 100.951 110.35C99.4922 110.35 98.0332 110.198 96.5842 109.897C96.5742 109.897 96.5642 109.895 96.5552 109.893C94.8522 109.538 93.6142 108.022 93.6022 106.282V106.276V96.831C93.6022 96.788 93.6062 96.802 93.6022 96.759C93.5862 96.519 93.3872 96.325 93.1512 96.29C93.1162 96.292 93.0962 96.29 93.0632 96.29H83.6492C83.6452 96.29 83.6372 96.29 83.6332 96.29C81.8832 96.29 80.3562 95.048 79.9962 93.335C79.9922 93.323 79.9922 93.312 79.9902 93.3C79.3882 90.404 79.3882 87.47 79.9922 84.575C79.9922 84.563 79.9942 84.552 79.9962 84.54C80.3552 82.829 81.8812 81.622 83.6292 81.622C83.6762 81.622 83.7112 81.626 83.7642 81.624H93.0632C93.3482 81.624 93.5752 81.433 93.6272 81.179C93.6352 81.138 93.6312 81.113 93.6312 81.079L93.6022 71.6C93.6022 69.834 94.8442 68.303 96.5552 67.946C96.6062 67.936 96.6332 67.928 96.6862 67.919C99.5162 67.345 102.403 67.343 105.235 67.919C105.309 67.939 105.309 67.939 105.35 67.948C107.063 68.303 108.26 69.835 108.26 71.583C108.26 71.63 108.27 71.665 108.268 71.714V81.066C108.268 81.375 108.518 81.625 108.825 81.625L118.198 81.594C118.255 81.594 118.272 81.588 118.311 81.588C120.059 81.588 121.532 82.83 121.891 84.541C121.901 84.59 121.914 84.621 121.936 84.697C122.51 87.527 122.541 90.38 121.963 93.212ZM139.012 41.652C132.371 41.652 126.967 36.25 126.967 29.608C126.967 22.965 132.371 17.561 139.012 17.561C145.657 17.561 151.059 22.965 151.059 29.608C151.059 36.249 145.657 41.652 139.012 41.652ZM177.129 102.644C169.563 102.644 163.406 96.488 163.406 88.921C163.406 81.353 169.562 75.198 177.129 75.198C184.697 75.198 190.854 81.352 190.854 88.921C190.854 96.488 184.698 102.644 177.129 102.644ZM201.75 62.714C196.811 62.714 192.791 58.694 192.791 53.755C192.791 48.816 196.811 44.794 201.75 44.794C206.691 44.794 210.711 48.815 210.711 53.755C210.711 58.695 206.692 62.714 201.75 62.714ZM222.356 82.827C217.417 82.827 213.397 78.811 213.397 73.87C213.397 68.929 217.417 64.909 222.356 64.909C227.297 64.909 231.316 68.929 231.316 73.87C231.316 78.811 227.297 82.827 222.356 82.827ZM222.356 41.673C217.417 41.673 213.397 37.653 213.397 32.715C213.397 27.774 217.417 23.756 222.356 23.756C227.297 23.756 231.316 27.774 231.316 32.715C231.317 37.654 227.297 41.673 222.356 41.673ZM242.657 62.714C237.715 62.714 233.696 58.694 233.696 53.755C233.696 48.816 237.716 44.794 242.657 44.794C247.598 44.794 251.618 48.815 251.618 53.755C251.618 58.695 247.598 62.714 242.657 62.714Z",
                             }),
                           })
-                        : "8bitdo_sn30" == t
-                          ? (0, i.jsxs)("svg", {
-                              viewBox: "0 0 36 36",
+                        : "gamecube" == t
+                          ? (0, i.jsx)("svg", {
+                              viewBox: "0 0 36 26",
                               fill: "none",
                               xmlns: "http://www.w3.org/2000/svg",
                               ...n,
-                              children: [
-                                (0, i.jsx)("g", {
-                                  clipPath: a,
-                                  children: (0, i.jsx)("path", {
-                                    fill: "currentColor",
-                                    d: "M11.2168 10.004C11.2667 10.004 11.3173 10.0048 11.3672 10.007C11.5907 10.0171 11.7075 10.136 11.7139 10.3605V10.5197H11.8965C15.9638 10.5197 20.0313 10.5188 24.0986 10.5226C24.239 10.5226 24.2877 10.4877 24.2861 10.3439C24.2837 10.1215 24.407 10.0095 24.6426 10.0079C25.5809 10.0033 26.5196 9.99799 27.458 10.0021C27.9951 10.0045 28.534 9.99883 29.0683 10.0431C30.1561 10.133 31.1802 10.4534 32.1455 10.965C32.3761 11.0871 32.5061 11.2487 32.4639 11.5187C32.4349 11.7034 32.5097 11.814 32.668 11.9269C34.3326 13.1148 35.399 14.705 35.8115 16.714C36.1472 18.3488 36.0615 19.9547 35.3359 21.4796C34.1526 23.9665 32.214 25.5049 29.4902 26.0021C28.1318 26.2499 26.8154 26.0562 25.5508 25.5109C25.3928 25.4427 25.2679 25.4444 25.1074 25.5246C23.4412 26.358 21.4298 25.8397 20.3681 24.3107C20.3086 24.2249 20.2442 24.1962 20.1426 24.1964C18.7123 24.1994 17.2818 24.2 15.8515 24.1964C15.7425 24.1962 15.6803 24.2342 15.6191 24.3224C14.5809 25.825 12.5275 26.3527 10.8974 25.5314C10.7321 25.4481 10.5977 25.4363 10.4277 25.5109C9.50667 25.9146 8.54336 26.127 7.53514 26.0997C5.65293 26.0489 4.00893 25.3806 2.60643 24.1339C1.39697 23.0585 0.587029 21.7317 0.197251 20.1554C-0.0490111 19.1589 -0.0459867 18.154 0.103501 17.1447C0.327081 15.6367 0.938596 14.308 1.94139 13.1603C2.37813 12.6607 2.87171 12.2238 3.42186 11.8527C3.50003 11.7999 3.52651 11.7413 3.52733 11.6505C3.52983 11.2987 3.69023 11.0423 4.00877 10.882C5.17119 10.2965 6.40354 10.0013 7.70506 10.0001C8.87562 9.99932 10.0462 10.0024 11.2168 10.004ZM12.5498 20.5704C11.7008 20.5706 11.0121 21.2596 11.0117 22.1085C11.0117 22.9578 11.7006 23.6465 12.5498 23.6466C13.399 23.6465 14.0879 22.9578 14.0879 22.1085C14.0874 21.2596 13.3988 20.5706 12.5498 20.5704ZM23.4736 20.5704C22.6246 20.5706 21.936 21.2596 21.9355 22.1085C21.9355 22.9578 22.6244 23.6465 23.4736 23.6466C24.3228 23.6465 25.0117 22.9578 25.0117 22.1085C25.0113 21.2596 24.3226 20.5706 23.4736 20.5704ZM28.6064 17.8507C27.9106 17.8511 27.3461 18.4157 27.3457 19.1115C27.3457 19.8076 27.9103 20.3728 28.6064 20.3732C29.3028 20.3732 29.8681 19.8079 29.8681 19.1115C29.8677 18.4154 29.3025 17.8507 28.6064 17.8507ZM6.7119 13.465C6.53797 13.4652 6.39674 13.6065 6.39647 13.7804V15.3331C6.39645 15.4095 6.33405 15.4707 6.25877 15.4708H4.70604C4.53211 15.471 4.39093 15.6124 4.39061 15.7863V17.1974C4.39084 17.3714 4.53205 17.5117 4.70604 17.5119H6.25877C6.33487 17.512 6.39602 17.5746 6.39647 17.6496V19.2033C6.39665 19.3773 6.53791 19.5185 6.7119 19.5187H8.12303C8.29688 19.5183 8.43731 19.3772 8.43748 19.2033V17.6496C8.43793 17.5736 8.50031 17.5122 8.57518 17.5119H10.1289C10.3027 17.5115 10.4441 17.3713 10.4443 17.1974V15.7863C10.444 15.6125 10.3027 15.4712 10.1289 15.4708H8.57518C8.50006 15.4705 8.4375 15.4094 8.43748 15.3331V13.7804C8.43721 13.6066 8.29682 13.4654 8.12303 13.465H6.7119ZM25.5478 15.2316C24.8521 15.2321 24.2875 15.7966 24.2871 16.4923C24.2871 17.1884 24.8519 17.7536 25.5478 17.754C26.2442 17.754 26.8095 17.1887 26.8096 16.4923C26.8091 15.7963 26.244 15.2316 25.5478 15.2316ZM31.667 15.2316C30.9711 15.2319 30.4067 15.7965 30.4062 16.4923C30.4063 17.1885 30.9709 17.7537 31.667 17.754C32.3633 17.7539 32.9287 17.1886 32.9287 16.4923C32.9283 15.7964 32.363 15.2317 31.667 15.2316ZM28.6064 12.5988C27.9106 12.5991 27.3461 13.1637 27.3457 13.8595C27.3458 14.5556 27.9104 15.1209 28.6064 15.1212C29.3027 15.1212 29.868 14.5558 29.8681 13.8595C29.8677 13.1635 29.3025 12.5988 28.6064 12.5988Z",
-                                  }),
-                                }),
-                                (0, i.jsx)("defs", {
-                                  children: (0, i.jsx)("clipPath", {
-                                    id: s,
-                                    children: (0, i.jsx)("rect", {
-                                      fill: "currentColor",
-                                      width: "36",
-                                      height: "36",
-                                    }),
-                                  }),
-                                }),
-                              ],
+                              children: (0, i.jsx)("path", {
+                                fill: "currentColor",
+                                d: "M16.1827 0.0781004C17.6081 -0.0426998 19.0335 -0.0183863 20.4571 0.121069C23.1735 0.386856 25.7983 1.04207 28.3604 1.96775C28.3933 1.97962 28.4272 1.98854 28.4707 2.00193C28.4909 1.96528 28.5193 1.93316 28.5264 1.89744C28.5625 1.71211 28.6809 1.67014 28.8555 1.66892C29.6045 1.66433 30.3068 1.85492 30.9815 2.16013C31.946 2.59683 32.798 3.20275 33.5821 3.90916C33.6515 3.97184 33.6587 4.0229 33.6211 4.10544C33.5517 4.25805 33.4959 4.41663 33.4317 4.5781C33.8532 4.96729 34.223 5.39899 34.5352 5.87986C35.1214 6.78349 35.4179 7.78243 35.5371 8.84568C35.7968 11.1614 35.9333 13.4849 35.9893 15.8135C36.0312 17.563 35.9522 19.308 35.7452 21.0459C35.6396 21.9318 35.484 22.8097 35.1397 23.6406C34.9085 24.1987 34.6002 24.7018 34.0889 25.0547C33.3268 25.5809 31.8525 25.6874 31.0977 24.4013C30.7916 23.8796 30.6396 23.3065 30.5069 22.7236C30.164 21.2205 29.8132 19.7187 29.4649 18.2168C29.3652 17.7865 29.2627 17.3565 29.1563 16.9033C28.9289 17.0598 28.7547 17.247 28.6407 17.4707C28.4287 17.8872 28.233 18.3132 28.0498 18.7431C27.8101 19.3059 27.5943 19.8836 27.1934 20.3554C25.8977 21.881 23.8114 22.5708 21.6748 21.6279C20.7231 21.2077 19.9131 20.6151 19.417 19.6777C18.6868 18.2976 18.5895 16.8836 19.337 15.4814C19.7143 14.7738 20.2355 14.1607 20.8174 13.6045C20.9131 13.513 21.0054 13.4171 21.0987 13.3232C21.1053 13.3165 21.1081 13.3056 21.125 13.2715C19.0201 12.8742 16.9252 12.8754 14.7891 13.2461C14.8996 13.3584 14.9835 13.4489 15.0733 13.5332C15.6865 14.109 16.2264 14.7504 16.6319 15.4853C17.252 16.6089 17.2713 17.7935 16.8594 18.9892C16.4264 20.2467 15.5363 21.0751 14.3409 21.6045C13.0659 22.169 11.7798 22.2381 10.4932 21.6592C9.31318 21.1283 8.49376 20.2528 8.03227 19.0361C7.8451 18.5422 7.62199 18.0604 7.39262 17.584C7.24337 17.2739 7.00619 17.0271 6.70317 16.8174C6.62981 17.1331 6.55966 17.4332 6.49027 17.7334C6.16674 19.1315 5.84402 20.5299 5.51957 21.9277C5.38381 22.5117 5.2609 23.1001 5.1016 23.6777C4.99151 24.0771 4.78572 24.4377 4.51078 24.7549C3.77431 25.6032 2.45123 25.5179 1.74027 24.9228C1.27551 24.5338 0.998936 24.0235 0.790079 23.4697C0.51363 22.7361 0.370845 21.9703 0.275431 21.1963C0.0625906 19.4694 -0.0391154 17.7349 0.0146884 15.9961C0.0639243 14.4025 0.145108 12.8095 0.239298 11.2177C0.293428 10.303 0.380001 9.38862 0.487345 8.47849C0.644598 7.14865 1.20265 5.99432 2.10746 5.00876C2.25884 4.84393 2.42083 4.68749 2.58598 4.53611C2.65364 4.47384 2.67533 4.42018 2.62895 4.3408C2.61888 4.32371 2.61641 4.30211 2.60941 4.28318C2.46019 3.87647 2.45845 3.87395 2.80668 3.60154C3.75687 2.85869 4.77722 2.24333 5.95219 1.92283C6.43149 1.79205 6.91854 1.72986 7.41801 1.7656C7.56878 1.7763 7.65507 1.82431 7.68168 1.97263C7.6861 1.9963 7.70206 2.01729 7.70024 2.01365H7.70121C8.85964 1.6644 9.99349 1.30045 11.1397 0.982397C12.7909 0.524039 14.4739 0.222765 16.1827 0.0781004ZM11.6436 14.5459C11.5481 14.5459 11.4554 14.584 11.3877 14.6513C11.3203 14.7187 11.2825 14.8109 11.2823 14.9062V16.5761H9.60942C9.51394 16.5762 9.42124 16.6143 9.35356 16.6816C9.28616 16.749 9.24829 16.8412 9.24809 16.9365V17.8388C9.24816 17.9343 9.2861 18.0262 9.35356 18.0937C9.42128 18.1613 9.51371 18.1992 9.60942 18.1992H11.2823V19.8681C11.2823 19.9637 11.3202 20.0564 11.3877 20.124C11.4555 20.1915 11.5479 20.2294 11.6436 20.2295H12.5469L12.6182 20.2226C12.6874 20.2088 12.7521 20.1745 12.8028 20.124C12.8702 20.0564 12.9082 19.9636 12.9082 19.8681V18.1992H14.5811L14.6524 18.1924C14.7216 18.1785 14.7863 18.1443 14.837 18.0937C14.9043 18.0262 14.9423 17.9342 14.9424 17.8388V16.9365C14.9422 16.8412 14.9044 16.749 14.837 16.6816C14.7693 16.6143 14.6766 16.5762 14.5811 16.5761H12.9082V14.9062C12.908 14.8109 12.8703 14.7187 12.8028 14.6513C12.7351 14.584 12.6424 14.5459 12.5469 14.5459H11.6436ZM23.6299 16.0361C22.8392 16.0362 22.1979 16.6768 22.1973 17.4668C22.1973 18.2572 22.8389 18.8984 23.6299 18.8984C24.4208 18.8981 25.0625 18.2571 25.0625 17.4668C25.0619 16.6769 24.4204 16.0364 23.6299 16.0361ZM24.9141 10.0381C24.1027 10.0382 23.4448 10.6961 23.4444 11.5068C23.4446 12.3176 24.1026 12.9745 24.9141 12.9746C25.7257 12.9746 26.3836 12.3177 26.3838 11.5068C26.3834 10.6961 25.7256 10.0381 24.9141 10.0381ZM29.0166 7.02048C27.7316 7.02074 26.6898 8.06175 26.6895 9.34568C26.6895 10.6298 27.7314 11.6706 29.0166 11.6709C30.3019 11.6707 31.3447 10.6299 31.3448 9.34568C31.3445 8.06172 30.3017 7.0207 29.0166 7.02048ZM7.16703 7.51755C6.06435 7.51791 5.17021 8.41113 5.16996 9.51267C5.17006 10.6143 6.06425 11.5074 7.16703 11.5078C8.27012 11.5078 9.16498 10.6146 9.16508 9.51267C9.16483 8.41091 8.27002 7.51755 7.16703 7.51755ZM32.4268 5.96091C32.1773 5.89397 31.9081 5.92981 31.6358 6.12107L31.6875 6.19529L31.6348 6.12009L31.625 6.12888C31.3844 6.3549 31.2555 6.56575 31.2139 6.77048C31.1722 6.97658 31.2224 7.16409 31.3106 7.33689C31.3977 7.50721 31.5271 7.67288 31.6495 7.83396C31.7732 7.99695 31.8926 8.15982 31.9766 8.33494C32.0646 8.56462 32.0999 8.79776 32.1211 9.02244C32.1419 9.24271 32.1507 9.46898 32.1866 9.65818C32.2233 9.85102 32.2925 10.0294 32.4493 10.1562C32.6054 10.2822 32.8337 10.3456 33.1602 10.3457H33.1661C33.5007 10.3247 33.7197 10.1432 33.8516 9.88669C33.9805 9.63579 34.0277 9.31221 34.0313 8.99021C34.0348 8.66633 33.9945 8.33347 33.9434 8.05955C33.8927 7.7881 33.8297 7.56499 33.7832 7.46189C33.6977 7.27222 33.4405 6.75768 33.0733 6.37888C32.8896 6.18958 32.6713 6.02681 32.4268 5.96091ZM28.626 4.45212C28.3017 4.44856 27.9687 4.48892 27.6944 4.54001C27.4226 4.59065 27.2 4.6538 27.0967 4.70017C26.9075 4.78524 26.3924 5.04199 26.0127 5.40915C25.8229 5.59275 25.6598 5.81104 25.5938 6.05564C25.5267 6.30496 25.5625 6.57357 25.7539 6.84568L25.7627 6.85544C25.9891 7.09596 26.1994 7.22518 26.4043 7.26658C26.611 7.30822 26.7985 7.25829 26.9717 7.1699C27.1424 7.08278 27.3074 6.95331 27.4688 6.83103C27.5919 6.73776 27.7148 6.64721 27.8428 6.57224L27.9737 6.5029C28.2026 6.41596 28.4344 6.38139 28.6582 6.36033C28.8788 6.33958 29.1046 6.33173 29.294 6.29587C29.4874 6.25918 29.6659 6.18939 29.793 6.0322C29.8876 5.91515 29.947 5.75785 29.9707 5.5488L29.9834 5.32224L29.9825 5.31638C29.9613 4.98226 29.7801 4.76252 29.5235 4.63083C29.2723 4.50218 28.9483 4.45568 28.626 4.45212Z",
+                              }),
                             })
-                          : "8bitdo_pro" == t
+                          : "8bitdo_sn30" == t
                             ? (0, i.jsxs)("svg", {
                                 viewBox: "0 0 36 36",
                                 fill: "none",
@@ -81424,7 +81511,7 @@
                                     clipPath: a,
                                     children: (0, i.jsx)("path", {
                                       fill: "currentColor",
-                                      d: "M27.7734 6.01249C28.9788 6.03744 30.1205 6.33782 31.1855 6.91483C31.3082 6.98141 31.3941 7.0615 31.4326 7.16971H31.0996V7.17362H31.4335C31.4524 7.22852 31.4594 7.29064 31.4521 7.3621C31.4407 7.47552 31.4843 7.54171 31.5859 7.60721C33.2663 8.68591 34.2958 10.2253 34.7167 12.1609C35.0706 13.7884 35.3234 15.4352 35.5361 17.0877C35.7469 18.7244 35.8609 20.3682 35.9335 22.0154C35.9671 22.7781 36.004 23.542 35.9999 24.3055C35.9944 25.303 35.8569 26.2831 35.4531 27.2088C34.9562 28.347 34.1485 29.1542 32.9384 29.5017C31.6727 29.8653 30.6028 29.5341 29.7509 28.5262C29.2715 27.9585 28.9464 27.3013 28.7177 26.6014C28.5088 25.9616 28.344 25.3077 28.1474 24.6639C27.6047 22.8866 26.5032 21.5482 24.9238 20.5887C24.9213 20.5871 24.9184 20.5862 24.916 20.5848L25.1503 20.2723L25.1718 20.2469L25.1728 20.2478L25.1904 20.2273C25.2862 20.2759 25.3768 20.3034 25.4365 20.323L25.7773 20.4256C25.8937 20.4577 26.012 20.487 26.124 20.5115L26.4384 20.573C27.1766 20.6984 27.9391 20.7019 28.6767 20.5828L28.6757 20.5818C31.2157 20.1944 33.4046 18.277 34.166 15.8308L34.165 15.8299C35.6102 11.3723 32.3235 6.65548 27.5917 6.65506V6.65409H8.4062V6.65506C5.37767 6.6497 2.70335 8.67037 1.81049 11.5506C1.00503 14.1045 1.74193 16.9571 3.68745 18.7879L3.87983 18.9617C4.91492 19.8713 6.23159 20.462 7.60053 20.6228H7.60151C8.67153 20.7459 9.79336 20.6306 10.8066 20.2273C10.8114 20.2327 10.8176 20.2378 10.8222 20.243L10.8886 20.1834L10.8222 20.2439L10.8271 20.2488L10.833 20.2557C10.8366 20.2598 10.842 20.2657 10.8476 20.2723C10.8594 20.2862 10.8744 20.3052 10.8915 20.326C10.9263 20.3681 10.9694 20.4197 11.0126 20.4724C11.0418 20.508 11.072 20.5445 11.0996 20.5779C11.0938 20.581 11.0879 20.5842 11.082 20.5877C9.89406 21.2973 8.98056 22.2657 8.32905 23.4842C8.03441 24.0355 7.85478 24.6298 7.69721 25.2303C7.50206 25.9733 7.29989 26.7134 6.96284 27.408C6.64138 28.0702 6.24258 28.6754 5.63471 29.1131C4.81567 29.7026 3.91714 29.77 2.98042 29.4724C1.77578 29.0895 0.984754 28.2619 0.511667 27.1101C0.206212 26.3666 0.0705524 25.5865 0.0243618 24.7879C-0.046774 23.562 0.0538517 22.3407 0.122018 21.1189C0.161122 20.4188 0.195563 19.7179 0.265573 19.0203C0.368012 18.003 0.474778 16.9846 0.627877 15.9744C0.821202 14.6994 1.02971 13.4249 1.29194 12.1629C1.69465 10.2234 2.74378 8.70172 4.4062 7.61405C4.51078 7.54554 4.57148 7.47897 4.55659 7.3494C4.53428 7.15242 4.62772 7.02617 4.79975 6.93046C5.59838 6.48682 6.45226 6.20819 7.35444 6.09159C7.80468 6.03349 8.26203 6.01478 8.71674 6.00956C9.68191 5.99838 10.6481 6.00686 11.6132 6.0076C11.6623 6.00761 11.7116 6.00867 11.7607 6.01053C12.0309 6.02025 12.1172 6.09801 12.1552 6.37186V6.37088H23.8154C23.8752 6.26485 23.9075 6.14249 23.9863 6.08768C24.0726 6.02812 24.2031 6.01093 24.3144 6.01053C25.4672 6.00532 26.621 5.98866 27.7734 6.01249ZM27.5878 7.23026L27.9902 7.24296C31.9701 7.49058 34.7257 11.4172 33.7294 15.2713L33.6171 15.656L33.6152 15.659C32.9396 17.8298 31.0302 19.5502 28.8037 19.9764L28.5878 20.0135H28.5849C27.9099 20.1225 27.211 20.1195 26.5351 20.0047L26.247 19.949C26.0499 19.9059 25.8293 19.8435 25.6337 19.7801C26.2276 19.1014 26.5334 18.1831 26.4589 17.283H26.4599C26.3463 15.5899 24.908 14.1684 23.207 14.1199H23.041C21.3039 14.1281 19.8318 15.5696 19.7148 17.283H19.7158C19.6765 17.7706 19.7462 18.2662 19.914 18.7244V18.7254L19.9277 18.7674L19.9287 18.7713L19.9423 18.8123L19.9521 18.8435L19.9648 18.8963L19.9716 18.9441H19.9726L19.9765 18.9793V18.9812L19.9804 19.0144L19.9824 19.0428V19.0603L19.9814 19.073L19.9804 19.0955V19.1033L19.9277 19.2693L20.2021 19.3562L20.2548 19.3728V19.4764H20.2568L20.3339 19.3982L20.4765 19.4432L20.5292 19.2781L20.5302 19.2693L20.5322 19.2703L20.5341 19.2644L20.5371 19.2488L20.538 19.2469L20.5507 19.1873L20.5527 19.1697V19.1668L20.5546 19.1473L20.5566 19.1189V19.1033L20.5576 19.0916L20.5585 19.0701V19.0428L20.5576 19.0242L20.5537 18.9627L20.5527 18.9471L20.5449 18.8807L20.5429 18.867L20.5312 18.7937L20.5263 18.7683L20.5068 18.6902H20.5078L20.5039 18.6775L20.4921 18.6385L20.4892 18.6307L20.4755 18.5896L20.4628 18.5506H20.4638L20.4589 18.5379L20.4091 18.3914C20.3029 18.0482 20.2617 17.6837 20.291 17.326L20.0136 17.3025L20.289 17.3221C20.3864 15.8966 21.6228 14.7 23.0488 14.6961L23.0546 14.6951C24.5067 14.66 25.787 15.8694 25.8847 17.3211V17.3269C25.9568 18.1839 25.6106 19.0661 24.9697 19.6355L25.1601 19.8504L24.9687 19.6346L24.9609 19.6433L24.9042 19.698L24.8515 19.7478L24.8437 19.7557L24.7949 19.8064L24.791 19.8113L24.748 19.8582L24.7451 19.8611L24.7128 19.8982L24.6962 19.9168L24.4111 20.2976L24.3974 20.3142L24.3857 20.3299L24.3935 20.3357L24.3544 20.3758L24.3525 20.3797L24.5966 20.5017L24.6025 20.5125L24.6415 20.5906C23.0992 21.3439 21.1855 20.8778 20.166 19.4949C20.1056 19.4133 20.0441 19.3832 19.9443 19.3836C18.6485 19.3869 17.3524 19.387 16.0566 19.3855C15.9769 19.3855 15.9142 19.394 15.8613 19.4685C14.9119 20.8074 12.9767 21.3814 11.3662 20.5935L11.4335 20.5242L11.6328 20.3162C11.6285 20.3115 11.6106 20.2916 11.5771 20.2517C11.5429 20.211 11.5006 20.1592 11.458 20.1072C11.3816 20.0142 11.2904 19.9026 11.2539 19.8621H11.2548C11.1885 19.787 11.1037 19.7023 11.0273 19.6346H11.0263C10.3864 19.0651 10.0392 18.1831 10.1113 17.3269L10.1123 17.324C10.2204 15.8833 11.4308 14.7105 12.872 14.6961L12.874 14.6951C14.3453 14.6707 15.5979 15.855 15.708 17.324V17.325C15.7357 17.6841 15.6956 18.0487 15.5898 18.3914L15.54 18.5379L15.538 18.5428C15.4742 18.7262 15.4041 18.9852 15.4599 19.2488L15.7421 19.1883L15.7695 19.1824L15.7441 19.1902L15.4687 19.2752L15.5195 19.4402L16.0703 19.2723L16.0214 19.114C16.0052 19.0154 16.0275 18.8903 16.08 18.7381C16.2308 18.3318 16.3013 17.8967 16.291 17.4646L16.2822 17.2801C16.15 15.5194 14.6532 14.0912 12.8662 14.1199H12.8642C11.1679 14.1378 9.75791 15.4668 9.55366 17.1199L9.53706 17.281C9.46215 18.1795 9.76702 19.0975 10.3583 19.7762C9.50533 20.0699 8.57082 20.1545 7.66694 20.0506H7.66596C6.49271 19.9124 5.35766 19.4282 4.4394 18.6814L4.25874 18.5281H4.25776C2.34413 16.8601 1.59604 14.1449 2.35932 11.7244L2.3603 11.7224L2.44135 11.4773C3.33297 8.9628 5.72246 7.22514 8.4062 7.23026H27.5878ZM12.8828 15.7625C12.0828 15.7627 11.4339 16.4123 11.4335 17.2127C11.4335 18.0134 12.0825 18.6627 12.8828 18.6629C13.6832 18.6629 14.332 18.0136 14.332 17.2127C14.3316 16.4121 13.6829 15.7625 12.8828 15.7625ZM23.1162 15.7625C22.3163 15.7629 21.6673 16.4123 21.6669 17.2127C21.6669 18.0133 22.316 18.6625 23.1162 18.6629C23.9166 18.6629 24.5654 18.0136 24.5654 17.2127C24.565 16.4121 23.9163 15.7625 23.1162 15.7625ZM27.8808 13.1892C27.1708 13.1893 26.5948 13.7659 26.5947 14.4764C26.5947 15.1868 27.1708 15.7624 27.8808 15.7625C28.5908 15.7623 29.1669 15.1868 29.1669 14.4764C29.1668 13.766 28.5908 13.1894 27.8808 13.1892ZM7.45405 9.20682C7.28806 9.20699 7.1525 9.34261 7.15229 9.50858V10.9764C7.15205 11.0454 7.09514 11.1031 7.02631 11.1033H5.55952C5.39342 11.1034 5.25786 11.239 5.25776 11.4051V12.7381C5.258 12.904 5.39351 13.0397 5.55952 13.0398H7.02631C7.09523 13.04 7.15219 13.0977 7.15229 13.1668V14.6346C7.15264 14.8004 7.28815 14.9362 7.45405 14.9363H8.78706C8.9528 14.936 9.08749 14.8003 9.08784 14.6346V13.1668C9.08794 13.0976 9.14581 13.0399 9.21479 13.0398H10.6816C10.8474 13.0395 10.9821 12.9039 10.9824 12.7381V11.4051C10.9823 11.2401 10.8491 11.1052 10.6845 11.1033L10.6796 11.1014H9.21284C9.14395 11.1013 9.08808 11.0454 9.08784 10.9764V9.50858C9.08763 9.34273 8.95288 9.20717 8.78706 9.20682H7.45405ZM25.0615 10.7459C24.3517 10.7462 23.7756 11.3228 23.7753 12.033C23.7754 12.7433 24.3516 13.3188 25.0615 13.3191C25.7716 13.3191 26.3475 12.7435 26.3476 12.033C26.3474 11.3226 25.7715 10.7459 25.0615 10.7459ZM30.6874 10.7459C29.9775 10.746 29.4016 11.3227 29.4013 12.033C29.4014 12.7435 29.9774 13.319 30.6874 13.3191C31.3976 13.3191 31.9735 12.7435 31.9736 12.033C31.9733 11.3226 31.3974 10.7459 30.6874 10.7459ZM27.8808 8.28788C27.1708 8.28797 26.5948 8.86454 26.5947 9.57499C26.5949 10.2853 27.1709 10.861 27.8808 10.8611C28.5907 10.8609 29.1667 10.2852 29.1669 9.57499C29.1668 8.8646 28.5908 8.28807 27.8808 8.28788Z",
+                                      d: "M11.2168 10.004C11.2667 10.004 11.3173 10.0048 11.3672 10.007C11.5907 10.0171 11.7075 10.136 11.7139 10.3605V10.5197H11.8965C15.9638 10.5197 20.0313 10.5188 24.0986 10.5226C24.239 10.5226 24.2877 10.4877 24.2861 10.3439C24.2837 10.1215 24.407 10.0095 24.6426 10.0079C25.5809 10.0033 26.5196 9.99799 27.458 10.0021C27.9951 10.0045 28.534 9.99883 29.0683 10.0431C30.1561 10.133 31.1802 10.4534 32.1455 10.965C32.3761 11.0871 32.5061 11.2487 32.4639 11.5187C32.4349 11.7034 32.5097 11.814 32.668 11.9269C34.3326 13.1148 35.399 14.705 35.8115 16.714C36.1472 18.3488 36.0615 19.9547 35.3359 21.4796C34.1526 23.9665 32.214 25.5049 29.4902 26.0021C28.1318 26.2499 26.8154 26.0562 25.5508 25.5109C25.3928 25.4427 25.2679 25.4444 25.1074 25.5246C23.4412 26.358 21.4298 25.8397 20.3681 24.3107C20.3086 24.2249 20.2442 24.1962 20.1426 24.1964C18.7123 24.1994 17.2818 24.2 15.8515 24.1964C15.7425 24.1962 15.6803 24.2342 15.6191 24.3224C14.5809 25.825 12.5275 26.3527 10.8974 25.5314C10.7321 25.4481 10.5977 25.4363 10.4277 25.5109C9.50667 25.9146 8.54336 26.127 7.53514 26.0997C5.65293 26.0489 4.00893 25.3806 2.60643 24.1339C1.39697 23.0585 0.587029 21.7317 0.197251 20.1554C-0.0490111 19.1589 -0.0459867 18.154 0.103501 17.1447C0.327081 15.6367 0.938596 14.308 1.94139 13.1603C2.37813 12.6607 2.87171 12.2238 3.42186 11.8527C3.50003 11.7999 3.52651 11.7413 3.52733 11.6505C3.52983 11.2987 3.69023 11.0423 4.00877 10.882C5.17119 10.2965 6.40354 10.0013 7.70506 10.0001C8.87562 9.99932 10.0462 10.0024 11.2168 10.004ZM12.5498 20.5704C11.7008 20.5706 11.0121 21.2596 11.0117 22.1085C11.0117 22.9578 11.7006 23.6465 12.5498 23.6466C13.399 23.6465 14.0879 22.9578 14.0879 22.1085C14.0874 21.2596 13.3988 20.5706 12.5498 20.5704ZM23.4736 20.5704C22.6246 20.5706 21.936 21.2596 21.9355 22.1085C21.9355 22.9578 22.6244 23.6465 23.4736 23.6466C24.3228 23.6465 25.0117 22.9578 25.0117 22.1085C25.0113 21.2596 24.3226 20.5706 23.4736 20.5704ZM28.6064 17.8507C27.9106 17.8511 27.3461 18.4157 27.3457 19.1115C27.3457 19.8076 27.9103 20.3728 28.6064 20.3732C29.3028 20.3732 29.8681 19.8079 29.8681 19.1115C29.8677 18.4154 29.3025 17.8507 28.6064 17.8507ZM6.7119 13.465C6.53797 13.4652 6.39674 13.6065 6.39647 13.7804V15.3331C6.39645 15.4095 6.33405 15.4707 6.25877 15.4708H4.70604C4.53211 15.471 4.39093 15.6124 4.39061 15.7863V17.1974C4.39084 17.3714 4.53205 17.5117 4.70604 17.5119H6.25877C6.33487 17.512 6.39602 17.5746 6.39647 17.6496V19.2033C6.39665 19.3773 6.53791 19.5185 6.7119 19.5187H8.12303C8.29688 19.5183 8.43731 19.3772 8.43748 19.2033V17.6496C8.43793 17.5736 8.50031 17.5122 8.57518 17.5119H10.1289C10.3027 17.5115 10.4441 17.3713 10.4443 17.1974V15.7863C10.444 15.6125 10.3027 15.4712 10.1289 15.4708H8.57518C8.50006 15.4705 8.4375 15.4094 8.43748 15.3331V13.7804C8.43721 13.6066 8.29682 13.4654 8.12303 13.465H6.7119ZM25.5478 15.2316C24.8521 15.2321 24.2875 15.7966 24.2871 16.4923C24.2871 17.1884 24.8519 17.7536 25.5478 17.754C26.2442 17.754 26.8095 17.1887 26.8096 16.4923C26.8091 15.7963 26.244 15.2316 25.5478 15.2316ZM31.667 15.2316C30.9711 15.2319 30.4067 15.7965 30.4062 16.4923C30.4063 17.1885 30.9709 17.7537 31.667 17.754C32.3633 17.7539 32.9287 17.1886 32.9287 16.4923C32.9283 15.7964 32.363 15.2317 31.667 15.2316ZM28.6064 12.5988C27.9106 12.5991 27.3461 13.1637 27.3457 13.8595C27.3458 14.5556 27.9104 15.1209 28.6064 15.1212C29.3027 15.1212 29.868 14.5558 29.8681 13.8595C29.8677 13.1635 29.3025 12.5988 28.6064 12.5988Z",
                                     }),
                                   }),
                                   (0, i.jsx)("defs", {
@@ -81439,7 +81526,7 @@
                                   }),
                                 ],
                               })
-                            : "8bitdo_ultimate" == t
+                            : "8bitdo_pro" == t
                               ? (0, i.jsxs)("svg", {
                                   viewBox: "0 0 36 36",
                                   fill: "none",
@@ -81450,7 +81537,7 @@
                                       clipPath: a,
                                       children: (0, i.jsx)("path", {
                                         fill: "currentColor",
-                                        d: "M25.3865 5.11825C26.755 4.90005 28.1094 4.97923 29.4236 5.39462C30.4285 5.71216 31.3614 6.19989 32.1726 6.89462C32.3276 7.02768 32.4119 7.17257 32.408 7.37704C32.4056 7.49827 32.4255 7.61963 32.4314 7.69345C32.5721 7.80286 32.6969 7.87505 32.7898 7.97567C33.7307 8.99583 34.2022 10.2489 34.5398 11.5626C34.9787 13.2716 35.2054 15.0185 35.4158 16.7657C35.5919 18.2301 35.751 19.6978 35.8796 21.1671C36.0269 22.851 36.0917 24.5378 35.7634 26.212C35.5761 27.1675 35.2593 28.0684 34.5789 28.7999C33.9668 29.458 33.1821 29.8296 32.3533 30.1241C31.7359 30.3438 31.5771 30.317 31.2107 29.7599C30.651 28.9095 30.1303 28.0326 29.5935 27.1671C28.9629 26.149 28.3487 25.1202 27.6961 24.1163C27.2547 23.4372 26.6937 22.8717 25.8972 22.6016C25.2789 22.3918 24.6367 22.3551 23.991 22.3556C19.8645 22.3575 15.7376 22.3624 11.6111 22.3614C10.178 22.3614 9.04967 22.9302 8.28492 24.1524C7.43808 25.5056 6.61368 26.8734 5.77515 28.2325C5.46691 28.7316 5.1469 29.2242 4.82887 29.7169C4.76726 29.8121 4.68876 29.8965 4.61695 29.9845C4.40805 30.2398 4.16884 30.3079 3.84058 30.1925C2.86063 29.848 1.9303 29.4329 1.25465 28.5997C0.678281 27.8888 0.403921 27.0492 0.233162 26.169C-0.034456 24.7888 -0.0493176 23.3911 0.0759357 22.0011C0.277018 19.7696 0.510949 17.5401 0.783944 15.3165C0.992378 13.6187 1.26467 11.9263 1.85328 10.3067C2.16201 9.45791 2.57326 8.66447 3.19508 7.99716C3.29517 7.88989 3.42374 7.80944 3.57496 7.68954C3.49832 7.16883 3.8053 6.87846 4.18922 6.60555C6.15956 5.20425 8.33914 4.74637 10.7107 5.12997C11.05 5.18473 11.0504 5.18936 11.4265 5.58016C11.5389 5.56107 11.6476 5.52694 11.7566 5.52645C14.8635 5.51177 17.97 5.49081 21.0769 5.49227C22.2174 5.49277 23.3574 5.5474 24.4978 5.57235C24.5492 5.57333 24.6169 5.53872 24.6502 5.49813C24.842 5.26328 25.09 5.16571 25.3865 5.11825ZM12.2996 14.6524C12.1182 14.6524 11.9696 14.8002 11.9695 14.9815V16.6192C11.9695 16.7005 11.9009 16.7683 11.8181 16.7686H10.1697C9.98837 16.7687 9.8397 16.9165 9.83961 17.0977V18.586C9.83976 18.7673 9.98841 18.914 10.1697 18.9141H11.8181C11.9008 18.9145 11.9693 18.9825 11.9695 19.0636V20.7022C11.9696 20.8836 12.1182 21.0304 12.2996 21.0304H13.7976C13.9786 21.0298 14.1276 20.8832 14.1277 20.7022V19.0636C14.1279 18.9823 14.1952 18.9142 14.2781 18.9141H15.9265C16.1076 18.9138 16.2564 18.7671 16.2566 18.586V17.0977C16.2565 16.9175 16.1094 16.7704 15.9295 16.7686L15.9246 16.7667H14.2761C14.193 16.7667 14.1277 16.7007 14.1277 16.6192V14.9815C14.1276 14.8005 13.9786 14.653 13.7976 14.6524H12.2996ZM22.9158 15.9591C21.8797 15.9591 21.0382 16.7996 21.0378 17.835C21.0379 18.8707 21.8795 19.711 22.9158 19.711C23.9516 19.7105 24.7927 18.8704 24.7927 17.835C24.7924 16.7999 23.9514 15.9596 22.9158 15.9591ZM28.3132 13.3809C27.6194 13.3809 27.0564 13.9433 27.0564 14.6368C27.0564 15.3303 27.6194 15.8927 28.3132 15.8927C29.0066 15.8922 29.5691 15.3299 29.5691 14.6368C29.5691 13.9436 29.0066 13.3814 28.3132 13.3809ZM7.63648 10.2296C6.60034 10.2296 5.75873 11.07 5.75855 12.1056C5.75883 13.141 6.6004 13.9815 7.63648 13.9815C8.67212 13.981 9.51316 13.1407 9.51344 12.1056C9.51326 11.0703 8.67218 10.2301 7.63648 10.2296ZM25.7566 10.8233C25.0622 10.8233 24.4999 11.3851 24.4998 12.0792C24.4998 12.7733 25.0621 13.335 25.7566 13.335C26.4507 13.3346 27.0124 12.773 27.0125 12.0792C27.0124 11.3854 26.4507 10.8238 25.7566 10.8233ZM30.8826 10.8233C30.1888 10.8233 29.6258 11.3858 29.6257 12.0792C29.6258 12.7726 30.1888 13.335 30.8826 13.335C31.5761 13.3347 32.1384 12.7724 32.1384 12.0792C32.1383 11.386 31.576 10.8237 30.8826 10.8233ZM28.3289 8.26376C27.635 8.26376 27.072 8.82614 27.072 9.51962C27.0722 10.2129 27.6352 10.7755 28.3289 10.7755C29.0221 10.775 29.5845 10.2126 29.5847 9.51962C29.5847 8.82643 29.0223 8.26424 28.3289 8.26376Z",
+                                        d: "M27.7734 6.01249C28.9788 6.03744 30.1205 6.33782 31.1855 6.91483C31.3082 6.98141 31.3941 7.0615 31.4326 7.16971H31.0996V7.17362H31.4335C31.4524 7.22852 31.4594 7.29064 31.4521 7.3621C31.4407 7.47552 31.4843 7.54171 31.5859 7.60721C33.2663 8.68591 34.2958 10.2253 34.7167 12.1609C35.0706 13.7884 35.3234 15.4352 35.5361 17.0877C35.7469 18.7244 35.8609 20.3682 35.9335 22.0154C35.9671 22.7781 36.004 23.542 35.9999 24.3055C35.9944 25.303 35.8569 26.2831 35.4531 27.2088C34.9562 28.347 34.1485 29.1542 32.9384 29.5017C31.6727 29.8653 30.6028 29.5341 29.7509 28.5262C29.2715 27.9585 28.9464 27.3013 28.7177 26.6014C28.5088 25.9616 28.344 25.3077 28.1474 24.6639C27.6047 22.8866 26.5032 21.5482 24.9238 20.5887C24.9213 20.5871 24.9184 20.5862 24.916 20.5848L25.1503 20.2723L25.1718 20.2469L25.1728 20.2478L25.1904 20.2273C25.2862 20.2759 25.3768 20.3034 25.4365 20.323L25.7773 20.4256C25.8937 20.4577 26.012 20.487 26.124 20.5115L26.4384 20.573C27.1766 20.6984 27.9391 20.7019 28.6767 20.5828L28.6757 20.5818C31.2157 20.1944 33.4046 18.277 34.166 15.8308L34.165 15.8299C35.6102 11.3723 32.3235 6.65548 27.5917 6.65506V6.65409H8.4062V6.65506C5.37767 6.6497 2.70335 8.67037 1.81049 11.5506C1.00503 14.1045 1.74193 16.9571 3.68745 18.7879L3.87983 18.9617C4.91492 19.8713 6.23159 20.462 7.60053 20.6228H7.60151C8.67153 20.7459 9.79336 20.6306 10.8066 20.2273C10.8114 20.2327 10.8176 20.2378 10.8222 20.243L10.8886 20.1834L10.8222 20.2439L10.8271 20.2488L10.833 20.2557C10.8366 20.2598 10.842 20.2657 10.8476 20.2723C10.8594 20.2862 10.8744 20.3052 10.8915 20.326C10.9263 20.3681 10.9694 20.4197 11.0126 20.4724C11.0418 20.508 11.072 20.5445 11.0996 20.5779C11.0938 20.581 11.0879 20.5842 11.082 20.5877C9.89406 21.2973 8.98056 22.2657 8.32905 23.4842C8.03441 24.0355 7.85478 24.6298 7.69721 25.2303C7.50206 25.9733 7.29989 26.7134 6.96284 27.408C6.64138 28.0702 6.24258 28.6754 5.63471 29.1131C4.81567 29.7026 3.91714 29.77 2.98042 29.4724C1.77578 29.0895 0.984754 28.2619 0.511667 27.1101C0.206212 26.3666 0.0705524 25.5865 0.0243618 24.7879C-0.046774 23.562 0.0538517 22.3407 0.122018 21.1189C0.161122 20.4188 0.195563 19.7179 0.265573 19.0203C0.368012 18.003 0.474778 16.9846 0.627877 15.9744C0.821202 14.6994 1.02971 13.4249 1.29194 12.1629C1.69465 10.2234 2.74378 8.70172 4.4062 7.61405C4.51078 7.54554 4.57148 7.47897 4.55659 7.3494C4.53428 7.15242 4.62772 7.02617 4.79975 6.93046C5.59838 6.48682 6.45226 6.20819 7.35444 6.09159C7.80468 6.03349 8.26203 6.01478 8.71674 6.00956C9.68191 5.99838 10.6481 6.00686 11.6132 6.0076C11.6623 6.00761 11.7116 6.00867 11.7607 6.01053C12.0309 6.02025 12.1172 6.09801 12.1552 6.37186V6.37088H23.8154C23.8752 6.26485 23.9075 6.14249 23.9863 6.08768C24.0726 6.02812 24.2031 6.01093 24.3144 6.01053C25.4672 6.00532 26.621 5.98866 27.7734 6.01249ZM27.5878 7.23026L27.9902 7.24296C31.9701 7.49058 34.7257 11.4172 33.7294 15.2713L33.6171 15.656L33.6152 15.659C32.9396 17.8298 31.0302 19.5502 28.8037 19.9764L28.5878 20.0135H28.5849C27.9099 20.1225 27.211 20.1195 26.5351 20.0047L26.247 19.949C26.0499 19.9059 25.8293 19.8435 25.6337 19.7801C26.2276 19.1014 26.5334 18.1831 26.4589 17.283H26.4599C26.3463 15.5899 24.908 14.1684 23.207 14.1199H23.041C21.3039 14.1281 19.8318 15.5696 19.7148 17.283H19.7158C19.6765 17.7706 19.7462 18.2662 19.914 18.7244V18.7254L19.9277 18.7674L19.9287 18.7713L19.9423 18.8123L19.9521 18.8435L19.9648 18.8963L19.9716 18.9441H19.9726L19.9765 18.9793V18.9812L19.9804 19.0144L19.9824 19.0428V19.0603L19.9814 19.073L19.9804 19.0955V19.1033L19.9277 19.2693L20.2021 19.3562L20.2548 19.3728V19.4764H20.2568L20.3339 19.3982L20.4765 19.4432L20.5292 19.2781L20.5302 19.2693L20.5322 19.2703L20.5341 19.2644L20.5371 19.2488L20.538 19.2469L20.5507 19.1873L20.5527 19.1697V19.1668L20.5546 19.1473L20.5566 19.1189V19.1033L20.5576 19.0916L20.5585 19.0701V19.0428L20.5576 19.0242L20.5537 18.9627L20.5527 18.9471L20.5449 18.8807L20.5429 18.867L20.5312 18.7937L20.5263 18.7683L20.5068 18.6902H20.5078L20.5039 18.6775L20.4921 18.6385L20.4892 18.6307L20.4755 18.5896L20.4628 18.5506H20.4638L20.4589 18.5379L20.4091 18.3914C20.3029 18.0482 20.2617 17.6837 20.291 17.326L20.0136 17.3025L20.289 17.3221C20.3864 15.8966 21.6228 14.7 23.0488 14.6961L23.0546 14.6951C24.5067 14.66 25.787 15.8694 25.8847 17.3211V17.3269C25.9568 18.1839 25.6106 19.0661 24.9697 19.6355L25.1601 19.8504L24.9687 19.6346L24.9609 19.6433L24.9042 19.698L24.8515 19.7478L24.8437 19.7557L24.7949 19.8064L24.791 19.8113L24.748 19.8582L24.7451 19.8611L24.7128 19.8982L24.6962 19.9168L24.4111 20.2976L24.3974 20.3142L24.3857 20.3299L24.3935 20.3357L24.3544 20.3758L24.3525 20.3797L24.5966 20.5017L24.6025 20.5125L24.6415 20.5906C23.0992 21.3439 21.1855 20.8778 20.166 19.4949C20.1056 19.4133 20.0441 19.3832 19.9443 19.3836C18.6485 19.3869 17.3524 19.387 16.0566 19.3855C15.9769 19.3855 15.9142 19.394 15.8613 19.4685C14.9119 20.8074 12.9767 21.3814 11.3662 20.5935L11.4335 20.5242L11.6328 20.3162C11.6285 20.3115 11.6106 20.2916 11.5771 20.2517C11.5429 20.211 11.5006 20.1592 11.458 20.1072C11.3816 20.0142 11.2904 19.9026 11.2539 19.8621H11.2548C11.1885 19.787 11.1037 19.7023 11.0273 19.6346H11.0263C10.3864 19.0651 10.0392 18.1831 10.1113 17.3269L10.1123 17.324C10.2204 15.8833 11.4308 14.7105 12.872 14.6961L12.874 14.6951C14.3453 14.6707 15.5979 15.855 15.708 17.324V17.325C15.7357 17.6841 15.6956 18.0487 15.5898 18.3914L15.54 18.5379L15.538 18.5428C15.4742 18.7262 15.4041 18.9852 15.4599 19.2488L15.7421 19.1883L15.7695 19.1824L15.7441 19.1902L15.4687 19.2752L15.5195 19.4402L16.0703 19.2723L16.0214 19.114C16.0052 19.0154 16.0275 18.8903 16.08 18.7381C16.2308 18.3318 16.3013 17.8967 16.291 17.4646L16.2822 17.2801C16.15 15.5194 14.6532 14.0912 12.8662 14.1199H12.8642C11.1679 14.1378 9.75791 15.4668 9.55366 17.1199L9.53706 17.281C9.46215 18.1795 9.76702 19.0975 10.3583 19.7762C9.50533 20.0699 8.57082 20.1545 7.66694 20.0506H7.66596C6.49271 19.9124 5.35766 19.4282 4.4394 18.6814L4.25874 18.5281H4.25776C2.34413 16.8601 1.59604 14.1449 2.35932 11.7244L2.3603 11.7224L2.44135 11.4773C3.33297 8.9628 5.72246 7.22514 8.4062 7.23026H27.5878ZM12.8828 15.7625C12.0828 15.7627 11.4339 16.4123 11.4335 17.2127C11.4335 18.0134 12.0825 18.6627 12.8828 18.6629C13.6832 18.6629 14.332 18.0136 14.332 17.2127C14.3316 16.4121 13.6829 15.7625 12.8828 15.7625ZM23.1162 15.7625C22.3163 15.7629 21.6673 16.4123 21.6669 17.2127C21.6669 18.0133 22.316 18.6625 23.1162 18.6629C23.9166 18.6629 24.5654 18.0136 24.5654 17.2127C24.565 16.4121 23.9163 15.7625 23.1162 15.7625ZM27.8808 13.1892C27.1708 13.1893 26.5948 13.7659 26.5947 14.4764C26.5947 15.1868 27.1708 15.7624 27.8808 15.7625C28.5908 15.7623 29.1669 15.1868 29.1669 14.4764C29.1668 13.766 28.5908 13.1894 27.8808 13.1892ZM7.45405 9.20682C7.28806 9.20699 7.1525 9.34261 7.15229 9.50858V10.9764C7.15205 11.0454 7.09514 11.1031 7.02631 11.1033H5.55952C5.39342 11.1034 5.25786 11.239 5.25776 11.4051V12.7381C5.258 12.904 5.39351 13.0397 5.55952 13.0398H7.02631C7.09523 13.04 7.15219 13.0977 7.15229 13.1668V14.6346C7.15264 14.8004 7.28815 14.9362 7.45405 14.9363H8.78706C8.9528 14.936 9.08749 14.8003 9.08784 14.6346V13.1668C9.08794 13.0976 9.14581 13.0399 9.21479 13.0398H10.6816C10.8474 13.0395 10.9821 12.9039 10.9824 12.7381V11.4051C10.9823 11.2401 10.8491 11.1052 10.6845 11.1033L10.6796 11.1014H9.21284C9.14395 11.1013 9.08808 11.0454 9.08784 10.9764V9.50858C9.08763 9.34273 8.95288 9.20717 8.78706 9.20682H7.45405ZM25.0615 10.7459C24.3517 10.7462 23.7756 11.3228 23.7753 12.033C23.7754 12.7433 24.3516 13.3188 25.0615 13.3191C25.7716 13.3191 26.3475 12.7435 26.3476 12.033C26.3474 11.3226 25.7715 10.7459 25.0615 10.7459ZM30.6874 10.7459C29.9775 10.746 29.4016 11.3227 29.4013 12.033C29.4014 12.7435 29.9774 13.319 30.6874 13.3191C31.3976 13.3191 31.9735 12.7435 31.9736 12.033C31.9733 11.3226 31.3974 10.7459 30.6874 10.7459ZM27.8808 8.28788C27.1708 8.28797 26.5948 8.86454 26.5947 9.57499C26.5949 10.2853 27.1709 10.861 27.8808 10.8611C28.5907 10.8609 29.1667 10.2852 29.1669 9.57499C29.1668 8.8646 28.5908 8.28807 27.8808 8.28788Z",
                                       }),
                                     }),
                                     (0, i.jsx)("defs", {
@@ -81465,63 +81552,89 @@
                                     }),
                                   ],
                                 })
-                              : "mobile_touch" == t
+                              : "8bitdo_ultimate" == t
                                 ? (0, i.jsxs)("svg", {
-                                    viewBox: "0 0 64 64",
-                                    transform:
-                                      "matrix(1, 0, 0, 1, 0, 0)rotate(270)",
+                                    viewBox: "0 0 36 36",
+                                    fill: "none",
                                     xmlns: "http://www.w3.org/2000/svg",
                                     ...n,
                                     children: [
-                                      (0, i.jsx)("rect", {
-                                        fill: "none",
-                                        stroke: "currentColor",
-                                        strokeLinecap: "round",
-                                        strokeLinejoin: "round",
-                                        strokeWidth: "3px",
-                                        height: "60.54",
-                                        rx: "5.09",
-                                        ry: "5.09",
-                                        width: "32.11",
-                                        x: "15.94",
-                                        y: "1.62",
+                                      (0, i.jsx)("g", {
+                                        clipPath: a,
+                                        children: (0, i.jsx)("path", {
+                                          fill: "currentColor",
+                                          d: "M25.3865 5.11825C26.755 4.90005 28.1094 4.97923 29.4236 5.39462C30.4285 5.71216 31.3614 6.19989 32.1726 6.89462C32.3276 7.02768 32.4119 7.17257 32.408 7.37704C32.4056 7.49827 32.4255 7.61963 32.4314 7.69345C32.5721 7.80286 32.6969 7.87505 32.7898 7.97567C33.7307 8.99583 34.2022 10.2489 34.5398 11.5626C34.9787 13.2716 35.2054 15.0185 35.4158 16.7657C35.5919 18.2301 35.751 19.6978 35.8796 21.1671C36.0269 22.851 36.0917 24.5378 35.7634 26.212C35.5761 27.1675 35.2593 28.0684 34.5789 28.7999C33.9668 29.458 33.1821 29.8296 32.3533 30.1241C31.7359 30.3438 31.5771 30.317 31.2107 29.7599C30.651 28.9095 30.1303 28.0326 29.5935 27.1671C28.9629 26.149 28.3487 25.1202 27.6961 24.1163C27.2547 23.4372 26.6937 22.8717 25.8972 22.6016C25.2789 22.3918 24.6367 22.3551 23.991 22.3556C19.8645 22.3575 15.7376 22.3624 11.6111 22.3614C10.178 22.3614 9.04967 22.9302 8.28492 24.1524C7.43808 25.5056 6.61368 26.8734 5.77515 28.2325C5.46691 28.7316 5.1469 29.2242 4.82887 29.7169C4.76726 29.8121 4.68876 29.8965 4.61695 29.9845C4.40805 30.2398 4.16884 30.3079 3.84058 30.1925C2.86063 29.848 1.9303 29.4329 1.25465 28.5997C0.678281 27.8888 0.403921 27.0492 0.233162 26.169C-0.034456 24.7888 -0.0493176 23.3911 0.0759357 22.0011C0.277018 19.7696 0.510949 17.5401 0.783944 15.3165C0.992378 13.6187 1.26467 11.9263 1.85328 10.3067C2.16201 9.45791 2.57326 8.66447 3.19508 7.99716C3.29517 7.88989 3.42374 7.80944 3.57496 7.68954C3.49832 7.16883 3.8053 6.87846 4.18922 6.60555C6.15956 5.20425 8.33914 4.74637 10.7107 5.12997C11.05 5.18473 11.0504 5.18936 11.4265 5.58016C11.5389 5.56107 11.6476 5.52694 11.7566 5.52645C14.8635 5.51177 17.97 5.49081 21.0769 5.49227C22.2174 5.49277 23.3574 5.5474 24.4978 5.57235C24.5492 5.57333 24.6169 5.53872 24.6502 5.49813C24.842 5.26328 25.09 5.16571 25.3865 5.11825ZM12.2996 14.6524C12.1182 14.6524 11.9696 14.8002 11.9695 14.9815V16.6192C11.9695 16.7005 11.9009 16.7683 11.8181 16.7686H10.1697C9.98837 16.7687 9.8397 16.9165 9.83961 17.0977V18.586C9.83976 18.7673 9.98841 18.914 10.1697 18.9141H11.8181C11.9008 18.9145 11.9693 18.9825 11.9695 19.0636V20.7022C11.9696 20.8836 12.1182 21.0304 12.2996 21.0304H13.7976C13.9786 21.0298 14.1276 20.8832 14.1277 20.7022V19.0636C14.1279 18.9823 14.1952 18.9142 14.2781 18.9141H15.9265C16.1076 18.9138 16.2564 18.7671 16.2566 18.586V17.0977C16.2565 16.9175 16.1094 16.7704 15.9295 16.7686L15.9246 16.7667H14.2761C14.193 16.7667 14.1277 16.7007 14.1277 16.6192V14.9815C14.1276 14.8005 13.9786 14.653 13.7976 14.6524H12.2996ZM22.9158 15.9591C21.8797 15.9591 21.0382 16.7996 21.0378 17.835C21.0379 18.8707 21.8795 19.711 22.9158 19.711C23.9516 19.7105 24.7927 18.8704 24.7927 17.835C24.7924 16.7999 23.9514 15.9596 22.9158 15.9591ZM28.3132 13.3809C27.6194 13.3809 27.0564 13.9433 27.0564 14.6368C27.0564 15.3303 27.6194 15.8927 28.3132 15.8927C29.0066 15.8922 29.5691 15.3299 29.5691 14.6368C29.5691 13.9436 29.0066 13.3814 28.3132 13.3809ZM7.63648 10.2296C6.60034 10.2296 5.75873 11.07 5.75855 12.1056C5.75883 13.141 6.6004 13.9815 7.63648 13.9815C8.67212 13.981 9.51316 13.1407 9.51344 12.1056C9.51326 11.0703 8.67218 10.2301 7.63648 10.2296ZM25.7566 10.8233C25.0622 10.8233 24.4999 11.3851 24.4998 12.0792C24.4998 12.7733 25.0621 13.335 25.7566 13.335C26.4507 13.3346 27.0124 12.773 27.0125 12.0792C27.0124 11.3854 26.4507 10.8238 25.7566 10.8233ZM30.8826 10.8233C30.1888 10.8233 29.6258 11.3858 29.6257 12.0792C29.6258 12.7726 30.1888 13.335 30.8826 13.335C31.5761 13.3347 32.1384 12.7724 32.1384 12.0792C32.1383 11.386 31.576 10.8237 30.8826 10.8233ZM28.3289 8.26376C27.635 8.26376 27.072 8.82614 27.072 9.51962C27.0722 10.2129 27.6352 10.7755 28.3289 10.7755C29.0221 10.775 29.5845 10.2126 29.5847 9.51962C29.5847 8.82643 29.0223 8.26424 28.3289 8.26376Z",
+                                        }),
                                       }),
-                                      (0, i.jsx)("line", {
-                                        fill: "none",
-                                        stroke: "currentColor",
-                                        strokeLinecap: "round",
-                                        strokeLinejoin: "round",
-                                        strokeWidth: "3px",
-                                        x1: "15.94",
-                                        x2: "48.06",
-                                        y1: "8.75",
-                                        y2: "8.75",
-                                      }),
-                                      (0, i.jsx)("line", {
-                                        fill: "none",
-                                        stroke: "currentColor",
-                                        strokeLinecap: "round",
-                                        strokeLinejoin: "round",
-                                        strokeWidth: "3px",
-                                        x1: "15.94",
-                                        x2: "48.06",
-                                        y1: "54.42",
-                                        y2: "54.42",
-                                      }),
-                                      (0, i.jsx)("line", {
-                                        fill: "none",
-                                        stroke: "currentColor",
-                                        strokeLinecap: "round",
-                                        strokeLinejoin: "round",
-                                        strokeWidth: "3px",
-                                        x1: "29.83",
-                                        x2: "33.68",
-                                        y1: "57.83",
-                                        y2: "57.83",
+                                      (0, i.jsx)("defs", {
+                                        children: (0, i.jsx)("clipPath", {
+                                          id: s,
+                                          children: (0, i.jsx)("rect", {
+                                            fill: "currentColor",
+                                            width: "36",
+                                            height: "36",
+                                          }),
+                                        }),
                                       }),
                                     ],
                                   })
-                                : (0, i.jsx)(m, { ...n });
+                                : "mobile_touch" == t
+                                  ? (0, i.jsxs)("svg", {
+                                      viewBox: "0 0 64 64",
+                                      transform:
+                                        "matrix(1, 0, 0, 1, 0, 0)rotate(270)",
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      ...n,
+                                      children: [
+                                        (0, i.jsx)("rect", {
+                                          fill: "none",
+                                          stroke: "currentColor",
+                                          strokeLinecap: "round",
+                                          strokeLinejoin: "round",
+                                          strokeWidth: "3px",
+                                          height: "60.54",
+                                          rx: "5.09",
+                                          ry: "5.09",
+                                          width: "32.11",
+                                          x: "15.94",
+                                          y: "1.62",
+                                        }),
+                                        (0, i.jsx)("line", {
+                                          fill: "none",
+                                          stroke: "currentColor",
+                                          strokeLinecap: "round",
+                                          strokeLinejoin: "round",
+                                          strokeWidth: "3px",
+                                          x1: "15.94",
+                                          x2: "48.06",
+                                          y1: "8.75",
+                                          y2: "8.75",
+                                        }),
+                                        (0, i.jsx)("line", {
+                                          fill: "none",
+                                          stroke: "currentColor",
+                                          strokeLinecap: "round",
+                                          strokeLinejoin: "round",
+                                          strokeWidth: "3px",
+                                          x1: "15.94",
+                                          x2: "48.06",
+                                          y1: "54.42",
+                                          y2: "54.42",
+                                        }),
+                                        (0, i.jsx)("line", {
+                                          fill: "none",
+                                          stroke: "currentColor",
+                                          strokeLinecap: "round",
+                                          strokeLinejoin: "round",
+                                          strokeWidth: "3px",
+                                          x1: "29.83",
+                                          x2: "33.68",
+                                          y1: "57.83",
+                                          y2: "57.83",
+                                        }),
+                                      ],
+                                    })
+                                  : (0, i.jsx)(m, { ...n });
       }
       function p(e) {
         const { controllerType: t, controllerStyle: r, ...s } = e;
@@ -81553,6 +81666,8 @@
             return (0, i.jsx)(g, { type: "hori", ...s });
           case n.kL:
             return (0, i.jsx)(g, { type: "mobile_touch", ...s });
+          case n.My:
+            return (0, i.jsx)(g, { type: "steamframe", ...s });
           default:
             return r == c.Tq
               ? (0, i.jsx)(g, { type: "gamecube", ...s })
@@ -81876,7 +81991,7 @@
           fill: "none",
           ...e,
           children: (0, i.jsx)("path", {
-            d: "M16 34V21H3V16H16V3H21V16H34V21H21V34H16Z",
+            d: "M7.5 32.135a1 1 0 0 1-1.5-.866V4.73a1 1 0 0 1 1.5-.866l22.999 13.269a1 1 0 0 1 0 1.732l-23 13.269Z",
             fill: "currentColor",
           }),
         });
@@ -81888,12 +82003,24 @@
           fill: "none",
           ...e,
           children: (0, i.jsx)("path", {
-            d: "M32.12 7.41L28.59 3.88L18 14.46L7.41 3.88L3.88 7.41L14.46 18L3.88 28.59L7.41 32.12L18 21.54L28.59 32.12L32.12 28.59L21.54 18L32.12 7.41Z",
+            d: "M16 34V21H3V16H16V3H21V16H34V21H21V34H16Z",
             fill: "currentColor",
           }),
         });
       }
       function R(e) {
+        return (0, i.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ...e,
+          children: (0, i.jsx)("path", {
+            d: "M32.12 7.41L28.59 3.88L18 14.46L7.41 3.88L3.88 7.41L14.46 18L3.88 28.59L7.41 32.12L18 21.54L28.59 32.12L32.12 28.59L21.54 18L32.12 7.41Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+      function j(e) {
         return (0, i.jsx)("svg", {
           viewBox: "0 0 36 36",
           fill: "none",
@@ -81905,7 +82032,7 @@
           }),
         });
       }
-      function j(e) {
+      function T(e) {
         return (0, i.jsxs)("svg", {
           viewBox: "0 0 24 24",
           fill: "none",
@@ -81923,7 +82050,7 @@
           ],
         });
       }
-      function T(e) {
+      function I(e) {
         return (0, i.jsxs)("svg", {
           viewBox: "0 0 24 24",
           fill: "none",
@@ -81940,7 +82067,7 @@
           ],
         });
       }
-      function I(e) {
+      function F(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -81958,7 +82085,7 @@
           ],
         });
       }
-      function F(e) {
+      function x(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -81970,7 +82097,7 @@
           }),
         });
       }
-      function x(e) {
+      function O(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -81982,7 +82109,7 @@
           }),
         });
       }
-      function O(e) {
+      function W(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -82004,7 +82131,7 @@
           ],
         });
       }
-      function W(e) {
+      function q(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -82047,7 +82174,7 @@
           ],
         });
       }
-      function q(e) {
+      function U(e) {
         return (0, i.jsxs)("svg", {
           viewBox: "0 0 36 36",
           fill: "none",
@@ -82075,7 +82202,7 @@
           ],
         });
       }
-      function U(e) {
+      function L(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -82087,7 +82214,7 @@
           }),
         });
       }
-      function L(e) {
+      function k(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -82101,7 +82228,7 @@
           }),
         });
       }
-      function k() {
+      function P() {
         return (0, i.jsxs)("svg", {
           version: "1.1",
           id: "Layer_2",
@@ -82136,7 +82263,7 @@
           ],
         });
       }
-      function P(e) {
+      function D(e) {
         return (0, i.jsx)("svg", {
           width: "36",
           height: "36",
@@ -82152,7 +82279,7 @@
           }),
         });
       }
-      function D(e) {
+      function A(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -82164,7 +82291,7 @@
           }),
         });
       }
-      function A(e) {
+      function E(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -82176,7 +82303,7 @@
           }),
         });
       }
-      function E(e) {
+      function N(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           baseProfile: "tiny",
@@ -82202,7 +82329,7 @@
           ],
         });
       }
-      function N(e) {
+      function G(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -82214,7 +82341,7 @@
           }),
         });
       }
-      function G(e) {
+      function H(e) {
         const { alert: t, urgent: r, ...n } = e;
         return r
           ? (0, i.jsxs)("svg", {
@@ -82279,7 +82406,7 @@
                 }),
               });
       }
-      function H(e) {
+      function V(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -82293,7 +82420,7 @@
           }),
         });
       }
-      function V(e) {
+      function Z(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -82311,7 +82438,7 @@
           ],
         });
       }
-      function Z(e) {
+      function K(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 20 20",
@@ -82325,7 +82452,7 @@
           }),
         });
       }
-      function K(e) {
+      function $(e) {
         return (0, i.jsx)("svg", {
           width: "5",
           height: "19",
@@ -82338,7 +82465,7 @@
           }),
         });
       }
-      function $(e) {
+      function Q(e) {
         return (0, i.jsx)("svg", {
           width: "5",
           height: "19",
@@ -82351,7 +82478,7 @@
           }),
         });
       }
-      function Q() {
+      function X() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -82366,7 +82493,7 @@
           }),
         });
       }
-      function X() {
+      function Y() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -82380,7 +82507,7 @@
           }),
         });
       }
-      function Y() {
+      function J() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -82394,7 +82521,7 @@
           }),
         });
       }
-      function J(e) {
+      function ee(e) {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -82409,7 +82536,7 @@
           }),
         });
       }
-      function ee(e) {
+      function te(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button SVGIcon_TextBullets",
@@ -82445,7 +82572,7 @@
           ],
         });
       }
-      function te(e) {
+      function re(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button",
@@ -82496,7 +82623,7 @@
           ],
         });
       }
-      function re(e) {
+      function ie(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button",
@@ -82531,7 +82658,7 @@
           ],
         });
       }
-      function ie(e) {
+      function ne(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button",
@@ -82566,7 +82693,7 @@
           ],
         });
       }
-      function ne(e) {
+      function se(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button",
@@ -82614,7 +82741,7 @@
           ],
         });
       }
-      function se(e) {
+      function ae(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button",
@@ -82649,7 +82776,7 @@
           ],
         });
       }
-      function ae(e) {
+      function oe(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button",
@@ -82684,7 +82811,7 @@
           ],
         });
       }
-      function oe(e) {
+      function le(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button",
@@ -82732,7 +82859,7 @@
           ],
         });
       }
-      function le(e) {
+      function ce(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button",
@@ -82798,7 +82925,7 @@
           ],
         });
       }
-      function ce(e) {
+      function ue(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button",
@@ -82864,7 +82991,7 @@
           ],
         });
       }
-      function ue(e) {
+      function de(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button",
@@ -82950,7 +83077,7 @@
           ],
         });
       }
-      function de(e) {
+      function me(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button",
@@ -83011,7 +83138,7 @@
           ],
         });
       }
-      function me(e) {
+      function ge(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button",
@@ -83072,7 +83199,7 @@
           ],
         });
       }
-      function ge() {
+      function pe() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83086,7 +83213,7 @@
           }),
         });
       }
-      function pe() {
+      function _e() {
         const [e, t] = (0, o.l)();
         return (0, i.jsxs)("svg", {
           viewBox: "0 0 36 36",
@@ -83145,7 +83272,7 @@
           ],
         });
       }
-      function _e() {
+      function he() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83159,7 +83286,7 @@
           }),
         });
       }
-      function he() {
+      function Be() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83173,7 +83300,7 @@
           }),
         });
       }
-      function Be() {
+      function be() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83187,7 +83314,7 @@
           }),
         });
       }
-      function be() {
+      function we() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83201,7 +83328,7 @@
           }),
         });
       }
-      function we() {
+      function fe() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83215,7 +83342,7 @@
           }),
         });
       }
-      function fe() {
+      function Me() {
         return (0, i.jsxs)("svg", {
           width: "24",
           height: "24",
@@ -83238,7 +83365,7 @@
           ],
         });
       }
-      function Me() {
+      function ye() {
         return (0, i.jsxs)("svg", {
           width: "24",
           height: "24",
@@ -83262,7 +83389,7 @@
           ],
         });
       }
-      function ye() {
+      function Se() {
         const [e, t] = (0, o.l)();
         return (0, i.jsxs)("svg", {
           version: "1.1",
@@ -83300,7 +83427,7 @@
           ],
         });
       }
-      function Se() {
+      function ve() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83314,7 +83441,7 @@
           }),
         });
       }
-      function ve() {
+      function Ce() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83328,7 +83455,7 @@
           }),
         });
       }
-      function Ce() {
+      function ze() {
         return (0, i.jsxs)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83369,7 +83496,7 @@
           ],
         });
       }
-      function ze() {
+      function Re() {
         return (0, i.jsxs)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83410,7 +83537,7 @@
           ],
         });
       }
-      function Re() {
+      function je() {
         return (0, i.jsxs)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83451,7 +83578,7 @@
           ],
         });
       }
-      function je() {
+      function Te() {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "24",
@@ -83492,7 +83619,7 @@
           ],
         });
       }
-      function Te() {
+      function Ie() {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "24",
@@ -83533,7 +83660,7 @@
           ],
         });
       }
-      function Ie() {
+      function Fe() {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "24",
@@ -83575,7 +83702,7 @@
           ],
         });
       }
-      function Fe() {
+      function xe() {
         return (0, i.jsxs)("svg", {
           viewBox: "0 0 24 24",
           fill: "none",
@@ -83606,7 +83733,7 @@
           ],
         });
       }
-      function xe() {
+      function Oe() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83621,7 +83748,7 @@
           }),
         });
       }
-      function Oe() {
+      function We() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83636,7 +83763,7 @@
           }),
         });
       }
-      function We() {
+      function qe() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83651,7 +83778,7 @@
           }),
         });
       }
-      function qe() {
+      function Ue() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83666,7 +83793,7 @@
           }),
         });
       }
-      function Ue() {
+      function Le() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83681,7 +83808,7 @@
           }),
         });
       }
-      function Le() {
+      function ke() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83696,7 +83823,7 @@
           }),
         });
       }
-      function ke() {
+      function Pe() {
         return (0, i.jsxs)("svg", {
           viewBox: "0 0 24 24",
           fill: "none",
@@ -83718,7 +83845,7 @@
           ],
         });
       }
-      function Pe() {
+      function De() {
         return (0, i.jsxs)("svg", {
           viewBox: "0 0 24 24",
           fill: "none",
@@ -83741,7 +83868,7 @@
           ],
         });
       }
-      function De() {
+      function Ae() {
         const [e, t] = (0, o.l)();
         return (0, i.jsxs)("svg", {
           version: "1.1",
@@ -83778,7 +83905,7 @@
           ],
         });
       }
-      function Ae() {
+      function Ee() {
         return (0, i.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -83804,7 +83931,7 @@
           }),
         });
       }
-      function Ee() {
+      function Ne() {
         const [e, t] = (0, o.l)();
         return (0, i.jsxs)("svg", {
           version: "1.1",
@@ -83831,7 +83958,7 @@
           ],
         });
       }
-      function Ne() {
+      function Ge() {
         const [e, t] = (0, o.l)();
         return (0, i.jsxs)("svg", {
           version: "1.1",
@@ -83860,7 +83987,7 @@
           ],
         });
       }
-      function Ge() {
+      function He() {
         const [e, t] = (0, o.l)();
         return (0, i.jsxs)("svg", {
           version: "1.1",
@@ -83891,7 +84018,7 @@
           ],
         });
       }
-      function He(e) {
+      function Ve(e) {
         return (0, i.jsxs)("svg", {
           width: "36",
           height: "36",
@@ -83913,7 +84040,7 @@
           ],
         });
       }
-      function Ve(e) {
+      function Ze(e) {
         return (0, i.jsxs)("svg", {
           width: "24",
           height: "24",
@@ -91729,7 +91856,8 @@
           (this.m_mapTokens = new Map()),
             (this.m_mapFallbackTokens = new Map()),
             (this.m_cbkTokensChanged = new u.lu()),
-            (this.m_bReportIndividualMissingTokens = !0);
+            (this.m_bReportIndividualMissingTokens = !0),
+            (this.m_bReady = !1);
         }
         static GetLanguageFallback(e) {
           return "sc_schinese" === e ? "schinese" : "english";
@@ -91764,6 +91892,9 @@
             this.m_mapFallbackTokens.clear(),
             this.AddTokens(e, t),
             this.m_cbkTokensChanged.Dispatch();
+        }
+        SetReady(e) {
+          this.m_bReady = e;
         }
         AddTokens(e, t) {
           Object.keys(e).forEach((t) => {
@@ -91818,13 +91949,13 @@
               : void (0 === this.m_mapTokens.size
                   ? (0, l.wT)(
                       !1,
-                      `Attempting to localize token '${e}' with no tokens in our map.`,
+                      `Attempting to localize token '${e}' with no tokens in our map for language '${a.TS.LANGUAGE}'. SharedLoc ready: ${d.Z.IsReady()}. site has inited: ${this.m_bReady}`,
                     )
                   : !t &&
                     this.m_bReportIndividualMissingTokens &&
                     (0, c.aj)().ReportError(
                       new Error(
-                        `Unable to find localization token '${e}' for language '${a.TS.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
+                        `Unable to find localization token '${e}' for language '${a.TS.LANGUAGE}', ${this.m_mapTokens.size} tokens in map. SharedLoc ready: ${d.Z.IsReady()}. site has inited: ${this.m_bReady}`,
                       ),
                       { bIncludeMessageInIdentifier: !0 },
                     ))
@@ -92051,109 +92182,110 @@
     91675: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $w: () => C,
-        $z: () => m,
-        Hq: () => l,
-        KC: () => p,
-        P0: () => B,
-        TW: () => c,
-        Vx: () => u,
-        _9: () => v,
-        _l: () => h,
-        a8: () => i,
-        cc: () => z,
-        dt: () => O,
-        lQ: () => b,
-        nR: () => d,
-        qZ: () => W,
-        sq: () => T,
-        u6: () => I,
-        vl: () => j,
+        $w: () => z,
+        $z: () => g,
+        Hq: () => c,
+        KC: () => _,
+        P0: () => b,
+        TW: () => u,
+        Vx: () => d,
+        _9: () => C,
+        _l: () => B,
+        a8: () => l,
+        cc: () => R,
+        dt: () => W,
+        lQ: () => w,
+        nR: () => m,
+        qZ: () => q,
+        sq: () => I,
+        u6: () => F,
+        vl: () => T,
       });
-      var i,
-        n = r(31561),
-        s = r(61859),
-        a = r(14771),
-        o = r(78686);
-      function l(e, t, r) {
-        let n;
+      var i = r(31561),
+        n = r(61859),
+        s = r(14771),
+        a = r(78686);
+      const o = 2147483647;
+      var l;
+      function c(e, t, r) {
+        let i;
         if ("boolean" == typeof t) {
-          n = {
-            eSuffix: t ? i.None : i.Ago,
+          i = {
+            eSuffix: t ? l.None : l.Ago,
             bForceSingleUnits: r,
             bHighGranularity: !1,
           };
         } else
-          n = {
-            eSuffix: i.Ago,
+          i = {
+            eSuffix: l.Ago,
             bForceSingleUnits: !1,
             bHighGranularity: !1,
             ...t,
           };
-        let o = "#TimeInterval_";
-        n.eSuffix == i.Ago
-          ? (o = "#TimeSince_")
-          : n.eSuffix == i.Remaining && (o = "#TimeRemaining_");
-        let l = (e) => Math.floor(e);
+        let a = "#TimeInterval_";
+        i.eSuffix == l.Ago
+          ? (a = "#TimeSince_")
+          : i.eSuffix == l.Remaining && (a = "#TimeRemaining_");
+        let o = (e) => Math.floor(e);
         if (
-          (n.bAllowDecimal && (l = (e) => Math.round(10 * e) / 10),
-          e >= 2 * a.Kp.PerYear)
+          (i.bAllowDecimal && (o = (e) => Math.round(10 * e) / 10),
+          e >= 2 * s.Kp.PerYear)
         )
-          return (0, s.we)(o + "XYears", l(e / a.Kp.PerYear));
-        if (e >= a.Kp.PerYear)
-          return (e -= a.Kp.PerYear) >= 2 * a.Kp.PerMonth &&
-            !n.bForceSingleUnits
-            ? (0, s.we)(o + "1YearXMonths", l(e / a.Kp.PerMonth))
-            : (0, s.we)(o + "1Year");
-        if (e >= 2 * a.Kp.PerMonth)
-          return (0, s.we)(o + "XMonths", l(e / a.Kp.PerMonth));
-        if (e >= 2 * a.Kp.PerWeek)
-          return (0, s.we)(o + "XWeeks", l(e / a.Kp.PerWeek));
-        if (e >= a.Kp.PerWeek)
-          return (0, s.we)(o + "1Week", l(e / a.Kp.PerWeek));
-        if (e >= 2 * a.Kp.PerDay)
-          return (0, s.we)(o + "XDays", l(e / a.Kp.PerDay));
-        if (e >= a.Kp.PerDay)
-          return (e -= a.Kp.PerDay) >= 2 * a.Kp.PerHour && !n.bForceSingleUnits
-            ? (0, s.we)(o + "1DayXHours", l(e / a.Kp.PerHour))
-            : (0, s.we)(o + "1Day");
-        if (e >= 2 * a.Kp.PerHour)
-          return (0, s.we)(o + "XHours", l(e / a.Kp.PerHour));
-        if (e >= a.Kp.PerHour)
-          return (e -= a.Kp.PerHour) >= 2 * a.Kp.PerMinute &&
-            !n.bForceSingleUnits
-            ? (0, s.we)(o + "1HourXMinutes", l(e / a.Kp.PerMinute))
-            : (0, s.we)(o + "1Hour");
-        if (e >= 2 * a.Kp.PerMinute) {
-          const t = Math.floor(e / a.Kp.PerMinute),
-            r = e % a.Kp.PerMinute;
-          return n.bHighGranularity && 0 != r
+          return (0, n.we)(a + "XYears", o(e / s.Kp.PerYear));
+        if (e >= s.Kp.PerYear)
+          return (e -= s.Kp.PerYear) >= 2 * s.Kp.PerMonth &&
+            !i.bForceSingleUnits
+            ? (0, n.we)(a + "1YearXMonths", o(e / s.Kp.PerMonth))
+            : (0, n.we)(a + "1Year");
+        if (e >= 2 * s.Kp.PerMonth)
+          return (0, n.we)(a + "XMonths", o(e / s.Kp.PerMonth));
+        if (e >= 2 * s.Kp.PerWeek)
+          return (0, n.we)(a + "XWeeks", o(e / s.Kp.PerWeek));
+        if (e >= s.Kp.PerWeek)
+          return (0, n.we)(a + "1Week", o(e / s.Kp.PerWeek));
+        if (e >= 2 * s.Kp.PerDay)
+          return (0, n.we)(a + "XDays", o(e / s.Kp.PerDay));
+        if (e >= s.Kp.PerDay)
+          return (e -= s.Kp.PerDay) >= 2 * s.Kp.PerHour && !i.bForceSingleUnits
+            ? (0, n.we)(a + "1DayXHours", o(e / s.Kp.PerHour))
+            : (0, n.we)(a + "1Day");
+        if (e >= 2 * s.Kp.PerHour)
+          return (0, n.we)(a + "XHours", o(e / s.Kp.PerHour));
+        if (e >= s.Kp.PerHour)
+          return (e -= s.Kp.PerHour) >= 2 * s.Kp.PerMinute &&
+            !i.bForceSingleUnits
+            ? (0, n.we)(a + "1HourXMinutes", o(e / s.Kp.PerMinute))
+            : (0, n.we)(a + "1Hour");
+        if (e >= 2 * s.Kp.PerMinute) {
+          const t = Math.floor(e / s.Kp.PerMinute),
+            r = e % s.Kp.PerMinute;
+          return i.bHighGranularity && 0 != r
             ? 1 == r
-              ? (0, s.we)(o + "XMinutes1Second", t)
-              : (0, s.we)(o + "XMinutesXSeconds", t, r)
-            : (0, s.we)(o + "XMinutes", l(e / a.Kp.PerMinute));
+              ? (0, n.we)(a + "XMinutes1Second", t)
+              : (0, n.we)(a + "XMinutesXSeconds", t, r)
+            : (0, n.we)(a + "XMinutes", o(e / s.Kp.PerMinute));
         }
-        if (e >= a.Kp.PerMinute) {
-          const t = e % a.Kp.PerMinute;
-          return n.bHighGranularity && 0 != t
+        if (e >= s.Kp.PerMinute) {
+          const t = e % s.Kp.PerMinute;
+          return i.bHighGranularity && 0 != t
             ? 1 == t
-              ? (0, s.we)(o + "1Minute1Second")
-              : (0, s.we)(o + "1MinuteXSeconds", t)
-            : (0, s.we)(o + "1Minute");
+              ? (0, n.we)(a + "1Minute1Second")
+              : (0, n.we)(a + "1MinuteXSeconds", t)
+            : (0, n.we)(a + "1Minute");
         }
-        return n.bHighGranularity
+        return i.bHighGranularity
           ? 1 == e
-            ? (0, s.we)(o + "1Second")
-            : (0, s.we)(o + "XSeconds", e)
-          : (0, s.we)(o + "LessThanAMinute");
+            ? (0, n.we)(a + "1Second")
+            : (0, n.we)(a + "XSeconds", e)
+          : (0, n.we)(a + "LessThanAMinute");
       }
-      function c(e, t, r) {
+      function u(e, t, r) {
         let i;
         i =
           void 0 === t || !0 === t || !1 === t
             ? { weekday: r ? "long" : "short", year: t ? void 0 : "numeric" }
             : t;
-        let n = new Date(1e3 * e);
+        let s = new Date(1e3 * e);
         const a = {
           weekday: "short",
           month: "long",
@@ -92161,40 +92293,40 @@
           year: "numeric",
           ...i,
         };
-        return n.toLocaleDateString(s.pf.GetPreferredLocales(), a);
+        return s.toLocaleDateString(n.pf.GetPreferredLocales(), a);
       }
-      function u(e, t, r = !1) {
+      function d(e, t, r = !1) {
         let i = new Date(1e3 * e),
           n = new Date(1e3 * t);
         return r ||
           (i.getFullYear() == n.getFullYear() &&
             i.getMonth() == n.getMonth() &&
             i.getDate() == n.getDate())
-          ? p(e) + " - " + p(t)
-          : d(e, t);
+          ? _(e) + " - " + _(t)
+          : m(e, t);
       }
-      function d(e, t, r) {
+      function m(e, t, r) {
         let i = new Date(1e3 * e),
-          n = new Date(1e3 * t);
+          s = new Date(1e3 * t);
         const a = new Date();
         if (
-          i.getFullYear() != n.getFullYear() ||
+          i.getFullYear() != s.getFullYear() ||
           a.getFullYear() != i.getFullYear() ||
           r
         )
-          return `${m(e)} - ${m(t)}`;
+          return `${g(e)} - ${g(t)}`;
         const o = { month: "short", day: "numeric" },
-          l = i.toLocaleDateString(s.pf.GetPreferredLocales(), o) + " - ";
-        if (i.getMonth() == n.getMonth()) {
+          l = i.toLocaleDateString(n.pf.GetPreferredLocales(), o) + " - ";
+        if (i.getMonth() == s.getMonth()) {
           const e = { day: "numeric" };
-          return l + n.toLocaleDateString(s.pf.GetPreferredLocales(), e);
+          return l + s.toLocaleDateString(n.pf.GetPreferredLocales(), e);
         }
-        return l + n.toLocaleDateString(s.pf.GetPreferredLocales(), o);
+        return l + s.toLocaleDateString(n.pf.GetPreferredLocales(), o);
       }
-      function m(e, t) {
+      function g(e, t) {
         const r = { year: "numeric", month: "short", day: "numeric", ...t };
         return new Date(1e3 * e).toLocaleDateString(
-          s.pf.GetPreferredLocales(),
+          n.pf.GetPreferredLocales(),
           r,
         );
       }
@@ -92202,15 +92334,15 @@
         (e[(e.None = 0)] = "None"),
           (e[(e.Ago = 1)] = "Ago"),
           (e[(e.Remaining = 2)] = "Remaining");
-      })(i || (i = {}));
-      const g = new Map();
-      function p(e, t, r) {
+      })(l || (l = {}));
+      const p = new Map();
+      function _(e, t, r) {
         const i = new Date(1e3 * e),
-          n = s.pf.GetPreferredLocales(),
+          s = n.pf.GetPreferredLocales(),
           a = {
             ...((null == t ? void 0 : t.bForce24HourClock) ||
             (function (e) {
-              let t = g.get(e);
+              let t = p.get(e);
               if (!0 === t || !1 === t) return t;
               const r = new Date();
               return (
@@ -92218,55 +92350,55 @@
                 (t =
                   r.toLocaleTimeString(e, { hour: "numeric" }) ==
                   r.toLocaleTimeString(e, { hour: "numeric", hour12: !1 })),
-                g.set(e, t),
+                p.set(e, t),
                 t
               );
-            })(n[0])
+            })(s[0])
               ? { hour: "numeric", minute: "2-digit", hourCycle: "h23" }
               : { hour: "numeric", minute: "2-digit" }),
             ...r,
           };
-        return i.toLocaleTimeString(n, a);
+        return i.toLocaleTimeString(s, a);
       }
-      const _ = new Map();
-      function h(e, t, r = !0, i = !0, a = !1) {
+      const h = new Map();
+      function B(e, t, r = !0, s = !0, a = !1) {
         const o = new Date(),
           l = new Date(1e3 * e);
-        if (l.getFullYear() != o.getFullYear()) return m(e);
-        i && n.tB(new Date().setHours(24, 0, 0, 0) - o.getTime());
+        if (l.getFullYear() != o.getFullYear()) return g(e);
+        s && i.tB(new Date().setHours(24, 0, 0, 0) - o.getTime());
         const c = new Date();
         if ((c.setHours(0, 0, 0, 0), r))
           if (l >= c) {
             if ((c.setDate(c.getDate() + 1), l < c))
-              return (0, s.we)("#Time_Today");
+              return (0, n.we)("#Time_Today");
             if ((c.setDate(c.getDate() + 1), l < c))
-              return (0, s.we)("#Time_Tomorrow");
+              return (0, n.we)("#Time_Tomorrow");
           } else if ((c.setDate(c.getDate() - 1), l >= c))
-            return (0, s.we)("#Time_Yesterday");
+            return (0, n.we)("#Time_Yesterday");
         const u = { month: t ? "long" : "short", day: "numeric" };
         a && (u.weekday = "long");
         const d = l.setHours(0, 0, 0, 0) + u.month;
-        let g = _.get(d);
+        let m = h.get(d);
         return (
-          g ||
-          ((g = l.toLocaleDateString(s.pf.GetPreferredLocales(), u)),
-          _.set(d, g),
-          g)
+          m ||
+          ((m = l.toLocaleDateString(n.pf.GetPreferredLocales(), u)),
+          h.set(d, m),
+          m)
         );
       }
-      function B(e, t, r, i) {
+      function b(e, t, r, i) {
         return (
-          v(new Date(1e3 * e), !1, !1) +
+          C(new Date(1e3 * e), !1, !1) +
           " " +
-          p(e, { bForce24HourClock: t }, { timeZone: i }) +
+          _(e, { bForce24HourClock: t }, { timeZone: i }) +
           " " +
           r
         );
       }
-      function b(e, t) {
+      function w(e, t) {
         const r = new Date(1e3 * e),
-          i = new Date(),
-          o = {
+          a = new Date(),
+          l = {
             bGranularFutureTime: !1,
             bGranularTodayTimeOnly: !1,
             bGranularToday: !1,
@@ -92277,184 +92409,184 @@
             bForce24HourClock: !1,
             ...t,
           };
-        if (r > i) {
-          if (!o.bGranularFutureTime)
+        if (r > a) {
+          if (!l.bGranularFutureTime)
             return (
-              n.tB(r.getTime() - i.getTime()),
-              r.getFullYear() == i.getFullYear() ? R(r) : T(r)
+              i.tB(Math.min(r.getTime() - a.getTime(), o)),
+              r.getFullYear() == a.getFullYear() ? j(r) : I(r)
             );
-          n.tB(new Date().setHours(24, 0, 0, 0) - i.getTime());
+          i.tB(new Date().setHours(24, 0, 0, 0) - a.getTime());
           let e = new Date();
           return (
             e.setHours(0, 0, 0, 0),
             e.setDate(e.getDate() + 1),
             r < e
-              ? (0, s.we)("#Time_Today")
+              ? (0, n.we)("#Time_Today")
               : (e.setDate(e.getDate() + 1),
                 r < e
-                  ? (0, s.we)("#Time_Tomorrow")
+                  ? (0, n.we)("#Time_Tomorrow")
                   : (e.setDate(e.getDate() + 5),
-                    r < e ? z(r) : C(r, !0, o.bAbbreviateDayOfWeek)))
+                    r < e ? R(r) : z(r, !0, l.bAbbreviateDayOfWeek)))
           );
         }
-        n.tB(new Date().setHours(24, 0, 0, 0) - i.getTime());
-        let l = new Date();
-        if ((l.setHours(0, 0, 0, 0), r >= l))
-          return o.bGranularToday
-            ? o.bGranularTodayTimeOnly
-              ? p(e, { bForce24HourClock: o.bForce24HourClock })
-              : (0, s.we)(
+        i.tB(new Date().setHours(24, 0, 0, 0) - a.getTime());
+        let c = new Date();
+        if ((c.setHours(0, 0, 0, 0), r >= c))
+          return l.bGranularToday
+            ? l.bGranularTodayTimeOnly
+              ? _(e, { bForce24HourClock: l.bForce24HourClock })
+              : (0, n.we)(
                   "#Time_Today_At",
-                  p(e, { bForce24HourClock: o.bForce24HourClock }),
+                  _(e, { bForce24HourClock: l.bForce24HourClock }),
                 )
-            : (0, s.we)("#Time_Today");
-        if ((l.setDate(i.getDate() - 1), r >= l))
-          return o.bGranularYesterday
-            ? (0, s.we)(
+            : (0, n.we)("#Time_Today");
+        if ((c.setDate(a.getDate() - 1), r >= c))
+          return l.bGranularYesterday
+            ? (0, n.we)(
                 "#Time_Yesterday_At",
-                p(e, { bForce24HourClock: o.bForce24HourClock }),
+                _(e, { bForce24HourClock: l.bForce24HourClock }),
               )
-            : (0, s.we)("#Time_Yesterday");
-        l.setDate(i.getDate() - 6);
-        const u = new Date(l);
-        if (o.bGranularWeek && r >= u) return C(r, !1, !o.bAbbreviateDayOfWeek);
-        if (o.bGranularPast)
-          return (0, s.we)(
+            : (0, n.we)("#Time_Yesterday");
+        c.setDate(a.getDate() - 6);
+        const d = new Date(c);
+        if (l.bGranularWeek && r >= d) return z(r, !1, !l.bAbbreviateDayOfWeek);
+        if (l.bGranularPast)
+          return (0, n.we)(
             "#Time_Past_At",
-            c(e, r.getFullYear() == i.getFullYear(), !o.bAbbreviateDayOfWeek),
-            p(e, { bForce24HourClock: o.bForce24HourClock }),
+            u(e, r.getFullYear() == a.getFullYear(), !l.bAbbreviateDayOfWeek),
+            _(e, { bForce24HourClock: l.bForce24HourClock }),
           );
-        if (r >= u) return (0, s.we)("#TimeSince_ThisWeek");
+        if (r >= d) return (0, n.we)("#TimeSince_ThisWeek");
         if (
-          r.getMonth() == i.getMonth() &&
-          r.getFullYear() == i.getFullYear()
+          r.getMonth() == a.getMonth() &&
+          r.getFullYear() == a.getFullYear()
         ) {
           const e =
-            Math.floor((u.valueOf() - r.valueOf()) / (1e3 * a.Kp.PerWeek)) + 1;
+            Math.floor((d.valueOf() - r.valueOf()) / (1e3 * s.Kp.PerWeek)) + 1;
           return 1 == e
-            ? (0, s.we)("#TimeSince_1Week")
-            : (0, s.we)("#TimeSince_XWeeks", e);
+            ? (0, n.we)("#TimeSince_1Week")
+            : (0, n.we)("#TimeSince_XWeeks", e);
         }
-        return r.getFullYear() == i.getFullYear() ? R(r) : T(r);
+        return r.getFullYear() == a.getFullYear() ? j(r) : I(r);
       }
-      const w = new Map(),
-        f = new Map(),
+      const f = new Map(),
         M = new Map(),
         y = new Map(),
-        S = new Map();
+        S = new Map(),
+        v = new Map();
       new Map();
-      function v(e, t = !1, r = !0) {
-        const i = {
-            weekday: r ? "long" : "short",
-            day: "numeric",
-            month: t ? "long" : "short",
-            year: "numeric",
-          },
-          n = e.setHours(0, 0, 0, 0) + i.weekday + i.month;
-        let a = S.get(n);
-        return (
-          a ||
-          ((a = e.toLocaleDateString(s.pf.GetPreferredLocales(), i)),
-          S.set(n, a),
-          a)
-        );
-      }
       function C(e, t = !1, r = !0) {
         const i = {
             weekday: r ? "long" : "short",
             day: "numeric",
             month: t ? "long" : "short",
+            year: "numeric",
           },
-          n = e.setHours(0, 0, 0, 0) + i.weekday + i.month;
-        let a = S.get(n);
+          s = e.setHours(0, 0, 0, 0) + i.weekday + i.month;
+        let a = v.get(s);
         return (
           a ||
-          ((a = e.toLocaleDateString(s.pf.GetPreferredLocales(), i)),
-          S.set(n, a),
+          ((a = e.toLocaleDateString(n.pf.GetPreferredLocales(), i)),
+          v.set(s, a),
           a)
         );
       }
-      function z(e) {
-        let t = w.get(e.getDay());
+      function z(e, t = !1, r = !0) {
+        const i = {
+            weekday: r ? "long" : "short",
+            day: "numeric",
+            month: t ? "long" : "short",
+          },
+          s = e.setHours(0, 0, 0, 0) + i.weekday + i.month;
+        let a = v.get(s);
         return (
-          t ||
-          ((t = e.toLocaleDateString(s.pf.GetPreferredLocales(), {
-            weekday: "long",
-          })),
-          w.set(e.getDay(), t),
-          t)
+          a ||
+          ((a = e.toLocaleDateString(n.pf.GetPreferredLocales(), i)),
+          v.set(s, a),
+          a)
         );
       }
       function R(e) {
-        let t = f.get(e.getMonth());
+        let t = f.get(e.getDay());
         return (
           t ||
-          ((t = e.toLocaleDateString(s.pf.GetPreferredLocales(), {
-            month: "long",
+          ((t = e.toLocaleDateString(n.pf.GetPreferredLocales(), {
+            weekday: "long",
           })),
-          f.set(e.getMonth(), t),
+          f.set(e.getDay(), t),
           t)
         );
       }
       function j(e) {
-        let t = M.get(e.getFullYear());
+        let t = M.get(e.getMonth());
         return (
           t ||
-          ((t = e.toLocaleDateString(s.pf.GetPreferredLocales(), {
-            year: "numeric",
+          ((t = e.toLocaleDateString(n.pf.GetPreferredLocales(), {
+            month: "long",
           })),
-          M.set(e.getFullYear(), t),
+          M.set(e.getMonth(), t),
           t)
         );
       }
       function T(e) {
+        let t = y.get(e.getFullYear());
+        return (
+          t ||
+          ((t = e.toLocaleDateString(n.pf.GetPreferredLocales(), {
+            year: "numeric",
+          })),
+          y.set(e.getFullYear(), t),
+          t)
+        );
+      }
+      function I(e) {
         const t = e.getMonth() + 12 * e.getFullYear();
-        let r = y.get(t);
+        let r = S.get(t);
         return (
           r ||
-          ((r = e.toLocaleDateString(s.pf.GetPreferredLocales(), {
+          ((r = e.toLocaleDateString(n.pf.GetPreferredLocales(), {
             month: "long",
             year: "numeric",
           })),
-          y.set(t, r),
+          S.set(t, r),
           r)
         );
       }
-      function I(e, t) {
+      function F(e, t) {
         switch (e.getUTCMonth()) {
           case 0:
           case 1:
           case 2:
-            return (0, s.we)(
+            return (0, n.we)(
               t ? "#Time_QuarterOfYear_Expanded_Q1" : "#Time_QuarterOfYear_Q1",
               e.getUTCFullYear(),
             );
           case 3:
           case 4:
           case 5:
-            return (0, s.we)(
+            return (0, n.we)(
               t ? "#Time_QuarterOfYear_Expanded_Q2" : "#Time_QuarterOfYear_Q2",
               e.getUTCFullYear(),
             );
           case 6:
           case 7:
           case 8:
-            return (0, s.we)(
+            return (0, n.we)(
               t ? "#Time_QuarterOfYear_Expanded_Q3" : "#Time_QuarterOfYear_Q3",
               e.getUTCFullYear(),
             );
           default:
-            return (0, s.we)(
+            return (0, n.we)(
               t ? "#Time_QuarterOfYear_Expanded_Q4" : "#Time_QuarterOfYear_Q4",
               e.getUTCFullYear(),
             );
         }
       }
-      function F(e, t, r) {
+      function x(e, t, r) {
         for (; e.length < t; ) e = r + e;
         return e;
       }
-      function x(e) {
+      function O(e) {
         return (
           (void 0 === e || isNaN(e)) && (e = 0),
           {
@@ -92465,64 +92597,64 @@
           }
         );
       }
-      function O(e, t, r) {
+      function W(e, t, r) {
         let i = e < 0;
-        const n = x((e = i ? 0 - e : e)),
-          a = n.fraction.toFixed(2).split(".")[1],
+        const s = O((e = i ? 0 - e : e)),
+          a = s.fraction.toFixed(2).split(".")[1],
           o = null == t || t;
         let l = !o || "00" == a;
-        i && 0 == n.hours && 0 == n.minutes && 0 == n.seconds && l && (i = !1);
+        i && 0 == s.hours && 0 == s.minutes && 0 == s.seconds && l && (i = !1);
         let c = "";
-        if (n.hours) {
-          const e = n.hours.toString(),
-            t = F(n.minutes.toString(), 2, "0"),
-            r = F(n.seconds.toString(), 2, "0"),
+        if (s.hours) {
+          const e = s.hours.toString(),
+            t = x(s.minutes.toString(), 2, "0"),
+            r = x(s.seconds.toString(), 2, "0"),
             i = o
               ? "#Duration_Abbreviation_HourMinuteSecondMillisecond"
               : "#Duration_Abbreviation_HourMinuteSecond";
-          c = (0, s.we)(i, e, t, r, a);
-        } else if (n.minutes) {
-          const e = n.minutes.toString(),
-            t = F(n.seconds.toString(), 2, "0"),
+          c = (0, n.we)(i, e, t, r, a);
+        } else if (s.minutes) {
+          const e = s.minutes.toString(),
+            t = x(s.seconds.toString(), 2, "0"),
             r = o
               ? "#Duration_Abbreviation_MinuteSecondMillisecond"
               : "#Duration_Abbreviation_MinuteSecond";
-          c = (0, s.we)(r, e, t, a);
-        } else if (n.seconds) {
-          const e = n.seconds.toString(),
+          c = (0, n.we)(r, e, t, a);
+        } else if (s.seconds) {
+          const e = s.seconds.toString(),
             t = o
               ? "#Duration_Abbreviation_SecondMillisecond"
               : "#Duration_Abbreviation_Second";
-          c = (0, s.we)(t, e, a);
+          c = (0, n.we)(t, e, a);
         }
         return (
-          i && (c = r ? (0, s.we)("#Duration_WrittenNegation", c) : "-" + c), c
+          i && (c = r ? (0, n.we)("#Duration_WrittenNegation", c) : "-" + c), c
         );
       }
-      function W(e, t, r) {
+      function q(e, t, r) {
         let i = e < 0;
-        const n = x((e = i ? 0 - e : e)),
-          a = F(n.seconds.toString(), 2, "0"),
-          l = n.fraction.toFixed(2).split(".")[1],
+        const s = O((e = i ? 0 - e : e)),
+          o = x(s.seconds.toString(), 2, "0"),
+          l = s.fraction.toFixed(2).split(".")[1],
           c = null == t || t;
         let u = !c || "00" == l;
-        i && 0 == n.hours && 0 == n.minutes && 0 == n.seconds && u && (i = !1);
+        i && 0 == s.hours && 0 == s.minutes && 0 == s.seconds && u && (i = !1);
         let d = "";
-        if (n.hours) {
-          const e = F(n.minutes.toString(), 2, "0"),
+        if (s.hours) {
+          const e = x(s.minutes.toString(), 2, "0"),
             t = c
               ? "#Duration_HourMinuteSecondMillisecond"
               : "#Duration_HourMinuteSecond";
-          d = (0, s.we)(t, n.hours, e, a, l);
+          d = (0, n.we)(t, s.hours, e, o, l);
         } else {
-          const e = n.minutes.toString(),
+          const e = s.minutes.toString(),
             t = c
               ? "#Duration_MinuteSecondMillisecond"
               : "#Duration_MinuteSecond";
-          d = o.Z.Localize(t, e, a, l);
+          d = a.Z.Localize(t, e, o, l);
         }
         return (
-          i && (d = r ? o.Z.Localize("#Duration_WrittenNegation", d) : "-" + d),
+          i && (d = r ? a.Z.Localize("#Duration_WrittenNegation", d) : "-" + d),
           d
         );
       }
@@ -93153,6 +93285,7 @@
         NT: () => m,
         Qz: () => l,
         ZF: () => u,
+        _1: () => _,
         k2: () => d,
         wm: () => o,
         yn: () => g,
@@ -93292,6 +93425,9 @@
       function p(e) {
         return e.startsWith("http://") || e.startsWith("https://");
       }
+      function _(e) {
+        return Boolean(null == e ? void 0 : e.startsWith("data:"));
+      }
     },
     28460: (e, t, r) => {
       "use strict";
@@ -93343,7 +93479,6 @@
     78327: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Bu: () => l.Bu,
         CI: () => B,
         Fd: () => l.Fd,
         Hn: () => b,

@@ -61,26 +61,25 @@
     },
     35261: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => xe });
+      a.r(t), a.d(t, { default: () => ge });
       var s = a(7850),
-        r = (a(64641), a(90626)),
-        n = a(92757),
-        i = a(97058),
-        o = a(41735),
-        l = a.n(o),
-        d = a(34629),
-        c = a(14947),
-        m = a(37085),
-        u = a(17720),
-        h = a(54728),
-        p = a(68797),
-        A = a(78327);
-      class _ {
+        r = (a(64641), a(92757)),
+        n = a(97058),
+        i = a(41735),
+        o = a.n(i),
+        l = a(34629),
+        d = a(14947),
+        c = a(37085),
+        m = a(17720),
+        u = a(54728),
+        h = a(68797),
+        p = a(78327);
+      class A {
         constructor() {
           (this.m_bShowOnlyVideo = !1),
             (this.m_bShowOnlyChat = !1),
             (this.m_curDebugInfo = null),
-            (0, c.Gn)(this);
+            (0, d.Gn)(this);
         }
         GetBroadcasterSteamID() {
           return this.m_steamid;
@@ -98,55 +97,55 @@
           return this.m_bShowOnlyChat || this.m_bShowOnlyVideo;
         }
         async LoadBroadcastDebugInfo(e) {
-          let t = A.TS.COMMUNITY_BASE_URL + "broadcast/broadcastdebuginfo",
+          let t = p.TS.COMMUNITY_BASE_URL + "broadcast/broadcastdebuginfo",
             a = {
               steamid: this.m_steamid.ConvertTo64BitString(),
               origin: self.origin,
             };
           try {
-            let s = await l().get(t, {
+            let s = await o().get(t, {
               params: a,
               withCredentials: !0,
               cancelToken: e ? e.token : void 0,
             });
             if (e && e.token.reason) return null;
-            if (s && 200 == s.status && s.data && s.data.success == m.R)
+            if (s && 200 == s.status && s.data && s.data.success == c.R)
               return (this.m_curDebugInfo = s.data), this.m_curDebugInfo;
           } catch (e) {
-            let t = (0, p.H)(e);
+            let t = (0, h.H)(e);
             console.error("LoadBroadcastDebugInfo: Failed " + t.strErrorMsg, t);
           }
           return null;
         }
         async UpdateBroadcastSettings(e, t, a) {
-          let s = A.TS.COMMUNITY_BASE_URL + "broadcast/updatebroadcastsettings",
+          let s = p.TS.COMMUNITY_BASE_URL + "broadcast/updatebroadcastsettings",
             r = {
               steamid: this.m_steamid.ConvertTo64BitString(),
               matchid: e,
               title: t,
-              sessionid: (0, A.KC)(),
+              sessionid: (0, p.KC)(),
             };
           try {
-            let e = await l().get(s, {
+            let e = await o().get(s, {
               params: r,
               withCredentials: !0,
               cancelToken: a ? a.token : void 0,
             });
             if (a && a.token.reason) return !1;
-            if (e && 200 == e.status && e.data && e.data.success == m.R) {
-              const e = h.es.GetOrCreateBroadcastInfo(
+            if (e && 200 == e.status && e.data && e.data.success == c.R) {
+              const e = u.es.GetOrCreateBroadcastInfo(
                 this.m_steamid.ConvertTo64BitString(),
               );
               return (
                 e &&
-                  (0, c.h5)(() => {
+                  (0, d.h5)(() => {
                     e.m_strTitle = t;
                   }),
                 !0
               );
             }
           } catch (e) {
-            let t = (0, p.H)(e);
+            let t = (0, h.H)(e);
             console.error(
               "UpdateBroadcastSettings: Failed " + t.strErrorMsg,
               t,
@@ -156,12 +155,12 @@
         }
         async StopBroadcast(e) {
           const t = this.m_steamid.ConvertTo64BitString(),
-            a = h.es.GetBroadcast(t);
-          let s = A.TS.COMMUNITY_BASE_URL + "broadcast/stopbroadcast",
+            a = u.es.GetBroadcast(t);
+          let s = p.TS.COMMUNITY_BASE_URL + "broadcast/stopbroadcast",
             r = {
               steamid: t,
               broadcastid: a ? a.m_ulBroadcastID : null,
-              sessionid: (0, A.KC)(),
+              sessionid: (0, p.KC)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "StopBroadcast",
@@ -172,14 +171,14 @@
         }
         async SetBroadcasterRestrictions(e, t, a) {
           const s = this.m_steamid.ConvertTo64BitString(),
-            r = h.es.GetBroadcast(s);
-          let n = A.TS.COMMUNITY_BASE_URL + "broadcast/setbroadcastrestriction",
+            r = u.es.GetBroadcast(s);
+          let n = p.TS.COMMUNITY_BASE_URL + "broadcast/setbroadcastrestriction",
             i = {
               steamid: s,
               broadcastid: r ? r.m_ulBroadcastID : null,
               type: e,
               days: t,
-              sessionid: (0, A.KC)(),
+              sessionid: (0, p.KC)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "SetBroadcasterRestrictions",
@@ -190,12 +189,12 @@
         }
         async SetUnBannable(e) {
           const t = this.m_steamid.ConvertTo64BitString(),
-            a = h.es.GetBroadcast(t);
-          let s = A.TS.COMMUNITY_BASE_URL + "broadcast/unban",
+            a = u.es.GetBroadcast(t);
+          let s = p.TS.COMMUNITY_BASE_URL + "broadcast/unban",
             r = {
               steamid: t,
               broadcastid: a ? a.m_ulBroadcastID : null,
-              sessionid: (0, A.KC)(),
+              sessionid: (0, p.KC)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "SetUnBannable",
@@ -206,13 +205,13 @@
         }
         async SendUserReportOnBroadcast(e) {
           const t = this.m_steamid.ConvertTo64BitString(),
-            a = h.es.GetBroadcast(t);
-          let s = A.TS.COMMUNITY_BASE_URL + "broadcast/report",
+            a = u.es.GetBroadcast(t);
+          let s = p.TS.COMMUNITY_BASE_URL + "broadcast/report",
             r = {
               steamid: t,
               broadcastid: a ? a.m_ulBroadcastID : null,
               description: e,
-              sessionid: (0, A.KC)(),
+              sessionid: (0, p.KC)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "SendUserReportOnBroadcast",
@@ -223,16 +222,16 @@
         }
         async InternalSendSimpleGetRequest(e, t, a, s) {
           try {
-            let e = await l().get(t, {
+            let e = await o().get(t, {
               params: a,
               withCredentials: !0,
               cancelToken: s ? s.token : void 0,
             });
             if (s && s.token.reason) return !1;
-            if (e && 200 == e.status && e.data && e.data.success == m.R)
+            if (e && 200 == e.status && e.data && e.data.success == c.R)
               return !0;
           } catch (t) {
-            let a = (0, p.H)(t);
+            let a = (0, h.H)(t);
             console.error(
               `CCommunityBroadcastStore:${e}: Failed ` + a.strErrorMsg,
               a,
@@ -242,14 +241,14 @@
         }
         static Get() {
           return (
-            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
-            _.s_Singleton
+            A.s_Singleton || ((A.s_Singleton = new A()), A.s_Singleton.Init()),
+            A.s_Singleton
           );
         }
         Init() {
-          let e = (0, A.Tc)("broadcastsinfo", "application_config");
+          let e = (0, p.Tc)("broadcastsinfo", "application_config");
           this.ValidateStoreDefault(e) &&
-            ((this.m_steamid = new u.b(e.steamid)),
+            ((this.m_steamid = new m.b(e.steamid)),
             (this.m_bShowOnlyChat = Boolean(e.show_only_chat)),
             (this.m_bShowOnlyVideo = Boolean(e.show_only_video)));
         }
@@ -257,8 +256,9 @@
           return !(!e || "object" != typeof e) && "string" == typeof e.steamid;
         }
       }
-      (0, d.Cg)([c.sH], _.prototype, "m_curDebugInfo", void 0);
-      var B = a(75844),
+      (0, l.Cg)([d.sH], A.prototype, "m_curDebugInfo", void 0);
+      var _ = a(75844),
+        B = a(90626),
         v = a(39606),
         S = a(67397),
         g = a(53120),
@@ -284,10 +284,10 @@
         O = a(82227),
         P = a(17337);
       const F = (e) => {
-          const t = (0, r.useRef)(null),
-            [a, n] = (0, r.useState)(null);
+          const t = (0, B.useRef)(null),
+            [a, r] = (0, B.useState)(null);
           return (
-            (0, r.useEffect)(
+            (0, B.useEffect)(
               () => () => {
                 t.current && t.current("BroadcastDebugSection: unmounting");
               },
@@ -302,9 +302,9 @@
                     children: (0, s.jsx)(w.$n, {
                       onClick: async () => {
                         t.current && t.current();
-                        const e = l().CancelToken.source();
+                        const e = o().CancelToken.source();
                         (t.current = e.cancel),
-                          n(await _.Get().LoadBroadcastDebugInfo(e));
+                          r(await A.Get().LoadBroadcastDebugInfo(e));
                       },
                       children: "(VO) Load Debug Info",
                     }),
@@ -318,14 +318,14 @@
         L = (e) => {
           var t;
           const { info: a } = e,
-            [n, i] = (0, r.useState)(!1);
+            [r, n] = (0, B.useState)(!1);
           if (!a) return null;
-          const o = _.Get().GetBroadcasterSteamID().ConvertTo64BitString(),
-            l = h.es.GetBroadcast(o);
+          const i = A.Get().GetBroadcasterSteamID().ConvertTo64BitString(),
+            o = u.es.GetBroadcast(i);
           return (0, s.jsxs)("div", {
             className: P.DisplaySection,
             children: [
-              Boolean(a.last_error_result && a.last_error_result != m.R) &&
+              Boolean(a.last_error_result && a.last_error_result != c.R) &&
                 (0, s.jsxs)("div", {
                   className: P.SubSection,
                   children: [
@@ -356,7 +356,7 @@
                     children: "Broadcast Setup",
                   }),
                   (0, s.jsxs)("div", {
-                    children: ["Broadcaster: ", a.steam_id, ", SteamID: ", o],
+                    children: ["Broadcaster: ", a.steam_id, ", SteamID: ", i],
                   }),
                   (0, s.jsxs)("div", {
                     children: [
@@ -677,22 +677,22 @@
                   (0, s.jsxs)("div", {
                     children: [
                       "Heartbeat Interval: ",
-                      l.m_data.heartbeat_interval,
+                      o.m_data.heartbeat_interval,
                     ],
                   }),
                   (0, s.jsxs)("div", {
-                    children: ["DASH MPEG Url: ", l.m_data.url],
+                    children: ["DASH MPEG Url: ", o.m_data.url],
                   }),
                   (0, s.jsxs)("div", {
-                    children: ["HLS Url: ", l.m_data.hls_url],
+                    children: ["HLS Url: ", o.m_data.hls_url],
                   }),
                 ],
               }),
               (0, s.jsx)(w.$n, {
-                onClick: () => i(!n),
+                onClick: () => n(!r),
                 children: "Toggle Raw Data",
               }),
-              Boolean(n) &&
+              Boolean(r) &&
                 (0, s.jsxs)(s.Fragment, {
                   children: [
                     (0, s.jsx)("div", {
@@ -702,7 +702,7 @@
                     (0, s.jsx)("div", {
                       className: P.SubSection,
                       children: (0, s.jsx)(H.G, {
-                        data: (null == l ? void 0 : l.m_data) || "",
+                        data: (null == o ? void 0 : o.m_data) || "",
                       }),
                     }),
                   ],
@@ -757,8 +757,8 @@
         const { broadcasterSteamID: t } = e,
           a = t.ConvertTo64BitString(),
           [r, n] = (0, X.q3)(() => {
-            const e = h.es.GetOrCreateBroadcastInfo(a);
-            let t = e.m_nAppID != h.fO ? e.m_nAppID : 0;
+            const e = u.es.GetOrCreateBroadcastInfo(a);
+            let t = e.m_nAppID != u.fO ? e.m_nAppID : 0;
             return [e.m_nViewerCount, t];
           }),
           [i] = (0, Y.t7)(n, { include_assets: !0 });
@@ -773,7 +773,7 @@
                   className: te.GameCapsule,
                   href: (0, ee.k2)(
                     (null == i ? void 0 : i.GetStorePageURL()) ||
-                      A.TS.STORE_BASE_URL + "app/" + n,
+                      p.TS.STORE_BASE_URL + "app/" + n,
                   ),
                   children: (0, s.jsx)("img", { src: o }),
                 }),
@@ -806,12 +806,12 @@
           }),
         });
       }
-      const ne = (0, B.PA)((e) => {
+      const ne = (0, _.PA)((e) => {
           const { broadcasterSteamID: t } = e,
             a = t.ConvertTo64BitString(),
             [r, n] = (0, X.q3)(() => {
-              const e = h.es.GetOrCreateBroadcastInfo(a);
-              let t = e.m_nAppID != h.fO ? e.m_nAppID : 0;
+              const e = u.es.GetOrCreateBroadcastInfo(a);
+              let t = e.m_nAppID != u.fO ? e.m_nAppID : 0;
               return [e.m_strAppTitle, t];
             }),
             [i] = (0, Y.t7)(n, { include_assets: !0 });
@@ -822,7 +822,7 @@
               (0, s.jsx)("a", {
                 href: (0, ee.k2)(
                   (null == i ? void 0 : i.GetStorePageURL()) ||
-                    A.TS.STORE_BASE_URL + "app/" + n,
+                    p.TS.STORE_BASE_URL + "app/" + n,
                 ),
                 children: Boolean(r) ? r : null == i ? void 0 : i.GetName(),
               }),
@@ -831,18 +831,18 @@
             ],
           });
         }),
-        ie = (0, B.PA)((e) => {
+        ie = (0, _.PA)((e) => {
           const { broadcasterSteamID: t } = e;
           t.ConvertTo64BitString();
           return (0, s.jsxs)("div", {
             className: te.BroadcastUserActionsCtn,
             children: [
               Boolean(
-                A.iA.steamid != e.broadcasterSteamID.ConvertTo64BitString(),
+                p.iA.steamid != e.broadcasterSteamID.ConvertTo64BitString(),
               ) &&
                 (0, s.jsx)(w.$n, {
                   onClick: (e) => {
-                    A.iA.logged_in
+                    p.iA.logged_in
                       ? (0, U.pg)(
                           (0, s.jsx)(oe, { broadcasterSteamID: t }),
                           (0, k.uX)(e),
@@ -881,14 +881,14 @@
           });
         }),
         oe = (e) => {
-          const [t, a] = (0, r.useState)("");
+          const [t, a] = (0, B.useState)("");
           return (0, s.jsx)(Q.o0, {
             strTitle: (0, G.we)("#Broadcast_ReportItem_Title"),
             strDescription: (0, G.we)("#Broadcast_ReportItem_Description"),
             onCancel: e.closeModal,
             bOKDisabled: 0 == t.trim().length,
             onOK: async () => {
-              await _.Get().SendUserReportOnBroadcast(t),
+              await A.Get().SendUserReportOnBroadcast(t),
                 e.closeModal && e.closeModal();
             },
             children: (0, s.jsx)("textarea", {
@@ -902,7 +902,7 @@
       var le = a(30593),
         de = a(22797);
       const ce = (e) => {
-          if (!A.iA.is_support) return null;
+          if (!p.iA.is_support) return null;
           const t = (t, a) => {
               (0, U.pg)(
                 (0, s.jsx)(me, {
@@ -943,23 +943,23 @@
             ],
           });
         },
-        me = (0, B.PA)((e) => {
+        me = (0, _.PA)((e) => {
           const { broadcastSteamID: t, strAction: a } = e,
-            [n, i] = (0, r.useState)(1),
-            [o, d] = (0, r.useState)(!1),
-            [c, m] = (0, r.useState)(!1),
-            [u, h] = (0, r.useState)(!1),
-            p = (0, r.useRef)(null);
-          (0, r.useEffect)(
+            [r, n] = (0, B.useState)(1),
+            [i, l] = (0, B.useState)(!1),
+            [d, c] = (0, B.useState)(!1),
+            [m, u] = (0, B.useState)(!1),
+            h = (0, B.useRef)(null);
+          (0, B.useEffect)(
             () => () => {
-              p.current && p.current("BroadcastConfirmBanAction: unmounting");
+              h.current && h.current("BroadcastConfirmBanAction: unmounting");
             },
             [],
           );
-          const A = () => e.closeModal && e.closeModal();
+          const p = () => e.closeModal && e.closeModal();
           return (0, s.jsx)(I.tH, {
             children: (0, s.jsx)(Q.x_, {
-              onEscKeypress: A,
+              onEscKeypress: p,
               children: (0, s.jsxs)(w.UC, {
                 children: [
                   (0, s.jsx)(w.Y9, {
@@ -987,13 +987,13 @@
                                 { label: "6 Months", data: 180 },
                                 { label: "1 Year", data: 365 },
                               ],
-                              selectedOption: n,
-                              onChange: (e) => i(e.data),
+                              selectedOption: r,
+                              onChange: (e) => n(e.data),
                             }),
-                            Boolean(o) && (0, s.jsx)(de.t, {}),
-                            Boolean(c) &&
+                            Boolean(i) && (0, s.jsx)(de.t, {}),
+                            Boolean(d) &&
                               (0, s.jsx)("div", {
-                                children: u
+                                children: m
                                   ? "Successfully Completed Request"
                                   : "Failed to complete request, check browser console and/or try again later",
                               }),
@@ -1003,33 +1003,33 @@
                     }),
                   }),
                   (0, s.jsx)(w.wi, {
-                    children: c
+                    children: d
                       ? (0, s.jsx)(w.jn, {
-                          onClick: A,
+                          onClick: p,
                           children: (0, G.we)("#Button_Dismiss"),
                         })
                       : (0, s.jsxs)(w.dR, {
                           children: [
                             (0, s.jsx)(w.$n, {
-                              onClick: A,
+                              onClick: p,
                               children: (0, G.we)("#Button_Cancel"),
                             }),
                             (0, s.jsx)(w.jn, {
                               onClick: async () => {
-                                d(!0);
+                                l(!0);
                                 try {
-                                  p.current && p.current();
-                                  const e = l().CancelToken.source();
-                                  p.current = e.cancel;
+                                  h.current && h.current();
+                                  const e = o().CancelToken.source();
+                                  h.current = e.cancel;
                                   let t =
-                                    await _.Get().SetBroadcasterRestrictions(
+                                    await A.Get().SetBroadcasterRestrictions(
                                       a,
-                                      n,
+                                      r,
                                       e,
                                     );
                                   e.token.reason || (t = !0);
                                 } finally {
-                                  d(!1), m(!0), h(false);
+                                  l(!1), c(!0), u(false);
                                 }
                               },
                               children: (0, G.we)("#Button_Confirm"),
@@ -1043,20 +1043,20 @@
           });
         }),
         ue = (e) => {
-          const [t, a] = (0, r.useState)(!1),
-            [n, i] = (0, r.useState)(!1),
-            [o, d] = (0, r.useState)(!1),
-            c = (0, r.useRef)(null);
-          (0, r.useEffect)(
+          const [t, a] = (0, B.useState)(!1),
+            [r, n] = (0, B.useState)(!1),
+            [i, l] = (0, B.useState)(!1),
+            d = (0, B.useRef)(null);
+          (0, B.useEffect)(
             () => () => {
-              c.current && c.current("BroadcastMakeUnbannable: unmounting");
+              d.current && d.current("BroadcastMakeUnbannable: unmounting");
             },
             [],
           );
-          const m = () => e.closeModal && e.closeModal();
+          const c = () => e.closeModal && e.closeModal();
           return (0, s.jsx)(I.tH, {
             children: (0, s.jsx)(Q.x_, {
-              onEscKeypress: m,
+              onEscKeypress: c,
               children: (0, s.jsxs)(w.UC, {
                 children: [
                   (0, s.jsx)(w.Y9, { children: "Make Broadcast Unbannable" }),
@@ -1070,9 +1070,9 @@
                         (0, s.jsxs)("div", {
                           children: [
                             Boolean(t) && (0, s.jsx)(de.t, {}),
-                            Boolean(n) &&
+                            Boolean(r) &&
                               (0, s.jsx)("div", {
-                                children: o
+                                children: i
                                   ? "Successfully Set Unbannable"
                                   : "Failed to make Unbannable",
                               }),
@@ -1082,15 +1082,15 @@
                     }),
                   }),
                   (0, s.jsx)(w.wi, {
-                    children: n
+                    children: r
                       ? (0, s.jsx)(w.jn, {
-                          onClick: m,
+                          onClick: c,
                           children: (0, G.we)("#Button_Dismiss"),
                         })
                       : (0, s.jsxs)(w.dR, {
                           children: [
                             (0, s.jsx)(w.$n, {
-                              onClick: m,
+                              onClick: c,
                               children: (0, G.we)("#Button_Cancel"),
                             }),
                             (0, s.jsx)(w.jn, {
@@ -1098,12 +1098,12 @@
                                 a(!0);
                                 let e = !1;
                                 try {
-                                  c.current && c.current();
-                                  const t = l().CancelToken.source();
-                                  (c.current = t.cancel),
-                                    (e = await _.Get().SetUnBannable(t));
+                                  d.current && d.current();
+                                  const t = o().CancelToken.source();
+                                  (d.current = t.cancel),
+                                    (e = await A.Get().SetUnBannable(t));
                                 } finally {
-                                  a(!1), i(!0), d(e);
+                                  a(!1), n(!0), l(e);
                                 }
                               },
                               children: (0, G.we)("#Button_Confirm"),
@@ -1118,19 +1118,19 @@
         };
       var he = a(26408),
         pe = a(25888);
-      const Ae = (0, B.PA)((e) => {
-        const t = _.Get().GetBroadcasterSteamID(),
+      const Ae = (0, _.PA)((e) => {
+        const t = A.Get().GetBroadcasterSteamID(),
           a = null == t ? void 0 : t.ConvertTo64BitString(),
-          n = (function () {
-            const [e] = (0, r.useState)(
+          r = (function () {
+            const [e] = (0, B.useState)(
               () =>
-                (0, A.Tc)("ewatchlocation", "application_config") || j.nn.CJ,
+                (0, p.Tc)("ewatchlocation", "application_config") || j.nn.CJ,
             );
             return e;
           })(),
-          [i, o] = (0, T.QD)("muted", !0),
-          l = h.es.GetBroadcast(a),
-          d = h.es.GetOrCreateBroadcastInfo(a);
+          [n, i] = (0, T.QD)("muted", !0),
+          o = u.es.GetBroadcast(a),
+          l = u.es.GetOrCreateBroadcastInfo(a);
         return a
           ? (0, s.jsx)(s.Fragment, {
               children: (0, s.jsxs)("div", {
@@ -1139,7 +1139,7 @@
                   (0, s.jsxs)("div", {
                     className: (0, R.A)(x().BroadcastAndChat),
                     children: [
-                      Boolean(!_.Get().BShowOnlyChat()) &&
+                      Boolean(!A.Get().BShowOnlyChat()) &&
                         (0, s.jsx)(I.tH, {
                           children: (0, s.jsx)("div", {
                             className: (0, R.A)(x().wrapper),
@@ -1147,22 +1147,22 @@
                               className: (0, R.A)({
                                 [x().video_placeholder]: !0,
                                 video_placeholder_trgt: !0,
-                                [x().NoChat]: _.Get().BShowOnlyVideo(),
+                                [x().NoChat]: A.Get().BShowOnlyVideo(),
                               }),
                               children: (0, s.jsx)("div", {
                                 className: x().BroadcastPlayerContainer,
                                 children: (0, s.jsx)(I.tH, {
                                   children: (0, s.jsx)(S.default, {
                                     steamIDBroadcast: a,
-                                    watchLocation: n,
-                                    bStartMuted: i,
+                                    watchLocation: r,
+                                    bStartMuted: n,
                                   }),
                                 }),
                               }),
                             }),
                           }),
                         }),
-                      Boolean(!_.Get().BShowOnlyVideo()) &&
+                      Boolean(!A.Get().BShowOnlyVideo()) &&
                         (0, s.jsx)("div", {
                           className: x().detail_chat_ctn,
                           children: (0, s.jsx)("div", {
@@ -1172,40 +1172,40 @@
                                 emoticonStore: f.MX,
                                 watchLocation: j.nn.fe,
                                 steamID: a,
-                                broadcastID: l ? l.m_ulBroadcastID : void 0,
+                                broadcastID: o ? o.m_ulBroadcastID : void 0,
                               }),
                             }),
                           }),
                         }),
                     ],
                   }),
-                  Boolean(!_.Get().BShowInIframe()) &&
-                    (0, s.jsx)(Be, { broadcasterSteamID: t, broadcastInfo: d }),
+                  Boolean(!A.Get().BShowInIframe()) &&
+                    (0, s.jsx)(Be, { broadcasterSteamID: t, broadcastInfo: l }),
                 ],
               }),
             })
           : null;
       });
       function _e(e) {
-        return 0 != e && e != h.fO;
+        return 0 != e && e != u.fO;
       }
-      const Be = (0, B.PA)((e) => {
+      const Be = (0, _.PA)((e) => {
           const { broadcasterSteamID: t, broadcastInfo: a } = e,
-            [n, i] = (0, r.useState)(null);
-          let o = a.m_nAppID;
+            [r, n] = (0, B.useState)(null);
+          let i = a.m_nAppID;
           return (
-            (0, r.useEffect)(() => {
-              _e(o) &&
+            (0, B.useEffect)(() => {
+              _e(i) &&
                 (async () => {
-                  let e = await b.ac.LoadOGGClanInfoForAppID(o);
-                  i(e);
+                  let e = await b.ac.LoadOGGClanInfoForAppID(i);
+                  n(e);
                 })();
-            }, [o]),
+            }, [i]),
             (0, s.jsxs)(s.Fragment, {
               children: [
                 (0, s.jsx)(re, { broadcasterSteamID: t }),
                 (0, s.jsx)(ve, { steamid: t }),
-                Boolean(A.iA.is_support) &&
+                Boolean(p.iA.is_support) &&
                   (0, s.jsxs)("div", {
                     children: [
                       (0, s.jsx)(ce, { broadcastSteamID: t }),
@@ -1218,7 +1218,7 @@
                       }),
                     ],
                   }),
-                _e(o) &&
+                _e(i) &&
                   (0, s.jsxs)("div", {
                     className: K.GameInfoCtn,
                     children: [
@@ -1249,11 +1249,11 @@
                       }),
                     ],
                   }),
-                Boolean(n) &&
+                Boolean(r) &&
                   (0, s.jsx)("div", {
                     className: K.RelatedEvents,
                     children: (0, s.jsx)(D.r, {
-                      clanAccountID: n.clanAccountID,
+                      clanAccountID: r.clanAccountID,
                       trackingLocation: C.Tc.My,
                       partnerEventStore: pe.Av,
                       bViewAllShowInfiniteScroll: !0,
@@ -1263,25 +1263,25 @@
             })
           );
         }),
-        ve = (0, B.PA)((e) => {
-          const t = (0, r.useRef)(null);
-          let a = h.es.GetOrCreateBroadcastInfo(
+        ve = (0, _.PA)((e) => {
+          const t = (0, B.useRef)(null);
+          let a = u.es.GetOrCreateBroadcastInfo(
             e.steamid.ConvertTo64BitString(),
           );
-          const [n, i] = (0, r.useState)(a.m_strTitle),
-            [o, d] = (0, r.useState)(""),
-            [c, m] = (0, r.useState)(null);
+          const [r, n] = (0, B.useState)(a.m_strTitle),
+            [i, l] = (0, B.useState)(""),
+            [d, c] = (0, B.useState)(null);
           if (
-            ((0, r.useEffect)(
+            ((0, B.useEffect)(
               () => (
-                i(a.m_strTitle),
+                n(a.m_strTitle),
                 () => {
                   t.current && t.current("BroadcastControls: unmounting");
                 }
               ),
               [a.m_strTitle],
             ),
-            A.iA.accountid != e.steamid.GetAccountID())
+            p.iA.accountid != e.steamid.GetAccountID())
           )
             return null;
           return (0, s.jsxs)("div", {
@@ -1300,28 +1300,28 @@
                       (0, s.jsx)(w.pd, {
                         type: "text",
                         label: (0, G.we)("#Broadcast_title_title"),
-                        onChange: (e) => i(e.currentTarget.value || ""),
+                        onChange: (e) => n(e.currentTarget.value || ""),
                         placeholder: (0, G.we)("#Broadcast_title_placeholder"),
-                        value: n,
+                        value: r,
                       }),
                       (0, s.jsx)(w.pd, {
                         type: "text",
                         label: (0, G.we)("#Broadcast_Control_matchid"),
-                        onChange: (e) => d(e.currentTarget.value || ""),
-                        value: o,
+                        onChange: (e) => l(e.currentTarget.value || ""),
+                        value: i,
                       }),
                       (0, s.jsxs)(w.$n, {
                         onClick: async () => {
                           t.current && t.current();
-                          const e = l().CancelToken.source();
+                          const e = o().CancelToken.source();
                           t.current = e.cancel;
-                          let a = await _.Get().UpdateBroadcastSettings(
-                            o,
-                            n,
+                          let a = await A.Get().UpdateBroadcastSettings(
+                            i,
+                            r,
                             e,
                           );
                           e.token.reason ||
-                            m(
+                            c(
                               (0, G.we)(
                                 a
                                   ? "#Broadcast_Control_Success"
@@ -1353,11 +1353,11 @@
                               ),
                               onOK: async () => {
                                 t.current && t.current();
-                                const e = l().CancelToken.source();
+                                const e = o().CancelToken.source();
                                 t.current = e.cancel;
-                                let a = await _.Get().StopBroadcast(e);
+                                let a = await A.Get().StopBroadcast(e);
                                 e.token.reason ||
-                                  m(
+                                  c(
                                     (0, G.we)(
                                       a
                                         ? "#Broadcast_Control_StopSuccess"
@@ -1371,7 +1371,7 @@
                         },
                         children: (0, G.we)("#Broadcast_Control_StopBroadcast"),
                       }),
-                      Boolean(c) && (0, s.jsx)("div", { children: c }),
+                      Boolean(d) && (0, s.jsx)("div", { children: d }),
                     ],
                   }),
                 ],
@@ -1379,35 +1379,22 @@
             ],
           });
         });
-      var Se = a(82429);
-      let ge = { BroadcastWatch: (e) => `/broadcast/(watch|watchnew)/${e}` };
-      function xe(e) {
-        const [t, a] = r.useState(!0);
-        return (
-          (0, r.useEffect)(() => {
-            t && Se.KN.InitGlobal().then(() => a(!1));
-          }, [t]),
-          t
-            ? (0, s.jsx)(de.t, {
-                string: (0, G.we)("#Loading"),
-                position: "center",
-                size: "medium",
-              })
-            : (0, s.jsx)(s.Fragment, {
-                children: (0, s.jsxs)(n.dO, {
-                  children: [
-                    (0, s.jsx)(n.qh, {
-                      path: ge.BroadcastWatch(":steamid_or_user_vanity"),
-                      render: (e) =>
-                        (0, s.jsx)(Ae, {
-                          strSteamID: e.match.params.steamid_or_user_vanity,
-                        }),
-                    }),
-                    (0, s.jsx)(n.qh, { component: i.a }),
-                  ],
-                }),
-              })
-        );
+      let Se = { BroadcastWatch: (e) => `/broadcast/(watch|watchnew)/${e}` };
+      function ge(e) {
+        return (0, s.jsx)(s.Fragment, {
+          children: (0, s.jsxs)(r.dO, {
+            children: [
+              (0, s.jsx)(r.qh, {
+                path: Se.BroadcastWatch(":steamid_or_user_vanity"),
+                render: (e) =>
+                  (0, s.jsx)(Ae, {
+                    strSteamID: e.match.params.steamid_or_user_vanity,
+                  }),
+              }),
+              (0, s.jsx)(r.qh, { component: n.a }),
+            ],
+          }),
+        });
       }
     },
     1035: (e, t, a) => {

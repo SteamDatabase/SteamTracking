@@ -1344,7 +1344,7 @@ function UpdateRelatedMovieSelects()
 
 		if ( origItemID && !g_rgRelatedMovies[ origItemID ]	 )
 		{
-			var newOption = $J( '<option value="' + origItemID +'">' + origItemName + '</option>' );
+			var newOption = $J( '<option/>', { value: origItemID } ).text( origItemName );
 			if ( origItemID == selected )
 				newOption.prop('selected', true);
 
@@ -1356,7 +1356,7 @@ function UpdateRelatedMovieSelects()
 			if ( key == trailerID )
 				return;
 
-			var newOption = $J( '<option value="' + key +'">' + value + '</option>' );
+			var newOption = $J( '<option/>', { value: key } ).text( value );
 			if ( key == selected )
 				newOption.prop('selected', true);
 

@@ -2848,18 +2848,20 @@
           }),
         });
       }
-      const _ = (_) =>
-        (0, _.jsxs)(_.Fragment, {
+      const _ = (_) => {
+        const { data: _ } = (0, _._)(_.editModel.GetClanAccountID());
+        return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
               className: (0, _._)(_.EditPreviewButton),
               toolTipContent: (0, _._)("#EventEditor_Loc_Export_Desc0"),
               children: (0, _.jsx)("a", {
                 onClick: (_) => {
-                  _.preventDefault(),
+                  __webpack_require__.preventDefault(),
                     (0, _._)(
                       (0, _.jsx)(_, {
                         editModel: _.editModel,
+                        permissions: _,
                       }),
                       (0, _._)(_),
                     );
@@ -2874,6 +2876,7 @@
             }),
           ],
         });
+      };
       let _ = class extends _.Component {
         constructor() {
           super(...arguments),
@@ -2903,8 +2906,7 @@
           });
         }
         render() {
-          const { closeModal: _, editModel: _ } = this.props,
-            _ = _._.Get().GetPartnerEventPermissions(_.GetClanSteamID());
+          const { closeModal: _, editModel: _, permissions: _ } = this.props;
           return (0, _.jsx)(_._, {
             title: (0, _._)("#EventEditor_Loc_Export"),
             onCancel: _,
@@ -2957,7 +2959,7 @@
                         ],
                       }),
                       Boolean(
-                        _.support_user &&
+                        (null == _ ? void 0 : _.support_user) &&
                           (_.BHasSaleEnabled() || _.BHasEmailEnabled),
                       ) &&
                         (0, _.jsxs)("div", {
@@ -3774,6 +3776,7 @@
               }),
             [],
           ),
+          _ = (0, _._)(_.clanSteamID, !0),
           _ = _.useCallback(
             (_) => {
               _.stopPropagation(),
@@ -3807,6 +3810,7 @@
                 (0, _.jsx)(_._, {
                   editModel: _._.GetEditModel(),
                   partnerEventEditorStore: _._,
+                  bValveAdmin: _,
                   closeModal: _,
                   OnPublishSuccess: _,
                 }),
@@ -6088,6 +6092,7 @@
               _.GetEventModel().BHasTag("hide_store"),
           ),
           _ = _ == _.ajI,
+          _ = (0, _._)(_.GetClanSteamID(), !0),
           _ = (_, _ = !1) => (0, _._)(_, _),
           _ = (_, _ = !1) => (0, _._)(_, _),
           _ =
@@ -6124,7 +6129,7 @@
                 "product_mobile_banner",
                 "sale_logo",
               ),
-              (0, _._)(_.GetClanSteamID(), !0) && _.push("sale_overlay")),
+              _ && _.push("sale_overlay")),
           (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
@@ -7089,10 +7094,10 @@
           [_, _] = (0, _._)(() => [
             _.BHasSaleEnabled(),
             _.GetEventModel().jsondata.sale_presenters,
-          ]);
+          ]),
+          _ = (0, _._)(_.GetClanSteamID(), !0);
         if (!_) return (0, _.jsx)(_.Fragment, {});
-        const _ = (0, _._)(_.GetClanSteamID(), !0),
-          _ = Boolean(_);
+        const _ = Boolean(_);
         return _ ||
           (_ && (!_ || (null == _ ? void 0 : _.length) >= 1)) ||
           _.GetEventType() == _.ajI
@@ -7176,11 +7181,12 @@
             _.GetClanAccountID(),
             _.GetGID(),
           ),
-          { bVisible: _ } = (0, _._)(_.GetEventModel()),
+          _ = (0, _._)(_.GetClanSteamID(), !0),
+          { bVisible: _ } = (0, _._)(_.GetEventModel(), _),
           { bVisible: _ } = (0, _._)(_.GetEventModel());
         if (_) return null;
         if (_ || _) return null;
-        if ((0, _._)(_.GetClanSteamID(), !0)) return (0, _.jsx)(_, {});
+        if (_) return (0, _.jsx)(_, {});
         return Boolean(_) ? (0, _.jsx)(_, {}) : null;
       }
       function _() {
@@ -8558,8 +8564,9 @@
             requireAdmin: _,
             dataToCopy: _,
           } = _,
-          _ = (0, _._)(() => _ && (0, _._)(_));
-        if (_ && !(0, _._)(_, _)) return null;
+          _ = (0, _._)(() => _ && (0, _._)(_)),
+          _ = (0, _._)(_, _);
+        if (_ && !_) return null;
         const _ = _
           ? (_) => {
               (0, _._)(_), _.preventDefault(), _.stopPropagation();
@@ -12056,8 +12063,10 @@
               (0, _._)();
         }, [_]);
         const _ = _.useCallback((_) => {
-          (0, _._)(_.strSectionId) && (0, _._)(_.strSectionId);
-        }, []);
+            (0, _._)(_.strSectionId) && (0, _._)(_.strSectionId);
+          }, []),
+          _ = (0, _._)(_.GetClanSteamID()),
+          _ = (0, _._)(_.GetClanSteamID(), !0);
         if (
           !_.BIsSourceEventSaleEnabled() &&
           _.clone_from_event_gid &&
@@ -12084,9 +12093,8 @@
           : 2 == _ &&
             ((_ = "#Sale_CreatorHome_title"),
             (_ = "doc/marketing/event_tools/creatorhome/tools"));
-        const _ = (0, _._)(_.GetClanSteamID()),
-          { bVisible: _ } = (0, _._)(_.GetEventModel()),
-          { bVisible: _ } = (0, _._)(_.GetEventModel()),
+        const { bVisible: _ } = (0, _._)(_.GetEventModel(), _),
+          { bVisible: _ } = (0, _._)(_.GetEventModel(), _),
           { bVisible: _ } = (0, _._)(_.GetEventModel()),
           _ = _ || _ || (_ && _);
         return (0, _.jsxs)("div", {
@@ -12830,16 +12838,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      function _(_) {
-        return _.BHasSaleEnabled() && (0, _._)(_).bVisible;
+      function _(_, _) {
+        return _.BHasSaleEnabled() && (0, _._)(_, _).bVisible;
       }
-      function _(_) {
-        return (
-          !!_(_.GetEventModel()) &&
-          (_._.Get().GetPartnerEventPermissions(_.GetClanSteamID())
-            .valve_admin ||
-            _.BHasTag(_))
-        );
+      function _(_, _) {
+        return !!_(_.GetEventModel(), _) && (_ || _.BHasTag(_));
       }
       function _(_) {
         const { editModel: _ } = _,
@@ -15715,10 +15718,19 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return (
+          !!_.BHasEmailEnabled() ||
+          _.clanSteamID.GetAccountID() == (0, _._)() ||
+          ((_._.IS_OGG || _._.IS_VALVE_GROUP) &&
+            Boolean(null == _ ? void 0 : _.valve_admin))
+        );
+      }
       const _ = (0, _._)((_) => {
           const { editModel: _ } = _,
-            { bHasValidatedEmail: _ } = (0, _._)();
-          if (!_._.Get().BShowEmailEditorTab(_.GetEventModel())) return null;
+            { bHasValidatedEmail: _ } = (0, _._)(),
+            { data: _ } = (0, _._)(_.GetClanAccountID());
+          if (!_(_.GetEventModel(), _)) return null;
           const _ = (0, _._)() !== _.GetClanAccountID();
           return (0, _.jsxs)(_.Fragment, {
             children: [
@@ -15778,6 +15790,7 @@
                         children: (0, _.jsx)(_, {
                           editModel: _,
                           bHasValidatedEmail: _,
+                          permissions: _,
                         }),
                       }),
                     (0, _.jsx)(_._, {
@@ -15808,9 +15821,11 @@
                               children: [
                                 (0, _.jsx)(_, {
                                   editModel: _,
+                                  permissions: _,
                                 }),
                                 (0, _.jsx)(_, {
                                   editModel: _,
+                                  permissions: _,
                                 }),
                               ],
                             }),
@@ -15999,7 +16014,7 @@
         render() {
           const { editModel: _ } = this.props,
             _ = Boolean(_.GetEmailSettings().locked),
-            _ = _._.Get().GetPartnerEventPermissions(_.GetClanSteamID());
+            { permissions: _ } = this.props;
           return (0, _.jsxs)("div", {
             className: _.ControlBarCtn,
             children: [
@@ -16015,14 +16030,14 @@
                 ],
               }),
               _ &&
-                _.valve_admin &&
+                (null == _ ? void 0 : _.valve_admin) &&
                 (0, _.jsx)("a", {
                   onClick: this.OnSetupAndFireEmailConfirm,
                   className: _().EditPreviewButton,
                   children: "(VO) Setup and Fire Email",
                 }),
               _ &&
-                !_.valve_admin &&
+                !(null == _ ? void 0 : _.valve_admin) &&
                 (0, _.jsx)("div", {
                   children: (0, _._)("#EventEmail_Ready_ValveRequiredToSend"),
                 }),
@@ -16284,12 +16299,8 @@
           this.GetEmailEditModel().SetControlGroupPercent(_);
         }
         render() {
-          const { editModel: _ } = this.props;
-          if (
-            !_._.Get().GetPartnerEventPermissions(_.GetClanSteamID())
-              .support_user
-          )
-            return null;
+          const { editModel: _, permissions: _ } = this.props;
+          if (!(null == _ ? void 0 : _.support_user)) return null;
           if (!Boolean(this.state.clanInfo))
             return (0, _.jsx)(_._, {
               string: (0, _._)("#Loading"),
@@ -16320,21 +16331,21 @@
                       onChange: (_) =>
                         this.GetEmailEditModel().SetFilterIRTopN(_),
                       label: (0, _._)("#EventEmail_Filter_IR"),
-                      checked: _.BIsIRTopNFiltering(),
+                      checked: __webpack_require__.BIsIRTopNFiltering(),
                     }),
                   Boolean(this.state.clanInfo.is_ogg) &&
                     (0, _.jsx)(_._, {
                       onChange: (_) =>
                         this.GetEmailEditModel().SetFilterWishlist(_),
                       label: (0, _._)("#EventEmail_Filter_Wishlist"),
-                      checked: _.BIsWishListFiltering(),
+                      checked: __webpack_require__.BIsWishListFiltering(),
                     }),
                   (0, _.jsx)(_._, {
                     type: "number",
                     min: "0",
                     max: "99",
                     label: (0, _._)("#EventEmail_Filter_ControlGroup"),
-                    value: _.GetControlGroupPercent(),
+                    value: __webpack_require__.GetControlGroupPercent(),
                     onChange: this.OnControlGroupSpinnerChange,
                   }),
                 ],
@@ -16438,7 +16449,7 @@
                       "RecipientToggle_" + _.clan_account_id,
                     ),
                   ),
-                    _.support_user &&
+                    (null == _ ? void 0 : _.support_user) &&
                       ((_ = (0, _.jsx)(_, {
                         valveOnly: !0,
                         label: (0, _._)(
@@ -16493,7 +16504,7 @@
         render() {
           const { editModel: _ } = this.props;
           let _ = new _._(_);
-          const _ = _._.Get().GetPartnerEventPermissions(_.GetClanSteamID());
+          const { permissions: _ } = this.props;
           return (0, _.jsxs)("div", {
             className: _.RecipientCtn,
             children: [
@@ -16967,7 +16978,7 @@
       const _ = (0, _._)((_) => {
         const { editModel: _ } = _;
         let _ = (0, _._)(_.GetEventType());
-        const _ = _._.Get().GetPartnerEventPermissions(_.GetClanSteamID()),
+        const { data: _ } = (0, _._)(_.GetClanAccountID()),
           _ = _.BHasTag("curator");
         return (0, _.jsxs)("div", {
           className: _().Columns,
@@ -16987,7 +16998,7 @@
                 (0, _.jsx)(_, {
                   editModel: _,
                 }),
-                (!_ || _.valve_admin) &&
+                (!_ || (null == _ ? void 0 : _.valve_admin)) &&
                   (0, _.jsx)(_, {
                     editModel: _,
                   }),
@@ -17222,14 +17233,15 @@
       }
       const _ = (0, _._)((_) => {
         const { editModel: _ } = _,
-          _ = _._.Get().GetPartnerEventPermissions(_.GetClanSteamID());
+          { data: _ } = (0, _._)(_.GetClanAccountID()),
+          _ = Boolean(null == _ ? void 0 : _.valve_admin);
         let _ = _.useRef(void 0);
         const _ = _.BHasSaleEnabled(),
           _ = _.GetEventType(),
           [_] = (0, _._)(() => [
             _.GetEventModel().jsondata.country_restriction,
           ]);
-        if (!_.valve_admin) return null;
+        if (!_) return null;
         const _ =
           _.GetAppID() == _._ ? "Deck" : _.GetAppID() == _._ ? "Frame" : void 0;
         return (0, _.jsxs)(_.Fragment, {
@@ -17299,7 +17311,7 @@
                         "By default we show sale pages on the events and discount store hub. Turning this on, we will not show this sale page there.",
                     }),
                   }),
-                Boolean(_(_.GetEventModel())) &&
+                Boolean(_(_.GetEventModel(), _)) &&
                   (0, _.jsx)(_._, {
                     onChange: (_) => _.SetTag(_, _),
                     label:
@@ -17724,12 +17736,14 @@
         }, [_]);
         const _ = _.GetEventType() == _.ajI,
           _ = _.GetAccountID() == (0, _._)() || _,
-          _ = !_ && (0, _._)(_, !0),
+          _ = (0, _._)(_, !0),
+          _ = !_ && _,
           _ = (_, _) => {
             (0, _._)(
               (0, _.jsx)(_._, {
                 editModel: _,
                 bUnlistedMode: _,
+                bValveAdmin: _,
                 OnPublishSuccess: () => _(!0),
                 partnerEventEditorStore: _._,
               }),
@@ -17832,6 +17846,7 @@
                           (0, _._)(
                             (0, _.jsx)(_._, {
                               editModel: _,
+                              bValveAdmin: _,
                               OnPublishSuccess: () => _(!0),
                               partnerEventEditorStore: _._,
                               closeModal: () => {
@@ -18417,7 +18432,8 @@
             _.GetEventType(),
             _.GetEventModel().jsondata.sale_presenters,
             _.BVisible(),
-          ]);
+          ]),
+          { data: _ } = (0, _._)(_.GetClanAccountID());
         return (0, _.jsx)("div", {
           className: (0, _._)(_.PublishContainer),
           children: (0, _.jsx)("div", {
@@ -18457,6 +18473,7 @@
                 (0, _.jsx)(_, {
                   eventType: _,
                   clanSteamID: _,
+                  permissions: _,
                 }),
                 (0, _.jsx)("div", {
                   className: _.ClearThings,
@@ -18489,13 +18506,12 @@
             });
           let _ = _._.GetEditModel(),
             _ = _.GetCategoryAsType();
-          const _ = _._.Get().GetPartnerEventPermissions(
-              this.props.clanSteamID,
-            ),
+          const { permissions: _ } = this.props,
             _ = _._.GetClanInfoByClanAccountID(
               _.GetClanSteamID().GetAccountID(),
             );
-          if (!_.can_edit) return (0, _.jsx)(_.Fragment, {});
+          if (!(null == _ ? void 0 : _.can_edit))
+            return (0, _.jsx)(_.Fragment, {});
           let _ = _.BHasSaleEnabled() || _.is_ogg;
           const _ =
             (_.BWillShowOnLibraryOverviewDueToSettings() ||
@@ -19029,17 +19045,18 @@
             }
             return !1;
           }, [_]),
-          _ = (0, _._)(_),
-          _ = (0, _._)(() => (0, _._)()),
-          _ = (0, _._)(_),
-          _ = (0, _._)(() => (0, _._)()),
+          { data: _ } = (0, _._)(_.clanSteamID.GetAccountID()),
+          _ = Boolean(null == _ ? void 0 : _.valve_admin),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(() => (0, _._)(_)),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(() => (0, _._)(_)),
           _ = (0, _._)(_);
         (0, _._)(
           [_.bVisible, _.bVisible, _.bVisible].filter(Boolean).length <= 1,
           "Sale, Update Landing Page, and Creator Home should be mutually exclusive",
         );
-        const _ = !_._.Get().BShowEmailEditorTab(_.GetEventModel()),
-          _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID);
+        const _ = !_(_.GetEventModel(), _);
         _._.LoadClanInfoForClanSteamID(_);
         const _ = Boolean(
             null === (_ = _._.GetClanInfoByClanAccountID(_.GetAccountID())) ||
@@ -19194,7 +19211,7 @@
             {
               name: "(VO) Debug",
               key: "debug",
-              hidden: !_.valve_admin,
+              hidden: !_,
               contents: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_._, {
                   editModel: _,
@@ -19205,7 +19222,7 @@
             {
               name: "(VO) Stats",
               key: "stats",
-              hidden: !_.valve_admin || !_.GID || !_.BHasSaleEnabled(),
+              hidden: !_ || !_.GID || !_.BHasSaleEnabled(),
               contents: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_, {
                   editModel: _,
@@ -19466,6 +19483,7 @@
       }
       function _(_) {
         const { editModel: _ } = _,
+          _ = (0, _._)(_.GetClanSteamID(), !0),
           [_, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
             return [
               _.GetEventType(),
@@ -19478,7 +19496,7 @@
               _ ? _.filter(Boolean).length : 0),
               _.BAllowedSteamStoreSpotlight(),
               _.GetAppID(),
-              _(_),
+              _(_, _),
             ];
             var _;
           }),
@@ -20498,9 +20516,7 @@
             _._.Init(new _._(_._.WEBAPI_BASE_URL)),
               _._.Init(),
               _._.Init(),
-              Promise.all([_._.InitGlobal()]).then(() =>
-                __webpack_require__(!1),
-              );
+              __webpack_require__(!1);
           }, []),
           _ || !_
             ? (0, _.jsx)(_._, {

@@ -130,19 +130,6 @@ message CartGiftMessage {
 	optional string signature = 4;
 }
 
-message CBilling_Address {
-	optional string first_name = 1;
-	optional string last_name = 2;
-	optional string address1 = 3;
-	optional string address2 = 4;
-	optional string city = 5;
-	optional string us_state = 6;
-	optional string country_code = 7;
-	optional string postcode = 8;
-	optional int32 zip_plus4 = 9;
-	optional string phone = 10;
-}
-
 // Used by: ChatRoom, ChatRoomClient, ClanChatRooms
 message CChatPartyBeacon {
 	optional uint32 app_id = 1;
@@ -203,41 +190,6 @@ message CChatRoomState {
 	optional uint32 sort_order = 6;
 	optional string last_message = 7;
 	optional uint32 accountid_last_message = 8;
-}
-
-message CClanEventData {
-	optional fixed64 gid = 1;
-	optional fixed64 clan_steamid = 2;
-	optional string event_name = 3;
-	optional int32 event_type = 4 [(.description) = "enum"];
-	optional uint32 appid = 5;
-	optional string server_address = 6;
-	optional string server_password = 7;
-	optional uint32 rtime32_start_time = 8;
-	optional uint32 rtime32_end_time = 9;
-	optional int32 comment_count = 10;
-	optional fixed64 creator_steamid = 11;
-	optional fixed64 last_update_steamid = 12;
-	optional string event_notes = 13;
-	optional string jsondata = 14;
-	optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;
-	optional bool published = 16;
-	optional bool hidden = 17;
-	optional uint32 rtime32_visibility_start = 18;
-	optional uint32 rtime32_visibility_end = 19;
-	optional uint32 broadcaster_accountid = 20;
-	optional uint32 follower_count = 21;
-	optional uint32 ignore_count = 22;
-	optional fixed64 forum_topic_id = 23;
-	optional uint32 rtime32_last_modified = 24;
-	optional fixed64 news_post_gid = 25;
-	optional uint32 rtime_mod_reviewed = 26;
-	optional uint32 featured_app_tagid = 27;
-	repeated uint32 referenced_appids = 28;
-	optional uint32 build_id = 29;
-	optional string build_branch = 30;
-	optional bool unlisted = 31;
-	optional uint32 rtime_created = 32;
 }
 
 // Used by: common.proto
@@ -423,6 +375,7 @@ message CClientMetrics_GamePerformance_Notification_FrameRate {
 	optional int32 session_seconds = 3;
 	optional uint32 framegen_frame_rate = 4;
 	optional .GamePerformanceSettings game_settings = 5;
+	optional uint32 seconds_since_active = 6;
 }
 
 message CClientMetrics_IPv6Connectivity_Notification {
@@ -677,27 +630,6 @@ message CCloud_PendingRemoteOperation {
 	optional int32 device_type = 6;
 }
 
-// Used by: common.proto
-message CCommunity_ClanAnnouncementInfo {
-	optional uint64 gid = 1;
-	optional uint64 clanid = 2;
-	optional uint64 posterid = 3;
-	optional string headline = 4;
-	optional uint32 posttime = 5;
-	optional uint32 updatetime = 6;
-	optional string body = 7;
-	optional int32 commentcount = 8;
-	repeated string tags = 9;
-	optional int32 language = 10;
-	optional bool hidden = 11;
-	optional fixed64 forum_topic_id = 12;
-	optional fixed64 event_gid = 13;
-	optional int32 voteupcount = 14;
-	optional int32 votedowncount = 15;
-	optional int32 ban_check_result = 16 [(.description) = "enum"];
-	optional bool banned = 17;
-}
-
 message CContentServerConfig_AnonymousDepots_Notification {
 	repeated uint32 anon_session_allowed_depots = 2;
 }
@@ -792,22 +724,6 @@ message CContentServerConfig_SteamCSConfigUpdate_Notification {
 	optional .CContentServerConfig_SteamCSConfig config = 1;
 }
 
-message CCuratorPreferences {
-	optional bool platform_windows = 2;
-	optional bool platform_mac = 3;
-	optional bool platform_linux = 4;
-	optional bool vr_content = 5;
-	optional bool adult_content_violence = 6;
-	optional bool adult_content_sex = 7;
-	optional uint32 timestamp_updated = 8;
-	repeated uint32 tagids_curated = 9;
-	repeated uint32 tagids_filtered = 10;
-	optional string website_title = 11;
-	optional string website_url = 12;
-	optional string discussion_url = 13;
-	optional bool show_broadcast = 14;
-}
-
 message CGameNetworkingUI_AppSummary {
 	optional uint32 appid = 1;
 	optional bool ip_was_shared_with_friend = 10;
@@ -876,111 +792,10 @@ message CGameRecording_AudioSessionsChanged_Notification_Session {
 	optional bool is_saved = 10;
 }
 
-message CGameRecordingClipFile {
-	repeated .CGameRecordingTimelineMetadata timelines = 1;
-	optional uint64 first_timeline_start_offset_ms = 2;
-	optional uint32 date_recorded = 3;
-	optional uint64 game_id = 4;
-	optional fixed64 published_file_id = 5;
-	optional uint64 size_in_bytes = 6;
-	optional string name = 7;
-	optional bool temporary = 8;
-	optional string original_device = 9;
-	optional uint32 original_gaming_device_type = 10;
-	optional uint32 date_downloaded = 11;
-	optional uint32 thumbnail_width = 12;
-	optional uint32 thumbnail_height = 13;
-	repeated .CGameRecordingTag tags = 14;
-	repeated .CGameRecordingPhase phases = 15;
-}
-
-message CGameRecordingFile {
-	repeated .CGameRecordingTimelineMetadata timelines = 1;
-	repeated .CGameRecordingPostGameSummary postgame_events = 2;
-	repeated string temporary_clips = 3;
-	repeated .CGameRecordingTag tags = 4;
-}
-
-// Used by: GameRecording, common.proto
-message CGameRecordingPhase {
-	optional string phase_id = 4;
-	optional uint64 duration_ms = 5;
-	repeated .CGameRecordingPhase_Tag tags = 6;
-	repeated .CGameRecordingPhase_Tag contained_tags = 7;
-	optional uint64 background_timeline_offset = 8;
-	repeated .CPhaseAttribute attributes = 9;
-}
-
-// Used by: GameRecording, common.proto
-message CGameRecordingPhase_Tag {
-	optional string name = 1;
-	optional string group = 2;
-}
-
-// Used by: common.proto
-message CGameRecordingPostGameSummary {
-	optional uint64 game_id = 1;
-	repeated .CGameRecordingTimelineEvent events = 2;
-}
-
-// Used by: common.proto
-message CGameRecordingTag {
-	optional uint64 game_id = 1;
-	optional .CTimelineTag tag = 2;
-	repeated .CGameRecordingTag_Timeline references = 3;
-}
-
-// Used by: common.proto
-message CGameRecordingTag_Timeline {
-	optional string clip_id = 1;
-	optional string timeline_id = 2;
-	optional uint64 offset_ms = 3;
-}
-
-message CGameRecordingTagInstance {
-	optional string timeline_id = 1;
-	optional uint64 entry_id = 2;
-	optional uint64 timeline_offset_ms = 3;
-	optional uint64 duration_ms = 4;
-}
-
-// Used by: GameRecording, common.proto
-message CGameRecordingTimelineEvent {
-	optional uint64 game_id = 1;
-	optional uint32 rt_created = 2;
-	optional int32 possible_clip = 3;
-	optional string timeline_id = 4;
-	optional uint64 entry_id = 5;
-	optional uint64 timeline_offset_ms = 6;
-	optional uint64 duration_ms = 7;
-	optional string marker_icon = 8;
-	optional string marker_title = 9;
-	optional bool user_marker = 10;
-}
-
-// Used by: GameRecording, common.proto
-message CGameRecordingTimelineMetadata {
-	optional string timeline_id = 1;
-	optional uint64 game_id = 2;
-	optional uint32 date_recorded = 3;
-	optional uint64 duration_ms = 4;
-	repeated .CGameRecordingTimelineMetadata_Recording recordings = 5;
-	repeated .CGameRecordingPhase phases = 6;
-	repeated .CGameRecordingTimelineEvent significant_events = 7;
-}
-
-// Used by: GameRecording, common.proto
-message CGameRecordingTimelineMetadata_Recording {
-	optional string recording_id = 1;
-	optional uint64 start_offset_ms = 2;
-	optional uint64 duration_ms = 3;
-	optional int32 recording_type = 4 [(.description) = "enum"];
-	optional bool delete_on_cleanup = 5;
-	optional uint64 video_manager_clip_id = 6;
-	optional uint64 video_manager_video_id = 7;
-	optional string cdn_manifest_url = 8;
-	optional uint64 file_size = 9;
-	optional uint64 recording_zero_timeline_offset_ms = 10;
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreCuration, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message CLocalizationToken {
+	optional uint32 language = 1;
+	optional string localized_string = 2;
 }
 
 message CMDSAdmin_DepotIngestChunkStorageFailure_Notification {
@@ -992,26 +807,6 @@ message CMDSAdmin_DepotIngestChunkStorageFailure_Notification {
 
 message CMsgAchievementChange {
 	optional uint32 appid = 1;
-}
-
-message CMsgAppRights {
-	optional bool edit_info = 1;
-	optional bool publish = 2;
-	optional bool view_error_data = 3;
-	optional bool download = 4;
-	optional bool upload_cdkeys = 5;
-	optional bool generate_cdkeys = 6;
-	optional bool view_financials = 7;
-	optional bool manage_ceg = 8;
-	optional bool manage_signing = 9;
-	optional bool manage_cdkeys = 10;
-	optional bool edit_marketing = 11;
-	optional bool economy_support = 12;
-	optional bool economy_support_supervisor = 13;
-	optional bool manage_pricing = 14;
-	optional bool broadcast_live = 15;
-	optional bool view_marketing_traffic = 16;
-	optional bool edit_store_display_content = 17;
 }
 
 message CMsgAuthTicket {
@@ -1041,17 +836,6 @@ message CMsgClientAccountInfo {
 	optional uint32 two_factor_state = 17;
 	optional bool is_phone_identifying = 18;
 	optional bool is_phone_needing_reverify = 19;
-}
-
-message CMsgClientAddFriend {
-	optional fixed64 steamid_to_add = 1;
-	optional string accountname_or_email_to_add = 2;
-}
-
-message CMsgClientAddFriendResponse {
-	optional int32 eresult = 1 [default = 2];
-	optional fixed64 steam_id_added = 2;
-	optional string persona_name_added = 3;
 }
 
 message CMsgClientAddFriendToGroup {
@@ -1190,57 +974,6 @@ message CMsgClientEmoticonList_Sticker {
 	optional uint32 use_count = 6;
 }
 
-message CMsgClientFriendMsg {
-	optional fixed64 steamid = 1;
-	optional int32 chat_entry_type = 2;
-	optional bytes message = 3;
-	optional fixed32 rtime32_server_timestamp = 4;
-	optional bool echo_to_sender = 5;
-}
-
-message CMsgClientFriendMsgIncoming {
-	optional fixed64 steamid_from = 1;
-	optional int32 chat_entry_type = 2;
-	optional bool from_limited_account = 3;
-	optional bytes message = 4;
-	optional fixed32 rtime32_server_timestamp = 5;
-}
-
-message CMsgClientFriendProfileInfo {
-	optional fixed64 steamid_friend = 1;
-}
-
-message CMsgClientFriendProfileInfoResponse {
-	optional int32 eresult = 1 [default = 2];
-	optional fixed64 steamid_friend = 2;
-	optional uint32 time_created = 3;
-	optional string real_name = 4;
-	optional string city_name = 5;
-	optional string state_name = 6;
-	optional string country_name = 7;
-	optional string headline = 8;
-	optional string summary = 9;
-}
-
-message CMsgClientFriendsGroupsList {
-	optional bool bremoval = 1;
-	optional bool bincremental = 2;
-	repeated .CMsgClientFriendsGroupsList_FriendGroup friendGroups = 3;
-	repeated .CMsgClientFriendsGroupsList_FriendGroupsMembership memberships = 4;
-}
-
-// Used by: common.proto
-message CMsgClientFriendsGroupsList_FriendGroup {
-	optional int32 nGroupID = 1;
-	optional string strGroupName = 2;
-}
-
-// Used by: common.proto
-message CMsgClientFriendsGroupsList_FriendGroupsMembership {
-	optional fixed64 ulSteamID = 1;
-	optional int32 nGroupID = 2;
-}
-
 message CMsgClientGetClanActivityCounts {
 	repeated uint64 steamid_clans = 1;
 }
@@ -1250,11 +983,6 @@ message CMsgClientGetEmoticonList {
 
 message CMsgClientHeartBeat {
 	optional bool send_reply = 1;
-}
-
-message CMsgClientHideFriend {
-	optional fixed64 friendid = 1;
-	optional bool hide = 2;
 }
 
 message CMsgClientInviteToGame {
@@ -1454,22 +1182,6 @@ message CMsgClientPersonaState_Friend_OtherGameData {
 	repeated .CMsgClientPersonaState_Friend_KV rich_presence = 2;
 }
 
-message CMsgClientPlayerNicknameList {
-	optional bool removal = 1;
-	optional bool incremental = 2;
-	repeated .CMsgClientPlayerNicknameList_PlayerNickname nicknames = 3;
-}
-
-// Used by: common.proto
-message CMsgClientPlayerNicknameList_PlayerNickname {
-	optional fixed64 steamid = 1;
-	optional string nickname = 3;
-}
-
-message CMsgClientRemoveFriend {
-	optional fixed64 friendid = 1;
-}
-
 message CMsgClientRemoveFriendFromGroup {
 	optional int32 groupid = 1;
 	optional fixed64 steamiduser = 2;
@@ -1514,15 +1226,6 @@ message CMsgClientServerTimestampRequest {
 message CMsgClientServerTimestampResponse {
 	optional uint64 client_request_timestamp = 1;
 	optional uint64 server_timestamp_ms = 2;
-}
-
-message CMsgClientSetPlayerNickname {
-	optional fixed64 steamid = 1;
-	optional string nickname = 2;
-}
-
-message CMsgClientSetPlayerNicknameResponse {
-	optional uint32 eresult = 1;
 }
 
 message CMsgClientSettings {
@@ -2089,26 +1792,6 @@ message CMsgIPAddress {
 	optional bytes v6 = 2;
 }
 
-message CMsgIPAddressBucket {
-	optional .CMsgIPAddress original_ip_address = 1;
-	optional fixed64 bucket = 2;
-}
-
-message CMsgKubeRPCPacket {
-	optional .CMsgKubeRPCPacket_Hdr hdr = 1;
-	optional bytes payload = 2;
-}
-
-// Used by: common.proto
-message CMsgKubeRPCPacket_Hdr {
-	optional fixed64 jobid_source = 10 [default = 18446744073709551615];
-	optional fixed64 jobid_target = 11 [default = 18446744073709551615];
-	optional string target_job_name = 12;
-	optional int32 eresult = 13 [default = 2];
-	optional string error_message = 14;
-	optional string reply_address = 42;
-}
-
 message CMsgMonitorInfo {
 	optional string selected_device_name = 1;
 	repeated .CMsgMonitorInfo_MonitorInfo monitors = 2;
@@ -2248,11 +1931,6 @@ message CMsgNetworkDeviceSetOptions_Wireless {
 	optional string band_filter = 3;
 }
 
-message CMsgPersonaChangeResponse {
-	optional uint32 result = 1;
-	optional string player_name = 2;
-}
-
 message CMsgProtoBufHeader {
 	optional fixed64 steamid = 1;
 	optional int32 client_sessionid = 2;
@@ -2290,10 +1968,6 @@ message CMsgProtoBufHeader {
 	optional fixed64 admin_request_spoofing_steamid = 43;
 	optional bool is_valveds = 44;
 	optional fixed64 trace_tag = 45;
-}
-
-message CMsgProtobufWrapped {
-	optional bytes message_body = 1;
 }
 
 message CMsgSelectOSBranchParams {
@@ -2835,13 +2509,6 @@ message CMsgWebUITransportFailure {
 	optional uint32 connect_count = 1;
 }
 
-// Used by: GameRecording, common.proto
-message CPhaseAttribute {
-	optional string group = 1;
-	optional string value = 2;
-	optional uint32 priority = 3;
-}
-
 message CProductImpressionsFromClient_Notification {
 	repeated .CProductImpressionsFromClient_Notification_Impression impressions = 1;
 }
@@ -2853,15 +2520,38 @@ message CProductImpressionsFromClient_Notification_Impression {
 	optional uint32 num_impressions = 3;
 }
 
-message CProductInfo_ForceEmitPriceConversion {
-	optional int32 method = 1 [(.description) = "enum"];
-}
-
 message CRemotePlay_SessionStopped_Notification {
 	optional fixed64 record_id = 1;
 	optional bool used_x264 = 2;
 	optional bool used_h264 = 3;
 	optional bool used_hevc = 4;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message CSeasonPass {
+	optional uint32 appid = 1;
+	repeated .CSeasonPassMilestone milestones = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message CSeasonPassDateAndDisplay {
+	optional uint32 rtime = 1;
+	optional string coming_soon_display_type = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message CSeasonPassMilestone {
+	optional int32 milestone_id = 1;
+	repeated .CLocalizationToken title = 2;
+	optional uint32 appid = 3;
+	optional fixed64 event_gid = 4;
+	repeated .CSeasonPassDateAndDisplay dates = 5;
+	optional bool shipped = 6;
+	optional uint32 rtime_complete = 7;
+	repeated .CLocalizationToken milestone_desc = 9;
+	repeated .CLocalizationToken image = 10;
+	optional bool backfilled_release = 11;
+	optional uint32 coming_soon_appid = 12;
 }
 
 message CSteamVR_AudioSettings_ChangeSettings_Request {
@@ -3311,14 +3001,6 @@ message CStreamVideoMode {
 	optional uint32 refresh_rate_denominator = 5;
 }
 
-// Used by: GameRecording, common.proto
-message CTimelineTag {
-	optional string name = 1;
-	optional string group = 2;
-	optional string icon = 3;
-	optional uint32 priority = 4;
-}
-
 // Used by: Test_TransportError, TransportValidation
 message CTransportValidation_AppendToString_Request {
 	repeated string append_strings = 1;
@@ -3634,6 +3316,20 @@ message CVRGamepadUI_Message_SetHMDSettings_Request {
 }
 
 message CVRGamepadUI_Message_SetHMDSettings_Response {
+}
+
+message CVRGamepadUI_Message_SetSpatializeEnabled_Request {
+	optional bool enabled = 1;
+}
+
+message CVRGamepadUI_Message_SetSpatializeEnabled_Response {
+}
+
+message CVRGamepadUI_Message_SetSpatializeSurroundEnabled_Request {
+	optional bool enabled = 1;
+}
+
+message CVRGamepadUI_Message_SetSpatializeSurroundEnabled_Response {
 }
 
 message CVRGamepadUI_Message_ShowDashboardPopup_Request {
@@ -4326,16 +4022,70 @@ message StoreItem_ExtraDetails {
 	optional string user_account_third_party = 7;
 	optional bool user_account_third_party_link_to_steam = 8;
 	optional .StoreItem_Anticheat anticheat = 9;
+	//optional .StoreItem_ExtraDetails_Anticheat anticheat = 9;
 	repeated .StoreItem_Eula eula = 10;
+	//repeated .StoreItem_ExtraDetails_Eula eula = 10;
 	optional .StoreItem_AIGeneratedContentService ai_generation_service = 11;
+	//optional .StoreItem_ExtraDetails_AIGeneratedContentService ai_generation_service = 11;
 	optional bool refund_checks_ea_playtime = 12;
-	repeated .StoreItem_PageSection section = 13;
+	repeated .StoreItem_ExtraDetails_PageSection section = 13;
+	//repeated .StoreItem_PageSection section = 13;
 	optional string legal_notice_bbcode = 14;
 	repeated int32 interactive_elements = 15 [(.description) = "enum"];
 	optional string content_survey_notes = 16;
 	optional string content_survey_ai_notes = 17;
-	repeated .StoreItem_PressReview press_review = 18;
+	repeated .StoreItem_ExtraDetails_PressReview press_review = 18;
 	optional string partner_awards_bbcode = 19;
+	optional .StoreItem_ExtraDetails_EarlyAccess early_access = 20;
+	optional .CSeasonPass season_pass = 21;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_AIGeneratedContentService {
+	optional string name = 1;
+	optional string url = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_Anticheat {
+	optional bool kernel_mode = 1;
+	optional bool uninstall_completely = 2;
+	optional bool boot_protection = 3;
+	optional string boot_protection_name = 4;
+	optional string name = 5;
+	optional string name_loc = 6;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_EarlyAccess {
+	optional string why_bbcode = 1;
+	optional string how_long_bbcode = 2;
+	optional string full_version_bbcode = 3;
+	optional string current_state_bbcode = 4;
+	optional string pricing_bbcode = 5;
+	optional string community_bbcode = 6;
+	optional string description_bbcode = 7;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_Eula {
+	optional string name = 1;
+	optional string url = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_PageSection {
+	optional string label = 1;
+	optional string content_bbcode = 2;
+	optional int32 banner = 3 [(.description) = "enum"];
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_PressReview {
+	optional string quote = 1;
+	optional string score = 2;
+	optional string site = 3;
+	optional string url = 4;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -4402,14 +4152,6 @@ message StoreItem_Platforms_VRSupport {
 message StoreItem_Playtest {
 	optional uint32 appid = 1;
 	optional bool is_open = 2;
-}
-
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
-message StoreItem_PressReview {
-	optional string quote = 1;
-	optional string score = 2;
-	optional string site = 3;
-	optional string url = 4;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -4621,8 +4363,5 @@ message UserSystemInformation {
 	optional uint32 screen_width = 18;
 	optional uint32 screen_height = 19;
 	optional bool precise_frame_rate = 20;
-}
-
-message WebUINoResponse {
 }
 

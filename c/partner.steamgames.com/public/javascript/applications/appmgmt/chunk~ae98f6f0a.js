@@ -1,132 +1,177 @@
-(() => {
-  (self.webpackChunkappmgmt_storeadmin =
-    self.webpackChunkappmgmt_storeadmin || []).push([
-    [6672],
-    {
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-        });
-        const _ = 4145017,
-          _ = 35143931,
-          _ = 39049601,
-          _ = 41316928,
-          _ = 45784768,
-          _ = 4397053,
-          _ = 4,
-          _ = 20,
-          _ = 45559995,
-          _ = 45902273,
-          _ = [_, _, _, _, _];
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-          _: () => _,
-        });
-        const _ =
-            /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\s"<>\[\],.ː:])?)/,
-          _ = /^(steam|ftp|https?):\/\//;
-        function _(_) {
-          return _.test(_) ? _ : "https://" + _;
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid");
-        const _ = {};
-        (_.arabic = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 22940, 19))),
-          (_.brazilian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 59990, 19))),
-          (_.bulgarian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 38573, 19))),
-          (_.czech = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 40975, 19))),
-          (_.danish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 38721, 19))),
-          (_.dutch = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 354, 19))),
-          (_.english = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 49768, 19))),
-          (_.finnish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 12931, 19))),
-          (_.french = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 6064, 19))),
-          (_.german = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 62942, 19))),
-          (_.greek = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 13924, 19))),
-          (_.hungarian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 99441, 19))),
-          (_.indonesian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 42584, 19))),
-          (_.italian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 97688, 19))),
-          (_.japanese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 5407, 19))),
-          (_.koreana = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 65815, 19))),
-          (_.latam = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 44287, 19))),
-          (_.malay = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 58160, 19))),
-          (_.norwegian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 33648, 19))),
-          (_.polish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 22649, 19))),
-          (_.portuguese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 23629, 19))),
-          (_.romanian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 81555, 19))),
-          (_.russian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 11809, 19))),
-          (_.schinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 79004, 19))),
-          (_.spanish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 97760, 19))),
-          (_.swedish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 86881, 19))),
-          (_.tchinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 28183, 19))),
-          (_.thai = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 10950, 19))),
-          (_.turkish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 22568, 19))),
-          (_.ukrainian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 17038, 19))),
-          (_.vietnamese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 62327, 19)));
-        async function _(_) {
-          if (_[_]) return _[_]();
-        }
-        const _ = (0, _._)(_);
-        async function _() {
-          return Promise.all([_.Ready()]);
-        }
-        function _() {
-          return useLocalizationReady(_);
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid");
-        const _ = JSON.parse(`{
+(self.webpackChunkappmgmt_storeadmin =
+  self.webpackChunkappmgmt_storeadmin || []).push([
+  [6672],
+  {
+    chunkid: (module) => {
+      module.exports = {
+        AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
+        BaseUI: "_3ar6NZpkNtMK2pmiKMadXq",
+        WidePageCtn: "uHgjQHyNygSKukDngfNQO",
+        AdminHeader: "vrqqGANTuXeQs27RGumFj",
+        Breadcrumbs: "_31raJsbMXVc33oW6c5hNxS",
+        Required: "_1-jmJyKnLRFoN-GX0Oqor8",
+        PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
+        PageTitle: "_2RxJB5bupbx0mkW8dYJQRE",
+        Beta: "_1YBhTKSlOER8bOnp0BU4Wj",
+        PageSubTitle: "okuL_y7hLnZUD5P4ACqUN",
+        ValveOnlyTitle: "_3skaXOiv1_vtHc_pGOPNsc",
+        ValveOnlyBackground: "_2FESGwA28dH3EVAa7uTsUX",
+        SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
+        DividerHeading: "_2kKPmwgbsJ_P67Vo-HwwRf",
+        ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
+        LeftCol: "_1AqrivbzwCs57BXiugqpeA",
+        ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
+        Blue: "J7iYYml2Jf_PcaACW1hEr",
+        ColHeaderImg: "_1VFkxNTzCFO2uCcle_nAJk",
+        Bright: "_3ZqV0CAeVnd0rruF6TVKQz",
+        ActionBar: "ilVbVkb6hkO_s6E_kiiSd",
+        SectionIntroRequirements: "_3TKZIwYk2f5dd3MR5909Uz",
+        warning: "_2HiNh3o5cgMEbzFKYBUjAy",
+        IntroText: "_1WWL_09T_-Jq--HSJRhKtH",
+        RightCol: "_3kaQhRnhNh_awrnNX90rui",
+        NoSticky: "JQNb8bHftBTAYpCXTx52v",
+        SmallText: "_3ltg5fPzb-WsRyzI41vAv_",
+        Button: "_3L1DFwM1lpsRwZ-AaMx9ie",
+        TitleSmall: "_3DyXNd5UgceEG9fcCKinvw",
+        DefaultSectionCtn: "Pupnokb21glaosRjxBjAm",
+        Indent: "_7PV326-4cpZdmTCEdgC2l",
+        DashLink: "_2NH_FlbsKA0jN2jPG4Rn9A",
+        FlexRow: "_3rz6jzCvvOGt8N0XaPIdzg",
+        MarginBottom: "_2Bw2oyBgXlb8EZ4HHbE8Ye",
+        UploadedImageDisplayCtn: "_1_JRuj6yAJovBDZE8IMSob",
+        UploaderLeftCol: "_3KQhw0sa1q_h62e4yaFgbw",
+        MarketingMessage: "_2pCvRF734J5gLxMMHW7LIb",
+        BannerPreview: "_1x4unTauuLCbMkThgRpsXc",
+        UploaderRightCol: "_3jcvvtnLhiQBvAebO2eI4Z",
+        LangCountTitle: "_1tPNH9hTWnMUsbdob5i93a",
+        LangSelectCtn: "_3tHzJ-eCQIlg-4XjTN0bNU",
+        UploaderImgLang: "_1jJThBArHevzcJ93kx4WhR",
+        LangSelected: "_1sUrnQsBw06ZqTIbMeE9tT",
+        DeleteAll: "rYuknI3K1VFknv90GNUTc",
+        EditCtn: "_1g5X3AT4HwD0ya2e2t2WTO",
+        StatusBtn: "_1MGZHxsnyQPrLXwl-8Fium",
+        HalfWidthBtnCtn: "fGJIpDJEvYkHmhWFP39BX",
+        StatReportCtn: "_1J3v1KGOhdSGz77c2rLxWy",
+        Stat: "_3OYQbVCq1yBuEx1XcDzG06",
+        BigStat: "lYYwDDss378Sm0FKPBxPh",
+        IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
+        AdminVerticalTabs: "_38rhsxAONglYlA01yweB9r",
+        RightPanel: "_1QYBs5PGw6PClZRx9WNL6z",
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 39049601,
+        _ = 41316928,
+        _ = 4,
+        _ = 20,
+        _ = 45559995,
+        _ = 45902273,
+        _ = [4145017, 35143931, _, _, _];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      const _ =
+          /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\s"<>\[\],.ː:])?)/,
+        _ = /^(steam|ftp|https?):\/\//;
+      function _(_) {
+        return _.test(_) ? _ : "https://" + _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = {};
+      (_.arabic = () =>
+        __webpack_require__._("chunkid").then(_._.bind(_, 22940, 19))),
+        (_.brazilian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 59990, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 38573, 19))),
+        (_.czech = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 40975, 19))),
+        (_.danish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 38721, 19))),
+        (_.dutch = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 354, 19))),
+        (_.english = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 49768, 19))),
+        (_.finnish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 12931, 19))),
+        (_.french = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 6064, 19))),
+        (_.german = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 62942, 19))),
+        (_.greek = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 13924, 19))),
+        (_.hungarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 99441, 19))),
+        (_.indonesian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 42584, 19))),
+        (_.italian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 97688, 19))),
+        (_.japanese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 5407, 19))),
+        (_.koreana = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 65815, 19))),
+        (_.latam = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 44287, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 58160, 19))),
+        (_.norwegian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 33648, 19))),
+        (_.polish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 22649, 19))),
+        (_.portuguese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 23629, 19))),
+        (_.romanian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 81555, 19))),
+        (_.russian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 11809, 19))),
+        (_.schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 79004, 19))),
+        (_.spanish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 97760, 19))),
+        (_.swedish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 86881, 19))),
+        (_.tchinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 28183, 19))),
+        (_.thai = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 10950, 19))),
+        (_.turkish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 22568, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 17038, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 62327, 19)));
+      const _ = (0, _._)(async function (_) {
+        if (_[_]) return _[_]();
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = JSON.parse(`{
 	"unknown": 0,
 	"store.steampowered.com": 1,
 	"steamcommunity.com": 2,
@@ -821,180 +866,141 @@
 	"personalcalendar-homepage": 100803,
 	"greatonframe": 100804
 }`);
-        var _ = __webpack_require__("chunkid");
-        function _(_) {
-          return _ in _;
+      var _ = __webpack_require__("chunkid");
+      class _ {
+        static InstrumentLink(_, _, _ = null) {
+          const _ = _.GetSNRLinkParam(_, _),
+            _ = _.GetCuratorClanIDParam(_);
+          return _.AddNavParamToURL(_, _, _);
         }
-        class _ {
-          static InstrumentLink(_, _, _ = null) {
-            const _ = _.GetSNRLinkParam(_, _),
-              _ = _.GetCuratorClanIDParam(_);
-            return _.AddNavParamToURL(_, _, _);
+        static ParseSNR(_) {
+          const _ = _.split("_") || [];
+          return {
+            domain: _.DecodeEventComponent(_[0]),
+            controller: _.DecodeEventComponent(_[1]),
+            method: _.DecodeEventComponent(_[2]),
+            submethod: _.DecodeEventComponent(_[3]),
+            feature: _.DecodeEventComponent(_[4]),
+            depth: _[5] ? Number(_[5]) : void 0,
+          };
+        }
+        static GetSNRLinkParam(_, _ = null) {
+          let _ = _.ComputeLinkPrefix(
+            _.domain,
+            _.controller,
+            _.method,
+            _.submethod,
+          );
+          _ = _ ?? _.depth ?? null;
+          const _ = _.EncodeEventComponent(_.feature);
+          return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
+        }
+        static GetCuratorClanIDParam(_) {
+          return _.curator_clanid ?? null;
+        }
+        static AddNavParamToURL(_, _, _) {
+          if (!_ || 0 == _.length) return _;
+          try {
+            const _ = new URL((0, _._)(_)),
+              _ = new URLSearchParams(_.search);
+            return (
+              _.set("snr", encodeURIComponent(_ ?? "")),
+              _ &&
+                !_._.includes(_) &&
+                _.set("curator_clanid", encodeURIComponent(_ ?? "")),
+              _.origin + _.pathname + "?" + _.toString() + _.hash
+            );
+          } catch (_) {
+            return console.error(_, _), _;
           }
-          static ParseSNR(_) {
-            const _ = _.split("_") || [];
-            return {
-              domain: _.DecodeEventComponent(_[0]),
-              controller: _.DecodeEventComponent(_[1]),
-              method: _.DecodeEventComponent(_[2]),
-              submethod: _.DecodeEventComponent(_[3]),
-              feature: _.DecodeEventComponent(_[4]),
-              depth: _[5] ? Number(_[5]) : void 0,
-            };
-          }
-          static GetSNRLinkParam(_, _ = null) {
-            let _ = _.ComputeLinkPrefix(
+        }
+        static ComputeLinkPrefix(_, _, _, _) {
+          let _ = "";
+          return (
+            (_ += _.EncodeEventComponent(_)),
+            (_ += "_"),
+            (_ += _.EncodeEventComponent(_)),
+            (_ += "_"),
+            (_ += _.EncodeEventComponent(_)),
+            (_ += "_"),
+            (_ += _.EncodeEventComponent(_)),
+            _
+          );
+        }
+        static EncodeEventComponent(_) {
+          return _
+            ? _ in _
+              ? "" + _[_]
+              : (_.match(/^[0-9]+$/) || (_ = _.replace(/^[0-9]+/, "")),
+                _.replace(/[^a-zA-Z0-9\- ]+/g, ""))
+            : "";
+        }
+        static DecodeEventComponent(_) {
+          const _ = _ && parseInt(_);
+          if (_ && _) for (const _ in _) if (_[_] == _) return _;
+          return _.SanitizeEventComponent(_);
+        }
+        static SanitizeEventComponent(_) {
+          return _ && _.match(/^[a-zA-Z0-9\-.]*$/) ? _ : "";
+        }
+      }
+      function _(_) {
+        return {
+          ..._,
+          domain: _.SanitizeEventComponent(_.domain),
+          controller: _.SanitizeEventComponent(_.controller),
+          method: _.SanitizeEventComponent(_.method),
+          submethod: _.SanitizeEventComponent(_.submethod),
+          feature: _.SanitizeEventComponent(_.feature),
+          depth: _.depth || 0,
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({});
+      _.createContext(void 0);
+      function _(_) {
+        const { children: _, ..._ } = _,
+          _ = _(),
+          _ = _.useMemo(
+            () => ({
+              ..._,
+              ..._,
+            }),
+            [
+              _,
               _.domain,
               _.controller,
               _.method,
               _.submethod,
-            );
-            _ = _ ?? _.depth ?? null;
-            const _ = _.EncodeEventComponent(_.feature);
-            return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
-          }
-          static GetCuratorClanIDParam(_) {
-            return _.curator_clanid ?? null;
-          }
-          static AddNavParamToURL(_, _, _) {
-            if (!_ || _.length == 0) return _;
-            try {
-              const _ = new URL((0, _._)(_)),
-                _ = new URLSearchParams(_.search);
-              return (
-                _.set("snr", encodeURIComponent(_ ?? "")),
-                _ &&
-                  !_._.includes(_) &&
-                  _.set("curator_clanid", encodeURIComponent(_ ?? "")),
-                _.origin + _.pathname + "?" + _.toString() + _.hash
-              );
-            } catch (_) {
-              return console.error(_, _), _;
-            }
-          }
-          static ComputeLinkPrefix(_, _, _, _) {
-            let _ = "";
-            return (
-              (_ += _.EncodeEventComponent(_)),
-              (_ += "_"),
-              (_ += _.EncodeEventComponent(_)),
-              (_ += "_"),
-              (_ += _.EncodeEventComponent(_)),
-              (_ += "_"),
-              (_ += _.EncodeEventComponent(_)),
-              _
-            );
-          }
-          static EncodeEventComponent(_) {
-            return _
-              ? _(_)
-                ? "" + _[_]
-                : (_.match(/^[0-9]+$/) || (_ = _.replace(/^[0-9]+/, "")),
-                  _.replace(/[^a-zA-Z0-9\- ]+/g, ""))
-              : "";
-          }
-          static DecodeEventComponent(_) {
-            const _ = _ && parseInt(_);
-            if (_ && _) {
-              for (const _ in _) if (_[_] == _) return _;
-            }
-            return _.SanitizeEventComponent(_);
-          }
-          static SanitizeEventComponent(_) {
-            return !_ || !_.match(/^[a-zA-Z0-9\-.]*$/) ? "" : _;
-          }
-        }
-        function _(_) {
-          return {
-            ..._,
-            domain: _.SanitizeEventComponent(_.domain),
-            controller: _.SanitizeEventComponent(_.controller),
-            method: _.SanitizeEventComponent(_.method),
-            submethod: _.SanitizeEventComponent(_.submethod),
-            feature: _.SanitizeEventComponent(_.feature),
-            depth: _.depth || 0,
-          };
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
+              _.feature,
+              _.depth,
+              _.curator_clanid,
+            ],
+          );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = _.createContext({}),
-          _ = _.createContext(void 0);
-        function _(_) {
-          const { children: _, ..._ } = _,
-            _ = _(),
-            _ = _.useMemo(
-              () => ({
-                ..._,
-                ..._,
-              }),
-              [
-                _,
-                _.domain,
-                _.controller,
-                _.method,
-                _.submethod,
-                _.feature,
-                _.depth,
-                _.curator_clanid,
-              ],
-            );
-          return (0, _.jsx)(_.Provider, {
-            value: _,
-            children: _,
-          });
-        }
-        function _(_) {
-          const { uiData: _, children: _ } = _,
-            _ = React.useMemo(
-              () => ({
-                domain: _.domain,
-                controller: _.controller,
-                method: _.method,
-                submethod: _.submethod,
-                feature: _.feature,
-                depth: _.depth,
-                curator_clanid: _?.curator_data?.clanid,
-              }),
-              [
-                _.domain,
-                _.controller,
-                _.method,
-                _.submethod,
-                _.feature,
-                _.depth,
-                _?.curator_data?.clanid,
-              ],
-            );
-          return jsx(_.Provider, {
-            value: _,
-            children: _,
-          });
-        }
-        function _() {
-          const _ = React.useContext(_),
-            _ = _();
-          return _ || _;
-        }
-        function _() {
-          return _.useContext(_);
-        }
-        function _(_, _) {
-          return _(_(), _, _);
-        }
-        function _(_, _, _) {
+      }
+      function _() {
+        return _.useContext(_);
+      }
+      function _(_, _) {
+        return (function (_, _, _) {
           return {
             ..._,
             feature: _ || _.feature,
@@ -1002,295 +1008,222 @@
             countrycode: _._.COUNTRY,
             is_client: _._.IN_CLIENT,
           };
-        }
-        function _(_, _, _) {
-          const _ = _();
-          return _.useMemo(() => _ && _(_, _, _, _), [_, _, _, _]);
-        }
-        function _(_, _) {
-          const _ = _();
-          return _.useMemo(
-            () =>
-              _._.GetSNRLinkParam(
-                {
-                  ..._,
-                  feature: _ || _.feature,
-                },
-                _,
-              ),
-            [_, _, _],
-          );
-        }
-        function _(_, _, _, _) {
-          const _ = _._.GetSNRLinkParam(
+        })(_(), _, _);
+      }
+      function _(_, _, _) {
+        const _ = _();
+        return _.useMemo(() => _ && _(_, _, _, _), [_, _, _, _]);
+      }
+      function _(_, _) {
+        const _ = _();
+        return _.useMemo(
+          () =>
+            _._.GetSNRLinkParam(
               {
                 ..._,
                 feature: _ || _.feature,
               },
               _,
             ),
-            _ = _._.GetCuratorClanIDParam(_);
-          return _._.AddNavParamToURL(_, _, _);
-        }
-        function _(_) {
-          const { href: _, ..._ } = _,
-            _ = _(_);
-          return jsx("a", {
-            ..._,
-            href: _,
-          });
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          if (!_) return;
-          let _ = _?.jsondata?.read_more_link
-            ? (0, _._)(_.jsondata.read_more_link).toLocaleLowerCase()
+          [_, _, _],
+        );
+      }
+      function _(_, _, _, _) {
+        const _ = _._.GetSNRLinkParam(
+            {
+              ..._,
+              feature: _ || _.feature,
+            },
+            _,
+          ),
+          _ = _._.GetCuratorClanIDParam(_);
+        return _._.AddNavParamToURL(_, _, _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return (0, _._)(
+          _,
+          (function (_) {
+            if (!_) return;
+            let _ = _?.jsondata?.read_more_link
+              ? (0, _._)(_.jsondata.read_more_link).toLocaleLowerCase()
+              : void 0;
+            return _ ? [_] : void 0;
+          })(_),
+        );
+      }
+      function _(_, _) {
+        return _
+          ? (_ = (0, _._)(_)
+              ? _(_, _)
+                ? (_._.IN_CLIENT ? "steam://openurl_external/" : "") +
+                  (0, _._)(_)
+                : (_._.IN_CLIENT ? "steam://openurl_external/" : "") + _
+              : (0, _._)(_))
+          : "";
+      }
+      function _(_, _, _) {
+        let _ = _;
+        return (
+          _.toLowerCase().startsWith("http") || (_ = "http://" + _),
+          (0, _.jsx)(_, {
+            url: _,
+            event: _,
+            children: _ || _,
+          })
+        );
+      }
+      const _ = (_) => {
+        const { url: _, event: _, className: _, style: _ } = _;
+        let _,
+          _ = (0, _._)(_);
+        (_ = _(_, _)), (0, _._)(_) && (_ = "noopener nofollow");
+        const _ =
+          "string" == typeof _.children &&
+          _.children.length > 0 &&
+          _ &&
+          !_.startsWith("steam://")
+            ? (0, _._)(_)
             : void 0;
-          if (_) return [_];
+        return (0, _.jsx)(_._, {
+          toolTipContent: _,
+          direction: "top",
+          children: (0, _.jsx)(_._, {
+            className: _,
+            href: _,
+            rel: _,
+            _: _._,
+            style: _,
+            children: _.children,
+          }),
+        });
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _ = "", _ = null) {
+        return _.InstrumentLink(_, _, _);
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)();
+        return _.useMemo(() => {
+          const _ = (0, _._)(_).toLowerCase(),
+            _ = (0, _._)(_._.COMMUNITY_BASE_URL).toLowerCase(),
+            _ = (0, _._)(_._.STORE_BASE_URL).toLowerCase();
+          return _ === _ || _ === _ ? (0, _._)(_, _, _, _) : _;
+        }, [_, _, _, _]);
+      }
+      function _(_, _, _ = null) {
+        const _ = _(_, _),
+          _ = _ ? _._.GetCuratorClanIDParam(_) : null;
+        return _._.AddNavParamToURL(_, _, _);
+      }
+      function _(_, _, _, _ = null) {
+        const _ = _(_, _, _);
+        if (_ && Object.keys(_).length > 0)
+          try {
+            const _ = new URL((0, _._)(_)),
+              _ = new URLSearchParams(_.search);
+            return (
+              Object.entries(_).forEach(([_, _]) => {
+                _.set(_, encodeURIComponent(_ ?? ""));
+              }),
+              _.origin + _.pathname + "?" + _.toString() + _.hash
+            );
+          } catch (_) {
+            0;
+          }
+        return _;
+      }
+      function _(_, _ = null) {
+        return _?.domain ? _.GetLinkParam(_, _) : _._.SNR;
+      }
+      class _ {
+        static sm_strDomain;
+        static sm_strController;
+        static sm_strMethod;
+        static sm_strSubmethod;
+        static sm_strComputedLinkPrefix;
+        static SetNavEventParams(_, _, _ = null, _ = null) {
+          (_.sm_strDomain = _),
+            (_.sm_strController = _),
+            (_.sm_strMethod = _),
+            (_.sm_strSubmethod = _),
+            (_.sm_strComputedLinkPrefix = null);
         }
-        function _(_, _) {
-          return (0, _._)(_, _(_));
-        }
-        function _(_, _) {
-          return _
-            ? ((0, _._)(_)
-                ? _(_, _)
-                  ? (_ =
-                      (_._.IN_CLIENT ? "steam://openurl_external/" : "") +
-                      (0, _._)(_))
-                  : (_ = (_._.IN_CLIENT ? "steam://openurl_external/" : "") + _)
-                : (_ = (0, _._)(_)),
-              _)
-            : "";
-        }
-        function _(_, _, _) {
-          let _ = _;
+        static GetDefaultParams() {
+          let _ = {
+            domain: _.sm_strDomain,
+            controller: _.sm_strController,
+          };
           return (
-            _.toLowerCase().startsWith("http") || (_ = "http://" + _),
-            (0, _.jsx)(_, {
-              url: _,
-              event: _,
-              children: _ || _,
-            })
+            _.sm_strMethod && (_.method = _.sm_strMethod),
+            _.sm_strSubmethod && (_.submethod = _.sm_strSubmethod),
+            _
           );
         }
-        const _ = (_) => {
-          const { url: _, event: _, className: _, style: _ } = _;
-          let _ = (0, _._)(_);
-          _ = _(_, _);
-          let _;
-          (0, _._)(_) && (_ = "noopener nofollow");
-          const _ =
-            typeof _.children == "string" &&
-            _.children.length > 0 &&
-            _ &&
-            !_.startsWith("steam://")
-              ? (0, _._)(_)
-              : void 0;
-          return (0, _.jsx)(_._, {
-            toolTipContent: _,
-            direction: "top",
-            children: (0, _.jsx)(_._, {
-              className: _,
-              href: _,
-              rel: _,
-              _: _._,
-              style: _,
-              children: _.children,
-            }),
-          });
-        };
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_, _ = "", _ = null) {
-          return _.InstrumentLink(_, _, _);
-        }
-        function _(_, _, _) {
-          const _ = (0, _._)();
-          return _.useMemo(() => {
-            const _ = (0, _._)(_).toLowerCase(),
-              _ = (0, _._)(_._.COMMUNITY_BASE_URL).toLowerCase(),
-              _ = (0, _._)(_._.STORE_BASE_URL).toLowerCase();
-            return _ === _ || _ === _ ? (0, _._)(_, _, _, _) : _;
-          }, [_, _, _, _]);
-        }
-        function _(_, _, _ = null) {
-          const _ = _(_, _),
-            _ = _ ? _._.GetCuratorClanIDParam(_) : null;
+        static InstrumentLink(_, _, _ = null) {
+          const _ = _.GetLinkParam(_, _),
+            _ = "string" != typeof _ ? _._.GetCuratorClanIDParam(_) : null;
           return _._.AddNavParamToURL(_, _, _);
         }
-        function _(_, _, _, _ = null) {
-          const _ = _(_, _, _);
-          if (_ && Object.keys(_).length > 0)
-            try {
-              const _ = new URL((0, _._)(_)),
-                _ = new URLSearchParams(_.search);
-              return (
-                Object.entries(_).forEach(([_, _]) => {
-                  _.set(_, encodeURIComponent(_ ?? ""));
-                }),
-                _.origin + _.pathname + "?" + _.toString() + _.hash
-              );
-            } catch {}
-          return _;
-        }
-        function _(_, _ = null) {
-          return _?.domain ? _.GetLinkParam(_, _) : _._.SNR;
-        }
-        function _(_, _ = "", _ = null) {
-          const _ = `${Config.STORE_BASE_URL}app/${_}`;
-          return _(_, _, _);
-        }
-        function _(_, _ = "") {
-          const _ = `${Config.STORE_BASE_URL}dlc/${_}`;
-          return _(_, _);
-        }
-        class _ {
-          static sm_strDomain;
-          static sm_strController;
-          static sm_strMethod;
-          static sm_strSubmethod;
-          static sm_strComputedLinkPrefix;
-          static SetNavEventParams(_, _, _ = null, _ = null) {
-            (_.sm_strDomain = _),
-              (_.sm_strController = _),
-              (_.sm_strMethod = _),
-              (_.sm_strSubmethod = _),
-              (_.sm_strComputedLinkPrefix = null);
+        static GetLinkParam(_, _ = null) {
+          let _, _;
+          if ("string" != typeof _) {
+            if (_.domain) return _._.GetSNRLinkParam(_, _);
+            _ = _.feature || "";
           }
-          static GetDefaultParams() {
-            let _ = {
-              domain: _.sm_strDomain,
-              controller: _.sm_strController,
-            };
-            return (
-              _.sm_strMethod && (_.method = _.sm_strMethod),
-              _.sm_strSubmethod && (_.submethod = _.sm_strSubmethod),
-              _
-            );
-          }
-          static InstrumentLink(_, _, _ = null) {
-            const _ = _.GetLinkParam(_, _),
-              _ = typeof _ != "string" ? _._.GetCuratorClanIDParam(_) : null;
-            return _._.AddNavParamToURL(_, _, _);
-          }
-          static GetLinkParam(_, _ = null) {
-            let _;
-            if (typeof _ != "string") {
-              if (_.domain) return _._.GetSNRLinkParam(_, _);
-              _ = _.feature || "";
-            }
-            let _;
-            if (!_.sm_strComputedLinkPrefix && !_.ComputeStaticLinkPrefix())
-              return null;
-            _ = _.sm_strComputedLinkPrefix;
-            let _ = _._.EncodeEventComponent(_);
-            return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
-          }
-          static ComputeStaticLinkPrefix() {
-            return _.sm_strDomain
-              ? ((_.sm_strComputedLinkPrefix = _._.ComputeLinkPrefix(
-                  _.sm_strDomain,
-                  _.sm_strController,
-                  _.sm_strMethod,
-                  _.sm_strSubmethod,
-                )),
-                !0)
-              : ((0, _._)(
-                  !1,
-                  "CStoreNavEvents::SetNavEventParams was not called before calling InstrumentLink!",
-                ),
-                !1);
-          }
+          if (!_.sm_strComputedLinkPrefix && !_.ComputeStaticLinkPrefix())
+            return null;
+          _ = _.sm_strComputedLinkPrefix;
+          let _ = _._.EncodeEventComponent(_);
+          return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
         }
-      },
-      chunkid: (module) => {
-        module.exports = {
-          AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
-          BaseUI: "_3ar6NZpkNtMK2pmiKMadXq",
-          WidePageCtn: "uHgjQHyNygSKukDngfNQO",
-          AdminHeader: "vrqqGANTuXeQs27RGumFj",
-          Breadcrumbs: "_31raJsbMXVc33oW6c5hNxS",
-          Required: "_1-jmJyKnLRFoN-GX0Oqor8",
-          PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
-          PageTitle: "_2RxJB5bupbx0mkW8dYJQRE",
-          Beta: "_1YBhTKSlOER8bOnp0BU4Wj",
-          PageSubTitle: "okuL_y7hLnZUD5P4ACqUN",
-          ValveOnlyTitle: "_3skaXOiv1_vtHc_pGOPNsc",
-          ValveOnlyBackground: "_2FESGwA28dH3EVAa7uTsUX",
-          SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
-          DividerHeading: "_2kKPmwgbsJ_P67Vo-HwwRf",
-          ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
-          LeftCol: "_1AqrivbzwCs57BXiugqpeA",
-          ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
-          Blue: "J7iYYml2Jf_PcaACW1hEr",
-          ColHeaderImg: "_1VFkxNTzCFO2uCcle_nAJk",
-          Bright: "_3ZqV0CAeVnd0rruF6TVKQz",
-          ActionBar: "ilVbVkb6hkO_s6E_kiiSd",
-          SectionIntroRequirements: "_3TKZIwYk2f5dd3MR5909Uz",
-          warning: "_2HiNh3o5cgMEbzFKYBUjAy",
-          IntroText: "_1WWL_09T_-Jq--HSJRhKtH",
-          RightCol: "_3kaQhRnhNh_awrnNX90rui",
-          NoSticky: "JQNb8bHftBTAYpCXTx52v",
-          SmallText: "_3ltg5fPzb-WsRyzI41vAv_",
-          Button: "_3L1DFwM1lpsRwZ-AaMx9ie",
-          TitleSmall: "_3DyXNd5UgceEG9fcCKinvw",
-          DefaultSectionCtn: "Pupnokb21glaosRjxBjAm",
-          Indent: "_7PV326-4cpZdmTCEdgC2l",
-          DashLink: "_2NH_FlbsKA0jN2jPG4Rn9A",
-          FlexRow: "_3rz6jzCvvOGt8N0XaPIdzg",
-          MarginBottom: "_2Bw2oyBgXlb8EZ4HHbE8Ye",
-          UploadedImageDisplayCtn: "_1_JRuj6yAJovBDZE8IMSob",
-          UploaderLeftCol: "_3KQhw0sa1q_h62e4yaFgbw",
-          MarketingMessage: "_2pCvRF734J5gLxMMHW7LIb",
-          BannerPreview: "_1x4unTauuLCbMkThgRpsXc",
-          UploaderRightCol: "_3jcvvtnLhiQBvAebO2eI4Z",
-          LangCountTitle: "_1tPNH9hTWnMUsbdob5i93a",
-          LangSelectCtn: "_3tHzJ-eCQIlg-4XjTN0bNU",
-          UploaderImgLang: "_1jJThBArHevzcJ93kx4WhR",
-          LangSelected: "_1sUrnQsBw06ZqTIbMeE9tT",
-          DeleteAll: "rYuknI3K1VFknv90GNUTc",
-          EditCtn: "_1g5X3AT4HwD0ya2e2t2WTO",
-          StatusBtn: "_1MGZHxsnyQPrLXwl-8Fium",
-          HalfWidthBtnCtn: "fGJIpDJEvYkHmhWFP39BX",
-          StatReportCtn: "_1J3v1KGOhdSGz77c2rLxWy",
-          Stat: "_3OYQbVCq1yBuEx1XcDzG06",
-          BigStat: "lYYwDDss378Sm0FKPBxPh",
-          IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
-          AdminVerticalTabs: "_38rhsxAONglYlA01yweB9r",
-          RightPanel: "_1QYBs5PGw6PClZRx9WNL6z",
-        };
-      },
+        static ComputeStaticLinkPrefix() {
+          return _.sm_strDomain
+            ? ((_.sm_strComputedLinkPrefix = _._.ComputeLinkPrefix(
+                _.sm_strDomain,
+                _.sm_strController,
+                _.sm_strMethod,
+                _.sm_strSubmethod,
+              )),
+              !0)
+            : ((0, _._)(
+                !1,
+                "CStoreNavEvents::SetNavEventParams was not called before calling InstrumentLink!",
+              ),
+              !1);
+        }
+      }
     },
-  ]);
-})();
+  },
+]);

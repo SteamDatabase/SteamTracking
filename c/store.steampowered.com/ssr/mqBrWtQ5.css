@@ -1,0 +1,38 @@
+.TIKXN-ViOCk- {
+  box-sizing: border-box;
+  --color-placeholder-text: var(--text-muted-color, #afafaf);
+  width: 100%;
+}
+.TIKXN-ViOCk-::placeholder {
+  color: var(--color-placeholder-text);
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
+  font-style: italic;
+}
+.TIKXN-ViOCk-::-webkit-input-placeholder {
+  color: var(--color-placeholder-text);
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
+  font-style: italic;
+}
+.TIKXN-ViOCk-::-moz-placeholder {
+  color: var(--color-placeholder-text);
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
+  font-style: italic;
+}
+.TIKXN-ViOCk-:-ms-placeholder-shown {
+  color: var(--color-placeholder-text);
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
+  font-style: italic;
+}
+.TIKXN-ViOCk-:read-only {
+  cursor: default;
+}
+textarea.TIKXN-ViOCk- {
+  padding-top: var(--spacing-1);
+  padding-bottom: var(--spacing-1);
+  max-width: 100%;
+  max-height: 100%;
+}

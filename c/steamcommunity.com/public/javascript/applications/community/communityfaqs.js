@@ -3871,7 +3871,6 @@
               });
         });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
           ViewFAQ: (_, _) => `/faqs/${_}/view/${_}*`,
@@ -3879,96 +3878,82 @@
           DashboardFAQ: (_) => `/faqs/${_}/dashboard`,
           PreviewFAQ: (_, _) => `/faqs/${_}/preview/${_}*`,
         },
-        _ = (0, _._)((_) => {
-          const [_, _] = _.useState(!0);
-          return (
-            _.useEffect(() => {
-              (async () => {
-                await _._.InitGlobal(), __webpack_require__(!1);
-              })();
-            }, []),
-            _
-              ? (0, _.jsx)(_._, {
-                  position: "center",
-                  size: "medium",
-                  string: (0, _._)("#Loading"),
-                })
-              : (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsxs)(_._, {
-                      children: [
-                        (0, _.jsx)(_._, {
-                          path: _.ViewFAQ(":vanity_str", ":faqid"),
-                          render: (_) =>
-                            (0, _.jsx)(_._, {
-                              config: {
-                                "faqs-root": () => {
-                                  const { faqid: _ } = _.match.params,
-                                    _ = (0, _._)(_);
-                                  return (0, _.jsx)(_, {
+        _ = (0, _._)((_) =>
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {}),
+              (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    path: _.ViewFAQ(":vanity_str", ":faqid"),
+                    render: (_) =>
+                      (0, _.jsx)(_._, {
+                        config: {
+                          "faqs-root": () => {
+                            const { faqid: _ } = _.match.params,
+                              _ = (0, _._)(_);
+                            return (0, _.jsx)(_, {
+                              faqid: _,
+                            });
+                          },
+                        },
+                      }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    path: _.EditFAQ(":vanity_str", ":faqid"),
+                    render: (_) =>
+                      (0, _.jsx)(_._, {
+                        config: {
+                          "faqs-root": () => {
+                            const { faqid: _ } = _.match.params;
+                            if (_) {
+                              const _ = (0, _._)(_);
+                              return _
+                                ? (0, _.jsx)(_, {
                                     faqid: _,
+                                  })
+                                : (0, _.jsx)(_._, {
+                                    push: !0,
+                                    _: _(_.k_eCommunityDashboard),
                                   });
-                                },
-                              },
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          path: _.EditFAQ(":vanity_str", ":faqid"),
-                          render: (_) =>
-                            (0, _.jsx)(_._, {
-                              config: {
-                                "faqs-root": () => {
-                                  const { faqid: _ } = _.match.params;
-                                  if (_) {
-                                    const _ = (0, _._)(_);
-                                    return _
-                                      ? (0, _.jsx)(_, {
-                                          faqid: _,
-                                        })
-                                      : (0, _.jsx)(_._, {
-                                          push: !0,
-                                          _: _(_.k_eCommunityDashboard),
-                                        });
-                                  }
-                                  return (0, _.jsx)(_, {});
-                                },
-                              },
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          path: _.DashboardFAQ(":vanity_str"),
-                          render: (_) =>
-                            (0, _.jsx)(_._, {
-                              config: {
-                                "faqs-root": () => (0, _.jsx)(_, {}),
-                              },
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          path: _.PreviewFAQ(":vanity_str", ":faqid"),
-                          render: (_) =>
-                            (0, _.jsx)(_._, {
-                              config: {
-                                "faqs-root": () => {
-                                  const { faqid: _ } = _.match.params,
-                                    _ = (0, _._)(_);
-                                  return (0, _.jsx)(_, {
-                                    faqid: _,
-                                  });
-                                },
-                              },
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          component: _._,
-                        }),
-                      ],
-                    }),
-                  ],
-                })
-          );
-        });
+                            }
+                            return (0, _.jsx)(_, {});
+                          },
+                        },
+                      }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    path: _.DashboardFAQ(":vanity_str"),
+                    render: (_) =>
+                      (0, _.jsx)(_._, {
+                        config: {
+                          "faqs-root": () => (0, _.jsx)(_, {}),
+                        },
+                      }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    path: _.PreviewFAQ(":vanity_str", ":faqid"),
+                    render: (_) =>
+                      (0, _.jsx)(_._, {
+                        config: {
+                          "faqs-root": () => {
+                            const { faqid: _ } = _.match.params,
+                              _ = (0, _._)(_);
+                            return (0, _.jsx)(_, {
+                              faqid: _,
+                            });
+                          },
+                        },
+                      }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    component: _._,
+                  }),
+                ],
+              }),
+            ],
+          }),
+        );
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

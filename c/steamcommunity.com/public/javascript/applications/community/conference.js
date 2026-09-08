@@ -305,7 +305,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         async LoadInitialCalendarData(_, _) {
@@ -316,12 +315,11 @@
           );
         }
         async InternalLoadInitialCalendarData(_, _) {
-          _._.IsInitialized() || _._.InitGlobal(),
-            (0, _._)({
-              collectionid: _,
-              bSectionByDay: !0,
-              rtCalendarEnd: _,
-            });
+          (0, _._)({
+            collectionid: _,
+            bSectionByDay: !0,
+            rtCalendarEnd: _,
+          });
           const _ = (0, _._)(),
             _ = (0, _._)("conference_calendar", "application_config");
           _ && (await __webpack_require__.RegisterCalendarEventsAndModels(_)),
@@ -338,9 +336,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -645,6 +640,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
@@ -742,6 +739,7 @@
             fnOnClicked: _,
           } = _,
           [_, _] = _.useState(!1),
+          _ = (0, _._)(),
           _ = (0, _._)(_.GetAppIDOrReferenceAppID());
         (0, _._)(_);
         const _ = (0, _._)(_);
@@ -842,7 +840,7 @@
               children: (0, _.jsxs)("div", {
                 className: _().Tile,
                 onClick: (_) => {
-                  _._.RecordAppInteractionEvent(_.appid, _._.k_eClickThrough),
+                  _.RecordInteraction(_._.k_eClickThrough),
                     (0, _._)() ||
                       (_(_), _.stopPropagation(), _.preventDefault());
                 },
@@ -945,7 +943,7 @@
       function _(_) {
         const { eventModel: _, fnSetVideoStateReady: _, mode: _ } = _,
           { video_preview_id: _, type: _ } = _.eventModel,
-          _ = _.calendarEvent.appid,
+          _ = (0, _._)(),
           _ = (0, _.sfN)(_._.LANGUAGE),
           _ = (0, _._)() && _ == _.zeJ ? _._.full : _._.capsule_main,
           _ = (0, _._)(_, "capsule", _, _, !0);
@@ -964,8 +962,7 @@
           controls: !0,
           imageClassnames: _().YoutubePreviewImage,
           onPlayerActivated: () => {
-            _._.RecordAppInteractionEvent(_, _._.k_ePlayedVideo),
-              __webpack_require__(!0);
+            _.RecordInteraction(_._.k_ePlayedVideo), __webpack_require__(!0);
           },
           preloadYoutubeScripts: !0,
           playsInline: !0,
@@ -1248,25 +1245,27 @@
           );
       function _(_) {
         const { eventModel: _ } = _,
-          _ = _._.Get(),
+          _ = (0, _._)(),
+          { myVote: _, Vote: _ } = (0, _._)(_, {
+            bAsk: !1,
+          }),
           [, _] = (0, _._)(_.clanSteamID.GetAccountID()),
-          [_, _, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             Math.max(0, _.nVotesUp - _.nVotesDown),
-            __webpack_require__.GetPreviouslyLoadedVote(_),
             _.GetForumTopicURL(null == _ ? void 0 : _.vanity_url),
             _.nCommentCount,
           ]),
-          _ = (function (_, _) {
-            return _.BIsUserLoggedIn()
+          _ = (function (_) {
+            return _._.logged_in
               ? _._.is_limited
                 ? _().Vote_LimitedUser
-                : !0 === _
+                : "up" === _
                   ? _().Vote_Positive
-                  : !1 === _
+                  : "down" === _
                     ? _().Vote_Negative
                     : _().Vote_Ready
               : _().Vote_NotLoggedIn;
-          })(_, _),
+          })(_),
           _ = !(0, _._)() && _,
           _ =
             _.live_stream_viewer_count > 0
@@ -1285,10 +1284,10 @@
               (0, _.jsxs)("div", {
                 className: (0, _._)(_().FooterStat, _().Vote, _),
                 onClick: () => {
-                  !0 !== __webpack_require__.GetPreviouslyLoadedVote(_) &&
-                    (0, _._)(_, _) &&
-                    (__webpack_require__.Vote(_, !0, _().CancelToken.source()),
-                    _._.RecordAppInteractionEvent(_.appid, _._.k_eThumbsUp));
+                  "up" !== _ &&
+                    (0, _._)() &&
+                    (_("up"),
+                    __webpack_require__.RecordInteraction(_._.k_eThumbsUp));
                 },
                 children: [
                   (0, _.jsx)(_.bfp, {
@@ -1307,10 +1306,7 @@
                     className: _().CommentIconCtn,
                     target: "_blank",
                     onClick: () => {
-                      _._.RecordAppInteractionEvent(
-                        _.appid,
-                        _._.k_eDiscussions,
-                      );
+                      __webpack_require__.RecordInteraction(_._.k_eDiscussions);
                     },
                     children: [
                       (0, _.jsx)(_._h6, {

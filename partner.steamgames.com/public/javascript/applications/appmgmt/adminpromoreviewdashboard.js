@@ -1,69 +1,66 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(() => {
-  (self.webpackChunkappmgmt_storeadmin =
-    self.webpackChunkappmgmt_storeadmin || []).push([
-    [7383],
-    {
-      88994: (m, e, o) => {
-        "use strict";
-        o.r(e), o.d(e, { default: () => l });
-        var r = o(7850),
-          d = o(48976),
-          u = o(90626),
-          c = o(85599),
-          n = o(98609),
-          E = o(95012),
-          _ = o(73850),
-          M = o.n(_);
-        function l(P) {
-          const s = (0, d.jo)(),
-            i = (0, u.useMemo)(() => {
-              if (s) {
-                const a = Math.floor(Date.now() / 1e3) - 345600,
-                  D = a + 480 * 60 * 60;
-                return s
-                  .filter(
-                    (t) =>
-                      t.start_date > a &&
-                      t.start_date < D &&
-                      ((!t.owner_account_id &&
-                        t.creator_account_id == n.iA.accountid) ||
-                        t.owner_account_id == n.iA.accountid ||
-                        (t.artwork_owner_account_id == n.iA.accountid &&
-                          !t.artwork_completed_time) ||
-                        t.operator_account_id == n.iA.accountid ||
-                        t.watch_list?.includes(n.iA.accountid)),
-                  )
-                  .map((t) => t.id);
-              }
-              return null;
-            }, [s]);
-          return n.iA.is_support
-            ? !i || s.length == 0
-              ? (0, r.jsx)(c.t, {
-                  string: "loading",
-                  size: "medium",
-                  position: "center",
+(self.webpackChunkappmgmt_storeadmin =
+  self.webpackChunkappmgmt_storeadmin || []).push([
+  [7383],
+  {
+    73850: () => {},
+    38603: (t, e, n) => {
+      "use strict";
+      n.r(e), n.d(e, { default: () => s });
+      var i = n(7850),
+        o = n(64399),
+        a = n(90626),
+        c = n(22797),
+        r = n(30470),
+        d = n(28268),
+        u = n(73850);
+      function s(t) {
+        const e = (0, o.jo)(),
+          n = (0, a.useMemo)(() => {
+            if (e) {
+              const t = Math.floor(Date.now() / 1e3) - 345600,
+                n = t + 1728e3;
+              return e
+                .filter(
+                  (e) =>
+                    e.start_date > t &&
+                    e.start_date < n &&
+                    ((!e.owner_account_id &&
+                      e.creator_account_id == r.iA.accountid) ||
+                      e.owner_account_id == r.iA.accountid ||
+                      (e.artwork_owner_account_id == r.iA.accountid &&
+                        !e.artwork_completed_time) ||
+                      e.operator_account_id == r.iA.accountid ||
+                      e.watch_list?.includes(r.iA.accountid)),
+                )
+                .map((t) => t.id);
+            }
+            return null;
+          }, [e]);
+        return r.iA.is_support
+          ? n && 0 != e.length
+            ? 0 == n.length
+              ? (0, i.jsx)("div", {
+                  children:
+                    "You're all good! Nothing of yours needs attention :)",
                 })
-              : i.length == 0
-                ? (0, r.jsx)("div", {
-                    children:
-                      "You're all good! Nothing of yours needs attention :)",
-                  })
-                : (0, r.jsx)("div", {
-                    className: _.Ctn,
-                    children: (0, r.jsx)(E.U, {
-                      planIDs: i,
-                      bExcludeHideButton: !0,
-                      bHideTypeField: !0,
-                      bHideDoneByDefault: !0,
-                    }),
-                  })
-            : null;
-        }
-      },
-      73850: () => {},
+              : (0, i.jsx)("div", {
+                  className: u.Ctn,
+                  children: (0, i.jsx)(d.U, {
+                    planIDs: n,
+                    bExcludeHideButton: !0,
+                    bHideTypeField: !0,
+                    bHideDoneByDefault: !0,
+                  }),
+                })
+            : (0, i.jsx)(c.t, {
+                string: "loading",
+                size: "medium",
+                position: "center",
+              })
+          : null;
+      }
     },
-  ]);
-})();
+  },
+]);

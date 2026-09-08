@@ -7,13 +7,13 @@
     "SellOnMarket_SellThisItem": "Jual",
     "ItemDescription_Tags": "Tag: ",
     "ItemDescription_TradeProtected": "Pertukaran Dilindungi",
-    "ItemDescription_TradeProtectedTooltip": "Trade protected items cannot be modified, consumed, or transferred.",
+    "ItemDescription_TradeProtectedTooltip": "Item dengan perlindungan pertukaran tidak boleh diubah suai, digunakan atau dipindahkan.",
     "ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
     "ItemDescription_ListedItem": "Di Pasaran",
-    "ItemDescription_ListedItemTooltip": "While you have this item listed for sale, you cannot modify or consume it.",
+    "ItemDescription_ListedItemTooltip": "Selagi item ini disenaraikan untuk dijual, anda tidak boleh mengubah suai atau menggunakannya.",
     "ItemDescription_ThisItemIsWorthGems": "Item ini bernilai: %1$s",
     "ItemDescription_XGems": "%1$s Gem",
     "ItemDescription_TurnIntoGemsButton": "Tukar menjadi Gem...",
-    "ItemDescription_GemDescription": "This item can be broken down into Gems to use to create Booster Packs.  <1>Learn more here</1>.",
+    "ItemDescription_GemDescription": "Item ini boleh dileraikan menjadi Gem dan digunakan untuk mencipta Pek Booster. <1>Ketahui lebih lanjut di sini</1>.",
     "ItemDescription_AccessoriesList_Title": "Aksesori"
 }

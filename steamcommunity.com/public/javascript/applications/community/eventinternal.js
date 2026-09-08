@@ -31,7 +31,7 @@
     },
     98378: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => ee });
+      a.r(t), a.d(t, { default: () => J });
       var n = a(7850),
         s = a(43527),
         r = a(25888),
@@ -158,8 +158,8 @@
             ),
           });
         };
-      var N = a(94333);
-      const R = (0, d.PA)((e) => {
+      var R = a(94333);
+      const N = (0, d.PA)((e) => {
           const t = (function () {
             const [e, t] = u.useState(!k.Get().BHasLoadCompleted());
             return (
@@ -418,7 +418,7 @@
                         }),
                       ],
                     }),
-                  (0, n.jsx)(N.hA, {
+                  (0, n.jsx)(R.hA, {
                     creatorID: t.GetCreatorHomeIdentifier(),
                     bHideCreatorType: !0,
                   }),
@@ -571,9 +571,8 @@
       (0, o.Cg)([c.sH], k.prototype, "m_mapSaleIDToInfo", void 0),
         (0, o.Cg)([c.sH], k.prototype, "m_listSaleState", void 0);
       var F = a(4796),
-        U = a(82429),
-        z = a(95034);
-      class q {
+        U = a(95034);
+      class z {
         constructor() {
           (this.m_rgApps = []),
             (this.m_rgClanAccountIDs = []),
@@ -583,10 +582,10 @@
         }
         static Get() {
           return (
-            q.s_globalSingletonStore ||
-              ((q.s_globalSingletonStore = new q()),
-              q.s_globalSingletonStore.Init()),
-            q.s_globalSingletonStore
+            z.s_globalSingletonStore ||
+              ((z.s_globalSingletonStore = new z()),
+              z.s_globalSingletonStore.Init()),
+            z.s_globalSingletonStore
           );
         }
         Init() {}
@@ -692,28 +691,28 @@
           );
         }
       }
-      (0, o.Cg)([c.sH.shallow], q.prototype, "m_rgApps", void 0),
-        (0, o.Cg)([c.sH.shallow], q.prototype, "m_rgClanAccountIDs", void 0);
-      var Y = a(6503),
-        $ = a(80778),
-        Q = a.n($),
-        K = a(22837);
-      const V = (0, d.PA)((e) => {
+      (0, o.Cg)([c.sH.shallow], z.prototype, "m_rgApps", void 0),
+        (0, o.Cg)([c.sH.shallow], z.prototype, "m_rgClanAccountIDs", void 0);
+      var q = a(6503),
+        Y = a(80778),
+        $ = a.n(Y),
+        Q = a(22837);
+      const K = (0, d.PA)((e) => {
           const [t, a] = (0, u.useState)(!0);
           (0, u.useEffect)(() => {
-            Promise.all([U.KN.InitGlobal(), r.mh.Init()]).then(() => a(!1));
+            r.mh.Init(), a(!1);
           }, []);
-          const [s, o] = (0, z.QD)("start", 0),
-            [i, l] = (0, z.QD)("start_appid", 0),
-            [c, d] = (0, z.QD)("count", 10),
-            [h, g] = (0, z.QD)("autoload", !0),
-            [m, p] = (0, z.QD)("batch_size", 1),
-            [v, _] = (0, z.QD)("automigrate", !1),
+          const [s, o] = (0, U.QD)("start", 0),
+            [i, l] = (0, U.QD)("start_appid", 0),
+            [c, d] = (0, U.QD)("count", 10),
+            [h, g] = (0, U.QD)("autoload", !0),
+            [m, p] = (0, U.QD)("batch_size", 1),
+            [v, _] = (0, U.QD)("automigrate", !1),
             [S, C] = (0, u.useState)(!1),
-            [x, I] = (0, z.QD)("rolling", 0),
+            [x, I] = (0, U.QD)("rolling", 0),
             [j, A] = (0, u.useState)(new Set()),
             b = (0, u.useRef)(0),
-            M = q.Get().GetApps(s, c, i),
+            M = z.Get().GetApps(s, c, i),
             E = 0 == x ? M : M.filter((e) => !j.has(Number(e.id))).slice(0, x),
             w = (e, t) => {
               j.has(e) ||
@@ -723,15 +722,15 @@
                 A(new Set(j)));
             };
           return (0, n.jsxs)("div", {
-            className: Q().MigrateToolCtn,
+            className: $().MigrateToolCtn,
             children: [
               (0, n.jsx)("div", {
-                className: Q().ToolHeader,
+                className: $().ToolHeader,
                 children: "Partner Events Migration Tools",
               }),
               E.map((e) =>
                 (0, n.jsx)(
-                  W,
+                  V,
                   {
                     app: e,
                     bAutoLoad: h,
@@ -755,7 +754,7 @@
                   string: "loading apps",
                 }),
               (0, n.jsx)("div", {
-                className: Q().LoadEventsButton,
+                className: $().LoadEventsButton,
                 onClick: () => {
                   C(!1), A(new Set()), o(s + c);
                 },
@@ -763,12 +762,12 @@
               }),
               !v &&
                 (0, n.jsx)("div", {
-                  className: Q().LoadEventsButton,
+                  className: $().LoadEventsButton,
                   onClick: () => C(!0),
                   children: "MIGRATE ALL ON PAGE",
                 }),
               (0, n.jsx)("div", {
-                className: Q().StatusMessage,
+                className: $().StatusMessage,
                 children:
                   j.size +
                   " OF " +
@@ -779,7 +778,7 @@
             ],
           });
         }),
-        W = (0, d.PA)((e) => {
+        V = (0, d.PA)((e) => {
           const t = Number(e.app.id),
             [a, s] = (0, u.useState)(0),
             [o, i] = (0, u.useState)([]),
@@ -842,11 +841,11 @@
                       "Migrating",
                       a,
                       o.AnnouncementGID,
-                      o.GetNameWithFallback(K.Bhc),
+                      o.GetNameWithFallback(Q.Bhc),
                       o,
                     );
                     try {
-                      const e = await (0, Y.e6)(o.AnnouncementGID, a, n);
+                      const e = await (0, q.e6)(o.AnnouncementGID, a, n);
                       if (e) console.warn("Already migrated to event", e);
                       else {
                         const e = r.mh.GetEditModel();
@@ -878,28 +877,28 @@
               _ || M || l || e.fnOnCompletion(t, h.current);
             }),
             (0, n.jsxs)("div", {
-              className: Q().ClanRow,
+              className: $().ClanRow,
               children: [
-                (0, n.jsx)("div", { className: Q().ID, children: t }),
+                (0, n.jsx)("div", { className: $().ID, children: t }),
                 (0, n.jsx)("a", {
-                  className: Q().ClanName,
+                  className: $().ClanName,
                   href: p,
                   children: m,
                 }),
                 (0, n.jsxs)("div", {
-                  className: Q().Counts,
+                  className: $().Counts,
                   children: [
                     `Loaded: ${v}\tVisible: ${C}\tOld: ${b}`,
                     x > 0 &&
                       (0, n.jsx)("span", {
-                        className: Q().LinkedAnnouncements,
+                        className: $().LinkedAnnouncements,
                         children: `Linked: ${x}`,
                       }),
                   ],
                 }),
                 _
                   ? (0, n.jsx)("div", {
-                      className: Q().LoadEventsButton,
+                      className: $().LoadEventsButton,
                       onClick: E,
                       children: "LOAD EVENTS",
                     })
@@ -907,40 +906,40 @@
                     ? (0, n.jsx)(f.t, { size: "small" })
                     : M
                       ? (0, n.jsx)("div", {
-                          className: Q().MigrateEventsButton,
+                          className: $().MigrateEventsButton,
                           onClick: T,
                           children: "MIGRATE EVENTS",
                         })
                       : (0, n.jsx)("div", {
-                          className: Q().CompleteMessage,
+                          className: $().CompleteMessage,
                           children: "NOTHING TO MIGRATE",
                         }),
               ],
             })
           );
         });
-      var X = a(92757),
-        Z = a(91254),
-        J = (a(5977), a(97058));
-      function ee(e) {
+      var W = a(92757),
+        X = a(91254),
+        Z = (a(5977), a(97058));
+      function J(e) {
         const [t, a] = u.useState(!0);
         return (
           u.useEffect(() => {
-            Z.O3.Init(), Promise.all([]).then(() => a(!1));
+            X.O3.Init(), Promise.all([]).then(() => a(!1));
           }, []),
           t
             ? (0, n.jsx)(f.t, { position: "center", size: "medium" })
-            : (0, n.jsxs)(X.dO, {
+            : (0, n.jsxs)(W.dO, {
                 children: [
-                  (0, n.jsx)(X.qh, {
+                  (0, n.jsx)(W.qh, {
                     path: s.mQ.MigrateSaleEvents(),
-                    component: R,
+                    component: N,
                   }),
-                  (0, n.jsx)(X.qh, {
+                  (0, n.jsx)(W.qh, {
                     path: s.mQ.MigrateEvents(),
-                    component: V,
+                    component: K,
                   }),
-                  (0, n.jsx)(X.qh, { component: J.a }),
+                  (0, n.jsx)(W.qh, { component: Z.a }),
                 ],
               })
         );

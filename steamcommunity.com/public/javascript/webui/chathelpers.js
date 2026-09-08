@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10961770";
+var CLSTAMP = "10976753";
 (() => {
   var e,
     t,
@@ -102,12 +102,12 @@ var CLSTAMP = "10961770";
         }
         (r.keys = () => Object.keys(i)), (r.id = 48516), (e.exports = r);
       },
-      94698: (e, t, n) => {
+      92611: (e, t, n) => {
         "use strict";
-        n(83508);
+        n(33992);
         var i = n(63696),
           r = n(7470),
-          s = n(7354);
+          s = n(53062);
         const a = {
             EUNIVERSE: 0,
             LANGUAGE: "english",
@@ -278,7 +278,7 @@ var CLSTAMP = "10961770";
         i.createContext({});
         n(83957), n(22386);
         new Map();
-        var E, b, I;
+        var b, E, I;
         !(function (e) {
           (e[(e.kPFIFlag_MicroTransactionFile = 1)] =
             "kPFIFlag_MicroTransactionFile"),
@@ -328,7 +328,7 @@ var CLSTAMP = "10961770";
               "kPFIFlag_ManagedContentDescriptors"),
             (e[(e.kPFIFlag_HasAuthorSnapshots = 268435456)] =
               "kPFIFlag_HasAuthorSnapshots");
-        })(E || (E = {})),
+        })(b || (b = {})),
           (function (e) {
             (e[(e.k_EPFSplitType_MicrotransactionItem = 0)] =
               "k_EPFSplitType_MicrotransactionItem"),
@@ -338,7 +338,7 @@ var CLSTAMP = "10961770";
                 "k_EPFSplitType_GreenlightItem"),
               (e[(e.k_EPFSplitType_SharedFile = 3)] =
                 "k_EPFSplitType_SharedFile");
-          })(b || (b = {})),
+          })(E || (E = {})),
           (function (e) {
             (e[(e.k_EPFAuditAction_Banned = 1)] = "k_EPFAuditAction_Banned"),
               (e[(e.k_EPFAuditAction_UnBanned = 2)] =
@@ -747,7 +747,7 @@ var CLSTAMP = "10961770";
               : console.assert(!!e, t, ...n)
             : e || console.warn(t, ...n);
         }
-        var V = n(41261);
+        var V = n(81922);
         function W(e, t, n, i) {
           var r,
             s = arguments.length,
@@ -999,7 +999,7 @@ var CLSTAMP = "10961770";
         let te;
         te ??= new Set();
         let ne = null;
-        var ie = n(73148);
+        var ie = n(9025);
         function re() {
           if (((e = q.LANGUAGE), !Q.has(e)))
             throw `unknown language ${q.LANGUAGE}`;
@@ -1061,7 +1061,10 @@ var CLSTAMP = "10961770";
               return Promise.all(
                 Array.from(i).map((n) =>
                   e(n).then((e) => {
-                    if (!e) return;
+                    if (!e)
+                      return void console.error(
+                        `Project loc failed to load language ${n}, got ${e}`,
+                      );
                     const i = new Map();
                     for (const [t, n] of Object.entries(e)) i.set("#" + t, n);
                     t.set(n, i);
@@ -1069,15 +1072,23 @@ var CLSTAMP = "10961770";
                 ),
               );
             })();
-          let r = !1;
-          var s;
-          function a(e, i) {
-            const [s, ...o] = i,
-              c =
-                t.get(s.strLanguage)?.get(e) ??
-                t.get(Z(s.strLanguage) ?? "english")?.get(e);
-            if (void 0 !== c) return c;
-            if (0 === o.length) {
+          let r = !1,
+            s = !1;
+          var a;
+          function o(e, i) {
+            const [a, ...c] = i,
+              l =
+                t.get(a.strLanguage)?.get(e) ??
+                t.get(Z(a.strLanguage) ?? "english")?.get(e);
+            if (void 0 !== l) return l;
+            if (0 === c.length) {
+              if (s)
+                return (
+                  console.warn(
+                    `Couldn't find localization key ${e} after erroring loading strings`,
+                  ),
+                  e
+                );
               if (!r) throw n;
               return (
                 (0, V.aj)().ReportError(
@@ -1088,19 +1099,23 @@ var CLSTAMP = "10961770";
                 e
               );
             }
-            return a(e, o);
+            return o(e, c);
           }
-          function o(e, ...t) {
-            return ee(a(e, re().languages), ...t);
+          function c(e, ...t) {
+            return ee(o(e, re().languages), ...t);
           }
           return (
-            n.then(() => (r = !0)),
-            (s = n),
+            n
+              .then(() => (r = !0))
+              .catch((e) => {
+                console.error("LoadStrings error", e), (s = !0);
+              }),
+            (a = n),
             (te ??= new Set()),
-            te.add(s),
+            te.add(a),
             (ne = Promise.all(te)),
             {
-              Localize: (e, ...t) => o(e, ...t),
+              Localize: (e, ...t) => c(e, ...t),
               LocalizeReact(e, ...t) {
                 const n = this.Localize(e);
                 if (n === e) return n;
@@ -1119,8 +1134,8 @@ var CLSTAMP = "10961770";
               },
               LocalizePlural: (e, t, ...n) =>
                 1 === t || "1" === t
-                  ? o(e, t, ...n)
-                  : o(e + "_Plural", t, ...n),
+                  ? c(e, t, ...n)
+                  : c(e + "_Plural", t, ...n),
               GetAppTypeLocKey(e, t) {
                 switch (t) {
                   case ie.uE.XP:
@@ -1153,7 +1168,7 @@ var CLSTAMP = "10961770";
                     return e;
                 }
               },
-              LocalizeInSpecificLang: (e, t, ...n) => ee(a(t, [e]), ...n),
+              LocalizeInSpecificLang: (e, t, ...n) => ee(o(t, [e]), ...n),
               Ready: () => n,
               IsReady: () => r,
               HasKey(e) {
@@ -1186,6 +1201,7 @@ var CLSTAMP = "10961770";
           m_cbkTokensChanged = new $();
           m_rgLocalesToUse;
           m_bReportIndividualMissingTokens = !0;
+          m_bReady = !1;
           static GetLanguageFallback(e) {
             return "sc_schinese" === e ? "schinese" : "english";
           }
@@ -1218,6 +1234,9 @@ var CLSTAMP = "10961770";
               this.m_mapFallbackTokens.clear(),
               this.AddTokens(e, t),
               this.m_cbkTokensChanged.Dispatch();
+          }
+          SetReady(e) {
+            this.m_bReady = e;
           }
           AddTokens(e, t) {
             Object.keys(e).forEach((t) => {
@@ -1272,13 +1291,13 @@ var CLSTAMP = "10961770";
                 : void (0 === this.m_mapTokens.size
                     ? x(
                         !1,
-                        `Attempting to localize token '${e}' with no tokens in our map.`,
+                        `Attempting to localize token '${e}' with no tokens in our map for language '${a.LANGUAGE}'. SharedLoc ready: ${ae.IsReady()}. site has inited: ${this.m_bReady}`,
                       )
                     : !t &&
                       this.m_bReportIndividualMissingTokens &&
                       (0, V.aj)().ReportError(
                         new Error(
-                          `Unable to find localization token '${e}' for language '${a.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
+                          `Unable to find localization token '${e}' for language '${a.LANGUAGE}', ${this.m_mapTokens.size} tokens in map. SharedLoc ready: ${ae.IsReady()}. site has inited: ${this.m_bReady}`,
                         ),
                         { bIncludeMessageInIdentifier: !0 },
                       ))
@@ -1571,8 +1590,8 @@ var CLSTAMP = "10961770";
             this.m_ulSteamID = new fe.A(s, r, !0);
           }
         }
-        var Ee = n(6660);
-        class be extends ge {
+        var be = n(6660);
+        class Ee extends ge {
           constructor(e) {
             super(e), (0, me.Gn)(this);
           }
@@ -1593,7 +1612,7 @@ var CLSTAMP = "10961770";
               (this.m_bReady = !0);
           }
         }
-        W([me.XI], be.prototype, "InitFromPHPInviteLinkInfo", null);
+        W([me.XI], Ee.prototype, "InitFromPHPInviteLinkInfo", null);
         class Ie {
           m_bConnectingToClient = !1;
           m_invite;
@@ -1601,7 +1620,7 @@ var CLSTAMP = "10961770";
           static sm_rtTimeCur;
           constructor(e) {
             (0, me.Gn)(this),
-              (this.m_invite = new be(e.strInviteCode)),
+              (this.m_invite = new Ee(e.strInviteCode)),
               e.Invite
                 ? this.m_invite.InitFromPHPInviteLinkInfo(e.Invite)
                 : this.m_invite.InitInvalid(),
@@ -1684,7 +1703,7 @@ var CLSTAMP = "10961770";
               }, 1e3);
           }
           IsMobileDevice() {
-            switch (new Ee.UAParser(navigator.userAgent).getResult().os.name) {
+            switch (new be.UAParser(navigator.userAgent).getResult().os.name) {
               case "iOS":
               case "Android":
               case "BlackBerry":
@@ -1810,12 +1829,12 @@ var CLSTAMP = "10961770";
               })();
           });
       },
-      32561: (e, t, n) => {
+      96757: (e, t, n) => {
         "use strict";
         n.d(t, { R: () => i });
         const i = 1;
       },
-      41261: (e, t, n) => {
+      81922: (e, t, n) => {
         "use strict";
         async function i(e, t = "SHA-256") {
           let n;
@@ -1832,8 +1851,8 @@ var CLSTAMP = "10961770";
           })(await window.crypto.subtle.digest(t, n));
         }
         n.d(t, { aj: () => F });
-        var r = n(52077),
-          s = n(58952),
+        var r = n(63129),
+          s = n(7928),
           a = n(63696);
         const o =
           window.addEventListener ||
@@ -2006,14 +2025,14 @@ var CLSTAMP = "10961770";
                           message: c,
                         };
                       })(e, t)
-                    : e.stack && e.stack.match(E)
+                    : e.stack && e.stack.match(b)
                       ? (async function (e, t) {
                           const {
                               cCallsitesToIgnore: n,
                               bIncludeMessageInIdentifier: i,
                             } = t,
                             r = e.stack?.split("\n") ?? [];
-                          let s = A(r.filter((e) => !!e.match(E))[n]);
+                          let s = A(r.filter((e) => !!e.match(b))[n]);
                           i && (s = `${s} ${e.message}`);
                           const a = r
                             .map((e) => {
@@ -2034,7 +2053,7 @@ var CLSTAMP = "10961770";
                             message: [e.message, ...a],
                           };
                         })(e, t)
-                      : e.stack && e.stack.match(b)
+                      : e.stack && e.stack.match(E)
                         ? (async function (e, t) {
                             const {
                                 bIncludeMessageInIdentifier: n,
@@ -2195,8 +2214,8 @@ var CLSTAMP = "10961770";
             .join(", ");
         }
         const k = /^\s*at .*(\S+:\d+|\(native\))/m,
-          E = /(^|@)\S+:\d+/,
-          b = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
+          b = /(^|@)\S+:\d+/,
+          E = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
         let I,
           S = !1;
         function A(e) {
@@ -2227,15 +2246,15 @@ var CLSTAMP = "10961770";
           return 1e4;
         }
       },
-      52077: (e, t, n) => {
+      63129: (e, t, n) => {
         "use strict";
         n.d(t, { I8: () => u, w: () => d });
-        var i = n(41261),
-          r = n(32561),
+        var i = n(81922),
+          r = n(96757),
           s = n(58663),
-          a = n(18553),
-          o = n(29634),
-          c = n(39610);
+          a = n(30565),
+          o = n(28744),
+          c = n(38150);
         class l {
           static InitHeaderFromPacket(e) {
             return new l(void 0, e);
@@ -2411,7 +2430,7 @@ var CLSTAMP = "10961770";
           );
         }
       },
-      78952: (e, t, n) => {
+      27588: (e, t, n) => {
         "use strict";
         n.d(t, {
           BT: () => c,
@@ -2579,7 +2598,7 @@ var CLSTAMP = "10961770";
               };
         }
       },
-      39610: (e, t, n) => {
+      38150: (e, t, n) => {
         "use strict";
         n.d(t, { pV: () => i });
         class i {
@@ -2655,7 +2674,7 @@ var CLSTAMP = "10961770";
           }
         }
       },
-      83508: (e, t, n) => {
+      33992: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2765,17 +2784,17 @@ var CLSTAMP = "10961770";
       ".js?contenthash=" +
       {
         43: "b98e0f420add57691fc2",
-        200: "2f085440862fb215c3fb",
-        295: "5381a9c91407f08953f0",
-        559: "5353922810b1052db615",
+        200: "f70dc77df2b44c5b6c28",
+        295: "30a1b0feb050dde520dd",
+        559: "e8fd6d4fe87221a119fa",
         762: "6381bf741535ad65d4e3",
-        815: "b87cd99e1b8dea577e42",
-        1136: "e1ca9c0db741e83dd2b9",
+        815: "c7a18e80878daf8f54e1",
+        1136: "5f832a08c3bef135c68e",
         1499: "016609b438b84fcc275a",
-        1864: "3517b502c7008587fe01",
-        2269: "03376b6d240fcc05831d",
+        1864: "f2b9178068767b40d428",
+        2269: "913b2ce129ee42bef5df",
         2532: "a9d9f49d622113e7237a",
-        2889: "1ebc2a4dd324ce073709",
+        2889: "7370f87b7e9e453eb0eb",
         2945: "b1bb49c86e94db92dee9",
         3e3: "1b03996604202ef27322",
         3016: "ca85786390010cceefc4",
@@ -2784,50 +2803,50 @@ var CLSTAMP = "10961770";
         3485: "08349ebcf15f4d7c2342",
         3723: "a69634b2de1f3fa5dba5",
         3789: "7576118cdc2ea612c555",
-        3800: "72b30e8b034fdc624d30",
-        3907: "0d5aaa5bfaf5af96cfdb",
+        3800: "29f495d97b5169da720b",
+        3907: "3dea78f6a4155105eeaa",
         4154: "ab85015c1182c53c2a07",
-        4230: "6d34cf433db410c0f53c",
-        4289: "a824167cb2edb8fb1b56",
+        4230: "163b24575a8590b5dd57",
+        4289: "b1ffb8ea3b089c182e85",
         4302: "127bac547ebe35debb6e",
-        4419: "4ea565754e3b324d1e3c",
+        4419: "a0af6463f1a69b1adf58",
         4434: "7042d1e1cb05e782371a",
         4488: "ecc72b7e73d0d3a37046",
-        4625: "49cb83ff4c8913db7a14",
-        4750: "906f94c7bcf2b7ba17d5",
+        4625: "b3f0a685e298e07970f2",
+        4750: "2f714d699e60e9e5441a",
         4776: "642916fbd7a977b50de9",
         4787: "ef50a874abefeb603b11",
-        4792: "8e054a3b680966459a06",
-        4978: "cdaf6719aa622dfb47ce",
-        5040: "5c42e6b4e364624dcec0",
-        5191: "2b05651ee419b8a1483a",
-        5233: "98659f40adb485e8859d",
+        4792: "f9a55c905cc523f64b44",
+        4978: "4253d6570728d8675048",
+        5040: "f96790d344ca1985baf6",
+        5191: "8aa4a92e8e0301626e83",
+        5233: "536bb318dfdd1d48eca4",
         5341: "d01dc36adbf1ed0dc168",
-        5436: "fa5e231597e7cb4f991f",
+        5436: "7a51987a0662bd324382",
         5480: "aa8842d2e7d72dad67c5",
-        5777: "2d841b81f44b4ef9dd97",
+        5777: "a0cbe768cbe83f6a2a8d",
         6127: "4882c58af191aaf74128",
-        6170: "5ef9bd4aab5b2d232d16",
+        6170: "0a707b61824222356e7e",
         6385: "e5f8cfa9b62ae2ae5efe",
-        6512: "dd9bf4f63eb4876c1c0a",
+        6512: "91ee6858d882af1c5e62",
         6518: "1367c553cc7eccd07bc4",
         6609: "fc94f8d39971c6671379",
-        6736: "d07aca8d48e418556f55",
+        6736: "17e2509232d2db22d939",
         6888: "c50f7606409776b647a0",
         6971: "e7f4af03b6ba3a7fa534",
-        7246: "88e8f90490afd2e430d2",
-        7263: "57fd1bc74fb5378c01f0",
+        7246: "167c8393e8c49711acd7",
+        7263: "99f6d1aa488039ff2230",
         7487: "8efea89904c72e8440e5",
-        7861: "44fa0f0437edc987c68a",
+        7861: "5edde2f8fc8a9ec95168",
         8194: "7b692387d3a77ce31c7b",
-        8476: "c251df4ddd5eff9c465f",
+        8476: "1ddeaaa684b3b1ffb95c",
         8759: "73a7657685d5198e1a73",
-        8766: "edb10b7fe5264a3a29a3",
-        9574: "f15767185ae74791c457",
-        9668: "f1098596b07b75583cb4",
+        8766: "0447dd79b31a8fe64ce1",
+        9574: "a1c254a386aa01497b75",
+        9668: "67e32057588ddc9e6d12",
         9746: "3679c8e2ce76e34b2ccf",
         9808: "51bb932b4ac14b5211d4",
-        9863: "ce61843aa55e021bb70f",
+        9863: "e0e594dbfb4435361da5",
       }[e]),
     (o.miniCssF = (e) => {}),
     (o.g = (function () {
@@ -2964,6 +2983,6 @@ var CLSTAMP = "10961770";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [3987, 9489, 1068], () => o(94698));
+  var c = o.O(void 0, [3987, 9489, 1068], () => o(92611));
   c = o.O(c);
 })();

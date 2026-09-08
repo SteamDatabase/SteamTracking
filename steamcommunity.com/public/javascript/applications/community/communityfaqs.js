@@ -229,7 +229,7 @@ License: MIT
                     (e = [...e.split(t).slice(i)].join(t));
                 }
                 this.isFirstChunk &&
-                  A(this._config.beforeFirstChunk) &&
+                  w(this._config.beforeFirstChunk) &&
                   void 0 !== (s = this._config.beforeFirstChunk(e)) &&
                   (e = s),
                   (this.isFirstChunk = !1),
@@ -256,7 +256,7 @@ License: MIT
                       workerId: o.WORKER_ID,
                       finished: i,
                     });
-                  else if (A(this._config.chunk) && !t) {
+                  else if (w(this._config.chunk) && !t) {
                     if (
                       (this._config.chunk(s, this._handle),
                       this._handle.paused() || this._handle.aborted())
@@ -274,7 +274,7 @@ License: MIT
                       (this._completeResults.meta = s.meta)),
                     this._completed ||
                       !i ||
-                      !A(this._config.complete) ||
+                      !w(this._config.complete) ||
                       (s && s.meta.aborted) ||
                       (this._config.complete(
                         this._completeResults,
@@ -288,7 +288,7 @@ License: MIT
                 this._halted = !0;
               }),
               (this._sendError = function (e) {
-                A(this._config.error)
+                w(this._config.error)
                   ? this._config.error(e)
                   : a &&
                     this._config.error &&
@@ -321,8 +321,8 @@ License: MIT
                     this._config.withCredentials &&
                       (t.withCredentials = this._config.withCredentials),
                     i ||
-                      ((t.onload = w(this._chunkLoaded, this)),
-                      (t.onerror = w(this._chunkError, this))),
+                      ((t.onload = A(this._chunkLoaded, this)),
+                      (t.onerror = A(this._chunkError, this))),
                     t.open(
                       this._config.downloadRequestBody ? "POST" : "GET",
                       this._input,
@@ -378,11 +378,11 @@ License: MIT
               (this._input = e),
                 (n = e.slice || e.webkitSlice || e.mozSlice),
                 i
-                  ? (((t = new FileReader()).onload = w(
+                  ? (((t = new FileReader()).onload = A(
                       this._chunkLoaded,
                       this,
                     )),
-                    (t.onerror = w(this._chunkError, this)))
+                    (t.onerror = A(this._chunkError, this)))
                   : (t = new FileReaderSync()),
                 this._nextChunk();
             }),
@@ -457,7 +457,7 @@ License: MIT
                 this._checkIsFinished(),
                   t.length ? this.parseChunk(t.shift()) : (n = !0);
               }),
-              (this._streamData = w(function (e) {
+              (this._streamData = A(function (e) {
                 try {
                   t.push(
                     "string" == typeof e
@@ -472,13 +472,13 @@ License: MIT
                   this._streamError(e);
                 }
               }, this)),
-              (this._streamError = w(function (e) {
+              (this._streamError = A(function (e) {
                 this._streamCleanUp(), this._sendError(e);
               }, this)),
-              (this._streamEnd = w(function () {
+              (this._streamEnd = A(function () {
                 this._streamCleanUp(), (i = !0), this._streamData("");
               }, this)),
-              (this._streamCleanUp = w(function () {
+              (this._streamCleanUp = A(function () {
                 this._input.removeListener("data", this._streamData),
                   this._input.removeListener("end", this._streamEnd),
                   this._input.removeListener("error", this._streamError);
@@ -501,7 +501,7 @@ License: MIT
               f = !1,
               p = [],
               x = { data: [], errors: [], meta: {} };
-            function w(t) {
+            function A(t) {
               return "greedy" === e.skipEmptyLines
                 ? "" === t.join("").trim()
                 : 1 === t.length && 0 === t[0].length;
@@ -520,7 +520,7 @@ License: MIT
                   (i = !1)),
                 e.skipEmptyLines &&
                   (x.data = x.data.filter(function (e) {
-                    return !w(e);
+                    return !A(e);
                   })),
                 j())
               ) {
@@ -531,7 +531,7 @@ License: MIT
                     x.data.splice(0, 1);
                   } else x.data.forEach(n);
                 function n(t, n) {
-                  A(e.transformHeader) && (t = e.transformHeader(t, n)),
+                  w(e.transformHeader) && (t = e.transformHeader(t, n)),
                     p.push(t);
                 }
               }
@@ -618,7 +618,7 @@ License: MIT
                 void 0 !== i && (e.row = i),
                 x.errors.push(e);
             }
-            A(e.step) &&
+            w(e.step) &&
               ((a = e.step),
               (e.step = function (t) {
                 (x = t),
@@ -637,7 +637,7 @@ License: MIT
                   e.newline || (e.newline = this.guessLineEndings(a, l)),
                   (i = !1),
                   e.delimiter
-                    ? A(e.delimiter) &&
+                    ? w(e.delimiter) &&
                       ((e.delimiter = e.delimiter(a)),
                       (x.meta.delimiter = e.delimiter))
                     : ((l = ((t, n, i, a, s) => {
@@ -669,7 +669,7 @@ License: MIT
                             v < x.data.length;
                             v++
                           )
-                            i && w(x.data[v])
+                            i && A(x.data[v])
                               ? p++
                               : ((f += h = x.data[v].length),
                                 void 0 === d
@@ -710,7 +710,7 @@ License: MIT
               (this.pause = function () {
                 (m = !0),
                   n.abort(),
-                  (t = A(e.chunk) ? "" : t.substring(n.getCharIndex()));
+                  (t = w(e.chunk) ? "" : t.substring(n.getCharIndex()));
               }),
               (this.resume = function () {
                 c.streamer._halted
@@ -724,7 +724,7 @@ License: MIT
                 (f = !0),
                   n.abort(),
                   (x.meta.aborted = !0),
-                  A(e.complete) && e.complete(x),
+                  w(e.complete) && e.complete(x),
                   (t = "");
               }),
               (this.guessLineEndings = function (e, t) {
@@ -777,8 +777,8 @@ License: MIT
               var p = o.length,
                 x = t.length,
                 v = n.length,
-                w = i.length,
-                C = A(a),
+                A = i.length,
+                C = w(a),
                 j = [],
                 b = [],
                 E = [],
@@ -789,7 +789,7 @@ License: MIT
                   if (((E = S[F]), (h += E.length), F !== S.length - 1))
                     h += n.length;
                   else if (f) return G();
-                  if (!i || E.substring(0, w) !== i) {
+                  if (!i || E.substring(0, A) !== i) {
                     if (C) {
                       if (((j = []), k(E.split(t)), P(), m)) return G();
                     } else k(E.split(t));
@@ -801,13 +801,13 @@ License: MIT
               for (
                 var D = o.indexOf(t, h),
                   y = o.indexOf(n, h),
-                  I = new RegExp(g(u) + g(c), "g"),
-                  N = o.indexOf(c, h);
+                  T = new RegExp(g(u) + g(c), "g"),
+                  I = o.indexOf(c, h);
                 ;
               )
                 if (o[h] === c)
-                  for (N = h, h++; ; ) {
-                    if (-1 === (N = o.indexOf(c, N + 1)))
+                  for (I = h, h++; ; ) {
+                    if (-1 === (I = o.indexOf(c, I + 1)))
                       return (
                         f ||
                           b.push({
@@ -819,32 +819,32 @@ License: MIT
                           }),
                         R()
                       );
-                    if (N === p - 1) return R(o.substring(h, N).replace(I, c));
-                    if (c === u && o[N + 1] === u) N++;
-                    else if (c === u || 0 === N || o[N - 1] !== u) {
-                      -1 !== D && D < N + 1 && (D = o.indexOf(t, N + 1));
-                      var T = Q(
+                    if (I === p - 1) return R(o.substring(h, I).replace(T, c));
+                    if (c === u && o[I + 1] === u) I++;
+                    else if (c === u || 0 === I || o[I - 1] !== u) {
+                      -1 !== D && D < I + 1 && (D = o.indexOf(t, I + 1));
+                      var N = Q(
                         -1 ===
-                          (y = -1 !== y && y < N + 1 ? o.indexOf(n, N + 1) : y)
+                          (y = -1 !== y && y < I + 1 ? o.indexOf(n, I + 1) : y)
                           ? D
                           : Math.min(D, y),
                       );
-                      if (o.substr(N + 1 + T, x) === t) {
-                        E.push(o.substring(h, N).replace(I, c)),
-                          o[(h = N + 1 + T + x)] !== c && (N = o.indexOf(c, h)),
+                      if (o.substr(I + 1 + N, x) === t) {
+                        E.push(o.substring(h, I).replace(T, c)),
+                          o[(h = I + 1 + N + x)] !== c && (I = o.indexOf(c, h)),
                           (D = o.indexOf(t, h)),
                           (y = o.indexOf(n, h));
                         break;
                       }
                       if (
-                        ((T = Q(y)),
-                        o.substring(N + 1 + T, N + 1 + T + v) === n)
+                        ((N = Q(y)),
+                        o.substring(I + 1 + N, I + 1 + N + v) === n)
                       ) {
                         if (
-                          (E.push(o.substring(h, N).replace(I, c)),
-                          B(N + 1 + T + v),
+                          (E.push(o.substring(h, I).replace(T, c)),
+                          B(I + 1 + N + v),
                           (D = o.indexOf(t, h)),
-                          (N = o.indexOf(c, h)),
+                          (I = o.indexOf(c, h)),
                           C && (P(), m))
                         )
                           return G();
@@ -858,10 +858,10 @@ License: MIT
                         row: j.length,
                         index: h,
                       }),
-                        N++;
+                        I++;
                     }
                   }
-                else if (i && 0 === E.length && o.substring(h, h + w) === i) {
+                else if (i && 0 === E.length && o.substring(h, h + A) === i) {
                   if (-1 === y) return G();
                   (h = y + v), (y = o.indexOf(n, h)), (D = o.indexOf(t, h));
                 } else if (-1 !== D && (D < y || -1 === y))
@@ -879,7 +879,7 @@ License: MIT
               function Q(e) {
                 var t = 0;
                 return -1 !== e &&
-                  (e = o.substring(N + 1, e)) &&
+                  (e = o.substring(I + 1, e)) &&
                   "" === e.trim()
                   ? e.length
                   : t;
@@ -908,7 +908,7 @@ License: MIT
                     let i = a[n];
                     if (
                       s[
-                        (i = A(e.transformHeader) ? e.transformHeader(i, n) : i)
+                        (i = w(e.transformHeader) ? e.transformHeader(i, n) : i)
                       ]
                     ) {
                       let e,
@@ -967,7 +967,7 @@ License: MIT
                 pause: x,
                 resume: x,
               };
-              if (A(n.userStep)) {
+              if (w(n.userStep)) {
                 for (
                   var r = 0;
                   r < t.results.data.length &&
@@ -984,14 +984,14 @@ License: MIT
                 );
                 delete t.results;
               } else
-                A(n.userChunk) &&
+                w(n.userChunk) &&
                   (n.userChunk(t.results, a, t.file), delete t.results);
             }
             t.finished && !i && p(t.workerId, t.results);
           }
           function p(e, t) {
             var n = s[e];
-            A(n.userComplete) && n.userComplete(t), n.terminate(), delete s[e];
+            w(n.userComplete) && n.userComplete(t), n.terminate(), delete s[e];
           }
           function x() {
             throw new Error("Not implemented.");
@@ -1003,21 +1003,21 @@ License: MIT
             for (t in e) n[t] = v(e[t]);
             return n;
           }
-          function w(e, t) {
+          function A(e, t) {
             return function () {
               e.apply(t, arguments);
             };
           }
-          function A(e) {
+          function w(e) {
             return "function" == typeof e;
           }
           return (
             (o.parse = function (t, i) {
               var a = (i = i || {}).dynamicTyping || !1;
               if (
-                (A(a) && ((i.dynamicTypingFunction = a), (a = {})),
+                (w(a) && ((i.dynamicTypingFunction = a), (a = {})),
                 (i.dynamicTyping = a),
-                (i.transform = !!A(i.transform) && i.transform),
+                (i.transform = !!w(i.transform) && i.transform),
                 !i.worker || !o.WORKERS_SUPPORTED)
               )
                 return (
@@ -1027,7 +1027,7 @@ License: MIT
                     ? ((t = ((e) =>
                         65279 !== e.charCodeAt(0) ? e : e.slice(1))(t)),
                       (a = new (i.download ? d : u)(i)))
-                    : !0 === t.readable && A(t.read) && A(t.on)
+                    : !0 === t.readable && w(t.read) && w(t.on)
                       ? (a = new h(i))
                       : ((n.File && t instanceof File) ||
                           t instanceof Object) &&
@@ -1064,10 +1064,10 @@ License: MIT
                 (a.userChunk = i.chunk),
                 (a.userComplete = i.complete),
                 (a.userError = i.error),
-                (i.step = A(i.step)),
-                (i.chunk = A(i.chunk)),
-                (i.complete = A(i.complete)),
-                (i.error = A(i.error)),
+                (i.step = w(i.step)),
+                (i.chunk = w(i.chunk)),
+                (i.complete = w(i.complete)),
+                (i.error = w(i.error)),
                 delete i.worker,
                 a.postMessage({ input: t, config: i, workerId: a.id });
             }),
@@ -1249,14 +1249,14 @@ License: MIT
                   this
                 );
                 function s() {
-                  if (0 === a.length) A(e.complete) && e.complete();
+                  if (0 === a.length) w(e.complete) && e.complete();
                   else {
                     var n,
                       i,
                       s,
                       l,
                       d = a[0];
-                    if (A(e.before)) {
+                    if (w(e.before)) {
                       var c = e.before(d.file, d.inputElem);
                       if ("object" == typeof c) {
                         if ("abort" === c.action)
@@ -1265,7 +1265,7 @@ License: MIT
                             (i = d.file),
                             (s = d.inputElem),
                             (l = c.reason),
-                            void (A(e.error) && e.error({ name: n }, i, s, l))
+                            void (w(e.error) && e.error({ name: n }, i, s, l))
                           );
                         if ("skip" === c.action) return void r();
                         "object" == typeof c.config &&
@@ -1277,7 +1277,7 @@ License: MIT
                     }
                     var u = d.instanceConfig.complete;
                     (d.instanceConfig.complete = function (e) {
-                      A(u) && u(e, d.file, d.inputElem), r();
+                      w(u) && u(e, d.file, d.inputElem), r();
                     }),
                       o.parse(d.file, d.instanceConfig);
                   }
@@ -1423,7 +1423,7 @@ License: MIT
     },
     70450: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { FAQRoutes: () => At, default: () => Ct });
+      n.r(t), n.d(t, { FAQRoutes: () => At, default: () => wt });
       var i,
         a = n(7850),
         s = n(75844),
@@ -1481,8 +1481,8 @@ License: MIT
         p = n(12155),
         x = n(22797),
         v = n(32754),
-        w = n(52038),
-        A = n(61859),
+        A = n(52038),
+        w = n(61859),
         C = n(41338),
         j = n(11259),
         b = n.n(j),
@@ -1492,9 +1492,9 @@ License: MIT
         F = n.n(S),
         D = n(17720),
         y = n(95695),
-        I = n.n(y),
-        N = n(25228),
-        T = n(4434),
+        T = n.n(y),
+        I = n(25228),
+        N = n(4434),
         k = n(56011),
         Q = n(91675),
         R = n(87669),
@@ -1508,9 +1508,9 @@ License: MIT
             className: y.FlexRowContainer,
             children: [
               (0, a.jsx)(z, { draft: t, eLanguage: n }),
-              (0, a.jsx)(N.t3, {
-                strToolTip: (0, A.we)("#FAQEditor_Loc_Import_ttip"),
-                strLabel: (0, A.we)("#EventEditor_Loc_Import_Short"),
+              (0, a.jsx)(I.t3, {
+                strToolTip: (0, w.we)("#FAQEditor_Loc_Import_ttip"),
+                strLabel: (0, w.we)("#EventEditor_Loc_Import_Short"),
                 fnOnImportLocData: (e, n) =>
                   (function (e, t, n) {
                     const i = new Set(),
@@ -1559,7 +1559,7 @@ License: MIT
                     (0, k.uX)(e),
                   );
                 },
-                children: (0, A.we)("#EventEditor_Loc_Export_Short"),
+                children: (0, w.we)("#EventEditor_Loc_Export_Short"),
               }),
               (0, a.jsx)("div", {
                 className: y.EditPreviewButton,
@@ -1573,7 +1573,7 @@ License: MIT
                     (0, k.uX)(e),
                   );
                 },
-                children: (0, A.we)("#EventEditor_Loc_Import_Short"),
+                children: (0, w.we)("#EventEditor_Loc_Import_Short"),
               }),
             ],
           });
@@ -1584,12 +1584,12 @@ License: MIT
             [d, c] = r.useState(new Array()),
             u =
               (s || d.length,
-              (0, A.we)(
+              (0, w.we)(
                 "import" == n
                   ? "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
                   : "#EventEditor_Loc_CrowdinIntegration_ExportTitle",
               )),
-            h = (0, A.we)(
+            h = (0, w.we)(
               "import" == n
                 ? "#EventEditor_Loc_Import_Crowdin_Confirm"
                 : "#EventEditor_Loc_Export_Crowdin_Confirm",
@@ -1628,15 +1628,15 @@ License: MIT
         z = (e) => {
           const { draft: t, eLanguage: n } = e;
           return (0, a.jsx)(v.he, {
-            toolTipContent: (0, A.we)("#FAQEditor_Loc_Export_ttip"),
+            toolTipContent: (0, w.we)("#FAQEditor_Loc_Export_ttip"),
             children: (0, a.jsx)("div", {
               className: y.EditPreviewButton,
               onClick: (e) => {
                 (0, f.pg)(
                   (0, a.jsx)(_.o0, {
-                    strTitle: (0, A.we)("#EventEditor_Loc_Export"),
+                    strTitle: (0, w.we)("#EventEditor_Loc_Export"),
                     bAlertDialog: !0,
-                    children: (0, a.jsx)(N.Yg, {
+                    children: (0, a.jsx)(I.Yg, {
                       fnGetLocData: () =>
                         (function (e, t) {
                           var n, i;
@@ -1670,7 +1670,7 @@ License: MIT
                   (0, k.uX)(e),
                 );
               },
-              children: (0, A.we)("#EventEditor_Loc_Export_Short"),
+              children: (0, w.we)("#EventEditor_Loc_Export_Short"),
             }),
           });
         },
@@ -1747,17 +1747,17 @@ License: MIT
                 children: [
                   (0, a.jsx)("div", {
                     className: B.Language,
-                    children: (0, A.we)("#FAQCrowdin_LanguageHeader"),
+                    children: (0, w.we)("#FAQCrowdin_LanguageHeader"),
                   }),
                   (0, a.jsx)("div", {
                     className: B.Timestamp,
-                    children: (0, A.we)("#FAQCrowdin_DraftTimestampHeader"),
+                    children: (0, w.we)("#FAQCrowdin_DraftTimestampHeader"),
                   }),
                 ],
               }),
               (0, a.jsx)(d.Yh, {
                 className: B.CheckAll,
-                label: (0, A.we)("#FAQCrowdin_SelectAllCheckboxes"),
+                label: (0, w.we)("#FAQCrowdin_SelectAllCheckboxes"),
                 onChange: (e) => {
                   s(e ? n.slice() : []);
                 },
@@ -1768,7 +1768,7 @@ License: MIT
                   null != o
                     ? o
                     : (0, a.jsx)("div", {
-                        children: (0, A.we)("#FAQCrowdin_NoDraftFound"),
+                        children: (0, w.we)("#FAQCrowdin_NoDraftFound"),
                       }),
               }),
             ],
@@ -1783,9 +1783,9 @@ License: MIT
               : null,
             { data: u } = (0, G.js)(null == c ? void 0 : c.GetAccountID()),
             h = l
-              ? (0, A.we)(
+              ? (0, w.we)(
                   "#FAQCrowdin_SavedAtTimeByAuthor",
-                  (0, A.TW)(l.timestamp) +
+                  (0, w.TW)(l.timestamp) +
                     " @ " +
                     (0, Q.KC)(l.timestamp, { bForce24HourClock: !1 }),
                   null !== (t = null == u ? void 0 : u.m_strPlayerName) &&
@@ -1793,13 +1793,13 @@ License: MIT
                     ? t
                     : l.author_account_id,
                 )
-              : (0, A.we)("#FAQCrowdin_NoDraftFound"),
+              : (0, w.we)("#FAQCrowdin_NoDraftFound"),
             m = (0, a.jsxs)("div", {
               className: B.LanguageCheckboxLabel,
               children: [
                 (0, a.jsx)("div", {
                   className: B.Language,
-                  children: (0, A.we)("#Language_" + (0, o.LgB)(i)),
+                  children: (0, w.we)("#Language_" + (0, o.LgB)(i)),
                 }),
                 (0, a.jsx)("div", { className: B.Timestamp, children: h }),
               ],
@@ -1817,11 +1817,11 @@ License: MIT
           [c, u] = r.useState(!1),
           [h, m] = r.useState(!1),
           [g, f] = r.useState(null),
-          p = (0, T.m)("CrowdinImportDialog"),
+          p = (0, N.m)("CrowdinImportDialog"),
           x = r.useRef([]);
         if (g)
           return (0, a.jsx)(_.o0, {
-            strTitle: (0, A.we)("#FAQDashboard_CrowdinToolTitle"),
+            strTitle: (0, w.we)("#FAQDashboard_CrowdinToolTitle"),
             strDescription: g,
             bAlertDialog: !0,
             bDestructiveWarning: !0,
@@ -1829,28 +1829,28 @@ License: MIT
           });
         if (h)
           return (0, a.jsx)(_.o0, {
-            strTitle: (0, A.we)("#FAQDashboard_CrowdinToolTitle"),
-            strDescription: (0, A.we)("#FAQDashboard_PublishComplete"),
+            strTitle: (0, w.we)("#FAQDashboard_CrowdinToolTitle"),
+            strDescription: (0, w.we)("#FAQDashboard_PublishComplete"),
             bAlertDialog: !0,
             closeModal: e.closeModal,
           });
         const v = (100 * (i + 0.5)) / t.length,
-          w = t[i].internal_name;
+          A = t[i].internal_name;
         return (0, a.jsx)(_.eV, {
-          title: (0, A.we)("#FAQDashboard_CrowdinToolTitle"),
+          title: (0, w.we)("#FAQDashboard_CrowdinToolTitle"),
           ...e,
           onCancel: () => p.cancel("CrowdinImportDialog cancelled"),
           children: (0, a.jsxs)(d.nB, {
             children: [
               (0, a.jsxs)(d.a3, {
                 children: [
-                  (0, A.we)(
+                  (0, w.we)(
                     "#FAQDashboard_CrowdinToolInstructionsWithCount",
                     t.length,
                   ),
                   (0, a.jsx)("div", {
                     className: B.Warning,
-                    children: (0, A.we)("#FAQDashboard_CrowdinToolWarning"),
+                    children: (0, w.we)("#FAQDashboard_CrowdinToolWarning"),
                   }),
                 ],
               }),
@@ -1902,16 +1902,16 @@ License: MIT
                           if (p.token.reason) return;
                           if (t != L.R)
                             return void f(
-                              (0, A.we)("#FAQDashboard_PublishFailed"),
+                              (0, w.we)("#FAQDashboard_PublishFailed"),
                             );
                         }
                       }
                       m(!0), u(!1);
                     },
                     disabled: c,
-                    children: (0, A.we)("#FAQDashboard_UpdateAllFAQsButton"),
+                    children: (0, w.we)("#FAQDashboard_UpdateAllFAQsButton"),
                   }),
-                  c && (0, a.jsx)(K, { nProgressPct: v, strCurrentLabel: w }),
+                  c && (0, a.jsx)(K, { nProgressPct: v, strCurrentLabel: A }),
                   x.current.length > 0 &&
                     (0, a.jsx)(J, { rgUpdatedLanguagesForAllFAQs: x.current }),
                 ],
@@ -1933,7 +1933,7 @@ License: MIT
             }),
             (0, a.jsx)("div", {
               className: B.CurrentFAQ,
-              children: (0, A.we)("#FAQDashboard_CrowdinToolProgress", n),
+              children: (0, w.we)("#FAQDashboard_CrowdinToolProgress", n),
             }),
           ],
         });
@@ -1946,7 +1946,7 @@ License: MIT
           children: [
             (0, a.jsx)("div", {
               className: B.ImportResultLabel,
-              children: (0, A.we)("#FAQDashboard_CrowdinToolResultsLabel"),
+              children: (0, w.we)("#FAQDashboard_CrowdinToolResultsLabel"),
             }),
             t.map((e, t) => {
               const i = n[t];
@@ -1992,10 +1992,10 @@ License: MIT
           if (!t)
             return (0, a.jsx)("div", {
               className: ne().Never,
-              children: (0, A.we)("#FAQDashboard_TimeNever"),
+              children: (0, w.we)("#FAQDashboard_TimeNever"),
             });
           const i = Date.now() / 1e3 - t,
-            s = i < 86400 ? (0, A.Hq)(i, !1, !0) : (0, A.$z)(t);
+            s = i < 86400 ? (0, w.Hq)(i, !1, !0) : (0, w.$z)(t);
           return (0, a.jsx)(X.gS, {
             className: n && ne().Warning,
             rtFullDate: t,
@@ -2059,7 +2059,7 @@ License: MIT
                   0 == t.length &&
                     (0, a.jsx)("div", {
                       className: b().ErrorMsg,
-                      children: (0, A.we)("#FAQDashboard_Empty"),
+                      children: (0, w.we)("#FAQDashboard_Empty"),
                     }),
                   d.map((e) => (0, a.jsx)(ue, { rgColumns: e }, e[0])),
                   !n && (0, a.jsx)(x.t, { position: "center", size: "xlarge" }),
@@ -2072,7 +2072,7 @@ License: MIT
           const t = r.useCallback(
               () =>
                 (0, f.mK)((0, a.jsx)(re, {}), window, {
-                  strTitle: (0, A.we)("#FAQDashboard_CreateFAQButton"),
+                  strTitle: (0, w.we)("#FAQDashboard_CreateFAQButton"),
                 }),
               [],
             ),
@@ -2081,7 +2081,7 @@ License: MIT
                 (0, f.mK)(
                   (0, a.jsx)(q, { bDisableBackgroundDismiss: !0 }),
                   window,
-                  { strTitle: (0, A.we)("#FAQDashboard_CrowdinToolTitle") },
+                  { strTitle: (0, w.we)("#FAQDashboard_CrowdinToolTitle") },
                 ),
               [],
             );
@@ -2090,18 +2090,18 @@ License: MIT
             children: [
               (0, a.jsx)("div", {
                 className: b().DashboardHeaderTitle,
-                children: (0, A.we)("#FAQDashboard_Header"),
+                children: (0, w.we)("#FAQDashboard_Header"),
               }),
               (0, a.jsxs)("div", {
                 className: b().DashboardHeaderButtonCtn,
                 children: [
                   (0, a.jsx)(d.$n, {
                     onClick: n,
-                    children: (0, A.we)("#FAQDashboard_CrowdinToolButton"),
+                    children: (0, w.we)("#FAQDashboard_CrowdinToolButton"),
                   }),
                   (0, a.jsx)(d.jn, {
                     onClick: t,
-                    children: (0, A.we)("#FAQDashboard_CreateFAQButton"),
+                    children: (0, w.we)("#FAQDashboard_CreateFAQButton"),
                   }),
                 ],
               }),
@@ -2119,17 +2119,17 @@ License: MIT
             className: b().CreateFAQDialog,
             children: [
               (0, a.jsx)(d.Y9, {
-                children: (0, A.we)("#FAQDashboard_CreateFAQButton"),
+                children: (0, w.we)("#FAQDashboard_CreateFAQButton"),
               }),
               (0, a.jsx)(d.nB, {
                 children: (0, a.jsxs)(d.a3, {
                   children: [
-                    (0, A.we)("#FAQDashboard_CreateFAQInstructions"),
+                    (0, w.we)("#FAQDashboard_CreateFAQInstructions"),
                     (0, a.jsx)("input", {
                       type: "text",
                       className: b().NameInput,
                       value: t,
-                      placeholder: (0, A.we)("#FAQDashboard_NamePlaceHolder"),
+                      placeholder: (0, w.we)("#FAQDashboard_NamePlaceHolder"),
                       onFocus: (e) => e.target.select(),
                       onChange: (e) => n(e.currentTarget.value),
                       maxLength: 120,
@@ -2195,19 +2195,19 @@ License: MIT
               eCurrentSortColumn: s,
               SetSortColumn: r,
             } = e,
-            o = (0, w.A)(
+            o = (0, A.A)(
               b().EntryColumn,
               b().ClickableHeader,
               n ? b().NameCol : b().DataCol,
               s == i && b().Selected,
             );
           return (0, a.jsxs)(v.he, {
-            toolTipContent: (0, A.we)(t + "_ttip"),
+            toolTipContent: (0, w.we)(t + "_ttip"),
             direction: "top",
             className: o,
             onClick: () => r(i),
             children: [
-              (0, A.we)(t),
+              (0, w.we)(t),
               (0, a.jsx)("div", {
                 className: b().DownArrow,
                 children: (0, a.jsx)(p.GB9, {}),
@@ -2226,7 +2226,7 @@ License: MIT
           const { bIsVisible: t } = e;
           return (0, a.jsx)("div", {
             className: t ? b().Visible : b().Hidden,
-            children: (0, A.we)(
+            children: (0, w.we)(
               t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible",
             ),
           });
@@ -2241,38 +2241,38 @@ License: MIT
             className: b().DashboardEntry,
             children: [
               (0, a.jsx)("div", {
-                className: (0, w.A)(b().EntryColumn, b().NameCol),
+                className: (0, A.A)(b().EntryColumn, b().NameCol),
                 children: (0, a.jsx)("div", {
                   className: b().EntryInternalName,
                   children: n,
                 }),
               }),
               (0, a.jsx)("div", {
-                className: (0, w.A)(b().EntryColumn, b().DataCol),
+                className: (0, A.A)(b().EntryColumn, b().DataCol),
                 children: (0, a.jsx)(ie, { rtTimestamp: s }),
               }),
               (0, a.jsx)("div", {
-                className: (0, w.A)(b().EntryColumn, b().DataCol),
+                className: (0, A.A)(b().EntryColumn, b().DataCol),
                 children: (0, a.jsx)(de, { nCount: r, nTotal: g, nGoal: g }),
               }),
               (0, a.jsx)("div", {
-                className: (0, w.A)(b().EntryColumn, b().DataCol),
+                className: (0, A.A)(b().EntryColumn, b().DataCol),
                 children: (0, a.jsx)(de, { nCount: o, nTotal: g, nGoal: 0 }),
               }),
               (0, a.jsx)("div", {
-                className: (0, w.A)(b().EntryColumn, b().DataCol),
+                className: (0, A.A)(b().EntryColumn, b().DataCol),
                 children: (0, a.jsx)(de, { nCount: l, nTotal: h, nGoal: h }),
               }),
               (0, a.jsx)("div", {
-                className: (0, w.A)(b().EntryColumn, b().DataCol),
+                className: (0, A.A)(b().EntryColumn, b().DataCol),
                 children: (0, a.jsx)(de, { nCount: d, nTotal: h, nGoal: 0 }),
               }),
               (0, a.jsx)("div", {
-                className: (0, w.A)(b().EntryColumn, b().DataCol),
+                className: (0, A.A)(b().EntryColumn, b().DataCol),
                 children: (0, a.jsx)(ce, { bIsVisible: c }),
               }),
               (0, a.jsx)("div", {
-                className: (0, w.A)(b().EntryColumn, b().DataCol),
+                className: (0, A.A)(b().EntryColumn, b().DataCol),
                 children: (0, a.jsx)(ce, { bIsVisible: u }),
               }),
             ],
@@ -2292,7 +2292,7 @@ License: MIT
                     ? void 0
                     : e.length) > 0,
                 )
-                  ? (0, A.we)("#EventEditor_UnsavedChanges")
+                  ? (0, w.we)("#EventEditor_UnsavedChanges")
                   : null;
               }),
               () => {
@@ -2320,7 +2320,7 @@ License: MIT
                     : n.startsWith(
                         At.ViewFAQ(h.UF.VANITY_ID, "").slice(0, -1),
                       ))) ||
-                (0, A.we)("#EventEditor_UnsavedChanges")
+                (0, w.we)("#EventEditor_UnsavedChanges")
               );
             },
           });
@@ -2332,19 +2332,19 @@ License: MIT
         pe = n(45724),
         xe = n(84811),
         ve = n(97780),
-        we = n(63280),
-        Ae = n.n(we),
+        Ae = n(63280),
+        we = n.n(Ae),
         Ce = n(64372),
         je = n(68797);
       const be = (e) =>
           (0, a.jsx)(v.he, {
-            toolTipContent: (0, A.we)("#FAQEditor_DeleteAction_ttip"),
+            toolTipContent: (0, w.we)("#FAQEditor_DeleteAction_ttip"),
             children: (0, a.jsx)("div", {
-              className: (0, w.A)(y.EditPreviewButton, y.Delete),
+              className: (0, A.A)(y.EditPreviewButton, y.Delete),
               onClick: (t) => {
                 (0, f.pg)((0, a.jsx)(Ee, { draft: e.draft }), (0, k.uX)(t));
               },
-              children: (0, A.we)("#FAQEditor_DeleteAction"),
+              children: (0, w.we)("#FAQEditor_DeleteAction"),
             }),
           }),
         Ee = (e) => {
@@ -2353,21 +2353,21 @@ License: MIT
             [s, o] = r.useState(!1),
             [c, u] = r.useState(void 0);
           let m = (0, a.jsx)("div", {
-            children: (0, A.we)("#FAQEditor_DeleteDesc"),
+            children: (0, w.we)("#FAQEditor_DeleteDesc"),
           });
           return (
             s
               ? (m = (0, a.jsx)(x.t, {
                   position: "center",
                   size: "medium",
-                  string: (0, A.we)("#FAQEditor_DeletingInProgress"),
+                  string: (0, w.we)("#FAQEditor_DeletingInProgress"),
                 }))
               : c &&
                 (m = (0, a.jsx)("div", {
-                  children: (0, A.we)(
+                  children: (0, w.we)(
                     "Error_Description",
                     c,
-                    (0, A.we)("#Error_GenericFailureDescription"),
+                    (0, w.we)("#Error_GenericFailureDescription"),
                   ),
                 })),
             (0, a.jsx)(xe.tH, {
@@ -2376,7 +2376,7 @@ License: MIT
                 children: (0, a.jsxs)(d.UC, {
                   children: [
                     (0, a.jsx)(d.Y9, {
-                      children: (0, A.we)("#FAQEditor_DeleteAction"),
+                      children: (0, w.we)("#FAQEditor_DeleteAction"),
                     }),
                     (0, a.jsx)(d.nB, {
                       children: (0, a.jsx)(d.a3, { children: m }),
@@ -2385,9 +2385,9 @@ License: MIT
                       children: (0, a.jsx)(d.CB, {
                         onCancel: n,
                         bOKDisabled: Boolean(s || c),
-                        strOKText: (0, A.we)("#FAQEditor_DeleteAction"),
+                        strOKText: (0, w.we)("#FAQEditor_DeleteAction"),
                         strCancelText: Boolean(s || c)
-                          ? (0, A.we)("#Button_OK")
+                          ? (0, w.we)("#Button_OK")
                           : void 0,
                         onOK: async () => {
                           o(!0),
@@ -2428,17 +2428,17 @@ License: MIT
           const { draft: t, bDisabled: n } = e,
             i = t.BNeedsSaving();
           return (0, a.jsx)(v.he, {
-            toolTipContent: (0, A.we)(
+            toolTipContent: (0, w.we)(
               i ? "#FAQPublish_SaveRequire_ttip" : "#FAQPublish_Publish_ttip",
             ),
             children: (0, a.jsx)("div", {
-              className: (0, w.A)(y.EditPreviewButton, n && y.Disabled),
+              className: (0, A.A)(y.EditPreviewButton, n && y.Disabled),
               onClick: (t) => {
                 n ||
                   (0, f.pg)(
                     i
                       ? (0, a.jsx)(_.KG, {
-                          strDescription: (0, A.we)(
+                          strDescription: (0, w.we)(
                             "#FAQPublish_SaveRequire_ttip",
                           ),
                         })
@@ -2446,7 +2446,7 @@ License: MIT
                     (0, k.uX)(t),
                   );
               },
-              children: (0, A.we)("#FAQPublish_Publish"),
+              children: (0, w.we)("#FAQPublish_Publish"),
             }),
           });
         }),
@@ -2459,24 +2459,24 @@ License: MIT
             [h, m] = r.useState(void 0),
             [g, f] = (0, l.g5)(n.GetFAQID()),
             [p, v] = r.useState(new Array());
-          let w = null;
+          let A = null;
           if (f)
             if (s)
-              w = (0, a.jsx)(x.t, {
+              A = (0, a.jsx)(x.t, {
                 position: "center",
                 size: "medium",
-                string: (0, A.we)("#FAQPublish_Publishing"),
+                string: (0, w.we)("#FAQPublish_Publishing"),
               });
             else if (c)
-              w = (0, a.jsx)("div", {
-                children: (0, A.we)("#FAQPublish_Success"),
+              A = (0, a.jsx)("div", {
+                children: (0, w.we)("#FAQPublish_Success"),
               });
             else if (h)
-              w = (0, a.jsx)("div", {
-                children: (0, A.we)(
+              A = (0, a.jsx)("div", {
+                children: (0, w.we)(
                   "#Error_Description",
                   h,
-                  (0, A.we)("#Error_GenericFailureDescription"),
+                  (0, w.we)("#Error_GenericFailureDescription"),
                 ),
               });
             else if (g) {
@@ -2489,14 +2489,14 @@ License: MIT
                           e.last_publish_timestamp < e.last_update_timestamp,
                       )
                       .map((e) => e.language);
-              w = (0, a.jsxs)(a.Fragment, {
+              A = (0, a.jsxs)(a.Fragment, {
                 children: [
                   (0, a.jsx)("div", {
-                    children: (0, A.we)("#FAQPublish_Desc"),
+                    children: (0, w.we)("#FAQPublish_Desc"),
                   }),
                   (0, a.jsx)("br", {}),
                   (0, a.jsx)("div", {
-                    children: (0, A.we)("#FAQPublish_Desc2"),
+                    children: (0, w.we)("#FAQPublish_Desc2"),
                   }),
                   (0, a.jsx)("br", {}),
                   (0, a.jsx)(Y, {
@@ -2508,14 +2508,14 @@ License: MIT
                 ],
               });
             } else
-              w = (0, a.jsx)("div", {
-                children: (0, A.we)("#FAQPublish_LoadError"),
+              A = (0, a.jsx)("div", {
+                children: (0, w.we)("#FAQPublish_LoadError"),
               });
           else
-            w = (0, a.jsx)(x.t, {
+            A = (0, a.jsx)(x.t, {
               size: "small",
               position: "center",
-              string: (0, A.we)("#FAQPublish_PublishWait"),
+              string: (0, w.we)("#FAQPublish_PublishWait"),
             });
           return (0, a.jsx)(xe.tH, {
             children: (0, a.jsx)(_.x_, {
@@ -2524,18 +2524,18 @@ License: MIT
                 className: B.LanguageListDialog,
                 children: [
                   (0, a.jsx)(d.Y9, {
-                    children: (0, A.we)("#FAQPublish_Publish"),
+                    children: (0, w.we)("#FAQPublish_Publish"),
                   }),
                   (0, a.jsx)(d.nB, {
-                    children: (0, a.jsx)(d.a3, { children: w }),
+                    children: (0, a.jsx)(d.a3, { children: A }),
                   }),
                   (0, a.jsx)(d.wi, {
                     children: (0, a.jsx)(d.CB, {
                       onCancel: i,
                       bOKDisabled: Boolean(s || c || h || 0 == p.length),
-                      strOKText: (0, A.we)("#FAQPublish_Publish"),
+                      strOKText: (0, w.we)("#FAQPublish_Publish"),
                       strCancelText: Boolean(s || c || h)
-                        ? (0, A.we)("#Button_OK")
+                        ? (0, w.we)("#Button_OK")
                         : void 0,
                       onOK: async () => {
                         o(!0),
@@ -2564,13 +2564,13 @@ License: MIT
         },
         Fe = (e) =>
           (0, a.jsx)(v.he, {
-            toolTipContent: (0, A.we)("#FAQEditor_ChangeVisible_ttip"),
+            toolTipContent: (0, w.we)("#FAQEditor_ChangeVisible_ttip"),
             children: (0, a.jsx)("div", {
               className: y.EditPreviewButton,
               onClick: (t) => {
                 (0, f.pg)((0, a.jsx)(De, { draft: e.draft }), (0, k.uX)(t));
               },
-              children: (0, A.we)("#FAQEditor_EditVisible"),
+              children: (0, w.we)("#FAQEditor_EditVisible"),
             }),
           }),
         De = (e) => {
@@ -2582,41 +2582,41 @@ License: MIT
             m = l.pN.Get().GetFAQArticleSummary(t.GetFAQID()),
             [g, f] = r.useState(m.visible_in_global_realm),
             [p, v] = r.useState(m.visible_in_china_realm);
-          let w = (0, a.jsxs)(a.Fragment, {
+          let A = (0, a.jsxs)(a.Fragment, {
             children: [
               (0, a.jsx)("div", {
-                children: (0, A.we)("#FAQEditor_ChangeVisible_Desc"),
+                children: (0, w.we)("#FAQEditor_ChangeVisible_Desc"),
               }),
               (0, a.jsx)(d.Yh, {
-                label: (0, A.we)("#FAQEditor_VisibleInGlobal"),
+                label: (0, w.we)("#FAQEditor_VisibleInGlobal"),
                 checked: g,
                 onChange: (e) => f(e),
               }),
               (0, a.jsx)(d.Yh, {
-                label: (0, A.we)("#FAQEditor_VisibleInChina"),
+                label: (0, w.we)("#FAQEditor_VisibleInChina"),
                 checked: p,
-                tooltip: (0, A.we)("#FAQEditor_VisibleInChina_ttip"),
+                tooltip: (0, w.we)("#FAQEditor_VisibleInChina_ttip"),
                 onChange: (e) => v(e),
               }),
             ],
           });
           return (
             i
-              ? (w = (0, a.jsx)(x.t, {
+              ? (A = (0, a.jsx)(x.t, {
                   position: "center",
                   size: "medium",
-                  string: (0, A.we)("#FAQEditor_ChangeVisible_InProgress"),
+                  string: (0, w.we)("#FAQEditor_ChangeVisible_InProgress"),
                 }))
               : o
-                ? (w = (0, a.jsx)("div", {
-                    children: (0, A.we)("#FAQEditor_ChangeVisible_Success"),
+                ? (A = (0, a.jsx)("div", {
+                    children: (0, w.we)("#FAQEditor_ChangeVisible_Success"),
                   }))
                 : u &&
-                  (w = (0, a.jsx)("div", {
-                    children: (0, A.we)(
+                  (A = (0, a.jsx)("div", {
+                    children: (0, w.we)(
                       "Error_Description",
                       u,
-                      (0, A.we)("#Error_GenericFailureDescription"),
+                      (0, w.we)("#Error_GenericFailureDescription"),
                     ),
                   })),
             (0, a.jsx)(xe.tH, {
@@ -2625,18 +2625,18 @@ License: MIT
                 children: (0, a.jsxs)(d.UC, {
                   children: [
                     (0, a.jsx)(d.Y9, {
-                      children: (0, A.we)("#FAQEditor_ChangeVisible"),
+                      children: (0, w.we)("#FAQEditor_ChangeVisible"),
                     }),
                     (0, a.jsx)(d.nB, {
-                      children: (0, a.jsx)(d.a3, { children: w }),
+                      children: (0, a.jsx)(d.a3, { children: A }),
                     }),
                     (0, a.jsx)(d.wi, {
                       children: (0, a.jsx)(d.CB, {
                         onCancel: n,
                         bOKDisabled: Boolean(i || o || u),
-                        strOKText: (0, A.we)("#FAQEditor_ChangeVisible"),
+                        strOKText: (0, w.we)("#FAQEditor_ChangeVisible"),
                         strCancelText: Boolean(i || o || u)
-                          ? (0, A.we)("#Button_OK")
+                          ? (0, w.we)("#Button_OK")
                           : void 0,
                         onOK: async () => {
                           s(!0),
@@ -2666,9 +2666,9 @@ License: MIT
           );
         };
       var ye = n(35707),
-        Ie = (n(42519), n(23809)),
-        Ne = n(61739),
-        Te = n(88942),
+        Te = (n(42519), n(23809)),
+        Ie = n(61739),
+        Ne = n(88942),
         ke = n(56545);
       const Qe = (0, s.PA)((e) => {
           var t, n, i, s, r;
@@ -2720,7 +2720,7 @@ License: MIT
                     (0, a.jsxs)("div", {
                       className: ye.SectionTitle,
                       children: [
-                        (0, A.we)("#FAQDashboard_VisibilityColumn"),
+                        (0, w.we)("#FAQDashboard_VisibilityColumn"),
                         " ",
                       ],
                     }),
@@ -2731,9 +2731,9 @@ License: MIT
                           className: ye.VisibilityCtn,
                           children: [
                             (0, a.jsxs)("div", {
-                              className: (0, w.A)(ye.StatusRow, ye.Global),
+                              className: (0, A.A)(ye.StatusRow, ye.Global),
                               children: [
-                                (0, A.we)(
+                                (0, w.we)(
                                   "#FAQDashboard_VisibleInGlobalRealmLabel",
                                 ),
                                 " ",
@@ -2743,9 +2743,9 @@ License: MIT
                               ],
                             }),
                             (0, a.jsxs)("div", {
-                              className: (0, w.A)(ye.StatusRow, ye.China),
+                              className: (0, A.A)(ye.StatusRow, ye.China),
                               children: [
-                                (0, A.we)(
+                                (0, w.we)(
                                   "#FAQDashboard_VisibleInChinaRealmLabel",
                                 ),
                                 " ",
@@ -2766,13 +2766,13 @@ License: MIT
                             f
                               ? (0, a.jsx)("div", {
                                   className: ye.PublishStatus,
-                                  children: (0, A.we)(
+                                  children: (0, w.we)(
                                     "#FAQStatus_DraftVersionsDesc",
                                   ),
                                 })
                               : (0, a.jsx)("div", {
                                   className: ye.PublishStatus,
-                                  children: (0, A.we)(
+                                  children: (0, w.we)(
                                     "#FAQStatus_NothingToPublish",
                                   ),
                                 }),
@@ -2794,7 +2794,7 @@ License: MIT
                   children: [
                     (0, a.jsx)("div", {
                       className: ye.SectionTitle,
-                      children: (0, A.we)("#FAQDashboard_LocalizationSection"),
+                      children: (0, w.we)("#FAQDashboard_LocalizationSection"),
                     }),
                     h.iA.is_support && (0, a.jsx)(Re, { draft: d }),
                     (0, a.jsxs)("div", {
@@ -2802,7 +2802,7 @@ License: MIT
                       children: [
                         (0, a.jsx)("div", {
                           className: ye.SectionDescription,
-                          children: (0, A.we)(
+                          children: (0, w.we)(
                             "#FAQDashboard_LocalizationSectionDesc",
                           ),
                         }),
@@ -2814,7 +2814,7 @@ License: MIT
                       children: [
                         (0, a.jsx)("div", {
                           className: ye.SectionDescription,
-                          children: (0, A.we)(
+                          children: (0, w.we)(
                             "#EventEditor_Loc_CrowdinIntegration_Desc",
                           ),
                         }),
@@ -2828,7 +2828,7 @@ License: MIT
                   children: [
                     (0, a.jsx)("div", {
                       className: ye.SectionTitle,
-                      children: (0, A.we)(
+                      children: (0, w.we)(
                         "#FAQStatus_LocalizedVersionStatusHeader",
                       ),
                     }),
@@ -2839,13 +2839,13 @@ License: MIT
                           children: (0, a.jsxs)("tr", {
                             children: [
                               (0, a.jsx)("th", {
-                                children: (0, A.we)("#LanguageTitle"),
+                                children: (0, w.we)("#LanguageTitle"),
                               }),
                               (0, a.jsx)("th", {
-                                children: (0, A.we)("#FAQStatus_LastUpdated"),
+                                children: (0, w.we)("#FAQStatus_LastUpdated"),
                               }),
                               (0, a.jsx)("th", {
-                                children: (0, A.we)("#FAQStatus_LastPublished"),
+                                children: (0, w.we)("#FAQStatus_LastPublished"),
                               }),
                             ],
                           }),
@@ -2867,8 +2867,8 @@ License: MIT
           const { draft: t } = e,
             n =
               ((function (e) {
-                const t = (0, Ie.KV)();
-                (0, Ne.n)({
+                const t = (0, Te.KV)();
+                (0, Ie.n)({
                   mutationKey: ["fetch_faq_translation", e],
                   mutationFn: async (n) => {
                     const i = ke.w.Init(Ce.PS);
@@ -2882,8 +2882,8 @@ License: MIT
                 });
               })(t.GetFAQID()),
               (function (e, t) {
-                const n = (0, Ie.KV)();
-                return (0, Te.I)({
+                const n = (0, Te.KV)();
+                return (0, Ne.I)({
                   queryKey: ["get_faq_crowdin_metadata", e, t],
                   queryFn: async () => {
                     const i = ke.w.Init(Ce.lk);
@@ -2911,7 +2911,7 @@ License: MIT
           return (0, a.jsxs)("tr", {
             children: [
               (0, a.jsx)("td", {
-                children: (0, A.we)("#Language_" + (0, o.LgB)(t.language)),
+                children: (0, w.we)("#Language_" + (0, o.LgB)(t.language)),
               }),
               (0, a.jsx)("td", {
                 children: (0, a.jsx)(ie, {
@@ -2945,7 +2945,7 @@ License: MIT
               children: [
                 !n &&
                   (0, a.jsx)("img", { className: Ue.SavedImage, src: Oe.A }),
-                (0, A.we)(n ? "#Button_Save" : "#Button_Saved"),
+                (0, w.we)(n ? "#Button_Save" : "#Button_Saved"),
               ],
             }),
           });
@@ -2982,11 +2982,11 @@ License: MIT
                 id: c,
                 children: i
                   ? (0, a.jsx)("div", {
-                      children: (0, A.we)("#FAQSave_Saving"),
+                      children: (0, w.we)("#FAQSave_Saving"),
                     })
                   : (0, a.jsxs)("div", {
                       children: [
-                        (0, A.we)(
+                        (0, w.we)(
                           Boolean(o == L.R)
                             ? "#FAQSave_SaveSuccess"
                             : "#FAQSave_Error",
@@ -3001,13 +3001,13 @@ License: MIT
                   : (0, a.jsx)("div", {
                       children: Boolean(o == L.R)
                         ? (0, a.jsx)("div", {
-                            children: (0, A.we)("#FAQSave_SaveSuccess_desc"),
+                            children: (0, w.we)("#FAQSave_SaveSuccess_desc"),
                           })
                         : (0, a.jsx)("div", {
-                            children: (0, A.we)(
+                            children: (0, w.we)(
                               "#Error_Description",
                               o,
-                              (0, A.we)("#Error_GenericFailureDescription"),
+                              (0, w.we)("#Error_GenericFailureDescription"),
                             ),
                           }),
                     }),
@@ -3017,7 +3017,7 @@ License: MIT
                   !i &&
                   (0, a.jsx)(d.jn, {
                     onClick: n,
-                    children: (0, A.we)("#Button_OK"),
+                    children: (0, w.we)("#Button_OK"),
                   }),
               }),
             ],
@@ -3030,7 +3030,7 @@ License: MIT
             s = t.BHasPublished();
           return (0, a.jsx)(xe.tH, {
             children: (0, a.jsxs)("div", {
-              className: (0, w.A)({
+              className: (0, A.A)({
                 [Ve.EventEditorTopBarContainer]: !0,
                 [Ve.EventUnPublished]: !n && !s,
                 [Ve.EventPublished]: !n && s,
@@ -3040,8 +3040,8 @@ License: MIT
                 (0, a.jsx)(m, {
                   route: n ? i.k_eCommunityEdit : i.k_eCommunityDashboard,
                   faqid: t.GetFAQID(),
-                  className: I().EditPreviewButton,
-                  children: (0, A.we)(
+                  className: T().EditPreviewButton,
+                  children: (0, w.we)(
                     n ? "#FAQEditor_EditFAQ" : "#EventDisplay_EventsDashBtn",
                   ),
                 }),
@@ -3049,7 +3049,7 @@ License: MIT
                   children: [
                     (0, a.jsx)("div", {
                       className: Ye().EditorInternalNameLabel,
-                      children: (0, A.we)(
+                      children: (0, w.we)(
                         n
                           ? "#FAQEditor_InternalName_Preview"
                           : "#FAQEditor_InternalName",
@@ -3072,7 +3072,7 @@ License: MIT
                   ],
                 }),
                 (0, a.jsxs)("div", {
-                  className: I().EventOptions,
+                  className: T().EventOptions,
                   children: [
                     (0, a.jsx)(Pe.Ng, {
                       selectedLang: fe.O.Get().GetCurEditLanguage(),
@@ -3089,8 +3089,8 @@ License: MIT
                       (0, a.jsx)(m, {
                         route: i.k_eCommunityPreview,
                         faqid: t.GetFAQID(),
-                        className: I().EditPreviewButton,
-                        children: (0, A.we)("#Button_Preview"),
+                        className: T().EditPreviewButton,
+                        children: (0, w.we)("#Button_Preview"),
                       }),
                   ],
                 }),
@@ -3105,7 +3105,7 @@ License: MIT
             [u, h] = r.useState(L.R),
             [m, g] = r.useState(!1);
           return (0, a.jsxs)(_.eV, {
-            title: (0, A.we)("#FAQEditor_ChangeInternalName"),
+            title: (0, w.we)("#FAQEditor_ChangeInternalName"),
             bAllowFullSize: !0,
             onCancel: t,
             closeModal: t,
@@ -3113,12 +3113,12 @@ License: MIT
               (0, a.jsxs)(d.nB, {
                 children: [
                   (0, a.jsx)("div", {
-                    children: (0, A.we)("#FAQEditor_ChangeInternalName_desc"),
+                    children: (0, w.we)("#FAQEditor_ChangeInternalName_desc"),
                   }),
                   (0, a.jsx)("input", {
                     type: "text",
                     value: i,
-                    placeholder: (0, A.we)("#FAQEditor_ChangeInternalName"),
+                    placeholder: (0, w.we)("#FAQEditor_ChangeInternalName"),
                     onFocus: (e) => e.target.select(),
                     onChange: (e) => s(e.currentTarget.value),
                     maxLength: 240,
@@ -3126,7 +3126,7 @@ License: MIT
                   }),
                   Boolean(o && !m) &&
                     (0, a.jsx)(x.t, {
-                      string: (0, A.we)("#Updating"),
+                      string: (0, w.we)("#Updating"),
                       position: "center",
                       size: "medium",
                     }),
@@ -3134,11 +3134,11 @@ License: MIT
                     (0, a.jsx)("span", {
                       children:
                         u == L.R
-                          ? (0, A.we)("#EventDisplay_Share_Success")
-                          : (0, A.we)(
+                          ? (0, w.we)("#EventDisplay_Share_Success")
+                          : (0, w.we)(
                               "#Error_Description",
                               u,
-                              (0, A.we)("#Error_GenericFailureDescription"),
+                              (0, w.we)("#Error_GenericFailureDescription"),
                             ),
                     }),
                 ],
@@ -3148,8 +3148,8 @@ License: MIT
                   bOKDisabled: 0 == i.trim().length || o,
                   onCancel: t,
                   strCancelText: m
-                    ? (0, A.we)("#Button_Close")
-                    : (0, A.we)("#Button_Cancel"),
+                    ? (0, w.we)("#Button_Close")
+                    : (0, w.we)("#Button_Cancel"),
                   onOK: async () => {
                     c(!0),
                       l.pN
@@ -3179,18 +3179,18 @@ License: MIT
               !!(null == o ? void 0 : o.last_publish_timestamp);
           return (0, a.jsx)(xe.tH, {
             children: (0, a.jsx)("div", {
-              className: (0, w.A)(I().SaveBackground),
+              className: (0, A.A)(T().SaveBackground),
               children: (0, a.jsxs)("div", {
-                className: I().FlexRowWrapFlexStartContainer,
+                className: T().FlexRowWrapFlexStartContainer,
                 style: { width: "unset", justifyContent: "center" },
                 children: [
                   (0, a.jsx)(ze, { draft: t }),
                   Boolean(d) &&
                     (0, a.jsx)("div", {
-                      className: I().EditPreviewButton,
+                      className: T().EditPreviewButton,
                       children: (0, a.jsx)("a", {
                         href: h.TS.HELP_BASE_URL + "faqs/view/" + s.url_code,
-                        children: (0, A.we)("#FAQEditir_ViewLiveFAQ"),
+                        children: (0, w.we)("#FAQEditir_ViewLiveFAQ"),
                       }),
                     }),
                 ],
@@ -3207,32 +3207,32 @@ License: MIT
             return (0, a.jsx)(x.t, {
               position: "center",
               size: "xlarge",
-              string: (0, A.we)("#Loading"),
+              string: (0, w.we)("#Loading"),
             });
           if (!n)
             return (0, a.jsx)(nt, {
-              strError: (0, A.we)("#FAQEditor_NoFAQFound"),
+              strError: (0, w.we)("#FAQEditor_NoFAQFound"),
             });
           const o = fe.O.Get().GetCurEditLanguage();
           return (0, a.jsxs)("div", {
             children: [
               (0, a.jsx)(Ze, { draft: n }),
               (0, a.jsxs)("div", {
-                className: Ae().FAQEditPage,
+                className: we().FAQEditPage,
                 children: [
                   (0, a.jsx)("div", {
-                    className: Ae().FAQMenuCtn,
+                    className: we().FAQMenuCtn,
                     children: (0, a.jsx)(Qe, { draft: n, eLanguage: o }),
                   }),
                   (0, a.jsx)("div", {
-                    className: Ae().FAQEditorCtn,
+                    className: we().FAQEditorCtn,
                     children: (0, a.jsx)("div", {
-                      className: Ae().FAQEditor,
+                      className: we().FAQEditor,
                       children: (0, a.jsxs)("div", {
-                        className: (0, w.A)(I().Columns, Ae().Columns),
+                        className: (0, A.A)(T().Columns, we().Columns),
                         children: [
                           (0, a.jsxs)("div", {
-                            className: (0, w.A)(I().LeftCol, Ae().LeftCol),
+                            className: (0, A.A)(T().LeftCol, we().LeftCol),
                             children: [
                               (0, a.jsx)(et, { draft: n, eLanguage: o }),
                               (0, a.jsx)(tt, {
@@ -3245,7 +3245,7 @@ License: MIT
                           (0, a.jsx)($e, {
                             draft: n,
                             bbcodeEditorRef: s,
-                            className: (0, w.A)(I().RightCol, Ae().RightCol),
+                            className: (0, A.A)(T().RightCol, we().RightCol),
                           }),
                         ],
                       }),
@@ -3266,7 +3266,7 @@ License: MIT
               className: e.className,
               children: [
                 (0, a.jsx)("div", {
-                  children: (0, A.we)("#FAQEditor_ImageTitle"),
+                  children: (0, w.we)("#FAQEditor_ImageTitle"),
                 }),
                 (0, a.jsx)(ve.G, {
                   bShowLightBox: !0,
@@ -3294,17 +3294,17 @@ License: MIT
         et = (0, s.PA)((e) => {
           const { draft: t, eLanguage: n } = e;
           return (0, a.jsxs)("div", {
-            className: Ae().EditorTitleField,
+            className: we().EditorTitleField,
             children: [
               (0, a.jsx)("div", {
-                className: Ae().EditorLabel,
-                children: (0, A.we)("#FAQEditor_TitleLabel"),
+                className: we().EditorLabel,
+                children: (0, w.we)("#FAQEditor_TitleLabel"),
               }),
               (0, a.jsx)("input", {
                 type: "text",
-                className: Ae().EditorTitleFieldInput,
+                className: we().EditorTitleFieldInput,
                 value: t.GetDraftTitle(n) || "",
-                placeholder: (0, A.we)("#FAQEditor_TitlePlaceHolder"),
+                placeholder: (0, w.we)("#FAQEditor_TitlePlaceHolder"),
                 onFocus: (e) => e.target.select(),
                 onChange: (e) => t.SetDraftTitle(n, e.currentTarget.value),
                 maxLength: 120,
@@ -3315,11 +3315,11 @@ License: MIT
         tt = (0, s.PA)((e) => {
           const { draft: t, eLanguage: n, bbcodeEditorRef: i } = e;
           return (0, a.jsxs)("div", {
-            className: Ae().EditorPane,
+            className: we().EditorPane,
             children: [
               (0, a.jsx)("div", {
-                className: Ae().EditorLabel,
-                children: (0, A.we)("#FAQEditor_ContentLabel"),
+                className: we().EditorLabel,
+                children: (0, w.we)("#FAQEditor_ContentLabel"),
               }),
               (0, a.jsx)(pe.I, {
                 ref: i,
@@ -3327,27 +3327,27 @@ License: MIT
                 fnOnTextChange: (e) =>
                   t.SetDraftContent(n, e.currentTarget.value),
                 fnSetText: (e) => t.SetDraftContent(n, e),
-                strPlaceholder: (0, A.we)("#FAQEditor_ContentPlaceHolder"),
+                strPlaceholder: (0, w.we)("#FAQEditor_ContentPlaceHolder"),
                 bSupportHTMLImport: !0,
                 showFormatHelp: "PartnerEvents",
-                className: Ae().TextPaneContainer,
-                classNameForTextArea: Ae().EditorPaneTextArea,
+                className: we().TextPaneContainer,
+                classNameForTextArea: we().EditorPaneTextArea,
               }),
             ],
           });
         }),
         nt = (e) =>
           (0, a.jsxs)("div", {
-            className: Ae().ErrorCtn,
+            className: we().ErrorCtn,
             children: [
               (0, a.jsx)("div", {
-                className: Ae().ErrorMsg,
+                className: we().ErrorMsg,
                 children: e.strError,
               }),
               (0, a.jsx)(m, {
                 route: i.k_eCommunityDashboard,
-                className: Ae().EscapeLink,
-                children: (0, A.we)("#FAQEditor_GoToDashboard"),
+                className: we().EscapeLink,
+                children: (0, w.we)("#FAQEditor_GoToDashboard"),
               }),
             ],
           });
@@ -3383,18 +3383,18 @@ License: MIT
                   n.scrollIntoView({ block: "start", behavior: "smooth" }));
             }, [l]),
             (0, a.jsxs)("div", {
-              className: (0, w.A)(at.FAQViewPage, h.TS.LANGUAGE),
+              className: (0, A.A)(at.FAQViewPage, h.TS.LANGUAGE),
               children: [
                 (0, a.jsx)("a", {
                   className: at.SupportTitle,
                   href: `${h.TS.HELP_BASE_URL}`,
-                  children: (0, A.we)("#FAQViewer_SteamSupport"),
+                  children: (0, w.we)("#FAQViewer_SteamSupport"),
                 }),
                 (0, a.jsxs)("div", {
                   className: at.Columns,
                   children: [
                     (0, a.jsxs)("div", {
-                      className: (0, w.A)(at.LeftCol),
+                      className: (0, A.A)(at.LeftCol),
                       children: [
                         (0, a.jsx)("div", { className: at.TopColorBar }),
                         (0, a.jsxs)("div", {
@@ -3444,24 +3444,24 @@ License: MIT
             [n, s] = (0, l.W)(t.faq_id, t.version, t.language);
           return l.pN.Get().BHasFAQEdit()
             ? (0, a.jsxs)("div", {
-                className: (0, w.A)(dt.Section, y.ValveOnlyBackground),
+                className: (0, A.A)(dt.Section, y.ValveOnlyBackground),
                 children: [
                   (0, a.jsx)("div", {
                     className: dt.TopicHeader,
-                    children: (0, A.we)("#FAQViewer_AdminLinks"),
+                    children: (0, w.we)("#FAQViewer_AdminLinks"),
                   }),
                   (0, a.jsx)("div", {
                     className: lt.InfoRow,
-                    children: (0, A.PP)(
+                    children: (0, w.PP)(
                       "#FAQViewer_Admin_LastUpdate",
                       (null == n ? void 0 : n.author_account_id)
                         ? (0, a.jsx)(ot.p, {
                             accountID: Number.parseInt(n.author_account_id),
                           })
-                        : (0, A.we)("#FAQViewer_UnknownUser"),
+                        : (0, w.we)("#FAQViewer_UnknownUser"),
                       (0, a.jsx)("span", {
                         children:
-                          (0, A.TW)(t.timestamp) +
+                          (0, w.TW)(t.timestamp) +
                           "@" +
                           (0, Q.KC)(t.timestamp, { bForce24HourClock: !1 }),
                       }),
@@ -3472,7 +3472,7 @@ License: MIT
                     faqid: t.faq_id,
                     route: i.k_eCommunityEdit,
                     bForceAnchor: !0,
-                    children: (0, A.we)("#FAQViewer_GotoEditor"),
+                    children: (0, w.we)("#FAQViewer_GotoEditor"),
                   }),
                 ],
               })
@@ -3490,14 +3490,14 @@ License: MIT
           const s = n.GetLastSavedDraftVersion(t.language);
           return (0, a.jsx)("div", {
             className: lt.InfoRow,
-            children: (0, A.PP)(
+            children: (0, w.PP)(
               "#FAQViewer_DraftNewer",
               (0, a.jsx)(ot.p, {
                 accountID: Number.parseInt(s.author_account_id),
               }),
               (0, a.jsx)("span", {
                 children:
-                  (0, A.TW)(s.timestamp) +
+                  (0, w.TW)(s.timestamp) +
                   "@" +
                   (0, Q.KC)(s.timestamp, { bForce24HourClock: !1 }),
               }),
@@ -3508,7 +3508,7 @@ License: MIT
           (0, a.jsxs)(a.Fragment, {
             children: [
               (0, a.jsxs)("div", {
-                className: (0, w.A)(dt.Section, dt.NeedHelp),
+                className: (0, A.A)(dt.Section, dt.NeedHelp),
                 children: [
                   (0, a.jsx)("div", {
                     className: dt.LeftCol,
@@ -3519,12 +3519,12 @@ License: MIT
                     children: [
                       (0, a.jsx)("div", {
                         className: dt.TopicHeader,
-                        children: (0, A.we)(
+                        children: (0, w.we)(
                           "#FAQViewer_SideBar_ProblemWithSteam_Title",
                         ),
                       }),
                       (0, a.jsx)("div", {
-                        children: (0, A.we)(
+                        children: (0, w.we)(
                           "#FAQViewer_SideBar_ProblemWithSteam_Desc",
                         ),
                       }),
@@ -3533,7 +3533,7 @@ License: MIT
                         children: (0, a.jsx)("a", {
                           href: h.TS.HELP_BASE_URL,
                           className: y.EditPreviewButton,
-                          children: (0, A.we)(
+                          children: (0, w.we)(
                             "#FAQViewer_SideBar_ProblemWithSteam_Link",
                           ),
                         }),
@@ -3544,7 +3544,7 @@ License: MIT
               }),
               !(0, h.Y2)() &&
                 (0, a.jsxs)("div", {
-                  className: (0, w.A)(dt.Section, dt.CommunityHelp),
+                  className: (0, A.A)(dt.Section, dt.CommunityHelp),
                   children: [
                     (0, a.jsx)("div", {
                       className: dt.LeftCol,
@@ -3555,12 +3555,12 @@ License: MIT
                       children: [
                         (0, a.jsx)("div", {
                           className: dt.TopicHeader,
-                          children: (0, A.we)(
+                          children: (0, w.we)(
                             "#FAQViewer_SideBar_CommunityHelp_Title",
                           ),
                         }),
                         (0, a.jsx)("div", {
-                          children: (0, A.we)(
+                          children: (0, w.we)(
                             "#FAQViewer_SideBar_CommunityHelp_Desc",
                           ),
                         }),
@@ -3569,7 +3569,7 @@ License: MIT
                           children: (0, a.jsx)("a", {
                             href: h.TS.COMMUNITY_BASE_URL + "discussions",
                             className: y.EditPreviewButton,
-                            children: (0, A.we)(
+                            children: (0, w.we)(
                               "#FAQViewer_SideBar_CommunityHelp_Link",
                             ),
                           }),
@@ -3598,14 +3598,14 @@ License: MIT
                 })
               : (0, a.jsx)(rt, {
                   children: (0, a.jsx)(ft, {
-                    strError: (0, A.we)("#FAQViewer_NoFAQFound"),
+                    strError: (0, w.we)("#FAQViewer_NoFAQFound"),
                   }),
                 })
             : (0, a.jsx)(rt, {
                 children: (0, a.jsx)(x.t, {
                   position: "center",
                   size: "xlarge",
-                  string: (0, A.we)("#Loading"),
+                  string: (0, w.we)("#Loading"),
                 }),
               });
         },
@@ -3627,7 +3627,7 @@ License: MIT
               (0, a.jsx)("a", {
                 className: gt().EscapeLink,
                 href: n,
-                children: (0, A.we)("#FAQViewer_GoToHomepage"),
+                children: (0, w.we)("#FAQViewer_GoToHomepage"),
               }),
             ],
           });
@@ -3651,106 +3651,91 @@ License: MIT
                 })
               : (0, a.jsx)(rt, {
                   children: (0, a.jsx)(ft, {
-                    strError: (0, A.we)("#FAQViewer_NoFAQFound"),
+                    strError: (0, w.we)("#FAQViewer_NoFAQFound"),
                   }),
                 })
             : (0, a.jsx)(rt, {
                 children: (0, a.jsx)(x.t, {
                   position: "center",
                   size: "xlarge",
-                  string: (0, A.we)("#Loading"),
+                  string: (0, w.we)("#Loading"),
                 }),
               });
         });
-      var xt = n(82429),
-        vt = n(6813),
-        wt = n(97058);
+      var xt = n(6813),
+        vt = n(97058);
       const At = {
           ViewFAQ: (e, t) => `/faqs/${e}/view/${t}*`,
           EditFAQ: (e, t) => `/faqs/${e}/edit/${t}*`,
           DashboardFAQ: (e) => `/faqs/${e}/dashboard`,
           PreviewFAQ: (e, t) => `/faqs/${e}/preview/${t}*`,
         },
-        Ct = (0, s.PA)((e) => {
-          const [t, n] = r.useState(!0);
-          return (
-            r.useEffect(() => {
-              (async () => {
-                await xt.KN.InitGlobal(), n(!1);
-              })();
-            }, []),
-            t
-              ? (0, a.jsx)(x.t, {
-                  position: "center",
-                  size: "medium",
-                  string: (0, A.we)("#Loading"),
-                })
-              : (0, a.jsxs)(a.Fragment, {
-                  children: [
-                    (0, a.jsx)(he, {}),
-                    (0, a.jsxs)(c.dO, {
-                      children: [
-                        (0, a.jsx)(c.qh, {
-                          path: At.ViewFAQ(":vanity_str", ":faqid"),
-                          render: (e) =>
-                            (0, a.jsx)(vt.X, {
-                              config: {
-                                "faqs-root": () => {
-                                  const { faqid: t } = e.match.params,
-                                    n = (0, l.CJ)(t);
-                                  return (0, a.jsx)(_t, { faqid: n });
-                                },
-                              },
-                            }),
-                        }),
-                        (0, a.jsx)(c.qh, {
-                          path: At.EditFAQ(":vanity_str", ":faqid"),
-                          render: (e) =>
-                            (0, a.jsx)(vt.X, {
-                              config: {
-                                "faqs-root": () => {
-                                  const { faqid: t } = e.match.params;
-                                  if (t) {
-                                    const e = (0, l.CJ)(t);
-                                    return e
-                                      ? (0, a.jsx)(Xe, { faqid: e })
-                                      : (0, a.jsx)(c.rd, {
-                                          push: !0,
-                                          to: g(i.k_eCommunityDashboard),
-                                        });
-                                  }
-                                  return (0, a.jsx)(ae, {});
-                                },
-                              },
-                            }),
-                        }),
-                        (0, a.jsx)(c.qh, {
-                          path: At.DashboardFAQ(":vanity_str"),
-                          render: (e) =>
-                            (0, a.jsx)(vt.X, {
-                              config: { "faqs-root": () => (0, a.jsx)(ae, {}) },
-                            }),
-                        }),
-                        (0, a.jsx)(c.qh, {
-                          path: At.PreviewFAQ(":vanity_str", ":faqid"),
-                          render: (e) =>
-                            (0, a.jsx)(vt.X, {
-                              config: {
-                                "faqs-root": () => {
-                                  const { faqid: t } = e.match.params,
-                                    n = (0, l.CJ)(t);
-                                  return (0, a.jsx)(pt, { faqid: n });
-                                },
-                              },
-                            }),
-                        }),
-                        (0, a.jsx)(c.qh, { component: wt.a }),
-                      ],
-                    }),
-                  ],
-                })
-          );
-        });
+        wt = (0, s.PA)((e) =>
+          (0, a.jsxs)(a.Fragment, {
+            children: [
+              (0, a.jsx)(he, {}),
+              (0, a.jsxs)(c.dO, {
+                children: [
+                  (0, a.jsx)(c.qh, {
+                    path: At.ViewFAQ(":vanity_str", ":faqid"),
+                    render: (e) =>
+                      (0, a.jsx)(xt.X, {
+                        config: {
+                          "faqs-root": () => {
+                            const { faqid: t } = e.match.params,
+                              n = (0, l.CJ)(t);
+                            return (0, a.jsx)(_t, { faqid: n });
+                          },
+                        },
+                      }),
+                  }),
+                  (0, a.jsx)(c.qh, {
+                    path: At.EditFAQ(":vanity_str", ":faqid"),
+                    render: (e) =>
+                      (0, a.jsx)(xt.X, {
+                        config: {
+                          "faqs-root": () => {
+                            const { faqid: t } = e.match.params;
+                            if (t) {
+                              const e = (0, l.CJ)(t);
+                              return e
+                                ? (0, a.jsx)(Xe, { faqid: e })
+                                : (0, a.jsx)(c.rd, {
+                                    push: !0,
+                                    to: g(i.k_eCommunityDashboard),
+                                  });
+                            }
+                            return (0, a.jsx)(ae, {});
+                          },
+                        },
+                      }),
+                  }),
+                  (0, a.jsx)(c.qh, {
+                    path: At.DashboardFAQ(":vanity_str"),
+                    render: (e) =>
+                      (0, a.jsx)(xt.X, {
+                        config: { "faqs-root": () => (0, a.jsx)(ae, {}) },
+                      }),
+                  }),
+                  (0, a.jsx)(c.qh, {
+                    path: At.PreviewFAQ(":vanity_str", ":faqid"),
+                    render: (e) =>
+                      (0, a.jsx)(xt.X, {
+                        config: {
+                          "faqs-root": () => {
+                            const { faqid: t } = e.match.params,
+                              n = (0, l.CJ)(t);
+                            return (0, a.jsx)(pt, { faqid: n });
+                          },
+                        },
+                      }),
+                  }),
+                  (0, a.jsx)(c.qh, { component: vt.a }),
+                ],
+              }),
+            ],
+          }),
+        );
     },
     42519: (e, t, n) => {
       "use strict";
@@ -3773,8 +3758,8 @@ License: MIT
       function x(e) {
         var t, n;
         const { editModel: u } = e,
-          [x, w] = a.useState(g.xPp),
-          [A, C] = a.useState(!1),
+          [x, A] = a.useState(g.xPp),
+          [w, C] = a.useState(!1),
           [j, b] = a.useState(null),
           E = u.GetClanSteamID(),
           L = u.GetGID(),
@@ -3791,10 +3776,10 @@ License: MIT
           y = (0, m.IW)(E.ConvertTo64BitString(), L, x);
         return S.isLoading
           ? null
-          : (0, i.jsxs)(l.E, {
+          : (0, i.jsxs)(l.Eb, {
               clanSteamID: e.editModel.GetClanSteamID(),
               children: [
-                (0, i.jsx)(_.mt, { active: A, children: (0, i.jsx)(f.t, {}) }),
+                (0, i.jsx)(_.mt, { active: w, children: (0, i.jsx)(f.t, {}) }),
                 (0, i.jsxs)("div", {
                   className: h().ValveCrowdInSyncCtn,
                   children: [
@@ -3834,10 +3819,10 @@ License: MIT
                     (0, i.jsx)(v, {
                       onChange: (e) => {
                         const t = e.target.value;
-                        if ("all" === t) w(g.xPp);
+                        if ("all" === t) A(g.xPp);
                         else {
                           const e = (0, g.sfN)(t);
-                          w(e);
+                          A(e);
                         }
                       },
                     }),
@@ -3894,7 +3879,7 @@ License: MIT
     },
     25228: (e, t, n) => {
       "use strict";
-      n.d(t, { Yg: () => A, t3: () => C });
+      n.d(t, { Yg: () => w, t3: () => C });
       var i = n(7850),
         a = n(40323),
         s = n.n(a),
@@ -3912,8 +3897,8 @@ License: MIT
         p = n(61859),
         x = n(87669),
         v = n(32754),
-        w = n(96471);
-      const A = (e) => {
+        A = n(96471);
+      const w = (e) => {
           const t = (t, n) => {
             t.preventDefault();
             const {
@@ -4029,7 +4014,7 @@ License: MIT
                   window,
                 );
             },
-            A = async (t) => {
+            w = async (t) => {
               let i = t.target.files;
               if (i && i.length > 0) {
                 n(!0);
@@ -4110,23 +4095,23 @@ License: MIT
             ),
             toolTipContent: e.strToolTip,
             children: (0, i.jsxs)("label", {
-              className: w.ImportButton,
+              className: A.ImportButton,
               htmlFor: "importlocalization",
               children: [
                 t && (0, i.jsx)(g.t, { size: "small" }),
                 (0, i.jsx)("div", {
-                  className: w.Label,
+                  className: A.Label,
                   children: (0, p.we)(
                     e.strLabel ? e.strLabel : "#Localization_Import_Btn",
                   ),
                 }),
                 (0, i.jsx)("input", {
                   id: "importlocalization",
-                  className: w.ImportButton,
+                  className: A.ImportButton,
                   style: { display: "none" },
                   type: "file",
-                  onSubmit: A,
-                  onChange: A,
+                  onSubmit: w,
+                  onChange: w,
                   multiple: !0,
                 }),
               ],

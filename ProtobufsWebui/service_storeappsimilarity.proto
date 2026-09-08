@@ -1,9 +1,9 @@
-import "common_base.proto";
 import "common.proto";
+import "common_base.proto";
 
 message CStoreAppSimilarity_IdentifyClustersFromPlaytime_Request {
 	optional fixed64 steamid = 1;
-	optional int32 sort = 2 [default = Identifier, (.description) = "enum"];
+	optional int32 sort = 2 [default = 1, (.description) = "enum"];
 	optional int32 clusters_to_return = 3;
 	optional int32 cluster_index = 4;
 	optional .StoreBrowseContext context = 10;
@@ -64,7 +64,7 @@ message StoreAppSimilarityPriorityOptions {
 	optional int32 playtime_max_seconds = 10 [default = 360000];
 	optional int32 playtime_max_games = 11 [default = 3];
 	optional double playtime_score_factor = 12 [default = 0.9];
-	optional int32 popularity_factor = 20 [default = Identifier, (.description) = "enum"];
+	optional int32 popularity_factor = 20 [default = 5, (.description) = "enum"];
 	optional int32 popularity_reciprocal = 21 [default = 10000];
 	optional int64 popularity_base_score = 22 [default = 5000000];
 	optional uint32 played_since = 23;

@@ -1,6476 +1,5135 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(() => {
-  (self.webpackChunkstore = self.webpackChunkstore || []).push([
-    [83276],
-    {
-      94381: (y, ie, o) => {
-        "use strict";
-        o.d(ie, { S: () => k });
-        var e = o(7850),
-          T = o(68031),
-          L = o(31857);
-        function ee(O) {
-          return (0, e.jsx)(L.I, {
-            ...O,
-            viewBoxSize: 16,
-            children: (0, e.jsx)("path", {
-              d: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
-              fill: "currentColor",
+(self.webpackChunkstore = self.webpackChunkstore || []).push([
+  [83276],
+  {
+    21895: (e) => {
+      e.exports = {
+        Root: "_1kIuUssJvopWbHik1IKMG6",
+        "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
+        "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+        "Variant-outline": "wlcXkTKJWe-SE0fCwIRwQ",
+        Disabled: "kLcGKsNxkoEqxgok6YzML",
+        Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
+        Icon: "cngAYeP7ZvFo2pT_v3-xO",
+      };
+    },
+    16619: (e) => {
+      e.exports = {
+        Color: "_2Vc3a-PM4tOhJcD72NEq1U",
+        IconSizeDefault: "_20lX82QaoUw-iHboSsmZBI",
+        "IconSize-1": "_1zRMg9IjPqEIAejKQDDLYW",
+        "IconSize-2": "_3dn_hJnXYKfl38rjqz4y91",
+        "IconSize-3": "_2aoIykgGddbEHeCGgMR79l",
+        "IconSize-4": "_1Ypu_MleveHHMyLy8PVNy",
+        "IconSize-5": "e8vp9esm_uAhUEdfq5zjr",
+        "IconSize-6": "hXAsxCohKrk8qBq6Enfgt",
+        "IconSize-7": "_5TifSVb5dMP2wAaHIDqM_",
+        "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
+        "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
+        HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
+      };
+    },
+    50909: (e) => {
+      e.exports = {
+        SalePageHiddenWarning: "_2h9U3L_8MxvbQ6TGGaeBYa",
+        WarningText: "_2iB5yR1rkdynH8-UFCwUty",
+      };
+    },
+    76789: (e) => {
+      e.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        SalePageLogoCtn: "_3Rukhd1HqXzPiBrK5hwPT-",
+        BackgroundAnimation: "_1xc_h6g1jbrfqXQXHDA2eY",
+        "ItemFocusAnim-darkerGrey-nocolor": "_32Qiunpe7Bq8tRMP7zANIV",
+        "ItemFocusAnim-darkerGrey": "_1jLvKsCp-1NNukUKFcJBiF",
+        "ItemFocusAnim-darkGreySettings": "_2oonpIg6GiNC1fFwAuTeY1",
+        "ItemFocusAnim-darkGrey": "_25MzDFkbrWeDNWxcpYDDqL",
+        "ItemFocusAnim-grey": "_24xCtEhvscRzLJyaNWLeUa",
+        "ItemFocusAnim-translucent-white-10": "_191r_XeIDZJjVtYMrw4vZN",
+        "ItemFocusAnim-translucent-white-20": "_3PT6d0B4zsV60BfrKuIA1r",
+        "ItemFocusAnimBorder-darkGrey": "_1Z9KMCmIY9huHpqwfwRypj",
+        "ItemFocusAnim-green": "_1WZWN5W96O7pMURRF2eleh",
+        focusAnimation: "_2hRoGMM5UsM8oeV-txHPNu",
+        hoverAnimation: "_1YMbPvrOkuzyOJDFmv_N8s",
+      };
+    },
+    71347: (e) => {
+      e.exports = {
+        PresenterDisclaimer: "_3t5Ysy42auAhLs-ZV5jwdF",
+        PresenterLabel: "_2FnM_Y63_Jnu_t6cnt-4se",
+      };
+    },
+    27828: (e) => {
+      e.exports = {
+        EyeDropperCtn: "_5jKe2NV9CM3JA3hcMALLw",
+        EyeDropperBtn: "_3afPQT_fEWmhHhFHS-WIk7",
+        ColorPickerCtn: "Nn2-w0eqLuugAR-Udm--3",
+        ColorPickerDialog: "_32PwNSgquR6tGAPIBcWgVq",
+      };
+    },
+    64387: (e) => {
+      e.exports = { MenuBackgroundReflection: "_1vclHrINn0CO_nGkxoDkKy" };
+    },
+    32190: (e) => {
+      e.exports = { ColorCtn: "Sf6uEgb-RsQVL8-DaDtRl" };
+    },
+    13447: (e) => {
+      e.exports = {
+        Ctn: "_2Un11RfkRCG1ypLwtwMzrI",
+        CtnEditor: "_1_IJ41Ffm67VU1UXLllw1C",
+        SwapColorsCtn: "_2n77ZzDS9tVkdreDY75XWS",
+        EditorTitle: "SxztzVEl1Jvth4-DhCzea",
+        ConfDialogOptions: "_1SQN7pP2X-HClw-EOdtut1",
+        ImageOptions: "_3pRF8ln193eBQJlbd8WJih",
+        ColorOptions: "_2zPsCFzA78zGnQWaKhLIr9",
+      };
+    },
+    81557: (e) => {
+      e.exports = {
+        TabCtn: "d43sj0ExWatSivXsOo2Qx",
+        TabHeader: "_2CnSAWQAuZ56_k9CtX6wvO",
+      };
+    },
+    53732: (e) => {
+      e.exports = {
+        ImageWrapperContainer: "_2or51Nzh1oEwvdNjKQ1XsS",
+        ImageWrapper: "_34WcpEIVKr8Z72GaesGoR4",
+        VideoBackground: "_3IizOeZqT1lZaoPEmdVxG",
+        ImageWrapperFilename: "_3_vYFjDjTuDvhsL10XO9BU",
+        ResultNotification: "_1X95b1CVvEsEa5dfoR5Pfv",
+        ErrorCode: "_-7Alg3skQ6oFTYIpKTHsI",
+        Hilight: "_3lBJMYeg4_hihNl0QTX1Qi",
+        ImageButton: "_2MUWDtjaZWaMDdJaQr4o5a",
+        Thumb: "_3M02zvAfoMwX5XlzlvFkc3",
+        Full: "_1RN-YKVciU9zYHOYX6OV0",
+        Delete: "_1X87fLS_CT0g2Vu5-fClUZ",
+        FloatingThrobber: "_2EHZ15YQSAK_T5SCxVobtG",
+        Localized: "_3FFrtt5Of4jP9unTFjYiHs",
+        ClanImageGrid: "_3J5Yc20Wkz7gjSxxWcHst",
+        ClanImageGridItem: "_1vXdD6QZTKcjYoRTOAuOeX",
+        Selected: "_3JVN2Ta1MlQnuMnqPo0XR8",
+        ImgCtn: "_248ADrw9QzPyhcxjqlaykT",
+        Name: "TzsVI0_4scOG258SCeyqz",
+      };
+    },
+    9709: (e) => {
+      e.exports = {
+        TitleImg: "_3E4IFPQP4lnTaJ8fo462Br",
+        PreviewImg: "_2COOlV_DzUDN3N0P3ToybN",
+        ArtworkBar: "_3OWH-tupjKqql_tcQsLYIp",
+      };
+    },
+    71647: (e) => {
+      e.exports = {
+        DragAndDropContainer: "_2RL1a79W53-tCW7090DcUp",
+        DragAndDropContainerDragging: "wn604fTvW5SH1o852jAnI",
+        ImageUploadBar: "_2Zk7b2c_FLMvZPqYvzTzt5",
+        SelectImageButton: "_3Cd9cpywFS-01PilCrgOQo",
+      };
+    },
+    49460: (e) => {
+      e.exports = {
+        SearchInput: "z7qI4Gjuleb-g6osRQpw2",
+        PickerTitle: "_1yPqhNpX8e1HgnrarYmsZg",
+      };
+    },
+    27344: (e) => {
+      e.exports = {
+        ImageDimensionTooSmall: "_1A6oRywbsuzGxawqTexX6G",
+        UploadPreviewCtn: "_1x7wvgGW08t0c2auyfWyAs",
+        UploadPreviewButtonsCtn: "_2Vsz0Teq375iSLvbdoaCw0",
+        UploadPreviewDelete: "_1898rmbQKDsZukkFbEda-H",
+        UploadPreviewButton: "wUyDKp6qikfxWISsHWYI5",
+        UploadPreviewError: "_2sh7mSiQmyBdLyJPYPva2L",
+        UploadPreviewWarning: "-khhIHR9pWYus_nTScWdO",
+        UploadPreviewMessage: "_3kt_NxdtRh4OR_iFeApvM9",
+        UploadPreview: "_3dSNtZdgIHIa6P9ZODRBJs",
+        PreviewImgCtn: "a4db1xuziijkLJ6HQXeEs",
+        PreviewImgInfo: "ddYEDOKiU6ZFhNI4sb_eQ",
+      };
+    },
+    25359: (e) => {
+      e.exports = {
+        EventEditorArtworkCtn: "_3etoSeNgIJIJoQjVvKBkdK",
+        ArtworkPreview: "_1fBG8S7L5v1-Ll8UMASqW5",
+        EventEditorArtworkBarContainer: "TLT1tvLtG6-1EdFGwToo1",
+        EventEditorButton: "_2EbfH5kGhG6VdMYM0aSFsw",
+        EventEditorInputPaneTopRow: "_3loSsH7QVVzJW4dbA_k8pH",
+        EventCoverImageCtn: "vcULy1uwr1V-xetzQ3t5_",
+        DragTarget: "_2qaqHaHt0FsJ5g6E50Rpbn",
+        DragOnTopOfMe: "_1-0mEm0at-4Czr10kmQ82K",
+        EventEditorArtworkTextCtn: "wbzVx6PSPvY3jxjmybwT7",
+        EventEditorDragTargetArea: "_352Z7ynHHExwu7pbLG0mi3",
+        EventEditorArtworkTitle: "_1BtkzIs3COLhdqubhPqTJa",
+        EventEditorArtworkSubTitle: "_3NsjbDpfSxc8ZHhYE5TuTv",
+        EventEditorArtworkResolution: "pScoegXLiCfPTrVdDHgRc",
+        ReassignCtn: "_2kzxUHYwRnfLZc2qUJp54m",
+        ImagePreviewContainer: "_4M__i4jyU9-VJE6K30Rat",
+        NoneSet: "csDC3rD7ooQ8gGXZhh594",
+        TitleSafePreview: "_2Gel5eBC4smzhCMPJN4poX",
+        TitleSafeCaption: "_2oU3ulhvWy8BrTtr-wLTHL",
+        LanguageSelector: "_33sdnBObDSgcIemY_8d188",
+        LanguageSelectorSelected: "_35iac6gVYl3NbfLM5oGhAp",
+        LanguageSelectorNoData: "_2MrExNFgrVVmzV4_XxWk7m",
+        LanguageContainer: "_1GqYxNpFolOmvCXZZ5SqS9",
+        LanguageOptions: "_1OF4inXEccSHpEi-94BNyB",
+        LanguageListContainer: "_2NKwVWWJzUopyzUpm5K8PU",
+        SelectImageContainerTopRow: "_33RDQ6gt9hW0N3baDbAfnl",
+        SelectImageContainerBottomRow: "_3Mstp8zLfqhPc0yqJGve2N",
+        TextTitle: "_1b_OxtjP85MZc-IlQfnnHR",
+        TextSubTitle: "EqzVNygGbzsiBalSQOtWy",
+        SelectImageEqualColumns: "Qz0mmjcnBMcs99N6fgVCv",
+        SelectImageBlock: "X_wtWeV0nNEF-9Rz0wZRL",
+        MainPreviewBlock: "_3kAV8hXf4G70C4tDE8HDjI",
+        Tips: "_2jAkKq9D5KKOH2cgMu59yN",
+        ExamplesCtn: "WiG3FOkzY58mDmTzVy40z",
+        SelectImageExampleImg: "_3Lcquzc_EacniSS2QxdUHx",
+        SelectImageLanguagesCtn: "_27huHYrHSwivfUIglfRube",
+        SelectImageTitle: "lJEQ6yKHtjwXClD4NVqUY",
+        ArtworkSelectorContainer: "_2dxWXru9IFUHuJgzC9_WwQ",
+        Title: "_2HiqsrLG8k4zf4raXVygUP",
+        SaleHeaderExampleCtn: "_2Nwi2WWTWdc4JkMEiHDFFK",
+        SaleHeaderExampleCol: "_2s4zAjRHJabF47kK9uxCY6",
+        BroadcastPreview: "_3NxzN3dNq98rjVdkyQ9QIH",
+        AssetExampleSpotlightCtn: "_29B1UOzVRMVZSd22IyP43x",
+        BackgroundConfigCtn: "_3SVRvFP-sXikNXmksKkDQ7",
+        OptionCtn: "_2XnObldRTEs5T4Sswyv5Fo",
+        ButtonRow: "_2W9rAanKV4V6A7Exx4sWGF",
+        BackgroundColorBtn: "_2YD-avez2pqO4MJHAO5_v0",
+        BackgroundColorResetBtn: "baRhk4ouyxcNfo_um5C76",
+        UploadSuccess: "inXVzuN-asDe-A5jnsvvV",
+        HighlightBox: "_3qTodEPOW76BNBFtgX0AUa",
+      };
+    },
+    79949: (e) => {
+      e.exports = {
+        MultipleExampleContainer: "_3HrpHSdcqC7wp8s07bOS2l",
+        ExampleSectionTitle: "MxxIR01BbdH_tAWmTbjoz",
+        DetailPageExample: "_3Mi3a8sT7hZn6-L_TPm3gr",
+        DetailExample: "TYQJH_hhcEuSRvl75g6GA",
+        DetailExample2: "HQAziOChjZK2M_cKTNA8",
+        MainImageCtn: "_1mRJSs13tWFRJ55fG6WrK8",
+        ExampleBodyPosition: "_2wNW_eWECTcvaYU7AYXXY2",
+        ExampleContentCtn: "_2bAs9Bkh1K8PYVhcLLerfA",
+        TextTitle: "_3fulSVNkgCeQyqxT0FjHOp",
+        TextSubTitle: "_3ThX6fPp7MJY_TrTP_RCRY",
+        TextBody: "_2nG13rbAd05OnozWt7nQWL",
+        SpotlightExample: "_3KsBV1q-e0ZnxgK9GdUiON",
+        ExampleSpacer: "oAEZygc5smKi6PjD-981",
+        BroadcastPreviewContainer: "_3aLcrZxS4I4KVtUF0BdHds",
+        SaleHeaderPreviewContainer: "GORXZE3lrdjE-QiVxXceW",
+      };
+    },
+    15496: (e) => {
+      e.exports = {
+        narrowWidth: "500px",
+        "duration-app-launch": "800ms",
+        ReadMoreLink: "_2mvgc6dpEDHRJlTWhGDz7h",
+        MajorEventContainer: "dVJB2r43CGIAgr-Xtt4P3",
+        MajorEventImageContainer: "_1PkTBeZJVs3WI8US0zffEx",
+        MajorEventImage: "_25fL1JQcG1kh_9L5danMxc",
+        BottomShadow: "_1ueE9cjv0hzERo311Gr6qL",
+        MajoreEventImageContentContainer: "_3mREW5LJ_7jyeol7BtXcym",
+        MajorEventImageTemplate: "lQR9_4nAXfydIY7zwOzSF",
+        MajorEventBackground: "_388IuJImOHcpIL9kvqJdet",
+        MajorEventImageBackgroundBlur: "_3sVs6YBElnuTON_cY_6ne5",
+        MajorEventHeader: "_1HL2nt3zhHJo3RkMzmD-Gb",
+        PartnerEventLargeImage_Title: "bYwbk-ycz_n2JnQgyrgDx",
+        EventType: "_3zVyXPaFJl95Q5qnxtDpuB",
+        GameIconAndName: "IltgR1LrH0neRnKq0TLxy",
+        GameIcon: "_3Dkj3XaiQV2I1d2m-RRA_L",
+        MajorEventSpotlightBackground: "_1ahePoGx6gPXhapzZw2L21",
+        MajorEventContent: "_2nr7NuawYs9NhC8OUkY0fK",
+        MajorEventTextCtn: "Ojdg2vBD3O1oroxYVU2zB",
+        MajorEventTitle: "nEBZT02OOnxIbyIl9Dk44",
+        MajorEventSummary: "HPngOFPPykmeXFSxcC1Zv",
+        MajorEvent_Ctn: "_2_kU7nUB6wwDu-LsbQZmNc",
+        AppDetailsSpotlightContainer: "_1zDJ1bfFg-UkuAluUAoGKj",
+        BackgroundAnimation: "_2zmvTGYcnxB2bhgSNFXnSi",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2DCLV3hUeBViGvq3yTsiQE",
+        "ItemFocusAnim-darkerGrey": "_1iMoXsAEHqrsXXcoaw1SIy",
+        "ItemFocusAnim-darkGreySettings": "_23bSFoV4nDLAGl_G32zEdY",
+        "ItemFocusAnim-darkGrey": "_1_Uo-zxJJlBTZyvRjgeG4_",
+        "ItemFocusAnim-grey": "_3AjpDoqzZuBj6F7fMiO2Q-",
+        "ItemFocusAnim-translucent-white-10": "_3PpKBwmAjZpmyTB-ooDvNd",
+        "ItemFocusAnim-translucent-white-20": "_2k5z_bdbdZRy3o_pIFzFBF",
+        "ItemFocusAnimBorder-darkGrey": "DuzyT2w758OaPfDpfQkO6",
+        "ItemFocusAnim-green": "kF7es13166bQnCHSRaw6l",
+        focusAnimation: "_3lfKCkcI6nWWMWFgLOGbyh",
+        hoverAnimation: "_24fZDwdgB8kUq2hGCnbx88",
+      };
+    },
+    64734: (e) => {
+      e.exports = {
+        SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
+        SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
+        required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
+      };
+    },
+    57757: (e, n, a) => {
+      "use strict";
+      a.d(n, { S: () => g });
+      var t = a(7850),
+        o = a(83392),
+        r = a(40704);
+      function i(e) {
+        return (0, t.jsx)(r.I, {
+          ...e,
+          viewBoxSize: 16,
+          children: (0, t.jsx)("path", {
+            d: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+      var s = a(21895),
+        l = a(64238),
+        c = a.n(l),
+        d = a(66922);
+      function g(e) {
+        const {
+            checked: n,
+            onChange: a,
+            disabled: r,
+            children: l,
+            ref: g,
+            variant: p,
+            color: _,
+            align: h = "center",
+            ...x
+          } = e,
+          v = "indeterminate" === n,
+          I = v ? m : i,
+          b = () => {
+            r || (a && a(!!v || !n));
+          },
+          j = (0, d.f)("Checkbox", p);
+        return (0, t.jsxs)(o.s, {
+          align: h,
+          ref: g,
+          role: "checkbox",
+          "aria-checked": v ? "mixed" : n,
+          "data-state": u(n),
+          className: c()(s.Root, s[`Variant-${j}`], r && s.Disabled),
+          onClick: b,
+          tabIndex: 0,
+          onKeyDown: (e) => {
+            r ||
+              (" " === e.key && (b(), e.preventDefault(), e.stopPropagation()));
+          },
+          cursor: "default",
+          "aria-disabled": r,
+          "data-accent-color": _,
+          ...x,
+          children: [
+            (0, t.jsx)("div", {
+              className: s.Checkbox,
+              children: n && (0, t.jsx)(I, { className: s.Icon }),
             }),
-          });
-        }
-        var oe = o(21895),
-          K = o(64238),
-          se = o.n(K),
-          R = o(80549);
-        function k(O) {
-          const {
-              checked: J,
-              onChange: N,
-              disabled: F,
-              children: X,
-              ref: A,
-              variant: Y,
-              color: ge,
-              align: fe = "center",
-              ...Z
-            } = O,
-            Q = J === "indeterminate",
-            f = Q ? pe : ee,
-            b = () => {
-              F || (N && N(Q ? !0 : !J));
-            },
-            z = (de) => {
-              F ||
-                (de.key === " " &&
-                  (b(), de.preventDefault(), de.stopPropagation()));
-            },
-            W = (0, R.f)("Checkbox", Y);
-          return (0, e.jsxs)(T.s, {
-            align: fe,
-            ref: A,
-            role: "checkbox",
-            "aria-checked": Q ? "mixed" : J,
-            "data-state": h(J),
-            className: se()(oe.Root, oe[`Variant-${W}`], F && oe.Disabled),
-            onClick: b,
-            tabIndex: 0,
-            onKeyDown: z,
-            cursor: "default",
-            "aria-disabled": F,
-            "data-accent-color": ge,
-            ...Z,
-            children: [
-              (0, e.jsx)("div", {
-                className: oe.Checkbox,
-                children: J && (0, e.jsx)(f, { className: oe.Icon }),
-              }),
-              X,
-            ],
-          });
-        }
-        function h(O) {
-          return O === "indeterminate" ? O : O ? "checked" : "unchecked";
-        }
-        function pe(O) {
-          return (0, e.jsx)("svg", {
-            viewBox: "0 0 16 16",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            children: (0, e.jsx)("path", {
-              d: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
-              fill: "currentColor",
-            }),
-          });
-        }
-      },
-      31857: (y, ie, o) => {
-        "use strict";
-        o.d(ie, { I: () => K });
-        var e = o(7850),
-          T = o(69289),
-          L = o(8928),
-          ee = o(16619),
-          oe = o.n(ee);
-        function K(R) {
-          const { viewBoxSize: k = 20, ...h } = R,
-            pe = h.size ? void 0 : ee.IconSizeDefault;
-          return (0, e.jsx)("svg", {
-            viewBox: `0 0 ${k} ${k}`,
-            ...(0, T.mz)({ className: pe, ...h }, se),
-          });
-        }
-        const se = [
-          ...L.L,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (R) => ee[`IconSize-${R}`],
-          },
-          {
-            prop: "color",
-            className: ee.Color,
-            cssProperty: (R) => ["--icon-color", (0, T.w7)(R)],
-          },
-          {
-            prop: "hitSlop",
-            className: ee.HitSlop,
-            cssProperty: (R) => [
-              "--hit-slop-custom",
-              typeof R == "string" ? R : "",
-            ],
-          },
-          L.h.find(({ prop: R }) => R === "cursor"),
-        ];
-      },
-      71698: (y, ie, o) => {
-        "use strict";
-        o.d(ie, { H: () => ee, s: () => oe });
-        var e = o(90626),
-          T = o(41623);
-        let L = 0;
-        function ee(K, se) {
-          (0, e.useEffect)(() => {
-            if (!(K || se))
-              return (
-                L++,
-                () => {
-                  --L == 0 && (0, T.s)();
-                }
-              );
-          }, [K, se]);
-        }
-        function oe(K) {
-          const [se, R] = (0, e.useState)(!1);
-          (0, e.useEffect)(() => {
-            const k = window.setTimeout(() => R(!0), K);
-            return () => window.clearTimeout(k);
-          }, [K]),
-            ee(se);
-        }
-      },
-      37656: (y, ie, o) => {
-        "use strict";
-        o.d(ie, { w: () => Z });
-        var e = o(41735),
-          T = o.n(e),
-          L = o(14947),
-          ee = o(65946),
-          oe = o(90626),
-          K = o(27066),
-          se = o(8323),
-          R = o(30096),
-          k = o(3166),
-          h = Object.defineProperty,
-          pe = Object.getOwnPropertyDescriptor,
-          O = (Q, f, b, z) => {
-            for (
-              var W = z > 1 ? void 0 : z ? pe(f, b) : f, de = Q.length - 1, ve;
-              de >= 0;
-              de--
-            )
-              (ve = Q[de]) && (W = (z ? ve(f, b, W) : ve(W)) || W);
-            return z && W && h(f, b, W), W;
-          };
-        const J = class Ln {
-          constructor() {
-            (0, L.Gn)(this);
-          }
-          giveaway_id = void 0;
-          seconds_until_drawing = void 0;
-          rtime_start = void 0;
-          rtime_end = void 0;
-          closed = void 0;
-          winner_count = void 0;
-          BIsValid() {
-            return this.giveaway_id !== void 0 && this.giveaway_id !== null;
-          }
-          BStarted() {
-            return (
-              this.BIsValid() &&
-              (this.seconds_until_drawing >= 0 || this.winner_count > 0)
-            );
-          }
-          clone() {
-            const f = new Ln();
-            return (
-              (f.giveaway_id = this.giveaway_id),
-              (f.seconds_until_drawing = this.seconds_until_drawing),
-              (f.rtime_start = this.rtime_start),
-              (f.rtime_end = this.rtime_end),
-              (f.closed = this.closed),
-              (f.winner_count = this.winner_count),
-              f
-            );
-          }
+            l,
+          ],
+        });
+      }
+      function u(e) {
+        return "indeterminate" === e ? e : e ? "checked" : "unchecked";
+      }
+      function m(e) {
+        return (0, t.jsx)("svg", {
+          viewBox: "0 0 16 16",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, t.jsx)("path", {
+            d: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+    },
+    40704: (e, n, a) => {
+      "use strict";
+      a.d(n, { I: () => s });
+      var t = a(7850),
+        o = a(11526),
+        r = a(75659),
+        i = a(16619);
+      function s(e) {
+        const { viewBoxSize: n = 20, ...a } = e,
+          r = a.size ? void 0 : i.IconSizeDefault;
+        return (0, t.jsx)("svg", {
+          viewBox: `0 0 ${n} ${n}`,
+          ...(0, o.mz)({ className: r, ...a }, l),
+        });
+      }
+      const l = [
+        ...r.L,
+        { prop: "size", responsive: !0, className: (e) => i[`IconSize-${e}`] },
+        {
+          prop: "color",
+          className: i.Color,
+          cssProperty: (e) => ["--icon-color", (0, o.w7)(e)],
+        },
+        {
+          prop: "hitSlop",
+          className: i.HitSlop,
+          cssProperty: (e) => [
+            "--hit-slop-custom",
+            "string" == typeof e ? e : "",
+          ],
+        },
+        r.h.find(({ prop: e }) => "cursor" === e),
+      ];
+    },
+    96859: (e, n, a) => {
+      "use strict";
+      a.d(n, { Sm: () => l, U: () => i, r3: () => d });
+      var t = a(62641),
+        o = a(17720),
+        r = a(44165);
+      function i(e, n, a) {
+        const i = new t.lh();
+        return (
+          (i.type = n),
+          (i.clanSteamID = o.b.InitFromClanID(e)),
+          (i.GID = "fakeevent_" + s++),
+          (i.visibility_state = t.zv.k_EEventStateUnlisted),
+          (i.visibilityStartTime = (0, r.sB)() - 1),
+          (i.jsondata.bSaleEnabled = !0),
+          (i.jsondata.sale_vanity_id_valve_approved_for_sale_subpath = !0),
+          (i.jsondata.sale_vanity_id = a),
+          (i.jsondata.sale_header_offset = 0),
+          (i.jsondata.sale_header_disable_top_margin = !1),
+          i
+        );
+      }
+      let s = 1234;
+      function l(e, n) {
+        return {
+          unique_id: s++,
+          capsules: [],
+          events: [],
+          links: [],
+          section_type: e,
+          localized_label: [],
+          default_label: n,
         };
-        O([L.sH], J.prototype, "giveaway_id", 2),
-          O([L.sH], J.prototype, "seconds_until_drawing", 2),
-          O([L.sH], J.prototype, "rtime_start", 2),
-          O([L.sH], J.prototype, "rtime_end", 2),
-          O([L.sH], J.prototype, "closed", 2),
-          O([L.sH], J.prototype, "winner_count", 2);
-        let N = J;
-        const F = class tt {
-          constructor() {
-            (0, L.Gn)(this);
-          }
-          m_mapGiveawayIDToNextDrawInfo = new Map();
-          m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map();
-          m_bLoadedFromConfig = !1;
-          m_mapNextDrawChangeCallback = new Map();
-          GetKey(f, b) {
-            return f + "_" + b;
-          }
-          GetInfoByInstance(f, b) {
-            return this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(
-              this.GetKey(f, b),
-            );
-          }
-          GetNextDrawChangeCallback(f) {
-            return (
-              this.m_mapNextDrawChangeCallback.has(f) ||
-                this.m_mapNextDrawChangeCallback.set(f, new se.lu()),
-              this.m_mapNextDrawChangeCallback.get(f)
-            );
-          }
-          CopyToGiveaway(f, b) {
-            b.closed != f.closed && (b.closed = f.closed),
-              b.giveaway_id != f.giveaway_id && (b.giveaway_id = f.giveaway_id),
-              b.rtime_start != f.rtime_start && (b.rtime_start = f.rtime_start),
-              b.rtime_end != f.rtime_end && (b.rtime_end = f.rtime_end),
-              b.winner_count != f.winner_count &&
-                (b.winner_count = f.winner_count),
-              b.seconds_until_drawing != f.seconds_until_drawing &&
-                (b.seconds_until_drawing = f.seconds_until_drawing);
-          }
-          async ReloadGiveaway(f, b) {
-            if (!f) return null;
-            let z = k.TS.STORE_BASE_URL + "prizes/nextdraw/" + f,
-              W = null,
-              de = { origin: self.origin };
-            return (
-              (W = await T().get(z, { params: de })),
-              (0, L.h5)(() => {
-                if (
-                  (this.m_mapGiveawayIDToNextDrawInfo.has(f) ||
-                    this.m_mapGiveawayIDToNextDrawInfo.set(f, new N()),
-                  this.CopyToGiveaway(
-                    W.data,
-                    this.m_mapGiveawayIDToNextDrawInfo.get(f),
-                  ),
-                  b !== void 0)
-                ) {
-                  const ve = this.GetKey(f, b);
-                  this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(ve) ||
-                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(
-                      ve,
-                      new N(),
-                    ),
-                    this.CopyToGiveaway(
-                      W.data,
-                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(ve),
-                    );
-                }
-              }),
-              this.GetNextDrawChangeCallback(f).Dispatch(
-                this.m_mapGiveawayIDToNextDrawInfo.get(f),
-              ),
-              this.m_mapGiveawayIDToNextDrawInfo.get(f)
-            );
-          }
-          static s_Singleton;
-          static Get() {
-            return (
-              tt.s_Singleton ||
-                ((tt.s_Singleton = new tt()), tt.s_Singleton.Init()),
-              tt.s_Singleton
-            );
-          }
-          Init() {
-            if (!this.m_bLoadedFromConfig) {
-              let f = (0, k.Tc)("giveawaynextdraw", "application_config");
-              if (f && f.giveaway_id) {
-                let b = new N();
-                this.CopyToGiveaway(f, b),
-                  this.m_mapGiveawayIDToNextDrawInfo.set(f.giveaway_id, b);
-              }
-              this.m_bLoadedFromConfig = !0;
-            }
-          }
-        };
-        O([L.sH], F.prototype, "m_mapGiveawayIDToNextDrawInfo", 2),
-          O([L.XI], F.prototype, "CopyToGiveaway", 1);
-        let X = F;
-        const A = class fn {
-          m_intervalID;
-          m_intervalCountDownID;
-          static s_GlobalInstance = 0;
-          m_myInstanceNumber = 0;
-          constructor() {
-            (this.m_myInstanceNumber = fn.s_GlobalInstance),
-              (fn.s_GlobalInstance += 1);
-          }
-          ClearRefreshInterval() {
-            this.m_intervalID &&
-              (window.clearInterval(this.m_intervalID),
-              (this.m_intervalID = void 0));
-          }
-          ClearCountDown() {
-            this.m_intervalCountDownID &&
-              (window.clearInterval(this.m_intervalCountDownID),
-              (this.m_intervalCountDownID = void 0));
-          }
-          SetupRefreshDataInterval(f, b) {
-            if ((this.ClearRefreshInterval(), !f.closed)) {
-              let z =
-                f.seconds_until_drawing <= 0 && f.winner_count == 0 ? 6e4 : 5e3;
-              this.m_intervalID = window.setInterval(b, z);
-            }
-          }
-          SetupCountDown(f, b) {
-            f > 0 && (this.m_intervalCountDownID = window.setInterval(b, 1e3));
-          }
-        };
-        O([K.o], A.prototype, "ClearRefreshInterval", 1),
-          O([K.o], A.prototype, "ClearCountDown", 1),
-          O([K.o], A.prototype, "SetupRefreshDataInterval", 1),
-          O([K.o], A.prototype, "SetupCountDown", 1);
-        let Y = A;
-        function ge(Q, f) {
-          const b = X.Get().GetInfoByInstance(Q, f.m_myInstanceNumber);
-          (b.seconds_until_drawing -= 1),
-            b.seconds_until_drawing == 0 && f.ClearCountDown();
-        }
-        function fe(Q, f) {
-          const b = X.Get().GetInfoByInstance(Q, f.m_myInstanceNumber);
-          b &&
-            b.BIsValid() &&
-            b.seconds_until_drawing <= 0 &&
-            !b.closed &&
-            (f.ClearCountDown(),
-            X.Get()
-              .ReloadGiveaway(Q, f.m_myInstanceNumber)
-              .then((z) => {
-                f.SetupCountDown(z.seconds_until_drawing, () => ge(Q, f));
-              }));
-        }
-        function Z(Q) {
-          const [f] = (0, oe.useState)(new Y()),
-            b = (0, R.CH)();
-          (0, oe.useEffect)(
-            () => (
-              X.Get()
-                .ReloadGiveaway(Q, f.m_myInstanceNumber)
-                .then((ke) => {
-                  f.SetupRefreshDataInterval(ke, () => fe(Q, f)),
-                    f.SetupCountDown(ke.seconds_until_drawing, () => ge(Q, f)),
-                    b();
-                }),
-              () => {
-                f.ClearRefreshInterval(), f.ClearCountDown();
-              }
-            ),
-            [f, Q, b],
-          );
-          const z = X.Get().GetInfoByInstance(Q, f.m_myInstanceNumber),
-            [W, de, ve] = (0, ee.q3)(() => [
-              z?.winner_count,
-              z?.closed,
-              z?.seconds_until_drawing,
-            ]);
-          return {
-            bLoadingGiveawayInfo:
-              !z || z.giveaway_id == null || !z.BStarted() || W === void 0,
-            winner_count: W,
-            closed: de,
-            seconds_until_drawing: ve,
-          };
-        }
-      },
-      21042: (y, ie, o) => {
-        "use strict";
-        o.d(ie, { Sm: () => R, U: () => K, oR: () => pe, r3: () => h });
-        var e = o(73259),
-          T = o(76559),
-          L = o(7582),
-          ee = o(90626),
-          oe = o(7638);
-        function K(O, J, N) {
-          const F = new e.lh();
-          return (
-            (F.type = J),
-            (F.clanSteamID = T.b.InitFromClanID(O)),
-            (F.GID = "fakeevent_" + se++),
-            (F.visibility_state = e.zv.k_EEventStateUnlisted),
-            (F.visibilityStartTime = (0, L.sB)() - 1),
-            (F.jsondata.bSaleEnabled = !0),
-            (F.jsondata.sale_vanity_id_valve_approved_for_sale_subpath = !0),
-            (F.jsondata.sale_vanity_id = N),
-            (F.jsondata.sale_header_offset = 0),
-            (F.jsondata.sale_header_disable_top_margin = !1),
-            F
-          );
-        }
-        let se = 1234;
-        function R(O, J) {
-          return {
-            unique_id: se++,
-            capsules: [],
-            events: [],
-            links: [],
-            section_type: O,
-            localized_label: [],
-            default_label: J,
-          };
-        }
-        const k = "socialcontent_";
-        function h() {
-          return {
-            platforms: [
-              { label: e.Zf.Steam, checked: !0 },
-              { label: e.Zf.Facebook, checked: !0 },
-              { label: e.Zf.Twitter, checked: !0 },
-              { label: e.Zf.Reddit, checked: !0 },
-            ],
-            doorsEnabled: !1,
-            content_options: [
-              {
-                unique_id: k + Math.floor(Math.random() * 1e6),
-                door: void 0,
-                twitter_card: e.jR.SummaryLargeImage,
-                localized_option_fields: {
-                  localized_header: [],
-                  title: [],
-                  description: [],
-                  image: [],
-                },
+      }
+      const c = "socialcontent_";
+      function d() {
+        return {
+          platforms: [
+            { label: t.Zf.Steam, checked: !0 },
+            { label: t.Zf.Facebook, checked: !0 },
+            { label: t.Zf.Twitter, checked: !0 },
+            { label: t.Zf.Reddit, checked: !0 },
+          ],
+          doorsEnabled: !1,
+          content_options: [
+            {
+              unique_id: c + Math.floor(1e6 * Math.random()),
+              door: void 0,
+              twitter_card: t.jR.SummaryLargeImage,
+              localized_option_fields: {
+                localized_header: [],
+                title: [],
+                description: [],
+                image: [],
               },
-            ],
-          };
-        }
-        function pe() {
-          const [O, J] = ee.useState(() => !oe.KN.BIsInited());
-          return (
-            ee.useEffect(() => {
-              (async () => (await Promise.all([oe.KN.InitGlobal()]), J(!1)))();
-            }, []),
-            O
-          );
-        }
-      },
-      91576: (y, ie, o) => {
-        "use strict";
-        o.d(ie, { _: () => Xa });
-        var e = o(7850),
-          T = o(99412),
-          L = o(19298),
-          ee = o(20169),
-          oe = o(28604),
-          K = o(36631),
-          se = o(64387);
-        function R(a) {
-          const { strURL: t } = a;
-          return t
-            ? (0, e.jsx)("div", {
-                className: se.MenuBackgroundReflection,
-                children: (0, e.jsx)("img", { alt: "", src: t }),
-              })
-            : null;
-        }
-        var k = o(65946),
-          h = o(90626),
-          pe = o(73259),
-          O = o(25792),
-          J = o(52393),
-          N = o.n(J),
-          F = o(95695),
-          X = o.n(F),
-          A = o(36707),
-          Y = o(3166),
-          ge = o(82054),
-          fe = o(68266);
-        function Z(a) {
-          const { event: t, bIsPreview: n } = a;
-          let s = t.jsondata.sale_background_video_webm,
-            r = t.jsondata.sale_background_video_mp4;
-          return r || s
-            ? (0, e.jsx)(O.tH, {
-                children: (0, e.jsxs)("video", {
-                  loop: !0,
-                  muted: !0,
-                  autoPlay: !0,
-                  playsInline: !0,
-                  className: (0, A.A)(
-                    N().SaleBackground,
-                    N()[`CustomStyle_${t.jsondata.sale_vanity_id}`],
-                    "SaleBackground",
-                    N().fullscreen_bg_video,
-                  ),
-                  style: {
-                    backgroundColor: n
-                      ? t.jsondata.sale_background_color
-                      : void 0,
-                  },
-                  children: [
-                    s && (0, e.jsx)("source", { src: s, type: "video/webm" }),
-                    r &&
-                      !Y.TS.IN_CLIENT &&
-                      (0, e.jsx)("source", { src: r, type: "video/mp4" }),
-                  ],
-                }),
-              })
-            : null;
-        }
-        function Q(a) {
-          const { event: t, language: n, children: s, bIsPreview: r } = a,
-            i = h.useRef(null),
-            c = (0, fe.m0)(t, "sale_header", n),
-            [u] = (0, k.q3)(() => [t.jsondata.sale_sub_menu]);
-          h.useEffect(() => {
-            if (!c) return;
-            const I = new Image();
-            (I.onload = () => {
-              const x = (100 * I.width) / 950 + "%";
-              i.current && i.current.style.setProperty("--background-scale", x);
-            }),
-              (I.src = c);
-          }, [c]);
-          const d = t.jsondata.sale_sections?.some(
-              (I) => I.section_type === "contenthubmaincarousel",
-            ),
-            m =
-              t.jsondata.item_source_type === pe.w.k_EContentHub &&
-              ((t.jsondata.sale_vanity_id &&
-                t.jsondata.sale_vanity_id.includes("contenthubsalepage_")) ||
-                d),
-            v = c ? `url(${c})` : "none";
-          return (0, e.jsxs)(e.Fragment, {
-            children: [
-              u
-                ? (0, e.jsx)(ge.j, {
-                    event: t,
-                    language: n,
-                    bIsPreview: r,
-                    subMenu: u,
-                    styleVariation: ge.g.k_SubMenu,
-                  })
-                : (0, e.jsx)(R, { strURL: c }),
-              (0, e.jsx)("div", {
-                className: (0, A.A)({
-                  SaleBackgroundCtn: !0,
-                  ContentHubSalePage: m,
-                }),
-                children: (0, e.jsxs)("div", {
-                  className: (0, A.A)(
-                    N()[`CustomStyle_${t.jsondata.sale_vanity_id}`],
-                    "SaleCustomCSS",
-                    N().SaleBackground,
-                    "SaleBackground",
-                  ),
-                  style: {
-                    display: "flex",
-                    position: "relative",
-                    flexDirection: "column",
-                    backgroundColor: t.jsondata.sale_background_color,
-                  },
-                  ref: i,
-                  children: [
-                    c && t.jsondata.sale_background_repeat == "coverBlur"
-                      ? (0, e.jsx)("img", {
-                          className: (0, A.A)(
-                            X().SalePageBackground,
-                            X().BackgroundImage,
-                            X().Blur,
-                          ),
-                          src: c,
-                          alt: "Header",
-                        })
-                      : (0, e.jsx)("div", {
-                          className: (0, A.A)(
-                            X().SalePageBackground,
-                            X().BackgroundImage,
-                          ),
-                          style: {
-                            backgroundImage: v,
-                            backgroundRepeat: t.jsondata.sale_background_repeat,
-                          },
-                        }),
-                    (0, e.jsx)(Z, { event: t, bIsPreview: r }),
-                    (0, e.jsx)(e.Fragment, { children: s }),
-                  ],
-                }),
-              }),
-            ],
-          });
-        }
-        var f = o(26589),
-          b = o(39905),
-          z = o(50909),
-          W = o.n(z);
-        function de(a) {
-          const { eventModel: t } = a,
-            { data: n } = (0, f.h)(t.clanSteamID.GetAccountID());
-          if (
-            !n ||
-            (!n.can_edit && !n.support_user) ||
-            (0, Y.yK)() == "community"
-          )
-            return;
-          const s = t.GetAllTags(),
-            r = [];
-          if (
-            (s.includes("hide_store") &&
-              r.push(
-                b.Z.Localize("#Sale_SaleEventIsHidden_Reason_ProductHide"),
-              ),
-            s.includes("mod_hide_store") &&
-              n.support_user &&
-              r.push(b.Z.Localize("#Sale_SaleEventIsHidden_Reason_Mod")),
-            !t.BIsVisibleEvent() &&
-              s.includes("contenthub") &&
-              r.push(
-                b.Z.Localize("#Sale_SaleEventIsHidden_ContentHub_Preview"),
-              ),
-            !(t.BIsVisibleEvent() && r.length == 0))
-          )
-            return (0, e.jsx)("div", {
-              className: W().SalePageHiddenWarning,
-              children: (0, e.jsxs)("div", {
+            },
+          ],
+        };
+      }
+    },
+    85661: (e, n, a) => {
+      "use strict";
+      a.d(n, { _: () => Oa });
+      var t = a(7850),
+        o = a(22837),
+        r = a(76217),
+        i = a(23310),
+        s = a(20721),
+        l = a(60860),
+        c = a(64387);
+      function d(e) {
+        const { strURL: n } = e;
+        return n
+          ? (0, t.jsx)("div", {
+              className: c.MenuBackgroundReflection,
+              children: (0, t.jsx)("img", { alt: "", src: n }),
+            })
+          : null;
+      }
+      var g = a(65946),
+        u = a(90626),
+        m = a(62641),
+        p = a(84811),
+        _ = a(52393),
+        h = a.n(_),
+        x = a(95695),
+        v = a.n(x),
+        I = a(52038),
+        b = a(78327),
+        j = a(13465),
+        f = a(46107);
+      function S(e) {
+        const { event: n, bIsPreview: a } = e;
+        let o = n.jsondata.sale_background_video_webm,
+          r = n.jsondata.sale_background_video_mp4;
+        return Boolean(r || o)
+          ? (0, t.jsx)(p.tH, {
+              children: (0, t.jsxs)("video", {
+                loop: !0,
+                muted: !0,
+                autoPlay: !0,
+                playsInline: !0,
+                className: (0, I.A)(
+                  h().SaleBackground,
+                  h()[`CustomStyle_${n.jsondata.sale_vanity_id}`],
+                  "SaleBackground",
+                  h().fullscreen_bg_video,
+                ),
+                style: {
+                  backgroundColor: a
+                    ? n.jsondata.sale_background_color
+                    : void 0,
+                },
                 children: [
-                  !t.BIsVisibleEvent() &&
-                    (0, e.jsx)("div", {
-                      className: W().WarningText,
-                      children: b.Z.Localize("#Sale_SaleEventIsHidden"),
-                    }),
-                  r.length > 0 &&
-                    (0, e.jsxs)("div", {
-                      className: W().WarningText,
-                      children: [
-                        b.Z.LocalizePlural(
-                          "#Sale_SaleEventIsHidden_Reason",
-                          r.length,
-                        ),
-                        (0, e.jsx)("ul", {
-                          children: r.map((i) =>
-                            (0, e.jsx)("li", { children: i }, i),
-                          ),
-                        }),
-                      ],
-                    }),
+                  o && (0, t.jsx)("source", { src: o, type: "video/webm" }),
+                  r &&
+                    !b.TS.IN_CLIENT &&
+                    (0, t.jsx)("source", { src: r, type: "video/mp4" }),
                 ],
-              }),
-            });
-        }
-        var ve = o(76789),
-          ke = o.n(ve),
-          l = o(18210);
-        function nt(a) {
-          const { eventModel: t, language: n } = a,
-            [s, r] = (0, k.q3)(() => [
-              t.jsondata.sale_logo_url,
-              l.NT.GetWithFallback(t.jsondata.localized_sale_logo, n),
-            ]);
-          return r && r?.length > 0
-            ? s
-              ? (0, e.jsx)("a", {
-                  className: ke().SalePageLogoCtn,
-                  href: Y.TS.STORE_BASE_URL + s,
-                  children: (0, e.jsx)(pt, { ...a }),
-                })
-              : (0, e.jsx)("div", {
-                  className: (0, A.A)(ke().SalePageLogoCtn, "SalePageLogoCtn"),
-                  children: (0, e.jsx)(pt, { ...a }),
-                })
-            : null;
-        }
-        function pt(a) {
-          const { eventModel: t, language: n } = a,
-            s = (0, fe.m0)(t, "sale_logo", n);
-          return (0, e.jsx)("img", { src: s, alt: "logo" });
-        }
-        var Ot = o(72865),
-          In = o(71347),
-          at = o.n(In),
-          ft = o(53107);
-        function Nt(a) {
-          const { rgPresenters: t } = a;
-          if (!t || t.length == 0) return null;
-          const n = (0, T.sfN)(Y.TS.LANGUAGE);
-          return t.length == 1
-            ? (0, e.jsx)("div", {
-                className: (0, A.A)(
-                  at().PresenterDisclaimer,
-                  "PresenterDisclaimer",
-                ),
-                children: b.Z.LocalizeReact(
-                  "#SalePresented_By",
-                  (0, e.jsx)(He, { presentor: t[0], lang: n }),
-                ),
-              })
-            : (0, e.jsx)("div", {
-                className: (0, A.A)(
-                  at().PresenterDisclaimer,
-                  "PresenterDisclaimer",
-                ),
-                children: b.Z.LocalizeReact(
-                  "#SalePresented_By_Multi",
-                  t
-                    .slice(0, t.length - 1)
-                    .map((s, r) =>
-                      (0, e.jsxs)(
-                        h.Fragment,
-                        {
-                          children: [
-                            (0, e.jsx)(He, { presentor: s, lang: n }),
-                            t.length > 2 && ", ",
-                          ],
-                        },
-                        s.url,
-                      ),
-                    ),
-                  (0, e.jsx)(He, { presentor: t[t.length - 1], lang: n }),
-                ),
-              });
-        }
-        function He(a) {
-          const { presentor: t, lang: n } = a,
-            s = (0, Ot.aL)(t.url);
-          return (0, e.jsx)(ft.uU, {
-            href: s,
-            bUseLinkFilter: !0,
-            className: at().PresenterLabel,
-            children: l.NT.GetWithFallback(t.localized_presenter_name, n),
-          });
-        }
-        var We = o(60480),
-          Me = o(92757),
-          Ve = o(18994),
-          It = o(86515),
-          Ut = o(64703),
-          Rt = o(61478);
-        function Ft(a) {
-          const { event: t, broadcastEmbedContext: n } = a,
-            s = !!t?.jsondata?.broadcast_display_wide_player,
-            r = !!t?.jsondata?.broadcast_dispaly_wide_player_allow_chat;
-          return (0, e.jsx)(e.Fragment, {
-            children:
-              !!(
-                t.BEventCanShowBroadcastWidget() &&
-                t.BSaleShowBroadcastAtTopOfPage()
-              ) &&
-              (0, e.jsx)(Rt.B, {
-                event: t,
-                broadcastEmbedContext: n,
-                bWideBroadcastDisplay: s,
-                bWideBroadcastPermitChat: r,
-              }),
-          });
-        }
-        var ot = o(24808);
-        function zt(a) {
-          const {
-            event: t,
-            fnOnChangeDayIndex: n,
-            addtionalAdminButtons: s,
-          } = a;
-          return (0, e.jsx)(ot.g, {
-            eventModel: t,
-            fnOnUpdateSaleDayIndex: n,
-            addtionalAdminButtons: s,
-            bSupportsSticky: !0,
-          });
-        }
-        var Qe = o(179),
-          Oe = o(50109),
-          ye = o(30096),
-          xt = o(98609),
-          Je = o(57673);
-        const st = new Map();
-        function Ht(a, t) {
-          const n = a.findIndex((s) => s.section_type === "tabs");
-          if (n >= 0 && t !== void 0) {
-            const s = a[n],
-              r = s.tabs?.findIndex((i) => i.unique_id === t);
-            if (r !== void 0 && r >= 0 && s.tabs)
-              return {
-                selectedTabBackgroundDef: s.tabs[r].tab_background_img_groups,
-                nTabSaleSectionIndex: n,
-              };
-          }
-          return {
-            selectedTabBackgroundDef: void 0,
-            nTabSaleSectionIndex: void 0,
-          };
-        }
-        function Wt(a, t, n) {
-          const s = new Map(),
-            r = new Map(),
-            i = new Map();
-          let c,
-            u,
-            d = 0;
-          const { selectedTabBackgroundDef: m, nTabSaleSectionIndex: v } = Ht(
-            t,
-            n,
-          );
-          if (a?.enabled) {
-            const I = a.groups?.length;
-            if (
-              (a.groups?.forEach((j, x) => {
-                if (d >= t.length || t[d].section_type == "tabs") return;
-                const _ = new Array();
-                for (
-                  let S = 0;
-                  S < (j?.num_sections || 0) &&
-                  d < t.length &&
-                  t[d].section_type != "tabs";
-                  ++S, ++d
-                ) {
-                  const G = t[d].unique_id;
-                  _.push(G),
-                    r.set(G, j.background_id),
-                    S === 0 && i.set(G, j.background_id);
-                }
-                if (
-                  (s.set(j.background_id, {
-                    nBackgroundGroupID: j.background_id,
-                    sectionUniqueIDs: _,
-                    nSaleSectionLastIndex: d - 1,
-                    nUniqueIDNextSaleSection:
-                      d < t.length && (v === void 0 || d < v)
-                        ? t[d].unique_id
-                        : void 0,
-                  }),
-                  x + 1 == I && a.last_group_until_cover_section_until_end)
-                )
-                  for (
-                    let S = d;
-                    S < t.length &&
-                    (!m || !m.enabled || S < v) &&
-                    !(t[S].section_type == "tabs" && m?.enabled);
-                    ++S
-                  ) {
-                    const G = t[S].unique_id;
-                    r.set(G, j.background_id);
-                  }
-              }),
-              d < t.length && (v === void 0 || d < v) && (c = t[d].unique_id),
-              m?.enabled && v !== void 0)
-            ) {
-              let j = v;
-              const x = m.groups.length;
-              for (
-                m.groups.forEach((_, w) => {
-                  if (j >= t.length) return;
-                  const S = new Array();
-                  for (
-                    let E = 0;
-                    E < _.num_sections && j < t.length;
-                    ++E, ++j
-                  ) {
-                    const M = t[j],
-                      V = M.unique_id;
-                    (0, Je.bF)(n, M)
-                      ? (S.push(V),
-                        r.set(V, _.background_id),
-                        E === 0 && i.set(V, _.background_id))
-                      : --E;
-                  }
-                  let D = j;
-                  for (; D < t.length && !(0, Je.bF)(n, t[D]); ) D += 1;
-                  if (
-                    (s.set(_.background_id, {
-                      nBackgroundGroupID: _.background_id,
-                      sectionUniqueIDs: S,
-                      nSaleSectionLastIndex: j - 1,
-                      nUniqueIDNextSaleSection:
-                        D < t.length ? t[D].unique_id : void 0,
-                    }),
-                    w + 1 == x && m.last_group_until_cover_section_until_end)
-                  )
-                    for (let E = j; E < t.length; ++E) {
-                      const M = t[E];
-                      if (M.section_type == "tabs" && m?.enabled) break;
-                      (0, Je.bF)(n, M) && r.set(M.unique_id, _.background_id);
-                    }
-                });
-                j < t.length && !(0, Je.bF)(n, t[j]);
-              )
-                j++;
-              j < t.length && (u = t[j].unique_id);
-            }
-          } else t?.length > 0 && (c = t[0].unique_id);
-          return {
-            mapGroupToSections: s,
-            nFirstSaleSectionIDWithoutGroup: c,
-            mapSectionToGroup: r,
-            mapFirstSectionToGroup: i,
-            selectedTabBackgroundDef: m,
-            nTabSaleSectionIndex: v,
-            nFirstTabSectionIDWithoutGroup: u,
-          };
-        }
-        var le = o(29630),
-          Vt = o(68434),
-          Ct = o(15181),
-          rt = o(41635),
-          Ge = o(81416);
-        function Dt(a, t, n, s) {
-          let i = a.jsondata.sale_background_img_groups.groups.find(
-            (c) => c.background_id === t.groupID,
-          );
-          return (
-            !i &&
-              s >= 0 &&
-              (i = a
-                .GetSaleSectionFirstMatchByType("tabs")
-                ?.tabs?.find((d) => d.unique_id == s)
-                ?.tab_background_img_groups?.groups?.find(
-                  (d) => d.background_id == t.groupID,
-                )),
-            (0, e.jsx)(
-              jt,
-              {
-                eventModel: a,
-                displayDef: i,
-                derivedGroupInfo: t.derivedGroupInfo,
-                children:
-                  i &&
-                  i.randomize_section_order &&
-                  n !== Ge.S.EPreviewMode_EditBackground
-                    ? (0, e.jsx)(Kt, {
-                        clanEventGID: a.GID,
-                        elSaleSections: t.elSaleSections,
-                      })
-                    : t.elSaleSections,
-              },
-              "background_group_" + t.groupID,
-            )
-          );
-        }
-        function Kt(a) {
-          const { clanEventGID: t, elSaleSections: n } = a,
-            [s, r] = (0, Vt.M)(`sale_section_seed_${t}`, (0, Ct.m)());
-          if (!n || n.length === 0) return null;
-          if (n.length > 1 && s !== void 0) {
-            const i = (0, Ct.A)(s);
-            return (0, e.jsx)(e.Fragment, { children: rt.fW(n, 0, i) });
-          }
-          return (0, e.jsx)(e.Fragment, { children: n });
-        }
-        function jt(a) {
-          const {
-              displayDef: t,
-              children: n,
-              eventModel: s,
-              derivedGroupInfo: r,
-            } = a,
-            i = (0, Oe.E)(),
-            c = h.useCallback(
-              (x, _) => {
-                st.set(r.nBackgroundGroupID, _);
-              },
-              [r],
-            ),
-            u = (0, ye.w6)(c);
-          if (!n || (Array.isArray(n) && n.length == 0)) return null;
-          if (!t) return (0, e.jsx)(e.Fragment, { children: n });
-          let d;
-          if (t.localized_background_art) {
-            const x = (0, T.LgB)(i),
-              _ =
-                x in t.localized_background_art
-                  ? x
-                  : l.A0.GetLanguageFallback(xt.TS.LANGUAGE),
-              w = t.localized_background_art[_];
-            w && (d = le.zU.GenerateURLFromHashAndExt(s.clanSteamID, w));
-          }
-          let m = "linear-gradient(";
-          switch (t.gradient_setting) {
-            case "top-to-bottom":
-              m += "to bottom,";
-              break;
-            case "left-to-right":
-              m += "to right,";
-              break;
-            case "top-left-to-bottom-right":
-              m += "to bottom right,";
-              break;
-            case "single-color":
-              m = void 0;
-              break;
-          }
-          t.background_color1 &&
-          t.background_color2 &&
-          t.background_color1 != t.background_color2
-            ? ((m += " " + t.background_color1),
-              (m += ", " + t.background_color2),
-              (m += ")"))
-            : (m = null);
-          const v =
-              t.background_color1 &&
-              (!t.background_color2 ||
-                t.gradient_setting == "single-color" ||
-                t.background_color1 == t.background_color2),
-            I = t.scaling_setting !== "cover" && t.position_setting !== "unset",
-            j = {
-              backgroundImage: m ? `url(${d}), ${m}` : `url(${d})`,
-              backgroundSize: t.scaling_setting,
-              backgroundRepeat: t.repeat_setting,
-              backgroundPosition: I ? t.position_setting : void 0,
-              backgroundColor: v ? t.background_color1 : void 0,
-              overflowY: "hidden",
-            };
-          return (0, e.jsx)("div", {
-            ref: u,
-            style: j,
-            id: "background_group_" + t.background_id,
-            children: n,
-          });
-        }
-        var St = o(9807),
-          it = o(4720),
-          Yt = o(64641),
-          Xe = o.n(Yt),
-          Ke = o(36118),
-          Ye = o(85599),
-          Ie = o(71421);
-        function Re(a) {
-          return typeof a == "string" || typeof a == "number"
-            ? a
-            : JSON.stringify(a);
-        }
-        class bt {
-          Keyify = (t) => Re(t);
-          m_mapVisible = new Map();
-          m_mapOwners = new Map();
-          IsAlreadyVisible(t) {
-            return this.m_mapVisible.has(this.Keyify(t));
-          }
-          SortKey(t, n) {
-            const s = this.m_mapVisible.get(this.Keyify(t)) || 0,
-              r = this.m_mapVisible.get(this.Keyify(n)) || 0;
-            return s - r;
-          }
-          BMarkAppVisibile(t, n) {
-            const s = this.EnsureOwnerSetExists(t),
-              r = this.Keyify(n);
-            return (
-              s.add(r),
-              this.IsAlreadyVisible(n)
-                ? (this.m_mapVisible.set(
-                    r,
-                    (this.m_mapVisible.get(r) ?? 0) + 1,
-                  ),
-                  !1)
-                : (this.m_mapVisible.set(r, 1), !0)
-            );
-          }
-          BMarkAppNotVisible(t, n) {
-            if (!this.IsAlreadyVisible(n)) return !1;
-            const s = this.EnsureOwnerSetExists(t),
-              r = this.Keyify(n);
-            return s.has(r) ? (this.DecrementAppVisibility(r), !0) : !1;
-          }
-          MarkAllAppsNotVisible(t) {
-            this.m_mapOwners.has(t) &&
-              (this.m_mapOwners
-                .get(t)
-                .forEach(this.DecrementAppVisibility.bind(this)),
-              this.m_mapOwners.delete(t));
-          }
-          EnsureOwnerSetExists(t) {
-            let n = this.m_mapOwners.get(t);
-            return (
-              n ||
-                (this.m_mapOwners.set(t, new Set()),
-                (n = this.m_mapOwners.get(t))),
-              n
-            );
-          }
-          DecrementAppVisibility(t) {
-            const n = (this.m_mapVisible.get(t) ?? 0) - 1;
-            n > 0 ? this.m_mapVisible.set(t, n) : this.m_mapVisible.delete(t);
-          }
-        }
-        var Ze = o(71742),
-          lt = o(53113),
-          Et = o(64377),
-          _t = o(7638);
-        function wt(a, t) {
-          if (!a || !a.BIsClanAccount()) return !1;
-          const n = _t.KN.Get().GetPartnerEventPermissions(a);
-          return n ? (t ? n.valve_admin : n.valve_admin || n.support_user) : !1;
-        }
-        function Zt(a) {
-          const { clanSteamID: t, id: n } = a;
-          return wt(t, a.requireAdmin)
-            ? (0, e.jsx)("div", {
-                id: n,
-                className: (0, A.A)(
-                  a.className,
-                  a.requireAdmin
-                    ? F.ValveOnlyAdminBackground
-                    : F.ValveOnlyBackground,
-                ),
-                children: a.children,
-              })
-            : null;
-        }
-        var U = o(16412),
-          re = o(96538),
-          be = o(88003),
-          Qt = o(12932),
-          ct = o(46777),
-          Jt = o(79118),
-          dt = o(16346),
-          Xt = o(61257),
-          yt = o(56718),
-          $t = o(27828),
-          $e = o.n($t);
-        function qt(a) {
-          return `rgba(${a.rgb.r}, ${a.rgb.g}, ${a.rgb.b}, ${a.rgb.a})`;
-        }
-        function en(a) {
-          const t = parseInt(a.slice(1), 16),
-            n = (t >> 16) & 255,
-            s = (t >> 8) & 255,
-            r = t & 255;
-          return `rgba(${n}, ${s}, ${r}, 1)`;
-        }
-        function tn(a) {
-          const { color: t, onChange: n, strTitle: s, disableAlpha: r } = a,
-            [i, c] = (0, h.useState)(() => t || "rgba(255, 255, 255, 1)"),
-            u = (0, h.useCallback)(async () => {
-              if (!("EyeDropper" in window)) {
-                alert(b.Z.Localize("#Sale_EyeDropperError"));
-                return;
-              }
-              try {
-                const v = (await new window.EyeDropper().open()).sRGBHex,
-                  I = en(v);
-                c(I), n(I);
-              } catch (d) {
-                console.warn(b.Z.Localize("#Sale_EyeDropperFailed"), d);
-              }
-            }, [n]);
-          return (0, e.jsxs)("div", {
-            className: $e().ColorPickerDialog,
-            children: [
-              !!s && (0, e.jsx)(U.JU, { children: s }),
-              (0, e.jsx)(Xt.xk, {
-                onChange: (d) => {
-                  const m = qt(d);
-                  c(m), n(m);
-                },
-                color: i,
-                disableAlpha: r,
-                className: $e().ColorPickerCtn,
-              }),
-              (0, e.jsx)("div", {
-                className: $e().EyeDropperCtn,
-                children: (0, e.jsx)(Ie.Gq, {
-                  toolTipContent: b.Z.Localize("#Sale_BackgroundColorPicker"),
-                  children: (0, e.jsx)(U.$n, {
-                    className: $e().EyeDropperBtn,
-                    onClick: u,
-                    children: (0, e.jsx)(yt.O7b, {}),
-                  }),
-                }),
-              }),
-            ],
-          });
-        }
-        function nn(a) {
-          const {
-              color: t,
-              onChange: n,
-              onRequestClose: s,
-              disableAlpha: r,
-              strTitle: i,
-            } = a,
-            c = (0, h.useRef)(null);
-          return (
-            (0, h.useEffect)(() => {
-              const u = c.current?.ownerDocument ?? document,
-                d = (v) => {
-                  c.current && !c.current.contains(v.target) && s();
-                },
-                m = (v) => {
-                  v.key === "Escape" && s();
-                };
-              return (
-                u.addEventListener("pointerdown", d, !0),
-                u.addEventListener("keydown", m, !0),
-                () => {
-                  u.removeEventListener("pointerdown", d, !0),
-                    u.removeEventListener("keydown", m, !0);
-                }
-              );
-            }, [s]),
-            (0, e.jsx)("div", {
-              ref: c,
-              children: (0, e.jsx)(tn, {
-                color: t,
-                disableAlpha: r,
-                strTitle: i ?? b.Z.Localize("#Button_Color"),
-                onChange: n,
               }),
             })
-          );
-        }
-        function an() {
-          return {
-            openColorPicker: (0, h.useCallback)((t, n) => {
-              let s = null;
-              const r = () => s?.Hide();
-              s = (0, dt.lX)(
-                (0, e.jsx)(nn, {
-                  color: n.color,
-                  disableAlpha: n.disableAlpha,
-                  strTitle: n.strTitle,
-                  onChange: n.onChange,
-                  onRequestClose: r,
-                }),
-                t,
-                { bDisablePopTop: !0 },
-              );
-            }, []),
-          };
-        }
-        var ut = o(13447),
-          Ae = o.n(ut),
-          on = o(32190),
-          At = o.n(on),
-          Be = o(76559),
-          Bt = o(75909),
-          Ee = o(53424),
-          Gt = o(72604),
-          sn = o(41735),
-          rn = o.n(sn),
-          qe = o(14947),
-          Te = o(9046),
-          ln = Object.defineProperty,
-          cn = Object.getOwnPropertyDescriptor,
-          dn = (a, t, n, s) => {
-            for (
-              var r = s > 1 ? void 0 : s ? cn(t, n) : t, i = a.length - 1, c;
-              i >= 0;
-              i--
-            )
-              (c = a[i]) && (r = (s ? c(t, n, r) : c(r)) || r);
-            return s && r && ln(t, n, r), r;
-          };
-        const g = class Pn {
-          m_curLocImageGroup = null;
-          m_curLocImageGroupType = null;
-          constructor() {
-            (0, qe.Gn)(this);
-          }
-          static async BDoesClanImageFileExistsOnCDNOrOrigin(t, n, s, r) {
-            let i =
-                Y.TS.COMMUNITY_BASE_URL +
-                "gid/" +
-                n.ConvertTo64BitString() +
-                "/hasclanimagefile",
-              c = { image_hash_and_ext: s, lang: "" + r };
-            return (
-              (await rn().get(i, { params: c, cancelToken: t && t.token })).data
-                .success == Gt.R
-            );
-          }
-          SetPrimaryImageForImageGroup(t, n) {
-            (!this.m_curLocImageGroup ||
-              this.m_curLocImageGroup.primaryImage.imageid != t.imageid ||
-              n != this.m_curLocImageGroupType) &&
-              ((this.m_curLocImageGroup = {
-                primaryImage: t,
-                localized_images: [],
+          : null;
+      }
+      function w(e) {
+        const { event: n, language: a, children: o, bIsPreview: r } = e,
+          i = u.useRef(null),
+          s = (0, f.m0)(n, "sale_header", a),
+          [l] = (0, g.q3)(() => [n.jsondata.sale_sub_menu]);
+        u.useEffect(() => {
+          if (!s) return;
+          const e = new Image();
+          (e.onload = () => {
+            const n = (100 * e.width) / 950 + "%";
+            i.current && i.current.style.setProperty("--background-scale", n);
+          }),
+            (e.src = s);
+        }, [s]);
+        const c = n.jsondata.sale_sections?.some(
+            (e) => "contenthubmaincarousel" === e.section_type,
+          ),
+          p =
+            n.jsondata.item_source_type === m.w.k_EContentHub &&
+            ((n.jsondata.sale_vanity_id &&
+              n.jsondata.sale_vanity_id.includes("contenthubsalepage_")) ||
+              c),
+          _ = s ? `url(${s})` : "none";
+        return (0, t.jsxs)(t.Fragment, {
+          children: [
+            l
+              ? (0, t.jsx)(j.j, {
+                  event: n,
+                  language: a,
+                  bIsPreview: r,
+                  subMenu: l,
+                  styleVariation: j.g.k_SubMenu,
+                })
+              : (0, t.jsx)(d, { strURL: s }),
+            (0, t.jsx)("div", {
+              className: (0, I.A)({
+                SaleBackgroundCtn: !0,
+                ContentHubSalePage: p,
               }),
-              (this.m_curLocImageGroupType = n),
-              (this.m_curLocImageGroup.localized_images = (0, rt.$Y)(
-                this.m_curLocImageGroup.localized_images,
-                T.bP9,
-                null,
-              )));
-          }
-          GetPrimaryImageForImageGroup() {
-            return this.m_curLocImageGroup?.primaryImage;
-          }
-          ClearImageGroup() {
-            (this.m_curLocImageGroup = null),
-              (this.m_curLocImageGroupType = null);
-          }
-          GetLocalizedImageGroupForEdit() {
-            return this.m_curLocImageGroup;
-          }
-          GetLocalizedImageGroupForEditAsURL(t, n) {
-            if (this.m_curLocImageGroup) {
-              let s = this.m_curLocImageGroup.primaryImage;
-              return this.m_curLocImageGroup.localized_images[n]
-                ? this.m_curLocImageGroup.localized_images[n]
-                : le.zU.GenerateURLFromHashAndExt(
-                    t,
-                    le.zU.GetHashAndExt(s) ?? "",
-                  );
-            }
-            return null;
-          }
-          async DetermineAvailableLocalizationForGroup(t) {
-            if (!this.m_curLocImageGroup) return;
-            const n = this.m_curLocImageGroup.primaryImage,
-              s = Be.b.InitFromClanID(n.clanAccountID),
-              r = le.zU.GetHashAndExt(n) ?? "",
-              i = [];
-            for (let u = T.Bhc; u < T.bP9; ++u)
-              i.push(Pn.BDoesClanImageFileExistsOnCDNOrOrigin(t, s, r, u));
-            const c = await Promise.all(i);
-            (0, qe.h5)(() => {
-              for (let u = T.Bhc; u < T.bP9; ++u)
-                c[u] &&
-                  (this.m_curLocImageGroup.localized_images[u] =
-                    le.zU.GenerateURLFromHashAndExtAndLang(
-                      s,
-                      r,
-                      Te.wI.full,
-                      u,
-                      this.m_curLocImageGroupType ?? void 0,
-                    ));
-            });
-          }
-          SetLocalizedImageGroupAtLang(t, n, s) {
-            this.m_curLocImageGroup &&
-              (this.m_curLocImageGroup.localized_images[t] = s
-                ? le.zU.GenerateURLFromHashAndExtAndLang(
-                    n,
-                    s,
-                    Te.wI.full,
-                    t,
-                    this.m_curLocImageGroupType ?? void 0,
-                  )
-                : null);
-          }
-          AddLocalizeImageUploaded(t, n) {
-            if (!this.m_curLocImageGroup) return;
-            let s = this.m_curLocImageGroup.primaryImage;
-            if (s?.image_hash == t) {
-              const r = Be.b.InitFromClanID(s.clanAccountID),
-                i = le.zU.GetHashAndExt(s);
-              i &&
-                (this.m_curLocImageGroup.localized_images[n] =
-                  le.zU.GenerateURLFromHashAndExtAndLang(
-                    r,
-                    i,
-                    Te.wI.full,
-                    n,
-                    this.m_curLocImageGroupType ?? void 0,
-                  ));
-            }
-          }
-          GetAllLocalizedGroupImages() {
-            return (
-              (this.m_curLocImageGroup &&
-                this.m_curLocImageGroup.localized_images) ||
-              []
-            );
-          }
-          GetAllLocalizedGroupImageHashAndExts() {
-            return this.GetAllLocalizedGroupImages()
-              .filter(Boolean)
-              .map((s) => le.zU.GetHashAndExtFromURL(s));
-          }
-        };
-        dn([qe.sH], g.prototype, "m_curLocImageGroup", 2);
-        let p = g;
-        const C = new p();
-        var B = o(38410),
-          P = o(34592),
-          H = o(75844),
-          te = o(32093),
-          xe = o(72849),
-          _e = o(64),
-          ue = o(72739),
-          Ce = o(82734);
-        function Le(a, t) {
-          const n = h.useRef(void 0),
-            s = h.useCallback(
-              (c) => {
-                c.currentTarget.files.length > 0 &&
-                  (a(c.currentTarget.files), (c.currentTarget.value = ""));
-              },
-              [a],
-            ),
-            r = h.useCallback(() => n.current.click(), []);
-          return [
-            ue.createPortal(
-              (0, e.jsx)("form", {
-                onSubmit: gn,
-                style: { display: "none" },
-                children: (0, e.jsx)("input", {
-                  ...t,
-                  type: "file",
-                  ref: n,
-                  onChange: s,
-                }),
-              }),
-              window.document.body,
-            ),
-            r,
-          ];
-        }
-        function Fe(a) {
-          const [t, n] = h.useState(!1),
-            s = h.useCallback((d) => {
-              ((d.dataTransfer.files && d.dataTransfer.files[0]) ||
-                (d.dataTransfer.types && d.dataTransfer.types[0] == "Files")) &&
-                n(!0);
-            }, []),
-            r = h.useCallback((d) => {
-              Ce.NO(d) && n(!1);
-            }, []),
-            i = h.useCallback(() => n(!1), []),
-            c = t ? gn : void 0,
-            u = h.useCallback(
-              (d) => {
-                d.dataTransfer.files?.length &&
-                  (a(d.dataTransfer.files, d),
-                  d.preventDefault(),
-                  d.stopPropagation()),
-                  n(!1);
-              },
-              [a],
-            );
-          return [
-            {
-              onDragEnter: s,
-              onDragLeave: r,
-              onDragEnd: i,
-              onDragOver: c,
-              onDrop: u,
-            },
-            t,
-          ];
-        }
-        async function un(a, t = 1e3) {
-          return await new Promise((n, s) => {
-            const r = new Image();
-            (r.src = a),
-              (r.onload = () => n("success")),
-              (r.onerror = () => n("error")),
-              t > 0 && window.setTimeout(() => n("timeout"), t);
-          });
-        }
-        function gn(a) {
-          a.preventDefault();
-        }
-        function io(a) {
-          switch (a.type) {
-            case "image/jpeg":
-              return "jpg";
-            case "image/png":
-              return "png";
-            case "image/gif":
-              return "gif";
-            default:
-              const t = a.name.match(/(?<=\.)[^.]+$/);
-              return t ? t[0] : void 0;
-          }
-        }
-        var kn = o(71647),
-          et = o.n(kn);
-        function Mn(a) {
-          const {
-              onDropFiles: t,
-              renderDesciption: n,
-              elAdditonalButtons: s,
-              elOverrideDragAndDropText: r,
-            } = a,
-            [i, c] = Fe(t),
-            [u, d] = Le(t, {
-              accept: "image/png, image/jpeg, image/gif, image/webp",
-              multiple: !0,
-            });
-          return (0, e.jsxs)("div", {
-            ...i,
-            className: (0, A.A)(
-              c ? et().DragAndDropContainerDragging : et().DragAndDropContainer,
-              "DragAndDropContainer",
-            ),
-            children: [
-              !!n && n(),
-              (0, e.jsx)("div", {
-                children: r || (0, l.we)("#ImagePicker_DragAndDrop"),
-              }),
-              (0, e.jsxs)("div", {
-                className: et().ImageUploadBar,
+              children: (0, t.jsxs)("div", {
+                className: (0, I.A)(
+                  h()[`CustomStyle_${n.jsondata.sale_vanity_id}`],
+                  "SaleCustomCSS",
+                  h().SaleBackground,
+                  "SaleBackground",
+                ),
+                style: {
+                  display: "flex",
+                  position: "relative",
+                  flexDirection: "column",
+                  backgroundColor: n.jsondata.sale_background_color,
+                },
+                ref: i,
                 children: [
-                  u,
-                  (0, e.jsxs)("label", {
-                    onClick: d,
-                    children: [
-                      (0, e.jsxs)("span", {
-                        children: [(0, l.we)("#ImagePicker_OrBrowse"), " "],
+                  s && "coverBlur" == n.jsondata.sale_background_repeat
+                    ? (0, t.jsx)("img", {
+                        className: (0, I.A)(
+                          v().SalePageBackground,
+                          v().BackgroundImage,
+                          v().Blur,
+                        ),
+                        src: s,
+                        alt: "Header",
+                      })
+                    : (0, t.jsx)("div", {
+                        className: (0, I.A)(
+                          v().SalePageBackground,
+                          v().BackgroundImage,
+                        ),
+                        style: {
+                          backgroundImage: _,
+                          backgroundRepeat: n.jsondata.sale_background_repeat,
+                        },
                       }),
-                      (0, e.jsx)("span", {
-                        className: et().SelectImageButton,
-                        children: (0, l.we)("#selectimage_select_file"),
-                      }),
-                    ],
-                  }),
+                  (0, t.jsx)(S, { event: n, bIsPreview: r }),
+                  (0, t.jsx)(t.Fragment, { children: o }),
                 ],
               }),
-              s,
-              a.children,
-            ],
-          });
-        }
-        var On = o(21254),
-          Nn = o(27344),
-          De = o.n(Nn),
-          Un = o(9472);
-        function Rn(a) {
-          const {
-              imageUploader: t,
-              fnUploadComplete: n,
-              elOverrideDragAndDropText: s,
-              forceResolution: r,
-              elAdditonalButtons: i,
-              rgRealmList: c,
-            } = a,
-            [u, d] = (0, k.q3)(() => [
-              t.GetUploadImages(),
-              Oe.O.Get().GetCurEditLanguage(),
-            ]),
-            m = h.useCallback(
-              async (j) => {
-                let x = Array.from(j),
-                  _ = !0;
-                for (let w = 0; w < x.length; w++) {
-                  const S = x[w],
-                    { language: D } = (0, B.jj)(S?.name, d);
-                  try {
-                    const G = (0, B.PD)(D, d, c);
-                    (_ = await t.AddImageForLanguage(S, G)),
-                      _ ||
-                        (console.error(
-                          "ImageUploaderPanel.OnDropFiles: failed on i=" +
-                            w +
-                            " file=" +
-                            S.name,
-                        ),
-                        (0, be.pg)(
-                          (0, e.jsx)(re.KG, {
-                            strDescription: (0, l.we)(
-                              "#ImagePicker_Error",
-                              S.name,
+            }),
+          ],
+        });
+      }
+      var k = a(56284),
+        C = a(78686),
+        E = a(50909),
+        D = a.n(E);
+      function A(e) {
+        const { eventModel: n } = e,
+          { data: a } = (0, k.hM)(n.clanSteamID.GetAccountID());
+        if (
+          !a ||
+          (!a.can_edit && !a.support_user) ||
+          "community" == (0, b.yK)()
+        )
+          return;
+        const o = n.GetAllTags(),
+          r = [];
+        return (
+          o.includes("hide_store") &&
+            r.push(C.Z.Localize("#Sale_SaleEventIsHidden_Reason_ProductHide")),
+          o.includes("mod_hide_store") &&
+            a.support_user &&
+            r.push(C.Z.Localize("#Sale_SaleEventIsHidden_Reason_Mod")),
+          !n.BIsVisibleEvent() &&
+            o.includes("contenthub") &&
+            r.push(C.Z.Localize("#Sale_SaleEventIsHidden_ContentHub_Preview")),
+          n.BIsVisibleEvent() && 0 == r.length
+            ? void 0
+            : (0, t.jsx)("div", {
+                className: D().SalePageHiddenWarning,
+                children: (0, t.jsxs)("div", {
+                  children: [
+                    !n.BIsVisibleEvent() &&
+                      (0, t.jsx)("div", {
+                        className: D().WarningText,
+                        children: C.Z.Localize("#Sale_SaleEventIsHidden"),
+                      }),
+                    r.length > 0 &&
+                      (0, t.jsxs)("div", {
+                        className: D().WarningText,
+                        children: [
+                          C.Z.LocalizePlural(
+                            "#Sale_SaleEventIsHidden_Reason",
+                            r.length,
+                          ),
+                          (0, t.jsx)("ul", {
+                            children: r.map((e) =>
+                              (0, t.jsx)("li", { children: e }, e),
                             ),
                           }),
-                          window,
-                        ));
-                  } catch (G) {
-                    let E = (0, P.H)(G);
-                    console.error(
-                      "ImageUploaderPanel.OnDropFiles: " + E.strErrorMsg,
-                      E,
-                    ),
-                      (0, be.pg)(
-                        (0, e.jsx)(re.KG, {
-                          strDescription: (0, l.we)(
-                            "#EventError_Code",
-                            E.strErrorMsg ?? "",
-                          ),
-                        }),
-                        window,
-                      );
-                  }
-                }
-                return _;
-              },
-              [d, t, c],
-            ),
-            v = h.useMemo(
-              () =>
-                i instanceof Array
-                  ? i
-                  : [
-                      (0, e.jsx)(
-                        h.Fragment,
-                        { children: i },
-                        "elAdditonalButtons",
-                      ),
-                    ],
-              [i],
-            );
-          (0, k.q3)(() =>
-            u.map((j) => ({ a: j.GetCurrentImageOption(), b: j.language })),
-          );
-          const I = async () => {
-            const j = await t.UploadAllImages(r);
-            n?.(j);
-          };
-          return (0, e.jsxs)(Mn, {
-            onDropFiles: m,
-            elAdditonalButtons: v,
-            elOverrideDragAndDropText: s,
-            children: [
-              (0, e.jsx)(h.Fragment, {
-                children: (0, e.jsx)("div", {
-                  className: De().UploadPreviewCtn,
-                  children: u.map((j) =>
-                    (0, e.jsx)(
-                      xn,
-                      {
-                        asset: j,
-                        forceResolution: r,
-                        fnOnRemove: () => t.DeleteUploadImage(j),
-                        languageRealms: c,
-                      },
-                      "arttabupload_" + j.filename + "_" + j.uploadTime,
-                    ),
-                  ),
-                }),
-              }),
-              (0, e.jsx)(Fn, { imageUploader: t, fnOnUploadImageRequested: I }),
-            ],
-          });
-        }
-        function Fn(a) {
-          const { imageUploader: t, fnOnUploadImageRequested: n } = a,
-            [s] = (0, k.q3)(() => [t.GetUploadImages()]),
-            r = s.some((c) => c.status == "pending"),
-            i = s.some(
-              (c) =>
-                c.status == "waiting" ||
-                c.status == "uploading" ||
-                c.status == "processing",
-            );
-          return (0, e.jsxs)("div", {
-            style: { display: "flex" },
-            className: De().UploadPreviewButtonsCtn,
-            children: [
-              !!s.length &&
-                (0, e.jsx)(U.$n, {
-                  style: { margin: "8px" },
-                  onClick: n,
-                  disabled: !r,
-                  children: (0, l.we)("#ImageUpload_Upload"),
-                }),
-              !!s.length &&
-                (0, e.jsx)(U.$n, {
-                  style: { margin: "8px" },
-                  onClick: t.ClearImages,
-                  disabled: i,
-                  children: (0, l.we)("#ImageUpload_Clear"),
-                }),
-            ],
-          });
-        }
-        function lo(a, t, n, s, r) {
-          let i = new Array();
-          return (
-            a.GetUploadImages().forEach((c) => {
-              i.push(
-                jsx(
-                  xn,
-                  {
-                    asset: c,
-                    forceResolution: n,
-                    forceFileType: s,
-                    fnOnRemove: () => a.DeleteUploadImage(c),
-                    languageRealms: r,
-                  },
-                  t + c.file + "_" + c.uploadTime,
-                ),
-              );
-            }),
-            i
-          );
-        }
-        const xn = (0, H.PA)(zn);
-        function zn(a) {
-          const t = (x) => {
-              if (x instanceof _e.M7) {
-                x.ResetImage();
-                const _ = window,
-                  w = (0, e.jsx)(On.q, {
-                    ownerWin: _,
-                    uploadFile: x,
-                    forceResolution: a.forceResolution,
-                    fileType: a.forceFileType || xe.bg.dU,
-                  });
-                (0, be.HT)(w, _, "CropModal", {
-                  strTitle: (0, l.we)("#ImageUpload_CropModalTitle"),
-                });
-              } else
-                console.log(
-                  "ImageUploadEmbeddedDialog trying to crop non image",
-                  x.fileType,
-                  JSON.stringify(x.GetCurrentImageOption()),
-                );
-            },
-            { asset: n, fnOnRemove: s, languageRealms: r } = a,
-            i = n.ImageOptions?.map((x) => {
-              let _ = x?.fnGetLabelText(),
-                w;
-              x.bEnforceDimensions && (_ += ` - ${x.width}x${x.height}`),
-                x.bDeprecated &&
-                  ((_ += ` ${(0, l.we)("#ImageUpload_Deprecated")}`),
-                  (w = (0, l.we)("#ImageUpload_Deprecated_ttip")));
-              let S;
-              return (
-                (n.BIsOriginalMinimumDimensions(x) &&
-                  n.FileTypeMatchesImageTypes(x)) ||
-                  (S = De().ImageDimensionTooSmall),
-                { label: _, data: x, strOptionClass: S, tooltip: w }
-              );
-            }).filter((x) => !x.data.bHiddenFromDropdown),
-            c = {
-              pending: (0, l.we)("#ImageUpload_Pending"),
-              waiting: (0, l.we)("#ImageUpload_Waiting"),
-              uploading: (0, l.we)("#ImageUpload_Uploading"),
-              processing: (0, l.we)("#ImageUpload_Processing"),
-              success: (0, l.we)("#ImageUpload_SuccessCard"),
-              failed: (0, l.we)("#ImageUpload_Failed"),
-            },
-            u = n.BSupportsLanguages()
-              ? Vn(
-                  l.A0.GetLanguageListForRealms(
-                    r ?? [te.TU.k_ESteamRealmGlobal],
-                  ),
-                )
-              : null,
-            d = n.IsValidAssetType(a.forceResolution, a.forceFileType),
-            m = n.status == "pending";
-          let v = c[n.status];
-          n.status == "pending" &&
-            (d.needsCrop
-              ? (v = (0, l.we)("#ImageUpload_NeedsCrop"))
-              : d.error && (v = (0, l.we)("#ImageUpload_Invalid")));
-          let I;
-          const j = n.GetCurrentImageOption();
-          return (
-            j && (I = i?.find((x) => x.data.sKey == j.sKey)?.data),
-            I || (I = i?.[0]?.data),
-            (0, e.jsxs)("div", {
-              className: De().UploadPreview,
-              children: [
-                (0, e.jsx)("div", {
-                  className: De().UploadPreviewDelete,
-                  onClick: () => s(n),
-                  children: (0, e.jsx)(Ke.sED, {}),
-                }),
-                (0, e.jsx)(Hn, { asset: n }),
-                u &&
-                  (0, e.jsx)(U.m, {
-                    strDropDownClassName: X().DropDownScroll,
-                    rgOptions: u,
-                    selectedOption: n.language,
-                    onChange: (x) => (n.language = x.data),
-                    disabled: !m,
-                  }),
-                i &&
-                  i?.length > 1 &&
-                  (0, e.jsx)(U.m, {
-                    label: n.GetImageOptionLabel(),
-                    rgOptions: i,
-                    selectedOption: I,
-                    onChange: (x) => n.SetCurrentImageOption(x.data),
-                    disabled: !m,
-                  }),
-                m &&
-                  d.warnings?.map((x, _) =>
-                    (0, e.jsx)(
-                      "div",
-                      { className: De().UploadPreviewWarning, children: x },
-                      `warning${_}`,
-                    ),
-                  ),
-                m &&
-                  d.messages?.map((x, _) =>
-                    (0, e.jsx)(
-                      "div",
-                      { className: De().UploadPreviewMessage, children: x },
-                      `message${_}`,
-                    ),
-                  ),
-                (0, e.jsxs)("div", {
-                  className: (0, A.A)({
-                    [X().FlexColumnContainer]: !0,
-                    [De().UploadPreviewError]: n.status == "failed",
-                  }),
-                  children: [
-                    v,
-                    (0, Un.o)(n.status) &&
-                      (0, e.jsx)("div", {
-                        className: Xe().FlexCenter,
-                        children: (0, e.jsx)(Ye.t, { size: "small" }),
+                        ],
                       }),
                   ],
                 }),
-                (0, e.jsx)("div", {
-                  className: De().UploadPreviewError,
-                  children: n.message,
-                }),
-                m &&
-                  d.error &&
-                  (0, e.jsx)("div", {
-                    className: De().UploadPreviewError,
-                    children: d.error,
-                  }),
-                m &&
-                  d.needsCrop &&
-                  (0, e.jsx)(U.jn, {
-                    onClick: () => t(n),
-                    children: (0, l.we)("#ImageUpload_OpenEditor"),
-                  }),
-              ],
+              })
+        );
+      }
+      var G = a(76789),
+        y = a.n(G),
+        T = a(61859);
+      function L(e) {
+        const { eventModel: n, language: a } = e,
+          [o, r] = (0, g.q3)(() => [
+            n.jsondata.sale_logo_url,
+            T.NT.GetWithFallback(n.jsondata.localized_sale_logo, a),
+          ]);
+        return r && r?.length > 0
+          ? o
+            ? (0, t.jsx)("a", {
+                className: y().SalePageLogoCtn,
+                href: b.TS.STORE_BASE_URL + o,
+                children: (0, t.jsx)(B, { ...e }),
+              })
+            : (0, t.jsx)("div", {
+                className: (0, I.A)(y().SalePageLogoCtn, "SalePageLogoCtn"),
+                children: (0, t.jsx)(B, { ...e }),
+              })
+          : null;
+      }
+      function B(e) {
+        const { eventModel: n, language: a } = e,
+          o = (0, f.m0)(n, "sale_logo", a);
+        return (0, t.jsx)("img", { src: o, alt: "logo" });
+      }
+      var N = a(60014),
+        M = a(71347),
+        U = a.n(M),
+        P = a(51272);
+      function R(e) {
+        const { rgPresenters: n } = e;
+        if (!n || 0 == n.length) return null;
+        const a = (0, o.sfN)(b.TS.LANGUAGE);
+        return 1 == n.length
+          ? (0, t.jsx)("div", {
+              className: (0, I.A)(
+                U().PresenterDisclaimer,
+                "PresenterDisclaimer",
+              ),
+              children: C.Z.LocalizeReact(
+                "#SalePresented_By",
+                (0, t.jsx)(z, { presentor: n[0], lang: a }),
+              ),
             })
+          : (0, t.jsx)("div", {
+              className: (0, I.A)(
+                U().PresenterDisclaimer,
+                "PresenterDisclaimer",
+              ),
+              children: C.Z.LocalizeReact(
+                "#SalePresented_By_Multi",
+                n
+                  .slice(0, n.length - 1)
+                  .map((e, o) =>
+                    (0, t.jsxs)(
+                      u.Fragment,
+                      {
+                        children: [
+                          (0, t.jsx)(z, { presentor: e, lang: a }),
+                          Boolean(n.length > 2) && ", ",
+                        ],
+                      },
+                      e.url,
+                    ),
+                  ),
+                (0, t.jsx)(z, { presentor: n[n.length - 1], lang: a }),
+              ),
+            });
+      }
+      function z(e) {
+        const { presentor: n, lang: a } = e,
+          o = (0, N.aL)(n.url);
+        return (0, t.jsx)(P.uU, {
+          href: o,
+          bUseLinkFilter: !0,
+          className: U().PresenterLabel,
+          children: T.NT.GetWithFallback(n.localized_presenter_name, a),
+        });
+      }
+      var F = a(67165),
+        O = a(92757),
+        H = a(75933),
+        V = a(17560),
+        q = a(35400),
+        W = a(21529);
+      function Y(e) {
+        const { event: n, broadcastEmbedContext: a } = e,
+          o = Boolean(n?.jsondata?.broadcast_display_wide_player),
+          r = Boolean(n?.jsondata?.broadcast_dispaly_wide_player_allow_chat);
+        return (0, t.jsx)(t.Fragment, {
+          children:
+            Boolean(
+              n.BEventCanShowBroadcastWidget() &&
+                n.BSaleShowBroadcastAtTopOfPage(),
+            ) &&
+            (0, t.jsx)(W.B, {
+              event: n,
+              broadcastEmbedContext: a,
+              bWideBroadcastDisplay: o,
+              bWideBroadcastPermitChat: r,
+            }),
+        });
+      }
+      var Z = a(87709);
+      function Q(e) {
+        const { event: n, fnOnChangeDayIndex: a, addtionalAdminButtons: o } = e;
+        return (0, t.jsx)(Z.g, {
+          eventModel: n,
+          fnOnUpdateSaleDayIndex: a,
+          addtionalAdminButtons: o,
+          bSupportsSticky: !0,
+        });
+      }
+      var J = a(95034),
+        K = a(63556),
+        X = a(84933),
+        $ = a(30470),
+        ee = a(98924);
+      const ne = new Map();
+      function ae(e, n, a) {
+        const t = new Map(),
+          o = new Map(),
+          r = new Map();
+        let i,
+          s,
+          l = 0;
+        const { selectedTabBackgroundDef: c, nTabSaleSectionIndex: d } =
+          (function (e, n) {
+            const a = e.findIndex((e) => "tabs" === e.section_type);
+            if (a >= 0 && void 0 !== n) {
+              const t = e[a],
+                o = t.tabs?.findIndex((e) => e.unique_id === n);
+              if (void 0 !== o && o >= 0 && t.tabs)
+                return {
+                  selectedTabBackgroundDef: t.tabs[o].tab_background_img_groups,
+                  nTabSaleSectionIndex: a,
+                };
+            }
+            return {
+              selectedTabBackgroundDef: void 0,
+              nTabSaleSectionIndex: void 0,
+            };
+          })(n, a);
+        if (e?.enabled) {
+          const g = e.groups?.length;
+          if (
+            (e.groups?.forEach((a, i) => {
+              if (l >= n.length || "tabs" == n[l].section_type) return;
+              const s = new Array();
+              for (
+                let e = 0;
+                e < (a?.num_sections || 0) && l < n.length;
+                ++e, ++l
+              ) {
+                if ("tabs" == n[l].section_type) break;
+                const t = n[l].unique_id;
+                s.push(t),
+                  o.set(t, a.background_id),
+                  0 === e && r.set(t, a.background_id);
+              }
+              t.set(a.background_id, {
+                nBackgroundGroupID: a.background_id,
+                sectionUniqueIDs: s,
+                nSaleSectionLastIndex: l - 1,
+                nUniqueIDNextSaleSection:
+                  l < n.length && (void 0 === d || l < d)
+                    ? n[l].unique_id
+                    : void 0,
+              });
+              if (i + 1 == g && e.last_group_until_cover_section_until_end)
+                for (
+                  let e = l;
+                  e < n.length && (!c || !c.enabled || e < d);
+                  ++e
+                ) {
+                  if ("tabs" == n[e].section_type && c?.enabled) break;
+                  const t = n[e].unique_id;
+                  o.set(t, a.background_id);
+                }
+            }),
+            l < n.length && (void 0 === d || l < d) && (i = n[l].unique_id),
+            c?.enabled && void 0 !== d)
+          ) {
+            let e = d;
+            const i = c.groups.length;
+            for (
+              c.groups.forEach((s, l) => {
+                if (e >= n.length) return;
+                const d = new Array();
+                for (let t = 0; t < s.num_sections && e < n.length; ++t, ++e) {
+                  const i = n[e],
+                    l = i.unique_id;
+                  (0, ee.bF)(a, i)
+                    ? (d.push(l),
+                      o.set(l, s.background_id),
+                      0 === t && r.set(l, s.background_id))
+                    : --t;
+                }
+                let g = e;
+                for (; g < n.length && !(0, ee.bF)(a, n[g]); ) g += 1;
+                t.set(s.background_id, {
+                  nBackgroundGroupID: s.background_id,
+                  sectionUniqueIDs: d,
+                  nSaleSectionLastIndex: e - 1,
+                  nUniqueIDNextSaleSection:
+                    g < n.length ? n[g].unique_id : void 0,
+                });
+                if (l + 1 == i && c.last_group_until_cover_section_until_end)
+                  for (let t = e; t < n.length; ++t) {
+                    const e = n[t];
+                    if ("tabs" == e.section_type && c?.enabled) break;
+                    (0, ee.bF)(a, e) && o.set(e.unique_id, s.background_id);
+                  }
+              });
+              e < n.length && !(0, ee.bF)(a, n[e]);
+            )
+              e++;
+            e < n.length && (s = n[e].unique_id);
+          }
+        } else n?.length > 0 && (i = n[0].unique_id);
+        return {
+          mapGroupToSections: t,
+          nFirstSaleSectionIDWithoutGroup: i,
+          mapSectionToGroup: o,
+          mapFirstSectionToGroup: r,
+          selectedTabBackgroundDef: c,
+          nTabSaleSectionIndex: d,
+          nFirstTabSectionIDWithoutGroup: s,
+        };
+      }
+      var te = a(17267),
+        oe = a(79359),
+        re = a(30142),
+        ie = a(62490),
+        se = a(40353);
+      function le(e, n, a, o) {
+        let r = e.jsondata.sale_background_img_groups.groups.find(
+          (e) => e.background_id === n.groupID,
+        );
+        if (!r && o >= 0) {
+          const a = e.GetSaleSectionFirstMatchByType("tabs"),
+            t = a?.tabs?.find((e) => e.unique_id == o);
+          r = t?.tab_background_img_groups?.groups?.find(
+            (e) => e.background_id == n.groupID,
           );
         }
-        function Hn(a) {
-          const { asset: t } = a;
-          return t.BIsVideo()
-            ? (0, e.jsxs)("div", {
-                className: De().PreviewImgCtn,
-                onClick: (n) =>
-                  (0, be.pg)((0, e.jsx)(Wn, { asset: t }), (0, Ce.uX)(n)),
-                children: [
-                  (0, e.jsxs)("span", {
-                    className: De().PreviewImgInfo,
-                    children: [t.width, " x ", t.height],
-                  }),
-                  (0, e.jsx)("video", {
-                    height: 120,
-                    controls: !1,
-                    autoPlay: !0,
-                    loop: !0,
-                    muted: !0,
-                    children: (0, e.jsx)("source", { src: t.dataUrl }),
-                  }),
-                ],
-              })
-            : (0, e.jsx)("div", {
-                className: De().PreviewImgCtn,
-                style: { backgroundImage: `url(${t.dataUrl})` },
-                children: (0, e.jsxs)("span", {
-                  className: De().PreviewImgInfo,
-                  children: [t.width, " x ", t.height],
-                }),
-              });
+        return (0, t.jsx)(
+          de,
+          {
+            eventModel: e,
+            displayDef: r,
+            derivedGroupInfo: n.derivedGroupInfo,
+            children:
+              r &&
+              r.randomize_section_order &&
+              a !== se.S.EPreviewMode_EditBackground
+                ? (0, t.jsx)(ce, {
+                    clanEventGID: e.GID,
+                    elSaleSections: n.elSaleSections,
+                  })
+                : n.elSaleSections,
+          },
+          "background_group_" + n.groupID,
+        );
+      }
+      function ce(e) {
+        const { clanEventGID: n, elSaleSections: a } = e,
+          [o, r] = (0, oe.M)(`sale_section_seed_${n}`, (0, re.m)());
+        if (!a || 0 === a.length) return null;
+        if (a.length > 1 && void 0 !== o) {
+          const e = (0, re.A)(o);
+          return (0, t.jsx)(t.Fragment, { children: ie.fW(a, 0, e) });
         }
-        function Wn(a) {
-          const { asset: t, closeModal: n } = a;
-          return (0, e.jsx)(re.o0, {
-            bAlertDialog: !0,
-            closeModal: n,
-            bAllowFullSize: !0,
-            children: (0, e.jsx)("video", {
-              controls: !0,
-              autoPlay: !0,
-              loop: !0,
-              muted: !0,
-              children: (0, e.jsx)("source", { src: t.dataUrl }),
-            }),
-          });
+        return (0, t.jsx)(t.Fragment, { children: a });
+      }
+      function de(e) {
+        const {
+            displayDef: n,
+            children: a,
+            eventModel: r,
+            derivedGroupInfo: i,
+          } = e,
+          s = (0, K.E)(),
+          l = u.useCallback(
+            (e, n) => {
+              ne.set(i.nBackgroundGroupID, n);
+            },
+            [i],
+          ),
+          c = (0, X.w6)(l);
+        if (!a || (Array.isArray(a) && 0 == a.length)) return null;
+        if (!n) return (0, t.jsx)(t.Fragment, { children: a });
+        let d;
+        if (n.localized_background_art) {
+          const e = (0, o.LgB)(s),
+            a =
+              e in n.localized_background_art
+                ? e
+                : T.A0.GetLanguageFallback($.TS.LANGUAGE),
+            t = n.localized_background_art[a];
+          t && (d = te.zU.GenerateURLFromHashAndExt(r.clanSteamID, t));
         }
-        function Vn(a) {
-          const t = [],
-            n = new Array();
-          for (const s of a) {
-            if (s == T.X51) continue;
-            const r = (0, l.we)("#Language_" + (0, T.LgB)(s));
-            n.push({ label: r, data: s });
-          }
+        let g = "linear-gradient(";
+        switch (n.gradient_setting) {
+          case "top-to-bottom":
+            g += "to bottom,";
+            break;
+          case "left-to-right":
+            g += "to right,";
+            break;
+          case "top-left-to-bottom-right":
+            g += "to bottom right,";
+            break;
+          case "single-color":
+            g = void 0;
+        }
+        n.background_color1 &&
+        n.background_color2 &&
+        n.background_color1 != n.background_color2
+          ? ((g += " " + n.background_color1),
+            (g += ", " + n.background_color2),
+            (g += ")"))
+          : (g = null);
+        const m =
+            n.background_color1 &&
+            (!n.background_color2 ||
+              "single-color" == n.gradient_setting ||
+              n.background_color1 == n.background_color2),
+          p = "cover" !== n.scaling_setting && "unset" !== n.position_setting,
+          _ = {
+            backgroundImage: g ? `url(${d}), ${g}` : `url(${d})`,
+            backgroundSize: n.scaling_setting,
+            backgroundRepeat: n.repeat_setting,
+            backgroundPosition: p ? n.position_setting : void 0,
+            backgroundColor: m ? n.background_color1 : void 0,
+            overflowY: "hidden",
+          };
+        return (0, t.jsx)("div", {
+          ref: c,
+          style: _,
+          id: "background_group_" + n.background_id,
+          children: a,
+        });
+      }
+      var ge = a(45318),
+        ue = a(99487),
+        me = a(64641),
+        pe = a.n(me),
+        _e = a(12155),
+        he = a(22797),
+        xe = a(32754);
+      class ve {
+        Keyify = (e) =>
+          (function (e) {
+            return "string" == typeof e || "number" == typeof e
+              ? e
+              : JSON.stringify(e);
+          })(e);
+        m_mapVisible = new Map();
+        m_mapOwners = new Map();
+        IsAlreadyVisible(e) {
+          return this.m_mapVisible.has(this.Keyify(e));
+        }
+        SortKey(e, n) {
           return (
-            n.sort((s, r) => s.label.localeCompare(r.label)),
-            n.forEach((s) => t.push({ label: s.label, data: s.data })),
+            (this.m_mapVisible.get(this.Keyify(e)) || 0) -
+            (this.m_mapVisible.get(this.Keyify(n)) || 0)
+          );
+        }
+        BMarkAppVisibile(e, n) {
+          const a = this.EnsureOwnerSetExists(e),
+            t = this.Keyify(n);
+          return (
+            a.add(t),
+            this.IsAlreadyVisible(n)
+              ? (this.m_mapVisible.set(t, (this.m_mapVisible.get(t) ?? 0) + 1),
+                !1)
+              : (this.m_mapVisible.set(t, 1), !0)
+          );
+        }
+        BMarkAppNotVisible(e, n) {
+          if (!this.IsAlreadyVisible(n)) return !1;
+          const a = this.EnsureOwnerSetExists(e),
+            t = this.Keyify(n);
+          return !!a.has(t) && (this.DecrementAppVisibility(t), !0);
+        }
+        MarkAllAppsNotVisible(e) {
+          this.m_mapOwners.has(e) &&
+            (this.m_mapOwners
+              .get(e)
+              .forEach(this.DecrementAppVisibility.bind(this)),
+            this.m_mapOwners.delete(e));
+        }
+        EnsureOwnerSetExists(e) {
+          let n = this.m_mapOwners.get(e);
+          return (
+            n ||
+              (this.m_mapOwners.set(e, new Set()),
+              (n = this.m_mapOwners.get(e))),
             n
           );
         }
-        var Tt = ((a) => (
-          (a[(a.k_eInsertThumbnail = 1)] = "k_eInsertThumbnail"),
-          (a[(a.k_eInsertFullImage = 2)] = "k_eInsertFullImage"),
-          (a[(a.k_eShowImageGroup = 3)] = "k_eShowImageGroup"),
-          (a[(a.k_eInsertVideo = 4)] = "k_eInsertVideo"),
-          a
-        ))(Tt || {});
-        function Cn(a, t = !1) {
-          return t
-            ? `${k_ClanImageReplacementToken}/${a.clanAccountID}/${ClanImageUtils.GetThumbHashAndExt(a)}`
-            : `${k_ClanImageReplacementToken}/${a.clanAccountID}/${ClanImageUtils.GetHashAndExt(a)}`;
+        DecrementAppVisibility(e) {
+          const n = (this.m_mapVisible.get(e) ?? 0) - 1;
+          n > 0 ? this.m_mapVisible.set(e, n) : this.m_mapVisible.delete(e);
         }
-        function co(a, t, n) {
-          let s = "";
-          const r = Cn(t);
-          if (n == 4)
-            (s = "[video webm="),
-              t.file_type == EClanImageFileType.k_EClanImageFileType_WEBM &&
-                (s += r),
-              (s += " mp4="),
-              t.file_type == EClanImageFileType.k_EClanImageFileType_MP4 &&
-                (s += r),
-              (s += " autoplay=true controls=false][/video]");
-          else if (n == 2) s = "[img]" + r + "[/img]";
-          else {
-            const i = Cn(t, !0);
-            s = "[url=" + r + "][img]" + i + "[/img][/url]";
-          }
-          a.InsertText(s);
-        }
-        var Kn = o(55436),
-          Yn = o(53732),
-          je = o.n(Yn),
-          Dn = o(49460);
-        function Zn(a) {
-          const { fnSetImageSearch: t } = a,
-            n = (0, h.useRef)(null);
-          return (0, e.jsx)("div", {
-            className: Dn.PickerTitle,
-            children: (0, e.jsx)("input", {
-              ref: n,
-              className: Dn.SearchInput,
-              type: "text",
-              placeholder: (0, l.we)("#ImagePicker_Search"),
-              onChange: (s) => t(s.currentTarget.value),
-              onKeyDown: (s) => {
-                s.key == "Escape" &&
-                  (t(""), n.current && (n.current.value = ""));
-              },
-            }),
-          });
-        }
-        const Qn = h.memo(function (t) {
-          const {
-            fileNameSearch: n,
-            clanAccountID: s,
-            imageInsertCallBack: r,
-            fnOnExpandImage: i,
-            showImageActions: c = !0,
-            InternalOpenLocalizeImageGroup: u,
-          } = t;
-          return (0, e.jsx)(jn, {
-            clanAccountID: s,
-            fileNameSearch: n,
-            children: (d, m) =>
-              d.map((v) =>
-                (0, e.jsx)(
-                  Jn,
-                  {
-                    clanImage: v,
-                    searchStringHilight: m,
-                    imageInsertCallBack: r,
-                    showImageActions: c,
-                    fnOnOpenLocalizedImageGroup: u,
-                    OnImageClick: i,
-                  },
-                  v.imageid,
-                ),
+      }
+      var Ie = a(81393),
+        be = a(61336),
+        je = a(96236);
+      function fe(e, n) {
+        const a = Boolean(e && e.BIsClanAccount()),
+          { data: t } = (0, k.hM)(a ? e.GetAccountID() : 0);
+        return (
+          a &&
+          (function (e, n) {
+            return (
+              !!e &&
+              (n
+                ? Boolean(e.valve_admin)
+                : Boolean(e.valve_admin || e.support_user))
+            );
+          })(t, n)
+        );
+      }
+      function Se(e) {
+        const { clanSteamID: n, id: a } = e;
+        return fe(n, e.requireAdmin)
+          ? (0, t.jsx)("div", {
+              id: a,
+              className: (0, I.A)(
+                e.className,
+                e.requireAdmin
+                  ? x.ValveOnlyAdminBackground
+                  : x.ValveOnlyBackground,
               ),
-          });
-        });
-        function jn(a) {
-          const { clanAccountID: t, fileNameSearch: n, children: s } = a,
-            r = (0, Ee.n9)(t),
-            i = n.trim().toLowerCase() || "",
-            c = Ee.pU.GetFilteredClanImagesList(r, i);
-          if (c.length == 0) {
-            const u = Be.b.InitFromClanID(t);
-            let d = Ee.pU.GetLoadState(u);
-            return d && d.loaded
-              ? (0, e.jsx)(
-                  "div",
-                  {
-                    className: je().ResultNotification,
-                    children:
-                      i.length > 0
-                        ? (0, l.we)("#ImagePicker_EmptySearch")
-                        : (0, l.we)("#ImagePicker_Empty"),
-                  },
-                  "ImagePicker_Result",
-                )
-              : d && d.errMsg
-                ? (0, e.jsx)(
-                    "div",
-                    {
-                      className: je().ErrorCode,
-                      children: (0, l.we)("#ImagePicker_Error", d.errMsg),
-                    },
-                    "ImagePicker_Result",
-                  )
-                : (0, e.jsx)(
-                    "div",
-                    {
-                      className: je().ResultNotification,
-                      children: (0, l.we)("#Loading"),
-                    },
-                    "ImagePicker_Result",
-                  );
-          } else return s(c, i);
-        }
-        function uo(a) {
-          const {
-            clanAccountID: t,
-            fileNameSearch: n,
-            onImageSelected: s,
-            selectedItem: r,
-          } = a;
-          return jsx(jn, {
-            clanAccountID: t,
-            fileNameSearch: n,
-            children: (i) =>
-              jsx("div", {
-                className: styles.ClanImageGrid,
-                children: i.map((c) =>
-                  jsx(
-                    $n,
-                    { clanImage: c, selected: c == r, onImageSelected: s },
-                    c.imageid,
-                  ),
-                ),
+              children: e.children,
+            })
+          : null;
+      }
+      var we = a(56283),
+        ke = a(74568),
+        Ce = a(738),
+        Ee = a(48479),
+        De = a(30294),
+        Ae = a(6379),
+        Ge = a(88997),
+        ye = a(61257),
+        Te = a(4869),
+        Le = a(27828),
+        Be = a.n(Le);
+      function Ne(e) {
+        const { color: n, onChange: a, strTitle: o, disableAlpha: r } = e,
+          [i, s] = (0, u.useState)(() => n || "rgba(255, 255, 255, 1)"),
+          l = (0, u.useCallback)(async () => {
+            if ("EyeDropper" in window)
+              try {
+                const e = new window.EyeDropper(),
+                  n = await e.open(),
+                  t = (function (e) {
+                    const n = parseInt(e.slice(1), 16);
+                    return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${255 & n}, 1)`;
+                  })(n.sRGBHex);
+                s(t), a(t);
+              } catch (e) {
+                console.warn(C.Z.Localize("#Sale_EyeDropperFailed"), e);
+              }
+            else alert(C.Z.Localize("#Sale_EyeDropperError"));
+          }, [a]);
+        return (0, t.jsxs)("div", {
+          className: Be().ColorPickerDialog,
+          children: [
+            Boolean(o) && (0, t.jsx)(we.JU, { children: o }),
+            (0, t.jsx)(ye.xk, {
+              onChange: (e) => {
+                const n = (function (e) {
+                  return `rgba(${e.rgb.r}, ${e.rgb.g}, ${e.rgb.b}, ${e.rgb.a})`;
+                })(e);
+                s(n), a(n);
+              },
+              color: i,
+              disableAlpha: r,
+              className: Be().ColorPickerCtn,
+            }),
+            (0, t.jsx)("div", {
+              className: Be().EyeDropperCtn,
+              children: (0, t.jsx)(xe.Gq, {
+                toolTipContent: C.Z.Localize("#Sale_BackgroundColorPicker"),
+                children: (0, t.jsx)(we.$n, {
+                  className: Be().EyeDropperBtn,
+                  onClick: l,
+                  children: (0, t.jsx)(Te.O7b, {}),
+                }),
               }),
+            }),
+          ],
+        });
+      }
+      function Me(e) {
+        const {
+            color: n,
+            onChange: a,
+            onRequestClose: o,
+            disableAlpha: r,
+            strTitle: i,
+          } = e,
+          s = (0, u.useRef)(null);
+        return (
+          (0, u.useEffect)(() => {
+            const e = s.current?.ownerDocument ?? document,
+              n = (e) => {
+                s.current && !s.current.contains(e.target) && o();
+              },
+              a = (e) => {
+                "Escape" === e.key && o();
+              };
+            return (
+              e.addEventListener("pointerdown", n, !0),
+              e.addEventListener("keydown", a, !0),
+              () => {
+                e.removeEventListener("pointerdown", n, !0),
+                  e.removeEventListener("keydown", a, !0);
+              }
+            );
+          }, [o]),
+          (0, t.jsx)("div", {
+            ref: s,
+            children: (0, t.jsx)(Ne, {
+              color: n,
+              disableAlpha: r,
+              strTitle: i ?? C.Z.Localize("#Button_Color"),
+              onChange: a,
+            }),
+          })
+        );
+      }
+      var Ue = a(13447),
+        Pe = a.n(Ue),
+        Re = a(32190),
+        ze = a.n(Re),
+        Fe = a(17720),
+        Oe = a(28954),
+        He = a(86355),
+        Ve = a(34629),
+        qe = a(37085),
+        We = a(41735),
+        Ye = a.n(We),
+        Ze = a(14947),
+        Qe = a(7221);
+      class Je {
+        m_curLocImageGroup = null;
+        m_curLocImageGroupType = null;
+        constructor() {
+          (0, Ze.Gn)(this);
+        }
+        static async BDoesClanImageFileExistsOnCDNOrOrigin(e, n, a, t) {
+          let o =
+              b.TS.COMMUNITY_BASE_URL +
+              "gid/" +
+              n.ConvertTo64BitString() +
+              "/hasclanimagefile",
+            r = { image_hash_and_ext: a, lang: "" + t };
+          return (
+            (await Ye().get(o, { params: r, cancelToken: e && e.token })).data
+              .success == qe.R
+          );
+        }
+        SetPrimaryImageForImageGroup(e, n) {
+          (this.m_curLocImageGroup &&
+            this.m_curLocImageGroup.primaryImage.imageid == e.imageid &&
+            n == this.m_curLocImageGroupType) ||
+            ((this.m_curLocImageGroup = {
+              primaryImage: e,
+              localized_images: [],
+            }),
+            (this.m_curLocImageGroupType = n),
+            (this.m_curLocImageGroup.localized_images = (0, ie.$Y)(
+              this.m_curLocImageGroup.localized_images,
+              o.bP9,
+              null,
+            )));
+        }
+        GetPrimaryImageForImageGroup() {
+          return this.m_curLocImageGroup?.primaryImage;
+        }
+        ClearImageGroup() {
+          (this.m_curLocImageGroup = null),
+            (this.m_curLocImageGroupType = null);
+        }
+        GetLocalizedImageGroupForEdit() {
+          return this.m_curLocImageGroup;
+        }
+        GetLocalizedImageGroupForEditAsURL(e, n) {
+          if (this.m_curLocImageGroup) {
+            let a = this.m_curLocImageGroup.primaryImage;
+            return this.m_curLocImageGroup.localized_images[n]
+              ? this.m_curLocImageGroup.localized_images[n]
+              : te.zU.GenerateURLFromHashAndExt(
+                  e,
+                  te.zU.GetHashAndExt(a) ?? "",
+                );
+          }
+          return null;
+        }
+        async DetermineAvailableLocalizationForGroup(e) {
+          if (!this.m_curLocImageGroup) return;
+          const n = this.m_curLocImageGroup.primaryImage,
+            a = Fe.b.InitFromClanID(n.clanAccountID),
+            t = te.zU.GetHashAndExt(n) ?? "",
+            r = [];
+          for (let n = o.Bhc; n < o.bP9; ++n)
+            r.push(Je.BDoesClanImageFileExistsOnCDNOrOrigin(e, a, t, n));
+          const i = await Promise.all(r);
+          (0, Ze.h5)(() => {
+            for (let e = o.Bhc; e < o.bP9; ++e)
+              i[e] &&
+                (this.m_curLocImageGroup.localized_images[e] =
+                  te.zU.GenerateURLFromHashAndExtAndLang(
+                    a,
+                    t,
+                    Qe.wI.full,
+                    e,
+                    this.m_curLocImageGroupType ?? void 0,
+                  ));
           });
         }
-        function Jn(a) {
-          const {
-              clanImage: t,
-              searchStringHilight: n,
-              imageInsertCallBack: s,
-              OnImageClick: r,
-              showImageActions: i,
-              fnOnOpenLocalizedImageGroup: c,
-            } = a,
-            [u, d] = h.useState(!1),
-            m = () => s(t, Tt.k_eInsertFullImage),
-            v = () => s(t, Tt.k_eInsertVideo),
-            I = () => s(t, Tt.k_eInsertThumbnail),
-            j = (ne) => {
-              t.url &&
-                (ne.dataTransfer.setData("text", t.url),
-                Ee.pU.GetClanImageDragListener().forEach((me) => {
-                  let we = Be.b.InitFromClanID(t.clanAccountID);
-                  me(we, !0);
-                }));
-            },
-            x = (ne) => {
-              t.url &&
-                Ee.pU.GetClanImageDragListener().forEach((me) => {
-                  let we = Be.b.InitFromClanID(t.clanAccountID);
-                  me(we, !1);
-                });
-            },
-            _ = (ne) => {
-              (0, be.pg)(
-                (0, e.jsx)(re.o0, {
-                  strTitle: (0, l.we)("#ImagePicker_DeleteImageTitle"),
-                  strDescription: "",
-                  onOK: S,
-                  onCancel: D,
-                  closeModal: D,
-                  children: (0, e.jsxs)(h.Fragment, {
-                    children: [
-                      (0, e.jsx)("div", {
-                        children: (0, l.we)(
-                          "#ImagePicker_DeleteAreYouSure",
-                          t.file_name ?? "",
-                        ),
-                      }),
-                      (0, e.jsx)("br", {}),
-                      (0, e.jsx)("br", {}),
-                      (0, e.jsx)("div", {
-                        children: (0, l.we)("#ImagePicker_DeleteWarning"),
-                      }),
-                    ],
-                  }),
-                }),
-                (0, Ce.uX)(ne) ?? window,
-              );
-            },
-            w = (ne) => {
-              console.log("ClanImageWrapper on delete error: " + ne),
-                (0, be.pg)(
-                  (0, e.jsx)(re.KG, {
-                    strTitle: (0, l.we)("#Error_FailureNotice"),
-                    strDescription: (0, l.we)(
-                      "#EventDisplay_DeleteEvent_Error",
-                    ),
-                    children: (0, e.jsx)("p", { children: ne }),
-                  }),
-                  window,
-                );
-            },
-            S = () => {
-              d(!0);
-              let ne = Be.b.InitFromClanID(t.clanAccountID);
-              Ee.pU
-                .DeleteClanImage(ne, t)
-                .then((me) => {
-                  me.success != Gt.R && w((0, P.H)(me).strErrorMsg), d(!1);
-                })
-                .catch((me) => {
-                  w((0, P.H)(me).strErrorMsg), d(!1);
-                }),
-                D();
-            },
-            D = () => {},
-            G = () => {
-              r && r(t);
-            },
-            E = t.file_name ? t.file_name : "",
-            M = (0, Kn.r)(n, E, String(t.imageid), je().Hilight),
-            V = le.zU.BIsClanImageVideo(t),
-            $ = i && !u && !V,
-            ae = i && !u && !V,
-            Ne = i && !u && V,
-            q = i && !u && !V;
-          return (0, e.jsx)(Et.K, {
-            placeholderHeight: "100vh",
-            className: je().ImageWrapperContainer,
-            rootMargin: "0px 0px 100% 0px",
-            children: (0, e.jsxs)("div", {
-              className: je().ImageButton,
-              children: [
-                (0, e.jsx)("div", {
-                  className: je().ImageWrapper,
-                  style: {
-                    backgroundImage: V ? "" : `url( '${t.thumb_url}' )`,
+        SetLocalizedImageGroupAtLang(e, n, a) {
+          this.m_curLocImageGroup &&
+            (this.m_curLocImageGroup.localized_images[e] = a
+              ? te.zU.GenerateURLFromHashAndExtAndLang(
+                  n,
+                  a,
+                  Qe.wI.full,
+                  e,
+                  this.m_curLocImageGroupType ?? void 0,
+                )
+              : null);
+        }
+        AddLocalizeImageUploaded(e, n) {
+          if (!this.m_curLocImageGroup) return;
+          let a = this.m_curLocImageGroup.primaryImage;
+          if (a?.image_hash == e) {
+            const e = Fe.b.InitFromClanID(a.clanAccountID),
+              t = te.zU.GetHashAndExt(a);
+            t &&
+              (this.m_curLocImageGroup.localized_images[n] =
+                te.zU.GenerateURLFromHashAndExtAndLang(
+                  e,
+                  t,
+                  Qe.wI.full,
+                  n,
+                  this.m_curLocImageGroupType ?? void 0,
+                ));
+          }
+        }
+        GetAllLocalizedGroupImages() {
+          return (
+            (this.m_curLocImageGroup &&
+              this.m_curLocImageGroup.localized_images) ||
+            []
+          );
+        }
+        GetAllLocalizedGroupImageHashAndExts() {
+          return this.GetAllLocalizedGroupImages()
+            .filter(Boolean)
+            .map((e) => te.zU.GetHashAndExtFromURL(e));
+        }
+      }
+      (0, Ve.Cg)([Ze.sH], Je.prototype, "m_curLocImageGroup", void 0);
+      const Ke = new Je();
+      var Xe = a(69343),
+        $e = a(68797),
+        en = a(75844),
+        nn = a(2160),
+        an = a(34214),
+        tn = a(64953),
+        on = a(72739),
+        rn = a(56011);
+      function sn(e) {
+        e.preventDefault();
+      }
+      var ln = a(71647),
+        cn = a.n(ln);
+      function dn(e) {
+        const {
+            onDropFiles: n,
+            renderDesciption: a,
+            elAdditonalButtons: o,
+            elOverrideDragAndDropText: r,
+          } = e,
+          [i, s] = (function (e) {
+            const [n, a] = u.useState(!1);
+            return [
+              {
+                onDragEnter: u.useCallback((e) => {
+                  ((e.dataTransfer.files && e.dataTransfer.files[0]) ||
+                    (e.dataTransfer.types &&
+                      "Files" == e.dataTransfer.types[0])) &&
+                    a(!0);
+                }, []),
+                onDragLeave: u.useCallback((e) => {
+                  rn.NO(e) && a(!1);
+                }, []),
+                onDragEnd: u.useCallback(() => a(!1), []),
+                onDragOver: n ? sn : void 0,
+                onDrop: u.useCallback(
+                  (n) => {
+                    n.dataTransfer.files?.length &&
+                      (e(n.dataTransfer.files, n),
+                      n.preventDefault(),
+                      n.stopPropagation()),
+                      a(!1);
                   },
-                  draggable: !0,
-                  onDragStart: j,
-                  onDragEnd: x,
-                  onDoubleClick: m,
-                  onClick: G,
-                  children: (0, e.jsx)(Sn, {
-                    clanImage: t,
-                    className: je().VideoBackground,
+                  [e],
+                ),
+              },
+              n,
+            ];
+          })(n),
+          [l, c] = (function (e, n) {
+            const a = u.useRef(void 0),
+              o = u.useCallback(
+                (n) => {
+                  n.currentTarget.files.length > 0 &&
+                    (e(n.currentTarget.files), (n.currentTarget.value = ""));
+                },
+                [e],
+              ),
+              r = u.useCallback(() => a.current.click(), []);
+            return [
+              on.createPortal(
+                (0, t.jsx)("form", {
+                  onSubmit: sn,
+                  style: { display: "none" },
+                  children: (0, t.jsx)("input", {
+                    ...n,
+                    type: "file",
+                    ref: a,
+                    onChange: o,
                   }),
                 }),
-                $ &&
-                  (0, e.jsx)("span", {
-                    className: je().Full,
-                    onClick: m,
-                    children: (0, l.we)("#ImagePicker_FullSize"),
-                  }),
-                u &&
-                  (0, e.jsx)(Ye.t, {
-                    size: "medium",
-                    className: je().FloatingThrobber,
-                  }),
-                ae &&
-                  (0, e.jsx)("span", {
-                    className: je().Thumb,
-                    onClick: I,
-                    children: (0, l.we)("#ImagePicker_Thumbnail"),
-                  }),
-                q &&
-                  c &&
-                  (0, e.jsx)(Xn, {
-                    bDeleting: u,
-                    clanImage: t,
-                    fnOnOpenLocalizedImageGroup: c,
-                  }),
-                Ne &&
-                  (0, e.jsx)("span", {
-                    className: je().Full,
-                    onClick: v,
-                    children: (0, l.we)("#ImagePicker_Video"),
-                  }),
-                !u &&
-                  (0, e.jsx)("span", {
-                    className: je().Delete,
-                    onClick: _,
-                    children: (0, e.jsx)("img", {}),
-                  }),
-                (0, e.jsx)("div", {
-                  className: je().ImageWrapperFilename,
-                  title: E,
-                  children: M,
+                window.document.body,
+              ),
+              r,
+            ];
+          })(n, {
+            accept: "image/png, image/jpeg, image/gif, image/webp",
+            multiple: !0,
+          });
+        return (0, t.jsxs)("div", {
+          ...i,
+          className: (0, I.A)(
+            s ? cn().DragAndDropContainerDragging : cn().DragAndDropContainer,
+            "DragAndDropContainer",
+          ),
+          children: [
+            Boolean(a) && a(),
+            (0, t.jsx)("div", {
+              children: r || (0, T.we)("#ImagePicker_DragAndDrop"),
+            }),
+            (0, t.jsxs)("div", {
+              className: cn().ImageUploadBar,
+              children: [
+                l,
+                (0, t.jsxs)("label", {
+                  onClick: c,
+                  children: [
+                    (0, t.jsxs)("span", {
+                      children: [(0, T.we)("#ImagePicker_OrBrowse"), " "],
+                    }),
+                    (0, t.jsx)("span", {
+                      className: cn().SelectImageButton,
+                      children: (0, T.we)("#selectimage_select_file"),
+                    }),
+                  ],
                 }),
               ],
             }),
-          });
-        }
-        function Xn(a) {
-          const {
-              clanImage: t,
-              fnOnOpenLocalizedImageGroup: n,
-              bDeleting: s,
-            } = a,
-            r = (0, _t.Ec)(t.clanAccountID);
-          return s || !r.valve_admin
-            ? null
-            : (0, e.jsx)("span", {
-                className: (0, A.A)(je().Localized, X().ValveOnlyBackground),
-                onClick: () => n?.(t),
-                children: "(VO) " + (0, l.we)("#ImagePicker_Localized"),
-              });
-        }
-        function Sn(a) {
-          const { clanImage: t, className: n } = a;
-          return le.zU.BIsClanImageVideo(t)
-            ? (0, e.jsx)("video", {
-                autoPlay: !0,
-                loop: !0,
-                muted: !0,
-                className: n,
-                children: (0, e.jsx)("source", {
-                  src: t.url,
-                  type: "video/" + (t.file_type == xe.bg.nn ? "mp4" : "webm"),
-                }),
-              })
-            : null;
-        }
-        function $n(a) {
-          const { clanImage: t, onImageSelected: n, selected: s } = a;
-          return jsxs("div", {
-            className: classnames(
-              styles.ClanImageGridItem,
-              s && styles.Selected,
-            ),
-            onClick: () => n(t, !1),
-            onDoubleClick: () => n(t, !0),
-            title: t.file_name,
-            children: [
-              jsx("div", {
-                className: styles.ImgCtn,
-                children: ClanImageUtils.BIsClanImageVideo(t)
-                  ? jsx(Sn, { clanImage: t })
-                  : jsx("img", { src: t.url, loading: "lazy" }),
-              }),
-              jsx("div", { className: styles.Name, children: t.file_name }),
-            ],
-          });
-        }
-        function qn(a) {
-          const { clanSteamID: t, closeModal: n, OnClanImageSelected: s } = a,
-            r = h.useCallback(
-              (u, d) => {
-                s?.(u, d), n?.();
-              },
-              [s, n],
-            ),
-            [i, c] = h.useState("");
-          return (0, e.jsxs)(re.o0, {
-            strTitle: (0, l.we)("#ImagePicker_Images"),
-            strDescription: (0, l.we)("#ImagePicker_DoubleClickToSelect"),
-            bAlertDialog: !0,
-            onOK: n,
-            onCancel: n,
-            children: [
-              (0, e.jsx)(Zn, { fnSetImageSearch: c }),
-              (0, e.jsx)(Qn, {
-                clanAccountID: t.GetAccountID(),
-                fileNameSearch: i,
-                imageInsertCallBack: r,
-                showImageActions: !1,
-              }),
-            ],
-          });
-        }
-        function ea(a) {
-          const { clanSteamID: t, OnClanImageSelected: n } = a;
-          return (0, e.jsxs)("div", {
-            className: et().ImageUploadBar,
-            children: [
-              (0, e.jsxs)("label", {
-                htmlFor: "clanimagedialog",
-                children: [
-                  (0, e.jsxs)("span", {
-                    children: [(0, l.we)("#ImagePicker_PreviousImages"), " "],
-                  }),
-                  (0, e.jsx)("span", {
-                    className: et().SelectImageButton,
-                    children: (0, l.we)("#ImagePicker_PreviousImages2"),
-                  }),
-                ],
-              }),
-              (0, e.jsx)("input", {
-                style: { display: "none" },
-                id: "clanimagedialog",
-                type: "button",
-                onClick: (s) => {
-                  (0, be.pg)(
-                    (0, e.jsx)(qn, { clanSteamID: t, OnClanImageSelected: n }),
-                    (0, Ce.uX)(s) ?? window,
-                  );
-                },
-              }),
-            ],
-          });
-        }
-        function ta(a) {
-          const {
-              clanSteamID: t,
-              rgSupportArtwork: n,
-              localizedPrimaryImage: s,
-              bAllowPreviousClanImageSelection: r,
-              fnSetImageURL: i,
-              rgRealmList: c,
-            } = a,
-            [u] = (0, k.q3)(() => [Oe.O.Get().GetCurEditLanguage()]),
-            d = (0, Bt.zO)(t, n, s),
-            m = a.uploaderOverride || d,
-            [v, I] = h.useState(!1),
-            j = h.useCallback(
-              async (w, S) => {
-                if (!v) {
-                  I(!0);
-                  try {
-                    const { language: D } = (0, B.jj)(w.file_name ?? "", u),
-                      G = (0, B.PD)(D, u, c);
-                    await m.AddExistingClanImage(w, G);
-                  } catch (D) {
-                    let G = (0, P.H)(D);
-                    console.error("AddExistingClanImage: " + G.strErrorMsg, G),
-                      (0, be.pg)(
-                        (0, e.jsx)(re.KG, {
-                          strDescription: (0, l.we)(
-                            "#EventError_Code",
-                            G.strErrorMsg ?? "",
+            o,
+            e.children,
+          ],
+        });
+      }
+      var gn = a(66331),
+        un = a(27344),
+        mn = a.n(un),
+        pn = a(78511);
+      function _n(e) {
+        const {
+            imageUploader: n,
+            fnUploadComplete: a,
+            elOverrideDragAndDropText: o,
+            forceResolution: r,
+            elAdditonalButtons: i,
+            rgRealmList: s,
+          } = e,
+          [l, c] = (0, g.q3)(() => [
+            n.GetUploadImages(),
+            K.O.Get().GetCurEditLanguage(),
+          ]),
+          d = u.useCallback(
+            async (e) => {
+              let a = Array.from(e),
+                o = !0;
+              for (let e = 0; e < a.length; e++) {
+                const r = a[e],
+                  { language: i } = (0, Xe.jj)(r?.name, c);
+                try {
+                  const a = (0, Xe.PD)(i, c, s);
+                  (o = await n.AddImageForLanguage(r, a)),
+                    o ||
+                      (console.error(
+                        "ImageUploaderPanel.OnDropFiles: failed on i=" +
+                          e +
+                          " file=" +
+                          r.name,
+                      ),
+                      (0, Ce.pg)(
+                        (0, t.jsx)(ke.KG, {
+                          strDescription: (0, T.we)(
+                            "#ImagePicker_Error",
+                            r.name,
                           ),
                         }),
                         window,
-                      );
-                  }
-                  I(!1);
-                }
-              },
-              [v, m, u, c],
-            ),
-            x = h.useMemo(
-              () =>
-                r
-                  ? [
-                      [
-                        (0, e.jsx)(
-                          ea,
-                          { clanSteamID: t, OnClanImageSelected: j },
-                          "clanartworkpicker",
+                      ));
+                } catch (e) {
+                  let n = (0, $e.H)(e);
+                  console.error(
+                    "ImageUploaderPanel.OnDropFiles: " + n.strErrorMsg,
+                    n,
+                  ),
+                    (0, Ce.pg)(
+                      (0, t.jsx)(ke.KG, {
+                        strDescription: (0, T.we)(
+                          "#EventError_Code",
+                          n.strErrorMsg ?? "",
                         ),
-                      ],
-                    ]
-                  : null,
-              [j, r, t],
-            ),
-            _ = (w) => {
-              for (const S of w) {
-                const D = S.uploadResult;
-                if (D?.origimagehash) {
-                  const G = (0, B.PD)(D.language, u, c);
-                  C.AddLocalizeImageUploaded(D.origimagehash, G);
-                } else {
-                  const G = Ee.pU.GetClanImageByImageHash(
-                      t,
-                      D?.image_hash ?? "",
-                    ),
-                    E = S.image.GetCurrentImageOption();
-                  if (G && E) {
-                    const M = (0, B.PD)(S.image.language, u, c);
-                    i(E.artworkType, G, M);
-                  }
+                      }),
+                      window,
+                    );
                 }
               }
-            };
-          return (0, e.jsx)(Rn, {
-            ...a,
-            imageUploader: m,
-            rgRealmList: c,
-            elAdditonalButtons: v
-              ? [
-                  (0, e.jsx)(
-                    Ye.t,
+              return o;
+            },
+            [c, n, s],
+          ),
+          m = u.useMemo(
+            () =>
+              i instanceof Array
+                ? i
+                : [
+                    (0, t.jsx)(
+                      u.Fragment,
+                      { children: i },
+                      "elAdditonalButtons",
+                    ),
+                  ],
+            [i],
+          );
+        (0, g.q3)(() =>
+          l.map((e) => ({ a: e.GetCurrentImageOption(), b: e.language })),
+        );
+        return (0, t.jsxs)(dn, {
+          onDropFiles: d,
+          elAdditonalButtons: m,
+          elOverrideDragAndDropText: o,
+          children: [
+            (0, t.jsx)(u.Fragment, {
+              children: (0, t.jsx)("div", {
+                className: mn().UploadPreviewCtn,
+                children: l.map((e) =>
+                  (0, t.jsx)(
+                    xn,
                     {
-                      position: "center",
-                      size: "medium",
-                      string: (0, l.we)("#Loading"),
+                      asset: e,
+                      forceResolution: r,
+                      fnOnRemove: () => n.DeleteUploadImage(e),
+                      languageRealms: s,
                     },
-                    "throbbing",
+                    "arttabupload_" + e.filename + "_" + e.uploadTime,
                   ),
-                ]
-              : x,
-            fnUploadComplete: _,
-          });
-        }
-        var gt = o(25279),
-          bn = o(84676),
-          na = o(25359),
-          ce = o.n(na),
-          aa = o(24806);
-        function En(a) {
-          const {
-              clanImage: t,
-              closeModal: n,
-              lang: s,
-              fnOnArtworkLangChange: r,
-              realms: i,
-              fnLangHasData: c,
-            } = a,
-            [u, d] = (0, h.useState)(s),
-            m = Be.b.InitFromClanID(t.clanAccountID),
-            v = (0, k.q3)(() =>
-              le.zU.GenerateURLFromHashAndExt(m, le.zU.GetHashAndExt(t) ?? ""),
-            );
-          return (0, e.jsx)(re.o0, {
-            strTitle: (0, l.we)("#selectimage_change_artwork_lang_title"),
-            strDescription: (0, l.we)("#selectimage_change_artworl_lang_desc"),
-            onOK: () => r?.(t, s, u),
-            onCancel: n,
-            closeModal: n,
-            children: (0, e.jsxs)("div", {
-              className: (0, A.A)(X().FlexColumnContainer, ce().ReassignCtn),
+                ),
+              }),
+            }),
+            (0, t.jsx)(hn, {
+              imageUploader: n,
+              fnOnUploadImageRequested: async () => {
+                const e = await n.UploadAllImages(r);
+                a?.(e);
+              },
+            }),
+          ],
+        });
+      }
+      function hn(e) {
+        const { imageUploader: n, fnOnUploadImageRequested: a } = e,
+          [o] = (0, g.q3)(() => [n.GetUploadImages()]),
+          r = o.some((e) => "pending" == e.status),
+          i = o.some(
+            (e) =>
+              "waiting" == e.status ||
+              "uploading" == e.status ||
+              "processing" == e.status,
+          );
+        return (0, t.jsxs)("div", {
+          style: { display: "flex" },
+          className: mn().UploadPreviewButtonsCtn,
+          children: [
+            Boolean(o.length) &&
+              (0, t.jsx)(we.$n, {
+                style: { margin: "8px" },
+                onClick: a,
+                disabled: !r,
+                children: (0, T.we)("#ImageUpload_Upload"),
+              }),
+            Boolean(o.length) &&
+              (0, t.jsx)(we.$n, {
+                style: { margin: "8px" },
+                onClick: n.ClearImages,
+                disabled: i,
+                children: (0, T.we)("#ImageUpload_Clear"),
+              }),
+          ],
+        });
+      }
+      const xn = (0, en.PA)(function (e) {
+        const { asset: n, fnOnRemove: a, languageRealms: r } = e,
+          i = n.ImageOptions?.map((e) => {
+            let a,
+              t,
+              o = e?.fnGetLabelText();
+            e.bEnforceDimensions && (o += ` - ${e.width}x${e.height}`),
+              e.bDeprecated &&
+                ((o += ` ${(0, T.we)("#ImageUpload_Deprecated")}`),
+                (a = (0, T.we)("#ImageUpload_Deprecated_ttip"))),
+              (n.BIsOriginalMinimumDimensions(e) &&
+                n.FileTypeMatchesImageTypes(e)) ||
+                (t = mn().ImageDimensionTooSmall);
+            return { label: o, data: e, strOptionClass: t, tooltip: a };
+          }).filter((e) => !e.data.bHiddenFromDropdown),
+          s = {
+            pending: (0, T.we)("#ImageUpload_Pending"),
+            waiting: (0, T.we)("#ImageUpload_Waiting"),
+            uploading: (0, T.we)("#ImageUpload_Uploading"),
+            processing: (0, T.we)("#ImageUpload_Processing"),
+            success: (0, T.we)("#ImageUpload_SuccessCard"),
+            failed: (0, T.we)("#ImageUpload_Failed"),
+          },
+          l = n.BSupportsLanguages()
+            ? (function (e) {
+                const n = [],
+                  a = new Array();
+                for (const n of e) {
+                  if (n == o.X51) continue;
+                  const e = (0, T.we)("#Language_" + (0, o.LgB)(n));
+                  a.push({ label: e, data: n });
+                }
+                return (
+                  a.sort((e, n) => e.label.localeCompare(n.label)),
+                  a.forEach((e) => n.push({ label: e.label, data: e.data })),
+                  a
+                );
+              })(
+                T.A0.GetLanguageListForRealms(r ?? [nn.TU.k_ESteamRealmGlobal]),
+              )
+            : null,
+          c = n.IsValidAssetType(e.forceResolution, e.forceFileType),
+          d = "pending" == n.status;
+        let g = s[n.status];
+        "pending" == n.status &&
+          (c.needsCrop
+            ? (g = (0, T.we)("#ImageUpload_NeedsCrop"))
+            : c.error && (g = (0, T.we)("#ImageUpload_Invalid")));
+        let u;
+        const m = n.GetCurrentImageOption();
+        m && (u = i?.find((e) => e.data.sKey == m.sKey)?.data);
+        u || (u = i?.[0]?.data);
+        return (0, t.jsxs)("div", {
+          className: mn().UploadPreview,
+          children: [
+            (0, t.jsx)("div", {
+              className: mn().UploadPreviewDelete,
+              onClick: () => a(n),
+              children: (0, t.jsx)(_e.sED, {}),
+            }),
+            (0, t.jsx)(vn, { asset: n }),
+            l &&
+              (0, t.jsx)(we.m, {
+                strDropDownClassName: v().DropDownScroll,
+                rgOptions: l,
+                selectedOption: n.language,
+                onChange: (e) => (n.language = e.data),
+                disabled: !d,
+              }),
+            i &&
+              i?.length > 1 &&
+              (0, t.jsx)(we.m, {
+                label: n.GetImageOptionLabel(),
+                rgOptions: i,
+                selectedOption: u,
+                onChange: (e) => n.SetCurrentImageOption(e.data),
+                disabled: !d,
+              }),
+            d &&
+              c.warnings?.map((e, n) =>
+                (0, t.jsx)(
+                  "div",
+                  { className: mn().UploadPreviewWarning, children: e },
+                  `warning${n}`,
+                ),
+              ),
+            d &&
+              c.messages?.map((e, n) =>
+                (0, t.jsx)(
+                  "div",
+                  { className: mn().UploadPreviewMessage, children: e },
+                  `message${n}`,
+                ),
+              ),
+            (0, t.jsxs)("div", {
+              className: (0, I.A)({
+                [v().FlexColumnContainer]: !0,
+                [mn().UploadPreviewError]: "failed" == n.status,
+              }),
               children: [
-                (0, e.jsx)("div", {
-                  className: ce().ImagePreviewContainer,
-                  children: (0, e.jsx)("img", {
-                    className: ce().ArtworkPreview,
-                    src: v,
+                g,
+                (0, pn.o)(n.status) &&
+                  (0, t.jsx)("div", {
+                    className: pe().FlexCenter,
+                    children: (0, t.jsx)(he.t, { size: "small" }),
                   }),
+              ],
+            }),
+            (0, t.jsx)("div", {
+              className: mn().UploadPreviewError,
+              children: n.message,
+            }),
+            d &&
+              c.error &&
+              (0, t.jsx)("div", {
+                className: mn().UploadPreviewError,
+                children: c.error,
+              }),
+            d &&
+              c.needsCrop &&
+              (0, t.jsx)(we.jn, {
+                onClick: () =>
+                  ((n) => {
+                    if (n instanceof tn.M7) {
+                      n.ResetImage();
+                      const a = window,
+                        o = (0, t.jsx)(gn.q, {
+                          ownerWin: a,
+                          uploadFile: n,
+                          forceResolution: e.forceResolution,
+                          fileType: e.forceFileType || an.bg.dU,
+                        });
+                      (0, Ce.HT)(o, a, "CropModal", {
+                        strTitle: (0, T.we)("#ImageUpload_CropModalTitle"),
+                      });
+                    } else
+                      console.log(
+                        "ImageUploadEmbeddedDialog trying to crop non image",
+                        n.fileType,
+                        JSON.stringify(n.GetCurrentImageOption()),
+                      );
+                  })(n),
+                children: (0, T.we)("#ImageUpload_OpenEditor"),
+              }),
+          ],
+        });
+      });
+      function vn(e) {
+        const { asset: n } = e;
+        return n.BIsVideo()
+          ? (0, t.jsxs)("div", {
+              className: mn().PreviewImgCtn,
+              onClick: (e) =>
+                (0, Ce.pg)((0, t.jsx)(In, { asset: n }), (0, rn.uX)(e)),
+              children: [
+                (0, t.jsxs)("span", {
+                  className: mn().PreviewImgInfo,
+                  children: [n.width, " x ", n.height],
                 }),
-                (0, e.jsx)(aa.Ng, {
-                  selectedLang: u,
-                  fnLangHasData: c,
-                  fnOnLanguageChanged: d,
-                  realms: i,
+                (0, t.jsx)("video", {
+                  height: 120,
+                  controls: !1,
+                  autoPlay: !0,
+                  loop: !0,
+                  muted: !0,
+                  children: (0, t.jsx)("source", { src: n.dataUrl }),
+                }),
+              ],
+            })
+          : (0, t.jsx)("div", {
+              className: mn().PreviewImgCtn,
+              style: { backgroundImage: `url(${n.dataUrl})` },
+              children: (0, t.jsxs)("span", {
+                className: mn().PreviewImgInfo,
+                children: [n.width, " x ", n.height],
+              }),
+            });
+      }
+      function In(e) {
+        const { asset: n, closeModal: a } = e;
+        return (0, t.jsx)(ke.o0, {
+          bAlertDialog: !0,
+          closeModal: a,
+          bAllowFullSize: !0,
+          children: (0, t.jsx)("video", {
+            controls: !0,
+            autoPlay: !0,
+            loop: !0,
+            muted: !0,
+            children: (0, t.jsx)("source", { src: n.dataUrl }),
+          }),
+        });
+      }
+      var bn;
+      !(function (e) {
+        (e[(e.k_eInsertThumbnail = 1)] = "k_eInsertThumbnail"),
+          (e[(e.k_eInsertFullImage = 2)] = "k_eInsertFullImage"),
+          (e[(e.k_eShowImageGroup = 3)] = "k_eShowImageGroup"),
+          (e[(e.k_eInsertVideo = 4)] = "k_eInsertVideo");
+      })(bn || (bn = {}));
+      var jn = a(29347),
+        fn = a(53732),
+        Sn = a.n(fn),
+        wn = a(49460);
+      function kn(e) {
+        const { fnSetImageSearch: n } = e,
+          a = (0, u.useRef)(null);
+        return (0, t.jsx)("div", {
+          className: wn.PickerTitle,
+          children: (0, t.jsx)("input", {
+            ref: a,
+            className: wn.SearchInput,
+            type: "text",
+            placeholder: (0, T.we)("#ImagePicker_Search"),
+            onChange: (e) => n(e.currentTarget.value),
+            onKeyDown: (e) => {
+              "Escape" == e.key && (n(""), a.current && (a.current.value = ""));
+            },
+          }),
+        });
+      }
+      const Cn = u.memo(function (e) {
+        const {
+          fileNameSearch: n,
+          clanAccountID: a,
+          imageInsertCallBack: o,
+          fnOnExpandImage: r,
+          showImageActions: i = !0,
+          InternalOpenLocalizeImageGroup: s,
+        } = e;
+        return (0, t.jsx)(En, {
+          clanAccountID: a,
+          fileNameSearch: n,
+          children: (e, n) =>
+            e.map((e) =>
+              (0, t.jsx)(
+                Dn,
+                {
+                  clanImage: e,
+                  searchStringHilight: n,
+                  imageInsertCallBack: o,
+                  showImageActions: i,
+                  fnOnOpenLocalizedImageGroup: s,
+                  OnImageClick: r,
+                },
+                e.imageid,
+              ),
+            ),
+        });
+      });
+      function En(e) {
+        const { clanAccountID: n, fileNameSearch: a, children: o } = e,
+          r = (0, He.n9)(n),
+          i = a.trim().toLowerCase() || "",
+          s = He.pU.GetFilteredClanImagesList(r, i);
+        if (0 == s.length) {
+          const e = Fe.b.InitFromClanID(n);
+          let a = He.pU.GetLoadState(e);
+          return a && a.loaded
+            ? (0, t.jsx)(
+                "div",
+                {
+                  className: Sn().ResultNotification,
+                  children:
+                    i.length > 0
+                      ? (0, T.we)("#ImagePicker_EmptySearch")
+                      : (0, T.we)("#ImagePicker_Empty"),
+                },
+                "ImagePicker_Result",
+              )
+            : a && a.errMsg
+              ? (0, t.jsx)(
+                  "div",
+                  {
+                    className: Sn().ErrorCode,
+                    children: (0, T.we)("#ImagePicker_Error", a.errMsg),
+                  },
+                  "ImagePicker_Result",
+                )
+              : (0, t.jsx)(
+                  "div",
+                  {
+                    className: Sn().ResultNotification,
+                    children: (0, T.we)("#Loading"),
+                  },
+                  "ImagePicker_Result",
+                );
+        }
+        return o(s, i);
+      }
+      function Dn(e) {
+        const {
+            clanImage: n,
+            searchStringHilight: a,
+            imageInsertCallBack: o,
+            OnImageClick: r,
+            showImageActions: i,
+            fnOnOpenLocalizedImageGroup: s,
+          } = e,
+          [l, c] = u.useState(!1),
+          d = () => o(n, bn.k_eInsertFullImage),
+          g = (e) => {
+            console.log("ClanImageWrapper on delete error: " + e),
+              (0, Ce.pg)(
+                (0, t.jsx)(ke.KG, {
+                  strTitle: (0, T.we)("#Error_FailureNotice"),
+                  strDescription: (0, T.we)("#EventDisplay_DeleteEvent_Error"),
+                  children: (0, t.jsx)("p", { children: e }),
+                }),
+                window,
+              );
+          },
+          m = () => {
+            c(!0);
+            let e = Fe.b.InitFromClanID(n.clanAccountID);
+            He.pU
+              .DeleteClanImage(e, n)
+              .then((e) => {
+                e.success != qe.R && g((0, $e.H)(e).strErrorMsg), c(!1);
+              })
+              .catch((e) => {
+                g((0, $e.H)(e).strErrorMsg), c(!1);
+              }),
+              p();
+          },
+          p = () => {},
+          _ = n.file_name ? n.file_name : "",
+          h = (0, jn.r)(a, _, String(n.imageid), Sn().Hilight),
+          x = te.zU.BIsClanImageVideo(n),
+          v = i && !l && !x,
+          I = i && !l && !x,
+          b = i && !l && x,
+          j = i && !l && !x;
+        return (0, t.jsx)(je.K, {
+          placeholderHeight: "100vh",
+          className: Sn().ImageWrapperContainer,
+          rootMargin: "0px 0px 100% 0px",
+          children: (0, t.jsxs)("div", {
+            className: Sn().ImageButton,
+            children: [
+              (0, t.jsx)("div", {
+                className: Sn().ImageWrapper,
+                style: { backgroundImage: x ? "" : `url( '${n.thumb_url}' )` },
+                draggable: !0,
+                onDragStart: (e) => {
+                  n.url &&
+                    (e.dataTransfer.setData("text", n.url),
+                    He.pU.GetClanImageDragListener().forEach((e) => {
+                      e(Fe.b.InitFromClanID(n.clanAccountID), !0);
+                    }));
+                },
+                onDragEnd: (e) => {
+                  n.url &&
+                    He.pU.GetClanImageDragListener().forEach((e) => {
+                      e(Fe.b.InitFromClanID(n.clanAccountID), !1);
+                    });
+                },
+                onDoubleClick: d,
+                onClick: () => {
+                  r && r(n);
+                },
+                children: (0, t.jsx)(Gn, {
+                  clanImage: n,
+                  className: Sn().VideoBackground,
+                }),
+              }),
+              v &&
+                (0, t.jsx)("span", {
+                  className: Sn().Full,
+                  onClick: d,
+                  children: (0, T.we)("#ImagePicker_FullSize"),
+                }),
+              l &&
+                (0, t.jsx)(he.t, {
+                  size: "medium",
+                  className: Sn().FloatingThrobber,
+                }),
+              I &&
+                (0, t.jsx)("span", {
+                  className: Sn().Thumb,
+                  onClick: () => o(n, bn.k_eInsertThumbnail),
+                  children: (0, T.we)("#ImagePicker_Thumbnail"),
+                }),
+              j &&
+                s &&
+                (0, t.jsx)(An, {
+                  bDeleting: l,
+                  clanImage: n,
+                  fnOnOpenLocalizedImageGroup: s,
+                }),
+              b &&
+                (0, t.jsx)("span", {
+                  className: Sn().Full,
+                  onClick: () => o(n, bn.k_eInsertVideo),
+                  children: (0, T.we)("#ImagePicker_Video"),
+                }),
+              !l &&
+                (0, t.jsx)("span", {
+                  className: Sn().Delete,
+                  onClick: (e) => {
+                    (0, Ce.pg)(
+                      (0, t.jsx)(ke.o0, {
+                        strTitle: (0, T.we)("#ImagePicker_DeleteImageTitle"),
+                        strDescription: "",
+                        onOK: m,
+                        onCancel: p,
+                        closeModal: p,
+                        children: (0, t.jsxs)(u.Fragment, {
+                          children: [
+                            (0, t.jsx)("div", {
+                              children: (0, T.we)(
+                                "#ImagePicker_DeleteAreYouSure",
+                                n.file_name ?? "",
+                              ),
+                            }),
+                            (0, t.jsx)("br", {}),
+                            (0, t.jsx)("br", {}),
+                            (0, t.jsx)("div", {
+                              children: (0, T.we)("#ImagePicker_DeleteWarning"),
+                            }),
+                          ],
+                        }),
+                      }),
+                      (0, rn.uX)(e) ?? window,
+                    );
+                  },
+                  children: (0, t.jsx)("img", {}),
+                }),
+              (0, t.jsx)("div", {
+                className: Sn().ImageWrapperFilename,
+                title: _,
+                children: h,
+              }),
+            ],
+          }),
+        });
+      }
+      function An(e) {
+        const {
+            clanImage: n,
+            fnOnOpenLocalizedImageGroup: a,
+            bDeleting: o,
+          } = e,
+          { data: r } = (0, k.hM)(n.clanAccountID);
+        return o || !r?.valve_admin
+          ? null
+          : (0, t.jsx)("span", {
+              className: (0, I.A)(Sn().Localized, v().ValveOnlyBackground),
+              onClick: () => a?.(n),
+              children: "(VO) " + (0, T.we)("#ImagePicker_Localized"),
+            });
+      }
+      function Gn(e) {
+        const { clanImage: n, className: a } = e;
+        return te.zU.BIsClanImageVideo(n)
+          ? (0, t.jsx)("video", {
+              autoPlay: !0,
+              loop: !0,
+              muted: !0,
+              className: a,
+              children: (0, t.jsx)("source", {
+                src: n.url,
+                type: "video/" + (n.file_type == an.bg.nn ? "mp4" : "webm"),
+              }),
+            })
+          : null;
+      }
+      function yn(e) {
+        const { clanSteamID: n, closeModal: a, OnClanImageSelected: o } = e,
+          r = u.useCallback(
+            (e, n) => {
+              o?.(e, n), a?.();
+            },
+            [o, a],
+          ),
+          [i, s] = u.useState("");
+        return (0, t.jsxs)(ke.o0, {
+          strTitle: (0, T.we)("#ImagePicker_Images"),
+          strDescription: (0, T.we)("#ImagePicker_DoubleClickToSelect"),
+          bAlertDialog: !0,
+          onOK: a,
+          onCancel: a,
+          children: [
+            (0, t.jsx)(kn, { fnSetImageSearch: s }),
+            (0, t.jsx)(Cn, {
+              clanAccountID: n.GetAccountID(),
+              fileNameSearch: i,
+              imageInsertCallBack: r,
+              showImageActions: !1,
+            }),
+          ],
+        });
+      }
+      function Tn(e) {
+        const { clanSteamID: n, OnClanImageSelected: a } = e;
+        return (0, t.jsxs)("div", {
+          className: cn().ImageUploadBar,
+          children: [
+            (0, t.jsxs)("label", {
+              htmlFor: "clanimagedialog",
+              children: [
+                (0, t.jsxs)("span", {
+                  children: [(0, T.we)("#ImagePicker_PreviousImages"), " "],
+                }),
+                (0, t.jsx)("span", {
+                  className: cn().SelectImageButton,
+                  children: (0, T.we)("#ImagePicker_PreviousImages2"),
                 }),
               ],
             }),
-          });
-        }
-        var Lt = o(56330);
-        function mn(a) {
-          if (!a) return a;
-          const t = a.lastIndexOf(".");
-          return t === -1 ? a : a.substring(0, t);
-        }
-        var oa = o(58483),
-          sa = o(82385),
-          ra = o(82206),
-          ia = o(95174),
-          la = o(9709),
-          hn = o(64868),
-          ca = o(44894);
-        const da =
-          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzcyREYxMUExREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzcyREYxMUIxREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NzJERjExODFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NzJERjExOTFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pmk/vzIAAAFiSURBVHjaYnz79i0DCDAB8X8gVgUIIEaoSBmIIQRkvAMIIBADJMUIxBVArI0sAAYAAQTTAwNlTEgcXZDpLFDOHCC+A8Sd6FoEAAIIJBAOZKxAEoTZmAPEKSxQSZitFVCz10D5O1iQdE4AYgsouwOKBUBWvAEyRKF+RQa+QLwFIIDQHYUM/gAxC8hfb6C6QTgLKvkaiGtAikBuUAHiD0g6QZJzob5gYUEz9jXUPU+AWAYWETDwG+o9mGQGLLAFoFbcBGJFIGaDagDHCrIV6ti8ArLCFoc3wf4HCDB84YANVEC9HwPEU4B4EiycQKEqgAUjx+F3INYHYkOoZh6YC0CeEUQLS2Qbi4HYCYgvQ8P8AhC3QOMaJRjRNf4C4m3QcP8ODd4QqM0dyIGEDgKgCtmgUf8dypeBamSERoEALi8sAuUnID4AxIegbHQA18OCRTKOlGgBeSECmuH+E4nfQPWAXQwAHbJ3VkYR2TIAAAAASUVORK5CYII=";
-        var ua = o(11243);
-        function ga(a) {
-          const {
-            clanSteamID: t,
-            fnGetImageHash: n,
-            fnLangHasData: s,
-            fnOnRemoveImage: r,
-          } = a;
-          (0, Ee.mr)(t.GetAccountID());
-          const i = h.useMemo(() => {
-              let m = new Array();
-              const v = l.A0.GetLanguageListForRealms([
-                te.TU.k_ESteamRealmGlobal,
-                te.TU.k_ESteamRealmChina,
-              ]);
-              for (const I of v) {
-                const j = n(I);
-                if (j) {
-                  const x = (0, T.LgB)(I),
-                    _ = (0, l.we)("#Language_" + x);
-                  m.push({ lang: I, strLang: x, locLang: _, imgHash: j });
+            (0, t.jsx)("input", {
+              style: { display: "none" },
+              id: "clanimagedialog",
+              type: "button",
+              onClick: (e) => {
+                (0, Ce.pg)(
+                  (0, t.jsx)(yn, { clanSteamID: n, OnClanImageSelected: a }),
+                  (0, rn.uX)(e) ?? window,
+                );
+              },
+            }),
+          ],
+        });
+      }
+      function Ln(e) {
+        const {
+            clanSteamID: n,
+            rgSupportArtwork: a,
+            localizedPrimaryImage: o,
+            bAllowPreviousClanImageSelection: r,
+            fnSetImageURL: i,
+            rgRealmList: s,
+          } = e,
+          [l] = (0, g.q3)(() => [K.O.Get().GetCurEditLanguage()]),
+          c = (0, Oe.zO)(n, a, o),
+          d = e.uploaderOverride || c,
+          [m, p] = u.useState(!1),
+          _ = u.useCallback(
+            async (e, n) => {
+              if (!m) {
+                p(!0);
+                try {
+                  const { language: n } = (0, Xe.jj)(e.file_name ?? "", l),
+                    a = (0, Xe.PD)(n, l, s);
+                  await d.AddExistingClanImage(e, a);
+                } catch (e) {
+                  let n = (0, $e.H)(e);
+                  console.error("AddExistingClanImage: " + n.strErrorMsg, n),
+                    (0, Ce.pg)(
+                      (0, t.jsx)(ke.KG, {
+                        strDescription: (0, T.we)(
+                          "#EventError_Code",
+                          n.strErrorMsg ?? "",
+                        ),
+                      }),
+                      window,
+                    );
+                }
+                p(!1);
+              }
+            },
+            [m, d, l, s],
+          ),
+          h = u.useMemo(
+            () =>
+              r
+                ? [
+                    [
+                      (0, t.jsx)(
+                        Tn,
+                        { clanSteamID: n, OnClanImageSelected: _ },
+                        "clanartworkpicker",
+                      ),
+                    ],
+                  ]
+                : null,
+            [_, r, n],
+          );
+        return (0, t.jsx)(_n, {
+          ...e,
+          imageUploader: d,
+          rgRealmList: s,
+          elAdditonalButtons: m
+            ? [
+                (0, t.jsx)(
+                  he.t,
+                  {
+                    position: "center",
+                    size: "medium",
+                    string: (0, T.we)("#Loading"),
+                  },
+                  "throbbing",
+                ),
+              ]
+            : h,
+          fnUploadComplete: (e) => {
+            for (const a of e) {
+              const e = a.uploadResult;
+              if (e?.origimagehash) {
+                const n = (0, Xe.PD)(e.language, l, s);
+                Ke.AddLocalizeImageUploaded(e.origimagehash, n);
+              } else {
+                const t = He.pU.GetClanImageByImageHash(n, e?.image_hash ?? ""),
+                  o = a.image.GetCurrentImageOption();
+                if (t && o) {
+                  const e = (0, Xe.PD)(a.image.language, l, s);
+                  i(o.artworkType, t, e);
                 }
               }
-              return (
-                (m = m.sort((I, j) =>
-                  I.locLang > j.locLang ? 1 : I.locLang < j.locLang ? -1 : 0,
-                )),
-                m
-              );
-            }, [n]),
-            [c, u, d] = (0, hn.uD)();
-          return (0, e.jsxs)("div", {
-            className: ce().SelectImageLanguagesCtn,
+            }
+          },
+        });
+      }
+      var Bn = a(73744),
+        Nn = a(55263),
+        Mn = a(25359),
+        Un = a.n(Mn),
+        Pn = a(1909);
+      function Rn(e) {
+        const {
+            clanImage: n,
+            closeModal: a,
+            lang: o,
+            fnOnArtworkLangChange: r,
+            realms: i,
+            fnLangHasData: s,
+          } = e,
+          [l, c] = (0, u.useState)(o),
+          d = Fe.b.InitFromClanID(n.clanAccountID),
+          m = (0, g.q3)(() =>
+            te.zU.GenerateURLFromHashAndExt(d, te.zU.GetHashAndExt(n) ?? ""),
+          );
+        return (0, t.jsx)(ke.o0, {
+          strTitle: (0, T.we)("#selectimage_change_artwork_lang_title"),
+          strDescription: (0, T.we)("#selectimage_change_artworl_lang_desc"),
+          onOK: () => r?.(n, o, l),
+          onCancel: a,
+          closeModal: a,
+          children: (0, t.jsxs)("div", {
+            className: (0, I.A)(v().FlexColumnContainer, Un().ReassignCtn),
             children: [
-              (0, e.jsx)("div", {
-                className: ce().SelectImageTitle,
-                children: (0, l.we)("#selectimage_uploaded_languages"),
+              (0, t.jsx)("div", {
+                className: Un().ImagePreviewContainer,
+                children: (0, t.jsx)("img", {
+                  className: Un().ArtworkPreview,
+                  src: m,
+                }),
               }),
-              (0, e.jsx)("div", {
-                className: ce().LanguageListContainer,
-                children: i.map((m) =>
-                  (0, e.jsx)(
-                    ma,
-                    { langData: m, ...a },
-                    "lang_select_" + t.GetAccountID() + " " + m.strLang,
-                  ),
+              (0, t.jsx)(Pn.Ng, {
+                selectedLang: l,
+                fnLangHasData: s,
+                fnOnLanguageChanged: c,
+                realms: i,
+              }),
+            ],
+          }),
+        });
+      }
+      var zn = a(56330);
+      function Fn(e) {
+        if (!e) return e;
+        const n = e.lastIndexOf(".");
+        return -1 === n ? e : e.substring(0, n);
+      }
+      var On = a(65606),
+        Hn = a(41550),
+        Vn = a(67680),
+        qn = a(50433),
+        Wn = a(9709),
+        Yn = a(64753),
+        Zn = a(44894);
+      var Qn = a(26408);
+      function Jn(e) {
+        const {
+          clanSteamID: n,
+          fnGetImageHash: a,
+          fnLangHasData: r,
+          fnOnRemoveImage: i,
+        } = e;
+        (0, He.mr)(n.GetAccountID());
+        const s = u.useMemo(() => {
+            let e = new Array();
+            const n = T.A0.GetLanguageListForRealms([
+              nn.TU.k_ESteamRealmGlobal,
+              nn.TU.k_ESteamRealmChina,
+            ]);
+            for (const t of n) {
+              const n = a(t);
+              if (n) {
+                const a = (0, o.LgB)(t),
+                  r = (0, T.we)("#Language_" + a);
+                e.push({ lang: t, strLang: a, locLang: r, imgHash: n });
+              }
+            }
+            return (
+              (e = e.sort((e, n) =>
+                e.locLang > n.locLang ? 1 : e.locLang < n.locLang ? -1 : 0,
+              )),
+              e
+            );
+          }, [a]),
+          [l, c, d] = (0, Yn.uD)();
+        return (0, t.jsxs)("div", {
+          className: Un().SelectImageLanguagesCtn,
+          children: [
+            (0, t.jsx)("div", {
+              className: Un().SelectImageTitle,
+              children: (0, T.we)("#selectimage_uploaded_languages"),
+            }),
+            (0, t.jsx)("div", {
+              className: Un().LanguageListContainer,
+              children: s.map((a) =>
+                (0, t.jsx)(
+                  Kn,
+                  { langData: a, ...e },
+                  "lang_select_" + n.GetAccountID() + " " + a.strLang,
                 ),
+              ),
+            }),
+            !!i &&
+              (0, t.jsxs)(we.$n, {
+                onClick: c,
+                children: [
+                  (0, T.we)("#Sale_RemoveAll"),
+                  (0, t.jsx)(Qn.o, {
+                    tooltip: (0, T.we)("#Sale_RemoveAll_Tooltip"),
+                  }),
+                ],
               }),
-              !!r &&
-                (0, e.jsxs)(U.$n, {
-                  onClick: u,
+            (0, t.jsx)(ke.EN, {
+              active: l,
+              children: (0, t.jsx)(ke.o0, {
+                strTitle: (0, T.we)("#Dialog_AreYouSure"),
+                strDescription: (0, T.we)("#ImageUpload_DeleteAll_Confirm"),
+                closeModal: d,
+                onOK: () => {
+                  for (let e = 0; e < o.bP9; e++) r && i && r(e) && i(e);
+                },
+              }),
+            }),
+          ],
+        });
+      }
+      function Kn(e) {
+        const {
+            clanSteamID: n,
+            langData: a,
+            langOverride: r,
+            fnOnLanguagePreviewChange: i,
+            fnOnArtworkLangChange: s,
+            fnOnRemoveImage: l,
+          } = e,
+          [c, d] = (0, g.q3)(() => {
+            const e = He.pU.GetClanImageByImageHash(n, a.imgHash);
+            let t = "";
+            e &&
+              (t = te.zU.GenerateURLFromHashAndExtAndLang(
+                n,
+                te.zU.GetHashAndExt(e),
+                Qe.wI.full,
+                a.lang,
+              ));
+            let o = Un().LanguageSelectorSelected;
+            return (
+              r != a.lang &&
+                (o = a.imgHash
+                  ? Un().LanguageSelector
+                  : Un().LanguageSelectorNoData),
+              [t, o]
+            );
+          });
+        return (0, t.jsxs)("div", {
+          id: a.strLang,
+          className: Un().LanguageContainer,
+          onClick: (e) => {
+            let n = (0, o.sfN)(e.currentTarget.id);
+            i(n);
+          },
+          children: [
+            (0, t.jsx)("div", { className: d, children: a.locLang }),
+            (0, t.jsxs)("span", {
+              className: Un().LanguageOptions,
+              children: [
+                Boolean(c) &&
+                  (0, t.jsx)("a", {
+                    href: c,
+                    target: "_blank",
+                    children: (0, t.jsx)(xe.he, {
+                      toolTipContent: (0, T.we)("#selectimage_viewimage_ttip"),
+                      children: _e.YNO(),
+                    }),
+                  }),
+                !!s && (0, t.jsx)(Xn, { ...e }),
+                !!l && (0, t.jsx)($n, { fnOnRemoveImage: l, langData: a }),
+              ],
+            }),
+          ],
+        });
+      }
+      function Xn(e) {
+        const {
+            clanSteamID: n,
+            langData: a,
+            fnOnArtworkLangChange: o,
+            fnGetImageHash: r,
+            fnLangHasData: i,
+            realms: s,
+          } = e,
+          [l, c, d] = (0, Yn.uD)(),
+          u = (0, g.q3)(() => {
+            const e = r(a.lang);
+            (0, Ie.wT)(
+              !e || !e.includes("."),
+              "ChangeLanguageButton: Unexpected File Extension: " + e,
+            );
+            return He.pU.GetClanImageByImageHash(n, e);
+          });
+        if (u)
+          return (0, t.jsxs)(t.Fragment, {
+            children: [
+              (0, t.jsx)(xe.he, {
+                toolTipContent: (0, T.we)("#selectimage_reassign_image_ttip"),
+                children: (0, t.jsx)("img", {
+                  "data-lang": a.lang,
+                  src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzcyREYxMUExREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzcyREYxMUIxREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NzJERjExODFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NzJERjExOTFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pmk/vzIAAAFiSURBVHjaYnz79i0DCDAB8X8gVgUIIEaoSBmIIQRkvAMIIBADJMUIxBVArI0sAAYAAQTTAwNlTEgcXZDpLFDOHCC+A8Sd6FoEAAIIJBAOZKxAEoTZmAPEKSxQSZitFVCz10D5O1iQdE4AYgsouwOKBUBWvAEyRKF+RQa+QLwFIIDQHYUM/gAxC8hfb6C6QTgLKvkaiGtAikBuUAHiD0g6QZJzob5gYUEz9jXUPU+AWAYWETDwG+o9mGQGLLAFoFbcBGJFIGaDagDHCrIV6ti8ArLCFoc3wf4HCDB84YANVEC9HwPEU4B4EiycQKEqgAUjx+F3INYHYkOoZh6YC0CeEUQLS2Qbi4HYCYgvQ8P8AhC3QOMaJRjRNf4C4m3QcP8ODd4QqM0dyIGEDgKgCtmgUf8dypeBamSERoEALi8sAuUnID4AxIegbHQA18OCRTKOlGgBeSECmuH+E4nfQPWAXQwAHbJ3VkYR2TIAAAAASUVORK5CYII=",
+                  onClick: () => c(),
+                }),
+              }),
+              (0, t.jsx)(p.tH, {
+                children: (0, t.jsx)(ke.EN, {
+                  active: l,
+                  children: (0, t.jsx)(Rn, {
+                    clanImage: u,
+                    lang: a.lang,
+                    fnOnArtworkLangChange: o,
+                    fnLangHasData: i,
+                    realms: s,
+                    closeModal: d,
+                  }),
+                }),
+              }),
+            ],
+          });
+        console.error("image does not exists on server");
+      }
+      function $n(e) {
+        const { fnOnRemoveImage: n, langData: a } = e,
+          [r, i, s] = (0, Yn.uD)();
+        return (0, t.jsxs)(t.Fragment, {
+          children: [
+            (0, t.jsx)(xe.he, {
+              toolTipContent: (0, T.we)("#selectimage_delete_image_ttip"),
+              children: (0, t.jsx)("img", {
+                "data-lang": a.lang,
+                src: Zn.A,
+                onClick: i,
+              }),
+            }),
+            (0, t.jsx)(p.tH, {
+              children: (0, t.jsx)(ke.EN, {
+                active: r,
+                children: (0, t.jsx)(ke.o0, {
+                  strTitle: (0, T.we)("#selectimage_remove_image"),
+                  strDescription: (0, T.we)(
+                    "#selectimage_remove_details",
+                    (0, T.we)("#Language_" + (0, o.LgB)(a.lang)),
+                  ),
+                  onOK: () => {
+                    n(a.lang);
+                  },
+                  closeModal: s,
+                }),
+              }),
+            }),
+          ],
+        });
+      }
+      var ea = a(3088),
+        na = a(10224),
+        aa = a(15496),
+        ta = a.n(aa),
+        oa = a(4703);
+      function ra(e) {
+        const {
+            event: n,
+            spotlightURLOverride: a,
+            fnHandleOpenEvent: i,
+            fnImageFailureCallback: s,
+            fnFilterImageURLsForKnownFailures: l,
+            langOverride: c,
+          } = e,
+          d = (0, na.c5)(),
+          m = u.useCallback(
+            (e) => {
+              e.preventDefault(), i && i(n);
+            },
+            [n, i],
+          ),
+          p = c || (0, o.sfN)(b.TS.LANGUAGE),
+          [_, h, x] = (0, g.q3)(() => [
+            n.GetSummaryWithFallback(p),
+            n.GetNameWithFallback(p),
+            n.BShowLibrarySpotlightText(),
+          ]);
+        let v = "spotlight",
+          j = Qe.wI.spotlight_main;
+        (2434320 != n.appid && b.TS.EUNIVERSE != o.Rv) ||
+          ((v = d
+            ? "localized_store_app_spotlight_mobile"
+            : "localized_store_app_spotlight"),
+          (j = Qe.wI.full));
+        let f =
+          (0, oa.WC)(void 0 !== a ? void 0 : n, v, p, j) ??
+          (void 0 !== a ? [a] : []);
+        l && f && (f = l(f));
+        const S = _.replace(/https:\/\/[^ ]*/gi, "").trimLeft();
+        return (0, t.jsx)(u.Fragment, {
+          children: (0, t.jsx)("div", {
+            className: ta().MajorEvent_Ctn,
+            ref: e.containerRef,
+            children: (0, t.jsxs)(r.Z, {
+              className: (0, I.A)(
+                ta().AppDetailsSpotlightContainer,
+                ta().MajorEventContainer,
+              ),
+              onActivate: m,
+              focusable: !0,
+              children: [
+                (0, t.jsx)("div", {
+                  className: ta().MajorEventBackground,
+                  children: (0, t.jsx)(ea.c, {
+                    className: ta().MajorEventImageBackgroundBlur,
+                    rgSources: f,
+                    onIncrementalError: (e, n, a) => s && s(n),
+                  }),
+                }),
+                (0, t.jsxs)("div", {
+                  className: ta().MajorEventImageContainer,
                   children: [
-                    (0, l.we)("#Sale_RemoveAll"),
-                    (0, e.jsx)(ua.o, {
-                      tooltip: (0, l.we)("#Sale_RemoveAll_Tooltip"),
+                    (0, t.jsx)(ea.c, {
+                      className: ta().MajorEventImage,
+                      rgSources: f,
+                      onIncrementalError: (e, n, a) => s && s(n),
+                    }),
+                    (0, t.jsx)("div", {
+                      className: ta().MajorEventImageTemplate,
+                    }),
+                    (0, t.jsx)("div", {
+                      className: ta().MajoreEventImageContentContainer,
+                      children:
+                        x &&
+                        (0, t.jsxs)("div", {
+                          className: ta().MajorEventContent,
+                          children: [
+                            (0, t.jsx)(ea.c, {
+                              className: ta().MajorEventSpotlightBackground,
+                              rgSources: f,
+                              onIncrementalError: (e, n, a) => s && s(n),
+                            }),
+                            (0, t.jsxs)("div", {
+                              className: ta().MajorEventTextCtn,
+                              children: [
+                                (0, t.jsx)("div", {
+                                  className: ta().MajorEventTitle,
+                                  children: h,
+                                }),
+                                (0, t.jsx)("div", {
+                                  className: ta().MajorEventSummary,
+                                  children: S,
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
                     }),
                   ],
                 }),
-              (0, e.jsx)(re.EN, {
-                active: c,
-                children: (0, e.jsx)(re.o0, {
-                  strTitle: (0, l.we)("#Dialog_AreYouSure"),
-                  strDescription: (0, l.we)("#ImageUpload_DeleteAll_Confirm"),
-                  closeModal: d,
-                  onOK: () => {
-                    for (let m = 0; m < T.bP9; m++) s && r && s(m) && r(m);
-                  },
-                }),
-              }),
-            ],
-          });
-        }
-        function ma(a) {
-          const {
-              clanSteamID: t,
-              langData: n,
-              langOverride: s,
-              fnOnLanguagePreviewChange: r,
-              fnOnArtworkLangChange: i,
-              fnOnRemoveImage: c,
-            } = a,
-            [u, d] = (0, k.q3)(() => {
-              const m = Ee.pU.GetClanImageByImageHash(t, n.imgHash);
-              let v = "";
-              m &&
-                (v = le.zU.GenerateURLFromHashAndExtAndLang(
-                  t,
-                  le.zU.GetHashAndExt(m),
-                  Te.wI.full,
-                  n.lang,
-                ));
-              let I = ce().LanguageSelectorSelected;
-              return (
-                s != n.lang &&
-                  (I = n.imgHash
-                    ? ce().LanguageSelector
-                    : ce().LanguageSelectorNoData),
-                [v, I]
-              );
-            });
-          return (0, e.jsxs)("div", {
-            id: n.strLang,
-            className: ce().LanguageContainer,
-            onClick: (m) => {
-              let v = (0, T.sfN)(m.currentTarget.id);
-              r(v);
-            },
-            children: [
-              (0, e.jsx)("div", { className: d, children: n.locLang }),
-              (0, e.jsxs)("span", {
-                className: ce().LanguageOptions,
-                children: [
-                  !!u &&
-                    (0, e.jsx)("a", {
-                      href: u,
-                      target: "_blank",
-                      children: (0, e.jsx)(Ie.he, {
-                        toolTipContent: (0, l.we)(
-                          "#selectimage_viewimage_ttip",
-                        ),
-                        children: Ke.YNO(),
-                      }),
-                    }),
-                  !!i && (0, e.jsx)(ha, { ...a }),
-                  !!c && (0, e.jsx)(va, { fnOnRemoveImage: c, langData: n }),
-                ],
-              }),
-            ],
-          });
-        }
-        function ha(a) {
-          const {
-              clanSteamID: t,
-              langData: n,
-              fnOnArtworkLangChange: s,
-              fnGetImageHash: r,
-              fnLangHasData: i,
-              realms: c,
-            } = a,
-            [u, d, m] = (0, hn.uD)(),
-            v = (0, k.q3)(() => {
-              const I = r(n.lang);
-              return (
-                (0, Ze.wT)(
-                  !I || !I.includes("."),
-                  "ChangeLanguageButton: Unexpected File Extension: " + I,
-                ),
-                Ee.pU.GetClanImageByImageHash(t, I)
-              );
-            });
-          if (!v) {
-            console.error("image does not exists on server");
-            return;
-          }
-          return (0, e.jsxs)(e.Fragment, {
-            children: [
-              (0, e.jsx)(Ie.he, {
-                toolTipContent: (0, l.we)("#selectimage_reassign_image_ttip"),
-                children: (0, e.jsx)("img", {
-                  "data-lang": n.lang,
-                  src: da,
-                  onClick: () => d(),
-                }),
-              }),
-              (0, e.jsx)(O.tH, {
-                children: (0, e.jsx)(re.EN, {
-                  active: u,
-                  children: (0, e.jsx)(En, {
-                    clanImage: v,
-                    lang: n.lang,
-                    fnOnArtworkLangChange: s,
-                    fnLangHasData: i,
-                    realms: c,
-                    closeModal: m,
-                  }),
-                }),
-              }),
-            ],
-          });
-        }
-        function va(a) {
-          const { fnOnRemoveImage: t, langData: n } = a,
-            [s, r, i] = (0, hn.uD)();
-          return (0, e.jsxs)(e.Fragment, {
-            children: [
-              (0, e.jsx)(Ie.he, {
-                toolTipContent: (0, l.we)("#selectimage_delete_image_ttip"),
-                children: (0, e.jsx)("img", {
-                  "data-lang": n.lang,
-                  src: ca.A,
-                  onClick: r,
-                }),
-              }),
-              (0, e.jsx)(O.tH, {
-                children: (0, e.jsx)(re.EN, {
-                  active: s,
-                  children: (0, e.jsx)(re.o0, {
-                    strTitle: (0, l.we)("#selectimage_remove_image"),
-                    strDescription: (0, l.we)(
-                      "#selectimage_remove_details",
-                      (0, l.we)("#Language_" + (0, T.LgB)(n.lang)),
-                    ),
-                    onOK: () => {
-                      t(n.lang);
-                    },
-                    closeModal: i,
-                  }),
-                }),
-              }),
-            ],
-          });
-        }
-        var vn = o(13465),
-          pa = o(21659),
-          fa = o(15496),
-          Se = o.n(fa),
-          Ia = o(88812);
-        function xa(a) {
-          const {
-              event: t,
-              spotlightURLOverride: n,
-              fnHandleOpenEvent: s,
-              fnImageFailureCallback: r,
-              fnFilterImageURLsForKnownFailures: i,
-              langOverride: c,
-            } = a,
-            u = (0, pa.c5)(),
-            d = h.useCallback(
-              (D) => {
-                D.preventDefault(), s && s(t);
-              },
-              [t, s],
-            ),
-            m = c || (0, T.sfN)(Y.TS.LANGUAGE),
-            [v, I, j] = (0, k.q3)(() => [
-              t.GetSummaryWithFallback(m),
-              t.GetNameWithFallback(m),
-              t.BShowLibrarySpotlightText(),
-            ]);
-          let x = "spotlight",
-            _ = Te.wI.spotlight_main;
-          (t.appid == 2434320 || Y.TS.EUNIVERSE == T.Rv) &&
-            ((x = u
-              ? "localized_store_app_spotlight_mobile"
-              : "localized_store_app_spotlight"),
-            (_ = Te.wI.full));
-          let w =
-            (0, Ia.WC)(n !== void 0 ? void 0 : t, x, m, _) ??
-            (n !== void 0 ? [n] : []);
-          i && w && (w = i(w));
-          const S = v.replace(/https:\/\/[^ ]*/gi, "").trimLeft();
-          return (0, e.jsx)(h.Fragment, {
-            children: (0, e.jsx)("div", {
-              className: Se().MajorEvent_Ctn,
-              ref: a.containerRef,
-              children: (0, e.jsxs)(L.Z, {
-                className: (0, A.A)(
-                  Se().AppDetailsSpotlightContainer,
-                  Se().MajorEventContainer,
-                ),
-                onActivate: d,
-                focusable: !0,
-                children: [
-                  (0, e.jsx)("div", {
-                    className: Se().MajorEventBackground,
-                    children: (0, e.jsx)(vn.c, {
-                      className: Se().MajorEventImageBackgroundBlur,
-                      rgSources: w,
-                      onIncrementalError: (D, G, E) => r && r(G),
-                    }),
-                  }),
-                  (0, e.jsxs)("div", {
-                    className: Se().MajorEventImageContainer,
-                    children: [
-                      (0, e.jsx)(vn.c, {
-                        className: Se().MajorEventImage,
-                        rgSources: w,
-                        onIncrementalError: (D, G, E) => r && r(G),
-                      }),
-                      (0, e.jsx)("div", {
-                        className: Se().MajorEventImageTemplate,
-                      }),
-                      (0, e.jsx)("div", {
-                        className: Se().MajoreEventImageContentContainer,
-                        children:
-                          j &&
-                          (0, e.jsxs)("div", {
-                            className: Se().MajorEventContent,
-                            children: [
-                              (0, e.jsx)(vn.c, {
-                                className: Se().MajorEventSpotlightBackground,
-                                rgSources: w,
-                                onIncrementalError: (D, G, E) => r && r(G),
-                              }),
-                              (0, e.jsxs)("div", {
-                                className: Se().MajorEventTextCtn,
-                                children: [
-                                  (0, e.jsx)("div", {
-                                    className: Se().MajorEventTitle,
-                                    children: I,
-                                  }),
-                                  (0, e.jsx)("div", {
-                                    className: Se().MajorEventSummary,
-                                    children: S,
-                                  }),
-                                ],
-                              }),
-                            ],
-                          }),
-                      }),
-                    ],
-                  }),
-                  (0, e.jsx)("div", { className: Se().BottomShadow }),
-                ],
-              }),
+                (0, t.jsx)("div", { className: ta().BottomShadow }),
+              ],
             }),
-          });
-        }
-        var Ca = o(79949),
-          he = o.n(Ca);
-        function Da(a) {
-          const {
-              langOverride: t,
-              artworkType: n,
-              fnOnLanguagePreviewChange: s,
-              clanSteamID: r,
-              eventModel: i,
-              partnerEventStore: c,
-              fnOnRemoveImage: u,
-              fnOnArtworkLangChange: d,
-              realms: m,
-              fnLangHasData: v,
-              fnGetImageHashAndExt: I,
-            } = a,
-            j = I(n, t),
-            x = j
-              ? le.zU.GenerateURLFromHashAndExtAndLang(r, j, Te.wI.full, t)
-              : "",
-            [_] = (0, k.q3)(() => [wa(n, I)]);
-          return _ == 0
-            ? (0, e.jsxs)("div", {
-                className: ce().ImagePreviewContainer,
-                children: [
-                  n === "capsule" &&
-                    (0, e.jsx)(_n, {
-                      imgURL:
-                        Y.TS.IMG_URL + "events/defaults/default_img_cover.jpg",
-                      eventModel: i,
-                    }),
-                  n === "background" &&
-                    (0, e.jsx)(wn, {
-                      imgURL:
-                        Y.TS.IMG_URL + "events/defaults/default_img_header.jpg",
-                      lang: t,
-                      eventModel: i,
-                      partnerEventStore: c,
-                    }),
-                  !![
+          }),
+        });
+      }
+      var ia = a(79949),
+        sa = a.n(ia);
+      function la(e) {
+        const {
+            langOverride: n,
+            artworkType: a,
+            fnOnLanguagePreviewChange: o,
+            clanSteamID: r,
+            eventModel: i,
+            partnerEventStore: s,
+            fnOnRemoveImage: l,
+            fnOnArtworkLangChange: c,
+            realms: d,
+            fnLangHasData: u,
+            fnGetImageHashAndExt: m,
+          } = e,
+          p = m(a, n),
+          _ = p
+            ? te.zU.GenerateURLFromHashAndExtAndLang(r, p, Qe.wI.full, n)
+            : "",
+          [h] = (0, g.q3)(() => [xa(a, m)]);
+        return 0 == h
+          ? (0, t.jsxs)("div", {
+              className: Un().ImagePreviewContainer,
+              children: [
+                "capsule" === a &&
+                  (0, t.jsx)(da, {
+                    imgURL:
+                      b.TS.IMG_URL + "events/defaults/default_img_cover.jpg",
+                    eventModel: i,
+                  }),
+                "background" === a &&
+                  (0, t.jsx)(ga, {
+                    imgURL:
+                      b.TS.IMG_URL + "events/defaults/default_img_header.jpg",
+                    lang: n,
+                    eventModel: i,
+                    partnerEventStore: s,
+                  }),
+                Boolean(
+                  [
                     "spotlight",
                     "localized_store_app_spotlight",
                     "localized_store_app_spotlight_mobile",
-                  ].includes(n) &&
-                    (0, e.jsx)(ja, {
-                      langOverride: t,
-                      artworkType: n,
-                      eventModel: i,
-                    }),
-                  (0, e.jsx)("div", {
-                    children: (0, l.we)("#EventEditor_ArtworkMissing"),
+                  ].includes(a),
+                ) &&
+                  (0, t.jsx)(ca, {
+                    langOverride: n,
+                    artworkType: a,
+                    eventModel: i,
                   }),
-                ],
-              })
-            : (0, e.jsxs)("div", {
-                className: ce().ImagePreviewContainer,
+                (0, t.jsx)("div", {
+                  children: (0, T.we)("#EventEditor_ArtworkMissing"),
+                }),
+              ],
+            })
+          : (0, t.jsxs)("div", {
+              className: Un().ImagePreviewContainer,
+              children: [
+                "capsule" === a &&
+                  (0, t.jsx)(da, { imgURL: _, eventModel: i, langOverride: n }),
+                "background" === a &&
+                  (0, t.jsx)(ga, {
+                    imgURL: _,
+                    lang: n,
+                    eventModel: i,
+                    partnerEventStore: s,
+                  }),
+                "spotlight" === a &&
+                  (0, t.jsx)(ua, { imgURL: _, event: i, lang: n }),
+                "localized_store_app_spotlight" === a &&
+                  (0, t.jsx)(ua, { imgURL: _, event: i, lang: n }),
+                "localized_store_app_spotlight_mobile" === a &&
+                  (0, t.jsx)(ua, { imgURL: _, event: i, lang: n }),
+                ("broadcast_left" === a || "broadcast_right" === a) &&
+                  (0, t.jsx)(ma, {
+                    imgURL: _,
+                    side: "broadcast_right" === a ? "right" : "left",
+                  }),
+                "sale_header" === a && (0, t.jsx)(pa, { imgURL: _ }),
+                "sale_overlay" === a && (0, t.jsx)(_a, { imgURL: _ }),
+                Qe.pb.includes(a) &&
+                  (0, t.jsx)("img", {
+                    className: Wn.PreviewImg,
+                    src: Ke.GetLocalizedImageGroupForEditAsURL(r, n) ?? void 0,
+                  }),
+                "product_banner" === a && (0, t.jsx)(ha, { imgURL: _ }),
+                "product_mobile_banner" === a && (0, t.jsx)(ha, { imgURL: _ }),
+                "sale_logo" === a && (0, t.jsx)(ha, { imgURL: _ }),
+                "bestofyear_banner" === a && (0, t.jsx)(ha, { imgURL: _ }),
+                "bestofyear_banner_mobile" === a &&
+                  (0, t.jsx)(ha, { imgURL: _ }),
+                (0, t.jsx)(Jn, {
+                  langOverride: n,
+                  clanSteamID: r,
+                  fnOnLanguagePreviewChange: o,
+                  fnOnRemoveImage: l,
+                  fnOnArtworkLangChange: c,
+                  realms: d,
+                  fnLangHasData: u,
+                  fnGetImageHash: (e) => Fn(m(a, e) ?? ""),
+                }),
+              ],
+            });
+      }
+      function ca(e) {
+        const { artworkType: n, langOverride: a, eventModel: o } = e,
+          r = Bn.Fj[n],
+          i = u.useMemo(
+            () =>
+              (function (e, n) {
+                const a = 780,
+                  t = 200,
+                  o = document.createElement("canvas");
+                (o.width = a), (o.height = t);
+                const r = o.getContext("2d"),
+                  i = 20;
+                for (let e = 0; e < t; e += i)
+                  for (let n = 0; n < a; n += i)
+                    (r.fillStyle =
+                      (n / i + e / i) % 2 == 0 ? "#a405e3ff" : "#000000"),
+                      r.fillRect(n, e, i, i);
+                const s = r.createLinearGradient(0, 0, a, 0);
+                s.addColorStop(0, "rgba(32,32,32,0.8)"),
+                  s.addColorStop(1, "rgba(60,60,60,0.8)"),
+                  (r.fillStyle = s),
+                  r.fillRect(0, 0, a, t);
+                const l = r.createRadialGradient(
+                  a / 2,
+                  t / 2,
+                  0,
+                  a / 2,
+                  t / 2,
+                  Math.max(a, t) / 1.2,
+                );
+                l.addColorStop(0, "rgba(0,0,0,0)"),
+                  l.addColorStop(1, "rgba(0,0,0,0.6)"),
+                  (r.fillStyle = l),
+                  r.fillRect(0, 0, a, t),
+                  (r.fillStyle = "#fff"),
+                  (r.font = "32px Arial"),
+                  (r.textAlign = "center"),
+                  (r.textBaseline = "middle"),
+                  r.fillText(e, a / 2, t / 2 - 20),
+                  n &&
+                    ((r.font = "18px Arial"), r.fillText(n, a / 2, t / 2 + 25));
+                return o.toDataURL("image/png");
+              })(
+                (0, T.we)("#EventEditor_ArtworkType_" + n),
+                `${r.width} X ${r.height}`,
+              ),
+            [r.height, r.width, n],
+          );
+        return (0, t.jsx)(ua, { lang: a, imgURL: i, event: o });
+      }
+      function da(e) {
+        const { imgURL: n, eventModel: a, langOverride: o } = e,
+          r = (0, K.E)();
+        return (0, t.jsx)("div", {
+          style: { display: "flex", width: "304px" },
+          children: (0, t.jsx)(qn.u, {
+            event: a,
+            imageURLOverride: n,
+            langOverride: o ?? r,
+          }),
+        });
+      }
+      function ga(e) {
+        const { lang: n, eventModel: a, partnerEventStore: r } = e,
+          i = (0, On.LJ)(),
+          [s, l, c, d, m] = (0, g.q3)(() => [
+            a.GetNameWithFallback(n),
+            a.GetDescriptionWithFallback(n),
+            a.GetSubTitleWithLanguageFallback(n),
+            a.type,
+            a.AnnouncementGID,
+          ]);
+        let p = l
+          ? (0, t.jsx)(Vn.fh, {
+              text: l || "",
+              partnerEventStore: r,
+              showErrorInfo: !1,
+              event: a,
+              languageOverride: K.O.Get().GetCurEditLanguage(),
+            })
+          : (0, T.we)("#selectimage_display_event_body");
+        return (0, t.jsxs)("div", {
+          className: sa().MultipleExampleContainer,
+          children: [
+            (0, t.jsx)("div", {
+              className: sa().ExampleSectionTitle,
+              children: (0, T.we)("#selectimage_preview_title_1"),
+            }),
+            (0, t.jsx)("div", {
+              className: (0, I.A)(sa().DetailPageExample, "DetailPageExample"),
+              children: (0, t.jsxs)("div", {
+                className: sa().DetailExample,
                 children: [
-                  n === "capsule" &&
-                    (0, e.jsx)(_n, {
-                      imgURL: x,
-                      eventModel: i,
-                      langOverride: t,
+                  (0, t.jsx)("div", {
+                    className: sa().MainImageCtn,
+                    children: (0, t.jsx)("img", { src: e.imgURL }),
+                  }),
+                  (0, t.jsx)("div", {
+                    className: sa().ExampleBodyPosition,
+                    children: (0, t.jsxs)("div", {
+                      className: sa().ExampleContentCtn,
+                      children: [
+                        (0, t.jsx)("div", {
+                          className: sa().TextTitle,
+                          children:
+                            s || (0, T.we)("#selectimage_display_event_title"),
+                        }),
+                        (0, t.jsx)("div", {
+                          className: sa().TextSubTitle,
+                          children:
+                            c ||
+                            (0, T.we)("#selectimage_display_event_subtitle"),
+                        }),
+                        (0, t.jsx)("div", {
+                          className: sa().TextBody,
+                          children: p,
+                        }),
+                      ],
                     }),
-                  n === "background" &&
-                    (0, e.jsx)(wn, {
-                      imgURL: x,
-                      lang: t,
-                      eventModel: i,
-                      partnerEventStore: c,
-                    }),
-                  n === "spotlight" &&
-                    (0, e.jsx)(Pt, { imgURL: x, event: i, lang: t }),
-                  n === "localized_store_app_spotlight" &&
-                    (0, e.jsx)(Pt, { imgURL: x, event: i, lang: t }),
-                  n === "localized_store_app_spotlight_mobile" &&
-                    (0, e.jsx)(Pt, { imgURL: x, event: i, lang: t }),
-                  (n === "broadcast_left" || n === "broadcast_right") &&
-                    (0, e.jsx)(ba, {
-                      imgURL: x,
-                      side: n === "broadcast_right" ? "right" : "left",
-                    }),
-                  n === "sale_header" && (0, e.jsx)(Ea, { imgURL: x }),
-                  n === "sale_overlay" && (0, e.jsx)(_a, { imgURL: x }),
-                  Te.pb.includes(n) &&
-                    (0, e.jsx)("img", {
-                      className: la.PreviewImg,
-                      src: C.GetLocalizedImageGroupForEditAsURL(r, t) ?? void 0,
-                    }),
-                  n === "product_banner" && (0, e.jsx)(mt, { imgURL: x }),
-                  n === "product_mobile_banner" &&
-                    (0, e.jsx)(mt, { imgURL: x }),
-                  n === "sale_logo" && (0, e.jsx)(mt, { imgURL: x }),
-                  n === "bestofyear_banner" && (0, e.jsx)(mt, { imgURL: x }),
-                  n === "bestofyear_banner_mobile" &&
-                    (0, e.jsx)(mt, { imgURL: x }),
-                  (0, e.jsx)(ga, {
-                    langOverride: t,
-                    clanSteamID: r,
-                    fnOnLanguagePreviewChange: s,
-                    fnOnRemoveImage: u,
-                    fnOnArtworkLangChange: d,
-                    realms: m,
-                    fnLangHasData: v,
-                    fnGetImageHash: (w) => mn(I(n, w) ?? ""),
                   }),
                 ],
-              });
-        }
-        function go(a) {
-          const { artworkType: t } = a,
-            n = ArtworkTypeMap[t];
-          return jsxs("div", {
-            className: previewstyles.SpotlightImage,
-            children: [
-              jsx("h1", {
-                className: previewstyles.SpotImgTitle,
-                children: Localize("#EventEditor_ArtworkType_" + t),
               }),
-              jsxs("p", {
-                className: previewstyles.SpotImgSubtitle,
-                children: [n.width, " X ", n.height],
-              }),
-            ],
-          });
-        }
-        function ja(a) {
-          const { artworkType: t, langOverride: n, eventModel: s } = a,
-            r = gt.Fj[t],
-            i = h.useMemo(
-              () =>
-                Sa(
-                  (0, l.we)("#EventEditor_ArtworkType_" + t),
-                  `${r.width} X ${r.height}`,
-                ),
-              [r.height, r.width, t],
-            );
-          return (0, e.jsx)(Pt, { lang: n, imgURL: i, event: s });
-        }
-        function Sa(a, t) {
-          const r = document.createElement("canvas");
-          (r.width = 780), (r.height = 200);
-          const i = r.getContext("2d"),
-            c = 20;
-          for (let m = 0; m < 200; m += c)
-            for (let v = 0; v < 780; v += c)
-              (i.fillStyle =
-                (v / c + m / c) % 2 === 0 ? "#a405e3ff" : "#000000"),
-                i.fillRect(v, m, c, c);
-          const u = i.createLinearGradient(0, 0, 780, 0);
-          u.addColorStop(0, "rgba(32,32,32,0.8)"),
-            u.addColorStop(1, "rgba(60,60,60,0.8)"),
-            (i.fillStyle = u),
-            i.fillRect(0, 0, 780, 200);
-          const d = i.createRadialGradient(
-            780 / 2,
-            200 / 2,
-            0,
-            780 / 2,
-            200 / 2,
-            Math.max(780, 200) / 1.2,
-          );
-          return (
-            d.addColorStop(0, "rgba(0,0,0,0)"),
-            d.addColorStop(1, "rgba(0,0,0,0.6)"),
-            (i.fillStyle = d),
-            i.fillRect(0, 0, 780, 200),
-            (i.fillStyle = "#fff"),
-            (i.font = "32px Arial"),
-            (i.textAlign = "center"),
-            (i.textBaseline = "middle"),
-            i.fillText(a, 780 / 2, 200 / 2 - 20),
-            t &&
-              ((i.font = "18px Arial"), i.fillText(t, 780 / 2, 200 / 2 + 25)),
-            r.toDataURL("image/png")
-          );
-        }
-        function _n(a) {
-          const { imgURL: t, eventModel: n, langOverride: s } = a,
-            r = (0, Oe.E)();
-          return (0, e.jsx)("div", {
-            style: { display: "flex", width: "304px" },
-            children: (0, e.jsx)(ia.u, {
-              event: n,
-              imageURLOverride: t,
-              langOverride: s ?? r,
             }),
-          });
-        }
-        function wn(a) {
-          const { lang: t, eventModel: n, partnerEventStore: s } = a,
-            r = (0, oa.LJ)(),
-            [i, c, u, d, m] = (0, k.q3)(() => [
-              n.GetNameWithFallback(t),
-              n.GetDescriptionWithFallback(t),
-              n.GetSubTitleWithLanguageFallback(t),
-              n.type,
-              n.AnnouncementGID,
-            ]);
-          let v = c
-            ? (0, e.jsx)(ra.fh, {
-                text: c || "",
-                partnerEventStore: s,
-                showErrorInfo: !1,
-                event: n,
-                languageOverride: Oe.O.Get().GetCurEditLanguage(),
-              })
-            : (0, l.we)("#selectimage_display_event_body");
-          return (0, e.jsxs)("div", {
-            className: he().MultipleExampleContainer,
-            children: [
-              (0, e.jsx)("div", {
-                className: he().ExampleSectionTitle,
-                children: (0, l.we)("#selectimage_preview_title_1"),
-              }),
-              (0, e.jsx)("div", {
-                className: (0, A.A)(
-                  he().DetailPageExample,
-                  "DetailPageExample",
-                ),
-                children: (0, e.jsxs)("div", {
-                  className: he().DetailExample,
-                  children: [
-                    (0, e.jsx)("div", {
-                      className: he().MainImageCtn,
-                      children: (0, e.jsx)("img", { src: a.imgURL }),
-                    }),
-                    (0, e.jsx)("div", {
-                      className: he().ExampleBodyPosition,
-                      children: (0, e.jsxs)("div", {
-                        className: he().ExampleContentCtn,
-                        children: [
-                          (0, e.jsx)("div", {
-                            className: he().TextTitle,
-                            children:
-                              i ||
-                              (0, l.we)("#selectimage_display_event_title"),
-                          }),
-                          (0, e.jsx)("div", {
-                            className: he().TextSubTitle,
-                            children:
-                              u ||
-                              (0, l.we)("#selectimage_display_event_subtitle"),
-                          }),
-                          (0, e.jsx)("div", {
-                            className: he().TextBody,
-                            children: v,
-                          }),
-                        ],
-                      }),
-                    }),
-                  ],
-                }),
-              }),
-              d != T.Fwr &&
-                (0, e.jsxs)(h.Fragment, {
-                  children: [
-                    (0, e.jsx)("div", { className: he().ExampleSpacer }),
-                    (0, e.jsx)("div", {
-                      className: he().ExampleSectionTitle,
-                      children: (0, l.we)("#selectimage_preview_title_2"),
-                    }),
-                    (0, e.jsx)("div", {
-                      className: (0, A.A)(
-                        he().DetailPageExample,
-                        "DetailPageExample",
+            d != o.Fwr &&
+              (0, t.jsxs)(u.Fragment, {
+                children: [
+                  (0, t.jsx)("div", { className: sa().ExampleSpacer }),
+                  (0, t.jsx)("div", {
+                    className: sa().ExampleSectionTitle,
+                    children: (0, T.we)("#selectimage_preview_title_2"),
+                  }),
+                  (0, t.jsx)("div", {
+                    className: (0, I.A)(
+                      sa().DetailPageExample,
+                      "DetailPageExample",
+                    ),
+                    children: (0, t.jsx)("div", {
+                      className: sa().DetailExample2,
+                      children: (0, t.jsx)(
+                        Hn.He,
+                        {
+                          event: a,
+                          emoticonStore: i,
+                          partnerEventStore: r,
+                          headerClassnames: "editor",
+                          langOverride: n,
+                          bDisableBroadcastPlayer: !0,
+                        },
+                        m,
                       ),
-                      children: (0, e.jsx)("div", {
-                        className: he().DetailExample2,
-                        children: (0, e.jsx)(
-                          sa.He,
-                          {
-                            event: n,
-                            emoticonStore: r,
-                            partnerEventStore: s,
-                            headerClassnames: "editor",
-                            langOverride: t,
-                            bDisableBroadcastPlayer: !0,
-                          },
-                          m,
-                        ),
-                      }),
                     }),
-                  ],
-                }),
-            ],
+                  }),
+                ],
+              }),
+          ],
+        });
+      }
+      const ua = (e) => {
+          const [n] = (0, Nn.t7)(e.event.appid, { include_assets: !0 });
+          if (!n) return null;
+          const a = n.GetName(),
+            o = n.GetAssets()?.GetCommunityIconURL();
+          return (0, t.jsx)("div", {
+            className: sa().SpotlightExample,
+            children: (0, t.jsx)(ra, {
+              event: e.event,
+              strDisplayName: a ?? "",
+              gameIconUrl: o,
+              spotlightURLOverride: e.imgURL,
+              langOverride: e.lang,
+            }),
           });
-        }
-        const Pt = (a) => {
-            const [t] = (0, bn.t7)(a.event.appid, { include_assets: !0 });
-            if (!t) return null;
-            const n = t.GetName(),
-              s = t.GetAssets()?.GetCommunityIconURL();
-            return (0, e.jsx)("div", {
-              className: he().SpotlightExample,
-              children: (0, e.jsx)(xa, {
-                event: a.event,
-                strDisplayName: n ?? "",
-                gameIconUrl: s,
-                spotlightURLOverride: a.imgURL,
-                langOverride: a.lang,
-              }),
-            });
-          },
-          ba = (a) => {
-            const t = [
-              (0, e.jsx)("img", { src: a.imgURL }, "img"),
-              (0, e.jsx)("div", { className: ce().BroadcastPreview }, "video"),
-            ];
-            return (
-              a.side === "right" && t.reverse(),
-              (0, e.jsx)("div", {
-                className: he().BroadcastPreviewContainer,
-                children: t,
-              })
-            );
-          },
-          Ea = (a) =>
-            (0, e.jsx)("div", {
-              className: he().SaleHeaderPreviewContainer,
-              children: (0, e.jsx)("img", {
-                style: { width: "100%" },
-                src: a.imgURL,
-              }),
+        },
+        ma = (e) => {
+          const n = [
+            (0, t.jsx)("img", { src: e.imgURL }, "img"),
+            (0, t.jsx)("div", { className: Un().BroadcastPreview }, "video"),
+          ];
+          return (
+            "right" === e.side && n.reverse(),
+            (0, t.jsx)("div", {
+              className: sa().BroadcastPreviewContainer,
+              children: n,
+            })
+          );
+        },
+        pa = (e) =>
+          (0, t.jsx)("div", {
+            className: sa().SaleHeaderPreviewContainer,
+            children: (0, t.jsx)("img", {
+              style: { width: "100%" },
+              src: e.imgURL,
             }),
-          _a = (a) =>
-            (0, e.jsx)("div", {
-              className: he().SaleHeaderPreviewContainer,
-              children: (0, e.jsx)("img", {
-                style: { width: "100%" },
-                src: a.imgURL,
-              }),
+          }),
+        _a = (e) =>
+          (0, t.jsx)("div", {
+            className: sa().SaleHeaderPreviewContainer,
+            children: (0, t.jsx)("img", {
+              style: { width: "100%" },
+              src: e.imgURL,
             }),
-          mt = (a) =>
-            (0, e.jsx)("div", {
-              className: he().SaleHeaderPreviewContainer,
-              children: (0, e.jsx)("img", {
-                style: { width: "100%" },
-                src: a.imgURL,
-              }),
-            });
-        function wa(a, t) {
-          let n = 0;
-          for (let s = T.Bhc; s < T.bP9; ++s)
-            (t(a, s)?.length ?? 0) > 0 && (n += 1);
-          return n;
-        }
-        var ya = Object.defineProperty,
-          Aa = Object.getOwnPropertyDescriptor,
-          yn = (a, t, n, s) => {
-            for (
-              var r = s > 1 ? void 0 : s ? Aa(t, n) : t, i = a.length - 1, c;
-              i >= 0;
-              i--
-            )
-              (c = a[i]) && (r = (s ? c(t, n, r) : c(r)) || r);
-            return s && r && ya(t, n, r), r;
-          };
-        const Ba =
-          "https://partner.steamgames.com/doc/store/localization#supported_languages";
-        var Ga = ((a) => (
-          (a[(a.k_None = 0)] = "k_None"),
-          (a[(a.k_Suggested = 1)] = "k_Suggested"),
-          (a[(a.k_Required = 2)] = "k_Required"),
-          (a[(a.k_Requested = 3)] = "k_Requested"),
-          a
-        ))(Ga || {});
-        function Ta(a) {
-          const {
-              artworkType: t,
-              headerHint: n,
-              appid: s,
-              fnToggleMinimize: r,
-              realms: i,
-              eventModel: c,
-              fnLangHasData: u,
-              fnGetImageHashAndExt: d,
-              fnSetImageURL: m,
-              partnerEventStore: v,
-            } = a,
-            [I] = (0, bn.t7)(s, { include_assets: !0 }),
-            [j, x] = (0, k.q3)(() => [
-              c?.GetEventType(),
-              c?.BHasTag("vo_marketing_message"),
-            ]),
-            _ = j == T.ajI;
-          let w = null;
-          n === 2
-            ? (w = (0, e.jsx)("span", {
-                style: { color: "#C6512B" },
-                children: (0, l.we)("#EventEditor_Required"),
+          }),
+        ha = (e) =>
+          (0, t.jsx)("div", {
+            className: sa().SaleHeaderPreviewContainer,
+            children: (0, t.jsx)("img", {
+              style: { width: "100%" },
+              src: e.imgURL,
+            }),
+          });
+      function xa(e, n) {
+        let a = 0;
+        for (let t = o.Bhc; t < o.bP9; ++t)
+          (n(e, t)?.length ?? 0) > 0 && (a += 1);
+        return a;
+      }
+      var va;
+      function Ia(e) {
+        const {
+            artworkType: n,
+            headerHint: a,
+            appid: r,
+            fnToggleMinimize: i,
+            realms: s,
+            eventModel: l,
+            fnLangHasData: c,
+            fnGetImageHashAndExt: d,
+            fnSetImageURL: u,
+            partnerEventStore: m,
+          } = e,
+          [p] = (0, Nn.t7)(r, { include_assets: !0 }),
+          [_, h] = (0, g.q3)(() => [
+            l?.GetEventType(),
+            l?.BHasTag("vo_marketing_message"),
+          ]),
+          x = _ == o.ajI;
+        let j = null;
+        a === va.k_Required
+          ? (j = (0, t.jsx)("span", {
+              style: { color: "#C6512B" },
+              children: (0, T.we)("#EventEditor_Required"),
+            }))
+          : a === va.k_Suggested
+            ? (j = (0, t.jsx)("span", {
+                style: { color: "#D7BC86" },
+                children: (0, T.we)("#EventEditor_Suggested"),
               }))
-            : n === 1
-              ? (w = (0, e.jsx)("span", {
-                  style: { color: "#D7BC86" },
-                  children: (0, l.we)("#EventEditor_Suggested"),
-                }))
-              : n === 3 &&
-                (w = (0, e.jsx)("span", {
-                  style: { color: "#D7BC86" },
-                  children: (0, l.we)("#EventEditor_Requested"),
-                }));
-          let S = null;
-          t === "capsule"
-            ? _
-              ? (S = (0, e.jsxs)(e.Fragment, {
+            : a === va.k_Requested &&
+              (j = (0, t.jsx)("span", {
+                style: { color: "#D7BC86" },
+                children: (0, T.we)("#EventEditor_Requested"),
+              }));
+        let f = null;
+        "capsule" === n
+          ? (f = x
+              ? (0, t.jsxs)(t.Fragment, {
                   children: [
-                    (0, e.jsxs)("p", {
+                    (0, t.jsxs)("p", {
                       children: [
-                        (0, e.jsx)("strong", {
-                          children: (0, l.we)("#selectimage_tip_design_title"),
+                        (0, t.jsx)("strong", {
+                          children: (0, T.we)("#selectimage_tip_design_title"),
                         }),
                         ": ",
-                        (0, l.we)("#selectimage_tip_capsule_creatorhome_1"),
+                        (0, T.we)("#selectimage_tip_capsule_creatorhome_1"),
                       ],
                     }),
-                    (0, e.jsxs)("p", {
+                    (0, t.jsxs)("p", {
                       children: [
-                        (0, e.jsx)("strong", {
-                          children: (0, l.we)("#selectimage_tip_usage_title"),
+                        (0, t.jsx)("strong", {
+                          children: (0, T.we)("#selectimage_tip_usage_title"),
                         }),
                         ": ",
-                        (0, l.we)("#selectimage_tip_capsule_creatorhome_2"),
+                        (0, T.we)("#selectimage_tip_capsule_creatorhome_2"),
                       ],
                     }),
                   ],
-                }))
-              : (S = (0, e.jsxs)(e.Fragment, {
+                })
+              : (0, t.jsxs)(t.Fragment, {
                   children: [
-                    !!x &&
-                      (0, e.jsxs)("div", {
-                        className: ce().HighlightBox,
+                    Boolean(h) &&
+                      (0, t.jsxs)("div", {
+                        className: Un().HighlightBox,
                         children: [
-                          (0, e.jsx)("p", {
-                            children: (0, l.we)("#PartnerEvent_MM_ArtworkTip"),
+                          (0, t.jsx)("p", {
+                            children: (0, T.we)("#PartnerEvent_MM_ArtworkTip"),
                           }),
-                          (0, e.jsx)("p", {
-                            children: (0, e.jsx)("a", {
-                              href: `${Y.TS.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
-                              children: (0, l.we)("#PartnerEvent_MM_LearnMore"),
+                          (0, t.jsx)("p", {
+                            children: (0, t.jsx)("a", {
+                              href: `${b.TS.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
+                              children: (0, T.we)("#PartnerEvent_MM_LearnMore"),
                             }),
                           }),
                         ],
                       }),
-                    (0, e.jsxs)("p", {
+                    (0, t.jsxs)("p", {
                       children: [
-                        (0, e.jsx)("strong", {
-                          children: (0, l.we)("#selectimage_tip_design_title"),
+                        (0, t.jsx)("strong", {
+                          children: (0, T.we)("#selectimage_tip_design_title"),
                         }),
                         ": ",
-                        (0, l.we)("#selectimage_tip_capsule_1"),
+                        (0, T.we)("#selectimage_tip_capsule_1"),
                       ],
                     }),
-                    (0, e.jsxs)("p", {
+                    (0, t.jsxs)("p", {
                       children: [
-                        (0, e.jsx)("strong", {
-                          children: (0, l.we)("#selectimage_tip_usage_title"),
+                        (0, t.jsx)("strong", {
+                          children: (0, T.we)("#selectimage_tip_usage_title"),
                         }),
                         ": ",
-                        (0, l.we)("#selectimage_tip_capsule_2"),
+                        (0, T.we)("#selectimage_tip_capsule_2"),
                       ],
                     }),
                   ],
                 }))
-            : t === "background"
-              ? (S = (0, e.jsx)(e.Fragment, {
-                  children: (0, e.jsxs)("p", {
+          : "background" === n
+            ? (f = (0, t.jsx)(t.Fragment, {
+                children: (0, t.jsxs)("p", {
+                  children: [
+                    (0, t.jsx)("strong", {
+                      children: (0, T.we)("#selectimage_tip_design_title"),
+                    }),
+                    ": ",
+                    (0, T.we)("#selectimage_tip_background_1"),
+                  ],
+                }),
+              }))
+            : "spotlight" === n || "localized_store_app_spotlight" === n
+              ? (f = (0, t.jsx)(t.Fragment, {
+                  children: (0, t.jsxs)("p", {
                     children: [
-                      (0, e.jsx)("strong", {
-                        children: (0, l.we)("#selectimage_tip_design_title"),
+                      (0, t.jsx)("strong", {
+                        children: (0, T.we)("#selectimage_tip_usage_title"),
                       }),
                       ": ",
-                      (0, l.we)("#selectimage_tip_background_1"),
+                      (0, T.we)("#selectimage_tip_store_spotlight_1"),
                     ],
                   }),
                 }))
-              : t === "spotlight" || t === "localized_store_app_spotlight"
-                ? (S = (0, e.jsx)(e.Fragment, {
-                    children: (0, e.jsxs)("p", {
+              : "localized_store_app_spotlight_mobile" === n
+                ? (f = (0, t.jsx)(t.Fragment, {
+                    children: (0, t.jsxs)("p", {
                       children: [
-                        (0, e.jsx)("strong", {
-                          children: (0, l.we)("#selectimage_tip_usage_title"),
+                        (0, t.jsx)("strong", {
+                          children: (0, T.we)("#selectimage_tip_usage_title"),
                         }),
                         ": ",
-                        (0, l.we)("#selectimage_tip_store_spotlight_1"),
+                        (0, T.we)("#selectimage_tip_store_mobile_spotlight"),
                       ],
                     }),
                   }))
-                : t === "localized_store_app_spotlight_mobile"
-                  ? (S = (0, e.jsx)(e.Fragment, {
-                      children: (0, e.jsxs)("p", {
-                        children: [
-                          (0, e.jsx)("strong", {
-                            children: (0, l.we)("#selectimage_tip_usage_title"),
-                          }),
-                          ": ",
-                          (0, l.we)("#selectimage_tip_store_mobile_spotlight"),
-                        ],
+                : "broadcast_left" === n || "broadcast_right" === n
+                  ? (f = (0, t.jsx)(t.Fragment, {
+                      children: (0, t.jsx)("p", {
+                        children: (0, T.we)("#selectimage_tip_broadcast_1"),
                       }),
                     }))
-                  : t === "broadcast_left" || t === "broadcast_right"
-                    ? (S = (0, e.jsx)(e.Fragment, {
-                        children: (0, e.jsx)("p", {
-                          children: (0, l.we)("#selectimage_tip_broadcast_1"),
-                        }),
+                  : "sale_header" === n
+                    ? (f = (0, t.jsxs)(t.Fragment, {
+                        children: [
+                          (0, t.jsx)("div", {
+                            className: v().EventElementRequired,
+                            children: (0, T.we)(
+                              "#selectimage_tip_required_title",
+                            ),
+                          }),
+                          (0, t.jsxs)("p", {
+                            children: [
+                              (0, t.jsx)("b", {
+                                children: (0, T.we)(
+                                  "#selectimage_tip_usage_title",
+                                ),
+                              }),
+                              ": ",
+                              (0, T.we)("#selectimage_tip_sale_header_1"),
+                            ],
+                          }),
+                          (0, t.jsxs)("p", {
+                            children: [
+                              (0, t.jsx)("b", {
+                                children: (0, T.we)(
+                                  "#selectimage_tip_design_title",
+                                ),
+                              }),
+                              ": ",
+                              (0, T.we)("#selectimage_tip_sale_header_2"),
+                            ],
+                          }),
+                          (0, t.jsx)("p", {
+                            children: (0, T.we)(
+                              "#selectimage_tip_sale_header_4",
+                            ),
+                          }),
+                          (0, t.jsxs)("p", {
+                            children: [
+                              (0, t.jsx)("b", {
+                                children: (0, T.we)(
+                                  "#selectimage_tip_template_title",
+                                ),
+                              }),
+                              ": ",
+                              (0, t.jsx)("a", {
+                                href: "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
+                                children: (0, T.we)(
+                                  "#selectimage_tip_sale_header_3",
+                                ),
+                              }),
+                            ],
+                          }),
+                          (0, t.jsx)("br", {}),
+                        ],
                       }))
-                    : t === "sale_header"
-                      ? (S = (0, e.jsxs)(e.Fragment, {
+                    : "hero" === n
+                      ? p &&
+                        (f = (0, t.jsxs)(t.Fragment, {
                           children: [
-                            (0, e.jsx)("div", {
-                              className: X().EventElementRequired,
-                              children: (0, l.we)(
-                                "#selectimage_tip_required_title",
-                              ),
+                            (0, t.jsx)("p", {
+                              children: (0, T.we)("#selectimage_tip_hero_1"),
                             }),
-                            (0, e.jsxs)("p", {
-                              children: [
-                                (0, e.jsx)("b", {
-                                  children: (0, l.we)(
-                                    "#selectimage_tip_usage_title",
-                                  ),
-                                }),
-                                ": ",
-                                (0, l.we)("#selectimage_tip_sale_header_1"),
-                              ],
-                            }),
-                            (0, e.jsxs)("p", {
-                              children: [
-                                (0, e.jsx)("b", {
-                                  children: (0, l.we)(
-                                    "#selectimage_tip_design_title",
-                                  ),
-                                }),
-                                ": ",
-                                (0, l.we)("#selectimage_tip_sale_header_2"),
-                              ],
-                            }),
-                            (0, e.jsx)("p", {
-                              children: (0, l.we)(
-                                "#selectimage_tip_sale_header_4",
-                              ),
-                            }),
-                            (0, e.jsxs)("p", {
-                              children: [
-                                (0, e.jsx)("b", {
-                                  children: (0, l.we)(
-                                    "#selectimage_tip_template_title",
-                                  ),
-                                }),
-                                ": ",
-                                (0, e.jsx)("a", {
-                                  href: "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
-                                  children: (0, l.we)(
-                                    "#selectimage_tip_sale_header_3",
-                                  ),
-                                }),
-                              ],
-                            }),
-                            (0, e.jsx)("br", {}),
+                            !Boolean(p.GetAssets()?.GetLibraryHeroURL()) &&
+                              (0, t.jsx)("p", {
+                                className: zn.ErrorStylesBackground,
+                                children: (0, T.we)(
+                                  "#EventEdtior_ArtworkType_hero_warning",
+                                ),
+                              }),
                           ],
                         }))
-                      : t === "hero"
-                        ? I &&
-                          (S = (0, e.jsxs)(e.Fragment, {
-                            children: [
-                              (0, e.jsx)("p", {
-                                children: (0, l.we)("#selectimage_tip_hero_1"),
-                              }),
-                              !I.GetAssets()?.GetLibraryHeroURL() &&
-                                (0, e.jsx)("p", {
-                                  className: Lt.ErrorStylesBackground,
-                                  children: (0, l.we)(
-                                    "#EventEdtior_ArtworkType_hero_warning",
-                                  ),
-                                }),
-                            ],
-                          }))
-                        : t === "localized_image_group" ||
-                            t === "link_capsule" ||
-                            t === "sale_section_title" ||
-                            t === "schedule_track_art" ||
-                            t === "localized_background_art"
-                          ? (S = (0, e.jsxs)(e.Fragment, {
-                              children: [
-                                (0, e.jsx)("p", {
-                                  children: (0, l.we)("#ImagePickerLoc_Desc"),
-                                }),
-                                (0, e.jsx)("p", {
-                                  children: (0, l.PP)(
-                                    "#ImagePickerLoc_Files",
-                                    (0, e.jsx)("a", {
-                                      href: Ba,
-                                      target: Y.TS.IN_CLIENT
-                                        ? void 0
-                                        : "_blank",
-                                      children: (0, l.we)(
-                                        "#ImagePickerLoc_URL",
-                                      ),
-                                    }),
-                                  ),
-                                }),
-                              ],
-                            }))
-                          : t === "product_banner"
-                            ? (S = (0, e.jsxs)(e.Fragment, {
+                      : (f =
+                          "localized_image_group" === n ||
+                          "link_capsule" === n ||
+                          "sale_section_title" === n ||
+                          "schedule_track_art" === n ||
+                          "localized_background_art" === n
+                            ? (0, t.jsxs)(t.Fragment, {
                                 children: [
-                                  (0, e.jsx)("div", {
-                                    className: X().EventElementOptional,
-                                    children: (0, l.we)(
-                                      "#selectimage_tip_optional_title",
-                                    ),
+                                  (0, t.jsx)("p", {
+                                    children: (0, T.we)("#ImagePickerLoc_Desc"),
                                   }),
-                                  (0, e.jsxs)("p", {
-                                    children: [
-                                      (0, e.jsx)("b", {
-                                        children: (0, l.we)(
-                                          "#selectimage_tip_usage_title",
+                                  (0, t.jsx)("p", {
+                                    children: (0, T.PP)(
+                                      "#ImagePickerLoc_Files",
+                                      (0, t.jsx)("a", {
+                                        href: "https://partner.steamgames.com/doc/store/localization#supported_languages",
+                                        target: b.TS.IN_CLIENT
+                                          ? void 0
+                                          : "_blank",
+                                        children: (0, T.we)(
+                                          "#ImagePickerLoc_URL",
                                         ),
                                       }),
-                                      ": ",
-                                      (0, l.we)(
-                                        "#selectimage_tip_sale_product_banner",
-                                      ),
-                                    ],
+                                    ),
                                   }),
                                 ],
-                              }))
-                            : t === "product_mobile_banner" ||
-                                t === "product_banner_override" ||
-                                t === "product_mobile_banner_override"
-                              ? (S = (0, e.jsxs)(e.Fragment, {
+                              })
+                            : "product_banner" === n
+                              ? (0, t.jsxs)(t.Fragment, {
                                   children: [
-                                    (0, e.jsx)("div", {
-                                      className: X().EventElementOptional,
-                                      children: (0, l.we)(
+                                    (0, t.jsx)("div", {
+                                      className: v().EventElementOptional,
+                                      children: (0, T.we)(
                                         "#selectimage_tip_optional_title",
                                       ),
                                     }),
-                                    (0, e.jsxs)("p", {
+                                    (0, t.jsxs)("p", {
                                       children: [
-                                        (0, e.jsx)("b", {
-                                          children: (0, l.we)(
+                                        (0, t.jsx)("b", {
+                                          children: (0, T.we)(
                                             "#selectimage_tip_usage_title",
                                           ),
                                         }),
                                         ": ",
-                                        (0, l.we)(
+                                        (0, T.we)(
                                           "#selectimage_tip_sale_product_banner",
                                         ),
-                                        t === "product_mobile_banner" &&
-                                          (0, e.jsxs)("span", {
-                                            children: [
-                                              "  ",
-                                              (0, l.we)(
-                                                "#selectimage_tip_sale_product_banner_mobile",
-                                              ),
-                                            ],
-                                          }),
                                       ],
                                     }),
                                   ],
-                                }))
-                              : t === "tab_bar_background"
-                                ? (S = (0, e.jsxs)(e.Fragment, {
+                                })
+                              : "product_mobile_banner" === n ||
+                                  "product_banner_override" === n ||
+                                  "product_mobile_banner_override" === n
+                                ? (0, t.jsxs)(t.Fragment, {
                                     children: [
-                                      (0, e.jsxs)("p", {
-                                        children: [
-                                          (0, e.jsx)("strong", {
-                                            children: (0, l.we)(
-                                              "#selectimage_tip_design_title",
-                                            ),
-                                          }),
-                                          ":",
-                                          (0, l.we)(
-                                            "#Sale_Tabs_Background_Design",
-                                          ),
-                                        ],
+                                      (0, t.jsx)("div", {
+                                        className: v().EventElementOptional,
+                                        children: (0, T.we)(
+                                          "#selectimage_tip_optional_title",
+                                        ),
                                       }),
-                                      (0, e.jsxs)("p", {
+                                      (0, t.jsxs)("p", {
                                         children: [
-                                          (0, e.jsx)("strong", {
-                                            children: (0, l.we)(
+                                          (0, t.jsx)("b", {
+                                            children: (0, T.we)(
                                               "#selectimage_tip_usage_title",
                                             ),
                                           }),
-                                          ":",
-                                          (0, l.we)(
-                                            "#Sale_Tabs_Background_Usage",
+                                          ": ",
+                                          (0, T.we)(
+                                            "#selectimage_tip_sale_product_banner",
                                           ),
+                                          "product_mobile_banner" === n &&
+                                            (0, t.jsxs)("span", {
+                                              children: [
+                                                "  ",
+                                                (0, T.we)(
+                                                  "#selectimage_tip_sale_product_banner_mobile",
+                                                ),
+                                              ],
+                                            }),
                                         ],
                                       }),
                                     ],
-                                  }))
-                                : t === "sale_logo"
-                                  ? (S = (0, e.jsxs)(e.Fragment, {
+                                  })
+                                : "tab_bar_background" === n
+                                  ? (0, t.jsxs)(t.Fragment, {
                                       children: [
-                                        (0, e.jsx)("div", {
-                                          className: X().EventElementOptional,
-                                          children: (0, l.we)(
-                                            "#selectimage_tip_optional_title",
-                                          ),
-                                        }),
-                                        (0, e.jsxs)("p", {
+                                        (0, t.jsxs)("p", {
                                           children: [
-                                            (0, e.jsx)("b", {
-                                              children: (0, l.we)(
+                                            (0, t.jsx)("strong", {
+                                              children: (0, T.we)(
+                                                "#selectimage_tip_design_title",
+                                              ),
+                                            }),
+                                            ":",
+                                            (0, T.we)(
+                                              "#Sale_Tabs_Background_Design",
+                                            ),
+                                          ],
+                                        }),
+                                        (0, t.jsxs)("p", {
+                                          children: [
+                                            (0, t.jsx)("strong", {
+                                              children: (0, T.we)(
                                                 "#selectimage_tip_usage_title",
                                               ),
                                             }),
-                                            ": ",
-                                            (0, l.we)(
-                                              "#selectimage_tip_pageLogo",
+                                            ":",
+                                            (0, T.we)(
+                                              "#Sale_Tabs_Background_Usage",
                                             ),
                                           ],
                                         }),
                                       ],
-                                    }))
-                                  : (S = (0, e.jsxs)(e.Fragment, {
-                                      children: [
-                                        (0, e.jsx)("div", {
-                                          className: X().EventElementRequired,
-                                          children: (0, l.we)(
-                                            "#selectimage_tip_required_title",
-                                          ),
-                                        }),
-                                        (0, e.jsxs)("p", {
-                                          children: [
-                                            (0, e.jsx)("b", {
-                                              children: (0, l.we)(
-                                                "#selectimage_tip_usage_title",
-                                              ),
-                                            }),
-                                            ": ",
-                                            (0, l.we)(
-                                              "#selectimage_tip_bestofyear",
+                                    })
+                                  : "sale_logo" === n
+                                    ? (0, t.jsxs)(t.Fragment, {
+                                        children: [
+                                          (0, t.jsx)("div", {
+                                            className: v().EventElementOptional,
+                                            children: (0, T.we)(
+                                              "#selectimage_tip_optional_title",
                                             ),
-                                          ],
-                                        }),
-                                      ],
-                                    }));
-          const D = gt.Fj[a.artworkType].width,
-            G = gt.Fj[a.artworkType].height;
-          return (0, e.jsxs)("div", {
-            id: a.id,
-            className: ce().ArtworkSelectorContainer,
-            children: [
-              !!a.title &&
-                (0, e.jsxs)("div", {
-                  className: ce().Title,
-                  onDoubleClick: r,
-                  children: [
-                    a.title,
-                    (0, e.jsx)("span", { children: "\xA0" }),
-                    w,
-                    r &&
-                      (0, e.jsx)(U.$n, {
-                        onClick: r,
-                        children: (0, e.jsx)(Ie.he, {
-                          toolTipContent: (0, l.we)(
-                            a.bIsMinimized
-                              ? "#Sale_Section_Maximize_Tooltip"
-                              : "#Sale_Section_Minimize_Tooltip",
-                          ),
-                          children: a.bIsMinimized
-                            ? (0, e.jsx)(Ke.hz4, {})
-                            : (0, e.jsx)(Ke.Xjb, {}),
-                        }),
-                      }),
-                  ],
-                }),
-              !a.bIsMinimized &&
-                (0, e.jsxs)("div", {
-                  className: (0, A.A)(ce().SelectImageBlock, ce().Tips),
-                  children: [
-                    S,
-                    !!(D && G) &&
-                      (0, e.jsxs)("p", {
-                        children: [
-                          (0, e.jsx)("b", {
-                            children: (0, l.we)(
-                              "#selectimage_tip_dimensions_title",
-                            ),
-                          }),
-                          ":\xA0",
-                          (0, l.PP)(
-                            "#selectimage_tip1",
-                            (0, gt.qj)(D),
-                            (0, gt.qj)(G),
-                          ),
-                        ],
-                      }),
-                    !!a.strWarning &&
-                      (0, e.jsx)("div", {
-                        children: (0, e.jsx)("p", {
-                          className: Lt.WarningStylesWithIcon,
-                          children: a.strWarning,
-                        }),
-                      }),
-                    a.elEventArtworkExample,
-                    "\xA0",
-                    (0, e.jsx)("br", {}),
-                    a.elAdditionalControls,
-                    !!a.fnRemoveAllArtwork &&
-                      (0, e.jsx)(U.$n, {
-                        onClick: (E) => {
-                          (0, be.pg)(
-                            (0, e.jsx)(La, {
-                              fnRemoveAllArtwork: a.fnRemoveAllArtwork,
-                            }),
-                            (0, Ce.uX)(E) ?? window,
-                          );
-                        },
-                        children: (0, l.we)("#Sale_RemoveAll"),
-                      }),
-                  ],
-                }),
-              !a.bIsMinimized &&
-                (0, e.jsx)(Pa, {
-                  clanSteamID: a.clanSteamID,
-                  title: a.title ?? "",
-                  eventModel: c,
-                  artworkType: a.artworkType,
-                  realms: i,
-                  appid: s,
-                  fnGetImageHashAndExt: d,
-                  fnSetImageURL: m,
-                  fnLangHasData: u,
-                  partnerEventStore: v,
-                }),
-            ],
-          });
-        }
-        function La(a) {
-          const { fnRemoveAllArtwork: t, closeModal: n } = a;
-          return (0, e.jsx)(re.o0, {
-            strTitle: (0, l.we)("#Sale_RemoveAll"),
-            strDescription: (0, l.we)("#ImageUpload_DeleteAll_Confirm"),
-            onOK: () => {
-              t?.(), n?.();
-            },
-            onCancel: n,
-          });
-        }
-        function Pa(a) {
-          const {
-              artworkType: t,
-              realms: n,
-              clanSteamID: s,
-              fnLangHasData: r,
-              fnGetImageHashAndExt: i,
-              fnSetImageURL: c,
-              eventModel: u,
-              appid: d,
-              partnerEventStore: m,
-            } = a,
-            v = t === "localized_image_group",
-            [I, j] = h.useState((0, Oe.E)()),
-            [x, _] = h.useState(new Array()),
-            w = h.useCallback(
-              (D, G, E) => {
-                let M = [];
-                x.find(($) => $.clanImage.imageid == D.imageid)
-                  ? (M = x.map(($) =>
-                      $.clanImage.imageid == D.imageid
-                        ? { clanImage: D, lang: G }
-                        : $,
-                    ))
-                  : E && (M = x.concat({ clanImage: D, lang: G })),
-                  _(M);
-              },
-              [x],
-            ),
-            S = h.useCallback(
-              (D, G, E) => {
-                (0, qe.h5)(() => {
-                  mn(i(t, G) ?? "") == D.image_hash && c(t, null, G),
-                    c(t, D, E),
-                    w(D, E, !1);
-                });
-              },
-              [i, t, c, w],
-            );
-          return t === "hero"
-            ? (0, e.jsx)("div", {
-                style: { padding: "16px" },
-                children: (0, e.jsx)(U.$n, {
-                  style: { textTransform: "uppercase", width: "200px" },
-                  onClick: () =>
-                    window.open(
-                      `${Y.TS.PARTNER_BASE_URL}admin/game/editbyappid/${d}?activetab=tab_graphicalassets`,
-                    ),
-                  children: (0, l.we)("#ImageUpload_EditHeroImage"),
-                }),
-              })
-            : (0, e.jsxs)("div", {
+                                          }),
+                                          (0, t.jsxs)("p", {
+                                            children: [
+                                              (0, t.jsx)("b", {
+                                                children: (0, T.we)(
+                                                  "#selectimage_tip_usage_title",
+                                                ),
+                                              }),
+                                              ": ",
+                                              (0, T.we)(
+                                                "#selectimage_tip_pageLogo",
+                                              ),
+                                            ],
+                                          }),
+                                        ],
+                                      })
+                                    : (0, t.jsxs)(t.Fragment, {
+                                        children: [
+                                          (0, t.jsx)("div", {
+                                            className: v().EventElementRequired,
+                                            children: (0, T.we)(
+                                              "#selectimage_tip_required_title",
+                                            ),
+                                          }),
+                                          (0, t.jsxs)("p", {
+                                            children: [
+                                              (0, t.jsx)("b", {
+                                                children: (0, T.we)(
+                                                  "#selectimage_tip_usage_title",
+                                                ),
+                                              }),
+                                              ": ",
+                                              (0, T.we)(
+                                                "#selectimage_tip_bestofyear",
+                                              ),
+                                            ],
+                                          }),
+                                        ],
+                                      }));
+        const S = Bn.Fj[e.artworkType].width,
+          w = Bn.Fj[e.artworkType].height;
+        return (0, t.jsxs)("div", {
+          id: e.id,
+          className: Un().ArtworkSelectorContainer,
+          children: [
+            Boolean(e.title) &&
+              (0, t.jsxs)("div", {
+                className: Un().Title,
+                onDoubleClick: i,
                 children: [
-                  (0, e.jsx)(kt, {
-                    list: x,
-                    fnOnArtworkLanguageChange: S,
-                    realms: n,
-                    fnLangHasData: r,
-                  }),
-                  (0, e.jsx)("div", {
-                    children: (0, e.jsx)("div", {
-                      className: (0, A.A)(
-                        ce().SelectImageBlock,
-                        ce().MainPreviewBlock,
-                      ),
-                      children: (0, e.jsx)(Da, {
-                        eventModel: u,
-                        clanSteamID: s,
-                        fnOnLanguagePreviewChange: (D) => {
-                          D != I && j(D);
-                        },
-                        langOverride: I,
-                        fnOnArtworkLangChange: v ? null : S,
-                        artworkType: t,
-                        fnOnRemoveImage: v ? null : (D) => c(t, null, D),
-                        realms: n,
-                        fnLangHasData: r,
-                        fnGetImageHashAndExt: i,
-                        partnerEventStore: m,
+                  e.title,
+                  (0, t.jsx)("span", { children: " " }),
+                  j,
+                  i &&
+                    (0, t.jsx)(we.$n, {
+                      onClick: i,
+                      children: (0, t.jsx)(xe.he, {
+                        toolTipContent: (0, T.we)(
+                          e.bIsMinimized
+                            ? "#Sale_Section_Maximize_Tooltip"
+                            : "#Sale_Section_Minimize_Tooltip",
+                        ),
+                        children: e.bIsMinimized
+                          ? (0, t.jsx)(_e.hz4, {})
+                          : (0, t.jsx)(_e.Xjb, {}),
                       }),
                     }),
-                  }),
                 ],
-              });
-        }
-        let kt = class extends h.Component {
-          ShowLangChangeDialog(a, t) {
-            const {
-              fnOnArtworkLanguageChange: n,
-              realms: s,
-              fnLangHasData: r,
-            } = this.props;
-            (0, be.pg)(
-              (0, e.jsx)(En, {
-                clanImage: a,
-                lang: t,
-                fnOnArtworkLangChange: n,
-                fnLangHasData: r,
-                realms: s,
               }),
-              window,
-            );
-          }
-          GenerateImageMappings() {
-            let a = new Array();
-            const { list: t } = this.props;
-            return (
-              t.forEach((n) => {
-                const { clanImage: s, lang: r } = n;
-                let i = (0, l.we)("#Language_" + (0, T.LgB)(r));
-                a.push(
-                  (0, e.jsxs)(
-                    "div",
-                    {
-                      className: X().FlexRowContainer,
+            !e.bIsMinimized &&
+              (0, t.jsxs)("div", {
+                className: (0, I.A)(Un().SelectImageBlock, Un().Tips),
+                children: [
+                  f,
+                  Boolean(S && w) &&
+                    (0, t.jsxs)("p", {
                       children: [
-                        (0, e.jsx)("span", {
-                          children: (0, l.we)(
-                            "#ImageUpload_Success_Mapping",
-                            s.file_name ?? "",
-                            i,
+                        (0, t.jsx)("b", {
+                          children: (0, T.we)(
+                            "#selectimage_tip_dimensions_title",
                           ),
                         }),
-                        (0, e.jsx)("a", {
-                          onClick: () => this.ShowLangChangeDialog(s, r),
-                          children: (0, l.we)(
-                            "#ImageUpload_Success_Mapping_Change",
+                        ": ",
+                        (0, T.PP)(
+                          "#selectimage_tip1",
+                          (0, Bn.qj)(S),
+                          (0, Bn.qj)(w),
+                        ),
+                      ],
+                    }),
+                  Boolean(e.strWarning) &&
+                    (0, t.jsx)("div", {
+                      children: (0, t.jsx)("p", {
+                        className: zn.WarningStylesWithIcon,
+                        children: e.strWarning,
+                      }),
+                    }),
+                  e.elEventArtworkExample,
+                  " ",
+                  (0, t.jsx)("br", {}),
+                  e.elAdditionalControls,
+                  Boolean(e.fnRemoveAllArtwork) &&
+                    (0, t.jsx)(we.$n, {
+                      onClick: (n) => {
+                        (0, Ce.pg)(
+                          (0, t.jsx)(ba, {
+                            fnRemoveAllArtwork: e.fnRemoveAllArtwork,
+                          }),
+                          (0, rn.uX)(n) ?? window,
+                        );
+                      },
+                      children: (0, T.we)("#Sale_RemoveAll"),
+                    }),
+                ],
+              }),
+            !e.bIsMinimized &&
+              (0, t.jsx)(ja, {
+                clanSteamID: e.clanSteamID,
+                title: e.title ?? "",
+                eventModel: l,
+                artworkType: e.artworkType,
+                realms: s,
+                appid: r,
+                fnGetImageHashAndExt: d,
+                fnSetImageURL: u,
+                fnLangHasData: c,
+                partnerEventStore: m,
+              }),
+          ],
+        });
+      }
+      function ba(e) {
+        const { fnRemoveAllArtwork: n, closeModal: a } = e;
+        return (0, t.jsx)(ke.o0, {
+          strTitle: (0, T.we)("#Sale_RemoveAll"),
+          strDescription: (0, T.we)("#ImageUpload_DeleteAll_Confirm"),
+          onOK: () => {
+            n?.(), a?.();
+          },
+          onCancel: a,
+        });
+      }
+      function ja(e) {
+        const {
+            artworkType: n,
+            realms: a,
+            clanSteamID: o,
+            fnLangHasData: r,
+            fnGetImageHashAndExt: i,
+            fnSetImageURL: s,
+            eventModel: l,
+            appid: c,
+            partnerEventStore: d,
+          } = e,
+          g = "localized_image_group" === n,
+          [m, p] = u.useState((0, K.E)()),
+          [_, h] = u.useState(new Array()),
+          x = u.useCallback(
+            (e, n, a) => {
+              let t = [];
+              _.find((n) => n.clanImage.imageid == e.imageid)
+                ? (t = _.map((a) =>
+                    a.clanImage.imageid == e.imageid
+                      ? { clanImage: e, lang: n }
+                      : a,
+                  ))
+                : a && (t = _.concat({ clanImage: e, lang: n })),
+                h(t);
+            },
+            [_],
+          ),
+          v = u.useCallback(
+            (e, a, t) => {
+              (0, Ze.h5)(() => {
+                Fn(i(n, a) ?? "") == e.image_hash && s(n, null, a),
+                  s(n, e, t),
+                  x(e, t, !1);
+              });
+            },
+            [i, n, s, x],
+          );
+        return "hero" === n
+          ? (0, t.jsx)("div", {
+              style: { padding: "16px" },
+              children: (0, t.jsx)(we.$n, {
+                style: { textTransform: "uppercase", width: "200px" },
+                onClick: () =>
+                  window.open(
+                    `${b.TS.PARTNER_BASE_URL}admin/game/editbyappid/${c}?activetab=tab_graphicalassets`,
+                  ),
+                children: (0, T.we)("#ImageUpload_EditHeroImage"),
+              }),
+            })
+          : (0, t.jsxs)("div", {
+              children: [
+                (0, t.jsx)(fa, {
+                  list: _,
+                  fnOnArtworkLanguageChange: v,
+                  realms: a,
+                  fnLangHasData: r,
+                }),
+                (0, t.jsx)("div", {
+                  children: (0, t.jsx)("div", {
+                    className: (0, I.A)(
+                      Un().SelectImageBlock,
+                      Un().MainPreviewBlock,
+                    ),
+                    children: (0, t.jsx)(la, {
+                      eventModel: l,
+                      clanSteamID: o,
+                      fnOnLanguagePreviewChange: (e) => {
+                        e != m && p(e);
+                      },
+                      langOverride: m,
+                      fnOnArtworkLangChange: g ? null : v,
+                      artworkType: n,
+                      fnOnRemoveImage: g ? null : (e) => s(n, null, e),
+                      realms: a,
+                      fnLangHasData: r,
+                      fnGetImageHashAndExt: i,
+                      partnerEventStore: d,
+                    }),
+                  }),
+                }),
+              ],
+            });
+      }
+      !(function (e) {
+        (e[(e.k_None = 0)] = "k_None"),
+          (e[(e.k_Suggested = 1)] = "k_Suggested"),
+          (e[(e.k_Required = 2)] = "k_Required"),
+          (e[(e.k_Requested = 3)] = "k_Requested");
+      })(va || (va = {}));
+      let fa = class extends u.Component {
+        ShowLangChangeDialog(e, n) {
+          const {
+            fnOnArtworkLanguageChange: a,
+            realms: o,
+            fnLangHasData: r,
+          } = this.props;
+          (0, Ce.pg)(
+            (0, t.jsx)(Rn, {
+              clanImage: e,
+              lang: n,
+              fnOnArtworkLangChange: a,
+              fnLangHasData: r,
+              realms: o,
+            }),
+            window,
+          );
+        }
+        GenerateImageMappings() {
+          let e = new Array();
+          const { list: n } = this.props;
+          return (
+            n.forEach((n) => {
+              const { clanImage: a, lang: r } = n;
+              let i = (0, T.we)("#Language_" + (0, o.LgB)(r));
+              e.push(
+                (0, t.jsxs)(
+                  "div",
+                  {
+                    className: v().FlexRowContainer,
+                    children: [
+                      (0, t.jsx)("span", {
+                        children: (0, T.we)(
+                          "#ImageUpload_Success_Mapping",
+                          a.file_name ?? "",
+                          i,
+                        ),
+                      }),
+                      (0, t.jsx)("a", {
+                        onClick: () => this.ShowLangChangeDialog(a, r),
+                        children: (0, T.we)(
+                          "#ImageUpload_Success_Mapping_Change",
+                        ),
+                      }),
+                    ],
+                  },
+                  "img_lang_" + n.clanImage.imageid + "_" + r,
+                ),
+              );
+            }),
+            e
+          );
+        }
+        render() {
+          const { list: e } = this.props;
+          if (!e || 0 == e.length) return (0, t.jsx)("div", {});
+          let n = this.GenerateImageMappings();
+          return (0, t.jsx)("div", {
+            className: Un().UploadSuccess,
+            children: n,
+          });
+        }
+      };
+      (0, Ve.Cg)([X.oI], fa.prototype, "ShowLangChangeDialog", null),
+        (fa = (0, Ve.Cg)([en.PA], fa));
+      var Sa = a(82705);
+      function wa(e) {
+        const {
+            clanSteamID: n,
+            appid: a,
+            eventModel: r,
+            realms: i,
+            loc_images: s,
+            artworkType: l,
+            fnLangHasData: c,
+            closeModal: d,
+            fnSetImageURL: m,
+            partnerEventStore: p,
+          } = e,
+          [_, h] = (0, u.useState)(!1),
+          x = (0, Oe.zO)(n, l),
+          v = n.GetAccountID(),
+          [b] = (0, g.q3)(() => [
+            x.GetFilesToUpload().length - x.GetCompletedFiles(),
+          ]);
+        (0, u.useEffect)(() => {
+          h(!1),
+            Ke.ClearImageGroup(),
+            s?.forEach((e, n) => {
+              const a = Fe.b.InitFromClanID(v);
+              if (0 == Ke.GetAllLocalizedGroupImages().length) {
+                const n = e && te.zU.GetHashFromHashAndExt(e),
+                  t = n && He.pU.GetClanImageByImageHash(a, n);
+                t && Ke.SetPrimaryImageForImageGroup(t, l);
+              }
+              Ke.SetLocalizedImageGroupAtLang(n, a, e ?? null);
+            }),
+            h(!0);
+        }, [s, v, l]);
+        const j = (0, u.useCallback)(
+            (e, n, a = o.Bhc) => {
+              const t = Fe.b.InitFromClanID(v),
+                r = te.zU.GetHashAndExt(n ?? null);
+              if (0 == Ke.GetAllLocalizedGroupImages().length) {
+                const n = r && te.zU.GetHashFromHashAndExt(r),
+                  a = n && He.pU.GetClanImageByImageHash(t, n);
+                a && Ke.SetPrimaryImageForImageGroup(a, e);
+              }
+              Ke.SetLocalizedImageGroupAtLang(a, t, r);
+            },
+            [v],
+          ),
+          f = (0, u.useCallback)((e, n) => {
+            const a = Ke.GetLocalizedImageGroupForEdit(),
+              t = a?.localized_images[n];
+            return t ? t.split("/").pop() : t;
+          }, []);
+        return (0, t.jsxs)(ke.o0, {
+          onCancel: d,
+          closeModal: d,
+          bDisableBackgroundDismiss: !0,
+          bAllowFullSize: !0,
+          className: (0, I.A)(zn.NotTooWideModal, zn.ImageManageDialog),
+          strTitle: e.strLocalizedTitle || (0, T.we)("#ImagePickerLoc_Title"),
+          strDescription: e.strLocalizedDescription,
+          bOKDisabled: b > 0,
+          onOK: () => {
+            const n = Ke.GetLocalizedImageGroupForEdit();
+            for (let e = o.Bhc; e < o.bP9; ++e) {
+              const a = n?.localized_images[e];
+              if (a) {
+                const n = a.split("/").pop() || "";
+                m(
+                  l,
+                  {
+                    image_hash: Fn(n),
+                    clanAccountID: v,
+                    file_type: (0, Sa.yh)(n) ?? an.bg.w3,
+                    imageid: 0,
+                  },
+                  e,
+                );
+              } else m(l, null, e);
+            }
+            Ke.ClearImageGroup(), e.onOK ? e.onOK() : d?.();
+          },
+          strOKButtonText:
+            b > 0 ? (0, T.we)("#ImagePickerLoc_DismissWarning") : void 0,
+          children: [
+            Boolean(!_)
+              ? (0, t.jsx)(he.t, {
+                  size: "medium",
+                  position: "center",
+                  string: (0, T.we)("#Loading"),
+                })
+              : (0, t.jsxs)(t.Fragment, {
+                  children: [
+                    (0, t.jsx)(Ln, {
+                      clanSteamID: n,
+                      rgSupportArtwork: [l],
+                      fnSetImageURL: j,
+                      bAllowPreviousClanImageSelection: !1,
+                      rgRealmList: i ?? [],
+                      uploaderOverride: x,
+                    }),
+                    (0, t.jsx)(Ia, {
+                      clanSteamID: n,
+                      eventModel: r,
+                      artworkType: l,
+                      title: null,
+                      appid: a,
+                      realms: i,
+                      fnRemoveAllArtwork: () => Ke.ClearImageGroup(),
+                      fnSetImageURL: j,
+                      fnGetImageHashAndExt: f,
+                      fnLangHasData: c,
+                      partnerEventStore: p,
+                    }),
+                  ],
+                }),
+            e.children,
+          ],
+        });
+      }
+      function ka(e) {
+        const { setting: n, fnUpdateSetting: a, label: o } = e,
+          r = u.useMemo(() => {
+            const e = [];
+            return (
+              e.push({
+                label: (0, T.we)("#EventEditor_Tile_NoRepeat"),
+                data: "no-repeat",
+              }),
+              e.push({
+                label: (0, T.we)("#EventEditor_Tile_RepeatX"),
+                data: "repeat-x",
+              }),
+              e.push({
+                label: (0, T.we)("#EventEditor_Tile_RepeatY"),
+                data: "repeat-y",
+              }),
+              e.push({
+                label: (0, T.we)("#EventEditor_Tile_Repeat"),
+                data: "repeat",
+              }),
+              e.push({
+                label: (0, T.we)("#EventEditor_Tile_NoRepeatAndBlur"),
+                data: "coverBlur",
+              }),
+              e
+            );
+          }, []);
+        return (0, t.jsxs)(t.Fragment, {
+          children: [
+            (0, t.jsx)(we.JU, {
+              children: o || (0, T.we)("#EventEditor_Tile_Title"),
+            }),
+            (0, t.jsx)(we.m, {
+              strDropDownClassName: x.DropDownScroll,
+              rgOptions: r,
+              selectedOption: n || "no-repeat",
+              onChange: (e) => a(e.data),
+              bDisableMouseOverlay: !0,
+              contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
+            }),
+          ],
+        });
+      }
+      var Ca = a(57757);
+      function Ea(e) {
+        const {
+            closeModal: n,
+            imgGroup: a,
+            fnUpdateImageGroup: r,
+            eventModel: i,
+          } = e,
+          { openColorPicker: s } = {
+            openColorPicker: (0, u.useCallback)((e, n) => {
+              let a = null;
+              a = (0, Ge.lX)(
+                (0, t.jsx)(Me, {
+                  color: n.color,
+                  disableAlpha: n.disableAlpha,
+                  strTitle: n.strTitle,
+                  onChange: n.onChange,
+                  onRequestClose: () => a?.Hide(),
+                }),
+                e,
+                { bDisablePopTop: !0 },
+              );
+            }, []),
+          },
+          [l, c] = (0, u.useState)(() => a),
+          [d, m, p, _, h, x, v, I] = (0, g.q3)(() => [
+            l.repeat_setting,
+            l.scaling_setting,
+            l.background_color1,
+            l.background_color2,
+            l.gradient_setting,
+            l.position_setting,
+            i.GetIncludedRealmList(),
+            l.randomize_section_order,
+          ]),
+          [b] = (0, u.useState)(() =>
+            (function (e) {
+              const n = ie.$Y([], o.bP9, null);
+              for (const a in e) {
+                const t = (0, o.sfN)(a);
+                t != o.xPp && (n[t] = e[a]);
+              }
+              return n;
+            })(l.localized_background_art ?? {}),
+          );
+        return (0, t.jsxs)(wa, {
+          strLocalizedTitle: (0, T.we)("#BackgroundGroups_Configure"),
+          strLocalizedDescription: (0, T.we)("#BackgroundGroups_DialogDesc"),
+          appid: i.appid,
+          eventModel: i,
+          clanSteamID: i.clanSteamID,
+          closeModal: n,
+          partnerEventStore: Ae.O3,
+          artworkType: "localized_background_art",
+          realms: v,
+          loc_images: b,
+          fnLangHasData: (e) => Boolean(b[e]),
+          fnGetImageHash: (e, n) => b[n],
+          fnSetImageURL: async (e, n, a) => {
+            c((e) => {
+              const t = { ...e.localized_background_art },
+                r = te.zU.GetHashAndExt(n);
+              return (
+                r ? (t[(0, o.LgB)(a)] = r) : delete t[(0, o.LgB)(a)],
+                { ...e, localized_background_art: t }
+              );
+            });
+          },
+          onOK: () => {
+            c((e) => (r(e), n && setTimeout(n, 1), { ...e }));
+          },
+          children: [
+            (0, t.jsxs)("div", {
+              className: Pe().ConfDialogOptions,
+              children: [
+                (0, t.jsxs)("div", {
+                  className: Pe().ImageOptions,
+                  children: [
+                    (0, t.jsx)(ka, {
+                      setting: d,
+                      fnUpdateSetting: (e) => {
+                        c(
+                          "no-repeat" !== e
+                            ? {
+                                ...l,
+                                repeat_setting: e,
+                                scaling_setting: "auto",
+                              }
+                            : { ...l, repeat_setting: e },
+                        );
+                      },
+                      label: (0, T.we)("#BackgroundGroups_Repeating"),
+                    }),
+                    (0, t.jsx)(Da, {
+                      scaling_setting: m ?? "contain",
+                      disable: "no-repeat" !== d,
+                      fnUpdateSetting: (e) => c({ ...l, scaling_setting: e }),
+                    }),
+                    Boolean("cover" != m) &&
+                      (0, t.jsx)(Ga, {
+                        position_settings: x,
+                        fnUpdateSetting: (e) =>
+                          c({ ...l, position_setting: e }),
+                      }),
+                  ],
+                }),
+                (0, t.jsxs)("div", {
+                  className: Pe().ColorOptions,
+                  children: [
+                    (0, t.jsx)(we.JU, {
+                      children: (0, T.we)("#BackgroundGroups_Color"),
+                    }),
+                    (0, t.jsxs)("div", {
+                      className: ze().ColorCtn,
+                      children: [
+                        (0, t.jsx)(we.$n, {
+                          style: { backgroundColor: p },
+                          onClick: (e) =>
+                            s(e, {
+                              color: p ?? "",
+                              onChange: (e) =>
+                                c({ ...l, background_color1: e }),
+                            }),
+                          children: (0, T.we)(
+                            void 0 === p
+                              ? "#BackgroundGroups_ColorNum_unset"
+                              : "#BackgroundGroups_ColorNum",
+                            1,
                           ),
+                        }),
+                        " ",
+                        (0, t.jsx)(we.$n, {
+                          onClick: () => c({ ...l, background_color1: void 0 }),
+                          children: (0, T.we)("#BackgroundGroups_Color_Clear"),
                         }),
                       ],
-                    },
-                    "img_lang_" + n.clanImage.imageid + "_" + r,
-                  ),
-                );
-              }),
-              a
-            );
-          }
-          render() {
-            const { list: a } = this.props;
-            if (!a || a.length == 0) return (0, e.jsx)("div", {});
-            let t = this.GenerateImageMappings();
-            return (0, e.jsx)("div", {
-              className: ce().UploadSuccess,
-              children: t,
-            });
-          }
-        };
-        yn([ye.oI], kt.prototype, "ShowLangChangeDialog", 1),
-          (kt = yn([H.PA], kt));
-        var ka = o(6658);
-        function Ma(a) {
-          const {
-              clanSteamID: t,
-              appid: n,
-              eventModel: s,
-              realms: r,
-              loc_images: i,
-              artworkType: c,
-              fnLangHasData: u,
-              closeModal: d,
-              fnSetImageURL: m,
-              partnerEventStore: v,
-            } = a,
-            [I, j] = (0, h.useState)(!1),
-            x = (0, Bt.zO)(t, c),
-            _ = t.GetAccountID(),
-            [w] = (0, k.q3)(() => [
-              x.GetFilesToUpload().length - x.GetCompletedFiles(),
-            ]);
-          (0, h.useEffect)(() => {
-            j(!1),
-              C.ClearImageGroup(),
-              i?.forEach((E, M) => {
-                const V = Be.b.InitFromClanID(_);
-                if (C.GetAllLocalizedGroupImages().length == 0) {
-                  const $ = E && le.zU.GetHashFromHashAndExt(E),
-                    ae = $ && Ee.pU.GetClanImageByImageHash(V, $);
-                  ae && C.SetPrimaryImageForImageGroup(ae, c);
-                }
-                C.SetLocalizedImageGroupAtLang(M, V, E ?? null);
-              }),
-              j(!0);
-          }, [i, _, c]);
-          const S = (0, h.useCallback)(
-              (E, M, V = T.Bhc) => {
-                const $ = Be.b.InitFromClanID(_),
-                  ae = le.zU.GetHashAndExt(M ?? null);
-                if (C.GetAllLocalizedGroupImages().length == 0) {
-                  const Ne = ae && le.zU.GetHashFromHashAndExt(ae),
-                    q = Ne && Ee.pU.GetClanImageByImageHash($, Ne);
-                  q && C.SetPrimaryImageForImageGroup(q, E);
-                }
-                C.SetLocalizedImageGroupAtLang(V, $, ae);
-              },
-              [_],
-            ),
-            D = (0, h.useCallback)((E, M) => {
-              const $ = C.GetLocalizedImageGroupForEdit()?.localized_images[M];
-              return $ && $.split("/").pop();
-            }, []),
-            G = () => {
-              const E = C.GetLocalizedImageGroupForEdit();
-              for (let M = T.Bhc; M < T.bP9; ++M) {
-                const V = E?.localized_images[M];
-                if (V) {
-                  const $ = V.split("/").pop() || "";
-                  m(
-                    c,
-                    {
-                      image_hash: mn($),
-                      clanAccountID: _,
-                      file_type: (0, ka.yh)($) ?? xe.bg.w3,
-                      imageid: 0,
-                    },
-                    M,
-                  );
-                } else m(c, null, M);
-              }
-              C.ClearImageGroup(), a.onOK ? a.onOK() : d?.();
-            };
-          return (0, e.jsxs)(re.o0, {
-            onCancel: d,
-            closeModal: d,
-            bDisableBackgroundDismiss: !0,
-            bAllowFullSize: !0,
-            className: (0, A.A)(Lt.NotTooWideModal, Lt.ImageManageDialog),
-            strTitle: a.strLocalizedTitle || (0, l.we)("#ImagePickerLoc_Title"),
-            strDescription: a.strLocalizedDescription,
-            bOKDisabled: w > 0,
-            onOK: G,
-            strOKButtonText:
-              w > 0 ? (0, l.we)("#ImagePickerLoc_DismissWarning") : void 0,
-            children: [
-              I
-                ? (0, e.jsxs)(e.Fragment, {
-                    children: [
-                      (0, e.jsx)(ta, {
-                        clanSteamID: t,
-                        rgSupportArtwork: [c],
-                        fnSetImageURL: S,
-                        bAllowPreviousClanImageSelection: !1,
-                        rgRealmList: r ?? [],
-                        uploaderOverride: x,
+                    }),
+                    (0, t.jsx)("div", {
+                      className: Pe().SwapColorsCtn,
+                      children: (0, t.jsx)(we.$n, {
+                        onClick: () =>
+                          c({
+                            ...l,
+                            background_color1: _,
+                            background_color2: p,
+                          }),
+                        children: (0, T.we)("#BackgroundGroups_Color_Swap"),
                       }),
-                      (0, e.jsx)(Ta, {
-                        clanSteamID: t,
-                        eventModel: s,
-                        artworkType: c,
-                        title: null,
-                        appid: n,
-                        realms: r,
-                        fnRemoveAllArtwork: () => C.ClearImageGroup(),
-                        fnSetImageURL: S,
-                        fnGetImageHashAndExt: D,
-                        fnLangHasData: u,
-                        partnerEventStore: v,
-                      }),
-                    ],
-                  })
-                : (0, e.jsx)(Ye.t, {
-                    size: "medium",
-                    position: "center",
-                    string: (0, l.we)("#Loading"),
-                  }),
-              a.children,
-            ],
-          });
-        }
-        function Oa(a) {
-          const { setting: t, fnUpdateSetting: n, label: s } = a,
-            r = h.useMemo(() => {
-              const i = [];
-              return (
-                i.push({
-                  label: (0, l.we)("#EventEditor_Tile_NoRepeat"),
-                  data: "no-repeat",
-                }),
-                i.push({
-                  label: (0, l.we)("#EventEditor_Tile_RepeatX"),
-                  data: "repeat-x",
-                }),
-                i.push({
-                  label: (0, l.we)("#EventEditor_Tile_RepeatY"),
-                  data: "repeat-y",
-                }),
-                i.push({
-                  label: (0, l.we)("#EventEditor_Tile_Repeat"),
-                  data: "repeat",
-                }),
-                i.push({
-                  label: (0, l.we)("#EventEditor_Tile_NoRepeatAndBlur"),
-                  data: "coverBlur",
-                }),
-                i
-              );
-            }, []);
-          return (0, e.jsxs)(e.Fragment, {
-            children: [
-              (0, e.jsx)(U.JU, {
-                children: s || (0, l.we)("#EventEditor_Tile_Title"),
-              }),
-              (0, e.jsx)(U.m, {
-                strDropDownClassName: F.DropDownScroll,
-                rgOptions: r,
-                selectedOption: t || "no-repeat",
-                onChange: (i) => n(i.data),
-                bDisableMouseOverlay: !0,
-                contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
-              }),
-            ],
-          });
-        }
-        var Na = o(94381);
-        function Ua(a) {
-          const {
-              closeModal: t,
-              imgGroup: n,
-              fnUpdateImageGroup: s,
-              eventModel: r,
-            } = a,
-            { openColorPicker: i } = an(),
-            [c, u] = (0, h.useState)(() => n),
-            [d, m, v, I, j, x, _, w] = (0, k.q3)(() => [
-              c.repeat_setting,
-              c.scaling_setting,
-              c.background_color1,
-              c.background_color2,
-              c.gradient_setting,
-              c.position_setting,
-              r.GetIncludedRealmList(),
-              c.randomize_section_order,
-            ]),
-            [S] = (0, h.useState)(() => Ra(c.localized_background_art ?? {}));
-          return (0, e.jsxs)(Ma, {
-            strLocalizedTitle: (0, l.we)("#BackgroundGroups_Configure"),
-            strLocalizedDescription: (0, l.we)("#BackgroundGroups_DialogDesc"),
-            appid: r.appid,
-            eventModel: r,
-            clanSteamID: r.clanSteamID,
-            closeModal: t,
-            partnerEventStore: Jt.O3,
-            artworkType: "localized_background_art",
-            realms: _,
-            loc_images: S,
-            fnLangHasData: (D) => !!S[D],
-            fnGetImageHash: (D, G) => S[G],
-            fnSetImageURL: async (D, G, E) => {
-              u((M) => {
-                const V = { ...M.localized_background_art },
-                  $ = le.zU.GetHashAndExt(G);
-                return (
-                  $ ? (V[(0, T.LgB)(E)] = $) : delete V[(0, T.LgB)(E)],
-                  { ...M, localized_background_art: V }
-                );
-              });
-            },
-            onOK: () => {
-              u((D) => (s(D), t && setTimeout(t, 1), { ...D }));
-            },
-            children: [
-              (0, e.jsxs)("div", {
-                className: Ae().ConfDialogOptions,
-                children: [
-                  (0, e.jsxs)("div", {
-                    className: Ae().ImageOptions,
-                    children: [
-                      (0, e.jsx)(Oa, {
-                        setting: d,
-                        fnUpdateSetting: (D) => {
-                          u(
-                            D !== "no-repeat"
-                              ? {
-                                  ...c,
-                                  repeat_setting: D,
-                                  scaling_setting: "auto",
-                                }
-                              : { ...c, repeat_setting: D },
-                          );
-                        },
-                        label: (0, l.we)("#BackgroundGroups_Repeating"),
-                      }),
-                      (0, e.jsx)(Fa, {
-                        scaling_setting: m ?? "contain",
-                        disable: d !== "no-repeat",
-                        fnUpdateSetting: (D) => u({ ...c, scaling_setting: D }),
-                      }),
-                      m != "cover" &&
-                        (0, e.jsx)(Ha, {
-                          position_settings: x,
-                          fnUpdateSetting: (D) =>
-                            u({ ...c, position_setting: D }),
-                        }),
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    className: Ae().ColorOptions,
-                    children: [
-                      (0, e.jsx)(U.JU, {
-                        children: (0, l.we)("#BackgroundGroups_Color"),
-                      }),
-                      (0, e.jsxs)("div", {
-                        className: At().ColorCtn,
+                    }),
+                    Boolean("single-color" !== h) &&
+                      (0, t.jsxs)("div", {
+                        className: ze().ColorCtn,
                         children: [
-                          (0, e.jsx)(U.$n, {
-                            style: { backgroundColor: v },
-                            onClick: (D) =>
-                              i(D, {
-                                color: v ?? "",
-                                onChange: (G) =>
-                                  u({ ...c, background_color1: G }),
+                          (0, t.jsx)(we.$n, {
+                            style: { backgroundColor: _ },
+                            onClick: (e) =>
+                              s(e, {
+                                color: _ ?? "",
+                                onChange: (e) =>
+                                  c({ ...l, background_color2: e }),
                               }),
-                            children: (0, l.we)(
-                              v === void 0
+                            children: (0, T.we)(
+                              void 0 === _
                                 ? "#BackgroundGroups_ColorNum_unset"
                                 : "#BackgroundGroups_ColorNum",
-                              1,
+                              2,
                             ),
                           }),
-                          "\xA0",
-                          (0, e.jsx)(U.$n, {
+                          " ",
+                          (0, t.jsx)(we.$n, {
                             onClick: () =>
-                              u({ ...c, background_color1: void 0 }),
-                            children: (0, l.we)(
+                              c({ ...l, background_color2: void 0 }),
+                            children: (0, T.we)(
                               "#BackgroundGroups_Color_Clear",
                             ),
                           }),
                         ],
                       }),
-                      (0, e.jsx)("div", {
-                        className: Ae().SwapColorsCtn,
-                        children: (0, e.jsx)(U.$n, {
-                          onClick: () =>
-                            u({
-                              ...c,
-                              background_color1: I,
-                              background_color2: v,
-                            }),
-                          children: (0, l.we)("#BackgroundGroups_Color_Swap"),
-                        }),
-                      }),
-                      j !== "single-color" &&
-                        (0, e.jsxs)("div", {
-                          className: At().ColorCtn,
-                          children: [
-                            (0, e.jsx)(U.$n, {
-                              style: { backgroundColor: I },
-                              onClick: (D) =>
-                                i(D, {
-                                  color: I ?? "",
-                                  onChange: (G) =>
-                                    u({ ...c, background_color2: G }),
-                                }),
-                              children: (0, l.we)(
-                                I === void 0
-                                  ? "#BackgroundGroups_ColorNum_unset"
-                                  : "#BackgroundGroups_ColorNum",
-                                2,
-                              ),
-                            }),
-                            "\xA0",
-                            (0, e.jsx)(U.$n, {
-                              onClick: () =>
-                                u({ ...c, background_color2: void 0 }),
-                              children: (0, l.we)(
-                                "#BackgroundGroups_Color_Clear",
-                              ),
-                            }),
-                          ],
-                        }),
-                      (0, e.jsx)(za, {
-                        gradient: j ?? "top-to-bottom",
-                        fnUpdateSetting: (D) =>
-                          u({ ...c, gradient_setting: D }),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-              (0, e.jsx)(Zt, {
-                clanSteamID: r.clanSteamID,
-                children: (0, e.jsx)(Na.S, {
-                  checked: !!w,
-                  onChange: (D) => {
-                    c.randomize_section_order = D;
-                  },
-                  children: (0, l.we)(
-                    "#BackgroundGroups_RandomizeSectionOrder",
-                  ),
-                }),
-              }),
-            ],
-          });
-        }
-        function Ra(a) {
-          const t = rt.$Y([], T.bP9, null);
-          for (const n in a) {
-            const s = (0, T.sfN)(n);
-            s != T.xPp && (t[s] = a[n]);
-          }
-          return t;
-        }
-        function Fa(a) {
-          const {
-              scaling_setting: t,
-              fnUpdateSetting: n,
-              label: s,
-              disable: r,
-            } = a,
-            i = h.useMemo(() => {
-              const c = [];
-              return (
-                c.push({
-                  label: (0, l.we)("#BackgroundGroups_Scaling_cover"),
-                  data: "cover",
-                }),
-                c.push({
-                  label: (0, l.we)("#BackgroundGroups_Scaling_contain"),
-                  data: "contain",
-                }),
-                c.push({
-                  label: (0, l.we)("#BackgroundGroups_Scaling_fixed"),
-                  data: "auto",
-                }),
-                c
-              );
-            }, []);
-          return (0, e.jsxs)(e.Fragment, {
-            children: [
-              (0, e.jsx)(U.JU, {
-                children: s || (0, l.we)("#BackgroundGroups_Scaling"),
-              }),
-              (0, e.jsx)(U.m, {
-                strDropDownClassName: F.DropDownScroll,
-                disabled: r,
-                rgOptions: i,
-                selectedOption: t || "cover",
-                onChange: (c) => n(c.data),
-                bDisableMouseOverlay: !0,
-                contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
-              }),
-            ],
-          });
-        }
-        function za(a) {
-          const { gradient: t, fnUpdateSetting: n, label: s } = a,
-            r = h.useMemo(() => {
-              const i = [];
-              return (
-                i.push({
-                  label: (0, l.we)("#BackgroundGroups_Gradient_Top"),
-                  data: "top-to-bottom",
-                }),
-                i.push({
-                  label: (0, l.we)("#BackgroundGroups_Gradient_Left"),
-                  data: "left-to-right",
-                }),
-                i.push({
-                  label: (0, l.we)("#BackgroundGroups_Gradient_TopLeft"),
-                  data: "top-left-to-bottom-right",
-                }),
-                i
-              );
-            }, []);
-          return (0, e.jsxs)(e.Fragment, {
-            children: [
-              (0, e.jsx)(U.JU, {
-                children: s || (0, l.we)("#EventEditor_ColorSetting_Title"),
-              }),
-              (0, e.jsx)(U.m, {
-                strDropDownClassName: F.DropDownScroll,
-                rgOptions: r,
-                selectedOption: t || "top-to-bottom",
-                onChange: (i) => n(i.data),
-                bDisableMouseOverlay: !0,
-                contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
-              }),
-            ],
-          });
-        }
-        function Ha(a) {
-          const { position_settings: t, fnUpdateSetting: n, label: s } = a,
-            r = h.useMemo(() => {
-              const i = [];
-              return (
-                i.push({
-                  label: (0, l.we)("#BackgroundGroups_Position_Unset"),
-                  data: "unset",
-                }),
-                i.push({
-                  label: (0, l.we)("#BackgroundGroups_Position_Centered"),
-                  data: "center",
-                }),
-                i.push({
-                  label: (0, l.we)("#BackgroundGroups_Position_CenteredTop"),
-                  data: "top center",
-                }),
-                i.push({
-                  label: (0, l.we)("#BackgroundGroups_Position_TopLeft"),
-                  data: "top left",
-                }),
-                i.push({
-                  label: (0, l.we)("#BackgroundGroups_Position_BottomRight"),
-                  data: "bottom right",
-                }),
-                i
-              );
-            }, []);
-          return (0, e.jsxs)(e.Fragment, {
-            children: [
-              (0, e.jsx)(U.JU, {
-                children: s || (0, l.we)("#BackgroundGroups_Position"),
-              }),
-              (0, e.jsx)(U.m, {
-                strDropDownClassName: F.DropDownScroll,
-                rgOptions: r,
-                selectedOption: t || "unset",
-                onChange: (i) => n(i.data),
-                bDisableMouseOverlay: !0,
-                contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
-              }),
-            ],
-          });
-        }
-        function Wa(a) {
-          const {
-              backgroundImageEditModel: t,
-              bBackgroundImgGroupEditMode: n,
-              fnSetBackgroundImgGroupEditMode: s,
-              bShowAsValveOnly: r,
-            } = a,
-            [i, c] = (0, h.useState)(t.BIsBackgroundImageEnabled()),
-            [u, d, m] = (0, ye.uD)(),
-            v = (0, k.q3)(() => t.GetSalePageLastCoverSectionUntilEnd());
-          return (0, e.jsx)("div", {
-            className: (0, A.A)(Ae().Ctn, r && F.ValveOnlyBackground),
-            children: (0, e.jsxs)(O.tH, {
-              children: [
-                (0, e.jsx)(U.Yh, {
-                  label: (0, l.we)("#BackgroundGroups_Setting"),
-                  checked: i,
-                  onChange: (I) => {
-                    c(I), t.SetBackgroundImageEnabled(I);
-                  },
-                }),
-                i
-                  ? (0, e.jsxs)(e.Fragment, {
-                      children: [
-                        (0, e.jsx)(U.Yh, {
-                          label: (0, l.we)("#BackgroundGroups_EditMode"),
-                          tooltip: (0, l.we)("#BackgroundGroups_EditMode_ttip"),
-                          checked: n,
-                          onChange: s,
-                        }),
-                        (0, e.jsx)(U.Yh, {
-                          label: (0, l.we)("#BackgroundGroups_ExtendToEnd"),
-                          tooltip: (0, l.we)(
-                            "#BackgroundGroups_ExtendToEnd_ttip",
-                          ),
-                          checked: v,
-                          onChange: (I) =>
-                            t.SetSalePageLastCoverSectionUntilEnd(I),
-                        }),
-                        (0, e.jsx)("hr", {}),
-                        (0, e.jsx)(U.$n, {
-                          onClick: d,
-                          children: (0, l.we)(
-                            "#BackgroundGroups_ClearAllSettings",
-                          ),
-                        }),
-                        (0, e.jsx)(re.EN, {
-                          active: u,
-                          children: (0, e.jsx)(re.o0, {
-                            strTitle: (0, l.we)(
-                              "#EventEditor_GenericAreYouSure",
-                            ),
-                            strDescription: (0, l.we)(
-                              "#BackgroundGroups_ClearAllSettings_Desc",
-                            ),
-                            bDestructiveWarning: !0,
-                            onOK: () => {
-                              t.ClearAllBackgroundImageGroupSettings(), c(!1);
-                            },
-                            closeModal: m,
-                          }),
-                        }),
-                      ],
-                    })
-                  : (0, e.jsx)("p", {
-                      children: (0, l.we)("#BackgroundGroups_Desc"),
+                    (0, t.jsx)(Aa, {
+                      gradient: h ?? "top-to-bottom",
+                      fnUpdateSetting: (e) => c({ ...l, gradient_setting: e }),
                     }),
-                (0, e.jsx)("br", {}),
-                (0, e.jsx)("a", {
-                  href: `${xt.TS.PARTNER_BASE_URL}doc/marketing/event_tools/sales/groups`,
-                  target: "_blank",
-                  children: (0, l.we)("#EventGeneric_SeeDocs"),
+                  ],
                 }),
               ],
             }),
-          });
-        }
-        const pn = h.forwardRef(function (t, n) {
-          const {
-              imgGroupDerivedMapping: s,
-              backgroundImageEditModel: r,
-              groupIndex: i,
-              imgGroup: c,
-              eventModel: u,
-              nTabIndex: d,
-            } = t,
-            m = (0, Oe.E)(),
-            [v, I, j, x] = (0, k.q3)(() => [
-              c && s.mapGroupToSections.get(c.background_id),
-              (c &&
-                s.mapGroupToSections.get(c.background_id)?.sectionUniqueIDs) ??
-                [],
-              d != null
-                ? r?.GetTabLastCoverSectionUntilEnd(d)
-                : r?.GetSalePageLastCoverSectionUntilEnd(),
-              d != null ? r?.GetTabGroupCount(d) : r?.GetSalePageGroupCount(),
-            ]),
-            _ = j && i + 1 === x,
-            [w, S, D] = (0, ye.uD)(),
-            [G, E, M] = (0, ye.uD)();
-          let V;
-          v?.nUniqueIDNextSaleSection &&
-            (V = (0, ct.h_)(
-              K.HY,
-              r.GetSaleSectionByID(v?.nUniqueIDNextSaleSection),
-              m,
-              u,
-              v.nSaleSectionLastIndex + 1,
-            ));
-          let $;
-          if (v && I?.length > 1) {
-            const ae = I[I.length - 1];
-            $ = (0, ct.h_)(
-              K.HY,
-              r?.GetSaleSectionByID(ae),
-              m,
-              u,
-              v.nSaleSectionLastIndex,
+            (0, t.jsx)(Se, {
+              clanSteamID: i.clanSteamID,
+              children: (0, t.jsx)(Ca.S, {
+                checked: !!I,
+                onChange: (e) => {
+                  l.randomize_section_order = e;
+                },
+                children: (0, T.we)("#BackgroundGroups_RandomizeSectionOrder"),
+              }),
+            }),
+          ],
+        });
+      }
+      function Da(e) {
+        const {
+            scaling_setting: n,
+            fnUpdateSetting: a,
+            label: o,
+            disable: r,
+          } = e,
+          i = u.useMemo(() => {
+            const e = [];
+            return (
+              e.push({
+                label: (0, T.we)("#BackgroundGroups_Scaling_cover"),
+                data: "cover",
+              }),
+              e.push({
+                label: (0, T.we)("#BackgroundGroups_Scaling_contain"),
+                data: "contain",
+              }),
+              e.push({
+                label: (0, T.we)("#BackgroundGroups_Scaling_fixed"),
+                data: "auto",
+              }),
+              e
             );
-          }
-          return (0, e.jsx)(Qt.qx, {
-            bStartMinimized: !1,
-            title: (0, l.we)(
-              d != null
-                ? "#BackgroundGroups_Sale_Tab_GroupNum"
-                : "#BackgroundGroups_Sale_GroupNum",
-              i + 1,
-            ),
-            className: t.classNameHeader,
-            children: (0, e.jsxs)("div", {
-              ref: n,
-              children: [
-                (0, e.jsx)(U.$n, {
-                  onClick: S,
-                  children: (0, l.we)("#BackgroundGroups_Configure"),
-                }),
-                (0, e.jsx)(re.EN, {
-                  active: w,
-                  children: (0, e.jsx)(Ua, {
-                    imgGroup: c,
-                    closeModal: D,
-                    eventModel: u,
-                    fnUpdateImageGroup: (ae) =>
-                      d != null
-                        ? r.SetTabBackgroundGroup(d, i, ae)
-                        : r.SetSalePageBackgroundGroup(i, ae),
-                  }),
-                }),
-                (0, e.jsx)("br", {}),
-                (0, e.jsx)("div", {
-                  className: Ae().EditorTitle,
-                  children: (0, l.we)("#BackgroundGroups_ContentTitle"),
-                }),
-                (0, e.jsxs)("ul", {
-                  children: [
-                    I.map((ae) =>
-                      (0, e.jsx)(
-                        "li",
-                        {
-                          children: (0, ct.h_)(
-                            K.W3,
-                            r.GetSaleSectionByID(ae),
-                            m,
-                            u,
-                            r.GetSaleSectionIndexByID(ae, !0),
-                          ),
-                        },
-                        "li_" + ae,
-                      ),
-                    ),
-                    !!_ &&
-                      (0, e.jsx)("li", {
-                        children: (0, l.we)("#BackgroundGroups_EndOfList"),
-                      }),
-                  ],
-                }),
-                !!$ &&
-                  (0, e.jsx)(U.$n, {
-                    onClick: () =>
-                      d != null
-                        ? r.SetTabBackgroundGroup(d, i, {
-                            ...c,
-                            num_sections: c.num_sections - 1,
-                          })
-                        : r.SetSalePageBackgroundGroup(i, {
-                            ...c,
-                            num_sections: c.num_sections - 1,
-                          }),
-                    children: (0, l.we)("#BackgroundGroups_Reduce", $),
-                  }),
-                !!V &&
-                  (0, e.jsx)(U.$n, {
-                    onClick: () =>
-                      d != null
-                        ? r.SetTabBackgroundGroup(d, i, {
-                            ...c,
-                            num_sections: c.num_sections + 1,
-                          })
-                        : r.SetSalePageBackgroundGroup(i, {
-                            ...c,
-                            num_sections: c.num_sections + 1,
-                          }),
-                    children: (0, l.we)("#BackgroundGroups_Extend", V),
-                  }),
-                i > 0 &&
-                  (0, e.jsxs)(e.Fragment, {
+          }, []);
+        return (0, t.jsxs)(t.Fragment, {
+          children: [
+            (0, t.jsx)(we.JU, {
+              children: o || (0, T.we)("#BackgroundGroups_Scaling"),
+            }),
+            (0, t.jsx)(we.m, {
+              strDropDownClassName: x.DropDownScroll,
+              disabled: r,
+              rgOptions: i,
+              selectedOption: n || "cover",
+              onChange: (e) => a(e.data),
+              bDisableMouseOverlay: !0,
+              contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
+            }),
+          ],
+        });
+      }
+      function Aa(e) {
+        const { gradient: n, fnUpdateSetting: a, label: o } = e,
+          r = u.useMemo(() => {
+            const e = [];
+            return (
+              e.push({
+                label: (0, T.we)("#BackgroundGroups_Gradient_Top"),
+                data: "top-to-bottom",
+              }),
+              e.push({
+                label: (0, T.we)("#BackgroundGroups_Gradient_Left"),
+                data: "left-to-right",
+              }),
+              e.push({
+                label: (0, T.we)("#BackgroundGroups_Gradient_TopLeft"),
+                data: "top-left-to-bottom-right",
+              }),
+              e
+            );
+          }, []);
+        return (0, t.jsxs)(t.Fragment, {
+          children: [
+            (0, t.jsx)(we.JU, {
+              children: o || (0, T.we)("#EventEditor_ColorSetting_Title"),
+            }),
+            (0, t.jsx)(we.m, {
+              strDropDownClassName: x.DropDownScroll,
+              rgOptions: r,
+              selectedOption: n || "top-to-bottom",
+              onChange: (e) => a(e.data),
+              bDisableMouseOverlay: !0,
+              contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
+            }),
+          ],
+        });
+      }
+      function Ga(e) {
+        const { position_settings: n, fnUpdateSetting: a, label: o } = e,
+          r = u.useMemo(() => {
+            const e = [];
+            return (
+              e.push({
+                label: (0, T.we)("#BackgroundGroups_Position_Unset"),
+                data: "unset",
+              }),
+              e.push({
+                label: (0, T.we)("#BackgroundGroups_Position_Centered"),
+                data: "center",
+              }),
+              e.push({
+                label: (0, T.we)("#BackgroundGroups_Position_CenteredTop"),
+                data: "top center",
+              }),
+              e.push({
+                label: (0, T.we)("#BackgroundGroups_Position_TopLeft"),
+                data: "top left",
+              }),
+              e.push({
+                label: (0, T.we)("#BackgroundGroups_Position_BottomRight"),
+                data: "bottom right",
+              }),
+              e
+            );
+          }, []);
+        return (0, t.jsxs)(t.Fragment, {
+          children: [
+            (0, t.jsx)(we.JU, {
+              children: o || (0, T.we)("#BackgroundGroups_Position"),
+            }),
+            (0, t.jsx)(we.m, {
+              strDropDownClassName: x.DropDownScroll,
+              rgOptions: r,
+              selectedOption: n || "unset",
+              onChange: (e) => a(e.data),
+              bDisableMouseOverlay: !0,
+              contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
+            }),
+          ],
+        });
+      }
+      function ya(e) {
+        const {
+            backgroundImageEditModel: n,
+            bBackgroundImgGroupEditMode: a,
+            fnSetBackgroundImgGroupEditMode: o,
+            bShowAsValveOnly: r,
+          } = e,
+          [i, s] = (0, u.useState)(n.BIsBackgroundImageEnabled()),
+          [l, c, d] = (0, X.uD)(),
+          m = (0, g.q3)(() => n.GetSalePageLastCoverSectionUntilEnd());
+        return (0, t.jsx)("div", {
+          className: (0, I.A)(Pe().Ctn, r && x.ValveOnlyBackground),
+          children: (0, t.jsxs)(p.tH, {
+            children: [
+              (0, t.jsx)(we.Yh, {
+                label: (0, T.we)("#BackgroundGroups_Setting"),
+                checked: i,
+                onChange: (e) => {
+                  s(e), n.SetBackgroundImageEnabled(e);
+                },
+              }),
+              i
+                ? (0, t.jsxs)(t.Fragment, {
                     children: [
-                      (0, e.jsx)("hr", {}),
-                      (0, e.jsx)(U.$n, {
-                        onClick: E,
-                        children: (0, l.we)(
-                          "#BackgroundGroups_RemoveThisGroup",
+                      (0, t.jsx)(we.Yh, {
+                        label: (0, T.we)("#BackgroundGroups_EditMode"),
+                        tooltip: (0, T.we)("#BackgroundGroups_EditMode_ttip"),
+                        checked: a,
+                        onChange: o,
+                      }),
+                      (0, t.jsx)(we.Yh, {
+                        label: (0, T.we)("#BackgroundGroups_ExtendToEnd"),
+                        tooltip: (0, T.we)(
+                          "#BackgroundGroups_ExtendToEnd_ttip",
+                        ),
+                        checked: m,
+                        onChange: (e) =>
+                          n.SetSalePageLastCoverSectionUntilEnd(e),
+                      }),
+                      (0, t.jsx)("hr", {}),
+                      (0, t.jsx)(we.$n, {
+                        onClick: c,
+                        children: (0, T.we)(
+                          "#BackgroundGroups_ClearAllSettings",
                         ),
                       }),
-                      (0, e.jsx)(re.EN, {
-                        active: G,
-                        children: (0, e.jsx)(re.o0, {
-                          strTitle: (0, l.we)("#Dialog_AreYouSure"),
-                          bDestructiveWarning: !0,
-                          strDescription: (0, l.we)(
-                            "#BackgroundGroups_RemoveThisGroup_Desc",
+                      (0, t.jsx)(ke.EN, {
+                        active: l,
+                        children: (0, t.jsx)(ke.o0, {
+                          strTitle: (0, T.we)("#EventEditor_GenericAreYouSure"),
+                          strDescription: (0, T.we)(
+                            "#BackgroundGroups_ClearAllSettings_Desc",
                           ),
-                          onOK: () =>
-                            d != null
-                              ? r.RemoveTabBackgroundGroup(d, i)
-                              : r.RemoveSalePageBackgroundGroup(i),
-                          closeModal: M,
+                          bDestructiveWarning: !0,
+                          onOK: () => {
+                            n.ClearAllBackgroundImageGroupSettings(), s(!1);
+                          },
+                          closeModal: d,
                         }),
                       }),
                     ],
+                  })
+                : (0, t.jsx)("p", {
+                    children: (0, T.we)("#BackgroundGroups_Desc"),
                   }),
-              ],
-            }),
-          });
+              (0, t.jsx)("br", {}),
+              (0, t.jsx)("a", {
+                href: `${$.TS.PARTNER_BASE_URL}doc/marketing/event_tools/sales/groups`,
+                target: "_blank",
+                children: (0, T.we)("#EventGeneric_SeeDocs"),
+              }),
+            ],
+          }),
         });
-        function Va(a) {
-          const { backgroundImageEditModel: t, nTabID: n } = a;
-          return (0, e.jsx)("div", {
-            className: Ae().CtnEditor,
-            children: (0, e.jsx)(U.$n, {
-              onClick: (s) =>
-                n !== void 0 && n >= 0
-                  ? t?.AddTabBackgroundGroup(n)
-                  : t?.AddSalePageBackgroundGroup(),
-              children: (0, l.we)(
-                n !== void 0 && n >= 0
-                  ? "#BackgroundGroups_AddNewGroupTab"
-                  : "#BackgroundGroups_AddNewGroup",
-              ),
-            }),
-          });
+      }
+      const Ta = u.forwardRef(function (e, n) {
+        const {
+            imgGroupDerivedMapping: a,
+            backgroundImageEditModel: o,
+            groupIndex: r,
+            imgGroup: i,
+            eventModel: s,
+            nTabIndex: c,
+          } = e,
+          d = (0, K.E)(),
+          [u, m, p, _] = (0, g.q3)(() => [
+            i && a.mapGroupToSections.get(i.background_id),
+            (i &&
+              a.mapGroupToSections.get(i.background_id)?.sectionUniqueIDs) ??
+              [],
+            null != c
+              ? o?.GetTabLastCoverSectionUntilEnd(c)
+              : o?.GetSalePageLastCoverSectionUntilEnd(),
+            null != c ? o?.GetTabGroupCount(c) : o?.GetSalePageGroupCount(),
+          ]),
+          h = p && r + 1 === _,
+          [x, v, I] = (0, X.uD)(),
+          [b, j, f] = (0, X.uD)();
+        let S, w;
+        if (
+          (u?.nUniqueIDNextSaleSection &&
+            (S = (0, De.h_)(
+              l.HY,
+              o.GetSaleSectionByID(u?.nUniqueIDNextSaleSection),
+              d,
+              s,
+              u.nSaleSectionLastIndex + 1,
+            )),
+          u && m?.length > 1)
+        ) {
+          const e = m[m.length - 1];
+          w = (0, De.h_)(
+            l.HY,
+            o?.GetSaleSectionByID(e),
+            d,
+            s,
+            u.nSaleSectionLastIndex,
+          );
         }
-        function Ka(a) {
-          const {
-              nTabID: t,
-              nSectionUniqueID: n,
-              salePageBackgroundDerivedConfig: s,
-              backgroundImageEditModel: r,
-            } = a,
-            i = s.mapFirstSectionToGroup.get(n);
-          return n == s.nFirstSaleSectionIDWithoutGroup ||
-            n == s.nFirstTabSectionIDWithoutGroup
-            ? (0, e.jsx)(Va, { backgroundImageEditModel: r, nTabID: t })
-            : i
-              ? (0, e.jsx)(Ya, { ...a, groupID: i })
-              : null;
-        }
-        function Ya(a) {
-          const {
-              groupID: t,
-              nTabID: n,
-              salePageBackgroundDerivedConfig: s,
-              backgroundImageEditModel: r,
-            } = a,
-            i =
-              n && n >= 0
-                ? s.selectedTabBackgroundDef.groups
-                : r.GetSalePageGroupDefinition().groups,
-            c = i.findIndex((w) => w.background_id === t),
-            u = i[c],
-            [d, m] = (0, h.useState)(!1);
-          (0, h.useEffect)(() => {
-            if (!d) return;
-            const w = (0, be.pg)(
-              (0, e.jsx)(re.o0, {
-                bAlertDialog: !0,
-                closeModal: () => m(!1),
-                children: (0, e.jsx)(pn, {
-                  backgroundImageEditModel: r,
-                  groupIndex: c,
-                  imgGroup: u,
-                  imgGroupDerivedMapping: s,
-                  eventModel: r.GetEventModel(),
-                  nTabIndex: n,
+        return (0, t.jsx)(Ee.qx, {
+          bStartMinimized: !1,
+          title: (0, T.we)(
+            null != c
+              ? "#BackgroundGroups_Sale_Tab_GroupNum"
+              : "#BackgroundGroups_Sale_GroupNum",
+            r + 1,
+          ),
+          className: e.classNameHeader,
+          children: (0, t.jsxs)("div", {
+            ref: n,
+            children: [
+              (0, t.jsx)(we.$n, {
+                onClick: v,
+                children: (0, T.we)("#BackgroundGroups_Configure"),
+              }),
+              (0, t.jsx)(ke.EN, {
+                active: x,
+                children: (0, t.jsx)(Ea, {
+                  imgGroup: i,
+                  closeModal: I,
+                  eventModel: s,
+                  fnUpdateImageGroup: (e) =>
+                    null != c
+                      ? o.SetTabBackgroundGroup(c, r, e)
+                      : o.SetSalePageBackgroundGroup(r, e),
                 }),
               }),
-              window,
-            );
-            return () => {
-              w.then((S) => S.Close());
-            };
-          }, [d, r, u, c, n, s]);
-          const v = (0, k.q3)(() => st.get(t)),
-            [I, j] = (0, h.useState)(null),
-            x = h.useCallback((w, S) => {
-              j(S);
-            }, []),
-            _ = (0, ye.w6)(x);
-          return (0, e.jsxs)("div", {
-            className: Ae().CtnEditor,
-            ref: _,
-            children: [
-              !!(v && I && I > v) &&
-                (0, e.jsx)(U.$n, {
-                  onClick: (w) => m(!0),
-                  children: (0, l.we)("#BackgroundGroups_EditBackgroundGroup"),
-                }),
-              (0, e.jsx)(pn, {
-                backgroundImageEditModel: r,
-                groupIndex: c,
-                imgGroup: u,
-                imgGroupDerivedMapping: s,
-                eventModel: r.GetEventModel(),
-                nTabIndex: n,
+              (0, t.jsx)("br", {}),
+              (0, t.jsx)("div", {
+                className: Pe().EditorTitle,
+                children: (0, T.we)("#BackgroundGroups_ContentTitle"),
               }),
-            ],
-          });
-        }
-        var Za = o(81557),
-          An = o.n(Za);
-        function Qa(a) {
-          const { imgGroupDerivedMapping: t } = a,
-            [n, s] = (0, h.useState)(!1);
-          (0, h.useEffect)(() => {
-            if (!n) return;
-            const v = (0, be.pg)(
-              (0, e.jsx)(re.o0, {
-                bAlertDialog: !0,
-                closeModal: () => s(!1),
-                children: (0, e.jsx)(Bn, { ...a }),
-              }),
-              window,
-            );
-            return () => {
-              v.then((I) => I.Close());
-            };
-          }, [n, a]);
-          const r = (0, k.q3)(() => {
-              const v = t.selectedTabBackgroundDef?.groups?.[0].background_id;
-              if (v) {
-                const I = t.mapGroupToSections.get(v);
-                if (I) return st.get(I?.nBackgroundGroupID) ?? 0;
-              }
-              return 0;
-            }),
-            [i, c] = (0, h.useState)(null),
-            u = h.useCallback((v, I) => {
-              c(I);
-            }, []),
-            d = (0, ye.w6)(u),
-            m = !!(r >= 0 && i && i > r);
-          return (0, e.jsxs)("div", {
-            className: (0, A.A)(Ae().CtnEditor, An().TabCtn),
-            ref: d,
-            children: [
-              m &&
-                (0, e.jsx)(U.$n, {
-                  onClick: (v) => s(!0),
-                  children: (0, l.we)("#BackgroundGroups_EditBackgroundGroup"),
-                }),
-              (0, e.jsx)(Bn, { ...a }),
-            ],
-          });
-        }
-        function Bn(a) {
-          const {
-              backgroundImageEditModel: t,
-              imgGroupDerivedMapping: n,
-              nTabID: s,
-            } = a,
-            [r, i] = (0, h.useState)(null),
-            [c, u, d, m] = (0, k.q3)(() => [
-              t?.GetTabLastCoverSectionUntilEnd(s),
-              t?.BIsTabEnabled(s),
-              n.selectedTabBackgroundDef,
-              t?.GetEventModel(),
-            ]);
-          return (0, e.jsxs)(O.tH, {
-            children: [
-              (0, e.jsx)(U.Yh, {
-                label: (0, l.we)("#BackgroundGroups_TaSetting"),
-                checked: u,
-                onChange: (v) => {
-                  if (
-                    ((0, Ze.wT)(t, "edit model mising"),
-                    (0, Ze.wT)(s !== void 0, "tab setting missing"),
-                    s !== void 0 && t)
-                  ) {
-                    const I = t.SetTabEnabled(s, v);
-                    (0, Ze.wT)(
-                      !!I,
-                      `Failed to create model TabID ${s}backgroundModel`,
+              (0, t.jsxs)("ul", {
+                children: [
+                  m.map((e) =>
+                    (0, t.jsx)(
+                      "li",
+                      {
+                        children: (0, De.h_)(
+                          l.W3,
+                          o.GetSaleSectionByID(e),
+                          d,
+                          s,
+                          o.GetSaleSectionIndexByID(e, !0),
+                        ),
+                      },
+                      "li_" + e,
                     ),
-                      i(I);
-                  } else
-                    console.error(
-                      `Failed to enable table group, edit mode: ${!!t}, TabID: ${s}.`,
-                    );
-                },
-              }),
-              !!u &&
-                (0, e.jsxs)(e.Fragment, {
-                  children: [
-                    (0, e.jsx)(U.Yh, {
-                      label: (0, l.we)("#BackgroundGroups_ExtendToEnd"),
-                      tooltip: (0, l.we)(
-                        "#BackgroundGroups_ExtendToEnd_Tab_ttip",
-                      ),
-                      checked: c,
-                      onChange: (v) => t.SetTabLastCoverSectionUntilEnd(s, v),
+                  ),
+                  Boolean(h) &&
+                    (0, t.jsx)("li", {
+                      children: (0, T.we)("#BackgroundGroups_EndOfList"),
                     }),
-                    (0, e.jsx)(pn, {
-                      backgroundImageEditModel: t,
-                      groupIndex: 0,
-                      imgGroup: (d || r)?.groups[0],
-                      imgGroupDerivedMapping: n,
-                      eventModel: m,
-                      nTabIndex: s,
-                      classNameHeader: An().TabHeader,
+                ],
+              }),
+              !!w &&
+                (0, t.jsx)(we.$n, {
+                  onClick: () =>
+                    null != c
+                      ? o.SetTabBackgroundGroup(c, r, {
+                          ...i,
+                          num_sections: i.num_sections - 1,
+                        })
+                      : o.SetSalePageBackgroundGroup(r, {
+                          ...i,
+                          num_sections: i.num_sections - 1,
+                        }),
+                  children: (0, T.we)("#BackgroundGroups_Reduce", w),
+                }),
+              !!S &&
+                (0, t.jsx)(we.$n, {
+                  onClick: () =>
+                    null != c
+                      ? o.SetTabBackgroundGroup(c, r, {
+                          ...i,
+                          num_sections: i.num_sections + 1,
+                        })
+                      : o.SetSalePageBackgroundGroup(r, {
+                          ...i,
+                          num_sections: i.num_sections + 1,
+                        }),
+                  children: (0, T.we)("#BackgroundGroups_Extend", S),
+                }),
+              Boolean(r > 0) &&
+                (0, t.jsxs)(t.Fragment, {
+                  children: [
+                    (0, t.jsx)("hr", {}),
+                    (0, t.jsx)(we.$n, {
+                      onClick: j,
+                      children: (0, T.we)("#BackgroundGroups_RemoveThisGroup"),
+                    }),
+                    (0, t.jsx)(ke.EN, {
+                      active: b,
+                      children: (0, t.jsx)(ke.o0, {
+                        strTitle: (0, T.we)("#Dialog_AreYouSure"),
+                        bDestructiveWarning: !0,
+                        strDescription: (0, T.we)(
+                          "#BackgroundGroups_RemoveThisGroup_Desc",
+                        ),
+                        onOK: () =>
+                          null != c
+                            ? o.RemoveTabBackgroundGroup(c, r)
+                            : o.RemoveSalePageBackgroundGroup(r),
+                        closeModal: f,
+                      }),
                     }),
                   ],
                 }),
             ],
-          });
-        }
-        var ht = o(85692),
-          Ja = o(25533);
-        function Xa(a) {
-          const {
-              promotionName: t,
-              eventModel: n,
-              bIsPreview: s,
-              language: r,
-              backgroundImageEditModel: i,
-              addtionalAdminButtons: c,
-              bDynamicallyCreatedSale: u,
-            } = a,
-            [d, m] = h.useState(n?.GetDayIndexFromEventStart()),
-            [v, I] = h.useState(null),
-            j = (0, k.q3)(() => n.jsondata.sale_header_disable_top_margin),
-            x = $a(n, d),
-            [_, w] = (0, h.useState)(!1);
-          h.useEffect(() => {
-            if (
-              n.jsondata.sale_custom_css &&
-              !v &&
-              s &&
-              n.jsondata.sale_vanity_id_valve_approved_for_sale_subpath &&
-              (0, Y.yK)() == "community"
-            ) {
-              const M = document.getElementsByTagName("HEAD")[0],
-                V = document.createElement("style");
-              (V.innerText = (0, lt.L$)(n.jsondata.sale_custom_css)),
-                I(V),
-                M.appendChild(V);
-            }
-            const E = document.getElementsByClassName(
-              "react_landing_background",
-            );
-            return (
-              (0, Ze.wT)(
-                E.length <= 1,
-                "Must have at most one react_landing_background",
-              ),
-              E.length >= 1 && (E[0].style.backgroundImage = ""),
-              () => {
-                v && (v.remove(), I(null));
-              }
-            );
-          }, [n, v, s]);
-          const S = n?.jsondata,
-            D = h.useMemo(
-              () => ({
-                promotionName: t,
-                clanid: Number(Y.UF.CLANACCOUNTID),
-                nAppIDVOD: Number(S?.broadcast_preroll_vod_appid),
-                event: n,
-                bIsPreview: s,
-                language: r,
-                accountIDs: s ? S?.broadcast_whitelist : void 0,
-                chat_announcement_giveaway:
-                  S?.broadcast_chat_announcement_giveaway,
-              }),
-              [s, n, S, r, t],
-            ),
-            G = (0, k.q3)(() => i?.BIsBackgroundImageEnabled() ?? !1);
-          if (!n || d === void 0)
-            return (0, e.jsx)("div", {
-              className: Xe().FlexCenter,
-              style: { height: "500px" },
-              children: (0, e.jsx)(Ye.t, {
-                size: "medium",
-                string: (0, l.we)("#Loading"),
-              }),
-            });
-          {
-            const E =
-                n.jsondata.localized_sale_logo &&
-                n.jsondata.localized_sale_logo?.filter(Boolean).length > 0,
-              M = n.BUsesContentHubForItemSource(),
-              V = n
-                .GetSaleSections()
-                .some((Pe) => Pe.section_type === "contenthubtitle"),
-              $ = M && V;
-            let ae,
-              Ne = !0;
-            E
-              ? (ae = 0)
-              : n.BUsesContentHubForItemSource()
-                ? (ae = 20)
-                : n.GetEventType() == T.ajI
-                  ? ((ae = 0), (Ne = !1))
-                  : (ae = n.jsondata.sale_header_offset || 0);
-            const q = Ne && n.jsondata.sale_header_offset === 530,
-              me = !It.nY
-                .Get()
-                .BIsPartnerTakeoverActive(
-                  n.GetContentHubType(),
-                  n.GetContentHubCategory(),
-                  n.GetContentHubTag(),
-                ),
-              we = s
-                ? !_ && i?.BIsBackgroundImageEnabled()
-                  ? Ge.S.EPreviewMode_EditBackground
-                  : Ge.S.EPreviewMode_Enabled
-                : Ge.S.EPreviewMode_Disabled,
-              ze = G || n.GetEventType() != T.ajI,
-              Ue = wt(n.clanSteamID),
-              vt = M ? ee.Yo.NoTransform : ee.Yo.NoTransformSparseContent,
-              Mt = (0, A.A)(
-                N().SaleOuterContainer,
-                j && N().SaleOuterTopMargin,
-                q && N().SaleNewSizing,
-                N()[`CustomStyle_${n.jsondata.sale_vanity_id}`],
-                "SaleOuterContainer",
-                E && N().SalePageLogoSet,
-                $ && N().ContentHub,
-              );
-            return (0, e.jsx)(O.tH, {
-              children: (0, e.jsx)(oe.EU, {
-                eventModel: n,
-                language: r,
-                children: (0, e.jsx)(K.Cs, {
-                  location: s ? K.HY : K.bs,
-                  children: (0, e.jsxs)(Q, {
-                    event: n,
-                    language: r,
-                    bIsPreview: !!s,
-                    children: [
-                      me && (0, e.jsx)(oe.Sn, {}),
-                      (0, e.jsx)(de, { eventModel: n }),
-                      !!i &&
-                        (ze || Ue) &&
-                        (0, e.jsx)(Wa, {
-                          backgroundImageEditModel: i,
-                          bBackgroundImgGroupEditMode: _,
-                          fnSetBackgroundImgGroupEditMode: w,
-                          bShowAsValveOnly: !ze,
-                        }),
-                      (0, e.jsxs)(L.Z, {
-                        style: $ ? void 0 : { marginTop: `${ae || 0}px` },
-                        className: Mt,
-                        scrollIntoViewType: vt,
-                        children: [
-                          (0, e.jsx)(nt, { eventModel: n, language: r }),
-                          (0, e.jsx)(Nt, {
-                            rgPresenters: n.jsondata.sale_presenters,
-                          }),
-                          (0, e.jsx)(Ft, {
-                            event: n,
-                            broadcastEmbedContext: D,
-                          }),
-                          (0, e.jsx)(eo, {
-                            ePreviewMode: we,
-                            event: n,
-                            backgroundImageEditModel: i,
-                            language: r,
-                            promotionName: t,
-                            nSaleDayIndex: d,
-                            broadcastEmbedContext: D,
-                            selectedTab: x,
-                          }),
-                          !u &&
-                            (0, e.jsx)(zt, {
-                              event: n,
-                              addtionalAdminButtons: c,
-                              fnOnChangeDayIndex: (Pe) => {
-                                Pe != d &&
-                                  ((n.m_overrideCurrentDay = Pe), m(Pe));
-                              },
-                            }),
-                        ],
-                      }),
-                    ],
-                  }),
-                }),
-              }),
-            });
-          }
-        }
-        function $a(a, t) {
-          const [n] = (0, Qe.QD)(Ve.jD, void 0);
-          return h.useMemo(() => {
-            const r = a
-              .GetSaleSectionFirstMatchByType("tabs")
-              ?.tabs?.filter((i) => !i.hide);
-            if (r && r.length > 0) {
-              let i = n > 0 ? r.find((u) => u.unique_id == n) : void 0;
-              i || (i = r[0]);
-              const c = i === r[0];
-              return new it.y(i, t, c);
-            }
-          }, [a, t, n]);
-        }
-        function Gn() {
-          if (window?.location?.hash)
-            return decodeURIComponent(
-              window.location.hash.substring(1).toLowerCase(),
-            );
-        }
-        function qa(a) {
-          const {
-              event: t,
-              language: n,
-              nSaleDayIndex: s,
-              ePreviewMode: r,
-              selectedTab: i,
-              backgroundImageEditModel: c,
-            } = a,
-            [u, d] = h.useState((0, Ve.rp)()),
-            m = h.useMemo(() => new bt(), []),
-            v = h.useCallback(() => d((0, Ve.rp)()), []);
-          h.useEffect(
-            () => (
-              window.addEventListener("resize", v),
-              () => window.removeEventListener("resize", v)
-            ),
-            [v],
-          ),
-            h.useEffect(() => {
-              let q = "";
-              const ne = () => {
-                  const we = Gn();
-                  if (we && we != q) {
-                    const ze = document.getElementById(we);
-                    ze && ((q = we), ze.scrollIntoView({ block: "start" }));
-                  }
-                },
-                me = setTimeout(() => ne(), 150);
-              return (
-                window.addEventListener("hashchange", ne),
-                () => {
-                  clearTimeout(me),
-                    window.removeEventListener("hashchange", ne);
-                }
-              );
-            }, []);
-          const I = (0, Me.W6)(),
-            j = (q, ne) => {
-              (0, Qe.ip)(I, { ...(ne || {}), [Ve.jD]: q.toString() });
-            },
-            [x, _] = (0, Qe.QD)("controller"),
-            [w, S] = (0, k.q3)(() => {
-              const q =
-                  We.pF.GetCreatorHome(t.clanSteamID)?.GetAppIDList().length ??
-                  0,
-                ne = t.GetSaleSectionIncludingFooterSections(q);
-              return [
-                Wt(
-                  t.jsondata.sale_background_img_groups,
-                  ne,
-                  i && i.GetActiveTabUniqueID(),
-                ),
-                ne,
-              ];
-            });
-          let D = !1;
-          const G = new it.y(void 0, s),
-            E = [{ elements: [], activeTab: G }];
-          let M = null;
-          const V = (0, Y.Qn)(),
-            $ = (0, ht.ty)(),
-            ae = h.useMemo(() => {
-              const q = Gn();
-              if (!q) return;
-              const ne = S.findIndex((me) => me.section_anchor === q);
-              return ne > -1 ? ne : void 0;
-            }, [S]);
-          S.forEach((q, ne) => {
-            const me = E[E.length - 1].activeTab;
-            if (me && !me.ShouldShowSection(q)) return;
-            const we = It.nY
-                .Get()
-                .BIsPartnerTakeoverActive(
-                  t.GetContentHubType(),
-                  t.GetContentHubCategory(),
-                  t.GetContentHubTag(),
-                ),
-              ze = u && !we && !t.jsondata.content_hub_restricted_width;
-            let Ue = (0, Ge.I)(q, r, t, n, V);
-            if (Ue === void 0) return;
-            if (!Ue)
-              if ((0, St.su)(q) && !Y.iA.logged_in)
-                D ||
-                  ((Ue = (0, e.jsx)(St.CC, {
-                    section: q,
-                    event: t,
-                    language: n,
-                  })),
-                  (D = !0));
-              else {
-                const so = q.diable_tab_id_filtering
-                  ? new it.y(void 0, me && me.GetSaleDay())
-                  : me;
-                q.section_type == "tabs" &&
-                  q.tabs?.some(
-                    (ro) => ro.unique_id == i?.GetActiveTabUniqueID(),
-                  ) &&
-                  E.push({ activeTab: i, elements: [] }),
-                  (Ue = (0, e.jsx)(Ja.H, {
-                    ...a,
-                    section: q,
-                    activeTab: so,
-                    appVisibilityTracker: m,
-                    selectedTab: i,
-                    setTabUniqueIDQueryParam: j,
-                    expanded: ze,
-                    controllerCategory: x,
-                    setControllerCategory: _,
-                  }));
-              }
-            $ &&
-              (Ue = (0, e.jsx)(oo, { nSectionID: q.unique_id, children: Ue }));
-            const vt = E && E.length && E[E.length - 1];
-            let Mt = (0, e.jsx)(
-              ao,
-              {
-                section: q,
-                nActiveTabID:
-                  vt && vt.activeTab && vt.activeTab.GetActiveTabUniqueID(),
-                saleSectionIndex: ne,
-                ePreviewMode: r,
-                salePageBackgroundDerivedConfig: w,
-                backgroundImageEditModel: c,
-                bExpanded: ze,
-                children: (0, e.jsx)(Et._, {
-                  enabled: !ae || ne > ae,
-                  children: Ue,
-                }),
-              },
-              "SaleSectionIndex_" + q.unique_id + "_" + ne,
-            );
-            const Pe = w.mapSectionToGroup.get(q.unique_id);
-            M &&
-              M.groupID != Pe &&
-              (E[E.length - 1].elements.push(
-                Dt(t, M, r, i && i?.GetActiveTabUniqueID()),
-              ),
-              (M = null)),
-              Pe
-                ? (M ||
-                    (M = {
-                      groupID: Pe,
-                      elSaleSections: [],
-                      derivedGroupInfo: w.mapGroupToSections.get(Pe),
-                    }),
-                  M.elSaleSections.push(Mt))
-                : E[E.length - 1].elements.push(Mt);
           }),
-            M &&
-              (E[E.length - 1].elements.push(
-                Dt(t, M, r, i && i?.GetActiveTabUniqueID()),
-              ),
-              (M = null));
-          const Ne = E.map((q, ne) =>
-            (0, e.jsx)(
-              "div",
-              {
-                className: (0, A.A)(
-                  N().SaleSectionTabListContainer,
-                  "SaleSectionTabListContainer",
-                ),
-                children: q.elements,
-              },
-              "TabSection_" + ne,
+        });
+      });
+      function La(e) {
+        const { backgroundImageEditModel: n, nTabID: a } = e;
+        return (0, t.jsx)("div", {
+          className: Pe().CtnEditor,
+          children: (0, t.jsx)(we.$n, {
+            onClick: (e) =>
+              void 0 !== a && a >= 0
+                ? n?.AddTabBackgroundGroup(a)
+                : n?.AddSalePageBackgroundGroup(),
+            children: (0, T.we)(
+              void 0 !== a && a >= 0
+                ? "#BackgroundGroups_AddNewGroupTab"
+                : "#BackgroundGroups_AddNewGroup",
             ),
-          );
-          return (0, e.jsx)(L.Z, {
-            focusable: !1,
-            focusableIfEmpty: !0,
-            navKey: "SaleSectionListContainer",
-            children: Ne,
-          });
-        }
-        const eo = (0, Me.y)(qa);
-        function to(a) {
-          const {
-            visibility_by_door_index_state: t,
-            door_index_visibility: n,
-            children: s,
-          } = a;
-          return t && n != null
-            ? (0, e.jsx)(no, {
-                visibility_by_door_index_state: t,
-                door_index_visibility: n,
-                children: s,
-              })
-            : (0, e.jsx)(e.Fragment, { children: s });
-        }
-        function no(a) {
-          const {
-              visibility_by_door_index_state: t,
-              door_index_visibility: n,
-              children: s,
-            } = a,
-            r = (0, Ut.OM)(n);
-          return (t == "hide_when_open_door_index" && r) ||
-            (t == "show_when_open_door_index" && !r)
-            ? null
-            : (0, e.jsx)(e.Fragment, { children: s });
-        }
-        function Tn({ children: a, onChange: t }) {
-          const n = h.useRef(null);
-          return (
-            (0, h.useEffect)(() => {
-              t(!!h.Children.toArray(a).filter(Boolean).length);
-            }, [a, t]),
-            a
-          );
-        }
-        function ao(a) {
-          const {
-              section: t,
-              saleSectionIndex: n,
-              nActiveTabID: s,
-              ePreviewMode: r,
-              salePageBackgroundDerivedConfig: i,
-              backgroundImageEditModel: c,
-              bExpanded: u,
-              children: d,
-            } = a,
-            m = t.section_anchor
-              ? t.section_anchor
-              : Ve.mj + (t.unique_id || n),
-            v = t.section_type != "tabs",
-            [I, j] = (0, h.useState)(!0);
-          return I
-            ? (0, e.jsx)(O.tH, {
-                children: (0, e.jsx)(to, {
-                  visibility_by_door_index_state:
-                    t.visibility_by_door_index_state,
-                  door_index_visibility: t.door_index_visibility,
-                  children: v
-                    ? (0, e.jsx)(L.Z, {
-                        navKey: m,
-                        id: m,
-                        className: (0, A.A)({
-                          [N().SaleSectionCtn]: !0,
-                          SaleSectionCtn: !0,
-                          [t.section_type]: !0,
-                          [t.internal_section_data?.internal_type || ""]: !0,
-                          expanded: u,
-                          [t.single_item_style || ""]: !0,
-                          [N().SaleSectionBackgroundImageGroupEdit]:
-                            r == Ge.S.EPreviewMode_EditBackground,
-                          [N().NoTopPadding]: t.collapse_header_space,
-                        }),
-                        children:
-                          r === Ge.S.EPreviewMode_EditBackground
-                            ? (0, e.jsxs)(e.Fragment, {
-                                children: [
-                                  d,
-                                  (0, e.jsx)(Ka, {
-                                    nSectionUniqueID: t.unique_id || n,
-                                    nTabID: s,
-                                    salePageBackgroundDerivedConfig: i,
-                                    backgroundImageEditModel: c,
-                                  }),
-                                ],
-                              })
-                            : (0, e.jsx)(Tn, { onChange: j, children: d }),
-                      })
-                    : (0, e.jsx)(e.Fragment, {
-                        children:
-                          r === Ge.S.EPreviewMode_EditBackground
-                            ? (0, e.jsxs)("div", {
-                                id: m,
-                                className: (0, A.A)({
-                                  [N().SaleSectionCtn]: !0,
-                                  [N().SaleSectionBackgroundImageGroupEdit]: !0,
-                                  [N().NoTopPadding]: t.collapse_header_space,
-                                }),
-                                children: [
-                                  d,
-                                  (0, e.jsx)(Qa, {
-                                    backgroundImageEditModel: c,
-                                    nTabID: s,
-                                    imgGroupDerivedMapping: i,
-                                  }),
-                                ],
-                              })
-                            : (0, e.jsx)(Tn, { onChange: j, children: d }),
-                      }),
-                }),
-              })
+          }),
+        });
+      }
+      function Ba(e) {
+        const {
+            nTabID: n,
+            nSectionUniqueID: a,
+            salePageBackgroundDerivedConfig: o,
+            backgroundImageEditModel: r,
+          } = e,
+          i = o.mapFirstSectionToGroup.get(a);
+        return a == o.nFirstSaleSectionIDWithoutGroup ||
+          a == o.nFirstTabSectionIDWithoutGroup
+          ? (0, t.jsx)(La, { backgroundImageEditModel: r, nTabID: n })
+          : i
+            ? (0, t.jsx)(Na, { ...e, groupID: i })
             : null;
-        }
-        function oo(a) {
-          const { nSectionID: t, children: n } = a,
-            [s, r] = h.useState(!1),
-            [i, c] = h.useState(!1);
-          h.useEffect(() => {
-            ht.TU.Get().SetMouseOverSection(t, s);
-          }, [t, s]);
-          const u = (0, k.q3)(() => ht.TU.Get().GetMouseOverSectionID()),
-            d = t && t == u,
-            m = () => ht.TU.Get().JumpToSection(t),
-            v = h.useRef(null);
-          return (
-            (0, ht.lM)((I) =>
-              t != I ? !1 : (v.current?.scrollIntoView(), c(!0), !0),
-            ),
-            (0, e.jsxs)("div", {
-              ref: v,
-              className: (0, A.A)({
-                [N().SaleSectionLivePreview]: !0,
-                [N().Hover]: !!d,
-                [N().JumpedTo]: !!i,
+      }
+      function Na(e) {
+        const {
+            groupID: n,
+            nTabID: a,
+            salePageBackgroundDerivedConfig: o,
+            backgroundImageEditModel: r,
+          } = e,
+          i =
+            a && a >= 0
+              ? o.selectedTabBackgroundDef.groups
+              : r.GetSalePageGroupDefinition().groups,
+          s = i.findIndex((e) => e.background_id === n),
+          l = i[s],
+          [c, d] = (0, u.useState)(!1);
+        (0, u.useEffect)(() => {
+          if (!c) return;
+          const e = (0, Ce.pg)(
+            (0, t.jsx)(ke.o0, {
+              bAlertDialog: !0,
+              closeModal: () => d(!1),
+              children: (0, t.jsx)(Ta, {
+                backgroundImageEditModel: r,
+                groupIndex: s,
+                imgGroup: l,
+                imgGroupDerivedMapping: o,
+                eventModel: r.GetEventModel(),
+                nTabIndex: a,
               }),
-              onAnimationEnd: () => c(!1),
-              onMouseEnter: () => r(!0),
-              onMouseLeave: () => r(!1),
-              children: [
-                s &&
-                  (0, e.jsx)(Ie.Gq, {
-                    toolTipContent: (0, l.we)("#Sale_SaleEditor_JumpTo_ttip"),
-                    direction: "top",
-                    children: (0, e.jsx)("button", {
-                      className: N().JumpToButton,
-                      onClick: m,
-                      children: (0, e.jsx)(Ke.ffu, {}),
-                    }),
-                  }),
-                n,
-              ],
-            })
+            }),
+            window,
           );
-        }
-      },
-      12932: (y, ie, o) => {
-        "use strict";
-        o.d(ie, { qx: () => F });
-        var e = o(7850),
-          T = o(16412),
-          L = o(18210),
-          ee = o(36118),
-          oe = o(90626),
-          K = o(36707),
-          se = o(95695),
-          R = o.n(se),
-          k = o(25792),
-          h = o(64734),
-          pe = o.n(h),
-          O = o(65946),
-          J = o(11243);
-        function N(A) {
-          const {
-              title: Y,
-              tooltip: ge,
-              getMinimized: fe,
-              toggleMinimized: Z,
-              className: Q,
-              children: f,
-              elAdditionalButtons: b,
-            } = A,
-            z = (0, O.q3)(() => fe());
-          return (0, e.jsxs)(e.Fragment, {
-            children: [
-              (0, e.jsxs)("div", {
-                className: (0, K.A)(
-                  Q,
-                  h.SectionTitleHeader,
-                  h.required_title,
-                  "SectionTitleHeader",
-                ),
+          return () => {
+            e.then((e) => e.Close());
+          };
+        }, [c, r, l, s, a, o]);
+        const m = (0, g.q3)(() => ne.get(n)),
+          [p, _] = (0, u.useState)(null),
+          h = u.useCallback((e, n) => {
+            _(n);
+          }, []),
+          x = (0, X.w6)(h);
+        return (0, t.jsxs)("div", {
+          className: Pe().CtnEditor,
+          ref: x,
+          children: [
+            Boolean(m && p && p > m) &&
+              (0, t.jsx)(we.$n, {
+                onClick: (e) => d(!0),
+                children: (0, T.we)("#BackgroundGroups_EditBackgroundGroup"),
+              }),
+            (0, t.jsx)(Ta, {
+              backgroundImageEditModel: r,
+              groupIndex: s,
+              imgGroup: l,
+              imgGroupDerivedMapping: o,
+              eventModel: r.GetEventModel(),
+              nTabIndex: a,
+            }),
+          ],
+        });
+      }
+      var Ma = a(81557),
+        Ua = a.n(Ma);
+      function Pa(e) {
+        const { imgGroupDerivedMapping: n } = e,
+          [a, o] = (0, u.useState)(!1);
+        (0, u.useEffect)(() => {
+          if (!a) return;
+          const n = (0, Ce.pg)(
+            (0, t.jsx)(ke.o0, {
+              bAlertDialog: !0,
+              closeModal: () => o(!1),
+              children: (0, t.jsx)(Ra, { ...e }),
+            }),
+            window,
+          );
+          return () => {
+            n.then((e) => e.Close());
+          };
+        }, [a, e]);
+        const r = (0, g.q3)(() => {
+            const e = n.selectedTabBackgroundDef?.groups?.[0].background_id;
+            if (e) {
+              const a = n.mapGroupToSections.get(e);
+              if (a) return ne.get(a?.nBackgroundGroupID) ?? 0;
+            }
+            return 0;
+          }),
+          [i, s] = (0, u.useState)(null),
+          l = u.useCallback((e, n) => {
+            s(n);
+          }, []),
+          c = (0, X.w6)(l),
+          d = Boolean(r >= 0 && i && i > r);
+        return (0, t.jsxs)("div", {
+          className: (0, I.A)(Pe().CtnEditor, Ua().TabCtn),
+          ref: c,
+          children: [
+            d &&
+              (0, t.jsx)(we.$n, {
+                onClick: (e) => o(!0),
+                children: (0, T.we)("#BackgroundGroups_EditBackgroundGroup"),
+              }),
+            (0, t.jsx)(Ra, { ...e }),
+          ],
+        });
+      }
+      function Ra(e) {
+        const {
+            backgroundImageEditModel: n,
+            imgGroupDerivedMapping: a,
+            nTabID: o,
+          } = e,
+          [r, i] = (0, u.useState)(null),
+          [s, l, c, d] = (0, g.q3)(() => [
+            n?.GetTabLastCoverSectionUntilEnd(o),
+            n?.BIsTabEnabled(o),
+            a.selectedTabBackgroundDef,
+            n?.GetEventModel(),
+          ]);
+        return (0, t.jsxs)(p.tH, {
+          children: [
+            (0, t.jsx)(we.Yh, {
+              label: (0, T.we)("#BackgroundGroups_TaSetting"),
+              checked: l,
+              onChange: (e) => {
+                if (
+                  ((0, Ie.wT)(n, "edit model mising"),
+                  (0, Ie.wT)(void 0 !== o, "tab setting missing"),
+                  void 0 !== o && n)
+                ) {
+                  const a = n.SetTabEnabled(o, e);
+                  (0, Ie.wT)(
+                    !!a,
+                    `Failed to create model TabID ${o}backgroundModel`,
+                  ),
+                    i(a);
+                } else
+                  console.error(
+                    `Failed to enable table group, edit mode: ${!!n}, TabID: ${o}.`,
+                  );
+              },
+            }),
+            Boolean(l) &&
+              (0, t.jsxs)(t.Fragment, {
                 children: [
-                  (0, e.jsxs)("div", {
-                    className: (0, K.A)(
-                      se.CollapsableSectionTitle,
-                      "EventEditorTextTitle",
+                  (0, t.jsx)(we.Yh, {
+                    label: (0, T.we)("#BackgroundGroups_ExtendToEnd"),
+                    tooltip: (0, T.we)(
+                      "#BackgroundGroups_ExtendToEnd_Tab_ttip",
                     ),
-                    children: [Y, !!ge && (0, e.jsx)(J.o, { tooltip: ge })],
+                    checked: s,
+                    onChange: (e) => n.SetTabLastCoverSectionUntilEnd(o, e),
                   }),
-                  (0, e.jsxs)("div", {
-                    className: h.SectionTitleButtons,
-                    children: [
-                      b,
-                      (0, e.jsx)(X, { bIsMinimized: z, fnToggleMinimize: Z }),
-                    ],
+                  (0, t.jsx)(Ta, {
+                    backgroundImageEditModel: n,
+                    groupIndex: 0,
+                    imgGroup: (c || r)?.groups[0],
+                    imgGroupDerivedMapping: a,
+                    eventModel: d,
+                    nTabIndex: o,
+                    classNameHeader: Ua().TabHeader,
                   }),
                 ],
               }),
-              !z && (0, e.jsx)(k.tH, { children: f }),
-            ],
-          });
-        }
-        function F(A) {
-          const [Y, ge] = oe.useState(!!A.bStartMinimized);
-          return (0, e.jsx)(N, {
-            ...A,
-            getMinimized: () => Y,
-            toggleMinimized: () => ge(!Y),
-            children: A.children,
-          });
-        }
-        function X(A) {
-          const { bIsMinimized: Y, fnToggleMinimize: ge } = A,
-            fe = Y ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-          return (0, e.jsx)(T.$n, {
-            "data-tooltip-text": (0, L.we)(fe),
-            onClick: ge,
-            children: A.bIsMinimized
-              ? (0, e.jsx)(ee.hz4, {})
-              : (0, e.jsx)(ee.Xjb, {}),
-          });
-        }
-      },
-      29462: (y, ie, o) => {
-        "use strict";
-        o.r(ie), o.d(ie, { default: () => pe });
-        var e = o(7850),
-          T = o(90626),
-          L = o(3166),
-          ee = o(99412),
-          oe = o(79118),
-          K = o(85599),
-          se = o(7638),
-          R = o(11811),
-          k = o(179),
-          h = o(21042);
-        function pe(O) {
-          const { clanAccountID: J, gidEvent: N } = O,
-            [F, X] = T.useState(!0);
-          let { eventModel: A, bLoading: Y } = (0, oe.dB)(J, N);
-          const ge = (0, ee.sfN)(L.TS.LANGUAGE),
-            [fe] = (0, k.QD)("livepreview");
-          return (
-            fe && (A = (0, h.U)(J, ee.ajI, "creatorhome_fake")),
-            T.useEffect(() => {
-              se.KN.InitGlobal().then(() => X(!1));
-            }),
-            T.useEffect(() => {
-              if (!Y && !A) {
-                const Z = new URL(window.location.href);
-                Z.searchParams.set("v1", "1"),
-                  window.location.replace(Z.toString());
+          ],
+        });
+      }
+      var za = a(77021),
+        Fa = a(48636);
+      function Oa(e) {
+        const {
+            promotionName: n,
+            eventModel: a,
+            bIsPreview: c,
+            language: d,
+            backgroundImageEditModel: m,
+            addtionalAdminButtons: _,
+            bDynamicallyCreatedSale: x,
+          } = e,
+          [v, j] = u.useState(a?.GetDayIndexFromEventStart()),
+          [f, S] = u.useState(null),
+          k = (0, g.q3)(() => a.jsondata.sale_header_disable_top_margin),
+          C = (function (e, n) {
+            const [a] = (0, J.QD)(H.jD, void 0);
+            return u.useMemo(() => {
+              const t = e.GetSaleSectionFirstMatchByType("tabs"),
+                o = t?.tabs?.filter((e) => !e.hide);
+              if (o && o.length > 0) {
+                let e = a > 0 ? o.find((e) => e.unique_id == a) : void 0;
+                e || (e = o[0]);
+                const t = e === o[0];
+                return new ue.y(e, n, t);
               }
-            }, [Y, A]),
-            !A || F
-              ? (0, e.jsx)(K.t, {})
-              : (0, e.jsx)(R.default, {
-                  eventModel: A,
-                  promotionName: `creatorhome_${N}`,
-                  language: ge,
-                })
-          );
-        }
-      },
-      17809: (y, ie, o) => {
-        "use strict";
-        o.d(ie, { d: () => dn });
-        var e = o(7850),
-          T = o(19367),
-          L = o(90626),
-          ee = o(3685),
-          oe = o(85528),
-          K = o(7638),
-          se = o(79118),
-          R = o(18210),
-          k = o(3166),
-          h = o(75779),
-          pe = o(80902),
-          O = o(72604),
-          J = o(72609);
-        function N() {
-          return typeof self < "u" ? self.origin : "store";
-        }
-        async function F() {
-          const g = new URLSearchParams(),
-            p = N();
-          p && g.set("origin", p);
-          const C = `${J.TS.STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatcounts?${g}`,
-            B = await fetch(C);
-          if (!B.ok) throw new Error(`${C} answered ${B.status}`);
-          const P = await B.json();
-          if (P?.success != O.R || !P.counts)
-            throw new Error(`${C} answered EResult ${P?.success}`);
-          return P.counts;
-        }
-        const X = 300 * 1e3;
-        function A() {
-          return ["DeckCompatCounts"];
-        }
-        function Y() {
-          return { queryKey: A(), queryFn: () => F(), staleTime: X, retry: !1 };
-        }
-        function ge() {
-          const { data: g } = (0, pe.I)(Y());
-          return g;
-        }
-        function fe(g, p) {
-          switch (p) {
-            case h.sd:
-              return g?.playable;
-            case h.V8:
-              return g?.unsupported;
-            default:
-              return g?.verified;
+            }, [e, n, a]);
+          })(a, v),
+          [E, D] = (0, u.useState)(!1);
+        u.useEffect(() => {
+          if (
+            a.jsondata.sale_custom_css &&
+            !f &&
+            c &&
+            Boolean(
+              a.jsondata.sale_vanity_id_valve_approved_for_sale_subpath,
+            ) &&
+            "community" == (0, b.yK)()
+          ) {
+            const e = document.getElementsByTagName("HEAD")[0],
+              n = document.createElement("style");
+            (n.innerText = (0, be.L$)(a.jsondata.sale_custom_css)),
+              S(n),
+              e.appendChild(n);
           }
-        }
-        var Z = o(70187),
-          Q = o(7379),
-          f = o(64703),
-          b = o(6878),
-          z = o(99412),
-          W = o(47610),
-          de = o(18860),
-          ve = o(41635),
-          ke = o(25792),
-          l = o(85599),
-          nt = o(5565);
-        const pt = L.Fragment;
-        function Ot(g) {
-          const {
-              reservationPackageID: p,
-              depositPackageID: C,
-              bIsPreview: B,
-              psuLessPackageID: P,
-              strOutOfStockOverride: H,
-              strDeliveryOverride: te,
-              bDeliveryOverrideOnlyIfOutOfStock: xe,
-              section: _e,
-            } = g,
-            { data: ue } = (0, W.DR)(p),
-            { data: Ce } = (0, W.DR)(P),
-            Le = (0, L.useMemo)(
-              () => [
-                {
-                  unique_id: "reservation_bbcode_" + p,
-                  reservation_package: p,
-                  deposit_package: C,
-                  localized_reservation_desc: (0, ve.$Y)([], z.bP9, null),
-                  localized_out_of_stock_override: (0, ve.$Y)(
-                    [H || null],
-                    z.bP9,
-                    null,
-                  ),
-                  localized_delivery_override_desc: (0, ve.$Y)(
-                    [te || null],
-                    z.bP9,
-                    null,
-                  ),
-                  override_delivery_only_out_of_stock: !!xe,
-                  psu_less_package: P,
-                },
-              ],
-              [p, C, H, te, xe, P],
+          const e = document.getElementsByClassName("react_landing_background");
+          return (
+            (0, Ie.wT)(
+              e.length <= 1,
+              "Must have at most one react_landing_background",
+            ),
+            e.length >= 1 && (e[0].style.backgroundImage = ""),
+            () => {
+              f && (f.remove(), S(null));
+            }
+          );
+        }, [a, f, c]);
+        const G = a?.jsondata,
+          y = u.useMemo(
+            () => ({
+              promotionName: n,
+              clanid: Number(b.UF.CLANACCOUNTID),
+              nAppIDVOD: Number(G?.broadcast_preroll_vod_appid),
+              event: a,
+              bIsPreview: c,
+              language: d,
+              accountIDs: c ? G?.broadcast_whitelist : void 0,
+              chat_announcement_giveaway:
+                G?.broadcast_chat_announcement_giveaway,
+            }),
+            [c, a, G, d, n],
+          ),
+          B = (0, g.q3)(() => m?.BIsBackgroundImageEnabled() ?? !1),
+          N = fe(a?.clanSteamID);
+        if (a && void 0 !== v) {
+          const e =
+              a.jsondata.localized_sale_logo &&
+              a.jsondata.localized_sale_logo?.filter(Boolean).length > 0,
+            g = a.BUsesContentHubForItemSource(),
+            u = a
+              .GetSaleSections()
+              .some((e) => "contenthubtitle" === e.section_type),
+            b = g && u;
+          let f,
+            S = !0;
+          e
+            ? (f = 0)
+            : a.BUsesContentHubForItemSource()
+              ? (f = 20)
+              : a.GetEventType() == o.ajI
+                ? ((f = 0), (S = !1))
+                : (f = a.jsondata.sale_header_offset || 0);
+          const G = S && 530 === a.jsondata.sale_header_offset,
+            T = V.nY
+              .Get()
+              .BIsPartnerTakeoverActive(
+                a.GetContentHubType(),
+                a.GetContentHubCategory(),
+                a.GetContentHubTag(),
+              ),
+            M = Boolean(!T),
+            U = c
+              ? !E && m?.BIsBackgroundImageEnabled()
+                ? se.S.EPreviewMode_EditBackground
+                : se.S.EPreviewMode_Enabled
+              : se.S.EPreviewMode_Disabled,
+            P = B || a.GetEventType() != o.ajI,
+            z = g ? i.Yo.NoTransform : i.Yo.NoTransformSparseContent,
+            F = (0, I.A)(
+              h().SaleOuterContainer,
+              k && h().SaleOuterTopMargin,
+              G && h().SaleNewSizing,
+              h()[`CustomStyle_${a.jsondata.sale_vanity_id}`],
+              "SaleOuterContainer",
+              e && h().SalePageLogoSet,
+              b && h().ContentHub,
             );
-          if (!ue || (P && !Ce))
-            return (0, e.jsx)(l.t, {
-              string: (0, R.we)("#Loading"),
-              size: "small",
-              position: "center",
-            });
-          const Fe = !J.iA.logged_in || !ue.account_restricted_from_purchasing,
-            un =
-              ue.reservation_state == de.G.k_EPurchaseReservationState_Reserved
-                ? ue
-                : void 0;
-          return (0, e.jsxs)(ke.tH, {
-            children: [
-              (0, e.jsx)(L.Suspense, {
-                fallback: null,
-                children: (0, e.jsx)(pt, {
-                  bIsPreview: !!B,
-                  rgReservationDef: Le,
-                }),
-              }),
-              !!ue.allow_purchase_in_country &&
-                (0, e.jsxs)("div", {
-                  className: Le[0].unique_id,
+          return (0, t.jsx)(p.tH, {
+            children: (0, t.jsx)(s.EU, {
+              eventModel: a,
+              language: d,
+              children: (0, t.jsx)(l.Cs, {
+                location: c ? l.HY : l.bs,
+                children: (0, t.jsxs)(w, {
+                  event: a,
+                  language: d,
+                  bIsPreview: !!c,
                   children: [
-                    (0, e.jsx)(nt.bk, {
-                      reservationDef: Le[0],
-                      hardwareDetail: ue,
-                      bPSULessModel: !1,
-                      reservedHardwareDetail: un,
+                    M && (0, t.jsx)(s.Sn, {}),
+                    (0, t.jsx)(A, { eventModel: a }),
+                    !!m &&
+                      (P || N) &&
+                      (0, t.jsx)(ya, {
+                        backgroundImageEditModel: m,
+                        bBackgroundImgGroupEditMode: E,
+                        fnSetBackgroundImgGroupEditMode: D,
+                        bShowAsValveOnly: !P,
+                      }),
+                    (0, t.jsxs)(r.Z, {
+                      style: b ? void 0 : { marginTop: `${f || 0}px` },
+                      className: F,
+                      scrollIntoViewType: z,
+                      children: [
+                        (0, t.jsx)(L, { eventModel: a, language: d }),
+                        (0, t.jsx)(R, {
+                          rgPresenters: a.jsondata.sale_presenters,
+                        }),
+                        (0, t.jsx)(Y, { event: a, broadcastEmbedContext: y }),
+                        (0, t.jsx)(Va, {
+                          ePreviewMode: U,
+                          event: a,
+                          backgroundImageEditModel: m,
+                          language: d,
+                          promotionName: n,
+                          nSaleDayIndex: v,
+                          broadcastEmbedContext: y,
+                          selectedTab: C,
+                        }),
+                        !x &&
+                          (0, t.jsx)(Q, {
+                            event: a,
+                            addtionalAdminButtons: _,
+                            fnOnChangeDayIndex: (e) => {
+                              e != v && ((a.m_overrideCurrentDay = e), j(e));
+                            },
+                          }),
+                      ],
                     }),
-                    Fe &&
-                      (0, e.jsx)(nt.pc, {
-                        section: _e,
-                        reservationDef: Le[0],
-                        hardwareDetail: ue,
-                        reservedHardwareDetail: un,
-                      }),
-                    Ce &&
-                      Ce?.allow_purchase_in_country &&
-                      (0, e.jsx)(nt.bk, {
-                        reservationDef: Le[0],
-                        hardwareDetail: Ce,
-                        bPSULessModel: !0,
-                        reservedHardwareDetail: void 0,
-                      }),
                   ],
                 }),
-            ],
-          });
-        }
-        function In(g) {
-          if (g?.bDepositRequired) {
-            if (
-              g.rgDepositPackageInfo &&
-              g.rgDepositPackageInfo?.length > 0 &&
-              g.rgDepositPackageInfo.filter((p) => p.bVisible).length == 0 &&
-              g?.rgReservationPackageInfo &&
-              g?.rgReservationPackageInfo?.length > 0 &&
-              g?.rgReservationPackageInfo.filter((p) => p.bVisible).length == 0
-            )
-              return !1;
-          } else if (
-            g?.rgReservationPackageInfo &&
-            g?.rgReservationPackageInfo?.length > 0 &&
-            g?.rgReservationPackageInfo.filter((p) => p.bVisible).length == 0
-          )
-            return !1;
-          return !0;
-        }
-        var at = o(21035),
-          ft = o(72865),
-          Nt = o(73371),
-          He = o.n(Nt),
-          We = o(36707),
-          Me = o(53041),
-          Ve = o(10026),
-          It = o.n(Ve),
-          Ut = o(19298),
-          Rt = o(11996),
-          Ft = o(19047),
-          ot = o(36118),
-          zt = o(47689),
-          Qe = o(89926),
-          Oe = o(32545),
-          ye = o.n(Oe);
-        function xt(g) {
-          const { appID: p, classOverride: C, styleOverride: B } = g,
-            [P, H] = (0, L.useState)(!1),
-            te = (0, zt.m)("GameHoverFollowButton"),
-            { elDialogElement: xe, fnShowLogonDialog: _e } = (0, Qe.l)(),
-            ue = (0, Rt.Fh)(p),
-            { mutateAsync: Ce } = (0, Ft.L)(p, !ue, void 0),
-            Le = async (Fe) => {
-              Fe.preventDefault(),
-                Fe.stopPropagation(),
-                k.iA.logged_in
-                  ? (H(!0), await Ce(), te.token.reason || H(!1))
-                  : _e();
-            };
-          return (0, e.jsxs)(Ut.Z, {
-            className: (0, We.A)(ye().FollowButton, C),
-            onClick: Le,
-            style: B,
-            children: [
-              ue ? (0, e.jsx)(ot.pPV, {}) : (0, e.jsx)(ot.c9e, {}),
-              (0, e.jsx)("div", {
-                className: (0, We.A)(
-                  ye().FollowButtonText,
-                  P && ye().FollowLoadingText,
-                  "FollowGameButton",
-                ),
-                children: (0, R.we)(
-                  ue ? "#Sale_StopFollowingGame" : "#Sale_FollowGame",
-                ),
               }),
-              xe,
-            ],
-          });
-        }
-        function Je(g) {
-          const { appid: p, color: C, bgcolor: B } = g,
-            P = (0, ft.n9)();
-          return (0, e.jsx)(xt, {
-            appID: p,
-            classOverride: (0, We.A)(
-              He().FollowGameButtonNotTop,
-              It().BBCodeFollowButton,
-            ),
-            styleOverride: { color: C, backgroundColor: B },
-          });
-        }
-        function st(g) {
-          const p = Number(g.args.appid);
-          if (!p) return null;
-          const C = (0, Me.O)(g.args.color, "black"),
-            B = (0, Me.O)(g.args.bgcolor, "white");
-          return (0, e.jsx)(Je, { appid: p, color: C, bgcolor: B });
-        }
-        var Ht = o(20681),
-          Wt = o(18657),
-          le = o.n(Wt),
-          Vt = o(63026);
-        function Ct(g) {
-          const { clanAccountID: p, color: C, bgcolor: B } = g;
-          (0, Ht.mx)();
-          const [P, H] = L.useState(!1);
-          return (0, e.jsx)("div", {
-            className: (0, We.A)(le().BBCodeFollowButton, P && le().isHovered),
-            onMouseEnter: () => H(!0),
-            onMouseLeave: () => H(!1),
-            children: (0, e.jsx)(Vt.Q, {
-              nCreatorAccountID: p,
-              classOverride: He().FollowGameButtonNotTop,
-              styleOverride: { color: C, backgroundColor: B },
-              followType: "group",
             }),
           });
         }
-        function rt(g) {
-          const { event: p } = g.context,
-            C = Number(g.args.groupid) || p?.clanSteamID.GetAccountID();
-          if (!C) return null;
-          const B = (0, Me.O)(g.args.color, "black"),
-            P = (0, Me.O)(g.args.bgcolor, "white");
-          return (0, e.jsx)(Ct, { clanAccountID: C, color: B, bgcolor: P });
-        }
-        var Ge = o(83482),
-          Dt = o(44267),
-          Kt = o(9202),
-          jt = o.n(Kt),
-          St = o(29522);
-        function it(g) {
-          const { appid: p, color: C, bgcolor: B } = g,
-            P = (0, ft.n9)(),
-            H = (0, St.$5)(p),
-            te = (0, Ge.L3)(P);
-          return (0, e.jsx)("div", {
-            className: jt().WishlistHoverCtn,
-            children: (0, e.jsx)(Dt.E, {
-              snr: te,
-              id: H,
-              classOverride: (0, We.A)(
-                He().WishlistButtonNotTop,
-                jt().BBCodeWishlistButton,
-                "WishlistButton",
-              ),
-              styleOverride: { color: C, backgroundColor: B },
-              bShowInGamepadUI: !0,
-            }),
-          });
-        }
-        function Yt(g) {
-          const p = Number(g.args.appid);
-          if (!p) return null;
-          const C = (0, Me.O)(g.args.color, "black"),
-            B = (0, Me.O)(g.args.bgcolor, "white");
-          return (0, e.jsx)(it, { appid: p, color: C, bgcolor: B });
-        }
-        let Xe = null;
-        function Ke() {
-          return (
-            Xe == null &&
-              (Xe = new Map([
-                ["wishlist", { Constructor: Yt, autocloses: !1 }],
-                ["followgroup", { Constructor: rt, autocloses: !1 }],
-              ])),
-            Xe
+        return (0, t.jsx)("div", {
+          className: pe().FlexCenter,
+          style: { height: "500px" },
+          children: (0, t.jsx)(he.t, {
+            size: "medium",
+            string: (0, T.we)("#Loading"),
+          }),
+        });
+      }
+      function Ha() {
+        if (window?.location?.hash)
+          return decodeURIComponent(
+            window.location.hash.substring(1).toLowerCase(),
           );
-        }
-        var Ye = o(37656),
-          Ie = o(29868),
-          Re = o(24642);
-        function bt(g) {
-          return g < 10 ? "0" + g : g;
-        }
-        function Ze(g) {
-          const { giveawayid: p } = g,
-            C = (0, Ye.w)(p),
+      }
+      const Va = (0, O.y)(function (e) {
+        const {
+            event: n,
+            language: a,
+            nSaleDayIndex: o,
+            ePreviewMode: i,
+            selectedTab: s,
+            backgroundImageEditModel: l,
+          } = e,
+          [c, d] = u.useState((0, H.rp)()),
+          m = u.useMemo(() => new ve(), []),
+          p = u.useCallback(() => d((0, H.rp)()), []);
+        u.useEffect(
+          () => (
+            window.addEventListener("resize", p),
+            () => window.removeEventListener("resize", p)
+          ),
+          [p],
+        ),
+          u.useEffect(() => {
+            let e = "";
+            const n = () => {
+                const n = Ha();
+                if (n && n != e) {
+                  const a = document.getElementById(n);
+                  a && ((e = n), a.scrollIntoView({ block: "start" }));
+                }
+              },
+              a = setTimeout(() => n(), 150);
+            return (
+              window.addEventListener("hashchange", n),
+              () => {
+                clearTimeout(a), window.removeEventListener("hashchange", n);
+              }
+            );
+          }, []);
+        const _ = (0, O.W6)(),
+          x = (e, n) => {
+            (0, J.ip)(_, { ...(n || {}), [H.jD]: e.toString() });
+          },
+          [v, j] = (0, J.QD)("controller"),
+          [f, S] = (0, g.q3)(() => {
+            const e =
+                F.pF.GetCreatorHome(n.clanSteamID)?.GetAppIDList().length ?? 0,
+              a = n.GetSaleSectionIncludingFooterSections(e);
+            return [
+              ae(
+                n.jsondata.sale_background_img_groups,
+                a,
+                s && s.GetActiveTabUniqueID(),
+              ),
+              a,
+            ];
+          });
+        let w = !1;
+        const k = [{ elements: [], activeTab: new ue.y(void 0, o) }];
+        let C = null;
+        const E = (0, b.Qn)(),
+          D = (0, za.ty)(),
+          A = u.useMemo(() => {
+            const e = Ha();
+            if (!e) return;
+            const n = S.findIndex((n) => n.section_anchor === e);
+            return n > -1 ? n : void 0;
+          }, [S]);
+        S.forEach((o, r) => {
+          const d = k[k.length - 1].activeTab;
+          if (d && !d.ShouldShowSection(o)) return;
+          const g = V.nY
+              .Get()
+              .BIsPartnerTakeoverActive(
+                n.GetContentHubType(),
+                n.GetContentHubCategory(),
+                n.GetContentHubTag(),
+              ),
+            u = c && !g && !Boolean(n.jsondata.content_hub_restricted_width);
+          let p = (0, se.I)(o, i, n, a, E);
+          if (void 0 === p) return;
+          if (p);
+          else if ((0, ge.su)(o) && !b.iA.logged_in)
+            w ||
+              ((p = (0, t.jsx)(ge.CC, { section: o, event: n, language: a })),
+              (w = !0));
+          else {
+            const n = o.diable_tab_id_filtering
+              ? new ue.y(void 0, d && d.GetSaleDay())
+              : d;
+            "tabs" == o.section_type &&
+              o.tabs?.some((e) => e.unique_id == s?.GetActiveTabUniqueID()) &&
+              k.push({ activeTab: s, elements: [] }),
+              (p = (0, t.jsx)(Fa.H, {
+                ...e,
+                section: o,
+                activeTab: n,
+                appVisibilityTracker: m,
+                selectedTab: s,
+                setTabUniqueIDQueryParam: x,
+                expanded: u,
+                controllerCategory: v,
+                setControllerCategory: j,
+              }));
+          }
+          D && (p = (0, t.jsx)(Qa, { nSectionID: o.unique_id, children: p }));
+          const _ = k && k.length && k[k.length - 1];
+          let h = (0, t.jsx)(
+            Za,
             {
-              bLoadingGiveawayInfo: B,
-              winner_count: P,
-              closed: H,
-              seconds_until_drawing: te,
-            } = C;
-          return B
-            ? null
-            : (0, e.jsxs)("div", {
-                className: Ie.countdownCtn,
-                children: [
-                  !!H &&
-                    (0, e.jsx)("div", {
-                      className: Ie.Closed,
-                      children:
-                        P > 0
-                          ? (0, R.we)("#Giveaway_Closed", (0, Re.D)(P))
-                          : (0, R.we)("#Giveaway_Closed_NoWinnerInfo"),
-                    }),
-                  !H &&
-                    (0, e.jsxs)(L.Fragment, {
-                      children: [
-                        te <= 0
-                          ? (0, e.jsxs)("div", {
-                              className: Ie.Throbber,
-                              children: [
-                                (0, e.jsx)(l.t, { size: "small" }),
-                                (0, e.jsx)("div", {
-                                  children: (0, R.we)("#Giveaway_RandomDraw"),
-                                }),
-                              ],
-                            })
-                          : (0, e.jsxs)("div", {
-                              className: Ie.CountDownCtn,
-                              children: [
-                                (0, e.jsx)("div", {
-                                  className: Ie.CountDownTime,
-                                  children:
-                                    bt(Math.floor(te / 60)) + ":" + bt(te % 60),
-                                }),
-                                (0, e.jsxs)("div", {
-                                  className: Ie.CountDownText,
-                                  children: [
-                                    (0, R.we)("#Giveaway_CountDown2"),
-                                    " ",
-                                    (0, R.we)("#Giveaway_KeepWatching"),
-                                  ],
-                                }),
-                              ],
-                            }),
-                        P > 0 &&
-                          (0, e.jsxs)("div", {
-                            className: Ie.WinnerInfo,
+              section: o,
+              nActiveTabID:
+                _ && _.activeTab && _.activeTab.GetActiveTabUniqueID(),
+              saleSectionIndex: r,
+              ePreviewMode: i,
+              salePageBackgroundDerivedConfig: f,
+              backgroundImageEditModel: l,
+              bExpanded: u,
+              children: (0, t.jsx)(je._, { enabled: !A || r > A, children: p }),
+            },
+            "SaleSectionIndex_" + o.unique_id + "_" + r,
+          );
+          const I = f.mapSectionToGroup.get(o.unique_id);
+          C &&
+            C.groupID != I &&
+            (k[k.length - 1].elements.push(
+              le(n, C, i, s && s?.GetActiveTabUniqueID()),
+            ),
+            (C = null)),
+            I
+              ? (C ||
+                  (C = {
+                    groupID: I,
+                    elSaleSections: [],
+                    derivedGroupInfo: f.mapGroupToSections.get(I),
+                  }),
+                C.elSaleSections.push(h))
+              : k[k.length - 1].elements.push(h);
+        }),
+          C &&
+            (k[k.length - 1].elements.push(
+              le(n, C, i, s && s?.GetActiveTabUniqueID()),
+            ),
+            (C = null));
+        const G = k.map((e, n) =>
+          (0, t.jsx)(
+            "div",
+            {
+              className: (0, I.A)(
+                h().SaleSectionTabListContainer,
+                "SaleSectionTabListContainer",
+              ),
+              children: e.elements,
+            },
+            "TabSection_" + n,
+          ),
+        );
+        return (0, t.jsx)(r.Z, {
+          focusable: !1,
+          focusableIfEmpty: !0,
+          navKey: "SaleSectionListContainer",
+          children: G,
+        });
+      });
+      function qa(e) {
+        const {
+          visibility_by_door_index_state: n,
+          door_index_visibility: a,
+          children: o,
+        } = e;
+        return n && null != a
+          ? (0, t.jsx)(Wa, {
+              visibility_by_door_index_state: n,
+              door_index_visibility: a,
+              children: o,
+            })
+          : (0, t.jsx)(t.Fragment, { children: o });
+      }
+      function Wa(e) {
+        const {
+            visibility_by_door_index_state: n,
+            door_index_visibility: a,
+            children: o,
+          } = e,
+          r = (0, q.OM)(a);
+        return ("hide_when_open_door_index" == n && r) ||
+          ("show_when_open_door_index" == n && !r)
+          ? null
+          : (0, t.jsx)(t.Fragment, { children: o });
+      }
+      function Ya({ children: e, onChange: n }) {
+        u.useRef(null);
+        return (
+          (0, u.useEffect)(() => {
+            n(!!u.Children.toArray(e).filter(Boolean).length);
+          }, [e, n]),
+          e
+        );
+      }
+      function Za(e) {
+        const {
+            section: n,
+            saleSectionIndex: a,
+            nActiveTabID: o,
+            ePreviewMode: i,
+            salePageBackgroundDerivedConfig: s,
+            backgroundImageEditModel: l,
+            bExpanded: c,
+            children: d,
+          } = e,
+          g = n.section_anchor ? n.section_anchor : H.mj + (n.unique_id || a),
+          m = "tabs" != n.section_type,
+          [_, x] = (0, u.useState)(!0);
+        return _
+          ? (0, t.jsx)(p.tH, {
+              children: (0, t.jsx)(qa, {
+                visibility_by_door_index_state:
+                  n.visibility_by_door_index_state,
+                door_index_visibility: n.door_index_visibility,
+                children: m
+                  ? (0, t.jsx)(r.Z, {
+                      navKey: g,
+                      id: g,
+                      className: (0, I.A)({
+                        [h().SaleSectionCtn]: !0,
+                        SaleSectionCtn: !0,
+                        [n.section_type]: !0,
+                        [n.internal_section_data?.internal_type || ""]: !0,
+                        expanded: c,
+                        [n.single_item_style || ""]: !0,
+                        [h().SaleSectionBackgroundImageGroupEdit]:
+                          i == se.S.EPreviewMode_EditBackground,
+                        [h().NoTopPadding]: n.collapse_header_space,
+                      }),
+                      children: Boolean(i === se.S.EPreviewMode_EditBackground)
+                        ? (0, t.jsxs)(t.Fragment, {
                             children: [
-                              (0, e.jsx)("div", {
-                                className: Ie.WinnerCount,
-                                children: (0, Re.D)(P),
-                              }),
-                              (0, e.jsx)("div", {
-                                className: Ie.WinnerText,
-                                children: (0, R.we)("#Giveaway_Congratulation"),
+                              d,
+                              (0, t.jsx)(Ba, {
+                                nSectionUniqueID: n.unique_id || a,
+                                nTabID: o,
+                                salePageBackgroundDerivedConfig: s,
+                                backgroundImageEditModel: l,
                               }),
                             ],
-                          }),
-                      ],
-                    }),
-                ],
-              });
-        }
-        var lt = o(57646);
-        function Et(g) {
-          const p = Number(g.args.packageid);
-          return p
-            ? (0, e.jsx)(lt.eF, {
-                packageID: p,
-                display_style: (0, lt._w)(g.args.display),
-              })
-            : null;
-        }
-        function _t(g) {
-          const p = Number(g.args.packageid),
-            C = Number(g.args.compareid);
-          return !p || !C
-            ? null
-            : (0, e.jsx)(lt.hJ, { packageID: p, compareID: C });
-        }
-        var wt = o(88245),
-          Zt = o(35702),
-          U = o(16412),
-          re = o(92757),
-          be = o(39256),
-          Qt = o(4720),
-          ct = o(75110),
-          Jt = o(57810),
-          dt = o(36631),
-          Xt = o(25533),
-          yt = o(81416);
-        function $t(g) {
-          const { eventModel: p, nEventBadgeID: C } = g,
-            B = (0, Zt.fy)(C);
-          if (B?.level > 0) {
-            let P = B.level;
-            if (p?.BHasSaleEnabled()) {
-              const H = p.GetSaleSectionsByType("badge_progress");
-              if (H?.length == 1) {
-                const te = H[0].badge_progress;
-                if (te?.event_badgeid == C && te?.granted_by_discovery_queue) {
-                  const xe = te.levels[te.levels.length - 1].level;
-                  return (0, e.jsx)($e, {
-                    eventModel: p,
-                    nBadgeLevel: P,
-                    nMaxLevel: xe,
-                  });
-                }
-              }
-            }
-            return (0, e.jsx)("span", {
-              className: "DisplayBadgeProgress",
-              children: (0, Re.D)(P),
-            });
-          }
-          return null;
-        }
-        function $e(g) {
-          const { eventModel: p, nBadgeLevel: C, nMaxLevel: B } = g,
-            P = L.useMemo(() => {
-              const ue = p
-                .GetSaleSections()
-                .filter((Ce) => Ce.section_type == "discoveryqueue");
-              return ue?.length > 0 ? ue[0] : null;
-            }, [p]),
-            { storePageFilter: H, eStoreDiscoveryQueueType: te } = L.useMemo(
-              () => (0, ct.lx)(p, P),
-              [p, P],
-            ),
-            xe = (0, Jt.Uf)(te, H),
-            _e = Math.min(C + xe, B);
-          return (0, e.jsx)("span", {
-            className: "DisplayBadgeProgress",
-            children: (0, Re.D)(_e),
-          });
-        }
-        function qt(g) {
-          const { event: p } = g.context,
-            C = Number.parseInt((0, Z.j$)(g.args, "eventid"));
-          return k.iA.logged_in && C
-            ? (0, e.jsx)($t, { nEventBadgeID: C, eventModel: p })
-            : null;
-        }
-        function en(g) {
-          const { nDoorIndex: p, children: C } = g,
-            B = (0, f.OM)(p),
-            { fnOpenDoor: P } = (0, f.OC)(),
-            [H, te] = L.useState(!1),
-            [xe, _e] = L.useState(!1),
-            { elDialogElement: ue, fnShowLogonDialog: Ce } = (0, Qe.l)();
-          return (0, e.jsxs)(e.Fragment, {
-            children: [
-              (0, e.jsx)(U.$n, {
-                disabled: B,
-                onClick: (Le) => {
-                  H ||
-                    (k.iA.logged_in
-                      ? (te(!0),
-                        P(p, !0, null, !1)
-                          .then((Fe) => {
-                            Fe || _e(!0), te(!1);
                           })
-                          .catch(() => {
-                            _e(!0), te(!1);
-                          }))
-                      : Ce());
-                },
-                children: xe
-                  ? (0, e.jsx)("div", {
-                      children: (0, R.we)("#GrantAwardError_Busy"),
+                        : (0, t.jsx)(Ya, { onChange: x, children: d }),
                     })
-                  : (0, e.jsxs)(e.Fragment, {
-                      children: [
-                        !!H && (0, e.jsx)(l.t, { size: "small" }),
-                        !!B && (0, e.jsx)(ot.Jlk, {}),
-                        C,
-                      ],
+                  : (0, t.jsx)(t.Fragment, {
+                      children: Boolean(i === se.S.EPreviewMode_EditBackground)
+                        ? (0, t.jsxs)("div", {
+                            id: g,
+                            className: (0, I.A)({
+                              [h().SaleSectionCtn]: !0,
+                              [h().SaleSectionBackgroundImageGroupEdit]: !0,
+                              [h().NoTopPadding]: n.collapse_header_space,
+                            }),
+                            children: [
+                              d,
+                              (0, t.jsx)(Pa, {
+                                backgroundImageEditModel: l,
+                                nTabID: o,
+                                imgGroupDerivedMapping: s,
+                              }),
+                            ],
+                          })
+                        : (0, t.jsx)(Ya, { onChange: x, children: d }),
                     }),
               }),
-              ue,
+            })
+          : null;
+      }
+      function Qa(e) {
+        const { nSectionID: n, children: a } = e,
+          [o, r] = u.useState(!1),
+          [i, s] = u.useState(!1);
+        u.useEffect(() => {
+          za.TU.Get().SetMouseOverSection(n, o);
+        }, [n, o]);
+        const l = (0, g.q3)(() => za.TU.Get().GetMouseOverSectionID()),
+          c = n && n == l,
+          d = u.useRef(null);
+        return (
+          (0, za.lM)((e) => n == e && (d.current?.scrollIntoView(), s(!0), !0)),
+          (0, t.jsxs)("div", {
+            ref: d,
+            className: (0, I.A)({
+              [h().SaleSectionLivePreview]: !0,
+              [h().Hover]: !!c,
+              [h().JumpedTo]: !!i,
+            }),
+            onAnimationEnd: () => s(!1),
+            onMouseEnter: () => r(!0),
+            onMouseLeave: () => r(!1),
+            children: [
+              o &&
+                (0, t.jsx)(xe.Gq, {
+                  toolTipContent: (0, T.we)("#Sale_SaleEditor_JumpTo_ttip"),
+                  direction: "top",
+                  children: (0, t.jsx)("button", {
+                    className: h().JumpToButton,
+                    onClick: () => za.TU.Get().JumpToSection(n),
+                    children: (0, t.jsx)(_e.ffu, {}),
+                  }),
+                }),
+              a,
             ],
-          });
-        }
-        function tn(g) {
-          const p = Number.parseInt((0, Z.j$)(g.args)) || 0;
-          return p >= 0 && p < 32
-            ? (0, e.jsx)(en, { nDoorIndex: p, children: g.children })
-            : null;
-        }
-        const nn = (0, re.y)(Xt.H);
-        function an(g) {
-          const p = Number.parseInt((0, Z.j$)(g.args)),
-            { event: C, showErrorInfo: B } = g.context;
-          if (p) {
-            const P = C?.jsondata?.sale_sections?.findIndex(
-              (H) => H.unique_id == p,
-            );
-            if (P >= 0) {
-              const H = C.GetDayIndexFromEventStart();
-              return (0, e.jsx)(dt.Cs, {
-                location: B ? dt.HY : dt.bs,
-                children: (0, e.jsx)(nn, {
-                  event: C,
-                  section: C.jsondata.sale_sections[P],
-                  activeTab: new Qt.y(null, H),
-                  language: g.language,
-                  nSaleDayIndex: H,
-                  promotionName: "",
-                  appVisibilityTracker: null,
-                  ePreviewMode: B
-                    ? yt.S.EPreviewMode_Enabled
-                    : yt.S.EPreviewMode_Disabled,
+          })
+        );
+      }
+    },
+    48479: (e, n, a) => {
+      "use strict";
+      a.d(n, { qx: () => _ });
+      var t = a(7850),
+        o = a(56283),
+        r = a(61859),
+        i = a(12155),
+        s = a(90626),
+        l = a(52038),
+        c = a(95695),
+        d = a(84811),
+        g = a(64734),
+        u = a(65946),
+        m = a(26408);
+      function p(e) {
+        const {
+            title: n,
+            tooltip: a,
+            getMinimized: o,
+            toggleMinimized: r,
+            className: i,
+            children: s,
+            elAdditionalButtons: p,
+          } = e,
+          _ = (0, u.q3)(() => o());
+        return (0, t.jsxs)(t.Fragment, {
+          children: [
+            (0, t.jsxs)("div", {
+              className: (0, l.A)(
+                i,
+                g.SectionTitleHeader,
+                g.required_title,
+                "SectionTitleHeader",
+              ),
+              children: [
+                (0, t.jsxs)("div", {
+                  className: (0, l.A)(
+                    c.CollapsableSectionTitle,
+                    "EventEditorTextTitle",
+                  ),
+                  children: [n, Boolean(a) && (0, t.jsx)(m.o, { tooltip: a })],
                 }),
-              });
-            } else if (B)
-              return (0, e.jsxs)("div", {
-                className: be.ErrorDiv,
-                children: ["Error could not find sale section ", p],
-              });
-          }
-          return null;
-        }
-        let ut = null;
-        function Ae() {
-          return (
-            ut == null &&
-              (ut = new Map([
-                ...Array.from(Ke().entries()),
-                [
-                  "itemdef",
-                  {
-                    Constructor: on,
-                    autocloses: !1,
-                    skipInternalNewline: !0,
-                    allowWrapTextForCopying: !0,
-                  },
-                ],
-                ["followgame", { Constructor: st, autocloses: !1 }],
-                ["deckcompatcount", { Constructor: At, autocloses: !1 }],
-                [
-                  "deckcompatuserlibrarycount",
-                  { Constructor: Be, autocloses: !1 },
-                ],
-                ["giveawayinfo", { Constructor: qe, autocloses: !1 }],
-                ["price", { Constructor: Et, autocloses: !1 }],
-                ["pricesavings", { Constructor: _t, autocloses: !1 }],
-                ["eventdoorvisibility", { Constructor: Bt, autocloses: !1 }],
-                ["chooseaccount", { Constructor: Gt, autocloses: !1 }],
-                ["badgecurrentlevel", { Constructor: qt, autocloses: !1 }],
-                ["optindoorquest", { Constructor: tn, autocloses: !1 }],
-                ["classname", { Constructor: sn, autocloses: !1 }],
-                ["localize", { Constructor: rn, autocloses: !1 }],
-                ["salesection", { Constructor: an, autocloses: !1 }],
-                ["reservationbutton", { Constructor: Te, autocloses: !1 }],
-              ])),
-            ut
-          );
-        }
-        function on(g) {
-          const { event: p } = g.context,
-            C = Number.parseInt((0, Z.j$)(g.args, "appid")),
-            B = Number.parseInt((0, Z.j$)(g.args, "itemdefid")),
-            P = Number.parseInt((0, Z.j$)(g.args, "maxquantity")),
-            H = (0, Z.j$)(g.args, "calltoaction");
-          return !(0, wt.gS)(C, B, !1) || !p
-            ? (0, e.jsx)(l.t, {
-                size: "small",
-                position: "center",
-                string: (0, R.we)("#Loading"),
-              })
-            : (0, e.jsx)(at.f, {
-                language: g.language,
-                clanAccountID: p.clanSteamID.GetAccountID(),
-                itemDefSetting: { nAppID: C, nItemDefID: B, max_quantity: P },
-                strCallToAction: H,
-              });
-        }
-        function At(g) {
-          const p = ge();
-          if (!p) return (0, e.jsx)(l.t, { size: "small" });
-          const C = Number.parseInt((0, Z.j$)(g.args));
-          return (0, e.jsx)("span", { children: (0, Re.D)(Number(fe(p, C))) });
-        }
-        function Be(g) {
-          const p = (0, Q.j)(k.iA.accountid, "library");
-          if (!p) return (0, e.jsx)(l.t, { size: "small" });
-          const C = Number.parseInt((0, Z.j$)(g.args));
-          let B = p.verifiedList?.length || 0;
-          switch (C) {
-            case h.sd:
-              B = p.playableList?.length || 0;
-              break;
-            case h.V8:
-              B = p.unsupportedList?.length || 0;
-              break;
-            case h.YX:
-              B = p.unknownList?.length || 0;
-              break;
-          }
-          return (0, e.jsx)("span", { children: (0, Re.D)(Number(B)) });
-        }
-        function Bt(g) {
-          const p = Number.parseInt((0, Z.j$)(g.args)),
-            C =
-              "hide" in g.args && !!Number.parseInt((0, Z.j$)(g.args, "hide"));
-          return p >= 0
-            ? (0, e.jsx)(Ee, { nDoorIndex: p, bHide: C, children: g.children })
-            : null;
-        }
-        function Ee(g) {
-          const { nDoorIndex: p, bHide: C, children: B } = g,
-            P = (0, f.OM)(p);
-          return P == null
-            ? null
-            : (P && !C) || (!P && C)
-              ? (0, e.jsx)(e.Fragment, { children: g.children })
-              : null;
-        }
-        function Gt(g) {
-          if (k.iA.logged_in) {
-            const p = Number.parseInt((0, Z.j$)(g.args)),
-              C = Number.parseInt((0, Z.j$)(g.args, "mod"));
-            if (C > 0 && p < C && k.iA.accountid % C == p) return g.children;
-          }
-          return null;
-        }
-        function sn(g) {
-          const p = (0, Z.j$)(g.args);
-          return p?.trim().length > 0
-            ? (0, e.jsx)("div", { className: p.trim(), children: g.children })
-            : (0, e.jsx)(e.Fragment, { children: g.children });
-        }
-        function rn(g) {
-          return (0, e.jsx)("span", {
-            className: b.LocalizeBlock,
-            children: (0, R.oW)(
-              g.children,
-              (0, e.jsx)("b", {}),
-              (0, e.jsx)("b", {}),
-              (0, e.jsx)("b", {}),
-              (0, e.jsx)("b", {}),
-            ),
-          });
-        }
-        function qe(g) {
-          let p = (0, Z.j$)(g.args);
-          return p
-            ? (0, e.jsx)(Ze, { giveawayid: p })
-            : (0, e.jsx)(L.Fragment, {});
-        }
-        function Te(g) {
-          const { showErrorInfo: p, event: C } = g.context,
-            B = Number.parseInt((0, Z.j$)(g.args)),
-            P = L.useMemo(() => {
-              if (C)
-                return C.jsondata.sale_sections?.find(
-                  (H) =>
-                    H.section_type == "vo_internal" &&
-                    (H.internal_section_data?.internal_type ==
-                      "reservation_widget" ||
-                      H.internal_section_data?.internal_type ==
-                        "while_supplies_last"),
-                );
-            }, [C]);
-          if (B && P) {
-            const H = Number.parseInt((0, Z.j$)(g.args, "depositpackageid")),
-              te = Number.parseInt((0, Z.j$)(g.args, "psulesspackageid")),
-              xe = (0, Z.j$)(g.args, "out_of_stock_override"),
-              _e = (0, Z.j$)(g.args, "delivery_override"),
-              ue = (0, Z.j$)(g.args, "delivery_override_out_of_stock");
-            return (0, e.jsx)(Ot, {
-              section: P,
-              reservationPackageID: B,
-              depositPackageID: H,
-              psuLessPackageID: te,
-              strOutOfStockOverride: xe,
-              strDeliveryOverride: ue || _e,
-              bDeliveryOverrideOnlyIfOutOfStock: !!ue,
-            });
-          }
-          return (0, e.jsx)(e.Fragment, {});
-        }
-        var ln = o(71698),
-          cn = o(82206);
-        function dn(g) {
-          const { bSalePage: p } = g,
-            [C, B] = L.useState(K.KN.IsInitialized());
-          return (
-            (0, ln.H)(C, p),
-            L.useEffect(() => {
-              oe.Vw.Init(new ee.D(k.TS.WEBAPI_BASE_URL)),
-                se.O3.Init(),
-                K.KN.InitGlobal().then(() => B(!0));
-            }, []),
-            L.useEffect(() => {
-              const P = (0, R.l4)();
-              P && T.locale(P);
-            }, []),
-            C
-              ? p
-                ? (0, e.jsx)(cn.d3, { dictionary: Ae(), children: g.children })
-                : g.children
-              : null
-          );
-        }
-      },
-      11811: (y, ie, o) => {
-        "use strict";
-        o.r(ie), o.d(ie, { default: () => Y });
-        var e = o(7850),
-          T = o(71698),
-          L = o(90626),
-          ee = o(73259),
-          oe = o(76559),
-          K = o(79118),
-          se = o(91576),
-          R = o(64641),
-          k = o.n(R),
-          h = o(85599),
-          pe = o(18210),
-          O = o(3166),
-          J = o(17809),
-          N = o(65946),
-          F = o(85692),
-          X = o(41032),
-          A = o(51079);
-        function Y(Q) {
-          const { eventModel: f } = Q;
-          return (0, e.jsx)(J.d, {
-            bSalePage: !0,
-            children: (0, e.jsx)(ge, { ...Q, overrideEventModel: f }),
-          });
-        }
-        function ge(Q) {
-          const { promotionName: f, language: b, overrideEventModel: z } = Q,
-            [W, de] = L.useState(
-              z ?? K.O3.GetClanEventFromAnnouncementGID(O.P9.ANNOUNCEMENT_GID),
-            );
-          L.useEffect(() => {
-            if (!z && W?.AnnouncementGID != O.P9.ANNOUNCEMENT_GID) {
-              const l = new oe.b(O.UF.CLANSTEAMID);
-              K.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                l,
-                O.P9.ANNOUNCEMENT_GID,
-                null,
-              ).then(de);
+                (0, t.jsxs)("div", {
+                  className: g.SectionTitleButtons,
+                  children: [
+                    p,
+                    (0, t.jsx)(h, { bIsMinimized: _, fnToggleMinimize: r }),
+                  ],
+                }),
+              ],
+            }),
+            !_ && (0, t.jsx)(d.tH, { children: s }),
+          ],
+        });
+      }
+      function _(e) {
+        const [n, a] = s.useState(Boolean(e.bStartMinimized));
+        return (0, t.jsx)(p, {
+          ...e,
+          getMinimized: () => n,
+          toggleMinimized: () => a(!n),
+          children: e.children,
+        });
+      }
+      function h(e) {
+        const { bIsMinimized: n, fnToggleMinimize: a } = e,
+          s = n ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return (0, t.jsx)(o.$n, {
+          "data-tooltip-text": (0, r.we)(s),
+          onClick: a,
+          children: e.bIsMinimized
+            ? (0, t.jsx)(i.hz4, {})
+            : (0, t.jsx)(i.Xjb, {}),
+        });
+      }
+    },
+    44231: (e, n, a) => {
+      "use strict";
+      a.r(n), a.d(n, { default: () => u });
+      var t = a(7850),
+        o = a(90626),
+        r = a(78327),
+        i = a(22837),
+        s = a(6379),
+        l = a(22797),
+        c = a(84428),
+        d = a(95034),
+        g = a(96859);
+      function u(e) {
+        const { clanAccountID: n, gidEvent: a } = e;
+        let { eventModel: u, bLoading: m } = (0, s.dB)(n, a);
+        const p = (0, i.sfN)(r.TS.LANGUAGE),
+          [_] = (0, d.QD)("livepreview");
+        return (
+          _ && (u = (0, g.U)(n, i.ajI, "creatorhome_fake")),
+          o.useEffect(() => {
+            if (!m && !u) {
+              const e = new URL(window.location.href);
+              e.searchParams.set("v1", "1"),
+                window.location.replace(e.toString());
             }
-          }, [W, z]),
-            Z(W, de);
-          const ve = (0, F.ty)();
-          if (((0, T.s)(1500), !W))
-            return (0, e.jsx)("div", {
-              className: k().FlexCenter,
-              style: { height: "500px" },
-              children: (0, e.jsx)(h.t, {
-                size: "medium",
-                string: (0, pe.we)("#Loading"),
-              }),
-            });
-          const ke =
-            (W.visibility_state !== ee.zv.k_EEventStateVisible &&
-              W.visibility_state !== ee.zv.k_EEventStateUnlisted) ||
-            ve;
-          return (0, e.jsx)(fe, {
-            eventModel: W,
-            children: (0, e.jsx)(A.oJ, {
-              children: (0, e.jsx)(A.Ay, {
-                curator_clanid: W?.clanSteamID?.GetAccountID(),
-                children: (0, e.jsx)(se._, {
-                  promotionName: f,
-                  language: b,
-                  eventModel: W,
-                  bIsPreview: ke,
-                }),
-              }),
+          }, [m, u]),
+          u
+            ? (0, t.jsx)(c.default, {
+                eventModel: u,
+                promotionName: `creatorhome_${a}`,
+                language: p,
+              })
+            : (0, t.jsx)(l.t, {})
+        );
+      }
+    },
+    84428: (e, n, a) => {
+      "use strict";
+      a.r(n), a.d(n, { default: () => b });
+      var t = a(7850),
+        o = a(5729),
+        r = a(90626),
+        i = a(62641),
+        s = a(17720),
+        l = a(6379),
+        c = a(85661),
+        d = a(64641),
+        g = a.n(d),
+        u = a(22797),
+        m = a(61859),
+        p = a(78327),
+        _ = a(84173),
+        h = a(65946),
+        x = a(77021),
+        v = a(38535),
+        I = a(32630);
+      function b(e) {
+        const { eventModel: n } = e;
+        return (0, t.jsx)(_.d, {
+          bSalePage: !0,
+          children: (0, t.jsx)(j, { ...e, overrideEventModel: n }),
+        });
+      }
+      function j(e) {
+        const { promotionName: n, language: a, overrideEventModel: d } = e,
+          [_, v] = r.useState(
+            d ?? l.O3.GetClanEventFromAnnouncementGID(p.P9.ANNOUNCEMENT_GID),
+          );
+        r.useEffect(() => {
+          if (!d && _?.AnnouncementGID != p.P9.ANNOUNCEMENT_GID) {
+            const e = new s.b(p.UF.CLANSTEAMID);
+            l.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+              e,
+              p.P9.ANNOUNCEMENT_GID,
+              null,
+            ).then(v);
+          }
+        }, [_, d]),
+          (function (e, n) {
+            const a = (0, h.q3)(() => x.TU.Get().GetEventModelJson()),
+              [t, o] = r.useState();
+            r.useEffect(() => {
+              if (!a || a == t) return;
+              o(a);
+              const e = i.lh.FromJSON(a);
+              (e.rtime32_last_modified = Math.floor(
+                new Date().getTime() / 1e3,
+              )),
+                n(e);
+            }, [e, n, t, a]);
+          })(_, v);
+        const b = (0, x.ty)();
+        if (((0, o.s)(1500), !_))
+          return (0, t.jsx)("div", {
+            className: g().FlexCenter,
+            style: { height: "500px" },
+            children: (0, t.jsx)(u.t, {
+              size: "medium",
+              string: (0, m.we)("#Loading"),
             }),
           });
-        }
-        function fe(Q) {
-          const { eventModel: f, children: b } = Q,
-            z = f.GetContentHubType() == "adultonly";
-          return (0, e.jsx)(X.QA, {
-            eAdultOnlyMediaBehavior: z ? "allowed" : "masked",
-            children: b,
-          });
-        }
-        function Z(Q, f) {
-          const b = (0, N.q3)(() => F.TU.Get().GetEventModelJson()),
-            [z, W] = L.useState();
-          L.useEffect(() => {
-            if (!b || b == z) return;
-            W(b);
-            const de = ee.lh.FromJSON(b);
-            (de.rtime32_last_modified = Math.floor(new Date().getTime() / 1e3)),
-              f(de);
-          }, [Q, f, z, b]);
-        }
-      },
-      21895: (y) => {
-        y.exports = {
-          Root: "_1kIuUssJvopWbHik1IKMG6",
-          "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
-          "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
-          "Variant-outline": "wlcXkTKJWe-SE0fCwIRwQ",
-          Disabled: "kLcGKsNxkoEqxgok6YzML",
-          Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
-          Icon: "cngAYeP7ZvFo2pT_v3-xO",
-        };
-      },
-      16619: (y) => {
-        y.exports = {
-          Color: "_2Vc3a-PM4tOhJcD72NEq1U",
-          IconSizeDefault: "_20lX82QaoUw-iHboSsmZBI",
-          "IconSize-1": "_1zRMg9IjPqEIAejKQDDLYW",
-          "IconSize-2": "_3dn_hJnXYKfl38rjqz4y91",
-          "IconSize-3": "_2aoIykgGddbEHeCGgMR79l",
-          "IconSize-4": "_1Ypu_MleveHHMyLy8PVNy",
-          "IconSize-5": "e8vp9esm_uAhUEdfq5zjr",
-          "IconSize-6": "hXAsxCohKrk8qBq6Enfgt",
-          "IconSize-7": "_5TifSVb5dMP2wAaHIDqM_",
-          "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
-          "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
-          HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
-        };
-      },
-      32545: (y) => {
-        y.exports = {
-          "duration-app-launch": "800ms",
-          FollowButton: "c-TDTqD2D5mBLfTqn3fSV",
-          FollowButtonText: "_2PmgMkPwEgmuCJVZLTGSPi",
-          FollowLoadingText: "_2XN3sBlgsLE3n5WrKOkWxi",
-          BackgroundAnimation: "uyy8KyiiqaQ8u9bMDwblz",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1ZwgsD1DzopaHZlXaaWS7B",
-          "ItemFocusAnim-darkerGrey": "_1sm-Ag9q7YyfjTirEAUKbD",
-          "ItemFocusAnim-darkGreySettings": "Y4bvEiSraTDYjd2Nd9Mwc",
-          "ItemFocusAnim-darkGrey": "J6U-QgbF3DbDkS-3DeQdU",
-          "ItemFocusAnim-grey": "_377hQ8s9afH681BN_ZEsfJ",
-          "ItemFocusAnim-translucent-white-10": "_3ztC4gHbTuhtfBA2YmQnsW",
-          "ItemFocusAnim-translucent-white-20": "pjQnWETBI391eZg-gLCoU",
-          "ItemFocusAnimBorder-darkGrey": "_35tkELTOnZffhYZXF6IM5p",
-          "ItemFocusAnim-green": "ubgODmIok4_aHDeaT6Dpl",
-          focusAnimation: "_3hPkc-RJEDgRJ0ItWpPsP9",
-          hoverAnimation: "_3cu-nLm0UDnrFRy4HkVrO8",
-        };
-      },
-      50909: (y) => {
-        y.exports = {
-          SalePageHiddenWarning: "_2h9U3L_8MxvbQ6TGGaeBYa",
-          WarningText: "_2iB5yR1rkdynH8-UFCwUty",
-        };
-      },
-      76789: (y) => {
-        y.exports = {
-          "duration-app-launch": "800ms",
-          narrowWidth: "500px",
-          SalePageLogoCtn: "_3Rukhd1HqXzPiBrK5hwPT-",
-          BackgroundAnimation: "_1xc_h6g1jbrfqXQXHDA2eY",
-          "ItemFocusAnim-darkerGrey-nocolor": "_32Qiunpe7Bq8tRMP7zANIV",
-          "ItemFocusAnim-darkerGrey": "_1jLvKsCp-1NNukUKFcJBiF",
-          "ItemFocusAnim-darkGreySettings": "_2oonpIg6GiNC1fFwAuTeY1",
-          "ItemFocusAnim-darkGrey": "_25MzDFkbrWeDNWxcpYDDqL",
-          "ItemFocusAnim-grey": "_24xCtEhvscRzLJyaNWLeUa",
-          "ItemFocusAnim-translucent-white-10": "_191r_XeIDZJjVtYMrw4vZN",
-          "ItemFocusAnim-translucent-white-20": "_3PT6d0B4zsV60BfrKuIA1r",
-          "ItemFocusAnimBorder-darkGrey": "_1Z9KMCmIY9huHpqwfwRypj",
-          "ItemFocusAnim-green": "_1WZWN5W96O7pMURRF2eleh",
-          focusAnimation: "_2hRoGMM5UsM8oeV-txHPNu",
-          hoverAnimation: "_1YMbPvrOkuzyOJDFmv_N8s",
-        };
-      },
-      71347: (y) => {
-        y.exports = {
-          PresenterDisclaimer: "_3t5Ysy42auAhLs-ZV5jwdF",
-          PresenterLabel: "_2FnM_Y63_Jnu_t6cnt-4se",
-        };
-      },
-      27828: (y) => {
-        y.exports = {
-          EyeDropperCtn: "_5jKe2NV9CM3JA3hcMALLw",
-          EyeDropperBtn: "_3afPQT_fEWmhHhFHS-WIk7",
-          ColorPickerCtn: "Nn2-w0eqLuugAR-Udm--3",
-          ColorPickerDialog: "_32PwNSgquR6tGAPIBcWgVq",
-        };
-      },
-      64387: (y) => {
-        y.exports = { MenuBackgroundReflection: "_1vclHrINn0CO_nGkxoDkKy" };
-      },
-      10026: (y) => {
-        y.exports = { BBCodeFollowButton: "NVuxjpTCUClP-4RsNDDvk" };
-      },
-      18657: (y) => {
-        y.exports = {
-          BBCodeFollowButton: "BwHJdoHlv8wy5OypqL_b7",
-          isHovered: "_2EcgCb9lHfl7I_MlirYLZL",
-        };
-      },
-      29868: (y) => {
-        y.exports = {
-          countdownCtn: "GWWacIf04lQysYMFJma0A",
-          Closed: "ATX_xEE69rX8wVxQvONEx",
-          CountDownCtn: "_11RwPICMOmmvNXkOq9bjPc",
-          CountDownTime: "eh0pMnSr-nk203Ealq_Rq",
-          CountDownText: "_3VKQ3h7Z4wO_U-Z_vXUZkk",
-          LearnMore: "_1q98mjxkCUwQuFALsiNtD7",
-          Throbber: "bEkRtFmRUW_smWksM-k9g",
-          WinnerInfo: "_2LTFl4ZFuL1BeNbqYPExWv",
-          WinnerCount: "Z7ScP-i1XHPQn4eeFdJ3g",
-          WinnerText: "chkuqox_QD6U5ID_AHTLk",
-        };
-      },
-      32190: (y) => {
-        y.exports = { ColorCtn: "Sf6uEgb-RsQVL8-DaDtRl" };
-      },
-      13447: (y) => {
-        y.exports = {
-          Ctn: "_2Un11RfkRCG1ypLwtwMzrI",
-          CtnEditor: "_1_IJ41Ffm67VU1UXLllw1C",
-          SwapColorsCtn: "_2n77ZzDS9tVkdreDY75XWS",
-          EditorTitle: "SxztzVEl1Jvth4-DhCzea",
-          ConfDialogOptions: "_1SQN7pP2X-HClw-EOdtut1",
-          ImageOptions: "_3pRF8ln193eBQJlbd8WJih",
-          ColorOptions: "_2zPsCFzA78zGnQWaKhLIr9",
-        };
-      },
-      81557: (y) => {
-        y.exports = {
-          TabCtn: "d43sj0ExWatSivXsOo2Qx",
-          TabHeader: "_2CnSAWQAuZ56_k9CtX6wvO",
-        };
-      },
-      53732: (y) => {
-        y.exports = {
-          ImageWrapperContainer: "_2or51Nzh1oEwvdNjKQ1XsS",
-          ImageWrapper: "_34WcpEIVKr8Z72GaesGoR4",
-          VideoBackground: "_3IizOeZqT1lZaoPEmdVxG",
-          ImageWrapperFilename: "_3_vYFjDjTuDvhsL10XO9BU",
-          ResultNotification: "_1X95b1CVvEsEa5dfoR5Pfv",
-          ErrorCode: "_-7Alg3skQ6oFTYIpKTHsI",
-          Hilight: "_3lBJMYeg4_hihNl0QTX1Qi",
-          ImageButton: "_2MUWDtjaZWaMDdJaQr4o5a",
-          Thumb: "_3M02zvAfoMwX5XlzlvFkc3",
-          Full: "_1RN-YKVciU9zYHOYX6OV0",
-          Delete: "_1X87fLS_CT0g2Vu5-fClUZ",
-          FloatingThrobber: "_2EHZ15YQSAK_T5SCxVobtG",
-          Localized: "_3FFrtt5Of4jP9unTFjYiHs",
-          ClanImageGrid: "_3J5Yc20Wkz7gjSxxWcHst",
-          ClanImageGridItem: "_1vXdD6QZTKcjYoRTOAuOeX",
-          Selected: "_3JVN2Ta1MlQnuMnqPo0XR8",
-          ImgCtn: "_248ADrw9QzPyhcxjqlaykT",
-          Name: "TzsVI0_4scOG258SCeyqz",
-        };
-      },
-      9709: (y) => {
-        y.exports = {
-          TitleImg: "_3E4IFPQP4lnTaJ8fo462Br",
-          PreviewImg: "_2COOlV_DzUDN3N0P3ToybN",
-          ArtworkBar: "_3OWH-tupjKqql_tcQsLYIp",
-        };
-      },
-      71647: (y) => {
-        y.exports = {
-          DragAndDropContainer: "_2RL1a79W53-tCW7090DcUp",
-          DragAndDropContainerDragging: "wn604fTvW5SH1o852jAnI",
-          ImageUploadBar: "_2Zk7b2c_FLMvZPqYvzTzt5",
-          SelectImageButton: "_3Cd9cpywFS-01PilCrgOQo",
-        };
-      },
-      49460: (y) => {
-        y.exports = {
-          SearchInput: "z7qI4Gjuleb-g6osRQpw2",
-          PickerTitle: "_1yPqhNpX8e1HgnrarYmsZg",
-        };
-      },
-      27344: (y) => {
-        y.exports = {
-          ImageDimensionTooSmall: "_1A6oRywbsuzGxawqTexX6G",
-          UploadPreviewCtn: "_1x7wvgGW08t0c2auyfWyAs",
-          UploadPreviewButtonsCtn: "_2Vsz0Teq375iSLvbdoaCw0",
-          UploadPreviewDelete: "_1898rmbQKDsZukkFbEda-H",
-          UploadPreviewButton: "wUyDKp6qikfxWISsHWYI5",
-          UploadPreviewError: "_2sh7mSiQmyBdLyJPYPva2L",
-          UploadPreviewWarning: "-khhIHR9pWYus_nTScWdO",
-          UploadPreviewMessage: "_3kt_NxdtRh4OR_iFeApvM9",
-          UploadPreview: "_3dSNtZdgIHIa6P9ZODRBJs",
-          PreviewImgCtn: "a4db1xuziijkLJ6HQXeEs",
-          PreviewImgInfo: "ddYEDOKiU6ZFhNI4sb_eQ",
-        };
-      },
-      25359: (y) => {
-        y.exports = {
-          EventEditorArtworkCtn: "_3etoSeNgIJIJoQjVvKBkdK",
-          ArtworkPreview: "_1fBG8S7L5v1-Ll8UMASqW5",
-          EventEditorArtworkBarContainer: "TLT1tvLtG6-1EdFGwToo1",
-          EventEditorButton: "_2EbfH5kGhG6VdMYM0aSFsw",
-          EventEditorInputPaneTopRow: "_3loSsH7QVVzJW4dbA_k8pH",
-          EventCoverImageCtn: "vcULy1uwr1V-xetzQ3t5_",
-          DragTarget: "_2qaqHaHt0FsJ5g6E50Rpbn",
-          DragOnTopOfMe: "_1-0mEm0at-4Czr10kmQ82K",
-          EventEditorArtworkTextCtn: "wbzVx6PSPvY3jxjmybwT7",
-          EventEditorDragTargetArea: "_352Z7ynHHExwu7pbLG0mi3",
-          EventEditorArtworkTitle: "_1BtkzIs3COLhdqubhPqTJa",
-          EventEditorArtworkSubTitle: "_3NsjbDpfSxc8ZHhYE5TuTv",
-          EventEditorArtworkResolution: "pScoegXLiCfPTrVdDHgRc",
-          ReassignCtn: "_2kzxUHYwRnfLZc2qUJp54m",
-          ImagePreviewContainer: "_4M__i4jyU9-VJE6K30Rat",
-          NoneSet: "csDC3rD7ooQ8gGXZhh594",
-          TitleSafePreview: "_2Gel5eBC4smzhCMPJN4poX",
-          TitleSafeCaption: "_2oU3ulhvWy8BrTtr-wLTHL",
-          LanguageSelector: "_33sdnBObDSgcIemY_8d188",
-          LanguageSelectorSelected: "_35iac6gVYl3NbfLM5oGhAp",
-          LanguageSelectorNoData: "_2MrExNFgrVVmzV4_XxWk7m",
-          LanguageContainer: "_1GqYxNpFolOmvCXZZ5SqS9",
-          LanguageOptions: "_1OF4inXEccSHpEi-94BNyB",
-          LanguageListContainer: "_2NKwVWWJzUopyzUpm5K8PU",
-          SelectImageContainerTopRow: "_33RDQ6gt9hW0N3baDbAfnl",
-          SelectImageContainerBottomRow: "_3Mstp8zLfqhPc0yqJGve2N",
-          TextTitle: "_1b_OxtjP85MZc-IlQfnnHR",
-          TextSubTitle: "EqzVNygGbzsiBalSQOtWy",
-          SelectImageEqualColumns: "Qz0mmjcnBMcs99N6fgVCv",
-          SelectImageBlock: "X_wtWeV0nNEF-9Rz0wZRL",
-          MainPreviewBlock: "_3kAV8hXf4G70C4tDE8HDjI",
-          Tips: "_2jAkKq9D5KKOH2cgMu59yN",
-          ExamplesCtn: "WiG3FOkzY58mDmTzVy40z",
-          SelectImageExampleImg: "_3Lcquzc_EacniSS2QxdUHx",
-          SelectImageLanguagesCtn: "_27huHYrHSwivfUIglfRube",
-          SelectImageTitle: "lJEQ6yKHtjwXClD4NVqUY",
-          ArtworkSelectorContainer: "_2dxWXru9IFUHuJgzC9_WwQ",
-          Title: "_2HiqsrLG8k4zf4raXVygUP",
-          SaleHeaderExampleCtn: "_2Nwi2WWTWdc4JkMEiHDFFK",
-          SaleHeaderExampleCol: "_2s4zAjRHJabF47kK9uxCY6",
-          BroadcastPreview: "_3NxzN3dNq98rjVdkyQ9QIH",
-          AssetExampleSpotlightCtn: "_29B1UOzVRMVZSd22IyP43x",
-          BackgroundConfigCtn: "_3SVRvFP-sXikNXmksKkDQ7",
-          OptionCtn: "_2XnObldRTEs5T4Sswyv5Fo",
-          ButtonRow: "_2W9rAanKV4V6A7Exx4sWGF",
-          BackgroundColorBtn: "_2YD-avez2pqO4MJHAO5_v0",
-          BackgroundColorResetBtn: "baRhk4ouyxcNfo_um5C76",
-          UploadSuccess: "inXVzuN-asDe-A5jnsvvV",
-          HighlightBox: "_3qTodEPOW76BNBFtgX0AUa",
-        };
-      },
-      79949: (y) => {
-        y.exports = {
-          MultipleExampleContainer: "_3HrpHSdcqC7wp8s07bOS2l",
-          ExampleSectionTitle: "MxxIR01BbdH_tAWmTbjoz",
-          DetailPageExample: "_3Mi3a8sT7hZn6-L_TPm3gr",
-          DetailExample: "TYQJH_hhcEuSRvl75g6GA",
-          DetailExample2: "HQAziOChjZK2M_cKTNA8",
-          MainImageCtn: "_1mRJSs13tWFRJ55fG6WrK8",
-          ExampleBodyPosition: "_2wNW_eWECTcvaYU7AYXXY2",
-          ExampleContentCtn: "_2bAs9Bkh1K8PYVhcLLerfA",
-          TextTitle: "_3fulSVNkgCeQyqxT0FjHOp",
-          TextSubTitle: "_3ThX6fPp7MJY_TrTP_RCRY",
-          TextBody: "_2nG13rbAd05OnozWt7nQWL",
-          SpotlightExample: "_3KsBV1q-e0ZnxgK9GdUiON",
-          ExampleSpacer: "oAEZygc5smKi6PjD-981",
-          BroadcastPreviewContainer: "_3aLcrZxS4I4KVtUF0BdHds",
-          SaleHeaderPreviewContainer: "GORXZE3lrdjE-QiVxXceW",
-        };
-      },
-      15496: (y) => {
-        y.exports = {
-          narrowWidth: "500px",
-          "duration-app-launch": "800ms",
-          ReadMoreLink: "_2mvgc6dpEDHRJlTWhGDz7h",
-          MajorEventContainer: "dVJB2r43CGIAgr-Xtt4P3",
-          MajorEventImageContainer: "_1PkTBeZJVs3WI8US0zffEx",
-          MajorEventImage: "_25fL1JQcG1kh_9L5danMxc",
-          BottomShadow: "_1ueE9cjv0hzERo311Gr6qL",
-          MajoreEventImageContentContainer: "_3mREW5LJ_7jyeol7BtXcym",
-          MajorEventImageTemplate: "lQR9_4nAXfydIY7zwOzSF",
-          MajorEventBackground: "_388IuJImOHcpIL9kvqJdet",
-          MajorEventImageBackgroundBlur: "_3sVs6YBElnuTON_cY_6ne5",
-          MajorEventHeader: "_1HL2nt3zhHJo3RkMzmD-Gb",
-          PartnerEventLargeImage_Title: "bYwbk-ycz_n2JnQgyrgDx",
-          EventType: "_3zVyXPaFJl95Q5qnxtDpuB",
-          GameIconAndName: "IltgR1LrH0neRnKq0TLxy",
-          GameIcon: "_3Dkj3XaiQV2I1d2m-RRA_L",
-          MajorEventSpotlightBackground: "_1ahePoGx6gPXhapzZw2L21",
-          MajorEventContent: "_2nr7NuawYs9NhC8OUkY0fK",
-          MajorEventTextCtn: "Ojdg2vBD3O1oroxYVU2zB",
-          MajorEventTitle: "nEBZT02OOnxIbyIl9Dk44",
-          MajorEventSummary: "HPngOFPPykmeXFSxcC1Zv",
-          MajorEvent_Ctn: "_2_kU7nUB6wwDu-LsbQZmNc",
-          AppDetailsSpotlightContainer: "_1zDJ1bfFg-UkuAluUAoGKj",
-          BackgroundAnimation: "_2zmvTGYcnxB2bhgSNFXnSi",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2DCLV3hUeBViGvq3yTsiQE",
-          "ItemFocusAnim-darkerGrey": "_1iMoXsAEHqrsXXcoaw1SIy",
-          "ItemFocusAnim-darkGreySettings": "_23bSFoV4nDLAGl_G32zEdY",
-          "ItemFocusAnim-darkGrey": "_1_Uo-zxJJlBTZyvRjgeG4_",
-          "ItemFocusAnim-grey": "_3AjpDoqzZuBj6F7fMiO2Q-",
-          "ItemFocusAnim-translucent-white-10": "_3PpKBwmAjZpmyTB-ooDvNd",
-          "ItemFocusAnim-translucent-white-20": "_2k5z_bdbdZRy3o_pIFzFBF",
-          "ItemFocusAnimBorder-darkGrey": "DuzyT2w758OaPfDpfQkO6",
-          "ItemFocusAnim-green": "kF7es13166bQnCHSRaw6l",
-          focusAnimation: "_3lfKCkcI6nWWMWFgLOGbyh",
-          hoverAnimation: "_24fZDwdgB8kUq2hGCnbx88",
-        };
-      },
-      9202: (y) => {
-        y.exports = {
-          "duration-app-launch": "800ms",
-          storeMenuResponsiveModeWidth: "730px",
-          SuppressScrollOnBody: "_1FFwlWIoDrtb0qdN9YUwHs",
-          WishlistHoverCtn: "GXjJQihysg6S5INBKClED",
-          BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
-          BackgroundAnimation: "Auhol3RHXIE3fQUoyOoWR",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2b6SJAbnZzhfHFRjTpAhNy",
-          "ItemFocusAnim-darkerGrey": "XywxBIK9eHokhhsZGNBan",
-          "ItemFocusAnim-darkGreySettings": "_2kXRPMPgy0P9b0CoapcXw7",
-          "ItemFocusAnim-darkGrey": "_3eSI5prhRv2g28mH4BvfI1",
-          "ItemFocusAnim-grey": "SwPqPFwuEkTnSchUdaYfU",
-          "ItemFocusAnim-translucent-white-10": "oXUFMy_wfkldK82-xV12m",
-          "ItemFocusAnim-translucent-white-20": "_3s81IjXe5IWP8-T018RCQq",
-          "ItemFocusAnimBorder-darkGrey": "_1Zq30UmvKFxqjOzEaqp0l",
-          "ItemFocusAnim-green": "_3G3OfrZkx3Nt3Q_A9oFTkP",
-          focusAnimation: "N5bN0xQL6oj7EZSzAeJ-B",
-          hoverAnimation: "_2MUmffXlPUO3g7xxum02Qa",
-        };
-      },
-      64734: (y) => {
-        y.exports = {
-          SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
-          SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
-          required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
-        };
-      },
-      44894: (y, ie, o) => {
-        "use strict";
-        o.d(ie, { A: () => e });
-        const e =
-          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
-      },
+        const j =
+          (_.visibility_state !== i.zv.k_EEventStateVisible &&
+            _.visibility_state !== i.zv.k_EEventStateUnlisted) ||
+          b;
+        return (0, t.jsx)(f, {
+          eventModel: _,
+          children: (0, t.jsx)(I.oJ, {
+            children: (0, t.jsx)(I.Ay, {
+              curator_clanid: _?.clanSteamID?.GetAccountID(),
+              children: (0, t.jsx)(c._, {
+                promotionName: n,
+                language: a,
+                eventModel: _,
+                bIsPreview: j,
+              }),
+            }),
+          }),
+        });
+      }
+      function f(e) {
+        const { eventModel: n, children: a } = e,
+          o = "adultonly" == n.GetContentHubType();
+        return (0, t.jsx)(v.QA, {
+          eAdultOnlyMediaBehavior: o ? "allowed" : "masked",
+          children: a,
+        });
+      }
     },
-  ]);
-})();
+    44894: (e, n, a) => {
+      "use strict";
+      a.d(n, { A: () => t });
+      const t =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
+    },
+  },
+]);
