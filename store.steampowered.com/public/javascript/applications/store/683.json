@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "Game ini didiskon sebesar %1$s sebelumnya dalam %2$s hari terakhir",
     "Price_History_Current_Low_Price_Ttip": "Ini adalah harga terendah untuk game ini dalam %1$s hari terakhir.",
     "Price_History_Current_Price": "SEKARANG",
-    "Price_History_Lowest_Previous_30": "Diskon berdasarkan harga terendah dalam 30 hari terakhir"
+    "Price_History_Lowest_Previous_30": "Diskon berdasarkan harga terendah dalam 30 hari terakhir",
+    "PersonalCalendar_Title": "Kalender Pribadimu",
+    "PersonalCalendar_Subtitle": "Daftar game baru dan mendatang yang dipersonalisasi untukmu",
+    "PersonalCalendar_More": "+%1$s Lagi",
+    "PersonalCalendar_Full": "Jelajahi Kalender Pribadi selengkapnya",
+    "PersonalCalendar_Explore": "Explore more",
+    "PersonalCalendar_EmptyDay": "Kami tidak memiliki rilisan terbaru untuk direkomendasikan kepadamu pada hari ini <1>Lihat sisa keseluruhan kalendermu!</1>",
+    "NewBadge": "BARU",
+    "Time_Today": "Hari ini",
+    "store_ui_dummy": "dont translate"
 }

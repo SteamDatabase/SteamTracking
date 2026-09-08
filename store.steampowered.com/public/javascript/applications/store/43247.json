@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "此游戏在过去的 %2$s 天内曾以 %1$s 的折扣价出售",
     "Price_History_Current_Low_Price_Ttip": "此游戏当前价格为过去 %1$s 天内最低",
     "Price_History_Current_Price": "当前价格",
-    "Price_History_Lowest_Previous_30": "折扣基于过去 30 天的最低价格"
+    "Price_History_Lowest_Previous_30": "折扣基于过去 30 天的最低价格",
+    "PersonalCalendar_Title": "您的个人日历",
+    "PersonalCalendar_Subtitle": "您专属的个性化游戏列表，其中列出了新游戏和即将推出的游戏",
+    "PersonalCalendar_More": "+%1$s 项",
+    "PersonalCalendar_Full": "探索您的完整个人日历",
+    "PersonalCalendar_Explore": "探索更多",
+    "PersonalCalendar_EmptyDay": "我们在这一天没有可向您推荐的新品 <1>快去看看您日历上的其他日期吧！</1>",
+    "NewBadge": "新",
+    "Time_Today": "今天",
+    "store_ui_dummy": "dont translate"
 }

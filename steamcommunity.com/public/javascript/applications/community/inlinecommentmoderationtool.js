@@ -1,52 +1,55 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 "use strict";
-(() => {
-  (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [2345],
-    {
-      75758: (v, a, n) => {
-        n.r(a), n.d(a, { default: () => l });
-        var t = n(7850),
-          o = n(46085),
-          d = n(64981),
-          _ = n(25614);
-        function l(e) {
-          var i, u;
-          const {
-              steamid: c,
-              commentThreadID: s,
-              gidComment: m,
-              authorSteamID: r,
-            } = e,
-            C = (0, o.kZ)(d.NC, s),
-            D = (0, o.EC)(c, s, m),
-            E = (0, o.c3)(c, s, m),
-            h = { subject_type: d.NC, subject_group_id: s, subject_id: m },
-            I = (
-              (u = (i = C.data) == null ? void 0 : i.subjects) != null ? u : []
-            ).find((M) => M.subject_id === m);
-          return (0, t.jsx)(_.l, {
-            sanctionMutation: D,
-            acquitMutation: E,
-            subjectKey: h,
-            subject: I,
+(self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
+  [2345],
+  {
+    44303: (t, e, n) => {
+      n.r(e), n.d(e, { default: () => d });
+      var i = n(7850),
+        s = n(90182),
+        u = n(34410),
+        c = n(25215);
+      function d(t) {
+        var e, n;
+        const {
+            steamid: d,
+            commentThreadID: m,
+            gidComment: o,
             authorSteamID: r,
-            children: (0, t.jsx)(j, { ...e }),
-          });
-        }
-        function j(e) {
-          return (0, t.jsxs)(t.Fragment, {
-            children: [
-              (0, t.jsxs)("div", { children: ["SteamID: ", e.steamid] }),
-              (0, t.jsxs)("div", {
-                children: ["CommentThreadID: ", e.commentThreadID],
-              }),
-              (0, t.jsxs)("div", { children: ["CommentGID: ", e.gidComment] }),
-            ],
-          });
-        }
-      },
+          } = t,
+          h = (0, s.kZ)(u.NC, m),
+          j = (0, s.EC)(d, m, o),
+          l = (0, s.c3)(d, m, o),
+          b = { subject_type: u.NC, subject_group_id: m, subject_id: o },
+          C = (
+            null !==
+              (n =
+                null === (e = h.data) || void 0 === e ? void 0 : e.subjects) &&
+            void 0 !== n
+              ? n
+              : []
+          ).find((t) => t.subject_id === o);
+        return (0, i.jsx)(c.l, {
+          sanctionMutation: j,
+          acquitMutation: l,
+          subjectKey: b,
+          subject: C,
+          authorSteamID: r,
+          children: (0, i.jsx)(a, { ...t }),
+        });
+      }
+      function a(t) {
+        return (0, i.jsxs)(i.Fragment, {
+          children: [
+            (0, i.jsxs)("div", { children: ["SteamID: ", t.steamid] }),
+            (0, i.jsxs)("div", {
+              children: ["CommentThreadID: ", t.commentThreadID],
+            }),
+            (0, i.jsxs)("div", { children: ["CommentGID: ", t.gidComment] }),
+          ],
+        });
+      }
     },
-  ]);
-})();
+  },
+]);

@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "Ez a játék az elmúlt %2$s nap során valamikor kedvezményes volt, %1$s áron.",
     "Price_History_Current_Low_Price_Ttip": "Ez a játék jelenleg az elmúlt %1$s napon belüli legalacsonyabb áron kapható.",
     "Price_History_Current_Price": "MOST",
-    "Price_History_Lowest_Previous_30": "Kedvezmény az elmúlt 30 nap legalacsonyabb ára alapján"
+    "Price_History_Lowest_Previous_30": "Kedvezmény az elmúlt 30 nap legalacsonyabb ára alapján",
+    "PersonalCalendar_Title": "Személyes naptárad",
+    "PersonalCalendar_Subtitle": "Egy személyre szabott lista neked az új és közelgő játékokról",
+    "PersonalCalendar_More": "+ Még %1$s",
+    "PersonalCalendar_Full": "Teljes Személyes naptárad felfedezése",
+    "PersonalCalendar_Explore": "Továbbiak felfedezése",
+    "PersonalCalendar_EmptyDay": "E napon nincs új megjelenés, amit neked tudnánk ajánlani. <1>Nézd meg a naptárad többi részét!</1>",
+    "NewBadge": "ÚJ",
+    "Time_Today": "Ma",
+    "store_ui_dummy": "dont translate"
 }

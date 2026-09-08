@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "Ціна цієї гри зі знижкою становила %1$s протягом останніх %2$s дн.",
     "Price_History_Current_Low_Price_Ttip": "Ціна на цю гру зараз найнижча за останні %1$s дн.",
     "Price_History_Current_Price": "ЗАРАЗ",
-    "Price_History_Lowest_Previous_30": "Знижка на основі найнижчої ціни за останні 30 днів"
+    "Price_History_Lowest_Previous_30": "Знижка на основі найнижчої ціни за останні 30 днів",
+    "PersonalCalendar_Title": "Ваш особистий календар",
+    "PersonalCalendar_Subtitle": "Персоналізований список нових і майбутніх ігор",
+    "PersonalCalendar_More": "+ ще %1$s",
+    "PersonalCalendar_Full": "Переглянути весь особистий календар",
+    "PersonalCalendar_Explore": "Explore more",
+    "PersonalCalendar_EmptyDay": "На цей день для вас немає рекомендованих релізів <1>Перегляньте решту свого календаря!</1>",
+    "NewBadge": "НОВЕ",
+    "Time_Today": "Сьогодні",
+    "store_ui_dummy": "dont translate"
 }

@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "Detta spel var på rea för %1$s under de senaste %2$s dagarna",
     "Price_History_Current_Low_Price_Ttip": "Det här spelet ligger just nu på sitt lägsta pris under de senaste %1$s dagarna.",
     "Price_History_Current_Price": "NU",
-    "Price_History_Lowest_Previous_30": "Rabatt baserad på lägsta pris under de senaste 30 dagarna"
+    "Price_History_Lowest_Previous_30": "Rabatt baserad på lägsta pris under de senaste 30 dagarna",
+    "PersonalCalendar_Title": "Din personliga kalender",
+    "PersonalCalendar_Subtitle": "En personlig lista över nya och kommande spel",
+    "PersonalCalendar_More": "+%1$s till",
+    "PersonalCalendar_Full": "Explore your full Personal Calendar",
+    "PersonalCalendar_Explore": "Explore more",
+    "PersonalCalendar_EmptyDay": "We don't have any new releases to recommend to you on this day <1>Check out the rest of your calendar!</1>",
+    "NewBadge": "NYTT",
+    "Time_Today": "Idag",
+    "store_ui_dummy": "dont translate"
 }

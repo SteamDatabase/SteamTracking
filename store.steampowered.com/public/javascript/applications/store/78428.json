@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "Jocul acesta a fost anterior la reducere pentru %1$s în ultimele %2$s de zile.",
     "Price_History_Current_Low_Price_Ttip": "Jocul acesta are momentan cel mai mic preț din ultimele %1$s zile.",
     "Price_History_Current_Price": "ACUM",
-    "Price_History_Lowest_Previous_30": "Reducere bazată pe cel mai mic preț din ultimele 30 de zile"
+    "Price_History_Lowest_Previous_30": "Reducere bazată pe cel mai mic preț din ultimele 30 de zile",
+    "PersonalCalendar_Title": "Calendarul tău personal",
+    "PersonalCalendar_Subtitle": "O listă personalizată pentru tine cu jocuri noi și viitoare",
+    "PersonalCalendar_More": "+%1$s More",
+    "PersonalCalendar_Full": "Explorează-ți întregul calendar personal",
+    "PersonalCalendar_Explore": "Explore more",
+    "PersonalCalendar_EmptyDay": "Nu avem nicio lansare nouă pe care să ți-o recomandăm pentru această zi. <1>Vezi restul calendarului tău!</1>",
+    "NewBadge": "NOU",
+    "Time_Today": "Astăzi",
+    "store_ui_dummy": "dont translate"
 }

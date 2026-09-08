@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "이 게임은 지난 %2$s일 이내에 할인을 제공하여 %1$s에 판매되었습니다.",
     "Price_History_Current_Low_Price_Ttip": "지난 %1$s일 기준 이 게임의 가격은 현재 가장 저렴합니다.",
     "Price_History_Current_Price": "현재 가격",
-    "Price_History_Lowest_Previous_30": "지난 30일간의 최저 가격 기준 할인"
+    "Price_History_Lowest_Previous_30": "지난 30일간의 최저 가격 기준 할인",
+    "PersonalCalendar_Title": "맞춤 캘린더",
+    "PersonalCalendar_Subtitle": "사용자에게 추천하는 신규 출시 및 출시 예정 게임을 보여주는 목록입니다.",
+    "PersonalCalendar_More": "%1$s개 더 보기",
+    "PersonalCalendar_Full": "맞춤 캘린더 살펴보기",
+    "PersonalCalendar_Explore": "Explore more",
+    "PersonalCalendar_EmptyDay": "오늘은 추천해 드릴 신규 게임이 없습니다. <1>캘린더의 다른 일정을 확인해 보세요!</1>",
+    "NewBadge": "신규",
+    "Time_Today": "오늘",
+    "store_ui_dummy": "dont translate"
 }

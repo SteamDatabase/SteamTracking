@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "Este juego estuvo en oferta por %1$s en los últimos %2$s días",
     "Price_History_Current_Low_Price_Ttip": "Este juego se encuentra actualmente al precio más bajo de los últimos %1$s días",
     "Price_History_Current_Price": "ACTUAL",
-    "Price_History_Lowest_Previous_30": "Descuento basado en el precio más bajo en los últimos 30 días"
+    "Price_History_Lowest_Previous_30": "Descuento basado en el precio más bajo en los últimos 30 días",
+    "PersonalCalendar_Title": "Tu calendario personal",
+    "PersonalCalendar_Subtitle": "Una lista personalizada para ti de juegos nuevos y próximos lanzamientos",
+    "PersonalCalendar_More": "+%1$s más",
+    "PersonalCalendar_Full": "Explora tu calendario personal completo",
+    "PersonalCalendar_Explore": "Explorar más",
+    "PersonalCalendar_EmptyDay": "No tenemos ningún lanzamiento nuevo que recomendarte hoy. <1>¡Consulta el resto de tu calendario!</1>",
+    "NewBadge": "NUEVA",
+    "Time_Today": "Hoy",
+    "store_ui_dummy": "dont translate"
 }

@@ -1,155 +1,147 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(() => {
-  (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [5278],
-    {
-      66185: (g, v, s) => {
-        "use strict";
-        s.r(v), s.d(v, { default: () => D });
-        var m = s(7850),
-          c = s(90626),
-          M = s(44217),
-          P = s.n(M),
-          _ = s(82734),
-          R = s(18210),
-          f = s(35471),
-          p = s.n(f),
-          u = s(4111),
-          x = s.n(u);
-        const E = 184,
-          L = 5,
-          O = 1024 * 1024,
-          D = c.forwardRef(function (o, t) {
-            const {
-              isLoading: a,
-              imageRef: e,
-              loaderRef: r,
-              getBlob: l,
-            } = C(o.imageData);
-            return (
-              c.useImperativeHandle(t, () => ({ getBlob: l })),
-              (0, m.jsx)("div", {
-                className: u.AvatarCrop,
-                children: (0, m.jsxs)("div", {
-                  className: u.AvatarCropBound,
-                  children: [
-                    (0, m.jsx)("img", { ref: e, className: u.AvatarCropImg }),
-                    (0, m.jsx)("div", {
-                      ref: r,
-                      className: u.AvatarLoading,
-                      style: { display: a ? "" : "none" },
-                      children: (0, R.we)("#Loading"),
-                    }),
-                  ],
-                }),
-              })
-            );
-          });
-        function C(n) {
-          const [o, t] = c.useState(!0),
-            a = c.useRef(void 0),
-            e = c.useRef(void 0),
-            r = c.useRef(null);
+(self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
+  [5278],
+  {
+    4111: (e) => {
+      e.exports = {
+        AvatarCrop: "UVQKcPi5M7xfkxGQGiesv",
+        AvatarCropBound: "t4p1Ec6lMuoroo13jMEgH",
+        AvatarCropImg: "JxmP84JNqiT4jGVeYsQti",
+        AvatarLoading: "_2HcWfCd15FR0zxzO3g4QQ9",
+      };
+    },
+    66884: (e, t, a) => {
+      "use strict";
+      a.r(t), a.d(t, { default: () => u });
+      var r = a(7850),
+        n = a(90626),
+        o = a(44217),
+        i = a.n(o),
+        c = a(56011),
+        s = a(61859),
+        l = a(35471),
+        d = a(4111);
+      const u = n.forwardRef(function (e, t) {
+        const {
+          isLoading: a,
+          imageRef: o,
+          loaderRef: c,
+          getBlob: u,
+        } = (function (e) {
+          const [t, a] = n.useState(!0),
+            r = n.useRef(void 0),
+            o = n.useRef(void 0),
+            c = n.useRef(null);
           return (
-            c.useEffect(() => {
-              t(!0),
-                e.current &&
-                  e.current.scrollIntoView({
+            n.useEffect(() => {
+              a(!0),
+                o.current &&
+                  o.current.scrollIntoView({
                     behavior: "smooth",
                     block: "center",
                   }),
-                I(a.current, n).then(() => {
-                  t(!1),
-                    (r.current = new (P())(a.current, {
+                g(r.current, e).then(() => {
+                  a(!1),
+                    (c.current = new (i())(r.current, {
                       viewMode: 1,
                       background: !1,
                       dragMode: "move",
                       aspectRatio: 1,
-                      preview: `.${f.AvatarCropPreview}`,
+                      preview: `.${l.AvatarCropPreview}`,
                       rotatable: !1,
                       checkOrientation: !1,
                       toggleDragModeOnDblclick: !1,
                       ready: () => {
-                        const A = r.current,
-                          d = A.getData(),
-                          i = Math.min(d.x, d.y);
-                        i > 0 &&
-                          A.setData({
-                            x: d.x - i,
-                            y: d.y - i,
-                            width: d.width + i + i,
-                            height: d.height + i + i,
+                        const e = c.current,
+                          t = e.getData(),
+                          a = Math.min(t.x, t.y);
+                        a > 0 &&
+                          e.setData({
+                            x: t.x - a,
+                            y: t.y - a,
+                            width: t.width + a + a,
+                            height: t.height + a + a,
                           });
                       },
                     }));
                 });
-              const l = a.current;
+              const t = r.current;
               return () => {
-                r.current.destroy(), URL.revokeObjectURL(l.src), (l.src = "");
+                c.current.destroy(), URL.revokeObjectURL(t.src), (t.src = "");
               };
-            }, [n]),
+            }, [e]),
             {
-              isLoading: o,
-              imageRef: a,
-              loaderRef: e,
-              getBlob: () => U(r.current, a.current),
+              isLoading: t,
+              imageRef: r,
+              loaderRef: o,
+              getBlob: () => h(c.current, r.current),
             }
           );
-        }
-        async function I(n, o) {
-          const t = new Image(),
-            a = (0, _.A2)(t, "load");
-          (t.src = URL.createObjectURL(o)), await a;
-          const e = document.createElement("canvas");
-          (e.width = t.width), (e.height = t.height);
-          const r = e.getContext("2d");
-          r.rect(0, 0, e.width, e.height),
-            (r.fillStyle = "black"),
-            r.fill(),
-            r.drawImage(t, 0, 0),
-            URL.revokeObjectURL(t.src);
-          const l = (0, _.A2)(n, "load");
-          (n.src = URL.createObjectURL(await h(e))), await l;
-        }
-        async function U(n, o) {
-          const t = n.getData();
-          let a = L;
-          for (;;) {
-            const e = await h(
-              B(o, { left: t.x, top: t.y, size: t.width, maxSize: E * a }),
-            );
-            if (a === 1 || e.size < O) return e;
-            a--;
-          }
-        }
-        function B(n, o) {
-          const t = Math.min(Math.max(E, o.size), o.maxSize),
-            a = document.createElement("canvas");
-          (a.width = t), (a.height = t);
-          const e = a.getContext("2d");
-          return (
-            (e.imageSmoothingEnabled = !0),
-            (e.imageSmoothingQuality = "high"),
-            e.rect(0, 0, t, t),
-            (e.fillStyle = "black"),
-            e.fill(),
-            e.drawImage(n, o.left, o.top, o.size, o.size, 0, 0, t, t),
-            a
+        })(e.imageData);
+        return (
+          n.useImperativeHandle(t, () => ({ getBlob: u })),
+          (0, r.jsx)("div", {
+            className: d.AvatarCrop,
+            children: (0, r.jsxs)("div", {
+              className: d.AvatarCropBound,
+              children: [
+                (0, r.jsx)("img", { ref: o, className: d.AvatarCropImg }),
+                (0, r.jsx)("div", {
+                  ref: c,
+                  className: d.AvatarLoading,
+                  style: { display: a ? "" : "none" },
+                  children: (0, s.we)("#Loading"),
+                }),
+              ],
+            }),
+          })
+        );
+      });
+      async function g(e, t) {
+        const a = new Image(),
+          r = (0, c.A2)(a, "load");
+        (a.src = URL.createObjectURL(t)), await r;
+        const n = document.createElement("canvas");
+        (n.width = a.width), (n.height = a.height);
+        const o = n.getContext("2d");
+        o.rect(0, 0, n.width, n.height),
+          (o.fillStyle = "black"),
+          o.fill(),
+          o.drawImage(a, 0, 0),
+          URL.revokeObjectURL(a.src);
+        const i = (0, c.A2)(e, "load");
+        (e.src = URL.createObjectURL(await f(n))), await i;
+      }
+      async function h(e, t) {
+        const a = e.getData();
+        let r = 5;
+        for (;;) {
+          const e = await f(
+            m(t, { left: a.x, top: a.y, size: a.width, maxSize: 184 * r }),
           );
+          if (1 === r || e.size < 1048576) return e;
+          r--;
         }
-        async function h(n, o, t) {
-          return new Promise((a) => n.toBlob(a, o, t));
-        }
-      },
-      4111: (g) => {
-        g.exports = {
-          AvatarCrop: "UVQKcPi5M7xfkxGQGiesv",
-          AvatarCropBound: "t4p1Ec6lMuoroo13jMEgH",
-          AvatarCropImg: "JxmP84JNqiT4jGVeYsQti",
-          AvatarLoading: "_2HcWfCd15FR0zxzO3g4QQ9",
-        };
-      },
+      }
+      function m(e, t) {
+        const a = Math.min(Math.max(184, t.size), t.maxSize),
+          r = document.createElement("canvas");
+        (r.width = a), (r.height = a);
+        const n = r.getContext("2d");
+        return (
+          (n.imageSmoothingEnabled = !0),
+          (n.imageSmoothingQuality = "high"),
+          n.rect(0, 0, a, a),
+          (n.fillStyle = "black"),
+          n.fill(),
+          n.drawImage(e, t.left, t.top, t.size, t.size, 0, 0, a, a),
+          r
+        );
+      }
+      async function f(e, t, a) {
+        return new Promise((r) => e.toBlob(r, t, a));
+      }
     },
-  ]);
-})();
+  },
+]);

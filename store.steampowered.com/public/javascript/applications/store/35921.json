@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "เกมนี้เคยลดราคา %1$s มาก่อนภายในเวลา %2$s วันที่ผ่านมา",
     "Price_History_Current_Low_Price_Ttip": "ขณะนี้เกมนี้มีราคาต่ำสุดในช่วงเวลา %1$s วันที่ผ่านมา",
     "Price_History_Current_Price": "ขณะนี้",
-    "Price_History_Lowest_Previous_30": "ส่วนลดตามราคาต่ำสุดในช่วง 30 วันที่ผ่านมา"
+    "Price_History_Lowest_Previous_30": "ส่วนลดตามราคาต่ำสุดในช่วง 30 วันที่ผ่านมา",
+    "PersonalCalendar_Title": "ปฏิทินส่วนตัวของคุณ",
+    "PersonalCalendar_Subtitle": "รายชื่อเกมใหม่และใกล้วางจำหน่ายที่ปรับแต่งเฉพาะสำหรับคุณ",
+    "PersonalCalendar_More": "+%1$s เพิ่มเติม",
+    "PersonalCalendar_Full": "สำรวจปฏิทินส่วนตัวแบบเต็มของคุณ",
+    "PersonalCalendar_Explore": "Explore more",
+    "PersonalCalendar_EmptyDay": "เราไม่มีรายการวางจำหน่ายล่าสุดที่จะแนะนำให้คุณในวันนี้ <1>โปรดดูรายการที่เหลือในปฏิทินของคุณ!</1>",
+    "NewBadge": "ใหม่",
+    "Time_Today": "วันนี้",
+    "store_ui_dummy": "dont translate"
 }

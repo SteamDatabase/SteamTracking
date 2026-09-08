@@ -1,5 +1,5 @@
 {
-    "footer_legal_notice": "© %1$s Valve Corporation. Hak cipta terpelihara. Semua tanda dagangan adalah hak milik pemilik masing-masing di AS dan negara-negara lain.<br>VAT termasuk dalam semua harga jika berkenaan.",
+    "footer_legal_notice": "© %1$s Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.<br>VAT included in all prices where applicable.",
     "footer_link_header_steam": "STEAM",
     "footer_link_header_valve": "VALVE",
     "footer_link_header_legal": "PERUNDANGAN",
@@ -10,9 +10,9 @@
     "footer_link_steam_distribution": "Pengedaran Steam",
     "footer_link_gift_cards": "Kad Hadiah",
     "footer_link_about_valve": "Tentang Valve",
-    "footer_link_jobs": "Kerjaya",
+    "footer_link_jobs": "Jobs",
     "footer_link_hardware": "Perkakasan",
-    "footer_link_recycling": "Kitar Semula",
+    "footer_link_recycling": "Recycling",
     "footer_link_privacy": "Privasi",
     "footer_link_accessibility": "Kebolehcapaian",
     "footer_link_notices_and_policies": "Notis & Polisi",

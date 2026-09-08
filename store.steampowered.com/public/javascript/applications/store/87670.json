@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "Peli oli saatavilla hintaan %1$s viimeisen %2$s päivän aikana.",
     "Price_History_Current_Low_Price_Ttip": "Pelin hinta on tällä hetkellä alin viimeisen %1$s päivän aikana.",
     "Price_History_Current_Price": "NYT",
-    "Price_History_Lowest_Previous_30": "Alennus alimman hinnan mukaan viimeisen 30 päivän aikana"
+    "Price_History_Lowest_Previous_30": "Alennus alimman hinnan mukaan viimeisen 30 päivän aikana",
+    "PersonalCalendar_Title": "Oma pelikalenteri",
+    "PersonalCalendar_Subtitle": "Sinulle räätälöity lista uusista ja tulevista peleistä",
+    "PersonalCalendar_More": "+%1$s muuta",
+    "PersonalCalendar_Full": "Tutustu pelikalenterin koko sisältöön",
+    "PersonalCalendar_Explore": "Explore more",
+    "PersonalCalendar_EmptyDay": "Meillä ei ole tänään suositeltavia uusia julkaisuja <1>Tutustu pelikalenterisi muuhun sisältöön!</1>",
+    "NewBadge": "UUTTA",
+    "Time_Today": "Tänään",
+    "store_ui_dummy": "dont translate"
 }

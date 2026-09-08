@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "Bu oyun son %2$s gün içerisinde indirimle %1$s oldu.",
     "Price_History_Current_Low_Price_Ttip": "Bu oyun şu anda son %1$s gündeki en düşük fiyatta.",
     "Price_History_Current_Price": "ŞİMDİ",
-    "Price_History_Lowest_Previous_30": "Son 30 gün içindeki en düşük fiyata göre indirim"
+    "Price_History_Lowest_Previous_30": "Son 30 gün içindeki en düşük fiyata göre indirim",
+    "PersonalCalendar_Title": "Kişisel Takviminiz",
+    "PersonalCalendar_Subtitle": "Size özel hazırlanmış yeni ve yakında çıkacak oyunlar listesi",
+    "PersonalCalendar_More": "+%1$s tane daha",
+    "PersonalCalendar_Full": "Kişisel takviminizin tamamını keşfedin",
+    "PersonalCalendar_Explore": "Explore more",
+    "PersonalCalendar_EmptyDay": "Bugün size önerebileceğimiz yeni çıkan bir oyun yok. <1>Takviminizin geri kalanına göz atın!</1>",
+    "NewBadge": "YENİ",
+    "Time_Today": "Bugün",
+    "store_ui_dummy": "dont translate"
 }

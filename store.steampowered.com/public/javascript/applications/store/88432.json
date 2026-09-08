@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "このゲームは、過去%2$s日間に割引され、%1$sで販売されていました",
     "Price_History_Current_Low_Price_Ttip": "このゲームの現在の価格は過去%1$s日間で最低です",
     "Price_History_Current_Price": "現在",
-    "Price_History_Lowest_Previous_30": "過去30日間の最低価格に基づく割引"
+    "Price_History_Lowest_Previous_30": "過去30日間の最低価格に基づく割引",
+    "PersonalCalendar_Title": "パーソナルカレンダー",
+    "PersonalCalendar_Subtitle": "あなた用にパーソナライズされた新作と近日登場ゲームのリスト",
+    "PersonalCalendar_More": "他%1$s本",
+    "PersonalCalendar_Full": "パーソナルカレンダー全体を探索",
+    "PersonalCalendar_Explore": "Explore more",
+    "PersonalCalendar_EmptyDay": "この日におすすめの新作リリースはありません。<1>カレンダーの他の日をチェックしてください！</1>",
+    "NewBadge": "NEW",
+    "Time_Today": "今日",
+    "store_ui_dummy": "dont translate"
 }

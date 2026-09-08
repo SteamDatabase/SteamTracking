@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "Tento produkt byl v posledních %2$s dnech dostupný za nejnižší zlevněnou cenu %1$s.",
     "Price_History_Current_Low_Price_Ttip": "Cena tohoto produktu je v současné době nejnižší za posledních %1$s dnů.",
     "Price_History_Current_Price": "AKTUÁLNÍ CENA",
-    "Price_History_Lowest_Previous_30": "Sleva založená na nejnižší ceně za posledních 30 dnů."
+    "Price_History_Lowest_Previous_30": "Sleva založená na nejnižší ceně za posledních 30 dnů.",
+    "PersonalCalendar_Title": "Váš osobní kalendář",
+    "PersonalCalendar_Subtitle": "Personalizovaný seznam nových a nadcházejících her.",
+    "PersonalCalendar_More": "A další (%1$s)",
+    "PersonalCalendar_Full": "Otevřít kalendář v plném zobrazení",
+    "PersonalCalendar_Explore": "Explore more",
+    "PersonalCalendar_EmptyDay": "Pro tento den Vám nemáme co ukázat. <1>Zbytek svého osobního kalendáře najdete zde!</1>",
+    "NewBadge": "NOVINKA",
+    "Time_Today": "Dnes",
+    "store_ui_dummy": "dont translate"
 }

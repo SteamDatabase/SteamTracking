@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "Dit spel was in de afgelopen %2$s dagen in de uitverkoop voor %1$s.",
     "Price_History_Current_Low_Price_Ttip": "De huidige prijs voor dit spel is de laagste prijs in de afgelopen %1$s dagen.",
     "Price_History_Current_Price": "NU",
-    "Price_History_Lowest_Previous_30": "Korting op basis van de laagste prijs in de afgelopen 30 dagen"
+    "Price_History_Lowest_Previous_30": "Korting op basis van de laagste prijs in de afgelopen 30 dagen",
+    "PersonalCalendar_Title": "Je persoonlijke agenda",
+    "PersonalCalendar_Subtitle": "Een speciaal voor jou samengestelde lijst van nieuwe en binnenkort verwachte spellen",
+    "PersonalCalendar_More": "+ nog %1$s",
+    "PersonalCalendar_Full": "Je volledige persoonlijke agenda bekijken",
+    "PersonalCalendar_Explore": "Explore more",
+    "PersonalCalendar_EmptyDay": "We hebben op deze dag geen nieuwe uitgaven die we je kunnen aanbevelen <1>Bekijk de rest van je agenda!</1>",
+    "NewBadge": "NIEUW",
+    "Time_Today": "Vandaag",
+    "store_ui_dummy": "dont translate"
 }

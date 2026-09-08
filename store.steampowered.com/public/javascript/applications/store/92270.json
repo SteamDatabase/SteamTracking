@@ -153,5 +153,14 @@
     "Price_History_Recent_Low_Price_Ttip": "Dette spil var på tilbud for %1$s indenfor de sidste %2$s dage",
     "Price_History_Current_Low_Price_Ttip": "Dette spil har lige nu den laveste pris indenfor de sidste %1$s dage",
     "Price_History_Current_Price": "NU",
-    "Price_History_Lowest_Previous_30": "Rabat baseret på laveste pris de sidste 30 dage"
+    "Price_History_Lowest_Previous_30": "Rabat baseret på laveste pris de sidste 30 dage",
+    "PersonalCalendar_Title": "Din personlige kalender",
+    "PersonalCalendar_Subtitle": "En personlig liste til dig med nye og kommende spil",
+    "PersonalCalendar_More": "+%1$s andre",
+    "PersonalCalendar_Full": "Udforsk hele din personlige kalender",
+    "PersonalCalendar_Explore": "Udforsk flere",
+    "PersonalCalendar_EmptyDay": "Vi har ingen nye udgivelser at anbefale dig i dag. <1>Tjek resten af kalenderen!</1>",
+    "NewBadge": "NYT",
+    "Time_Today": "I dag",
+    "store_ui_dummy": "dont translate"
 }

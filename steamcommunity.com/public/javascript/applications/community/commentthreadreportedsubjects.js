@@ -1,32 +1,30 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 "use strict";
-(() => {
-  (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [6408, 892],
-    {
-      10723: (c, m, e) => {
-        e.r(m), e.d(m, { default: () => d });
-        var u = e(7850),
-          a = e(46085),
-          s = e(64981),
-          n = e(17871);
-        function d(t) {
-          const o = (0, a.kZ)(s.NC, t.commentThreadID),
-            C = (0, n.useCommentThread)(
-              t.steamid,
-              t.eCommentThreadType,
-              t.gidfeature,
-              t.gidfeature2,
-            );
-          return (0, u.jsx)(n.ReportedSubjectList, {
-            subjectType: s.NC,
-            subjectGroupQuery: o,
-            commentThreadQuery: C,
-            inlineClassNames: t.inlineClassNames,
-          });
-        }
-      },
+(self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
+  [6408, 892],
+  {
+    48866: (e, t, s) => {
+      s.r(t), s.d(t, { default: () => r });
+      var u = s(7850),
+        n = s(90182),
+        a = s(34410),
+        m = s(10378);
+      function r(e) {
+        const t = (0, n.kZ)(a.NC, e.commentThreadID),
+          s = (0, m.useCommentThread)(
+            e.steamid,
+            e.eCommentThreadType,
+            e.gidfeature,
+            e.gidfeature2,
+          );
+        return (0, u.jsx)(m.ReportedSubjectList, {
+          subjectType: a.NC,
+          subjectGroupQuery: t,
+          commentThreadQuery: s,
+          inlineClassNames: e.inlineClassNames,
+        });
+      }
     },
-  ]);
-})();
+  },
+]);
