@@ -3922,8 +3922,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       function _(_) {
         return (0, _.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -4679,7 +4679,6 @@
       }
       function _(_) {
         return (0, _.jsx)("svg", {
-          style: _,
           className: "SVGIcon_Button",
           width: "36",
           height: "36",

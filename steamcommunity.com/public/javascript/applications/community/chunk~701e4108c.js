@@ -3,8 +3,8 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [8201],
   {
-    69041: (s) => {
-      s.exports = {
+    69041: (e) => {
+      e.exports = {
         Button: "_0BH1ydyFmSnUvoVK2hIc",
         "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
         Icon: "_2_fy3SzcKa1xbrgpG7JsW1",
@@ -20,8 +20,8 @@
         MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
       };
     },
-    73406: (s) => {
-      s.exports = {
+    73406: (e) => {
+      e.exports = {
         Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
         LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
         "Size-1": "_1Vxi9jNBkNCJzht7q4pUcZ",
@@ -34,11 +34,11 @@
         ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
       };
     },
-    44041: (s) => {
-      s.exports = { Box: "_2YzOLNBx6TonKU0Zmp20l4" };
+    44041: (e) => {
+      e.exports = { Box: "_2YzOLNBx6TonKU0Zmp20l4" };
     },
-    68875: (s) => {
-      s.exports = {
+    68875: (e) => {
+      e.exports = {
         Flex: "_3nHL7awgK1Qei1XivGvHMK",
         Direction: "_3JCkAyd9cnB90tRcDLPp4W",
         Justify: "_12ampOcrpRamy1y301kEaK",
@@ -50,8 +50,8 @@
         Inline: "LOeaKjPDMbdcAB54IFgyX",
       };
     },
-    88122: (s) => {
-      s.exports = {
+    88122: (e) => {
+      e.exports = {
         "m-0": "_3NvasCX7YWBZpC8aibkm0E",
         "m-1": "_37cUiZ5UzC1qHmlFJaMIAr",
         "m-2": "_22pmrTZIf7_RclhN_Za_yk",
@@ -270,252 +270,282 @@
         AspectRatio: "_1OB-pyw07DhYE8iZusGAjg",
       };
     },
-    91239: (s) => {
-      s.exports = { Reset: "_3A_c3YHYd4YIjA8Y-olnPl" };
+    65274: (e) => {
+      e.exports = {
+        Text: "f6hU22EA7Z8peFWZVBJU",
+        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
+        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
+        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
+        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
+        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
+        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
+        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
+        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
+        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
+        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
+        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
+        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
+        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
+        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
+      };
     },
-    48474: (s, r, e) => {
+    50122: (e) => {
+      e.exports = {
+        TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
+        TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
+        Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
+        "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
+        "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
+        "Underline-auto": "_2OgYmw12nDHXtyT9za9yzL",
+        "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
+      };
+    },
+    91239: (e) => {
+      e.exports = { Reset: "_3A_c3YHYd4YIjA8Y-olnPl" };
+    },
+    48474: (e, s, r) => {
       "use strict";
-      e.d(r, { $: () => f, v: () => y });
-      var o = e(7850),
-        p = e(64238),
-        i = e.n(p),
-        n = e(69041),
-        t = e(75659),
-        a = e(11526),
-        c = e(11820),
-        l = e(62463),
-        m = e(45699),
-        _ = e(66922),
-        d = e(78327);
-      function u(s) {
-        s.preventDefault();
+      r.d(s, { $: () => f, v: () => x });
+      var o = r(7850),
+        i = r(64238),
+        n = r.n(i),
+        p = r(69041),
+        t = r(75659),
+        a = r(11526),
+        c = r(11820),
+        l = r(62463),
+        m = r(45699),
+        _ = r(66922),
+        d = r(78327);
+      function u(e) {
+        e.preventDefault();
       }
       const v = [
           ...t.L,
-          { prop: "size", responsive: !0, className: (s) => n[`Size-${s}`] },
-          { prop: "variant", className: (s) => n[`Variant-${s}`] },
-          { prop: "color", dataProperty: (s) => ["accent-color", `${s}`] },
+          { prop: "size", responsive: !0, className: (e) => p[`Size-${e}`] },
+          { prop: "variant", className: (e) => p[`Variant-${e}`] },
+          { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
           {
             prop: "width",
-            className: n.Width,
+            className: p.Width,
             cssProperty: "--width",
             responsive: !0,
           },
           {
             prop: "minWidth",
-            className: n.MinWidth,
+            className: p.MinWidth,
             cssProperty: "--min-width",
             responsive: !0,
           },
         ],
-        f = function (s) {
-          var r;
+        f = function (e) {
+          var s;
           const {
-              variant: e,
-              size: p = "2",
+              variant: r,
+              size: i = "2",
               minWidth: t = "fit-content",
               color: c,
               loading: u,
               children: f,
-              onClick: y,
-              icon: N,
-              focusable: x,
+              onClick: x,
+              icon: y,
+              focusable: N,
               navProps: g,
               ...h
-            } = s,
+            } = e,
             P = (0, d.Qn)(),
             b = u
               ? (0, o.jsx)(l.k, {
-                  size: p,
+                  size: i,
                   color: c,
                   variant: "bright",
                   children: f,
                 })
               : f,
-            S = u ? void 0 : y,
-            z =
-              null !== (r = null != x ? x : null == g ? void 0 : g.focusable) &&
-              void 0 !== r
-                ? r
-                : !!S,
-            C = (0, _.f)("Button", e),
-            j = {
+            z = u ? void 0 : x,
+            S =
+              null !== (s = null != N ? N : null == g ? void 0 : g.focusable) &&
+              void 0 !== s
+                ? s
+                : !!z,
+            k = (0, _.f)("Button", r),
+            w = {
               type: "button",
               ...(0, a.mz)(
                 {
                   ...h,
-                  variant: C,
-                  size: p,
+                  variant: k,
+                  size: i,
                   minWidth: t,
                   color: c,
-                  className: i()(n.Button, N && n.Icon),
-                  onClick: S,
+                  className: n()(p.Button, y && p.Icon),
+                  onClick: z,
                 },
                 v,
               ),
               children: b,
             };
-          return P && (z || g)
-            ? (0, o.jsx)(m.fu, { ...j, ...(g || {}), focusable: z })
-            : (0, o.jsx)("button", { ...j });
+          return P && (S || g)
+            ? (0, o.jsx)(m.fu, { ...w, ...(g || {}), focusable: S })
+            : (0, o.jsx)("button", { ...w });
         },
-        y = function (s) {
+        x = function (e) {
           const {
-              variant: r,
-              size: e = "2",
-              minWidth: p = "fit-content",
+              variant: s,
+              size: r = "2",
+              minWidth: i = "fit-content",
               disabled: t,
               icon: l,
               focusable: f,
-              navProps: y,
-              ...N
-            } = s,
-            x = (0, d.Qn)(),
-            g = (0, _.f)("Button", r),
+              navProps: x,
+              ...y
+            } = e,
+            N = (0, d.Qn)(),
+            g = (0, _.f)("Button", s),
             h = t ? u : void 0,
             P = (0, a.mz)(
               {
                 onClick: h,
                 "aria-disabled": t,
-                ...N,
+                ...y,
                 variant: g,
-                size: e,
-                minWidth: p,
-                className: i()(n.Button, l && n.Icon, (0, c.T)()),
+                size: r,
+                minWidth: i,
+                className: n()(p.Button, l && p.Icon, (0, c.T)()),
               },
               v,
             );
-          return x && (f || y)
-            ? (0, o.jsx)(m.Ii, { ...P, ...(y || {}), focusable: f })
+          return N && (f || x)
+            ? (0, o.jsx)(m.Ii, { ...P, ...(x || {}), focusable: f })
             : (0, o.jsx)("a", { ...P });
         };
     },
-    62463: (s, r, e) => {
+    62463: (e, s, r) => {
       "use strict";
-      e.d(r, { k: () => _ });
-      var o = e(7850),
-        p = e(73406),
-        i = e(11526),
-        n = e(90534),
-        t = e(64238),
-        a = e.n(t),
-        c = e(83392),
-        l = e(75659),
-        m = e(66922);
-      function _(s) {
+      r.d(s, { k: () => _ });
+      var o = r(7850),
+        i = r(73406),
+        n = r(11526),
+        p = r(90534),
+        t = r(64238),
+        a = r.n(t),
+        c = r(83392),
+        l = r(75659),
+        m = r(66922);
+      function _(e) {
         const {
-            size: r = "3",
-            loading: e = !0,
-            children: i,
+            size: s = "3",
+            loading: r = !0,
+            children: n,
             color: t,
             variant: a,
             ...l
-          } = s,
+          } = e,
           _ = (0, m.f)("LoadingSpinner", a);
-        return i || !e
-          ? (0, o.jsxs)(n.az, {
+        return n || !r
+          ? (0, o.jsxs)(p.az, {
               position: "relative",
               ...l,
               width: "fit-content",
               children: [
                 (0, o.jsx)("div", {
-                  "data-visibility": !e,
-                  className: p.ChildContainer,
-                  children: i,
+                  "data-visibility": !r,
+                  className: i.ChildContainer,
+                  children: n,
                 }),
-                e &&
+                r &&
                   (0, o.jsx)(c.s, {
                     position: "absolute",
                     inset: "0",
                     justify: "center",
                     align: "center",
-                    children: (0, o.jsx)(d, { size: r, color: t, variant: _ }),
+                    children: (0, o.jsx)(d, { size: s, color: t, variant: _ }),
                   }),
               ],
             })
-          : (0, o.jsx)(d, { size: r, color: t, variant: _, ...l });
+          : (0, o.jsx)(d, { size: s, color: t, variant: _, ...l });
       }
-      function d(s) {
-        const { className: r, color: e, ...n } = (0, i.mz)(s, u);
+      function d(e) {
+        const { className: s, color: r, ...p } = (0, n.mz)(e, u);
         return (0, o.jsx)("div", {
-          "data-accent-color": e,
-          className: a()(r, p.Spinner),
-          ...n,
+          "data-accent-color": r,
+          className: a()(s, i.Spinner),
+          ...p,
         });
       }
       const u = [
         ...l.L,
-        { prop: "size", responsive: !0, className: (s) => p[`Size-${s}`] },
-        { prop: "variant", className: (s) => p[`Variant-${s}`] },
+        { prop: "size", responsive: !0, className: (e) => i[`Size-${e}`] },
+        { prop: "variant", className: (e) => i[`Variant-${e}`] },
       ];
     },
-    90534: (s, r, e) => {
+    90534: (e, s, r) => {
       "use strict";
-      e.d(r, { A4: () => u, az: () => _ });
-      var o = e(7850),
-        p = e(44041),
-        i = e(39479),
-        n = e(64238),
-        t = e.n(n),
-        a = e(11526),
-        c = e(75659),
-        l = e(11820),
-        m = e(78327);
-      function _(s) {
-        var r;
-        const { as: e = "div", focusable: n, navProps: c, ref: _, ...u } = s,
+      r.d(s, { A4: () => u, az: () => _ });
+      var o = r(7850),
+        i = r(44041),
+        n = r(39479),
+        p = r(64238),
+        t = r.n(p),
+        a = r(11526),
+        c = r(75659),
+        l = r(11820),
+        m = r(78327);
+      function _(e) {
+        var s;
+        const { as: r = "div", focusable: p, navProps: c, ref: _, ...u } = e,
           v = (0, m.Qn)(),
           f = (0, a.mz)(
-            { ...u, className: t()(p.Box, (0, l.T)(), s.className) },
+            { ...u, className: t()(i.Box, (0, l.T)(), e.className) },
             d,
           ),
-          y =
-            null !== (r = null != n ? n : null == c ? void 0 : c.focusable) &&
-            void 0 !== r
-              ? r
+          x =
+            null !== (s = null != p ? p : null == c ? void 0 : c.focusable) &&
+            void 0 !== s
+              ? s
               : !!u.onClick,
-          N = (0, o.jsx)(e, { ref: _, ...f });
-        return v && (y || c)
-          ? (0, o.jsx)(i.J, { ...(c || {}), focusable: y, children: N })
-          : N;
+          y = (0, o.jsx)(r, { ref: _, ...f });
+        return v && (x || c)
+          ? (0, o.jsx)(n.J, { ...(c || {}), focusable: x, children: y })
+          : y;
       }
       const d = c.h;
-      function u(s) {
-        return (0, a.Ef)(s, c.L);
+      function u(e) {
+        return (0, a.Ef)(e, c.L);
       }
     },
-    83392: (s, r, e) => {
+    83392: (e, s, r) => {
       "use strict";
-      e.d(r, { s: () => _ });
-      var o = e(7850),
-        p = e(39479),
-        i = e(64238),
-        n = e.n(i),
-        t = e(11526),
-        a = e(55348),
-        c = e(75659),
-        l = e(68875),
-        m = e(78327);
-      function _(s) {
-        var r, e;
-        const { as: i = "div", focusable: c, navProps: _, ref: u, ...v } = s,
+      r.d(s, { s: () => _ });
+      var o = r(7850),
+        i = r(39479),
+        n = r(64238),
+        p = r.n(n),
+        t = r(11526),
+        a = r(55348),
+        c = r(75659),
+        l = r(68875),
+        m = r(78327);
+      function _(e) {
+        var s, r;
+        const { as: n = "div", focusable: c, navProps: _, ref: u, ...v } = e,
           f = (0, m.Qn)(),
-          y = (0, t.mz)({ ...v, className: n()(s.className, l.Flex) }, d),
-          N =
-            null !== (r = null != c ? c : null == _ ? void 0 : _.focusable) &&
-            void 0 !== r
-              ? r
+          x = (0, t.mz)({ ...v, className: p()(e.className, l.Flex) }, d),
+          y =
+            null !== (s = null != c ? c : null == _ ? void 0 : _.focusable) &&
+            void 0 !== s
+              ? s
               : !!v.onClick,
-          x = (0, o.jsx)(i, { ref: u, ...y }),
-          g = (0, a.n)(null !== (e = v.direction) && void 0 !== e ? e : "row");
+          N = (0, o.jsx)(n, { ref: u, ...x }),
+          g = (0, a.n)(null !== (r = v.direction) && void 0 !== r ? r : "row");
         return f
-          ? (0, o.jsx)(p.J, {
+          ? (0, o.jsx)(i.J, {
               ...(_ || {}),
-              focusable: N,
+              focusable: y,
               "flow-children": g,
-              children: x,
+              children: N,
             })
-          : x;
+          : N;
       }
       const d = [
         ...c.h,
@@ -529,7 +559,7 @@
           prop: "justify",
           responsive: !0,
           className: l.Justify,
-          cssProperty: (s) => ["--justify", u(s)],
+          cssProperty: (e) => ["--justify", u(e)],
         },
         {
           prop: "align",
@@ -541,19 +571,19 @@
           prop: "gap",
           responsive: !0,
           className: l.Gap,
-          cssProperty: (s) => ["--gap", `var(--spacing-${s})`],
+          cssProperty: (e) => ["--gap", `var(--spacing-${e})`],
         },
         {
           prop: "gapX",
           responsive: !0,
           className: l.GapX,
-          cssProperty: (s) => ["--gap-x", `var(--spacing-${s})`],
+          cssProperty: (e) => ["--gap-x", `var(--spacing-${e})`],
         },
         {
           prop: "gapY",
           responsive: !0,
           className: l.GapY,
-          cssProperty: (s) => ["--gap-y", `var(--spacing-${s})`],
+          cssProperty: (e) => ["--gap-y", `var(--spacing-${e})`],
         },
         {
           prop: "wrap",
@@ -563,283 +593,283 @@
         },
         { prop: "inline", responsive: !0, className: l.Inline },
       ];
-      function u(s) {
-        return /^(between|around|evenly)$/.test(s) ? `space-${s}` : s;
+      function u(e) {
+        return /^(between|around|evenly)$/.test(e) ? `space-${e}` : e;
       }
     },
-    75659: (s, r, e) => {
+    75659: (e, s, r) => {
       "use strict";
-      e.d(r, { L: () => i, h: () => n });
-      var o = e(11526),
-        p = e(88122);
-      const i = [
-          { prop: "margin", responsive: !0, className: (s) => p[`m-${s}`] },
-          { prop: "marginX", responsive: !0, className: (s) => p[`mx-${s}`] },
-          { prop: "marginY", responsive: !0, className: (s) => p[`my-${s}`] },
-          { prop: "marginTop", responsive: !0, className: (s) => p[`mt-${s}`] },
+      r.d(s, { L: () => n, h: () => p });
+      var o = r(11526),
+        i = r(88122);
+      const n = [
+          { prop: "margin", responsive: !0, className: (e) => i[`m-${e}`] },
+          { prop: "marginX", responsive: !0, className: (e) => i[`mx-${e}`] },
+          { prop: "marginY", responsive: !0, className: (e) => i[`my-${e}`] },
+          { prop: "marginTop", responsive: !0, className: (e) => i[`mt-${e}`] },
           {
             prop: "marginRight",
             responsive: !0,
-            className: (s) => p[`mr-${s}`],
+            className: (e) => i[`mr-${e}`],
           },
           {
             prop: "marginBottom",
             responsive: !0,
-            className: (s) => p[`mb-${s}`],
+            className: (e) => i[`mb-${e}`],
           },
           {
             prop: "marginLeft",
             responsive: !0,
-            className: (s) => p[`ml-${s}`],
+            className: (e) => i[`ml-${e}`],
           },
           {
             prop: "marginStart",
             responsive: !0,
-            className: (s) => p[`ms-${s}`],
+            className: (e) => i[`ms-${e}`],
           },
-          { prop: "marginEnd", responsive: !0, className: (s) => p[`me-${s}`] },
+          { prop: "marginEnd", responsive: !0, className: (e) => i[`me-${e}`] },
         ],
-        n = [
-          ...i,
-          { prop: "padding", responsive: !0, className: (s) => p[`p-${s}`] },
-          { prop: "paddingX", responsive: !0, className: (s) => p[`px-${s}`] },
-          { prop: "paddingY", responsive: !0, className: (s) => p[`py-${s}`] },
+        p = [
+          ...n,
+          { prop: "padding", responsive: !0, className: (e) => i[`p-${e}`] },
+          { prop: "paddingX", responsive: !0, className: (e) => i[`px-${e}`] },
+          { prop: "paddingY", responsive: !0, className: (e) => i[`py-${e}`] },
           {
             prop: "paddingTop",
             responsive: !0,
-            className: (s) => p[`pt-${s}`],
+            className: (e) => i[`pt-${e}`],
           },
           {
             prop: "paddingRight",
             responsive: !0,
-            className: (s) => p[`pr-${s}`],
+            className: (e) => i[`pr-${e}`],
           },
           {
             prop: "paddingBottom",
             responsive: !0,
-            className: (s) => p[`pb-${s}`],
+            className: (e) => i[`pb-${e}`],
           },
           {
             prop: "paddingLeft",
             responsive: !0,
-            className: (s) => p[`pl-${s}`],
+            className: (e) => i[`pl-${e}`],
           },
           {
             prop: "paddingStart",
             responsive: !0,
-            className: (s) => p[`ps-${s}`],
+            className: (e) => i[`ps-${e}`],
           },
           {
             prop: "paddingEnd",
             responsive: !0,
-            className: (s) => p[`pe-${s}`],
+            className: (e) => i[`pe-${e}`],
           },
           {
             prop: "width",
             responsive: !0,
-            className: p.Width,
+            className: i.Width,
             cssProperty: "--width",
           },
           {
             prop: "minWidth",
             responsive: !0,
-            className: p.MinWidth,
+            className: i.MinWidth,
             cssProperty: "--min-width",
           },
           {
             prop: "maxWidth",
             responsive: !0,
-            className: p.MaxWidth,
+            className: i.MaxWidth,
             cssProperty: "--max-width",
           },
           {
             prop: "height",
             responsive: !0,
-            className: p.Height,
+            className: i.Height,
             cssProperty: "--height",
           },
           {
             prop: "minHeight",
             responsive: !0,
-            className: p.MinHeight,
+            className: i.MinHeight,
             cssProperty: "--min-height",
           },
           {
             prop: "maxHeight",
             responsive: !0,
-            className: p.MaxHeight,
+            className: i.MaxHeight,
             cssProperty: "--max-height",
           },
           {
             prop: "flexBasis",
             responsive: !0,
-            className: p.FlexBasis,
+            className: i.FlexBasis,
             cssProperty: "--flex-basis",
           },
           {
             prop: "flexGrow",
             responsive: !0,
-            className: p.FlexGrow,
+            className: i.FlexGrow,
             cssProperty: "--flex-grow",
           },
           {
             prop: "flexShrink",
             responsive: !0,
-            className: p.FlexShrink,
+            className: i.FlexShrink,
             cssProperty: "--flex-shrink",
           },
           {
             prop: "radius",
             responsive: !0,
-            className: (s) => p[`Radius-${s}`],
+            className: (e) => i[`Radius-${e}`],
           },
           {
             prop: "cursor",
             responsive: !0,
-            className: p.Cursor,
+            className: i.Cursor,
             cssProperty: "--cursor",
           },
           {
             prop: "position",
             responsive: !0,
-            className: p.Position,
+            className: i.Position,
             cssProperty: "--position",
           },
           {
             prop: "inset",
             responsive: !0,
-            className: p.Inset,
-            cssProperty: (s) => ["--inset", (0, o.ti)(s)],
+            className: i.Inset,
+            cssProperty: (e) => ["--inset", (0, o.ti)(e)],
           },
           {
             prop: "gridColumn",
             responsive: !0,
-            className: p.GridColumn,
+            className: i.GridColumn,
             cssProperty: "--grid-column",
           },
           {
             prop: "gridColumnStart",
             responsive: !0,
-            className: p.GridColumnStart,
+            className: i.GridColumnStart,
             cssProperty: "--grid-column-start",
           },
           {
             prop: "gridColumnEnd",
             responsive: !0,
-            className: p.GridColumnEnd,
+            className: i.GridColumnEnd,
             cssProperty: "--grid-column-end",
           },
           {
             prop: "gridRow",
             responsive: !0,
-            className: p.GridRow,
+            className: i.GridRow,
             cssProperty: "--grid-row",
           },
           {
             prop: "gridRowStart",
             responsive: !0,
-            className: p.GridRowStart,
+            className: i.GridRowStart,
             cssProperty: "--grid-row-start",
           },
           {
             prop: "gridRowEnd",
             responsive: !0,
-            className: p.GridRowEnd,
+            className: i.GridRowEnd,
             cssProperty: "--grid-row-end",
           },
           {
             prop: "gridArea",
             responsive: !0,
-            className: p.GridArea,
+            className: i.GridArea,
             cssProperty: "--grid-area",
           },
           {
             prop: "alignSelf",
             responsive: !0,
-            className: p.AlignSelf,
+            className: i.AlignSelf,
             cssProperty: "--align-self",
           },
           {
             prop: "justifySelf",
             responsive: !0,
-            className: p.JustifySelf,
+            className: i.JustifySelf,
             cssProperty: "--justify-self",
           },
           {
             prop: "background",
             responsive: !0,
-            className: p.Background,
-            cssProperty: (s) => ["--background", (0, o.Fd)(s)],
+            className: i.Background,
+            cssProperty: (e) => ["--background", (0, o.Fd)(e)],
           },
           {
             prop: "overflow",
             responsive: !0,
-            className: p.Overflow,
+            className: i.Overflow,
             cssProperty: "--overflow",
           },
           {
             prop: "zIndex",
             responsive: !0,
-            className: p.ZIndex,
+            className: i.ZIndex,
             cssProperty: "--z-index",
           },
           {
             prop: "display",
             responsive: !0,
-            className: p.Display,
+            className: i.Display,
             cssProperty: "--display",
           },
           {
             prop: "elevation",
             responsive: !0,
-            className: p.Elevation,
+            className: i.Elevation,
             dataProperty: "elevation",
           },
           {
             prop: "border",
             responsive: !0,
-            className: p.Border,
+            className: i.Border,
             cssProperty: "--border",
           },
           {
             prop: "borderColor",
             responsive: !0,
-            className: [p.Border, p.BorderColor].join(" "),
-            cssProperty: (s) => ["--border-color", (0, o.Fd)(s)],
+            className: [i.Border, i.BorderColor].join(" "),
+            cssProperty: (e) => ["--border-color", (0, o.Fd)(e)],
           },
           {
             prop: "outline",
             responsive: !0,
-            className: p.Outline,
-            cssProperty: (s) => ["--outline-color", (0, o.Fd)(s)],
+            className: i.Outline,
+            cssProperty: (e) => ["--outline-color", (0, o.Fd)(e)],
           },
           {
             prop: "textAlign",
             responsive: !0,
-            className: p.TextAlign,
+            className: i.TextAlign,
             cssProperty: "--text-align",
           },
           {
             prop: "aspectRatio",
             responsive: !0,
-            className: p.AspectRatio,
+            className: i.AspectRatio,
             cssProperty: "--aspect-ratio",
           },
         ];
     },
-    11526: (s, r, e) => {
+    11526: (e, s, r) => {
       "use strict";
-      e.d(r, {
-        Ef: () => n,
+      r.d(s, {
+        Ef: () => p,
         Fd: () => c,
         ti: () => a,
         To: () => l,
         w7: () => m,
         mz: () => t,
       });
-      var o = e(10430),
-        p = e(55348);
-      const i = {
+      var o = r(10430),
+        i = r(55348);
+      const n = {
         0: !0,
         1: !0,
         2: !0,
@@ -851,57 +881,57 @@
         8: !0,
         9: !0,
       };
-      function n(s, r) {
-        const e = { remaining: { ...s }, extracted: {} };
-        for (const s of r) {
-          const r = s.prop;
-          r in e.remaining &&
-            ((e.extracted[r] = e.remaining[r]), delete e.remaining[r]);
+      function p(e, s) {
+        const r = { remaining: { ...e }, extracted: {} };
+        for (const e of s) {
+          const s = e.prop;
+          s in r.remaining &&
+            ((r.extracted[s] = r.remaining[s]), delete r.remaining[s]);
         }
-        return e;
+        return r;
       }
-      function t(s, r) {
-        return (function (s, r, e) {
+      function t(e, s) {
+        return (function (e, s, r) {
           const o = [],
-            i = {},
+            n = {},
             t = {},
-            { extracted: a, remaining: c } = n(s, r);
-          for (const n of r) {
-            if (!(n.prop in a)) continue;
-            let r = a[n.prop];
+            { extracted: a, remaining: c } = p(e, s);
+          for (const p of s) {
+            if (!(p.prop in a)) continue;
+            let s = a[p.prop];
             if (
-              void 0 !== r &&
-              (n.responsive && (r = (0, p.I)(r, e.formFactor)), void 0 !== r)
+              void 0 !== s &&
+              (p.responsive && (s = (0, i.I)(s, r.formFactor)), void 0 !== s)
             ) {
-              if (n.className) {
+              if (p.className) {
                 if (
-                  !n.cssProperty &&
-                  !n.dataProperty &&
-                  "string" == typeof n.className &&
-                  !r
+                  !p.cssProperty &&
+                  !p.dataProperty &&
+                  "string" == typeof p.className &&
+                  !s
                 )
                   continue;
-                const s =
-                  "function" == typeof n.className
-                    ? n.className(r)
-                    : n.className;
-                o.push(s);
+                const e =
+                  "function" == typeof p.className
+                    ? p.className(s)
+                    : p.className;
+                o.push(e);
               }
-              if (n.cssProperty)
-                if ("function" == typeof n.cssProperty) {
-                  const o = n.cssProperty(r, s, e.formFactor);
+              if (p.cssProperty)
+                if ("function" == typeof p.cssProperty) {
+                  const o = p.cssProperty(s, e, r.formFactor);
                   if (o.length && Array.isArray(o[0]))
-                    o.forEach(([s, r]) => (i[s] = r));
+                    o.forEach(([e, s]) => (n[e] = s));
                   else {
-                    const s = o;
-                    i[s[0]] = s[1];
+                    const e = o;
+                    n[e[0]] = e[1];
                   }
-                } else i[n.cssProperty] = r;
-              if (n.dataProperty)
-                if ("function" == typeof n.dataProperty) {
-                  const [s, e] = n.dataProperty(r);
-                  t[`data-${s}`] = e;
-                } else t[`data-${n.dataProperty}`] = r;
+                } else n[p.cssProperty] = s;
+              if (p.dataProperty)
+                if ("function" == typeof p.dataProperty) {
+                  const [e, r] = p.dataProperty(s);
+                  t[`data-${e}`] = r;
+                } else t[`data-${p.dataProperty}`] = s;
             }
           }
           return (
@@ -911,81 +941,216 @@
             "style" in c &&
               c.style &&
               "object" == typeof c.style &&
-              Object.assign(i, c.style),
-            { ...t, ...c, className: o.join(" "), style: i }
+              Object.assign(n, c.style),
+            { ...t, ...c, className: o.join(" "), style: n }
           );
-        })(s, r, { formFactor: (0, o.xC)() });
+        })(e, s, { formFactor: (0, o.xC)() });
       }
-      function a(s) {
-        return (function (s) {
-          return !!i[s];
-        })(s)
-          ? `var(--spacing-${s})`
-          : s;
+      function a(e) {
+        return (function (e) {
+          return !!n[e];
+        })(e)
+          ? `var(--spacing-${e})`
+          : e;
       }
-      function c(s) {
-        if (!("%" == s[s.length - 1])) return `var(--color-${s})`;
-        const [r, e] = s.split(" ");
-        return `rgb( from ${`var(--color-${r})`} r g b / ${e} )`;
+      function c(e) {
+        if (!("%" == e[e.length - 1])) return `var(--color-${e})`;
+        const [s, r] = e.split(" ");
+        return `rgb( from ${`var(--color-${s})`} r g b / ${r} )`;
       }
-      function l(s, r) {
-        return s.startsWith("text") ? `var(--color-${s}-${r})` : c(s);
+      function l(e, s) {
+        return e.startsWith("text") ? `var(--color-${e}-${s})` : c(e);
       }
-      function m(s) {
-        return s.startsWith("text") ? `var(--color-${s})` : c(s);
-      }
-    },
-    55348: (s, r, e) => {
-      "use strict";
-      e.d(r, { I: () => i, n: () => n });
-      var o = e(10430);
-      const p = o.IE.reduce((s, r, e) => ((s[r] = e), s), {});
-      function i(s, r) {
-        if ("object" != typeof s) return s;
-        for (let e = p[r]; e >= 0; e--) if (o.IE[e] in s) return s[o.IE[e]];
-        return s.initial;
-      }
-      function n(s) {
-        return i(s, (0, o.xC)());
+      function m(e) {
+        return e.startsWith("text") ? `var(--color-${e})` : c(e);
       }
     },
-    11820: (s, r, e) => {
+    55348: (e, s, r) => {
       "use strict";
-      e.d(r, { T: () => p });
-      var o = e(91239);
-      function p() {
+      r.d(s, { I: () => n, n: () => p });
+      var o = r(10430);
+      const i = o.IE.reduce((e, s, r) => ((e[s] = r), e), {});
+      function n(e, s) {
+        if ("object" != typeof e) return e;
+        for (let r = i[s]; r >= 0; r--) if (o.IE[r] in e) return e[o.IE[r]];
+        return e.initial;
+      }
+      function p(e) {
+        return n(e, (0, o.xC)());
+      }
+    },
+    20187: (e, s, r) => {
+      "use strict";
+      r.d(s, { Ae: () => _, EY: () => l, U6: () => m });
+      var o = r(7850),
+        i = r(55348),
+        n = r(11526),
+        p = r(75659),
+        t = r(64238),
+        a = r.n(t),
+        c = r(65274);
+      function l(e) {
+        const { as: s = "span", ref: r, className: i, ...p } = e,
+          t = s;
+        return (0, o.jsx)(t, {
+          ref: r,
+          ...(0, n.mz)({ ...p, className: a()(c.Text, i) }, _),
+        });
+      }
+      const m = [
+          {
+            prop: "weight",
+            responsive: !0,
+            className: c.TextWeight,
+            cssProperty: (e) => ["--text-weight", `var(--font-weight-${e})`],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: c.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            responsive: !0,
+            cssProperty: (e, s, r) => {
+              var o;
+              return [
+                "--text-color",
+                (0, n.To)(
+                  e,
+                  null !== (o = (0, i.I)(s.contrast, r)) && void 0 !== o
+                    ? o
+                    : "body",
+                ),
+              ];
+            },
+          },
+          {
+            prop: "contrast",
+            responsive: !0,
+            cssProperty: (e, s, r) => {
+              var o;
+              return [
+                "--text-color",
+                (0, n.To)(
+                  null !== (o = (0, i.I)(s.color, r)) && void 0 !== o
+                    ? o
+                    : "text-body",
+                  e,
+                ),
+              ];
+            },
+          },
+          { prop: "truncate", className: c.Truncate },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: c.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: c.WhiteSpace,
+            cssProperty: "--white-space",
+          },
+        ],
+        _ = [
+          ...m,
+          ...p.L,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (e) => c[`TextSize-${e}`],
+          },
+        ];
+    },
+    28491: (e, s, r) => {
+      "use strict";
+      r.d(s, { W: () => _, Y: () => l });
+      var o = r(7850),
+        i = r(50122),
+        n = r(20187),
+        p = r(11526),
+        t = r(45699),
+        a = r(39479),
+        c = r(78327);
+      function l(e) {
+        var s;
+        const { underline: r = "auto", focusable: n, navProps: a, ...l } = e,
+          _ = (0, c.Qn)(),
+          d =
+            null !== (s = null != n ? n : null == a ? void 0 : a.focusable) &&
+            void 0 !== s
+              ? s
+              : !!l.href,
+          u = (0, p.mz)({ ...l, underline: r, className: i.TextLink }, m);
+        return _ && (d || a)
+          ? (0, o.jsx)(t.Ii, { ...u, ...(a || {}), focusable: d })
+          : (0, o.jsx)("a", { ...u });
+      }
+      const m = [
+        ...n.Ae,
+        { prop: "underline", className: (e) => i[`Underline-${e}`] },
+      ];
+      function _(e) {
+        var s;
+        const { underline: r = "auto", focusable: n, navProps: t, ...l } = e,
+          _ = (0, c.Qn)(),
+          d =
+            null !== (s = null != n ? n : null == t ? void 0 : t.focusable) &&
+            void 0 !== s
+              ? s
+              : !!l.onClick,
+          u = (0, o.jsx)("span", {
+            role: "button",
+            ...(0, p.mz)(
+              { ...l, underline: r, className: i.TextLinkButton },
+              m,
+            ),
+          });
+        return _ && (d || t)
+          ? (0, o.jsx)(a.J, { ...(t || {}), focusable: d, children: u })
+          : u;
+      }
+    },
+    11820: (e, s, r) => {
+      "use strict";
+      r.d(s, { T: () => i });
+      var o = r(91239);
+      function i() {
         return o.Reset;
       }
     },
-    39479: (s, r, e) => {
+    39479: (e, s, r) => {
       "use strict";
-      e.d(r, { J: () => c });
-      var o = e(7850),
-        p = e(8871),
-        i = e(90626),
-        n = e(7745),
-        t = e(90665),
-        a = e(74882);
-      function c(s) {
-        var r;
-        const { children: e, "flow-children": c, ...l } = s,
-          { gamepadEvents: m } = (0, t.C7)(s);
+      r.d(s, { J: () => c });
+      var o = r(7850),
+        i = r(8871),
+        n = r(90626),
+        p = r(7745),
+        t = r(90665),
+        a = r(74882);
+      function c(e) {
+        var s;
+        const { children: r, "flow-children": c, ...l } = e,
+          { gamepadEvents: m } = (0, t.C7)(e);
         let _;
-        c && (l.layout = (0, n.O)(c)),
+        c && (l.layout = (0, p.O)(c)),
           m.onOKButton ||
-            ("onClick" in e.props && e.props.onClick && (m.onOKButton = t._K)),
-          l.focusable && (_ = e.props.tabIndex || 0);
+            ("onClick" in r.props && r.props.onClick && (m.onOKButton = t._K)),
+          l.focusable && (_ = r.props.tabIndex || 0);
         const { ref: d, node: u } = (0, t.qp)(l);
         (0, a.Ui)(m, d);
         const v = (0, t.BT)(u),
-          f = (0, p.Ue)(
+          f = (0, i.Ue)(
             d,
-            null === (r = e.props) || void 0 === r ? void 0 : r.ref,
+            null === (s = r.props) || void 0 === s ? void 0 : s.ref,
             v,
           );
         return (0, o.jsx)(t.TJ.Provider, {
           value: u,
-          children: i.cloneElement(e, { ...e.props, ref: f, tabIndex: _ }),
+          children: n.cloneElement(r, { ...r.props, ref: f, tabIndex: _ }),
         });
       }
     },

@@ -170,6 +170,8 @@
         CarouselItem: "D2cHIYFbm1QaCVSR4zbmV",
         img: "_1QQdH2AxwtQmkzZsCIS6oY",
         Selected: "_2Ac4v3PipuR3EsxU-etWDy",
+        PlayColorHeader: "_1kp9OYKsZwBo2Ozv1b6l88",
+        PlayColorCtn: "_1Rllevojw7t7fs4OgATh8v",
       };
     },
     chunkid: (module) => {
@@ -4807,6 +4809,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         async OverlayClanImage(_, _, _, _, _, _) {
@@ -5390,14 +5393,14 @@
           if (!_) {
             _ = (await _._.LoadOGGClanInfoForAppID(_)).clanSteamID;
           }
-          const _ = await _._.Get().LoadSingleAppEventPermissions(_);
+          const _ = await _._.ensureQueryData((0, _._)(_.GetAccountID(), _._));
           return super.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID(
             _,
             _,
             _,
             _,
             _,
-            _.can_edit,
+            Boolean(null == _ ? void 0 : _.can_edit),
           );
         }
         static async GetLastUpdateTimeForEvent(_, _, _, _) {
@@ -8321,7 +8324,7 @@
             const _ = _.lastIndexOf(".");
             if (-1 !== _) {
               const _ = _.substring(0, _);
-              if ("poster" == _) _ = _.substring(_ + 1);
+              if ("poster" == _) _ = `${_}.${_}`;
               else {
                 if (_ != _) return null;
                 _.image_2x = `${_}${_}.${_.substring(_ + 1)}`;
@@ -8342,7 +8345,9 @@
                   return null;
               }
           }),
-          _ && !_.image && (_.image = `${_}.${_}`),
+          _ &&
+            (!_.image || _.video_webm_src || _.video_mp4_src) &&
+            (_.image = _),
           _
         );
       }
@@ -8828,7 +8833,7 @@
         const { fnOnDirty: _, localizedMedia: _ } = _,
           _ = (0, _._)(),
           _ = (0, _.useCallback)(
-            (_, _, _, _, _) => {
+            (_, _, _, _, _, _, _) => {
               (0, _._)(
                 null != _ && _ >= _.Bhc && _ < _.bP9,
                 "Unexpected value for elang: " + _,
@@ -8839,6 +8844,7 @@
                 );
               const _ = (0, _._)(_, _);
               if (_) {
+                _.aspect_ratio = (0, _._)(_, _);
                 const _ = (0, _._)([...(_.localized_media || [])], _.bP9, null);
                 (_[_] = _), (_.localized_media = _), _();
               }
@@ -8897,11 +8903,15 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = ["template_asset"];
       function _(_) {
         return `${_._.COMMUNITY_BASE_URL}mediaconvert/ajaxgroupconvert/${_.ConvertTo64BitString()}`;
+      }
+      function _(_) {
+        return `${_._.COMMUNITY_BASE_URL}mediaconvert/ajaxgroupconvertdimensions/${_.ConvertTo64BitString()}`;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -14369,7 +14379,249 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { fnOnDirty: _, localizedMedia: _ } = _,
+          [_, _, _] = (0, _._)(() => [
+            _.trailer_appid,
+            _.trailer_base_id,
+            _.trailer_display || _._.k_EDisplayScreenshot,
+          ]);
+        return (0, _.jsxs)("div", {
+          className: _().Ctn,
+          children: [
+            (0, _.jsx)("p", {
+              children: (0, _._)("#Template_Section_MediaContent_Trailer_Desc"),
+            }),
+            (0, _.jsx)(_._, {
+              trailerOnly: !0,
+              onAddItem: (_, _) => {
+                _ != _.trailer_appid &&
+                  ((_.trailer_appid = _), (_.trailer_base_id = void 0), _());
+              },
+            }),
+            _ &&
+              (0, _.jsx)(_, {
+                appid: _,
+                trailerBaseID: _,
+                trailerDisplay: _,
+                onChange: (_, _, _) => {
+                  (_.trailer_base_id == _ &&
+                    _.trailer_appid == _ &&
+                    _.trailer_display == _) ||
+                    ((_.trailer_base_id = _),
+                    (_.trailer_appid = _),
+                    (_.trailer_display = _),
+                    _());
+                },
+              }),
+          ],
+        });
+      }
+      const _ = {
+        include_trailers: !0,
+        include_assets: !0,
+      };
+      function _(_) {
+        const {
+            appid: _,
+            trailerBaseID: _,
+            trailerDisplay: _,
+            onChange: _,
+          } = _,
+          [_, _] = (0, _._)(_, _),
+          _ = _.useMemo(() => {
+            const _ = [];
+            return (
+              _.push({
+                label: (0, _._)(
+                  "#Template_Section_MediaContent_Trailer_Screenshot",
+                ),
+                data: _._.k_EDisplayScreenshot,
+              }),
+              _.push({
+                label: (0, _._)(
+                  "#Template_Section_MediaContent_Trailer_MicroTrailer",
+                ),
+                data: _._.k_EDisplayMicrotrailer,
+              }),
+              _.push({
+                label: (0, _._)(
+                  "#Template_Section_MediaContent_Trailer_HoverMicroTrailer",
+                ),
+                data: _._.k_EDisplayHoverMicrotrailer,
+              }),
+              _
+            );
+          }, []);
+        return (
+          (0, _.useEffect)(() => {
+            if (!_ && _ == _._ && _ && _.BHasTrailers(!1)) {
+              const _ = _.GetAllTrailers().GetAllTrailers(!1);
+              _.length > 0 && _(_, _[0].GetTrailerID(), _);
+            }
+          }, [_, _, _, _, _, _]),
+          _ == _._
+            ? (0, _.jsx)(_._, {
+                size: "medium",
+                string: (0, _._)("#Loading"),
+              })
+            : _ == _._
+              ? (0, _.jsx)("div", {
+                  children: (0, _._)("#EventEditor_FailedToLoadApp"),
+                })
+              : (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("img", {
+                      src: _.GetAssets().GetHeaderURL(),
+                      alt: _.GetName(),
+                    }),
+                    (0, _.jsx)("div", {
+                      children: _.GetName(),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().CarouselCtn,
+                      children: (0, _.jsx)("div", {
+                        className: _().Carousel,
+                        children: _.GetAllTrailers()
+                          .GetAllTrailers(!1)
+                          .map((_) =>
+                            (0, _.jsx)(
+                              "div",
+                              {
+                                className: (0, _._)({
+                                  [_().CarouselItem]: !0,
+                                  [_().Selected]: _ == _.GetTrailerID(),
+                                }),
+                                onClick: () => _(_, _.GetTrailerID(), _),
+                                children: (0, _.jsx)(_._, {
+                                  toolTipContent: _.GetName(),
+                                  children: (0, _.jsx)("img", {
+                                    src: _.GetScreenshot(),
+                                    alt: _.GetName(),
+                                  }),
+                                }),
+                              },
+                              "trailer_" + _.GetTrailerID(),
+                            ),
+                          ),
+                      }),
+                    }),
+                    (0, _.jsx)(_._, {
+                      strDropDownClassName: _.DropDownScroll,
+                      label: (0, _._)(
+                        "#Template_Section_MediaContent_Trailer_Label",
+                      ),
+                      tooltip: (0, _._)(
+                        "#Template_Section_MediaContent_Trailer_ttip",
+                      ),
+                      rgOptions: _,
+                      selectedOption: _,
+                      onChange: (_) => _(_, _, _.data),
+                      bDisableMouseOverlay: !0,
+                      contextMenuPositionOptions: {
+                        bDisableMouseOverlay: !0,
+                      },
+                    }),
+                  ],
+                })
+        );
+      }
+      function _(_) {
+        var _, _;
+        const _ = (_) =>
+          (null == _ ? void 0 : _.media_type) == _._.k_MediaTrailer;
+        return (
+          !!(
+            _(_.media_overlay) ||
+            _(_.media_overlay_mobile_content_varient) ||
+            _(_.media_overlay_tablet_content_varient)
+          ) ||
+          Boolean(
+            null ===
+              (_ =
+                null === (_ = _.media_container) || void 0 === _
+                  ? void 0
+                  : _.media_rows) || void 0 === _
+              ? void 0
+              : __webpack_require__.some((_) => {
+                  var _;
+                  return null === (_ = _.media_columns) || void 0 === _
+                    ? void 0
+                    : _.some(
+                        (_) =>
+                          _(_) ||
+                          _(_.mobile_content_varient) ||
+                          _(_.tablet_content_varient),
+                      );
+                }),
+          )
+        );
+      }
+      function _(_) {
+        const { editModel: _, saleSection: _ } = _,
+          [_, _] = (0, _._)(() => [
+            _.trailer_play_color,
+            _.trailer_play_hover_color,
+          ]),
+          { openColorPicker: _ } = (0, _._)(),
+          _ = (_) => (_) => {
+            _(_, {
+              color: _[_],
+              onChange: (_) => {
+                _[_] != _ && ((_[_] = _), _.SetDirty(_._.jsondata_sales));
+              },
+            });
+          };
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
+              className: _().PlayColorHeader,
+              children: (0, _._)(
+                "#Template_Section_MediaContent_Trailer_PlayColor_Header",
+              ),
+            }),
+            (0, _.jsxs)("div", {
+              className: _().PlayColorCtn,
+              children: [
+                (0, _.jsx)(_._, {
+                  toolTipContent: (0, _._)(
+                    "#Template_Section_MediaContent_Trailer_PlayColor_ttip",
+                  ),
+                  children: (0, _.jsx)(_._, {
+                    onClick: _("trailer_play_color"),
+                    style: {
+                      background: _,
+                    },
+                    children: (0, _._)(
+                      "#Template_Section_MediaContent_Trailer_PlayColor",
+                    ),
+                  }),
+                }),
+                (0, _.jsx)(_._, {
+                  toolTipContent: (0, _._)(
+                    "#Template_Section_MediaContent_Trailer_PlayHoverColor_ttip",
+                  ),
+                  children: (0, _.jsx)(_._, {
+                    onClick: _("trailer_play_hover_color"),
+                    style: {
+                      background: _,
+                    },
+                    children: (0, _._)(
+                      "#Template_Section_MediaContent_Trailer_PlayHoverColor",
+                    ),
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { arrows: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
@@ -15114,7 +15366,8 @@
             editModel: _,
             section: _,
           });
-        const _ = !_ && !_;
+        const _ = !_ && !_,
+          _ = (0, _._)(() => _(_));
         return (0, _.jsxs)(_.Fragment, {
           children: [
             _ &&
@@ -15250,6 +15503,11 @@
                   ),
               ],
             }),
+            _ &&
+              (0, _.jsx)(_, {
+                editModel: _,
+                saleSection: _,
+              }),
             (0, _.jsx)(_, {
               header: (0, _.jsx)("div", {
                 className: _.LayoutSubheader,
@@ -16444,73 +16702,112 @@
         );
       }
       function _(_) {
+        var _;
         const { saleSection: _, editModel: _ } = _,
           [_, _, _] = (0, _._)(() => [
             _.smart_section_type,
-            __webpack_require__.GetEventType() == _.ajI,
-            __webpack_require__.GetEventModel().BUsesContentHubForItemSource(),
+            _.GetEventType() == _.ajI,
+            _.GetEventModel().BUsesContentHubForItemSource(),
           ]),
           _ = _ ? "wishlist" : "linked_app_list",
-          _ = [];
-        (0, _._)(__webpack_require__.GetEventModel()) ||
-          _.push({
-            label: (0, _._)("#Sale_SmartSection_FilterFromLinkedAppList"),
-            tooltip: (0, _._)(
-              "#Sale_SmartSection_FilterFromLinkedAppList_ttip",
-            ),
-            data: "linked_app_list",
-          }),
-          _.push(
-            ...(function (_, _) {
-              return _.useMemo(() => {
+          _ = (0, _._)(_.GetEventModel()),
+          _ = (function (_, _) {
+            return _.useMemo(() => {
+              const _ = _._([
+                _ && {
+                  data: "creator_list",
+                  label: (0, _._)("#Sale_SmartSection_CreatorList"),
+                  tooltip: (0, _._)("#Sale_SmartSection_CreatorList_ttip"),
+                },
+                {
+                  data: "wishlist",
+                  label: (0, _._)("#Sale_Wishlist"),
+                  tooltip: (0, _._)("#Sale_Wishlist_ttip"),
+                },
+                {
+                  data: "interactive_recommender",
+                  label: (0, _._)("#Sale_InteractiveRecommender"),
+                  tooltip: (0, _._)("#Sale_InteractiveRecommender_ttip"),
+                },
+                {
+                  data: "tag_recommender",
+                  label: (0, _._)("#Sale_SmartSection_Recommended"),
+                  tooltip: (0, _._)("#Sale_SmartSection_Recommended_ttip"),
+                },
+                {
+                  data: "personalized_carousel",
+                  label: (0, _._)("#Sale_PersonalizedCarousel"),
+                  tooltip: (0, _._)("#Sale_PersonalizedCarousel_ttip"),
+                },
+                {
+                  data: "discounted",
+                  label: (0, _._)("#Sale_SmartSection_Discount"),
+                  tooltip: (0, _._)("#Sale_SmartSection_Discount_ttip"),
+                },
+                {
+                  data: "popularpurchaseddiscounted",
+                  label: (0, _._)("#Sale_SmartSection_DiscountedPopular"),
+                  tooltip: (0, _._)(
+                    "#Sale_SmartSection_DiscountedPopular_ttip",
+                  ),
+                },
+                {
+                  data: "trendingwishlisted",
+                  label: (0, _._)("#Sale_BrowserSortOption_TrendingWishlisted"),
+                  tooltip: (0, _._)(
+                    "#Sale_BrowserSortOption_TrendingWishlisted_ttip",
+                  ),
+                },
+                _ && {
+                  data: "popularpurchased",
+                  label: (0, _._)("#Sale_SmartSection_PopularSalesRank"),
+                  tooltip: (0, _._)("#Sale_SmartSection_PopularSalesRank_ttip"),
+                },
+                {
+                  data: "all_released",
+                  label: (0, _._)("#Sale_SmartSection_AllReleases"),
+                  tooltip: (0, _._)("#Sale_SmartSection_AllReleases_ttip"),
+                },
+                {
+                  data: "all_upcoming",
+                  label: (0, _._)("#Sale_SmartSection_AllUpcoming"),
+                  tooltip: (0, _._)("#Sale_SmartSection_AllUpcoming_ttip"),
+                },
+                _ && {
+                  data: "dailyactiveuserdemo",
+                  label: (0, _._)(
+                    "#Sale_BrowserSortOption_DailyActiveUserDemo",
+                  ),
+                  tooltip: (0, _._)(
+                    "#Sale_BrowserSortOption_DailyActiveUserDemo_ttip",
+                  ),
+                },
+              ]);
+              if (_._.is_support) {
                 const _ = _._([
-                  _ && {
-                    data: "creator_list",
-                    label: (0, _._)("#Sale_SmartSection_CreatorList"),
-                    tooltip: (0, _._)("#Sale_SmartSection_CreatorList_ttip"),
-                  },
                   {
-                    data: "wishlist",
-                    label: (0, _._)("#Sale_Wishlist"),
-                    tooltip: (0, _._)("#Sale_Wishlist_ttip"),
-                  },
-                  {
-                    data: "interactive_recommender",
-                    label: (0, _._)("#Sale_InteractiveRecommender"),
-                    tooltip: (0, _._)("#Sale_InteractiveRecommender_ttip"),
-                  },
-                  {
-                    data: "tag_recommender",
-                    label: (0, _._)("#Sale_SmartSection_Recommended"),
-                    tooltip: (0, _._)("#Sale_SmartSection_Recommended_ttip"),
-                  },
-                  {
-                    data: "personalized_carousel",
-                    label: (0, _._)("#Sale_PersonalizedCarousel"),
-                    tooltip: (0, _._)("#Sale_PersonalizedCarousel_ttip"),
-                  },
-                  {
-                    data: "discounted",
-                    label: (0, _._)("#Sale_SmartSection_Discount"),
-                    tooltip: (0, _._)("#Sale_SmartSection_Discount_ttip"),
-                  },
-                  {
-                    data: "popularpurchaseddiscounted",
-                    label: (0, _._)("#Sale_SmartSection_DiscountedPopular"),
+                    data: "ml_wishlist_recommender",
+                    label: (0, _._)("#Sale_BrowserSortOption_MLWishlist"),
                     tooltip: (0, _._)(
-                      "#Sale_SmartSection_DiscountedPopular_ttip",
+                      "#Sale_BrowserSortOption_MLWishlist_ttip",
                     ),
                   },
                   {
-                    data: "trendingwishlisted",
-                    label: (0, _._)(
-                      "#Sale_BrowserSortOption_TrendingWishlisted",
-                    ),
+                    data: "ml_playtime_recommender",
+                    label: (0, _._)("#Sale_BrowserSortOption_MLPlaytime"),
                     tooltip: (0, _._)(
-                      "#Sale_BrowserSortOption_TrendingWishlisted_ttip",
+                      "#Sale_BrowserSortOption_MLPlaytime_ttip",
                     ),
                   },
-                  _ && {
+                  {
+                    data: "topwishlisted",
+                    label:
+                      (0, _._)("#Sale_BrowserSortOption_TopWishlisted") +
+                      " [ALL TIME]",
+                    tooltip:
+                      "Orders games featured on this sales page by all time wishlist data.",
+                  },
+                  {
                     data: "popularpurchased",
                     label: (0, _._)("#Sale_SmartSection_PopularSalesRank"),
                     tooltip: (0, _._)(
@@ -16518,214 +16815,210 @@
                     ),
                   },
                   {
-                    data: "all_released",
-                    label: (0, _._)("#Sale_SmartSection_AllReleases"),
-                    tooltip: (0, _._)("#Sale_SmartSection_AllReleases_ttip"),
+                    data: "newandtrending",
+                    label: (0, _._)("#Sale_BrowserSortOption_NewAndTrending"),
+                    tooltip:
+                      "Shows games in a similar fashion to the front pages New and Trending tab. Mix of recency of release, review score and play count",
                   },
                   {
-                    data: "all_upcoming",
-                    label: (0, _._)("#Sale_SmartSection_AllUpcoming"),
-                    tooltip: (0, _._)("#Sale_SmartSection_AllUpcoming_ttip"),
+                    data: "trendingfree",
+                    label: (0, _._)("#Sale_BrowserSortOption_TrendingFree"),
+                    tooltip: (0, _._)(
+                      "#Sale_BrowserSortOption_TrendingFree_ttip",
+                    ),
+                  },
+                  {
+                    data: "all",
+                    label: (0, _._)("#Sale_BrowserSortOption_All"),
+                    tooltip: "Shows all games featured on this sales page",
+                  },
+                  {
+                    data: "popularcomingsoon",
+                    label: (0, _._)(
+                      "#Sale_BrowserSortOption_PopularComingSoon",
+                    ),
+                    tooltip:
+                      "Orders not released games featured on this sales page by their all time wishlists data.",
+                  },
+                  {
+                    data: "mostplayeddemo",
+                    label:
+                      (0, _._)("#Sale_BrowserSortOption_MostPlayedDemo") +
+                      " [all time demo player count]",
+                    tooltip:
+                      "Orders games featured on this sales page by total demo player count (all-time).",
+                  },
+                  {
+                    data: "dailyactiveuserdemo",
+                    label:
+                      (0, _._)("#Sale_BrowserSortOption_DailyActiveUserDemo") +
+                      " [yesterdays peak player count]",
+                    tooltip:
+                      "Orders games featured on this sales page by yesterdays peak player count.",
+                  },
+                  {
+                    data: "playednowdemo",
+                    label:
+                      (0, _._)("#Sale_BrowserSortOption_PlayedNowDemo") +
+                      " [Active demo Players NOW]",
+                    tooltip:
+                      "This is limited to Demo AppIDs. Using only featured games from this sale page. Will sort games using live server player count data with a 5 minute.",
+                  },
+                  {
+                    data: "tag",
+                    label: (0, _._)("#Sale_Tag"),
+                    tooltip: (0, _._)("#Sale_Tag_ttip"),
+                  },
+                  {
+                    data: "category",
+                    label: (0, _._)("#Sale_Category"),
+                    tooltip: (0, _._)("#Sale_Category_ttip"),
+                  },
+                  {
+                    data: "wishlist_onsale",
+                    label: "Show ANY discounted item from user's wishlist",
+                    tooltip:
+                      "This will pull the ANY discount game that is also on the logged in users wishlist across the entire Steam catalog. Not limited to the games featured on this sale page.",
+                  },
+                  {
+                    data: "dlc_onsale",
+                    label: "Show ANY discounted DLC from user's library",
+                    tooltip:
+                      "This will pull the ANY DLC for a game in the users library that is on Sale. Not limited to the DLCs featured on this sale page.",
+                  },
+                  {
+                    data: "dlc_music_onsale",
+                    label:
+                      "Show ANY discounted Soundtracks from user's library",
+                    tooltip:
+                      "This will pull any soundtrack (specific DLC) for a game the user owns that is on sale across the entire Steam catalog",
+                  },
+                  {
+                    data: "top_n",
+                    label: "Show ANY discounted Top Seller",
+                    tooltip:
+                      "This will pull the TOP discounted apps across the ENTIRE Steam catalog and it is not limited to the games specifically featured in this sales page.",
+                  },
+                  {
+                    data: "all_discounted",
+                    label: "Show ANY discounted",
+                    tooltip:
+                      "This will pull ALL discounted apps across the ENTIRE Steam catalog and it is not limited to the games specifically featured in this sales page.",
+                  },
+                  {
+                    data: "interactive_recommender_onsale",
+                    label: "Show ANY discounted interactive recommendations",
+                    tooltip:
+                      "This will use the interactive recommender results for logged in users to pull the TOP recommended that are also on discount across the ENTIRE Steam catalog. It is not limited to the games specifically featured in this sales page.",
+                  },
+                  {
+                    data: "sale_tabhub",
+                    label: "Show Various TAGs as clickable links to hub pages",
+                    tooltip:
+                      "Displays a carousel of tag related images that will direct for a set of curated tags backed by Steam Tag Content hubs",
+                  },
+                  {
+                    data: "ir_subscription",
+                    label:
+                      "Show Interactive Recommended Games from Subscription",
+                    tooltip:
+                      "Specific to a Master Subscription (ie, EA Play) on Steam.  Will only displayed IR recommended games for a logged in users that part of the master subscription",
+                  },
+                  {
+                    data: "deck_compatibility",
+                    label: "Show Deck Compatibility Games in _blank_y",
+                    tooltip:
+                      "Shows deck verified games from the users library or wishlist, further specified in page setting.",
+                  },
+                  {
+                    data: "deck_topplayed",
+                    label: "Show Deck Top 100 Carousel",
+                    tooltip: "Shows the Steam Deck's top games in a carousel",
+                  },
+                  {
+                    data: "nearby_recommended",
+                    label: "Nearby Recommended Games",
+                    tooltip:
+                      "Generates ML recommended and wishlistsed games for the previous month and next two months",
                   },
                   _ && {
-                    data: "dailyactiveuserdemo",
-                    label: (0, _._)(
-                      "#Sale_BrowserSortOption_DailyActiveUserDemo",
-                    ),
-                    tooltip: (0, _._)(
-                      "#Sale_BrowserSortOption_DailyActiveUserDemo_ttip",
-                    ),
+                    data: "contenthub_popular",
+                    label: "Popular - Content Hub",
+                    tooltip:
+                      "Shows games sorted by active user rank, using logic specific to this content hub. For example, on the VR hub, games will be sorted by VR playtime.",
                   },
                 ]);
-                if (_._.is_support) {
-                  const _ = _._([
-                    {
-                      data: "ml_wishlist_recommender",
-                      label: (0, _._)("#Sale_BrowserSortOption_MLWishlist"),
-                      tooltip: (0, _._)(
-                        "#Sale_BrowserSortOption_MLWishlist_ttip",
-                      ),
-                    },
-                    {
-                      data: "ml_playtime_recommender",
-                      label: (0, _._)("#Sale_BrowserSortOption_MLPlaytime"),
-                      tooltip: (0, _._)(
-                        "#Sale_BrowserSortOption_MLPlaytime_ttip",
-                      ),
-                    },
-                    {
-                      data: "topwishlisted",
-                      label:
-                        (0, _._)("#Sale_BrowserSortOption_TopWishlisted") +
-                        " [ALL TIME]",
-                      tooltip:
-                        "Orders games featured on this sales page by all time wishlist data.",
-                    },
-                    {
-                      data: "popularpurchased",
-                      label: (0, _._)("#Sale_SmartSection_PopularSalesRank"),
-                      tooltip: (0, _._)(
-                        "#Sale_SmartSection_PopularSalesRank_ttip",
-                      ),
-                    },
-                    {
-                      data: "newandtrending",
-                      label: (0, _._)("#Sale_BrowserSortOption_NewAndTrending"),
-                      tooltip:
-                        "Shows games in a similar fashion to the front pages New and Trending tab. Mix of recency of release, review score and play count",
-                    },
-                    {
-                      data: "trendingfree",
-                      label: (0, _._)("#Sale_BrowserSortOption_TrendingFree"),
-                      tooltip: (0, _._)(
-                        "#Sale_BrowserSortOption_TrendingFree_ttip",
-                      ),
-                    },
-                    {
-                      data: "all",
-                      label: (0, _._)("#Sale_BrowserSortOption_All"),
-                      tooltip: "Shows all games featured on this sales page",
-                    },
-                    {
-                      data: "popularcomingsoon",
-                      label: (0, _._)(
-                        "#Sale_BrowserSortOption_PopularComingSoon",
-                      ),
-                      tooltip:
-                        "Orders not released games featured on this sales page by their all time wishlists data.",
-                    },
-                    {
-                      data: "mostplayeddemo",
-                      label:
-                        (0, _._)("#Sale_BrowserSortOption_MostPlayedDemo") +
-                        " [all time demo player count]",
-                      tooltip:
-                        "Orders games featured on this sales page by total demo player count (all-time).",
-                    },
-                    {
-                      data: "dailyactiveuserdemo",
-                      label:
-                        (0, _._)(
-                          "#Sale_BrowserSortOption_DailyActiveUserDemo",
-                        ) + " [yesterdays peak player count]",
-                      tooltip:
-                        "Orders games featured on this sales page by yesterdays peak player count.",
-                    },
-                    {
-                      data: "playednowdemo",
-                      label:
-                        (0, _._)("#Sale_BrowserSortOption_PlayedNowDemo") +
-                        " [Active demo Players NOW]",
-                      tooltip:
-                        "This is limited to Demo AppIDs. Using only featured games from this sale page. Will sort games using live server player count data with a 5 minute.",
-                    },
-                    {
-                      data: "tag",
-                      label: (0, _._)("#Sale_Tag"),
-                      tooltip: (0, _._)("#Sale_Tag_ttip"),
-                    },
-                    {
-                      data: "category",
-                      label: (0, _._)("#Sale_Category"),
-                      tooltip: (0, _._)("#Sale_Category_ttip"),
-                    },
-                    {
-                      data: "wishlist_onsale",
-                      label: "Show ANY discounted item from user's wishlist",
-                      tooltip:
-                        "This will pull the ANY discount game that is also on the logged in users wishlist across the entire Steam catalog. Not limited to the games featured on this sale page.",
-                    },
-                    {
-                      data: "dlc_onsale",
-                      label: "Show ANY discounted DLC from user's library",
-                      tooltip:
-                        "This will pull the ANY DLC for a game in the users library that is on Sale. Not limited to the DLCs featured on this sale page.",
-                    },
-                    {
-                      data: "dlc_music_onsale",
-                      label:
-                        "Show ANY discounted Soundtracks from user's library",
-                      tooltip:
-                        "This will pull any soundtrack (specific DLC) for a game the user owns that is on sale across the entire Steam catalog",
-                    },
-                    {
-                      data: "top_n",
-                      label: "Show ANY discounted Top Seller",
-                      tooltip:
-                        "This will pull the TOP discounted apps across the ENTIRE Steam catalog and it is not limited to the games specifically featured in this sales page.",
-                    },
-                    {
-                      data: "all_discounted",
-                      label: "Show ANY discounted",
-                      tooltip:
-                        "This will pull ALL discounted apps across the ENTIRE Steam catalog and it is not limited to the games specifically featured in this sales page.",
-                    },
-                    {
-                      data: "interactive_recommender_onsale",
-                      label: "Show ANY discounted interactive recommendations",
-                      tooltip:
-                        "This will use the interactive recommender results for logged in users to pull the TOP recommended that are also on discount across the ENTIRE Steam catalog. It is not limited to the games specifically featured in this sales page.",
-                    },
-                    {
-                      data: "sale_tabhub",
-                      label:
-                        "Show Various TAGs as clickable links to hub pages",
-                      tooltip:
-                        "Displays a carousel of tag related images that will direct for a set of curated tags backed by Steam Tag Content hubs",
-                    },
-                    {
-                      data: "ir_subscription",
-                      label:
-                        "Show Interactive Recommended Games from Subscription",
-                      tooltip:
-                        "Specific to a Master Subscription (ie, EA Play) on Steam.  Will only displayed IR recommended games for a logged in users that part of the master subscription",
-                    },
-                    {
-                      data: "deck_compatibility",
-                      label: "Show Deck Compatibility Games in _blank_y",
-                      tooltip:
-                        "Shows deck verified games from the users library or wishlist, further specified in page setting.",
-                    },
-                    {
-                      data: "deck_topplayed",
-                      label: "Show Deck Top 100 Carousel",
-                      tooltip: "Shows the Steam Deck's top games in a carousel",
-                    },
-                    {
-                      data: "nearby_recommended",
-                      label: "Nearby Recommended Games",
-                      tooltip:
-                        "Generates ML recommended and wishlistsed games for the previous month and next two months",
-                    },
-                    _ && {
-                      data: "contenthub_popular",
-                      label: "Popular - Content Hub",
-                      tooltip:
-                        "Shows games sorted by active user rank, using logic specific to this content hub. For example, on the VR hub, games will be sorted by VR playtime.",
-                    },
-                  ]);
-                  (0, _._)(_, _);
-                }
-                return _;
-              }, [_, _]);
-            })(_, _),
-          );
-        const _ = (0, _._)(_);
+                (0, _._)(_, _);
+              }
+              return _;
+            }, [_, _]);
+          })(_, _),
+          _ = (0, _.useMemo)(() => {
+            const _ = [];
+            return (
+              _ ||
+                _.push({
+                  label: (0, _._)("#Sale_SmartSection_FilterFromLinkedAppList"),
+                  tooltip: (0, _._)(
+                    "#Sale_SmartSection_FilterFromLinkedAppList_ttip",
+                  ),
+                  data: "linked_app_list",
+                }),
+              _.push(..._),
+              _
+            );
+          }, [_, _]),
+          _ = null == _ ? _ : _,
+          _ =
+            null !== (_ = _.find((_) => _.data === _)) && void 0 !== _
+              ? _
+              : null,
+          _ = (0, _._)({
+            rgOptions: _,
+            selectedValue: _,
+            onSelectionChange: (_) => {
+              _(_, _, "linked_app_list" == _.data),
+                (_.smart_section_type =
+                  "linked_app_list" == _.data ? void 0 : _.data),
+                _.SetDirty(_._.jsondata_sales);
+            },
+            filter: (_, _) =>
+              (0, _._)(_).toLocaleLowerCase().includes(_.toLocaleLowerCase()),
+            filterPlaceholder: (0, _._)("#AddonPicker_Search"),
+          });
         return (0, _.jsx)(_._, {
-          strClassName: _.SmartSelType,
           label: (0, _._)("#Sale_SmartSectionType"),
-          rgOptions: _,
-          controlled: !0,
-          selectedOption: null == _ ? _ : _,
-          onChange: (_) => {
-            _(_, _, "linked_app_list" == _.data),
-              (_.smart_section_type =
-                "linked_app_list" == _.data ? void 0 : _.data),
-              __webpack_require__.SetDirty(_._.jsondata_sales);
-          },
-          contextMenuPositionOptions: {
-            bDisablePopTop: !0,
-          },
+          className: _.SmartSelType,
+          children: (0, _.jsxs)(_._.Root, {
+            state: _,
+            children: [
+              (0, _.jsx)(_._.Trigger, {
+                children: _
+                  ? (0, _.jsx)(_._.Value, {
+                      children: (0, _.jsx)(_._, {
+                        info: _,
+                      }),
+                    })
+                  : (0, _.jsx)(_._.Placeholder, {
+                      children: (0, _._)("#Sale_SmartSectionType"),
+                    }),
+              }),
+              (0, _.jsx)(_._.Options, {
+                children: _.rgFilteredOptions.map((_) =>
+                  (0, _.jsx)(
+                    _._.Option,
+                    {
+                      value: _,
+                      children: (0, _.jsx)(_._, {
+                        info: _,
+                      }),
+                    },
+                    _.data,
+                  ),
+                ),
+              }),
+            ],
+          }),
         });
       }
       function _(_, _, _) {
@@ -17147,37 +17440,35 @@
             }),
             (0, _.jsx)("div", {
               className: _.ToggleCtn,
-              children: (0, _.jsx)(_._, {
-                children: (0, _.jsxs)(_._.Root, {
-                  value: _ ? "on" : "off",
-                  onValueChange: (_) => {
-                    return (
-                      _((_ = "on" === _)),
-                      void (0, _._)(() => {
-                        _.smart_section = _;
-                        const _ = _ ? "all_released" : _;
-                        (_.smart_section_type = _ ? _ : void 0),
-                          !_.smart_section_max_apps &&
-                            _ &&
-                            (_.smart_section_max_apps = _),
-                          _(_, _, _ && null == _.smart_section_type),
-                          _.SetDirty(_._.jsondata_sales);
-                      })
-                    );
-                    var _;
-                  },
-                  radius: "sm",
-                  children: [
-                    (0, _.jsx)(_._.Item, {
-                      value: "off",
-                      children: (0, _._)("#Sale_SmartSection_ToggleOff"),
-                    }),
-                    (0, _.jsx)(_._.Item, {
-                      value: "on",
-                      children: (0, _._)("#Sale_SmartSection_ToggleOn"),
-                    }),
-                  ],
-                }),
+              children: (0, _.jsxs)(_._.Root, {
+                value: _ ? "on" : "off",
+                onValueChange: (_) => {
+                  return (
+                    _((_ = "on" === _)),
+                    void (0, _._)(() => {
+                      _.smart_section = _;
+                      const _ = _ ? "all_released" : _;
+                      (_.smart_section_type = _ ? _ : void 0),
+                        !_.smart_section_max_apps &&
+                          _ &&
+                          (_.smart_section_max_apps = _),
+                        _(_, _, _ && null == _.smart_section_type),
+                        _.SetDirty(_._.jsondata_sales);
+                    })
+                  );
+                  var _;
+                },
+                radius: "sm",
+                children: [
+                  (0, _.jsx)(_._.Item, {
+                    value: "off",
+                    children: (0, _._)("#Sale_SmartSection_ToggleOff"),
+                  }),
+                  (0, _.jsx)(_._.Item, {
+                    value: "on",
+                    children: (0, _._)("#Sale_SmartSection_ToggleOn"),
+                  }),
+                ],
               }),
             }),
           ],
@@ -17774,7 +18065,6 @@
         return _ ? _[_] : "";
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -23083,7 +23373,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         GetSaleItemRewardDefsForEventID(_) {
@@ -24355,7 +24644,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
       const _ = "socialcontent_";
       function _(_) {
         const { saleSection: _, editModel: _ } = _,
@@ -24799,151 +25087,162 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = /^[\d\s.:x/]*$/i;
       function _(_) {
         const { fnOnDirty: _, localizedMedia: _ } = _,
-          [_, _, _] = (0, _._)(() => [
-            _.trailer_appid,
-            _.trailer_base_id,
-            _.trailer_display || _._.k_EDisplayScreenshot,
-          ]);
-        return (0, _.jsxs)("div", {
-          className: _().Ctn,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          [_, _] = (0, _._)(() => {
+            var _;
+            const _ =
+              null === (_ = _.localized_media) || void 0 === _ ? void 0 : _[_];
+            return [
+              null == _ ? void 0 : _.aspect_ratio,
+              (null == _ ? void 0 : _.image) ||
+                (null == _ ? void 0 : _.video_webm_src) ||
+                (null == _ ? void 0 : _.video_mp4_src),
+            ];
+          }),
+          [_, _] = (0, _.useState)(void 0),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useCallback)(
+            (_) => {
+              var _;
+              const _ =
+                null === (_ = _.localized_media) || void 0 === _
+                  ? void 0
+                  : _[_];
+              _ && _.aspect_ratio !== _ && ((_.aspect_ratio = _), _());
+            },
+            [_, _, _.localized_media],
+          ),
+          _ = (0, _.useCallback)(async () => {
+            _(!0),
+              _(
+                await (async function (_, _) {
+                  const _ = new URLSearchParams();
+                  __webpack_require__.append("sessionid", (0, _._)()),
+                    __webpack_require__.append("filename", _);
+                  try {
+                    const _ = await fetch((0, _._)(_), {
+                      method: "POST",
+                      body: _,
+                      credentials: "include",
+                    });
+                    if (404 === _.status) return "none";
+                    if (!_._)
+                      return void console.error(
+                        "FetchConvertedMediaSize failed",
+                        _.status,
+                      );
+                    const _ = await _.json();
+                    return _.width && _.height
+                      ? {
+                          nWidth: _.width,
+                          nHeight: _.height,
+                        }
+                      : "none";
+                  } catch (_) {
+                    return void console.error(
+                      "FetchConvertedMediaSize failed",
+                      _,
+                    );
+                  }
+                })(_.GetClanSteamID(), _),
+              ),
+              _(!1);
+          }, [_, _]);
+        if (!_) return null;
+        const _ = _ && "none" !== _ ? _ : void 0,
+          _ = (0, _._)(
+            null == _ ? void 0 : _.nWidth,
+            null == _ ? void 0 : _.nHeight,
+          );
+        return (0, _.jsxs)(_._, {
+          direction: "column",
+          gap: "1",
           children: [
-            (0, _.jsx)("p", {
-              children: (0, _._)("#Template_Section_MediaContent_Trailer_Desc"),
+            (0, _.jsx)(_._, {
+              size: "2",
+              contrast: "subtitle",
+              children: (0, _._)("#Template_Section_MediaAspectRatio"),
+            }),
+            (0, _.jsxs)(_._, {
+              align: "center",
+              gap: "2",
+              children: [
+                (0, _.jsx)(_._, {
+                  value: _,
+                  placeholder: (0, _._)(
+                    "#Template_Section_MediaAspectRatio_placeholder",
+                  ),
+                  clearable: !0,
+                  onTextClear: () => _(void 0),
+                  valueToString: _._,
+                  valueFromString: (_) => {
+                    var _;
+                    return null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : _._;
+                  },
+                  checkValidText: (_) => _.test(_),
+                  onValueChange: _,
+                }),
+                (0, _.jsx)(_._, {
+                  variant: "basic",
+                  loading: _,
+                  onClick: _,
+                  children: (0, _._)(
+                    "#Template_Section_MediaAspectRatio_LookUp",
+                  ),
+                }),
+              ],
             }),
             (0, _.jsx)(_._, {
-              trailerOnly: !0,
-              onAddItem: (_, _) => {
-                _ != _.trailer_appid &&
-                  ((_.trailer_appid = _), (_.trailer_base_id = void 0), _());
-              },
+              size: "2",
+              contrast: "note",
+              children: (0, _._)("#Template_Section_MediaAspectRatio_desc"),
             }),
+            "none" === _ &&
+              (0, _.jsx)(_._, {
+                size: "2",
+                children: (0, _._)(
+                  "#Template_Section_MediaAspectRatio_NoRecord",
+                ),
+              }),
             _ &&
-              (0, _.jsx)(_.Fragment, {
-                children: (0, _.jsx)(_, {
-                  appid: _,
-                  trailerBaseID: _,
-                  trailerDisplay: _,
-                  onChange: (_, _, _) => {
-                    _.trailer_base_id != _ &&
-                      ((_.trailer_base_id = _),
-                      (_.trailer_appid = _),
-                      (_.trailer_display = _),
-                      _());
-                  },
-                }),
+              _ &&
+              (0, _.jsxs)(_._, {
+                align: "center",
+                gap: "2",
+                children: [
+                  (0, _.jsx)(_._, {
+                    size: "2",
+                    children: (0, _._)(
+                      "#Template_Section_MediaAspectRatio_Converted",
+                      _.nWidth,
+                      _.nHeight,
+                      (0, _._)(_),
+                    ),
+                  }),
+                  _ !== _ &&
+                    (0, _.jsx)(_._, {
+                      variant: "basic",
+                      onClick: () => _(_),
+                      children: (0, _._)(
+                        "#Template_Section_MediaAspectRatio_Use",
+                      ),
+                    }),
+                ],
               }),
           ],
         });
       }
-      const _ = {
-        include_trailers: !0,
-        include_assets: !0,
-      };
-      function _(_) {
-        const {
-            appid: _,
-            trailerBaseID: _,
-            trailerDisplay: _,
-            onChange: _,
-          } = _,
-          [_, _] = (0, _._)(_, _),
-          _ = _.useMemo(() => {
-            const _ = [];
-            return (
-              _.push({
-                label: (0, _._)(
-                  "#Template_Section_MediaContent_Trailer_Screenshot",
-                ),
-                data: _._.k_EDisplayScreenshot,
-              }),
-              _.push({
-                label: (0, _._)(
-                  "#Template_Section_MediaContent_Trailer_MicroTrailer",
-                ),
-                data: _._.k_EDisplayMicrotrailer,
-              }),
-              _
-            );
-          }, []);
-        return (
-          (0, _.useEffect)(() => {
-            if (!_ && _ == _._ && _ && _.BHasTrailers(!1)) {
-              const _ = _.GetAllTrailers().GetAllTrailers(!1);
-              _.length > 0 && _(_, _[0].GetTrailerID(), _);
-            }
-          }, [_, _, _, _, _, _]),
-          _ == _._
-            ? (0, _.jsx)(_._, {
-                size: "medium",
-                string: (0, _._)("#Loading"),
-              })
-            : _ == _._
-              ? (0, _.jsx)("div", {
-                  children: (0, _._)("#EventEditor_FailedToLoadApp"),
-                })
-              : (0, _.jsxs)("div", {
-                  children: [
-                    (0, _.jsx)("img", {
-                      src: _.GetAssets().GetHeaderURL(),
-                      alt: _.GetName(),
-                    }),
-                    (0, _.jsx)("div", {
-                      children: _.GetName(),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _().CarouselCtn,
-                      children: (0, _.jsx)("div", {
-                        className: _().Carousel,
-                        children: _.GetAllTrailers()
-                          .GetAllTrailers(!1)
-                          .map((_) =>
-                            (0, _.jsx)(
-                              "div",
-                              {
-                                className: (0, _._)({
-                                  [_().CarouselItem]: !0,
-                                  [_().Selected]: _ == _.GetTrailerID(),
-                                }),
-                                onClick: () => _(_, _.GetTrailerID(), _),
-                                children: (0, _.jsx)(_._, {
-                                  toolTipContent: _.GetName(),
-                                  children: (0, _.jsx)("img", {
-                                    src: _.GetScreenshot(),
-                                    alt: _.GetName(),
-                                  }),
-                                }),
-                              },
-                              "trailer_" + _.GetTrailerID(),
-                            ),
-                          ),
-                      }),
-                    }),
-                    (0, _.jsx)(_._, {
-                      strDropDownClassName: _.DropDownScroll,
-                      label: (0, _._)(
-                        "#Template_Section_MediaContent_Trailer_Label",
-                      ),
-                      tooltip: (0, _._)(
-                        "#Template_Section_MediaContent_Trailer_ttip",
-                      ),
-                      rgOptions: _,
-                      selectedOption: _,
-                      onChange: (_) => _(_, _, _.data),
-                      bDisableMouseOverlay: !0,
-                      contextMenuPositionOptions: {
-                        bDisableMouseOverlay: !0,
-                      },
-                    }),
-                  ],
-                })
-        );
-      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { localizedMedia: _, fnOnDirty: _ } = _,
           _ = (0, _._)(),
@@ -24970,6 +25269,10 @@
               : (0, _.jsxs)(_.Fragment, {
                   children: [
                     (0, _.jsx)(_._, {
+                      fnOnDirty: _,
+                      localizedMedia: _,
+                    }),
+                    (0, _.jsx)(_, {
                       fnOnDirty: _,
                       localizedMedia: _,
                     }),
@@ -25048,8 +25351,11 @@
                   toggled: _ == _._.k_MediaTrailer,
                   tooltip: (0, _._)("#Template_Section_MediaContent_Trailer"),
                   onClick: () => {
+                    var _;
                     _.media_type != _._.k_MediaTrailer &&
                       ((_.media_type = _._.k_MediaTrailer),
+                      (null !== (_ = _.trailer_display) && void 0 !== _) ||
+                        (_.trailer_display = _._.k_EDisplayHoverMicrotrailer),
                       __webpack_require__());
                   },
                   children: (0, _.jsx)(_.gat, {}),
@@ -26568,6 +26874,7 @@
             ]);
             return (0, _._)(_, _);
           })(_),
+          _ = (0, _._)(() => _(_)),
           _ = (0, _.useMemo)(() => {
             if (_ || _) {
               const _ = [
@@ -26673,6 +26980,11 @@
             (0, _.jsx)("p", {
               children: (0, _._)("#Template_Section_MediaOverlay_desc"),
             }),
+            _ &&
+              (0, _.jsx)(_, {
+                editModel: _,
+                saleSection: _,
+              }),
             Boolean(_ || _)
               ? (0, _.jsx)(_._, {
                   tabs: _,
@@ -27351,8 +27663,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -28634,6 +28944,9 @@
             (0, _.jsx)(_, {
               ..._,
             }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
           ],
         });
       }
@@ -28782,6 +29095,96 @@
             children:
               "No longer supporting deposits; code need fixes if we want to add back",
           }),
+        });
+      }
+      function _(_) {
+        const { reservation: _, fnOnDirty: _ } = _,
+          [_, _, _] = (0, _._)(() => {
+            var _, _, _;
+            return [
+              null !== (_ = _.purchase_requires_purchasable_packages) &&
+              void 0 !== _
+                ? _
+                : [],
+              null === (_ = _.purchase_requires_purchasable_packages) ||
+              void 0 === _
+                ? void 0
+                : _.length,
+              null !== (_ = _.purchase_requires_owned_appid) && void 0 !== _
+                ? _
+                : 0,
+            ];
+          }),
+          _ = (0, _.useCallback)(() => {
+            _.purchase_requires_purchasable_packages ||
+              (_.purchase_requires_purchasable_packages = []),
+              _.purchase_requires_purchasable_packages.push(0),
+              __webpack_require__();
+          }, [_, _]);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
+              children: [
+                "Optional Purchase Requirements ",
+                (0, _.jsx)(_._, {
+                  tooltip:
+                    "Leave these empty to sell this item to everyone. If any are set, the buy button reads 'Available with Purchase' and is disabled until the customer satisfies at least one of them.",
+                }),
+              ],
+            }),
+            _.map((_, _) =>
+              (0, _.jsxs)(
+                "div",
+                {
+                  children: [
+                    (0, _.jsx)(_, {
+                      type: "sub",
+                      label: `Package ${_ + 1} the customer must be able to buy`,
+                      tooltip:
+                        "Package tied to a specific model of the hardware. It counts if their reservation turn has come up for the package, or if the package is in stock and purchaseable by them.",
+                      value: null != _ ? _ : 0,
+                      onValueChange: (_) => {
+                        var _;
+                        (null ===
+                          (_ = _.purchase_requires_purchasable_packages) ||
+                        void 0 === _
+                          ? void 0
+                          : _[_]) != _ &&
+                          ((_.purchase_requires_purchasable_packages[_] = _),
+                          __webpack_require__());
+                      },
+                    }),
+                    (0, _.jsxs)(_._, {
+                      onClick: () => {
+                        (_.purchase_requires_purchasable_packages = _.filter(
+                          (_, _) => _ !== _,
+                        )),
+                          __webpack_require__();
+                      },
+                      children: ["Remove Package ", _ + 1],
+                    }),
+                  ],
+                },
+                _,
+              ),
+            ),
+            (0, _.jsx)(_._, {
+              onClick: _,
+              children: "Add Required Package",
+            }),
+            (0, _.jsx)(_, {
+              type: "game",
+              label: "Advertising AppID the customer must own",
+              tooltip:
+                "The advertising app granted when the hardware is bought. Do not use the hardware app itself; owning the hardware would prevent the customer from buying it again.",
+              value: _,
+              onValueChange: (_) => {
+                _.purchase_requires_owned_appid != _ &&
+                  ((_.purchase_requires_owned_appid = _ || void 0),
+                  __webpack_require__());
+              },
+            }),
+          ],
         });
       }
       function _(_) {
@@ -29835,8 +30238,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { saleSection: _ } = _;
@@ -30817,7 +31218,7 @@
               ? void 0
               : _.internal_type) || "invalid",
           ),
-          _ = (0, _._)(_.GetClanSteamID()),
+          _ = (0, _._)(_),
           _ = (function (_, _, _, _, _, _, _, _, _, _, _) {
             const _ = [];
             if (
@@ -31346,6 +31747,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
+        const _ = (0, _._)(_);
         return _.useMemo(() => {
           const _ = _ == _.ajI,
             _ = _._([
@@ -31434,7 +31836,7 @@
                 tooltip: (0, _._)("#Sale_TabButtons_ttip"),
               },
             ]);
-          if ((0, _._)(_)) {
+          if (_) {
             const _ = _._([
               {
                 label: (0, _._)("#Sale_VOInternalSection_SaleItemBrowser"),
@@ -35415,13 +35817,14 @@
       }
       function _(_) {
         const { editModel: _ } = _,
-          [_, _, _] = (0, _._)(() => [
+          [_, _] = (0, _._)(() => [
             _.GetVisibilityState(),
-            _._.Get().GetPartnerEventPermissions(_.GetClanSteamID()),
             (_.BWillShowOnLibraryOverviewDueToSettings() ||
               _.BWillShowOnLibraryDetailDueToSettings()) &&
               (0, _._)(_.GetEventModel()),
-          ]);
+          ]),
+          { data: _ } = (0, _._)(_.GetClanAccountID()),
+          _ = Boolean(null == _ ? void 0 : _.can_edit);
         if (_ == _._.k_EEventStateVisible)
           return (0, _.jsx)("div", {
             className: (0, _._)(_().EventStatusContainer, "visible"),
@@ -35558,6 +35961,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -35565,32 +35970,39 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _._(_).map((_) => {
-          let _ = _.label;
-          return (
-            _.valveOnly &&
-              (_ = (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)("span", {
-                    className: _.ValveOnlyText,
-                    children: "(VO)",
-                  }),
-                  " ",
-                  _,
-                ],
-              })),
-            _.tooltip &&
-              (_ = (0, _.jsxs)(_._, {
-                toolTipContent: _.tooltip,
-                className: _.DropDownOptionHelpLabel,
-                children: [_, " ", (0, _.jsx)(_._VW, {})],
-              })),
-            {
-              label: _,
-              data: _.data,
-            }
-          );
-        });
+        const { info: _ } = _;
+        let _ = _.label;
+        return (
+          _.valveOnly &&
+            (_ = (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("span", {
+                  className: _.ValveOnlyText,
+                  children: "(VO)",
+                }),
+                " ",
+                _,
+              ],
+            })),
+          _.tooltip &&
+            (_ = (0, _.jsxs)(_._, {
+              toolTipContent: _.tooltip,
+              className: _.DropDownOptionHelpLabel,
+              children: [_, " ", (0, _.jsx)(_._VW, {})],
+            })),
+          _
+        );
+      }
+      function _(_) {
+        return "string" == typeof _.label ? _.label : "";
+      }
+      function _(_) {
+        return _._(_).map((_) => ({
+          label: (0, _.jsx)(_, {
+            info: _,
+          }),
+          data: _.data,
+        }));
       }
       function _(_, _) {
         _.push(
@@ -37496,7 +37908,8 @@
         })(_ || (_ = {})),
         (function (_) {
           (_.k_EDisplayScreenshot = "screenshot"),
-            (_.k_EDisplayMicrotrailer = "microtrailer");
+            (_.k_EDisplayMicrotrailer = "microtrailer"),
+            (_.k_EDisplayHoverMicrotrailer = "hover_microtrailer");
         })(_ || (_ = {})),
         (function (_) {
           (_.k_TopLeft = "top_left"),

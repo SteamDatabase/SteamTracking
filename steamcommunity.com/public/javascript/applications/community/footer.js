@@ -35,36 +35,6 @@
         "HeadingSize-9": "_3L0vs4_Y96AtsR3P5GUkUa",
       };
     },
-    65274: (e) => {
-      e.exports = {
-        Text: "f6hU22EA7Z8peFWZVBJU",
-        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
-        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
-        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
-        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
-        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
-        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
-        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
-        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
-        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
-        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
-        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
-        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
-        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
-        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
-      };
-    },
-    50122: (e) => {
-      e.exports = {
-        TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
-        TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
-        Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
-        "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
-        "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
-        "Underline-auto": "_2OgYmw12nDHXtyT9za9yzL",
-        "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
-      };
-    },
     74840: (e) => {
       e.exports = {
         GlobalFooter: "_291ttHtxyu5obiKzor2G9G",
@@ -82,26 +52,26 @@
     },
     49560: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => j, p: () => _ });
+      n.d(t, { A: () => _, p: () => j });
       var s = n(7850),
         r = n(90626),
         o = n(73788),
         i = n(8083),
-        l = n(94621),
-        c = n(8871),
+        c = n(94621),
+        l = n(8871),
         a = n(45699),
         h = n(85585),
         C = n(7445),
         d = n(81393),
         p = n(64238),
         u = n.n(p),
-        x = n(11820),
-        f = n(78327);
+        f = n(11820),
+        x = n(78327);
       const g = (0, r.createContext)(null);
       function m(e) {
-        return (0, f.Qn)() ? (0, s.jsx)(v, { ...e }) : (0, s.jsx)(H, { ...e });
+        return (0, x.Qn)() ? (0, s.jsx)(H, { ...e }) : (0, s.jsx)(v, { ...e });
       }
-      function v(e) {
+      function H(e) {
         const { children: t } = e,
           n = (0, r.useContext)(g);
         (0, d.wT)(
@@ -123,7 +93,7 @@
           })
         );
       }
-      function H(e) {
+      function v(e) {
         const { children: t } = e,
           n = (0, r.useContext)(g);
         return (
@@ -139,22 +109,22 @@
           })
         );
       }
-      function _(e) {
+      function j(e) {
         const { gutter: t = 0, placement: n } = e,
           s = [],
           r = n && "object" == typeof n;
         return (
           r && n.offset
-            ? s.push((0, l.cY)(n.offset))
-            : (r && void 0 !== n.offset) || s.push((0, l.cY)(2)),
+            ? s.push((0, c.cY)(n.offset))
+            : (r && void 0 !== n.offset) || s.push((0, c.cY)(2)),
           r && n.flip
-            ? s.push((0, l.UU)(n.flip))
-            : (r && void 0 !== n.flip) || s.push((0, l.UU)()),
+            ? s.push((0, c.UU)(n.flip))
+            : (r && void 0 !== n.flip) || s.push((0, c.UU)()),
           r && n.shift
-            ? s.push((0, l.BN)(n.shift))
-            : (r && void 0 !== n.shift) || s.push((0, l.BN)()),
+            ? s.push((0, c.BN)(n.shift))
+            : (r && void 0 !== n.shift) || s.push((0, c.BN)()),
           s.push(
-            (0, l.Ej)({
+            (0, c.Ej)({
               apply: (n) => {
                 const { rects: s, elements: r, availableHeight: o } = n,
                   i = { boxSizing: "border-box", zIndex: "1" };
@@ -176,15 +146,15 @@
                     unContentWidth: s.floating.width,
                     unTargetWidth: s.reference.width,
                   }));
-                const l =
+                const c =
                   "number" == typeof t ? `${t}px` : `var(--spacing-${t})`;
                 "function" == typeof e.maxHeight
                   ? (i.maxHeight = e.maxHeight({
                       unAvailableHeight: o,
-                      gutter: l,
+                      gutter: c,
                     }))
                   : "number" == typeof e.maxHeight
-                    ? (i.maxHeight = `min( calc( ${o}px - ${l} ), ${e.maxHeight}px )`)
+                    ? (i.maxHeight = `min( calc( ${o}px - ${c} ), ${e.maxHeight}px )`)
                     : (i.maxHeight =
                         "number" == typeof t
                           ? o - t + "px"
@@ -200,7 +170,7 @@
           s
         );
       }
-      const j = {
+      const _ = {
         Root: function (e) {
           const { children: t, ...n } = e,
             r = (function (e) {
@@ -210,12 +180,12 @@
                 placement: s,
                 interactions: r = {},
               } = e;
-              let l = t;
+              let c = t;
               0;
-              const c = (0, o.we)({
-                  open: l,
+              const l = (0, o.we)({
+                  open: c,
                   onOpenChange: n,
-                  middleware: _(e),
+                  middleware: j(e),
                   whileElementsMounted: i.ll,
                   placement: s && "object" == typeof s ? s.initial : s,
                   strategy: "fixed",
@@ -236,25 +206,25 @@
                 }),
                 a = { enabled: !!r.click },
                 h = "function" == typeof r.click ? r.click(a) : a,
-                C = (0, o.kp)(c.context, h),
+                C = (0, o.kp)(l.context, h),
                 d = { enabled: !!r.focus },
                 p = "function" == typeof r.focus ? r.focus(d) : d,
-                u = (0, o.iQ)(c.context, p),
-                x = { handleClose: (0, o.iB)() },
-                f = "function" == typeof r.hover ? r.hover(x) : x,
-                g = (0, o.Mk)(c.context, { enabled: !!r.hover, ...f }),
-                m = (0, o.s9)(c.context),
-                { getFloatingProps: v, getReferenceProps: H } = (0, o.bv)([
+                u = (0, o.iQ)(l.context, p),
+                f = { handleClose: (0, o.iB)() },
+                x = "function" == typeof r.hover ? r.hover(f) : f,
+                g = (0, o.Mk)(l.context, { enabled: !!r.hover, ...x }),
+                m = (0, o.s9)(l.context),
+                { getFloatingProps: H, getReferenceProps: v } = (0, o.bv)([
                   C,
                   u,
                   g,
                   m,
                 ]);
               return {
-                floating: c,
-                getFloatingProps: v,
-                getReferenceProps: H,
-                open: l,
+                floating: l,
+                getFloatingProps: H,
+                getReferenceProps: v,
+                open: c,
               };
             })(n);
           return (0, s.jsx)(g.Provider, { value: r, children: t });
@@ -267,7 +237,7 @@
             ? s
               ? (0, r.cloneElement)(n, {
                   ...s.getReferenceProps(n.props),
-                  ref: (0, c.XB)(n.props.ref, s.floating.refs.setReference),
+                  ref: (0, l.XB)(n.props.ref, s.floating.refs.setReference),
                 })
               : (console.error(
                   "<PopoverAnchor> must be a child of <PopoverRoot>.",
@@ -277,10 +247,10 @@
         },
         Positioner: function (e) {
           const { children: t, className: n, ref: i } = e,
-            l = (0, r.useContext)(g),
-            c = (0, o.SV)([
+            c = (0, r.useContext)(g),
+            l = (0, o.SV)([
               i,
-              null == l ? void 0 : l.floating.refs.setFloating,
+              null == c ? void 0 : c.floating.refs.setFloating,
               (e) => {
                 var t;
                 return null === (t = null == e ? void 0 : e.showPopover) ||
@@ -289,24 +259,24 @@
                   : t.call(e);
               },
             ]);
-          if (!l)
+          if (!c)
             return (
               console.error(
                 "<Popover.Positioner> must be a child of <Popover.Root>.",
               ),
               null
             );
-          if (!l.open) return null;
+          if (!c.open) return null;
           let a = r.Children.only(t),
             h = r.Fragment;
-          a.type == j.FocusManager &&
+          a.type == _.FocusManager &&
             ((a = r.Children.only(a.props.children)), (h = m));
           const C = (0, r.cloneElement)(a, {
-            ref: c,
-            style: { ...l.floating.floatingStyles },
-            className: u()((0, x.T)(), n),
+            ref: l,
+            style: { ...c.floating.floatingStyles },
+            className: u()((0, f.T)(), n),
             popover: "manual",
-            ...l.getFloatingProps(),
+            ...c.getFloatingProps(),
           });
           return (0, s.jsx)(h, { children: C });
         },
@@ -320,32 +290,32 @@
         r = n(39479),
         o = n(64238),
         i = n.n(o),
-        l = n(75659),
-        c = n(11526),
+        c = n(75659),
+        l = n(11526),
         a = n(75180),
         h = n(78327);
       function C(e) {
         var t;
-        const { as: n = "div", ref: o, focusable: l, navProps: C, ...p } = e,
+        const { as: n = "div", ref: o, focusable: c, navProps: C, ...p } = e,
           u = (0, h.Qn)(),
-          x = (0, c.mz)({ ...p, className: i()(a.Grid, e.className) }, d),
-          f =
-            null !== (t = null != l ? l : null == C ? void 0 : C.focusable) &&
+          f = (0, l.mz)({ ...p, className: i()(a.Grid, e.className) }, d),
+          x =
+            null !== (t = null != c ? c : null == C ? void 0 : C.focusable) &&
             void 0 !== t
               ? t
               : !!p.onClick,
-          g = (0, s.jsx)(n, { ref: o, ...x });
+          g = (0, s.jsx)(n, { ref: o, ...f });
         return u
           ? (0, s.jsx)(r.J, {
               "flow-children": "grid",
               ...(C || {}),
-              focusable: f,
+              focusable: x,
               children: g,
             })
           : g;
       }
       const d = [
-        ...l.h,
+        ...c.h,
         {
           prop: "display",
           responsive: !0,
@@ -445,9 +415,9 @@
         r = n(39049),
         o = n(75659),
         i = n(20187),
-        l = n(11526),
-        c = n(90626);
-      const a = c.createContext({ depth: 0 });
+        c = n(11526),
+        l = n(90626);
+      const a = l.createContext({ depth: 0 });
       var h = n(11820),
         C = n(64238),
         d = n.n(C);
@@ -467,9 +437,9 @@
                   ),
                   "h1");
             return "h" + n;
-          })(t, (0, c.useContext)(a).depth);
+          })(t, (0, l.useContext)(a).depth);
         return (0, s.jsx)(i, {
-          ...(0, l.mz)({ ...e, className: d()((0, h.T)(), r.Heading, n) }, u),
+          ...(0, c.mz)({ ...e, className: d()((0, h.T)(), r.Heading, n) }, u),
         });
       }
       const u = [
@@ -482,141 +452,6 @@
         },
       ];
     },
-    20187: (e, t, n) => {
-      "use strict";
-      n.d(t, { Ae: () => d, EY: () => h, U6: () => C });
-      var s = n(7850),
-        r = n(55348),
-        o = n(11526),
-        i = n(75659),
-        l = n(64238),
-        c = n.n(l),
-        a = n(65274);
-      function h(e) {
-        const { as: t = "span", ref: n, className: r, ...i } = e,
-          l = t;
-        return (0, s.jsx)(l, {
-          ref: n,
-          ...(0, o.mz)({ ...i, className: c()(a.Text, r) }, d),
-        });
-      }
-      const C = [
-          {
-            prop: "weight",
-            responsive: !0,
-            className: a.TextWeight,
-            cssProperty: (e) => ["--text-weight", `var(--font-weight-${e})`],
-          },
-          {
-            prop: "align",
-            responsive: !0,
-            className: a.TextAlign,
-            cssProperty: "--text-align",
-          },
-          {
-            prop: "color",
-            responsive: !0,
-            cssProperty: (e, t, n) => {
-              var s;
-              return [
-                "--text-color",
-                (0, o.To)(
-                  e,
-                  null !== (s = (0, r.I)(t.contrast, n)) && void 0 !== s
-                    ? s
-                    : "body",
-                ),
-              ];
-            },
-          },
-          {
-            prop: "contrast",
-            responsive: !0,
-            cssProperty: (e, t, n) => {
-              var s;
-              return [
-                "--text-color",
-                (0, o.To)(
-                  null !== (s = (0, r.I)(t.color, n)) && void 0 !== s
-                    ? s
-                    : "text-body",
-                  e,
-                ),
-              ];
-            },
-          },
-          { prop: "truncate", className: a.Truncate },
-          {
-            prop: "lineClamp",
-            responsive: !0,
-            className: a.LineClamp,
-            cssProperty: "--line-clamp",
-          },
-          {
-            prop: "whiteSpace",
-            className: a.WhiteSpace,
-            cssProperty: "--white-space",
-          },
-        ],
-        d = [
-          ...C,
-          ...i.L,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (e) => a[`TextSize-${e}`],
-          },
-        ];
-    },
-    28491: (e, t, n) => {
-      "use strict";
-      n.d(t, { W: () => d, Y: () => h });
-      var s = n(7850),
-        r = n(50122),
-        o = n(20187),
-        i = n(11526),
-        l = n(45699),
-        c = n(39479),
-        a = n(78327);
-      function h(e) {
-        var t;
-        const { underline: n = "auto", focusable: o, navProps: c, ...h } = e,
-          d = (0, a.Qn)(),
-          p =
-            null !== (t = null != o ? o : null == c ? void 0 : c.focusable) &&
-            void 0 !== t
-              ? t
-              : !!h.href,
-          u = (0, i.mz)({ ...h, underline: n, className: r.TextLink }, C);
-        return d && (p || c)
-          ? (0, s.jsx)(l.Ii, { ...u, ...(c || {}), focusable: p })
-          : (0, s.jsx)("a", { ...u });
-      }
-      const C = [
-        ...o.Ae,
-        { prop: "underline", className: (e) => r[`Underline-${e}`] },
-      ];
-      function d(e) {
-        var t;
-        const { underline: n = "auto", focusable: o, navProps: l, ...h } = e,
-          d = (0, a.Qn)(),
-          p =
-            null !== (t = null != o ? o : null == l ? void 0 : l.focusable) &&
-            void 0 !== t
-              ? t
-              : !!h.onClick,
-          u = (0, s.jsx)("span", {
-            role: "button",
-            ...(0, i.mz)(
-              { ...h, underline: n, className: r.TextLinkButton },
-              C,
-            ),
-          });
-        return d && (p || l)
-          ? (0, s.jsx)(c.J, { ...(l || {}), focusable: p, children: u })
-          : u;
-      }
-    },
     21423: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { GlobalFooter: () => J });
@@ -624,26 +459,26 @@
         r = n(83392),
         o = n(59805),
         i = n(28491),
-        l = n(10430),
-        c = n(20187),
+        c = n(10430),
+        l = n(20187),
         a = n(48474),
         h = n(44167),
         C = n(19997),
         d = n(2160),
         p = n(66973),
         u = n(91933),
-        x = n(38861);
-      function f() {
-        return "desktop" === (0, u.j_)(x.k1);
+        f = n(38861);
+      function x() {
+        return "desktop" === (0, u.j_)(f.k1);
       }
       function g() {
-        f() && (0, u.Y1)(x.k1), "location" in window && location.reload();
+        x() && (0, u.Y1)(f.k1), "location" in window && location.reload();
       }
       var m = n(66418),
-        v = n(60014),
-        H = n(64238),
-        _ = n.n(H),
-        j = n(90626),
+        H = n(60014),
+        v = n(64238),
+        j = n.n(v),
+        _ = n(90626),
         L = n(74840),
         w = n(90534),
         V = n(49560);
@@ -656,10 +491,10 @@
             bTooltipMode: o,
             popoverProps: i,
           } = e,
-          [l, c] = (0, j.useState)(!1);
+          [c, l] = (0, _.useState)(!1);
         return (0, s.jsxs)(V.A.Root, {
-          open: l,
-          onOpenChange: c,
+          open: c,
+          onOpenChange: l,
           interactions: {
             hover: (e) => {
               let t = { ...e, delay: { open: r, close: 0 } };
@@ -675,9 +510,9 @@
           ],
         });
       }
-      var S = n(60859),
-        z = n.n(S);
-      function M() {
+      var M = n(60859),
+        S = n.n(M);
+      function z() {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "142",
@@ -735,7 +570,7 @@
           ],
         });
       }
-      function T() {
+      function R() {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "100",
@@ -760,12 +595,12 @@
           ],
         });
       }
-      function R(e) {
+      function T(e) {
         let { href: t, ...n } = e;
-        const r = (0, v.n9)();
+        const r = (0, H.n9)();
         return (
           (null == t ? void 0 : t.startsWith(m.TS.STORE_BASE_URL)) &&
-            (t = (0, v.bV)(r, t)),
+            (t = (0, H.bV)(r, t)),
           (0, s.jsx)(i.Y, {
             href: t,
             color: "dull-11",
@@ -776,67 +611,67 @@
         );
       }
       function A(e) {
-        const t = (0, l.xC)();
+        const t = (0, c.xC)();
         return "initial" === t || "sm" === t
           ? null
           : (0, s.jsx)("footer", {
-              className: _()(z().SteamChinaFooter, e.className),
+              className: j()(S().SteamChinaFooter, e.className),
               children: (0, s.jsxs)(w.az, {
-                className: z().FooterContent,
+                className: S().FooterContent,
                 children: [
                   (0, s.jsxs)(r.s, {
                     align: "center",
                     justify: "between",
                     children: [
-                      (0, s.jsx)(R, {
+                      (0, s.jsx)(T, {
                         href: m.TS.STORE_BASE_URL,
-                        children: (0, s.jsx)(M, {}),
+                        children: (0, s.jsx)(z, {}),
                       }),
                       (0, s.jsxs)(w.az, {
-                        className: z().NavLinks,
+                        className: S().NavLinks,
                         children: [
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(T, {
                             href: "https://about.steamchina.com/upgrade_announcement.html",
                             children: "公告",
                           }),
                           "  |  ",
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(T, {
                             href: m.TS.STORE_BASE_URL + "about",
                             children: "关于蒸汽平台",
                           }),
                           "  |  ",
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(T, {
                             href: m.TS.STORE_BASE_URL + "steam_refunds",
                             children: "退款政策",
                           }),
                           "  |  ",
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(T, {
                             href: m.TS.STORE_BASE_URL + "subscriber_agreement",
                             children: "软件许可服务协议",
                           }),
                           "  |  ",
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(T, {
                             href: m.TS.STORE_BASE_URL + "privacy_agreement",
                             children: "个人信息保护政策",
                           }),
                           "  |  ",
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(T, {
                             href: m.TS.STORE_BASE_URL + "data_outbound",
                             children: "个人信息出境告知书",
                           }),
                           "  |  ",
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(T, {
                             href: "https://about.steamchina.com/content_report.html",
                             children: "不良内容举报投诉",
                           }),
                           "  |  ",
                           (0, s.jsx)("br", {}),
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(T, {
                             href: "https://about.steamchina.com/infringement_report.html",
                             children: "侵权投诉",
                           }),
                           "  |  ",
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(T, {
                             href: "https://about.steamchina.com/parentguardianship_agreement.html",
                             children: "家长监护",
                           }),
@@ -852,13 +687,13 @@
                       (0, s.jsxs)(r.s, {
                         gap: "2",
                         children: [
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(T, {
                             href: "https://www.wanmei.com/",
                             children: (0, s.jsx)(y, {}),
                           }),
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(T, {
                             href: "https://www.valvesoftware.com",
-                            children: (0, s.jsx)(T, {}),
+                            children: (0, s.jsx)(R, {}),
                           }),
                         ],
                       }),
@@ -881,7 +716,7 @@
                                     m.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/weibo_logo.svg?v=1",
                                 }),
-                                (0, s.jsx)(c.EY, { children: "微博" }),
+                                (0, s.jsx)(l.EY, { children: "微博" }),
                               ],
                             }),
                           }),
@@ -901,7 +736,7 @@
                                     m.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/wechat_logo.svg?v=1",
                                 }),
-                                (0, s.jsx)(c.EY, { children: "微信" }),
+                                (0, s.jsx)(l.EY, { children: "微信" }),
                               ],
                             }),
                           }),
@@ -927,7 +762,7 @@
                         children: [
                           "© 完美世界征奇(上海)多媒体科技有限公司 版权所有。",
                           (0, s.jsx)("br", {}),
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(T, {
                             href: "https://beian.miit.gov.cn",
                             children: "沪ICP备 17051673号-4",
                           }),
@@ -947,41 +782,41 @@
               }),
             });
       }
-      var k = n(13843);
-      const E = {};
-      (E.arabic = () => n.e(2560).then(n.t.bind(n, 42560, 19))),
-        (E.brazilian = () => n.e(7442).then(n.t.bind(n, 37442, 19))),
-        (E.bulgarian = () => n.e(9945).then(n.t.bind(n, 39945, 19))),
-        (E.czech = () => n.e(5059).then(n.t.bind(n, 55059, 19))),
-        (E.danish = () => n.e(9605).then(n.t.bind(n, 19605, 19))),
-        (E.dutch = () => n.e(3366).then(n.t.bind(n, 13366, 19))),
-        (E.english = () => n.e(4468).then(n.t.bind(n, 74468, 19))),
-        (E.finnish = () => n.e(1655).then(n.t.bind(n, 31655, 19))),
-        (E.french = () => n.e(1580).then(n.t.bind(n, 21580, 19))),
-        (E.german = () => n.e(5666).then(n.t.bind(n, 5666, 19))),
-        (E.greek = () => n.e(2936).then(n.t.bind(n, 22936, 19))),
-        (E.hungarian = () => n.e(2173).then(n.t.bind(n, 52173, 19))),
-        (E.indonesian = () => n.e(412).then(n.t.bind(n, 80412, 19))),
-        (E.italian = () => n.e(9468).then(n.t.bind(n, 29468, 19))),
-        (E.japanese = () => n.e(2811).then(n.t.bind(n, 52811, 19))),
-        (E.koreana = () => n.e(6139).then(n.t.bind(n, 76139, 19))),
-        (E.latam = () => n.e(7267).then(n.t.bind(n, 77267, 19))),
-        (E.malay = () => n.e(8844).then(n.t.bind(n, 88844, 19))),
-        (E.norwegian = () => n.e(5964).then(n.t.bind(n, 85964, 19))),
-        (E.polish = () => n.e(6509).then(n.t.bind(n, 26509, 19))),
-        (E.portuguese = () => n.e(8233).then(n.t.bind(n, 58233, 19))),
-        (E.romanian = () => n.e(8727).then(n.t.bind(n, 48727, 19))),
-        (E.russian = () => n.e(8973).then(n.t.bind(n, 98973, 19))),
-        (E.schinese = () => n.e(9720).then(n.t.bind(n, 49720, 19))),
-        (E.spanish = () => n.e(1924).then(n.t.bind(n, 31924, 19))),
-        (E.swedish = () => n.e(7925).then(n.t.bind(n, 17925, 19))),
-        (E.tchinese = () => n.e(9259).then(n.t.bind(n, 89259, 19))),
-        (E.thai = () => n.e(5474).then(n.t.bind(n, 25474, 19))),
-        (E.turkish = () => n.e(2164).then(n.t.bind(n, 12164, 19))),
-        (E.ukrainian = () => n.e(2626).then(n.t.bind(n, 52626, 19))),
-        (E.vietnamese = () => n.e(6515).then(n.t.bind(n, 66515, 19)));
-      const P = (0, k.l)(async function (e) {
-        if (E[e]) return E[e]();
+      var E = n(13843);
+      const k = {};
+      (k.arabic = () => n.e(2560).then(n.t.bind(n, 42560, 19))),
+        (k.brazilian = () => n.e(7442).then(n.t.bind(n, 37442, 19))),
+        (k.bulgarian = () => n.e(9945).then(n.t.bind(n, 39945, 19))),
+        (k.czech = () => n.e(5059).then(n.t.bind(n, 55059, 19))),
+        (k.danish = () => n.e(9605).then(n.t.bind(n, 19605, 19))),
+        (k.dutch = () => n.e(3366).then(n.t.bind(n, 13366, 19))),
+        (k.english = () => n.e(4468).then(n.t.bind(n, 74468, 19))),
+        (k.finnish = () => n.e(1655).then(n.t.bind(n, 31655, 19))),
+        (k.french = () => n.e(1580).then(n.t.bind(n, 21580, 19))),
+        (k.german = () => n.e(5666).then(n.t.bind(n, 5666, 19))),
+        (k.greek = () => n.e(2936).then(n.t.bind(n, 22936, 19))),
+        (k.hungarian = () => n.e(2173).then(n.t.bind(n, 52173, 19))),
+        (k.indonesian = () => n.e(412).then(n.t.bind(n, 80412, 19))),
+        (k.italian = () => n.e(9468).then(n.t.bind(n, 29468, 19))),
+        (k.japanese = () => n.e(2811).then(n.t.bind(n, 52811, 19))),
+        (k.koreana = () => n.e(6139).then(n.t.bind(n, 76139, 19))),
+        (k.latam = () => n.e(7267).then(n.t.bind(n, 77267, 19))),
+        (k.malay = () => n.e(8844).then(n.t.bind(n, 88844, 19))),
+        (k.norwegian = () => n.e(5964).then(n.t.bind(n, 85964, 19))),
+        (k.polish = () => n.e(6509).then(n.t.bind(n, 26509, 19))),
+        (k.portuguese = () => n.e(8233).then(n.t.bind(n, 58233, 19))),
+        (k.romanian = () => n.e(8727).then(n.t.bind(n, 48727, 19))),
+        (k.russian = () => n.e(8973).then(n.t.bind(n, 98973, 19))),
+        (k.schinese = () => n.e(9720).then(n.t.bind(n, 49720, 19))),
+        (k.spanish = () => n.e(1924).then(n.t.bind(n, 31924, 19))),
+        (k.swedish = () => n.e(7925).then(n.t.bind(n, 17925, 19))),
+        (k.tchinese = () => n.e(9259).then(n.t.bind(n, 89259, 19))),
+        (k.thai = () => n.e(5474).then(n.t.bind(n, 25474, 19))),
+        (k.turkish = () => n.e(2164).then(n.t.bind(n, 12164, 19))),
+        (k.ukrainian = () => n.e(2626).then(n.t.bind(n, 52626, 19))),
+        (k.vietnamese = () => n.e(6515).then(n.t.bind(n, 66515, 19)));
+      const P = (0, E.l)(async function (e) {
+        if (k[e]) return k[e]();
       });
       var Z = n(78327);
       function N() {
@@ -1022,8 +857,8 @@
           ],
         });
       }
-      function U() {
-        const e = (0, j.useId)();
+      function B() {
+        const e = (0, _.useId)();
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "95",
@@ -1058,7 +893,7 @@
           ],
         });
       }
-      function B() {
+      function U() {
         return (0, s.jsx)("svg", {
           width: "24",
           height: "22",
@@ -1106,7 +941,7 @@
           }),
         });
       }
-      function W(e) {
+      function D(e) {
         return (0, s.jsx)(r.s, { direction: "column", gap: "4", ...e });
       }
       function Y(e) {
@@ -1118,12 +953,12 @@
           ...e,
         });
       }
-      function D(e) {
+      function G(e) {
         let { href: t, ...n } = e;
-        const r = (0, v.n9)();
+        const r = (0, H.n9)();
         return (
           (null == t ? void 0 : t.startsWith(m.TS.STORE_BASE_URL)) &&
-            (t = (0, v.bV)(r, t)),
+            (t = (0, H.bV)(r, t)),
           (0, s.jsx)(i.Y, {
             href: t,
             color: "dull-11",
@@ -1133,8 +968,8 @@
           })
         );
       }
-      function G() {
-        const e = (0, l.xC)();
+      function W() {
+        const e = (0, c.xC)();
         return (0, s.jsxs)(r.s, {
           gridArea: "main",
           direction: "column",
@@ -1145,17 +980,17 @@
               gap: "6",
               align: "center",
               children: [
-                (0, s.jsx)(D, {
+                (0, s.jsx)(G, {
                   href: m.TS.STORE_BASE_URL,
                   children: (0, s.jsx)(N, {}),
                 }),
-                (0, s.jsx)(D, {
+                (0, s.jsx)(G, {
                   href: "https://valvesoftware.com",
-                  children: (0, s.jsx)(U, {}),
+                  children: (0, s.jsx)(B, {}),
                 }),
               ],
             }),
-            (0, s.jsx)(c.EY, {
+            (0, s.jsx)(l.EY, {
               as: "p",
               size: "1",
               className: L.LegalNotice,
@@ -1168,19 +1003,19 @@
               align: "center",
               className: L.LogoLinks,
               children: [
-                (0, s.jsx)(D, {
+                (0, s.jsx)(G, {
                   href: "https://www.youtube.com/@Steam",
                   children: (0, s.jsx)(F, {}),
                 }),
-                (0, s.jsx)(D, {
+                (0, s.jsx)(G, {
                   href: "https://bsky.app/profile/steampowered.com",
-                  children: (0, s.jsx)(B, {}),
+                  children: (0, s.jsx)(U, {}),
                 }),
-                (0, s.jsx)(D, {
+                (0, s.jsx)(G, {
                   href: "https://facebook.com/steam",
                   children: (0, s.jsx)(O, {}),
                 }),
-                (0, s.jsx)(D, {
+                (0, s.jsx)(G, {
                   href: "https://twitter.com/steam",
                   children: (0, s.jsx)(I, {}),
                 }),
@@ -1195,7 +1030,7 @@
                     href: m.TS.STORE_BASE_URL + "mobile/",
                     children: P.Localize("#footer_link_get_mobile_apps"),
                   }),
-                f() &&
+                x() &&
                   (0, s.jsx)(a.$, {
                     color: "dull",
                     onClick: g,
@@ -1206,9 +1041,9 @@
           ],
         });
       }
-      function X(e) {
+      function $(e) {
         return (
-          (0, j.use)(P.Ready()),
+          (0, _.use)(P.Ready()),
           (0, s.jsx)(h.N, {
             breakpoints: { sm: 700 },
             children: (0, s.jsxs)(C.x, {
@@ -1223,7 +1058,7 @@
                 sm: "min-content min-content max-content max-content",
                 md: "fit-content(400px) max-content max-content max-content max-content",
               },
-              className: _()(L.GlobalFooter, e.className),
+              className: j()(L.GlobalFooter, e.className),
               justifyContent: { initial: "start", sm: "start", md: "center" },
               gap: { initial: "6", sm: "9" },
               padding: "7",
@@ -1231,106 +1066,106 @@
               textAlign: "start",
               id: "footer",
               children: [
-                (0, s.jsx)(G, {}),
-                (0, s.jsxs)(W, {
+                (0, s.jsx)(W, {}),
+                (0, s.jsxs)(D, {
                   gridArea: "steam",
                   children: [
                     (0, s.jsx)(Y, {
                       children: P.Localize("#footer_link_header_steam"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.STORE_BASE_URL + "about/",
                       children: P.Localize("#footer_link_about_steam"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.STORE_BASE_URL + "subscriber_agreement/",
                       children: P.Localize("#footer_link_steam_ssa"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.PARTNER_BASE_URL,
                       children: P.Localize("#footer_link_steamworks"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.PARTNER_BASE_URL + "steamdirect",
                       children: P.Localize("#footer_link_steam_distribution"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.STORE_BASE_URL + "digitalgiftcards/",
                       children: P.Localize("#footer_link_gift_cards"),
                     }),
                   ],
                 }),
-                (0, s.jsxs)(W, {
+                (0, s.jsxs)(D, {
                   gridArea: "valve",
                   children: [
                     (0, s.jsx)(Y, {
                       children: P.Localize("#footer_link_header_valve"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: "https://valvesoftware.com/about",
                       children: P.Localize("#footer_link_about_valve"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: "https://valvesoftware.com/",
                       children: P.Localize("#footer_link_jobs"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.STORE_BASE_URL + "hardware/",
                       children: P.Localize("#footer_link_hardware"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.STORE_BASE_URL + "hardware_recycling/",
                       children: P.Localize("#footer_link_recycling"),
                     }),
                   ],
                 }),
-                (0, s.jsxs)(W, {
+                (0, s.jsxs)(D, {
                   gridArea: "legal",
                   children: [
                     (0, s.jsx)(Y, {
                       children: P.Localize("#footer_link_header_legal"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.STORE_BASE_URL + "privacy_agreement/",
                       children: P.Localize("#footer_link_privacy"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: "https://help.steampowered.com/faqs/view/10BB-D27A-6378-4436",
                       children: P.Localize("#footer_link_accessibility"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.STORE_BASE_URL + "legal/",
                       children: P.Localize("#footer_link_notices_and_policies"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.STORE_BASE_URL + "account/cookiepreferences/",
                       children: P.Localize("#footer_link_cookies"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.STORE_BASE_URL + "steam_refunds/",
                       children: P.Localize("#footer_link_refunds"),
                     }),
                   ],
                 }),
-                (0, s.jsxs)(W, {
+                (0, s.jsxs)(D, {
                   gridArea: "more",
                   children: [
                     (0, s.jsx)(Y, {
                       children: P.Localize("#footer_link_header_more"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.STORE_BASE_URL + "about/",
                       children: P.Localize("#footer_link_get_steam"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.STORE_BASE_URL + "mobile/",
                       children: P.Localize("#footer_link_get_mobile_apps"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.HELP_BASE_URL,
                       children: P.Localize("#footer_link_get_support"),
                     }),
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(G, {
                       href: m.TS.STORE_BASE_URL + "account/",
                       children: P.Localize("#footer_link_my_account"),
                     }),
@@ -1345,8 +1180,8 @@
         if ((0, Z.Qn)()) return null;
         const t = (0, d.nA)(m.TS.EREALM)
           ? (0, s.jsx)(A, { ...e })
-          : (0, s.jsx)(X, { ...e });
-        return (0, s.jsx)(v.nn, {
+          : (0, s.jsx)($, { ...e });
+        return (0, s.jsx)(H.nn, {
           controller: "footer",
           method: "footer",
           children: t,

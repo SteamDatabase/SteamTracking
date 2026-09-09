@@ -1305,6 +1305,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 7;
       var _, _;
@@ -1863,7 +1864,13 @@
         }
         async GetVODManifest(_, _) {
           _.SetState(_.Loading, "");
-          let _ = await _._.Get().LoadVODForAppID(_.m_nAppIDVOD);
+          let _ = await _._.fetchQuery((0, _._)(_.m_nAppIDVOD)).catch((_) => {
+            console.error(
+              "BroadcastWatchStore:GetVODManifest: Failed to load VOD " +
+                _.m_nAppIDVOD,
+              _,
+            );
+          });
           _
             ? (_.SetState(_.Ready),
               (_.m_manifestURL = _.video_url),

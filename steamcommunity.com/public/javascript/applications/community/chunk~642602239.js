@@ -266,14 +266,14 @@
           Ou: () => I,
           r: () => _,
           PQ: () => v,
-          W: () => y,
+          W: () => S,
           LK: () => M,
           zE: () => b,
-          mj: () => S,
+          mj: () => y,
           hK: () => C,
         });
       var a = {};
-      r.r(a), r.d(a, { rg: () => E, kE: () => A });
+      r.r(a), r.d(a, { rg: () => A, kE: () => E });
       var o = {};
       r.r(o), r.d(o, { hu: () => T, yt: () => N });
       var l = r(80613),
@@ -286,8 +286,8 @@
         g = 1,
         f = 2,
         _ = 3,
-        S = 4,
-        y = 5,
+        y = 4,
+        S = 5,
         b = 6,
         w = 7,
         C = 8,
@@ -297,8 +297,8 @@
         M = 12,
         I = 13,
         j = 14,
-        E = 1,
-        A = 2,
+        A = 1,
+        E = 2,
         T = 1,
         N = 3;
       function k(e) {
@@ -1542,11 +1542,11 @@
         Sz: () => j,
         Tu: () => v,
         W4: () => w,
-        ZS: () => E,
+        ZS: () => A,
         Zb: () => I,
         _J: () => k,
         ck: () => R,
-        d$: () => A,
+        d$: () => E,
         j$: () => B,
       });
       var i = r(7850),
@@ -1564,8 +1564,8 @@
         g = r(32754),
         f = r(52038),
         _ = r(61859),
-        S = r(61336),
-        y = r(30470),
+        y = r(61336),
+        S = r(30470),
         b = r(84958);
       const w = new Map([
           [
@@ -1594,7 +1594,7 @@
           ],
           ["h1", { Constructor: I, autocloses: !1, skipFollowingNewline: !0 }],
           ["h2", { Constructor: j, autocloses: !1, skipFollowingNewline: !0 }],
-          ["h3", { Constructor: E, autocloses: !1, skipFollowingNewline: !0 }],
+          ["h3", { Constructor: A, autocloses: !1, skipFollowingNewline: !0 }],
           [
             "h4",
             {
@@ -1717,7 +1717,7 @@
                 let t = (0, p.J)(B(e.args));
                 if (!t) {
                   const r = e.children;
-                  "string" == typeof r && (0, S.DZ)(r) && (t = (0, p.J)(r));
+                  "string" == typeof r && (0, y.DZ)(r) && (t = (0, p.J)(r));
                 }
                 const r =
                     "button" == B(e.args, "style") ? s().LinkButton : void 0,
@@ -1738,7 +1738,7 @@
                     id: a,
                     children: e.children,
                   });
-                return (0, i.jsx)(A, {
+                return (0, i.jsx)(E, {
                   className: r,
                   href: t,
                   id: a,
@@ -1955,25 +1955,25 @@
                   h = null !== (o = B(e.args, "id")) && void 0 !== o ? o : "",
                   g = new Date(u),
                   _ = g.getUTCFullYear(),
-                  S = ("0" + (g.getUTCMonth() + 1)).slice(-2),
-                  y = ("0" + g.getUTCDate()).slice(-2),
+                  y = ("0" + (g.getUTCMonth() + 1)).slice(-2),
+                  S = ("0" + g.getUTCDate()).slice(-2),
                   b = ("0" + g.getUTCHours()).slice(-2),
                   w = ("0" + g.getUTCMinutes()).slice(-2),
-                  C = `${_}${S}${y}T${b}${w}00Z`,
+                  C = `${_}${y}${S}T${b}${w}00Z`,
                   v = new Date(d),
                   x = v.getUTCFullYear(),
                   M = ("0" + (v.getUTCMonth() + 1)).slice(-2),
                   I = ("0" + v.getUTCDate()).slice(-2),
                   j = ("0" + v.getUTCHours()).slice(-2),
-                  E = ("0" + v.getUTCMinutes()).slice(-2),
-                  A = `${x}${M}${I}T${j}${E}00Z`;
+                  A = ("0" + v.getUTCMinutes()).slice(-2),
+                  E = `${x}${M}${I}T${j}${A}00Z`;
                 let T;
                 try {
                   let e = "BEGIN:VCALENDAR\r\n";
                   (e += "VERSION:2.0\r\n"),
                     (e += "BEGIN:VEVENT\r\n"),
                     (e += `DTSTART:${C}\r\n`),
-                    (e += `DTEND:${A}\r\n`),
+                    (e += `DTEND:${E}\r\n`),
                     (e += `SUMMARY:${c.replace("\n", "\\n")}\r\n`),
                     m && (e += `DESCRIPTION:${m.replace("\n", "\\n")}\r\n`),
                     p && (e += `LOCATION:${p.replace("\n", "\\n")}\r\n`),
@@ -1987,7 +1987,7 @@
                   "https://calendar.google.com/calendar/render?action=TEMPLATE";
                 (N += `&text=${encodeURI(c)}`),
                   (N += `&details=${encodeURI(m)}`),
-                  (N += `&dates=${encodeURI(C + "/" + A)}`);
+                  (N += `&dates=${encodeURI(C + "/" + E)}`);
                 const k = (e) => {
                   if ("ReactNativeWebView" in window) {
                     const t = window.ReactNativeWebView,
@@ -2052,10 +2052,10 @@
                 const t = B(e.args),
                   r = "button" == B(e.args, "style") ? s().LinkButton : void 0,
                   n = r && B(e.args, "buttoncolor");
-                return (0, i.jsx)(A, {
+                return (0, i.jsx)(E, {
                   className: r,
                   style: { backgroundColor: n },
-                  href: `${y.TS.PARTNER_BASE_URL}doc/${t}`,
+                  href: `${S.TS.PARTNER_BASE_URL}doc/${t}`,
                   children: e.children,
                 });
               },
@@ -2143,25 +2143,25 @@
       function j(e) {
         return M("h2", e, (0, f.A)(s().Header2, "BB_Header2"));
       }
-      function E(e) {
+      function A(e) {
         return M("h3", e, (0, f.A)(s().Header3, "BB_Header3"));
       }
-      const A = (e) => {
+      const E = (e) => {
         const { href: t, ...r } = e;
         let n,
           s = (0, d.OZ)(null != t ? t : "");
         (0, u.p)(s)
           ? ((s =
-              (y.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
+              (S.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
               (0, u.E)(s)),
             (n = "noopener nofollow"))
-          : (s = (0, S.NT)(s));
+          : (s = (0, y.NT)(s));
         const o =
           "string" == typeof e.children &&
           e.children.length > 0 &&
           t &&
           !t.startsWith("steam://")
-            ? (0, S.Qz)(t)
+            ? (0, y.Qz)(t)
             : void 0;
         return (0, i.jsx)(g.Gq, {
           toolTipContent: o,
@@ -2458,13 +2458,13 @@
         ik: () => m,
         mZ: () => f,
         t7: () => h,
-        zX: () => S,
+        zX: () => y,
       });
       var i = r(41735),
         n = r.n(i),
         s = r(90626),
         a = r(37085),
-        o = r(6824),
+        o = r(30570),
         l = r(73745),
         c = r(16021);
       const u = 1,
@@ -2478,8 +2478,8 @@
         const [g, f] = (0, s.useState)(void 0),
           {
             include_assets: _,
-            include_release: S,
-            include_platforms: y,
+            include_release: y,
+            include_platforms: S,
             include_all_purchase_options: b,
             include_screenshots: w,
             include_trailers: C,
@@ -2489,8 +2489,8 @@
             include_basic_info: M,
             include_supported_languages: I,
             include_full_description: j,
-            include_included_items: E,
-            include_assets_without_overrides: A,
+            include_included_items: A,
+            include_assets_without_overrides: E,
             apply_user_filters: T,
             include_links: N,
             include_extra_details: k,
@@ -2499,8 +2499,8 @@
           ((0, s.useEffect)(() => {
             const r = {
               include_assets: _,
-              include_release: S,
-              include_platforms: y,
+              include_release: y,
+              include_platforms: S,
               include_all_purchase_options: b,
               include_screenshots: w,
               include_trailers: C,
@@ -2510,8 +2510,8 @@
               include_basic_info: M,
               include_supported_languages: I,
               include_full_description: j,
-              include_included_items: E,
-              include_assets_without_overrides: A,
+              include_included_items: A,
+              include_assets_without_overrides: E,
               apply_user_filters: T,
               include_links: N,
               include_extra_details: k,
@@ -2541,8 +2541,8 @@
             i,
             g,
             _,
-            S,
             y,
+            S,
             b,
             w,
             C,
@@ -2552,8 +2552,8 @@
             M,
             I,
             j,
-            E,
             A,
+            E,
             T,
             N,
             k,
@@ -2596,8 +2596,8 @@
             include_all_purchase_options: g,
             include_screenshots: f,
             include_trailers: _,
-            include_ratings: S,
-            include_tag_count: y,
+            include_ratings: y,
+            include_tag_count: S,
             include_reviews: b,
             include_basic_info: w,
             include_supported_languages: C,
@@ -2618,8 +2618,8 @@
                 include_all_purchase_options: g,
                 include_screenshots: f,
                 include_trailers: _,
-                include_ratings: S,
-                include_tag_count: y,
+                include_ratings: y,
+                include_tag_count: S,
                 include_reviews: b,
                 include_basic_info: w,
                 include_supported_languages: C,
@@ -2646,7 +2646,7 @@
               }),
               () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, i, a, o, p, h, g, f, _, S, y, b, w, C, B, v, x, M, I, j]),
+          }, [e, t, i, a, o, p, h, g, f, _, y, S, b, w, C, B, v, x, M, I, j]),
           !e)
         )
           return d;
@@ -2664,7 +2664,7 @@
           ? m
           : d;
       }
-      function S(e, t, r) {
+      function y(e, t, r) {
         return _(e, o.c6.qI, t, r);
       }
     },
@@ -2791,8 +2791,8 @@
             bShowVideoImmediately: r,
             bAutoPlay: h,
             nStartSeconds: _,
-            classNameSize: S,
-            classNameAlign: y,
+            classNameSize: y,
+            classNameAlign: S,
           } = e,
           [b, w] = (0, n.useState)(!r),
           [C, B] = (0, n.useState)(!1),
@@ -2853,7 +2853,7 @@
         return (0, i.jsx)(p.gZ, {
           video: t,
           children: (0, i.jsxs)("div", {
-            className: (0, c.A)(g().PreviewYouTubeVideo, S, y),
+            className: (0, c.A)(g().PreviewYouTubeVideo, y, S),
             id: t,
             children: [
               (0, i.jsx)("img", {
@@ -2894,8 +2894,8 @@
         g = r.n(h),
         f = r(97232),
         _ = r(32754);
-      const S = 1576780700;
-      let y = class extends s.Component {
+      const y = 1576780700;
+      let S = class extends s.Component {
         OnEmoticonClick(e) {
           var t;
           const {
@@ -2950,7 +2950,7 @@
             this.BHaveUnseenEmoticons() && s)
           ) {
             let e = this.GetNewestIndicatorTime();
-            (!e || e < S) && (e = S), s("rtLastAckedNewEmoticons", e);
+            (!e || e < y) && (e = y), s("rtLastAckedNewEmoticons", e);
           }
         }
         GetNewestIndicatorTime() {
@@ -2964,7 +2964,7 @@
         BHaveUnseenEmoticons() {
           const { rtLastAckedNewEmoticons: e } = this.props;
           let t = this.GetNewestIndicatorTime();
-          return !e || e < S || (t && (!e || e < t));
+          return !e || e < y || (t && (!e || e < t));
         }
         render() {
           const { disabled: e, className: t, ttip: r, useImg: i } = this.props;
@@ -3009,9 +3009,9 @@
           );
         }
       };
-      (0, i.Cg)([o.oI], y.prototype, "OnEmoticonClick", null),
-        (y = (0, i.Cg)([a.PA], y));
-      const b = y;
+      (0, i.Cg)([o.oI], S.prototype, "OnEmoticonClick", null),
+        (S = (0, i.Cg)([a.PA], S));
+      const b = S;
     },
     10820: (e, t, r) => {
       "use strict";
@@ -3033,8 +3033,8 @@
         g = r(68255),
         f = r(76217),
         _ = r(88006),
-        S = r(19418);
-      class y extends o.Component {
+        y = r(19418);
+      class S extends o.Component {
         constructor(e) {
           super(e), (this.state = { activeIndex: e.initialActiveIndex || 0 });
         }
@@ -3060,7 +3060,7 @@
                 }
               : void 0;
           return (0, n.jsxs)(f.Z, {
-            className: S.Picker,
+            className: y.Picker,
             onButtonDown: a,
             children: [s && (0, n.jsx)(b, { children: this.RenderTabs() }), i],
           });
@@ -3082,25 +3082,25 @@
       }
       function b(e) {
         return (0, n.jsx)(f.Z, {
-          className: S.Tabs,
+          className: y.Tabs,
           "flow-children": "row",
           children: e.children,
         });
       }
       function w(e) {
         return (0, n.jsx)("div", {
-          className: S.Content,
+          className: y.Content,
           children: e.children,
         });
       }
       function C(e) {
         const { active: t, children: r, onClick: i } = e;
         return (0, n.jsx)(f.Z, {
-          className: (0, d.A)(S.Tab, t && S.Active),
-          focusClassName: S.Focus,
+          className: (0, d.A)(y.Tab, t && y.Active),
+          focusClassName: y.Focus,
           onActivate: i,
           children: (0, n.jsx)("div", {
-            className: (0, d.A)(S.TabContent, t && S.Active),
+            className: (0, d.A)(y.TabContent, t && y.Active),
             children: r,
           }),
         });
@@ -3117,10 +3117,10 @@
           (0, n.jsx)(
             f.Z,
             {
-              className: S.Item,
+              className: y.Item,
               onActivate: () => i(t[a]),
               autoFocus: 0 === a,
-              focusClassName: S.Focus,
+              focusClassName: y.Focus,
               children: r(t[a]),
             },
             s(e),
@@ -3130,7 +3130,7 @@
           0 === t.length && a && (o = a()),
           (0, n.jsx)(f.Z, {
             "flow-children": "grid",
-            className: S.ItemList,
+            className: y.ItemList,
             children: o,
           })
         );
@@ -3157,7 +3157,7 @@
               children: [
                 s &&
                   (0, n.jsx)("div", {
-                    className: S.SectionedPageTitle,
+                    className: y.SectionedPageTitle,
                     children: s,
                   }),
                 i.map(({ title: e, ...t }) =>
@@ -3175,11 +3175,11 @@
       }
       function M(e) {
         return (0, n.jsxs)("div", {
-          className: S.Section,
+          className: y.Section,
           children: [
-            (0, n.jsx)("div", { className: S.SectionTitle, children: e.title }),
+            (0, n.jsx)("div", { className: y.SectionTitle, children: e.title }),
             (0, n.jsx)("div", {
-              className: S.SectionContent,
+              className: y.SectionContent,
               children: e.children,
             }),
           ],
@@ -3188,11 +3188,11 @@
       function I(e) {
         const { value: t, onChange: r, onSubmit: i } = e;
         return (0, n.jsx)("div", {
-          className: S.FilterInputContainer,
+          className: y.FilterInputContainer,
           children: (0, n.jsx)(g.pd, {
             type: "text",
             placeholder: (0, m.we)("#AddonPicker_Search"),
-            className: S.FilterInput,
+            className: y.FilterInput,
             value: t,
             onChange: (e) => r(e.target.value),
             onSubmit: i,
@@ -3202,12 +3202,12 @@
       function j(e) {
         const { className: t, ...r } = e;
         return (0, n.jsx)("div", {
-          className: (0, d.A)(t, S.AddonPickerMessage),
+          className: (0, d.A)(t, y.AddonPickerMessage),
           ...r,
         });
       }
-      var E = r(42060),
-        A = r.n(E),
+      var A = r(42060),
+        E = r.n(A),
         T = r(51272),
         N = r(81962);
       function k(e) {
@@ -3250,9 +3250,9 @@
                 (0, n.jsx)("span", {
                   title: (0, m.we)("#AddonPicker_RecentlyUsed"),
                   className: (0, d.A)(
-                    A().PickerTab,
-                    A().Clock,
-                    e && A().ActiveTab,
+                    E().PickerTab,
+                    E().Clock,
+                    e && E().ActiveTab,
                   ),
                   children: (0, n.jsx)(re, {}),
                 }),
@@ -3265,14 +3265,14 @@
                 }),
             }),
           (0, n.jsx)(u.tz, {
-            children: (0, n.jsx)(y, {
+            children: (0, n.jsx)(S, {
               config: [
                 ...p,
                 {
                   renderTab: (e) =>
                     (0, n.jsx)("span", {
                       title: (0, m.we)("#AddonPicker_Emoticons"),
-                      className: (0, d.A)(A().PickerTab, e && A().ActiveTab),
+                      className: (0, d.A)(E().PickerTab, e && E().ActiveTab),
                       children: (0, n.jsx)(ee, {}),
                     }),
                   renderContent: () =>
@@ -3286,7 +3286,7 @@
                   renderTab: (e) =>
                     (0, n.jsx)("span", {
                       title: (0, m.we)("#AddonPicker_Stickers"),
-                      className: (0, d.A)(A().PickerTab, e && A().ActiveTab),
+                      className: (0, d.A)(E().PickerTab, e && E().ActiveTab),
                       children: (0, n.jsx)(X, {}),
                     }),
                   renderContent: () =>
@@ -3296,7 +3296,7 @@
                   renderTab: (e) =>
                     (0, n.jsx)("span", {
                       title: (0, m.we)("#AddonPicker_RoomEffects"),
-                      className: (0, d.A)(A().PickerTab, e && A().ActiveTab),
+                      className: (0, d.A)(E().PickerTab, e && E().ActiveTab),
                       children: (0, n.jsx)(te, {}),
                     }),
                   renderContent: () =>
@@ -3340,9 +3340,9 @@
                   (0, n.jsx)("span", {
                     title: (0, m.we)("#AddonPicker_RecentlyUsed"),
                     className: (0, d.A)(
-                      A().PickerTab,
-                      A().Clock,
-                      e && A().ActiveTab,
+                      E().PickerTab,
+                      E().Clock,
+                      e && E().ActiveTab,
                     ),
                     children: (0, n.jsx)(re, {}),
                   }),
@@ -3355,14 +3355,14 @@
                   }),
               }),
             (0, n.jsx)(u.tz, {
-              children: (0, n.jsx)(y, {
+              children: (0, n.jsx)(S, {
                 config: [
                   ...s,
                   {
                     renderTab: (e) =>
                       (0, n.jsx)("span", {
                         title: (0, m.we)("#AddonPicker_Emoticons"),
-                        className: (0, d.A)(A().PickerTab, e && A().ActiveTab),
+                        className: (0, d.A)(E().PickerTab, e && E().ActiveTab),
                         children: (0, n.jsx)(ee, {}),
                       }),
                     renderContent: () =>
@@ -3376,7 +3376,7 @@
                     renderTab: (e) =>
                       (0, n.jsx)("span", {
                         title: (0, m.we)("#AddonPicker_Stickers"),
-                        className: (0, d.A)(A().PickerTab, e && A().ActiveTab),
+                        className: (0, d.A)(E().PickerTab, e && E().ActiveTab),
                         children: (0, n.jsx)(X, {}),
                       }),
                     renderContent: () =>
@@ -3408,13 +3408,13 @@
         }
         render() {
           return (0, n.jsx)(u.tz, {
-            children: (0, n.jsx)(y, {
+            children: (0, n.jsx)(S, {
               config: [
                 {
                   renderTab: () =>
                     (0, n.jsx)("span", {
                       title: (0, m.we)("#AddonPicker_Emoticons"),
-                      className: A().PickerTab,
+                      className: E().PickerTab,
                       children: (0, n.jsx)(ee, {}),
                     }),
                   renderContent: () =>
@@ -3445,13 +3445,13 @@
         }
         render() {
           return (0, n.jsx)(u.tz, {
-            children: (0, n.jsx)(y, {
+            children: (0, n.jsx)(S, {
               config: [
                 {
                   renderTab: () =>
                     (0, n.jsx)("span", {
                       title: (0, m.we)("#AddonPicker_Emoticons"),
-                      className: A().PickerTab,
+                      className: E().PickerTab,
                       children: (0, n.jsx)(ee, {}),
                     }),
                   renderContent: () =>
@@ -3751,7 +3751,7 @@
         const { emoticon: t, large: r } = e,
           i = !t.last_used && t.time_received;
         return (0, n.jsxs)("div", {
-          className: A().EmoticonItem,
+          className: E().EmoticonItem,
           children: [
             (0, n.jsx)(N.n, { emoticon: t.name, large: r }),
             i && (0, n.jsx)(J, {}),
@@ -3769,7 +3769,7 @@
             i = p(h.TS.COMMUNITY_CDN_URL, e.name);
           return (0, n.jsxs)("div", {
             ref: this.m_ref,
-            className: (0, d.A)(t, A().StickerButton),
+            className: (0, d.A)(t, E().StickerButton),
             onMouseOver: () => this.setState({ showHover: !0 }),
             onFocus: () => this.setState({ showHover: !0 }),
             onMouseLeave: () => this.setState({ showHover: !1 }),
@@ -3796,7 +3796,7 @@
           subtitle: null == s ? void 0 : s.GetName(),
           children: (0, n.jsx)("img", {
             src: p(h.TS.COMMUNITY_CDN_URL, r),
-            className: A().StickerHoverSticker,
+            className: E().StickerHoverSticker,
           }),
         });
       });
@@ -3820,7 +3820,7 @@
             onFocus: () => this.setState({ showHover: !0 }),
             onMouseLeave: () => this.setState({ showHover: !1 }),
             onBlur: () => this.setState({ showHover: !1 }),
-            className: (0, d.A)(r, A().EffectButton),
+            className: (0, d.A)(r, E().EffectButton),
             ...i,
             children: [
               s.renderEffectIcon(),
@@ -3848,15 +3848,15 @@
           title: r,
           subtitle: null == o ? void 0 : o.GetName(),
           children: (0, n.jsx)("div", {
-            className: A().EffectHoverEffect,
+            className: E().EffectHoverEffect,
             children: a.renderEffectIcon(),
           }),
         });
       });
       function J() {
         return (0, n.jsx)("div", {
-          className: A().NewEmoticonIndicator,
-          children: (0, n.jsx)("div", { className: A().NewEmoticonCircle }),
+          className: E().NewEmoticonIndicator,
+          children: (0, n.jsx)("div", { className: E().NewEmoticonCircle }),
         });
       }
       function X(e) {
@@ -4123,10 +4123,11 @@
               bMuted: d,
               className: m,
               mediaScale: h,
-              onClick: g,
-              altText: b,
+              flAspectRatio: g,
+              onClick: b,
+              altText: w,
             } = e,
-            w = (0, s.useMemo)(() => {
+            C = (0, s.useMemo)(() => {
               var e;
               return Boolean(
                 null === (e = r.rgVideoTracks) || void 0 === e
@@ -4136,42 +4137,42 @@
                     ),
               );
             }, [r.rgVideoTracks]),
-            [C, B] = s.useState(!1),
-            v = f();
+            [B, v] = s.useState(!1),
+            x = f();
           if (!r.rgVideoSources || !r.rgVideoSources.length) return null;
-          const x = (function (e) {
+          const M = (function (e) {
             return !(
-              !(0, c.ZF)(e.sPoster) ||
+              (!(0, c._1)(e.sPoster) && !(0, c.ZF)(e.sPoster)) ||
               (e.rgVideoSources &&
                 e.rgVideoSources.some((e) => !(0, c.ZF)(e.sURL))) ||
               (e.rgVideoTracks &&
                 e.rgVideoTracks.some((e) => !(0, c.ZF)(e.sURL)))
             );
           })(r);
-          let M;
-          (!x || (w && u.TS.EUNIVERSE == a.wLO)) && (M = "anonymous");
-          const I = d || (i && p.Get().BVolumePreferenceMuted()),
-            j = r.sPoster ? _(r.sPoster, v) : "";
+          let I;
+          (!M || (C && u.TS.EUNIVERSE == a.wLO)) && (I = "anonymous");
+          const j = d || (i && p.Get().BVolumePreferenceMuted()),
+            A = r.sPoster ? _(r.sPoster, x) : "";
           return (0, n.jsxs)("video", {
             width: "100%",
             height: "auto",
             autoPlay: i,
-            muted: I,
+            muted: j,
             playsInline: !0,
             controls: o,
-            poster: j,
+            poster: A,
             loop: l,
-            crossOrigin: M,
+            crossOrigin: I,
             onVolumeChange: (e) => {
               const t = e.target,
                 r = t.muted ? 0 : t.volume;
-              C && p.Get().SetVolumePreference(r);
+              B && p.Get().SetVolumePreference(r);
             },
             onPlay: (e) => {
               const t = e.target,
                 r = 0 == t.currentTime,
                 n = p.Get().BUserHasVolumePreference();
-              if ((B(!0), r))
+              if ((v(!0), r))
                 if (n || i)
                   n &&
                     ((t.volume = p.Get().GetVolumePreference()),
@@ -4183,12 +4184,15 @@
             },
             ref: t,
             className: m,
-            onClick: g,
-            "aria-label": b,
-            style: { width: h && h >= 1 && h < 100 ? `${h}%` : void 0 },
+            onClick: b,
+            "aria-label": w,
+            style: {
+              width: h && h >= 1 && h < 100 ? `${h}%` : void 0,
+              aspectRatio: g || void 0,
+            },
             children: [
-              (0, n.jsx)(S, { rgVideoSources: r.rgVideoSources }),
-              (0, n.jsx)(y, { rgVideoTracks: r.rgVideoTracks }),
+              (0, n.jsx)(y, { rgVideoSources: r.rgVideoSources }),
+              (0, n.jsx)(S, { rgVideoTracks: r.rgVideoTracks }),
             ],
           });
         }),
@@ -4197,7 +4201,8 @@
         return s.useContext(g) || (0, d.xv)();
       }
       function _(e, t) {
-        if (e)
+        if (e) {
+          if ((0, c._1)(e)) return e;
           try {
             const r = new URL(e);
             return (
@@ -4207,8 +4212,9 @@
           } catch {
             return e;
           }
+        }
       }
-      function S(e) {
+      function y(e) {
         const { rgVideoSources: t } = e,
           r = f();
         return t
@@ -4221,7 +4227,7 @@
             ),
           );
       }
-      function y(e) {
+      function S(e) {
         const { rgVideoTracks: t } = e;
         return t
           ? t.map((e, r) => (0, n.jsx)(b, { track: e, rgVideoTracks: t }, r))
@@ -4322,7 +4328,7 @@
     },
     48211: (e, t, r) => {
       "use strict";
-      r.d(t, { N1: () => C, VC: () => y, fm: () => x, gZ: () => B });
+      r.d(t, { N1: () => C, VC: () => S, fm: () => x, gZ: () => B });
       var i,
         n = r(34629),
         s = r(7850),
@@ -4343,7 +4349,7 @@
       })(i || (i = {}));
       let f = i.NotLoaded,
         _ = [];
-      function S(e) {
+      function y(e) {
         var t;
         if (f != i.Loaded) {
           if (f == i.NotLoaded) {
@@ -4356,10 +4362,10 @@
           e && (_.includes(e) || _.push(e));
         } else e && e();
       }
-      function y(e = !0) {
+      function S(e = !0) {
         const t = (0, d.Rp)("youtube");
         (0, a.useEffect)(() => {
-          t && e && S();
+          t && e && y();
         }, [t, e]);
       }
       function b(e) {
@@ -4399,11 +4405,16 @@
               r.forcePause != e.forcePause);
         }
         componentDidUpdate(e) {
-          var t, r;
-          e.forcePause != this.props.forcePause &&
+          e.forcePause != this.props.forcePause && this.ApplyForcePause();
+        }
+        ApplyForcePause() {
+          this.m_player &&
+            this.m_bPlayerReady &&
             (this.props.forcePause
-              ? null === (t = this.m_player) || void 0 === t || t.pauseVideo()
-              : null === (r = this.m_player) || void 0 === r || r.playVideo());
+              ? "function" == typeof this.m_player.pauseVideo &&
+                this.m_player.pauseVideo()
+              : "function" == typeof this.m_player.playVideo &&
+                this.m_player.playVideo());
         }
         DestroyPlayer() {
           if (this.m_player)
@@ -4416,10 +4427,11 @@
             }
         }
         BindPlayerContainer(e) {
-          this.m_playerContainer != e &&
+          e &&
+            this.m_playerContainer != e &&
             ((this.m_playerContainer = e),
             this.DestroyPlayer(),
-            this.m_playerContainer && S(this.OnYoutubeScriptsReady));
+            y(this.OnYoutubeScriptsReady));
         }
         OnYoutubeScriptsReady() {
           this.CreatePlayer(this.props);
@@ -4475,8 +4487,10 @@
             (null === (t = this.m_player) ||
               void 0 === t ||
               t.setSize(this.props.width, this.props.height)),
-            this.props.autoplay &&
-              (null === (r = this.m_player) || void 0 === r || r.playVideo()),
+            this.props.forcePause
+              ? this.ApplyForcePause()
+              : this.props.autoplay &&
+                (null === (r = this.m_player) || void 0 === r || r.playVideo()),
             this.props.onPlayerReady && this.props.onPlayerReady();
         }
         OnPlayerStateChange(e) {
@@ -4572,7 +4586,7 @@
               o.current && (n.current = new YT.Player(o.current, {}));
             };
             return (
-              r && S(e),
+              r && y(e),
               () => {
                 b(e), (n.current = null);
               }

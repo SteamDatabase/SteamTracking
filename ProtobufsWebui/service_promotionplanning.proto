@@ -157,17 +157,6 @@ message CPromotionPlanning_GetAllPlansForApps_Response_CAppIncludedInSales {
 	optional fixed64 clan_event_gid = 2;
 }
 
-message CPromotionPlanning_GetAllPlansForPartner_Request {
-	optional uint32 partnerid = 1;
-	optional bool show_hidden = 4;
-	optional uint32 start_date = 5;
-	optional uint32 end_date = 6;
-}
-
-message CPromotionPlanning_GetAllPlansForPartner_Response {
-	repeated .CPromotionPlan plans = 1;
-}
-
 message CPromotionPlanning_GetPlan_Request {
 	optional fixed64 promotion_id = 1;
 }
@@ -363,8 +352,6 @@ service PromotionPlanning {
 	rpc GetAllActivePlan (.CPromotionPlanning_GetAllActivePlan_Request) returns (.CPromotionPlanning_GetAllActivePlan_Response);
 	// bConstMethod=true, ePrivilege=4
 	rpc GetAllPlansForApps (.CPromotionPlanning_GetAllPlansForApps_Request) returns (.CPromotionPlanning_GetAllPlansForApps_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
-	rpc GetAllPlansForPartner (.CPromotionPlanning_GetAllPlansForPartner_Request) returns (.CPromotionPlanning_GetAllPlansForPartner_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetPlan (.CPromotionPlanning_GetPlan_Request) returns (.CPromotionPlanning_GetPlan_Response);
 	// bConstMethod=true, ePrivilege=1

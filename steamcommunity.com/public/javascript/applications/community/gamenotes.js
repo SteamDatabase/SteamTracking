@@ -52,7 +52,7 @@
         CalendarEventLink: "_106tp5gLWBvoekGEC8HXQ",
       };
     },
-    59722: (e) => {
+    37341: (e) => {
       e.exports = {
         Hover: "_1lo3nIamSX1TzzE4TlhFXA",
         Link: "_1ds3uh7ntoekPm635F2Ziv",
@@ -5515,7 +5515,7 @@
         o = r(61859),
         l = r(17558),
         c = r(22145),
-        u = r(59722),
+        u = r(37341),
         d = r(42714);
       const m = a.memo(function (e) {
         const {

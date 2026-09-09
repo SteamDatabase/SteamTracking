@@ -118746,7 +118746,7 @@
       }
       var iq = i(40928),
         nq = i(42603),
-        sq = i(4810),
+        sq = i(82429),
         oq = i(24468),
         rq = function (e, t, i, n) {
           var s,
@@ -160250,7 +160250,7 @@
           : [];
       }
       var j = i(43221),
-        $ = i(4810);
+        $ = i(82429);
       class q {
         constructor() {
           this._workerTextModelSyncServer = new $.WorkerTextModelSyncServer();
@@ -162868,7 +162868,7 @@
       (u = d([c(0, o.Gy), c(1, r.rr), c(2, s.L)], u)),
         (0, h.v)(l.ISemanticTokensStylingService, u, 1);
     },
-    4810: (e, t, i) => {
+    82429: (e, t, i) => {
       i.r(t),
         i.d(t, {
           MirrorModel: () => m,

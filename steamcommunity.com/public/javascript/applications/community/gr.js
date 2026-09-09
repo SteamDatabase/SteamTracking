@@ -2630,13 +2630,18 @@
               (0, k.mJ)(
                 () => this.m_gameRecordingVideo.GetPlaybackTime(),
                 (e) => {
+                  var t;
                   if (
                     this.m_pendingStop &&
                     this.m_pendingStop.m_strRecordingID ==
                       this.m_strRecordingID &&
                     this.m_pendingStop.m_nOffsetMS <= 1e3 * e
                   ) {
-                    if (this.m_playbackDefinition)
+                    if (
+                      null === (t = this.m_playbackDefinition) || void 0 === t
+                        ? void 0
+                        : t.m_nLoopDurationMS
+                    )
                       return void this.StartPlaybackForRange();
                     this.m_gameRecordingVideo.Pause(),
                       (this.m_pendingStop = null);
@@ -3040,8 +3045,8 @@
                 )),
             e)
           ) {
-            if (this.m_playbackDefinition.m_nDurationMS) {
-              let e = r + this.m_playbackDefinition.m_nDurationMS,
+            if (this.m_playbackDefinition.m_nLoopDurationMS) {
+              let e = r + this.m_playbackDefinition.m_nLoopDurationMS,
                 t =
                   this.m_timelineLoader.ConvertGlobaOffsetToRecordingAndRelativeOffset(
                     e,
@@ -3165,20 +3170,25 @@
           );
         }
         PlayNextTimelineRecording(e) {
-          if (this.m_playbackDefinition)
+          var t;
+          if (
+            null === (t = this.m_playbackDefinition) || void 0 === t
+              ? void 0
+              : t.m_nLoopDurationMS
+          )
             return void this.StartPlaybackForRange();
-          let t;
+          let r;
           if (this.m_strRecordingID)
-            t = this.m_timelineLoader.GetNextRecording(this.m_strRecordingID);
+            r = this.m_timelineLoader.GetNextRecording(this.m_strRecordingID);
           else {
             const e =
               this.m_timelineLoader.GetClosestNextRecordingInGlobalTimeline(
                 (0, re.Sb)(this.m_nGlobalTimelinePlaybackMS),
               );
-            t = null == e ? void 0 : e.recording_id;
+            r = null == e ? void 0 : e.recording_id;
           }
-          t
-            ? this.SetPlaytimeFromRecordingOffset(t, 0)
+          r
+            ? this.SetPlaytimeFromRecordingOffset(r, 0)
             : (this.m_gameRecordingVideo.Pause(),
               e && this.TryPlayInitialTimelineVideo());
         }

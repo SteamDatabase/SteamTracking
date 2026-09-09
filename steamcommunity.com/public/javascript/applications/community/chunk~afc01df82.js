@@ -1469,7 +1469,7 @@
         i = n(81047),
         o = n(17720),
         c = n(86355),
-        d = n(82429),
+        d = n(56284),
         g = n(29347),
         m = n(95695),
         u = n.n(m),
@@ -1735,8 +1735,8 @@
             fnOnOpenLocalizedImageGroup: n,
             bDeleting: l,
           } = e,
-          r = (0, d.Ec)(a.clanAccountID);
-        return l || !r.valve_admin
+          { data: r } = (0, d.hM)(a.clanAccountID);
+        return l || !(null == r ? void 0 : r.valve_admin)
           ? null
           : (0, t.jsx)("span", {
               className: (0, I.A)(C().Localized, u().ValveOnlyBackground),
@@ -2360,7 +2360,7 @@
         y = n(7221),
         R = n(65606),
         T = n(55294),
-        U = n(47887),
+        U = n(86665),
         G = n(50433),
         B = n(9709),
         M = n(45832),
@@ -3891,15 +3891,25 @@
     },
     64846: (e, a, n) => {
       "use strict";
-      n.d(a, { E: () => o, m: () => i });
+      n.d(a, { Dd: () => i, Eb: () => o });
       var t = n(7850),
-        l = n(82429),
+        l = n(56284),
         r = n(95695),
         s = n(52038);
       function i(e, a) {
-        if (!e || !e.BIsClanAccount()) return !1;
-        const n = l.KN.Get().GetPartnerEventPermissions(e);
-        return !!n && (a ? n.valve_admin : n.valve_admin || n.support_user);
+        const n = Boolean(e && e.BIsClanAccount()),
+          { data: t } = (0, l.hM)(n ? e.GetAccountID() : 0);
+        return (
+          n &&
+          (function (e, a) {
+            return (
+              !!e &&
+              (a
+                ? Boolean(e.valve_admin)
+                : Boolean(e.valve_admin || e.support_user))
+            );
+          })(t, a)
+        );
       }
       function o(e) {
         const { clanSteamID: a, id: n } = e;

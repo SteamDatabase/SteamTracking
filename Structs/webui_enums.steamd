@@ -2588,6 +2588,18 @@ enum UnnamedEnum41ef8b0e788e0224
 	Cancel = 2;
 }
 
+enum UnnamedEnum428eadb50be819d7
+{
+	None = 0;
+	Approved = 1;
+	Rejected_CountryPricing = 2;
+	Rejected_ExceedsMaxPrice = 3;
+	Rejected_PriceIncreaseTooHigh = 4;
+	Rejected_NoGuidelineMatch = 5;
+	Rejected_MissingCurrencies = 6;
+	Rejected_MissingRegions = 7;
+}
+
 enum UnnamedEnum442e63328704c13b
 {
 	Left = 1;

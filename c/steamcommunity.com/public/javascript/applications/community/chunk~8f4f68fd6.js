@@ -1290,7 +1290,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -6542,7 +6541,7 @@
                 (!(!_.viewed || !_.viewed) && _.viewed < _.viewed);
         }
         AddNotificationToRollups(_, _) {
-          var _, _, _, _;
+          var _, _;
           const _ = this.BSendToCallbackAsNew(_);
           _ && this.m_rgUnreadNotificationIDs.push(_.notification_id);
           let _ = _.notification_type;
@@ -6585,12 +6584,6 @@
                       ? _.rgread.push(_.notification_id)
                       : _.rgunread.push(_.notification_id);
                 }
-                (null === (_ = _.json_data) || void 0 === _
-                  ? void 0
-                  : _.app_id) &&
-                  _._.Get().QueueAppRequest(_.json_data.app_id, {
-                    include_assets: !0,
-                  });
               }
               break;
             case _._._:
@@ -6643,12 +6636,6 @@
                     : _.rgunread.push(_.notification_id);
               }
               break;
-            case _._._:
-              const _ = null === (_ = _(_)) || void 0 === _ ? void 0 : _.appid;
-              _ &&
-                _._.Get().QueueAppRequest(_, {
-                  include_assets: !0,
-                });
             default:
               _.push({
                 type: _,
@@ -6685,9 +6672,6 @@
                 ? _.rgread.push(_.notification_id)
                 : _.rgunread.push(_.notification_id);
           }
-          _._.Get().QueueAppRequest(parseInt(_), {
-            include_assets: !0,
-          });
         }
       }
       function _() {
@@ -6762,36 +6746,28 @@
           queryKey: _(_),
           queryFn: async () =>
             (async function (_, _) {
+              var _;
               if (!(_ && _.steamid && _.contextid && _.appid && _.assetid))
                 return _("Item notification missing required attributes"), null;
               const _ = _._.Init(_._);
-              __webpack_require__.Body().set_steamid(_.steamid),
-                __webpack_require__.Body().set_contextid(_.contextid),
-                __webpack_require__.Body().set_appid(parseInt(_.appid)),
-                __webpack_require__.Body().set_get_descriptions(!0),
-                __webpack_require__.Body().set_language(_._.LANGUAGE);
+              _.Body().set_steamid(_.steamid),
+                _.Body().set_contextid(_.contextid),
+                _.Body().set_appid(parseInt(_.appid)),
+                _.Body().set_get_descriptions(!0),
+                _.Body().set_language(_._.LANGUAGE);
               let _ = new _._();
-              _.add_assetids(_.assetid),
-                __webpack_require__.Body().set_filters(_);
+              _.add_assetids(_.assetid), _.Body().set_filters(_);
               const _ = await _._.GetInventoryItemsWithDescriptions(_, _);
-              if (_.GetEResult() !== _._)
-                return (
-                  _(
+              return _.GetEResult() !== _._
+                ? (_(
                     "Request for steam item metadata did not succeed",
                     _.GetEResult(),
                   ),
-                  null
-                );
-              let _ = "";
-              const _ = await _._.Get().QueueAppRequest(parseInt(_.appid), {});
-              if (_ == _._) {
-                const _ = _._.Get().GetApp(parseInt(_.appid));
-                _ = null == _ ? void 0 : _.GetName();
-              } else _("Failed getting app info", _);
-              return {
-                app_name: _,
-                item_data: _.Body().toObject().descriptions[0],
-              };
+                  null)
+                : null !== (_ = _.Body().toObject().descriptions[0]) &&
+                    void 0 !== _
+                  ? _
+                  : null;
             })(_, _),
           staleTime: 1 / 0,
         });
@@ -7822,7 +7798,6 @@
             });
       }
       function _(_) {
-        var _, _;
         let {
           itemState: _,
           fallbackLogo: _,
@@ -7830,6 +7805,7 @@
           location: _,
           icon: _,
           timestamp: _,
+          appName: _,
           fnRenderTimestamp: _,
           nUnread: _,
           onHide: _,
@@ -7838,16 +7814,9 @@
           _ = () => _(!0),
           _ = _(_);
         let _ = _;
-        if (
-          (null === (_ = null == _ ? void 0 : _.item_data) || void 0 === _
-            ? void 0
-            : _.icon_url) &&
-          !_
-        ) {
-          let _ = `${_._.COMMUNITY_CDN_URL}economy/image/${_.item_data.icon_url}`,
-            _ = _.item_data.background_color
-              ? "#" + _.item_data.background_color
-              : null;
+        if ((null == _ ? void 0 : _.icon_url) && !_) {
+          let _ = `${_._.COMMUNITY_CDN_URL}economy/image/${_.icon_url}`,
+            _ = _.background_color ? "#" + _.background_color : null;
           const _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           _ = (0, _.jsx)(_._, {
             style: {
@@ -7864,45 +7833,28 @@
             }),
           });
         }
-        const _ = 753 == parseInt(_.appid);
+        const _ = 753 == _.appid;
         let _ = null;
         if (void 0 !== _ && _ > 1) {
           const _ = _ - 1;
           _ = _
             ? (0, _._)("#Notification_Item_RollupMore_Steam", _)
-            : (null == _ ? void 0 : _.app_name)
-              ? (0, _._)(
-                  "#Notification_Item_RollupMore_GameName",
-                  _,
-                  _.app_name,
-                )
+            : _
+              ? (0, _._)("#Notification_Item_RollupMore_GameName", _, _)
               : (0, _._)("#Notification_Item_RollupMore", _);
         } else
-          (null == _ ? void 0 : _.app_name) &&
-            (_ = _
-              ? _.app_name
-              : (0, _._)("#Notification_Item_Single_GameName", _.app_name));
-        const _ = (
-            null === (_ = null == _ ? void 0 : _.item_data) || void 0 === _
-              ? void 0
-              : _.name
-          )
-            ? _.item_data.name
+          _ && (_ = _ ? _ : (0, _._)("#Notification_Item_Single_GameName", _));
+        const _ = (null == _ ? void 0 : _.name)
+            ? _.name
             : (0, _._)("#Notification_Item_Body_Generic"),
-          _ = !_ || !_.item_data;
+          _ = !_;
         if (_) {
           let _ = "";
           return (
-            (_ = (null == _ ? void 0 : _.app_name)
+            (_ = _
               ? _ > 1
-                ? (0, _._)(
-                    "#Notification_Item_Body_Short_Plural",
-                    null == _ ? void 0 : _.app_name,
-                  )
-                : (0, _._)(
-                    "#Notification_Item_Body_Short",
-                    null == _ ? void 0 : _.app_name,
-                  )
+                ? (0, _._)("#Notification_Item_Body_Short_Plural", _)
+                : (0, _._)("#Notification_Item_Body_Short", _)
               : (0, _._)("#Notification_Item_Body_Generic")),
             (0, _.jsx)(_, {
               ..._,
@@ -8824,11 +8776,19 @@
             _ = (0, _._)(),
             _ = (0, _._)(_.item, _, _),
             _ = _(_),
+            { data: _ } = (0, _._)(
+              (null == _ ? void 0 : _.appid)
+                ? {
+                    appid: _.appid,
+                  }
+                : void 0,
+            ),
             _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/inventory`;
           return (0, _.jsx)("a", {
             href: _,
             onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
             children: (0, _.jsx)(_, {
+              appName: null == _ ? void 0 : _.name,
               icon: (0, _.jsx)(_.rI_, {}),
               fallbackLogo: (0, _.jsx)(_.Qte, {}),
               onActivate: () =>

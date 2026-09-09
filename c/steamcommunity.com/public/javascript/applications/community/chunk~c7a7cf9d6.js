@@ -285,6 +285,113 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_eLibrary = 1)] = "k_eLibrary"),
+          (_[(_.k_eWishlist = 2)] = "k_eWishlist"),
+          (_[(_.k_eFollowing = 4)] = "k_eFollowing"),
+          (_[(_.k_eRecommended = 8)] = "k_eRecommended"),
+          (_[(_.k_eSteam = 16)] = "k_eSteam"),
+          (_[(_.k_eRequired = 32)] = "k_eRequired"),
+          (_[(_.k_eFeatured = 64)] = "k_eFeatured"),
+          (_[(_.k_eCurator = 128)] = "k_eCurator"),
+          (_[(_.k_eReposted = 256)] = "k_eReposted");
+      })(_ || (_ = {}));
+      class _ {
+        GetSource() {
+          var _, _;
+          return this.appInfo
+            ? this.appInfo.source
+            : null !==
+                  (_ =
+                    null === (_ = this.clanInfo) || void 0 === _
+                      ? void 0
+                      : _.source) && void 0 !== _
+              ? _
+              : 0;
+        }
+        static GetEntityNameForID(_, _) {
+          var _, _;
+          if (_)
+            return null !==
+              (_ =
+                null === (_ = _._.Get().GetApp(_)) || void 0 === _
+                  ? void 0
+                  : __webpack_require__.GetName()) && void 0 !== _
+              ? _
+              : (0, _._)("#EventCalendar_MuteApp_Unknown");
+          if (_) {
+            const _ = _._.GetClanInfoByClanAccountID(_);
+            if (null == _ ? void 0 : _.group_name) return _.group_name;
+          }
+          return (0, _._)("#EventCalendar_MuteApp_Unknown");
+        }
+        static BHasEntityNameForID(_, _) {
+          var _, _;
+          return _
+            ? Boolean(
+                null === (_ = _._.Get().GetApp(_)) || void 0 === _
+                  ? void 0
+                  : __webpack_require__.GetName(),
+              )
+            : !!_ &&
+                !!(null === (_ = _._.GetClanInfoByClanAccountID(_)) ||
+                void 0 === _
+                  ? void 0
+                  : _.group_name);
+        }
+        GetEntityName() {
+          return _.GetEntityNameForID(this.appid, this.clanid);
+        }
+        GetGameCapsule() {
+          var _, _;
+          if (this.appInfo)
+            return null ===
+              (_ =
+                null === (_ = _._.Get().GetApp(this.appInfo.appid)) ||
+                void 0 === _
+                  ? void 0
+                  : _.GetAssets()) || void 0 === _
+              ? void 0
+              : _.GetMainCapsuleURL();
+          if (this.clanInfo) {
+            let _ = _._.GetClanInfoByClanAccountID(this.clanInfo.clanid);
+            if (_) return _.avatar_full_url;
+          }
+          return (0, _._)("#EventCalendar_MuteApp_Unknown");
+        }
+        GetGameIcon() {
+          var _, _;
+          if (this.appInfo)
+            return null ===
+              (_ =
+                null === (_ = _._.Get().GetApp(this.appInfo.appid)) ||
+                void 0 === _
+                  ? void 0
+                  : _.GetAssets()) || void 0 === _
+              ? void 0
+              : _.GetCommunityIconURL();
+          if (this.clanInfo) {
+            let _ = _._.GetClanInfoByClanAccountID(this.clanInfo.clanid);
+            if (_) return _.avatar_full_url;
+          }
+          return (0, _._)("#EventCalendar_MuteApp_Unknown");
+        }
+      }
+      class _ {}
+      class _ {}
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
@@ -802,12 +909,13 @@
           _ && (0, _._)(_);
         }
         RegisterEventVotes(_) {
-          if (!_) return;
-          const _ = _._.Get();
-          for (const _ of _) {
-            const _ = void 0 === _.vote ? void 0 : Boolean(_.vote);
-            _.SetVote(_._, _);
-          }
+          _ &&
+            (0, _._)(
+              _.map((_) => ({
+                gidAnnouncement: _._,
+                vote: void 0 === _.vote ? null : _.vote ? "up" : "down",
+              })),
+            );
         }
         RegisterCalendarEvents(_) {
           if (_) {
@@ -999,7 +1107,7 @@
             _ = _.clanInfo ? _.clanInfo.clanid : void 0;
           null != _ || null != _
             ? (await _._.Get().UpdateCommunicationSetting(_, _, _),
-              _._.RecordAppInteractionEvent(_, _._.k_eMuted))
+              (0, _._)(_._.k_eMuted))
             : (0, _._)(
                 !1,
                 "Both clan id and account id are missing, cannot change communication status",
@@ -1026,7 +1134,6 @@
         (0, _._)([_._], _.prototype, "RegisterCalendarEventsAndModels", null),
         (0, _._)([_._], _.prototype, "RegisterCalendarApps", null),
         (0, _._)([_._], _.prototype, "RegisterCalendarClans", null),
-        (0, _._)([_._], _.prototype, "RegisterEventVotes", null),
         (0, _._)([_._], _.prototype, "RegisterCalendarEvents", null),
         (0, _._)([_._], _.prototype, "BHitEventHorizon", null),
         (0, _._)([_._.bound], _.prototype, "LoadAdditionalEvents", null),
@@ -1194,6 +1301,312 @@
         return null !== _.get();
       }
       window.g_EventCalendarMap = _;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.k_ERecent = "recent"),
+          (_.k_ELibrary = "library"),
+          (_.k_EWishlist = "wishlist"),
+          (_.k_EFollowing = "following"),
+          (_.k_ERecommended = "recommended"),
+          (_.k_ESteam = "steam"),
+          (_.k_EFeatured = "featured"),
+          (_.k_ECurator = "curator");
+      })(_ || (_ = {}));
+      const _ = [
+          _.k_ELibrary,
+          _.k_EWishlist,
+          _.k_EFollowing,
+          _.k_ERecommended,
+          _.k_ESteam,
+          _.k_ECurator,
+        ],
+        _ = [..._, _.k_EFeatured],
+        _ = [_.k_EFeatured];
+      var _;
+      !(function (_) {
+        (_.k_ENews = "news"),
+          (_.k_EEvents = "events"),
+          (_.k_EStreaming = "streaming"),
+          (_.k_EUpdates = "updates"),
+          (_.k_EReleases = "releases"),
+          (_.k_ESales = "sales");
+      })(_ || (_ = {}));
+      const _ = [
+          _.k_ENews,
+          _.k_EEvents,
+          _.k_EStreaming,
+          _.k_EUpdates,
+          _.k_EReleases,
+          _.k_ESales,
+        ],
+        _ = new Map([
+          [_.k_ENews, [_.uYK]],
+          [_.k_EEvents, [_.L0X, _.I5b, _._, _._, _.hGl, _.WNR, _.pIh, _.izQ]],
+          [_.k_EStreaming, [_.KDJ]],
+          [_.k_EUpdates, [_.Fwr, _._, _.zeJ]],
+          [_.k_EReleases, [_.yhO, _.Aqr, _.DEQ, _.f4X, _.zcX]],
+          [_.k_ESales, [_.HRy, _.C$4, _.LOv, _.HFK]],
+        ]);
+      function _(_) {
+        return new Map(_.map((_) => [_, !0]));
+      }
+      class _ {
+        constructor(_) {
+          (this.m_mapEventTypeGroupsAllowed = new Map()),
+            (this.m_mapGameSources = new Map()),
+            (this.m_bCuratorUnhideOnFollowDialogDismissed = !1),
+            (this.m_mapHiddenApps = new Map()),
+            (this.m_mapHiddenClans = new Map()),
+            (this.m_bInitializedForUpdatesOnly = !1),
+            (this.m_eStorageType = "session"),
+            (0, _._)(this),
+            (0, _._)(() => {
+              (null == _ ? void 0 : _.rgHiddenApps) &&
+                _.rgHiddenApps.forEach((_) => this.m_mapHiddenApps.set(_, !0)),
+                (null == _ ? void 0 : _.rgHiddenClans) &&
+                  _.rgHiddenClans.forEach((_) =>
+                    this.m_mapHiddenClans.set(_, !0),
+                  );
+            });
+        }
+        GetGameSources() {
+          return Array.from(this.m_mapGameSources.keys());
+        }
+        GetStorageObject() {
+          return this.m_strStorageKey
+            ? "session" === this.m_eStorageType
+              ? window.sessionStorage
+              : window.localStorage
+            : null;
+        }
+        GetPreferencesStorageKey() {
+          return `${this.m_strStorageKey}-event-calendar-prefs`;
+        }
+        get enabledEventTypeSet() {
+          var _;
+          const _ = new Set();
+          for (const _ of Array.from(this.m_mapEventTypeGroupsAllowed.keys()))
+            null === (_ = _.get(_)) ||
+              void 0 === _ ||
+              _.forEach((_) => _.add(_));
+          return _;
+        }
+        MapClanEventTypeToGroup(_) {
+          let _;
+          return (
+            _.forEach((_, _) => {
+              -1 !== __webpack_require__.indexOf(_) && (_ = _);
+            }),
+            _ || _.k_EEvents
+          );
+        }
+        InitDefaultCheckboxes(_, _, _) {
+          (this.m_bInitializedForUpdatesOnly = _),
+            (this.m_mapEventTypeGroupsAllowed = _(_ ? [_.k_EUpdates] : _));
+          const _ = (0, _._)() ? _ : _;
+          (this.m_mapGameSources = _(_ ? _ : _)),
+            _ && this.m_mapGameSources.set(_.k_EFeatured, !0);
+        }
+        Init(_, _, _, _, _) {
+          (this.m_eStorageType = _), (this.m_strStorageKey = _);
+          const _ = this.GetStorageObject(),
+            _ = _ ? _.getItem(this.GetPreferencesStorageKey()) : null;
+          if (_) {
+            const _ = JSON.parse(_);
+            if (_.rgEventTypeGroupsAllowed && _.rgGameSources) {
+              const { rgEventTypeGroupsAllowed: _, rgGameSources: _ } = _;
+              return (
+                (this.m_mapEventTypeGroupsAllowed = _(_)),
+                (this.m_mapGameSources = _(_)),
+                void (
+                  void 0 !== _.bCuratorUnhideOnFollowDismissed &&
+                  (this.m_bCuratorUnhideOnFollowDialogDismissed =
+                    _.bCuratorUnhideOnFollowDismissed)
+                )
+              );
+            }
+          }
+          this.InitDefaultCheckboxes(_, _, _);
+        }
+        SaveFilterPreferences() {
+          const _ = this.GetStorageObject();
+          if (!_) return;
+          const _ = {
+            rgEventTypeGroupsAllowed: Array.from(
+              this.m_mapEventTypeGroupsAllowed.keys(),
+            ),
+            rgGameSources: Array.from(this.m_mapGameSources.keys()),
+            bCuratorUnhideOnFollowDismissed:
+              this.m_bCuratorUnhideOnFollowDialogDismissed,
+          };
+          _.setItem(this.GetPreferencesStorageKey(), JSON.stringify(_));
+        }
+        RecordFilterChange() {
+          let _ = 0;
+          this.BIsGameSourceAllowed(_.k_ELibrary) && (_ |= 1),
+            this.BIsGameSourceAllowed(_.k_EWishlist) && (_ |= 2),
+            this.BIsGameSourceAllowed(_.k_EFollowing) && (_ |= 4),
+            this.BIsGameSourceAllowed(_.k_ERecommended) && (_ |= 8),
+            this.BIsGameSourceAllowed(_.k_ESteam) && (_ |= 16),
+            this.BIsGameSourceAllowed(_.k_EFeatured) && (_ |= 32),
+            this.BIsGameSourceAllowed(_.k_ERecent) && (_ |= 64),
+            this.BIsEventTypeGroupAllowed(_.k_ENews) && (_ |= 1024),
+            this.BIsEventTypeGroupAllowed(_.k_EEvents) && (_ |= 2048),
+            this.BIsEventTypeGroupAllowed(_.k_EStreaming) && (_ |= 4096),
+            this.BIsEventTypeGroupAllowed(_.k_EUpdates) && (_ |= 8192),
+            this.BIsEventTypeGroupAllowed(_.k_EReleases) && (_ |= 16384),
+            this.BIsEventTypeGroupAllowed(_.k_ESales) && (_ |= 32768),
+            (0, _._)(_._, _);
+        }
+        BCuratorUnhideOnFollowDialogDismissed() {
+          return this.m_bCuratorUnhideOnFollowDialogDismissed;
+        }
+        SetCuratorUnhideOnFollowDialogDismissed(_) {
+          (this.m_bCuratorUnhideOnFollowDialogDismissed = _),
+            this.SaveFilterPreferences();
+        }
+        BIsEventTypeGroupAllowed(_) {
+          return this.m_mapEventTypeGroupsAllowed.has(_);
+        }
+        BIsGameSourceAllowed(_) {
+          return (
+            !(_ === _.k_EFollowing && !(0, _._)()) &&
+            !(_ === _.k_ECurator && !(0, _._)()) &&
+            this.m_mapGameSources.has(_)
+          );
+        }
+        SetEventTypeGroupAllowed(_, _) {
+          _
+            ? this.m_mapEventTypeGroupsAllowed.set(_, !0)
+            : this.m_mapEventTypeGroupsAllowed.delete(_),
+            this.SaveFilterPreferences(),
+            this.RecordFilterChange();
+        }
+        SetGameSourceAllowed(_, _) {
+          _
+            ? (this.m_mapGameSources.set(_, !0),
+              _ == _.k_ERecent
+                ? this.m_mapGameSources.delete(_.k_ELibrary)
+                : _ == _.k_ELibrary &&
+                  ((0, _._)(
+                    !this.m_mapGameSources.has(_.k_ERecent),
+                    "Setting Library although Recent already set - illusion was broken",
+                  ),
+                  this.m_mapGameSources.delete(_.k_ERecent)))
+            : (this.m_mapGameSources.delete(_),
+              _ == _.k_ERecent
+                ? this.m_mapGameSources.set(_.k_ELibrary, !0)
+                : _ == _.k_ELibrary &&
+                  this.m_mapGameSources.delete(_.k_ERecent)),
+            this.SaveFilterPreferences(),
+            this.RecordFilterChange();
+        }
+        BShouldDisplayEvent(_) {
+          const _ = _.GetSource(),
+            _ = Boolean(
+              _.appInfo &&
+                _.appInfo.last_played &&
+                _.appInfo.last_played + 15552e3 >= _._.GetTimeNowWithOverride(),
+            );
+          return (
+            !!(
+              this.enabledEventTypeSet.has(_.event_type) ||
+              (this.m_bInitializedForUpdatesOnly &&
+                this.BIsEventTypeGroupAllowed(_.k_EUpdates) &&
+                _.event_type == _.uYK &&
+                _.start_time < 1599202800)
+            ) &&
+            !this.m_mapHiddenApps.has(_.appid) &&
+              !this.m_mapHiddenClans.has(_.clanid) &&
+            (!!(_ & _._.k_eRequired || _ & _._.k_eReposted) ||
+              Boolean(
+                (this.BIsGameSourceAllowed(_.k_ERecent) && _) ||
+                  (this.BIsGameSourceAllowed(_.k_ELibrary) &&
+                    _ & _._.k_eLibrary) ||
+                  (this.BIsGameSourceAllowed(_.k_EWishlist) &&
+                    _ & _._.k_eWishlist) ||
+                  (this.BIsGameSourceAllowed(_.k_EFollowing) &&
+                    _ & _._.k_eFollowing) ||
+                  (this.BIsGameSourceAllowed(_.k_ERecommended) &&
+                    _ & _._.k_eRecommended) ||
+                  (this.BIsGameSourceAllowed(_.k_ESteam) && _ & _._.k_eSteam) ||
+                  (this.BIsGameSourceAllowed(_.k_EFeatured) &&
+                    _ & _._.k_eFeatured) ||
+                  (this.BIsGameSourceAllowed(_.k_ECurator) &&
+                    _ & _._.k_eCurator),
+              ))
+          );
+        }
+        BAreAllEventsHidden() {
+          return (
+            0 == this.m_mapEventTypeGroupsAllowed.size ||
+            0 == this.m_mapGameSources.size
+          );
+        }
+        BAreAnyEventsFiltered(_) {
+          const _ = (0, _._)() ? _ : _;
+          return (
+            (_ ? _ : _).some((_) => !this.BIsGameSourceAllowed(_)) ||
+            _.some((_) => !this.BIsEventTypeGroupAllowed(_))
+          );
+        }
+        BIsClanVisible(_) {
+          return !this.m_mapHiddenClans.has(_);
+        }
+        SetClanVisibility(_, _) {
+          _
+            ? this.m_mapHiddenClans.has(_) && this.m_mapHiddenClans.delete(_)
+            : this.m_mapHiddenClans.has(_) || this.m_mapHiddenClans.set(_, !0);
+        }
+        BIsAppVisible(_) {
+          return !this.m_mapHiddenApps.has(_);
+        }
+        SetAppVisibility(_, _) {
+          _
+            ? this.m_mapHiddenApps.has(_) && this.m_mapHiddenApps.delete(_)
+            : this.m_mapHiddenApps.has(_) || this.m_mapHiddenApps.set(_, !0);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_mapEventTypeGroupsAllowed", void 0),
+        (0, _._)([_._], _.prototype, "m_mapGameSources", void 0),
+        (0, _._)(
+          [_._],
+          _.prototype,
+          "m_bCuratorUnhideOnFollowDialogDismissed",
+          void 0,
+        ),
+        (0, _._)([_._], _.prototype, "m_mapHiddenApps", void 0),
+        (0, _._)([_._], _.prototype, "m_mapHiddenClans", void 0),
+        (0, _._)(
+          [
+            (0, _._)({
+              keepAlive: !0,
+              equals: _._.structural,
+            }),
+          ],
+          _.prototype,
+          "enabledEventTypeSet",
+          null,
+        ),
+        (0, _._)([_._], _.prototype, "SetEventTypeGroupAllowed", null),
+        (0, _._)([_._], _.prototype, "SetGameSourceAllowed", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1470,8 +1883,16 @@
             _ && _.m_fnSubmit && (_.m_fnSubmit.Cancel(), (_.m_fnSubmit = null));
           }
           ReportImpression(_, _, _) {
-            __webpack_require__.RecordEventShown(_, _._._),
-              _ && _._.RecordViewedEvent((0, _._)(), _.GID);
+            if ((__webpack_require__.RecordEventShown(_, _._._), _)) {
+              const _ = (0, _._)();
+              _.RecordEventViewed(
+                _.GID,
+                __webpack_require__.GetCurrentlyLoadedItemsForStats(),
+                __webpack_require__
+                  .GetStoreInitializationTimestamp()
+                  .getTime() / 1e3,
+              );
+            }
             const _ = this.m_mapEvents.get(_.GID);
             _ &&
               ((_.m_bHasBeenTracked = !0),
@@ -1481,9 +1902,11 @@
         })(),
         _ = (_) => {
           const { event: _ } = _,
+            _ = (0, _._)(),
             _ = (0, _._)();
           if (_.ShouldTrack(_)) {
-            const _ = () => _.StartTracking(_, _.recordNewsHubStats || !1, _),
+            const _ = () =>
+                _.StartTracking(_, _.recordNewsHubStats ? _ : void 0, _),
               _ = () => _.StopTracking(_);
             return (0, _.jsx)(_._, {
               onEnter: _,

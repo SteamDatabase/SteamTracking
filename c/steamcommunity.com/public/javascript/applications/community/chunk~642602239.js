@@ -4965,6 +4965,7 @@
               bMuted: _,
               className: _,
               mediaScale: _,
+              flAspectRatio: _,
               onClick: _,
               altText: _,
             } = _,
@@ -4983,7 +4984,7 @@
           if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
           const _ = (function (_) {
             return !(
-              !(0, _._)(_.sPoster) ||
+              (!(0, _._)(_.sPoster) && !(0, _._)(_.sPoster)) ||
               (_.rgVideoSources &&
                 _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
               (_.rgVideoTracks &&
@@ -5029,6 +5030,7 @@
             "aria-label": _,
             style: {
               width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
+              aspectRatio: _ || void 0,
             },
             children: [
               (0, _.jsx)(_, {
@@ -5045,7 +5047,8 @@
         return _.useContext(_) || (0, _._)();
       }
       function _(_, _) {
-        if (_)
+        if (_) {
+          if ((0, _._)(_)) return _;
           try {
             const _ = new URL(_);
             return (
@@ -5055,6 +5058,7 @@
           } catch {
             return _;
           }
+        }
       }
       function _(_) {
         const { rgVideoSources: _ } = _,
@@ -5283,13 +5287,16 @@
               _.forcePause != _.forcePause);
         }
         componentDidUpdate(_) {
-          var _, _;
-          _.forcePause != this.props.forcePause &&
+          _.forcePause != this.props.forcePause && this.ApplyForcePause();
+        }
+        ApplyForcePause() {
+          this.m_player &&
+            this.m_bPlayerReady &&
             (this.props.forcePause
-              ? null === (_ = this.m_player) || void 0 === _ || _.pauseVideo()
-              : null === (_ = this.m_player) ||
-                void 0 === _ ||
-                __webpack_require__.playVideo());
+              ? "function" == typeof this.m_player.pauseVideo &&
+                this.m_player.pauseVideo()
+              : "function" == typeof this.m_player.playVideo &&
+                this.m_player.playVideo());
         }
         DestroyPlayer() {
           if (this.m_player)
@@ -5302,10 +5309,11 @@
             }
         }
         BindPlayerContainer(_) {
-          this.m_playerContainer != _ &&
+          _ &&
+            this.m_playerContainer != _ &&
             ((this.m_playerContainer = _),
             this.DestroyPlayer(),
-            this.m_playerContainer && _(this.OnYoutubeScriptsReady));
+            _(this.OnYoutubeScriptsReady));
         }
         OnYoutubeScriptsReady() {
           this.CreatePlayer(this.props);
@@ -5365,10 +5373,12 @@
             (null === (_ = this.m_player) ||
               void 0 === _ ||
               _.setSize(this.props.width, this.props.height)),
-            this.props.autoplay &&
-              (null === (_ = this.m_player) ||
-                void 0 === _ ||
-                __webpack_require__.playVideo()),
+            this.props.forcePause
+              ? this.ApplyForcePause()
+              : this.props.autoplay &&
+                (null === (_ = this.m_player) ||
+                  void 0 === _ ||
+                  __webpack_require__.playVideo()),
             this.props.onPlayerReady && this.props.onPlayerReady();
         }
         OnPlayerStateChange(_) {

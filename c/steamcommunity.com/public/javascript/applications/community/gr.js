@@ -2785,13 +2785,18 @@
               (0, _._)(
                 () => this.m_gameRecordingVideo.GetPlaybackTime(),
                 (_) => {
+                  var _;
                   if (
                     this.m_pendingStop &&
                     this.m_pendingStop.m_strRecordingID ==
                       this.m_strRecordingID &&
                     this.m_pendingStop.m_nOffsetMS <= 1e3 * _
                   ) {
-                    if (this.m_playbackDefinition)
+                    if (
+                      null === (_ = this.m_playbackDefinition) || void 0 === _
+                        ? void 0
+                        : _.m_nLoopDurationMS
+                    )
                       return void this.StartPlaybackForRange();
                     this.m_gameRecordingVideo.Pause(),
                       (this.m_pendingStop = null);
@@ -3206,8 +3211,8 @@
                 )),
             _)
           ) {
-            if (this.m_playbackDefinition.m_nDurationMS) {
-              let _ = _ + this.m_playbackDefinition.m_nDurationMS,
+            if (this.m_playbackDefinition.m_nLoopDurationMS) {
+              let _ = _ + this.m_playbackDefinition.m_nLoopDurationMS,
                 _ =
                   this.m_timelineLoader.ConvertGlobaOffsetToRecordingAndRelativeOffset(
                     _,
@@ -3328,7 +3333,12 @@
           );
         }
         PlayNextTimelineRecording(_) {
-          if (this.m_playbackDefinition)
+          var _;
+          if (
+            null === (_ = this.m_playbackDefinition) || void 0 === _
+              ? void 0
+              : _.m_nLoopDurationMS
+          )
             return void this.StartPlaybackForRange();
           let _;
           if (this.m_strRecordingID)

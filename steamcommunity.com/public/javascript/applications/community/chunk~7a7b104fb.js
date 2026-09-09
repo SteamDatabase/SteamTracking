@@ -796,7 +796,7 @@
         o = r(54728),
         l = r(17267),
         c = r(94057),
-        d = r(73022),
+        d = r(92317),
         m = r(51272),
         u = r(52038),
         h = r(61859),
@@ -940,7 +940,7 @@
             }
             return null;
           })(t, r),
-          c = (0, d.h)("GameAwardDrop2022");
+          c = (0, d.h3)("GameAwardDrop2022");
         let m = null,
           u = B().GiveawayRegisterButton;
         return (

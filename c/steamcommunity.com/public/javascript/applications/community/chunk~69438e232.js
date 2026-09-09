@@ -3,6 +3,62 @@
   {
     chunkid: (module) => {
       module.exports = {
+        PollBackground: "_2r_t3AhqjpzUxObM0vLPwL",
+        PollContainer: "_3hHnAsj2GNM_j1UZvYD5mi",
+        PollQuestion: "_3jEARWe0zZetd6h8KP6kCo",
+        PollOptions: "_1M3TJW3OFn6kL8Y2NegE1Q",
+        PollOption: "_1qcuI6mCt5_qtvFIRZYFUl",
+        Selected: "_1tGKmiNT8kR1M3BFlWcG1j",
+        PollVoteIcon: "_1dpuVtT-fBprfWUYwIYVf9",
+        Disabled: "FNR2rMnaJDHSxS8QcOw3Z",
+        ContentRow: "_2y19ohgg-3iLZIuV1Pt627",
+        BackgroundBar: "_2R8BCMr1cgNzCrRd3tkNNb",
+        ForegroundBar: "OSxkpWT-ORYpJSdW2JZMm",
+        PctText: "MU9BomtVv8bCuqosNmbo",
+        OptionText: "_2MjpgTcoK-yty8ZkBXirNL",
+        PollStatus: "tpwoVtxSkk230qksahSCn",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        narrowWidth: "500px",
+        EventDetailTimeInfo: "xBUZ1jJ4rafFpeTqBLFXy",
+        StartDate: "_3fnIGWmHQRS3H57PR7Qm0V",
+        EndDate: "_27ujtr5AsAF4_qa1HEifF4",
+        MultiDateAndTime: "_130Qkcrkkg7Ygi1ksNJVM",
+        RightSideTitles: "_34vtF4hGMg7lb2WZUbe8ie",
+        DateAndTime: "zLuUcDh0YJONQX3MssuAu",
+        VerticalLocalDateAndTime: "MT8Ri2dV3bsGLkpXTvoVG",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        FlexColumnContainer: "rh8dmsOr2EWCLPlwnCFIJ",
+        FullStartTime: "_2hYSOJf-lN9ud36C3VZ8e9",
+        ReminderDialog: "_1wuYdqboukc5kNT3-44sfX",
+        ReminderOptions: "_2QnQmTwVmvRwL6o4ysTPBQ",
+        ReminderBackground: "_13UwIiuzRz_qEbDAVBW-t-",
+        ReminderExpandsLeft: "_1-ZywREdsd3bg4EdYP0XeG",
+        ReminderOption: "_1x4NpiMrsiBt6sYz1zzHIc",
+        Unverified: "X5LUdUZjlvYo4k6czlifb",
+        CheckboxWrapper: "xpjXUWiD1HYf5bLjnpEMH",
+        ReminderCheckBox: "kPLmwYMHgDUHl1qO252N2",
+        IconMode: "_12XV43l_Qpg43IzyNzxR2O",
+        RemindBell: "_2HlM-E-WiSOionA9tu8HB1",
+        RemindCheck: "_2JziNs1TXz_ViAio_L0hFY",
+        ReminderDefault: "_3NwTBeStn8IpEP8Zg2jIF6",
+        TextMode: "_1zPOQ2nBel9G46FV8P-KA-",
+        ReminderCheck: "_1eDuCf0wTgvblQ_etRjP06",
+        ReminderOpennedOptions: "zwAlLjqNWaKW-8d69n0KK",
+        ReminderOptionsHeader: "-EdAjT_iIqwrdjsZlHLXt",
+        ReminderCalendarOptions: "_2fcTGlG_bOzJAhswx6vIIz",
+        ReminderSettings: "_3Pr4BoHW3n0OD8XPdtzVAW",
+        ReminderNotes: "_2mOFOyTA2w0vN-SOWZNXwi",
+        RpcThrobber: "_2Aby7dwRv-eMDWo3OwH59",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         CornerSash: "_1tKrXofY3mdVjHya13I1Ks",
       };
     },
@@ -96,6 +152,13 @@
         HoverContentTransition: "_14fzjUJx__1_iVvRQOFvNZ",
         Opening: "_1-VyPy3KZSzyBfUxYeZGHQ",
         Open: "_2lBsXkkcijYbtJ_ml1-6nE",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        CheckMark: "_3QpozFqH35lAw0VLMCSzjT",
+        DialogCtn: "_1Bzbk55gxuoPniZQJkoTjn",
+        EquipCtn: "_2_ZLb7Wk-U4cDrBvFBE7b5",
       };
     },
     chunkid: (module) => {
@@ -547,24 +610,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        PollBackground: "_1id2J6OtlRj0Ppiuep3ha",
-        PollContainer: "_3yFlyjtNdLP96hRQ92y9we",
-        PollQuestion: "_2ImZrvyKjXKlnNM6h_7qHT",
-        PollOptions: "_1-_aGrJzdFf8uYUfDKEn30",
-        PollOption: "_3hNd0q0tYO12nPDCPsT8sm",
-        Selected: "_3Nv8BLF6dRk932f5NhyNIH",
-        PollVoteIcon: "ziFphpM2Ie-orQ5ezpQqT",
-        Disabled: "_1bO8azG0-IqxQ3AQbWtCxx",
-        ContentRow: "_3Yb8eVHtZWf1AWt7VV3P-z",
-        BackgroundBar: "_30b_e8W4Z94Lwn8x2U9TYH",
-        ForegroundBar: "_3PFkx8XNigPW6CoYfHH5Yi",
-        PctText: "_1RNbjKcBRtD4pseH6hyggg",
-        OptionText: "_1qUCIT-7ueBBoNjoCvGfbP",
-        PollStatus: "_3NDl2Pml7Uvse14r9SWJTD",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         DevSummaryCtn: "_1k0S-tUF_ENycLJ7PWqbzS",
         LargeFormat: "_1090TwnnSh07Rya_5ss37E",
         CreatorDescCtn: "_3nKoQbWM1xYxsCfDoImGQ-",
@@ -669,32 +714,6 @@
     chunkid: (module) => {
       module.exports = {
         AppSummaryWidgetCtn: "_1-2t1NI3qbO2JgWmCss7AW",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        FlexColumnContainer: "_15ufNax9QUSW3N7J3t5TmY",
-        FullStartTime: "_1YLHWZHuAxRYOyv0nq0a3Z",
-        ReminderDialog: "_3YUEYUcuh0PTxYsV6Fecqq",
-        ReminderOptions: "_1Tp8K4gynWBOBpC9tS_xXV",
-        ReminderBackground: "TNf9_B9OYDQXSleTS1gAS",
-        ReminderExpandsLeft: "_38Xly-p-GTyBu1lVv1KF79",
-        ReminderOption: "_26nnhy-kEQVG1EJvwt-YOG",
-        Unverified: "_1dcmAZnqCMpEs3PXIajJIN",
-        CheckboxWrapper: "_1xuKEdr0rNMBRK_vYraObm",
-        ReminderCheckBox: "vPo2jxLA9iAVrt49Ic3c1",
-        IconMode: "_1YjsRp8XbwoXVWYYvWD7iv",
-        RemindBell: "_3-_M2IUSKHovaZaejfEH3E",
-        RemindCheck: "_2qaPrk1hI1cvMDPYnXO-kj",
-        ReminderDefault: "_19p2Qdr48bduJICtjBoXVv",
-        TextMode: "_553rCUt4qxX8_S5jBNMrv",
-        ReminderCheck: "_3fMhCIg2SQlEWyw9rHKGCe",
-        ReminderOpennedOptions: "vBuhkIZJzVjB-gDKqhho8",
-        ReminderOptionsHeader: "_2oOZCpUHJOjdt7D5zkx0Ed",
-        ReminderCalendarOptions: "VO6FStOkQjIXr-aZW1JBx",
-        ReminderSettings: "_2Pn59J0keCBE-RnAuaUUVx",
-        ReminderNotes: "_3qE0wUvpzn1HTPrT3R_wOv",
-        RpcThrobber: "_3F3aByA4Tw1mRbNiiVtXP-",
       };
     },
     chunkid: (module) => {
@@ -804,13 +823,8 @@
         lang_ko: "_36n2d0WrYP7qNfJaBDPBzE",
         lang_ja: "-TO1bNNGYVahD_n4sJP5r",
         "lang_zh-tw": "_3lwKp3Y9WtjxoKIhneSXGJ",
-        StartDate: "_1Maw_Rw6sOKYC1KkOI1xM",
-        EndDate: "vjGzCo2ZaJr6KcbuTta8L",
-        MultiDateAndTime: "hrpa5B__OlJvPDvHQM_d-",
         RightSideTitles: "efy3k8RozzxfFidgbdfZZ",
         DisplayAdminPanel_Title: "_1lmj3YadvgLSNGiTrVsnnT",
-        DateAndTime: "_3Sy57gZmUNuNdOI8qtPQVs",
-        NoDateAndTime: "_3lh2YoTQ3RiHxrfuO3CVjL",
         AppSummaryCtn: "Wk21cv1qcYBOF2PSAOfb-",
         AppSummaryWidgetTitleCtn: "jJFfoBi2WDn1ym8KCLfLr",
         Title: "_2gsoDhNzhAXpECJk2aM94W",
@@ -846,7 +860,6 @@
         MarketLink: "_19WRlHb-r_EpFcgEtFL8iV",
         MarketLinkhover: "Q7KDk8kBk01MxhM_KZoqt",
         ReadMoreCnt: "_1L8MouFdSBwf8mcqLtAIPu",
-        VerticalLocalDateAndTime: "_1mp7jCbQZOXCcY5CmAu7xm",
       };
     },
     chunkid: (module) => {
@@ -1122,13 +1135,6 @@
         "ItemFocusAnim-green": "_34pf2FqL7CWP6V9VNzPEIS",
         focusAnimation: "_1wLvhANps-c7yKLact-7v8",
         hoverAnimation: "_2FuCM99jbjgMa0JFZoisSA",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        CheckMark: "_2RwDkHMoOnosJANzYXpE",
-        DialogCtn: "_1un0dZktOVEKH7zzpSTtoF",
-        EquipCtn: "_1zUv_m9l3wknw_k_rwz0uy",
       };
     },
     chunkid: (module) => {
@@ -1418,42 +1424,6 @@
       function _(_, _ = null, _ = "") {
         const _ = "\\[\\/?(?:" + _(_) + "){1,}.*?]";
         return _.replace(new RegExp(_, "gi"), _);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)({
-          mutationFn: () =>
-            (async function (_, _) {
-              const _ = _._.Init(_._);
-              __webpack_require__.Body().set_item_id(_._.fromObject(_));
-              const _ = await _._.AddFreeLicense(_, _);
-              return [_.GetEResult(), _.Body().toObject()];
-            })(_, _),
-          onSuccess(_) {
-            const [
-              _,
-              {
-                packageids_added: _,
-                appids_added: _,
-                purchase_result_detail: _,
-              },
-            ] = _;
-            _ && __webpack_require__(_);
-          },
-        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1759,8 +1729,19 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _ && (_.support_user || _.valve_admin)
+          ? {
+              ..._,
+              can_edit: !0,
+              support_user: !1,
+              valve_admin: !1,
+            }
+          : _;
+      }
       async function _(_, _, _) {
-        const _ = (0, _._)("partnereventpermissions", "application_config");
+        const _ = (0, _._)(),
+          _ = (0, _._)("partnereventpermissions", "application_config");
         if (
           (function (_) {
             const _ = _;
@@ -1779,7 +1760,7 @@
           const _ = _.find((_) => _.clanid == _);
           if (_) {
             let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
-            return _;
+            return _(_, _);
           }
         }
         if (_._.logged_in) {
@@ -1797,7 +1778,7 @@
             const _ = await _.json();
             if (_) {
               let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
-              return _;
+              return _(_, _);
             }
           }
         }
@@ -2433,6 +2414,438 @@
         _: () => _,
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        const _ = (function (_, _) {
+          const _ = (0, _._)({
+            queryKey: _(_, _),
+            queryFn: async () => {
+              const _ = await fetch(_(_, _, !1), {
+                method: "GET",
+                credentials: "include",
+              });
+              return _(await __webpack_require__.json());
+            },
+            placeholderData: {
+              results: [],
+              success: _._,
+              bLoading: !0,
+              userPollSubmitData: {
+                user_poll_option_votes: [],
+              },
+            },
+          });
+          return _.data
+            ? _.data
+            : {
+                results: [],
+                success: _._,
+                bLoading: !0,
+                userPollSubmitData: {
+                  user_poll_option_votes: [],
+                },
+              };
+        })(_, _);
+        return (0, _.useMemo)(() => {
+          const _ = _.results.find((_) => _ == _.unique_id);
+          return {
+            bLoading: _.bLoading,
+            success: _.success,
+            userPollData: _,
+            error_message: _.error_message,
+            userPollSubmitData: _.userPollSubmitData,
+          };
+        }, [_, _]);
+      }
+      function _(_) {
+        return {
+          ..._,
+          bLoading: !1,
+          userPollSubmitData: {
+            user_poll_option_votes: _.results
+              .map((_) => _.voted_option_id)
+              .reduce((_, _) => _.concat(_), []),
+          },
+        };
+      }
+      function _(_, _) {
+        return ["usePartnerEventUserPoll", _.ConvertTo64BitString(), _];
+      }
+      function _(_, _, _) {
+        return `${_._.COMMUNITY_BASE_URL}partnerevents/${_.ConvertTo64BitString()}/userpoll/${_}/${_ ? "ajaxcastvote" : "ajaxloaddata"}/?origin=${(0, _._)()}`;
+      }
+      const _ = 86400;
+      function _(_, _) {
+        var _, _;
+        let _ = 0;
+        if (_.poll_end_time) _ = _.poll_end_time;
+        else {
+          _ =
+            (null !==
+              (_ =
+                null !== (_ = _.rtime32_visibility_start) && void 0 !== _
+                  ? _
+                  : _.rtime32_start_time) && void 0 !== _
+              ? _
+              : 0) + (_.poll_end_days_since_start || _);
+        }
+        return _;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const _ = _.context.event,
+          _ = _.context.showErrorInfo,
+          _ = (0, _._)(_.args, "poll_id"),
+          _ = Number.parseInt(_),
+          _ = (0, _._)(() =>
+            (function (_, _) {
+              var _;
+              const _ =
+                (null === (_ = null == _ ? void 0 : _.jsondata) || void 0 === _
+                  ? void 0
+                  : _.user_polls) || [];
+              return (
+                (null == _ ? void 0 : _.find((_) => _.poll_id == _)) || null
+              );
+            })(_, _),
+          );
+        if (!_ || !_)
+          return _
+            ? (0, _.jsx)("div", {
+                className: _.ErrorStylesWithIcon,
+                children: (0, _._)("#UserPolls_Editor_FailToFindModel", _),
+              })
+            : null;
+        const _ = (0, _.sfN)(_._.LANGUAGE);
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_, {
+            userPollDef: _,
+            lang: _,
+            eventModel: _,
+          }),
+        });
+      }
+      function _(_) {
+        var _, _, _;
+        const { eventModel: _, userPollDef: _, lang: _ } = _,
+          { userPollData: _, ..._ } = _(_.clanSteamID, _.GID || "0", _.poll_id),
+          _ = Boolean(
+            _.error_message &&
+              (null === (_ = _.error_message) || void 0 === _
+                ? void 0
+                : _.length) > 0,
+          ),
+          _ = (function (_, _) {
+            const _ = (0, _._)();
+            return (0, _._)({
+              mutationKey: [
+                "useSetPartnerEventCastVoteUserPoll",
+                _.GetAccountID(),
+                _,
+              ],
+              mutationFn: async (_) => {
+                const _ = {
+                    votes: _.votes,
+                  },
+                  _ = await fetch(_(_, _, !0), {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(_),
+                    credentials: "include",
+                  });
+                if (!_._) throw new Error(`Server returned ${_.status}`);
+                return await _.json();
+              },
+              onSuccess: (_, _) => {
+                if (_.success == _._)
+                  __webpack_require__.setQueryData(_(_, _), () => _(_));
+                else {
+                  const _ = __webpack_require__.getQueryData(_(_, _));
+                  if (_) {
+                    const _ = {
+                      ..._,
+                      success: _.success,
+                      error_message: _.error_message,
+                    };
+                    __webpack_require__.setQueryData(_(_, _), () => _);
+                  }
+                }
+              },
+            });
+          })(_.clanSteamID, _.GID || "0"),
+          [_, _] = (0, _.useState)(void 0),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          _ =
+            (null == _ ? void 0 : _.option_results) &&
+            (null == _ ? void 0 : _.option_results.length) > 0,
+          _ =
+            ((_ &&
+              (null === (_ = _.voted_option_id) || void 0 === _
+                ? void 0
+                : _.length)) ||
+              0) > 0;
+        return (
+          (0, _.useEffect)(() => {
+            if (
+              !_ &&
+              _.results_visibility_settings != _._.k_EPollResult_NotVisible &&
+              _
+            ) {
+              const _ = (function (_, _) {
+                return _(_, _) < Math.floor(Date.now() / 1e3);
+              })(
+                {
+                  rtime32_visibility_start:
+                    _.GetVisibilityStartTimeAndDateUnixSeconds(),
+                  rtime32_start_time: _.GetStartTimeAndDateUnixSeconds(),
+                },
+                _,
+              );
+              (_ || _) && _(!0);
+            }
+          }, [_, _, _, _, _]),
+          (0, _.jsxs)(_, {
+            ..._,
+            children: [
+              null === (_ = _.options) || void 0 === _
+                ? void 0
+                : _.map((_) => {
+                    const _ =
+                        null == _
+                          ? void 0
+                          : _.option_results.find(
+                              (_) => _.unique_id == _.option_id,
+                            ),
+                      _ =
+                        (null == _
+                          ? void 0
+                          : _.voted_option_id.includes(_.option_id || 0)) ||
+                        _ === _.option_id;
+                    return (0, _.jsx)(
+                      _,
+                      {
+                        lang: _,
+                        pollOptionDef: _,
+                        bSelected: _,
+                        nPercentage: _
+                          ? null == _
+                            ? void 0
+                            : _.percent
+                          : void 0,
+                        onClick: () => _(_.option_id),
+                        bDisableSelection:
+                          _.bLoading ||
+                          !(null == _ ? void 0 : _.vote_permitted) ||
+                          _ ||
+                          _ ||
+                          _,
+                      },
+                      "polloption" + _.option_id,
+                    );
+                  }),
+              !!_ &&
+                (0, _.jsx)(_._, {
+                  onClick: async () => {
+                    if (
+                      !_.userPollSubmitData.user_poll_option_votes.includes(_)
+                    ) {
+                      _(!0);
+                      const _ = {
+                        user_poll_option_votes: [
+                          ..._.userPollSubmitData.user_poll_option_votes,
+                        ],
+                      };
+                      _.user_poll_option_votes.push(_),
+                        await _.mutateAsync({
+                          votes: _,
+                        }),
+                        _(void 0),
+                        _(!1);
+                    }
+                  },
+                  children: (0, _._)("#Button_Submit"),
+                }),
+              (_ || _.bLoading) &&
+                (0, _.jsx)(_._, {
+                  size: "small",
+                  position: "center",
+                  string: _.bLoading ? (0, _._)("#Loading") : void 0,
+                }),
+              _ &&
+                !_ &&
+                !_ &&
+                (0, _.jsx)(_._, {
+                  onClick: () => _(!0),
+                  children: (0, _._)("#UserPolls_JustSeeResults"),
+                }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _.ErrorStylesWithIcon,
+                  children: _.error_message,
+                }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const { userPollDef: _, lang: _, eventModel: _, children: _ } = _,
+          _ = (0, _._)(),
+          [_, _] = (0, _._)(() => [
+            _._.GetWithFallback(_.localized_poll_description, _),
+            _.user_poll_background,
+          ]);
+        let _;
+        const _ = _.clanSteamID.GetAccountID();
+        Boolean(_) &&
+          (_ = {
+            backgroundImage: `url('${(0, _._)(_, _)}')`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          });
+        const _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]),
+          { userPollData: _ } = _(_, _.GID || "0", _.poll_id),
+          _ = _(
+            {
+              rtime32_visibility_start:
+                _.GetVisibilityStartTimeAndDateUnixSeconds(),
+              rtime32_start_time: _.GetStartTimeAndDateUnixSeconds(),
+            },
+            _,
+          );
+        return (0, _.jsx)("div", {
+          className: _().PollBackground,
+          style: _,
+          children: (0, _.jsxs)("div", {
+            className: _().PollContainer,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().PollQuestion,
+                children: _,
+              }),
+              (0, _.jsx)("div", {
+                className: _().PollOptions,
+                children: _,
+              }),
+              (0, _.jsxs)("div", {
+                className: _().PollStatus,
+                children: [
+                  (0, _.jsx)("div", {
+                    children: (0, _._)(
+                      "#UserPolls_status_N_Votes",
+                      (0, _._)((null == _ ? void 0 : _.total_votes) || 0),
+                    ),
+                  }),
+                  (null == _ ? void 0 : _.display_message)
+                    ? (0, _.jsx)("div", {
+                        children: null == _ ? void 0 : _.display_message,
+                      })
+                    : (0, _.jsx)("div", {
+                        children: (0, _._)(
+                          "#UserPolls_status_N_TimeRemaining",
+                          (0, _._)(_ - _),
+                        ),
+                      }),
+                ],
+              }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const {
+            pollOptionDef: _,
+            onClick: _,
+            lang: _,
+            bDisableSelection: _,
+            bSelected: _,
+            nPercentage: _,
+          } = _,
+          [_] = (0, _._)(() => [_._.GetWithFallback(_.localized_option, _)]),
+          _ = Math.round(100 * (null != _ ? _ : 0)),
+          _ = !_ && Boolean(_);
+        return (0, _.jsxs)("div", {
+          className: (0, _._)({
+            [_().PollOption]: !0,
+            [_().Selected]: _,
+            [_().Disabled]: _,
+          }),
+          role: "button",
+          "aria-pressed": Boolean(_),
+          "aria-disabled": Boolean(_),
+          tabIndex: _ ? 0 : void 0,
+          onClick: _ ? _ : void 0,
+          onKeyDown: _
+            ? (_) => {
+                ("Enter" !== _.key && " " !== _.key) ||
+                  (_.preventDefault(), null == _ || __webpack_require__());
+              }
+            : void 0,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().BackgroundBar,
+            }),
+            (0, _.jsx)("div", {
+              className: _().ForegroundBar,
+              style: {
+                width: `${_}%`,
+              },
+            }),
+            (0, _.jsxs)("div", {
+              className: _().ContentRow,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().PollVoteIcon,
+                }),
+                void 0 !== _ &&
+                  (0, _.jsxs)("div", {
+                    className: _().PctText,
+                    children: [_, "%"],
+                  }),
+                (0, _.jsx)("span", {
+                  className: _().OptionText,
+                  children: _,
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -2747,6 +3160,140 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            event: _,
+            className: _,
+            nOverrideStartTime: _,
+            nOverrideEndTime: _,
+          } = _,
+          _ = _.stylesmodule
+            ? {
+                ..._(),
+                ..._.stylesmodule,
+              }
+            : _(),
+          [_, _, _] = (0, _._)(() => [
+            _ ||
+              (_.bOldAnnouncement
+                ? _.postTime
+                : _.GetStartTimeAndDateUnixSeconds()),
+            _ || _.GetEndTimeAndDateUnixSeconds(),
+            _.type,
+          ]),
+          _ = !(0, _._)(_);
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_.EventDetailTimeInfo, _),
+          children: (0, _.jsx)(_._, {
+            startDateAndTime: _,
+            endDateAndTime: _,
+            bHideEndTime: _,
+            stylesmodule: _,
+          }),
+        });
+      }
+      function _(_) {
+        const {
+            _: _,
+            event: _,
+            className: _,
+            dateRangeLayout: _ = "horizontal",
+          } = _,
+          [_, _, _] = (0, _._)(() => [
+            __webpack_require__.GetStartTimeAndDateUnixSeconds(),
+            __webpack_require__.GetEndTimeAndDateUnixSeconds(),
+            _.type,
+          ]),
+          _ = {};
+        return (
+          "vertical" == _ && (_.ShortDateRange = _().VerticalLocalDateAndTime),
+          (0, _.jsx)("div", {
+            _: _,
+            className: (0, _._)(_().EventDetailTimeInfo, _),
+            children: (0, _.jsx)(_._, {
+              startDateAndTime: _,
+              endDateAndTime: _,
+              bHideEndTime: !(0, _._)(_),
+              stylesmodule: _,
+            }),
+          })
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return ["GetClanAnnouncementVoteForUser", _, _];
+      }
+      function _(_, _, _, _) {
+        var _;
+        const _ = (0, _._)(),
+          _ = _(_, _._.accountid),
+          { data: _ } = (0, _._)({
+            queryKey: _,
+            queryFn: async () => await __webpack_require__.GetMyEventVote(_),
+            initialData: null == _ ? void 0 : _.initialVote,
+            enabled:
+              Boolean(_) &&
+              Boolean(_._.accountid) &&
+              (null === (_ = null == _ ? void 0 : _.bAsk) || void 0 === _ || _),
+            staleTime: 1 / 0,
+            gcTime: 1 / 0,
+          }),
+          { mutate: _ } = (0, _._)({
+            mutationFn: async (_) => {
+              const _ = await __webpack_require__.RateEvent(_, _, _);
+              if (_ != _._)
+                throw new Error(`RateClanAnnouncement failed with ${_}`);
+            },
+            onMutate: (_) => _.setQueryData(_, _),
+            onError: () =>
+              _.invalidateQueries({
+                queryKey: _,
+              }),
+          });
+        return {
+          myVote: _,
+          Vote: (_) => {
+            _ && _ != _ && _(_);
+          },
+        };
+      }
+      function _(_, _) {
+        if (0 == _.length) return;
+        const _ = null != _ ? _ : (0, _._)("SetMyEventVotes");
+        _ &&
+          _.forEach((_) =>
+            __webpack_require__.setQueryData(
+              _(_.gidAnnouncement, _._.accountid),
+              _.vote,
+            ),
+          );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2849,10 +3396,10 @@
       function _(_, _, _, _, _, _ = _._.full, _ = !0) {
         return {
           queryKey: _(_, _, _, _, _),
-          enabled: _ && !!_.GID,
+          enabled: !!(null == _ ? void 0 : _.GID),
           initialData: () => _(_, _, _, _, _),
           queryFn: async () => {
-            var _, _;
+            var _, _, _, _, _;
             if (!_) return null;
             let _ = _(_, _, _, _, _);
             if (_) return _;
@@ -2875,7 +3422,9 @@
                     ? void 0
                     : _.length)
                 )
-                  return _.avatar_full_url;
+                  return null !== (_ = _.avatar_full_url) && void 0 !== _
+                    ? _
+                    : null;
                 _ = _.jsondata.referenced_appids[0];
               }
               const _ = await _.ensureQueryData(
@@ -2884,7 +3433,9 @@
                 }),
               );
               return _
-                ? (0, _._)(_, "main_capsule")
+                ? null !== (_ = (0, _._)(_, "main_capsule")) && void 0 !== _
+                  ? _
+                  : null
                 : (null == _ ? void 0 : _.avatar_full_url)
                   ? _.avatar_full_url
                   : `${_._.STORE_ITEM_BASE_URL}steam/apps/${_}/header.jpg`;
@@ -2892,7 +3443,9 @@
             return "background" == _ &&
               _ &&
               ((_.is_creator_home && !_.is_ogg) || _.is_curator)
-              ? _.creator_page_bg_url
+              ? null !== (_ = _.creator_page_bg_url) && void 0 !== _
+                ? _
+                : null
               : await _.ensureQueryData((0, _._)(_, _, _));
           },
         };
@@ -2936,8 +3489,9 @@
       function _(_, _, _) {
         return {
           queryKey: _(_),
-          enabled: _ && !!_.GID,
+          enabled: !!(null == _ ? void 0 : _.GID),
           queryFn: async () => {
+            var _;
             if (!_) return null;
             const _ = await _.ensureQueryData(
                 (0, _._)(
@@ -2962,24 +3516,778 @@
                       ? 0
                       : _.GID,
                 );
-                if (_.all_ages_screenshots.length > 1)
-                  return (
-                    (_ %= _.all_ages_screenshots.length),
-                    `${_._.STORE_ITEM_BASE_URL}${_.all_ages_screenshots[_].filename}`
-                  );
+                return (
+                  (_ %= _.all_ages_screenshots.length),
+                  `${_._.STORE_ITEM_BASE_URL}${_.all_ages_screenshots[_].filename}`
+                );
               }
             }
             return __webpack_require__.GetEventType() != _.ajI &&
               _ &&
-              ((_.is_creator_home && !_.is_ogg) || _.is_curator)
-              ? _.avatar_full_url
-              : void 0;
+              ((_.is_creator_home && !_.is_ogg) || _.is_curator) &&
+              null !== (_ = _.avatar_full_url) &&
+              void 0 !== _
+              ? _
+              : null;
           },
         };
       }
       function _(_) {
         return ["useFallbackArtworkScreenshot", null == _ ? void 0 : _.GID];
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      async function _(_, _) {
+        const _ = new URLSearchParams();
+        __webpack_require__.append("page_action", String(_)),
+          __webpack_require__.append("snr", _._.SNR),
+          __webpack_require__.append("uint_data", String(_)),
+          __webpack_require__.append(
+            "str_data",
+            (function () {
+              if (_._.IN_CLIENT) return "steam";
+              const _ = navigator.userAgent;
+              return /iPhone|iPad|iPod/i.test(_) ||
+                (/Macintosh/i.test(_) && /Safari/i.test(_))
+                ? "ios"
+                : /Android/i.test(_)
+                  ? "android"
+                  : "";
+            })(),
+          );
+        try {
+          await fetch(_._.STORE_BASE_URL + "events/ajaxreportnewshubstats/", {
+            method: "POST",
+            body: _,
+          });
+        } catch {}
+      }
+      !(function (_) {
+        (_[(_.k_eDiscussions = 0)] = "k_eDiscussions"),
+          (_[(_.k_eThumbsUp = 1)] = "k_eThumbsUp"),
+          (_[(_.k_eClickThrough = 2)] = "k_eClickThrough"),
+          (_[(_.k_eMuted = 3)] = "k_eMuted"),
+          (_[(_.k_ePlayedVideo = 4)] = "k_ePlayedVideo"),
+          (_[(_.k_eReminder_Opened = 5)] = "k_eReminder_Opened"),
+          (_[(_.k_eReminder_MobilePush = 6)] = "k_eReminder_MobilePush"),
+          (_[(_.k_eReminder_Email = 7)] = "k_eReminder_Email"),
+          (_[(_.k_eReminder_CalendarApple = 8)] = "k_eReminder_CalendarApple"),
+          (_[(_.k_eReminder_CalendarGoogle = 9)] =
+            "k_eReminder_CalendarGoogle"),
+          (_[(_.k_eReminder_CalendarOutlook = 10)] =
+            "k_eReminder_CalendarOutlook"),
+          (_[(_.k_eReminder_EmailUnverified = 11)] =
+            "k_eReminder_EmailUnverified"),
+          (_[(_.k_eReminder_MobilePushMissing = 12)] =
+            "k_eReminder_MobilePushMissing");
+      })(_ || (_ = {}));
+      const _ = {
+        nFutureViewedIndex: 0,
+        nPastViewedIndex: 0,
+        nLastRecordedFilter: 0,
+      };
+      function _(_) {
+        var _;
+        return null !==
+          (_ = _.getQueryData(["EventCalendarTrackingProgress"])) &&
+          void 0 !== _
+          ? _
+          : _;
+      }
+      function _(_, _) {
+        _.setQueryDefaults(["EventCalendarTrackingProgress"], {
+          staleTime: 1 / 0,
+          gcTime: 1 / 0,
+        }),
+          _.setQueryData(["EventCalendarTrackingProgress"], (_) => ({
+            ...(null != _ ? _ : _),
+            ..._,
+          }));
+      }
+      function _(_, _, _) {
+        return clearTimeout(_), setTimeout(_, _);
+      }
+      function _(_) {
+        _(_._._, _);
+      }
+      function _(_, _) {
+        const _ = _(_(_).schFilter, 1e3, () => {
+          _ != _(_).nLastRecordedFilter &&
+            (_(_, {
+              nLastRecordedFilter: _,
+            }),
+            _(_._._, _));
+        });
+        _(_, {
+          schFilter: _,
+        });
+      }
+      function _(_) {
+        return Math.max(0, Math.floor(Date.now() / 1e3 - _));
+      }
+      function _() {
+        const _ = (0, _._)(),
+          { mutate: _ } = (0, _._)({
+            mutationFn: async (_) => {
+              switch (_.type) {
+                case "interaction":
+                  _(_.interaction);
+                  break;
+                case "filter-change":
+                  _(_, _.nFilterBitMask);
+                  break;
+                case "event-viewed":
+                  !(function (_, _, _, _) {
+                    let _,
+                      _,
+                      _ = 0,
+                      _ = 0;
+                    for (const _ of _) {
+                      const _ = _.start_time > _;
+                      if ((_.unique_id == _ && ((_ = _), (_ = _)), _)) _++;
+                      else if (void 0 !== _) break;
+                      _++;
+                    }
+                    if (void 0 === _ || !_) return;
+                    const _ = _(_);
+                    if (_ < _) {
+                      const _ = _ - _;
+                      if (_.nFutureViewedIndex >= _) return;
+                      const _ = _(_.schFuture, 500, () => {
+                        const _ =
+                          Math.min(_, 4095) |
+                          (Math.min(_, 255) << 12) |
+                          (Math.min(_(_), 2047) << 20);
+                        _(_._._, _);
+                      });
+                      return void _(_, {
+                        nFutureViewedIndex: _,
+                        schFuture: _,
+                      });
+                    }
+                    const _ = _ - _;
+                    if (_.nPastViewedIndex >= _) return;
+                    const _ = Math.floor((_ - _.start_time) / 86400),
+                      _ = _(_.schPast, 500, () => {
+                        const _ =
+                          Math.min(_, 4095) |
+                          (Math.min(_, 255) << 12) |
+                          (Math.min(_(_), 2047) << 20);
+                        _(_._._, _);
+                      });
+                    _(_, {
+                      nPastViewedIndex: _,
+                      schPast: _,
+                    });
+                  })(_, _.gidEvent, _.rgItemsInView, _.rtCalendarInit);
+              }
+            },
+          });
+        return _.useMemo(
+          () => ({
+            RecordInteraction: (_) =>
+              _({
+                type: "interaction",
+                interaction: _,
+              }),
+            RecordFilterChange: (_) =>
+              _({
+                type: "filter-change",
+                nFilterBitMask: _,
+              }),
+            RecordEventViewed: (_, _, _) =>
+              _({
+                type: "event-viewed",
+                gidEvent: _,
+                rgItemsInView: _,
+                rtCalendarInit: _,
+              }),
+          }),
+          [_],
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (
+          (_.bHasVerifiedEmail && _.bFollowsByEmail) ||
+          (_.bHasPushNotification && _.bFollowsByPush)
+        );
+      }
+      function _(_) {
+        const {
+            eventModel: _,
+            rtNow: _,
+            notifyState: _,
+            bOnlyShowIcon: _,
+            renderPanel: _,
+            onRequestSignIn: _,
+            bSignedIn: _,
+            onTrack: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          _ = _.useRef(null),
+          _ = _.useRef(null),
+          _ = _.useCallback(() => {
+            var _;
+            null === (_ = _.current) || void 0 === _ || _.Hide(), _(!1);
+          }, []),
+          _ = _ && !_,
+          _ = _(_);
+        return (void 0 !== _.startTime && _.startTime < _) ||
+          _.BIsUnlistedEvent()
+          ? null
+          : (0, _.jsxs)("div", {
+              className: (0, _._)({
+                [_.ReminderCheckBox]: !0,
+                [_().ReminderCtn]: !0,
+                [_.IconMode]: _,
+                [_.TextMode]: !_,
+                ReminderSet: _,
+                RemindMeWidget: !0,
+              }),
+              onClick: (_) => {
+                _
+                  ? (_
+                      ? _()
+                      : (() => {
+                          const _ = {
+                            bOverlapHorizontal: !0,
+                            bOverlapVertical: !0,
+                            bDisablePopTop: !0,
+                            bMatchWidth: !0,
+                            strClassName: (0, _._)(
+                              _.ReminderDialog,
+                              _.ReminderOptions,
+                              _.contextMenu,
+                            ),
+                          };
+                          (_.current = (0, _._)(_(_), _.current, _)),
+                            _.current.SetOnHideCallback(_),
+                            _(!0),
+                            null == _ || _("opened");
+                        })(),
+                    _.stopPropagation(),
+                    _.preventDefault())
+                  : null == _ || _();
+              },
+              ref: _,
+              children: [
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.RemindCheck,
+                    children: (0, _.jsx)(_.Jlk, {}),
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.RemindBell,
+                    children: (0, _.jsx)(_.IrQ, {}),
+                  }),
+                (0, _.jsx)("div", {
+                  className: _.ReminderDefault,
+                  children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.ReminderOptions,
+                }),
+              ],
+            });
+      }
+      function _(_) {
+        const {
+            eventModel: _,
+            lang: _,
+            rtNow: _,
+            notifyState: _,
+            bShowStartTime: _,
+            bExpandLeft: _,
+            bOnlyShowIcon: _,
+            strCalendarEventTitle: _,
+            onChangeNotify: _,
+            onTrack: _,
+            fnHidePanel: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(void 0),
+          [_, _, _] = (0, _._)(),
+          _ = async (_, _) => {
+            if (_.GID && _.GID != _.kFb) {
+              _(!0);
+              try {
+                await _(_, _),
+                  _ &&
+                    (null == _ ||
+                      _("email" == _ ? "notify-email" : "notify-push"));
+              } catch (_) {
+                _(_ instanceof Error ? _.message : String(_)), _();
+              }
+              _(!1);
+            }
+          },
+          _ = _.jsondata.bSaleEnabled ? _._.k_eStoreSalePage : _._.k_eStoreView,
+          _ = (0, _._)(_, _, "forceAbsolute"),
+          _ = (_) => {
+            const _ = _.appid
+                ? "app/" + _.appid
+                : "group/" + _.clanSteamID.GetAccountID(),
+              _ = "l=" + (0, _.LgB)(_);
+            return `${_._.STORE_BASE_URL}${(0, _._)()}/download/${_}/${_}/${_.GID}?${_}`;
+          },
+          {
+            bHasVerifiedEmail: _,
+            bHasPushNotification: _,
+            bFollowsByEmail: _,
+            bFollowsByPush: _,
+          } = _,
+          _ = _ && _.GetStartTimeAndDateUnixSeconds();
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _.ReminderCheckBox,
+                _ ? _.IconMode : _.TextMode,
+                "RemindMeWidget",
+              ),
+              onClick: _,
+              children: [
+                _(_) &&
+                  (0, _.jsx)("div", {
+                    className: _.RemindCheck,
+                    children: (0, _.jsx)(_.Jlk, {}),
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.RemindBell,
+                    children: (0, _.jsx)(_.IrQ, {}),
+                  }),
+                (0, _.jsx)("div", {
+                  className: _.ReminderDefault,
+                  children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.ReminderOpennedOptions,
+                }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _.FlexColumnContainer,
+                _.ReminderBackground,
+                _ && _.ReminderExpandsLeft,
+              ),
+              children: [
+                _ &&
+                  (0, _.jsx)(_._, {
+                    className: _.RpcThrobber,
+                    size: "xlarge",
+                    position: "center",
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.FullStartTime,
+                    children: (0, _._)(
+                      "#EventDisplay_EventUpcoming_WithDateAndTime",
+                      (0, _._)(
+                        _,
+                        (0, _._)(new Date(1e3 * _), new Date(1e3 * _)),
+                      ),
+                      (0, _._)(_, !0),
+                    ),
+                  }),
+                (0, _.jsx)("div", {
+                  className: _.ReminderOptionsHeader,
+                  children: (0, _._)(
+                    "#EventDisplay_Reminder_GetNotification_Via",
+                  ),
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: _.CheckboxWrapper,
+                      bTopmost: !0,
+                      toolTipContent: (0, _._)(
+                        _
+                          ? "#EventReminder_NotifyByEmail_ttip"
+                          : "#EventReminder_NotifyByEmail_Missing",
+                      ),
+                      children: (0, _.jsx)(_._, {
+                        label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
+                        disabled: !_,
+                        checked: _,
+                        onChange: (_) => _(_, "email"),
+                      }),
+                    }),
+                    !_ &&
+                      (0, _.jsx)("div", {
+                        className: _.FlexColumnContainer,
+                        children: (0, _.jsx)("a", {
+                          href: _._.STORE_BASE_URL + "account/",
+                          target: _._.IN_CLIENT ? void 0 : "_blank",
+                          onClick: () =>
+                            null == _ ? void 0 : _("email-unverified"),
+                          children: (0, _._)(
+                            "#EventReminder_NotifyByEmail_Missing_Add",
+                          ),
+                        }),
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: _.CheckboxWrapper,
+                      bTopmost: !0,
+                      toolTipContent: (0, _._)(
+                        _
+                          ? "#EventReminder_NotifyByMobile_ttip"
+                          : "#EventReminder_NotifyByMobile_Missing",
+                      ),
+                      children: (0, _.jsx)(_._, {
+                        label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
+                        disabled: !_,
+                        checked: _,
+                        onChange: (_) => _(_, "push"),
+                      }),
+                    }),
+                    !_ &&
+                      (0, _.jsx)("div", {
+                        className: _.FlexColumnContainer,
+                        children: (0, _.jsx)("a", {
+                          href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
+                          target: _._.IN_CLIENT ? void 0 : "_blank",
+                          onClick: () =>
+                            null == _ ? void 0 : _("push-missing"),
+                          children: (0, _._)(
+                            "#EventReminder_NotifyByMobile_Install",
+                          ),
+                        }),
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.ReminderOptionsHeader,
+                      children: (0, _._)(
+                        "#EventDisplay_Reminder_AddToCalendar",
+                      ),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.ReminderCalendarOptions,
+                      children: [
+                        (0, _.jsx)("a", {
+                          className: _.ReminderOption,
+                          href: _("ics"),
+                          onClick: () =>
+                            null == _ ? void 0 : _("calendar-apple"),
+                          children: (0, _._)(
+                            "#EventDisplay_Reminder_AppleCalendar_Short",
+                          ),
+                        }),
+                        (0, _.jsx)("a", {
+                          className: _.ReminderOption,
+                          target: _._.IN_CLIENT ? void 0 : "_blank",
+                          href: (() => {
+                            const _ = encodeURIComponent(_),
+                              _ = encodeURIComponent(
+                                (() => {
+                                  let _ = _.GetSubTitleWithLanguageFallback(_);
+                                  return (
+                                    (_ = _ ? `${_}\n\n\n` : ""),
+                                    `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
+                                  );
+                                })(),
+                              ),
+                              _ = _.GetStartTimeAndDateUnixSeconds(),
+                              _ = _(_),
+                              _ = _(
+                                _.GetEndTimeAndDateUnixSeconds() ||
+                                  _ + _._.PerHour,
+                              ),
+                              _ =
+                                (_._.IN_CLIENT
+                                  ? "steam://openurl_external/"
+                                  : "") +
+                                `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
+                            return (0, _._)(_);
+                          })(),
+                          onClick: () =>
+                            null == _ ? void 0 : _("calendar-google"),
+                          children: (0, _._)(
+                            "#EventDisplay_Reminder_GoogleCalendar_Short",
+                          ),
+                        }),
+                        (0, _.jsx)("a", {
+                          className: _.ReminderOption,
+                          href: _("outlook"),
+                          onClick: () =>
+                            null == _ ? void 0 : _("calendar-outlook"),
+                          children: (0, _._)(
+                            "#EventDisplay_Reminder_OutlookCalendar_Short",
+                          ),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                !1,
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                strTitle: (0, _._)("#EventDisplay_Reminder_FollowEvent_Error"),
+                strDescription: (0, _._)(
+                  "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
+                ),
+                closeModal: _,
+                children: _,
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        return new Date(1e3 * _)
+          .toISOString()
+          .replace(/[-:]/g, "")
+          .replace(/\.\d{3}Z$/, "Z");
+      }
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
+          (_[(_.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
+          (_[(_.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
+      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          { data: _ } = (0, _._)((0, _._)(_, _, _)),
+          _ = (0, _._)(),
+          _ = _(_, _);
+        return {
+          bHasVerifiedEmail: _.bHasValidatedEmail,
+          bHasPushNotification: _.bHasPushNotification,
+          bFollowsByEmail: 0 != (_ & _.k_ENotifyFlagByEmail),
+          bFollowsByPush: 0 != (_ & _.k_ENotifyFlagByPush),
+        };
+      }
+      function _(_, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(_, _, _);
+        return async (_, _) => {
+          if (!_) return;
+          const _ = __webpack_require__.getQueryData(_.queryKey),
+            _ = "email" == _ ? _.k_ENotifyFlagByEmail : _.k_ENotifyFlagByPush,
+            _ = _(_, _),
+            _ = _ ? _ | _ : _ & ~_;
+          await (async function (_, _, _) {
+            const _ = 0 == _,
+              _ = `${_._.COMMUNITY_BASE_URL}gid/${_._.InitFromClanID(_).ConvertTo64BitString()}/`,
+              _ = `${_}${_ ? "unfolloworunignoreevent" : "followorignoreevent"}`,
+              _ = new URLSearchParams();
+            _.append("sessionid", (0, _._)()),
+              _.append("ignore", "false"),
+              _.append("gid", _),
+              _.append("notification_flag", "" + _),
+              _.append("clan_accountid", "" + _);
+            const _ = await fetch(_, {
+              method: "POST",
+              body: _,
+              credentials: "include",
+            });
+            if (!_._) throw new Error(`${_} answered ${_.status}`);
+          })(_, _, _),
+            await __webpack_require__.invalidateQueries({
+              queryKey: _.queryKey,
+            });
+        };
+      }
+      function _(_, _) {
+        var _, _, _, _;
+        const _ =
+          _ &&
+          null !==
+            (_ =
+              null === (_ = null == _ ? void 0 : _.event_followed) ||
+              void 0 === _
+                ? void 0
+                : __webpack_require__.indexOf(_)) &&
+          void 0 !== _
+            ? _
+            : -1;
+        return -1 == _
+          ? 0
+          : null !==
+                (_ =
+                  null === (_ = null == _ ? void 0 : _.event_followed_flags) ||
+                  void 0 === _
+                    ? void 0
+                    : _[_]) && void 0 !== _
+            ? _
+            : 0;
+      }
+      function _(_) {
+        const { eventModel: _, bOnlyShowIcon: _, onTrack: _ } = _,
+          _ = (0, _._)(),
+          _ = _(_.clanSteamID.GetAccountID(), _.GID),
+          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              eventModel: _,
+              rtNow: _,
+              notifyState: _,
+              bOnlyShowIcon: _,
+              bSignedIn: Boolean(_._.logged_in) || _._.IN_CLIENT,
+              onRequestSignIn: _,
+              onTrack: _,
+              renderPanel: (_) =>
+                (0, _.jsx)(_, {
+                  ..._,
+                  rtNow: _,
+                  fnHidePanel: _,
+                }),
+            }),
+            _,
+          ],
+        });
+      }
+      function _(_) {
+        var _;
+        const {
+            eventModel: _,
+            lang: _,
+            strHubName: _,
+            bShowStartTime: _,
+            bExpandLeft: _,
+            bOnlyShowIcon: _,
+            onTrack: _,
+            rtNow: _,
+            fnHidePanel: _,
+          } = _,
+          _ = _.clanSteamID.GetAccountID(),
+          _ = _(_, _.GID),
+          _ = _(_, _.GID),
+          _ =
+            null !== (_ = __webpack_require__.GetNameWithFallback(_)) &&
+            void 0 !== _
+              ? _
+              : "",
+          _ = _ ? `${_}: ${_}` : _;
+        return (0, _.jsx)(_, {
+          eventModel: _,
+          lang: _,
+          rtNow: _,
+          notifyState: _,
+          strCalendarEventTitle: _,
+          bShowStartTime: _,
+          bExpandLeft: _,
+          bOnlyShowIcon: _,
+          onChangeNotify: _,
+          onTrack: _,
+          fnHidePanel: _,
+        });
+      }
+      function _(_) {
+        const {
+            eventModel: _,
+            lang: _,
+            bShowStartTime: _,
+            bExpandLeft: _,
+            bOnlyShowIcon: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (function (_) {
+            const _ = _.appid || void 0,
+              _ = (0, _._)(_),
+              { data: _ } = (0, _._)(_),
+              { data: _ } = (0, _._)(_ ? void 0 : _.clanSteamID.GetAccountID());
+            return (
+              (_
+                ? null == _
+                  ? void 0
+                  : _.name
+                : null == _
+                  ? void 0
+                  : _.group_name) || void 0
+            );
+          })(_);
+        return (0, _.jsx)(_, {
+          eventModel: _,
+          lang: _,
+          strHubName: _,
+          bShowStartTime: _,
+          bExpandLeft: _,
+          bOnlyShowIcon: _,
+          onTrack: (_) => _.RecordInteraction(_[_]),
+        });
+      }
+      const _ = {
+        opened: _._.k_eReminder_Opened,
+        "notify-email": _._.k_eReminder_Email,
+        "notify-push": _._.k_eReminder_MobilePush,
+        "email-unverified": _._.k_eReminder_EmailUnverified,
+        "push-missing": _._.k_eReminder_MobilePushMissing,
+        "calendar-apple": _._.k_eReminder_CalendarApple,
+        "calendar-google": _._.k_eReminder_CalendarGoogle,
+        "calendar-outlook": _._.k_eReminder_CalendarOutlook,
+      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -20647,6 +21955,316 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(),
+          { bLoading: _ } = _,
+          { className: _, bPreviewMode: _, rewardType: _ } = _,
+          [_, _, _] = (0, _._)();
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              className: (0, _._)("CSSClaimItemButton", _),
+              onClick: () => {
+                _.bCanClaimNewItem
+                  ? _()
+                  : _ &&
+                    (_(),
+                    console.log(
+                      "Show dialog for debugging, since already claimed: ",
+                      _,
+                    ));
+              },
+              disabled: _,
+              children: Boolean(_)
+                ? (0, _.jsx)(_._, {
+                    string: (0, _._)("#Loading"),
+                    size: "small",
+                  })
+                : (0, _.jsx)(_, {
+                    claimState: _,
+                  }),
+            }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_, {
+                rewardType: _,
+                closeModal: _,
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { claimState: _, strButtonOverride: _, rewardType: _ } = _;
+        if (_.bAlreadyClaimedCurrentItem)
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_.CheckMark, "CSSClaimedState"),
+            children: [
+              (0, _.jsx)(_.Jlk, {}),
+              (0, _.jsxs)("span", {
+                children: [
+                  " ",
+                  _ || (0, _._)("#Sale_ClaimableReward_AlreadyClaimed"),
+                ],
+              }),
+            ],
+          });
+        let _ = (0, _._)("#Sale_ClaimableReward_generic");
+        switch ((null == _ ? void 0 : _.community_item_class) || _) {
+          case _._:
+            _ = (0, _._)("#Sale_ClaimableReward_sticker");
+            break;
+          case _._:
+            _ = (0, _._)("#Sale_ClaimableReward_profilemodifier");
+            break;
+          case _._:
+            _ = (0, _._)("#Sale_ClaimableReward_animatedavatar");
+        }
+        return (0, _.jsx)("span", {
+          className: "CSSUnclaimedState",
+          children: _,
+        });
+      }
+      function _(_) {
+        const { closeModal: _, rewardType: _ } = _,
+          { fnClaimItem: _ } = (0, _._)(),
+          _ = (0, _._)(),
+          [_, _] = _.useState(null);
+        _.useEffect(() => {
+          _.bLoading ||
+            (_.fnSetLoading(!0),
+            _()
+              .then((_) => {
+                if ((_(_), _.appid)) {
+                  let _ = (0, _._)("#Sale_ClaimableReward_completed_generic");
+                  const _ = (null == _ ? void 0 : _.community_item_class) || _;
+                  switch (_) {
+                    case _._:
+                      _ = (0, _._)("#Sale_ClaimableReward_completed_sticker");
+                      break;
+                    case _._:
+                      _ = (0, _._)(
+                        "#Sale_ClaimableReward_completed_profilemodifier",
+                      );
+                      break;
+                    case _._:
+                      _ = (0, _._)(
+                        "#Sale_ClaimableReward_completed_animatedavatar",
+                      );
+                  }
+                  _.fnSetStrSuccess("   "),
+                    _.fnSetElSuccess(
+                      (0, _.jsxs)("div", {
+                        className: _.DialogCtn,
+                        children: [
+                          (0, _.jsx)("span", {
+                            children: _,
+                          }),
+                          (0, _.jsx)(_, {
+                            appid: _.appid,
+                            community_item_type: _.community_item_type,
+                            rewardType: _,
+                          }),
+                        ],
+                      }),
+                    );
+                } else _.fnSetStrError((0, _._)("#Sale_ClaimableReward_Busy"));
+              })
+              .catch(() =>
+                _.fnSetStrError((0, _._)("#Sale_ClaimableReward_Busy")),
+              ));
+        }, [null == _ ? void 0 : _.community_item_class, _, _, _]);
+        let _ = (0, _._)("#Sale_ClaimableReward_generic");
+        switch ((null == _ ? void 0 : _.community_item_class) || _) {
+          case _._:
+            _ = (0, _._)("#Sale_ClaimableReward_sticker");
+            break;
+          case _._:
+            _ = (0, _._)("#Sale_ClaimableReward_profilemodifier");
+            break;
+          case _._:
+            _ = (0, _._)("#Sale_ClaimableReward_animatedavatar");
+        }
+        return (0, _.jsx)(_._, {
+          state: _,
+          strDialogTitle: _,
+          closeModal: _,
+        });
+      }
+      function _(_) {
+        const { appid: _, community_item_type: _, rewardType: _ } = _;
+        return _ && _
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_._, {
+                  appid: _,
+                  community_item_type: _,
+                }),
+                Boolean(_ == _._) &&
+                  (0, _.jsx)(_, {
+                    appid: _,
+                    community_item_type: _,
+                  }),
+              ],
+            })
+          : null;
+      }
+      function _(_) {
+        const { appid: _, community_item_type: _ } = _,
+          _ = (0, _._)(_),
+          { mutate: _, isSuccess: _ } = (0, _._)();
+        if (!_) return null;
+        const _ = _.find((_) => _.item_type == _);
+        return _
+          ? (0, _.jsxs)("div", {
+              className: _.EquipCtn,
+              children: [
+                Boolean(_)
+                  ? (0, _.jsx)("div", {
+                      children: (0, _._)(
+                        "#Sale_ClaimableReward_profilemodifier_apply_success",
+                      ),
+                    })
+                  : (0, _.jsx)(_._, {
+                      onClick: () => _(_),
+                      children: (0, _._)(
+                        "#Sale_ClaimableReward_profilemodifier_apply",
+                      ),
+                    }),
+                (0, _.jsx)(_._, {
+                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}`,
+                  children: (0, _._)(
+                    "#Sale_ClaimableReward_profilemodifier_view",
+                  ),
+                }),
+              ],
+            })
+          : (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)(_._, {
+                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/edit/goldenprofile`,
+                  children: (0, _._)(
+                    "#Sale_ClaimableReward_profilemodifier_choose",
+                  ),
+                }),
+                (0, _.jsx)(_._, {
+                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}`,
+                  children: (0, _._)(
+                    "#Sale_ClaimableReward_profilemodifier_view",
+                  ),
+                }),
+              ],
+            });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "saleaction/giveawayregistration",
+        _ = "saleaction/creategiveawayregistration";
+      async function _(_) {
+        const _ = _._.STORE_BASE_URL + _,
+          _ = await fetch(_, {
+            method: "POST",
+            credentials: "include",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify({
+              name: _,
+            }),
+          });
+        return await _("UpdateUserGiveawayRegistration", _, _, _);
+      }
+      async function _(_, _, _, _) {
+        if (!_._) throw new Error(_ + " answered " + _.status);
+        const _ = await _.json();
+        if ((null == _ ? void 0 : _.success) == _._ && _.registration)
+          return _.registration;
+        throw new Error(
+          _ + " on " + _ + " answered " + (null == _ ? void 0 : _.success),
+        );
+      }
+      const _ = {
+        registered: !1,
+      };
+      function _(_, _) {
+        return ["sale", "giveawayregistration", _, _];
+      }
+      function _(_, _) {
+        return {
+          queryKey: _(_, _),
+          queryFn: () =>
+            (async function (_) {
+              const _ =
+                  _._.STORE_BASE_URL + _ + "?name=" + encodeURIComponent(_),
+                _ = await fetch(_, {
+                  credentials: "include",
+                });
+              return await _("GetUserGiveawayRegistration", _, _, _);
+            })(_),
+          enabled: Boolean(_),
+          retry: !1,
+        };
+      }
+      function _(_) {
+        const { data: _, isError: _ } = (0, _._)(_(_, _._.accountid));
+        return _ ? _ : _;
+      }
+      function _() {
+        const _ = (0, _._)(),
+          { mutateAsync: _ } = (0, _._)({
+            mutationFn: _,
+            onSuccess: (_, _) => _.setQueryData(_(_, _._.accountid), _),
+          });
+        return {
+          fnCreateRegistration: (0, _.useCallback)(
+            async (_) => {
+              try {
+                return await _(_);
+              } catch (_) {
+                return (
+                  console.error("Registering for giveaway " + _ + " failed", _),
+                  _
+                );
+              }
+            },
+            [_],
+          ),
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -25420,7 +27038,7 @@
           ? (function (_, _, _) {
               switch (_) {
                 case "date_full":
-                  return _(_);
+                  return (0, _._)(_);
                 case "date_month":
                   return _(new Date(1e3 * _));
                 case "date_quarter":
@@ -25471,11 +27089,10 @@
               _.custom_release_date_message,
             )
           : (null == _ ? void 0 : _.steam_release_date)
-            ? _(_.steam_release_date)
+            ? ((_ = _.steam_release_date),
+              new Date(1e3 * _).toLocaleDateString((0, _._)()))
             : "";
-      }
-      function _(_) {
-        return new Date(1e3 * _).toLocaleDateString((0, _._)());
+        var _;
       }
       function _(_) {
         return _.toLocaleDateString((0, _._)(), {
@@ -25919,6 +27536,42 @@
           },
           onSuccess: () => {
             (0, _._)();
+          },
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: () =>
+            (async function (_, _) {
+              const _ = _._.Init(_._);
+              __webpack_require__.Body().set_item_id(_._.fromObject(_));
+              const _ = await _._.AddFreeLicense(_, _);
+              return [_.GetEResult(), _.Body().toObject()];
+            })(_, _),
+          onSuccess(_) {
+            const [
+              _,
+              {
+                packageids_added: _,
+                appids_added: _,
+                purchase_result_detail: _,
+              },
+            ] = _;
+            _ && __webpack_require__(_);
           },
         });
       }
@@ -29289,113 +30942,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_eLibrary = 1)] = "k_eLibrary"),
-          (_[(_.k_eWishlist = 2)] = "k_eWishlist"),
-          (_[(_.k_eFollowing = 4)] = "k_eFollowing"),
-          (_[(_.k_eRecommended = 8)] = "k_eRecommended"),
-          (_[(_.k_eSteam = 16)] = "k_eSteam"),
-          (_[(_.k_eRequired = 32)] = "k_eRequired"),
-          (_[(_.k_eFeatured = 64)] = "k_eFeatured"),
-          (_[(_.k_eCurator = 128)] = "k_eCurator"),
-          (_[(_.k_eReposted = 256)] = "k_eReposted");
-      })(_ || (_ = {}));
-      class _ {
-        GetSource() {
-          var _, _;
-          return this.appInfo
-            ? this.appInfo.source
-            : null !==
-                  (_ =
-                    null === (_ = this.clanInfo) || void 0 === _
-                      ? void 0
-                      : _.source) && void 0 !== _
-              ? _
-              : 0;
-        }
-        static GetEntityNameForID(_, _) {
-          var _, _;
-          if (_)
-            return null !==
-              (_ =
-                null === (_ = _._.Get().GetApp(_)) || void 0 === _
-                  ? void 0
-                  : __webpack_require__.GetName()) && void 0 !== _
-              ? _
-              : (0, _._)("#EventCalendar_MuteApp_Unknown");
-          if (_) {
-            const _ = _._.GetClanInfoByClanAccountID(_);
-            if (null == _ ? void 0 : _.group_name) return _.group_name;
-          }
-          return (0, _._)("#EventCalendar_MuteApp_Unknown");
-        }
-        static BHasEntityNameForID(_, _) {
-          var _, _;
-          return _
-            ? Boolean(
-                null === (_ = _._.Get().GetApp(_)) || void 0 === _
-                  ? void 0
-                  : __webpack_require__.GetName(),
-              )
-            : !!_ &&
-                !!(null === (_ = _._.GetClanInfoByClanAccountID(_)) ||
-                void 0 === _
-                  ? void 0
-                  : _.group_name);
-        }
-        GetEntityName() {
-          return _.GetEntityNameForID(this.appid, this.clanid);
-        }
-        GetGameCapsule() {
-          var _, _;
-          if (this.appInfo)
-            return null ===
-              (_ =
-                null === (_ = _._.Get().GetApp(this.appInfo.appid)) ||
-                void 0 === _
-                  ? void 0
-                  : _.GetAssets()) || void 0 === _
-              ? void 0
-              : _.GetMainCapsuleURL();
-          if (this.clanInfo) {
-            let _ = _._.GetClanInfoByClanAccountID(this.clanInfo.clanid);
-            if (_) return _.avatar_full_url;
-          }
-          return (0, _._)("#EventCalendar_MuteApp_Unknown");
-        }
-        GetGameIcon() {
-          var _, _;
-          if (this.appInfo)
-            return null ===
-              (_ =
-                null === (_ = _._.Get().GetApp(this.appInfo.appid)) ||
-                void 0 === _
-                  ? void 0
-                  : _.GetAssets()) || void 0 === _
-              ? void 0
-              : _.GetCommunityIconURL();
-          if (this.clanInfo) {
-            let _ = _._.GetClanInfoByClanAccountID(this.clanInfo.clanid);
-            if (_) return _.avatar_full_url;
-          }
-          return (0, _._)("#EventCalendar_MuteApp_Unknown");
-        }
-      }
-      class _ {}
-      class _ {}
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = ["show", "hide", "remove"],
@@ -32293,450 +33839,6 @@
         _: () => _,
         _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_eDiscussions = 0)] = "k_eDiscussions"),
-          (_[(_.k_eThumbsUp = 1)] = "k_eThumbsUp"),
-          (_[(_.k_eClickThrough = 2)] = "k_eClickThrough"),
-          (_[(_.k_eMuted = 3)] = "k_eMuted"),
-          (_[(_.k_ePlayedVideo = 4)] = "k_ePlayedVideo"),
-          (_[(_.k_eReminder_Opened = 5)] = "k_eReminder_Opened"),
-          (_[(_.k_eReminder_MobilePush = 6)] = "k_eReminder_MobilePush"),
-          (_[(_.k_eReminder_Email = 7)] = "k_eReminder_Email"),
-          (_[(_.k_eReminder_CalendarApple = 8)] = "k_eReminder_CalendarApple"),
-          (_[(_.k_eReminder_CalendarGoogle = 9)] =
-            "k_eReminder_CalendarGoogle"),
-          (_[(_.k_eReminder_CalendarOutlook = 10)] =
-            "k_eReminder_CalendarOutlook"),
-          (_[(_.k_eReminder_EmailUnverified = 11)] =
-            "k_eReminder_EmailUnverified"),
-          (_[(_.k_eReminder_MobilePushMissing = 12)] =
-            "k_eReminder_MobilePushMissing");
-      })(_ || (_ = {}));
-      const _ = new (class {
-        constructor() {
-          (this.m_nPastViewedIndex = 0),
-            (this.m_nPastViewedDays = 0),
-            (this.m_nFutureViewedIndex = 0),
-            (this.m_nFutureViewableEvents = 0),
-            (this.m_nLastRecordedFilter = 0),
-            (this.m_sBrowserID = void 0),
-            (this.m_scheduledFilterChange = new _._()),
-            (this.m_scheduledFutureStats = new _._()),
-            (this.m_scheduledPastStats = new _._());
-        }
-        RecordViewedEvent(_, _) {
-          const _ = _.GetStoreInitializationTimestamp().getTime() / 1e3;
-          this.m_nFutureViewableEvents = 0;
-          let _,
-            _,
-            _ = 0;
-          const _ = _.GetCurrentlyLoadedItemsForStats();
-          for (const _ of _) {
-            const _ = _.start_time > _;
-            if ((_.unique_id == _ && ((_ = _), (_ = _)), _))
-              this.m_nFutureViewableEvents++;
-            else if (void 0 !== _) break;
-            _++;
-          }
-          if (void 0 !== _ && _)
-            if (_ < this.m_nFutureViewableEvents) {
-              const _ = this.m_nFutureViewableEvents - _;
-              if (this.m_nFutureViewedIndex < _) {
-                this.m_nFutureViewedIndex = _;
-                const _ = () => {
-                    const _ =
-                      Math.min(this.m_nFutureViewedIndex, 4095) |
-                      (Math.min(this.m_nFutureViewableEvents, 255) << 12) |
-                      (Math.min(this.GetTimeSpentOnPageS(_), 2047) << 20);
-                    _.SendExperimentEventToSteam(_._._, _);
-                  },
-                  _ = 500;
-                this.m_scheduledFutureStats.Schedule(_, _);
-              }
-            } else {
-              const _ = _ - this.m_nFutureViewableEvents;
-              if (this.m_nPastViewedIndex < _) {
-                (this.m_nPastViewedIndex = _),
-                  (this.m_nPastViewedDays = Math.floor(
-                    (_ - _.start_time) / 86400,
-                  ));
-                const _ = () => {
-                    const _ =
-                      Math.min(this.m_nPastViewedIndex, 4095) |
-                      (Math.min(this.m_nPastViewedDays, 255) << 12) |
-                      (Math.min(this.GetTimeSpentOnPageS(_), 2047) << 20);
-                    _.SendExperimentEventToSteam(_._._, _);
-                  },
-                  _ = 500;
-                this.m_scheduledPastStats.Schedule(_, _);
-              }
-            }
-        }
-        RecordFilterChangeEvent(_) {
-          this.m_scheduledFilterChange.Schedule(1e3, () => {
-            let _ = 0;
-            _.BIsGameSourceAllowed(_._.k_ELibrary) && (_ |= 1),
-              _.BIsGameSourceAllowed(_._.k_EWishlist) && (_ |= 2),
-              _.BIsGameSourceAllowed(_._.k_EFollowing) && (_ |= 4),
-              _.BIsGameSourceAllowed(_._.k_ERecommended) && (_ |= 8),
-              _.BIsGameSourceAllowed(_._.k_ESteam) && (_ |= 16),
-              _.BIsGameSourceAllowed(_._.k_EFeatured) && (_ |= 32),
-              _.BIsGameSourceAllowed(_._.k_ERecent) && (_ |= 64),
-              _.BIsEventTypeGroupAllowed(_._.k_ENews) && (_ |= 1024),
-              _.BIsEventTypeGroupAllowed(_._.k_EEvents) && (_ |= 2048),
-              _.BIsEventTypeGroupAllowed(_._.k_EStreaming) && (_ |= 4096),
-              _.BIsEventTypeGroupAllowed(_._.k_EUpdates) && (_ |= 8192),
-              _.BIsEventTypeGroupAllowed(_._.k_EReleases) && (_ |= 16384),
-              _.BIsEventTypeGroupAllowed(_._.k_ESales) && (_ |= 32768),
-              _ != this.m_nLastRecordedFilter &&
-                ((this.m_nLastRecordedFilter = _),
-                this.SendExperimentEventToSteam(_._._, _));
-          });
-        }
-        GetTimeSpentOnPageS(_) {
-          const _ = _.GetStoreInitializationTimestamp(),
-            _ = new Date();
-          return Math.max(
-            0,
-            Math.floor((__webpack_require__.getTime() - _.getTime()) / 1e3),
-          );
-        }
-        RecordAppInteractionEvent(_, _) {
-          this.SendExperimentEventToSteam(_._._, _);
-        }
-        SendExperimentEventToSteam(_, _) {
-          var _;
-          this.InitBrowserID();
-          const _ = _._.STORE_BASE_URL + "events/ajaxreportnewshubstats/",
-            _ = new URLSearchParams();
-          _.append("page_action", "" + _),
-            _.append("snr", _._.SNR),
-            _.append("uint_data", "" + _),
-            _.append(
-              "str_data",
-              null !== (_ = this.m_sBrowserID) && void 0 !== _ ? _ : "",
-            ),
-            _().post(_, _);
-        }
-        InitBrowserID() {
-          if (void 0 === this.m_sBrowserID)
-            if (_._.IN_CLIENT) this.m_sBrowserID = "steam";
-            else {
-              const _ = navigator.userAgent;
-              /iPhone|iPad|iPod/i.test(_) ||
-              (/Macintosh/i.test(_) && /Safari/i.test(_))
-                ? (this.m_sBrowserID = "ios")
-                : /Android/i.test(_)
-                  ? (this.m_sBrowserID = "android")
-                  : (this.m_sBrowserID = "");
-            }
-        }
-      })();
-      (0, _._)("g_EventCalendarTrackingStore", _);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_.k_ERecent = "recent"),
-          (_.k_ELibrary = "library"),
-          (_.k_EWishlist = "wishlist"),
-          (_.k_EFollowing = "following"),
-          (_.k_ERecommended = "recommended"),
-          (_.k_ESteam = "steam"),
-          (_.k_EFeatured = "featured"),
-          (_.k_ECurator = "curator");
-      })(_ || (_ = {}));
-      const _ = [
-          _.k_ELibrary,
-          _.k_EWishlist,
-          _.k_EFollowing,
-          _.k_ERecommended,
-          _.k_ESteam,
-          _.k_ECurator,
-        ],
-        _ = [..._, _.k_EFeatured],
-        _ = [_.k_EFeatured];
-      var _;
-      !(function (_) {
-        (_.k_ENews = "news"),
-          (_.k_EEvents = "events"),
-          (_.k_EStreaming = "streaming"),
-          (_.k_EUpdates = "updates"),
-          (_.k_EReleases = "releases"),
-          (_.k_ESales = "sales");
-      })(_ || (_ = {}));
-      const _ = [
-          _.k_ENews,
-          _.k_EEvents,
-          _.k_EStreaming,
-          _.k_EUpdates,
-          _.k_EReleases,
-          _.k_ESales,
-        ],
-        _ = new Map([
-          [_.k_ENews, [_.uYK]],
-          [_.k_EEvents, [_.L0X, _.I5b, _._, _._, _.hGl, _.WNR, _.pIh, _.izQ]],
-          [_.k_EStreaming, [_.KDJ]],
-          [_.k_EUpdates, [_.Fwr, _._, _.zeJ]],
-          [_.k_EReleases, [_.yhO, _.Aqr, _.DEQ, _.f4X, _.zcX]],
-          [_.k_ESales, [_.HRy, _.C$4, _.LOv, _.HFK]],
-        ]);
-      function _(_) {
-        return new Map(_.map((_) => [_, !0]));
-      }
-      class _ {
-        constructor(_) {
-          (this.m_mapEventTypeGroupsAllowed = new Map()),
-            (this.m_mapGameSources = new Map()),
-            (this.m_bCuratorUnhideOnFollowDialogDismissed = !1),
-            (this.m_mapHiddenApps = new Map()),
-            (this.m_mapHiddenClans = new Map()),
-            (this.m_bInitializedForUpdatesOnly = !1),
-            (this.m_eStorageType = "session"),
-            (0, _._)(this),
-            (0, _._)(() => {
-              (null == _ ? void 0 : _.rgHiddenApps) &&
-                _.rgHiddenApps.forEach((_) => this.m_mapHiddenApps.set(_, !0)),
-                (null == _ ? void 0 : _.rgHiddenClans) &&
-                  _.rgHiddenClans.forEach((_) =>
-                    this.m_mapHiddenClans.set(_, !0),
-                  );
-            });
-        }
-        GetGameSources() {
-          return Array.from(this.m_mapGameSources.keys());
-        }
-        GetStorageObject() {
-          return this.m_strStorageKey
-            ? "session" === this.m_eStorageType
-              ? window.sessionStorage
-              : window.localStorage
-            : null;
-        }
-        GetPreferencesStorageKey() {
-          return `${this.m_strStorageKey}-event-calendar-prefs`;
-        }
-        get enabledEventTypeSet() {
-          var _;
-          const _ = new Set();
-          for (const _ of Array.from(this.m_mapEventTypeGroupsAllowed.keys()))
-            null === (_ = _.get(_)) ||
-              void 0 === _ ||
-              _.forEach((_) => _.add(_));
-          return _;
-        }
-        MapClanEventTypeToGroup(_) {
-          let _;
-          return (
-            _.forEach((_, _) => {
-              -1 !== __webpack_require__.indexOf(_) && (_ = _);
-            }),
-            _ || _.k_EEvents
-          );
-        }
-        InitDefaultCheckboxes(_, _, _) {
-          (this.m_bInitializedForUpdatesOnly = _),
-            (this.m_mapEventTypeGroupsAllowed = _(_ ? [_.k_EUpdates] : _));
-          const _ = (0, _._)() ? _ : _;
-          (this.m_mapGameSources = _(_ ? _ : _)),
-            _ && this.m_mapGameSources.set(_.k_EFeatured, !0);
-        }
-        Init(_, _, _, _, _) {
-          (this.m_eStorageType = _), (this.m_strStorageKey = _);
-          const _ = this.GetStorageObject(),
-            _ = _ ? _.getItem(this.GetPreferencesStorageKey()) : null;
-          if (_) {
-            const _ = JSON.parse(_);
-            if (_.rgEventTypeGroupsAllowed && _.rgGameSources) {
-              const { rgEventTypeGroupsAllowed: _, rgGameSources: _ } = _;
-              return (
-                (this.m_mapEventTypeGroupsAllowed = _(_)),
-                (this.m_mapGameSources = _(_)),
-                void (
-                  void 0 !== _.bCuratorUnhideOnFollowDismissed &&
-                  (this.m_bCuratorUnhideOnFollowDialogDismissed =
-                    _.bCuratorUnhideOnFollowDismissed)
-                )
-              );
-            }
-          }
-          this.InitDefaultCheckboxes(_, _, _);
-        }
-        SaveFilterPreferences() {
-          const _ = this.GetStorageObject();
-          if (!_) return;
-          const _ = {
-            rgEventTypeGroupsAllowed: Array.from(
-              this.m_mapEventTypeGroupsAllowed.keys(),
-            ),
-            rgGameSources: Array.from(this.m_mapGameSources.keys()),
-            bCuratorUnhideOnFollowDismissed:
-              this.m_bCuratorUnhideOnFollowDialogDismissed,
-          };
-          _.setItem(this.GetPreferencesStorageKey(), JSON.stringify(_));
-        }
-        BCuratorUnhideOnFollowDialogDismissed() {
-          return this.m_bCuratorUnhideOnFollowDialogDismissed;
-        }
-        SetCuratorUnhideOnFollowDialogDismissed(_) {
-          (this.m_bCuratorUnhideOnFollowDialogDismissed = _),
-            this.SaveFilterPreferences();
-        }
-        BIsEventTypeGroupAllowed(_) {
-          return this.m_mapEventTypeGroupsAllowed.has(_);
-        }
-        BIsGameSourceAllowed(_) {
-          return (
-            !(_ === _.k_EFollowing && !(0, _._)()) &&
-            !(_ === _.k_ECurator && !(0, _._)()) &&
-            this.m_mapGameSources.has(_)
-          );
-        }
-        SetEventTypeGroupAllowed(_, _) {
-          _
-            ? this.m_mapEventTypeGroupsAllowed.set(_, !0)
-            : this.m_mapEventTypeGroupsAllowed.delete(_),
-            this.SaveFilterPreferences(),
-            _._.RecordFilterChangeEvent(this);
-        }
-        SetGameSourceAllowed(_, _) {
-          _
-            ? (this.m_mapGameSources.set(_, !0),
-              _ == _.k_ERecent
-                ? this.m_mapGameSources.delete(_.k_ELibrary)
-                : _ == _.k_ELibrary &&
-                  ((0, _._)(
-                    !this.m_mapGameSources.has(_.k_ERecent),
-                    "Setting Library although Recent already set - illusion was broken",
-                  ),
-                  this.m_mapGameSources.delete(_.k_ERecent)))
-            : (this.m_mapGameSources.delete(_),
-              _ == _.k_ERecent
-                ? this.m_mapGameSources.set(_.k_ELibrary, !0)
-                : _ == _.k_ELibrary &&
-                  this.m_mapGameSources.delete(_.k_ERecent)),
-            this.SaveFilterPreferences(),
-            _._.RecordFilterChangeEvent(this);
-        }
-        BShouldDisplayEvent(_) {
-          const _ = _.GetSource(),
-            _ = Boolean(
-              _.appInfo &&
-                _.appInfo.last_played &&
-                _.appInfo.last_played + 15552e3 >= _._.GetTimeNowWithOverride(),
-            );
-          return (
-            !!(
-              this.enabledEventTypeSet.has(_.event_type) ||
-              (this.m_bInitializedForUpdatesOnly &&
-                this.BIsEventTypeGroupAllowed(_.k_EUpdates) &&
-                _.event_type == _.uYK &&
-                _.start_time < 1599202800)
-            ) &&
-            !this.m_mapHiddenApps.has(_.appid) &&
-              !this.m_mapHiddenClans.has(_.clanid) &&
-            (!!(_ & _._.k_eRequired || _ & _._.k_eReposted) ||
-              Boolean(
-                (this.BIsGameSourceAllowed(_.k_ERecent) && _) ||
-                  (this.BIsGameSourceAllowed(_.k_ELibrary) &&
-                    _ & _._.k_eLibrary) ||
-                  (this.BIsGameSourceAllowed(_.k_EWishlist) &&
-                    _ & _._.k_eWishlist) ||
-                  (this.BIsGameSourceAllowed(_.k_EFollowing) &&
-                    _ & _._.k_eFollowing) ||
-                  (this.BIsGameSourceAllowed(_.k_ERecommended) &&
-                    _ & _._.k_eRecommended) ||
-                  (this.BIsGameSourceAllowed(_.k_ESteam) && _ & _._.k_eSteam) ||
-                  (this.BIsGameSourceAllowed(_.k_EFeatured) &&
-                    _ & _._.k_eFeatured) ||
-                  (this.BIsGameSourceAllowed(_.k_ECurator) &&
-                    _ & _._.k_eCurator),
-              ))
-          );
-        }
-        BAreAllEventsHidden() {
-          return (
-            0 == this.m_mapEventTypeGroupsAllowed.size ||
-            0 == this.m_mapGameSources.size
-          );
-        }
-        BAreAnyEventsFiltered(_) {
-          const _ = (0, _._)() ? _ : _;
-          return (
-            (_ ? _ : _).some((_) => !this.BIsGameSourceAllowed(_)) ||
-            _.some((_) => !this.BIsEventTypeGroupAllowed(_))
-          );
-        }
-        BIsClanVisible(_) {
-          return !this.m_mapHiddenClans.has(_);
-        }
-        SetClanVisibility(_, _) {
-          _
-            ? this.m_mapHiddenClans.has(_) && this.m_mapHiddenClans.delete(_)
-            : this.m_mapHiddenClans.has(_) || this.m_mapHiddenClans.set(_, !0);
-        }
-        BIsAppVisible(_) {
-          return !this.m_mapHiddenApps.has(_);
-        }
-        SetAppVisibility(_, _) {
-          _
-            ? this.m_mapHiddenApps.has(_) && this.m_mapHiddenApps.delete(_)
-            : this.m_mapHiddenApps.has(_) || this.m_mapHiddenApps.set(_, !0);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_mapEventTypeGroupsAllowed", void 0),
-        (0, _._)([_._], _.prototype, "m_mapGameSources", void 0),
-        (0, _._)(
-          [_._],
-          _.prototype,
-          "m_bCuratorUnhideOnFollowDialogDismissed",
-          void 0,
-        ),
-        (0, _._)([_._], _.prototype, "m_mapHiddenApps", void 0),
-        (0, _._)([_._], _.prototype, "m_mapHiddenClans", void 0),
-        (0, _._)(
-          [
-            (0, _._)({
-              keepAlive: !0,
-              equals: _._.structural,
-            }),
-          ],
-          _.prototype,
-          "enabledEventTypeSet",
-          null,
-        ),
-        (0, _._)([_._], _.prototype, "SetEventTypeGroupAllowed", null),
-        (0, _._)([_._], _.prototype, "SetGameSourceAllowed", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -33780,89 +34882,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = {
-        registered: !1,
-      };
-      function _(_) {
-        return {
-          queryKey: ["sale", "giveawayregistration", _, _._.accountid],
-          queryFn: () =>
-            (async function (_) {
-              const _ =
-                  _._.STORE_BASE_URL + _ + "?name=" + encodeURIComponent(_),
-                _ = await fetch(_, {
-                  credentials: "include",
-                });
-              return await _("GetUserGiveawayRegistration", _, _, _);
-            })(_),
-          enabled: Boolean(_),
-          retry: !1,
-        };
-      }
-      function _(_) {
-        const { data: _, isError: _ } = (0, _._)(_(_));
-        return _ ? _ : _;
-      }
-      function _() {
-        const _ = (0, _._)(),
-          { mutateAsync: _ } = (0, _._)({
-            mutationFn: _,
-            onSuccess: (_, _) => _.setQueryData(_(_).queryKey, _),
-          });
-        return {
-          fnCreateRegistration: _.useCallback(
-            async (_) => {
-              try {
-                return await _(_);
-              } catch (_) {
-                return (
-                  console.error("Registering for giveaway " + _ + " failed", _),
-                  _
-                );
-              }
-            },
-            [_],
-          ),
-        };
-      }
-      const _ = "saleaction/giveawayregistration",
-        _ = "saleaction/creategiveawayregistration";
-      async function _(_) {
-        const _ = _._.STORE_BASE_URL + _,
-          _ = await fetch(_, {
-            method: "POST",
-            credentials: "include",
-            headers: {
-              "content-type": "application/json",
-            },
-            body: JSON.stringify({
-              name: _,
-            }),
-          });
-        return await _("UpdateUserGiveawayRegistration", _, _, _);
-      }
-      async function _(_, _, _, _) {
-        if (!_._) throw new Error(_ + " answered " + _.status);
-        const _ = await _.json();
-        if ((null == _ ? void 0 : _.success) == _._ && _.registration)
-          return _.registration;
-        throw new Error(
-          _ + " on " + _ + " answered " + (null == _ ? void 0 : _.success),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -34118,66 +35137,55 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        constructor() {
-          this.m_mapAppToVOD = new Map();
-        }
-        GetVODForAppID(_) {
-          return this.m_mapAppToVOD.get(_);
-        }
-        async LoadVODForAppID(_, _) {
-          if (this.m_mapAppToVOD.has(_)) return this.m_mapAppToVOD.get(_);
-          const _ = _._.STORE_BASE_URL + "video/details/" + _ + "/0",
-            _ = {};
-          try {
-            let _ = await _().get(_, {
-              params: _,
-              withCredentials: !0,
-              cancelToken: _ ? _.token : void 0,
-            });
-            if (_ && _.token.reason) return;
-            if (
-              _ &&
-              200 == _.status &&
-              _.data &&
-              (_.data.success == _._ || "ready" == _.data.success)
-            ) {
-              let _ = (0, _._)({
+      function _(_) {
+        return ["video", "vod", _];
+      }
+      function _(_) {
+        return {
+          queryKey: _(_),
+          queryFn: ({ signal: _ }) =>
+            (async function (_, _) {
+              const _ = _._.STORE_BASE_URL + "video/details/" + _ + "/0",
+                _ = await fetch(_, {
+                  credentials: "include",
+                  signal: _,
+                });
+              if (!_._) throw new Error(_ + " answered " + _.status);
+              const _ = await _.json();
+              if (
+                (null == _ ? void 0 : _.success) != _._ &&
+                "ready" != (null == _ ? void 0 : _.success)
+              )
+                throw new Error(
+                  "video/details on " +
+                    _ +
+                    " answered " +
+                    (null == _ ? void 0 : _.success),
+                );
+              _.bookmark
+                ? _._.Get().SetBookmarkForApp(_, _.bookmark)
+                : _._.Get().InitializeBookmarkForApp(_);
+              return {
                 appid: _,
-                video_url: _.data.video_url,
-                bookmark: _.data.bookmark,
-              });
-              return (
-                _.data.bookmark
-                  ? _._.Get().SetBookmarkForApp(_, _.data.bookmark)
-                  : _._.Get().InitializeBookmarkForApp(_),
-                this.m_mapAppToVOD.set(_, _),
-                _
-              );
-            }
-          } catch (_) {
-            let _ = (0, _._)(_);
-            console.error(
-              "CVideoOnDemandStore:LoadVODForAppID: Failed " + _.strErrorMsg,
-              _,
-            );
-          }
-        }
-        static Get() {
-          return (
-            _.s_VODStore || ((_.s_VODStore = new _()), _.s_VODStore.Init()),
-            _.s_VODStore
-          );
-        }
-        Init() {}
+                video_url: _.video_url,
+                bookmark: _.bookmark,
+              };
+            })(_, _),
+          retry: !1,
+        };
+      }
+      function _(_) {
+        const { data: _, isPending: _ } = (0, _._)(_(_));
+        return {
+          vodInfo: _,
+          bLoading: _,
+        };
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -36724,7 +37732,9 @@
               category: _,
             }),
             (0, _.jsx)(_._, {
-              onClick: _,
+              onClick: (_) => {
+                _.preventDefault(), _();
+              },
               children: (0, _.jsx)("span", {
                 className: _().LearnMorePC,
                 children: _._.Localize(
@@ -39219,8 +40229,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -39754,6 +40764,7 @@
                               }),
                               (0, _.jsx)(_._, {
                                 event: _,
+                                className: _().EventDetailTimeInfo,
                               }),
                             ],
                           }),
@@ -45551,7 +46562,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -46552,7 +47562,7 @@
         return null == _ ? void 0 : _.find((_) => _.group_id == _);
       }
       function _() {
-        return _._.Get().BIsUserLoggedIn()
+        return _._.logged_in
           ? (_) => _()
           : () =>
               (0, _._)(
@@ -47296,429 +48306,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        const _ = (function (_, _) {
-          const _ = (0, _._)({
-            queryKey: _(_, _),
-            queryFn: async () => {
-              const _ = await fetch(_(_, _, !1), {
-                method: "GET",
-                credentials: "include",
-              });
-              return _(await __webpack_require__.json());
-            },
-            placeholderData: {
-              results: [],
-              success: _._,
-              bLoading: !0,
-              userPollSubmitData: {
-                user_poll_option_votes: [],
-              },
-            },
-          });
-          return _.data
-            ? _.data
-            : {
-                results: [],
-                success: _._,
-                bLoading: !0,
-                userPollSubmitData: {
-                  user_poll_option_votes: [],
-                },
-              };
-        })(_, _);
-        return (0, _.useMemo)(() => {
-          const _ = _.results.find((_) => _ == _.unique_id);
-          return {
-            bLoading: _.bLoading,
-            success: _.success,
-            userPollData: _,
-            error_message: _.error_message,
-            userPollSubmitData: _.userPollSubmitData,
-          };
-        }, [_, _]);
-      }
-      function _(_) {
-        return {
-          ..._,
-          bLoading: !1,
-          userPollSubmitData: {
-            user_poll_option_votes: _.results
-              .map((_) => _.voted_option_id)
-              .reduce((_, _) => _.concat(_), []),
-          },
-        };
-      }
-      function _(_, _) {
-        return ["usePartnerEventUserPoll", _.ConvertTo64BitString(), _];
-      }
-      function _(_, _, _) {
-        return `${_._.COMMUNITY_BASE_URL}partnerevents/${_.ConvertTo64BitString()}/userpoll/${_}/${_ ? "ajaxcastvote" : "ajaxloaddata"}/?origin=${(0, _._)()}`;
-      }
-      const _ = 86400;
-      function _(_, _) {
-        var _, _;
-        let _ = 0;
-        if (_.poll_end_time) _ = _.poll_end_time;
-        else {
-          _ =
-            (null !==
-              (_ =
-                null !== (_ = _.rtime32_visibility_start) && void 0 !== _
-                  ? _
-                  : _.rtime32_start_time) && void 0 !== _
-              ? _
-              : 0) + (_.poll_end_days_since_start || _);
-        }
-        return _;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _.context.event,
-          _ = _.context.showErrorInfo,
-          _ = (0, _._)(_.args, "poll_id"),
-          _ = Number.parseInt(_),
-          _ = (0, _._)(() =>
-            (function (_, _) {
-              var _;
-              const _ =
-                (null === (_ = null == _ ? void 0 : _.jsondata) || void 0 === _
-                  ? void 0
-                  : _.user_polls) || [];
-              return (
-                (null == _ ? void 0 : _.find((_) => _.poll_id == _)) || null
-              );
-            })(_, _),
-          );
-        if (!_ || !_)
-          return _
-            ? (0, _.jsx)("div", {
-                className: _.ErrorStylesWithIcon,
-                children: (0, _._)("#UserPolls_Editor_FailToFindModel", _),
-              })
-            : null;
-        const _ = (0, _.sfN)(_._.LANGUAGE);
-        return (0, _.jsx)(_._, {
-          children: (0, _.jsx)(_, {
-            userPollDef: _,
-            lang: _,
-            eventModel: _,
-          }),
-        });
-      }
-      function _(_) {
-        var _, _, _;
-        const { eventModel: _, userPollDef: _, lang: _ } = _,
-          { userPollData: _, ..._ } = _(_.clanSteamID, _.GID || "0", _.poll_id),
-          _ = Boolean(
-            _.error_message &&
-              (null === (_ = _.error_message) || void 0 === _
-                ? void 0
-                : _.length) > 0,
-          ),
-          _ = (function (_, _) {
-            const _ = (0, _._)();
-            return (0, _._)({
-              mutationKey: [
-                "useSetPartnerEventCastVoteUserPoll",
-                _.GetAccountID(),
-                _,
-              ],
-              mutationFn: async (_) => {
-                const _ = {
-                    votes: _.votes,
-                  },
-                  _ = await fetch(_(_, _, !0), {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(_),
-                    credentials: "include",
-                  });
-                if (!_._) throw new Error(`Server returned ${_.status}`);
-                return await _.json();
-              },
-              onSuccess: (_, _) => {
-                if (_.success == _._)
-                  __webpack_require__.setQueryData(_(_, _), () => _(_));
-                else {
-                  const _ = __webpack_require__.getQueryData(_(_, _));
-                  if (_) {
-                    const _ = {
-                      ..._,
-                      success: _.success,
-                      error_message: _.error_message,
-                    };
-                    __webpack_require__.setQueryData(_(_, _), () => _);
-                  }
-                }
-              },
-            });
-          })(_.clanSteamID, _.GID || "0"),
-          [_, _] = (0, _.useState)(void 0),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1),
-          _ =
-            (null == _ ? void 0 : _.option_results) &&
-            (null == _ ? void 0 : _.option_results.length) > 0,
-          _ =
-            ((_ &&
-              (null === (_ = _.voted_option_id) || void 0 === _
-                ? void 0
-                : _.length)) ||
-              0) > 0;
-        return (
-          (0, _.useEffect)(() => {
-            if (
-              !_ &&
-              _.results_visibility_settings != _._.k_EPollResult_NotVisible &&
-              _
-            ) {
-              const _ = (function (_, _) {
-                return _(_, _) < Math.floor(Date.now() / 1e3);
-              })(
-                {
-                  rtime32_visibility_start:
-                    _.GetVisibilityStartTimeAndDateUnixSeconds(),
-                  rtime32_start_time: _.GetStartTimeAndDateUnixSeconds(),
-                },
-                _,
-              );
-              (_ || _) && _(!0);
-            }
-          }, [_, _, _, _, _]),
-          (0, _.jsxs)(_, {
-            ..._,
-            children: [
-              null === (_ = _.options) || void 0 === _
-                ? void 0
-                : _.map((_) => {
-                    const _ =
-                        null == _
-                          ? void 0
-                          : _.option_results.find(
-                              (_) => _.unique_id == _.option_id,
-                            ),
-                      _ =
-                        (null == _
-                          ? void 0
-                          : _.voted_option_id.includes(_.option_id || 0)) ||
-                        _ === _.option_id;
-                    return (0, _.jsx)(
-                      _,
-                      {
-                        lang: _,
-                        pollOptionDef: _,
-                        bSelected: _,
-                        nPercentage: _
-                          ? null == _
-                            ? void 0
-                            : _.percent
-                          : void 0,
-                        onClick: () => _(_.option_id),
-                        bDisableSelection:
-                          _.bLoading ||
-                          !(null == _ ? void 0 : _.vote_permitted) ||
-                          _ ||
-                          _ ||
-                          _,
-                      },
-                      "polloption" + _.option_id,
-                    );
-                  }),
-              !!_ &&
-                (0, _.jsx)(_._, {
-                  onClick: async () => {
-                    if (
-                      !_.userPollSubmitData.user_poll_option_votes.includes(_)
-                    ) {
-                      _(!0);
-                      const _ = {
-                        user_poll_option_votes: [
-                          ..._.userPollSubmitData.user_poll_option_votes,
-                        ],
-                      };
-                      _.user_poll_option_votes.push(_),
-                        await _.mutateAsync({
-                          votes: _,
-                        }),
-                        _(void 0),
-                        _(!1);
-                    }
-                  },
-                  children: (0, _._)("#Button_Submit"),
-                }),
-              (_ || _.bLoading) &&
-                (0, _.jsx)(_._, {
-                  size: "small",
-                  position: "center",
-                  string: _.bLoading ? (0, _._)("#Loading") : void 0,
-                }),
-              _ &&
-                !_ &&
-                !_ &&
-                (0, _.jsx)("a", {
-                  href: "#",
-                  onClick: (_) => {
-                    _.preventDefault(), _(!0);
-                  },
-                  children: (0, _._)("#UserPolls_JustSeeResults"),
-                }),
-              _ &&
-                (0, _.jsx)("div", {
-                  className: _.ErrorStylesWithIcon,
-                  children: _.error_message,
-                }),
-            ],
-          })
-        );
-      }
-      function _(_) {
-        const { userPollDef: _, lang: _, eventModel: _, children: _ } = _,
-          _ = (0, _._)(),
-          [_, _] = (0, _._)(() => [
-            _._.GetWithFallback(_.localized_poll_description, _),
-            _.user_poll_background,
-          ]);
-        let _;
-        const _ = _.clanSteamID.GetAccountID();
-        Boolean(_) &&
-          (_ = {
-            backgroundImage: `url('${(0, _._)(_, _)}')`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          });
-        const _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]),
-          { userPollData: _ } = _(_, _.GID || "0", _.poll_id),
-          _ = _(
-            {
-              rtime32_visibility_start:
-                _.GetVisibilityStartTimeAndDateUnixSeconds(),
-              rtime32_start_time: _.GetStartTimeAndDateUnixSeconds(),
-            },
-            _,
-          );
-        return (0, _.jsx)("div", {
-          className: _().PollBackground,
-          style: _,
-          children: (0, _.jsxs)("div", {
-            className: _().PollContainer,
-            children: [
-              (0, _.jsx)("div", {
-                className: _().PollQuestion,
-                children: _,
-              }),
-              (0, _.jsx)("div", {
-                className: _().PollOptions,
-                children: _,
-              }),
-              (0, _.jsxs)("div", {
-                className: _().PollStatus,
-                children: [
-                  (0, _.jsx)("div", {
-                    children: (0, _._)(
-                      "#UserPolls_status_N_Votes",
-                      (0, _._)((null == _ ? void 0 : _.total_votes) || 0),
-                    ),
-                  }),
-                  (null == _ ? void 0 : _.display_message)
-                    ? (0, _.jsx)("div", {
-                        children: null == _ ? void 0 : _.display_message,
-                      })
-                    : (0, _.jsx)("div", {
-                        children: (0, _._)(
-                          "#UserPolls_status_N_TimeRemaining",
-                          (0, _._)(_ - _),
-                        ),
-                      }),
-                ],
-              }),
-            ],
-          }),
-        });
-      }
-      function _(_) {
-        const {
-            pollOptionDef: _,
-            onClick: _,
-            lang: _,
-            bDisableSelection: _,
-            bSelected: _,
-            nPercentage: _,
-          } = _,
-          [_] = (0, _._)(() => [_._.GetWithFallback(_.localized_option, _)]),
-          _ = Math.round(100 * (null != _ ? _ : 0));
-        return (0, _.jsxs)("div", {
-          className: (0, _._)({
-            [_().PollOption]: !0,
-            [_().Selected]: _,
-            [_().Disabled]: _,
-          }),
-          onClick: _ ? void 0 : _,
-          children: [
-            (0, _.jsx)("div", {
-              className: _().BackgroundBar,
-            }),
-            (0, _.jsx)("div", {
-              className: _().ForegroundBar,
-              style: {
-                width: `${_}%`,
-              },
-            }),
-            (0, _.jsxs)("div", {
-              className: _().ContentRow,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().PollVoteIcon,
-                }),
-                void 0 !== _ &&
-                  (0, _.jsxs)("div", {
-                    className: _().PctText,
-                    children: [_, "%"],
-                  }),
-                (0, _.jsx)("span", {
-                  className: _().OptionText,
-                  children: _,
-                }),
-              ],
-            }),
-          ],
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       const _ =
         /^(#(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})|[a-z-]+\([^;{}]*\)|[a-z]+)$/i;
@@ -47739,11 +48326,11 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -47892,7 +48479,6 @@
       }
       (0, _._)([_._], _.prototype, "m_mapClanReposted", void 0);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -47905,6 +48491,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -48233,10 +48820,10 @@
           __webpack_require__._("chunkid"),
         ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
-      function _(_, _) {
-        if (!_.BIsUserLoggedIn())
-          return (
-            _._.IN_CLIENT
+      function _() {
+        return _._.logged_in
+          ? !_._.is_limited || ((0, _._)((0, _.jsx)(_._, {}), window), !1)
+          : (_._.IN_CLIENT
               ? console.log(
                   "EventDiscussionWidget: In Client: Cannot use login widget. We expect to be already logged in.",
                 )
@@ -48251,73 +48838,12 @@
                   }),
                   window,
                 ),
-            !1
-          );
-        return (
-          !_.GetPartnerEventPermissions(_.clanSteamID).limited_user ||
-          ((0, _._)((0, _.jsx)(_._, {}), window), !1)
-        );
-      }
-      function _(_) {
-        let _;
-        return !0 === _ ? (_ = "up") : !1 === _ && (_ = "down"), _;
+            !1);
       }
       function _(_) {
         const { eventModel: _, emoticonStore: _, partnerEventStore: _ } = _,
           _ = (0, _._)(),
-          { myVote: _, Vote: _ } = (function (_) {
-            const [_, _] = _.useState(() =>
-                _._.Get().BHasMyVote(_)
-                  ? _(_._.Get().GetPreviouslyLoadedVote(_))
-                  : void 0,
-              ),
-              [_, _] = _.useState(() => !!_._.Get().BHasMyVote(_)),
-              _ = _.useRef(_),
-              _ = _.GID;
-            _.useEffect(() => {
-              const _ = _.current || !_._.Get().BIsUserLoggedIn();
-              if (((_.current = !1), _)) return;
-              const _ = _().CancelToken.source();
-              return (
-                _._.Get()
-                  .LoadMyVote(_, _)
-                  .then((_) => {
-                    __webpack_require__(_(_)), _(!0);
-                  })
-                  .catch((_) => {
-                    const _ = (0, _._)(_);
-                    console.error("EventDiscussionWidget = " + _.strErrorMsg);
-                  }),
-                () => _.cancel("EventDiscussionWidget is being unmounted")
-              );
-            }, [_]);
-            const _ = _.useCallback(
-              (_) => {
-                _(_, _._.Get()) &&
-                  _ != _ &&
-                  null != _ &&
-                  _ &&
-                  (_._.Get()
-                    .Vote(_, "up" === _, _().CancelToken.source())
-                    .catch((_) => {
-                      const _ = (0, _._)(_);
-                      console.error(
-                        "EventDiscussionWidget.OnVote" +
-                          _ +
-                          " " +
-                          _.strErrorMsg,
-                        _,
-                      );
-                    }),
-                  __webpack_require__(_));
-              },
-              [_, _, _],
-            );
-            return {
-              myVote: _,
-              Vote: _,
-            };
-          })(_),
+          { myVote: _, Vote: _ } = (0, _._)(_),
           [, _] = (0, _._)(_.clanSteamID.GetAccountID()),
           [_, _, _, _] = (0, _._)(() => [
             (0, _._)(_.nVotesUp - _.nVotesDown, 0, Number.MAX_SAFE_INTEGER),
@@ -48330,8 +48856,10 @@
         return (0, _.jsx)(_, {
           nVoteCount: _,
           nCommentCount: _,
-          myVote: _,
-          onVote: _,
+          myVote: null != _ ? _ : void 0,
+          onVote: (_) => {
+            _() && void 0 !== _ && _(_);
+          },
           strDiscussionURL: _,
           onDiscussionUnavailable: (_) => {
             (0, _._)(
@@ -48422,7 +48950,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -48432,6 +48961,160 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      !(function (_) {
+        (_.k_TrailerAsButton = "button"),
+          (_.k_TrailerAsPill = "pill"),
+          (_.k_TrailerAsFull = "full"),
+          (_.k_TrailerAsPoster = "poster"),
+          (_.k_TrailerAsMicro = "micro");
+      })(_ || (_ = {}));
+      function _(_) {
+        const {
+            embedStyle: _,
+            appid: _,
+            color: _,
+            bgcolor: _,
+            children: _,
+            trailerBaseID: _,
+            subtitles: _,
+          } = _,
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useMemo)(
+            () => ({
+              appid: _,
+            }),
+            [_],
+          );
+        switch (_) {
+          case _.k_TrailerAsButton:
+          case _.k_TrailerAsPill:
+            return (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)({
+                    [_().Pill]: _ == _.k_TrailerAsPill,
+                    [_().Button]: _ == _.k_TrailerAsButton,
+                  }),
+                  onClick: () => _(!0),
+                  style: {
+                    color: _,
+                    backgroundColor: _,
+                  },
+                  children: [
+                    (0, _.jsx)(_.jGG, {}),
+                    _ || (0, _._)("#EventEmail_WatchNow"),
+                  ],
+                }),
+                (0, _.jsx)(_._, {
+                  _: _,
+                  bShowModal: _,
+                  trailerBaseID: _,
+                  hideModal: () => _(!1),
+                }),
+              ],
+            });
+          default:
+          case _.k_TrailerAsFull:
+            return (0, _.jsx)(_, {
+              ..._,
+            });
+        }
+      }
+      function _(_) {
+        const { appid: _, trailerBaseID: _ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          [_, _] = (0, _.useState)(() =>
+            _ && _ ? null : (0, _._)("#TrailerPlayer_ID_NotProvided"),
+          ),
+          _ = (0, _._)(_),
+          _ = (0, _.useMemo)(
+            () => (_ ? _.find((_) => _.trailer_base_id === _) : null),
+            [_, _],
+          );
+        return (
+          (0, _.useEffect)(() => {
+            (null == _ ? void 0 : _.unvailable_for_country_restriction) &&
+              _((0, _._)("#TrailerPlayer_CouldNotLoad", _, _)),
+              _ &&
+                !_ &&
+                _(
+                  (0, _._)(
+                    "#TrailerPlayer_CouldNotLoad",
+                    _.appid,
+                    _.trailerBaseID,
+                  ),
+                );
+          }, [
+            _,
+            _.appid,
+            _.trailerBaseID,
+            null == _ ? void 0 : _.unvailable_for_country_restriction,
+            _,
+            _,
+            _,
+          ]),
+          _
+            ? _.bIsPreviewMode
+              ? (0, _.jsx)("div", {
+                  className: _().ErrorDiv,
+                  children: _,
+                })
+              : null
+            : _
+              ? (0, _.jsx)(_, {
+                  trailerToPlay: _,
+                })
+              : (0, _.jsx)(_._, {
+                  string: (0, _._)("#Loading"),
+                  size: "small",
+                })
+        );
+      }
+      function _(_) {
+        const { trailerToPlay: _ } = _,
+          {
+            rgDashTrailers: _,
+            rgHlsTrailers: _,
+            strCaptionManufest: _,
+          } = (0, _.useMemo)(() => {
+            const { rgDashTrailers: _, rgHlsTrailers: _ } = (0, _._)(_);
+            return {
+              rgDashTrailers: _,
+              rgHlsTrailers: _,
+              strCaptionManufest: (0, _._)(_),
+            };
+          }, [_]);
+        return 0 == (null == _ ? void 0 : _.length)
+          ? null
+          : (0, _.jsx)("div", {
+              className: _().VideoPopupContainers,
+              children: (0, _.jsx)(_._, {
+                dashManifests: _ || [],
+                hlsManifest:
+                  (_.length > 0 && (null == _ ? void 0 : _[0])) || "",
+                screenshot: (0, _._)(_),
+                altText: _.trailer_name,
+                muteWhenAutoplayBlocked: !0,
+                captionManifest: _,
+              }),
+            });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -48459,7 +49142,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { strURL: _, children: _ } = _;
@@ -48492,7 +49174,6 @@
             });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       let _ = null;
       function _() {
@@ -48735,12 +49416,12 @@
                 ? void 0
                 : _.toLocaleLowerCase()) && void 0 !== _
             ? _
-            : _._.k_TrailerAsFull;
-        _ = Object.values(_._).includes(_) ? _ : _._.k_TrailerAsFull;
+            : _.k_TrailerAsFull;
+        _ = Object.values(_).includes(_) ? _ : _.k_TrailerAsFull;
         const _ = (0, _._)(_.args.color, "black"),
           _ = (0, _._)(_.args.bgcolor, "white"),
           _ = (0, _._)(_.args);
-        return (0, _.jsx)(_._, {
+        return (0, _.jsx)(_, {
           appid: _,
           trailerBaseID: _,
           bIsPreviewMode: _.context.showErrorInfo,
@@ -49764,7 +50445,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
@@ -49778,61 +50458,32 @@
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = (_) => {
-          const _ = (0, _.useRef)(null),
-            [_, _] = (0, _.useState)(_._.Get().GetVODForAppID(_.appid)),
-            [_, _] = (0, _.useState)(
-              !Boolean(_._.Get().GetVODForAppID(_.appid)),
-            );
-          return (
-            (0, _.useEffect)(() => () => {
-              var _;
-              null === (_ = _.current) ||
-                void 0 === _ ||
-                _.call(_, "VODPlayer: unmounting");
-            }),
-            (0, _.useEffect)(() => {
-              let _ = _;
-              if (
-                (_ &&
-                  _.appid != _.appid &&
-                  (_ = _._.Get().GetVODForAppID(_.appid)),
-                !_)
-              ) {
-                const _ = async () => {
-                  _.current && _.current();
-                  const _ = _().CancelToken.source();
-                  (_.current = _.cancel),
-                    (_ = await _._.Get().LoadVODForAppID(_.appid)),
-                    _.token.reason || _(_),
-                    _(!1);
-                };
-                _(!0), __webpack_require__();
-              }
-              _ != _ && _(_);
-            }, [_.appid, _]),
-            !_ && _.bPreviewMode
-              ? (0, _.jsx)("div", {
-                  children: (0, _._)(
-                    _ ? "#VODPlayer_Loading" : "#VODPlayer_ErrorLoading",
-                    _.appid,
-                  ),
-                })
-              : (0, _.jsx)("div", {
-                  className: _.BroadcastCtn,
-                  children: (0, _.jsx)(_._, {
-                    children: (0, _.jsx)(_.Suspense, {
-                      fallback: null,
-                      children: (0, _.jsx)(_, {
-                        nAppIDVOD: _.appid,
-                        watchLocation: _._._,
-                        bStartPaused: !0,
-                      }),
+          const { vodInfo: _, bLoading: _ } = (0, _._)(_.appid);
+          return !_ && _.bPreviewMode
+            ? (0, _.jsx)("div", {
+                children: (0, _._)(
+                  _ ? "#VODPlayer_Loading" : "#VODPlayer_ErrorLoading",
+                  _.appid,
+                ),
+              })
+            : (0, _.jsx)("div", {
+                className: _.BroadcastCtn,
+                children: (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_.Suspense, {
+                    fallback: null,
+                    children: (0, _.jsx)(_, {
+                      nAppIDVOD: _.appid,
+                      watchLocation: _._._,
+                      bStartPaused: !0,
                     }),
                   }),
-                })
-          );
+                }),
+              });
         };
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -50002,6 +50653,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new Map([
         [
@@ -50011,7 +50663,7 @@
               const { event: _, showErrorInfo: _ } = _.context,
                 _ = (0, _._)(_.args);
               if (_)
-                return (0, _.jsx)(_._, {
+                return (0, _.jsx)(_, {
                   eventGID: _,
                   bPreviewMode: _,
                 });
@@ -50028,8 +50680,41 @@
           },
         ],
       ]);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { bPreviewMode: _, eventGID: _, ..._ } = _,
+          _ = (0, _._)(_);
+        if (!_)
+          return _
+            ? (0, _.jsx)("div", {
+                className: _.ErrorDiv,
+                children: (0, _._)("#EventDidplay_Reminder_EventNotVisible", _),
+              })
+            : null;
+        const _ = (0, _.sfN)(_._.LANGUAGE);
+        return (0, _.jsx)(_._, {
+          lang: _,
+          ..._,
+          eventModel: _,
+        });
+      }
+      function _(_) {
+        const _ = (0, _._)(_.args, "name"),
+          _ = "true" === ((0, _._)(_.args, "visible") || "false").toLowerCase(),
+          _ = (0, _._)(_);
+        if (!_) {
+          return _.context.showErrorInfo
+            ? (0, _.jsx)("div", {
+                children: "Failed to provide giveaway name",
+              })
+            : null;
+        }
+        return _ && _.registered && ((_.eligible && _) || (!_.eligible && !_))
+          ? (0, _.jsx)(_.Fragment, {
+              children: _.children,
+            })
+          : null;
+      }
+      var _ = __webpack_require__("chunkid");
       let _ = null;
       function _() {
         return (
@@ -50109,21 +50794,6 @@
           appid: _,
           bPreviewMode: Boolean(_.context.showErrorInfo),
         });
-      }
-      function _(_) {
-        const _ = (0, _._)(_.args, "name"),
-          _ = "true" === ((0, _._)(_.args, "visible") || "false").toLowerCase(),
-          _ = (0, _._)(_);
-        if (!_) {
-          return _.context.showErrorInfo
-            ? (0, _.jsx)("div", {
-                children: "Failed to provide giveaway name",
-              })
-            : null;
-        }
-        return _ && _.registered && ((_.eligible && _) || (!_.eligible && !_))
-          ? _.children
-          : null;
       }
       function _(_) {
         const _ = Boolean(_.context.showErrorInfo),
@@ -51197,8 +51867,11 @@
             _._.COUNTRY +
             "&l=" +
             _._.LANGUAGE,
-          _ = _._.Get().GetPartnerEventPermissions(_._.InitFromClanID(_)),
-          _ = _ && (_.can_edit || _.support_user),
+          { data: _ } = (0, _._)(_),
+          _ = Boolean(
+            (null == _ ? void 0 : _.can_edit) ||
+              (null == _ ? void 0 : _.support_user),
+          ),
           _ = _._.Get().BOwnsApp(_),
           _ = (0, _.useMemo)(() => {
             const _ = [];
@@ -51339,7 +52012,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -51347,729 +52019,78 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (
-          (_.bHasVerifiedEmail && _.bFollowsByEmail) ||
-          (_.bHasPushNotification && _.bFollowsByPush)
-        );
-      }
-      function _(_) {
-        const {
-            eventModel: _,
-            rtNow: _,
-            notifyState: _,
-            bOnlyShowIcon: _,
-            renderPanel: _,
-            onRequestSignIn: _,
-            bSignedIn: _,
-            onTrack: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          _ = _.useRef(null),
-          _ = _.useRef(null),
-          _ = _.useCallback(() => {
-            var _;
-            null === (_ = _.current) || void 0 === _ || _.Hide(), _(!1);
-          }, []),
-          _ = _ && !_,
-          _ = _(_);
-        return (void 0 !== _.startTime && _.startTime < _) ||
-          _.BIsUnlistedEvent()
-          ? null
-          : (0, _.jsxs)("div", {
-              className: (0, _._)({
-                [_.ReminderCheckBox]: !0,
-                [_().ReminderCtn]: !0,
-                [_.IconMode]: _,
-                [_.TextMode]: !_,
-                ReminderSet: _,
-                RemindMeWidget: !0,
-              }),
-              onClick: (_) => {
-                _
-                  ? (_
-                      ? _()
-                      : (() => {
-                          const _ = {
-                            bOverlapHorizontal: !0,
-                            bOverlapVertical: !0,
-                            bDisablePopTop: !0,
-                            bMatchWidth: !0,
-                            strClassName: (0, _._)(
-                              _.ReminderDialog,
-                              _.ReminderOptions,
-                              _.contextMenu,
-                            ),
-                          };
-                          (_.current = (0, _._)(_(_), _.current, _)),
-                            _.current.SetOnHideCallback(_),
-                            _(!0),
-                            null == _ || _("opened");
-                        })(),
-                    _.stopPropagation(),
-                    _.preventDefault())
-                  : null == _ || _();
-              },
-              ref: _,
-              children: [
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _.RemindCheck,
-                    children: (0, _.jsx)(_.Jlk, {}),
-                  }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _.RemindBell,
-                    children: (0, _.jsx)(_.IrQ, {}),
-                  }),
-                (0, _.jsx)("div", {
-                  className: _.ReminderDefault,
-                  children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
-                }),
-                (0, _.jsx)("div", {
-                  className: _.ReminderOptions,
-                }),
-              ],
-            });
-      }
-      function _(_) {
-        const {
-            eventModel: _,
-            lang: _,
-            rtNow: _,
-            notifyState: _,
-            bShowStartTime: _,
-            bExpandLeft: _,
-            bOnlyShowIcon: _,
-            strCalendarEventTitle: _,
-            onChangeNotify: _,
-            onTrack: _,
-            fnHidePanel: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          _ = async (_, _) => {
-            if (_.GID && _.GID != _.kFb) {
-              _(!0);
-              try {
-                await _(_, _),
-                  _ &&
-                    (null == _ ||
-                      _("email" == _ ? "notify-email" : "notify-push"));
-              } catch (_) {
-                (0, _._)(
-                  (0, _.jsx)(_._, {
-                    strTitle: (0, _._)(
-                      "#EventDisplay_Reminder_FollowEvent_Error",
-                    ),
-                    strDescription: (0, _._)(
-                      "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
-                    ),
-                    children: _ instanceof Error ? _.message : String(_),
-                  }),
-                  window,
-                );
-              }
-              _(!1);
-            }
-          },
-          _ = _.jsondata.bSaleEnabled ? _._.k_eStoreSalePage : _._.k_eStoreView,
-          _ = (0, _._)(_, _, "forceAbsolute"),
-          _ = (_) => {
-            const _ = _.appid
-                ? "app/" + _.appid
-                : "group/" + _.clanSteamID.GetAccountID(),
-              _ = "l=" + (0, _.LgB)(_);
-            return `${_._.STORE_BASE_URL}${(0, _._)()}/download/${_}/${_}/${_.GID}?${_}`;
-          },
-          {
-            bHasVerifiedEmail: _,
-            bHasPushNotification: _,
-            bFollowsByEmail: _,
-            bFollowsByPush: _,
-          } = _,
-          _ = _ && _.GetStartTimeAndDateUnixSeconds();
-        return (0, _.jsxs)("div", {
-          children: [
-            (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _.ReminderCheckBox,
-                _ ? _.IconMode : _.TextMode,
-                "RemindMeWidget",
-              ),
-              onClick: _,
-              children: [
-                _(_) &&
-                  (0, _.jsx)("div", {
-                    className: _.RemindCheck,
-                    children: (0, _.jsx)(_.Jlk, {}),
-                  }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _.RemindBell,
-                    children: (0, _.jsx)(_.IrQ, {}),
-                  }),
-                (0, _.jsx)("div", {
-                  className: _.ReminderDefault,
-                  children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
-                }),
-                (0, _.jsx)("div", {
-                  className: _.ReminderOpennedOptions,
-                }),
-              ],
-            }),
-            (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _.FlexColumnContainer,
-                _.ReminderBackground,
-                _ && _.ReminderExpandsLeft,
-              ),
-              children: [
-                _ &&
-                  (0, _.jsx)(_._, {
-                    className: _.RpcThrobber,
-                    size: "xlarge",
-                    position: "center",
-                  }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _.FullStartTime,
-                    children: (0, _._)(
-                      "#EventDisplay_EventUpcoming_WithDateAndTime",
-                      (0, _._)(
-                        _,
-                        (0, _._)(new Date(1e3 * _), new Date(1e3 * _)),
-                      ),
-                      (0, _._)(_, !0),
-                    ),
-                  }),
-                (0, _.jsx)("div", {
-                  className: _.ReminderOptionsHeader,
-                  children: (0, _._)(
-                    "#EventDisplay_Reminder_GetNotification_Via",
-                  ),
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-                  children: [
-                    (0, _.jsx)(_._, {
-                      className: _.CheckboxWrapper,
-                      bTopmost: !0,
-                      toolTipContent: (0, _._)(
-                        _
-                          ? "#EventReminder_NotifyByEmail_ttip"
-                          : "#EventReminder_NotifyByEmail_Missing",
-                      ),
-                      children: (0, _.jsx)(_._, {
-                        label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
-                        disabled: !_,
-                        checked: _,
-                        onChange: (_) => _(_, "email"),
-                      }),
-                    }),
-                    !_ &&
-                      (0, _.jsx)("div", {
-                        className: _.FlexColumnContainer,
-                        children: (0, _.jsx)("a", {
-                          href: _._.STORE_BASE_URL + "account/",
-                          target: _._.IN_CLIENT ? void 0 : "_blank",
-                          onClick: () =>
-                            null == _ ? void 0 : _("email-unverified"),
-                          children: (0, _._)(
-                            "#EventReminder_NotifyByEmail_Missing_Add",
-                          ),
-                        }),
-                      }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-                  children: [
-                    (0, _.jsx)(_._, {
-                      className: _.CheckboxWrapper,
-                      bTopmost: !0,
-                      toolTipContent: (0, _._)(
-                        _
-                          ? "#EventReminder_NotifyByMobile_ttip"
-                          : "#EventReminder_NotifyByMobile_Missing",
-                      ),
-                      children: (0, _.jsx)(_._, {
-                        label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
-                        disabled: !_,
-                        checked: _,
-                        onChange: (_) => _(_, "push"),
-                      }),
-                    }),
-                    !_ &&
-                      (0, _.jsx)("div", {
-                        className: _.FlexColumnContainer,
-                        children: (0, _.jsx)("a", {
-                          href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
-                          target: _._.IN_CLIENT ? void 0 : "_blank",
-                          onClick: () =>
-                            null == _ ? void 0 : _("push-missing"),
-                          children: (0, _._)(
-                            "#EventReminder_NotifyByMobile_Install",
-                          ),
-                        }),
-                      }),
-                  ],
-                }),
-                (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _.ReminderOptionsHeader,
-                      children: (0, _._)(
-                        "#EventDisplay_Reminder_AddToCalendar",
-                      ),
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.ReminderCalendarOptions,
-                      children: [
-                        (0, _.jsx)("a", {
-                          className: _.ReminderOption,
-                          href: _("ics"),
-                          onClick: () =>
-                            null == _ ? void 0 : _("calendar-apple"),
-                          children: (0, _._)(
-                            "#EventDisplay_Reminder_AppleCalendar_Short",
-                          ),
-                        }),
-                        (0, _.jsx)("a", {
-                          className: _.ReminderOption,
-                          target: _._.IN_CLIENT ? void 0 : "_blank",
-                          href: (() => {
-                            const _ = encodeURIComponent(_),
-                              _ = encodeURIComponent(
-                                (() => {
-                                  let _ = _.GetSubTitleWithLanguageFallback(_);
-                                  return (
-                                    (_ = _ ? `${_}\n\n\n` : ""),
-                                    `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
-                                  );
-                                })(),
-                              ),
-                              _ = _.GetStartTimeAndDateUnixSeconds(),
-                              _ = _(_),
-                              _ = _(
-                                _.GetEndTimeAndDateUnixSeconds() ||
-                                  _ + _._.PerHour,
-                              ),
-                              _ =
-                                (_._.IN_CLIENT
-                                  ? "steam://openurl_external/"
-                                  : "") +
-                                `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
-                            return (0, _._)(_);
-                          })(),
-                          onClick: () =>
-                            null == _ ? void 0 : _("calendar-google"),
-                          children: (0, _._)(
-                            "#EventDisplay_Reminder_GoogleCalendar_Short",
-                          ),
-                        }),
-                        (0, _.jsx)("a", {
-                          className: _.ReminderOption,
-                          href: _("outlook"),
-                          onClick: () =>
-                            null == _ ? void 0 : _("calendar-outlook"),
-                          children: (0, _._)(
-                            "#EventDisplay_Reminder_OutlookCalendar_Short",
-                          ),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                !1,
-              ],
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        return new Date(1e3 * _)
-          .toISOString()
-          .replace(/[-:]/g, "")
-          .replace(/\.\d{3}Z$/, "Z");
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          { data: _ } = (0, _._)((0, _._)(_, _, _)),
-          _ = (0, _._)(),
-          _ = _(_, _);
-        return {
-          bHasVerifiedEmail: _.bHasValidatedEmail,
-          bHasPushNotification: _.bHasPushNotification,
-          bFollowsByEmail: 0 != (_ & _._.k_ENotifyFlagByEmail),
-          bFollowsByPush: 0 != (_ & _._.k_ENotifyFlagByPush),
-        };
-      }
-      function _(_, _) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(_, _, _);
-        return async (_, _) => {
-          if (!_) return;
-          const _ = __webpack_require__.getQueryData(_.queryKey),
-            _ =
-              "email" == _ ? _._.k_ENotifyFlagByEmail : _._.k_ENotifyFlagByPush,
-            _ = _(_, _),
-            _ = _ ? _ | _ : _ & ~_;
-          await (async function (_, _, _) {
-            const _ = 0 == _,
-              _ = `${_._.COMMUNITY_BASE_URL}gid/${_._.InitFromClanID(_).ConvertTo64BitString()}/`,
-              _ = `${_}${_ ? "unfolloworunignoreevent" : "followorignoreevent"}`,
-              _ = new URLSearchParams();
-            _.append("sessionid", (0, _._)()),
-              _.append("ignore", "false"),
-              _.append("gid", _),
-              _.append("notification_flag", "" + _),
-              _.append("clan_accountid", "" + _);
-            const _ = await fetch(_, {
-              method: "POST",
-              body: _,
-              credentials: "include",
-            });
-            if (!_._) throw new Error(`${_} answered ${_.status}`);
-          })(_, _, _),
-            await __webpack_require__.invalidateQueries({
-              queryKey: _.queryKey,
-            });
-        };
-      }
-      function _(_, _) {
-        var _, _, _, _;
-        const _ =
-          _ &&
-          null !==
-            (_ =
-              null === (_ = null == _ ? void 0 : _.event_followed) ||
-              void 0 === _
-                ? void 0
-                : __webpack_require__.indexOf(_)) &&
-          void 0 !== _
-            ? _
-            : -1;
-        return -1 == _
-          ? 0
-          : null !==
-                (_ =
-                  null === (_ = null == _ ? void 0 : _.event_followed_flags) ||
-                  void 0 === _
-                    ? void 0
-                    : _[_]) && void 0 !== _
-            ? _
-            : 0;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
-          const {
-              eventModel: _,
-              lang: _,
-              bShowStartTime: _,
-              bExpandLeft: _,
-              bOnlyShowIcon: _,
-            } = _,
-            _ = _(_.clanSteamID.GetAccountID(), _.GID);
-          _.useEffect(() => {
-            !_.appid &&
-              _.clanSteamID &&
-              _._.LoadClanInfoForClanSteamID(_.clanSteamID);
-          }, [_]);
-          const _ = _._.Get().BIsUserLoggedIn();
-          return (0, _.jsx)(_, {
-            eventModel: _,
-            rtNow: (0, _._)(),
-            notifyState: _,
-            bOnlyShowIcon: _,
-            bSignedIn: _ || _._.IN_CLIENT,
-            onRequestSignIn: () => {
-              (0, _._)(
-                (0, _.jsx)(_._, {
-                  strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
-                  strDescription: (0, _._)(
-                    "#EventDisplay_Share_NotLoggedIn_Description",
-                  ),
-                  strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
-                  onOK: () => (0, _._)(),
-                }),
-                window,
-              );
-            },
-            onTrack: (_) => _(_, _),
-            renderPanel: (_) =>
-              (0, _.jsx)(_, {
-                eventModel: _,
-                lang: _,
-                bShowStartTime: _,
-                bExpandLeft: _,
-                bOnlyShowIcon: _,
-                fnHidePanel: _,
-              }),
-          });
-        }),
-        _ = (0, _._)((_) => {
-          const {
-              eventModel: _,
-              lang: _,
-              bShowStartTime: _,
-              bExpandLeft: _,
-              bOnlyShowIcon: _,
-              fnHidePanel: _,
-            } = _,
-            _ = _.clanSteamID.GetAccountID(),
-            _ = _(_, _.GID),
-            _ = _(_, _.GID);
-          return (0, _.jsx)(_, {
-            eventModel: _,
-            lang: _,
-            rtNow: (0, _._)(),
-            notifyState: _,
-            bShowStartTime: _,
-            bExpandLeft: _,
-            bOnlyShowIcon: _,
-            strCalendarEventTitle: _(_, _),
-            onChangeNotify: _,
-            onTrack: (_) => _(_, _),
-            fnHidePanel: _,
-          });
-        });
+      let _;
       function _(_, _) {
         var _;
-        const _ =
-          null !== (_ = _.GetNameWithFallback(_)) && void 0 !== _ ? _ : "";
-        if (_._.BHasEntityNameForID(_.appid, _.clanSteamID.GetAccountID())) {
-          return `${_._.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
-        }
-        return _;
-      }
-      function _(_, _) {
-        const _ = {
-          opened: _._.k_eReminder_Opened,
-          "notify-email": _._.k_eReminder_Email,
-          "notify-push": _._.k_eReminder_MobilePush,
-          "email-unverified": _._.k_eReminder_EmailUnverified,
-          "push-missing": _._.k_eReminder_MobilePushMissing,
-          "calendar-apple": _._.k_eReminder_CalendarApple,
-          "calendar-google": _._.k_eReminder_CalendarGoogle,
-          "calendar-outlook": _._.k_eReminder_CalendarOutlook,
-        };
-        _._.RecordAppInteractionEvent(_.appid, _[_]);
-      }
-      function _(_) {
-        const { bPreviewMode: _, eventGID: _, ..._ } = _,
-          _ = (0, _._)(_);
-        if (!_)
-          return _
-            ? (0, _.jsx)("div", {
-                className: _.ErrorDiv,
-                children: (0, _._)("#EventDidplay_Reminder_EventNotVisible", _),
-              })
-            : null;
-        const _ = (0, _.sfN)(_._.LANGUAGE);
-        return (0, _.jsx)(_, {
-          lang: _,
-          ..._,
-          eventModel: _,
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      !(function (_) {
-        (_.k_TrailerAsButton = "button"),
-          (_.k_TrailerAsPill = "pill"),
-          (_.k_TrailerAsFull = "full"),
-          (_.k_TrailerAsPoster = "poster"),
-          (_.k_TrailerAsMicro = "micro");
-      })(_ || (_ = {}));
-      function _(_) {
-        const {
-            embedStyle: _,
-            appid: _,
-            color: _,
-            bgcolor: _,
-            children: _,
-            trailerBaseID: _,
-            subtitles: _,
-          } = _,
-          [_, _] = (0, _.useState)(!1),
-          _ = (0, _.useMemo)(
-            () => ({
-              appid: _,
-            }),
-            [_],
-          );
-        switch (_) {
-          case _.k_TrailerAsButton:
-          case _.k_TrailerAsPill:
-            return (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsxs)("div", {
-                  className: (0, _._)({
-                    [_().Pill]: _ == _.k_TrailerAsPill,
-                    [_().Button]: _ == _.k_TrailerAsButton,
-                  }),
-                  onClick: () => _(!0),
-                  style: {
-                    color: _,
-                    backgroundColor: _,
-                  },
-                  children: [
-                    (0, _.jsx)(_.jGG, {}),
-                    _ || (0, _._)("#EventEmail_WatchNow"),
-                  ],
-                }),
-                (0, _.jsx)(_._, {
-                  _: _,
-                  bShowModal: _,
-                  trailerBaseID: _,
-                  hideModal: () => _(!1),
-                }),
-              ],
-            });
-          default:
-          case _.k_TrailerAsFull:
-            return (0, _.jsx)(_, {
-              ..._,
-            });
-        }
-      }
-      function _(_) {
-        const { appid: _, trailerBaseID: _ } = _,
-          _ = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          [_, _] = (0, _.useState)(() =>
-            _ && _ ? null : (0, _._)("#TrailerPlayer_ID_NotProvided"),
-          ),
-          _ = (0, _._)(_),
-          _ = (0, _.useMemo)(
-            () => (_ ? _.find((_) => _.trailer_base_id === _) : null),
-            [_, _],
-          );
-        return (
-          (0, _.useEffect)(() => {
-            (null == _ ? void 0 : _.unvailable_for_country_restriction) &&
-              _((0, _._)("#TrailerPlayer_CouldNotLoad", _, _)),
-              _ &&
-                !_ &&
-                _(
-                  (0, _._)(
-                    "#TrailerPlayer_CouldNotLoad",
-                    _.appid,
-                    _.trailerBaseID,
-                  ),
-                );
-          }, [
-            _,
-            _.appid,
-            _.trailerBaseID,
-            null == _ ? void 0 : _.unvailable_for_country_restriction,
-            _,
-            _,
-            _,
-          ]),
-          _
-            ? _.bIsPreviewMode
-              ? (0, _.jsx)("div", {
-                  className: _().ErrorDiv,
-                  children: _,
-                })
-              : null
-            : _
-              ? (0, _.jsx)(_, {
-                  trailerToPlay: _,
-                })
-              : (0, _.jsx)(_._, {
-                  string: (0, _._)("#Loading"),
-                  size: "small",
-                })
-        );
-      }
-      function _(_) {
-        const { trailerToPlay: _ } = _,
-          {
-            rgDashTrailers: _,
-            rgHlsTrailers: _,
-            strCaptionManufest: _,
-          } = (0, _.useMemo)(() => {
-            const { rgDashTrailers: _, rgHlsTrailers: _ } = (0, _._)(_);
-            return {
-              rgDashTrailers: _,
-              rgHlsTrailers: _,
-              strCaptionManufest: (0, _._)(_),
-            };
-          }, [_]);
-        return 0 == (null == _ ? void 0 : _.length)
-          ? null
-          : (0, _.jsx)("div", {
-              className: _().VideoPopupContainers,
-              children: (0, _.jsx)(_._, {
-                dashManifests: _ || [],
-                hlsManifest:
-                  (_.length > 0 && (null == _ ? void 0 : _[0])) || "",
-                screenshot: (0, _._)(_),
-                altText: _.trailer_name,
-                muteWhenAutoplayBlocked: !0,
-                captionManifest: _,
+        const _ = null == _ ? void 0 : _.AnnouncementGID,
+          _ =
+            null !== (_ = null == _ ? void 0 : _.clanSteamID.GetAccountID()) &&
+            void 0 !== _
+              ? _
+              : 0,
+          _ = (function () {
+            const _ = (0, _._)();
+            return _.useMemo(
+              () => ({
+                GetMyEventVote: async (_) =>
+                  await (async function (_, _) {
+                    if (!_) return null;
+                    const _ = await _._.GetClanAnnouncementVoteForUser(_, {
+                      announcementid: _,
+                    });
+                    if (!__webpack_require__.BSuccess()) return null;
+                    return __webpack_require__.Body().voted_up()
+                      ? "up"
+                      : __webpack_require__.Body().voted_down()
+                        ? "down"
+                        : null;
+                  })(_, _),
+                RateEvent: async (_, _, _) =>
+                  await (async function (_, _, _, _) {
+                    if (!_) return _._;
+                    const _ = await _._.RateClanAnnouncement(_, {
+                      announcementid: _,
+                      vote_up: "up" == _,
+                      clan_accountid: _,
+                    });
+                    return _.GetEResult();
+                  })(_, _, _, _),
               }),
-            });
+              [_],
+            );
+          })(),
+          { myVote: _, Vote: _ } = (0, _._)(_, _, _, {
+            initialVote: _(_),
+            ..._,
+          });
+        return {
+          myVote: _,
+          Vote: (_) => {
+            _ &&
+              _ &&
+              _ != _ &&
+              (_ && _.UpdateVoteCount(_, -1), _.UpdateVoteCount(_, 1), _(_));
+          },
+        };
+      }
+      function _(_) {
+        if ("undefined" != typeof window) {
+          if (!_) {
+            _ = new Map();
+            const _ = (0, _._)("uservotes", "application_config");
+            null == _ ||
+              _.forEach((_) => {
+                _.clanAnnouncementGID &&
+                  _.set(
+                    _.clanAnnouncementGID,
+                    _.voted_up ? "up" : _.voted_down ? "down" : null,
+                  );
+              });
+          }
+          return _ ? _.get(_) : void 0;
+        }
+        (0, _._)(!1, "GetVoteFromPageConfig is browser only");
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -52945,68 +52966,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { event: _, nOverrideStartTime: _, nOverrideEndTime: _ } = _,
-          _ = _.stylesmodule
-            ? {
-                ..._(),
-                ..._.stylesmodule,
-              }
-            : _(),
-          [_, _, _] = (0, _._)(() => [
-            _ ||
-              (_.bOldAnnouncement
-                ? _.postTime
-                : _.GetStartTimeAndDateUnixSeconds()),
-            _ || _.GetEndTimeAndDateUnixSeconds(),
-            _.type,
-          ]),
-          _ = !(0, _._)(_);
-        return (0, _.jsx)("div", {
-          className: _.EventDetailTimeInfo,
-          children: (0, _.jsx)(_._, {
-            startDateAndTime: _,
-            endDateAndTime: _,
-            bHideEndTime: _,
-            stylesmodule: _,
-          }),
-        });
-      }
-      function _(_) {
-        const { _: _, event: _, dateRangeLayout: _ = "horizontal" } = _,
-          [_, _, _] = (0, _._)(() => [
-            __webpack_require__.GetStartTimeAndDateUnixSeconds(),
-            __webpack_require__.GetEndTimeAndDateUnixSeconds(),
-            _.type,
-          ]),
-          _ = {};
-        return (
-          "vertical" == _ && (_.ShortDateRange = _().VerticalLocalDateAndTime),
-          (0, _.jsx)("div", {
-            _: _,
-            className: _().EventDetailTimeInfo,
-            children: (0, _.jsx)(_._, {
-              startDateAndTime: _,
-              endDateAndTime: _,
-              bHideEndTime: !(0, _._)(_),
-              stylesmodule: _,
-            }),
-          })
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -53720,48 +53679,68 @@
             }
           }, [_, _]),
           _ = _.useId(),
-          _ = _.useId();
-        if (!_ || !_.adaptive_trailers) return null;
-        const { rgDashTrailers: _, rgHlsTrailers: _ } = (0, _._)(_);
-        if (0 == (null == _ ? void 0 : _.length)) return null;
-        let _ = (0, _._)(_);
-        return (0, _.jsx)(_._, {
-          active: _,
-          children: (0, _.jsxs)(_._, {
-            "aria-labelledby": _(_, _),
-            bAllowFullSize: !0,
-            bOKDisabled: !0,
-            closeModal: _,
-            children: [
-              (0, _.jsx)("div", {
-                className: _().VideoPopupContainers,
-                children: (0, _.jsx)(_._, {
-                  dashManifests: _ || [],
-                  hlsManifest:
-                    (_.length > 0 && (null == _ ? void 0 : _[0])) || "",
-                  screenshot: (0, _._)(_),
-                  altText: _.trailer_name,
-                  muteWhenAutoplayBlocked: !0,
-                  captionManifest: _,
+          _ = _.useId(),
+          {
+            rgDashTrailers: _,
+            rgHlsTrailers: _,
+            strCaptionManufest: _,
+            strScreenshot: _,
+          } = (0, _.useMemo)(() => {
+            if (!_)
+              return {
+                rgDashTrailers: [],
+                rgHlsTrailers: [],
+                strCaptionManufest: "",
+                strScreenshot: "",
+              };
+            const { rgDashTrailers: _, rgHlsTrailers: _ } = (0, _._)(_);
+            return {
+              rgDashTrailers: _,
+              rgHlsTrailers: _,
+              strCaptionManufest: (0, _._)(_),
+              strScreenshot: (0, _._)(_),
+            };
+          }, [_]);
+        return _ && _.adaptive_trailers
+          ? 0 == _.length
+            ? null
+            : (0, _.jsx)(_._, {
+                active: _,
+                children: (0, _.jsxs)(_._, {
+                  "aria-labelledby": _(_, _),
+                  bAllowFullSize: !0,
+                  bOKDisabled: !0,
+                  closeModal: _,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().VideoPopupContainers,
+                      children: (0, _.jsx)(_._, {
+                        dashManifests: _,
+                        hlsManifest: _[0] || "",
+                        screenshot: _,
+                        altText: _.trailer_name,
+                        muteWhenAutoplayBlocked: !0,
+                        captionManifest: _,
+                      }),
+                    }),
+                    (0, _.jsx)("div", {
+                      _: _,
+                      style: {
+                        display: "none",
+                      },
+                      children: (null == _ ? void 0 : _.name) || "",
+                    }),
+                    (0, _.jsx)("div", {
+                      _: _,
+                      style: {
+                        display: "none",
+                      },
+                      children: _.trailer_name,
+                    }),
+                  ],
                 }),
-              }),
-              (0, _.jsx)("div", {
-                _: _,
-                style: {
-                  display: "none",
-                },
-                children: (null == _ ? void 0 : _.name) || "",
-              }),
-              (0, _.jsx)("div", {
-                _: _,
-                style: {
-                  display: "none",
-                },
-                children: _.trailer_name,
-              }),
-            ],
-          }),
-        });
+              })
+          : null;
       }
       function _(_) {
         const {
@@ -54312,232 +54291,6 @@
               : _,
           })
         );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(),
-          { bLoading: _ } = _,
-          { className: _, bPreviewMode: _, rewardType: _ } = _;
-        return (0, _.jsx)(_._, {
-          className: (0, _._)("CSSClaimItemButton", _),
-          onClick: (_) => {
-            var _, _;
-            _.bCanClaimNewItem
-              ? (0, _._)(
-                  (0, _.jsx)(_, {
-                    rewardType: _,
-                  }),
-                  null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
-                )
-              : _ &&
-                ((0, _._)(
-                  (0, _.jsx)(_, {
-                    rewardType: _,
-                  }),
-                  null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
-                ),
-                console.log(
-                  "Show dialog for debugging, since already claimed: ",
-                  (0, _._)(_),
-                ));
-          },
-          disabled: _,
-          children: Boolean(_)
-            ? (0, _.jsx)(_._, {
-                string: (0, _._)("#Loading"),
-                size: "small",
-              })
-            : (0, _.jsx)(_, {
-                claimState: _,
-              }),
-        });
-      }
-      function _(_) {
-        const { claimState: _, strButtonOverride: _, rewardType: _ } = _;
-        if (_.bAlreadyClaimedCurrentItem)
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(_.CheckMark, "CSSClaimedState"),
-            children: [
-              (0, _.jsx)(_.Jlk, {}),
-              (0, _.jsxs)("span", {
-                children: [
-                  " ",
-                  _ || (0, _._)("#Sale_ClaimableReward_AlreadyClaimed"),
-                ],
-              }),
-            ],
-          });
-        let _ = (0, _._)("#Sale_ClaimableReward_generic");
-        switch ((null == _ ? void 0 : _.community_item_class) || _) {
-          case _._:
-            _ = (0, _._)("#Sale_ClaimableReward_sticker");
-            break;
-          case _._:
-            _ = (0, _._)("#Sale_ClaimableReward_profilemodifier");
-            break;
-          case _._:
-            _ = (0, _._)("#Sale_ClaimableReward_animatedavatar");
-        }
-        return (0, _.jsx)("span", {
-          className: "CSSUnclaimedState",
-          children: _,
-        });
-      }
-      function _(_) {
-        const { closeModal: _, rewardType: _ } = _,
-          { fnClaimItem: _ } = (0, _._)(),
-          _ = (0, _._)(),
-          [_, _] = _.useState(null);
-        _.useEffect(() => {
-          _.bLoading ||
-            (_.fnSetLoading(!0),
-            _()
-              .then((_) => {
-                if (
-                  (_(_), console.log("claim response", (0, _._)(_)), _.appid)
-                ) {
-                  let _ = (0, _._)("#Sale_ClaimableReward_completed_generic");
-                  const _ = (null == _ ? void 0 : _.community_item_class) || _;
-                  switch (_) {
-                    case _._:
-                      _ = (0, _._)("#Sale_ClaimableReward_completed_sticker");
-                      break;
-                    case _._:
-                      _ = (0, _._)(
-                        "#Sale_ClaimableReward_completed_profilemodifier",
-                      );
-                      break;
-                    case _._:
-                      _ = (0, _._)(
-                        "#Sale_ClaimableReward_completed_animatedavatar",
-                      );
-                  }
-                  _.fnSetStrSuccess("   "),
-                    _.fnSetElSuccess(
-                      (0, _.jsxs)("div", {
-                        className: _.DialogCtn,
-                        children: [
-                          (0, _.jsx)("span", {
-                            children: _,
-                          }),
-                          (0, _.jsx)(_, {
-                            appid: _.appid,
-                            community_item_type: _.community_item_type,
-                            rewardType: _,
-                          }),
-                        ],
-                      }),
-                    );
-                } else _.fnSetStrError((0, _._)("#Sale_ClaimableReward_Busy"));
-              })
-              .catch((_) =>
-                _.fnSetStrError((0, _._)("#Sale_ClaimableReward_Busy")),
-              ));
-        }, [null == _ ? void 0 : _.community_item_class, _, _, _]);
-        let _ = (0, _._)("#Sale_ClaimableReward_generic");
-        switch ((null == _ ? void 0 : _.community_item_class) || _) {
-          case _._:
-            _ = (0, _._)("#Sale_ClaimableReward_sticker");
-            break;
-          case _._:
-            _ = (0, _._)("#Sale_ClaimableReward_profilemodifier");
-            break;
-          case _._:
-            _ = (0, _._)("#Sale_ClaimableReward_animatedavatar");
-        }
-        return (0, _.jsx)(_._, {
-          state: _,
-          strDialogTitle: _,
-          closeModal: _,
-        });
-      }
-      function _(_) {
-        const { appid: _, community_item_type: _, rewardType: _ } = _;
-        return _ && _
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_._, {
-                  appid: _,
-                  community_item_type: _,
-                }),
-                Boolean(_ == _._) &&
-                  (0, _.jsx)(_, {
-                    appid: _,
-                    community_item_type: _,
-                  }),
-              ],
-            })
-          : null;
-      }
-      function _(_) {
-        const { appid: _, community_item_type: _ } = _,
-          _ = (0, _._)(_),
-          { mutate: _, isSuccess: _ } = (0, _._)();
-        if (!_) return null;
-        const _ = _.find((_) => _.item_type == _);
-        return _
-          ? (0, _.jsxs)("div", {
-              className: _.EquipCtn,
-              children: [
-                Boolean(_)
-                  ? (0, _.jsx)("div", {
-                      children: (0, _._)(
-                        "#Sale_ClaimableReward_profilemodifier_apply_success",
-                      ),
-                    })
-                  : (0, _.jsx)(_._, {
-                      onClick: () => _(_),
-                      children: (0, _._)(
-                        "#Sale_ClaimableReward_profilemodifier_apply",
-                      ),
-                    }),
-                (0, _.jsx)(_._, {
-                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}`,
-                  children: (0, _._)(
-                    "#Sale_ClaimableReward_profilemodifier_view",
-                  ),
-                }),
-              ],
-            })
-          : (0, _.jsxs)("div", {
-              children: [
-                (0, _.jsx)(_._, {
-                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/edit/goldenprofile`,
-                  children: (0, _._)(
-                    "#Sale_ClaimableReward_profilemodifier_choose",
-                  ),
-                }),
-                (0, _.jsx)(_._, {
-                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}`,
-                  children: (0, _._)(
-                    "#Sale_ClaimableReward_profilemodifier_view",
-                  ),
-                }),
-              ],
-            });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -55210,6 +54963,10 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -55222,6 +54979,60 @@
       }
       function _(_, _, _) {
         return _ ? ((0, _._)(_) ? _ : `${_}images/clan/${_}/${_}`) : _;
+      }
+      const _ = "poster",
+        _ = `${_}.avif`,
+        _ = /^([0-9a-f]{32})(?:_2x)?\.[a-z0-9.]+$/i;
+      function _(_) {
+        var _;
+        const _ = _.video_webm_src || _.video_mp4_src;
+        if (!_) return _.image;
+        if (
+          null === (_ = _.image) || void 0 === _ ? void 0 : _.includes(`.${_}.`)
+        )
+          return _.image;
+        const _ = _.exec(_);
+        return _ ? `${_[1]}.${_}` : _.image;
+      }
+      const _ = 0.01,
+        _ = 100,
+        _ = 4,
+        _ = [
+          [16, 9],
+          [9, 16],
+          [4, 3],
+          [3, 4],
+          [3, 2],
+          [2, 3],
+          [1, 1],
+          [21, 9],
+          [2, 1],
+          [1, 2],
+          [5, 4],
+          [4, 5],
+        ],
+        _ = 0.005;
+      function _(_, _) {
+        if (!(!_ || !_ || _ <= 0 || _ <= 0)) return _(_ / _);
+      }
+      function _(_) {
+        if (!_ || !Number.isFinite(_) || _ < _ || _ > _) return;
+        const _ = Math.pow(10, _);
+        return Math.round(_ * _) / _;
+      }
+      function _(_) {
+        const _ = _.trim();
+        if (!_) return;
+        const _ = /^(\d+(?:\.\d+)?)\s*[:x/]\s*(\d+(?:\.\d+)?)$/i.exec(_);
+        return _
+          ? _(parseFloat(_[1]), parseFloat(_[2]))
+          : /^\d+(?:\.\d+)?$/.test(_)
+            ? _(parseFloat(_))
+            : void 0;
+      }
+      function _(_) {
+        const _ = _.find(([_, _]) => Math.abs(_ - _ / _) < _);
+        return _ ? `${_[0]}:${_[1]}` : String(_);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

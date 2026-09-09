@@ -306,6 +306,7 @@ ${COMMUNITY_BASE_URL}market/search?appid=${_ ? _ : 0}
 ${COMMUNITY_BASE_URL}market/steamitemfiltersicon/${}
 ${COMMUNITY_BASE_URL}market/suggestedapps
 ${COMMUNITY_BASE_URL}mediaconvert/ajaxgroupconvert/${}
+${COMMUNITY_BASE_URL}mediaconvert/ajaxgroupconvertdimensions/${}
 ${COMMUNITY_BASE_URL}migrate/ajaxcreateupdatesalepage
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
