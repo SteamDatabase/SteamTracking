@@ -1,0 +1,48 @@
+"use strict";
+(() => {
+  (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
+    [8089],
+    {
+      chunkid: (module) => {
+        module.exports = JSON.parse(`{
+	"language": "japanese",
+	"DeckVerified_CompatibilitySection_Title": "Steam Deck互換性",
+	"DeckVerified_CompatibilitySection_Details": "詳細",
+	"DeckVerified_CategoryLabel_Verified": "確認済み",
+	"DeckVerified_CategoryLabel_Playable": "プレイ可能",
+	"DeckVerified_CategoryLabel_Unsupported": "非対応",
+	"DeckVerified_CategoryLabel_Unknown": "不明",
+	"DeckVerified_FilterLabel_Verified": "「確認済み」のみ",
+	"DeckVerified_FilterLabel_Verified_Playable": "「確認済み」と「プレイ可能」",
+	"DeckVerified_FilterLabel_Verified_Playable_Unknown": "「確認済み」、「プレイ可能」、および「未テスト」",
+	"DeckVerified_FilterLabel_AllGames": "すべてのゲーム",
+	"DeckVerified_FilterLabel_Unknown": "不明",
+	"DeckVerified_FilterDescription_Verified": "Deck内蔵のコントロールとディスプレイで快適に動作するゲームのみを表示します。",
+	"DeckVerified_FilterDescription_Verified_NotOnDeck": "Steam Deck内蔵のコントロールとディスプレイで快適に動作するゲームのみを表示します。",
+	"DeckVerified_FilterDescription_Verified_Playable": "「確認済み」のすべてのタイトルに加えて、プレイ可能であるものの操作や設定に追加の作業が必要な場合があるゲームを表示します。",
+	"DeckVerified_FilterDescription_Verified_Playable_Unknown": "「確認済み」および「プレイ可能」のすべてのタイトルに加えて、Deckの互換性テストがまだ行われていないゲームを表示します。",
+	"DeckVerified_FilterDescription_AllGames": "Steam Deckで快適に動作しないゲームを含め、ライブラリ内のすべてのゲームを表示します。",
+	"SteamOS_CompatibilitySection_Title": "SteamOS互換性",
+	"SteamOS_CompatibilitySection_Details": "詳細",
+	"SteamOS_CategoryLabel_Unknown": "不明",
+	"SteamOS_CategoryLabel_Unsupported": "非対応",
+	"SteamOS_CategoryLabel_Compatible": "互換性あり",
+	"SteamOS_FilterLabel_Compatible": "互換性があるもののみ",
+	"SteamOS_FilterLabel_Compatible_Unknown": "互換性があり、未テスト",
+	"SteamOS_FilterLabel_AllGames": "すべてのゲーム",
+	"SteamOS_FilterDescription_Compatible": "SteamOSのサポートのためにテストされたゲームを含む",
+	"SteamOS_FilterDescription_Compatible_Unknown": "SteamOSのサポートのためにテストされたゲームと、SteamOS互換性テストがまだ行われていないゲームを含む。",
+	"SteamOS_FilterDescription_AllGames": "SteamOSで快適に動作しないゲームを含め、ライブラリ内のすべてのゲームを表示する。",
+	"MachineVerified_FilterDescription_Verified": "Steam Machineで快適に動作するゲームのみを表示します。",
+	"MachineVerified_FilterDescription_Verified_Playable": "「確認済み」のすべてのタイトルに加えて、プレイ可能であるものの操作や設定に追加の作業が必要な場合があるゲームを表示します。",
+	"MachineVerified_FilterDescription_Verified_Playable_Unknown": "「確認済み」および「プレイ可能」のすべてのタイトルに加えて、Steam Machineの互換性テストがまだ行われていないゲームを表示します。",
+	"MachineVerified_FilterDescription_AllGames": "Steam Machineで快適に動作しないゲームを含め、ライブラリ内のすべてのゲームを表示します。",
+	"FrameVerified_FilterDescription_Verified": "Steam Frameで快適に動作するゲームのみを表示します。",
+	"FrameVerified_FilterDescription_Verified_Playable": "「Frameで確認済み」のすべてのタイトルに加えて、プレイ可能であるものの操作や設定に追加の作業が必要な場合があるゲームを表示します。",
+	"FrameVerified_FilterDescription_Verified_Playable_Unknown": "「確認済み」および「プレイ可能」のすべてのタイトルに加えて、Steam Frameの互換性テストがまだ行われていないゲームを表示します。",
+	"FrameVerified_FilterDescription_AllGames": "Steam Frameで快適に動作しないゲームを含め、ライブラリ内のすべてのゲームを表示します。"
+}`);
+      },
+    },
+  ]);
+})();

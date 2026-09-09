@@ -24,7 +24,7 @@
 "SteamBootstrapper_UpdateChecking"			"正在檢查可用更新…"
 "SteamBootstrapper_UpdatePrepare"				"正在準備更新…"
 "SteamBootstrapper_UpdateDownload"			"正在下載更新…"
-"SteamBootstrapper_UpdateDownloading"			"正在下載更新 (已下載 %bytes% KB，共 %size% KB)…"
+"SteamBootstrapper_UpdateDownloading"			"正在下載更新（已下載 %bytes% KB，共 %size% KB）…"
 "SteamBootstrapper_UpdateExtractingPackage"	"正在解壓縮套件…"
 "SteamBootstrapper_UpdateInstalling"			"正在安裝更新…"
 "SteamBootstrapper_InstallVerify"				"正在確認安裝…"

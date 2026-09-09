@@ -1,14 +1,8 @@
   Actual   :
   Comment started here.
   Expected :
-  f_bavail: %lu\n
-  f_bfree : %lu\n
-  f_blocks: %lu\n
-  f_bsize : %lu\n
-  f_frsize: %lu\n
   what():
  !"#$%&'()*+,-./0123
- 2>/dev/null
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
  Can't back up over more bytes than were returned by the last call to Next().
@@ -153,7 +147,6 @@
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
-#!/bin/sh\nexit 0\n
 $0  extend .$1 {\n
 $0  extensions $1 to $2;\n
 $0  reserved
@@ -179,6 +172,8 @@ $\n k_EContentModerationSanction_MAX
 $\n k_EContentReportReason_CSAMOther
 $\n k_EContentReportReason_Derailing
 $\n k_EContentReportReason_Reposting
+$\n k_EDLCHighlightReason_ComingSoon
+$\n k_EDLCHighlightReason_NewPlayers
 $\n k_EExternalSaleEventType_Unknown
 $\n k_EGPUPerformanceLevel_Profiling
 $\n k_EGpuDriverId_GoogleSwiftshader
@@ -208,6 +203,7 @@ $\n k_SystemAudioPortDirection_Input
 %\n!k_EContentReportReason_OtherAbuse
 %\n!k_EContentReportResolution_Broken
 %\n!k_EContentReportResolution_Purged
+%\n!k_EDLCHighlightReason_Recommended
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingType_NotRecording
 %\n!k_EGraphicsPerfOverlayLevel_Basic
@@ -222,9 +218,6 @@ $\n k_SystemAudioPortDirection_Input
 %\n!k_SystemAudioPortDirection_Output
 %\n!k_SystemAudioPortType_Video32RGBA
 %a %b %e %T %Y
-%d MB avail\n
-%d MB free space\n
-%d MB total space\n
 %d:00
 %lld
 %llu
@@ -234,7 +227,6 @@ $\n k_SystemAudioPortDirection_Input
 %s%c.temp_write_%x
 %s.%u.tmp
 %s.async%u.tmp
-%s/.steam/%s
 %s/.steam/steam
 %s/steamXXXXXX
 %s: __pos (which is %zu) > this->size() (which is %zu)
@@ -279,6 +271,7 @@ $\n k_SystemAudioPortDirection_Input
 '\n#k_EBrowserGPUStatus_DisabledUnknown
 '\n#k_EContentModerationSanction_Warned
 '\n#k_EContentModeratorLevel_Supervisor
+'\n#k_EContentReportReason_BulkDeletion
 '\n#k_EContentReportReason_ToSViolation
 '\n#k_EContentReportSubjectType_Invalid
 '\n#k_EContentReportSubjectType_UGCFile
@@ -311,6 +304,7 @@ $\n k_SystemAudioPortDirection_Input
 (\n$k_EContentReportResolution_Sustained
 (\n$k_EContentReportSubjectAction_Locked
 (\n$k_EContentReportSubjectAction_Warned
+(\n$k_EDLCHighlightReason_PlayerFavorite
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -455,10 +449,12 @@ $\n k_SystemAudioPortDirection_Input
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_EResolutionAutomation_FullyAutomated
 *\n&k_ESystemDisplayCompatibilityMode_None
+*\n&k_EWindowsUpdateOperationResult_Failed
 *\n&k_PublishedFileQueryType_RankedByTrend
 *m_pCurrentProtoBufMsg
 *|\n\fECPUGovernor
 ++CCUNG
+++CCUNG$
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
@@ -486,6 +482,7 @@ $\n k_SystemAudioPortDirection_Input
 +\n'k_ESteamDeckCompatibilityFeedback_Agree
 +\n'k_ESteamDeckCompatibilityFeedback_Unset
 +\n'k_ESteamOSCompatibilityCategory_Unknown
++\n'k_EWindowsUpdateOperationResult_Aborted
 +\n\rReservedRange
 +\n\vmethod_type
 , but was
@@ -578,6 +575,7 @@ $\n k_SystemAudioPortDirection_Input
 -\n)k_ESteamDeckCompatibilityCategory_Unknown
 -\n)k_ESystemDisplayCompatibilityMode_Invalid
 -\n)k_EWindowsUpdateInstallationImpact_Normal
+-\n)k_EWindowsUpdateOperationResult_Succeeded
 -\n\rrasterization
 -\n\rsecurity_info
 -\n\rskia_graphite
@@ -617,7 +615,6 @@ $\n k_SystemAudioPortDirection_Input
 -cef-force-sandbox
 -cef-full-memory-crash-report
 -cef-log-sandbox
--cef-restart-on-ui-mode-change
 -cef-use-vulkan
 -cef-verbose-js-logging
 -cef-verbose-logging
@@ -652,9 +649,9 @@ $\n k_SystemAudioPortDirection_Input
 -pid
 -prefer-gamescope-composer
 -prefer-gamescope-composer-vr
+-profilestartup
 -realm=China
 -realm=Global
--restart-on-ui-mode-change
 -startcount=%d
 -steamdeckdisplay
 -steamframe
@@ -748,6 +745,8 @@ $\n k_SystemAudioPortDirection_Input
 .\n*k_ESteamDeckCompatibilityCategory_Verified
 .\n*k_ESteamDeckCompatibilityFeedback_Disagree
 .\n*k_ESteamOSCompatibilityCategory_Compatible
+.\n*k_EWindowsUpdateOperationResult_InProgress
+.\n*k_EWindowsUpdateOperationResult_NotStarted
 .\n*k_EnhancedMarketAppearanceStatus_Completed
 .cpl
 .dummy
@@ -761,7 +760,7 @@ $\n k_SystemAudioPortDirection_Input
 .google.protobuf.ServiceOptions"
 .google.protobuf.SourceCodeInfo
 .placeholder.proto
-.steam_exec_test.sh
+.steam_exec_test
 .y4w
 /\n+k_EAppTestType_SteamDeckCompatibilityReview
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
@@ -785,15 +784,15 @@ $\n k_SystemAudioPortDirection_Input
 /dev/urandom
 /etc/mtab
 /proc/mounts
+/proc/self/fd/%d
 /proc/self/maps
-/run/host/%s
+/run/host/root/%s
 /steamrt64
+/steamsysinfo
 /tmp
-/tmp/disk-free.XXXXXX
 /tmp/steam_chrome_shmem_uid%d_spid%u
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
-/ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -925,7 +924,6 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI19CMsgLoadingResourceE
 16CHTMLProtoBufMsgI19CMsgPopupHTMLWindowE
 16CHTMLProtoBufMsgI20CMsgGetCookiesForURLE
-16CHTMLProtoBufMsgI20CMsgRestartJSContextE
 16CHTMLProtoBufMsgI20CMsgSetSteamBetaNameE
 16CHTMLProtoBufMsgI21CMsgJSReleaseCallbackE
 16CHTMLProtoBufMsgI21CMsgRequestFullScreenE
@@ -963,6 +961,7 @@ $\n k_SystemAudioPortDirection_Input
 16CMsgAckScreenDPI
 16CMsgBrowserReady
 16CMsgClearHistory
+16CMsgInputBlocked
 16CMsgJSMethodCall
 16CMsgNodeHasFocus
 16CMsgOpenDevTools
@@ -983,6 +982,7 @@ $\n k_SystemAudioPortDirection_Input
 17CMsgLoadedRequest
 17CMsgMouseDblClick
 17CMsgSearchResults
+17CMsgSetBlockInput
 17CMsgStartDownload
 17CMsgUpdateToolTip
 17CStreamReaderBase
@@ -1038,7 +1038,6 @@ $\n k_SystemAudioPortDirection_Input
 20CMsgJSExecutePromise
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
-20CMsgRestartJSContext
 20CMsgScalePageToValue
 20CMsgSetSteamBetaName
 21CHTMLPageSecurityInfo
@@ -1131,6 +1130,7 @@ $\n k_SystemAudioPortDirection_Input
 456789:;<=
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
 4\n'k_EChildProcessQueryExitCode_ErrorOther
+4\n'k_EWindowsUpdateOperationResult_Unknown
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EContentReportReason_LinkingToMaliciousContent
 4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
@@ -1169,6 +1169,7 @@ $\n k_SystemAudioPortDirection_Input
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
 7\n3k_ESteamOSCompatibilityResultDisplayType_Compatible
+7\n3k_EWindowsUpdateOperationResult_SucceededWithErrors
 7\n\tenum_type
 8080
 8CMsgCopy
@@ -1254,6 +1255,13 @@ Azerbaijani
 BCreateDirectory
 BDirectRendererBrowser( eBrowserType )
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
+BFilesystemAllowsExecution: couldn't read %s\n
+BFilesystemAllowsExecution: execute test timed out\n
+BFilesystemAllowsExecution: failed to copy %s to %s: %s\n
+BFilesystemAllowsExecution: failed to get exit code\n
+BFilesystemAllowsExecution: failed to reopen fd: %d\n
+BFilesystemAllowsExecution: failed to write %s: %s\n
+BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIsOpen()
 BOffScreenRendererBrowser( eBrowserType )
@@ -1591,6 +1599,7 @@ CMsgImeCancelComposition
 CMsgImeCommitText
 CMsgImeCompositionRangeChanged
 CMsgImeSetComposition
+CMsgInputBlocked
 CMsgInspectElement
 CMsgJSDialogResponse
 CMsgJSExecuteCallback
@@ -1624,13 +1633,13 @@ CMsgRenderProcessTerminated
 CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged
-CMsgRestartJSContext"
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
 CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetAccessibilitySettings
+CMsgSetBlockInput
 CMsgSetForceDeviceScaleFactors
 CMsgSetForegroundWindow
 CMsgSetHTMLTitle
@@ -1678,6 +1687,7 @@ CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
 CPathString
+CSHA1::HashFile
 CSHA1::Update
 CSharedMemStream has memory already locked for put. Don't write with memory locked.\n
 CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory\n
@@ -1734,7 +1744,6 @@ ContextCommand
 Could not create an instance of
 Could not find type "
 Couldn't parse default value "
-Couldn't write %s: %s\n
 CreateBrowser id:%u type:%d flags:%x (%d, %d) %dx%d
 CreateInterface
 CreateResponse: id:%u handle:%u
@@ -1744,7 +1753,6 @@ Croatian
 Czech
 DATA_LOSS
 DBG_PATHMATCH
-DBG_STAT
 DEADLINE_EXCEEDED
 DLOPEN Error:%s\n
 DO NOT PARSE: fields may be stripped and missing.\n
@@ -1752,7 +1760,6 @@ D\n@k_EContentReportReason_MisleadingInformationAboutGoodsOrServices
 D\n@k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate
 Danish
 Dari
-DcheckIsFatal
 December
 Default value for an enum field must be an identifier.
 DefaultANGLEVulkan
@@ -1800,6 +1807,7 @@ EContentReportResolution
 EContentReportSubjectAction
 EContentReportSubjectType
 EControlledLegalCategoryStatus
+EDLCHighlightReason
 EEnhancedMarketAppearanceStatus
 EExternalSaleEventType
 EGPUPerformanceLevel
@@ -1840,6 +1848,7 @@ ESystemDisplayCompatibilityMode
 ESystemFanControlMode
 ESystemServiceState
 EWindowStackingOrder
+EWindowsUpdateOperationResult
 EWindowsUpdateRebootBehavior
 E\n8k_EChildProcessQueryExitCode_ErrorNotSupportedByPlatform
 Element( i )
@@ -1871,7 +1880,6 @@ Error parsing text-format
 Error reporting not implemented.
 Error while parsing option value for "
 Estonian
-Execute: %s\n
 Expanded map entry type
 Expect a decimal number, got:
 Expected "
@@ -1914,8 +1922,6 @@ Failed creating file mapping %s\n
 Failed creating read event %s\n
 Failed creating view of file for %s\n
 Failed creating write event %s\n
-Failed system(%s) in execute test: %d %s\n
-Failed system(%s) in execute test: %d\n
 Failed to bind client address for shared fd id: 0x%lx\n
 Failed to bind server addres for shared fd: %d\n
 Failed to create socket for shared fd id: 0x%lx\n
@@ -1991,7 +1997,6 @@ Force the usage of opaque backgrounds for CEF
 Forced create but already created for SharedObjectEvent\n
 Forcing secure cookie flag as samesite=none
 Found invalid proto option data for:
-Free disk space for %s would overflow
 French
 Friday
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
@@ -2239,6 +2244,7 @@ MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
 Marathi
 March
+MatchCaseInsensitivePathIfAvailable: in slow path
 Matched '%s' -> '%s'\n
 MaybeAllocateAligned cannot fail here.
 Message class "
@@ -2480,6 +2486,8 @@ Polish
 PopupHTMLWindow: idx:%u handle:%u
 Portuguese
 PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PrepareBuffer( nNewLength ) == pstrNew
 Process %d failed to shm_open %s\n
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
@@ -2496,6 +2504,7 @@ QkkXa
 Quechua
 RESOURCE_EXHAUSTED
 Ran out of IPC SharedObjectManager entries!\n
+ReOpenFd: failed to reopen: %s: %s\n
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
 Recursion limit at end of parse should be
@@ -2512,7 +2521,6 @@ Required fields are not allowed in proto3.
 Reserved numbers must be positive integers.
 Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
 Reserved range end number must be greater than start number.
-Restart the renderer on UI mode changes
 Restart webhelper process, counter %d
 RetryCreateBrowser id:%u type:%u flags:%u: (%d, %d) %dx%d
 Romanian
@@ -2767,6 +2775,7 @@ This shouldn't be called if all the sizes are equal.
 ThreadCloseProcess
 ThreadFindProcessByName
 ThreadGetCurrentProcessId
+ThreadGetProcessExitCode
 ThreadGetProcessId
 ThreadInterlockedDecrement
 ThreadInterlockedExchange
@@ -2827,16 +2836,15 @@ VProfInternalEnterScopeCurrentThread
 VProfInternalGetProfileForCurrentThread
 VTT for
 V_AppendSlash
-V_ComposeFileName
 V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
 V_ExtractFileExtension
 V_ExtractFilePath
 V_FixDoubleSlashes
 V_FixSlashes
-V_FormatAndAppend
 V_IsAbsolutePath
 V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 V_MakeAbsolutePath
+V_MakeRelativePath
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
 V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
@@ -2852,7 +2860,6 @@ V_binarytohex
 V_hextobinary
 V_isvalidhex
 V_snprintf
-V_strcat
 V_stristr(char const*, char const*)
 V_strncat
 V_strncat_length
@@ -3119,7 +3126,6 @@ __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
 __int128
-__isoc99_fscanf
 __isoc99_sscanf
 __iswctype_l
 __lxstat
@@ -3189,6 +3195,7 @@ __wrap_utimes
 __xmknod
 __xstat
 __xstat64
+_exit
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
 _txnal_cow_string_D1_commit(void*)
@@ -3380,7 +3387,6 @@ disables loading winh264.dll
 disables logging from CEF
 disables per-process site-isolation
 disables sandboxing in CEF
-disk-free command failed\n
 diskSize
 display_height
 dl_iterate_phdr
@@ -3394,6 +3400,7 @@ domain
 domains
 double
 dpi_horizontal
+dup2
 dutch
 dynamic_cast
 eCmd > 0 && eCmd < eHTMLCommands_None
@@ -3402,6 +3409,7 @@ el_GR
 elementtagname
 en-US
 en_US
+enabled
 enables CEF usage of the Chromium keyring
 enables Chromium remote debugging, defaulting to localhost:8080
 enables full crash dumps
@@ -3421,6 +3429,7 @@ es_419
 es_ES
 estackingorder
 estonian
+execve
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 expandableSpace
 expires
@@ -3434,6 +3443,7 @@ false
 false"
 false"&\n\fCMsgStopFind
 false"M\n
+fchmod
 fclose
 fcntl
 fd-cl-
@@ -3465,10 +3475,10 @@ fnmatch
 focus
 focused
 fopen
-fopen tmpfile failed\n
 fopen64
 force enable Chromium window occlusion testing
 force sandboxing in CEF
+fork
 fprintf
 fputc
 fputs
@@ -3478,7 +3488,6 @@ fread
 free
 french
 freopen
-fscanf disk-free output failed\n
 fseek
 fseeko64
 fsync
@@ -3797,6 +3806,8 @@ k_EContentReportReason_Trolling
 k_EContentReportReason_Unknown
 k_EContentReportResolution_MAX
 k_EContentReportSubjectType_MAX
+k_EDLCHighlightReason_New
+k_EDLCHighlightReason_None
 k_EExportCodec_Default
 k_EExportCodec_H264
 k_EExportCodec_H265
@@ -4076,8 +4087,6 @@ minimum_font_size
 misspelled_word
 mkdir
 mkfifo
-mkstemp
-mkstemp errno %d\n
 mmap
 mmap64
 modf
@@ -4255,7 +4264,6 @@ rgba
 rmdir
 ro_RO
 romanian
-root
 routes
 ru_RU
 russian
@@ -4326,8 +4334,8 @@ static_cast<Node_t*>(pNode)->elem
 statvfs
 statvfs64
 statvfs64 failed for %s, errno %d %s
+statvfs64 output would overflow: %s
 statvfs64 reports success but zero free space\n
-statvfs64: ret %d errno %d\n
 std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
 std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
 std::allocator

@@ -1,0 +1,48 @@
+"use strict";
+(() => {
+  (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
+    [7930],
+    {
+      chunkid: (module) => {
+        module.exports = JSON.parse(`{
+	"language": "greek",
+	"DeckVerified_CompatibilitySection_Title": "Συμβατότητα με Steam Deck",
+	"DeckVerified_CompatibilitySection_Details": "Λεπτομέρειες",
+	"DeckVerified_CategoryLabel_Verified": "Επαληθευμένο",
+	"DeckVerified_CategoryLabel_Playable": "Υποστηρίζεται",
+	"DeckVerified_CategoryLabel_Unsupported": "Δεν υποστηρίζεται",
+	"DeckVerified_CategoryLabel_Unknown": "Άγνωστο",
+	"DeckVerified_FilterLabel_Verified": "Μόνο Επαληθευμένα",
+	"DeckVerified_FilterLabel_Verified_Playable": "Επαληθευμένα και Υποστηριζόμενα",
+	"DeckVerified_FilterLabel_Verified_Playable_Unknown": "Επαληθευμένα, Υποστηριζόμενα και Αδοκίμαστα",
+	"DeckVerified_FilterLabel_AllGames": "Όλα τα παιχνίδια",
+	"DeckVerified_FilterLabel_Unknown": "Άγνωστα",
+	"DeckVerified_FilterDescription_Verified": "Εμφάνιση μόνο των παιχνιδιών που λειτουργούν απρόσκοπτα με τα ενσωματωμένα στοιχεία ελέγχου και την οθόνη του Steam Deck σας.",
+	"DeckVerified_FilterDescription_Verified_NotOnDeck": "Εμφάνιση μόνο των παιχνιδιών που λειτουργούν απρόσκοπτα με τα ενσωματωμένα στοιχεία ελέγχου και την οθόνη του Steam Deck.",
+	"DeckVerified_FilterDescription_Verified_Playable": "Εμφάνιση όλων των τίτλων με την αξιολόγηση «Επαληθευμένο», συν παιχνιδιών που υποστηρίζονται αλλά μπορεί να απαιτούν λίγη επιπλέον προσπάθεια για να αλληλεπιδράσετε μαζί τους ή για να τα διαμορφώσετε.",
+	"DeckVerified_FilterDescription_Verified_Playable_Unknown": "Εμφάνιση όλων των τίτλων που είναι Επαληθευμένοι και Υποστηρίζονται, καθώς και αυτών για τους οποίους δεν έχουν γίνει ακόμα δοκιμές συμβατότητας με το Steam Deck.",
+	"DeckVerified_FilterDescription_AllGames": "Εμφάνιση όλων των παιχνιδιών στη Συλλογή σας, καθώς και αυτών που δεν λειτουργούν καλά στο Steam Deck.",
+	"SteamOS_CompatibilitySection_Title": "Συμβατότητα με SteamOS",
+	"SteamOS_CompatibilitySection_Details": "Λεπτομέρειες",
+	"SteamOS_CategoryLabel_Unknown": "Άγνωστο",
+	"SteamOS_CategoryLabel_Unsupported": "Δεν υποστηρίζεται",
+	"SteamOS_CategoryLabel_Compatible": "Συμβατό",
+	"SteamOS_FilterLabel_Compatible": "Μόνο Συμβατά",
+	"SteamOS_FilterLabel_Compatible_Unknown": "Συμβατά και Αδοκίμαστα",
+	"SteamOS_FilterLabel_AllGames": "Όλα τα παιχνίδια",
+	"SteamOS_FilterDescription_Compatible": "Συμπερίληψη παιχνιδιών που έχουν δοκιμαστεί για υποστήριξη του SteamOS",
+	"SteamOS_FilterDescription_Compatible_Unknown": "Συμπερίληψη παιχνιδιών που έχουν δοκιμαστεί για υποστήριξη του SteamOS, καθώς και παιχνιδιών που δεν έχουν δοκιμαστεί ακόμα για Συμβατότητα με το SteamOS.",
+	"SteamOS_FilterDescription_AllGames": "Εμφάνιση όλων των παιχνιδιών στη Συλλογή σας, καθώς και αυτών που δεν λειτουργούν καλά σε SteamOS.",
+	"MachineVerified_FilterDescription_Verified": "Εμφάνιση μόνο των παιχνιδιών που λειτουργούν απρόσκοπτα με το Steam Machine.",
+	"MachineVerified_FilterDescription_Verified_Playable": "Εμφάνιση όλων των τίτλων με την αξιολόγηση «Επαληθευμένο», συν παιχνιδιών που υποστηρίζονται αλλά μπορεί να απαιτούν λίγη επιπλέον προσπάθεια για να αλληλεπιδράσετε μαζί τους ή για να τα διαμορφώσετε.",
+	"MachineVerified_FilterDescription_Verified_Playable_Unknown": "Εμφάνιση όλων των τίτλων με την αξιολόγηση «Επαληθευμένο» και «Υποστηρίζεται», συν παιχνιδιών των οποίων η συμβατότητα με το Steam Machine δεν έχει ελεγχθεί ακόμα.",
+	"MachineVerified_FilterDescription_AllGames": "Εμφάνιση όλων των παιχνιδιών στη Συλλογή σας, καθώς και αυτών που δεν λειτουργούν καλά στο Steam Machine.",
+	"FrameVerified_FilterDescription_Verified": "Εμφάνιση μόνο των παιχνιδιών που λειτουργούν απρόσκοπτα με το Steam Frame.",
+	"FrameVerified_FilterDescription_Verified_Playable": "Εμφάνιση όλων των τίτλων με την αξιολόγηση «Επαληθευμένο» για το Frame, συν παιχνιδιών που υποστηρίζονται αλλά μπορεί να απαιτούν λίγη επιπλέον προσπάθεια για να αλληλεπιδράσετε μαζί τους ή για να τα διαμορφώσετε.",
+	"FrameVerified_FilterDescription_Verified_Playable_Unknown": "Εμφάνιση όλων των τίτλων με την αξιολόγηση «Επαληθευμένο» και «Υποστηρίζεται», συν παιχνιδιών των οποίων η συμβατότητα με το Steam Frame δεν έχει ελεγχθεί ακόμα.",
+	"FrameVerified_FilterDescription_AllGames": "Εμφάνιση όλων των παιχνιδιών στη Συλλογή σας, καθώς και αυτών που δεν λειτουργούν καλά στο Steam Frame."
+}`);
+      },
+    },
+  ]);
+})();

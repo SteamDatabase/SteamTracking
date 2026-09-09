@@ -28,6 +28,12 @@ message CSteamOSManager_ApplyMandatoryUpdate_Request {
 message CSteamOSManager_ApplyMandatoryUpdate_Response {
 }
 
+message CSteamOSManager_CECWakeAndSetActive_Request {
+}
+
+message CSteamOSManager_CECWakeAndSetActive_Response {
+}
+
 message CSteamOSManager_FactoryReset_Request {
 	optional bool reset_os = 1;
 	optional bool reset_user_data = 2;
@@ -80,6 +86,13 @@ message CSteamOSManager_SetDefaultDesktopSession_Request {
 message CSteamOSManager_SetDefaultDesktopSession_Response {
 }
 
+message CSteamOSManager_SetDesktopAsDefaultLoginMode_Request {
+	optional bool is_desktop_default = 1;
+}
+
+message CSteamOSManager_SetDesktopAsDefaultLoginMode_Response {
+}
+
 message CSteamOSManager_SetSteamVRPath_Request {
 	optional string path = 1;
 }
@@ -128,9 +141,10 @@ message CSteamOSManagerState {
 	optional bool is_session_management_supported = 31;
 	repeated string desktop_sessions_available = 32;
 	optional string desktop_session_default = 33;
-	optional bool is_extended_cec_available = 34;
-	optional bool is_extended_cec_wake_device_supported = 35;
-	optional bool is_ec_logging_available = 36;
+	optional bool is_desktop_default_login_mode = 34;
+	optional bool is_extended_cec_available = 35;
+	optional bool is_extended_cec_wake_device_supported = 36;
+	optional bool is_ec_logging_available = 37;
 }
 
 message CSteamVRPathRecord {
@@ -141,6 +155,8 @@ message CSteamVRPathRecord {
 service SteamOSManager {
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc ApplyMandatoryUpdate (.CSteamOSManager_ApplyMandatoryUpdate_Request) returns (.CSteamOSManager_ApplyMandatoryUpdate_Response);
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc CECWakeAndSetActive (.CSteamOSManager_CECWakeAndSetActive_Request) returns (.CSteamOSManager_CECWakeAndSetActive_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc FactoryReset (.CSteamOSManager_FactoryReset_Request) returns (.CSteamOSManager_FactoryReset_Response);
 	// ePrivilege=1, eClientExecutionSite=1
@@ -159,6 +175,8 @@ service SteamOSManager {
 	rpc RefreshScreenReaderAutoLocale (.CSteamOSManager_RefreshScreenReaderAutoLocale_Request) returns (.CSteamOSManager_RefreshScreenReaderAutoLocale_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc SetDefaultDesktopSession (.CSteamOSManager_SetDefaultDesktopSession_Request) returns (.CSteamOSManager_SetDefaultDesktopSession_Response);
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc SetDesktopAsDefaultLoginMode (.CSteamOSManager_SetDesktopAsDefaultLoginMode_Request) returns (.CSteamOSManager_SetDesktopAsDefaultLoginMode_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc SetSteamVRPath (.CSteamOSManager_SetSteamVRPath_Request) returns (.CSteamOSManager_SetSteamVRPath_Response);
 	// ePrivilege=1, eClientExecutionSite=1

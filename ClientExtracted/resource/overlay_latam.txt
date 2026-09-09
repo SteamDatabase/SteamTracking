@@ -177,7 +177,7 @@
 "Overlay_MicroTxnSubscriptionDays"		"día(s)"
 "Overlay_MicroTxnAuth_ConvertedTotalLabel"	"Se te cobrará"
 "Overlay_MicroTxnAuth_ConvertedTotalValue"	"%converted_total%"
-"Overlay_MicroTxnAuth_RefundPeriod" "Steam ofrece reembolsos en aquellos productos que hayan sido adquiridos en menos de 48 horas si no se han usado, modificado o transferido. <a href=http://store.steampowered.com/steam_refunds>Más información</a>"
+"Overlay_MicroTxnAuth_RefundPeriod" "Steam ofrece reembolsos para estos artículos dentro de las 48 horas posteriores a la compra si no fueron consumidos, modificados o transferidos. <a href=http://store.steampowered.com/steam_refunds>Más información</a>"
 "Overlay_MicroTxnAuth_NotRefundable" "No se pueden efectuar reembolsos en estos artículos. <a href=http://store.steampowered.com/steam_refunds>Más información</a>"
 "Overlay_MicroTxnAuth_ConnectionError" "Error de conexión"
 "Overlay_MicroTxnAuth_ConnectionError_Info" "Tu transacción no pudo ser completada porque hubo un problema de comunicación con Steam."

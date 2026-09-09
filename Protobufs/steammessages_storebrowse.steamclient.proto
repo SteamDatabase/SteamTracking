@@ -2,6 +2,8 @@ import "steammessages_base.proto";
 import "steammessages_unified_base.steamclient.proto";
 import "enums_productinfo.proto";
 import "enums.proto";
+import "steammessages_appratings_types.proto";
+import "steammessages_steamawards_types.proto";
 import "contenthubs.proto";
 
 option cc_generic_services = true;
@@ -15,6 +17,7 @@ enum EStoreItemType {
 	k_EStoreItemType_Tag = 4;
 	k_EStoreItemType_Creator = 5;
 	k_EStoreItemType_HubCategory = 6;
+	k_EStoreItemType_SalePage = 7;
 }
 
 enum EStoreAppType {
@@ -112,6 +115,7 @@ message StoreItemID {
 	optional uint32 tagid = 4;
 	optional uint32 creatorid = 5;
 	optional uint32 hubcategoryid = 6;
+	optional fixed64 salepagegid = 7;
 }
 
 message StoreBrowseContext {
@@ -138,6 +142,8 @@ message StoreBrowseItemDataRequest {
 	optional bool include_assets_without_overrides = 15;
 	optional bool apply_user_filters = 16;
 	optional bool include_links = 17;
+	optional bool include_extra_details = 18;
+	optional bool include_best_purchase_option = 19 [default = true];
 }
 
 message CStoreBrowse_GetItems_Request {
@@ -239,6 +245,7 @@ message StoreItem {
 		optional string page_background_path = 15;
 		optional string raw_page_background = 16;
 		optional string edition_comparison = 17;
+		optional uint32 last_modified = 21;
 	}
 
 	message ReleaseInfo {
@@ -378,6 +385,7 @@ message StoreItem {
 		optional uint32 start_time = 1;
 		optional uint32 end_time = 2;
 		optional string text = 3;
+		optional uint32 appid = 4;
 	}
 
 	message Link {
@@ -399,13 +407,76 @@ message StoreItem {
 		optional string dropdown_description_bbcode = 5;
 	}
 
+	message Anticheat {
+		optional bool kernel_mode = 1;
+		optional bool uninstall_completely = 2;
+		optional bool boot_protection = 3;
+		optional string boot_protection_name = 4;
+		optional string name = 5;
+		optional string name_loc = 6;
+	}
+
+	message Eula {
+		optional string name = 1;
+		optional string url = 2;
+	}
+
+	message AIGeneratedContentService {
+		optional string name = 1;
+		optional string url = 2;
+	}
+
+	message PageSection {
+		enum EPageSectionBanner {
+			k_EPageSectionBanner_None = 0;
+			k_EPageSectionBanner_Workshop = 1;
+			k_EPageSectionBanner_Follow = 2;
+			k_EPageSectionBanner_MachineController = 3;
+		}
+
+		optional string label = 1;
+		optional string content_bbcode = 2;
+		optional .StoreItem.PageSection.EPageSectionBanner banner = 3 [default = k_EPageSectionBanner_None];
+	}
+
+	message PressReview {
+		optional string quote = 1;
+		optional string score = 2;
+		optional string site = 3;
+		optional string url = 4;
+	}
+
+	message ExtraDetails {
+		repeated .SteamAward steam_award = 1;
+		optional bool vetted = 2;
+		optional bool no_mouse_keyboard_support = 3;
+		optional bool controller_wizard_complete = 4;
+		optional string drm_third_party_type = 5;
+		optional string drm_activation_limit = 6;
+		optional string user_account_third_party = 7;
+		optional bool user_account_third_party_link_to_steam = 8;
+		optional .StoreItem.Anticheat anticheat = 9;
+		repeated .StoreItem.Eula eula = 10;
+		optional .StoreItem.AIGeneratedContentService ai_generation_service = 11;
+		optional bool refund_checks_ea_playtime = 12;
+		repeated .StoreItem.PageSection section = 13;
+		optional string legal_notice_bbcode = 14;
+		repeated .EInteractiveElement interactive_elements = 15;
+		optional string content_survey_notes = 16;
+		optional string content_survey_ai_notes = 17;
+		repeated .StoreItem.PressReview press_review = 18;
+		optional string partner_awards_bbcode = 19;
+	}
+
 	optional .EStoreItemType item_type = 1 [default = k_EStoreItemType_Invalid];
 	optional uint32 id = 2;
+	optional fixed64 gid = 76;
 	optional uint32 success = 3;
 	optional bool visible = 4;
 	optional bool unvailable_for_country_restriction = 5;
 	optional string name = 6;
 	optional string store_url_path = 7;
+	optional string store_url_slug = 8;
 	optional uint32 appid = 9;
 	optional .EStoreAppType type = 10 [default = k_EStoreAppType_Game];
 	repeated .EStoreAppType included_types = 11;
@@ -443,6 +514,7 @@ message StoreItem {
 	repeated .StoreItem.Link links = 71;
 	optional string purchase_description_bbcode = 72;
 	repeated .StoreItem.PackageGroup package_groups = 74;
+	optional .StoreItem.ExtraDetails extra_details = 75;
 }
 
 message StoreGameRating {
@@ -450,6 +522,11 @@ message StoreGameRating {
 	optional string rating = 2;
 	repeated string descriptors = 3;
 	optional string interactive_elements = 4;
+	optional .ERatingAgency agency = 5 [default = k_ERatingAgency_Invalid];
+	optional bool banned = 6;
+	optional bool esrb_online_music_not_rated = 7;
+	optional bool esrb_online_interactions_not_rated = 8;
+	repeated .EInteractiveElement survey_interactive_elements = 9;
 	optional int32 required_age = 10;
 	optional bool use_age_gate = 11;
 	optional string image_url = 20;

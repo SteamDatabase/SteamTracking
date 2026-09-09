@@ -155,7 +155,7 @@ message CLoyaltyRewards_QueryRewardItems_Request {
 	optional string language = 4;
 	optional int32 count = 5;
 	optional string cursor = 6;
-	optional int32 sort = 7 [default = 1, (.description) = "enum"];
+	optional int32 sort = 7 [default = Identifier, (.description) = "enum"];
 	optional bool sort_descending = 8 [default = true];
 	repeated int32 reward_types = 9 [(.description) = "enum"];
 	repeated int32 excluded_community_item_classes = 10;

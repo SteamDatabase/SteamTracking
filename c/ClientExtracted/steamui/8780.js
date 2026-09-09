@@ -1,0 +1,34 @@
+"use strict";
+(() => {
+  (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
+    [8780],
+    {
+      chunkid: (module) => {
+        module.exports = JSON.parse(`{
+	"language": "spanish",
+	"TrailerPlayer_Settings_Tooltip": "Ajustes",
+	"TrailerPlayer_Captions_Tooltip": "Subtítulos",
+	"TrailerPlayer_Play_Tooltip": "Reproducir",
+	"TrailerPlayer_Pause_Tooltip": "Pausar",
+	"TrailerPlayer_Mute_Tooltip": "Silenciar",
+	"TrailerPlayer_Unmute_Tooltip": "Dejar de silenciar",
+	"TrailerPlayer_FullScreen_Tooltip": "Pantalla completa",
+	"TrailerPlayer_ExitFullScreen_Tooltip": "Salir de la pantalla completa",
+	"TrailerPlayer_EnterTheater_Tooltip": "Entrar en el modo cine",
+	"TrailerPlayer_ExitTheater_Tooltip": "Salir del modo cine",
+	"TrailerPlayer_Quality_Auto": "Automática",
+	"TrailerPlayer_Error_Playback": "Se ha producido un error al reproducir este vídeo.",
+	"TrailerPlayer_Error_UnsupportedCodec": "El formato de vídeo no es compatible con este dispositivo.",
+	"StoreTrailer_AutoPlayVideos": "Reproducir vídeos automáticamente",
+	"StoreTrailer_Title_Category_Unknown": "Tráiler",
+	"StoreTrailer_Title_Category_Gameplay": "Jugabilidad",
+	"StoreTrailer_Title_Category_Teaser": "Avance",
+	"StoreTrailer_Title_Category_Cinematic": "General / Cinemática",
+	"StoreTrailer_Title_Category_Update": "Actualización / Expansión / Temporada",
+	"StoreTrailer_Title_Category_Accolades": "Galardones",
+	"StoreTrailer_Title_Category_Interview": "Entrevista / Diario de desarrollo"
+}`);
+      },
+    },
+  ]);
+})();

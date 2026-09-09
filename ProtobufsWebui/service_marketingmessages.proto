@@ -216,7 +216,7 @@ message CMarketingMessages_MarkMessageClicked_Notification {
 	optional fixed64 gid = 1;
 	optional uint32 display_index = 2 [default = 0];
 	optional int32 template_type = 3 [default = Identifier, (.description) = "enum"];
-	optional int32 click_location = 4 [default = 0, (.description) = "enum"];
+	optional int32 click_location = 4 [default = Identifier, (.description) = "enum"];
 }
 
 message CMarketingMessages_MarkMessageSeen_Notification {

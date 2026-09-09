@@ -1,9 +1,10 @@
 
                     ... and %d detail types\n
                     ... and %d other unique values\n
+                    details: %s - %s (%d) (%dms)\n
                     details: %s [locked by %s - %s / %s (%ldms)] (%d) (%ldms)\n
-                    details: %s%s (%d) (%dms)\n
             Not Before:
+            ms    us/parse
           %s %d %s\n
           waiting on %d %s%s  (%ldms)\n
          %u requests queued waiting for a connection\n
@@ -30,12 +31,17 @@
    %s - %llu total requests made%s %lld completed (%u max/host)\n
   !!""##$$$$%%%%&&&&&&&&''''''''(((((((((((((((())))))))))))))))********************************
   ##%%&&))**,,//1122447788;;==>>@@CCEEFFIIJJLLOOQQRRTTWWXX[[]]^^aabbddgghhkkmmnnppssuuvvyyzz||
+  %-46s %5d %14s\n
+  %-52s %14s\n
   %10.3f %6.2f      %10.3f %6.2f      %10.3f %6.2f   %6d %6.2f
   %10.3f %6.2f      %6d
   %52s%12d%12.3f%6.2f%%%12.3f%6.2f%%%12.3f%12.3f%12.3f\n
+  %s: %13.3f ms (%6.2f%%)\n
   ---------- ------      ---------- ------      ---------- ------   ------ ------\n
   ---------- ------      ------\n
   ---------------------------------------------------- ----------- ----------- ------ ----------- ------ ----------- ----------- -----------\n
+  ...and %d more message types\n
+  ...of which on a net thread: %s parses (%6.2f%% of all), %s bytes\n
   Actual   :
   Comment started here.
   Created %lldms ago, current wait %lldms for %s\n
@@ -43,18 +49,17 @@
   Expected :
   Scope                                                      Calls  Time+Child    Pct        Time    Pct   Avg+Child         Avg        Peak\n
   Ss=%d, Se=%d, Ah=%d, Al=%d
-  f_bavail: %lu\n
-  f_bfree : %lu\n
-  f_blocks: %lu\n
-  f_bsize : %lu\n
-  f_frsize: %lu\n
+  by service method:\n
+  job thread   : %14s parses (%6.2f%%)  %16s bytes (%6.2f%%)\n
   message pending type %d, packets %d, seq [%d, %d], first unacked: %d, size %d\n
   message received seq: %d, size %d\n
   what():
+  worker thread: %14s parses (%6.2f%%)  %16s bytes (%6.2f%%)\n
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !BAllIntraProcessMessagesReceived( %d outstanding )
  %12.06fs %s%s\n
+ %13.3f %11.3f
  %5lld (%5lld)
  %s%lu (%s0x%lx)\n
  ' ) - 3 G M Q _ c e i w }
@@ -83,7 +88,6 @@
  -child-update-ui
  -child-update-ui-socket %d
  -foreground
- 2>/dev/null
  <+%d truncated>
  = { <proto text format> }". To set fields within it, use syntax like "
  Avg Time/Frame (ms)\n
@@ -187,6 +191,7 @@
 !AxU
 !BUseIOCP()
 !H88p
+!HasMessageLengthHeader()
 !IsAlive()
 !V_isempty( prefix )
 !V_isempty( suffix )
@@ -216,25 +221,33 @@
 !m_data.HasError()
 !m_pHTTP2Session
 !m_pInt
+!m_pParsedBody
+!m_pParsedHeader && !m_pParsedBody
 !m_pProtoBufBody
 !m_pReceivedPktFirst || m_pReceivedPktFirst->GetSeq() > m_nTheirSeqReceived
 !m_pReceivedPktFirst || pNextPkt->GetSeq() != m_pReceivedPktFirst->GetSeq()
 !m_pRedirectRequestHandle
 !m_pSSLConnection
+!m_pSSLSendState
+!m_pThreadedSendSink
+!m_pThreadedSendSink || m_listEncryptedSendChunks.Count() == 0
 !m_pWebSocketConnectionCallback
 !m_pszCipher
 !m_pubRecvBuffer
 !m_pubRecvMsg
+!m_pvecLocks || !m_pvecLocks->HasElement( pLock )
 !m_sFrameCur.m_pubPayload
-!m_vecLocks.HasElement( pLock )
 !nghttp2_ksl_it_begin(it)
 !pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
+!pCompletionData->pSSLConnectionToRelease
 !pKeyCallback
 !pLock->BIsLocked()
 !pParent->m_bInDeleteQueue
+!pRecvState->m_pSSLConnectionDirect || BNetInMainThread()
 !pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pTracker->IsClaimed( pKey )
 !pWorkItem->BIsRunning()
+!pWorkItem->m_bDeferCompletion
 !pszString || pszString[nChars] == '\0'
 !pvCallbackCur
 !s_bInittedJobTypeMessageInfo
@@ -334,7 +347,6 @@
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
-#!/bin/sh\nexit 0\n
 #3CScs
 #:*S8,}gNzl
 #ETHw
@@ -426,6 +438,7 @@ $\n k_ESteamReviewScore_VeryPositive
 $\nY8O
 $d`D-laM
 $ffn
+% count
 %$%a%b%V%U%c%Q%W%]%\%[%
 %%%ds | %%9s | %%12s\n
 %%-%ds | %%9d | %%12s\n
@@ -488,6 +501,8 @@ $ffn
 %*sinherit\n
 %*snamingAuthority:
 %*spriv:\n
+%-14s %14s %7.2f%% %16s%s\n
+%-14s %14s %8s %16s%s\n
 %-18s
 %-23s %s Kx=%-8s Au=%-4s Enc=%-9s Mac=%-4s\n
 %.14s.%03dZ
@@ -623,9 +638,6 @@ $ffn
 %appname% can't write to its install dir.
 %appname% is no longer supported on your operating system version.
 %appname% is no longer supported on your operating system version.\n\nClick OK to exit the selected %appname% beta.
-%d MB avail\n
-%d MB free space\n
-%d MB total space\n
 %d frames sampled for %.2f seconds\n
 %d jobs reached caller deadline without aborting since last report\n
 %d total TCP connections exist.\n
@@ -719,6 +731,7 @@ $ffn
 %s/tmp
 %s: %d, %d, %d
 %s: %s returned %s %d (%s), disconnecting TCP connection. %d sends, %lld bytes outstanding %s\n
+%s: %s, by message:\n
 %s: '%s' failed with exit code: %d\n
 %s: '%s', '%s'
 %s: (%d bit)\n
@@ -750,6 +763,7 @@ $ffn
 %s: lseek start failed: %s\n
 %s: mkstemp %s: errno %s\n
 %s: no such process %d - %d\n
+%s: none\n
 %s: pending command too large, truncating
 %s: re-launching steam in SteamRT runtime\n
 %s: read failed: %s\n
@@ -1178,7 +1192,6 @@ $ffn
 (null)
 (r=%d t=%s us=%d)
 (root)
-(size_t) pNetPacket->CubData() >= sizeof( ProtoBufMsgHeader_t )
 (size_t)(p - (uint8_t *)ov_copy) == nov * sizeof(nghttp2_origin_entry) + len + nov
 (stream->flags & NGHTTP2_STREAM_FLAG_DEFERRED_ALL) == 0
 (uint)~0 != hConnection
@@ -1235,10 +1248,12 @@ $ffn
 )\n$k_EMsgEnsureBillingConfigReload_TEST
 )\n$k_EMsgFBSBootstrapperGetPackageChunk
 )\n$k_EMsgFBSBootstrapperPackageResponse
+)\n$k_EMsgFBSQueryHotfixPackagesResponse
 )\n$k_EMsgGCGetAccountDetails_DEPRECATED
 )\n$k_EMsgGCHAccountTradeBanStatusChange
 )\n$k_EMsgGMShellAndServerAddressUpdates
 )\n$k_EMsgProductInfoChangedNotification
+)\n$k_EMsgRemoteClientInstallAppResponse
 )\n$k_EMsgRemoteClientPairWifiAPResponse
 )\n$k_EMsgUCMPublishedFileContentUpdated
 )\n$k_EMsgUCMUpdatePublishedFileResponse
@@ -1342,6 +1357,10 @@ $ffn
 *\n\fjobid_target
 *hbJ1
 *laM-\SO
+*m_pQueuedNetMsgs
+*m_pmapJobsDependentOnUs
+*m_pvecLocks
+*m_pvecResourceAccessRecord
 *pBaseFrameFunction->GetName()
 *pOldMsgInfo->pchMsgName
 *pPtr == pExpectEnd
@@ -1361,7 +1380,6 @@ $ffn
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG{c|
 +2Hp
 +HpXhE
 +QQ 3K%
@@ -1674,6 +1692,7 @@ $ffn
 ../common/registry.cpp
 ../common/scheduledfunction.cpp
 ../common/scheduledfunction.h
+../common/sslinterface.h
 ../common/steamid.cpp
 ../common/string_misc.cpp
 ../common/tcpconnection.cpp
@@ -1837,7 +1856,7 @@ $ffn
 .steam-enable-steamrt64-client
 .steam-first-start-breadcrumb
 .steam/steam/logs
-.steam_exec_test.sh
+.steam_exec_test
 .x7B
 .y4w
 .zip.
@@ -1875,6 +1894,7 @@ $ffn
 /dev/
 /dev/disk/by-uuid
 /dev/hwrng
+/dev/null
 /dev/random
 /dev/srandom
 /dev/tty
@@ -1908,12 +1928,14 @@ $ffn
 /proc/net/route
 /proc/self/exe
 /proc/self/fd
+/proc/self/fd/%d
 /proc/self/maps
 /proc/version
-/run/host/%s
 /run/host/etc/os-release
+/run/host/root/%s
 /sbin/lsof
 /steamrt64
+/steamsysinfo
 /sys/bus/iio/devices
 /sys/class/drm/card0/card0-eDP-1/edid
 /sys/class/hwmon
@@ -1929,8 +1951,6 @@ $ffn
 /tmp/.steam-sem-names
 /tmp/cmd-stderr.XXXXXX
 /tmp/cmd-stdout.XXXXXX
-/tmp/disk-free.XXXXXX
-/ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 /usr/bin/lsof
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
@@ -1942,8 +1962,7 @@ $ffn
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
-/usr/bin/steamos-polkit-helpers/steamos-set-hostname %s
-/usr/bin/steamos-polkit-helpers/steamos-set-timezone %s
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
 /usr/lib/jupiter-dock-updater/jupiter-dock-updater-mock.sh
@@ -2089,6 +2108,8 @@ $ffn
 10CUtlMemoryIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_S1_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringb10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringb10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringy10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringy10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI14CMetricsSymbolb10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI14CMetricsSymbolb10CDefEqualsIS1_E11HashFunctorIS1_ES1_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI4EMsgi10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tEE
@@ -2103,6 +2124,8 @@ $ffn
 10CUtlMemoryIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIiN22CCompletionPortManager11SAssocEntryE10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIiN22CCompletionPortManager11SAssocEntryE10CDefEqualsIiE11HashFunctorIiEiE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIiy10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIiy10CDefEqualsIiE11HashFunctorIiEiE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIjP13MessageInfo_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIjP13MessageInfo_t10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIjP14CTCPConnection10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
@@ -2121,6 +2144,8 @@ $ffn
 10CUtlMemoryIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN14CUDPConnection20ConnectPingResults_tEE
@@ -2133,11 +2158,13 @@ $ffn
 10CUtlMemoryIN14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN17CHTTPRequestCache19CachedFileLRUData_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN18COpenSSLConnection13JobWakeData_tEiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListIN18COpenSSLConnection20EncryptedSendChunk_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN4CNet21NetConnectionWakeUp_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN7CJobMgr13JobYielding_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP10CCoroutineiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP10CNetPacketiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP18CHTTPRequestHandleiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListIP18COpenSSLConnectioniE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP22CBaseScheduledFunctioniE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIPN18COpenSSLConnection15COutgoingBufferEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIiiE10ListElem_tEE
@@ -2148,6 +2175,7 @@ $ffn
 10CUtlMemoryIN16CCookieContainer11CCookieInfoEE
 10CUtlMemoryIN17CWorkItemPipeline7BarrierEE
 10CUtlMemoryIN21CScheduledFunctionMgr15ScheduledItem_tEE
+10CUtlMemoryIN4CJob14QueuedNetMsg_tEE
 10CUtlMemoryIN4CJob22ResourceAccessRecord_tEE
 10CUtlMemoryIN6ConVar22ConVarChangeCallback_tEE
 10CUtlMemoryIN7CJobMgr12JobTimeout_tEE
@@ -2177,6 +2205,7 @@ $ffn
 10CUtlMemoryIiE
 10CUtlMemoryIjE
 10CUtlMemoryIwE
+10CUtlMemoryIyE
 10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeI16CStringPoolIndexIiEiN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES1_E
@@ -2220,6 +2249,7 @@ $ffn
 10CUtlVectorIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_S1_E12HashBucket_tE10CUtlMemoryISD_EE
 10CUtlVectorIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_S1_E12HashBucket_tE10CUtlMemoryISC_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringb10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
+10CUtlVectorIN11CUtlHashMapI10CUtlStringy10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI14CMetricsSymbolb10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS7_EE
 10CUtlVectorIN11CUtlHashMapI4EMsgi10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS7_EE
 10CUtlVectorIN11CUtlHashMapIN11CHTTPClient12HostLookup_tEN14CUtlHashMapLRUIS2_NS1_20AddrConnectionInfo_tENS2_2EqENS2_4HashEE15ElementBucket_tES5_S6_S2_E12HashBucket_tE10CUtlMemoryISA_EE
@@ -2227,6 +2257,7 @@ $ffn
 10CUtlVectorIN11CUtlHashMapIPKcP13MessageInfo_t24CDefCaselessStringEquals22CDefCaselessStringHashS2_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIiN22CCompletionPortManager11SAssocEntryE10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tE10CUtlMemoryIS8_EE
+10CUtlVectorIN11CUtlHashMapIiy10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN11CUtlHashMapIjP13MessageInfo_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIjP14CTCPConnection10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIjP14CUDPConnection10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS8_EE
@@ -2236,6 +2267,7 @@ $ffn
 10CUtlVectorIN11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE12HashBucket_tE10CUtlMemoryIS8_EE
+10CUtlVectorIN11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN14CUDPConnection20ConnectPingResults_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN15CBaseFileSystem10FindData_tE10CUtlMemoryIS1_EE
@@ -2244,6 +2276,7 @@ $ffn
 10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS1_EE
 10CUtlVectorIN17CWorkItemPipeline7BarrierE10CUtlMemoryIS1_EE
 10CUtlVectorIN21CScheduledFunctionMgr15ScheduledItem_tE10CUtlMemoryIS1_EE
+10CUtlVectorIN4CJob14QueuedNetMsg_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4CJob22ResourceAccessRecord_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN7CJobMgr12JobTimeout_tE10CUtlMemoryIS1_EE
@@ -2272,6 +2305,7 @@ $ffn
 10CUtlVectorIi10CUtlMemoryIiEE
 10CUtlVectorIj10CUtlMemoryIjEE
 10CUtlVectorIw10CUtlMemoryIwEE
+10CUtlVectorIy10CUtlMemoryIyEE
 10ConCommand
 10IAppSystem
 11CDirWatcher
@@ -2286,6 +2320,7 @@ $ffn
 11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS0_9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES6_S8_S0_E
 11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS0_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES5_S7_S0_E
 11CUtlHashMapI10CUtlStringb10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
+11CUtlHashMapI10CUtlStringy10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI14CMetricsSymbolb10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
 11CUtlHashMapI4EMsgi10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
 11CUtlHashMapIN11CHTTPClient12HostLookup_tEN14CUtlHashMapLRUIS1_NS0_20AddrConnectionInfo_tENS1_2EqENS1_4HashEE15ElementBucket_tES4_S5_S1_E
@@ -2293,6 +2328,7 @@ $ffn
 11CUtlHashMapIPKcP13MessageInfo_t24CDefCaselessStringEquals22CDefCaselessStringHashS1_E
 11CUtlHashMapIPKci10CDefEqualsIS1_E11HashFunctorIS1_ES1_E
 11CUtlHashMapIiN22CCompletionPortManager11SAssocEntryE10CDefEqualsIiE11HashFunctorIiEiE
+11CUtlHashMapIiy10CDefEqualsIiE11HashFunctorIiEiE
 11CUtlHashMapIjP13MessageInfo_t10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjP14CTCPConnection10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjP14CUDPConnection10CDefEqualsIjE11HashFunctorIjEjE
@@ -2302,6 +2338,7 @@ $ffn
 11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE
 11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE
+11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE
 11CWorkThread
 11IFileSystem
@@ -2370,11 +2407,13 @@ $ffn
 14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE
 14CUtlLinkedListIN17CHTTPRequestCache19CachedFileLRUData_tEiE
 14CUtlLinkedListIN18COpenSSLConnection13JobWakeData_tEiE
+14CUtlLinkedListIN18COpenSSLConnection20EncryptedSendChunk_tEiE
 14CUtlLinkedListIN4CNet21NetConnectionWakeUp_tEiE
 14CUtlLinkedListIN7CJobMgr13JobYielding_tEiE
 14CUtlLinkedListIP10CCoroutineiE
 14CUtlLinkedListIP10CNetPacketiE
 14CUtlLinkedListIP18CHTTPRequestHandleiE
+14CUtlLinkedListIP18COpenSSLConnectioniE
 14CUtlLinkedListIP22CBaseScheduledFunctioniE
 14CUtlLinkedListIP25CWorkItemNetFilterEncryptiE
 14CUtlLinkedListIP8CFunctoriE
@@ -2533,7 +2572,11 @@ $ffn
 20CWorkItemSetFileSize
 20CWorkItemWithTimeout
 20IHTTPRedirectHandler
+20ISSLThreadedSendSink
 20IUniformRandomStream
+21:03:00
+21:03:04
+21:03:05
 21CClanAnnouncementInfo
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
@@ -2546,9 +2589,6 @@ $ffn
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21UserSystemInformation
-22:49:40
-22:49:44
-22:49:45
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2583,6 +2623,7 @@ $ffn
 25INetSSLConnectionCallback
 26CActivationCodePackageInfo
 26CHTTPCacheInitializeThread
+26CSSLFramedRecvMsgCollector
 26CWorkItemHTTPClientRequest
 26CWorkItemZeroAndFreeBuffer
 27;C
@@ -2622,6 +2663,7 @@ $ffn
 3-WH
 30!]^JV
 3072
+30000
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819D300D06092A864886F70D010101050003818B00308187028181009957897BBA6BF554958165AE91669D08C2D35DC2803CC6929C233862D48626877CABA0DAE1DA4186142B546CBB74AD117795EC13EAE021793C2DDD26031B16E0F9DADC9E23F8288E57A2D8593EA7402158B451F1C39632C9987FA6C84DEC057D8B88526B5C629B2CD0C0C5516B15CB1E46415E8ABB9B8FC05546DF2D4AD55F6D020111
 30819D300D06092A864886F70D010101050003818B0030818702818100AAA1281C05F4EFD6207BA11B78BA957C43B3760BD2B8AC8BA664B5BA237FC4475A16B9AABCB94EB72D0B9DEC12B6C113F896A11938CBD33EEEF70BB3DB09B37488FD95FCE9706A75EB6D8060B756CAD693981492404228649BDE9BD63148873BB23CD2894998F34975CA8E5191642E5F437C8A6F6C546A57C7DB859A0189FD35020111
@@ -2702,7 +2744,6 @@ $ffn
 40 Mbps
 4000
 4096
-30000
 41CHTTPDefaultRedirectEnableHandlerInternal
 41CNetConnectionImmediateDisconnectWorkItem
 42CClientMetrics_ClientBootstrap_RequestInfo
@@ -2762,9 +2803,9 @@ $ffn
 6-nn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
+60000000
 64CK\vH
 65536
-60000000
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2976,6 +3017,7 @@ $ffn
 @MaxOutstandingSendThreadItemFatalAssert
 @MaxOutstandingSendThreadItemFatalAssertSecondsAtLimit
 @MaxOutstandingSendThreadItemSleep
+@bAssertOnProtoBufBodyMismatch
 @bCallerDeadlineAbortJobDisableWhenHTTPReqStart
 @bEnableFrameFuncOverageWarnings
 @bEnableHTTP2OnAllCHTTPClients
@@ -2984,9 +3026,16 @@ $ffn
 @bEnableSpewThrottle
 @bHttpClientRecordHostnameDimension
 @bLogMessageToProtobufClass
+@bMeasureSSLLatencyStats
 @bMetricsEnabled
 @bMsgErrorDump
 @bProfileYieldsInTestSuiteJobs
+@bProtoBufNetPacketDropRawBytes
+@bProtobufParseSizeProfile
+@bProtobufParseTimeProfile
+@bSSLThreadedMsgParse
+@bSSLThreadedMsgParseRelayedBodies
+@bSSLThreadedSendDelivery
 @c5U
 @cMinimumJobTimeoutsToCheckPerFrame
 @cNetEncryptionHandshakeWorkMax_HighPri
@@ -3017,6 +3066,8 @@ $ffn
 @nSpewThrottleTriggerThreshold
 @nSpewThrottleUnconditionalResumeMs
 @nSpewThrottleUnconditionalTriggerCount
+@nThreadedProtobufParseMinBytes
+@nThreadedProtobufParseThreads
 @net_backlog_bytes_allowed
 @net_backlog_time_allowed_sec
 @net_loopback
@@ -3348,6 +3399,7 @@ Already Owned
 Already Purchased
 Already Redeemed
 Already saw decimal point or exponent; can't have another one.
+Also time each protobuf body parse, so protobuf_parse_stats can report time per size bucket and how much parse time actually moved off the job thread.  Off by default - it adds two clock samples per parse.
 Always Blocked
 American Express
 Amex (BoaCompra)
@@ -3390,6 +3442,7 @@ Artwork
 ArtworkPublished
 Ascending
 Assamese
+Assert when a body parsed ahead of the main thread is not the type the handler builds.  See\n'protobuf_parse_stats' for the running count and which messages it happened to.
 Assert( %s ):%s:%d\n
 Assertion Failed: stack%2d: %s
 Assertion Failed: stack%2d: %s (%d): %s
@@ -3479,6 +3532,13 @@ BFileExists( m_FontFileLight )
 BFileExists( m_FontFileRegular )
 BFileExists( str )
 BFilesystemAllowsExecution Yielding IO Job
+BFilesystemAllowsExecution: couldn't read %s\n
+BFilesystemAllowsExecution: execute test timed out\n
+BFilesystemAllowsExecution: failed to copy %s to %s: %s\n
+BFilesystemAllowsExecution: failed to get exit code\n
+BFilesystemAllowsExecution: failed to reopen fd: %d\n
+BFilesystemAllowsExecution: failed to write %s: %s\n
+BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BHandleTCPMessageData - buffered
 BHandleTCPMessageData - unbuffered
@@ -3601,6 +3661,8 @@ BResolveHostString - unexpected DNS lookup flag '%d'\n
 BRouteWorkItemCompleted called for a job that could not be found!\n
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
 BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
+BSetSteamAutoStart: failed to copy %s to %s\n
+BSetSteamAutoStart: failed to create directories for %s\n
 BStarted()
 BT]Q@
 BTcq
@@ -4176,6 +4238,7 @@ CJob::BYieldingWaitForServiceMethodResponse - Received message of type %s with s
 CJob::BYieldingWaitForServiceMethodResponse - Received mismatched message type (%d instead of %d) for service method %s\n
 CJob::BYieldingWaitForServiceMethodResponse expected service method %s but received an empty service method
 CJob::BYieldingWaitForServiceMethodResponse expected service method %s but received service method %s
+CJob::BYieldingWaitForWorkItemAcks asked to wait on %d work items
 CJob::Heartbeat
 CJob::OnCallerDeadlineReached
 CJob::StartJob() called twice on job %s\n
@@ -4203,10 +4266,12 @@ CJobMgr::BRouteGenericToJob() job %s received unexpected generic event
 CJobMgr::BRouteMsgToJob() - continue job
 CJobMgr::BRouteMsgToJob() - job
 CJobMgr::BRunNewJobsFromNetMessages
+CJobMgr::BYieldingWaitForMsg() job %s discarding queued message %s, waiting for %s\n
 CJobMgr::DumpJobCategoryData - job type %s is waiting on a lock with no owning job
-CJobMgr::PassMsgToJob() job %s received unexpected message %s when paused for %s\n
+CJobMgr::PassMsgToJob() job %s dropping message %s, %d already queued while paused for %s\n
 CJobMgr::SetWaitDetails
 CJobMgr::TimeoutJob
+CJobMgr::m_PBParseThreadPool
 CJobMgr::m_WorkThreadPool
 CKeyValuesSystem
 CKeyValuesSystem dumping last %u keys added to system (oldest first):\n
@@ -4350,12 +4415,14 @@ CMsgProtobufWrapped
 CNet
 CNet Encrypt
 CNet Globals
+CNet Handshake
 CNet Resolver
 CNet class was not initialized
 CNet::AsyncConnect - not a valid address: '%s'.
 CNet::AsyncConnect: somebody is trying to connect to 0xcdcdcdcd.  Uninitialized memory?
 CNet::BAsyncSend
 CNet::BAsyncSend (swap)
+CNet::BAsyncSend (swap, reserved)
 CNet::BFrameFuncHandleCompletedWorkItems
 CNet::BFrameFuncPollConnections
 CNet::BFrameFuncRunHosts
@@ -4416,13 +4483,16 @@ COpenSSLConnection(%c%p) made no progress: %s (%u in %d out)
 COpenSSLConnection(%c%p) waiting in connect: %s (last err = %d)\n
 COpenSSLConnection(c%p) reused session certificate was previously accepted, now rejected by callback\n
 COpenSSLConnection::BAsyncSend
+COpenSSLConnection::BAsyncSend (prefixed)
 COpenSSLConnection::BAsyncSend (swap)
+COpenSSLConnection::BAsyncSend prefix + payload size overflow
 COpenSSLConnection::BAsyncUnbufferedSend
 COpenSSLConnection::BYieldingWaitForSendsCompleted
 COpenSSLConnection::COpenSSLConnection
 COpenSSLConnection::OnThreadedWorkItemCompleted
 COpenSSLConnection::QueueRunSSL - actual
 COpenSSLConnection::RecvPkt
+COpenSSLConnection::ThreadedFlushEncryptedSendChunks
 COpenSSLConnection::ThreadedPerformInitialHandshake
 COpenSSLConnection::ThreadedPerformRead
 COpenSSLConnection::ThreadedPerformWrite
@@ -4431,6 +4501,7 @@ COpenSSLConnection::ThreadedPerformWrite received an empty buffer
 COpenSSLConnection::ThreadedRunSSL
 COpenSSLConnection::ThreadedRunSSL iter
 COpenSSLConnection::ThreadedTransferWorkToThread
+COpenSSLConnection::ValidateStatics
 COpenSSLContext
 COpenSSLContext::COpenSSLContext()
 COpenSSLWrapper
@@ -4461,11 +4532,15 @@ CProcessEnvironmentManager::setenv called with no value
 CProcessEnvironmentManager::setenv invalid index %d\n
 CProtoBufMsg::BAsyncSend
 CProtoBufMsg::BAsyncSendInternal
+CProtoBufMsg::BPrepareParseFromPacket( IMsgNetPacket )
 CProtoBufMsg::InitFromPacket( IMsgNetPacket )
 CProtoBufMsg::InitHeaderFromPacket( IMsgNetPacket )
+CProtoBufMsg::YieldingParseAndFinishBatch( IMsgNetPacket )
 CProtoBufMsgBase::ExpectingReply
 CProtoBufMsgBase::SerializeWriteBytes
+CProtoBufMsgValidateStatics
 CProtoBufNetPacket::RebuildPacketIfNeeded (needed)
+CProtoBufNetPacket::RebuildRawPacketIfDropped
 CQueuedLambdaRunner::BFrameFuncRunQueuedFunctions
 CRC error
 CRC32_ProcessBuffer
@@ -4488,6 +4563,7 @@ CRYPTO_new_ex_data
 CRYPTO_ocb128_copy_ctx
 CRYPTO_ocb128_init
 CRYPTO_set_ex_data
+CSHA1::HashFile
 CSHA1::Update
 CSPAuth
 CSPName
@@ -4530,8 +4606,11 @@ CTCPConnection::BInternalAsyncSend - MsgAlloc
 CTCPConnection::BInternalAsyncSend - memcpy
 CTCPConnection::BInternalAsyncSend(): Outstanding sends has reached %lld bytes.  Connection %d to %s with %d outstanding bytes self-destructing. Backlogged for %d seconds.
 CTCPConnection::BInternalAsyncSend(): Outstanding sends has reached %lld bytes.  Connection %d to %s with %d outstanding bytes, backlogged for %d seconds, self-destructing.\n
+CTCPConnection::BInternalAsyncSendTakeOwnership
 CTCPConnection::BPollConnection
 CTCPConnection::BProcessPendingSends
+CTCPConnection::BeginAsyncRecv: PostIOCPMessage failed, disconnecting.\n
+CTCPConnection::CSSLSendState::ThreadedSendEncryptedDataTakeOwnership
 CTCPConnection::CloseSocket()
 CTCPConnection::DestroyAllForOwner
 CTCPConnection::DispatchWorkItemToJob
@@ -4654,6 +4733,7 @@ CWebSocketConnection::InternalGetWebSocketConnection called without calling CWeb
 CWebSocketConnectionDelayedCloseConnectionWorkItem
 CWebSocketConnectionDelayedCloseConnectionWorkItem::ThreadProcess
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
+CWorkItem::SetOrderingKey must be called before AddWorkItem
 CWorkItemGetAvailableDrives
 CWorkItemGetAvailableDrives::ThreadProcess
 CWorkItemGetFileSystemStableId
@@ -4690,17 +4770,20 @@ CWorkItemZeroAndFreeBuffer
 CWorkItemZeroAndFreeBuffer - SecureZeroMemory+delete
 CWorkItemZeroAndFreeBuffer::ThreadProcess
 CWorkThread -- GetNextWorkItemToProcess
-CWorkThread -- OnWorkItemCompleted - ordered
-CWorkThread -- OnWorkItemCompleted - unordered
+CWorkThread -- OnWorkItemCompleted
 CWorkThread -- Sleep
 CWorkThreadPool - Check SetEvent
 CWorkThreadPool - SetEvent()
 CWorkThreadPool - Signal Thread Event
 CWorkThreadPool can't support item auto resubmission when ensuring output ordering
 CWorkThreadPool::BTryDeleteExitedWorkerThreads
+CWorkThreadPool::SetEnsureOutputOrdering must be set before any work item is added
 CWorkThreadPool::StartWorkThread: Thread creation failed.\n
 CWorkThreadPool::StartWorkThreads: called with no threads in the pool, this is probably a bug.\n
+CWorkThreadPool::StopWorkThreads: giving up after %dms with %d deferred work item(s) outstanding; continuing shutdown.\n
+CWorkThreadPool::StopWorkThreads: still waiting on %d deferred work item(s) after %dms.\n
 CWorkThreadPool::~CWorkThreadPool(): Thread pool %s shutdown incorrectly.\n
+CWorkThreadPool::~CWorkThreadPool: %d items were waiting on output ordering, discarded.\n
 CWorkThreadPool::~CWorkThreadPool: work complete queue not empty, %d items discarded.\n
 CWorkThreadPool::~CWorkThreadPool: work processing queue not empty: %d items discarded.\n
 CYieldingScopedJobLock failed - there is no indication to the caller!!!
@@ -4955,6 +5038,7 @@ Copying
 Copyright (C) 2010, Thomas G. Lane, Guido Vollbeding
 Copyright Violation
 Coroutine '%s' stack save size is %d bytes
+Coroutine stack bookkeeping error
 Coroutine_IsActive()
 Corrupt JPEG data: %u extraneous bytes before marker 0x%02x
 Corrupt JPEG data: bad Huffman code
@@ -4981,7 +5065,8 @@ Couldn't chdir into the install path
 Couldn't create cache directory %s, got error %d
 Couldn't open .bsp %s for embedded pack file check\n
 Couldn't parse default value "
-Couldn't write %s: %s\n
+CountLocks(): %d, locks[0]: (0x%p), pLock: 0x%p, this: 0x%p\n
+CountLocks(): %d, this: 0x%p, pLock = 0x%p\n
 CountryCode
 Coupon has expired
 Create process failed
@@ -5038,7 +5123,6 @@ DATA_LOSS
 DB Lookup CD-Key
 DBF-
 DBG_PATHMATCH
-DBG_STAT
 DCT coefficient out of range
 DCT scaled block size %dx%d not supported
 DD.9
@@ -5829,7 +5913,6 @@ EventType
 Exception validating current work item
 Excluded
 ExecVPENoReturn
-Execute: %s\n
 Exhausted list of download hosts
 Existing cancelled license
 Exiting on SPEW_ABORT\n
@@ -5946,10 +6029,9 @@ Failed Dependency
 Failed loading registry KV.
 Failed loading trust store: %s\n
 Failed parsing ProtoBuf body %s out of message: %s(%d)
+Failed setting ForceQuiet
 Failed setting downloads
 Failed setting updates
-Failed system(%s) in execute test: %d %s\n
-Failed system(%s) in execute test: %d\n
 Failed to apply update, reverting...
 Failed to capture callstack
 Failed to clear up temporary update files used for rollback, continuing anyway
@@ -6005,7 +6087,6 @@ Failed to unzip item %d (%s)\n
 Failed to unzip package (%s)
 Failed to unzip symlink %d (%s)\n
 Failed to verify manifest
-Failed writing http cache file to disk
 Failed! http%s://%s%s\n
 Failed!999 Web Socket connect failure http%s://%s%s\n
 Failing manifest download with http error %d
@@ -6107,7 +6188,6 @@ Frame requires too much memory for decoding
 Fraud Check Failed
 Free
 Free Weekend
-Free disk space for %s would overflow
 FreeDeletedPackets
 Freed EMS handle %u
 Freed XMS handle %u
@@ -6375,7 +6455,6 @@ HMAC routines
 HMAC-MD5
 HMAC-SHA1
 HOME
-HTTP Cache file delete failed
 HTTP Connection (%p) (connection handle %X) destructing! - Dispatching pending request (%p)\n
 HTTP Connection (%p) Dispatching pending request (%p) as failed due to AsyncAbort() called before send\n
 HTTP Connection (%p) Dispatching pending request (%p) as failed due to failure sending\n
@@ -6419,6 +6498,7 @@ Hash Algorithm:
 Hausa
 Header compression/decompression error
 Header of Literals' block doesn't respect format specification
+Header-only net packet whose pre-parsed header and body went elsewhere - nothing left to parse
 Headline
 Headphones
 Headset
@@ -7165,8 +7245,10 @@ Master Subscription
 MasterCard
 MasterPackageID
 Mastercard (BoaCompra)
+MatchCaseInsensitivePathIfAvailable: in slow path
 Matched '%s' -> '%s'\n
 Max block allocation size for PB arena
+Max worker threads in the dedicated pool used for threaded protobuf body parses (see @nThreadedProtobufParseMinBytes).  Changes take effect live.
 MaxProtocol
 MaxResults
 MaxUseCount
@@ -7310,8 +7392,10 @@ N11SteamStdLib12CCommandLineE
 N11SteamStdLib12ICommandLineE
 N14CNetConnection22SSLNetConnectionData_tE
 N14CTCPConnection11RecvState_tE
+N14CTCPConnection13CSSLSendStateE
 N14CUtlHashMapLRUI10CIPAndPortN11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tE
 N14CUtlHashMapLRUIN11CHTTPClient12HostLookup_tENS0_20AddrConnectionInfo_tENS1_2EqENS1_4HashEE15ElementBucket_tE
+N15CWorkThreadPool12OrderGroup_tE
 N16CCookieContainer11CCookieInfoE
 N16SteamThreadTools7CThreadE
 N17CFileWriterThread14CFileWriteItemE
@@ -7321,6 +7405,7 @@ N17CHTTPRequestCache19CachedFileLRUData_tE
 N17CHTTPRequestCache30RequestWaitingValidationData_tE
 N19CQueuedLambdaRunner16QueuedFunction_tE
 N1e\n*
+N4CJob15QueuedNetMsgs_tE
 N4vgui9ILocalizeE
 N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat17FieldValuePrinterE
@@ -7467,6 +7552,7 @@ NIST/X9.62/SECG curve over a 192 bit prime field
 NJ2"v
 NO ACTION
 NO X509_NAME
+NOTE: @bProtobufParseSizeProfile is 0, so the histogram below is not being updated.\n
 NOTICEREF
 NOT_FOUND
 NO_ERROR
@@ -8152,6 +8238,8 @@ Parental Settings
 Parental control blocked
 ParentalSetup
 ParityStripe
+Parse framed Steam3 message headers and bodies on the SSL work thread, as well as framing them there.  Read per message, so it takes effect live.
+Parse protobuf message bodies of at least this many bytes on a worker thread instead of on the job thread.  0 disables threaded parsing entirely.
 Partial Content
 Partial refund
 Partner Member
@@ -8221,6 +8309,7 @@ Pii[2cc
 PinValidda
 Ping
 Piracy or Cheats
+Plaintext delivered to a stream connection that is not framing on the SSL thread
 Plat_GetExecutablePath returned false
 PlatformSocketsInit failed, error %s (%d)
 Player Name History
@@ -8231,6 +8320,8 @@ Poly1305
 Polynomial:
 Portuguese
 PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PostCode
 PostRecv
 PostTime
@@ -8238,6 +8329,9 @@ PostedAnnouncement
 PosterID
 Potential overflow in png_zalloc()
 Pragma
+Pre-parse the bodies of service methods that execute on the client.  Off by default: the only\nservers those pass through - CM and UDS - relay them by header and never look at the body, so\nparsing it here is work nobody on this side consumes.  Watch 'protobuf_parse_stats'.
+Pre-parsed body type disagrees with the handler for %s%s%s: parsed as %s, handler wants %s
+Pre-parsed net packet header is not a CMsgProtoBufHeader, parsing it again
 Preallocating
 Precondition Failed
 Precondition Required
@@ -8491,6 +8585,7 @@ Rate Limit Exceeded
 Raw stream mode only supported for TCP connections
 Rbg.E
 ReLaunchCmdLine
+ReOpenFd: failed to reopen: %s: %s\n
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
 Read Error
@@ -8505,6 +8600,7 @@ Ready to run
 ReallyBigKey
 ReapProcess
 Reasons
+Reboot required before updates can install
 Rebuild
 Received a message with timeout=0.  Caller should not have sent it
 Received bad client magic byte string
@@ -8548,6 +8644,8 @@ ReexecToLauncher: proceeding in current environment\n
 Refundable
 Refunded
 Refunded to wallet
+Refusing HTTP/2 request to %s, path contains control characters\n
+Refusing request to %s, URL or a header contains control characters\n
 Region Locked
 Region Restriction Expired
 Region not supported
@@ -8557,6 +8655,7 @@ Registered ID:
 Registry
 Relay Failed
 Release State Override
+Release the raw packet bytes of an inbound message whose header and body were both parsed for us, rebuilding them on demand for the few callers that want them.  Also read by the SSL work thread, which then never copies those bytes out of its read buffer in the first place.  Watch 'protobuf_parse_stats' for how often that happens.
 ReleaseCleared() can only be used on a RepeatedPtrField not on
 ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena,
@@ -8800,11 +8899,13 @@ SSL server
 SSL::OnThreadedWorkItem - CompleteUnbuffered
 SSL::OnThreadedWorkItem - HandshakeCompleted
 SSL::OnThreadedWorkItem - QueueZeroBuffer
+SSL::OnThreadedWorkItem - RecvFramedMsgs
 SSL::OnThreadedWorkItem - RecvPlainText
 SSL::OnThreadedWorkItem - ReleasePackets
 SSL::OnThreadedWorkItem - SendEncryptedData
 SSL::ThreadedPerformRead - Realloc
 SSL::ThreadedPerformRead - SecureZeroMemory
+SSL::ThreadedZeroConsumedRecvPlaintext
 SSL::WakeJobsWaitingOnSends
 SSLERR
 SSLOK
@@ -9013,7 +9114,7 @@ Sending of an email failed
 Sending up to %u queued request(s) for %s\n
 Sent message: %s - %u bytes\n
 Sentiment
-Sep  2 2026
+Sep  9 2026
 September
 Serbian
 SerialNumber
@@ -9051,6 +9152,8 @@ SetInt64
 SetJobWaitDetailsConst
 SetJobWaitDetailsFormat
 SetRawDataAndWipeInput( tmp, cbData )
+SetRecvStreamParser is for stream connections only
+SetRecvStreamParser must be called before any data flows
 SetRepeatedBool
 SetRepeatedDouble
 SetRepeatedEnum
@@ -9275,7 +9378,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Sep  2 2026 22:49:45
+Startup - updater built Sep  9 2026 21:03:04
 State
 StaticFileWriterThread()
 Steam
@@ -9290,7 +9393,6 @@ Steam client out of date
 Steam data link does not exist, client is misconfigured, cannot continue: %s
 Steam does not run in VirtualBox with 3D acceleration enabled. Try turning off 3D acceleration.
 Steam is already running, exiting (command line was forwarded).\n
-Steam needs to be online to update.\t Please confirm your network connection and try again.
 Steam.cfg
 Steam/Press Master
 Steam2 Migration Complete
@@ -9713,7 +9815,7 @@ This is an S/MIME signed message%s%s
 This program requires version
 This program was compiled against version
 This shouldn't be called if all the sizes are equal.
-This system does not meet the requirements to run Steam.
+This system does not meet the requirements to run Steam.\n\n
 This turns on the spew in SPEW_MISC at level 4, still need to adjust spew levels to see it.
 Thread "%s" (ID %d) failed to shut down\n
 Thread cannot be joined with self
@@ -9724,6 +9826,7 @@ Thread synchronization object is unuseable
 Thread(0x%p/0x%p/0x%x)
 ThreadGetProcessExitCode
 ThreadInMainThread()
+ThreadedParsePacketToProtoBufMsg
 ThreadedPerformInitialHandshake SSL_do_handshake
 ThreeHours
 Thursday
@@ -9770,6 +9873,7 @@ Total of %u buckets with %u hash collisions\n
 TotalDiscount
 Touch'n Go
 TracerPid:
+Track a histogram of protobuf message body sizes as they are parsed.  See the protobuf_parse_stats console command.
 Tracked allocs currently in use. %d Total %d\n
 Trade
 Trade Fee
@@ -9970,6 +10074,7 @@ Unsupported marker type 0x%02x
 Unsupported max Symbol Value : too large
 Unsupported parameter
 Unsupported: type mismatch
+Unusable send header reserve of %u bytes
 Unused
 Update Optional
 Update Paused
@@ -10253,6 +10358,8 @@ WindowsHome
 Wolof
 Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 Work Item (%s) for Work Pool %s completed but job no longer existed to notify\n
+Work pool %s completed an item with no order group, dispatching unordered
+Work pool %s ensures output ordering, it must be drained via BDispatchCompletedWorkItems()
 Work thread '%s' is marked exited, but we could not immediately join prior to deleting -- proceeding without join\n
 Workshop
 Workshop Items
@@ -10646,6 +10753,7 @@ Zulu
 [no name available]
 [num threads]
 [packed = true] can only be specified for repeated primitive fields.
+[reset] Dump the histogram of protobuf message body sizes parsed, and how many were parsed on a worker thread
 [uCu
 [ucS
 [wait queue]
@@ -10969,7 +11077,6 @@ __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
 __int128
-__isoc99_fscanf
 __isoc99_sscanf
 __isoc99_swscanf
 __iswctype_l
@@ -10983,6 +11090,8 @@ __nl_langinfo_l
 __printf_chk
 __pthread_key_create
 __register_atfork
+__sched_cpualloc
+__sched_cpufree
 __snprintf_chk
 __sprintf_chk
 __stack_chk_fail
@@ -11622,7 +11731,11 @@ bn_set_words
 bn_to_asn1_string
 bnrand
 bnrand_range
+bodies pre-parsed and never used (%s bytes)
+bodies skipped as client-relayed
 body
+body pre-parses discarded by a second wrapper
+body size
 bool
 bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
 boolean
@@ -11662,6 +11775,8 @@ buf error
 buf->pos == buf->last
 buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
 bufDataChunk.TellPut() > 0
+bufDataToSwap.TellPut() >= (int)cubReserved
+bufDataToSwap.TellPut() >= (int)cubReservedForHeader
 bufRGB.TellPut() == nWidth*nHeight*3
 bufRGBA.TellPut() == nWidth*nHeight * 4
 buf[0] == expect_tag
@@ -12235,6 +12350,7 @@ controller_xbox360
 controller_xboxelite
 controller_xboxone
 controller_zotac_zone
+convar changed
 convar_
 cooki
 cookie
@@ -12633,6 +12749,7 @@ cubDecryptedData + 16 <= (uint) m_pNetPacket->CubData()
 cubEncryptedData
 cubEncryptedData > 0
 cubEncryptedData >= cubTotalOutput
+cubFixedHeader && cubOriginalData >= cubFixedHeader
 cubIV
 cubIV >= k_nSymmetricBlockSize
 cubIncoming >= 0
@@ -12643,6 +12760,7 @@ cubMsgByteSize <= INT_MAX
 cubMsgRemaining > 0
 cubMsgSizeMax >= 0
 cubPkt < V_ARRAYSIZE( m_rgPacketData )
+cubPkt > 0
 cubPkt >= sizeof ( UDPPktHdr_t )
 cubPlaintextData
 cubPlaintextData > 0
@@ -12911,7 +13029,6 @@ disconnected
 discriminant is zero
 discussion_url
 disk
-disk-free command failed\n
 diskSize
 distinguishedName
 distpoint
@@ -13069,6 +13186,7 @@ eKeyType == k_ECryptoKeyTypeRSAPublic
 eMsg != k_EMsgInvalid
 eNULL
 ePts
+eVerifyLevel == EVerifyLevel::k_EQuick
 eXIf
 e\Gg77
 e\roL
@@ -13320,6 +13438,7 @@ exec
 execl
 execl failed, errno %d\n
 execv
+execve
 execvp
 execvpe
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
@@ -13413,6 +13532,7 @@ falseB
 fastly
 fatal
 favouriteDrink
+fchmod
 fclose
 fcntl
 fdatasync
@@ -13508,7 +13628,6 @@ fontFileDecrypted.opentype_font_data().size() <= INT_MAX
 font_file_name
 fopen
 fopen %s failed: %s\n
-fopen tmpfile failed\n
 fopen('
 fopen64
 forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
@@ -13549,7 +13668,6 @@ from
 fsSWR
 fs_debug
 fs_debug: %s\n
-fscanf disk-free output failed\n
 fseek
 fseeko64
 fstat
@@ -13585,6 +13703,16 @@ g_mapLegacyJobMetrics
 g_mapMetricsDisabledCatalogs
 g_mapMetricsDisabledOperations
 g_mapMetricsEnabledOperations
+g_mapProtoBufBodyAdoptedByEMsg
+g_mapProtoBufBodyCopiedByEMsg
+g_mapProtoBufBodyMismatchByEMsg
+g_mapProtoBufBodyMismatchByName
+g_mapProtoBufBodyNeverUsedByEMsg
+g_mapProtoBufNetThreadBodySkippedRelayByEMsg
+g_mapProtoBufNetThreadBodyTypeUnknownByEMsg
+g_mapProtoBufPreParseDiscardedByEMsg
+g_mapProtoBufRawReadsByEMsg
+g_mapProtoBufRawReadsByName
 g_pAllFutureSharedStates
 g_pFioAsyncEnqueue == NULL
 g_pFioAsyncFinalize == NULL
@@ -13675,7 +13803,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenhA:
+ggen
 givenName
 glBegin
 glBindTexture
@@ -13905,6 +14033,7 @@ head
 head_stream
 header crc mismatch
 header too long
+header-only packets with no parsed pair left: %s !!\n
 headers_frame->hd.type == NGHTTP2_HEADERS
 headline
 heartbeat request already pending
@@ -13950,6 +14079,8 @@ host
 host=
 hostname
 hosts
+hotfix finished
+hotfix started
 hour
 hours
 houseIdentifier
@@ -14705,6 +14836,7 @@ is_websocket_connect
 isalnum
 isalpha
 isbundle
+iscntrl
 isinbundle
 isspace
 issuer
@@ -14748,6 +14880,7 @@ java_generic_services
 java_multiple_files
 java_outer_classname
 java_string_check_utf8
+job pool
 job.m_STimePauseTimeout.LTime() >= CSTime::LServerTimeCur()
 job.m_ePauseReason == k_EJobPauseReasonWaitingForLock
 job.m_pWaitingOnWorkItem == NULL
@@ -15110,11 +15243,8 @@ k_EMsgAMXsollaPayment
 k_EMsgAMXsollaPaymentResponse
 k_EMsgATSCSPerfTestResponse
 k_EMsgATSCSPerfTestTask
-k_EMsgATSCallTest
-k_EMsgATSCallTestReply
 k_EMsgATSCycleTCM
 k_EMsgATSExternalStressJobStart
-k_EMsgATSInitDRMSStressTest
 k_EMsgATSRunFailServerTest
 k_EMsgATSStartExternalStress
 k_EMsgATSStartStressTest
@@ -15122,6 +15252,7 @@ k_EMsgATSStarted
 k_EMsgATSStopStressTest
 k_EMsgATSUFSPerfTestResponse
 k_EMsgATSUFSPerfTestTask
+k_EMsgAdminClientInfo
 k_EMsgAdminCmd
 k_EMsgAdminCmdResponse
 k_EMsgAdminConsoleTitle
@@ -15640,6 +15771,7 @@ k_EMsgFBSDeployHotFixPackage
 k_EMsgFBSDeployHotFixResponse
 k_EMsgFBSDeployPackage
 k_EMsgFBSDeployResponse
+k_EMsgFBSDeployStoredHotFix
 k_EMsgFBSDownloadHotFix
 k_EMsgFBSDownloadHotFixResponse
 k_EMsgFBSForceBounce
@@ -15649,6 +15781,7 @@ k_EMsgFBSMinidumpServer
 k_EMsgFBSPauseFrozenDumps
 k_EMsgFBSQueryGMForRequest
 k_EMsgFBSQueryGMResponse
+k_EMsgFBSQueryHotfixPackages
 k_EMsgFBSRebootBox
 k_EMsgFBSRebootBoxResponse
 k_EMsgFBSReqVersion
@@ -15824,6 +15957,8 @@ k_EMsgRemoteClientAuthorizationResponse
 k_EMsgRemoteClientBase
 k_EMsgRemoteClientGetControllerConfig
 k_EMsgRemoteClientGetControllerConfigResponse
+k_EMsgRemoteClientInstallApp
+k_EMsgRemoteClientInstallAppResponse
 k_EMsgRemoteClientPairWifiAP
 k_EMsgRemoteClientPing
 k_EMsgRemoteClientPingResponse
@@ -16249,6 +16384,7 @@ m_PathIDInfos
 m_PendingMainThreadHTTPHandle
 m_PendingMainThreadHTTPHandle == nullptr
 m_PendingMainThreadHTTPRequest == nullptr
+m_ProtoBufParseThreadPool
 m_QueueJobSleeping
 m_QueueJobTimeouts
 m_QueueScheduledItems
@@ -16275,6 +16411,7 @@ m_WorkThreads.Count() == 0 && m_cThreadsRunning == (uint32) 0
 m_WorkThreads[ iWorkThread ]
 m_bAllowUnstableRemoval
 m_bConnectionIsInit
+m_bDroppedRawPacket && m_pHeader
 m_bHTTPSTunnelCompleted == false
 m_bHavePartialMsg is true, but no receive buffer is allocated!
 m_bInitialized
@@ -16285,12 +16422,10 @@ m_bufBody
 m_bufBody.TellPut() == 0
 m_bufData
 m_bufDecryptedRecvBuffer
-m_bufEncryptedSendBuffer
 m_bufLeftOverHTTP2BodyDataChunk
 m_bufMultiFragment
 m_bufSRTPRecvKey
 m_bufSRTPSendKey
-m_bufSSLRecv
 m_buffer
 m_bufferVarArgs
 m_cCurrentDepth < m_cMaxDepth
@@ -16305,6 +16440,8 @@ m_cachedRequest.GetPtr()
 m_cachedResponse.GetPtr()
 m_configOverride
 m_cubAlreadySentFromHeadBuffer < head.len
+m_cubEncryptedSendPending == 0
+m_cubEncryptedSendPending >= chunk.m_cubData
 m_cubMsgIncomingRecv <= m_cubMsgIncomingAlloc
 m_data
 m_decoratedFactory
@@ -16321,6 +16458,7 @@ m_errorIndex>=0
 m_fileReader
 m_fnCompletionCallback
 m_hConnection != 0xdddddddd
+m_hCoroutine != 0
 m_hParam != ICommandLine::InvalidHParam()
 m_hSocket == INVALID_SOCKET
 m_hashMap
@@ -16337,6 +16475,8 @@ m_listCacheFileLRU
 m_listCacheFileLRU.IsValidIndex( mapData.m_iLRUListIndex )
 m_listChangedFiles
 m_listCommandLineOption
+m_listEncryptedSendChunks
+m_listEncryptedSendChunks.Count() == 0
 m_listHandlesDelayedForCache
 m_listJobsToWakeOnSendsComplete
 m_listLRU
@@ -16351,9 +16491,10 @@ m_mapFileWatchData
 m_mapFileWatchData.Key( i )
 m_mapJobSharedStatesOutstanding
 m_mapJobSharedStatesOutstanding.IsValidIndex( ndxCount )
-m_mapJobsDependentOnUs
 m_mapMessageIDToMsgInfo
 m_mapMessageNameToMsgInfo
+m_mapOrderGroups
+m_mapOrderGroups[ iGroup ]
 m_mapOrphanMessages
 m_mapOutstandingConditionalRequests
 m_mapPendingSharedStates
@@ -16376,7 +16517,9 @@ m_nPollFd >= 0
 m_nPostFd >= 0
 m_nRecursions > 0
 m_nTheirSeqNacked < m_nTheirSeqReceived
-m_nWritesPendingInEncryptedBuffer == 0 && m_bufEncryptedSendBuffer.TellPut() == 0
+m_nWorkItemState != k_nSSLWorkItemIdle
+m_nWorkItemState == k_nSSLWorkItemRunningPending
+m_nWritesPendingInEncryptedBuffer == 0 && m_cubEncryptedSendPending == 0
 m_p == NULL
 m_pBudgetGroups
 m_pBudgetGroups == NULL
@@ -16389,7 +16532,6 @@ m_pClientSession
 m_pConnection
 m_pConnectionCallback
 m_pConnectionCallback == NULL
-m_pConnectionRemoteIntraProcess->m_bIntraProcess
 m_pConnectionRemoteIntraProcess->m_pConnectionRemoteIntraProcess == this
 m_pCookieContainer
 m_pCurrentWorkItem
@@ -16421,6 +16563,7 @@ m_pObj
 m_pObj == NULL
 m_pOriginatingRequestHandle
 m_pParent == this
+m_pParsedHeader && m_pParsedBody
 m_pProtoBufBody == NULL
 m_pReceivedPktFirst->GetSeq() != m_pReceivedPktFirst->PReceivedPktNext()->GetSeq()
 m_pRecvState == NULL
@@ -16435,11 +16578,13 @@ m_pSSLConnectionData
 m_pSSLConnectionData != NULL
 m_pSSLConnectionData && m_pSSLConnectionData->m_pSSLCallback
 m_pSSLContext
+m_pSSLSendState
 m_pSavedStack
 m_pSetIntValue
 m_pSetStringValue
 m_pSibling
 m_pStackHigh
+m_pThreadedSendSink
 m_pTicketKeyMgr
 m_pTicketKeyMgr == NULL
 m_pTreeInUseConnections
@@ -16461,6 +16606,7 @@ m_pszName
 m_pthreadWatcher
 m_pubMsgIncoming == NULL
 m_pubRecvBuffer
+m_pvecLocks && m_pvecLocks->HasElement( pLock )
 m_queueItemsPending.Count() == 0
 m_queueSendBuffers
 m_rgvecKeys
@@ -16526,21 +16672,17 @@ m_vecCallbacks.Count() == 0 || !callback
 m_vecCompletedAndWaiting
 m_vecConnectPingResults
 m_vecDecryptedRecvBufferIndividualEnds
-m_vecEncryptedSendBufferIndividualLengths
 m_vecGetParams
 m_vecGetParams[i]
 m_vecHashBuckets
 m_vecIPFilterRanges
 m_vecIPFilterRangesV6
-m_vecLocks
-m_vecLocks.Count(): %d, m_vecLocks[0]: (0x%p), pLock: 0x%p, this: 0x%p\n
-m_vecLocks.Count(): %d, this: 0x%p, pLock = 0x%p\n
-m_vecLocks.HasElement( pLock )
 m_vecMetrics
 m_vecNetPackets
 m_vecNetPackets.Count() == 0
 m_vecNodeMemBlocks.size() == 1
 m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
+m_vecOrderGroupsDeferred
 m_vecParms
 m_vecParms.IsValidIndex( nIndex )
 m_vecParms[i]
@@ -16549,13 +16691,13 @@ m_vecPostParams.Count() < 65535
 m_vecPostParams.IsValidIndex( iNode )
 m_vecPostParams[i]
 m_vecProxyOverrideExcludedHosts
+m_vecQueued
 m_vecRedirectStack
 m_vecRegisteredWriters
 m_vecRegisteredWriters.HasElement( pFile )
 m_vecRequestsToSend
 m_vecRequestsToSend.Count()
 m_vecRequestsToSend.Count() == 1
-m_vecResourceAccessRecord
 m_vecSSLHostnames
 m_vecUserProxyExcludedHosts
 m_vecpHTTPClients
@@ -16617,6 +16759,7 @@ magma-mac
 magma-ofb
 mail
 mailPreferenceOption
+main thread
 makecontext
 malay
 malayalam
@@ -16764,7 +16907,6 @@ mkdir "%%fs_target%%\bin"\n
 mkdir "%s"\n
 mkfifo
 mkstemp
-mkstemp errno %d\n
 mktime
 mllt!
 mlock
@@ -16922,6 +17064,9 @@ nepali
 nested asn1 error
 nested asn1 string
 nested too deep
+net thread
+net thread bodies with no known type
+net thread pre-parse: %s headers parsed, %s had no known body type, %s k_EMsgMulti skipped\n
 netfilter
 netmsg
 network
@@ -17372,6 +17517,7 @@ pBaseScheduledFunction->GetDeadlineTime().LTime() >= m_lTimeNextDeadline
 pBaseScheduledFunction->Run()
 pBlob
 pBodyBuffer->TellPut() == (int)pRequest->GetReqBodyBytesTotal()
+pBuf == m_bufDecryptedRecvBuffer.PeekPut()
 pBuf->BIsUnbufferedSend()
 pBuffer
 pCAL
@@ -17412,6 +17558,7 @@ pFindData
 pFmt
 pFormat != NULL
 pFrameFunctionMgr
+pGroup->m_vecCompletedAndWaiting.Count() == 0
 pGroupName
 pH88
 pHYs
@@ -17499,6 +17646,7 @@ pReuseSession == NULL
 pSalt
 pScanHandlePendingList != pCompletionData
 pSearch != NULL
+pSink
 pSourceFunc
 pSpecified
 pSrc != NULL
@@ -17522,6 +17670,8 @@ pWebSocketConnection->m_EConnectionState == k_EConnectionStateConnecting
 pWebSocketConnection->m_pHTTPRequest
 pWildCard
 pWorkItem
+pWorkItem->m_bDeferCompletion
+pWorkItem->m_bRunning
 pWorkThread != NULL
 pWorkThread->m_bFinished is false but thread is not running
 pXhH
@@ -17555,10 +17705,13 @@ parental
 parms.Count() == 0
 parse
 parse error
+parse time not tracked - set @bProtobufParseTimeProfile 1 to measure it\n
+parse time: %.3f ms total\n
 parse tlsext
 parse_ca_names
 parse_http_line1
 parse_tagging
+parses
 parsing
 parsing_failed
 partial
@@ -17836,6 +17989,9 @@ pp|B>>q
 pq->q[item->index] == item
 pqualid
 pqueue_new
+pre-parsed bodies copied for a second reader
+pre-parsed bodies of the wrong type
+pre-parsed bodies: %s adopted, %s copied, %s unusable\n
 pread64
 precise_frame_rate
 prediction resistance not supported
@@ -17903,6 +18059,8 @@ proto
 proto2
 proto3
 proto3_optional
+protobuf parse stats reset\n
+protobuf_parse_stats
 protocol is shutdown
 protocol version
 protocolInformation
@@ -18091,6 +18249,9 @@ random_device::random_device(const std::string&): device not available
 random_device::random_device(const std::string&): unsupported token
 rang
 range
+raw byte reads on pre-parsed packets
+raw packets rebuilt after being dropped: %s, %s bytes re-serialized (%s per rebuild)\n
+raw packets rebuilt after being dropped: none (@bProtoBufNetPacketDropRawBytes = %d)\n
 rblk->n >= (16 - 1)
 rc2-40-cbc
 rc2-64-cbc
@@ -18211,6 +18372,7 @@ reservation_country_code
 reservation_state
 reserved
 reserved_range
+reset
 resizeNumBits >= 0
 responderId
 response
@@ -18392,6 +18554,7 @@ scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_getaffinity
 sched_setaffinity
 sched_yield
 scheduledItem.m_ulTime
@@ -18681,6 +18844,7 @@ setext-miAuth
 setext-pinAny
 setext-pinSecure
 setext-track2
+setjmp returned unexpected result %d in Internal_Coroutine_Continue
 setlocal\n
 setlocale
 setmntent
@@ -18727,6 +18891,7 @@ shake256
 shared info error
 shared resource
 shared resource high pri
+shared state
 shmat
 shmdt
 shmget
@@ -18816,18 +18981,19 @@ sm_ThreadSafeQueueLogEvents.GetQueue()[ iLogEvent ]
 sm_ThreadSafeQueueLogMsgSpew
 sm_bShuttingDown
 sm_bShuttingDown && sm_pLogInstance
-sm_cOutstandingIntraProcessRecvsAllConnections >= 0
 sm_cOutstandingIntraProcessRecvsAllConnections >= m_cOutstandingIntraProcessRecvs
-sm_cOutstandingIntraProcessRecvsAllConnections >= m_pConnectionRemoteIntraProcess->m_cOutstandingIntraProcessRecvs
 sm_cOutstandingSendBytesAllConnections >= 0
 sm_cOutstandingSendsAllConnections > 0
 sm_cRef == 0
 sm_cRef > 0
+sm_listAllConnections
+sm_listAllConnections[i]
 sm_mapTCPSocketOwnerCallback
 sm_mapUDPSocketOwnerCallback
 sm_mapWebSocketConnection
 sm_mapWebSocketConnection[iIndex] == this
 sm_msgSpewThrottle
+sm_pHandshakeWorkThreadPool
 sm_pLogInstance
 sm_pMemPoolPendingMsg
 sm_pMemPoolReceivedPkt
@@ -19037,8 +19203,8 @@ status_request_v2
 statvfs
 statvfs64
 statvfs64 failed for %s, errno %d %s
+statvfs64 output would overflow: %s
 statvfs64 reports success but zero free space\n
-statvfs64: ret %d errno %d\n
 stbl_module_init
 stbl_section
 std::allocator
@@ -19303,6 +19469,7 @@ this == g_pJobCur
 thisUpdate
 threaded work (proxy/dns)
 threads
+threshold @nThreadedProtobufParseMinBytes = %d ('protobuf_parse_stats reset' after changing it)\n
 throw
 ticket
 ticket_appdata
@@ -19544,6 +19711,7 @@ too much nonce requested
 too short
 too small
 tool
+total: %s parses, %s bytes\n
 total_queue_size
 totaltime
 toupper
@@ -20075,6 +20243,7 @@ wcstoull
 wctob
 weak
 weak_dependency
+web deploy
 web links changed
 web:checkout
 web:community

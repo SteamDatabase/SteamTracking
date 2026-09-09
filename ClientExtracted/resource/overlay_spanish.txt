@@ -208,7 +208,7 @@
 "Overlay_Publish_Error_Quota" "No tienes suficiente espacio disponible en Cloud para cargar esta captura"
 "Overlay_Publish_Error_Quota_Plural" "No tienes suficiente espacio disponible en Cloud para cargar estas capturas"
 "Overlay_Delete_Screenshot_Error" "Se ha producido un error al borrar la captura. Por favor, inténtalo de nuevo más tarde."
-"Overlay_Tag_As_Potential_Spoiler" "Etiquetar como posible spoiler"
+"Overlay_Tag_As_Potential_Spoiler" "Etiquetar como posible espóiler"
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Acuerdo Legal de Steam Workshop"
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "Debes aceptar la última versión del Acuerdo Legal de Steam Workshop antes de completar la publicación de tu artículo."
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_ViewItem" "Ver artículo"

@@ -922,6 +922,15 @@ message CMsgSetTouchGesturesToCancel {
 	repeated uint32 gestures = 2;
 }
 
+message CMsgSetBlockInput {
+	optional uint32 browser_handle = 1;
+	optional bool enabled = 2;
+}
+
+message CMsgInputBlocked {
+	optional uint32 browser_handle = 1;
+}
+
 message CMsgImeSetComposition {
 	optional uint32 browser_handle = 1;
 	optional string text = 2;
@@ -1013,9 +1022,6 @@ message CMsgPopupCreated {
 message CMsgSetVRKeyboardVisibility {
 	optional uint32 browser_handle = 1;
 	optional bool visible = 2;
-}
-
-message CMsgRestartJSContext {
 }
 
 message CMsgSetAccessibilitySettings {

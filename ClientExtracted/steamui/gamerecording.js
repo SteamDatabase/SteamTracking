@@ -1,1698 +1,1765 @@
-(self.webpackChunksteamui = self.webpackChunksteamui || []).push([
-  [7462],
-  {
-    11995: (e) => {
-      e.exports = { ClipUploadStatus: "_3rMEP_IbC30BRuQuHY6F1E" };
-    },
-    25025: (e) => {
-      e.exports = {
-        ClipDetails: "_1fyr-hKRG1lR-7oPJ_rqmG",
-        VideoContainer: "_1Ml8-TqxakKRFRAYwvdq4Y",
-        ClipPreview: "_3vpFgujAo8vFRf6bAtHCEO",
-        Thumbnail: "_3PnGnLoEMy4dXaT5j3EWN0",
-        PlayContainer: "_1Cv16KKO1tKy2jnOykai5-",
-        Button: "MwGjy194NChFEI20JTHao",
-      };
-    },
-    24709: (e, r, t) => {
-      "use strict";
-      t.r(r), t.d(r, { default: () => g });
-      var i = t(62540),
-        s = t(63696),
-        a = t(80026),
-        n = t(91720),
-        l = t(93092),
-        o = t(44846),
-        m = t(35198),
-        c = t(64608),
-        d = t(46108),
-        u = t(11995);
-      function g(e) {
-        const { clipToUpload: r, finishUpload: t } = e,
-          [a, m] = s.useState(!1),
-          [d, g] = s.useState(),
-          { fnUploadClip: _ } = (0, n.Sm)(),
-          [p, b] = s.useState();
-        if (!r) return null;
-        return (0, i.jsxs)("div", {
-          className: u.ClipUploadStatus,
-          children: [
-            (0, i.jsx)(l.d, { clipID: r.clip_id }),
-            !a &&
-              (0, i.jsx)(c.$n, {
-                onClick: async () => {
-                  m(!0);
-                  const { eResult: e, strURL: i } = await _(
-                    r.clip_id,
-                    "",
-                    "",
-                    o.wY0,
-                  );
-                  t(i), m(!1);
-                },
-                children: "Upload",
+(() => {
+  (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
+    [7462],
+    {
+      11995: (X) => {
+        X.exports = { ClipUploadStatus: "_3rMEP_IbC30BRuQuHY6F1E" };
+      },
+      25025: (X) => {
+        X.exports = {
+          ClipDetails: "_1fyr-hKRG1lR-7oPJ_rqmG",
+          VideoContainer: "_1Ml8-TqxakKRFRAYwvdq4Y",
+          ClipPreview: "_3vpFgujAo8vFRf6bAtHCEO",
+          Thumbnail: "_3PnGnLoEMy4dXaT5j3EWN0",
+          PlayContainer: "_1Cv16KKO1tKy2jnOykai5-",
+          Button: "MwGjy194NChFEI20JTHao",
+        };
+      },
+      27082: (X, k, l) => {
+        "use strict";
+        l.r(k), l.d(k, { default: () => J });
+        var v = l(62540),
+          $ = l(63696),
+          D = l(40326),
+          U = l(97724),
+          H = l(48635),
+          q = l(94601),
+          S = l(1345),
+          p = l(50777),
+          g = l(7727),
+          n = l(11995),
+          s = l.n(n),
+          t = "10978408";
+        function J(w) {
+          const { clipToUpload: B, finishUpload: f } = w,
+            [u, y] = $.useState(!1),
+            [e, V] = $.useState(),
+            { fnUploadClip: M } = (0, U.Sm)(),
+            [z, c] = $.useState();
+          if (!B) return null;
+          const j = async () => {
+            y(!0);
+            const { eResult: W, strURL: Y } = await M(B.clip_id, "", "", q.wY0);
+            f(Y), y(!1);
+          };
+          return (0, v.jsxs)("div", {
+            className: n.ClipUploadStatus,
+            children: [
+              (0, v.jsx)(H.d, { clipID: B.clip_id }),
+              !u && (0, v.jsx)(p.$n, { onClick: j, children: "Upload" }),
+              u && (0, v.jsx)(o, { clipToUpload: B }),
+            ],
+          });
+        }
+        function o(w) {
+          const { clipToUpload: B } = w,
+            [f, u] = $.useState(),
+            [y, e] = $.useState();
+          $.useEffect(
+            () =>
+              D.xM.RegisterForNotifyUploadProgress(
+                (c) => (
+                  typeof c.Body().eresult() > "u"
+                    ? u(c.Body().progress() * 100)
+                    : u(void 0),
+                  S.R
+                ),
+              ).unregister,
+            [],
+          );
+          let V = (0, g.we)("#Chat_Uploading", B.clip_id),
+            M = { width: f + "%" };
+          return (0, v.jsxs)("div", {
+            className: "chatFileUploadProgressContainer",
+            children: [
+              (0, v.jsx)("div", {
+                className: "chatFileUploadProgressName",
+                children: V,
               }),
-            a && (0, i.jsx)(B, { clipToUpload: r }),
-          ],
-        });
-      }
-      function B(e) {
-        const { clipToUpload: r } = e,
-          [t, n] = s.useState(),
-          [l, o] = s.useState();
-        s.useEffect(
-          () =>
-            a.xM.RegisterForNotifyUploadProgress(
-              (e) => (
-                void 0 === e.Body().eresult()
-                  ? n(100 * e.Body().progress())
-                  : n(void 0),
-                m.R
-              ),
-            ).unregister,
-          [],
-        );
-        let c = (0, d.we)("#Chat_Uploading", r.clip_id),
-          u = { width: t + "%" };
-        return (0, i.jsxs)("div", {
-          className: "chatFileUploadProgressContainer",
-          children: [
-            (0, i.jsx)("div", {
-              className: "chatFileUploadProgressName",
-              children: c,
-            }),
-            (0, i.jsx)("div", {
-              className:
-                "chatFileUploadProgressBarContainer DialogProgressBar_ProgressBarContainer",
-              children: (0, i.jsx)("div", {
-                className: "DialogProgressBar_Value",
-                style: u,
+              (0, v.jsx)("div", {
+                className:
+                  "chatFileUploadProgressBarContainer DialogProgressBar_ProgressBarContainer",
+                children: (0, v.jsx)("div", {
+                  className: "DialogProgressBar_Value",
+                  style: M,
+                }),
               }),
-            }),
-          ],
-        });
-      }
-    },
-    84512: (e, r, t) => {
-      "use strict";
-      t.r(r),
-        t.d(r, {
-          default: () => L,
-          useTimelineLoaderForCommunityClip: () => H,
-        });
-      var i,
-        s,
-        a = t(62540),
-        n = t(63696),
-        l = t(92374),
-        o = t(91720),
-        m = t(68956),
-        c = t(36975),
-        d = t(69157),
-        u = t(46382),
-        g = t(61416),
-        B = t(58663),
-        _ = t.n(B),
-        p = t(48307),
-        b = t(12176);
-      class M extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            M.prototype.representation_name || p.Sg(M.M()),
-            B.Message.initialize(this, e, 0, -1, [11], null);
+            ],
+          });
         }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            M.sm_m ||
-              (M.sm_m = {
-                proto: M,
-                fields: {
-                  representation_name: {
-                    n: 2,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
+      },
+      62625: (X, k, l) => {
+        "use strict";
+        l.r(k),
+          l.d(k, {
+            default: () => sr,
+            useTimelineLoaderForCommunityClip: () => C,
+          });
+        var v = l(62540),
+          $ = l(63696),
+          D = l(60869),
+          U = l(97724),
+          H = l(26888),
+          q = l(45233),
+          S = l(19698),
+          p = l(60925),
+          g = l(61416),
+          n = l(58663),
+          s = l.n(n),
+          t = l(67480),
+          J = l(98237),
+          o = "10978408";
+        class w extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              w.prototype.representation_name || t.Sg(w.M()),
+              n.Message.initialize(this, r, 0, -1, [11], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              w.sm_m ||
+                (w.sm_m = {
+                  proto: w,
+                  fields: {
+                    representation_name: {
+                      n: 2,
+                      br: t.qM.readString,
+                      bw: t.gp.writeString,
+                    },
+                    horizontal_resolution: {
+                      n: 3,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    vertical_resolution: {
+                      n: 4,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    frame_rate: {
+                      n: 5,
+                      br: t.qM.readDouble,
+                      bw: t.gp.writeDouble,
+                    },
+                    bandwidth: {
+                      n: 6,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    audio_sample_rate: {
+                      n: 7,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    frame_rate_string: {
+                      n: 8,
+                      br: t.qM.readString,
+                      bw: t.gp.writeString,
+                    },
+                    codec: { n: 9, br: t.qM.readString, bw: t.gp.writeString },
+                    audio_channel_config: {
+                      n: 10,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    segment_info: { n: 11, c: u, r: !0, q: !0 },
                   },
-                  horizontal_resolution: {
-                    n: 3,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
+                }),
+              w.sm_m
+            );
+          }
+          static MBF() {
+            return w.sm_mbf || (w.sm_mbf = t.w0(w.M())), w.sm_mbf;
+          }
+          toObject(r = !1) {
+            return w.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(w.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(w.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new w();
+            return w.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(w.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return w.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(w.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              w.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgVideoGameRecordingRepresentation";
+          }
+        }
+        class B extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              B.prototype.component_name || t.Sg(B.M()),
+              n.Message.initialize(this, r, 0, -1, [5], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              B.sm_m ||
+                (B.sm_m = {
+                  proto: B,
+                  fields: {
+                    component_name: {
+                      n: 1,
+                      br: t.qM.readString,
+                      bw: t.gp.writeString,
+                    },
+                    contents: {
+                      n: 2,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    segment_size: {
+                      n: 3,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    file_type: {
+                      n: 4,
+                      br: t.qM.readString,
+                      bw: t.gp.writeString,
+                    },
+                    representations: { n: 5, c: w, r: !0, q: !0 },
                   },
-                  vertical_resolution: {
-                    n: 4,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
+                }),
+              B.sm_m
+            );
+          }
+          static MBF() {
+            return B.sm_mbf || (B.sm_mbf = t.w0(B.M())), B.sm_mbf;
+          }
+          toObject(r = !1) {
+            return B.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(B.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(B.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new B();
+            return B.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(B.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return B.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(B.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              B.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgVideoGameRecordingComponent";
+          }
+        }
+        class f extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              f.prototype.steamid || t.Sg(f.M()),
+              n.Message.initialize(this, r, 0, -1, [7], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              f.sm_m ||
+                (f.sm_m = {
+                  proto: f,
+                  fields: {
+                    steamid: {
+                      n: 1,
+                      br: t.qM.readUint64String,
+                      bw: t.gp.writeUint64String,
+                    },
+                    app_id: { n: 2, br: t.qM.readUint32, bw: t.gp.writeUint32 },
+                    num_segments: {
+                      n: 3,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    length_milliseconds: {
+                      n: 4,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    segment_duration_timescale: {
+                      n: 5,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    segment_duration: {
+                      n: 6,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    components: { n: 7, c: B, r: !0, q: !0 },
+                    start_time_ms: {
+                      n: 8,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    start_offset_in_timeline_ms: {
+                      n: 9,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
                   },
-                  frame_rate: {
-                    n: 5,
-                    br: p.qM.readDouble,
-                    bw: p.gp.writeDouble,
+                }),
+              f.sm_m
+            );
+          }
+          static MBF() {
+            return f.sm_mbf || (f.sm_mbf = t.w0(f.M())), f.sm_mbf;
+          }
+          toObject(r = !1) {
+            return f.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(f.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(f.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new f();
+            return f.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(f.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return f.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(f.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              f.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgVideoGameRecordingDef";
+          }
+        }
+        class u extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              u.prototype.segment_number || t.Sg(u.M()),
+              n.Message.initialize(this, r, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              u.sm_m ||
+                (u.sm_m = {
+                  proto: u,
+                  fields: {
+                    segment_number: {
+                      n: 1,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    segment_size_bytes: {
+                      n: 2,
+                      br: t.qM.readUint64String,
+                      bw: t.gp.writeUint64String,
+                    },
+                    component_name: {
+                      n: 3,
+                      br: t.qM.readString,
+                      bw: t.gp.writeString,
+                    },
+                    representation_name: {
+                      n: 4,
+                      br: t.qM.readString,
+                      bw: t.gp.writeString,
+                    },
                   },
-                  bandwidth: {
-                    n: 6,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
+                }),
+              u.sm_m
+            );
+          }
+          static MBF() {
+            return u.sm_mbf || (u.sm_mbf = t.w0(u.M())), u.sm_mbf;
+          }
+          toObject(r = !1) {
+            return u.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(u.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(u.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new u();
+            return u.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(u.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return u.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(u.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              u.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVideo_GameRecordingSegmentInfo";
+          }
+        }
+        class y extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              y.prototype.segment_info || t.Sg(y.M()),
+              n.Message.initialize(this, r, 0, -1, [5], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              y.sm_m ||
+                (y.sm_m = {
+                  proto: y,
+                  fields: {
+                    segment_info: { n: 1, c: u },
+                    url_host: {
+                      n: 2,
+                      br: t.qM.readString,
+                      bw: t.gp.writeString,
+                    },
+                    url_path: {
+                      n: 3,
+                      br: t.qM.readString,
+                      bw: t.gp.writeString,
+                    },
+                    use_https: { n: 4, br: t.qM.readBool, bw: t.gp.writeBool },
+                    request_headers: { n: 5, c: e, r: !0, q: !0 },
                   },
-                  audio_sample_rate: {
-                    n: 7,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
+                }),
+              y.sm_m
+            );
+          }
+          static MBF() {
+            return y.sm_mbf || (y.sm_mbf = t.w0(y.M())), y.sm_mbf;
+          }
+          toObject(r = !1) {
+            return y.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(y.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(y.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new y();
+            return y.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(y.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return y.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(y.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              y.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVideo_GameRecordingSegmentUploadInfo";
+          }
+        }
+        class e extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              e.prototype.name || t.Sg(e.M()),
+              n.Message.initialize(this, r, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              e.sm_m ||
+                (e.sm_m = {
+                  proto: e,
+                  fields: {
+                    name: { n: 1, br: t.qM.readString, bw: t.gp.writeString },
+                    value: { n: 2, br: t.qM.readString, bw: t.gp.writeString },
                   },
-                  frame_rate_string: {
-                    n: 8,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
+                }),
+              e.sm_m
+            );
+          }
+          static MBF() {
+            return e.sm_mbf || (e.sm_mbf = t.w0(e.M())), e.sm_mbf;
+          }
+          toObject(r = !1) {
+            return e.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(e.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(e.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new e();
+            return e.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(e.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return e.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(e.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              e.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVideo_GameRecordingSegmentUploadInfo_HTTPHeaders";
+          }
+        }
+        var V = "10978408";
+        class M extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              M.prototype.video_manager_clip_id || t.Sg(M.M()),
+              n.Message.initialize(this, r, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              M.sm_m ||
+                (M.sm_m = {
+                  proto: M,
+                  fields: {
+                    video_manager_clip_id: {
+                      n: 1,
+                      br: t.qM.readFixed64String,
+                      bw: t.gp.writeFixed64String,
+                    },
+                    video_manager_video_id: {
+                      n: 2,
+                      br: t.qM.readFixed64String,
+                      bw: t.gp.writeFixed64String,
+                    },
+                    server_timeline_id: {
+                      n: 3,
+                      br: t.qM.readFixed64String,
+                      bw: t.gp.writeFixed64String,
+                    },
+                    manifest_url: {
+                      n: 4,
+                      br: t.qM.readString,
+                      bw: t.gp.writeString,
+                    },
+                    duration_ms: {
+                      n: 5,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    start_offset_ms: {
+                      n: 6,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
                   },
-                  codec: { n: 9, br: p.qM.readString, bw: p.gp.writeString },
-                  audio_channel_config: {
-                    n: 10,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
+                }),
+              M.sm_m
+            );
+          }
+          static MBF() {
+            return M.sm_mbf || (M.sm_mbf = t.w0(M.M())), M.sm_mbf;
+          }
+          toObject(r = !1) {
+            return M.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(M.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(M.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new M();
+            return M.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(M.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return M.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(M.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              M.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVideoManagerClipID";
+          }
+        }
+        class z extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              z.prototype.clip_id || t.Sg(z.M()),
+              n.Message.initialize(this, r, 0, -1, [9], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              z.sm_m ||
+                (z.sm_m = {
+                  proto: z,
+                  fields: {
+                    clip_id: {
+                      n: 1,
+                      br: t.qM.readFixed64String,
+                      bw: t.gp.writeFixed64String,
+                    },
+                    gameid: {
+                      n: 2,
+                      br: t.qM.readUint64String,
+                      bw: t.gp.writeUint64String,
+                    },
+                    date_recorded: {
+                      n: 4,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    total_file_size_bytes: {
+                      n: 7,
+                      br: t.qM.readUint64String,
+                      bw: t.gp.writeUint64String,
+                    },
+                    video_ids: { n: 9, c: M, r: !0, q: !0 },
+                    owner_steamid: {
+                      n: 10,
+                      br: t.qM.readFixed64String,
+                      bw: t.gp.writeFixed64String,
+                    },
+                    upload_complete: {
+                      n: 11,
+                      br: t.qM.readBool,
+                      bw: t.gp.writeBool,
+                    },
+                    duration_ms: {
+                      n: 12,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
                   },
-                  segment_info: { n: 11, c: w, r: !0, q: !0 },
-                },
-              }),
-            M.sm_m
-          );
+                }),
+              z.sm_m
+            );
+          }
+          static MBF() {
+            return z.sm_mbf || (z.sm_mbf = t.w0(z.M())), z.sm_mbf;
+          }
+          toObject(r = !1) {
+            return z.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(z.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(z.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new z();
+            return z.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(z.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return z.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(z.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              z.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CGameRecordingClip";
+          }
         }
-        static MBF() {
-          return M.sm_mbf || (M.sm_mbf = p.w0(M.M())), M.sm_mbf;
-        }
-        toObject(e = !1) {
-          return M.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(M.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(M.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new M();
-          return M.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(M.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(M.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgVideoGameRecordingRepresentation";
-        }
-      }
-      class y extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            y.prototype.component_name || p.Sg(y.M()),
-            B.Message.initialize(this, e, 0, -1, [5], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            y.sm_m ||
-              (y.sm_m = {
-                proto: y,
-                fields: {
-                  component_name: {
-                    n: 1,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
+        class c extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              c.prototype.clip || t.Sg(c.M()),
+              n.Message.initialize(this, r, 0, -1, [3], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              c.sm_m ||
+                (c.sm_m = {
+                  proto: c,
+                  fields: {
+                    clip: { n: 2, c: z },
+                    video_def: { n: 3, c: f, r: !0, q: !0 },
                   },
-                  contents: { n: 2, br: p.qM.readUint32, bw: p.gp.writeUint32 },
-                  segment_size: {
-                    n: 3,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
+                }),
+              c.sm_m
+            );
+          }
+          static MBF() {
+            return c.sm_mbf || (c.sm_mbf = t.w0(c.M())), c.sm_mbf;
+          }
+          toObject(r = !1) {
+            return c.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(c.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(c.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new c();
+            return c.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(c.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return c.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(c.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              c.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CGameRecording_CreateShareClip_Request";
+          }
+        }
+        class j extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              j.prototype.clip || t.Sg(j.M()),
+              n.Message.initialize(this, r, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              j.sm_m ||
+                (j.sm_m = { proto: j, fields: { clip: { n: 1, c: z } } }),
+              j.sm_m
+            );
+          }
+          static MBF() {
+            return j.sm_mbf || (j.sm_mbf = t.w0(j.M())), j.sm_mbf;
+          }
+          toObject(r = !1) {
+            return j.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(j.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(j.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new j();
+            return j.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(j.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return j.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(j.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              j.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CGameRecording_CreateShareClip_Response";
+          }
+        }
+        class W extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              W.prototype.clip_id || t.Sg(W.M()),
+              n.Message.initialize(this, r, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              W.sm_m ||
+                (W.sm_m = {
+                  proto: W,
+                  fields: {
+                    clip_id: {
+                      n: 2,
+                      br: t.qM.readFixed64String,
+                      bw: t.gp.writeFixed64String,
+                    },
                   },
-                  file_type: {
-                    n: 4,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
+                }),
+              W.sm_m
+            );
+          }
+          static MBF() {
+            return W.sm_mbf || (W.sm_mbf = t.w0(W.M())), W.sm_mbf;
+          }
+          toObject(r = !1) {
+            return W.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(W.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(W.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new W();
+            return W.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(W.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return W.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(W.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              W.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CGameRecording_DeleteSharedClip_Request";
+          }
+        }
+        class Y extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(), n.Message.initialize(this, r, 0, -1, void 0, null);
+          }
+          toObject(r = !1) {
+            return Y.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return r ? { $jspbMessageInstance: i } : {};
+          }
+          static fromObject(r) {
+            return new Y();
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new Y();
+            return Y.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return r;
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return Y.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {}
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              Y.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CGameRecording_DeleteSharedClip_Response";
+          }
+        }
+        class F extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              F.prototype.clip_id || t.Sg(F.M()),
+              n.Message.initialize(this, r, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              F.sm_m ||
+                (F.sm_m = {
+                  proto: F,
+                  fields: {
+                    clip_id: {
+                      n: 2,
+                      br: t.qM.readFixed64String,
+                      bw: t.gp.writeFixed64String,
+                    },
                   },
-                  representations: { n: 5, c: M, r: !0, q: !0 },
-                },
-              }),
-            y.sm_m
-          );
+                }),
+              F.sm_m
+            );
+          }
+          static MBF() {
+            return F.sm_mbf || (F.sm_mbf = t.w0(F.M())), F.sm_mbf;
+          }
+          toObject(r = !1) {
+            return F.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(F.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(F.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new F();
+            return F.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(F.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return F.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(F.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              F.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CGameRecording_GetSingleSharedClip_Request";
+          }
         }
-        static MBF() {
-          return y.sm_mbf || (y.sm_mbf = p.w0(y.M())), y.sm_mbf;
+        class O extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              O.prototype.clip || t.Sg(O.M()),
+              n.Message.initialize(this, r, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              O.sm_m ||
+                (O.sm_m = { proto: O, fields: { clip: { n: 1, c: z } } }),
+              O.sm_m
+            );
+          }
+          static MBF() {
+            return O.sm_mbf || (O.sm_mbf = t.w0(O.M())), O.sm_mbf;
+          }
+          toObject(r = !1) {
+            return O.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(O.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(O.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new O();
+            return O.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(O.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return O.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(O.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              O.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CGameRecording_GetSingleSharedClip_Response";
+          }
         }
-        toObject(e = !1) {
-          return y.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(y.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(y.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new y();
-          return y.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(y.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(y.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgVideoGameRecordingComponent";
-        }
-      }
-      class f extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            f.prototype.steamid || p.Sg(f.M()),
-            B.Message.initialize(this, e, 0, -1, [7], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            f.sm_m ||
-              (f.sm_m = {
-                proto: f,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: p.qM.readUint64String,
-                    bw: p.gp.writeUint64String,
+        class E extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              E.prototype.recording_id || t.Sg(E.M()),
+              n.Message.initialize(this, r, 0, -1, [4], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              E.sm_m ||
+                (E.sm_m = {
+                  proto: E,
+                  fields: {
+                    recording_id: {
+                      n: 1,
+                      br: t.qM.readUint64String,
+                      bw: t.gp.writeUint64String,
+                    },
+                    component_name: {
+                      n: 2,
+                      br: t.qM.readString,
+                      bw: t.gp.writeString,
+                    },
+                    representation_name: {
+                      n: 3,
+                      br: t.qM.readString,
+                      bw: t.gp.writeString,
+                    },
+                    segments_to_store: { n: 4, c: u, r: !0, q: !0 },
                   },
-                  app_id: { n: 2, br: p.qM.readUint32, bw: p.gp.writeUint32 },
-                  num_segments: {
-                    n: 3,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
+                }),
+              E.sm_m
+            );
+          }
+          static MBF() {
+            return E.sm_mbf || (E.sm_mbf = t.w0(E.M())), E.sm_mbf;
+          }
+          toObject(r = !1) {
+            return E.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(E.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(E.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new E();
+            return E.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(E.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return E.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(E.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              E.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVideo_BeginGameRecordingSegmentsUpload_Request";
+          }
+        }
+        class T extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              T.prototype.segments_needed || t.Sg(T.M()),
+              n.Message.initialize(this, r, 0, -1, [1], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              T.sm_m ||
+                (T.sm_m = {
+                  proto: T,
+                  fields: {
+                    segments_needed: { n: 1, c: y, r: !0, q: !0 },
+                    call_again: { n: 2, br: t.qM.readBool, bw: t.gp.writeBool },
                   },
-                  length_milliseconds: {
-                    n: 4,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
+                }),
+              T.sm_m
+            );
+          }
+          static MBF() {
+            return T.sm_mbf || (T.sm_mbf = t.w0(T.M())), T.sm_mbf;
+          }
+          toObject(r = !1) {
+            return T.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(T.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(T.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new T();
+            return T.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(T.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return T.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(T.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              T.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVideo_BeginGameRecordingSegmentsUpload_Response";
+          }
+        }
+        class P extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              P.prototype.recording_id || t.Sg(P.M()),
+              n.Message.initialize(this, r, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              P.sm_m ||
+                (P.sm_m = {
+                  proto: P,
+                  fields: {
+                    recording_id: {
+                      n: 1,
+                      br: t.qM.readUint64String,
+                      bw: t.gp.writeUint64String,
+                    },
+                    component_name: {
+                      n: 2,
+                      br: t.qM.readString,
+                      bw: t.gp.writeString,
+                    },
+                    representation_name: {
+                      n: 3,
+                      br: t.qM.readString,
+                      bw: t.gp.writeString,
+                    },
+                    first_segment_number: {
+                      n: 4,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    num_segments: {
+                      n: 5,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
+                    upload_result: {
+                      n: 6,
+                      br: t.qM.readUint32,
+                      bw: t.gp.writeUint32,
+                    },
                   },
-                  segment_duration_timescale: {
-                    n: 5,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
+                }),
+              P.sm_m
+            );
+          }
+          static MBF() {
+            return P.sm_mbf || (P.sm_mbf = t.w0(P.M())), P.sm_mbf;
+          }
+          toObject(r = !1) {
+            return P.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(P.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(P.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new P();
+            return P.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(P.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return P.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(P.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              P.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVideo_CommitGameRecordingSegmentsUpload_Request";
+          }
+        }
+        class Q extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(), n.Message.initialize(this, r, 0, -1, void 0, null);
+          }
+          toObject(r = !1) {
+            return Q.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return r ? { $jspbMessageInstance: i } : {};
+          }
+          static fromObject(r) {
+            return new Q();
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new Q();
+            return Q.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return r;
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return Q.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {}
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              Q.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVideo_CommitGameRecordingSegmentsUpload_Response";
+          }
+        }
+        class x extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              x.prototype.recording_id || t.Sg(x.M()),
+              n.Message.initialize(this, r, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              x.sm_m ||
+                (x.sm_m = {
+                  proto: x,
+                  fields: {
+                    recording_id: {
+                      n: 1,
+                      br: t.qM.readUint64String,
+                      bw: t.gp.writeUint64String,
+                    },
                   },
-                  segment_duration: {
-                    n: 6,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
+                }),
+              x.sm_m
+            );
+          }
+          static MBF() {
+            return x.sm_mbf || (x.sm_mbf = t.w0(x.M())), x.sm_mbf;
+          }
+          toObject(r = !1) {
+            return x.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(x.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(x.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new x();
+            return x.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(x.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return x.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(x.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              x.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Request";
+          }
+        }
+        class m extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              m.prototype.segments_needed || t.Sg(m.M()),
+              n.Message.initialize(this, r, 0, -1, [1], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              m.sm_m ||
+                (m.sm_m = {
+                  proto: m,
+                  fields: { segments_needed: { n: 1, c: y, r: !0, q: !0 } },
+                }),
+              m.sm_m
+            );
+          }
+          static MBF() {
+            return m.sm_mbf || (m.sm_mbf = t.w0(m.M())), m.sm_mbf;
+          }
+          toObject(r = !1) {
+            return m.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(m.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(m.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new m();
+            return m.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(m.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return m.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(m.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              m.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Response";
+          }
+        }
+        class h extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              h.prototype.recording_id || t.Sg(h.M()),
+              n.Message.initialize(this, r, 0, -1, [2], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              h.sm_m ||
+                (h.sm_m = {
+                  proto: h,
+                  fields: {
+                    recording_id: {
+                      n: 1,
+                      br: t.qM.readUint64String,
+                      bw: t.gp.writeUint64String,
+                    },
+                    segments_uploaded: { n: 2, c: u, r: !0, q: !0 },
                   },
-                  components: { n: 7, c: y, r: !0, q: !0 },
-                  start_time_ms: {
-                    n: 8,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
-                  },
-                  start_offset_in_timeline_ms: {
-                    n: 9,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
-                  },
-                },
-              }),
-            f.sm_m
-          );
-        }
-        static MBF() {
-          return f.sm_mbf || (f.sm_mbf = p.w0(f.M())), f.sm_mbf;
-        }
-        toObject(e = !1) {
-          return f.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(f.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(f.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new f();
-          return f.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(f.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(f.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgVideoGameRecordingDef";
-        }
-      }
-      class w extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            w.prototype.segment_number || p.Sg(w.M()),
-            B.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            w.sm_m ||
-              (w.sm_m = {
-                proto: w,
-                fields: {
-                  segment_number: {
-                    n: 1,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
-                  },
-                  segment_size_bytes: {
-                    n: 2,
-                    br: p.qM.readUint64String,
-                    bw: p.gp.writeUint64String,
-                  },
-                  component_name: {
-                    n: 3,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
-                  },
-                  representation_name: {
-                    n: 4,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
-                  },
-                },
-              }),
-            w.sm_m
-          );
-        }
-        static MBF() {
-          return w.sm_mbf || (w.sm_mbf = p.w0(w.M())), w.sm_mbf;
-        }
-        toObject(e = !1) {
-          return w.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(w.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(w.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new w();
-          return w.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(w.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(w.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_GameRecordingSegmentInfo";
-        }
-      }
-      class z extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            z.prototype.segment_info || p.Sg(z.M()),
-            B.Message.initialize(this, e, 0, -1, [5], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            z.sm_m ||
-              (z.sm_m = {
-                proto: z,
-                fields: {
-                  segment_info: { n: 1, c: w },
-                  url_host: { n: 2, br: p.qM.readString, bw: p.gp.writeString },
-                  url_path: { n: 3, br: p.qM.readString, bw: p.gp.writeString },
-                  use_https: { n: 4, br: p.qM.readBool, bw: p.gp.writeBool },
-                  request_headers: { n: 5, c: S, r: !0, q: !0 },
-                },
-              }),
-            z.sm_m
-          );
-        }
-        static MBF() {
-          return z.sm_mbf || (z.sm_mbf = p.w0(z.M())), z.sm_mbf;
-        }
-        toObject(e = !1) {
-          return z.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(z.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(z.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new z();
-          return z.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(z.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(z.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_GameRecordingSegmentUploadInfo";
-        }
-      }
-      class S extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            S.prototype.name || p.Sg(S.M()),
-            B.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            S.sm_m ||
-              (S.sm_m = {
-                proto: S,
-                fields: {
-                  name: { n: 1, br: p.qM.readString, bw: p.gp.writeString },
-                  value: { n: 2, br: p.qM.readString, bw: p.gp.writeString },
-                },
-              }),
-            S.sm_m
-          );
-        }
-        static MBF() {
-          return S.sm_mbf || (S.sm_mbf = p.w0(S.M())), S.sm_mbf;
-        }
-        toObject(e = !1) {
-          return S.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(S.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(S.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new S();
-          return S.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(S.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(S.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_GameRecordingSegmentUploadInfo_HTTPHeaders";
-        }
-      }
-      class R extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            R.prototype.video_manager_clip_id || p.Sg(R.M()),
-            B.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            R.sm_m ||
-              (R.sm_m = {
-                proto: R,
-                fields: {
-                  video_manager_clip_id: {
-                    n: 1,
-                    br: p.qM.readFixed64String,
-                    bw: p.gp.writeFixed64String,
-                  },
-                  video_manager_video_id: {
-                    n: 2,
-                    br: p.qM.readFixed64String,
-                    bw: p.gp.writeFixed64String,
-                  },
-                  server_timeline_id: {
-                    n: 3,
-                    br: p.qM.readFixed64String,
-                    bw: p.gp.writeFixed64String,
-                  },
-                  manifest_url: {
-                    n: 4,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
-                  },
-                  duration_ms: {
-                    n: 5,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
-                  },
-                  start_offset_ms: {
-                    n: 6,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
-                  },
-                },
-              }),
-            R.sm_m
-          );
-        }
-        static MBF() {
-          return R.sm_mbf || (R.sm_mbf = p.w0(R.M())), R.sm_mbf;
-        }
-        toObject(e = !1) {
-          return R.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(R.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(R.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new R();
-          return R.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(R.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(R.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideoManagerClipID";
-        }
-      }
-      class h extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            h.prototype.clip_id || p.Sg(h.M()),
-            B.Message.initialize(this, e, 0, -1, [9], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
-                fields: {
-                  clip_id: {
-                    n: 1,
-                    br: p.qM.readFixed64String,
-                    bw: p.gp.writeFixed64String,
-                  },
-                  gameid: {
-                    n: 2,
-                    br: p.qM.readUint64String,
-                    bw: p.gp.writeUint64String,
-                  },
-                  date_recorded: {
-                    n: 4,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
-                  },
-                  total_file_size_bytes: {
-                    n: 7,
-                    br: p.qM.readUint64String,
-                    bw: p.gp.writeUint64String,
-                  },
-                  video_ids: { n: 9, c: R, r: !0, q: !0 },
-                  owner_steamid: {
-                    n: 10,
-                    br: p.qM.readFixed64String,
-                    bw: p.gp.writeFixed64String,
-                  },
-                  upload_complete: {
-                    n: 11,
-                    br: p.qM.readBool,
-                    bw: p.gp.writeBool,
-                  },
-                  duration_ms: {
-                    n: 12,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
-                  },
-                },
-              }),
-            h.sm_m
-          );
-        }
-        static MBF() {
-          return h.sm_mbf || (h.sm_mbf = p.w0(h.M())), h.sm_mbf;
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(h.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(h.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new h();
-          return h.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(h.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(h.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecordingClip";
-        }
-      }
-      class j extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            j.prototype.clip || p.Sg(j.M()),
-            B.Message.initialize(this, e, 0, -1, [3], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            j.sm_m ||
-              (j.sm_m = {
-                proto: j,
-                fields: {
-                  clip: { n: 2, c: h },
-                  video_def: { n: 3, c: f, r: !0, q: !0 },
-                },
-              }),
-            j.sm_m
-          );
-        }
-        static MBF() {
-          return j.sm_mbf || (j.sm_mbf = p.w0(j.M())), j.sm_mbf;
-        }
-        toObject(e = !1) {
-          return j.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(j.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(j.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new j();
-          return j.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(j.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(j.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_CreateShareClip_Request";
-        }
-      }
-      class U extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            U.prototype.clip || p.Sg(U.M()),
-            B.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            U.sm_m || (U.sm_m = { proto: U, fields: { clip: { n: 1, c: h } } }),
-            U.sm_m
-          );
-        }
-        static MBF() {
-          return U.sm_mbf || (U.sm_mbf = p.w0(U.M())), U.sm_mbf;
-        }
-        toObject(e = !1) {
-          return U.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(U.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(U.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new U();
-          return U.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(U.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return U.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(U.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_CreateShareClip_Response";
-        }
-      }
-      class C extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            C.prototype.clip_id || p.Sg(C.M()),
-            B.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            C.sm_m ||
-              (C.sm_m = {
-                proto: C,
-                fields: {
-                  clip_id: {
-                    n: 2,
-                    br: p.qM.readFixed64String,
-                    bw: p.gp.writeFixed64String,
-                  },
-                },
-              }),
-            C.sm_m
-          );
-        }
-        static MBF() {
-          return C.sm_mbf || (C.sm_mbf = p.w0(C.M())), C.sm_mbf;
-        }
-        toObject(e = !1) {
-          return C.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(C.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(C.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new C();
-          return C.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(C.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(C.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_DeleteSharedClip_Request";
-        }
-      }
-      class F extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), B.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return F.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return e ? { $jspbMessageInstance: r } : {};
-        }
-        static fromObject(e) {
-          return new F();
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new F();
-          return F.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {}
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_DeleteSharedClip_Response";
-        }
-      }
-      class W extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            W.prototype.clip_id || p.Sg(W.M()),
-            B.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            W.sm_m ||
-              (W.sm_m = {
-                proto: W,
-                fields: {
-                  clip_id: {
-                    n: 2,
-                    br: p.qM.readFixed64String,
-                    bw: p.gp.writeFixed64String,
-                  },
-                },
-              }),
-            W.sm_m
-          );
-        }
-        static MBF() {
-          return W.sm_mbf || (W.sm_mbf = p.w0(W.M())), W.sm_mbf;
-        }
-        toObject(e = !1) {
-          return W.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(W.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(W.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new W();
-          return W.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(W.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(W.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_GetSingleSharedClip_Request";
-        }
-      }
-      class v extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            v.prototype.clip || p.Sg(v.M()),
-            B.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            v.sm_m || (v.sm_m = { proto: v, fields: { clip: { n: 1, c: h } } }),
-            v.sm_m
-          );
-        }
-        static MBF() {
-          return v.sm_mbf || (v.sm_mbf = p.w0(v.M())), v.sm_mbf;
-        }
-        toObject(e = !1) {
-          return v.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(v.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(v.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new v();
-          return v.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(v.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(v.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_GetSingleSharedClip_Response";
-        }
-      }
-      class T extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            T.prototype.recording_id || p.Sg(T.M()),
-            B.Message.initialize(this, e, 0, -1, [4], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            T.sm_m ||
-              (T.sm_m = {
-                proto: T,
-                fields: {
-                  recording_id: {
-                    n: 1,
-                    br: p.qM.readUint64String,
-                    bw: p.gp.writeUint64String,
-                  },
-                  component_name: {
-                    n: 2,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
-                  },
-                  representation_name: {
-                    n: 3,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
-                  },
-                  segments_to_store: { n: 4, c: w, r: !0, q: !0 },
-                },
-              }),
-            T.sm_m
-          );
-        }
-        static MBF() {
-          return T.sm_mbf || (T.sm_mbf = p.w0(T.M())), T.sm_mbf;
-        }
-        toObject(e = !1) {
-          return T.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(T.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(T.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new T();
-          return T.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(T.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(T.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_BeginGameRecordingSegmentsUpload_Request";
-        }
-      }
-      class q extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            q.prototype.segments_needed || p.Sg(q.M()),
-            B.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            q.sm_m ||
-              (q.sm_m = {
-                proto: q,
-                fields: {
-                  segments_needed: { n: 1, c: z, r: !0, q: !0 },
-                  call_again: { n: 2, br: p.qM.readBool, bw: p.gp.writeBool },
-                },
-              }),
-            q.sm_m
-          );
-        }
-        static MBF() {
-          return q.sm_mbf || (q.sm_mbf = p.w0(q.M())), q.sm_mbf;
-        }
-        toObject(e = !1) {
-          return q.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(q.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(q.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new q();
-          return q.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(q.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return q.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(q.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_BeginGameRecordingSegmentsUpload_Response";
-        }
-      }
-      class O extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            O.prototype.recording_id || p.Sg(O.M()),
-            B.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: {
-                  recording_id: {
-                    n: 1,
-                    br: p.qM.readUint64String,
-                    bw: p.gp.writeUint64String,
-                  },
-                  component_name: {
-                    n: 2,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
-                  },
-                  representation_name: {
-                    n: 3,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
-                  },
-                  first_segment_number: {
-                    n: 4,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
-                  },
-                  num_segments: {
-                    n: 5,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
-                  },
-                  upload_result: {
-                    n: 6,
-                    br: p.qM.readUint32,
-                    bw: p.gp.writeUint32,
-                  },
-                },
-              }),
-            O.sm_m
-          );
-        }
-        static MBF() {
-          return O.sm_mbf || (O.sm_mbf = p.w0(O.M())), O.sm_mbf;
-        }
-        toObject(e = !1) {
-          return O.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(O.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(O.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new O();
-          return O.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(O.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(O.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_CommitGameRecordingSegmentsUpload_Request";
-        }
-      }
-      class x extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), B.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return x.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return e ? { $jspbMessageInstance: r } : {};
-        }
-        static fromObject(e) {
-          return new x();
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new x();
-          return x.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {}
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_CommitGameRecordingSegmentsUpload_Response";
-        }
-      }
-      class I extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            I.prototype.recording_id || p.Sg(I.M()),
-            B.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            I.sm_m ||
-              (I.sm_m = {
-                proto: I,
-                fields: {
-                  recording_id: {
-                    n: 1,
-                    br: p.qM.readUint64String,
-                    bw: p.gp.writeUint64String,
-                  },
-                },
-              }),
-            I.sm_m
-          );
-        }
-        static MBF() {
-          return I.sm_mbf || (I.sm_mbf = p.w0(I.M())), I.sm_mbf;
-        }
-        toObject(e = !1) {
-          return I.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(I.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(I.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new I();
-          return I.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(I.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(I.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Request";
-        }
-      }
-      class G extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            G.prototype.segments_needed || p.Sg(G.M()),
-            B.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            G.sm_m ||
-              (G.sm_m = {
-                proto: G,
-                fields: { segments_needed: { n: 1, c: z, r: !0, q: !0 } },
-              }),
-            G.sm_m
-          );
-        }
-        static MBF() {
-          return G.sm_mbf || (G.sm_mbf = p.w0(G.M())), G.sm_mbf;
-        }
-        toObject(e = !1) {
-          return G.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(G.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(G.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new G();
-          return G.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(G.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(G.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Response";
-        }
-      }
-      class N extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            N.prototype.recording_id || p.Sg(N.M()),
-            B.Message.initialize(this, e, 0, -1, [2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            N.sm_m ||
-              (N.sm_m = {
-                proto: N,
-                fields: {
-                  recording_id: {
-                    n: 1,
-                    br: p.qM.readUint64String,
-                    bw: p.gp.writeUint64String,
-                  },
-                  segments_uploaded: { n: 2, c: w, r: !0, q: !0 },
-                },
-              }),
-            N.sm_m
-          );
-        }
-        static MBF() {
-          return N.sm_mbf || (N.sm_mbf = p.w0(N.M())), N.sm_mbf;
-        }
-        toObject(e = !1) {
-          return N.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return p.BT(N.M(), e, r);
-        }
-        static fromObject(e) {
-          return p.Uq(N.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new N();
-          return N.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return p.zj(N.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          p.i0(N.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_GameRecordingCommitSegmentUploads_Request";
-        }
-      }
-      class P extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), B.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return P.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return e ? { $jspbMessageInstance: r } : {};
-        }
-        static fromObject(e) {
-          return new P();
-        }
-        static deserializeBinary(e) {
-          let r = new (_().BinaryReader)(e),
-            t = new P();
-          return P.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {}
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_GameRecordingCommitSegmentUploads_Response";
-        }
-      }
-      !(function (e) {
-        (e.CreateShareClip = function (e, r, t) {
-          return e.SendMsg(
-            "GameRecordingClip.CreateShareClip#1",
-            (0, b.I8)(j, r, t),
-            U,
-            { ePrivilege: 1 },
-          );
-        }),
-          (e.DeleteSharedClip = function (e, r, t) {
-            return e.SendMsg(
-              "GameRecordingClip.DeleteSharedClip#1",
-              (0, b.I8)(C, r, t),
-              F,
+                }),
+              h.sm_m
+            );
+          }
+          static MBF() {
+            return h.sm_mbf || (h.sm_mbf = t.w0(h.M())), h.sm_mbf;
+          }
+          toObject(r = !1) {
+            return h.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return t.BT(h.M(), r, i);
+          }
+          static fromObject(r) {
+            return t.Uq(h.M(), r);
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new h();
+            return h.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return t.zj(h.MBF(), r, i);
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return h.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {
+            t.i0(h.M(), r, i);
+          }
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              h.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVideo_GameRecordingCommitSegmentUploads_Request";
+          }
+        }
+        class Z extends n.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(), n.Message.initialize(this, r, 0, -1, void 0, null);
+          }
+          toObject(r = !1) {
+            return Z.toObject(r, this);
+          }
+          static toObject(r, i) {
+            return r ? { $jspbMessageInstance: i } : {};
+          }
+          static fromObject(r) {
+            return new Z();
+          }
+          static deserializeBinary(r) {
+            let i = new (s().BinaryReader)(r),
+              a = new Z();
+            return Z.deserializeBinaryFromReader(a, i);
+          }
+          static deserializeBinaryFromReader(r, i) {
+            return r;
+          }
+          serializeBinary() {
+            var r = new (s().BinaryWriter)();
+            return Z.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, i) {}
+          serializeBase64String() {
+            var r = new (s().BinaryWriter)();
+            return (
+              Z.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVideo_GameRecordingCommitSegmentUploads_Response";
+          }
+        }
+        var d;
+        ((b) => {
+          function r(L, A, K) {
+            return L.SendMsg(
+              "GameRecordingClip.CreateShareClip#1",
+              (0, J.I8)(c, A, K),
+              j,
               { ePrivilege: 1 },
             );
-          }),
-          (e.GetSingleSharedClip = function (e, r, t) {
-            return e.SendMsg(
+          }
+          b.CreateShareClip = r;
+          function i(L, A, K) {
+            return L.SendMsg(
+              "GameRecordingClip.DeleteSharedClip#1",
+              (0, J.I8)(W, A, K),
+              Y,
+              { ePrivilege: 1 },
+            );
+          }
+          b.DeleteSharedClip = i;
+          function a(L, A, K) {
+            return L.SendMsg(
               "GameRecordingClip.GetSingleSharedClip#1",
-              (0, b.I8)(W, r, t),
-              v,
+              (0, J.I8)(F, A, K),
+              O,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
-          });
-      })(i || (i = {})),
-        (function (e) {
-          (e.BeginGameRecordingSegmentsUpload = function (e, r, t) {
-            return e.SendMsg(
+          }
+          b.GetSingleSharedClip = a;
+        })(d || (d = {}));
+        var G;
+        ((b) => {
+          function r(A, K, N) {
+            return A.SendMsg(
               "VideoClip.BeginGameRecordingSegmentsUpload#1",
-              (0, b.I8)(T, r, t),
-              q,
+              (0, J.I8)(E, K, N),
+              T,
               { ePrivilege: 1 },
             );
-          }),
-            (e.CommitGameRecordingSegmentsUpload = function (e, r, t) {
-              return e.SendMsg(
-                "VideoClip.CommitGameRecordingSegmentsUpload#1",
-                (0, b.I8)(O, r, t),
-                x,
-                { ePrivilege: 1 },
-              );
-            }),
-            (e.GetNextBatchOfSegmentsToUpload = function (e, r, t) {
-              return e.SendMsg(
-                "VideoClip.GetNextBatchOfSegmentsToUpload#1",
-                (0, b.I8)(I, r, t),
-                G,
-                { ePrivilege: 1 },
-              );
-            }),
-            (e.CommitSegmentUploads = function (e, r, t) {
-              return e.SendMsg(
-                "VideoClip.CommitSegmentUploads#1",
-                (0, b.I8)(N, r, t),
-                P,
-                { ePrivilege: 1 },
-              );
-            });
-        })(s || (s = {}));
-      var V = t(35198),
-        D = t(84629),
-        E = t(25025),
-        k = t(35488);
-      function K(e) {
-        const { clipID: r } = e,
-          t = (function (e) {
-            const r = (0, u.KV)();
-            return (0, g.I)({
-              queryKey: ["grclip", e],
-              queryFn: async () => {
-                const t = b.w.Init(W);
-                t.Body().set_clip_id(e);
-                const s = await i.GetSingleSharedClip(r, t);
-                if (s.GetEResult() != V.R)
-                  throw (
-                    ((0, D.ZI)("GetSingleSharedClip failed"),
-                    s.DEBUG_LogToConsole(),
-                    new Error(
-                      `Failed to load clip with result: ${s.GetEResult()}`,
-                    ))
-                  );
-                let a,
-                  n = s.Body().toObject().clip,
-                  l = [];
-                if (0 == n.video_ids.length)
-                  throw (
-                    ((0, D.ZI)("No video ids in clip", e),
-                    s.DEBUG_LogToConsole(),
-                    new Error("No video ids in clip"))
-                  );
-                for (let e of n.video_ids)
-                  (a && a.timeline_id == e.server_timeline_id) ||
-                    ((a = A(n, e)), l.push(a)),
-                    a.recordings.push({
-                      recording_id: e.video_manager_video_id,
-                      start_offset_ms: e.start_offset_ms.toFixed(0),
-                      duration_ms: e.duration_ms.toFixed(0),
-                      recording_type: d.kO,
-                      cdn_manifest_url: e.manifest_url,
-                    });
-                return { clip_id: n.clip_id, game_id: n.gameid, timelines: l };
-              },
-            });
-          })(r);
-        return t.data
-          ? (0, a.jsx)($, { clip: t.data, mode: l.g_.ChatClip })
-          : (0, a.jsx)("div", {
-              style: { color: "white" },
-              children: "Loading...",
-            });
-      }
-      const L = function (e) {
-        const { previewURL: r } = e,
-          [t, i] = n.useState(!1);
-        return t
-          ? (0, a.jsx)(K, { ...e })
-          : (0, a.jsxs)("div", {
-              className: E.ClipPreview,
-              onClick: () => {
-                i(!0);
-              },
-              children: [
-                (0, a.jsx)("img", { className: E.Thumbnail, src: r }),
-                (0, a.jsx)("div", {
-                  className: E.PlayContainer,
-                  children: (0, a.jsx)(k.Play, { className: E.Button }),
-                }),
-              ],
-            });
-      };
-      function A(e, r) {
-        return {
-          timeline_id: r.server_timeline_id,
-          game_id: e.clip_id,
-          date_recorded: e.date_recorded,
-          duration_ms: e.duration_ms.toFixed(0),
-          recordings: [],
-        };
-      }
-      function H(e) {
-        const r = n.useMemo(() => (0, o.pw)(e), [e]),
-          t = n.useCallback(
-            (r) => {
-              for (const t of e.timelines)
-                for (const e of t.recordings)
-                  if (e.recording_id == r) return e.cdn_manifest_url;
+          }
+          b.BeginGameRecordingSegmentsUpload = r;
+          function i(A, K, N) {
+            return A.SendMsg(
+              "VideoClip.CommitGameRecordingSegmentsUpload#1",
+              (0, J.I8)(P, K, N),
+              Q,
+              { ePrivilege: 1 },
+            );
+          }
+          b.CommitGameRecordingSegmentsUpload = i;
+          function a(A, K, N) {
+            return A.SendMsg(
+              "VideoClip.GetNextBatchOfSegmentsToUpload#1",
+              (0, J.I8)(x, K, N),
+              m,
+              { ePrivilege: 1 },
+            );
+          }
+          b.GetNextBatchOfSegmentsToUpload = a;
+          function L(A, K, N) {
+            return A.SendMsg(
+              "VideoClip.CommitSegmentUploads#1",
+              (0, J.I8)(h, K, N),
+              Z,
+              { ePrivilege: 1 },
+            );
+          }
+          b.CommitSegmentUploads = L;
+        })(G || (G = {}));
+        var _ = l(1345),
+          R = l(51026),
+          I = l(25025),
+          rr = l(69385),
+          ur = "10978408";
+        function tr(b) {
+          const { previewURL: r } = b,
+            [i, a] = $.useState(!1);
+          if (i) return (0, v.jsx)(ir, { ...b });
+          const L = () => {
+            a(!0);
+          };
+          return (0, v.jsxs)("div", {
+            className: I.ClipPreview,
+            onClick: L,
+            children: [
+              (0, v.jsx)("img", { className: I.Thumbnail, src: r }),
+              (0, v.jsx)("div", {
+                className: I.PlayContainer,
+                children: (0, v.jsx)(rr.Play, { className: I.Button }),
+              }),
+            ],
+          });
+        }
+        function ir(b) {
+          const { clipID: r } = b,
+            i = nr(r);
+          return i.data
+            ? (0, v.jsx)(lr, { clip: i.data, mode: D.g_.ChatClip })
+            : (0, v.jsx)("div", {
+                style: { color: "white" },
+                children: "Loading...",
+              });
+        }
+        const sr = tr;
+        function ar(b, r) {
+          return {
+            timeline_id: r.server_timeline_id,
+            game_id: b.clip_id,
+            date_recorded: b.date_recorded,
+            duration_ms: b.duration_ms.toFixed(0),
+            recordings: [],
+          };
+        }
+        function nr(b) {
+          const r = (0, p.KV)();
+          return (0, g.I)({
+            queryKey: ["grclip", b],
+            queryFn: async () => {
+              const i = J.w.Init(F);
+              i.Body().set_clip_id(b);
+              const a = await d.GetSingleSharedClip(r, i);
+              if (a.GetEResult() != _.R)
+                throw (
+                  ((0, R.ZI)("GetSingleSharedClip failed"),
+                  a.DEBUG_LogToConsole(),
+                  new Error(
+                    `Failed to load clip with result: ${a.GetEResult()}`,
+                  ))
+                );
+              let L = a.Body().toObject().clip,
+                A = [];
+              if (L.video_ids.length == 0)
+                throw (
+                  ((0, R.ZI)("No video ids in clip", b),
+                  a.DEBUG_LogToConsole(),
+                  new Error("No video ids in clip"))
+                );
+              let K;
+              for (let N of L.video_ids)
+                (!K || K.timeline_id != N.server_timeline_id) &&
+                  ((K = ar(L, N)), A.push(K)),
+                  K.recordings.push({
+                    recording_id: N.video_manager_video_id,
+                    start_offset_ms: N.start_offset_ms.toFixed(0),
+                    duration_ms: N.duration_ms.toFixed(0),
+                    recording_type: S.kO,
+                    cdn_manifest_url: N.manifest_url,
+                  });
+              return { clip_id: L.clip_id, game_id: L.gameid, timelines: A };
             },
-            [e],
+          });
+        }
+        function C(b) {
+          const r = $.useMemo(() => (0, U.pw)(b), [b]),
+            i = $.useCallback(
+              (a) => {
+                for (const L of b.timelines)
+                  for (const A of L.recordings)
+                    if (A.recording_id == a) return A.cdn_manifest_url;
+              },
+              [b],
+            );
+          return (
+            $.useEffect(() => () => r && r.release(), [r]),
+            { loader: r.loader, fnGetManifest: i }
           );
-        return (
-          n.useEffect(() => () => r && r.release(), [r]),
-          { loader: r.loader, fnGetManifest: t }
-        );
-      }
-      function $(e) {
-        const { clip: r, mode: t } = e,
-          { loader: i, fnGetManifest: s } = H(r);
-        return (0, a.jsx)(a.Fragment, {
-          children: (0, a.jsx)(l.Ni, {
-            loader: i,
-            fnGetManifest: s,
-            mode: t,
-            children: (0, a.jsxs)("div", {
-              className: E.ClipDetails,
-              children: [
-                (0, a.jsx)("div", {
-                  className: E.VideoContainer,
-                  children: (0, a.jsx)(m.J, {
-                    positionAbsolute: !1,
-                    autoPlay: t != l.g_.ChatClip,
+        }
+        function lr(b) {
+          const { clip: r, mode: i } = b,
+            { loader: a, fnGetManifest: L } = C(r);
+          return (0, v.jsx)(v.Fragment, {
+            children: (0, v.jsx)(D.Ni, {
+              loader: a,
+              fnGetManifest: L,
+              mode: i,
+              children: (0, v.jsxs)("div", {
+                className: I.ClipDetails,
+                children: [
+                  (0, v.jsx)("div", {
+                    className: I.VideoContainer,
+                    children: (0, v.jsx)(H.J, {
+                      positionAbsolute: !1,
+                      autoPlay: i != D.g_.ChatClip,
+                    }),
                   }),
-                }),
-                (0, a.jsx)(c.h, { loader: i }),
-              ],
+                  (0, v.jsx)(q.h, { loader: a }),
+                ],
+              }),
             }),
-          }),
-        });
-      }
+          });
+        }
+      },
     },
-  },
-]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/gamerecording.js.map
+  ]);
+})();
+//# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/gamerecording.js.map

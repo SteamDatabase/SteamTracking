@@ -1,0 +1,48 @@
+option optimize_for = SPEED;
+
+enum ERatingAgency {
+	k_ERatingAgency_Invalid = 0;
+	k_ERatingAgency_ESRB = 1;
+	k_ERatingAgency_PEGI = 2;
+	k_ERatingAgency_BBFC = 3;
+	k_ERatingAgency_USK = 4;
+	k_ERatingAgency_OFLC_AU = 5;
+	k_ERatingAgency_OFLC_NZ = 6;
+	k_ERatingAgency_CERO = 7;
+	k_ERatingAgency_GRAC = 8;
+	k_ERatingAgency_GMEDIA = 9;
+	k_ERatingAgency_DEJUS = 10;
+	k_ERatingAgency_IMDA = 11;
+	k_ERatingAgency_FPB = 12;
+	k_ERatingAgency_TESRI = 13;
+	k_ERatingAgency_RARS = 14;
+	k_ERatingAgency_AGCOM = 15;
+	k_ERatingAgency_IGRS = 16;
+	k_ERatingAgency_Steam_Germany = 17;
+	k_ERatingAgency_Steam_Australia = 18;
+	k_ERatingAgency_CADPA = 19;
+}
+
+enum EAppRatingSource {
+	k_EAppRatingSource_Invalid = 0;
+	k_EAppRatingSource_Official = 1;
+	k_EAppRatingSource_Generated = 2;
+}
+
+message AppRatingAuxData {
+	repeated string descriptors = 1;
+	repeated string interactive_elements = 2;
+	optional string official_id = 3;
+	optional bool esrb_online_music_not_rated = 4;
+	optional bool esrb_online_interactions_not_rated = 5;
+}
+
+message AppRating {
+	optional .ERatingAgency rating_agency = 1 [default = k_ERatingAgency_Invalid];
+	optional string rating = 2;
+	optional .EAppRatingSource source = 3 [default = k_EAppRatingSource_Invalid];
+	optional bool banned = 4;
+	optional uint32 required_age = 5;
+	optional bool use_age_gate = 6;
+	optional .AppRatingAuxData aux_data = 7;
+}

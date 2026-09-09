@@ -339,6 +339,7 @@ enum EMsg {
 	k_EMsgAdminGCGetCommandListResponse = 1026;
 	k_EMsgFBSConnectionData = 1027;
 	k_EMsgAdminMsgSpew = 1028;
+	k_EMsgAdminClientInfo = 1029;
 	k_EMsgBaseFBS = 1100;
 	k_EMsgFBSReqVersion = 1100;
 	k_EMsgFBSVersionInfo = 1101;
@@ -374,6 +375,9 @@ enum EMsg {
 	k_EMsgFBSBootstrapperPackageTransferProgress = 1132;
 	k_EMsgFBSRestartBootstrapper = 1133;
 	k_EMsgFBSPauseFrozenDumps = 1134;
+	k_EMsgFBSDeployStoredHotFix = 1135;
+	k_EMsgFBSQueryHotfixPackages = 1136;
+	k_EMsgFBSQueryHotfixPackagesResponse = 1137;
 	k_EMsgBaseFileXfer = 1200;
 	k_EMsgFileXferRequest = 1200;
 	k_EMsgFileXferResponse = 1201;
@@ -464,9 +468,6 @@ enum EMsg {
 	k_EMsgATSUFSPerfTestTask = 1504;
 	k_EMsgATSUFSPerfTestResponse = 1505;
 	k_EMsgATSCycleTCM = 1506;
-	k_EMsgATSInitDRMSStressTest = 1507;
-	k_EMsgATSCallTest = 1508;
-	k_EMsgATSCallTestReply = 1509;
 	k_EMsgATSStartExternalStress = 1510;
 	k_EMsgATSExternalStressJobStart = 1511;
 	k_EMsgATSExternalStressJobQueued = 1512;
@@ -1392,6 +1393,8 @@ enum EMsg {
 	k_eMsgRemoteClientSuspendLanPeerContent = 9536;
 	k_eMsgRemoteClientUpdateDownloadsController = 9537;
 	k_EMsgRemoteClientAcceptAllEULAs = 9538;
+	k_EMsgRemoteClientInstallApp = 9539;
+	k_EMsgRemoteClientInstallAppResponse = 9540;
 	k_EMsgClientConcurrentSessionsBase = 9600;
 	k_EMsgClientPlayingSessionState = 9600;
 	k_EMsgClientKickPlayingSession = 9601;

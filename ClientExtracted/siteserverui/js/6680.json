@@ -83,7 +83,7 @@
     "Steam_EResult_81": "Neplatný dotaz na CEG",
     "Steam_EResult_82": "Zařízení s omezeným přístupem",
     "Steam_EResult_83": "Platí omezení na region",
-    "Steam_EResult_84": "Byl překročen limit akcí",
+    "Steam_EResult_84": "Byla překročena frekvence akcí",
     "Steam_EResult_85": "Přihlášení zamítnuto (je vyžadován kód dvoufaktorového ověření)",
     "Steam_EResult_86": "Položka nebo záznam byl odstraněn",
     "Steam_EResult_87": "Příliš mnoho pokusů o přihlášení",

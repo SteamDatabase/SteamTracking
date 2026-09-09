@@ -10,6 +10,11 @@ enum EMMSLobbyStatus {
 	k_EMMSLobbyStatusNotAMember = 3;
 }
 
+message MMSKeyValuePair {
+	optional string name = 1;
+	optional string value = 2;
+}
+
 message CMsgClientMMSSetRatelimitPolicyOnClient {
 	optional uint32 app_id = 1;
 	optional bool enable_rate_limits = 2;
@@ -24,10 +29,11 @@ message CMsgClientMMSCreateLobby {
 	optional int32 lobby_flags = 4;
 	optional uint32 cell_id = 5;
 	optional uint32 deprecated_public_ip = 6;
-	optional bytes metadata = 7;
+	optional bytes metadata_kv = 7;
 	optional string persona_name_owner = 8;
 	optional .CMsgIPAddress public_ip = 9;
 	optional string network_ping_location = 10;
+	repeated .MMSKeyValuePair metadata = 11;
 }
 
 message CMsgClientMMSCreateLobbyResponse {
@@ -48,7 +54,8 @@ message CMsgClientMMSJoinLobbyResponse {
 	message Member {
 		optional fixed64 steam_id = 1;
 		optional string persona_name = 2;
-		optional bytes metadata = 3;
+		optional bytes metadata_kv = 3;
+		repeated .MMSKeyValuePair metadata = 4;
 	}
 
 	optional uint32 app_id = 1;
@@ -58,8 +65,9 @@ message CMsgClientMMSJoinLobbyResponse {
 	optional int32 lobby_type = 5;
 	optional int32 lobby_flags = 6;
 	optional fixed64 steam_id_owner = 7;
-	optional bytes metadata = 8;
+	optional bytes metadata_kv = 8;
 	repeated .CMsgClientMMSJoinLobbyResponse.Member members = 9;
+	repeated .MMSKeyValuePair metadata = 10;
 }
 
 message CMsgClientMMSLeaveLobby {
@@ -96,12 +104,13 @@ message CMsgClientMMSGetLobbyListResponse {
 		optional int32 max_members = 2;
 		optional int32 lobby_type = 3;
 		optional int32 lobby_flags = 4;
-		optional bytes metadata = 5;
+		optional bytes metadata_kv = 5;
 		optional int32 num_members = 6;
 		optional float distance = 7;
 		optional int64 weight = 8;
 		optional int32 ping = 9;
 		optional int32 missing_ping = 10;
+		repeated .MMSKeyValuePair metadata = 11;
 	}
 
 	optional uint32 app_id = 1;
@@ -116,8 +125,9 @@ message CMsgClientMMSSetLobbyData {
 	optional int32 max_members = 4;
 	optional int32 lobby_type = 5;
 	optional int32 lobby_flags = 6;
-	optional bytes metadata = 7;
+	optional bytes metadata_kv = 7;
 	optional string network_ping_location = 8;
+	repeated .MMSKeyValuePair metadata = 9;
 }
 
 message CMsgClientMMSSetLobbyDataResponse {
@@ -135,8 +145,9 @@ message CMsgClientMMSLobbyData {
 	message Member {
 		optional fixed64 steam_id = 1;
 		optional string persona_name = 2;
-		optional bytes metadata = 3;
+		optional bytes metadata_kv = 3;
 		optional string ping_data = 4;
+		repeated .MMSKeyValuePair metadata = 5;
 	}
 
 	optional uint32 app_id = 1;
@@ -146,10 +157,11 @@ message CMsgClientMMSLobbyData {
 	optional int32 lobby_type = 5;
 	optional int32 lobby_flags = 6;
 	optional fixed64 steam_id_owner = 7;
-	optional bytes metadata = 8;
+	optional bytes metadata_kv = 8;
 	repeated .CMsgClientMMSLobbyData.Member members = 9;
 	optional uint32 lobby_cellid = 10;
 	optional bool owner_should_accept_changes = 11;
+	repeated .MMSKeyValuePair metadata = 12;
 }
 
 message CMsgClientMMSSendLobbyChatMsg {

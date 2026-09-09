@@ -657,12 +657,6 @@ SteamClientPatchNotes
 	method		"internal"
 }
 
-SteamClientBetaPatchNotes
-{
-	url			"%store%/events/clientpatchnotes?branch=beta"
-	method		"internal"
-}
-
 NewsHomePage
 {
 	url			"%store%/news"
@@ -898,11 +892,6 @@ ChatRoot
 	url			"%chat%"
 	method		"internal"
 	filter		"friends"
-}
-Chat
-{
-	url			"%chat%/chat/clientui/?l=%language%&cc=%country%&build=%buildid%"
-	method		"internal"
 }
 BigPictureChat
 {

@@ -7,11 +7,6 @@
   Comment started here.
   Expected :
   Ss=%d, Se=%d, Ah=%d, Al=%d
-  f_bavail: %lu\n
-  f_bfree : %lu\n
-  f_blocks: %lu\n
-  f_bsize : %lu\n
-  f_frsize: %lu\n
   what():
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
@@ -21,7 +16,6 @@
  --enable-duplicate-detection
  --force
  --label '%s'
- 2>/dev/null
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
  Can't back up over more bytes than were returned by the last call to Next().
@@ -190,7 +184,6 @@
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
-#!/bin/sh\nexit 0\n
 #3CScs
 #FLR
 #FileOpenDialog_Cancel
@@ -317,6 +310,8 @@ $\n k_EContentModerationSanction_MAX
 $\n k_EContentReportReason_CSAMOther
 $\n k_EContentReportReason_Derailing
 $\n k_EContentReportReason_Reposting
+$\n k_EDLCHighlightReason_ComingSoon
+$\n k_EDLCHighlightReason_NewPlayers
 $\n k_EExternalSaleEventType_Unknown
 $\n k_EGPUPerformanceLevel_Profiling
 $\n k_EGpuDriverId_GoogleSwiftshader
@@ -363,6 +358,7 @@ $\nY8O
 %\n!k_EContentReportReason_OtherAbuse
 %\n!k_EContentReportResolution_Broken
 %\n!k_EContentReportResolution_Purged
+%\n!k_EDLCHighlightReason_Recommended
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingType_NotRecording
 %\n!k_EGraphicsPerfOverlayLevel_Basic
@@ -385,9 +381,6 @@ $\nY8O
 %community%
 %communityhttps%
 %d %d %d %d
-%d MB avail\n
-%d MB free space\n
-%d MB total space\n
 %d.%d.%d.%d:%d
 %d:00
 %f %f %f %f
@@ -494,6 +487,7 @@ $\nY8O
 '\n#k_EBrowserGPUStatus_DisabledUnknown
 '\n#k_EContentModerationSanction_Warned
 '\n#k_EContentModeratorLevel_Supervisor
+'\n#k_EContentReportReason_BulkDeletion
 '\n#k_EContentReportReason_ToSViolation
 '\n#k_EContentReportSubjectType_Invalid
 '\n#k_EContentReportSubjectType_UGCFile
@@ -538,6 +532,7 @@ $\nY8O
 (\n$k_EContentReportResolution_Sustained
 (\n$k_EContentReportSubjectAction_Locked
 (\n$k_EContentReportSubjectAction_Warned
+(\n$k_EDLCHighlightReason_PlayerFavorite
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -698,6 +693,7 @@ $\nY8O
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_EResolutionAutomation_FullyAutomated
 *\n&k_ESystemDisplayCompatibilityMode_None
+*\n&k_EWindowsUpdateOperationResult_Failed
 *\n&k_PublishedFileQueryType_RankedByTrend
 *pchMsg && *pchMsg == '%'
 *pcubDecodedData
@@ -730,6 +726,7 @@ $\nY8O
 +\n'k_ESteamDeckCompatibilityFeedback_Agree
 +\n'k_ESteamDeckCompatibilityFeedback_Unset
 +\n'k_ESteamOSCompatibilityCategory_Unknown
++\n'k_EWindowsUpdateOperationResult_Aborted
 +\n\rReservedRange
 +\n\vmethod_type
 +ulsX
@@ -804,6 +801,7 @@ $\nY8O
 -\n)k_ESteamDeckCompatibilityCategory_Unknown
 -\n)k_ESystemDisplayCompatibilityMode_Invalid
 -\n)k_EWindowsUpdateInstallationImpact_Normal
+-\n)k_EWindowsUpdateOperationResult_Succeeded
 -\n\rrasterization
 -\n\rsecurity_info
 -\n\rskia_graphite
@@ -975,6 +973,8 @@ $\nY8O
 .\n*k_ESteamDeckCompatibilityCategory_Verified
 .\n*k_ESteamDeckCompatibilityFeedback_Disagree
 .\n*k_ESteamOSCompatibilityCategory_Compatible
+.\n*k_EWindowsUpdateOperationResult_InProgress
+.\n*k_EWindowsUpdateOperationResult_NotStarted
 .\n*k_EnhancedMarketAppearanceStatus_Completed
 .cpl
 .current.txt
@@ -998,7 +998,7 @@ $\nY8O
 .ogv
 .placeholder.proto
 .png
-.steam_exec_test.sh
+.steam_exec_test
 .webm
 .y4w
 /P8i
@@ -1029,11 +1029,13 @@ $\nY8O
 /name
 /proc/meminfo
 /proc/mounts
+/proc/self/fd/%d
 /proc/self/maps
 /proc/stat
-/run/host/%s
+/run/host/root/%s
 /sbin/lsof
 /steamrt64
+/steamsysinfo
 /sys/bus/iio/devices
 /sys/class/drm
 /sys/class/drm/card0/card0-eDP-1/edid
@@ -1045,12 +1047,10 @@ $\nY8O
 /tmp
 /tmp/cmd-stderr.XXXXXX
 /tmp/cmd-stdout.XXXXXX
-/tmp/disk-free.XXXXXX
 /tmp/gameoverlay_ui.previous.txt
 /tmp/gameoverlay_ui.txt
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
-/ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 /usr/bin/lsof
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
@@ -1062,8 +1062,7 @@ $\nY8O
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
-/usr/bin/steamos-polkit-helpers/steamos-set-hostname %s
-/usr/bin/steamos-polkit-helpers/steamos-set-timezone %s
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
 /usr/bin/xdg-open
@@ -1080,12 +1079,11 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0000000000000000000000000000000000000000
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789ABCDEF
-0123456789ABCDEF`\r
 0123456789abcdef
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
@@ -1400,7 +1398,6 @@ $\nY8O
 15IGPUStatsReader
 15IOverlayOSPumps
 16 Mbps
-16AppModalQueryBox
 16CHTMLProtoBufMsgI10CMsgGoBackE
 16CHTMLProtoBufMsgI10CMsgReloadE
 16CHTMLProtoBufMsgI11CMsgKeyCharE
@@ -1458,6 +1455,7 @@ $\nY8O
 16CMsgAckScreenDPI
 16CMsgBrowserReady
 16CMsgClearHistory
+16CMsgInputBlocked
 16CMsgJSMethodCall
 16CMsgNodeHasFocus
 16CMsgOpenDevTools
@@ -1486,6 +1484,7 @@ $\nY8O
 17CMsgLoadedRequest
 17CMsgMouseDblClick
 17CMsgSearchResults
+17CMsgSetBlockInput
 17CMsgStartDownload
 17CMsgUpdateToolTip
 17CPurchaseGiftInfo
@@ -1561,7 +1560,6 @@ $\nY8O
 20CMsgJSExecutePromise
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
-20CMsgRestartJSContext
 20CMsgScalePageToValue
 20CMsgSetSteamBetaName
 20CMultipleCallResultsI15COverlayVRState24GameStatsSessionIssued_tE
@@ -1570,6 +1568,7 @@ $\nY8O
 20CRefCountServiceBaseILb1E6CRefMTE
 20HTMLFramelessWrapper
 20IJSMethodCallHandler
+21:03:08
 21CClanAnnouncementInfo
 21CHTMLPageSecurityInfo
 21CLogFileAsyncCallback
@@ -1586,7 +1585,6 @@ $\nY8O
 21CPurchaseLineItemInfo
 21CUtlCStringConversion
 21CreateDirectoryDialog
-22:49:49
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -1693,6 +1691,7 @@ $\nY8O
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
 49fN
 4\n'k_EChildProcessQueryExitCode_ErrorOther
+4\n'k_EWindowsUpdateOperationResult_Unknown
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EContentReportReason_LinkingToMaliciousContent
 4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
@@ -1756,6 +1755,7 @@ $\nY8O
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
 7\n3k_ESteamOSCompatibilityResultDisplayType_Compatible
+7\n3k_EWindowsUpdateOperationResult_SucceededWithErrors
 7\n\tenum_type
 7~8A
 8 Mbps
@@ -1821,6 +1821,7 @@ $\nY8O
 <\n8k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime
 <empty>\n
 <no url>
+<null>
 <unnamed>
 = or is NULL
 =\n9k_EAppTestType_SteamChinaPlatformOperator_StorePageReview
@@ -1966,7 +1967,6 @@ Anonymous User
 App Running
 AppID
 AppIDToRedirect
-AppModalQueryBox
 AppRootPanel
 AppendedSHA
 Application built with libpng-
@@ -2018,6 +2018,13 @@ BBVA Continental
 BCreateDirectory
 BEGIN
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
+BFilesystemAllowsExecution: couldn't read %s\n
+BFilesystemAllowsExecution: execute test timed out\n
+BFilesystemAllowsExecution: failed to copy %s to %s: %s\n
+BFilesystemAllowsExecution: failed to get exit code\n
+BFilesystemAllowsExecution: failed to reopen fd: %d\n
+BFilesystemAllowsExecution: failed to write %s: %s\n
+BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIPFamiliesOverlap - unknown eServerFamilies value %d
 BIsOpen()
@@ -2030,6 +2037,8 @@ BSR_ANYCRLF)
 BSR_UNICODE)
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
 BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
+BSetSteamAutoStart: failed to copy %s to %s\n
+BSetSteamAutoStart: failed to create directories for %s\n
 BWriteValueToFileAsUser
 BWriteValuetoFileAsRoot
 BWritingFatalMiniDump
@@ -2502,6 +2511,7 @@ CMsgImeCancelComposition
 CMsgImeCommitText
 CMsgImeCompositionRangeChanged
 CMsgImeSetComposition
+CMsgInputBlocked
 CMsgInspectElement
 CMsgJSDialogResponse
 CMsgJSExecuteCallback
@@ -2535,13 +2545,13 @@ CMsgRenderProcessTerminated
 CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged
-CMsgRestartJSContext"
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
 CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetAccessibilitySettings
+CMsgSetBlockInput
 CMsgSetForceDeviceScaleFactors
 CMsgSetForegroundWindow
 CMsgSetHTMLTitle
@@ -2614,6 +2624,7 @@ CPerfLabel
 CRC error
 CRC32_ProcessBuffer
 CRLF)
+CSHA1::HashFile
 CSHA1::Update
 CSPAuth
 CScreenshotThread::Run - Error reading screenshot stream. Clearing any remaining data.\n
@@ -2911,7 +2922,6 @@ Couldn't parse script file: expected 'event', found '%s'\n
 Couldn't parse script file: expected <event name>, found nothing\n
 Couldn't parse script sequence '%s': expected '{', found '%s'\n
 Couldn't parse script sequence '%s': expected <anim command>, found '%s'\n
-Couldn't write %s: %s\n
 CountryCode
 Coupon has expired
 Create
@@ -2960,7 +2970,6 @@ Czech
 DATA_LOSS
 DB Lookup CD-Key
 DBG_PATHMATCH
-DBG_STAT
 DCT coefficient out of range
 DCT scaled block size %dx%d not supported
 DDDDUUUU
@@ -3163,6 +3172,7 @@ EControllerConfigFeature
 EControllerType
 ECreditCardType
 ECurrencyCode
+EDLCHighlightReason
 EDRMWrapLocation
 EDownloadSourceHTTPSSupport
 EDurationControlProgress
@@ -3281,6 +3291,7 @@ EWUInstallCriticalUpdatesResult
 EWURequiresRebootResult
 EWalletSource
 EWindowStackingOrder
+EWindowsUpdateOperationResult
 EWindowsUpdateRebootBehavior
 EWorkshopFileType
 EXECUTABLE_PATH
@@ -3369,7 +3380,6 @@ EventName
 EventNotes
 EventTime
 EventType
-Execute: %s\n
 Existing cancelled license
 Exito
 Expand
@@ -3443,10 +3453,9 @@ Failed during internal/external buffer swapping\n
 Failed finding game exiting event %s\n
 Failed loading registry KV.
 Failed putting data into external buffer during swapping\n
+Failed setting ForceQuiet
 Failed setting downloads
 Failed setting updates
-Failed system(%s) in execute test: %d %s\n
-Failed system(%s) in execute test: %d\n
 Failed to add image to avif encoder: %u
 Failed to bind client address for shared fd id: 0x%lx\n
 Failed to bind server addres for shared fd: %d\n
@@ -3607,7 +3616,6 @@ FrameTitleBar.SmallFont
 Fraud Check Failed
 Free
 Free Weekend
-Free disk space for %s would overflow
 Freed EMS handle %u
 Freed XMS handle %u
 French
@@ -3677,6 +3685,7 @@ GameOverlay process started: pid: %d\n
 GameOverlayRender_PaintCmdStream_%s
 GameOverlaySettingsChanged
 GameOverlayUI Thread
+GameOverlayUI_ScreenshotXfer_%u_%u
 GameOverlay_GameExitingEvent_%s
 GameOverlay_InGameRenderingCompleted_%s
 GameOverlay_InputEventStream_%s
@@ -3802,6 +3811,7 @@ HTML.SearchInsetX
 HTML.SearchInsetY
 HTML.SearchTall
 HTML.SearchWide
+HTML::ExecuteJSCallback
 HTML::Paint()
 HTMLBackRequested
 HTMLCanGoBackAndForward
@@ -4136,6 +4146,13 @@ JPEG Image (*.jpg)
 JPEG datastream contains no image
 JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
 JPEGMEM
+JSMethodCall - ConvertArgsToTuple
+JSMethodCall - FreeArgsInTuple
+JSMethodCall - invalid argument ShortDebugString
+JSMethodCall - invoke handler
+JSMethodCall - too few arguments
+JSMethodCall: %s
+JSMethodCall: <untagged>
 JSObjectProperty
 JSType
 JZJ{.
@@ -4583,6 +4600,7 @@ Master Subscription
 MasterCard
 MasterPackageID
 Mastercard (BoaCompra)
+MatchCaseInsensitivePathIfAvailable: in slow path
 Matched '%s' -> '%s'\n
 MaxFPSNumber
 MaxLabel
@@ -5367,6 +5385,8 @@ PopulateFileNameCompletion
 PopupHTML
 Portuguese
 PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PostCode
 PostTime
 PostedAnnouncement
@@ -5481,6 +5501,7 @@ RankedByVote
 RankedByVotesUp
 Rapipago
 Rate Limit Exceeded
+ReOpenFd: failed to reopen: %s: %s\n
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
 Read Error
@@ -5490,6 +5511,7 @@ Read failure in png_handle_zTXt
 Read from EMS failed
 Read from XMS failed
 Read palette index exceeding num_palette
+Reboot required before updates can install
 Rebuild
 ReceivedNewGame
 ReceivesGroupComment
@@ -5678,7 +5700,7 @@ Sending of an email failed
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep  2 2026
+Sep  9 2026
 Seperator
 SeperatorBack
 SeperatorFront
@@ -6127,10 +6149,12 @@ This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means 
 This program requires version
 This program was compiled against version
 This shouldn't be called if all the sizes are equal.
+ThreadCloseProcess
 ThreadEnumerateGpusDrm
 ThreadEnumerateGpusNvml
 ThreadGetCurrentId
 ThreadGetCurrentProcessId
+ThreadGetProcessExitCode
 ThreadInMainThread
 ThreadInMainThread()
 ThreadInit
@@ -6146,6 +6170,7 @@ ThreadInterlockedIncrement
 ThreadIsProcessIdActive
 ThreadShellExecute
 ThreadSleep
+ThreadWaitForProcessExit
 ThreeHours
 ThrobberImagePanel
 Thursday
@@ -6367,7 +6392,7 @@ Uzbek
 VAC beta
 VALVE
 VFileSystem014
-VGUI_Application_001
+VGUI_Application_002
 VGUI_Input005
 VGUI_InputInternal001
 VGUI_Localize003
@@ -6375,7 +6400,7 @@ VGUI_NotificationManager002
 VGUI_Panel010
 VGUI_Scheme010
 VGUI_Setup001
-VGUI_Surface039
+VGUI_Surface040
 VGUI_System011
 VGUI_ivgui007
 VGy#
@@ -6396,20 +6421,19 @@ VTC Pay Online Banking
 VTC Pay Wallet
 VTT for
 V_AppendSlash
-V_ComposeFileName
 V_CopyAndFixSlashes
 V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
 V_ExtractFileExtension
 V_ExtractFilePath
 V_FixDoubleSlashes
 V_FixSlashes
-V_FormatAndAppend
 V_GetFileExtension
 V_IsAbsolutePath
 V_IsSteamCloseProtocol
 V_IsValidURLCharacter
 V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 V_MakeAbsolutePath
+V_MakeRelativePath
 V_ParseURLQueryString
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
@@ -6877,7 +6901,6 @@ __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
 __int128
-__isoc99_fscanf
 __isoc99_sscanf
 __iswctype_l
 __lxstat
@@ -6953,6 +6976,7 @@ _actionSignalTargetDar
 _associateName
 _blank
 _clickableTextPanels
+_exit
 _imageDar
 _imageDar.IsValidIndex( index )
 _input
@@ -7447,6 +7471,7 @@ controller_xboxelite
 controller_xboxone
 controller_zotac_zone
 controls
+convar changed
 convar_
 cookies
 coord_x
@@ -7550,7 +7575,6 @@ disabled group
 disallowed Unicode code point (>= 0xd800 && <= 0xdfff)
 disconnected
 disk
-disk-free command failed\n
 diskSize
 display_height
 divider
@@ -7575,6 +7599,7 @@ drophoverdelay
 droppable
 dual_stack
 dulltext
+dup2
 duplicate
 duplicate sRGB information ignored
 durationcontrolinit
@@ -7616,6 +7641,7 @@ entries
 entry
 enum
 enums.proto
+environ
 erroffset passed as NULL
 error
 error in user chunk
@@ -7635,6 +7661,7 @@ event deleted
 event updated
 ewh/?y
 exceeds application limits
+execve
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 exit
 expandableSpace
@@ -7658,6 +7685,7 @@ false"
 false"&\n\fCMsgStopFind
 false"M\n
 fastly
+fchmod
 fclose
 fcntl
 fd-cl-
@@ -7728,10 +7756,10 @@ focus
 focused
 font
 fopen
-fopen tmpfile failed\n
 fopen64
 forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
 forever
+fork
 format
 forward
 fotolog.net
@@ -7767,7 +7795,6 @@ friends/
 friends/trackerui_%language%.txt
 friendslist
 friendster.com
-fscanf disk-free output failed\n
 fseek
 fseeko64
 fsync %s failed, errno = %d\n
@@ -8018,6 +8045,8 @@ hindi
 hintText
 horizontal-align
 host
+hotfix finished
+hotfix started
 hour
 hover
 href=
@@ -8076,6 +8105,7 @@ https://shared.steamstatic.com/store_item_assets/steam/apps
 https://steam-chat.com/
 https://steamcommunity.com/
 https://steamloopback.host
+https://steamloopback.host/
 https://steampublishbeta.valve.org/
 https://store.steamchina.com/qr/
 https://video.beta.steamstatic.com/
@@ -8249,6 +8279,7 @@ is_save
 isalnum
 isalpha
 isbundle
+iscntrl
 isevcert
 isinbundle
 ispageload
@@ -8385,6 +8416,8 @@ k_EContentReportReason_Trolling
 k_EContentReportReason_Unknown
 k_EContentReportResolution_MAX
 k_EContentReportSubjectType_MAX
+k_EDLCHighlightReason_New
+k_EDLCHighlightReason_None
 k_EExportCodec_Default
 k_EExportCodec_H264
 k_EExportCodec_H265
@@ -9001,7 +9034,6 @@ misspelled_word
 mkdir
 mkfifo
 mkstemp
-mkstemp errno %d\n
 mktime
 mmap
 mmap64
@@ -9758,8 +9790,8 @@ status
 statvfs
 statvfs64
 statvfs64 failed for %s, errno %d %s
+statvfs64 output would overflow: %s
 statvfs64 reports success but zero free space\n
-statvfs64: ret %d errno %d\n
 std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
 std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
 std::allocator
@@ -9816,7 +9848,6 @@ steamgames.com
 steamglobal
 steamhdl
 steamlink://
-steamloopback.host
 steamos-update: using duplicate detection: %d\n
 steampipe
 steampipepeering
@@ -10058,6 +10089,7 @@ unReadAheadChunkSize < INT32_MAX/2
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 unSize < 128 * 1024 * 1024
 unable to find control '%s'\n
+uname
 unavailable
 unconnected
 undefined
@@ -10227,6 +10259,7 @@ wcstol
 wctob
 weak
 weak_dependency
+web deploy
 web links changed
 web:checkout
 web:community

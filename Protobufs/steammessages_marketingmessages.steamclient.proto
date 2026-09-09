@@ -22,6 +22,7 @@ enum EMarketingMessageType {
 	k_EMarketingMessageFreeWeekend = 14;
 	k_EMarketingMessageSalePages = 15;
 	k_EMarketingMessagePlaytestAvailable = 16;
+	k_EMarketingMessageNewGame = 17;
 }
 
 enum EMarketingMessageVisibility {
@@ -136,6 +137,7 @@ message CDisplayMarketingMessage {
 	optional string associated_name = 6;
 	optional string template_type = 10;
 	optional string template_vars_json = 11;
+	repeated .StoreItemID recommended_items = 12;
 }
 
 message CMarketingMessages_GetMarketingMessagesForUser_Response {

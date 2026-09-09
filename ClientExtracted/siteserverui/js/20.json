@@ -167,6 +167,7 @@
     "SteamOS_TestResult_MultiWindowAppAutomaticallySetsFocus": "此游戏使用多个窗口，可能需要您通过蒸汽平台叠加界面手动聚焦到正确窗口。",
     "SteamOS_TestResult_CloudSavesNotEnabledByDefault": "此游戏需要使用游戏内设置手动为存档的游戏启用蒸汽平台云支持",
     "SteamMachine_TestResult_GameOrLauncherDoesntExitCleanly": "此游戏不能彻底退出，可能需要您通过蒸汽平台叠加界面手动退出",
+    "SteamMachine_TestResult_MultiWindowAppAutomaticallySetsFocus": "此游戏使用多个窗口，可能需要您通过蒸汽平台叠加界面手动聚焦到正确窗口",
     "SteamFrame_TestResult_GameOrLauncherDoesntExitCleanly": "此游戏不能彻底退出，可能需要您通过蒸汽平台叠加界面手动退出",
     "SteamFrame_TestResult_MultiWindowAppAutomaticallySetsFocus": "此游戏使用多个窗口，可能需要您通过蒸汽平台叠加界面手动聚焦到正确窗口。",
     "SteamFrame_TestResult_CloudSavesNotEnabledByDefault": "此游戏需要使用游戏内设置手动为存档的游戏启用蒸汽平台云支持",

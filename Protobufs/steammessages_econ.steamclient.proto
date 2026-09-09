@@ -93,6 +93,7 @@ message CEconItem_Description {
 	optional string market_bucket_group_id = 35;
 	optional uint32 sealed_type = 37;
 	optional string market_name_inside_group = 38;
+	optional string market_bucket_id = 39;
 }
 
 message CEconItem_Tag {

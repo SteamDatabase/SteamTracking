@@ -28,9 +28,13 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 @steam/js-core
 
+@steam/localization
+
 @steam/protobuf
 
 @steam/runtime-config
+
+@steam/sharedlocalization
 
 axios
 MIT

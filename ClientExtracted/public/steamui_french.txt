@@ -2248,7 +2248,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_Purchase_StreetAddressLine2"	"Adresse ligne 2 (optionel)"
 
 "Steam_LaunchGame"					"Jouer"
-"Steam_LaunchStream"				"Streamer"
+"Steam_LaunchStream"				"Diffuser"
 "Steam_LaunchApp"					"Lancer"
 "Steam_Countdown_Days"				"Jours"
 "Steam_Countdown_Hours"				"Heures"

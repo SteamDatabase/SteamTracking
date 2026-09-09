@@ -12,13 +12,9 @@
   Comment started here.
   Expected :
   KEY_SPACE
-  f_bavail: %lu\n
-  f_bfree : %lu\n
-  f_blocks: %lu\n
-  f_bsize : %lu\n
-  f_frsize: %lu\n
   what():
  !"#$%&'()*+,-./0123
+ !"#$%&'()*+,-./0123x
  %s%lu (%s0x%lx)\n
  ' ) - 3 G M Q _ c e i w }
  (%ld unused bits)\n
@@ -36,7 +32,6 @@
  --enable-duplicate-detection
  --force
  --label '%s'
- 2>/dev/null
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
  Can't back up over more bytes than were returned by the last call to Next().
@@ -243,7 +238,6 @@
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
-#!/bin/sh\nexit 0\n
 #3CScs
 #:*S8,}gNzl
 #ETHw
@@ -378,9 +372,6 @@ $d`D-laM
 %a, %e-%b-%Y %H:%M:%S
 %a, %e-%b-%y %H:%M:%S
 %d %d %d %d
-%d MB avail\n
-%d MB free space\n
-%d MB total space\n
 %d.%d.%d.%d
 %d.%d.%d.%d/%d.%d.%d.%d
 %d.%d.%d.%d:%d
@@ -582,8 +573,6 @@ $d`D-laM
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG=
-++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 ++KEY_PAD_PLUS
@@ -756,7 +745,7 @@ $d`D-laM
 .placeholder.proto
 .pp@0
 .res
-.steam_exec_test.sh
+.steam_exec_test
 .x7B
 .y4w
 /'/)/A/E/K/M/Q/W/o/u/}/
@@ -771,6 +760,7 @@ $d`D-laM
 /dev/disk/by-uuid
 /dev/drm_dp_aux0
 /dev/hwrng
+/dev/null
 /dev/random
 /dev/srandom
 /dev/tty
@@ -780,10 +770,12 @@ $d`D-laM
 /name
 /proc/%d/environ
 /proc/mounts
+/proc/self/fd/%d
 /proc/self/maps
-/run/host/%s
+/run/host/root/%s
 /sbin/lsof
 /steamrt64
+/steamsysinfo
 /sys/bus/iio/devices
 /sys/class/backlight/
 /sys/class/dmi/id/bios_version
@@ -798,10 +790,8 @@ $d`D-laM
 /tmp/.X11-unix
 /tmp/cmd-stderr.XXXXXX
 /tmp/cmd-stdout.XXXXXX
-/tmp/disk-free.XXXXXX
 /tmp/gamescope.png
 /tmp/steam_chrome_overlay_uid%d_spid%s
-/ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 /usr/bin/lsof
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
@@ -813,8 +803,7 @@ $d`D-laM
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
-/usr/bin/steamos-polkit-helpers/steamos-set-hostname %s
-/usr/bin/steamos-polkit-helpers/steamos-set-timezone %s
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
 /usr/bin/xdg-open
@@ -835,15 +824,15 @@ $d`D-laM
 0 Umv
 0)KEY_0
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFPp4
+0123456789ABCDEFP
 0123456789abcdef
 08bX
 0A/8
@@ -1586,6 +1575,13 @@ BF-CFB
 BF-ECB
 BF-OFB
 BFUa.X
+BFilesystemAllowsExecution: couldn't read %s\n
+BFilesystemAllowsExecution: execute test timed out\n
+BFilesystemAllowsExecution: failed to copy %s to %s: %s\n
+BFilesystemAllowsExecution: failed to get exit code\n
+BFilesystemAllowsExecution: failed to reopen fd: %d\n
+BFilesystemAllowsExecution: failed to write %s: %s\n
+BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIGNUM
 BIO lib
@@ -1689,6 +1685,8 @@ BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
 BResolveHostString - unexpected DNS lookup flag '%d'\n
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
 BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
+BSetSteamAutoStart: failed to copy %s to %s\n
+BSetSteamAutoStart: failed to create directories for %s\n
 BUF lib
 BUF_MEM_grow
 BUF_MEM_grow_clean
@@ -2230,6 +2228,7 @@ CRYPTO_new_ex_data
 CRYPTO_ocb128_copy_ctx
 CRYPTO_ocb128_init
 CRYPTO_set_ex_data
+CSHA1::HashFile
 CSHA1::Update
 CSPName
 CScheme
@@ -2376,7 +2375,6 @@ Couldn't find color '%s' referenced in render fill comand '%s'\n
 Couldn't find custom font file '%s'\n
 Couldn't find scheme color '%s'\n
 Couldn't parse default value "
-Couldn't write %s: %s\n
 CountryCode
 CreateInterface
 CreateMilesMusicAudioDevice
@@ -2406,7 +2404,6 @@ DAL\fL@
 DATA_LOSS
 DBF-
 DBG_PATHMATCH
-DBG_STAT
 DD.9
 DDDDUUUU
 DEADLINE_EXCEEDED
@@ -2904,7 +2901,6 @@ EventNotes
 EventTime
 EventType
 Excluded
-Execute: %s\n
 Expanded map entry type
 Expect a decimal number, got:
 Expected "
@@ -2973,8 +2969,6 @@ FT_Set_Pixel_Sizes
 FV|FgUV
 F\n\foptimize_for
 Failed loading registry KV.
-Failed system(%s) in execute test: %d %s\n
-Failed system(%s) in execute test: %d\n
 Failed to load "%s"
 Failed to load custom font file '%s'\n
 Failed to load optional module %s\n
@@ -3053,7 +3047,6 @@ FontManager()
 Fonts
 ForceQuit
 Found invalid proto option data for:
-Free disk space for %s would overflow
 FreeAudioDevice
 French
 Friday
@@ -3733,6 +3726,7 @@ March
 Marlett
 Mask Algorithm:
 MasterPackageID
+MatchCaseInsensitivePathIfAvailable: in slow path
 Matched '%s' -> '%s'\n
 MaxProtocol
 MaxUseCount
@@ -4512,6 +4506,8 @@ Poly1305
 Polynomial:
 Portuguese
 PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PostCode
 PostTime
 PosterID
@@ -4678,6 +4674,7 @@ RSA_verify
 RSA_verify_ASN1_OCTET_STRING
 RSA_verify_PKCS1_PSS_mgf1
 Rbg.E
+ReOpenFd: failed to reopen: %s: %s\n
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
 Read Error
@@ -5541,8 +5538,10 @@ This is an S/MIME signed message%s%s
 This program requires version
 This program was compiled against version
 This shouldn't be called if all the sizes are equal.
+ThreadCloseProcess
 ThreadGetCurrentId
 ThreadGetCurrentProcessId
+ThreadGetProcessExitCode
 ThreadImplOneTimeInit
 ThreadInMainThread
 ThreadInterlockedDecrement
@@ -5551,6 +5550,7 @@ ThreadInterlockedExchangeAdd
 ThreadInterlockedExchangeAdd64
 ThreadInterlockedIncrement
 ThreadSleep
+ThreadWaitForProcessExit
 Thursday
 Tick
 Tigrinya
@@ -5694,7 +5694,7 @@ VGUI
 VGUI Globals
 VGUI trying to serialize out of bounds of texture\n
 VGUISetup
-VGUI_Application_001
+VGUI_Application_002
 VGUI_Input005
 VGUI_InputInternal001
 VGUI_Localize003
@@ -5702,7 +5702,7 @@ VGUI_NotificationManager002
 VGUI_Panel010
 VGUI_Scheme010
 VGUI_Setup001
-VGUI_Surface039
+VGUI_Surface040
 VGUI_System011
 VGUI_ivgui007
 VGuiModuleLoader004
@@ -5716,18 +5716,17 @@ VProfInternalGetProfileForCurrentThread
 VTT for
 V_AggressiveStripPrecedingAndTrailingWhitespace
 V_AppendSlash
-V_ComposeFileName
 V_CopyAndFixSlashes
 V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
 V_ExtractFileExtension
 V_ExtractFilePath
 V_FixDoubleSlashes
 V_FixSlashes
-V_FormatAndAppend
 V_GetFileExtension
 V_IsAbsolutePath
 V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 V_MakeAbsolutePath
+V_MakeRelativePath
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
 V_SplitNumbers
@@ -6396,7 +6395,6 @@ __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
 __int128
-__isoc99_fscanf
 __isoc99_sscanf
 __iswctype_l
 __lxstat
@@ -8006,7 +8004,6 @@ directory services (X.500)
 directory services - algorithms
 dirname error
 discriminant is zero
-disk-free command failed\n
 diskSize
 distinguishedName
 distpoint
@@ -8133,6 +8130,7 @@ dtls_construct_hello_verify_request
 dtls_get_reassembled_message
 dtls_process_hello_verify
 dtls_wait_for_dry
+dup2
 dupKeyMap
 duplicate
 duplicate compression id
@@ -8323,6 +8321,7 @@ entropy input too long
 entropy out of range
 enum
 enveloped-data
+environ
 err:%lx:%lx:%lx:%lx
 errno=
 error
@@ -8383,6 +8382,7 @@ excluded subtree violation
 excludedSubtrees
 execl
 execl failed, errno %d\n
+execve
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 exp master
 expand on static bignum data
@@ -8451,6 +8451,7 @@ false"
 family
 fatal
 favouriteDrink
+fchmod
 fclose
 fcntl
 fdatasync
@@ -8536,7 +8537,6 @@ fontFile.encrypted_contents().size() <= INT_MAX
 fontFileDecrypted.opentype_font_data().size() <= INT_MAX
 font_file_name
 fopen
-fopen tmpfile failed\n
 fopen('
 fopen64
 forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
@@ -8564,7 +8564,6 @@ frexp
 friendlyCountry
 friendlyCountryName
 friendlyName
-fscanf disk-free output failed\n
 fseek
 fseeko64
 fstat
@@ -8666,7 +8665,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(8"
 givenName
 glBegin
 glBindTexture
@@ -10143,7 +10142,6 @@ mixed handshake and non handshake data
 mkdir
 mkfifo
 mkstemp
-mkstemp errno %d\n
 mktime
 mlock
 mmZ7EEP
@@ -11283,7 +11281,6 @@ s_pSymbolTable
 s_pTable
 s_pVGUIToScanCode[ iKeyCode ] == 0
 s_pVGUIToVirtualKey[ iKeyCode ] == 0
-s_pVGUIToXKB[ iKeyCode ] == 0
 safeContentsBag
 salt
 salt length check failed
@@ -11848,8 +11845,8 @@ status_request_v2
 statvfs
 statvfs64
 statvfs64 failed for %s, errno %d %s
+statvfs64 output would overflow: %s
 statvfs64 reports success but zero free space\n
-statvfs64: ret %d errno %d\n
 stbl_module_init
 stbl_section
 std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const

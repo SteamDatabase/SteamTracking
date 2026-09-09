@@ -26,8 +26,6 @@
 *N12_GLOBAL__N_122generic_error_categoryE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGY
-++CCUNGn\f
 ++CCUNGstd::exception
 /dev/random
 /dev/urandom

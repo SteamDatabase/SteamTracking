@@ -1,0 +1,51 @@
+import "enums.proto";
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CMsgCompatManagerTool {
+	optional string name = 1;
+	optional string display_name = 2;
+	optional bool is_default = 3;
+	optional bool is_active = 4;
+	optional bool is_legacy = 5;
+	optional bool is_incompatible = 6;
+}
+
+message CMsgCompatManagerAlias {
+	optional string alias = 1;
+	optional string display_name = 2;
+	optional string current_tool_name = 3;
+}
+
+message CCompatManager_GetCompatTools_Request {
+	optional uint32 appid = 1;
+}
+
+message CCompatManager_GetCompatTools_Response {
+	repeated .CMsgCompatManagerTool tools = 1;
+	repeated .CMsgCompatManagerAlias aliases = 2;
+	optional string selected_tool_identifier = 3;
+	optional string default_tool_identifier = 4;
+}
+
+message CCompatManager_SpecifyCompatTool_Request {
+	optional uint32 appid = 1;
+	optional string tool_name = 2;
+}
+
+message CCompatManager_SpecifyCompatTool_Response {
+}
+
+message CCompatManager_StateChanged_Notification {
+}
+
+service CompatManager {
+	option (webui_service_execution_site) = k_EClientExecutionSiteClientdll;
+
+	rpc GetCompatTools (.CCompatManager_GetCompatTools_Request) returns (.CCompatManager_GetCompatTools_Response);
+	rpc SpecifyCompatTool (.CCompatManager_SpecifyCompatTool_Request) returns (.CCompatManager_SpecifyCompatTool_Response);
+	rpc NotifyStateChanged (.CCompatManager_StateChanged_Notification) returns (.WebUINoResponse);
+}

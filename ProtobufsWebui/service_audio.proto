@@ -30,6 +30,20 @@ message CAudio_GetMonoDownmixEnabled_Response {
 	optional bool enabled = 1;
 }
 
+message CAudio_GetSpatializeEnabled_Request {
+}
+
+message CAudio_GetSpatializeEnabled_Response {
+	optional bool enabled = 1;
+}
+
+message CAudio_GetSpatializeSurroundEnabled_Request {
+}
+
+message CAudio_GetSpatializeSurroundEnabled_Response {
+	optional bool enabled = 1;
+}
+
 message CAudio_GetSupportedFeatures_Request {
 }
 
@@ -38,6 +52,8 @@ message CAudio_GetSupportedFeatures_Response {
 	optional bool use_bluetooth_for_mic = 2;
 	optional bool reset_config = 3;
 	optional bool bluetooth_audio_preference = 4;
+	optional bool spatialize = 5;
+	optional bool spatialize_surround = 6;
 }
 
 message CAudio_GetUseBluetoothForMic_Request {
@@ -91,6 +107,20 @@ message CAudio_SetMonoDownmixEnabled_Request {
 message CAudio_SetMonoDownmixEnabled_Response {
 }
 
+message CAudio_SetSpatializeEnabled_Request {
+	optional bool enabled = 1;
+}
+
+message CAudio_SetSpatializeEnabled_Response {
+}
+
+message CAudio_SetSpatializeSurroundEnabled_Request {
+	optional bool enabled = 1;
+}
+
+message CAudio_SetSpatializeSurroundEnabled_Response {
+}
+
 message CAudio_SetSpeakerConfiguration_Request {
 	optional int32 sink_id = 1;
 	optional int32 config = 2 [(.description) = "enum"];
@@ -134,6 +164,10 @@ service Audio {
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc GetMonoDownmixEnabled (.CAudio_GetMonoDownmixEnabled_Request) returns (.CAudio_GetMonoDownmixEnabled_Response);
 	// ePrivilege=1, eClientExecutionSite=1
+	rpc GetSpatializeEnabled (.CAudio_GetSpatializeEnabled_Request) returns (.CAudio_GetSpatializeEnabled_Response);
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc GetSpatializeSurroundEnabled (.CAudio_GetSpatializeSurroundEnabled_Request) returns (.CAudio_GetSpatializeSurroundEnabled_Response);
+	// ePrivilege=1, eClientExecutionSite=1
 	rpc GetSupportedFeatures (.CAudio_GetSupportedFeatures_Request) returns (.CAudio_GetSupportedFeatures_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc GetUseBluetoothForMic (.CAudio_GetUseBluetoothForMic_Request) returns (.CAudio_GetUseBluetoothForMic_Response);
@@ -149,6 +183,10 @@ service Audio {
 	rpc SetHdmiCecEnabled (.CAudio_SetHdmiCecEnabled_Request) returns (.CAudio_SetHdmiCecEnabled_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc SetMonoDownmixEnabled (.CAudio_SetMonoDownmixEnabled_Request) returns (.CAudio_SetMonoDownmixEnabled_Response);
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc SetSpatializeEnabled (.CAudio_SetSpatializeEnabled_Request) returns (.CAudio_SetSpatializeEnabled_Response);
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc SetSpatializeSurroundEnabled (.CAudio_SetSpatializeSurroundEnabled_Request) returns (.CAudio_SetSpatializeSurroundEnabled_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc SetSpeakerConfiguration (.CAudio_SetSpeakerConfiguration_Request) returns (.CAudio_SetSpeakerConfiguration_Response);
 	// ePrivilege=1, eClientExecutionSite=1

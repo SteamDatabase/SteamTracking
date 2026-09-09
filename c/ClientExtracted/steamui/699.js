@@ -1,0 +1,48 @@
+"use strict";
+(() => {
+  (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
+    [699],
+    {
+      chunkid: (module) => {
+        module.exports = JSON.parse(`{
+	"language": "portuguese",
+	"DeckVerified_CompatibilitySection_Title": "Compatibilidade com o Steam Deck",
+	"DeckVerified_CompatibilitySection_Details": "Detalhes",
+	"DeckVerified_CategoryLabel_Verified": "Aprovado",
+	"DeckVerified_CategoryLabel_Playable": "Jogável",
+	"DeckVerified_CategoryLabel_Unsupported": "Incompatível",
+	"DeckVerified_CategoryLabel_Unknown": "Desconhecido",
+	"DeckVerified_FilterLabel_Verified": "Só Aprovados",
+	"DeckVerified_FilterLabel_Verified_Playable": "Aprovados e Jogáveis",
+	"DeckVerified_FilterLabel_Verified_Playable_Unknown": "Aprovados, Jogáveis e Não Testados",
+	"DeckVerified_FilterLabel_AllGames": "Todos os jogos",
+	"DeckVerified_FilterLabel_Unknown": "Não Testados",
+	"DeckVerified_FilterDescription_Verified": "Mostrar apenas jogos que funcionam naturalmente com o ecrã e controlos integrados do teu Deck.",
+	"DeckVerified_FilterDescription_Verified_NotOnDeck": "Mostrar apenas jogos que funcionam naturalmente com o ecrã e controlos integrados do Steam Deck.",
+	"DeckVerified_FilterDescription_Verified_Playable": "Mostrar todos os jogos Aprovados e jogos que são Jogáveis, mas que podem precisar de passos adicionais para a interação ou configuração.",
+	"DeckVerified_FilterDescription_Verified_Playable_Unknown": "Mostrar todos os jogos Aprovados e Jogáveis, para além de jogos cuja compatibilidade com o Deck ainda não foi testada.",
+	"DeckVerified_FilterDescription_AllGames": "Mostrar todos os jogos da tua biblioteca, incluindo aqueles que não funcionam bem no Steam Deck.",
+	"SteamOS_CompatibilitySection_Title": "Compatibilidade com o SteamOS",
+	"SteamOS_CompatibilitySection_Details": "Detalhes",
+	"SteamOS_CategoryLabel_Unknown": "Desconhecido",
+	"SteamOS_CategoryLabel_Unsupported": "Incompatível",
+	"SteamOS_CategoryLabel_Compatible": "Compatível",
+	"SteamOS_FilterLabel_Compatible": "Só compatíveis",
+	"SteamOS_FilterLabel_Compatible_Unknown": "Compatíveis e Não Testados",
+	"SteamOS_FilterLabel_AllGames": "Todos os jogos",
+	"SteamOS_FilterDescription_Compatible": "Incluir jogos que foram testados e são compatíveis com SteamOS.",
+	"SteamOS_FilterDescription_Compatible_Unknown": "Incluir jogos que foram testados e são compatíveis com o SteamOS, para além de jogos cuja compatibilidade com o SteamOS ainda não foi testada.",
+	"SteamOS_FilterDescription_AllGames": "Mostrar todos os jogos da tua biblioteca, incluindo aqueles que não funcionam bem no SteamOS.",
+	"MachineVerified_FilterDescription_Verified": "Mostrar apenas jogos que funcionam naturalmente na Steam Machine.",
+	"MachineVerified_FilterDescription_Verified_Playable": "Mostrar todos os jogos Aprovados e jogos que são Jogáveis, mas que podem precisar de passos adicionais para a interação ou configuração.",
+	"MachineVerified_FilterDescription_Verified_Playable_Unknown": "Mostrar todos os jogos Aprovados e Jogáveis, para além de jogos cuja compatibilidade com a Steam Machine ainda não foi testada.",
+	"MachineVerified_FilterDescription_AllGames": "Mostrar todos os jogos da tua biblioteca, incluindo aqueles que não funcionam bem na Steam Machine.",
+	"FrameVerified_FilterDescription_Verified": "Mostrar apenas jogos que funcionam naturalmente no Steam Frame.",
+	"FrameVerified_FilterDescription_Verified_Playable": "Mostrar todos os jogos Aprovados e jogos que são Jogáveis no Steam Frame, mas que podem precisar de passos adicionais para a interação ou configuração.",
+	"FrameVerified_FilterDescription_Verified_Playable_Unknown": "Mostrar todos os jogos Aprovados e Jogáveis, para além de jogos cuja compatibilidade com o Steam Frame ainda não foi testada.",
+	"FrameVerified_FilterDescription_AllGames": "Mostrar todos os jogos da tua biblioteca, incluindo aqueles que não funcionam bem no Steam Frame."
+}`);
+      },
+    },
+  ]);
+})();

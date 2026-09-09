@@ -1340,6 +1340,7 @@ vkGetPhysicalDeviceProperties2KHR
 vkGetShaderModuleCreateInfoIdentifierEXT
 vkGetShaderModuleIdentifierEXT
 void
+vpre\f
 vsnprintf
 vtable for
 vtable for __cxxabiv1::__class_type_info

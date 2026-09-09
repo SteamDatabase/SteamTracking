@@ -6,12 +6,16 @@ option cc_generic_services = false;
 enum EChildProcessQueryCommand {
 	k_EChildProcessQueryCommand_Invalid = 0;
 	k_EChildProcessQueryCommand_GpuTopology = 1;
-	k_EChildProcessQueryCommand_Max = 2;
+	k_EChildProcessQueryCommand_EnumerateHostAppsLinux = 2;
+	k_EChildProcessQueryCommand_GetHostAppLinux = 3;
+	k_EChildProcessQueryCommand_Max = 4;
 }
 
 message CMsgChildProcessQueryResponse {
 	oneof response {
 		.CMsgChildProcessQueryGpuTopology gpu_topology = 1;
+		.CMsgChildProcessQueryEnumerateHostAppsLinux host_apps = 2;
+		.CMsgChildProcessQueryGetHostAppLinux host_app = 3;
 	}
 }
 
@@ -29,4 +33,21 @@ message CMsgChildProcessQueryGpuTopology {
 
 	repeated .CMsgChildProcessQueryGpuTopology.GpuInfo gpus = 1;
 	optional uint32 default_gpu_id = 2;
+}
+
+message CMsgHostAppInfo {
+	optional string name = 1;
+	optional string path_exe = 2;
+	repeated string args = 3;
+	optional string path_shortcut = 4;
+	optional string icon_name = 5;
+	optional bool is_terminal = 6;
+}
+
+message CMsgChildProcessQueryEnumerateHostAppsLinux {
+	repeated .CMsgHostAppInfo apps = 1;
+}
+
+message CMsgChildProcessQueryGetHostAppLinux {
+	optional .CMsgHostAppInfo app = 1;
 }

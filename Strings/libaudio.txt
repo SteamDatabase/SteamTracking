@@ -1,10 +1,4 @@
-  f_bavail: %lu\n
-  f_bfree : %lu\n
-  f_blocks: %lu\n
-  f_bsize : %lu\n
-  f_frsize: %lu\n
   what():
- 2>/dev/null
  [clone
  _Complex
  _Imaginary
@@ -28,13 +22,9 @@
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
-#!/bin/sh\nexit 0\n
 $ORIGIN
 %.17g
 %.18g
-%d MB avail\n
-%d MB free space\n
-%d MB total space\n
 %d:00
 %lld
 %llu
@@ -92,22 +82,23 @@ $ORIGIN
 ../tier1/utlsymbol.cpp
 .cpl
 .mp3
-.steam_exec_test.sh
+.steam_exec_test
 /core
 /dev
 /dev/
 /dev/disk/by-uuid
+/dev/null
 /dev/random
 /dev/urandom
 /etc/mtab
 /proc/mounts
+/proc/self/fd/%d
 /proc/self/maps
-/run/host/%s
+/run/host/root/%s
 /sink/%s/volume-control
 /steamrt64
+/steamsysinfo
 /tmp
-/tmp/disk-free.XXXXXX
-/ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 0123456789
 0123456789ABCDEF
@@ -261,6 +252,13 @@ Attempted to set the volume without the service running
 AudioSinkList
 BCreateDirectory
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
+BFilesystemAllowsExecution: couldn't read %s\n
+BFilesystemAllowsExecution: execute test timed out\n
+BFilesystemAllowsExecution: failed to copy %s to %s: %s\n
+BFilesystemAllowsExecution: failed to get exit code\n
+BFilesystemAllowsExecution: failed to reopen fd: %d\n
+BFilesystemAllowsExecution: failed to write %s: %s\n
+BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIsOpen()
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
@@ -277,6 +275,7 @@ CFileWriter::FlushInternal
 CFileWriter::Write
 CFileWriterThread
 CPathString
+CSHA1::HashFile
 CSHA1::Update
 CUtlBuffer
 CUtlBuffer::GetStringFast: binary buffers only
@@ -297,22 +296,17 @@ CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
 Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
 Capture Stream
-Couldn't write %s: %s\n
 CreateInterface
 CreateMilesMusicAudioDevice
 CreateMilesSoundAudioDevice
 CreateMilesVoiceAudioDevice
 DBG_PATHMATCH
-DBG_STAT
 DLOPEN Error:%s\n
 Don't know how to check filesystem type on POSIX!
 Element( i )
 Error
 Error State on string being set.
-Execute: %s\n
 Expected %lld but got %lld!
-Failed system(%s) in execute test: %d %s\n
-Failed system(%s) in execute test: %d\n
 Failed to load "%s"
 Failed to load optional module %s\n
 Failed to move pulse sink input
@@ -350,7 +344,6 @@ Failed to set source output by index\n
 Failed to subscribe pulse context
 Failed to subscribe to pulse device restore ext\n
 File change notification for %s but no file contents changed based on hash\n
-Free disk space for %s would overflow
 FreeAudioDevice
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
 GLIBCXX_TUNABLES
@@ -380,15 +373,16 @@ JArray
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save monitor.alsa.enable-external-volume-control false
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save monitor.alsa.enable-external-volume-control true
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.spatial-audio false
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.spatial-audio true
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.spatial-audio-surround false
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.spatial-audio-surround true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.enable-spatial-audio false
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.enable-spatial-audio true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.enable-spatial-audio-surround false
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.enable-spatial-audio-surround true
 LOCK_EX
 LOCK_SH
 LoadFileRangeIntoBuffer_Internal
 Lowered '%s' -> '%s'\n
 MUSIC
+MatchCaseInsensitivePathIfAvailable: in slow path
 Matched '%s' -> '%s'\n
 MilesLoader
 N10__cxxabiv115__forced_unwindE
@@ -412,6 +406,8 @@ Plat_OutputDebugString
 Plat_VirtualAccessFlags
 Plat_localtime
 PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PrepareBuffer( nNewLength ) == pstrNew
 PulseCardInfoCallback
 PulseClientCallback
@@ -427,6 +423,7 @@ PulseSourceOutputCallback
 RIB_find_files_provider
 Ramp Time
 Ramp To
+ReOpenFd: failed to reopen: %s: %s\n
 Received pulse event with bad context: %s\n
 Received pulse event with no info: %s\n
 Received pulse event with no userdata: %s\n
@@ -490,13 +487,16 @@ TSQueueBase_Push
 TSQueueBase_UnsafeDummy
 TSQueueBase_UnsafePeek
 TSQueue_PopIntoFreeList
+ThreadCloseProcess
 ThreadGetCurrentProcessId
+ThreadGetProcessExitCode
 ThreadInterlockedDecrement
 ThreadInterlockedExchange
 ThreadInterlockedExchangeAdd
 ThreadInterlockedExchangeAdd64
 ThreadInterlockedIncrement
 ThreadSleep
+ThreadWaitForProcessExit
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unhandled pulse event facility:%d\n
@@ -505,14 +505,13 @@ VOICE
 VProfInternalEnterScopeCurrentThread
 VTT for
 V_AppendSlash
-V_ComposeFileName
 V_ExtractFileExtension
 V_ExtractFilePath
 V_FixDoubleSlashes
 V_FixSlashes
-V_FormatAndAppend
 V_IsAbsolutePath
 V_MakeAbsolutePath
+V_MakeRelativePath
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
 V_StrTrim
@@ -527,7 +526,6 @@ V_binarytohex
 V_hextobinary
 V_isvalidhex
 V_snprintf
-V_strcat
 V_stristr(char const*, char const*)
 V_strncat
 V_strncat_length
@@ -572,7 +570,6 @@ __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
 __int128
-__isoc99_fscanf
 __isoc99_sscanf
 __lxstat
 __lxstat64
@@ -621,6 +618,7 @@ __wrap_utimes
 __xmknod
 __xstat
 __xstat64
+_exit
 _strlwr
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
@@ -700,6 +698,7 @@ closedir
 co_await
 const_cast
 construction vtable for
+controller
 count >= 0
 covariant return thunk to
 cubBytesToRead < INT32_MAX
@@ -716,13 +715,13 @@ delete
 delete[]
 device.bus
 device.description
+device.form_factor
 device.volume.read-mute
 device.volume.read-volume
 device.volume.write-mute-toggle
 device.volume.write-mute-value
 device.volume.write-volume-updown
 device.volume.write-volume-value
-disk-free command failed\n
 diskSize
 dl_iterate_phdr
 dlclose
@@ -732,10 +731,13 @@ dlmopen %s failed: %s\n
 dlopen
 dlsym
 double
+dup2
 dynamic_cast
 earpiece
 endmntent
+environ
 error
+execve
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 expandableSpace
 faccessat
@@ -744,6 +746,7 @@ failed to set sink input mute
 failed to set sink input volume
 fallocate64
 false
+fchmod
 fclose
 fcntl
 fdatasync
@@ -760,15 +763,14 @@ flock LOCK_EX %s failed, errno = %d\n
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 fnmatch
 fopen
-fopen tmpfile failed\n
 fopen64
+fork
 fprintf
 fputc
 fputs
 fread
 free
 freopen
-fscanf disk-free output failed\n
 fseek
 fsync %s failed, errno = %d\n
 ftello64
@@ -804,7 +806,6 @@ headphones
 headset
 hidden alias for
 hifi
-iB{0N
 iec958.codecs.detected
 info.m_pReplacementString == 0
 initializer for module
@@ -875,8 +876,6 @@ memmove
 memset
 mkdir
 mkfifo
-mkstemp
-mkstemp errno %d\n
 mmap64
 modf
 mold 2.36.0 (compatible with GNU ld)
@@ -1042,7 +1041,6 @@ release_space %llu
 rename
 request_space %llu
 rmdir
-root
 s_bAllowStaticSymbolTable
 s_pAudioController
 s_pSymbolTable
@@ -1069,8 +1067,8 @@ static_cast<Node_t*>(pNode)->elem
 statvfs
 statvfs64
 statvfs64 failed for %s, errno %d %s
+statvfs64 output would overflow: %s
 statvfs64 reports success but zero free space\n
-statvfs64: ret %d errno %d\n
 std::allocator
 std::bad_alloc
 std::bad_array_new_length
@@ -1118,7 +1116,6 @@ symlink
 syntax error at line %d near:
 syscall
 system
-t?Hm
 template
 template parameter object for
 terminate called after throwing an instance of '
@@ -1181,8 +1178,8 @@ wchar_t
 wpctl reset --all --yes
 wpctl reset --all --yes --dry-run
 wpctl settings monitor.alsa.enable-external-volume-control
-wpctl settings node.stream.spatial-audio
-wpctl settings node.stream.spatial-audio-surround
+wpctl settings node.stream.enable-spatial-audio
+wpctl settings node.stream.enable-spatial-audio-surround
 write
 write %s failed, errno = %d\n
 {default arg#

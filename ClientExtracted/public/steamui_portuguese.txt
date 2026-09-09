@@ -350,7 +350,7 @@
 "SteamUI_Subscriptions_Price_Hdr"		"PREÇO"
 "SteamUI_Subscriptions_AvailableSubs_Hdr"	"SUBSCRIÇÕES DISPONÍVEIS"
 "SteamUI_Subscriptions_SubscriptionTo"		"Steam - Subscrição em %s1"
-"SteamUI_Subscriptions_Successful"		"Subscreveste-te com sucesso em %s1."
+"SteamUI_Subscriptions_Successful"		"Subscreveste %s1 com sucesso."
 "SteamUI_Subscriptions_UnsubscribeFrom"		"Steam - A anular a subscrição de %s1"
 "SteamUI_Subscriptions_UnSub_Successful"	"Anulaste com sucesso a subscrição de %s1."
 "SteamUI_Subscriptions_Error_Title"		"Steam - Erro"
@@ -432,7 +432,7 @@
 "Steam_Status_ItemsComplete"	"Downloads concluídos: %numcompl% de %numtotal% "
 "Steam_Status_DownloadsTitle"		"Downloads"
 "Steam_Status_GoToDownloadsPage"		"Gerir"
-"Steam_Status_PeerContentServer"		"A alojar transferência na rede"
+"Steam_Status_PeerContentServer"		"A enviar ficheiros pela rede"
 
 "Steam_Time_ShowMostRecent"			"Mostrar último(s)"
 "Steam_Time_5Minutes"				"5 minutos"
@@ -1100,7 +1100,7 @@
 "SteamUI_ValveSurvey_Summary_UploadProgress"	"Progresso do envio:"
 "SteamUI_ValveSurvey_Summary_NoCSERServers"	"Não foi possível encontrar um servidor que apresentasse estatísticas. Tenta novamente mais tarde."
 
-"Steam_UnableToPreload_NotSubscribed" "Não foi possível pré-carregar esta aplicação, uma vez que não a subscreveu"
+"Steam_UnableToPreload_NotSubscribed" "Não foi possível pré-carregar esta aplicação, uma vez que não a subscreveste"
 
 "SteamUI_ValveSurvey_Summary_Misc"		"Diversos:"
 "SteamUI_ValveSurvey_Summary_LanguageId"	"Idioma da interface:  %s1"
@@ -2889,7 +2889,7 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 "Steam_GuestPassRedeemed_LinkTextLimitExceeded"	"Clica aqui para visitares a Loja Steam."
 "Steam_GuestPassRedeemed_LinkURLLimitExceeded"	"steam://store"
 
-"Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=guestpass"	"Já possuis este jogo"
+"Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=guestpass"	"Já tens este jogo"
 "Steam_GuestPassRedeemed_TextAlreadyOwned$type=guestpass"	"Não podes aceitar um passe para %package%, uma vez que já possuis o jogo completo! Para jogar o jogo completo, instala-o e executa-o a partir da tua Biblioteca de Jogos."
 
 "Steam_GuestPassRedeemed_HeadlineMustOwnApp$type=guestpass"	"Este passe de convidado tem requisitos adicionais"
@@ -3270,7 +3270,7 @@ O programa Beta terminou - reinicia o Steam para regressares ao lançamento atua
 
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=gift"	"Falha na ativação do presente"
 
-"Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=gift"	"Já possuis este jogo"
+"Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=gift"	"Já tens este jogo"
 "Steam_GuestPassRedeemed_TextAlreadyOwned$type=gift"	"Não podes aceitar um presente %package%, uma vez que já possuis o jogo! Para jogar o jogo, instala-o e executa-o a partir da Biblioteca de Jogos."
 
 "Steam_GuestPassRedeemed_HeadlineMustOwnApp$type=gift"	"Este passe de presente possui requisitos adicionais"
@@ -3333,7 +3333,7 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 
 "Steam_PurchaseReview_IsGift"		"Presente para"
 "Steam_SendGuestPass_GiftMsgExplanation" 	"Introduz uma mensagem para enviar com o presente."
-"Steam_SendGuestPass_AlreadyOwnsGame"		"%s1 já possui este jogo"
+"Steam_SendGuestPass_AlreadyOwnsGame"		"%s1 já tem este jogo"
 
 "Steam_GiftRevoked_Title"			"Steam - Presente cancelado"
 "Steam_GiftRevoked"					"O teu presente contendo %package%, que recebeste recentemente de %gifter%, foi cancelado devido a um problema ao processar o pagamento deste item.\n\nComo resultado, os jogos associados a este presente não podem ser jogados. Se pretendes comprar este item, visita a loja do Steam. Caso contrário, podes optar por eliminar o conteúdo local associado a este presente."
@@ -3701,7 +3701,7 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 "steam_downloads_updating"	"A atualizar"
 "steam_downloads_downloading"	"A transferir"
 "steam_downloads_preloading"	"A pré-carregar"
-"steam_downloads_unpacking"	"A extrair"
+"steam_downloads_unpacking"	"A descomprimir"
 "steam_downloads_patching"	"A aplicar atualização"
 "steam_downloads_paused"	"Atualização necessária"
 "steam_downloads_queued"	"Na fila"

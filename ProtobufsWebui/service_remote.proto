@@ -1,3 +1,4 @@
+import "common.proto";
 import "common_base.proto";
 
 message CRemoteClient_AllocateRelayServer_Request {
@@ -40,12 +41,6 @@ message CRemoteClient_DeleteRemotePlayTogetherInvitation_Request {
 }
 
 message CRemoteClient_DeleteRemotePlayTogetherInvitation_Response {
-}
-
-message CRemoteClient_DeviceDetails {
-	optional string device_friendly_name = 1;
-	optional int32 os_type = 2;
-	optional uint32 gaming_device_type = 3;
 }
 
 message CRemoteClient_GetPairingInfo_Request {

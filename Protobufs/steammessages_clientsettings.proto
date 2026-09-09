@@ -138,6 +138,8 @@ message CMsgClientSettings {
 	optional bool controllerconnect_notification_sound = 4036 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\ControllerConnectNotificationSound", (setting_default_bool) = false];
 	optional bool controller_low_battery_notification_toast = 4037 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\ControllerLowBatteryNotificationToast", (setting_default_bool) = true];
 	optional bool controller_low_battery_notification_sound = 4038 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\ControllerLowBatteryNotificationSound", (setting_default_bool) = false];
+	optional bool logged_in_as_user_notification_toast = 4039 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\LoggedInAsUserNotificationToast", (setting_default_bool) = true];
+	optional bool logged_in_as_user_notification_sound = 4040 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\LoggedInAsUserNotificationSound", (setting_default_bool) = false];
 	optional bool smooth_scroll_webviews = 5000 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool enable_gpu_accelerated_webviews = 5001 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool enable_hardware_video_decoding = 5003 [(setting_store) = k_EClientSettingStore_CustomFunc];
@@ -164,6 +166,7 @@ message CMsgClientSettings {
 	optional bool library_display_icon_in_game_list = 7007 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "LibraryDisplayIconInGameList", (setting_default_bool) = true];
 	optional bool ready_to_play_includes_streaming = 7008 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_name) = "ReadyToPlayIncludesStreaming"];
 	optional bool show_steam_deck_info = 7009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "ShowSteamDeckInfoInLibrary"];
+	optional bool library_home_big_art = 7010 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "LibraryHomeBigArt"];
 	optional bool enable_shader_precache = 8000 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool enable_shader_background_processing = 8001 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional uint64 shader_precached_size = 8002 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_readonly) = true];
@@ -223,6 +226,8 @@ message CMsgClientSettings {
 	optional string startup_movie_local_path = 16001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/StartupMovie/LocalPath", (setting_pre_login) = true];
 	optional bool startup_movie_shuffle = 16002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/StartupMovie/Shuffle", (setting_pre_login) = true];
 	optional bool startup_movie_used_for_resume = 16003 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Customization/StartupMovie/UsedForResume"];
+	optional string screensaver_current_id = 16004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/Screensaver/CurrentScreensaver"];
+	optional string screensaver_settings = 16005 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/Screensaver/Settings"];
 	optional bool game_notes_enable_spellcheck = 17001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "GameNotesEnableSpellcheck", (setting_default_bool) = true];
 	optional int32 screenshot_items_per_row = 18000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "ScreenshotViewItemsPerRow", (setting_default_int) = 1];
 	optional string gamerecording_background_path = 18201 [(setting_store) = k_EClientSettingStore_CustomFunc];
@@ -315,8 +320,6 @@ message CMsgClientSettings {
 	optional int32 system_idle_screensaver_battery_sec = 24008 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Software\\Valve\\Steam\\System\\IdleScreensaverBatterySeconds", (setting_default_int) = 0];
 	optional int32 system_idle_screensaver_ac_sec = 24009 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Software\\Valve\\Steam\\System\\IdleScreensaverACSeconds", (setting_default_int) = 300];
 	optional bool vr_show_perf_graph_in_hmd = 25000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "VR/ShowPerfGraphInHMD", (setting_default_bool) = false];
-	optional bool vr_audio_spatialize = 25001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Audio/Spatialize", (setting_default_bool) = false];
-	optional bool vr_audio_spatialize_surround = 25002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Audio/SpatializeSurround", (setting_default_bool) = false];
 	optional bool accessibility_debug_visualizer = 26000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/DebugVisualizer", (setting_default_bool) = false];
 	optional bool accessibility_screen_reader_enabled = 26001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/ScreenReaderEnabled", (setting_default_bool) = false];
 	optional float accessibility_screen_reader_rate = 26002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/ScreenReaderPitch", (setting_default_float) = 0.5];
@@ -348,4 +351,5 @@ message CMsgClientSettings {
 	optional bool oobe_stage_2_completed = 28004 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_pre_login) = true, (setting_description) = "True if OOBE stage 2 has completed or we're on a platform where we don't do OOBE"];
 	optional bool oobe_stage_2_test_mode_enabled = 28005 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_pre_login) = true, (setting_readonly) = true, (setting_description) = "OOBE test mode is enabled for stage 2 either by passing -testoobe on the command line or setting the force_stage2_oobe client setting"];
 	optional bool force_stage_2_oobe = 28006 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\ForceOOBEStage2", (setting_pre_login) = true];
+	optional bool compat_show_all_tools = 29000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Compatibility/ShowAllTools", (setting_default_bool) = false];
 }

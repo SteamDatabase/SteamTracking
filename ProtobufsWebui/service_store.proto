@@ -354,8 +354,7 @@ message CStore_UpdatePackageReservations_Response {
 
 message CStore_UserPreferences {
 	optional int32 primary_language = 1;
-	optional uint32 secondary_languages = 2;
-	//optional uint64 secondary_languages = 2;
+	optional uint64 secondary_languages = 2;
 	optional bool platform_windows = 3;
 	optional bool platform_mac = 4;
 	optional bool platform_linux = 5;

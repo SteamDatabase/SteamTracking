@@ -309,7 +309,7 @@ message CBroadcast_SetRTMPInfo_Request {
 	optional int32 broadcast_delay = 3;
 	optional uint32 app_id = 4;
 	optional uint32 required_app_id = 5;
-	optional int32 broadcast_chat_permission = 6 [default = 0, (.description) = "enum"];
+	optional int32 broadcast_chat_permission = 6 [default = Identifier, (.description) = "enum"];
 	optional int32 broadcast_buffer = 7;
 	optional fixed64 steamid = 8;
 	optional uint32 chat_rate_limit = 9;

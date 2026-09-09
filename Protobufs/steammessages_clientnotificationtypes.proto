@@ -65,6 +65,9 @@ enum EClientNotificationType {
 	k_EClientNotificationType_ControllerLowBattery = 62;
 	k_EClientNotificationType_ControllerConnected = 63;
 	k_EClientNotificationType_ControllerDisconnected = 64;
+	k_EClientNotificationType_LoggedInAsUser = 65;
+	k_EClientNotificationType_RestartNeeded = 66;
+	k_EClientNotificationType_RedeemFramePromo = 67;
 }
 
 enum ESystemUpdateNotificationType {
@@ -95,6 +98,7 @@ message CClientNotificationScreenshot {
 message CClientNotificationDownloadCompleted {
 	optional uint32 appid = 1;
 	optional uint32 dlc_appid = 2;
+	optional string remote_client_name = 3;
 }
 
 message CClientNotificationFriendInvite {
@@ -302,4 +306,13 @@ message CClientNotificationControllerConnected {
 message CClientNotificationControllerDisconnected {
 	optional uint32 controller_type = 1;
 	optional string controller_name = 2;
+}
+
+message CClientNotificationLoggedInAsUser {
+}
+
+message CClientNotificationRestartNeeded {
+}
+
+message CClientNotificationRedeemFramePromo {
 }

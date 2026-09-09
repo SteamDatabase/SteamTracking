@@ -212,6 +212,8 @@ message CClientMetrics_ReportLinuxStats_Notification {
 	optional int32 launcher_type = 4;
 	optional int32 game_server_appid = 5;
 	optional string process_name = 6;
+	optional int32 kernel_version_major = 7;
+	optional int32 kernel_version_minor = 8;
 }
 
 message CClientMetrics_ReportAccessibilitySettings_Notification {
@@ -259,6 +261,7 @@ message CClientMetrics_GamePerformance_Notification {
 		optional int32 session_seconds = 3;
 		optional uint32 framegen_frame_rate = 4;
 		optional .GamePerformanceSettings game_settings = 5;
+		optional uint32 seconds_since_active = 6;
 	}
 
 	repeated .CClientMetrics_GamePerformance_Notification.FrameRate frame_rates = 2;

@@ -182,7 +182,7 @@ message CPublishedFile_GetDetails_Request {
 	optional uint32 return_playtime_stats = 13;
 	optional uint32 appid = 14;
 	optional bool strip_description_bbcode = 15;
-	optional int32 desired_revision = 16 [default = 0, (.description) = "enum"];
+	optional int32 desired_revision = 16 [default = Identifier, (.description) = "enum"];
 	optional bool includereactions = 17 [default = false];
 	optional bool admin_query = 18;
 }
@@ -216,14 +216,14 @@ message CPublishedFile_GetItemInfo_Request {
 	optional uint32 appid = 1;
 	optional uint32 last_time_updated = 2;
 	repeated .CPublishedFile_GetItemInfo_Request_WorkshopItem workshop_items = 3;
-	optional int32 desired_revision = 4 [default = 0, (.description) = "enum"];
+	optional int32 desired_revision = 4 [default = Identifier, (.description) = "enum"];
 	optional bool full_reconcile = 5;
 }
 
 message CPublishedFile_GetItemInfo_Request_WorkshopItem {
 	optional fixed64 published_file_id = 1;
 	optional uint32 time_updated = 2;
-	optional int32 desired_revision = 3 [default = 0, (.description) = "enum"];
+	optional int32 desired_revision = 3 [default = Identifier, (.description) = "enum"];
 }
 
 message CPublishedFile_GetItemInfo_Response {
@@ -245,7 +245,7 @@ message CPublishedFile_GetSubSectionData_Request {
 	optional uint64 publishedfileid = 1;
 	optional bool for_table_of_contents = 2;
 	optional uint64 specific_sectionid = 3;
-	optional int32 desired_revision = 4 [default = 0, (.description) = "enum"];
+	optional int32 desired_revision = 4 [default = Identifier, (.description) = "enum"];
 }
 
 message CPublishedFile_GetSubSectionData_Response {
@@ -282,7 +282,7 @@ message CPublishedFile_GetUserFiles_Request {
 	repeated .CPublishedFile_GetUserFiles_Request_KVTag required_kv_tags = 30;
 	optional uint32 return_playtime_stats = 31;
 	optional bool strip_description_bbcode = 32;
-	optional int32 desired_revision = 33 [default = 0, (.description) = "enum"];
+	optional int32 desired_revision = 33 [default = Identifier, (.description) = "enum"];
 	repeated .CPublishedFile_GetUserFiles_Request_TagGroup taggroups = 34;
 	optional bool return_reactions = 35 [default = false];
 	optional bool return_apps = 36;
@@ -290,6 +290,7 @@ message CPublishedFile_GetUserFiles_Request {
 	optional bool admin_query = 38;
 	optional .CPublishedFile_GetUserFiles_Request_DateRange date_range_created = 39;
 	optional .CPublishedFile_GetUserFiles_Request_DateRange date_range_updated = 40;
+	repeated int32 excluded_apps_with_content_descriptors = 41 [(.description) = "enum"];
 }
 
 message CPublishedFile_GetUserFiles_Request_DateRange {
@@ -352,6 +353,7 @@ message CPublishedFile_Publish_Request {
 	optional string collection_type = 14;
 	optional string game_type = 15;
 	optional string url = 16;
+	optional int32 language = 17;
 }
 
 message CPublishedFile_Publish_Response {
@@ -392,7 +394,7 @@ message CPublishedFile_QueryFiles_Request {
 	optional bool return_details = 37;
 	optional bool strip_description_bbcode = 38;
 	optional string cursor = 39;
-	optional int32 desired_revision = 40 [default = 0, (.description) = "enum"];
+	optional int32 desired_revision = 40 [default = Identifier, (.description) = "enum"];
 	repeated .CPublishedFile_QueryFiles_Request_TagGroup taggroups = 42;
 	optional bool return_reactions = 43 [default = false];
 	optional .CPublishedFile_QueryFiles_Request_DateRange date_range_created = 44;
@@ -432,7 +434,7 @@ message CPublishedFile_RefreshVotingQueue_Request {
 	optional bool match_all_tags = 4 [default = true];
 	repeated string excluded_tags = 5;
 	optional uint32 desired_queue_size = 6;
-	optional int32 desired_revision = 8 [default = 0, (.description) = "enum"];
+	optional int32 desired_revision = 8 [default = Identifier, (.description) = "enum"];
 }
 
 message CPublishedFile_RefreshVotingQueue_Response {
@@ -541,9 +543,11 @@ message CPublishedFile_Update_Request {
 	optional string filename = 7;
 	optional string preview_filename = 8;
 	optional bool spoiler_tag = 10;
+	optional string collectiontype = 14;
 	optional uint32 image_width = 15;
 	optional uint32 image_height = 16;
 	optional int32 language = 17;
+	optional bool update_tags = 18;
 }
 
 message CPublishedFile_Update_Response {

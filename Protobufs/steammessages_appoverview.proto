@@ -1,4 +1,5 @@
 import "enums.proto";
+import "enums_productinfo.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = true;
@@ -60,6 +61,7 @@ enum EAppCloudStatus {
 }
 
 enum EAppControllerSupportLevel {
+	k_EAppControllerSupportLevelUnknown = -1;
 	k_EAppControllerSupportLevelNone = 0;
 	k_EAppControllerSupportLevelPartial = 1;
 	k_EAppControllerSupportLevelFull = 2;
@@ -111,7 +113,7 @@ message CAppOverview {
 	optional uint32 rt_original_release_date = 25 [default = 0];
 	optional uint32 rt_steam_release_date = 26 [default = 0];
 	optional string icon_hash = 27;
-	optional .EAppControllerSupportLevel xbox_controller_support = 31 [default = k_EAppControllerSupportLevelNone];
+	optional .EAppControllerSupportLevel xbox_controller_support = 31 [default = k_EAppControllerSupportLevelUnknown];
 	optional bool vr_supported = 32;
 	optional uint32 metacritic_score = 36;
 	optional uint64 size_on_disk = 37;
@@ -148,6 +150,7 @@ message CAppOverview {
 	optional bool has_custom_sort_as = 76;
 	optional uint64 bitfield_supported_languages = 77 [default = 0];
 	repeated .CAppOverview_PerClientData remote_per_client_data = 78;
+	repeated .EContentDescriptorID content_descriptors = 79;
 }
 
 message CAppOverview_Change {

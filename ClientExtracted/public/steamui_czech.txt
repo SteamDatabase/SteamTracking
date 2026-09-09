@@ -3715,7 +3715,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "steam_downloads_downloading"	"Stahování"
 "steam_downloads_preloading"	"Předstahování"
 "steam_downloads_unpacking"	"Rozbalování"
-"steam_downloads_patching"	"Aktualizování"
+"steam_downloads_patching"	"Upravování"
 "steam_downloads_paused"	"Je vyžadována aktualizace"
 "steam_downloads_queued"	"Ve frontě"
 "steam_downloads_delayed"	"Naplánováno na %delayeduntil%"

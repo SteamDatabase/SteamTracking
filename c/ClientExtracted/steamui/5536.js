@@ -1,0 +1,48 @@
+"use strict";
+(() => {
+  (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
+    [5536],
+    {
+      chunkid: (module) => {
+        module.exports = JSON.parse(`{
+	"language": "ukrainian",
+	"DeckVerified_CompatibilitySection_Title": "Сумісність зі Steam Deck",
+	"DeckVerified_CompatibilitySection_Details": "Подробиці",
+	"DeckVerified_CategoryLabel_Verified": "Сумісна",
+	"DeckVerified_CategoryLabel_Playable": "Можна грати",
+	"DeckVerified_CategoryLabel_Unsupported": "Не підтримується",
+	"DeckVerified_CategoryLabel_Unknown": "Невідомо",
+	"DeckVerified_FilterLabel_Verified": "Лише сумісні",
+	"DeckVerified_FilterLabel_Verified_Playable": "Сумісні та в які можна грати",
+	"DeckVerified_FilterLabel_Verified_Playable_Unknown": "Сумісні, у які можна грати та неперевірені",
+	"DeckVerified_FilterLabel_AllGames": "Усі ігри",
+	"DeckVerified_FilterLabel_Unknown": "Невідомо",
+	"DeckVerified_FilterDescription_Verified": "Показувати лише ігри, які чудово працюють із вбудованими елементами керування та екраном Steam Deck.",
+	"DeckVerified_FilterDescription_Verified_NotOnDeck": "Показувати лише ігри, які чудово працюють із вбудованими елементами керування та екраном Steam Deck.",
+	"DeckVerified_FilterDescription_Verified_Playable": "Показувати всі сумісні ігри та ігри, у які можна грати, але з додатковими налаштуваннями.",
+	"DeckVerified_FilterDescription_Verified_Playable_Unknown": "Показувати всі сумісні ігри й ті, у які можна грати, а також ігри, які ще не були перевірені.",
+	"DeckVerified_FilterDescription_AllGames": "Показувати всі ігри в бібліотеці, включно з тими, які не повністю сумісні зі Steam Deck.",
+	"SteamOS_CompatibilitySection_Title": "Сумісність зі SteamOS",
+	"SteamOS_CompatibilitySection_Details": "Подробиці",
+	"SteamOS_CategoryLabel_Unknown": "Невідомо",
+	"SteamOS_CategoryLabel_Unsupported": "Не підтримується",
+	"SteamOS_CategoryLabel_Compatible": "Сумісна",
+	"SteamOS_FilterLabel_Compatible": "Лише сумісні",
+	"SteamOS_FilterLabel_Compatible_Unknown": "Сумісні та неперевірені",
+	"SteamOS_FilterLabel_AllGames": "Усі ігри",
+	"SteamOS_FilterDescription_Compatible": "Ігри, які перевірені й підтримують SteamOS",
+	"SteamOS_FilterDescription_Compatible_Unknown": "Ігри, які перевірені й підтримують SteamOS, а також ті, що ще не перевірені",
+	"SteamOS_FilterDescription_AllGames": "Усі ігри в бібліотеці, включно з тими, які добре не працюють на SteamOS",
+	"MachineVerified_FilterDescription_Verified": "Показувати лише ігри, які чудово працюють на Steam Machine.",
+	"MachineVerified_FilterDescription_Verified_Playable": "Показувати всі сумісні ігри та ігри, у які можна грати, але з додатковими налаштуваннями.",
+	"MachineVerified_FilterDescription_Verified_Playable_Unknown": "Показувати всі сумісні ігри й ті, у які можна грати, а також ігри, які ще не були перевірені на сумісність зі Steam Machine.",
+	"MachineVerified_FilterDescription_AllGames": "Показувати всі ігри в бібліотеці, включно з тими, які не повністю сумісні зі Steam Machine.",
+	"FrameVerified_FilterDescription_Verified": "Показувати лише ігри, які чудово працюють на Steam Frame.",
+	"FrameVerified_FilterDescription_Verified_Playable": "Показувати всі сумісні з Frame ігри та ігри, у які можна грати, але з додатковими налаштуваннями.",
+	"FrameVerified_FilterDescription_Verified_Playable_Unknown": "Показувати всі сумісні ігри й ті, у які можна грати, а також ігри, які ще не були перевірені на сумісність зі Steam Frame.",
+	"FrameVerified_FilterDescription_AllGames": "Показувати всі ігри в бібліотеці, включно з тими, які не повністю сумісні зі Steam Frame."
+}`);
+      },
+    },
+  ]);
+})();

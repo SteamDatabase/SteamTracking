@@ -486,13 +486,28 @@ message CPlayer_GetUserAchievements_Response {
 
 	message Group {
 		optional uint32 groupid = 1;
-		optional uint32 completion_achievements = 3;
+		optional bool is_achievable = 2;
+		optional uint32 completed_achievements = 3;
+		optional bool is_completed = 4;
 	}
 
 	repeated .CPlayer_GetUserAchievements_Response.Achievement achievements = 1;
 	optional int32 schema_version = 2;
 	optional uint32 schema_hash = 3;
 	repeated .CPlayer_GetUserAchievements_Response.Group groups = 4;
+}
+
+message CPlayer_GetGlobalAchievementPercentages_Request {
+	optional uint32 appid = 1;
+}
+
+message CPlayer_GetGlobalAchievementPercentages_Response {
+	message Achievement {
+		optional uint32 internal_key = 1;
+		optional float player_percent_unlocked = 2;
+	}
+
+	repeated .CPlayer_GetGlobalAchievementPercentages_Response.Achievement achievements = 1;
 }
 
 message CPlayer_GetUserStats_Request {
@@ -961,6 +976,7 @@ service Player {
 	rpc GetAchievementsProgress (.CPlayer_GetAchievementsProgress_Request) returns (.CPlayer_GetAchievementsProgress_Response);
 	rpc GetGameAchievements (.CPlayer_GetGameAchievements_Request) returns (.CPlayer_GetGameAchievements_Response);
 	rpc GetUserAchievements (.CPlayer_GetUserAchievements_Request) returns (.CPlayer_GetUserAchievements_Response);
+	rpc GetGlobalAchievementPercentages (.CPlayer_GetGlobalAchievementPercentages_Request) returns (.CPlayer_GetGlobalAchievementPercentages_Response);
 	rpc GetUserStats (.CPlayer_GetUserStats_Request) returns (.CPlayer_GetUserStats_Response);
 	rpc GetFavoriteBadge (.CPlayer_GetFavoriteBadge_Request) returns (.CPlayer_GetFavoriteBadge_Response);
 	rpc SetFavoriteBadge (.CPlayer_SetFavoriteBadge_Request) returns (.CPlayer_SetFavoriteBadge_Response);

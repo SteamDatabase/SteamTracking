@@ -684,6 +684,16 @@ enum EWindowsUpdateRebootBehavior {
 	k_EWindowsUpdateRebootBehavior_MightNeedReboot = 2;
 }
 
+enum EWindowsUpdateOperationResult {
+	k_EWindowsUpdateOperationResult_Unknown = -1;
+	k_EWindowsUpdateOperationResult_NotStarted = 0;
+	k_EWindowsUpdateOperationResult_InProgress = 1;
+	k_EWindowsUpdateOperationResult_Succeeded = 2;
+	k_EWindowsUpdateOperationResult_SucceededWithErrors = 3;
+	k_EWindowsUpdateOperationResult_Failed = 4;
+	k_EWindowsUpdateOperationResult_Aborted = 5;
+}
+
 enum EExternalSaleEventType {
 	k_EExternalSaleEventType_Unknown = 0;
 	k_EExternalSaleEventType_Publisher = 1;
@@ -860,7 +870,8 @@ enum EContentReportReason {
 	k_EContentReportReason_ToSViolation = 66;
 	k_EContentReportReason_Miscategorized = 67;
 	k_EContentReportReason_BypassingProfanityFilter = 68;
-	k_EContentReportReason_MAX = 69;
+	k_EContentReportReason_BulkDeletion = 69;
+	k_EContentReportReason_MAX = 70;
 }
 
 enum EResolutionAutomation {
@@ -902,4 +913,13 @@ enum ECommentDeleteReason {
 	k_ECommentDeleteReason_Support = 4;
 	k_ECommentDeleteReason_Spam = 5;
 	k_ECommentDeleteReason_AccountDeletion = 6;
+}
+
+enum EDLCHighlightReason {
+	k_EDLCHighlightReason_None = 0;
+	k_EDLCHighlightReason_New = 1;
+	k_EDLCHighlightReason_ComingSoon = 2;
+	k_EDLCHighlightReason_PlayerFavorite = 3;
+	k_EDLCHighlightReason_Recommended = 4;
+	k_EDLCHighlightReason_NewPlayers = 5;
 }

@@ -1,0 +1,14 @@
+"use strict";
+(() => {
+  (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
+    [6350],
+    {
+      46350: (e) => {
+        e.exports = JSON.parse(
+          `{"language":"dutch","TrailerPlayer_Settings_Tooltip":"Instellingen","TrailerPlayer_Captions_Tooltip":"Ondertiteling/ODS","TrailerPlayer_Play_Tooltip":"Afspelen","TrailerPlayer_Pause_Tooltip":"Pauzeren","TrailerPlayer_Mute_Tooltip":"Dempen","TrailerPlayer_Unmute_Tooltip":"Niet meer dempen","TrailerPlayer_FullScreen_Tooltip":"Volledig scherm","TrailerPlayer_ExitFullScreen_Tooltip":"Volledig scherm afsluiten","TrailerPlayer_EnterTheater_Tooltip":"Theatermodus starten","TrailerPlayer_ExitTheater_Tooltip":"Theatermodus afsluiten","TrailerPlayer_Quality_Auto":"Automatisch","TrailerPlayer_Error_Playback":"Er is een fout opgetreden bij het afspelen van deze video","TrailerPlayer_Error_UnsupportedCodec":"Video-indeling niet ondersteund op dit apparaat","StoreTrailer_AutoPlayVideos":"Video's automatisch afspelen","StoreTrailer_Title_Category_Unknown":"Trailer","StoreTrailer_Title_Category_Gameplay":"Gameplay","StoreTrailer_Title_Category_Teaser":"Teaser","StoreTrailer_Title_Category_Cinematic":"Algemeen/filmisch","StoreTrailer_Title_Category_Update":"Update/uitbreiding/seizoen","StoreTrailer_Title_Category_Accolades":"Lofbetuigingen","StoreTrailer_Title_Category_Interview":"Interview/achter de schermen"}`,
+        );
+      },
+    },
+  ]);
+})();
+//# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/6350.js.map

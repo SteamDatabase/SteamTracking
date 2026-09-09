@@ -1,0 +1,34 @@
+"use strict";
+(() => {
+  (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
+    [3695],
+    {
+      chunkid: (module) => {
+        module.exports = JSON.parse(`{
+	"language": "romanian",
+	"TrailerPlayer_Settings_Tooltip": "Setări",
+	"TrailerPlayer_Captions_Tooltip": "Subtitrări simple/complexe",
+	"TrailerPlayer_Play_Tooltip": "Redă",
+	"TrailerPlayer_Pause_Tooltip": "Întrerupe",
+	"TrailerPlayer_Mute_Tooltip": "Dezactivează sunetul",
+	"TrailerPlayer_Unmute_Tooltip": "Activează sunetul",
+	"TrailerPlayer_FullScreen_Tooltip": "Ecran complet",
+	"TrailerPlayer_ExitFullScreen_Tooltip": "Ieși din modul ecran complet",
+	"TrailerPlayer_EnterTheater_Tooltip": "Intră în modul cinema",
+	"TrailerPlayer_ExitTheater_Tooltip": "Ieși din modul cinema",
+	"TrailerPlayer_Quality_Auto": "Automată",
+	"TrailerPlayer_Error_Playback": "A avut loc o eroare la redarea acestui videoclip",
+	"TrailerPlayer_Error_UnsupportedCodec": "Formatul video nu este compatibil cu acest dispozitiv",
+	"StoreTrailer_AutoPlayVideos": "Redare automată a videoclipurilor",
+	"StoreTrailer_Title_Category_Unknown": "Trailer",
+	"StoreTrailer_Title_Category_Gameplay": "Secvențe din joc",
+	"StoreTrailer_Title_Category_Teaser": "Teaser",
+	"StoreTrailer_Title_Category_Cinematic": "General/cinematic",
+	"StoreTrailer_Title_Category_Update": "Actualizare/expansiune/sezon",
+	"StoreTrailer_Title_Category_Accolades": "Premii",
+	"StoreTrailer_Title_Category_Interview": "Interviu/jurnal de dezvoltare"
+}`);
+      },
+    },
+  ]);
+})();

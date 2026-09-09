@@ -203,7 +203,6 @@ $\nY8O
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGL6\f
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +2Hp
@@ -1864,7 +1863,6 @@ long long
 lower
 lpHP
 lseek
-m\S6D8`;
 malloc
 map keys are not unique
 map<$0, $1>

@@ -96,7 +96,7 @@
 "Friends_SearchingForFriend"				"Buscando a %search%..."
 "Friends_FriendHasBeenAddedToYourListUnderName" "%search% se ha añadido a tu lista de amigos con el nombre '%friend%'."
 "Friends_FriendHasBeenAddedToYourList"		"%friend% se ha añadido a tu lista de amigos."
-"Friends_UnableToFindFriendByThatName"		"No se ha podido encontrar a %search%. Pulsa 'Atrás' si quieres repetir la búsqueda."
+"Friends_UnableToFindFriendByThatName"		"No se ha podido encontrar a %search%. Pulsa «Atrás» si quieres repetir la búsqueda."
 "Friends_CannotAddSelfToList"				"¡No puedes añadirte a ti mismo a tu lista de amigos!"
 "Friends_CannotAddFriendWhoIsAlreadyInList" "%search% ya se encuentra en tu lista de amigos con el nombre '%friend%'."
 
@@ -161,7 +161,7 @@
 "Friends_TooManyFriends"				"¡Tu lista de amigos está llena! Elimina algunos e inténtalo de nuevo."
 "Friends_TargetHasTooManyFriends"		"¡La lista de amigos de %search% está llena!"
 "Friends_DefaultAddError"	 			"Ha habido un problema al añadir a %search% a tu lista de amigos."
-"Friends_UnableToFindFriendByThatNameInvitePrompt"		"No se ha podido encontrar un usuario de Steam con la dirección de correo electrónico %search%.\n\nSi quieres invitar a %search% a que se una a Steam y añadirlo a tu lista de Amigos, pulsa 'Siguiente' o pulsa 'Atrás' para repetir la búsqueda."
+"Friends_UnableToFindFriendByThatNameInvitePrompt"		"No se ha podido encontrar un usuario de Steam con la dirección de correo electrónico %search%.\n\nSi quieres invitar a %search% a que se una a Steam y añadirlo a tu lista de Amigos, pulsa 'Siguiente' o pulsa «Atrás» para repetir la búsqueda."
 "Friends_InvitingFriend"				"Enviando invitación a %search%..."
 "Friends_InvitationPending"			"Se ha invitado a %search% a que se una a Steam recientemente; cuando responda, se añadirá a tu lista de amigos.\n"
 "Friends_InvitationSent"				"Se ha enviado a %search% una invitación por correo electrónico, y se añadirá a tu lista de amigos cuando responda.\n"

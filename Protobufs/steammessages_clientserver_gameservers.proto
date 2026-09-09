@@ -94,7 +94,7 @@ message CMsgGMSClientServerQueryResponse {
 		optional uint32 query_port = 2;
 		optional uint32 auth_players = 3;
 		optional .CMsgIPAddress server_ip = 4;
-		optional fixed64 steam_id = 6;
+		optional fixed64 steam_id = 6 [(allow_field_named_steam_id) = true];
 		optional uint32 revision = 7;
 		optional uint32 players = 8;
 		optional uint32 game_port = 9;

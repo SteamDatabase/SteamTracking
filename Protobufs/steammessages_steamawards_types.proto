@@ -1,0 +1,11 @@
+option optimize_for = SPEED;
+
+message SteamAward_Localization {
+	optional string title = 1;
+}
+
+message SteamAward {
+	optional int32 voteid = 1;
+	optional .SteamAward_Localization localization = 2;
+	optional int32 award_year = 3;
+}

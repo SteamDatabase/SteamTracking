@@ -264,7 +264,6 @@ message CSteamInputService_RawControllerDetailItem {
 	optional uint32 controller_type = 3;
 	optional uint32 controller_style = 4;
 	optional int32 xinput_index = 5;
-	//optional uint32 xinput_index = 5;
 	optional bool is_wireless_steam_dongle = 6;
 	optional uint32 vendor_id = 7;
 	optional uint32 product_id = 8;

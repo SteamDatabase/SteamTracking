@@ -521,7 +521,6 @@ This should take less than a minute."
 "Steam_SetJumplistOptions"		"Set Taskbar Preferences"
 "Steam_ShowOnlineStatusOptions"	"Select online options to display"
 "Steam_ShowDestinationOptions"	"Select destinations to display"
-"Steam_MustRestartToTakeEffect"			"This setting will not take effect until\nyou have restarted Steam."
 "Steam_LanguageSelect"				"Select the language you wish Steam to use (requires Steam to restart)"
 "Steam_SteamChinaLanguageSelect"	"Steam can only be used in Simplified Chinese"
 "Steam_SelectSkinToUse"				"Select the skin you wish Steam to use (requires Steam to restart)"
@@ -562,9 +561,7 @@ This should take less than a minute."
 "Steam_PasswordStrength"				"Password strength:"
 
 "Steam_MustRestart_Title"		"Steam - Restart required"
-"Steam_MustRestart_Info"		"Steam must now be restarted in order to receive the latest update.\nYou won't be able to continue using Steam until it has restarted."
 "Steam_MustRestart_Button"		"Restart Steam"
-"Steam_MustRestart_Language"		"You must restart Steam now to change your language settings."
 
 "Steam_ChangeBeta_Title"		"Steam - Beta Participation"
 "Steam_ChangeBeta_Text"			"Do you want to participate in the Steam beta program?\nSteam will restart in order to receive the beta client."
@@ -3195,9 +3192,6 @@ To join one of these beta programs, select it from the list below and click 'OK'
 
 "Steam_ReadMoreAboutBetas"	"Read more about how betas on Steam work"
 "Steam_SelectNoBeta"	"NONE - Opt out of all beta programs"
-"Steam_BetaIsOver" "Thank you for participating in the %betaname% beta on Steam.
-
-The beta has now ended - please restart Steam to return to the current release."
 
 "Steam_ChooseGameLanguage"	"Select the language you wish to play this game in:"
 "Steam_GameProperties_LanguageTab" "Language"

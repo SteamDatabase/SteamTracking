@@ -112,6 +112,7 @@ message CPublishedFile_Publish_Request {
 	optional string collection_type = 14;
 	optional string game_type = 15;
 	optional string url = 16;
+	optional int32 language = 17;
 }
 
 message CPublishedFile_Publish_Response {
@@ -346,6 +347,7 @@ message CPublishedFile_GetUserFiles_Request {
 	optional .CPublishedFile_GetUserFiles_Request.DateRange date_range_updated = 40;
 	repeated .EContentDescriptorID excluded_content_descriptors = 37;
 	optional bool admin_query = 38;
+	repeated .EContentDescriptorID excluded_apps_with_content_descriptors = 41;
 	optional bool totalonly = 17;
 	optional bool ids_only = 18;
 	optional bool return_vote_data = 19 [default = true];
@@ -405,9 +407,11 @@ message CPublishedFile_Update_Request {
 	optional string filename = 7;
 	optional string preview_filename = 8;
 	optional bool spoiler_tag = 10;
+	optional string collectiontype = 14;
 	optional uint32 image_width = 15;
 	optional uint32 image_height = 16;
 	optional int32 language = 17;
+	optional bool update_tags = 18;
 }
 
 message CPublishedFile_Update_Response {

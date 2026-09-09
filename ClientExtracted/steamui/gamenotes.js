@@ -1,168 +1,178 @@
-(self.webpackChunksteamui = self.webpackChunksteamui || []).push([
-  [1220],
-  {
-    39889: (e) => {
-      e.exports = { GameNotesPopup: "_3hIt9g_59KauEV2uSNK6Ct" };
-    },
-    44840: (e, t, s) => {
-      "use strict";
-      s.r(t), s.d(t, { default: () => f });
-      var o = s(62540),
-        n = s(63098),
-        p = s(34394),
-        i = s(55518),
-        r = s(63696),
-        a = s(49519),
-        u = s(67808),
-        d = s(73259),
-        c = s(45264),
-        l = s(44829),
-        h = s(64608),
-        m = s(10606),
-        x = s(46108),
-        j = s(39889);
-      function f(e) {
-        const { popup: t } = e,
-          [s, p] = r.useState();
-        return (
-          r.useEffect(() => {
-            if (s)
-              return n.U.RegisterPopup(t, () =>
-                s.SteamClient.Window.BringToFront(),
-              );
-          }, [t, s]),
-          void 0 === t.noteid
-            ? (0, o.jsx)(_, { popup: t, refPopup: p })
-            : (0, o.jsx)(P, { popup: t, refPopup: p })
-        );
-      }
-      function P(e) {
-        const { popup: t, refPopup: s } = e,
-          n = (0, x.we)("#GameNotes_NoteForGame", t.display_name);
-        return (0, o.jsx)(u.p, {
-          body_class: j.GameNotesPopup,
-          children: (0, o.jsxs)(m.hM, {
-            strName: t.id,
-            strTitle: n,
-            onDismiss: () => t.close(),
-            popupWidth: 500,
-            popupHeight: 500,
-            resizable: !0,
-            refPopup: s,
-            className: "TODO",
-            children: [
-              (0, o.jsx)(h.Y9, { children: n }),
-              (0, o.jsx)(p.A, {
-                mode: "single",
-                closePopup: () => t.close(),
-                children: (0, o.jsx)(N, {
-                  noteParent: t.noteParent,
-                  noteid: t.noteid,
-                }),
-              }),
-            ],
-          }),
-        });
-      }
-      function N(e) {
-        const { noteParent: t, noteid: s } = e,
-          { data: n } = (0, c.P6)(t, s);
-        return n ? (0, o.jsx)(l.U, { note: n }) : null;
-      }
-      function _(e) {
-        const { popup: t, refPopup: s } = e,
-          n = t.noteParent,
-          u = r.useMemo(() => [(0, d.o)(n)], [n]);
-        return (0, o.jsx)(m.hM, {
-          strName: t.id,
-          strTitle: t.display_name,
-          onDismiss: () => t.close(),
-          popupWidth: 900,
-          popupHeight: 830,
-          resizable: !0,
-          refPopup: s,
-          className: "TODO",
-          children: (0, o.jsx)(a.fS, {
-            initialEntries: u,
-            children: (0, o.jsx)(p.A, {
-              mode: "page",
-              closePopup: () => t.close(),
-              children: (0, o.jsx)(i.default, { noteParent: n }),
-            }),
-          }),
-        });
-      }
-    },
-    55518: (e, t, s) => {
-      "use strict";
-      s.r(t), s.d(t, { default: () => j });
-      var o = s(62540),
-        n = s(49519),
-        p = s(73259),
-        i = s(74751),
-        r = s(63696),
-        a = s(39941),
-        u = s(45264),
-        d = s(35395),
-        c = s(26853),
-        l = s(46108);
-      function h() {
-        const { data: e, isLoading: t } = (0, u.Yh)(),
-          s = r.useMemo(
-            () => e?.slice().sort((e, t) => t.last_modified - e.last_modified),
-            [e],
+(() => {
+  (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
+    [1220],
+    {
+      39889: (j) => {
+        j.exports = { GameNotesPopup: "_3hIt9g_59KauEV2uSNK6Ct" };
+      },
+      3291: (j, l, t) => {
+        "use strict";
+        t.r(l), t.d(l, { default: () => a });
+        var s = t(62540),
+          d = t(9851),
+          p = t(50209),
+          P = t(44026),
+          m = t(63696),
+          O = t(49519),
+          M = t(17205),
+          v = t(12442),
+          D = t(41843),
+          f = t(91088),
+          _ = t(50777),
+          h = t(64243),
+          x = t(7727),
+          c = t(39889),
+          A = t.n(c),
+          g = "10978408";
+        function a(r) {
+          const { popup: o } = r,
+            [i, n] = m.useState();
+          return (
+            m.useEffect(() => {
+              if (i)
+                return d.U.RegisterPopup(o, () =>
+                  i.SteamClient.Window.BringToFront(),
+                );
+            }, [o, i]),
+            o.noteid === void 0
+              ? (0, s.jsx)(u, { popup: o, refPopup: n })
+              : (0, s.jsx)(e, { popup: o, refPopup: n })
           );
-        return t
-          ? (0, o.jsx)(c.t, { msDelayAppear: 300 })
-          : (0, o.jsxs)("div", {
+        }
+        function e(r) {
+          const { popup: o, refPopup: i } = r,
+            n = (0, x.we)("#GameNotes_NoteForGame", o.display_name);
+          return (0, s.jsx)(M.p, {
+            body_class: c.GameNotesPopup,
+            children: (0, s.jsxs)(h.hM, {
+              strName: o.id,
+              strTitle: n,
+              onDismiss: () => o.close(),
+              popupWidth: 500,
+              popupHeight: 500,
+              resizable: !0,
+              refPopup: i,
+              className: "TODO",
               children: [
-                (0, o.jsx)("h1", {
-                  children: (0, l.we)("#UserGameNotes_NotesList"),
-                }),
-                (0, o.jsx)("ul", {
-                  children: s.map((e) =>
-                    (0, o.jsx)(m, { game: e }, e.appid || e.shortcut_name),
-                  ),
+                (0, s.jsx)(_.Y9, { children: n }),
+                (0, s.jsx)(p.A, {
+                  mode: "single",
+                  closePopup: () => o.close(),
+                  children: (0, s.jsx)(E, {
+                    noteParent: o.noteParent,
+                    noteid: o.noteid,
+                  }),
                 }),
               ],
-            });
-      }
-      function m(e) {
-        const { game: t } = e;
-        return (0, o.jsx)("li", {
-          children: (0, o.jsx)(a.N_, {
-            to: (0, p.o)(
-              t.appid ? { appid: t.appid } : { shortcut: t.shortcut_name },
-            ),
-            children: t.appid
-              ? (0, o.jsx)(x, { appid: t.appid })
-              : t.shortcut_name,
-          }),
-        });
-      }
-      function x(e) {
-        const { appid: t } = e,
-          s = (0, d.X)(t);
-        return s?.name;
-      }
-      function j(e) {
-        return (0, o.jsxs)(n.dO, {
-          children: [
-            (0, o.jsx)(n.qh, { path: p.O.List(), children: (0, o.jsx)(h, {}) }),
-            (0, o.jsx)(n.qh, {
-              path: p.O.AppNotes(":appid", ":noteid?"),
-              children: (0, o.jsx)(i.u, {}),
             }),
-            (0, o.jsx)(n.qh, {
-              path: p.O.ShortcutNotes(":shortcut_name", ":noteid?"),
-              children: (0, o.jsx)(i.u, {}),
+          });
+        }
+        function E(r) {
+          const { noteParent: o, noteid: i } = r,
+            { data: n } = (0, D.P6)(o, i);
+          return n ? (0, s.jsx)(f.U, { note: n }) : null;
+        }
+        function u(r) {
+          const { popup: o, refPopup: i } = r,
+            n = o.noteParent,
+            L = m.useMemo(() => [(0, v.o)(n)], [n]);
+          return (0, s.jsx)(h.hM, {
+            strName: o.id,
+            strTitle: o.display_name,
+            onDismiss: () => o.close(),
+            popupWidth: 900,
+            popupHeight: 830,
+            resizable: !0,
+            refPopup: i,
+            className: "TODO",
+            children: (0, s.jsx)(O.fS, {
+              initialEntries: L,
+              children: (0, s.jsx)(p.A, {
+                mode: "page",
+                closePopup: () => o.close(),
+                children: (0, s.jsx)(P.default, { noteParent: n }),
+              }),
             }),
-            (0, o.jsx)(n.qh, {
-              children: (0, o.jsx)(n.rd, { to: `${(0, p.o)(e.noteParent)}` }),
+          });
+        }
+      },
+      44026: (j, l, t) => {
+        "use strict";
+        t.r(l), t.d(l, { default: () => g });
+        var s = t(62540),
+          d = t(49519),
+          p = t(12442),
+          P = t(14828),
+          m = t(63696),
+          O = t(39941),
+          M = t(41843),
+          v = t(12684),
+          D = t(7354),
+          f = t(7727),
+          _ = "10978408";
+        function h() {
+          const { data: a, isLoading: e } = (0, M.Yh)(),
+            E = m.useMemo(
+              () =>
+                a?.slice().sort((u, r) => r.last_modified - u.last_modified),
+              [a],
+            );
+          return e
+            ? (0, s.jsx)(D.t, { msDelayAppear: 300 })
+            : (0, s.jsxs)("div", {
+                children: [
+                  (0, s.jsx)("h1", {
+                    children: (0, f.we)("#UserGameNotes_NotesList"),
+                  }),
+                  (0, s.jsx)("ul", {
+                    children: E.map((u) =>
+                      (0, s.jsx)(x, { game: u }, u.appid || u.shortcut_name),
+                    ),
+                  }),
+                ],
+              });
+        }
+        function x(a) {
+          const { game: e } = a;
+          return (0, s.jsx)("li", {
+            children: (0, s.jsx)(O.N_, {
+              to: (0, p.o)(
+                e.appid ? { appid: e.appid } : { shortcut: e.shortcut_name },
+              ),
+              children: e.appid
+                ? (0, s.jsx)(c, { appid: e.appid })
+                : e.shortcut_name,
             }),
-          ],
-        });
-      }
+          });
+        }
+        function c(a) {
+          const { appid: e } = a;
+          return (0, v.X)(e)?.name;
+        }
+        var A = "10978408";
+        function g(a) {
+          return (0, s.jsxs)(d.dO, {
+            children: [
+              (0, s.jsx)(d.qh, {
+                path: p.O.List(),
+                children: (0, s.jsx)(h, {}),
+              }),
+              (0, s.jsx)(d.qh, {
+                path: p.O.AppNotes(":appid", ":noteid?"),
+                children: (0, s.jsx)(P.u, {}),
+              }),
+              (0, s.jsx)(d.qh, {
+                path: p.O.ShortcutNotes(":shortcut_name", ":noteid?"),
+                children: (0, s.jsx)(P.u, {}),
+              }),
+              (0, s.jsx)(d.qh, {
+                children: (0, s.jsx)(d.rd, { to: `${(0, p.o)(a.noteParent)}` }),
+              }),
+            ],
+          });
+        }
+      },
     },
-  },
-]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/gamenotes.js.map
+  ]);
+})();
+//# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/gamenotes.js.map

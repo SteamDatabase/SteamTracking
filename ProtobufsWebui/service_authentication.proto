@@ -197,7 +197,7 @@ message CAuthentication_RefreshToken_Enumerate_Response_TokenUsageEvent {
 message CAuthentication_RefreshToken_Revoke_Request {
 	optional fixed64 token_id = 1;
 	optional fixed64 steamid = 2;
-	optional int32 revoke_action = 3 [default = 1, (.description) = "enum"];
+	optional int32 revoke_action = 3 [default = Identifier, (.description) = "enum"];
 	optional bytes signature = 4;
 }
 
@@ -206,7 +206,7 @@ message CAuthentication_RefreshToken_Revoke_Response {
 
 message CAuthentication_Token_Revoke_Request {
 	optional string token = 1;
-	optional int32 revoke_action = 2 [default = 1, (.description) = "enum"];
+	optional int32 revoke_action = 2 [default = Identifier, (.description) = "enum"];
 }
 
 message CAuthentication_Token_Revoke_Response {

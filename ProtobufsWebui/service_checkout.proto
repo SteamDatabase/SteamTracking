@@ -32,8 +32,7 @@ message CCheckout_GetFriendOwnershipForGifting_Response_OwnershipInfo {
 }
 
 message CCheckout_ValidateCart_Request {
-	optional int64 gidshoppingcart = 1;
-	//optional uint64 gidshoppingcart = 1;
+	optional uint64 gidshoppingcart = 1;
 	optional .StoreBrowseContext context = 2;
 	optional .StoreBrowseItemDataRequest data_request = 3;
 	optional .CartGiftInfo gift_info = 4;

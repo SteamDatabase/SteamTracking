@@ -1,22 +1,10 @@
+import "common.proto";
 import "common_base.proto";
 
 message CRemoteClient_DisableSteamBroadcast_Notification {
 }
 
 message CRemoteClient_EnableSteamBroadcast_Notification {
-}
-
-message CRemoteClient_RegisterStatusUpdate_Notification {
-	optional fixed64 session_id = 1;
-	optional fixed64 steamid = 2;
-	optional fixed64 device_id = 3;
-	optional bool disable_polling = 4;
-}
-
-message CRemoteClient_RemotePacket_Notification {
-	optional fixed64 session_id = 1;
-	optional fixed64 steamid = 2;
-	optional bytes payload = 4;
 }
 
 message CRemoteClient_SteamBroadcast_Notification {
@@ -33,21 +21,9 @@ message CRemoteClient_SteamToSteam_Notification {
 	optional bytes encrypted_payload = 5;
 }
 
-message CRemoteClient_Task {
-	optional int32 type = 1 [(.description) = "enum"];
-	optional fixed64 task_id = 2;
-	optional string url = 3;
-	optional int64 file_id = 4;
-}
-
 message CRemoteClient_TaskList_Notification {
 	optional fixed64 remote_client_id = 1;
 	repeated .CRemoteClient_Task tasklist = 2;
-}
-
-message CRemoteClient_UnregisterStatusUpdate_Notification {
-	optional fixed64 session_id = 1;
-	optional fixed64 steamid = 2;
 }
 
 message CRemotePlayTogether_Notification {

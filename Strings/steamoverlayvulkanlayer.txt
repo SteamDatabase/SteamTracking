@@ -20,6 +20,8 @@ $ORIGIN
 *NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN26CVulkanAsyncReadbackThread4InitEP10VkDevice_TEUlvE_EEEEEE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGA
+++CCUNGV
 ++CCUNGstd::exception
 /dev/random
 /dev/urandom
@@ -34,6 +36,7 @@ $ORIGIN
 @entryPointOutput.vTexCoord
 CLcx
 Constants
+EP32-
 Enable multithreading to use std::thread
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
 GLIBCXX_TUNABLES
@@ -50,7 +53,6 @@ GL_ARB_shading_language_420pack
 GameOverlayRenderer.dll
 GameOverlayRenderer64.dll
 HDRParams
-H\najU
 JArray
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
@@ -97,6 +99,7 @@ Vcoeff
 Voffset
 VulkanSteamOverlayBeginRendering
 VulkanSteamOverlayDeleteTexture(int)
+VulkanSteamOverlayDestroySwapChain
 VulkanSteamOverlayDrawTexturedRect
 VulkanSteamOverlayPresent
 VulkanSteamOverlayProcessCapturedFrame

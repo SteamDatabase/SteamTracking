@@ -441,6 +441,9 @@ message CStreamingClientConfig {
 	optional int32 window_frame_offset_x = 33;
 	optional int32 window_frame_offset_y = 34;
 	optional bool enable_video_pyrowave = 35 [default = false];
+	optional bool pyrowave_custom_bitrate = 36;
+	optional int32 pyrowave_custom_bitrate_kbps = 37;
+	optional float pyrowave_quality_modifier = 38;
 }
 
 message CStreamingServerConfig {

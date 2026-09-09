@@ -1,0 +1,48 @@
+"use strict";
+(() => {
+  (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
+    [8247],
+    {
+      chunkid: (module) => {
+        module.exports = JSON.parse(`{
+	"language": "danish",
+	"DeckVerified_CompatibilitySection_Title": "Steam Deck-kompatibilitet",
+	"DeckVerified_CompatibilitySection_Details": "Detaljer",
+	"DeckVerified_CategoryLabel_Verified": "Bekræftet",
+	"DeckVerified_CategoryLabel_Playable": "Spilbart",
+	"DeckVerified_CategoryLabel_Unsupported": "Ikke understøttet",
+	"DeckVerified_CategoryLabel_Unknown": "Ukendt",
+	"DeckVerified_FilterLabel_Verified": "Kun bekræftede",
+	"DeckVerified_FilterLabel_Verified_Playable": "Bekræftede og spilbare",
+	"DeckVerified_FilterLabel_Verified_Playable_Unknown": "Bekræftede, spilbare og utestede",
+	"DeckVerified_FilterLabel_AllGames": "Alle spil",
+	"DeckVerified_FilterLabel_Unknown": "Ukendt",
+	"DeckVerified_FilterDescription_Verified": "Vis kun spil, som fungerer uden videre med din Steam Decks indbyggede styring og skærm.",
+	"DeckVerified_FilterDescription_Verified_NotOnDeck": "Vis kun spil, som fungerer uden videre med Steam Decks indbyggede styring og skærm.",
+	"DeckVerified_FilterDescription_Verified_Playable": "Vis alle bekræftede spil og spil, som er spilbare, men som kan kræve ekstra arbejde at interagere med eller konfigurere.",
+	"DeckVerified_FilterDescription_Verified_Playable_Unknown": "Vis alle bekræftede og spilbare spil samt spil, som endnu ikke er blevet testet for kompatibilitet med Steam Deck.",
+	"DeckVerified_FilterDescription_AllGames": "Vis alle spil i dit bibliotek, inklusive spil, der ikke kører godt på Steam Deck.",
+	"SteamOS_CompatibilitySection_Title": "Kompatibilitet med SteamOS",
+	"SteamOS_CompatibilitySection_Details": "Detaljer",
+	"SteamOS_CategoryLabel_Unknown": "Ukendt",
+	"SteamOS_CategoryLabel_Unsupported": "Ikke understøttet",
+	"SteamOS_CategoryLabel_Compatible": "Kompatibelt",
+	"SteamOS_FilterLabel_Compatible": "Kun kompatible",
+	"SteamOS_FilterLabel_Compatible_Unknown": "Kompatible og utestede",
+	"SteamOS_FilterLabel_AllGames": "Alle spil",
+	"SteamOS_FilterDescription_Compatible": "Inkluder spil, som er blevet testet og understøtter SteamOS.",
+	"SteamOS_FilterDescription_Compatible_Unknown": "Inkluder spil, som er blevet testet og understøtter SteamOS, plus spil, som endnu ikke er blevet testet for SteamOS-kompatibilitet.",
+	"SteamOS_FilterDescription_AllGames": "Vis alle spil i dit bibliotek, inklusive spil, der ikke kører godt på SteamOS.",
+	"MachineVerified_FilterDescription_Verified": "Vis kun spil, som fungerer uden videre med Steam Machine.",
+	"MachineVerified_FilterDescription_Verified_Playable": "Vis alle bekræftede spil og spil, som er spilbare, men som kan kræve ekstra arbejde at interagere med eller konfigurere.",
+	"MachineVerified_FilterDescription_Verified_Playable_Unknown": "Vis alle bekræftede og spilbare spil samt spil, som endnu ikke er blevet testet for kompatibilitet med Steam Machine.",
+	"MachineVerified_FilterDescription_AllGames": "Vis alle spil i dit bibliotek, inklusive spil, der ikke kører godt på Steam Machine.",
+	"FrameVerified_FilterDescription_Verified": "Vis kun spil, som fungerer uden videre med Steam Frame.",
+	"FrameVerified_FilterDescription_Verified_Playable": "Vis alle bekræftede spil på Frame samt spil, som er spilbare, men som kan kræve ekstra arbejde at interagere med eller konfigurere.",
+	"FrameVerified_FilterDescription_Verified_Playable_Unknown": "Vis alle bekræftede og spilbare spil samt spil, som endnu ikke er blevet testet for kompatibilitet med Steam Frame.",
+	"FrameVerified_FilterDescription_AllGames": "Vis alle spil i dit bibliotek, inklusive spil, der ikke kører godt på Steam Frame."
+}`);
+      },
+    },
+  ]);
+})();

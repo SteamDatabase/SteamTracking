@@ -123,6 +123,8 @@ message CMsgRemoteClientDownloadsManagement {
 	optional bool enable_all_downloads = 3;
 	optional uint32 remove_from_download_list_app_id = 4;
 	optional bool suspend_download_throttling = 5;
+	optional uint32 uninstalling_app_id = 6;
+	optional uint32 installing_app_id = 7;
 }
 
 message CMsgRemoteClientUpdateDownloadsController {
@@ -171,6 +173,14 @@ message CMsgRemoteClientAppUpdateInfoComplete {
 message CMsgRemoteClientDownloadingAppID {
 	optional uint32 downloading_app_id = 1;
 	optional .AppUpdateInfo update_info = 2;
+}
+
+message CMsgRemoteClientInstallApp {
+	optional uint32 app_id = 1;
+}
+
+message CMsgRemoteClientInstallAppResponse {
+	optional int32 e_launch_result = 1 [default = 2];
 }
 
 message CMsgRemoteClientStartStream {

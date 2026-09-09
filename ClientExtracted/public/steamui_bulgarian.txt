@@ -3686,7 +3686,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "steam_library_unknown_owner" "Други игри"
 "steam_library_filter_mygames" "Моите игри"
 "steam_library_filter_screenshots"	"Снимки"
-"steam_library_filter_uncategorized"	"Без категория"
+"steam_library_filter_uncategorized"	"Некатегоризирани"
 "steam_library_filter_hidden"	"Скрити"
 "steam_library_filter_site" "От %site%"
 

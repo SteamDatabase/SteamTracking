@@ -1,0 +1,34 @@
+"use strict";
+(() => {
+  (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
+    [548],
+    {
+      chunkid: (module) => {
+        module.exports = JSON.parse(`{
+	"language": "norwegian",
+	"TrailerPlayer_Settings_Tooltip": "Innstillinger",
+	"TrailerPlayer_Captions_Tooltip": "Teksting",
+	"TrailerPlayer_Play_Tooltip": "Spill av",
+	"TrailerPlayer_Pause_Tooltip": "Pause",
+	"TrailerPlayer_Mute_Tooltip": "Demp",
+	"TrailerPlayer_Unmute_Tooltip": "Fjern demping",
+	"TrailerPlayer_FullScreen_Tooltip": "Fullskjerm",
+	"TrailerPlayer_ExitFullScreen_Tooltip": "Avslutt fullskjerm",
+	"TrailerPlayer_EnterTheater_Tooltip": "Bruk kinomodus",
+	"TrailerPlayer_ExitTheater_Tooltip": "Avslutt kinomodus",
+	"TrailerPlayer_Quality_Auto": "Automatisk",
+	"TrailerPlayer_Error_Playback": "Det oppstod en feil under avspilling av videoen",
+	"TrailerPlayer_Error_UnsupportedCodec": "Videoformatet støttes ikke på denne enheten",
+	"StoreTrailer_AutoPlayVideos": "Spill av videoer automatisk",
+	"StoreTrailer_Title_Category_Unknown": "Trailer",
+	"StoreTrailer_Title_Category_Gameplay": "Spilling",
+	"StoreTrailer_Title_Category_Teaser": "Sniktitt",
+	"StoreTrailer_Title_Category_Cinematic": "Generell/filmatisk",
+	"StoreTrailer_Title_Category_Update": "Oppdatering/utvidelse/sesong",
+	"StoreTrailer_Title_Category_Accolades": "Utmerkelser",
+	"StoreTrailer_Title_Category_Interview": "Intervju/utviklerlogg"
+}`);
+      },
+    },
+  ]);
+})();

@@ -174,7 +174,7 @@ message CFamilyGroups_GetSharedLibraryApps_Response_SharedApp {
 	optional string sort_as = 7;
 	optional string capsule_filename = 8;
 	optional string img_icon_hash = 9;
-	optional int32 exclude_reason = 10 [default = 0, (.description) = "enum"];
+	optional int32 exclude_reason = 10 [default = Identifier, (.description) = "enum"];
 	optional uint32 rt_time_acquired = 11;
 	optional uint32 rt_last_played = 12;
 	optional uint32 rt_playtime = 13;

@@ -89,7 +89,7 @@
 "Steam_ErrorPasswordsDontMatch" "Las contraseñas introducidas no coinciden.\nIntroduce la misma contraseña en cada campo."
 "Steam_ErrorCantStartGame" "Este juego no está disponible actualmente.\nPor favor, inténtalo de nuevo en otro momento."
 "Steam_ErrorCantStartGameDetailed" "No se ha podido iniciar el juego (%error%)."
-"Steam_ErrorCantRunBecauseRequires64bitOS"	"No se ha podido iniciar el juego porque estás usando una versión de Windows de 32 bits y se requiere una versión de 64 bits.\n\nSi el juego tiene una opción de ejecución de 32 bits, selecciónala, si no, necesitarás un equipo con una versión de Windows de 64 bits.\nSi no tienes dicho equipo disponible haz clic abajo para saber cómo solicitar un rembolso.\n"
+"Steam_ErrorCantRunBecauseRequires64bitOS"	"No se ha podido iniciar el juego porque estás usando una versión de Windows de 32 bits y se requiere una versión de 64 bits.\n\nSi el juego tiene una opción de ejecución de 32 bits, selecciónala, si no, necesitarás un equipo con una versión de Windows de 64 bits.\nSi no tienes dicho equipo disponible, haz clic abajo para saber cómo solicitar un reembolso.\n"
 "Steam_ErrorCantStartGameDependency" "No se ha podido iniciar el juego con contenido compartido. Por favor, actualiza estos juegos primero:\n\n %detail%"
 "Steam_ErrorUsernameTooShort" "Debes introducir un nombre de 3 caracteres como mínimo."
 "Steam_ErrorPasswordTooShort2" "Tu contraseña debe contener al menos 8 caracteres."
@@ -111,9 +111,9 @@
 
 "Steam_ForgottenPassword_Title" "Recuperar información de cuenta - Steam"
 "Steam_ForgottenPassword_VerifyIdentity" "Antes de poder cambiar tu contraseña, debemos comprobar tu identidad. Introduce el nombre de la cuenta."
-"Steam_ForgottenPassword_Incorrect" "No se ha podido cambiar tu contraseña.\nO has introducido mal el código de validación,\no tu nueva contraseña no es válida.\n\nPulsa 'Atrás' y vuelve a intentarlo. \n"
-"Steam_ForgottenPassword_Success" "Tu contraseña ha cambiado.\n\nHaz clic en 'Finalizar' para volver a la pantalla de conexión."
-"Steam_ForgottenPassword_SamePassword" "La nueva contraseña coincide con la contraseña actual. Pulsa 'Retroceder' para escoger otra contraseña o 'Cancelar' para iniciar sesión con la contraseña actual\n"
+"Steam_ForgottenPassword_Incorrect" "No se ha podido cambiar tu contraseña.\nO has introducido mal el código de validación,\no tu nueva contraseña no es válida.\n\nPulsa «Atrás» y vuelve a intentarlo. \n"
+"Steam_ForgottenPassword_Success" "Tu contraseña ha cambiado.\n\nHaz clic en «Finalizar» para volver a la pantalla de conexión."
+"Steam_ForgottenPassword_SamePassword" "La nueva contraseña coincide con la contraseña actual. Pulsa «Atrás» para escoger otra contraseña o «Cancelar» para iniciar sesión con la contraseña actual\n"
 "Steam_ForgottenPassword_EnterAuthCodeDescription" "Por favor, introduce el código de autenticación de Steam Guard actual de la aplicación Steam Mobile de tu teléfono."
 "Steam_ForgottenPassword_EnterAuthCode" "Código de Steam Guard"
 "Steam_ForgottenPassword_EnterSms" "Código por SMS"
@@ -144,7 +144,7 @@
 "SteamUI_CreateAccount_CopyAndPaste"	"Copia y pega este código en el cuadro que aparece a continuación."
 "SteamUI_CreateAccount_Response"	"En unos minutos, recibirás un correo electrónico\nde respuesta de Steam con el código de validación."
 "SteamUI_CreateAccount_SentTo"	"Hemos enviado un correo electrónico de confirmación a:"
-"SteamUI_CreateAccount_EnterCodeAgain"	"Haz clic en 'Atrás' para introducir el código de \nnuevo o para escribir una dirección de correo electrónico distinta."
+"SteamUI_CreateAccount_EnterCodeAgain"	"Haz clic en «Atrás» para introducir el código de \nnuevo o para escribir una dirección de correo electrónico distinta."
 "SteamUI_CreateAccount_DoesNotMatch"	"Este código no concuerda con el que nosotros tenemos en nuestro registro.\nComprueba el correo electrónico y asegúrate\nde que has escrito el código correctamente.\nRecibiste el código en un mensaje con el asunto\n\"Steam account - Please verify your email address\".\nEl código contiene 8 caracteres."
 
 "SteamUI_SteamProgress_Title"	"Steam - Procesando"
@@ -376,9 +376,9 @@
 "Steam_RunGame_Title_Error"			"Steam - Error"
 "Steam_RunGame_AnotherGameIsBeingRan"	"No se puede ejecutar el juego. Estás ejecutando otro juego; espera a que\neste proceso se complete."
 "Steam_RunGame_Title_ConvertingToSteam3Content"		"Sistema de contenido de Steam"
-"Steam_RunGame_ConvertingToSteam3Content"			"Este juego está siendo convertido al nuevo sistema de contenido de Steam"
+"Steam_RunGame_ConvertingToSteam3Content"			"Este juego se está convirtiendo al nuevo sistema de contenido de Steam"
 
-"Steam_PurchaseProductIntroTitle"		"Steam - Comprar %subscription%"
+"Steam_PurchaseProductIntroTitle"		"Steam - Comprar «%subscription%»"
 "Steam_ScanCDKey_NoRetailProduct"		"Tu clave de producto válida te da derecho a\nsuscribirte a los siguientes juegos."
 "Steam_ScanCDKey_RetailProductFound"	"Se ha encontrado una versión previa de \n%s1 instalada en el equipo. Tu clave de producto te da derecho a \nsuscribirte a los siguientes juegos."
 "Steam_ScanCDKey_SpaceRequired"		"Espacio requerido en disco:"
@@ -408,8 +408,8 @@
 "Steam_PayPalWaiting"				"Tu navegador ha sido redirigido al sitio web de %provider%. Inicia sesión o crea una cuenta en ese sitio web para revisar los detalles de la compra y autorizar la transacción."
 "Steam_PayPalNotAcceptedInGermany"	"PayPal no se acepta actualmente en Alemania. Selecciona otro método de pago."
 
-"Steam_CancelPurchase_Title"			"Compra: %subscription%"
-"Steam_CancelPurchase_Info"			"La compra no se ha completado. Si cancelas la compra ahora, no tendrás acceso a %subscription% y no recibirás cargo alguno.\n\n¿Seguro que deseas cancelar tu compra?"
+"Steam_CancelPurchase_Title"			"Compra: «%subscription%»"
+"Steam_CancelPurchase_Info"			"La compra no se ha completado. Si cancelas la compra ahora, no tendrás acceso a «%subscription%» ni recibirás cargo alguno.\n\n¿Seguro que quieres cancelar tu compra?"
 "Steam_CancelPurchase_ContinueButton"	"Reanudar compra"
 "Steam_CancelPurchase_CancelButton"	"Cancelar compra"
 
@@ -505,7 +505,7 @@
 "Steam_ReAddToMyGames_Info"			"%s1 necesitará %s2 MB en disco.\nSteam descargará ahora el contenido o\nconvertirá una instalación existente del juego."
 
 "Steam_ConversionNotEnoughDiskSpace_Title"	"Steam - No hay suficiente espacio en disco"
-"Steam_ConversionNotEnoughDiskSpace_Info"	"No cuentas con espacio en disco suficiente para instalar los juegos seleccionados.\nLibera espacio en disco, o pulsa 'Volver' y borra algunos elementos de la selección."
+"Steam_ConversionNotEnoughDiskSpace_Info"	"No cuentas con espacio en disco suficiente para instalar los juegos seleccionados.\nLibera espacio en disco, o haz clic en «Atrás» y borra algunos elementos de la selección."
 "Steam_ConversionNotEnoughDiskSpaceForConversion_Info"	"No hay suficiente espacio disponible en el disco para convertir los juegos seleccionados a Steam.\nLibera %s1 MB de espacio en el disco e inténtalo de nuevo."
 "Steam_Interface"				"Interfaz"
 "Steam_EnableGPUWebViews_Option"		"Activar el renderizado acelerado por GPU al visitar páginas web (requiere reiniciar)"
@@ -543,7 +543,7 @@
 "Steam_ChangePasswordNewPassword"		"Introduce una nueva contraseña"
 "Steam_ChangePasswordConfirmNewPassword"	"Vuelve a introducir tu contraseña nueva"
 "Steam_ChangePasswordMismatchedNewPasswords"	"Las dos contraseñas introducidas no coinciden. Vuelve a introducir la contraseña que quieras."
-"Steam_ChangePasswordPasswordNotNew"	"La contraseña actual es la misma que la nueva que acabas de introducir.\nVuelve a introducir la contraseña que quieras."
+"Steam_ChangePasswordPasswordNotNew"	"La nueva contraseña coincide con la actual.\nVuelve a introducir la contraseña que quieras."
 "Steam_ChangePasswordFailed"			"No se ha podido cambiar la contraseña.\nPor favor, comprueba que has introducido tu contraseña original correctamente."
 "Steam_ChangePasswordFailedTwoFactorMismatch"	"No se ha podido cambiar la contraseña.\nPor favor, comprueba que has introducido tu código de autenticación de Steam Guard correctamente."
 "Steam_ChangePasswordFailedSmsFailed"			"No se ha podido cambiar la contraseña.\nPor favor, comprueba que has introducido el código del SMS correctamente."
@@ -579,14 +579,14 @@
 "Steam_PurchaseProgress_Title"		"Steam - Procesando"
 "Steam_PurchaseProgress_Info"		"Activando clave en Steam..."
 
-"Steam_PurchaseFailedBadCDKey"		"Steam no ha podido registrar la clave de producto.\n\nEs posible que la clave del producto ya esté en nuestra base de datos o que no sea correcta. Comprueba que no has escrito mal la clave. I, L y 1 pueden parecer similares. Lo mismo sucede con V e Y o 0 y O."
+"Steam_PurchaseFailedBadCDKey"		"Steam no ha podido registrar la clave de producto.\n\nEs posible que la clave ya esté en nuestra base de datos o que no sea correcta. Comprueba que no has escrito mal la clave. I, L y 1 pueden parecer similares. Lo mismo sucede con V e Y o 0 y O."
 
 "Steam_PleaseVisitSupportPage"		"Para obtener soporte técnico o ayuda, visita:"
 "Steam_SteamPoweredURL"			"http://www.steampowered.com"
-"Steam_PurchaseCDKeySuccess"		"Enhorabuena.  Tu copia de %subscription% se ha activado con éxito en la cuenta %account%.\n\nPara poder jugar a %game%, tendrás que iniciar sesión en Steam con esta misma cuenta."
+"Steam_PurchaseCDKeySuccess"		"Enhorabuena.  Tu copia de «%subscription%» se ha activado con éxito en la cuenta %account%.\n\nPara poder jugar a %game%, tendrás que iniciar sesión en Steam con esta misma cuenta."
 "Steam_PurchaseAccount"			"%account%"
 
-"Steam_PurchaseCDKeyIncomplete"		"Tu suscripción no se ha podido activar completamente debido al alto número de solicitudes de %subscription% existentes. Podrás jugar a %game% mientras completamos la operación."
+"Steam_PurchaseCDKeyIncomplete"		"Tu suscripción no se ha podido activar completamente debido al alto número de solicitudes de «%subscription%» existentes. Podrás jugar a %game% mientras completamos la operación."
 
 "Steam_PreLoadingDescription"	"Has elegido presolicitar %game%. Steam gestiona las reservas a través de tres sencillos pasos:"
 "Steam_PreLoading1"				"1. Precarga el contenido de juego."
@@ -608,7 +608,7 @@
 "Steam_PreloadProgressNotesStart"	"%game% está preparado para precargarse en tu ordenador.\n\nSi presolicitas el juego ahora, se desbloqueará y podrás empezar a jugar el mismo día de su lanzamiento."
 "Steam_PreloadProgressNotesStartPayed"	"%game% está preparado para precargarse en tu ordenador."
 
-"Steam_PreloadDescription"		"Aviso: Acabas de presolicitar %subscription%. Se desbloqueará y podrás empezar a jugar el mismo día de su lanzamiento."
+"Steam_PreloadDescription"		"Aviso: Acabas de presolicitar «%subscription%». Se desbloqueará y podrás empezar a jugar el mismo día de su lanzamiento."
 
 "Steam_PreloadComplete_Title"	"Precarga de %game% completada"
 "Steam_PreloadComplete"			"Precarga completada"
@@ -620,8 +620,8 @@
 "Steam_PreloadBuyNow"			"Comprar este juego ahora..."
 
 "Steam_PreloadAndPurchaseComplete_Title"	"Reserva de %game% completada"
-"Steam_PreorderComplete"		"Se ha completado la reserva de %subscription%. En el mismo momento que el juego se ponga a la venta oficialmente, podrás empezar a jugar.\n\n¡Gracias por el pedido!"
-"Steam_PreloadCompletePlay"		"En el mismo momento que el juego se ponga a la venta oficialmente, podrás empezar a jugar."
+"Steam_PreorderComplete"		"Se ha completado la reserva de «%subscription%». En el mismo momento en que el juego se ponga a la venta oficialmente, podrás empezar a jugar.\n\n¡Gracias por el pedido!"
+"Steam_PreloadCompletePlay"		"En el mismo momento en que el juego se ponga a la venta oficialmente, podrás empezar a jugar."
 
 "Steam_Monitor_AppAcquiredPercentage"	"Cantidad adquirida"
 
@@ -641,7 +641,7 @@
 "Steam_ChangeContactEmailWizard_Changed" "Has modificado la dirección de correo electrónico de contacto."
 "Steam_ChangeContactEmailWizard_Contact" "Esta nueva dirección se utilizará para confirmar futuras compras y ayudarte a gestionar el acceso a tu cuenta de Steam."
 "Steam_ChangeContactEmailWizard_NotChangedYet" "Contactando con los servidores de Steam para enviar un código de confirmación a la nueva dirección de correo electrónico que has propuesto..."
-"Steam_ChangeContactEmailWizard_WaitingForVerify" "El cambio se completará una vez nos confirmes la recepción de ese correo electrónico haciendo clic en el enlace incluido."
+"Steam_ChangeContactEmailWizard_WaitingForVerify" "El cambio se completará una vez que nos confirmes la recepción de ese correo electrónico haciendo clic en el enlace incluido."
 "Steam_WeMaySMSYou" "Steam puede confirmar este cambio con un mensaje de texto enviado por SMS a tu número de teléfono."
 "Steam_ChangeEmail_MissingSMSCode" "Se ha enviado un mensaje por SMS al teléfono que se encuentra asociado a tu cuenta. Necesitarás introducir el código de cambio de email que encontrarás en dicho mensaje."
 
@@ -674,7 +674,7 @@
 "Steam_RequestingEmailVerificationFailed" "Error en la verificación de la dirección de correo electrónico. Vuelve a intentarlo más tarde."
 "SteamUI_CreateAccount_TheName" "El nombre"
 "SteamUI_CreateAccount_AlreadyTaken" "ya ha sido registrado por otro usuario de Steam."
-"SteamUI_CreateAccount_DifferentNames" "Haz clic en 'Atrás' para probar con otro nombre\no selecciona uno de los que te sugerimos y haz clic en 'Siguiente'."
+"SteamUI_CreateAccount_DifferentNames" "Haz clic en «Atrás» para probar con otro nombre\no selecciona uno de los que te sugerimos y haz clic en 'Siguiente'."
 "SteamUI_CreateAccount_SuggestedNames" "Nombres de cuenta sugeridos:"
 "SteamUI_CreateAccount_Names" "Nombres"
 "Steam_ForgottenPassword_MarketRestriction" "Aviso: Si restableces tu contraseña, no podrás intercambiar o utilizar el mercado de la comunidad temporalmente."
@@ -714,10 +714,10 @@
 
 "Steam_Logout_Exit" 	"Salir y cerrar sesión"
 "Steam_Logout_DontShowAgain" "No volver a mostrarlo"
-"Steam_Logout_ExitOff" "Al salir de Steam de esta manera, podrás utilizar el\n'modo desconectado' la próxima vez que inicies Steam."
-"Steam_Logout_PersonalInfo" "Parte de tu información personal se guardará\nen este ordenador. Si estás utilizando un\nordenador público, es posible que prefieras utiliza la opción\nmás segura, 'Salir y cerrar sesión'."
-"Steam_Logout_Secure" "'Salir y cerrar sesión' es el método más seguro de abandonar\nSteam (recomendado en ordenadores de uso público).\nNo podrás volver a utilizar el\n'modo desconectado' hasta que vuelvas a iniciar sesión en Steam."
-"Steam_Logout_AllowOffline" "Para usar el 'modo desconectado' la próxima vez que\ninicies Steam, haz clic en 'Cancelar' y selecciona\n'Salir' en el menú de Steam."
+"Steam_Logout_ExitOff" "Al salir de Steam de esta manera, podrás utilizar el\n«modo desconectado» la próxima vez que inicies Steam."
+"Steam_Logout_PersonalInfo" "Parte de tu información personal se guardará\nen este ordenador. Si estás utilizando un\nordenador público, es posible que prefieras utilizar la opción\nmás segura: «Salir y cerrar sesión»."
+"Steam_Logout_Secure" "'Salir y cerrar sesión' es el método más seguro de abandonar\nSteam (recomendado en ordenadores de uso público).\nNo podrás volver a utilizar el\n«modo desconectado» hasta que vuelvas a iniciar sesión en Steam."
+"Steam_Logout_AllowOffline" "Para usar el «modo desconectado» la próxima vez que\ninicies Steam, haz clic en «Cancelar» y selecciona\n«Salir» en el menú de Steam."
 "Steam_Logout_Title" "Salir"
 "Steam_Logout_TitleLogout" "Salir y cerrar sesión"
 "Steam_OptionsForAdvancedUsersOnly"		"Estos parámetros son solo para usuarios avanzados."
@@ -726,10 +726,10 @@
 
 "SteamUI_OfflineMode_CouldNotConnect" "No ha sido posible conectar a Steam."
 "SteamUI_OfflineMode_AppearOffline" "Parece que en este momento no estás conectado a Internet o que tu conexión no está configurada correctamente para Steam."
-"SteamUI_OfflineMode_SteamOffline" "Steam no está disponible en este momento.\n\n\nPor favor, inténtalo de nuevo más tarde haciendo clic en 'Volver a intentarlo' o inicia Steam en 'modo desconectado'.\n"
+"SteamUI_OfflineMode_SteamOffline" "Steam no está disponible en este momento.\n\n\nPor favor, inténtalo de nuevo más tarde haciendo clic en «Volver a intentarlo» o inicia Steam en «modo desconectado».\n"
 "SteamUI_OfflineMode_ChosenOffline" "Steam está configurado actualmente en modo desconectado. Muchas funciones, como Amigos y el explorador de servidores, no estarán disponibles en dicho modo."
-"SteamUI_OfflineMode_Choose" "Comprueba tu conexión y haz clic en 'Volver a intentarlo' o inicia Steam en el 'modo desconectado'."
-"SteamUI_OfflineMode_ChooseConnectionOnly" "Por favor, comprueba tu conexión de red y haz clic en 'Volver a intentarlo'."
+"SteamUI_OfflineMode_Choose" "Comprueba tu conexión y haz clic en «Volver a intentarlo» o inicia Steam en el «modo desconectado»."
+"SteamUI_OfflineMode_ChooseConnectionOnly" "Por favor, comprueba tu conexión de red y haz clic en «Volver a intentarlo»."
 "SteamUI_OfflineMode_GoOnlineButton" "Pasar a modo conectado"
 "SteamUI_OfflineMode_Retry" "Volver a intentarlo"
 "SteamUI_OfflineMode_StartInOffline" "Modo desconectado"
@@ -845,7 +845,7 @@
 
 
 
-"SteamUI_Modem_33_6k"		"Módem - 33.6 kbps"
+"SteamUI_Modem_33_6k"		"Módem - 33,6 kbps"
 "SteamUI_ISDN_112k"		"RDSI - 112 kbps"
 "SteamUI_T1"			"T1 superior a 1 Mbps"
 "SteamUI_LAN"			"LAN superior a 10 Mbps"
@@ -1161,7 +1161,7 @@
 "SteamUI_CCWarning_Duplicate"	"Antes de que envíes esta solicitud de compra:\n\nParece que esta solicitud de compra contiene la misma información (o prácticamente la misma) que una solicitud enviada anteriormente. Solamente debes repetir la solicitud si estás absolutamente seguro de que el hecho de que no se aceptara la información de tu tarjeta de crédito ha sido un error.\n\nIMPORTANTE: Si la compañía de tu tarjeta de crédito no acepta la compra, es posible que los fondos de tu cuenta queden bloqueados temporalmente."
 "SteamUI_CCWarning" "Steam - Advertencia"
 
-"SteamUI_ForgottenPasswordResetType" "Para recuperar los datos de conexión correspondiente a tu cuenta de Steam, necesitamos primero el nombre de la misma."
+"SteamUI_ForgottenPasswordResetType" "Para recuperar la información de inicio de sesión correspondiente a tu cuenta de Steam, necesitamos primero el nombre de la misma."
 "SteamUI_ForgottenPasswordResetType2" "¿Qué necesitas recuperar? Aquí puedes restablecer tu contraseña o, si has perdido el acceso a tu aplicación de autenticación de Steam Guard, puedes eliminarla de tu cuenta."
 "SteamUI_ForgottenPasswordGetAccountName" "No sé el nombre de la cuenta."
 "SteamUI_ForgottenPasswordResetPassword" "Sé el nombre de la cuenta."
@@ -1224,68 +1224,68 @@
 "Steam_SubscriptionCancelled_CDKey_MustLoginPS3" "Debes jugar a «%gamename%» en la PlayStation®3 antes de poder registrar la clave de producto que has introducido.\n\nSigue estos pasos:\n\n- Inicia «%gamename%» en tu PlayStation®3.\n\n- Vincula tu cuenta de Steam a tu cuenta de PlayStation®3 Network.\n\n- Conéctate a Steam mientras juegas a «%gamename%» en la PlayStation®3.\n\n- Registra esta clave de producto en Steam."
 
 "Steam_SubscriptionSuccess_Headline" "Gracias, tu transacción se ha completado."
-"Steam_SubscriptionSuccess$purchasetype=regular" "Se ha completado correctamente tu suscripción a %subscription%. Tu suscripción está registrada en esta cuenta de Steam: %accountName%. A partir de ahora, deberás conectarte a esta cuenta para poder acceder a tus juegos. ¡Gracias por el pedido!"
-"Steam_SubscriptionSuccess$purchasetype=gift" "Tu regalo de %subscription% se ha enviado a %giftee%. ¡Gracias por el pedido!"
-"Steam_SubscriptionSuccess$purchasetype=unknown" "La compra de %subscription% se ha completado con éxito. ¡Gracias por el pedido!"
+"Steam_SubscriptionSuccess$purchasetype=regular" "Se ha completado correctamente tu suscripción a «%subscription%». Tu suscripción está registrada en esta cuenta de Steam: %accountName%. A partir de ahora, deberás conectarte a esta cuenta para poder acceder a tus juegos. ¡Gracias por el pedido!"
+"Steam_SubscriptionSuccess$purchasetype=gift" "Tu regalo de «%subscription%» se ha enviado a %giftee%. ¡Gracias por el pedido!"
+"Steam_SubscriptionSuccess$purchasetype=unknown" "La compra de «%subscription%» se ha completado con éxito. ¡Gracias por el pedido!"
 
 "Steam_SubscriptionCancelled_PaymentCardDeclined_Headline" "Tarjeta de crédito rechazada"
-"Steam_SubscriptionCancelled_PaymentCardDeclined" "No se ha completado la suscripción a %subscription%. La compañía de crédito ha rechazado la información de tu tarjeta de crédito.\n\nTen en cuenta que, en algunos casos, la compañía de crédito puede bloquear fondos en tu cuenta, pero esto no significa que recibirás cargo alguno. Tras revisar la información que aparece a continuación, si crees que ha habido algún error, intenta realizar la compra de nuevo."
+"Steam_SubscriptionCancelled_PaymentCardDeclined" "No se ha completado la suscripción a «%subscription%». La compañía de crédito ha rechazado la información de tu tarjeta de crédito.\n\nTen en cuenta que, en algunos casos, la compañía de crédito puede bloquear fondos en tu cuenta, pero esto no significa que vayas a recibir cargo alguno. Tras revisar la información que aparece a continuación, si crees que ha habido algún error, intenta realizar la compra de nuevo."
 
 "Steam_SubscriptionSuccess_Preorder_Headline" "Solicitud completada; aún no se ha cargado el importe en la tarjeta."
-"Steam_SubscriptionSuccess_Preorder" "La reserva de %subscription% se ha completado con éxito.\nNo se cargará el importe hasta el lanzamiento oficial del juego. Recibirás el recibo por el importe total cuando se procese la tarjeta. ¡Gracias por el pedido!"
+"Steam_SubscriptionSuccess_Preorder" "La reserva de «%subscription%» se ha completado con éxito.\nNo se cargará el importe hasta el lanzamiento oficial del juego. Recibirás el recibo por el importe total cuando se procese la tarjeta. ¡Gracias por el pedido!"
 
 "Steam_Subscription_Preorder_CcardSuccess_Headline" "Se ha procesado tu reserva."
-"Steam_Subscription_Preorder_CcardSuccess" "Recientemente realizaste una reserva de %subscription%. El juego ya está oficialmente a la venta, de modo que se ha procesado la transacción y se ha cargado el importe en tu tarjeta de crédito. ¡Gracias por el pedido!"
+"Steam_Subscription_Preorder_CcardSuccess" "Recientemente realizaste una reserva de «%subscription%». El juego ya está oficialmente a la venta, de modo que se ha procesado la transacción y se ha cargado el importe en tu tarjeta de crédito. ¡Gracias por el pedido!"
 
 "Steam_Subscription_Preorder_CcardDeclined_Headline" "Reserva; se ha rechazado la tarjeta de crédito."
-"Steam_Subscription_Preorder_CcardDeclined" "Recientemente realizaste una reserva de %subscription%. El juego ya está oficialmente a la venta, de modo que Steam ha procesado la transacción con tu tarjeta de crédito.\n\nSe ha rechazado tu tarjeta y, por consiguiente, no se ha llevado a cabo la transacción. Tras revisar la información que aparece a continuación, si crees que ha habido algún error, intenta realizar la suscripción de nuevo."
+"Steam_Subscription_Preorder_CcardDeclined" "Recientemente realizaste una reserva de «%subscription%». El juego ya está oficialmente a la venta, de modo que Steam ha procesado la transacción con tu tarjeta de crédito.\n\nSe ha rechazado tu tarjeta y, por consiguiente, no se ha llevado a cabo la transacción. Tras revisar la información que aparece a continuación, si crees que ha habido algún error, intenta realizar la suscripción de nuevo."
 
 "Steam_Subscription_Preorder_PreProcess_Headline" "Se ha procesado tu reserva"
-"Steam_Subscription_Preorder_PreProcess" "La reserva de %subscription% se ha completado. El lanzamiento oficial del juego tendrá lugar en breve. Se ha procesado tu pago.\n\nRecibirás una notificación tan pronto como el juego esté disponible. ¡Gracias por el pedido!"
+"Steam_Subscription_Preorder_PreProcess" "La reserva de «%subscription%» se ha completado. El lanzamiento oficial del juego tendrá lugar en breve. Se ha procesado tu pago.\n\nRecibirás una notificación tan pronto como el juego esté disponible. ¡Gracias por el pedido!"
 
 "Steam_Subscription_Preorder_PreProcess_PayPal_Headline" "Se ha procesado tu reserva"
-"Steam_Subscription_Preorder_PreProcess_PayPal" "La reserva de %subscription% se ha completado. El lanzamiento oficial del juego tendrá lugar en breve. El importe del juego se ha cargado en tu cuenta de %provider%.\n\nRecibirás una notificación tan pronto como el juego esté disponible. ¡Gracias por el pedido!"
+"Steam_Subscription_Preorder_PreProcess_PayPal" "La reserva de «%subscription%» se ha completado. El lanzamiento oficial del juego tendrá lugar en breve. El importe del juego se ha cargado en tu cuenta de %provider%.\n\nRecibirás una notificación tan pronto como el juego esté disponible. ¡Gracias por el pedido!"
 
 "Steam_Subscription_Preorder_Timeout_Headline" "Reserva pendiente"
-"Steam_Subscription_Preorder_Timeout" "No se ha completado la reserva de %subscription% porque Steam está muy ocupado en estos momentos y no puede procesar la transacción.\n\nNos pondremos en contacto contigo con los resultados de la transacción tan pronto como nos sea posible procesarla."
+"Steam_Subscription_Preorder_Timeout" "No se ha completado la reserva de «%subscription%» porque Steam está muy ocupado en estos momentos y no puede procesar la transacción.\n\nNos pondremos en contacto contigo con los resultados de la transacción tan pronto como nos sea posible procesarla."
 
 "Steam_SubscriptionCancelled_Cancelled_Headline" "Suscripción cancelada"
-"Steam_SubscriptionCancelled_Cancelled"	"Se ha cancelado tu suscripción a %subscription%. La cancelación se ha producido porque el propietario de la cuenta de Steam la ha solicitado o porque Valve ha detectado un incumplimiento del Acuerdo de Suscriptor a Steam."
+"Steam_SubscriptionCancelled_Cancelled"	"Se ha cancelado tu suscripción a «%subscription%». La cancelación se ha producido porque el propietario de la cuenta de Steam la ha solicitado o porque Valve ha detectado un incumplimiento del Acuerdo de Suscriptor a Steam."
 
 "Steam_SubscriptionCancelled_ServerFailed_Headline" "El servidor de Steam está ocupado."
-"Steam_SubscriptionCancelled_ServerFailed" "No se ha completado la suscripción a %subscription%. Los servidores de Steam están muy ocupados en estos momentos y no puede procesarse tu solicitud.  \n\nTe pedimos disculpas por las molestias. Vuelve a intentarlo dentro de unas horas."
+"Steam_SubscriptionCancelled_ServerFailed" "No se ha completado la suscripción a «%subscription%». Los servidores de Steam están muy ocupados en estos momentos y no puede procesarse tu solicitud.  \n\nTe pedimos disculpas por las molestias. Vuelve a intentarlo dentro de unas horas."
 
 "Steam_Subscription_ContactSupport_Headline" "Error en la compra"
-"Steam_Subscription_ContactSupport" "Se ha producido un error inesperado. No se ha completado la suscripción a %subscription%.\n\nPor favor, ponte en contacto con el Soporte de Steam a través del siguiente enlace."
+"Steam_Subscription_ContactSupport" "Se ha producido un error inesperado. No se ha completado la suscripción a «%subscription%».\n\nPor favor, ponte en contacto con el Soporte de Steam a través del siguiente enlace."
 
 "Steam_SubscriptionFailure_Timeout_Headline" "Suscripción pendiente"
-"Steam_SubscriptionFailure_Timeout" "No se completado la suscripción a %subscription% porque Steam está muy ocupado en estos momentos y no puede procesar la transacción.  \n\nSin embargo, puedes jugar a %subscription% mientras esperas. Nos pondremos en contacto contigo con los resultados de la transacción tan pronto como nos sea posible procesarla."
+"Steam_SubscriptionFailure_Timeout" "No se ha completado la suscripción a «%subscription%» porque Steam está muy ocupado en estos momentos y no puede procesar la transacción.\n\nSin embargo, puedes jugar a ««%subscription%»» mientras esperas. Nos pondremos en contacto contigo con los resultados de la transacción tan pronto como nos sea posible procesarla."
 
 "Steam_Subscription_RestrictedCountry_Headline" "No disponible"
-"Steam_Subscription_RestrictedCountry" "Lo sentimos, pero no puedes adquirir %subscription% en este país. Se ha cancelado la compra."
+"Steam_Subscription_RestrictedCountry" "Lo sentimos, pero no puedes adquirir «%subscription%» en este país. Se ha cancelado la compra."
 
 "Steam_Subscription_Refunded_Headline" "Compra reembolsada"
-"Steam_Subscription_Refunded" "Se te ha reembolsado lo que pagaste por %subscription%. El crédito debería aparecer en tu cuenta en un par de días hábiles."
+"Steam_Subscription_Refunded" "Se te ha reembolsado lo que pagaste por «%subscription%». El crédito debería aparecer en tu cuenta en un par de días hábiles."
 
 "Steam_Subscription_HardwarePromo_Used_Headline" "Registro duplicado"
 "Steam_Subscription_HardwarePromo_Used" "Esta oferta ya se ha activado usando una cuenta de Steam distinta."
-"Steam_PurchaseError_HardwarePromoIneligible" "Este equipo no cumple los requisitos del sistema para la oferta de %subscription%."
+"Steam_PurchaseError_HardwarePromoIneligible" "Este equipo no cumple los requisitos del sistema para la oferta de «%subscription%»."
 "Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098&l=spanish/"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "Producto ya adquirido"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "Esta cuenta de Steam ya posee el producto o productos incluidos en\nesta oferta. Para acceder a ellos, visita tu biblioteca de productos."
 
 
-"Steam_PurchaseError_HardwarePromoNeedDirectX" "¡Perdón! Para verificar que cumples los requisitos de la oferta de %subscription% es necesario DirectX 9 o superior."
+"Steam_PurchaseError_HardwarePromoNeedDirectX" "¡Perdón! Para verificar que cumples los requisitos de la oferta de «%subscription%» es necesario DirectX 9 o superior."
 "Steam_HardwarePromoInstallDirextX_Link" "Página de descarga de Microsoft DirectX®"
 "Steam_HardwarePromoInstallDirextX_URL" "http://www.microsoft.com/windows/directx/"
 
 "Steam_SubscriptionSuccess_HardwarePromo_Headline" "Registro completado"
-"Steam_SubscriptionSuccess_HardwarePromo" "Has canjeado la oferta de %subscription% con éxito. Tu suscripción está registrada en esta cuenta de Steam: %accountName%. A partir de ahora, deberás conectarte a esta cuenta para poder acceder a tus juegos."
+"Steam_SubscriptionSuccess_HardwarePromo" "Has canjeado la oferta de «%subscription%» con éxito. Tu suscripción está registrada en esta cuenta de Steam: %accountName%. A partir de ahora, deberás conectarte a esta cuenta para poder acceder a tus juegos."
 "Steam_SubscriptionSuccess_HardwarePromo2" "Podrás acceder a los juegos incluidos en esta oferta desde cualquier ordenador, siempre que te conectes a la cuenta de Steam '%accountname%'."
 
 "Steam_PreorderCancelled_Headline" "Reserva cancelada"
-"Steam_PreorderCancelled" "Tal y como has pedido, se ha cancelado tu reserva a través de Steam para suscribirte a %subscription%. No recibirás cargo alguno."
+"Steam_PreorderCancelled" "Tal y como has pedido, se ha cancelado tu reserva a través de Steam para suscribirte a «%subscription%». No recibirás cargo alguno."
 
 "Steam_PleaseWait" "Espera, por favor"
 "Steam_Printing" "Imprimiendo..."
@@ -1293,7 +1293,7 @@
 "Steam_CyberCafe_FeatureLocked_Title" "Steam - Error"
 "Steam_CyberCafe_FeatureLocked" "Esta función está bloqueada actualmente.\nPara acceder, conéctate de nuevo a Steam con tu cuenta de cibercafé\ny asegúrate de que esté marcada la opción 'Recordar mi contraseña'."
 
-"Steam_RegisterCDKey_Info"	"Por favor, introduce la clave del producto que deseas añadir a tu biblioteca de Steam."
+"Steam_RegisterCDKey_Info"	"Introduce la clave del producto que deseas añadir a tu biblioteca de Steam."
 "Steam_RegisterCDKey_Example"	"Las claves tienen estos formatos:\n AAAAA-BBBBB-CCCCC\n AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n 237ABCDGHJLPRST 23"
 
 "Steam_Rejected_Cdkey_Recover_Feedback" "Se ha enviado un correo electrónico al propietario del código del producto que has introducido."
@@ -1321,12 +1321,12 @@
 "Steam_RedeemWalletVoucher"	"Canjear un código de la Cartera de Steam..."
 "Steam_Wallet_PendingBalance" "%amount% (%amount_delayed% pendiente)"
 
-"Steam_PurchaseError_SubscriptionAlreadyOwned"	"Ya tienes una %subscription%."
+"Steam_PurchaseError_SubscriptionAlreadyOwned"	"Ya tienes «%subscription%»."
 "Steam_UpdateNews_Title"	"Steam - Noticias"
 "Steam_SettingsNotification_Info"	"Quiero que se me notifiquen (mediante mensajería instantánea de Steam) las adiciones o cambios sobre:"
 "Steam_SettingsNotification_MyGames"	"Mis partidas"
 "Steam_SettingsNotification_UpcomingReleases"	"Lanzamientos futuros y recientes"
-"Steam_PurchaseError_HardwarePromoAlreadyOwned" "Ya has canjeado la oferta de %subscription% con esta cuenta de Steam."
+"Steam_PurchaseError_HardwarePromoAlreadyOwned" "Ya has canjeado la oferta de «%subscription%» con esta cuenta de Steam."
 
 "Steam_GamesDialog_RightClick_UpdateNews"	"Ver noticias"
 
@@ -1355,7 +1355,7 @@
 "Steam_App_LegacyKey_Denied_Text"  "Steam no ha podido verificar la propiedad del producto para poder solicitar una clave del mismo. Por favor, ponte en contacto con el equipo de Soporte de Steam."
 "Steam_App_LegacyKey_Denied_Borrowed_Text" "El contenido de %game%, o parte de él, solo está disponible mediante una conexión a un servicio de terceros, por ejemplo Uplay o Origin.\nEl propietario debe estar registrado con este servicio para acceder a dicho contenido."
 "Steam_App_LegacyKey_Pending_Text" "La solicitud de la clave de producto está pendiente de aprobación por parte del equipo de Soporte de Steam. Inténtalo de nuevo en unas horas."
-"Steam_App_LegacyKey_OutOfKeys_Text" "Steam tiene agotadas temporalmente la claves de «%game%».\n\nTe enviaremos una clave de producto cuando recibamos más claves del editor.\nVuelve más tarde o puedes solicitar un reembolso ahora."
+"Steam_App_LegacyKey_OutOfKeys_Text" "Steam tiene agotadas temporalmente las claves de «%game%».\n\nTe enviaremos una clave de producto cuando recibamos más claves del editor.\nVuelve más tarde o puedes solicitar un reembolso ahora."
 
 "Steam_App_Update_Failed_Title"	"Steam - Error"
 "Steam_App_Update_Failed_Text" "Se ha producido un error al actualizar %game% (%reason%)"
@@ -1448,7 +1448,7 @@
 "SteamUI_SuppressUnsupported"		"No volver a mostrar esta advertencia"
 
 "SteamUI_DriverUnknown_Title"		"Tarjeta de vídeo desconocida"
-"SteamUI_DriverUnknown_Info"		"Tu tarjeta de vídeo no aparece en nuestra base de datos.  Por tanto, quizá no puedas ejecutar el juego con la estabilidad o el rendimiento suficientes.  Te agradeceríamos que nos facilitaras toda la información referente a tu tarjeta y controlador de vídeo para que podamos incluirlos en nuestra base de datos.  Haz clic en el botón \"Cargar información\" y así sabremos qué tarjetas de vídeo nos falta incluir."
+"SteamUI_DriverUnknown_Info"		"Tu tarjeta de vídeo no aparece en nuestra base de datos.  Por tanto, quizá no puedas ejecutar el juego con la estabilidad o el rendimiento suficientes.  Te agradeceríamos que nos facilitaras toda la información referente a tu tarjeta y controlador de vídeo para que podamos incluirlos en nuestra base de datos.  Haz clic en el botón «Cargar información» y así sabremos qué tarjetas de vídeo nos faltan incluir."
 "SteamUI_UnknownUrlLabel"		"Ver la Política de Privacidad de Valve..."
 "SteamUI_UnknownUpload"			"Cargar información"
 "SteamUI_ContinueUnknown"		"Seguir de todos modos"
@@ -1532,18 +1532,18 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Start_Server_FSMount_Error_Title"	"Servidor dedicado - Error del sistema de archivos"
 "Start_Server_FSMount_Error" 		"Error al montar el sistema de archivos de Steam."
 
-"Steam_Subscription_Success_WithShipping$purchasetype=regular"	"Se ha completado correctamente tu suscripción a %subscription%.\n\nPuedes jugar a cualquiera de los juegos que ya están disponibles con solo hacer clic en ellos en tu biblioteca de productos de Steam. Recibirás también una confirmación por correo electrónico tan pronto se hayan enviado los artículos de tu pedido. ¡Gracias por tu pedido!"
-"Steam_Subscription_Success_WithShipping$purchasetype=gift"	"Tu regalo de %subscription% se ha enviado a %giftee%. Recibirás una confirmación por correo electrónico tan pronto se hayan enviado los artículos de tu pedido. ¡Gracias por el pedido!"
-"Steam_Subscription_Success_WithShipping$purchasetype=unknown"	"La compra de %subscription% se ha completado con éxito. Recibirás una confirmación por correo electrónico tan pronto se hayan enviado los artículos de tu pedido. ¡Gracias por el pedido!"
+"Steam_Subscription_Success_WithShipping$purchasetype=regular"	"Se ha completado correctamente tu suscripción a «%subscription%».\n\nPuedes jugar a cualquiera de los juegos que ya están disponibles con solo hacer clic en ellos en tu biblioteca de productos de Steam. Recibirás también una confirmación por correo electrónico tan pronto como se hayan enviado los artículos de tu pedido. ¡Gracias por tu pedido!"
+"Steam_Subscription_Success_WithShipping$purchasetype=gift"	"Tu regalo de «%subscription%» se ha enviado a %giftee%. Recibirás una confirmación por correo electrónico tan pronto como se hayan enviado los artículos de tu pedido. ¡Gracias por el pedido!"
+"Steam_Subscription_Success_WithShipping$purchasetype=unknown"	"La compra de «%subscription%» se ha completado con éxito. Recibirás una confirmación por correo electrónico tan pronto como se hayan enviado los artículos de tu pedido. ¡Gracias por el pedido!"
 "Steam_Subscription_Success_WithShipping_Headline"	"Gracias, tu transacción se ha completado."
 
 "Steam_SubscriptionFailure_Timeout_CantPlay_Headline"	"Suscripción pendiente"
-"Steam_SubscriptionFailure_Timeout_CantPlay"	"No se completado la suscripción a %subscription% porque los servidores de Steam no pueden procesar la transacción en este momento.\n\nNo podrás jugar a %subscription% mientras no se complete el proceso de suscripción. Te pedimos disculpas por este inconveniente. El equipo de Steam está trabajando para corregir el problema y te avisará tan pronto se haya completado la transacción."
+"Steam_SubscriptionFailure_Timeout_CantPlay"	"No se ha completado la suscripción a «%subscription%» porque los servidores de Steam no pueden procesar la transacción en este momento.\n\nNo podrás jugar a «%subscription%» mientras no se complete el proceso de suscripción. Te pedimos disculpas por este inconveniente. El equipo de Steam está trabajando para corregir el problema y te avisará tan pronto se haya completado la transacción."
 
 "Steam_CannotStartSecondPurchase"	"Hay una compra en curso, por lo que en estos momentos no puedes iniciar otra. Completa o cancela la compra en curso."
 
-"SteamUI_PleaseInstallRetailFiles_Title"	"Instala %subscription% antes de continuar."
-"SteamUI_PleaseInstallRetailFiles_Info"		"Es necesario instalar %subscription% antes de continuar.\nIntroduce el CD o DVD de %suscripción% en la unidad y selecciona 'instalar' en el menú de instalación automática."
+"SteamUI_PleaseInstallRetailFiles_Title"	"Instala «%subscription%» antes de continuar."
+"SteamUI_PleaseInstallRetailFiles_Info"		"Es necesario instalar «%subscription%» antes de continuar.\nIntroduce el CD o DVD de %suscripción% en la unidad y selecciona 'instalar' en el menú de instalación automática."
 
 "Steam_PhoneNumber"		"Número de teléfono"
 
@@ -1969,8 +1969,8 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "steam_monitor_peakusage"		"Pico de velocidad de descarga"
 "steam_monitor_totaldownloaded"		"N.º total de bytes descargados en esta sesión"
 
-"Steam_SubscriptionCancelled_PaymentCardDeclined_InsufficientFunds"		"No se ha completado la suscripción a %subscription%. La compañía de crédito ha rechazado tu tarjeta por no contar con suficientes fondos en la cuenta.\n\nTen en cuenta que, en algunos casos, la compañía de crédito puede bloquear fondos en tu cuenta, pero esto no significa que recibirás cargo alguno."
-"Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailure"				"No se ha completado la suscripción a %subscription%. La compañía de crédito ha rechazado tu tarjeta por no ser correcta la dirección introducida.\n\nTen en cuenta que, en algunos casos, la compañía de crédito puede bloquear fondos en tu cuenta, pero esto no significa que recibirás cargo alguno. Tras revisar la información que aparece a continuación, si crees que ha habido algún error, intenta realizar la compra de nuevo."
+"Steam_SubscriptionCancelled_PaymentCardDeclined_InsufficientFunds"		"No se ha completado la suscripción a «%subscription%». La compañía de crédito ha rechazado tu tarjeta por no contar con suficientes fondos en la cuenta.\n\nTen en cuenta que, en algunos casos, la compañía de crédito puede bloquear fondos en tu cuenta, pero esto no significa que vayas a recibir cargo alguno."
+"Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailure"				"No se ha completado la suscripción a «%subscription%». La compañía de crédito ha rechazado tu tarjeta por no ser correcta la dirección introducida.\n\nTen en cuenta que, en algunos casos, la compañía de crédito puede bloquear fondos en tu cuenta, pero esto no significa que vayas a recibir cargo alguno. Tras revisar la información que aparece a continuación, si crees que ha habido algún error, intenta realizar la compra de nuevo."
 
 "ServerBrowser_ModNotInstalled" "No tienes instalado el modo de partida de terceros"
 "ServerBrowser_AppNotFound" "No se puede conectar con el servidor:\n el id. de aplicación especificado por el servidor no es válido."
@@ -2362,10 +2362,10 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_Decrypting"				"Descifrando"
 
 "Steam_CDKeyAlreadyRegistered_Title"	"Steam - Advertencia de clave de producto"
-"Steam_CDKeyAlreadyRegistered_Info"	"Ya has activado los productos asociados a este clave.\nNo necesitas volver a introducir la clave de producto; solo tienes que iniciar sesión en esta cuenta de Steam para acceder a los artículos."
+"Steam_CDKeyAlreadyRegistered_Info"	"Ya has activado los productos asociados a esta clave.\nNo necesitas volver a introducir la clave de producto; solo tienes que iniciar sesión en esta cuenta de Steam para acceder a los artículos."
 
 "Steam_InstallComplete_RetailInstall"		"Ahora puedes acceder a los juegos seleccionados en la biblioteca de productos de Steam. Las actualizaciones se están descargando en segundo plano."
-"Steam_InstallComplete_RetailInstall_GamesAlwaysAvailable"	"Puedes volver a acceder a estos juegos cuando quieras desde cualquier ordenador iniciando sesión en tu cuenta de Steam '%account%'."
+"Steam_InstallComplete_RetailInstall_GamesAlwaysAvailable"	"Puedes volver a acceder a estos juegos cuando quieras desde cualquier ordenador iniciando sesión en tu cuenta de Steam «%account%»."
 "Steam_Install_AutoLaunchGamesList"		"Ver biblioteca de Steam"
 "Steam_Install_AutoLaunchGameStart"		"Iniciar ahora"
 "Steam_Install_DontShowPageAgain"		"No volver a mostrar esta página"
@@ -2606,7 +2606,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_Country_GQ"		"Guinea Ecuatorial"
 "Steam_Country_ER"		"Eritrea"
 "Steam_Country_EE"		"Estonia"
-"Steam_Country_ET"		"Etiopia"
+"Steam_Country_ET"		"Etiopía"
 "Steam_Country_FK"		"Islas Malvinas"
 "Steam_Country_FO"		"Islas Feroe"
 "Steam_Country_FJ"		"Fiyi"
@@ -2778,7 +2778,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_HL2Russian_Installed"			"Se ha activado Half-Life 2 Russian Pack.\n¿Iniciar Half-Life 2 ahora?"
 "Steam_HL2Russian_Removed"			"Se ha desactivado Half-Life 2 Russian Pack."
 "Steam_HL2Russian_AlreadyInstalled"	"Half-Life 2 Russian Pack ya está activo."
-"Steam_HL2Russian_AlreadyRemoved"		"Half-Life 2 Russian Pack no está inactivo en este momento."
+"Steam_HL2Russian_AlreadyRemoved"		"Half-Life 2 Russian Pack no está activo en este momento."
 "Steam_HL2Russian_LaunchHalfLifeNow"	"Iniciar Half-Life 2"
 
 "Steam_GameLaunchOptions_Title"				"%game% - Steam"
@@ -2806,10 +2806,10 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 
 "Steam_UserNameReserved"		"Tu nombre de cuenta no debe incluir 'Valve' o 'Steam'."
 "SteamUI_SendEmail"			"Dirección de correo electrónico (opcional)"
-"Steam_PurchaseError_MissingRequiredApp"	"%subscription% requiere que tengas %app%,\n haz clic en Aceptar para ver las opciones de compra de %app%."
+"Steam_PurchaseError_MissingRequiredApp"	"«%subscription%» requiere que tengas %app%,\n haz clic en Aceptar para ver las opciones de compra de %app%."
 
-"Steam_Ubisoft_EmailPrompt"			"A Ubisoft, editores de %subscription%, les gustaría seguir en contacto contigo. Al proporcionarnos la siguiente información te enviaremos de vez en cuando información sobre los próximos juegos."
-"Steam_TellTale_EmailPrompt"			"A Telltale, editores de %subscription%, les gustaría seguir en contacto contigo. Introduce tu dirección de correo electrónico a continuación para suscribirte al boletín de Telltale, que incluye anuncios de nuevos juegos, imágenes «entre bastidores» del proceso de desarrollo, cómics, columnas de recetas y consejos, y alguna que otra oferta especial. ¡No te arrepentirás!"
+"Steam_Ubisoft_EmailPrompt"			"A Ubisoft, editores de «%subscription%», les gustaría seguir en contacto contigo. Al proporcionarnos la siguiente información te enviaremos de vez en cuando información sobre los próximos juegos."
+"Steam_TellTale_EmailPrompt"			"A Telltale, editores de «%subscription%», les gustaría seguir en contacto contigo. Introduce tu dirección de correo electrónico a continuación para suscribirte al boletín de Telltale, que incluye anuncios de nuevos juegos, imágenes «entre bastidores» del proceso de desarrollo, cómics, columnas de recetas y consejos, y alguna que otra oferta especial. ¡No te arrepentirás!"
 
 "Steam_ManageGuestPasses"		"Gestionar regalos y pases de invitado..."
 "Steam_GuestPasses_Title"		"Regalos y pases de invitado"
@@ -2890,10 +2890,10 @@ Crea uno enviando un regalo por correo electrónico a alguien que conozcas."
 "Steam_GuestPassRedeemed_LinkURLLimitExceeded"	"steam://store"
 
 "Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=guestpass"	"Ya tienes este juego"
-"Steam_GuestPassRedeemed_TextAlreadyOwned$type=guestpass"	"¡No puedes aceptar un pase de invitado para %package%, porque ya tienes la versión completa!. Para jugar, instálalo e inícialo desde tu biblioteca de productos."
+"Steam_GuestPassRedeemed_TextAlreadyOwned$type=guestpass"	"¡No puedes aceptar un pase de invitado para «%package%», porque ya tienes la versión completa! Para jugar, instálalo e inícialo desde tu biblioteca de productos."
 
 "Steam_GuestPassRedeemed_HeadlineMustOwnApp$type=guestpass"	"Este pase de invitado tiene requisitos adicionales"
-"Steam_GuestPassRedeemed_TextMustOwnApp$type=guestpass"	"Antes de activar un pase de invitado para %package%, debes adquirir primero %appname%. Una vez que lo tengas, intenta activar este pase de invitado de nuevo."
+"Steam_GuestPassRedeemed_TextMustOwnApp$type=guestpass"	"Antes de activar un pase de invitado para %package%, debes adquirir primero «%appname%». Una vez que lo tengas, intenta activar este pase de invitado de nuevo."
 
 "Steam_GuestPassRedeemed_HeadlineRevoked$type=guestpass"	"Este pase de invitado está anulado"
 "Steam_GuestPassRedeemed_TextRevoked$type=guestpass"	"El amigo que te envió el pase de invitado lo ha cancelado y ha enviado un nuevo código de activación. Si este nuevo código te lo ha enviado a ti, recibirás otro correo electrónico con el mismo."
@@ -2938,7 +2938,7 @@ Crea uno enviando un regalo por correo electrónico a alguien que conozcas."
 "SteamUI_ValveSurvey_ControllerCradleLabel"		"¿Utilizas la base del extensor inalámbrico para mejorar la conexión inalámbrica de tu Steam Controller (como se muestra abajo)?"
 "SteamUI_ValveSurvey_ControllerCradleDontHave"	"No tengo un extensor inalámbrico."
 "SteamUI_ValveSurvey_ControllerCradleYes"		"Sí, uso el extensor inalámbrico como se muestra."
-"SteamUI_ValveSurvey_ControllerCradleNo"		"No, conecto el receptor inalámbrico en un puerto USB."
+"SteamUI_ValveSurvey_ControllerCradleNo"		"No, conecto el receptor inalámbrico a un puerto USB."
 "SteamUI_ValveSurvey_ControllerNoReceiver"		"No hay receptor inalámbrico."
 "SteamUI_ValveSurvey_Summary_ControllerCradle"	"Cable y base del Steam Controller: %s1"
 
@@ -2947,19 +2947,19 @@ Crea uno enviando un regalo por correo electrónico a alguien que conozcas."
 "Steam_SubscriptionFailure_ServiceUnavailable_Headline" "El servidor de Steam no está disponible"
 "Steam_SubscriptionFailure_ServiceUnavailable" "Tu equipo no puede conectarse a los servidores de Steam o puede que el servicio esté deshabilitado temporalmente. Por favor, vuelve a intentarlo más tarde."
 
-"Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddress"	"No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de un problema con la dirección asociada a tu cuenta de %provider%. Puedes corregir este problema a través de %provider% o hacer clic en «Atrás» para seleccionar un método de pago diferente."
-"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSource"	"No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de un problema con la fuente de financiación de tu cuenta de %provider%. Puedes corregir este problema a través de %provider% o hacer clic en «Atrás» para seleccionar un método de pago diferente."
-"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherPaymentMethod"	"No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de un problema con la autorización. Haz clic en «Atrás» para elegir otro método de pago."
+"Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddress"	"No se ha completado tu compra de «%subscription%».\n\n%provider% ha informado de un problema con la dirección asociada a tu cuenta de %provider%. Puedes corregir este problema a través de %provider% o hacer clic en «Atrás» para seleccionar un método de pago diferente."
+"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSource"	"No se ha completado tu compra de «%subscription%».\n\n%provider% ha informado de un problema con la fuente de financiación de tu cuenta de %provider%. Puedes corregir este problema a través de %provider% o hacer clic en «Atrás» para seleccionar un método de pago diferente."
+"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherPaymentMethod"	"No se ha completado tu compra de «%subscription%».\n\n%provider% ha informado de un problema con la autorización. Haz clic en «Atrás» para elegir otro método de pago."
 "Steam_PayPalDeclined_SupportLink"									"Visita el sitio web del Soporte de Steam para más información."
 
 "Steam_SubscriptionCancelled_RegionNotSupported_Headline" "No se admite este método de pago."
-"Steam_SubscriptionCancelled_RegionNotSupported" "No se ha completado tu compra de %subscription%.\n\nEl método de pago que has elegido no está disponible actualmente en tu país. Haz clic en «Atrás» y elige otro método de pago."
+"Steam_SubscriptionCancelled_RegionNotSupported" "No se ha completado tu compra de «%subscription%».\n\nEl método de pago que has elegido no está disponible actualmente en tu país. Haz clic en «Atrás» y elige otro método de pago."
 
 "Steam_SubscriptionCancelled_PayPalDeclined_Headline" "Error de autorización de %provider%."
-"Steam_SubscriptionCancelled_PayPalDeclined" "No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de un problema con la autorización. Haz clic en «Atrás» y selecciona otro método de pago."
+"Steam_SubscriptionCancelled_PayPalDeclined" "No se ha completado tu compra de «%subscription%».\n\n%provider% ha informado de un problema con la autorización. Haz clic en «Atrás» y selecciona otro método de pago."
 
-"Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de un problema con tu cuenta de %provider%. Ponte en contacto con el servicio de atención al cliente de %provider% o haz clic en 'Atrás' para elegir otro método de pago."
-"Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de que tu cuenta de %provider% necesita verificación o fondos para completar la compra. Ponte en contacto con el servicio de atención al cliente de %provider% o haz clic en 'Atrás' para elegir otro método de pago."
+"Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"No se ha completado tu compra de «%subscription%».\n\n%provider% ha informado de un problema con tu cuenta de %provider%. Ponte en contacto con el servicio de atención al cliente de %provider% o haz clic en «Atrás» para elegir otro método de pago."
+"Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"No se ha completado tu compra de «%subscription%».\n\n%provider% ha informado de que tu cuenta de %provider% necesita verificación o fondos para completar la compra. Ponte en contacto con el servicio de atención al cliente de %provider% o haz clic en «Atrás» para elegir otro método de pago."
 
 "Steam_PaymentMethodNotAvailable_Generic" "Lo sentimos; por el momento no aceptamos ese método de pago."
 
@@ -3028,7 +3028,7 @@ Crea uno enviando un regalo por correo electrónico a alguien que conozcas."
 "Steam_VideoDriverInvokeFailed_Title"			"Steam - Error"
 "Steam_VideoDriverInvokeFailed_Text"			"Ha habido un problema al ejecutar la herramienta de actualización del controlador de vídeo."
 
-"Steam_InOfflineModeButNeedToLogIn" "No ha sido posible conectarse a la red de Steam. El 'Modo \nDesconectado' no está disponible porque no hay información\nde inicio de sesión de Steam almacenada en este ordenador.\n\nNo podrás utilizar Steam hasta que te\nconectes de nuevo a la red de Steam."
+"Steam_InOfflineModeButNeedToLogIn" "No es posible conectarse a la red de Steam. El modo \ndesconectado no está disponible porque no hay información\nde inicio de sesión de Steam almacenada en este ordenador.\n\nNo podrás utilizar Steam hasta que te\nconectes de nuevo a la red de Steam."
 "Steam_InOfflineModeButNeedToLogIn_Link"			"Haz clic aquí para comprobar el estado de la red de Steam"
 
 "Skin_By_Random_n"			"Apariencia para Steam basada en un diseño de random_n"
@@ -3095,7 +3095,7 @@ Crea uno enviando un regalo por correo electrónico a alguien que conozcas."
 "SteamUI_P2P_FileListTip_Remaining"	"Número de bloques que quedan por descargar"
 "SteamUI_P2P_FileListTip_Progress"	"Estado de finalización"
 
-"SteamUI_P2P_ClientState_Unknown"	"N. d."
+"SteamUI_P2P_ClientState_Unknown"	"No disponible"
 "SteamUI_P2P_ClientState_Connecting"	"Conectando"
 "SteamUI_P2P_ClientState_Handshake"	"Aceptación"
 "SteamUI_P2P_ClientState_Active"	"Activo"
@@ -3106,7 +3106,7 @@ Crea uno enviando un regalo por correo electrónico a alguien que conozcas."
 "Steam_P2P_StateComplete"		"Terminado"
 "Steam_P2P_StateIncomplete"		"Incompleto"
 
-"Steam_P2P_TorrentState_Unknown"	"N. d."
+"Steam_P2P_TorrentState_Unknown"	"No disponible"
 "Steam_P2P_TorrentState_Checking"	"Comprobando..."
 "Steam_P2P_TorrentState_Waiting"	"Esperando..."
 "Steam_P2P_TorrentState_Ready"		"Lista."
@@ -3278,7 +3278,7 @@ La beta ya ha acabado: reinicia Steam para volver a la versión actual."
 "Steam_GuestPassRedeemed_TextAlreadyOwned$type=gift"	"¡No puedes aceptar un regalo de %package%, porque ya tienes el juego! Para jugar, instálalo e inícialo desde tu biblioteca de productos."
 
 "Steam_GuestPassRedeemed_HeadlineMustOwnApp$type=gift"	"Este pase de regalo tiene requisitos adicionales"
-"Steam_GuestPassRedeemed_TextMustOwnApp$type=gift"		"Antes de aceptar un regalo de %package%, debes adquirir primero %appname%. Una vez que lo tengas, intenta aceptar este regalo de nuevo."
+"Steam_GuestPassRedeemed_TextMustOwnApp$type=gift"		"Antes de aceptar un regalo de %package%, debes adquirir primero «%appname%». Una vez que lo tengas, intenta aceptar este regalo de nuevo."
 
 "Steam_GuestPassRedeemed_HeadlineRevoked$type=gift"	"Este regalo está anulado"
 "Steam_GuestPassRedeemed_TextRevoked$type=gift"	"El amigo que te envió el regalo lo ha cancelado y ha enviado un nuevo código de activación. Si este nuevo código te lo ha enviado a ti, recibirás otro correo electrónico con el mismo."
@@ -3304,9 +3304,9 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_Purchase_PlusTax"			"El importe total se calculará durante el proceso de compra para incluir los impuestos."
 "Steam_Purchase_PlusTaxAndShipping"	"El importe total se calculará durante el proceso de compra para incluir los impuestos y los gastos de envío y manipulación."
 
-"Steam_Legal_PackageDetails_Unreleased_Shipping" "Algunos de los productos incluidos en este paquete no se han puesto a la venta, por lo que aún no están disponibles. En la fecha del lanzamiento de estos productos, se pondrán automáticamente a tu disposición por medio de Steam. La fecha de lanzamiento de estos productos no se ha determinado todavía y, por tanto, los compradores no deben dar por sentado que las fechas aproximadas del lanzamiento sean correctas. Los artículos del paquete %subscription% se entregarán en un plazo de 6 a 8 semanas"
+"Steam_Legal_PackageDetails_Unreleased_Shipping" "Algunos de los productos incluidos en este paquete no se han puesto a la venta, por lo que aún no están disponibles. En la fecha del lanzamiento de estos productos, se pondrán automáticamente a tu disposición por medio de Steam. La fecha de lanzamiento de estos productos no se ha determinado todavía y, por tanto, los compradores no deben dar por sentado que las fechas aproximadas del lanzamiento sean correctas. Los artículos del paquete «%subscription%» se entregarán en un plazo de 6 a 8 semanas"
 "Steam_Legal_PackageDetails_Unreleased" "Algunos de los productos incluidos en este paquete no se han puesto a la venta, por lo que aún no están disponibles. En la fecha del lanzamiento de estos productos, se pondrán automáticamente a tu disposición por medio de Steam. La fecha de lanzamiento de estos productos no se ha determinado todavía y, por tanto, los compradores no deben dar por sentado que las fechas aproximadas del lanzamiento sean correctas."
-"Steam_Legal_PackageDetails_Shipping" "Los artículos del paquete %subscription% se entregarán en un plazo de 6 a 8 semanas"
+"Steam_Legal_PackageDetails_Shipping" "Los artículos del paquete «%subscription%» se entregarán en un plazo de 6 a 8 semanas"
 
 "Steam_ForcedGiftPurchase_Next"	"Para comprar este elemento como regalo, haz clic en «Siguiente» para continuar."
 
@@ -3389,17 +3389,17 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_AccountEmail_Email"		"Dirección de correo electrónico de contacto:"
 "Steam_AccountEmail_Print"		"Haz clic aquí para imprimir la página"
 
-"Steam_SubscriptionCancelled_PaymentCardDeclinedCart" "No se ha completado tu suscripción a los siguientes artículos. La compañía de crédito ha rechazado tu tarjeta por no ser correcta la información introducida.\n\nTen en cuenta que, en algunos casos, la compañía de crédito puede bloquear fondos en tu cuenta, pero esto no significa que recibirás cargo alguno. Tras revisar la información que aparece a continuación, si crees que ha habido algún error, intenta realizar la compra de nuevo."
-"Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailureCart"				"No se ha completado tu suscripción a los siguientes artículos. La compañía de crédito ha rechazado tu tarjeta por no ser correcta la dirección introducida.\n\nTen en cuenta que, en algunos casos, la compañía de crédito puede bloquear fondos en tu cuenta, pero esto no significa que recibirás cargo alguno. Tras revisar la información que aparece a continuación, si crees que ha habido algún error, intenta realizar la compra de nuevo."
-"Steam_SubscriptionCancelled_PaymentCardDeclined_InsufficientFundsCart"		"No se ha completado tu suscripción a los siguientes artículos. La compañía de crédito ha rechazado tu tarjeta por no contar con suficientes fondos en la cuenta.\n\nTen en cuenta que, en algunos casos, la compañía de crédito puede bloquear fondos en tu cuenta, pero esto no significa que recibirás cargo alguno."
+"Steam_SubscriptionCancelled_PaymentCardDeclinedCart" "No se ha completado tu suscripción a los siguientes artículos. La compañía de crédito ha rechazado tu tarjeta por no ser correcta la información introducida.\n\nTen en cuenta que, en algunos casos, la compañía de crédito puede bloquear fondos en tu cuenta, pero esto no significa que vayas a recibir cargo alguno. Tras revisar la información que aparece a continuación, si crees que ha habido algún error, intenta realizar la compra de nuevo."
+"Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailureCart"				"No se ha completado tu suscripción a los siguientes artículos. La compañía de crédito ha rechazado tu tarjeta por no ser correcta la dirección introducida.\n\nTen en cuenta que, en algunos casos, la compañía de crédito puede bloquear fondos en tu cuenta, pero esto no significa que vayas a recibir cargo alguno. Tras revisar la información que aparece a continuación, si crees que ha habido algún error, intenta realizar la compra de nuevo."
+"Steam_SubscriptionCancelled_PaymentCardDeclined_InsufficientFundsCart"		"No se ha completado tu suscripción a los siguientes artículos. La compañía de crédito ha rechazado tu tarjeta por no contar con suficientes fondos en la cuenta.\n\nTen en cuenta que, en algunos casos, la compañía de crédito puede bloquear fondos en tu cuenta, pero esto no significa que vayas a recibir cargo alguno."
 "Steam_Subscription_Preorder_PreProcessCart" "Se ha completado tu reserva. El lanzamiento oficial del juego tendrá lugar en breve. Se ha procesado tu pago.\n\nRecibirás una notificación tan pronto como el juego esté disponible. ¡Gracias por el pedido!"
 "Steam_SubscriptionSuccessCart$purchasetype=regular" "Tu suscripción a los siguientes artículos se ha completado correctamente. Tu suscripción está registrada en esta cuenta de Steam: %accountName%. A partir de ahora, deberás conectarte a esta cuenta para poder acceder a tus juegos. ¡Gracias por el pedido!"
 "Steam_SubscriptionSuccessCart$purchasetype=gift" "Tu regalo de los siguientes artículos se ha enviado a %giftee%. ¡Gracias por el pedido!"
 "Steam_SubscriptionSuccessCart$purchasetype=unknown" "Tu compra de los siguientes artículos se ha completado correctamente. ¡Gracias por el pedido!"
 "Steam_Subscription_Preorder_CcardSuccessCart" "Hace poco, hiciste una reserva de los siguientes artículos. Estos artículos ya están oficialmente a la venta, de modo que se ha procesado la transacción y se ha cargado el importe en tu tarjeta de crédito. ¡Gracias por el pedido!"
-"Steam_Subscription_Success_WithShippingCart$purchasetype=regular"	"Tu suscripción a los siguientes artículos se ha completado correctamente.\n\nPuedes jugar a cualquiera de los juegos que ya estén disponibles haciendo clic en ellos en tu biblioteca de productos de Steam. Recibirás también una confirmación por correo electrónico tan pronto se hayan enviado los artículos físicos de tu pedido. ¡Gracias por tu compra!"
-"Steam_Subscription_Success_WithShippingCart$purchasetype=gift"	"Tu regalo de los siguientes artículos se ha enviado a %giftee%. Recibirás una confirmación por correo electrónico tan pronto se hayan enviado los artículos de tu pedido. ¡Gracias por el pedido!"
-"Steam_Subscription_Success_WithShippingCart$purchasetype=unknown"	"Se ha completado tu compra de los siguientes artículos. Recibirás una confirmación por correo electrónico tan pronto se hayan enviado los artículos de tu pedido. ¡Gracias por el pedido!"
+"Steam_Subscription_Success_WithShippingCart$purchasetype=regular"	"Tu suscripción a los siguientes artículos se ha completado correctamente.\n\nPuedes jugar a cualquiera de los juegos que ya estén disponibles haciendo clic en ellos en tu biblioteca de productos de Steam. Recibirás también una confirmación por correo electrónico tan pronto como se hayan enviado los artículos físicos de tu pedido. ¡Gracias por tu compra!"
+"Steam_Subscription_Success_WithShippingCart$purchasetype=gift"	"Tu regalo de los siguientes artículos se ha enviado a %giftee%. Recibirás una confirmación por correo electrónico tan pronto como se hayan enviado los artículos de tu pedido. ¡Gracias por el pedido!"
+"Steam_Subscription_Success_WithShippingCart$purchasetype=unknown"	"Se ha completado tu compra de los siguientes artículos. Recibirás una confirmación por correo electrónico tan pronto como se hayan enviado los artículos de tu pedido. ¡Gracias por el pedido!"
 "Steam_SubscriptionCancelled_PaymentCardUseLimitHit_InfoCart" 	"Esta transacción no se pudo procesar porque la tarjeta de crédito se ha usado demasiadas veces en Steam.\n\nEsta política se ha puesto en práctica para proteger a nuestros clientes contra el fraude en el uso de las tarjetas de crédito. Actuamos activamente para perseguir el fraude con todo el peso de la ley."
 "Steam_Subscription_ContactSupportCart" "Se ha producido un error inesperado. No se ha completado tu suscripción a los siguientes artículos.\n\nPor favor, ponte en contacto con el Soporte de Steam a través del siguiente enlace."
 "Steam_SubscriptionCancelled_PayPalDeclinedCart" "Tu compra de los siguientes artículos no se ha completado.\n\n%provider% ha informado de un problema con la autorización. Prueba a realizar tu compra de nuevo con un método de pago distinto."
@@ -3489,7 +3489,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"El juego que estás instalando requiere un disco duro con el sistema de archivos NTFS y\nno puede instalarse en uno con el sistema FAT32. Para más información,\nconsulta el artículo de soporte en el vínculo que aparece abajo."
-"SteamUI_GameRequires_64BitOS_Detail"	"El juego que estás instalando requiere una versión de Windows de 64 bits. Si no tienes\ndicho equipo, haz clic abajo para saber cómo solicitar un rembolso."
+"SteamUI_GameRequires_64BitOS_Detail"	"El juego que estás instalando requiere una versión de Windows de 64 bits. Si no tienes\ndicho equipo, haz clic abajo para saber cómo solicitar un reembolso."
 
 "SteamUI_SiteLicense_LockedDetail"	"Actualmente no hay licencias disponibles para este producto. Inténtalo de\nnuevo más tarde o notifícaselo al administrador local."
 
@@ -3819,7 +3819,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_newscontinued"		"Leer más"
 "steam_NonSteam"		"Mod o acceso directo no de Steam"
 "steam_NonSteam_OpenVR"		"Aplicación OpenVR"
-"steam_NonSteamMessage"		"Falta información detallada sobre «%gamename%» porque es un mod o acceso directo que no es de Steam. Steam puede iniciarlo de todos modos y, en muchos casos, estará también disponible la interfaz dentro del juego."
+"steam_NonSteamMessage"		"Falta información detallada sobre «%gamename%» porque es un mod o acceso directo que no es de Steam. Steam puede iniciarlo de todos modos y, en muchos casos, estará también disponible la interfaz superpuesta durante las partidas."
 "steam_NonSteamMessage_OpenVR"	"Falta información detallada sobre «%gamename%» porque es una aplicación OpenVR que no es de Steam. Steam puede iniciarla de todos modos."
 "steam_welcome$apptype=game"			"Información sobre el juego"
 "steam_welcome$apptype=application"			"Información sobre la aplicación"
@@ -3882,7 +3882,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 "steam_hidewelcomemessage"	"Ocultar este mensaje"
 "steam_achievement_mostrecent"	"Más reciente"
-"steam_achievement_unlockedsofar" "Has desbloqueado %achieved_achievements%/%available_achievements% (%achieved_percent%%)"
+"steam_achievement_unlockedsofar" "Has desbloqueado %achieved_achievements%/%available_achievements% (%achieved_percent% %)"
 "steam_achievementslocked"	"Logros bloqueados"
 "steam_everythingachieved"	"Has desbloqueado todos los logros. ¡Enhorabuena!"
 
@@ -4738,7 +4738,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_Screenshots_CancelUpload" "Cancelar"
 "Steam_Screenshots_ShowOnDisk" "Mostrar en el disco"
 "Steam_Screenshots_ShowOnline" "Mostrar online"
-"Steam_Screenshots_IsSpoiler" "Añadir etiqueta de spoiler"
+"Steam_Screenshots_IsSpoiler" "Añadir etiqueta de espóiler"
 "Steam_Screenshots_Private" "Privada"
 "Steam_Screenshots_FriendsOnly" "Solo amigos"
 "Steam_Screenshots_Public" "Pública"

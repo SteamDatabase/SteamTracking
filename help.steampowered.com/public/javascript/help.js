@@ -199,6 +199,11 @@ HelpWizard = {
             return null;
         }
 
+				if ( href.match( 'HelpViewReceipt' ) )
+		{
+			return null;
+		}
+
 		var matches = href.match( /^\/*(?:#!?|wizard)\/*/ );
 		if ( matches )
 		{

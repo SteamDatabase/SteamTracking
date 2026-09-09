@@ -1,4 +1,5 @@
 import "common_base.proto";
+import "common.proto";
 
 message CGameRecording_CleanupBackgroundRecordings_Request {
 }
@@ -179,7 +180,7 @@ message CGameRecording_GetThumbnails_Request {
 	optional uint32 major_axis = 5 [default = 512];
 	optional int32 time_precision = 6 [default = Identifier, (.description) = "enum"];
 	optional string timeline_id = 7;
-	optional int32 format = 8 [default = 1, (.description) = "enum"];
+	optional int32 format = 8 [default = Identifier, (.description) = "enum"];
 }
 
 message CGameRecording_GetThumbnails_Response {
@@ -441,62 +442,6 @@ message CGameRecording_ZipClip_Response {
 	optional string zip_path = 1;
 }
 
-message CGameRecordingPhase {
-	optional string phase_id = 4;
-	optional uint64 duration_ms = 5;
-	repeated .CGameRecordingPhase_Tag tags = 6;
-	repeated .CGameRecordingPhase_Tag contained_tags = 7;
-	optional uint64 background_timeline_offset = 8;
-	repeated .CPhaseAttribute attributes = 9;
-}
-
-message CGameRecordingPhase_Tag {
-	optional string name = 1;
-	optional string group = 2;
-}
-
-message CGameRecordingTimelineEvent {
-	optional uint64 game_id = 1;
-	optional uint32 rt_created = 2;
-	optional int32 possible_clip = 3;
-	optional string timeline_id = 4;
-	optional uint64 entry_id = 5;
-	optional uint64 timeline_offset_ms = 6;
-	optional uint64 duration_ms = 7;
-	optional string marker_icon = 8;
-	optional string marker_title = 9;
-	optional bool user_marker = 10;
-}
-
-message CGameRecordingTimelineMetadata {
-	optional string timeline_id = 1;
-	optional uint64 game_id = 2;
-	optional uint32 date_recorded = 3;
-	optional uint64 duration_ms = 4;
-	repeated .CGameRecordingTimelineMetadata_Recording recordings = 5;
-	repeated .CGameRecordingPhase phases = 6;
-	repeated .CGameRecordingTimelineEvent significant_events = 7;
-}
-
-message CGameRecordingTimelineMetadata_Recording {
-	optional string recording_id = 1;
-	optional uint64 start_offset_ms = 2;
-	optional uint64 duration_ms = 3;
-	optional int32 recording_type = 4 [(.description) = "enum"];
-	optional bool delete_on_cleanup = 5;
-	optional uint64 video_manager_clip_id = 6;
-	optional uint64 video_manager_video_id = 7;
-	optional string cdn_manifest_url = 8;
-	optional uint64 file_size = 9;
-	optional uint64 recording_zero_timeline_offset_ms = 10;
-}
-
-message CPhaseAttribute {
-	optional string group = 1;
-	optional string value = 2;
-	optional uint32 priority = 3;
-}
-
 message CTimelineEntry {
 	optional string timeline_id = 1;
 	optional uint64 entry_id = 2;
@@ -515,13 +460,6 @@ message CTimelineEntry {
 	repeated .CTimelineTag tag = 17;
 	optional string phase_id = 18;
 	repeated .CPhaseAttribute attributes = 19;
-}
-
-message CTimelineTag {
-	optional string name = 1;
-	optional string group = 2;
-	optional string icon = 3;
-	optional uint32 priority = 4;
 }
 
 service GameRecording {

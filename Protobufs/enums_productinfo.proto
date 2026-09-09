@@ -9,24 +9,10 @@ enum EContentDescriptorID {
 	k_EContentDescriptorMAX = 6;
 }
 
-enum ERatingAgency {
-	k_ERatingAgency_Invalid = 0;
-	k_ERatingAgency_ESRB = 1;
-	k_ERatingAgency_PEGI = 2;
-	k_ERatingAgency_BBFC = 3;
-	k_ERatingAgency_USK = 4;
-	k_ERatingAgency_OFLC_AU = 5;
-	k_ERatingAgency_OFLC_NZ = 6;
-	k_ERatingAgency_CERO = 7;
-	k_ERatingAgency_GRAC = 8;
-	k_ERatingAgency_GMEDIA = 9;
-	k_ERatingAgency_DEJUS = 10;
-	k_ERatingAgency_IMDA = 11;
-	k_ERatingAgency_FPB = 12;
-	k_ERatingAgency_TESRI = 13;
-	k_ERatingAgency_RARS = 14;
-	k_ERatingAgency_AGCOM = 15;
-	k_ERatingAgency_IGRS = 16;
-	k_ERatingAgency_Steam_Germany = 17;
-	k_ERatingAgency_Steam_Australia = 18;
+enum EInteractiveElement {
+	k_EInteractiveElement_Invalid = 0;
+	k_EInteractiveElement_InGamePurchases = 1;
+	k_EInteractiveElement_InGamePurchasesOfRandomizedItems = 2;
+	k_EInteractiveElement_InGameChat = 3;
+	k_EInteractiveElement_OnlineInteractivity = 4;
 }

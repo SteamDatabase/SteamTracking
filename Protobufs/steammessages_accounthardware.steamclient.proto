@@ -211,6 +211,14 @@ message CAccountHardware_RegisterSteamMachine_Request {
 message CAccountHardware_RegisterSteamMachine_Response {
 }
 
+message CAccountHardwarePromotions_RedeemFramePromoPackage_Request {
+	optional string serial = 1;
+	optional string computed_serial = 2;
+}
+
+message CAccountHardwarePromotions_RedeemFramePromoPackage_Response {
+}
+
 service AccountHardware {
 	rpc RegisterSteamController (.CAccountHardware_RegisterSteamController_Request) returns (.CAccountHardware_RegisterSteamController_Response);
 	rpc CompleteSteamControllerRegistration (.CAccountHardware_CompleteSteamControllerRegistration_Request) returns (.CAccountHardware_CompleteSteamControllerRegistration_Response);
@@ -228,4 +236,8 @@ service AccountHardware {
 	rpc ManageSavedHardware (.CAccountHardware_ManageSavedHardware_Request) returns (.CAccountHardware_ManageSavedHardware_Response);
 	rpc GetSavedHardwareList (.CAccountHardware_GetSavedHardwareList_Request) returns (.CAccountHardware_GetSavedHardwareList_Response);
 	rpc RegisterSteamMachine (.CAccountHardware_RegisterSteamMachine_Request) returns (.CAccountHardware_RegisterSteamMachine_Response);
+}
+
+service AccountHardwarePromotions {
+	rpc RedeemFramePromoPackage (.CAccountHardwarePromotions_RedeemFramePromoPackage_Request) returns (.CAccountHardwarePromotions_RedeemFramePromoPackage_Response);
 }
