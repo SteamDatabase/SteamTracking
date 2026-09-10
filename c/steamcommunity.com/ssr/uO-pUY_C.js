@@ -2094,7 +2094,324 @@ function _(_, _, _, _) {
     _
   );
 }
-var _ = _(_(), 1);
+var _ = `-RfAozBAXnc-`;
+function _() {
+  return (0, _.jsx)(_, {
+    position: `relative`,
+    inset: `0`,
+    radius: `sm`,
+    direction: `column`,
+    align: `center`,
+    justify: `center`,
+    marginTop: `2`,
+    className: _,
+    style: {
+      pointerEvents: `none`,
+    },
+    children: (0, _.jsx)(_, {
+      align: `center`,
+      _: `div`,
+      size: `7`,
+      weight: `heavy`,
+      children: _.Localize(`#Listings_NoneFound`),
+    }),
+  });
+}
+function _(_) {
+  let {
+      view: _ = `grid`,
+      onViewChange: _,
+      children: _,
+      breadcrumbs: _ = (0, _.jsx)(`div`, {}),
+      sort: _,
+      onLoadMore: _,
+      loadingMore: _,
+      loadingNew: _ = !0,
+      loadingError: _,
+      empty: _,
+      resetScrollIdentity: _,
+    } = _,
+    _ = _() === `initial`,
+    _ = !_,
+    _ = (0, _.useRef)(null),
+    _ = (0, _.useRef)(!0);
+  return (
+    (0, _.useEffect)(() => {
+      _.current &&
+        !_.current &&
+        _.current.getBoundingClientRect().top < 0 &&
+        _.current.scrollIntoView(!0),
+        (_.current = !1);
+    }, [_]),
+    (0, _.jsxs)(_, {
+      ref: _,
+      children: [
+        (0, _.jsxs)(_, {
+          justify: `between`,
+          align: `center`,
+          gap: `2`,
+          marginBottom: `2`,
+          wrap: `wrap`,
+          children: [
+            _,
+            (0, _.jsxs)(_, {
+              gap: `2`,
+              align: `center`,
+              children: [
+                !1,
+                !_ &&
+                  (0, _.jsx)(_, {
+                    children: _.Localize(`#SortBy_Label`),
+                  }),
+                _,
+              ],
+            }),
+          ],
+        }),
+        (0, _.jsxs)(_, {
+          position: `relative`,
+          children: [
+            _ === `grid` &&
+              (0, _.jsxs)(_, {
+                columns: {
+                  initial: `repeat(auto-fill, minmax(136px, 1fr))`,
+                  _: `repeat(auto-fill, minmax(260px, 1fr))`,
+                },
+                gap: {
+                  initial: `2`,
+                  _: `4`,
+                },
+                children: [
+                  _,
+                  _ &&
+                    (0, _.jsx)(_, {
+                      onTrigger: _,
+                    }),
+                ],
+              }),
+            _ === `list` &&
+              (0, _.jsxs)(_, {
+                direction: `column`,
+                gap: `4`,
+                children: [
+                  _,
+                  _ &&
+                    (0, _.jsx)(_, {
+                      onTrigger: _,
+                    }),
+                ],
+              }),
+            _ && (0, _.jsx)(_, {}),
+            _ &&
+              (0, _.jsx)(_, {
+                justify: `center`,
+                margin: `5`,
+                children: (0, _.jsx)(_, {
+                  size: `4`,
+                }),
+              }),
+            _ &&
+              (0, _.jsx)(_, {
+                position: `absolute`,
+                inset: `0`,
+                background: `dull-4 80%`,
+                radius: `sm`,
+                paddingX: `4`,
+                paddingTop: `9`,
+                children: (0, _.jsx)(_, {
+                  justify: `center`,
+                  align: `center`,
+                  children: (0, _.jsx)(_, {
+                    size: `5`,
+                  }),
+                }),
+              }),
+            _ && (0, _.jsx)(_, {}),
+          ],
+        }),
+      ],
+    })
+  );
+}
+function _() {
+  return (0, _.jsx)(_, {
+    justify: `center`,
+    align: `center`,
+    radius: `sm`,
+    background: `red-3`,
+    outline: `red-5`,
+    padding: `4`,
+    marginTop: `4`,
+    children: (0, _.jsx)(_, {
+      size: `5`,
+      contrast: `subtitle`,
+      children: _.Localize(`#Results_PageLoadError`),
+    }),
+  });
+}
+var _ = _(_(), 1),
+  _ = `CqWwAJioCoU-`,
+  _ = `CXcCYctqKOs-`;
+function _() {
+  return _(`sm`);
+}
+function _(_) {
+  let { children: _ } = _;
+  return _()
+    ? (0, _.jsx)(_, {
+        ..._,
+      })
+    : (0, _.jsx)(_, {
+        gap: `2`,
+        direction: `column`,
+        width: `300px`,
+        maxWidth: `300px`,
+        position: `sticky`,
+        inset: `var(--spacing-2) auto auto auto`,
+        children: _,
+      });
+}
+function _(_) {
+  let { children: _, onClose: _, open: _ } = _;
+  return _
+    ? (0, _.jsx)(_.Root, {
+        onClose: _,
+        children: (0, _.jsxs)(_, {
+          gap: `2`,
+          direction: `column`,
+          width: `min( 300px, 95vw )`,
+          maxWidth: `min( 300px, 95vw )`,
+          elevation: `2`,
+          background: `dull-3`,
+          position: `relative`,
+          maxHeight: `95vh`,
+          overflow: `auto`,
+          onClick: (_) => _.stopPropagation(),
+          children: [
+            (0, _.jsxs)(_, {
+              direction: `column`,
+              gap: `2`,
+              padding: `3`,
+              children: [
+                (0, _.jsx)(_, {
+                  inset: `12px 12px auto auto`,
+                  position: `absolute`,
+                  children: (0, _.jsx)(_, {
+                    onClick: _,
+                    hitSlop: !0,
+                  }),
+                }),
+                _,
+              ],
+            }),
+            (0, _.jsx)(_, {
+              padding: `3`,
+              paddingTop: `4`,
+              position: `sticky`,
+              marginTop: `2`,
+              inset: `auto auto 0 auto`,
+              className: _,
+              children: (0, _.jsx)(_, {
+                variant: `inverted`,
+                width: `100%`,
+                color: `green`,
+                onClick: _,
+                children: _.Localize(`#Filter_ViewResults`),
+              }),
+            }),
+          ],
+        }),
+      })
+    : null;
+}
+function _(_) {
+  let { children: _ } = _;
+  return (0, _.jsx)(_, {
+    weight: `heavy`,
+    size: `4`,
+    className: _,
+    children: _,
+  });
+}
+function _(_) {
+  let { onReset: _ } = _;
+  return (0, _.jsx)(_, {
+    alignSelf: `center`,
+    children: (0, _.jsx)(_, {
+      color: `dull`,
+      variant: `ghost`,
+      onClick: _,
+      children: _.Localize(`#MarketSearch_Reset`),
+    }),
+  });
+}
+var _ = Object.assign(_, {
+  Title: _,
+  ResetButton: _,
+});
+function _(_, _) {
+  let _ = _(_),
+    [_, _] = (0, _.useState)(null),
+    _ = _(_, {
+      nTimeoutMS: 300,
+      nTimeoutExtensionMS: 300,
+      nMaxTimeoutExtensions: 1 / 0,
+    }),
+    _ = _(_);
+  return (
+    (0, _.useEffect)(() => {
+      _ !== null && _ !== null && _ !== _ && (_(_), _(null));
+    }, [_, _, _, _]),
+    (0, _.useEffect)(() => {
+      _ !== _ && _ !== null && _ !== null && _(null);
+    }, [_, _, _]),
+    [_ === null ? _ : _, _]
+  );
+}
+var _ = `_3DSXa7TwSCo-`,
+  _ = `DbqWsFmrBJU-`;
+function _(_) {
+  let { description: _ } = _,
+    _ = _() === `initial`;
+  if (!_) return null;
+  let _ = _.descriptions ?? [];
+  if (_(_.appid)) {
+    let _ = !1,
+      _ = !1,
+      _ = !1;
+    _ = _.filter((_) => {
+      if (_.name === `exterior_wear` || _.name === `sticker_info`) return !1;
+      if (_.name === `attribute` && !_.commodity)
+        if (!_) _ = !0;
+        else return !1;
+      return _.name === `blank` && (!_ || _)
+        ? !1
+        : ((_ = _.name === `blank`), (_ ||= !_), !0);
+    });
+  }
+  return (0, _.jsx)(_, {
+    direction: `column`,
+    justify: `center`,
+    minWidth: `0`,
+    gap: `2`,
+    paddingTop: `4`,
+    paddingRight: `4`,
+    children: (0, _.jsxs)(_.Root, {
+      description: {
+        ..._,
+        descriptions: _,
+      },
+      children: [
+        !_ && (0, _.jsx)(_.Name, {}),
+        !_ &&
+          (0, _.jsx)(_.GameInfo, {
+            hrefGame: _.AppHome(_.appid),
+          }),
+        (0, _.jsx)(_.Descriptions, {}),
+      ],
+    }),
+  });
+}
 function _(_) {
   let { appid: _, onClose: _, buckets: _, activeBucketID: _ } = _,
     [_, _] = (0, _.useState)(() =>
@@ -2785,47 +3102,319 @@ function _(_) {
     ],
   });
 }
+var _ = `APEAY0rnAbo-`,
+  _ = `JqPNuuugB1c-`;
 function _(_) {
-  let { description: _ } = _,
-    _ = _() === `initial`;
-  if (!_) return null;
-  let _ = _.descriptions ?? [];
-  if (_(_.appid)) {
-    let _ = !1,
-      _ = !1,
-      _ = !1;
-    _ = _.filter((_) => {
-      if (_.name === `exterior_wear` || _.name === `sticker_info`) return !1;
-      if (_.name === `attribute` && !_.commodity)
-        if (!_) _ = !0;
-        else return !1;
-      return _.name === `blank` && (!_ || _)
-        ? !1
-        : ((_ = _.name === `blank`), (_ ||= !_), !0);
-    });
-  }
-  return (0, _.jsx)(_, {
-    direction: `column`,
-    justify: `center`,
-    minWidth: `0`,
-    gap: `2`,
-    paddingTop: `4`,
-    paddingRight: `4`,
-    children: (0, _.jsxs)(_.Root, {
-      description: {
-        ..._,
-        descriptions: _,
-      },
+  let { currency: _, orders: _ } = _,
+    _ = _.slice(0, 6),
+    _ = _.length < _.length;
+  return (
+    _ && _.pop(),
+    (0, _.jsxs)(`table`, {
+      className: _,
       children: [
-        !_ && (0, _.jsx)(_.Name, {}),
-        !_ &&
-          (0, _.jsx)(_.GameInfo, {
-            hrefGame: _.AppHome(_.appid),
+        (0, _.jsx)(`thead`, {
+          children: (0, _.jsxs)(`tr`, {
+            children: [
+              (0, _.jsx)(`th`, {
+                children: (0, _.jsx)(_, {
+                  size: `4`,
+                  children: _.Localize(`#OrderBook_Table_Price`),
+                }),
+              }),
+              (0, _.jsx)(`th`, {
+                children: (0, _.jsx)(_, {
+                  size: `4`,
+                  children: _.Localize(`#OrderBook_Table_Quantity`),
+                }),
+              }),
+            ],
           }),
-        (0, _.jsx)(_.Descriptions, {}),
+        }),
+        (0, _.jsxs)(`tbody`, {
+          children: [
+            _.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  quantity: _.quantity,
+                  price: _(_.price, _),
+                },
+                _.price,
+              ),
+            ),
+            _ &&
+              (0, _.jsx)(_, {
+                featuredOrders: _,
+                ..._,
+              }),
+          ],
+        }),
       ],
+    })
+  );
+}
+function _(_) {
+  let { price: _, quantity: _ } = _,
+    _ = new Intl.NumberFormat();
+  return (0, _.jsxs)(`tr`, {
+    children: [
+      (0, _.jsx)(`td`, {
+        children: (0, _.jsx)(_, {
+          children: _,
+        }),
+      }),
+      (0, _.jsx)(`td`, {
+        children: (0, _.jsx)(_, {
+          children: _.format(_),
+        }),
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { featuredOrders: _, totalOrders: _, orders: _, currency: _ } = _,
+    _ =
+      _[0].price < _[1].price
+        ? `#OrderBook_Table_PriceOrMore`
+        : `#OrderBook_Table_PriceOrLess`,
+    _ = _[_.length].price,
+    _ = _ - _.reduce((_, _) => _ + _.quantity, 0),
+    _ = new Intl.NumberFormat();
+  return (0, _.jsxs)(`tr`, {
+    children: [
+      (0, _.jsx)(`td`, {
+        children: (0, _.jsx)(_, {
+          children: _.Localize(_, _(_, _)),
+        }),
+      }),
+      (0, _.jsx)(`td`, {
+        children: (0, _.jsx)(_, {
+          children: _.format(_),
+        }),
+      }),
+    ],
+  });
+}
+function _() {
+  let [_, _] = (0, _.useState)(!1),
+    [_, _] = (0, _.useState)();
+  return (
+    (0, _.useEffect)(() => {
+      _(!1), _(_);
+    }, [_]),
+    {
+      flash: (0, _.useCallback)(() => {
+        _(!0), _(void 0);
+      }, []),
+      strClassName: _,
+    }
+  );
+}
+function _(_) {
+  let { className: _, ..._ } = _,
+    { flash: _, strClassName: _ } = _(),
+    _ = (0, _.useRef)(!1);
+  return (
+    (0, _.useEffect)(() => {
+      _.current ? _() : (_.current = !0);
+    }, [_, _.children]),
+    (0, _.jsx)(_, {
+      ..._,
+      className: (0, _.default)(_, _),
+    })
+  );
+}
+function _(_) {
+  let { description: _, ..._ } = _,
+    _ = _.appid,
+    _ = _.market_name || _.name,
+    _ = _.market_hash_name;
+  if (!_ || !_ || !_) return null;
+  let _ = `Cancel all listings`,
+    _ = `Delete item bucket`,
+    _ = (_) => {
+      switch (_) {
+        case _:
+          confirm(`Are you sure you want to cancel all listings for "${_}"?`) &&
+            _(_, _);
+          break;
+        case _:
+          confirm(
+            `Are you sure you want to remove "${_}" from the market index? If there are listings for this item, please cancel them first or the bucket will come back.`,
+          ) && _(_, _);
+          break;
+      }
+    };
+  return (0, _.jsx)(_, {
+    ..._,
+    children: (0, _.jsx)(_, {
+      options: [_, _],
+      selectedValue: `Admin`,
+      onSelectionChange: _,
+      size: `1`,
     }),
   });
+}
+async function _(_, _) {
+  try {
+    let _ = new FormData();
+    _.set(`appid`, _.toString()),
+      _.set(`market_hash_name`, _),
+      _.set(`sessionid`, _());
+    let _ = await fetch(`${_.COMMUNITY_BASE_URL}market/cancelalllistings/`, {
+        method: `POST`,
+        body: _,
+      }),
+      _ = await _.json();
+    if (!_._) {
+      alert(`Failed to cancel. ${_?.error ?? ``}`);
+      return;
+    }
+    alert(
+      `The cancel request was received. The Market servers have begun working on canceling all listings.`,
+    );
+  } catch {
+    alert(`Failed to cancel`);
+  }
+}
+async function _(_, _) {
+  try {
+    let _ = new FormData();
+    _.set(`appid`, _.toString()),
+      _.set(`market_hash_name`, _),
+      _.set(`sessionid`, _());
+    let _ = await fetch(`${_.COMMUNITY_BASE_URL}market/deleteitembucket`, {
+        method: `POST`,
+        body: _,
+      }),
+      _ = await _.json();
+    if (!_._) {
+      alert(`Failed to cancel. ${_?.error ?? ``}`);
+      return;
+    }
+    alert(
+      `The request was received. It should be removed from the search index shortly.`,
+    );
+  } catch {
+    alert(`Failed to delete`);
+  }
+}
+var _ = _.memo(function (_) {
+  let {
+      filter: _,
+      onFilterChange: _,
+      facetingInfo: _,
+      description: _,
+      relevantAssetProperties: _,
+      open: _,
+      onShowFilters: _,
+    } = _,
+    _ = _(),
+    [_, _] = (0, _.useState)(),
+    _ = (_, _) => {
+      _ ? (_(_), _(void 0)) : _(_);
+    },
+    _ = _ || _,
+    _ =
+      _.price[0] !== 0 ||
+      _.price[1] !== _.maxPrice ||
+      Object.keys(_.facets).length > 0 ||
+      Object.keys(_.accessories).length > 0,
+    _ = () => {
+      _(
+        {
+          ..._,
+          facets: {},
+          accessories: {},
+          price: [0, _.maxPrice],
+        },
+        !0,
+      );
+    };
+  return (0, _.jsxs)(_, {
+    open: _,
+    onClose: () => _(!1),
+    children: [
+      (0, _.jsx)(_.Title, {
+        children: _.Localize(`#ListingFilter_Title`),
+      }),
+      (0, _.jsx)(_, {
+        ..._,
+      }),
+      (0, _.jsx)(_, {
+        filter: _,
+        onFilterChange: _,
+        facetingInfo: _,
+        description: _,
+        relevantAssetProperties: _,
+      }),
+      _ &&
+        (0, _.jsx)(_.ResetButton, {
+          onReset: _,
+        }),
+    ],
+  });
+});
+function _(_) {
+  let {
+    filter: _,
+    onFilterChange: _,
+    facetingInfo: _,
+    description: _,
+    relevantAssetProperties: _ = {},
+  } = _;
+  _(_.app, `Attempted to render app filters without an app!`);
+  let _ = _(_.app.appid),
+    _ = (0, _.useMemo)(() => _(_.trigger), [])(_?.tags),
+    _ = _(_ ? _.app.appid : 0),
+    _ = _(_.app.appid);
+  if (!_.isSuccess || _.isError || !_.isSuccess) return null;
+  let _ = (_.data?.property_schemas || []).filter(
+      (_) => !_.hide_from_description && !!_[_._],
+    ),
+    _ = [];
+  return (
+    _ && _.isSuccess && (_ = _.data),
+    (0, _.jsx)(_, {
+      appid: _.app.appid,
+      facets: _.data,
+      facetingInfo: _,
+      accessories: _,
+      assetProperties: _,
+      state: _,
+      onStateChange: _,
+    })
+  );
+}
+function _(_) {
+  let { textFilter: _, onTextFilterChange: _ } = _,
+    [_, _] = (0, _.useState)(void 0),
+    _ = (0, _.useCallback)(() => {
+      _ !== void 0 && (_(_), _(void 0));
+    }, [_, _]);
+  return (
+    (0, _.useEffect)(() => {
+      if (_) {
+        let _ = window.setTimeout(() => _(), 500);
+        return () => window.clearTimeout(_);
+      } else return () => {};
+    }, [_, _]),
+    (0, _.jsx)(_, {
+      dullColor: {
+        8: `var(--color-dull-6)`,
+        9: `var(--color-dull-7)`,
+      },
+      children: (0, _.jsx)(_, {
+        value: _ ?? _ ?? ``,
+        onTextChange: _,
+        onBlur: _,
+        placeholder: _.Localize(`#Listings_TextFilter_Placeholder`),
+        variant: `inset-focus`,
+        maxLength: 90,
+      }),
+    })
+  );
 }
 function _(_ = {}) {
   return _({
@@ -3550,207 +4139,9 @@ function _(_) {
     ],
   });
 }
-var _ = `APEAY0rnAbo-`,
-  _ = `JqPNuuugB1c-`;
-function _(_) {
-  let { currency: _, orders: _ } = _,
-    _ = _.slice(0, 6),
-    _ = _.length < _.length;
-  return (
-    _ && _.pop(),
-    (0, _.jsxs)(`table`, {
-      className: _,
-      children: [
-        (0, _.jsx)(`thead`, {
-          children: (0, _.jsxs)(`tr`, {
-            children: [
-              (0, _.jsx)(`th`, {
-                children: (0, _.jsx)(_, {
-                  size: `4`,
-                  children: _.Localize(`#OrderBook_Table_Price`),
-                }),
-              }),
-              (0, _.jsx)(`th`, {
-                children: (0, _.jsx)(_, {
-                  size: `4`,
-                  children: _.Localize(`#OrderBook_Table_Quantity`),
-                }),
-              }),
-            ],
-          }),
-        }),
-        (0, _.jsxs)(`tbody`, {
-          children: [
-            _.map((_) =>
-              (0, _.jsx)(
-                _,
-                {
-                  quantity: _.quantity,
-                  price: _(_.price, _),
-                },
-                _.price,
-              ),
-            ),
-            _ &&
-              (0, _.jsx)(_, {
-                featuredOrders: _,
-                ..._,
-              }),
-          ],
-        }),
-      ],
-    })
-  );
-}
-function _(_) {
-  let { price: _, quantity: _ } = _,
-    _ = new Intl.NumberFormat();
-  return (0, _.jsxs)(`tr`, {
-    children: [
-      (0, _.jsx)(`td`, {
-        children: (0, _.jsx)(_, {
-          children: _,
-        }),
-      }),
-      (0, _.jsx)(`td`, {
-        children: (0, _.jsx)(_, {
-          children: _.format(_),
-        }),
-      }),
-    ],
-  });
-}
-function _(_) {
-  let { featuredOrders: _, totalOrders: _, orders: _, currency: _ } = _,
-    _ =
-      _[0].price < _[1].price
-        ? `#OrderBook_Table_PriceOrMore`
-        : `#OrderBook_Table_PriceOrLess`,
-    _ = _[_.length].price,
-    _ = _ - _.reduce((_, _) => _ + _.quantity, 0),
-    _ = new Intl.NumberFormat();
-  return (0, _.jsxs)(`tr`, {
-    children: [
-      (0, _.jsx)(`td`, {
-        children: (0, _.jsx)(_, {
-          children: _.Localize(_, _(_, _)),
-        }),
-      }),
-      (0, _.jsx)(`td`, {
-        children: (0, _.jsx)(_, {
-          children: _.format(_),
-        }),
-      }),
-    ],
-  });
-}
-function _() {
-  let [_, _] = (0, _.useState)(!1),
-    [_, _] = (0, _.useState)();
-  return (
-    (0, _.useEffect)(() => {
-      _(!1), _(_);
-    }, [_]),
-    {
-      flash: (0, _.useCallback)(() => {
-        _(!0), _(void 0);
-      }, []),
-      strClassName: _,
-    }
-  );
-}
-function _(_) {
-  let { className: _, ..._ } = _,
-    { flash: _, strClassName: _ } = _(),
-    _ = (0, _.useRef)(!1);
-  return (
-    (0, _.useEffect)(() => {
-      _.current ? _() : (_.current = !0);
-    }, [_, _.children]),
-    (0, _.jsx)(_, {
-      ..._,
-      className: (0, _.default)(_, _),
-    })
-  );
-}
 var _ = `roMraLJYHfY-`,
-  _ = `Gfv8gLv9Z74-`;
-function _(_) {
-  let { description: _, ..._ } = _,
-    _ = _.appid,
-    _ = _.market_name || _.name,
-    _ = _.market_hash_name;
-  if (!_ || !_ || !_) return null;
-  let _ = `Cancel all listings`,
-    _ = `Delete item bucket`,
-    _ = (_) => {
-      switch (_) {
-        case _:
-          confirm(`Are you sure you want to cancel all listings for "${_}"?`) &&
-            _(_, _);
-          break;
-        case _:
-          confirm(
-            `Are you sure you want to remove "${_}" from the market index? If there are listings for this item, please cancel them first or the bucket will come back.`,
-          ) && _(_, _);
-          break;
-      }
-    };
-  return (0, _.jsx)(_, {
-    ..._,
-    children: (0, _.jsx)(_, {
-      options: [_, _],
-      selectedValue: `Admin`,
-      onSelectionChange: _,
-      size: `1`,
-    }),
-  });
-}
-async function _(_, _) {
-  try {
-    let _ = new FormData();
-    _.set(`appid`, _.toString()),
-      _.set(`market_hash_name`, _),
-      _.set(`sessionid`, _());
-    let _ = await fetch(`${_.COMMUNITY_BASE_URL}market/cancelalllistings/`, {
-        method: `POST`,
-        body: _,
-      }),
-      _ = await _.json();
-    if (!_._) {
-      alert(`Failed to cancel. ${_?.error ?? ``}`);
-      return;
-    }
-    alert(
-      `The cancel request was received. The Market servers have begun working on canceling all listings.`,
-    );
-  } catch {
-    alert(`Failed to cancel`);
-  }
-}
-async function _(_, _) {
-  try {
-    let _ = new FormData();
-    _.set(`appid`, _.toString()),
-      _.set(`market_hash_name`, _),
-      _.set(`sessionid`, _());
-    let _ = await fetch(`${_.COMMUNITY_BASE_URL}market/deleteitembucket`, {
-        method: `POST`,
-        body: _,
-      }),
-      _ = await _.json();
-    if (!_._) {
-      alert(`Failed to cancel. ${_?.error ?? ``}`);
-      return;
-    }
-    alert(
-      `The request was received. It should be removed from the search index shortly.`,
-    );
-  } catch {
-    alert(`Failed to delete`);
-  }
-}
-var _ = `j5hLl0uc0ew-`,
+  _ = `Gfv8gLv9Z74-`,
+  _ = `j5hLl0uc0ew-`,
   _ = `KY4I1XHH9WA-`;
 function _(_) {
   let { buckets: _, description: _ } = _;
@@ -4772,397 +5163,6 @@ function _(_) {
       _ && _ ? `#Item_CountryBuySellRestricted` : `#Item_CountryBuyRestricted`,
     ),
   });
-}
-var _ = `_3DSXa7TwSCo-`,
-  _ = `DbqWsFmrBJU-`,
-  _ = `-RfAozBAXnc-`;
-function _() {
-  return (0, _.jsx)(_, {
-    position: `relative`,
-    inset: `0`,
-    radius: `sm`,
-    direction: `column`,
-    align: `center`,
-    justify: `center`,
-    marginTop: `2`,
-    className: _,
-    style: {
-      pointerEvents: `none`,
-    },
-    children: (0, _.jsx)(_, {
-      align: `center`,
-      _: `div`,
-      size: `7`,
-      weight: `heavy`,
-      children: _.Localize(`#Listings_NoneFound`),
-    }),
-  });
-}
-function _(_) {
-  let {
-      view: _ = `grid`,
-      onViewChange: _,
-      children: _,
-      breadcrumbs: _ = (0, _.jsx)(`div`, {}),
-      sort: _,
-      onLoadMore: _,
-      loadingMore: _,
-      loadingNew: _ = !0,
-      loadingError: _,
-      empty: _,
-      resetScrollIdentity: _,
-    } = _,
-    _ = _() === `initial`,
-    _ = !_,
-    _ = (0, _.useRef)(null),
-    _ = (0, _.useRef)(!0);
-  return (
-    (0, _.useEffect)(() => {
-      _.current &&
-        !_.current &&
-        _.current.getBoundingClientRect().top < 0 &&
-        _.current.scrollIntoView(!0),
-        (_.current = !1);
-    }, [_]),
-    (0, _.jsxs)(_, {
-      ref: _,
-      children: [
-        (0, _.jsxs)(_, {
-          justify: `between`,
-          align: `center`,
-          gap: `2`,
-          marginBottom: `2`,
-          wrap: `wrap`,
-          children: [
-            _,
-            (0, _.jsxs)(_, {
-              gap: `2`,
-              align: `center`,
-              children: [
-                !1,
-                !_ &&
-                  (0, _.jsx)(_, {
-                    children: _.Localize(`#SortBy_Label`),
-                  }),
-                _,
-              ],
-            }),
-          ],
-        }),
-        (0, _.jsxs)(_, {
-          position: `relative`,
-          children: [
-            _ === `grid` &&
-              (0, _.jsxs)(_, {
-                columns: {
-                  initial: `repeat(auto-fill, minmax(136px, 1fr))`,
-                  _: `repeat(auto-fill, minmax(260px, 1fr))`,
-                },
-                gap: {
-                  initial: `2`,
-                  _: `4`,
-                },
-                children: [
-                  _,
-                  _ &&
-                    (0, _.jsx)(_, {
-                      onTrigger: _,
-                    }),
-                ],
-              }),
-            _ === `list` &&
-              (0, _.jsxs)(_, {
-                direction: `column`,
-                gap: `4`,
-                children: [
-                  _,
-                  _ &&
-                    (0, _.jsx)(_, {
-                      onTrigger: _,
-                    }),
-                ],
-              }),
-            _ && (0, _.jsx)(_, {}),
-            _ &&
-              (0, _.jsx)(_, {
-                justify: `center`,
-                margin: `5`,
-                children: (0, _.jsx)(_, {
-                  size: `4`,
-                }),
-              }),
-            _ &&
-              (0, _.jsx)(_, {
-                position: `absolute`,
-                inset: `0`,
-                background: `dull-4 80%`,
-                radius: `sm`,
-                paddingX: `4`,
-                paddingTop: `9`,
-                children: (0, _.jsx)(_, {
-                  justify: `center`,
-                  align: `center`,
-                  children: (0, _.jsx)(_, {
-                    size: `5`,
-                  }),
-                }),
-              }),
-            _ && (0, _.jsx)(_, {}),
-          ],
-        }),
-      ],
-    })
-  );
-}
-function _() {
-  return (0, _.jsx)(_, {
-    justify: `center`,
-    align: `center`,
-    radius: `sm`,
-    background: `red-3`,
-    outline: `red-5`,
-    padding: `4`,
-    marginTop: `4`,
-    children: (0, _.jsx)(_, {
-      size: `5`,
-      contrast: `subtitle`,
-      children: _.Localize(`#Results_PageLoadError`),
-    }),
-  });
-}
-var _ = `CqWwAJioCoU-`,
-  _ = `CXcCYctqKOs-`;
-function _() {
-  return _(`sm`);
-}
-function _(_) {
-  let { children: _ } = _;
-  return _()
-    ? (0, _.jsx)(_, {
-        ..._,
-      })
-    : (0, _.jsx)(_, {
-        gap: `2`,
-        direction: `column`,
-        width: `300px`,
-        maxWidth: `300px`,
-        position: `sticky`,
-        inset: `var(--spacing-2) auto auto auto`,
-        children: _,
-      });
-}
-function _(_) {
-  let { children: _, onClose: _, open: _ } = _;
-  return _
-    ? (0, _.jsx)(_.Root, {
-        onClose: _,
-        children: (0, _.jsxs)(_, {
-          gap: `2`,
-          direction: `column`,
-          width: `min( 300px, 95vw )`,
-          maxWidth: `min( 300px, 95vw )`,
-          elevation: `2`,
-          background: `dull-3`,
-          position: `relative`,
-          maxHeight: `95vh`,
-          overflow: `auto`,
-          onClick: (_) => _.stopPropagation(),
-          children: [
-            (0, _.jsxs)(_, {
-              direction: `column`,
-              gap: `2`,
-              padding: `3`,
-              children: [
-                (0, _.jsx)(_, {
-                  inset: `12px 12px auto auto`,
-                  position: `absolute`,
-                  children: (0, _.jsx)(_, {
-                    onClick: _,
-                    hitSlop: !0,
-                  }),
-                }),
-                _,
-              ],
-            }),
-            (0, _.jsx)(_, {
-              padding: `3`,
-              paddingTop: `4`,
-              position: `sticky`,
-              marginTop: `2`,
-              inset: `auto auto 0 auto`,
-              className: _,
-              children: (0, _.jsx)(_, {
-                variant: `inverted`,
-                width: `100%`,
-                color: `green`,
-                onClick: _,
-                children: _.Localize(`#Filter_ViewResults`),
-              }),
-            }),
-          ],
-        }),
-      })
-    : null;
-}
-function _(_) {
-  let { children: _ } = _;
-  return (0, _.jsx)(_, {
-    weight: `heavy`,
-    size: `4`,
-    className: _,
-    children: _,
-  });
-}
-function _(_) {
-  let { onReset: _ } = _;
-  return (0, _.jsx)(_, {
-    alignSelf: `center`,
-    children: (0, _.jsx)(_, {
-      color: `dull`,
-      variant: `ghost`,
-      onClick: _,
-      children: _.Localize(`#MarketSearch_Reset`),
-    }),
-  });
-}
-var _ = Object.assign(_, {
-  Title: _,
-  ResetButton: _,
-});
-function _(_, _) {
-  let _ = _(_),
-    [_, _] = (0, _.useState)(null),
-    _ = _(_, {
-      nTimeoutMS: 300,
-      nTimeoutExtensionMS: 300,
-      nMaxTimeoutExtensions: 1 / 0,
-    }),
-    _ = _(_);
-  return (
-    (0, _.useEffect)(() => {
-      _ !== null && _ !== null && _ !== _ && (_(_), _(null));
-    }, [_, _, _, _]),
-    (0, _.useEffect)(() => {
-      _ !== _ && _ !== null && _ !== null && _(null);
-    }, [_, _, _]),
-    [_ === null ? _ : _, _]
-  );
-}
-var _ = _.memo(function (_) {
-  let {
-      filter: _,
-      onFilterChange: _,
-      facetingInfo: _,
-      description: _,
-      relevantAssetProperties: _,
-      open: _,
-      onShowFilters: _,
-    } = _,
-    _ = _(),
-    [_, _] = (0, _.useState)(),
-    _ = (_, _) => {
-      _ ? (_(_), _(void 0)) : _(_);
-    },
-    _ = _ || _,
-    _ =
-      _.price[0] !== 0 ||
-      _.price[1] !== _.maxPrice ||
-      Object.keys(_.facets).length > 0 ||
-      Object.keys(_.accessories).length > 0,
-    _ = () => {
-      _(
-        {
-          ..._,
-          facets: {},
-          accessories: {},
-          price: [0, _.maxPrice],
-        },
-        !0,
-      );
-    };
-  return (0, _.jsxs)(_, {
-    open: _,
-    onClose: () => _(!1),
-    children: [
-      (0, _.jsx)(_.Title, {
-        children: _.Localize(`#ListingFilter_Title`),
-      }),
-      (0, _.jsx)(_, {
-        ..._,
-      }),
-      (0, _.jsx)(_, {
-        filter: _,
-        onFilterChange: _,
-        facetingInfo: _,
-        description: _,
-        relevantAssetProperties: _,
-      }),
-      _ &&
-        (0, _.jsx)(_.ResetButton, {
-          onReset: _,
-        }),
-    ],
-  });
-});
-function _(_) {
-  let {
-    filter: _,
-    onFilterChange: _,
-    facetingInfo: _,
-    description: _,
-    relevantAssetProperties: _ = {},
-  } = _;
-  _(_.app, `Attempted to render app filters without an app!`);
-  let _ = _(_.app.appid),
-    _ = (0, _.useMemo)(() => _(_.trigger), [])(_?.tags),
-    _ = _(_ ? _.app.appid : 0),
-    _ = _(_.app.appid);
-  if (!_.isSuccess || _.isError || !_.isSuccess) return null;
-  let _ = (_.data?.property_schemas || []).filter(
-      (_) => !_.hide_from_description && !!_[_._],
-    ),
-    _ = [];
-  return (
-    _ && _.isSuccess && (_ = _.data),
-    (0, _.jsx)(_, {
-      appid: _.app.appid,
-      facets: _.data,
-      facetingInfo: _,
-      accessories: _,
-      assetProperties: _,
-      state: _,
-      onStateChange: _,
-    })
-  );
-}
-function _(_) {
-  let { textFilter: _, onTextFilterChange: _ } = _,
-    [_, _] = (0, _.useState)(void 0),
-    _ = (0, _.useCallback)(() => {
-      _ !== void 0 && (_(_), _(void 0));
-    }, [_, _]);
-  return (
-    (0, _.useEffect)(() => {
-      if (_) {
-        let _ = window.setTimeout(() => _(), 500);
-        return () => window.clearTimeout(_);
-      } else return () => {};
-    }, [_, _]),
-    (0, _.jsx)(_, {
-      dullColor: {
-        8: `var(--color-dull-6)`,
-        9: `var(--color-dull-7)`,
-      },
-      children: (0, _.jsx)(_, {
-        value: _ ?? _ ?? ``,
-        onTextChange: _,
-        onBlur: _,
-        placeholder: _.Localize(`#Listings_TextFilter_Placeholder`),
-        variant: `inset-focus`,
-        maxLength: 90,
-      }),
-    })
-  );
 }
 function _(_) {
   let { title: _, children: _, ..._ } = _,
