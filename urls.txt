@@ -439,6 +439,7 @@ ClientManifest/steam_client_win64               @ https://client-update.fastly.s
 ClientManifest/steam_client_osx                 @ https://client-update.fastly.steamstatic.com/steam_client_osx?__TIME__
 ClientManifest/steam_client_linuxarm64          @ https://client-update.fastly.steamstatic.com/steam_client_linuxarm64?__TIME__
 ClientManifest/steamdeck_stable                 @ https://client-update.fastly.steamstatic.com/steam_client_steamdeck_stable_ubuntu12?__TIME__
+ClientManifest/steam_client_chromeos            @ https://client-update.fastly.steamstatic.com/steam_client_chromeos_public_88ac3843c888c7adb9cd406fbac4ff7a7d2cde9b_ubuntu12?__TIME__
 
 //
 // Beta Client Manifests
