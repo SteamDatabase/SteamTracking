@@ -105,11 +105,27 @@ console.log("Found", files.length, "files to parse");
 for (const file of files) {
 	try {
 		const code = await readFile(file);
-		const ast = parse(code, {
-			ecmaVersion: latestEcmaVersion,
-			sourceType: "module",
-			loc: true,
-		});
+		let ast;
+
+		try {
+			ast = parse(code, {
+				ecmaVersion: latestEcmaVersion,
+				sourceType: "module",
+				loc: true,
+			});
+		} catch (e) {
+			// Legacy non-module scripts can contain things that are only valid in
+			// sloppy mode (e.g. duplicate top-level function declarations).
+			if (!(e instanceof SyntaxError)) {
+				throw e;
+			}
+
+			ast = parse(code, {
+				ecmaVersion: latestEcmaVersion,
+				sourceType: "script",
+				loc: true,
+			});
+		}
 		const crossModuleExportedMessages = new Map();
 		const services = [];
 		const messages = [];
@@ -182,7 +198,19 @@ for (const file of files) {
 						}
 
 						if (crossModuleExportedMessages.has(currentModule)) {
-							throw new Error(`Module already exported: ${currentModule}`);
+							// Plain (non-webpack) scripts can have object literals that reuse the same
+							// key with a 3-parameter function (e.g. `success: function (a, b, c)`).
+							// Only complain if this repeat actually looks like a webpack module.
+							if (
+								result.exportedIds.size > 0 ||
+								result.services.length > 0 ||
+								result.messages.length > 0 ||
+								result.enums.length > 0
+							) {
+								throw new Error(`Module already exported: ${currentModule}`);
+							}
+
+							return;
 						}
 
 						crossModuleExportedMessages.set(currentModule, result.exportedIds);
