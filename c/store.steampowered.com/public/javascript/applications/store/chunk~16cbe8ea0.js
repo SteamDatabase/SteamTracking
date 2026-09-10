@@ -8739,7 +8739,36 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        GetMyEventVote: async function (_) {
+          const _ =
+              _._.STORE_BASE_URL +
+              "partnereventaction/myvote?gid=" +
+              encodeURIComponent(_),
+            _ = await fetch(_, {
+              credentials: "include",
+            });
+          if (!_._) throw new Error(`${_} answered ${_.status}`);
+          return (await __webpack_require__.json()).vote ?? null;
+        },
+        RateEvent: async function (_, _, _) {
+          const _ = _._.STORE_BASE_URL + "partnereventaction/rateevent",
+            _ = {
+              gid: _,
+              clanaccountid: String(_),
+              voteup: "up" == _ ? "1" : "0",
+            },
+            _ = await fetch(_, {
+              method: "POST",
+              credentials: "include",
+              body: new URLSearchParams(_),
+            });
+          if (!_._) throw new Error(`${_} answered ${_.status}`);
+          return (await _.json()).success ?? _._;
+        },
+      };
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8749,34 +8778,42 @@
         const _ = _?.AnnouncementGID,
           _ = _?.clanSteamID.GetAccountID() ?? 0,
           _ = (function () {
-            const _ = (0, _._)();
+            const { useActiveCMInterface: _ } = (0, _._)(),
+              _ = (0, _._)(),
+              _ = Boolean(_);
             return _.useMemo(
-              () => ({
-                GetMyEventVote: async (_) =>
-                  await (async function (_, _) {
-                    if (!_) return null;
-                    const _ = await _._.GetClanAnnouncementVoteForUser(_, {
-                      announcementid: _,
-                    });
-                    if (!__webpack_require__.BSuccess()) return null;
-                    return __webpack_require__.Body().voted_up()
-                      ? "up"
-                      : __webpack_require__.Body().voted_down()
-                        ? "down"
-                        : null;
-                  })(_, _),
-                RateEvent: async (_, _, _) =>
-                  await (async function (_, _, _, _) {
-                    if (!_) return _._;
-                    const _ = await _._.RateClanAnnouncement(_, {
-                      announcementid: _,
-                      vote_up: "up" == _,
-                      clan_accountid: _,
-                    });
-                    return _.GetEResult();
-                  })(_, _, _, _),
-              }),
-              [_],
+              () =>
+                _
+                  ? {
+                      GetMyEventVote: async (_) =>
+                        await (async function (_, _) {
+                          if (!_) return null;
+                          const _ = await _._.GetClanAnnouncementVoteForUser(
+                            _,
+                            {
+                              announcementid: _,
+                            },
+                          );
+                          if (!__webpack_require__.BSuccess()) return null;
+                          return __webpack_require__.Body().voted_up()
+                            ? "up"
+                            : __webpack_require__.Body().voted_down()
+                              ? "down"
+                              : null;
+                        })(_, _),
+                      RateEvent: async (_, _, _) =>
+                        await (async function (_, _, _, _) {
+                          if (!_) return _._;
+                          const _ = await _._.RateClanAnnouncement(_, {
+                            announcementid: _,
+                            vote_up: "up" == _,
+                            clan_accountid: _,
+                          });
+                          return _.GetEResult();
+                        })(_, _, _, _),
+                    }
+                  : _,
+              [_, _],
             );
           })(),
           { myVote: _, Vote: _ } = (0, _._)(_, _, _, {

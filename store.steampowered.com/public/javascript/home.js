@@ -2293,7 +2293,7 @@ GHomepage = {
 				var SettingsSpotlights = {
 			games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true,
 			include_priority: true };
-		var rgSpotlights = GDynamicStorePage.FilterAndPrioritizeCapsules( $J('.home_area_spotlight', $Pages), 'spotlights', 'home', SettingsSpotlights, oShownItems, 3 );
+						var rgSpotlights = GDynamicStorePage.FilterAndPrioritizeCapsules( $J('.home_area_spotlight', $Pages), 'spotlights', 'home', SettingsSpotlights, oShownItems );
 		var rgDailyDeals = GDynamicStorePage.FilterAndPrioritizeCapsules( $J('.store_capsule.daily_deal', $Pages), 'spotlights', 'home', Settings, oShownItems, 2 );
 		var rgSpecials = GDynamicStorePage.FilterAndPrioritizeItems( GHomepage.oDisplayLists.specials, 'spotlights', 'home', Settings, oShownItems, 16 );
 

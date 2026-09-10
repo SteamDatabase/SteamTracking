@@ -1624,6 +1624,8 @@ ${STORE_BASE_URL}notification/ajaxusersettings
 ${STORE_BASE_URL}online_conduct/
 ${STORE_BASE_URL}parental/ajaxunlock/
 ${STORE_BASE_URL}parental/requestrecovery
+${STORE_BASE_URL}partnereventaction/myvote?gid=${}
+${STORE_BASE_URL}partnereventaction/rateevent
 ${STORE_BASE_URL}personalcalendar
 ${STORE_BASE_URL}personalcalendar/
 ${STORE_BASE_URL}personalcalendardata

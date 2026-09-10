@@ -5820,7 +5820,7 @@
         T = n(14256),
         C = n.n(T),
         R = n(32803),
-        A = n(91546),
+        A = n(28102),
         D = n(86090),
         I = n(75844),
         M = n(17720),
@@ -8035,81 +8035,114 @@
         return i.useContext(r) ?? (0, a.Gw)();
       }
     },
-    91546: (e, t, n) => {
+    28102: (e, t, n) => {
       "use strict";
-      n.d(t, { C: () => u });
+      n.d(t, { C: () => p });
       var i = n(41838),
         a = n(37085),
-        r = n(34214),
-        s = n(23809),
-        o = n(90626),
-        l = n(81393),
-        c = n(24484);
-      let d;
-      function u(e, t) {
+        r = n(66418);
+      const s = {
+        GetMyEventVote: async function (e) {
+          const t =
+              r.TS.STORE_BASE_URL +
+              "partnereventaction/myvote?gid=" +
+              encodeURIComponent(e),
+            n = await fetch(t, { credentials: "include" });
+          if (!n.ok) throw new Error(`${t} answered ${n.status}`);
+          return (await n.json()).vote ?? null;
+        },
+        RateEvent: async function (e, t, n) {
+          const i = r.TS.STORE_BASE_URL + "partnereventaction/rateevent",
+            s = {
+              gid: e,
+              clanaccountid: String(t),
+              voteup: "up" == n ? "1" : "0",
+            },
+            o = await fetch(i, {
+              method: "POST",
+              credentials: "include",
+              body: new URLSearchParams(s),
+            });
+          if (!o.ok) throw new Error(`${i} answered ${o.status}`);
+          return (await o.json()).success ?? a.zi;
+        },
+      };
+      var o = n(34214),
+        l = n(23809),
+        c = n(90626),
+        d = n(81393),
+        u = n(24484);
+      let m;
+      function p(e, t) {
         const n = e?.AnnouncementGID,
-          l = e?.clanSteamID.GetAccountID() ?? 0,
-          c = (function () {
-            const e = (0, s.KV)();
-            return o.useMemo(
-              () => ({
-                GetMyEventVote: async (t) =>
-                  await (async function (e, t) {
-                    if (!e) return null;
-                    const n = await r.BE.GetClanAnnouncementVoteForUser(e, {
-                      announcementid: t,
-                    });
-                    if (!n.BSuccess()) return null;
-                    return n.Body().voted_up()
-                      ? "up"
-                      : n.Body().voted_down()
-                        ? "down"
-                        : null;
-                  })(e, t),
-                RateEvent: async (t, n, i) =>
-                  await (async function (e, t, n, i) {
-                    if (!e) return a.Dy;
-                    const s = await r.BE.RateClanAnnouncement(e, {
-                      announcementid: t,
-                      vote_up: "up" == i,
-                      clan_accountid: n,
-                    });
-                    return s.GetEResult();
-                  })(e, t, n, i),
-              }),
-              [e],
+          r = e?.clanSteamID.GetAccountID() ?? 0,
+          d = (function () {
+            const { useActiveCMInterface: e } = (0, l.tc)(),
+              t = (0, l.KV)(),
+              n = Boolean(e);
+            return c.useMemo(
+              () =>
+                n
+                  ? {
+                      GetMyEventVote: async (e) =>
+                        await (async function (e, t) {
+                          if (!e) return null;
+                          const n = await o.BE.GetClanAnnouncementVoteForUser(
+                            e,
+                            { announcementid: t },
+                          );
+                          if (!n.BSuccess()) return null;
+                          return n.Body().voted_up()
+                            ? "up"
+                            : n.Body().voted_down()
+                              ? "down"
+                              : null;
+                        })(t, e),
+                      RateEvent: async (e, n, i) =>
+                        await (async function (e, t, n, i) {
+                          if (!e) return a.Dy;
+                          const r = await o.BE.RateClanAnnouncement(e, {
+                            announcementid: t,
+                            vote_up: "up" == i,
+                            clan_accountid: n,
+                          });
+                          return r.GetEResult();
+                        })(t, e, n, i),
+                    }
+                  : s,
+              [n, t],
             );
           })(),
-          { myVote: d, Vote: u } = (0, i.KL)(n, l, c, {
-            initialVote: m(n),
+          { myVote: u, Vote: m } = (0, i.KL)(n, r, d, {
+            initialVote: _(n),
             ...t,
           });
         return {
-          myVote: d,
+          myVote: u,
           Vote: (t) => {
             e &&
               n &&
-              t != d &&
-              (d && e.UpdateVoteCount(d, -1), e.UpdateVoteCount(t, 1), u(t));
+              t != u &&
+              (u && e.UpdateVoteCount(u, -1), e.UpdateVoteCount(t, 1), m(t));
           },
         };
       }
-      function m(e) {
+      function _(e) {
         if ("undefined" != typeof window) {
-          if (!d) {
-            d = new Map();
-            const e = (0, c.Fd)("uservotes", "application_config");
+          if (!m) {
+            m = new Map();
+            const e = (0, u.Fd)("uservotes", "application_config");
             e?.forEach((e) => {
               e.clanAnnouncementGID &&
-                d.set(
+                m.set(
                   e.clanAnnouncementGID,
                   e.voted_up ? "up" : e.voted_down ? "down" : null,
                 );
             });
           }
-          return e ? d.get(e) : void 0;
+          return e ? m.get(e) : void 0;
         }
-        (0, l.wT)(!1, "GetVoteFromPageConfig is browser only");
+        (0, d.wT)(!1, "GetVoteFromPageConfig is browser only");
       }
     },
     93826: (e, t, n) => {
