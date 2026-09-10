@@ -333,14 +333,49 @@ class ClientExtractor
 			return false;
 		}
 
-		if( preg_match( "/exports=JSON\.parse\('(?<code>.+)'\)}}]\);(?:\r?\n\/\/# sourceMappingURL=(.+)\.map)?$/", $Data, $Matches ) !== 1 )
+		if( ( preg_match( "/exports=JSON\.parse\('(?<code>.+)'\)}}]\);(?:\r?\n\/\/# sourceMappingURL=(.+)\.map)?$/", $Data, $Matches ) !== 1 ) && ( preg_match( "/exports=JSON\.parse\(`(.*)`\)/", $Data, $Matches ) !== 1 ) && ( preg_match( "/exports=JSON\.parse\('(.*)'\)/", $Data, $Matches ) !== 1 ) )
 		{
 			return false;
 		}
 
 		$NewFilename = preg_replace( '/(-json)?\.js$/', '.json', $Filename );
 
-		$Data = stripcslashes( $Matches[ 1 ] );
+
+		$Data = preg_replace_callback( '/\\\\(\\\\|x[0-9A-Fa-f]{2}|\'|\`|u\{[0-9a-fA-F]+\})/',
+				function( $m )
+				{
+					$esc = $m[ 1 ];
+
+					if( $esc === '\\' )
+					{
+						return '\\';
+					}
+
+					if( $esc[ 0 ] === 'x' )
+					{
+						return '\u00' . substr( $esc, 1 );
+					}
+
+					if( $esc[ 0 ] === 'u' )
+					{
+						return mb_chr(hexdec(substr( $esc, 2, -1 )), 'UTF-8');
+					}
+
+					if( $esc === '`' )
+					{
+						return '`';
+					}
+
+					if( $esc === "'" )
+					{
+						return "'";
+					}
+
+					throw new Exception( "Unknown escape sequence: $esc" );
+				},
+				$Matches[ 1 ] 
+        );
+
 		$Data = json_decode( $Data, true, 512, JSON_THROW_ON_ERROR );
 		$Data = json_encode( $Data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . PHP_EOL;
 
@@ -398,7 +433,7 @@ class ClientExtractor
 
 			if( $Extension === 'js' )
 			{
-				if( $this->ExtractJsonFromWebpack( $File->getPathname() ) )
+				if( !str_starts_with( $Filename, 'libraries~' ) && $this->ExtractJsonFromWebpack( $File->getPathname() ) )
 				{
 					$this->Log( 'Extracted json from ' . $RelativePath );
 					continue;

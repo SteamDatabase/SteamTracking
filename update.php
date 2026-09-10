@@ -1231,7 +1231,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		// Fixes valve being unable to send a proper utf-8 file
 		private function StringUnescape( $str )
         {
-            return preg_replace_callback( '/\\\\(\\\\|x[0-9A-Fa-f]{2}|\')/',
+            return preg_replace_callback( '/\\\\(\\\\|x[0-9A-Fa-f]{2}|\'|u\{[0-9a-fA-F]+\})/',
 				function( $m )
 				{
 					$esc = $m[ 1 ];
@@ -1244,6 +1244,11 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 					if( $esc[ 0 ] === 'x' )
 					{
 						return '\u00' . substr( $esc, 1 );
+					}
+
+					if( $esc[ 0 ] === 'u' )
+					{
+						return mb_chr(hexdec(substr( $esc, 2, -1 )), 'UTF-8');
 					}
 
 					return "'";
