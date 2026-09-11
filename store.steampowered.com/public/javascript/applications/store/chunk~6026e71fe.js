@@ -10851,28 +10851,31 @@
       }
       function ls(e) {
         const { rgLanguagePreferences: t, options: a } = e,
-          { appid: s } = r.useContext(nt.S),
-          [i, o] = r.useState(!1),
-          l = (0, ga.lI)(),
-          c = !(0, qe.Qn)(),
-          d = ba(s, ha.Wf.SL),
-          u = Ca(s),
-          [m, p] = r.useState(void 0),
-          _ = m ?? Boolean(d.data?.expand_graph),
-          h = r.useMemo(() => !!qa(d.data), [d.data]),
-          g = (0, qt.BL)(
+          { appid: s, summary_options: i } = r.useContext(nt.S),
+          [o, l] = r.useState(!1),
+          c = (0, ga.lI)(),
+          d = !(0, qe.Qn)(),
+          u = ba(s, ha.Wf.SL),
+          m = Ca(s),
+          [p, _] = r.useState(void 0),
+          h = p ?? Boolean(u.data?.expand_graph),
+          g = r.useMemo(() => !!qa(u.data), [u.data]),
+          f = (0, qt.BL)(
             r.useCallback((e) => {
-              e.isIntersecting && o(!0);
+              e.isIntersecting && l(!0);
             }, []),
             { threshold: 0, rootMargin: "0px 0px 1000px 0px" },
           ),
-          [f, S] = r.useState({
+          [S, v] = r.useState({
             ...Ye(),
             language: or(t),
             filter_offtopic_activity:
-              l.data?.preferences?.review_score_preference != ha.Wf.Yy,
+              c.data?.preferences?.review_score_preference != ha.Wf.Yy,
+            summary_num_positive_reviews:
+              i?.summaryDisplayed?.nReviewsPositive || 0,
+            summary_num_reviews: i?.summaryDisplayed?.nReviews || 0,
           }),
-          v = (function (e, t, a) {
+          y = (function (e, t, a) {
             const n = (0, ze.jE)();
             return (0, Ve.q)({
               queryKey: Xe(e, t),
@@ -10884,13 +10887,13 @@
               retry: (e, t) =>
                 t instanceof Ue.x ? t.eResult != He.nO && e < 3 : e < 3,
             });
-          })(s, f, i),
-          y = v?.data?.pages?.[0],
-          b =
-            (v?.data?.pages?.[v.data.pages.length - 1],
-            new Map(y?.rgReviewTags.map((e) => [e.id, e]))),
-          C = r.useCallback((e, t, a) => {
-            S((n) => ({
+          })(s, S, o),
+          b = y?.data?.pages?.[0],
+          C =
+            (y?.data?.pages?.[y.data.pages.length - 1],
+            new Map(b?.rgReviewTags.map((e) => [e.id, e]))),
+          w = r.useCallback((e, t, a) => {
+            v((n) => ({
               ...n,
               start_date: e,
               end_date: t,
@@ -10899,8 +10902,8 @@
               review_type: a,
             }));
           }, []),
-          w = r.useCallback((e, t) => {
-            S((a) => ({
+          x = r.useCallback((e, t) => {
+            v((a) => ({
               ...a,
               start_date: e,
               end_date: t,
@@ -10909,79 +10912,79 @@
               filter_offtopic_activity: !1,
             }));
           }, []),
-          x = r.useCallback((e) => {
-            S((t) => ({
+          A = r.useCallback((e) => {
+            v((t) => ({
               ...t,
               topics: Array.from(new Set(t.topics).add(String(e))),
             }));
           }, []),
-          A = r.useCallback(() => {
-            p(!_);
-          }, [_]),
-          I = f.start_date > 0 && f.end_date > 0,
-          T = r.useMemo(
-            () =>
-              I ? { nStartDate: f.start_date, nEndDate: f.end_date } : void 0,
-            [I, f.start_date, f.end_date],
-          ),
+          I = r.useCallback(() => {
+            _(!h);
+          }, [h]),
+          T = S.start_date > 0 && S.end_date > 0,
           j = r.useMemo(
+            () =>
+              T ? { nStartDate: S.start_date, nEndDate: S.end_date } : void 0,
+            [T, S.start_date, S.end_date],
+          ),
+          D = r.useMemo(
             () =>
               a && {
                 ...a,
-                rgTopics: y?.rgReviewTags,
-                bHasOfftopicActivity: u,
-                bHasReviewHistogram: h,
+                rgTopics: b?.rgReviewTags,
+                bHasOfftopicActivity: m,
+                bHasReviewHistogram: g,
                 rgLanguagePreferences: t,
               },
-            [a, y?.rgReviewTags, u, h, t],
+            [a, b?.rgReviewTags, m, g, t],
           );
         return (0, n.jsxs)(nt.M.Provider, {
-          value: { fnSetTopicFilter: x },
+          value: { fnSetTopicFilter: A },
           children: [
             !1,
-            c &&
-              j &&
+            d &&
+              D &&
               (0, n.jsxs)(n.Fragment, {
                 children: [
                   (0, n.jsx)(on, {
                     appid: s,
-                    onSelectDateRange: C,
-                    onSelectOffTopicActivity: w,
-                    selectedRange: T,
-                    bCollapsed: !_,
+                    onSelectDateRange: w,
+                    onSelectOffTopicActivity: x,
+                    selectedRange: j,
+                    bCollapsed: !h,
                   }),
                   (0, n.jsx)(lr, {
-                    filters: f,
-                    onFiltersChanged: S,
-                    options: j,
-                    bGraphVisible: !!_,
-                    onShowGraph: A,
+                    filters: S,
+                    onFiltersChanged: v,
+                    options: D,
+                    bGraphVisible: !!h,
+                    onShowGraph: I,
                   }),
-                  f &&
+                  S &&
                     (0, n.jsx)(vr, {
-                      filters: f,
-                      onFiltersChanged: S,
-                      options: j,
+                      filters: S,
+                      onFiltersChanged: v,
+                      options: D,
                     }),
                 ],
               }),
             (0, n.jsxs)("div", {
-              ref: g,
+              ref: f,
               className: _a().StatusLine,
               children: [
-                v.isFetching && (0, n.jsx)(zt.t, { size: "small" }),
+                y.isFetching && (0, n.jsx)(zt.t, { size: "small" }),
                 (0, n.jsx)(ss, {
-                  data: y,
-                  bFilteredReviews: f.filter_offtopic_activity,
-                  bHasReviewBombs: u,
+                  data: b,
+                  bFilteredReviews: S.filter_offtopic_activity,
+                  bHasReviewBombs: m,
                 }),
               ],
             }),
-            "summary" == y?.reviewFilter &&
-              (0, n.jsx)(us, { summary: y, mapTags: b }),
-            "summary" != y?.reviewFilter &&
-              (0, n.jsx)(cs, { queryReviews: v, mapTags: b }),
-            v.isError && (0, n.jsx)(os, { error: v.error }),
+            "summary" == b?.reviewFilter &&
+              (0, n.jsx)(us, { summary: b, mapTags: C }),
+            "summary" != b?.reviewFilter &&
+              (0, n.jsx)(cs, { queryReviews: y, mapTags: C }),
+            y.isError && (0, n.jsx)(os, { error: y.error }),
           ],
         });
       }

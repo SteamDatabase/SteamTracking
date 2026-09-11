@@ -258,6 +258,8 @@ $\nY8O
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
+00:05:40
+00:05:41
 0123456789
 0123456789ABCDEF
 0123456789abcdef
@@ -272,8 +274,6 @@ $\nY8O
 16IKeyValuesSystem
 18CUtlCharConversion
 19CUtlNoEscConversion
-21:03:00
-21:03:01
 21CUtlCStringConversion
 30!]^JV
 31CAdHocValidation_SimpleCallback
@@ -523,7 +523,7 @@ SKyu
 STEAM_DESKTOP_APP_AFFINITY_LIST
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep  9 2026
+Sep 11 2026
 Size
 Sm"\vg
 Someone called ClearWritingMinidump without holding the minidump lock.
@@ -1157,7 +1157,6 @@ urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 usleep
 utime
 utimes
-v1>a
 vasprintf
 vector::_M_realloc_append
 vector::reserve

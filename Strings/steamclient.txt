@@ -108,7 +108,6 @@
   worker thread: %14s parses (%6.2f%%)  %16s bytes (%6.2f%%)\n
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
- !"#$%&'()*+,-./0123-
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !BAllIntraProcessMessagesReceived( %d outstanding )
@@ -5475,6 +5474,7 @@ $steammessages_parental_objects.proto"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNG}
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -8301,20 +8301,13 @@ $steammessages_parental_objects.proto"
 00000001
 00003333
 00:00:00
-00|000
 01/01/00
-1000
-1024
-10000
-1000000
-1048576
-10000000
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00|000
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
-0123456789ABCDEF@w
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 08bX
@@ -8478,6 +8471,12 @@ $steammessages_parental_objects.proto"
 100 127.0.0.1 stale
 100-continue
 100.64.0.0/10
+1000
+1024
+10000
+1000000
+1048576
+10000000
 10Audio_Stub
 10ByteReader
 10CClientJob
@@ -17464,6 +17463,7 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/@
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -21726,7 +21726,7 @@ CRemoteClientManager::SendEnableAllDownloadsToRemoteClient
 CRemoteClientManager::SendInstallRemoteApp
 CRemoteClientManager::SendQueuedBroadcastMessagesIfNecessary
 CRemoteClientManager::SendRemoveFromDownloadsToRemoteClient
-CRemoteClientManager::SendSuspendDownloadThrottleingToRemoteClient
+CRemoteClientManager::SendSuspendDownloadThrottlingToRemoteClient
 CRemoteClientManager::SendSuspendLanPeerContent
 CRemoteClientManager::SendUninstallRemoteApp
 CRemoteClientManager::SetDownloadingAppIDToRemoteClient
@@ -22450,6 +22450,7 @@ CWorkThreadPool - Check SetEvent
 CWorkThreadPool - SetEvent()
 CWorkThreadPool - Signal Thread Event
 CWorkThreadPool can't support item auto resubmission when ensuring output ordering
+CWorkThreadPool: a deferred work item cannot ask to be resubmitted
 CWorkThreadPool::BTryDeleteExitedWorkerThreads
 CWorkThreadPool::SetEnsureOutputOrdering must be set before any work item is added
 CWorkThreadPool::StartWorkThread: Thread creation failed.\n
@@ -30640,7 +30641,6 @@ MutableRawRepeatedField
 MutableRepeatedMessage
 MuteBroadcastChatUser
 MuteUserInGroup
-MxLw
 Myanmar
 N#_4o9
 N*WVe
@@ -35461,7 +35461,7 @@ SendSteamBroadcastPacket
 SendSteamServiceStatusUpdate
 SendSteamToSteamPacket
 SendStreamTransportSignal
-SendSuspendDownloadThrottleingToRemoteClient
+SendSuspendDownloadThrottlingToRemoteClient
 SendSuspendLanPeerContent
 SendThumbnailToRelay
 SendTimeSincePreviousPacket
@@ -54107,6 +54107,7 @@ localized_name_token
 localized_string
 localized_tag_name
 locally delete
+locally forget
 localtime
 locatio
 location
@@ -58748,6 +58749,7 @@ pThis->m_nReplyTimeoutsSinceLastRecv == 0
 pThisPair->m_nState != kICECandidatePairState_InProgress
 pThisPair->m_nState == kICECandidatePairState_InProgress
 pThread
+pThread && pThread->m_pCurrentWorkItem == pWorkItem && !pThread->m_bCurrentItemDeferred
 pTicket != NULL
 pTimedTrialApp->m_unSecondsUnreported > m_unSecondsReported
 pToken
@@ -61995,7 +61997,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep  9 2026 21:03:04
+steam Sep 11 2026 00:05:45
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate

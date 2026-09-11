@@ -34,7 +34,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = "10978408";
+          _ = "10986482";
         function _(_) {
           const { clipToUpload: _, finishUpload: _ } = _,
             [_, _] = _.useState(!1),
@@ -124,7 +124,7 @@
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "10978408";
+          _ = "10986482";
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -645,7 +645,7 @@
             return "CVideo_GameRecordingSegmentUploadInfo_HTTPHeaders";
           }
         }
-        var _ = "10978408";
+        var _ = "10986482";
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -1782,7 +1782,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "10978408";
+          _ = "10986482";
         function _(_) {
           const { previewURL: _ } = _,
             [_, _] = _.useState(!1);

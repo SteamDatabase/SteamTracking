@@ -103,6 +103,12 @@ if has_beta_optin; then
 	if [ -e "$STEAMROOT/.steam-enable-steamrt64-client" ]; then
 		if [ -x "$STEAMROOT/steamrt64/steam" ]; then
 			log "Starting SteamRT3 Steam"
+			
+			# Some distros incorrectly set STEAM_RUNTIME before starting steam, which will
+			# prevent pressure-vessel from starting:
+			# Reference: https://github.com/ValveSoftware/steam-for-linux/issues/13597
+			unset STEAM_RUNTIME
+
 			create_legacy_entry_points
 			"$STEAMROOT/steamrt64/steam" "$@"
 			STATUS=$?

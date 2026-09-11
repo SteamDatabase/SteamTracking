@@ -5254,8 +5254,10 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGS
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNGx
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -6320,8 +6322,8 @@ ${LANGUAGE}
 ../steamUI/hardwareupdatecontroller.cpp:412
 ../steamUI/installfoldercontroller.cpp
 ../steamUI/ledcontroller.cpp
-../steamUI/ledcontroller.cpp:1922
-../steamUI/ledcontroller.cpp:590
+../steamUI/ledcontroller.cpp:1933
+../steamUI/ledcontroller.cpp:601
 ../steamUI/libraryassetcache.cpp
 ../steamUI/loginusers.cpp
 ../steamUI/modmanager.cpp
@@ -7775,6 +7777,7 @@ ${LANGUAGE}
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEFP
 0123456789abcdef
 03000000de280000fc11000001000000,Steam Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,
 03000000de280000ff11000001000000
@@ -13924,6 +13927,7 @@ ${LANGUAGE}
 :scheme
 :statu
 :status
+:w2A
 ; zp%Jj
 ;!;#;-;9;E;S;Y;_;q;{;
 ;"lY7
@@ -18933,6 +18937,7 @@ CWorkThreadPool - Check SetEvent
 CWorkThreadPool - SetEvent()
 CWorkThreadPool - Signal Thread Event
 CWorkThreadPool can't support item auto resubmission when ensuring output ordering
+CWorkThreadPool: a deferred work item cannot ask to be resubmitted
 CWorkThreadPool::BTryDeleteExitedWorkerThreads
 CWorkThreadPool::SetEnsureOutputOrdering must be set before any work item is added
 CWorkThreadPool::StartWorkThread: Thread creation failed.\n
@@ -27124,6 +27129,7 @@ NVENC - failed to allocate buffers on bitrate/resolution change
 NVENC - failed to allocate buffers on format change [type=%d]
 NVENC - no D3D12 input format for producer format %d
 NVENC - nvenc not supported
+NVENC - recreating due to buffer format change
 NVENC - recreating due to quality or resolution change
 NVIDIA
 N\n\fachievements
@@ -30400,7 +30406,7 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep  9 2026 21:03:08
+Sep 11 2026 00:05:48
 September
 Serbian
 Serial
@@ -38063,6 +38069,7 @@ bIsInClientBeta
 bIsLanguage
 bIsLaunchOptionTypeExemptFromGameTheater
 bIsLimited
+bIsLowSpecHardware
 bIsMounted
 bIsOfflineMode
 bIsOnline
@@ -42503,7 +42510,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -52799,6 +52806,7 @@ pT6w.
 pTCPConnection->m_cOutstandingSends > 0
 pTemperature is a required paramater
 pThread
+pThread && pThread->m_pCurrentWorkItem == pWorkItem && !pThread->m_bCurrentItemDeferred
 pToken
 pToolWindow
 pU>\AL

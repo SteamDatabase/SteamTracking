@@ -11981,7 +11981,7 @@
       }
       function _(_) {
         const { rgLanguagePreferences: _, options: _ } = _,
-          { appid: _ } = _.useContext(_._),
+          { appid: _, summary_options: _ } = _.useContext(_._),
           [_, _] = _.useState(!1),
           _ = (0, _._)(),
           _ = !(0, _._)(),
@@ -12004,6 +12004,9 @@
             language: _(_),
             filter_offtopic_activity:
               _.data?.preferences?.review_score_preference != _._._,
+            summary_num_positive_reviews:
+              _?.summaryDisplayed?.nReviewsPositive || 0,
+            summary_num_reviews: _?.summaryDisplayed?.nReviews || 0,
           }),
           _ = (function (_, _, _) {
             const _ = (0, _._)();

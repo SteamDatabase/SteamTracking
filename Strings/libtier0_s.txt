@@ -109,12 +109,12 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 /tmp/.steam-sem-names
+00:05:42
 0123456789
 0123456789ABCDEF
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
-21:03:02
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -445,7 +445,7 @@ SDL_SetCurrentThreadPriority
 STEAM_DESKTOP_APP_AFFINITY_LIST
 SecureRandomBytes
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep  9 2026
+Sep 11 2026
 ServerMain
 SetAssertDialogsShown
 SetAssertDumpStack
