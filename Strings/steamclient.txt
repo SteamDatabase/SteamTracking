@@ -110,7 +110,6 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123\r
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -2246,6 +2245,7 @@ $steammessages_parental_objects.proto"
 %\n!k_EProfileCustomizationTypeSalien
 %\n!k_ERemoteClientBroadcastMsgStatus
 %\n!k_ERemoteClientPairWifiAPCanceled
+%\n!k_ERemoteClientPairWifiAPProgress
 %\n!k_ERemoteClientServiceSiteLicense
 %\n!k_ERemoteDeviceStreamingInvisible
 %\n!k_ESteamDatagramMsg_P2PStatsRelay
@@ -4061,7 +4061,6 @@ $steammessages_parental_objects.proto"
 (\t"\\n*CBroadcast_UpdateChatMessageFlair_Response
 (\t"\v\n\tCPauseMsg"\f\n\nCResumeMsg"
 (\t"]\n"CShader_GetBucketManifest_Response
-(\t"^\n"CMsgRemoteClientPairWifiAPResponse
 (\t"_\n/CMsgClientRequestForgottenPasswordEmailResponse
 (\t"_\n\rGameListEntry
 (\t"`\n(CBroadcast_MuteBroadcastChatUser_Request
@@ -5258,6 +5257,7 @@ $steammessages_parental_objects.proto"
 *ZN21CNetworkManagerClient23RequestUpdateDeviceDataEjEUlvE_
 *ZN21CNetworkManagerClient28TriggerGalileoWifiWorkaroundEvEUlvE_
 *ZN21CNetworkManagerDevice19OnWifiSignalChangedEP14_NMAccessPointEUlvE_
+*ZN23CRemoteClientPairWifiAP21BYieldingRunClientJobEvEUlRKN19CRemoteClientSoftAP17ConnectProgress_tEE_
 *ZN23CSystemPerfManagerLinux31SetRefreshRateExternallyManagedEbEUlvE_
 *ZN24CSystemDisplayManagerX114InitEvEUlPN12LinuxHelpers22ScreenChangedDetails_tEE_
 *ZN25SteamNetworkingSocketsLib24CSteamNetworkingUtilsSDR23BeginFetchNetworkConfigEbbEUlPNS_14HTTPResponse_tEE_
@@ -5283,6 +5283,7 @@ $steammessages_parental_objects.proto"
 *ZN28CSystemDisplayManagerWayland4InitEvEUlPN12LinuxHelpers22ScreenChangedDetails_tEE_
 *ZN29CRemoteStorageFileSyncContext19EYieldingUploadFileERK20RemoteFileCacheKey_tyPFbRK10CUtlBufferPvES6_bEUlP18CHTTPRequestHandlejE_
 *ZN29CRemoteStorageFileSyncContext21EYieldingDownloadFileERK20RemoteFileCacheKey_tEUlP18CHTTPRequestHandleR10CUtlBufferE_
+*ZN31CRemoteClientPairWifiAPResponse21BYieldingRunClientJobEP13IMsgNetPacketEUlRKN19CRemoteClientSoftAP17ConnectProgress_tEE_
 *ZN31CSteamEngineHTTPResponseHandler5ResetEvEUlP18CHTTPRequestHandleE_
 *ZN4CNet26CallbackDeleteOnCompletionEvE39CUnbufferedSendCallbackDeleteOnComplete
 *ZN5CUser12LogOnOfflineEbEUlvE_
@@ -5397,6 +5398,7 @@ $steammessages_parental_objects.proto"
 *\n&k_EProtoServiceTypeVRGamepadUIMessages
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_EQueryFilesSpecialFilter_ParentItems
+*\n&k_ERemoteClientPairWifiAPConnectFailed
 *\n&k_ERemoteDeviceAuthorizationInProgress
 *\n&k_EResolutionAutomation_FullyAutomated
 *\n&k_ESharedLibrary_AppExcluded_ByPartner
@@ -5464,10 +5466,10 @@ $steammessages_parental_objects.proto"
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
-++CCUNG"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNG}
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -8245,8 +8247,12 @@ $steammessages_parental_objects.proto"
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0.0333
 0.050
-0.125
 0.13.15.106
+00000
+000000
+00000000
+0000000000000000000000000000000000000000
+0.125
 0.15
 0.65
 0.75
@@ -8292,10 +8298,6 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
-00000
-000000
-00000000
-0000000000000000000000000000000000000000
 00000001
 00003333
 00:00:00
@@ -8307,7 +8309,6 @@ $steammessages_parental_objects.proto"
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFpz
 0123456789abcdef
 08bX
 0: Auto. 1: Force Controller to be "HandHeld" orientation, like SteamDeck (tilt in pitch by 90 degrees so that "Yaw" is "Through the Screen". 2: Force Controller to be "Standalone" controller like Steam Controller, where "Yaw" is "Through Sticks".
@@ -21742,7 +21743,9 @@ CRemoteClientSoftAP settings updated, enabled = %d, hotspot = %d, ssid = "%s"
 CRemoteClientSoftAP::Init
 CRemoteClientSoftAP::OnIPCountry
 CRemoteClientSoftAP::ScheduledStateCheck
+CRemoteClientSoftAP::SetPairedSSIDAndPassword
 CRemoteClientSoftAP::ThreadedSendSoftAPCmd
+CRemoteClientSoftAP::YieldingConnectWithFallbacks
 CRemoteClientSoftAP::m_pWorkThreadPool
 CRemoteClient_ClientDetails
 CRemoteClient_ClientLogin
@@ -30119,7 +30122,6 @@ MUSICBRAINZ_TRACKID
 MUSICBRAINZ_WORKID
 MUSICIP_PUID
 MUTE
-MX`w
 M\n\fscreensavers
 M\n\fsession_data
 M\n\nCreateRole
@@ -31658,6 +31660,7 @@ No relay public key from network config (yet?)
 No response from server
 No routing secret.  This is allowed in dev environment, but not in production.
 No screen descriptor detected
+No search plan step connected
 No signaling?
 No signature
 No signed cert?  We cannot probe relays without a cert
@@ -35256,6 +35259,7 @@ Screenshots
 Scroll Lock
 Scroll Lock Toggle
 Search
+Search plan step "%s" connected
 SearchForPlayers
 Seat
 Seat checkout from %s %s for app (%u): FAILED - EResult (%d) %s (%ums)
@@ -40887,6 +40891,7 @@ Zulu
 \n"CMsgClientGetClientDetailsResponse
 \n"CMsgClientPICSChangesSinceResponse
 \n"CMsgClientSharedLibraryStopPlaying
+\n"CMsgRemoteClientPairWifiAPResponse
 \n"CMsgSteamDatagramConnectionQuality
 \n"CMsgSteamDatagramP2PRoutingSummary
 \n"CPublishedFile_GetItemInfo_Request
@@ -41979,6 +41984,7 @@ Zulu
 \n\nstate_name
 \n\nsteam_deck
 \n\nsteamid_to
+\n\nsteps_done
 \n\nstyle_name
 \n\nsubject_id
 \n\nsync_state
@@ -42566,6 +42572,7 @@ Zulu
 \n\tstart_dir
 \n\tstart_num
 \n\tsteam_ids
+\n\tstep_name
 \n\tsubtitles
 \n\tsupported
 \n\tsurvey_id
@@ -42889,6 +42896,7 @@ Zulu
 \n\vsteam_realm
 \n\vsteamidhost
 \n\vsteamiduser
+\n\vsteps_total
 \n\vstore_appid
 \n\vstore_items
 \n\vstream_port
@@ -45506,6 +45514,7 @@ channel
 channel == impl_
 channel == iter->second
 channel named in candidate does not exist
+channelOverride
 channels
 channels_.find(name) == channels_.end()
 char
@@ -46324,7 +46333,7 @@ crashhandler004
 crc_encryptedticket
 crc_header_mismatch
 create != transport->HasChannel(iter->first)
-create\t%s\t%s\thbs6\t%s
+create\t%s\t%s\t%s\t%s
 create_if_not_found
 create_input_method
 create_session_request
@@ -48080,6 +48089,7 @@ estackingorder
 estate
 estatus
 estimated_packet_rate
+estimated_seconds
 estimated_seconds_remaining
 estimated_size
 estimated_time_registered
@@ -49132,6 +49142,7 @@ gesture
 gestures
 get raw key failed
 get-channels
+get-plan
 get-proxy-type-func
 get_Count failed
 get_RebootRequired failed
@@ -49187,7 +49198,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggenh
 ghjkl
 gidlist
 gidparentcomment
@@ -49855,6 +49866,7 @@ hashes
 hashlen <= 32
 hausa
 have_version_hash
+hbs6
 hcontent
 hcontent_preview
 hd_ringbuf_get
@@ -60559,6 +60571,7 @@ sealed
 search only supported for directories
 search-cwd
 searchGuide
+searchPlan
 search_text_target
 searchbuttontext
 searchid
@@ -61647,7 +61660,7 @@ stderr
 stdin
 stdout
 steam
-steam Oct 10 2026 00:12:01
+steam Oct 10 2026 19:04:02
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
@@ -62138,6 +62151,10 @@ streaming_v2\WifiAPHotspotSSID
 streaming_v2\WifiAPPairedPassword
 streaming_v2\WifiAPPairedSSID
 streaming_v2\WifiAPPairedTime
+streaming_v2\WifiAPPlanChannelOverride
+streaming_v2\WifiAPPlanHidden
+streaming_v2\WifiAPPlanMode
+streaming_v2\WifiAPPlanName
 streaming_v2\dongle\%llu\%s
 street
 streetAddress
@@ -62263,6 +62280,7 @@ supports_batches
 supports_brightness
 supports_color
 supports_os_updates
+supports_progress
 supports_rate_limit_response
 supports_remote_hid
 supports_speed

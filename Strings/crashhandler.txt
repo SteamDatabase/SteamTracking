@@ -332,7 +332,6 @@ $ORIGIN
 /tmp/.steam-sem-names
 /tmp/dumps
 /usr/bin/crosdisk %s
-00:11:56
 0123456789
 0123456789ABCDEF
 0123456789ABCDEFN15google_breakpad11LinuxDumperE
@@ -359,6 +358,7 @@ $ORIGIN
 17CFileWriterThread
 17CStreamReaderBase
 18CUtlCharConversion
+19:03:53
 19CDirContentsWatcher
 19CUtlNoEscConversion
 20CUniformRandomStream

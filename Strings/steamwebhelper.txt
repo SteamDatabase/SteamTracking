@@ -1312,9 +1312,10 @@ $d`D-laM
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0000000000000000000000000000000000000000
-00003333
 00:00:00
-00:12:03
+1000
+1024
+00003333
 01/01/00
 0123456789.
 0123456789
@@ -1358,8 +1359,6 @@ $d`D-laM
 1.5 Mbps
 1.5M
 1.6.37
-1000
-1024
 10CCEFThread
 10CCookieSet
 10CMsgGoBack
@@ -1952,6 +1951,7 @@ $d`D-laM
 18CefX509Certificate
 18IFileChooserDialog
 18_cef_window_info_t
+19:04:03
 19CActivationCodeInfo
 19CClientMicroTxnInfo
 19CCompositorGLThread
@@ -2391,9 +2391,9 @@ $d`D-laM
 31CefResourceRequestHandlerCppToC
 31CefRunContextMenuCallbackCToCpp
 31CefV8ArrayBufferReleaseCallback
+3333
 32767
 32CefDevToolsMessageObserverCppToC
-3333
 3333UUUU
 33CMsgDuplicateControllerSourceMode
 33CMsgVerticalScrollBarSizeResponse

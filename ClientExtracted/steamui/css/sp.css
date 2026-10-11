@@ -83457,6 +83457,24 @@ button._3vbFnnANQWDkz5Zvq1-vYm svg {
 ._1v7vlCihasyycoYLr6EJmL .Panel > div {
   padding-left: 12px;
 }
+._1FqzSTgucjDq4na4kIEFr- {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+._2aACF14g0Nqq92YHaVCoMj {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+._20bS6tFAUouZCyrr3pLCwM {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.GGOFsqurzXReTGSkJdKah {
+  color: #59bf40;
+}
 @keyframes _3PWfr56_ljtykNtULUV9Pz {
   from {
     background-position: 0 100%;
@@ -125438,6 +125456,9 @@ html.responsive.touch
   gap: 32px;
   height: fit-content;
   flex: 0 0 auto;
+}
+._1QtyWskSQDOL4n2IpmgWOY {
+  width: 360px;
 }
 ._2ZyIpim8vIeL-NOayzPfUd {
   position: absolute;
@@ -217965,6 +217986,9 @@ button._1I26U52L7lJKgLprxrKKp4 svg {
   );
   transition: --quickaccesspercent 200ms linear;
   border-radius: 9999px;
+}
+._1zQgf4oesrAtd0gCD-0G-e._2K8ZLbaTj__bCK5g2aLUAR::before {
+  content: none;
 }
 ._2u-uxHR8YG7v9RTcF4l927 > :last-child {
   margin-bottom: 0;

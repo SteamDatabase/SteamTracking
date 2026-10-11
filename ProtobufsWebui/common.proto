@@ -3809,12 +3809,17 @@ message CMsgRemoteClientInstallAppResponse {
 message CMsgRemoteClientPairWifiAP {
 	optional string ssid = 1;
 	optional string password = 2;
+	optional bool supports_progress = 3;
 }
 
 message CMsgRemoteClientPairWifiAPResponse {
 	optional int32 e_pair_result = 1 [default = 2];
 	optional string ssid = 2;
 	optional string password = 3;
+	optional int32 steps_done = 4;
+	optional int32 steps_total = 5;
+	optional string step_name = 6;
+	optional uint32 estimated_seconds = 7;
 }
 
 message CMsgRemoteClientPeerContentServerChanged {

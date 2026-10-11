@@ -2483,6 +2483,7 @@ ${FILENAME}
 (/f92
 (0'yX
 (0rt
+(10a^
 (1NE\n
 (3zg
 (6byOTER
@@ -4487,18 +4488,16 @@ ${FILENAME}
 0,PQ
 0-AD
 0/bu^U
+0/gge
 0000000000000000000000000000000000000000
 0.06
-0/gge
-00:11:56
-00:12:00
 00\fo
-01%3
-01%6
 01%66754&#"
 0123456789.
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+01%3
+01%6
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -4988,6 +4987,8 @@ ${FILENAME}
 18StoreItem_Trailers
 196?
 198
+19:03:53
+19:03:57
 19CActivationCodeInfo
 19CClientHandshakeMsg
 19CClientMicroTxnInfo
@@ -5625,6 +5626,9 @@ ${FILENAME}
 3265&
 3265''6654#72
 3265'3
+3267
+3267.
+3276
 32654
 32654##
 32654##5
@@ -5660,12 +5664,10 @@ ${FILENAME}
 326554&##
 326554&'
 326654&&#"
-3267
 3267!
 3267!5!&
 3267!5!&&#"
 3267&'^7l
-3267.
 32675
 32675#5!
 32675&&#"
@@ -5682,7 +5684,6 @@ ${FILENAME}
 327'Z
 3275!5!
 3275#5!
-3276
 327675.
 32:B\n
 32CMsgRemoteDeviceStreamingRequest
@@ -6059,10 +6060,10 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
+467.
 4632
 46632
 467&&54632
-467.
 4676654&#"
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSteamDatagramConnectionStatsClientToRouter
@@ -6523,12 +6524,12 @@ ${FILENAME}
 6654&#"
 6675
 67!5!
-675!
-6753
-666666666666666666666666666666666666666666666666
 6754&#"
 67547&55&'7
 6786
+666666666666666666666666666666666666666666666666
+675!
+6753
 67Zc
 68Jy
 699[
@@ -6716,7 +6717,6 @@ ${FILENAME}
 73MW
 73nL4\v
 74&'3
-74632
 75#5!
 754.
 7524
@@ -6724,6 +6724,7 @@ ${FILENAME}
 75th
 76&'3
 7623.
+74632
 7664&#"
 76653
 76654&#"
@@ -7443,6 +7444,7 @@ ${FILENAME}
 :w@jby2
 :wI\Uf6
 :wJY
+:wXY
 :y,npz
 :yBK\t
 ; boundary=
@@ -10124,6 +10126,8 @@ CNegotiatedConfig
 CNegotiationCompleteMsg"
 CNegotiationInitMsg
 CNegotiationSetConfigMsg
+COLOR_ENCODING
+COLOR_RANGE
 COMMIT_DEVICE/DISCONNECT_DEVICE failed for controller at /dev/hidraw%d\n
 COMPLEMENTOFALL
 COMPLEMENTOFDEFAULT
@@ -11565,6 +11569,7 @@ Disable controller mouse mode
 Disable controller support
 DisablePyrowave
 Disabled
+Disabling HDR output, it requires the Vulkan renderer\n
 Disattivazione automatica dell'audio da Steam Frame
 Disbilita i controlli touch
 Discarding handshake timestamp that's %lldms old, not sending in ConnectOK\n
@@ -13906,6 +13911,9 @@ ISO-UA
 ISO-US
 ISSUING_DIST_POINT
 ISYQ2
+ITU-R BT.2020 YCbCr
+ITU-R BT.601 YCbCr
+ITU-R BT.709 YCbCr
 ITU-T
 ITc[
 ITsn=
@@ -22845,6 +22853,8 @@ Y@od
 YAYIN: %d x %d, %2.2f FPS
 YBS'
 YCXy
+YCbCr full range
+YCbCr limited range
 YC{e
 YD62
 YE4?
@@ -32558,7 +32568,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Oct 10 2026 00:11:59
+lib Oct 10 2026 19:03:56
 lib(%lu)
 libEGL.so.1
 libGL.so.1

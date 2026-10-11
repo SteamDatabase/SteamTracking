@@ -9178,6 +9178,7 @@
           InstructionList: "_1BCbaDEB_TpNjPO_k7sHQz",
           DonglePage: "JeE9-9_EN6oxHwvW9JPIB",
           DongleContent: "pmWoMyWGaVzcFvh_1DfPr",
+          PairingProgress: "_1QtyWskSQDOL4n2IpmgWOY",
           PairingSuccessText: "_2ZyIpim8vIeL-NOayzPfUd",
           GuidedTourFinalDesc: "_1PxSdWK1PXAgUrww-Ves27",
           GuidedTourVideosDesc: "_1MNGHGUt5JKr7FKLK9AbjY",
@@ -18188,6 +18189,14 @@
           Container: "_3SFRZYIb9Y2q7YsVtB3YKb",
           CollapseIconParent: "ehAsUVkW87U5OHZJohB5N",
           Collapsed: "_2hFLgYbxE-5r06ns3QN334",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          WifiAPPairingProgress: "_1FqzSTgucjDq4na4kIEFr-",
+          Step: "_2aACF14g0Nqq92YHaVCoMj",
+          Icon: "_20bS6tFAUouZCyrr3pLCwM",
+          Done: "GGOFsqurzXReTGSkJdKah",
         };
       },
       chunkid: (module) => {
@@ -226559,6 +226568,7 @@
             _: () => _,
             _: () => _,
             _: () => _,
+            _: () => _,
           });
         var _ = {};
         __webpack_require__._(_),
@@ -228313,7 +228323,9 @@
           _ = 4,
           _ = 5,
           _ = 6,
-          _ = 7;
+          _ = 7,
+          _ = 8,
+          _ = 9;
         var _ = "steamdb";
         const _ = 1,
           _ = 2;
@@ -231106,6 +231118,11 @@
                       _: _._.readString,
                       _: _._.writeString,
                     },
+                    supports_progress: {
+                      _: 3,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
                   },
                 }),
               _.sm_m
@@ -231178,6 +231195,26 @@
                       _: 3,
                       _: _._.readString,
                       _: _._.writeString,
+                    },
+                    steps_done: {
+                      _: 4,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
+                    steps_total: {
+                      _: 5,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
+                    step_name: {
+                      _: 6,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    estimated_seconds: {
+                      _: 7,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
                     },
                   },
                 }),
@@ -516541,7 +516578,7 @@ Status Code:` +
                     button: "X",
                     "aria-label": (0, _._)("#GamepadKey_X"),
                   }),
-                (0, _._)("#GuidedTour_Frame_Skip"),
+                _.buttonText ?? (0, _._)("#GuidedTour_Frame_Skip"),
               ],
             }),
           });
@@ -517953,7 +517990,11 @@ Status Code:` +
           const _ = (0, _._)(),
             _ = _.filter((_) => _.bHasUnpairedWifiAP || _.bCanPairViaWifiAP),
             _ = _.length > 0,
-            [_, _] = (0, _.useState)(!1),
+            [_, _] = (0, _.useState)(void 0),
+            _ = (0, _._)(_),
+            _ = !!_ && !_.strResult,
+            _ = !!_?.strResult && _.bSucceeded,
+            _ = _?.strResult && !_.bSucceeded ? _.strResult : void 0,
             _ = _.some((_) => _.bConnectedViaWifiAP) && !_,
             [_, _] = (0, _.useState)(
               (0, _._)("#GuidedTour_FrameUnknownPCName"),
@@ -517961,6 +518002,12 @@ Status Code:` +
             _ = (0, _._)();
           if (
             ((0, _._)(_._.PairWifiDongle),
+            (0, _.useEffect)(
+              () => () => {
+                _ && _._.DismissWifiAPPair(_);
+              },
+              [_],
+            ),
             (0, _.useEffect)(() => {
               _ && _.nextPage();
             }, [_, _]),
@@ -517983,9 +518030,16 @@ Status Code:` +
                 },
               );
             },
-            _ = async (_) => {
-              (await SteamClient?.RemotePlay?.PairViaWifiAP(_)) == _._._ &&
-                (_(_[0].clientName), _(!0));
+            _ = (_) => {
+              _(
+                _.find((_) => _.clientId == _)?.clientName ??
+                  (0, _._)("#GuidedTour_FrameUnknownPCName"),
+              ),
+                _(_),
+                _._.PairViaWifiAP(_);
+            },
+            _ = () => {
+              _._.DismissWifiAPPair(_), _(void 0);
             };
           return _
             ? (0, _.jsxs)(_, {
@@ -518020,19 +518074,22 @@ Status Code:` +
               })
             : _
               ? (0, _.jsxs)(_, {
-                  onOk: () => _(_[0].clientId),
+                  onOk: () => null,
                   onCancel: _,
                   children: [
                     (0, _.jsxs)("div", {
                       className: _.TopContent,
                       children: [
                         (0, _.jsx)(_, {
-                          children: (0, _._)("#GuidedTour_PairWithComputer"),
+                          children: (0, _._)("#GuidedTour_PairingWithComputer"),
                         }),
                         (0, _.jsx)(_, {
                           className: _.CenterDesc,
                           children: (0, _._)(
-                            "#GuidedTour_WirelessAdapterDetected",
+                            "#GuidedTour_FramePairingWith",
+                            (0, _.jsx)(_, {
+                              strName: _,
+                            }),
                           ),
                         }),
                       ],
@@ -518041,35 +518098,26 @@ Status Code:` +
                       className: _.DongleContent,
                       children: [
                         (0, _.jsx)(_, {}),
-                        (0, _.jsx)(_, {
-                          strHostComputerName:
-                            _[0]?.clientName ??
-                            (0, _._)("#GuidedTour_FrameUnknownPCName"),
+                        (0, _.jsx)(_._, {
+                          clientId: _,
+                          className: _.PairingProgress,
                         }),
                       ],
                     }),
-                    (0, _.jsxs)(_._, {
+                    (0, _.jsx)(_._, {
                       className: _.ButtonContainer,
                       "flow-children": "row",
-                      children: [
-                        (0, _.jsx)(_, {
-                          buttonAction: _,
-                        }),
-                        (0, _.jsx)(_, {
-                          pairDongle: () => _(_[0].clientId),
-                          nextPage: _.nextPage,
-                          bDisabled: !1,
-                          children: (0, _._)("#GuidedTour_Frame_Pair"),
-                        }),
-                      ],
+                      children: (0, _.jsx)(_, {
+                        buttonAction: _,
+                        buttonText: (0, _._)("#Button_Cancel"),
+                      }),
                     }),
                   ],
                 })
-              : (0, _.jsx)(_, {
-                  onOk: _ && (() => _(_[0].clientId)),
-                  onCancel: _,
-                  children: (0, _.jsxs)(_._, {
-                    className: _.DonglePage,
+              : _
+                ? (0, _.jsxs)(_, {
+                    onOk: () => _(_[0].clientId),
+                    onCancel: _,
                     children: [
                       (0, _.jsxs)("div", {
                         className: _.TopContent,
@@ -518079,15 +518127,22 @@ Status Code:` +
                           }),
                           (0, _.jsx)(_, {
                             className: _.CenterDesc,
-                            children: (0, _._)(
-                              "#GuidedTour_SearchingForWirelessAdapter",
-                            ),
+                            children:
+                              _ ??
+                              (0, _._)("#GuidedTour_WirelessAdapterDetected"),
                           }),
                         ],
                       }),
                       (0, _.jsxs)("div", {
                         className: _.DongleContent,
-                        children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+                        children: [
+                          (0, _.jsx)(_, {}),
+                          (0, _.jsx)(_, {
+                            strHostComputerName:
+                              _[0]?.clientName ??
+                              (0, _._)("#GuidedTour_FrameUnknownPCName"),
+                          }),
+                        ],
                       }),
                       (0, _.jsxs)(_._, {
                         className: _.ButtonContainer,
@@ -518099,14 +518154,57 @@ Status Code:` +
                           (0, _.jsx)(_, {
                             pairDongle: () => _(_[0].clientId),
                             nextPage: _.nextPage,
-                            bDisabled: !_,
+                            bDisabled: !1,
                             children: (0, _._)("#GuidedTour_Frame_Pair"),
                           }),
                         ],
                       }),
                     ],
-                  }),
-                });
+                  })
+                : (0, _.jsx)(_, {
+                    onOk: _ && (() => _(_[0].clientId)),
+                    onCancel: _,
+                    children: (0, _.jsxs)(_._, {
+                      className: _.DonglePage,
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: _.TopContent,
+                          children: [
+                            (0, _.jsx)(_, {
+                              children: (0, _._)(
+                                "#GuidedTour_PairWithComputer",
+                              ),
+                            }),
+                            (0, _.jsx)(_, {
+                              className: _.CenterDesc,
+                              children: (0, _._)(
+                                "#GuidedTour_SearchingForWirelessAdapter",
+                              ),
+                            }),
+                          ],
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _.DongleContent,
+                          children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+                        }),
+                        (0, _.jsxs)(_._, {
+                          className: _.ButtonContainer,
+                          "flow-children": "row",
+                          children: [
+                            (0, _.jsx)(_, {
+                              buttonAction: _,
+                            }),
+                            (0, _.jsx)(_, {
+                              pairDongle: () => _(_[0].clientId),
+                              nextPage: _.nextPage,
+                              bDisabled: !_,
+                              children: (0, _._)("#GuidedTour_Frame_Pair"),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  });
         }
         function _(_) {
           const { onComplete: _ } = _;
@@ -529464,7 +529562,6 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = "steamdb";
         const _ = 0,
           _ = 1;
@@ -529852,8 +529949,9 @@ Status Code:` +
           (_[(_.NotPresent = 1)] = "NotPresent"),
           (_[(_.Unpaired = 2)] = "Unpaired"),
           (_[(_.PairingInProgress = 3)] = "PairingInProgress"),
-          (_[(_.Paired = 4)] = "Paired"),
-          (_[(_.Ready = 5)] = "Ready"),
+          (_[(_.ConnectingInProgress = 4)] = "ConnectingInProgress"),
+          (_[(_.Paired = 5)] = "Paired"),
+          (_[(_.Ready = 6)] = "Ready"),
           _
         ))(_ || {});
         function _(_) {
@@ -529862,11 +529960,13 @@ Status Code:` +
               return "#QuickAccess_Streaming_WirelessAdapterNotDetected";
             case 2:
               return "#QuickAccess_Streaming_WirelessAdapterPairingNeeded";
-            case 4:
+            case 5:
               return "#QuickAccess_Streaming_WirelessAdapterWaiting";
             case 3:
               return "#QuickAccess_Streaming_WirelessAdapterPairingInProgress";
-            case 5:
+            case 4:
+              return "#QuickAccess_Streaming_WirelessAdapterConnectingInProgress";
+            case 6:
               return "#QuickAccess_Streaming_WirelessAdapterReady";
             default:
               return "";
@@ -529878,8 +529978,9 @@ Status Code:` +
             case 2:
             case 3:
             case 4:
-              return _().NotReady;
             case 5:
+              return _().NotReady;
+            case 6:
               return _().Ready;
             default:
               return "";
@@ -529905,8 +530006,15 @@ Status Code:` +
         }
         function _(_) {
           const { device: _, bLocked: _, bDevMode: _ } = _,
-            [_, _] = _.useState(!1);
-          (0, _._)(() => _(!1), 18e3, [_]);
+            _ = (0, _._)(_.clientId, !0),
+            _ = !!_ && !_.strResult;
+          _.useEffect(
+            () => () => {
+              _._.GetWifiAPPairState(_.clientId)?.eResult !== void 0 &&
+                _._.DismissWifiAPPair(_.clientId);
+            },
+            [_.clientId],
+          );
           const [_, _] = _.useState(!1),
             _ = (0, _._)(),
             {
@@ -529930,15 +530038,19 @@ Status Code:` +
               _ =
                 _.bConnectingViaWifiAP ||
                 (_.bConnectedViaWifiAP && !_.bHasLocalConnection);
-            _ ? (_ = 5) : _ ? (_ = 3) : _ ? (_ = 4) : _ ? (_ = 2) : (_ = 1);
+            _
+              ? (_ = 6)
+              : _
+                ? (_ = _.bConnecting ? 4 : 3)
+                : _
+                  ? (_ = 5)
+                  : _
+                    ? (_ = 2)
+                    : (_ = 1);
           }
           const _ = !_ && !_.bHasSteamVRInstalled && _.bHasLocalConnection,
-            _ = async () => {
-              _(!0);
-              const _ = await SteamClient?.RemotePlay?.PairViaWifiAP(
-                _.clientId,
-              );
-              _(_ == _._._);
+            _ = () => {
+              _._.PairViaWifiAP(_.clientId);
             },
             _ = () => {
               _._.InstallApp(_.g5s, _.clientId);
@@ -530005,6 +530117,17 @@ Status Code:` +
                   className: (0, _._)(_().HostStatus, _(_)),
                   children: (0, _._)(_),
                 }),
+              _?.bShowBar &&
+                !_ &&
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _().HostStatus,
+                    _().SteamVRInstallingProgressBar,
+                  ),
+                  style: {
+                    "--quickaccesspercent": `${_.nPercent}`,
+                  },
+                }),
               _ &&
                 !_ &&
                 (0, _.jsxs)(_.Fragment, {
@@ -530043,6 +530166,14 @@ Status Code:` +
                           children: (0, _._)(
                             "#QuickAccess_Streaming_PairWirelessAdapter",
                           ),
+                        }),
+                      }),
+                    (_ == 3 || _ == 4) &&
+                      (0, _.jsx)("div", {
+                        children: (0, _.jsx)(_._, {
+                          onClick: () => _._.DismissWifiAPPair(_.clientId),
+                          disabled: _,
+                          children: (0, _._)("#Button_Cancel"),
                         }),
                       }),
                     _ &&
@@ -604232,6 +604363,7 @@ Status Code:` +
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -604263,6 +604395,17 @@ Status Code:` +
             return _ && _ && _(_, _, _), _;
           };
         const _ = new _._("FriendsUI/RemotePlay");
+        function _() {
+          return {
+            bConnecting: !1,
+            msConnectStart: 0,
+            nEstimatedSeconds: 0,
+            nStepsDone: 0,
+            nStepsTotal: 0,
+            strStepName: "",
+            bDismissed: !1,
+          };
+        }
         class _ {
           constructor() {
             (0, _._)(this);
@@ -604286,6 +604429,7 @@ Status Code:` +
           m_sRemoteDeviceBeingPaired = void 0;
           m_sRemoteDeviceRequestingSpectatePermission = void 0;
           m_sRemoteDevicePairingPIN = void 0;
+          m_mapWifiAPPairState = _._.map();
           Init(_) {
             SteamClient.RemotePlay.RegisterForSettingsChanges(
               this.OnSettingsChanged,
@@ -604331,6 +604475,12 @@ Status Code:` +
               ),
               SteamClient.RemotePlay.RegisterForRemoteClientStopped(
                 this.OnRemoteClientStopped,
+              ),
+              SteamClient.RemotePlay.RegisterForPairWifiAPProgress(
+                this.OnPairWifiAPProgress,
+              ),
+              SteamClient.RemotePlay.RegisterForPairWifiAPResult(
+                this.OnPairWifiAPResult,
               );
           }
           get settings() {
@@ -604470,6 +604620,45 @@ Status Code:` +
           }
           get sRemoteDevicePairingPIN() {
             return this.m_sRemoteDevicePairingPIN;
+          }
+          GetWifiAPPairState(_) {
+            return this.m_mapWifiAPPairState.get(_);
+          }
+          BAnyWifiAPPairShown() {
+            return Array.from(this.m_mapWifiAPPairState.values()).some(
+              (_) => !_.bDismissed,
+            );
+          }
+          async PairViaWifiAP(_) {
+            this.m_mapWifiAPPairState.set(_, _());
+            const _ = await SteamClient.RemotePlay.PairViaWifiAP(_);
+            return this.OnPairWifiAPResult(_, _), _;
+          }
+          DismissWifiAPPair(_) {
+            const _ = this.m_mapWifiAPPairState.get(_);
+            _ &&
+              (_._.ON_FRAME &&
+                _.bConnecting &&
+                _.eResult === void 0 &&
+                SteamClient.RemotePlay.UnpairLocalWifiAP(),
+              (_.bDismissed = !0));
+          }
+          OnPairWifiAPProgress(_, _, _, _, _) {
+            let _ = this.m_mapWifiAPPairState.get(_);
+            (!_ || _.eResult !== void 0) &&
+              ((_ = _()), this.m_mapWifiAPPairState.set(_, _)),
+              _ &&
+                !_.bConnecting &&
+                ((_.bConnecting = !0),
+                (_.msConnectStart = Date.now()),
+                (_.nEstimatedSeconds = _)),
+              (_.nStepsDone = _),
+              (_.nStepsTotal = _),
+              (_.strStepName = _);
+          }
+          OnPairWifiAPResult(_, _) {
+            const _ = this.m_mapWifiAPPairState.get(_);
+            _ && (_.eResult = _);
           }
           async OnRemoteDevicePairingPINChanged(_, _) {
             (this.m_sRemoteDevicePairingPIN = _),
@@ -604616,6 +604805,8 @@ Status Code:` +
           _([_._], _.prototype, "OnSettingsChanged", 1),
           _([_._], _.prototype, "OnDevicesChanged", 1),
           _([_._], _.prototype, "OnRestrictedSessionChanged", 1),
+          _([_._], _.prototype, "OnPairWifiAPProgress", 1),
+          _([_._], _.prototype, "OnPairWifiAPResult", 1),
           _([_._], _.prototype, "OnRemoteDevicePairingPINChanged", 1),
           _([_._], _.prototype, "OnRemoteDeviceAuthorizationRequested", 1),
           _([_._], _.prototype, "OnRemoteDeviceAuthorizationCancelled", 1),
@@ -604689,6 +604880,16 @@ Status Code:` +
         function _() {
           return (0, _._)(() => _.sRemoteDevicePairingPIN);
         }
+        function _(_) {
+          return (0, _._)(() => {
+            const _ = _.GetWifiAPPairState(_);
+            return _ && !_.bDismissed
+              ? {
+                  ..._,
+                }
+              : void 0;
+          });
+        }
         function _() {
           const _ = (0, _._)(() => _.bAudioDriverDialogVisible),
             _ = _.useCallback(() => {
@@ -604727,6 +604928,8 @@ Status Code:` +
               return (0, _._)("#RemotePlay_PairWifiAPResult_Timeout");
             case _._._:
               return (0, _._)("#RemotePlay_PairWifiAPResult_Canceled");
+            case _._._:
+              return (0, _._)("#RemotePlay_PairWifiAPResult_ConnectFailed");
           }
         }
       },
@@ -644119,7 +644322,9 @@ Status Code:` +
           const [_, _] = (0, _._)("skip_steamframe_pairing_dialog"),
             [_, _] = _.useState(_),
             [_, _] = _.useState([]),
+            [_, _] = _.useState(void 0),
             [_, _] = _.useState(!1),
+            _ = (0, _._)(_),
             _ = (0, _._)(() => _._.settings.bCanPairViaWifiAP),
             _ = (0, _._)(() => _._.devices.some((_) => _.bConnectedViaWifiAP)),
             _ = (0, _._)(1e4, [_, _]),
@@ -644128,119 +644333,136 @@ Status Code:` +
                 (_) => _.bHasUnpairedWifiAP && !_.includes(_.clientId),
               ),
             ),
-            _ = (0, _._)(),
             _ = _.useId(),
-            _ = _.length > 1,
-            _ = (0, _._)();
-          if (
-            _ ||
-            _ ||
-            _._.ON_FRAME ||
-            _._.ActiveWindowInstance?.BrowserWindow?.ConfigContext.IN_VR ||
-            !_ ||
-            _ ||
-            !_ ||
-            _.length == 0 ||
-            _?.IsVRGamepadUIOverlayWindow()
-          )
-            return null;
-          const _ = async () => {
-              _([..._, ..._.map((_) => _.clientId)]), _(_);
+            [_, _] = _.useState(!1);
+          _.useEffect(() => {
+            _.length > 1 && _(!0);
+          }, [_.length]);
+          const _ = _ ? _ : _ || _.length > 1,
+            _ = (0, _._)(),
+            _ = async () => {
+              _((_) => [..._, ..._.map((_) => _.clientId)]), _(_);
             },
-            _ = async (_) => {
-              _(!0);
-              const _ = await SteamClient?.RemotePlay?.PairViaWifiAP(_),
-                _ = () => {
-                  _(!1), _ == _._._ && _();
-                };
-              (0, _._)(
-                (0, _.jsx)(_._, {
-                  strTitle: (0, _._)("#RemotePlay_PairWifiAPResult_Title"),
-                  strDescription: (0, _._)(_),
-                  onOK: _,
-                  bAlertDialog: !0,
-                }),
-                _.ownerWindow ?? window,
-                {
-                  bForcePopOut: !0,
-                },
-              );
+            _ = (_) => {
+              _(_), _(_), _._.PairViaWifiAP(_);
+            },
+            _ = () => {
+              _._.DismissWifiAPPair(_),
+                _(void 0),
+                (!_?.strResult || _.bSucceeded) && (_((_) => [..._, _]), _());
             };
-          return (0, _.jsx)(_._, {
-            strName: "SteamFrameWirelessAdapterDialog",
-            onDismiss: _,
-            strTitle: (0, _._)("#SteamFrameWirelessAdapterDialog_Header"),
-            popupWidth: 500,
-            popupHeight: _ ? 350 : 270,
-            modal: !1,
-            children: (0, _.jsxs)(_._, {
-              title: (0, _._)("#SteamFrameWirelessAdapterDialog_Header"),
-              "aria-describedby": _,
-              onCancel: _,
-              children: [
-                (0, _.jsx)(_._, {
-                  _: _,
-                  children: (0, _._)(
-                    "#SteamFrameWirelessAdapterDialog_Description",
-                  ),
-                }),
-                _ &&
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsx)("div", {
-                      className: _().ClientList,
-                      children: _.map((_) =>
-                        (0, _.jsxs)(
-                          "div",
-                          {
-                            className: _().ClientListRow,
-                            children: [
-                              (0, _.jsx)("span", {
-                                className: _().ClientName,
-                                children: _.clientName,
-                              }),
-                              (0, _.jsx)(_._, {
-                                className: _().Button,
-                                onClick: () => _(_.clientId),
-                                children: (0, _._)(
-                                  "#SteamFrameWirelessAdapterDialog_Pair",
-                                ),
-                              }),
-                            ],
-                          },
-                          _.clientId || _.deviceId,
-                        ),
-                      ),
-                    }),
-                  }),
-                (0, _.jsx)(_._, {
-                  className: _().DontShowAgain,
-                  label: (0, _._)(
-                    "#SteamFrameWirelessAdapterDialog_DontShowAgain",
-                  ),
-                  checked: _,
-                  onChange: _,
-                }),
-                (0, _.jsxs)(_._, {
+          return _
+            ? (0, _.jsx)(_._, {
+                strName: "SteamFrameWirelessAdapterDialog",
+                onDismiss: _,
+                strTitle: (0, _._)("#SteamFrameWirelessAdapterDialog_Header"),
+                popupWidth: 500,
+                popupHeight: _ ? 350 : 270,
+                modal: !1,
+                children: (0, _.jsxs)(_._, {
+                  title: (0, _._)("#SteamFrameWirelessAdapterDialog_Header"),
+                  onCancel: _,
                   children: [
-                    _ &&
-                      (0, _.jsxs)(_._, {
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_._, {
+                        clientId: _,
+                      }),
+                    }),
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_._, {
                         onClick: _,
-                        children: [" ", (0, _._)("#Button_Cancel"), " "],
-                      }),
-                    !_ &&
-                      (0, _.jsx)(_._, {
-                        focusButton: "primary",
-                        strOKText: (0, _._)(
-                          "#SteamFrameWirelessAdapterDialog_Pair",
+                        children: (0, _._)(
+                          _?.strResult ? "#Button_Close" : "#Button_Cancel",
                         ),
-                        onOK: () => _(_[0].clientId),
-                        onCancel: _,
                       }),
+                    }),
                   ],
                 }),
-              ],
-            }),
-          });
+              })
+            : _ ||
+                _._.ON_FRAME ||
+                _._.ActiveWindowInstance?.BrowserWindow?.ConfigContext.IN_VR ||
+                !_ ||
+                _ ||
+                !_ ||
+                _.length == 0 ||
+                _?.IsVRGamepadUIOverlayWindow()
+              ? null
+              : (0, _.jsx)(_._, {
+                  strName: "SteamFrameWirelessAdapterDialog",
+                  onDismiss: _,
+                  strTitle: (0, _._)("#SteamFrameWirelessAdapterDialog_Header"),
+                  popupWidth: 500,
+                  popupHeight: _ ? 350 : 270,
+                  modal: !1,
+                  children: (0, _.jsxs)(_._, {
+                    title: (0, _._)("#SteamFrameWirelessAdapterDialog_Header"),
+                    "aria-describedby": _,
+                    onCancel: _,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        _: _,
+                        children: (0, _._)(
+                          "#SteamFrameWirelessAdapterDialog_Description",
+                        ),
+                      }),
+                      _ &&
+                        (0, _.jsx)(_._, {
+                          children: (0, _.jsx)("div", {
+                            className: _().ClientList,
+                            children: _.map((_) =>
+                              (0, _.jsxs)(
+                                "div",
+                                {
+                                  className: _().ClientListRow,
+                                  children: [
+                                    (0, _.jsx)("span", {
+                                      className: _().ClientName,
+                                      children: _.clientName,
+                                    }),
+                                    (0, _.jsx)(_._, {
+                                      className: _().Button,
+                                      onClick: () => _(_.clientId),
+                                      children: (0, _._)(
+                                        "#SteamFrameWirelessAdapterDialog_Pair",
+                                      ),
+                                    }),
+                                  ],
+                                },
+                                _.clientId || _.deviceId,
+                              ),
+                            ),
+                          }),
+                        }),
+                      (0, _.jsx)(_._, {
+                        className: _().DontShowAgain,
+                        label: (0, _._)(
+                          "#SteamFrameWirelessAdapterDialog_DontShowAgain",
+                        ),
+                        checked: _,
+                        onChange: _,
+                      }),
+                      (0, _.jsxs)(_._, {
+                        children: [
+                          _ &&
+                            (0, _.jsxs)(_._, {
+                              onClick: _,
+                              children: [" ", (0, _._)("#Button_Cancel"), " "],
+                            }),
+                          !_ &&
+                            (0, _.jsx)(_._, {
+                              focusButton: "primary",
+                              strOKText: (0, _._)(
+                                "#SteamFrameWirelessAdapterDialog_Pair",
+                              ),
+                              onOK: () => _(_[0].clientId),
+                              onCancel: _,
+                            }),
+                        ],
+                      }),
+                    ],
+                  }),
+                });
         }
         var _ = ((_) => (
           (_[(_.k_EWaitingForUser = 0)] = "k_EWaitingForUser"),
@@ -644408,7 +644630,7 @@ Status Code:` +
             }),
           });
         }
-        function _() {
+        function _(_) {
           const _ = (0, _._)(_.g5s),
             _ = (0, _._)(_.lmQ);
           return !_?.bHasAnyLocalContent && !_?.bHasAnyLocalContent
@@ -644416,22 +644638,23 @@ Status Code:` +
             : (0, _.jsxs)(_.Fragment, {
                 children: [
                   (0, _.jsx)(_, {}),
-                  (0, _.jsx)(_, {}),
-                  (0, _.jsx)(_, {}),
+                  !_.bOnlyPairing &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+                    }),
                 ],
               });
         }
         const _ = (0, _._)(function () {
           const _ = (0, _._)(),
-            _ = (0, _._)(() => _._.settings.bCanPairViaWifiAP);
-          return (0, _._)(() =>
-            _._.devices.some((_) => _.bConnectedViaWifiAP),
-          ) ||
-            !_ ||
-            !_ ||
-            _._.ON_FRAME
+            _ = (0, _._)(() => _._.settings.bCanPairViaWifiAP),
+            _ = (0, _._)(() => _._.devices.some((_) => _.bConnectedViaWifiAP)),
+            _ = (0, _._)(() => _._.BAnyWifiAPPairShown());
+          return (_ && !_) || !_ || !_ || _._.ON_FRAME
             ? null
-            : (0, _.jsx)(_, {});
+            : (0, _.jsx)(_, {
+                bOnlyPairing: _,
+              });
         });
         var _ = "steamdb";
         function _(_) {
@@ -646208,7 +646431,7 @@ Status Code:` +
             _ = (0, _._)("CommunitySingleScreenshot", _),
             _ = (0, _._)(),
             _ = (_) => _(_, _.currentTarget),
-            _ = _(_),
+            _ = _(_, "all"),
             {
               short_description: _,
               favorited: _ = 0,
@@ -646400,7 +646623,7 @@ Status Code:` +
             ],
           });
         }
-        function _(_) {
+        function _(_, _) {
           const { mutateAsync: _ } = (0, _._)(),
             _ = (0, _._)(),
             _ = (0, _._)();
@@ -646408,7 +646631,7 @@ Status Code:` +
             if (
               (_({
                 screenshots: [_],
-                location: "local",
+                location: _,
               }),
               "entries" in _)
             ) {
@@ -646426,13 +646649,13 @@ Status Code:` +
               _.Media.Grid({
                 bReplace: !0,
               });
-          }, [_, _, _, _]);
+          }, [_, _, _, _, _]);
         }
         function _(_) {
           const { screenshot: _ } = _,
             _ = _.rtCreated,
             _ = (0, _._)(_),
-            _ = _(_),
+            _ = _(_, "local"),
             _ = (0, _._)(),
             _ = (_) => _(_, _.currentTarget),
             _ = (0, _._)();
@@ -646470,7 +646693,7 @@ Status Code:` +
         }
         function _(_) {
           const { screenshot: _ } = _,
-            _ = _(_);
+            _ = _(_, "local");
           return (0, _.jsx)(_, {
             children: (0, _.jsx)(_, {
               grow: !0,
@@ -698764,7 +698987,7 @@ Status Code:` +
               _.nSteamVersion > 0
                 ? _.nSteamVersion.toString()
                 : (0, _._)("#Settings_System_SteamLocalBuild"),
-            _ = parseInt(1791589745),
+            _ = parseInt(1791685688),
             _ = _ && (0, _._)(_, _, _),
             _ = _.sSteamBuildDate,
             _ = (0, _._)() ? " GMT+0000" : " GMT-0800",
@@ -733446,7 +733669,6 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = "steamdb";
         const _ = -1,
           _ = 0;
@@ -734355,21 +734577,27 @@ Status Code:` +
           });
         }
         function _(_) {
-          const { device: _, onPairResult: _ } = _,
-            [_, _] = _.useState(!1);
-          (0, _._)(() => _(!1), 15e3, [_]);
-          const { bCanPairViaWifiAP: _, bConnectedViaWifiAP: _ } = _,
-            _ = async () => {
-              _(!0);
-              const _ = await SteamClient?.RemotePlay?.PairViaWifiAP(
-                _.clientId,
-              );
-              _(_ == _._._), _ && _(_);
+          const { device: _ } = _,
+            { bCanPairViaWifiAP: _, bConnectedViaWifiAP: _ } = _,
+            _ = (0, _._)(_.clientId, !0),
+            _ = _ && !_.strResult;
+          _.useEffect(
+            () => () => {
+              _._.GetWifiAPPairState(_.clientId)?.eResult !== void 0 &&
+                _._.DismissWifiAPPair(_.clientId);
             },
-            _ = _.useId(),
+            [_.clientId],
+          );
+          const _ = _.useId(),
             _ = {
               accessibilityId: _,
               label: _.clientName,
+              description:
+                _ &&
+                (0, _.jsx)(_._, {
+                  clientId: _.clientId,
+                  bTransientResult: !0,
+                }),
             },
             _ = _._(_, _);
           return (
@@ -734386,11 +734614,18 @@ Status Code:` +
               ..._,
               children: [
                 !_ &&
+                  !_ &&
                   (0, _.jsx)(_._, {
-                    onClick: _,
-                    disabled: _,
+                    onClick: () => _._.PairViaWifiAP(_.clientId),
                     ..._,
                     children: (0, _._)("#Settings_RemotePlay_WifiAP_Pair"),
+                  }),
+                !_ &&
+                  _ &&
+                  (0, _.jsx)(_._, {
+                    onClick: () => _._.DismissWifiAPPair(_.clientId),
+                    ..._,
+                    children: (0, _._)("#Button_Cancel"),
                   }),
                 _ &&
                   (0, _.jsx)(_._, {
@@ -734440,7 +734675,6 @@ Status Code:` +
             [_, _] = (0, _._)("remote_play_wifi_ap_show_advanced"),
             [_] = (0, _._)("remote_play_wifi_ap_paired_ssid"),
             _ = _.useRef(void 0),
-            _ = (0, _._)(),
             _ = (0, _._)(),
             _ = [
               {
@@ -734528,13 +734762,6 @@ Status Code:` +
             ],
             _ = (_) => {
               _(_.data).includes(_) || _(0), _(_.data).includes(_) || _(0);
-            },
-            _ = (_) => {
-              (0, _._)(
-                (0, _._)("#RemotePlay_PairWifiAPResult_Title"),
-                (0, _._)(_),
-                _.ownerWindow ?? window,
-              );
             },
             _ = _.useId(),
             _ = _.useId(),
@@ -734780,7 +735007,6 @@ Status Code:` +
                             _,
                             {
                               device: _,
-                              onPairResult: _,
                             },
                             _.clientId ?? _.deviceId,
                           ),
@@ -739739,7 +739965,7 @@ Status Code:` +
             _ = (0, _._)(_),
             _ = !0,
             _ = _.nSteamVersion > 0 ? _.nSteamVersion.toString() : "local",
-            _ = parseInt(1791589745),
+            _ = parseInt(1791685688),
             _ = _ && (0, _._)(_, _, _),
             _ = ((_.nCPUHz || 0) / 1e3 / 1e3 / 1e3).toFixed(2) + " GHz",
             _ = (0, _._)(_.nSystemRAMSizeMB * 1024 * 1024, 0),
@@ -740847,6 +741073,153 @@ Status Code:` +
               _,
             ],
           });
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = "steamdb";
+        const _ = 95,
+          _ = 300,
+          _ = 15e3;
+        function _(_, _ = !1) {
+          const _ = (0, _._)(_),
+            _ = _?.eResult !== void 0,
+            _ = _?.eResult == _._._,
+            _ = !!_?.bConnecting,
+            _ = (0, _._)(
+              () =>
+                !!_._.devices.find((_) => _.clientId == _)?.bConnectedViaWifiAP,
+            );
+          (0, _._)({
+            msInterval: 250,
+            bEnabled: _ && !_,
+          });
+          const [_, _] = _.useState(!1);
+          _.useEffect(() => {
+            if (!_ || !_ || !_) {
+              _(_);
+              return;
+            }
+            const _ = window.setTimeout(() => _(!0), _);
+            return () => window.clearTimeout(_);
+          }, [_, _, _]);
+          const _ = _ && _,
+            [_, _] = _.useState(!1),
+            [_, _] = _.useState(!1);
+          if (
+            (_.useEffect(() => {
+              if ((_(!1), _(!1), !_ || !_)) return;
+              const _ = window.setTimeout(() => _(!0), _);
+              return () => window.clearTimeout(_);
+            }, [_, _]),
+            _.useEffect(() => {
+              _ && _ && _(!0);
+            }, [_, _]),
+            !_ || (_ && _ && (_ || (_ && !_))))
+          )
+            return;
+          let _ = 0;
+          _
+            ? (_ = 100)
+            : _ &&
+              _.nEstimatedSeconds &&
+              (_ = Math.min(
+                _,
+                (100 * (Date.now() - _.msConnectStart)) /
+                  (_.nEstimatedSeconds * 1e3),
+              ));
+          let _;
+          return (
+            _ &&
+              _ &&
+              (_
+                ? (_ = (0, _._)(
+                    _
+                      ? "#RemotePlay_PairWifiAPResult_Connected"
+                      : "#RemotePlay_PairWifiAPResult_OK",
+                  ))
+                : (_ = (0, _._)(_.eResult))),
+            {
+              bPairing: !_ && !_,
+              bConnecting: _,
+              bShowBar: _ && !_,
+              nPercent: _,
+              nTransitionSec: _ ? _ / 1e3 : 0.25,
+              strResult: _,
+              bSucceeded: _,
+            }
+          );
+        }
+        function _(_) {
+          const _ = _(_.clientId, _.bTransientResult);
+          return _
+            ? (0, _.jsxs)("div", {
+                className: (0, _._)(_().WifiAPPairingProgress, _.className),
+                children: [
+                  !_.strResult &&
+                    (0, _.jsxs)("div", {
+                      className: _().Step,
+                      children: [
+                        _.bPairing
+                          ? (0, _.jsx)(_.Spinner, {
+                              className: _().Icon,
+                            })
+                          : (0, _.jsx)(_.Checkmark, {
+                              className: (0, _._)(_().Icon, _().Done),
+                            }),
+                        (0, _._)(
+                          _.bPairing
+                            ? "#RemotePlay_PairWifiAP_Pairing"
+                            : "#RemotePlay_PairWifiAP_Paired",
+                        ),
+                      ],
+                    }),
+                  !_.strResult &&
+                    _.bConnecting &&
+                    (0, _.jsxs)("div", {
+                      className: _().Step,
+                      children: [
+                        (0, _.jsx)(_.Spinner, {
+                          className: _().Icon,
+                        }),
+                        (0, _._)("#RemotePlay_PairWifiAP_Connecting"),
+                      ],
+                    }),
+                  _.bShowBar &&
+                    (0, _.jsx)(_._, {
+                      nProgress: _.nPercent,
+                      nTransitionSec: _.nTransitionSec,
+                    }),
+                  _.strResult &&
+                    (0, _.jsxs)("div", {
+                      className: (0, _._)(_().Step, _.bSucceeded && _().Done),
+                      children: [
+                        _.bSucceeded &&
+                          (0, _.jsx)(_.Checkmark, {
+                            className: _().Icon,
+                          }),
+                        _.strResult,
+                      ],
+                    }),
+                ],
+              })
+            : null;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {

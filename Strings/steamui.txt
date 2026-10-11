@@ -2022,6 +2022,7 @@ ${LANGUAGE}
 %\n!k_EProfileCustomizationTypeSalien
 %\n!k_ERemoteClientBroadcastMsgStatus
 %\n!k_ERemoteClientPairWifiAPCanceled
+%\n!k_ERemoteClientPairWifiAPProgress
 %\n!k_ERemoteClientServiceSiteLicense
 %\n!k_ERemoteDeviceStreamingInvisible
 %\n!k_ESteamDeckKeyboardLayout_Danish
@@ -3610,7 +3611,6 @@ ${LANGUAGE}
 (\t"\\n*CBroadcast_UpdateChatMessageFlair_Response
 (\t"\v\n\tCPauseMsg"\f\n\nCResumeMsg"
 (\t"]\n"CShader_GetBucketManifest_Response
-(\t"^\n"CMsgRemoteClientPairWifiAPResponse
 (\t"_\n\rGameListEntry
 (\t"`\n(CBroadcast_MuteBroadcastChatUser_Request
 (\t"`\n\nSteamAward
@@ -5220,6 +5220,7 @@ ${LANGUAGE}
 *\n&k_EProtoServiceTypeVRGamepadUIMessages
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_EQueryFilesSpecialFilter_ParentItems
+*\n&k_ERemoteClientPairWifiAPConnectFailed
 *\n&k_ERemoteDeviceAuthorizationInProgress
 *\n&k_EResolutionAutomation_FullyAutomated
 *\n&k_ESharedLibrary_AppExcluded_ByPartner
@@ -5279,9 +5280,10 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG8
+++CCUNGS
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNGx
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -7816,10 +7818,10 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 00003333
 00:00:00
-01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -18079,6 +18081,8 @@ CNotificationController::OnStreamingClientConnected
 CNotificationController::OnStreamingClientDisconnected
 CNotificationController::UpdateItemAnnouncement
 COL$
+COLOR_ENCODING
+COLOR_RANGE
 COMMIT
 COMPLEMENTOFALL
 COMPLEMENTOFDEFAULT
@@ -18322,6 +18326,7 @@ CRemotePlayController::OnRemoteClientInputSettingsChange
 CRemotePlayController::OnRemoteClientInstallAppResult
 CRemotePlayController::OnRemoteClientLaunchFailed
 CRemotePlayController::OnRemoteClientOffline
+CRemotePlayController::OnRemoteClientPairWifiAPProgress
 CRemotePlayController::OnRemoteClientPairWifiAPResult
 CRemotePlayController::OnRemoteClientRemotePlayBitrateOverride
 CRemotePlayController::OnRemoteClientRemotePlayClearControllers
@@ -24297,6 +24302,9 @@ ISSUING_DIST_POINT
 IStreamParser::BIsValidMsgType() invalid packet header (1st 8 bytes: 0x%02X%02X%02X%02X%02X%02X%02X%02X, %d bytes recv'd so far) discarding packet and closing connection\n
 IStreamParser::BIsValidMsgType() old packet header from out-of-date Steam build, discarding packet and closing connection\n
 IStreamParser::BIsValidMsgType() too-large cbMessageSize in message header (%u bytes, %d bytes recv'd so far) discarding packet and closing connection\n
+ITU-R BT.2020 YCbCr
+ITU-R BT.601 YCbCr
+ITU-R BT.709 YCbCr
 ITU-T
 ITc[
 ITsn=
@@ -26382,6 +26390,7 @@ N21CRemotePlayController49CCallbackInternal_OnRemoteClientSoftAPStateChangeE
 N21CRemotePlayController49CCallbackInternal_OnRemoteClientStartStreamResultE
 N21CRemotePlayController49CCallbackInternal_OnRemoteDevicePairingPINChangedE
 N21CRemotePlayController50CCallbackInternal_OnRemoteClientDongleDisconnectedE
+N21CRemotePlayController50CCallbackInternal_OnRemoteClientPairWifiAPProgressE
 N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherGroupCreatedE
 N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherPlayerJoinedE
 N21CRemotePlayController50CCallbackInternal_OnStreamingClientSettingsChangedE
@@ -27788,7 +27797,7 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 10 2026 00:12:35
+Oct 10 2026 19:04:04
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -29421,6 +29430,8 @@ RemotePlay.RegisterForInputDriverRestartNotice
 RemotePlay.RegisterForInputUsed
 RemotePlay.RegisterForInviteResult
 RemotePlay.RegisterForNetworkUtilizationUpdate
+RemotePlay.RegisterForPairWifiAPProgress
+RemotePlay.RegisterForPairWifiAPResult
 RemotePlay.RegisterForPlaceholderStateChanged
 RemotePlay.RegisterForPlayerInputSettingsChanged
 RemotePlay.RegisterForQualityOverride
@@ -34413,6 +34424,8 @@ Y77n
 Y9#C
 Y>@J3
 Y@9Ql
+YCbCr full range
+YCbCr limited range
 YK}o
 YOU GOT A TROPHY!
 YOuc
@@ -34840,6 +34853,7 @@ Z~@rg
 \n"CGameRecording_QueryPhases_Request
 \n"CGameServers_FriendsQuery_Response
 \n"CGameServers_QueryByFakeIP_Request
+\n"CMsgRemoteClientPairWifiAPResponse
 \n"CPublishedFile_GetItemInfo_Request
 \n"CRemotePlay_SessionStarted_Request
 \n"CStoreBrowse_GetDLCForApps_Request
@@ -35799,6 +35813,7 @@ Z~@rg
 \n\nstate_name
 \n\nsteam_deck
 \n\nsteamid_to
+\n\nsteps_done
 \n\nstyle_name
 \n\nsubject_id
 \n\nsync_state
@@ -36318,6 +36333,7 @@ Z~@rg
 \n\tsource_id
 \n\tstart_dir
 \n\tstart_num
+\n\tstep_name
 \n\tstore_tag
 \n\tsubtitles
 \n\tsupported
@@ -36595,6 +36611,7 @@ Z~@rg
 \n\vsteam_realm
 \n\vsteamidhost
 \n\vsteamiduser
+\n\vsteps_total
 \n\vstore_appid
 \n\vstore_items
 \n\vstream_port
@@ -41662,6 +41679,7 @@ estackingorder
 estate
 estatus
 estimated_packet_rate
+estimated_seconds
 estimated_seconds_remaining
 estimated_size
 estimated_time_registered
@@ -56636,6 +56654,7 @@ supported_video_codecs
 supports_brightness
 supports_color
 supports_os_updates
+supports_progress
 supports_remote_hid
 supports_speed
 supports_startup_brightness
@@ -59106,7 +59125,6 @@ z~rvjnbfZ^RVJNBF
 {A7Dd
 {GCOKWS_[
 {OYK
-{PuQ
 {\n"version": %u,\n"gameids" : [\n
 {\n\t"file_format_version" : "1.0.0",\n\t"layer" : {\n\t\t"name": "%s",\n\t\t"type": "GLOBAL",\n\t\t"library_path": "%s/%s",\n\t\t"api_version": "1.3.207",\n\t\t"implementation_version": "1",\n\t\t"description": "%s",\n\t\t"disable_environment": { "DISABLE_%s": "1" },\n\t\t"enable_environment": { "ENABLE_%s": "1" }%s\n\t}\n}\n
 {aey

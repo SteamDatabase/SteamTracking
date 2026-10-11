@@ -12,6 +12,8 @@ enum ERemoteClientPairWifiAPResult {
 	k_ERemoteClientPairWifiAPNoDonglePresent = 5;
 	k_ERemoteClientPairWifiAPTimeout = 6;
 	k_ERemoteClientPairWifiAPCanceled = 7;
+	k_ERemoteClientPairWifiAPProgress = 8;
+	k_ERemoteClientPairWifiAPConnectFailed = 9;
 }
 
 enum EStreamingDongleFixResult {
@@ -272,10 +274,15 @@ message CMsgRemoteClientWifiAPStatus {
 message CMsgRemoteClientPairWifiAP {
 	optional string ssid = 1;
 	optional string password = 2;
+	optional bool supports_progress = 3;
 }
 
 message CMsgRemoteClientPairWifiAPResponse {
 	optional int32 e_pair_result = 1 [default = 2];
 	optional string ssid = 2;
 	optional string password = 3;
+	optional int32 steps_done = 4;
+	optional int32 steps_total = 5;
+	optional string step_name = 6;
+	optional uint32 estimated_seconds = 7;
 }
