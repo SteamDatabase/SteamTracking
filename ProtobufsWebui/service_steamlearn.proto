@@ -912,6 +912,11 @@ message CMsgSteamLearnModelNodeExtract {
 	optional string extracted_compact_table = 11;
 	optional uint32 recency_months = 12;
 	optional string fest_name = 13;
+	optional bool use_input_min = 14;
+	optional uint32 input_min_input_number = 15;
+	optional float input_min_value = 16;
+	optional bool use_renormalize = 17;
+	optional uint32 renormalize_input_number = 18;
 }
 
 message CMsgSteamLearnModelNodeFlatten {
@@ -961,6 +966,13 @@ message CMsgSteamLearnModelNodeReshape2D {
 
 message CMsgSteamLearnModelNodeRowExtract {
 	optional int32 row = 1;
+}
+
+message CMsgSteamLearnModelNodeScaledCosineSimilarity {
+	optional float initial_scale = 1;
+	optional float initial_bias = 2;
+	optional bool freeze_scale = 3;
+	optional bool freeze_bias = 4;
 }
 
 message CMsgSteamLearnModelNodeShuffle {
@@ -1103,6 +1115,7 @@ message CMsgSteamLearnProjectNode {
 	optional .CMsgSteamLearnModelNodeBertFinetune bert_finetune = 49;
 	optional .CMsgSteamLearnModelNodeThreshold threshold = 50;
 	optional .CMsgSteamLearnModelNodeLogic logic = 51;
+	optional .CMsgSteamLearnModelNodeScaledCosineSimilarity scaled_cosine_similarity = 52;
 }
 
 message CMsgSteamLearnProjectNodeConnector {

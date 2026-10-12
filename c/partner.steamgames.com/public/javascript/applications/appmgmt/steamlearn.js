@@ -147,6 +147,7 @@
           _ = 40,
           _ = 41,
           _ = 42,
+          _ = 43,
           _ = 0,
           _ = 1,
           _ = 2,
@@ -2889,6 +2890,10 @@
                       _: 51,
                       _: _,
                     },
+                    scaled_cosine_similarity: {
+                      _: 52,
+                      _: _,
+                    },
                   },
                 }),
               _.sm_m
@@ -4236,6 +4241,83 @@
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
+              _.prototype.initial_scale || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    initial_scale: {
+                      _: 1,
+                      _: _._.readFloat,
+                      _: _._.writeFloat,
+                    },
+                    initial_bias: {
+                      _: 2,
+                      _: _._.readFloat,
+                      _: _._.writeFloat,
+                    },
+                    freeze_scale: {
+                      _: 3,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    freeze_bias: {
+                      _: 4,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgSteamLearnModelNodeScaledCosineSimilarity";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
               _.prototype.input_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
@@ -4311,6 +4393,31 @@
                       _: 13,
                       _: _._.readString,
                       _: _._.writeString,
+                    },
+                    use_input_min: {
+                      _: 14,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    input_min_input_number: {
+                      _: 15,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    input_min_value: {
+                      _: 16,
+                      _: _._.readFloat,
+                      _: _._.writeFloat,
+                    },
+                    use_renormalize: {
+                      _: 17,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    renormalize_input_number: {
+                      _: 18,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
                     },
                   },
                 }),

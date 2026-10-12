@@ -870,7 +870,7 @@
                               }),
                               (0, _.jsx)("div", {
                                 children:
-                                  "A high-quality photo or scan of the original, physical document, ensuring that the image is in focus, no external light impacts quality and that all watermarks, imprints, features and color are clearly visible. Do not Crop the images of your ID document - the corners and edges must be clearly visible. Ensure you do not deprecate any aspect of the image, otherwise we will not proceed with your verification.",
+                                  "A high-quality photo of the original, physical document, ensuring that the image is in focus, no external light impacts quality and that all watermarks, imprints, features and color are clearly visible. Do not Crop the images of your ID document - the corners and edges must be clearly visible. Ensure you do not deprecate any aspect of the image, otherwise we will not proceed with your verification.",
                               }),
                               (0, _.jsx)("br", {}),
                               (0, _.jsxs)("div", {
@@ -941,7 +941,7 @@
                                   children: [
                                     (0, _.jsx)("li", {
                                       children:
-                                        "Show your full face, and you holding the same Identification document - note, this is not a substitute for supplying a scan / photo of the original document as described above",
+                                        "Show your full face, and you holding the same Identification document - note, this is not a substitute for supplying a photo of the original document as described above",
                                     }),
                                     (0, _.jsx)("li", {
                                       children:

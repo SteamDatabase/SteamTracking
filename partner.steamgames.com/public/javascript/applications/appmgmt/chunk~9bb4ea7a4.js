@@ -5106,6 +5106,31 @@
                       bw: i.gp.writeUint32,
                     },
                     vetted: { n: 7, br: i.qM.readBool, bw: i.gp.writeBool },
+                    groups_completed_base: {
+                      n: 8,
+                      br: i.qM.readUint32,
+                      bw: i.gp.writeUint32,
+                    },
+                    groups_total_base: {
+                      n: 9,
+                      br: i.qM.readUint32,
+                      bw: i.gp.writeUint32,
+                    },
+                    groups_completed_dlc: {
+                      n: 10,
+                      br: i.qM.readUint32,
+                      bw: i.gp.writeUint32,
+                    },
+                    groups_total_dlc: {
+                      n: 11,
+                      br: i.qM.readUint32,
+                      bw: i.gp.writeUint32,
+                    },
+                    base_game_total: {
+                      n: 12,
+                      br: i.qM.readUint32,
+                      bw: i.gp.writeUint32,
+                    },
                   },
                 }),
               Yr.sm_m
