@@ -285,7 +285,7 @@ class ClientExtractor
 					$Name = $File->getBasename( '.so' );
 					$this->Log( 'Dumping ' . $File->getFilename() );
 
-					$Command = escapeshellarg( $DumpStrings ) . ' -target elf -binary ' . escapeshellarg( $File->getPathname() );
+					$Command = escapeshellarg( $DumpStrings ) . ' dump -format elf -sort -mask-protobufs ' . escapeshellarg( $File->getPathname() );
 					exec( $Command, $Output, $ReturnCode );
 
 					if( $ReturnCode !== 0 )
@@ -295,7 +295,6 @@ class ClientExtractor
 					}
 
 					$Strings = array_unique( $Output );
-					sort( $Strings );
 
 					file_put_contents( self::STRINGS_DIR . '/' . $Name . '.txt', implode( PHP_EOL, $Strings ) . PHP_EOL );
 					$Output = [];
@@ -308,7 +307,7 @@ class ClientExtractor
 			if( file_exists( $SteamBinary ) )
 			{
 				$Name = basename( $SteamBinary );
-				$Command = escapeshellarg( $DumpStrings ) . ' -target elf -binary ' . escapeshellarg( $SteamBinary );
+				$Command = escapeshellarg( $DumpStrings ) . ' dump -format elf -sort -mask-protobufs ' . escapeshellarg( $SteamBinary );
 				exec( $Command, $Output, $ReturnCode );
 
 				if( $ReturnCode !== 0 )
@@ -317,7 +316,6 @@ class ClientExtractor
 					continue;
 				}
 				$Strings = array_unique( $Output );
-				sort( $Strings );
 
 				file_put_contents( self::STRINGS_DIR . '/'. $Name . '.txt', implode( PHP_EOL, $Strings ) . PHP_EOL );
 				$Output = [];
@@ -469,70 +467,9 @@ class ClientExtractor
 	{
 		$this->Log( 'Fixing encodings' );
 
-		$Iterator = new RecursiveIteratorIterator(
-			new RecursiveDirectoryIterator( self::CLIENT_EXTRACTED_DIR, RecursiveDirectoryIterator::SKIP_DOTS )
-		);
+		$DumpStrings = __DIR__ . '/DumpStrings/DumpStrings' . ( PHP_OS_FAMILY === 'Windows' ? '.exe' : '' );
 
-		/** @var \SplFileInfo $File */
-		foreach( $Iterator as $File )
-		{
-			if( !$File->isFile() || !in_array( $File->getExtension(), [ 'txt', 'xml', 'cfg', 'res' ] ) )
-			{
-				continue;
-			}
-
-			$this->ConvertFileEncoding( $File->getPathname() );
-		}
-	}
-
-	private function ConvertFileEncoding( string $FileName ) : void
-	{
-		$Handle = fopen( $FileName, 'r' );
-
-		if( $Handle === false )
-		{
-			return;
-		}
-
-		$BOM = fread( $Handle, 4 );
-		fclose( $Handle );
-
-		$Encoding = null;
-
-		// Detect and convert UTF-16, UTF-32 to UTF-8
-		if( $BOM === "\x00\x00\xFE\xFF" )
-		{
-			$Encoding = 'UTF-32BE';
-		}
-		else if( $BOM === "\xFF\xFE\x00\x00" )
-		{
-			$Encoding = 'UTF-32LE';
-		}
-		else if( substr( $BOM, 0, 2 ) === "\xFE\xFF" )
-		{
-			$Encoding = 'UTF-16BE';
-		}
-		else if( substr( $BOM, 0, 2 ) === "\xFF\xFE" )
-		{
-			$Encoding = 'UTF-16LE';
-		}
-
-		if( $Encoding !== null )
-		{
-			$RelativePath = str_replace( self::CLIENT_EXTRACTED_DIR . '/', '', $FileName );
-			$this->Log( 'Converting ' . $Encoding . ' to UTF-8: ' . $RelativePath );
-
-			$Text = file_get_contents( $FileName );
-
-			if( $Text !== false )
-			{
-				$Text = mb_convert_encoding( $Text, 'UTF-8', $Encoding );
-				$Text = preg_replace( '/^[\xef\xbb\xbf\xff\xfe\xfe\xff]*/', '', $Text );
-				$Text = trim( $Text ) . PHP_EOL;
-
-				file_put_contents( $FileName, $Text );
-			}
-		}
+		$this->RunCommand( escapeshellarg( $DumpStrings ) . ' fix-encoding -ext txt,xml,cfg,res ' . escapeshellarg( self::CLIENT_EXTRACTED_DIR ) );
 	}
 
 	private function Log( string $String ) : void
