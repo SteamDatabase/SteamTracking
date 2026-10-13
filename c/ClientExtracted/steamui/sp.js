@@ -402969,6 +402969,7 @@ ${_}`;
               uniformSizing: _ = !1,
               batteryCriticalThreshold: _ = 0.2,
               alert: _ = !1,
+              saver: _ = !1,
               className: _,
               forceWhiteChargingBolt: _,
               ..._
@@ -402976,37 +402977,72 @@ ${_}`;
             _ = _ == _._,
             _ = _ == _._,
             _ = _ || _,
+            [_, _] = (0, _._)(),
             _ = (0, _.jsxs)("svg", {
               ..._,
               width: _ ? void 0 : "34px",
               height: _ ? void 0 : "24px",
-              viewBox: _ ? "-4 0 52 36" : "0 0 48 36",
+              viewBox: _ ? "-8 0 52 36" : "0 0 48 36",
               className: _ ? _ : void 0,
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
               children: [
-                !_ &&
-                  (0, _.jsx)("path", {
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    _: "M39 6H0V30H39V22H42V14H39V6ZM36 9H3V27H36V9Z",
-                    fill: "currentColor",
-                  }),
-                (0, _.jsx)("svg", {
-                  _: "6",
-                  _: "12",
-                  width: "27",
-                  height: "12",
-                  children: (0, _.jsx)("rect", {
-                    width: `${_ * 100}%`,
-                    height: "100%",
-                    fill: _ <= _ ? "#E01D79" : "#59BF40",
+                (0, _.jsx)("defs", {
+                  children: (0, _.jsxs)("mask", {
+                    _: _,
+                    children: [
+                      (0, _.jsx)("rect", {
+                        _: "-20",
+                        _: "-20",
+                        width: "100",
+                        height: "100",
+                        fill: "#ffffff",
+                      }),
+                      (0, _.jsx)("path", {
+                        _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
+                        fill: "none",
+                        stroke: "#000000",
+                        "stroke-width": "6",
+                        "stroke-linecap": "round",
+                        "stroke-linejoin": "round",
+                      }),
+                    ],
                   }),
                 }),
-                (_ || _) &&
-                  (0, _.jsx)("path", {
-                    _: "M16 20L21 11V16H26L21 25V20H16Z",
-                    fill: _ ? "white" : "currentColor",
+                (0, _.jsxs)("g", {
+                  mask: _ ? _ : void 0,
+                  children: [
+                    !_ &&
+                      (0, _.jsx)("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        _: "M39 6H0V30H39V22H42V14H39V6ZM36 9H3V27H36V9Z",
+                        fill: "currentColor",
+                      }),
+                    (0, _.jsx)("svg", {
+                      _: "6",
+                      _: "12",
+                      width: "27",
+                      height: "12",
+                      children: (0, _.jsx)("rect", {
+                        width: `${_ * 100}%`,
+                        height: "100%",
+                        fill: _ <= _ ? "#E01D79" : "#59BF40",
+                      }),
+                    }),
+                    (_ || _) &&
+                      (0, _.jsx)("path", {
+                        _: "M16 20L21 11V16H26L21 25V20H16Z",
+                        fill: _ ? "white" : "currentColor",
+                      }),
+                  ],
+                }),
+                _ &&
+                  (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("path", {
+                      _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
+                      fill: "#59BF40",
+                    }),
                   }),
                 _ &&
                   (0, _.jsxs)(_.Fragment, {
@@ -403083,39 +403119,75 @@ ${_}`;
               batteryLevel: _,
               uniformSizing: _ = !1,
               alert: _ = !1,
+              saver: _ = !1,
               className: _,
               forceWhiteChargingBolt: _,
             } = _,
+            [_, _] = (0, _._)(),
             _ = (0, _.jsxs)("svg", {
               width: _ ? void 0 : "42",
               height: _ ? void 0 : "36",
-              viewBox: _ ? "-4 0 52 36" : _ ? "0 0 48 36" : "0 0 42 36",
+              viewBox: _ ? "-8 0 52 36" : _ ? "0 0 48 36" : "0 0 42 36",
               className: _ ? _ : void 0,
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
               children: [
-                (0, _.jsx)("path", {
-                  _: "M33 24V12L6 12V24H33Z",
-                  fill: "#59BF40",
-                }),
-                !_ &&
-                  (0, _.jsx)("path", {
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    _: "M0 6H39V14H42V22H39V30H0V6ZM3 9H36V27H3V9Z",
-                    fill: "currentColor",
+                (0, _.jsx)("defs", {
+                  children: (0, _.jsxs)("mask", {
+                    _: _,
+                    children: [
+                      (0, _.jsx)("rect", {
+                        _: "-20",
+                        _: "-20",
+                        width: "100",
+                        height: "100",
+                        fill: "#ffffff",
+                      }),
+                      (0, _.jsx)("path", {
+                        _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
+                        fill: "none",
+                        stroke: "#000000",
+                        "stroke-width": "6",
+                        "stroke-linecap": "round",
+                        "stroke-linejoin": "round",
+                      }),
+                    ],
                   }),
+                }),
+                (0, _.jsxs)("g", {
+                  mask: _ ? _ : void 0,
+                  children: [
+                    (0, _.jsx)("path", {
+                      _: "M33 24V12L6 12V24H33Z",
+                      fill: "#59BF40",
+                    }),
+                    !_ &&
+                      (0, _.jsx)("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        _: "M0 6H39V14H42V22H39V30H0V6ZM3 9H36V27H3V9Z",
+                        fill: "currentColor",
+                      }),
+                    _ &&
+                      (0, _.jsx)("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        _: "M38.4774 6H0V30H39V22H42V18.4895C39.6953 17.5151 38.08 15.2509 38.08 12.6132C38.08 11.4277 38.4063 10.3177 38.9747 9.36634L38.4774 6ZM36 9H3V27H36V9Z",
+                        fill: "currentColor",
+                      }),
+                    (0, _.jsx)("path", {
+                      _: "M23.591 13.3334L18.3713 18.8147L16.0198 16.355L14.1665 18.2756L18.3713 22.6667L25.4443 15.254L23.591 13.3334Z",
+                      fill: _ ? "white" : "currentColor",
+                    }),
+                  ],
+                }),
                 _ &&
-                  (0, _.jsx)("path", {
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    _: "M38.4774 6H0V30H39V22H42V18.4895C39.6953 17.5151 38.08 15.2509 38.08 12.6132C38.08 11.4277 38.4063 10.3177 38.9747 9.36634L38.4774 6ZM36 9H3V27H36V9Z",
-                    fill: "currentColor",
+                  (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("path", {
+                      _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
+                      fill: "#59BF40",
+                    }),
                   }),
-                (0, _.jsx)("path", {
-                  _: "M23.591 13.3334L18.3713 18.8147L16.0198 16.355L14.1665 18.2756L18.3713 22.6667L25.4443 15.254L23.591 13.3334Z",
-                  fill: _ ? "white" : "currentColor",
-                }),
                 _ &&
                   (0, _.jsxs)(_.Fragment, {
                     children: [
@@ -458563,6 +458635,7 @@ Status Code:` +
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(module_exports, {
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -530548,7 +530621,8 @@ Status Code:` +
               })).filter(({ stream: _ }) => _ != null)
             : [];
         }
-        var _ = "steamdb";
+        var _ = __webpack_require__("chunkid"),
+          _ = "steamdb";
         const _ = 0.1,
           _ = 0.25;
         function _() {
@@ -530938,6 +531012,7 @@ Status Code:` +
                   batteryLevel: _.state.flLevel,
                   uniformSizing: _,
                   alert: _.alert,
+                  saver: _.saver,
                   forceWhiteChargingBolt: _,
                 })
               : (0, _.jsx)(_.Battery, {
@@ -530945,6 +531020,7 @@ Status Code:` +
                   batteryLevel: _.state.flLevel,
                   uniformSizing: _,
                   alert: _.alert,
+                  saver: _.saver,
                   forceWhiteChargingBolt: _,
                 });
           return (0, _.jsxs)(_, {
@@ -531065,6 +531141,7 @@ Status Code:` +
                 icon: _,
                 deviceName: _,
                 alert: _.alert,
+                saver: _.saver,
                 sayFull: _ && _.devicePath == _._,
                 neverShowBatteryPercent: _.devicePath != _._,
               });
@@ -531108,6 +531185,7 @@ Status Code:` +
                 hasBattery: _,
                 deviceConnected: _,
                 alert: _,
+                saver: (0, _._)(),
               }),
             }),
             _ = (0, _.jsx)(_._, {
@@ -698987,7 +699065,7 @@ Status Code:` +
               _.nSteamVersion > 0
                 ? _.nSteamVersion.toString()
                 : (0, _._)("#Settings_System_SteamLocalBuild"),
-            _ = parseInt(1791685688),
+            _ = parseInt(1791840534),
             _ = _ && (0, _._)(_, _, _),
             _ = _.sSteamBuildDate,
             _ = (0, _._)() ? " GMT+0000" : " GMT-0800",
@@ -739965,7 +740043,7 @@ Status Code:` +
             _ = (0, _._)(_),
             _ = !0,
             _ = _.nSteamVersion > 0 ? _.nSteamVersion.toString() : "local",
-            _ = parseInt(1791685688),
+            _ = parseInt(1791840534),
             _ = _ && (0, _._)(_, _, _),
             _ = ((_.nCPUHz || 0) / 1e3 / 1e3 / 1e3).toFixed(2) + " GHz",
             _ = (0, _._)(_.nSystemRAMSizeMB * 1024 * 1024, 0),

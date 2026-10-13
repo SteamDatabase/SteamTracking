@@ -2005,12 +2005,18 @@ $ffn
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 00000000
+1000
+1024
 00003333
-01/01/00
+10000
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+00:25:27
+00:25:31
+00:25:32
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -2059,9 +2065,6 @@ $ffn
 1.6.37
 10.0.0.0/8
 100 127.0.0.1 stale
-1000
-1024
-10000
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2345,7 +2348,6 @@ $ffn
 11IFileSystem
 11M|
 12 Mbps
-123456789
 127.0.0.1
 128 Kbps
 128K
@@ -2479,7 +2481,6 @@ $ffn
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
-18446744073709551615
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CFutureSharedStateIbE
@@ -2500,8 +2501,6 @@ $ffn
 18IUDPSocketCallback
 18IWorkThreadFactory
 192.69.96.0/22
-19:03:53
-19:04:00
 19CActivationCodeInfo
 19CClientMicroTxnInfo
 19CCuratorPreferences
@@ -2780,7 +2779,13 @@ $ffn
 50UserContentDescriptorPreferences_ContentDescriptor
 512 Kbps
 512K
+6144
+8000
+8192
+65536
 524288
+123456789
+18446744073709551615
 52F*
 55Ly
 55j_WW
@@ -2803,8 +2808,6 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-6144
-65536
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 64CK\vH
@@ -2859,8 +2862,6 @@ $ffn
 8.K%G
 8/A0
 80 Mbps
-8000
-8192
 82\n:XPH
 83L3
 83N6
@@ -7886,7 +7887,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 10 2026
+Oct 13 2026
 October
 Odia
 Offensive Avatar
@@ -9385,7 +9386,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Oct 10 2026 19:04:00
+Startup - updater built Oct 13 2026 00:25:32
 State
 StaticFileWriterThread()
 Steam

@@ -62,7 +62,7 @@
         41196: (le, se, B) => {
           "use strict";
           B.d(se, { TU: () => c, hw: () => s, nA: () => e });
-          var l = "11115265",
+          var l = "11118705",
             c = ((a) => (
               (a[(a.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
               (a[(a.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
@@ -403,7 +403,7 @@
             zeJ: () => Ei,
             zlr: () => d,
           });
-          var l = "11115265";
+          var l = "11118705";
           const c = 1,
             e = 2,
             s = 3,
@@ -1901,7 +1901,7 @@
             yY: () => v,
             zl: () => r,
           });
-          var l = "11115265";
+          var l = "11118705";
           function c(L, Z = 0, K = Math.random) {
             if (L?.length > 1) {
               let H = Z > 0 ? Math.min(Z, L.length) : L.length;
@@ -2083,7 +2083,7 @@
         3493: (le, se, B) => {
           "use strict";
           B.d(se, { wT: () => c, z_: () => s });
-          var l = "11115265";
+          var l = "11118705";
           function c(a, v, ...w) {
             console.assert
               ? w.length == 0
@@ -2109,7 +2109,7 @@
         89317: (le, se, B) => {
           "use strict";
           B.d(se, { C: () => c });
-          var l = "11115265";
+          var l = "11118705";
           async function c(a, v = "SHA-256") {
             let w;
             typeof a == "string" ? (w = s(a)) : (w = a);
@@ -2130,7 +2130,7 @@
         81919: (le, se, B) => {
           "use strict";
           B.d(se, { o: () => c });
-          var l = "11115265";
+          var l = "11118705";
           function c(e, s, a) {
             return {
               get() {
@@ -2213,7 +2213,7 @@
             zL: () => Z,
             zi: () => e,
           });
-          var l = "11115265";
+          var l = "11118705";
           const c = 1,
             e = 2,
             s = 3,
@@ -2351,7 +2351,7 @@
             c = B(98237),
             e = B(75959),
             s = B(63696),
-            a = "11115265";
+            a = "11118705";
           const v =
             window.addEventListener ||
             (globalThis && globalThis.addEventListener) ||
@@ -2762,7 +2762,7 @@
           "use strict";
           B.d(se, { l: () => e });
           var l = B(93750),
-            c = "11115265";
+            c = "11118705";
           class e {
             m_vecCallbacks = [];
             Register(a) {
@@ -2807,7 +2807,7 @@
             bT: () => w,
             kf: () => P,
           });
-          var l = "11115265";
+          var l = "11118705";
           function c(p, S) {
             return (
               (p = Math.ceil(p)),
@@ -2878,7 +2878,7 @@
         65733: (le, se, B) => {
           "use strict";
           B.d(se, { x0: () => e, yI: () => s });
-          var l = "11115265";
+          var l = "11118705";
           async function c(a) {
             try {
               return await a;
@@ -2910,7 +2910,7 @@
             ut: () => g,
             yc: () => w,
           });
-          var l = "11115265";
+          var l = "11118705";
           const c = [
               "sc_schinese",
               "schinese",
@@ -3009,14 +3009,14 @@
           var l = B(69766),
             c = B(63696),
             e = B(4726),
-            s = "11115265";
+            s = "11118705";
           const a = 0,
             v = 1,
             w = 2,
             g = 3,
             r = 4,
             I = 5;
-          var P = "11115265";
+          var P = "11118705";
           function p(Y, ..._) {
             return (
               _.length == 0 ||
@@ -3033,7 +3033,7 @@
           var S = B(11224),
             T = B(93330),
             F = B(32758),
-            x = "11115265";
+            x = "11118705";
           function h(Y) {
             const _ = new Map();
             async function $() {
@@ -3198,7 +3198,7 @@
         11224: (le, se, B) => {
           "use strict";
           B.d(se, { n: () => a, u: () => s });
-          var l = "11115265";
+          var l = "11118705";
           let c;
           c ??= new Set();
           let e;
@@ -3219,7 +3219,7 @@
             a = B(98089),
             v = B(13820),
             w = B(98890),
-            g = "11115265";
+            g = "11118705";
           const r = 8;
           class I {
             static InitHeaderFromPacket(T) {
@@ -3408,7 +3408,7 @@
           });
           var l = B(58663),
             c = B.n(l),
-            e = "11115265";
+            e = "11118705";
           const s = l.BinaryReader.prototype,
             a = l.BinaryWriter.prototype;
           function v(x) {
@@ -3586,11 +3586,11 @@
           var c = B(58663),
             e = B.n(c),
             s = B(67480),
-            a = "11115265";
+            a = "11118705";
           const v = 0,
             w = 1,
             g = 2;
-          var r = "11115265";
+          var r = "11118705";
           function I(x) {
             return "unknown EContentHubDiscountFilterType ( " + x + " )";
           }
@@ -3979,7 +3979,7 @@
             xpG: () => Ig,
             y6$: () => e,
           });
-          var l = "11115265";
+          var l = "11118705";
           const c = 0,
             e = 1,
             s = 2,
@@ -5423,7 +5423,7 @@
         83882: (le, se, B) => {
           "use strict";
           B.d(se, { T4: () => a, mx: () => c, u7: () => s });
-          var l = "11115265";
+          var l = "11118705";
           const c = 1,
             e = 2,
             s = 3,
@@ -5452,7 +5452,7 @@
           var c = B(58663),
             e = B.n(c),
             s = B(67480),
-            a = "11115265";
+            a = "11118705";
           const v = 1,
             w = 2,
             g = 3,
@@ -5489,10 +5489,10 @@
             q = 34,
             X = 35,
             C = 36;
-          var oe = "11115265";
+          var oe = "11118705";
           const ue = 0,
             R = 1;
-          var ee = "11115265";
+          var ee = "11118705";
           function n(ne) {
             return "unknown EBanContentCheckResult ( " + ne + " )";
           }
@@ -8042,7 +8042,7 @@
             s = B.n(e),
             a = B(67480),
             v = B(98237),
-            w = "11115265";
+            w = "11118705";
           class g extends e.Message {
             static ImplementsStaticInterface() {}
             constructor(o = null) {
@@ -8443,14 +8443,14 @@
             }
           }
           var S = B(13820),
-            T = "11115265";
+            T = "11118705";
           const F = 1,
             x = 2,
             h = 3,
             W = 4,
             Y = 5,
             _ = 6;
-          var $ = "11115265";
+          var $ = "11118705";
           const V = 1,
             d = 2,
             k = 3,
@@ -8458,7 +8458,7 @@
             ae = 5,
             te = 6,
             be = 7;
-          var Be = "11115265";
+          var Be = "11118705";
           function L(ie) {
             return "unknown ESteamPipeOperationType ( " + ie + " )";
           }
@@ -10892,7 +10892,7 @@
           var l = B(58663),
             c = B.n(l),
             e = B(67480),
-            s = "11115265";
+            s = "11118705";
           class a extends l.Message {
             static ImplementsStaticInterface() {}
             constructor(n = null) {
@@ -13816,7 +13816,7 @@
             c = B.n(l),
             e = B(67480),
             s = B(13820),
-            a = "11115265";
+            a = "11118705";
           class v extends l.Message {
             static ImplementsStaticInterface() {}
             constructor(d = null) {
@@ -15269,7 +15269,7 @@
             c = B.n(l),
             e = B(67480),
             s = B(13820),
-            a = "11115265";
+            a = "11118705";
           class v extends l.Message {
             static ImplementsStaticInterface() {}
             constructor(i = null) {
@@ -15352,7 +15352,7 @@
               return "EncryptedAppTicket";
             }
           }
-          var w = "11115265";
+          var w = "11118705";
           class g extends l.Message {
             static ImplementsStaticInterface() {}
             constructor(i = null) {
@@ -19479,7 +19479,7 @@
             g = B.n(w),
             r = B(67480),
             I = B(98237),
-            P = "11115265";
+            P = "11118705";
           class p extends w.Message {
             static ImplementsStaticInterface() {}
             constructor(t = null) {
@@ -19607,7 +19607,7 @@
             }
           }
           var T = B(41780),
-            F = "11115265";
+            F = "11118705";
           const x = -1,
             h = 0,
             W = 1,
@@ -19617,7 +19617,7 @@
             V = 5,
             d = 6,
             k = 7;
-          var G = "11115265";
+          var G = "11118705";
           const ae = 0,
             te = 1,
             be = 2,
@@ -19633,7 +19633,7 @@
             E = 12,
             q = 13,
             X = 14;
-          var C = "11115265";
+          var C = "11118705";
           const oe = 0,
             ue = 1,
             R = 2,
@@ -19644,7 +19644,7 @@
             j = 7,
             D = 8,
             J = 9;
-          var me = "11115265";
+          var me = "11118705";
           const Ee = 0,
             Me = 1,
             fe = 2,
@@ -19671,7 +19671,7 @@
             ne = 23,
             u = 24,
             O = 25;
-          var ge = "11115265";
+          var ge = "11118705";
           const Ae = 0,
             Se = 1,
             Ue = 2,
@@ -19679,14 +19679,14 @@
             Zr = 4,
             Nr = 5,
             Cr = 6;
-          var nt = "11115265";
+          var nt = "11118705";
           const xe = 0,
             Gr = 10,
             rt = 20,
             et = 30,
             tt = 40,
             at = 50;
-          var Dt = "11115265";
+          var Dt = "11118705";
           function ct(De) {
             return "unknown EStoreItemType ( " + De + " )";
           }
@@ -24894,7 +24894,7 @@
         98890: (le, se, B) => {
           "use strict";
           B.d(se, { Kx: () => s, pV: () => c, w: () => a });
-          var l = "11115265";
+          var l = "11118705";
           class c {
             m_nOffset;
             m_nLength;
@@ -25016,7 +25016,7 @@
           });
           var l = B(63696),
             c = B(34699),
-            e = "11115265";
+            e = "11118705";
           function s(V, d, k, G) {
             l.useEffect(() => {
               const ae = V && "current" in V ? V.current : V;
@@ -25335,7 +25335,7 @@
           var l = B(63696),
             c = B(65733),
             e = B(54483),
-            s = "11115265";
+            s = "11118705";
           function a(U, E) {
             return (q, X, C) => C;
           }
@@ -25652,7 +25652,7 @@
             cZ: () => e,
           });
           var l = B(63696),
-            c = "11115265";
+            c = "11118705";
           function e(r, I) {
             r != null &&
               (typeof r == "function"
@@ -25703,7 +25703,7 @@
           B.d(se, { Ki: () => g, TS: () => v, YJ: () => a, iA: () => w });
           var l = B(30610),
             c = B(76196),
-            e = "11115265";
+            e = "11118705";
           const s = void 0;
           function a(r) {
             return r;
@@ -25721,7 +25721,7 @@
             c = B(3715),
             e = B(38215),
             s = B(41054),
-            a = "11115265";
+            a = "11118705";
           function v(r) {
             const { queryClient: I = g, steamUI: P } = r;
             l.useEffect(() => {
@@ -25755,7 +25755,7 @@
           "use strict";
           B.d(se, { LH: () => v, Rh: () => s });
           var l = B(63696),
-            c = "11115265";
+            c = "11118705";
           const e = (0, l.createContext)(void 0),
             s = e.Provider;
           function a(w) {
@@ -25787,7 +25787,7 @@
           });
           var l = B(63696),
             c = B(3493),
-            e = "11115265";
+            e = "11118705";
           const s = l.createContext(void 0),
             a = s.Provider,
             v = () => {
@@ -25876,13 +25876,13 @@
           async function e(v) {
             if (c[v]) return c[v]();
           }
-          var s = "11115265";
+          var s = "11118705";
           const a = (0, l.l)(e);
         },
         33183: (le, se, B) => {
           "use strict";
           B.d(se, { P: () => c });
-          var l = "11115265";
+          var l = "11118705";
           class c {
             async GetObject(s, a) {
               try {
@@ -25902,7 +25902,7 @@
           B.d(se, { q: () => s });
           var l = B(6739),
             c = B(94601),
-            e = "11115265";
+            e = "11118705";
           function s() {
             return l.TS.IN_CLIENT && (0, c.DOG)(l.TS.LAUNCHER_TYPE);
           }
@@ -25913,7 +25913,7 @@
           var l = B(37976),
             c = B(94601),
             e = B(6739),
-            s = "11115265";
+            s = "11118705";
           class a {
             m_ulSteamID;
             constructor(w = 0, g, r, I) {
@@ -26087,7 +26087,7 @@
         48603: (le, se, B) => {
           "use strict";
           B.d(se, { Dp: () => a, Fj: () => s, L: () => e });
-          var l = "11115265";
+          var l = "11118705";
           function c(g, r) {
             return v(g, r) !== null;
           }
@@ -26131,7 +26131,7 @@
             g = B(89193),
             r = B(94601),
             I = B(1345),
-            P = "11115265";
+            P = "11118705";
           function p(ze) {
             return "unknown EMsg ( " + ze + " )";
           }
@@ -26155,7 +26155,7 @@
             _ = B(3493),
             $ = B(6460),
             V = B(24384),
-            d = "11115265",
+            d = "11118705",
             k = Object.defineProperty,
             G = Object.getOwnPropertyDescriptor,
             ae = (ze, A, ce, ne) => {
@@ -26498,7 +26498,7 @@
             ae([g.XI], L.prototype, "OnDisconnect", 1);
           var Z = B(48603),
             K = B(5415),
-            H = "11115265",
+            H = "11118705",
             Q = Object.defineProperty,
             N = Object.getOwnPropertyDescriptor,
             re = (ze, A, ce, ne) => {
@@ -26729,7 +26729,7 @@
             q = B(13820),
             X = B(83957),
             C = B.n(X),
-            oe = "11115265";
+            oe = "11118705";
           const ue = 10 * 1e3,
             R = 3600 * 24 * 7,
             ee = 3600 * 5,
@@ -27029,7 +27029,7 @@
           function o(ze) {
             return (ze.msPing || 0) + (ze.nCMLoad || 0);
           }
-          var z = "11115265",
+          var z = "11118705",
             ye = Object.defineProperty,
             Re = Object.getOwnPropertyDescriptor,
             Oe = (ze, A, ce, ne) => {
@@ -27313,7 +27313,7 @@
             }
           }
           Oe([g.XI], je.prototype, "DecodeAndDispatchMultiMsg", 1);
-          var qe = "11115265";
+          var qe = "11118705";
         },
         24384: (le, se, B) => {
           "use strict";
@@ -27323,7 +27323,7 @@
             e = B(89193),
             s = B(1345),
             a = B(32758),
-            v = "11115265",
+            v = "11118705",
             w = Object.defineProperty,
             g = Object.getOwnPropertyDescriptor,
             r = (P, p, S, T) => {
@@ -27524,7 +27524,7 @@
           const v = "/images/steam_spinner.png";
           var w = B(49364),
             g = B(69766),
-            r = "11115265";
+            r = "11118705";
           const I = c.memo(function (F) {
               const {
                 className: x,
@@ -27870,7 +27870,7 @@
           var l = B(93750),
             c = B(81919),
             e = B(43310),
-            s = "11115265",
+            s = "11118705",
             a = Object.defineProperty,
             v = Object.getOwnPropertyDescriptor,
             w = (W, Y, _, $) => {
@@ -28040,7 +28040,7 @@
         8658: (le, se, B) => {
           "use strict";
           B.d(se, { A: () => c });
-          var l = "11115265";
+          var l = "11118705";
           function c(...s) {
             return s.reduce(
               (a, v) =>
@@ -28068,7 +28068,7 @@
         93071: (le, se, B) => {
           "use strict";
           B.d(se, { VY: () => c, kI: () => s, lc: () => e });
-          var l = "11115265";
+          var l = "11118705";
           function c(a) {
             if (!s() || !window.document.cookie) return null;
             const v = document.cookie.match("(^|; )" + a + "=([^;]*)");
@@ -28131,7 +28131,7 @@
             yU: () => X,
           });
           var l = B(48603),
-            c = "11115265";
+            c = "11118705";
           function e(M) {
             return M != null && M.focus !== void 0;
           }
@@ -28658,7 +28658,7 @@
             g = B(6460),
             r = B(9040),
             I = B(65639),
-            P = "11115265";
+            P = "11118705";
           class p {
             m_mapTokens = new Map();
             m_mapFallbackTokens = new Map();
@@ -29124,7 +29124,7 @@
             c = B(7727),
             e = B(5415),
             s = B(9040),
-            a = "11115265";
+            a = "11118705";
           const v = 2147483647;
           var w = ((R) => (
             (R[(R.None = 0)] = "None"),
@@ -29764,7 +29764,7 @@
             c = B(34699),
             e = B(83780),
             s = B(63696),
-            a = "11115265";
+            a = "11118705";
           function v() {
             const [x, h] = (0, s.useState)(!1),
               W = (0, e.BL)((0, s.useCallback)((d) => h(d.isIntersecting), [])),
@@ -29783,7 +29783,7 @@
               { style: W, ref: h }
             );
           }
-          var g = "11115265";
+          var g = "11118705";
           function r() {
             const [x, h] = s.useState(0),
               W = s.useCallback(
@@ -29798,7 +29798,7 @@
             return { strMinHeightStyle: Y, refForResizeObserver: _ };
           }
           var I = B(57575),
-            P = "11115265";
+            P = "11118705";
           function p(x) {
             return (0, c.QS)(
               (h) => {
@@ -29835,7 +29835,7 @@
             return (0, c.Ue)(V, k);
           }
           var T = B(81919),
-            F = "11115265";
+            F = "11118705";
         },
         83780: (le, se, B) => {
           "use strict";
@@ -29850,7 +29850,7 @@
             c = B(3493),
             e = B(50789),
             s = B(34699),
-            a = "11115265";
+            a = "11118705";
           function v(p, S) {
             return (0, s.QS)(
               (T) => {
@@ -29912,7 +29912,7 @@
             wi: () => g,
             yS: () => p,
           });
-          var l = "11115265";
+          var l = "11118705";
           const c = {
             PerYear: 31536e3,
             PerMonth: 2628e3,
@@ -30026,7 +30026,7 @@
             a = B(30610),
             v = B(22545),
             w = B(76196),
-            g = "11115265";
+            g = "11118705";
           const r = l.createContext({}),
             I = (Q) => {
               const N = l.useContext(r);
@@ -30167,7 +30167,7 @@
           "use strict";
           B.d(se, { GP: () => a, TS: () => e, UF: () => v, iA: () => s });
           var l = B(83882),
-            c = "11115265";
+            c = "11118705";
           const e = {
               EUNIVERSE: 0,
               LANGUAGE: "english",
@@ -30277,7 +30277,7 @@
           var l = B(23365),
             c = B(93071),
             e = B(30610),
-            s = "11115265";
+            s = "11118705";
           const a = "webui_config";
           function v($, V = a) {
             return g($, V, !0);
@@ -30309,7 +30309,7 @@
               }
             else d && console.error("Missing config element #", V);
           }
-          var r = "11115265";
+          var r = "11118705";
           let I;
           function P() {
             if (!(0, c.kI)()) return I || (I = S()), I;
@@ -30371,7 +30371,7 @@
         22545: (le, se, B) => {
           "use strict";
           B.d(se, { $W: () => W, Ae: () => x, MP: () => Y, OO: () => _ });
-          var l = "11115265";
+          var l = "11118705";
           function c() {
             const d = navigator.userAgent.match(
               /Valve (?<family>Steam (?:Client|GameOverlay|Tenfoot|ClientUI|Gamepad(?: VR)?(?:\/Steam Deck)?))( \[(?<betaid>[^\]]*)\])?(\/(?<launcher>[A-Za-z0-9_]+))?\/(?<version>[0-9]*)/,
@@ -30465,11 +30465,11 @@
         77680: (le, se, B) => {
           "use strict";
           B.d(se, { w: () => v, r: () => w });
-          var l = "11115265";
+          var l = "11118705";
           const c = 0,
             e = 1,
             s = 2;
-          var a = "11115265";
+          var a = "11118705";
           const v = { SHOW_CONSOLE: "", CLOUD_GAMING_PLATFORM: c };
           function w() {
             return v.CLOUD_GAMING_PLATFORM != c;
@@ -30481,7 +30481,7 @@
           var l = B(33183),
             c = B(3493),
             e = B(51934),
-            s = "11115265";
+            s = "11118705";
           class a extends l.P {
             async GetString(w) {
               try {
@@ -30523,7 +30523,7 @@
           B.d(se, { W: () => g });
           var l = B(94601),
             c = B(81919),
-            e = "11115265",
+            e = "11118705",
             s = Object.defineProperty,
             a = Object.getOwnPropertyDescriptor,
             v = (r, I, P, p) => {
@@ -30566,7 +30566,7 @@
             I = B(94601),
             P = B(41196),
             p = B(77680),
-            S = "11115265";
+            S = "11118705";
           const T = "steam-dev-configparams";
           function F() {
             let L = "";
@@ -30611,7 +30611,7 @@
             _ = B(71262),
             $ = B(33113),
             V = B(40618),
-            d = "11115265";
+            d = "11118705";
           const k = !1,
             G = c.lazy(() =>
               Promise.all([B.e(9068), B.e(3714)]).then(B.bind(B, 89107)),
@@ -30930,10 +30930,10 @@
           1005: "98e28afc2db5993f4962",
           1012: "c3a236d78c5dedff82f8",
           1093: "345b42d4294c7c49a295",
-          1129: "2baba034ac53ca7a3776",
+          1129: "192b4412aed118b72b4b",
           1133: "d89ddca0a5767ca842c2",
           1139: "1e5dc97c3cf66f83b334",
-          1220: "6b47d1cd8bc011b8d63f",
+          1220: "b315bddd9e04344f4623",
           1242: "c2b6d48c4a04cdb8a477",
           1275: "c43e67d0340511fc04e4",
           1325: "b547eaa65761c29b64a1",
@@ -31032,9 +31032,9 @@
           3675: "a1c7bc52f5058ba5ba05",
           3695: "a960106da5dfe25daade",
           3706: "2981a5b26c56041f9fde",
-          3714: "e7127fced03e54d45c6e",
+          3714: "d07e46a57d7fa9656e6a",
           3744: "55f6de16858471640eef",
-          3834: "d00dee49f595cc6e6644",
+          3834: "81f3588d0de081faa56f",
           3869: "e1d6d5dccf5de0fad5dc",
           3876: "9dfd09b2c570bab56e1a",
           3899: "ebdc2584dce2a6b71514",
@@ -31134,13 +31134,13 @@
           7376: "c791f71e47a5d6202720",
           7386: "fd69132e1e127e9c94c9",
           7442: "dedfb635c8696a5a8041",
-          7462: "6d72ca1b3b9d1a12aedd",
+          7462: "0f9f60f137e529182365",
           7503: "daa9b22f32c67068a3cf",
           7533: "da594422fa33693bb84c",
           7554: "606581027d06f59a75f5",
           7569: "ac27ae8f525ea46d28a3",
           7627: "aaacbde436dff08a1fae",
-          7653: "4a4988a9f679caec8c1d",
+          7653: "96be1f16487a950e101f",
           7656: "1fd35ecff3f759635bfc",
           7696: "b054594061efe54879fc",
           7770: "c3ece28180ca8300458f",
@@ -31166,7 +31166,7 @@
           8330: "8258c260fdc929389bce",
           8346: "2a822e156b71646dd690",
           8391: "acaf9dd4a4dd5f9f6058",
-          8396: "841597792d8ad7217626",
+          8396: "f6572e9301ba723a2cf4",
           8405: "8ca27ad6585dea861a79",
           8443: "701ea90b425ffed773bb",
           8445: "467520e1f7030933fed4",
@@ -31199,7 +31199,7 @@
           9068: "de8f612e303dea5387d0",
           9108: "b59da46df8fe1ee0fdd4",
           9120: "230d59ee4a99c1fd0767",
-          9129: "30d9bfee43266e1fdf26",
+          9129: "db630e46ba88632bd1d1",
           9134: "c1af76f97d2d64be2eb8",
           9171: "d60c3602aef9675eed4c",
           9183: "c51e2acedd52d19b4627",
@@ -31216,7 +31216,7 @@
           9536: "d536cb9c41c87028c4be",
           9558: "090cfff1220fd9d6b3c8",
           9637: "add7222c524fa2f61d7f",
-          9672: "04c3dfc4a96d05e4d35a",
+          9672: "474138f6eee3a871a877",
           9711: "a2038e4475447c2e7fe4",
           9737: "26dfe37c0ed905ec631e",
           9740: "482d50af4698816e67a8",

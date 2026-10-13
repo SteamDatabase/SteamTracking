@@ -6563,10 +6563,10 @@ $steammessages_parental_objects.proto"
 ../clientdll/systemdockmanager_linux.cpp:337
 ../clientdll/systemdockmanager_linux.cpp:562
 ../clientdll/systemmanager.cpp
-../clientdll/systemmanager.cpp:2552
-../clientdll/systemmanager.cpp:2885
-../clientdll/systemmanager.cpp:4429
-../clientdll/systemmanager.cpp:5024
+../clientdll/systemmanager.cpp:2578
+../clientdll/systemmanager.cpp:2911
+../clientdll/systemmanager.cpp:4455
+../clientdll/systemmanager.cpp:5050
 ../clientdll/systemperfmanager.cpp
 ../clientdll/systemperfmanager_linux.cpp
 ../clientdll/systemperfmanager_linux.cpp:1185
@@ -8247,12 +8247,8 @@ $steammessages_parental_objects.proto"
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0.0333
 0.050
-0.13.15.106
-00000
-000000
-00000000
-0000000000000000000000000000000000000000
 0.125
+0.13.15.106
 0.15
 0.65
 0.75
@@ -8298,6 +8294,10 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
+00000
+000000
+00000000
+0000000000000000000000000000000000000000
 00000001
 00003333
 00:00:00
@@ -11892,11 +11892,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
-200M
 2019
 2048
 20000
 2000000
+200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -16266,7 +16266,6 @@ $steammessages_parental_objects.proto"
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CSteamOSManager_SetDesktopAsDefaultLoginMode_Response
 6.CTransportValidation_RequestLargeNotification_Request
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -16282,6 +16281,7 @@ $steammessages_parental_objects.proto"
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
+60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -17454,6 +17454,7 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/@
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -49198,7 +49199,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -61660,7 +61661,7 @@ stderr
 stdin
 stdout
 steam
-steam Oct 10 2026 19:04:02
+steam Oct 13 2026 00:25:33
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &

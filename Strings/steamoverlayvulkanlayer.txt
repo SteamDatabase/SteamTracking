@@ -990,7 +990,6 @@ vk_layerGetPhysicalDeviceProcAddr
 void
 vtable for
 wchar_t
-{A70
 {default arg#
 {lambda
 {parm#

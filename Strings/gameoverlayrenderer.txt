@@ -534,7 +534,6 @@ XWindowEvent
 XkbKeycodeToKeysym
 XlibMessage
 XwcLookupString
-Y1"Zm
 [%s] tgid=%d begin_ctx=%lld
 [%s] tgid=%d end_ctx=%lld
 [abi:
