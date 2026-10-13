@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Korjattiin kaveri- ja chat-ikkunoiden piiloutuminen yhteisönäkymässä Linux- ja macOS -käyttöjärjestelmissä.",
     "BBCode_Loading": "Lataa",
     "BBCode_Failed": "Lataus epäonnistui",
-    "broadcastDetails_Playing": "Pelissä"
+    "broadcastDetails_Playing": "Pelissä",
+    "VoiceChat_Muted_Deck": "Mykistetty"
 }

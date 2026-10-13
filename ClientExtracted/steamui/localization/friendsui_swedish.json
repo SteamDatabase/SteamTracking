@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Fixade att vän- och chattfönster inte visades i spelövertoningen på Linux och macOS.",
     "BBCode_Loading": "Läser in",
     "BBCode_Failed": "Inläsning misslyckades",
-    "broadcastDetails_Playing": "Spelar"
+    "broadcastDetails_Playing": "Spelar",
+    "VoiceChat_Muted_Deck": "Tystad"
 }

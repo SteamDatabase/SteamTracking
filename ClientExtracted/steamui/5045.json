@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "Umožňuje zamezit uživateli v nahlašování obsahu nebo zpochybňování rozhodnutí, v případě, že zneužil systém.",
     "setcooldown_setbutton": "Nastavit omezení",
     "setcooldown_clearopenreports": "Smazat nevyřešená nahlášení tohoto uživatele",
-    "setcooldown_statssummary": "%1$s/%2$s zproštěno, %3$s/%4$s za poslední týden",
-    "nocomma": ""
+    "setcooldown_statssummary": "%1$s/%2$s zproštěno, %3$s/%4$s za poslední týden"
 }

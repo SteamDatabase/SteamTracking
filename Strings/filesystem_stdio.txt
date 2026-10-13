@@ -164,6 +164,7 @@ $ORIGIN
 :error\n
 @echo off\n
 @echo on\n
+Application
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 Assertion failed: length > k_cchMaxString

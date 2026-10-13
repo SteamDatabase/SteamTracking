@@ -240,5 +240,7 @@
     "MediaManager_AppHeader_NonSteamGame": "非蒸汽平台游戏",
     "GameFrameRateReporting_Prompt": "我们能否在您已登录自己的蒸汽平台帐户并畅玩游戏时收集匿名帧率数据？这些数据有助于我们了解游戏兼容性并改进蒸汽平台。",
     "GameFrameRateReporting_Details_Desc": "如果您选择同意，游戏帧率数据将在不关联您蒸汽平台帐户的情况下进行存储，但会记录您所使用的硬件类型。这些数据将协助我们了解游戏兼容性，并提升运行蒸汽平台的各类设备的使用体验。",
-    "GameFrameRateReporting_Details_HowToChange": "如果您希望过后更改该设置，可以在蒸汽平台帐户设置中进行操作。"
+    "GameFrameRateReporting_Details_HowToChange": "如果您希望过后更改该设置，可以在蒸汽平台帐户设置中进行操作。",
+    "InstallApp_Failed_AlreadyInstalled": "您正在尝试安装的应用已在远程设备上安装。请重启蒸汽平台以更新应用状态。",
+    "SteamMachine_TestResult_CloudSavesNotEnabledByDefault": "此游戏需要使用游戏内设置手动为存档的游戏启用蒸汽平台云支持"
 }

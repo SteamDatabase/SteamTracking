@@ -4387,9 +4387,9 @@
                 n.set_identifier(t.identifier + " " + t.identifierHash),
                 n.set_message(JSON.stringify(t.message)),
                 t.strComponentStack &&
-                  ((s ??= {}),
-                  (s.componentStack = t.strComponentStack),
-                  (s.strDisplayVersion = t.strDisplayVersion)),
+                  ((s ??= {}), (s.componentStack = t.strComponentStack)),
+                t.strDisplayVersion &&
+                  ((s ??= {}), (s.strDisplayVersion = t.strDisplayVersion)),
                 s && n.set_context(JSON.stringify(s)),
                 t.strUrl && n.set_url(t.strUrl),
                 n

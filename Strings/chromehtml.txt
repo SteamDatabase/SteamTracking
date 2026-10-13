@@ -2,7 +2,6 @@
   Comment started here.
   Expected :
   what():
- !"#$%&'()*+,-./0123
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
  Can't back up over more bytes than were returned by the last call to Next().
@@ -12,7 +11,6 @@
  Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
  [clone
  [default = $0
- \n\vinitial_top
  _Complex
  _Imaginary
  __vector(
@@ -56,7 +54,6 @@
 !"Failed to kill existing helper process"
 !"_msize_dbg unsupported"
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
-!\n\finitial_left
 !is_large()
 !m_ChromeIPCClient.BInitialized()
 !m_data.HasError()
@@ -65,7 +62,6 @@
 !options.strInstallDir.IsEmpty()
 !pszString || pszString[nChars] == '\0'
 !vecEntryFields.IsEmpty()
-" \n\rCMsgSetUIMode
 " because it is missing required fields:
 " conflicts with field "
 " conflicts with the existing symbol "
@@ -109,10 +105,7 @@
 " which is a proto3 message type.
 " which is not defined or is not an extension of "
 " which is.
-"#\n\tCMsgClose
 "$0" does not declare $1 as an extension number.
-"&\n\fCMsgStopLoad
-"'\n\rCMsgShowPopup
 ") is not compatible with this reflection object (which is for type "
 ") to start from the outermost scope.
 ").  Note that the exact same class is required; not just the same descriptor.
@@ -139,11 +132,7 @@
 "MapEnd"
 "MapSize"
 "MutableRawRepeatedField"
-"\n\farray_values
-"^\n\fOneofOptions
 "e" must be followed by exponent.
-"k\n\vCMsgPostURL
-"t\n\rCMsgAddHeader
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
@@ -158,65 +147,9 @@ $0oneof $1 {
 $0option $1;\n
 $0rpc $1($4.$2) returns ($5.$3)
 $ORIGIN
-$\n k_BluetoothDeviceType_Headphones
-$\n k_BluetoothDeviceType_OtherAudio
-$\n k_ColorGamutLabelSet_sRGB_Native
-$\n k_EAsyncGameSessionUserStateDone
-$\n k_EBrowserFeatureStatus_NotFound
-$\n k_ECommentDeleteReason_Moderator
-$\n k_ECommentThreadTypeQAndASession
-$\n k_ECommunityItemClass_ChatEffect
-$\n k_ECommunityItemClass_Consumable
-$\n k_ECommunityItemClass_SalienItem
-$\n k_EContentModerationSanction_MAX
-$\n k_EContentReportReason_CSAMOther
-$\n k_EContentReportReason_Derailing
-$\n k_EContentReportReason_Reposting
-$\n k_EDLCHighlightReason_ComingSoon
-$\n k_EDLCHighlightReason_NewPlayers
-$\n k_EExternalSaleEventType_Unknown
-$\n k_EGPUPerformanceLevel_Profiling
-$\n k_EGpuDriverId_GoogleSwiftshader
-$\n k_EGpuDriverId_NvidiaProprietary
-$\n k_EGraphicsPerfOverlayLevel_Full
-$\n k_EJSRegisterMethodType_Callback
-$\n k_EJSRegisterMethodType_Function
-$\n k_EPressOutletAction_ExitStaging
-$\n k_ESessionPersistence_Persistent
-$\n k_EStorageDriveMediaType_Invalid
-$\n k_EStorageDriveMediaType_Unknown
-$\n k_EStorageFormatStage_Finalizing
-$\n k_EStorageFormatStage_Formatting
-$\n k_EStorageFormatStage_NotRunning
-$\n k_SystemAudioChannel_FrontCenter
-$\n k_SystemAudioPortDirection_Input
 %.17g
 %.18g
 %I:%M:%S %p
-%\n k_EPersonaStateFlag_ClientTypeVR
-%\n!k_EBroadcastPermissionSubscribers
-%\n!k_EBrowserFeatureStatus_EnabledOn
-%\n!k_ECommunityItemClass_AvatarFrame
-%\n!k_ECommunityItemClass_BoosterPack
-%\n!k_ECompromiseDetectionType_Manual
-%\n!k_EContentReportReason_Harassment
-%\n!k_EContentReportReason_OtherAbuse
-%\n!k_EContentReportResolution_Broken
-%\n!k_EContentReportResolution_Purged
-%\n!k_EDLCHighlightReason_Recommended
-%\n!k_EExternalSaleEventType_Showcase
-%\n!k_EGameRecordingType_NotRecording
-%\n!k_EGraphicsPerfOverlayLevel_Basic
-%\n!k_EPressOutletAction_EnterStaging
-%\n!k_EPressOutletAction_StagedDelete
-%\n!k_EProfileCustomizationTypeBadges
-%\n!k_EProfileCustomizationTypeGuides
-%\n!k_EProfileCustomizationTypeReplay
-%\n!k_EProfileCustomizationTypeSalien
-%\n!k_EStorageBlockContentType_Crypto
-%\n!k_ESystemServiceState_Unavailable
-%\n!k_SystemAudioPortDirection_Output
-%\n!k_SystemAudioPortType_Video32RGBA
 %a %b %e %T %Y
 %d:00
 %lld
@@ -236,173 +169,14 @@ $\n k_SystemAudioPortDirection_Input
 %s_mutex
 %s_server
 %s_written
-&\n!k_EPersonaStateFlag_ClientTypeWeb
-&\n"k_EBroadcastEncoderBestPerformance
-&\n"k_ECloudStoragePersistStateDeleted
-&\n"k_ECommentDeleteReason_ThreadOwner
-&\n"k_ECommentThreadTypeClanCuratedApp
-&\n"k_ECommentThreadTypeRecommendation
-&\n"k_ECompromiseDetectionType_Move2FA
-&\n"k_EContentCheckProvider_SteamLearn
-&\n"k_EContentReportReason_Advertising
-&\n"k_EContentReportResolution_Removed
-&\n"k_EExternalSaleEventType_Franchise
-&\n"k_EExternalSaleEventType_Publisher
-&\n"k_EGpuDriverId_BroadcomProprietary
-&\n"k_EGpuDriverId_QualcommProprietary
-&\n"k_EGraphicsPerfOverlayLevel_Hidden
-&\n"k_EGraphicsPerfOverlayLevel_Medium
-&\n"k_EHDRVisualization_HeatmapClassic
-&\n"k_EPersonaStateFlag_InJoinableGame
-&\n"k_EProfileCustomizationTypeInvalid
-&\n"k_EPublishedFileStorageSystemDepot
-&\n"k_EStorageBlockContentType_Invalid
-&\n"k_EStorageBlockContentType_Unknown
-&\n"k_EStorageBlockFileSystemType_Ext4
-&\n"k_EStorageBlockFileSystemType_VFat
-&\n"k_EStorageDriveMediaType_Removable
-&\n"k_SystemAudioPortDirection_Invalid
-&\n\ngpu_status
-&bzi
-'\n#k_EBluetoothAudioPreference_Latency
-'\n#k_EBluetoothAudioPreference_Quality
-'\n#k_EBrowserContrastMode_NoPreference
-'\n#k_EBrowserFeatureStatus_DisabledOff
-'\n#k_EBrowserGPUStatus_DisabledUnknown
-'\n#k_EContentModerationSanction_Warned
-'\n#k_EContentModeratorLevel_Supervisor
-'\n#k_EContentReportReason_BulkDeletion
-'\n#k_EContentReportReason_ToSViolation
-'\n#k_EContentReportSubjectType_Invalid
-'\n#k_EContentReportSubjectType_UGCFile
-'\n#k_EGraphicsPerfOverlayLevel_Minimal
-'\n#k_EHDRVisualization_HeatmapExtended
-'\n#k_EPersonaStateFlag_HasRichPresence
-'\n#k_EProfileCustomizationTypeMyGuides
-'\n#k_EProvideDeckFeedbackPreference_No
 ( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
-(\n$k_EBroadcastPermissionFriendsAllowed
-(\n$k_EBroadcastPermissionFriendsApprove
-(\n$k_EBrowserFeatureStatus_EnabledForce
-(\n$k_EChildProcessQueryExitCode_Success
-(\n$k_ECloudStoragePersistStateForgotten
-(\n$k_ECloudStoragePersistStatePersisted
-(\n$k_ECommentThreadTypeClanAnnouncement
-(\n$k_ECommentThreadTypeModeratorMessage
-(\n$k_ECommentThreadTypeVideo_Deprecated
-(\n$k_ECommunityItemClass_AnimatedAvatar
-(\n$k_EContentCheckProvider_GoogleGemini
-(\n$k_EContentModerationSanction_Deleted
-(\n$k_EContentModerationSanction_Invalid
-(\n$k_EContentReportReason_Impersonation
-(\n$k_EContentReportReason_OtherOffTopic
-(\n$k_EContentReportReason_ReferralLinks
-(\n$k_EContentReportReason_TargetedAbuse
-(\n$k_EContentReportResolution_Acquitted
-(\n$k_EContentReportResolution_Sustained
-(\n$k_EContentReportSubjectAction_Locked
-(\n$k_EContentReportSubjectAction_Warned
-(\n$k_EDLCHighlightReason_PlayerFavorite
-(\n$k_EGameRecordingType_ManualRecording
-(\n$k_ENewSteamAnnouncementState_AllRead
-(\n$k_ENewSteamAnnouncementState_Invalid
-(\n$k_EPressOutletMemberPendingState_MAX
-(\n$k_EProvideDeckFeedbackPreference_Yes
-(\n$k_EPublishedFileStorageSystemInvalid
-(\n$k_ESplitScalingFilter_NIS_Deprecated
-(\n$k_EUpdaterState_ClientRestartPending
-(\n$k_EUpdaterState_SystemRestartPending
-(\n$k_PublishedFileQueryType_NotYetRated
-(\r"#\n\tCMsgPaste
-(\r"$\n\nCMsgGoBack
-(\r"$\n\nCMsgReload
-(\r"%\n\vCMsgGetZoom
-(\r"'\n\rCMsgGoForward
-(\r"'\n\rCMsgHidePopup
-(\r"7\n\rCMsgWasHidden
-(\r"8\n\rCMsgDisableF5
-(\r"<\n\rCMsgScreenDPI
-(\r"P\n\rCMsgMouseDown
-(\r"P\n\rCMsgMouseMove
-(\r"Y\n\rCMsgSizePopup
-(\r"\\n&CMsgSetBrowserViewDomainRequestMapping
-(\r"q\n\vCMsgKeyChar
-(\r"w\n\vCMsgKeyDown
-(\r"z\n)CMsgBrowserViewPostMessageToParentRequest
-(\r"z\n\vCMsgMouseUp
-(\t")\n\vCHTMLHeader
-(\t"5\n\fCMsgSetFocus
-(\t"6\n\vCMsgJSAlert
-(\t"8\n\rCMsgJSConfirm
-(\v2 .google.protobuf.DescriptorProto
-(\v2!.google.protobuf.EnumValueOptions"
-(\v2$.google.protobuf.EnumDescriptorProto
-(\v2$.google.protobuf.FileDescriptorProto"
-(\v2$.google.protobuf.UninterpretedOption"/\n
-(\v2$.google.protobuf.UninterpretedOption":\n\fOptimizeMode
-(\v2$.google.protobuf.UninterpretedOption"P\n
-(\v2$.google.protobuf.UninterpretedOption*\t
-(\v2%.google.protobuf.FieldDescriptorProto
-(\v2%.google.protobuf.OneofDescriptorProto
-(\v2&.google.protobuf.ExtensionRangeOptions
-(\v2&.google.protobuf.MethodDescriptorProto
-(\v2'.google.protobuf.ServiceDescriptorProto
-(\v2(.google.protobuf.SourceCodeInfo.Location
-(\v2).google.protobuf.EnumValueDescriptorProto
-(\v2*.CMsgShowBrowserContextMenu.ContextCommand
-(\v2+.CMsgDraggableRegionsChanged.DraggableRects
-(\v2-.google.protobuf.GeneratedCodeInfo.Annotation
-(\v2-.google.protobuf.UninterpretedOption.NamePart
-(\v2..google.protobuf.DescriptorProto.ReservedRange
-(\v2/.CMsgSetLocalFileRequestMapping.AdditionalRoute
-(\v2/.google.protobuf.DescriptorProto.ExtensionRange
-(\v26.google.protobuf.EnumDescriptorProto.EnumReservedRange
-(\v2\f.CHTMLHeader"=\n
-(\v2\f.CMsgJSValue
-(\v2\f.CMsgJSValue"
-(\v2\f.CMsgJSValue"g\n
-(\v2\f.CMsgJSValue"x\n
 (anonymous namespace)
 (cannot determine missing fields for lite message)
 (merge
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-)\n$k_EPersonaStateFlag_ClientTypeMobile
-)\n%k_EAppTestType_SteamChina_BuildReview
-)\n%k_EBrowserFeatureStatus_DisabledOffOk
-)\n%k_EBrowserGPUStatus_DisabledBlocklist
-)\n%k_EBrowserGPUStatus_DisabledJSRequest
-)\n%k_ECommunityItemClass_ProfileModifier
-)\n%k_ECompromiseDetectionType_DeviceType
-)\n%k_ECompromiseDetectionType_TradeEvent
-)\n%k_EContentModerationSanction_Escalate
-)\n%k_EContentReportReason_Discrimination
-)\n%k_EContentReportReason_Miscategorized
-)\n%k_EContentReportReason_OtherTerrorism
-)\n%k_EContentReportResolution_Relabelled
-)\n%k_EContentReportResolution_Sanctioned
-)\n%k_EContentReportResolution_Suspicious
-)\n%k_EContentReportResolution_Unresolved
-)\n%k_EContentReportSubjectAction_Claimed
-)\n%k_EContentReportSubjectAction_Deleted
-)\n%k_EContentReportSubjectAction_Invalid
-)\n%k_EContentReportSubjectAction_Updated
-)\n%k_EContentReportSubjectType_ChatGroup
-)\n%k_EContentReportSubjectType_ForumPost
-)\n%k_EControlledLegalCategoryStatus_None
-)\n%k_EPressOutletAction_ReverseStagedAdd
-)\n%k_EProfileCustomizationTypeCustomText
-)\n%k_EProfileCustomizationTypeGreenlight
-)\n%k_EProfileCustomizationTypeMyWorkshop
-)\n%k_EPublishedFileStorageSystemUGCCloud
-)\n%k_EStorageBlockContentType_FileSystem
-)\n%k_EStorageBlockFileSystemType_Invalid
-)\n%k_EStorageBlockFileSystemType_Unknown
-)\n%k_EnhancedMarketAppearanceStatus_None
-)\n%k_PublishedFileQueryType_RankedByVote
-)\n\tcanvas_2d
 *N12_GLOBAL__N_117io_error_categoryE
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
@@ -428,94 +202,15 @@ $\n k_SystemAudioPortDirection_Input
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
 *ZNK24CChildEnvironmentBuilder22GetFilteredEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
-*\\n\fEExportCodec
-*\n%k_EPersonaStateFlag_ClientTypeTenfoot
-*\n%k_EPersonaStateFlag_LaunchTypeGamepad
-*\n&k_EBrowserFeatureStatus_EnabledForceOn
-*\n&k_EBrowserFeatureStatus_UnavailableOff
-*\n&k_EBrowserGPUStatus_DisabledCrashCount
-*\n&k_ECommentDeleteReason_AccountDeletion
-*\n&k_ECompromiseDetectionType_ApiCallRate
-*\n&k_EContentCheckProvider_GoogleVertexAI
-*\n&k_EContentModerationSanction_HubBanned
-*\n&k_EContentReportReason_GenderedDoxxing
-*\n&k_EContentReportReason_OtherDisruptive
-*\n&k_EContentReportReason_OtherHarassment
-*\n&k_EContentReportSubjectAction_Disputed
-*\n&k_EContentReportSubjectAction_Released
-*\n&k_EContentReportSubjectAction_Unlocked
-*\n&k_EGameFrameRateReportingPreference_No
-*\n&k_EPersonaStateFlag_RemotePlayTogether
-*\n&k_EProvideDeckFeedbackPreference_Unset
-*\n&k_EResolutionAutomation_FullyAutomated
-*\n&k_ESystemDisplayCompatibilityMode_None
-*\n&k_EWindowsUpdateOperationResult_Failed
-*\n&k_PublishedFileQueryType_RankedByTrend
 *m_pCurrentProtoBufMsg
-*|\n\fECPUGovernor
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNG?
 ++CCUNGd
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-+\n'k_EBrowserFeatureStatus_EnabledReadback
-+\n'k_EBrowserGPUStatus_DisabledCommandLine
-+\n'k_ECommentThreadTypeUserReceivedNewGame
-+\n'k_ECommentThreadTypeUserStatusPublished
-+\n'k_ECommunityItemClass_ProfileBackground
-+\n'k_ECompromiseDetectionType_TicketAction
-+\n'k_EContentModerationSanction_Relabelled
-+\n'k_EContentReportReason_GenderedStalking
-+\n'k_EContentReportReason_NamingAndShaming
-+\n'k_EContentReportResolution_RemoveAndBan
-+\n'k_EContentReportSubjectAction_Acquitted
-+\n'k_EContentReportSubjectAction_Cancelled
-+\n'k_EContentReportSubjectAction_Escalated
-+\n'k_EContentReportSubjectAction_Sustained
-+\n'k_EContentReportSubjectType_ChatRoomMsg
-+\n'k_EPressOutletMemberPendingState_Member
-+\n'k_EProfileCustomizationTypeAchievements
-+\n'k_EProfileCustomizationTypeFavoriteGame
-+\n'k_EProfileCustomizationTypeItemShowcase
-+\n'k_EProfileCustomizationTypeMyGreenlight
-+\n'k_EProfileCustomizationTypeWorkshopItem
-+\n'k_ESteamDeckCompatibilityFeedback_Agree
-+\n'k_ESteamDeckCompatibilityFeedback_Unset
-+\n'k_ESteamOSCompatibilityCategory_Unknown
-+\n'k_EWindowsUpdateOperationResult_Aborted
-+\n\rReservedRange
-+\n\vmethod_type
 , but was
 , not just within "
-,\n(k_ColorGamutLabelSet_Native_sRGB_Boosted
-,\n(k_EBrowserFeatureStatus_DisabledSoftware
-,\n(k_EBrowserFeatureStatus_UnavailableOffOk
-,\n(k_ECommentThreadTypePublishedFile_Public
-,\n(k_EContentModerationSanction_TradeBanned
-,\n(k_EContentReportReason_AttemptedScamming
-,\n(k_EContentReportReason_CSAMSexualContent
-,\n(k_EContentReportReason_InauthenticReview
-,\n(k_EContentReportResolution_RemoveAndKick
-,\n(k_EContentReportResolution_RemoveAndWarn
-,\n(k_EContentReportSubjectAction_Sanctioned
-,\n(k_EContentReportSubjectAction_Unresolved
-,\n(k_EControlledLegalCategoryStatus_Accused
-,\n(k_EGameRecordingType_BackgroundRecording
-,\n(k_EPressOutletAction_ReverseStagedDelete
-,\n(k_EProfileCustomizationTypeFavoriteGroup
-,\n(k_EProfileCustomizationTypeGameCollector
-,\n(k_EProfileCustomizationTypeTradeShowcase
-,\n(k_EProfileCustomizationTypeVideoShowcase
-,\n(k_EPublishedFileStorageSystemLegacyCloud
-,\n(k_ESteamDeckCompatibilityFeedback_Ignore
-,\n(k_ESteamDeckCompatibilityTestResult_Fail
-,\n(k_ESteamDeckCompatibilityTestResult_Pass
-,\n(k_EWindowsUpdateInstallationImpact_Minor
-,\n(k_EnhancedMarketAppearanceStatus_Pending
-,\n(k_PublishedFileQueryType_RankedByVotesUp
-,\n\fvideo_decode
-,\n\fvideo_encode
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
 --device-scale-factor=1
@@ -560,26 +255,6 @@ $\n k_SystemAudioPortDirection_Input
 --valve-enable-site-isolation
 --valve-initial-threadpool-size=%d
 -0123456789
--\n(k_EPersonaStateFlag_LaunchTypeCompatTool
--\n)k_EAppTestType_SteamChina_StorePageReview
--\n)k_EBrowserGPUStatus_DisabledRuntimeDetect
--\n)k_ECommentThreadTypeScreenshot_Deprecated
--\n)k_EContentCheckProvider_Google_DEPRECATED
--\n)k_EContentReportReason_EncouragingSuicide
--\n)k_EContentReportReason_GenderedHarassment
--\n)k_EContentReportReason_OtherScamsAndTheft
--\n)k_EContentReportSubjectAction_TradeBanned
--\n)k_EContentReportSubjectType_CommentThread
--\n)k_EContentReportSubjectType_FriendChatMsg
--\n)k_EGameFrameRateReportingPreference_Unset
--\n)k_EProfileCustomizationTypeRecommendation
--\n)k_ESteamDeckCompatibilityCategory_Unknown
--\n)k_ESystemDisplayCompatibilityMode_Invalid
--\n)k_EWindowsUpdateInstallationImpact_Normal
--\n)k_EWindowsUpdateOperationResult_Succeeded
--\n\rrasterization
--\n\rsecurity_info
--\n\rskia_graphite
 -allowbrowserviewunderlays
 -arch
 -buildid=%u
@@ -717,66 +392,12 @@ $\n k_SystemAudioPortDirection_Input
 ./google/protobuf/repeated_field.h
 ./google/protobuf/stubs/stringpiece.h
 ./google/protobuf/unknown_field_set.h
-.CCookie"
-.CHTMLPageSecurityInfo"n\n
-.CHistoryEntry"c\n\rCMsgLoadError
-.CMsgFileLoadDialog.Filter
-.CMsgJSValue.JSObjectProperty
-.EAccessibilityContrastMode
-.EBrowserFeatureStatus
-.EBrowserFeatureStatus"7\n
-.EBrowserGPUStatus
-.EJSRegisterMethodType"
 .PLACEHOLDER_VALUE
-.\n*k_EAsyncGameSessionUserStateReadyForAction
-.\n*k_EAsyncGameSessionUserVisibilityDismissed
-.\n*k_ECommentThreadTypeWorkshopAccount_Public
-.\n*k_ECompromiseDetectionType_MaliciousRefund
-.\n*k_EContentReportReason_EncouragingSelfHarm
-.\n*k_EContentReportReason_EncouragingViolence
-.\n*k_EContentReportReason_OrganizingTerrorism
-.\n*k_EContentReportSubjectAction_ResetContent
-.\n*k_EControlledLegalCategoryStatus_Acquitted
-.\n*k_EControlledLegalCategoryStatus_Convicted
-.\n*k_EPressOutletMemberPendingState_StagedAdd
-.\n*k_EProfileCustomizationTypeArtworkShowcase
-.\n*k_EPublishedFileInappropriateResult_Likely
-.\n*k_EResolutionAutomation_PartiallyAutomated
-.\n*k_ESteamDeckCompatibilityCategory_Playable
-.\n*k_ESteamDeckCompatibilityCategory_Verified
-.\n*k_ESteamDeckCompatibilityFeedback_Disagree
-.\n*k_ESteamOSCompatibilityCategory_Compatible
-.\n*k_EWindowsUpdateOperationResult_InProgress
-.\n*k_EWindowsUpdateOperationResult_NotStarted
-.\n*k_EnhancedMarketAppearanceStatus_Completed
 .cpl
 .dummy
 .foo = value".
-.google.protobuf.EnumOptions
-.google.protobuf.FieldOptions
-.google.protobuf.FileOptions
-.google.protobuf.MessageOptions
-.google.protobuf.MethodOptions
-.google.protobuf.OneofOptions"
-.google.protobuf.ServiceOptions"
-.google.protobuf.SourceCodeInfo
 .placeholder.proto
 .steam_exec_test
-.y4w
-/\n+k_EAppTestType_SteamDeckCompatibilityReview
-/\n+k_EBrowserFeatureStatus_UnavailableSoftware
-/\n+k_ECommentThreadTypePublishedFile_Developer
-/\n+k_ECommunityItemClass_MiniProfileBackground
-/\n+k_ECommunityItemClass_SteamDeckKeyboardSkin
-/\n+k_ECommunityItemClass_SteamDeckStartupMovie
-/\n+k_EContentReportReason_EncouragingTerrorism
-/\n+k_EContentReportResolution_HarassmentStrike
-/\n+k_EContentReportSubjectAction_BannedFromHub
-/\n+k_EContentReportSubjectAction_OwnerDisputed
-/\n+k_ESteamDeckCompatibilityTestResult_Invalid
-/\n+k_ESteamOSCompatibilityCategory_Unsupported
-/\n+k_EnhancedMarketAppearanceStatus_InProgress
-/\n+k_PublishedFileQueryType_RankedByTextSearch
 /dev
 /dev/
 /dev/disk/by-uuid
@@ -795,25 +416,10 @@ $\n k_SystemAudioPortDirection_Input
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
 /usr/bin/crosdisk %s
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+0123456789
 0123456789ABCDEF
 0123456789abcdef
-0\n#k_EAsyncGameSessionUserStateUnknown
-0\n,k_EAppTestType_SteamFrameCompatibilityReview
-0\n,k_EAsyncGameSessionUserStateWaitingForOthers
-0\n,k_EBrowserGPUStatus_DisabledChildCommandLine
-0\n,k_EContentModerationSanction_CommunityBanned
-0\n,k_EContentModerationSanction_KickedFromGroup
-0\n,k_EContentReportReason_GenderedTargetedAbuse
-0\n,k_EContentReportReason_NonConsensualMaterial
-0\n,k_EContentReportReason_NudityOrSexualContent
-0\n,k_EContentReportResolution_VisibilityChanged
-0\n,k_ENewSteamAnnouncementState_NewAnnouncement
-0\n,k_EPublishedFileInappropriateProvider_Amazon
-0\n,k_EPublishedFileInappropriateProvider_Google
-0\n,k_EPublishedFileInappropriateResult_Possible
-0\n,k_EPublishedFileInappropriateResult_Unlikely
 10CMsgGoBack
 10CMsgReload
 10CUtlMemoryI13ModuleCount_tE
@@ -1011,28 +617,6 @@ $\n k_SystemAudioPortDirection_Input
 19CMsgSteamAuthNeeded
 19CUtlNoEscConversion
 19HTMLCommandBuffer_t
-1\n-k_ECommentThreadTypeWorkshopAccount_Developer
-1\n-k_EContentModerationSanction_HarassmentBanned
-1\n-k_EContentModerationSanction_HarassmentStrike
-1\n-k_EContentModerationSanction_MarkAsSuspicious
-1\n-k_EContentReportReason_CSAMFakedSexualContent
-1\n-k_EContentReportReason_PhishingOrAccountTheft
-1\n-k_EContentReportReason_QuotesModeratedContent
-1\n-k_EContentReportSubjectAction_PrivateMessaged
-1\n-k_EHardwareCompatibilityFeedbackDetails_Input
-1\n-k_EHardwareCompatibilityFeedbackDetails_Other
-1\n-k_EHardwareCompatibilityFeedbackDetails_Unset
-1\n-k_EPressOutletMemberPendingState_StagedDelete
-1\n-k_EProfileCustomizationTypeScreenshotShowcase
-1\n-k_EPublishedFileInappropriateProvider_Invalid
-1\n-k_ESteamDeckCompatibilityCategory_Unsupported
-1\n-k_ESteamDeckCompatibilityTestResult_FailMinor
-2#.google.protobuf.FieldOptions.CType:
-2$.google.protobuf.FieldOptions.JSType:\tJS_NORMAL
-2).google.protobuf.FileOptions.OptimizeMode:
-2*.google.protobuf.FieldDescriptorProto.Type
-2+.google.protobuf.FieldDescriptorProto.Label
-2/.google.protobuf.MethodOptions.IdempotencyLevel:
 20CHTMLBaseProtoBufMsg
 20CMsgGetCookiesForURL
 20CMsgJSDialogResponse
@@ -1097,20 +681,6 @@ $\n k_SystemAudioPortDirection_Input
 28CMsgScreenInformationChanged
 28CMsgSetAccessibilitySettings
 28CMsgSetTouchGesturesToCancel
-2\n.k_ECommentThreadTypePublishedFile_Announcement
-2\n.k_EContentReportReason_AutoCreatedOnModeration
-2\n.k_EContentReportReason_BullyingAndIntimidation
-2\n.k_EContentReportReason_GenderedOtherHarassment
-2\n.k_EContentReportReason_OtherCommercialActivity
-2\n.k_EContentReportReason_OtherViolenceOrSelfHarm
-2\n.k_EContentReportResolution_DisconnectedFromApp
-2\n.k_EContentReportSubjectAction_EscalatedForCSAM
-2\n.k_EPublishedFileInappropriateResult_NotScanned
-2\n.k_EPublishedFileInappropriateResult_VeryLikely
-2\n.k_EWindowsUpdateRebootBehavior_MightNeedReboot
-2\n.k_PublishedFileQueryType_RankedByPlaytimeTrend
-2\n.k_PublishedFileQueryType_RankedByTotalPlaytime
-2\n.k_PublishedFileQueryType_RankedByTotalVotesAsc
 30CMsgImeCompositionRangeChanged
 30CMsgSetForceDeviceScaleFactors
 30CMsgSetLocalFileRequestMapping
@@ -1119,101 +689,24 @@ $\n k_SystemAudioPortDirection_Input
 33CMsgVerticalScrollBarSizeResponse
 35CMsgHorizontalScrollBarSizeResponse
 38CMsgSetBrowserViewDomainRequestMapping
-3\n&k_EWindowsUpdateRebootBehavior_Unknown
-3\n/k_EContentReportReason_BypassingProfanityFilter
-3\n/k_EContentReportReason_CSAMGroomingOrEnticement
-3\n/k_EContentReportReason_CredibleThreatOfViolence
-3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
-3\n/k_PublishedFileQueryType_RankedByNumParentItems
 41CMsgBrowserViewPostMessageToParentRequest
 41CMsgShowBrowserContextMenu_ContextCommand
 42CMsgDraggableRegionsChanged_DraggableRects
-456789:;<=
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
-4\n'k_EChildProcessQueryExitCode_ErrorOther
-4\n'k_EWindowsUpdateOperationResult_Unknown
-4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
-4\n0k_EContentReportReason_LinkingToMaliciousContent
-4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
-4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
-4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
-4\n0k_EWindowsUpdateRebootBehavior_AlwaysNeedsReboot
-4\n0k_PublishedFileQueryType_RankedByBanContentCheck
-4\n0k_PublishedFileQueryType_RankedByLastUpdatedDate
-4\n0k_PublishedFileQueryType_RankedByPublicationDate
-5\n1k_EContentReportReason_FakedNonConsensualMaterial
-5\n1k_EContentReportSubjectAction_BannedFromCommunity
-5\n1k_EGameFrameRateReportingPreference_Yes_Anonymous
-5\n1k_EHardwareCompatibilityFeedbackDetails_Stability
-5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
-5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
-5\n1k_ESteamDeckCompatibilityTestResult_NotApplicable
-5\n1k_ESystemDisplayCompatibilityMode_MinimalBandwith
-5\n1k_PublishedFileQueryType_RankedByNumTimesReported
-5\n\vnested_type
-6\n2k_EBrowserGPUStatus_DisabledCompositingCommandLine
-6\n2k_EContentModerationSanction_CommentHistoryDeleted
-6\n2k_EContentReportReason_GenderedEncouragingViolence
-6\n2k_EContentReportReason_RightToBeForgottenViolation
-6\n2k_EHardwareCompatibilityFeedbackDetails_Legibility
-6\n2k_EProfileCustomizationTypeRareAchievementShowcase
-6\n2k_ESteamOSCompatibilityResultDisplayType_Invisible
-6\n\fmessage_type
 7CCookie
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringli8CDefLessE
 7CUtlMapIj16BrowserDetails_ti8CDefLessE
-7\n*k_EChildProcessQueryExitCode_ErrorFileSave
-7\n*k_EWindowsUpdateInstallationImpact_Unknown
-7\n3k_EContentReportSubjectAction_EscalatedForTerrorism
-7\n3k_EHardwareCompatibilityFeedbackDetails_Performance
-7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
-7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
-7\n3k_ESteamOSCompatibilityResultDisplayType_Compatible
-7\n3k_EWindowsUpdateOperationResult_SucceededWithErrors
-7\n\tenum_type
 8080
 8CMsgCopy
 8CMsgFind
-8\n4k_EContentReportReason_GenderedNonConsensualMaterial
-8\n4k_EGameFrameRateReportingPreference_Yes_NonAnonymous
-8\n4k_EProfileCustomizationTypeAchievementsCompletionist
-8\n4k_ESteamDeckCompatibilityResultDisplayType_Invisible
-8\n4k_ESteamOSCompatibilityResultDisplayType_Unsupported
-8\n4k_EWindowsUpdateInstallationImpact_ExclusiveHandling
-8\n\textension
 9CMsgClose
 9CMsgKeyUp
 9CMsgPaste
-9\n5k_EAppTestType_SteamChinaPlatformOperator_BuildReview
-9\n5k_EContentReportReason_MissingProcessingGroundForData
-9\n5k_EContentReportResolution_CountryRestrictionsChanged
-9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
-9\n5k_PublishedFileQueryType_RankedByNumParentCollections
-9\n\noneof_decl
 : Tried to copy from a message with a different type. to:
 : Tried to merge from a message with a different type.  to:
 : failed to parse contents
-:\n-k_EChildProcessQueryExitCode_ErrorCommandline
-:\n6k_EContentReportReason_GenderedBullyingAndIntimidation
-:\n6k_EContentReportResolution_SuspiciousIncludingUpvoters
-:\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
-:\n6k_ESteamOSCompatibilityResultDisplayType_Informational
-:\n6k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend
-:\v-2147483648
-;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
-<\n/k_EChildProcessQueryExitCode_ErrorUnimplemented
-<\n8k_ESteamDeckCompatibilityResultDisplayType_Informational
-<\n8k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime
-=\n9k_EAppTestType_SteamChinaPlatformOperator_StorePageReview
-=\n9k_EContentReportReason_FakedGenderedNonConsensualMaterial
-=\n9k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions
-=\n9k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions
->\n:k_EContentReportReason_NoncomplianceWithPricingRegulations
-?456789:;<=
 ???\f???????\n???\r?\t?\v
-?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
-?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
 A file with this name is already in the pool.
 A protocol message was rejected because it was too big (more than
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
@@ -1223,8 +716,6 @@ AKST
 ALREADY_EXISTS
 ASCII
 ASCII//TRANSLIT
-A\n=k_EContentReportReason_OtherDataProtectionAndPrivacyViolation
-A\n\nannotation
 AddAllocatedMessage
 AddBool
 AddCleared() can only be used on a RepeatedPtrField not on an arena.
@@ -1237,7 +728,6 @@ AddMessage
 AddString
 AddUInt32
 AddUInt64
-AdditionalRoute
 Afrikaans
 Albanian
 Allow webhelper to create BrowserView underlays
@@ -1270,7 +760,6 @@ BREAKPAD_DUMP_LOCATION
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
 BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
-B\n>k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate
 BackUp() can only be called after a successful Next().
 Bad Access flag on shared mem create: %s: %u\n
 Bangla
@@ -1287,7 +776,6 @@ Byte size calculation and serialization were inconsistent.  This may indicate a 
 CANCELLED
 CChromeIPCClient::PushCommand
 CChromeIPCClient::RunFrame
-CCookie
 CEF_CRASH_REPORTER_PRODUCT_VERSION
 CEF_CRASH_REPORTER_SERVER_URL
 CFileReader
@@ -1551,132 +1039,7 @@ CHTMLController::RunFrame
 CHTMLController::RunFrame - Deferred paint
 CHTMLController::RunFrame - Dispatch commands
 CHTMLController::RunFrame - IPC Client
-CHTMLPageSecurityInfo
 CLcx
-CMsgAckPIDShuttingDown
-CMsgAckScreenDPI
-CMsgAckSharedPaintBuffers
-CMsgAuthedSteamDomains
-CMsgBlockedRequest
-CMsgBringWindowToFront
-CMsgBrowserCreate
-CMsgBrowserCreateResponse
-CMsgBrowserErrorStrings
-CMsgBrowserFocusChanged
-CMsgBrowserPosition
-CMsgBrowserReady
-CMsgBrowserRemove
-CMsgBrowserResized
-CMsgBrowserSetMinSize
-CMsgBrowserSetName
-CMsgBrowserSize
-CMsgCanGoBackAndForward
-CMsgClearAllBrowsingData
-CMsgClearAllCookies
-CMsgClearHistory
-CMsgCloseDevTools
-CMsgComboNeedsPaint
-CMsgCopy
-CMsgCtrlTabPressed
-CMsgDisableBackgroundThrottling
-CMsgDraggableRegionsChanged
-CMsgExecuteJavaScript
-CMsgExitFullScreen
-CMsgFavIconURLChanged
-CMsgFileLoadDialog
-CMsgFileLoadDialogResponse
-CMsgFind
-CMsgFinishedRequest
-CMsgFullRepaint
-CMsgGetCookiesForURL
-CMsgGetCookiesForURLResponse
-CMsgGetZoomResponse
-CMsgHandleContextMenuCommand
-CMsgHideToolTip
-CMsgHideWindow
-CMsgHistoryChanged
-CMsgHorizontalScrollBarSize
-CMsgImeCancelComposition
-CMsgImeCommitText
-CMsgImeCompositionRangeChanged
-CMsgImeSetComposition
-CMsgInputBlocked
-CMsgInspectElement
-CMsgJSDialogResponse
-CMsgJSExecuteCallback
-CMsgJSExecutePromise
-CMsgJSMethodCall
-CMsgJSRaiseException
-CMsgJSRegisterMethod
-CMsgJSReleaseCallback
-CMsgLinkAtPosition
-CMsgLinkAtPositionResponse
-CMsgLoadedRequest
-CMsgLoadingResource
-CMsgMaximizeRestoreWindow
-CMsgMinimizeWindow
-CMsgMouseDblClick
-CMsgMouseLeave
-CMsgMouseWheel
-CMsgNeedsPaint
-CMsgNeedsSharedTexturePaint
-CMsgNodeHasFocus
-CMsgNotifyUserActivation
-CMsgOpenDevTools
-CMsgOpenNewTab
-CMsgOpenSteamURL
-CMsgPageSecurity
-CMsgPauseRepaint
-CMsgPopupCreated
-CMsgPopupHTMLWindow
-CMsgProcessInfoNotification
-CMsgRenderProcessTerminated
-CMsgRequestFullScreen
-CMsgRequestProcessInfo
-CMsgResizeGripChanged
-CMsgSavePageToJPEG
-CMsgSavePageToJPEGResponse
-CMsgScalePageToValue
-CMsgScreenInformationChanged
-CMsgSearchResults
-CMsgSetAccessibilitySettings
-CMsgSetBlockInput
-CMsgSetForceDeviceScaleFactors
-CMsgSetForegroundWindow
-CMsgSetHTMLTitle
-CMsgSetHorizontalScroll
-CMsgSetLocalFileRequestMapping
-CMsgSetNetFakeLocalSystemState
-CMsgSetPIDShuttingDown
-CMsgSetProtocolBlockList
-CMsgSetSharedPaintBuffers
-CMsgSetSteamBetaName
-CMsgSetSteamID
-CMsgSetTargetFrameRate
-CMsgSetTouchGesturesToCancel
-CMsgSetVRKeyboardVisibility
-CMsgSetVerticalScroll
-CMsgSetWindowPosition
-CMsgSetWindowStackingOrder
-CMsgSetWindowVisibility
-CMsgSetZoomLevel
-CMsgShowBrowserContextMenu
-CMsgShowToolTip
-CMsgShowWindow
-CMsgStartDownload
-CMsgStartRequest
-CMsgStartRequestResponse
-CMsgStatusText
-CMsgSteamAuthCookiesSet
-CMsgSteamAuthNeeded
-CMsgToggleFindInPageDialog
-CMsgTouchGesture
-CMsgURLChanged
-CMsgUnlockH264
-CMsgUpdateToolTip
-CMsgVerticalScrollBarSize
-CMsgViewSource
-CORD
 CPPTYPE_BOOL
 CPPTYPE_DOUBLE
 CPPTYPE_ENUM
@@ -1695,7 +1058,6 @@ CSharedMemStream has memory already locked for put. Need to write through acquir
 CSharedMemStream::Clear()
 CSharedMemStream::Get()
 CSharedMemStream::Put()
-CType
 CUIProtoBufMsg::BDeserialize
 CUIProtoBufMsg::SerializeCrossProc
 CUtlBuffer
@@ -1715,8 +1077,6 @@ CValidator::IsClaimed(void const*, bool) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
 CVariableBitStringBase
-C\n#direct_rendering_display_compositor
-C\n?k_EContentReportReason_MisleadingInformationAboutConsumerRights
 Call set methods to initialize MapKey.
 Caller should provide us with *buffer_ when buffer is non-empty
 Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
@@ -1739,7 +1099,6 @@ Command stream from webhelper is corrupt, got larger than 128M command
 Command stream from webhelper is corrupt, got larger than 128M command (%d)
 Command stream from webhelper is corrupt, invalid read size
 Command stream from webhelper is corrupt, invalid read size %d/%d
-ContextCommand
 Could not create an instance of
 Could not find type "
 Couldn't parse default value "
@@ -1755,15 +1114,11 @@ DBG_PATHMATCH
 DEADLINE_EXCEEDED
 DLOPEN Error:%s\n
 DO NOT PARSE: fields may be stripped and missing.\n
-D\n@k_EContentReportReason_MisleadingInformationAboutGoodsOrServices
-D\n@k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate
 Danish
 Dari
 December
 Default value for an enum field must be an identifier.
 DefaultANGLEVulkan
-DescriptorProto
-DescriptorProtosH
 Destroying a held mutex\n
 Disable GPU accelerated compositing in browsers
 Disable GPU usage in CEF (force software rendering/compositing)
@@ -1778,78 +1133,8 @@ Division or mod by zero: dividend.hi=
 Don't know how to check filesystem type on POSIX!
 Don't lookup extension types if they aren't present (1).
 Don't lookup extension types if they aren't present (2).
-DraggableRects
 Dutch
-EACState
-EAccessibilityContrastMode
-EAsyncGameSessionUserState
-EAsyncGameSessionUserVisibility
-EBluetoothAudioPreference
-EBluetoothDeviceType
-EBroadcastEncoderSetting
-EBroadcastPermission
-EBrowserFeatureStatus
-EBrowserGPUStatus
-EChildProcessQueryExitCode
-ECloudGamingPlatform
-ECloudStoragePersistState
-EColorGamutLabelSet
-ECommentDeleteReason
-ECommentThreadType
-ECommunityItemClass
-ECompromiseDetectionType
-EContentCheckProvider
-EContentModerationSanction
-EContentModeratorLevel
-EContentReportReason
-EContentReportResolution
-EContentReportSubjectAction
-EContentReportSubjectType
-EControlledLegalCategoryStatus
-EDLCHighlightReason
-EEnhancedMarketAppearanceStatus
-EExternalSaleEventType
-EGPUPerformanceLevel
-EGRMode
-EGameRecordingType
-EGamescopeBlurMode
-EGraphicsPerfOverlayLevel
-EHDRToneMapOperator
-EHDRVisualization
-EJSRegisterMethodType
-ENewSteamAnnouncementState
-EPersonaStateFlag
-EPressOutletAction
-EPressOutletMemberPendingState
-EProfileCustomizationType
-EProvideDeckFeedbackPreference
-EPublishedFileQueryType
-EPublishedFileStorageSystem
 ERROR
-EResolutionAutomation
-ESDCardFormatStage
-ESessionPersistence
-ESpeakerConfiguration
-ESplitScalingFilter
-ESplitScalingScaler
-ESteamDeckCompatibilityCategory
-ESteamDeckCompatibilityFeedback
-ESteamOSCompatibilityCategory
-EStorageBlockContentType
-EStorageBlockFileSystemType
-EStorageDriveMediaType
-EStorageFormatStage
-ESystemAudioChannel
-ESystemAudioDirection
-ESystemAudioPortDirection
-ESystemAudioPortType
-ESystemDisplayCompatibilityMode
-ESystemFanControlMode
-ESystemServiceState
-EWindowStackingOrder
-EWindowsUpdateOperationResult
-EWindowsUpdateRebootBehavior
-E\n8k_EChildProcessQueryExitCode_ErrorNotSupportedByPlatform
 Element( i )
 Enable GPU debugging in Chromium, costs a glGetError() call after every command
 Enable VA-API video decoding on Linux
@@ -1863,10 +1148,7 @@ Enum value "$0" is reserved multiple times.
 Enum value "$0" is reserved.
 Enum value "$0" uses reserved number $1.
 Enum value in map must define 0 as the first value.
-EnumDescriptorProto
 EnumOptions
-EnumReservedRange
-EnumValueDescriptorProto
 EnumValueOptions
 Enums must contain at least one value.
 Error
@@ -1905,16 +1187,12 @@ Extension range $0 to $1 overlaps with already-defined range $2 to $3.
 Extension range $0 to $1 overlaps with reserved range $2 to $3.
 Extension range end number must be greater than start number.
 Extension ranges are not allowed in proto3.
-ExtensionRange
-ExtensionRangeOptions
 Extensions in proto3 are only allowed for defining options.
 Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 ExtractSubrange() when arena is non-NULL is only supported when
 FAILED_PRECONDITION
 FATAL
-F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
-F\n\foptimize_for
 Failed connecting to webhelper process
 Failed connecting to webhelper process, started %0.2f ago
 Failed creating file mapping %s\n
@@ -1961,7 +1239,6 @@ Field numbers must be positive integers.
 Field with message or enum type missing type_name.
 Field with primitive type has type_name.
 Field:
-FieldDescriptorProto
 FieldDescriptorProto.extendee not set for extension field.
 FieldDescriptorProto.extendee set for non-extension field.
 FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
@@ -1977,13 +1254,10 @@ File change notification for %s but no file contents changed based on hash\n
 File is already registered:
 File not found in database (unexpected):
 File recursively imports itself:
-FileDescriptorProto
-FileDescriptorSet
 FileOptions
 Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
 Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
 Filipino
-Filter
 Finnish
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
@@ -2011,9 +1285,7 @@ GLIBC_2.3.2
 GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
-G\nCk_EContentReportReason_HiddenAdvertisementOrCommercialCommunication
 Galician
-GeneratedCodeInfo
 Georgian
 German
 GetBool
@@ -2048,7 +1320,6 @@ GetString
 GetStringReference
 GetUInt32
 GetUInt64
-Google.Protobuf.Reflection
 Greek
 Groups are not supported in proto3 syntax.
 Gujarati
@@ -2111,7 +1382,6 @@ Hebrew
 Hex and octal numbers must be integers.
 Hindi
 Hungarian
-IDEMPOTENCY_UNKNOWN
 INFO
 INTERNAL
 INVALID_ARGUMENT
@@ -2120,7 +1390,6 @@ IPC error: LockMgrMutex failed to acquire SysMgrMutex\n
 IPC: recovering abandoned mutex %p\n
 IVALIDATE001
 Icelandic
-IdempotencyLevel
 Igbo
 Ignoring extension "
 Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field:
@@ -2165,9 +1434,6 @@ IsValidIndex( elem )
 IsValidIndex(elem)
 Italian
 JArray
-JSObjectProperty
-JSType
-J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
 January
 Japanese
 July
@@ -2182,9 +1448,6 @@ Kinyarwanda
 Konkani
 Korean
 Kyrgyz
-LABEL_OPTIONAL
-LABEL_REPEATED
-LABEL_REQUIRED
 LC_ADDRESS
 LC_COLLATE
 LC_CTYPE
@@ -2199,12 +1462,10 @@ LC_TELEPHONE
 LC_TIME
 LOCK_EX
 LOCK_SH
-Label
 Latam_Spanish
 Latvian
 Lithuanian
 LoadFileRangeIntoBuffer_Internal
-Location
 Logic problem? szsrc =
 Lowered '%s' -> '%s'\n
 Luxembourgish
@@ -2258,7 +1519,6 @@ MessageSet is not supported in proto3.
 MessageSets cannot have fields, only extensions.
 Messages can't have default values!
 Messages can't have default values.
-MethodDescriptorProto
 MethodOptions
 Missing field: FileDescriptorProto.name.
 Missing name.
@@ -2396,7 +1656,6 @@ N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NOT_FOUND
-NO_SIDE_EFFECTS
 NSt3_V214error_categoryE
 NSt6locale5facet6__shimE
 NSt6locale5facetE
@@ -2430,7 +1689,6 @@ NSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE
 NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
 NSt8ios_base7failureB5cxx11E
 NSt8ios_base7failureE
-NamePart
 Need space between identifier and decimal point.
 Need space between number and identifier.
 Nepali
@@ -2447,12 +1705,10 @@ Note that enum values use C++ scoping rules, meaning that enum values are siblin
 November
 Numbers starting with leading zero must be in octal.
 OUT_OF_RANGE
-O\n\nAnnotation
 October
 Odia
 OnProcessInfo: invalid request id
 Oneof must have at least one field.
-OneofDescriptorProto
 OneofOptions
 Option "
 Option field "
@@ -2499,7 +1755,6 @@ PushCommand: Restarting webhelper process due to IPC timeout
 PushCommand: Trying to push too large command: browser:%u cmd:%d size:%d
 PushCommand: Trying to push too small command: browser:%u cmd:%d size:%d
 PutInternal: Not enough space for put when locked\n
-QkkXa
 Quechua
 RESOURCE_EXHAUSTED
 Ran out of IPC SharedObjectManager entries!\n
@@ -2526,11 +1781,9 @@ Romanian
 Russian
 SHMemStream header is corrupt in GetInternal()\n
 SHMemStream header is corrupt in PutInternal()\n
-SPEED
 STEAMVIDEOTOKEN
 STEAM_CEF_GPU_CMD_PREFIX
 STEAM_DEBUGCEF
-STRING
 Saturday
 Scots
 Second argument to Swap() (of type "
@@ -2539,7 +1792,6 @@ Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
 September
 Serbian
-ServiceDescriptorProto
 ServiceOptions
 SetAllocatedMessage
 SetBool
@@ -2573,7 +1825,6 @@ Slovenian
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options:
 Sorani
 Sotho
-SourceCodeInfo
 Spanish
 SpareRendererForSitePerProcess
 St10bad_typeid
@@ -2802,7 +2053,6 @@ Tswana
 Tuesday
 Turkish
 Turkmen
-Type
 Type appears to be in generated pool but wasn't
 Type is already registered:
 UNAUTHENTICATED
@@ -2819,7 +2069,6 @@ Unexpected end of string.
 Unexpected failure while serializing option submessage
 Unimplemented type:
 Uninterpreted option is missing name or value.
-UninterpretedOption
 Unknown enumeration value of "
 Unknown error
 Unmatched %s\n
@@ -2910,7 +2159,6 @@ WriteToEnvFD: write failed, aborted: %s
 XXXXXX
 Xhosa
 Yoruba
-Z-google.golang.org/protobuf/types/descriptorpb
 Zulu
 [abi:
 [friend]
@@ -2926,169 +2174,9 @@ Zulu
 \n  Problem     :
 \n  Problem     : Enum value did not match field type:\n    Expected  :
 \n  Problem     : Field is not the right type for this message:\n    Expected  :
-\n EWindowsUpdateInstallationImpact
-\n google/protobuf/descriptor.proto
-\n!CMsgVerticalScrollBarSizeResponse
-\n!EGameFrameRateReportingPreference
-\n!EPublishedFileInappropriateResult
-\n!ESteamDeckCompatibilityTestResult
-\n#CMsgHorizontalScrollBarSizeResponse
-\n#EPublishedFileInappropriateProvider
-\n%EHardwareCompatibilityFeedbackDetails
-\n&ESteamOSCompatibilityResultDisplayType
-\n(ESteamDeckCompatibilityResultDisplayType
 \nParsing attempt:
-\n\fEAppTestType
-\n\fEGpuDriverId
-\n\fEUpdaterType
-\n\fFieldOptions
-\n\fLITE_RUNTIME
-\n\fSTRING_PIECE
-\n\fTYPE_FIXED32
-\n\fTYPE_FIXED64
-\n\fTYPE_MESSAGE
-\n\faccept_types
-\n\favg_frame_ms
-\n\fbIsMainFrame
-\n\fbrowser_type
-\n\fdisplay_name
-\n\fdouble_value
-\n\fdpi_vertical
-\n\fhwnd_browser
-\n\fis_extension
-\n\fis_off_panel
-\n\fjava_package
-\n\fmouse_button
-\n\frelative_url
-\n\fruby_package
-\n\fshare_handle
-\n\fstring_value
-\n\fswift_prefix
-\n\nEForumType
-\n\nESLSHelper
-\n\nIDEMPOTENT
-\n\nTYPE_BYTES
-\n\nTYPE_FLOAT
-\n\nTYPE_GROUP
-\n\nTYPE_INT32
-\n\nTYPE_INT64
-\n\nbgoforward
-\n\nbool_value
-\n\nboxed_type
-\n\ncache_miss
-\n\ncertExpiry
-\n\ncommand_id
-\n\ndependency
-\n\ndeprecated
-\n\nerror_code
-\n\nfullscreen
-\n\ngo_package
-\n\ninput_type
-\n\nis_default
-\n\nissuerName
-\n\nlocal_path
-\n\nmax_height
-\n\nmin_height
-\n\npageserial
-\n\nrequest_id
-\n\nscroll_max
-\n\nsource_pid
-\n\ntype_flags
-\n\nuint_value
-\n\rCHistoryEntry
-\n\rCMsgSetCookie
-\n\rCMsgSetCursor
-\n\rEBatteryState
-\n\rEProtoAppType
-\n\rETouchGesture
-\n\rEUpdaterState
-\n\rMethodOptions
-\n\rTYPE_SFIXED32
-\n\rTYPE_SFIXED64
-\n\rbHasCertError
-\n\rbrowser_scale
-\n\rcombobox_tall
-\n\rcombobox_wide
-\n\rdefault_value
-\n\rdisplay_width
-\n\rinitial_width
-\n\ris_system_key
-\n\rk_EAppTypeDLC
-\n\rlong_frame_ms
-\n\rnativeKeyCode
-\n\rphp_namespace
-\n\rproxy_problem
-\n\rreject_reason
-\n\rreplace_entry
-\n\rreserved_name
-\n\rsource_handle
-\n\rvroverlay_key
-\n\tEOSBranch
-\n\targuments
-\n\tbIsEVCert
-\n\tbIsSecure
-\n\tblivelink
-\n\tdpi_scale
-\n\tdraggable
-\n\texception
-\n\tint_value
-\n\tis_object
-\n\tjson_name
-\n\tmap_entry
-\n\tmax_width
-\n\tmin_width
-\n\tmodifiers
-\n\tnCertBits
-\n\tname_part
-\n\tpageTitle
-\n\tpage_size
-\n\tpagescale
-\n\tpagetitle
-\n\trequestid
-\n\ttap_count
-\n\ttype_name
-\n\tuseragent
-\n\vCMsgBuildID
-\n\vCMsgJSValue
-\n\vEnumOptions
-\n\vFileOptions
-\n\vTYPE_DOUBLE
-\n\vTYPE_SINT32
-\n\vTYPE_SINT64
-\n\vTYPE_STRING
-\n\vTYPE_UINT32
-\n\vTYPE_UINT64
-\n\vactiveMatch
-\n\vallow_alias
-\n\vbForeground
-\n\vbIsRedirect
-\n\vbytes_value
-\n\vcustom_data
-\n\vdpi_scaling
-\n\venums.proto*
-\n\vhwnd_parent
-\n\vinitialFile
-\n\vinitial_url
-\n\voneof_index
-\n\voutput_type
-\n\vpinch_scale
-\n\vpopup_index
-\n\vrequest_url
-\n\vsend_in_xhr
-\n\vsource_file
-\n\vtransparent
-\n\vunlock_code
-\n\vurl_rewrite
-\n\vwindow_icon
-\r\n\tCODE_SIZE
-\r\n\tJS_NORMAL
-\r\n\tJS_NUMBER
-\r\n\tJS_STRING
-\r\n\tTYPE_BOOL
-\r\n\tTYPE_ENUM
 \t(%zu) comparing %s with %s\n
 \u%04x
-\venums.proto"^\n\tCMsgKeyUp
 \x%02x
 _Float
 _GLOBAL_
@@ -3187,18 +2275,14 @@ __xmknod
 __xstat
 __xstat64
 _exit
-a\rxg[
 abort
 access
 accessor_ == other.accessor_
-additional_includes
 afrikaans
-aggregate_value
 albanian
 alignof
 allocator
 allowed in proto3.
-allowed_extensions
 alnum
 alpha
 alphasort64
@@ -3207,21 +2291,14 @@ an arena.
 append=
 ar_AE
 arabic
-args
-argument
 armenian
 assamese
 auto
 auto:
 availableSpace
 azerbaijani
-bAllow
-bHasMultipleInputs
-bInput
-bNewNavigation
 bValidHandle == true
 bad_function_call
-bad_url
 bangla
 basic_filebuf::_M_convert_to_external conversion error
 basic_filebuf::underflow codecvt::max_length() is not valid
@@ -3253,14 +2330,11 @@ basic_string::resize
 basic_string::substr
 basic_string_view::substr
 basque
-begin
 belarusian
 bg_BG
-bgoback
 bind
 bind_textdomain_codeset
 bindtextdomain
-binput
 bitNum >= 0 && bitNum < this->Size()
 blank
 bool
@@ -3269,12 +2343,9 @@ boolean
 bosnian
 brazilian
 browserDetails.pBrowser && browserDetails.eBrowserType != EBrowserType_Unknown
-browser_handle
-bsuccess
 btowc
 buffer. Use the 'bytes' type if you intend to send raw
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
-build_id
 bulgarian
 byte
 bytes
@@ -3283,15 +2354,11 @@ cActualReplacements == cReplacements
 can't reach here.
 cannot create shim for unknown locale::facet
 cannot create std::vector larger than max_size()
-canvas_oop_rasterization
 catalan
 cbActual < (uint32)nBufSizeWithTerminator
 cbData == sizeof(newConnection)
-cc_enable_arenas
-cc_generic_services
 cef_log.previous.txt
 cef_log.txt
-certName
 char
 char google::protobuf::StringPiece::operator[](google::protobuf::stringpiece_ssize_type) const
 char16_t
@@ -3300,9 +2367,7 @@ char8_t
 chdir
 cherokee
 chmod
-choose_directory
 chown
-client_streaming
 clientui
 clock_gettime
 close
@@ -3310,9 +2375,7 @@ close() failed:
 closedir
 cntrl
 co_await
-com.google.protobufB
 connect
-connection_problem
 const google::protobuf::UnknownFieldSet& google::protobuf::UnknownField::group() const
 const google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int) const
 const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin() const
@@ -3320,20 +2383,12 @@ const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::inte
 const string& google::protobuf::UnknownField::length_delimited() const
 const_cast
 construction vtable for
-cookies
-coord_x
-coord_y
 covariant return thunk to
-creation_flags
 croatian
 cs_CZ
-csharp_namespace
-ctype
 cubBytesToRead < INT32_MAX
 cubData < FIO_MAX_IO_BYTES
 cubData < INT32_MAX
-cursor
-custom_commands
 czech
 da_DK
 danish
@@ -3347,15 +2402,11 @@ decltype (
 decltype(auto)
 decltype(nullptr)
 default
-default_local_path
 delete
 delete[]
 deleted virtual method called\n
-deltax
-deltay
 dgettext
 digit
-disable
 disables CEF gpu-process sandbox
 disables CEF seccomp-bpf sandbox on Linux
 disables Chromium window occlusion testing
@@ -3368,7 +2419,6 @@ disables logging from CEF
 disables per-process site-isolation
 disables sandboxing in CEF
 diskSize
-display_height
 dl_iterate_phdr
 dlclose
 dlerror
@@ -3376,20 +2426,14 @@ dlmopen
 dlmopen %s failed: %s\n
 dlopen
 dlsym
-domain
-domains
 double
-dpi_horizontal
 dup2
 dutch
 dynamic_cast
 eCmd > 0 && eCmd < eHTMLCommands_None
-edit_state_flags
 el_GR
-elementtagname
 en-US
 en_US
-enabled
 enables CEF usage of the Chromium keyring
 enables Chromium remote debugging, defaulting to localhost:8080
 enables full crash dumps
@@ -3398,31 +2442,22 @@ enables verbose logging from CEF
 enables verbose logging of JS console events
 endmntent
 english
-entries
 enum
 enums.proto
 environ
 error
-error_description
 es-419
 es_419
 es_ES
-estackingorder
 estonian
 execve
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 expandableSpace
-expires
 extend .$0 {\n
-extendee
-extension_range
 faccessat
 failed to generate a valid callback handler key
 fallocate64
 false
-false"
-false"&\n\fCMsgStopFind
-false"M\n
 fchmod
 fclose
 fcntl
@@ -3434,15 +2469,8 @@ feof
 fflush
 fgets
 fi_FI
-field
-file
-filename
 fileno
-files
 filipino
-filler
-filters
-find
 finnish
 fixed32
 fixed64
@@ -3452,8 +2480,6 @@ flock %s %s failed. errno = %d
 flock LOCK_EX %s failed, errno = %d\n
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 fnmatch
-focus
-focused
 fopen
 fopen64
 force enable Chromium window occlusion testing
@@ -3475,7 +2501,6 @@ fsync %s failed, errno = %d\n
 ftello64
 ftruncate
 ftruncate64
-function_handle
 futex robust_list not initialized by pthreads
 futex robust_list not pthreads-compatible
 futimes
@@ -3492,8 +2517,6 @@ galician
 generic
 georgian
 german
-gesture
-gestures
 get_disk_info
 getc
 getcwd
@@ -3506,7 +2529,6 @@ getwc
 glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
-google.protobuf"G\n
 google.protobuf.
 google.protobuf.Any
 google.protobuf.BoolValue
@@ -3614,7 +2636,6 @@ google::protobuf::uint32 google::protobuf::UnknownField::fixed32() const
 google::protobuf::uint64 google::protobuf::UnknownField::fixed64() const
 google::protobuf::uint64 google::protobuf::UnknownField::varint() const
 google::protobuf::uint8* google::protobuf::internal::ExtensionSet::_InternalSerialize(int, int, google::protobuf::uint8*, google::protobuf::io::EpsCopyOutputStream*) const
-gpu_compositing
 graph
 greek
 group
@@ -3622,23 +2643,15 @@ guard variable for
 gujarati
 gurmukhi
 half
-handle
 hardware
 hausa
-header
-headers
 hebrew
-height
-hidden
 hidden alias for
 hindi
-host
 htmlmessages.proto
-httponly
 https://crash.steampowered.com/submit
 hu_HU
 hungarian
-hwnd
 i < length_
 iRet == 0
 icelandic
@@ -3646,19 +2659,14 @@ iconv
 iconv_close
 iconv_open
 id_ID
-idempotency_level
-identifier_value
 idx < m_map.m_nMaxElement
 igbo
 import "$0";\n
 import public "$0";\n
 import weak "$0";\n
-index
 indonesian
-infind
 infinity
 info.m_pReplacementString == 0
-initial_height
 initializer for module
 int google::protobuf::CalculateBase64EscapedLen(int, bool)
 int32
@@ -3670,9 +2678,7 @@ ios_base::_M_grow_words is not valid
 iostream
 iostream error
 irish
-is_array
 is_large()
-is_save
 isspace
 it_IT
 italian
@@ -3680,278 +2686,10 @@ ja_JP
 japanese
 java Class for
 java resource
-java_generate_equals_and_hash
-java_generic_services
-java_multiple_files
-java_outer_classname
-java_string_check_utf8
 json_name = "
-jstype
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
-k_BluetoothDeviceType_Computer
-k_BluetoothDeviceType_Gamepad
-k_BluetoothDeviceType_Headset
-k_BluetoothDeviceType_Invalid
-k_BluetoothDeviceType_Joystick
-k_BluetoothDeviceType_Keyboard
-k_BluetoothDeviceType_Mouse
-k_BluetoothDeviceType_Phone
-k_BluetoothDeviceType_Speakers
-k_BluetoothDeviceType_Unknown
-k_ColorGamutLabelSet_Default
-k_EACState_Connected
-k_EACState_ConnectedSlow
-k_EACState_Disconnected
-k_EACState_Unknown
-k_EAppTestType_BuildReview
-k_EAppTestType_StorePageReview
-k_EAppTypeApplication
-k_EAppTypeBeta
-k_EAppTypeComic
-k_EAppTypeConfig
-k_EAppTypeDemo
-k_EAppTypeDepotOnly
-k_EAppTypeDeprected
-k_EAppTypeDriver
-k_EAppTypeFranchise
-k_EAppTypeGame
-k_EAppTypeGuide
-k_EAppTypeHardware
-k_EAppTypeInvalid
-k_EAppTypeMusicAlbum
-k_EAppTypePlugin
-k_EAppTypeSeries
-k_EAppTypeShortcut
-k_EAppTypeTool
-k_EAppTypeVideo
-k_EBatteryState_Charging
-k_EBatteryState_Discharging
-k_EBatteryState_Full
-k_EBatteryState_Unknown
-k_EBroadcastEncoderBestQuality
-k_EBroadcastPermissionDisabled
-k_EBroadcastPermissionPublic
-k_EBrowserContrastMode_Less
-k_EBrowserContrastMode_More
-k_EBrowserFeatureStatus_Enabled
-k_EBrowserFeatureStatus_Invalid
-k_EBrowserFeatureStatus_Unknown
-k_EBrowserGPUStatus_Enabled
-k_EBrowserGPUStatus_Invalid
-k_ECPUGovernor_Invalid
-k_ECPUGovernor_Manual
-k_ECPUGovernor_Perf
-k_ECPUGovernor_Powersave
-k_ECloudGamingPlatformNVIDIA
-k_ECloudGamingPlatformNone
-k_ECloudGamingPlatformValve
-k_ECommentDeleteReason_Invalid
-k_ECommentDeleteReason_Spam
-k_ECommentDeleteReason_Support
-k_ECommentDeleteReason_User
-k_ECommentThreadTypeClan
-k_ECommentThreadTypeClanEvent
-k_ECommentThreadTypeForumTopic
-k_ECommentThreadTypeInvalid
-k_ECommentThreadTypeMax
-k_ECommentThreadTypeNewsPost
-k_ECommentThreadTypeProfile
-k_ECommentThreadTypeTest
-k_ECommunityItemClass_Badge
-k_ECommunityItemClass_Emoticon
-k_ECommunityItemClass_GameCard
-k_ECommunityItemClass_GameGoo
-k_ECommunityItemClass_Invalid
-k_ECommunityItemClass_Scene
-k_ECommunityItemClass_Sticker
-k_ECompromiseDetectionType_None
-k_EContentCheckProvider_Amazon
-k_EContentCheckProvider_Invalid
-k_EContentCheckProvider_Local
-k_EContentModeratorLevel_Any
-k_EContentModeratorLevel_MAX
-k_EContentModeratorLevel_Valve
-k_EContentReportReason_Baiting
-k_EContentReportReason_Begging
-k_EContentReportReason_Doxxing
-k_EContentReportReason_Gambling
-k_EContentReportReason_Invalid
-k_EContentReportReason_MAX
-k_EContentReportReason_None
-k_EContentReportReason_Piracy
-k_EContentReportReason_Raffles
-k_EContentReportReason_Spam
-k_EContentReportReason_Stalking
-k_EContentReportReason_Trolling
-k_EContentReportReason_Unknown
-k_EContentReportResolution_MAX
-k_EContentReportSubjectType_MAX
-k_EDLCHighlightReason_New
-k_EDLCHighlightReason_None
-k_EExportCodec_Default
-k_EExportCodec_H264
-k_EExportCodec_H265
-k_EExternalSaleEventType_Region
-k_EExternalSaleEventType_Theme
-k_EForumType_Event
-k_EForumType_General
-k_EForumType_Invalid
-k_EForumType_Max
-k_EForumType_PlayTest
-k_EForumType_PublishedFile
-k_EForumType_ReportedPosts
-k_EForumType_Trading
-k_EForumType_Workshop
-k_EGPUPerformanceLevel_Auto
-k_EGPUPerformanceLevel_High
-k_EGPUPerformanceLevel_Invalid
-k_EGPUPerformanceLevel_Low
-k_EGPUPerformanceLevel_Manual
-k_EGRMode_Always
-k_EGRMode_Manual
-k_EGRMode_Never
-k_EGameRecordingType_Clip
-k_EGameRecordingType_Unknown
-k_EGamescopeBlurMode_Always
-k_EGamescopeBlurMode_Disabled
-k_EGamescopeBlurMode_IfOccluded
-k_EGpuDriverId_AmdOpenSource
-k_EGpuDriverId_AmdProprietary
-k_EGpuDriverId_ArmProprietary
-k_EGpuDriverId_IntelPropietary
-k_EGpuDriverId_Invalid
-k_EGpuDriverId_MesaDozen
-k_EGpuDriverId_MesaHoneyKrisp
-k_EGpuDriverId_MesaIntel
-k_EGpuDriverId_MesaLLVMPipe
-k_EGpuDriverId_MesaNVK
-k_EGpuDriverId_MesaPanVK
-k_EGpuDriverId_MesaRadv
-k_EGpuDriverId_MesaTurnip
-k_EGpuDriverId_MesaVenus
-k_EGpuDriverId_MoltenVK
-k_EGpuDriverId_Unknown
-k_EHDRToneMapOperator_Invalid
-k_EHDRToneMapOperator_Reinhard
-k_EHDRToneMapOperator_Uncharted
-k_EHDRVisualization_Analysis
-k_EHDRVisualization_Heatmap
-k_EHDRVisualization_None
-k_EJSRegisterMethodType_Invalid
-k_EJSRegisterMethodType_Promise
-k_EOSBranch_Beta
-k_EOSBranch_BetaCandidate
-k_EOSBranch_Main
-k_EOSBranch_Preview
-k_EOSBranch_PreviewCandidate
-k_EOSBranch_Release
-k_EOSBranch_ReleaseCandidate
-k_EOSBranch_Staging
-k_EOSBranch_Unknown
-k_EPersonaStateFlag_Golden
-k_EPressOutletAction_Created
-k_EPressOutletAction_Deleted
-k_EPressOutletAction_Granted
-k_EPressOutletAction_Invalid
-k_EPressOutletAction_MAX
-k_EPressOutletAction_Removed
-k_EPressOutletAction_StagedAdd
-k_EPressOutletAction_Undeleted
-k_EPressOutletAction_Updated
-k_EResolutionAutomation_MAX
-k_EResolutionAutomation_Manual
-k_ESDCardFormatStage_Finalizing
-k_ESDCardFormatStage_Formatting
-k_ESDCardFormatStage_Invalid
-k_ESDCardFormatStage_Rescuing
-k_ESDCardFormatStage_Starting
-k_ESDCardFormatStage_Testing
-k_ESLSHelper_Devcoredump
-k_ESLSHelper_Gpu
-k_ESLSHelper_Invalid
-k_ESLSHelper_Journal
-k_ESLSHelper_Kdump
-k_ESLSHelper_Minidump
-k_ESLSHelper_SystemInfo
-k_ESessionPersistence_Ephemeral
-k_ESessionPersistence_Invalid
-k_ESpeakerConfiguration_51
-k_ESpeakerConfiguration_51_Ac3
-k_ESpeakerConfiguration_71
-k_ESpeakerConfiguration_Other
-k_ESpeakerConfiguration_Stereo
-k_ESplitScalingFilter_Invalid
-k_ESplitScalingFilter_Linear
-k_ESplitScalingFilter_Nearest
-k_ESplitScalingFilter_Sharp
-k_ESplitScalingScaler_Auto
-k_ESplitScalingScaler_Fill
-k_ESplitScalingScaler_Fit
-k_ESplitScalingScaler_Integer
-k_ESplitScalingScaler_Invalid
-k_ESplitScalingScaler_Stretch
-k_EStorageBlockContentType_Raid
-k_EStorageDriveMediaType_HDD
-k_EStorageDriveMediaType_SSD
-k_EStorageFormatStage_Invalid
-k_EStorageFormatStage_Rescuing
-k_EStorageFormatStage_Starting
-k_EStorageFormatStage_Testing
-k_ESystemServiceState_Disabled
-k_ESystemServiceState_Enabled
-k_ETouchGestureDoubleTap
-k_ETouchGestureFlingCancelled
-k_ETouchGestureFlingStart
-k_ETouchGestureLongPress
-k_ETouchGestureLongTap
-k_ETouchGestureNone
-k_ETouchGesturePinchBegin
-k_ETouchGesturePinchEnd
-k_ETouchGesturePinchUpdate
-k_ETouchGestureShortPress
-k_ETouchGestureTap
-k_ETouchGestureTapCancelled
-k_ETouchGestureTouch
-k_ETouchGestureTwoFingerTap
-k_EUpdaterState_Applying
-k_EUpdaterState_Available
-k_EUpdaterState_Checking
-k_EUpdaterState_Invalid
-k_EUpdaterState_RollBack
-k_EUpdaterState_UpToDate
-k_EUpdaterType_Aggregated
-k_EUpdaterType_BIOS
-k_EUpdaterType_Client
-k_EUpdaterType_Dummy
-k_EUpdaterType_Invalid
-k_EUpdaterType_OS
-k_EUpdaterType_Test1
-k_EUpdaterType_Test2
-k_EWindowStackingOrder_Bottom
-k_EWindowStackingOrder_Invalid
-k_EWindowStackingOrder_Top
-k_SystemAudioChannel_Aggregated
-k_SystemAudioChannel_BackLeft
-k_SystemAudioChannel_BackRight
-k_SystemAudioChannel_FrontLeft
-k_SystemAudioChannel_FrontRight
-k_SystemAudioChannel_Invalid
-k_SystemAudioChannel_LFE
-k_SystemAudioChannel_Mono
-k_SystemAudioChannel_Unknown
-k_SystemAudioDirection_Input
-k_SystemAudioDirection_Invalid
-k_SystemAudioDirection_Output
-k_SystemAudioPortType_Audio32f
-k_SystemAudioPortType_Invalid
-k_SystemAudioPortType_Midi8b
-k_SystemAudioPortType_Unknown
-k_SystemFanControlMode_Default
-k_SystemFanControlMode_Disabled
-k_SystemFanControlMode_Invalid
 kannada
 kazakh
-keyCode
 khmer
 kiche
 kill
@@ -3960,14 +2698,10 @@ ko_KR
 konkani
 koreana
 kyrgyz
-label
 latam
 latvian
-lazy
 lchown
 ld-linux-x86-64.so.2
-leading_comments
-leading_detached_comments
 len > 0 || HasError()
 len >= input_len
 length_ >= n
@@ -3979,8 +2713,6 @@ librt.so.1
 libtier0_s.so
 libvstdlib_s.so
 link
-link_url
-list
 lithuanian
 locale::_Impl::_M_replace_facet
 locale::_S_normalize_category category not found
@@ -3988,7 +2720,6 @@ locale::facet::_S_create_c_locale name not valid
 locale::facet::_S_lc_ctype_c_locale duplocale error
 locale::facet::_S_lc_ctype_c_locale newlocale error
 localeconv
-location
 logs
 long
 long double
@@ -4061,10 +2792,6 @@ memcpy
 memmove
 memset
 message
-message_set_wire_format
-method
-minimum_font_size
-misspelled_word
 mkdir
 mkfifo
 mmap
@@ -4076,7 +2803,6 @@ mount
 ms-MY
 msync
 mt19937
-multiple_raster_threads
 munmap
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nGrowSize >= 0
@@ -4086,18 +2812,13 @@ nMinCapacity >= nChars
 nPut + nPutDelta <= outBuf.TellMaxPut()
 nSize != 0
 nSize >= 0
-nTargetFrameRate
 nTargetLength > 0
-name
-native_dropdowns
-negative_int_value
 nepali
 new
 newConnection.m_eCmd != 0
 new[]
 nl_NL
 no_NO
-no_standard_descriptor_accessor
 noexcept
 non-transaction clone for
 non-virtual thunk to
@@ -4107,30 +2828,20 @@ null
 nullptr output boolean given.
 num > 0
 numElements >= 0
-number
 obj_count
 obj_size
-objc_class_prefix
-object_properties
 odia
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset >= 0
-only_allow_trusted_popups
-only_send_to_steam
 open
 open64
 opendir
-opengl
 operator
 operator""
 option json_name is not allowed on extension fields.
 optional
-options
 output specified is nullptr
-override_height
-override_width
-owning_browser_handle
 pBuf == NULL
 pBuffer->TellPut() == 0
 pCmd->m_eCmd == eHTMLCommands_NeedsPaint || pCmd->m_eCmd == eHTMLCommands_NeedsSharedTexturePaint
@@ -4144,42 +2855,27 @@ pNode && pNode->Next == QueueEnd()
 pOptions
 pToken
 pWatcher != NULL
-package
 package $0;\n\n
-packed
-page_url
-parent_popup_index
 parse
 parsing
-path
-patterns
 pchValue || eSetVarPolicy == k_ESetVarPolicy_Delete
 pchVar
 pclose
 persian
-php_class_prefix
-php_generic_services
-php_metadata_namespace
 pl_PL
 please implement MergeFrom for your type.
 polish
 poll
 popen
 portuguese
-positive_int_value
 posix_fadvise
-post
-postData
 pread64
-preferred_contrast
 prepend=
 print
 printf
-promise_handle
 proto
 proto2
 proto3
-proto3_optional
 pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
@@ -4197,12 +2893,10 @@ pthread_mutex_unlock
 pthread_once
 pthread_self
 pthreads futex robust_list is corrupt
-public_dependency
 punct
 putc
 putwc
 pwrite64
-py_generic_services
 quechua
 random_device could not be read
 random_device: getentropy failed
@@ -4210,7 +2904,6 @@ random_device: rdrand failed
 random_device: rdseed failed
 random_device::random_device(const std::string&): device not available
 random_device::random_device(const std::string&): unsupported token
-raw_draw
 rdrand
 rdrnd
 rdseed
@@ -4219,59 +2912,37 @@ readdir64
 readlink
 realloc
 realpath
-rects
 recursion_budget_ < recursion_limit_
 recvfrom
 recvmsg
-reduced_motion_enabled
 reference temporary #
-referrer
 registered:
 reinterpret_cast
 release_space %llu
 rename
 repeated
-request_domain
 request_space %llu
-requesting_url
 required
 res > 0
-reserved_range
 resizeNumBits >= 0
-result
-results
-reverse
-rgba
 rmdir
 ro_RO
 romanian
-routes
 ru_RU
 russian
-samesite
 sc_schinese
-scale
 scandir
 scandir64
 sched_yield
 schinese
 scots
-script
-scroll
-scrollx
-scrolly
-searchbuttontext
-secure
 secure_getenv
-selection_text
 sendfile64
 sendmsg
 sendto
 serbian
 serialize
 serializing
-server_streaming
-service
 service $0 {\n
 set=
 setlocale
@@ -4280,8 +2951,6 @@ setvbuf
 sfixed32
 sfixed64
 shahmukhi
-shared_memory_handle
-shared_memory_size
 shm_open
 shm_unlink
 short
@@ -4300,15 +2969,11 @@ snprintf
 socket
 sorani
 sotho
-source_code_info
 space
 spaceGranted
 spaceReleased
-span
 spanish
 sprintf
-start
-state
 statfs
 statfs64
 static_cast
@@ -4334,12 +2999,9 @@ std::iostream
 std::istream
 std::ostream
 std::string
-stddev_sum_frame_ms
 stderr
 stdin
 stdout
-steam_beta_name
-steam_id
 strCustomCSS
 strHTMLCacheDir
 strInitialURL
@@ -4378,20 +3040,16 @@ strtoll
 strtoul
 strtoull
 subtype mismatch
-success
 sv_SE
 swahili
 swedish
 symlink
-syntax
 syntax = "$0";\n\n
 syntax error at line %d near:
 syscall
 system
 tajik
-tall
 tamil
-target
 tatar
 tchinese
 telugu
@@ -4400,7 +3058,6 @@ template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
-text
 text format contains deprecated field "
 th_TH
 thai
@@ -4411,19 +3068,15 @@ this
 throw
 tigrinya
 time
-title
 tolower
 tr_TR
-trailing_comments
 transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
 true
-trusted_creator
 tswana
 turkish
 turkmen
-type
 type or int32).
 type() == TYPE_FIXED32
 type() == TYPE_FIXED64
@@ -4437,7 +3090,6 @@ typeinfo for
 typeinfo for SteamThreadTools::CThread
 typeinfo name for
 typename
-ui_mode
 uint32
 uint64
 uk_UA
@@ -4447,10 +3099,8 @@ unReadAheadChunkSize < INT32_MAX/2
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 unSize < 128 * 1024 * 1024
 unexpected BrowserCreateResponse for unknown browser 0x%x
-unfiltered_link_url
 ungetc
 ungetwc
-unichar
 uninitialized __any_string
 uninterpreted_option
 unknown
@@ -4466,8 +3116,6 @@ unsigned short
 unsupported flags 0x%x passed to CFileReader::BOpenFile
 upper
 urdu
-urls
-user_css
 usleep
 utime
 utimes
@@ -4484,7 +3132,6 @@ vector::reserve
 vi_VN
 vietnamese
 virtual thunk to
-visible
 void
 void google::protobuf::FieldDescriptorProto::_internal_set_label(google::protobuf::FieldDescriptorProto_Label)
 void google::protobuf::FieldDescriptorProto::_internal_set_type(google::protobuf::FieldDescriptorProto_Type)
@@ -4493,10 +3140,8 @@ void google::protobuf::internal::byteswap<1>(void*)
 void google::protobuf::internal::byteswap<4>(void*)
 void google::protobuf::internal::byteswap<8>(void*)
 void google::protobuf::io::CodedInputStream::UnsafeDecrementRecursionDepth()
-vr_overlay_key
 vsnprintf
 vtable for
-vulkan
 w+bx
 wchar_t
 wcrtomb
@@ -4504,17 +3149,9 @@ wcscmp
 wcslen
 wcsnrtombs
 wctob
-weak
-weak_dependency
-webgl
-webgl2
-webgpu
 webhelper crashing too often, stopping restart
 webhelper crashing too often, stopping restart (%d times)
-webnn
 welsh
-wide
-width
 with a type that does not implement MergeFrom. This is unsafe;
 wmemchr
 wmemcmp
@@ -4526,12 +3163,8 @@ write
 write %s failed, errno = %d\n
 writev
 wrong submessage type
-x_local
 xdigit
 xhosa
-xhotspot
-y_local
-yhotspot
 yoruba
 zh-cn
 zh-tw
@@ -4539,7 +3172,6 @@ zh-xc
 zh_CN
 zh_TW
 zh_XC
-zoom
 zulu
 {default arg#
 {lambda

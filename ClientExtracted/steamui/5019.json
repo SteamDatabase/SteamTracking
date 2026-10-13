@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "Eltilt egy felhasználót a tartalomjelentéstől és moderálásvitatástól, amikor visszaél a rendszerrel.",
     "setcooldown_setbutton": "Várakoztatás beállítása",
     "setcooldown_clearopenreports": "E felhasználó megoldatlan jelentéseinek törlése",
-    "setcooldown_statssummary": "%1$s/%2$s jelentés felmentve, %3$s/%4$s a múlt héten.",
-    "nocomma": ""
+    "setcooldown_statssummary": "%1$s/%2$s jelentés felmentve, %3$s/%4$s a múlt héten."
 }

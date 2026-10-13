@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Linux와 macOS의 게임 내 오버레이에서 친구와 채팅창이 표시되지 않는 문제를 해결했습니다.",
     "BBCode_Loading": "불러오는 중",
     "BBCode_Failed": "불러오기 실패",
-    "broadcastDetails_Playing": "플레이 중"
+    "broadcastDetails_Playing": "플레이 중",
+    "VoiceChat_Muted_Deck": "음소거됨"
 }

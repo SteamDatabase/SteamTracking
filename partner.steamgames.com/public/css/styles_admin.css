@@ -4778,9 +4778,11 @@ table.root_path_table {
 .crossPlatform_yes {
     color: #67c1f5;
 }
-
+.crossPlatform_ready {
+	color: #00ff3a;
+}
 .crossPlatform_no {
-    color: #fff03a;
+    color: #ff1111;
 }
 select.additional_languages {
     margin-top: 12px;

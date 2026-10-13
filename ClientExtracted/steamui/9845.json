@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "Estä käyttäjää ilmiantamasta sisältöä tai kiistauttamasta moderointipäätöksiä, jos hän on käyttänyt järjestelmää väärin.",
     "setcooldown_setbutton": "Aseta jäähy",
     "setcooldown_clearopenreports": "Poista käyttäjän ratkaisemattomat ilmiannot",
-    "setcooldown_statssummary": "%1$s/%2$s ilmoitusta koskeva sisältö sallittu, joista %3$s/%4$s viimeisen viikon aikana.",
-    "nocomma": ""
+    "setcooldown_statssummary": "%1$s/%2$s ilmoitusta koskeva sisältö sallittu, joista %3$s/%4$s viimeisen viikon aikana."
 }

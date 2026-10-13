@@ -21,5 +21,7 @@
     "reportedcontent_disputed_2": "蒸汽平台的争议审核人员将重新评估内容。",
     "reportedcontent_disputesanctioned_3": "感谢您帮助我们维护蒸汽平台上的安全环境。",
     "anonymousreport_description": "登录蒸汽平台社区即可举报不当或非法内容。",
-    "anonymousreport_join": "加入蒸汽平台"
+    "anonymousreport_join": "加入蒸汽平台",
+    "reportedcontent_disputedenied_2": "经过蒸汽平台争议审核人员的评估，我们发现相关内容并未违反蒸汽平台的%1$s，尤其是我们未发现证据显示其包含以下内容：%2$s。",
+    "reportedcontent_disputesanctioned_2": "经过蒸汽平台争议审核人员的评估，我们发现您举报的内容违反了蒸汽平台的%1$s，尤其是发现其包含以下内容：%2$s。"
 }

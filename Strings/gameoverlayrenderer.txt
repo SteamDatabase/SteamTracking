@@ -68,8 +68,8 @@ $ORIGIN
 /tmp/steam_chrome_overlay_uid%d_spid%u
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+0123456789
 10IMemStream
 12CIMENullImpl
 15CSavedMemStream
@@ -81,8 +81,6 @@ $ORIGIN
 24CGameStreamGameMemStream
 25CGameStreamSteamMemStream
 4IIME
-5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
-;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
 @@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@std::bad_alloc
 ASEs implemented
@@ -326,7 +324,6 @@ Previous renderer inactive, force releasing video stream\n
 Process %d failed to shm_open %s\n
 Process was forked: %d -> %d, follow new process in the new log file!\n
 PutInternal: Not enough space for put when locked\n
-QkkXa
 Ran out of IPC SharedObjectManager entries!\n
 Regrabbing pointer on window %lx\n
 Remapping untracked pointer grab window 0x%lx\n

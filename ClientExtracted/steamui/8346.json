@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "Memblokir pengguna dari melaporkan konten atau menyengketakan moderasi saat mereka menyalahgunakan sistem.",
     "setcooldown_setbutton": "Atur waktu jeda",
     "setcooldown_clearopenreports": "Hapus laporan yang belum terselesaikan milik pengguna ini",
-    "setcooldown_statssummary": "%1$s/%2$s laporan dibebaskan, %3$s/%4$s dalam seminggu terakhir.",
-    "nocomma": ""
+    "setcooldown_statssummary": "%1$s/%2$s laporan dibebaskan, %3$s/%4$s dalam seminggu terakhir."
 }

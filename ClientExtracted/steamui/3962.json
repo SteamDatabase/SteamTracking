@@ -205,7 +205,7 @@
     "moderationaction_escalated_for_csam": "因涉及儿童性侵害内容（CSAM），已转交给 Valve 处理",
     "moderationaction_escalated_for_terrorism": "因涉及恐怖主义，已转交给 Valve 处理",
     "moderationaction_claimed": "已领取",
-    "moderationaction_released": "已解除",
+    "moderationaction_released": "已释出",
     "moderationaction_privatemessaged": "私信已发送",
     "moderationaction_unknown": "未知操作",
     "moderationaction_ownerdisputed": "所有者已对处理提出争议",
@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "使滥用系统的用户无法进行内容举报或对处理结果提出争议。",
     "setcooldown_setbutton": "设置冷却时间",
     "setcooldown_clearopenreports": "清除该用户的未解决举报",
-    "setcooldown_statssummary": "%2$s 份举报中的 %1$s 份已判为无责，上周举报的 %4$s 份中 %3$s 份已判为无责。",
-    "nocomma": ""
+    "setcooldown_statssummary": "%2$s 份举报中的 %1$s 份已判为无责，上周举报的 %4$s 份中 %3$s 份已判为无责。"
 }

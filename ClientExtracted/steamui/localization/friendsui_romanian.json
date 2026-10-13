@@ -650,7 +650,7 @@
     "SuspiciousSender_Dialog_Description1": "Nu te conecta la niciun cont, inclusiv contul Steam, prin intermediul linkurilor din aceste mesaje. Reprezentanții Steam nu te vor contacta NICIODATĂ prin chat sau programe externe. <1>Află mai multe</1> despre recomandările Steam de securitate.",
     "SuspiciousSender_Dialog_Description2": "Linkurile de la acest utilizator vor fi dezactivate în acest grup până când închizi această avertizare.",
     "SuspiciousSender_Dialog_Description3": "Raportarea acestor mesaje ajută Steam să ia măsuri și să detecteze acest tip de conținut în viitor.",
-    "SuspiciousSender_Dialog_Dismiss": "Închide avertismentul",
+    "SuspiciousSender_Dialog_Dismiss": "Ignoră avertismentul",
     "SuspiciousSender_Dialog_Block": "Blochează utilizatorul (%1$s)",
     "SuspiciousSender_Dialog_Report": "Raportează mesajele",
     "Friend_Menu_Open": "Opțiuni",
@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "S-a reparat faptul că ferestrele pentru prieteni și chat nu erau afișate în interfața din joc pe Linux și macOS.",
     "BBCode_Loading": "Se încarcă",
     "BBCode_Failed": "Nu s-a putut încărca",
-    "broadcastDetails_Playing": "Se joacă"
+    "broadcastDetails_Playing": "Se joacă",
+    "VoiceChat_Muted_Deck": "Amuțit"
 }

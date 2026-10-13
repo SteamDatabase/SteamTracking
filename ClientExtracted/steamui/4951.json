@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "Zablokuj użytkownikowi możliwość zgłaszania treści lub tworzenia sporów, gdy dopuścił się nadużyć względem systemu.",
     "setcooldown_setbutton": "Ustaw blokadę",
     "setcooldown_clearopenreports": "Wyczyść nierozpatrzone zgłoszenia tego użytkownika",
-    "setcooldown_statssummary": "Uniewinniono %1$s/%2$s zgłoszeń. %3$s/%4$s w ostatnim tygodniu.",
-    "nocomma": ""
+    "setcooldown_statssummary": "Uniewinniono %1$s/%2$s zgłoszeń. %3$s/%4$s w ostatnim tygodniu."
 }

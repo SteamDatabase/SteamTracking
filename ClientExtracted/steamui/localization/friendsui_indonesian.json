@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Memperbaiki jendela Teman dan Obrolan yang tidak tampil di overlay dalam game pada Linux dan macOS.",
     "BBCode_Loading": "Memuat",
     "BBCode_Failed": "Gagal memuat",
-    "broadcastDetails_Playing": "Bermain"
+    "broadcastDetails_Playing": "Bermain",
+    "VoiceChat_Muted_Deck": "Dibisukan"
 }

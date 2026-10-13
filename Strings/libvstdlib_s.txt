@@ -21,7 +21,6 @@
 !"_msize_dbg unsupported"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
-!AxU
 !V_isempty( prefix )
 !V_isempty( suffix )
 !m_data.HasError()
@@ -34,12 +33,9 @@
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
-#FLR
 #include
 #include is NULL
-#tDq
 $ORIGIN
-$\nY8O
 %$%a%b%V%U%c%Q%W%]%\%[%
 %.17g
 %.18g
@@ -107,7 +103,6 @@ $\nY8O
 &atilde;
 &auml;
 &brvbar;
-&bzi
 &ccedil;
 &cedil;
 &cent;
@@ -187,7 +182,6 @@ $\nY8O
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGstd::exception
-+ulsX
 ----------------------------------------\n
 -chromeosdiskmanagement
 -chromeosnopreallocate
@@ -238,7 +232,6 @@ $\nY8O
 ../vstdlib/strtools_unicode.cpp
 .cpl
 .steam_exec_test
-.y4w
 /ValveIPCSHM_%d
 /dev
 /dev/
@@ -273,7 +266,6 @@ $\nY8O
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-0F`8
 0x%4.4X is both the source and destination of a normalization mapping
 10CUtlMemoryI10CUtlStringE
 10CUtlMemoryI13ModuleCount_tE
@@ -332,12 +324,7 @@ $\nY8O
 20IUniformRandomStream
 21CUtlCStringConversion
 24CDirWatcherPollingThread
-30!]^JV
-49fN
-52F*
 5ICvar
-5T&w&
-6 PQ
 6ConVar
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringli8CDefLessE
@@ -346,15 +333,11 @@ $\nY8O
 7CUtlMapIwPKwi8CDefLessE
 7CUtlSetI10CUtlStringi8CDefLessE
 7CUtlSetIyi8CDefLessE
-7~8A
 8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
 8CAutoPtrI7CUtlSetIyi8CDefLessEE
-8\foQS
 9IValidate
-9a&g
 </script>
 <empty>\n
-A@qVc"
 ACADEMY
 ACCOUNTANTS
 ACTIVE
@@ -420,7 +403,6 @@ Bad expression token: %c at %d in %s\n
 Block size: %s\tAlloc'd: %d (peak: %d)\tNum blobs: %d (%s)\n
 Breaking '%s' in '%s'\n
 Bucket size : count\n
-C-Yn
 CAMERA
 CAMP
 CANCERRESEARCH
@@ -572,7 +554,6 @@ DISCOUNT
 DLOPEN Error:%s\n
 DOMAINS
 DURBAN
-D\vvf:
 DebugStatsSystem
 Delta %d cub %d iub %x %s %s\n
 Delta signature cubD: %d cDelta: %d Code: %x\n
@@ -598,7 +579,6 @@ Expected %lld but got %lld!
 FAIL
 FARM
 FCVAR_NEVER_AS_STRING
-FCZ&
 FEEDBACK
 FINANCE
 FINANCIAL
@@ -660,8 +640,6 @@ GetPlatformNameFromEPlatformType
 GetPortableOsVersionInformation
 GetSpewOutputFunc
 GetUint64FromString() did not get correct peCS parameter
-H$6t
-H*0"ZOW
 HAMBURG
 HAUS
 HIPHOP
@@ -696,7 +674,6 @@ JETZT
 JOBS
 JOBURG
 JUEGOS
-JZJ{.
 KAUFEN
 KITCHEN
 KIWI
@@ -788,7 +765,6 @@ MEDIA
 MEET
 MELBOURNE
 MENU
-MGiI
 MIAMI
 MINI
 MOBI
@@ -892,8 +868,6 @@ PosixFileOpen: failed to get path fd for: %s - %s\n
 PrepareBuffer( nNewLength ) == pstrNew
 QPON
 QUEBEC
-Qkkbal
-R1h58
 RECIPES
 REHAB
 REISE
@@ -925,7 +899,6 @@ SEXY
 SHIKSHA
 SHOES
 SINGLES
-SKyu
 SOCIAL
 SOFTWARE
 SOHU
@@ -944,7 +917,6 @@ SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
 Size() == operand.Size()
-Sm"\vg
 St10bad_typeid
 St11logic_error
 St11range_error
@@ -1274,7 +1246,6 @@ V_wcsncpy
 V_wcstoi64
 V_wcstoui64
 V_whextobinary
-Vc0a
 WANG
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
 WATCH
@@ -1393,17 +1364,13 @@ YANDEX
 YOKOHAMA
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 ZONE
-Zjz\v
 [abi:
 [friend]
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
-\nYg:a
-\rRoOs
 \t(%zu) comparing %s with %s\n
 \u%04x
 \u000
 \u001
-]JldN
 _DMsg
 _Float
 _GLOBAL_
@@ -1481,8 +1448,6 @@ _exit
 _setjmp
 _strlwr
 _strupr
-`tun%
-a\rxg[
 abort
 about to perform blocking dns call from the main thread.  consider refactoring.\n
 access
@@ -1494,7 +1459,6 @@ argLen < 0x10000000u
 auto
 auto:
 availableSpace
-b,uZ
 bad_function_call
 baseIP.GetType() == k_EIPTypeV4
 baseIP.GetType() == k_EIPTypeV6
@@ -1529,7 +1493,6 @@ buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
 bufferLen == 0 || pDest != NULL
 bufferLen > 0 && bufferLen <= INT_MAX
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
-bwiO'
 byte
 cActualReplacements == cReplacements
 calloc
@@ -1563,7 +1526,6 @@ covariant return thunk to
 cubBytesToRead < INT32_MAX
 cubData < FIO_MAX_IO_BYTES
 cubData < INT32_MAX
-dQy/
 decimal128
 decimal32
 decimal64
@@ -1596,7 +1558,6 @@ existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 expandableSpace
 extension
 extension[0] == '.'
-f.N%H
 faccessat
 fallocate64
 false
@@ -1633,7 +1594,6 @@ ftruncate failed\n
 ftruncate64
 futimes
 fwrite
-gAY:
 gCURLUtils_hashTLDs
 g_VProfProfilesRunningCount
 g_VProfile
@@ -1692,8 +1652,6 @@ iOS 9.1
 iOS 9.2
 iOS 9_.3
 iOption != m_listCommandLineOption.InvalidIndex()
-i]Wb
-ig,o
 in != out
 info.m_pReplacementString == 0
 initializer for module
@@ -1706,11 +1664,8 @@ iswalpha
 iswspace
 java Class for
 java resource
-k2U\v
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
-lDa>
-lEd/
 lchown
 ld-linux-x86-64.so.2
 len < maxlen
@@ -1813,7 +1768,6 @@ mount
 msync
 mt19937
 munmap
-mwa!
 n == 0 || s1 != NULL
 n == 0 || s2 != NULL
 nBytes
@@ -1853,7 +1807,6 @@ out of order normalization entry
 outsize >= ( inputbytes * 2 ) + 1
 outsize >= 1
 pBlob
-pCRF
 pConv && pConv->GetDelimiterLength() > 0
 pData
 pDefaultValue
@@ -1909,7 +1862,6 @@ pvecAddressesOut != nullptr || pSingleOutput != nullptr
 pwchDest != NULL
 pwchSrc != NULL
 pwrite64
-qR5FE%
 random_device could not be read
 random_device: getentropy failed
 random_device: rdrand failed
@@ -1932,7 +1884,6 @@ rename
 request_space %llu
 resizeNumBits >= 0
 rmdir
-ru&o
 s1 != NULL
 s2 != NULL
 s_bAllowStaticSymbolTable
@@ -2078,8 +2029,6 @@ vstdlib_wcstoui64
 vswprintf
 vtable for
 vtable for CUniformRandomStream
-w+OQvr
-wXR\r
 wchar_t
 wcscasecmp
 wcscmp
@@ -2091,15 +2040,11 @@ wcstol
 wcstoll
 wcstoull
 windows
-wn>Jj
 write
 write %s failed, errno = %d\n
-y9*O
-zC`G;
 {%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X}
 {%8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X}
 {default arg#
-{kHw
 {lambda
 {parm#
 {unnamed type#

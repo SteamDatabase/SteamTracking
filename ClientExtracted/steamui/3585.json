@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "시스템을 악용한 사용자가 콘텐츠를 신고하거나 조정에 대해 이의를 제기하지 못하도록 차단합니다.",
     "setcooldown_setbutton": "쿨다운 설정",
     "setcooldown_clearopenreports": "이 사용자의 해결되지 않은 신고를 제거합니다.",
-    "setcooldown_statssummary": "%2$s건 중 %1$s건이 제재 불필요 처리되었습니다.(지난주 기준 %4$s건 중 %3$s건)",
-    "nocomma": ""
+    "setcooldown_statssummary": "%2$s건 중 %1$s건이 제재 불필요 처리되었습니다.(지난주 기준 %4$s건 중 %3$s건)"
 }

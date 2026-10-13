@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Byl opraven seznam přátel a okna konverzací, která se v systémech Linux a macOS nezobrazovala v překrytí služby Steam.",
     "BBCode_Loading": "Načítání",
     "BBCode_Failed": "Načítání se nezdařilo",
-    "broadcastDetails_Playing": "Hraje"
+    "broadcastDetails_Playing": "Hraje",
+    "VoiceChat_Muted_Deck": "Umlčeno"
 }

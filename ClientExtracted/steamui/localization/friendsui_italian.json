@@ -99,7 +99,7 @@
     "VoiceChatConnectingHelp": "Assistenza con i problemi di connessione alla chat vocale",
     "VoiceChatReconnecting": "Riconnessione...",
     "VoiceChatParterConnecting": "In attesa di %1$s...",
-    "CopyVoiceChatLogs": "Copia i registri vocali negli Appunti",
+    "CopyVoiceChatLogs": "Copia i registri vocali negli appunti",
     "ToggleVoiceConsoleLog": "Attiva/disattiva registro vocale nella console",
     "ToggleLocalMicEcho": "Attiva/disattiva eco del microfono locale",
     "Voice_StartChat": "Avvia chat vocale",
@@ -291,8 +291,8 @@
     "Chat_Upload_ErrorAction_Retry": "Riprova",
     "Chat_Upload_ErrorAction_Close": "Chiudi",
     "Chat_Copy": "Copia",
-    "Chat_Copy_Clipboard": "Copia negli Appunti",
-    "Chat_Copy_Link_Clipboard": "Copia il link negli Appunti",
+    "Chat_Copy_Clipboard": "Copia negli appunti",
+    "Chat_Copy_Link_Clipboard": "Copia il link negli appunti",
     "Chat_Visit_Link": "Aperto",
     "Chat_CloseTabAction": "Chiudi la scheda",
     "Chat_CloseTabAction_SteamDeck": "Termina chat",
@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "È stato risolto un problema con le finestre degli amici e delle chat che non comparivano nell'overlay in gioco su Linux e macOS.",
     "BBCode_Loading": "Caricamento",
     "BBCode_Failed": "Caricamento non riuscito",
-    "broadcastDetails_Playing": "Riproduzione"
+    "broadcastDetails_Playing": "Riproduzione",
+    "VoiceChat_Muted_Deck": "Silenziata"
 }

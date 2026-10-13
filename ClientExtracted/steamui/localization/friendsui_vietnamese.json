@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Sửa lỗi cửa sổ bạn bè và trò chuyện không hiển thị bên trong lớp phủ của trò chơi trên Linux và macOS.",
     "BBCode_Loading": "Đang tải",
     "BBCode_Failed": "Tải thất bại",
-    "broadcastDetails_Playing": "Đang chơi"
+    "broadcastDetails_Playing": "Đang chơi",
+    "VoiceChat_Muted_Deck": "Tắt tiếng"
 }

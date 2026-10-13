@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Opgelost dat vrienden- en chatvensters niet in de overlay in het spel werden weergegeven op Linux en macOS.",
     "BBCode_Loading": "Laden",
     "BBCode_Failed": "Laden mislukt",
-    "broadcastDetails_Playing": "Speelt"
+    "broadcastDetails_Playing": "Speelt",
+    "VoiceChat_Muted_Deck": "Gedempt"
 }

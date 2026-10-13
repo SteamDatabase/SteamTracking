@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "修复了好友和聊天窗口在 Linux 及 macOS 上的游戏内叠加界面中不显示的问题。",
     "BBCode_Loading": "正在载入",
     "BBCode_Failed": "载入失败",
-    "broadcastDetails_Playing": "正在播放"
+    "broadcastDetails_Playing": "正在播放",
+    "VoiceChat_Muted_Deck": "已禁言"
 }

@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Foi resolvido um problema em que as janelas do chat e dos amigos não apareciam no Painel Steam durante jogos no Linux e no macOS.",
     "BBCode_Loading": "A carregar",
     "BBCode_Failed": "Erro ao carregar",
-    "broadcastDetails_Playing": "A jogar"
+    "broadcastDetails_Playing": "A jogar",
+    "VoiceChat_Muted_Deck": "Silenciado(a)"
 }

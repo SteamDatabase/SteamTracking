@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "De gebruiker kan geen inhoud rapporteren of bezwaar aantekenen tegen moderatiebeslissingen als ze misbruik hebben gemaakt van het systeem.",
     "setcooldown_setbutton": "Afkoelperiode instellen",
     "setcooldown_clearopenreports": "Niet-opgeloste meldingen van deze gebruiker wissen",
-    "setcooldown_statssummary": "Vrijspraak bij %1$s/%2$s meldingen, %3$s/%4$s in de afgelopen week.",
-    "nocomma": ""
+    "setcooldown_statssummary": "Vrijspraak bij %1$s/%2$s meldingen, %3$s/%4$s in de afgelopen week."
 }

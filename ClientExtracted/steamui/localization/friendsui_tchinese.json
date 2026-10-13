@@ -648,9 +648,9 @@
     "SuspiciousSender_ViewOptions": "點擊以查看選項…",
     "SuspiciousSender_Dialog_Title": "可疑訊息",
     "SuspiciousSender_Dialog_Description1": "請勿透過這些訊息提供的連結登入包括 Steam 在內的任何帳戶。Steam 客服絕對不會透過聊天或外部程式與您聯絡。 <1>深入了解</1> Steam 的安全建議。",
-    "SuspiciousSender_Dialog_Description2": "此群組內的這位使用者所提供的連結將被停用，直到您解除警告為止。",
+    "SuspiciousSender_Dialog_Description2": "此群組內的這位使用者所提供的連結將被停用，直到您關閉警告為止。",
     "SuspiciousSender_Dialog_Description3": "檢舉這些訊息可協助 Steam 採取行動，並在未來偵測出這類內容。",
-    "SuspiciousSender_Dialog_Dismiss": "解除警告",
+    "SuspiciousSender_Dialog_Dismiss": "關閉警告",
     "SuspiciousSender_Dialog_Block": "封鎖 %1$s",
     "SuspiciousSender_Dialog_Report": "檢舉訊息",
     "Friend_Menu_Open": "選項",
@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "修正在 Linux 和 macOS 中，好友與聊天視窗無法顯示於遊戲內嵌介面中的問題",
     "BBCode_Loading": "載入中",
     "BBCode_Failed": "載入失敗",
-    "broadcastDetails_Playing": "正在遊玩"
+    "broadcastDetails_Playing": "正在遊玩",
+    "VoiceChat_Muted_Deck": "已靜音"
 }

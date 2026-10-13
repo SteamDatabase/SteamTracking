@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "Interdire à un compte de signaler du contenu ou de contester les décisions de la modération en raison d'un abus du système de signalement.",
     "setcooldown_setbutton": "Définir un délai d'attente",
     "setcooldown_clearopenreports": "Effacer les signalements non résolus de ce compte",
-    "setcooldown_statssummary": "%1$s/%2$s signalements acquittés, %3$s/%4$s au cours de la dernière semaine.",
-    "nocomma": ""
+    "setcooldown_statssummary": "%1$s/%2$s signalements acquittés, %3$s/%4$s au cours de la dernière semaine."
 }

@@ -15,12 +15,10 @@
  throw
  transaction_safe
  volatile
-!a9X
 $ORIGIN
 %016lx
 %02x
 %02x.%016lx.json
-%4xY
 %I:%M:%S %p
 %a %b %e %T %Y
 %s handle 0x%016lx is not registered.\nIt has either not been recorded, or it failed to be recorded earlier (which is expected if application uses an extension that is not recognized by Fossilize).\n
@@ -78,7 +76,6 @@ $ORIGIN
 --spirv-val
 --timeout-seconds
 -0123456789
--sSO\
 -std::bad_alloc
 ../external/fossilize/fossilize.cpp
 ../external/fossilize/fossilize_db.cpp
@@ -86,7 +83,6 @@ $ORIGIN
 ../external/fossilize/layer/dispatch.cpp
 ../external/fossilize/layer/instance.cpp
 .foz
-.wN\f9
 /dev/null
 /dev/random
 /dev/urandom
@@ -96,16 +92,10 @@ $ORIGIN
 /proc/self/autogroup
 /proc/self/exe
 /proc/sys/kernel/sched_autogroup_enabled
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+0123456789
 0123456789ABCDEF
 10.0.3
-11eU%
-9a&g
-:V!2m
-;\tFzo
-@BXV
-@iZb
 AKST
 ASCII
 ASCII//TRANSLIT
@@ -152,7 +142,6 @@ EngineVersion
 EngineVersionMajor
 EngineVersionMinor
 EngineVersionPatch
-EydV
 FOSSILIZEDB
 FOSSILIZE_APPLICATION_INFO_FILTER_PATH
 FOSSILIZE_DUMP_SYNC
@@ -326,7 +315,6 @@ Invalid varint format.\n
 JArray
 JSON version mismatches.
 January
-Jugm
 July
 June
 LC_ADDRESS
@@ -341,7 +329,6 @@ LC_NUMERIC
 LC_PAPER
 LC_TELEPHONE
 LC_TIME
-MGiI
 MODULE
 March
 Monday
@@ -395,16 +382,13 @@ NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
 NSt8ios_base7failureB5cxx11E
 NSt8ios_base7failureE
 November
-O8Mr
 October
 POSIX
 Pipeline layout
 Pipeline library
 QA: Pipeline compilation required for pipeline, flags %08x'%08x.\n
-Qkkbal
 RAYTRACE
 RAYTRACE_VERR
-RJqn
 Raytracing pipeline
 Recording compute pipeline failed, usually caused by unsupported pNext.\n
 Recording graphics pipeline failed, usually caused by unsupported pNext.\n
@@ -419,7 +403,6 @@ STEAM_FOSSILIZE_IDENTIFIER_DUMP_PATH
 STEAM_FOSSILIZE_LAST_USE_TAG
 STEAM_FOSSILIZE_PIPELINE_USE_DUMP_PATH
 STEAM_FOSSILIZE_PRECOMPILE_QA
-STv/N
 Sampler
 Saturday
 September
@@ -540,13 +523,11 @@ St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
 St9type_info
 Sunday
-T%L9
 TLS init function for
 TLS wrapper function for
 TOUCH
 Thursday
 Tuesday
-U1(\Q
 UTF-8
 Unknown error
 VK_EXT_pipeline_creation_cache_control
@@ -557,16 +538,9 @@ VTT for
 VendorID
 W4vC
 Wednesday
-X5AHx
-XqkY
-Zjz\v
-[*QmU
 [abi:
 [friend]
 \t\t\t\t\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\ysK
-]rHa
 _Float
 _GLOBAL_
 _ITM_RU1
@@ -685,7 +659,6 @@ blank
 blendConstants
 blendEnable
 blendOverlap
-bnMG
 bool
 boolean
 borderColor
@@ -695,7 +668,6 @@ bucketVariantFeatureDependencies
 buf error
 buffer too small
 byte
-bzo=
 cannot create shim for unknown locale::facet
 cannot create std::deque larger than max_size()
 cannot create std::vector larger than max_size()
@@ -740,7 +712,6 @@ covariant return thunk to
 cullMode
 customBorderColor
 customResolve
-d6\f6
 data
 data error
 dataSize
@@ -805,8 +776,6 @@ dstSubpass
 dup2
 dynamicState
 dynamic_cast
-eax~Z
-ekhHD
 embeddedSampler
 engineFilters
 engineName
@@ -878,7 +847,6 @@ graph
 graphicsPipelines
 groups
 guard variable for
-hGT.
 half
 hardware
 hash
@@ -888,7 +856,6 @@ heapIndexStride
 heapOffset
 height
 hidden alias for
-i]Wb
 iconv
 iconv_close
 iconv_open
@@ -918,8 +885,6 @@ isxdigit
 java Class for
 java resource
 json
-k*do^
-k0V(
 killpg
 layout
 ld-linux-x86-64.so.2
@@ -948,7 +913,6 @@ long
 long double
 long long
 lower
-mSx@
 magFilter
 malloc
 mapEntries
@@ -988,7 +952,6 @@ mktime
 mmap
 module
 mold 2.36.0 (compatible with GNU ld)
-mr"iR
 mt19937
 multisampleState
 multisampledRenderToSingleSampledEnable
@@ -996,7 +959,6 @@ multiviewMeshShader
 munmap
 mutableDescriptorTypeLists
 mz_zip_end failed!\n
-nQ:B
 name
 nanosleep
 need dictionary
@@ -1020,13 +982,11 @@ opendir
 operator
 operator""
 out of memory
-pH_r
 pNext
 pNext in VkPipelineDynamicStateCreateInfo not supported.
 parameter error
 passOp
 patchControlPoints
-pc2g
 physicalDeviceFeatures
 pipe
 pipelineBindPoint
@@ -1066,8 +1026,6 @@ pushDataOffset
 pushIndex
 pushOffset
 putc
-quAt
-raB3G
 random_device could not be read
 random_device: getentropy failed
 random_device: rdrand failed
@@ -1213,7 +1171,6 @@ subpasses
 supersampleFragmentShadingRates
 syscall
 system
-tC7Ddx
 taskShader
 template
 template parameter object for
@@ -1321,19 +1278,14 @@ wmemcmp
 wmemcpy
 wmemmove
 wmemset
-wn>Jj
 write calledback failed
 writeMask
 xChromaOffset
 xdigit
-xg^Jp5|
 yChromaOffset
-yMzw\n
 ycbcrModel
 ycbcrRange
-z^KD
 {default arg#
 {lambda
 {parm#
 {unnamed type#
-{zel#|67

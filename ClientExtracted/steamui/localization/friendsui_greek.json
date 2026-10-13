@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Διορθώθηκαν τα παράθυρα φίλων και συνομιλίας να μην εμφανίζουν την επικάλυψη εντός παιχνιδιού σε Linux και macOS.",
     "BBCode_Loading": "Φόρτωση",
     "BBCode_Failed": "Αποτυχία φόρτωσης",
-    "broadcastDetails_Playing": "Παίζει"
+    "broadcastDetails_Playing": "Παίζει",
+    "VoiceChat_Muted_Deck": "Σε σίγαση"
 }

@@ -205,7 +205,7 @@
     "moderationaction_escalated_for_csam": "Đã chuyển lên Valve (vì nội dung xâm hại tình dục trẻ em)",
     "moderationaction_escalated_for_terrorism": "Đã chuyển lên Valve (vì nội dung khủng bố)",
     "moderationaction_claimed": "Đã nhận",
-    "moderationaction_released": "Đã đăng",
+    "moderationaction_released": "Đã nhượng lại",
     "moderationaction_privatemessaged": "Đã gửi tin nhắn riêng",
     "moderationaction_unknown": "Hành động không xác định",
     "moderationaction_ownerdisputed": "Chủ sở hữu phản đối kết quả kiểm duyệt",
@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "Chặn người dùng tố cáo nội dung hoặc phản đối quyết định điều hành khi họ lạm dụng hệ thống.",
     "setcooldown_setbutton": "Đặt thời gian chờ",
     "setcooldown_clearopenreports": "Xóa các tố cáo chưa được giải quyết của người dùng này",
-    "setcooldown_statssummary": "%1$s/%2$s tố cáo không phạt, %3$s/%4$s vào tuần trước.",
-    "nocomma": ""
+    "setcooldown_statssummary": "%1$s/%2$s tố cáo không phạt, %3$s/%4$s vào tuần trước."
 }

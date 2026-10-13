@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "Blochează posibilitatea unui utilizator de a raporta conținut sau a contesta deciziile de moderarea dacă acesta a abuzat de sistem.",
     "setcooldown_setbutton": "Setează perioada de restricție",
     "setcooldown_clearopenreports": "Șterge raportările nerezolvate ale acestui utilizator",
-    "setcooldown_statssummary": "%1$s/%2$s raportări achitate, %3$s/%4$s fiind în ultima săptămână.",
-    "nocomma": ""
+    "setcooldown_statssummary": "%1$s/%2$s raportări achitate, %3$s/%4$s fiind în ultima săptămână."
 }

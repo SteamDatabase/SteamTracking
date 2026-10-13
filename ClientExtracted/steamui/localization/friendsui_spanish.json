@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Se corrigió un problema por el que las ventanas de amigos y de chat no se mostraban en la interfaz superpuesta durante las partidas en Linux y macOS.",
     "BBCode_Loading": "Cargando",
     "BBCode_Failed": "Error al cargar",
-    "broadcastDetails_Playing": "Reproduciendo"
+    "broadcastDetails_Playing": "Reproduciendo",
+    "VoiceChat_Muted_Deck": "Silenciado"
 }

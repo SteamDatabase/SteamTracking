@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Fehler behoben, durch den Freunde- und Chatfenster im In-Game-Overlay unter Linux und macOS nicht angezeigt wurden.",
     "BBCode_Loading": "Ladevorgang läuft",
     "BBCode_Failed": "Konnte nicht geladen werden",
-    "broadcastDetails_Playing": "Spielt"
+    "broadcastDetails_Playing": "Spielt",
+    "VoiceChat_Muted_Deck": "Stummgeschaltet"
 }

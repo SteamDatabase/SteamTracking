@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "Blokker en bruker fra å rapportere innhold eller klage på moderering når de har misbrukt systemet.",
     "setcooldown_setbutton": "Angi venteperiode",
     "setcooldown_clearopenreports": "Tøm denne brukerens uløste rapporter",
-    "setcooldown_statssummary": "%1$s/%2$s rapporter frikjent, %3$s/%4$s den siste uken.",
-    "nocomma": ""
+    "setcooldown_statssummary": "%1$s/%2$s rapporter frikjent, %3$s/%4$s den siste uken."
 }

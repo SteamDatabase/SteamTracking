@@ -25,9 +25,6 @@
   V Front Porch: %d\n
   V Sync: %d\n
   Width: %d mm\n
- !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
- $(,048<AEIMQUY]aeimquy}
  %s file [%s], format=%s channels=%d freq=%d.
  (Preferred)
  (THIS IS PROBABLY A BUG!)
@@ -208,9 +205,6 @@
 !"Viewport size exceeds current render target dimensions"
 !"allowed_frames_in_flight value must be between 1 and 3!"
 !"enable_anisotropy must be set to false (FEATURE_ANISOTROPY disabled)"
-!)19BJRZcks{
-!)@:F,@zj/@\G1@|
-"3DUfw
 "vkCreateImageView"
 #define SDL_TEXCOORD_PRECISION highp\nprecision mediump float;\n\n
 #define SDL_TEXCOORD_PRECISION mediump\nprecision mediump float;\n\n
@@ -268,7 +262,6 @@ $ORIGIN
 (iiibiiay)
 (null)
 (sa(iiay)ss)
-,[1K6
 ,hint:SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1
 ,hint:SDL_GAMECONTROLLER_USE_GAMECUBE_LABELS:=1
 -*-*-*-*-*--*-*-*-*-*-*-iso10646-1,*
@@ -345,7 +338,6 @@ $ORIGIN
 0.14.0
 0000000058626f782033363020576900,Xbox 360 Wireless Controller,a:b0,b:b1,back:b14,dpdown:b11,dpleft:b12,dpright:b13,dpup:b10,guide:b7,leftshoulder:b4,leftstick:b8,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b9,righttrigger:a5,rightx:a3,righty:a4,start:b6,x:b2,y:b3,
 0000000058626f782047616d65706100,Xbox Gamepad (userspace driver),a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a5,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a4,rightx:a2,righty:a3,start:b7,x:b2,y:b3,
-00033
 0123456789+-*/\r,.?()#
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 0123456789abcdef
@@ -635,18 +627,14 @@ $ORIGIN
 0x%x
 3-bit IMA ADPCM currently not supported
 3333
-33333
 333333?
 3333n
-333;
 333>0
 333?333
 333~
 33>0
 33?33
 37?;3
-6ccc6
-6fff6
 6nffg
 800>33n
 8<63
@@ -664,13 +652,10 @@ $ORIGIN
 <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">\r\n<node>\r\n  <interface name="org.kde.StatusNotifierItem">\r\n\r\n    <property name="Category" type="s" access="read"/>\r\n    <property name="Id" type="s" access="read"/>\r\n    <property name="Title" type="s" access="read"/>\r\n    <property name="Status" type="s" access="read"/>\r\n    <property name="WindowId" type="i" access="read"/>\r\n\r\n    <!-- An additional path to add to the theme search path to find the icons specified above. -->\r\n    <property name="IconThemePath" type="s" access="read"/>\r\n    <property name="Menu" type="o" access="read"/>\r\n    <property name="ItemIsMenu" type="b" access="read"/>\r\n\r\n\r\n    <!-- main icon -->\r\n    <!-- names are preferred over pixmaps -->\r\n    <property name="IconName" type="s" access="read"/>\r\n\r\n    <!--struct containing width, height and image data-->\r\n    <property name="IconPixmap" type="a(iiay)" access="read">\r\n      <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusImageVector"/>\r\n    </property>\r\n\r\n    <property name="OverlayIconName" type="s" access="read"/>\r\n\r\n    <property name="OverlayIconPixmap" type="a(iiay)" access="read">\r\n      <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusImageVector"/>\r\n    </property>\r\n\r\n\r\n    <!-- Requesting attention icon -->\r\n    <property name="AttentionIconName" type="s" access="read"/>\r\n\r\n    <!--same definition as image-->\r\n    <property name="AttentionIconPixmap" type="a(iiay)" access="read">\r\n      <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusImageVector"/>\r\n    </property>\r\n\r\n    <property name="AttentionMovieName" type="s" access="read"/>\r\n\r\n\r\n\r\n    <!-- tooltip data -->\r\n\r\n    <!--(iiay) is an image-->\r\n    <property name="ToolTip" type="(sa(iiay)ss)" access="read">\r\n      <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusToolTipStruct"/>\r\n    </property>\r\n\r\n    <method name="ProvideXdgActivationToken">\r\n        <arg name="token" type="s" direction="in"/>\r\n    </method>\r\n\r\n    <!-- interaction: the systemtray wants the application to do something -->\r\n    <method name="ContextMenu">\r\n        <!-- we're passing the coordinates of the icon, so the app knows where to put the popup window -->\r\n        <arg name="x" type="i" direction="in"/>\r\n        <arg name="y" type="i" direction="in"/>\r\n    </method>\r\n\r\n    <method name="Activate">\r\n        <arg name="x" type="i" direction="in"/>\r\n        <arg name="y" type="i" direction="in"/>\r\n    </method>\r\n\r\n    <method name="SecondaryActivate">\r\n        <arg name="x" type="i" direction="in"/>\r\n        <arg name="y" type="i" direction="in"/>\r\n    </method>\r\n\r\n    <method name="Scroll">\r\n      <arg name="delta" type="i" direction="in"/>\r\n      <arg name="orientation" type="s" direction="in"/>\r\n    </method>\r\n\r\n    <!-- Signals: the client wants to change something in the status-->\r\n    <signal name="NewTitle">\r\n    </signal>\r\n\r\n    <signal name="NewIcon">\r\n    </signal>\r\n\r\n    <signal name="NewAttentionIcon">\r\n    </signal>\r\n\r\n    <signal name="NewOverlayIcon">\r\n    </signal>\r\n\r\n    <signal name="NewMenu">\r\n    </signal>\r\n\r\n    <signal name="NewToolTip">\r\n    </signal>\r\n\r\n    <signal name="NewStatus">\r\n      <arg name="status" type="s"/>\r\n    </signal>\r\n\r\n  </interface>\r\n</node>
 <?xml version="1.0"?><node name="/"><interface name="com.canonical.dbusmenu"><property name="Version" type="u" access="read"></property><property name="TextDirection" type="s" access="read"></property><property name="Status" type="s" access="read"></property><property name="IconThemePath" type="as" access="read"></property><method name="GetLayout"><arg type="i" name="parentId" direction="in"></arg><arg type="i" name="recursionDepth" direction="in"></arg><arg type="as" name="propertyNames" direction="in"></arg><arg type="u" name="revision" direction="out"></arg><arg type="(ia{sv}av)" name="layout" direction="out"></arg></method><method name="GetGroupProperties"><arg type="ai" name="ids" direction="in"></arg><arg type="as" name="propertyNames" direction="in"></arg><arg type="a(ia{sv})" name="properties" direction="out"></arg></method><method name="GetProperty"><arg type="i" name="id" direction="in"></arg><arg type="s" name="name" direction="in"></arg><arg type="v" name="value" direction="out"></arg></method><method name="Event"><arg type="i" name="id" direction="in"></arg><arg type="s" name="eventId" direction="in"></arg><arg type="v" name="data" direction="in"></arg><arg type="u" name="timestamp" direction="in"></arg></method><method name="EventGroup"><arg type="a(isvu)" name="events" direction="in"></arg><arg type="ai" name="idErrors" direction="out"></arg></method><method name="AboutToShow"><arg type="i" name="id" direction="in"></arg><arg type="b" name="needUpdate" direction="out"></arg></method><method name="AboutToShowGroup"><arg type="ai" name="ids" direction="in"></arg><arg type="ai" name="updatesNeeded" direction="out"></arg><arg type="ai" name="idErrors" direction="out"></arg></method><signal name="ItemsPropertiesUpdated"><arg type="a(ia{sv})" name="updatedProps" direction="out"/><arg type="a(ias)" name="removedProps" direction="out"/></signal><signal name="LayoutUpdated"><arg type="u" name="revision" direction="out"></arg><arg type="i" name="parent" direction="out"></arg></signal><signal name="ItemActivationRequested"><arg type="i" name="id" direction="out"></arg><arg type="u" name="timestamp" direction="out"></arg></signal></interface></node>
 <unspecified>
-=@zj?@L~@@\GA@l
-=v<y5
 >cs{og>
 ?333333
 ?ff>6fg
 ?ff>ff?
-?ffffff
 ?fooff?
 @entryPointOutput
 @entryPointOutput.color
@@ -696,7 +681,6 @@ AC Refresh
 AC Save
 AC Search
 AC Stop
-ADH~OqW/`
 ALSA PCM audio
 ALSA default playback device
 ALSA default recording device
@@ -1954,7 +1938,6 @@ PulseMainloop
 QANBA USA, LLC
 QANBA USA,LLC
 Qanba
-QkkXa
 RENDER
 RESOURCE_MANAGER
 RGB 4:4:4: %s\n
@@ -2151,7 +2134,7 @@ SDL not built with OpenXR support
 SDL not built with camera support
 SDL offscreen video driver
 SDL revision: %s
-SDL-release-3.4.0-1547-gda44f6887
+SDL-release-3.4.0-1576-gab5541ec5
 SDL.app.metadata.copyright
 SDL.app.metadata.creator
 SDL.app.metadata.identifier
@@ -4361,19 +4344,20 @@ Stream #%d is already bound to a device
 Stream has no destination format
 Stream has no source format
 String
+Success
 Super
 Surface doesn't have a colorkey
 Surface doesn't use a palette
 Surfaces must not be locked during blit
 Suspend: %s\n
 Swapchain composition not supported!
+Switch Joy-Con (L/R)
 SwitchPro
 Synaptics
 Sync Signal Level: %f\n
 SysReq
 System audio playback device
 System audio recording device
-T 3K
 TANGENTIAL_PRESSURE
 TARGETS
 TEMPLATES
@@ -5006,13 +4990,36 @@ Zero buffer/length
 [General]\n
 [UNKNOWN]
 [slot %d]
+[{"feature":"Thai","description":"Thai language support","priority":"suggested","soname":["libthai.so.0"]}]
+[{"feature":"audio-libalsa","description":"Support for audio through libalsa","priority":"suggested","soname":["libasound.so.2"]}]
+[{"feature":"audio-libpipewire","description":"Support for audio through libpipewire","priority":"suggested","soname":["libpipewire-0.3.so.0"]}]
+[{"feature":"audio-libpulseaudio","description":"Support for audio through libpulseaudio","priority":"suggested","soname":["libpulse.so.0"]}]
+[{"feature":"core-libdbus","description":"Support for D-Bus IPC","priority":"recommended","soname":["libdbus-1.so.3"]}]
+[{"feature":"egl-egl","description":"Support for EGL","priority":"suggested","soname":["libEGL.so.1"]}]
+[{"feature":"egl-es-pvr","description":"Support for EGL ES PVR","priority":"suggested","soname":["libGLES_CM.so.1"]}]
+[{"feature":"egl-es2","description":"Support for EGL ES2","priority":"suggested","soname":["libGLESv2.so.2"]}]
+[{"feature":"egl-ogl-es","description":"Support for OpenGL ES","priority":"suggested","soname":["libGLESv1_CM.so.1"]}]
+[{"feature":"egl-opengl","description":"Support for OpenGL","priority":"suggested","soname":["libGL.so.1","libOpenGL.so.0"]}]
+[{"feature":"events-udev","description":"Support for events through libudev","priority":"recommended","soname":["libudev.so.1","libudev.so.1","libudev.so.0"]}]
+[{"feature":"fribidi","description":"Bidirectional text support","priority":"suggested","soname":["libfribidi.so.0"]}]
+[{"feature":"hidabi-libusb","description":"Support for joysticks through libusb","priority":"suggested","soname":["libusb-1.0.so.0"]}]
+[{"feature":"libusb","description":"Support for joysticks through libusb","priority":"suggested","soname":["libusb-1.0.so.0"]}]
+[{"feature":"offscreen-vulkan","description":"Support for offscreen Vulkan","priority":"suggested","soname":["libvulkan.so.1"]}]
+[{"feature":"storage-steam","description":"Support for Steam user storage","priority":"suggested","soname":["libsteam_api.so"]}]
+[{"feature":"x11","description":"Support for video through X11 backend","priority":"recommended","soname":["libX11.so.6"]}]
+[{"feature":"x11","description":"Support for video through X11 backend","priority":"recommended","soname":["libXcursor.so.1"]}]
+[{"feature":"x11","description":"Support for video through X11 backend","priority":"recommended","soname":["libXext.so.6"]}]
+[{"feature":"x11","description":"Support for video through X11 backend","priority":"recommended","soname":["libXfixes.so.3"]}]
+[{"feature":"x11","description":"Support for video through X11 backend","priority":"recommended","soname":["libXi.so.6"]}]
+[{"feature":"x11","description":"Support for video through X11 backend","priority":"recommended","soname":["libXrandr.so.2"]}]
+[{"feature":"x11","description":"Support for video through X11 backend","priority":"recommended","soname":["libXss.so.1"]}]
+[{"feature":"x11","description":"Support for video through X11 backend","priority":"recommended","soname":["libXtst.so.6"]}]
+[{"feature":"x11-vulkan","description":"Support for vulkan on X11","priority":"suggested","soname":["libX11-xcb.so.1"]}]
+[{"feature":"x11-vulkan","description":"Support for vulkan on X11","priority":"suggested","soname":["libvulkan.so.1"]}]
 \6s{o6
-\fc=Ac
 \n%.2d:
 \n\nSDL assertion report.\n
 \t\t\t\t\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 _DIR
 _Exit
 _GTK_SHOW_WINDOW_MENU
@@ -5152,7 +5159,6 @@ avx2
 avx512f
 axby
 a{sv}
-b!r!o,P
 bInterfaceNumber
 back
 back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,misc1:b11,paddle2:b13,paddle4:b15,
@@ -5167,7 +5173,6 @@ break
 buffer
 buttons
 bytes
-c!s!n,q
 c>6>c
 callback
 calloc
@@ -5367,7 +5372,6 @@ event
 events
 ew-resize
 expf
-f!v!k,l,G
 face:
 face:abxy,
 face:axby,
@@ -5387,7 +5391,6 @@ fence
 fences
 ferror
 fff<
-fff>
 ffff<
 ffffff
 fflush
@@ -5400,6 +5403,7 @@ file://
 fileno
 filterEvents
 finger
+first_binding + num_bindings exceeds MAX_VERTEX_BUFFERS
 first_slot + num_bindings exceeds MAX_STORAGE_BUFFERS_PER_STAGE
 first_slot + num_bindings exceeds MAX_STORAGE_TEXTURES_PER_STAGE
 first_slot + num_bindings exceeds MAX_TEXTURE_SAMPLERS_PER_STAGE
@@ -5593,6 +5597,7 @@ height
 height * pitch would overflow
 height + 1 would overflow
 help
+hid_error is not implemented yet
 hid_get_indexed_string: not supported by hidraw
 hid_read_timeout: unexpected poll error (device disconnected)
 hidapi device
@@ -5641,7 +5646,6 @@ ioctl(GRDESCSIZE) error for '%s', not a HIDRAW device?: %s
 ioctl(GRDESCSIZE): %s
 iso10646-1
 iso8859-11
-j!z!g,h,H
 joyconleft
 joyconpair
 joyconright
@@ -5735,7 +5739,6 @@ logf
 lround
 lroundf
 lseek
-lt4X<
 main
 make GL context current
 malloc
@@ -6361,7 +6364,6 @@ type='signal', interface='org.freedesktop.Notifications',member='NotificationClo
 type='signal', interface='org.freedesktop.portal.Notification',member='ActionInvoked'
 type='signal', interface='org.freedesktop.portal.Settings',member='SettingChanged', arg0='org.freedesktop.appearance',arg1='color-scheme'
 type='signal',interface='%s'
-u,v,F
 u_matrix
 u_offset
 u_palette
@@ -6451,7 +6453,6 @@ usb_device
 usb_interface
 user_storage
 usleep
-v<y5
 value
 varying mediump vec4 v_color;\n\nvoid main()\n{\n    gl_FragColor = v_color;\n}\n
 varying vec4 v_color;\n\nvoid main()\n{\n    gl_FragColor = v_color;\n}
@@ -6791,7 +6792,6 @@ xdg-open
 xinput
 xmonad
 xpad
-yidqk
 zenity
 zoom-in
 zoom-out

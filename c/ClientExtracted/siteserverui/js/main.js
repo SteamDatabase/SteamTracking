@@ -5016,9 +5016,9 @@
                 _.set_identifier(_.identifier + " " + _.identifierHash),
                 _.set_message(JSON.stringify(_.message)),
                 _.strComponentStack &&
-                  ((_ ??= {}),
-                  (_.componentStack = _.strComponentStack),
-                  (_.strDisplayVersion = _.strDisplayVersion)),
+                  ((_ ??= {}), (_.componentStack = _.strComponentStack)),
+                _.strDisplayVersion &&
+                  ((_ ??= {}), (_.strDisplayVersion = _.strDisplayVersion)),
                 _ && _.set_context(JSON.stringify(_)),
                 _.strUrl && _.set_url(_.strUrl),
                 _

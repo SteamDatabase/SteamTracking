@@ -32,7 +32,6 @@
  transaction_safe
  volatile
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
-!AxU
 !V_isempty( prefix )
 !V_isempty( suffix )
 !g_VProfile
@@ -42,12 +41,9 @@
 !pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pTracker->IsClaimed( pKey )
 !pszString || pszString[nChars] == '\0'
-#FLR
 #include
 #include is NULL
-#tDq
 $ORIGIN
-$\nY8O
 %$%a%b%V%U%c%Q%W%]%\%[%
 %%%ds | %%9s | %%12s\n
 %%-%ds | %%9d | %%12s\n
@@ -115,7 +111,6 @@ $\nY8O
 &atilde;
 &auml;
 &brvbar;
-&bzi
 &ccedil;
 &cedil;
 &cent;
@@ -196,7 +191,6 @@ $\nY8O
 ++CCUNG5
 ++CCUNGZ
 ++CCUNGstd::exception
-+ulsX
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
 -- Profile scopes sorted by average time (without children) --
@@ -244,7 +238,6 @@ $\nY8O
 ../vstdlib/keyvaluessystem.cpp
 ../vstdlib/strtools.cpp
 ../vstdlib/strtools_unicode.cpp
-.y4w
 /bin/sh
 /dev/random
 /dev/urandom
@@ -258,12 +251,9 @@ $\nY8O
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
-00:25:27
-00:25:28
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-0F`8
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
@@ -272,27 +262,19 @@ $\nY8O
 16CAdHocValidation
 16CKeyValuesSystem
 16IKeyValuesSystem
+18:44:16
+18:44:18
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
-30!]^JV
-30=b
 31CAdHocValidation_SimpleCallback
-49fN
-52F*
-5T&w&
-6 PQ
 7CUtlMapIPvii8CDefLessE
 7CUtlMapIjbi8CDefLessE
-7~8A
-8\foQS
 9IMemAlloc
-9a&g
 <empty>\n
 <family %u, %u bytes>
 <no address info>
 <unknown>
-A@qVc"
 ANDROID
 ANDROID32
 ANDROID64
@@ -313,7 +295,6 @@ Blocks
 Breaking '%s' in '%s'\n
 Bucket size : count\n
 Busy, please retry.\n
-C-Yn
 C-runtime internal
 CHROMEOS
 CKeyValuesSystem
@@ -357,7 +338,6 @@ DF32x
 DF64_
 DF64x
 DONT_BREAK_ON_ASSERT
-D\vvf:
 Deleting thread object from the thread, this is bad
 DumpMemTrackingStats %d %d \n
 Error State on string being set.
@@ -366,7 +346,6 @@ Error decoding string2: %s
 Error while parsing text KeyValues for resource %s
 Exiting on SPEW_ABORT\n
 Expected %lld but got %lld!
-FCZ&
 Failed to capture callstack
 Failed to create thread (error 0x%x)
 Failed to get thread priority: foreign thread unsupported\n
@@ -395,8 +374,6 @@ GetFloatFromString() did not get correct peCS parameter
 GetInt64FromString() did not get correct peCS parameter
 GetIntFromString() did not get correct peCS parameter
 GetUint64FromString() did not get correct peCS parameter
-H$6t
-H*0"ZOW
 HOME
 INVALID_KEY_SYMBOL
 IVALIDATE001
@@ -409,7 +386,6 @@ Invalid thread id during thread Start()
 IsSpewActive
 IsValidIndex( elem )
 JArray
-JZJ{.
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
 KeyValues don't support #include anymore, file "%s"
@@ -448,7 +424,6 @@ LoadFileIntoBuffer: NULL parameters
 LoadFromBuffer: missing {   (current key: '%s')
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
-MGiI
 Matched '%s' -> '%s'\n
 MemFree:
 MemTotal:
@@ -509,9 +484,6 @@ PS3 Unattributed
 Peak %.2f ms frame\n
 PrepareBuffer( nNewLength ) == pstrNew
 Probably deadlock or failure waiting for thread to initialize.
-QkkXa
-Qkkbal
-R1h58
 RGBA: %.2X %.2X %.2X %.2X
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got NULL key
@@ -521,12 +493,10 @@ RecursiveLoadFromBuffer:  got } in key
 Root
 SDL_GetError
 SDL_SetCurrentThreadPriority
-SKyu
 STEAM_DESKTOP_APP_AFFINITY_LIST
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 Size
-Sm"\vg
 Someone called ClearWritingMinidump without holding the minidump lock.
 Someone called SetWritingMinidump without holding the minidump lock.
 Spew Globals
@@ -589,7 +559,6 @@ Validate Failed: !!!Leaked:\t%llu %s%s\n
 Validate Failed: Leaked connection %u\n
 Validate Failed: Leaked file %p\n
 Validate Failed: Leaked socket %p\n
-Vc0a
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.\n
 WIN32
 WIN64
@@ -603,13 +572,10 @@ Warning: support for elevated priorities is most likely unavailable, suppressing
 Warning: thread priority outside allowed range %d\n
 X360
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
-Zjz\v
 [ func+child   func ]     Count\n
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
 [abi:
 [friend]
-\nYg:a
-\rRoOs
 \t%d items : %s - %s:%d\n
 \t(%zu) comparing %s with %s\n
 \tValidate Failed: leaked connection to %s\n
@@ -617,7 +583,6 @@ Zjz\v
 \tValidate Failed: leaked socket remote address %s\n
 \u000
 \u001
-]JldN
 _ExitOnFatalAssert\n
 _Float
 _GLOBAL_
@@ -653,8 +618,6 @@ __xmknod
 __xstat
 __xstat64
 _exit
-`tun%
-a\rxg[
 aarch64
 abort
 access
@@ -665,7 +628,6 @@ asctime_r
 audio.so
 auto
 auto:
-b,uZ
 backtrace
 backtrace_symbols
 basic_iostream
@@ -696,7 +658,6 @@ boolean
 buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
 bufferLen == 0 || pDest != NULL
 bufferLen > 0 && bufferLen <= INT_MAX
-bwiO'
 byte
 cActualReplacements == cReplacements
 calloc
@@ -733,7 +694,6 @@ crashhandler002
 crashhandler003
 crashhandler004
 ctime_r
-dQy/
 daylight
 decimal128
 decimal32
@@ -766,7 +726,6 @@ existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 extension
 extension[0] == '.'
 externaltests.so
-f.N%H
 faccessat
 false
 fclose
@@ -786,7 +745,6 @@ free
 freopen
 friendsui.so
 fwrite
-gAY:
 g_pMemAllocSteam
 generic
 getcwd
@@ -807,8 +765,6 @@ guard variable for
 half
 hardware
 hidden alias for
-i]Wb
-ig,o
 in != out
 info.m_pReplacementString == 0
 initializer for module
@@ -822,12 +778,9 @@ iswspace
 item %p sentinel corrupted. skipping.\n
 java Class for
 java resource
-k2U\v
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 kill
-lDa>
-lEd/
 lchown
 ld-linux-x86-64.so.2
 len < maxlen
@@ -886,7 +839,6 @@ mount
 mprotect
 mt19937
 munmap
-mwa!
 n == 0 || s1 != NULL
 n == 0 || s2 != NULL
 nBytes
@@ -928,7 +880,6 @@ p2prelayserver.so
 p2pstunserver.so
 pAllocTracker->m_uSentinel == 0xaa110ced
 pBlob
-pCRF
 pChild
 pConv && pConv->GetDelimiterLength() > 0
 pDest
@@ -1000,7 +951,6 @@ pthread_self
 pthread_setname_np
 pthread_setschedparam
 pthread_setspecific
-qR5FE%
 random_device could not be read
 random_device: getentropy failed
 random_device: rdrand failed
@@ -1020,7 +970,6 @@ reference temporary #
 reinterpret_cast
 rename
 rmdir
-ru&o
 s1 != NULL
 s2 != NULL
 s_dev_urandom_fd >= 0
@@ -1171,8 +1120,6 @@ vstdlib_wcstoi64
 vstdlib_wcstoui64
 vswprintf
 vtable for
-w+OQvr
-wXR\r
 waitid
 waitpid
 wchar_t
@@ -1185,17 +1132,13 @@ wcsncpy
 wcstol
 wcstoll
 wcstoull
-wn>Jj
 write
 x86_64
 xlocale
 xmemory
-y9*O
-zC`G;
 {%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X}
 {%8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X}
 {default arg#
-{kHw
 {lambda
 {parm#
 {unnamed type#

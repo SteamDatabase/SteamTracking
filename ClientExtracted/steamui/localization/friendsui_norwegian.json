@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Fikset at venne- og samtalevinduer ikke ble vist i spilloverlegget på Linux og macOS.",
     "BBCode_Loading": "Laster",
     "BBCode_Failed": "Kunne ikke laste inn",
-    "broadcastDetails_Playing": "Spiller"
+    "broadcastDetails_Playing": "Spiller",
+    "VoiceChat_Muted_Deck": "Dempet"
 }

@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Linux ve macOS'teki oyun içi arayüzlerde arkadaşlar ve sohbet pencerelerinin görünmemesi hatası giderildi.",
     "BBCode_Loading": "Yükleniyor",
     "BBCode_Failed": "Yüklenemedi",
-    "broadcastDetails_Playing": "Oynuyor:"
+    "broadcastDetails_Playing": "Oynuyor:",
+    "VoiceChat_Muted_Deck": "Susturuldu"
 }

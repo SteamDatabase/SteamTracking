@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Исправлена ошибка, из-за которой окна друзей и чата не отображались во внутриигровом оверлее на Linux и macOS.",
     "BBCode_Loading": "Загрузка",
     "BBCode_Failed": "Ошибка загрузки",
-    "broadcastDetails_Playing": "Воспроизведение"
+    "broadcastDetails_Playing": "Воспроизведение",
+    "VoiceChat_Muted_Deck": "Заглушено"
 }

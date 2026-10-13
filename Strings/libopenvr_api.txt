@@ -86,8 +86,8 @@
 *N12_GLOBAL__N_122generic_error_categoryE
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
--1e+9999
 -0123456789
+-1e+9999
 -Infinity
 ./obj_openvr_api_linux64/release/libopenvr_api.so
 .config
@@ -713,7 +713,6 @@ Json::writeString(Json::StreamWriter::Factory const&, Json::Value const&)
 Json::writeString(Json::StreamWriter::Factory const&, Json::Value const&) (.cold)
 July
 June
-KdXJ
 LC_ADDRESS
 LC_COLLATE
 LC_CTYPE
@@ -1032,7 +1031,6 @@ UTF8to16(char const*)
 UTF8to16(char const*) (.cold)
 UTF8to16(char const*)::s_converter
 UTF8to16(std::string const&)
-Uekf
 Uint64ToString(unsigned long)
 Unable to connect to Oculus Runtime (1000)
 Unable to connect to Oculus Runtime, possible bad install (1114)
@@ -1865,6 +1863,7 @@ gettext
 getwc
 global constructors keyed to
 global destructors keyed to
+gold 1.15
 graph
 guard variable for
 guard variable for (anonymous namespace)::get_locale_cache_mutex()::locale_cache_mutex

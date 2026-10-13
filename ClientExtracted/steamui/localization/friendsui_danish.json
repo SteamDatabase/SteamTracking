@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Rettelse af venne- og chatvinduer, som ikke blev vist i overlayet i spil i Linux og macOS.",
     "BBCode_Loading": "Indlæser",
     "BBCode_Failed": "Indlæsningen mislykkedes",
-    "broadcastDetails_Playing": "Spiller"
+    "broadcastDetails_Playing": "Spiller",
+    "VoiceChat_Muted_Deck": "Dæmpet"
 }

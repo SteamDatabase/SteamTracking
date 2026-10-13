@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "Bloquea la capacidad de un usuario para denunciar contenido o disputar decisiones de moderación cuando haya abusado del sistema.",
     "setcooldown_setbutton": "Establecer suspensión",
     "setcooldown_clearopenreports": "Borrar las denuncias sin resolver de este usuario",
-    "setcooldown_statssummary": "%1$s/%2$s denuncias absueltas, %3$s/%4$s en la última semana.",
-    "nocomma": ""
+    "setcooldown_statssummary": "%1$s/%2$s denuncias absueltas, %3$s/%4$s en la última semana."
 }

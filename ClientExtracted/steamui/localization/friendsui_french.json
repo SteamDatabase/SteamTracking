@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Correction du problème suivant : les fenêtres de contacts et de chat ne s'affichaient pas dans l'overlay en jeu sur Linux et macOS.",
     "BBCode_Loading": "Chargement",
     "BBCode_Failed": "Échec du chargement",
-    "broadcastDetails_Playing": "Joue à"
+    "broadcastDetails_Playing": "Joue à",
+    "VoiceChat_Muted_Deck": "En sourdine"
 }

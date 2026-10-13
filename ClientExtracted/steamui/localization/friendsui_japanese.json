@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Linux および macOS のゲーム内オーバーレイで、フレンドとチャットウィンドウが表示されない問題を修正。",
     "BBCode_Loading": "読み込み中",
     "BBCode_Failed": "読み込みに失敗しました",
-    "broadcastDetails_Playing": "プレイ中"
+    "broadcastDetails_Playing": "プレイ中",
+    "VoiceChat_Muted_Deck": "ミュート状態"
 }

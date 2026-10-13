@@ -205,7 +205,7 @@
     "moderationaction_escalated_for_csam": "Çocuklara yönelik cinsel istismar nitelikli materyaller nedeniyle Valve'a iletildi",
     "moderationaction_escalated_for_terrorism": "Terörizm nedeniyle Valve'a iletildi",
     "moderationaction_claimed": "Alındı",
-    "moderationaction_released": "Yayınlandı",
+    "moderationaction_released": "Bırakıldı",
     "moderationaction_privatemessaged": "Özel mesaj gönderildi",
     "moderationaction_unknown": "Bilinmeyen eylem",
     "moderationaction_ownerdisputed": "Düzenlemeye içerik sahibi tarafından itiraz edildi",
@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "Bu özellik, bir kullanıcının sistemi kötüye kullanması durumunda içeriği şikâyet etmesini veya bir karara itiraz etmesini engellemenizi sağlar.",
     "setcooldown_setbutton": "Bekleme süresini ayarla",
     "setcooldown_clearopenreports": "Bu kullanıcının çözülmemiş şikâyetlerini kaldır",
-    "setcooldown_statssummary": "%1$s/%2$s şikâyet aklandı, geçen hafta %3$s/%4$s şikâyet aklandı.",
-    "nocomma": ""
+    "setcooldown_statssummary": "%1$s/%2$s şikâyet aklandı, geçen hafta %3$s/%4$s şikâyet aklandı."
 }

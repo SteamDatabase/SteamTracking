@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Виправлено помилку, внаслідок якої вікна списку друзів і чату не зображувалися в оверлеї Linux і macOS.",
     "BBCode_Loading": "Завантаження",
     "BBCode_Failed": "Не вдалося завантажити",
-    "broadcastDetails_Playing": "Відтворення"
+    "broadcastDetails_Playing": "Відтворення",
+    "VoiceChat_Muted_Deck": "Приглушено"
 }

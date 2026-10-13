@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Поправено е, че списъкът с приятели и чат прозорците не се изобразяваха в игралния Steam слой под Linux и macOS.",
     "BBCode_Loading": "Зареждане",
     "BBCode_Failed": "Неуспешно зареждане",
-    "broadcastDetails_Playing": "Играе"
+    "broadcastDetails_Playing": "Играе",
+    "VoiceChat_Muted_Deck": "Заглушен"
 }

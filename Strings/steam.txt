@@ -30,7 +30,6 @@
     with %d x %d thumbnail image
    %s - %llu total requests made%s %lld completed (%u max/host)\n
   !!""##$$$$%%%%&&&&&&&&''''''''(((((((((((((((())))))))))))))))********************************
-  ##%%&&))**,,//1122447788;;==>>@@CCEEFFIIJJLLOOQQRRTTWWXX[[]]^^aabbddgghhkkmmnnppssuuvvyyzz||
   %-46s %5d %14s\n
   %-52s %14s\n
   %10.3f %6.2f      %10.3f %6.2f      %10.3f %6.2f   %6d %6.2f
@@ -56,13 +55,11 @@
   what():
   worker thread: %14s parses (%6.2f%%)  %16s bytes (%6.2f%%)\n
  !"#$%&'()*+,-./0123
- !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !BAllIntraProcessMessagesReceived( %d outstanding )
  %12.06fs %s%s\n
  %13.3f %11.3f
  %5lld (%5lld)
  %s%lu (%s0x%lx)\n
- ' ) - 3 G M Q _ c e i w }
  (%ld unused bits)\n
  (%llu proxied)
  (BGP MDT)
@@ -109,7 +106,6 @@
  Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
  [clone
  [default = $0
- \vjpF
  _Complex
  _Imaginary
  __vector(
@@ -139,10 +135,8 @@
  filename="%s"%s
  filename="smime.p7s"%s%s
  for
- google/protobuf/descriptor.proto"1\n\rCMsgIPAddress
  has the same name as
  held by
- iciNWq
  if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
  inflate 1.2.11 Copyright 1995-2017 Mark Adler
  is unused.
@@ -168,11 +162,9 @@
  type does not match\n
  using zstream
  volatile
- wZiK
  was modified concurrently during serialization.
  with
  with type
-! !K+hcF&db
 !"Don't poll on UDP sockets dude"
 !"Not implemented"
 !"Unable to get home directory"
@@ -184,19 +176,13 @@
 !( uNetFlags & k_uNetFlagNoIOCP )
 !("CLocalizedStringTable::ConstructString - Found a %s# escape sequence who's index was more than the number of args.")
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
-!,wze
-!1AQaq
-!5!A!I!O!Y![!_!s!}!
 != and not NULL
-!AxU
 !BUseIOCP()
-!H88p
 !HasMessageLengthHeader()
 !IsAlive()
 !V_isempty( prefix )
 !V_isempty( suffix )
 !V_isempty( svHostname )
-!\fmHs8
 !bAsDatagram
 !g_VProfile
 !g_pCrashMemoryReserve
@@ -260,8 +246,6 @@
 !sm_pMemPoolPendingMsg
 !sm_pMemPoolReceivedPkt
 !strchr(filename, '\n') && !strchr(filename, '\r')
-!tI)i
-!tX)i
 !vecEntryFields.IsEmpty()
 " because it is missing required fields:
 " conflicts with field "
@@ -306,7 +290,6 @@
 " which is a proto3 message type.
 " which is not defined or is not an extension of "
 " which is.
-"!"%"+"1"9"K"O"c"g"s"u"
 "$0" does not declare $1 as an extension number.
 ") is not compatible with this reflection object (which is for type "
 ") to start from the outermost scope.
@@ -324,9 +307,6 @@
 "/*" inside block comment.  Block comments cannot be nested.
 "0x" must be followed by hex digits.
 "10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
-"2BRbr
-"3ii
-"6.Bl
 "; boundary="----%s"%s%s
 "????'????????????????????????????????????????????????????\????
 "DeleteMapValue"
@@ -338,20 +318,11 @@
 "MapEnd"
 "MapSize"
 "MutableRawRepeatedField"
-"^\n\fOneofOptions
-"`bB303
-"cs73KI
 "e" must be followed by exponent.
 "lang"\r\n{\r\n"Language" "English"\r\n"Tokens"\r\n{\r\n
-"lbN.
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
-#3CScs
-#:*S8,}gNzl
-#ETHw
-#FLR
-#Q7z
 #SettingsController_Shutdown_10
 #SettingsController_Shutdown_120
 #SettingsController_Shutdown_15
@@ -401,15 +372,8 @@
 #Steam_Settings_Ingame_ShowFPS_Off
 #Steam_Settings_Ingame_ShowFPS_RightBottom
 #Steam_Settings_Ingame_ShowFPS_RightTop
-#\t#\v#'#)#/#3#5#E#Q#S#Y#c#k#
-#\v+(bF&drJ:x#
-#]hK Ed
-#bML"
 #include
 #include is NULL
-#tDq
-$%&'()*+,-./0123456789:;<=
-$)$=$A$C$M$_$g$k$y$}$
 $0  extend .$1 {\n
 $0  extensions $1 to $2;\n
 $0  reserved
@@ -420,30 +384,12 @@ $0message $1
 $0oneof $1 {
 $0option $1;\n
 $0rpc $1($4.$2) returns ($5.$3)
-$3br
-$4DTdt
-$Cw!R
-$F09Y
 $HOME/
 $ORIGIN
-$O\tdwR\rox\\r*
-$XI(6
-$\n k_EClanInGameContentReleaseEvent
-$\n k_ECodecUsageReasonGameRecording
-$\n k_EGamePerformanceSetting_Custom
-$\n k_EGamePerformanceSetting_Medium
-$\n k_EGamePerformanceSetting_NotSet
-$\n k_ESteamReviewScore_VeryNegative
-$\n k_ESteamReviewScore_VeryPositive
-$\nY8O
-$d`D-laM
-$ffn
 % count
 %$%a%b%V%U%c%Q%W%]%\%[%
 %%%ds | %%9s | %%12s\n
 %%-%ds | %%9d | %%12s\n
-%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
-%'%1%=%C%K%O%s%
 %*s      %s%s%s%s\n
 %*s    Info Entries:\n
 %*s    Profession OIDs:\n
@@ -532,7 +478,6 @@ $ffn
 %04u-%02u-%02u %02u:%02u:%02u
 %04x:%04x
 %08lx
-%0nV4
 %1.4lfms
 %10llu %6.1f%% %14llu %6.1f%% %10d %s\n
 %12sPublic Key Algorithm:
@@ -547,7 +492,6 @@ $ffn
 %50s %15d %15d %15d %18d %10lldms %10.2fms\n
 %50s %15s %10s %10s %12s %12s\n
 %50s %15s %15s %15s %18s %12s %12s\n
-%5EUeu
 %5ld:
 %7d%9.0f%8d%9.0f%10.0f   %*s%s\n
 %7d%9.0f%8s%9s%10s   %*s%s\n
@@ -559,77 +503,12 @@ $ffn
 %8sVersion: %ld (0x%lx)\n
 %8sVersion: Unknown (%ld)\n
 %<%^%_%Z%T%i%f%`%P%l%g%h%d%e%Y%X%R%S%k%j%
-%ATP
 %I:%M:%S %p
-%K3 QQ+
 %Y%m%d%H%M%S
 %Y%m%dT%H%M%SZ
 %Y-%m-%d %H:%M:%S
 %Y-%m-%dT%H:%M:%S+00:00
 %Y-%m-%dT%H:%M:%SZ
-%\n k_EMsgAMAccountPS3UnlinkResponse
-%\n k_EMsgAMAuthenticateUserResponse
-%\n k_EMsgAMBoaCompraPaymentResponse
-%\n k_EMsgAMClientAcceptFriendInvite
-%\n k_EMsgAMClientCreateFriendsGroup
-%\n k_EMsgAMClientDeleteFriendsGroup
-%\n k_EMsgAMClientManageFriendsGroup
-%\n k_EMsgAMCompleteExternalPurchase
-%\n k_EMsgAMFinalizePurchaseResponse
-%\n k_EMsgAMGetAccountStatusResponse
-%\n k_EMsgAMGetCommunityPrivacyState
-%\n k_EMsgAMGetLegacyGameKeyResponse
-%\n k_EMsgAMGetUserClansNewsResponse
-%\n k_EMsgAMGetUserNewsSubscriptions
-%\n k_EMsgAMGetWalletDetailsResponse
-%\n k_EMsgAMHandlePendingTransaction
-%\n k_EMsgAMPayPalPaymentsHubPayment
-%\n k_EMsgAMPlayerHostedOnGameServer
-%\n k_EMsgAMSetAccountTrustedRequest
-%\n k_EMsgAMSetUserNewsSubscriptions
-%\n k_EMsgAMSmart2PayPaymentResponse
-%\n k_EMsgAMSwapKioskDepositResponse
-%\n k_EMsgATSExternalStressJobQueued
-%\n k_EMsgBSCompletePurchaseResponse
-%\n k_EMsgBSRemoveExpiredPaymentData
-%\n k_EMsgCREItemVoteSummaryResponse
-%\n k_EMsgClientAckGuestPassResponse
-%\n k_EMsgClientAnonLogOn_Deprecated
-%\n k_EMsgClientCheckAppBetaPassword
-%\n k_EMsgClientCommentNotifications
-%\n k_EMsgClientDPCheckSpecialSurvey
-%\n k_EMsgClientDeregisterWithServer
-%\n k_EMsgClientGameConnect_obsolete
-%\n k_EMsgClientGamesPlayed_obsolete
-%\n k_EMsgClientGetLobbyListResponse
-%\n k_EMsgClientGetUserStatsResponse
-%\n k_EMsgClientMMSJoinLobbyResponse
-%\n k_EMsgClientP2PIntroducerMessage
-%\n k_EMsgClientUDSP2PSessionStarted
-%\n k_EMsgClientUFSGetSingleFileInfo
-%\n k_EMsgClientUFSShareFileResponse
-%\n k_EMsgCommunityGetUserFriendNews
-%\n k_EMsgDPPartnerMicroTxnsResponse
-%\n k_EMsgDRMStabilityReportResponse
-%\n k_EMsgDRMWorkerProcessDRMAndSign
-%\n k_EMsgGCGetEmailTemplateResponse
-%\n k_EMsgGCHAccountLockStatusChange
-%\n k_EMsgGCHRoutingRulesFromGCHtoGM
-%\n k_EMsgGCHRoutingRulesToGCHfromGM
-%\n k_EMsgRemoteClientAcceptAllEULAs
-%\n k_EMsgRemoteClientAppUploadStats
-%\n k_EMsgRemoteClientStatusResponse
-%\n k_EMsgUCMPublishedFilePreviewAdd
-%\n k_EMsgUCMPublishedFileSubscribed
-%\n k_EMsgUCMUpdatePublishedFileStat
-%\n k_EMsgUFSSynchronizeFileResponse
-%\n k_EMsgUFSUpdateFileFlagsResponse
-%\n k_EMsgWebAPIRegisterGCInterfaces
-%\n!k_EBanContentCheckResult_Possible
-%\n!k_EBanContentCheckResult_Unlikely
-%\n!k_EClientPersonaStateFlagLastSeen
-%\n!k_EClientPersonaStateFlagPresence
-%\n!k_EClientPersonaStateFlagSourceID
 %a %b %e %T %Y
 %a, %d %b %Y %H:%M:%S GMT
 %a, %e %b %Y %H:%M:%S
@@ -647,7 +526,6 @@ $ffn
 %d.%d.%d.%d/%d.%d.%d.%d
 %d.%d.%d.%d:%d
 %d:00
-%daE<<0\f6
 %f %f %f %f
 %hu:%u:%u%c
 %i.%i.%i.%i
@@ -660,7 +538,6 @@ $ffn
 %llx
 %lu:%s:%s:%d:%s\n
 %lx-%lx %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
-%n2.Y
 %s %2d %02d:%02d:%02d %d%s
 %s %2d %02d:%02d:%02d%.*s %d%s
 %s %s %s %s
@@ -784,11 +661,6 @@ $ffn
 %sTomorrow
 %sYesterday
 %u%% complete
-&&Lj66lZ??~A
-&'&)&5&;&?&K&S&Y&e&i&o&{&
-&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
-&1j@U
-&6FVfv
 &AElig;
 &Aacute;
 &Acirc;
@@ -806,7 +678,6 @@ $ffn
 &Icirc;
 &Igrave;
 &Iuml;
-&Lj&6lZ6?~A?
 &Ntilde;
 &Oacute;
 &Ocirc;
@@ -814,85 +685,12 @@ $ffn
 &Oslash;
 &Otilde;
 &Ouml;
-&OzJ
 &THORN;
 &Uacute;
 &Ucirc;
 &Ugrave;
 &Uuml;
 &Yacute;
-&\n!k_EClientPersonaStateFlagClanData
-&\n!k_EClientPersonaStateGameDataBlob
-&\n!k_EMsgAMCancelEasyCollectResponse
-&\n!k_EMsgAMClientChatMemberInfoRelay
-&\n!k_EMsgAMCreateFinancialAdjustment
-&\n!k_EMsgAMGetAccountBanInfoResponse
-&\n!k_EMsgAMGetAccountDetailsResponse
-&\n!k_EMsgAMGetAccountPSNInfoResponse
-&\n!k_EMsgAMGetClanPermissionSettings
-&\n!k_EMsgAMGetFriendsLobbiesResponse
-&\n!k_EMsgAMGetUserFriendNewsResponse
-&\n!k_EMsgAMGrantGuestPasses2Response
-&\n!k_EMsgAMPlayerGetClanBasicDetails
-&\n!k_EMsgAMReverseChargebackResponse
-&\n!k_EMsgAMSetClanPermissionSettings
-&\n!k_EMsgAMSetFriendRelationshipNone
-&\n!k_EMsgAMValidateEmailLinkResponse
-&\n!k_EMsgATSExternalStressJobRunning
-&\n!k_EMsgATSExternalStressJobStopAll
-&\n!k_EMsgATSExternalStressJobStopped
-&\n!k_EMsgBSGetBillingAddressResponse
-&\n!k_EMsgBSGetCreditCardInfoResponse
-&\n!k_EMsgBSGetPayPalUserInfoResponse
-&\n!k_EMsgBSInitGCBankXferTxnResponse
-&\n!k_EMsgBSQiwiWalletInvoiceResponse
-&\n!k_EMsgBSUpdatePaymentDataResponse
-&\n!k_EMsgClientAcknowledgeClanInvite
-&\n!k_EMsgClientBroadcastUploadConfig
-&\n!k_EMsgClientCheckPasswordResponse
-&\n!k_EMsgClientCreateAccountResponse
-&\n!k_EMsgClientFriendMsgEchoToSender
-&\n!k_EMsgClientGamesPlayed2_obsolete
-&\n!k_EMsgClientGamesPlayed3_obsolete
-&\n!k_EMsgClientGamesPlayedNoDataBlob
-&\n!k_EMsgClientGetAppOwnershipTicket
-&\n!k_EMsgClientGetClanActivityCounts
-&\n!k_EMsgClientGetDepotDecryptionKey
-&\n!k_EMsgClientGetFriendsWhoPlayGame
-&\n!k_EMsgClientMMSLeaveLobbyResponse
-&\n!k_EMsgClientMMSLobbyGameServerSet
-&\n!k_EMsgClientMMSSetLobbyGameServer
-&\n!k_EMsgClientNatTraversalStatEvent
-&\n!k_EMsgClientNetworkingCertRequest
-&\n!k_EMsgClientNotLoggedOnDeprecated
-&\n!k_EMsgClientOGSEndSessionResponse
-&\n!k_EMsgClientP2PConnectionFailInfo
-&\n!k_EMsgClientPersonaChangeResponse
-&\n!k_EMsgClientResetPasswordResponse
-&\n!k_EMsgClientStat2Int32_Deprecated
-&\n!k_EMsgClientUpdateGuestPassesList
-&\n!k_EMsgClientVoiceCallPreAuthorize
-&\n!k_EMsgDRMSFetchVersionSetResponse
-&\n!k_EMsgEconCDKeyProcessTransaction
-&\n!k_EMsgFBSApplyAccountCredResponse
-&\n!k_EMsgFSCommentNotificationViewed
-&\n!k_EMsgGCHAccountPhoneNumberChange
-&\n!k_EMsgGCHAppCheersGetAllowedTypes
-&\n!k_EMsgGSAssociateWithClanResponse
-&\n!k_EMsgMDSGetDepotManifestResponse
-&\n!k_EMsgServiceMethodCallFromClient
-&\n!k_EMsgTestFlushDelayedSQLResponse
-&\n!k_EMsgUCMPublishedFileChildRemove
-&\n!k_EMsgUCMReloadUserFileListCaches
-&\n!k_EMsgUFSMigrateFileAppIDResponse
-&\n!k_EMsgUGSGetUserGameStatsResponse
-&\n!k_EMsgWGConnectionLegacyWGRequest
-&\n"k_EClanESportTournamentStreamEvent
-&\n"k_EClanPreAnnounceMajorUpdateEvent
-&\n"k_EClientPersonaStateFlagQueryPort
-&\n"k_ECodecUsagePlatformSteamHardware
-&\n"k_ESteamReviewScore_MostlyNegative
-&\n"k_ESteamReviewScore_MostlyPositive
 &aacute;
 &acirc;
 &acute;
@@ -904,7 +702,6 @@ $ffn
 &atilde;
 &auml;
 &brvbar;
-&bzi
 &ccedil;
 &cedil;
 &cent;
@@ -968,70 +765,10 @@ $ffn
 &ucirc;
 &ugrave;
 &uml;
-&ut8
 &uuml;
 &yacute;
 &yen;
 &yuml;
-'5'7'M'S'U'_'k'm's'w'
-'7GWgw
-'DAE
-'RL6
-'\n!k_EClientPersonaStateFlagWatching
-'\n"k_EClientPersonaStateFlagBroadcast
-'\n"k_EClientPersonaStateGameExtraInfo
-'\n"k_EMsgAISRequestContentDescription
-'\n"k_EMsgAMClansInCommonCountResponse
-'\n"k_EMsgAMFixPendingPurchaseResponse
-'\n"k_EMsgAMGetAccountCommunityBanInfo
-'\n"k_EMsgAMGetAccountDetailsResponse2
-'\n"k_EMsgAMGetUserGroupStatusResponse
-'\n"k_EMsgAMGetUserLicenseListResponse
-'\n"k_EMsgAMIsAccountNameInUseResponse
-'\n"k_EMsgAMPlayerNicknameListResponse
-'\n"k_EMsgAMResolveWalletReverseRevoke
-'\n"k_EMsgAMSendCartRepurchaseResponse
-'\n"k_EMsgAMServiceModulesCallResponse
-'\n"k_EMsgAMSetUserGiftUnownedResponse
-'\n"k_EMsgBSUpdateInventoryFromProPack
-'\n"k_EMsgCCSDeleteAllCommentsByAuthor
-'\n"k_EMsgCEGWhackFailureReportRequest
-'\n"k_EMsgClientConcurrentSessionsBase
-'\n"k_EMsgClientDFSAuthenticateRequest
-'\n"k_EMsgClientFileToDownloadResponse
-'\n"k_EMsgClientMMSCreateLobbyResponse
-'\n"k_EMsgClientPICSAccessTokenRequest
-'\n"k_EMsgClientPICSPrivateBetaRequest
-'\n"k_EMsgClientPICSProductInfoRequest
-'\n"k_EMsgClientPasswordChangeResponse
-'\n"k_EMsgClientResetForgottenPassword
-'\n"k_EMsgClientServerTimestampRequest
-'\n"k_EMsgClientStartPeerContentServer
-'\n"k_EMsgClientStoreUserStatsResponse
-'\n"k_EMsgClientSubscribeToPersonaFeed
-'\n"k_EMsgClientUCMDeletePublishedFile
-'\n"k_EMsgClientUCMPublishFileResponse
-'\n"k_EMsgClientUCMUpdatePublishedFile
-'\n"k_EMsgDRMVariabilityReportResponse
-'\n"k_EMsgFSComputeFrenematrixResponse
-'\n"k_EMsgGMGetModifiedConVarsResponse
-'\n"k_EMsgGMSClientServerQueryResponse
-'\n"k_EMsgGSGetUserGroupStatusResponse
-'\n"k_EMsgRMMsgTraceAddOrUpdateTrigger
-'\n"k_EMsgRemoteClientAppDownloadStats
-'\n"k_EMsgRemoteClientAppUpdateStopped
-'\n"k_EMsgRemoteClientStreamingEnabled
-'\n"k_EMsgSecretsRequestCredentialPair
-'\n"k_EMsgUCMPublishedFileUnsubscribed
-'\n"k_EMsgWGConnectionLegacyWGResponse
-'\n"k_eMsgRemoteClientDownloadingAppID
-'\n#k_EBanContentCheckResult_NotScanned
-'\n#k_EBanContentCheckResult_VeryLikely
-'\n#k_EClientPersonaStateFlagPlayerName
-'\n\tmessageid
-'nU_O_M
-'prB2
-'s~h9g
 ( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
 ( ( size_t )( m_nBlocksAllocated ) % 8 ) == 0
 ( ( size_t )( m_nLogicalBytesAllocated ) % 8 ) == 0
@@ -1043,7 +780,6 @@ $ffn
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 ( m_nTotalWeights+nWeight) > m_nTotalWeights
 ( unsigned )elem <= ( unsigned )m_Size
-(!(1(=(?(I(Q([(](a(g(u(
 (%p) Aborting HTTP connection and all requests on it due to lack of SSL certificate verification\n
 (%p) Aborting HTTP request because BAsyncSend() failed (AsyncSendCurrentRequest)\n
 (%p) Aborting HTTP request because we received a ConnectFailed callback (handle: %X  eResult: %d  extended: %llu)\n
@@ -1084,105 +820,13 @@ $ffn
 ((size_t)((buf)->end - (buf)->last)) >= datamax
 ((size_t)((buf)->end - (buf)->last)) >= padlen - 1
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
-()*+,-./*(((
-(0'yX
-(8HXhx
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
 (NONE)
-(U1h
-(ZdOt\n&
-(\n#k_EMsgAMCheckClanInviteRateLimiting
-(\n#k_EMsgAMCheckClanMembershipResponse
-(\n#k_EMsgAMClientRemoveFriendFromGroup
-(\n#k_EMsgAMDeleteStoredPaypalAgreement
-(\n#k_EMsgAMGetPaypalAgreementsResponse
-(\n#k_EMsgAMGetPendingNotificationCount
-(\n#k_EMsgAMGetPlayerBanDetailsResponse
-(\n#k_EMsgAMLoadActivationCodesResponse
-(\n#k_EMsgAMPerfectWorldPaymentResponse
-(\n#k_EMsgAMResetUserVerificationGSByIP
-(\n#k_EMsgAMSetCommunityProfileSettings
-(\n#k_EMsgAMTicketAuthRequestOrResponse
-(\n#k_EMsgAMTransferLockedGiftsResponse
-(\n#k_EMsgATSExternalStressActionResult
-(\n#k_EMsgAdminGCGetCommandListResponse
-(\n#k_EMsgBSAuthenticateCCTransResponse
-(\n#k_EMsgBSPruneCardUsageStatsResponse
-(\n#k_EMsgBSQueryFindCreditCardResponse
-(\n#k_EMsgBSSendShippingRequestResponse
-(\n#k_EMsgBackpackAddToCurrencyResponse
-(\n#k_EMsgCEGWhackFailureReportResponse
-(\n#k_EMsgClientAMGetPersonaNameHistory
-(\n#k_EMsgClientDFSAuthenticateResponse
-(\n#k_EMsgClientFSGetFriendsSteamLevels
-(\n#k_EMsgClientFriendRemovedFromSource
-(\n#k_EMsgClientGamesPlayedWithDataBlob
-(\n#k_EMsgClientGetMicroTxnInfoResponse
-(\n#k_EMsgClientLBSGetLBEntriesResponse
-(\n#k_EMsgClientLaunchClientAppResponse
-(\n#k_EMsgClientMMSGetLobbyListResponse
-(\n#k_EMsgClientMMSSetLobbyDataResponse
-(\n#k_EMsgClientOGSBeginSessionResponse
-(\n#k_EMsgClientPICSAccessTokenResponse
-(\n#k_EMsgClientPICSChangesSinceRequest
-(\n#k_EMsgClientPICSPrivateBetaResponse
-(\n#k_EMsgClientPICSProductInfoResponse
-(\n#k_EMsgClientRedeemGuestPassResponse
-(\n#k_EMsgClientResetForgottenPassword3
-(\n#k_EMsgClientResetForgottenPassword4
-(\n#k_EMsgClientServerTimestampResponse
-(\n#k_EMsgClientSetClientAppUpdateState
-(\n#k_EMsgClientSetIgnoreFriendResponse
-(\n#k_EMsgClientUCMPublishedFileUpdated
-(\n#k_EMsgContentDescriptionDeltaUpdate
-(\n#k_EMsgFBSBootstrapperPackageRequest
-(\n#k_EMsgFSAddOrRemoveFollowerResponse
-(\n#k_EMsgFSGetPendingNotificationCount
-(\n#k_EMsgGMNeedShellAndServerAddresses
-(\n#k_EMsgMDSContentServerConfigRequest
-(\n#k_EMsgPSIsValidShoppingCartResponse
-(\n#k_EMsgProvideWindowsEventLogEntries
-(\n#k_EMsgRequestWindowsEventLogEntries
-(\n#k_EMsgSecretsCredentialPairResponse
-(\n#k_EMsgUCMPublishedFileParentChanged
-(\n#k_EMsgUCMPublishedFilePreviewRemove
-(\n#k_EMsgWGConnectionValidateUserToken
-(\n\nevent_type
-(\t"8\n\tCMsgMulti
-(\v2 .CCommunity_ClanAnnouncementInfo
-(\v2 .google.protobuf.DescriptorProto
-(\v2!.google.protobuf.EnumValueOptions"
-(\v2$.google.protobuf.EnumDescriptorProto
-(\v2$.google.protobuf.FileDescriptorProto"
-(\v2$.google.protobuf.UninterpretedOption"/\n
-(\v2$.google.protobuf.UninterpretedOption":\n\fOptimizeMode
-(\v2$.google.protobuf.UninterpretedOption"P\n
-(\v2$.google.protobuf.UninterpretedOption*\t
-(\v2%.google.protobuf.FieldDescriptorProto
-(\v2%.google.protobuf.OneofDescriptorProto
-(\v2&.google.protobuf.ExtensionRangeOptions
-(\v2&.google.protobuf.MethodDescriptorProto
-(\v2'.google.protobuf.ServiceDescriptorProto
-(\v2(.google.protobuf.SourceCodeInfo.Location
-(\v2).google.protobuf.EnumValueDescriptorProto
-(\v2+.CClientMetrics_ClientBootstrap_RequestInfo
-(\v2+.CClientMetrics_ClientBootstrap_RequestInfo"
-(\v2,.CUIFontFilePackagePB.CUIEncryptedFontFilePB
-(\v2-.google.protobuf.GeneratedCodeInfo.Annotation
-(\v2-.google.protobuf.UninterpretedOption.NamePart
-(\v2..CClientMetrics_ContentDownloadResponse_Counts"q\n,CClientMetrics_ContentDownloadResponse_Hosts
-(\v2..google.protobuf.DescriptorProto.ReservedRange
-(\v2/.google.protobuf.DescriptorProto.ExtensionRange
-(\v22.CClientMetrics_ContentDownloadResponse_HostCountsB
-(\v23.UserContentDescriptorPreferences.ContentDescriptor
-(\v26.google.protobuf.EnumDescriptorProto.EnumReservedRange
 (anonymous namespace)
 (cannot determine missing fields for lite message)
 (eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
-(fS{ggRcjh
-(h`H1pqA
 (home_dir != NULL) && (home_dir[0] != '\0')
 (int) m_treePostParamNameHashes.Count() == (int) m_vecPostParams.Count()
 (iub & (m_nSizeWithStack-1)) == 0
@@ -1201,71 +845,9 @@ $ffn
 (uint64)bufferCompressed.TellPut() + cbDataOut + 4 + 8 + 3 <= (uint64)INT_MAX
 (unknown)
 (unspecified)
-(wMww
-(|YGNk
-)!)#)?)G)])e)i)o)u)
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
-))Kb00\f<ZZ
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-)9IYiy
-)TpH
-)Urz
-)\n$k_EMsgAMClaimUnownedUserGiftResponse
-)\n$k_EMsgAMFriendsInCommonCountResponse
-)\n$k_EMsgAMGetAccountFlagsForWGSpoofing
-)\n$k_EMsgAMGetPlayerLinkDetailsResponse
-)\n$k_EMsgAMGetPreviousCBAccountResponse
-)\n$k_EMsgAMResolveNegativeWalletCredits
-)\n$k_EMsgAMRollbackGiftTransferResponse
-)\n$k_EMsgAMSupportRemoveAccountSecurity
-)\n$k_EMsgBSConvertToCurrentKeysResponse
-)\n$k_EMsgBSGenerateBoaCompraMD5Response
-)\n$k_EMsgBSQueryBankInformationResponse
-)\n$k_EMsgBSQueryTxnExtendedInfoResponse
-)\n$k_EMsgBSReverseRedeemPOSAKeyResponse
-)\n$k_EMsgBSStatusInquiryPOSAKeyResponse
-)\n$k_EMsgBSStoreBankInformationResponse
-)\n$k_EMsgCREUpdateUserPublishedItemVote
-)\n$k_EMsgClientAnonUserLogOn_Deprecated
-)\n$k_EMsgClientEnableOrDisableDownloads
-)\n$k_EMsgClientFSEnumerateFollowingList
-)\n$k_EMsgClientFSGetIsFollowingResponse
-)\n$k_EMsgClientGetClientAppListResponse
-)\n$k_EMsgClientGetClientDetailsResponse
-)\n$k_EMsgClientGetLegacyGameKeyResponse
-)\n$k_EMsgClientInstallClientAppResponse
-)\n$k_EMsgClientLogOnWithHash_Deprecated
-)\n$k_EMsgClientMMSFlushFrenemyListCache
-)\n$k_EMsgClientMMSSetLobbyOwnerResponse
-)\n$k_EMsgClientPICSChangesSinceResponse
-)\n$k_EMsgClientRegisterAuthTicketWithCM
-)\n$k_EMsgClientRequestItemAnnouncements
-)\n$k_EMsgClientSharedLibraryStopPlaying
-)\n$k_EMsgClientUCMAddScreenshotResponse
-)\n$k_EMsgClientUFSGetUGCDetailsResponse
-)\n$k_EMsgDRMWorkerProcessGetBlobRequest
-)\n$k_EMsgEconTrading_CancelTradeRequest
-)\n$k_EMsgEnsureBillingConfigReload_TEST
-)\n$k_EMsgFBSBootstrapperGetPackageChunk
-)\n$k_EMsgFBSBootstrapperPackageResponse
-)\n$k_EMsgFBSQueryHotfixPackagesResponse
-)\n$k_EMsgGCGetAccountDetails_DEPRECATED
-)\n$k_EMsgGCHAccountTradeBanStatusChange
-)\n$k_EMsgGMShellAndServerAddressUpdates
-)\n$k_EMsgProductInfoChangedNotification
-)\n$k_EMsgRemoteClientInstallAppResponse
-)\n$k_EMsgRemoteClientPairWifiAPResponse
-)\n$k_EMsgUCMPublishedFileContentUpdated
-)\n$k_EMsgUCMUpdatePublishedFileResponse
-)\n$k_EMsgUFSHttpUploadFileFinishRequest
-)\n$k_EMsgUFSUpdateRecordBatchedResponse
-)\n%k_EBanContentCheckResult_VeryUnlikely
-)haI
-)n/h%fPn
-*%*/*O*U*_*e*k*m*s*
 ***** OUT OF MEMORY! attempted allocation size: %zu ****\n
-**qXU
-*0fT
 *10CUtlMemoryIN10CUtlRBTreeIN12_GLOBAL__N_121CLocalizedStringTable11fastvalue_tEiPFbRKS3_S5_E25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 *10CUtlMemoryIN10CUtlRBTreeIN12_GLOBAL__N_121CLocalizedStringTable17localizedstring_tEiPFbRKS3_S5_E25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 *10CUtlRBTreeIN12_GLOBAL__N_121CLocalizedStringTable11fastvalue_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E
@@ -1274,10 +856,6 @@ $ffn
 *23CInternalLambdaWorkItemIZ31YldThreadedRunFunctorAndReleasePKcP8CFunctorP15CWorkThreadPoolEUlvE_vE
 *23CInternalLambdaWorkItemIZN4CNet24YieldingIPAddrToHostNameE10CIPAddressPcjEUlvE_vE
 *23CInternalLambdaWorkItemIZN4CNet26YieldingHostStringToNetAdrEPKcR10CIPAndPortEUlvE_S3_E
-*2SzR
-*5KS
-*:JZjz
-*DQW%
 *N12_GLOBAL__N_117io_error_categoryE
 *N12_GLOBAL__N_121CLocalizedStringTableE
 *N12_GLOBAL__N_121system_error_categoryE
@@ -1315,48 +893,6 @@ $ffn
 *ZNK24CChildEnvironmentBuilder22GetFilteredEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
-*\n"queue_head_position_at_reservation
-*\n%k_EClientPersonaStateFlagRichPresence
-*\n%k_EClientPersonaStateFlagUserClanRank
-*\n%k_EMsgAMAcctAllowedToPurchaseResponse
-*\n%k_EMsgAMGetAccountResetDetailsRequest
-*\n%k_EMsgAMGetClanPermissionBitsResponse
-*\n%k_EMsgAMGetFriendRelationshipResponse
-*\n%k_EMsgAMGetSteamIDForMicroTxnResponse
-*\n%k_EMsgAMGetUserLicenseHistoryResponse
-*\n%k_EMsgAMIsAccountInCaptchaGracePeriod
-*\n%k_EMsgAMSetClanPermissionBitsResponse
-*\n%k_EMsgBSGetProPackOrderStatusResponse
-*\n%k_EMsgBSResetPackagePurchaseRateLimit
-*\n%k_EMsgClientAMGetClanOfficersResponse
-*\n%k_EMsgClientEnableTestLicenseResponse
-*\n%k_EMsgClientFriendProfileInfoResponse
-*\n%k_EMsgClientFriendUserStatusPublished
-*\n%k_EMsgClientLBSFindOrCreateLBResponse
-*\n%k_EMsgClientMMSGetLobbyStatusResponse
-*\n%k_EMsgClientMicroTxnAuthorizeResponse
-*\n%k_EMsgClientPendingGameLaunchResponse
-*\n%k_EMsgClientRequestEncryptedAppTicket
-*\n%k_EMsgClientUGSGetGlobalStatsResponse
-*\n%k_EMsgDRMWorkerProcessGetBlobResponse
-*\n%k_EMsgEconFlushInventoryCacheResponse
-*\n%k_EMsgEconTrading_InitiateTradeResult
-*\n%k_EMsgEnsureExecuteScheduledTask_TEST
-*\n%k_EMsgGCHMarkAppSessionsAuthoritative
-*\n%k_EMsgGMTestNextBuildSchemaConversion
-*\n%k_EMsgGSComputeNewPlayerCompatibility
-*\n%k_EMsgPSAddWalletCreditToShoppingCart
-*\n%k_EMsgRemoteClientGetControllerConfig
-*\n%k_EMsgRemoteClientStartStreamResponse
-*\n%k_EMsgSMTestNextBuildSchemaConversion
-*\n%k_EMsgUFSHttpUploadFileFinishResponse
-*\n%k_EMsgWebAPIInvalidateOAuthTokenCache
-*\n%k_eMsgRemoteClientDownloadsManagement
-*\n&k_EBanContentCheckResult_NeedsChecking
-*\n\fjobid_source
-*\n\fjobid_target
-*hbJ1
-*laM-\SO
 *m_pQueuedNetMsgs
 *m_pmapJobsDependentOnUs
 *m_pvecLocks
@@ -1374,50 +910,13 @@ $ffn
 *pcubMsgSizeMax >= 0 && *pcubMsgSizeMax < k_cubMaxMsgDataSize * 2
 *pcubPlaintextData
 *pcubSignature > 0
-+'+1+3+=+?+K+O+U+i+m+o+{+
-+(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-+2Hp
-+HpXhE
-+QQ 3K%
-+\n#content_descriptorids_including_dlc
-+\n&k_EMsgAMClientAddFriendToGroupResponse
-+\n&k_EMsgAMClientPublishRemovalFromSource
-+\n&k_EMsgAMGameServerAccountDeleteAccount
-+\n&k_EMsgAMGetAccountEmailAddressResponse
-+\n&k_EMsgAMGetAccountResetDetailsResponse
-+\n&k_EMsgAMGetClanDetailsForForumCreation
-+\n&k_EMsgAMGetUserCurrentGameInfoResponse
-+\n&k_EMsgBSPurchaseRunFraudChecksResponse
-+\n&k_EMsgBSQueryTransactionStatusResponse
-+\n&k_EMsgClientDisableTestLicenseResponse
-+\n&k_EMsgClientFSGetFollowerCountResponse
-+\n&k_EMsgClientGetPeerContentInfoResponse
-+\n&k_EMsgClientLANP2PRequestChunkResponse
-+\n&k_EMsgClientReportOverlayDetourFailure
-+\n&k_EMsgClientRequestAccountDataResponse
-+\n&k_EMsgClientRequestFreeLicenseResponse
-+\n&k_EMsgClientUninstallClientAppResponse
-+\n&k_EMsgDRMWorkerProcessSignFileResponse
-+\n&k_EMsgEconTrading_InitiateTradeRequest
-+\n&k_EMsgGMStatsForwardToAdminConnections
-+\n&k_EMsgMDSGetDepotDecryptionKeyResponse
-+\n&k_EMsgNotificationOfSuspiciousActivity
-+\n&k_EMsgPSGetAccountCartContentsResponse
-+\n&k_EMsgRemoteClientAuthorizationRequest
-+\n&k_EMsgShellCheckWindowsUpdatesResponse
-+\n&k_EMsgUCMPublishedFileChildAddResponse
-+\n&k_EMsgUCMResetCommunityContentResponse
-+\n&k_EMsgWebAPIInvalidateOAuthClientCache
-+\n\rReservedRange
 +automatic
-+en+eo+
 +login
 +logon
-+ulsX
 , %1.4lfms
 , Type=
 , but was
@@ -1426,45 +925,10 @@ $ffn
 , path=
 , retcode=
 , value=
-,!MbDg[
-,#,/,5,9,A,W,Y,i,w,
-,CBKE
 ,Reason=
-,\n'k_EMsgAISGetPackageChangeNumberResponse
-,\n'k_EMsgAMClientSetPlayerNicknameResponse
-,\n'k_EMsgAMGameServerAccountChangePassword
-,\n'k_EMsgAMGetStoredPaymentSummaryResponse
-,\n'k_EMsgAMGetWalletConversionRateResponse
-,\n'k_EMsgAMProbeClanMembershipListResponse
-,\n'k_EMsgAMSupportIsAccountEnabledResponse
-,\n'k_EMsgBSBoaCompraConfirmProductDelivery
-,\n'k_EMsgBSValidateXsollaSignatureResponse
-,\n'k_EMsgCEGVersionSetEnableDisableRequest
-,\n'k_EMsgClientChatGetFriendMessageHistory
-,\n'k_EMsgClientDPSendSpecialSurveyResponse
-,\n'k_EMsgClientGetNumberOfCurrentPlayersDP
-,\n'k_EMsgClientNetworkingMobileCertRequest
-,\n'k_EMsgClientRequestCommentNotifications
-,\n'k_EMsgClientServiceMethodLegacyResponse
-,\n'k_EMsgClientSiteLicenseCheckoutResponse
-,\n'k_EMsgClientUCMDeleteScreenshotResponse
-,\n'k_EMsgClientUnlockHEVCResponse_OBSOLETE
-,\n'k_EMsgDRMWorkerProcessInstallAllRequest
-,\n'k_EMsgDRMWorkerProcessUnpackBlobRequest
-,\n'k_EMsgEconTrading_InitiateTradeProposed
-,\n'k_EMsgEconTrading_InitiateTradeResponse
-,\n'k_EMsgGMGetServiceMethodRoutingResponse
-,\n'k_EMsgPSGetShoppingCartContentsResponse
-,\n'k_EMsgRemoteClientAppInfoUpdateComplete
-,\n'k_EMsgRemoteClientAuthResponse_OBSOLETE
-,\n'k_EMsgRemoteClientAuthorizationResponse
-,\n'k_EMsgUCMGetUserSubscribedFilesResponse
-,\n'k_EMsgWebAPIValidateOAuth2TokenResponse
-,\n'k_eMsgRemoteClientSuspendLanPeerContent
 ,name:
 ,section=
 ,value:
--"ke6
 -*-bitstream charter-medium-r-normal--*-120-*-*-p-*-iso8859-1
 -*-courier 10 pitch-medium-r-normal--*-120-*-*-m-*-iso8859-1
 -+xX0123456789abcdef0123456789ABCDEF
@@ -1504,34 +968,6 @@ $ffn
 -0123456789
 -480p
 -720p
--;-C-I-M-a-e-q-
--DBF
--\n(k_EMsgAMClientCreateFriendsGroupResponse
--\n(k_EMsgAMClientDeleteFriendsGroupResponse
--\n(k_EMsgAMClientManageFriendsGroupResponse
--\n(k_EMsgAMCompleteExternalPurchaseResponse
--\n(k_EMsgAMGetCommunityPrivacyStateResponse
--\n(k_EMsgAMGetUserNewsSubscriptionsResponse
--\n(k_EMsgAMHandlePendingTransactionResponse
--\n(k_EMsgAMIsPackageRestrictedInUserCountry
--\n(k_EMsgAMPayPalPaymentsHubPaymentResponse
--\n(k_EMsgBSRemoveExpiredPaymentDataResponse
--\n(k_EMsgCEGVersionSetEnableDisableResponse
--\n(k_EMsgCREGetUserPublishedItemVoteDetails
--\n(k_EMsgClientCheckAppBetaPasswordResponse
--\n(k_EMsgClientDPCheckSpecialSurveyResponse
--\n(k_EMsgClientSiteLicenseGetAvailableSeats
--\n(k_EMsgClientUFSGetSingleFileInfoResponse
--\n(k_EMsgClientVanityURLChangedNotification
--\n(k_EMsgDRMWorkerProcessAnalyzeFileRequest
--\n(k_EMsgDRMWorkerProcessDRMAndSignResponse
--\n(k_EMsgDRMWorkerProcessExamineBlobRequest
--\n(k_EMsgDRMWorkerProcessInstallAllResponse
--\n(k_EMsgDRMWorkerProcessUnpackBlobResponse
--\n(k_EMsgGCRegisterWebInterfaces_Deprecated
--\n(k_EMsgRemoteClientAuthorizationConfirmed
--\n(k_EMsgUCMPublishedFilePreviewAddResponse
--\t47Cd1z
 -allosarches
 -allosvers
 -alwaysrelaunch
@@ -1631,7 +1067,6 @@ $ffn
 -windowed
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 . Difference of
-.%.-.3.7.9.?.W.[.o.y.
 ...(%d more items)
 ...<truncated>...
 ../../src/common/clientdirectories.h
@@ -1788,43 +1223,9 @@ $ffn
 ./google/protobuf/repeated_field.h
 ./google/protobuf/stubs/stringpiece.h
 ./google/protobuf/unknown_field_set.h
-.5P<e
-.97yY
-.CClanEventUserNewsTuple"
-.CMsgGCRoutingProtoBufHeader
-.CMsgIPAddress
-.CMsgKeyValuePair"
-.CMsgKubeRPCPacket.Hdr
-.EBanContentCheckResult
-.EProtoClanEventType
-.HCK\v
 .LTRS
 .PLACEHOLDER_VALUE
 .Too many IDATs found
-.\n)k_EMsgAMGetClanPermissionSettingsResponse
-.\n)k_EMsgAMPlayerGetClanBasicDetailsResponse
-.\n)k_EMsgAMRequestPersonaUpdateForChatServer
-.\n)k_EMsgAMSetClanPermissionSettingsResponse
-.\n)k_EMsgClientContentServerLogOn_Deprecated
-.\n)k_EMsgClientGetAppOwnershipTicketResponse
-.\n)k_EMsgClientGetClanActivityCountsResponse
-.\n)k_EMsgClientGetDepotDecryptionKeyResponse
-.\n)k_EMsgClientGetFriendsWhoPlayGameResponse
-.\n)k_EMsgClientMMSSetRatelimitPolicyOnClient
-.\n)k_EMsgClientNetworkingCertRequestResponse
-.\n)k_EMsgClientRequestForgottenPasswordEmail
-.\n)k_EMsgClientUCMSetUserPublishedFileAction
-.\n)k_EMsgClientVoiceCallPreAuthorizeResponse
-.\n)k_EMsgDRMWorkerProcessAnalyzeFileResponse
-.\n)k_EMsgDRMWorkerProcessExamineBlobResponse
-.\n)k_EMsgDRMWorkerProcessValidateFileRequest
-.\n)k_EMsgEconCDKeyProcessTransactionResponse
-.\n)k_EMsgGCHAppCheersGetAllowedTypesResponse
-.\n)k_EMsgRemoteClientDownloadScheduleChanged
-.\n)k_EMsgUCMPublishedFileChildRemoveResponse
-.\n)k_EMsgUpdateScheduledTaskEnableState_TEST
-.\n*k_ESteamReviewScore_OverwhelminglyNegative
-.\n*k_ESteamReviewScore_OverwhelminglyPositive
 .bsp
 .cnf
 .conf
@@ -1835,57 +1236,20 @@ $ffn
 .dummy
 .foo = value".
 .forceupdate
-.google.protobuf.EnumOptions
-.google.protobuf.FieldOptions
-.google.protobuf.FileOptions
-.google.protobuf.MessageOptions
-.google.protobuf.MethodOptions
-.google.protobuf.OneofOptions"
-.google.protobuf.ServiceOptions"
-.google.protobuf.SourceCodeInfo
 .include
 .installed
-.lbN
 .manifest
 .old
 .pac
 .placeholder.proto
-.pp@0
 .steam
 .steam-enable-steamrt64-client
 .steam-first-start-breadcrumb
 .steam/steam/logs
 .steam_exec_test
-.x7B
-.y4w
 .zip.
 .zip.vz
-/'/)/A/E/K/M/Q/W/o/u/}/
-/)IMT
-/+ep+eqU
-/OTN
-/P8i
 /Steam3PosixRegistryManager
-/\n*k_EMsgAMGameServerPlayerCompatibilityCheck
-/\n*k_EMsgAMGetAccountCommunityBanInfoResponse
-/\n*k_EMsgBSUpdateInventoryFromProPackResponse
-/\n*k_EMsgCCSDeleteAllCommentsByAuthorResponse
-/\n*k_EMsgClientChatOfflineMessageNotification
-/\n*k_EMsgClientChatRequestOfflineMessageCount
-/\n*k_EMsgClientInformOfResetForgottenPassword
-/\n*k_EMsgClientNewLoginKeyAccepted_Deprecated
-/\n*k_EMsgClientRequestForgottenPasswordEmail3
-/\n*k_EMsgClientResetForgottenPasswordResponse
-/\n*k_EMsgClientSiteLicenseGetContentCacheInfo
-/\n*k_EMsgClientStartPeerContentServerResponse
-/\n*k_EMsgClientUCMDeletePublishedFileResponse
-/\n*k_EMsgClientUCMUpdatePublishedFileResponse
-/\n*k_EMsgDRMWorkerProcessEvaluateCrashRequest
-/\n*k_EMsgDRMWorkerProcessInstallDRMDLLRequest
-/\n*k_EMsgDRMWorkerProcessValidateFileResponse
-/\n*k_EMsgGCHRecurringSubscriptionStatusChange
-/\n*k_EMsgServiceMethodCallFromClientNonAuthed
-/\n*k_eMsgRemoteClientPeerContentServerChanged
 /bin/lsof
 /bin/sh
 /client/
@@ -1915,7 +1279,6 @@ $ffn
 /etc/ssl/certs/ca-certificates.crt
 /etc/steamos-oobe-image
 /etc/yellowdog-release
-/fxLf
 /index.html
 /logs
 /name
@@ -1977,9 +1340,7 @@ $ffn
 /usr/share/applications/steambeta.desktop
 /var/lib/dbus/machine-id
 /var/run/reboot-required
-/wo4:
 /wpad.dat
-/yQA
 0 != ( g_vecIPv4ThisBox.Count() + g_vecIPv6ThisBox.Count() )
 0 != cMicrosecondsToSleep
 0 != g_vecIPv4ThisBox.Count()
@@ -2003,61 +1364,17 @@ $ffn
 0 == m_vecChoices.Count()
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
-0 Umv
 00000000
-1000
-1024
-00003333
-10000
-0123456789.
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:25:27
-00:25:31
-00:25:32
 01/01/00
+0123456789
+0123456789.
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-08bX
-0?0L
-0A/8
-0F`8
-0Ntl
-0Z@q
-0\n+k_EMsgAMClientRemoveFriendFromGroupResponse
-0\n+k_EMsgAMCreateClanEventDummyForRateLimiting
-0\n+k_EMsgAMGetPendingNotificationCountResponse
-0\n+k_EMsgAMSetCommunityProfileSettingsResponse
-0\n+k_EMsgAMUpdateClanEventDummyForRateLimiting
-0\n+k_EMsgChatServerGetPendingNotificationCount
-0\n+k_EMsgClientAMGetPersonaNameHistoryResponse
-0\n+k_EMsgClientDRMDownloadRequestWithCrashData
-0\n+k_EMsgClientFSGetFriendsSteamLevelsResponse
-0\n+k_EMsgClientLogOnWithCredentials_Deprecated
-0\n+k_EMsgClientRequestedClientStats_Deprecated
-0\n+k_EMsgClientSetClientAppUpdateStateResponse
-0\n+k_EMsgClientSiteLicenseSiteInfoNotification
-0\n+k_EMsgDRMWorkerProcessDescribeSecretRequest
-0\n+k_EMsgDRMWorkerProcessEvaluateCrashResponse
-0\n+k_EMsgDRMWorkerProcessInstallDRMDLLResponse
-0\n+k_EMsgDRMWorkerProcessSecretIdStringRequest
-0\n+k_EMsgDRMWorkerProcessSteamworksInfoRequest
-0\n+k_EMsgDRMWorkerProcessValidateDRMDLLRequest
-0\n+k_EMsgFSGetPendingNotificationCountResponse
-0\n+k_EMsgUCMPublishedFilePreviewRemoveResponse
-0\n+k_EMsgWGConnectionValidateUserTokenResponse
-0\n+k_eMsgRemoteClientUpdateDownloadsController
-0\n\nrouting_gc
-0\r0#0)070;0U0Y0[0g0q0y0}0
-0\r8np
-0\tzc
-0`P0
-0pp@5tqE?|sO541
 1 Mbps
-1!1'1-191C1E1K1]1a1g1m1s1
 1.2.11
 1.5 Mbps
 1.5.6
@@ -2065,6 +1382,9 @@ $ffn
 1.6.37
 10.0.0.0/8
 100 127.0.0.1 stale
+1000
+10000
+1024
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2346,8 +1666,8 @@ $ffn
 11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE
 11CWorkThread
 11IFileSystem
-11M|
 12 Mbps
+123456789
 127.0.0.1
 128 Kbps
 128K
@@ -2427,8 +1747,8 @@ $ffn
 14CWaitDetailMgr
 14ConCommandBase
 14ISSLConnection
-1536
 15000
+1536
 155.133.240.0/23
 15CBaseFileSystem
 15CChatMemberInfo
@@ -2481,6 +1801,8 @@ $ffn
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
+18:44:16
+18:44:21
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CFutureSharedStateIbE
@@ -2515,44 +1837,9 @@ $ffn
 19CUtlNoEscConversion
 19CUtlQueueDeprecatedI19NetPacketToDelete_tE
 19IConnectionCallback
-1A26b
-1H@H
-1\n,k_EMsgAISUpdateSubordinateContentDescription
-1\n,k_EMsgAMGetAccountFlagsForWGSpoofingResponse
-1\n,k_EMsgAMResolveNegativeWalletCreditsResponse
-1\n,k_EMsgAMTwoFactorRecoverAuthenticatorRequest
-1\n,k_EMsgCREUpdateUserPublishedItemVoteResponse
-1\n,k_EMsgClientDPSendSpecialSurveyResponseReply
-1\n,k_EMsgClientEnableOrDisableDownloadsResponse
-1\n,k_EMsgClientFSEnumerateFollowingListResponse
-1\n,k_EMsgClientMMSFlushFrenemyListCacheResponse
-1\n,k_EMsgDRMWorkerProcessDescribeSecretResponse
-1\n,k_EMsgDRMWorkerProcessSecretIdStringResponse
-1\n,k_EMsgDRMWorkerProcessSplitAndInstallRequest
-1\n,k_EMsgDRMWorkerProcessSteamworksInfoResponse
-1\n,k_EMsgDRMWorkerProcessValidateDRMDLLResponse
-1\n,k_EMsgEnsureBillingConfigReloadResponse_TEST
-1\n,k_EMsgFBSBootstrapperGetPackageChunkResponse
-1\n,k_EMsgFBSBootstrapperPackageTransferProgress
-1\n,k_EMsgRemoteClientAuthorizationCancelRequest
-1\n,k_eMsgRemoteClientRestrictAutoUpdatesChanged
-1bS1
-1nds
-1wsHp
 2 + encoded_len_bytes + encoded_len <= buflen
 2 Mbps
-2#.google.protobuf.FieldOptions.CType:
-2$.google.protobuf.FieldOptions.JSType:\tJS_NORMAL
-2'.CMsgProtoBufHeader.ESessionDisposition:
-2).google.protobuf.FileOptions.OptimizeMode:
-2)252Y2]2c2k2o2u2w2{2
-2*.google.protobuf.FieldDescriptorProto.Type
-2+.google.protobuf.FieldDescriptorProto.Label
-2+ss
-2,THh
 2.1 Chromium 1.9
-2/.google.protobuf.MethodOptions.IdempotencyLevel:
-20.GamePerformanceSettings.EGamePerformanceSetting
 200 Mbps
 2000
 200M
@@ -2625,7 +1912,6 @@ $ffn
 26CSSLFramedRecvMsgCollector
 26CWorkItemHTTPClientRequest
 26CWorkItemZeroAndFreeBuffer
-27;C
 27CFileSystemStdIODLLValidate
 27CMsgGCRoutingProtoBufHeader
 27CWorkItemLoadFileIntoBuffer
@@ -2634,35 +1920,9 @@ $ffn
 29CSteamUpdaterPreprocessThread
 29CWorkItemFindDriveNameForPath
 2>/dev/null
-2GJH
-2Ht\l
-2T26
-2\n-k_EMsgAMIsAccountInCaptchaGracePeriodResponse
-2\n-k_EMsgAMTwoFactorRecoverAuthenticatorResponse
-2\n-k_EMsgBSResetPackagePurchaseRateLimitResponse
-2\n-k_EMsgClientRequestEncryptedAppTicketResponse
-2\n-k_EMsgDRMWorkerProcessBackfillOriginalRequest
-2\n-k_EMsgDRMWorkerProcessSplitAndInstallResponse
-2\n-k_EMsgEnsureExecuteScheduledTaskResponse_TEST
-2\n-k_EMsgGMTestNextBuildSchemaConversionResponse
-2\n-k_EMsgGSComputeNewPlayerCompatibilityResponse
-2\n-k_EMsgPSAddWalletCreditToShoppingCartResponse
-2\n-k_EMsgRemoteClientDownloadItemScheduleChanged
-2\n-k_EMsgRemoteClientGetControllerConfigResponse
-2\n-k_EMsgSMTestNextBuildSchemaConversionResponse
-2aNuE
-2bT~
-2dV2:tN:\n
-2prB
 3 Mbps
-3$ae
-3%3+3/353A3G3[3_3g3k3s3y3
-3,IE),W
-3--Jg
-3-WH
-30!]^JV
-3072
 30000
+3072
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819D300D06092A864886F70D010101050003818B00308187028181009957897BBA6BF554958165AE91669D08C2D35DC2803CC6929C233862D48626877CABA0DAE1DA4186142B546CBB74AD117795EC13EAE021793C2DDD26031B16E0F9DADC9E23F8288E57A2D8593EA7402158B451F1C39632C9987FA6C84DEC057D8B88526B5C629B2CD0C0C5516B15CB1E46415E8ABB9B8FC05546DF2D4AD55F6D020111
 30819D300D06092A864886F70D010101050003818B0030818702818100AAA1281C05F4EFD6207BA11B78BA957C43B3760BD2B8AC8BA664B5BA237FC4475A16B9AABCB94EB72D0B9DEC12B6C113F896A11938CBD33EEEF70BB3DB09B37488FD95FCE9706A75EB6D8060B756CAD693981492404228649BDE9BD63148873BB23CD2894998F34975CA8E5191642E5F437C8A6F6C546A57C7DB859A0189FD35020111
@@ -2704,13 +1964,11 @@ $ffn
 30CWorkItemNetFilterOnDisconnect
 31CAdHocValidation_SimpleCallback
 31CCommunity_ClanAnnouncementInfo
-32:B\n
 32CWorkItemThreadedDeleteCacheFile
 32UserContentDescriptorPreferences
 3333
 3333UUUU
 33CHTTPDefaultRedirectEnableHandler
-33fU
 34CNetConnectionOnDisconnectWorkItem
 34CPrescientDimensionsMetricsFactory
 34CWorkItemThreadedGetCachedResponse
@@ -2719,28 +1977,13 @@ $ffn
 36w-
 37CNetConnectionAsyncDisconnectWorkItem
 384 Kbps
-384:H\n
 384K
 38CClientMetrics_ClientBootstrap_Summary
 38CWorkItemNetEncryptionHandshakeEncrypt
 39CWorkItemGetFileSystemPosixDeviceNumber
-3Cn(
 3DES
 3DES(168)
-3HLhx
-3Wk1^
-3YH_!
-3\n.k_EMsgAMGetClanDetailsForForumCreationResponse
-3\n.k_EMsgDRMWorkerProcessBackfillOriginalResponse
-3\n.k_EMsgTestWorkerProcessLoadUnloadModuleRequest
-3\v;8BJ\nH
-3ej\n
-3g\f8
 3pay
-3psC'dcG,
-3rUZ
-3x&>Z
-3|rN>
 4 Mbps
 40 Mbps
 4000
@@ -2750,85 +1993,27 @@ $ffn
 42CClientMetrics_ClientBootstrap_RequestInfo
 43CUIFontFilePackagePB_CUIEncryptedFontFilePB
 44CClientMetrics_ContentDownloadResponse_Hosts
-44\r9MMR
-456789:;<=
 45CClientMetrics_ContentDownloadResponse_Counts
-46$a
-474E4U4W4c4i4m4
 49CClientMetrics_ContentDownloadResponse_HostCounts
-49fN
-4@AA
 4CJob
-4T9\n
-4\fZQ
-4\n/k_EMsgAISBroadcastSubordinateContentDescription
-4\n/k_EMsgBSBoaCompraConfirmProductDeliveryResponse
-4\n/k_EMsgClientChatGetFriendMessageHistoryResponse
-4\n/k_EMsgClientGetNumberOfCurrentPlayersDPResponse
-4\n/k_EMsgClientNetworkingMobileCertRequestResponse
-4\n/k_EMsgTestWorkerProcessLoadUnloadModuleResponse
-4\n/k_EMsgTestWorkerProcessServiceModuleCallRequest
-4\nLx
-4f$H
-4h\4
-4i5U6B738%9
-4tpD
-5-535;5A5Q5e5o5q5w5{5}5
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
 512 Kbps
 512K
-6144
-8000
-8192
-65536
 524288
-123456789
-18446744073709551615
-52F*
-55Ly
-55j_WW
 56 Mbps
-5Itc
-5T&w&
-5\n0k_EMsgAMIsPackageRestrictedInUserCountryResponse
-5\n0k_EMsgCREGetUserPublishedItemVoteDetailsResponse
-5\n0k_EMsgClientSiteLicenseGetAvailableSeatsResponse
-5\n0k_EMsgTestWorkerProcessServiceModuleCallResponse
-5\n\vnested_type
-5\tuy
-5ceTk
-5mF\tfE
-5mmQ
-5nsfZ
-5q\teH
 6 Mbps
-6 PQ
-6#6165676;6M6O6S6Y6a6k6m6
-6*Fc7
-6-nn
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
-64CK\vH
+6144
+65536
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
 6ConVar
-6PNi&\f
-6\n1k_EMsgClientRequestForgottenPasswordEmailResponse
-6\n1k_EMsgClientUCMSetUserPublishedFileActionResponse
-6\n1k_EMsgUpdateScheduledTaskEnableStateResponse_TEST
-6\n\fmessage_type
-6cot
-6qo~
-6tpD4
-6yy_&
-7,gm;
 768 Kbps
 768K
-77\nGJ
-7?7E7I7O7]7a7u7
 7CJobMgr
 7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
@@ -2847,29 +2032,14 @@ $ffn
 7CUtlMapIyji8CDefLessE
 7CUtlSetI10CUtlStringi8CDefLessE
 7CUtlSetIyi8CDefLessE
-7E\vy
-7XRJ
-7\n2k_EMsgAMGameServerPlayerCompatibilityCheckResponse
-7\n2k_EMsgAMValidatePasswordResetCodeAndSendSmsRequest
-7\n2k_EMsgClientInformOfResetForgottenPasswordResponse
-7\n2k_EMsgClientSiteLicenseGetContentCacheInfoResponse
-7\n2k_EMsgClientUCMEnumeratePublishedFilesByUserAction
-7\n2k_EMsgDRMWorkerProcessInstallProcessedFilesRequest
-7\n\tenum_type
-7nY7m
-7~8A
 8 Mbps
-8.K%G
-8/A0
 80 Mbps
-82\n:XPH
+8000
+8192
 83L3
 83N6
 83Q2
 83Q3
-88n|
-88pH
-8A6j
 8CAutoPtrI15IMetricsFactoryE
 8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
 8CAutoPtrI7CUtlSetIyi8CDefLessEE
@@ -2878,28 +2048,10 @@ $ffn
 8CNetHost
 8CTCPHost
 8CUDPHost
-8GZS
-8IaiS/8,
-8\foQS
-8\n3k_EMsgAMValidatePasswordResetCodeAndSendSmsResponse
-8\n3k_EMsgChatServerGetPendingNotificationCountResponse
-8\n3k_EMsgDRMWorkerProcessInstallProcessedFilesResponse
-8\n\textension
-8\v8!83858A8G8K8S8W8_8e8o8q8}8
 8\vWzK
-8]Vc2
 8b  16-May-2010
-8pH8
-8y\rW
-8z\rkt
-9#9%9)9/9=9A9M9[9k9y9}9
-9)PF
-9)jx
 9.1.14
 961e13c2046fbe474916afdb087db2222535db4e51f34b5fa45b4fd7803abff2
-99Ov
-99rKJJ
-9<n\nM
 9CCardInfo
 9CMsgMulti
 9CUtlQueueI8WSABUF_SE
@@ -2907,40 +2059,25 @@ $ffn
 9CUtlQueueIP9CLogEventE
 9CWorkItem
 9Hh3J
-9IGv
 9IMemAlloc
 9IValidate
-9PE,$
-9\n4k_EMsgAISUpdateSubordinateContentDescriptionResponse
-9\n\noneof_decl
-9a&g
-9c,Y0x
-9eZI
-9kQp
-9rK9J
 : Tried to copy from a message with a different type. to:
 : Tried to merge from a message with a different type.  to:
 : failed to parse contents
 : inherit\n
 :%02X
-:':+:1:K:Q:[:c:g:m:y:
-:.JlN
-:5ptI.T(
 :7Q7
 :BAD BOOLEAN
 :BAD ENUMERATED
 :BAD INTEGER
 :BAD OBJECT
 :EXTERNAL TYPE %s\n
-:LBN
 :authorit
 :authority
 :done\n
-:eaI
 :error\n
 :metho
 :method
-:oc\ve
 :pat
 :path
 :protoco
@@ -2948,23 +2085,9 @@ $ffn
 :scheme
 :statu
 :status
-; zp%Jj
-;!;#;-;9;E;S;Y;_;q;{;
-;"lY7
-;22dV::tN\n\n
-;4hP
-;83\v\nHBJ7
-;K+PW
-;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
-;dy>p
-;fD4~
-;xsK
 < Called by: %s
 < or is NULL
-<)<5<C<O<S<[<e<k<q<
 <-loopback>
-<0\f<pqA1
-<4E87
 <= or is NULL
 <ABSENT>\n
 <ASN1 %d>
@@ -2988,36 +2111,11 @@ $ffn
 <unknown>
 <unsupported>
 = or is NULL
-=!=-=3=7=?=C=o=s=u=y={=
-==zGdd
-=Tie
-=Uec
-=VX7
-=asyv
-=j&&LZ66lA??~
-=trF6,#
 > or is NULL
->#>)>/>3>A>W>c>e>w>
 >/dev/null
->0PFJ
 >= or is NULL
->I{TrEX
->ZF9
->\n9k_EMsgClientChatGetFriendMessageHistoryForOfflineMessages
->\n9k_EMsgClientRequestWebAPIAuthenticateUserNonce_Deprecated
->\v?\r?7?;?=?A?Y?_?e?g?y?}?
->w^23
-?456789:;<=
 ???\f???????\n???\r?\t?\v
-?HAI\t81\t9dcG'
-?QfZ
-?\n:k_EMsgClientUCMEnumeratePublishedFilesByUserActionResponse
-?fuP=
-?jOb
-?tr#6
 ?w8'g
-@!@%@+@1@?@C@E@]@a@g@m@
-@0pp
 @EnableUDPHistory
 @MaxOutstandingSendThreadItemFatalAssert
 @MaxOutstandingSendThreadItemFatalAssertSecondsAtLimit
@@ -3041,7 +2139,6 @@ $ffn
 @bSSLThreadedMsgParse
 @bSSLThreadedMsgParseRelayedBodies
 @bSSLThreadedSendDelivery
-@c5U
 @cMinimumJobTimeoutsToCheckPerFrame
 @cNetEncryptionHandshakeWorkMax_HighPri
 @cNetEncryptionHandshakeWorkMax_LowPri
@@ -3052,7 +2149,6 @@ $ffn
 @metricsDisabledCatalogs
 @metricsDisabledOperations
 @metricsEnabledOperations
-@n2w
 @nCallerDeadlineHopLatencyMS
 @nClientCMUDPPingTimeGoodEnoughThresholdMS
 @nClientCMUDPPingTimeoutUseGoodEnoughMS
@@ -3079,13 +2175,6 @@ $ffn
 A file with this name is already in the pool.
 A protocol message was rejected because it was too big (more than
 A reservation already exists
-A!;I2
-A!A3A5A;A?AYAeAkAwA{A
-A2VPD
-A9ue_
-A:3,]VOHyrkd[[
-A;DC04
-A@qVc"
 AA Compromise
 AACompromise
 ABADF
@@ -3171,8 +2260,6 @@ AESCCM8(256)
 AESGCM
 AESGCM(128)
 AESGCM(256)
-AI\tHpH8x
-AJsN
 AKST
 ALIGN_TYPE is wrong, please fix
 ALL:!COMPLEMENTOFDEFAULT:!eNULL
@@ -3185,8 +2272,6 @@ ANDROID32
 ANDROID64
 ANSI X9.62
 ANY PRIVATE KEY
-AOZs\!yA*
-AP"\nsQJ
 ARIA
 ARIA-128-CBC
 ARIA-128-CCM
@@ -3304,7 +2389,6 @@ AUTHORITY_INFO_ACCESS
 AUTHORITY_KEYID
 AVGRATE
 AVS Failure
-A\n\nannotation
 AbortConnection - (%p) Aborting client HTTP connection\n
 Aborting HTTP request because !bSent\n
 Aborting HTTP request because body content is larger than range request\n
@@ -3328,7 +2412,6 @@ Aborting stale HTTP request on connection (%p, stream: %d) due to network activi
 Aborting stale client HTTP connection (%p) due to network timeout: %s - %X\n
 About to overflow TCP msg buffer after failing to determine cubMsgSizeMax.  Disconnecting.\n
 Abuse reporter's UGC Image
-AcG\nt
 Accept
 Accept-Encoding
 Acceptable OCSP Responses
@@ -3431,6 +2514,7 @@ App Running
 AppID
 AppIDToRedirect
 AppendedSHA
+Application
 Application built with libpng-
 Application jmp_buf size changed
 Application must supply a known background gamma
@@ -3502,16 +2586,11 @@ Average %.2f fps, %.2f ms per frame\n
 Avg Job
 Away
 Azerbaijani
-A~Se
-B#B)B/BCBSBUB[BaBsB}B
-B#C0D?EQFeG|H
-B*k@5
 B-163
 B-233
 B-283
 B-409
 B-571
-B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
 BAD-TYPE
@@ -3531,7 +2610,6 @@ BF-CBC
 BF-CFB
 BF-ECB
 BF-OFB
-BFUa.X
 BFileExists Yielding IO Job
 BFileExists( m_FontFileLight )
 BFileExists( m_FontFileRegular )
@@ -3597,8 +2675,6 @@ BIsFixedDisk Yielding IO Job
 BIsOpen()
 BIsSameFilesystem Yielding IO Job
 BIsValidDirectory Yielding IO Job
-BK+O
-BKbhTb~XBK!;
 BLAKE2b512
 BLAKE2s256
 BMPSTRING
@@ -3669,8 +2745,6 @@ BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result i
 BSetSteamAutoStart: failed to copy %s to %s\n
 BSetSteamAutoStart: failed to create directories for %s\n
 BStarted()
-BT]Q@
-BTcq
 BTransmitFile
 BUF lib
 BUF_MEM_grow
@@ -3700,7 +2774,6 @@ BYieldingWaitOneFrame
 BYieldingWaitTime
 BYieldingWaitTimeWithLimit
 BYieldingWaitTimeWithLimitRealTime
-B\nYY
 BackUp() can only be called after a successful Next().
 Background update loop checking for update. . .
 Background update loop suppressed by client. . .
@@ -3741,7 +2814,6 @@ Beeline
 Belarusian
 Benchmark
 Beta
-Bh;+j
 Billing agreement cancelled
 Billing name is invalid because it looks like it contains credit card data
 BillingCurrency
@@ -3757,7 +2829,6 @@ Blocked arguments
 Blocked because user is not a commercial partner
 Blocked by U.S. government regulations
 Blocks
-Bnl1l
 BoaCompra Gold
 Body
 Bogus DAC index %d
@@ -3790,7 +2861,6 @@ Brazilian
 Breaking '%s' in '%s'\n
 Broadcom
 Browser
-Bt-N
 Bucket size : count\n
 Buffer passed to JPEG library is too small
 Bugs
@@ -3798,16 +2868,8 @@ Bulgarian
 Business account not allowed to purchase
 Busy
 Busy, please retry.\n
-Bx\r9
 Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of
-C q'O
-C%C'C3C7C9COCWCiC
-C-Yn
 C-runtime internal
-C3ps
-C6pH[
-C77nYmm
-C@gw
 CA Compromise
 CA Issuers
 CA Repository
@@ -3859,7 +2921,6 @@ CAST5-CBC
 CAST5-CFB
 CAST5-ECB
 CAST5-OFB
-CB4cJQlAc
 CBIGNUM
 CBaseFileSystem
 CBaseFileSystem::Close
@@ -3877,16 +2938,10 @@ CBaseFileSystem::Tell
 CBaseFileSystem::Write
 CBaseLinuxUpdateUI::BaseCreateWindow: XOpenDisplay failed\n
 CBaseScheduledFunction
-CBilling_Address
-CCDDBAppDetailCommon
 CCIR601 sampling not implemented yet
-CClanEventData
-CClanEventUserNewsTuple
-CClanMatchEventByRange
 CClientStructNetPacket->GetGCRouting() not valid.
 CClientStructNetPacket->GetHdrIP() not valid.
 CClientStructNetPacket->GetRealm() not valid.
-CCommunity_ClanAnnouncementInfo
 CCompletionPortManager::IOCPWorkerThread: got 100 consecutive errors, last error %d (%s), IOCP thread aborting and exiting\n
 CCopyableUtlVector()  - copycons
 CCoroutine
@@ -3920,10 +2975,8 @@ CCrypto::RSAVerifySignature
 CCrypto::RSAVerifySignatureSHA256
 CCrypto::SymmetricDecrypt
 CCrypto::SymmetricEncrypt
-CCuratorPreferences
 CD Key
 CDNAuth
-CE;Lb
 CERTIFICATE
 CERTIFICATE REQUEST
 CERTIFICATEPOLICIES
@@ -4290,7 +3343,6 @@ CLIENT_TRAFFIC_SECRET_0
 CLNT
 CLcx
 CLegacy
-CLocalizationToken
 CLocalizedStringTable
 CLogEvent
 CLogFile::LogLine
@@ -4407,16 +3459,8 @@ CMetricsPayload: Measurement_StatisticSet JSON serialization is not implemented
 CMetricsPayload::RecordMetric_Dimension
 CMetricsPayload::RecordMetric_Measurement
 CMetricsSymbol::sm_symbolTable
-CMsgAuthTicket
 CMsgBase_t : packet too small
 CMsgBase_t : packet too small (EMsg %u)
-CMsgGCRoutingProtoBufHeader
-CMsgIPAddressBucket
-CMsgKeyValuePair
-CMsgKeyValueSet
-CMsgKubeRPCPacket
-CMsgProtoBufHeader
-CMsgProtobufWrapped
 CNet
 CNet Encrypt
 CNet Globals
@@ -4475,7 +3519,6 @@ CONNECT
 CONNECT %s HTTP/1.1\r\nHost: %s\r\n\r\n
 CONNECT_ERROR
 CONTINUATION: unexpected
-CORD
 COpenSSLConnection
 COpenSSLConnection(%c%p) %s session established to %s peer using %d-bit cipher %s\n
 COpenSSLConnection(%c%p) BAsyncSend after shutdown
@@ -4521,7 +3564,6 @@ CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
 CPU_MHZ
-CPackageReservationStatus
 CPathString
 CPendingMsg::SendPkt
 CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
@@ -4646,7 +3688,6 @@ CTSQueue bad tail->Next value
 CTSQueue freelist depth mismatch
 CTSQueue m_HeadTailPair mismatch when empty
 CT_POLICY_EVAL_CTX_new
-CType
 CUDPConnection
 CUDPConnection globals
 CUDPConnection not initialized, was GlobalInit called?
@@ -4687,9 +3728,6 @@ CUDPSocket::BSend
 CUDPSocket::ContinueRecv: critically behind on socket reads, something's wrong, committing suicide
 CUDPSocket::ContinueRecv: more than 1 million bytes to read from socket, are we falling behind?
 CUDPSocket::OnRecvComplete
-CUIEncryptedFontFilePB
-CUIFontFilePackagePB
-CUcR1
 CUpdateUIChildProcess: failed to create IPC socket\n
 CUpdateUIChildProcess: failed to fork child process\n
 CUpdateUIChildProcess: failed to run child process
@@ -4799,10 +3837,6 @@ CWorkThreadPool::~CWorkThreadPool: work processing queue not empty: %d items dis
 CYieldingScopedJobLock failed - there is no indication to the caller!!!
 CZipWriterFile was not finalized before destruction
 CZipWriterFile was not finalized before reuse
-C\n>k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse
-C\tD\vD
-C\t\nD4
-C\vo9
 Cabal
 Cache Proxy results by hostname: %s\n
 Cache miss for %s - '%s' corrupt\n
@@ -5035,7 +4069,6 @@ Content-Type: %ssignature;
 Content-Type: application/ocsp-request\r\nContent-Length: %d\r\n\r\n
 Content-Type: multipart/signed;
 Content-Type: text/plain\r\n\r\n
-ContentDescriptor
 Context should be init first
 Continue
 Controller Binding
@@ -5111,14 +4144,8 @@ Currency of purchase does not match currency of wallet
 CurrencyCode
 Curves
 Custom CSS
-Cw!K
 Cyber cafe accounts can't purchase
 Czech
-D#D)D;D?DEDKDQDSDYDeDoD
-D4tp
-D@D/lcO+hcK
-DAE!
-DAL\fL@
 DATA or HEADERS frame has already been submitted for the stream
 DATA: insufficient padding space
 DATA: invalid padding
@@ -5130,14 +4157,9 @@ DATA: stream not opened
 DATA: stream_id == 0
 DATA_LOSS
 DB Lookup CD-Key
-DBF-
 DBG_PATHMATCH
 DCT coefficient out of range
 DCT scaled block size %dx%d not supported
-DD.9
-DD5z
-DDDDUUUU
-DDli
 DEADLINE_EXCEEDED
 DEFAULT
 DEFAULT_WRITE_PATH
@@ -5247,7 +4269,6 @@ DIRECTORYSTRING
 DISPLAYTEXT
 DIST_POINT
 DIST_POINT_NAME
-DIq*\tW
 DLOPEN Error:%s\n
 DNS:
 DO NOT PARSE: fields may be stripped and missing.\n
@@ -5315,7 +4336,6 @@ DTLSv1.2
 DTLSv1_listen
 DVCS
 DWCHV
-D\vvf:
 Dana
 Danish
 Dankort
@@ -5326,7 +4346,6 @@ Data corruption detected
 Data transfer deferred
 Date
 Days
-DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
 December
@@ -5352,8 +4371,6 @@ Deploy
 Deposit is not required to purchase
 Depot
 Descending
-DescriptorProto
-DescriptorProtosH
 Desktop
 Destination
 Destination buffer is too small
@@ -5437,16 +4454,8 @@ Duplicate rack initialization of GID system
 Duplicated Request
 Dur ms
 Dutch
-DwWzO
-Dyp~B\n1
-E+E1EAEIESEUEaEwE}E
-E,v\nX
 E-mail Protection
 E0123456789ABCDEF
-E5\v\n6
-E5tq
-E=FZGrH
-E>70aZSL}voh
 EACCES
 EADDRINUSE
 EADDRNOTAVAIL
@@ -5471,7 +4480,6 @@ EAppUpdateProgressType
 EAppUpdateState
 EAsyncGameSessionUserState
 EAuthTokenPermission
-EBanContentCheckResult
 EBluetoothDeviceType
 EBroadcastPermission
 EBroadcastUploadResult
@@ -5613,12 +4621,9 @@ EClanPermission
 EClanRank
 EClanRelationship
 EClientDatacenterRoute
-EClientPersonaStateFlag
 ECloudStorageActorTypes
 ECloudStorageProviders
 EClub Points
-ECodecUsagePlatform
-ECodecUsageReason
 ECommunityContentType
 ECommunityPrivacyState
 ECommunityProfileState
@@ -5653,7 +4658,6 @@ EForeignKeyAction
 EFriendRelationship
 EGCAction
 EGCStatus
-EGamePerformanceSetting
 EGamingDeviceType
 EGpuDriverId
 EHTTPMethod
@@ -5679,9 +4683,7 @@ ELobbyFilter
 ELogonState
 EMPTY
 EMicroTxnAuthResponse
-EMsg
 EMsg %d registered multiple times.
-EMsgClanAccountFlags
 EMsg_IsValid( pOldMsgInfo->eMsg )
 ENABLE_VK_LAYER_VALVE_steam_overlay_1
 ENCRYPTED
@@ -5700,7 +4702,6 @@ EPaymentMethod
 EPersonaState
 EPersonalQuestion
 EPlatformType
-EProtoClanEventType
 EPublishedFileInfoMatchingFileType
 EPublishedFileQueryType
 EPurchaseResultDetail
@@ -5718,21 +4719,18 @@ ERegKeyRoot
 ERemoteStorageFileRoot
 ERemoteStoragePlatform
 EResult
-ESessionDisposition
 EShellConfigUpdateSection
 ESignatureClass
 ESteamControllerConfigTemplateWorkshopFileID
 ESteamIPv6ConnectivityProtocol
 ESteamIPv6ConnectivityState
 ESteamRealm
-ESteamReviewScore
 ESteamUserStatType
 EStorageBlockContentType
 EStorageBlockFileSystemType
 EStoreCategory
 ESupportCompanyDomain
 ETIMEDOUT
-ETLL
 ETag
 ETimeUnit
 ETransportError
@@ -5831,10 +4829,6 @@ EXTRACTOR-dtls_srtp
 EXTRACT_AND_EXPAND
 EXTRACT_ONLY
 EZipFormat
-E[3M
-E\foD
-E\r\f52
-EcxmV4
 Ed25519 key public doesn't match private!
 EdiPartyName
 EdiPartyName:<unsupported>
@@ -5873,10 +4867,7 @@ Enum value "$0" is reserved multiple times.
 Enum value "$0" is reserved.
 Enum value "$0" uses reserved number $1.
 Enum value in map must define 0 as the first value.
-EnumDescriptorProto
 EnumOptions
-EnumReservedRange
-EnumValueDescriptorProto
 EnumValueOptions
 Enums must contain at least one value.
 Error (generic)
@@ -5913,7 +4904,6 @@ ErrorLinkURL
 ErrorSerial
 ErrorString
 Estonian
-EtL?
 Event Text
 EventName
 EventNotes
@@ -5964,8 +4954,6 @@ Extension range $0 to $1 overlaps with already-defined range $2 to $3.
 Extension range $0 to $1 overlaps with reserved range $2 to $3.
 Extension range end number must be greater than start number.
 Extension ranges are not allowed in proto3.
-ExtensionRange
-ExtensionRangeOptions
 Extensions in proto3 are only allowed for defining options.
 Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
@@ -5977,22 +4965,16 @@ ExternalValidation
 Extra compressed data
 ExtractSubrange() when arena is non-NULL is only supported when
 Extracting package...
-F6tr
 FAILED_PRECONDITION
 FALSE
 FATAL
 FCVAR_NEVER_AS_STRING
-FCZ&
-FCtD}
-FDA~i
-FF!w
 FILE pointer
 FIPS
 FIPS routines
 FIPS_mode_set
 FLOAT
 FLOW_CONTROL_ERROR
-FOC+
 FORM
 FORMAT
 FR19CNullMetricsFactoryvE
@@ -6029,9 +5011,6 @@ FT_New_Face
 FT_New_Memory_Face
 FT_Set_Char_Size
 FT_Set_Pixel_Sizes
-FV|FgUV
-F\nAk_EMsgClientRequestWebAPIAuthenticateUserNonceResponse_Deprecated
-F\n\foptimize_for
 Facebook query returned an error
 Failed
 Failed Dependency
@@ -6132,7 +5111,6 @@ Field with message or enum type missing type_name.
 Field with primitive type has type_name.
 Field:
 Field=
-FieldDescriptorProto
 FieldDescriptorProto.extendee not set for extension field.
 FieldDescriptorProto.extendee set for non-extension field.
 FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
@@ -6153,8 +5131,6 @@ File is already registered:
 File locked
 File not found in database (unexpected):
 File recursively imports itself:
-FileDescriptorProto
-FileDescriptorSet
 FileOptions
 FilePublished_Screenshot_Tagged
 FileRead
@@ -6210,9 +5186,6 @@ Friends
 Full
 Fully Installed
 Function not implemented
-F{e6
-F~Tb
-G3oML
 GAMESCOPE_WAYLAND_DISPLAY
 GAME_
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
@@ -6304,8 +5277,6 @@ GOST89MAC
 GOST94
 GOST_KX_MESSAGE
 GRAPHICSTRING
-GSc\v3
-GXqN
 Galician
 Game
 Game Managed Item
@@ -6317,7 +5288,6 @@ GameCodeFromKey
 GameInstall
 GameItemID
 GameManagedItems
-GamePerformanceSettings
 GameServer
 GameStop
 Gamepad
@@ -6330,7 +5300,6 @@ Gateway Time-out
 GeneralDirectoryServer_FindServerIPAddrPorts
 GeneralNames
 GeneralString
-GeneratedCodeInfo
 Generator (compressed):
 Generator (hybrid):
 Generator (uncompressed):
@@ -6403,7 +5372,6 @@ Global Collect unknown error
 Global Moderator
 Gone
 Google Swiftshader
-Google.Protobuf.Reflection
 Got GOAWAY frame with last stream processed %d for stream %d\n
 Got RST STREAM for stream %d with error %u\n
 Got completed conditional request dispatched to client cache, but no data for it in our map?
@@ -6421,15 +5389,6 @@ Guest Account
 Guest Pass
 Guides
 Gujarati
-GzV%E$;
-H$6t
-H*0"ZOW
-H3wQ
-H5gRR-
-H7_Ya
-H8xp
-H@H9xqI
-HBJ\nTRF
 HEAD
 HEADERS: could not unpack
 HEADERS: insufficient padding space
@@ -6490,9 +5449,6 @@ HTTPS_PROXY
 HTTP_1_1_REQUIRED
 HTTP_PROXY
 HWID Set
-HWyn
-H\fJxE\v
-Ha4\n
 Halkbank
 Handheld
 Handshake Failed
@@ -6513,7 +5469,6 @@ Headphones
 Headset
 Hebrew
 Hex and octal numbers must be integers.
-Hf-2
 Hier
 Hier Avg
 Hindi
@@ -6530,24 +5485,15 @@ Hostname mismatch
 Hosts
 Hour
 Hours
-Hp!v
-HqI9x
 HttpClientConnection (%p) now initiating TCP connection through %X \n
 Huffman code size table overflow
 Huffman table 0x%02x was not defined
 Humper
 Hung transaction cancelled
 Hungarian
-Hw~J
-H{1S
-I(fQ
 I/O Operation Failed
-I/t1
-I5=T
-I9xq
 IA5STRING
 IANA
-IB;4e^WP
 ICC or token signature
 ICC profile length invalid (not a multiple of 4)
 ICC profile tag outside profile
@@ -6559,10 +5505,7 @@ IDEA-CBC
 IDEA-CFB
 IDEA-ECB
 IDEA-OFB
-IDEMPOTENCY_UNKNOWN
 IEEE Security in Storage Working Group
-IEN$
-IEw!
 ILocalize::AddFile() failed to load file "%s".\n
 IMPLICIT
 IMetricsFactory
@@ -6621,12 +5564,8 @@ IStreamParser::BIsValidMsgType() invalid packet header (1st 8 bytes: 0x%02X%02X%
 IStreamParser::BIsValidMsgType() old packet header from out-of-date Steam build, discarding packet and closing connection\n
 IStreamParser::BIsValidMsgType() too-large cbMessageSize in message header (%u bytes, %d bytes recv'd so far) discarding packet and closing connection\n
 ITU-T
-ITc[
 IVALIDATE001
-I\nlQ
-I\tHA\t981G'dc
 Icelandic
-IdempotencyLevel
 If-Match
 If-Modified-Since
 If-None-Match
@@ -6648,8 +5587,6 @@ Ignoring invalid time value
 Ignoring received invalid HTTP header field: frame type: %u, stream: %d, name: [%.*s], value: [%.*s]
 Ignoring request to write a PLTE chunk in grayscale PNG
 Ignoring resume of count %d\n
-IiGM>nw
-Ik\f`dub`D
 Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field:
 Illegal password
 Illegal termination of worker thread '%s'
@@ -6887,23 +5824,16 @@ ItemDescription
 Items
 Items_Mtx
 Items_ReadyToUse
-J0X|
-J:xrG
 JArray
 JFIF APP0 marker: version %d.%02d, density %dx%d  %d
 JFIF extension marker: JPEG-compressed thumbnail image, length %u
 JFIF extension marker: RGB thumbnail image, length %u
 JFIF extension marker: palette thumbnail image, length %u
 JFIF extension marker: type 0x%02x, length %u
-JN5\fgm
 JOINT-ISO-ITU-T
 JPEG datastream contains no image
 JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
 JPEGMEM
-JSType
-JZJ{.
-J\nHBF
-J\rS%H
 January
 Japanese
 Job %llu (%s) aborting.  %s\n
@@ -6929,26 +5859,17 @@ JobMgr ThreadPoolStats:\n
 Jobs
 JoinedGroup
 Joystick
-JpL9=
 July
 June
 K'iche'
-K(\f]C15
 K-163
 K-233
 K-283
 K-409
 K-571
-K4K
-K;xs
 KDF routines
 KISA
-KN>v
 KNQ\r
-KNx[
-KRB8+
-K\rdSC\td?
-Ka\nTw
 KakaoPay
 Kannada
 Kazakh
@@ -6992,7 +5913,6 @@ KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
 KeyValuesSystem()
 Keyboard
-KhSK
 Khmer
 Kicked
 KickedAcknowledged
@@ -7003,7 +5923,6 @@ Konkani
 Korean
 Kr\t=o
 Kuveyt Turk Bank
-KwZi
 KxANY
 KxDHE
 KxDHE-PSK
@@ -7015,16 +5934,9 @@ KxRSA
 KxRSA_PSK
 KxSRP
 Kyrgyz
-L+5d
-L8-\rHO
-LABEL_OPTIONAL
-LABEL_REPEATED
-LABEL_REQUIRED
-LAM\rhaI)|pL<
 LANCache
 LANPeer
 LB hCon  Socket  Flags  Local address    Remote address   Mode    State         Last recv (ms)  Sends pending\n
-LBN6
 LC_ADDRESS
 LC_COLLATE
 LC_CTYPE
@@ -7045,7 +5957,6 @@ LLVMPipe Mesa
 LOCK_EX
 LOCK_SH
 LV=%zu n=%zu\n
-Label
 Language
 Laser
 Last Message Repeated %d times.\n%s
@@ -7103,7 +6014,6 @@ LinuxXdgConfigHome
 LinuxXdgDataHome
 Lithuanian
 Live Broadcast
-Lj&&lZ66~A??
 Load certs from files in a directory
 Load file into cache
 LoadFileIntoBuffer: NULL parameters
@@ -7141,31 +6051,20 @@ Low Violence
 Lowered '%s' -> '%s'\n
 Luxembourgish
 LzmaDec_DecodeToDic no progress?
-M%J3\nUc7
-M*jg7
-M-laO
-M3fU3
-M8MF
-M;;va
 MAIN
 MASK:
 MAX_ALLOC_CHUNK is wrong, please fix
-MBb!\v
 MD5-SHA1
 MDC2
 MEDIUM
-MF?8ib[T
 MGF1
-MGiI
 MIC-CLEAR
 MIC-ONLY
 MIME MHS
 MIME-Version: 1.0%s
-MMfU33
 MNG features are not allowed in a PNG datastream
 MOL Points
 MUSIC
-M\rLAI)haL<|p\t\t
 Mac OS
 MacAppSupport
 MacCaches
@@ -7298,7 +6197,6 @@ Messages can't have default values!
 Messages can't have default values.
 Method Not Allowed
 Method Not Found
-MethodDescriptorProto
 MethodOptions
 Metrics disabled by catalog for %s, %s\n
 Metrics disabled by operation blacklist for %s, %s\n
@@ -7318,10 +6216,6 @@ MiddleboxCompat
 Migrate
 MilliSeconds
 MinProtocol
-MinghuaQu
-MinghuaQu)
-MinghuaQuS
-MinghuaQuw
 Minidumps written:\n
 Minimum
 MinorCode
@@ -7349,7 +6243,6 @@ Missing file permissions
 Missing game files
 Missing name.
 Missing update files
-MkL\f
 Mobile (Degica)
 Mobile Wallet (Japan)
 Moderator
@@ -7382,7 +6275,6 @@ Must pass a INetSSLConnectionCallback if using SSL
 MutableMessage
 MutableRawRepeatedField
 MutableRepeatedMessage
-N.lb
 N10SteamVProf13CVProfManagerE
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
@@ -7413,7 +6305,6 @@ N17CFileWriterThread19CFileWriterWorkItemE
 N17CHTTPRequestCache19CachedFileLRUData_tE
 N17CHTTPRequestCache30RequestWaitingValidationData_tE
 N19CQueuedLambdaRunner16QueuedFunction_tE
-N1e\n*
 N4CJob15QueuedNetMsgs_tE
 N4vgui9ILocalizeE
 N6google8protobuf10TextFormat17BaseTextGeneratorE
@@ -7521,7 +6412,6 @@ N6google8protobuf8internal30RepeatedPtrFieldStringAccessorE
 N6google8protobuf8internal31RepeatedPtrFieldMessageAccessorE
 N6google8protobuf8internal33RandomAccessRepeatedFieldAccessorE
 N9CJobFuncs20CJobFuncsDispatchJobE
-N9OaP
 N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
@@ -7558,7 +6448,6 @@ NIST/SECG curve over a 571 bit binary field
 NIST/SECG/WTLS curve over a 163 bit binary field
 NIST/SECG/WTLS curve over a 233 bit binary field
 NIST/X9.62/SECG curve over a 192 bit prime field
-NJ2"v
 NO ACTION
 NO X509_NAME
 NOTE: @bProtobufParseSizeProfile is 0, so the histogram below is not being updated.\n
@@ -7566,7 +6455,6 @@ NOTICEREF
 NOT_FOUND
 NO_ERROR
 NO_PROXY
-NO_SIDE_EFFECTS
 NSt3_V214error_categoryE
 NSt6locale5facet6__shimE
 NSt6locale5facetE
@@ -7629,10 +6517,8 @@ NULL\n
 NUMERIC
 NUMERICSTRING
 NVIDIA
-N\r\nyd
 Name
 Name:\t
-NamePart
 Nanaco
 Naranja
 NaverPay
@@ -7668,10 +6554,8 @@ Network send exceeded
 News
 Next packet in multi-packet UDP message is too large and would exceed initially allocated buffer
 Next schedule deadline: %lldus\n
-Ni.f
 Night
 Nil time value
-Nl9\
 No Connection
 No Content
 No Detail
@@ -7758,20 +6642,13 @@ NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing to do
 November
-NrZl
 NullMetrics()
 NumTickets
 Number of Jobs to give a single protobuf Arena before we create a new one
 Numbers starting with leading zero must be in octal.
 Numeric
 NumericalCompare
-Nwh\v
-O!YNO
-O*9y]
 O/lc\r=<1\r-,!@
-O44h\
-O:t\vg
-O@RJ
 OBJ lib
 OBJECT
 OBJECT DESCRIPTOR
@@ -7876,9 +6753,6 @@ OTHERNAME
 OUT OF MEMORY
 OUT_OF_RANGE
 OXXO
-OZw3(?
-O\n\nAnnotation
-O\r\nP2
 Oakley-EC2N-3
 Oakley-EC2N-4
 Object
@@ -7899,12 +6773,10 @@ Officers
 Official
 Offline
 Offline App Cache invalid
-Oh7{j
 On-disk registry has changed and is marked dirty - we're about to lose data.
 Once
 OneCard
 Oneof must have at least one field.
-OneofDescriptorProto
 OneofOptions
 Online
 Online Banking (Thailand)
@@ -7988,9 +6860,6 @@ P-256
 P-384
 P-521
 P-521:P-384:P-256
-P00`
-P1\t98"
-P<xD<
 PARAMETERS
 PATCH
 PBE-MD2-DES
@@ -8159,9 +7028,7 @@ PKDu
 PKEY_USAGE_PERIOD
 PKINIT Client Auth
 PKIX
-PK\ry
 PLACEHOLDER_VALUE
-PL^m
 PNG file corrupted by ASCII conversion
 PNG load error %s\n
 PNG load warning %s\n
@@ -8178,21 +7045,17 @@ POSA code is not activated
 POSIX
 POSIX does not support inheriting full mutexes
 POST
-PPxD<<%
-PRB+
 PRI * HTTP/2.0\r\n\r\nSM\r\n\r\n
 PRINTABLE
 PRINTABLESTRING
 PRIORITY: stream_id == 0
 PRIVATE KEY
-PRM=|q
 PRNG not seeded
 PROFESSION_INFO
 PROTOCOL_ERROR
 PROXY_CERT_INFO_EXTENSION
 PROXY_POLICY
 PS3 Unattributed
-PSC\n
 PSK larger than allowed
 PSK-AES128-CBC-SHA
 PSK-AES128-CBC-SHA256
@@ -8255,7 +7118,6 @@ Partial Content
 Partial refund
 Partner Member
 Partner needs VAT ID set to purchase commercial licenses
-PartnerEventNotificationType
 Party
 Password Set
 Password is not set
@@ -8282,8 +7144,6 @@ PaymentID
 PaymentInfo
 PaymentMethod
 Payshop
-Pb1m
-Pe6^
 Peak %.2f ms frame\n
 Peer
 Peer Server
@@ -8313,10 +7173,8 @@ Persona Set
 Phone
 Phone number is Voice Over IP
 Physical product limit exceeded
-PiI\r
 Pichincha
 Pichincha Cash
-Pii[2cc
 PinValidda
 Ping
 Piracy or Cheats
@@ -8413,21 +7271,8 @@ Purchase pending
 PurchaseCountryCode
 PurchaseStatus
 Q$By5
-Q/xtJ2
-Q9gZ
 QC,A
 QIWI
-QPeA~S
-QSeA~
-QXzc
-Qf(I
-Qg$ZO4Z
-Qjh/T
-QkkXa
-Qkkbal
-Qm_:R
-Qmm5
-Qs(8%
 Qualcomm
 Quantization table 0x%02x was not defined
 Quantizing to %d = %d*%d*%d colors
@@ -8436,12 +7281,6 @@ Quechua
 Queued deletion of %d files in HTTP cache\n
 Queueing request for http%s://%s%s, %d already in queue, we are still discovering HTTP/2 support\n
 Queueing request for http%s://%s%s, %d already in queue\n
-QyReSOT5U
-Q{yc
-R##Fe
-R1h58
-R5=D
-R;vM;
 RADV_FORCE_VRS_CONFIG_FILE
 RAND_DRBG_generate
 RAND_DRBG_instantiate
@@ -8483,7 +7322,6 @@ RFC 5639 curve over a 512 bit prime field
 RGB color space not permitted on grayscale PNG
 RGBA: %.2X %.2X %.2X %.2X
 RIPEMD160
-RRvM;;
 RSA Data Security, Inc.
 RSA Data Security, Inc. PKCS
 RSA PRIVATE KEY
@@ -8567,7 +7405,6 @@ RSA_verify_PKCS1_PSS_mgf1
 RST%d
 RST_STREAM: stream in idle
 RST_STREAM: stream_id == 0
-RX\r
 RackSystem
 Raid
 Range
@@ -8594,7 +7431,6 @@ RankedByVotesUp
 Rapipago
 Rate Limit Exceeded
 Raw stream mode only supported for TCP connections
-Rbg.E
 ReLaunchCmdLine
 ReOpenFd: failed to reopen: %s: %s\n
 Reached an unintended state: CPPTYPE_MESSAGE
@@ -8747,13 +7583,10 @@ Reusing HTTP connection (%p) for %s\n
 Reviews
 Revive
 Revoked
-RgD/X
-RoVZcz
 Romanian
 Root
 Routing Domain Identifiers
 Row has too many bytes to allocate in memory
-Rs$c~B
 RuPay
 RunCommand
 RunCommand: %s\n
@@ -8766,17 +7599,12 @@ RunUntilCompletedLowPri
 Running Script
 Running Update
 Russian
-S#FI
-S+Re
 S/MIME
 S/MIME CA
 S/MIME Capabilities
 S/MIME email
 S/MIME encryption
 S/MIME signing
-S0F_
-S11b?
-S2zw
 SCRYPT_PARAMS
 SCT_CTX_new
 SCT_CTX_verify
@@ -8793,7 +7621,6 @@ SDL_GetError
 SDL_SetCurrentThreadPriority
 SDL_VIDEODRIVER
 SDL_VIDEO_DRIVER
-SDQn]
 SECG curve over a 112 bit prime field
 SECG curve over a 113 bit binary field
 SECG curve over a 128 bit prime field
@@ -8855,8 +7682,6 @@ SHA512-256
 SHAKE128
 SHAKE256
 SIPHASH
-SK?Nv
-SKyu
 SLEEP_BEFORE_ELEVATED_UPDATE
 SM2 curve over a 256 bit prime field
 SM2 routines
@@ -8875,7 +7700,6 @@ SMIME_text
 SMS code failed
 SNILS
 SNMPv2
-SPEED
 SPEI
 SRP-AES-128-CBC-SHA
 SRP-AES-256-CBC-SHA
@@ -9050,7 +7874,6 @@ STORE lib
 STORE routines
 STREAM_CLOSED
 STRENGTH
-STRING
 SUITEB128
 SUITEB128C2
 SUITEB128ONLY
@@ -9063,10 +7886,6 @@ SXNET_add_id_ulong
 SXNET_get_id_asc
 SXNET_get_id_ulong
 SXNetID
-S[TR
-S\fWj
-S\vQN
-S_gO
 SafeMode
 SafetyPay
 SalesTerritoryCode
@@ -9080,7 +7899,6 @@ SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 Saving metrics to disk (%s)
 Saving package (%s) failed.
 Saving unknown chunk:
-SbEwd
 Sberbank
 Scan script does not transmit all data
 ScheduledEvent
@@ -9137,7 +7955,6 @@ ServerPassword
 ServerPreference
 Service Read Only
 Service Unavailable
-ServiceDescriptorProto
 ServiceOptions
 Session Replaced
 SessionTicket
@@ -9216,7 +8033,6 @@ Sleeping for time
 SlotsAvailable
 Slovak
 Slovenian
-Sm"\vg
 Smoothing not supported with nonstandard sampling ratios
 Snooze
 SocketAlreadyClosed
@@ -9232,7 +8048,6 @@ Something else
 Sorani
 Sotho
 Source buffer is wrong
-SourceCodeInfo
 Spamming
 Spanish
 Speakers
@@ -9386,7 +8201,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Oct 13 2026 00:25:32
+Startup - updater built Oct 13 2026 18:44:21
 State
 StaticFileWriterThread()
 Steam
@@ -9495,12 +8310,7 @@ Symbol table grew beyond limit. Time to upgrade to a larger specialization of CU
 Synthetic oneofs must be after all other oneofs
 System
 System OS is not compatible with manifest OS type
-T*8U
-T0.S
-T00`P
-T5w?30d
 T61STRING
-TB)I
 TCP disconnect\n
 TCP send queue for send thread was above fatal limit %d for more than %d seconds, killing process.
 TELETEXSTRING
@@ -9700,9 +8510,7 @@ TLSv1.3 write server key update
 TMPDIR
 TOTAL RECV
 TOTAL SENT
-TPD2
 TPEDE
-TQ\v;83
 TRCC
 TRCCS
 TRCH
@@ -9713,7 +8521,6 @@ TRCS
 TRCV
 TREE
 TRFIN
-TRG7ts
 TRHR
 TRNP
 TRSC
@@ -9726,7 +8533,6 @@ TRST
 TRUE
 TRUSTED CERTIFICATE
 TSA server
-TSG.
 TS_ACCURACY_set_micros
 TS_ACCURACY_set_millis
 TS_ACCURACY_set_seconds
@@ -9920,15 +8726,10 @@ Turkish
 Turkmen
 Two-factor activation code mismatch
 Two-factor code mismatch
-Type
 Type appears to be in generated pool but wasn't
 Type is already registered:
 Type=
 Type=nil
-U$qk.
-U(Px(
-U)l:T^8rv\n
-U33f
 UDP Socket %i too full (%d bytes, warning limit %d)\n
 UDPSocket: ThreadedFunc_RecvUDP got error %d (%s) from socket %d, (invalid) hSocketOwner %d, we're not receiving on this socket now!\n
 UDPSocket: WSARecvFrom returned benign error %d, retrying\n
@@ -9975,12 +8776,6 @@ UTF-8 data when
 UTF8
 UTF8STRING
 UTF8String
-UUPx((
-UUUU
-UUUUUUUUUUUUUU<o(
-UUUUUUUUUUUa\f\v
-U`2d
-UiCL
 Ukrainian
 Unable to decrement IOCP eventfd, error %d
 Unable to determine CPU Frequency. Try defining CPU_MHZ.\n
@@ -10017,7 +8812,6 @@ Uninitialized row
 Uninstalled
 Uninstalling
 Uninterpreted option is missing name or value.
-UninterpretedOption
 UnionPay
 Universe
 Unknown
@@ -10137,18 +8931,13 @@ User is associated with multiple cafes
 User is not associated with any cafes
 User-Agent
 UserStatus
-UserSystemInformation
 Using the following download hosts for %s, Realm %s
 Using update UI: console
 Using update UI: glx
 Using update UI: xwin
-Ut]<E
 UtlThreadSafeQueue
 Uyghur
 Uzbek
-U|Ei
-V22dN::t
-V8zc5\e
 VAC beta
 VALVE_CRYPTO_dbg_free
 VALVE_CRYPTO_dbg_malloc
@@ -10161,7 +8950,6 @@ VISIBLE
 VISIBLESTRING
 VISTA
 VPROF Report for Thread: %d - %s\n
-VRa\r
 VSZa
 VSZd
 VTC Pay Cards
@@ -10211,7 +8999,6 @@ ValveOfficial
 Valve_SteamIPC_Class
 Variants Also Negotiates
 Vary
-Vc0a
 Verification complete
 Verification skipped
 Verify error:
@@ -10228,9 +9015,6 @@ Verifying executable file sizes only (quick mode)
 Verifying file sizes only
 Verifying installation...
 Version not supported
-Vg3LE
-VggjeK uO5n
-Vgh$
 Video
 Video Init Failed
 VideoPublished
@@ -10241,8 +9025,6 @@ Virtual array controller messed up
 Visa
 Visa (BoaCompra)
 Visa Electron (BoaCompra)
-Vql4
-W%0Qv4AV
 WARNING
 WARNING: %s='%s' does not allow fallback. Appending 'x11,windows'\n
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.\n
@@ -10308,7 +9090,6 @@ Warning: support for elevated priorities is most likely unavailable, suppressing
 Warning: thread priority outside allowed range %d\n
 Warning: thumbnail image size does not match data length %u
 Warning: unknown JFIF revision number %d.%02d
-Wcr"
 We we first discover the protobuf class used for a particular EMsg, log it
 WeChat
 Web API key registration ban
@@ -10385,7 +9166,6 @@ Wrong Price
 Wrong file size for %s. %d should be %d\n
 Wrong file size for %s. %llu should be %llu\n
 Wrote palette index exceeding num_palette
-Wza]lw\t
 X Error
 X-Forwarded-For
 X25519
@@ -10535,7 +9315,6 @@ X9cm
 XAllocClassHint
 XAllocSizeHints
 XAllocWMHints
-XBB0a
 XChangeProperty
 XChangeWindowAttributes
 XCheckIfEvent
@@ -10580,7 +9359,6 @@ XFreeExtensionList
 XFreeFontInfo
 XFreeFontNames
 XFreeGC
-XG[r
 XGetAtomName
 XGetErrorDatabaseText
 XGetErrorText
@@ -10597,7 +9375,6 @@ XGetWMNormalHints
 XGetWindowAttributes
 XGetWindowProperty
 XGrabPointer
-XH1l
 XIconifyWindow
 XInitThreads
 XInternAtom
@@ -10611,7 +9388,6 @@ XLookupString
 XMapRaised
 XMapWindow
 XMatchVisualInfo
-XMd~w
 XMoveResizeWindow
 XMoveWindow
 XNextEvent
@@ -10622,7 +9398,6 @@ XQueryExtension
 XQueryFont
 XQueryKeymap
 XQueryPointer
-XRJ2
 XRRFreeCrtcInfo
 XRRFreeOutputInfo
 XRRFreeScreenResources
@@ -10672,28 +9447,16 @@ XUnsetICFocus
 XVisualIDFromVisual
 XWarpPointer
 XXXXXX
-Xe7H&e
-XhHp
 Xhosa
 XkbKeycodeToKeysym
 XlibMessage
 XrmDestroyDatabase
 XrmGetResource
 XrmGetStringDatabase
-XsBI
 Xutf8TextListToTextProperty
-Xw:vP
-X|IQ
-Y1qh
-Y77n
-YU=E
 YYYY
-Y\trH5
 Yandex
 Yapi Kredi
-Yb6N4
-YbZ6[
-YeKlt
 YearOrMore
 Yielding (ready to run)
 YieldingFindDriveNameForPath
@@ -10701,7 +9464,6 @@ YieldingGetAvailableDrives
 YieldingGetFileSystemPosixDeviceNumber
 YieldingGetFileSystemStableId
 YieldingResolveHostNameOrIPWithPort
-YnFpW
 YooMoney
 Yoruba
 You are about to call a thread func on an object on the current stack - it will move while we yield!
@@ -10710,11 +9472,7 @@ You can't set a body manually AND set POST params
 You must refund this transaction to wallet
 You must type in
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
-YsRX
-Z-google.golang.org/protobuf/types/descriptorpb
 Z0000
-Z:hluv
-ZF]:Ba?
 ZINT32
 ZINT64
 ZLIB
@@ -10724,13 +9482,9 @@ ZSTD_trace_decompress_begin
 ZSTD_trace_decompress_end
 ZUINT32
 ZUINT64
-Z\fL+i
 Z_OK on Z_FINISH with output space
-Ze2Zh@
-ZiKw
 ZipToBuffer
 Ziraat Bank
-Zjz\v
 Zong
 Zulu
 [ func+child   func ]     Count\n
@@ -10747,9 +9501,7 @@ Zulu
 [HEX DUMP]:
 [Invalid]
 [M:%u:%u:%u]
-[S2k
 [TXN:%llu]
-[\nr5Z
 [abi:
 [active]
 [avg time]
@@ -10757,31 +9509,20 @@ Zulu
 [completed queue]
 [english]
 [friend]
-[h1R
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
 [no name available]
 [num threads]
 [packed = true] can only be specified for repeated primitive fields.
 [reset] Dump the histogram of protobuf message body sizes parsed, and how many were parsed on a worker thread
-[uCu
-[ucS
+[unknown string]
 [wait queue]
 \%02X
 \%03o
-\(a8Bk
-\44h
-\Nbl
-\SO7tsG
 \U%04lX
 \U%08x
 \W%08lX
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-\f"ICEqn.s
-\f%\f/\f1\fA\f[\f_\fa\fm\fs\fw\f
-\f1 VC
-\f<<0A1pq
-\fGB z
 \n            Not After :
 \n        Public key OCSP hash:
 \n    Actual    :
@@ -10792,9 +9533,6 @@ Zulu
 \n  Problem     :
 \n  Problem     : Enum value did not match field type:\n    Expected  :
 \n  Problem     : Field is not the right type for this message:\n    Expected  :
-\n UserContentDescriptorPreferences
-\n google/protobuf/descriptor.proto
-\n!\n1\n9\n=\nI\nW\na\nc\ng\no\nu\n{\n
 \n%*s
 \n%*sExtensions:
 \n%*sLog       : %s
@@ -10805,258 +9543,37 @@ Zulu
 \n%*sZone: %s, User:
 \n%12s%s
 \n%u frame functions of type %s:\n\n
-\n&CClientMetrics_ClientBootstrap_Summary
-\n*CClientMetrics_ClientBootstrap_RequestInfo
-\n-CClientMetrics_ContentDownloadResponse_Counts
-\n1CClientMetrics_ContentDownloadResponse_HostCounts
-\n2gQ\v\tU
-\n3wV
-\n:82H
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
-\nO1Ie
 \nPPid:\t
 \nParsing attempt:
 \nThis report shows all running jobs, organized into a tree based on what\nthey are waiting on.  If a job is waiting on X, then it will be indented\nand underneath X, a child in the tree.\n\nThe report contains three types of items:\n  - Jobs (prefixed by 'Job:')\n  - Things that jobs are waiting on (net messages, SQL, DBOs, memcached,\n    locks, HTTP, etc).  Note: a job can be a "thing a job is waiting on"\n\t(e.g. when it holds a lock), leading to a chain.\n  - Callers\n\nLegend:\n  Hier Jobs        :  Number of jobs in total, including this item and its descendants\n  Hier Avg Wait ms :  Average wait time (ms) of all jobs in this branch of the tree\n  Num Jobs         :  Number of jobs of this specific type waiting on this same cause chain\n  Job Avg Wait ms  :  Average wait time (ms) of the jobs of this type that have been waiting\n                      on this cause chain\n  Avg Job Dur ms   :  Average total job run time (ms).  Not just the time spent in the current\n                      yield.\n
-\nW2a
-\nYg:a
-\n\fFieldOptions
-\n\fLITE_RUNTIME
-\n\fSTRING_PIECE
-\n\fTYPE_FIXED32
-\n\fTYPE_FIXED64
-\n\fTYPE_MESSAGE
-\n\fbuild_branch
-\n\fclan_steamid
-\n\fcommentcount
-\n\fcountry_code
-\n\fdebug_source
-\n\fdouble_value
-\n\fh_steam_pipe
-\n\fignore_count
-\n\fis_extension
-\n\fjava_package
-\n\fk_EMsgBaseAM
-\n\fk_EMsgBaseBS
-\n\fk_EMsgBaseCM
-\n\fk_EMsgBaseCS
-\n\fk_EMsgBaseDP
-\n\fk_EMsgBaseGC
-\n\fk_EMsgBaseGM
-\n\fk_EMsgBaseSM
-\n\fk_EMsgBaseVS
-\n\fk_EMsgBaseWG
-\n\fk_EMsgCSBase
-\n\fk_EMsgCSPing
-\n\fk_EMsgFSBase
-\n\fk_EMsgGSDeny
-\n\fk_EMsgGSKick
-\n\fmanufacturer
-\n\fmessage_body
-\n\fplatform_mac
-\n\frtime_before
-\n\fruby_package
-\n\fscreen_width
-\n\fstring_value
-\n\fswift_prefix
-\n\ftime_expires
-\n\ftoken_source
-\n\nIDEMPOTENT
-\n\nTYPE_BYTES
-\n\nTYPE_FLOAT
-\n\nTYPE_GROUP
-\n\nTYPE_INT32
-\n\nTYPE_INT64
-\n\nboxed_type
-\n\ncpu_vendor
-\n\ndependency
-\n\ndeprecated
-\n\nevent_name
-\n\nfirst_name
-\n\ngo_package
-\n\ninput_type
-\n\nis_valveds
-\n\nk_EMsgExit
-\n\nk_EMsgPing
-\n\nmanage_ceg
-\n\nsystem_ram
-\n\nticket_crc
-\n\ntimeout_ms
-\n\nupdatetime
-\n\nvr_content
-\n\rCMsgAppRights
-\n\rMethodOptions
-\n\rTYPE_SFIXED32
-\n\rTYPE_SFIXED64
-\n\rclass_unknown
-\n\rcomment_count
-\n\rdefault_value
-\n\rdx_video_card
-\n\rerror_message
-\n\rfriendly_name
-\n\rk_EEventStart
-\n\rk_EMsgBaseAIS
-\n\rk_EMsgBaseATS
-\n\rk_EMsgBaseBRP
-\n\rk_EMsgBaseDFS
-\n\rk_EMsgBaseFBS
-\n\rk_EMsgBaseMDS
-\n\rk_EMsgBaseOGS
-\n\rk_EMsgBaseP2P
-\n\rk_EMsgCREBase
-\n\rk_EMsgDRMSync
-\n\rk_EMsgGMSBase
-\n\rk_EMsgInvalid
-\n\rk_EMsgKGSBase
-\n\rk_EMsgMMSBase
-\n\rk_EMsgRMRange
-\n\rk_EMsgSLCBase
-\n\rk_EMsgUCMBase
-\n\rk_EMsgUDSBase
-\n\rk_EMsgUGSBase
-\n\rk_EMsgUMQBase
-\n\rlauncher_type
-\n\rmanage_cdkeys
-\n\rnews_post_gid
-\n\rphp_namespace
-\n\rreply_address
-\n\rreserved_name
-\n\rrouting_appid
-\n\rrtime_created
-\n\rscreen_height
-\n\rserver_secret
-\n\rsize_unzipped
-\n\rtime_reserved
-\n\rtotal_time_ms
-\n\rupload_cdkeys
-\n\rvotedowncount
-\n\rwebapi_key_id
-\n\rwebsite_title
 \n\tIPSec/IKE/Oakley curve #3 over a 155 bit binary field.\n\tNot suitable for ECDSA.\n\tQuestionable extension field!
 \n\tIPSec/IKE/Oakley curve #4 over a 185 bit binary field.\n\tNot suitable for ECDSA.\n\tQuestionable extension field!
 \n\t\tChain Certificate %d:\n
-\n\tbase_name
-\n\tbeta_name
-\n\tclass_100
-\n\tclass_200
-\n\tclass_300
-\n\tclass_400
-\n\tclass_500
-\n\tedit_info
-\n\tevent_gid
-\n\tjson_name
-\n\tlast_name
-\n\tmap_entry
-\n\tname_part
-\n\tpackageid
-\n\tpublished
-\n\tqualified
-\n\trtime_end
-\n\ttrace_tag
-\n\ttype_name
-\n\tvram_size
-\n\tzip_plus4
-\n\vEnumOptions
-\n\vFileOptions
-\n\vTYPE_DOUBLE
-\n\vTYPE_SINT32
-\n\vTYPE_SINT64
-\n\vTYPE_STRING
-\n\vTYPE_UINT32
-\n\vTYPE_UINT64
-\n\vallow_alias
-\n\vdriver_date
-\n\vdx_deviceid
-\n\vdx_vendorid
-\n\vevent_notes
-\n\vk_EMsgAlert
-\n\vk_EMsgMulti
-\n\vk_EMsgStats
-\n\vno_response
-\n\vnum_retries
-\n\voneof_index
-\n\voutput_type
-\n\vpropagation
-\n\vrtime_after
-\n\vrtime_start
-\n\vsource_file
-\n\vsource_type
-\n\vstatus_code
-\n\vsteam_realm
-\n\vticket_type
-\n\vvoteupcount
-\n\vwebsite_url
 \nkhT
 \nlibpng version 1.6.37\nCopyright (c) 2018-2019 Cosmin Truta\nCopyright (c) 1998-2002,2004,2006-2018 Glenn Randers-Pehrson\nCopyright (c) 1996-1997 Andreas Dilger\nCopyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.\n
-\r!\r+\r-\r=\r?\rO\rU\ri\ry\r
-\r7AO\n
-\rEuR
-\rLAM
-\rMinghuaQu\f
-\rRoOs
-\rSNo
-\rUhF
-\r\n\tCODE_SIZE
-\r\n\tJS_NORMAL
-\r\n\tJS_NUMBER
-\r\n\tJS_STRING
-\r\n\tTYPE_BOOL
-\r\n\tTYPE_ENUM
-\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\ri1I
-\rmj>zjZ
-\sG7tPD
-\t#\t%\t+\t/\t5\tC\tI\tM\tO\tU\tY\t_\tk\tq\tw\t
 \t%d items : %s - %s:%d\n
 \t(%zu) comparing %s with %s\n
 \t*** %s - %s - (had more work last frame!!) ***\n
-\t-f3F2
-\t6trF
-\tHAI8xpH\f
-\tOkI
-\tOzG\r
 \tValidate Failed: leaked connection to %s\n
 \tValidate Failed: leaked file '%s'\n
 \tValidate Failed: leaked socket remote address %s\n
-\t\tCJAAQ
 \t\tExpiration: %s\n
 \t\tHostnames:\n
 \t\tIssuer hash: 0x%08X\n
 \t\tIssuer: %s\n
 \t\tSerial: %s\n
 \t\tSubject: %s\n
-\t\t\n\n\v\v\f\f\f\f\r\r\r\r
 \t\t\t\t\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\t\taJj
-\ttqE5
-\twl]azW
-\txYn
 \u%04x
 \u000
 \u001
-\v#\v)\v-\v?\vG\vQ\vW\v]\ve\vo\v{\v
-\vHCK/
-\vZ\nyVR
-\v\vTSG
-\vjFF\r
-\vow5
 \vssh-ed25519
 \x%02x
-]JldN
-]gy73
-^1kW3
-^4MZ
-^CuY
-^DQQI
-^J_spY
-^QyY
-^oEZ_
-_55j
 _DIR
 _ExitOnFatalAssert\n
 _Float
 _GLOBAL_
-_H^zvd
 _ITM_RU1
 _ITM_RU8
 _ITM_addUserCommitAction
@@ -11067,7 +9584,6 @@ _ITM_registerTMCloneTable
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
 _STEAM_SETENV_MANAGER
-_TbF~
 __MACOSX/
 __assert_fail
 __ctype_b_loc
@@ -11127,28 +9643,13 @@ __xmknod
 __xpg_strerror_r
 __xstat
 __xstat64
-_a7C
 _english.txt
 _exit
-_g@Cg
 _input
-_jbF~T
 _label
 _longjmp
-_rDd
 _setjmp
-_xU`u
-`3QbE
-`3SbE
-`D$daM-l
-`H(hqA1p
-`P00
-`URp
-`VX:H
 `YfA
-`fPw.\vM
-`tun%
-`yNT
 a null shared library handle was used
 a->namelen == 0
 a->valuelen == 0
@@ -11157,26 +9658,17 @@ a2d_ASN1_OBJECT
 a2i_ASN1_INTEGER
 a2i_ASN1_STRING
 a2i_GENERAL_NAME
-a5<p
-a5j_5W
-a8Bk
 aDSS
 aECDSA
 aGOST
 aGOST01
 aGOST12
-aI)h
 aNULL
 aPSK
 aRSA
-aRe.
 aRecord
 aSRP
-a\rxg[
-a\v3rB
 aaControls
-aaY8GG
-aaj_55
 aarch64
 abort
 about to perform blocking dns call from the main thread.  consider refactoring.\n
@@ -11207,10 +9699,8 @@ account flags changed
 acpitz
 acpt_state
 active
-actual_hostname
 ad dvcs
 ad_timestamping
-adapter_description
 add signer error
 addProfessionInfo
 add_cert_dir
@@ -11218,22 +9708,14 @@ add_key_share
 adding object
 additional input too long
 additional verification
-additional_includes
 addrListening.HasIP()
 addr_strings
 addr_validate_path_internal
-address1
-address2
 addressFamily
-address_of_request_url
 addressinfo
 addrinfo addr is not af inet
 addrinfo_wrap
-admin_request_spoofing_steamid
-admin_spoofing_user
 admissionAuthority
-adult_content_sex
-adult_content_violence
 aes key setup failed
 aes-128-cbc
 aes-128-cbc-hmac-sha1
@@ -11290,8 +9772,6 @@ aesni_init_key
 aesni_xts_init_key
 affiliationChanged
 afrikaans
-aggregate_value
-aiKwZ
 airtel
 akamai
 akid mismatch
@@ -11311,7 +9791,6 @@ allo
 allocator
 allotmswe
 allow
-allow_field_named_steam_id
 allow_no_dhe_kex
 allowed in proto3.
 alnum
@@ -11341,18 +9820,14 @@ announcement created
 announcement deleted
 announcement failed content check
 announcement updated
-announcement_body
-announcement_gid
 anonymous
 ansi-X9-62
 anti_replay
 anyExtendedKeyUsage
 anyPolicy
 app data in handshake
-app_type
 append=
 append_exp
-appid
 appl [ %d ]
 application
 application data after close notify
@@ -11517,7 +9992,6 @@ auth-psk
 auth-rsa
 auth-srp
 authAttrs
-auth_account_flags
 auth_attr
 authority and issuer serial number mismatch
 authority and subject key identifier mismatch
@@ -11533,11 +10007,9 @@ automatic
 aux error
 availableSpace
 avg time
-aybSr
 azerbaijani
 azure
 a|G2
-b,uZ
 b->namelen == 0
 b->valuelen == 0
 b052ddf9b939bbdddc88ecbd5b97a923f1b56c8dc80d085f759886a42004cd15
@@ -11546,21 +10018,11 @@ b2i_dss
 b2i_rsa
 b64_new
 b64_read_asn1
-bB"`3
 bForceRequeue || m_unThreadBytesToRead == 0 || m_eResultRunSSL != k_EResultOK
-bGu\r
-bJ*h
 bKGD
 bKGD must be after
-bN.l
-bS11*?
 bSuccess || pWorkItem->HasTimedOut()
 bUseIOCP
-bV}TS
-b\fLM%
-b\fzUkm
-b\nS)7
-b]jY
 background color must be supplied to remove alpha/transparency
 backlog
 backtrace
@@ -11641,9 +10103,7 @@ bad x509 filetype
 bad_function_call
 baishancloud
 baked in
-ban_check_result
 bangla
-banned
 banned from chat
 base
 base64 decode error
@@ -11685,7 +10145,6 @@ basic_string::substr
 basic_string_view::substr
 basque
 before SSL initialization
-begin
 belarusian
 bellcanada
 beta
@@ -11729,7 +10188,6 @@ block type is not 02
 blockSize
 blowfish
 blowfish(ptr)
-bmNP
 bmpstring is wrong length
 bn dec2bn error
 bn decode error
@@ -11745,7 +10203,6 @@ bnrand
 bnrand_range
 bodies pre-parsed and never used (%s bytes)
 bodies skipped as client-relayed
-body
 body pre-parses discarded by a second wrapper
 body size
 bool
@@ -11773,16 +10230,13 @@ brainpoolP512r1
 brainpoolP512t1
 brazilian
 broadcast
-broadcast_live
 broadcastchat
-broadcaster_accountid
 broadcastgamedata
 broadcastmanifests
 broadcastorigin
 broken pipe
 browser
 btowc
-bucket
 buf error
 buf->pos == buf->last
 buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
@@ -11805,12 +10259,9 @@ buflen >= 2 + encoded_len_bytes
 bufs->head == bufs->cur
 bugs
 build_chain
-build_id
 buildingName
 bulgarian
 businessCategory
-bvVd
-bwiO'
 by_file_ctrl
 byte
 bytes
@@ -11818,12 +10269,10 @@ bytes.
 bytes=
 bytes=%llu-%llu
 bytesTransferred >= 0
-bytes_received
 bytes_to_cipher_list
 c ap traffic
 c e traffic
 c hs traffic
-c!!B0
 c2i_ASN1_BIT_STRING
 c2i_ASN1_INTEGER
 c2i_ASN1_OBJECT
@@ -11870,12 +10319,10 @@ cHRM White Y
 cHRM chunk does not match sRGB
 cMicrosecondsToSleep < k_cMicroSecJobPausedTimeout
 cNAMERecord
-cO!r
 cRLSign
 cRefCount >= 0
 cSecs >= 0
 cSeqsAcked > 0
-cU!\f}QP
 ca dn length mismatch
 ca key too small
 ca md too weak
@@ -12029,8 +10476,6 @@ category_9
 cbActual < (uint32)nBufSizeWithTerminator
 cbPropsOut == LZMA_PROPS_SIZE
 ccMax >= 1
-cc_enable_arenas
-cc_generic_services
 cchEncodedData > 0
 cchEncodedData >= ( cubData * 2 ) + 1
 ccs received early
@@ -12086,7 +10531,6 @@ char32_t
 char8_t
 characteristic-two-field
 chat
-chc1
 chdir
 check invalid j value
 check invalid q value
@@ -12129,9 +10573,6 @@ cipher parameter initialisation error
 ciphersuite digest has changed
 ciphersuite_cb
 ciphersuites
-city
-clamp_range_slot
-clanid
 class
 cleanup method function failed
 clearance
@@ -12148,12 +10589,9 @@ client/UDPSocket/RecvPacket
 client/UDPSocket/SentBytes
 client/UDPSocket/SentPacket
 clientAuth
-client_sessionid
 client_sigalgs
-client_streaming
 clienthello tlsext
 clientmetrics.proto
-clientmetrics.proto"
 clientui
 clientui.so
 clientupdatehosts
@@ -12166,7 +10604,6 @@ closedir
 closing session
 cloud
 clping
-cm_sysid
 cmac
 cmcCA
 cmcRA
@@ -12216,10 +10653,8 @@ coefficient%d:
 coefficient:
 cofactor
 collect_data
-collection_time_active
 color map overflow (BAD internal error)
 color-map index out of range
-com.google.protobufB
 com.valvesoftware.steam
 comcast
 comcastoffnet
@@ -12231,7 +10666,6 @@ common libcrypto routines
 common ok and cancel characters
 commonName
 community
-community_visible_stats
 comp
 comp_id
 compatible
@@ -12308,9 +10742,6 @@ content-type
 contentEncryptionAlgorithm
 contentType
 content_adaptive_brightness
-content_descriptorid
-content_descriptorids
-content_descriptors_to_exclude
 content_type
 contenthubs
 contentidentifier mismatch
@@ -12416,10 +10847,8 @@ countryCode3n
 countryName
 country_codes
 countrycodes
-counts
 covalensolutions.com
 covariant return thunk to
-cpu_name
 crashhandler.so
 crashhandler002
 crashhandler003
@@ -12427,7 +10856,6 @@ crashhandler004
 crc_header_mismatch
 create_synthetic_message_hash
 create_ticket_prequel
-creator_steamid
 critical
 critical,
 crl already delta
@@ -12727,7 +11155,6 @@ crypto/x509v3/v3_utl.c
 cryptocom
 cryptopro
 cs_CZ
-csharp_namespace
 ct_base64_decode
 ct_cert_scts
 ct_move_scts
@@ -12744,7 +11171,6 @@ ctrl error
 ctrl failure
 ctrl not implemented
 ctrl operation not implemented
-ctype
 cubBuffer >= cbWritten + ( m_pNetPacket->CubData() - cubSkip )
 cubBuffer >= cbWritten + m_ReplacementBody.Count()
 cubBytesToRead < INT32_MAX
@@ -12845,13 +11271,7 @@ d=%-2d hl=%ld l=%4ld
 d=%-2d hl=%ld l=inf
 dITRedirect
 dNSDomain
-dPH/
-dPq\n
-dQy/
 dSAQuality
-dV22tN::
-dZ!2.
-dZK<),F8
 da_DK
 damaged LZ stream
 dane already enabled
@@ -12893,7 +11313,6 @@ days
 dcObject
 dcobject
 de_DE
-debug_source_string_index
 decimal128
 decimal32
 decimal64
@@ -12969,7 +11388,6 @@ desx
 desx-cbc
 detached content
 detect_self_dependency
-df)r
 dfxp
 dgettext
 dgram_sctp_new
@@ -13039,14 +11457,12 @@ disabled
 disabled group
 disconnected
 discriminant is zero
-discussion_url
 disk
 diskSize
 distinguishedName
 distpoint
 distpoint already set
 div by zero
-dlCz
 dl_bind_func
 dl_iterate_phdr
 dl_load
@@ -13110,8 +11526,6 @@ domainRelatedObject
 done
 done!\n
 double
-download
-download_completed
 dpkg-query -s steamos-updatelevel | grep Version | cut -d' ' -f2
 dprintf
 drbg already initialized
@@ -13120,7 +11534,6 @@ drbg_bytes
 drbg_get_entropy
 drbg_setup
 driver
-driver_version
 dsa routines
 dsaEncryption
 dsaEncryption-old
@@ -13146,8 +11559,6 @@ dsa_with_SHA3-512
 dsa_with_SHA384
 dsa_with_SHA512
 dso already loaded
-dst_gc_dir_index
-dst_gcid_queue
 dstu28147
 dstu28147-cfb
 dstu28147-ofb
@@ -13181,11 +11592,9 @@ duplicate sRGB information ignored
 duplicate zone id
 dutch
 dvcs
-dx_driver_version
 dylib
 dynamic_cast
 e exp master
-e+ZQT
 eConnectionMode == k_EConnectionModeClient
 eContent
 eContentType
@@ -13197,11 +11606,8 @@ eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
 eKeyType == k_ECryptoKeyTypeRSAPublic
 eMsg != k_EMsgInvalid
 eNULL
-ePts
 eVerifyLevel == EVerifyLevel::k_EQuick
 eXIf
-e\Gg77
-e\roL
 eaFO
 early_data_count_ok
 ec group new by name failure
@@ -13296,8 +11702,6 @@ eckey_priv_encode
 eckey_pub_decode
 eckey_pub_encode
 eckey_type2param
-economy_support
-economy_support_supervisor
 ecp_nistz256_get_affine
 ecp_nistz256_inv_mod_ord
 ecp_nistz256_mult_precompute
@@ -13311,11 +11715,7 @@ ed25519
 ed448
 edgenext
 edgio
-edit_marketing
-edit_store_display_content
 ee key too small
-eeX=
-ei\t&H
 el_GR
 elliptic curve routines
 email
@@ -13350,8 +11750,6 @@ encrypted track 2
 encryptedContent
 encryptedContentInfo
 encryptedKey
-encrypted_contents
-encrypted_font_files
 encryption
 encryption ctrl failure
 encryption not supported for this key type
@@ -13366,7 +11764,6 @@ entropy input too long
 entropy out of range
 enum
 enums_clientserver.proto
-enums_clientserver.proto*
 enveloped-data
 environ
 epoch
@@ -13379,7 +11776,6 @@ epoll_ctl queue MOD failed with error %d
 epoll_ctl rearm MOD failed with error %d
 epoll_wait
 epoll_wait() failed: %d\n
-eresult
 err:%lx:%lx:%lx:%lx
 errno
 errno=
@@ -13428,7 +11824,6 @@ ess_add_signing_cert
 ess_add_signing_cert_v2
 ess_cert_id_v2_new_init
 ess_signing_cert_v2_new_init
-estate
 estonian
 etag
 eurotransit
@@ -13436,13 +11831,10 @@ event created
 event deleted
 event updated
 eventfd
-events
 evp_EncryptDecryptUpdate
-ewh/?y
 exceeds application limits
 exceeds max fragment size
 excessive message size
-exclude_client_sessionids
 excluded
 excluded subtree violation
 excludedSubtrees
@@ -13474,7 +11866,6 @@ expecting private key blob
 expecting public key blob
 experimental
 expire
-expired
 expires
 explicit
 explicit length mismatch
@@ -13496,7 +11887,6 @@ extended master secret
 extendedCertificateAttributes
 extendedKeyUsage
 extendedStatus
-extendee
 extension
 extension exists
 extension name error
@@ -13505,21 +11895,12 @@ extension not received
 extension setting not supported
 extension value error
 extension[0] == '.'
-extension_range
 extensions
 external
 externaltests.so
 extra compressed data
 extra data in message
-f&dy
-f.N%H
 f17b6178030a3149805d92b9ce0f681b1d37f7085a66e7f60acf31bc892f2f86
-f;\fu8
-fC\tc
-fG;P^
-fNt7
-fP[J@8OLz
-fP~V
 faccessat
 facsimileTelephoneNumber
 failed to base64 encode value
@@ -13538,9 +11919,6 @@ failed to swap context
 failure
 fallocate64
 false
-false"
-false:J\n
-falseB
 fastly
 fatal
 favouriteDrink
@@ -13562,7 +11940,6 @@ feature_mouseregion
 feature_none
 feature_radialmenu
 feature_touchmenu
-featured_app_tagid
 feof
 ferror
 ffdhe2048
@@ -13575,7 +11952,6 @@ fflush()
 fgetc
 fgets
 fi_FI
-field
 field missing
 field too large
 field=
@@ -13624,7 +12000,6 @@ first octet invalid
 fixed point overflow ignored
 fixed32
 fixed64
-fjW>J
 flags
 float
 flock
@@ -13634,10 +12009,8 @@ flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 floor
 flushing
 fnmatch
-follower_count
 fontFile.encrypted_contents().size() <= INT_MAX
 fontFileDecrypted.opentype_font_data().size() <= INT_MAX
-font_file_name
 fopen
 fopen %s failed: %s\n
 fopen('
@@ -13649,13 +12022,10 @@ format error in CRL's lastUpdate field
 format error in CRL's nextUpdate field
 format error in certificate's notAfter field
 format error in certificate's notBefore field
-forum_topic_id
-forward_to_sysid
 foundEndOfCentralDirRecord
 fprintf
 fputc
 fputs
-fqi\tH
 fr-FR
 fr_FR
 fragmented client hello
@@ -13677,7 +12047,6 @@ friendlyName
 friends
 friendsui.so
 from
-fsSWR
 fs_debug
 fs_debug: %s\n
 fseek
@@ -13685,11 +12054,9 @@ fseeko64
 fstat
 fsync
 fsync %s failed, errno = %d\n
-ft1k
 ftell
 ftello64
 ftruncate64
-fu`z
 full
 fullname
 func(%lu)
@@ -13697,10 +12064,6 @@ functionality not supported
 futimes
 fwrite
 gAMA
-gAY:
-gB>d
-gK99r
-gZFySTa(
 g_CompletionPortManager.BStarted()
 g_FileSystem_Stdio
 g_LocalSubnetsThisBox
@@ -13742,9 +12105,6 @@ gai_strerror
 galician
 galileo
 game
-game_resolution_height
-game_resolution_width
-gameid
 gameitemid
 gameoverlayrenderer.so
 gamepad+mouse.vdf
@@ -13753,7 +12113,6 @@ gamepad_fps.vdf
 gamepad_joystick.vdf
 gamepad_platformer.vdf
 gameserver
-gaming_device_type
 gamma table being rebuilt
 gamma value
 gamma value does not match libpng estimate
@@ -13765,7 +12124,6 @@ general_allocate_boolean
 general_allocate_prompt
 generate cryptogram
 generate error
-generate_cdkeys
 generate_key
 generationQualifier
 generator:
@@ -13815,7 +12173,6 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
 givenName
 glBegin
 glBindTexture
@@ -13860,7 +12217,6 @@ gnames_from_sectname
 gnu_get_libc_version
 good
 google
-google.protobuf"G\n
 google.protobuf.
 google.protobuf.Any
 google.protobuf.BoolValue
@@ -13987,7 +12343,6 @@ gostr3411-2012-512
 gostr3411-94
 got a fin before a ccs
 goto done\n
-gqr<
 graph
 grasshopper-cbc
 grasshopper-cfb
@@ -14016,25 +12371,13 @@ gurmukhi
 gzip
 gzip, deflate
 gzip,identity,*;q=0
-h2Wl
-h8,4$
 hConnection == m_hConnection
-hHpX
 hIST
 hIST must be after
-hPU3
 hQueue != -1
-hR}S
-hU&qx
-h\44Q
-h\f90
-h`TM
 half
 handshake failure
 hardware
-has_adult_content
-has_adult_content_sex
-has_adult_content_violence
 hash
 hashAlgorithm
 hashFunc
@@ -14047,7 +12390,6 @@ header crc mismatch
 header too long
 header-only packets with no parsed pair left: %s !!\n
 headers_frame->hd.type == NGHTTP2_HEADERS
-headline
 heartbeat request already pending
 hebrew
 hex:
@@ -14057,13 +12399,11 @@ hexpass
 hexsalt
 hexsecret
 hexseed
-hidden
 hidden alias for
 high
 highwinds
 hindi
 hkdf
-hl\tJ3o
 hmac
 hmac-md5
 hmac-sha1
@@ -14080,7 +12420,6 @@ hmacWithSHA384
 hmacWithSHA512
 hmacWithSHA512-224
 hmacWithSHA512-256
-hm~iD
 holdInstructionCallIssuer
 holdInstructionCode
 holdInstructionNone
@@ -14089,8 +12428,6 @@ homePostalAddress
 homeTelephoneNumber
 host
 host=
-hostname
-hosts
 hotfix finished
 hotfix started
 hour
@@ -14125,8 +12462,6 @@ httpserver
 hu_HU
 hungarian
 hwmon*
-hxi(j
-h~0Q.
 i + 1 < blk->n
 i < blk->n - 1
 i < iframe->niv
@@ -14154,12 +12489,10 @@ i2s_ASN1_ENUMERATED
 i2s_ASN1_IA5STRING
 i2s_ASN1_INTEGER
 i2v_AUTHORITY_INFO_ACCESS
-i91k
 iA5StringSyntax
 iCCP
 iCCP: invalid keyword
 iDEAL
-iFjt
 iGenerateRandomNumberRetry < 300
 iIP < g_vecIPv4ThisBox.Count()
 iIP < g_vecIPv6ThisBox.Count()
@@ -14201,12 +12534,9 @@ iTXt
 iTXt: invalid compression
 iTXt: invalid keyword
 iTXt: uncompressed text too long
-i\fD8
-i]Wb
 ia5org
 iana
 icelandic
-icon
 iconv
 iconv_close
 iconv_open
@@ -14516,9 +12846,7 @@ idea-cbc
 idea-cfb
 idea-ecb
 idea-ofb
-idempotency_level
 identified-organization
-identifier_value
 identity
 identity,*;q=0
 idp mismatch
@@ -14539,13 +12867,10 @@ if-unmodified-sinc
 if-unmodified-since
 if1R
 iframe->state == NGHTTP2_IB_IGN_ALL
-ig,o
 igbo
 ignored in grayscale PNG
 ignoring out of range rgb_to_gray coefficients
-ihD5
 iio:device*
-ilRdV
 illegal Suite B digest
 illegal bitstring format
 illegal boolean
@@ -14822,11 +13147,8 @@ ios_base::_M_grow_words allocation failed
 ios_base::_M_grow_words is not valid
 iostream
 iostream error
-ip"R\n
 ipAddressChoice
-ip_addr"
 ip_country_code
-ip_v6
 ipsec Internet Key Exchange
 ipsec3
 ipsec4
@@ -14841,9 +13163,7 @@ iqmp not inverse of q
 irish
 is NULL
 is not a
-is_from_external_source
 is_large()
-is_visible_in_steam_china
 is_websocket_connect
 isalnum
 isalpha
@@ -14877,21 +13197,12 @@ iter
 itu-t
 iv gen error
 ixaustralia
-izc}
-i~wKVA\
-jL?1]
-jZ=F
 ja_JP
 janetMailbox
 japanese
 jastel
 java Class for
 java resource
-java_generate_equals_and_hash
-java_generic_services
-java_multiple_files
-java_outer_classname
-java_string_check_utf8
 job pool
 job.m_STimePauseTimeout.LTime() >= CSTime::LServerTimeCur()
 job.m_ePauseReason == k_EJobPauseReasonWaitingForLock
@@ -14901,11 +13212,8 @@ jobMsgInfo.m_EMsg != 0
 job_metrics
 joined the group
 joint-iso-itu-t
-jrml[Q
 json
 json_name = "
-jsondata
-jstype
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
 jupiter
 jurisdictionC
@@ -14914,11 +13222,7 @@ jurisdictionL
 jurisdictionLocalityName
 jurisdictionST
 jurisdictionStateOrProvinceName
-jwK\v\n
-j|Ym
 k10temp
-k2U\v
-k53i
 kDHE
 kDHEPSK
 kECDHE
@@ -14926,452 +13230,50 @@ kECDHEPSK
 kEDH
 kEECDH
 kGOST
-kLg\t
-kNGY|(
 kPSK
 kRSA
 kRSAPSK
 kSRP
-kV!DA
-k\r"pbA
-k_EBanContentCheckResult_Likely
-k_EBanContentCheckResult_Reset
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
-k_EClanBetaReleaseEvent
-k_EClanBroadcastEvent
-k_EClanChatEvent
-k_EClanCreatorHome
-k_EClanCrosspostEvent
-k_EClanDLCReleaseEvent
-k_EClanDevStreamEvent
-k_EClanFamousStreamEvent
-k_EClanFreeTrial
-k_EClanFutureReleaseEvent
-k_EClanGameEvent
-k_EClanGameItemSalesEvent
-k_EClanGameReleaseEvent
-k_EClanGameSalesEvent
-k_EClanIRLEvent
-k_EClanInGameBonusXPEvent
-k_EClanInGameChallengeEvent
-k_EClanInGameContestEvent
-k_EClanInGameEventGeneral
-k_EClanInGameLootEvent
-k_EClanInGamePerksEvent
-k_EClanMajorUpdateEvent
-k_EClanMeetingEvent
-k_EClanMusicAndArtsEvent
-k_EClanNewsEvent
-k_EClanOtherEvent
-k_EClanPartyEvent
-k_EClanSeasonRelease
-k_EClanSeasonUpdate
-k_EClanSmallUpdateEvent
-k_EClanSpecialCauseEvent
-k_EClanSportsEvent
-k_EClanTripEvent
-k_EClientPersonaStateFlagStatus
-k_ECodecUsagePlatformLinux
-k_ECodecUsagePlatformMacOS
-k_ECodecUsagePlatformUnknown
-k_ECodecUsagePlatformWindows
-k_ECodecUsageReasonBroadcasting
-k_ECodecUsageReasonGameVideo
-k_ECodecUsageReasonRemotePlay
-k_ECodecUsageReasonUnknown
 k_EConnectionModeClient == m_pNetConnection->m_EConnectionMode
 k_EConnectionStateConnecting == m_EConnectionState
 k_EConnectionStateUnconnected == m_EConnectionState
 k_EConnectionTypeTCP == GetConnectionType( hConnection )
 k_EConnectionTypeUDP == GetConnectionType( hConnection )
 k_EConnectionTypeWebSocket == GetConnectionType( hConnection )
-k_EEventBroadcastStart
-k_EEventMatchStart
-k_EEventPartnerMaxType
-k_EGamePerformanceSetting_High
-k_EGamePerformanceSetting_Low
-k_EGamePerformanceSetting_Ultra
 k_EHandshakeStateComplete == m_EHandshakeState
 k_EHandshakeStateInProgress == m_EHandshakeState
 k_EIPTypeV4 == addr.GetType()
-k_EMRouteMessage
 k_EMSgNonStdMsgSyslog
-k_EMsgAIGetAppGCFlags
-k_EMsgAIGetAppGCFlagsResponse
-k_EMsgAIGetAppList
-k_EMsgAIGetAppListResponse
-k_EMsgAISGetPackageChangeNumber
-k_EMsgAMAccountPS3Unlink
-k_EMsgAMAcctAllowedToPurchase
-k_EMsgAMAddFounderToClan
-k_EMsgAMAddFreeLicense
-k_EMsgAMAddFreeLicenseResponse
-k_EMsgAMAddFriend
-k_EMsgAMAddFriendResponse
-k_EMsgAMAddLicense
-k_EMsgAMAddMinutesToLicense
-k_EMsgAMAuthenticateUser
-k_EMsgAMAuthenticatedPlayerList
-k_EMsgAMBanFromChat
-k_EMsgAMBitPayPayment
-k_EMsgAMBitPayPaymentResponse
-k_EMsgAMBoaCompraPayment
-k_EMsgAMCancelEasyCollect
-k_EMsgAMCancelLicense
-k_EMsgAMCancelPurchase
-k_EMsgAMChallengeNotification
-k_EMsgAMChallengeVerdict
-k_EMsgAMChangeClanOwner
-k_EMsgAMChatActionResult
-k_EMsgAMChatCleanup
-k_EMsgAMChatEnter
-k_EMsgAMChatInvite
-k_EMsgAMChatMulti
-k_EMsgAMCheckClanMembership
-k_EMsgAMClaimUnownedUserGift
-k_EMsgAMClanCleanup
-k_EMsgAMClanCleanupList
-k_EMsgAMClanDataUpdated
-k_EMsgAMClanPermissions
-k_EMsgAMClanPermissionsResponse
-k_EMsgAMClansInCommon
-k_EMsgAMClansInCommonCount
-k_EMsgAMClansInCommonResponse
-k_EMsgAMClearDispute
 k_EMsgAMClientAddFriendToGroup
 k_EMsgAMClientAddFriendToGroupResponse
-k_EMsgAMClientChatActionRelay
-k_EMsgAMClientChatInviteRelay
-k_EMsgAMClientChatMsgRelay
 k_EMsgAMClientCreateFriendsGroup
 k_EMsgAMClientCreateFriendsGroupResponse
 k_EMsgAMClientDeleteFriendsGroup
 k_EMsgAMClientDeleteFriendsGroupResponse
-k_EMsgAMClientJoinChatRelay
 k_EMsgAMClientManageFriendsGroup
 k_EMsgAMClientManageFriendsGroupResponse
-k_EMsgAMClientNotPlaying
 k_EMsgAMClientRemoveFriendFromGroup
 k_EMsgAMClientRemoveFriendFromGroupResponse
-k_EMsgAMClientRequestFriendship
 k_EMsgAMClientSetPlayerNickname
 k_EMsgAMClientSetPlayerNicknameResponse
-k_EMsgAMConvertWallet
-k_EMsgAMConvertWalletResponse
-k_EMsgAMCreateChargeback
-k_EMsgAMCreateChat
-k_EMsgAMCreateChatResponse
-k_EMsgAMCreateClan
-k_EMsgAMCreateClanResponse
-k_EMsgAMCreateDispute
-k_EMsgAMCreateRefund
-k_EMsgAMDegicaPayment
-k_EMsgAMDegicaPaymentResponse
-k_EMsgAMDeleteStoredCard
-k_EMsgAMDeleteStoredPaymentInfo
-k_EMsgAMDumpClan
-k_EMsgAMDumpUser
-k_EMsgAMEClubPayment
-k_EMsgAMEClubPaymentResponse
-k_EMsgAMECommPayPayment
-k_EMsgAMECommPayPaymentResponse
-k_EMsgAMEditBanReason
-k_EMsgAMExtendLicense
-k_EMsgAMFinalizePurchase
-k_EMsgAMFindAccounts
-k_EMsgAMFindAccountsResponse
-k_EMsgAMFindClanUser
-k_EMsgAMFindClanUserResponse
-k_EMsgAMFindGSByIP
-k_EMsgAMFindHungTransactions
-k_EMsgAMFixPendingPurchase
-k_EMsgAMFixPendingRefund
-k_EMsgAMFoundGSByIP
-k_EMsgAMFriendsInCommon
-k_EMsgAMFriendsInCommonResponse
-k_EMsgAMFriendsList
-k_EMsgAMFriendsListResponse
-k_EMsgAMFundedPayment
-k_EMsgAMFundedPaymentResponse
-k_EMsgAMGMSGameServerRemove
-k_EMsgAMGMSGameServerUpdate
-k_EMsgAMGSSearch
 k_EMsgAMGameServerRemove
 k_EMsgAMGameServerUpdate
-k_EMsgAMGetAccountBanInfo
-k_EMsgAMGetAccountDetails
-k_EMsgAMGetAccountDetails2
-k_EMsgAMGetAccountEmailAddress
-k_EMsgAMGetAccountPSNInfo
 k_EMsgAMGetAccountResetDetailsRequest
 k_EMsgAMGetAccountResetDetailsResponse
-k_EMsgAMGetAccountStatus
-k_EMsgAMGetChatBanList
-k_EMsgAMGetChatBanListResponse
-k_EMsgAMGetClanDetails
-k_EMsgAMGetClanDetailsResponse
-k_EMsgAMGetClanHistory
-k_EMsgAMGetClanHistoryResponse
-k_EMsgAMGetClanMembers
-k_EMsgAMGetClanMembersResponse
-k_EMsgAMGetClanOfficers
-k_EMsgAMGetClanOfficersResponse
-k_EMsgAMGetClanPOTW
-k_EMsgAMGetClanPOTWResponse
-k_EMsgAMGetClanPermissionBits
-k_EMsgAMGetClanRank
-k_EMsgAMGetClanRankResponse
-k_EMsgAMGetFriendRelationship
-k_EMsgAMGetFriendsLobbies
-k_EMsgAMGetGSPlayerList
-k_EMsgAMGetGSPlayerListResponse
-k_EMsgAMGetIgnored
-k_EMsgAMGetIgnoredResponse
-k_EMsgAMGetLegacyGameKey
-k_EMsgAMGetNameHistory
-k_EMsgAMGetNameHistoryResponse
-k_EMsgAMGetPaypalAgreements
-k_EMsgAMGetPlayerBanDetails
-k_EMsgAMGetPlayerLinkDetails
-k_EMsgAMGetPreviousCBAccount
-k_EMsgAMGetPurchaseStatus
-k_EMsgAMGetSteamIDForMicroTxn
-k_EMsgAMGetStoredPaymentSummary
-k_EMsgAMGetUserClansNews
-k_EMsgAMGetUserCurrentGameInfo
-k_EMsgAMGetUserGifts
-k_EMsgAMGetUserGiftsResponse
-k_EMsgAMGetUserGroupStatus
-k_EMsgAMGetUserLicenseHistory
-k_EMsgAMGetUserLicenseList
-k_EMsgAMGetWalletConversionRate
-k_EMsgAMGetWalletDetails
-k_EMsgAMGiftRevoked
-k_EMsgAMGrantCoupon
-k_EMsgAMGrantCouponResponse
-k_EMsgAMGrantGuestPasses
-k_EMsgAMGrantGuestPasses2
-k_EMsgAMInitPurchase
-k_EMsgAMInitPurchaseResponse
-k_EMsgAMIsAccountNameInUse
-k_EMsgAMIsUserBanned
-k_EMsgAMIsValidAccountID
-k_EMsgAMKickUserFromClan
-k_EMsgAMLeaveClan
-k_EMsgAMLoadActivationCodes
-k_EMsgAMLookupKey
-k_EMsgAMLookupKeyResponse
-k_EMsgAMMOLPayment
-k_EMsgAMMOLPaymentResponse
-k_EMsgAMNameChange
-k_EMsgAMNewChallenge
-k_EMsgAMNodwinPayment
-k_EMsgAMNodwinPaymentResponse
-k_EMsgAMNotifyChatOfClanChange
-k_EMsgAMNuveiPayment
-k_EMsgAMNuveiPaymentResponse
-k_EMsgAMP2PIntroducerMessage
-k_EMsgAMPasswordHashUpgrade
-k_EMsgAMPerfectWorldPayment
-k_EMsgAMPersonaChangeResponse
-k_EMsgAMPlayerNicknameList
-k_EMsgAMProbeClanMembershipList
-k_EMsgAMPublishChatMemberInfo
-k_EMsgAMPublishChatRoomInfo
-k_EMsgAMPurchaseResponse
-k_EMsgAMRecordBanEnforcement
-k_EMsgAMRefreshGuestPasses
-k_EMsgAMRefreshSessions
-k_EMsgAMRegisterKey
-k_EMsgAMRelayPublishStatus
-k_EMsgAMReloadAccount
-k_EMsgAMReloadGameGroupPolicy
-k_EMsgAMRemoveFriend
-k_EMsgAMRemovePublisherUser
-k_EMsgAMRenewAgreement
-k_EMsgAMRenewLicense
-k_EMsgAMRequestClanData
-k_EMsgAMRequestClanDetails
-k_EMsgAMRequestFriendData
-k_EMsgAMResolveWalletRevoke
-k_EMsgAMResubmitPurchase
-k_EMsgAMReverseChargeback
-k_EMsgAMRevokeLegacyGameKeys
-k_EMsgAMRevokePurchaseResponse
-k_EMsgAMRollbackGiftTransfer
-k_EMsgAMRouteToClients
-k_EMsgAMSendAccountInfoUpdate
-k_EMsgAMSendCartRepurchase
-k_EMsgAMSendQueuedEmails
-k_EMsgAMSendScheduledGift
-k_EMsgAMSendSystemIMToUser
-k_EMsgAMServiceModulesCache
-k_EMsgAMServiceModulesCall
-k_EMsgAMSessionInfoRequest
-k_EMsgAMSessionInfoResponse
-k_EMsgAMSetAccountDetails
-k_EMsgAMSetAccountFlags
-k_EMsgAMSetAvatar
-k_EMsgAMSetClanDetails
-k_EMsgAMSetClanName
-k_EMsgAMSetClanNameResponse
-k_EMsgAMSetClanPOTW
-k_EMsgAMSetClanPOTWResponse
-k_EMsgAMSetClanPermissionBits
-k_EMsgAMSetClanRank
-k_EMsgAMSetClanRankResponse
-k_EMsgAMSetIgnored
-k_EMsgAMSetIgnoredResponse
-k_EMsgAMSetLicenseFlags
-k_EMsgAMSetPartnerMember
-k_EMsgAMSetPersonaName
-k_EMsgAMSetPreApproval
-k_EMsgAMSetPreApprovalResponse
-k_EMsgAMSetRemoteClientID
-k_EMsgAMSetUserGiftUnowned
-k_EMsgAMSmart2PayPayment
-k_EMsgAMSupportChangeEmail
-k_EMsgAMSupportChangePassword
-k_EMsgAMSupportEnableOrDisable
-k_EMsgAMSupportIsAccountEnabled
-k_EMsgAMSwapKioskDeposit
-k_EMsgAMTransferLockedGifts
 k_EMsgAMTwoFactorRecoverAuthenticatorRequest
 k_EMsgAMTwoFactorRecoverAuthenticatorResponse
-k_EMsgAMUnBanFromChat
-k_EMsgAMUpdateGSPlayStats
-k_EMsgAMUpdateUserBanRequest
-k_EMsgAMUserClanList
-k_EMsgAMUserClanListResponse
-k_EMsgAMVACStatusUpdate
-k_EMsgAMValidateEmailLink
 k_EMsgAMValidatePasswordResetCodeAndSendSmsRequest
 k_EMsgAMValidatePasswordResetCodeAndSendSmsResponse
-k_EMsgAMValidateWGToken
-k_EMsgAMValidateWGTokenResponse
-k_EMsgAMVerfiyUser
-k_EMsgAMWipeFriendsList
-k_EMsgAMXsollaPayment
-k_EMsgAMXsollaPaymentResponse
-k_EMsgATSCSPerfTestResponse
-k_EMsgATSCSPerfTestTask
-k_EMsgATSCycleTCM
-k_EMsgATSExternalStressJobStart
-k_EMsgATSRunFailServerTest
-k_EMsgATSStartExternalStress
-k_EMsgATSStartStressTest
-k_EMsgATSStarted
-k_EMsgATSStopStressTest
-k_EMsgATSUFSPerfTestResponse
-k_EMsgATSUFSPerfTestTask
-k_EMsgAdminClientInfo
-k_EMsgAdminCmd
-k_EMsgAdminCmdResponse
-k_EMsgAdminConsoleTitle
-k_EMsgAdminGCCommand
-k_EMsgAdminGCGetCommandList
-k_EMsgAdminGCSpew
-k_EMsgAdminLogEvent
-k_EMsgAdminLogListenRequest
-k_EMsgAdminMsgSpew
-k_EMsgAdminSpew
-k_EMsgAllowUserToPlayQuery
-k_EMsgAllowUserToPlayResponse
-k_EMsgAssignSysID
-k_EMsgBSAuthenticateCCTrans
-k_EMsgBSCheckJobRunning
-k_EMsgBSCheckJobRunningResponse
-k_EMsgBSCommitAdyenTxn
-k_EMsgBSCommitGCTxn
-k_EMsgBSCommitWPTxn
-k_EMsgBSCompletePurchase
-k_EMsgBSConvertToCurrentKeys
-k_EMsgBSGenerateBoaCompraMD5
-k_EMsgBSGetBillingAddress
-k_EMsgBSGetCreditCardInfo
-k_EMsgBSGetPayPalUserInfo
-k_EMsgBSGetProPackOrderStatus
-k_EMsgBSInitGCBankXferTxn
-k_EMsgBSInitPayPalTxn
-k_EMsgBSInitPayPalTxnResponse
-k_EMsgBSInitPurchase
-k_EMsgBSInitPurchaseResponse
-k_EMsgBSPaymentInstrBan
-k_EMsgBSPaymentInstrBanResponse
-k_EMsgBSPruneCardUsageStats
-k_EMsgBSPurchaseResponse
-k_EMsgBSPurchaseRunFraudChecks
-k_EMsgBSPurchaseStart
-k_EMsgBSQiwiWalletInvoice
-k_EMsgBSQueryBankInformation
-k_EMsgBSQueryFindCreditCard
-k_EMsgBSQueryTransactionStatus
-k_EMsgBSQueryTxnExtendedInfo
-k_EMsgBSReverseRedeemPOSAKey
-k_EMsgBSSendShippingRequest
-k_EMsgBSSettleComplete
-k_EMsgBSStatusInquiryPOSAKey
-k_EMsgBSStoreBankInformation
-k_EMsgBSUpdateConversionRates
-k_EMsgBSUpdatePaymentData
-k_EMsgBSValidateXsollaSignature
-k_EMsgBSVerifyPOSAKey
-k_EMsgBSVerifyPOSAKeyResponse
-k_EMsgBackpackAddToCurrency
-k_EMsgBackpackBase
-k_EMsgBadLoginIPList
 k_EMsgBadgeCraftedNotification
-k_EMsgBaseAMRange2
-k_EMsgBaseAdmin
-k_EMsgBaseCCSRange
-k_EMsgBaseChannelAuth
-k_EMsgBaseChatServer
-k_EMsgBaseClient
-k_EMsgBaseClient2
-k_EMsgBaseClient3
-k_EMsgBaseDRMS
-k_EMsgBaseFTSRange
-k_EMsgBaseFileXfer
-k_EMsgBaseGameServer
-k_EMsgBaseGeneral
-k_EMsgBaseLBSRange
-k_EMsgBasePSRange
-k_EMsgBaseSecretServer
-k_EMsgBaseShell
-k_EMsgBaseTest
-k_EMsgBaseUFSRange
-k_EMsgBaseWatchdogServer
-k_EMsgBoxMonitorBase
-k_EMsgBoxMonitorReportRequest
-k_EMsgBoxMonitorReportResponse
-k_EMsgCEGPropStatusDRMSRequest
-k_EMsgCEGPropStatusDRMSResponse
-k_EMsgCMGetSecrets
-k_EMsgCMRemotePlayOffline
-k_EMsgCMRemotePlayReplyPacket
-k_EMsgCMSessionRejected
-k_EMsgCMSetAllowState
-k_EMsgCMSetSecrets
-k_EMsgCMSpewAllowState
 k_EMsgCREGetUserPublishedItemVoteDetails
 k_EMsgCREGetUserPublishedItemVoteDetailsResponse
 k_EMsgCREItemVoteSummary
 k_EMsgCREItemVoteSummaryResponse
 k_EMsgCREUpdateUserPublishedItemVote
 k_EMsgCREUpdateUserPublishedItemVoteResponse
-k_EMsgCSPingResponse
-k_EMsgChannelAuthChallenge
-k_EMsgChannelAuthResponse
-k_EMsgChannelAuthResult
 k_EMsgChannelEncryptRequest
 k_EMsgChannelEncryptResponse
-k_EMsgChannelEncryptResult
-k_EMsgChatServerRouteFriendMsg
-k_EMsgClanAccountFlagDisabled
-k_EMsgClanAccountFlagLarge
-k_EMsgClanAccountFlagLocked
-k_EMsgClanAccountFlagOGG
-k_EMsgClanAccountFlagPublic
 k_EMsgClientAMGetClanOfficers
 k_EMsgClientAMGetClanOfficersResponse
 k_EMsgClientAMGetPersonaNameHistory
@@ -15388,7 +13290,6 @@ k_EMsgClientAppUsageEvent
 k_EMsgClientAuthList
 k_EMsgClientAuthListAck
 k_EMsgClientAuthList_Deprecated
-k_EMsgClientBroadcastBase
 k_EMsgClientBroadcastDisconnect
 k_EMsgClientBroadcastFrames
 k_EMsgClientBroadcastInit
@@ -15454,7 +13355,6 @@ k_EMsgClientFSGetFriendsSteamLevels
 k_EMsgClientFSGetFriendsSteamLevelsResponse
 k_EMsgClientFSGetIsFollowing
 k_EMsgClientFSGetIsFollowingResponse
-k_EMsgClientFeatureGroupInfo
 k_EMsgClientFileToDownload
 k_EMsgClientFileToDownloadResponse
 k_EMsgClientFriendMsg
@@ -15471,7 +13371,6 @@ k_EMsgClientGCMsgFailed
 k_EMsgClientGMSServerQuery
 k_EMsgClientGameConnectDeny
 k_EMsgClientGameConnectTokens
-k_EMsgClientGameEnded_obsolete
 k_EMsgClientGamesPlayed
 k_EMsgClientGamesPlayedNoDataBlob
 k_EMsgClientGamesPlayedWithDataBlob
@@ -15511,8 +13410,6 @@ k_EMsgClientIsLimitedAccount
 k_EMsgClientItemAnnouncements
 k_EMsgClientJoinChat
 k_EMsgClientKickPlayingSession
-k_EMsgClientLANP2PBase
-k_EMsgClientLANP2PMax
 k_EMsgClientLANP2PRequestChunk
 k_EMsgClientLANP2PRequestChunkResponse
 k_EMsgClientLBSFindOrCreateLB
@@ -15576,8 +13473,6 @@ k_EMsgClientOGSBeginSession
 k_EMsgClientOGSBeginSessionResponse
 k_EMsgClientOGSEndSession
 k_EMsgClientOGSEndSessionResponse
-k_EMsgClientOGSReportBug
-k_EMsgClientOGSReportString
 k_EMsgClientOGSWriteRow
 k_EMsgClientP2PConnectionFailInfo
 k_EMsgClientP2PConnectionInfo
@@ -15590,7 +13485,6 @@ k_EMsgClientPICSPrivateBetaRequest
 k_EMsgClientPICSPrivateBetaResponse
 k_EMsgClientPICSProductInfoRequest
 k_EMsgClientPICSProductInfoResponse
-k_EMsgClientPackageVersions
 k_EMsgClientPasswordChange3
 k_EMsgClientPasswordChangeResponse
 k_EMsgClientPeerChunkRequest
@@ -15611,7 +13505,6 @@ k_EMsgClientRegisterAuthTicketWithCM
 k_EMsgClientRegisterKey
 k_EMsgClientRemoveFriend
 k_EMsgClientReportOverlayDetourFailure
-k_EMsgClientRequestAccountData
 k_EMsgClientRequestAuthList
 k_EMsgClientRequestCommentNotifications
 k_EMsgClientRequestEncryptedAppTicket
@@ -15645,17 +13538,13 @@ k_EMsgClientServiceCallResponse
 k_EMsgClientServiceMethodLegacy
 k_EMsgClientServiceMethodLegacyResponse
 k_EMsgClientServiceModule
-k_EMsgClientSessionEnd
-k_EMsgClientSessionStart
 k_EMsgClientSessionToken
-k_EMsgClientSessionUpdate
 k_EMsgClientSetClientAppUpdateState
 k_EMsgClientSetClientAppUpdateStateResponse
 k_EMsgClientSetHeartbeatRate
 k_EMsgClientSetIgnoreFriend
 k_EMsgClientSetIgnoreFriendResponse
 k_EMsgClientSharedLibraryStopPlaying
-k_EMsgClientSiteLicenseBase
 k_EMsgClientSiteLicenseCheckout
 k_EMsgClientSiteLicenseCheckoutResponse
 k_EMsgClientSiteLicenseGetAvailableSeats
@@ -15665,8 +13554,6 @@ k_EMsgClientSiteLicenseGetContentCacheInfoResponse
 k_EMsgClientSiteLicenseSiteInfoNotification
 k_EMsgClientStartPeerContentServer
 k_EMsgClientStartPeerContentServerResponse
-k_EMsgClientStat2_Deprecated
-k_EMsgClientStat_Deprecated
 k_EMsgClientStatsUpdated
 k_EMsgClientSteamUsageEvent
 k_EMsgClientStoreUserStats
@@ -15696,15 +13583,12 @@ k_EMsgClientUCMUpdatePublishedFile
 k_EMsgClientUCMUpdatePublishedFileResponse
 k_EMsgClientUDSP2PSessionEnded
 k_EMsgClientUDSP2PSessionStarted
-k_EMsgClientUFSGetUGCDetails
-k_EMsgClientUFSShareFile
 k_EMsgClientUGSGetGlobalStats
 k_EMsgClientUGSGetGlobalStatsResponse
 k_EMsgClientUninstallClientApp
 k_EMsgClientUninstallClientAppResponse
 k_EMsgClientUnlockH264
 k_EMsgClientUnlockH264Response
-k_EMsgClientUnlockHEVC_OBSOLETE
 k_EMsgClientUpdateGuestPassesList
 k_EMsgClientUpdateUserGameInfo
 k_EMsgClientUserNotifications
@@ -15714,148 +13598,19 @@ k_EMsgClientVanityURLChangedNotification
 k_EMsgClientVoiceCallPreAuthorize
 k_EMsgClientVoiceCallPreAuthorizeResponse
 k_EMsgClientWalletInfoUpdate
-k_EMsgCommunityAddFriendNews
-k_EMsgContentDescriptionUpdate
-k_EMsgDFSAcceptedResponse
-k_EMsgDFSConnection
-k_EMsgDFSConnectionReply
-k_EMsgDFSGetFile
-k_EMsgDFSGetFileFromServer
-k_EMsgDFSInstallLocalFile
-k_EMsgDFSPurgeFile
-k_EMsgDFSRecvTransmitFile
-k_EMsgDFSRequestPingback
-k_EMsgDFSRequestPingback2
-k_EMsgDFSResponsePingback2
-k_EMsgDFSRouteFile
-k_EMsgDFSRouteFileResponse
-k_EMsgDFSSendTransmitFile
-k_EMsgDFSStartTransfer
-k_EMsgDFSTransferComplete
-k_EMsgDPCloudStats
-k_EMsgDPGameServersPlayersStats
-k_EMsgDPGetPlayerCount
-k_EMsgDPGetPlayerCountResponse
-k_EMsgDPPartnerMicroTxns
-k_EMsgDPSetPublishingState
-k_EMsgDPStoreSaleStatistics
-k_EMsgDPUniquePlayersStat
-k_EMsgDPVRUniquePlayersStat
-k_EMsgDRMAdminUpdate
-k_EMsgDRMAdminUpdateResponse
-k_EMsgDRMBuildBlobRequest
-k_EMsgDRMBuildBlobResponse
-k_EMsgDRMDetailsReportRequest
-k_EMsgDRMDetailsReportResponse
-k_EMsgDRMEmptyGuidCache
-k_EMsgDRMEmptyGuidCacheResponse
-k_EMsgDRMProcessFile
-k_EMsgDRMProcessFileResponse
-k_EMsgDRMRange2
-k_EMsgDRMResolveGuidRequest
-k_EMsgDRMResolveGuidResponse
-k_EMsgDRMSFetchVersionSet
-k_EMsgDRMStabilityReport
-k_EMsgDRMSyncResponse
-k_EMsgDRMVariabilityReport
-k_EMsgDRMWorkerProcess
-k_EMsgDRMWorkerProcessSignFile
 k_EMsgDestJobFailed
-k_EMsgDirRequest
-k_EMsgDirResponse
-k_EMsgEconBase
-k_EMsgEconFlushInventoryCache
-k_EMsgEconGetErrorLogs
-k_EMsgEconGetErrorLogsResponse
 k_EMsgEconTrading_CancelTradeRequest
 k_EMsgEconTrading_InitiateTradeProposed
 k_EMsgEconTrading_InitiateTradeRequest
 k_EMsgEconTrading_InitiateTradeResponse
 k_EMsgEconTrading_InitiateTradeResult
 k_EMsgEconTrading_StartSession
-k_EMsgExitShell
-k_EMsgExitShells
-k_EMsgExpectShellRestart
-k_EMsgFBSApplyAccountCred
-k_EMsgFBSApplyOSUpdates
-k_EMsgFBSConnectionData
-k_EMsgFBSDeployHotFixPackage
-k_EMsgFBSDeployHotFixResponse
-k_EMsgFBSDeployPackage
-k_EMsgFBSDeployResponse
-k_EMsgFBSDeployStoredHotFix
-k_EMsgFBSDownloadHotFix
-k_EMsgFBSDownloadHotFixResponse
-k_EMsgFBSForceBounce
-k_EMsgFBSForceRefresh
-k_EMsgFBSInfoFromBootstrapper
-k_EMsgFBSMinidumpServer
-k_EMsgFBSPauseFrozenDumps
-k_EMsgFBSQueryGMForRequest
-k_EMsgFBSQueryGMResponse
-k_EMsgFBSQueryHotfixPackages
-k_EMsgFBSRebootBox
-k_EMsgFBSRebootBoxResponse
-k_EMsgFBSReqVersion
-k_EMsgFBSRestartBootstrapper
-k_EMsgFBSRunCMDScript
-k_EMsgFBSSetBigBrotherMode
-k_EMsgFBSSetShellCount
-k_EMsgFBSSetState
-k_EMsgFBSTerminateShell
-k_EMsgFBSTerminateZombies
-k_EMsgFBSUpdateBootstrapper
-k_EMsgFBSUpdateTargetConfigFile
-k_EMsgFBSVersionInfo
-k_EMsgFSAddOrRemoveFollower
-k_EMsgFSCommentNotification
-k_EMsgFSComputeFrenematrix
-k_EMsgFSPlayStatusNotification
-k_EMsgFSRichPresenceRequest
-k_EMsgFSRichPresenceResponse
-k_EMsgFSUpdateFollowingList
-k_EMsgFailServer
 k_EMsgFileXferData
 k_EMsgFileXferDataAck
 k_EMsgFileXferEnd
 k_EMsgFileXferRequest
 k_EMsgFileXferResponse
-k_EMsgGCAchievementAwarded
-k_EMsgGCCmdDeploy
-k_EMsgGCCmdDeployResponse
-k_EMsgGCCmdDown
-k_EMsgGCCmdRevive
-k_EMsgGCCmdStatus
-k_EMsgGCCmdSwitch
-k_EMsgGCGetEmailTemplate
-k_EMsgGCHAccountTwoFactorChange
-k_EMsgGCHAccountVacStatusChange
-k_EMsgGCHAppCheersReceived
-k_EMsgGCHInviteUserToLobby
-k_EMsgGCHKillGC
-k_EMsgGCHKillGCResponse
-k_EMsgGCHRelay
-k_EMsgGCHRelayToClient
-k_EMsgGCHRequestStatus
-k_EMsgGCHRequestStatusResponse
-k_EMsgGCHRequestUpdateSession
-k_EMsgGCHSpawnGC
-k_EMsgGCHSpawnGCResponse
-k_EMsgGCHUpdateMultipleSessions
-k_EMsgGCHUpdateSession
-k_EMsgGCHVacVerificationChange
-k_EMsgGCInterAppMessage
-k_EMsgGMDRMSync
-k_EMsgGMDynamicRoutingUpdate
-k_EMsgGMGetModifiedConVars
-k_EMsgGMGetServiceMethodRouting
-k_EMsgGMLoadActivationCodes
-k_EMsgGMQueueForFBS
 k_EMsgGMSClientServerQueryResponse
-k_EMsgGMSGameServerReplicate
-k_EMsgGMSchemaConversionResults
-k_EMsgGMWriteConfigToSQL
-k_EMsgGMWriteShellFailureToSQL
 k_EMsgGSApprove
 k_EMsgGSAssociateWithClan
 k_EMsgGSAssociateWithClanResponse
@@ -15879,94 +13634,21 @@ k_EMsgGSStatusUpdate_Unused
 k_EMsgGSUserPlaying
 k_EMsgGameServerOutOfDate
 k_EMsgGameServerPolicyUpdate
-k_EMsgGenericReply
-k_EMsgGetUserIPCountry
-k_EMsgGetUserIPCountryResponse
-k_EMsgGracefulExitShell
-k_EMsgHeartbeat
-k_EMsgHotFixProgress
 k_EMsgHubConnect
-k_EMsgInvalidateDBOCacheItems
-k_EMsgJobHeartbeat
-k_EMsgJobHeartbeatTest
-k_EMsgJobHeartbeatTestResponse
-k_EMsgKeepAlive
-k_EMsgLBSDeleteLB
-k_EMsgLBSDeleteLBEntry
-k_EMsgLBSDeleteLBResponse
-k_EMsgLBSFindOrCreateLB
-k_EMsgLBSFindOrCreateLBResponse
-k_EMsgLBSGetLBEntries
-k_EMsgLBSGetLBEntriesResponse
-k_EMsgLBSGetLBList
-k_EMsgLBSGetLBListResponse
-k_EMsgLBSResetLB
-k_EMsgLBSResetLBResponse
-k_EMsgLBSSetLBDetails
-k_EMsgLBSSetScore
-k_EMsgLBSSetScoreResponse
-k_EMsgLicenseProcessingComplete
-k_EMsgLoadDBOCacheItem
-k_EMsgLoadDBOCacheItemResponse
-k_EMsgMDSContentServerConfig
-k_EMsgMDSGetDepotDecryptionKey
-k_EMsgMDSGetDepotManifest
-k_EMsgMDSGetDepotManifestChunk
-k_EMsgMDSMigrateChunk
-k_EMsgMDSMigrateChunkResponse
-k_EMsgMDSToCSFlushChunk
-k_EMsgMDSToCSFlushManifest
-k_EMsgMMSGetLobbyList
-k_EMsgMMSGetLobbyListResponse
-k_EMsgMMSRoutingOverride
-k_EMsgMPASBase
-k_EMsgMPASVacBanReset
-k_EMsgNonStdMsgBase
 k_EMsgNonStdMsgChase
 k_EMsgNonStdMsgDFSTransfer
 k_EMsgNonStdMsgHTTPClient
 k_EMsgNonStdMsgHTTPServer
 k_EMsgNonStdMsgMemcached
 k_EMsgNonStdMsgPHPSimulator
-k_EMsgNonStdMsgRTMPServer
 k_EMsgNonStdMsgRedis
-k_EMsgNonStdMsgSteam2Emulator
 k_EMsgNonStdMsgTests
 k_EMsgNonStdMsgUMQpipeAAPL
 k_EMsgNonStdMsgWGResponse
-k_EMsgNonStdMsgWebSocket
-k_EMsgNotifyWatchdog
-k_EMsgOGSBeginSession
-k_EMsgOGSBeginSessionResponse
-k_EMsgOGSEndSession
-k_EMsgOGSEndSessionResponse
-k_EMsgOGSWriteAppSessionRow
-k_EMsgP2PIntroducerMessage
-k_EMsgPICSBase
-k_EMsgPSGetAccountCartContents
-k_EMsgPSGetShoppingCartContents
-k_EMsgPSIsValidShoppingCart
-k_EMsgPhysicalBoxInventory
-k_EMsgPingResponse
-k_EMsgPrepareToExit
-k_EMsgProductInfoCacheStatus
-k_EMsgProtobufWrapped
-k_EMsgQuestServerBase
-k_EMsgQueuedEmailsComplete
-k_EMsgRMDeleteMemcachedKeys
-k_EMsgRMMsgTraceEvent
-k_EMsgRMMsgTraceRemoveTriggers
-k_EMsgRMRemoteInvoke
-k_EMsgRMTestVerisignOTP
-k_EMsgRMTestVerisignOTPResponse
-k_EMsgRemoteClientAcceptEULA
-k_EMsgRemoteClientAppStatus
-k_EMsgRemoteClientAuth_OBSOLETE
 k_EMsgRemoteClientAuthorizationCancelRequest
 k_EMsgRemoteClientAuthorizationConfirmed
 k_EMsgRemoteClientAuthorizationRequest
 k_EMsgRemoteClientAuthorizationResponse
-k_EMsgRemoteClientBase
 k_EMsgRemoteClientGetControllerConfig
 k_EMsgRemoteClientGetControllerConfigResponse
 k_EMsgRemoteClientInstallApp
@@ -15978,111 +13660,11 @@ k_EMsgRemoteClientProofRequest
 k_EMsgRemoteClientProofResponse
 k_EMsgRemoteClientStartStream
 k_EMsgRemoteClientStartStreamResponse
-k_EMsgRemoteClientStatusRequest
-k_EMsgRemoteClientWifiAPStatus
-k_EMsgReqChallenge
-k_EMsgReqChallengeTest
-k_EMsgRequestFullStatsBlock
-k_EMsgSCIDRequest
-k_EMsgSCIDResponse
-k_EMsgSMExpensiveReport
-k_EMsgSMHourlyReport
-k_EMsgSMPartitionRenames
-k_EMsgSecretsBase
-k_EMsgServerSecretChanged
 k_EMsgServiceMethod
 k_EMsgServiceMethodCallFromClient
 k_EMsgServiceMethodCallFromClientNonAuthed
 k_EMsgServiceMethodResponse
 k_EMsgServiceMethodSendToClient
-k_EMsgSetTestFlag
-k_EMsgShellCheckWindowsUpdates
-k_EMsgShellConfigInfoUpdate
-k_EMsgShellFailed
-k_EMsgShellSearchLogs
-k_EMsgShellSearchLogsResponse
-k_EMsgStatsDeprecated
-k_EMsgStoreBase
-k_EMsgSubscribe
-k_EMsgTestFlushDelayedSQL
-k_EMsgTestInitDB
-k_EMsgTestResetServer
-k_EMsgTestWorkerProcess
-k_EMsgTimestampRequest
-k_EMsgTimestampResponse
-k_EMsgUCMFixStatsPublishedFile
-k_EMsgUCMGetUserSubscribedFiles
-k_EMsgUCMPublishFile
-k_EMsgUCMPublishFileResponse
-k_EMsgUCMPublishedFileChildAdd
-k_EMsgUCMPublishedFileReported
-k_EMsgUCMReloadPublishedFile
-k_EMsgUCMResetCommunityContent
-k_EMsgUCMUpdatePublishedFile
-k_EMsgUDSHasSession
-k_EMsgUDSHasSessionResponse
-k_EMsgUDSRenderUserAuth
-k_EMsgUDSRenderUserAuthResponse
-k_EMsgUFSDownloadChunkRequest
-k_EMsgUFSDownloadChunkResponse
-k_EMsgUFSDownloadFinishRequest
-k_EMsgUFSDownloadFinishResponse
-k_EMsgUFSDownloadStartRequest
-k_EMsgUFSDownloadStartResponse
-k_EMsgUFSFlushURLCache
-k_EMsgUFSGetUGCURLs
-k_EMsgUFSGetUGCURLsResponse
-k_EMsgUFSMigrateFile
-k_EMsgUFSMigrateFileAppID
-k_EMsgUFSMigrateFileResponse
-k_EMsgUFSReloadAccount
-k_EMsgUFSReloadAccountResponse
-k_EMsgUFSReloadPartitionInfo
-k_EMsgUFSSynchronizeFile
-k_EMsgUFSUpdateFileFlags
-k_EMsgUFSUpdateRecordBatched
-k_EMsgUGSGetUserGameStats
-k_EMsgUGSGetUserStats
-k_EMsgUGSStoreUserStats
-k_EMsgUGSStoreUserStatsResponse
-k_EMsgUGSUpdateGlobalStats
-k_EMsgUniverseChanged
-k_EMsgUniverseData
-k_EMsgUpdateCMMessageRateRules
-k_EMsgUpdateConfigFile
-k_EMsgUpdateCreditCardRequest
-k_EMsgUpdateRecordResponse
-k_EMsgUpdateUserBanResponse
-k_EMsgVACResponse
-k_EMsgVSAddCheat
-k_EMsgVSChallengeResultText
-k_EMsgVSGetChallengeResults
-k_EMsgVSLoadDBFinished
-k_EMsgVSMarkCheat
-k_EMsgVSPurgeCodeModDB
-k_EMsgVSReportLingerer
-k_EMsgVSRequestManagedChallenge
-k_EMsgWGConnectionProtocolError
-k_EMsgWGRequest
-k_EMsgWGResponse
-k_EMsgWebAPIBase
-k_EMsgWebAPIJobRequest
-k_EMsgWebAPIJobResponse
-k_EMsgWebAPISetSecrets
-k_EMsgWebAPIValidateOAuth2Token
-k_EMsgWorkerProcess
-k_EMsgWorkerProcessPingRequest
-k_EMsgWorkerProcessPingResponse
-k_EMsgWorkerProcessShutdown
-k_EMsgWorkshopBase
-k_EMsgZipRequest
-k_EMsgZipResponse
-k_ESessionDispositionDisconnect
-k_ESessionDispositionNormal
-k_ESteamReviewScore_Mixed
-k_ESteamReviewScore_Negative
-k_ESteamReviewScore_None
-k_ESteamReviewScore_Positive
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 k_nSymmetricKeyLen256 == cubKey || k_nSymmetricKeyLen128 == cubKey
@@ -16131,7 +13713,6 @@ keyword truncated
 keywordsstudios.com
 kh9F
 khmer
-ki!S
 kiche
 kicked from chat
 kicked off the group
@@ -16162,17 +13743,7 @@ kx-rsa-psk
 kx-srp
 kxBlob
 kyrgyz
-k|9R
 l <= uRequiredBytes
-l6qnk
-l97\v
-lDa>
-lEd/
-lEsim
-lHt\
-lNrZ
-l\vDZ2\fs
-label
 ladder post failure
 ladder pre failure
 ladder step failure
@@ -16183,18 +13754,14 @@ last-modified
 lastModifiedBy
 lastModifiedTime
 lastUpdate
-last_update_steamid
 latam
 latvian
 launched as admin but couldn't update
 launched with install update flag, no download directory given
-lazy
 lblk->n + rblk->n < (2 * 16 - 1)
 lcO/<1\r=,!\r-@@@
 lchown
 ld-linux-x86-64.so.2
-leading_comments
-leading_detached_comments
 led_brightness
 left the group
 legacy_
@@ -16295,7 +13862,6 @@ localhost
 localhost/
 localityName
 localization
-localized_string
 localtime
 localtime_r
 locatio
@@ -16322,7 +13888,6 @@ loopback
 lost rgb to gray
 lost/gained channels
 lower
-lpHP
 lsb_release -d -s
 lseek
 lseek64
@@ -16332,15 +13897,9 @@ lsof reported an unexpected address: %s
 ltrf216a
 lumen
 luxembourgish
-lvs&4
 lzma_dict_valve
 lzma_valve
-l}C.we
-m>gh
-mC4\n
-mK1f
 mXRecord
-mZzW\v
 m_AssocHandles
 m_AssocHandles.IsValidIndex( nAssocIdx )
 m_BaseIP.GetType() == k_EIPTypeV4
@@ -16784,12 +14343,9 @@ malloc
 malloc failure
 malloc_usable_size
 maltese
-manage_pricing
-manage_signing
 manager
 mandatory
 manifest
-manifest_requests
 maori
 map keys are not unique
 map<$0, $1>
@@ -16818,7 +14374,6 @@ maximum
 maxlen >= 1
 maxmem_bytes
 maxsize=
-mb@}b
 mbrtowc
 mbsnrtowcs
 mbsrtowcs
@@ -16855,13 +14410,11 @@ message digest is null
 message extensions
 message imprint mismatch
 messageDigest
-message_set_wire_format
 messagedigest attribute wrong length
 messagedigest wrong length
 method
 method not supported
 metrics
-mg\f5NJ
 mgf1
 mgf1 digest not allowed
 mgf1 with sha1 (default)
@@ -16923,16 +14476,13 @@ mkdir "%s"\n
 mkfifo
 mkstemp
 mktime
-mllt!
 mlock
-mmZ7EEP
 mmap
 mmap64
 mobile
 mobileTelephoneNumber
 mobilechat
 mode
-model
 modf
 module initialization error
 module=
@@ -16963,8 +14513,6 @@ msSGC
 msSmartcardLogin
 msUPN
 msg %s, job source %llu, job target %llu
-msgpool_hard_limit
-msgpool_soft_limit
 msgsigdigest error
 msgsigdigest verification failure
 msgsigdigest wrong length
@@ -16978,16 +14526,11 @@ munmap
 music
 must-revalidate
 mustownapp
-mwa!
 n <= (size_t)INT_MAX
 n == 0 || s1 != NULL
 n == 0 || s2 != NULL
 n does not equal p q
 n does not equal product of primes
-n)M5
-n6j/
-n:2C[
-n<!TH+9
 nAmount
 nAmountDelayed
 nBarrierNumber < m_vecBarriers.Count()
@@ -17033,22 +14576,14 @@ nSeqStart <= nSeqEnd
 nSeqStart > nSeqPrev
 nSize != 0
 nSize >= 0
-nStf,a
 nSubkeys == 0
-nSw}Z\tu
 nTargetLength > 0
 nTotal number of strings %u, longest string size %u, avg size %u\n
-nV_S
 nValue >= 0 && nValue <= 15
 nWeight > 0
 nWidth >= 0 && nHeight >= 0
-nY77
 nYear > 1712
 nYear >= 1900 && nMonth >= 1 && nMonth <= 12
-n\fjST
-n\nNKF
-n\tMr
-n\vDsv
 name
 name =
 name constraints minimum and maximum not supported
@@ -17074,7 +14609,6 @@ need dictionary
 need new setup values
 need one signer
 need organization and numbers
-negative_int_value
 nepali
 nested asn1 error
 nested asn1 string
@@ -17259,7 +14793,6 @@ no value
 no verify cookie callback
 no-cache
 no-store
-no:7
 noCheck
 noRevAvail
 no_NO
@@ -17271,7 +14804,6 @@ no_proxy
 no_renegotiation
 no_resumption_on_reneg
 no_ssl3
-no_standard_descriptor_accessor
 no_ticket
 no_tls1
 no_tls1_1
@@ -17292,7 +14824,6 @@ nonce mismatch
 nonce not returned
 none
 nonsegmentedvideo
-nopqrs(
 normal disconnect
 norwegian
 not XOF or invalid length
@@ -17332,7 +14863,6 @@ noticeNumbers
 notice_section
 noticenos
 noticeref
-notificaton_token
 nref_nos
 nsBaseUrl
 nsCaPolicyUrl
@@ -17364,28 +14894,20 @@ num > 0
 num threads
 numElements <= m_nAllocationCount
 numElements >= 0
-num_gpu
 num_tickets
-number
 number too large
 nv->name->len > 0
-o&1m&
-o-\vBs
 o2i_ECPublicKey
 o2i_SCT
 o2i_SCT_LIST
 o2i_SCT_signature
-o=*oh
-oE"z
 oFFs
-oMinghuaQu
 oaep
 oaep decoding error
 oauthclient
 objCA
 obj_count
 obj_size
-objc_class_prefix
 object
 object identifier routines
 object not ascii format
@@ -17432,7 +14954,6 @@ openssh-key-v1
 openssl.cnf
 openssl_conf
 openssl_fopen
-opentype_font_data
 openvroverlay
 openxr
 operation
@@ -17449,7 +14970,6 @@ opt3001
 option json_name is not allowed on extension fields.
 optional
 optionalSignature
-options
 oracle
 order
 organization
@@ -17459,8 +14979,6 @@ organizationalStatus
 organizationalUnitName
 oriType
 oriValue
-original_hostname
-original_ip_address
 originator
 originatorInfo
 originatorSignatureValue
@@ -17508,11 +15026,9 @@ output specified is nullptr
 outsize >= ( inputbytes * 2 ) + 1
 outsize >= 1
 overflow error
-ow\tg
 owner
 p is not prime
 p not prime
-p+"\tHr9
 p.char_two
 p.onBasis
 p.other
@@ -17523,8 +15039,6 @@ p.tpBasis
 p2pcore.so
 p2prelayserver.so
 p2pstunserver.so
-p5Z3
-p@0pqE5tsO?|1
 pAllocTracker->m_uSentinel == 0xaa110ced
 pBarrier->m_ulCurrentSequenceNum == pItem->GetPipelineSequenceNumber()
 pBaseFrameFunction
@@ -17537,7 +15051,6 @@ pBuf->BIsUnbufferedSend()
 pBuffer
 pCAL
 pCAL: invalid keyword
-pCRF
 pCallback == m_pConnectionCallback || m_pConnectionCallback == NULL
 pCallerJob
 pCallerJob != this
@@ -17558,7 +15071,6 @@ pConnectionCallback == pWebSocketConnection
 pContext
 pContext->GetConnectionType() == k_ESSLConnectionType_Client
 pConv && pConv->GetDelimiterLength() > 0
-pD4t
 pData
 pDecodedData
 pDefaultValue
@@ -17575,7 +15087,6 @@ pFormat != NULL
 pFrameFunctionMgr
 pGroup->m_vecCompletedAndWaiting.Count() == 0
 pGroupName
-pH88
 pHYs
 pHandle
 pHandle == pRequestHandle
@@ -17599,7 +15110,6 @@ pJobType->m_pNumCurrentJobs == nullptr
 pJobType->m_pchName && *pJobType->m_pchName
 pKeyCallback
 pKeyValuesTextParser
-pKp\nZ
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 pLock
 pLock->BIsLocked()
@@ -17607,7 +15117,6 @@ pLock->GetJobLocking() == this
 pLock->m_pJob == this
 pLock->m_unWaitingCount > 0
 pLogInstance == sm_pLogInstance
-pL~k
 pModule == nullptr
 pName
 pNetConnection
@@ -17629,7 +15138,6 @@ pOutputDigest
 pOwner->m_unThreadBytesToRead == 0
 pOwner->m_unThreadBytesToRead > (uint)pBIOData->m_Num
 pOwner->m_unThreadBytesToRead >= pPacket->CubData()
-pP@fJ
 pParent->m_bInDeleteQueue
 pPathID
 pPendingMsg == m_pPendingMsgFirst
@@ -17670,14 +15178,12 @@ pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 4) || pDest > pSrc + (sr
 pStr != NULL
 pStr1 != NULL
 pStr2 != NULL
-pT6w.
 pTCPConnection->m_cOutstandingSends > 0
 pTemperature is a required paramater
 pThread
 pThread && pThread->m_pCurrentWorkItem == pWorkItem && !pThread->m_bCurrentItemDeferred
 pToken
 pTracker->Find( pKey ) != NULL
-pU>\AL
 pUDPConnection
 pWatcher != NULL
 pWebSocketConnection
@@ -17690,23 +15196,15 @@ pWorkItem->m_bDeferCompletion
 pWorkItem->m_bRunning
 pWorkThread != NULL
 pWorkThread->m_bFinished is false but thread is not running
-pXhH
-pZlNr
-p\lHtW
-p\tK2
 pack_first_byte
 package
 package $0;\n\n
-package_requests
-package_version
 packages
-packed
 packet length too long
 packfile.m_bIsPackFile
 packfile.m_hPackFile
 padding check failed
 pagerTelephoneNumber
-pairs
 palette color-map: too few entries
 panorama.so
 parallelizationParameter
@@ -17746,7 +15244,6 @@ path too long
 pathID
 pathStringLength >= 1
 pathlen
-payload
 payment gateway capabilities
 pbeWithMD2AndDES-CBC
 pbeWithMD2AndRC2-CBC
@@ -17805,12 +15302,7 @@ persian
 personalSignature
 personalTitle
 personalisation string too long
-phone
 photo
-php_class_prefix
-php_generic_services
-php_metadata_namespace
-php_output_always_number
 physical id
 physicalDeliveryOfficeName
 pid %u sleeping...
@@ -17908,8 +15400,6 @@ pkvHosts
 pkvRealms
 pkvServerResponse
 pl_PL
-platform_linux
-platform_windows
 please implement MergeFrom for your type.
 pledged buffer stability condition is not respected
 plogs
@@ -17986,22 +15476,15 @@ popconfig
 popen
 port
 portuguese
-position_is_waitlist
-positive_int_value
 posix_fadvise
 posix_memalign
 post handshake auth encoding err
 postOfficeBox
 postalAddress
 postalCode
-postcode
-posterid
-posttime
 ppBasis
 ppFrames[iFrame] != NULL
-pp\rk
 ppath
-pp|B>>q
 pq->q[item->index] == item
 pqualid
 pqueue_new
@@ -18009,7 +15492,6 @@ pre-parsed bodies copied for a second reader
 pre-parsed bodies of the wrong type
 pre-parsed bodies: %s adopted, %s copied, %s unusable\n
 pread64
-precise_frame_rate
 prediction resistance not supported
 preferredDeliveryMethod
 preloadonly
@@ -18037,7 +15519,6 @@ prime_infos
 print
 printf
 prioritize_chacha
-priority_score
 priv [ %d ]
 priv:
 priv_key
@@ -18075,7 +15556,6 @@ propack.so
 proto
 proto2
 proto3
-proto3_optional
 protobuf parse stats reset\n
 protobuf_parse_stats
 protocol is shutdown
@@ -18094,7 +15574,6 @@ proxy-connection
 proxyCertInfo
 proxyPolicy
 ps3os
-psC3
 pseudonym
 psk identity not found
 psk no client cb
@@ -18173,10 +15652,8 @@ public-key:
 public/steambootstrapper_%language%.txt
 publicExponent:
 publicKey
-public_dependency
 public_key
 publish
-publisher_group_id
 pulContext
 punct
 purchase
@@ -18200,16 +15677,8 @@ pwrd.com
 pwrd_telecom
 pwrd_unicom
 pwrite64
-py_generic_services
-pzKD)
 q not prime
-q,&2ke!
-qCJ.
-qR5FE%
-qUN1
 qcStatements
-qdZRMHD@=;86421/.-+*)(''&%$$#""!!
-qeei
 qsort
 qualifiers
 qualityLabelledData
@@ -18217,29 +15686,11 @@ quantil
 quantity
 quechua
 queue
-queue_head_position_now
-queue_in_waitlist
-queue_position
-queue_waitlist_token
 qwest
 qwilt
-r$0I
-r/2O
 r2i_certpol
 r2i_pci
-r3A~
-rB2pBB
-rD B
-rF6t
 rFC822localPart
-rK99
-rKE\t
-rT+6ZNw
-rUUT
-rY|T
-rZ$2
-rZlN
-r\tU[B
 r_32_12_16_init_key
 rack
 rackspace
@@ -18305,7 +15756,6 @@ reading strings
 readlink
 ready
 realloc
-realm
 realms
 realpath
 reaping pid: %u -- %s\n
@@ -18331,7 +15781,6 @@ recvfrom
 recvmsg
 refere
 reference temporary #
-referenced_appids
 referer
 refres
 refresh
@@ -18386,10 +15835,7 @@ res == pBuf->TellPut()
 res binder
 res master
 reseed error
-reservation_country_code
-reservation_state
 reserved
-reserved_range
 reset
 resizeNumBits >= 0
 responderId
@@ -18403,7 +15849,6 @@ responseStatus
 responseType
 response_duration
 response_firstbyte_latency
-response_time_ms
 responses
 result
 result too large
@@ -18429,7 +15874,6 @@ ringbuf->len > 0
 ripemd
 ripemd160
 ripemd160WithRSA
-rm\niAB
 rmd160
 rmdir
 rnode->blk->n < (2 * 16 - 1)
@@ -18445,7 +15889,6 @@ root ca not trusted
 rounds != 0
 row_stride == (int)( nImageWidth * jpegInfo.output_components )
 row_stride_out >= row_stride
-rq7x;P
 rsa operations not supported
 rsa routines
 rsaEncryption
@@ -18495,37 +15938,23 @@ rsadsi
 rsaesOaep
 rsalen > 0 && rsalen < 10 * 1024 * 1024
 rsassaPss
-rtE1
-rtime32_end_time
-rtime32_last_modified
-rtime32_start_time
-rtime32_visibility_end
-rtime32_visibility_start
-rtime_estimated_notification
-rtime_mod_reviewed
-ru&o
 ru_RU
 russian
 rv > 0 && rv <= nSendLen
 s ap traffic
 s hs traffic
-s(Fdi
 s-maxage
 s1 != NULL
-s11bS
 s2 != NULL
 s2i_ASN1_IA5STRING
 s2i_ASN1_INTEGER
 s2i_ASN1_OCTET_STRING
 s2i_skey_id
 s390x_aes_gcm_ctrl
-sAmTb
 sBIT
-sC3pcG'd
 sCAL
 sCAL height
 sCAL width
-sK;xPL
 sOARecord
 sPLT
 sPLT chunk has bad length
@@ -18562,7 +15991,6 @@ salt
 salt length check failed
 salt length recovery failed
 saltLength
-sao5
 sbgp-autonomousSysNum
 sbgp-ipAddrBlock
 sbgp-routerIdentifier
@@ -18670,7 +16098,6 @@ sendfile64
 sending
 sendmsg
 sendto
-seq_num
 sequence length mismatch
 sequence not constructed
 sequence or set needs config
@@ -18688,9 +16115,6 @@ server response error
 server response parse error
 server.so
 serverAuth
-server_address
-server_password
-server_streaming
 serverandwgonly
 serverbrowser.so
 serverhello tlsext
@@ -18711,7 +16135,6 @@ session->server
 session_after_frame_sent1
 session_after_header_block_received
 session_close_stream_on_goaway
-session_disposition
 session_id
 session_id_context
 session_pack_extension
@@ -18870,7 +16293,6 @@ setpriority
 setrlimit
 setsid
 setsockopt
-setting
 setup_tbuf
 setvbuf
 sfixed32
@@ -18918,7 +16340,6 @@ short header
 short line
 shortcut
 should retry
-show_broadcast
 shred --remove %s
 shutdown
 shutdown while in init
@@ -19032,11 +16453,9 @@ socketpair
 solrconfig
 sorani
 sotho
-source_code_info
 space
 spaceGranted
 spaceReleased
-span
 spanish
 spkac
 sprintf
@@ -19199,7 +16618,6 @@ sslv3 rollback attack
 stable_get
 stackLevel >= 0 && stackLevel < m_errorIndex
 stackpath
-start
 startdate
 starting
 startup
@@ -19277,7 +16695,6 @@ steamdeck_hwmon
 steamdeck_stable
 steamglobal
 steamhdl
-steamid
 steammessages_base.proto
 steamos
 steamos-update: using duplicate detection: %d\n
@@ -19375,7 +16792,6 @@ subtitles
 subtreeMaximumQuality
 subtreeMinimumQuality
 subtype mismatch
-success
 sudo -n chmod a+w "%s"
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
@@ -19396,7 +16812,6 @@ swahili
 swedish
 swprintf
 symlink
-syntax
 syntax = "$0";\n\n
 syntax error at line %d near:
 sys$assign error
@@ -19404,32 +16819,24 @@ sys$dassgn error
 sys$qiow error
 syscall
 sysconf
-sysid
 sysreqs
 system
 system lib
 system library
 system_default
 szDomainName != nullptr
-s}D2[
-tDwg
 tEXt
 tEXt: invalid keyword
 tEXt: text too long
 tIME
 tRNS chunk has out-of-range samples for bit_depth
 tRNS must be after
-t\lHBW
 tableLog requires too much memory : unsupported
 tag count too large
 tag=
-tagids_curated
-tagids_filtered
-tags
 tajik
 tamil
 targetInformation
-target_job_name
 taskus.com
 tata
 tatar
@@ -19438,7 +16845,6 @@ tbsResponseData
 tcgetattr
 tchinese
 tcsetattr
-tdXn
 telephoneNumber
 teletexTerminalIdentifier
 telexNumber
@@ -19465,7 +16871,6 @@ text/plain
 text:
 textEncodedORAddress
 textNotice
-tfjgvmfv
 th_TH
 thai
 the
@@ -19489,7 +16894,6 @@ threaded work (proxy/dns)
 threads
 threshold @nThreadedProtobufParseMinBytes = %d ('protobuf_parse_stats reset' after changing it)\n
 throw
-ticket
 ticket_appdata
 tid(%u) pthread_key_create failed: %s\n
 tigrinya
@@ -19500,8 +16904,6 @@ time syscall error
 timeStamping
 timegm
 timeout
-timestamp_added
-timestamp_updated
 timestampsign
 timezone
 tinet
@@ -19709,7 +17111,6 @@ tlsv13 alert missing extension
 toRead > 0
 token not present
 token present
-token_id
 tolower
 too large
 too large frame size
@@ -19730,7 +17131,6 @@ too short
 too small
 tool
 total: %s parses, %s bytes\n
-total_queue_size
 totaltime
 toupper
 towerattack
@@ -19740,7 +17140,6 @@ tr_TR
 traffic upd
 trailerField
 trailers
-trailing_comments
 transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
@@ -19748,7 +17147,6 @@ transfer-encodin
 transfer-encoding
 transfer-encoding: %s not yet implemented\n
 transit
-transport_error
 tree_init
 true
 truncated
@@ -19759,7 +17157,6 @@ try_decode_PKCS8Encrypted
 try_decode_params
 trying to take the same lock twice!
 ts datasign
-tsG7
 ts_CONF_invalid
 ts_CONF_lookup_fail
 ts_RESP_create_tst_info
@@ -19802,7 +17199,6 @@ typeinfo fn for
 typeinfo for
 typeinfo name for
 typename
-u!!Bc
 u.addressPrefix
 u.addressRange
 u.addressesOrRanges
@@ -19810,11 +17206,6 @@ u.asIdsOrRanges
 u.id
 u.inherit
 u.range
-u0Az
-u1\m
-u;{Gk
-uT_Rm#
-u\fcc
 ua-pki
 uacurve0
 uacurve1
@@ -19829,14 +17220,12 @@ uacurve9
 ubuntu12
 ui process interrupted or cancelled
 uifontfile_format.proto
-uifontfile_format.proto"C\n\rCUIFontFilePB
 uint32
 uint32_c2i
 uint32_new
 uint64
 uint64_c2i
 uint64_new
-ujR\f
 uk_UA
 ukrainian
 ulResult != 0
@@ -19992,7 +17381,6 @@ unknown\n%*s
 unlink
 unlink_dep
 unlink_sib
-unlisted
 unprotectedAttrs
 unrecognized ICC profile class
 unrecognized equation type
@@ -20082,7 +17470,6 @@ upper
 urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 urdu
 uri authority unsupported
-us_state
 use srtp not negotiated
 use_certificate_chain_file
 usecTimeout >= 0
@@ -20097,16 +17484,12 @@ userClass
 userId
 userNotice
 userPassword
-user_waitlist_token
 usleep
 utf8only
 utime
 utimes
 uyghur
 uzbek
-v!pH
-v$p5K
-v07\v
 v1 (0x0)
 v2i_ASIdentifiers
 v2i_ASN1_BIT_STRING
@@ -20126,10 +17509,6 @@ v2i_idp
 v2i_issuer_alt
 v2i_subject_alt
 v3_generic_extension
-v>XB
-vQO+t
-v\fdn
-v\v]mE
 valencian
 valid
 valid_until
@@ -20191,9 +17570,6 @@ video.so
 video64_server.so
 videomanager
 vietnamese
-view_error_data
-view_financials
-view_marketing_traffic
 virtual thunk to
 vmc.com
 vms_bind_sym
@@ -20211,16 +17587,7 @@ vstdlib_wcstoi64
 vstdlib_wcstoui64
 vswprintf
 vtable for
-vtw\nx
-w"ZXb
-w+OQvr
 w+bx
-w3Xc
-w8i_q
-w>mMS
-w?6r
-wAXu
-wXR\r
 wait details: [%s] - %s
 wait for time
 waitid
@@ -20244,7 +17611,6 @@ wap-wsg-idm-ecid-wtls8
 wap-wsg-idm-ecid-wtls9
 warning
 wasd.vdf
-wbW_0O#
 wchar_t
 wcrtomb
 wcscasecmp
@@ -20261,7 +17627,6 @@ wcstoll
 wcstoull
 wctob
 weak
-weak_dependency
 web deploy
 web links changed
 web:checkout
@@ -20279,13 +17644,9 @@ webm
 webm-segmented
 websocket
 websockets
-webui_auth_key
 week
 weight
 welsh
-wfDJ@
-wg_token
-wge6
 which lsof >/dev/null 2>&1
 while
 whirlpool
@@ -20326,7 +17687,6 @@ wmemcmp
 wmemcpy
 wmemmove
 wmemset
-wn>Jj
 wolof
 work item
 workSpace buffer is not large enough
@@ -20361,7 +17721,6 @@ wrong type
 wrong version number
 www-authenticat
 www-authenticate
-x((Pz
 x-gzip
 x.GetRawData( tmp ) == cbData
 x121Address
@@ -20379,37 +17738,16 @@ x509_name_ex_new
 x509_pubkey_decode
 x86_64
 x931
-x=9v
-xUN'
-x`tm6
 xdg-user-dir %s
 xdigit
 xerror_handler: X failed, continuing\n
 xhosa
-xj)9
 xlocale
 xmemory
-xpH8
-xqI9
-xrJ:DCG
-xsK;
-xtq\t
 xts duplicated keys
-xxJo%%\r..8$
-xzxv
-y9*O
-yU\n2`
-ye"Y
 year
 yielding
 yoruba
-yu]4if
-yyX\f
-z3T\vC
-z4BP
-z4Hg
-zC\nsZ
-zC`G;
 zTXt
 zTXt: invalid compression type
 zTXt: invalid keyword
@@ -20430,24 +17768,13 @@ zstd_dict_valve
 zstd_valve
 zstream unclaimed
 zulu
-zy:HO
 {%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X}
 {%8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X}
-{OYK
 {default arg#
-{kHw
 {lambda
 {parm#
 {unnamed type#
 |47?6
 |<C!FReQ
-|sG2
-}5bIqLk
-}o]9s
 ~/.steam/machine-id
-~2sP
 ~CJOB: %s has an unexpected threaded work item.
-~NX4
-~SeA
-~TD7(
-~TbF

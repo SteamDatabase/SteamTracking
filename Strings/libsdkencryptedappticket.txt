@@ -2,7 +2,6 @@
   Comment started here.
   Expected :
   what():
- !"#$%&'()*+,-./0123
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
  Can't back up over more bytes than were returned by the last call to Next().
@@ -48,14 +47,9 @@
  transaction_safe
  type does not match\n
  volatile
- wZiK
  was modified concurrently during serialization.
  with type
-!AxU
-!H88p
 !is_large()
-!tI)i
-!tX)i
 " because it is missing required fields:
 " conflicts with field "
 " conflicts with the existing symbol "
@@ -115,7 +109,6 @@
 ". Value: "
 "/*" inside block comment.  Block comments cannot be nested.
 "0x" must be followed by hex digits.
-"3ii
 "????'????????????????????????????????????????????????????\????
 "DeleteMapValue"
 "GetMapData"
@@ -126,10 +119,7 @@
 "MapEnd"
 "MapSize"
 "MutableRawRepeatedField"
-"^\n\fOneofOptions
 "e" must be followed by exponent.
-#FLR
-#tDq
 $0  extend .$1 {\n
 $0  extensions $1 to $2;\n
 $0  reserved
@@ -141,37 +131,14 @@ $0oneof $1 {
 $0option $1;\n
 $0rpc $1($4.$2) returns ($5.$3)
 $ORIGIN
-$\nY8O
 %I:%M:%S %p
 %a %b %e %T %Y
 %lld
 %llu
 %s/.steam/steam
 %s: __pos (which is %zu) > this->size() (which is %zu)
-&&Lj66lZ??~A
-&Lj&6lZ6?~A?
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
-(\v2 .google.protobuf.DescriptorProto
-(\v2!.google.protobuf.EnumValueOptions"
-(\v2$.google.protobuf.EnumDescriptorProto
-(\v2$.google.protobuf.FileDescriptorProto"
-(\v2$.google.protobuf.UninterpretedOption"/\n
-(\v2$.google.protobuf.UninterpretedOption":\n\fOptimizeMode
-(\v2$.google.protobuf.UninterpretedOption"P\n
-(\v2$.google.protobuf.UninterpretedOption*\t
-(\v2%.google.protobuf.FieldDescriptorProto
-(\v2%.google.protobuf.OneofDescriptorProto
-(\v2&.google.protobuf.ExtensionRangeOptions
-(\v2&.google.protobuf.MethodDescriptorProto
-(\v2'.google.protobuf.ServiceDescriptorProto
-(\v2(.google.protobuf.SourceCodeInfo.Location
-(\v2).google.protobuf.EnumValueDescriptorProto
-(\v2-.google.protobuf.GeneratedCodeInfo.Annotation
-(\v2-.google.protobuf.UninterpretedOption.NamePart
-(\v2..google.protobuf.DescriptorProto.ReservedRange
-(\v2/.google.protobuf.DescriptorProto.ExtensionRange
-(\v26.google.protobuf.EnumDescriptorProto.EnumReservedRange
 (anonymous namespace)
 (cannot determine missing fields for lite message)
 (merge
@@ -206,10 +173,6 @@ $\nY8O
 ++CCUNG\f8\f
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-+2Hp
-+HpXhE
-+\n\rReservedRange
-+ulsX
 , but was
 , not just within "
 ,std::bad_alloc
@@ -241,69 +204,19 @@ $\nY8O
 .PLACEHOLDER_VALUE
 .dummy
 .foo = value".
-.google.protobuf.EnumOptions
-.google.protobuf.FieldOptions
-.google.protobuf.FileOptions
-.google.protobuf.MessageOptions
-.google.protobuf.MethodOptions
-.google.protobuf.OneofOptions"
-.google.protobuf.ServiceOptions"
-.google.protobuf.SourceCodeInfo
 .placeholder.proto
 /dev/random
 /dev/urandom
-0 Umv
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+0123456789
 0123456789abcdef
-0F`8
-0`P0
 18EncryptedAppTicket
-1bS1
-2#.google.protobuf.FieldOptions.CType:
-2$.google.protobuf.FieldOptions.JSType:\tJS_NORMAL
-2).google.protobuf.FileOptions.OptimizeMode:
-2*.google.protobuf.FieldDescriptorProto.Type
-2+.google.protobuf.FieldDescriptorProto.Label
-2+ss
-2/.google.protobuf.MethodOptions.IdempotencyLevel:
-2Ht\l
-2dV2:tN:\n
-30!]^JV
-33fU
-456789:;<=
-49fN
-4h\4
-52F*
-55j_WW
-5T&w&
-5\n\vnested_type
-6 PQ
-6-nn
-6\n\fmessage_type
-7\n\tenum_type
-7nY7m
-7~8A
-88pH
-8\foQS
-8\n\textension
-8pH8
-99rKJJ
-9\n\noneof_decl
-9a&g
-9rK9J
 : Tried to copy from a message with a different type. to:
 : Tried to merge from a message with a different type.  to:
 : failed to parse contents
-;22dV::tN\n\n
-;fD4~
-==zGdd
-=j&&LZ66lA??~
-?456789:;<=
 ???\f???????\n???\r?\t?\v
 A file with this name is already in the pool.
 A protocol message was rejected because it was too big (more than
-A@qVc"
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
@@ -311,7 +224,6 @@ AKST
 ALREADY_EXISTS
 ASCII
 ASCII//TRANSLIT
-A\n\nannotation
 AddAllocatedMessage
 AddBool
 AddCleared() can only be used on a RepeatedPtrField not on an arena.
@@ -327,14 +239,10 @@ AddUInt64
 Already saw decimal point or exponent; can't have another one.
 April
 August
-A~Se
 BackUp() can only be called after a successful Next().
 Boolean default must be true or false.
 Breaking '%s' in '%s'\n
 Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of
-C-Yn
-C77nYmm
-C@gw
 CANCELLED
 CHECK failed: !InRealOneof(field):
 CHECK failed: !IsDefault(default_value):
@@ -582,7 +490,6 @@ CHECK failed: uninterpreted_options_field != nullptr:
 CHECK failed: value != nullptr:
 CHECK failed: z.first != NULL:
 CLcx
-CORD
 CPPTYPE_BOOL
 CPPTYPE_DOUBLE
 CPPTYPE_ENUM
@@ -593,7 +500,6 @@ CPPTYPE_MESSAGE
 CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
-CType
 Call set methods to initialize MapKey.
 Caller should provide us with *buffer_ when buffer is non-empty
 Can't
@@ -613,19 +519,14 @@ Could not find type "
 Couldn't parse default value "
 DATA_LOSS
 DBG_PATHMATCH
-DD.9
 DEADLINE_EXCEEDED
 DO NOT PARSE: fields may be stripped and missing.\n
-D\vvf:
 December
 Default value for an enum field must be an identifier.
-DescriptorProto
-DescriptorProtosH
 Division or mod by zero: dividend.hi=
 Don't lookup extension types if they aren't present (1).
 Don't lookup extension types if they aren't present (2).
 ERROR
-EncryptedAppTicket
 End-of-file inside block comment.
 Entry
 Enum name
@@ -634,10 +535,7 @@ Enum value "$0" is reserved multiple times.
 Enum value "$0" is reserved.
 Enum value "$0" uses reserved number $1.
 Enum value in map must define 0 as the first value.
-EnumDescriptorProto
 EnumOptions
-EnumReservedRange
-EnumValueDescriptorProto
 EnumValueOptions
 Enums must contain at least one value.
 Error parsing text-format
@@ -668,16 +566,12 @@ Extension range $0 to $1 overlaps with already-defined range $2 to $3.
 Extension range $0 to $1 overlaps with reserved range $2 to $3.
 Extension range end number must be greater than start number.
 Extension ranges are not allowed in proto3.
-ExtensionRange
-ExtensionRangeOptions
 Extensions in proto3 are only allowed for defining options.
 Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 ExtractSubrange() when arena is non-NULL is only supported when
 FAILED_PRECONDITION
 FATAL
-FCZ&
-F\n\foptimize_for
 False
 FastHexToBuffer() wants non-negative integers, not
 February
@@ -698,7 +592,6 @@ Field numbers must be positive integers.
 Field with message or enum type missing type_name.
 Field with primitive type has type_name.
 Field:
-FieldDescriptorProto
 FieldDescriptorProto.extendee not set for extension field.
 FieldDescriptorProto.extendee set for non-extension field.
 FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
@@ -713,8 +606,6 @@ File appears to be in generated pool but wasn't registered:
 File is already registered:
 File not found in database (unexpected):
 File recursively imports itself:
-FileDescriptorProto
-FileDescriptorSet
 FileOptions
 Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
 Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
@@ -722,7 +613,6 @@ First argument to Swap() (of type "
 First argument to SwapFields() (of type "
 Found invalid proto option data for:
 Friday
-F~Tb
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
 GCC: (SteamRT 9.3.0-17+steamrt1.3+srt1) 9.3.1 20210309
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
@@ -735,7 +625,6 @@ GLIBC_2.3
 GLIBC_2.3.2
 GLIBC_2.3.4
 GLIBC_2.4
-GeneratedCodeInfo
 GetBool
 GetDouble
 GetEnumValue
@@ -759,19 +648,14 @@ GetString
 GetStringReference
 GetUInt32
 GetUInt64
-Google.Protobuf.Reflection
 Groups are not supported in proto3 syntax.
-H$6t
-H*0"ZOW
 HOME
 HasField
 Hex and octal numbers must be integers.
-IDEMPOTENCY_UNKNOWN
 INFO
 INTERNAL
 INVALID_ARGUMENT
 INVALID_CPPTYPE
-IdempotencyLevel
 Ignoring extension "
 Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field:
 Import
@@ -803,17 +687,11 @@ Invalid wire type for CPPTYPE_MESSAGE:
 Invalid wire type for CPPTYPE_UINT32:
 Invalid wire type for CPPTYPE_UINT64:
 JArray
-JSType
-JZJ{.
 January
 July
 June
 Key in map fields cannot be enum types.
 Key in map fields cannot be float/double, bytes or message types.
-KwZi
-LABEL_OPTIONAL
-LABEL_REPEATED
-LABEL_REQUIRED
 LC_ADDRESS
 LC_COLLATE
 LC_CTYPE
@@ -826,15 +704,8 @@ LC_NUMERIC
 LC_PAPER
 LC_TELEPHONE
 LC_TIME
-Label
-Lj&&lZ66~A??
-Location
 Logic problem? szsrc =
 Lowered '%s' -> '%s'\n
-M3fU3
-M;;va
-MGiI
-MMfU33
 MapKey::GetBoolValue
 MapKey::GetInt32Value
 MapKey::GetInt64Value
@@ -878,7 +749,6 @@ MessageSet is not supported in proto3.
 MessageSets cannot have fields, only extensions.
 Messages can't have default values!
 Messages can't have default values.
-MethodDescriptorProto
 MethodOptions
 Missing field: FileDescriptorProto.name.
 Missing name.
@@ -1004,7 +874,6 @@ N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NOT_FOUND
-NO_SIDE_EFFECTS
 NSt3_V214error_categoryE
 NSt6locale5facet6__shimE
 NSt6locale5facetE
@@ -1038,7 +907,6 @@ NSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE
 NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
 NSt8ios_base7failureB5cxx11E
 NSt8ios_base7failureE
-NamePart
 Need space between identifier and decimal point.
 Need space between number and identifier.
 No default value
@@ -1050,36 +918,22 @@ Not implemented field number
 Not supported.
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 November
-NrZl
 Numbers starting with leading zero must be in octal.
-O44h\
 OUT_OF_RANGE
-O\n\nAnnotation
 October
 Oneof must have at least one field.
-OneofDescriptorProto
 OneofOptions
 Option "
 Option field "
 Option must have a name.
 Option must not use reserved name "uninterpreted_option".
-P00`
-P<xD<
 PERMISSION_DENIED
 PLACEHOLDER_VALUE
 POSIX
-PPxD<<%
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
-QPeA~S
-QSeA~
-Qkkbal
-R##Fe
-R1h58
-R;vM;
 RESOURCE_EXHAUSTED
-RRvM;;
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
 Recursion limit at end of parse should be
@@ -1094,16 +948,10 @@ Required fields are not allowed in proto3.
 Reserved numbers must be positive integers.
 Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
 Reserved range end number must be greater than start number.
-S11b?
-SKyu
-SPEED
-STRING
 Saturday
-SbEwd
 Second argument to Swap() (of type "
 Second argument to SwapFields() (of type "
 September
-ServiceDescriptorProto
 ServiceOptions
 SetAllocatedMessage
 SetBool
@@ -1126,9 +974,7 @@ SetString
 SetUInt32
 SetUInt64
 Should not reach here.
-Sm"\vg
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options:
-SourceCodeInfo
 St10bad_typeid
 St10ctype_base
 St10money_base
@@ -1272,7 +1118,6 @@ Sunday
 Swap
 Symbol name "
 Synthetic oneofs must be after all other oneofs
-T00`P
 TLS init function for
 TLS wrapper function for
 The JSON camel-case name of field "
@@ -1289,11 +1134,8 @@ Tried to merge messages of different types
 Tried to register a non-generated type with the generated type registry.
 True
 Tuesday
-Type
 Type appears to be in generated pool but wasn't
 Type is already registered:
-U(Px(
-U33f
 UNAUTHENTICATED
 UNAVAILABLE
 UNIMPLEMENTED
@@ -1301,19 +1143,16 @@ UNKNOWN
 UNKNOWN_ENUM_VALUE_%s_%d
 UTF-8
 UTF-8 data when
-UUPx((
 Unexpected end of string.
 Unexpected failure while serializing option submessage
 Unimplemented type:
 Uninterpreted option is missing name or value.
-UninterpretedOption
 Unknown enumeration value of "
 Unknown error
 Unmatched %s\n
 Unrecognized syntax:
 Unsupported
 Unsupported: type mismatch
-V22dN::t
 VTT for
 Value must be "true" or "false" for boolean option "
 Value must be identifier for boolean option "
@@ -1329,22 +1168,15 @@ Value of type "
 Value out of range for int32 option "
 Value out of range for int64 option "
 Value out of range for uint32 option "
-Vc0a
 WARNING
 Warning parsing text-format
 Wednesday
-XhHp
-Y77n
-Z-google.golang.org/protobuf/types/descriptorpb
-ZiKw
-Zjz\v
 [abi:
 [friend]
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
 [packed = true] can only be specified for repeated primitive fields.
 \%03o
-\44h
 \U%08x
 \n    Actual    :
 \n    Field type:
@@ -1353,66 +1185,9 @@ Zjz\v
 \n  Problem     :
 \n  Problem     : Enum value did not match field type:\n    Expected  :
 \n  Problem     : Field is not the right type for this message:\n    Expected  :
-\n google/protobuf/descriptor.proto
 \nParsing attempt:
-\nYg:a
-\n\fFieldOptions
-\n\fLITE_RUNTIME
-\n\fSTRING_PIECE
-\n\fTYPE_FIXED32
-\n\fTYPE_FIXED64
-\n\fTYPE_MESSAGE
-\n\fdouble_value
-\n\fis_extension
-\n\fjava_package
-\n\fruby_package
-\n\fstring_value
-\n\fswift_prefix
-\n\nIDEMPOTENT
-\n\nTYPE_BYTES
-\n\nTYPE_FLOAT
-\n\nTYPE_GROUP
-\n\nTYPE_INT32
-\n\nTYPE_INT64
-\n\nboxed_type
-\n\ndependency
-\n\ndeprecated
-\n\ngo_package
-\n\ninput_type
-\n\rMethodOptions
-\n\rTYPE_SFIXED32
-\n\rTYPE_SFIXED64
-\n\rdefault_value
-\n\rphp_namespace
-\n\rreserved_name
-\n\tjson_name
-\n\tmap_entry
-\n\tname_part
-\n\ttype_name
-\n\vEnumOptions
-\n\vFileOptions
-\n\vTYPE_DOUBLE
-\n\vTYPE_SINT32
-\n\vTYPE_SINT64
-\n\vTYPE_STRING
-\n\vTYPE_UINT32
-\n\vTYPE_UINT64
-\n\vallow_alias
-\n\voneof_index
-\n\voutput_type
-\n\vsource_file
-\rRoOs
-\r\n\tCODE_SIZE
-\r\n\tJS_NORMAL
-\r\n\tJS_NUMBER
-\r\n\tJS_STRING
-\r\n\tTYPE_BOOL
-\r\n\tTYPE_ENUM
 \t(%zu) comparing %s with %s\n
-\txYn
 \x%02x
-]JldN
-_55j
 _Float
 _GLOBAL_
 _ITM_RU1
@@ -1422,7 +1197,6 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_TbF~
 __assert_fail
 __ctype_get_mb_cur_max
 __cxa_atexit
@@ -1503,19 +1277,9 @@ __wrap_utimes
 __xmknod
 __xstat
 __xstat64
-_jbF~T
-`3QbE
-`3SbE
-`P00
-`tun%
-a5j_5W
-aaj_55
 abort
 access
 accessor_ == other.accessor_
-additional_includes
-aggregate_value
-aiKwZ
 alignof
 allocator
 allowed in proto3.
@@ -1524,8 +1288,6 @@ alpha
 an arena.
 auto
 auto:
-b,uZ
-bS11*?
 basic_filebuf::_M_convert_to_external conversion error
 basic_filebuf::underflow codecvt::max_length() is not valid
 basic_filebuf::underflow error reading the file
@@ -1555,7 +1317,6 @@ basic_string::replace
 basic_string::resize
 basic_string::substr
 basic_string_view::substr
-begin
 bind_textdomain_codeset
 bindtextdomain
 blank
@@ -1564,19 +1325,12 @@ bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const g
 boolean
 btowc
 buffer. Use the 'bytes' type if you intend to send raw
-bwiO'
 byte
 bytes
 bytes.
-c!!B0
-cU!\f}QP
 can't reach here.
 cannot create shim for unknown locale::facet
 cannot create std::vector larger than max_size()
-cb_encrypted_appownershipticket
-cb_encrypteduserdata
-cc_enable_arenas
-cc_generic_services
 char
 char google::protobuf::StringPiece::operator[](google::protobuf::stringpiece_ssize_type) const
 char16_t
@@ -1585,13 +1339,11 @@ char8_t
 chdir
 chmod
 chown
-client_streaming
 close
 close() failed:
 closedir
 cntrl
 co_await
-com.google.protobufB
 const google::protobuf::UnknownFieldSet& google::protobuf::UnknownField::group() const
 const google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int) const
 const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin() const
@@ -1600,11 +1352,6 @@ const string& google::protobuf::UnknownField::length_delimited() const
 const_cast
 construction vtable for
 covariant return thunk to
-crc_encryptedticket
-csharp_namespace
-ctype
-dQy/
-dV22tN::
 data_ == other.data_
 decimal128
 decimal32
@@ -1624,22 +1371,13 @@ dlopen
 double
 dynamic_cast
 encrypted_app_ticket.proto
-encrypted_app_ticket.proto"
-encrypted_ticket
 enum
 extend .$0 {\n
-extendee
-extension_range
-f.N%H
-fNt7
 faccessat
 false
-false"
 fclose
 fdopen
 fflush
-field
-file
 fileno
 fixed32
 fixed64
@@ -1655,8 +1393,6 @@ freopen
 fseeko64
 ftello64
 fwrite
-gAY:
-gK99r
 generic
 getc
 getentropy
@@ -1665,7 +1401,6 @@ getwc
 glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
-google.protobuf"G\n
 google.protobuf.
 google.protobuf.Any
 google.protobuf.BoolValue
@@ -1776,20 +1511,13 @@ google::protobuf::uint8* google::protobuf::internal::ExtensionSet::_InternalSeri
 graph
 group
 guard variable for
-h8,4$
-hHpX
-h\44Q
 half
 hardware
 hidden alias for
 i < length_
-i]Wb
 iconv
 iconv_close
 iconv_open
-idempotency_level
-identifier_value
-ig,o
 import "$0";\n
 import public "$0";\n
 import weak "$0";\n
@@ -1807,25 +1535,10 @@ iostream error
 is_large()
 java Class for
 java resource
-java_generate_equals_and_hash
-java_generic_services
-java_multiple_files
-java_outer_classname
-java_string_check_utf8
 json_name = "
-jstype
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
-k2U\v
-lDa>
-lEd/
-lHt\
-lNrZ
-label
-lazy
 lchown
 ld-linux-x86-64.so.2
-leading_comments
-leading_detached_comments
 len >= input_len
 length_ >= n
 libc.so.6
@@ -1837,12 +1550,10 @@ locale::_S_normalize_category category not found
 locale::facet::_S_create_c_locale name not valid
 locale::facet::_S_lc_ctype_c_locale duplocale error
 locale::facet::_S_lc_ctype_c_locale newlocale error
-location
 long
 long double
 long long
 lower
-lpHP
 lseek
 malloc
 map keys are not unique
@@ -1857,29 +1568,20 @@ memcpy
 memmove
 memset
 message
-message_set_wire_format
-method
 mkdir
 mkfifo
 mold 2.36.0 (compatible with GNU ld)
 mount
 mt19937
-mwa!
-nY77
-name
-negative_int_value
 new
 new[]
-no_standard_descriptor_accessor
 noexcept
 non-transaction clone for
 non-virtual thunk to
 null
 nullptr output boolean given.
-number
 obj_count
 obj_size
-objc_class_prefix
 open
 open64
 opendir
@@ -1887,44 +1589,24 @@ operator
 operator""
 option json_name is not allowed on extension fields.
 optional
-options
 output specified is nullptr
-pCRF
-pH88
-pXhH
-pZlNr
-p\lHtW
-package
 package $0;\n\n
-packed
 parse
 parsing
-path
-php_class_prefix
-php_generic_services
-php_metadata_namespace
 please implement MergeFrom for your type.
 poll
-positive_int_value
-pp|B>>q
 print
 proto
 proto2
 proto3
-proto3_optional
 pthread_cond_broadcast
 pthread_cond_wait
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
-public_dependency
 punct
 putc
 putwc
-py_generic_services
-qR5FE%
-rK99
-rZlN
 random_device could not be read
 random_device: getentropy failed
 random_device: rdrand failed
@@ -1945,17 +1627,12 @@ reinterpret_cast
 rename
 repeated
 required
-reserved_range
 rmdir
-ru&o
-s11bS
 scandir
 scandir64
 secure_getenv
 serialize
 serializing
-server_streaming
-service
 service $0 {\n
 setlocale
 setvbuf
@@ -1970,11 +1647,8 @@ size_t to int conversion
 sizeof
 sizeof...
 snprintf
-source_code_info
 space
-span
 sprintf
-start
 statfs
 statfs64
 static_cast
@@ -2025,11 +1699,9 @@ strtoul
 strtoull
 subtype mismatch
 symlink
-syntax
 syntax = "$0";\n\n
 syscall
 system
-t\lHBW
 template
 template parameter object for
 terminate called after throwing an instance of '
@@ -2041,14 +1713,11 @@ the actual field type (for enums T should be the generated enum
 the global scope
 this
 throw
-ticket_version_no
 tolower
-trailing_comments
 transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
 true
-type
 type or int32).
 type() == TYPE_FIXED32
 type() == TYPE_FIXED64
@@ -2061,7 +1730,6 @@ typeinfo fn for
 typeinfo for
 typeinfo name for
 typename
-u!!Bc
 uint32
 uint64
 ungetc
@@ -2097,36 +1765,24 @@ void google::protobuf::internal::byteswap<8>(void*)
 void google::protobuf::io::CodedInputStream::UnsafeDecrementRecursionDepth()
 vsnprintf
 vtable for
-w+OQvr
 w+bx
-wXR\r
 wchar_t
 wcrtomb
 wcscmp
 wcslen
 wcsnrtombs
 wctob
-weak
-weak_dependency
 with a type that does not implement MergeFrom. This is unsafe;
 wmemchr
 wmemcmp
 wmemcpy
 wmemmove
 wmemset
-wn>Jj
 write
 writev
 wrong submessage type
-x((Pz
 xdigit
-xxJo%%\r..8$
-y9*O
-zC`G;
 {default arg#
-{kHw
 {lambda
 {parm#
 {unnamed type#
-~SeA
-~TbF

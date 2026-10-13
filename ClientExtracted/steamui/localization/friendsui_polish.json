@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Naprawiono błąd powodujący, że okna czatu i znajomych nie wyświetlały się w nakładce w systemach Linux i macOS.",
     "BBCode_Loading": "Wczytywanie",
     "BBCode_Failed": "Nie udało się wczytać",
-    "broadcastDetails_Playing": "Gra w"
+    "broadcastDetails_Playing": "Gra w",
+    "VoiceChat_Muted_Deck": "Wyciszenie"
 }

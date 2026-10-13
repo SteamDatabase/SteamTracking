@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Javítottuk, hogy a barát- és csevegésablakok Linuxon és macOS-en nem jelentek meg a játékbeli átfedésen.",
     "BBCode_Loading": "Betöltés",
     "BBCode_Failed": "Nem sikerült betölteni",
-    "broadcastDetails_Playing": "Ezzel játszik:"
+    "broadcastDetails_Playing": "Ezzel játszik:",
+    "VoiceChat_Muted_Deck": "Némítva"
 }

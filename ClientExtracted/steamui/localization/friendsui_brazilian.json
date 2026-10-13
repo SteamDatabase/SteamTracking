@@ -1218,5 +1218,6 @@
     "changeLog_UpdateItem57": "Correção de erro que impedia a exibição da lista de amigos e janelas de conversa no Painel Steam no Linux e macOS.",
     "BBCode_Loading": "Carregando",
     "BBCode_Failed": "Erro ao carregar",
-    "broadcastDetails_Playing": "Jogando"
+    "broadcastDetails_Playing": "Jogando",
+    "VoiceChat_Muted_Deck": "Silenciado"
 }

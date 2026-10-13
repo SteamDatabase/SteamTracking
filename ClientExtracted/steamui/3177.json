@@ -205,7 +205,7 @@
     "moderationaction_escalated_for_csam": "因涉及 CSAM（兒童性虐待內容），已升級交由 Valve 處理",
     "moderationaction_escalated_for_terrorism": "因涉及恐怖主義，已升級交由 Valve 處理",
     "moderationaction_claimed": "已領取",
-    "moderationaction_released": "發行日",
+    "moderationaction_released": "已釋出",
     "moderationaction_privatemessaged": "私人訊息已傳送",
     "moderationaction_unknown": "未知行動",
     "moderationaction_ownerdisputed": "擁有者已對處理提出爭議",
@@ -279,9 +279,9 @@
     "reportedcontent_disputesanctioned_3": "感謝您協助我們維護 Steam 環境的安全。",
     "reportedcontent_content_report_breadcrumb": "檢舉詳情",
     "reportedcontent_you_wrote": "您撰寫了：",
-    "reportedcontent_summary_forumpost": "討論區文章",
+    "reportedcontent_summary_forumpost": "一篇討論區文章",
     "reportedcontent_summary_forumpost_on": "在 %3$s 中心針對「%2$s」主題的%1$s",
-    "reportedcontent_summary_forumtopic_in": "在 %1$s 中心的 %2$s",
+    "reportedcontent_summary_forumtopic_in": "在 %1$s 中心的%2$s",
     "anonymousreport_title": "檢舉此內容",
     "anonymousreport_description": "登入 Steam 社群以檢舉不當或非法內容。",
     "anonymousreport_footer": "若您無法登入，可以<1>提交匿名檢舉</1>。",
@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "阻止濫用系統的使用者檢舉內容或對處理提出爭議。",
     "setcooldown_setbutton": "設定冷卻時間",
     "setcooldown_clearopenreports": "清除此使用者尚未解決的檢舉",
-    "setcooldown_statssummary": "%1$s/%2$s 個檢舉不成立，過去一週內有 %3$s/%4$s 個。",
-    "nocomma": ""
+    "setcooldown_statssummary": "%1$s/%2$s 個檢舉不成立，過去一週內有 %3$s/%4$s 個。"
 }

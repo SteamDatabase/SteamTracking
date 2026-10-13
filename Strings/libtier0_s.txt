@@ -111,12 +111,12 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 /tmp/.steam-sem-names
-00:25:29
 0123456789
 0123456789ABCDEF
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
+18:44:18
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -434,7 +434,6 @@ Plat_localtime
 Plat_timegm
 Plat_timezone
 Probably deadlock or failure waiting for thread to initialize.
-QkkXa
 RealGetCallStack
 RealPrintCallStack
 RealPrintRawCallStack
@@ -834,7 +833,6 @@ asctime_r
 audio.so
 auto
 auto:
-b\v0T\
 backtrace
 backtrace_symbols
 basic_iostream

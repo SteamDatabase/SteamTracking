@@ -332720,6 +332720,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = "steamdb";
         function _(_) {
           const {
@@ -332744,9 +332745,10 @@
             [_, _] = _.useState(!1),
             [_, _] = _.useState(null),
             [_, _] = _.useState(null),
+            _ = (0, _._)(() => _?.visible),
             _ = _.useCallback(() => {
               let _ = _;
-              if (!_ || !_ || !_ || (_ && _ && !_.visible)) return;
+              if (!_ || !_ || !_ || (_ && _ && !_)) return;
               let _ = _.ownerDocument.defaultView;
               if (!_ || _.closed) return;
               (_.style.display = "flex"),
@@ -332817,7 +332819,7 @@
                 _ != _ && _(_),
                 _ != _ && _(_),
                 _ || _(!0);
-            }, [_, _, _, _, _, _, _, _, _, _, _, _, _]);
+            }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _]);
           _.useEffect(() => _(), [_]);
           let _ = Object.assign(
               {
@@ -332826,7 +332828,7 @@
               },
               _,
             ),
-            _ = !_ || _.visible;
+            _ = !_ || _;
           return (0, _.jsx)("div", {
             popover: "manual",
             ref: _,
@@ -699065,7 +699067,7 @@ Status Code:` +
               _.nSteamVersion > 0
                 ? _.nSteamVersion.toString()
                 : (0, _._)("#Settings_System_SteamLocalBuild"),
-            _ = parseInt(1791840534),
+            _ = parseInt(1791917108),
             _ = _ && (0, _._)(_, _, _),
             _ = _.sSteamBuildDate,
             _ = (0, _._)() ? " GMT+0000" : " GMT-0800",
@@ -713826,9 +713828,10 @@ Status Code:` +
         function _(_) {
           (0, _.useEffect)(() => {
             const _ =
-              new URLSearchParams(window.location.search).get("PACKAGE_CL") ??
-              _;
-            (0, _._)().Init("Client Login", _, _.GetServiceTransport());
+                new URLSearchParams(window.location.search).get("PACKAGE_CL") ??
+                _,
+              _ = (0, _._)();
+            _.product || _.Init("Client Login", _, _.GetServiceTransport());
           }, [_]);
         }
       },
@@ -740043,7 +740046,7 @@ Status Code:` +
             _ = (0, _._)(_),
             _ = !0,
             _ = _.nSteamVersion > 0 ? _.nSteamVersion.toString() : "local",
-            _ = parseInt(1791840534),
+            _ = parseInt(1791917108),
             _ = _ && (0, _._)(_, _, _),
             _ = ((_.nCPUHz || 0) / 1e3 / 1e3 / 1e3).toFixed(2) + " GHz",
             _ = (0, _._)(_.nSystemRAMSizeMB * 1024 * 1024, 0),

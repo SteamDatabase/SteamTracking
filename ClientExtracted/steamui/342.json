@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "Impedisci a un utente di segnalare contenuti o contestare la moderazione quando ha abusato del sistema.",
     "setcooldown_setbutton": "Imposta sospensione",
     "setcooldown_clearopenreports": "Cancella le segnalazioni non risolte di questo utente",
-    "setcooldown_statssummary": "%1$s/%2$s segnalazioni assolte, %3$s/%4$s nella scorsa settimana.",
-    "nocomma": ""
+    "setcooldown_statssummary": "%1$s/%2$s segnalazioni assolte, %3$s/%4$s nella scorsa settimana."
 }

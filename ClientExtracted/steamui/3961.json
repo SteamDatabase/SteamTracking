@@ -302,6 +302,5 @@
     "setcooldown_dialogdescription": "システムを濫用したユーザーによるコンテンツの報告やモデレーションへの異議申し立てをブロックします。",
     "setcooldown_setbutton": "クールダウンを設定",
     "setcooldown_clearopenreports": "このユーザーの未解決報告をクリアする",
-    "setcooldown_statssummary": "%1$s／%2$s件の報告が問題なしと判定、%3$s／%4$s件は過去1週間以内。",
-    "nocomma": ""
+    "setcooldown_statssummary": "%1$s／%2$s件の報告が問題なしと判定、%3$s／%4$s件は過去1週間以内。"
 }
