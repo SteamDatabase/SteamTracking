@@ -1,0 +1,17 @@
+message CStreamPlayerConfig {
+	message CAudioConfig {
+		optional float volume = 1 [default = 1];
+		optional bool mute = 2;
+		optional bool boost = 3;
+	}
+
+	optional .CStreamPlayerConfig.CAudioConfig audio_config = 1;
+	optional .CStreamPlayerConfig.CAudioConfig microphone_config = 2;
+	optional bool controller_overlay_opened = 4;
+	optional bool menubar_overlay_opened = 5;
+	optional uint32 menubar_overlay_hotkey = 6;
+	optional bool has_touch_input = 7;
+	optional bool wants_touch_input = 8;
+	optional float window_curvature_OBSOLETE = 10;
+	optional string window_settings = 11;
+}

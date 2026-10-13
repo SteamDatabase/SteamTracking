@@ -212,6 +212,7 @@ class ClientExtractor
 		[
 			self::LINUX_BINS_DIR . '/steamrt64/steamui.so',
 			self::LINUX_BINS_DIR . '/steamrt64/steamclient.so',
+			self::LINUX_BINS_DIR . '/steamrt64/streaming_client',
 		];
 
 		if( !file_exists( $ProtobufDumper ) )
