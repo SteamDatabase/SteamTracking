@@ -5,14 +5,26 @@
     [10034],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
-        __webpack_require__._(module_exports, {
+        __webpack_require__.__webpack_require__(module_exports, {
+          _: () => _,
+        });
+        let __webpack_require__;
+        function _(_) {
+          _ = _;
+        }
+        function _() {
+          return _;
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        __webpack_require__.__webpack_require__(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
+        var __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid");
         function _(_, _) {
           _.Body().set_context(_(_));
         }
@@ -32,27 +44,28 @@
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
-        __webpack_require__._(module_exports, {
+        __webpack_require__.__webpack_require__(module_exports, {
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
+        var __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = __webpack_require__("chunkid"),
+          __webpack_require__ = Object.defineProperty,
+          __webpack_require__ = Object.getOwnPropertyDescriptor,
+          __webpack_require__ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -102,7 +115,7 @@
             _ = await _;
           return _ != _._ ? _ : _;
         }
-        const _ = class _ {
+        const __webpack_require__ = class _ {
           k_QueueWaitUntilRequestMS = 5;
           k_nMaxBatchSize = 250;
           m_bReturnUnavailableItems = !1;
@@ -141,9 +154,9 @@
           m_PendingInfoPromise;
           m_PendingInfoResolve = void 0;
           m_PendingTimer = void 0;
-          k_AlreadyResolvedOK = Promise.resolve(_._);
-          k_AlreadyResolvedInvalid = Promise.resolve(_._);
-          k_AlreadyResolvedBusy = Promise.resolve(_._);
+          k_AlreadyResolvedOK = Promise.resolve(_.__webpack_require__);
+          k_AlreadyResolvedInvalid = Promise.resolve(_.__webpack_require__);
+          k_AlreadyResolvedBusy = Promise.resolve(_.__webpack_require__);
           static sm_instance;
           static Get() {
             return (
@@ -661,16 +674,17 @@
             );
           }
           GetServiceTransport() {
-            return (
-              this.m_serviceTransport ||
-                (console.warn(
-                  "Service transport not initialized for StoreItemCache",
-                ),
+            if (!this.m_serviceTransport) {
+              const _ = (0, _._)();
+              if (_) return _.GetServiceTransport();
+              console.warn(
+                "Service transport not initialized for StoreItemCache",
+              ),
                 (this.m_serviceTransport = (0, _._)(
                   new _._(_._.WEBAPI_BASE_URL),
-                ).GetAnonymousServiceTransport())),
-              this.m_serviceTransport
-            );
+                ).GetAnonymousServiceTransport());
+            }
+            return this.m_serviceTransport;
           }
           async InternalHandleLoadStoreItems(_, _) {
             let _ = _._;
@@ -1006,11 +1020,11 @@
             return _;
           }
         };
-        _([_._], _.prototype, "ReadItem", 1);
-        let _ = _;
+        _([_.__webpack_require__], _.prototype, "ReadItem", 1);
+        let __webpack_require__ = _;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
-        __webpack_require__._(module_exports, {
+        __webpack_require__.__webpack_require__(module_exports, {
           _: () => _,
         });
         function _(_, _) {

@@ -3,7 +3,7 @@
 "use strict";
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [65282],
+    [5282],
     {
       38636: (Ee, be, F) => {
         F.d(be, { qp: () => de, tB: () => ne, ur: () => ge, z9: () => ue });
@@ -12,7 +12,7 @@
           r = F(75245),
           v = F(35038),
           Be = Object.defineProperty,
-          fe = (T, e, t) =>
+          pe = (T, e, t) =>
             e in T
               ? Be(T, e, {
                   enumerable: !0,
@@ -21,7 +21,7 @@
                   value: t,
                 })
               : (T[e] = t),
-          a = (T, e, t) => fe(T, typeof e != "symbol" ? e + "" : e, t);
+          a = (T, e, t) => pe(T, typeof e != "symbol" ? e + "" : e, t);
         function je(T) {
           return "unknown EMarketBucketLevel ( " + T + " )";
         }
@@ -292,7 +292,7 @@
           }
         };
         a(k, "sm_m"), a(k, "sm_mbf");
-        let pe = k;
+        let fe = k;
         const _ = class d extends s.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
@@ -481,7 +481,7 @@
                       bw: r.gp.writeString,
                     },
                     sealed: { n: 32, br: r.qM.readBool, bw: r.gp.writeBool },
-                    container_properties: { n: 33, c: pe },
+                    container_properties: { n: 33, c: fe },
                     market_bucket_group_name: {
                       n: 34,
                       br: r.qM.readString,
@@ -773,18 +773,18 @@
         };
         a(K, "sm_m"), a(K, "sm_mbf");
         let Me = K;
-        const H = class f extends s.Message {
+        const H = class p extends s.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              f.prototype.id || r.Sg(f.M()),
+              p.prototype.id || r.Sg(p.M()),
               s.Message.initialize(this, e, 0, -1, void 0, null);
           }
           static M() {
             return (
-              f.sm_m ||
-                (f.sm_m = {
-                  proto: f,
+              p.sm_m ||
+                (p.sm_m = {
+                  proto: p,
                   fields: {
                     id: { n: 1, br: r.qM.readUint32, bw: r.gp.writeUint32 },
                     name: { n: 2, br: r.qM.readString, bw: r.gp.writeString },
@@ -818,69 +818,6 @@
                       n: 9,
                       br: r.qM.readBool,
                       bw: r.gp.writeBool,
-                    },
-                  },
-                }),
-              f.sm_m
-            );
-          }
-          static MBF() {
-            return f.sm_mbf || (f.sm_mbf = r.w0(f.M())), f.sm_mbf;
-          }
-          toObject(e = !1) {
-            return f.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return r.BT(f.M(), e, t);
-          }
-          static fromObject(e) {
-            return r.Uq(f.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new (i().BinaryReader)(e),
-              n = new f();
-            return f.deserializeBinaryFromReader(n, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return r.zj(f.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new (i().BinaryWriter)();
-            return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            r.i0(f.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new (i().BinaryWriter)();
-            return (
-              f.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CEconItem_AssetPropertySchema";
-          }
-        };
-        a(H, "sm_m"), a(H, "sm_mbf");
-        let ye = H;
-        const J = class p extends s.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              p.prototype.appid || r.Sg(p.M()),
-              s.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              p.sm_m ||
-                (p.sm_m = {
-                  proto: p,
-                  fields: {
-                    appid: { n: 1, br: r.qM.readUint32, bw: r.gp.writeUint32 },
-                    language: {
-                      n: 2,
-                      br: r.qM.readString,
-                      bw: r.gp.writeString,
                     },
                   },
                 }),
@@ -918,6 +855,69 @@
             var e = new (i().BinaryWriter)();
             return (
               p.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CEconItem_AssetPropertySchema";
+          }
+        };
+        a(H, "sm_m"), a(H, "sm_mbf");
+        let ye = H;
+        const J = class f extends s.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              f.prototype.appid || r.Sg(f.M()),
+              s.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              f.sm_m ||
+                (f.sm_m = {
+                  proto: f,
+                  fields: {
+                    appid: { n: 1, br: r.qM.readUint32, bw: r.gp.writeUint32 },
+                    language: {
+                      n: 2,
+                      br: r.qM.readString,
+                      bw: r.gp.writeString,
+                    },
+                  },
+                }),
+              f.sm_m
+            );
+          }
+          static MBF() {
+            return f.sm_mbf || (f.sm_mbf = r.w0(f.M())), f.sm_mbf;
+          }
+          toObject(e = !1) {
+            return f.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return r.BT(f.M(), e, t);
+          }
+          static fromObject(e) {
+            return r.Uq(f.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new (i().BinaryReader)(e),
+              n = new f();
+            return f.deserializeBinaryFromReader(n, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return r.zj(f.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new (i().BinaryWriter)();
+            return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            r.i0(f.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new (i().BinaryWriter)();
+            return (
+              f.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -1698,7 +1698,12 @@
               "Econ.GetInventoryItemsWithDescriptions#1",
               (0, v.I8)(ue, E, j),
               Re,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           T.GetInventoryItemsWithDescriptions = e;
@@ -1734,7 +1739,12 @@
               "Econ.GetAssetPropertySchema#1",
               (0, v.I8)(Se, E, j),
               ze,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           T.GetAssetPropertySchema = Oe;

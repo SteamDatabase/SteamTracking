@@ -274,6 +274,23 @@
             }
           }
         }
+        function _(_) {
+          if ("appid" in _)
+            return {
+              _: _.appid,
+              type: "game",
+            };
+          if ("packageid" in _)
+            return {
+              _: _.packageid,
+              type: "sub",
+            };
+          if ("bundleid" in _)
+            return {
+              _: _.bundleid,
+              type: "bundle",
+            };
+        }
         function _(_, _) {
           switch (_) {
             case "sub":

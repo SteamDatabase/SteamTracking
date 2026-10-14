@@ -29,6 +29,8 @@ message CStoreQuery_GetItemsByUserRecommendedTags_Request_Section {
 	optional bool randomize = 3;
 	optional bool include_packages = 4 [default = false];
 	optional bool include_bundles = 5 [default = false];
+	optional bool include_dlc = 6;
+	optional int32 min_discount_percent = 7;
 }
 
 message CStoreQuery_GetItemsByUserRecommendedTags_Response {
@@ -107,6 +109,7 @@ message CStoreQueryFilters {
 	repeated int32 content_descriptors_excluded = 16 [(.description) = "enum"];
 	optional .CStoreQueryFilters_DiscountedDatesFilter discounted_dates_filter = 17;
 	optional .CStoreQueryFilters_CompatibilityFilter compatibility_filter = 18;
+	optional .CStoreQueryFilters_ReviewScoreFilter review_score_filter = 19;
 	optional int32 regional_top_n_sellers = 40;
 	optional int32 global_top_n_sellers = 41;
 	optional int32 regional_long_term_top_n_sellers = 42;
@@ -141,6 +144,11 @@ message CStoreQueryFilters_ReleaseDateFilter {
 	optional int32 release_date_type = 1 [(.description) = "enum"];
 	optional int32 start_date = 2;
 	optional int32 end_date = 3;
+}
+
+message CStoreQueryFilters_ReviewScoreFilter {
+	optional int32 min_score = 1 [(.description) = "enum"];
+	optional bool allow_unreviewed = 2;
 }
 
 message CStoreQueryFilters_TagFilter {

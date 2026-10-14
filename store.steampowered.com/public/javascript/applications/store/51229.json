@@ -4174,7 +4174,7 @@
     "GamePerformanceStats_AverageFrameRate_Device": "Rata-rata FPS yang dilaporkan untuk %1$s pada %2$s adalah %3$s",
     "GamePerformanceStats_AverageFrameRate_ThisGame_Device": "Rata-rata FPS yang dilaporkan untuk game ini pada %1$s adalah %2$s",
     "GamePerformanceStats_FPS": "%1$s FPS",
-    "GamePerformanceStats_FrameRateDataBasedOn": "Data ini didasarkan pada laporan FPS selama %1$s hari terakhir dari pengguna %2$s yang memilih untuk memberikan data FPS.",
+    "GamePerformanceStats_FrameRateDataBasedOn": "Data ini didasarkan pada laporan FPS selama %1$s hari dari pengguna %2$s yang memilih untuk memberikan data FPS.",
     "GamePerformanceStats_FrameRateDataBasedOnHidden": "Data ini didasarkan pada laporan FPS dari pengguna %1$s yang memilih untuk memberikan data FPS.",
     "GamePerformanceStats_FrameRateMoreInfo": "Catatan: Varian saat ini tidak tersedia, tapi direncanakan selama Beta. Dengan data varian, kamu akan dapat melihat apakah FPS stabil atau berfluktuasi banyak.",
     "GamePerformance_Reason": "Alasan",

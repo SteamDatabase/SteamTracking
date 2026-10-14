@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [96966],
+    [6966],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -16,11 +16,14 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         function _(_) {
           const { redirectUrl: _ = _._.COMMUNITY_BASE_URL } = _,
             [_] = (0, _.useState)(
-              new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+              new _._(
+                new _._(_._.WEBAPI_BASE_URL),
+              ).GetAnonymousServiceTransport(),
             ),
             [_, _] = (0, _.useState)(!1),
             _ = (_) => {

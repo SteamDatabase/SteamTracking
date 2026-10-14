@@ -124,6 +124,48 @@
         __webpack_require__._(module_exports, {
           _: () => _,
         });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const [_, _] = useState(!1);
+          return (
+            useEffect(() => {
+              window.SSR && (window.SSR.hydrated = !0),
+                startTransition(() => _(!0));
+            }, []),
+            jsx(_.Provider, {
+              value: _,
+              children: _.children,
+            })
+          );
+        }
+        const _ = (0, _.createContext)(!1);
+        function _() {
+          return (0, _.useContext)(_);
+        }
+        const _ = Intl.DateTimeFormat().resolvedOptions().timeZone,
+          _ =
+            "document" in globalThis
+              ? document.cookie
+                  .split(";")
+                  .find((_) => _.trim().startsWith("timezoneName"))
+                  ?.split("=")[1]
+              : void 0,
+          _ = _ && decodeURIComponent(_);
+        function _() {
+          return _() ? _ : (_ ?? _);
+        }
+        function _() {
+          "document" in globalThis &&
+            (document.cookie = `timezoneName=${_};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
+        }
+        _();
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
         const _ =
           /^(#(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})|[a-z-]+\([^;{}]*\)|[a-z]+)$/i;
         function _(_) {
@@ -2357,6 +2399,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         async function _(_, _) {
           const { rgDefIDs: _, strCategory: _, itemClass: _ } = _,
@@ -2373,9 +2416,11 @@
         }
         let _;
         function _() {
-          return (
-            _ || (_ = new _._(_._.WEBAPI_BASE_URL)), _.GetServiceTransport()
-          );
+          const _ = (0, _._)();
+          return _
+            ? _.GetAnonymousServiceTransport()
+            : (_ || (_ = new _._(_._.WEBAPI_BASE_URL)),
+              _.GetServiceTransport());
         }
         async function _(_) {
           return _(_(), _);
@@ -2975,45 +3020,6 @@
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = {
-            2022: _,
-            2023: _,
-            2024: _,
-            2025: _,
-          },
-          _ = Object.values(_).reduce(
-            (_, _) => ({
-              ..._,
-              ..._,
-            }),
-            {},
-          ),
-          _ = 2022;
-        function _(_) {
-          const [_, _] = (0, _.useState)({});
-          return (
-            (0, _.useEffect)(() => {
-              let _ = _[_];
-              _ || (_ = _[_]),
-                _({
-                  ..._,
-                  ..._,
-                });
-            }, [_]),
-            _
-          );
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
@@ -3509,139 +3515,6 @@
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = "nicknames";
-        function _(_) {
-          const _ = (0, _._)(),
-            { data: _, isLoading: _ } = (0, _._)({
-              queryKey: [_],
-              queryFn: async () => {
-                const _ = new Map();
-                if (_._.logged_in) {
-                  const _ = _._.Init(_.w_T),
-                    _ = (await _.xtC.GetNicknameList(_, _)).Body().toObject();
-                  _?.nicknames &&
-                    _.nicknames.length > 0 &&
-                    _.nicknames.forEach((_) => {
-                      _.accountid &&
-                        _.nickname &&
-                        _.set(_.accountid, _.nickname);
-                    });
-                }
-                return _;
-              },
-            });
-          return _ ? _.get(_) : null;
-        }
-        async function _(_) {
-          if (!_ || _.length == 0) return [];
-          const _ =
-            (0, _._)() == "community"
-              ? _._.COMMUNITY_BASE_URL
-              : _._.STORE_BASE_URL;
-          if (_.length == 1) {
-            const _ = {
-                accountid: _[0],
-                origin: self.origin,
-              },
-              _ = await _().get(`${_}actions/ajaxgetavatarpersona`, {
-                params: _,
-              });
-            if (
-              !_ ||
-              _.status != 200 ||
-              _.data?.success != _._ ||
-              !_.data?.userinfo
-            )
-              throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
-            return [_.data.userinfo];
-          } else {
-            const _ = {
-                accountids: _.join(","),
-                origin: self.origin,
-              },
-              _ = await _().get(`${_}actions/ajaxgetmultiavatarpersona`, {
-                params: _,
-              });
-            if (
-              !_ ||
-              _.status != 200 ||
-              _.data?.success != _._ ||
-              !_.data?.userinfos
-            )
-              throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
-            const _ = new Map();
-            return (
-              _.data.userinfos.forEach((_) =>
-                _.set(new _._(_.steamid).GetAccountID(), _),
-              ),
-              _.map((_) => _.get(_))
-            );
-          }
-        }
-        const _ = new (_())((_) => _(_), {
-            cache: !1,
-          }),
-          _ = "avatarandpersonas";
-        function _(_) {
-          const { data: _, isLoading: _ } = (0, _._)({
-            queryKey: [_, _],
-            queryFn: () => _.load(_),
-          });
-          return [_, _];
-        }
-        function _(_) {
-          const _ = (0, _._)(),
-            { data: _, isLoading: _ } = (0, _._)({
-              queryKey: [_, _],
-              queryFn: async () => {
-                const _ = await _.loadMany(_);
-                return (
-                  _.forEach((_) => {
-                    if (_ instanceof Error) return;
-                    const _ = [_, new _._(_.steamid).GetAccountID()];
-                    _.setQueryData(_, _);
-                  }),
-                  _
-                );
-              },
-              enabled: _?.length > 0,
-            }),
-            _ = (0, _.useMemo)(() => {
-              const _ = new Array();
-              return (
-                _?.forEach((_) => {
-                  _ instanceof Error || _.push(_);
-                }),
-                _
-              );
-            }, [_]);
-          return _ ? null : _;
-        }
-        function _(_) {
-          return ReactQueryClient.getQueryData([_, _]);
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -3725,6 +3598,7 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = _.createContext(void 0);
         function _() {
@@ -3739,8 +3613,8 @@
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = 0,
           _ = 1,
@@ -7921,6 +7795,12 @@
           _.GetYIRCurrentMonthlySummary = _;
         })(_ || (_ = {}));
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         const _ = {
             [_.Gkz]: [_.Gkz, _.Vg1, _.Sv2, _.e94, _.H2m, _.Loc],
@@ -8324,83 +8204,10 @@
               _++;
           return _;
         }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const _ = _._.Get().BIsLoaded() ? _._.Get() : void 0;
-          return _.useMemo(() => _(_, _), [_, _]);
-        }
-        function _(_, _) {
-          if (!_ || !_) return !1;
-          if (_.BExcludesContentDescriptor(_.GetContentDescriptorIDs()))
-            return !0;
-          switch (_.GetStoreItemType()) {
-            case _._._:
-              if (_.BIsGameIgnored(_.GetID())) return !0;
-              break;
-            case _._._:
-              if (_.BIsPackageIgnored(_.GetID())) return !0;
-              break;
-          }
-          return !1;
-        }
         var _ = __webpack_require__("chunkid");
-        const _ = _.createContext({
-          bIsUser: !1,
-          persona_name: "",
-          avatar_url: "",
-          Screenshots: void 0,
-          themeStyle: {},
-        });
         function _() {
-          return (0, _.useContext)(_).bIsUser;
+          return _._.country_code.toLowerCase() === "cn";
         }
-        function _() {
-          return (0, _.useContext)(_).themeStyle;
-        }
-        function _(_) {
-          const _ = _._.logged_in,
-            _ = _?.GetContentDescriptorIDs().length > 0,
-            _ = _(),
-            _ = _(_);
-          return _ ? !_ && _ : _;
-        }
-        function _() {
-          return (0, _.useContext)(_).persona_name;
-        }
-        function _() {
-          const _ = (0, _.useContext)(_).Screenshots;
-          return (0, _._)(_, "YIR context missing initialization!"), _;
-        }
-        function _() {
-          const _ = (0, _.useContext)(_),
-            _ = _.bIsUser;
-          return _.useCallback(
-            (_, ..._) => {
-              if (_) {
-                const _ = `${_}_second`;
-                return (0, _._)(_, ..._) === _
-                  ? (0, _._)(_, ..._)
-                  : (0, _._)(_, ..._);
-              } else {
-                const _ = `${_}_third`;
-                return (0, _._)(_, _.persona_name, ..._) === _
-                  ? (0, _._)(_, ..._)
-                  : (0, _._)(_, _.persona_name, ..._);
-              }
-            },
-            [_, _.persona_name],
-          );
-        }
-        function _(_) {
-          return _ < 100
-            ? (0, _._)("#YIR_Percent_Low", "1")
-            : (0, _._)("#YIR_Percent", Math.round(_ / 100).toFixed(0));
-        }
-        function _() {
-          return !0;
-        }
-        var _ = __webpack_require__("chunkid");
         function _(_, _, _) {
           const { rgRankings: _, nTotalResultCount: _ } = _(_, _),
             _ = new Set(_.map((_) => _.appid).slice(0, _));
@@ -8431,7 +8238,7 @@
                   {
                     appid: _.appid,
                     parent_appid: _.parent_appid,
-                    strPercentage: _(_),
+                    nPercentagex100: _,
                   }
                 );
               }
@@ -8443,7 +8250,7 @@
                 return {
                   appid: _.appid,
                   parent_appid: _.parent_appid,
-                  strPercentage: _(_),
+                  nPercentagex100: _,
                 };
               }
               return {
@@ -8556,8 +8363,8 @@
                 _ = _.stats.total_playtime_percentagex100;
               let _ = 0,
                 _ = 0;
-              _.game_summary
-                ?.sort(
+              [..._.game_summary]
+                .sort(
                   (_, _) =>
                     (_?.total_playtime_percentagex100 ?? 0) -
                     (_?.total_playtime_percentagex100 ?? 0),
@@ -8591,11 +8398,12 @@
             _ = new Array();
           for (let _ = 0; _ < 12; ++_) {
             const _ = _.findIndex(
-              (_) => _.date.getMonth() === _ && _.date.getFullYear() === _,
+              (_) =>
+                _.date.getUTCMonth() === _ && _.date.getUTCFullYear() === _,
             );
             _ === -1
               ? _.push({
-                  date: new Date(_, _, 15),
+                  date: new Date(Date.UTC(_, _, 15)),
                   topPlayedPercentBreakdownPerMonth: {},
                   topPlayedRelativePercentBreakdownForMonth: {},
                   otherPlayedPercentBreakdownForMonth: {},
@@ -8606,19 +8414,7 @@
           return _;
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
+          _ = __webpack_require__("chunkid");
         const _ = 5,
           _ = 8;
         function _(_) {
@@ -8630,7 +8426,8 @@
                 typeof _.demos_played == "number" &&
                 _.game_rankings &&
                 typeof _.playtests_played == "number" &&
-                typeof _.substantial == "boolean" &&
+                (typeof _.substantial == "boolean" ||
+                  typeof _.substantial == "number") &&
                 _.by_numbers,
               "YIR playtime stats missing expected fields!",
             );
@@ -8684,7 +8481,6 @@
           m_rgMonthChartData = [];
           m_rgTopGameMonthsChartIdsAndRanks = [];
           m_rgAggregateTagData = [];
-          m_privacyState = 0;
           m_rgDemoByPlaytime = [];
           m_rgPlaytestByPlaytime = [];
           GetRawStats() {
@@ -8713,12 +8509,6 @@
           }
           GetYear() {
             return this.m_allStats.year;
-          }
-          GetPrivacyState() {
-            return this.m_privacyState;
-          }
-          SetPrivacyState(_) {
-            this.m_privacyState = _;
           }
           GetGameSummaryForApp(_) {
             return this.m_mapGameSummary.get(_);
@@ -8772,13 +8562,11 @@
             return this.m_rgAggregateTagData;
           }
           constructor(_, _, _, _) {
-            (0, _._)(this);
             const _ = _(_);
             if (
               ((this.m_allStats = _),
               (this.m_steamid = _._.InitFromAccountID(_.account_id)),
-              (this.m_privacyState = _.privacy_state),
-              (this.m_globalPercentiles = _),
+              (this.m_globalPercentiles = _ ?? void 0),
               (this.m_globalGameplayDistribution = _(_)),
               (this.m_previousYearSummary = _(_)),
               this.BHasPlaytimeData() &&
@@ -8849,7 +8637,7 @@
           GetGameAgeCounts(_) {
             let _ = this.m_allStats.playtime_stats?.game_summary || [];
             if (_.length == 0) return [_.length];
-            let _ = new Date(`December 15 ${this.GetYear()}`).getTime() / 1e3,
+            let _ = Date.UTC(this.GetYear(), 11, 15) / 1e3,
               _ = Array(_.length + 1).fill(0);
             for (let _ of _) {
               let _ = _.rtime_release_date || _;
@@ -8866,445 +8654,665 @@
             return _;
           }
         }
-        _([_._], _.prototype, "m_privacyState", 2);
         const _ = null,
           _ = "0px 0px 100% 0px";
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        const _ = {
-            include_basic_info: !0,
-            include_assets_without_overrides: !0,
-          },
-          _ = class _ {
-            m_SteamInterface;
-            m_DynamicUserStore = null;
-            m_GameDetailPopupData = {
-              index: void 0,
-              appids: [],
-            };
-            get SteamInterface() {
-              return this.m_SteamInterface;
-            }
-            GetGameList() {
-              return this.m_GameDetailPopupData;
-            }
-            async GetLoadYearInReview(_, _) {
-              const _ = this.LoadFromPageConfigIfAvailable(_, _);
-              if (_)
-                return new _(
-                  _,
-                  this.LoadFromPageConfigGlobalPercentile(_),
-                  this.LoadFromPageConfigGlobalDistribution(_),
-                  this.LoadFromPageConfigPreviousYearSummary(_),
-                );
-              const _ = _._.Init(_);
-              _.Body().set_steamid(_),
-                _.Body().set_year(_),
-                _.Body().set_force_regenerate(!1);
-              const _ = await _.GetUserYearInReview(
-                  this.m_SteamInterface.GetServiceTransport(),
-                  _,
-                ),
-                {
-                  stats: _,
-                  percentiles: _,
-                  distribution: _,
-                  previous_year_summary: _,
-                } = _.Body().toObject();
-              return (
-                (0, _._)(
-                  !!_ && !!_ && !!_ && !!_,
-                  "YIR Loaded with missing fields!",
-                ),
-                new _(_, _, _, _)
-              );
-            }
-            async PreloadStoreItemCache(_) {
-              let _ = _.GetTopGamesShownAppIDs().map((_) =>
-                _._.fromObject({
-                  appid: _,
-                }),
-              );
-              if (_.length == 0) return !0;
-              let _ = _._.Init(_._);
-              (0, _._)(_), (0, _._)(_, _), _.Body().set_ids(_);
-              let _ = await _._.GetItems(
-                this.m_SteamInterface.GetServiceTransport(),
-                _,
-              );
-              if (_.GetEResult() != _._) throw "error loading game info";
-              for (let _ of _.Body().store_items()) _._.Get().ReadItem(_, _);
-              return !0;
-            }
-            LoadFromPageConfigIfAvailable(_, _) {
-              const _ = "yearinreview_" + new _._(_).GetAccountID() + "_" + _;
-              let _ = (0, _._)(_, "application_config");
-              return this.ValidateYearInReview(_) ? _ : null;
-            }
-            LoadFromPageConfigGlobalDistribution(_) {
-              const _ = "yearinreview_" + _ + "_distribution";
-              return (0, _._)(_, "application_config");
-            }
-            LoadFromPageConfigGlobalPercentile(_) {
-              const _ = "yearinreview_" + _ + "_percentiles";
-              return (0, _._)(_, "application_config");
-            }
-            LoadFromPageConfigPreviousYearSummary(_) {
-              const _ = "yearinreview_" + _ + "_previous_year_summary";
-              return (0, _._)(_, "application_config");
-            }
-            ValidateYearInReview(_) {
-              const _ = _;
-              return !!(
-                _ &&
-                typeof _ == "object" &&
-                _.account_id &&
-                typeof _.account_id == "number" &&
-                _.playtime_stats &&
-                typeof _.playtime_stats == "object"
-              );
-            }
-            async SetYearInReviewPrivacy(_, _, _) {
-              const _ = _._.Init(_);
-              _.Body().set_steamid(_),
-                _.Body().set_year(_),
-                _.Body().set_privacy_state(_);
-              const _ = await _.SetUserSharingPermissions(
-                this.m_SteamInterface.GetServiceTransport(),
-                _,
-              );
-              return _.GetEResult() != _._
-                ? {
-                    privacy_state: void 0,
-                    error: this.PrivacyEResultToMessage(_.GetEResult()),
-                  }
-                : {
-                    privacy_state: _.Body().privacy_state(),
-                  };
-            }
-            PrivacyEResultToMessage(_) {
-              return _ === _._
-                ? "Servers are busy, please try again later"
-                : "";
-            }
-            GetGameDetailsPopupIndex() {
-              return this.m_GameDetailPopupData.index;
-            }
-            SetGameDetailsPopupIndex(_) {
-              _ >= 0 &&
-                _ < this.m_GameDetailPopupData.appids.length &&
-                (this.m_GameDetailPopupData.index = _);
-            }
-            SetGameDetailsPopupAppData(_, _) {
-              (this.m_GameDetailPopupData.appids = _),
-                (this.m_GameDetailPopupData.index = _);
-            }
-            static s_Singleton;
-            static Get() {
-              return (
-                _.s_Singleton ||
-                  ((_.s_Singleton = new _()), _.s_Singleton.Init()),
-                _.s_Singleton
-              );
-            }
-            constructor() {
-              (0, _._)(this);
-            }
-            async Init() {
-              (this.m_SteamInterface = (0, _._)()),
-                (this.m_DynamicUserStore = await _._.Get().HintLoad());
-            }
-          };
-        _([_._], _.prototype, "m_GameDetailPopupData", 2);
-        let _ = _;
         function _(_, _) {
-          const { data: _, isLoading: _ } = (0, _._)({
-            queryKey: ["YearInReview", "Get", _, _],
-            queryFn: () => _.Get().GetLoadYearInReview(_, _),
-          });
-          let _ = _,
-            { data: _, isLoading: _ } = (0, _._)({
-              queryKey: ["YearInReview_AppDataLoading"],
-              queryFn: () => _.Get().PreloadStoreItemCache(_),
-              enabled: !!_,
-            }),
-            _ = _ || _;
-          return (
-            !_ && !_ && (_ = null),
+          const {
+            stats: _,
+            percentiles: _,
+            distribution: _,
+            previous_year_summary: _,
+          } = _;
+          return {
+            eResult: _,
+            privacy_state: _?.privacy_state,
+            stats: _,
+            percentiles: _,
+            distribution: _,
+            previous_year_summary: _,
+          };
+        }
+        function _(_, _) {
+          return ["YIR", "Get", _, _];
+        }
+        function _(_, _, _) {
+          return {
+            queryKey: _(_, _),
+            queryFn: async () => {
+              const _ = await _.GetUserYearInReview(_, {
+                steamid: _,
+                year: _,
+                fetch_previous_year_summary: !0,
+              });
+              return _(_.GetEResult(), _.Body().toObject());
+            },
+            staleTime: 1 / 0,
+          };
+        }
+        function _(_, _) {
+          return (0, _._)(_((0, _._)(), _, _));
+        }
+        function _(_, _) {
+          const { data: _, isLoading: _ } = _(_, _),
             {
-              userYearInReview: _,
-              isLoading: _,
-            }
+              eResult: _,
+              stats: _,
+              percentiles: _,
+              distribution: _,
+              previous_year_summary: _,
+            } = _ ?? {};
+          return {
+            userYearInReview: _.useMemo(() => {
+              if (!(_ != _._ || !_)) return new _(_, _, _, _);
+            }, [_, _, _, _, _]),
+            isLoading: _,
+          };
+        }
+        function _(_, _) {
+          return _(_, _).data?.privacy_state;
+        }
+        function _(_, _) {
+          const _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            mutationFn: async (_) => {
+              const _ = await _.SetUserSharingPermissions(_, {
+                steamid: _,
+                year: _,
+                privacy_state: _,
+              });
+              return {
+                eResult: _.GetEResult(),
+                privacy_state: _.Body().privacy_state(),
+              };
+            },
+            onSuccess: ({ eResult: _, privacy_state: _ }) => {
+              _ == _._ &&
+                _ !== void 0 &&
+                _.setQueryData(
+                  _(_, _),
+                  (_) =>
+                    _ && {
+                      ..._,
+                      privacy_state: _,
+                    },
+                );
+            },
+          });
+        }
+        function _(_, _, _) {
+          return {
+            steamid: _,
+            nYear: _,
+            achievements: new (_())((_) => _(_, _, _, _), {
+              cache: !1,
+            }),
+            screenshots: new (_())((_) => _(_, _, _, _), {
+              cache: !1,
+            }),
+          };
+        }
+        const _ = _.createContext(void 0);
+        function _() {
+          const _ = _.useContext(_);
+          return (
+            (0, _._)(
+              _,
+              "Cannot use YIR data loaders outside of Steam Replay page!",
+            ),
+            _
           );
         }
-        async function _(_, _, _) {
-          return await _.Get().SetYearInReviewPrivacy(_, _, _);
-        }
-        function _() {
-          const [_, _, _] = (0, _._)(() => {
-            const _ = _.Get().GetGameList();
-            return [
-              typeof _.index == "number" && _.appids.length > _.index
-                ? _.appids[_.index]
-                : null,
-              _.appids.length,
-              _.index,
-            ];
-          });
-          return {
-            unAppID: _,
-            length: _,
-            index: _,
-          };
+        async function _(_, _, _, _) {
+          try {
+            const _ = await _.GetUserYearAchievements(_, {
+              steamid: _,
+              year: _,
+              appids: [..._],
+              total_only: !1,
+            });
+            if (_.GetEResult() == _._) {
+              const { game_achievements: _ = [] } = _.Body().toObject(),
+                _ = _.reduce((_, _) => ((_[_.appid] = _), _), {});
+              return _.map((_) => {
+                const _ = _[_];
+                return {
+                  ..._,
+                  appid: _,
+                  achievements: (_?.achievements ?? []).map((_) => ({
+                    ..._,
+                    achievement_name_internal: (
+                      _.achievement_name_internal ?? ""
+                    ).toLowerCase(),
+                  })),
+                };
+              });
+            }
+            console.error("GetUserYearAchievements failed: " + _.GetEResult());
+          } catch (_) {
+            console.error("GetUserYearAchievements failed", _);
+          }
+          return _.map((_) => ({
+            appid: _,
+            achievements: [],
+          }));
         }
         function _(_, _) {
-          return _.useCallback(() => {
-            _.Get().SetGameDetailsPopupAppData(_, _);
-          }, [_, _]);
+          return {
+            queryKey: ["YIR", "achievements", "apps", _.steamid, _.nYear, _],
+            queryFn: () => _.achievements.load(_),
+            staleTime: 1 / 0,
+          };
         }
         function _(_) {
-          return _.useCallback(() => {
-            _.Get().SetGameDetailsPopupIndex(_);
-          }, [_]);
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        class _ {
-          m_SteamInterface;
-          m_steamid;
-          m_year;
-          m_DataLoader;
-          constructor(_, _, _) {
-            (this.m_SteamInterface = _),
-              (this.m_steamid = _),
-              (this.m_year = _),
-              (this.m_DataLoader = new (_())(
-                (_) => this.InternalLoadScreenshots(_),
-                {
-                  cache: !1,
-                },
-              ));
-          }
-          get steamid() {
-            return this.m_steamid;
-          }
-          get year() {
-            return this.m_year;
-          }
-          GetScreenshots(_) {
-            return this.m_DataLoader.load(_);
-          }
-          async InternalLoadScreenshots(_) {
-            const _ = _._.Init(_);
-            _.Body().set_steamid(this.m_steamid.ConvertTo64BitString()),
-              _.Body().set_year(this.m_year),
-              _.Body().set_appids(_);
-            const _ = await _.GetUserYearScreenshots(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (!_.BSuccess())
-              throw `Load Screenshots failed: ${_.GetErrorMessage()}`;
-            const { apps: _ = [] } = _.Body().toObject(),
-              _ = new Map();
-            for (const _ of _) _.appid && _.set(_.appid, _.screenshots ?? []);
-            return _.map((_) => _.get(_));
-          }
+          const _ = _();
+          (0, _._)({
+            queries: _.GetTopGamesShownAppIDs().map((_) => _(_, _)),
+          });
         }
         function _(_) {
-          const _ = _(),
+          const { data: _ } = (0, _._)({
+            ..._(_(), _),
+            enabled: !!_,
+          });
+          return _;
+        }
+        function _(_, _, _) {
+          return {
+            queryKey: ["YIR", "achievements", "display", _, _],
+            queryFn: async () => {
+              try {
+                const _ = await _.xtC.GetGameAchievements(_, {
+                  appid: _,
+                  language: _,
+                });
+                if (_.GetEResult() == _._)
+                  return (_.Body().toObject().achievements ?? []).map((_) => ({
+                    ..._,
+                    internal_name: (_.internal_name ?? "").toLowerCase(),
+                  }));
+                console.error("GetGameAchievements failed: " + _.GetEResult());
+              } catch (_) {
+                console.error("GetGameAchievements failed", _);
+              }
+              return [];
+            },
+            staleTime: 1 / 0,
+          };
+        }
+        function _(_, _ = !0) {
+          const _ = (0, _._)(),
             { data: _ } = (0, _._)({
-              queryKey: [
-                "yirscreenshots",
-                _.steamid.ConvertTo64BitString(),
-                _.year,
-                _,
-              ],
-              queryFn: () => _.GetScreenshots(_),
+              ..._(_, _, _._.LANGUAGE || "english"),
+              enabled: _ && !!_,
             });
           return _;
         }
+        function _(_) {
+          const _ = _(_);
+          return _.useMemo(() => {
+            const _ = new Map();
+            for (const _ of _ ?? [])
+              _.internal_name && _.set(_.internal_name, _);
+            return _;
+          }, [_]);
+        }
+        function _(_) {
+          return _(_)?.length ?? 0;
+        }
+        async function _(_, _, _, _) {
+          const _ = await _.GetUserYearScreenshots(_, {
+            steamid: _,
+            year: _,
+            appids: [..._],
+          });
+          if (!_.BSuccess())
+            throw `Load Screenshots failed: ${_.GetErrorMessage()}`;
+          const { apps: _ = [] } = _.Body().toObject(),
+            _ = _.reduce((_, _) => ((_[_.appid] = _), _), {});
+          return _.map((_) => _[_]?.screenshots);
+        }
+        function _(_, _) {
+          return {
+            queryKey: ["YIR", "Screenshots", _.steamid, _.nYear, _],
+            queryFn: async () => (await _.screenshots.load(_)) ?? null,
+            staleTime: 1 / 0,
+          };
+        }
+        function _(_) {
+          const { data: _ } = (0, _._)({
+            ..._(_(), _),
+            enabled: !!_,
+          });
+          return _ ?? void 0;
+        }
+        function _(_, _, _, _) {
+          return {
+            queryKey: ["YIR", "Friends", _, _, _],
+            queryFn: async () => {
+              const _ = await _.GetFriendsSharedYearInReview(_, {
+                steamid: _,
+                year: _,
+                return_private: _,
+              });
+              if (_.GetEResult() != _._)
+                throw "error friend sharing information " + _.GetEResult();
+              const { friend_shares: _ = [] } = _.Body().toObject();
+              return _.filter((_) => !!_.steamid).map(
+                ({
+                  steamid: _,
+                  privacy_state: _,
+                  rt_privacy_updated: _,
+                  privacy_override: _,
+                }) => ({
+                  steamid: _,
+                  privacy_state: _ ?? 0,
+                  rt_privacy_updated: _ ?? 0,
+                  privacy_override: !!_,
+                }),
+              );
+            },
+            staleTime: 1 / 0,
+          };
+        }
+        function _(_, _) {
+          return (0, _._)(_((0, _._)(), _, _, _._.is_support));
+        }
+        function _(_, _, _, _) {
+          return {
+            queryKey: ["YIR", "ShareImages", _, _, _],
+            queryFn: async () => {
+              const _ = await _.GetUserYearInReviewShareImage(_, {
+                steamid: _,
+                year: _,
+                language: _,
+              });
+              if (_.GetEResult() != _._)
+                throw `Load social images failed: ${_.GetErrorMessage()}`;
+              return _.Body().toObject().images ?? [];
+            },
+            staleTime: 1 / 0,
+          };
+        }
+        function _(_, _, _) {
+          return (0, _._)(_((0, _._)(), _, _, _));
+        }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          return _?.success === _._ || _?.success === _._;
+        }
+        function _(_) {
+          const _ = _
+              ? {
+                  appid: _,
+                }
+              : void 0,
+            { data: _, isLoading: _ } = (0, _._)(_),
+            { data: _, isLoading: _ } = (0, _._)(_);
+          return {
+            item: _.useMemo(
+              () =>
+                _(_)
+                  ? {
+                      info: _,
+                      assets: _ ?? null,
+                    }
+                  : void 0,
+              [_, _],
+            ),
+            bLoading: _ || _,
+          };
+        }
+        function _(_, _ = !1) {
+          const _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            queryKey: ["YIR", "storeitems", _, _],
+            queryFn: async () => {
+              const _ = await Promise.all(
+                  _.map(async (_) => {
+                    const [_, _] = await Promise.allSettled([
+                      _.fetchQuery(
+                        (0, _._)(_, {
+                          appid: _,
+                        }),
+                      ),
+                      _.fetchQuery(
+                        (0, _._)(_, {
+                          appid: _,
+                        }),
+                      ),
+                      _ &&
+                        _.fetchQuery(
+                          (0, _._)(_, {
+                            appid: _,
+                          }),
+                        ),
+                    ]);
+                    return _.status === "rejected" || !_(_.value)
+                      ? null
+                      : {
+                          appid: _,
+                          info: _.value,
+                          assets: _.status === "fulfilled" ? _.value : null,
+                        };
+                  }),
+                ),
+                _ = new Map();
+              for (const _ of _) _ && _.set(_.appid, _);
+              if (_.size === 0 && _.length > 0)
+                throw new Error("Error loading store items!");
+              return _;
+            },
+            staleTime: 0,
+          });
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        async function _(_, _) {
-          const _ = await _;
-          if (_) {
-            const _ = _.find((_) => _.appid == _);
-            if (_) return _;
-          }
-          return null;
+        const _ = {};
+        (_.arabic = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 49101, 19))),
+          (_.brazilian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 78513, 19))),
+          (_.bulgarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 52986, 19))),
+          (_.czech = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 32820, 19))),
+          (_.danish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 1864, 19))),
+          (_.dutch = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 58325, 19))),
+          (_.english = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 91651, 19))),
+          (_.finnish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 24972, 19))),
+          (_.french = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 19065, 19))),
+          (_.german = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 54003, 19))),
+          (_.greek = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 93443, 19))),
+          (_.hungarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 79366, 19))),
+          (_.indonesian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 35057, 19))),
+          (_.italian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 82155, 19))),
+          (_.japanese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 29318, 19))),
+          (_.koreana = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 50400, 19))),
+          (_.latam = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 15024, 19))),
+          (_.malay = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 50191, 19))),
+          (_.norwegian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 323, 19))),
+          (_.polish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 17892, 19))),
+          (_.portuguese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 93532, 19))),
+          (_.romanian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 28702, 19))),
+          (_.russian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 26586, 19))),
+          (_.sc_schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 46848, 19))),
+          (_.schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 81849, 19))),
+          (_.spanish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 14571, 19))),
+          (_.swedish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 79706, 19))),
+          (_.tchinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 2634, 19))),
+          (_.thai = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 22531, 19))),
+          (_.turkish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 23043, 19))),
+          (_.ukrainian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 99337, 19))),
+          (_.vietnamese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 40182, 19)));
+        async function _(_) {
+          if (_[_]) return _[_]();
         }
-        class _ {
-          m_SteamInterface;
-          m_mapUserAchievementsByYear = new Map();
-          m_mapPromiseUserAchievementsByYear = new Map();
-          m_mapAchievementLoadCallback = new Map();
-          GetKey(_, _, _) {
-            return `${_}_${_}_${_}`;
-          }
-          GetAchievementLoadCallback(_, _, _) {
-            const _ = this.GetKey(_, _, _);
-            return (
-              this.m_mapAchievementLoadCallback.has(_) ||
-                this.m_mapAchievementLoadCallback.set(_, new _._()),
-              this.m_mapAchievementLoadCallback.get(_)
-            );
-          }
-          GetAchievement(_, _, _) {
-            const _ = this.GetKey(_, _, _);
-            return this.m_mapUserAchievementsByYear.get(_);
-          }
-          GetManyAchievement(_, _, _) {
-            return _.map((_) => this.GetAchievement(_, _, _));
-          }
-          async LoadUserAchievementForYearForGame(_, _, _) {
-            const _ = this.GetKey(_, _, _);
-            return (
-              this.m_mapPromiseUserAchievementsByYear.has(_) ||
-                this.m_mapPromiseUserAchievementsByYear.set(
-                  _,
-                  _(_, this.InternalLoadUserAchievementForYear(_, _, [_])),
-                ),
-              this.m_mapPromiseUserAchievementsByYear.get(_)
-            );
-          }
-          async LoadUserAchievementForYearForMultipleGame(_, _, _) {
-            const _ = new Array(),
-              _ = new Array();
-            if (
-              (_.forEach((_) => {
-                const _ = this.GetKey(_, _, _);
-                this.m_mapPromiseUserAchievementsByYear.has(_)
-                  ? _.push(this.m_mapPromiseUserAchievementsByYear.get(_))
-                  : _.push(_);
-              }),
-              _.length > 0)
-            ) {
-              const _ = this.InternalLoadUserAchievementForYear(_, _, _);
-              _.forEach((_) => {
-                const _ = this.GetKey(_, _, _),
-                  _ = _(_, _);
-                this.m_mapPromiseUserAchievementsByYear.set(_, _), _.push(_);
-              });
-            }
-            return Promise.all(_);
-          }
-          async InternalLoadUserAchievementForYear(_, _, _) {
-            const _ = _._.Init(_),
-              _ = _._.InitFromAccountID(_);
-            _.Body().set_appids(_),
-              _.Body().set_steamid(_.ConvertTo64BitString()),
-              _.Body().set_year(_),
-              _.Body().set_total_only(!1);
-            let _ = null;
-            try {
-              const _ = await _.GetUserYearAchievements(
-                this.m_SteamInterface.GetServiceTransport(),
-                _,
-              );
-              if (_.GetEResult() == _._) {
-                const { game_achievements: _ = [] } = _.Body().toObject(),
-                  _ = new Map();
-                for (const _ of _) _.appid && _.set(_.appid, _);
-                return (
-                  _.forEach((_) => {
-                    const _ = this.GetKey(_, _, _),
-                      _ = _.get(_) || {
-                        appid: _,
-                        achievements: [],
-                      };
-                    (_.achievements = (_.achievements ?? []).map((_) => ({
-                      ..._,
-                      achievement_name_internal: (
-                        _.achievement_name_internal ?? ""
-                      ).toLowerCase(),
-                    }))),
-                      this.m_mapUserAchievementsByYear.set(_, _),
-                      this.GetAchievementLoadCallback(_, _, _).Dispatch(_);
-                  }),
-                  _
-                );
-              }
-              _ = (0, _._)(_);
-            } catch (_) {
-              _ = (0, _._)(_);
-            }
-            return (
-              console.error(
-                "CYearInReviewUserAchievementStore.InternalLoadUserAchievementForYear failed: " +
-                  _?.strErrorMsg,
-                _,
-              ),
-              _.map((_) => ({
-                appid: _,
-                achievements: [],
-              }))
-            );
-          }
-          static s_Singleton;
-          static Get() {
-            return (
-              _.s_Singleton ||
-                ((_.s_Singleton = new _()), _.s_Singleton.Init()),
-              _.s_Singleton
-            );
-          }
-          constructor() {}
-          Init() {
-            this.m_SteamInterface = (0, _._)();
-          }
+        const _ = (0, _._)(_),
+          _ = {};
+        (_.arabic = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 72817, 19))),
+          (_.brazilian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 89162, 19))),
+          (_.bulgarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 84230, 19))),
+          (_.czech = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 52920, 19))),
+          (_.danish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 48524, 19))),
+          (_.dutch = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 48361, 19))),
+          (_.english = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 17615, 19))),
+          (_.finnish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 56528, 19))),
+          (_.french = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 92997, 19))),
+          (_.german = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 4503, 19))),
+          (_.greek = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 37767, 19))),
+          (_.hungarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 14034, 19))),
+          (_.indonesian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 19013, 19))),
+          (_.italian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 32031, 19))),
+          (_.japanese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 9490, 19))),
+          (_.koreana = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 34372, 19))),
+          (_.latam = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 76020, 19))),
+          (_.malay = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 79275, 19))),
+          (_.norwegian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 42591, 19))),
+          (_.polish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 17832, 19))),
+          (_.portuguese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 53384, 19))),
+          (_.romanian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 99586, 19))),
+          (_.russian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 37766, 19))),
+          (_.sc_schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 73900, 19))),
+          (_.schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 30581, 19))),
+          (_.spanish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 78079, 19))),
+          (_.swedish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 94270, 19))),
+          (_.tchinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 14606, 19))),
+          (_.thai = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 735, 19))),
+          (_.turkish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 18975, 19))),
+          (_.ukrainian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 47197, 19))),
+          (_.vietnamese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 17042, 19)));
+        async function _(_) {
+          if (_[_]) return _[_]();
         }
-        function _(_, _, _) {
-          const [_, _] = (0, _.useState)(_.Get().GetManyAchievement(_, _, _));
-          return (
-            (0, _.useEffect)(() => {
-              _?.length > 0 &&
-                _.Get()
-                  .LoadUserAchievementForYearForMultipleGame(_, _, _)
-                  .then(_);
-            }, [_, _, _]),
-            _
-          );
+        const _ = (0, _._)(_),
+          _ = {};
+        (_.arabic = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 3569, 19))),
+          (_.brazilian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 31997, 19))),
+          (_.bulgarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 43238, 19))),
+          (_.czech = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 8632, 19))),
+          (_.danish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 57836, 19))),
+          (_.dutch = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 76073, 19))),
+          (_.english = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 18351, 19))),
+          (_.finnish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 64560, 19))),
+          (_.french = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 64325, 19))),
+          (_.german = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 70199, 19))),
+          (_.greek = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 30631, 19))),
+          (_.hungarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 8370, 19))),
+          (_.indonesian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 45893, 19))),
+          (_.italian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 88607, 19))),
+          (_.japanese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 95378, 19))),
+          (_.koreana = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 45636, 19))),
+          (_.latam = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 79380, 19))),
+          (_.malay = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 73579, 19))),
+          (_.norwegian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 41343, 19))),
+          (_.polish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 97160, 19))),
+          (_.portuguese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 29064, 19))),
+          (_.romanian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 68290, 19))),
+          (_.russian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 80454, 19))),
+          (_.sc_schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 96588, 19))),
+          (_.schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 93813, 19))),
+          (_.spanish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 7135, 19))),
+          (_.swedish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 55646, 19))),
+          (_.tchinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 21230, 19))),
+          (_.thai = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 78015, 19))),
+          (_.turkish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 1951, 19))),
+          (_.ukrainian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 70781, 19))),
+          (_.vietnamese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 33394, 19)));
+        async function _(_) {
+          if (_[_]) return _[_]();
         }
-        function _(_, _, _) {
-          const [_, _] = (0, _.useState)(_.Get().GetAchievement(_, _, _)),
-            [_, _] = (0, _.useState)(_);
-          return (
-            (0, _.useEffect)(() => {
-              (!_ || _ != _) &&
-                _.Get()
-                  .LoadUserAchievementForYearForGame(_, _, _)
-                  .then((_) => {
-                    _(_), _(_);
-                  });
-            }, [_, _, _, _, _]),
-            (0, _._)(_.Get().GetAchievementLoadCallback(_, _, _), _),
-            _
-          );
+        const _ = (0, _._)(_),
+          _ = {};
+        (_.arabic = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 87621, 19))),
+          (_.brazilian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 20537, 19))),
+          (_.bulgarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 52482, 19))),
+          (_.czech = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 81868, 19))),
+          (_.danish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 16224, 19))),
+          (_.dutch = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 81629, 19))),
+          (_.english = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 63675, 19))),
+          (_.finnish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 4628, 19))),
+          (_.french = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 85121, 19))),
+          (_.german = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 3931, 19))),
+          (_.greek = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 31531, 19))),
+          (_.hungarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 78302, 19))),
+          (_.indonesian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 28921, 19))),
+          (_.italian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 41283, 19))),
+          (_.japanese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 25550, 19))),
+          (_.koreana = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 29352, 19))),
+          (_.latam = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 75624, 19))),
+          (_.malay = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 81271, 19))),
+          (_.norwegian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 94491, 19))),
+          (_.polish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 28268, 19))),
+          (_.portuguese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 72660, 19))),
+          (_.romanian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 38134, 19))),
+          (_.russian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 32658, 19))),
+          (_.sc_schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 92280, 19))),
+          (_.schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 1617, 19))),
+          (_.spanish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 77555, 19))),
+          (_.swedish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 42930, 19))),
+          (_.tchinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 60610, 19))),
+          (_.thai = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 4939, 19))),
+          (_.turkish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 21131, 19))),
+          (_.ukrainian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 28049, 19))),
+          (_.vietnamese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 38030, 19)));
+        async function _(_) {
+          if (_[_]) return _[_]();
+        }
+        const _ = (0, _._)(_),
+          _ = new Map([
+            [2022, _],
+            [2023, _],
+            [2024, _],
+            [2025, _],
+          ]);
+        function _(_) {
+          return _.get(_);
+        }
+        function _() {
+          const _ = (0, _._)(_._),
+            _ = (0, _._)(_),
+            _ = (0, _._)(_),
+            _ = (0, _._)(_),
+            _ = (0, _._)(_);
+          return _ && _ && _ && _ && _;
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ =
@@ -9315,6 +9323,141 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = _.createContext({
+          bIsUser: !1,
+          persona_name: "",
+          avatar_url: "",
+          themeStyle: {},
+        });
+        function _() {
+          return (0, _.useContext)(_).bIsUser;
+        }
+        function _() {
+          return (0, _.useContext)(_).themeStyle;
+        }
+        function _(_) {
+          const _ = _._.logged_in,
+            _ = _?.content_descriptorids ?? [],
+            _ = _(),
+            _ = (0, _._)(),
+            { data: _ } = (0, _._)(),
+            _ = _ ?? (0, _._)(_),
+            _ =
+              !!_ &&
+              (_.some((_) => _.setExcludedContentDescriptors.has(_)) ||
+                (!!_.appid && _.mapIgnoredApps.has(_.appid)));
+          return _ ? !_ && _ : _.length > 0;
+        }
+        function _() {
+          return (0, _.useContext)(_).persona_name;
+        }
+        function _() {
+          const { persona_name: _, bIsUser: _ } = (0, _.useContext)(_);
+          return _.useCallback(
+            (_, ..._) => (0, _._)(_._, _, _, _, ..._) ?? _,
+            [_, _],
+          );
+        }
+        function _() {
+          const { persona_name: _, bIsUser: _ } = (0, _.useContext)(_);
+          return _.useCallback(
+            (_, _, ..._) => {
+              const _ = _(_);
+              return _ && (0, _._)(_, _, _, _, ..._);
+            },
+            [_, _],
+          );
+        }
+        function _(_) {
+          return _ < 100
+            ? _._.Localize("#YIR_Percent_Low", "1")
+            : _._.Localize("#YIR_Percent", Math.round(_ / 100).toFixed(0));
+        }
+        function _() {
+          return !0;
+        }
+        function _() {
+          const _ = _(),
+            _ = (0, _._)();
+          return _.useCallback(
+            (_) =>
+              (0, _._)(_, {
+                weekday: "short",
+                year: _ ? void 0 : "numeric",
+                timeZone: _,
+              }),
+            [_, _],
+          );
+        }
+        const _ = {
+            index: void 0,
+            appids: [],
+          },
+          _ = _.createContext(_),
+          _ = _.createContext(() => {});
+        function _(_) {
+          const [_, _] = _.useState(_);
+          return (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsx)(_.Provider, {
+              value: _,
+              children: _.children,
+            }),
+          });
+        }
+        function _(_) {
+          return typeof _.index == "number" && _.appids.length > _.index
+            ? _.appids[_.index]
+            : null;
+        }
+        function _() {
+          const _ = _.useContext(_);
+          return {
+            unAppID: _(_),
+            length: _.appids.length,
+            index: _.index,
+          };
+        }
+        function _() {
+          const _ = _.useContext(_);
+          return _.useCallback(
+            (_, _) =>
+              _({
+                index: _,
+                appids: _,
+              }),
+            [_],
+          );
+        }
+        function _(_, _) {
+          const _ = _();
+          return _.useCallback(() => _(_, _), [_, _, _]);
+        }
+        function _(_) {
+          const _ = _.useContext(_);
+          return _.useCallback(() => {
+            _((_) =>
+              _ >= 0 && _ < _.appids.length
+                ? {
+                    ..._,
+                    index: _,
+                  }
+                : _,
+            );
+          }, [_, _]);
+        }
+        function _() {
+          const _ = _.useContext(_);
+          return _.useCallback(
+            (_) => {
+              _((_) => (_(_) == _ ? _ : _));
+            },
+            [_],
+          );
+        }
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -9331,10 +9474,6 @@
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        const _ = {
-          ..._,
-          include_screenshots: !0,
-        };
         function _(_) {
           const {
               category: _,
@@ -9364,8 +9503,8 @@
             [_, _] = (0, _.useState)(
               _.length > 0 ? _[0].parent_appid || _[0].appid : 0,
             ),
-            _ = (0, _._)(_, _ == "vr" ? _ : _),
-            _ = _(_, _, _),
+            { isLoading: _, data: _ } = _(_, _ == "vr"),
+            _ = _(_, _, _, _),
             _ =
               _ === "overall" ||
               _ === "controller" ||
@@ -9400,7 +9539,7 @@
                       }),
                       (0, _.jsx)("div", {
                         className: _().StatDescription,
-                        children: (0, _._)("#YIR_NewLine_Games", _),
+                        children: _._.LocalizePlural("#YIR_NewLine_Games", _),
                       }),
                     ],
                   }),
@@ -9413,7 +9552,7 @@
                       }),
                       (0, _.jsx)("div", {
                         className: _().StatDescription,
-                        children: (0, _._)("#YIR_NewLine_Session", _),
+                        children: _._.LocalizePlural("#YIR_NewLine_Session", _),
                       }),
                     ],
                   }),
@@ -9435,7 +9574,7 @@
                 _ > 0 &&
                 (0, _.jsx)("div", {
                   className: _().SectionSubTitle,
-                  children: (0, _._)(_, _),
+                  children: _._.Localize(_, _),
                 }),
               !!_ &&
                 (0, _.jsx)("div", {
@@ -9453,33 +9592,39 @@
             ],
           });
         }
-        function _(_, _, _) {
-          const [_, _] = _.useState(0);
-          return (
-            _.useEffect(() => {
-              if (_ == _._) return;
-              const _ = _.reduce((_, _) => {
-                const _ = _.parent_appid || _.appid,
-                  _ = _._.Get().GetApp(_)?.BIsVisible(),
-                  _ = !(_ == "demo" || _ == "playtest") || _.parent_appid;
-                return _ + (_ && _ ? 1 : 0);
-              }, 0);
-              _(_);
-            }, [_, _, _]),
-            _
+        function _(_, _, _, _) {
+          return (0, _.useMemo)(
+            () =>
+              _ || !_
+                ? 0
+                : _.reduce((_, _) => {
+                    const _ = _.parent_appid || _.appid,
+                      _ = _.get(_)?.info.visible,
+                      _ = !(_ == "demo" || _ == "playtest") || _.parent_appid;
+                    return _ + (_ && _ ? 1 : 0);
+                  }, 0),
+            [_, _, _, _],
           );
         }
         function _(_) {
           const { appid: _ } = _,
-            [_] = (0, _._)(_, _),
+            { data: _ } = (0, _._)({
+              appid: _,
+            }),
             _ = (0, _._)();
           if (!_) return null;
-          const _ = _.GetScreenshots(_ == "blocked");
-          if (!_.length) return null;
-          const _ = _[1],
-            _ = _ == "masked" && !_.BIsAgeSafeScreenshot(_);
+          const _ = _.all_ages_screenshots ?? [],
+            _ = (
+              _ == "blocked"
+                ? _
+                : [..._, ...(_.mature_content_screenshots ?? [])].sort(
+                    (_, _) => _.ordinal - _.ordinal,
+                  )
+            )[1];
+          if (!_) return null;
+          const _ = _ == "masked" && !_.includes(_);
           return (0, _.jsx)("img", {
-            src: _,
+            src: (0, _._)(_),
             className: (0, _._)({
               [_().GameImage]: !0,
               [_().BlurImage]: _,
@@ -9510,7 +9655,10 @@
                 _,
                 {
                   appid: _.appid,
-                  strInfo: _.strPercentage,
+                  strInfo:
+                    _.nPercentagex100 !== void 0
+                      ? _(_.nPercentagex100)
+                      : void 0,
                   nParentAppID: _.parent_appid,
                   eChildType: _,
                   index: _,
@@ -9534,10 +9682,10 @@
               nParentAppID: _,
               eChildType: _,
             } = _,
-            [_, _] = (0, _._)(_ == null ? _ : _, _),
+            { item: _, bLoading: _ } = _(_ == null ? _ : _),
             _ = _(_, _);
-          if (_ == _._) return null;
-          if (!_ || !_.BIsVisible())
+          if (_) return null;
+          if (!_ || !_.info.visible)
             return _ && (_ == _._._ || _ == _._._)
               ? (0, _.jsx)(_, {
                   ..._,
@@ -9545,7 +9693,7 @@
                   eChildType: _._._,
                 })
               : null;
-          const _ = _.GetAssetsWithoutOverrides()?.GetLibraryCapsuleURL();
+          const _ = (0, _._)(_.assets, "library_capsule");
           return (0, _.jsxs)("a", {
             className: _().CapsuleCtn,
             onClick: _,
@@ -9561,25 +9709,25 @@
                             _ == _._._ &&
                             (0, _.jsx)("div", {
                               className: _().DemoPlayDetails,
-                              children: (0, _._)("#YIR_Played_Demo"),
+                              children: _._.Localize("#YIR_Played_Demo"),
                             }),
                           _ &&
                             _ == _._._ &&
                             (0, _.jsx)("div", {
                               className: _().PlaytestPlayDetails,
-                              children: (0, _._)("#YIR_Played_PlayTest"),
+                              children: _._.Localize("#YIR_Played_PlayTest"),
                             }),
                         ],
                       }),
                       (0, _.jsx)("img", {
                         loading: _,
                         src: _,
-                        alt: _.GetName(),
+                        alt: _.info.name,
                       }),
                     ],
                   })
                 : (0, _.jsx)(_, {
-                    item: _,
+                    item: _.info,
                   }),
               !!_ &&
                 (0, _.jsx)("div", {
@@ -9596,11 +9744,11 @@
             children: [
               (0, _.jsx)("img", {
                 src: _,
-                alt: _.GetName() || "" + _.GetAppID(),
+                alt: _.name || "" + _.appid,
               }),
               (0, _.jsx)("div", {
                 className: _().GameTitle,
-                children: _.GetName(),
+                children: _.name,
               }),
             ],
           });
@@ -9618,13 +9766,12 @@
               }),
               (0, _.jsx)("div", {
                 className: _().StatDescription,
-                children: (0, _._)(_),
+                children: _._.Localize(_),
               }),
             ],
           });
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -9644,13 +9791,11 @@
                 Array.from(_)
               );
             }, [_]),
-            _ = (0, _._)(_, _),
+            { isLoading: _ } = _(_),
             _ = _(),
-            _ = (_) =>
-              window.sessionStorage.setItem("yirfirsttime", `?tab=${_.key}`),
             _ = [
               {
-                name: (0, _._)("#YIR_FirstTime_Tab_MonthlyGrid"),
+                name: _._.Localize("#YIR_FirstTime_Tab_MonthlyGrid"),
                 key: "firsttimebymonth",
                 contents: (0, _.jsx)(_._, {
                   children: (0, _.jsx)("div", {
@@ -9661,10 +9806,9 @@
                     }),
                   }),
                 }),
-                onClick: _,
               },
               {
-                name: (0, _._)("#YIR_FirstTime_Tab_Grid"),
+                name: _._.Localize("#YIR_FirstTime_Tab_Grid"),
                 key: "firsttimegrid",
                 contents: (0, _.jsx)(_._, {
                   children: (0, _.jsx)(_, {
@@ -9672,7 +9816,6 @@
                     nYear: _,
                   }),
                 }),
-                onClick: _,
               },
             ];
           return _.length == 0
@@ -9690,11 +9833,11 @@
                         className: _.SectionTitle,
                         children: _("#YIR_FirstTime_Title", _.length),
                       }),
-                      _ == _._
+                      _
                         ? (0, _.jsx)(_._, {
                             size: "medium",
                             position: "center",
-                            string: (0, _._)("#Loading"),
+                            string: _._.Localize("#Loading"),
                           })
                         : (0, _.jsx)("div", {
                             className: _.TabCtn,
@@ -9730,7 +9873,7 @@
                   )
                   .map((_) => ({
                     appid: _.appid,
-                    strPercentage: _(_.total_playtime_percentagex100),
+                    nPercentagex100: _.total_playtime_percentagex100,
                     bNewThisYear: !!_.new_this_year,
                     bIsDemo: !!_.demo,
                     bIsPlaytest: !!_.playtest,
@@ -9757,7 +9900,7 @@
                     href: "#",
                     className: _.ShowMoreBtn,
                     onClick: () => _(!0),
-                    children: (0, _._)("#YIR_ShowMore"),
+                    children: _._.Localize("#YIR_ShowMore"),
                   }),
                 }),
             ],
@@ -9806,7 +9949,7 @@
                     const _ = _.GetGameSummaryForApp(_.appid);
                     return {
                       appid: _.appid,
-                      strPercentage: _(_.relative_playtime_percentagex100),
+                      nPercentagex100: _.relative_playtime_percentagex100,
                       bNewThisYear: !!_.new_this_year,
                       bIsDemo: !!_.demo,
                       bIsPlaytest: !!_.playtest,
@@ -9830,8 +9973,8 @@
                 (0, _.jsx)("div", {
                   className: _.MonthTitle,
                   children: _
-                    ? (0, _._)(
-                        "#YIR_MonthlyGrid_MonthSingular_" + (_.getMonth() + 1),
+                    ? _._.Localize(
+                        `#YIR_MonthlyGrid_MonthSingular_${_.getUTCMonth() + 1}`,
                       )
                     : (0, _._)(_),
                 }),
@@ -9847,7 +9990,7 @@
                       href: "#",
                       className: _.ShowMoreBtn,
                       onClick: () => _(!0),
-                      children: (0, _._)("#YIR_ShowMore"),
+                      children: _._.Localize("#YIR_ShowMore"),
                     }),
                   }),
               ],
@@ -9856,11 +9999,17 @@
           );
         }
         function _(_) {
-          const { nYear: _, rgGamesInOrderOfPlaytime: _, strTooltip: _ } = _;
-          let _ = _.filter((_) => _._.Get().BHasApp(_.nParentAppID || _.appid));
+          const { nYear: _, rgGamesInOrderOfPlaytime: _, strTooltip: _ } = _,
+            _ = _(),
+            _ = (0, _.useMemo)(
+              () => _.map((_) => _.nParentAppID || _.appid),
+              [_],
+            ),
+            { data: _ } = _(_);
+          let _ = _.filter((_) => _?.has(_.nParentAppID || _.appid));
           const _ = _.map((_) => _.appid);
           let _ = _.map((_, _) => {
-            let _ = () => _.Get().SetGameDetailsPopupAppData(_, _);
+            let _ = () => _(_, _);
             return (0, _.jsx)(
               _,
               {
@@ -9868,7 +10017,8 @@
                 bNewThisYear: _.bNewThisYear,
                 fnOnClick: _,
                 nYear: _,
-                strPercentage: _.strPercentage,
+                strPercentage:
+                  _.nPercentagex100 !== void 0 ? _(_.nPercentagex100) : void 0,
                 strTooltip: _,
                 bIsDemo: _.bIsDemo,
                 bIsPlayTest: _.bIsPlaytest,
@@ -9893,12 +10043,11 @@
               bIsDemo: _,
               bIsPlayTest: _,
             } = _,
-            [_] = (0, _._)(_, _),
-            _ = (0, _._)(),
+            { item: _ } = _(_),
+            _ = (0, _._)(_ && (0, _._)(_.info)) || "",
             _ = _();
-          if (!_ || !_.BIsVisible()) return null;
-          const _ = (0, _._)(_?.GetStorePageURL() || "", _),
-            _ = _.GetAssetsWithoutOverrides()?.GetLibraryCapsuleURL();
+          if (!_ || !_.info.visible) return null;
+          const _ = (0, _._)(_.assets, "library_capsule");
           return (0, _.jsx)("div", {
             className: (0, _._)({
               [_.GameCtn]: !0,
@@ -9909,7 +10058,7 @@
               _ && (_.preventDefault(), _());
             },
             children: (0, _.jsx)(_._, {
-              appid: _.GetAppID(),
+              appid: _,
               children: (0, _.jsxs)("a", {
                 href: _ ? void 0 : _,
                 className: _.CapsuleCtn,
@@ -9924,7 +10073,7 @@
                               _.GamePlayDetails,
                               _.GamePlayDetails,
                             ),
-                            children: (0, _._)("#YIR_FirstTime_Played", _),
+                            children: _._.Localize("#YIR_FirstTime_Played", _),
                           }),
                         !!_ &&
                           (0, _.jsx)("div", {
@@ -9932,7 +10081,7 @@
                               _.DemoPlayDetails,
                               _.DemoPlayDetails,
                             ),
-                            children: (0, _._)("#YIR_Played_Demo"),
+                            children: _._.Localize("#YIR_Played_Demo"),
                           }),
                         !!_ &&
                           (0, _.jsx)("div", {
@@ -9940,7 +10089,7 @@
                               _.PlaytestPlayDetails,
                               _.PlaytestPlayDetails,
                             ),
-                            children: (0, _._)("#YIR_Played_PlayTest"),
+                            children: _._.Localize("#YIR_Played_PlayTest"),
                           }),
                       ],
                     }),
@@ -9950,7 +10099,7 @@
                         src: _,
                       })
                     : (0, _.jsx)(_, {
-                        item: _,
+                        item: _.info,
                       }),
                   !!_ &&
                     (0, _.jsx)(_._, {
@@ -10055,12 +10204,20 @@
                 ),
               [_],
             ),
-            [_, _] = (0, _.useState)(null),
-            _ = (0, _._)(_, _);
-          (0, _.useEffect)(() => {
-            _ != _._ && _(_.map((_) => _._.Get().GetApp(_)).filter((_) => !!_));
-          }, [_, _]);
-          const _ = (0, _.useMemo)(() => _ && _(_), [_]);
+            { data: _ } = _(_),
+            { rgStoreItems: _, rgImageURLs: _ } = (0, _.useMemo)(() => {
+              if (!_)
+                return {
+                  rgStoreItems: null,
+                  rgImageURLs: null,
+                };
+              const _ = _.map((_) => _.get(_)).filter((_) => !!_ && !!_.assets),
+                _ = _(_);
+              return {
+                rgStoreItems: _,
+                rgImageURLs: _,
+              };
+            }, [_, _]);
           return _
             ? (0, _.jsxs)(_.Fragment, {
                 children: [
@@ -10094,24 +10251,14 @@
               });
         }
         function _(_) {
-          const _ = (_) => {
-              const _ = _.GetAssetsWithoutOverrides();
-              return (
-                (0, _._)(_, "Cannot get image without assets"),
-                (_.GetLibraryHeroURL()?.trim().length ?? 0) > 0
-                  ? _.GetLibraryHeroURL()
-                  : _.GetMainCapsuleURL()
-              );
-            },
-            _ = (_) => {
-              const _ = _.GetAssetsWithoutOverrides();
-              return (
-                (0, _._)(_, "Cannot get image without assets"),
-                (_.GetRawPageBackgroundURL()?.trim().length ?? 0) > 0
-                  ? _.GetRawPageBackgroundURL()
-                  : _.GetMainCapsuleURL()
-              );
-            },
+          const _ = (_) => (
+              (0, _._)(_.assets, "Cannot get image without assets"),
+              (0, _._)(_.assets, "library_hero", "main_capsule")
+            ),
+            _ = (_) => (
+              (0, _._)(_.assets, "Cannot get image without assets"),
+              (0, _._)(_.assets, "raw_page_background", "main_capsule")
+            ),
             _ = _.map(_);
           return (
             _.length <= 50 && _.push(..._.map(_)),
@@ -10121,7 +10268,7 @@
         }
         function _(_) {
           const { appid: _, children: _ } = _,
-            [_] = (0, _._)(_, _),
+            { item: _ } = _(_),
             _ = _();
           return _
             ? (0, _.jsxs)(_.Fragment, {
@@ -10133,7 +10280,7 @@
                       children: (0, _.jsx)("div", {
                         className: (0, _._)(_().ImageTint, _.ImageTint),
                         children: (0, _.jsx)("img", {
-                          src: _?.GetAssetsWithoutOverrides()?.GetLibraryHeroURL(),
+                          src: (0, _._)(_.assets, "library_hero"),
                         }),
                       }),
                     }),
@@ -10211,7 +10358,6 @@
           );
         };
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = () => {
             const _ = _();
@@ -10393,7 +10539,7 @@
             _ = _.GetPlayTimeStats().by_numbers?.achievements_pct || 0,
             _ = _.GetPlayTimeStats().by_numbers?.games_played_pct || 0,
             _ = _.GetPlayTimeStats().by_numbers?.game_streak_pct || 0,
-            _ = _ > 0 && _ > 0 && _._.country_code.toLowerCase() !== "cn";
+            _ = _ > 0 && _ > 0 && !_();
           _ >= 99 && (_ = 100),
             _ >= 99 && (_ = 100),
             _ >= 99 && (_ = 100),
@@ -10563,7 +10709,7 @@
                         _ &&
                         (0, _.jsx)("div", {
                           className: _().ProgressSteamAvgLabel,
-                          children: (0, _._)(
+                          children: _._.Localize(
                             "#YIR_Compare_PlayerProgress_Steam_Avg",
                             _,
                           ),
@@ -10633,12 +10779,12 @@
               OldActive: _("#YIR_Compare_OldGames_Desc_User", _),
             },
             _ = {
-              NewActive: (0, _._)("#YIR_Compare_NewGames_Desc_AvgSteam", _),
-              UsedActive: (0, _._)(
+              NewActive: _._.Localize("#YIR_Compare_NewGames_Desc_AvgSteam", _),
+              UsedActive: _._.Localize(
                 "#YIR_Compare_ComfortGames_Desc_AvgSteam",
                 _,
               ),
-              OldActive: (0, _._)("#YIR_Compare_OldGames_Desc_AvgSteam", _),
+              OldActive: _._.Localize("#YIR_Compare_OldGames_Desc_AvgSteam", _),
             },
             _ = (0, _.useMemo)(() => {
               const _ = new Array();
@@ -10667,7 +10813,7 @@
             children: [
               (0, _.jsx)("div", {
                 className: (0, _._)(_().GameNewnessTitle, _.GameNewnessTitle),
-                children: (0, _._)(
+                children: _._.LocalizeReact(
                   "#YIR_Compare_Flavor_Title",
                   (0, _.jsx)("div", {}),
                 ),
@@ -10789,10 +10935,10 @@
                                 _.Color,
                               ),
                               children: [
-                                (0, _._)("#YIR_Compare_Percentage", _[_]),
+                                _._.Localize("#YIR_Compare_Percentage", _[_]),
                                 (0, _.jsx)("div", {
                                   className: _().FlavorLabel,
-                                  children: (0, _._)(_[_]),
+                                  children: _._.Localize(_[_]),
                                 }),
                               ],
                             }),
@@ -10821,7 +10967,7 @@
                                 _.PercentageLabel,
                                 _.Color,
                               ),
-                              children: (0, _._)(
+                              children: _._.Localize(
                                 "#YIR_Compare_Percentage",
                                 _[_],
                               ),
@@ -10850,8 +10996,7 @@
             { data: _ } = (0, _._)(_._.LANGUAGE),
             _ = _(),
             _ = _(),
-            _ = (0, _._)(),
-            _ = window.innerWidth <= 300,
+            _ = _(),
             _ = _.map((_) => _.nPreSelectionWeight).sort((_, _) => _ - _);
           let _ = _.map((_, _) => {
             const _ = _.findIndex((_) => _ - _.nPreSelectionWeight < 1e-5);
@@ -10875,7 +11020,7 @@
             children: [
               (0, _.jsx)("div", {
                 className: _().SectionLabel,
-                children: (0, _._)("#YIR_Spider_Title"),
+                children: _._.Localize("#YIR_Spider_Title"),
               }),
               (0, _.jsx)("div", {
                 className: (0, _._)(_().SectionDesc, _.SectionDesc),
@@ -10893,7 +11038,9 @@
                     children: [
                       (0, _.jsx)(_._, {}),
                       (0, _.jsx)(_._, {
-                        tick: (0, _.jsx)(_, {}),
+                        tick: (0, _.jsx)(_, {
+                          bNumberedLabels: _,
+                        }),
                         dataKey: "subject",
                       }),
                       (0, _.jsx)(_._, {
@@ -10909,7 +11056,7 @@
                   }),
                 }),
               }),
-              (_ || _) &&
+              _ &&
                 (0, _.jsxs)("ol", {
                   className: _().RadarChartLegend,
                   children: [" ", _, " "],
@@ -10917,11 +11064,25 @@
             ],
           });
         }
+        function _() {
+          const [_, _] = (0, _.useState)(!1);
+          return (
+            (0, _.useEffect)(
+              () => _((0, _._)() || window.innerWidth <= 300),
+              [],
+            ),
+            _
+          );
+        }
         function _(_) {
-          const { payload: _, _: _, verticalAnchor: _, ..._ } = _,
-            _ = (0, _._)(),
-            _ = window.innerWidth <= 300;
-          return _ || _
+          const {
+            payload: _,
+            _: _,
+            verticalAnchor: _,
+            bNumberedLabels: _,
+            ..._
+          } = _;
+          return _
             ? (0, _.jsx)("text", {
                 _: _,
                 ..._,
@@ -10981,7 +11142,7 @@
             (0, _.jsx)(
               _,
               {
-                label: (0, _._)(_),
+                label: _._.Localize(_),
                 value: _,
               },
               _,
@@ -10992,7 +11153,7 @@
             children: [
               (0, _.jsx)("div", {
                 className: _().SectionLabel,
-                children: (0, _._)("#YIR_ByTheNum_Title"),
+                children: _._.Localize("#YIR_ByTheNum_Title"),
               }),
               (0, _.jsx)("div", {
                 className: _().NumbersRowsCnt,
@@ -11021,59 +11182,6 @@
             ],
           });
         }
-        class _ {
-          m_SteamInterface;
-          async LoadFriendsSharedYearInReview(_, _) {
-            const _ = _._.Init(_),
-              _ = _._.InitFromAccountID(_);
-            _.Body().set_year(_),
-              _.Body().set_steamid(_.ConvertTo64BitString()),
-              _.Body().set_return_private(_._.is_support);
-            const _ = await _.GetFriendsSharedYearInReview(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (_.GetEResult() != _._)
-              throw "error friend sharing information " + _.GetEResult();
-            const { friend_shares: _ } = _.Body().toObject();
-            if (!_) return [];
-            const _ = [];
-            for (const _ of _)
-              if (_.steamid) {
-                const {
-                  steamid: _,
-                  privacy_override: _,
-                  privacy_state: _,
-                  rt_privacy_updated: _,
-                } = _;
-                _.push({
-                  steamid: _,
-                  privacy_state: _ ?? 0,
-                  rt_privacy_updated: _ ?? 0,
-                  privacy_override: !!_,
-                });
-              }
-            return _;
-          }
-          static s_Singleton;
-          static Get() {
-            return (
-              _.s_Singleton ||
-                ((_.s_Singleton = new _()), _.s_Singleton.Init()),
-              _.s_Singleton
-            );
-          }
-          constructor() {}
-          Init() {
-            this.m_SteamInterface = (0, _._)();
-          }
-        }
-        function _(_, _) {
-          return (0, _._)({
-            queryKey: ["SharedFriendYearInReviews", _, _],
-            queryFn: () => _.Get().LoadFriendsSharedYearInReview(_, _),
-          });
-        }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -11081,28 +11189,27 @@
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { userYearInReview: _ } = _;
-          return _._.is_support || _._.accountid == _.GetAccountID()
-            ? (0, _.jsxs)(_._, {
-                rootMargin: "0px 0px 100% 0px",
-                children: [
-                  (0, _.jsx)(_, {
-                    accountID: _.GetAccountID(),
-                    year: _.GetYear(),
-                  }),
-                  (0, _.jsx)(_, {
-                    accountID: _.GetAccountID(),
-                    year: _.GetYear(),
-                  }),
-                ],
-              })
-            : null;
+          if (_._.is_support || _._.accountid == _.GetAccountID()) {
+            const _ = _.GetSteamID().ConvertTo64BitString(),
+              _ = _.GetYear();
+            return (0, _.jsxs)(_._, {
+              rootMargin: "0px 0px 100% 0px",
+              children: [
+                (0, _.jsx)(_, {
+                  steamid: _,
+                  year: _,
+                }),
+                (0, _.jsx)(_, {
+                  steamid: _,
+                  year: _,
+                }),
+              ],
+            });
+          }
+          return null;
         }
         function _(_) {
-          const { accountID: _, year: _ } = _,
-            _ = (0, _.useMemo)(
-              () => _._.InitFromAccountID(_).ConvertTo64BitString(),
-              [_],
-            ),
+          const { steamid: _, year: _ } = _,
             _ = (0, _._)(_, !0);
           if (
             _.isLoading ||
@@ -11113,8 +11220,8 @@
           const _ = _.data
             .family_group()
             .members()
-            .map((_) => new _._(_.steamid()))
-            .filter((_) => _.GetAccountID() != _);
+            .map((_) => _.steamid())
+            .filter((_) => !!_ && _ !== _);
           return _.length == 0
             ? null
             : (0, _.jsxs)("div", {
@@ -11122,7 +11229,7 @@
                 children: [
                   (0, _.jsx)("div", {
                     className: _.FriendsSharedSectionTitle,
-                    children: (0, _._)("#YIR_FamilyShared"),
+                    children: _._.Localize("#YIR_FamilyShared"),
                   }),
                   (0, _.jsx)("div", {
                     className: _.FriendsGrid,
@@ -11130,7 +11237,7 @@
                       (0, _.jsx)(
                         _,
                         {
-                          strSteamid: _.ConvertTo64BitString(),
+                          steamid: _,
                           year: _,
                           ePrivacy: _,
                           bPrivacyOverride: !1,
@@ -11144,7 +11251,7 @@
         }
         const _ = 50;
         function _(_) {
-          const { accountID: _, year: _ } = _,
+          const { steamid: _, year: _ } = _,
             { isLoading: _, data: _ } = _(_, _),
             _ = (0, _.useMemo)(
               () =>
@@ -11175,7 +11282,7 @@
               children: [
                 (0, _.jsx)("div", {
                   className: _.FriendsSharedSectionTitle,
-                  children: (0, _._)("#YIR_FriendShared"),
+                  children: _._.Localize("#YIR_FriendShared"),
                 }),
                 (0, _.jsx)(_._, {
                   className: _.FriendsGrid,
@@ -11184,7 +11291,7 @@
                     (0, _.jsx)(
                       _,
                       {
-                        strSteamid: _.steamid,
+                        steamid: _.steamid,
                         ePrivacy: _.privacy_state,
                         year: _,
                         bPrivacyOverride: _.privacy_override,
@@ -11196,32 +11303,35 @@
                 !!_._.is_support &&
                   (0, _.jsx)("div", {
                     className: _.ValveOnlyBackground,
-                    children: (0, _._)("#YIR_FriendShared_support"),
+                    children: _._.Localize("#YIR_FriendShared_support"),
                   }),
               ],
             })
           );
         }
         function _(_) {
-          const { strSteamid: _, year: _, ePrivacy: _ } = _,
-            _ = new _._(_),
+          const { steamid: _, year: _, ePrivacy: _ } = _,
             _ = _();
           return (0, _.jsx)(_._, {
-            href: `${_._.STORE_BASE_URL}replay/${_.ConvertTo64BitString()}/${_}`,
+            href: `${_._.STORE_BASE_URL}replay/${_}/${_}`,
             className: (0, _._)({
               [_.IsPrivate]: _ == _,
               [_.FriendCtn]: !0,
               [_.FriendCtn]: !0,
             }),
             children: (0, _.jsx)(_._, {
-              accountID: _.GetAccountID(),
+              accountID: _._.InitFromString(_).GetAccountID(),
               bHideWhenNotAvailable: !0,
               bLink: !1,
             }),
           });
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          return `${_._.STORE_CDN_URL}public/images/yearinreview/${_}`;
+        }
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
@@ -11248,35 +11358,35 @@
                   _.windows_playtime_percentagex100 > _ &&
                   _.push({
                     _: "windows",
-                    name: (0, _._)("#YIR_Platfrom_windows"),
+                    name: _._.Localize("#YIR_Platfrom_windows"),
                     value: _.windows_playtime_percentagex100,
                   }),
                 typeof _.linux_playtime_percentagex100 == "number" &&
                   _.linux_playtime_percentagex100 > _ &&
                   _.push({
                     _: "linux",
-                    name: (0, _._)("#YIR_Platfrom_linux"),
+                    name: _._.Localize("#YIR_Platfrom_linux"),
                     value: _.linux_playtime_percentagex100,
                   }),
                 typeof _.macos_playtime_percentagex100 == "number" &&
                   _.macos_playtime_percentagex100 > _ &&
                   _.push({
                     _: "mac",
-                    name: (0, _._)("#YIR_Platfrom_macos"),
+                    name: _._.Localize("#YIR_Platfrom_macos"),
                     value: _.macos_playtime_percentagex100,
                   }),
                 typeof _.vr_playtime_percentagex100 == "number" &&
                   _.vr_playtime_percentagex100 > _ &&
                   _.push({
                     _: "vr",
-                    name: (0, _._)("#YIR_Platfrom_vr"),
+                    name: _._.Localize("#YIR_Platfrom_vr"),
                     value: _.vr_playtime_percentagex100,
                   }),
                 typeof _.deck_playtime_percentagex100 == "number" &&
                   _.deck_playtime_percentagex100 > _ &&
                   _.push({
                     _: "deck",
-                    name: (0, _._)("#YIR_Platfrom_deck"),
+                    name: _._.Localize("#YIR_Platfrom_deck"),
                     value: _.deck_playtime_percentagex100,
                   }),
                 _
@@ -11289,35 +11399,35 @@
                   _.windows_playtime_percentagex100 > _ &&
                   _.push({
                     _: "windows",
-                    name: (0, _._)("#YIR_Platfrom_windows"),
+                    name: _._.Localize("#YIR_Platfrom_windows"),
                     value: _.filter((_) => _.played_windows).length,
                   }),
                 typeof _.linux_playtime_percentagex100 == "number" &&
                   _.linux_playtime_percentagex100 > _ &&
                   _.push({
                     _: "linux",
-                    name: (0, _._)("#YIR_Platfrom_linux"),
+                    name: _._.Localize("#YIR_Platfrom_linux"),
                     value: _.filter((_) => _.played_linux).length,
                   }),
                 typeof _.macos_playtime_percentagex100 == "number" &&
                   _.macos_playtime_percentagex100 > _ &&
                   _.push({
                     _: "mac",
-                    name: (0, _._)("#YIR_Platfrom_macos"),
+                    name: _._.Localize("#YIR_Platfrom_macos"),
                     value: _.filter((_) => _.played_mac).length,
                   }),
                 typeof _.vr_playtime_percentagex100 == "number" &&
                   _.vr_playtime_percentagex100 > _ &&
                   _.push({
                     _: "vr",
-                    name: (0, _._)("#YIR_Platfrom_vr"),
+                    name: _._.Localize("#YIR_Platfrom_vr"),
                     value: _.filter((_) => _.played_vr).length,
                   }),
                 typeof _.deck_playtime_percentagex100 == "number" &&
                   _.deck_playtime_percentagex100 > _ &&
                   _.push({
                     _: "deck",
-                    name: (0, _._)("#YIR_Platfrom_deck"),
+                    name: _._.Localize("#YIR_Platfrom_deck"),
                     value: _.filter((_) => _.played_deck).length,
                   }),
                 _
@@ -11342,7 +11452,7 @@
                       children: [
                         (0, _.jsx)("div", {
                           className: _().GraphTitle,
-                          children: (0, _._)("#YIR_Platfrom_playtime"),
+                          children: _._.Localize("#YIR_Platfrom_playtime"),
                         }),
                         (0, _.jsx)(_._, {
                           width: "90%",
@@ -11387,7 +11497,7 @@
                       children: [
                         (0, _.jsx)("div", {
                           className: _().GraphTitle,
-                          children: (0, _._)("#YIR_Platfrom_games"),
+                          children: _._.Localize("#YIR_Platfrom_games"),
                         }),
                         (0, _.jsx)(_._, {
                           width: "90%",
@@ -11449,7 +11559,7 @@
               children: [
                 _[0].name,
                 ": ",
-                (0, _._)("#YIR_Percent_Playtime", _(_)),
+                _._.Localize("#YIR_Percent_Playtime", _(_)),
               ],
             });
           }
@@ -11461,9 +11571,10 @@
             const _ = _[0].value,
               _ = _[0].name;
             return (0, _.jsx)(_._, {
-              children: (0, _._)(
-                "#YIR_Platfrom_gamesplays_tooltip",
-                _,
+              children: _._.Localize(
+                _ === 1
+                  ? "#YIR_Platfrom_gamesplays_tooltip"
+                  : "#YIR_Platfrom_gamesplays_tooltip_Plural",
                 (0, _._)(_),
                 _,
               ),
@@ -11561,7 +11672,10 @@
                                 }),
                                 (0, _.jsx)("div", {
                                   className: _().StatDescription,
-                                  children: (0, _._)("#YIR_NewLine_Games", _),
+                                  children: _._.LocalizePlural(
+                                    "#YIR_NewLine_Games",
+                                    _,
+                                  ),
                                 }),
                               ],
                             }),
@@ -11574,7 +11688,10 @@
                                 }),
                                 (0, _.jsx)("div", {
                                   className: _().StatDescription,
-                                  children: (0, _._)("#YIR_NewLine_Session", _),
+                                  children: _._.LocalizePlural(
+                                    "#YIR_NewLine_Session",
+                                    _,
+                                  ),
                                 }),
                               ],
                             }),
@@ -11670,7 +11787,7 @@
                   children: (0, _.jsx)(_, {
                     category: "vr",
                     userYearInReview: _,
-                    bgImageURL: `${_._.IMG_URL}yearinreview/vr_background6.webp`,
+                    bgImageURL: _("vr_background6.webp"),
                     title: _("#YIR_TopGames_vr"),
                     subTitle: void 0,
                   }),
@@ -11689,7 +11806,7 @@
                     ),
                     subTitle: _(
                       "#YIR_Platform_subtitle_controller",
-                      (0, _._)("#YIR_Platfrom_controller_forsubtitle"),
+                      _._.Localize("#YIR_Platfrom_controller_forsubtitle"),
                     ),
                   }),
                 }),
@@ -11757,7 +11874,7 @@
           _ = __webpack_require__._(_);
         function _(_) {
           const { userYearInReview: _ } = _;
-          if (_._.country_code.toLowerCase() === "cn") return null;
+          if (_()) return null;
           const _ = _.GetPlayTimeStats().playtime_streak;
           return !_ ||
             (typeof _.longest_consecutive_days == "number" &&
@@ -11857,13 +11974,12 @@
                         children: [
                           (0, _.jsx)("div", {
                             className: _().StreakStart,
-                            children: (0, _._)(_.rtime_start ?? 0, _),
+                            children: _(_.rtime_start ?? 0),
                           }),
                           (0, _.jsx)("div", {
                             className: _().StreakEnd,
-                            children: (0, _._)(
+                            children: _(
                               (_.rtime_start ?? 0) + _ * 24 * 60 * 60,
-                              _,
                             ),
                           }),
                         ],
@@ -11924,7 +12040,7 @@
                         href: "#",
                         className: _().ShowMoreBtn,
                         onClick: () => _(!0),
-                        children: (0, _._)("#YIR_ShowMore"),
+                        children: _._.Localize("#YIR_ShowMore"),
                       }),
                     }),
                 ],
@@ -12009,48 +12125,10 @@
           const _ = _(_.toLowerCase(), _, _).replace(/[^0-9a-f]/g, "");
           return _ ? parseInt(_, 16) : 0;
         }
-        class _ {
-          m_SteamInterface;
-          get SteamInterface() {
-            return this.m_SteamInterface;
-          }
-          async GetLoadSocialImages(_, _, _) {
-            const _ = _._.Init(_);
-            _.Body().set_steamid(_),
-              _.Body().set_year(_),
-              _.Body().set_language(_);
-            const _ = await _.GetUserYearInReviewShareImage(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (_.GetEResult() != _._)
-              throw `Load social images failed: ${_.GetErrorMessage()}`;
-            return _.Body().toObject().images ?? [];
-          }
-          static s_Singleton;
-          static Get() {
-            return (
-              _.s_Singleton ||
-                ((_.s_Singleton = new _()), _.s_Singleton.Init()),
-              _.s_Singleton
-            );
-          }
-          constructor() {}
-          Init() {
-            this.m_SteamInterface = (0, _._)();
-          }
-        }
-        const _ = "yir_social_images";
-        function _(_, _, _) {
-          return (0, _._)({
-            queryKey: [_, _, _, _],
-            queryFn: () => _.Get().GetLoadSocialImages(_, _, _),
-          });
-        }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          const { userYearInReview: _, steamId: _, nYear: _ } = _,
+          const { steamId: _, nYear: _ } = _,
             _ = _(),
             _ = _();
           if (!_._.logged_in) return null;
@@ -12058,18 +12136,17 @@
             return (0, _.jsx)(_._, {
               className: (0, _._)(_.SeeRewindButton, _.SeeRewindButton),
               href: `${_._.STORE_BASE_URL}replay/${_._.steamid}/${_}?src=${_}`,
-              children: (0, _._)("#YIR_SeeYourRewind"),
+              children: _._.Localize("#YIR_SeeYourRewind"),
             });
           const _ = () => {
             (0, _._)(
               (0, _.jsx)(_, {
-                userYearInReview: _,
                 steamId: _,
                 nYear: _,
               }),
               window,
               {
-                strTitle: (0, _._)("#Button_Share"),
+                strTitle: _._.Localize("#Button_Share"),
               },
             );
           };
@@ -12077,7 +12154,6 @@
             className: _.YIRShareCtn,
             children: [
               (0, _.jsx)(_, {
-                userYearInReview: _,
                 steamId: _,
                 nYear: _,
               }),
@@ -12090,7 +12166,7 @@
                   }),
                   (0, _.jsx)("span", {
                     className: (0, _._)(_.ShareText),
-                    children: (0, _._)("#Button_Share"),
+                    children: _._.Localize("#Button_Share"),
                   }),
                 ],
               }),
@@ -12098,31 +12174,30 @@
           });
         }
         function _(_) {
-          const { userYearInReview: _, steamId: _, nYear: _ } = _,
+          const { steamId: _, nYear: _ } = _,
             [_, _] = (0, _.useState)(""),
-            _ = (0, _._)(() => _.GetPrivacyState()),
-            _ = (0, _._)(() => _.GetPrivacyState()),
+            _ = _(_.ConvertTo64BitString(), _),
+            { mutateAsync: _ } = _(_.ConvertTo64BitString(), _),
             _ = (0, _.useMemo)(() => _ === _ || _ === _, [_]),
             _ = [
               {
                 data: _,
-                label: (0, _._)("#YIR_ShareVisbility_Private"),
+                label: _._.Localize("#YIR_ShareVisbility_Private"),
               },
               {
                 data: _,
-                label: (0, _._)("#YIR_ShareVisbility_FriendsOnly"),
+                label: _._.Localize("#YIR_ShareVisbility_FriendsOnly"),
               },
               {
                 data: _,
-                label: (0, _._)("#YIR_ShareVisbility_Public"),
+                label: _._.Localize("#YIR_ShareVisbility_Public"),
               },
             ],
             _ = async (_) => {
               if (_.data !== _) {
-                const _ = await _(_.ConvertTo64BitString(), _, _.data);
-                _.privacy_state !== void 0
-                  ? _.SetPrivacyState(_.privacy_state)
-                  : _.error && _(_.error);
+                const { eResult: _ } = await _(_.data),
+                  _ = _ != _._ ? _(_) : "";
+                _ && _(_);
               }
             };
           return (0, _.jsxs)(_._, {
@@ -12131,8 +12206,8 @@
               (0, _.jsx)("div", {
                 className: (0, _._)(_.PrivacyWarning, _ ? _.Visible : ""),
                 children: _
-                  ? (0, _._)("#YIR_ShareVisbility")
-                  : (0, _._)("#YIR_ShareModal_DisabledShareTtp"),
+                  ? _._.Localize("#YIR_ShareVisbility")
+                  : _._.Localize("#YIR_ShareModal_DisabledShareTtp"),
               }),
               (0, _.jsx)("div", {
                 className: _.DropDownSizer,
@@ -12153,18 +12228,16 @@
           });
         }
         function _(_) {
+          return _ === _._ ? "Servers are busy, please try again later" : "";
+        }
+        function _(_) {
           return `y${_ % 100}`;
         }
         const _ = "l";
         function _(_) {
-          const {
-              closeModal: _,
-              userYearInReview: _,
-              steamId: _,
-              nYear: _,
-            } = _,
+          const { closeModal: _, steamId: _, nYear: _ } = _,
             [_, _] = (0, _.useState)(),
-            _ = (0, _._)(() => _.GetPrivacyState()),
+            _ = _(_.ConvertTo64BitString(), _),
             _ = (0, _.useMemo)(() => _ === _ || _ === _, [_]),
             [_, _] = (0, _.useState)((0, _.sfN)(_._.LANGUAGE)),
             _ = (0, _.useMemo)(() => (0, _.LgB)(_), [_]),
@@ -12184,7 +12257,7 @@
               })
             : (0, _.jsx)(_._, {
                 strDescription: "",
-                strTitle: (0, _._)("#YIR_ShareModal_Title"),
+                strTitle: _._.Localize("#YIR_ShareModal_Title"),
                 onCancel: _,
                 onOK: _,
                 bAlertDialog: !0,
@@ -12213,7 +12286,6 @@
                       className: _.FooterCtn,
                       children: [
                         (0, _.jsx)(_, {
-                          userYearInReview: _,
                           steamId: _,
                           nYear: _,
                         }),
@@ -12330,7 +12402,7 @@
                                     (0, _.jsx)("div", {
                                       onClick: _,
                                       className: _.PreviewMask,
-                                      children: (0, _._)(
+                                      children: _._.Localize(
                                         "#YIR_ShareModal_FullscreenPreview",
                                       ),
                                     }),
@@ -12381,7 +12453,7 @@
                       }),
                       (0, _.jsx)("div", {
                         className: _.FormatHint,
-                        children: (0, _._)(
+                        children: _._.Localize(
                           `#YIR_ShareModal_ImageCaption_${_[_].name}`,
                         ),
                       }),
@@ -12390,7 +12462,7 @@
                 : (0, _.jsx)("div", {
                     className: (0, _._)(_.CarouselCtn, _.LoadingCtn),
                     children: (0, _.jsx)("div", {
-                      children: (0, _._)(
+                      children: _._.Localize(
                         "#YIR_ShareModal_FailedToGenerateImages",
                       ),
                     }),
@@ -12477,7 +12549,7 @@
               }),
               (0, _.jsx)("span", {
                 className: (0, _._)(_.InteractButtonText),
-                children: (0, _._)("#YIR_ShareModal_SaveImage"),
+                children: _._.Localize("#YIR_ShareModal_SaveImage"),
               }),
             ],
           });
@@ -12491,9 +12563,9 @@
                   event_name: "shareimage",
                   link: _,
                   url: _,
-                  subject: (0, _._)("#YIR_ShareModal_MobileSubject"),
+                  subject: _._.Localize("#YIR_ShareModal_MobileSubject"),
                   message: _,
-                  title: (0, _._)("#YIR_ShareModal_MobileMessage"),
+                  title: _._.Localize("#YIR_ShareModal_MobileMessage"),
                 };
                 _.postMessage(JSON.stringify(_));
                 return;
@@ -12508,7 +12580,7 @@
               }),
               (0, _.jsx)("span", {
                 className: (0, _._)(_.InteractButtonText),
-                children: (0, _._)("#YIR_ShareModal_ShareImage"),
+                children: _._.Localize("#YIR_ShareModal_ShareImage"),
               }),
             ],
           });
@@ -12530,7 +12602,7 @@
             children: [
               (0, _.jsx)("div", {
                 className: _.ShareURLTitle,
-                children: (0, _._)("#YIR_ShareModal_YourLink"),
+                children: _._.Localize("#YIR_ShareModal_YourLink"),
               }),
               (0, _.jsxs)("div", {
                 className: _.ShareURLCtn,
@@ -12548,7 +12620,7 @@
                       }),
                       (0, _.jsx)("span", {
                         className: (0, _._)(_.ShareLinkText),
-                        children: (0, _._)(
+                        children: _._.Localize(
                           _
                             ? "#YIR_ShareModal_CopyLink_Success"
                             : "#YIR_ShareModal_CopyLink",
@@ -12570,7 +12642,7 @@
                       }),
                       (0, _.jsx)("span", {
                         className: (0, _._)(_.ShareLinkText),
-                        children: (0, _._)(
+                        children: _._.Localize(
                           "#YIR_ShareModal_ShareOnFriendsActivity",
                         ),
                       }),
@@ -12585,7 +12657,7 @@
                       }),
                       (0, _.jsx)("span", {
                         className: (0, _._)(_.ShareLinkText),
-                        children: (0, _._)("#YIR_ShareModal_AddShowcase"),
+                        children: _._.Localize("#YIR_ShareModal_AddShowcase"),
                       }),
                     ],
                   }),
@@ -12603,9 +12675,9 @@
                   event_name: "share",
                   link: _,
                   url: _,
-                  subject: (0, _._)("#YIR_ShareModal_MobileSubject"),
-                  message: (0, _._)("#YIR_ShareModal_MobileMessage"),
-                  title: (0, _._)("#YIR_ShareModal_MobileMessage"),
+                  subject: _._.Localize("#YIR_ShareModal_MobileSubject"),
+                  message: _._.Localize("#YIR_ShareModal_MobileMessage"),
+                  title: _._.Localize("#YIR_ShareModal_MobileMessage"),
                 };
                 _.postMessage(JSON.stringify(_));
                 return;
@@ -12624,7 +12696,7 @@
                     }),
                     (0, _.jsx)("span", {
                       className: (0, _._)(_.ShareLinkText),
-                      children: (0, _._)("#YIR_ShareModal_ShareLink"),
+                      children: _._.Localize("#YIR_ShareModal_ShareLink"),
                     }),
                   ],
                 }),
@@ -12637,7 +12709,7 @@
                     }),
                     (0, _.jsx)("span", {
                       className: (0, _._)(_.ShareLinkText),
-                      children: (0, _._)(
+                      children: _._.Localize(
                         "#YIR_ShareModal_ShareOnFriendsActivity",
                       ),
                     }),
@@ -12662,20 +12734,21 @@
             _ = _.GetPlayTimeStats().playtime_streak,
             _ = _.GetTopGamesShown(),
             _ = _(),
-            _ = _.slice(0, 5)
-              .map((_, _) =>
-                _._.Get().BHasStoreItem(_.appid, _._._)
-                  ? (0, _.jsx)(
-                      _,
-                      {
-                        gameStat: _,
-                        gridClass: `Game${_}`,
-                      },
-                      `${_}_${_.appid}`,
-                    )
-                  : null,
-              )
-              .filter((_) => _ !== null),
+            _ = (0, _.useMemo)(() => _.slice(0, 5), [_]),
+            _ = (0, _.useMemo)(() => _.map((_) => _.appid), [_]),
+            { data: _ } = _(_),
+            _ = _.map((_, _) =>
+              _?.has(_.appid)
+                ? (0, _.jsx)(
+                    _,
+                    {
+                      gameStat: _,
+                      gridClass: `Game${_}`,
+                    },
+                    `${_}_${_.appid}`,
+                  )
+                : null,
+            ).filter((_) => _ !== null),
             _ = [
               _(_, _),
               _(_, _),
@@ -12776,7 +12849,7 @@
             : _ &&
                 typeof _.longest_consecutive_days == "number" &&
                 _.longest_consecutive_days > 0 &&
-                _._.country_code.toLowerCase() !== "cn"
+                !_()
               ? (0, _.jsx)(
                   _,
                   {
@@ -12861,7 +12934,7 @@
               nPreviousYearsGames: _,
             } = _,
             _ = _(),
-            _ = `${_._.IMG_URL}yearinreview/bg_2023.svg`;
+            _ = _("bg_2023.svg");
           let _ = _().NormalNumbers;
           return (
             _ > 99999 ? (_ = _().SixNumbers) : _ > 99 && (_ = _().ThreeNumbers),
@@ -12893,16 +12966,16 @@
                     children: [
                       (0, _.jsx)("div", {
                         className: _().RewindHeader,
-                        children: (0, _._)(
+                        children: _._.LocalizeReact(
                           "#YearInReview_SteamRewindHeader",
                           (0, _.jsx)("span", {
                             className: (0, _._)(_().UserName, _.UserName),
-                            children: (0, _._)(
+                            children: _._.Localize(
                               "#YearInReview_PossessiveUserName",
                               _,
                             ),
                           }),
-                          (0, _._)("#date_year", _),
+                          _._.Localize("#date_year", _),
                         ),
                       }),
                       (0, _.jsxs)("div", {
@@ -12914,7 +12987,10 @@
                           }),
                           (0, _.jsx)("div", {
                             className: _().SmallText,
-                            children: (0, _._)("#YIR_YourSummary_Games", _),
+                            children: _._.LocalizePlural(
+                              "#YIR_YourSummary_Games",
+                              _,
+                            ),
                           }),
                           (0, _.jsx)(_, {
                             strTokenPrefix: "#YIR_YourSummary_PrevYear_Game",
@@ -12938,7 +13014,7 @@
                             }),
                             (0, _.jsx)("div", {
                               className: _().SmallText,
-                              children: (0, _._)(
+                              children: _._.LocalizePlural(
                                 "#YIR_YourSummary_GamesFirst",
                                 _,
                               ),
@@ -12955,7 +13031,10 @@
                             }),
                             (0, _.jsx)("div", {
                               className: _().SmallText,
-                              children: (0, _._)("#YIR_YourSummary_Demos", _),
+                              children: _._.LocalizePlural(
+                                "#YIR_YourSummary_Demos",
+                                _,
+                              ),
                             }),
                           ],
                         }),
@@ -12969,7 +13048,7 @@
                             }),
                             (0, _.jsx)("div", {
                               className: _().SmallText,
-                              children: (0, _._)(
+                              children: _._.LocalizePlural(
                                 "#YIR_YourSummary_PlayTests",
                                 _,
                               ),
@@ -12997,7 +13076,11 @@
                       }),
                       (0, _.jsx)("div", {
                         className: _().CompareText,
-                        children: (0, _._)(_ + "Less", _ - _, (0, _._)(_ - _)),
+                        children: _._.LocalizePlural(
+                          `${_}Less`,
+                          _ - _,
+                          (0, _._)(_ - _),
+                        ),
                       }),
                     ],
                   })
@@ -13009,7 +13092,11 @@
                       }),
                       (0, _.jsx)("div", {
                         className: _().CompareText,
-                        children: (0, _._)(_ + "More", _ - _, (0, _._)(_ - _)),
+                        children: _._.LocalizePlural(
+                          `${_}More`,
+                          _ - _,
+                          (0, _._)(_ - _),
+                        ),
                       }),
                     ],
                   });
@@ -13021,7 +13108,7 @@
             _ = _.GetYear(),
             _ = _();
           if (!_) return null;
-          const _ = `${_._.IMG_URL}yearinreview/achievement_grid_02.webp`;
+          const _ = _("achievement_grid_02.webp");
           let _ = _().NormalNumbers;
           return (
             typeof _.total_achievements == "number" &&
@@ -13067,7 +13154,7 @@
                       }),
                       (0, _.jsx)("div", {
                         className: _().SmallText,
-                        children: (0, _._)(
+                        children: _._.LocalizePlural(
                           "#YIR_YourSummary_Achievement",
                           _.total_achievements,
                         ),
@@ -13095,7 +13182,7 @@
                           }),
                           (0, _.jsx)("div", {
                             className: _().SmallText,
-                            children: (0, _._)(
+                            children: _._.LocalizePlural(
                               "#YIR_YourSummary_Achievement_Games",
                               _.total_games_with_achievements,
                             ),
@@ -13111,7 +13198,7 @@
                           }),
                           (0, _.jsx)("div", {
                             className: _().SmallText,
-                            children: (0, _._)(
+                            children: _._.LocalizePlural(
                               "#YIR_YourSummary_Achievement_Rare",
                               _.total_rare_achievements,
                             ),
@@ -13130,11 +13217,11 @@
             _ = _.rtime_start ?? 0,
             _ = _.longest_consecutive_days ?? 0,
             _ = _(),
-            _ = (0, _._)(_, _),
-            _ = (0, _._)(_ + _ * 24 * 60 * 60, _),
+            _ = _(_),
+            _ = _(_ + _ * 24 * 60 * 60),
             _ = _();
-          if (_._.country_code === "ch") return null;
-          const _ = `${_._.IMG_URL}yearinreview/streak_bg.jpg`;
+          if (_()) return null;
+          const _ = _("streak_bg.jpg");
           return (0, _.jsx)("div", {
             className: (0, _._)(_().SummaryCtnShadow, _.SummaryCtnShadow),
             children: (0, _.jsxs)("div", {
@@ -13164,18 +13251,18 @@
                   children: [
                     (0, _.jsx)("div", {
                       className: _().BigNum,
-                      children: (0, _._)(
+                      children: _._.LocalizePlural(
                         "#YIR_Game_LongestStreak_DaysPlayed",
                         _,
                       ),
                     }),
                     (0, _.jsx)("div", {
                       className: _().SmallText,
-                      children: (0, _._)("#YIR_YourSummary_Stat_Streak"),
+                      children: _._.Localize("#YIR_YourSummary_Stat_Streak"),
                     }),
                     (0, _.jsx)("div", {
                       className: _().SmallLightText,
-                      children: (0, _._)(
+                      children: _._.Localize(
                         "#YIR_Game_LongestStreak_FromDateToDate",
                         _,
                         _,
@@ -13199,7 +13286,7 @@
                       }),
                       (0, _.jsx)("div", {
                         className: _().SmallText,
-                        children: (0, _._)(
+                        children: _._.LocalizePlural(
                           "#YIR_YourSummary_Games",
                           _.streak_games.length,
                         ),
@@ -13223,8 +13310,8 @@
               _.controller_playtime_percentagex100 +
               _.deck_playtime_percentagex100,
             _ = _(_),
-            _ = `${_._.IMG_URL}yearinreview/keyboard.png?v=3`,
-            _ = `${_._.IMG_URL}yearinreview/controllers.png?v=2`,
+            _ = _("keyboard.png?v=3"),
+            _ = _("controllers.png?v=2"),
             _ = _();
           let _, _, _;
           return (
@@ -13267,7 +13354,7 @@
                           }),
                           (0, _.jsx)("div", {
                             className: (0, _._)(_().Subtitle, _),
-                            children: (0, _._)(
+                            children: _._.Localize(
                               "#YIR_HowYouPlayed_Keyboard_Generic",
                             ),
                           }),
@@ -13291,7 +13378,7 @@
                           }),
                           (0, _.jsx)("div", {
                             className: (0, _._)(_().Subtitle, _),
-                            children: (0, _._)(
+                            children: _._.Localize(
                               "#YIR_HowYouPlayed_Controllers_Percent",
                             ),
                           }),
@@ -13307,11 +13394,11 @@
         function _(_) {
           const { gameStat: _, gridClass: _ } = _,
             { appid: _ } = _,
-            [_] = (0, _._)(_, _),
+            { item: _ } = _(_),
             _ = _(0, [_]),
             _ = _();
           if (!_) return null;
-          const _ = _.GetAssetsWithoutOverrides()?.GetLibraryHeroURL(),
+          const _ = (0, _._)(_.assets, "library_hero"),
             _ = Math.trunc(_.stats.total_sessions);
           return (0, _.jsx)("div", {
             className: (0, _._)(_().SummaryCtnShadow, _.SummaryCtnShadow),
@@ -13337,7 +13424,7 @@
                 }),
                 (0, _.jsx)("div", {
                   className: _().SummaryBlockGameName,
-                  children: _.GetName(),
+                  children: _.info.name,
                 }),
                 (0, _.jsxs)("div", {
                   className: _().SummaryBlockExtrasCtn,
@@ -13355,7 +13442,7 @@
                         }),
                         (0, _.jsx)("div", {
                           className: _().SmallText,
-                          children: (0, _._)(
+                          children: _._.Localize(
                             _ == 1
                               ? "#YIR_Game_PlaySession_Singular"
                               : "#YIR_Game_PlaySessions",
@@ -13382,7 +13469,7 @@
               }),
               (0, _.jsx)("div", {
                 className: _().SmallText,
-                children: (0, _._)(_),
+                children: _._.Localize(_),
               }),
             ],
           });
@@ -13482,8 +13569,8 @@
             _ = _(),
             _ = _();
           if (_ && _ && _.length) {
-            const _ = _[0].payload.date.getMonth(),
-              _ = (0, _._)(`#YIR_MonthlyCharts_MonthNoun_${_ + 1}`),
+            const _ = _[0].payload.date.getUTCMonth(),
+              _ = _._.Localize(`#YIR_MonthlyCharts_MonthNoun_${_ + 1}`),
               _ = _[0].payload.topPlayedPercentBreakdownPerMonth[_],
               _ = Object.keys(_[0].payload.otherPlayedPercentBreakdownForMonth),
               _ = _[0].payload.topPlayedRelativePercentBreakdownForMonth,
@@ -13522,7 +13609,7 @@
                           _.length > _ &&
                           (0, _.jsx)("div", {
                             className: _.HoveredGameLabel,
-                            children: (0, _._)(
+                            children: _._.Localize(
                               "#YIR_MonthlyCharts_OtherGamesTooltip_AndMore",
                               _.length - _,
                             ),
@@ -13587,7 +13674,7 @@
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("div", {
-                            children: (0, _._)(
+                            children: _._.Localize(
                               "#YIR_MonthlyCharts_PlayedSubtitleTooltip",
                             ),
                           }),
@@ -13632,11 +13719,9 @@
           });
         }
         function _({ appId: _, style: _ }) {
-          const [_] = (0, _._)(parseInt(_), _);
-          if (!_) return null;
-          const _ = _.GetAssetsWithoutOverrides();
-          if (!_) return null;
-          const _ = _.GetLibraryCapsuleURL() || _;
+          const { item: _ } = _(parseInt(_));
+          if (!_?.assets) return null;
+          const _ = (0, _._)(_.assets, "library_capsule") || _;
           return (0, _.jsx)("img", {
             style: _,
             className: _.CapsuleImg,
@@ -13644,13 +13729,13 @@
           });
         }
         function _({ appId: _, className: _ }) {
-          const [_] = (0, _._)(parseInt(_), _);
+          const { item: _ } = _(parseInt(_));
           return _
             ? (0, _.jsx)(
                 "div",
                 {
                   className: _,
-                  children: _.GetName(),
+                  children: _.info.name,
                 },
                 _,
               )
@@ -13658,7 +13743,7 @@
         }
         function _(_) {
           const { appId: _, className: _, value: _, date: _ } = _,
-            [_] = (0, _._)(parseInt(_), _);
+            { item: _ } = _(parseInt(_));
           return _
             ? (0, _.jsx)(
                 "div",
@@ -13669,7 +13754,7 @@
                     _,
                     "#YIR_MonthlyCharts_TopPlayedTooltip",
                     (0, _.jsx)("b", {
-                      children: _.GetName(),
+                      children: _.info.name,
                     }),
                   ),
                 },
@@ -13762,8 +13847,8 @@
             _ = _(),
             _ = _[0];
           if (_ && _?.value) {
-            const _ = _.payload.date.getMonth(),
-              _ = (0, _._)(`#YIR_MonthlyCharts_MonthNoun_${_ + 1}`),
+            const _ = _.payload.date.getUTCMonth(),
+              _ = _._.Localize(`#YIR_MonthlyCharts_MonthNoun_${_ + 1}`),
               _ = _.value,
               _ = _
                 ? "#YIR_MonthlyCharts_TopPlayedGameTooltip_Percent"
@@ -13778,7 +13863,7 @@
                   style: {
                     color: _.chartAccentColor,
                   },
-                  children: (0, _._)(
+                  children: _._.LocalizeReact(
                     _,
                     (0, _.jsx)("b", {
                       children: _ ? _(_) : (0, _._)(_),
@@ -13795,7 +13880,7 @@
         }
         function _(_, _, _, ..._) {
           const _ = `${_}_Percent`;
-          return (0, _._)(
+          return _._.LocalizeReact(
             _,
             (0, _.jsx)("b", {
               children: _(_),
@@ -13838,137 +13923,11 @@
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        class _ {
-          m_SteamInterface;
-          m_mapAchievementDef = new Map();
-          m_mapPromiseAchievementDef = new Map();
-          m_mapLoadCallback = new Map();
-          GetAchievements(_) {
-            return this.m_mapAchievementDef.get(_);
-          }
-          BHasAchievementLoaded(_) {
-            return this.m_mapAchievementDef.has(_);
-          }
-          GetAchievementLoadChange(_) {
-            return (
-              this.m_mapLoadCallback.has(_) ||
-                this.m_mapLoadCallback.set(_, new _._()),
-              this.m_mapLoadCallback.get(_)
-            );
-          }
-          async LoadAchievementDisplayInfo(_) {
-            return this.m_mapAchievementDef.has(_)
-              ? this.m_mapAchievementDef.get(_) || []
-              : (this.m_mapPromiseAchievementDef.has(_) ||
-                  this.m_mapPromiseAchievementDef.set(
-                    _,
-                    this.InternalLoadAchievementDisplayInfo(_),
-                  ),
-                this.m_mapPromiseAchievementDef.get(_) || []);
-          }
-          async InternalLoadAchievementDisplayInfo(_) {
-            const _ = _._.Init(_.ARV);
-            _.Body().set_appid(_),
-              _.Body().set_language(_._.LANGUAGE || "english");
-            const _ = {
-              appid: _,
-              _: _._.LANGUAGE,
-            };
-            let _;
-            try {
-              const _ = await _.xtC.GetGameAchievements(
-                this.m_SteamInterface.GetServiceTransport(),
-                _,
-              );
-              if (_.GetEResult() == _._) {
-                const _ = _.Body()
-                  .achievements()
-                  .map((_) => {
-                    const _ = _.toObject();
-                    return (
-                      (_.internal_name = (_.internal_name ?? "").toLowerCase()),
-                      _
-                    );
-                  });
-                return (
-                  this.m_mapAchievementDef.set(_, _),
-                  this.GetAchievementLoadChange(_).Dispatch(_),
-                  _
-                );
-              }
-              _ = (0, _._)(_);
-            } catch (_) {
-              _ = (0, _._)(_);
-            }
-            return (
-              console.error(
-                "CGameAchievementDisplayStore.InternalLoadAchievementDisplayInfo hit error: " +
-                  _.strErrorMsg,
-                _,
-              ),
-              []
-            );
-          }
-          static s_Singleton;
-          static Get() {
-            return (
-              _.s_Singleton ||
-                ((_.s_Singleton = new _()), _.s_Singleton.Init()),
-              _.s_Singleton
-            );
-          }
-          constructor() {}
-          Init() {
-            this.m_SteamInterface = (0, _._)();
-          }
-        }
         function _(_) {
-          const [_, _] = (0, _.useState)(_.Get().GetAchievements(_)),
-            [_, _] = (0, _.useState)(_);
-          return (
-            (0, _.useEffect)(() => {
-              ((_ == null && !_.Get().BHasAchievementLoaded(_)) || _ != _) &&
-                _.Get()
-                  .LoadAchievementDisplayInfo(_)
-                  .then((_) => {
-                    _(_), _(_);
-                  });
-            }, [_, _, _]),
-            (0, _._)(_.Get().GetAchievementLoadChange(_), _),
-            _
-          );
-        }
-        function _(_) {
-          const _ = _(_);
-          return (0, _.useMemo)(() => {
-            const _ = new Map();
-            if (!_) return _;
-            for (const _ of _) _.internal_name && _.set(_.internal_name, _);
-            return _;
-          }, [_]);
-        }
-        function _(_) {
-          const _ = _(_);
-          return _ ? _.length : 0;
-        }
-        function _(_) {
-          const [_, _] = (0, _.useState)(_.Get().GetAchievements(_));
-          return (0, _._)(_.Get().GetAchievementLoadChange(_), _), _;
-        }
-        function _(_, _, _) {
-          const _ = _(_, _, _),
-            _ = _(_),
-            [_, _] = (0, _.useState)(() =>
-              _(_?.all_time_unlocked_achievements, _?.length ?? 0),
-            );
-          return (
-            (0, _.useEffect)(() => {
-              _(_(_?.all_time_unlocked_achievements, _?.length ?? 0));
-            }, [_?.length, _?.all_time_unlocked_achievements]),
-            _
-          );
+          const _ = _(_),
+            _ = _(_, !1);
+          return _(_?.all_time_unlocked_achievements, _?.length ?? 0);
         }
         function _(_, _) {
           return typeof _ == "number" && _ > 0 && _ > 0 && _ <= _;
@@ -14040,7 +13999,7 @@
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { appid: _, userYearInReview: _ } = _,
-            _ = _(_.GetYear(), _.GetAccountID(), _);
+            _ = _(_);
           return !_ || !((_?.achievements?.length ?? 0) > 0)
             ? null
             : (0, _.jsx)(_._, {
@@ -14077,7 +14036,7 @@
                 (0, _.jsx)("div", {
                   onClick: _,
                   className: _.ContentRestrictionText,
-                  children: (0, _._)(
+                  children: _._.Localize(
                     "#YIR_TopGames_ContentRestrictionAchievements",
                   ),
                 }),
@@ -14095,14 +14054,14 @@
                         (0, _.jsx)("a", {
                           href: _,
                           className: _.AchievementLink,
-                          children: (0, _._)("#YIR_SeeAllAchievements"),
+                          children: _._.Localize("#YIR_SeeAllAchievements"),
                         }),
                       !_ &&
                         (0, _.jsx)(_._, {
                           href: _,
                           target: "_blank",
                           className: _.AchievementLink,
-                          children: (0, _._)("#YIR_SeeAllAchievements"),
+                          children: _._.Localize("#YIR_SeeAllAchievements"),
                         }),
                     ],
                   }),
@@ -14125,7 +14084,7 @@
                         }),
                         (0, _.jsx)("div", {
                           className: _.AchievementsSmallText,
-                          children: (0, _._)(
+                          children: _._.LocalizeReact(
                             "#YIR_UnlockedThisYear_Short",
                             (0, _.jsx)("br", {}),
                           ),
@@ -14170,7 +14129,7 @@
               })
             : (0, _.jsx)(_._, {
                 size: "small",
-                string: (0, _._)("#Loading"),
+                string: _._.Localize("#Loading"),
               });
         }
         const _ = 10;
@@ -14211,7 +14170,7 @@
                 }),
                 (0, _.jsx)("br", {}),
                 (0, _.jsx)("div", {
-                  children: (0, _._)(
+                  children: _._.Localize(
                     "#YIR_Achievement_ttip",
                     (0, _._)(
                       Math.max(
@@ -14277,7 +14236,7 @@
             _ = {
               backgroundImage: `url(${_.image_url + _})`,
             },
-            _ = `${_._.IMG_URL}yearinreview/screenshot_placeholder.png`,
+            _ = _("screenshot_placeholder.png"),
             _ = () => {
               _ && _(!1), _();
             };
@@ -14289,7 +14248,7 @@
               _ &&
                 (0, _.jsx)("div", {
                   className: _.ContentRestrictionText,
-                  children: (0, _._)(
+                  children: _._.Localize(
                     "#YIR_TopGames_ContentRestrictionScreenshots",
                   ),
                 }),
@@ -14347,12 +14306,13 @@
         function _(_) {
           const { gameSummary: _, index: _, userYearInReview: _ } = _,
             _ = _(),
+            _ = _(),
             _ = _.appid,
             _ = _.GetYear();
           for (let _ = _; _ >= _; --_) {
             const _ = `#steamrewind${_}_gametext_appid_${_}`,
-              _ = _(_, _);
-            if (_ != _)
+              _ = _(_, _, _);
+            if (_ !== void 0)
               return (0, _.jsxs)("div", {
                 className: _.IntroLine,
                 children: [_, " "],
@@ -14390,13 +14350,10 @@
             (_.current = _);
           let _ = _.useRef(void 0),
             _ = _.useCallback(() => {
-              let _ = () => {
-                  _ == _.unAppID &&
-                    _.Get().SetGameDetailsPopupAppData(void 0, []);
-                },
+              let _ = () => _(_),
                 _ = parseInt(_.strGameDetailsTransitionTimeMS);
               (_.current = setTimeout(_, _)), _(!1);
-            }, [_.unAppID, _]);
+            }, [_, _]);
           return (
             _.useEffect(
               () => () => {
@@ -14417,7 +14374,7 @@
         }
         function _(_) {
           let { userYearInReview: _ } = _,
-            { unAppID: _, length: _ = 0, index: _ = 0 } = _(),
+            { unAppID: _, length: _, index: _ = 0 } = _(),
             [_, _] = _(_),
             _ = _(_);
           const _ = _(_ + 1),
@@ -14455,7 +14412,9 @@
                 ],
               }),
             });
-          return _.createPortal(_, document.body);
+          return typeof document > "u"
+            ? null
+            : _.createPortal(_, document.body);
         }
         const _ = _.memo((_) => {
           const { unAppID: _, userYearInReview: _, index: _ } = _,
@@ -14463,9 +14422,9 @@
             _ = Math.trunc(_?.playtime_streak?.longest_consecutive_days || 1),
             _ = _.GetGameSummaryForApp(_),
             _ = _ ? _.parent_appid || _ : 0,
-            [_, _] = (0, _._)(_, _),
-            _ = _(_, _.GetAccountID(), _.GetYear()),
-            _ = (0, _._)(),
+            { item: _, bLoading: _ } = _(_),
+            _ = _(_),
+            _ = (0, _._)(_ ? (0, _._)(_.info) : void 0),
             _ = _(),
             _ = _ % 2 ? "OddGradient" : "EvenGradient",
             _ = (0, _._)(),
@@ -14476,7 +14435,7 @@
               () => _.GetChartMonthlyDataForApp(_),
               [_, _],
             );
-          if (_ === _._)
+          if (_)
             return (0, _.jsx)("div", {
               className: (0, _._)(
                 _.TopGameBlockContainer,
@@ -14490,11 +14449,11 @@
               }),
             });
           if (!_ || !_) return null;
-          let _ = (0, _._)(_.GetStorePageURL(), _);
+          let _ = _;
           _._.IN_CLIENT && (_ = "steam://openurl/" + _);
           const _ = _?.find((_) => _.percent > 0),
-            _ = _ ? _.date.getMonth() : null,
-            _ = _ ? (0, _._)(`#YIR_MonthlyCharts_MonthNoun_${_ + 1}`) : "",
+            _ = _ ? _.date.getUTCMonth() : null,
+            _ = _ ? _._.Localize(`#YIR_MonthlyCharts_MonthNoun_${_ + 1}`) : "",
             _ = Math.trunc(_.total_sessions);
           let _ = "";
           _ && _
@@ -14502,12 +14461,13 @@
             : _ &&
               !_._.IN_MOBILE_WEBVIEW &&
               (_ = `steam://open/library/details/${_}`);
-          const _ = _.GetName() ?? "";
+          const _ = _.info.name ?? "";
           let _ = _;
           return (
             _.demo
-              ? (_ = (0, _._)("#YIR_GameName_PlusDemo", _))
-              : _.playtest && (_ = (0, _._)("#YIR_GameName_PlusPlaytest", _)),
+              ? (_ = _._.Localize("#YIR_GameName_PlusDemo", _))
+              : _.playtest &&
+                (_ = _._.Localize("#YIR_GameName_PlusPlaytest", _)),
             (0, _.jsxs)(_, {
               className: (0, _._)(
                 _.TopGameBlockContainer,
@@ -14517,13 +14477,13 @@
               ),
               children: [
                 (0, _.jsx)(_, {
-                  oStoreItem: _,
+                  item: _,
                 }),
                 (0, _.jsxs)("div", {
                   className: _.StandardInfoCtn,
                   children: [
                     (0, _.jsx)(_, {
-                      oStoreItem: _,
+                      item: _,
                     }),
                     (0, _.jsxs)("div", {
                       className: (0, _._)(
@@ -14542,7 +14502,7 @@
                                   (0, _.jsx)("a", {
                                     href: _,
                                     className: _.GameLink,
-                                    children: (0, _._)(
+                                    children: _._.Localize(
                                       "#YIR_TopGames_VisitInStore",
                                     ),
                                   }),
@@ -14551,7 +14511,7 @@
                                     href: _,
                                     target: "_blank",
                                     className: _.GameLink,
-                                    children: (0, _._)(
+                                    children: _._.Localize(
                                       "#YIR_TopGames_VisitInStore",
                                     ),
                                   }),
@@ -14559,7 +14519,7 @@
                                   (0, _.jsx)(_._, {
                                     href: _,
                                     className: _.GameLink,
-                                    children: (0, _._)(
+                                    children: _._.Localize(
                                       "#YIR_TopGames_VisitInLibrary",
                                     ),
                                   }),
@@ -14598,7 +14558,7 @@
                                       }),
                                       (0, _.jsx)("div", {
                                         className: _.NumSubtitle,
-                                        children: (0, _._)(
+                                        children: _._.Localize(
                                           "#YIR_Game_PercentPlaytime",
                                         ),
                                       }),
@@ -14614,7 +14574,7 @@
                                       }),
                                       (0, _.jsx)("div", {
                                         className: _.NumSubtitle,
-                                        children: (0, _._)(
+                                        children: _._.Localize(
                                           _ == 1
                                             ? "#YIR_Game_PlaySession_Singular"
                                             : "#YIR_Game_PlaySessions",
@@ -14622,12 +14582,12 @@
                                       }),
                                     ],
                                   }),
-                                _._.country_code.toLowerCase() !== "cn" &&
+                                !_() &&
                                   _ > 1 &&
                                   (0, _.jsx)("div", {
                                     className: _.StatContainer,
                                     children: (0, _.jsxs)(_._, {
-                                      toolTipContent: (0, _._)(
+                                      toolTipContent: _._.LocalizeReact(
                                         "#YIR_Game_LongestStreak_ttip",
                                       ),
                                       children: [
@@ -14637,7 +14597,7 @@
                                         }),
                                         (0, _.jsx)("div", {
                                           className: _.NumSubtitle,
-                                          children: (0, _._)(
+                                          children: _._.Localize(
                                             "#YIR_Game_LongestStreak",
                                           ),
                                         }),
@@ -14658,7 +14618,7 @@
                                         }),
                                         (0, _.jsx)("div", {
                                           className: _.NumSubtitle,
-                                          children: (0, _._)(
+                                          children: _._.Localize(
                                             "#YIR_TopGames_NewThisYEar",
                                           ),
                                         }),
@@ -14675,7 +14635,8 @@
                                       }),
                                       (0, _.jsx)("div", {
                                         className: _.NumSubtitle,
-                                        children: (0, _._)("#YIR_TopGames_100"),
+                                        children:
+                                          _._.Localize("#YIR_TopGames_100"),
                                       }),
                                     ],
                                   }),
@@ -14718,16 +14679,16 @@
                 (0, _.jsx)(_, {
                   appid: _,
                   userYearInReview: _,
-                  oStoreItem: _,
+                  item: _,
                 }),
               ],
             })
           );
         });
         function _(_) {
-          const { oStoreItem: _ } = _,
-            _ = _(_),
-            _ = _.GetAssetsWithoutOverrides()?.GetLibraryHeroURL();
+          const { item: _ } = _,
+            _ = _(_.info),
+            _ = (0, _._)(_.assets, "library_hero");
           return (0, _.jsx)("div", {
             className: _.BackgroundImage,
             style: _
@@ -14738,10 +14699,10 @@
           });
         }
         function _(_) {
-          const { oStoreItem: _ } = _,
+          const { item: _ } = _,
             _ = _(),
-            _ = _(_),
-            _ = _.GetAssetsWithoutOverrides()?.GetLibraryHeroURL();
+            _ = _(_.info),
+            _ = (0, _._)(_.assets, "library_hero");
           return (0, _.jsx)(_.Fragment, {
             children: (0, _.jsx)("div", {
               className: (0, _._)(_.BackgroundImageFull, _.BackgroundImageFull),
@@ -14754,8 +14715,8 @@
           });
         }
         function _(_) {
-          const { appid: _, userYearInReview: _, oStoreItem: _ } = _,
-            _ = _(_);
+          const { appid: _, userYearInReview: _, item: _ } = _,
+            _ = _(_.info);
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_, {
@@ -14777,7 +14738,6 @@
             _ = (0, _._)(_),
             { bIsOwned: _ } = (0, _._)(_),
             _ = (0, _._)(),
-            _ = (0, _._)(_),
             { mutate: _ } = (0, _._)(_, !_, _);
           return !_._.logged_in || _
             ? null
@@ -14788,7 +14748,7 @@
                 },
                 children: [
                   _ ? (0, _.jsx)(_.qnF, {}) : (0, _.jsx)(_.T4m, {}),
-                  (0, _._)(
+                  _._.Localize(
                     _ ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist",
                   ),
                 ],
@@ -14797,13 +14757,14 @@
         var _ = __webpack_require__("chunkid");
         function _(_) {
           const { pageData: _ } = _,
-            { steamid: _, nYear: _, eResult: _ } = _,
-            _ = (0, _._)();
+            { steamid: _, nYear: _, eResult: _ } = _;
           _.useEffect(() => {
-            (0, _._)(_, "src", void 0),
-              (0, _._)(_, "snr", void 0),
-              (0, _._)(_, "sP", void 0);
-          }, [_]);
+            const _ = new URL(window.location.href),
+              _ = ["src", "snr", "sP"].filter((_) => _.searchParams.has(_));
+            _.length &&
+              (_.forEach((_) => _.searchParams.delete(_)),
+              window.history.replaceState(window.history.state, "", _));
+          }, []);
           const _ = _.useRef(null);
           if (
             (_.useEffect(() => {
@@ -14812,11 +14773,11 @@
             _ == _._)
           )
             return (0, _.jsx)(_, {
-              message: (0, _._)("#YIR_Error_NoShareNoGameplayNotUser"),
+              message: _._.Localize("#YIR_Error_NoShareNoGameplayNotUser"),
             });
           if (!_ || !_)
             return (0, _.jsx)(_, {
-              message: (0, _._)("#YIR_Error_NoData"),
+              message: _._.Localize("#YIR_Error_NoData"),
             });
           const _ = new _._(_);
           return (0, _.jsx)(_.Provider, {
@@ -14836,28 +14797,30 @@
             { userYearInReview: _, isLoading: _ } = _(
               _.ConvertTo64BitString(),
               _,
-            );
-          if (_ || _)
+            ),
+            { isLoading: _, isError: _ } = _(_?.GetTopGamesShownAppIDs() ?? []),
+            _ = _();
+          if (_ || _ || _ || !_)
             return (0, _.jsx)(_._, {
-              string: (0, _._)("#Loading"),
+              string: _._.Localize("#Loading"),
               position: "center",
             });
           if (!_ || !_.BIsIndividualAccount())
             return (0, _.jsx)(_, {
-              message: (0, _._)("#YIR_Error_NoUser"),
+              message: _._.Localize("#YIR_Error_NoUser"),
             });
-          if (!_)
+          if (!_ || _)
             return (0, _.jsx)(_, {
-              message: (0, _._)("#YIR_Error_PageLoadFailed"),
+              message: _._.Localize("#YIR_Error_PageLoadFailed"),
             });
           const _ = !_.GetPlayTimeStats()?.game_summary?.length;
           return _._.steamid !== _.steamid && _
             ? (0, _.jsx)(_, {
-                message: (0, _._)("#YIR_Error_NoShareNoGameplayNotUser"),
+                message: _._.Localize("#YIR_Error_NoShareNoGameplayNotUser"),
               })
             : _
               ? (0, _.jsx)(_, {
-                  message: (0, _._)("#YIR_Error_NoShareNoGameplay"),
+                  message: _._.Localize("#YIR_Error_NoShareNoGameplay"),
                 })
               : (0, _.jsx)(_._, {
                   autoFocus: !0,
@@ -14880,30 +14843,30 @@
               themeYear: _,
               children: _,
             } = _,
-            _ = _.GetSteamID(),
-            _ = _.GetYear(),
             _ = (0, _._)(_),
-            _ = _.useRef(void 0);
-          (!_.current ||
-            _.current.steamid.GetAccountID() != _.GetAccountID() ||
-            _.current.year != _) &&
-            (_.current = new _(_.Get().SteamInterface, _, _));
-          const _ = _.current,
+            _ = (0, _._)(),
+            _ = _.GetSteamID().ConvertTo64BitString(),
+            _ = _.GetYear(),
+            _ = _.useMemo(() => _(_, _, _), [_, _, _]),
             _ = _.useMemo(
               () => ({
                 bIsUser: _,
                 persona_name: _.persona_name,
                 avatar_url: _.avatar_url,
-                Screenshots: _,
                 themeStyle: _,
               }),
-              [_, _.persona_name, _.avatar_url, _, _],
+              [_, _.persona_name, _.avatar_url, _],
             );
           return (0, _.jsx)(_.Provider, {
             value: _,
             children: (0, _.jsx)(_._, {
               eAdultOnlyMediaBehavior: _ ? "allowed" : "masked",
-              children: _,
+              children: (0, _.jsx)(_.Provider, {
+                value: _,
+                children: (0, _.jsx)(_, {
+                  children: _,
+                }),
+              }),
             }),
           });
         }
@@ -14935,9 +14898,8 @@
         function _(_) {
           const { userYearInReview: _, viewAsUser: _ } = _,
             _ = _.GetSteamID(),
-            _ = _.GetYear(),
-            _ = _.GetTopGamesShownAppIDs();
-          _(_, _.GetAccountID(), _);
+            _ = _.GetYear();
+          _(_);
           const { persona_name: _ } = (0, _.useContext)(_),
             _ = _.GetPlayTimeStats().game_summary?.length;
           return (0, _.jsxs)(_.Fragment, {
@@ -15020,7 +14982,7 @@
                         children: [
                           (0, _.jsx)("div", {
                             className: _().ShareTitle,
-                            children: (0, _._)("#YIR_ShareOptionsTitle"),
+                            children: _._.Localize("#YIR_ShareOptionsTitle"),
                           }),
                           (0, _.jsxs)(_._, {
                             className: _().ShareColumns,
@@ -15030,12 +14992,11 @@
                                 children: [
                                   (0, _.jsx)("div", {
                                     className: _().ShareTypeTitle,
-                                    children: (0, _._)(
+                                    children: _._.Localize(
                                       "#YIR_ShareModal_TitleSocial",
                                     ),
                                   }),
                                   (0, _.jsx)(_, {
-                                    userYearInReview: _,
                                     steamId: _,
                                     nYear: _,
                                   }),
@@ -15046,7 +15007,7 @@
                                 children: [
                                   (0, _.jsx)("div", {
                                     className: _().ShareTypeTitle,
-                                    children: (0, _._)(
+                                    children: _._.Localize(
                                       "#YIR_ShareModal_TitleProfile",
                                     ),
                                   }),
@@ -15059,7 +15020,7 @@
                                       }),
                                       (0, _.jsx)("span", {
                                         className: (0, _._)(_().ShareText),
-                                        children: (0, _._)(
+                                        children: _._.Localize(
                                           "#YIR_ShareModal_AddShowcase",
                                         ),
                                       }),
@@ -15110,7 +15071,7 @@
               }),
               (0, _.jsx)("span", {
                 className: (0, _._)(_().UserName, _.UserName),
-                children: (0, _._)("#YearInReview_PossessiveUserName", _),
+                children: _._.Localize("#YearInReview_PossessiveUserName", _),
               }),
             ],
           });
@@ -15126,10 +15087,10 @@
               children: [
                 (0, _.jsx)("div", {
                   className: _().RewindHeader,
-                  children: (0, _._)(
+                  children: _._.LocalizeReact(
                     "#YearInReview_SteamRewindHeader",
                     (0, _.jsx)(_, {}),
-                    (0, _._)("#date_year", _, " "),
+                    _._.Localize("#date_year", _, " "),
                   ),
                 }),
                 _._.logged_in &&
@@ -15139,7 +15100,6 @@
                       className: (0, _._)(_().ShareArea),
                       children: (0, _.jsx)(_._, {
                         children: (0, _.jsx)(_, {
-                          userYearInReview: _,
                           steamId: _,
                           nYear: _,
                         }),
@@ -15237,7 +15197,7 @@
             className: (0, _._)(_().YearInReviewContent, _().ConclusionCtn),
             children: (0, _.jsx)("div", {
               className: _().SectionTitle,
-              children: (0, _._)(
+              children: _._.LocalizeReact(
                 "#YIR_Conclusion",
                 (0, _.jsx)("span", {
                   className: (0, _._)(_().ConclusionName, _.ConclusionName),
@@ -15258,7 +15218,7 @@
             children: [
               (0, _.jsx)("div", {
                 className: _().SectionTitle,
-                children: (0, _._)("#YIR_FAQ_Title"),
+                children: _._.Localize("#YIR_FAQ_Title"),
               }),
               (0, _.jsxs)("div", {
                 className: _().Questions,
@@ -15268,11 +15228,11 @@
                     children: [
                       (0, _.jsx)("div", {
                         className: _().Question,
-                        children: (0, _._)("#YIR_FAQ_Dates_Q"),
+                        children: _._.Localize("#YIR_FAQ_Dates_Q"),
                       }),
                       (0, _.jsx)("div", {
                         className: _().Answer,
-                        children: (0, _._)("#YIR_FAQ_Dates_A", _),
+                        children: _._.Localize("#YIR_FAQ_Dates_A", _),
                       }),
                     ],
                   }),
@@ -15281,11 +15241,11 @@
                     children: [
                       (0, _.jsx)("div", {
                         className: _().Question,
-                        children: (0, _._)("#YIR_FAQ_Offline_Q"),
+                        children: _._.Localize("#YIR_FAQ_Offline_Q"),
                       }),
                       (0, _.jsx)("div", {
                         className: _().Answer,
-                        children: (0, _._)("#YIR_FAQ_Offline_A"),
+                        children: _._.Localize("#YIR_FAQ_Offline_A"),
                       }),
                     ],
                   }),
@@ -15294,11 +15254,11 @@
                     children: [
                       (0, _.jsx)("div", {
                         className: _().Question,
-                        children: (0, _._)("#YIR_FAQ_Types_Q"),
+                        children: _._.Localize("#YIR_FAQ_Types_Q"),
                       }),
                       (0, _.jsx)("div", {
                         className: _().Answer,
-                        children: (0, _._)("#YIR_FAQ_Types_A"),
+                        children: _._.Localize("#YIR_FAQ_Types_A"),
                       }),
                     ],
                   }),
@@ -15307,22 +15267,22 @@
                     children: [
                       (0, _.jsx)("div", {
                         className: _().Question,
-                        children: (0, _._)("#YIR_FAQ_Share_Q"),
+                        children: _._.Localize("#YIR_FAQ_Share_Q"),
                       }),
                       (0, _.jsxs)("div", {
                         className: _().Answer,
                         children: [
-                          (0, _._)("#YIR_FAQ_Share_A"),
+                          _._.Localize("#YIR_FAQ_Share_A"),
                           (0, _.jsxs)("ol", {
                             children: [
                               (0, _.jsx)("li", {
-                                children: (0, _._)("#YIR_FAQ_Share_A_b1"),
+                                children: _._.Localize("#YIR_FAQ_Share_A_b1"),
                               }),
                               (0, _.jsx)("li", {
-                                children: (0, _._)("#YIR_FAQ_Share_A_b2"),
+                                children: _._.Localize("#YIR_FAQ_Share_A_b2"),
                               }),
                               (0, _.jsx)("li", {
-                                children: (0, _._)("#YIR_FAQ_Share_A_b3"),
+                                children: _._.Localize("#YIR_FAQ_Share_A_b3"),
                               }),
                             ],
                           }),
@@ -15335,11 +15295,11 @@
                     children: [
                       (0, _.jsx)("div", {
                         className: _().Question,
-                        children: (0, _._)("#YIR_FAQ_ShareFamily_Q"),
+                        children: _._.Localize("#YIR_FAQ_ShareFamily_Q"),
                       }),
                       (0, _.jsx)("div", {
                         className: _().Answer,
-                        children: (0, _._)("#YIR_FAQ_ShareFamily_A"),
+                        children: _._.Localize("#YIR_FAQ_ShareFamily_A"),
                       }),
                     ],
                   }),
@@ -15348,16 +15308,16 @@
                     children: [
                       (0, _.jsx)("div", {
                         className: _().Question,
-                        children: (0, _._)("#YIR_FAQ_Controller_Q"),
+                        children: _._.Localize("#YIR_FAQ_Controller_Q"),
                       }),
                       (0, _.jsx)("div", {
                         className: _().Answer,
-                        children: (0, _._)("#YIR_FAQ_Controller_A1"),
+                        children: _._.Localize("#YIR_FAQ_Controller_A1"),
                       }),
                       (0, _.jsx)("br", {}),
                       (0, _.jsx)("div", {
                         className: _().Answer,
-                        children: (0, _._)("#YIR_FAQ_Controller_A2"),
+                        children: _._.Localize("#YIR_FAQ_Controller_A2"),
                       }),
                     ],
                   }),
@@ -15367,11 +15327,11 @@
                         children: [
                           (0, _.jsx)("div", {
                             className: _().Question,
-                            children: (0, _._)("#YIR_FAQ_PrivateApps_Q"),
+                            children: _._.Localize("#YIR_FAQ_PrivateApps_Q"),
                           }),
                           (0, _.jsx)("div", {
                             className: _().Answer,
-                            children: (0, _._)("#YIR_FAQ_PrivateApps_A", _),
+                            children: _._.Localize("#YIR_FAQ_PrivateApps_A", _),
                           }),
                         ],
                       })
@@ -15380,11 +15340,14 @@
                         children: [
                           (0, _.jsx)("div", {
                             className: _().Question,
-                            children: (0, _._)("#YIR_FAQ_PrivateApps_v2_Q"),
+                            children: _._.Localize("#YIR_FAQ_PrivateApps_v2_Q"),
                           }),
                           (0, _.jsx)("div", {
                             className: _().Answer,
-                            children: (0, _._)("#YIR_FAQ_PrivateApps_v2_A", _),
+                            children: _._.Localize(
+                              "#YIR_FAQ_PrivateApps_v2_A",
+                              _,
+                            ),
                           }),
                         ],
                       }),
@@ -15394,40 +15357,42 @@
           });
         }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = {
           Home: (_, _) => `${_._.YearInReview(_, _)}`,
         };
         function _(_) {
-          return (
-            (0, _._)(),
-            (0, _.jsx)(_._, {
-              domain: "store.steampowered.com",
-              controller: "yearinreview",
+          return (0, _.jsx)(_._, {
+            domain: "store.steampowered.com",
+            controller: "yearinreview",
+            children: (0, _.jsx)(_._, {
               children: (0, _.jsx)(_._, {
-                children: (0, _.jsx)(_._, {
-                  path: `${_.Home(":steamId?", ":year?")}`,
-                  render: (_) =>
-                    (0, _.jsx)(_._, {
-                      method: "yearinreview",
-                      children: (0, _.jsx)(_._, {
-                        children: (0, _.jsx)(_, {
-                          steamId: _.match.params.steamId,
-                          year: _.match.params.year,
-                        }),
+                path: `${_.Home(":steamId?", ":year?")}`,
+                render: (_) =>
+                  (0, _.jsx)(_._, {
+                    method: "yearinreview",
+                    children: (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_, {
+                        steamId: _.match.params.steamId,
+                        year: _.match.params.year,
                       }),
                     }),
-                }),
+                  }),
               }),
-            })
-          );
+            }),
+          });
         }
         function _(_) {
           const { steamId: _, year: _ } = _,
+            _ = (0, _._)(),
             _ = _.useMemo(() => _(_, _), [_, _]);
-          return (0, _.jsx)(_, {
-            pageData: _,
-          });
+          return (
+            _.useMemo(() => _(_, _), [_, _]),
+            (0, _.jsx)(_, {
+              pageData: _,
+            })
+          );
         }
         function _(_, _) {
           const _ = _ == "my" ? _._.steamid : _ || "",
@@ -15450,6 +15415,47 @@
             bLocalizationAdvancedAccess: _,
             bAllowDevToggles: _,
           };
+        }
+        function _(_, _) {
+          const { steamid: _, nYear: _ } = _;
+          if (!_ || !_) return;
+          const _ = new _._(_),
+            _ = _(_.ConvertTo64BitString(), _);
+          if (_.getQueryData(_)) return;
+          const _ = (0, _._)(
+            `yearinreview_${_.GetAccountID()}_${_}`,
+            "application_config",
+          );
+          _(_) &&
+            _.setQueryData(
+              _,
+              _(_._, {
+                stats: _,
+                percentiles: (0, _._)(
+                  `yearinreview_${_}_percentiles`,
+                  "application_config",
+                ),
+                distribution: (0, _._)(
+                  `yearinreview_${_}_distribution`,
+                  "application_config",
+                ),
+                previous_year_summary: (0, _._)(
+                  `yearinreview_${_}_previous_year_summary`,
+                  "application_config",
+                ),
+              }),
+            );
+        }
+        function _(_) {
+          const _ = _;
+          return (
+            !!_ &&
+            typeof _ == "object" &&
+            !!_.account_id &&
+            typeof _.account_id == "number" &&
+            !!_.playtime_stats &&
+            typeof _.playtime_stats == "object"
+          );
         }
       },
       chunkid: (module) => {
@@ -16025,366 +16031,6 @@
           CapsuleImg: "_3pVEkyjcVAxFbWBaXkDxtw",
           HoveredGameLabel: "k6Eh-X_tQXx5sEpDHBMq6",
           TotalPlaytime: "_3F-F53fTqM5DXVQc6Jz5d3",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          new_games_color: "#3cdf6a",
-          used_games_color: "#4df",
-          old_games_color: "#e496ff",
-          pie_windows: "#28aee1",
-          pie_linux: "#cd4141",
-          pie_deck: "#9c85d1",
-          pie_mac: "#939a9d",
-          pie_vr: "#55af30",
-          topApp_0: "#00a299",
-          topApp_1: "#017baa",
-          topApp_2: "#044fbb",
-          topApp_3: "#2325b9",
-          topApp_4: "#4a17a6",
-          topApp_5: "#881abf",
-          topApp_6: "#bf1a72",
-          topApp_7: "#cb5545",
-          monthOthersColor: "#7d98aa",
-          chartAccentColor: "#fff",
-          chartAccentColorAlt: "#1a9ffe",
-          ImagesCtn: "_1mCWTI0JoiDqCmO8bDDES5",
-          SingleGame: "_2sI9nEpezKWeRW_uX3zDe9",
-          ImageTint: "_1KFiu2aZBbuwvWHItKoR7-",
-          Section: "ZbHrxezu8VrBxMPSTh9z3",
-          StreakSizeFullBar: "_14BklrGtK29m79DW3nqHWV",
-          LongestStreakBgImage: "_3bCDTuFBTstThIkVu8rZAK",
-          Tab: "_2RZyYiWAwDAPtAyy1l4EhC",
-          UserName: "_3ZGQww28rxBs_rNFt4A-Z",
-          ConclusionName: "_2QHBE_5MFY0OIfAJK-6KPs",
-          GridItem: "_3JsZSm646Y5ZkGhpSOODAW",
-          AchievementBlock: "_2DHea-Spjx2dRqPQcVfpqw",
-          StreakBlock: "_2Sd0qjwv69VPg701ROB46l",
-          HardwareBlock: "_2KTGrVdH4bYO-rOyHaGaXe",
-          DeviceBlock: "_33YJLXitiubERYxUXrbecK",
-          SummaryCtnShadow: "_3eIkBGJSxL654zOmmOBOz7",
-          BackgroundImage: "_36jZ71s237_s23yxdQgPFO",
-          SummaryCtn: "_2l4E7GqLFXFY_rYWRbFOIt",
-          TopHonorsSection: "_24OE-kMDyDQ0Ci29zIPqdq",
-          MissingUserCtn: "_3L0BnaPXE2Nuz3x60nrf8",
-          GenericBackground: "_1h36ybUWs1ZX5telCOk0XC",
-          LogInCtn: "_26pjxsotAYqvNMpivHzvaw",
-          FriendCtn: "_1mZ6NQJ_g6wG-NdlN86ksm",
-          TopGameBlockContainer: "_36knYDLxQo9AaZviPf_cnn",
-          OddGradient: "_1mrNpFA8PEjfLYXmvbboJl",
-          EvenGradient: "uGK9CVVk1pMAHGs62QINl",
-          TopMostGame: "_2pfc8dJefQjNg6UM3yLz9q",
-          FirstPlayCtn: "_1TBDwSyyCkodf5oKezdape",
-          GamePlayDetails: "vqmq5_0SK8i0bpeppqxnx",
-          PlatformChartsCtn: "_2PR724R2IuabDLtoLxWpfk",
-          IconAchievement: "_2IjTrxdj_wI9Gh7_aMbZTM",
-          IconGamesPlayed: "_1pYbm7SYRqjtbSjm99vybx",
-          IconStreak: "_3wrtHF8HGJ6k-7gSKy9tHu",
-          PlayBehaviorContainer: "tiuwqat5VX9DqGp1wTasT",
-          ProgressBarFilled: "_2TAF9zz_FTeA_XA7NabVmT",
-          ProgressBarFilledGradient: "_2Jn-XMt83DMEbyRglDjPZ-",
-          GameNewnessTitle: "_2S-kJn2DuxoMMQRJoCDp5K",
-          NewActive: "_3nz5W7FAYvN2-2n0MuWlwo",
-          DataBoxArrow: "_1EoUlR9aVJ5EMp7C5CYdlJ",
-          Background: "DxFS4y1E5x3-FXRmvNTjr",
-          UserData: "mjYOxpO92Sjjaq1vI0nPa",
-          DataBox: "_1TC4ZL8Igk0UZwM5n37MPP",
-          SteamData: "_1muEXi8fQZowcGSWQIP5EF",
-          Border: "_3APY0jBERnHXknBhjYaKzK",
-          PercentageLabel: "grEIxWPqvyXbDSONzpGyk",
-          Color: "_1jd63YNjr7wMQzLdB_QziW",
-          PercentageDescriptionLabel: "etu3gC0CbXo-55a8VnGLb",
-          UsedActive: "_3cggzJW9YF-UN83xHTZQ8v",
-          OldActive: "_2e8Hfol5roqPlMlmMEe4jK",
-          AllGamesBGImage: "_3ugWpF65a-Hzz9zZbMdFei",
-          SeeRewindButton: "_25JDT1O9te5Afb7dDcz4ry",
-          MMFrame: "_34F3ONj5DcTlh_joG-sHu5",
-          MMOverride: "_3410LOeYZJjY6R_H4U0YuQ",
-          Header: "_1wRDr7Zzwg-daOQ9jG5qY5",
-          YearSubtitle: "yqOBUuUlT4ChD5MB4Gfmb",
-          ReplayLogo: "_1Dj2Lm_eGilmq2aTCNLmKz",
-          ReplayLogoAccent: "_1boFekf-O9JBLOKZNRGpGL",
-          Hashtag: "rUjuX2Th6QbH4f1-l8H3c",
-          Avatar: "_3TIPQVu2JQ0Pp0s4DBxqdN",
-          DataBlock: "_2ZVTo1HmTUnFF3TNZBarJ3",
-          PersonaName: "_1n5x7nxPhP-Sq0AhY5ssVm",
-          ReplayHighlight: "_1t179jT3miESogxBPLvKso",
-          ViewPageButton: "jIjgB6ZoOX1pa2GftI1RS",
-          Description: "_1vouHy7Qkdo_QusE7gHag1",
-          OtherYearLink: "_1i52pDXbOiguTescoinJBz",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          new_games_color: "#d67070",
-          used_games_color: "#683db4",
-          old_games_color: "#3898b0",
-          pie_windows: "#d67070",
-          pie_linux: "#683db4",
-          pie_deck: "#3898b0",
-          pie_mac: "#46ab46",
-          pie_vr: "#c7b84e",
-          topApp_0: "#d67070",
-          topApp_1: "#70d670",
-          topApp_2: "#683db4",
-          topApp_3: "#3898b0",
-          topApp_4: "#ab4646",
-          topApp_5: "#46ab46",
-          topApp_6: "#3d138a",
-          topApp_7: "#0e6e86",
-          monthOthersColor: "#7d98aa",
-          chartAccentColor: "#fff",
-          chartAccentColorAlt: "#1a9ffe",
-          ImagesCtn: "_10kzTTAtqaz13b6p7OjG8S",
-          scaleBackground: "_1WW8z64-BrcfAZZpgbuRTM",
-          SingleGame: "_2Pj3-6RWhMQHDGPtVx1ftl",
-          ImageTint: "RdmGip0ngXjp9kSzfsMuc",
-          Section: "_1ihw3wAprvhicFWLMrq7hf",
-          StreakSizeFullBar: "_3s6e74lp5bDTtWMnpcnBbA",
-          LongestStreakBgImage: "_1GiTU8n2lD-sPz0sCR0Xhj",
-          Tab: "_25kqUwukU9GN1Ef9tihV6L",
-          UserName: "_1eLSYaRNKbAsXOhQTsmW1V",
-          ConclusionName: "_3Xy9Cx3rQeyhPKSjwGEfl6",
-          GridItem: "_3xyYnoaptMoTZ1HqL_koRs",
-          AchievementBlock: "_1M433GBUUxgHItBhMw0U94",
-          StreakBlock: "_2X6mwNm61FuayA-l1afHjg",
-          HardwareBlock: "GImwL8nsYgPpolltUalGf",
-          DeviceBlock: "_2s1BbZknfTzGiX0KPWI6sQ",
-          SummaryCtnShadow: "_18moaZsJq2bOBUKUFkgZXW",
-          BackgroundImage: "_1LIoXPNaAmjCNg--cqeYNJ",
-          SummaryCtn: "_2iEZg9UeJZPaXWH8DEQgAY",
-          TopHonorsSection: "_3pGXxrtry6vbrbKN05WUO6",
-          FriendCtn: "_2W45uTzo4s5qj5DLPHUt2f",
-          TopGameBlockContainer: "_36jqv5rato1nA9_Fm4TgqO",
-          OddGradient: "_2humxv5J-6yJS4voPPdZ2t",
-          EvenGradient: "_2Ri1edchogFKwyEY3XKJiq",
-          TopMostGame: "_3AeiaW8hpnC1ONnWJUXAj5",
-          GamePlayDetails: "il8qj5ZbFvylAOOLUaNtV",
-          PlatformChartsCtn: "_1VlT4dTCqBdYP-i3bxLhyJ",
-          gradient: "DcluJQjgDbSdO-U954rux",
-          IconAchievement: "_1dt08I2SCDobYoSlg6xjqf",
-          IconGamesPlayed: "_3Zy7ueS4aunldSTv-YA2GT",
-          IconStreak: "_22reoVLCzn-Fuh73p1pXr5",
-          PlayBehaviorContainer: "_1U1ZuwB1L9K4CPqioL0e5s",
-          ProgressBarFilled: "_3NgeYY9GD7yBtWM_upyPTT",
-          ProgressBarFilledGradient: "_2WMTIhxpdYdVPW8qMMaMIR",
-          GameNewnessTitle: "_3kzRWYdjSiT3NFAj2oVTVY",
-          NewActive: "_3YOjggFXHQrDGODGISowUn",
-          DataBoxArrow: "_2V5vsfJLUUAm8Dkwco2jw9",
-          Background: "_1P7u77iRdWEMNFa_uDOAgx",
-          UserData: "sT4Y_Mssd38IykTqpNttI",
-          DataBox: "sw8ZdGxYqpVlDpQ-O0ymi",
-          SteamData: "_3QBOqe7aPF_N0gIqkC9fmI",
-          Border: "_1LJoYGt4cvMN5B1_sAJP8f",
-          PercentageLabel: "_6GBP_G16XsdGbYC8NTZh6",
-          Color: "_5AuLAC-w6VzF8QR5dj5Xt",
-          PercentageDescriptionLabel: "SsulucKQh-HigrEyVzMIg",
-          UsedActive: "_3kPVLKj0dwg8U5A6Fg7ISA",
-          OldActive: "_3n3sqX8WsGOyPAMMvYy_O-",
-          AllGamesBGImage: "Da4bxMaQBEGNrVrq5DpDH",
-          SeeRewindButton: "_288f6z1gFOsYlF9sPrQjGL",
-          MMFrame: "_2uL2aC9JTgz2OiBYlYh0OV",
-          MMOverride: "_3r4GfYoEmqFKtRaTHW4kce",
-          Header: "_2a2ceVKfNdvTRhuk5GSdns",
-          YearSubtitle: "_2p3PzXE3K1nmqcMQq3_IfL",
-          ReplayLogo: "_3LKGj8E0hxcbos8M02X8Z5",
-          ReplayLogoAccent: "QA6ZiaAVMlmpcQ76Vh1ai",
-          Hashtag: "u0AZ32D3fSCUz7g34qqez",
-          Avatar: "_1YfBn_vDDQheFIvB_NS8jT",
-          DataBlock: "_2k0fIZXO_T84nzNLVPk3_8",
-          PersonaName: "cUavdbPuv_0xdR4Dn9zos",
-          ReplayHighlight: "_17c5leGvLNSi5Ww9tu6KYI",
-          ViewPageButton: "AwTMLvj9vwwJanUhUW0md",
-          Description: "_L5X9igrHe9C6CwhZe_ny",
-          OtherYearLink: "_1fHTilDQDzxqV57h1u1xHI",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          "duration-app-launch": "800ms",
-          new_games_color: "#34f3fe",
-          used_games_color: "#cc6670",
-          old_games_color: "#f4d760",
-          pie_windows: "#d67070",
-          pie_linux: "#aa3db4",
-          pie_deck: "#3898b0",
-          pie_mac: "#46ab46",
-          pie_vr: "#c7b84e",
-          topApp_0: "#d67070",
-          topApp_1: "#70d670",
-          topApp_2: "#683db4",
-          topApp_3: "#3898b0",
-          topApp_4: "#ab4646",
-          topApp_5: "#46ab46",
-          topApp_6: "#3d138a",
-          topApp_7: "#0e6e86",
-          monthOthersColor: "#7d98aa",
-          chartAccentColor: "#fff",
-          chartAccentColorAlt: "#1a9ffe",
-          ImagesCtn: "_3OQ6rgJBkGnH9Bf6r2e3HL",
-          scaleBackground: "_3JN7ZUgVCUsaPMpmqP7TwR",
-          SingleGame: "_1HbdEudMGphunPB0JEXg7i",
-          ImageTint: "_1gfY6mgm47-kMTUtqR0-Ou",
-          Section: "tRbx_6RHxbCDIMagDBI8p",
-          LongestStreakBgImage: "_1MVdzFDJOXawdsqr3Yhqsw",
-          StreakSizeFullBar: "_36N_E04MlrcS-OcKDAtap2",
-          Tab: "_1KD4j_7fmsom6XcRjCdT0Q",
-          UserName: "WSDA_clh_9sxDy4zdmbjD",
-          ConclusionName: "_1gHhZmVSITXh31m_yruKhR",
-          SummaryCtnShadow: "_2-LqaFKV7kacR8awEnhfJX",
-          GridItem: "_3OZGvnLThiIYbr4Ouh2bxp",
-          BackgroundImage: "_2aMzl_Delss7H1rWla6XDB",
-          FriendCtn: "_1_-90oN_7p0LZPblYQBANu",
-          TopGameBlockContainer: "_1Y5fJhtMjArQRouT4r3-C7",
-          BackgroundImageFull: "_3MOFeHUyOuqaV0X3Yr3VNf",
-          OddGradient: "_3ZMWDI255mEZaJyC56j0wL",
-          EvenGradient: "Juac3ZakPmb2mXfPy5vYL",
-          TopMostGame: "_1hCC5kg_wi3ka5DgsPuQSB",
-          GamePlayDetails: "_3rUVGxkgXErfzS1dUw-09d",
-          PlatformChartsCtn: "_37_pY_aEthje0YSZyP7Cs3",
-          gradient: "_3Z_LYJhCqdb8ZUUwCdpQgr",
-          TopHonorsSection: "_1JuNaCUGgdEe4Kg1wwxKiC",
-          SectionDesc: "frtdAP-rVslnmtiDFU5hj",
-          IconAchievement: "_1blrLRqm7dIEf-KlyXeucX",
-          IconGamesPlayed: "_3mFHXBXxcqOg-QN0otvPIV",
-          IconStreak: "_1BAN0pj-aWkXRxswwHZqJ6",
-          PlayBehaviorContainer: "_3K-BxOFebKlIgA3KHN3fRd",
-          ProgressBarFilled: "_149r1AuXIu7SWFlKGFPK2g",
-          ProgressBarFilledGradient: "_1dBow-Dbmq4zxmKY1jgQAn",
-          GameNewnessTitle: "_3yTxsy6ozFIGQBi_USS7Wq",
-          NewActive: "_3Q-lCYrQuOslt990fq-rr6",
-          DataBoxArrow: "_1op5IwtjH5Lq0XP38WK3LT",
-          Background: "_2j3GatBNdCKuNabv1m37Yq",
-          UserData: "_3m-Ki0zq5OMIcIZ41vG6wU",
-          DataBox: "ezwPo6nwskfStGExxxe2",
-          SteamData: "_3ki5fNFYPN-mUpMWp_7yBc",
-          Border: "_3OeymkaW96P8-ADBuNVDju",
-          PercentageLabel: "_3JxJmNw4L3TNLr0RgUvc-J",
-          Color: "GDFSAsxyT5cjNE1qUDVjI",
-          PercentageDescriptionLabel: "LkZ04ZMADGM3ycZyxP335",
-          UsedActive: "_1GIOMMTrITyIDVa9Vjc6JE",
-          OldActive: "_3U-IfPH0I8djRe2moFvzuF",
-          AllGamesBGImage: "_1yRd48MGRuylzC44_4Dmgb",
-          SeeRewindButton: "mf6UTLxYSeiKkvIhlAodx",
-          MMFrame: "_2vqAzxON4lE_16iKxhv8qT",
-          MMOverride: "_2HmEzExHY4aeyBFI6MUXmT",
-          Header: "_3gOcUL_xfcBkYU0g20TaXb",
-          YearSubtitle: "_3UwJLn8p1rV25mjYmzwrVA",
-          ReplayLogo: "_221R7vRZej1-5Itjx416tA",
-          ReplayLogoAccent: "_18J6u_1IgoXwwOwNs17yBg",
-          Hashtag: "_3bTOGmEBF0FW3IZn63KpR7",
-          Avatar: "_2zdVUZKCn5qRHBOk2Wvvhh",
-          DataBlock: "Cop9oURErdKz-xnG00D19",
-          PersonaName: "_1yc5XlMVWWlXCsludrsGM8",
-          ViewPageButton: "_8vh-tS_EH62zvZbZzF6Bq",
-          Description: "_1ImcGBhCVlOyWddPGdtGz9",
-          OtherYearLink: "_3LrPDKdIcbQ34J2OlNHDXh",
-          BackgroundAnimation: "_1iXipF4ysagEImD280CprP",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1rmm8RPOlAxQMFUAP8bygH",
-          "ItemFocusAnim-darkerGrey": "_3Ws16JxP5tjYQMyhOCZPyl",
-          "ItemFocusAnim-darkGreySettings": "_1U1iTefDLSbKqIp4V19WVn",
-          "ItemFocusAnim-darkGrey": "_1Z34B8hAZCLKdCS-fIrGZl",
-          "ItemFocusAnim-grey": "_25oYhp1kwf6zZ5vtnsQBgc",
-          "ItemFocusAnim-translucent-white-10": "_12q-BgpP8S8I4o8Y7tVgP5",
-          "ItemFocusAnim-translucent-white-20": "LBhH9gPpgXf2pY0_Lc3Al",
-          "ItemFocusAnimBorder-darkGrey": "_3V_jsm1ATEfbvpDr6TIw3R",
-          "ItemFocusAnim-green": "_1CWlcSJ0K4nB9z9UY1GJO7",
-          focusAnimation: "xxHDLCKk6ZGZZcwkKMJ_o",
-          hoverAnimation: "_1JpeZ-3CBjNXMpN8RezwCI",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          "duration-app-launch": "800ms",
-          new_games_color: "#34f3fe",
-          used_games_color: "#cc6670",
-          old_games_color: "#f4d760",
-          pie_windows: "#d67070",
-          pie_linux: "#aa3db4",
-          pie_deck: "#3898b0",
-          pie_mac: "#46ab46",
-          pie_vr: "#c7b84e",
-          topApp_0: "#d67070",
-          topApp_1: "#70d670",
-          topApp_2: "#683db4",
-          topApp_3: "#3898b0",
-          topApp_4: "#ab4646",
-          topApp_5: "#46ab46",
-          topApp_6: "#3d138a",
-          topApp_7: "#0e6e86",
-          monthOthersColor: "#7d98aa",
-          chartAccentColor: "#fff",
-          chartAccentColorAlt: "#1a9ffe",
-          ImagesCtn: "_2s7mIvwS-3CubLZ0qh2JUW",
-          scaleBackground: "_26thFVUdrVT5cwl3ZNo621",
-          SingleGame: "Oi2hkZjaYSLMdFBa10fFW",
-          ImageTint: "_4dii7ZD-CzK6Hdr_1zFfz",
-          Section: "_1boQl7oW6GufFP0tCEqgPg",
-          LongestStreakBgImage: "Rb3f3N7xL755z9IQo1z3a",
-          StreakSizeFullBar: "_3232l-2EN_vmaNNFhu8wYg",
-          Tab: "_2oU8grgLlvrP-1kypqcmjG",
-          UserName: "_3tdBf9Fq7kubW0eXl3uhhM",
-          ConclusionName: "_1fViacRZXSttKAoUhRITId",
-          SummaryCtnShadow: "_2BWKGdK_xOyg1l3a2AgT4Z",
-          GridItem: "_1NKomKIPmTDGyDrAtz-2d4",
-          BackgroundImage: "_3wN5uwJqxQEIAmXkzKmCFm",
-          FriendCtn: "_64HO5Fgwc4BRCG8pcDvno",
-          TopGameBlockContainer: "DFb2vstqM2m5UIqllW6-z",
-          BackgroundImageFull: "_2BWkMEocB_PWAlCNnvwkpW",
-          OddGradient: "_31GzI9SB2Wj87sB13c7XHz",
-          EvenGradient: "_283mQrlso9fruh_DtsBP18",
-          TopMostGame: "_2PmC6qr8RF22oGrrTwa-Ai",
-          GamePlayDetails: "_3gAeRCR1lnQimVrfYKP6JD",
-          PlatformChartsCtn: "TSAyulrl5QSSKjK1gTZdg",
-          gradient: "_2kZoREa11DQ2pGPkasd9xs",
-          TopHonorsSection: "_3vxAkxTbGM_XzgF_jQu8MR",
-          SectionDesc: "CJ9awmTLX6bSz36NY4HT4",
-          IconAchievement: "_2vdLENzDQtBQjyAkyv9S_w",
-          IconGamesPlayed: "_3iBplwgmTqlW65lS36SzT2",
-          IconStreak: "_3muGaWbeottcWdmhZBqB53",
-          PlayBehaviorContainer: "_3g2ea3qJY6j67_cFF5Mgsq",
-          ProgressBarFilled: "_1LQbY-wdcf-dh-t3dkucGC",
-          ProgressBarFilledGradient: "_3aihmNXrhiBM33b7t7UKFC",
-          GameNewnessTitle: "_39lOiSYRWalnWaZ5SX3zhx",
-          NewActive: "_1sdItmmpaYbqIRLLUtrDrG",
-          DataBoxArrow: "_3ajjJPkrXfayfPA3Vivx-8",
-          Background: "A6FIZiuS0_nAypC7LbvhE",
-          UserData: "_1KHyWCx0wbs471k7TSRMAs",
-          DataBox: "_2c-eiPgDpepgIpD_jtHUzC",
-          SteamData: "_1yhuxYer1QE_Vm8FfAmsIa",
-          Border: "_1SA7sXKMgETCa_JaP3B6C4",
-          PercentageLabel: "_1c_OSzoiESQi8VycwjySgq",
-          Color: "_2dH3sotPVHLbsosd0aSRFe",
-          PercentageDescriptionLabel: "-_6lWC6tfX-A_YFsFXfOv",
-          UsedActive: "_3or6GTplqe7LbAyXhO8n4E",
-          OldActive: "_19DsdrAsV7SPTJTtHyxbx9",
-          AllGamesBGImage: "_2OdQZo0IGLXzoR4AUydRp3",
-          SeeRewindButton: "_1V87Pd_xyPBUjoW6T3yIYp",
-          MMFrame: "_1rm7lp0POJnMfv_wJCmj51",
-          MMOverride: "_3dXsGCw_Hqvycqp0ierI13",
-          Header: "_2Mb9gJJAqkyW-uwgteM7bR",
-          YearSubtitle: "_2JtAZbKQCRYsuq8Grhj9D_",
-          ReplayLogo: "mpZwdryoa_9MxYXp1Qr8Q",
-          ReplayLogoAccent: "_3TL2UyEq_QwjQ1KvR0c_LW",
-          Hashtag: "_2vAhvd0pJ4Bjao8aEg0lk0",
-          Avatar: "_1zOzJvJn7vryT-8zfXh6h4",
-          DataBlock: "_3AqjU369Dul6eM24tTW4Ro",
-          PersonaName: "_3C6Kgz1wyud6uRK9iRRtnZ",
-          ViewPageButton: "g4FuYY6kNOhx6ps41n66o",
-          Description: "_3ZFqletUdCzkvW-BpBfk0",
-          OtherYearLink: "_3_I-YXo6WE2pSgpSqOe90G",
-          BackgroundAnimation: "pim2eKmSTb2NQIYFR8-kO",
-          "ItemFocusAnim-darkerGrey-nocolor": "_34ksdmLRP6M-DL55A02DbT",
-          "ItemFocusAnim-darkerGrey": "_1rk5lOTR37WlC5N5CRPD_3",
-          "ItemFocusAnim-darkGreySettings": "_3fTyTKz8tIlcCsQ-iKdny7",
-          "ItemFocusAnim-darkGrey": "_1hxhmw8W2ifnYr2qLY4uPy",
-          "ItemFocusAnim-grey": "_3O7xVUyXHUO3jznnaVQkCj",
-          "ItemFocusAnim-translucent-white-10": "_3cPKti68OjsijubFhK8nJh",
-          "ItemFocusAnim-translucent-white-20": "_2WYaf97De-ZJ0mFANrqtDV",
-          "ItemFocusAnimBorder-darkGrey": "_2WH9L3RX3P6NaqBc2WQPlc",
-          "ItemFocusAnim-green": "_3YKGX14tVZ6u6O9dDCD9Sb",
-          focusAnimation: "_16qKuIfVUjk7_3Q-w67mSd",
-          hoverAnimation: "_2uOutcDfkb2CPTKk4_5i7l",
         };
       },
       chunkid: (module) => {

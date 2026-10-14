@@ -7423,6 +7423,11 @@ message StoreItem_ExtraDetails {
 	optional bool points_shop_eligible = 24;
 	optional .StoreItem_ExtraDetails_Metacritic metacritic = 26;
 	optional .StoreItem_ExtraDetails_CastAndCrew cast_and_crew = 27;
+	optional .StoreItem_ExtraDetails_SystemRequirements system_requirements = 28;
+	optional uint32 running_time_minutes = 29;
+	optional .StoreItem_ExtraDetails_Episode episode = 30;
+	repeated .StoreItem_ExtraDetails_Season seasons = 31;
+	optional int32 video_extras_note = 32 [(.description) = "enum"];
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7459,6 +7464,13 @@ message StoreItem_ExtraDetails_EarlyAccess {
 	optional string pricing_bbcode = 5;
 	optional string community_bbcode = 6;
 	optional string description_bbcode = 7;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_Episode {
+	optional string number = 1;
+	optional int32 type = 2 [(.description) = "enum"];
+	optional bool hide_details = 3;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7501,6 +7513,51 @@ message StoreItem_ExtraDetails_PressReview {
 	optional string score = 2;
 	optional string site = 3;
 	optional string url = 4;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_Season {
+	optional int32 index = 1;
+	optional string name = 2;
+	repeated uint32 episode_appids = 3;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_SystemRequirements {
+	repeated .StoreItem_ExtraDetails_SystemRequirements_PlatformRequirements platforms = 1;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_SystemRequirements_PlatformRequirements {
+	optional int32 platform = 1 [(.description) = "enum"];
+	optional .StoreItem_ExtraDetails_SystemRequirements_Requirements minimum = 2;
+	optional .StoreItem_ExtraDetails_SystemRequirements_Requirements recommended = 3;
+	optional bool requires_64bit = 4;
+	optional bool requires_apple_silicon = 5;
+	optional int32 unsupported_os_note = 6 [(.description) = "enum"];
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_SystemRequirements_Requirements {
+	optional string os_version = 1;
+	optional bool os_version_unsupported = 2;
+	optional string processor = 3;
+	optional .StoreItem_ExtraDetails_SystemRequirements_Size memory = 4;
+	optional string graphics = 5;
+	optional string directx = 6;
+	optional bool broadband = 7;
+	optional .StoreItem_ExtraDetails_SystemRequirements_Size storage = 8;
+	optional .StoreItem_ExtraDetails_SystemRequirements_Size storage_hq = 9;
+	optional string sound_card = 10;
+	optional string vr_support = 11;
+	optional string notes = 12;
+	optional string legacy_bbcode = 13;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_SystemRequirements_Size {
+	optional string amount = 1;
+	optional string units = 2;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

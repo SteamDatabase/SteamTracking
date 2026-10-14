@@ -208,7 +208,7 @@
     "ReviewScore_TooltipYourLanguages": "A te nyelved (%3$s) %2$s felhasználói értékeléséből %1$s% pozitív.",
     "ReviewScore_TooltipLanguage": "%3$s – E nyelv %2$s felhasználói értékelésből %1$s% pozitív.",
     "ReviewLanguageScores_Title": "Felhasználói értékelések – Nyelvi bontás",
-    "ReviewLanguageScores_Desc": "A(z) %1$s játéknak elegendő értékelése van, hogy a Steam nyelvspecifikus értékelési pontszámokat számoljon ki. Alapesetben a nyelvspecifikus értékelési pontszám jelenik az adott nyelvet elsődlegesként beállító felhasználóknak.",
+    "ReviewLanguageScores_Desc": "A(z) %1$s játéknak elegendő értékelése van, hogy a Steam nyelvspecifikus értékelési pontszámokat számoljon ki. Alapesetben a nyelvspecifikus értékelési pontszám jelenik meg az adott nyelvet elsődlegesként beállító felhasználóknak.",
     "ReviewLanguageScores_DescEdit": "Beállításaid módosítása: <1>Értékelési pontszám beállításai</1>. További információk: <2>A felhasználói értékelésekről</2>.",
     "ReviewLanguageScores_YourLanguagesScore": "A nyelveid értékelési pontszáma",
     "ReviewLanguageScores_YourLanguageScore": "%1$s értékelési pontszám",

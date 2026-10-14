@@ -3003,7 +3003,13 @@
                   ReminderSet: _,
                   RemindMeWidget: !0,
                 }),
+                role: "button",
+                tabIndex: 0,
+                "aria-expanded": _,
                 onClick: _,
+                onKeyDown: (_) => {
+                  (_.key === "Enter" || _.key === " ") && _(_);
+                },
                 ref: _,
                 children: [
                   _ &&
@@ -3107,7 +3113,13 @@ ${_}`;
                   _ ? _.IconMode : _.TextMode,
                   "RemindMeWidget",
                 ),
+                role: "button",
+                tabIndex: 0,
                 onClick: _,
+                onKeyDown: (_) => {
+                  (_.key === "Enter" || _.key === " ") &&
+                    (_.preventDefault(), _());
+                },
                 children: [
                   _(_) &&
                     (0, _.jsx)("div", {
@@ -3184,6 +3196,7 @@ ${_}`;
                             href: _._.STORE_BASE_URL + "account/",
                             target: _._.IN_CLIENT ? void 0 : "_blank",
                             onClick: () => _?.("email-unverified"),
+                            rel: "noreferrer",
                             children: (0, _._)(
                               "#EventReminder_NotifyByEmail_Missing_Add",
                             ),
@@ -3218,6 +3231,7 @@ ${_}`;
                             href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
                             target: _._.IN_CLIENT ? void 0 : "_blank",
                             onClick: () => _?.("push-missing"),
+                            rel: "noreferrer",
                             children: (0, _._)(
                               "#EventReminder_NotifyByMobile_Install",
                             ),
@@ -3249,6 +3263,7 @@ ${_}`;
                             target: _._.IN_CLIENT ? void 0 : "_blank",
                             href: _(),
                             onClick: () => _?.("calendar-google"),
+                            rel: "noreferrer",
                             children: (0, _._)(
                               "#EventDisplay_Reminder_GoogleCalendar_Short",
                             ),
@@ -9876,6 +9891,7 @@ ${_}`;
               _,
               {
                 ePrivilege: 3,
+                rgBrowserAPISites: ["store", "community"],
               },
             );
           }
@@ -9887,6 +9903,7 @@ ${_}`;
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["store", "community"],
               },
             );
           }
@@ -9898,6 +9915,7 @@ ${_}`;
               _,
               {
                 ePrivilege: 3,
+                rgBrowserAPISites: ["store", "community"],
               },
             );
           }
@@ -9909,6 +9927,7 @@ ${_}`;
               _,
               {
                 ePrivilege: 3,
+                rgBrowserAPISites: ["store", "community"],
               },
             );
           }
@@ -10744,6 +10763,7 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         async function _(_, _) {
           const { rgDefIDs: _, strCategory: _, itemClass: _ } = _,
@@ -10760,9 +10780,11 @@ ${_}`;
         }
         let _;
         function _() {
-          return (
-            _ || (_ = new _._(_._.WEBAPI_BASE_URL)), _.GetServiceTransport()
-          );
+          const _ = (0, _._)();
+          return _
+            ? _.GetAnonymousServiceTransport()
+            : (_ || (_ = new _._(_._.WEBAPI_BASE_URL)),
+              _.GetServiceTransport());
         }
         async function _(_) {
           return _(_(), _);
@@ -10840,6 +10862,7 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         async function _(_, _) {
           const _ = await _._.GetCommunityInventory(_, {
@@ -10856,6 +10879,8 @@ ${_}`;
         }
         let _;
         function _() {
+          const _ = (0, _._)();
+          if (_) return _.GetServiceTransport();
           if (!_) {
             const _ = (0, _._)("read_inventory_token", "application_config");
             _ = _ ? new _._(_._.WEBAPI_BASE_URL, _) : (0, _._)();
@@ -11139,6 +11164,7 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = {
           bCanClaimNewItem: !1,
@@ -11222,6 +11248,8 @@ ${_}`;
         }
         let _;
         function _() {
+          const _ = (0, _._)();
+          if (_) return _.GetServiceTransport();
           if (!_) {
             const _ = (0, _._)("loyalty_webapi_token", "application_config");
             _ = _ ? new _._(_._.WEBAPI_BASE_URL, _) : (0, _._)();
@@ -17915,13 +17943,20 @@ ${_}`;
           return /\[userpolls\b/i.test(_);
         }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { dynamicImport: _, fallback: _, ..._ } = _,
             [_] = (0, _.useState)(() =>
-              _.lazy(async () => ({
-                default: await _(),
-              })),
+              _.lazy(async () => {
+                const _ = await _();
+                return (
+                  await (0, _._)(),
+                  {
+                    default: _,
+                  }
+                );
+              }),
             );
           return (0, _.jsx)(_._, {
             fallback: _,
@@ -18938,10 +18973,12 @@ ${_}`;
                   (0, _.jsx)("img", {
                     src: _,
                     className: (0, _._)(_.Banner, _.Big),
+                    alt: _.GetNameWithFallback(_),
                   }),
                   (0, _.jsx)("img", {
                     src: _,
                     className: (0, _._)(_.Banner, _.Mobile),
+                    alt: _.GetNameWithFallback(_),
                   }),
                 ],
               });

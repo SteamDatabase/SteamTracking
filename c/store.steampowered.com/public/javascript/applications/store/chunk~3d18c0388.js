@@ -1485,19 +1485,25 @@
             !_)
           )
             return null;
+          _.use(_._.Ready());
           let _ = {};
-          return (
-            _ && (_.backgroundImage = `url('${_}')`),
-            (0, _.jsx)("div", {
-              style: _,
-              className: _().UserInputNeeded,
-              onClick: _,
-              children: (0, _.jsx)("div", {
-                className: (0, _._)(_().UserInputGlass, _ && _().Animate),
-                children: (0, _.jsx)(_._, {}),
-              }),
-            })
-          );
+          _ && (_.backgroundImage = `url('${_}')`);
+          let _ = (_) => {
+            (_.key === "Enter" || _.key === " ") && (_.preventDefault(), _());
+          };
+          return (0, _.jsx)("div", {
+            style: _,
+            className: _().UserInputNeeded,
+            role: "button",
+            tabIndex: 0,
+            "aria-label": _._.Localize("#TrailerPlayer_Play_Tooltip"),
+            onClick: _,
+            onKeyDown: _,
+            children: (0, _.jsx)("div", {
+              className: (0, _._)(_().UserInputGlass, _ && _().Animate),
+              children: (0, _.jsx)(_._, {}),
+            }),
+          });
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -1943,6 +1949,7 @@
               ref: _,
               style: _,
               className: _,
+              role: "menu",
               children: _,
             });
           return _.createPortal(_, _.current);
@@ -1950,6 +1957,7 @@
         function _(_) {
           return (0, _.jsx)("div", {
             className: _().Separator,
+            role: "separator",
           });
         }
         function _(_) {
@@ -1962,7 +1970,14 @@
             _ && ((_ = "#eeeeee"), (_ = "#ffffff")),
             (0, _.jsxs)("div", {
               className: _,
+              role: "menuitemcheckbox",
+              "aria-checked": _,
+              tabIndex: 0,
               onClick: _,
+              onKeyDown: (_) => {
+                (_.key === "Enter" || _.key === " ") &&
+                  (_.preventDefault(), _());
+              },
               ..._,
               children: [
                 _,
@@ -2223,8 +2238,9 @@
           );
         }
         function _(_) {
-          let { player: _, showHoverThumb: _, onTouchSeek: _ } = _,
-            _ = (0, _.useRef)(null),
+          let { player: _, showHoverThumb: _, onTouchSeek: _ } = _;
+          _.use(_._.Ready());
+          let _ = (0, _.useRef)(null),
             [_, _, _] = (0, _._)(_),
             [_, _] = _(_, _),
             _ = _();
@@ -2243,12 +2259,26 @@
             _ = {
               width: `${_.toFixed(1)}%`,
             },
+            _ = (_) => {
+              _.key === "Home"
+                ? (_.preventDefault(), _.Seek(0))
+                : _.key === "End" &&
+                  (_.preventDefault(), _.Seek(_.GetTimelineDuration()));
+            },
             _ = (0, _._)(_().Timeline, _ && _().Hovered);
           return (0, _.jsxs)("div", {
             ref: _,
             className: _,
             "data-keepcontrols": !!_,
+            role: "slider",
+            tabIndex: 0,
+            "aria-label": _._.Localize("#TrailerPlayer_Seek_Label"),
+            "aria-valuemin": 0,
+            "aria-valuemax": Math.round(_),
+            "aria-valuenow": Math.round(_),
+            "aria-valuetext": `${(0, _._)(_, !1)} / ${(0, _._)(_, !1)}`,
             onClick: _,
+            onKeyDown: _,
             onPointerMove: _.onPointerMove,
             onPointerLeave: _.onPointerLeave,
             onPointerDown: _.onPointerDown,

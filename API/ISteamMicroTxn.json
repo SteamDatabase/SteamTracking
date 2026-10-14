@@ -392,6 +392,12 @@
                     "description": "ip address of user in string format (xxx.xxx.xxx.xxx). Only required if usersession=web"
                 },
                 {
+                    "name": "allowzerototal",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Pass this (any value) to allow a transaction where every item amount is 0. The app must also be enabled for zero-cost transactions."
+                },
+                {
                     "name": "itemid[0]",
                     "type": "uint32",
                     "optional": false,
@@ -549,6 +555,12 @@
                     "description": "ip address of user in string format (xxx.xxx.xxx.xxx). Only required if usersession=web"
                 },
                 {
+                    "name": "allowzerototal",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Pass this (any value) to allow a transaction where every item amount is 0. The app must also be enabled for zero-cost transactions."
+                },
+                {
                     "name": "itemid[0]",
                     "type": "uint32",
                     "optional": false,
@@ -704,6 +716,12 @@
                     "type": "string",
                     "optional": true,
                     "description": "ip address of user in string format (xxx.xxx.xxx.xxx). Only required if usersession=web"
+                },
+                {
+                    "name": "allowzerototal",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Pass this (any value) to allow a transaction where every item amount is 0. The app must also be enabled for zero-cost transactions."
                 },
                 {
                     "name": "itemid[0]",

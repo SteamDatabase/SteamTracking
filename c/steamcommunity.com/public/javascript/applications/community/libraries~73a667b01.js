@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [42695],
+    [2695],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         var _ = __webpack_require__("chunkid"),

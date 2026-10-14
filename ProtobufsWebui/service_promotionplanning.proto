@@ -354,7 +354,7 @@ service PromotionPlanning {
 	rpc GetAllPlansForApps (.CPromotionPlanning_GetAllPlansForApps_Request) returns (.CPromotionPlanning_GetAllPlansForApps_Response);
 	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetPlan (.CPromotionPlanning_GetPlan_Request) returns (.CPromotionPlanning_GetPlan_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetPlanByAssociationID (.CPromotionPlanning_GetPlanByAssociationID_Request) returns (.CPromotionPlanning_GetPlanByAssociationID_Response);
 	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
 	rpc GetPlanByInputAccessKey (.CPromotionPlanning_GetPlanByInputAccessKey_Request) returns (.CPromotionPlanning_GetPlanByInputAccessKey_Response);

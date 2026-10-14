@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [49769],
+    [9769],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -791,6 +791,7 @@
               disabled: _,
               className: _,
               status: _,
+              color: _,
               ..._
             } = _,
             _ = _ === "underline" ? "none" : _;
@@ -799,6 +800,7 @@
               ..._,
               radius: _,
               "data-status": _,
+              "data-dull-color": _ && _ !== "dull" ? _ : void 0,
               className: _()(
                 _.ControlBox,
                 _ && !_ && _.Focusable,
@@ -1416,6 +1418,7 @@
               radius: _,
               size: _,
               status: _,
+              color: _,
               children: _,
               value: _,
               onValueChange: _,
@@ -1506,6 +1509,7 @@
                   _ !== null &&
                     (0, _.jsx)(_, {
                       radius: _,
+                      color: _,
                     }),
                 ],
               }),
@@ -1559,11 +1563,12 @@
         }
         (_.Item = _), (_.Root = _);
         function _(_) {
-          const { radius: _ } = _;
+          const { radius: _, color: _ } = _;
           return (0, _.jsx)(_._, {
             className: _.IndicatorPosition,
             children: (0, _.jsx)("div", {
               className: _.Indicator,
+              "data-accent-color": _,
             }),
           });
         }
@@ -1719,6 +1724,7 @@
               size: _,
               radius: _,
               status: _,
+              color: _,
               rgOptions: _,
               multiselect: _,
               onClear: _,
@@ -1765,6 +1771,7 @@
               size: _,
               radius: _,
               status: _,
+              color: _,
               hasValue: _,
               tabIndex: 0,
               cursor: "pointer",
@@ -2041,7 +2048,7 @@
               _.current && _.target !== _.current && _.current.focus();
             },
             _ = _ && _,
-            _ = _ ? _._ : "input",
+            _ = _ ? _ : "input",
             _ =
               _ && _ && !_
                 ? {
@@ -2066,6 +2073,12 @@
               ..._,
               ..._,
             }),
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)(_._, {
+            noFocusRing: !0,
+            ..._,
           });
         }
       },

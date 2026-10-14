@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [52959],
+    [2959],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -858,7 +858,7 @@
             );
           }
           async UpdateEventBlockFromCalendarEvent(_, _) {
-            const _ = _.appInfo ? _.appid : void 0,
+            const _ = _.appid || void 0,
               _ = _.clanInfo ? _.clanInfo.clanid : void 0;
             if (_ == null && _ == null) {
               (0, _._)(

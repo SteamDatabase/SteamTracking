@@ -5528,6 +5528,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5815,15 +5816,13 @@
           _ = __webpack_require__("chunkid");
         function _() {
           const _ = (0, _._)("promotion_operation_token", "application_config");
-          return (
-            (0, _._)(
-              _,
-              "GetPromotionWriteAccess: promotion operation token is missing",
-            ),
-            _
-              ? (0, _._)(new _._(_._.WEBAPI_BASE_URL, _)).GetServiceTransport()
-              : null
-          );
+          return _
+            ? (0, _._)(new _._(_._.WEBAPI_BASE_URL, _)).GetServiceTransport()
+            : ((0, _._)(
+                !1,
+                "GetPromotionWriteAccess: promotion operation token is missing",
+              ),
+              null);
         }
         function _(_, _) {
           const [_] = (0, _.useState)(() => _());

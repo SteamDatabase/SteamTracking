@@ -4735,6 +4735,11 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	color: #263645;
 }
 
+.tab_item.focus .prepurchase_tag {
+	color: #263645;
+	background: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='3 3 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23263645' fill-rule='evenodd' clip-rule='evenodd' d='M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33ZM20.2092 10.9908H14.8092V19.3092L21 25.5L24.8184 21.6816L20.2092 17.0724V10.9908Z'/%3E%3C/svg%3E") no-repeat 4px 4px #b5df20;
+}
+
 body.v6 .home_rightcol .tab_preview .tab_title {
 	font-family: "Motiva Sans", Sans-serif;
 	text-transform: none;
@@ -4811,8 +4816,7 @@ body.v6 .home_rightcol .tab_preview .tab_title {
 background: -webkit-linear-gradient( left, #c6e6f8 5%,#95bcd3 95%);
 	background: linear-gradient( to right, #c6e6f8 5%,#95bcd3 95%);
 	margin-right: -18px;
-	padding-right: 14px;
-}
+	padding-right: 18px; }
 
 .tab_item.focus .tab_item_name {
 	color: #10161b;

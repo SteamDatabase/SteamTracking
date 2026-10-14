@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [53256],
+    [3256],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -491,6 +491,7 @@
                 hidden: _,
                 bPartnerMemberOnlyChat: _,
                 bInvertLayout: _,
+                onSignIn: _,
               } = this.props,
               _ = this.m_chat ? this.m_chat.m_rgChatMessages : [],
               _ = _ ? _.reverse() : _,
@@ -517,6 +518,7 @@
                     oChat: this.m_chat,
                     emoticonStore: this.props.emoticonStore,
                     bPartnerMemberOnlyChat: _,
+                    onSignIn: _,
                   }),
                 (0, _.jsx)(_, {}),
                 (0, _.jsx)("div", {
@@ -535,6 +537,7 @@
                     oChat: this.m_chat,
                     emoticonStore: this.props.emoticonStore,
                     bPartnerMemberOnlyChat: _,
+                    onSignIn: _,
                   }),
               ],
             });
@@ -548,7 +551,12 @@
           (_ = _([_._], _));
         function _(_) {
           var _, _, _;
-          const { oChat: _, emoticonStore: _, bPartnerMemberOnlyChat: _ } = _;
+          const {
+            oChat: _,
+            emoticonStore: _,
+            bPartnerMemberOnlyChat: _,
+            onSignIn: _,
+          } = _;
           return _ &&
             (!((_ = _._) != null && _.logged_in) ||
               !((_ = _._) != null && _.is_partner_member))
@@ -558,7 +566,11 @@
                   oChat: _,
                   emoticonStore: _,
                 })
-              : null;
+              : _
+                ? (0, _.jsx)(_, {
+                    onSignIn: _,
+                  })
+                : null;
         }
         function _(_) {
           const { oChat: _, emoticonStore: _ } = _,
@@ -693,6 +705,16 @@
           }
         }
         function _(_) {
+          return (0, _.jsx)("div", {
+            className: _().Description,
+            children: (0, _.jsx)(_._, {
+              onClick: _.onSignIn,
+              className: (0, _._)(_().SignInButton),
+              children: (0, _._)("#BroadcastChat_Login"),
+            }),
+          });
+        }
+        function _(_) {
           return (0, _.jsxs)("div", {
             className: _().Description,
             children: [
@@ -701,6 +723,7 @@
                 children: (0, _._)("#Broadcast_PartnerChat_Login"),
               }),
               !_._.logged_in &&
+                !_._.IN_STEAMUI &&
                 (0, _.jsx)(_._, {
                   onClick: _._,
                   className: (0, _._)(_().SignInButton),
@@ -3491,6 +3514,8 @@
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -9399,6 +9424,7 @@
             return _.SendMsg("SteamTV.AddChatBan#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
+              rgBrowserAPISites: ["store", "community"],
             });
           }
           _.AddChatBan = _;
@@ -9418,6 +9444,7 @@
               {
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["store", "community"],
               },
             );
           }
@@ -9430,6 +9457,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 0,
+                rgBrowserAPISites: ["store", "community"],
               },
             );
           }
@@ -9453,6 +9481,7 @@
             return _.SendMsg("SteamTV.JoinChat#1", (0, _._)(_, _, _), _, {
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
+              rgBrowserAPISites: ["store", "community"],
             });
           }
           _.JoinChat = _;
@@ -9553,7 +9582,15 @@
           _ = 10,
           _ = class _ {
             constructor() {
-              _(this, "m_mapChats", new Map()), (0, _._)(this);
+              _(this, "m_mapChats", new Map()),
+                _(this, "m_cmInterface"),
+                (0, _._)(this);
+            }
+            SetCMInterface(_) {
+              this.m_cmInterface = _;
+            }
+            GetCMInterface() {
+              return this.m_cmInterface;
             }
             GetChat(_, _) {
               return this.m_mapChats.get(_) || this.m_mapChats.get(_);
@@ -9584,12 +9621,11 @@
               _(this, "m_nLastSleepMS", 0),
               _(this, "m_bReconnecting", !1),
               _(this, "m_strChatURL"),
-              _(this, "m_webApiToken"),
               _(this, "m_unInstanceID", Math.floor(Math.random() * 4294967296)),
               _(this, "m_strUserSteamID", ""),
               _(this, "m_regexUserEmoticons", null),
               _(this, "m_chatScheduledFunc", null),
-              _(this, "m_webAPIInterface", null),
+              _(this, "m_steamInterface", null),
               _(this, "m_textFilterStore", null),
               _(this, "m_bHasAddedWelcomeChat", !1),
               _(this, "m_mapMutedUsers", {}),
@@ -9601,10 +9637,7 @@
               _(this, "m_rgAnnouncements", []),
               _(this, "m_latestAnnouncement", null),
               (0, _._)(this),
-              (this.m_webAPIInterface = new _._(
-                _._.WEBAPI_BASE_URL,
-                _._.webapi_token,
-              ));
+              (this.m_steamInterface = this.CreateSteamInterface());
           }
           InitTextFilter() {
             this.m_textFilterStore = new _._({
@@ -9623,21 +9656,22 @@
           GetUserSteamID() {
             return this.m_strUserSteamID;
           }
+          CreateSteamInterface() {
+            var _;
+            const _ = (_ = (0, _._)()) != null ? _ : _.Get().GetCMInterface();
+            return (
+              _ || (0, _._)(new _._(_._.WEBAPI_BASE_URL, _._.webapi_token))
+            );
+          }
           StartForSteamID(_, _) {
-            (this.m_webAPIInterface = new _._(
-              _._.WEBAPI_BASE_URL,
-              _._.webapi_token,
-            )),
+            (this.m_steamInterface = this.CreateSteamInterface()),
               (this.m_ulBroadcastSteamID = _),
               (this.m_ulBroadcastID = _),
               this.InitTextFilter(),
               this.RequestChatInfo();
           }
           StartForChannel(_) {
-            (this.m_webAPIInterface = new _._(
-              _._.WEBAPI_BASE_URL,
-              _._.webapi_token,
-            )),
+            (this.m_steamInterface = this.CreateSteamInterface()),
               (this.m_ulBroadcastChannelID = _),
               (this.m_strUserSteamID = _._.steamid),
               this.InitTextFilter(),
@@ -9650,35 +9684,22 @@
             const _ = _.trim();
             if (_.length != 0)
               try {
-                let _, _, _;
-                if (this.m_webApiToken) {
-                  const _ = new FormData();
-                  _.append("chat_id", this.m_ulChatID),
-                    _.append("message", _),
-                    _.append("instance_id", this.m_unInstanceID.toString()),
-                    (_ = await _().post(
-                      `${_._.WEBAPI_BASE_URL}IBroadcastService/PostChatMessage/v0001?access_token=${this.m_webApiToken}`,
-                      _,
-                    )),
-                    (_ = _.data && _.data.response);
-                } else {
-                  const _ = _._.Init(_._);
-                  _.SetBodyFields({
-                    chat_id: this.m_ulChatID,
-                    message: _,
-                    instance_id: this.m_unInstanceID.toString(),
-                  }),
-                    (_ = await _._.PostChatMessage(
-                      this.m_webAPIInterface.GetServiceTransport(),
-                      _,
-                    )),
-                    (_ = {
-                      result: _.GetEResult(),
-                      cooldown_time_seconds: _.Body().cooldown_time_seconds(),
-                      in_game: _.Body().in_game(),
-                      persona_name: _.Body().persona_name(),
-                    });
-                }
+                const _ = _._.Init(_._);
+                _.SetBodyFields({
+                  chat_id: this.m_ulChatID,
+                  message: _,
+                  instance_id: this.m_unInstanceID.toString(),
+                });
+                const _ = await _._.PostChatMessage(
+                    this.m_steamInterface.GetServiceTransport(),
+                    _,
+                  ),
+                  _ = {
+                    result: _.GetEResult(),
+                    cooldown_time_seconds: _.Body().cooldown_time_seconds(),
+                    in_game: _.Body().in_game(),
+                    persona_name: _.Body().persona_name(),
+                  };
                 if (_ && _.result && _.result != _._) {
                   let _ = "";
                   _.result == _._
@@ -9727,6 +9748,7 @@
                   steamid: this.m_ulBroadcastSteamID,
                   broadcastid: this.m_ulBroadcastID,
                   sessionid: (0, _._)(),
+                  notoken: 1,
                 },
                 _ = await _().get(`${_._.CHAT_BASE_URL}broadcast/getchatinfo`, {
                   params: _,
@@ -9742,7 +9764,6 @@
                       _.flair_group_ids && _.flair_group_ids[0]),
                     _.blocked && console.log("User is blocked from chat"),
                     _.steamid && (this.m_strUserSteamID = _.steamid),
-                    _.token && (this.m_webApiToken = _.token),
                     _.emoticons && this.SetOwnedEmoticons(_.emoticons),
                     this.m_bHasAddedWelcomeChat ||
                       (this.m_rgChatMessages.push({
@@ -9774,7 +9795,7 @@
                 broadcast_channel_id: this.m_ulBroadcastChannelID,
               });
               let _ = await _.JoinChat(
-                this.m_webAPIInterface.GetServiceTransport(),
+                this.m_steamInterface.GetServiceTransport(),
                 _,
               );
               if (!_.Body().chat_id || !_.Body().view_url_template) {
@@ -9810,7 +9831,7 @@
             });
             const _ = (
                 await _.GetChatModerators(
-                  this.m_webAPIInterface.GetServiceTransport(),
+                  this.m_steamInterface.GetServiceTransport(),
                   _,
                 )
               )
@@ -10022,7 +10043,7 @@
                 undo: _,
               }),
                 await _.AddChatBan(
-                  this.m_webAPIInterface.GetServiceTransport(),
+                  this.m_steamInterface.GetServiceTransport(),
                   _,
                 );
             } else {
@@ -10054,27 +10075,16 @@
             if (!this.m_mapMutedUsers[_]) {
               this.m_mapMutedUsers[_] = _;
               try {
-                if (this.m_webApiToken) {
-                  const _ = new FormData();
-                  _.append("chat_id", this.m_ulChatID),
-                    _.append("user_steamid", _),
-                    _.append("muted", "1"),
-                    await _().post(
-                      `${_._.WEBAPI_BASE_URL}IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=${this.m_webApiToken}`,
-                      _,
-                    );
-                } else {
-                  const _ = _._.Init(_._);
-                  _.SetBodyFields({
-                    chat_id: this.m_ulChatID,
-                    user_steamid: _,
-                    muted: !0,
-                  }),
-                    await _._.MuteBroadcastChatUser(
-                      this.m_webAPIInterface.GetServiceTransport(),
-                      _,
-                    );
-                }
+                const _ = _._.Init(_._);
+                _.SetBodyFields({
+                  chat_id: this.m_ulChatID,
+                  user_steamid: _,
+                  muted: !0,
+                }),
+                  await _._.MuteBroadcastChatUser(
+                    this.m_steamInterface.GetServiceTransport(),
+                    _,
+                  );
               } catch {
                 _ &&
                   (this.m_rgChatMessages.push({
@@ -10107,36 +10117,25 @@
               this.m_ulBroadcastSteamID == this.m_strUserSteamID)
             )
               try {
-                if (this.m_webApiToken) {
-                  const _ = new FormData();
-                  _.append("chat_id", this.m_ulChatID),
-                    _.append("user_steamid", _),
-                    _.append("muted", "0"),
-                    await _().post(
-                      `${_._.WEBAPI_BASE_URL}IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=${this.m_webApiToken}`,
-                      _,
-                    );
-                } else {
-                  const _ = _._.Init(_._);
-                  _.SetBodyFields({
-                    chat_id: this.m_ulChatID,
-                    user_steamid: _,
-                    muted: !1,
-                  }),
-                    await _._.MuteBroadcastChatUser(
-                      this.m_webAPIInterface.GetServiceTransport(),
-                      _,
-                    );
-                }
-                this.m_rgChatMessages.push({
-                  type: _._.Notification,
-                  msg: (0, _._)("#BroadcastChat_UserUnmutedLocal", _),
-                  client_ts: Number(new Date()),
-                  instance_id: this.m_unInstanceID,
-                  in_game: !1,
-                  persona_name: "",
-                  steamid: "",
-                });
+                const _ = _._.Init(_._);
+                _.SetBodyFields({
+                  chat_id: this.m_ulChatID,
+                  user_steamid: _,
+                  muted: !1,
+                }),
+                  await _._.MuteBroadcastChatUser(
+                    this.m_steamInterface.GetServiceTransport(),
+                    _,
+                  ),
+                  this.m_rgChatMessages.push({
+                    type: _._.Notification,
+                    msg: (0, _._)("#BroadcastChat_UserUnmutedLocal", _),
+                    client_ts: Number(new Date()),
+                    instance_id: this.m_unInstanceID,
+                    in_game: !1,
+                    persona_name: "",
+                    steamid: "",
+                  });
               } catch {
                 this.m_rgChatMessages.push({
                   type: _._.Error,
@@ -10167,25 +10166,15 @@
           async RemoveUserMessagesServer(_, _) {
             if (_ != this.m_strUserSteamID)
               try {
-                if (this.m_webApiToken) {
-                  const _ = new FormData();
-                  _.append("chat_id", this.m_ulChatID),
-                    _.append("user_steamid", _),
-                    await _().post(
-                      `${_._.WEBAPI_BASE_URL}IBroadcastService/RemoveUserChatText/v0001/?access_token=${this.m_webApiToken}`,
-                      _,
-                    );
-                } else {
-                  const _ = _._.Init(_._);
-                  _.SetBodyFields({
-                    chat_id: this.m_ulChatID,
-                    user_steamid: _,
-                  }),
-                    await _._.RemoveUserChatText(
-                      this.m_webAPIInterface.GetServiceTransport(),
-                      _,
-                    );
-                }
+                const _ = _._.Init(_._);
+                _.SetBodyFields({
+                  chat_id: this.m_ulChatID,
+                  user_steamid: _,
+                }),
+                  await _._.RemoveUserChatText(
+                    this.m_steamInterface.GetServiceTransport(),
+                    _,
+                  );
               } catch {
                 this.m_rgChatMessages.push({
                   type: _._.Error,
@@ -10199,25 +10188,15 @@
               }
           }
           async UpdateChatMessageFlair(_) {
-            if (this.m_webApiToken) {
-              const _ = new FormData();
-              _.append("chat_id", this.m_ulChatID),
-                _.append("flair", `^${this.m_strFlairGroupID}^:${_}:`),
-                await _().post(
-                  `${_._.WEBAPI_BASE_URL}IBroadcastService/UpdateChatMessageFlair/v0001/?access_token=${this.m_webApiToken}`,
-                  _,
-                );
-            } else {
-              const _ = _._.Init(_._);
-              _.SetBodyFields({
-                chat_id: this.m_ulChatID,
-                flair: `^${this.m_strFlairGroupID}^:${_}:`,
-              }),
-                await _._.UpdateChatMessageFlair(
-                  this.m_webAPIInterface.GetServiceTransport(),
-                  _,
-                );
-            }
+            const _ = _._.Init(_._);
+            _.SetBodyFields({
+              chat_id: this.m_ulChatID,
+              flair: `^${this.m_strFlairGroupID}^:${_}:`,
+            }),
+              await _._.UpdateChatMessageFlair(
+                this.m_steamInterface.GetServiceTransport(),
+                _,
+              );
           }
           IsUserMutedLocally(_) {
             return !!this.m_mapMutedUsers[_];
@@ -10514,6 +10493,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           return (0, _.jsx)(_._, {
@@ -10562,7 +10542,9 @@
         function _(_) {
           const { redirectURL: _, guestOption: _ } = _,
             [_] = (0, _.useState)(
-              new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+              new _._(
+                new _._(_._.WEBAPI_BASE_URL),
+              ).GetAnonymousServiceTransport(),
             ),
             [_, _] = (0, _.useState)(!1),
             _ = (_) => {

@@ -1164,7 +1164,7 @@
         I([h.sH], M.prototype, "m_appidList", 2),
           I([h.sH], M.prototype, "m_nFollowers", 2),
           I([h.sH], M.prototype, "m_clanAccountFlags", 2);
-        var c = T(13018),
+        var c = T(77008),
           a = T(60298),
           w = T(76559),
           f = T(77291),

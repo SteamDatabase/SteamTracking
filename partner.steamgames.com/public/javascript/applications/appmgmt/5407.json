@@ -61,7 +61,6 @@
     "Reservation_Waitlist_NotSignedIn_Desc": "待機リストに参加するには、Steamにサインインしてください。「OK」を選択すると、サインインページに移動します。",
     "Reservation_OnRegularReserveForModel": "あなたは%1$sの予約キューに参加しています",
     "Reservation_PostShuffle_TAndC": "<1>利用規約</1>が適用されます。",
-    "machine_dummy": "dummy",
     "PriceDisplay_YourPrice": "価格：",
     "PriceGrid_NormalPrice": "通常",
     "PriceGrid_RecentPrice": "過去30日間の最安値",

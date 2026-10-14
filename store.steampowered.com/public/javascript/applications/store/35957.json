@@ -34,6 +34,8 @@
     "Achievements_Filter_LockedAchievements": "Pencapaian Dikunci",
     "Achievements_Filter_AllSets": "Semua Set (%1$s)",
     "Achievements_Filter_DLCTag": "DLC",
+    "Achievements_Filter_Label": "Penapis",
+    "Achievements_Filter_LabelWithSelection": "Penapis: %1$s",
     "Achievements_Set_BaseGame": "Permainan Asas",
     "Achievements_Set_DLCLabel": "DLC:",
     "Achievements_Set_DeveloperOnly": "Pembangun sahaja",
@@ -48,5 +50,13 @@
     "Achievements_Table_HiddenTitle": "PENCAPAIAN TERSEMBUNYI (%1$s)",
     "Achievements_Table_HiddenByFilterCount": "%1$s pencapaian disembunyikan oleh penapis",
     "Achievements_Table_HiddenByFilterCount_Plural": "%1$s pencapaian disembunyikan oleh penapis",
+    "Achievements_Row_UnlockedOnDate": "Dibuka pada %1$s",
+    "Achievements_Row_UnlockedNoDate": "Buka",
+    "Achievements_Row_ProgressCount": "%1$s / %2$s",
+    "Achievements_Progress_SetUnlockedCountCallout": "%1$s/%2$s dibuka",
+    "Achievements_Progress_SetCompleteCountCallout": "%1$s/%2$s pencapaian dibuka",
+    "Achievements_Compare_PlaytimePlayed": "%1$s telah bermain",
+    "Achievements_Compare_FriendPickerFilterPlaceholder": "Penapis...",
+    "Achievements_Compare_SelectedFriendCount_Plural": "%1$s Rakan",
     "dummy": "palsu"
 }

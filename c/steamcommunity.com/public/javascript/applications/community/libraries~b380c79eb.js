@@ -1,7 +1,7 @@
 "use strict";
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [88415],
+    [8415],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         __webpack_require__._(module_exports, {

@@ -2,7 +2,7 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [52959],
+    [2959],
     {
       49789: (Z, W, r) => {
         "use strict";
@@ -148,7 +148,7 @@
           l = r(27066),
           A = r(18210),
           I = r(3166),
-          u = r(6469),
+          u = r(19619),
           S = r(81673),
           K = ((o) => (
             (o.Default = "default"),
@@ -845,7 +845,7 @@
             );
           }
           async UpdateEventBlockFromCalendarEvent(e, t) {
-            const n = e.appInfo ? e.appid : void 0,
+            const n = e.appid || void 0,
               i = e.clanInfo ? e.clanInfo.clanid : void 0;
             if (n == null && i == null) {
               (0, v.wT)(

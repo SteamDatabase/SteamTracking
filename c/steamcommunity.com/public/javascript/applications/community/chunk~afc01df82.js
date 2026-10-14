@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [49281],
+    [9281],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -94,7 +94,8 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid");
         function _(_) {
           const _ = (0, _.useRef)(null);
           (0, _.useEffect)(() => {
@@ -108,22 +109,27 @@
               }
             );
           }, []);
+          let _ = "";
+          typeof _.imageTitle == "string" && (_ = _.imageTitle);
           const _ =
               typeof _.prevSrc == "string"
                 ? (0, _.jsx)("img", {
                     src: _.prevSrc,
+                    alt: "",
                   })
                 : _.prevSrc,
             _ =
               typeof _.mainSrc == "string"
                 ? (0, _.jsx)("img", {
                     src: _.mainSrc,
+                    alt: _,
                   })
                 : _.mainSrc,
             _ =
               typeof _.nextSrc == "string"
                 ? (0, _.jsx)("img", {
                     src: _.nextSrc,
+                    alt: "",
                   })
                 : _.nextSrc,
             _ = [
@@ -153,7 +159,7 @@
                   _().LightboxImageContainer,
                   _().LightboxMainImage,
                 ),
-                tabIndex: 0,
+                role: "presentation",
                 onClick: (_) => {
                   _.target.nodeName !== "IMG" && _.onCloseRequest(_);
                 },
@@ -181,6 +187,7 @@
                       (0, _.jsx)("button", {
                         className: _().LightboxCloseButton,
                         onClick: _.onCloseRequest,
+                        "aria-label": _._.Localize("#Button_Close"),
                       }),
                     ],
                   }),
@@ -190,11 +197,13 @@
                 (0, _.jsx)("button", {
                   className: _().LightboxLeftButton,
                   onClick: _.onMovePrevRequest,
+                  "aria-label": _._.Localize("#Carousel_Prev"),
                 }),
               _.nextSrc &&
                 (0, _.jsx)("button", {
                   className: _().LightboxRightButton,
                   onClick: _.onMoveNextRequest,
+                  "aria-label": _._.Localize("#Carousel_Next"),
                 }),
             ],
           });
@@ -4085,7 +4094,11 @@
           static ReadFile(_) {
             return new Promise((_, _) => {
               const _ = new FileReader();
-              (_.onload = (_) => _(_.result)), _.readAsText(_);
+              (_.onload = () => {
+                var _;
+                return _((_ = _.result) != null ? _ : "");
+              }),
+                _.readAsText(_);
             });
           }
           static WriteFile(_, _) {

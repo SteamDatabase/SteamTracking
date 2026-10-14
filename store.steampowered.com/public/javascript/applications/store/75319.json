@@ -4174,7 +4174,7 @@
     "GamePerformanceStats_AverageFrameRate_Device": "%1$s oyununun %2$s için ortalama kare hızının %3$s olduğu bildirilmiştir.",
     "GamePerformanceStats_AverageFrameRate_ThisGame_Device": "Bu oyunun %1$s için ortalama kare hızının %2$s olduğu bildirilmiştir.",
     "GamePerformanceStats_FPS": "%1$s FPS",
-    "GamePerformanceStats_FrameRateDataBasedOn": "Bu veriler, kare hızı verilerini göndermeyi kabul etmiş %2$s müşterileri tarafından son %1$s gün içinde gönderilen kare hızı raporlarına dayanmaktadır.",
+    "GamePerformanceStats_FrameRateDataBasedOn": "Bu veriler, kare hızı verilerini göndermeyi kabul etmiş %2$s müşterileri tarafından %1$s gün boyunca gönderilen kare hızı raporlarına dayanmaktadır.",
     "GamePerformanceStats_FrameRateDataBasedOnHidden": "Bu veriler, kare hızı verilerini göndermeyi kabul etmiş %1$s müşterileri tarafından gönderilen kare hızı raporlarına dayanmaktadır.",
     "GamePerformanceStats_FrameRateMoreInfo": "Not: Varyans verilerini şu anda sağlamıyoruz ancak beta süreci içerisinde bunu eklemeyi planlıyoruz. Varyans verileri sayesinde kare hızınızın kararlı mı olduğunu yoksa çok mu dalgalandığını görebileceksiniz.",
     "GamePerformance_Reason": "Sebep",

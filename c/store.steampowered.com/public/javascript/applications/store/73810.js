@@ -3631,6 +3631,7 @@
                 bConstMethod: !0,
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
               },
             );
           }
@@ -3643,6 +3644,7 @@
               {
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
               },
             );
           }
@@ -3655,6 +3657,7 @@
               {
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
               },
             );
           }
@@ -3667,6 +3670,7 @@
               {
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
               },
             );
           }
@@ -3722,6 +3726,7 @@
               {
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
               },
             );
           }

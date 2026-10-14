@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [51220],
+    [1220],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -11446,7 +11446,7 @@
                     (0, _.jsx)(_._, {}),
                     (0, _.jsx)(_._, {
                       onClick: () => _(!_),
-                      tooltip: "#FormattingToolbar_ExpandOptions",
+                      tooltip: (0, _._)("#FormattingToolbar_ExpandOptions"),
                       children: (0, _.jsx)(_.cLJ, {
                         direction: _ ? "up" : "down",
                       }),
@@ -11732,7 +11732,7 @@
                   deletePending: _,
                 }),
               (0, _.jsx)(_._, {
-                toolTipContent: "#UserGameNotes_DeleteNote",
+                toolTipContent: (0, _._)("#UserGameNotes_DeleteNote"),
                 direction: "top",
                 children: (0, _.jsx)(_._, {
                   onClick: _,
@@ -11901,7 +11901,7 @@
               _ && _(_, void 0, !0);
             }, [_, _, _]);
           const _ = (0, _.jsx)(_._, {
-            toolTipContent: "#UserGameNotes_NewNote",
+            toolTipContent: (0, _._)("#UserGameNotes_NewNote"),
             direction: "top",
             children: (0, _.jsx)(_._, {
               className: _.NewNoteButton,

@@ -61,7 +61,6 @@
     "Reservation_Waitlist_NotSignedIn_Desc": "Melden Sie sich an, um sich in die Warteliste einzutragen. Mit einem Klick auf „OK“ werden Sie zur Anmeldeseite weitergeleitet.",
     "Reservation_OnRegularReserveForModel": "Sie befinden sich in der Reservierungswarteschlange für: %1$s",
     "Reservation_PostShuffle_TAndC": "Es gelten die <1>Allgemeinen Geschäftsbedingungen</1>.",
-    "machine_dummy": "dummy",
     "PriceDisplay_YourPrice": "Ihr Preis:",
     "PriceGrid_NormalPrice": "STANDARD",
     "PriceGrid_RecentPrice": "30-TAGE-TIEF",

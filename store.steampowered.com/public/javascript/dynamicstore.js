@@ -1313,6 +1313,7 @@ GDynamicStore = {
 				$BundleContentsCtn.addClass( 'collapsed' );
 
 			var $BundleContentsPosition = $J('<div/>', {'class': 'bundle_contents_preview_position'} );
+			var rgPrePurchaseLinks = [];
 			for ( var i = 0; i < rgItemsWithCaps.length; i++ )
 			{
 				var rgLinkParams = { 'class': 'bundle_contents_preview_item ds_collapse_flag', 'data-panel': '{"focusable":false}' }
@@ -1326,6 +1327,8 @@ GDynamicStore = {
 					$Link.addClass( 'floated' ).css( 'left', flPositionRight + '%' ).css('z-index', (rgItemsWithCaps.length - i));
 				}
 				$BundleContentsPosition.append( $Link.append( $Img ) );
+				if ( GStoreItemData.rgPackageData[ rgItemsWithCaps[i] ].prepurchase )
+					rgPrePurchaseLinks.push( $Link );
 
 
 				GStoreItemData.BindHoverEvents( $Img.parent(), Item.appids.length == 1 ? Item.appids[0] : null, rgItemsWithCaps[i] );
@@ -1333,6 +1336,13 @@ GDynamicStore = {
 
 			$Description.append( $BundleContentsCtn.append($BundleContentsPosition) );
 			GDynamicStore.DecorateDynamicItems( $BundleContentsCtn );
+
+			// these capsules have no price to put a pre-purchase tag beside, so flag them like owned/in cart, unless they already are
+			for ( var iLink = 0; iLink < rgPrePurchaseLinks.length; iLink++ )
+			{
+				if ( !rgPrePurchaseLinks[iLink].hasClass( 'ds_flagged' ) )
+					rgPrePurchaseLinks[iLink].addClass( 'ds_flagged ds_prepurchase' ).append( '<div class="ds_flag ds_prepurchase_flag">Pre-Purchase&nbsp;&nbsp;</div>' );
+			}
 		}
 	},
 

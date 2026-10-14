@@ -124,23 +124,6 @@ a:hover {
 	padding-left:17px;
 }
 
-.customBrowseBG.appCustomBGSaxxyAwards
-{
-	height: 342px;
-}
-
-.browseAppDetails.appCustomBGSaxxyAwards
-{
-	height: 342px;
-}
-
-.appCustomBGSaxxyAwards .customBrowseDesc
-{
-	padding-top: 75px;
-	margin-right: 100px;
-	width: 512px;
-}
-
 .appid_373030 .customBrowseDesc, .appid_477220 .customBrowseDesc
 {
     margin-top: 80px;
@@ -3239,50 +3222,6 @@ input.searchText
 
 /* -----[ /modal stuff ] ----------- */
 
-.exception_letter
-{
-	background-color: #ffffff;
-	background-image: none;
-	color: #000000;
-	text-align: left;
-}
-
-.exception_letter_body
-{
-	padding-left: 100px;
-	padding-right: 100px;
-}
-
-.exception_letter a, .exception_letter a:hover, .exception_letter a:active, .exception_letter a:visited {
-	color: #0000ff;
-	text-decoration: underline;
-}
-
-.exception_letter .date
-{
-	margin-top: 25px;
-	margin-bottom: 25px;
-}
-
-.exception_letter .dear
-{
-	margin-bottom: 25px;
-}
-
-.exception_letter .text
-{
-	margin-bottom: 25px;
-}
-
-.exception_letter .closing
-{
-	margin-bottom: 25px;
-}
-
-.exception_letter .signature
-{
-}
-
 .rightSectionHolder select
 {
 	margin-left: 10px;
@@ -3766,45 +3705,6 @@ div.hover {
 }
 
 
-
-#ig_header {
-	margin-top: 15px;
-	position: relative;
-}
-
-#ig_header .blurb a:hover {
-	text-decoration: none;
-}
-
-#ig_header > div {
-	position: relative;
-	width: 949px;
-	margin: 0 auto 0 auto;
-
-}
-
-#ig_header .blurb {
-	position: absolute;
-	width: 408px;
-	height: 90px;
-	right: 10px;
-	top: 25px;
-	text-align: left;
-}
-
-#ig_header .blurb h1 {
-	color: #fff;
-	font-size: 24px;
-	font-weight: normal;
-	margin: 0px 0px 0px 0px;
-}
-
-#ig_header .blurb p {
-	color: #bdbdbd;
-	font-size: 14px;
-	font-weight: normal;
-	margin: 4px 0 4px 0;
-}
 
 #ig_bottom {
 	/*background: #262627 url('https://community.fastly.steamstatic.com/public/images/sharedfiles/ig/greenlight_content_background.png') top center no-repeat;*/
@@ -4708,23 +4608,6 @@ a.tooltip {
 .service_provider_row:hover .service_provider_url
 {
 	visibility: visible;
-}
-
-.workshop_callout_dota2_spring_2014_event
-{
-	color:#350f09;
-	height: 95px;
-	padding-top: 26px;
-	padding-right: 220px;
-	text-align: center;
-	letter-spacing: 6px;
-	line-height: 22px;
-	font-size: 16px;
-	font-family: 'Motiva Sans Bold', Arial, Tahoma;
-	text-transform: uppercase;
-	cursor: pointer;
-	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/dota2_spring_workshop_banner.jpg');
-	background-repeat:no-repeat;
 }
 
 a.workshop_announcement_title, h2.workshop_announcement_title

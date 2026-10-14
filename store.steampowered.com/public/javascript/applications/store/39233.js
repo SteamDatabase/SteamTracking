@@ -4,857 +4,855 @@
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
     [39233],
     {
-      63088: (Q, F, t) => {
+      63088: (G, F, t) => {
         "use strict";
-        t.d(F, { Z: () => v, t: () => x });
+        t.d(F, { Z: () => P, t: () => O });
         var e = t(35038),
-          y = t(29392),
-          l = t(36053),
-          M = t(68312),
+          W = t(29392),
+          c = t(36053),
+          D = t(68312),
           z = t(75233),
-          W = t(51614),
-          N = t(48366),
+          y = t(51614),
+          B = t(48366),
           T = t(9843),
-          I = t(78280),
-          P = t(83665),
-          j = t(20125);
-        async function a(D, o, d) {
-          if ((0, N.c2)(o)) {
-            const m = e.w.Init(y.tj);
-            m.Body().set_line_item_id(d);
-            const g = await y.t8.RemoveItemFromCart(D, m);
-            return (0, j.WZ)(), g.Body().toObject();
+          x = t(78280),
+          g = t(83665),
+          N = t(20125);
+        async function r(v, p, L) {
+          if ((0, B.c2)(p)) {
+            const l = e.w.Init(W.tj);
+            l.Body().set_line_item_id(L);
+            const E = await W.t8.RemoveItemFromCart(v, l);
+            return (0, N.WZ)(), E.Body().toObject();
           } else {
-            const m = e.w.Init(l.VJ);
-            m.Body().set_gidlineitems([d]), m.Body().set_gidshoppingcart(o.gid);
-            const g = await l.Q2.RemoveLineItems(D, m);
-            return (0, j.WZ)(), g.Body().toObject();
+            const l = e.w.Init(c.VJ);
+            l.Body().set_gidlineitems([L]), l.Body().set_gidshoppingcart(p.gid);
+            const E = await c.Q2.RemoveLineItems(v, l);
+            return (0, N.WZ)(), E.Body().toObject();
           }
         }
-        function x(D) {
-          const o = (0, M.KV)(),
-            d = (0, z.jE)(),
-            m = (0, I.j4)();
-          return (0, W.n)({
-            mutationFn: async () => await a(o, m, D),
-            onSuccess: (g) => {
-              "cart" in g ? (0, P.LN)(d, m, g.cart) : (0, P.Cd)(d, m);
+        function O(v) {
+          const p = (0, D.KV)(),
+            L = (0, z.jE)(),
+            l = (0, x.j4)();
+          return (0, y.n)({
+            mutationFn: async () => await r(p, l, v),
+            onSuccess: (E) => {
+              "cart" in E ? (0, g.LN)(L, l, E.cart) : (0, g.Cd)(L, l);
             },
           });
         }
-        async function L(D, o) {
-          if ((0, N.c2)(o)) {
-            const d = e.w.Init(y.HK);
-            return (await y.t8.DeleteCart(D, d)).BSuccess();
+        async function C(v, p) {
+          if ((0, B.c2)(p)) {
+            const L = e.w.Init(W.HK);
+            return (await W.t8.DeleteCart(v, L)).BSuccess();
           } else {
-            const d = await (0, T.d0)(D, o);
-            if (d && d.line_items && d.line_items.length) {
-              const m = e.w.Init(l.VJ);
+            const L = await (0, T.d0)(v, p);
+            if (L && L.line_items && L.line_items.length) {
+              const l = e.w.Init(c.VJ);
               return (
-                m
+                l
                   .Body()
                   .set_gidlineitems(
-                    d.line_items.map(({ line_item_id: E }) => E),
+                    L.line_items.map(({ line_item_id: d }) => d),
                   ),
-                m.Body().set_gidshoppingcart(o.gid),
-                (await l.Q2.RemoveLineItems(D, m)).BSuccess()
+                l.Body().set_gidshoppingcart(p.gid),
+                (await c.Q2.RemoveLineItems(v, l)).BSuccess()
               );
             }
             return !1;
           }
         }
-        function v() {
-          const D = (0, M.KV)(),
-            o = (0, z.jE)(),
-            d = (0, I.j4)();
-          return (0, W.n)({
-            mutationFn: async () => await L(D, d),
-            onSuccess: () => (0, P.Cd)(o, d),
+        function P() {
+          const v = (0, D.KV)(),
+            p = (0, z.jE)(),
+            L = (0, x.j4)();
+          return (0, y.n)({
+            mutationFn: async () => await C(v, L),
+            onSuccess: () => (0, g.Cd)(p, L),
           });
         }
       },
-      79485: (Q, F, t) => {
+      79485: (G, F, t) => {
         "use strict";
-        t.d(F, { C: () => x });
+        t.d(F, { C: () => O });
         var e = t(35038),
-          y = t(29392),
-          l = t(8173),
-          M = t(72609),
+          W = t(29392),
+          c = t(8173),
+          D = t(72609),
           z = t(68312),
-          W = t(75233),
-          N = t(51614),
+          y = t(75233),
+          B = t(51614),
           T = t(78280),
-          I = t(83665),
-          P = t(48366),
-          j = t(36053);
-        async function a(L, v, D, o, d, m) {
-          if ((0, P.c2)(v)) {
-            const g = e.w.Init(y.Bk);
-            g.Body().set_line_item_id(D),
-              g.Body().set_user_country(M.iA.country_code),
-              d && g.Body().set_gift_info(l.$z.fromObject(d)),
-              o && g.Body().set_flags(y.Eo.fromObject(o)),
-              m && g.Body().set_apply_gidcoupon(m);
-            const E = await y.t8.ModifyLineItem(L, g);
+          x = t(83665),
+          g = t(48366),
+          N = t(36053);
+        async function r(C, P, v, p, L, l) {
+          if ((0, g.c2)(P)) {
+            const E = e.w.Init(W.Bk);
+            E.Body().set_line_item_id(v),
+              E.Body().set_user_country(D.iA.country_code),
+              L && E.Body().set_gift_info(c.$z.fromObject(L)),
+              p && E.Body().set_flags(W.Eo.fromObject(p)),
+              l && E.Body().set_apply_gidcoupon(l);
+            const d = await W.t8.ModifyLineItem(C, E);
             return (
-              E.BSuccess() ||
-                console.warn(`Failed to update gift info: ${E.GetEResult()}`),
-              [E.GetEResult(), E.Body().toObject()]
+              d.BSuccess() ||
+                console.warn(`Failed to update gift info: ${d.GetEResult()}`),
+              [d.GetEResult(), d.Body().toObject()]
             );
           } else {
-            const g = e.w.Init(j.ic);
-            g.Body().set_gidlineitem(D),
-              g.Body().set_gidshoppingcart(v.gid),
-              d
-                ? g.Body().set_gift_info(l.$z.fromObject(d))
-                : o?.is_gift &&
-                  g
-                    .Body()
-                    .set_gift_info(
-                      l.$z.fromObject({
-                        accountid_giftee: 0,
-                        email_giftee: "",
-                      }),
-                    );
-            const E = await j.Q2.ModifyLineItem(L, g);
+            const E = e.w.Init(N.ic);
+            E.Body().set_gidlineitem(v),
+              E.Body().set_gidshoppingcart(P.gid),
+              L
+                ? E.Body().set_gift_info(c.$z.fromObject(L))
+                : p?.is_gift &&
+                  E.Body().set_gift_info(
+                    c.$z.fromObject({ accountid_giftee: 0, email_giftee: "" }),
+                  );
+            const d = await N.Q2.ModifyLineItem(C, E);
             return (
-              E.BSuccess() ||
+              d.BSuccess() ||
                 console.warn(
-                  `Failed to update gift info in anonymous cart: ${E.GetEResult()}`,
+                  `Failed to update gift info in anonymous cart: ${d.GetEResult()}`,
                 ),
-              E.Body().toObject()
+              d.Body().toObject()
             );
           }
         }
-        function x(L) {
-          const v = (0, T.j4)(),
-            D = (0, z.KV)(),
-            o = (0, W.jE)(),
-            d = (0, I.GO)(v);
-          return (0, N.n)({
-            mutationFn: (m) =>
-              a(D, v, m.lineItemID, m.lineItemFlags, m.giftInfo, m.gidCoupon),
-            onMutate: async (m) => {
-              await o.cancelQueries({ queryKey: d });
-              const g = o.getQueryData(d);
+        function O(C) {
+          const P = (0, T.j4)(),
+            v = (0, z.KV)(),
+            p = (0, y.jE)(),
+            L = (0, x.GO)(P);
+          return (0, B.n)({
+            mutationFn: (l) =>
+              r(v, P, l.lineItemID, l.lineItemFlags, l.giftInfo, l.gidCoupon),
+            onMutate: async (l) => {
+              await p.cancelQueries({ queryKey: L });
+              const E = p.getQueryData(L);
               return (
-                o.setQueryData(d, (E) => ({
-                  ...(E ?? {}),
+                p.setQueryData(L, (d) => ({
+                  ...(d ?? {}),
                   line_items:
-                    E?.line_items?.map((C) =>
-                      C.line_item_id !== m.lineItemID
-                        ? C
+                    d?.line_items?.map((I) =>
+                      I.line_item_id !== l.lineItemID
+                        ? I
                         : {
-                            ...C,
-                            flags: m.lineItemFlags || C.flags,
-                            gift_info: m.giftInfo || C.gift_info,
+                            ...I,
+                            flags: l.lineItemFlags || I.flags,
+                            gift_info: l.giftInfo || I.gift_info,
                           },
                     ) ?? [],
                 })),
-                { previousCart: g }
+                { previousCart: E }
               );
             },
-            onSuccess: (m) => {
-              "cart" in m ? (0, I.LN)(o, v, m.cart) : (0, I.Cd)(o, v);
+            onSuccess: (l) => {
+              "cart" in l ? (0, x.LN)(p, P, l.cart) : (0, x.Cd)(p, P);
             },
-            onError: (m, g, E) => {
-              E?.previousCart && o.setQueryData(d, E.previousCart);
+            onError: (l, E, d) => {
+              d?.previousCart && p.setQueryData(L, d.previousCart);
             },
           });
         }
       },
-      60659: (Q, F, t) => {
+      60659: (G, F, t) => {
         "use strict";
-        t.d(F, { Ez: () => W, fg: () => N, iZ: () => T });
+        t.d(F, { Ez: () => y, fg: () => B, iZ: () => T });
         var e = t(7850),
-          y = t(78280),
-          l = t(90626);
-        const M = l.createContext({ step: "initial", setStep: () => {} });
+          W = t(78280),
+          c = t(90626);
+        const D = c.createContext({ step: "initial", setStep: () => {} });
         function z() {
-          return (0, l.useContext)(M);
+          return (0, c.useContext)(D);
         }
-        function W() {
-          const I = z();
-          return [I.step, I.setStep];
+        function y() {
+          const x = z();
+          return [x.step, x.setStep];
         }
-        function N() {
-          const I = z();
-          return [I.cartWideGiftInfo, I.onCartWideGiftInfoChange];
+        function B() {
+          const x = z();
+          return [x.cartWideGiftInfo, x.onCartWideGiftInfoChange];
         }
-        function T(I) {
+        function T(x) {
           const {
-              step: P,
-              setStep: j,
-              cartID: a,
-              cartWideGiftInfo: x,
-              onCartWideGiftInfoChange: L,
-              children: v,
-            } = I,
-            D = l.useMemo(
+              step: g,
+              setStep: N,
+              cartID: r,
+              cartWideGiftInfo: O,
+              onCartWideGiftInfoChange: C,
+              children: P,
+            } = x,
+            v = c.useMemo(
               () => ({
-                step: P,
-                setStep: j,
-                cartWideGiftInfo: x,
-                onCartWideGiftInfoChange: L,
+                step: g,
+                setStep: N,
+                cartWideGiftInfo: O,
+                onCartWideGiftInfoChange: C,
               }),
-              [P, j, x, L],
+              [g, N, O, C],
             );
-          return (0, e.jsx)(M.Provider, {
-            value: D,
-            children: (0, e.jsx)(y.h3, { cartID: a, children: v }),
+          return (0, e.jsx)(D.Provider, {
+            value: v,
+            children: (0, e.jsx)(W.h3, { cartID: r, children: P }),
           });
         }
       },
-      2165: (Q, F, t) => {
+      2165: (G, F, t) => {
         "use strict";
         t.d(F, {
-          LP: () => g,
-          WA: () => D,
+          LP: () => E,
+          WA: () => v,
           Yz: () => w,
-          ZZ: () => m,
-          wW: () => d,
+          ZZ: () => l,
+          wW: () => L,
         });
         var e = t(7850),
-          y = t(38580),
-          l = t(8173),
-          M = t(72609),
+          W = t(38580),
+          c = t(8173),
+          D = t(72609),
           z = t(20117),
-          W = t(40358),
-          N = t(68094),
+          y = t(40358),
+          B = t(68094),
           T = t(64238),
-          I = t.n(T),
-          P = t(90626),
-          j = t(97889),
-          a = t(36798),
-          x = t(60097),
-          L = t.n(x),
-          v = t(58162),
-          D = ((u) => (
+          x = t.n(T),
+          g = t(90626),
+          N = t(97889),
+          r = t(36798),
+          O = t(60097),
+          C = t.n(O),
+          P = t(58162),
+          v = ((u) => (
             (u[(u.k_ECartDisplayType_Unknown = 0)] =
               "k_ECartDisplayType_Unknown"),
             (u[(u.k_ECartDisplayType_Modal = 1)] = "k_ECartDisplayType_Modal"),
             (u[(u.k_ECartDisplayType_FullPage = 2)] =
               "k_ECartDisplayType_FullPage"),
             u
-          ))(D || {});
-        const o = P.createContext({
+          ))(v || {});
+        const p = g.createContext({
           rgCartLevelNotices: [],
           mapValidateNoticesToFootnote: new Map(),
           eDisplayType: 0,
         });
-        function d(u) {
-          const { validateCart: s, eDisplayType: r, children: c } = u,
-            U = oe(s, r);
-          return (0, e.jsx)(o.Provider, { value: U, children: c });
+        function L(u) {
+          const { validateCart: n, eDisplayType: a, children: _ } = u,
+            U = oe(n, a);
+          return (0, e.jsx)(p.Provider, { value: U, children: _ });
         }
-        function m() {
-          const { rgCartLevelNotices: u } = P.useContext(o);
+        function l() {
+          const { rgCartLevelNotices: u } = g.useContext(p);
           return !u || !u.length
             ? null
             : u.length == 1
               ? (0, e.jsx)("div", {
-                  className: x.HeaderNotices,
-                  children: a.Q8.Localize("#Cart_CartLevelErrorFormat", u[0]),
+                  className: O.HeaderNotices,
+                  children: r.Q8.Localize("#Cart_CartLevelErrorFormat", u[0]),
                 })
               : (0, e.jsxs)("div", {
-                  className: x.HeaderNotices,
+                  className: O.HeaderNotices,
                   children: [
                     (0, e.jsx)("div", {
-                      children: a.Q8.Localize("#Cart_CartLevelErrorMultiple"),
+                      children: r.Q8.Localize("#Cart_CartLevelErrorMultiple"),
                     }),
                     (0, e.jsx)("ul", {
-                      children: u.map((s, r) =>
-                        (0, e.jsx)("li", { children: s }, r),
+                      children: u.map((n, a) =>
+                        (0, e.jsx)("li", { children: n }, a),
                       ),
                     }),
                   ],
                 });
         }
-        function g(u) {
-          const { validateCart: s } = u,
-            { mapValidateNoticesToFootnote: r } = P.useContext(o);
-          if (!r || !r.size) return null;
-          const U = (s?.cart_items || []).every((ee) => !ee.errors),
-            S = U
-              ? a.Q8.Localize("#Cart_FooterNoticeHeader_Warning")
-              : a.Q8.Localize("#Cart_FooterNoticeHeader_MustFix"),
-            k = I()(x.FooterNoticesHeader, !U && x.MustFix);
+        function E(u) {
+          const { validateCart: n } = u,
+            { mapValidateNoticesToFootnote: a } = g.useContext(p);
+          if (!a || !a.size) return null;
+          const U = (n?.cart_items || []).every((ee) => !ee.errors),
+            Q = U
+              ? r.Q8.Localize("#Cart_FooterNoticeHeader_Warning")
+              : r.Q8.Localize("#Cart_FooterNoticeHeader_MustFix"),
+            k = x()(O.FooterNoticesHeader, !U && O.MustFix);
           return (0, e.jsxs)("div", {
             children: [
-              (0, e.jsx)("div", { className: k, children: S }),
-              Array.from(r).map(([ee, K]) =>
-                (0, e.jsx)(E, { notice: K }, K.index),
+              (0, e.jsx)("div", { className: k, children: Q }),
+              Array.from(a).map(([ee, K]) =>
+                (0, e.jsx)(d, { notice: K }, K.index),
               ),
             ],
           });
         }
-        function E(u) {
-          const { notice: s } = u;
+        function d(u) {
+          const { notice: n } = u;
           return (0, e.jsxs)("div", {
-            className: x.FooterNotice,
+            className: O.FooterNotice,
             children: [
               (0, e.jsx)("div", {
-                className: x.NoticeIndex,
-                children: (0, e.jsx)("sup", { children: s.index }),
+                className: O.NoticeIndex,
+                children: (0, e.jsx)("sup", { children: n.index }),
               }),
-              (0, e.jsx)("div", { children: s.footnote_text }),
+              (0, e.jsx)("div", { children: n.footnote_text }),
             ],
           });
         }
-        function C(u) {
-          return P.useContext(o)?.mapValidateNoticesToFootnote.get(u)?.index;
+        function I(u) {
+          return g.useContext(p)?.mapValidateNoticesToFootnote.get(u)?.index;
         }
-        function V() {
-          return P.useContext(o)?.eDisplayType ?? 0;
+        function S() {
+          return g.useContext(p)?.eDisplayType ?? 0;
         }
         function w(u) {
-          const { lineItem: s } = u,
-            r = V();
-          let c = [],
-            U = !!s.gift_info?.accountid_giftee;
+          const { lineItem: n } = u,
+            a = S();
+          let _ = [],
+            U = !!n.gift_info?.accountid_giftee;
           return (
-            s.errors?.duplicate_appids_in_cart?.length &&
-              c.push(
+            n.errors?.duplicate_appids_in_cart?.length &&
+              _.push(
                 (0, e.jsx)(
-                  O,
+                  M,
                   {
-                    purchase_state: l.WN.ZK,
-                    notice_text: a.Q8.Localize(
+                    purchase_state: c.WN.ZK,
+                    notice_text: r.Q8.Localize(
                       "#Cart_Error_DuplicateApps_LineItem",
                     ),
-                    appids: s.errors.duplicate_appids_in_cart,
+                    appids: n.errors.duplicate_appids_in_cart,
                   },
                   "duplicate_appids",
                 ),
               ),
-            c.push((0, e.jsx)(_e, { lineItem: s }, "owned_apps")),
-            s.errors?.unavailable_in_country &&
-              c.push(
+            _.push((0, e.jsx)(_e, { lineItem: n }, "owned_apps")),
+            n.errors?.unavailable_in_country &&
+              _.push(
                 (0, e.jsx)(
-                  O,
+                  M,
                   {
-                    purchase_state: l.WN.Hp,
-                    notice_text: a.Q8.Localize(
+                    purchase_state: c.WN.Hp,
+                    notice_text: r.Q8.Localize(
                       "#Cart_Error_UnavailableCountry_LineItem",
                     ),
                   },
                   "unavailable_in_country",
                 ),
               ),
-            s.errors?.adult_content_restricted &&
-              c.push(
+            n.errors?.adult_content_restricted &&
+              _.push(
                 (0, e.jsx)(
-                  O,
+                  M,
                   {
-                    purchase_state: l.WN.C4,
-                    notice_text: a.Q8.Localize(
+                    purchase_state: c.WN.C4,
+                    notice_text: r.Q8.Localize(
                       "#Cart_Error_AdultContentRestricted_LineItem",
                     ),
                   },
                   "adult_content_restricted",
                 ),
               ),
-            s.errors?.commercial_license_restricted &&
-              c.push(
+            n.errors?.commercial_license_restricted &&
+              _.push(
                 (0, e.jsx)(
-                  O,
+                  M,
                   {
-                    purchase_state: l.WN.yQ,
-                    notice_text: a.Q8.Localize(
+                    purchase_state: c.WN.yQ,
+                    notice_text: r.Q8.Localize(
                       "#Cart_Error_CommercialLicenseRestricted_LineItem",
                     ),
                   },
                   "commercial_license_restricted",
                 ),
               ),
-            s.errors?.gift_not_valid_for_recipient_region &&
-              c.push(
+            n.errors?.gift_not_valid_for_recipient_region &&
+              _.push(
                 (0, e.jsx)(
-                  O,
+                  M,
                   {
-                    purchase_state: l.WN._o,
-                    notice_text: a.Q8.Localize(
+                    purchase_state: c.WN._o,
+                    notice_text: r.Q8.Localize(
                       "#Cart_Error_GiftRecipientInvalid",
                     ),
                   },
                   "gift_recipient_invalid",
                 ),
               ),
-            c.push((0, e.jsx)(ce, { lineItem: s }, "coupon_notices")),
-            s.errors?.too_many_in_cart &&
-              c.push(
+            _.push((0, e.jsx)(ce, { lineItem: n }, "coupon_notices")),
+            n.errors?.too_many_in_cart &&
+              _.push(
                 (0, e.jsx)(
-                  O,
+                  M,
                   {
-                    purchase_state: l.WN.YF,
-                    notice_text: a.Q8.Localize("#Cart_Error_TooManyInCart"),
+                    purchase_state: c.WN.YF,
+                    notice_text: r.Q8.Localize("#Cart_Error_TooManyInCart"),
                   },
                   "too_many_in_cart",
                 ),
               ),
-            s.errors?.missing_must_own_appids?.length &&
-              c.push(
+            n.errors?.missing_must_own_appids?.length &&
+              _.push(
                 (0, e.jsx)(
-                  O,
+                  M,
                   {
-                    purchase_state: l.WN.VL,
+                    purchase_state: c.WN.VL,
                     notice_text: U
-                      ? a.Q8.Localize(
+                      ? r.Q8.Localize(
                           "#Cart_Error_MissingMustOwnApps_GiftLineItem",
                         )
-                      : a.Q8.Localize(
+                      : r.Q8.Localize(
                           "#Cart_Error_MissingMustOwnApps_LineItem",
                         ),
-                    appids: s.errors.missing_must_own_appids,
+                    appids: n.errors.missing_must_own_appids,
                   },
                   "missing_must_own_appids",
                 ),
               ),
-            s.warnings?.appids_in_mastersub?.length &&
-              c.push(
+            n.warnings?.appids_in_mastersub?.length &&
+              _.push(
                 (0, e.jsx)(
-                  O,
+                  M,
                   {
-                    purchase_state: l.WN.Q7,
-                    notice_text: a.Q8.Localize(
+                    purchase_state: c.WN.Q7,
+                    notice_text: r.Q8.Localize(
                       "#Cart_Error_MasterSubscription_LineItem",
                     ),
-                    appids: s.warnings.appids_in_mastersub.flatMap((S) =>
-                      S.cart_appid ? [S.cart_appid] : [],
+                    appids: n.warnings.appids_in_mastersub.flatMap((Q) =>
+                      Q.cart_appid ? [Q.cart_appid] : [],
                     ),
                   },
                   "appids_in_mastersub",
                 ),
               ),
-            s.warnings?.owned_appids?.length &&
-              c.push(
+            n.warnings?.owned_appids?.length &&
+              _.push(
                 (0, e.jsx)(
-                  O,
+                  M,
                   {
-                    purchase_state: l.WN.fZ,
-                    notice_text: a.Q8.Localize(
+                    purchase_state: c.WN.fZ,
+                    notice_text: r.Q8.Localize(
                       "#Cart_Warning_AlreadyOwned_LineItem",
                     ),
-                    appids: s.warnings.owned_appids,
+                    appids: n.warnings.owned_appids,
                   },
                   "owned_appids",
                 ),
               ),
-            s.warnings?.owned_appids_extra_copy?.length &&
-              c.push(
+            n.warnings?.owned_appids_extra_copy?.length &&
+              _.push(
                 (0, e.jsx)(
-                  O,
+                  M,
                   {
-                    purchase_state: l.WN.Vx,
-                    notice_text: a.Q8.Localize(
+                    purchase_state: c.WN.Vx,
+                    notice_text: r.Q8.Localize(
                       "#Cart_Warning_ExtraCopies_LineItem",
                     ),
-                    appids: s.warnings.owned_appids_extra_copy,
+                    appids: n.warnings.owned_appids_extra_copy,
                   },
                   "owned_appids_extra_copy",
                 ),
               ),
-            s.warnings?.price_has_changed &&
-              c.push(
+            n.warnings?.price_has_changed &&
+              _.push(
                 (0, e.jsx)(
-                  O,
+                  M,
                   {
-                    purchase_state: l.WN.vY,
-                    notice_text: a.Q8.Localize(
+                    purchase_state: c.WN.vY,
+                    notice_text: r.Q8.Localize(
                       "#Cart_Warning_PriceChange_LineItem",
                     ),
                   },
                   "price_has_changed",
                 ),
               ),
-            s.warnings?.non_refundable &&
-              c.push(
+            n.warnings?.non_refundable &&
+              _.push(
                 (0, e.jsx)(
-                  O,
+                  M,
                   {
-                    purchase_state: l.WN.YQ,
-                    notice_text: a.Q8.Localize(
+                    purchase_state: c.WN.YQ,
+                    notice_text: r.Q8.Localize(
                       "#Cart_Warning_NoRefund_LineItem",
                     ),
                   },
                   "non_refundable",
                 ),
               ),
-            s.warnings?.gift_recipient_higher_price &&
-              c.push(
+            n.warnings?.gift_recipient_higher_price &&
+              _.push(
                 (0, e.jsx)(
-                  O,
+                  M,
                   {
-                    purchase_state: l.WN.j6,
-                    notice_text: a.Q8.Localize(
+                    purchase_state: c.WN.j6,
+                    notice_text: r.Q8.Localize(
                       "#Cart_Warning_RecipientHigherPrice",
                     ),
                   },
                   "gift_recipient_higher_price",
                 ),
               ),
-            c.push((0, e.jsx)(re, { lineItem: s }, "available_cheaper")),
+            _.push((0, e.jsx)(re, { lineItem: n }, "available_cheaper")),
             U &&
-              r !== 2 &&
-              c.push(
+              a !== 2 &&
+              _.push(
                 (0, e.jsx)(
-                  B,
-                  { nGifteeAccountID: s.gift_info.accountid_giftee },
+                  j,
+                  { nGifteeAccountID: n.gift_info.accountid_giftee },
                   "non_friend_gift",
                 ),
               ),
-            c
+            _
           );
         }
-        function O(u) {
-          const { purchase_state: s, notice_text: r, appids: c } = u,
-            U = C(s),
-            k = V() === 2 && !!U;
-          return (0, e.jsxs)(v.dp, {
+        function M(u) {
+          const { purchase_state: n, notice_text: a, appids: _ } = u,
+            U = I(n),
+            k = S() === 2 && !!U;
+          return (0, e.jsxs)(P.dp, {
             children: [
-              r,
+              a,
               k && (0, e.jsx)("sup", { children: U }),
               " ",
-              (0, e.jsx)(X, { rgAppIDs: c ?? [] }),
+              (0, e.jsx)(X, { rgAppIDs: _ ?? [] }),
             ],
           });
         }
         function q(u) {
-          const { errors: s, warnings: r } = u;
+          const { errors: n, warnings: a } = u;
           return [
-            ...(s?.duplicate_appids_in_cart ?? []),
-            ...(s?.missing_must_own_appids ?? []),
-            ...(s?.owned_appids ?? []),
-            ...(r?.appids_in_mastersub ?? []).flatMap((c) =>
-              c.cart_appid ? [c.cart_appid] : [],
+            ...(n?.duplicate_appids_in_cart ?? []),
+            ...(n?.missing_must_own_appids ?? []),
+            ...(n?.owned_appids ?? []),
+            ...(a?.appids_in_mastersub ?? []).flatMap((_) =>
+              _.cart_appid ? [_.cart_appid] : [],
             ),
-            ...(r?.owned_appids ?? []),
-            ...(r?.owned_appids_extra_copy ?? []),
+            ...(a?.owned_appids ?? []),
+            ...(a?.owned_appids_extra_copy ?? []),
           ];
         }
         function X(u) {
-          const { rgAppIDs: s } = u;
-          return !s || s.length == 0
+          const { rgAppIDs: n } = u;
+          return !n || n.length == 0
             ? null
-            : s.map((r, c) =>
+            : n.map((a, _) =>
                 (0, e.jsx)(
                   Z,
-                  { appid: r, last: c >= s.length - 1 },
-                  `${r}_${c}`,
+                  { appid: a, last: _ >= n.length - 1 },
+                  `${a}_${_}`,
                 ),
               );
         }
         function Z(u) {
-          const { appid: s, last: r } = u,
-            { data: c } = (0, W.J$)({ appid: s });
-          return c
+          const { appid: n, last: a } = u,
+            { data: _ } = (0, y.J$)({ appid: n });
+          return _
             ? (0, e.jsxs)(e.Fragment, {
                 children: [
-                  (0, e.jsx)(j.y, { appid: s, name_override: c.name }),
-                  !r && (0, e.jsx)(e.Fragment, { children: ", " }),
+                  (0, e.jsx)(N.y, { appid: n, name_override: _.name }),
+                  !a && (0, e.jsx)(e.Fragment, { children: ", " }),
                 ],
               })
             : null;
         }
         function re(u) {
-          const { lineItem: s } = u,
-            { data: r } = (0, W.mr)(s.item_id),
-            { data: c } = (0, W.EO)(s.item_id);
+          const { lineItem: n } = u,
+            { data: a } = (0, y.mr)(n.item_id),
+            { data: _ } = (0, y.EO)(n.item_id);
           if (
             !(
-              !!!s.gift_info?.accountid_giftee &&
-              !!r &&
-              !!c &&
-              !(0, N.vk)(r, c)
+              !!!n.gift_info?.accountid_giftee &&
+              !!a &&
+              !!_ &&
+              !(0, B.vk)(a, _)
             )
           )
             return null;
-          const k = c.packageid
-            ? { packageid: c.packageid }
-            : { bundleid: c.bundleid };
-          return (0, e.jsx)(v.dp, {
-            children: a.Q8.LocalizeReact(
+          const k = _.packageid
+            ? { packageid: _.packageid }
+            : { bundleid: _.bundleid };
+          return (0, e.jsx)(P.dp, {
+            children: r.Q8.LocalizeReact(
               "#Cart_Warning_AvailableAtALowerPrice",
-              (0, e.jsx)(j.y, { ...k, name_override: c.purchase_option_name }),
+              (0, e.jsx)(N.y, { ...k, name_override: _.purchase_option_name }),
             ),
           });
         }
-        function B(u) {
-          const { nGifteeAccountID: s } = u,
-            r = z.b2
-              .InitFromAccountID(s, M.TS.EUNIVERSE)
+        function j(u) {
+          const { nGifteeAccountID: n } = u,
+            a = z.b2
+              .InitFromAccountID(n, D.TS.EUNIVERSE)
               .ConvertTo64BitString(),
-            { data: c } = (0, y.Dv)();
-          return P.useMemo(() => !c || c.includes(r), [c, r]) || !M.iA.logged_in
+            { data: _ } = (0, W.Dv)();
+          return g.useMemo(() => !_ || _.includes(a), [_, a]) || !D.iA.logged_in
             ? null
-            : (0, e.jsx)(v.dp, {
-                children: a.Q8.Localize("#Cart_Warning_GiftToNonFriend"),
+            : (0, e.jsx)(P.dp, {
+                children: r.Q8.Localize("#Cart_Warning_GiftToNonFriend"),
               });
         }
         function _e(u) {
-          const { lineItem: s } = u;
-          if (!s.errors?.owned_appids?.length) return null;
-          let r = !!s.gift_info?.accountid_giftee;
-          if (s.errors?.has_existing_billing_agreement)
-            return (0, e.jsx)(O, {
-              purchase_state: l.WN.Gy,
-              notice_text: a.Q8.Localize(
+          const { lineItem: n } = u;
+          if (!n.errors?.owned_appids?.length) return null;
+          let a = !!n.gift_info?.accountid_giftee;
+          if (n.errors?.has_existing_billing_agreement)
+            return (0, e.jsx)(M, {
+              purchase_state: c.WN.Gy,
+              notice_text: r.Q8.Localize(
                 "#Cart_Error_ExistingBillingAgreement",
               ),
             });
           {
-            const c = (s.store_item?.included_appids?.length ?? 0) > 1;
-            let U = a.Q8.Localize(
-              r
+            const _ = (n.store_item?.included_appids?.length ?? 0) > 1;
+            let U = r.Q8.Localize(
+              a
                 ? "#Cart_Error_AlreadyOwned_GiftLineItem_Game"
                 : "#Cart_Error_AlreadyOwned_LineItem_Game",
             );
             return (
-              c &&
-                (U = a.Q8.Localize(
-                  r
+              _ &&
+                (U = r.Q8.Localize(
+                  a
                     ? "#Cart_Error_AlreadyOwned_GiftLineItem"
                     : "#Cart_Error_AlreadyOwned_LineItem",
                 )),
-              (0, e.jsx)(O, {
-                purchase_state: l.WN.kj,
+              (0, e.jsx)(M, {
+                purchase_state: c.WN.kj,
                 notice_text: U,
-                appids: c ? s.errors.owned_appids : void 0,
+                appids: _ ? n.errors.owned_appids : void 0,
               })
             );
           }
         }
         function ce(u) {
-          const { lineItem: s } = u;
+          const { lineItem: n } = u;
           return (0, e.jsxs)(e.Fragment, {
             children: [
-              s.errors?.coupon_exclusive_promo &&
-                (0, e.jsx)(O, {
-                  purchase_state: l.WN.rp,
-                  notice_text: a.Q8.Localize(
+              n.errors?.coupon_exclusive_promo &&
+                (0, e.jsx)(M, {
+                  purchase_state: c.WN.rp,
+                  notice_text: r.Q8.Localize(
                     "#Cart_Error_CouponIsExclusivePromo",
                   ),
                 }),
-              s.errors?.invalid_coupon &&
-                (0, e.jsx)(O, {
-                  purchase_state: l.WN.p_,
-                  notice_text: a.Q8.Localize("#Cart_Error_CouponIsInvalid"),
+              n.errors?.invalid_coupon &&
+                (0, e.jsx)(M, {
+                  purchase_state: c.WN.p_,
+                  notice_text: r.Q8.Localize("#Cart_Error_CouponIsInvalid"),
                 }),
-              s.errors?.invalid_coupon_for_item &&
-                (0, e.jsx)(O, {
-                  purchase_state: l.WN.VJ,
-                  notice_text: a.Q8.Localize(
+              n.errors?.invalid_coupon_for_item &&
+                (0, e.jsx)(M, {
+                  purchase_state: c.WN.VJ,
+                  notice_text: r.Q8.Localize(
                     "#Cart_Error_CouponIsInvalidForItem",
                   ),
                 }),
             ],
           });
         }
-        function oe(u, s) {
-          return P.useMemo(() => {
-            let r = new Map(),
-              c = new Map(),
+        function oe(u, n) {
+          return g.useMemo(() => {
+            let a = new Map(),
+              _ = new Map(),
               U = 1;
-            const S = (K, ne) => {
-              c.has(K) || c.set(K, { index: U++, footnote_text: ne });
+            const Q = (K, se) => {
+              _.has(K) || _.set(K, { index: U++, footnote_text: se });
             };
             let k = !1;
             u?.cart_items?.forEach((K) => {
-              let ne = !!K.gift_info?.accountid_giftee;
+              let se = !!K.gift_info?.accountid_giftee;
               K.errors && (k = !0),
                 K.errors?.duplicate_appids_in_cart?.length &&
-                  S(
-                    l.WN.ZK,
-                    a.Q8.Localize("#Cart_Error_DuplicateApps_FootNote"),
+                  Q(
+                    c.WN.ZK,
+                    r.Q8.Localize("#Cart_Error_DuplicateApps_FootNote"),
                   ),
                 K.errors?.owned_appids?.length &&
                   (K.errors?.has_existing_billing_agreement
-                    ? S(
-                        l.WN.Gy,
-                        a.Q8.Localize(
+                    ? Q(
+                        c.WN.Gy,
+                        r.Q8.Localize(
                           "#Cart_Error_ExistingBillingAgreement_FootNote",
                         ),
                       )
-                    : S(
-                        l.WN.kj,
-                        a.Q8.Localize(
-                          ne
+                    : Q(
+                        c.WN.kj,
+                        r.Q8.Localize(
+                          se
                             ? "#Cart_Error_AlreadyOwned_GiftFootNote"
                             : "#Cart_Error_AlreadyOwned_FootNote",
                         ),
                       )),
                 K.errors?.unavailable_in_country &&
-                  S(
-                    l.WN.Hp,
-                    a.Q8.Localize("#Cart_Error_UnavailableCountry_FootNote"),
+                  Q(
+                    c.WN.Hp,
+                    r.Q8.Localize("#Cart_Error_UnavailableCountry_FootNote"),
                   ),
                 K.errors?.adult_content_restricted &&
-                  S(
-                    l.WN.C4,
-                    a.Q8.Localize(
+                  Q(
+                    c.WN.C4,
+                    r.Q8.Localize(
                       "#Cart_Error_AdultContentRestricted_FootNote",
                     ),
                   ),
                 K.errors?.commercial_license_restricted &&
-                  S(
-                    l.WN.yQ,
-                    a.Q8.Localize(
+                  Q(
+                    c.WN.yQ,
+                    r.Q8.Localize(
                       "#Cart_Error_CommercialLicenseRestricted_FootNote",
                     ),
                   ),
                 K.errors?.missing_must_own_appids &&
-                  S(
-                    l.WN.VL,
-                    ne
-                      ? a.Q8.Localize(
+                  Q(
+                    c.WN.VL,
+                    se
+                      ? r.Q8.Localize(
                           "#Cart_Error_MissingMustOwnApps_FootNoteGift",
                         )
-                      : a.Q8.Localize(
+                      : r.Q8.Localize(
                           "#Cart_Error_MissingMustOwnApps_FootNote",
                         ),
                   ),
                 K.warnings?.appids_in_mastersub?.length &&
-                  S(
-                    l.WN.Q7,
-                    a.Q8.Localize("#Cart_Error_MasterSubscription_FootNote"),
+                  Q(
+                    c.WN.Q7,
+                    r.Q8.Localize("#Cart_Error_MasterSubscription_FootNote"),
                   ),
                 K.warnings?.price_has_changed &&
-                  r.set(
-                    l.WN.vY,
-                    a.Q8.Localize("#Cart_Warning_PriceChange_FootNote"),
+                  a.set(
+                    c.WN.vY,
+                    r.Q8.Localize("#Cart_Warning_PriceChange_FootNote"),
                   );
             });
-            let ee = Array.from(r.values());
+            let ee = Array.from(a.values());
             return (
-              k && ee.unshift(a.Q8.Localize("#Cart_CartLevelErrorNotice")),
+              k && ee.unshift(r.Q8.Localize("#Cart_CartLevelErrorNotice")),
               {
                 rgCartLevelNotices: ee,
-                mapValidateNoticesToFootnote: c,
-                eDisplayType: s,
+                mapValidateNoticesToFootnote: _,
+                eDisplayType: n,
               }
             );
-          }, [u, s]);
+          }, [u, n]);
         }
       },
-      97889: (Q, F, t) => {
+      97889: (G, F, t) => {
         "use strict";
-        t.d(F, { y: () => N });
+        t.d(F, { y: () => B });
         var e = t(7850),
-          y = t(80702),
-          l = t(40358),
-          M = t(64201),
-          z = t.n(M);
-        const W = {
+          W = t(80702),
+          c = t(40358),
+          D = t(64201),
+          z = t.n(D);
+        const y = {
           direction: "right",
           style: { width: "320px", height: `${320 * (125 / 184)}px` },
         };
-        function N(T) {
-          const { name_override: I, ...P } = T,
-            { data: j } = (0, l.J$)(I ? void 0 : P),
-            a = I ?? j?.name;
-          return (0, e.jsx)(y.Q, {
-            id: P,
-            hoverProps: W,
-            name: a,
+        function B(T) {
+          const { name_override: x, ...g } = T,
+            { data: N } = (0, c.J$)(x ? void 0 : g),
+            r = x ?? N?.name;
+          return (0, e.jsx)(W.Q, {
+            id: g,
+            hoverProps: y,
+            name: r,
             className: z().LineItemStoreHover,
             bShowWishlistButton: !1,
-            children: a,
+            children: r,
           });
         }
       },
-      48201: (Q, F, t) => {
+      48201: (G, F, t) => {
         "use strict";
         t.d(F, { p: () => U });
         var e = t(7850),
-          y = t(53080),
-          l = t(85978),
-          M = t(19298),
+          W = t(53080),
+          c = t(85978),
+          D = t(19298),
           z = t(71742),
-          W = t(29392),
-          N = t(78192),
+          y = t(29392),
+          B = t(48156),
           T = t(72609),
-          I = t(57646),
-          P = t(47610),
-          j = t(27894),
-          a = t(24873),
-          x = t(3348),
-          L = t(40358),
-          v = t(68094),
-          D = t(29522),
-          o = t(5827),
-          d = t(56925),
-          m = t(54806),
-          g = t(64238),
-          E = t.n(g),
-          C = t(90626),
-          V = t(25792),
+          x = t(57646),
+          g = t(47610),
+          N = t(27894),
+          r = t(24873),
+          O = t(3348),
+          C = t(40358),
+          P = t(68094),
+          v = t(29522),
+          p = t(5827),
+          L = t(56925),
+          l = t(54806),
+          E = t(64238),
+          d = t.n(E),
+          I = t(90626),
+          S = t(25792),
           w = t(69736),
-          O = t(91405),
+          M = t(91405),
           q = t(63088),
           X = t(79485),
           Z = t(48366),
           re = t(60659),
-          B = t(36798),
+          j = t(36798),
           _e = t(78280),
           ce = t(2165),
           oe = t(97889),
           u = t(86711),
-          s = t.n(u),
-          r = t(58162),
-          c = t(71421);
-        function U(n) {
+          n = t.n(u),
+          a = t(58162),
+          _ = t(71421);
+        function U(s) {
           const {
             lineItems: i,
-            cartValidation: _,
+            cartValidation: o,
             renderLineItem: f = Ee,
-            scrollable: p = !1,
-          } = n;
+            scrollable: m = !1,
+          } = s;
           if (!i.length) return (0, e.jsx)(ee, {});
-          const A = _?.cart_items
-            ? _.cart_items.reduce((h, R) => ((h[R.line_item_id] = R), h), {})
+          const A = o?.cart_items
+            ? o.cart_items.reduce((h, R) => ((h[R.line_item_id] = R), h), {})
             : {};
-          return (0, e.jsx)(r.uO, {
-            scrollable: p,
+          return (0, e.jsx)(a.uO, {
+            scrollable: m,
             children: i.map((h, R) =>
-              h
-                ? (0, e.jsx)(
-                    V.tH,
-                    {
-                      fallback: (G) => (0, e.jsx)(k, { item: h, error: G }),
-                      children: (0, e.jsx)(S, {
-                        item: h,
-                        validatedItem: A[h.line_item_id],
-                        renderLineItem: f,
-                      }),
-                    },
-                    h.line_item_id || R,
-                  )
-                : (0, e.jsx)(r.vF, {}, R),
+              (0, e.jsx)(
+                a.Vv.Provider,
+                {
+                  value: !m && R == 0,
+                  children: h
+                    ? (0, e.jsx)(S.tH, {
+                        fallback: (V) => (0, e.jsx)(k, { item: h, error: V }),
+                        children: (0, e.jsx)(Q, {
+                          item: h,
+                          validatedItem: A[h.line_item_id],
+                          renderLineItem: f,
+                        }),
+                      })
+                    : (0, e.jsx)(a.vF, {}),
+                },
+                h?.line_item_id || R,
+              ),
             ),
           });
         }
-        function S(n) {
-          const { item: i, validatedItem: _, renderLineItem: f } = n,
-            p = K(i);
-          if (!p) throw `Unknown line item type (${i.type})`;
-          const { data: A } = (0, L.J$)(p),
-            { data: h } = (0, L.U2)(p),
-            { data: R } = (0, L.mr)(p),
-            G = h ? (0, v.Jz)(h) : p;
+        function Q(s) {
+          const { item: i, validatedItem: o, renderLineItem: f } = s,
+            m = K(i);
+          if (!m) throw `Unknown line item type (${i.type})`;
+          const { data: A } = (0, C.J$)(m),
+            { data: h } = (0, C.U2)(m),
+            { data: R } = (0, C.mr)(m),
+            V = h ? (0, P.Jz)(h) : m;
           return (
-            (0, L.lv)(G),
-            (0, L.qI)(G),
+            (0, C.lv)(V),
+            (0, C.qI)(V),
             A && (!A.visible || R === null)
               ? (0, e.jsx)(pe, {
                   lineItemID: i.line_item_id,
-                  validatedItem: _,
+                  validatedItem: o,
                   storeItem: A,
                 })
-              : !A || !h || !R || !_
-                ? (0, e.jsx)(r.vF, {})
-                : (0, e.jsx)(ne, {
+              : !A || !h || !R || !o
+                ? (0, e.jsx)(a.vF, {})
+                : (0, e.jsx)(se, {
                     lineItem: i,
-                    validatedItem: _,
+                    validatedItem: o,
                     storeItem: A,
                     displayItem: h,
                     purchaseOption: R,
@@ -862,115 +860,115 @@
                   })
           );
         }
-        function k(n) {
-          const { item: i, error: _ } = n,
+        function k(s) {
+          const { item: i, error: o } = s,
             f = (0, q.t)(i.line_item_id);
-          return (0, e.jsxs)(r.Rz, {
-            className: s().ErrorLineItem,
+          return (0, e.jsxs)(a.Rz, {
+            className: n().ErrorLineItem,
             children: [
               (0, e.jsxs)("div", {
-                className: s().Left,
+                className: n().Left,
                 children: [
                   (0, e.jsx)("div", {
-                    className: s().Error,
-                    children: B.Q8.Localize("#Cart_LineItem_ErrorBoundary"),
+                    className: n().Error,
+                    children: j.Q8.Localize("#Cart_LineItem_ErrorBoundary"),
                   }),
                   (0, e.jsx)("div", {
-                    className: s().Muted,
-                    children: _.message,
+                    className: n().Muted,
+                    children: o.message,
                   }),
                 ],
               }),
-              (0, e.jsx)(M.Z, {
+              (0, e.jsx)(D.Z, {
                 onActivate: () => f.mutate(),
-                className: s().RemoveButton,
-                children: B.Q8.Localize("#Cart_Remove"),
+                className: n().RemoveButton,
+                children: j.Q8.Localize("#Cart_Remove"),
               }),
             ],
           });
         }
         function ee() {
-          return (0, e.jsx)(r.Rz, {
-            className: s().ErrorLineItem,
+          return (0, e.jsx)(a.Rz, {
+            className: n().ErrorLineItem,
             children: (0, e.jsx)("div", {
-              className: s().Left,
+              className: n().Left,
               children: (0, e.jsx)("div", {
-                className: s().LineItemTitle,
-                children: B.Q8.Localize("#Cart_Empty"),
+                className: n().LineItemTitle,
+                children: j.Q8.Localize("#Cart_Empty"),
               }),
             }),
           });
         }
-        function K(n) {
-          const i = n.type;
+        function K(s) {
+          const i = s.type;
           switch (i) {
-            case W.KW.$B:
-              return { packageid: n.packageid };
-            case W.KW.XY:
-              return { bundleid: n.bundleid };
-            case W.KW.vC:
+            case y.KW.$B:
+              return { packageid: s.packageid };
+            case y.KW.XY:
+              return { bundleid: s.bundleid };
+            case y.KW.vC:
               return;
             default:
               (0, z.z_)(i, `Unhandled type: ${i}`);
           }
         }
-        function ne(n) {
+        function se(s) {
           const {
               storeItem: i,
-              displayItem: _,
+              displayItem: o,
               lineItem: f,
-              purchaseOption: p,
+              purchaseOption: m,
               validatedItem: A,
               renderLineItem: h,
-            } = n,
+            } = s,
             R = f.line_item_id,
-            G = (0, v.Jz)(i),
+            V = (0, P.Jz)(i),
             te = (0, q.t)(R),
-            se = te.isPending || te.isSuccess,
-            { data: J } = (0, L.by)(G),
-            H = (0, D._Z)(G),
-            { data: ie, isLoading: b } = (0, d.Pt)(),
-            $ = C.useMemo(() => H.filter((We) => ie?.has(We)), [H, ie]),
-            Y = C.useId();
-          if (b) return (0, e.jsx)(r.vF, {});
+            ne = te.isPending || te.isSuccess,
+            { data: J } = (0, C.by)(V),
+            H = (0, v._Z)(V),
+            { data: ie, isLoading: b } = (0, L.Pt)(),
+            $ = I.useMemo(() => H.filter((ye) => ie?.has(ye)), [H, ie]),
+            Y = I.useId();
+          if (b) return (0, e.jsx)(a.vF, {});
           const ae = f.flags?.is_gift,
             ue = H.length > 0 && $.length === H.length,
-            ye = !ae && $.length > 0 && !ue;
+            We = !ae && $.length > 0 && !ue;
           return h({
             lineItem: f,
             storeItem: i,
             validatedItem: A,
             children: (0, e.jsxs)(e.Fragment, {
               children: [
-                se && (0, e.jsx)(r.UD, {}),
-                (0, e.jsxs)(M.Z, {
-                  className: E()(
-                    s().InnerLineItemCtn,
-                    se && s().PendingLineItem,
+                ne && (0, e.jsx)(a.UD, {}),
+                (0, e.jsxs)(D.Z, {
+                  className: d()(
+                    n().InnerLineItemCtn,
+                    ne && n().PendingLineItem,
                   ),
                   "flow-children": "row",
                   children: [
                     (0, e.jsx)("div", {
-                      className: E()(s().LineItemColumn, s().LineItemCapsule),
-                      children: (0, e.jsx)(j.p, {
-                        storeItem: _,
+                      className: d()(n().LineItemColumn, n().LineItemCapsule),
+                      children: (0, e.jsx)(N.p, {
+                        storeItem: o,
                         feature: "cart-items",
                         noImpressionTracking: !0,
-                        className: s().ImageLink,
+                        className: n().ImageLink,
                         children: (0, e.jsx)(le, {
-                          storeItem: _,
+                          storeItem: o,
                           alt: i.name,
                           blurred: !!A.errors?.adult_content_restricted,
                         }),
                       }),
                     }),
                     (0, e.jsxs)("div", {
-                      className: s().LineItemDetailsCtn,
+                      className: n().LineItemDetailsCtn,
                       children: [
-                        (0, e.jsx)(r.UW, {
-                          className: s().LineItemDetailsRowTop,
+                        (0, e.jsx)(a.UW, {
+                          className: n().LineItemDetailsRowTop,
                           children: (0, e.jsx)("div", {
-                            className: s().LineItemTitle,
+                            className: n().LineItemTitle,
                             id: Y,
                             children: i.name,
                           }),
@@ -979,32 +977,32 @@
                         (0, e.jsxs)(de, {
                           validatedItem: A,
                           children: [
-                            (0, e.jsx)(Ce, { storeItem: i, purchaseOption: p }),
-                            (0, e.jsx)(he, { purchaseOption: p }),
-                            (0, e.jsx)(Oe, { storeItem: i, purchaseOption: p }),
+                            (0, e.jsx)(Ce, { storeItem: i, purchaseOption: m }),
+                            (0, e.jsx)(he, { purchaseOption: m }),
+                            (0, e.jsx)(Oe, { storeItem: i, purchaseOption: m }),
                           ],
                         }),
                         (0, e.jsx)(Ae, { validatedItem: A }),
-                        ye && (0, e.jsx)(Re, { appids: $ }),
-                        (0, e.jsxs)(r.UW, {
-                          className: s().LineItemSpaceBetween,
+                        We && (0, e.jsx)(Re, { appids: $ }),
+                        (0, e.jsxs)(a.UW, {
+                          className: n().LineItemSpaceBetween,
                           children: [
                             (0, e.jsx)("div", {
-                              className: E()(
-                                s().LineItemCol,
-                                s().PlatformIcons,
+                              className: d()(
+                                n().LineItemCol,
+                                n().PlatformIcons,
                               ),
-                              children: (0, e.jsx)(a.Dm, { id: (0, v.Jz)(_) }),
+                              children: (0, e.jsx)(r.Dm, { id: (0, P.Jz)(o) }),
                             }),
                             (0, e.jsx)(Ie, {
-                              purchaseOption: p,
+                              purchaseOption: m,
                               validatedItem: A,
                             }),
                           ],
                         }),
                         (0, e.jsx)(ge, {
                           lineItem: f,
-                          purchaseOption: p,
+                          purchaseOption: m,
                           validatedItem: A,
                           rgAppIDs: H,
                           bAllAppsPrivate: ue,
@@ -1019,42 +1017,44 @@
             }),
           });
         }
-        function pe(n) {
-          const { lineItemID: i, validatedItem: _, storeItem: f } = n,
-            p = (0, q.t)(i),
-            A = p.isPending;
-          return (0, e.jsxs)(r.Rz, {
+        function pe(s) {
+          const { lineItemID: i, validatedItem: o, storeItem: f } = s,
+            m = (0, q.t)(i),
+            A = m.isPending;
+          return (0, e.jsxs)(a.Rz, {
             placeholder: !0,
             children: [
-              A && (0, e.jsx)(r.UD, {}),
-              (0, e.jsxs)("div", {
-                className: E()(s().InnerLineItemCtn, A && s().PendingLineItem),
+              A && (0, e.jsx)(a.UD, {}),
+              (0, e.jsxs)(D.Z, {
+                className: d()(n().InnerLineItemCtn, A && n().PendingLineItem),
+                "flow-children": "row",
                 children: [
                   (0, e.jsx)("div", {
-                    className: E()(s().LineItemColumn, s().LineItemCapsule),
-                    children: (0, e.jsx)(j.p, {
+                    className: d()(n().LineItemColumn, n().LineItemCapsule),
+                    children: (0, e.jsx)(N.p, {
                       storeItem: f,
                       noImpressionTracking: !0,
                       children: (0, e.jsx)(le, { storeItem: f }),
                     }),
                   }),
                   (0, e.jsxs)("div", {
-                    className: s().LineItemDetailsCtn,
+                    className: n().LineItemDetailsCtn,
                     children: [
-                      (0, e.jsx)(r.UW, {
-                        className: s().LineItemDetailsRowTop,
+                      (0, e.jsx)(a.UW, {
+                        className: n().LineItemDetailsRowTop,
                         children: (0, e.jsx)("div", {
-                          className: s().LineItemTitle,
+                          className: n().LineItemTitle,
                           children: f?.name,
                         }),
                       }),
-                      !!_ && (0, e.jsx)(de, { validatedItem: _ }),
-                      (0, e.jsx)(r.UW, {
-                        className: s().LineItemSpaceBetween,
-                        children: (0, e.jsx)(M.Z, {
-                          onActivate: () => p.mutate(),
-                          className: s().RemoveLineItem,
-                          children: B.Q8.Localize("#Cart_Remove"),
+                      !!o && (0, e.jsx)(de, { validatedItem: o }),
+                      (0, e.jsx)(a.UW, {
+                        className: n().LineItemSpaceBetween,
+                        children: (0, e.jsx)(D.Z, {
+                          focusable: !0,
+                          onActivate: () => m.mutate(),
+                          className: n().RemoveLineItem,
+                          children: j.Q8.Localize("#Cart_Remove"),
                         }),
                       }),
                     ],
@@ -1064,150 +1064,150 @@
             ],
           });
         }
-        function le(n) {
-          const { storeItem: i, alt: _, blurred: f } = n,
-            { data: p } = (0, L.lv)((0, v.Jz)(i));
+        function le(s) {
+          const { storeItem: i, alt: o, blurred: f } = s,
+            { data: m } = (0, C.lv)((0, P.Jz)(i));
           let h = `${T.TS.STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png`;
           return (
-            p?.header
+            m?.header
               ? (h =
                   T.TS.STORE_ITEM_BASE_URL +
-                  p.asset_url_format.replace("${FILENAME}", p.header))
-              : p?.small_capsule &&
+                  m.asset_url_format.replace("${FILENAME}", m.header))
+              : m?.small_capsule &&
                 (h =
                   T.TS.STORE_ITEM_BASE_URL +
-                  p.asset_url_format.replace("${FILENAME}", p.small_capsule)),
+                  m.asset_url_format.replace("${FILENAME}", m.small_capsule)),
             (0, e.jsx)("img", {
-              alt: _ ?? i.name,
-              className: f ? s().HeaderImgBlurred : s().HeaderImg,
+              alt: o ?? i.name,
+              className: f ? n().HeaderImgBlurred : n().HeaderImg,
               src: h,
             })
           );
         }
-        function Ee(n) {
-          return (0, e.jsx)(M.Z, {
-            children: (0, e.jsx)(r.Rz, { children: n.children }),
+        function Ee(s) {
+          return (0, e.jsx)(D.Z, {
+            children: (0, e.jsx)(a.Rz, { children: s.children }),
           });
         }
-        function de(n) {
-          const { validatedItem: i, children: _ } = n;
+        function de(s) {
+          const { validatedItem: i, children: o } = s;
           return (0, e.jsxs)("div", {
-            className: s().LineItemSpaceBetween,
-            children: [(0, e.jsx)(ce.Yz, { lineItem: i }), _],
+            className: n().LineItemSpaceBetween,
+            children: [(0, e.jsx)(ce.Yz, { lineItem: i }), o],
           });
         }
-        function fe(n) {
-          const { storeItem: i } = n,
-            { data: _ } = (0, L.by)((0, v.Jz)(i)),
-            f = (0, x.VM)(_);
-          if (!_) return null;
-          let p = B.Q8.Localize("#Cart_ComingSoon", f);
+        function fe(s) {
+          const { storeItem: i } = s,
+            { data: o } = (0, C.by)((0, P.Jz)(i)),
+            f = (0, O.VM)(o);
+          if (!o) return null;
+          let m = j.Q8.Localize("#Cart_ComingSoon", f);
           return (
-            ["text_tba", "text_comingsoon"].includes(_.coming_soon_display) &&
-              (p = f),
-            (0, e.jsx)(r.dp, { children: p })
+            ["text_tba", "text_comingsoon"].includes(o.coming_soon_display) &&
+              (m = f),
+            (0, e.jsx)(a.dp, { children: m })
           );
         }
-        function Ie(n) {
-          const { purchaseOption: i, validatedItem: _ } = n;
+        function Ie(s) {
+          const { purchaseOption: i, validatedItem: o } = s;
           let f = i?.formatted_original_price,
-            p = i?.formatted_final_price,
+            m = i?.formatted_final_price,
             A = i?.discount_pct;
-          const h = _.subtotal?.amount_in_cents !== i?.final_price_in_cents;
+          const h = o.subtotal?.amount_in_cents !== i?.final_price_in_cents;
           return (
-            _.original_price &&
-              _.subtotal &&
+            o.original_price &&
+              o.subtotal &&
               h &&
-              ((f = _.original_price.formatted_amount),
-              (p = _.subtotal.formatted_amount),
-              (A = (0, r.dR)(_))),
+              ((f = o.original_price.formatted_amount),
+              (m = o.subtotal.formatted_amount),
+              (A = (0, a.dR)(o))),
             (0, e.jsx)("div", {
-              className: s().LineItemRightCol,
-              children: (0, e.jsx)(I.kb, {
-                className: s().PriceWidget,
+              className: n().LineItemRightCol,
+              children: (0, e.jsx)(x.kb, {
+                className: n().PriceWidget,
                 formatted_orig_price: f,
-                formatted_final_price: p,
+                formatted_final_price: m,
                 discount_percent: A,
                 bHideDiscountPercentForCompliance:
                   i.hide_discount_pct_for_compliance,
-                bDiscountFromCoupon: !!_.coupon_discount?.amount_in_cents,
+                bDiscountFromCoupon: !!o.coupon_discount?.amount_in_cents,
               }),
             })
           );
         }
-        function ge(n) {
+        function ge(s) {
           const {
               lineItem: i,
-              purchaseOption: _,
+              purchaseOption: o,
               validatedItem: f,
-              rgAppIDs: p,
+              rgAppIDs: m,
               bAllAppsPrivate: A,
               fnRemoveLineItem: h,
               accessibilityId: R,
-            } = n,
-            G = (0, Z.EJ)(),
+            } = s,
+            V = (0, Z.EJ)(),
             [te] = (0, re.fg)(),
-            se =
+            ne =
               te?.accountid_giftee ||
-              (G ? i.gift_info?.accountid_giftee : void 0),
+              (V ? i.gift_info?.accountid_giftee : void 0),
             J = (0, _e.j4)(),
             H =
               (0, Z.ZB)() &&
               !f?.restrict_add_additional_to_cart &&
               !(0, Z.kx)(J),
             ie = f.errors?.adult_content_restricted,
-            b = (0, O.A)(
+            b = (0, M.A)(
               i.packageid,
               i.bundleid,
-              me(_),
+              me(o),
               void 0,
               "cart-add-additional",
             ),
-            $ = C.useId(),
-            Y = C.useId();
-          return (0, e.jsxs)(r.UW, {
-            className: s().LineItemSpaceBetween,
+            $ = I.useId(),
+            Y = I.useId();
+          return (0, e.jsxs)(a.UW, {
+            className: n().LineItemSpaceBetween,
             children: [
               (0, e.jsx)("div", {
-                className: E()(s().LineItemCol, s().PurchaseOptionPickerCtn),
-                children: se
-                  ? (0, e.jsx)(Le, { recipient: se })
+                className: d()(n().LineItemCol, n().PurchaseOptionPickerCtn),
+                children: ne
+                  ? (0, e.jsx)(Le, { recipient: ne })
                   : (0, e.jsx)(xe, {
                       lineItem: i,
-                      rgAppIDs: p,
+                      rgAppIDs: m,
                       bAllAppsPrivate: A,
-                      purchaseOption: _,
+                      purchaseOption: o,
                     }),
               }),
               (0, e.jsxs)("div", {
-                className: E()(s().LineItemRightCol, s().AddRemoveLinks),
+                className: d()(n().LineItemRightCol, n().AddRemoveLinks),
                 children: [
                   H &&
                     (0, e.jsxs)(e.Fragment, {
                       children: [
-                        (0, e.jsx)(c.Gq, {
-                          toolTipContent: B.Q8.Localize(
+                        (0, e.jsx)(_.Gq, {
+                          toolTipContent: j.Q8.Localize(
                             "#Cart_LineItem_Add_Tooltip",
                           ),
                           usePointerEvents: !0,
-                          children: (0, e.jsx)(M.Z, {
+                          children: (0, e.jsx)(D.Z, {
                             onActivate: () => !b.isPending && b.mutate(),
-                            className: s().AddLineItem,
+                            className: n().AddLineItem,
                             id: $,
                             "aria-labelledby": `${$} ${R}`,
-                            children: B.Q8.Localize("#Cart_Add"),
+                            children: j.Q8.Localize("#Cart_Add"),
                           }),
                         }),
                         "|",
                       ],
                     }),
-                  !G &&
-                    (0, e.jsx)(M.Z, {
+                  !V &&
+                    (0, e.jsx)(D.Z, {
                       onActivate: () => h(),
-                      className: s().RemoveLineItem,
+                      className: n().RemoveLineItem,
                       id: Y,
                       "aria-labelledby": `${Y} ${R}`,
-                      children: B.Q8.Localize("#Cart_Remove"),
+                      children: j.Q8.Localize("#Cart_Remove"),
                     }),
                   ie &&
                     (0, e.jsxs)(e.Fragment, {
@@ -1215,8 +1215,8 @@
                         "| ",
                         (0, e.jsx)("a", {
                           href: `${T.TS.STORE_CHECKOUT_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=cart`,
-                          className: s().VerifyLineItem,
-                          children: B.Q8.Localize("#Cart_Verify"),
+                          className: n().VerifyLineItem,
+                          children: j.Q8.Localize("#Cart_Verify"),
                         }),
                         " ",
                       ],
@@ -1226,43 +1226,43 @@
             ],
           });
         }
-        function Le(n) {
-          const { data: i } = (0, l.jn)(n.recipient),
-            _ = i?.public_data?.persona_name;
+        function Le(s) {
+          const { data: i } = (0, c.jn)(s.recipient),
+            o = i?.public_data?.persona_name;
           return (0, e.jsx)("div", {
-            className: s().GiftForNotice,
-            children: B.Q8.LocalizeReact(
+            className: n().GiftForNotice,
+            children: j.Q8.LocalizeReact(
               "#Cart_GiftForNotice",
-              _ ? (0, e.jsx)("span", { className: s().Name, children: _ }) : "",
+              o ? (0, e.jsx)("span", { className: n().Name, children: o }) : "",
             ),
           });
         }
-        function Ce(n) {
-          const { storeItem: i, purchaseOption: _ } = n,
-            f = !!_.requires_shipping && i.item_type === N.c6.RD,
-            { data: p } = (0, P.DR)(f ? i.id : void 0);
-          return p
-            ? (0, e.jsx)(r.dp, {
-                children: B.Q8.Localize(
+        function Ce(s) {
+          const { storeItem: i, purchaseOption: o } = s,
+            f = !!o.requires_shipping && i.item_type === B.c6.RD,
+            { data: m } = (0, g.DR)(f ? i.id : void 0);
+          return m
+            ? (0, e.jsx)(a.dp, {
+                children: j.Q8.Localize(
                   "#Cart_ShippingEstimate_DeliveryDate",
-                  (0, w.x)(p),
+                  (0, w.x)(m),
                 ),
               })
             : null;
         }
-        function he(n) {
-          const { purchaseOption: i } = n;
+        function he(s) {
+          const { purchaseOption: i } = s;
           if (!i.requires_shipping) return null;
-          const _ = T.iA.country_code;
-          return ["GB"].includes(_)
-            ? (0, e.jsx)(r.dp, {
-                children: (0, e.jsx)(M.Z, {
+          const o = T.iA.country_code;
+          return ["GB"].includes(o)
+            ? (0, e.jsx)(a.dp, {
+                children: (0, e.jsx)(D.Z, {
                   children: (0, e.jsx)("a", {
-                    className: s().ComplianceLink,
+                    className: n().ComplianceLink,
                     target: "_blank",
                     href: "https://www.valvesoftware.com/legal/statement-of-compliance",
                     rel: "noreferrer",
-                    children: B.Q8.Localize(
+                    children: j.Q8.Localize(
                       "#Cart_LineItem_Hardware_Compliance_Label",
                     ),
                   }),
@@ -1270,25 +1270,25 @@
               })
             : null;
         }
-        var Pe = ((n) => (
-            (n[(n.k_EBillingAgreementTypeInvalid = 0)] =
+        var Pe = ((s) => (
+            (s[(s.k_EBillingAgreementTypeInvalid = 0)] =
               "k_EBillingAgreementTypeInvalid"),
-            (n[(n.k_EBillingAgreementTypeSteam = 1)] =
+            (s[(s.k_EBillingAgreementTypeSteam = 1)] =
               "k_EBillingAgreementTypeSteam"),
-            (n[(n.k_EBillingAgreementTypeGame = 2)] =
+            (s[(s.k_EBillingAgreementTypeGame = 2)] =
               "k_EBillingAgreementTypeGame"),
-            n
+            s
           ))(Pe || {}),
-          ve = ((n) => (
-            (n[(n.k_ETimeUnitNone = 0)] = "k_ETimeUnitNone"),
-            (n[(n.k_ETimeUnitSecond = 1)] = "k_ETimeUnitSecond"),
-            (n[(n.k_ETimeUnitMinute = 2)] = "k_ETimeUnitMinute"),
-            (n[(n.k_ETimeUnitHour = 3)] = "k_ETimeUnitHour"),
-            (n[(n.k_ETimeUnitDay = 4)] = "k_ETimeUnitDay"),
-            (n[(n.k_ETimeUnitWeek = 5)] = "k_ETimeUnitWeek"),
-            (n[(n.k_ETimeUnitMonth = 6)] = "k_ETimeUnitMonth"),
-            (n[(n.k_ETimeUnitYear = 7)] = "k_ETimeUnitYear"),
-            n
+          ve = ((s) => (
+            (s[(s.k_ETimeUnitNone = 0)] = "k_ETimeUnitNone"),
+            (s[(s.k_ETimeUnitSecond = 1)] = "k_ETimeUnitSecond"),
+            (s[(s.k_ETimeUnitMinute = 2)] = "k_ETimeUnitMinute"),
+            (s[(s.k_ETimeUnitHour = 3)] = "k_ETimeUnitHour"),
+            (s[(s.k_ETimeUnitDay = 4)] = "k_ETimeUnitDay"),
+            (s[(s.k_ETimeUnitWeek = 5)] = "k_ETimeUnitWeek"),
+            (s[(s.k_ETimeUnitMonth = 6)] = "k_ETimeUnitMonth"),
+            (s[(s.k_ETimeUnitYear = 7)] = "k_ETimeUnitYear"),
+            s
           ))(ve || {});
         const De = {
           1: "Second",
@@ -1299,76 +1299,76 @@
           6: "Month",
           7: "Year",
         };
-        function Oe(n) {
-          const { storeItem: i, purchaseOption: _ } = n;
-          if (i.item_type !== N.c6.RD) return null;
-          const f = _.recurrence_info;
+        function Oe(s) {
+          const { storeItem: i, purchaseOption: o } = s;
+          if (i.item_type !== B.c6.RD) return null;
+          const f = o.recurrence_info;
           if (!f) return null;
-          let p = "#Package";
-          f.billing_agreement_type === 2 && (p = "#GameBillingPackage"),
-            _.formatted_final_price && _.discount_pct && (p += "WithDiscount");
+          let m = "#Package";
+          f.billing_agreement_type === 2 && (m = "#GameBillingPackage"),
+            o.formatted_final_price && o.discount_pct && (m += "WithDiscount");
           const h = De[f.renewal_time_unit],
-            R = p + "CostIncludesSubscriptionBy" + h;
-          return (0, e.jsx)(r.dp, {
-            children: B.Q8.Localize(
+            R = m + "CostIncludesSubscriptionBy" + h;
+          return (0, e.jsx)(a.dp, {
+            children: j.Q8.Localize(
               R,
-              _.formatted_final_price,
+              o.formatted_final_price,
               f.formatted_renewal_price,
               f.renewal_time_period,
-              _.discount_pct,
+              o.discount_pct,
             ),
           });
         }
-        function me(n) {
-          return n.user_can_purchase_as_gift;
+        function me(s) {
+          return s.user_can_purchase_as_gift;
         }
-        function Me(n) {
-          return !n.is_commercial_license && !n.requires_shipping;
+        function Me(s) {
+          return !s.is_commercial_license && !s.requires_shipping;
         }
-        function xe(n) {
+        function xe(s) {
           const {
               lineItem: i,
-              rgAppIDs: _,
+              rgAppIDs: o,
               bAllAppsPrivate: f,
-              purchaseOption: p,
-            } = n,
+              purchaseOption: m,
+            } = s,
             A = (0, X.C)(),
-            h = (0, d.DT)(),
+            h = (0, L.DT)(),
             R = (0, Z.EJ)(),
-            { data: G } = (0, l.jn)(
+            { data: V } = (0, c.jn)(
               i.gift_info?.accountid_giftee
                 ? i.gift_info.accountid_giftee
                 : null,
             ),
-            te = !me(p) || R,
-            se = !Me(p);
+            te = !me(m) || R,
+            ne = !Me(m);
           let J = [
             {
               data: "myself",
-              label: B.Q8.Localize("#Cart_LineItemOptions_Myself"),
+              label: j.Q8.Localize("#Cart_LineItemOptions_Myself"),
             },
           ];
           if (
-            (se ||
+            (ne ||
               J.push({
                 data: "private",
-                label: B.Q8.Localize("#Cart_LineItemOptions_Privately"),
-                tooltip: B.Q8.Localize("#Cart_LineItemOptions_PrivateTooltip"),
+                label: j.Q8.Localize("#Cart_LineItemOptions_Privately"),
+                tooltip: j.Q8.Localize("#Cart_LineItemOptions_PrivateTooltip"),
               }),
             !te)
           ) {
-            const b = G?.public_data?.persona_name;
+            const b = V?.public_data?.persona_name;
             i.gift_info?.accountid_giftee && b
               ? J.push({
                   data: "gift",
-                  label: B.Q8.Localize(
+                  label: j.Q8.Localize(
                     "#Cart_LineItemOptions_GiftForPersona",
                     b,
                   ),
                 })
               : J.push({
                   data: "gift",
-                  label: B.Q8.Localize("#Cart_LineItemOptions_Gift"),
+                  label: j.Q8.Localize("#Cart_LineItemOptions_Gift"),
                 });
           }
           let H = i.flags?.is_gift ? "gift" : "myself";
@@ -1376,7 +1376,7 @@
             return null;
           const ie = (b) => {
             if (H === b.data) return;
-            const $ = (ae) => h.mutate({ rgAppIDs: _, bPrivate: ae }),
+            const $ = (ae) => h.mutate({ rgAppIDs: o, bPrivate: ae }),
               Y = (ae) =>
                 A.mutate({
                   lineItemID: i.line_item_id,
@@ -1386,13 +1386,13 @@
             H === "private" ? $(!1) : H === "gift" && Y(!1),
               b.data === "private" ? $(!0) : b.data === "gift" && Y(!0);
           };
-          return (0, e.jsx)(y.l6, {
+          return (0, e.jsx)(W.l6, {
             onSelectionChange: ie,
             selectedValue: J.find((b) => b.data === H) ?? null,
             options: J,
             getOptionLabel: (b) =>
               b.tooltip
-                ? (0, e.jsx)(c.Gq, {
+                ? (0, e.jsx)(_.Gq, {
                     toolTipContent: b.tooltip,
                     usePointerEvents: !0,
                     children: (0, e.jsx)("span", { children: b.label }),
@@ -1402,12 +1402,12 @@
             placement: "bottom-start",
           });
         }
-        const Ae = C.memo(function (i) {
-          const { validatedItem: _ } = i,
-            f = _.included_packageids ?? [],
-            p = (0, o.eG)(),
-            A = (0, m.E)({
-              queries: f.map((R) => (0, L.mt)(p, { packageid: R })),
+        const Ae = I.memo(function (i) {
+          const { validatedItem: o } = i,
+            f = o.included_packageids ?? [],
+            m = (0, p.eG)(),
+            A = (0, l.E)({
+              queries: f.map((R) => (0, C.mt)(m, { packageid: R })),
             }),
             h = [
               ...new Set(
@@ -1416,24 +1416,24 @@
                   .flat(),
               ),
             ];
-          return !h.length || (h.length == 1 && !_.item_id?.bundleid)
+          return !h.length || (h.length == 1 && !o.item_id?.bundleid)
             ? null
-            : (0, e.jsxs)(r.UW, {
+            : (0, e.jsxs)(a.UW, {
                 text: !0,
                 children: [
                   (0, e.jsxs)("span", {
                     children: [
-                      B.Q8.LocalizePlural("#Cart_IncludesItems", h.length),
+                      j.Q8.LocalizePlural("#Cart_IncludesItems", h.length),
                       ":",
                       " ",
                     ],
                   }),
-                  h.map((R, G) =>
+                  h.map((R, V) =>
                     (0, e.jsxs)(
-                      C.Fragment,
+                      I.Fragment,
                       {
                         children: [
-                          G > 0 && ", ",
+                          V > 0 && ", ",
                           (0, e.jsx)(oe.y, { appid: R }),
                         ],
                       },
@@ -1443,257 +1443,268 @@
                 ],
               });
         });
-        function Re(n) {
-          const { appids: i } = n,
-            _ = i.map((f, p) =>
+        function Re(s) {
+          const { appids: i } = s,
+            o = i.map((f, m) =>
               (0, e.jsxs)(
-                C.Fragment,
-                { children: [p > 0 && ", ", (0, e.jsx)(oe.y, { appid: f })] },
+                I.Fragment,
+                { children: [m > 0 && ", ", (0, e.jsx)(oe.y, { appid: f })] },
                 f,
               ),
             );
-          return (0, e.jsxs)(r.UW, {
+          return (0, e.jsxs)(a.UW, {
             children: [
               (0, e.jsxs)("span", {
                 children: [
-                  B.Q8.Localize("#Cart_Notice_SomeAppsPrivate"),
+                  j.Q8.Localize("#Cart_Notice_SomeAppsPrivate"),
                   "\xA0",
                 ],
               }),
-              _,
+              o,
             ],
           });
         }
       },
-      58162: (Q, F, t) => {
+      58162: (G, F, t) => {
         "use strict";
         t.d(F, {
-          Rz: () => a,
-          UD: () => L,
-          UW: () => j,
-          dR: () => D,
-          dp: () => v,
-          uO: () => P,
-          vF: () => x,
+          Rz: () => C,
+          UD: () => v,
+          UW: () => r,
+          Vv: () => O,
+          dR: () => L,
+          dp: () => p,
+          uO: () => N,
+          vF: () => P,
         });
         var e = t(7850),
-          y = t(19298),
-          l = t(78365),
-          M = t(7967),
+          W = t(19298),
+          c = t(78365),
+          D = t(7967),
           z = t(64238),
-          W = t.n(z),
-          N = t(85599),
-          T = t(86711),
-          I = t.n(T);
-        function P(o) {
-          const { scrollable: d = !1, children: m } = o,
-            g = d ? M.MS : y.Z;
-          return (0, e.jsx)(g, {
-            className: W()(I().LineItemsCtn, d && I().Scrollable),
+          y = t.n(z),
+          B = t(90626),
+          T = t(85599),
+          x = t(86711),
+          g = t.n(x);
+        function N(l) {
+          const { scrollable: E = !1, children: d } = l,
+            I = E ? D.MS : W.Z;
+          return (0, e.jsx)(I, {
+            className: y()(g().LineItemsCtn, E && g().Scrollable),
             focusableIfEmpty: !0,
-            children: m,
+            children: d,
           });
         }
-        function j(o) {
-          const { text: d, children: m, className: g, noWrap: E } = o;
-          return (0, e.jsx)(y.Z, {
+        function r(l) {
+          const { text: E, children: d, className: I, noWrap: S } = l;
+          return (0, e.jsx)(W.Z, {
             "flow-children": "row",
-            className: W()(
-              I().LineItemDetailsRow,
-              d && I().Text,
-              E && I().NoWrap,
-              g,
+            className: y()(
+              g().LineItemDetailsRow,
+              E && g().Text,
+              S && g().NoWrap,
+              I,
             ),
-            children: m,
+            children: d,
           });
         }
-        function a(o) {
-          const { placeholder: d, className: m, children: g } = o;
-          return (0, e.jsx)(l.YZ, {
-            className: W()(
-              I().LineItemWrapper,
-              d && I().LineItemPlaceholder,
-              m,
+        const O = B.createContext(!1);
+        function C(l) {
+          const { placeholder: E, className: d, children: I } = l,
+            S = B.useContext(O);
+          return (0, e.jsx)(c.YZ, {
+            className: y()(
+              g().LineItemWrapper,
+              E && g().LineItemPlaceholder,
+              d,
             ),
-            children: g,
+            fnScrollIntoViewHandler: S
+              ? () => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              : void 0,
+            children: I,
           });
         }
-        function x() {
-          return (0, e.jsx)(a, {
+        function P() {
+          return (0, e.jsx)(C, {
             placeholder: !0,
-            children: (0, e.jsx)(L, {}),
+            children: (0, e.jsx)(v, {}),
           });
         }
-        function L() {
+        function v() {
           return (0, e.jsx)("div", {
-            className: I().LoadingThrobber,
-            children: (0, e.jsx)(N.t, {
+            className: g().LoadingThrobber,
+            children: (0, e.jsx)(T.t, {
               size: "medium",
               position: "center",
               msDelayAppear: 250,
             }),
           });
         }
-        function v(o) {
-          const { children: d } = o;
-          return (0, e.jsx)(j, {
+        function p(l) {
+          const { children: E } = l;
+          return (0, e.jsx)(r, {
             text: !0,
             children: (0, e.jsx)("div", {
-              className: I().Warning,
-              children: d,
+              className: g().Warning,
+              children: E,
             }),
           });
         }
-        function D(o) {
-          if (o.coupon_applied) return o.coupon_applied.discount_pct;
-          const d = parseInt(o.original_price.amount_in_cents),
-            m = parseInt(o.subtotal.amount_in_cents);
-          return Math.min(99, Math.floor(((d - m) / d) * 100 + 0.5));
+        function L(l) {
+          if (l.coupon_applied) return l.coupon_applied.discount_pct;
+          const E = parseInt(l.original_price.amount_in_cents),
+            d = parseInt(l.subtotal.amount_in_cents);
+          return Math.min(99, Math.floor(((E - d) / E) * 100 + 0.5));
         }
       },
-      87913: (Q, F, t) => {
+      87913: (G, F, t) => {
         "use strict";
-        t.d(F, { MT: () => m, g7: () => D, p2: () => d, xz: () => v });
+        t.d(F, { MT: () => l, g7: () => v, p2: () => L, xz: () => P });
         var e = t(35038),
-          y = t(19563),
-          l = t(8173),
-          M = t(78192),
+          W = t(19563),
+          c = t(8173),
+          D = t(48156),
           z = t(68312),
-          W = t(5827),
-          N = t(63667),
+          y = t(5827),
+          B = t(63667),
           T = t(72609),
-          I = t(80902),
-          P = t(48366),
-          j = t(60659),
-          a = t(78280),
-          x = t(83665);
-        const L = {
+          x = t(80902),
+          g = t(48366),
+          N = t(60659),
+          r = t(78280),
+          O = t(83665);
+        const C = {
             include_basic_info: !0,
             include_assets: !0,
             include_platforms: !0,
             include_release: !0,
             include_included_items: !0,
           },
-          v = {
-            ...L,
+          P = {
+            ...C,
             include_included_items: !0,
             include_all_purchase_options: !0,
-            included_item_data_request: L,
+            included_item_data_request: C,
           };
-        function D() {
-          const E = (0, z.KV)(),
-            C = (0, a.j4)(),
-            [V] = (0, j.fg)(),
-            { storeBrowseContext: w, cacheStoreItemData: O } = (0, W.yn)();
-          return (0, I.I)(o(E, C, w, V, O));
+        function v() {
+          const d = (0, z.KV)(),
+            I = (0, r.j4)(),
+            [S] = (0, N.fg)(),
+            { storeBrowseContext: w, cacheStoreItemData: M } = (0, y.yn)();
+          return (0, x.I)(p(d, I, w, S, M));
         }
-        function o(E, C, V, w, O) {
+        function p(d, I, S, w, M) {
           return {
-            queryKey: (0, x.m4)(C, w),
-            queryFn: async () => g(E, C, V, w, v, O),
+            queryKey: (0, O.m4)(I, w),
+            queryFn: async () => E(d, I, S, w, P, M),
             staleTime: 1 / 0,
-            enabled: T.iA.logged_in || !(0, P.c2)(C),
+            enabled: T.iA.logged_in || !(0, g.c2)(I),
           };
         }
-        function d(E) {
-          return !E?.cart_items?.length || E.cart_items.length === 0
+        function L(d) {
+          return !d?.cart_items?.length || d.cart_items.length === 0
             ? !1
-            : E.cart_items.every(
-                ({ store_item: C }) =>
-                  C?.item_type == M.c6.RD &&
-                  !!(C.self_purchase_option || C.best_purchase_option)
+            : d.cart_items.every(
+                ({ store_item: I }) =>
+                  I?.item_type == D.c6.RD &&
+                  !!(I.self_purchase_option || I.best_purchase_option)
                     ?.requires_shipping,
               );
         }
-        function m(E) {
-          return !E?.cart_items?.length || E.cart_items.length === 0
+        function l(d) {
+          return !d?.cart_items?.length || d.cart_items.length === 0
             ? !1
-            : E.cart_items.every(
-                ({ store_item: C, gift_info: V }) =>
-                  C?.item_type == M.c6.RD &&
-                  (!!V?.accountid_giftee || !!V?.email_giftee),
+            : d.cart_items.every(
+                ({ store_item: I, gift_info: S }) =>
+                  I?.item_type == D.c6.RD &&
+                  (!!S?.accountid_giftee || !!S?.email_giftee),
               );
         }
-        async function g(E, C, V, w, O, q) {
-          const X = e.w.Init(y.vL);
-          (0, P.kx)(C) || (0, P.uU)(C)
-            ? (X.Body().set_gidshoppingcart(C.gid),
-              w && X.Body().set_gift_info(l.$z.fromObject(w)))
-            : (0, P.sb)(C) && X.Body().set_gidreplayoftransid(C.gid),
-            (0, N.rV)(V, X),
-            O && (0, N.Bn)(X, O);
-          const Z = await y._o.ValidateCart(E, X);
+        async function E(d, I, S, w, M, q) {
+          const X = e.w.Init(W.vL);
+          (0, g.kx)(I) || (0, g.uU)(I)
+            ? (X.Body().set_gidshoppingcart(I.gid),
+              w && X.Body().set_gift_info(c.$z.fromObject(w)))
+            : (0, g.sb)(I) && X.Body().set_gidreplayoftransid(I.gid),
+            (0, B.rV)(S, X),
+            M && (0, B.Bn)(X, M);
+          const Z = await W._o.ValidateCart(d, X);
           if (
             (Z.BSuccess() ||
               console.warn(
                 `Failed to validate shopping cart: ${Z.GetEResult()}`,
               ),
-            O && q)
+            M && q)
           )
-            for (const re of Z.Body().cart_items()) q(re.store_item(), O);
+            for (const re of Z.Body().cart_items()) q(re.store_item(), M);
           return Z.Body().toObject();
         }
       },
-      38580: (Q, F, t) => {
+      38580: (G, F, t) => {
         "use strict";
-        t.d(F, { Dv: () => I });
+        t.d(F, { Dv: () => x });
         var e = t(20117),
-          y = t(99412),
-          l = t(35038),
-          M = t(10335),
+          W = t(99412),
+          c = t(35038),
+          D = t(10335),
           z = t(27386),
-          W = t(42993),
-          N = t(68312),
+          y = t(42993),
+          B = t(68312),
           T = t(80902);
-        function I() {
-          const x = (0, N.KV)(),
-            L = (0, W.LH)();
-          return (0, T.I)(P(x, L));
+        function x() {
+          const O = (0, B.KV)(),
+            C = (0, y.LH)();
+          return (0, T.I)(g(O, C));
         }
-        function P(x, L) {
+        function g(O, C) {
           return {
-            queryKey: ["GetFriendsList", L],
+            queryKey: ["GetFriendsList", C],
             queryFn: async () => {
-              const v = l.w.Init(M.pH);
-              return (await M.DF.GetFriendsList(x, v))
+              const P = c.w.Init(D.pH);
+              return (await D.DF.GetFriendsList(O, P))
                 .Body()
                 .friendslist()
                 ?.friends()
-                ?.filter((o) => {
-                  if (!o.ulfriendid()) return !1;
-                  const d = new e.b2(o.ulfriendid());
+                ?.filter((p) => {
+                  if (!p.ulfriendid()) return !1;
+                  const L = new e.b2(p.ulfriendid());
                   return (
-                    (o.efriendrelationship() == y._UC ||
-                      o.efriendrelationship() == y.Ec7) &&
-                    d.BIsIndividualAccount()
+                    (p.efriendrelationship() == W._UC ||
+                      p.efriendrelationship() == W.Ec7) &&
+                    L.BIsIndividualAccount()
                   );
                 })
-                .map((o) => o.ulfriendid());
+                .map((p) => p.ulfriendid());
             },
+            enabled: !!C,
           };
         }
-        function j() {
-          const x = useActiveServiceTransport(),
-            L = useActiveAccount();
-          return useQuery(a(x, L));
+        function N() {
+          const O = useActiveServiceTransport(),
+            C = useActiveAccount();
+          return useQuery(r(O, C));
         }
-        function a(x, L) {
+        function r(O, C) {
           return {
-            queryKey: ["GetFriendNicknameMap", L],
+            queryKey: ["GetFriendNicknameMap", C],
             queryFn: async () => {
-              const v = CProtoBufMsg.Init(CPlayer_GetNicknameList_Request),
-                D = await PlayerService.GetNicknameList(x, v);
+              const P = CProtoBufMsg.Init(CPlayer_GetNicknameList_Request),
+                v = await PlayerService.GetNicknameList(O, P);
               return new Map(
-                D.Body()
+                v
+                  .Body()
                   .toObject()
-                  ?.nicknames?.map((o) => [o.accountid, o.nickname]),
+                  ?.nicknames?.map((p) => [p.accountid, p.nickname]),
               );
             },
           };
         }
       },
-      60097: (Q) => {
-        Q.exports = {
+      60097: (G) => {
+        G.exports = {
           strMaxCartPartResponsiveWidth: "840px",
           CartCard: "_4SG2MjCMpIRt6W-Zj4Oxm",
           HeaderNotices: "_2BtczALVCY2zzCLnj8oga9",
@@ -1703,11 +1714,11 @@
           NoticeIndex: "_3N9Ik0sMA90E7jGHJqycWH",
         };
       },
-      64201: (Q) => {
-        Q.exports = { LineItemStoreHover: "_3DfrtekI1PCxuXbfj85Zwp" };
+      64201: (G) => {
+        G.exports = { LineItemStoreHover: "_3DfrtekI1PCxuXbfj85Zwp" };
       },
-      86711: (Q) => {
-        Q.exports = {
+      86711: (G) => {
+        G.exports = {
           strMaxCartPartResponsiveWidth: "840px",
           CartCard: "_1MfAwU630QwDv6FuV9c_Dr",
           LineItemsCtn: "_3ypRUtQoOfOrCsyHlzfGm4",

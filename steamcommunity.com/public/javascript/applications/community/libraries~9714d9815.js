@@ -2,7 +2,7 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [54922],
+    [4922],
     {
       44217: function (pi) {
         /*!

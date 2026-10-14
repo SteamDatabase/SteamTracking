@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    173: (e, t, r) => {
+    1: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => ln });
       var i,
         n = r(669),
         s = r.n(n),
-        a = r(18),
+        a = r(514),
         o = r(696);
       function l(e) {
         return "object" == typeof e && null !== e && "value" in e;
@@ -95,10 +95,10 @@
         );
       }
       var b = r(629),
-        p = r(897),
-        f = r(50),
-        B = r(549),
-        w = r(692);
+        p = r(311),
+        f = r(560),
+        B = r(939),
+        w = r(434);
       class y {
         m_NavigationController;
         m_postMessage;
@@ -394,8 +394,8 @@
         (0, b.Cg)([p.o], I.prototype, "OnKeyUp", null),
         (0, b.Cg)([p.o], I.prototype, "Reset", null);
       var F,
-        A = r(464),
-        N = r(160);
+        A = r(702),
+        N = r(142);
       class E {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -6597,7 +6597,11 @@
             return e.SendNotification(
               "ClientMetrics.ReportReactUsage#1",
               Tr(Dt, t),
-              { ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }),
           (e.ReportClientError = function (e, t) {
@@ -7024,9 +7028,9 @@
                 n.set_identifier(t.identifier + " " + t.identifierHash),
                 n.set_message(JSON.stringify(t.message)),
                 t.strComponentStack &&
-                  ((s ??= {}),
-                  (s.componentStack = t.strComponentStack),
-                  (s.strDisplayVersion = t.strDisplayVersion)),
+                  ((s ??= {}), (s.componentStack = t.strComponentStack)),
+                t.strDisplayVersion &&
+                  ((s ??= {}), (s.strDisplayVersion = t.strDisplayVersion)),
                 s && n.set_context(JSON.stringify(s)),
                 t.strUrl && n.set_url(t.strUrl),
                 n
@@ -13247,7 +13251,7 @@
         },
       };
     },
-    50: (e, t, r) => {
+    560: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -13260,12 +13264,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    692: (e, t, r) => {
+    434: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => a, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(897),
-        s = r(50);
+        n = r(311),
+        s = r(560);
       class a {
         PostMessage(e) {}
         RegisterForMessage(e) {}

@@ -26,6 +26,8 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         function _(_) {
@@ -5914,6 +5916,7 @@
             return _.SendMsg("SteamTV.AddChatBan#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
+              rgBrowserAPISites: ["store", "community"],
             });
           }
           _.AddChatBan = _;
@@ -5933,6 +5936,7 @@
               {
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["store", "community"],
               },
             );
           }
@@ -5945,6 +5949,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 0,
+                rgBrowserAPISites: ["store", "community"],
               },
             );
           }
@@ -5968,6 +5973,7 @@
             return _.SendMsg("SteamTV.JoinChat#1", (0, _._)(_, _, _), _, {
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
+              rgBrowserAPISites: ["store", "community"],
             });
           }
           _.JoinChat = _;
@@ -6038,7 +6044,6 @@
           _.AppCheer = _;
         })(_ || (_ = {}));
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -6967,6 +6972,7 @@
           _.SendMsgSearchAppDataCacheByStoreKeywords = _;
         })(_ || (_ = {}));
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
@@ -8043,7 +8049,8 @@
             );
           }
         }
-        const _ = 3600,
+        const _ = 15,
+          _ = 3600,
           _ = "(1)";
         class _ {
           m_WebUIServiceTransport;
@@ -8061,12 +8068,17 @@
           m_strCleanWords = "";
           m_strBannedPattern = "";
           m_strCleanPattern = "";
+          m_bWordListsComplete = !1;
+          m_bHaveCompleteFilter = !1;
           m_regexBannedWords = null;
           m_regexCleanWords = null;
           m_bShownFilterTip = !1;
           m_bInitialized = !1;
           m_bFilterChangedWhileLoading = !1;
           m_bOngoingLoad = !1;
+          m_promiseOngoingLoad = null;
+          m_fnUnregisterDictionaryChanged = void 0;
+          m_rgUnregisterPlayerNotifications = [];
           m_DataAccess;
           constructor(_) {
             (0, _._)(this);
@@ -8078,7 +8090,7 @@
               (this.m_TextFilterWords = new _.EyI()),
               (this.m_DataAccess = _);
           }
-          async Init(_ = 0, _ = null, _ = null) {
+          async Init(_ = 0, _ = null, _ = null, _ = null) {
             (this.m_bInitialized = !1),
               (this.m_WebUIServiceTransport = _),
               (this.m_unAccountID = _),
@@ -8087,42 +8099,84 @@
               (this.m_strBannedWords = ""),
               (this.m_strProfanityWords = ""),
               (this.m_strCleanWords = ""),
+              (this.m_bWordListsComplete = !1),
               this.InitSteamEngineLanguages(),
+              this.RegisterPlayerNotifications(_),
               await this.LoadFilter(),
               await this.LoadTextFilterPreferences(),
               await this.LoadTextFilterWords(),
               await this.RequestUpdatedSettings(),
-              await (0, _._)(() => !this.m_bOngoingLoad),
-              await this.InitFiltersWithRetry();
+              (this.m_nLoadLanguagesRetryDelaySec = _),
+              await this.EnsureFiltersLoaded();
           }
           InitSteamEngineLanguages() {
             this.m_WebUIServiceTransport.BIsValid() &&
-              (this.m_WebUIServiceTransport.messageHandlers.RegisterServiceNotificationHandler(
-                _.NotifyTextFilterDictionaryChangedHandler,
-                this.OnTextFilterDictionaryChanged,
-              ),
+              (this.m_fnUnregisterDictionaryChanged?.(),
+              (this.m_fnUnregisterDictionaryChanged =
+                this.m_WebUIServiceTransport.messageHandlers.RegisterServiceNotificationHandler(
+                  _.NotifyTextFilterDictionaryChangedHandler,
+                  this.OnTextFilterDictionaryChanged,
+                ).unregister),
               this.InitSteamEngineLanguage(_._.LANGUAGE),
               _._.LANGUAGE !== "english" &&
                 this.InitSteamEngineLanguage("english"));
           }
           OnTextFilterDictionaryChanged(_) {
             return (
-              this.m_bInitialized
-                ? this.InitFiltersWithRetry()
-                : (this.m_bFilterChangedWhileLoading = !0),
+              !this.m_bInitialized && !this.m_bOngoingLoad
+                ? (this.m_bFilterChangedWhileLoading = !0)
+                : ((this.m_nLoadLanguagesRetryDelaySec = _),
+                  this.EnsureFiltersLoaded()),
               _._
             );
           }
+          EnsureFiltersLoaded() {
+            return this.m_bOngoingLoad && this.m_promiseOngoingLoad
+              ? ((this.m_bFilterChangedWhileLoading = !0),
+                this.m_promiseOngoingLoad)
+              : ((this.m_promiseOngoingLoad = this.InitFiltersWithRetry()),
+                this.m_promiseOngoingLoad);
+          }
           async InitFiltersWithRetry() {
-            do
-              (this.m_bFilterChangedWhileLoading = !1),
-                (this.m_bInitialized = !1),
-                (this.m_bOngoingLoad = !0),
-                await this.LoadLanguages(),
-                this.OnFilterDataChanged(),
-                (this.m_bInitialized = !0);
-            while (this.m_bFilterChangedWhileLoading);
-            this.m_bOngoingLoad = !1;
+            this.m_bOngoingLoad = !0;
+            try {
+              do
+                (this.m_bFilterChangedWhileLoading = !1),
+                  await this.LoadLanguages(),
+                  this.OnFilterDataChanged(),
+                  (this.m_bInitialized = !0);
+              while (this.m_bFilterChangedWhileLoading);
+            } finally {
+              (this.m_bOngoingLoad = !1), (this.m_promiseOngoingLoad = null);
+            }
+          }
+          RegisterPlayerNotifications(_) {
+            this.m_rgUnregisterPlayerNotifications.forEach((_) => _()),
+              (this.m_rgUnregisterPlayerNotifications = []),
+              _ &&
+                this.m_rgUnregisterPlayerNotifications.push(
+                  _.RegisterServiceNotificationHandler(
+                    _.QAJ.NotifyCommunityPreferencesChangedHandler,
+                    (_) => (
+                      this.UpdateCommunityPreferences(_.Body().preferences()),
+                      this.OnPlayerSettingsChanged(),
+                      _._
+                    ),
+                  ).unregister,
+                  _.RegisterServiceNotificationHandler(
+                    _.QAJ.NotifyTextFilterWordsChangedHandler,
+                    (_) => (
+                      this.UpdateTextFilterWords(_.Body().words()),
+                      this.OnPlayerSettingsChanged(),
+                      _._
+                    ),
+                  ).unregister,
+                );
+          }
+          OnPlayerSettingsChanged() {
+            this.m_bInitialized &&
+              !this.m_bOngoingLoad &&
+              this.OnFilterDataChanged();
           }
           InitSteamEngineLanguage(_) {
             const _ = _._.Init(_);
@@ -8226,7 +8280,8 @@
               _ = await this.LoadObfuscatedString(
                 "CTextFilterStore_strCleanPattern",
               );
-            _ != null && _ != null && this.BRebuildFilter(_, _);
+            (this.m_bHaveCompleteFilter = _ != null && _ != null),
+              _ != null && _ != null && this.BRebuildFilter(_, _);
           }
           SaveFilter() {
             this.SaveObfuscatedString(
@@ -8316,38 +8371,36 @@
             (this.m_TextFilterWords = _), this.SaveTextFilterWords();
           }
           m_nLoadLanguagesRetryTimeout = void 0;
-          async LoadLanguages(_ = 15) {
+          m_nLoadLanguagesRetryDelaySec = _;
+          async LoadLanguages() {
             (this.m_strBannedWords = ""),
               (this.m_strProfanityWords = ""),
-              (this.m_strCleanWords = "");
-            try {
-              await this.LoadLanguage(_._.LANGUAGE),
-                _._.LANGUAGE !== "english" &&
-                  (await this.LoadLanguage("english"));
-            } catch (_) {
+              (this.m_strCleanWords = ""),
+              (this.m_bWordListsComplete = !1),
               this.m_nLoadLanguagesRetryTimeout &&
-                ((0, _._)(
-                  !this.m_nLoadLanguagesRetryTimeout,
-                  "Got two concurrent calls to TextFilteringStore.LoadLanguages",
-                ),
-                window.clearTimeout(this.m_nLoadLanguagesRetryTimeout),
-                (this.m_nLoadLanguagesRetryTimeout = void 0)),
-                (_ = Math.min(_ * 2, _)),
-                console.warn(
-                  "LoadLanguages caught",
-                  _,
-                  "retry in",
-                  _,
-                  "seconds",
-                ),
-                (this.m_nLoadLanguagesRetryTimeout = window.setTimeout(
-                  async () => {
-                    (this.m_nLoadLanguagesRetryTimeout = void 0),
-                      await this.LoadLanguages(_),
-                      this.OnFilterDataChanged();
-                  },
-                  _ * 1e3,
-                ));
+                (window.clearTimeout(this.m_nLoadLanguagesRetryTimeout),
+                (this.m_nLoadLanguagesRetryTimeout = void 0));
+            try {
+              let _ = await this.LoadLanguage(_._.LANGUAGE);
+              if (
+                (_._.LANGUAGE !== "english" &&
+                  (_ = (await this.LoadLanguage("english")) && _),
+                !_)
+              )
+                throw new Error("clean_public dictionary unavailable");
+              (this.m_nLoadLanguagesRetryDelaySec = _),
+                (this.m_bWordListsComplete = !0);
+            } catch (_) {
+              this.m_nLoadLanguagesRetryDelaySec = Math.min(
+                this.m_nLoadLanguagesRetryDelaySec * 2,
+                _,
+              );
+              const _ = this.m_nLoadLanguagesRetryDelaySec;
+              console.warn("LoadLanguages caught", _, "retry in", _, "seconds"),
+                (this.m_nLoadLanguagesRetryTimeout = window.setTimeout(() => {
+                  (this.m_nLoadLanguagesRetryTimeout = void 0),
+                    this.EnsureFiltersLoaded();
+                }, _ * 1e3));
             }
           }
           async LoadLanguage(_) {
@@ -8389,11 +8442,20 @@
                 this.m_strProfanityWords += _.data;
               }
             }
+            const _ = this.m_WebUIServiceTransport.BIsValid(),
+              _ = "CTextFilterStore_strCleanPublic_" + _;
             _ = `${_._.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${_}&v=${_}&origin=${_()}`;
-            {
+            try {
               const _ = await _().get(_);
-              this.m_strCleanWords += _.data;
+              (this.m_strCleanWords += _.data),
+                _ && this.SaveObfuscatedString(_, _.data);
+            } catch (_) {
+              console.warn("LoadLanguage caught while loading clean list:", _);
+              const _ = _ ? await this.LoadObfuscatedString(_) : null;
+              if (!_) return !1;
+              this.m_strCleanWords += _;
             }
+            return !0;
           }
           CreatePattern(_) {
             let _ = _.filter(function (_) {
@@ -8402,6 +8464,8 @@
             return _.length > 0 ? "\\b(" + _.join("|") + ")\\b" : "";
           }
           OnFilterDataChanged() {
+            if (!this.m_bWordListsComplete && this.m_bHaveCompleteFilter)
+              return;
             let _ = new RegExp(/\s*[\r\n]+\s*/g),
               _ = [],
               _ = [];
@@ -8430,7 +8494,10 @@
             let _ = this.CreatePattern(_),
               _ = this.CreatePattern(_);
             _ != "" && (_ = "^(" + _ + ")$"),
-              this.BRebuildFilter(_, _) && this.SaveFilter();
+              this.BRebuildFilter(_, _) &&
+                this.m_bWordListsComplete &&
+                this.SaveFilter(),
+              (this.m_bHaveCompleteFilter = this.m_bWordListsComplete);
           }
           BRebuildFilter(_, _) {
             if (_ === this.m_strBannedPattern && _ === this.m_strCleanPattern)
@@ -8552,6 +8619,13 @@
           _ = 10,
           _ = class _ {
             m_mapChats = new Map();
+            m_cmInterface;
+            SetCMInterface(_) {
+              this.m_cmInterface = _;
+            }
+            GetCMInterface() {
+              return this.m_cmInterface;
+            }
             GetChat(_, _) {
               return this.m_mapChats.get(_) || this.m_mapChats.get(_);
             }
@@ -8584,12 +8658,11 @@
           m_nLastSleepMS = 0;
           m_bReconnecting = !1;
           m_strChatURL;
-          m_webApiToken;
           m_unInstanceID = Math.floor(Math.random() * 4294967296);
           m_strUserSteamID = "";
           m_regexUserEmoticons = null;
           m_chatScheduledFunc = null;
-          m_webAPIInterface = null;
+          m_steamInterface = null;
           m_textFilterStore = null;
           m_bHasAddedWelcomeChat = !1;
           m_mapMutedUsers = {};
@@ -8602,10 +8675,7 @@
           m_latestAnnouncement = null;
           constructor() {
             (0, _._)(this),
-              (this.m_webAPIInterface = new _._(
-                _._.WEBAPI_BASE_URL,
-                _._.webapi_token,
-              ));
+              (this.m_steamInterface = this.CreateSteamInterface());
           }
           InitTextFilter() {
             this.m_textFilterStore = new _({
@@ -8624,21 +8694,21 @@
           GetUserSteamID() {
             return this.m_strUserSteamID;
           }
+          CreateSteamInterface() {
+            const _ = (0, _._)() ?? _.Get().GetCMInterface();
+            return (
+              _ || (0, _._)(new _._(_._.WEBAPI_BASE_URL, _._.webapi_token))
+            );
+          }
           StartForSteamID(_, _) {
-            (this.m_webAPIInterface = new _._(
-              _._.WEBAPI_BASE_URL,
-              _._.webapi_token,
-            )),
+            (this.m_steamInterface = this.CreateSteamInterface()),
               (this.m_ulBroadcastSteamID = _),
               (this.m_ulBroadcastID = _),
               this.InitTextFilter(),
               this.RequestChatInfo();
           }
           StartForChannel(_) {
-            (this.m_webAPIInterface = new _._(
-              _._.WEBAPI_BASE_URL,
-              _._.webapi_token,
-            )),
+            (this.m_steamInterface = this.CreateSteamInterface()),
               (this.m_ulBroadcastChannelID = _),
               (this.m_strUserSteamID = _._.steamid),
               this.InitTextFilter(),
@@ -8651,35 +8721,22 @@
             const _ = _.trim();
             if (_.length != 0)
               try {
-                let _, _, _;
-                if (this.m_webApiToken) {
-                  const _ = new FormData();
-                  _.append("chat_id", this.m_ulChatID),
-                    _.append("message", _),
-                    _.append("instance_id", this.m_unInstanceID.toString()),
-                    (_ = await _().post(
-                      `${_._.WEBAPI_BASE_URL}IBroadcastService/PostChatMessage/v0001?access_token=${this.m_webApiToken}`,
-                      _,
-                    )),
-                    (_ = _.data && _.data.response);
-                } else {
-                  const _ = _._.Init(_._);
-                  _.SetBodyFields({
-                    chat_id: this.m_ulChatID,
-                    message: _,
-                    instance_id: this.m_unInstanceID.toString(),
-                  }),
-                    (_ = await _._.PostChatMessage(
-                      this.m_webAPIInterface.GetServiceTransport(),
-                      _,
-                    )),
-                    (_ = {
-                      result: _.GetEResult(),
-                      cooldown_time_seconds: _.Body().cooldown_time_seconds(),
-                      in_game: _.Body().in_game(),
-                      persona_name: _.Body().persona_name(),
-                    });
-                }
+                const _ = _._.Init(_._);
+                _.SetBodyFields({
+                  chat_id: this.m_ulChatID,
+                  message: _,
+                  instance_id: this.m_unInstanceID.toString(),
+                });
+                const _ = await _._.PostChatMessage(
+                    this.m_steamInterface.GetServiceTransport(),
+                    _,
+                  ),
+                  _ = {
+                    result: _.GetEResult(),
+                    cooldown_time_seconds: _.Body().cooldown_time_seconds(),
+                    in_game: _.Body().in_game(),
+                    persona_name: _.Body().persona_name(),
+                  };
                 if (_ && _.result && _.result != _._) {
                   let _ = "";
                   _.result == _._
@@ -8728,6 +8785,7 @@
                   steamid: this.m_ulBroadcastSteamID,
                   broadcastid: this.m_ulBroadcastID,
                   sessionid: (0, _._)(),
+                  notoken: 1,
                 },
                 _ = await _().get(`${_._.CHAT_BASE_URL}broadcast/getchatinfo`, {
                   params: _,
@@ -8743,7 +8801,6 @@
                       _.flair_group_ids && _.flair_group_ids[0]),
                     _.blocked && console.log("User is blocked from chat"),
                     _.steamid && (this.m_strUserSteamID = _.steamid),
-                    _.token && (this.m_webApiToken = _.token),
                     _.emoticons && this.SetOwnedEmoticons(_.emoticons),
                     this.m_bHasAddedWelcomeChat ||
                       (this.m_rgChatMessages.push({
@@ -8775,7 +8832,7 @@
                 broadcast_channel_id: this.m_ulBroadcastChannelID,
               });
               let _ = await _.JoinChat(
-                this.m_webAPIInterface.GetServiceTransport(),
+                this.m_steamInterface.GetServiceTransport(),
                 _,
               );
               if (!_.Body().chat_id || !_.Body().view_url_template) {
@@ -8811,7 +8868,7 @@
             });
             const _ = (
                 await _.GetChatModerators(
-                  this.m_webAPIInterface.GetServiceTransport(),
+                  this.m_steamInterface.GetServiceTransport(),
                   _,
                 )
               )
@@ -9022,7 +9079,7 @@
                 undo: _,
               }),
                 await _.AddChatBan(
-                  this.m_webAPIInterface.GetServiceTransport(),
+                  this.m_steamInterface.GetServiceTransport(),
                   _,
                 );
             } else {
@@ -9054,27 +9111,16 @@
             if (!this.m_mapMutedUsers[_]) {
               this.m_mapMutedUsers[_] = _;
               try {
-                if (this.m_webApiToken) {
-                  const _ = new FormData();
-                  _.append("chat_id", this.m_ulChatID),
-                    _.append("user_steamid", _),
-                    _.append("muted", "1"),
-                    await _().post(
-                      `${_._.WEBAPI_BASE_URL}IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=${this.m_webApiToken}`,
-                      _,
-                    );
-                } else {
-                  const _ = _._.Init(_._);
-                  _.SetBodyFields({
-                    chat_id: this.m_ulChatID,
-                    user_steamid: _,
-                    muted: !0,
-                  }),
-                    await _._.MuteBroadcastChatUser(
-                      this.m_webAPIInterface.GetServiceTransport(),
-                      _,
-                    );
-                }
+                const _ = _._.Init(_._);
+                _.SetBodyFields({
+                  chat_id: this.m_ulChatID,
+                  user_steamid: _,
+                  muted: !0,
+                }),
+                  await _._.MuteBroadcastChatUser(
+                    this.m_steamInterface.GetServiceTransport(),
+                    _,
+                  );
               } catch {
                 _ &&
                   (this.m_rgChatMessages.push({
@@ -9107,36 +9153,25 @@
               this.m_ulBroadcastSteamID == this.m_strUserSteamID)
             )
               try {
-                if (this.m_webApiToken) {
-                  const _ = new FormData();
-                  _.append("chat_id", this.m_ulChatID),
-                    _.append("user_steamid", _),
-                    _.append("muted", "0"),
-                    await _().post(
-                      `${_._.WEBAPI_BASE_URL}IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=${this.m_webApiToken}`,
-                      _,
-                    );
-                } else {
-                  const _ = _._.Init(_._);
-                  _.SetBodyFields({
-                    chat_id: this.m_ulChatID,
-                    user_steamid: _,
-                    muted: !1,
-                  }),
-                    await _._.MuteBroadcastChatUser(
-                      this.m_webAPIInterface.GetServiceTransport(),
-                      _,
-                    );
-                }
-                this.m_rgChatMessages.push({
-                  type: _._.Notification,
-                  msg: (0, _._)("#BroadcastChat_UserUnmutedLocal", _),
-                  client_ts: Number(new Date()),
-                  instance_id: this.m_unInstanceID,
-                  in_game: !1,
-                  persona_name: "",
-                  steamid: "",
-                });
+                const _ = _._.Init(_._);
+                _.SetBodyFields({
+                  chat_id: this.m_ulChatID,
+                  user_steamid: _,
+                  muted: !1,
+                }),
+                  await _._.MuteBroadcastChatUser(
+                    this.m_steamInterface.GetServiceTransport(),
+                    _,
+                  ),
+                  this.m_rgChatMessages.push({
+                    type: _._.Notification,
+                    msg: (0, _._)("#BroadcastChat_UserUnmutedLocal", _),
+                    client_ts: Number(new Date()),
+                    instance_id: this.m_unInstanceID,
+                    in_game: !1,
+                    persona_name: "",
+                    steamid: "",
+                  });
               } catch {
                 this.m_rgChatMessages.push({
                   type: _._.Error,
@@ -9167,25 +9202,15 @@
           async RemoveUserMessagesServer(_, _) {
             if (_ != this.m_strUserSteamID)
               try {
-                if (this.m_webApiToken) {
-                  const _ = new FormData();
-                  _.append("chat_id", this.m_ulChatID),
-                    _.append("user_steamid", _),
-                    await _().post(
-                      `${_._.WEBAPI_BASE_URL}IBroadcastService/RemoveUserChatText/v0001/?access_token=${this.m_webApiToken}`,
-                      _,
-                    );
-                } else {
-                  const _ = _._.Init(_._);
-                  _.SetBodyFields({
-                    chat_id: this.m_ulChatID,
-                    user_steamid: _,
-                  }),
-                    await _._.RemoveUserChatText(
-                      this.m_webAPIInterface.GetServiceTransport(),
-                      _,
-                    );
-                }
+                const _ = _._.Init(_._);
+                _.SetBodyFields({
+                  chat_id: this.m_ulChatID,
+                  user_steamid: _,
+                }),
+                  await _._.RemoveUserChatText(
+                    this.m_steamInterface.GetServiceTransport(),
+                    _,
+                  );
               } catch {
                 this.m_rgChatMessages.push({
                   type: _._.Error,
@@ -9199,25 +9224,15 @@
               }
           }
           async UpdateChatMessageFlair(_) {
-            if (this.m_webApiToken) {
-              const _ = new FormData();
-              _.append("chat_id", this.m_ulChatID),
-                _.append("flair", `^${this.m_strFlairGroupID}^:${_}:`),
-                await _().post(
-                  `${_._.WEBAPI_BASE_URL}IBroadcastService/UpdateChatMessageFlair/v0001/?access_token=${this.m_webApiToken}`,
-                  _,
-                );
-            } else {
-              const _ = _._.Init(_._);
-              _.SetBodyFields({
-                chat_id: this.m_ulChatID,
-                flair: `^${this.m_strFlairGroupID}^:${_}:`,
-              }),
-                await _._.UpdateChatMessageFlair(
-                  this.m_webAPIInterface.GetServiceTransport(),
-                  _,
-                );
-            }
+            const _ = _._.Init(_._);
+            _.SetBodyFields({
+              chat_id: this.m_ulChatID,
+              flair: `^${this.m_strFlairGroupID}^:${_}:`,
+            }),
+              await _._.UpdateChatMessageFlair(
+                this.m_steamInterface.GetServiceTransport(),
+                _,
+              );
           }
           IsUserMutedLocally(_) {
             return !!this.m_mapMutedUsers[_];
@@ -10315,6 +10330,7 @@
                 hidden: _,
                 bPartnerMemberOnlyChat: _,
                 bInvertLayout: _,
+                onSignIn: _,
               } = this.props,
               _ = this.m_chat ? this.m_chat.m_rgChatMessages : [],
               _ = _ ? _.reverse() : _,
@@ -10341,6 +10357,7 @@
                     oChat: this.m_chat,
                     emoticonStore: this.props.emoticonStore,
                     bPartnerMemberOnlyChat: _,
+                    onSignIn: _,
                   }),
                 (0, _.jsx)(_, {}),
                 (0, _.jsx)("div", {
@@ -10359,6 +10376,7 @@
                     oChat: this.m_chat,
                     emoticonStore: this.props.emoticonStore,
                     bPartnerMemberOnlyChat: _,
+                    onSignIn: _,
                   }),
               ],
             });
@@ -10371,7 +10389,12 @@
           _([_._], _.prototype, "RenderUserChatLine", 1),
           (_ = _([_._], _));
         function _(_) {
-          const { oChat: _, emoticonStore: _, bPartnerMemberOnlyChat: _ } = _;
+          const {
+            oChat: _,
+            emoticonStore: _,
+            bPartnerMemberOnlyChat: _,
+            onSignIn: _,
+          } = _;
           return _ && (!_._?.logged_in || !_._?.is_partner_member)
             ? (0, _.jsx)(_, {})
             : _._?.logged_in
@@ -10379,7 +10402,11 @@
                   oChat: _,
                   emoticonStore: _,
                 })
-              : null;
+              : _
+                ? (0, _.jsx)(_, {
+                    onSignIn: _,
+                  })
+                : null;
         }
         function _(_) {
           const { oChat: _, emoticonStore: _ } = _,
@@ -10510,6 +10537,16 @@
           }
         }
         function _(_) {
+          return (0, _.jsx)("div", {
+            className: _().Description,
+            children: (0, _.jsx)(_._, {
+              onClick: _.onSignIn,
+              className: (0, _._)(_().SignInButton),
+              children: (0, _._)("#BroadcastChat_Login"),
+            }),
+          });
+        }
+        function _(_) {
           return (0, _.jsxs)("div", {
             className: _().Description,
             children: [
@@ -10518,6 +10555,7 @@
                 children: (0, _._)("#Broadcast_PartnerChat_Login"),
               }),
               !_._.logged_in &&
+                !_._.IN_STEAMUI &&
                 (0, _.jsx)(_._, {
                   onClick: _,
                   className: (0, _._)(_().SignInButton),
@@ -15374,6 +15412,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         function _(_) {
@@ -16155,9 +16194,8 @@
                 _.data.success == _._ &&
                 _.data.webapi_token
               ) {
-                this.m_transport = new _._(
-                  _._.WEBAPI_BASE_URL,
-                  _.data.webapi_token,
+                this.m_transport = (0, _._)(
+                  new _._(_._.WEBAPI_BASE_URL, _.data.webapi_token),
                 ).GetServiceTransport();
                 return;
               }
@@ -17490,10 +17528,12 @@
                   (0, _.jsx)("img", {
                     src: _,
                     className: (0, _._)(_.Banner, _.Big),
+                    alt: _.GetNameWithFallback(_),
                   }),
                   (0, _.jsx)("img", {
                     src: _,
                     className: (0, _._)(_.Banner, _.Mobile),
+                    alt: _.GetNameWithFallback(_),
                   }),
                 ],
               });

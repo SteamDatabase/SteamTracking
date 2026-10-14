@@ -1153,6 +1153,9 @@ p {
 	.buttonRow .contentSurveyAttention.newQuestions {
 		background-color: #A4D007;
 	}
+	.buttonRow .contentSurveyAttention.inherited {
+		background-color: #67c1f5;
+	}
 	.buttonRow .compatSection {
 		display: inline-flex;
 		flex-direction: row;

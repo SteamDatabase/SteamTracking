@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [69773],
+    [9773],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -3404,6 +3404,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { schema: _, addtlAttrs: _, children: _ } = _,
@@ -3418,7 +3419,7 @@
               (0, _.jsx)(_._, {
                 onClick: () => _(_),
                 toggled: _,
-                tooltip: "#FormattingToolbar_InsertLink",
+                tooltip: (0, _._)("#FormattingToolbar_InsertLink"),
                 keyboardShortcut: "Mod-k",
                 children: _,
               }),
@@ -3446,8 +3447,8 @@
                 onClick: () => _(_),
                 toggled: _,
                 tooltip: _
-                  ? "#FormattingToolbar_Color"
-                  : "#FormattingToolbar_BgColor",
+                  ? (0, _._)("#FormattingToolbar_Color")
+                  : (0, _._)("#FormattingToolbar_BgColor"),
                 children: _,
               }),
             ],
@@ -3457,13 +3458,13 @@
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
-                tooltip: "#FormattingToolbar_Undo",
+                tooltip: (0, _._)("#FormattingToolbar_Undo"),
                 keyboardShortcut: "Mod-z",
                 command: _._,
                 children: (0, _.jsx)(_.VnB, {}),
               }),
               (0, _.jsx)(_._, {
-                tooltip: "#FormattingToolbar_Redo",
+                tooltip: (0, _._)("#FormattingToolbar_Redo"),
                 keyboardShortcut:
                   _._.PLATFORM == "macos" ? "Mod-Shift-z" : "Mod-y",
                 command: _._,
@@ -3477,33 +3478,33 @@
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
-                tooltip: "#FormattingToolbar_Bold",
+                tooltip: (0, _._)("#FormattingToolbar_Bold"),
                 keyboardShortcut: "Mod-b",
                 mark: _.marks.strong,
                 children: (0, _.jsx)(_.l4n, {}),
               }),
               (0, _.jsx)(_._, {
-                tooltip: "#FormattingToolbar_Italic",
+                tooltip: (0, _._)("#FormattingToolbar_Italic"),
                 keyboardShortcut: "Mod-i",
                 mark: _.marks.italic,
                 children: (0, _.jsx)(_.UKJ, {}),
               }),
               (0, _.jsx)(_._, {
-                tooltip: "#FormattingToolbar_Underline",
+                tooltip: (0, _._)("#FormattingToolbar_Underline"),
                 keyboardShortcut: "Mod-u",
                 mark: _.marks.underline,
                 children: (0, _.jsx)(_.Gj3, {}),
               }),
               "strike" in _.marks &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#FormattingToolbar_Strike",
+                  tooltip: (0, _._)("#FormattingToolbar_Strike"),
                   keyboardShortcut: "Mod-Shift-x",
                   mark: _.marks.strike,
                   children: (0, _.jsx)(_.tI4, {}),
                 }),
               "code" in _.marks &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#FormattingToolbar_InlineCode",
+                  tooltip: (0, _._)("#FormattingToolbar_InlineCode"),
                   keyboardShortcut: "Ctrl-Shift-c",
                   mark: _.marks.code,
                   children: (0, _.jsx)(_.bmT, {}),
@@ -3526,7 +3527,7 @@
         function _(_) {
           const { schema: _ } = _;
           return (0, _.jsx)(_._, {
-            tooltip: "#FormattingToolbar_Paragraph",
+            tooltip: (0, _._)("#FormattingToolbar_Paragraph"),
             keyboardShortcut: "Ctrl-Shift-0",
             nodeType: _.nodes.paragraph,
             children: (0, _.jsx)(_.iYj, {}),
@@ -3561,7 +3562,7 @@
           return jsxs(Fragment, {
             children: [
               jsx(_, {
-                tooltip: "#FormattingToolbar_AlignLeft",
+                tooltip: Localize("#FormattingToolbar_AlignLeft"),
                 keyboardShortcut: "Ctrl-Shift-L",
                 nodeTypes: _,
                 attrs: {
@@ -3570,7 +3571,7 @@
                 children: jsx(GamepadUISVG.TextLeftAlign, {}),
               }),
               jsx(_, {
-                tooltip: "#FormattingToolbar_AlignCenter",
+                tooltip: Localize("#FormattingToolbar_AlignCenter"),
                 keyboardShortcut: "Ctrl-Shift-E",
                 nodeTypes: _,
                 attrs: {
@@ -3579,7 +3580,7 @@
                 children: jsx(GamepadUISVG.TextCenterAlign, {}),
               }),
               jsx(_, {
-                tooltip: "#FormattingToolbar_AlignRight",
+                tooltip: Localize("#FormattingToolbar_AlignRight"),
                 keyboardShortcut: "Ctrl-Shift-R",
                 nodeTypes: _,
                 attrs: {
@@ -3597,7 +3598,7 @@
             children: [
               _ <= 1 &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#FormattingToolbar_HeadingLevel1",
+                  tooltip: (0, _._)("#FormattingToolbar_HeadingLevel1"),
                   keyboardShortcut: "Ctrl-Shift-1",
                   nodeType: _.nodes.heading,
                   attrs: {
@@ -3608,7 +3609,7 @@
               _ <= 2 &&
                 _ >= 2 &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#FormattingToolbar_HeadingLevel2",
+                  tooltip: (0, _._)("#FormattingToolbar_HeadingLevel2"),
                   keyboardShortcut: "Ctrl-Shift-2",
                   nodeType: _.nodes.heading,
                   attrs: {
@@ -3619,7 +3620,7 @@
               _ <= 3 &&
                 _ >= 3 &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#FormattingToolbar_HeadingLevel3",
+                  tooltip: (0, _._)("#FormattingToolbar_HeadingLevel3"),
                   keyboardShortcut: "Ctrl-Shift-3",
                   nodeType: _.nodes.heading,
                   attrs: {
@@ -3630,7 +3631,7 @@
               _ <= 4 &&
                 _ >= 4 &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#FormattingToolbar_HeadingLevel4",
+                  tooltip: (0, _._)("#FormattingToolbar_HeadingLevel4"),
                   keyboardShortcut: "Ctrl-Shift-4",
                   nodeType: _.nodes.heading,
                   attrs: {
@@ -3641,7 +3642,7 @@
               _ <= 5 &&
                 _ >= 5 &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#FormattingToolbar_HeadingLevel5",
+                  tooltip: (0, _._)("#FormattingToolbar_HeadingLevel5"),
                   keyboardShortcut: "Ctrl-Shift-5",
                   nodeType: _.nodes.heading,
                   attrs: {
@@ -3672,7 +3673,7 @@
             (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)(_, {
-                  tooltip: "#FormattingToolbar_BulletedList",
+                  tooltip: (0, _._)("#FormattingToolbar_BulletedList"),
                   keyboardShortcut: "Ctrl-Shift-8",
                   list_type: _,
                   list_item: _,
@@ -3680,7 +3681,7 @@
                 }),
                 _ &&
                   (0, _.jsx)(_, {
-                    tooltip: "#FormattingToolbar_OrderedList",
+                    tooltip: (0, _._)("#FormattingToolbar_OrderedList"),
                     keyboardShortcut: "Ctrl-Shift-7",
                     list_type: _,
                     list_item: _,
@@ -3690,13 +3691,13 @@
                   (0, _.jsxs)(_.Fragment, {
                     children: [
                       (0, _.jsx)(_._, {
-                        tooltip: "#FormattingToolbar_OutdentList",
+                        tooltip: (0, _._)("#FormattingToolbar_OutdentList"),
                         keyboardShortcut: "Mod-[",
                         command: _,
                         children: (0, _.jsx)(_.LSz, {}),
                       }),
                       (0, _.jsx)(_._, {
-                        tooltip: "#FormattingToolbar_IndentList",
+                        tooltip: (0, _._)("#FormattingToolbar_IndentList"),
                         keyboardShortcut: "Mod-[",
                         command: _,
                         children: (0, _.jsx)(_.ycU, {}),
@@ -3744,8 +3745,8 @@
           const { bSpellcheckEnabled: _, setSpellcheckEnabled: _ } = _;
           return (0, _.jsx)(_._, {
             tooltip: _
-              ? "#FormattingToolbar_DisableSpellcheck"
-              : "#FormattingToolbar_EnableSpellcheck",
+              ? (0, _._)("#FormattingToolbar_DisableSpellcheck")
+              : (0, _._)("#FormattingToolbar_EnableSpellcheck"),
             toggled: _,
             onClick: () => _(!_),
             children: (0, _.jsx)(_.DEV, {}),
@@ -3766,7 +3767,6 @@
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -3917,7 +3917,7 @@
             className: _.TooltipWithShortcut,
             children: [
               (0, _.jsx)("div", {
-                children: typeof _ == "string" ? (0, _._)(_) : _,
+                children: _,
               }),
               (0, _.jsx)("div", {
                 children: (0, _.jsx)(_, {

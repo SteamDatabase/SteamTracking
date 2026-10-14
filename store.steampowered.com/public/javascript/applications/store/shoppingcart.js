@@ -10,27 +10,27 @@
         var t = a(7850);
         const j =
             "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=",
-          h =
+          Q =
             a.p +
             "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching",
           v =
             "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
         var M = a(99412),
           K = a(90626);
-        function Q(e) {
+        function h(e) {
           const { rgSources: n, onIncrementalError: r, alt: f, ...l } = e,
-            [s, u] = (0, K.useState)(0),
+            [s, g] = (0, K.useState)(0),
             B = n[s];
           return (0, t.jsx)("img", {
-            onError: (d) => {
-              u((y) => y + 1), r?.(d, B, s);
+            onError: (A) => {
+              g((y) => y + 1), r?.(A, B, s);
             },
             alt: f,
             ...l,
             src: B,
           });
         }
-        var A = a(72609),
+        var d = a(72609),
           I = a(64238),
           R = a.n(I),
           c = a(16339),
@@ -42,9 +42,9 @@
               statusStyle: f,
               statusPosition: l,
               className: s,
-              children: u,
+              children: g,
               isOnline: B,
-              isInGame: d,
+              isInGame: A,
               isWatchingBroadcast: y,
               isAwayOrSnooze: X,
               alt: p,
@@ -59,7 +59,7 @@
                 {
                   [c.Offline]: !B,
                   [c.Online]: B,
-                  [c.InGame]: d,
+                  [c.InGame]: A,
                   [c.WatchingBroadcast]: y,
                   [c.AwayOrSnooze]: X,
                 },
@@ -69,13 +69,13 @@
               "data-status-position": l,
               children: [
                 (0, t.jsx)("div", { className: c.AvatarStatus, style: f }),
-                (0, t.jsx)(Q, {
+                (0, t.jsx)(h, {
                   className: R()(c.Avatar),
                   rgSources: N,
                   draggable: !1,
                   alt: p,
                 }),
-                u,
+                g,
               ],
             })
           );
@@ -113,12 +113,12 @@
             size: l,
             ...s
           } = e;
-          let u = (0, U.t)(n.public_data?.sha_digest_avatar, l);
+          let g = (0, U.t)(n.public_data?.sha_digest_avatar, l);
           return (
             r?.image_small?.length &&
-              (u = A.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + r.image_small),
+              (g = d.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + r.image_small),
             (0, t.jsx)(L, {
-              avatarURL: u,
+              avatarURL: g,
               size: l,
               isOnline: n.private_data?.persona_state === M.UXk,
               isInGame: n.private_data?.game_id !== void 0,
@@ -158,7 +158,7 @@
             r
           );
         }
-        function g(e) {
+        function u(e) {
           const {
               loopDuration: n = "Infinite",
               bParentHovered: r,
@@ -166,8 +166,8 @@
               className: l,
               ...s
             } = e,
-            [u, B] = useState(!1),
-            d = E(n, u),
+            [g, B] = useState(!1),
+            A = E(n, g),
             y = useProfileItemsEquipped(
               s.playerLinkDetails.public_data.steamid,
             );
@@ -177,10 +177,10 @@
             onMouseLeave: () => B(!1),
             children: jsx(T, {
               ...s,
-              animatedAvatar: d ? y.data?.animated_avatar : void 0,
+              animatedAvatar: A ? y.data?.animated_avatar : void 0,
               children: jsx(O, {
                 profileItem: y.data?.avatar_frame,
-                bDisableAnimation: f && !d,
+                bDisableAnimation: f && !A,
               }),
             }),
           });
@@ -189,14 +189,14 @@
           switch (e) {
             case "X-Small":
             case "Small":
-              return (0, A.YJ)(j);
+              return (0, d.YJ)(j);
             case "Medium":
             case "MediumLarge":
-              return (0, A.YJ)(v);
+              return (0, d.YJ)(v);
             case "Large":
             case "X-Large":
             case "FillArea":
-              return (0, A.YJ)(h);
+              return (0, d.YJ)(Q);
           }
         }
       },
@@ -205,12 +205,12 @@
         a.r(P), a.d(P, { CartErrorModal: () => q, default: () => $ });
         var t = a(7850),
           j = a(30986),
-          h = a(68031),
+          Q = a(68031),
           v = a(15252),
           M = a(8892),
           K = a(93191),
-          Q = a(19298),
-          A = a(55051),
+          h = a(19298),
+          d = a(55051),
           I = a(72609),
           R = a(66243),
           c = a(47604),
@@ -219,7 +219,7 @@
           O = a(68312),
           T = a(20117),
           E = a(80902),
-          g = a(75233),
+          u = a(75233),
           C = a(51614);
         const e = "giftee-hint-2",
           n = 600;
@@ -257,7 +257,7 @@
           });
         }
         function l() {
-          const i = (0, g.jE)(),
+          const i = (0, u.jE)(),
             o = (0, O.rX)();
           return (0, C.n)({
             mutationFn: async (m) => {
@@ -273,9 +273,9 @@
           });
         }
         var s = a(72865),
-          u = a(90626),
+          g = a(90626),
           B = a(46477),
-          d = a(79485),
+          A = a(79485),
           y = a(48366),
           X = a(30815),
           p = a(36798),
@@ -292,7 +292,7 @@
             S = (0, X.Yj)(m),
             Y = (0, s.aL)(`${I.TS.STORE_BASE_URL}cart/`);
           if (
-            (u.useEffect(() => {
+            (g.useEffect(() => {
               S && S?.length == 0 && o();
             }, [S, o]),
             !S || !Z)
@@ -308,8 +308,9 @@
               onClose: o,
               navID: "CartModal",
               strTitle: V,
-              children: (0, t.jsxs)("div", {
+              children: (0, t.jsxs)(h.Z, {
                 className: x.ShoppingCartModalContent,
+                "flow-children": "column",
                 children: [
                   (0, t.jsx)(k.p, {
                     lineItems: S,
@@ -317,7 +318,7 @@
                     scrollable: !0,
                   }),
                   (0, t.jsx)(aa, { lineItems: S, cartValidation: W }),
-                  (0, t.jsxs)(Q.Z, {
+                  (0, t.jsxs)(h.Z, {
                     className: x.ShoppingCartModalBtns,
                     children: [
                       (0, t.jsx)(R.Oh, {
@@ -372,12 +373,12 @@
         }
         function aa(i) {
           const { cartValidation: o, lineItems: m } = i,
-            H = u.useRef(!1),
-            [Z, z] = u.useState(!1),
+            H = g.useRef(!1),
+            [Z, z] = g.useState(!1),
             { gifteeHint: W, gifteePlayerDetails: S } = r(),
             Y = (0, y.EJ)(),
             V = l(),
-            ta = (0, d.C)(),
+            ta = (0, A.C)(),
             _ = S?.public_data,
             ea = o?.cart_items;
           let F = !Z && !!W?.nGifteeAccountID && !!_ && !Y && !!o?.cart_items;
@@ -390,16 +391,16 @@
             );
           }
           if (
-            (u.useEffect(() => {
+            (g.useEffect(() => {
               F &&
                 !H.current &&
-                ((0, B.D)()?.AddEvent(A.Xm.K4), (H.current = !0));
+                ((0, B.D)()?.AddEvent(d.Xm.K4), (H.current = !0));
             }, [F]),
             !F)
           )
             return null;
           const na = () => {
-              (0, B.D)()?.AddEvent(A.Xm.En), V.mutate(null);
+              (0, B.D)()?.AddEvent(d.Xm.En), V.mutate(null);
             },
             sa = () => {
               for (const J of m)
@@ -412,7 +413,7 @@
                   },
                   gidCoupon: J.gidcoupon_applied,
                 });
-              V.mutate(W), z(!0), (0, B.D)()?.AddEvent(A.Xm.xh);
+              V.mutate(W), z(!0), (0, B.D)()?.AddEvent(d.Xm.xh);
             },
             oa = (0, t.jsxs)("a", {
               href: (0, K.n)(S),
@@ -431,7 +432,7 @@
                 }),
               ],
             });
-          return (0, t.jsxs)(h.s, {
+          return (0, t.jsxs)(Q.s, {
             className: x.GifteeHintCtn,
             align: "center",
             gap: "3",
@@ -443,7 +444,7 @@
                 className: x.GifteeHint,
                 children: p.Q8.LocalizeReact("#Cart_GifteeHint_Wishlist", oa),
               }),
-              (0, t.jsxs)(h.s, {
+              (0, t.jsxs)(Q.s, {
                 gap: "2",
                 direction: "row",
                 align: "center",
@@ -467,14 +468,14 @@
       },
       93191: (D, P, a) => {
         "use strict";
-        a.d(P, { F: () => h, n: () => j });
+        a.d(P, { F: () => Q, n: () => j });
         var t = a(72609);
         function j(v, M) {
           return v?.public_data?.profile_url
             ? `${t.TS.COMMUNITY_BASE_URL}id/${v.public_data.profile_url}`
-            : h(v?.public_data?.steamid || M);
+            : Q(v?.public_data?.steamid || M);
         }
-        function h(v) {
+        function Q(v) {
           return v ? `${t.TS.COMMUNITY_BASE_URL}profiles/${v}` : "";
         }
       },
@@ -483,54 +484,54 @@
         a.d(P, { y: () => c });
         var t = a(7850),
           j = a(24660),
-          h = a(38566),
+          Q = a(38566),
           v = a(54130),
           M = a(64238),
           K = a.n(M),
-          Q = a(90626),
-          A = a(3166),
+          h = a(90626),
+          d = a(3166),
           I = a(88208),
           R = a.n(I);
         const c = Object.assign(U, { Root: L, Content: T });
         function U(E) {
-          const { children: g, className: C, ...e } = E;
+          const { children: u, className: C, ...e } = E;
           return (0, t.jsx)(c.Root, {
             ...e,
-            children: (0, t.jsx)(c.Content, { className: C, children: g }),
+            children: (0, t.jsx)(c.Content, { className: C, children: u }),
           });
         }
         function L(E) {
           const {
-              onClose: g,
+              onClose: u,
               className: C,
               navID: e,
               children: n,
               allowScrollBehind: r,
               ...f
             } = E,
-            [l, s] = Q.useState(!1),
-            u = Q.useCallback((d) => {
-              d &&
-                (d.showModal(),
-                d.ownerDocument.defaultView &&
+            [l, s] = h.useState(!1),
+            g = h.useCallback((A) => {
+              A &&
+                (A.showModal(),
+                A.ownerDocument.defaultView &&
                   s(
-                    d.ownerDocument.body.scrollHeight >
-                      d.ownerDocument.defaultView.innerHeight,
+                    A.ownerDocument.body.scrollHeight >
+                      A.ownerDocument.defaultView.innerHeight,
                   ));
             }, []),
-            B = Q.useCallback(
-              (d) => {
-                d.target == d.currentTarget && g("backdropclick");
+            B = h.useCallback(
+              (A) => {
+                A.target == A.currentTarget && u("backdropclick");
               },
-              [g],
+              [u],
             );
           return (0, t.jsx)(O, {
             navID: e ?? "ModalDialog",
-            onClose: g,
+            onClose: u,
             children: (0, t.jsx)("dialog", {
-              ref: u,
+              ref: g,
               className: K()(I.ModalDialog, !r && l && I.PreventScroll, C),
-              onClose: () => g("onclose"),
+              onClose: () => u("onclose"),
               onClick: B,
               ...f,
               children: (0, t.jsx)(v.q, { children: n }),
@@ -538,14 +539,14 @@
           });
         }
         function O(E) {
-          const { navID: g, onClose: C, children: e } = E,
-            n = Q.useCallback(() => C("cancelbutton"), [C]),
-            r = Q.useRef(void 0);
+          const { navID: u, onClose: C, children: e } = E,
+            n = h.useCallback(() => C("cancelbutton"), [C]),
+            r = h.useRef(void 0);
           return (
             (0, j.O7)(r, !0, !0),
-            (0, A.Qn)()
-              ? (0, t.jsx)(h.D6, {
-                  navID: g ?? "ModalDialog",
+            (0, d.Qn)()
+              ? (0, t.jsx)(Q.D6, {
+                  navID: u ?? "ModalDialog",
                   onCancelButton: n,
                   modal: !0,
                   navTreeRef: r,
@@ -555,9 +556,9 @@
           );
         }
         function T(E) {
-          const { className: g, children: C } = E;
+          const { className: u, children: C } = E;
           return (0, t.jsx)("div", {
-            className: K()(I.ModalDialogContent, g),
+            className: K()(I.ModalDialogContent, u),
             onClick: (e) => e.stopPropagation(),
             children: C,
           });
@@ -568,12 +569,12 @@
         a.d(P, { s: () => I });
         var t = a(7850),
           j = a(19298),
-          h = a(64238),
-          v = a.n(h),
+          Q = a(64238),
+          v = a.n(Q),
           M = a(36118),
           K = a(76962),
-          Q = a(5598),
-          A = a.n(Q);
+          h = a(5598),
+          d = a.n(h);
         function I(R) {
           const {
             onClose: c,
@@ -582,33 +583,33 @@
             children: O,
             strTitle: T,
             wideMode: E,
-            ...g
+            ...u
           } = R;
           return (0, t.jsx)(K.y, {
             onClose: c,
             navID: L ?? "SimpleModalDialog",
-            ...g,
+            ...u,
             children: (0, t.jsxs)("div", {
-              className: v()(U, A().SimpleModalDialog, E && A().WideMode),
+              className: v()(U, d().SimpleModalDialog, E && d().WideMode),
               children: [
                 " ",
                 (0, t.jsxs)(j.Z, {
-                  className: A().SimpleModalDialogHeader,
+                  className: d().SimpleModalDialogHeader,
                   children: [
                     T &&
-                      (0, t.jsx)("h2", {
-                        className: A().SimpleModalDialogTitle,
+                      (0, t.jsx)("div", {
+                        className: d().SimpleModalDialogTitle,
                         children: T,
                       }),
                     (0, t.jsx)("button", {
                       onClick: (C) => (c("xclick"), C.preventDefault(), !1),
-                      className: A().XButton,
+                      className: d().XButton,
                       children: (0, t.jsx)(M.tmm, {}),
                     }),
                   ],
                 }),
                 (0, t.jsx)("div", {
-                  className: A().SimpleModalContentCtn,
+                  className: d().SimpleModalContentCtn,
                   children: O,
                 }),
               ],

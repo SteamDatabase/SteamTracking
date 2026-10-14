@@ -19,11 +19,12 @@
     "Sale_Section_Label_Color": "Warna Label",
     "Sale_Section_Background_Top": "Gradien Latar Belakang (Atas)",
     "Sale_Section_Background_Bottom": "Gradien Latar Belakang (Bawah)",
-    "Reservation_InPool": "Anda berada dalam senarai untuk model yang dipilih di bawah",
-    "Reservation_In_Waitlist_WithName": "Dalam senarai menunggu %1$s sejak %2$s",
-    "machine_dummy": "palsu",
+    "Reservation_JoinPool": "Sertai Senarai",
+    "Reservation_Change_Pool": "Tukar Model?",
+    "Reservation_In_Waitlist_NoDate": "Dalam senarai menunggu",
     "PriceDisplay_YourPrice": "Harga Anda:",
     "PriceGrid_NormalPrice": "BIASANYA",
     "PriceGrid_RecentPrice": "HARGA TERENDAH 30 HARI",
-    "PriceGrid_CurrentPrice": "SEKARANG"
+    "PriceGrid_CurrentPrice": "SEKARANG",
+    "Dummy": "palsu"
 }

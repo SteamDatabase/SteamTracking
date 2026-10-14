@@ -29,7 +29,7 @@
   var _ = (_, _, _) => Dre(_, typeof _ != "symbol" ? _ + "" : _, _);
   var Ere = Ire((_) => {
     (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-      [10091],
+      [91],
       {
         chunkid: (module, module_exports, __webpack_require__) => {
           var _,

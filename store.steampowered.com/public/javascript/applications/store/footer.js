@@ -4,34 +4,34 @@
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
     [21574],
     {
-      84909: (T, y, t) => {
+      84909: (R, D, t) => {
         "use strict";
-        t.d(y, { AM: () => W, Pr: () => N });
+        t.d(D, { AM: () => W, Pr: () => N });
         var n = t(7850),
           i = t(90626),
           m = t(73788),
-          V = t(8083),
+          P = t(8083),
           d = t(94621),
           M = t(18938),
           e = t(24660),
-          S = t(38566),
+          O = t(38566),
           H = t(54130),
           c = t(71742),
-          O = t(64238),
-          r = t.n(O),
+          T = t(64238),
+          r = t.n(T),
           E = t(3877),
           v = t(3166),
-          j = t(28020);
-        const C = (0, i.createContext)(null);
-        function A(a) {
+          A = t(28020);
+        const h = (0, i.createContext)(null);
+        function S(a) {
           const { children: p, ...o } = a,
             f = $(o);
-          return (0, n.jsx)(C.Provider, { value: f, children: p });
+          return (0, n.jsx)(h.Provider, { value: f, children: p });
         }
-        function B(a) {
+        function y(a) {
           const { children: p } = a,
             o = i.Children.only(p),
-            f = (0, i.useContext)(C);
+            f = (0, i.useContext)(h);
           return o
             ? f
               ? (0, i.cloneElement)(o, {
@@ -44,10 +44,10 @@
                 null)
             : null;
         }
-        function U(a) {
+        function I(a) {
           const { children: p, className: o, ref: f, label: L } = a,
-            z = (0, i.useContext)(C),
-            D = (0, m.SV)([f, z?.floating.refs.setFloating]);
+            z = (0, i.useContext)(h),
+            B = (0, m.SV)([f, z?.floating.refs.setFloating]);
           if (!z)
             return (
               console.error(
@@ -56,34 +56,34 @@
               null
             );
           if (!z.open) return null;
-          let I = i.Children.only(p),
+          let F = i.Children.only(p),
             x = i.Fragment;
           return (
-            I.type == W.FocusManager &&
-              ((I = i.Children.only(I.props.children)), (x = l)),
+            F.type == W.FocusManager &&
+              ((F = i.Children.only(F.props.children)), (x = l)),
             (0, n.jsx)(x, {
-              children: (0, n.jsx)(j.HF, {
+              children: (0, n.jsx)(A.HF, {
                 presentation: z.presentation,
                 sizing: z.sizing,
-                floatingRef: D,
+                floatingRef: B,
                 floatingProps: z.getFloatingProps(),
                 floatingStyles: z.floating.floatingStyles,
                 referenceElement: z.floating.elements.domReference,
                 className: r()((0, E.T)(), o),
                 label: L,
-                children: I,
+                children: F,
               }),
             })
           );
         }
         function l(a) {
           return (0, v.Qn)()
-            ? (0, n.jsx)(F, { ...a })
+            ? (0, n.jsx)(U, { ...a })
             : (0, n.jsx)(k, { ...a });
         }
-        function F(a) {
+        function U(a) {
           const { children: p } = a,
-            o = (0, i.useContext)(C);
+            o = (0, i.useContext)(h);
           (0, c.wT)(
             !!o,
             "<Popover.Positioner> must be a child of <Popover.Root>.",
@@ -92,7 +92,7 @@
             L = i.useRef(void 0);
           return (
             (0, e.O7)(L, !0, !0),
-            (0, n.jsx)(S.D6, {
+            (0, n.jsx)(O.D6, {
               navID: "Popover",
               onCancelButton: f,
               modal: !0,
@@ -106,7 +106,7 @@
         }
         function k(a) {
           const { children: p } = a,
-            o = (0, i.useContext)(C);
+            o = (0, i.useContext)(h);
           return (
             (0, c.wT)(
               !!o,
@@ -127,21 +127,21 @@
             width: f,
             maxHeight: L,
             gutter: z,
-            scroll: D,
+            scroll: B,
           } = a;
-          let I = p;
-          const x = (0, j.Pr)(a.presentation),
-            R = N(a, I, x),
+          let F = p;
+          const x = (0, A.Pr)(a.presentation),
+            V = N(a, F, x),
             Z = { enabled: !!o.click },
             s = typeof o.click == "function" ? o.click(Z) : Z,
-            X = (0, m.kp)(R.context, s),
-            h = { enabled: !!o.focus },
-            q = typeof o.focus == "function" ? o.focus(h) : h,
-            _ = (0, m.iQ)(R.context, q),
+            X = (0, m.kp)(V.context, s),
+            C = { enabled: !!o.focus },
+            q = typeof o.focus == "function" ? o.focus(C) : C,
+            _ = (0, m.iQ)(V.context, q),
             J = { handleClose: (0, m.iB)() },
             t1 = typeof o.hover == "function" ? o.hover(J) : J,
-            n1 = (0, m.Mk)(R.context, { enabled: !!o.hover, ...t1 }),
-            e1 = (0, m.s9)(R.context),
+            n1 = (0, m.Mk)(V.context, { enabled: !!o.hover, ...t1 }),
+            e1 = (0, m.s9)(V.context),
             { getFloatingProps: o1, getReferenceProps: G } = (0, m.bv)([
               X,
               _,
@@ -149,12 +149,12 @@
               e1,
             ]);
           return {
-            floating: R,
+            floating: V,
             getFloatingProps: o1,
             getReferenceProps: G,
-            open: I,
+            open: F,
             presentation: x,
-            sizing: { width: f, maxHeight: L, gutter: z, scroll: D },
+            sizing: { width: f, maxHeight: L, gutter: z, scroll: B },
           };
         }
         function N(a, p, o) {
@@ -164,12 +164,12 @@
             open: p,
             onOpenChange: f,
             middleware: z ? K(a) : [],
-            whileElementsMounted: z ? V.ll : void 0,
+            whileElementsMounted: z ? P.ll : void 0,
             placement: L && typeof L == "object" ? L.initial : L,
             strategy: "fixed",
             platform: {
-              ...V.iD,
-              getOffsetParent: (D) => D?.ownerDocument?.defaultView ?? window,
+              ...P.iD,
+              getOffsetParent: (B) => B?.ownerDocument?.defaultView ?? window,
             },
           });
         }
@@ -190,48 +190,48 @@
             f.push(
               (0, d.Ej)({
                 apply: (z) => {
-                  const { rects: D, elements: I, availableHeight: x } = z,
-                    R = {
+                  const { rects: B, elements: F, availableHeight: x } = z,
+                    V = {
                       boxSizing: "border-box",
                       zIndex: "1",
                       "-webkit-app-region": "no-drag",
                     };
-                  switch ((a.scroll && (R.overflowY = "auto"), a.width)) {
+                  switch ((a.scroll && (V.overflowY = "auto"), a.width)) {
                     case "target": {
-                      R.width = `${D.reference.width}px`;
+                      V.width = `${B.reference.width}px`;
                       break;
                     }
                     case "content": {
-                      R.width = `${D.floating.width}px`;
+                      V.width = `${B.floating.width}px`;
                       break;
                     }
                     case "dropdown": {
-                      let s = D.reference.width;
-                      D.floating.width > s && s < 200 && (s = D.floating.width),
-                        (R.width = `${s}px`);
+                      let s = B.reference.width;
+                      B.floating.width > s && s < 200 && (s = B.floating.width),
+                        (V.width = `${s}px`);
                     }
                   }
                   typeof a.width == "function" &&
-                    (R.width = a.width({
-                      unContentWidth: D.floating.width,
-                      unTargetWidth: D.reference.width,
+                    (V.width = a.width({
+                      unContentWidth: B.floating.width,
+                      unTargetWidth: B.reference.width,
                     }));
                   const Z =
                     typeof p == "number" ? `${p}px` : `var(--spacing-${p})`;
                   typeof a.maxHeight == "function"
-                    ? (R.maxHeight = a.maxHeight({
+                    ? (V.maxHeight = a.maxHeight({
                         unAvailableHeight: x,
                         gutter: Z,
                       }))
                     : typeof a.maxHeight == "number"
-                      ? (R.maxHeight = `min( calc( ${x}px - ${Z} ), ${a.maxHeight}px )`)
+                      ? (V.maxHeight = `min( calc( ${x}px - ${Z} ), ${a.maxHeight}px )`)
                       : typeof p == "number"
-                        ? (R.maxHeight = `${x - p}px`)
-                        : (R.maxHeight = `calc( ${x}px - var(--spacing-${p}) )`),
-                    Object.assign(I.floating.style, R),
-                    I.floating.style.setProperty(
+                        ? (V.maxHeight = `${x - p}px`)
+                        : (V.maxHeight = `calc( ${x}px - var(--spacing-${p}) )`),
+                    Object.assign(F.floating.style, V),
+                    F.floating.style.setProperty(
                       "--popover-max-height",
-                      R.maxHeight,
+                      V.maxHeight,
                     );
                 },
               }),
@@ -239,36 +239,36 @@
             f
           );
         }
-        const W = { Root: A, Anchor: B, Positioner: U, FocusManager: l };
+        const W = { Root: S, Anchor: y, Positioner: I, FocusManager: l };
       },
-      95994: (T, y, t) => {
+      95994: (R, D, t) => {
         "use strict";
-        t.d(y, { x: () => c });
+        t.d(D, { x: () => c });
         var n = t(7850),
           i = t(70182),
           m = t(64238),
-          V = t.n(m),
+          P = t.n(m),
           d = t(8928),
           M = t(69289),
           e = t(75180),
-          S = t.n(e),
+          O = t.n(e),
           H = t(3166);
         function c(r) {
-          const { as: E = "div", ref: v, focusable: j, navProps: C, ...A } = r,
-            B = (0, H.Qn)(),
-            U = (0, M.mz)({ ...A, className: V()(e.Grid, r.className) }, O),
-            l = j ?? C?.focusable ?? !!A.onClick,
-            F = (0, n.jsx)(E, { ref: v, ...U });
-          return B
+          const { as: E = "div", ref: v, focusable: A, navProps: h, ...S } = r,
+            y = (0, H.Qn)(),
+            I = (0, M.mz)({ ...S, className: P()(e.Grid, r.className) }, T),
+            l = A ?? h?.focusable ?? !!S.onClick,
+            U = (0, n.jsx)(E, { ref: v, ...I });
+          return y
             ? (0, n.jsx)(i.J, {
                 "flow-children": "grid",
-                ...(C || {}),
+                ...(h || {}),
                 focusable: l,
-                children: F,
+                children: U,
               })
-            : F;
+            : U;
         }
-        const O = [
+        const T = [
           ...d.h,
           {
             prop: "display",
@@ -362,79 +362,79 @@
           },
         ];
       },
-      57152: (T, y, t) => {
+      57152: (R, D, t) => {
         "use strict";
-        t.d(y, { D: () => E });
+        t.d(D, { D: () => E });
         var n = t(7850),
           i = t(39049),
           m = t(8928),
-          V = t(15252),
+          P = t(15252),
           d = t(69289),
           M = t(90626);
-        function e(C) {
-          const { depth: A } = useContext(S);
-          return jsx(S.Provider, {
-            value: { depth: A + 1 },
-            children: jsx(Box, { ...C }),
+        function e(h) {
+          const { depth: S } = useContext(O);
+          return jsx(O.Provider, {
+            value: { depth: S + 1 },
+            children: jsx(Box, { ...h }),
           });
         }
-        const S = M.createContext({ depth: 0 });
+        const O = M.createContext({ depth: 0 });
         function H() {
-          return (0, M.useContext)(S).depth;
+          return (0, M.useContext)(O).depth;
         }
         var c = t(3877),
-          O = t(64238),
-          r = t.n(O);
-        function E(C) {
-          const { level: A = "auto", className: B, color: U } = C,
+          T = t(64238),
+          r = t.n(T);
+        function E(h) {
+          const { level: S = "auto", className: y, color: I } = h,
             l = H(),
-            F = j(A, l);
-          return (0, n.jsx)(F, {
-            ...(0, d.mz)({ ...C, className: r()((0, c.T)(), i.Heading, B) }, v),
+            U = A(S, l);
+          return (0, n.jsx)(U, {
+            ...(0, d.mz)({ ...h, className: r()((0, c.T)(), i.Heading, y) }, v),
           });
         }
         const v = [
-          ...V.U6,
+          ...P.U6,
           ...m.L,
           {
             prop: "size",
             responsive: !0,
-            className: (C) => i[`HeadingSize-${C}`],
+            className: (h) => i[`HeadingSize-${h}`],
           },
         ];
-        function j(C, A) {
-          if (C === "auto" && A === 0) return "h1";
-          const B = C === "auto" ? A.toString() : C;
-          return /^[1-6]$/.test(B)
-            ? "h" + B
-            : C === "auto"
+        function A(h, S) {
+          if (h === "auto" && S === 0) return "h1";
+          const y = h === "auto" ? S.toString() : h;
+          return /^[1-6]$/.test(y)
+            ? "h" + y
+            : h === "auto"
               ? (console.error(
                   '<Section> nesting has exceeded "h6" for headings.',
                 ),
                 "h6")
               : (console.error(
-                  `Attempt to render invalid heading level, "${B}".`,
+                  `Attempt to render invalid heading level, "${y}".`,
                 ),
                 "h1");
         }
       },
-      15252: (T, y, t) => {
+      15252: (R, D, t) => {
         "use strict";
-        t.d(y, { Ae: () => O, EY: () => H, U6: () => c });
+        t.d(D, { Ae: () => T, EY: () => H, U6: () => c });
         var n = t(7850),
           i = t(1039),
           m = t(69289),
-          V = t(8928),
+          P = t(8928),
           d = t(64238),
           M = t.n(d),
           e = t(65274),
-          S = t.n(e);
+          O = t.n(e);
         function H(r) {
-          const { as: E = "span", ref: v, className: j, ...C } = r,
-            A = E;
-          return (0, n.jsx)(A, {
+          const { as: E = "span", ref: v, className: A, ...h } = r,
+            S = E;
+          return (0, n.jsx)(S, {
             ref: v,
-            ...(0, m.mz)({ ...C, className: M()(e.Text, j) }, O),
+            ...(0, m.mz)({ ...h, className: M()(e.Text, A) }, T),
           });
         }
         const c = [
@@ -479,9 +479,9 @@
               cssProperty: "--white-space",
             },
           ],
-          O = [
+          T = [
             ...c,
-            ...V.L,
+            ...P.L,
             {
               prop: "size",
               responsive: !0,
@@ -489,89 +489,85 @@
             },
           ];
       },
-      86336: (T, y, t) => {
+      86336: (R, D, t) => {
         "use strict";
-        t.d(y, { W: () => O, Y: () => H });
+        t.d(D, { W: () => T, Y: () => H });
         var n = t(7850),
           i = t(50122),
           m = t.n(i),
-          V = t(15252),
+          P = t(15252),
           d = t(69289),
-          M = t(24660),
-          e = t(70182),
-          S = t(3166);
+          M = t(70182),
+          e = t(3166),
+          O = t(2333);
         function H(r) {
-          const { underline: E = "auto", focusable: v, navProps: j, ...C } = r,
-            A = (0, S.Qn)(),
-            B = v ?? j?.focusable ?? !!C.href,
-            U = (0, d.mz)({ ...C, underline: E, className: i.TextLink }, c);
-          return A && (B || j)
-            ? (0, n.jsx)(M.Ii, { ...U, ...(j || {}), focusable: B })
-            : (0, n.jsx)("a", { ...U });
+          const { underline: E = "auto", ...v } = r,
+            A = (0, d.mz)({ ...v, underline: E, className: i.TextLink }, c);
+          return (0, n.jsx)(O.o, { ...A });
         }
         const c = [
-          ...V.Ae,
+          ...P.Ae,
           { prop: "underline", className: (r) => i[`Underline-${r}`] },
         ];
-        function O(r) {
-          const { underline: E = "auto", focusable: v, navProps: j, ...C } = r,
-            A = (0, S.Qn)(),
-            B = v ?? j?.focusable ?? !!C.onClick,
-            U = (0, n.jsx)("span", {
+        function T(r) {
+          const { underline: E = "auto", focusable: v, navProps: A, ...h } = r,
+            S = (0, e.Qn)(),
+            y = v ?? A?.focusable ?? !!h.onClick,
+            I = (0, n.jsx)("span", {
               role: "button",
               ...(0, d.mz)(
-                { ...C, underline: E, className: i.TextLinkButton },
+                { ...h, underline: E, className: i.TextLinkButton },
                 c,
               ),
             });
-          return A && (B || j)
-            ? (0, n.jsx)(e.J, { ...(j || {}), focusable: B, children: U })
-            : U;
+          return S && (y || A)
+            ? (0, n.jsx)(M.J, { ...(A || {}), focusable: y, children: I })
+            : I;
         }
       },
-      10566: (T, y, t) => {
+      10566: (R, D, t) => {
         "use strict";
-        t.r(y), t.d(y, { GlobalFooter: () => a1 });
+        t.r(D), t.d(D, { GlobalFooter: () => a1 });
         var n = t(7850),
           i = t(68031),
           m = t(57152),
-          V = t(86336),
+          P = t(86336),
           d = t(83321),
           M = t(15252),
           e = t(8892),
-          S = t(75694),
+          O = t(75694),
           H = t(95994),
           c = t(32093),
-          O = t(79014),
+          T = t(79014),
           r = t(52438),
           E = t(90900);
         function v() {
           return (0, r.j_)(E.k1) === "desktop";
         }
-        function j() {
+        function A() {
           return ReadCookie(k_responsiveViewPrefsCookie) === "touch";
         }
-        function C(u = !1) {
-          const P = [];
+        function h(u = !1) {
+          const j = [];
           return (
-            v() ? P.push("force_desktop") : P.push("responsive"),
-            (j() || u) && P.push("touch"),
-            P.join(" ")
+            v() ? j.push("force_desktop") : j.push("responsive"),
+            (A() || u) && j.push("touch"),
+            j.join(" ")
           );
         }
-        function A() {
+        function S() {
           WriteCookie(k_responsiveViewPrefsCookie, "desktop"),
             "location" in window && location.reload();
         }
-        function B() {
+        function y() {
           WriteCookie(k_responsiveViewPrefsCookie, "touch"),
             "location" in window && location.reload();
         }
-        function U() {
+        function I() {
           v() && (0, r.Y1)(E.k1), "location" in window && location.reload();
         }
         var l = t(72609),
-          F = t(72865),
+          U = t(72865),
           k = t(64238),
           $ = t.n(k),
           N = t(90626),
@@ -581,7 +577,7 @@
           p = t(67344);
         function o(u) {
           const {
-              children: P,
+              children: j,
               hoverContent: Y,
               nDelayShowMS: w,
               bTooltipMode: c1,
@@ -602,7 +598,7 @@
             presentation: "anchor",
             ...C1,
             children: [
-              (0, n.jsx)(a.AM.Anchor, { children: P }),
+              (0, n.jsx)(a.AM.Anchor, { children: j }),
               (0, n.jsx)(a.AM.Positioner, {
                 children: (0, n.jsx)(W.az, { children: Y }),
               }),
@@ -649,7 +645,7 @@
             ],
           });
         }
-        function D() {
+        function B() {
           return (0, n.jsxs)("svg", {
             width: "98",
             height: "34",
@@ -669,7 +665,7 @@
             ],
           });
         }
-        function I() {
+        function F() {
           return (0, n.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             width: "100",
@@ -698,12 +694,12 @@
           });
         }
         function x(u) {
-          let { href: P, ...Y } = u;
-          const w = (0, F.n9)();
+          let { href: j, ...Y } = u;
+          const w = (0, U.n9)();
           return (
-            P?.startsWith(l.TS.STORE_BASE_URL) && (P = (0, F.bV)(w, P)),
-            (0, n.jsx)(V.Y, {
-              href: P,
+            j?.startsWith(l.TS.STORE_BASE_URL) && (j = (0, U.bV)(w, j)),
+            (0, n.jsx)(P.Y, {
+              href: j,
               color: "dull-11",
               target: "_blank",
               whiteSpace: "nowrap",
@@ -711,9 +707,9 @@
             })
           );
         }
-        function R(u) {
-          const P = (0, d.xC)();
-          return P === "initial" || P === "sm"
+        function V(u) {
+          const j = (0, d.xC)();
+          return j === "initial" || j === "sm"
             ? null
             : (0, n.jsx)("footer", {
                 className: $()(L().SteamChinaFooter, u.className),
@@ -795,11 +791,11 @@
                           children: [
                             (0, n.jsx)(x, {
                               href: "https://www.wanmei.com/",
-                              children: (0, n.jsx)(D, {}),
+                              children: (0, n.jsx)(B, {}),
                             }),
                             (0, n.jsx)(x, {
                               href: "https://www.valvesoftware.com",
-                              children: (0, n.jsx)(I, {}),
+                              children: (0, n.jsx)(F, {}),
                             }),
                           ],
                         }),
@@ -929,7 +925,7 @@
         async function X(u) {
           if (s[u]) return s[u]();
         }
-        const h = (0, Z.l)(X);
+        const C = (0, Z.l)(X);
         var q = t(3166);
         function _() {
           return (0, n.jsxs)("svg", {
@@ -1066,12 +1062,12 @@
           });
         }
         function g(u) {
-          let { href: P, ...Y } = u;
-          const w = (0, F.n9)();
+          let { href: j, ...Y } = u;
+          const w = (0, U.n9)();
           return (
-            P?.startsWith(l.TS.STORE_BASE_URL) && (P = (0, F.bV)(w, P)),
-            (0, n.jsx)(V.Y, {
-              href: P,
+            j?.startsWith(l.TS.STORE_BASE_URL) && (j = (0, U.bV)(w, j)),
+            (0, n.jsx)(P.Y, {
+              href: j,
               color: "dull-11",
               target: "_blank",
               whiteSpace: "nowrap",
@@ -1105,8 +1101,8 @@
                 as: "p",
                 size: "1",
                 className: K.LegalNotice,
-                children: (0, O.A)(
-                  h.Localize("#footer_legal_notice", new Date().getFullYear()),
+                children: (0, T.A)(
+                  C.Localize("#footer_legal_notice", new Date().getFullYear()),
                 ),
               }),
               (0, n.jsxs)(i.s, {
@@ -1139,13 +1135,13 @@
                     !l.TS.IN_MOBILE_WEBVIEW &&
                     (0, n.jsx)(e.v, {
                       href: l.TS.STORE_BASE_URL + "mobile/",
-                      children: h.Localize("#footer_link_get_mobile_apps"),
+                      children: C.Localize("#footer_link_get_mobile_apps"),
                     }),
                   v() &&
                     (0, n.jsx)(e.$, {
                       color: "dull",
-                      onClick: U,
-                      children: h.Localize("#footer_view_mobile_website"),
+                      onClick: I,
+                      children: C.Localize("#footer_view_mobile_website"),
                     }),
                 ],
               }),
@@ -1154,8 +1150,8 @@
         }
         function r1(u) {
           return (
-            (0, N.use)(h.Ready()),
-            (0, n.jsx)(S.N, {
+            (0, N.use)(C.Ready()),
+            (0, n.jsx)(O.N, {
               breakpoints: { sm: 700 },
               children: (0, n.jsxs)(H.x, {
                 as: "footer",
@@ -1182,27 +1178,27 @@
                     gridArea: "steam",
                     children: [
                       (0, n.jsx)(Q, {
-                        children: h.Localize("#footer_link_header_steam"),
+                        children: C.Localize("#footer_link_header_steam"),
                       }),
                       (0, n.jsx)(g, {
                         href: l.TS.STORE_BASE_URL + "about/",
-                        children: h.Localize("#footer_link_about_steam"),
+                        children: C.Localize("#footer_link_about_steam"),
                       }),
                       (0, n.jsx)(g, {
                         href: l.TS.STORE_BASE_URL + "subscriber_agreement/",
-                        children: h.Localize("#footer_link_steam_ssa"),
+                        children: C.Localize("#footer_link_steam_ssa"),
                       }),
                       (0, n.jsx)(g, {
                         href: l.TS.PARTNER_BASE_URL,
-                        children: h.Localize("#footer_link_steamworks"),
+                        children: C.Localize("#footer_link_steamworks"),
                       }),
                       (0, n.jsx)(g, {
                         href: l.TS.PARTNER_BASE_URL + "steamdirect",
-                        children: h.Localize("#footer_link_steam_distribution"),
+                        children: C.Localize("#footer_link_steam_distribution"),
                       }),
                       (0, n.jsx)(g, {
                         href: l.TS.STORE_BASE_URL + "digitalgiftcards/",
-                        children: h.Localize("#footer_link_gift_cards"),
+                        children: C.Localize("#footer_link_gift_cards"),
                       }),
                     ],
                   }),
@@ -1210,23 +1206,23 @@
                     gridArea: "valve",
                     children: [
                       (0, n.jsx)(Q, {
-                        children: h.Localize("#footer_link_header_valve"),
+                        children: C.Localize("#footer_link_header_valve"),
                       }),
                       (0, n.jsx)(g, {
                         href: "https://valvesoftware.com/about",
-                        children: h.Localize("#footer_link_about_valve"),
+                        children: C.Localize("#footer_link_about_valve"),
                       }),
                       (0, n.jsx)(g, {
                         href: "https://valvesoftware.com/",
-                        children: h.Localize("#footer_link_jobs"),
+                        children: C.Localize("#footer_link_jobs"),
                       }),
                       (0, n.jsx)(g, {
                         href: l.TS.STORE_BASE_URL + "hardware/",
-                        children: h.Localize("#footer_link_hardware"),
+                        children: C.Localize("#footer_link_hardware"),
                       }),
                       (0, n.jsx)(g, {
                         href: l.TS.STORE_BASE_URL + "hardware_recycling/",
-                        children: h.Localize("#footer_link_recycling"),
+                        children: C.Localize("#footer_link_recycling"),
                       }),
                     ],
                   }),
@@ -1234,30 +1230,30 @@
                     gridArea: "legal",
                     children: [
                       (0, n.jsx)(Q, {
-                        children: h.Localize("#footer_link_header_legal"),
+                        children: C.Localize("#footer_link_header_legal"),
                       }),
                       (0, n.jsx)(g, {
                         href: l.TS.STORE_BASE_URL + "privacy_agreement/",
-                        children: h.Localize("#footer_link_privacy"),
+                        children: C.Localize("#footer_link_privacy"),
                       }),
                       (0, n.jsx)(g, {
                         href: "https://help.steampowered.com/faqs/view/10BB-D27A-6378-4436",
-                        children: h.Localize("#footer_link_accessibility"),
+                        children: C.Localize("#footer_link_accessibility"),
                       }),
                       (0, n.jsx)(g, {
                         href: l.TS.STORE_BASE_URL + "legal/",
-                        children: h.Localize(
+                        children: C.Localize(
                           "#footer_link_notices_and_policies",
                         ),
                       }),
                       (0, n.jsx)(g, {
                         href:
                           l.TS.STORE_BASE_URL + "account/cookiepreferences/",
-                        children: h.Localize("#footer_link_cookies"),
+                        children: C.Localize("#footer_link_cookies"),
                       }),
                       (0, n.jsx)(g, {
                         href: l.TS.STORE_BASE_URL + "steam_refunds/",
-                        children: h.Localize("#footer_link_refunds"),
+                        children: C.Localize("#footer_link_refunds"),
                       }),
                     ],
                   }),
@@ -1265,23 +1261,23 @@
                     gridArea: "more",
                     children: [
                       (0, n.jsx)(Q, {
-                        children: h.Localize("#footer_link_header_more"),
+                        children: C.Localize("#footer_link_header_more"),
                       }),
                       (0, n.jsx)(g, {
                         href: l.TS.STORE_BASE_URL + "about/",
-                        children: h.Localize("#footer_link_get_steam"),
+                        children: C.Localize("#footer_link_get_steam"),
                       }),
                       (0, n.jsx)(g, {
                         href: l.TS.STORE_BASE_URL + "mobile/",
-                        children: h.Localize("#footer_link_get_mobile_apps"),
+                        children: C.Localize("#footer_link_get_mobile_apps"),
                       }),
                       (0, n.jsx)(g, {
                         href: l.TS.HELP_BASE_URL,
-                        children: h.Localize("#footer_link_get_support"),
+                        children: C.Localize("#footer_link_get_support"),
                       }),
                       (0, n.jsx)(g, {
                         href: l.TS.STORE_BASE_URL + "account/",
-                        children: h.Localize("#footer_link_my_account"),
+                        children: C.Localize("#footer_link_my_account"),
                       }),
                     ],
                   }),
@@ -1292,69 +1288,69 @@
         }
         function a1(u) {
           if ((0, q.Qn)()) return null;
-          const P = (0, c.nA)(l.TS.EREALM)
-            ? (0, n.jsx)(R, { ...u })
+          const j = (0, c.nA)(l.TS.EREALM)
+            ? (0, n.jsx)(V, { ...u })
             : (0, n.jsx)(r1, { ...u });
-          return (0, n.jsx)(F.nn, {
+          return (0, n.jsx)(U.nn, {
             controller: "footer",
             method: "footer",
-            children: P,
+            children: j,
           });
         }
       },
-      79014: (T, y, t) => {
+      79014: (R, D, t) => {
         "use strict";
-        t.d(y, { A: () => m, i: () => i });
+        t.d(D, { A: () => m, i: () => i });
         var n = t(90626);
-        function i(V, ...d) {
+        function i(P, ...d) {
           const M = [],
             e = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs");
-          let S = 0,
+          let O = 0,
             H;
-          for (; (H = e.exec(V)); ) {
-            (S += H[0].length), M.push(H[1]);
+          for (; (H = e.exec(P)); ) {
+            (O += H[0].length), M.push(H[1]);
             const c = parseInt(H[2]),
-              O = H[3] || "",
-              r = i(O, ...d),
+              T = H[3] || "",
+              r = i(T, ...d),
               v = (c >= 1 && c <= d.length ? d[c - 1] : null)
-                ? n.cloneElement(d[c - 1], {}, O ? r : null)
-                : O;
+                ? n.cloneElement(d[c - 1], {}, T ? r : null)
+                : T;
             M.push(v);
           }
-          return M.push(V.substr(S)), n.createElement(n.Fragment, null, ...M);
+          return M.push(P.substr(O)), n.createElement(n.Fragment, null, ...M);
         }
-        function m(V, d = ["b", "i", "br"]) {
+        function m(P, d = ["b", "i", "br"]) {
           const M = d.join("|"),
             e = [],
-            S = new RegExp(
+            O = new RegExp(
               `(?<before>.*?)<(?<tagname>${M})>(?<contents>.*?)(?<endtag><\\/\\2>|$)`,
               "gs",
             );
           let H = 0,
             c;
-          for (; (c = S.exec(V)); ) {
+          for (; (c = O.exec(P)); ) {
             if (!c.groups) continue;
             if (!c.groups?.endtag) {
-              const j = c.groups.before.length + c.groups.tagname.length + 2;
-              (H += j), (S.lastIndex = c.index + j), e.push(c.groups.before);
-              const C = c[2],
-                A = n.createElement(C);
-              e.push(A);
+              const A = c.groups.before.length + c.groups.tagname.length + 2;
+              (H += A), (O.lastIndex = c.index + A), e.push(c.groups.before);
+              const h = c[2],
+                S = n.createElement(h);
+              e.push(S);
               continue;
             }
             (H += c[0].length), e.push(c.groups.before);
-            const O = c.groups.tagname,
+            const T = c.groups.tagname,
               r = c.groups.contents || "";
             let E = null;
             r && (E = m(r, d));
-            const v = n.createElement(O, {}, E);
+            const v = n.createElement(T, {}, E);
             e.push(v);
           }
-          return e.push(V.slice(H)), n.createElement(n.Fragment, null, ...e);
+          return e.push(P.slice(H)), n.createElement(n.Fragment, null, ...e);
         }
       },
-      75180: (T) => {
-        T.exports = {
+      75180: (R) => {
+        R.exports = {
           Grid: "_2IVd64AHN6R428cgcPqW7M",
           Display: "_2PUyyAEGuZenuwES7VJvQO",
           Columns: "_16FZUyKiH6Z7trthKypJwf",
@@ -1371,8 +1367,8 @@
           Gap: "c0C2uHpDLCegllhH1rM3M",
         };
       },
-      39049: (T) => {
-        T.exports = {
+      39049: (R) => {
+        R.exports = {
           Heading: "_12ldq1_X5RuLWAAs_ODwt7",
           "HeadingSize-1": "-YHuRmP6nUp0IqPQ4F3wk",
           "HeadingSize-2": "_20m6yPkrPwQ8XwlhPdMtqu",
@@ -1385,8 +1381,8 @@
           "HeadingSize-9": "_3L0vs4_Y96AtsR3P5GUkUa",
         };
       },
-      65274: (T) => {
-        T.exports = {
+      65274: (R) => {
+        R.exports = {
           Text: "f6hU22EA7Z8peFWZVBJU",
           Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
           "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
@@ -1404,8 +1400,8 @@
           WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
         };
       },
-      50122: (T) => {
-        T.exports = {
+      50122: (R) => {
+        R.exports = {
           TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
           TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
           Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
@@ -1415,16 +1411,16 @@
           "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
         };
       },
-      74840: (T) => {
-        T.exports = {
+      74840: (R) => {
+        R.exports = {
           GlobalFooter: "_291ttHtxyu5obiKzor2G9G",
           LegalNotice: "_1y5BgqyS1zWfS5kYC34pV9",
           LogoLinks: "_12bkgGAkxHc79lKMb7rK88",
           LinkColumnHeading: "g8vToPr0EO3CpytRyimNA",
         };
       },
-      60859: (T) => {
-        T.exports = {
+      60859: (R) => {
+        R.exports = {
           SteamChinaFooter: "_1xP-wMjwBUZyEOyfSNfAYV",
           FooterContent: "_3yFMcIFF5seXRG2z7Eb08C",
           NavLinks: "_2hZemvW0chMhSn36Vr0RF9",

@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [27634],
+    [7634],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -1070,6 +1070,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -1080,6 +1081,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -1090,6 +1092,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -1100,6 +1103,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -1111,6 +1115,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -1123,6 +1128,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5798,6 +5804,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5810,6 +5817,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5822,6 +5830,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5833,6 +5842,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5844,6 +5854,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5855,6 +5866,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5866,6 +5878,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5877,6 +5890,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5888,6 +5902,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5899,6 +5914,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5910,6 +5926,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5922,6 +5939,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5933,6 +5951,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5944,6 +5963,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5955,6 +5975,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5966,6 +5987,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5978,6 +6000,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -5989,6 +6012,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -6001,6 +6025,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -6024,6 +6049,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -7589,7 +7615,8 @@
                     "_" +
                     _.forum_id +
                     "_" +
-                    _.topic_id;
+                    _.topic_id +
+                    (_.brate_limited ? "_ratelimited" : "");
                   let _ = _.findIndex((_) => _.rollup_key == _);
                   if (_ == -1)
                     _.push({
@@ -7893,6 +7920,7 @@
                 last_post: _.last_post,
                 bsubscribed: _(_.subscribed),
                 bis_owner: _(_.bis_owner),
+                brate_limited: !!_.brate_limited,
               };
               return (
                 _.json_data &&
@@ -8258,22 +8286,22 @@
             count: _,
             icon: _,
             onActivate: _,
-            strLocToken: _,
+            strBody: _,
             bAlwaysShow: _,
             eUIMode: _,
             classNames: _,
             visible: _,
           } = _;
-          if (!_ && !_) return null;
-          const _ = (0, _._)(_, _);
-          return (0, _.jsx)(_, {
-            icon: _,
-            body: _,
-            onActivate: _,
-            eUIMode: _,
-            classNames: _,
-            visible: _,
-          });
+          return !_ && !_
+            ? null
+            : (0, _.jsx)(_, {
+                icon: _,
+                body: _,
+                onActivate: _,
+                eUIMode: _,
+                classNames: _,
+                visible: _,
+              });
         }
         var __webpack_require__ = ((_) => (
           (_[(_.none = 0)] = "none"),
@@ -9254,16 +9282,23 @@
                 _.title &&
                 (_ = _.json_data.title);
           let _ = null;
-          _.comment_type == _._ && _.bis_forum && _
-            ? (_ = (0, _.jsx)(_, {
-                children: (0, _._)(
-                  "#SteamNotifications_Comment_NewDiscussion",
+          _.brate_limited
+            ? _.comment_type == _._ && _.bis_forum && _
+              ? (_ = (0, _._)(
+                  "#SteamNotifications_Comment_RateLimited_Forum",
                   _,
-                ),
-              }))
-            : (_ = (0, _.jsxs)(_, {
-                children: ['"', _, '"'],
-              }));
+                ))
+              : (_ = (0, _._)("#SteamNotifications_Comment_RateLimited"))
+            : _.comment_type == _._ && _.bis_forum && _
+              ? (_ = (0, _.jsx)(_, {
+                  children: (0, _._)(
+                    "#SteamNotifications_Comment_NewDiscussion",
+                    _,
+                  ),
+                }))
+              : (_ = (0, _.jsxs)(_, {
+                  children: ['"', _, '"'],
+                }));
           let _ = (0, _._)("#SteamNotifications_Comment"),
             _ = null;
           if (_ !== void 0 && _ > 1) {
@@ -10015,7 +10050,7 @@
           });
         }
         function _(_) {
-          const { url: _, count: _, icon: _, strLocToken: _, eFeature: _ } = _,
+          const { url: _, count: _, icon: _, strBody: _, eFeature: _ } = _,
             _ = (0, _._)(_);
           return !_ || _
             ? null
@@ -10026,7 +10061,7 @@
                   icon: (0, _.jsx)(_, {}),
                   count: _,
                   onActivate: () => window.location.assign(_),
-                  strLocToken: _,
+                  strBody: _,
                   eUIMode: _.yrU,
                   visible: !0,
                 }),

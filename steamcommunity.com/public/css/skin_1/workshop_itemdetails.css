@@ -2551,26 +2551,6 @@ gap: 10px;
 	margin: 20px 0 15px 0px;
 }
 
-.saxxy_controls {
-	box-shadow: 0 0 6px #111;
-	background-color: #000;
-	margin: 5px 0 5px 0;
-	padding: 5px 10px 10px 10px;
-	color: #7cb0f1;
-	max-height: 67px;
-}
-
-.saxxy_controls > p {
-	margin: 2px 0 7px 0px;
-	font-size: 18px;
-	color: #e1e1e1;
-}
-
-.saxxy_controls .categories
-{
-	color: #959595;
-}
-
 .autoplay_container {
 	float: right;
 }

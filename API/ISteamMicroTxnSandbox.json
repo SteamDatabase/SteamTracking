@@ -380,6 +380,12 @@
                     "description": "ISO 4217 currency code"
                 },
                 {
+                    "name": "allowzerototal",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Pass this (any value) to allow a transaction where every item amount is 0. The app must also be enabled for zero-cost transactions."
+                },
+                {
                     "name": "itemid[0]",
                     "type": "uint32",
                     "optional": false,
@@ -489,6 +495,12 @@
                     "description": "ISO 4217 currency code"
                 },
                 {
+                    "name": "allowzerototal",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Pass this (any value) to allow a transaction where every item amount is 0. The app must also be enabled for zero-cost transactions."
+                },
+                {
                     "name": "itemid[0]",
                     "type": "uint32",
                     "optional": false,
@@ -596,6 +608,12 @@
                     "type": "string",
                     "optional": false,
                     "description": "ISO 4217 currency code"
+                },
+                {
+                    "name": "allowzerototal",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Pass this (any value) to allow a transaction where every item amount is 0. The app must also be enabled for zero-cost transactions."
                 },
                 {
                     "name": "itemid[0]",

@@ -103,6 +103,7 @@
     "PartnerOptIn_Status_PendingReview": "Análise pendente",
     "PartnerOptIn_Status_Invited": "Convite enviado",
     "PartnerOptIn_Status_LastUpdate": "Última atualização: %1$s",
+    "PartnerOptIn_Intro_PageTitle": "Inscrição em %1$s",
     "PartnerOptIn_Intro_Deadline": "Prazo para inscrição: %1$s (Horário do Pacífico)",
     "PartnerOptIn_Intro_RegisteredTitle": "Inscrição confirmada!",
     "PartnerOptIn_Intro_SubmittedTitle": "Inscrição já enviada!",
@@ -160,5 +161,15 @@
     "PartnerOptIn_Fields_PressContact_Name_Placeholder": "Introduza aqui o nome da pessoa a contactar",
     "PartnerOptIn_Fields_PressContact_Email": "Endereço de e-mail:",
     "PartnerOptIn_Fields_PressContact_Email_Placeholder": "exemplo@exemplo.com",
-    "PartnerOptIn_Page_RegistrationTitle": "Inscrição"
+    "PartnerOptIn_Page_RegistrationTitle": "Inscrição",
+    "PartnerOptIn_Page_BackToLanding": "Voltar à página inicial da aplicação",
+    "PartnerOptIn_Choice_Title": "Inscrição no evento",
+    "PartnerOptIn_Choice_RequirementsNotMet": "Antes de se poder inscrever: %1$s",
+    "PartnerOptIn_Choice_In": "Sim, gostaríamos de incluir <1>\"%1$s\"</1> no evento <1>\"%2$s\"</1>",
+    "PartnerOptIn_Choice_Out": "Não, não queremos incluir <1>\"%1$s\"</1> no evento <1>\"%2$s\"</1>",
+    "PartnerOptIn_Save_Save": "Guardar",
+    "PartnerOptIn_Save_Submit": "Enviar",
+    "PartnerOptIn_Save_Error_Title": "Erro ao guardar inscrição",
+    "PartnerOptIn_Save_Error_Desc": "Ocorreu um problema ao guardar a resposta de inscrição. Tente mais tarde.",
+    "PartnerOptIn_Save_Error_Detail": "Ocorreu um problema ao guardar a resposta de inscrição. Verifique a mensagem de erro: %1$s"
 }

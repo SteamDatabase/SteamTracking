@@ -2479,6 +2479,50 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
     display: none;
 }
 
+.prepurchase_tag {
+	width: fit-content;
+	height: 16px;
+	line-height: 16px;
+	padding: 1px 5px 1px 17px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 10px;
+	white-space: nowrap;
+	text-transform: uppercase;
+	color: #b5df20;
+	background: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='3 3 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23b5df20' fill-rule='evenodd' clip-rule='evenodd' d='M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33ZM20.2092 10.9908H14.8092V19.3092L21 25.5L24.8184 21.6816L20.2092 17.0724V10.9908Z'/%3E%3C/svg%3E") no-repeat 4px 4px #2c3c49;
+}
+
+.tab_item .prepurchase_price_ctn {
+	float: right;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	height: 100%;
+	margin-right: 16px;
+}
+
+.tab_item .prepurchase_price_ctn .tab_item_discount {
+	margin: 0;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .tab_item .prepurchase_price_ctn {
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+		gap: 2px;
+		margin-right: 4px;
+	}
+}
+
+.tab_item_purchase .prepurchase_tag,
+.tab_item_capsule_purchase .prepurchase_tag {
+	margin: 0 0 2px auto;
+}
+
 .home_tabs_content {
 	min-height: 775px;
 }
@@ -2566,8 +2610,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 }
 
 .tab_item.focus .release_date {
-	right: 30px;
-}
+	right: 34px; }
 
 
 /* Blurring for various filtered items */

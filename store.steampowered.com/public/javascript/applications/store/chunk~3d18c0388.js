@@ -9,59 +9,59 @@
         o.d(a1, { Jh: () => C1, Tw: () => X, g: () => F, hj: () => h1 });
         var e = o(7850),
           r = o(90626),
-          W = o(36707),
-          n1 = o(61593),
-          z = o.n(n1),
-          D = o(26359),
-          b = o(39905);
+          U = o(36707),
+          r1 = o(61593),
+          z = o.n(r1),
+          k = o(26359),
+          _ = o(39905);
         const X = 0,
           F = 1,
           C1 = 2;
         function h1(c1) {
           const {
-              name: g1,
+              name: m1,
               trailerCategory: M,
               trailerDisplay: i1,
               mouseOver: u1,
             } = c1,
-            [T, k] = r.useState(!1);
+            [b, I] = r.useState(!1);
           if (
             (r.useEffect(() => {
-              i1 != X && k(!0);
+              i1 != X && I(!0);
             }, [i1]),
             r.useEffect(() => {
               if (u1) {
-                k(!0);
+                I(!0);
                 return;
               }
-              if (!T) return;
-              const x1 = setTimeout(() => k(!1), 3e3);
+              if (!b) return;
+              const x1 = setTimeout(() => I(!1), 3e3);
               return () => clearTimeout(x1);
-            }, [T, u1]),
+            }, [b, u1]),
             M == null || i1 == X)
           )
             return;
-          const j1 =
+          const P1 =
             i1 == F
-              ? b.Z.Localize("#StoreTrailer_Title_TrailerPreview")
-              : (0, D.e)(M);
+              ? _.Z.Localize("#StoreTrailer_Title_TrailerPreview")
+              : (0, k.e)(M);
           return (0, e.jsx)("div", {
-            className: (0, W.A)({ [z().TrailerTitle]: !0, [z().Visible]: T }),
-            children: b.Z.LocalizeReact(
+            className: (0, U.A)({ [z().TrailerTitle]: !0, [z().Visible]: b }),
+            children: _.Z.LocalizeReact(
               "#StoreTrailer_Title_Combiner",
-              (0, e.jsx)("span", { className: z().Category, children: j1 }),
-              g1,
+              (0, e.jsx)("span", { className: z().Category, children: P1 }),
+              m1,
             ),
           });
         }
       },
       26359: ($, a1, o) => {
         "use strict";
-        o.d(a1, { e: () => W });
+        o.d(a1, { e: () => U });
         var e = o(47045),
-          r = o(78192);
-        function W(n1) {
-          switch (n1) {
+          r = o(48156);
+        function U(r1) {
+          switch (r1) {
             case r.$m.oe:
               return e.n.Localize("#StoreTrailer_Title_Category_Gameplay");
             case r.$m.mD:
@@ -80,27 +80,27 @@
       },
       64271: ($, a1, o) => {
         "use strict";
-        o.d(a1, { P: () => W1 });
+        o.d(a1, { P: () => j1 });
         var e = o(7850),
           r = o(90626),
-          W = o(20525),
-          n1 = o(96974),
-          z = o.n(n1),
-          D = o(14947),
-          b = o(89083),
+          U = o(20525),
+          r1 = o(96974),
+          z = o.n(r1),
+          k = o(14947),
+          _ = o(89083),
           X = o(8323),
           F = o(30096),
           C1 = o(12997),
           h1 = o(99412),
           c1 = Object.defineProperty,
-          g1 = Object.getOwnPropertyDescriptor,
+          m1 = Object.getOwnPropertyDescriptor,
           M = (i, t, a, s) => {
             for (
-              var l = s > 1 ? void 0 : s ? g1(t, a) : t, c = i.length - 1, L;
-              c >= 0;
-              c--
+              var l = s > 1 ? void 0 : s ? m1(t, a) : t, f = i.length - 1, L;
+              f >= 0;
+              f--
             )
-              (L = i[c]) && (l = (s ? L(t, a, l) : L(l)) || l);
+              (L = i[f]) && (l = (s ? L(t, a, l) : L(l)) || l);
             return s && l && c1(t, a, l), l;
           };
         const i1 = 5;
@@ -110,7 +110,7 @@
           (i[(i.Pause = 2)] = "Pause"),
           i
         ))(u1 || {});
-        class T {
+        class b {
           m_elVideo = null;
           m_player = null;
           m_listeners = new X.Ji();
@@ -125,7 +125,7 @@
           m_bUserInputNeeded = !1;
           m_bMuted = !1;
           m_nVolume = 1;
-          m_eFailureReason = b.N_.Invalid;
+          m_eFailureReason = _.N_.Invalid;
           m_maxDimensions = null;
           m_bPlaybackStarted = !1;
           m_bBuffering = !0;
@@ -136,7 +136,7 @@
           m_nVideoDuration = 0;
           m_nBufferedEndTime = 0;
           constructor(t) {
-            (0, D.Gn)(this), (this.m_persistState = t || {});
+            (0, k.Gn)(this), (this.m_persistState = t || {});
           }
           IsPaused() {
             return this.m_bPaused;
@@ -174,9 +174,9 @@
           IsShowingCaption() {
             return this.m_bShowingCaption;
           }
-          Start(t, a, s, l, c) {
+          Start(t, a, s, l, f) {
             this.Stop(),
-              (this.m_strStatsURL = c || ""),
+              (this.m_strStatsURL = f || ""),
               (this.m_elVideo = t),
               this.m_listeners.AddEventListener(
                 this.m_elVideo,
@@ -238,18 +238,18 @@
                 "pagehide",
                 this.SendStats,
               ),
-              (this.m_player = new b.Zn(this.m_elVideo)),
+              (this.m_player = new _.Zn(this.m_elVideo)),
               this.m_player.SetTimeoutAfterFailedDownload(!1);
             let L =
               this.m_persistState.m_bAudioMuted !== void 0
                 ? this.m_persistState.m_bAudioMuted
                 : !1;
             this.SetMute(L, !0);
-            let x =
+            let p =
               this.m_persistState.m_nPlayerVolume !== void 0
                 ? this.m_persistState.m_nPlayerVolume
                 : 1;
-            this.SetVolume(x, !0),
+            this.SetVolume(p, !0),
               this.m_player.SetMuteOnAutoplayBlocked(
                 this.m_bMuteWhenAutoplayBlocked,
               ),
@@ -308,7 +308,7 @@
           }
           OnDownloadFailed(t) {
             console.log("video download failed", t.detail),
-              (this.m_eFailureReason = t.detail || b.N_.PlaybackError);
+              (this.m_eFailureReason = t.detail || _.N_.PlaybackError);
           }
           OnUserInputNeeded() {
             this.m_bUserInputNeeded = !0;
@@ -433,66 +433,66 @@
             this.m_bSentStats ||
               !this.m_player ||
               !this.m_strStatsURL ||
-              (_(this.m_player, this.m_strStatsURL, this.m_eFailureReason),
+              (R(this.m_player, this.m_strStatsURL, this.m_eFailureReason),
               (this.m_bSentStats = !0));
           }
         }
-        M([D.sH], T.prototype, "m_bPaused", 2),
-          M([D.sH], T.prototype, "m_bUserInputNeeded", 2),
-          M([D.sH], T.prototype, "m_bMuted", 2),
-          M([D.sH], T.prototype, "m_nVolume", 2),
-          M([D.sH], T.prototype, "m_eFailureReason", 2),
-          M([D.sH], T.prototype, "m_maxDimensions", 2),
-          M([D.sH], T.prototype, "m_bPlaybackStarted", 2),
-          M([D.sH], T.prototype, "m_bBuffering", 2),
-          M([D.sH], T.prototype, "m_bHasCaptions", 2),
-          M([D.sH], T.prototype, "m_bShowingCaption", 2),
-          M([D.sH], T.prototype, "m_nPlaybackTime", 2),
-          M([D.sH], T.prototype, "m_nVideoStartTime", 2),
-          M([D.sH], T.prototype, "m_nVideoDuration", 2),
-          M([D.sH], T.prototype, "m_nBufferedEndTime", 2),
-          M([D.XI.bound], T.prototype, "OnVideoPlaying", 1),
-          M([F.oI], T.prototype, "OnVideoPause", 1),
-          M([D.XI.bound], T.prototype, "OnVideoTimeUpdate", 1),
-          M([F.oI], T.prototype, "OnVolumeChange", 1),
-          M([F.oI], T.prototype, "OnVideoEnd", 1),
-          M([F.oI], T.prototype, "OnVideoValveEnded", 1),
-          M([F.oI], T.prototype, "OnDownloadFailed", 1),
-          M([F.oI], T.prototype, "OnUserInputNeeded", 1),
-          M([D.XI.bound], T.prototype, "OnMetadataChanged", 1),
-          M([D.XI.bound], T.prototype, "OnCaptionsChange", 1),
-          M([F.oI], T.prototype, "UserInputReceived", 1),
-          M([D.XI.bound], T.prototype, "SetMuteInternal", 1),
-          M([F.oI], T.prototype, "SendStats", 1);
-        function k(i, t, a, s, l, c, L) {
-          let x = (0, C1.F)(),
-            P = (0, r.useRef)(void 0);
-          P.current || (P.current = new T(x));
+        M([k.sH], b.prototype, "m_bPaused", 2),
+          M([k.sH], b.prototype, "m_bUserInputNeeded", 2),
+          M([k.sH], b.prototype, "m_bMuted", 2),
+          M([k.sH], b.prototype, "m_nVolume", 2),
+          M([k.sH], b.prototype, "m_eFailureReason", 2),
+          M([k.sH], b.prototype, "m_maxDimensions", 2),
+          M([k.sH], b.prototype, "m_bPlaybackStarted", 2),
+          M([k.sH], b.prototype, "m_bBuffering", 2),
+          M([k.sH], b.prototype, "m_bHasCaptions", 2),
+          M([k.sH], b.prototype, "m_bShowingCaption", 2),
+          M([k.sH], b.prototype, "m_nPlaybackTime", 2),
+          M([k.sH], b.prototype, "m_nVideoStartTime", 2),
+          M([k.sH], b.prototype, "m_nVideoDuration", 2),
+          M([k.sH], b.prototype, "m_nBufferedEndTime", 2),
+          M([k.XI.bound], b.prototype, "OnVideoPlaying", 1),
+          M([F.oI], b.prototype, "OnVideoPause", 1),
+          M([k.XI.bound], b.prototype, "OnVideoTimeUpdate", 1),
+          M([F.oI], b.prototype, "OnVolumeChange", 1),
+          M([F.oI], b.prototype, "OnVideoEnd", 1),
+          M([F.oI], b.prototype, "OnVideoValveEnded", 1),
+          M([F.oI], b.prototype, "OnDownloadFailed", 1),
+          M([F.oI], b.prototype, "OnUserInputNeeded", 1),
+          M([k.XI.bound], b.prototype, "OnMetadataChanged", 1),
+          M([k.XI.bound], b.prototype, "OnCaptionsChange", 1),
+          M([F.oI], b.prototype, "UserInputReceived", 1),
+          M([k.XI.bound], b.prototype, "SetMuteInternal", 1),
+          M([F.oI], b.prototype, "SendStats", 1);
+        function I(i, t, a, s, l, f, L) {
+          let p = (0, C1.F)(),
+            j = (0, r.useRef)(void 0);
+          j.current || (j.current = new b(p));
           let S = (0, F.QS)(
-            (B) => {
-              if (B)
-                return P.current.Start(B, i, t, a, s), () => P.current.Stop();
+            (Z) => {
+              if (Z)
+                return j.current.Start(Z, i, t, a, s), () => j.current.Stop();
             },
-            [P, i, t, s],
+            [j, i, t, s],
           );
           return (
             (0, r.useEffect)(() => {
-              P.current.UpdatePersistState(x);
-            }, [x]),
+              j.current.UpdatePersistState(p);
+            }, [p]),
             (0, r.useEffect)(() => {
-              P.current.SetPlaybackEndCallback(l);
+              j.current.SetPlaybackEndCallback(l);
             }, [l]),
             (0, r.useEffect)(() => {
-              P.current.SetOnPlayPauseChangeCallback(c);
-            }, [c]),
+              j.current.SetOnPlayPauseChangeCallback(f);
+            }, [f]),
             (0, r.useEffect)(() => {
-              P.current.SetOnMuteChangeCallback(L),
-                L && L(P.current.GetMuted());
+              j.current.SetOnMuteChangeCallback(L),
+                L && L(j.current.GetMuted());
             }, [L]),
-            [S, P.current]
+            [S, j.current]
           );
         }
-        function j1(i, t) {
+        function P1(i, t) {
           (t = !!t),
             (0, r.useEffect)(() => {
               i.SetMuteWhenAutoplayBlocked(t);
@@ -514,27 +514,27 @@
             !l.current
           );
         }
-        function _(i, t, a) {
+        function R(i, t, a) {
           if (!navigator || typeof navigator.sendBeacon > "u") return;
           let s = i.GetDASHPlayerStats().GetPlayerStatsSummary(),
             l = i.GetAndCloseWatchedIntervals();
           if (
-            l.reduce((B, U) => B + (U[1] - U[0]), 0) < i1 &&
-            a == b.N_.Invalid
+            l.reduce((Z, W) => Z + (W[1] - W[0]), 0) < i1 &&
+            a == _.N_.Invalid
           )
             return;
-          let x = {
+          let p = {
               strManifest: i.IsPlayingHLS() ? i.GetHLSURL() : i.GetMPDURL(),
               watched: l,
               eFailureReason: a,
               ...s,
             },
-            P = JSON.stringify(x),
+            j = JSON.stringify(p),
             S = new FormData();
-          S.append("stats", P), navigator.sendBeacon(t, S);
+          S.append("stats", j), navigator.sendBeacon(t, S);
         }
         var A = o(65946),
-          Z = o(36707),
+          B = o(36707),
           N = o(31382),
           f1 = o(94162),
           s1 = o(56718),
@@ -565,42 +565,42 @@
         }
         const w = (0, r.forwardRef)(function (t, a) {
           let { children: s, ...l } = t,
-            c = h(),
-            L = (0, M1.Ue)(c, a);
+            f = h(),
+            L = (0, M1.Ue)(f, a);
           return (0, e.jsx)("div", { ref: L, ...l, children: s });
         });
-        var g = o(84456),
+        var v = o(84456),
           C = o(7817),
-          R = o(78192),
-          y = o(86048),
-          r1 = o(47045);
+          E = o(48156),
+          V = o(86048),
+          Y = o(47045);
         const K = 200,
           o1 = 5e3;
         function v1(i) {
           let { player: t, category: a, title: s, focus: l } = i,
-            c = (0, r.useRef)(null),
+            f = (0, r.useRef)(null),
             L = (0, r.useRef)(null),
-            [x, P] = (0, g.Cl)(t, C.M$),
-            [S, B] = (0, r.useState)(!1),
-            U = (0, g.o$)(S, B, c);
-          x = x || S;
-          let t1 = H1(t),
-            d1 = (0, y.b$)(!!l),
-            V1 = (0, Z.A)(O().PlayerControls, x && O().ShowControls);
-          return (0, e.jsx)(g.F8.Provider, {
-            value: U,
+            [p, j] = (0, v.Cl)(t, C.M$),
+            [S, Z] = (0, r.useState)(!1),
+            W = (0, v.o$)(S, Z, f);
+          p = p || S;
+          let n1 = T1(t),
+            d1 = (0, V.b$)(!!l),
+            y1 = (0, B.A)(O().PlayerControls, p && O().ShowControls);
+          return (0, e.jsx)(v.F8.Provider, {
+            value: W,
             children: (0, e.jsxs)("div", {
               ref: d1,
-              className: V1,
-              ...P,
-              onKeyDown: t1,
+              className: y1,
+              ...j,
+              onKeyDown: n1,
               tabIndex: 0,
               children: [
                 (0, e.jsxs)("div", {
                   className: O().ControlGroup,
                   children: [
-                    (0, e.jsx)(b1, { player: t, enabled: x && !S }),
-                    (0, e.jsx)(R1, {}),
+                    (0, e.jsx)(R1, { player: t, enabled: p && !S }),
+                    (0, e.jsx)(Z1, {}),
                     (0, e.jsxs)(w, {
                       ref: L,
                       className: O().LowerControls,
@@ -613,7 +613,7 @@
                               className: O().LeftGroup,
                               children: [
                                 (0, e.jsx)(C.zA, { player: t }),
-                                (0, e.jsx)(E1, {
+                                (0, e.jsx)(B1, {
                                   player: t,
                                   refControlsHover: L,
                                 }),
@@ -635,18 +635,18 @@
                     }),
                   ],
                 }),
-                (0, e.jsx)(T1, {
+                (0, e.jsx)(_1, {
                   player: t,
-                  controlsVisible: x,
+                  controlsVisible: p,
                   category: a,
                   title: s,
                 }),
-                (0, e.jsx)("div", { ref: c, className: O().MenuLayer }),
+                (0, e.jsx)("div", { ref: f, className: O().MenuLayer }),
               ],
             }),
           });
         }
-        function H1(i) {
+        function T1(i) {
           let t = (0, N.ri)(),
             a = (0, N.Dy)(t, "fullscreen");
           return (0, r.useCallback)(
@@ -666,21 +666,21 @@
             [i, a],
           );
         }
-        function S1(i, t) {
+        function b1(i, t) {
           let a = (0, r.useRef)(null),
             s = (0, r.useRef)(1),
             l = (0, r.useRef)(0),
-            [c, L] = (0, r.useState)([]),
-            x = (0, r.useCallback)(
-              (B) => {
-                if (B.target != a.current) return;
-                let U = i.TogglePlayPauseState(),
-                  t1 = s.current++;
-                L((V1) => [{ nID: t1, eState: U }, ...V1]);
+            [f, L] = (0, r.useState)([]),
+            p = (0, r.useCallback)(
+              (Z) => {
+                if (Z.target != a.current) return;
+                let W = i.TogglePlayPauseState(),
+                  n1 = s.current++;
+                L((y1) => [{ nID: n1, eState: W }, ...y1]);
                 let d1 = () => {
                   (l.current = 0), i.TogglePlayPause();
                 };
-                if (B.pointerType != "mouse") {
+                if (Z.pointerType != "mouse") {
                   d1();
                   return;
                 }
@@ -692,9 +692,9 @@
               },
               [a, l, i, L, t],
             ),
-            P = (0, r.useCallback)(
-              (B) => {
-                L((U) => U.filter((t1) => t1.nID != B));
+            j = (0, r.useCallback)(
+              (Z) => {
+                L((W) => W.filter((n1) => n1.nID != Z));
               },
               [L],
             );
@@ -704,69 +704,69 @@
             },
             [l],
           );
-          let S = (0, g.Ps)(x);
+          let S = (0, v.Ps)(p);
           return {
             refBackground: a,
             inputEvents: S,
-            clickEvents: c,
-            fnRemoveEvent: P,
+            clickEvents: f,
+            fnRemoveEvent: j,
           };
         }
-        function T1(i) {
+        function _1(i) {
           let { player: t, controlsVisible: a, category: s, title: l } = i,
-            c = (0, C.Rh)("once", t, a);
-          if (s == R.$m.$z || !l) return null;
-          let L = (0, Z.A)(O().TitleRow, c && O().ShowControls);
+            f = (0, C.Rh)("once", t, a);
+          if (s == E.$m.$z || !l) return null;
+          let L = (0, B.A)(O().TitleRow, f && O().ShowControls);
           return (0, e.jsx)("div", {
             className: L,
             children: (0, e.jsx)(C.AE, { category: s, title: l }),
           });
         }
-        function b1(i) {
+        function R1(i) {
           let { player: t, enabled: a } = i,
             s = (0, N.ri)(),
             l = (0, N.Dy)(s, "fullscreen"),
             {
-              refBackground: c,
+              refBackground: f,
               inputEvents: L,
-              clickEvents: x,
-              fnRemoveEvent: P,
-            } = S1(t, l),
-            S = (0, Z.A)(O().BackgroundClick, a && O().Enabled);
+              clickEvents: p,
+              fnRemoveEvent: j,
+            } = b1(t, l),
+            S = (0, B.A)(O().BackgroundClick, a && O().Enabled);
           return (0, e.jsx)("div", {
-            ref: c,
+            ref: f,
             className: S,
             ...L,
-            children: x.map((B) =>
-              (0, e.jsx)(_1, { event: B, removeEvent: P }, `icon_${B.nID}`),
+            children: p.map((Z) =>
+              (0, e.jsx)(E1, { event: Z, removeEvent: j }, `icon_${Z.nID}`),
             ),
           });
         }
-        function _1(i) {
+        function E1(i) {
           let { event: t, removeEvent: a } = i,
             s = t.nID,
             l = (0, r.useCallback)(() => {
               a(s);
             }, [s, a]),
-            c = null;
+            f = null;
           return (
             t.eState == u1.Play
-              ? (c = (0, e.jsx)(W.ud, {}))
-              : t.eState == u1.Pause && (c = (0, e.jsx)(W.E$, {})),
+              ? (f = (0, e.jsx)(U.ud, {}))
+              : t.eState == u1.Pause && (f = (0, e.jsx)(U.E$, {})),
             (0, e.jsx)("div", {
               className: O().Icon,
               onAnimationEnd: l,
-              children: c,
+              children: f,
             })
           );
         }
-        function R1(i) {
+        function Z1(i) {
           return (0, e.jsx)("div", { className: O().BehindControlsFade });
         }
-        function E1(i) {
+        function B1(i) {
           let { player: t, refControlsHover: a } = i,
-            [s, l, c, L] = (0, g.qi)(t),
-            [x, P] = G(a),
+            [s, l, f, L] = (0, v.qi)(t),
+            [p, j] = G(a),
             S;
           s || l === 0
             ? (S = (0, e.jsx)(s1.K9I, {}))
@@ -775,16 +775,16 @@
               : l < 0.6
                 ? (S = (0, e.jsx)(s1.TPi, {}))
                 : (S = (0, e.jsx)(s1._3Z, {}));
-          let B = r1.n.Localize(
+          let Z = Y.n.Localize(
             s ? "#TrailerPlayer_Unmute_Tooltip" : "#TrailerPlayer_Mute_Tooltip",
           );
           return (0, e.jsxs)("div", {
             className: O().VolumeControls,
-            onMouseEnter: P,
+            onMouseEnter: j,
             "data-keepcontrols": !0,
             children: [
-              (0, e.jsx)(C.c5, { onActivate: L, tooltip: B, children: S }),
-              x &&
+              (0, e.jsx)(C.c5, { onActivate: L, tooltip: Z, children: S }),
+              p &&
                 (0, e.jsx)("div", {
                   className: O().VolumeSlider,
                   children: (0, e.jsx)(w1.A0, {
@@ -792,7 +792,7 @@
                     max: 1,
                     value: s ? 0 : l,
                     step: 0.01,
-                    onChange: c,
+                    onChange: f,
                     dpadStep: 0.1,
                   }),
                 }),
@@ -809,54 +809,54 @@
             [t, s]
           );
         }
-        var P1 = o(54745),
-          Y = o.n(P1);
-        const N1 = 3e3,
-          I1 = 1e3;
-        function D1(i) {
+        var H1 = o(54745),
+          q = o.n(H1);
+        const G1 = 3e3,
+          k1 = 1e3;
+        function A1(i) {
           let { player: t, category: a, title: s } = i,
             l = (0, r.useRef)(null),
-            [c, L] = G1(l, t, C.M$),
-            x = (0, r.useRef)(null),
-            [P, S] = (0, r.useState)(!1),
-            B = (0, g.o$)(P, S, x);
-          c = c || P;
-          let [U, t1] = f(t),
-            d1 = (0, Z.A)(Y().ControlGroup, c && Y().ShowControls),
-            V1 = (0, Z.A)(Y().CenterControls, !!U && Y().Hide);
-          return (0, e.jsx)(g.F8.Provider, {
-            value: B,
+            [f, L] = W1(l, t, C.M$),
+            p = (0, r.useRef)(null),
+            [j, S] = (0, r.useState)(!1),
+            Z = (0, v.o$)(j, S, p);
+          f = f || j;
+          let [W, n1] = c(t),
+            d1 = (0, B.A)(q().ControlGroup, f && q().ShowControls),
+            y1 = (0, B.A)(q().CenterControls, !!W && q().Hide);
+          return (0, e.jsx)(v.F8.Provider, {
+            value: Z,
             children: (0, e.jsxs)("div", {
-              className: Y().PlayerControls,
+              className: q().PlayerControls,
               ...L,
               children: [
                 (0, e.jsxs)("div", {
                   ref: l,
                   className: d1,
                   children: [
-                    (0, e.jsx)(u, { thumbnail: U }),
-                    (0, e.jsx)(p, {}),
+                    (0, e.jsx)(u, { thumbnail: W }),
+                    (0, e.jsx)(x, {}),
                     (0, e.jsx)("div", {
-                      className: V1,
+                      className: y1,
                       children: (0, e.jsx)(d, { player: t }),
                     }),
                     (0, e.jsxs)("div", {
-                      className: Y().LowerControls,
+                      className: q().LowerControls,
                       children: [
                         (0, e.jsx)(C.Kf, {
                           player: t,
-                          onTouchSeek: t1,
+                          onTouchSeek: n1,
                           showHoverThumb: !1,
                         }),
                         (0, e.jsxs)("div", {
-                          className: Y().ButtonRow,
+                          className: q().ButtonRow,
                           children: [
                             (0, e.jsx)("div", {
-                              className: Y().LeftGroup,
+                              className: q().LeftGroup,
                               children: (0, e.jsx)(C.BI, { player: t }),
                             }),
                             (0, e.jsxs)("div", {
-                              className: Y().RightGroup,
+                              className: q().RightGroup,
                               children: [
                                 (0, e.jsx)(C.Y1, { player: t }),
                                 (0, e.jsx)(C.K$, { player: t }),
@@ -870,74 +870,74 @@
                     }),
                   ],
                 }),
-                (0, e.jsx)(A1, {
+                (0, e.jsx)(F1, {
                   player: t,
-                  controlsVisible: c,
+                  controlsVisible: f,
                   category: a,
                   title: s,
                 }),
-                (0, e.jsx)("div", { ref: x, className: Y().MenuLayer }),
+                (0, e.jsx)("div", { ref: p, className: q().MenuLayer }),
               ],
             }),
           });
         }
-        function G1(i, t, a) {
-          let [s, l] = k1(i, t);
+        function W1(i, t, a) {
+          let [s, l] = O1(i, t);
           return (s = s || a), [s, l];
         }
-        function k1(i, t) {
-          let [a, s] = (0, g.if)(),
+        function O1(i, t) {
+          let [a, s] = (0, v.if)(),
             l = (0, r.useRef)(null),
-            c = (0, r.useRef)(!0),
-            L = (0, g.BF)(t);
+            f = (0, r.useRef)(!0),
+            L = (0, v.BF)(t);
           (0, r.useEffect)(() => {
-            let B = c.current;
-            if (((c.current = !1), B && !L)) return;
-            s(!0, L ? 0 : I1);
-          }, [L, s, c]);
-          let x = (0, r.useCallback)(
-              (B) => {
-                l.current = B.target;
+            let Z = f.current;
+            if (((f.current = !1), Z && !L)) return;
+            s(!0, L ? 0 : k1);
+          }, [L, s, f]);
+          let p = (0, r.useCallback)(
+              (Z) => {
+                l.current = Z.target;
               },
               [l],
             ),
-            P = (0, r.useCallback)(
-              (B) => {
+            j = (0, r.useCallback)(
+              (Z) => {
                 l.current = null;
               },
               [l],
             ),
             S = (0, r.useCallback)(
-              (B) => {
-                let U = l.current;
-                if (((l.current = null), U == null)) return;
-                let t1 = L ? 0 : N1;
-                if (B.target != U || i.current != U) {
-                  s(!0, t1);
+              (Z) => {
+                let W = l.current;
+                if (((l.current = null), W == null)) return;
+                let n1 = L ? 0 : G1;
+                if (Z.target != W || i.current != W) {
+                  s(!0, n1);
                   return;
                 }
-                s(!a, t1);
+                s(!a, n1);
               },
               [s, i, L, a],
             );
-          return [a, { onPointerDown: x, onPointerCancel: P, onPointerUp: S }];
+          return [a, { onPointerDown: p, onPointerCancel: j, onPointerUp: S }];
         }
-        function A1(i) {
+        function F1(i) {
           let { player: t, controlsVisible: a, category: s, title: l } = i,
-            c = (0, C.Rh)("standard", t, a);
-          if (s == R.$m.$z || !l) return null;
-          let L = (0, Z.A)(
-            Y().TitleRow,
-            c && !a && Y().FadeIn,
-            a && Y().ControlsVisible,
+            f = (0, C.Rh)("standard", t, a);
+          if (s == E.$m.$z || !l) return null;
+          let L = (0, B.A)(
+            q().TitleRow,
+            f && !a && q().FadeIn,
+            a && q().ControlsVisible,
           );
           return (0, e.jsx)("div", {
             className: L,
             children: (0, e.jsx)(C.AE, { category: s, title: l }),
           });
         }
-        function p(i) {
-          return (0, e.jsx)("div", { className: Y().GlassBackground });
+        function x(i) {
+          return (0, e.jsx)("div", { className: q().GlassBackground });
         }
         function u(i) {
           let { thumbnail: t } = i,
@@ -948,133 +948,133 @@
                   s(null);
                   return;
                 }
-                let x = L.getBoundingClientRect(),
-                  P = x.right - x.left,
-                  S = x.bottom - x.top;
-                s({ width: P, height: S });
+                let p = L.getBoundingClientRect(),
+                  j = p.right - p.left,
+                  S = p.bottom - p.top;
+                s({ width: j, height: S });
               },
               [s],
             );
           if (!t) return null;
-          let c = { display: "none" };
+          let f = { display: "none" };
           if (a) {
             let L = a.width / t.nThumbnailWidth,
-              x = a.height / t.nThumbnailHeight,
-              P = Math.min(L, x);
-            c = {
-              width: `${t.nThumbnailWidth * P}px`,
-              height: `${t.nThumbnailHeight * P}px`,
+              p = a.height / t.nThumbnailHeight,
+              j = Math.min(L, p);
+            f = {
+              width: `${t.nThumbnailWidth * j}px`,
+              height: `${t.nThumbnailHeight * j}px`,
               backgroundImage: `url(${t.strTileURL})`,
-              backgroundPosition: `-${t.x * P}px -${t.y * P}px`,
-              backgroundSize: `${t.nImageWidth * P}px ${t.nImageHeight * P}px`,
+              backgroundPosition: `-${t.x * j}px -${t.y * j}px`,
+              backgroundSize: `${t.nImageWidth * j}px ${t.nImageHeight * j}px`,
               backgroundRepeat: "no-repeat",
             };
           }
           return (0, e.jsx)("div", {
             ref: l,
-            className: Y().SeekThumbnail,
+            className: q().SeekThumbnail,
             children: (0, e.jsx)("div", {
-              style: c,
-              className: Y().ThumbnailImage,
+              style: f,
+              className: q().ThumbnailImage,
             }),
           });
         }
-        function f(i) {
+        function c(i) {
           let [t, a] = (0, r.useState)(null),
             s = (0, r.useRef)(!1),
             l = (0, r.useRef)(null),
-            c = r.useCallback(
+            f = r.useCallback(
               (L) => {
-                let x = L ? L.thumbnail : null;
-                !i.IsPaused() && x && ((s.current = !0), i.Pause()),
-                  !x && s.current && (i.Play(), (s.current = !1)),
-                  l.current && !x && i.Seek(l.current.nPlaybackSeconds),
+                let p = L ? L.thumbnail : null;
+                !i.IsPaused() && p && ((s.current = !0), i.Pause()),
+                  !p && s.current && (i.Play(), (s.current = !1)),
+                  l.current && !p && i.Seek(l.current.nPlaybackSeconds),
                   (l.current = L),
-                  a(x);
+                  a(p);
               },
               [i, a, s],
             );
-          return [t, c];
+          return [t, f];
         }
         function d(i) {
           let { player: t } = i,
-            a = (0, g.BF)(t),
-            s = (0, g._8)(t),
-            l = (0, g.Ps)(s),
-            c = a ? (0, e.jsx)(W.ud, {}) : (0, e.jsx)(W.E$, {});
+            a = (0, v.BF)(t),
+            s = (0, v._8)(t),
+            l = (0, v.Ps)(s),
+            f = a ? (0, e.jsx)(U.ud, {}) : (0, e.jsx)(U.E$, {});
           return (0, e.jsx)("div", {
-            className: Y().CenteredPlayToggle,
+            className: q().CenteredPlayToggle,
             ...l,
-            children: c,
+            children: f,
           });
         }
         var m = o(3166),
-          v = o(98645),
-          V = o.n(v),
-          j = o(19298),
+          g = o(98645),
+          y = o.n(g),
+          P = o(19298),
           H = o(64415);
-        const E = 3e3,
+        const T = 3e3,
           l1 = 1500;
         function p1(i) {
           let { player: t, category: a, title: s } = i,
-            [l, c] = q(t, C.M$),
-            L = (0, g.BF)(t),
-            x = I(t, c),
-            P = (0, g._8)(t),
-            [S, B, U, t1] = (0, g.qi)(t),
+            [l, f] = e1(t, C.M$),
+            L = (0, v.BF)(t),
+            p = D(t, f),
+            j = (0, v._8)(t),
+            [S, Z, W, n1] = (0, v.qi)(t),
             d1 = (0, r.useCallback)(() => {
-              t1(), c();
-            }, [t1, c]),
-            V1 = (0, r.useCallback)(
-              (B1) => {
+              n1(), f();
+            }, [n1, f]),
+            y1 = (0, r.useCallback)(
+              (D1) => {
                 !t.IsPaused() &&
-                  B1.currentTarget == B1.target &&
+                  D1.currentTarget == D1.target &&
                   t.TogglePlayPause();
               },
               [t],
             ),
             z1 = (0, r.useRef)(null),
             [K1, $1] = (0, r.useState)(!1),
-            Q1 = (0, g.o$)(K1, $1, z1);
+            Q1 = (0, v.o$)(K1, $1, z1);
           const X1 = S
               ? "#TrailerPlayer_Unmute_Tooltip"
               : "#TrailerPlayer_Mute_Tooltip",
-            y1 = L
+            V1 = L
               ? "#TrailerPlayer_Play_Tooltip"
               : "#TrailerPlayer_Pause_Tooltip";
-          let J1 = (0, Z.A)(V().ControlGroup, l && V().ShowControls);
-          return (0, e.jsx)(g.F8.Provider, {
+          let J1 = (0, B.A)(y().ControlGroup, l && y().ShowControls);
+          return (0, e.jsx)(v.F8.Provider, {
             value: Q1,
-            children: (0, e.jsxs)(j.Z, {
-              className: V().PlayerControls,
+            children: (0, e.jsxs)(P.Z, {
+              className: y().PlayerControls,
               focusable: !0,
-              onClick: V1,
-              onOKActionDescription: r1.n.Localize(y1),
-              onOKButton: P,
+              onClick: y1,
+              onOKActionDescription: Y.n.Localize(V1),
+              onOKButton: j,
               onSecondaryButton: d1,
-              onSecondaryActionDescription: r1.n.Localize(X1),
-              onButtonDown: x,
+              onSecondaryActionDescription: Y.n.Localize(X1),
+              onButtonDown: p,
               children: [
                 (0, e.jsxs)("div", {
                   className: J1,
                   children: [
-                    (0, e.jsx)(e1, {}),
+                    (0, e.jsx)(t1, {}),
                     (0, e.jsxs)("div", {
-                      className: V().LowerControls,
+                      className: y().LowerControls,
                       children: [
                         (0, e.jsx)(C.Kf, { player: t, showHoverThumb: !1 }),
                         (0, e.jsxs)("div", {
-                          className: V().ButtonRow,
+                          className: y().ButtonRow,
                           children: [
                             (0, e.jsxs)("div", {
-                              className: V().LeftGroup,
+                              className: y().LeftGroup,
                               children: [
                                 (0, e.jsx)(C.zA, { player: t }),
                                 (0, e.jsx)(C.BI, { player: t }),
                               ],
                             }),
                             (0, e.jsx)("div", {
-                              className: V().RightGroup,
+                              className: y().RightGroup,
                               children: (0, e.jsx)(C.Y1, { player: t }),
                             }),
                           ],
@@ -1089,26 +1089,26 @@
                   category: a,
                   title: s,
                 }),
-                (0, e.jsx)("div", { ref: z1, className: V().MenuLayer }),
+                (0, e.jsx)("div", { ref: z1, className: y().MenuLayer }),
               ],
             }),
           });
         }
-        function q(i, t) {
-          let [a, s] = (0, g.if)(),
+        function e1(i, t) {
+          let [a, s] = (0, v.if)(),
             l = (0, r.useRef)(!0),
-            c = (0, g.BF)(i);
+            f = (0, v.BF)(i);
           (0, r.useEffect)(() => {
-            let x = l.current;
-            if (((l.current = !1), x && !c)) return;
-            s(!0, c ? 0 : l1);
-          }, [c, s, l]);
+            let p = l.current;
+            if (((l.current = !1), p && !f)) return;
+            s(!0, f ? 0 : l1);
+          }, [f, s, l]);
           let L = (0, r.useCallback)(() => {
-            s(!0, E);
+            s(!0, T);
           }, [s]);
           return [a, L];
         }
-        function I(i, t) {
+        function D(i, t) {
           return (0, r.useCallback)(
             (s) => {
               if (s.detail.button == H.pR.TRIGGER_LEFT && i) {
@@ -1130,77 +1130,77 @@
         }
         function Q(i) {
           let { player: t, controlsVisible: a, category: s, title: l } = i,
-            c = (0, C.Rh)("standard", t, a);
-          if (s == R.$m.$z || !l) return null;
-          let L = (0, Z.A)(V().TitleRow, c && V().ShowControls);
+            f = (0, C.Rh)("standard", t, a);
+          if (s == E.$m.$z || !l) return null;
+          let L = (0, B.A)(y().TitleRow, f && y().ShowControls);
           return (0, e.jsx)("div", {
             className: L,
             children: (0, e.jsx)("div", {
-              className: V().RowLimit,
+              className: y().RowLimit,
               children: (0, e.jsx)(C.AE, { category: s, title: l }),
             }),
           });
         }
-        function e1(i) {
-          return (0, e.jsx)("div", { className: V().BehindControlsFade });
+        function t1(i) {
+          return (0, e.jsx)("div", { className: y().BehindControlsFade });
         }
-        var m1 = o(13854),
-          L1 = o(85599);
-        const Z1 = 500,
-          O1 = "responsive_menu_ignore_touch";
-        function W1(i) {
+        var L1 = o(13854),
+          g1 = o(85599);
+        const I1 = 500,
+          S1 = "responsive_menu_ignore_touch";
+        function j1(i) {
           return (0, N.ri)()
             ? (0, e.jsx)(r.Suspense, {
-                children: (0, e.jsx)(F1, { ...i, localContext: !1 }),
+                children: (0, e.jsx)(N1, { ...i, localContext: !1 }),
               })
             : (0, e.jsx)(r.Suspense, {
                 children: (0, e.jsx)(N.QY, {
                   iosVideoFallback: !0,
                   supportsTheater: !1,
                   supportsFullscreen: !0,
-                  children: (0, e.jsx)(F1, { ...i, localContext: !0 }),
+                  children: (0, e.jsx)(N1, { ...i, localContext: !0 }),
                 }),
               });
         }
-        function F1(i) {
+        function N1(i) {
           let {
             ref: t,
             dashManifests: a,
             hlsManifest: s,
             captionManifest: l,
-            screenshot: c,
+            screenshot: f,
             forcePause: L,
-            onPlaybackStart: x,
-            onPlaybackEnd: P,
+            onPlaybackStart: p,
+            onPlaybackEnd: j,
             onPlayPauseChange: S,
-            onMuteChange: B,
-            uiMode: U,
-            altText: t1,
+            onMuteChange: Z,
+            uiMode: W,
+            altText: n1,
             title: d1,
-            category: V1,
+            category: y1,
             statsURL: z1,
             muteWhenAutoplayBlocked: K1,
             localContext: $1,
             focus: Q1,
           } = i;
-          (d1 = d1 || ""), (V1 = V1 || R.$m.$z);
-          let [X1, y1] = k(a, s, l, z1, P, S, B);
-          U1(t, y1), j1(y1, !!K1);
-          let [J1, B1] = e2(y1),
+          (d1 = d1 || ""), (y1 = y1 || E.$m.$z);
+          let [X1, V1] = I(a, s, l, z1, j, S, Z);
+          U1(t, V1), P1(V1, !!K1);
+          let [J1, D1] = e2(V1),
             r2 = (0, N.ri)(),
             i2 = $1 && r2 ? r2.refFullscreen : null,
             s2 = (0, F.Ue)(J1, i2),
-            Y1 = x1(y1, !!L),
+            Y1 = x1(V1, !!L),
             o2 = Y1 ? void 0 : X1,
             q1 = {};
-          B1 &&
-            ((q1.width = `${B1.nWidth}px`), (q1.height = `${B1.nHeight}px`));
-          let l2 = (0, A.q3)(() => y1.IsBuffering());
+          D1 &&
+            ((q1.width = `${D1.nWidth}px`), (q1.height = `${D1.nHeight}px`));
+          let l2 = (0, A.q3)(() => V1.IsBuffering());
           r.useEffect(() => {
-            l2 || (x && x());
-          }, [l2, x]),
-            r.use(r1.n.Ready());
-          let a2 = (0, Z.A)(z().TrailerPlayer, O1);
+            l2 || (p && p());
+          }, [l2, p]),
+            r.use(Y.n.Ready());
+          let a2 = (0, B.A)(z().TrailerPlayer, S1);
           return (0, e.jsxs)("div", {
             ref: s2,
             className: a2,
@@ -1211,19 +1211,19 @@
                 style: q1,
                 controls: !1,
                 playsInline: !0,
-                "aria-label": t1,
+                "aria-label": n1,
                 crossOrigin: "anonymous",
               }),
               (0, e.jsx)(t2, {
-                player: y1,
-                uiMode: U,
-                category: V1,
+                player: V1,
+                uiMode: W,
+                category: y1,
                 title: d1,
                 focus: Q1,
               }),
-              (0, e.jsx)(n2, { player: y1 }),
-              !Y1 && (0, e.jsx)(n, { player: y1, screenshot: c }),
-              !Y1 && (0, e.jsx)(C.MT, { player: y1 }),
+              (0, e.jsx)(n2, { player: V1 }),
+              !Y1 && (0, e.jsx)(n, { player: V1, screenshot: f }),
+              !Y1 && (0, e.jsx)(C.MT, { player: V1 }),
             ],
           });
         }
@@ -1258,52 +1258,52 @@
             a = (0, r.useRef)(null),
             s = (0, r.useRef)(null),
             l = (0, F.CH)(),
-            c = (0, r.useCallback)(() => {
+            f = (0, r.useCallback)(() => {
               let S = a.current,
-                B = t.current;
-              if (!S || !B) return;
-              let [U, t1] = m1.kf(B.nWidth, B.nHeight, S.nWidth, S.nHeight);
-              S.nWidth - U < 2 ? (U = S.nWidth) : (U = Math.ceil(U)),
-                S.nHeight - t1 < 2 ? (t1 = S.nHeight) : (t1 = Math.ceil(t1));
+                Z = t.current;
+              if (!S || !Z) return;
+              let [W, n1] = L1.kf(Z.nWidth, Z.nHeight, S.nWidth, S.nHeight);
+              S.nWidth - W < 2 ? (W = S.nWidth) : (W = Math.ceil(W)),
+                S.nHeight - n1 < 2 ? (n1 = S.nHeight) : (n1 = Math.ceil(n1));
               let d1 = s.current;
-              (d1 && d1.nWidth == U && d1.nHeight == t1) ||
-                ((s.current = { nWidth: U, nHeight: t1 }), l());
+              (d1 && d1.nWidth == W && d1.nHeight == n1) ||
+                ((s.current = { nWidth: W, nHeight: n1 }), l());
             }, [t, a, s, l]),
             L = (0, r.useCallback)(
               (S) => {
-                (t.current = S), c();
+                (t.current = S), f();
               },
-              [t, c],
+              [t, f],
             );
-          (0, g.U1)(i, L);
-          let x = (0, r.useCallback)(
+          (0, v.U1)(i, L);
+          let p = (0, r.useCallback)(
             (S) => {
               (a.current = {
                 nWidth: S.contentRect.width,
                 nHeight: S.contentRect.height,
               }),
-                c();
+                f();
             },
-            [a, c],
+            [a, f],
           );
-          return [(0, F.wY)(x), s.current];
+          return [(0, F.wY)(p), s.current];
         }
         function t2(i) {
-          let { player: t, uiMode: a, category: s, title: l, focus: c } = i;
+          let { player: t, uiMode: a, category: s, title: l, focus: f } = i;
           const L = (0, m.Qn)(),
-            x = (0, m.Xk)();
+            p = (0, m.Xk)();
           return (
             (!a || a == "auto") &&
-              ((0, f1.$W)() || x
+              ((0, f1.$W)() || p
                 ? (a = "touch")
                 : L
                   ? (a = "gamepad")
                   : (a = "desktop")),
             a == "touch"
-              ? (0, e.jsx)(D1, { player: t, category: s, title: l })
+              ? (0, e.jsx)(A1, { player: t, category: s, title: l })
               : a == "gamepad"
                 ? (0, e.jsx)(p1, { player: t, category: s, title: l })
-                : (0, e.jsx)(v1, { player: t, category: s, title: l, focus: c })
+                : (0, e.jsx)(v1, { player: t, category: s, title: l, focus: f })
           );
         }
         function n2(i) {
@@ -1312,100 +1312,106 @@
             l = (0, A.q3)(() => t.IsBuffering());
           (0, r.useEffect)(() => {
             if (!l) return;
-            let x = window.setTimeout(() => s("fadein"), 1e3);
+            let p = window.setTimeout(() => s("fadein"), 1e3);
             return () => {
-              x && window.clearTimeout(x);
+              p && window.clearTimeout(p);
             };
           }, [l, s]),
             (0, r.useEffect)(() => {
               if (l) return;
               s("fadeout");
-              let x = window.setTimeout(() => s("norender"), 300);
-              return () => window.clearTimeout(x);
+              let p = window.setTimeout(() => s("norender"), 300);
+              return () => window.clearTimeout(p);
             }, [l, s]);
-          let c = a != "norender",
-            L = (0, Z.A)(z().LoadingThrobber, a == "fadein" && z().FadeIn);
+          let f = a != "norender",
+            L = (0, B.A)(z().LoadingThrobber, a == "fadein" && z().FadeIn);
           return (0, e.jsx)("div", {
             className: L,
             children:
-              c && (0, e.jsx)(L1.t, { size: "large", position: "center" }),
+              f && (0, e.jsx)(g1.t, { size: "large", position: "center" }),
           });
         }
         function n(i) {
           let { player: t, screenshot: a } = i,
             s = (0, A.q3)(() => t.GetUserInputNeeded()),
-            l = (0, F.DF)(s, Z1),
-            [c, L] = (0, r.useState)(!1),
-            x = r.useCallback(() => {
+            l = (0, F.DF)(s, I1),
+            [f, L] = (0, r.useState)(!1),
+            p = r.useCallback(() => {
               t.UserInputReceived(), L(!0);
             }, [t]);
           if (
             (r.useEffect(() => {
-              if (!c) return;
-              let B = setTimeout(() => L(!1), 500);
-              return () => clearTimeout(B);
-            }, [c]),
+              if (!f) return;
+              let W = setTimeout(() => L(!1), 500);
+              return () => clearTimeout(W);
+            }, [f]),
             !l)
           )
             return null;
-          let P = {};
-          return (
-            a && (P.backgroundImage = `url('${a}')`),
-            (0, e.jsx)("div", {
-              style: P,
-              className: z().UserInputNeeded,
-              onClick: x,
-              children: (0, e.jsx)("div", {
-                className: (0, Z.A)(z().UserInputGlass, c && z().Animate),
-                children: (0, e.jsx)(W.ud, {}),
-              }),
-            })
-          );
+          r.use(Y.n.Ready());
+          let j = {};
+          a && (j.backgroundImage = `url('${a}')`);
+          let S = (Z) => {
+            (Z.key === "Enter" || Z.key === " ") && (Z.preventDefault(), p());
+          };
+          return (0, e.jsx)("div", {
+            style: j,
+            className: z().UserInputNeeded,
+            role: "button",
+            tabIndex: 0,
+            "aria-label": Y.n.Localize("#TrailerPlayer_Play_Tooltip"),
+            onClick: p,
+            onKeyDown: S,
+            children: (0, e.jsx)("div", {
+              className: (0, B.A)(z().UserInputGlass, f && z().Animate),
+              children: (0, e.jsx)(U.ud, {}),
+            }),
+          });
         }
       },
       12997: ($, a1, o) => {
         "use strict";
-        o.d(a1, { F: () => z, v: () => n1 });
+        o.d(a1, { F: () => z, v: () => r1 });
         var e = o(7850),
           r = o(90626);
-        const W = (0, r.createContext)({});
-        function n1(D) {
+        const U = (0, r.createContext)({});
+        function r1(k) {
           let {
-              autoplayEnabled: b,
+              autoplayEnabled: _,
               setAutoplayEnabled: X,
               playerVolume: F,
               setPlayerVolume: C1,
               audioMuted: h1,
               setAudioMuted: c1,
-              children: g1,
-            } = D,
+              children: m1,
+            } = k,
             M = (0, r.useMemo)(
               () => ({
-                m_bAutoplayEnabled: b,
+                m_bAutoplayEnabled: _,
                 m_fnSetAutoplayEnabled: X,
                 m_nPlayerVolume: F,
                 m_fnSetPlayerVolume: C1,
                 m_bAudioMuted: h1,
                 m_fnSetAudioMuted: c1,
               }),
-              [b, X, F, C1, h1, c1],
+              [_, X, F, C1, h1, c1],
             );
-          return (0, e.jsx)(W.Provider, { value: M, children: g1 });
+          return (0, e.jsx)(U.Provider, { value: M, children: m1 });
         }
         function z() {
-          return (0, r.useContext)(W);
+          return (0, r.useContext)(U);
         }
       },
       84456: ($, a1, o) => {
         "use strict";
         o.d(a1, {
-          Ae: () => k,
+          Ae: () => I,
           Av: () => i1,
           BF: () => s1,
           Cl: () => M,
           F8: () => F,
-          Ps: () => j1,
-          QR: () => g1,
+          Ps: () => P1,
+          QR: () => m1,
           U1: () => J,
           Ug: () => u1,
           Uo: () => O,
@@ -1415,230 +1421,230 @@
           j_: () => N,
           lr: () => M1,
           o$: () => h1,
-          qi: () => Z,
+          qi: () => B,
           sy: () => c1,
         });
         var e = o(90626),
           r = o(65946),
-          W = o(14947),
-          n1 = o(71742);
+          U = o(14947),
+          r1 = o(71742);
         const z = 2e3,
-          D = 500,
-          b = 4e3,
+          k = 500,
+          _ = 4e3,
           X = -1,
           F = e.createContext(void 0);
         function C1() {
           return (0, e.useContext)(F);
         }
-        function h1(h, w, g) {
+        function h1(h, w, v) {
           return (0, e.useMemo)(
             () => ({
               m_bMenuVisible: h,
               m_fnSetMenuVisible: w,
-              m_refMenuLayer: g,
+              m_refMenuLayer: v,
             }),
-            [h, w, g],
+            [h, w, v],
           );
         }
         function c1() {
           let h = C1();
           return h ? h.m_bMenuVisible : !1;
         }
-        function g1() {
+        function m1() {
           let h = C1();
-          (0, n1.wT)(h, "Missing controls context");
+          (0, r1.wT)(h, "Missing controls context");
           let w = h.m_fnSetMenuVisible;
           return (
             (0, e.useEffect)(() => (w(!0), () => w(!1)), [w]), h.m_refMenuLayer
           );
         }
         function M(h, w) {
-          let [g, C] = T(h);
-          return [g || w, C];
+          let [v, C] = b(h);
+          return [v || w, C];
         }
         function i1(h) {
-          return h.pointerType == "touch" ? b : z;
+          return h.pointerType == "touch" ? _ : z;
         }
         function u1() {
-          return D;
+          return k;
         }
-        function T(h) {
-          let [w, g] = x1(),
+        function b(h) {
+          let [w, v] = x1(),
             C = (0, e.useRef)(void 0),
-            R = (0, e.useRef)(!1),
-            y = (0, e.useRef)({ element: void 0, bKeepControls: !1 }),
-            r1 = (0, e.useCallback)(
+            E = (0, e.useRef)(!1),
+            V = (0, e.useRef)({ element: void 0, bKeepControls: !1 }),
+            Y = (0, e.useCallback)(
               (G) => {
-                if (G.target == y.current.element) return;
-                let P1 = k(G);
-                y.current = { element: G.target, bKeepControls: P1 };
+                if (G.target == V.current.element) return;
+                let H1 = I(G);
+                V.current = { element: G.target, bKeepControls: H1 };
               },
-              [y],
+              [V],
             ),
             K = (0, e.useCallback)(
               (G) => {
-                if (y.current.bKeepControls || R.current) {
-                  g(!0, 0);
+                if (V.current.bKeepControls || E.current) {
+                  v(!0, 0);
                   return;
                 }
-                g(!0, G);
+                v(!0, G);
               },
-              [y, R, g],
+              [V, E, v],
             ),
             o1 = s1(h),
             v1 = (0, e.useCallback)(
               (G) => {
-                (R.current = G), K(z);
+                (E.current = G), K(z);
               },
-              [R, K],
+              [E, K],
             );
-          _(h, v1);
-          let H1 = (0, e.useCallback)(() => {
+          R(h, v1);
+          let T1 = (0, e.useCallback)(() => {
             K(z);
           }, [K]);
-          A(h, H1);
-          let S1 = (0, e.useCallback)(
+          A(h, T1);
+          let b1 = (0, e.useCallback)(
               (G) => {
-                G.pointerType != "touch" && (r1(G), K(i1(G)));
+                G.pointerType != "touch" && (Y(G), K(i1(G)));
               },
-              [K, r1],
-            ),
-            T1 = (0, e.useCallback)(
-              (G) => {
-                G.pointerType != "touch" && (r1(G), K(i1(G)));
-              },
-              [r1, K],
-            ),
-            b1 = (0, e.useCallback)(
-              (G) => {
-                G.pointerType != "touch" &&
-                  ((y.current = { element: void 0, bKeepControls: !1 }),
-                  K(u1()));
-              },
-              [y, K],
+              [K, Y],
             ),
             _1 = (0, e.useCallback)(
+              (G) => {
+                G.pointerType != "touch" && (Y(G), K(i1(G)));
+              },
+              [Y, K],
+            ),
+            R1 = (0, e.useCallback)(
+              (G) => {
+                G.pointerType != "touch" &&
+                  ((V.current = { element: void 0, bKeepControls: !1 }),
+                  K(u1()));
+              },
+              [V, K],
+            ),
+            E1 = (0, e.useCallback)(
               (G) => {
                 C.current = G.currentTarget;
               },
               [C],
             ),
-            R1 = (0, e.useCallback)(
+            Z1 = (0, e.useCallback)(
               (G) => {
                 C.current = void 0;
               },
               [C],
             ),
-            E1 = (0, e.useCallback)(
+            B1 = (0, e.useCallback)(
               (G) => {
-                let P1 = C.current;
-                (C.current = void 0), G.currentTarget == P1 && K(i1(G));
+                let H1 = C.current;
+                (C.current = void 0), G.currentTarget == H1 && K(i1(G));
               },
               [K],
             );
           return [
             w,
             {
-              onPointerEnter: S1,
-              onPointerMove: T1,
-              onPointerLeave: b1,
-              onPointerDown: _1,
-              onPointerUp: E1,
-              onPointerCancel: R1,
+              onPointerEnter: b1,
+              onPointerMove: _1,
+              onPointerLeave: R1,
+              onPointerDown: E1,
+              onPointerUp: B1,
+              onPointerCancel: Z1,
             },
           ];
         }
-        function k(h) {
+        function I(h) {
           let w = h.target,
-            g = h.currentTarget;
-          for (; w && w != g; ) {
+            v = h.currentTarget;
+          for (; w && w != v; ) {
             if (w.dataset?.keepcontrols == "true") return !0;
             w = w.parentElement;
           }
           return !1;
         }
-        function j1(h) {
+        function P1(h) {
           let w = (0, e.useRef)(X),
-            g = (0, e.useCallback)(
-              (y) => {
-                (y.pointerType === "mouse" && y.button != 0) ||
-                  (y.currentTarget.setPointerCapture(y.pointerId),
-                  (w.current = y.pointerId));
+            v = (0, e.useCallback)(
+              (V) => {
+                (V.pointerType === "mouse" && V.button != 0) ||
+                  (V.currentTarget.setPointerCapture(V.pointerId),
+                  (w.current = V.pointerId));
               },
               [w],
             ),
             C = (0, e.useCallback)(
-              (y) => {
-                w.current == y.pointerId && (w.current = X);
+              (V) => {
+                w.current == V.pointerId && (w.current = X);
               },
               [w],
             ),
-            R = (0, e.useCallback)(
-              (y) => {
-                if (w.current != y.pointerId) return;
-                y.currentTarget.releasePointerCapture(y.pointerId),
+            E = (0, e.useCallback)(
+              (V) => {
+                if (w.current != V.pointerId) return;
+                V.currentTarget.releasePointerCapture(V.pointerId),
                   (w.current = X);
-                let r1 = y.currentTarget.getBoundingClientRect(),
-                  { clientX: K, clientY: o1 } = y;
-                K >= r1.left &&
-                  K <= r1.right &&
-                  o1 >= r1.top &&
-                  o1 <= r1.bottom &&
-                  h(y);
+                let Y = V.currentTarget.getBoundingClientRect(),
+                  { clientX: K, clientY: o1 } = V;
+                K >= Y.left &&
+                  K <= Y.right &&
+                  o1 >= Y.top &&
+                  o1 <= Y.bottom &&
+                  h(V);
               },
               [w, h],
             );
-          return { onPointerDown: g, onPointerCancel: C, onPointerUp: R };
+          return { onPointerDown: v, onPointerCancel: C, onPointerUp: E };
         }
         function x1() {
           let [h, w] = (0, e.useState)(!1),
-            g = (0, e.useRef)(void 0),
+            v = (0, e.useRef)(void 0),
             C = (0, e.useCallback)(
-              (R, y) => {
-                g.current &&
-                  (window.clearTimeout(g.current), (g.current = void 0)),
-                  w(R),
-                  !(!R || y == 0) &&
-                    (g.current = window.setTimeout(() => w(!1), y));
+              (E, V) => {
+                v.current &&
+                  (window.clearTimeout(v.current), (v.current = void 0)),
+                  w(E),
+                  !(!E || V == 0) &&
+                    (v.current = window.setTimeout(() => w(!1), V));
               },
               [w],
             );
           return (
             (0, e.useEffect)(
               () => () => {
-                g.current && window.clearTimeout(g.current);
+                v.current && window.clearTimeout(v.current);
               },
               [],
             ),
             [h, C]
           );
         }
-        function _(h, w) {
-          let g = (0, e.useRef)(!0),
+        function R(h, w) {
+          let v = (0, e.useRef)(!0),
             C = s1(h);
           (0, e.useEffect)(() => {
-            let R = g.current;
-            (g.current = !1), !(R && !C) && w(C);
-          }, [C, w, g]);
+            let E = v.current;
+            (v.current = !1), !(E && !C) && w(C);
+          }, [C, w, v]);
         }
         function A(h, w) {
-          let g = (0, e.useRef)(!0),
+          let v = (0, e.useRef)(!0),
             C = (0, r.q3)(() => h.GetMuted());
           (0, e.useEffect)(() => {
-            let R = g.current;
-            (g.current = !1), !R && w();
-          }, [C, w, g]);
+            let E = v.current;
+            (v.current = !1), !E && w();
+          }, [C, w, v]);
         }
-        function Z(h) {
-          let [w, g] = (0, r.q3)(() => [h.GetMuted(), h.GetVolume()]),
+        function B(h) {
+          let [w, v] = (0, r.q3)(() => [h.GetMuted(), h.GetVolume()]),
             C = (0, e.useCallback)(
-              (y) => {
-                h.SetMute(!1), h.SetVolume(y);
+              (V) => {
+                h.SetMute(!1), h.SetVolume(V);
               },
               [h],
             ),
-            R = (0, e.useCallback)(() => h.SetMute(!w), [w, h]);
-          return [w, g, C, R];
+            E = (0, e.useCallback)(() => h.SetMute(!w), [w, h]);
+          return [w, v, C, E];
         }
         function N(h) {
           return (0, r.q3)(() => [
@@ -1660,12 +1666,12 @@
         }
         function J(h, w) {
           (0, e.useEffect)(() => {
-            const g = (0, W.fm)(() => {
+            const v = (0, U.fm)(() => {
               let C = h.GetMaxVideoDimensions(),
-                R = C ? { nWidth: C.nWidth, nHeight: C.nHeight } : null;
-              w(R);
+                E = C ? { nWidth: C.nWidth, nHeight: C.nHeight } : null;
+              w(E);
             });
-            return () => g();
+            return () => v();
           }, [h, w]);
         }
         function O(h) {
@@ -1681,354 +1687,380 @@
       7817: ($, a1, o) => {
         "use strict";
         o.d(a1, {
-          K$: () => _1,
-          MT: () => I1,
-          Wc: () => T1,
-          Y1: () => D1,
-          zA: () => G1,
+          K$: () => E1,
+          MT: () => k1,
+          Wc: () => _1,
+          Y1: () => A1,
+          zA: () => W1,
           c5: () => v1,
-          BI: () => H1,
-          CS: () => b1,
-          tS: () => S1,
-          Kf: () => R1,
-          AE: () => k1,
+          BI: () => T1,
+          CS: () => R1,
+          tS: () => b1,
+          Kf: () => Z1,
+          AE: () => O1,
           M$: () => o1,
-          Rh: () => A1,
+          Rh: () => F1,
         });
         var e = o(7850),
           r = o(90626),
-          W = o(13854),
-          n1 = o(56718),
+          U = o(13854),
+          r1 = o(56718),
           z = o(20525),
-          D = o(98339),
-          b = o.n(D),
+          k = o(98339),
+          _ = o.n(k),
           X = o(36707),
           F = o(48473),
           C1 = o(71421),
           h1 = o(30096),
           c1 = o(31382),
-          g1 = o(92264),
+          m1 = o(92264),
           M = o(84456),
           i1 = o(82734),
           u1 = o(89083),
-          T = o(26359),
-          k = o(47045),
-          j1 = o(72739),
+          b = o(26359),
+          I = o(47045),
+          P1 = o(72739),
           x1 = o(36118),
-          _ = o(84666),
-          A = o.n(_),
-          Z = o(14043),
+          R = o(84666),
+          A = o.n(R),
+          B = o(14043),
           N = o(12997),
           f1 = o(3166),
           s1 = o(41635),
           w1 = o(99412);
         const J = parseInt(A().nContextMenuEdgePadding),
           O = parseInt(A().nContextMenuVerticalGap);
-        function M1(p) {
-          let { refButton: u, onClose: f, scroll: d, children: m } = p,
-            v = (0, r.useRef)(null),
-            [V, j] = (0, r.useState)({ nLeft: 0, nTop: 0 }),
+        function M1(x) {
+          let { refButton: u, onClose: c, scroll: d, children: m } = x,
+            g = (0, r.useRef)(null),
+            [y, P] = (0, r.useState)({ nLeft: 0, nTop: 0 }),
             H = (0, M.QR)(),
-            E = (0, h1.QS)(
-              (I) => {
-                if (((v.current = I), !I)) return;
-                let Q = (e1) => {
-                  let m1 = (0, i1.id)(I, e1.target),
-                    L1 = (0, i1.id)(u.current, e1.target);
-                  !m1 && !L1 && f();
+            T = (0, h1.QS)(
+              (D) => {
+                if (((g.current = D), !D)) return;
+                let Q = (t1) => {
+                  let L1 = (0, i1.id)(D, t1.target),
+                    g1 = (0, i1.id)(u.current, t1.target);
+                  !L1 && !g1 && c();
                 };
-                if (I.ownerDocument.defaultView)
+                if (D.ownerDocument.defaultView)
                   return (
-                    I.ownerDocument.defaultView.addEventListener("mouseup", Q),
+                    D.ownerDocument.defaultView.addEventListener("mouseup", Q),
                     () =>
-                      I.ownerDocument.defaultView?.removeEventListener(
+                      D.ownerDocument.defaultView?.removeEventListener(
                         "mouseup",
                         Q,
                       )
                   );
               },
-              [v, f, u],
+              [g, c, u],
             );
           if (
             ((0, r.useLayoutEffect)(() => {
-              if (!v.current || !u.current || !H.current) return;
-              let I = v.current.getBoundingClientRect(),
+              if (!g.current || !u.current || !H.current) return;
+              let D = g.current.getBoundingClientRect(),
                 Q = H.current.getBoundingClientRect(),
-                e1 = u.current.getBoundingClientRect(),
-                m1 = Q.right - Q.left,
-                L1 = e1.right - e1.left,
-                Z1 = e1.left - Q.left + L1 / 2,
-                O1 = I.right - I.left,
-                W1 = W.OQ(Z1 - O1 / 2, 0 + J, m1 - O1 - J),
-                F1 = I.bottom - I.top,
-                U1 = e1.top - O - F1 - Q.top;
-              j({ nLeft: W1, nTop: U1 });
-            }, [v, u, H]),
+                t1 = u.current.getBoundingClientRect(),
+                L1 = Q.right - Q.left,
+                g1 = t1.right - t1.left,
+                I1 = t1.left - Q.left + g1 / 2,
+                S1 = D.right - D.left,
+                j1 = U.OQ(I1 - S1 / 2, 0 + J, L1 - S1 - J),
+                N1 = D.bottom - D.top,
+                U1 = t1.top - O - N1 - Q.top;
+              P({ nLeft: j1, nTop: U1 });
+            }, [g, u, H]),
             !H.current || !m)
           )
             return null;
-          let l1 = { left: V.nLeft, top: V.nTop },
+          let l1 = { left: y.nLeft, top: y.nTop },
             p1 = (0, X.A)(A().SettingsMenu, !!d && A().Scroll),
-            q = (0, e.jsx)("div", {
-              ref: E,
+            e1 = (0, e.jsx)("div", {
+              ref: T,
               style: l1,
               className: p1,
+              role: "menu",
               children: m,
             });
-          return j1.createPortal(q, H.current);
+          return P1.createPortal(e1, H.current);
         }
-        function h(p) {
-          return (0, e.jsx)("div", { className: A().Separator });
+        function h(x) {
+          return (0, e.jsx)("div", {
+            className: A().Separator,
+            role: "separator",
+          });
         }
-        function w(p) {
-          let { onClick: u, checked: f, children: d } = p,
-            [m, v] = (0, h1.OP)(),
-            V = (0, X.A)(A().MenuItem, f && A().Checked),
-            j = "#2d73ff",
+        function w(x) {
+          let { onClick: u, checked: c, children: d } = x,
+            [m, g] = (0, h1.OP)(),
+            y = (0, X.A)(A().MenuItem, c && A().Checked),
+            P = "#2d73ff",
             H = "#00ccff";
           return (
-            m && ((j = "#eeeeee"), (H = "#ffffff")),
+            m && ((P = "#eeeeee"), (H = "#ffffff")),
             (0, e.jsxs)("div", {
-              className: V,
+              className: y,
+              role: "menuitemcheckbox",
+              "aria-checked": c,
+              tabIndex: 0,
               onClick: u,
-              ...v,
+              onKeyDown: (T) => {
+                (T.key === "Enter" || T.key === " ") &&
+                  (T.preventDefault(), u());
+              },
+              ...g,
               children: [
                 d,
-                f && (0, e.jsx)(x1.X4B, { color: j, highlightColor: H }),
+                c && (0, e.jsx)(x1.X4B, { color: P, highlightColor: H }),
               ],
             })
           );
         }
-        function g(p) {
-          let { player: u, refButton: f, onClose: d } = p,
+        function v(x) {
+          let { player: u, refButton: c, onClose: d } = x,
             m = (0, N.F)(),
-            v = u.GetVideoRepresentations().map((E) => {
+            g = u.GetVideoRepresentations().map((T) => {
               let l1 = () => {
-                  u.SetVideoRepresentation(E), d();
+                  u.SetVideoRepresentation(T), d();
                 },
-                p1 = R(E);
+                p1 = E(T);
               return (0, e.jsx)(
                 w,
-                { onClick: l1, checked: E.selected, children: p1 },
-                E.id,
+                { onClick: l1, checked: T.selected, children: p1 },
+                T.id,
               );
             }),
-            V = v.length > 1,
-            j = !!m.m_fnSetAutoplayEnabled,
-            H = V || !j;
+            y = g.length > 1,
+            P = !!m.m_fnSetAutoplayEnabled,
+            H = y || !P;
           return (0, e.jsxs)(M1, {
-            refButton: f,
+            refButton: c,
             onClose: d,
             children: [
-              H && v,
-              j && H && (0, e.jsx)(h, {}),
-              j && (0, e.jsx)(C, { onClose: d }),
+              H && g,
+              P && H && (0, e.jsx)(h, {}),
+              P && (0, e.jsx)(C, { onClose: d }),
             ],
           });
         }
-        function C(p) {
-          let { onClose: u } = p,
-            f = (0, N.F)(),
-            d = f.m_bAutoplayEnabled == !0,
+        function C(x) {
+          let { onClose: u } = x,
+            c = (0, N.F)(),
+            d = c.m_bAutoplayEnabled == !0,
             m = (0, r.useCallback)(() => {
-              f.m_fnSetAutoplayEnabled && f.m_fnSetAutoplayEnabled(!d), u();
-            }, [d, f, u]);
+              c.m_fnSetAutoplayEnabled && c.m_fnSetAutoplayEnabled(!d), u();
+            }, [d, c, u]);
           return (
-            r.use(k.n.Ready()),
+            r.use(I.n.Ready()),
             (0, e.jsx)(w, {
               onClick: m,
               checked: d,
-              children: k.n.Localize("#StoreTrailer_AutoPlayVideos"),
+              children: I.n.Localize("#StoreTrailer_AutoPlayVideos"),
             })
           );
         }
-        function R(p) {
-          return (0, Z.n)(p)
-            ? k.n.Localize("#TrailerPlayer_Quality_Auto")
-            : p.height == 2160
+        function E(x) {
+          return (0, B.n)(x)
+            ? I.n.Localize("#TrailerPlayer_Quality_Auto")
+            : x.height == 2160
               ? "2160p (4k)"
-              : `${p.height}p`;
+              : `${x.height}p`;
         }
-        function y(p) {
-          let { player: u, refButton: f, onClose: d } = p;
+        function V(x) {
+          let { player: u, refButton: c, onClose: d } = x;
           const m = (0, w1.sfN)(f1.TS.LANGUAGE);
-          let v = (0, r.useMemo)(() => {
-              let j = [...u.GetCaptionRepresentations()],
-                H = j.findIndex((E) => E.m_eLanguage == m);
-              return H > 0 && s1.yY(j, H, 0), j;
+          let g = (0, r.useMemo)(() => {
+              let P = [...u.GetCaptionRepresentations()],
+                H = P.findIndex((T) => T.m_eLanguage == m);
+              return H > 0 && s1.yY(P, H, 0), P;
             }, [m, u]),
-            V = [];
-          for (let j of v) {
+            y = [];
+          for (let P of g) {
             let H = () => {
-              u.SetCaptionRepresentation(j.m_eLanguage), d();
+              u.SetCaptionRepresentation(P.m_eLanguage), d();
             };
-            V.push(
+            y.push(
               (0, e.jsx)(
                 w,
-                { onClick: H, checked: !1, children: j.m_strLabel },
-                j.m_eLanguage,
+                { onClick: H, checked: !1, children: P.m_strLabel },
+                P.m_eLanguage,
               ),
             ),
-              j.m_eLanguage == m && V.push((0, e.jsx)(h, {}));
+              P.m_eLanguage == m && y.push((0, e.jsx)(h, {}));
           }
-          return V.length == 0
+          return y.length == 0
             ? null
             : (0, e.jsx)(M1, {
-                refButton: f,
+                refButton: c,
                 onClose: d,
                 scroll: !0,
-                children: V,
+                children: y,
               });
         }
-        const r1 = parseInt(b().nTimelineHoverEdgePadding),
+        const Y = parseInt(_().nTimelineHoverEdgePadding),
           K = 130,
           o1 = !1,
-          v1 = r.forwardRef(function (u, f) {
+          v1 = r.forwardRef(function (u, c) {
             let {
                 tooltip: d,
                 onActivate: m,
-                size: v,
-                children: V,
-                disableTooltip: j,
+                size: g,
+                children: y,
+                disableTooltip: P,
               } = u,
               H = (0, M.sy)(),
-              E = (0, M.Ps)(m);
+              T = (0, M.Ps)(m);
             return (0, e.jsx)(C1.he, {
               toolTipContent: d,
               direction: "top",
               usePointerEvents: !0,
-              bDisabled: H || j,
+              bDisabled: H || P,
               children: (0, e.jsx)("div", {
-                ref: f,
-                className: b().PlaybackButton,
-                ...E,
+                ref: c,
+                className: _().PlaybackButton,
+                ...T,
                 "data-keepcontrols": !0,
-                children: V,
+                children: y,
               }),
             });
           });
-        function H1(p) {
-          let { player: u } = p,
-            [f, d] = (0, M.j_)(u),
-            m = (0, g1.qZ)(f, !1),
-            v = (0, g1.qZ)(d, !1);
+        function T1(x) {
+          let { player: u } = x,
+            [c, d] = (0, M.j_)(u),
+            m = (0, m1.qZ)(c, !1),
+            g = (0, m1.qZ)(d, !1);
           return (0, e.jsxs)("div", {
-            className: b().PlaybackTime,
+            className: _().PlaybackTime,
             children: [
               (0, e.jsx)("span", { children: m }),
-              (0, e.jsx)("span", { className: b().TimeDash, children: "/" }),
-              (0, e.jsx)("span", { children: v }),
+              (0, e.jsx)("span", { className: _().TimeDash, children: "/" }),
+              (0, e.jsx)("span", { children: g }),
             ],
           });
         }
-        function S1(p) {
+        function b1(x) {
           let u = (0, c1.ri)(),
-            f = (0, c1.Dy)(u, "theater");
+            c = (0, c1.Dy)(u, "theater");
           if (!u || !u.bSupportsTheater) return null;
-          r.use(k.n.Ready());
+          r.use(I.n.Ready());
           let d = u.strMode == "theater",
             m = d ? (0, e.jsx)(z.nf, {}) : (0, e.jsx)(z.tS, {}),
-            v = k.n.Localize(
+            g = I.n.Localize(
               d
                 ? "#TrailerPlayer_ExitTheater_Tooltip"
                 : "#TrailerPlayer_EnterTheater_Tooltip",
             );
-          return (0, e.jsx)(v1, { onActivate: f, tooltip: v, children: m });
+          return (0, e.jsx)(v1, { onActivate: c, tooltip: g, children: m });
         }
-        function T1(p) {
+        function _1(x) {
           let u = (0, c1.ri)(),
-            f = (0, c1.Dy)(u, "fullscreen");
+            c = (0, c1.Dy)(u, "fullscreen");
           if (!u || !u.bSupportsFullscreen) return null;
-          r.use(k.n.Ready());
+          r.use(I.n.Ready());
           let d = u.strMode == "fullscreen",
-            m = d ? (0, e.jsx)(n1.JaO, {}) : (0, e.jsx)(z.mc, {}),
-            v = k.n.Localize(
+            m = d ? (0, e.jsx)(r1.JaO, {}) : (0, e.jsx)(z.mc, {}),
+            g = I.n.Localize(
               d
                 ? "#TrailerPlayer_ExitFullScreen_Tooltip"
                 : "#TrailerPlayer_FullScreen_Tooltip",
             );
-          return (0, e.jsx)(v1, { onActivate: f, tooltip: v, children: m });
+          return (0, e.jsx)(v1, { onActivate: c, tooltip: g, children: m });
         }
-        function b1(p) {
-          let { player: u } = p,
-            [f, d] = (0, r.useState)(!1),
+        function R1(x) {
+          let { player: u } = x,
+            [c, d] = (0, r.useState)(!1),
             m = (0, r.useCallback)(() => d(!1), [d]),
-            v = (0, r.useRef)(null);
-          const V = (0, f1.Xk)();
-          let j = (0, r.useCallback)(() => {
-              d((E) => !E);
+            g = (0, r.useRef)(null);
+          const y = (0, f1.Xk)();
+          let P = (0, r.useCallback)(() => {
+              d((T) => !T);
             }, [d]),
-            H = (0, X.A)(b().SettingsButton, f && b().Rotated);
+            H = (0, X.A)(_().SettingsButton, c && _().Rotated);
           return (
-            r.use(k.n.Ready()),
+            r.use(I.n.Ready()),
             (0, e.jsxs)(e.Fragment, {
               children: [
                 (0, e.jsx)(v1, {
-                  ref: v,
-                  onActivate: j,
-                  tooltip: k.n.Localize("#TrailerPlayer_Settings_Tooltip"),
-                  disableTooltip: V,
-                  children: (0, e.jsx)(n1.wB_, { className: H }),
+                  ref: g,
+                  onActivate: P,
+                  tooltip: I.n.Localize("#TrailerPlayer_Settings_Tooltip"),
+                  disableTooltip: y,
+                  children: (0, e.jsx)(r1.wB_, { className: H }),
                 }),
-                f && (0, e.jsx)(g, { player: u, refButton: v, onClose: m }),
+                c && (0, e.jsx)(v, { player: u, refButton: g, onClose: m }),
               ],
             })
           );
         }
-        function _1(p) {
-          let { player: u } = p,
-            [f, d] = (0, r.useState)(!1),
+        function E1(x) {
+          let { player: u } = x,
+            [c, d] = (0, r.useState)(!1),
             m = (0, r.useCallback)(() => d(!1), [d]),
-            v = (0, r.useRef)(null),
-            { bHasCaptions: V, bShowingCaption: j } = (0, M.lr)(u),
+            g = (0, r.useRef)(null),
+            { bHasCaptions: y, bShowingCaption: P } = (0, M.lr)(u),
             H = (0, r.useCallback)(() => {
-              if (j) {
+              if (P) {
                 u.DisableCaptions();
                 return;
               }
-              d((E) => !E);
-            }, [d, u, j]);
+              d((T) => !T);
+            }, [d, u, P]);
           return (
-            r.use(k.n.Ready()),
-            V
+            r.use(I.n.Ready()),
+            y
               ? (0, e.jsxs)(e.Fragment, {
                   children: [
                     (0, e.jsxs)(v1, {
-                      ref: v,
+                      ref: g,
                       onActivate: H,
-                      tooltip: k.n.Localize("#TrailerPlayer_Captions_Tooltip"),
+                      tooltip: I.n.Localize("#TrailerPlayer_Captions_Tooltip"),
                       children: [
-                        j && (0, e.jsx)(n1.W8t, {}),
-                        !j && (0, e.jsx)(n1.l1R, {}),
+                        P && (0, e.jsx)(r1.W8t, {}),
+                        !P && (0, e.jsx)(r1.l1R, {}),
                       ],
                     }),
-                    f && (0, e.jsx)(y, { player: u, refButton: v, onClose: m }),
+                    c && (0, e.jsx)(V, { player: u, refButton: g, onClose: m }),
                   ],
                 })
               : null
           );
         }
-        function R1(p) {
-          let { player: u, showHoverThumb: f, onTouchSeek: d } = p,
-            m = (0, r.useRef)(null),
-            [v, V, j] = (0, M.j_)(u),
-            [H, E] = N1(u, d),
-            l1 = E1();
-          (0, M.sy)() && (E = null);
-          let q = P1(u);
-          E || (q = void 0);
-          let I = { display: "none" };
-          E && ((I.left = E.nTickOffset), (I.display = "block"));
-          let Q = W.bT(v, 0, V, 0, 100),
-            e1 = W.bT(j, 0, V, 0, 100),
-            m1 = { width: `${Q.toFixed(1)}%` },
-            L1 = { width: `${e1.toFixed(1)}%` },
-            Z1 = (0, X.A)(b().Timeline, E && b().Hovered);
+        function Z1(x) {
+          let { player: u, showHoverThumb: c, onTouchSeek: d } = x;
+          r.use(I.n.Ready());
+          let m = (0, r.useRef)(null),
+            [g, y, P] = (0, M.j_)(u),
+            [H, T] = G1(u, d),
+            l1 = B1();
+          (0, M.sy)() && (T = null);
+          let e1 = H1(u);
+          T || (e1 = void 0);
+          let D = { display: "none" };
+          T && ((D.left = T.nTickOffset), (D.display = "block"));
+          let Q = U.bT(g, 0, y, 0, 100),
+            t1 = U.bT(P, 0, y, 0, 100),
+            L1 = { width: `${Q.toFixed(1)}%` },
+            g1 = { width: `${t1.toFixed(1)}%` },
+            I1 = (j1) => {
+              j1.key === "Home"
+                ? (j1.preventDefault(), u.Seek(0))
+                : j1.key === "End" &&
+                  (j1.preventDefault(), u.Seek(u.GetTimelineDuration()));
+            },
+            S1 = (0, X.A)(_().Timeline, T && _().Hovered);
           return (0, e.jsxs)("div", {
             ref: l1,
-            className: Z1,
-            "data-keepcontrols": !!E,
-            onClick: q,
+            className: S1,
+            "data-keepcontrols": !!T,
+            role: "slider",
+            tabIndex: 0,
+            "aria-label": I.n.Localize("#TrailerPlayer_Seek_Label"),
+            "aria-valuemin": 0,
+            "aria-valuemax": Math.round(y),
+            "aria-valuenow": Math.round(g),
+            "aria-valuetext": `${(0, m1.qZ)(g, !1)} / ${(0, m1.qZ)(y, !1)}`,
+            onClick: e1,
+            onKeyDown: I1,
             onPointerMove: H.onPointerMove,
             onPointerLeave: H.onPointerLeave,
             onPointerDown: H.onPointerDown,
@@ -2036,292 +2068,293 @@
             children: [
               (0, e.jsxs)("div", {
                 ref: m,
-                className: b().TimelineBar,
+                className: _().TimelineBar,
                 onPointerEnter: H.onPointerEnter,
                 children: [
                   (0, e.jsx)("div", {
-                    className: (0, X.A)(b().Bar, b().Buffered),
+                    className: (0, X.A)(_().Bar, _().Buffered),
+                    style: g1,
+                  }),
+                  (0, e.jsx)("div", {
+                    className: (0, X.A)(_().Bar, _().Played),
                     style: L1,
                   }),
                   (0, e.jsx)("div", {
-                    className: (0, X.A)(b().Bar, b().Played),
-                    style: m1,
-                  }),
-                  (0, e.jsx)("div", {
-                    className: (0, X.A)(b().HoverTick),
-                    style: I,
+                    className: (0, X.A)(_().HoverTick),
+                    style: D,
                   }),
                 ],
               }),
               (0, e.jsx)(G, {
                 refTimeline: m,
-                hoverState: E,
-                showHoverThumb: f,
+                hoverState: T,
+                showHoverThumb: c,
               }),
             ],
           });
         }
-        function E1() {
+        function B1() {
           return (0, h1.QS)((u) => {
             if (!u) return;
-            let f = (m) => {
+            let c = (m) => {
                 m.stopPropagation();
               },
               d = (m) => {
                 m.stopPropagation();
               };
             return (
-              u.addEventListener("touchstart", f, { passive: !1 }),
+              u.addEventListener("touchstart", c, { passive: !1 }),
               u.addEventListener("touchend", d, { passive: !1 }),
               () => {
-                u.removeEventListener("touchstart", f),
+                u.removeEventListener("touchstart", c),
                   u.removeEventListener("touchend", d);
               }
             );
           }, []);
         }
-        function G(p) {
-          let { refTimeline: u, hoverState: f, showHoverThumb: d } = p,
+        function G(x) {
+          let { refTimeline: u, hoverState: c, showHoverThumb: d } = x,
             m = (0, r.useRef)(null),
-            [v, V] = (0, r.useState)({ nHoverLeft: 0, bFitsInParent: !1 });
+            [g, y] = (0, r.useState)({ nHoverLeft: 0, bFitsInParent: !1 });
           if (
             ((0, r.useLayoutEffect)(() => {
-              if (!f || !m.current || !u.current) return;
+              if (!c || !m.current || !u.current) return;
               let l1 = u.current.getBoundingClientRect(),
                 p1 = m.current.getBoundingClientRect(),
-                q = l1.right - l1.left,
-                I = p1.right - p1.left,
-                Q = W.OQ(f.nTickOffset - I / 2, 0 + r1, q - I - r1),
-                e1 = (0, i1.PX)(
+                e1 = l1.right - l1.left,
+                D = p1.right - p1.left,
+                Q = U.OQ(c.nTickOffset - D / 2, 0 + Y, e1 - D - Y),
+                t1 = (0, i1.PX)(
                   m.current.ownerDocument.documentElement,
                   m.current,
                   "data-trailer-player",
                 ),
-                m1 = !0;
-              if (e1) {
-                let L1 = e1.getBoundingClientRect();
-                m1 = p1.top > L1.top;
+                L1 = !0;
+              if (t1) {
+                let g1 = t1.getBoundingClientRect();
+                L1 = p1.top > g1.top;
               }
-              V((L1) =>
-                L1.nHoverLeft == Q && L1.bFitsInParent == m1
-                  ? L1
-                  : { nHoverLeft: Q, bFitsInParent: m1 },
+              y((g1) =>
+                g1.nHoverLeft == Q && g1.bFitsInParent == L1
+                  ? g1
+                  : { nHoverLeft: Q, bFitsInParent: L1 },
               );
-            }, [f, m, u, V]),
-            !f)
+            }, [c, m, u, y]),
+            !c)
           )
             return null;
-          let j = {
-              left: v.nHoverLeft,
-              visibility: v.bFitsInParent ? "visible" : "hidden",
+          let P = {
+              left: g.nHoverLeft,
+              visibility: g.bFitsInParent ? "visible" : "hidden",
             },
             H,
-            E = d ? f.thumbnail : null;
-          if (E) {
-            let l1 = K / E.nThumbnailHeight;
+            T = d ? c.thumbnail : null;
+          if (T) {
+            let l1 = K / T.nThumbnailHeight;
             H = {
-              width: `${E.nThumbnailWidth * l1}px`,
-              height: `${E.nThumbnailHeight * l1}px`,
-              backgroundImage: `url(${E.strTileURL})`,
-              backgroundPosition: `-${E.x * l1}px -${E.y * l1}px`,
-              backgroundSize: `${E.nImageWidth * l1}px ${E.nImageHeight * l1}px`,
+              width: `${T.nThumbnailWidth * l1}px`,
+              height: `${T.nThumbnailHeight * l1}px`,
+              backgroundImage: `url(${T.strTileURL})`,
+              backgroundPosition: `-${T.x * l1}px -${T.y * l1}px`,
+              backgroundSize: `${T.nImageWidth * l1}px ${T.nImageHeight * l1}px`,
               backgroundRepeat: "no-repeat",
             };
           }
           return (0, e.jsxs)("div", {
             ref: m,
-            style: j,
-            className: b().Hover,
+            style: P,
+            className: _().Hover,
             children: [
-              !!E && (0, e.jsx)("div", { style: H, className: b().HoverImage }),
+              !!T && (0, e.jsx)("div", { style: H, className: _().HoverImage }),
               (0, e.jsx)("span", {
-                className: b().HoverTime,
-                children: (0, F.Rx)(f.nPlaybackSeconds, !0),
+                className: _().HoverTime,
+                children: (0, F.Rx)(c.nPlaybackSeconds, !0),
               }),
             ],
           });
         }
-        function P1(p) {
+        function H1(x) {
           return (0, r.useCallback)(
             (u) => {
-              let f = u.currentTarget.getBoundingClientRect(),
-                m = (u.pageX - f.left) / (f.right - f.left);
-              p.Seek(m * p.GetTimelineDuration()),
+              let c = u.currentTarget.getBoundingClientRect(),
+                m = (u.pageX - c.left) / (c.right - c.left);
+              x.Seek(m * x.GetTimelineDuration()),
                 u.preventDefault(),
                 u.stopPropagation();
             },
-            [p],
+            [x],
           );
         }
-        function Y(p, u, f) {
-          let d = f - u.left,
+        function q(x, u, c) {
+          let d = c - u.left,
             m = u.right - u.left;
-          d = W.OQ(d, 0, m);
-          let v = d / m,
-            V = Math.floor(p.GetTimelineDuration() * v),
-            j = p.GetThumbnail(V);
-          return j
-            ? { nTickOffset: d, nPlaybackSeconds: V, thumbnail: j }
+          d = U.OQ(d, 0, m);
+          let g = d / m,
+            y = Math.floor(x.GetTimelineDuration() * g),
+            P = x.GetThumbnail(y);
+          return P
+            ? { nTickOffset: d, nPlaybackSeconds: y, thumbnail: P }
             : null;
         }
-        function N1(p, u) {
-          let [f, d] = (0, r.useState)(null),
+        function G1(x, u) {
+          let [c, d] = (0, r.useState)(null),
             m = (0, r.useRef)(null),
-            v = (0, r.useRef)(null),
-            V = (0, r.useCallback)(
-              (q) => {
-                if (q.pointerType != "mouse" && q.pointerType != "pen") return;
-                m.current = q.currentTarget;
-                let I = m.current.getBoundingClientRect(),
-                  Q = Y(p, I, q.clientX);
+            g = (0, r.useRef)(null),
+            y = (0, r.useCallback)(
+              (e1) => {
+                if (e1.pointerType != "mouse" && e1.pointerType != "pen")
+                  return;
+                m.current = e1.currentTarget;
+                let D = m.current.getBoundingClientRect(),
+                  Q = q(x, D, e1.clientX);
                 d(Q);
               },
-              [m, d, p],
+              [m, d, x],
             ),
-            j = (0, r.useCallback)(
-              (q) => {
-                let I = m.current;
-                if ((I || (I = v.current), !I)) return;
-                let Q = I.getBoundingClientRect(),
-                  e1 = Y(p, Q, q.clientX);
-                if ((d(e1), v.current && u)) {
-                  let m1 = e1
+            P = (0, r.useCallback)(
+              (e1) => {
+                let D = m.current;
+                if ((D || (D = g.current), !D)) return;
+                let Q = D.getBoundingClientRect(),
+                  t1 = q(x, Q, e1.clientX);
+                if ((d(t1), g.current && u)) {
+                  let L1 = t1
                     ? {
-                        thumbnail: e1.thumbnail,
-                        nPlaybackSeconds: e1.nPlaybackSeconds,
+                        thumbnail: t1.thumbnail,
+                        nPlaybackSeconds: t1.nPlaybackSeconds,
                       }
                     : null;
-                  u(m1);
+                  u(L1);
                 }
               },
-              [m, v, p, d, u],
+              [m, g, x, d, u],
             ),
             H = (0, r.useCallback)(
-              (q) => {
-                m.current && ((m.current = null), d((I) => (o1 ? I : null)));
+              (e1) => {
+                m.current && ((m.current = null), d((D) => (o1 ? D : null)));
               },
               [d],
             ),
-            E = (0, r.useCallback)(
-              (q) => {
-                (v.current = q.currentTarget),
-                  v.current.setPointerCapture(q.pointerId),
+            T = (0, r.useCallback)(
+              (e1) => {
+                (g.current = e1.currentTarget),
+                  g.current.setPointerCapture(e1.pointerId),
                   (document.body.style.userSelect = "none");
-                let I = v.current.getBoundingClientRect(),
-                  Q = Y(p, I, q.clientX);
+                let D = g.current.getBoundingClientRect(),
+                  Q = q(x, D, e1.clientX);
                 if ((d(Q), u)) {
-                  let e1 = Q
+                  let t1 = Q
                     ? {
                         thumbnail: Q.thumbnail,
                         nPlaybackSeconds: Q.nPlaybackSeconds,
                       }
                     : null;
-                  u(e1);
+                  u(t1);
                 }
               },
-              [v, u, p],
+              [g, u, x],
             ),
             l1 = (0, r.useCallback)(
-              (q) => {
-                v.current &&
-                  ((v.current = null),
+              (e1) => {
+                g.current &&
+                  ((g.current = null),
                   (document.body.style.userSelect = ""),
                   m.current || d(null),
                   u && u(null));
               },
-              [v, m, u, d],
+              [g, m, u, d],
             );
           return [
             {
-              onPointerEnter: V,
-              onPointerMove: j,
+              onPointerEnter: y,
+              onPointerMove: P,
               onPointerLeave: H,
-              onPointerDown: E,
+              onPointerDown: T,
               onLostPointerCapture: l1,
             },
-            f,
+            c,
           ];
         }
-        function I1(p) {
-          let { player: u } = p,
-            f = (0, M.fd)(u);
-          r.use(k.n.Ready());
+        function k1(x) {
+          let { player: u } = x,
+            c = (0, M.fd)(u);
+          r.use(I.n.Ready());
           let d = "";
           return (
-            f == u1.N_.UnsupportedMediaType
-              ? (d = k.n.Localize("#TrailerPlayer_Error_UnsupportedCodec"))
-              : f != u1.N_.Invalid &&
-                (d = k.n.Localize("#TrailerPlayer_Error_Playback")),
+            c == u1.N_.UnsupportedMediaType
+              ? (d = I.n.Localize("#TrailerPlayer_Error_UnsupportedCodec"))
+              : c != u1.N_.Invalid &&
+                (d = I.n.Localize("#TrailerPlayer_Error_Playback")),
             d
               ? (0, e.jsx)("div", {
-                  className: b().FatalErrorMessage,
+                  className: _().FatalErrorMessage,
                   children: (0, e.jsx)("span", { children: d }),
                 })
               : null
           );
         }
-        function D1(p) {
-          let { player: u } = p,
-            [f, d, m, v] = (0, M.qi)(u);
-          r.use(k.n.Ready());
-          const V = (0, f1.Xk)();
-          let j = f ? (0, e.jsx)(n1.K9I, {}) : (0, e.jsx)(n1._3Z, {}),
-            H = k.n.Localize(
-              f
+        function A1(x) {
+          let { player: u } = x,
+            [c, d, m, g] = (0, M.qi)(u);
+          r.use(I.n.Ready());
+          const y = (0, f1.Xk)();
+          let P = c ? (0, e.jsx)(r1.K9I, {}) : (0, e.jsx)(r1._3Z, {}),
+            H = I.n.Localize(
+              c
                 ? "#TrailerPlayer_Unmute_Tooltip"
                 : "#TrailerPlayer_Mute_Tooltip",
             );
           return (0, e.jsx)(v1, {
-            onActivate: v,
+            onActivate: g,
             tooltip: H,
-            disableTooltip: V,
-            children: j,
+            disableTooltip: y,
+            children: P,
           });
         }
-        function G1(p) {
-          let { player: u } = p,
-            f = (0, M.BF)(u);
-          r.use(k.n.Ready());
-          let d = f ? (0, e.jsx)(z.ud, {}) : (0, e.jsx)(z.E$, {}),
-            m = k.n.Localize(
-              f
+        function W1(x) {
+          let { player: u } = x,
+            c = (0, M.BF)(u);
+          r.use(I.n.Ready());
+          let d = c ? (0, e.jsx)(z.ud, {}) : (0, e.jsx)(z.E$, {}),
+            m = I.n.Localize(
+              c
                 ? "#TrailerPlayer_Play_Tooltip"
                 : "#TrailerPlayer_Pause_Tooltip",
             ),
-            v = (0, M._8)(u);
-          return (0, e.jsx)(v1, { onActivate: v, tooltip: m, children: d });
+            g = (0, M._8)(u);
+          return (0, e.jsx)(v1, { onActivate: g, tooltip: m, children: d });
         }
-        function k1(p) {
-          let { category: u, title: f } = p,
-            d = (0, T.e)(u);
+        function O1(x) {
+          let { category: u, title: c } = x,
+            d = (0, b.e)(u);
           return (0, e.jsxs)("div", {
-            className: b().TitleRow,
+            className: _().TitleRow,
             children: [
-              (0, e.jsx)("span", { className: b().Category, children: d }),
-              (0, e.jsx)("span", { className: b().Separator }),
-              (0, e.jsx)("span", { className: b().Title, children: f }),
+              (0, e.jsx)("span", { className: _().Category, children: d }),
+              (0, e.jsx)("span", { className: _().Separator }),
+              (0, e.jsx)("span", { className: _().Title, children: c }),
             ],
           });
         }
-        function A1(p, u, f) {
+        function F1(x, u, c) {
           let m = (0, M.Uo)(u),
-            [v, V] = (0, r.useState)(""),
-            j = (0, r.useRef)(0);
+            [g, y] = (0, r.useState)(""),
+            P = (0, r.useRef)(0);
           (0, r.useEffect)(() => {
             !m ||
-              f ||
-              v != "" ||
-              (V("active"),
-              (j.current = window.setTimeout(() => V("complete"), 4e3)));
-          }, [m, f, v, j, V]),
+              c ||
+              g != "" ||
+              (y("active"),
+              (P.current = window.setTimeout(() => y("complete"), 4e3)));
+          }, [m, c, g, P, y]),
             (0, r.useEffect)(() => {
-              f && (V("complete"), window.clearTimeout(j.current));
-            }, [f]),
-            (0, r.useEffect)(() => () => window.clearTimeout(j.current), []);
+              c && (y("complete"), window.clearTimeout(P.current));
+            }, [c]),
+            (0, r.useEffect)(() => () => window.clearTimeout(P.current), []);
           let H = (0, r.useRef)(!1);
           return (
-            v == "complete" && !f && (H.current = !0),
-            p == "once" && H.current ? !1 : v == "active" || f
+            g == "complete" && !c && (H.current = !0),
+            x == "once" && H.current ? !1 : g == "active" || c
           );
         }
       },
@@ -2335,16 +2368,16 @@
       20525: ($, a1, o) => {
         "use strict";
         o.d(a1, {
-          E$: () => A1,
-          mc: () => v,
-          nf: () => V,
-          tS: () => j,
-          ud: () => k1,
+          E$: () => F1,
+          mc: () => g,
+          nf: () => y,
+          tS: () => P,
+          ud: () => O1,
         });
         var e = o(7850),
           r = o(91929),
-          W = o.n(r);
-        function n1(n) {
+          U = o.n(r);
+        function r1(n) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -2376,7 +2409,7 @@
             }),
           });
         }
-        function D(n) {
+        function k(n) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -2410,7 +2443,7 @@
             ],
           });
         }
-        function b(n) {
+        function _(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -2500,7 +2533,7 @@
             }),
           });
         }
-        function g1(n) {
+        function m1(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -2576,7 +2609,7 @@
             }),
           });
         }
-        function T(n) {
+        function b(n) {
           return jsxs("svg", {
             width: "36",
             height: "36",
@@ -2596,7 +2629,7 @@
             ],
           });
         }
-        function k(n) {
+        function I(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -2610,7 +2643,7 @@
             }),
           });
         }
-        function j1(n) {
+        function P1(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -2638,7 +2671,7 @@
             }),
           });
         }
-        function _(n) {
+        function R(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -2666,7 +2699,7 @@
             }),
           });
         }
-        function Z(n) {
+        function B(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -2821,7 +2854,7 @@
             }),
           });
         }
-        function g(n) {
+        function v(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -2849,7 +2882,7 @@
             }),
           });
         }
-        function R(n) {
+        function E(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -2863,7 +2896,7 @@
             }),
           });
         }
-        function y(n) {
+        function V(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -2877,7 +2910,7 @@
             }),
           });
         }
-        function r1(n) {
+        function Y(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -2935,7 +2968,7 @@
             }),
           });
         }
-        function H1(n) {
+        function T1(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -2951,7 +2984,7 @@
             }),
           });
         }
-        function S1(n) {
+        function b1(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -2965,7 +2998,7 @@
             }),
           });
         }
-        function T1(n) {
+        function _1(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -2981,7 +3014,7 @@
             }),
           });
         }
-        function b1(n) {
+        function R1(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -2995,7 +3028,7 @@
             }),
           });
         }
-        function _1(n) {
+        function E1(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -3009,7 +3042,7 @@
             }),
           });
         }
-        function R1(n) {
+        function Z1(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -3023,7 +3056,7 @@
             }),
           });
         }
-        function E1(n) {
+        function B1(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -3061,7 +3094,7 @@
             ],
           });
         }
-        function P1(n) {
+        function H1(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -3075,7 +3108,7 @@
             }),
           });
         }
-        function Y(n) {
+        function q(n) {
           return jsxs("svg", {
             width: "36",
             height: "36",
@@ -3095,7 +3128,7 @@
             ],
           });
         }
-        function N1(n) {
+        function G1(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -3111,7 +3144,7 @@
             }),
           });
         }
-        function I1(n) {
+        function k1(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -3127,7 +3160,7 @@
             }),
           });
         }
-        function D1(n) {
+        function A1(n) {
           return jsx("svg", {
             width: "36",
             height: "36",
@@ -3143,7 +3176,7 @@
             }),
           });
         }
-        function G1(n) {
+        function W1(n) {
           return jsxs("div", {
             className: classnames(
               styles.RecordingIconContainer,
@@ -3151,12 +3184,12 @@
               n.className,
             ),
             children: [
-              jsx(I1, { className: classnames(styles.Outer, "Outer") }),
-              jsx(D1, { className: classnames(styles.Inner, "Inner") }),
+              jsx(k1, { className: classnames(styles.Outer, "Outer") }),
+              jsx(A1, { className: classnames(styles.Inner, "Inner") }),
             ],
           });
         }
-        function k1(n) {
+        function O1(n) {
           return (0, e.jsx)("svg", {
             className: "SVGIcon_Button",
             width: "36",
@@ -3171,7 +3204,7 @@
             }),
           });
         }
-        function A1(n) {
+        function F1(n) {
           return (0, e.jsx)("svg", {
             className: "SVGIcon_Button",
             width: "36",
@@ -3186,7 +3219,7 @@
             }),
           });
         }
-        function p(n) {
+        function x(n) {
           return jsx("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             className: "SVGIcon_Button",
@@ -3216,7 +3249,7 @@
             }),
           });
         }
-        function f(n) {
+        function c(n) {
           return jsx("svg", {
             className: "SVGIcon_Button",
             width: "36",
@@ -3275,7 +3308,7 @@
             ],
           });
         }
-        function v(n) {
+        function g(n) {
           return (0, e.jsx)("svg", {
             className: "SVGIcon_Button",
             width: "36",
@@ -3290,7 +3323,7 @@
             }),
           });
         }
-        function V(n) {
+        function y(n) {
           return (0, e.jsx)("svg", {
             width: "128",
             height: "128",
@@ -3303,7 +3336,7 @@
             }),
           });
         }
-        function j(n) {
+        function P(n) {
           return (0, e.jsx)("svg", {
             width: "128",
             height: "128",
@@ -3332,7 +3365,7 @@
             }),
           });
         }
-        function E(n) {
+        function T(n) {
           return jsx("svg", {
             viewBox: "8 0 36 36",
             fill: "none",
@@ -3449,7 +3482,7 @@
             ],
           });
         }
-        function q(n) {
+        function e1(n) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -3471,7 +3504,7 @@
             ],
           });
         }
-        function I(n) {
+        function D(n) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -3505,7 +3538,7 @@
             }),
           });
         }
-        function e1(n) {
+        function t1(n) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -3523,7 +3556,7 @@
             ],
           });
         }
-        function m1(n) {
+        function L1(n) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -3543,7 +3576,7 @@
             ],
           });
         }
-        function L1(n) {
+        function g1(n) {
           let { direction: i, ...t } = n,
             s = { transform: `scaleX( ${i == "right" ? "-1" : "1"} )` };
           return jsxs("svg", {
@@ -3567,7 +3600,7 @@
             ],
           });
         }
-        function Z1(n) {
+        function I1(n) {
           return jsx("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -3581,7 +3614,7 @@
             }),
           });
         }
-        function O1(n) {
+        function S1(n) {
           return jsx("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -3595,7 +3628,7 @@
             }),
           });
         }
-        function W1(n) {
+        function j1(n) {
           return jsx("svg", {
             width: "24",
             height: "24",
@@ -3609,7 +3642,7 @@
             }),
           });
         }
-        function F1(n) {
+        function N1(n) {
           return jsxs("svg", {
             width: "20",
             height: "20",
@@ -3713,25 +3746,25 @@
       },
       31382: ($, a1, o) => {
         "use strict";
-        o.d(a1, { Dy: () => x1, QY: () => T, ri: () => j1, vG: () => k });
+        o.d(a1, { Dy: () => x1, QY: () => b, ri: () => P1, vG: () => I });
         var e = o(7850),
           r = o(90626),
-          W = o(82734),
-          n1 = o(18938),
+          U = o(82734),
+          r1 = o(18938),
           z = o(30343),
-          D = o(8323),
-          b = o(71742);
-        function X(_ = !1) {
-          let [A, Z] = useState(!1),
+          k = o(8323),
+          _ = o(71742);
+        function X(R = !1) {
+          let [A, B] = useState(!1),
             N = useRef(null),
             f1 = useRefCallbackWithCleanup(
               (J) => {
                 if (((N.current = J), !J)) {
-                  Z(!1);
+                  B(!1);
                   return;
                 }
                 let O = () => {
-                  Z(BElementFullscreen(J));
+                  B(BElementFullscreen(J));
                 };
                 return (
                   J.addEventListener("fullscreenchange", O),
@@ -3740,7 +3773,7 @@
                   }
                 );
               },
-              [Z],
+              [B],
             ),
             s1 = useCallback(() => {
               if (!N.current) return;
@@ -3749,97 +3782,97 @@
                 CancelFullscreen(J);
                 return;
               }
-              F(J, _);
-            }, [N, _]),
+              F(J, R);
+            }, [N, R]),
             w1 = useMemo(
               () => ({ bFullscreen: A, fnToggleFullscreen: s1 }),
               [A, s1],
             );
           return [f1, w1];
         }
-        function F(_, A) {
-          if (!_ || (0, W.ww)(_) || (0, W.tl)(_) || !A) return;
-          let Z = _.getElementsByTagName("video");
-          if (Z.length == 0) return;
-          let N = Z[0];
+        function F(R, A) {
+          if (!R || (0, U.ww)(R) || (0, U.tl)(R) || !A) return;
+          let B = R.getElementsByTagName("video");
+          if (B.length == 0) return;
+          let N = B[0];
           N.webkitSetPresentationMode &&
             N.webkitSetPresentationMode("fullscreen");
         }
         const C1 = (0, r.createContext)(void 0);
-        function h1(_) {
-          let { iosVideoFallback: A, children: Z } = _,
+        function h1(R) {
+          let { iosVideoFallback: A, children: B } = R,
             [N, f1] = X(!!A),
             s1 = useMemo(
               () => ({ refFullscreenElement: N, data: f1 }),
               [N, f1],
             );
-          return jsx(C1.Provider, { value: s1, children: Z });
+          return jsx(C1.Provider, { value: s1, children: B });
         }
         function c1() {
-          let _ = useContext(C1);
-          return _ ? _.data : void 0;
+          let R = useContext(C1);
+          return R ? R.data : void 0;
         }
-        function g1() {
-          let _ = useContext(C1);
-          return _ ? _.refFullscreenElement : void 0;
+        function m1() {
+          let R = useContext(C1);
+          return R ? R.refFullscreenElement : void 0;
         }
-        function M(_) {
-          return _ ? _ instanceof HTMLDialogElement : !1;
+        function M(R) {
+          return R ? R instanceof HTMLDialogElement : !1;
         }
-        function i1(_) {
-          return _ ? _.hasAttribute("popover") : !1;
+        function i1(R) {
+          return R ? R.hasAttribute("popover") : !1;
         }
         const u1 = (0, r.createContext)(void 0);
-        function T(_) {
+        function b(R) {
           let {
               iosVideoFallback: A,
-              supportsTheater: Z,
+              supportsTheater: B,
               supportsFullscreen: N,
               children: f1,
-            } = _,
+            } = R,
             s1 = (0, r.useRef)(null),
             w1 = (0, r.useRef)(null),
             [J, O] = (0, r.useState)("none");
-          (0, z.Y)(J == "theater"), (Z = !!Z), (N = !!N);
-          let M1 = (0, n1.QS)(
+          (0, z.Y)(J == "theater"), (B = !!B), (N = !!N);
+          let M1 = (0, r1.QS)(
               (C) => {
                 if (((w1.current = C), !C)) return;
-                let R = () => {
-                  O((y) =>
-                    (0, W.ww)(C)
+                let E = () => {
+                  O((V) =>
+                    (0, U.ww)(C)
                       ? "fullscreen"
-                      : y == "fullscreen"
+                      : V == "fullscreen"
                         ? "none"
-                        : y,
+                        : V,
                   );
                 };
                 return (
-                  C.addEventListener("fullscreenchange", R),
-                  () => C.removeEventListener("fullscreenchange", R)
+                  C.addEventListener("fullscreenchange", E),
+                  () => C.removeEventListener("fullscreenchange", E)
                 );
               },
               [O],
             ),
-            h = (0, n1.QS)(
+            h = (0, r1.QS)(
               (C) => {
                 if (((s1.current = C), !C)) return;
-                let R = () => {
+                let E = () => {
                     O((o1) => (o1 == "theater" ? "none" : o1));
                   },
-                  y = (o1) => {
+                  V = (o1) => {
                     o1.currentTarget == o1.target && M(C) && C.close();
                   },
-                  r1 = (o1) => {
-                    o1.newState == "close" && R();
+                  Y = (o1) => {
+                    o1.newState == "close" && E();
                   },
-                  K = new D.Ji();
+                  K = new k.Ji();
                 return (
                   M(C)
-                    ? (K.AddEventListener(C, "close", R),
-                      K.AddEventListener(C, "click", y))
+                    ? (K.AddEventListener(C, "close", E),
+                      K.AddEventListener(C, "click", V))
                     : i1(C)
-                      ? K.AddEventListener(C, "beforetoggle", r1)
-                      : (0, b.wT)(!1, "Was expecting a dialog or popover"),
+                      ? K.AddEventListener(C, "beforetoggle", Y)
+                      : (0, _.wT)(!1, "Was expecting a dialog or popover"),
                   () => K.Unregister()
                 );
               },
@@ -3847,52 +3880,52 @@
             ),
             w = (0, r.useCallback)(
               (C) => {
-                let R = w1.current,
-                  y = s1.current;
-                R &&
-                  (C != "fullscreen" && (0, W.ww)(R) && (0, W.MS)(R),
-                  C == "fullscreen" && F(R, !!A)),
-                  M(y) &&
-                    (C != "theater" && y.open && y.close(),
-                    C == "theater" && y.showModal()),
-                  i1(y) &&
+                let E = w1.current,
+                  V = s1.current;
+                E &&
+                  (C != "fullscreen" && (0, U.ww)(E) && (0, U.MS)(E),
+                  C == "fullscreen" && F(E, !!A)),
+                  M(V) &&
+                    (C != "theater" && V.open && V.close(),
+                    C == "theater" && V.showModal()),
+                  i1(V) &&
                     (C != "theater" &&
-                      y.matches(":popover-open") &&
-                      y.hidePopover(),
-                    C == "theater" && y.showPopover()),
+                      V.matches(":popover-open") &&
+                      V.hidePopover(),
+                    C == "theater" && V.showPopover()),
                   O(C);
               },
               [A],
             );
           (0, r.useEffect)(() => {
-            J == "theater" && !Z && w("none");
-          }, [w, J, Z]);
-          let g = (0, r.useMemo)(
+            J == "theater" && !B && w("none");
+          }, [w, J, B]);
+          let v = (0, r.useMemo)(
             () => ({
               refFullscreen: M1,
               refTheater: h,
               strMode: J,
-              bSupportsTheater: Z,
+              bSupportsTheater: B,
               bSupportsFullscreen: N,
               fnSetMode: w,
             }),
-            [M1, h, J, Z, N, w],
+            [M1, h, J, B, N, w],
           );
-          return (0, e.jsx)(u1.Provider, { value: g, children: f1 });
+          return (0, e.jsx)(u1.Provider, { value: v, children: f1 });
         }
-        function k(_) {
-          let { drop: A, children: Z } = _;
+        function I(R) {
+          let { drop: A, children: B } = R;
           return A
-            ? (0, e.jsx)(u1.Provider, { value: void 0, children: Z })
-            : Z;
+            ? (0, e.jsx)(u1.Provider, { value: void 0, children: B })
+            : B;
         }
-        function j1() {
+        function P1() {
           return (0, r.useContext)(u1);
         }
-        function x1(_, A) {
+        function x1(R, A) {
           return (0, r.useCallback)(() => {
-            _ && (_.strMode != A ? _.fnSetMode(A) : _.fnSetMode("none"));
-          }, [_, A]);
+            R && (R.strMode != A ? R.fnSetMode(A) : R.fnSetMode("none"));
+          }, [R, A]);
         }
       },
       61593: ($) => {

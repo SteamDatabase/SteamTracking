@@ -1355,6 +1355,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         function _(_) {
@@ -2136,9 +2137,8 @@
                 _.data.success == _._ &&
                 _.data.webapi_token
               ) {
-                this.m_transport = new _._(
-                  _._.WEBAPI_BASE_URL,
-                  _.data.webapi_token,
+                this.m_transport = (0, _._)(
+                  new _._(_._.WEBAPI_BASE_URL, _.data.webapi_token),
                 ).GetServiceTransport();
                 return;
               }

@@ -2,7 +2,7 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [58138],
+    [8138],
     {
       10635: (w, xe, m) => {
         "use strict";
@@ -3342,7 +3342,7 @@
             return s && a && Ji(e, i, a), a;
           };
         const es = u.lazy(() =>
-            Promise.all([m.e(54922), m.e(25278)]).then(m.bind(m, 66185)),
+            Promise.all([m.e(4922), m.e(5278)]).then(m.bind(m, 66185)),
           ),
           ts = !0;
         let Xt = class extends u.Component {

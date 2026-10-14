@@ -9,6 +9,69 @@
           _: () => _,
           _: () => _,
           _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const _ = _?.jsondata?.read_more_link;
+          if (!_) return;
+          const _ = (0, _._)(_).toLocaleLowerCase();
+          return _ ? [_] : void 0;
+        }
+        function _(_, _) {
+          return (0, _._)(_, _(_));
+        }
+        function _(_, _) {
+          if (!_) return "";
+          if (!(0, _._)(_)) return (0, _._)(_);
+          const _ = _(_, _) ? (0, _._)(_) : _;
+          return (_._.IN_CLIENT ? "steam://openurl_external/" : "") + _;
+        }
+        function _(_, _, _) {
+          const _ = _.toLowerCase().startsWith("http") ? _ : "http://" + _;
+          return (0, _.jsx)(_, {
+            url: _,
+            event: _,
+            children: _ || _,
+          });
+        }
+        const _ = (_) => {
+          const { url: _, event: _, className: _, style: _ } = _;
+          let _ = (0, _._)(_);
+          _ = _(_, _);
+          const _ = (0, _._)(_) ? "noopener nofollow" : void 0,
+            _ =
+              typeof _.children == "string" &&
+              _.children.length > 0 &&
+              _ &&
+              !_.startsWith("steam://")
+                ? (0, _._)(_)
+                : void 0;
+          return (0, _.jsx)(_._, {
+            toolTipContent: _,
+            direction: "top",
+            children: (0, _.jsx)(_._, {
+              className: _,
+              href: _,
+              rel: _,
+              _: _._,
+              style: _,
+              children: _.children,
+            }),
+          });
+        };
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -461,6 +524,30 @@
               secure: !0,
               httpOnly: !0,
               maxAge: 3600 * 24 * 1,
+            },
+            preferenceControls: {
+              isTechnicallyNecessary: !0,
+            },
+          },
+          _ = {
+            name: "steamparental",
+            preferenceControls: {
+              isTechnicallyNecessary: !0,
+            },
+          },
+          _ = {
+            name: "clientsessionid",
+            preferenceControls: {
+              isTechnicallyNecessary: !0,
+            },
+          },
+          _ = {
+            name: "steambrowserredirect",
+            options: {
+              secure: !0,
+              httpOnly: !0,
+              path: "/",
+              sameSite: "lax",
             },
             preferenceControls: {
               isTechnicallyNecessary: !0,
@@ -5562,6 +5649,88 @@
           window.sessionStorage.setItem(_, _);
         }
         window.SetHoverPresentation = _;
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid");
+        const _ = {};
+        (_.arabic = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 22940, 19))),
+          (_.brazilian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 59990, 19))),
+          (_.bulgarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 38573, 19))),
+          (_.czech = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 40975, 19))),
+          (_.danish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 38721, 19))),
+          (_.dutch = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 354, 19))),
+          (_.english = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 49768, 19))),
+          (_.finnish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 12931, 19))),
+          (_.french = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 6064, 19))),
+          (_.german = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 62942, 19))),
+          (_.greek = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 13924, 19))),
+          (_.hungarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 99441, 19))),
+          (_.indonesian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 42584, 19))),
+          (_.italian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 97688, 19))),
+          (_.japanese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 5407, 19))),
+          (_.koreana = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 65815, 19))),
+          (_.latam = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 44287, 19))),
+          (_.malay = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 58160, 19))),
+          (_.norwegian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 33648, 19))),
+          (_.polish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 22649, 19))),
+          (_.portuguese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 23629, 19))),
+          (_.romanian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 81555, 19))),
+          (_.russian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 11809, 19))),
+          (_.sc_schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 98347, 19))),
+          (_.schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 79004, 19))),
+          (_.spanish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 97760, 19))),
+          (_.swedish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 86881, 19))),
+          (_.tchinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 28183, 19))),
+          (_.thai = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 10950, 19))),
+          (_.turkish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 22568, 19))),
+          (_.ukrainian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 17038, 19))),
+          (_.vietnamese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 62327, 19)));
+        async function _(_) {
+          if (_[_]) return _[_]();
+        }
+        const _ = (0, _._)(_);
+        async function _() {
+          return Promise.all([_.Ready()]);
+        }
+        function _() {
+          return useLocalizationReady(_);
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -12995,6 +13164,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { _: _, bSelfPurchaseOption: _ } = _,
@@ -13023,6 +13193,7 @@
               bPreferWholeNumbers: _,
               bSelfPurchaseOption: _,
               bHideNewTag: _,
+              bPrePurchaseBesidePrice: _,
             } = _,
             _ = _._.NOW,
             { data: _ } = (0, _._)(_),
@@ -13046,7 +13217,7 @@
                 children: _._.Localize("#EventDisplay_CallToAction_InLibrary"),
               }),
             });
-          if (_ && _.is_coming_soon && (!_ || !_.packageid)) {
+          if (_ && _.is_coming_soon && (!_ || (!_.packageid && !_.bundleid))) {
             if (_) return null;
             const _ =
               _.coming_soon_display &&
@@ -13135,6 +13306,7 @@
               !!_.hide_discount_pct_for_compliance,
             bShowNewFlag: _,
             bHidePrePurchase: !!_,
+            bPrePurchaseBesidePrice: _,
             strDiscountAndPriceClassName: _,
             strPriceFormattedClassName: _,
             bPurchaseOptionDisplay: _,
@@ -13151,6 +13323,7 @@
               bHideDiscountPercentForCompliance: _,
               bShowNewFlag: _,
               bHidePrePurchase: _,
+              bPrePurchaseBesidePrice: _,
               strDiscountAndPriceClassName: _,
               strPriceFormattedClassName: _,
               bPurchaseOptionDisplay: _,
@@ -13172,6 +13345,7 @@
               [_().Discounted]: !!_,
               Discounted: !!_,
               [_().PrePurchase]: !!_,
+              [_().PrePurchaseBesidePrice]: !!_,
               [_().NewItem]: !!_,
               [_().PurchaseOption]: _,
               [_ ?? ""]: !!_,
@@ -13180,11 +13354,17 @@
             children: [
               !!(_ && !_) &&
                 (0, _.jsx)("div", {
-                  className: (0, _._)(_().StoreSalePrepurchaseLabel),
-                  children: (0, _.jsx)("span", {
-                    children: _._.Localize(
-                      "#EventDisplay_CallToAction_Prepurchase_Short",
-                    ),
+                  className: (0, _._)(
+                    _().StoreSalePrepurchaseLabel,
+                    "StoreSalePrepurchaseLabel",
+                  ),
+                  children: (0, _.jsxs)("span", {
+                    children: [
+                      (0, _.jsx)(_.zD7, {}),
+                      _._.Localize(
+                        "#EventDisplay_CallToAction_Prepurchase_Short",
+                      ),
+                    ],
                   }),
                 }),
               !!(!_ && _) &&
@@ -13225,7 +13405,10 @@
                 }),
               !!(!_ && _ && !_) &&
                 (0, _.jsx)("div", {
-                  className: _().StoreSaleDiscountBox,
+                  className: (0, _._)(
+                    _().StoreSaleDiscountBox,
+                    "StoreSaleDiscountBox",
+                  ),
                   children: `-${_}%`,
                 }),
               !!(_ && _) &&
@@ -13677,6 +13860,9 @@
         }
         function _(_, ..._) {
           const { data: _ } = useStoreItemAssets(_);
+          return _(_, ..._);
+        }
+        function _(_, ..._) {
           if (!_?.asset_url_format) return;
           const _ = _.find((_) => {
             const _ = _[_];
@@ -13885,6 +14071,9 @@
         }
         function _(_, _) {
           return !!(_ && _.is_coming_soon && _ && _.packageid);
+        }
+        function _(_, _) {
+          return !!(_ && _ && _.packageid);
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -14275,6 +14464,12 @@
             staleTime: 3600 * 1e3,
           };
         }
+        function _(_) {
+          const _ = _?.preferences?.primary_language;
+          return _ === void 0 || _ <= k_ELanguage_None || _ >= k_ELanguage_MAX
+            ? PchLanguageToELanguage(Config.LANGUAGE)
+            : _;
+        }
         function _() {
           const _ = useActiveServiceTransport(),
             _ = UserConfig.accountid;
@@ -14566,6 +14761,126 @@
             }),
           });
         };
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_, _ = "", _ = null) {
+          return _.InstrumentLink(_, _, _);
+        }
+        function _(_, _, _) {
+          const _ = (0, _._)();
+          return _.useMemo(() => {
+            const _ = (0, _._)(_).toLowerCase(),
+              _ = (0, _._)(_._.COMMUNITY_BASE_URL).toLowerCase(),
+              _ = (0, _._)(_._.STORE_BASE_URL).toLowerCase();
+            return _ === _ || _ === _ ? (0, _._)(_, _, _, _) : _;
+          }, [_, _, _, _]);
+        }
+        function _(_, _, _ = null) {
+          const _ = _(_, _),
+            _ = _ ? _._.GetCuratorClanIDParam(_) : null;
+          return _._.AddNavParamToURL(_, _, _);
+        }
+        function _(_, _, _, _ = null) {
+          const _ = _(_, _, _);
+          if (_ && Object.keys(_).length > 0)
+            try {
+              const _ = new URL((0, _._)(_)),
+                _ = new URLSearchParams(_.search);
+              return (
+                Object.entries(_).forEach(([_, _]) => {
+                  _.set(_, encodeURIComponent(_ ?? ""));
+                }),
+                _.origin + _.pathname + "?" + _.toString() + _.hash
+              );
+            } catch {}
+          return _;
+        }
+        function _(_, _ = null) {
+          return _?.domain ? _.GetLinkParam(_, _) : _._.SNR;
+        }
+        function _(_, _ = "", _ = null) {
+          const _ = `${Config.STORE_BASE_URL}app/${_}`;
+          return _(_, _, _);
+        }
+        function _(_, _ = "") {
+          const _ = `${Config.STORE_BASE_URL}dlc/${_}`;
+          return _(_, _);
+        }
+        class _ {
+          static sm_strDomain;
+          static sm_strController;
+          static sm_strMethod;
+          static sm_strSubmethod;
+          static sm_strComputedLinkPrefix;
+          static SetNavEventParams(_, _, _ = null, _ = null) {
+            (_.sm_strDomain = _),
+              (_.sm_strController = _),
+              (_.sm_strMethod = _),
+              (_.sm_strSubmethod = _),
+              (_.sm_strComputedLinkPrefix = null);
+          }
+          static GetDefaultParams() {
+            let _ = {
+              domain: _.sm_strDomain,
+              controller: _.sm_strController,
+            };
+            return (
+              _.sm_strMethod && (_.method = _.sm_strMethod),
+              _.sm_strSubmethod && (_.submethod = _.sm_strSubmethod),
+              _
+            );
+          }
+          static InstrumentLink(_, _, _ = null) {
+            const _ = _.GetLinkParam(_, _),
+              _ = typeof _ != "string" ? _._.GetCuratorClanIDParam(_) : null;
+            return _._.AddNavParamToURL(_, _, _);
+          }
+          static GetLinkParam(_, _ = null) {
+            let _;
+            if (typeof _ != "string") {
+              if (_.domain) return _._.GetSNRLinkParam(_, _);
+              _ = _.feature || "";
+            }
+            let _;
+            if (!_.sm_strComputedLinkPrefix && !_.ComputeStaticLinkPrefix())
+              return null;
+            _ = _.sm_strComputedLinkPrefix;
+            let _ = _._.EncodeEventComponent(_);
+            return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
+          }
+          static ComputeStaticLinkPrefix() {
+            return _.sm_strDomain
+              ? ((_.sm_strComputedLinkPrefix = _._.ComputeLinkPrefix(
+                  _.sm_strDomain,
+                  _.sm_strController,
+                  _.sm_strMethod,
+                  _.sm_strSubmethod,
+                )),
+                !0)
+              : ((0, _._)(
+                  !1,
+                  "CStoreNavEvents::SetNavEventParams was not called before calling InstrumentLink!",
+                ),
+                !1);
+          }
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -15281,6 +15596,7 @@
           InGameHover: "_yRMvMttBTHiO3_SMH6Or",
           StoreSalePrepurchaseLabel: "_2mG_q95stW67uyZmLXcO8y",
           SingleLineOriginalPrice: "_1jRZOgPPLTjiXtsrX_iB1O",
+          PrePurchaseBesidePrice: "_1jh1dcHkieLMN3eGCeHg_E",
           YourPriceLabel: "_1RGKRbbcPP2ImptkZ3LP6P",
           BaseDiscount: "_3BJdajInVqrAsGwPFUAshC",
           StoreSalePriceButton: "_PS7WNXgzr2qOl4HOjEIp",
@@ -15493,6 +15809,63 @@
           ActionText: "_2s5NsgqEDdI6nKvz-9YFa4",
           Footer: "_3OKQsxzgQZkt2GtKz9679g",
           Logo: "_2AEA_k1tEcjAtTL7-Bnitk",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
+          BaseUI: "_3ar6NZpkNtMK2pmiKMadXq",
+          WidePageCtn: "uHgjQHyNygSKukDngfNQO",
+          AdminHeader: "vrqqGANTuXeQs27RGumFj",
+          Breadcrumbs: "_31raJsbMXVc33oW6c5hNxS",
+          Required: "_1-jmJyKnLRFoN-GX0Oqor8",
+          PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
+          PageTitle: "_2RxJB5bupbx0mkW8dYJQRE",
+          Beta: "_1YBhTKSlOER8bOnp0BU4Wj",
+          PageSubTitle: "okuL_y7hLnZUD5P4ACqUN",
+          ValveOnlyTitle: "_3skaXOiv1_vtHc_pGOPNsc",
+          ValveOnlyBackground: "_2FESGwA28dH3EVAa7uTsUX",
+          SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
+          DividerHeading: "_2kKPmwgbsJ_P67Vo-HwwRf",
+          ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
+          LeftCol: "_1AqrivbzwCs57BXiugqpeA",
+          ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
+          Blue: "J7iYYml2Jf_PcaACW1hEr",
+          ColHeaderImg: "_1VFkxNTzCFO2uCcle_nAJk",
+          Bright: "_3ZqV0CAeVnd0rruF6TVKQz",
+          ActionBar: "ilVbVkb6hkO_s6E_kiiSd",
+          SectionIntroRequirements: "_3TKZIwYk2f5dd3MR5909Uz",
+          warning: "_2HiNh3o5cgMEbzFKYBUjAy",
+          IntroText: "_1WWL_09T_-Jq--HSJRhKtH",
+          RightCol: "_3kaQhRnhNh_awrnNX90rui",
+          NoSticky: "JQNb8bHftBTAYpCXTx52v",
+          SmallText: "_3ltg5fPzb-WsRyzI41vAv_",
+          Button: "_3L1DFwM1lpsRwZ-AaMx9ie",
+          TitleSmall: "_3DyXNd5UgceEG9fcCKinvw",
+          DefaultSectionCtn: "Pupnokb21glaosRjxBjAm",
+          Indent: "_7PV326-4cpZdmTCEdgC2l",
+          DashLink: "_2NH_FlbsKA0jN2jPG4Rn9A",
+          FlexRow: "_3rz6jzCvvOGt8N0XaPIdzg",
+          MarginBottom: "_2Bw2oyBgXlb8EZ4HHbE8Ye",
+          UploadedImageDisplayCtn: "_1_JRuj6yAJovBDZE8IMSob",
+          UploaderLeftCol: "_3KQhw0sa1q_h62e4yaFgbw",
+          MarketingMessage: "_2pCvRF734J5gLxMMHW7LIb",
+          BannerPreview: "_1x4unTauuLCbMkThgRpsXc",
+          UploaderRightCol: "_3jcvvtnLhiQBvAebO2eI4Z",
+          LangCountTitle: "_1tPNH9hTWnMUsbdob5i93a",
+          LangSelectCtn: "_3tHzJ-eCQIlg-4XjTN0bNU",
+          UploaderImgLang: "_1jJThBArHevzcJ93kx4WhR",
+          LangSelected: "_1sUrnQsBw06ZqTIbMeE9tT",
+          DeleteAll: "rYuknI3K1VFknv90GNUTc",
+          EditCtn: "_1g5X3AT4HwD0ya2e2t2WTO",
+          StatusBtn: "_1MGZHxsnyQPrLXwl-8Fium",
+          HalfWidthBtnCtn: "fGJIpDJEvYkHmhWFP39BX",
+          StatReportCtn: "_1J3v1KGOhdSGz77c2rLxWy",
+          Stat: "_3OYQbVCq1yBuEx1XcDzG06",
+          BigStat: "lYYwDDss378Sm0FKPBxPh",
+          IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
+          AdminVerticalTabs: "_38rhsxAONglYlA01yweB9r",
+          RightPanel: "_1QYBs5PGw6PClZRx9WNL6z",
         };
       },
       chunkid: (module) => {

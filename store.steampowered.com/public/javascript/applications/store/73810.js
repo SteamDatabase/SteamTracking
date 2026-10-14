@@ -5,28 +5,28 @@
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
     [73810],
     {
-      95039: (kr, Pr, z) => {
-        z.d(Pr, { fH: () => M, nW: () => g });
-        const Sr = null,
+      95039: (kr, Fr, z) => {
+        z.d(Fr, { fH: () => M, nW: () => g });
+        const Pr = null,
           M = 0,
           g = 1;
       },
-      6740: (kr, Pr, z) => {
-        z.d(Pr, {
+      6740: (kr, Fr, z) => {
+        z.d(Fr, {
           kX: () => Gr,
-          iP: () => S,
-          R9: () => F,
+          iP: () => P,
+          R9: () => S,
           tS: () => N,
           qu: () => K,
-          Ev: () => P,
+          Ev: () => F,
           Qc: () => D,
           TY: () => M,
           SS: () => g,
           wv: () => m,
-          O6: () => Sr,
+          O6: () => Pr,
         });
-        var Sr = {};
-        z.r(Sr), z.d(Sr, { w$: () => W });
+        var Pr = {};
+        z.r(Pr), z.d(Pr, { w$: () => W });
         var M = {};
         z.r(M),
           z.d(M, {
@@ -43,8 +43,8 @@
         z.r(g), z.d(g, { Ql: () => E, w0: () => f, FB: () => $, tS: () => L });
         var m = {};
         z.r(m), z.d(m, { BH: () => cr });
-        var b = z(80613),
-          e = z.n(b),
+        var t = z(80613),
+          e = z.n(t),
           i = z(75245),
           G = z(35038),
           Qr = z(95039),
@@ -82,10 +82,10 @@
           cr = 5,
           vr = 6,
           Bi = 99;
-        function bi(s) {
+        function ti(s) {
           return "unknown ECaptchaAnnotation ( " + s + " )";
         }
-        function ti(s) {
+        function bi(s) {
           return "unknown EAuthSessionSecurityHistory ( " + s + " )";
         }
         function gi(s) {
@@ -130,12 +130,12 @@
         function ci(s) {
           return "unknown EConfirmationRequestType ( " + s + " )";
         }
-        class K extends b.Message {
+        class K extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               K.prototype.account_name || i.Sg(K.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -169,8 +169,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new K();
-            return K.deserializeBinaryFromReader(t, a);
+              b = new K();
+            return K.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(K.MBF(), r, a);
@@ -192,12 +192,12 @@
             return "CAuthentication_GetPasswordRSAPublicKey_Request";
           }
         }
-        class p extends b.Message {
+        class p extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               p.prototype.publickey_mod || i.Sg(p.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -241,8 +241,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new p();
-            return p.deserializeBinaryFromReader(t, a);
+              b = new p();
+            return p.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(p.MBF(), r, a);
@@ -264,12 +264,12 @@
             return "CAuthentication_GetPasswordRSAPublicKey_Response";
           }
         }
-        class N extends b.Message {
+        class N extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               N.prototype.device_friendly_name || i.Sg(N.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -325,8 +325,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new N();
-            return N.deserializeBinaryFromReader(t, a);
+              b = new N();
+            return N.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(N.MBF(), r, a);
@@ -348,12 +348,12 @@
             return "CAuthentication_DeviceDetails";
           }
         }
-        class H extends b.Message {
+        class H extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               H.prototype.confirmation_type || i.Sg(H.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -392,8 +392,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new H();
-            return H.deserializeBinaryFromReader(t, a);
+              b = new H();
+            return H.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(H.MBF(), r, a);
@@ -415,20 +415,20 @@
             return "CAuthentication_AllowedConfirmation";
           }
         }
-        class F extends b.Message {
+        class S extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
-              F.prototype.device_friendly_name || i.Sg(F.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              S.prototype.device_friendly_name || i.Sg(S.M()),
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              F.sm_m ||
-                (F.sm_m = {
-                  proto: F,
+              S.sm_m ||
+                (S.sm_m = {
+                  proto: S,
                   fields: {
                     device_friendly_name: {
                       n: 1,
@@ -449,52 +449,52 @@
                     },
                   },
                 }),
-              F.sm_m
+              S.sm_m
             );
           }
           static MBF() {
-            return F.sm_mbf || (F.sm_mbf = i.w0(F.M())), F.sm_mbf;
+            return S.sm_mbf || (S.sm_mbf = i.w0(S.M())), S.sm_mbf;
           }
           toObject(r = !1) {
-            return F.toObject(r, this);
+            return S.toObject(r, this);
           }
           static toObject(r, a) {
-            return i.BT(F.M(), r, a);
+            return i.BT(S.M(), r, a);
           }
           static fromObject(r) {
-            return i.Uq(F.M(), r);
+            return i.Uq(S.M(), r);
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new F();
-            return F.deserializeBinaryFromReader(t, a);
+              b = new S();
+            return S.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
-            return i.zj(F.MBF(), r, a);
+            return i.zj(S.MBF(), r, a);
           }
           serializeBinary() {
             var r = new (e().BinaryWriter)();
-            return F.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return S.serializeBinaryToWriter(this, r), r.getResultBuffer();
           }
           static serializeBinaryToWriter(r, a) {
-            i.i0(F.M(), r, a);
+            i.i0(S.M(), r, a);
           }
           serializeBase64String() {
             var r = new (e().BinaryWriter)();
             return (
-              F.serializeBinaryToWriter(this, r), r.getResultBase64String()
+              S.serializeBinaryToWriter(this, r), r.getResultBase64String()
             );
           }
           getClassName() {
             return "CAuthentication_BeginAuthSessionViaQR_Request";
           }
         }
-        class k extends b.Message {
+        class k extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               k.prototype.client_id || i.Sg(k.M()),
-              b.Message.initialize(this, r, 0, -1, [5], null);
+              t.Message.initialize(this, r, 0, -1, [5], null);
           }
           static sm_m;
           static sm_mbf;
@@ -541,8 +541,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new k();
-            return k.deserializeBinaryFromReader(t, a);
+              b = new k();
+            return k.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(k.MBF(), r, a);
@@ -564,20 +564,20 @@
             return "CAuthentication_BeginAuthSessionViaQR_Response";
           }
         }
-        class S extends b.Message {
+        class P extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
-              S.prototype.device_friendly_name || i.Sg(S.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              P.prototype.device_friendly_name || i.Sg(P.M()),
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              S.sm_m ||
-                (S.sm_m = {
-                  proto: S,
+              P.sm_m ||
+                (P.sm_m = {
+                  proto: P,
                   fields: {
                     device_friendly_name: {
                       n: 1,
@@ -640,52 +640,52 @@
                     },
                   },
                 }),
-              S.sm_m
+              P.sm_m
             );
           }
           static MBF() {
-            return S.sm_mbf || (S.sm_mbf = i.w0(S.M())), S.sm_mbf;
+            return P.sm_mbf || (P.sm_mbf = i.w0(P.M())), P.sm_mbf;
           }
           toObject(r = !1) {
-            return S.toObject(r, this);
+            return P.toObject(r, this);
           }
           static toObject(r, a) {
-            return i.BT(S.M(), r, a);
+            return i.BT(P.M(), r, a);
           }
           static fromObject(r) {
-            return i.Uq(S.M(), r);
+            return i.Uq(P.M(), r);
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new S();
-            return S.deserializeBinaryFromReader(t, a);
+              b = new P();
+            return P.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
-            return i.zj(S.MBF(), r, a);
+            return i.zj(P.MBF(), r, a);
           }
           serializeBinary() {
             var r = new (e().BinaryWriter)();
-            return S.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return P.serializeBinaryToWriter(this, r), r.getResultBuffer();
           }
           static serializeBinaryToWriter(r, a) {
-            i.i0(S.M(), r, a);
+            i.i0(P.M(), r, a);
           }
           serializeBase64String() {
             var r = new (e().BinaryWriter)();
             return (
-              S.serializeBinaryToWriter(this, r), r.getResultBase64String()
+              P.serializeBinaryToWriter(this, r), r.getResultBase64String()
             );
           }
           getClassName() {
             return "CAuthentication_BeginAuthSessionViaCredentials_Request";
           }
         }
-        class T extends b.Message {
+        class T extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               T.prototype.client_id || i.Sg(T.M()),
-              b.Message.initialize(this, r, 0, -1, [4], null);
+              t.Message.initialize(this, r, 0, -1, [4], null);
           }
           static sm_m;
           static sm_mbf;
@@ -746,8 +746,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new T();
-            return T.deserializeBinaryFromReader(t, a);
+              b = new T();
+            return T.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(T.MBF(), r, a);
@@ -769,20 +769,20 @@
             return "CAuthentication_BeginAuthSessionViaCredentials_Response";
           }
         }
-        class P extends b.Message {
+        class F extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
-              P.prototype.client_id || i.Sg(P.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              F.prototype.client_id || i.Sg(F.M()),
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              P.sm_m ||
-                (P.sm_m = {
-                  proto: P,
+              F.sm_m ||
+                (F.sm_m = {
+                  proto: F,
                   fields: {
                     client_id: {
                       n: 1,
@@ -801,52 +801,52 @@
                     },
                   },
                 }),
-              P.sm_m
+              F.sm_m
             );
           }
           static MBF() {
-            return P.sm_mbf || (P.sm_mbf = i.w0(P.M())), P.sm_mbf;
+            return F.sm_mbf || (F.sm_mbf = i.w0(F.M())), F.sm_mbf;
           }
           toObject(r = !1) {
-            return P.toObject(r, this);
+            return F.toObject(r, this);
           }
           static toObject(r, a) {
-            return i.BT(P.M(), r, a);
+            return i.BT(F.M(), r, a);
           }
           static fromObject(r) {
-            return i.Uq(P.M(), r);
+            return i.Uq(F.M(), r);
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new P();
-            return P.deserializeBinaryFromReader(t, a);
+              b = new F();
+            return F.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
-            return i.zj(P.MBF(), r, a);
+            return i.zj(F.MBF(), r, a);
           }
           serializeBinary() {
             var r = new (e().BinaryWriter)();
-            return P.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return F.serializeBinaryToWriter(this, r), r.getResultBuffer();
           }
           static serializeBinaryToWriter(r, a) {
-            i.i0(P.M(), r, a);
+            i.i0(F.M(), r, a);
           }
           serializeBase64String() {
             var r = new (e().BinaryWriter)();
             return (
-              P.serializeBinaryToWriter(this, r), r.getResultBase64String()
+              F.serializeBinaryToWriter(this, r), r.getResultBase64String()
             );
           }
           getClassName() {
             return "CAuthentication_PollAuthSessionStatus_Request";
           }
         }
-        class u extends b.Message {
+        class u extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               u.prototype.new_client_id || i.Sg(u.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -915,8 +915,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new u();
-            return u.deserializeBinaryFromReader(t, a);
+              b = new u();
+            return u.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(u.MBF(), r, a);
@@ -938,12 +938,12 @@
             return "CAuthentication_PollAuthSessionStatus_Response";
           }
         }
-        class h extends b.Message {
+        class h extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               h.prototype.client_id || i.Sg(h.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -977,8 +977,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new h();
-            return h.deserializeBinaryFromReader(t, a);
+              b = new h();
+            return h.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(h.MBF(), r, a);
@@ -1000,12 +1000,12 @@
             return "CAuthentication_GetAuthSessionInfo_Request";
           }
         }
-        class R extends b.Message {
+        class R extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               R.prototype.ip || i.Sg(R.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -1080,8 +1080,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new R();
-            return R.deserializeBinaryFromReader(t, a);
+              b = new R();
+            return R.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(R.MBF(), r, a);
@@ -1103,12 +1103,12 @@
             return "CAuthentication_GetAuthSessionInfo_Response";
           }
         }
-        class A extends b.Message {
+        class A extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               A.prototype.client_id || i.Sg(A.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -1147,8 +1147,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new A();
-            return A.deserializeBinaryFromReader(t, a);
+              b = new A();
+            return A.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(A.MBF(), r, a);
@@ -1170,12 +1170,12 @@
             return "CAuthentication_GetAuthSessionRiskInfo_Request";
           }
         }
-        class C extends b.Message {
+        class C extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               C.prototype.location_confirmer || i.Sg(C.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -1224,8 +1224,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new C();
-            return C.deserializeBinaryFromReader(t, a);
+              b = new C();
+            return C.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(C.MBF(), r, a);
@@ -1247,12 +1247,12 @@
             return "CAuthentication_GetAuthSessionRiskInfo_Response";
           }
         }
-        class o extends b.Message {
+        class o extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               o.prototype.client_id || i.Sg(o.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -1297,8 +1297,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new o();
-            return o.deserializeBinaryFromReader(t, a);
+              b = new o();
+            return o.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(o.MBF(), r, a);
@@ -1320,12 +1320,12 @@
             return "CAuthentication_NotifyRiskQuizResults_Notification";
           }
         }
-        class _ extends b.Message {
+        class _ extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               _.prototype.platform || i.Sg(_.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -1357,8 +1357,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new _();
-            return _.deserializeBinaryFromReader(t, a);
+              b = new _();
+            return _.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(_.MBF(), r, a);
@@ -1380,10 +1380,10 @@
             return "CAuthentication_NotifyRiskQuizResults_Notification_RiskQuizResults";
           }
         }
-        class Yr extends b.Message {
+        class Yr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(), b.Message.initialize(this, r, 0, -1, void 0, null);
+            super(), t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           toObject(r = !1) {
             return Yr.toObject(r, this);
@@ -1396,8 +1396,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new Yr();
-            return Yr.deserializeBinaryFromReader(t, a);
+              b = new Yr();
+            return Yr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return r;
@@ -1417,12 +1417,12 @@
             return "CAuthentication_GetAuthSessionsForAccount_Request";
           }
         }
-        class rr extends b.Message {
+        class rr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               rr.prototype.client_ids || i.Sg(rr.M()),
-              b.Message.initialize(this, r, 0, -1, [1], null);
+              t.Message.initialize(this, r, 0, -1, [1], null);
           }
           static sm_m;
           static sm_mbf;
@@ -1459,8 +1459,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new rr();
-            return rr.deserializeBinaryFromReader(t, a);
+              b = new rr();
+            return rr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(rr.MBF(), r, a);
@@ -1482,12 +1482,12 @@
             return "CAuthentication_GetAuthSessionsForAccount_Response";
           }
         }
-        class ir extends b.Message {
+        class ir extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               ir.prototype.version || i.Sg(ir.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -1544,8 +1544,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new ir();
-            return ir.deserializeBinaryFromReader(t, a);
+              b = new ir();
+            return ir.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(ir.MBF(), r, a);
@@ -1567,10 +1567,10 @@
             return "CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request";
           }
         }
-        class Jr extends b.Message {
+        class Jr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(), b.Message.initialize(this, r, 0, -1, void 0, null);
+            super(), t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           toObject(r = !1) {
             return Jr.toObject(r, this);
@@ -1583,8 +1583,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new Jr();
-            return Jr.deserializeBinaryFromReader(t, a);
+              b = new Jr();
+            return Jr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return r;
@@ -1604,12 +1604,12 @@
             return "CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response";
           }
         }
-        class D extends b.Message {
+        class D extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               D.prototype.client_id || i.Sg(D.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -1650,8 +1650,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new D();
-            return D.deserializeBinaryFromReader(t, a);
+              b = new D();
+            return D.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(D.MBF(), r, a);
@@ -1673,12 +1673,12 @@
             return "CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request";
           }
         }
-        class ar extends b.Message {
+        class ar extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               ar.prototype.agreement_session_url || i.Sg(ar.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -1712,8 +1712,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new ar();
-            return ar.deserializeBinaryFromReader(t, a);
+              b = new ar();
+            return ar.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(ar.MBF(), r, a);
@@ -1735,12 +1735,12 @@
             return "CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response";
           }
         }
-        class lr extends b.Message {
+        class lr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               lr.prototype.refresh_token || i.Sg(lr.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -1784,8 +1784,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new lr();
-            return lr.deserializeBinaryFromReader(t, a);
+              b = new lr();
+            return lr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(lr.MBF(), r, a);
@@ -1807,12 +1807,12 @@
             return "CAuthentication_AccessToken_GenerateForApp_Request";
           }
         }
-        class mr extends b.Message {
+        class mr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               mr.prototype.access_token || i.Sg(mr.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -1851,8 +1851,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new mr();
-            return mr.deserializeBinaryFromReader(t, a);
+              b = new mr();
+            return mr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(mr.MBF(), r, a);
@@ -1874,12 +1874,12 @@
             return "CAuthentication_AccessToken_GenerateForApp_Response";
           }
         }
-        class er extends b.Message {
+        class er extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               er.prototype.include_revoked || i.Sg(er.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -1914,8 +1914,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new er();
-            return er.deserializeBinaryFromReader(t, a);
+              b = new er();
+            return er.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(er.MBF(), r, a);
@@ -1937,12 +1937,12 @@
             return "CAuthentication_RefreshToken_Enumerate_Request";
           }
         }
-        class Br extends b.Message {
+        class Br extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               Br.prototype.refresh_tokens || i.Sg(Br.M()),
-              b.Message.initialize(this, r, 0, -1, [1], null);
+              t.Message.initialize(this, r, 0, -1, [1], null);
           }
           static sm_m;
           static sm_mbf;
@@ -1952,7 +1952,7 @@
                 (Br.sm_m = {
                   proto: Br,
                   fields: {
-                    refresh_tokens: { n: 1, c: br, r: !0, q: !0 },
+                    refresh_tokens: { n: 1, c: tr, r: !0, q: !0 },
                     requesting_token: {
                       n: 2,
                       br: i.qM.readFixed64String,
@@ -1977,8 +1977,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new Br();
-            return Br.deserializeBinaryFromReader(t, a);
+              b = new Br();
+            return Br.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(Br.MBF(), r, a);
@@ -2000,12 +2000,12 @@
             return "CAuthentication_RefreshToken_Enumerate_Response";
           }
         }
-        class Q extends b.Message {
+        class Q extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               Q.prototype.time || i.Sg(Q.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -2044,8 +2044,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new Q();
-            return Q.deserializeBinaryFromReader(t, a);
+              b = new Q();
+            return Q.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(Q.MBF(), r, a);
@@ -2067,20 +2067,20 @@
             return "CAuthentication_RefreshToken_Enumerate_Response_TokenUsageEvent";
           }
         }
-        class br extends b.Message {
+        class tr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
-              br.prototype.token_id || i.Sg(br.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              tr.prototype.token_id || i.Sg(tr.M()),
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              br.sm_m ||
-                (br.sm_m = {
-                  proto: br,
+              tr.sm_m ||
+                (tr.sm_m = {
+                  proto: tr,
                   fields: {
                     token_id: {
                       n: 1,
@@ -2133,70 +2133,6 @@
                     },
                   },
                 }),
-              br.sm_m
-            );
-          }
-          static MBF() {
-            return br.sm_mbf || (br.sm_mbf = i.w0(br.M())), br.sm_mbf;
-          }
-          toObject(r = !1) {
-            return br.toObject(r, this);
-          }
-          static toObject(r, a) {
-            return i.BT(br.M(), r, a);
-          }
-          static fromObject(r) {
-            return i.Uq(br.M(), r);
-          }
-          static deserializeBinary(r) {
-            let a = new (e().BinaryReader)(r),
-              t = new br();
-            return br.deserializeBinaryFromReader(t, a);
-          }
-          static deserializeBinaryFromReader(r, a) {
-            return i.zj(br.MBF(), r, a);
-          }
-          serializeBinary() {
-            var r = new (e().BinaryWriter)();
-            return br.serializeBinaryToWriter(this, r), r.getResultBuffer();
-          }
-          static serializeBinaryToWriter(r, a) {
-            i.i0(br.M(), r, a);
-          }
-          serializeBase64String() {
-            var r = new (e().BinaryWriter)();
-            return (
-              br.serializeBinaryToWriter(this, r), r.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CAuthentication_RefreshToken_Enumerate_Response_RefreshTokenDescription";
-          }
-        }
-        class tr extends b.Message {
-          static ImplementsStaticInterface() {}
-          constructor(r = null) {
-            super(),
-              tr.prototype.token || i.Sg(tr.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              tr.sm_m ||
-                (tr.sm_m = {
-                  proto: tr,
-                  fields: {
-                    token: { n: 1, br: i.qM.readString, bw: i.gp.writeString },
-                    revoke_action: {
-                      n: 2,
-                      d: Lr,
-                      br: i.qM.readEnum,
-                      bw: i.gp.writeEnum,
-                    },
-                  },
-                }),
               tr.sm_m
             );
           }
@@ -2214,8 +2150,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new tr();
-            return tr.deserializeBinaryFromReader(t, a);
+              b = new tr();
+            return tr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(tr.MBF(), r, a);
@@ -2234,13 +2170,77 @@
             );
           }
           getClassName() {
+            return "CAuthentication_RefreshToken_Enumerate_Response_RefreshTokenDescription";
+          }
+        }
+        class br extends t.Message {
+          static ImplementsStaticInterface() {}
+          constructor(r = null) {
+            super(),
+              br.prototype.token || i.Sg(br.M()),
+              t.Message.initialize(this, r, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              br.sm_m ||
+                (br.sm_m = {
+                  proto: br,
+                  fields: {
+                    token: { n: 1, br: i.qM.readString, bw: i.gp.writeString },
+                    revoke_action: {
+                      n: 2,
+                      d: Lr,
+                      br: i.qM.readEnum,
+                      bw: i.gp.writeEnum,
+                    },
+                  },
+                }),
+              br.sm_m
+            );
+          }
+          static MBF() {
+            return br.sm_mbf || (br.sm_mbf = i.w0(br.M())), br.sm_mbf;
+          }
+          toObject(r = !1) {
+            return br.toObject(r, this);
+          }
+          static toObject(r, a) {
+            return i.BT(br.M(), r, a);
+          }
+          static fromObject(r) {
+            return i.Uq(br.M(), r);
+          }
+          static deserializeBinary(r) {
+            let a = new (e().BinaryReader)(r),
+              b = new br();
+            return br.deserializeBinaryFromReader(b, a);
+          }
+          static deserializeBinaryFromReader(r, a) {
+            return i.zj(br.MBF(), r, a);
+          }
+          serializeBinary() {
+            var r = new (e().BinaryWriter)();
+            return br.serializeBinaryToWriter(this, r), r.getResultBuffer();
+          }
+          static serializeBinaryToWriter(r, a) {
+            i.i0(br.M(), r, a);
+          }
+          serializeBase64String() {
+            var r = new (e().BinaryWriter)();
+            return (
+              br.serializeBinaryToWriter(this, r), r.getResultBase64String()
+            );
+          }
+          getClassName() {
             return "CAuthentication_Token_Revoke_Request";
           }
         }
-        class Zr extends b.Message {
+        class Zr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(), b.Message.initialize(this, r, 0, -1, void 0, null);
+            super(), t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           toObject(r = !1) {
             return Zr.toObject(r, this);
@@ -2253,8 +2253,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new Zr();
-            return Zr.deserializeBinaryFromReader(t, a);
+              b = new Zr();
+            return Zr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return r;
@@ -2274,12 +2274,12 @@
             return "CAuthentication_Token_Revoke_Response";
           }
         }
-        class gr extends b.Message {
+        class gr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               gr.prototype.token_id || i.Sg(gr.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -2329,8 +2329,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new gr();
-            return gr.deserializeBinaryFromReader(t, a);
+              b = new gr();
+            return gr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(gr.MBF(), r, a);
@@ -2352,10 +2352,10 @@
             return "CAuthentication_RefreshToken_Revoke_Request";
           }
         }
-        class Kr extends b.Message {
+        class Kr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(), b.Message.initialize(this, r, 0, -1, void 0, null);
+            super(), t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           toObject(r = !1) {
             return Kr.toObject(r, this);
@@ -2368,8 +2368,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new Kr();
-            return Kr.deserializeBinaryFromReader(t, a);
+              b = new Kr();
+            return Kr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return r;
@@ -2389,12 +2389,12 @@
             return "CAuthentication_RefreshToken_Revoke_Response";
           }
         }
-        class q extends b.Message {
+        class q extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               q.prototype.token_id || i.Sg(q.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -2471,8 +2471,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new q();
-            return q.deserializeBinaryFromReader(t, a);
+              b = new q();
+            return q.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(q.MBF(), r, a);
@@ -2494,12 +2494,12 @@
             return "CSupportRefreshTokenDescription";
           }
         }
-        class V extends b.Message {
+        class V extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               V.prototype.time || i.Sg(V.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -2537,8 +2537,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new V();
-            return V.deserializeBinaryFromReader(t, a);
+              b = new V();
+            return V.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(V.MBF(), r, a);
@@ -2560,12 +2560,12 @@
             return "CSupportRefreshTokenDescription_TokenUsageEvent";
           }
         }
-        class sr extends b.Message {
+        class sr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               sr.prototype.action || i.Sg(sr.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -2602,8 +2602,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new sr();
-            return sr.deserializeBinaryFromReader(t, a);
+              b = new sr();
+            return sr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(sr.MBF(), r, a);
@@ -2625,12 +2625,12 @@
             return "CSupportRefreshTokenAudit";
           }
         }
-        class Mr extends b.Message {
+        class Mr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               Mr.prototype.steamid || i.Sg(Mr.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -2669,8 +2669,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new Mr();
-            return Mr.deserializeBinaryFromReader(t, a);
+              b = new Mr();
+            return Mr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(Mr.MBF(), r, a);
@@ -2692,12 +2692,12 @@
             return "CAuthenticationSupport_QueryRefreshTokensByAccount_Request";
           }
         }
-        class dr extends b.Message {
+        class dr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               dr.prototype.refresh_tokens || i.Sg(dr.M()),
-              b.Message.initialize(this, r, 0, -1, [1], null);
+              t.Message.initialize(this, r, 0, -1, [1], null);
           }
           static sm_m;
           static sm_mbf;
@@ -2732,8 +2732,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new dr();
-            return dr.deserializeBinaryFromReader(t, a);
+              b = new dr();
+            return dr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(dr.MBF(), r, a);
@@ -2755,12 +2755,12 @@
             return "CAuthenticationSupport_QueryRefreshTokensByAccount_Response";
           }
         }
-        class wr extends b.Message {
+        class wr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               wr.prototype.token_id || i.Sg(wr.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -2794,8 +2794,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new wr();
-            return wr.deserializeBinaryFromReader(t, a);
+              b = new wr();
+            return wr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(wr.MBF(), r, a);
@@ -2817,12 +2817,12 @@
             return "CAuthenticationSupport_QueryRefreshTokenByID_Request";
           }
         }
-        class yr extends b.Message {
+        class yr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               yr.prototype.refresh_tokens || i.Sg(yr.M()),
-              b.Message.initialize(this, r, 0, -1, [1], null);
+              t.Message.initialize(this, r, 0, -1, [1], null);
           }
           static sm_m;
           static sm_mbf;
@@ -2850,8 +2850,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new yr();
-            return yr.deserializeBinaryFromReader(t, a);
+              b = new yr();
+            return yr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(yr.MBF(), r, a);
@@ -2873,12 +2873,12 @@
             return "CAuthenticationSupport_QueryRefreshTokenByID_Response";
           }
         }
-        class zr extends b.Message {
+        class zr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               zr.prototype.token_id || i.Sg(zr.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -2917,8 +2917,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new zr();
-            return zr.deserializeBinaryFromReader(t, a);
+              b = new zr();
+            return zr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(zr.MBF(), r, a);
@@ -2940,10 +2940,10 @@
             return "CAuthenticationSupport_RevokeToken_Request";
           }
         }
-        class Hr extends b.Message {
+        class Hr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(), b.Message.initialize(this, r, 0, -1, void 0, null);
+            super(), t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           toObject(r = !1) {
             return Hr.toObject(r, this);
@@ -2956,8 +2956,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new Hr();
-            return Hr.deserializeBinaryFromReader(t, a);
+              b = new Hr();
+            return Hr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return r;
@@ -2977,12 +2977,12 @@
             return "CAuthenticationSupport_RevokeToken_Response";
           }
         }
-        class fr extends b.Message {
+        class fr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               fr.prototype.token_id || i.Sg(fr.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -3016,8 +3016,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new fr();
-            return fr.deserializeBinaryFromReader(t, a);
+              b = new fr();
+            return fr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(fr.MBF(), r, a);
@@ -3039,12 +3039,12 @@
             return "CAuthenticationSupport_GetTokenHistory_Request";
           }
         }
-        class jr extends b.Message {
+        class jr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               jr.prototype.history || i.Sg(jr.M()),
-              b.Message.initialize(this, r, 0, -1, [1], null);
+              t.Message.initialize(this, r, 0, -1, [1], null);
           }
           static sm_m;
           static sm_mbf;
@@ -3072,8 +3072,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new jr();
-            return jr.deserializeBinaryFromReader(t, a);
+              b = new jr();
+            return jr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(jr.MBF(), r, a);
@@ -3095,12 +3095,12 @@
             return "CAuthenticationSupport_GetTokenHistory_Response";
           }
         }
-        class Wr extends b.Message {
+        class Wr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               Wr.prototype.steamid || i.Sg(Wr.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -3139,8 +3139,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new Wr();
-            return Wr.deserializeBinaryFromReader(t, a);
+              b = new Wr();
+            return Wr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(Wr.MBF(), r, a);
@@ -3162,49 +3162,49 @@
             return "CAuthenticationSupport_MarkTokenCompromised_Request";
           }
         }
-        class Fr extends b.Message {
+        class Sr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
-            super(), b.Message.initialize(this, r, 0, -1, void 0, null);
+            super(), t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           toObject(r = !1) {
-            return Fr.toObject(r, this);
+            return Sr.toObject(r, this);
           }
           static toObject(r, a) {
             return r ? { $jspbMessageInstance: a } : {};
           }
           static fromObject(r) {
-            return new Fr();
+            return new Sr();
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new Fr();
-            return Fr.deserializeBinaryFromReader(t, a);
+              b = new Sr();
+            return Sr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return r;
           }
           serializeBinary() {
             var r = new (e().BinaryWriter)();
-            return Fr.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return Sr.serializeBinaryToWriter(this, r), r.getResultBuffer();
           }
           static serializeBinaryToWriter(r, a) {}
           serializeBase64String() {
             var r = new (e().BinaryWriter)();
             return (
-              Fr.serializeBinaryToWriter(this, r), r.getResultBase64String()
+              Sr.serializeBinaryToWriter(this, r), r.getResultBase64String()
             );
           }
           getClassName() {
             return "CAuthenticationSupport_MarkTokenCompromised_Response";
           }
         }
-        class Or extends b.Message {
+        class Or extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               Or.prototype.appid || i.Sg(Or.M()),
-              b.Message.initialize(this, r, 0, -1, void 0, null);
+              t.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -3239,8 +3239,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new Or();
-            return Or.deserializeBinaryFromReader(t, a);
+              b = new Or();
+            return Or.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(Or.MBF(), r, a);
@@ -3262,12 +3262,12 @@
             return "CCloudGaming_TimeRemaining";
           }
         }
-        class xr extends b.Message {
+        class xr extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               xr.prototype.platform || i.Sg(xr.M()),
-              b.Message.initialize(this, r, 0, -1, [2], null);
+              t.Message.initialize(this, r, 0, -1, [2], null);
           }
           static sm_m;
           static sm_mbf;
@@ -3309,8 +3309,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new xr();
-            return xr.deserializeBinaryFromReader(t, a);
+              b = new xr();
+            return xr.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(xr.MBF(), r, a);
@@ -3332,12 +3332,12 @@
             return "CCloudGaming_GetTimeRemaining_Request";
           }
         }
-        class Ir extends b.Message {
+        class Ir extends t.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
               Ir.prototype.entries || i.Sg(Ir.M()),
-              b.Message.initialize(this, r, 0, -1, [2], null);
+              t.Message.initialize(this, r, 0, -1, [2], null);
           }
           static sm_m;
           static sm_mbf;
@@ -3365,8 +3365,8 @@
           }
           static deserializeBinary(r) {
             let a = new (e().BinaryReader)(r),
-              t = new Ir();
-            return Ir.deserializeBinaryFromReader(t, a);
+              b = new Ir();
+            return Ir.deserializeBinaryFromReader(b, a);
           }
           static deserializeBinaryFromReader(r, a) {
             return i.zj(Ir.MBF(), r, a);
@@ -3395,34 +3395,51 @@
               "Authentication.GetPasswordRSAPublicKey#1",
               (0, G.I8)(K, y, j),
               p,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
+              },
             );
           }
           s.GetPasswordRSAPublicKey = r;
           function a(w, y, j) {
             return w.SendMsg(
               "Authentication.BeginAuthSessionViaQR#1",
-              (0, G.I8)(F, y, j),
+              (0, G.I8)(S, y, j),
               k,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
+              },
             );
           }
           s.BeginAuthSessionViaQR = a;
-          function t(w, y, j) {
+          function b(w, y, j) {
             return w.SendMsg(
               "Authentication.BeginAuthSessionViaCredentials#1",
-              (0, G.I8)(S, y, j),
+              (0, G.I8)(P, y, j),
               T,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
+              },
             );
           }
-          s.BeginAuthSessionViaCredentials = t;
+          s.BeginAuthSessionViaCredentials = b;
           function Dr(w, y, j) {
             return w.SendMsg(
               "Authentication.PollAuthSessionStatus#1",
-              (0, G.I8)(P, y, j),
+              (0, G.I8)(F, y, j),
               u,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
+              },
             );
           }
           s.PollAuthSessionStatus = Dr;
@@ -3466,7 +3483,11 @@
               "Authentication.UpdateAuthSessionWithSteamGuardCode#1",
               (0, G.I8)(D, y, j),
               ar,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["all"],
+              },
             );
           }
           s.UpdateAuthSessionWithSteamGuardCode = ri;
@@ -3500,7 +3521,7 @@
           function mi(w, y, j) {
             return w.SendMsg(
               "Authentication.RevokeToken#1",
-              (0, G.I8)(tr, y, j),
+              (0, G.I8)(br, y, j),
               Zr,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
@@ -3536,7 +3557,7 @@
             );
           }
           s.QueryRefreshTokenByID = a;
-          function t(Er, Nr, Xr) {
+          function b(Er, Nr, Xr) {
             return Er.SendMsg(
               "AuthenticationSupport.RevokeToken#1",
               (0, G.I8)(zr, Nr, Xr),
@@ -3544,7 +3565,7 @@
               { ePrivilege: 5 },
             );
           }
-          s.RevokeToken = t;
+          s.RevokeToken = b;
           function Dr(Er, Nr, Xr) {
             return Er.SendMsg(
               "AuthenticationSupport.GetTokenHistory#1",
@@ -3558,7 +3579,7 @@
             return Er.SendMsg(
               "AuthenticationSupport.MarkTokenCompromised#1",
               (0, G.I8)(Wr, Nr, Xr),
-              Fr,
+              Sr,
               { ePrivilege: 5 },
             );
           }
@@ -3566,10 +3587,10 @@
         })(Cr || (Cr = {}));
         var or;
         ((s) => {
-          function r(a, t, Dr) {
+          function r(a, b, Dr) {
             return a.SendMsg(
               "CloudGaming.GetTimeRemaining#1",
-              (0, G.I8)(xr, t, Dr),
+              (0, G.I8)(xr, b, Dr),
               Ir,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -3577,14 +3598,14 @@
           s.GetTimeRemaining = r;
         })(or || (or = {}));
       },
-      44787: (kr, Pr, z) => {
-        z.d(Pr, { bv: () => f, ot: () => $r, oN: () => Sr, fz: () => Vr });
-        var Sr = {};
-        z.r(Sr), z.d(Sr, { U3: () => Qr, Ej: () => G });
+      44787: (kr, Fr, z) => {
+        z.d(Fr, { bv: () => f, ot: () => $r, oN: () => Pr, fz: () => Vr });
+        var Pr = {};
+        z.r(Pr), z.d(Pr, { U3: () => Qr, Ej: () => G });
         var M = z(80613),
           g = z.n(M),
           m = z(75245),
-          b = z(35038);
+          t = z(35038);
         const e = 0,
           i = 1,
           G = 2,
@@ -4964,7 +4985,7 @@
           function l(Ur, cr, vr) {
             return Ur.SendMsg(
               "TwoFactor.QueryTime#1",
-              (0, b.I8)(W, cr, vr),
+              (0, t.I8)(W, cr, vr),
               Y,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
@@ -4973,7 +4994,7 @@
           function B(Ur, cr, vr) {
             return Ur.SendMsg(
               "TwoFactor.QueryStatus#1",
-              (0, b.I8)(J, cr, vr),
+              (0, t.I8)(J, cr, vr),
               O,
               { ePrivilege: 1 },
             );
@@ -4982,7 +5003,7 @@
           function d(Ur, cr, vr) {
             return Ur.SendMsg(
               "TwoFactor.AddAuthenticator#1",
-              (0, b.I8)(x, cr, vr),
+              (0, t.I8)(x, cr, vr),
               I,
               { ePrivilege: 1 },
             );
@@ -4991,7 +5012,7 @@
           function Tr(Ur, cr, vr) {
             return Ur.SendMsg(
               "TwoFactor.FinalizeAddAuthenticator#1",
-              (0, b.I8)(c, cr, vr),
+              (0, t.I8)(c, cr, vr),
               U,
               { ePrivilege: 1 },
             );
@@ -5000,7 +5021,7 @@
           function ur(Ur, cr, vr) {
             return Ur.SendMsg(
               "TwoFactor.UpdateTokenVersion#1",
-              (0, b.I8)(Z, cr, vr),
+              (0, t.I8)(Z, cr, vr),
               Lr,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
@@ -5009,7 +5030,7 @@
           function hr(Ur, cr, vr) {
             return Ur.SendMsg(
               "TwoFactor.RemoveAuthenticator#1",
-              (0, b.I8)(v, cr, vr),
+              (0, t.I8)(v, cr, vr),
               n,
               { ePrivilege: 9 },
             );
@@ -5018,7 +5039,7 @@
           function Rr(Ur, cr, vr) {
             return Ur.SendMsg(
               "TwoFactor.RemoveAuthenticatorViaChallengeStart#1",
-              (0, b.I8)($r, cr, vr),
+              (0, t.I8)($r, cr, vr),
               $,
               { ePrivilege: 9 },
             );
@@ -5027,7 +5048,7 @@
           function Ar(Ur, cr, vr) {
             return Ur.SendMsg(
               "TwoFactor.RemoveAuthenticatorViaChallengeContinue#1",
-              (0, b.I8)(f, cr, vr),
+              (0, t.I8)(f, cr, vr),
               E,
               { ePrivilege: 9 },
             );

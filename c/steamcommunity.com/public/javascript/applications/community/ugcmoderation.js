@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [37102],
+    [7102],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -393,6 +393,7 @@
               radius: _,
               size: _,
               status: _,
+              color: _,
               children: _,
               value: _,
               onValueChange: _,
@@ -483,6 +484,7 @@
                   _ !== null &&
                     (0, _.jsx)(_, {
                       radius: _,
+                      color: _,
                     }),
                 ],
               }),
@@ -536,11 +538,12 @@
         }
         (_.Item = _), (_.Root = _);
         function _(_) {
-          const { radius: _ } = _;
+          const { radius: _, color: _ } = _;
           return (0, _.jsx)(_._, {
             className: _.IndicatorPosition,
             children: (0, _.jsx)("div", {
               className: _.Indicator,
+              "data-accent-color": _,
             }),
           });
         }

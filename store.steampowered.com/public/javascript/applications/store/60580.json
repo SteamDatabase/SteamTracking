@@ -106,5 +106,7 @@
     "ReadableDuration_Days": "%1$s hari",
     "ReadableDuration_Hours": "%1$s jam",
     "ReadableDuration_Minutes": "%1$s minit",
-    "ReadableDuration_OneMinute": "satu minit"
+    "ReadableDuration_OneMinute": "satu minit",
+    "Playtime_Hours": "%1$s jam",
+    "Playtime_Minutes": "%1$s min"
 }

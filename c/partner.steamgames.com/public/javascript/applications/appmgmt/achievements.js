@@ -285,7 +285,17 @@
                 const _ = (0, _._)();
                 return (0, _._)({
                   mutationFn: async (_) => {
-                    for (const _ of _) await _(_, _.groupid, _.group);
+                    const { groups: _, onProgress: _ } = _;
+                    for (let _ = 0; _ < _.length; _++) {
+                      const _ = _[_];
+                      _?.({
+                        step: "group",
+                        name: _.groupid,
+                        completed: _,
+                        total: _.length,
+                      }),
+                        await _(_, _.groupid, _.group);
+                    }
                     return !0;
                   },
                   onSuccess: async () => {
@@ -341,6 +351,16 @@
                   },
                 });
               },
+              _ = function (_) {
+                return !!_ && _.startsWith("data:");
+              },
+              _ = function (_) {
+                return (
+                  (_.achievement ? 1 : 0) +
+                  (_(_.icon) ? 1 : 0) +
+                  (_(_.icon_gray) ? 1 : 0)
+                );
+              },
               _ = function (_, _, _) {
                 const _ = (0, _._)();
                 return (0, _._)({
@@ -373,11 +393,32 @@
                 });
               },
               _ = function (_) {
+                return (
+                  (_.addOrUpdate ?? []).reduce((_, _) => _ + _(_), 0) +
+                  (_.delete ?? []).length
+                );
+              },
+              _ = function (_) {
                 const _ = (0, _._)();
                 return (0, _._)({
                   mutationFn: async (_) => {
-                    for (const _ of _.addOrUpdate ?? []) await _(_, _);
-                    for (const _ of _.delete ?? []) await _(_, _);
+                    const _ = _(_);
+                    let _ = 0;
+                    const _ = (_, _) => {
+                      _.onProgress?.({
+                        step: _,
+                        name: _,
+                        completed: _,
+                        total: _,
+                      }),
+                        _++;
+                    };
+                    for (const _ of _.addOrUpdate ?? []) {
+                      const _ = _.achievement?.name ?? _.name ?? "";
+                      await _(_, _, (_) => _(_, _));
+                    }
+                    for (const _ of _.delete ?? [])
+                      _("delete", _.name ?? ""), await _(_, _);
                     return !0;
                   },
                   onSuccess: async () => {
@@ -388,6 +429,7 @@
                 });
               };
             __webpack_require__._(_, {
+              _: () => _,
               _: () => _,
               _: () => _,
               _: () => _,
@@ -520,15 +562,12 @@
               const _ = `${_._.PARTNER_BASE_URL}images/uploadachievement`;
               await _("AchievementImageUpload", _, _);
             }
-            async function _(_, _, _, _, _) {
-              _ &&
-                _.startsWith("data:") &&
-                (await _(_, _, _, "achievement", _)),
-                _ &&
-                  _.startsWith("data:") &&
-                  (await _(_, _, _, "achievement_gray", _));
+            async function _(_, _, _, _, _, _) {
+              _(_) && (_?.("icon"), await _(_, _, _, "achievement", _)),
+                _(_) &&
+                  (_?.("icon_gray"), await _(_, _, _, "achievement_gray", _));
             }
-            async function _(_, _) {
+            async function _(_, _, _) {
               const {
                 statID: _,
                 bitID: _,
@@ -538,7 +577,7 @@
               } = _;
               if (!_ && _ && _)
                 return (
-                  await _(_, _, _, _, _),
+                  await _(_, _, _, _, _, _),
                   {
                     success: _._,
                     statid: _,
@@ -562,9 +601,10 @@
                     _.append("displayname", JSON.stringify(_.display.name)),
                   _.display.desc &&
                     _.append("displaydesc", JSON.stringify(_.display.desc)));
-              const _ = `${_._.PARTNER_BASE_URL}achievements/ajaxcreateorupdateachievement/${_}`,
-                _ = await _("addOrUpdateAchievement", _, _);
-              return await _(_, _.statid, _.bitid, _, _), _;
+              const _ = `${_._.PARTNER_BASE_URL}achievements/ajaxcreateorupdateachievement/${_}`;
+              _?.("achievement");
+              const _ = await _("addOrUpdateAchievement", _, _);
+              return await _(_, _.statid, _.bitid, _, _, _), _;
             }
             async function _(_, _) {
               const { statID: _, bitID: _ } = _,
@@ -901,6 +941,7 @@
                     openFilePicker: _,
                     save: _,
                     isSaving: _,
+                    saveProgress: _,
                     saveError: _,
                     saveSucceeded: _,
                     onClose: _,
@@ -983,6 +1024,7 @@
                     _ &&
                       (0, _.jsx)(_._, {
                         pending: _,
+                        progress: _,
                         error: _,
                         hideCancel: !0,
                         onSave: _,
@@ -2248,10 +2290,16 @@
                     .map((_) => ({
                       ..._(_),
                       ..._(_),
+                      name: _,
                     }));
                 return {
                   addOrUpdate: [..._, ..._, ..._],
-                  delete: _ ? _.deleted.map(_) : [],
+                  delete: _
+                    ? _.deleted.map((_) => ({
+                        ..._(_),
+                        name: _,
+                      }))
+                    : [],
                 };
               },
               _ = function (_) {
@@ -2283,6 +2331,7 @@
                   [_, _] = (0, _.useState)(!0),
                   [_, _] = (0, _.useState)(!1),
                   [_, _] = (0, _.useState)(!1),
+                  [_, _] = (0, _.useState)(void 0),
                   _ = (0, _.useRef)(void 0),
                   _ = (0, _.useMemo)(() => _(_, _), [_, _]),
                   _ = (0, _.useMemo)(() => _(_, _), [_, _]),
@@ -2341,13 +2390,34 @@
                   fileInputRef: _,
                   acceptedTypes: _,
                   save: async () => {
+                    const _ = _(_),
+                      _ = _(_, _, _, _),
+                      _ = _.length,
+                      _ = _ + (0, _._)(_);
+                    _(void 0);
                     try {
-                      await _.mutateAsync(_(_)),
-                        await _.mutateAsync(_(_, _, _, _)),
+                      await _.mutateAsync({
+                        groups: _,
+                        onProgress: (_) =>
+                          _({
+                            ..._,
+                            total: _,
+                          }),
+                      }),
+                        await _.mutateAsync({
+                          ..._,
+                          onProgress: (_) =>
+                            _({
+                              ..._,
+                              completed: _ + _.completed,
+                              total: _,
+                            }),
+                        }),
                         _(!0);
                     } catch {}
                   },
                   isSaving: _.isPending || _.isPending,
+                  saveProgress: _,
                   saveError: _.error?.message ?? _.error?.message,
                   saveSucceeded: _,
                   onClose: _,
@@ -4251,8 +4321,12 @@
                   [_, _] = (0, _.useState)(""),
                   [_, _] = (0, _.useState)(!1),
                   [_, _] = (0, _.useState)(!1),
-                  _ = (0, _._)(_),
-                  { data: _ } = (0, _._)(_),
+                  _ = (0, _._)(_, {
+                    bNoRetryOnError: !0,
+                  }),
+                  { data: _ } = (0, _._)(_, {
+                    bNoRetryOnError: !0,
+                  }),
                   _ = (0, _._)(_),
                   _ = {
                     appID: _,
@@ -5610,8 +5684,9 @@
                                 ),
                                 " ",
                                 (0, _.jsx)(_._, {
-                                  helpText:
+                                  helpText: (0, _._)(
                                     "#AchievementEditor_Group_Tooltip_Archived",
+                                  ),
                                 }),
                               ],
                             }),
@@ -5626,8 +5701,9 @@
                                 ),
                                 " ",
                                 (0, _.jsx)(_._, {
-                                  helpText:
+                                  helpText: (0, _._)(
                                     "#AchievementEditor_Group_Tooltip_DeveloperOnly",
+                                  ),
                                 }),
                               ],
                             }),
@@ -6692,6 +6768,51 @@
         __webpack_require__._(module, async (_, _) => {
           try {
             let _ = function (_) {
+                const { progress: _, pending: _ } = _,
+                  { step: _, name: _, completed: _, total: _ } = _,
+                  _ = _ > 0 ? Math.round((100 * _) / _) : 0,
+                  _ = (0, _._)(
+                    _
+                      ? "#AchievementEditor_Bulk_Save_Progress"
+                      : "#AchievementEditor_Bulk_Save_Stopped",
+                    _ + 1,
+                    _,
+                  );
+                return (0, _.jsxs)("div", {
+                  className: _.SaveProgress,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.SaveProgressBar,
+                      role: "progressbar",
+                      "aria-valuenow": _,
+                      "aria-valuemax": _,
+                      children: (0, _.jsx)("div", {
+                        style: {
+                          width: `${_}%`,
+                        },
+                      }),
+                    }),
+                    (0, _.jsxs)(_._, {
+                      direction: "row",
+                      gap: "2",
+                      children: [
+                        (0, _.jsx)(_._, {
+                          contrast: "title",
+                          children: _,
+                        }),
+                        (0, _.jsx)("span", {
+                          className: _.SaveProgressLabel,
+                          children: (0, _.jsx)(_._, {
+                            contrast: "description",
+                            children: (0, _._)(_[_], _),
+                          }),
+                        }),
+                      ],
+                    }),
+                  ],
+                });
+              },
+              _ = function (_) {
                 const {
                   saveText: _,
                   saveColor: _,
@@ -6699,6 +6820,7 @@
                   onSave: _,
                   onCancel: _,
                   pending: _,
+                  progress: _,
                   error: _,
                   saveDisabled: _ = !1,
                   hideCancel: _ = !1,
@@ -6706,6 +6828,12 @@
                 return (0, _.jsxs)("div", {
                   className: _.SaveCloseButtons,
                   children: [
+                    !!_ &&
+                      (_ || !!_) &&
+                      (0, _.jsx)(_, {
+                        progress: _,
+                        pending: _,
+                      }),
                     !!_ &&
                       (0, _.jsx)(_, {
                         text: _,
@@ -7072,6 +7200,7 @@
               _ = __webpack_require__("chunkid"),
               _ = __webpack_require__("chunkid"),
               _ = __webpack_require__("chunkid"),
+              _ = __webpack_require__("chunkid"),
               _ = __webpack_require__._(_),
               _ = __webpack_require__("chunkid"),
               _ = __webpack_require__("chunkid"),
@@ -7086,7 +7215,14 @@
               _ = __webpack_require__("chunkid"),
               _ = _([_, _]);
             [_, _] = _.then ? (await _)() : _;
-            const _ = "0",
+            const _ = {
+                group: "#AchievementEditor_Bulk_Save_Step_Group",
+                achievement: "#AchievementEditor_Bulk_Save_Step_Achievement",
+                icon: "#AchievementEditor_Bulk_Save_Step_Icon",
+                icon_gray: "#AchievementEditor_Bulk_Save_Step_IconGray",
+                delete: "#AchievementEditor_Bulk_Save_Step_Delete",
+              },
+              _ = "0",
               _ = "newgroup";
             _();
           } catch (_) {
@@ -7947,6 +8083,25 @@
             persister: _?.GetPersister(_),
           });
         }
+        function _(_) {
+          const _ = React.useContext(_),
+            _ = React.useMemo(
+              () =>
+                _.queries.map((_) => {
+                  const { area: _, maxAgeSeconds: _, meta: _, ..._ } = _;
+                  return {
+                    ..._,
+                    meta: _(_, _, _),
+                    persister: _?.GetPersister(_),
+                  };
+                }),
+              [_.queries, _],
+            );
+          return useQueries({
+            queries: _,
+            combine: _.combine,
+          });
+        }
         function _(_, _, _) {
           return {
             ..._,
@@ -8258,6 +8413,16 @@
         }
         const _ = (0, _._)(_);
         function _(_) {
+          return _?.bNoRetryOnError
+            ? {
+                retry: !1,
+                retryOnMount: !1,
+                refetchOnWindowFocus: !1,
+                refetchOnReconnect: !1,
+              }
+            : {};
+        }
+        function _(_) {
           return {
             ..._,
             groups: _.groups.map((_) =>
@@ -8282,9 +8447,12 @@
             area: "achievements",
           };
         }
-        function _(_) {
+        function _(_, _) {
           const _ = (0, _._)();
-          return _(_(_, _));
+          return _({
+            ..._(_, _),
+            ..._(_),
+          });
         }
         function _(_, _) {
           return {
@@ -8294,13 +8462,32 @@
             area: "achievements",
           };
         }
-        function _(_) {
+        function _(_, _) {
           const _ = (0, _._)();
-          return _(_(_, _));
+          return _({
+            ..._(_, _),
+            ..._(_),
+          });
         }
         function _(_, _) {
           const { data: _ } = _(_);
           if (_) return _.percentages[_] ?? void 0;
+        }
+        function _(_, _) {
+          const _ = _(_),
+            _ = _(_),
+            _ = _.data,
+            _ = _.data;
+          if (!_ || !_)
+            return {
+              data: void 0,
+              isPending: _.isPending || _.isPending,
+            };
+          const _ = _ ? GetAchievementInternalKeyByApiName(_, _) : void 0;
+          return {
+            data: _ === void 0 ? void 0 : (_.percentages[_] ?? void 0),
+            isPending: !1,
+          };
         }
         function _(_, _, _) {
           return {
@@ -8343,6 +8530,17 @@
           const _ = useActiveServiceTransport(),
             _ = usePersistedQuery(_(_, _, _));
           return _(_, _, _);
+        }
+        function _(_) {
+          return _.map((_) => _.data);
+        }
+        function _(_, _) {
+          const _ = useActiveServiceTransport(),
+            _ = useMemo(() => _.map((_) => _(_, _, _)), [_, _, _]);
+          return usePersistedQueries({
+            queries: _,
+            combine: _,
+          });
         }
         function _(_, _) {
           const _ = useActiveServiceTransport(),
@@ -8390,6 +8588,39 @@
             data: _,
           };
         }
+        function _(_, _) {
+          const _ = _(_),
+            _ = _(_),
+            _ = _(_, _),
+            _ = _.data,
+            _ = _.data,
+            _ = !!_ && !!_,
+            _ = () => (_ ? GetAchievementsByStatus(_, _.data, _) : void 0),
+            _ = useQuery({
+              queryKey: GetAppAchievementsQueryKey(
+                _,
+                "by_status",
+                _,
+                _.dataUpdatedAt,
+                _.dataUpdatedAt,
+                _.dataUpdatedAt,
+              ),
+              queryFn: () => {
+                const _ = _();
+                if (_ === void 0)
+                  throw new Error("No achievements to split by status");
+                return _;
+              },
+              initialData: _,
+              staleTime: 1 / 0,
+              gcTime: 60 * 1e3,
+              enabled: _,
+            });
+          return {
+            data: _ ? _.data : void 0,
+            isPending: !_ && (_.isPending || _.isPending),
+          };
+        }
         async function _(_, _, _, _) {
           await FetchPersistedQuery(_, _(_, _, _));
         }
@@ -8406,6 +8637,7 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -8473,11 +8705,8 @@
               minWidth: _ = "fit-content",
               disabled: _,
               icon: _,
-              focusable: _,
-              navProps: _,
               ..._
             } = _,
-            _ = (0, _._)(),
             _ = (0, _._)("Button", _),
             _ = _ ? _ : void 0,
             _ = (0, _._)(
@@ -8492,15 +8721,9 @@
               },
               _,
             );
-          return _ && (_ || _)
-            ? (0, _.jsx)(_._, {
-                ..._,
-                ...(_ || {}),
-                focusable: _,
-              })
-            : (0, _.jsx)("a", {
-                ..._,
-              });
+          return (0, _.jsx)(_._, {
+            ..._,
+          });
         }
         function _(_) {
           _.preventDefault();
@@ -9189,6 +9412,81 @@
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = _.createContext(!1);
+        function _(_) {
+          return jsx(_.Provider, {
+            value: !0,
+            children: _.children,
+          });
+        }
+        function _() {
+          return _.useContext(_);
+        }
+        function _(_) {
+          const {
+            snr: _,
+            focusable: _,
+            navProps: _,
+            href: _,
+            openInNewWindow: _,
+            target: _,
+            rel: _,
+            ..._
+          } = _;
+          (0, _._)(
+            !(_ && _),
+            "Link: pass either openInNewWindow or target, not both",
+          );
+          const _ = (0, _._)(),
+            _ = _(),
+            _ = _(_, _),
+            _ = _ ?? _?.focusable ?? !!_;
+          let _ = _ ? "_blank" : _;
+          !_ && _ && (_ = "_top");
+          let _ = _;
+          !_ && _ && (_ = "noreferrer noopener");
+          const _ = {
+            href: _,
+            target: _,
+            rel: _,
+            ..._,
+          };
+          return _ && (_ || _)
+            ? (0, _.jsx)(_._, {
+                ..._,
+                focusable: _,
+                ..._,
+              })
+            : (0, _.jsx)("a", {
+                ..._,
+              });
+        }
+        function _(_, _) {
+          const _ = (0, _._)();
+          return !_ || !_
+            ? _
+            : _ === !0
+              ? (0, _._)(_, _)
+              : (0, _._)(
+                  {
+                    ..._,
+                    ..._,
+                  },
+                  _,
+                );
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         function _() {
           return _.TextEntry;
@@ -9414,6 +9712,7 @@
               size: _,
               radius: _,
               status: _,
+              color: _,
               rgOptions: _,
               multiselect: _,
               onClear: _,
@@ -9460,6 +9759,7 @@
               size: _,
               radius: _,
               status: _,
+              color: _,
               hasValue: _,
               tabIndex: 0,
               cursor: "pointer",
@@ -10003,7 +10303,7 @@
               disabled: _,
               variant: _,
             }),
-            _ = _ ? _._ : "textarea";
+            _ = _ ? _ : "textarea";
           return (0, _.jsx)(_, {
             ref: _,
             ..._,
@@ -10012,6 +10312,12 @@
             rows: _,
             readOnly: _,
             "aria-disabled": _,
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)(_._, {
+            noFocusRing: !0,
+            ..._,
           });
         }
       },
@@ -10087,7 +10393,7 @@
               _.current && _.target !== _.current && _.current.focus();
             },
             _ = _ && _,
-            _ = _ ? _._ : "input",
+            _ = _ ? _ : "input",
             _ =
               _ && _ && !_
                 ? {
@@ -10112,6 +10418,12 @@
               ..._,
               ..._,
             }),
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)(_._, {
+            noFocusRing: !0,
+            ..._,
           });
         }
       },
@@ -10262,9 +10574,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
-            _ = (0, _._)(),
-            _ = _ ?? _?.focusable ?? !!_.href,
+          const { underline: _ = "auto", ..._ } = _,
             _ = (0, _._)(
               {
                 ..._,
@@ -10273,15 +10583,9 @@
               },
               _,
             );
-          return _ && (_ || _)
-            ? (0, _.jsx)(_._, {
-                ..._,
-                ...(_ || {}),
-                focusable: _,
-              })
-            : (0, _.jsx)("a", {
-                ..._,
-              });
+          return (0, _.jsx)(_._, {
+            ..._,
+          });
         }
         const _ = [
           ..._._,
@@ -10446,7 +10750,7 @@
                   className: _().SimpleModalDialogHeader,
                   children: [
                     _ &&
-                      (0, _.jsx)("h2", {
+                      (0, _.jsx)("div", {
                         className: _().SimpleModalDialogTitle,
                         children: _,
                       }),
@@ -10807,6 +11111,9 @@
           Instructions: "eAXCYyP4Yo_obxJtxkQDw",
           SaveCloseButtons: "_3D4enyVLBjzX5hIkYjGqHt",
           ButtonContainer: "mxve6PMrinRTttvrTp7jw",
+          SaveProgress: "xq00fRu498bnrRYyPbfn4",
+          SaveProgressLabel: "_20Kbw-BaMeTvYXD2oo1rW",
+          SaveProgressBar: "_3z_I3jZi6PmDRLzjkzKL7_",
           Icon: "_3MrFpvB3KKnTm85gb6oa6Z",
           ButtonIcon: "_1YhOgpne8YpIF6j3GsUyCf",
         };

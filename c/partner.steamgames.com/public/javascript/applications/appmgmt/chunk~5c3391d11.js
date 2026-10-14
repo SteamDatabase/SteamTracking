@@ -3183,6 +3183,7 @@
             startingTab: _.toString(),
             preferredFocus: !0,
             bDisableRouting: !0,
+            focusRingHasBorderRadius: !0,
           });
         }
         function _(_) {
@@ -3666,6 +3667,7 @@
               OnTabChanged: _,
               classNameCtn: _,
               classNameTab: _,
+              focusRingHasBorderRadius: _,
               classNameTabContent: _,
               preferredFocus: _,
               bVerticalTabs: _,
@@ -3717,6 +3719,7 @@
                         tab: _,
                         OnTabClick: _,
                         classNameTab: _,
+                        focusRingHasBorderRadius: _,
                         active: _.key === _.key,
                         preferredFocus: _ === _.key,
                       },
@@ -3770,6 +3773,7 @@
             tab: _,
             OnTabClick: _,
             classNameTab: _,
+            focusRingHasBorderRadius: _,
             active: _,
             preferredFocus: _,
           } = _;
@@ -3789,6 +3793,7 @@
               ),
               onActivate: () => _(_),
               preferredFocus: _,
+              focusRingHasBorderRadius: _,
               children: [
                 !!_.vo_warning &&
                   (0, _.jsx)(_._, {

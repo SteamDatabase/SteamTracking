@@ -92,6 +92,7 @@
           },
         ];
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const {
@@ -152,11 +153,8 @@
               minWidth: _ = "fit-content",
               disabled: _,
               icon: _,
-              focusable: _,
-              navProps: _,
               ..._
             } = _,
-            _ = (0, _._)(),
             _ = (0, _._)("Button", _),
             _ = _ ? _ : void 0,
             _ = (0, _._)(
@@ -171,15 +169,9 @@
               },
               _,
             );
-          return _ && (_ || _)
-            ? (0, _.jsx)(_._, {
-                ..._,
-                ...(_ || {}),
-                focusable: _,
-              })
-            : (0, _.jsx)("a", {
-                ..._,
-              });
+          return (0, _.jsx)(_._, {
+            ..._,
+          });
         }
         function _(_) {
           _.preventDefault();
@@ -212,6 +204,81 @@
             responsive: !0,
           },
         ];
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = _.createContext(!1);
+        function _(_) {
+          return jsx(_.Provider, {
+            value: !0,
+            children: _.children,
+          });
+        }
+        function _() {
+          return _.useContext(_);
+        }
+        function _(_) {
+          const {
+            snr: _,
+            focusable: _,
+            navProps: _,
+            href: _,
+            openInNewWindow: _,
+            target: _,
+            rel: _,
+            ..._
+          } = _;
+          (0, _._)(
+            !(_ && _),
+            "Link: pass either openInNewWindow or target, not both",
+          );
+          const _ = (0, _._)(),
+            _ = _(),
+            _ = _(_, _),
+            _ = _ ?? _?.focusable ?? !!_;
+          let _ = _ ? "_blank" : _;
+          !_ && _ && (_ = "_top");
+          let _ = _;
+          !_ && _ && (_ = "noreferrer noopener");
+          const _ = {
+            href: _,
+            target: _,
+            rel: _,
+            ..._,
+          };
+          return _ && (_ || _)
+            ? (0, _.jsx)(_._, {
+                ..._,
+                focusable: _,
+                ..._,
+              })
+            : (0, _.jsx)("a", {
+                ..._,
+              });
+        }
+        function _(_, _) {
+          const _ = (0, _._)();
+          return !_ || !_
+            ? _
+            : _ === !0
+              ? (0, _._)(_, _)
+              : (0, _._)(
+                  {
+                    ..._,
+                    ..._,
+                  },
+                  _,
+                );
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";

@@ -227,6 +227,7 @@
               radius: _,
               size: _,
               status: _,
+              color: _,
               children: _,
               value: _,
               onValueChange: _,
@@ -317,6 +318,7 @@
                   _ !== null &&
                     (0, _.jsx)(_, {
                       radius: _,
+                      color: _,
                     }),
                 ],
               }),
@@ -370,11 +372,12 @@
         }
         (_.Item = _), (_.Root = _);
         function _(_) {
-          const { radius: _ } = _;
+          const { radius: _, color: _ } = _;
           return (0, _.jsx)(_._, {
             className: _.IndicatorPosition,
             children: (0, _.jsx)("div", {
               className: _.Indicator,
+              "data-accent-color": _,
             }),
           });
         }
@@ -1066,17 +1069,23 @@
           _: () => _,
         });
         var _ = __webpack_require__("chunkid");
+        const _ = new Set();
+        function _() {
+          for (const _ of _) _(location.search);
+        }
         function _() {
           const [_, _] = (0, _.useState)(location.search);
           return (
             (0, _.useEffect)(() => {
-              function _(_) {
-                _.data === "urlchange" && _(location.search);
+              function _() {
+                _(location.search);
               }
               return (
-                window.addEventListener("message", _),
+                _.add(_),
+                window.addEventListener("popstate", _),
+                _(location.search),
                 () => {
-                  window.removeEventListener("message", _);
+                  _.delete(_), window.removeEventListener("popstate", _);
                 }
               );
             }, []),
@@ -1095,10 +1104,9 @@
                   : _
                 : _;
             }, [_, _, _]),
-            [_, _] = (0, _.useState)(_),
             _ = _.useCallback(
               (_, _ = !1) => {
-                const _ = new URLSearchParams(_.substring(1));
+                const _ = new URLSearchParams(location.search.substring(1));
                 if (_ != null) {
                   if (_.get(_) == _) return;
                   _.set(_, String(_));
@@ -1117,11 +1125,9 @@
                       "",
                       decodeURIComponent(`${window.location.pathname}?${_}`),
                     ),
-                  (0, _.startTransition)(() => {
-                    _(_), window.postMessage("urlchange");
-                  });
+                  (0, _.startTransition)(_);
               },
-              [_, _],
+              [_],
             );
           return [_, _];
         }
@@ -13320,6 +13326,35 @@
         __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid");
+        function _(_) {
+          if (_.section_type === "crosspromotesalepage")
+            return _.sale_page_cross_promo_event_gid || void 0;
+        }
+        function _(_, _) {
+          return !_.sale_page_cross_promo_event_gid ||
+            !_.sale_page_cross_promo_featured_app_tagid
+            ? "setup"
+            : !_ || !_.BIsVisibleEvent()
+              ? "missing"
+              : null;
+        }
+        function _(_, _) {
+          return _
+            ? (0, _._)(
+                "#Sale_CrossPromoSale_SectionTitle",
+                _.GetNameWithFallback(_) ?? "",
+              )
+            : (0, _._)("#Sale_CrossPromoSale_DefaultSectionTitle");
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid");
         function _(_) {
@@ -13364,6 +13399,48 @@
             nNumSections: _.length,
             nSectionIndex: _,
           };
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_, _, _) {
+          let _ = _,
+            _ = 0;
+          for (_ = 0; _ < _; _++) {
+            const _ = _[_ % _.length];
+            if (_ < _) break;
+            _ -= _;
+          }
+          return _;
+        }
+        function _(_, _) {
+          if ((0, _._)(_)) return 0;
+          const _ = (0, _._)(_);
+          return _ <= 0 ? 0 : _ + _;
+        }
+        function _(_, _, _, _, _) {
+          let _ =
+            "section_" +
+            _ +
+            "_" +
+            _.GID +
+            (_ || 0) +
+            (0, _._)(
+              _.unique_id ? _.unique_id.toString() : JSON.stringify(_),
+            ).toString();
+          return (
+            _ &&
+              _.rtime32_last_local_modification &&
+              (_ += "_" + _.rtime32_last_local_modification),
+            _
+          );
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -15720,6 +15797,11 @@
                 : _.strFeature
                   ? "feature:" + _.strFeature
                   : "apptype:" + _.strAppType;
+        }
+        function _(_) {
+          _?.forEach((_) => {
+            (_.unique_id = _(_)), _(_.rgChildren);
+          });
         }
         function _(_) {
           if (_.strFeature) return _[_.strFeature];
@@ -18467,7 +18549,7 @@
             );
           }
           async UpdateEventBlockFromCalendarEvent(_, _) {
-            const _ = _.appInfo ? _.appid : void 0,
+            const _ = _.appid || void 0,
               _ = _.clanInfo ? _.clanInfo.clanid : void 0;
             if (_ == null && _ == null) {
               (0, _._)(
@@ -19932,7 +20014,102 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
+          _ = __webpack_require__("chunkid");
+        const _ = 4;
+        function _(_) {
+          return _.GetSaleSections().filter(
+            (_) =>
+              BIsSaleSectionTypeItemsLike(_.section_type) &&
+              GetSaleSectionSmartSectionType(_) === "personalized_carousel",
+          );
+        }
+        function _(_) {
+          if (_.appid())
+            return {
+              _: _.appid(),
+              type: "game",
+            };
+          if (_.bundleid())
+            return {
+              _: _.bundleid(),
+              type: "bundle",
+            };
+          if (_.packageid())
+            return {
+              _: _.packageid(),
+              type: "sub",
+            };
+        }
+        function _(_, _, _, _, _) {
+          const _ = _(_),
+            _ = {
+              rgSections: _.map((_) => ({
+                eSort:
+                  _.smart_section_personalized_carousel_sort ??
+                  EStoreQuerySort.k_EStoreQuerySort_GlobalLongTermSalesRank,
+                nMinItems: _.smart_section_personalized_carousel_min_items ?? _,
+                bRandomize: !!_.smart_section_personalized_carousel_randomize,
+              })),
+              storePageFilter: GetSaleStorePageFilter(
+                _,
+                !!_[0]?.prioritize_discounts,
+                _,
+              ),
+              strStoreFilterJSON: _[0]
+                ? GetSaleSectionStoreFilter(_[0])
+                : void 0,
+            };
+          return {
+            queryKey: [
+              "SaleTech",
+              "PersonalizedCarousels",
+              _,
+              _.country,
+              _.language,
+              JSON.stringify(_),
+            ],
+            queryFn: () => _(_, _, _, _),
+            staleTime: 1 / 0,
+          };
+        }
+        async function _(_, _, _, _) {
+          if (!_ || _.rgSections.length === 0) return [];
+          const _ = CProtoBufMsg.Init(
+            CStoreQuery_GetItemsByUserRecommendedTags_Request,
+          );
+          for (const {
+            eSort: _,
+            nMinItems: _,
+            bRandomize: _,
+          } of _.rgSections) {
+            const _ = _.Body().add_sections();
+            _.set_sort(_), _.set_min_items(_), _.set_randomize(_);
+          }
+          _.Body().set_context(GetStoreBrowseContext(_)),
+            _.Body().set_filters(
+              GetStorePageFilterProto(_.storePageFilter, !1),
+            ),
+            _.strStoreFilterJSON &&
+              _.Body()
+                .filters(!0)
+                .add_store_filters()
+                .set_filter_json(_.strStoreFilterJSON);
+          const _ = await StoreQueryService.GetItemsByUserRecommendedTags(_, _);
+          if (_.GetEResult() != k_EResultOK)
+            throw new Error(
+              `GetItemsByUserRecommendedTags failed: ${_.GetEResult()}`,
+            );
+          return _.Body()
+            .sections()
+            .map((_) => ({
+              strTagName: _.tag_name() ?? "",
+              rgCapsules: _.store_item_ids().flatMap((_) => {
+                const _ = _(_);
+                return _ ? [_] : [];
+              }),
+            }));
+        }
+        var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
             for (
@@ -19950,7 +20127,7 @@
           constructor() {
             (0, _._)(this);
             const _ = (0, _._)("loyalty_webapi_token", "application_config"),
-              _ = new _._(_._.WEBAPI_BASE_URL, _ || void 0);
+              _ = (0, _._)(new _._(_._.WEBAPI_BASE_URL, _ || void 0));
             this.m_serviceTransport = _.GetServiceTransport();
           }
           static GetRelevantSections(_) {
@@ -20023,27 +20200,10 @@
               .map((_) => ({
                 sTagName: _.tag_name() ?? "",
                 rgCapsules: _.store_item_ids().flatMap((_) => {
-                  const _ = _.ConvertStoreItemIDToAppType(_);
+                  const _ = _(_);
                   return _ ? [_] : [];
                 }),
               }));
-          }
-          static ConvertStoreItemIDToAppType(_) {
-            if (_.appid())
-              return {
-                _: _.appid(),
-                type: "game",
-              };
-            if (_.bundleid())
-              return {
-                _: _.bundleid(),
-                type: "bundle",
-              };
-            if (_.packageid())
-              return {
-                _: _.tagid(),
-                type: "sub",
-              };
           }
           static s_Singleton;
           static Get() {
@@ -21845,6 +22005,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _, _) {
           const _ = _ == _._ || _ == _._ || _ == _._,
@@ -21925,15 +22086,9 @@
         function _(_, _, _, _, _, _) {
           if (!_) return "";
           if (_.section_type === "crosspromotesalepage") {
-            const _ = _.sale_page_cross_promo_event_gid
-              ? _._.GetClanEventModel(_.sale_page_cross_promo_event_gid)
-              : void 0;
-            return _
-              ? (0, _._)(
-                  "#Sale_CrossPromoSale_SectionTitle",
-                  _.GetNameWithFallback(_) ?? "",
-                )
-              : (0, _._)("#Sale_CrossPromoSale_DefaultSectionTitle");
+            const _ = (0, _._)(_),
+              _ = _ ? _._.GetClanEventModel(_) : void 0;
+            return (0, _._)(_, _);
           }
           const _ = _(_, _, _),
             _ = _._.GetWithFallback(_.localized_label, _),
@@ -22019,6 +22174,9 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -22027,8 +22185,165 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid");
+        const _ = 1,
+          _ = _._.PerHour;
+        function _(_, _, _, _) {
+          const _ = _(
+              _,
+              _.rtime32_last_modified,
+              (_) => "groups" in _ && Array.isArray(_.groups),
+            ),
+            _ = [],
+            _ = [];
+          let _ = _ > 0 ? Math.min(_, _.length) : _.length;
+          if (_)
+            for (const _ of _.data.groups) {
+              const _ = _.splice(0, _.nCount),
+                _ = _._(_.nSeed);
+              (0, _._)(_, Math.min(_, _.length), _),
+                (_ -= Math.min(_, _.length)),
+                _.push(..._),
+                _.push(_);
+            }
+          if (_.length > 0)
+            if (_ > 0) {
+              const _ = {
+                  nCount: _,
+                  nSeed: _._(),
+                },
+                _ = _._(_.nSeed);
+              (0, _._)(_, _, _),
+                _.push(..._),
+                _.push(_),
+                _(_, _.rtime32_last_modified, {
+                  groups: _,
+                });
+            } else _.push(..._);
+          return _;
+        }
+        function _(_, _, _, _, _) {
+          return !(0, _._)(_, _, _) || _.length <= 1
+            ? _
+            : _(_, _, _, _.random_order_top_x);
+        }
+        function _(_, _, _) {
+          const [_] = (0, _._)(_._, void 0);
+          return _.useMemo(() => _(_, _, _, _), [_, _, _, _]);
+        }
+        function _(_, _, _, _) {
+          if (!(0, _._)(_, _, _) || !window.sessionStorage) return _;
+          const _ = (0, _._)(_, _, _, "section"),
+            _ = _(
+              _,
+              _.rtime32_last_modified,
+              (_) => "nSeed" in _ && Number.isInteger(_.nSeed),
+            ),
+            _ = _ ? _.data.nSeed : _._(),
+            _ = _._(_),
+            _ = _.random_order_top_x ?? 0,
+            _ = JSON.parse(JSON.stringify(_));
+          return (
+            (0, _._)(_.capsules, _, _),
+            (0, _._)(_.links, _, _),
+            (0, _._)(
+              _.events?.filter((_) => !!_),
+              _,
+              _,
+            ),
+            (0, _._)(_.featured_curator_list, _, _),
+            _(_, _.rtime32_last_modified, {
+              nSeed: _,
+            }),
+            _
+          );
+        }
+        function _(_) {
+          const _ = "nextfest_personalized_" + _.GID,
+            _ = _(
+              _,
+              _.rtime32_last_modified,
+              (_) => "nSeed" in _ && Number.isInteger(_.nSeed),
+            );
+          if (_) return _.data.nSeed;
+          const _ = _._();
+          try {
+            _(
+              _,
+              _.rtime32_last_modified,
+              {
+                nSeed: _,
+              },
+              _,
+            );
+          } catch {}
+          return _;
+        }
+        function _(_, _) {
+          let _ = (_ ^ Math.imul(_, 2654435761)) >>> 0;
+          return (
+            (_ = Math.imul(_ ^ (_ >>> 16), 2246822507)),
+            (_ = Math.imul(_ ^ (_ >>> 13), 3266489909)),
+            (_ = (_ ^ (_ >>> 16)) >>> 0),
+            (_ + 0.5) / 4294967296
+          );
+        }
+        function _(_, _, _) {
+          let _;
+          try {
+            const _ = window.sessionStorage.getItem(_);
+            _ = _ && JSON.parse(_);
+          } catch {}
+          if (
+            !(!_ || _.nVersion != _ || _.rtLastModified != _) &&
+            !(_.rtExpires && _.rtExpires < Date.now() / 1e3) &&
+            !(_ && !_(_.data))
+          )
+            return _;
+        }
+        function _(_, _, _, _) {
+          const _ = {
+            nVersion: _,
+            rtLastModified: _,
+            data: _,
+          };
+          _ > 0 && (_.rtExpires = Math.floor(Date.now() / 1e3) + _),
+            window.sessionStorage.setItem(_, JSON.stringify(_));
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        function _(_, _, _) {
+          return {
+            nSaleTagID: _.BUsesContentHubForItemSource()
+              ? void 0
+              : _.featured_app_tagid,
+            strContentHubType: _.GetContentHubType(),
+            strContentHubCategory: _.GetContentHubCategory(),
+            nContentHubTagID: _.GetContentHubTag(),
+            bDiscountsOnly: _.BContentHubDiscountedOnly(),
+            bPrioritizeDiscounts: _,
+            strOptInName: _.jsondata.prune_list_optin_name,
+            nOptInTagID: _.jsondata.optin_tagid,
+            nPruneTagID: _.jsondata.optin_prune_tagid,
+            bOptInOnly: _.jsondata.optin_only,
+            nCreatorClanAccountId: _ ? _.clanSteamID.GetAccountID() : void 0,
+          };
+        }
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -22081,24 +22396,9 @@
         var _ = __webpack_require__("chunkid");
         function _(_, _) {
           const _ = _._.GetClanInfoByClanAccountID(
-              _.clanSteamID.GetAccountID(),
-            ),
-            _ = (0, _._)(_, _);
-          return {
-            nSaleTagID: _.BUsesContentHubForItemSource()
-              ? void 0
-              : _.featured_app_tagid,
-            strContentHubType: _.GetContentHubType(),
-            strContentHubCategory: _.GetContentHubCategory(),
-            nContentHubTagID: _.GetContentHubTag(),
-            bDiscountsOnly: _.BContentHubDiscountedOnly(),
-            bPrioritizeDiscounts: _ || !1,
-            strOptInName: _.jsondata.prune_list_optin_name,
-            nOptInTagID: _.jsondata.optin_tagid,
-            nPruneTagID: _.jsondata.optin_prune_tagid,
-            bOptInOnly: _.jsondata.optin_only,
-            nCreatorClanAccountId: _ ? _.clanSteamID.GetAccountID() : void 0,
-          };
+            _.clanSteamID.GetAccountID(),
+          );
+          return _(_, _ || !1, (0, _._)(_, _));
         }
         function _(_, _) {
           const _ = _(_, _.prioritize_discounts),
@@ -22176,6 +22476,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -22184,6 +22485,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -22303,10 +22605,10 @@
         function _(_, _, _, _) {
           if (_?.length > 0 && _.BIsNextFest() && !(0, _._)(_, _, _)) {
             const _ = (0, _._)("rgMLRecommenderWishlist", "application_config");
-            Array.isArray(_) &&
-              _.length > 0 &&
-              Number.isInteger(_[0]) &&
-              (_ = _([..._], _, (_) => _._));
+            if (Array.isArray(_) && _.length > 0 && Number.isInteger(_[0])) {
+              const _ = _.jsondata.sale_ml_recommender_weight_exponent || _._;
+              _ = _(_, _, (_) => _._, (0, _._)(_), _);
+            }
           }
           return _;
         }
@@ -22333,13 +22635,27 @@
           }
           return _;
         }
-        function _(_, _, _) {
-          const _ = new Map(_.map((_, _) => [_, _]));
-          return _.sort((_, _) => {
-            const _ = _.get(_(_)) ?? _.length,
-              _ = _.get(_(_)) ?? _.length;
-            return _ - _;
-          });
+        function _(_, _, _, _, _) {
+          const _ = new Map(_.map((_, _) => [_, _])),
+            _ = _ >= 0,
+            _ = [],
+            _ = [];
+          for (const _ of _) {
+            const _ = _(_),
+              _ = (0, _._)(_, _),
+              _ = _.get(_);
+            _ !== void 0
+              ? _.push({
+                  item: _,
+                  flSortKey: _ ? Math.log(_) * Math.pow(_ + 1, _) : -_,
+                })
+              : _.push({
+                  item: _,
+                  flSortKey: _ ? _ : 0,
+                });
+          }
+          const _ = (_, _) => _.flSortKey - _.flSortKey;
+          return [..._.sort(_), ..._.sort(_)].map((_) => _.item);
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -22356,6 +22672,8 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = ((_) => (
             (_[(_.EPreviewMode_Disabled = 1)] = "EPreviewMode_Disabled"),
             (_[(_.EPreviewMode_Enabled = 2)] = "EPreviewMode_Enabled"),
@@ -22363,7 +22681,7 @@
               "EPreviewMode_EditBackground"),
             _
           ))(_ || {});
-        function _(_, _, _, _, _) {
+        function _(_, _, _, _, _, _) {
           const _ = (0, _._)();
           if (_.disable_section)
             return (0, _.jsx)(_._, {
@@ -22376,7 +22694,8 @@
             (_.hide_section_before_rtime && _ < _.hide_section_before_rtime) ||
             (_.hide_section_after_rtime && _.hide_section_after_rtime < _) ||
             (_.show_section_on_gamepadui === "hide-in-gamepadui" && _) ||
-            (_.show_section_on_gamepadui === "show-only-in-gamepadui" && !_)
+            (_.show_section_on_gamepadui === "show-only-in-gamepadui" && !_) ||
+            (0, _._)(_, _, _.bPersonalizedAvailable, _.eExplorationMode)
           )
             if (_ == 3) {
               let _ = (0, _._)("#EventEditor_Preview_SectionMarkedHidden");
@@ -22448,36 +22767,24 @@
                   ),
                 })
               : void 0;
-          if (_.section_type == "crosspromotesalepage")
-            if (
-              _.sale_page_cross_promo_event_gid &&
-              _.sale_page_cross_promo_featured_app_tagid
-            ) {
-              const _ = _._.GetClanEventModel(
-                _.sale_page_cross_promo_event_gid,
-              );
-              if (!_ || !_.BIsVisibleEvent())
-                return _ && _ != 1
-                  ? (0, _.jsx)(_._, {
-                      section: _,
-                      event: _,
-                      language: _,
-                      strOverrideLocalized: (0, _._)(
-                        "#EventEditor_Preview_CrossPromo_missing",
-                      ),
-                    })
-                  : void 0;
-            } else
-              return _ && _ != 1
-                ? (0, _.jsx)(_._, {
-                    section: _,
-                    event: _,
-                    language: _,
-                    strOverrideLocalized: (0, _._)(
-                      "#EventEditor_Preview_CrossPromo_setup",
-                    ),
-                  })
-                : void 0;
+          if (_.section_type == "crosspromotesalepage") {
+            const _ = (0, _._)(_),
+              _ = _ ? _._.GetClanEventModel(_) : void 0,
+              _ = (0, _._)(_, _);
+            if (_)
+              if (_ && _ != 1) {
+                const _ =
+                  _ == "setup"
+                    ? "#EventEditor_Preview_CrossPromo_setup"
+                    : "#EventEditor_Preview_CrossPromo_missing";
+                return (0, _.jsx)(_._, {
+                  section: _,
+                  event: _,
+                  language: _,
+                  strOverrideLocalized: (0, _._)(_),
+                });
+              } else return;
+          }
           return null;
         }
       },
@@ -22814,7 +23121,7 @@
                   !!_ &&
                     (0, _.jsx)(_._, {
                       className: _.SaleSectionSubtext,
-                      toolTipContent: "#Sale_HiddenItem_Tooltip",
+                      toolTipContent: (0, _._)("#Sale_HiddenItem_Tooltip"),
                       children: (0, _.jsx)("a", {
                         href: _._.STORE_BASE_URL + "account/preferences",
                         children: (0, _._)(
@@ -22919,6 +23226,144 @@
             _ = "#Sale_Section_Type_" + (_?.section_type || "unknowntype"),
             _ = (0, _._)(_);
           if (_ !== _) return `${_} (${_})`;
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const _ = (0, _._)("rgMLRecommenderWishlist", "application_config"),
+            _ = Array.isArray(_) && _.length > 0 && Number.isInteger(_[0]),
+            _ = (0, _._)(_),
+            _ = _ <= 0 && _,
+            [_] = (0, _._)(_._, void 0),
+            _ = _ == _._.Random,
+            _ = _ && !_ ? _._.Personalized : _._.Random;
+          return {
+            bHasRecommendations: _,
+            bPersonalizedAvailable: _,
+            nNextFestRandomSecondsRemaining: _,
+            eExplorationMode: _,
+          };
+        }
+        function _(_) {
+          const { event: _ } = _,
+            _ = (0, _._)(),
+            {
+              bHasRecommendations: _,
+              bPersonalizedAvailable: _,
+              nNextFestRandomSecondsRemaining: _,
+              eExplorationMode: _,
+            } = _(_),
+            [_, _] = _.useState(_);
+          if (_ <= 0 && !_) return;
+          let _ = (0, _._)(
+              "#SaleSectionNextFestHeader_ExplorationMode_DescriptionReady1",
+            ),
+            _ = (0, _._)(
+              "#SaleSectionNextFestHeader_ExplorationMode_DescriptionReady2",
+            );
+          if (_ > 0) {
+            const _ = _ > 0 ? new Date().getTime() / 1e3 + _ : 0,
+              _ = Math.round(_ / 3600) * 3600,
+              _ = (0, _._)(new Date(_ * 1e3)),
+              _ = (0, _._)(_);
+            (_ = (0, _._)(
+              "#SaleSectionNextFestHeader_ExplorationMode_DescriptionNotReady1",
+            )),
+              (_ = (0, _._)(
+                "#SaleSectionNextFestHeader_ExplorationMode_DescriptionNotReady2",
+                _,
+                _,
+              ));
+          }
+          const _ = (_) => {
+              _ &&
+                ((0, _._)(_, {
+                  [_._]: _,
+                }),
+                _(_));
+            },
+            _ = _.BShowNextFestHeader(!0) && !_.BShowNextFestHeader(!1);
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_().SaleSection, _().ExplorationModeCtn),
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().ExplorationModeTitle,
+                children: [
+                  (0, _._)("#SaleSectionNextFestHeader_ExplorationMode_Title"),
+                  (0, _.jsx)("span", {
+                    children: (0, _._)(
+                      "#SaleSectionNextFestHeader_ExplorationMode_SubTitle",
+                    ),
+                  }),
+                  _ &&
+                    (0, _.jsx)("span", {
+                      className: _().ValveOnly,
+                      children: "(VO)",
+                    }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _().ExplorationModeContent,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().ExplorationModeToggle,
+                    children: (0, _.jsxs)(_._.Root, {
+                      value: _,
+                      onValueChange: (_) => _(_),
+                      variant: "inset-glass",
+                      radius: "md",
+                      children: [
+                        (0, _.jsx)(_._.Item, {
+                          value: _._.Random,
+                          children: (0, _._)(
+                            "#SaleSectionNextFestHeader_ExplorationMode_Random",
+                          ),
+                        }),
+                        (0, _.jsx)(_._.Item, {
+                          value: _._.Personalized,
+                          disabled: !_,
+                          children: (0, _._)(
+                            "#SaleSectionNextFestHeader_ExplorationMode_Personalized",
+                          ),
+                        }),
+                      ],
+                    }),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().ExplorationModeDescription,
+                    children: [
+                      (0, _.jsx)("div", {
+                        children: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        children: _,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -23462,6 +23907,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
           m_rgMyWishlistOnSale = null;
@@ -23479,6 +23925,11 @@
           m_rgDeckTopPlayedGames = null;
           m_serviceTransport;
           constructor() {
+            const _ = (0, _._)();
+            if (_) {
+              this.m_serviceTransport = _.GetServiceTransport();
+              return;
+            }
             const _ = (0, _._)("loyalty_webapi_token", "application_config"),
               _ = (0, _._)(new _._(_._.WEBAPI_BASE_URL, _ || void 0));
             this.m_serviceTransport = _.GetServiceTransport();
@@ -24076,6 +24527,146 @@
             );
           }
         }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const { partnerTakeoverData: _ } = _,
+            _ = (0, _._)();
+          if (!_?.strPageBackgroundURL) return null;
+          let _ = _.strPageBackgroundTarget;
+          _ == null && (_ = `${_._.STORE_BASE_URL}app/${_.takeoverAppID}`);
+          const _ = (0, _._)()
+              ? _.nPageBackgroundOffsetHeightMobile
+              : _.nPageBackgroundOffsetHeight,
+            _ = _.strPageBackgroundColorLeft,
+            _ = _.strPageBackgroundColorRight;
+          (_ = _?.replace("http://", "https://")),
+            (_ = (0, _._)(_, {
+              ..._,
+              feature: "promo-takeover",
+            }));
+          const _ = {
+              height: (_ || 0) + "px",
+            },
+            _ = {
+              background:
+                _ && _
+                  ? "linear-gradient(to right, rgb(" +
+                    _ +
+                    ") 49%, rgb(" +
+                    _ +
+                    ") 51%)"
+                  : void 0,
+            };
+          return (0, _.jsxs)(_._, {
+            appid: _.takeoverAppID,
+            children: [
+              (0, _.jsx)(_, {
+                partnerTakeoverData: _,
+              }),
+              (0, _.jsx)(_._, {
+                className: _.ContentHubTakeoverCtn,
+                style: _,
+                autoFocus: !0,
+                children: (0, _.jsx)(_._, {
+                  href: _,
+                  style: _,
+                  autoFocus: !0,
+                  children: (0, _.jsx)(_, {
+                    partnerTakeoverData: _,
+                  }),
+                }),
+              }),
+            ],
+          });
+        }
+        function _(_) {
+          const { partnerTakeoverData: _ } = _,
+            _ = (0, _._)()
+              ? _.strPageBackgroundMobileURL
+              : _.strPageBackgroundURL,
+            _ = (0, _.useRef)(null);
+          return (
+            (0, _._)(_),
+            (0, _._)() && (_?.strPageBackgroundMobileWebM?.length ?? 0) > 0
+              ? (0, _.jsxs)("video", {
+                  className: _.fullscreen_bg__video_mobile,
+                  poster: _,
+                  ref: _,
+                  loop: !0,
+                  muted: !0,
+                  autoPlay: !0,
+                  playsInline: !0,
+                  children: [
+                    (0, _.jsx)("source", {
+                      src: _.strPageBackgroundMobileWebM,
+                      type: "video/webm",
+                    }),
+                    !_._.IN_CLIENT &&
+                      (0, _.jsx)("source", {
+                        src: _?.strPageBackgroundMobileMP4,
+                        type: "video/mp4",
+                      }),
+                  ],
+                })
+              : !(0, _._)() && _?.strPageBackgroundWebM?.length
+                ? (0, _.jsxs)("video", {
+                    className: _.fullscreen_bg__video,
+                    poster: _,
+                    ref: _,
+                    loop: !0,
+                    muted: !0,
+                    autoPlay: !0,
+                    playsInline: !0,
+                    children: [
+                      (0, _.jsx)("source", {
+                        src: _.strPageBackgroundWebM,
+                        type: "video/webm",
+                      }),
+                      !_._.IN_CLIENT &&
+                        (0, _.jsx)("source", {
+                          src: _.strPageBackgroundMP4,
+                          type: "video/mp4",
+                        }),
+                    ],
+                  })
+                : (0, _.jsx)("img", {
+                    src: _,
+                  })
+          );
+        }
+        function _(_) {
+          const { partnerTakeoverData: _ } = _;
+          return (_?.strPageBackgroundColorLeft?.length ?? 0) > 0 &&
+            (_?.strPageBackgroundColorRight?.length ?? 0) > 0
+            ? (0, _.jsxs)("div", {
+                className: _.store_bg_overlay,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.gradient_width,
+                    style: {
+                      position: "absolute",
+                      left: 0,
+                      background: `-webkit-gradient(linear, right top, left top, color-stop(0%, rgba( ${_.strPageBackgroundColorLeft},0 ) ), color-stop(100%, rgba( ${_.strPageBackgroundColorLeft},1) ) )`,
+                    },
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.gradient_width,
+                    style: {
+                      position: "absolute",
+                      right: 0,
+                      background: `-webkit-gradient(linear, left top, right top, color-stop(0%, rgba( ${_.strPageBackgroundColorRight}, 0 ) ), color-stop(100%, rgba(${_.strPageBackgroundColorRight},1) ) )`,
+                    },
+                  }),
+                ],
+              })
+            : null;
+        }
         function _(_, _) {
           const _ = new Array();
           return (
@@ -24174,6 +24765,24 @@
               partnerTakeoverData: _.GetPartnerTakeover(_, _, _),
             }
           );
+        }
+        function _(_) {
+          const {
+              hubtype: _,
+              category: _,
+              tagid: _,
+              prioritize_discounts: _,
+              prune_list_optin_name: _,
+              optin_tagid: _,
+              optin_prune_tagid: _,
+              optin_only: _,
+            } = _,
+            { bLoading: _, partnerTakeoverData: _ } = _(_, _, _, _, _, _, _, _);
+          return _ || !_
+            ? null
+            : (0, _.jsx)(_, {
+                partnerTakeoverData: _,
+              });
         }
         function _(_, _, _, _, _, _, _, _, _, _) {
           const _ = _._.Get(),
@@ -24291,7 +24900,6 @@
           );
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const {
@@ -24470,155 +25078,6 @@
                     }),
                   ],
                 });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const {
-              hubtype: _,
-              category: _,
-              tagid: _,
-              prioritize_discounts: _,
-              prune_list_optin_name: _,
-              optin_tagid: _,
-              optin_prune_tagid: _,
-              optin_only: _,
-            } = _,
-            _ = (0, _._)(),
-            { bLoading: _, partnerTakeoverData: _ } = _(_, _, _, _, _, _, _, _);
-          if (_ || !_ || !_.strPageBackgroundURL) return null;
-          let _ = _.strPageBackgroundTarget;
-          _ == null && (_ = `${_._.STORE_BASE_URL}app/${_.takeoverAppID}`);
-          const _ = (0, _._)()
-              ? _.nPageBackgroundOffsetHeightMobile
-              : _.nPageBackgroundOffsetHeight,
-            _ = _.strPageBackgroundColorLeft,
-            _ = _.strPageBackgroundColorRight;
-          (_ = _?.replace("http://", "https://")),
-            (_ = (0, _._)(_, {
-              ..._,
-              feature: "promo-takeover",
-            }));
-          const _ = {
-              height: (_ || 0) + "px",
-            },
-            _ = {
-              background:
-                !!_ &&
-                !!_ &&
-                "linear-gradient(to right, rgb(" +
-                  _ +
-                  ") 49%, rgb(" +
-                  _ +
-                  ") 51%)",
-            };
-          return (0, _.jsxs)(_._, {
-            appid: _.takeoverAppID,
-            children: [
-              (0, _.jsx)(_, {
-                partnerTakeoverData: _,
-              }),
-              (0, _.jsx)(_._, {
-                className: _.ContentHubTakeoverCtn,
-                style: _,
-                autoFocus: !0,
-                children: (0, _.jsx)(_._, {
-                  href: _,
-                  style: _,
-                  autoFocus: !0,
-                  children: (0, _.jsx)(_, {
-                    partnerTakeoverData: _,
-                  }),
-                }),
-              }),
-            ],
-          });
-        }
-        function _(_) {
-          const { partnerTakeoverData: _ } = _,
-            _ = (0, _._)()
-              ? _.strPageBackgroundMobileURL
-              : _.strPageBackgroundURL,
-            _ = (0, _.useRef)(null);
-          return (
-            (0, _._)(_),
-            (0, _._)() && _?.strPageBackgroundMobileWebM?.length > 0
-              ? (0, _.jsxs)("video", {
-                  className: _.fullscreen_bg__video_mobile,
-                  poster: _,
-                  ref: _,
-                  loop: !0,
-                  muted: !0,
-                  autoPlay: !0,
-                  playsInline: !0,
-                  children: [
-                    (0, _.jsx)("source", {
-                      src: _.strPageBackgroundMobileWebM,
-                      type: "video/webm",
-                    }),
-                    !_._.IN_CLIENT &&
-                      (0, _.jsx)("source", {
-                        src: _?.strPageBackgroundMobileMP4,
-                        type: "video/mp4",
-                      }),
-                  ],
-                })
-              : !(0, _._)() && _?.strPageBackgroundWebM?.length
-                ? (0, _.jsxs)("video", {
-                    className: _.fullscreen_bg__video,
-                    poster: _,
-                    ref: _,
-                    loop: !0,
-                    muted: !0,
-                    autoPlay: !0,
-                    playsInline: !0,
-                    children: [
-                      (0, _.jsx)("source", {
-                        src: _.strPageBackgroundWebM,
-                        type: "video/webm",
-                      }),
-                      !_._.IN_CLIENT &&
-                        (0, _.jsx)("source", {
-                          src: _.strPageBackgroundMP4,
-                          type: "video/mp4",
-                        }),
-                    ],
-                  })
-                : (0, _.jsx)("img", {
-                    src: _,
-                  })
-          );
-        }
-        function _(_) {
-          const { partnerTakeoverData: _ } = _;
-          return _?.strPageBackgroundColorLeft?.length > 0 &&
-            _?.strPageBackgroundColorRight?.length > 0
-            ? (0, _.jsxs)("div", {
-                className: _.store_bg_overlay,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.gradient_width,
-                    style: {
-                      position: "absolute",
-                      left: 0,
-                      background: `-webkit-gradient(linear, right top, left top, color-stop(0%, rgba( ${_.strPageBackgroundColorLeft},0 ) ), color-stop(100%, rgba( ${_.strPageBackgroundColorLeft},1) ) )`,
-                    },
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.gradient_width,
-                    style: {
-                      position: "absolute",
-                      right: 0,
-                      background: `-webkit-gradient(linear, left top, right top, color-stop(0%, rgba( ${_.strPageBackgroundColorRight}, 0 ) ), color-stop(100%, rgba(${_.strPageBackgroundColorRight},1) ) )`,
-                    },
-                  }),
-                ],
-              })
-            : null;
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -30003,40 +30462,8 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_, _, _) {
-          let _ = _,
-            _ = 0;
-          for (_ = 0; _ < _; _++) {
-            const _ = _[_ % _.length];
-            if (_ < _) break;
-            _ -= _;
-          }
-          return _;
-        }
-        function _(_, _) {
-          if ((0, _._)(_)) return 0;
-          const _ = (0, _._)(_);
-          return _ <= 0 ? 0 : _ + _;
-        }
-        function _(_, _, _, _, _) {
-          let _ =
-            "section_" +
-            _ +
-            "_" +
-            _.GID +
-            (_ || 0) +
-            (0, _._)(
-              _.unique_id ? _.unique_id.toString() : JSON.stringify(_),
-            ).toString();
-          return (
-            _ &&
-              _.rtime32_last_local_modification &&
-              (_ += "_" + _.rtime32_last_local_modification),
-            _
-          );
-        }
-        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         function _(_) {
           const {
@@ -30047,7 +30474,7 @@
               bLoading: _,
               onShowMore: _,
             } = _,
-            _ = _(_, _, _) < _;
+            _ = (0, _._)(_, _, _) < _;
           return (0, _.jsx)("div", {
             className: (0, _._)(
               _().ShowContentsContainer,
@@ -30071,7 +30498,7 @@
           });
         }
         function _(_) {
-          return Math.max(_(_, 0), 4);
+          return Math.max((0, _._)(_, 0), 4);
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -30084,6 +30511,8 @@
               bInGamepadUI: _,
               placeholderHeight: _,
               nHiddenCapsules: _,
+              title: _,
+              subtitle: _,
               children: _,
             } = _,
             [_, _] = _.useState(void 0),
@@ -30118,6 +30547,8 @@
                     event: _,
                     language: _,
                     nHiddenCapsules: _,
+                    title: _,
+                    subtitle: _,
                     bShowSeeMoreHint: _,
                     bUseGamepadLinkHint: !0,
                     onLinkResolved: (_) => _(_ ?? void 0),
@@ -30174,8 +30605,8 @@
               bHideIfTooFewItems: !!_.hide_section_if_too_few_items,
               ...(0, _._)(_.jsondata),
             },
-            _ = _(_, _.nShowAdditionalRows),
-            _ = _((0, _._)(_, _), _, _.capsules?.length ?? 0);
+            _ = (0, _._)(_, _.nShowAdditionalRows),
+            _ = (0, _._)((0, _._)(_, _), _, _.capsules?.length ?? 0);
           return _ < _ && (0, _._)(_) && (_.nShowAdditionalRows -= _ - _), _;
         }
         var _ = __webpack_require__("chunkid"),
@@ -30916,99 +31347,8 @@
           return _(_, _, _, _?.GetSelectedOptionsCount());
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = 1;
-        function _(_, _, _, _) {
-          const _ = _(
-              _,
-              _.rtime32_last_modified,
-              (_) => "groups" in _ && Array.isArray(_.groups),
-            ),
-            _ = [],
-            _ = [];
-          let _ = _ > 0 ? Math.min(_, _.length) : _.length;
-          if (_)
-            for (const _ of _.data.groups) {
-              const _ = _.splice(0, _.nCount),
-                _ = _._(_.nSeed);
-              (0, _._)(_, Math.min(_, _.length), _),
-                (_ -= Math.min(_, _.length)),
-                _.push(..._),
-                _.push(_);
-            }
-          if (_.length > 0)
-            if (_ > 0) {
-              const _ = {
-                  nCount: _,
-                  nSeed: _._(),
-                },
-                _ = _._(_.nSeed);
-              (0, _._)(_, _, _),
-                _.push(..._),
-                _.push(_),
-                _(_, _.rtime32_last_modified, {
-                  groups: _,
-                });
-            } else _.push(..._);
-          return _;
-        }
-        function _(_, _, _, _, _) {
-          return !(0, _._)(_, _, _) || _.length <= 1
-            ? _
-            : _(_, _, _, _.random_order_top_x);
-        }
-        function _(_, _, _) {
-          const [_] = (0, _._)(_._, void 0);
-          return _.useMemo(() => _(_, _, _, _), [_, _, _, _]);
-        }
-        function _(_, _, _, _) {
-          if (!(0, _._)(_, _, _) || !window.sessionStorage) return _;
-          const _ = _(_, _, _, "section"),
-            _ = _(
-              _,
-              _.rtime32_last_modified,
-              (_) => "nSeed" in _ && Number.isInteger(_.nSeed),
-            ),
-            _ = _ ? _.data.nSeed : _._(),
-            _ = _._(_),
-            _ = _.random_order_top_x ?? 0,
-            _ = JSON.parse(JSON.stringify(_));
-          return (
-            (0, _._)(_.capsules, _, _),
-            (0, _._)(_.links, _, _),
-            (0, _._)(
-              _.events?.filter((_) => !!_),
-              _,
-              _,
-            ),
-            (0, _._)(_.featured_curator_list, _, _),
-            _(_, _.rtime32_last_modified, {
-              nSeed: _,
-            }),
-            _
-          );
-        }
-        function _(_, _, _) {
-          let _;
-          try {
-            const _ = window.sessionStorage.getItem(_);
-            _ = _ && JSON.parse(_);
-          } catch {}
-          if (
-            !(!_ || _.nVersion != _ || _.rtLastModified != _) &&
-            !(_ && !_(_.data))
-          )
-            return _;
-        }
-        function _(_, _, _) {
-          const _ = {
-            nVersion: _,
-            rtLastModified: _,
-            data: _,
-          };
-          window.sessionStorage.setItem(_, JSON.stringify(_));
-        }
-        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -31525,8 +31865,14 @@
             )
               _.sort((_, _) => _.sortOrder - _.sortOrder);
             else {
-              const _ = _(_, _, _, "creator_list", _?.GetActiveTabUniqueID());
-              _ = _(_, _, _);
+              const _ = (0, _._)(
+                _,
+                _,
+                _,
+                "creator_list",
+                _?.GetActiveTabUniqueID(),
+              );
+              _ = (0, _._)(_, _, _);
             }
             return {
               capsules: _.map((_) => ({
@@ -31786,7 +32132,7 @@
           );
         }
         async function _(_, _, _, _, _, _, _, _, _, _, _ = 0, _, _, _, _) {
-          const _ = _(_, _, _, _);
+          const _ = (0, _._)(_, _, _, _);
           if ((0, _._)(_.section_type) && (0, _._)(_) != "sale_tabhub")
             return await _(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _);
           if (_.section_type === "events" || _.section_type == "sale_events")
@@ -31821,8 +32167,8 @@
           if ((await _._.Get().HintLoad(), _.signal.aborted)) return _;
           let _,
             _ = !1;
-          const _ = _(_, _, _, "capsules", _?.GetActiveTabUniqueID()),
-            _ = _(_, _),
+          const _ = (0, _._)(_, _, _, "capsules", _?.GetActiveTabUniqueID()),
+            _ = (0, _._)(_, _),
             _ = (0, _._)(_, _, _);
           if ((0, _._)(_)) {
             const _ = await _(
@@ -31843,7 +32189,7 @@
                 _.smart_section_max_apps &&
                 _.length < _.smart_section_max_apps
               )),
-              _.enable_faceted_browsing || (_ = _(_, _, _, _, _)),
+              _.enable_faceted_browsing || (_ = (0, _._)(_, _, _, _, _)),
               _.firstCapsule &&
                 ((_ = _.filter((_) => _._ !== _.firstCapsule?._)),
                 _.unshift(_.firstCapsule)),
@@ -31868,8 +32214,8 @@
               _.SetFacetCounts(_.rgSolrFacetCounts),
               _.SetSolrMatchCount(_.nMatchCount),
               (_ = _.rgCapsules),
-              (_ = _(_, _, _, _, [..._]));
-          } else _ = _(_, _, _, _, [..._.capsules]);
+              (_ = (0, _._)(_, _, _, _, [..._]));
+          } else _ = (0, _._)(_, _, _, _, [..._.capsules]);
           if (_.signal.aborted) return _;
           if (
             ((_ = (0, _._)(_, _, _, _)),
@@ -32030,8 +32376,15 @@
               _.events.filter((_) => !!_).map((_) => _.announcement_gid),
             );
           let _ = _.map((_) => _.GID);
-          const _ = _(_, _, _, "events" + _.length, _?.GetActiveTabUniqueID());
-          (_ = _(_, _, _, _, _)), (_ = _.map((_) => _._.GetClanEventModel(_)));
+          const _ = (0, _._)(
+            _,
+            _,
+            _,
+            "events" + _.length,
+            _?.GetActiveTabUniqueID(),
+          );
+          (_ = (0, _._)(_, _, _, _, _)),
+            (_ = _.map((_) => _._.GetClanEventModel(_)));
           let _ = _.filter(
             (_) =>
               !!_ && (_.BUsesContentHubForItemSource() || _.ShouldShowEvent(_)),
@@ -32067,8 +32420,8 @@
               localized_link_capsule: void 0,
               materialized_link_capsule: _.square,
             }));
-            const _ = _(_, _, _, "links", _?.GetActiveTabUniqueID());
-            _ = _(_, _, _, _, _);
+            const _ = (0, _._)(_, _, _, "links", _?.GetActiveTabUniqueID());
+            _ = (0, _._)(_, _, _, _, _);
           }
           return _;
         }
@@ -32262,7 +32615,7 @@
               _(_);
             },
             _ = (_) => {
-              const _ = Math.min((0, _._)(_, _.length, _), _(_, 0));
+              const _ = Math.min((0, _._)(_, _.length, _), (0, _._)(_, 0));
               return Math.max(1, _) * 250;
             },
             _ = () => {
@@ -32275,7 +32628,7 @@
                   facetFilterState: _.facetFilterState,
                 });
             },
-            _ = _(_, _.section, _);
+            _ = (0, _._)(_, _.section, _);
           let _ = null;
           if (!_)
             _.enable_faceted_browsing
@@ -32311,7 +32664,7 @@
                     _,
                     (0, _.jsx)(_, {
                       section: _,
-                      nRowsWithNext: _(_, _),
+                      nRowsWithNext: (0, _._)(_, _),
                       nCapsules: _.capsules.length,
                       rgRowSizes: (0, _._)(_, _),
                       bLoading: _,
@@ -33343,7 +33696,7 @@
                   (0, _.jsx)(
                     _._,
                     {
-                      toolTipContent: _,
+                      toolTipContent: (0, _._)(_),
                       onClick: () => this.OnFlavorLabelClick(_.flavor),
                       className: (0, _._)(
                         _().FlavorLabel,
@@ -38386,7 +38739,7 @@
                 let { rgCapsules: _ } = await _(
                   _,
                   _,
-                  _(_, _, _, _),
+                  (0, _._)(_, _, _, _),
                   _,
                   _,
                   _,
@@ -39764,111 +40117,7 @@
             }),
           });
         }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { event: _ } = _,
-            _ = (0, _._)(),
-            _ = (0, _._)("rgMLRecommenderWishlist", "application_config"),
-            _ = Array.isArray(_) && _.length > 0 && Number.isInteger(_[0]),
-            _ = (0, _._)(_),
-            _ = _ <= 0 && _,
-            [_] = (0, _._)(_._, void 0),
-            _ = _ == _._.Random,
-            [_, _] = _.useState(_ && !_ ? _._.Personalized : _._.Random);
-          if (_ <= 0 && !_) return;
-          let _ = (0, _._)(
-              "#SaleSectionNextFestHeader_ExplorationMode_DescriptionReady1",
-            ),
-            _ = (0, _._)(
-              "#SaleSectionNextFestHeader_ExplorationMode_DescriptionReady2",
-            );
-          if (_ > 0) {
-            const _ = _ > 0 ? new Date().getTime() / 1e3 + _ : 0,
-              _ = Math.round(_ / 3600) * 3600,
-              _ = (0, _._)(new Date(_ * 1e3)),
-              _ = (0, _._)(_);
-            (_ = (0, _._)(
-              "#SaleSectionNextFestHeader_ExplorationMode_DescriptionNotReady1",
-            )),
-              (_ = (0, _._)(
-                "#SaleSectionNextFestHeader_ExplorationMode_DescriptionNotReady2",
-                _,
-                _,
-              ));
-          }
-          const _ = (_) => {
-              _ &&
-                ((0, _._)(_, {
-                  [_._]: _,
-                }),
-                _(_));
-            },
-            _ = _.BShowNextFestHeader(!0) && !_.BShowNextFestHeader(!1);
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(_().SaleSection, _().ExplorationModeCtn),
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().ExplorationModeTitle,
-                children: [
-                  (0, _._)("#SaleSectionNextFestHeader_ExplorationMode_Title"),
-                  (0, _.jsx)("span", {
-                    children: (0, _._)(
-                      "#SaleSectionNextFestHeader_ExplorationMode_SubTitle",
-                    ),
-                  }),
-                  _ &&
-                    (0, _.jsx)("span", {
-                      className: _().ValveOnly,
-                      children: "(VO)",
-                    }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _().ExplorationModeContent,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().ExplorationModeToggle,
-                    children: (0, _.jsxs)(_._.Root, {
-                      value: _,
-                      onValueChange: (_) => _(_),
-                      variant: "inset-glass",
-                      radius: "md",
-                      children: [
-                        (0, _.jsx)(_._.Item, {
-                          value: _._.Random,
-                          children: (0, _._)(
-                            "#SaleSectionNextFestHeader_ExplorationMode_Random",
-                          ),
-                        }),
-                        (0, _.jsx)(_._.Item, {
-                          value: _._.Personalized,
-                          disabled: !_,
-                          children: (0, _._)(
-                            "#SaleSectionNextFestHeader_ExplorationMode_Personalized",
-                          ),
-                        }),
-                      ],
-                    }),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _().ExplorationModeDescription,
-                    children: [
-                      (0, _.jsx)("div", {
-                        children: _,
-                      }),
-                      (0, _.jsx)("div", {
-                        children: _,
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-            ],
-          });
-        }
+        var _ = __webpack_require__("chunkid");
         function _(_) {
           const { event: _, section: _, activeTab: _, language: _ } = _,
             _ = (0, _._)();
@@ -40116,7 +40365,7 @@
                 ..._,
               });
             case "nextfest_header":
-              return (0, _.jsx)(_, {
+              return (0, _.jsx)(_._, {
                 ..._,
               });
             case "steam_review_section":
@@ -40636,8 +40885,9 @@
             : (0, _.jsxs)(_._, {
                 className: _.TabTagFilterCtn,
                 children: [
-                  (0, _.jsxs)("div", {
+                  (0, _.jsxs)(_._, {
                     className: _.TabTagFilterRow,
+                    "flow-children": "row",
                     children: [
                       (0, _.jsx)(_, {
                         strName: (0, _._)("#Sale_Tabs_TagFilter_All"),
@@ -40662,8 +40912,9 @@
                   }),
                   _ &&
                     _.length > 0 &&
-                    (0, _.jsx)("div", {
+                    (0, _.jsx)(_._, {
                       className: (0, _._)(_.TabTagFilterRow, _.Secondary),
+                      "flow-children": "row",
                       children: _.map((_) => {
                         const _ = (0, _._)(_),
                           _ = _ === _.strChildKey;
@@ -40865,7 +41116,7 @@
             _ = _(_.tabs, _, _, _),
             _ = _(_),
             _ = (0, _._)(),
-            _ = _ && !!_.tab_tag_filter && !_,
+            _ = _ && !!_.tab_tag_filter,
             _ = (0, _._)(),
             _ = _.useCallback(
               (_) =>
@@ -44128,6 +44379,17 @@
       chunkid: (module) => {
         module.exports = {
           narrowWidth: "500px",
+          ContentHubTakeoverCtn: "tKrtIuzXBC1spaouFtAys",
+          fullscreen_bg: "_2KOJdE8WgaglE4t_rnhIK9",
+          fullscreen_bg__video: "LYYGbLM1JXZ_tUDvPOPzf",
+          fullscreen_bg__video_mobile: "_1jrJav1Rx9oE6y8t2OxqWs",
+          store_bg_overlay: "jGeNsdt5edODqJcxOmxG7",
+          gradient_width: "_1bfqbHV0KTod5RwSZskb5R",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          narrowWidth: "500px",
           "duration-app-launch": "800ms",
           SaleBackgroundOverlay: "_1WrAYASFyV0qtWIbXSGoo6",
           BackgroundAnimation: "_3MYFEzuIRKobkUk2lRYnMK",
@@ -44450,15 +44712,6 @@
           AppName: "r6OCNSBahfTSSDTqXDVqY",
           LibraryImage: "_1QVat7gXKVzPNiStElIJCt",
           CapsuleColumn: "_3OUOaqR0a3uYqsWOZbfSSh",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          fullscreen_bg: "-M0lUK3jDRg7ZCRU0lGVq",
-          fullscreen_bg__video: "_31ex5tVRKlb9Ulfz9g_Wfk",
-          fullscreen_bg__video_mobile: "_3JzFbExRmNiGvVbuTWzqjg",
-          store_bg_overlay: "_3KWlnATubYMW1Ljc4HCbEZ",
-          gradient_width: "_1G24HtYyi8CtYqAaFfU2WP",
         };
       },
       chunkid: (module) => {

@@ -1685,6 +1685,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid");
         const _ = {};
@@ -2000,7 +2001,7 @@
           });
         }
         function _(_) {
-          return _.toLocaleDateString(GetPreferredLocales(), {
+          return _.toLocaleDateString((0, _._)(), {
             month: "short",
           });
         }
@@ -4657,6 +4658,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { _: _, bSelfPurchaseOption: _ } = _,
@@ -4685,6 +4687,7 @@
               bPreferWholeNumbers: _,
               bSelfPurchaseOption: _,
               bHideNewTag: _,
+              bPrePurchaseBesidePrice: _,
             } = _,
             _ = _._.NOW,
             { data: _ } = (0, _._)(_),
@@ -4708,7 +4711,7 @@
                 children: _._.Localize("#EventDisplay_CallToAction_InLibrary"),
               }),
             });
-          if (_ && _.is_coming_soon && (!_ || !_.packageid)) {
+          if (_ && _.is_coming_soon && (!_ || (!_.packageid && !_.bundleid))) {
             if (_) return null;
             const _ =
               _.coming_soon_display &&
@@ -4797,6 +4800,7 @@
               !!_.hide_discount_pct_for_compliance,
             bShowNewFlag: _,
             bHidePrePurchase: !!_,
+            bPrePurchaseBesidePrice: _,
             strDiscountAndPriceClassName: _,
             strPriceFormattedClassName: _,
             bPurchaseOptionDisplay: _,
@@ -4813,6 +4817,7 @@
               bHideDiscountPercentForCompliance: _,
               bShowNewFlag: _,
               bHidePrePurchase: _,
+              bPrePurchaseBesidePrice: _,
               strDiscountAndPriceClassName: _,
               strPriceFormattedClassName: _,
               bPurchaseOptionDisplay: _,
@@ -4834,6 +4839,7 @@
               [_().Discounted]: !!_,
               Discounted: !!_,
               [_().PrePurchase]: !!_,
+              [_().PrePurchaseBesidePrice]: !!_,
               [_().NewItem]: !!_,
               [_().PurchaseOption]: _,
               [_ ?? ""]: !!_,
@@ -4842,11 +4848,17 @@
             children: [
               !!(_ && !_) &&
                 (0, _.jsx)("div", {
-                  className: (0, _._)(_().StoreSalePrepurchaseLabel),
-                  children: (0, _.jsx)("span", {
-                    children: _._.Localize(
-                      "#EventDisplay_CallToAction_Prepurchase_Short",
-                    ),
+                  className: (0, _._)(
+                    _().StoreSalePrepurchaseLabel,
+                    "StoreSalePrepurchaseLabel",
+                  ),
+                  children: (0, _.jsxs)("span", {
+                    children: [
+                      (0, _.jsx)(_.zD7, {}),
+                      _._.Localize(
+                        "#EventDisplay_CallToAction_Prepurchase_Short",
+                      ),
+                    ],
                   }),
                 }),
               !!(!_ && _) &&
@@ -4887,7 +4899,10 @@
                 }),
               !!(!_ && _ && !_) &&
                 (0, _.jsx)("div", {
-                  className: _().StoreSaleDiscountBox,
+                  className: (0, _._)(
+                    _().StoreSaleDiscountBox,
+                    "StoreSaleDiscountBox",
+                  ),
                   children: `-${_}%`,
                 }),
               !!(_ && _) &&
@@ -5414,6 +5429,7 @@
         __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid");
         function _(_, _ = !1) {
@@ -5433,6 +5449,9 @@
         }
         function _(_, _) {
           return !!(_ && _.is_coming_soon && _ && _.packageid);
+        }
+        function _(_, _) {
+          return !!(_ && _ && _.packageid);
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -8832,6 +8851,7 @@
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -9105,6 +9125,7 @@
             startingTab: _.toString(),
             preferredFocus: !0,
             bDisableRouting: !0,
+            focusRingHasBorderRadius: !0,
           });
         }
         function _(_) {
@@ -9587,6 +9608,7 @@
               OnTabChanged: _,
               classNameCtn: _,
               classNameTab: _,
+              focusRingHasBorderRadius: _,
               classNameTabContent: _,
               preferredFocus: _,
               bVerticalTabs: _,
@@ -9638,6 +9660,7 @@
                         tab: _,
                         OnTabClick: _,
                         classNameTab: _,
+                        focusRingHasBorderRadius: _,
                         active: _.key === _.key,
                         preferredFocus: _ === _.key,
                       },
@@ -9691,6 +9714,7 @@
             tab: _,
             OnTabClick: _,
             classNameTab: _,
+            focusRingHasBorderRadius: _,
             active: _,
             preferredFocus: _,
           } = _;
@@ -9710,6 +9734,7 @@
               ),
               onActivate: () => _(_),
               preferredFocus: _,
+              focusRingHasBorderRadius: _,
               children: [
                 !!_.vo_warning &&
                   (0, _.jsx)(_._, {
@@ -9834,6 +9859,7 @@
           InGameHover: "_yRMvMttBTHiO3_SMH6Or",
           StoreSalePrepurchaseLabel: "_2mG_q95stW67uyZmLXcO8y",
           SingleLineOriginalPrice: "_1jRZOgPPLTjiXtsrX_iB1O",
+          PrePurchaseBesidePrice: "_1jh1dcHkieLMN3eGCeHg_E",
           YourPriceLabel: "_1RGKRbbcPP2ImptkZ3LP6P",
           BaseDiscount: "_3BJdajInVqrAsGwPFUAshC",
           StoreSalePriceButton: "_PS7WNXgzr2qOl4HOjEIp",

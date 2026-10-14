@@ -4252,6 +4252,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -4262,6 +4263,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -4272,6 +4274,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -4282,6 +4285,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -4293,6 +4297,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -4305,6 +4310,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -6225,6 +6231,7 @@
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -6268,6 +6275,7 @@
                 bConstMethod: !0,
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -10924,6 +10932,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -10936,6 +10945,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -10948,6 +10958,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -10959,6 +10970,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -10970,6 +10982,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -10981,6 +10994,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -10992,6 +11006,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11003,6 +11018,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11014,6 +11030,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11025,6 +11042,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11036,6 +11054,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11048,6 +11067,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11059,6 +11079,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11070,6 +11091,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11081,6 +11103,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11092,6 +11115,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11104,6 +11128,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11115,6 +11140,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11127,6 +11153,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -11150,6 +11177,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -13452,6 +13480,7 @@
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -13507,6 +13536,7 @@
               {
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -19636,7 +19666,8 @@
                     "_" +
                     _.forum_id +
                     "_" +
-                    _.topic_id;
+                    _.topic_id +
+                    (_.brate_limited ? "_ratelimited" : "");
                   let _ = _.findIndex((_) => _.rollup_key == _);
                   if (_ == -1)
                     _.push({
@@ -19933,6 +19964,7 @@
                 last_post: _.last_post,
                 bsubscribed: _(_.subscribed),
                 bis_owner: _(_.bis_owner),
+                brate_limited: !!_.brate_limited,
               };
               return (
                 _.json_data &&
@@ -21216,22 +21248,22 @@
             count: _,
             icon: _,
             onActivate: _,
-            strLocToken: _,
+            strBody: _,
             bAlwaysShow: _,
             eUIMode: _,
             classNames: _,
             visible: _,
           } = _;
-          if (!_ && !_) return null;
-          const _ = (0, _._)(_, _);
-          return (0, _.jsx)(_, {
-            icon: _,
-            body: _,
-            onActivate: _,
-            eUIMode: _,
-            classNames: _,
-            visible: _,
-          });
+          return !_ && !_
+            ? null
+            : (0, _.jsx)(_, {
+                icon: _,
+                body: _,
+                onActivate: _,
+                eUIMode: _,
+                classNames: _,
+                visible: _,
+              });
         }
         var _ = ((_) => (
           (_[(_.none = 0)] = "none"),
@@ -23910,6 +23942,7 @@
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -24926,6 +24959,9 @@
         }
         function _(_, ..._) {
           const { data: _ } = useStoreItemAssets(_);
+          return _(_, ..._);
+        }
+        function _(_, ..._) {
           if (!_?.asset_url_format) return;
           const _ = _.find((_) => {
             const _ = _[_];
@@ -25566,16 +25602,23 @@
                   : (_ = (0, _._)("#SteamNotifications_Comment_Screenshot"))
               : !_ && _.json_data?.title && (_ = _.json_data.title);
           let _ = null;
-          _.comment_type == _ && _.bis_forum && _
-            ? (_ = (0, _.jsx)(_, {
-                children: (0, _._)(
-                  "#SteamNotifications_Comment_NewDiscussion",
+          _.brate_limited
+            ? _.comment_type == _ && _.bis_forum && _
+              ? (_ = (0, _._)(
+                  "#SteamNotifications_Comment_RateLimited_Forum",
                   _,
-                ),
-              }))
-            : (_ = (0, _.jsxs)(_, {
-                children: ['"', _, '"'],
-              }));
+                ))
+              : (_ = (0, _._)("#SteamNotifications_Comment_RateLimited"))
+            : _.comment_type == _ && _.bis_forum && _
+              ? (_ = (0, _.jsx)(_, {
+                  children: (0, _._)(
+                    "#SteamNotifications_Comment_NewDiscussion",
+                    _,
+                  ),
+                }))
+              : (_ = (0, _.jsxs)(_, {
+                  children: ['"', _, '"'],
+                }));
           let _ = (0, _._)("#SteamNotifications_Comment"),
             _ = null;
           if (_ !== void 0 && _ > 1) {
@@ -27847,7 +27890,8 @@
             );
           }
         }
-        const _ = 3600,
+        const _ = 15,
+          _ = 3600,
           _ = "(1)";
         class _ {
           m_WebUIServiceTransport;
@@ -27865,12 +27909,17 @@
           m_strCleanWords = "";
           m_strBannedPattern = "";
           m_strCleanPattern = "";
+          m_bWordListsComplete = !1;
+          m_bHaveCompleteFilter = !1;
           m_regexBannedWords = null;
           m_regexCleanWords = null;
           m_bShownFilterTip = !1;
           m_bInitialized = !1;
           m_bFilterChangedWhileLoading = !1;
           m_bOngoingLoad = !1;
+          m_promiseOngoingLoad = null;
+          m_fnUnregisterDictionaryChanged = void 0;
+          m_rgUnregisterPlayerNotifications = [];
           m_DataAccess;
           constructor(_) {
             (0, _._)(this);
@@ -27882,7 +27931,7 @@
               (this.m_TextFilterWords = new _.EyI()),
               (this.m_DataAccess = _);
           }
-          async Init(_ = 0, _ = null, _ = null) {
+          async Init(_ = 0, _ = null, _ = null, _ = null) {
             (this.m_bInitialized = !1),
               (this.m_WebUIServiceTransport = _),
               (this.m_unAccountID = _),
@@ -27891,42 +27940,84 @@
               (this.m_strBannedWords = ""),
               (this.m_strProfanityWords = ""),
               (this.m_strCleanWords = ""),
+              (this.m_bWordListsComplete = !1),
               this.InitSteamEngineLanguages(),
+              this.RegisterPlayerNotifications(_),
               await this.LoadFilter(),
               await this.LoadTextFilterPreferences(),
               await this.LoadTextFilterWords(),
               await this.RequestUpdatedSettings(),
-              await (0, _._)(() => !this.m_bOngoingLoad),
-              await this.InitFiltersWithRetry();
+              (this.m_nLoadLanguagesRetryDelaySec = _),
+              await this.EnsureFiltersLoaded();
           }
           InitSteamEngineLanguages() {
             this.m_WebUIServiceTransport.BIsValid() &&
-              (this.m_WebUIServiceTransport.messageHandlers.RegisterServiceNotificationHandler(
-                _.NotifyTextFilterDictionaryChangedHandler,
-                this.OnTextFilterDictionaryChanged,
-              ),
+              (this.m_fnUnregisterDictionaryChanged?.(),
+              (this.m_fnUnregisterDictionaryChanged =
+                this.m_WebUIServiceTransport.messageHandlers.RegisterServiceNotificationHandler(
+                  _.NotifyTextFilterDictionaryChangedHandler,
+                  this.OnTextFilterDictionaryChanged,
+                ).unregister),
               this.InitSteamEngineLanguage(_._.LANGUAGE),
               _._.LANGUAGE !== "english" &&
                 this.InitSteamEngineLanguage("english"));
           }
           OnTextFilterDictionaryChanged(_) {
             return (
-              this.m_bInitialized
-                ? this.InitFiltersWithRetry()
-                : (this.m_bFilterChangedWhileLoading = !0),
+              !this.m_bInitialized && !this.m_bOngoingLoad
+                ? (this.m_bFilterChangedWhileLoading = !0)
+                : ((this.m_nLoadLanguagesRetryDelaySec = _),
+                  this.EnsureFiltersLoaded()),
               _._
             );
           }
+          EnsureFiltersLoaded() {
+            return this.m_bOngoingLoad && this.m_promiseOngoingLoad
+              ? ((this.m_bFilterChangedWhileLoading = !0),
+                this.m_promiseOngoingLoad)
+              : ((this.m_promiseOngoingLoad = this.InitFiltersWithRetry()),
+                this.m_promiseOngoingLoad);
+          }
           async InitFiltersWithRetry() {
-            do
-              (this.m_bFilterChangedWhileLoading = !1),
-                (this.m_bInitialized = !1),
-                (this.m_bOngoingLoad = !0),
-                await this.LoadLanguages(),
-                this.OnFilterDataChanged(),
-                (this.m_bInitialized = !0);
-            while (this.m_bFilterChangedWhileLoading);
-            this.m_bOngoingLoad = !1;
+            this.m_bOngoingLoad = !0;
+            try {
+              do
+                (this.m_bFilterChangedWhileLoading = !1),
+                  await this.LoadLanguages(),
+                  this.OnFilterDataChanged(),
+                  (this.m_bInitialized = !0);
+              while (this.m_bFilterChangedWhileLoading);
+            } finally {
+              (this.m_bOngoingLoad = !1), (this.m_promiseOngoingLoad = null);
+            }
+          }
+          RegisterPlayerNotifications(_) {
+            this.m_rgUnregisterPlayerNotifications.forEach((_) => _()),
+              (this.m_rgUnregisterPlayerNotifications = []),
+              _ &&
+                this.m_rgUnregisterPlayerNotifications.push(
+                  _.RegisterServiceNotificationHandler(
+                    _.QAJ.NotifyCommunityPreferencesChangedHandler,
+                    (_) => (
+                      this.UpdateCommunityPreferences(_.Body().preferences()),
+                      this.OnPlayerSettingsChanged(),
+                      _._
+                    ),
+                  ).unregister,
+                  _.RegisterServiceNotificationHandler(
+                    _.QAJ.NotifyTextFilterWordsChangedHandler,
+                    (_) => (
+                      this.UpdateTextFilterWords(_.Body().words()),
+                      this.OnPlayerSettingsChanged(),
+                      _._
+                    ),
+                  ).unregister,
+                );
+          }
+          OnPlayerSettingsChanged() {
+            this.m_bInitialized &&
+              !this.m_bOngoingLoad &&
+              this.OnFilterDataChanged();
           }
           InitSteamEngineLanguage(_) {
             const _ = _._.Init(_);
@@ -28030,7 +28121,8 @@
               _ = await this.LoadObfuscatedString(
                 "CTextFilterStore_strCleanPattern",
               );
-            _ != null && _ != null && this.BRebuildFilter(_, _);
+            (this.m_bHaveCompleteFilter = _ != null && _ != null),
+              _ != null && _ != null && this.BRebuildFilter(_, _);
           }
           SaveFilter() {
             this.SaveObfuscatedString(
@@ -28120,38 +28212,36 @@
             (this.m_TextFilterWords = _), this.SaveTextFilterWords();
           }
           m_nLoadLanguagesRetryTimeout = void 0;
-          async LoadLanguages(_ = 15) {
+          m_nLoadLanguagesRetryDelaySec = _;
+          async LoadLanguages() {
             (this.m_strBannedWords = ""),
               (this.m_strProfanityWords = ""),
-              (this.m_strCleanWords = "");
-            try {
-              await this.LoadLanguage(_._.LANGUAGE),
-                _._.LANGUAGE !== "english" &&
-                  (await this.LoadLanguage("english"));
-            } catch (_) {
+              (this.m_strCleanWords = ""),
+              (this.m_bWordListsComplete = !1),
               this.m_nLoadLanguagesRetryTimeout &&
-                ((0, _._)(
-                  !this.m_nLoadLanguagesRetryTimeout,
-                  "Got two concurrent calls to TextFilteringStore.LoadLanguages",
-                ),
-                window.clearTimeout(this.m_nLoadLanguagesRetryTimeout),
-                (this.m_nLoadLanguagesRetryTimeout = void 0)),
-                (_ = Math.min(_ * 2, _)),
-                console.warn(
-                  "LoadLanguages caught",
-                  _,
-                  "retry in",
-                  _,
-                  "seconds",
-                ),
-                (this.m_nLoadLanguagesRetryTimeout = window.setTimeout(
-                  async () => {
-                    (this.m_nLoadLanguagesRetryTimeout = void 0),
-                      await this.LoadLanguages(_),
-                      this.OnFilterDataChanged();
-                  },
-                  _ * 1e3,
-                ));
+                (window.clearTimeout(this.m_nLoadLanguagesRetryTimeout),
+                (this.m_nLoadLanguagesRetryTimeout = void 0));
+            try {
+              let _ = await this.LoadLanguage(_._.LANGUAGE);
+              if (
+                (_._.LANGUAGE !== "english" &&
+                  (_ = (await this.LoadLanguage("english")) && _),
+                !_)
+              )
+                throw new Error("clean_public dictionary unavailable");
+              (this.m_nLoadLanguagesRetryDelaySec = _),
+                (this.m_bWordListsComplete = !0);
+            } catch (_) {
+              this.m_nLoadLanguagesRetryDelaySec = Math.min(
+                this.m_nLoadLanguagesRetryDelaySec * 2,
+                _,
+              );
+              const _ = this.m_nLoadLanguagesRetryDelaySec;
+              console.warn("LoadLanguages caught", _, "retry in", _, "seconds"),
+                (this.m_nLoadLanguagesRetryTimeout = window.setTimeout(() => {
+                  (this.m_nLoadLanguagesRetryTimeout = void 0),
+                    this.EnsureFiltersLoaded();
+                }, _ * 1e3));
             }
           }
           async LoadLanguage(_) {
@@ -28193,11 +28283,20 @@
                 this.m_strProfanityWords += _.data;
               }
             }
+            const _ = this.m_WebUIServiceTransport.BIsValid(),
+              _ = "CTextFilterStore_strCleanPublic_" + _;
             _ = `${_._.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${_}&v=${_}&origin=${_()}`;
-            {
+            try {
               const _ = await _().get(_);
-              this.m_strCleanWords += _.data;
+              (this.m_strCleanWords += _.data),
+                _ && this.SaveObfuscatedString(_, _.data);
+            } catch (_) {
+              console.warn("LoadLanguage caught while loading clean list:", _);
+              const _ = _ ? await this.LoadObfuscatedString(_) : null;
+              if (!_) return !1;
+              this.m_strCleanWords += _;
             }
+            return !0;
           }
           CreatePattern(_) {
             let _ = _.filter(function (_) {
@@ -28206,6 +28305,8 @@
             return _.length > 0 ? "\\b(" + _.join("|") + ")\\b" : "";
           }
           OnFilterDataChanged() {
+            if (!this.m_bWordListsComplete && this.m_bHaveCompleteFilter)
+              return;
             let _ = new RegExp(/\s*[\r\n]+\s*/g),
               _ = [],
               _ = [];
@@ -28234,7 +28335,10 @@
             let _ = this.CreatePattern(_),
               _ = this.CreatePattern(_);
             _ != "" && (_ = "^(" + _ + ")$"),
-              this.BRebuildFilter(_, _) && this.SaveFilter();
+              this.BRebuildFilter(_, _) &&
+                this.m_bWordListsComplete &&
+                this.SaveFilter(),
+              (this.m_bHaveCompleteFilter = this.m_bWordListsComplete);
           }
           BRebuildFilter(_, _) {
             if (_ === this.m_strBannedPattern && _ === this.m_strCleanPattern)
@@ -28812,7 +28916,7 @@
           });
         }
         function _(_) {
-          const { url: _, count: _, icon: _, strLocToken: _, eFeature: _ } = _,
+          const { url: _, count: _, icon: _, strBody: _, eFeature: _ } = _,
             _ = _(_);
           return !_ || _
             ? null
@@ -28823,7 +28927,7 @@
                   icon: (0, _.jsx)(_, {}),
                   count: _,
                   onActivate: () => window.location.assign(_),
-                  strLocToken: _,
+                  strBody: _,
                   eUIMode: _.yrU,
                   visible: !0,
                 }),
@@ -29131,7 +29235,8 @@
               `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/inventory/#pending_gifts`,
             countItem: "pending_gifts",
             icon: _._,
-            strLocToken: "#Notification_NewGiftsPinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_NewGiftsPinned_Body", _),
             feature: _,
           },
           {
@@ -29139,7 +29244,8 @@
               `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/home/invites`,
             countItem: "pending_invites",
             icon: _.sdo,
-            strLocToken: "#Notification_FriendInvitePinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_FriendInvitePinned_Body", _),
             feature: _,
           },
           {
@@ -29147,7 +29253,8 @@
               `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/notifications#comments`,
             countItem: "comments",
             icon: _.MwB,
-            strLocToken: "#Notification_NewCommentPinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_NewCommentPinned_Body", _),
             feature: _,
           },
           {
@@ -29155,7 +29262,8 @@
               `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/inventory`,
             countItem: "inventory_items",
             icon: _.rI_,
-            strLocToken: "#Notification_NewItemAnnouncementPinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_NewItemAnnouncementPinned_Body", _),
             feature: _,
           },
           {
@@ -29163,7 +29271,8 @@
               `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/tradeoffers`,
             countItem: "trade_offers",
             icon: _.h20,
-            strLocToken: "#Notification_NewTradeOffersPinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_NewTradeOffersPinned_Body", _),
             feature: _,
           },
           {
@@ -29171,27 +29280,31 @@
               `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/gamenotifications`,
             countItem: "async_game_updates",
             icon: _.wC1,
-            strLocToken: "#Notification_NewAsyncGamePinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_NewAsyncGamePinned_Body", _),
           },
           {
             fnUrl: () => `${_._.COMMUNITY_BASE_URL}my/moderatormessages`,
             countItem: "moderator_messages",
             icon: _.hJ4,
-            strLocToken: "#Notification_NewModeratorMessagePinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_NewModeratorMessagePinned_Body", _),
             feature: _,
           },
           {
             fnUrl: () => `${_._.HELP_BASE_URL}wizard/HelpRequests`,
             countItem: "help_request_replies",
             icon: _.Cv4,
-            strLocToken: "#Notification_NewHelpRequestRepliesPinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_NewHelpRequestRepliesPinned_Body", _),
           },
           {
             fnUrl: () =>
               `${_._.STORE_BASE_URL}account/familymanagement/join?ft=${_._.steamid}`,
             countItem: "family_invites",
             icon: _.Qte,
-            strLocToken: "#Notification_FamilyInvitePinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_FamilyInvitePinned_Body", _),
           },
         ];
         function _() {
@@ -29204,7 +29317,7 @@
                   url: _.fnUrl(),
                   count: _.summary[_.countItem],
                   icon: _.icon,
-                  strLocToken: _.strLocToken,
+                  strBody: _.fnLocalizeBody(_.summary[_.countItem]),
                   eFeature: _.feature,
                 },
                 _.countItem,

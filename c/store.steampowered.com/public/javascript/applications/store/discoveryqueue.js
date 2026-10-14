@@ -1299,6 +1299,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = {
           bCanClaimNewItem: !1,
@@ -1382,6 +1383,8 @@
         }
         let _;
         function _() {
+          const _ = (0, _._)();
+          if (_) return _.GetServiceTransport();
           if (!_) {
             const _ = (0, _._)("loyalty_webapi_token", "application_config");
             _ = _ ? new _._(_._.WEBAPI_BASE_URL, _) : (0, _._)();
@@ -2361,7 +2364,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
@@ -2370,9 +2372,6 @@
             _ = (0, _._)(),
             [_] = (0, _._)("inqueue", "" + _._._),
             [_, _] = (0, _.useState)(!1),
-            [_] = (0, _._)(_, {
-              include_assets: !0,
-            }),
             _ = (0, _._)(),
             { eStoreDiscoveryQueueType: _, storePageFilter: _ } =
               _.useMemo(() => {
@@ -2401,7 +2400,7 @@
               _(!0);
             }, []),
             _ = (0, _._)(_, _);
-          return !_ || !_ || _
+          return !_ || _
             ? null
             : (0, _.jsxs)(_._, {
                 focusable: !0,

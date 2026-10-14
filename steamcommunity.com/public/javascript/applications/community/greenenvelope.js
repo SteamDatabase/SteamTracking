@@ -2,28 +2,28 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [20976],
+    [976],
     {
-      81944: (B, T, i) => {
+      81944: (U, B, n) => {
         "use strict";
-        i.d(T, { J: () => h });
-        var t = i(7850),
-          g = i(19298),
-          v = i(90626),
-          y = i(79089),
-          f = i(18938),
-          I = i(2259),
+        n.d(B, { J: () => h });
+        var e = n(7850),
+          g = n(19298),
+          v = n(90626),
+          T = n(79089),
+          f = n(18938),
+          I = n(2259),
           P = Object.defineProperty,
-          D = (M, e, n) =>
-            e in M
-              ? P(M, e, {
+          D = (M, i, o) =>
+            i in M
+              ? P(M, i, {
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
-                  value: n,
+                  value: o,
                 })
-              : (M[e] = n),
-          E = (M, e, n) => D(M, typeof e != "symbol" ? e + "" : e, n);
+              : (M[i] = o),
+          E = (M, i, o) => D(M, typeof i != "symbol" ? i + "" : i, o);
         class h extends v.Component {
           constructor() {
             super(...arguments),
@@ -31,23 +31,23 @@
               E(this, "m_refElement", v.createRef()),
               E(this, "m_elTracked", null),
               E(this, "m_bPreviouslyIntersecting", !1),
-              E(this, "HandleRef", (e) => {
-                (0, f.cZ)(this.m_refElement, e),
+              E(this, "HandleRef", (i) => {
+                (0, f.cZ)(this.m_refElement, i),
                   this.props.containerRef &&
-                    (0, f.cZ)(this.props.containerRef, e);
+                    (0, f.cZ)(this.props.containerRef, i);
               }),
-              E(this, "OnIntersection", (e) => {
-                let n = !1;
-                for (const c of e)
-                  if (c.isIntersecting) {
-                    n = !0;
+              E(this, "OnIntersection", (i) => {
+                let o = !1;
+                for (const l of i)
+                  if (l.isIntersecting) {
+                    o = !0;
                     break;
                   }
-                this.m_bPreviouslyIntersecting != n &&
-                  ((this.m_bPreviouslyIntersecting = n),
+                this.m_bPreviouslyIntersecting != o &&
+                  ((this.m_bPreviouslyIntersecting = o),
                   this.props.onVisibilityChange &&
-                    this.props.onVisibilityChange(n),
-                  n && this.BTriggerOnce() && this.DestroyObserver());
+                    this.props.onVisibilityChange(o),
+                  o && this.BTriggerOnce() && this.DestroyObserver());
               });
           }
           static GetScrollableClassname() {
@@ -73,57 +73,57 @@
           componentDidMount() {
             this.UpdateObserver(null);
           }
-          componentDidUpdate(e) {
-            this.UpdateObserver(e);
+          componentDidUpdate(i) {
+            this.UpdateObserver(i);
           }
-          UpdateObserver(e) {
+          UpdateObserver(i) {
             if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
             this.m_observer &&
-              e &&
-              (e.rootMargin != this.m_observer.rootMargin ||
-                e.thresholds != this.m_observer.thresholds) &&
+              i &&
+              (i.rootMargin != this.m_observer.rootMargin ||
+                i.thresholds != this.m_observer.thresholds) &&
               this.DestroyObserver();
-            let n = this.m_refElement.current;
+            let o = this.m_refElement.current;
             if (
               (this.m_observer &&
-                n != this.m_elTracked &&
+                o != this.m_elTracked &&
                 (this.m_elTracked &&
                   this.m_observer.unobserve(this.m_elTracked),
                 (this.m_elTracked = null)),
-              !this.m_observer && n)
+              !this.m_observer && o)
             ) {
-              let o = { root: this.FindScrollableAncestor(n) };
-              this.props.rootMargin && (o.rootMargin = this.props.rootMargin),
-                this.props.thresholds && (o.threshold = this.props.thresholds),
-                (this.m_observer = (0, I.md)(n, this.OnIntersection, o));
+              let s = { root: this.FindScrollableAncestor(o) };
+              this.props.rootMargin && (s.rootMargin = this.props.rootMargin),
+                this.props.thresholds && (s.threshold = this.props.thresholds),
+                (this.m_observer = (0, I.md)(o, this.OnIntersection, s));
             }
             this.m_observer &&
-              n &&
-              n != this.m_elTracked &&
-              (this.m_observer.observe(n), (this.m_elTracked = n));
+              o &&
+              o != this.m_elTracked &&
+              (this.m_observer.observe(o), (this.m_elTracked = o));
           }
-          FindScrollableAncestor(e) {
-            return (0, y.Kf)(e, (n) => {
-              const c = this.props.horizontal
-                ? window.getComputedStyle(n).overflowX
-                : window.getComputedStyle(n).overflowY;
+          FindScrollableAncestor(i) {
+            return (0, T.Kf)(i, (o) => {
+              const l = this.props.horizontal
+                ? window.getComputedStyle(o).overflowX
+                : window.getComputedStyle(o).overflowY;
               return !!(
-                c == "scroll" ||
-                c == "auto" ||
-                n.classList.contains(h.GetScrollableClassname())
+                l == "scroll" ||
+                l == "auto" ||
+                o.classList.contains(h.GetScrollableClassname())
               );
             });
           }
           render() {
             let {
-              onVisibilityChange: e,
-              rootMargin: n,
-              trigger: c,
-              horizontal: o,
+              onVisibilityChange: i,
+              rootMargin: o,
+              trigger: l,
+              horizontal: s,
               containerRef: R,
               ...C
             } = this.props;
-            return (0, t.jsx)(g.Z, {
+            return (0, e.jsx)(g.Z, {
               ref: this.HandleRef,
               ...C,
               children: this.props.children,
@@ -131,54 +131,54 @@
           }
         }
       },
-      72845: (B, T, i) => {
+      72845: (U, B, n) => {
         "use strict";
-        i.r(T),
-          i.d(T, {
+        n.r(B),
+          n.d(B, {
             GreenEnvelope: () => b,
-            default: () => Y,
-            useSteamNotifications: () => A,
+            default: () => V,
+            useSteamNotifications: () => y,
           });
-        var t = i(7850),
-          g = i(99412),
-          v = i(79365),
-          y = i(65946),
-          f = i(90626),
-          I = i(42993),
-          P = i(3692),
-          D = i(68312),
-          E = i(16346),
-          h = i(80862),
-          M = i(56718),
-          e = i(36118),
-          n = i(36707),
-          c = i(18210),
-          o = i(98609),
-          R = i(25792),
-          C = i(29553),
-          l = i.n(C),
-          L = i(90297),
-          x = i(81944);
+        var e = n(7850),
+          g = n(99412),
+          v = n(79365),
+          T = n(65946),
+          f = n(90626),
+          I = n(42993),
+          P = n(3692),
+          D = n(68312),
+          E = n(16346),
+          h = n(80862),
+          M = n(56718),
+          i = n(36118),
+          o = n(36707),
+          l = n(18210),
+          s = n(98609),
+          R = n(25792),
+          C = n(29553),
+          c = n.n(C),
+          L = n(90297),
+          x = n(81944);
         const d = new h.cE(),
-          b = (0, R.Nr)(function (s) {
-            const { bResponsiveHeader: r, notifications: _ } = s;
+          b = (0, R.Nr)(function (r) {
+            const { bResponsiveHeader: a, notifications: _ } = r;
             f.useEffect(() => {
               _ && !d.m_bLoaded && d.ProcessNewNotificationPayload(_);
             }, [_]);
             const u = (0, D.KV)();
             (0, f.useEffect)(() => {
               d.setTransport(u),
-                (window.RefreshSteamNotifications = () => k(u));
+                (window.RefreshSteamNotifications = () => F(u));
             }, [u]);
-            const N = A();
-            return r
-              ? (0, t.jsxs)(t.Fragment, {
-                  children: [(0, t.jsx)(j, {}), (0, t.jsx)(H, {})],
+            const p = y();
+            return a
+              ? (0, e.jsxs)(e.Fragment, {
+                  children: [(0, e.jsx)(j, {}), (0, e.jsx)(H, {})],
                 })
-              : (0, t.jsx)(K, { nTotalUnviewed: N.nUnviewed });
+              : (0, e.jsx)(K, { nTotalUnviewed: p.nUnviewed });
           });
-        function A() {
-          return (0, y.q3)(() => ({
+        function y() {
+          return (0, T.q3)(() => ({
             notifications: d.m_rgNotificationRollups,
             summary: d.m_summary,
             loaded: d.m_bLoaded,
@@ -186,24 +186,24 @@
           }));
         }
         function S() {
-          const a = A(),
-            s = (0, I.LH)(),
-            { data: r } = (0, P.S0)(s),
+          const t = y(),
+            r = (0, I.LH)(),
+            { data: a } = (0, P.S0)(r),
             _ = (0, P.BM)(),
-            u = r == null ? void 0 : r.settings;
-          return a.notifications.filter(
-            (N) => !(0, h.jb)(N.type, u, _) && !(0, h.XT)(N.item),
+            u = a == null ? void 0 : a.settings;
+          return t.notifications.filter(
+            (p) => !(0, h.jb)(p.type, u, _) && !(0, h.XT)(p.item),
           );
         }
-        function K(a) {
-          const { nTotalUnviewed: s } = a,
-            r = f.useRef(null),
+        function K(t) {
+          const { nTotalUnviewed: r } = t,
+            a = f.useRef(null),
             _ = S(),
-            [u, N] = f.useState(l().AnimateBell);
+            [u, p] = f.useState(c().AnimateBell);
           f.useEffect(() => {
-            r.current ||
-              ((r.current = (0, E.lX)(
-                (0, t.jsx)(W, { popupRef: r }),
+            a.current ||
+              ((a.current = (0, E.lX)(
+                (0, e.jsx)(W, { popupRef: a }),
                 document.getElementById("green_envelope_menu_root"),
                 {
                   bPreferPopLeft: !0,
@@ -211,261 +211,270 @@
                   strClassName: "GreenEnvelopeMenu",
                 },
               )),
-              r.current.Hide());
+              a.current.Hide());
             const m = document.getElementById("header_notification_link");
             m && (m.style.cssText = "background-color: rgba(0,0,0,0)"),
-              window.setTimeout(() => N(null), 2e3);
+              window.setTimeout(() => p(null), 2e3);
           }, []);
-          const U = () => {
+          const A = () => {
               var m, O;
-              ((m = r.current) != null && m.visible) ||
-                ((O = r.current) == null || O.Show(),
-                _.findIndex((z) => !z.item.viewed) != -1 &&
+              ((m = a.current) != null && m.visible) ||
+                ((O = a.current) == null || O.Show(),
+                _.findIndex((J) => !J.item.viewed) != -1 &&
                   d.MarkAllItemsViewed());
             },
-            p = f.useCallback(
+            N = f.useCallback(
               (m) => {
                 var O;
-                !m && (O = r.current) != null && O.visible && r.current.Hide();
+                !m && (O = a.current) != null && O.visible && a.current.Hide();
               },
-              [r],
+              [a],
             );
-          return (0, t.jsx)(x.J, {
+          return (0, e.jsx)(x.J, {
             trigger: "repeated",
-            onVisibilityChange: p,
-            children: (0, t.jsx)("button", {
-              onClick: U,
+            onVisibilityChange: N,
+            children: (0, e.jsx)("button", {
+              onClick: A,
               id: "green_envelope_menu_root",
-              className: (0, n.A)(
-                l().NotificationsButton,
-                s ? l().Green : l().Grey,
+              className: (0, o.A)(
+                c().NotificationsButton,
+                r ? c().Green : c().Grey,
                 u,
               ),
-              children: (0, t.jsx)(M.$0s, {
-                className: l().SVGNotifications,
-                "aria-label": (0, c.we)("#NotificationsMenu_Title"),
+              children: (0, e.jsx)(M.$0s, {
+                className: c().SVGNotifications,
+                "aria-label": (0, l.we)("#NotificationsMenu_Title"),
               }),
             }),
           });
         }
-        const W = (a) => {
-            var s;
-            const { popupRef: r } = a,
+        const W = (t) => {
+            var r;
+            const { popupRef: a } = t,
               _ = f.useRef(null),
-              [u, N] = f.useState(!1);
+              [u, p] = f.useState(!1);
             f.useEffect(() => {
-              var p, m;
-              N(
+              var N, m;
+              p(
                 _.current != null &&
-                  ((p = _.current) == null ? void 0 : p.scrollHeight) >
+                  ((N = _.current) == null ? void 0 : N.scrollHeight) >
                     ((m = _.current) == null ? void 0 : m.clientHeight),
               );
-            }, [(s = _.current) == null ? void 0 : s.scrollHeight, u]);
-            const U = u ? void 0 : l().MenuScrollbarHidden;
-            return (0, t.jsxs)("div", {
-              className: l().NotificationsMenu,
+            }, [(r = _.current) == null ? void 0 : r.scrollHeight, u]);
+            const A = u ? void 0 : c().MenuScrollbarHidden;
+            return (0, e.jsxs)("div", {
+              className: c().NotificationsMenu,
               onClick: () => {
-                var p;
-                return (p = r == null ? void 0 : r.current) == null
+                var N;
+                return (N = a == null ? void 0 : a.current) == null
                   ? void 0
-                  : p.Hide();
+                  : N.Hide();
               },
               children: [
-                (0, t.jsx)(w, {}),
-                (0, t.jsxs)("div", {
-                  className: (0, n.A)(l().NotificationsMenuScrollable, U),
+                (0, e.jsx)(w, {}),
+                (0, e.jsxs)("div", {
+                  className: (0, o.A)(c().NotificationsMenuScrollable, A),
                   ref: _,
                   children: [
-                    (0, t.jsx)(j, {}),
-                    (0, t.jsx)($, {}),
-                    (0, t.jsx)(F, {}),
+                    (0, e.jsx)(j, {}),
+                    (0, e.jsx)(z, {}),
+                    (0, e.jsx)($, {}),
                   ],
                 }),
               ],
             });
           },
           w = () => {
-            const a = `${o.TS.COMMUNITY_BASE_URL}profiles/${o.iA.steamid}/notifications`;
-            return (0, t.jsxs)("div", {
-              className: (0, n.A)(l().NotificationHeader),
+            const t = `${s.TS.COMMUNITY_BASE_URL}profiles/${s.iA.steamid}/notifications`;
+            return (0, e.jsxs)("div", {
+              className: (0, o.A)(c().NotificationHeader),
               children: [
-                (0, t.jsx)("div", {
-                  className: l().AllNotificationsTitle,
-                  children: (0, c.we)("#NotificationsMenu_Title"),
+                (0, e.jsx)("div", {
+                  className: c().AllNotificationsTitle,
+                  children: (0, l.we)("#NotificationsMenu_Title"),
                 }),
-                (0, t.jsx)("a", {
-                  href: a,
-                  children: (0, t.jsx)("div", {
-                    className: l().AllNotificationsButton,
-                    children: (0, c.we)("#NotificationsMenu_ViewAll"),
+                (0, e.jsx)("a", {
+                  href: t,
+                  children: (0, e.jsx)("div", {
+                    className: c().AllNotificationsButton,
+                    children: (0, l.we)("#NotificationsMenu_ViewAll"),
                   }),
                 }),
               ],
             });
           },
           H = () => {
-            const a = `${o.TS.COMMUNITY_BASE_URL}profiles/${o.iA.steamid}/notifications`;
-            return (0, t.jsx)("div", {
-              className: (0, n.A)(
-                l().NotificationHeader,
-                l().ResponsiveViewAll,
+            const t = `${s.TS.COMMUNITY_BASE_URL}profiles/${s.iA.steamid}/notifications`;
+            return (0, e.jsx)("div", {
+              className: (0, o.A)(
+                c().NotificationHeader,
+                c().ResponsiveViewAll,
               ),
-              children: (0, t.jsx)("a", {
-                href: a,
-                children: (0, t.jsx)("div", {
-                  className: l().AllNotificationsButton,
-                  children: (0, c.we)("#NotificationsMenu_ViewAll"),
+              children: (0, e.jsx)("a", {
+                href: t,
+                children: (0, e.jsx)("div", {
+                  className: c().AllNotificationsButton,
+                  children: (0, l.we)("#NotificationsMenu_ViewAll"),
                 }),
               }),
             });
           };
-        function G(a, s, r) {
-          !s.read &&
-            (!r || r.button == 0 || r.button == 1) &&
-            s.notification_id &&
-            d.MarkItemRead(s.notification_id),
-            a();
+        function Y(t, r, a) {
+          !r.read &&
+            (!a || a.button == 0 || a.button == 1) &&
+            r.notification_id &&
+            d.MarkItemRead(r.notification_id),
+            t();
         }
-        function $() {
-          const a = S();
-          return a.length == 0
+        function z() {
+          const t = S();
+          return t.length == 0
             ? null
-            : (0, t.jsx)("div", {
-                className: l().NotificationsMenuEntriesContainer,
-                children: a.map((s, r) =>
-                  (0, t.jsx)(
+            : (0, e.jsx)("div", {
+                className: c().NotificationsMenuEntriesContainer,
+                children: t.map((r, a) =>
+                  (0, e.jsx)(
                     L.R1,
                     {
-                      rollup: s,
-                      onNotificationClick: G,
+                      rollup: r,
+                      onNotificationClick: Y,
                       uimode: g.yrU,
                       location: g.B3I,
                     },
-                    r,
+                    a,
                   ),
                 ),
               });
         }
-        const V = [
+        const G = [
           {
             fnUrl: () =>
-              `${o.TS.COMMUNITY_BASE_URL}profiles/${o.iA.steamid}/inventory/#pending_gifts`,
+              `${s.TS.COMMUNITY_BASE_URL}profiles/${s.iA.steamid}/inventory/#pending_gifts`,
             countItem: "pending_gifts",
-            icon: e.pD,
-            strLocToken: "#Notification_NewGiftsPinned_Body",
+            icon: i.pD,
+            fnLocalizeBody: (t) =>
+              (0, l.Yp)("#Notification_NewGiftsPinned_Body", t),
             feature: v.ip,
           },
           {
             fnUrl: () =>
-              `${o.TS.COMMUNITY_BASE_URL}profiles/${o.iA.steamid}/home/invites`,
+              `${s.TS.COMMUNITY_BASE_URL}profiles/${s.iA.steamid}/home/invites`,
             countItem: "pending_invites",
-            icon: e.sdo,
-            strLocToken: "#Notification_FriendInvitePinned_Body",
+            icon: i.sdo,
+            fnLocalizeBody: (t) =>
+              (0, l.Yp)("#Notification_FriendInvitePinned_Body", t),
             feature: v.M,
           },
           {
             fnUrl: () =>
-              `${o.TS.COMMUNITY_BASE_URL}profiles/${o.iA.steamid}/notifications#comments`,
+              `${s.TS.COMMUNITY_BASE_URL}profiles/${s.iA.steamid}/notifications#comments`,
             countItem: "comments",
-            icon: e.MwB,
-            strLocToken: "#Notification_NewCommentPinned_Body",
+            icon: i.MwB,
+            fnLocalizeBody: (t) =>
+              (0, l.Yp)("#Notification_NewCommentPinned_Body", t),
             feature: v.qR,
           },
           {
             fnUrl: () =>
-              `${o.TS.COMMUNITY_BASE_URL}profiles/${o.iA.steamid}/inventory`,
+              `${s.TS.COMMUNITY_BASE_URL}profiles/${s.iA.steamid}/inventory`,
             countItem: "inventory_items",
-            icon: e.rI_,
-            strLocToken: "#Notification_NewItemAnnouncementPinned_Body",
+            icon: i.rI_,
+            fnLocalizeBody: (t) =>
+              (0, l.Yp)("#Notification_NewItemAnnouncementPinned_Body", t),
             feature: v.WJ,
           },
           {
             fnUrl: () =>
-              `${o.TS.COMMUNITY_BASE_URL}profiles/${o.iA.steamid}/tradeoffers`,
+              `${s.TS.COMMUNITY_BASE_URL}profiles/${s.iA.steamid}/tradeoffers`,
             countItem: "trade_offers",
-            icon: e.h20,
-            strLocToken: "#Notification_NewTradeOffersPinned_Body",
+            icon: i.h20,
+            fnLocalizeBody: (t) =>
+              (0, l.Yp)("#Notification_NewTradeOffersPinned_Body", t),
             feature: v.ut,
           },
           {
             fnUrl: () =>
-              `${o.TS.COMMUNITY_BASE_URL}profiles/${o.iA.steamid}/gamenotifications`,
+              `${s.TS.COMMUNITY_BASE_URL}profiles/${s.iA.steamid}/gamenotifications`,
             countItem: "async_game_updates",
-            icon: e.wC1,
-            strLocToken: "#Notification_NewAsyncGamePinned_Body",
+            icon: i.wC1,
+            fnLocalizeBody: (t) =>
+              (0, l.Yp)("#Notification_NewAsyncGamePinned_Body", t),
           },
           {
-            fnUrl: () => `${o.TS.COMMUNITY_BASE_URL}my/moderatormessages`,
+            fnUrl: () => `${s.TS.COMMUNITY_BASE_URL}my/moderatormessages`,
             countItem: "moderator_messages",
             icon: M.hJ4,
-            strLocToken: "#Notification_NewModeratorMessagePinned_Body",
+            fnLocalizeBody: (t) =>
+              (0, l.Yp)("#Notification_NewModeratorMessagePinned_Body", t),
             feature: v.qR,
           },
           {
-            fnUrl: () => `${o.TS.HELP_BASE_URL}wizard/HelpRequests`,
+            fnUrl: () => `${s.TS.HELP_BASE_URL}wizard/HelpRequests`,
             countItem: "help_request_replies",
-            icon: e.Cv4,
-            strLocToken: "#Notification_NewHelpRequestRepliesPinned_Body",
+            icon: i.Cv4,
+            fnLocalizeBody: (t) =>
+              (0, l.Yp)("#Notification_NewHelpRequestRepliesPinned_Body", t),
           },
           {
             fnUrl: () =>
-              `${o.TS.STORE_BASE_URL}account/familymanagement/join?ft=${o.iA.steamid}`,
+              `${s.TS.STORE_BASE_URL}account/familymanagement/join?ft=${s.iA.steamid}`,
             countItem: "family_invites",
-            icon: e.Qte,
-            strLocToken: "#Notification_FamilyInvitePinned_Body",
+            icon: i.Qte,
+            fnLocalizeBody: (t) =>
+              (0, l.Yp)("#Notification_FamilyInvitePinned_Body", t),
           },
         ];
         function j() {
-          const a = A();
-          return (0, t.jsx)(t.Fragment, {
-            children: V.map((s) =>
-              (0, t.jsx)(
+          const t = y();
+          return (0, e.jsx)(e.Fragment, {
+            children: G.map((r) =>
+              (0, e.jsx)(
                 L.QR,
                 {
-                  url: s.fnUrl(),
-                  count: a.summary[s.countItem],
-                  icon: s.icon,
-                  strLocToken: s.strLocToken,
-                  eFeature: s.feature,
+                  url: r.fnUrl(),
+                  count: t.summary[r.countItem],
+                  icon: r.icon,
+                  strBody: r.fnLocalizeBody(t.summary[r.countItem]),
+                  eFeature: r.feature,
                 },
-                s.countItem,
+                r.countItem,
               ),
             ),
           });
         }
-        function F() {
-          return (0, t.jsxs)("div", {
-            className: l().EmptyNotificationsCtn,
+        function $() {
+          return (0, e.jsxs)("div", {
+            className: c().EmptyNotificationsCtn,
             children: [
-              (0, t.jsx)("div", {
-                className: l().EmptyNotificationsTitle,
-                children: (0, c.we)("#NotificationsList_EmptyTitle_New"),
+              (0, e.jsx)("div", {
+                className: c().EmptyNotificationsTitle,
+                children: (0, l.we)("#NotificationsList_EmptyTitle_New"),
               }),
-              (0, t.jsx)("div", {
-                className: l().EmptyNotificationsBody,
-                children: (0, c.we)("#NotificationsList_EmptyBody"),
+              (0, e.jsx)("div", {
+                className: c().EmptyNotificationsBody,
+                children: (0, l.we)("#NotificationsList_EmptyBody"),
               }),
             ],
           });
         }
-        const Y = b;
-        async function k(a) {
-          let s = null;
+        const V = b;
+        async function F(t) {
+          let r = null;
           try {
-            s = await (0, h.tM)(
-              a,
-              o.iA.steamid,
-              (0, g.sfN)(o.TS.LANGUAGE),
+            r = await (0, h.tM)(
+              t,
+              s.iA.steamid,
+              (0, g.sfN)(s.TS.LANGUAGE),
               void 0,
               !1,
               !1,
             );
           } catch {}
-          s && d.ProcessNewNotificationPayload(s);
+          r && d.ProcessNewNotificationPayload(r);
         }
       },
-      29553: (B) => {
-        B.exports = {
+      29553: (U) => {
+        U.exports = {
           NotificationsMenu: "_3EPagkYPxulGbe-5invUhK",
           NotificationsMenuEntriesContainer: "m0H4PhlsBcw0NzlQje7q",
           NotificationsMenuScrollable: "_2hgxpK_sWS7mDF66uPetpF",

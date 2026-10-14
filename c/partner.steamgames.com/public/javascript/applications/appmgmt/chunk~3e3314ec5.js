@@ -154,6 +154,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -492,7 +493,7 @@
             if (_) for (const _ of _.keys()) _.prices[_] = this.GetPrice(_, _);
             return _;
           }
-          async SubmitProposalToServer(_, _, _) {
+          async SubmitProposalToServer(_, _, _, _) {
             const _ = this.BuildNewPricingProposal(_, _),
               _ = JSON.stringify(_.prices),
               _ = (0, _._)("publisherid", "application_config"),
@@ -505,6 +506,7 @@
               _ = new FormData();
             _.append("sessionid", (0, _._)()),
               _.append("partner_will_publish", _ ? "1" : "0"),
+              _.append("cancel_unapplied", _ ? "1" : "0"),
               _.append("prices", _);
             let _ = null;
             try {
@@ -532,17 +534,18 @@
             } catch (_) {
               _ = _;
             }
-            const _ = (0, _._)(_);
-            return (
-              console.error(
-                "CPackagePricingStore.SubmitProposalToServer: failed",
-                _.strErrorMsg,
-                _,
-              ),
-              _?.response?.data ?? {
+            const _ = (0, _._)(_),
+              _ = _?.response?.data ?? {
                 success: _._,
-              }
-            );
+              };
+            return _.unappliedProposal
+              ? ((_.newProposal = _), _)
+              : (console.error(
+                  "CPackagePricingStore.SubmitProposalToServer: failed",
+                  _.strErrorMsg,
+                  _,
+                ),
+                _);
           }
           async PublishApprovedProposal(_, _, _ = 0) {
             const _ = this.m_mapPriceProposals.get(_);
@@ -736,17 +739,36 @@
             _ = _.Get().GetPrice(_, _);
           return _(_, _).join("");
         }
-        function _(_) {
+        function _() {
           const [_, _] = _.useState(_.Get().m_strDisplayPriceKey);
-          return (0, _._)(_.Get().m_displayPriceKeyCallbackList, _), _(_, _);
+          return (0, _._)(_.Get().m_displayPriceKeyCallbackList, _), _;
         }
         function _(_, _) {
           const [_, _] = _.useState(_.Get().GetPrice(_, _));
           return (
             (0, _._)(_.Get().GetPriceGridCellCallbackList(_, _), _),
             _.useEffect(() => _(_.Get().GetPrice(_, _)), [_, _]),
-            _(_, _).join("")
+            _
           );
+        }
+        function _(_) {
+          const _ = _();
+          return _(_, _);
+        }
+        function _(_, _) {
+          const _ = _(_, _);
+          return _(_, _).join("");
+        }
+        function _(_, _, _) {
+          const _ = (_(_) ?? _("USD"))?.bWholeUnitsOnly
+            ? Math.ceil((_ * _) / 1e4) * 100
+            : Math.ceil((_ * _) / 100);
+          return _ - _;
+        }
+        function _(_, _) {
+          const _ = _(),
+            _ = _(_, _);
+          if (typeof _ == "number") return _(_(_, _, _), _).join("");
         }
         function _(_, _, _) {
           let _ = 0;
@@ -978,7 +1000,7 @@
         }
         function _() {
           return _.useCallback(
-            (_, _, _) => _.Get().SubmitProposalToServer(_, _, _),
+            (_, _, _, _) => _.Get().SubmitProposalToServer(_, _, _, _),
             [],
           );
         }
@@ -1127,6 +1149,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const {
@@ -1187,11 +1210,8 @@
               minWidth: _ = "fit-content",
               disabled: _,
               icon: _,
-              focusable: _,
-              navProps: _,
               ..._
             } = _,
-            _ = (0, _._)(),
             _ = (0, _._)("Button", _),
             _ = _ ? _ : void 0,
             _ = (0, _._)(
@@ -1206,15 +1226,9 @@
               },
               _,
             );
-          return _ && (_ || _)
-            ? (0, _.jsx)(_._, {
-                ..._,
-                ...(_ || {}),
-                focusable: _,
-              })
-            : (0, _.jsx)("a", {
-                ..._,
-              });
+          return (0, _.jsx)(_._, {
+            ..._,
+          });
         }
         function _(_) {
           _.preventDefault();
@@ -1249,6 +1263,81 @@
           ],
           _ = _,
           _ = _;
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = _.createContext(!1);
+        function _(_) {
+          return jsx(_.Provider, {
+            value: !0,
+            children: _.children,
+          });
+        }
+        function _() {
+          return _.useContext(_);
+        }
+        function _(_) {
+          const {
+            snr: _,
+            focusable: _,
+            navProps: _,
+            href: _,
+            openInNewWindow: _,
+            target: _,
+            rel: _,
+            ..._
+          } = _;
+          (0, _._)(
+            !(_ && _),
+            "Link: pass either openInNewWindow or target, not both",
+          );
+          const _ = (0, _._)(),
+            _ = _(),
+            _ = _(_, _),
+            _ = _ ?? _?.focusable ?? !!_;
+          let _ = _ ? "_blank" : _;
+          !_ && _ && (_ = "_top");
+          let _ = _;
+          !_ && _ && (_ = "noreferrer noopener");
+          const _ = {
+            href: _,
+            target: _,
+            rel: _,
+            ..._,
+          };
+          return _ && (_ || _)
+            ? (0, _.jsx)(_._, {
+                ..._,
+                focusable: _,
+                ..._,
+              })
+            : (0, _.jsx)("a", {
+                ..._,
+              });
+        }
+        function _(_, _) {
+          const _ = (0, _._)();
+          return !_ || !_
+            ? _
+            : _ === !0
+              ? (0, _._)(_, _)
+              : (0, _._)(
+                  {
+                    ..._,
+                    ..._,
+                  },
+                  _,
+                );
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";

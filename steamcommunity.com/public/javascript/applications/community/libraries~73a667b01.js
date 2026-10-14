@@ -2,7 +2,7 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [42695],
+    [2695],
     {
       56589: (B, T, l) => {
         var u = l(48763),

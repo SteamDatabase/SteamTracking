@@ -1544,17 +1544,23 @@
           });
           return _;
         }
+        const _ = new Set();
+        function _() {
+          for (const _ of _) _(location.search);
+        }
         function _() {
           const [_, _] = (0, _.useState)(location.search);
           return (
             (0, _.useEffect)(() => {
-              function _(_) {
-                _.data === "urlchange" && _(location.search);
+              function _() {
+                _(location.search);
               }
               return (
-                window.addEventListener("message", _),
+                _.add(_),
+                window.addEventListener("popstate", _),
+                _(location.search),
                 () => {
-                  window.removeEventListener("message", _);
+                  _.delete(_), window.removeEventListener("popstate", _);
                 }
               );
             }, []),
@@ -1573,10 +1579,9 @@
                   : _
                 : _;
             }, [_, _, _]),
-            [_, _] = (0, _.useState)(_),
             _ = _.useCallback(
               (_, _ = !1) => {
-                const _ = new URLSearchParams(_.substring(1));
+                const _ = new URLSearchParams(location.search.substring(1));
                 if (_ != null) {
                   if (_.get(_) == _) return;
                   _.set(_, String(_));
@@ -1595,11 +1600,9 @@
                       "",
                       decodeURIComponent(`${window.location.pathname}?${_}`),
                     ),
-                  (0, _.startTransition)(() => {
-                    _(_), window.postMessage("urlchange");
-                  });
+                  (0, _.startTransition)(_);
               },
-              [_, _],
+              [_],
             );
           return [_, _];
         }
@@ -1630,7 +1633,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
           m_steamInterface;
@@ -1646,11 +1648,7 @@
             );
           }
           Init() {
-            const _ = (0, _._)("store_feature_token", "application_config");
-            (0, _._)(!!_, "require store_feature_token"),
-              (this.m_steamInterface = (0, _._)(
-                new _._(_._.WEBAPI_BASE_URL, _),
-              ));
+            this.m_steamInterface = (0, _._)(new _._(_._.WEBAPI_BASE_URL));
           }
         }
         function _() {
@@ -5802,7 +5800,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const [_, _] = (0, _.useState)(!1),
@@ -5848,10 +5845,7 @@
             "partnerbrowse_webapi_token",
             "application_config",
           );
-          return (
-            (0, _._)(!!_, "require partnerbrowse_webapi_token"),
-            (0, _._)(new _._(_._.WEBAPI_BASE_URL, _))
-          );
+          return (0, _._)(new _._(_._.WEBAPI_BASE_URL, _));
         }
         function _(_) {
           return _._.Initialize(_.GetServiceTransport(), _._.is_partner_member);

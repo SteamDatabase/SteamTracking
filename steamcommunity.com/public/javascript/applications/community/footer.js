@@ -2,41 +2,41 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [21574],
+    [1574],
     {
-      84909: (A, B, t) => {
+      84909: (P, B, t) => {
         "use strict";
         t.d(B, { AM: () => W, Pr: () => K });
         var n = t(7850),
           i = t(90626),
-          L = t(73788),
-          z = t(8083),
-          H = t(94621),
-          S = t(18938),
+          p = t(73788),
+          O = t(8083),
+          L = t(94621),
+          R = t(18938),
           l = t(24660),
-          D = t(38566),
-          F = t(54130),
-          O = t(71742),
-          y = t(64238),
-          c = t.n(y),
-          p = t(3877),
-          M = t(3166),
-          m = t(28020);
-        const a = (0, i.createContext)(null);
-        function E(r) {
-          const { children: v, ...s } = r,
+          y = t(38566),
+          U = t(54130),
+          S = t(71742),
+          D = t(64238),
+          r = t.n(D),
+          E = t(3877),
+          H = t(3166),
+          g = t(28020);
+        const C = (0, i.createContext)(null);
+        function j(a) {
+          const { children: x, ...s } = a,
             u = J(s);
-          return (0, n.jsx)(a.Provider, { value: u, children: v });
+          return (0, n.jsx)(C.Provider, { value: u, children: x });
         }
-        function T(r) {
-          const { children: v } = r,
-            s = i.Children.only(v),
-            u = (0, i.useContext)(a);
+        function z(a) {
+          const { children: x } = a,
+            s = i.Children.only(x),
+            u = (0, i.useContext)(C);
           return s
             ? u
               ? (0, i.cloneElement)(s, {
                   ...u.getReferenceProps(s.props),
-                  ref: (0, S.XB)(s.props.ref, u.floating.refs.setReference),
+                  ref: (0, R.XB)(s.props.ref, u.floating.refs.setReference),
                 })
               : (console.error(
                   "<PopoverAnchor> must be a child of <PopoverRoot>.",
@@ -44,205 +44,205 @@
                 null)
             : null;
         }
-        function U(r) {
-          const { children: v, className: s, ref: u, label: g } = r,
-            P = (0, i.useContext)(a),
-            V = (0, L.SV)([
+        function I(a) {
+          const { children: x, className: s, ref: u, label: m } = a,
+            A = (0, i.useContext)(C),
+            V = (0, p.SV)([
               u,
-              P == null ? void 0 : P.floating.refs.setFloating,
+              A == null ? void 0 : A.floating.refs.setFloating,
             ]);
-          if (!P)
+          if (!A)
             return (
               console.error(
                 "<Popover.Positioner> must be a child of <Popover.Root>.",
               ),
               null
             );
-          if (!P.open) return null;
-          let R = i.Children.only(v),
+          if (!A.open) return null;
+          let T = i.Children.only(x),
             h = i.Fragment;
           return (
-            R.type == W.FocusManager &&
-              ((R = i.Children.only(R.props.children)), (h = o)),
+            T.type == W.FocusManager &&
+              ((T = i.Children.only(T.props.children)), (h = o)),
             (0, n.jsx)(h, {
-              children: (0, n.jsx)(m.HF, {
-                presentation: P.presentation,
-                sizing: P.sizing,
+              children: (0, n.jsx)(g.HF, {
+                presentation: A.presentation,
+                sizing: A.sizing,
                 floatingRef: V,
-                floatingProps: P.getFloatingProps(),
-                floatingStyles: P.floating.floatingStyles,
-                referenceElement: P.floating.elements.domReference,
-                className: c()((0, p.T)(), s),
-                label: g,
-                children: R,
+                floatingProps: A.getFloatingProps(),
+                floatingStyles: A.floating.floatingStyles,
+                referenceElement: A.floating.elements.domReference,
+                className: r()((0, E.T)(), s),
+                label: m,
+                children: T,
               }),
             })
           );
         }
-        function o(r) {
-          return (0, M.Qn)()
-            ? (0, n.jsx)(I, { ...r })
-            : (0, n.jsx)(N, { ...r });
+        function o(a) {
+          return (0, H.Qn)()
+            ? (0, n.jsx)(F, { ...a })
+            : (0, n.jsx)(N, { ...a });
         }
-        function I(r) {
-          const { children: v } = r,
-            s = (0, i.useContext)(a);
-          (0, O.wT)(
+        function F(a) {
+          const { children: x } = a,
+            s = (0, i.useContext)(C);
+          (0, S.wT)(
             !!s,
             "<Popover.Positioner> must be a child of <Popover.Root>.",
           );
           const u = () => s.floating.context.onOpenChange(!1),
-            g = i.useRef(void 0);
+            m = i.useRef(void 0);
           return (
-            (0, l.O7)(g, !0, !0),
-            (0, n.jsx)(D.D6, {
+            (0, l.O7)(m, !0, !0),
+            (0, n.jsx)(y.D6, {
               navID: "Popover",
               onCancelButton: u,
               modal: !0,
-              navTreeRef: g,
+              navTreeRef: m,
               children: (0, n.jsx)("div", {
                 style: { display: "contents" },
-                children: (0, n.jsx)(F.q, { children: v }),
+                children: (0, n.jsx)(U.q, { children: x }),
               }),
             })
           );
         }
-        function N(r) {
-          const { children: v } = r,
-            s = (0, i.useContext)(a);
+        function N(a) {
+          const { children: x } = a,
+            s = (0, i.useContext)(C);
           return (
-            (0, O.wT)(
+            (0, S.wT)(
               !!s,
               "<Popover.Positioner> must be a child of <Popover.Root>.",
             ),
-            (0, n.jsx)(L.s3, {
+            (0, n.jsx)(p.s3, {
               context: s.floating.context,
               initialFocus: -1,
               returnFocus: !1,
-              children: v,
+              children: x,
             })
           );
         }
-        function J(r) {
+        function J(a) {
           const {
-            open: v,
+            open: x,
             interactions: s = {},
             width: u,
-            maxHeight: g,
-            gutter: P,
+            maxHeight: m,
+            gutter: A,
             scroll: V,
-          } = r;
-          let R = v;
-          const h = (0, m.Pr)(r.presentation),
-            j = K(r, R, h),
+          } = a;
+          let T = x;
+          const h = (0, g.Pr)(a.presentation),
+            M = K(a, T, h),
             Z = { enabled: !!s.click },
             e = typeof s.click == "function" ? s.click(Z) : Z,
-            $ = (0, L.kp)(j.context, e),
-            C = { enabled: !!s.focus },
-            q = typeof s.focus == "function" ? s.focus(C) : C,
-            _ = (0, L.iQ)(j.context, q),
-            Q = { handleClose: (0, L.iB)() },
+            $ = (0, p.kp)(M.context, e),
+            c = { enabled: !!s.focus },
+            q = typeof s.focus == "function" ? s.focus(c) : c,
+            _ = (0, p.iQ)(M.context, q),
+            Q = { handleClose: (0, p.iB)() },
             t1 = typeof s.hover == "function" ? s.hover(Q) : Q,
-            n1 = (0, L.Mk)(j.context, { enabled: !!s.hover, ...t1 }),
-            o1 = (0, L.s9)(j.context),
-            { getFloatingProps: s1, getReferenceProps: Y } = (0, L.bv)([
+            n1 = (0, p.Mk)(M.context, { enabled: !!s.hover, ...t1 }),
+            o1 = (0, p.s9)(M.context),
+            { getFloatingProps: s1, getReferenceProps: Y } = (0, p.bv)([
               $,
               _,
               n1,
               o1,
             ]);
           return {
-            floating: j,
+            floating: M,
             getFloatingProps: s1,
             getReferenceProps: Y,
-            open: R,
+            open: T,
             presentation: h,
-            sizing: { width: u, maxHeight: g, gutter: P, scroll: V },
+            sizing: { width: u, maxHeight: m, gutter: A, scroll: V },
           };
         }
-        function K(r, v, s) {
-          const { onOpenChange: u, placement: g } = r,
-            P = s === "anchor";
-          return (0, L.we)({
-            open: v,
+        function K(a, x, s) {
+          const { onOpenChange: u, placement: m } = a,
+            A = s === "anchor";
+          return (0, p.we)({
+            open: x,
             onOpenChange: u,
-            middleware: P ? G(r) : [],
-            whileElementsMounted: P ? z.ll : void 0,
-            placement: g && typeof g == "object" ? g.initial : g,
+            middleware: A ? G(a) : [],
+            whileElementsMounted: A ? O.ll : void 0,
+            placement: m && typeof m == "object" ? m.initial : m,
             strategy: "fixed",
             platform: {
-              ...z.iD,
+              ...O.iD,
               getOffsetParent: (V) => {
-                var R, h;
+                var T, h;
                 return (h =
-                  (R = V == null ? void 0 : V.ownerDocument) == null
+                  (T = V == null ? void 0 : V.ownerDocument) == null
                     ? void 0
-                    : R.defaultView) != null
+                    : T.defaultView) != null
                   ? h
                   : window;
               },
             },
           });
         }
-        function G(r) {
-          const { gutter: v = 0, placement: s } = r,
+        function G(a) {
+          const { gutter: x = 0, placement: s } = a,
             u = [],
-            g = s && typeof s == "object";
+            m = s && typeof s == "object";
           return (
-            g && s.offset
-              ? u.push((0, H.cY)(s.offset))
-              : (!g || s.offset === void 0) && u.push((0, H.cY)(2)),
-            g && s.flip
-              ? u.push((0, H.UU)(s.flip))
-              : (!g || s.flip === void 0) && u.push((0, H.UU)()),
-            g && s.shift
-              ? u.push((0, H.BN)(s.shift))
-              : (!g || s.shift === void 0) && u.push((0, H.BN)()),
+            m && s.offset
+              ? u.push((0, L.cY)(s.offset))
+              : (!m || s.offset === void 0) && u.push((0, L.cY)(2)),
+            m && s.flip
+              ? u.push((0, L.UU)(s.flip))
+              : (!m || s.flip === void 0) && u.push((0, L.UU)()),
+            m && s.shift
+              ? u.push((0, L.BN)(s.shift))
+              : (!m || s.shift === void 0) && u.push((0, L.BN)()),
             u.push(
-              (0, H.Ej)({
-                apply: (P) => {
-                  const { rects: V, elements: R, availableHeight: h } = P,
-                    j = {
+              (0, L.Ej)({
+                apply: (A) => {
+                  const { rects: V, elements: T, availableHeight: h } = A,
+                    M = {
                       boxSizing: "border-box",
                       zIndex: "1",
                       "-webkit-app-region": "no-drag",
                     };
-                  switch ((r.scroll && (j.overflowY = "auto"), r.width)) {
+                  switch ((a.scroll && (M.overflowY = "auto"), a.width)) {
                     case "target": {
-                      j.width = `${V.reference.width}px`;
+                      M.width = `${V.reference.width}px`;
                       break;
                     }
                     case "content": {
-                      j.width = `${V.floating.width}px`;
+                      M.width = `${V.floating.width}px`;
                       break;
                     }
                     case "dropdown": {
                       let e = V.reference.width;
                       V.floating.width > e && e < 200 && (e = V.floating.width),
-                        (j.width = `${e}px`);
+                        (M.width = `${e}px`);
                     }
                   }
-                  typeof r.width == "function" &&
-                    (j.width = r.width({
+                  typeof a.width == "function" &&
+                    (M.width = a.width({
                       unContentWidth: V.floating.width,
                       unTargetWidth: V.reference.width,
                     }));
                   const Z =
-                    typeof v == "number" ? `${v}px` : `var(--spacing-${v})`;
-                  typeof r.maxHeight == "function"
-                    ? (j.maxHeight = r.maxHeight({
+                    typeof x == "number" ? `${x}px` : `var(--spacing-${x})`;
+                  typeof a.maxHeight == "function"
+                    ? (M.maxHeight = a.maxHeight({
                         unAvailableHeight: h,
                         gutter: Z,
                       }))
-                    : typeof r.maxHeight == "number"
-                      ? (j.maxHeight = `min( calc( ${h}px - ${Z} ), ${r.maxHeight}px )`)
-                      : typeof v == "number"
-                        ? (j.maxHeight = `${h - v}px`)
-                        : (j.maxHeight = `calc( ${h}px - var(--spacing-${v}) )`),
-                    Object.assign(R.floating.style, j),
-                    R.floating.style.setProperty(
+                    : typeof a.maxHeight == "number"
+                      ? (M.maxHeight = `min( calc( ${h}px - ${Z} ), ${a.maxHeight}px )`)
+                      : typeof x == "number"
+                        ? (M.maxHeight = `${h - x}px`)
+                        : (M.maxHeight = `calc( ${h}px - var(--spacing-${x}) )`),
+                    Object.assign(T.floating.style, M),
+                    T.floating.style.setProperty(
                       "--popover-max-height",
-                      j.maxHeight,
+                      M.maxHeight,
                     );
                 },
               }),
@@ -250,41 +250,41 @@
             u
           );
         }
-        const W = { Root: E, Anchor: T, Positioner: U, FocusManager: o };
+        const W = { Root: j, Anchor: z, Positioner: I, FocusManager: o };
       },
-      95994: (A, B, t) => {
+      95994: (P, B, t) => {
         "use strict";
-        t.d(B, { x: () => O });
+        t.d(B, { x: () => S });
         var n = t(7850),
           i = t(70182),
-          L = t(64238),
-          z = t.n(L),
-          H = t(8928),
-          S = t(69289),
+          p = t(64238),
+          O = t.n(p),
+          L = t(8928),
+          R = t(69289),
           l = t(75180),
-          D = t.n(l),
-          F = t(3166);
-        function O(c) {
-          var p;
-          const { as: M = "div", ref: m, focusable: a, navProps: E, ...T } = c,
-            U = (0, F.Qn)(),
-            o = (0, S.mz)({ ...T, className: z()(l.Grid, c.className) }, y),
-            I =
-              (p = a != null ? a : E == null ? void 0 : E.focusable) != null
-                ? p
-                : !!T.onClick,
-            N = (0, n.jsx)(M, { ref: m, ...o });
-          return U
+          y = t.n(l),
+          U = t(3166);
+        function S(r) {
+          var E;
+          const { as: H = "div", ref: g, focusable: C, navProps: j, ...z } = r,
+            I = (0, U.Qn)(),
+            o = (0, R.mz)({ ...z, className: O()(l.Grid, r.className) }, D),
+            F =
+              (E = C != null ? C : j == null ? void 0 : j.focusable) != null
+                ? E
+                : !!z.onClick,
+            N = (0, n.jsx)(H, { ref: g, ...o });
+          return I
             ? (0, n.jsx)(i.J, {
                 "flow-children": "grid",
-                ...(E || {}),
-                focusable: I,
+                ...(j || {}),
+                focusable: F,
                 children: N,
               })
             : N;
         }
-        const y = [
-          ...H.h,
+        const D = [
+          ...L.h,
           {
             prop: "display",
             responsive: !0,
@@ -361,103 +361,103 @@
             prop: "gap",
             responsive: !0,
             className: l.Gap,
-            cssProperty: (c) => ["--grid-gap", `var(--spacing-${c})`],
+            cssProperty: (r) => ["--grid-gap", `var(--spacing-${r})`],
           },
           {
             prop: "gapX",
             responsive: !0,
             className: l.Gap,
-            cssProperty: (c) => ["--grid-gap-x", `var(--spacing-${c})`],
+            cssProperty: (r) => ["--grid-gap-x", `var(--spacing-${r})`],
           },
           {
             prop: "gapY",
             responsive: !0,
             className: l.Gap,
-            cssProperty: (c) => ["--grid-gap-y", `var(--spacing-${c})`],
+            cssProperty: (r) => ["--grid-gap-y", `var(--spacing-${r})`],
           },
         ];
       },
-      34771: (A, B, t) => {
+      34771: (P, B, t) => {
         "use strict";
-        t.d(B, { D: () => p });
+        t.d(B, { D: () => E });
         var n = t(7850),
           i = t(39049),
-          L = t(8928),
-          z = t(15252),
-          H = t(69289),
-          S = t(90626);
-        function l(a) {
-          const { depth: E } = useContext(D);
-          return jsx(D.Provider, {
-            value: { depth: E + 1 },
-            children: jsx(Box, { ...a }),
+          p = t(8928),
+          O = t(15252),
+          L = t(69289),
+          R = t(90626);
+        function l(C) {
+          const { depth: j } = useContext(y);
+          return jsx(y.Provider, {
+            value: { depth: j + 1 },
+            children: jsx(Box, { ...C }),
           });
         }
-        const D = S.createContext({ depth: 0 });
-        function F() {
-          return (0, S.useContext)(D).depth;
+        const y = R.createContext({ depth: 0 });
+        function U() {
+          return (0, R.useContext)(y).depth;
         }
-        var O = t(3877),
-          y = t(64238),
-          c = t.n(y);
-        function p(a) {
-          const { level: E = "auto", className: T, color: U } = a,
-            o = F(),
-            I = m(E, o);
-          return (0, n.jsx)(I, {
-            ...(0, H.mz)({ ...a, className: c()((0, O.T)(), i.Heading, T) }, M),
+        var S = t(3877),
+          D = t(64238),
+          r = t.n(D);
+        function E(C) {
+          const { level: j = "auto", className: z, color: I } = C,
+            o = U(),
+            F = g(j, o);
+          return (0, n.jsx)(F, {
+            ...(0, L.mz)({ ...C, className: r()((0, S.T)(), i.Heading, z) }, H),
           });
         }
-        const M = [
-          ...z.U6,
-          ...L.L,
+        const H = [
+          ...O.U6,
+          ...p.L,
           {
             prop: "size",
             responsive: !0,
-            className: (a) => i[`HeadingSize-${a}`],
+            className: (C) => i[`HeadingSize-${C}`],
           },
         ];
-        function m(a, E) {
-          if (a === "auto" && E === 0) return "h1";
-          const T = a === "auto" ? E.toString() : a;
-          return /^[1-6]$/.test(T)
-            ? "h" + T
-            : a === "auto"
+        function g(C, j) {
+          if (C === "auto" && j === 0) return "h1";
+          const z = C === "auto" ? j.toString() : C;
+          return /^[1-6]$/.test(z)
+            ? "h" + z
+            : C === "auto"
               ? (console.error(
                   '<Section> nesting has exceeded "h6" for headings.',
                 ),
                 "h6")
               : (console.error(
-                  `Attempt to render invalid heading level, "${T}".`,
+                  `Attempt to render invalid heading level, "${z}".`,
                 ),
                 "h1");
         }
       },
-      15252: (A, B, t) => {
+      15252: (P, B, t) => {
         "use strict";
-        t.d(B, { Ae: () => y, EY: () => F, U6: () => O });
+        t.d(B, { Ae: () => D, EY: () => U, U6: () => S });
         var n = t(7850),
           i = t(1039),
-          L = t(69289),
-          z = t(8928),
-          H = t(64238),
-          S = t.n(H),
+          p = t(69289),
+          O = t(8928),
+          L = t(64238),
+          R = t.n(L),
           l = t(65274),
-          D = t.n(l);
-        function F(c) {
-          const { as: p = "span", ref: M, className: m, ...a } = c,
-            E = p;
-          return (0, n.jsx)(E, {
-            ref: M,
-            ...(0, L.mz)({ ...a, className: S()(l.Text, m) }, y),
+          y = t.n(l);
+        function U(r) {
+          const { as: E = "span", ref: H, className: g, ...C } = r,
+            j = E;
+          return (0, n.jsx)(j, {
+            ref: H,
+            ...(0, p.mz)({ ...C, className: R()(l.Text, g) }, D),
           });
         }
-        const O = [
+        const S = [
             {
               prop: "weight",
               responsive: !0,
               className: l.TextWeight,
-              cssProperty: (c) => ["--text-weight", `var(--font-weight-${c})`],
+              cssProperty: (r) => ["--text-weight", `var(--font-weight-${r})`],
             },
             {
               prop: "align",
@@ -468,13 +468,13 @@
             {
               prop: "color",
               responsive: !0,
-              cssProperty: (c, p, M) => {
-                var m;
+              cssProperty: (r, E, H) => {
+                var g;
                 return [
                   "--text-color",
-                  (0, L.To)(
-                    c,
-                    (m = (0, i.I)(p.contrast, M)) != null ? m : "body",
+                  (0, p.To)(
+                    r,
+                    (g = (0, i.I)(E.contrast, H)) != null ? g : "body",
                   ),
                 ];
               },
@@ -482,13 +482,13 @@
             {
               prop: "contrast",
               responsive: !0,
-              cssProperty: (c, p, M) => {
-                var m;
+              cssProperty: (r, E, H) => {
+                var g;
                 return [
                   "--text-color",
-                  (0, L.To)(
-                    (m = (0, i.I)(p.color, M)) != null ? m : "text-body",
-                    c,
+                  (0, p.To)(
+                    (g = (0, i.I)(E.color, H)) != null ? g : "text-body",
+                    r,
                   ),
                 ];
               },
@@ -506,117 +506,109 @@
               cssProperty: "--white-space",
             },
           ],
-          y = [
-            ...O,
-            ...z.L,
+          D = [
+            ...S,
+            ...O.L,
             {
               prop: "size",
               responsive: !0,
-              className: (c) => l[`TextSize-${c}`],
+              className: (r) => l[`TextSize-${r}`],
             },
           ];
       },
-      86336: (A, B, t) => {
+      86336: (P, B, t) => {
         "use strict";
-        t.d(B, { W: () => y, Y: () => F });
+        t.d(B, { W: () => D, Y: () => U });
         var n = t(7850),
           i = t(50122),
-          L = t.n(i),
-          z = t(15252),
-          H = t(69289),
-          S = t(24660),
-          l = t(70182),
-          D = t(3166);
-        function F(c) {
-          var p;
-          const { underline: M = "auto", focusable: m, navProps: a, ...E } = c,
-            T = (0, D.Qn)(),
-            U =
-              (p = m != null ? m : a == null ? void 0 : a.focusable) != null
-                ? p
-                : !!E.href,
-            o = (0, H.mz)({ ...E, underline: M, className: i.TextLink }, O);
-          return T && (U || a)
-            ? (0, n.jsx)(S.Ii, { ...o, ...(a || {}), focusable: U })
-            : (0, n.jsx)("a", { ...o });
+          p = t.n(i),
+          O = t(15252),
+          L = t(69289),
+          R = t(70182),
+          l = t(3166),
+          y = t(2333);
+        function U(r) {
+          const { underline: E = "auto", ...H } = r,
+            g = (0, L.mz)({ ...H, underline: E, className: i.TextLink }, S);
+          return (0, n.jsx)(y.o, { ...g });
         }
-        const O = [
-          ...z.Ae,
-          { prop: "underline", className: (c) => i[`Underline-${c}`] },
+        const S = [
+          ...O.Ae,
+          { prop: "underline", className: (r) => i[`Underline-${r}`] },
         ];
-        function y(c) {
-          var p;
-          const { underline: M = "auto", focusable: m, navProps: a, ...E } = c,
-            T = (0, D.Qn)(),
-            U =
-              (p = m != null ? m : a == null ? void 0 : a.focusable) != null
-                ? p
-                : !!E.onClick,
+        function D(r) {
+          var E;
+          const { underline: H = "auto", focusable: g, navProps: C, ...j } = r,
+            z = (0, l.Qn)(),
+            I =
+              (E = g != null ? g : C == null ? void 0 : C.focusable) != null
+                ? E
+                : !!j.onClick,
             o = (0, n.jsx)("span", {
               role: "button",
-              ...(0, H.mz)(
-                { ...E, underline: M, className: i.TextLinkButton },
-                O,
+              ...(0, L.mz)(
+                { ...j, underline: H, className: i.TextLinkButton },
+                S,
               ),
             });
-          return T && (U || a)
-            ? (0, n.jsx)(l.J, { ...(a || {}), focusable: U, children: o })
+          return z && (I || C)
+            ? (0, n.jsx)(R.J, { ...(C || {}), focusable: I, children: o })
             : o;
         }
       },
-      10566: (A, B, t) => {
+      10566: (P, B, t) => {
         "use strict";
         t.r(B), t.d(B, { GlobalFooter: () => r1 });
         var n = t(7850),
           i = t(68031),
-          L = t(34771),
-          z = t(86336),
-          H = t(77343),
-          S = t(15252),
+          p = t(34771),
+          O = t(86336),
+          L = t(77343),
+          R = t(15252),
           l = t(75083),
-          D = t(75694),
-          F = t(95994),
-          O = t(32093),
-          y = t(79014),
-          c = t(52438),
-          p = t(90900);
-        function M() {
-          return (0, c.j_)(p.k1) === "desktop";
+          y = t(75694),
+          U = t(95994),
+          S = t(32093),
+          D = t(79014),
+          r = t(52438),
+          E = t(90900);
+        function H() {
+          return (0, r.j_)(E.k1) === "desktop";
         }
-        function m() {
+        function g() {
           return ReadCookie(k_responsiveViewPrefsCookie) === "touch";
         }
-        function a(d = !1) {
-          const x = [];
+        function C(d = !1) {
+          const v = [];
           return (
-            M() ? x.push("force_desktop") : x.push("responsive"),
-            (m() || d) && x.push("touch"),
-            x.join(" ")
+            H() ? v.push("force_desktop") : v.push("responsive"),
+            (g() || d) && v.push("touch"),
+            v.join(" ")
           );
         }
-        function E() {
+        function j() {
           WriteCookie(k_responsiveViewPrefsCookie, "desktop"),
             "location" in window && location.reload();
         }
-        function T() {
+        function z() {
           WriteCookie(k_responsiveViewPrefsCookie, "touch"),
             "location" in window && location.reload();
         }
-        function U() {
-          M() && (0, c.Y1)(p.k1), "location" in window && location.reload();
+        function I() {
+          H() && (0, r.Y1)(E.k1), "location" in window && location.reload();
         }
         var o = t(72609),
-          I = t(72865),
+          F = t(72865),
           N = t(64238),
           J = t.n(N),
           K = t(90626),
           G = t(74840),
           W = t(60351),
-          r = t(84909),
-          v = t(67344);
+          a = t(84909),
+          x = t(67344);
         function s(d) {
           const {
-              children: x,
+              children: v,
               hoverContent: X,
               nDelayShowMS: w,
               bTooltipMode: c1,
@@ -624,29 +616,29 @@
             } = d,
             [h1, i1] = (0, K.useState)(!1),
             u1 = (k) => {
-              ((0, v.p)() && !k) || i1(k);
+              ((0, x.p)() && !k) || i1(k);
             },
             d1 = (k) => {
               let e1 = { ...k, delay: { open: w, close: 0 } };
               return c1 && (e1 = { ...e1, handleClose: null }), e1;
             };
-          return (0, n.jsxs)(r.AM.Root, {
+          return (0, n.jsxs)(a.AM.Root, {
             open: h1,
             onOpenChange: i1,
             interactions: { hover: d1 },
             presentation: "anchor",
             ...C1,
             children: [
-              (0, n.jsx)(r.AM.Anchor, { children: x }),
-              (0, n.jsx)(r.AM.Positioner, {
+              (0, n.jsx)(a.AM.Anchor, { children: v }),
+              (0, n.jsx)(a.AM.Positioner, {
                 children: (0, n.jsx)(W.az, { children: X }),
               }),
             ],
           });
         }
         var u = t(60859),
-          g = t.n(u);
-        function P() {
+          m = t.n(u);
+        function A() {
           return (0, n.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             width: "142",
@@ -704,7 +696,7 @@
             ],
           });
         }
-        function R() {
+        function T() {
           return (0, n.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             width: "100",
@@ -733,14 +725,14 @@
           });
         }
         function h(d) {
-          let { href: x, ...X } = d;
-          const w = (0, I.n9)();
+          let { href: v, ...X } = d;
+          const w = (0, F.n9)();
           return (
-            x != null &&
-              x.startsWith(o.TS.STORE_BASE_URL) &&
-              (x = (0, I.bV)(w, x)),
-            (0, n.jsx)(z.Y, {
-              href: x,
+            v != null &&
+              v.startsWith(o.TS.STORE_BASE_URL) &&
+              (v = (0, F.bV)(w, v)),
+            (0, n.jsx)(O.Y, {
+              href: v,
               color: "dull-11",
               target: "_blank",
               whiteSpace: "nowrap",
@@ -748,14 +740,14 @@
             })
           );
         }
-        function j(d) {
-          const x = (0, H.xC)();
-          return x === "initial" || x === "sm"
+        function M(d) {
+          const v = (0, L.xC)();
+          return v === "initial" || v === "sm"
             ? null
             : (0, n.jsx)("footer", {
-                className: J()(g().SteamChinaFooter, d.className),
+                className: J()(m().SteamChinaFooter, d.className),
                 children: (0, n.jsxs)(W.az, {
-                  className: g().FooterContent,
+                  className: m().FooterContent,
                   children: [
                     (0, n.jsxs)(i.s, {
                       align: "center",
@@ -763,10 +755,10 @@
                       children: [
                         (0, n.jsx)(h, {
                           href: o.TS.STORE_BASE_URL,
-                          children: (0, n.jsx)(P, {}),
+                          children: (0, n.jsx)(A, {}),
                         }),
                         (0, n.jsxs)(W.az, {
-                          className: g().NavLinks,
+                          className: m().NavLinks,
                           children: [
                             (0, n.jsx)(h, {
                               href: "https://about.steamchina.com/upgrade_announcement.html",
@@ -836,7 +828,7 @@
                             }),
                             (0, n.jsx)(h, {
                               href: "https://www.valvesoftware.com",
-                              children: (0, n.jsx)(R, {}),
+                              children: (0, n.jsx)(T, {}),
                             }),
                           ],
                         }),
@@ -859,7 +851,7 @@
                                       o.TS.STORE_CDN_URL +
                                       "public/shared/images/footer/weibo_logo.svg?v=1",
                                   }),
-                                  (0, n.jsx)(S.EY, {
+                                  (0, n.jsx)(R.EY, {
                                     children: "\u5FAE\u535A",
                                   }),
                                 ],
@@ -881,7 +873,7 @@
                                       o.TS.STORE_CDN_URL +
                                       "public/shared/images/footer/wechat_logo.svg?v=1",
                                   }),
-                                  (0, n.jsx)(S.EY, {
+                                  (0, n.jsx)(R.EY, {
                                     children: "\u5FAE\u4FE1",
                                   }),
                                 ],
@@ -931,42 +923,42 @@
         }
         var Z = t(37901);
         const e = {};
-        (e.arabic = () => t.e(42560).then(t.t.bind(t, 42560, 19))),
-          (e.brazilian = () => t.e(37442).then(t.t.bind(t, 37442, 19))),
-          (e.bulgarian = () => t.e(39945).then(t.t.bind(t, 39945, 19))),
-          (e.czech = () => t.e(55059).then(t.t.bind(t, 55059, 19))),
-          (e.danish = () => t.e(19605).then(t.t.bind(t, 19605, 19))),
-          (e.dutch = () => t.e(13366).then(t.t.bind(t, 13366, 19))),
-          (e.english = () => t.e(74468).then(t.t.bind(t, 74468, 19))),
-          (e.finnish = () => t.e(31655).then(t.t.bind(t, 31655, 19))),
-          (e.french = () => t.e(21580).then(t.t.bind(t, 21580, 19))),
+        (e.arabic = () => t.e(2560).then(t.t.bind(t, 42560, 19))),
+          (e.brazilian = () => t.e(7442).then(t.t.bind(t, 37442, 19))),
+          (e.bulgarian = () => t.e(9945).then(t.t.bind(t, 39945, 19))),
+          (e.czech = () => t.e(5059).then(t.t.bind(t, 55059, 19))),
+          (e.danish = () => t.e(9605).then(t.t.bind(t, 19605, 19))),
+          (e.dutch = () => t.e(3366).then(t.t.bind(t, 13366, 19))),
+          (e.english = () => t.e(4468).then(t.t.bind(t, 74468, 19))),
+          (e.finnish = () => t.e(1655).then(t.t.bind(t, 31655, 19))),
+          (e.french = () => t.e(1580).then(t.t.bind(t, 21580, 19))),
           (e.german = () => t.e(5666).then(t.t.bind(t, 5666, 19))),
-          (e.greek = () => t.e(22936).then(t.t.bind(t, 22936, 19))),
-          (e.hungarian = () => t.e(52173).then(t.t.bind(t, 52173, 19))),
-          (e.indonesian = () => t.e(80412).then(t.t.bind(t, 80412, 19))),
-          (e.italian = () => t.e(29468).then(t.t.bind(t, 29468, 19))),
-          (e.japanese = () => t.e(52811).then(t.t.bind(t, 52811, 19))),
-          (e.koreana = () => t.e(76139).then(t.t.bind(t, 76139, 19))),
-          (e.latam = () => t.e(77267).then(t.t.bind(t, 77267, 19))),
-          (e.malay = () => t.e(88844).then(t.t.bind(t, 88844, 19))),
-          (e.norwegian = () => t.e(85964).then(t.t.bind(t, 85964, 19))),
-          (e.polish = () => t.e(26509).then(t.t.bind(t, 26509, 19))),
-          (e.portuguese = () => t.e(58233).then(t.t.bind(t, 58233, 19))),
-          (e.romanian = () => t.e(48727).then(t.t.bind(t, 48727, 19))),
-          (e.russian = () => t.e(98973).then(t.t.bind(t, 98973, 19))),
-          (e.sc_schinese = () => t.e(11143).then(t.t.bind(t, 11143, 19))),
-          (e.schinese = () => t.e(49720).then(t.t.bind(t, 49720, 19))),
-          (e.spanish = () => t.e(31924).then(t.t.bind(t, 31924, 19))),
-          (e.swedish = () => t.e(17925).then(t.t.bind(t, 17925, 19))),
-          (e.tchinese = () => t.e(89259).then(t.t.bind(t, 89259, 19))),
-          (e.thai = () => t.e(25474).then(t.t.bind(t, 25474, 19))),
-          (e.turkish = () => t.e(12164).then(t.t.bind(t, 12164, 19))),
-          (e.ukrainian = () => t.e(52626).then(t.t.bind(t, 52626, 19))),
-          (e.vietnamese = () => t.e(66515).then(t.t.bind(t, 66515, 19)));
+          (e.greek = () => t.e(2936).then(t.t.bind(t, 22936, 19))),
+          (e.hungarian = () => t.e(2173).then(t.t.bind(t, 52173, 19))),
+          (e.indonesian = () => t.e(412).then(t.t.bind(t, 80412, 19))),
+          (e.italian = () => t.e(9468).then(t.t.bind(t, 29468, 19))),
+          (e.japanese = () => t.e(2811).then(t.t.bind(t, 52811, 19))),
+          (e.koreana = () => t.e(6139).then(t.t.bind(t, 76139, 19))),
+          (e.latam = () => t.e(7267).then(t.t.bind(t, 77267, 19))),
+          (e.malay = () => t.e(8844).then(t.t.bind(t, 88844, 19))),
+          (e.norwegian = () => t.e(5964).then(t.t.bind(t, 85964, 19))),
+          (e.polish = () => t.e(6509).then(t.t.bind(t, 26509, 19))),
+          (e.portuguese = () => t.e(8233).then(t.t.bind(t, 58233, 19))),
+          (e.romanian = () => t.e(8727).then(t.t.bind(t, 48727, 19))),
+          (e.russian = () => t.e(8973).then(t.t.bind(t, 98973, 19))),
+          (e.sc_schinese = () => t.e(1143).then(t.t.bind(t, 11143, 19))),
+          (e.schinese = () => t.e(9720).then(t.t.bind(t, 49720, 19))),
+          (e.spanish = () => t.e(1924).then(t.t.bind(t, 31924, 19))),
+          (e.swedish = () => t.e(7925).then(t.t.bind(t, 17925, 19))),
+          (e.tchinese = () => t.e(9259).then(t.t.bind(t, 89259, 19))),
+          (e.thai = () => t.e(5474).then(t.t.bind(t, 25474, 19))),
+          (e.turkish = () => t.e(2164).then(t.t.bind(t, 12164, 19))),
+          (e.ukrainian = () => t.e(2626).then(t.t.bind(t, 52626, 19))),
+          (e.vietnamese = () => t.e(6515).then(t.t.bind(t, 66515, 19)));
         async function $(d) {
           if (e[d]) return e[d]();
         }
-        const C = (0, Z.l)($);
+        const c = (0, Z.l)($);
         var q = t(3166);
         function _() {
           return (0, n.jsxs)("svg", {
@@ -1094,7 +1086,7 @@
           return (0, n.jsx)(i.s, { direction: "column", gap: "4", ...d });
         }
         function b(d) {
-          return (0, n.jsx)(L.D, {
+          return (0, n.jsx)(p.D, {
             level: "3",
             color: "dull-12",
             weight: "heavy",
@@ -1103,14 +1095,14 @@
           });
         }
         function f(d) {
-          let { href: x, ...X } = d;
-          const w = (0, I.n9)();
+          let { href: v, ...X } = d;
+          const w = (0, F.n9)();
           return (
-            x != null &&
-              x.startsWith(o.TS.STORE_BASE_URL) &&
-              (x = (0, I.bV)(w, x)),
-            (0, n.jsx)(z.Y, {
-              href: x,
+            v != null &&
+              v.startsWith(o.TS.STORE_BASE_URL) &&
+              (v = (0, F.bV)(w, v)),
+            (0, n.jsx)(O.Y, {
+              href: v,
               color: "dull-11",
               target: "_blank",
               whiteSpace: "nowrap",
@@ -1119,7 +1111,7 @@
           );
         }
         function l1() {
-          const d = (0, H.xC)();
+          const d = (0, L.xC)();
           return (0, n.jsxs)(i.s, {
             gridArea: "main",
             direction: "column",
@@ -1140,12 +1132,12 @@
                   }),
                 ],
               }),
-              (0, n.jsx)(S.EY, {
+              (0, n.jsx)(R.EY, {
                 as: "p",
                 size: "1",
                 className: G.LegalNotice,
-                children: (0, y.A)(
-                  C.Localize("#footer_legal_notice", new Date().getFullYear()),
+                children: (0, D.A)(
+                  c.Localize("#footer_legal_notice", new Date().getFullYear()),
                 ),
               }),
               (0, n.jsxs)(i.s, {
@@ -1178,13 +1170,13 @@
                     !o.TS.IN_MOBILE_WEBVIEW &&
                     (0, n.jsx)(l.v, {
                       href: o.TS.STORE_BASE_URL + "mobile/",
-                      children: C.Localize("#footer_link_get_mobile_apps"),
+                      children: c.Localize("#footer_link_get_mobile_apps"),
                     }),
-                  M() &&
+                  H() &&
                     (0, n.jsx)(l.$, {
                       color: "dull",
-                      onClick: U,
-                      children: C.Localize("#footer_view_mobile_website"),
+                      onClick: I,
+                      children: c.Localize("#footer_view_mobile_website"),
                     }),
                 ],
               }),
@@ -1193,10 +1185,10 @@
         }
         function a1(d) {
           return (
-            (0, K.use)(C.Ready()),
-            (0, n.jsx)(D.N, {
+            (0, K.use)(c.Ready()),
+            (0, n.jsx)(y.N, {
               breakpoints: { sm: 700 },
-              children: (0, n.jsxs)(F.x, {
+              children: (0, n.jsxs)(U.x, {
                 as: "footer",
                 areas: {
                   initial: '"steam valve" "legal more" "main main"',
@@ -1221,27 +1213,27 @@
                     gridArea: "steam",
                     children: [
                       (0, n.jsx)(b, {
-                        children: C.Localize("#footer_link_header_steam"),
+                        children: c.Localize("#footer_link_header_steam"),
                       }),
                       (0, n.jsx)(f, {
                         href: o.TS.STORE_BASE_URL + "about/",
-                        children: C.Localize("#footer_link_about_steam"),
+                        children: c.Localize("#footer_link_about_steam"),
                       }),
                       (0, n.jsx)(f, {
                         href: o.TS.STORE_BASE_URL + "subscriber_agreement/",
-                        children: C.Localize("#footer_link_steam_ssa"),
+                        children: c.Localize("#footer_link_steam_ssa"),
                       }),
                       (0, n.jsx)(f, {
                         href: o.TS.PARTNER_BASE_URL,
-                        children: C.Localize("#footer_link_steamworks"),
+                        children: c.Localize("#footer_link_steamworks"),
                       }),
                       (0, n.jsx)(f, {
                         href: o.TS.PARTNER_BASE_URL + "steamdirect",
-                        children: C.Localize("#footer_link_steam_distribution"),
+                        children: c.Localize("#footer_link_steam_distribution"),
                       }),
                       (0, n.jsx)(f, {
                         href: o.TS.STORE_BASE_URL + "digitalgiftcards/",
-                        children: C.Localize("#footer_link_gift_cards"),
+                        children: c.Localize("#footer_link_gift_cards"),
                       }),
                     ],
                   }),
@@ -1249,23 +1241,23 @@
                     gridArea: "valve",
                     children: [
                       (0, n.jsx)(b, {
-                        children: C.Localize("#footer_link_header_valve"),
+                        children: c.Localize("#footer_link_header_valve"),
                       }),
                       (0, n.jsx)(f, {
                         href: "https://valvesoftware.com/about",
-                        children: C.Localize("#footer_link_about_valve"),
+                        children: c.Localize("#footer_link_about_valve"),
                       }),
                       (0, n.jsx)(f, {
                         href: "https://valvesoftware.com/",
-                        children: C.Localize("#footer_link_jobs"),
+                        children: c.Localize("#footer_link_jobs"),
                       }),
                       (0, n.jsx)(f, {
                         href: o.TS.STORE_BASE_URL + "hardware/",
-                        children: C.Localize("#footer_link_hardware"),
+                        children: c.Localize("#footer_link_hardware"),
                       }),
                       (0, n.jsx)(f, {
                         href: o.TS.STORE_BASE_URL + "hardware_recycling/",
-                        children: C.Localize("#footer_link_recycling"),
+                        children: c.Localize("#footer_link_recycling"),
                       }),
                     ],
                   }),
@@ -1273,30 +1265,30 @@
                     gridArea: "legal",
                     children: [
                       (0, n.jsx)(b, {
-                        children: C.Localize("#footer_link_header_legal"),
+                        children: c.Localize("#footer_link_header_legal"),
                       }),
                       (0, n.jsx)(f, {
                         href: o.TS.STORE_BASE_URL + "privacy_agreement/",
-                        children: C.Localize("#footer_link_privacy"),
+                        children: c.Localize("#footer_link_privacy"),
                       }),
                       (0, n.jsx)(f, {
                         href: "https://help.steampowered.com/faqs/view/10BB-D27A-6378-4436",
-                        children: C.Localize("#footer_link_accessibility"),
+                        children: c.Localize("#footer_link_accessibility"),
                       }),
                       (0, n.jsx)(f, {
                         href: o.TS.STORE_BASE_URL + "legal/",
-                        children: C.Localize(
+                        children: c.Localize(
                           "#footer_link_notices_and_policies",
                         ),
                       }),
                       (0, n.jsx)(f, {
                         href:
                           o.TS.STORE_BASE_URL + "account/cookiepreferences/",
-                        children: C.Localize("#footer_link_cookies"),
+                        children: c.Localize("#footer_link_cookies"),
                       }),
                       (0, n.jsx)(f, {
                         href: o.TS.STORE_BASE_URL + "steam_refunds/",
-                        children: C.Localize("#footer_link_refunds"),
+                        children: c.Localize("#footer_link_refunds"),
                       }),
                     ],
                   }),
@@ -1304,23 +1296,23 @@
                     gridArea: "more",
                     children: [
                       (0, n.jsx)(b, {
-                        children: C.Localize("#footer_link_header_more"),
+                        children: c.Localize("#footer_link_header_more"),
                       }),
                       (0, n.jsx)(f, {
                         href: o.TS.STORE_BASE_URL + "about/",
-                        children: C.Localize("#footer_link_get_steam"),
+                        children: c.Localize("#footer_link_get_steam"),
                       }),
                       (0, n.jsx)(f, {
                         href: o.TS.STORE_BASE_URL + "mobile/",
-                        children: C.Localize("#footer_link_get_mobile_apps"),
+                        children: c.Localize("#footer_link_get_mobile_apps"),
                       }),
                       (0, n.jsx)(f, {
                         href: o.TS.HELP_BASE_URL,
-                        children: C.Localize("#footer_link_get_support"),
+                        children: c.Localize("#footer_link_get_support"),
                       }),
                       (0, n.jsx)(f, {
                         href: o.TS.STORE_BASE_URL + "account/",
-                        children: C.Localize("#footer_link_my_account"),
+                        children: c.Localize("#footer_link_my_account"),
                       }),
                     ],
                   }),
@@ -1331,18 +1323,18 @@
         }
         function r1(d) {
           if ((0, q.Qn)()) return null;
-          const x = (0, O.nA)(o.TS.EREALM)
-            ? (0, n.jsx)(j, { ...d })
+          const v = (0, S.nA)(o.TS.EREALM)
+            ? (0, n.jsx)(M, { ...d })
             : (0, n.jsx)(a1, { ...d });
-          return (0, n.jsx)(I.nn, {
+          return (0, n.jsx)(F.nn, {
             controller: "footer",
             method: "footer",
-            children: x,
+            children: v,
           });
         }
       },
-      75180: (A) => {
-        A.exports = {
+      75180: (P) => {
+        P.exports = {
           Grid: "_2IVd64AHN6R428cgcPqW7M",
           Display: "_2PUyyAEGuZenuwES7VJvQO",
           Columns: "_16FZUyKiH6Z7trthKypJwf",
@@ -1359,8 +1351,8 @@
           Gap: "c0C2uHpDLCegllhH1rM3M",
         };
       },
-      39049: (A) => {
-        A.exports = {
+      39049: (P) => {
+        P.exports = {
           Heading: "_12ldq1_X5RuLWAAs_ODwt7",
           "HeadingSize-1": "-YHuRmP6nUp0IqPQ4F3wk",
           "HeadingSize-2": "_20m6yPkrPwQ8XwlhPdMtqu",
@@ -1373,8 +1365,8 @@
           "HeadingSize-9": "_3L0vs4_Y96AtsR3P5GUkUa",
         };
       },
-      65274: (A) => {
-        A.exports = {
+      65274: (P) => {
+        P.exports = {
           Text: "f6hU22EA7Z8peFWZVBJU",
           Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
           "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
@@ -1392,8 +1384,8 @@
           WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
         };
       },
-      50122: (A) => {
-        A.exports = {
+      50122: (P) => {
+        P.exports = {
           TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
           TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
           Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
@@ -1403,16 +1395,16 @@
           "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
         };
       },
-      74840: (A) => {
-        A.exports = {
+      74840: (P) => {
+        P.exports = {
           GlobalFooter: "_291ttHtxyu5obiKzor2G9G",
           LegalNotice: "_1y5BgqyS1zWfS5kYC34pV9",
           LogoLinks: "_12bkgGAkxHc79lKMb7rK88",
           LinkColumnHeading: "g8vToPr0EO3CpytRyimNA",
         };
       },
-      60859: (A) => {
-        A.exports = {
+      60859: (P) => {
+        P.exports = {
           SteamChinaFooter: "_1xP-wMjwBUZyEOyfSNfAYV",
           FooterContent: "_3yFMcIFF5seXRG2z7Eb08C",
           NavLinks: "_2hZemvW0chMhSn36Vr0RF9",

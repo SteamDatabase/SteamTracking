@@ -1,7 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (() => {
-  globalThis.CLSTAMP = "11099037";
   (() => {
     "use strict";
     var _ = {},
@@ -15,23 +14,23 @@
     (i.m = _),
       (() => {
         var e = [];
-        i.O = (d, a, c, o) => {
+        i.O = (d, a, o, f) => {
           if (a) {
-            o = o || 0;
-            for (var t = e.length; t > 0 && e[t - 1][2] > o; t--)
+            f = f || 0;
+            for (var t = e.length; t > 0 && e[t - 1][2] > f; t--)
               e[t] = e[t - 1];
-            e[t] = [a, c, o];
+            e[t] = [a, o, f];
             return;
           }
           for (var n = 1 / 0, t = 0; t < e.length; t++) {
-            for (var [a, c, o] = e[t], l = !0, r = 0; r < a.length; r++)
-              (o & !1 || n >= o) && Object.keys(i.O).every((u) => i.O[u](a[r]))
+            for (var [a, o, f] = e[t], b = !0, r = 0; r < a.length; r++)
+              (f & !1 || n >= f) && Object.keys(i.O).every((u) => i.O[u](a[r]))
                 ? a.splice(r--, 1)
-                : ((l = !1), o < n && (n = o));
-            if (l) {
+                : ((b = !1), f < n && (n = f));
+            if (b) {
               e.splice(t--, 1);
-              var f = c();
-              f !== void 0 && (d = f);
+              var c = o();
+              c !== void 0 && (d = c);
             }
           }
           return d;
@@ -46,27 +45,27 @@
             ? (a) => Object.getPrototypeOf(a)
             : (a) => a.__proto__,
           d;
-        i.t = function (a, c) {
+        i.t = function (a, o) {
           if (
-            (c & 1 && (a = this(a)),
-            c & 8 ||
+            (o & 1 && (a = this(a)),
+            o & 8 ||
               (typeof a == "object" &&
                 a &&
-                ((c & 4 && a.__esModule) ||
-                  (c & 16 && typeof a.then == "function"))))
+                ((o & 4 && a.__esModule) ||
+                  (o & 16 && typeof a.then == "function"))))
           )
             return a;
-          var o = Object.create(null);
-          i.r(o);
+          var f = Object.create(null);
+          i.r(f);
           var t = {};
           d = d || [null, e({}), e([]), e(e)];
           for (
-            var n = c & 2 && a;
+            var n = o & 2 && a;
             typeof n == "object" && !~d.indexOf(n);
             n = e(n)
           )
-            Object.getOwnPropertyNames(n).forEach((l) => (t[l] = () => a[l]));
-          return (t.default = () => a), i.d(o, t), o;
+            Object.getOwnPropertyNames(n).forEach((b) => (t[b] = () => a[b]));
+          return (t.default = () => a), i.d(f, t), f;
         };
       })(),
       (i.d = (e, d) => {
@@ -118,26 +117,26 @@
         }[e] || e) +
         ".js?contenthash=" +
         {
-          20: "a554a75e8a95dc1073cf",
+          20: "dad34d0059caa149bf75",
           60: "dd496a706491c3113b8f",
           198: "0fc9c51e8223bcf47dc7",
           286: "7538e9f542b4ee21575b",
-          361: "cf94d1fdda35706bb872",
+          361: "f8fbbf81de4fffe31187",
           412: "efe666d6440c05552c32",
-          662: "16ab0c1efc8df40ef3fa",
+          662: "11ae5d118c85cdd3a7d2",
           664: "82cd60d162345fcc8080",
-          684: "77ce98cc513ea45a0155",
+          684: "bc43eaa6041b3462ea5a",
           759: "c0f82aa7b78d2f887fd2",
-          764: "cff69b4b35198c3e709a",
+          764: "dafbcffe9628f493b580",
           831: "3e85db622eb1fc634d4a",
           833: "dd12eb244a78fd5b208d",
-          976: "c45ff3954ce55aa83c78",
-          1031: "d5fe81acedaa7f204033",
-          1047: "483694fe26779a87b4b8",
+          976: "4a5944e23b2057bb4ce8",
+          1031: "c3f47aa4ec95ff7d7fad",
+          1047: "46431d903059e9d33093",
           1143: "99852ba61683226041b6",
-          1229: "ea863b85676eef82227d",
-          1359: "36d998985052a2c5735b",
-          1574: "6cb79e4266d07a66c241",
+          1229: "71747b34790bb19e055d",
+          1359: "77b75fd4af435a424914",
+          1574: "836fd9d81a6702c07277",
           1580: "412387197fe5e69ccaf6",
           1602: "e6eea6fee2fdbfae2309",
           1655: "6581a8933eed9a8db7b5",
@@ -145,33 +144,33 @@
           1924: "b8b6d1c5c533faeebbae",
           2164: "20487e8ed38db39fdea5",
           2173: "a4dbee52e0e8a887ac85",
-          2330: "ac4e21da0f3c1173ae84",
-          2378: "3575dc1fe18e1036847f",
+          2330: "b5bb82237c4cd91c613c",
+          2378: "64b3e08e86fc1b21fd3e",
           2446: "45f84c24b2dd6c0a844a",
           2560: "8630e84fcb3e92e3ca0d",
-          2589: "163967bf8d10bfe82d53",
+          2589: "7508c3b35a668138c11d",
           2626: "1788a2c39dcc140f745f",
-          2711: "1b85626a086f478452cc",
-          2736: "c6d37001323d48863702",
+          2711: "c2472d45ab7b52db4a8d",
+          2736: "5abf09bc3bc11af8d2fb",
           2811: "5ab63133108e3887e2c3",
           2936: "0f819a9667a80b271dd6",
           3140: "9b132f5787d6bd2098ff",
-          3248: "7d9e4e28a52e54afb732",
-          3296: "e347fa63842e23d653fe",
-          3301: "27fe3d7d8fe7945e659d",
+          3248: "7d5d2eb4c8fd1a6567cd",
+          3296: "66a6ee4b83b82bdcf228",
+          3301: "1365ef5c3446be62f3a9",
           3366: "54b9db68b0886199294a",
           3589: "a47cb6b859e9d5b94d69",
           3867: "81527d65913a67959db4",
           4102: "dad9b2f219fb9c8ae210",
-          4122: "41e25e3b35e39c366141",
-          4175: "4d32d1eb9079d5332ca0",
-          4401: "c57d7e3f3a4e62ef3544",
+          4122: "72099b0caa7ff510c36b",
+          4175: "2a77bed29d97ca7d518e",
+          4401: "9bb8bced6c89a5e48a6d",
           4468: "3294493e44a67f27d556",
           4694: "8f67bc28d01fa263ba13",
           5052: "f03f95f08f2a26964b6e",
           5059: "2b1e3c10675a099e05b1",
           5103: "633e12c04b2858c9731a",
-          5319: "934b5eecf07aa9e2656e",
+          5319: "f9149b63c86dca02dbf3",
           5388: "651764f6dae323277a7d",
           5474: "a30e83235a9bac5e42f7",
           5666: "99072b54280fd7bd51a3",
@@ -180,20 +179,20 @@
           6428: "0c4cff7e03d05e6aac36",
           6509: "81e19738b5f38b91c755",
           6515: "630bab8a44740a1fb1d7",
-          7046: "44c3fc0c26c76842c18d",
+          7046: "479154e1bbfd653e45b5",
           7267: "02ccbd25e4c3b4d9cc83",
           7345: "f9aa80baec2024e59476",
           7442: "67eba33a9c1e51a7719a",
           7553: "0703274ae03a7f6febae",
-          7688: "58124d4e14f57e377cdd",
-          7700: "4852313788b9bfa5475d",
+          7688: "f7e8680852f6c36e9078",
+          7700: "7a489c9f007e22275f19",
           7724: "bbbfb80562c0cb9566d4",
           7925: "d75682db9e6115287251",
-          8010: "9e20273ff4699ac07f9e",
+          8010: "013ed41ea292b34c5af4",
           8021: "3c4f4573ea0be37a6d69",
           8233: "29e4c281bb27460455b4",
-          8356: "a070f8943e8191b01367",
-          8515: "c16734fe4f1c0be66bc8",
+          8356: "943adec543ee75d2ca2e",
+          8515: "3566ec5475a20025d531",
           8547: "4e9d5dd2f50f38beef85",
           8724: "50b892f6a7139c72c58a",
           8727: "a4f9ff8c88b0f0901df9",
@@ -201,21 +200,21 @@
           8844: "20f4567eecb949b62468",
           8973: "a01fb0de85aa135ad2c0",
           9259: "3d5eef82b9c988f2441f",
-          9333: "2b5f0385e9a3a05e2449",
+          9333: "564458f1d05c48888995",
           9387: "4316205b785a90285745",
-          9431: "2544f327a7ff1c0fef0c",
+          9431: "2d7e7a6619309725da6c",
           9453: "906270e7fcd1a0ab4c9c",
           9468: "e32729bc5db20f53a428",
           9515: "7ebce2ce84a63df8d749",
           9605: "858776876f7046f8c3fc",
           9720: "28660cfc8dadb4b53094",
           9783: "36beac8a4a5b76394291",
-          9854: "6429c4563db74d86e88a",
+          9854: "3474ec09689ef6a52df9",
           9857: "0037155a8d60c713f0e7",
           9914: "143ddc17f64959c5da47",
           9945: "690327418bc0638f2930",
-          9965: "818c4b1c2251c69ebd0b",
-          9998: "fc1bb5d711df7f2b2416",
+          9965: "d0367c9af36596050972",
+          9998: "45ccce4ebf962571d01e",
         }[e]),
       (i.miniCssF = (e) =>
         "css/applications/help/" +
@@ -234,36 +233,36 @@
       (() => {
         var e = {},
           d = "Help:";
-        i.l = (a, c, o, t) => {
+        i.l = (a, o, f, t) => {
           if (e[a]) {
-            e[a].push(c);
+            e[a].push(o);
             return;
           }
-          var n, l;
-          if (o !== void 0)
+          var n, b;
+          if (f !== void 0)
             for (
-              var r = document.getElementsByTagName("script"), f = 0;
-              f < r.length;
-              f++
+              var r = document.getElementsByTagName("script"), c = 0;
+              c < r.length;
+              c++
             ) {
-              var b = r[f];
+              var l = r[c];
               if (
-                b.getAttribute("src") == a ||
-                b.getAttribute("data-webpack") == d + o
+                l.getAttribute("src") == a ||
+                l.getAttribute("data-webpack") == d + f
               ) {
-                n = b;
+                n = l;
                 break;
               }
             }
           n ||
-            ((l = !0),
+            ((b = !0),
             (n = document.createElement("script")),
             (n.charset = "utf-8"),
             (n.timeout = 120),
             i.nc && n.setAttribute("nonce", i.nc),
-            n.setAttribute("data-webpack", d + o),
+            n.setAttribute("data-webpack", d + f),
             (n.src = a)),
-            (e[a] = [c]);
+            (e[a] = [o]);
           var s = (p, u) => {
               (n.onerror = n.onload = null), clearTimeout(m);
               var g = e[a];
@@ -281,7 +280,7 @@
             );
           (n.onerror = s.bind(null, n.onerror)),
             (n.onload = s.bind(null, n.onload)),
-            l && document.head.appendChild(n);
+            b && document.head.appendChild(n);
         };
       })(),
       (i.r = (e) => {
@@ -293,17 +292,17 @@
       (i.p = ""),
       (() => {
         if (!(typeof document > "u")) {
-          var e = (o, t, n, l, r) => {
-              var f = document.createElement("link");
-              (f.rel = "stylesheet"), (f.type = "text/css");
-              var b = (s) => {
-                if (((f.onerror = f.onload = null), s.type === "load")) l();
+          var e = (f, t, n, b, r) => {
+              var c = document.createElement("link");
+              (c.rel = "stylesheet"), (c.type = "text/css");
+              var l = (s) => {
+                if (((c.onerror = c.onload = null), s.type === "load")) b();
                 else {
                   var m = s && s.type,
                     p = (s && s.target && s.target.href) || t,
                     u = new Error(
                       "Loading CSS chunk " +
-                        o +
+                        f +
                         ` failed.
 (` +
                         m +
@@ -315,60 +314,60 @@
                     (u.code = "CSS_CHUNK_LOAD_FAILED"),
                     (u.type = m),
                     (u.request = p),
-                    f.parentNode && f.parentNode.removeChild(f),
+                    c.parentNode && c.parentNode.removeChild(c),
                     r(u);
                 }
               };
               return (
-                (f.onerror = f.onload = b),
-                (f.href = t),
+                (c.onerror = c.onload = l),
+                (c.href = t),
                 n
-                  ? n.parentNode.insertBefore(f, n.nextSibling)
-                  : document.head.appendChild(f),
-                f
+                  ? n.parentNode.insertBefore(c, n.nextSibling)
+                  : document.head.appendChild(c),
+                c
               );
             },
-            d = (o, t) => {
+            d = (f, t) => {
               for (
-                var n = document.getElementsByTagName("link"), l = 0;
-                l < n.length;
-                l++
+                var n = document.getElementsByTagName("link"), b = 0;
+                b < n.length;
+                b++
               ) {
-                var r = n[l],
-                  f = r.getAttribute("data-href") || r.getAttribute("href");
-                if (r.rel === "stylesheet" && (f === o || f === t)) return r;
+                var r = n[b],
+                  c = r.getAttribute("data-href") || r.getAttribute("href");
+                if (r.rel === "stylesheet" && (c === f || c === t)) return r;
               }
               for (
-                var b = document.getElementsByTagName("style"), l = 0;
-                l < b.length;
-                l++
+                var l = document.getElementsByTagName("style"), b = 0;
+                b < l.length;
+                b++
               ) {
-                var r = b[l],
-                  f = r.getAttribute("data-href");
-                if (f === o || f === t) return r;
+                var r = l[b],
+                  c = r.getAttribute("data-href");
+                if (c === f || c === t) return r;
               }
             },
-            a = (o) =>
+            a = (f) =>
               new Promise((t, n) => {
-                var l = i.miniCssF(o),
-                  r = i.p + l;
-                if (d(l, r)) return t();
-                e(o, r, null, t, n);
+                var b = i.miniCssF(f),
+                  r = i.p + b;
+                if (d(b, r)) return t();
+                e(f, r, null, t, n);
               }),
-            c = { 4556: 0 };
-          i.f.miniCss = (o, t) => {
+            o = { 4556: 0 };
+          i.f.miniCss = (f, t) => {
             var n = { 976: 1, 1574: 1 };
-            c[o]
-              ? t.push(c[o])
-              : c[o] !== 0 &&
-                n[o] &&
+            o[f]
+              ? t.push(o[f])
+              : o[f] !== 0 &&
+                n[f] &&
                 t.push(
-                  (c[o] = a(o).then(
+                  (o[f] = a(f).then(
                     () => {
-                      c[o] = 0;
+                      o[f] = 0;
                     },
-                    (l) => {
-                      throw (delete c[o], l);
+                    (b) => {
+                      throw (delete o[f], b);
                     },
                   )),
                 );
@@ -377,25 +376,25 @@
       })(),
       (() => {
         var e = { 4556: 0 };
-        (i.f.j = (c, o) => {
-          var t = i.o(e, c) ? e[c] : void 0;
+        (i.f.j = (o, f) => {
+          var t = i.o(e, o) ? e[o] : void 0;
           if (t !== 0)
-            if (t) o.push(t[2]);
-            else if (c != 4556) {
-              var n = new Promise((b, s) => (t = e[c] = [b, s]));
-              o.push((t[2] = n));
-              var l = i.p + i.u(c),
+            if (t) f.push(t[2]);
+            else if (o != 4556) {
+              var n = new Promise((l, s) => (t = e[o] = [l, s]));
+              f.push((t[2] = n));
+              var b = i.p + i.u(o),
                 r = new Error(),
-                f = (b) => {
+                c = (l) => {
                   if (
-                    i.o(e, c) &&
-                    ((t = e[c]), t !== 0 && (e[c] = void 0), t)
+                    i.o(e, o) &&
+                    ((t = e[o]), t !== 0 && (e[o] = void 0), t)
                   ) {
-                    var s = b && (b.type === "load" ? "missing" : b.type),
-                      m = b && b.target && b.target.src;
+                    var s = l && (l.type === "load" ? "missing" : l.type),
+                      m = l && l.target && l.target.src;
                     (r.message =
                       "Loading chunk " +
-                      c +
+                      o +
                       ` failed.
 (` +
                       s +
@@ -408,21 +407,21 @@
                       t[1](r);
                   }
                 };
-              i.l(l, f, "chunk-" + c, c);
-            } else e[c] = 0;
+              i.l(b, c, "chunk-" + o, o);
+            } else e[o] = 0;
         }),
-          (i.O.j = (c) => e[c] === 0);
-        var d = (c, o) => {
-            var [t, n, l] = o,
+          (i.O.j = (o) => e[o] === 0);
+        var d = (o, f) => {
+            var [t, n, b] = f,
               r,
-              f,
-              b = 0;
+              c,
+              l = 0;
             if (t.some((m) => e[m] !== 0)) {
               for (r in n) i.o(n, r) && (i.m[r] = n[r]);
-              if (l) var s = l(i);
+              if (b) var s = b(i);
             }
-            for (c && c(o); b < t.length; b++)
-              (f = t[b]), i.o(e, f) && e[f] && e[f][0](), (e[f] = 0);
+            for (o && o(f); l < t.length; l++)
+              (c = t[l]), i.o(e, c) && e[c] && e[c][0](), (e[c] = 0);
             return i.O(s);
           },
           a = (self.webpackChunkHelp = self.webpackChunkHelp || []);

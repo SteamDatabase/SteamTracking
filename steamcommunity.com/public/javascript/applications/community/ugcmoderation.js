@@ -2,35 +2,35 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [37102],
+    [7102],
     {
-      11038: (b, T, e) => {
+      11038: (b, A, e) => {
         "use strict";
-        e.r(T), e.d(T, { UGCBanDialogOnGlobalVariable: () => B });
+        e.r(A), e.d(A, { UGCBanDialogOnGlobalVariable: () => U });
         var t = e(7850),
           i = e(68031),
-          M = e(15252),
-          I = e(75083),
-          y = e(1522),
-          V = e(26072),
-          S = e(86392),
-          E = e(14432),
-          p = e(64388),
-          x = e(90626);
-        function f(P) {
-          return V.u.Localize("#moderation_ugcban_default_note", (0, S.Jt)(P));
+          S = e(15252),
+          O = e(75083),
+          R = e(1522),
+          p = e(26072),
+          L = e(86392),
+          g = e(14432),
+          Y = e(64388),
+          E = e(90626);
+        function m(v) {
+          return p.u.Localize("#moderation_ugcban_default_note", (0, L.Jt)(v));
         }
-        function B() {
-          const [P, N] = x.useState(null),
-            [u, Y] = x.useState(null),
-            [K, C] = x.useState(!1),
-            [o, l] = x.useState("");
+        function U() {
+          const [v, N] = E.useState(null),
+            [d, F] = E.useState(null),
+            [K, f] = E.useState(!1),
+            [o, l] = E.useState("");
           if (
-            (x.useEffect(
+            (E.useEffect(
               () => (
                 (window.ShowUGCBanDialog = (a, h) => {
-                  Y(null),
-                    C(!1),
+                  F(null),
+                    f(!1),
                     l(""),
                     N({ cItems: a.length, fnOnConfirm: h });
                 }),
@@ -40,24 +40,24 @@
               ),
               [],
             ),
-            !P)
+            !v)
           )
             return null;
-          const g = () => N(null),
+          const C = () => N(null),
             c = () => {
-              u === null || !o.trim() || (P.fnOnConfirm(u, o.trim()), g());
+              d === null || !o.trim() || (v.fnOnConfirm(d, o.trim()), C());
             },
-            v = (a) => {
+            j = (a) => {
               a !== null &&
-                ((!o.trim() || (u !== null && o === f(u))) && l(f(a)), Y(a)),
-                C(!1);
+                ((!o.trim() || (d !== null && o === m(d))) && l(m(a)), F(a)),
+                f(!1);
             },
-            j = P.cItems > 1 ? `Ban ${P.cItems} items` : "Ban item";
-          return (0, t.jsxs)(p.s, {
-            onClose: g,
-            strTitle: j,
+            I = v.cItems > 1 ? `Ban ${v.cItems} items` : "Ban item";
+          return (0, t.jsxs)(Y.s, {
+            onClose: C,
+            strTitle: I,
             children: [
-              K && (0, t.jsx)(E.F, { reasons: (0, S.cd)(), onSelect: v }),
+              K && (0, t.jsx)(g.F, { reasons: (0, L.cd)(), onSelect: j }),
               !K &&
                 (0, t.jsxs)(i.s, {
                   direction: "column",
@@ -70,18 +70,18 @@
                       align: "center",
                       marginBottom: "2",
                       children: [
-                        (0, t.jsx)(M.EY, { children: "Select a reason:" }),
-                        (0, t.jsx)(I.$, {
+                        (0, t.jsx)(S.EY, { children: "Select a reason:" }),
+                        (0, t.jsx)(O.$, {
                           size: "1",
                           color: "dull",
-                          onClick: () => C(!0),
+                          onClick: () => f(!0),
                           children:
-                            u === null ? "Click to select..." : (0, S.Jt)(u),
+                            d === null ? "Click to select..." : (0, L.Jt)(d),
                         }),
                       ],
                     }),
-                    (0, t.jsx)(M.EY, { children: "Note:" }),
-                    (0, t.jsx)(y.f, {
+                    (0, t.jsx)(S.EY, { children: "Note:" }),
+                    (0, t.jsx)(R.f, {
                       value: o,
                       onTextChange: (a) => l(a),
                       maxLength: 256,
@@ -92,13 +92,13 @@
                       justify: "end",
                       marginTop: "3",
                       children: [
-                        (0, t.jsx)(I.$, {
-                          onClick: g,
+                        (0, t.jsx)(O.$, {
+                          onClick: C,
                           color: "dull",
                           children: "Cancel",
                         }),
-                        (0, t.jsx)(I.$, {
-                          disabled: u === null || !o.trim(),
+                        (0, t.jsx)(O.$, {
+                          disabled: d === null || !o.trim(),
                           onClick: c,
                           children: "Ban",
                         }),
@@ -110,39 +110,39 @@
           });
         }
       },
-      31832: (b, T, e) => {
+      31832: (b, A, e) => {
         "use strict";
-        e.r(T), e.d(T, { UGCModerationSubjectPanel: () => Z });
+        e.r(A), e.d(A, { UGCModerationSubjectPanel: () => D });
         var t = e(7850),
           i = e(15252),
-          M = e(68031),
-          I = e(75083),
-          y = e(21663),
-          V = e(64981),
-          S = e(49527),
-          E = e(72609),
-          p = e(64388),
-          x = e(90626),
-          f = e(86067),
-          B = e(13725),
-          P = e(46085),
+          S = e(68031),
+          O = e(75083),
+          R = e(21663),
+          p = e(64981),
+          L = e(49527),
+          g = e(72609),
+          Y = e(64388),
+          E = e(90626),
+          m = e(86067),
+          U = e(13725),
+          v = e(46085),
           N = e(86392),
-          u = e(72524);
-        const Y = 0,
+          d = e(72524);
+        const F = 0,
           K = 1,
-          C = 2,
+          f = 2,
           o = 3;
         var l = e(64238),
-          g = e.n(l),
+          C = e.n(l),
           c = e(93249),
-          v = e.n(c);
-        function j(n) {
+          j = e.n(c);
+        function I(n) {
           return !!n && n !== o;
         }
         function a(n) {
-          return j(n.status)
+          return I(n.status)
             ? (0, t.jsxs)("span", {
-                className: g()(v().Pill, n.className),
+                className: C()(j().Pill, n.className),
                 children: [n.label, n.status === K && "?"],
               })
             : null;
@@ -150,125 +150,125 @@
         function h(n) {
           return (0, t.jsx)(a, {
             status: n.status,
-            className: v().TerrorismPill,
+            className: j().TerrorismPill,
             label: "Terrorism",
+          });
+        }
+        function T(n) {
+          return (0, t.jsx)(a, {
+            status: n.status,
+            className: j().CSAMPill,
+            label: "CSAM",
           });
         }
         function z(n) {
           return (0, t.jsx)(a, {
             status: n.status,
-            className: v().CSAMPill,
-            label: "CSAM",
-          });
-        }
-        function W(n) {
-          return (0, t.jsx)(a, {
-            status: n.status,
-            className: v().ViolencePill,
+            className: j().ViolencePill,
             label: "Violent threat",
           });
         }
-        function F(n) {
+        function $(n) {
           const { subject: s } = n;
-          return !j(s.terrorism_status) &&
-            !j(s.csam_status) &&
-            !j(s.credible_threat_of_violence_status)
+          return !I(s.terrorism_status) &&
+            !I(s.csam_status) &&
+            !I(s.credible_threat_of_violence_status)
             ? null
             : (0, t.jsxs)("div", {
                 children: [
                   (0, t.jsx)(h, { status: s.terrorism_status }),
-                  (0, t.jsx)(z, { status: s.csam_status }),
-                  (0, t.jsx)(W, {
+                  (0, t.jsx)(T, { status: s.csam_status }),
+                  (0, t.jsx)(z, {
                     status: s.credible_threat_of_violence_status,
                   }),
                 ],
               });
         }
-        function A(n) {
-          return { subject_type: V.z8, published_file_id: n };
+        function y(n) {
+          return { subject_type: p.z8, published_file_id: n };
         }
-        function R(n) {
-          return (0, P.OI)(A(n));
+        function W(n) {
+          return (0, v.OI)(y(n));
         }
-        function $(n) {
-          var s, m, r;
-          const U = (0, P.w3)(A(n.publishedFileID)),
-            [G, Q] = (0, x.useState)(!1);
-          if (U.isPending) return null;
-          if (U.isError)
+        function G(n) {
+          var s, u, r;
+          const M = (0, v.w3)(y(n.publishedFileID)),
+            [V, Q] = (0, E.useState)(!1);
+          if (M.isPending) return null;
+          if (M.isError)
             return (0, t.jsx)(i.EY, {
-              children: f.T.Localize("#ugcsubjectpanel_error"),
+              children: m.T.Localize("#ugcsubjectpanel_error"),
             });
-          const L = (s = U.data.subjects) == null ? void 0 : s[0];
-          return L
-            ? (0, t.jsxs)(M.s, {
+          const B = (s = M.data.subjects) == null ? void 0 : s[0];
+          return B
+            ? (0, t.jsxs)(S.s, {
                 direction: "column",
                 gap: "1",
                 children: [
-                  (0, t.jsx)(i.EY, { children: (0, N.hl)(L) }),
-                  (0, t.jsx)(F, { subject: L }),
+                  (0, t.jsx)(i.EY, { children: (0, N.hl)(B) }),
+                  (0, t.jsx)($, { subject: B }),
                   (0, t.jsx)(i.EY, {
-                    children: f.T.Localize(
+                    children: m.T.Localize(
                       "#forumsubjectlist_subjectreportsummary",
-                      (m = L.unresolved_report_count) != null ? m : 0,
-                      (r = L.unresolved_dispute_count) != null ? r : 0,
+                      (u = B.unresolved_report_count) != null ? u : 0,
+                      (r = B.unresolved_dispute_count) != null ? r : 0,
                     ),
                   }),
-                  (0, t.jsxs)(M.s, {
+                  (0, t.jsxs)(S.s, {
                     direction: "row",
                     gap: "2",
                     children: [
-                      (0, t.jsx)(I.$, {
+                      (0, t.jsx)(O.$, {
                         size: "1",
                         color: "dull",
                         onClick: () => Q(!0),
-                        children: f.T.Localize("#ugcsubjectpanel_history"),
+                        children: m.T.Localize("#ugcsubjectpanel_history"),
                       }),
-                      (0, t.jsx)(_, { subject: L }),
-                      (0, t.jsx)(d, { subject: L }),
+                      (0, t.jsx)(Z, { subject: B }),
+                      (0, t.jsx)(x, { subject: B }),
                     ],
                   }),
-                  G && (0, t.jsx)(D, { subject: L, onClose: () => Q(!1) }),
+                  V && (0, t.jsx)(P, { subject: B, onClose: () => Q(!1) }),
                 ],
               })
             : null;
         }
-        function _(n) {
+        function Z(n) {
           const { subject: s } = n,
-            m = (0, P.YL)(s.reported_content_id ? [s.reported_content_id] : []),
+            u = (0, v.YL)(s.reported_content_id ? [s.reported_content_id] : []),
             r =
               !!s.assigned_moderator_steamid &&
               s.assigned_moderator_steamid !== "0";
           return !s.reported_content_id ||
             !r ||
-            s.assigned_moderator_steamid !== E.iA.steamid
+            s.assigned_moderator_steamid !== g.iA.steamid
             ? null
-            : (0, t.jsx)(I.$, {
+            : (0, t.jsx)(O.$, {
                 size: "1",
                 color: "dull",
-                loading: m.isPending,
-                onClick: () => m.mutate(),
-                children: f.T.Localize("#ugcsubjectpanel_release"),
+                loading: u.isPending,
+                onClick: () => u.mutate(),
+                children: m.T.Localize("#ugcsubjectpanel_release"),
               });
         }
-        function d(n) {
+        function x(n) {
           const { subject: s } = n,
-            [m, r] = (0, x.useState)(!1);
-          return !s.reported_content_id || s.resolved !== S.z_
+            [u, r] = (0, E.useState)(!1);
+          return !s.reported_content_id || s.resolved !== L.z_
             ? null
             : (0, t.jsxs)(t.Fragment, {
                 children: [
-                  (0, t.jsx)(I.$, {
+                  (0, t.jsx)(O.$, {
                     size: "1",
                     color: "dull",
                     onClick: () => r(!0),
-                    children: f.T.Localize("#moderation_escalation_escalate"),
+                    children: m.T.Localize("#moderation_escalation_escalate"),
                   }),
-                  m &&
-                    (0, t.jsx)(p.s, {
+                  u &&
+                    (0, t.jsx)(Y.s, {
                       onClose: () => r(!1),
-                      strTitle: f.T.Localize("#moderation_escalation_escalate"),
-                      children: (0, t.jsx)(u.R, {
+                      strTitle: m.T.Localize("#moderation_escalation_escalate"),
+                      children: (0, t.jsx)(d.R, {
                         reportedContentID: s.reported_content_id,
                         onClose: () => r(!1),
                       }),
@@ -276,207 +276,214 @@
                 ],
               });
         }
-        function D(n) {
-          const { subject: s, onClose: m } = n,
-            [r, U] = (0, x.useState)("reports");
-          return (0, t.jsx)(p.s, {
-            onClose: m,
-            strTitle: f.T.Localize("#ugcsubjectpanel_dialogtitle"),
-            children: (0, t.jsxs)(M.s, {
+        function P(n) {
+          const { subject: s, onClose: u } = n,
+            [r, M] = (0, E.useState)("reports");
+          return (0, t.jsx)(Y.s, {
+            onClose: u,
+            strTitle: m.T.Localize("#ugcsubjectpanel_dialogtitle"),
+            children: (0, t.jsxs)(S.s, {
               direction: "column",
               gap: "2",
               children: [
-                (0, t.jsxs)(y.I.Root, {
+                (0, t.jsxs)(R.I.Root, {
                   value: r,
-                  onValueChange: (G) => U(G),
+                  onValueChange: (V) => M(V),
                   children: [
-                    (0, t.jsx)(y.I.Item, {
+                    (0, t.jsx)(R.I.Item, {
                       value: "reports",
-                      children: f.T.Localize("#ugcsubjectpanel_reports"),
+                      children: m.T.Localize("#ugcsubjectpanel_reports"),
                     }),
-                    (0, t.jsx)(y.I.Item, {
+                    (0, t.jsx)(R.I.Item, {
                       value: "history",
-                      children: f.T.Localize("#ugcsubjectpanel_history"),
+                      children: m.T.Localize("#ugcsubjectpanel_history"),
                     }),
                   ],
                 }),
-                r === "reports" && (0, t.jsx)(B.lX, { subject: s }),
+                r === "reports" && (0, t.jsx)(U.lX, { subject: s }),
                 r === "history" &&
-                  (0, t.jsx)(B.B8, {
+                  (0, t.jsx)(U.B8, {
                     reportedContentID: s.reported_content_id,
                   }),
               ],
             }),
           });
         }
-        var O = e(29385);
-        function Z(n) {
+        var _ = e(29385);
+        function D(n) {
           const { publishedFileID: s } = n,
-            m = (0, O.jE)();
+            u = (0, _.jE)();
           return (
-            (0, x.useEffect)(() => {
-              const r = (U) => {
-                var G;
-                ((G = U.detail) == null ? void 0 : G.publishedFileID) == s &&
-                  m.invalidateQueries({ queryKey: R(s) });
+            (0, E.useEffect)(() => {
+              const r = (M) => {
+                var V;
+                ((V = M.detail) == null ? void 0 : V.publishedFileID) == s &&
+                  u.invalidateQueries({ queryKey: W(s) });
               };
               return (
                 window.addEventListener("ugc-moderation-resolved", r),
                 () => window.removeEventListener("ugc-moderation-resolved", r)
               );
-            }, [m, s]),
-            (0, t.jsx)($, { publishedFileID: s })
+            }, [u, s]),
+            (0, t.jsx)(G, { publishedFileID: s })
           );
         }
       },
-      21663: (b, T, e) => {
+      21663: (b, A, e) => {
         "use strict";
-        e.d(T, { I: () => u });
+        e.d(A, { I: () => d });
         var t = e(7850),
           i = e(90626),
-          M = e(86946),
-          I = e(60351),
-          y = e(71742),
-          V = e(64238),
-          S = e.n(V),
-          E = e(53011),
-          p = e.n(E),
-          x = e(68031),
-          f = e(80549);
-        const B = (0, i.createContext)(null);
-        function P(C) {
+          S = e(86946),
+          O = e(60351),
+          R = e(71742),
+          p = e(64238),
+          L = e.n(p),
+          g = e(53011),
+          Y = e.n(g),
+          E = e(68031),
+          m = e(80549);
+        const U = (0, i.createContext)(null);
+        function v(f) {
           const {
               variant: o,
               radius: l,
-              size: g,
+              size: C,
               status: c,
-              children: v,
-              value: j,
-              onValueChange: a,
-            } = C,
-            [h, z] = (0, i.useState)({}),
-            W = (0, i.useCallback)((_, d) => z((D) => ({ ...D, [d]: _ })), []),
-            F = (0, i.useCallback)(
-              (_, d) =>
-                z((D) => {
-                  const O = { ...D };
-                  return O[d] === _ && delete O[d], O;
+              color: j,
+              children: I,
+              value: a,
+              onValueChange: h,
+            } = f,
+            [T, z] = (0, i.useState)({}),
+            $ = (0, i.useCallback)((x, P) => z((_) => ({ ..._, [P]: x })), []),
+            y = (0, i.useCallback)(
+              (x, P) =>
+                z((_) => {
+                  const D = { ..._ };
+                  return D[P] === x && delete D[P], D;
                 }),
               [],
             ),
-            A = (_) => {
-              let d = 0;
-              switch (_.key) {
+            W = (x) => {
+              let P = 0;
+              switch (x.key) {
                 case " ":
                 case "Enter":
                 case "ArrowRight":
-                  d = 1;
+                  P = 1;
                   break;
                 case "ArrowLeft":
-                  d = -1;
+                  P = -1;
                   break;
               }
-              if (d) {
-                const D = Array.from(Object.values(h)).sort(K);
-                let O;
-                if (j === null) O = d > 0 ? 0 : D.length - 1;
+              if (P) {
+                const _ = Array.from(Object.values(T)).sort(K);
+                let D;
+                if (a === null) D = P > 0 ? 0 : _.length - 1;
                 else {
-                  const s = h[j],
-                    m = D.findIndex((r) => r === s);
-                  (0, y.wT)(
-                    typeof m == "number",
+                  const u = T[a],
+                    r = _.findIndex((M) => M === u);
+                  (0, R.wT)(
+                    typeof r == "number",
                     "Could not find current segmented value position",
                   ),
-                    (O = m + d);
+                    (D = r + P);
                 }
-                const Z = D[O < 0 ? D.length + O : O % D.length],
-                  n = Object.keys(h).find((s) => h[s] === Z);
-                typeof n != "string"
+                const n = _[D < 0 ? _.length + D : D % _.length],
+                  s = Object.keys(T).find((u) => T[u] === n);
+                typeof s != "string"
                   ? console.error("Could not find next segmeneted value")
-                  : (a(n), _.stopPropagation(), _.preventDefault());
+                  : (h(s), x.stopPropagation(), x.preventDefault());
               }
             },
-            R = (0, f.f)("SegmentedControl", o),
-            $ = (0, i.useMemo)(
+            G = (0, m.f)("SegmentedControl", o),
+            Z = (0, i.useMemo)(
               () => ({
-                value: j,
-                onValueChange: a,
-                register: W,
-                unregister: F,
+                value: a,
+                onValueChange: h,
+                register: $,
+                unregister: y,
                 radius: l,
-                size: g,
+                size: C,
               }),
-              [j, a, W, F, l, g],
+              [a, h, $, y, l, C],
             );
-          return (0, t.jsx)(M.j, {
+          return (0, t.jsx)(S.j, {
             clickable: !1,
             hoverable: !1,
             focusable: !1,
-            variant: R,
+            variant: G,
             radius: l,
-            size: g,
+            size: C,
             status: c,
-            className: S()(E.SegmentedControlBox, E[`Variant-${R}`]),
+            className: L()(g.SegmentedControlBox, g[`Variant-${G}`]),
             tabIndex: 0,
-            onKeyDown: A,
-            children: (0, t.jsx)(B.Provider, {
-              value: $,
-              children: (0, t.jsxs)(I.az, {
-                className: E.SegmentedControl,
+            onKeyDown: W,
+            children: (0, t.jsx)(U.Provider, {
+              value: Z,
+              children: (0, t.jsxs)(O.az, {
+                className: g.SegmentedControl,
                 style: { "--outer-radius": `var(--radius-${l})` },
-                children: [v, j !== null && (0, t.jsx)(Y, { radius: l })],
+                children: [
+                  I,
+                  a !== null && (0, t.jsx)(F, { radius: l, color: j }),
+                ],
               }),
             }),
           });
         }
-        function N(C) {
-          const { value: o, children: l, disabled: g } = C,
-            c = (0, i.useContext)(B),
-            [v, j] = (0, i.useState)(),
+        function N(f) {
+          const { value: o, children: l, disabled: C } = f,
+            c = (0, i.useContext)(U),
+            [j, I] = (0, i.useState)(),
             { register: a, unregister: h } = c || {};
           if (
             ((0, i.useEffect)(
-              () => (!v || !a || !h ? () => {} : (a(v, o), () => h(v, o))),
-              [a, h, o, v],
+              () => (!j || !a || !h ? () => {} : (a(j, o), () => h(j, o))),
+              [a, h, o, j],
             ),
             !c)
           )
             return null;
-          const { value: z, onValueChange: W, radius: F, size: A } = c,
-            R = o === z,
-            $ = (d) => {
-              d.stopPropagation(), d.preventDefault(), !(R || g) && W(o);
+          const { value: T, onValueChange: z, radius: $, size: y } = c,
+            W = o === T,
+            G = (x) => {
+              x.stopPropagation(), x.preventDefault(), !(W || C) && z(o);
             },
-            _ = l === void 0 ? o : l;
-          return (0, t.jsx)(x.s, {
+            Z = l === void 0 ? o : l;
+          return (0, t.jsx)(E.s, {
             justify: "center",
             align: "center",
-            ref: j,
-            onClick: $,
-            "data-selected": R ? "true" : "false",
-            className: S()(E.Item, A && E[`Size-${A}`], g ? E.disabled : ""),
-            children: _,
+            ref: I,
+            onClick: G,
+            "data-selected": W ? "true" : "false",
+            className: L()(g.Item, y && g[`Size-${y}`], C ? g.disabled : ""),
+            children: Z,
           });
         }
-        function u(C) {
-          const { options: o, getOptionLabel: l = (c) => c, ...g } = C;
-          return (0, t.jsx)(u.Root, {
-            ...g,
+        function d(f) {
+          const { options: o, getOptionLabel: l = (c) => c, ...C } = f;
+          return (0, t.jsx)(d.Root, {
+            ...C,
             children: o.map((c) =>
-              (0, t.jsx)(u.Item, { value: c, children: l(c) }, c),
+              (0, t.jsx)(d.Item, { value: c, children: l(c) }, c),
             ),
           });
         }
-        (u.Item = N), (u.Root = P);
-        function Y(C) {
-          const { radius: o } = C;
-          return (0, t.jsx)(I.az, {
-            className: E.IndicatorPosition,
-            children: (0, t.jsx)("div", { className: E.Indicator }),
+        (d.Item = N), (d.Root = v);
+        function F(f) {
+          const { radius: o, color: l } = f;
+          return (0, t.jsx)(O.az, {
+            className: g.IndicatorPosition,
+            children: (0, t.jsx)("div", {
+              className: g.Indicator,
+              "data-accent-color": l,
+            }),
           });
         }
-        function K(C, o) {
-          const l = C.compareDocumentPosition(o);
+        function K(f, o) {
+          const l = f.compareDocumentPosition(o);
           return l & Node.DOCUMENT_POSITION_FOLLOWING
             ? -1
             : l & Node.DOCUMENT_POSITION_PRECEDING

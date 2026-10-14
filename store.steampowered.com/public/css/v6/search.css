@@ -544,6 +544,28 @@
 	justify-content: flex-end;
 	align-items: center;
 }
+.search_discount_and_price:has( > .prepurchase_tag ) {
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 6px;
+}
+.search_discount_and_price:has( > .prepurchase_tag ) .discount_block {
+	height: auto;
+}
+@media screen and (max-width: 910px)
+{
+	html.responsive .search_discount_and_price:has( > .prepurchase_tag ) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+		gap: 2px;
+	}
+	html.responsive .search_discount_and_price > .prepurchase_tag {
+		margin-right: 8px;
+	}
+}
 .search_discount_and_price .discount_block .discount_prices {
 	background-color: inherit;
 }

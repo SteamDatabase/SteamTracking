@@ -3,12 +3,12 @@
 "use strict";
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [12694],
+    [2694],
     {
-      6600: (be, de, g) => {
-        g.d(de, { td: () => ae });
-        var k = g(14947),
-          x = g(3166),
+      6600: (be, de, S) => {
+        S.d(de, { td: () => ae });
+        var k = S(14947),
+          x = S(3166),
           _ = Object.defineProperty,
           w = Object.getOwnPropertyDescriptor,
           pe = (C, d, m) =>
@@ -113,8 +113,8 @@
               });
         }
       },
-      90828: (be, de, g) => {
-        g.d(de, { J8: () => _, X8: () => x });
+      90828: (be, de, S) => {
+        S.d(de, { J8: () => _, X8: () => x });
         var k = ((w) => (
             (w[(w.Hover = 0)] = "Hover"),
             (w[(w.ClickPopup = 1)] = "ClickPopup"),
@@ -129,8 +129,8 @@
           ))(x || {});
         class _ {}
       },
-      25317: (be, de, g) => {
-        g.d(de, {
+      25317: (be, de, S) => {
+        S.d(de, {
           M5: () => j,
           MU: () => ee,
           MX: () => ve,
@@ -139,19 +139,19 @@
           fn: () => J,
           j: () => ye,
         });
-        var k = g(10142),
-          x = g(41735),
-          _ = g.n(x),
-          w = g(14947),
-          pe = g(72604),
-          q = g(76559),
-          $ = g(61639),
-          re = g(22950),
-          le = g(7582),
-          P = g(28462),
-          ae = g(34592),
-          R = g(3166),
-          C = g(34032),
+        var k = S(10142),
+          x = S(41735),
+          _ = S.n(x),
+          w = S(14947),
+          pe = S(72604),
+          q = S(76559),
+          $ = S(61639),
+          re = S(22950),
+          le = S(7582),
+          P = S(28462),
+          ae = S(34592),
+          R = S(3166),
+          C = S(34032),
           d = Object.defineProperty,
           m = Object.getOwnPropertyDescriptor,
           u = (T, s, i) =>
@@ -165,12 +165,12 @@
               : (T[s] = i),
           f = (T, s, i, p) => {
             for (
-              var S = p > 1 ? void 0 : p ? m(s, i) : s, b = T.length - 1, I;
+              var g = p > 1 ? void 0 : p ? m(s, i) : s, b = T.length - 1, I;
               b >= 0;
               b--
             )
-              (I = T[b]) && (S = (p ? I(s, i, S) : I(S)) || S);
-            return p && S && d(s, i, S), S;
+              (I = T[b]) && (g = (p ? I(s, i, g) : I(g)) || g);
+            return p && g && d(s, i, g), g;
           },
           B = (T, s, i) => u(T, typeof s != "symbol" ? s + "" : s, i);
         let D = !1;
@@ -290,8 +290,8 @@
                   (i =
                     !!p &&
                     p.some(
-                      (S) =>
-                        re.es.GetOrCreateBroadcastInfo(S.steamid).m_nAppID ===
+                      (g) =>
+                        re.es.GetOrCreateBroadcastInfo(g.steamid).m_nAppID ===
                         s,
                     ));
               }),
@@ -303,9 +303,9 @@
             return (
               this.m_lookupStreams.forEach((p) => {
                 p == null ||
-                  p.forEach((S) => {
-                    re.es.GetOrCreateBroadcastInfo(S.steamid).m_nAppID === s &&
-                      i.push(S);
+                  p.forEach((g) => {
+                    re.es.GetOrCreateBroadcastInfo(g.steamid).m_nAppID === s &&
+                      i.push(g);
                   });
               }),
               i
@@ -350,20 +350,20 @@
                 include_trailers: !0,
               });
             const p = k.A.Get().GetApp(s.nAppIDVOD),
-              S = new C.TT();
+              g = new C.TT();
             if (
-              ((S.accountid = 0),
-              (S.nAppIDVOD = s.nAppIDVOD),
-              (S.default_selection_priority = C.mY.k_ePrimary),
-              (S.current_selection_priority = C.mY.k_ePrimary),
-              (S.thumbnail_http_address =
+              ((g.accountid = 0),
+              (g.nAppIDVOD = s.nAppIDVOD),
+              (g.default_selection_priority = C.mY.k_ePrimary),
+              (g.current_selection_priority = C.mY.k_ePrimary),
+              (g.thumbnail_http_address =
                 (p == null ? void 0 : p.GetAssets().GetHeaderURL()) || ""),
-              (S.title = (p == null ? void 0 : p.GetName()) || ""),
-              this.GetStreams(s).unshift(S),
+              (g.title = (p == null ? void 0 : p.GetName()) || ""),
+              this.GetStreams(s).unshift(g),
               i)
             ) {
               const b = this.GetStreamsLookupKeyFromDef(s);
-              this.m_playReadyStream.set(b, S);
+              this.m_playReadyStream.set(b, g);
             }
           }
           async HintLoadEmbeddablePreviewStreams(s) {
@@ -383,8 +383,8 @@
                 )),
                 this.HandleHintLoadBroadcastResponse(s, i.data)
               );
-            } catch (S) {
-              let b = (0, ae.H)(S);
+            } catch (g) {
+              let b = (0, ae.H)(g);
               console.error(
                 "HintLoadEmbeddablePreviewStreams hit error loading: " +
                   b.strErrorMsg,
@@ -398,8 +398,8 @@
               p = this.GetStreamsLookupKeyFromParam(i);
             if (!this.m_inFlightRequests.has(p)) {
               this.m_lookupKeyToEmbedStreamDef.set(p, s);
-              const S = this.InternalHintLoadEmbeddableStreams(s, i);
-              this.m_inFlightRequests.set(p, S);
+              const g = this.InternalHintLoadEmbeddableStreams(s, i);
+              this.m_inFlightRequests.set(p, g);
             }
             return this.m_inFlightRequests.get(p);
           }
@@ -410,16 +410,16 @@
             );
             if ((0, C.h7)(p)) return this.HandleHintLoadBroadcastResponse(s, p);
             try {
-              let S = null;
+              let g = null;
               return (
-                (S = await _().get(
+                (g = await _().get(
                   R.TS.STORE_BASE_URL + "broadcast/ajaxgetstreamersforpage",
                   { params: i },
                 )),
-                this.HandleHintLoadBroadcastResponse(s, S.data)
+                this.HandleHintLoadBroadcastResponse(s, g.data)
               );
-            } catch (S) {
-              let b = (0, ae.H)(S);
+            } catch (g) {
+              let b = (0, ae.H)(g);
               console.error(
                 "HintLoadEmbeddableStreams hit error loading: " + b.strErrorMsg,
                 b,
@@ -448,7 +448,7 @@
                     (this.m_bUseFakeData = !0))),
               i.broadcast_chat_visibility &&
                 (this.m_pageChatStatus = i.broadcast_chat_visibility);
-            const S = new Array();
+            const g = new Array();
             (0, w.h5)(() => {
               i.filtered.forEach((G) => {
                 if (!G.steamid) {
@@ -462,7 +462,7 @@
                   G.current_selection_priority === void 0 &&
                     (G.current_selection_priority =
                       G.default_selection_priority),
-                  se != re.fO && S.push(se);
+                  se != re.fO && g.push(se);
               });
             });
             const b = this.GetStreamsLookupKeyFromDef(s);
@@ -477,12 +477,12 @@
             return await this.AutoStartVideoStream(s, I), I;
           }
           ExtractBroadcastPrioritiesFromPartnerEventForPreview(s, i) {
-            var p, S;
+            var p, g;
             const b = Array.from(
                 (p = s.jsondata.broadcast_whitelist) != null ? p : [],
               ),
               I = Array.from(
-                (S = s.jsondata.broadcast_priority) != null ? S : [],
+                (g = s.jsondata.broadcast_priority) != null ? g : [],
               ),
               G = new Map();
             for (let Q = 0; Q < b.length && !(Q >= I.length); Q++)
@@ -497,26 +497,26 @@
             if (this.m_bMapHasStartedVideo.get(p)) return null;
             if (this.m_bUseFakeData) {
               if (!this.m_playReadyStream.get(p)) {
-                const S = {
+                const g = {
                   accountid: 0,
                   thumbnail_http_address: "",
                   default_selection_priority: C.mY.k_eGeneral,
                   current_selection_priority: C.mY.k_eGeneral,
                 };
-                this.m_playReadyStream.set(p, S);
+                this.m_playReadyStream.set(p, g);
               }
               return this.m_playReadyStream;
             }
             return this.PlayFromAvailableStreams(s, i);
           }
           async PlayFromAvailableStreams(s, i, p = !1) {
-            const S = new Set();
+            const g = new Set();
             for (;;) {
-              const b = i.filter((Q) => !S.has(Q) && (!p || !Q.nAppIDVOD)),
+              const b = i.filter((Q) => !g.has(Q) && (!p || !Q.nAppIDVOD)),
                 I = this.GetAutoStartStream(b);
               if (!I) return null;
               if (await this.AttemptToPlayStream(s, I)) return I;
-              S.add(I);
+              g.add(I);
             }
           }
           async AttemptToPlayStream(s, i) {
@@ -532,9 +532,9 @@
             )
               this.m_playReadyStream.set(p, i);
             else {
-              const S = await this.m_mapBroadcastChecked.get(i.accountid);
-              if ((S == null ? void 0 : S.success) == pe.R) {
-                (i.steamid = S.steamid),
+              const g = await this.m_mapBroadcastChecked.get(i.accountid);
+              if ((g == null ? void 0 : g.success) == pe.R) {
+                (i.steamid = g.steamid),
                   this.m_playReadyStream.set(p, i),
                   this.GetConcurrentStreams(s) > 1
                     ? (this.m_streamChatStatus = "hide")
@@ -548,7 +548,7 @@
           }
           async InternalAttemptToPlayStream(s, i) {
             let p = this.GetStreamsLookupKeyFromDef(s),
-              S = null;
+              g = null;
             try {
               const b = R.TS.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast";
               let I = {
@@ -556,7 +556,7 @@
                 viewer_token: re.es.GetViewerToken(),
                 origin: self.origin,
               };
-              return (S = await _().get(b, { params: I })), S.data;
+              return (g = await _().get(b, { params: I })), g.data;
             } catch (b) {
               let I = (0, ae.H)(b);
               console.error(
@@ -570,13 +570,13 @@
             if (!s) return null;
             const i = s.filter((I) => J(I)),
               p = i.reduce((I, G) => Math.max(I, ie(G)), 0),
-              S = i.filter((I) => ie(I) === p);
-            if (S.length === 0) return null;
-            const b = Math.floor(Math.random() * S.length);
-            return S[b];
+              g = i.filter((I) => ie(I) === p);
+            if (g.length === 0) return null;
+            const b = Math.floor(Math.random() * g.length);
+            return g[b];
           }
           MapEmbeddableStreamToRequest(s) {
-            var i, p, S;
+            var i, p, g;
             return {
               appid: s.appid,
               promotionName: s.bIsPreview ? "preview" : s.promotionName,
@@ -599,7 +599,7 @@
               hubtype: (i = s.event) == null ? void 0 : i.GetContentHubType(),
               hubcategory:
                 (p = s.event) == null ? void 0 : p.GetContentHubCategory(),
-              hubtagid: (S = s.event) == null ? void 0 : S.GetContentHubTag(),
+              hubtagid: (g = s.event) == null ? void 0 : g.GetContentHubTag(),
               tabuniqueid: s.tabuniqueid,
               tabfilter: s.tabfilter,
               rt_now_override_test: le.HD.BHasTimeOverride()
@@ -660,12 +660,12 @@
         }
         const ve = new P.T();
       },
-      18614: (be, de, g) => {
-        g.d(de, { l: () => R, m: () => ae });
-        var k = g(14947),
-          x = g(76559),
-          _ = g(7582),
-          w = g(77495),
+      18614: (be, de, S) => {
+        S.d(de, { l: () => R, m: () => ae });
+        var k = S(14947),
+          x = S(76559),
+          _ = S(7582),
+          w = S(77495),
           pe = Object.defineProperty,
           q = Object.getOwnPropertyDescriptor,
           $ = (C, d, m) =>
@@ -834,13 +834,13 @@
         let ae = P;
         const R = new ae();
       },
-      22950: (be, de, g) => {
-        g.d(de, { es: () => Z, fK: () => qe, a0: () => Xe, fO: () => Le });
-        var k = g(41735),
-          x = g.n(k),
-          _ = g(14947),
-          w = g(6600),
-          pe = g(90828),
+      22950: (be, de, S) => {
+        S.d(de, { es: () => Z, fK: () => qe, a0: () => Xe, fO: () => Le });
+        var k = S(41735),
+          x = S.n(k),
+          _ = S(14947),
+          w = S(6600),
+          pe = S(90828),
           q = Object.defineProperty,
           $ = (l, e, t) =>
             e in l
@@ -1019,15 +1019,15 @@
           }
           UpdateSoundtrack(e, t) {}
         }
-        var R = g(48937),
-          C = g(89083),
-          d = g(13854),
-          m = g(3166),
-          u = g(27066),
-          f = g(7409),
-          B = g(14043),
-          D = g(8323),
-          J = g(72604),
+        var R = S(48937),
+          C = S(89083),
+          d = S(13854),
+          m = S(3166),
+          u = S(27066),
+          f = S(7409),
+          B = S(14043),
+          D = S(8323),
+          J = S(72604),
           j = Object.defineProperty,
           Y = Object.getOwnPropertyDescriptor,
           ye = (l, e, t) =>
@@ -1364,34 +1364,35 @@
           ie([_.XI.bound], T.prototype, "CaptureStatsForDisplay", 1),
           ie([u.o], T.prototype, "OnVideoPause", 1),
           ie([u.o], T.prototype, "OnVideoResize", 1);
-        var s = g(99412),
-          i = g(90711),
-          p = g(41635),
-          S = g(71742),
-          b = g(18210),
-          I = g(34592),
-          G = g(40497),
-          Q = g(9032),
-          se = g(35038),
-          Ve = g(13018),
-          K = g(80613),
-          M = g.n(K),
-          n = g(75245),
-          Ye = Object.defineProperty,
-          $e = (l, e, t) =>
+        var s = S(99412),
+          i = S(90711),
+          p = S(41635),
+          g = S(71742),
+          b = S(18210),
+          I = S(34592),
+          G = S(40497),
+          Q = S(9032),
+          se = S(35038),
+          Ve = S(77008),
+          Ye = S(60298),
+          K = S(80613),
+          M = S.n(K),
+          n = S(75245),
+          $e = Object.defineProperty,
+          Qe = (l, e, t) =>
             e in l
-              ? Ye(l, e, {
+              ? $e(l, e, {
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
                   value: t,
                 })
               : (l[e] = t),
-          X = (l, e, t) => $e(l, typeof e != "symbol" ? e + "" : e, t);
-        function _t(l) {
+          X = (l, e, t) => Qe(l, typeof e != "symbol" ? e + "" : e, t);
+        function ft(l) {
           return "unknown ETrailerConvertState ( " + l + " )";
         }
-        function ft(l) {
+        function St(l) {
           return "unknown ETrailerConvertTargetType ( " + l + " )";
         }
         const Te = class E extends K.Message {
@@ -1460,7 +1461,7 @@
           }
         };
         X(Te, "sm_m"), X(Te, "sm_mbf");
-        let Qe = Te;
+        let Ze = Te;
         const Me = class A extends K.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
@@ -1527,7 +1528,7 @@
           }
         };
         X(Me, "sm_m"), X(Me, "sm_mbf");
-        let Ze = Me;
+        let et = Me;
         const Pe = class U extends K.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
@@ -1589,7 +1590,7 @@
           }
         };
         X(Pe, "sm_m"), X(Pe, "sm_mbf");
-        let et = Pe;
+        let tt = Pe;
         const Oe = class L extends K.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
@@ -1652,7 +1653,7 @@
           }
         };
         X(Oe, "sm_m"), X(Oe, "sm_mbf");
-        let tt = Oe;
+        let at = Oe;
         const Re = class W extends K.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
@@ -1715,7 +1716,7 @@
           }
         };
         X(Re, "sm_m"), X(Re, "sm_mbf");
-        let at = Re;
+        let st = Re;
         const ke = class F extends K.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
@@ -1936,7 +1937,7 @@
           }
         };
         X(Ee, "sm_m"), X(Ee, "sm_mbf");
-        let st = Ee;
+        let rt = Ee;
         const Ae = class N extends K.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
@@ -1992,14 +1993,14 @@
           }
         };
         X(Ae, "sm_m"), X(Ae, "sm_mbf");
-        let rt = Ae;
+        let it = Ae;
         var Ue;
         ((l) => {
           function e(r, o, h) {
             return r.SendMsg(
               "Video.ClientGetVideoURL#1",
-              (0, se.I8)(Qe, o, h),
-              Ze,
+              (0, se.I8)(Ze, o, h),
+              et,
               { ePrivilege: 1 },
             );
           }
@@ -2015,8 +2016,8 @@
           function a(r, o, h) {
             return r.SendMsg(
               "Video.GetVideoBookmarks#1",
-              (0, se.I8)(st, o, h),
-              rt,
+              (0, se.I8)(rt, o, h),
+              it,
               { ePrivilege: 1 },
             );
           }
@@ -2026,7 +2027,7 @@
         ((l) => {
           l.NotifyUnlockedH264Handler = {
             name: "VideoClient.NotifyUnlockedH264#1",
-            request: et,
+            request: tt,
           };
         })(ze || (ze = {}));
         var Ne;
@@ -2034,24 +2035,24 @@
           function e(t, a, r) {
             return t.SendMsg(
               "FovasVideo.ClientGetOPFSettings#1",
-              (0, se.I8)(tt, a, r),
-              at,
+              (0, se.I8)(at, a, r),
+              st,
               { ePrivilege: 1 },
             );
           }
           l.ClientGetOPFSettings = e;
         })(Ne || (Ne = {}));
-        var it = Object.defineProperty,
-          nt = (l, e, t) =>
+        var nt = Object.defineProperty,
+          ot = (l, e, t) =>
             e in l
-              ? it(l, e, {
+              ? nt(l, e, {
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
                   value: t,
                 })
               : (l[e] = t),
-          we = (l, e, t) => nt(l, typeof e != "symbol" ? e + "" : e, t);
+          we = (l, e, t) => ot(l, typeof e != "symbol" ? e + "" : e, t);
         const xe = class fe {
           constructor() {
             we(this, "m_transport", null),
@@ -2143,9 +2144,8 @@
                 a.data.success == J.R &&
                 a.data.webapi_token
               ) {
-                this.m_transport = new Ve.D(
-                  m.TS.WEBAPI_BASE_URL,
-                  a.data.webapi_token,
+                this.m_transport = (0, Ye.C)(
+                  new Ve.D(m.TS.WEBAPI_BASE_URL, a.data.webapi_token),
                 ).GetServiceTransport();
                 return;
               }
@@ -2161,7 +2161,7 @@
         };
         we(xe, "s_VODStore");
         let De = xe;
-        class ot {
+        class lt {
           constructor(e) {
             we(this, "m_appid"), (this.m_appid = e);
           }
@@ -2181,10 +2181,10 @@
               : 0;
           }
         }
-        var Ie = g(44930),
+        var Ie = S(44930),
           je = Object.defineProperty,
-          lt = Object.getOwnPropertyDescriptor,
-          mt = (l, e, t) =>
+          mt = Object.getOwnPropertyDescriptor,
+          dt = (l, e, t) =>
             e in l
               ? je(l, e, {
                   enumerable: !0,
@@ -2195,17 +2195,17 @@
               : (l[e] = t),
           v = (l, e, t, a) => {
             for (
-              var r = a > 1 ? void 0 : a ? lt(e, t) : e, o = l.length - 1, h;
+              var r = a > 1 ? void 0 : a ? mt(e, t) : e, o = l.length - 1, h;
               o >= 0;
               o--
             )
               (h = l[o]) && (r = (a ? h(e, t, r) : h(r)) || r);
             return a && r && je(e, t, r), r;
           },
-          c = (l, e, t) => mt(l, typeof e != "symbol" ? e + "" : e, t);
+          c = (l, e, t) => dt(l, typeof e != "symbol" ? e + "" : e, t);
         const Ke = 1800,
-          dt = 1e3,
-          ct = 5 * 1e3,
+          ct = 1e3,
+          pt = 5 * 1e3,
           Le = 7;
         var qe = ((l) => (
           (l[(l.None = 0)] = "None"),
@@ -2215,7 +2215,7 @@
           (l[(l.Error = 4)] = "Error"),
           l
         ))(qe || {});
-        async function pt(l, e, t) {
+        async function ut(l, e, t) {
           if (!e) return;
           let a = new FormData();
           a.append("steamid", l),
@@ -2353,12 +2353,12 @@
         v([_.sH], ge.prototype, "m_eWatchState", 2),
           v([_.sH], ge.prototype, "m_strStateDescription", 2),
           v([_.XI], ge.prototype, "SetState", 1);
-        class ut extends ge {
+        class ht extends ge {
           constructor() {
             super(...arguments), c(this, "m_clipID"), c(this, "m_data");
           }
         }
-        class ht extends ge {
+        class _t extends ge {
           constructor() {
             super(...arguments),
               c(this, "m_nAppIDVOD"),
@@ -2487,7 +2487,7 @@
             e.Stop(),
               a &&
                 (a.m_ulBroadcastID &&
-                  pt(
+                  ut(
                     t,
                     a.m_ulBroadcastID,
                     this.m_broadcastSettings.ulViewerToken,
@@ -2545,7 +2545,7 @@
             let t = this.m_mapClips.get(e);
             return (
               t ||
-              ((t = new ut()),
+              ((t = new ht()),
               (t.m_clipID = e),
               (t.m_eWatchState = 0),
               this.m_mapClips.set(e, t),
@@ -2556,7 +2556,7 @@
             let t = this.m_mapVODs.get(e);
             return (
               t ||
-              ((t = new ht()),
+              ((t = new _t()),
               (t.m_nAppIDVOD = e),
               (t.m_eWatchState = 0),
               this.m_mapVODs.set(e, t),
@@ -2611,7 +2611,7 @@
             }
           }
           DelayedGetBroadcastManifest(e, t, a = Date.now()) {
-            e.m_schManifestTimeout.Schedule(ct, () =>
+            e.m_schManifestTimeout.Schedule(pt, () =>
               this.GetBroadcastManifest(e, t, a),
             );
           }
@@ -2827,7 +2827,7 @@
           }
           SaveBroadcastSettings() {
             window.localStorage &&
-              this.m_schSaveSettings.Schedule(dt, () => {
+              this.m_schSaveSettings.Schedule(ct, () => {
                 try {
                   window.localStorage.setItem(
                     "broadcastSettings",
@@ -3014,7 +3014,7 @@
             this.m_fnOnVideoEnd = e;
           }
           InitPlayer() {
-            (0, S.wT)(!this.m_player, "Initialized twice?"),
+            (0, g.wT)(!this.m_player, "Initialized twice?"),
               this.m_listeners.AddEventListener(
                 this.m_elVideo,
                 "playing",
@@ -3136,7 +3136,7 @@
               (this.m_player = a),
               m.iA.logged_in &&
                 e.m_nAppIDVOD &&
-                a.SetBookmarkAdapter(new ot(e.m_nAppIDVOD)),
+                a.SetBookmarkAdapter(new lt(e.m_nAppIDVOD)),
               e.m_manifestURL && a.PlayMPD(e.m_manifestURL),
               this.SetVolume(this.m_nVolume),
               (t = this.m_player) == null || t.SetMuted(this.m_bMuted);

@@ -61,7 +61,6 @@
     "Reservation_Waitlist_NotSignedIn_Desc": "Войдите в Steam, чтобы присоединиться к списку ожидания. Нажмите ОК, чтобы перейти на страницу входа.",
     "Reservation_OnRegularReserveForModel": "Вы находитесь в очереди бронирования %1$s",
     "Reservation_PostShuffle_TAndC": "Действуют <1>условия использования</1>.",
-    "machine_dummy": "dummy",
     "PriceDisplay_YourPrice": "Цена для вас:",
     "PriceGrid_NormalPrice": "ОБЫЧНАЯ",
     "PriceGrid_RecentPrice": "МИН. ЗА 30 ДНЕЙ",

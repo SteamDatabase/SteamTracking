@@ -973,10 +973,6 @@ td.rdtYear:hover {
 .GamepadMode ._3ypRUtQoOfOrCsyHlzfGm4._2A58_XmT-KCSwE_kh-xntF {
   padding: 3px;
 }
-.GamepadMode ._3ypRUtQoOfOrCsyHlzfGm4 > :first-child.XjPmFc2t_i1DAuEXEbIX,
-.GamepadMode ._3ypRUtQoOfOrCsyHlzfGm4 > :first-child > .XjPmFc2t_i1DAuEXEbIX {
-  scroll-margin-top: 1000px;
-}
 .XjPmFc2t_i1DAuEXEbIX {
   position: relative;
   padding: 15px;
@@ -986,6 +982,9 @@ td.rdtYear:hover {
 }
 .XjPmFc2t_i1DAuEXEbIX:has(.rdt.rdtOpen) {
   z-index: 2;
+}
+.XjPmFc2t_i1DAuEXEbIX {
+  scroll-margin-top: var(--store-menu-overlap-height, 46px);
 }
 @keyframes xtUORpc8Xy9Hs_tdAIitT {
   from {

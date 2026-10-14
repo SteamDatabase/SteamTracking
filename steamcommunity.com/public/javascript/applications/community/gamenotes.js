@@ -2,16 +2,16 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [51220],
+    [1220],
     {
-      92987: (Br, br, d) => {
+      92987: (Br, Mr, d) => {
         "use strict";
-        d.r(br), d.d(br, { default: () => xl });
+        d.r(Mr), d.d(Mr, { default: () => xl });
         var m = d(7850),
           v = d(99412),
           B = d(90626),
           q = d(92757),
-          Mr = d(68312);
+          wr = d(68312);
         const D = {
           List: () => "/notes/list",
           AppNotes: (o, e) => `/notes/app/${o}/${e != null ? e : ""}`,
@@ -10351,7 +10351,7 @@
         function Oo() {
           return B.useContext(Ar).setSpellcheckEnabled;
         }
-        var wr = d(18210);
+        var br = d(18210);
         const No = new Ns.wd("GameNotesCloudStore").Debug;
         function xo() {
           const o = Gr();
@@ -10430,7 +10430,7 @@
           const e = (0, Ds.jE)(),
             r = Gr();
           return B.useCallback(() => {
-            const s = (0, wr.we)("#UserGameNotes_UntitledNote_Title"),
+            const s = (0, br.we)("#UserGameNotes_UntitledNote_Title"),
               l = r.NewNote(o, s);
             return Ea(e, o, (u) => [...u, l]), l.id;
           }, [e, r, o]);
@@ -10515,7 +10515,7 @@
                     (0, m.jsx)(jr.hK, {}),
                     (0, m.jsx)(jr.ff, {
                       onClick: () => w(!f),
-                      tooltip: "#FormattingToolbar_ExpandOptions",
+                      tooltip: (0, br.we)("#FormattingToolbar_ExpandOptions"),
                       children: (0, m.jsx)(Zr.cLJ, {
                         direction: f ? "up" : "down",
                       }),
@@ -10530,7 +10530,7 @@
                       (0, m.jsx)(Lr.WJ, { schema: e, levels: 5 }),
                       (0, m.jsx)(jr.u3, {
                         nodeType: e.nodes.code_block,
-                        tooltip: (0, wr.we)("#FormattingToolbar_CodeBlock"),
+                        tooltip: (0, br.we)("#FormattingToolbar_CodeBlock"),
                         children: (0, m.jsx)(Zr.kNE, {}),
                       }),
                       (0, m.jsx)(jr.XQ, {}),
@@ -10562,7 +10562,7 @@
             E = (0, Hr.Qn)(),
             A = {
               onSecondaryButton: () => e(),
-              onSecondaryActionDescription: (0, wr.we)(
+              onSecondaryActionDescription: (0, br.we)(
                 "#UserGameNotes_DeleteNote",
               ),
               onDragOver: (ur) => ur.stopPropagation(),
@@ -10740,8 +10740,8 @@
                 active: !0,
                 children: (0, m.jsx)(ei.o0, {
                   bAlertDialog: !0,
-                  strTitle: (0, wr.we)("#Error_Generic"),
-                  strDescription: (0, wr.we)(
+                  strTitle: (0, br.we)("#Error_Generic"),
+                  strDescription: (0, br.we)(
                     "#UserGameNotes_ErrorSavingNotes",
                     e,
                   ),
@@ -10770,7 +10770,7 @@
                   deletePending: E,
                 }),
               (0, m.jsx)(ka.he, {
-                toolTipContent: "#UserGameNotes_DeleteNote",
+                toolTipContent: (0, br.we)("#UserGameNotes_DeleteNote"),
                 direction: "top",
                 children: (0, m.jsx)(Dr.$n, {
                   onClick: A,
@@ -10788,12 +10788,12 @@
             ? (0, m.jsx)(Dr.jn, {
                 onClick: () => r(),
                 className: hr.CloseWindowButton,
-                children: (0, wr.we)("#Button_SaveAndClose"),
+                children: (0, br.we)("#Button_SaveAndClose"),
               })
             : (0, m.jsx)(Dr.$n, {
                 onClick: () => r(),
                 className: hr.CloseWindowButton,
-                children: (0, wr.we)("#Button_Close"),
+                children: (0, br.we)("#Button_Close"),
               });
         }
         function pl(o) {
@@ -10801,11 +10801,11 @@
           return (0, m.jsx)(ei.EN, {
             active: !0,
             children: (0, m.jsx)(ei.o0, {
-              strTitle: (0, wr.we)("#UserGameNotes_DeleteNote"),
-              strDescription: (0, wr.we)("#UserGameNotes_PromptDelete"),
+              strTitle: (0, br.we)("#UserGameNotes_DeleteNote"),
+              strDescription: (0, br.we)("#UserGameNotes_PromptDelete"),
               onOK: () => s(),
               bOKDisabled: l,
-              strOKButtonText: (0, wr.we)("#Button_Delete"),
+              strOKButtonText: (0, br.we)("#Button_Delete"),
               closeModal: r,
             }),
           });
@@ -10892,8 +10892,8 @@
           );
         }
         function Qa(o) {
-          const e = (0, Mr.KV)(),
-            r = (0, Mr.rX)();
+          const e = (0, wr.KV)(),
+            r = (0, wr.rX)();
           return (0, xs.I)({
             queryKey: ["appinfo", o],
             queryFn: async () => wl(e, r).load(o),
@@ -10929,7 +10929,7 @@
               E && l(s, void 0, !0);
             }, [l, s, E]);
           const A = (0, m.jsx)(ka.he, {
-            toolTipContent: "#UserGameNotes_NewNote",
+            toolTipContent: (0, br.we)("#UserGameNotes_NewNote"),
             direction: "top",
             children: (0, m.jsx)(Dr.$n, {
               className: hr.NewNoteButton,
@@ -10969,7 +10969,7 @@
                 title:
                   ((Vr = Tr.title) == null ? void 0 : Vr.length) > 0
                     ? Tr.title
-                    : (0, wr.we)("#UserGameNotes_Untitled"),
+                    : (0, br.we)("#UserGameNotes_Untitled"),
                 identifier: Tr.id,
                 content: (0, m.jsx)(Cl, { noteParent: e, note: Tr }),
                 pageClassName: hr.NotePage,
@@ -10979,7 +10979,7 @@
             Rr = _s(),
             Kr = B.useCallback((Tr) => Rr(e, Tr), [Rr, e]),
             Fr = Hr.TS.IN_STEAMUI
-              ? (0, wr.we)("#UserGameNotes_NotesList")
+              ? (0, br.we)("#UserGameNotes_NotesList")
               : (0, m.jsx)(Sl, { noteParent: e });
           return E && u
             ? (0, m.jsx)(Dr.Bv, {
@@ -11018,7 +11018,7 @@
           return (
             "appid" in e ? (s = r == null ? void 0 : r.name) : (s = e.shortcut),
             (0, m.jsx)(m.Fragment, {
-              children: (0, wr.we)("#UserGameNotes_NotesForGame", s),
+              children: (0, br.we)("#UserGameNotes_NotesForGame", s),
             })
           );
         }
@@ -11068,7 +11068,7 @@
             : (0, m.jsxs)("div", {
                 children: [
                   (0, m.jsx)("h1", {
-                    children: (0, wr.we)("#UserGameNotes_NotesList"),
+                    children: (0, br.we)("#UserGameNotes_NotesList"),
                   }),
                   (0, m.jsx)("ul", {
                     children: r.map((s) =>
@@ -11099,7 +11099,7 @@
         function Tl(o, e, r = {}) {
           const { bIsPublic: s = !0 } = r,
             l = { unAppID: o, strMachineName: e, bIsPublic: s },
-            u = (0, Mr.KV)();
+            u = (0, wr.KV)();
           return (0, Ps.n)({
             mutationFn: async ({ files: g }) =>
               await Wl(
@@ -11214,7 +11214,7 @@
           });
         }
         function Dl() {
-          const o = (0, Mr.TR)(),
+          const o = (0, wr.TR)(),
             { mutateAsync: e } = Tl(v.oez, "Steam Community Web Interface", {
               bIsPublic: !0,
             }),
@@ -11228,17 +11228,17 @@
           return l;
         }
       },
-      8145: (Br, br, d) => {
+      8145: (Br, Mr, d) => {
         "use strict";
-        d.d(br, { op: () => a, CS: () => G, vE: () => i, Al: () => cr });
+        d.d(Mr, { op: () => a, CS: () => G, vE: () => i, Al: () => cr });
         const m = 0,
           v = 1,
           B = 2,
           q = 3;
-        var Mr = Object.defineProperty,
+        var wr = Object.defineProperty,
           D = (p, M, y) =>
             M in p
-              ? Mr(p, M, {
+              ? wr(p, M, {
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
@@ -11504,9 +11504,9 @@
           return T != 0 && (M[y] = h), M;
         }
       },
-      29950: (Br, br, d) => {
+      29950: (Br, Mr, d) => {
         "use strict";
-        d.d(br, { J: () => m });
+        d.d(Mr, { J: () => m });
         function m(v) {
           if (!v) return v;
           const B = v.trim(),
@@ -11520,14 +11520,14 @@
             : B;
         }
       },
-      99931: (Br, br, d) => {
+      99931: (Br, Mr, d) => {
         "use strict";
-        d.d(br, { W: () => a });
+        d.d(Mr, { W: () => a });
         var m = d(7850),
           v = d(57053),
           B = d(52893),
           q = d(90626),
-          Mr = d(18210),
+          wr = d(18210),
           D = d(29950),
           mr = d(12293),
           cr = d(19565),
@@ -11660,7 +11660,7 @@
               (0, m.jsx)("div", { className: G.Link, children: p }),
               (0, m.jsx)("div", {
                 className: G.LinkHelp,
-                children: (0, Mr.we)("#UserGameNotes_ClickToOpenLink"),
+                children: (0, wr.we)("#UserGameNotes_ClickToOpenLink"),
               }),
             ],
           });
@@ -11669,14 +11669,14 @@
           O.open(dr);
         }
       },
-      66243: (Br, br, d) => {
+      66243: (Br, Mr, d) => {
         "use strict";
-        d.d(br, { Oh: () => U, n9: () => cr, sP: () => Mr });
+        d.d(Mr, { Oh: () => U, n9: () => cr, sP: () => wr });
         var m = d(7850),
           v = d(24660),
           B = d(44375),
           q = d.n(B);
-        function Mr(a) {
+        function wr(a) {
           const { children: i, ...t } = a;
           return (0, m.jsx)(v.fu, {
             className: B.GreenButton,
@@ -11737,14 +11737,14 @@
           });
         }
       },
-      95987: (Br, br, d) => {
+      95987: (Br, Mr, d) => {
         "use strict";
-        d.d(br, { y: () => dr });
+        d.d(Mr, { y: () => dr });
         var m = d(35038),
           v = d(21196),
           B = d(57589),
           q = d(36174),
-          Mr = d(27066),
+          wr = d(27066),
           D = Object.defineProperty,
           mr = Object.getOwnPropertyDescriptor,
           cr = (O, n, p) =>
@@ -11842,12 +11842,12 @@
             return this.m_strProduct;
           }
         }
-        G([Mr.o], t.prototype, "CheckSend", 1);
+        G([wr.o], t.prototype, "CheckSend", 1);
         const dr = new t();
       },
-      35184: (Br, br, d) => {
+      35184: (Br, Mr, d) => {
         "use strict";
-        d.d(br, { R: () => q });
+        d.d(Mr, { R: () => q });
         var m = d(7850),
           v = d(90626),
           B = d(72739);
@@ -11862,7 +11862,7 @@
               msAnimationDuration: i = 250,
               children: t,
             } = D,
-            { style: dr, active: O, refDiv: n } = Mr(G, a, i);
+            { style: dr, active: O, refDiv: n } = wr(G, a, i);
           return !G && !O && !b
             ? null
             : (0, m.jsx)("div", {
@@ -11875,7 +11875,7 @@
                 children: t,
               });
         }
-        function Mr(D, mr = "height", cr = 250) {
+        function wr(D, mr = "height", cr = 250) {
           const G = v.useRef(null),
             U = v.useRef(!0),
             [b, a] = v.useState("idle"),
@@ -11934,14 +11934,14 @@
           );
         }
       },
-      95603: (Br, br, d) => {
+      95603: (Br, Mr, d) => {
         "use strict";
-        d.d(br, { DB: () => mr, PW: () => G, Ss: () => Mr, hk: () => D });
+        d.d(Mr, { DB: () => mr, PW: () => G, Ss: () => wr, hk: () => D });
         var m = d(7850),
           v = d(90626),
           B = d(72739),
           q = d(82734);
-        function Mr(U, b) {
+        function wr(U, b) {
           const a = v.useRef(void 0),
             i = v.useCallback(
               (O) => {

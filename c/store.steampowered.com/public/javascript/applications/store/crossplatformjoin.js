@@ -18,6 +18,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           return (0, _.jsx)(_._, {
@@ -66,7 +67,9 @@
         function _(_) {
           const { redirectURL: _, guestOption: _ } = _,
             [_] = (0, _.useState)(
-              new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+              new _._(
+                new _._(_._.WEBAPI_BASE_URL),
+              ).GetAnonymousServiceTransport(),
             ),
             [_, _] = (0, _.useState)(!1),
             _ = (_) => {

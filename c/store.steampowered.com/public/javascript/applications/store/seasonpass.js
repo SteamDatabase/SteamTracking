@@ -58,6 +58,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { appid: _ } = _,
@@ -232,7 +233,6 @@
             ),
           });
         }
-        const _ = {};
         function _(_) {
           const { milestone: _, baseGameAppID: _ } = _;
           return (0, _.jsxs)(_.Fragment, {
@@ -245,7 +245,7 @@
                     : "#SeasonPass_Event_Status",
                 ),
               }),
-              _.appid &&
+              !!_.appid &&
                 (0, _.jsx)(_, {
                   milestone: _,
                 }),
@@ -263,9 +263,10 @@
         }
         function _(_) {
           const { milestone: _ } = _,
-            [_] = (0, _._)(_.appid, _);
+            _ = (0, _._)(_.appid),
+            { data: _ } = (0, _._)(_);
           return (0, _.jsx)("a", {
-            href: _?.GetStorePageURL() || `${_._.STORE_BASE_URL}app/${_.appid}`,
+            href: (0, _._)(_) || `${_._.STORE_BASE_URL}app/${_.appid}`,
             children: (0, _._)("#SeasonPass_ShowStore"),
           });
         }

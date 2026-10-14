@@ -1,7 +1,7 @@
 "use strict";
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [91063],
+    [1063],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         __webpack_require__._(module_exports, {
@@ -10,7 +10,6 @@
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -955,6 +954,7 @@
           _.SendMsgSearchAppDataCacheByStoreKeywords = _;
         })(_ || (_ = {}));
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
@@ -2099,7 +2099,8 @@
             );
           }
         }
-        const _ = 3600,
+        const _ = 15,
+          _ = 3600,
           _ = "(1)";
         class _ {
           constructor(_) {
@@ -2118,14 +2119,20 @@
               _(this, "m_strCleanWords", ""),
               _(this, "m_strBannedPattern", ""),
               _(this, "m_strCleanPattern", ""),
+              _(this, "m_bWordListsComplete", !1),
+              _(this, "m_bHaveCompleteFilter", !1),
               _(this, "m_regexBannedWords", null),
               _(this, "m_regexCleanWords", null),
               _(this, "m_bShownFilterTip", !1),
               _(this, "m_bInitialized", !1),
               _(this, "m_bFilterChangedWhileLoading", !1),
               _(this, "m_bOngoingLoad", !1),
+              _(this, "m_promiseOngoingLoad", null),
+              _(this, "m_fnUnregisterDictionaryChanged"),
+              _(this, "m_rgUnregisterPlayerNotifications", []),
               _(this, "m_DataAccess"),
               _(this, "m_nLoadLanguagesRetryTimeout"),
+              _(this, "m_nLoadLanguagesRetryDelaySec", _),
               (0, _._)(this);
             let _ = new _.B4H();
             (this.m_TextFilterPreferences = {
@@ -2135,7 +2142,7 @@
               (this.m_TextFilterWords = new _.EyI()),
               (this.m_DataAccess = _);
           }
-          async Init(_ = 0, _ = null, _ = null) {
+          async Init(_ = 0, _ = null, _ = null, _ = null) {
             (this.m_bInitialized = !1),
               (this.m_WebUIServiceTransport = _),
               (this.m_unAccountID = _),
@@ -2144,42 +2151,86 @@
               (this.m_strBannedWords = ""),
               (this.m_strProfanityWords = ""),
               (this.m_strCleanWords = ""),
+              (this.m_bWordListsComplete = !1),
               this.InitSteamEngineLanguages(),
+              this.RegisterPlayerNotifications(_),
               await this.LoadFilter(),
               await this.LoadTextFilterPreferences(),
               await this.LoadTextFilterWords(),
               await this.RequestUpdatedSettings(),
-              await (0, _._)(() => !this.m_bOngoingLoad),
-              await this.InitFiltersWithRetry();
+              (this.m_nLoadLanguagesRetryDelaySec = _),
+              await this.EnsureFiltersLoaded();
           }
           InitSteamEngineLanguages() {
+            var _;
             this.m_WebUIServiceTransport.BIsValid() &&
-              (this.m_WebUIServiceTransport.messageHandlers.RegisterServiceNotificationHandler(
-                _.NotifyTextFilterDictionaryChangedHandler,
-                this.OnTextFilterDictionaryChanged,
-              ),
+              ((_ = this.m_fnUnregisterDictionaryChanged) == null ||
+                _.call(this),
+              (this.m_fnUnregisterDictionaryChanged =
+                this.m_WebUIServiceTransport.messageHandlers.RegisterServiceNotificationHandler(
+                  _.NotifyTextFilterDictionaryChangedHandler,
+                  this.OnTextFilterDictionaryChanged,
+                ).unregister),
               this.InitSteamEngineLanguage(_._.LANGUAGE),
               _._.LANGUAGE !== "english" &&
                 this.InitSteamEngineLanguage("english"));
           }
           OnTextFilterDictionaryChanged(_) {
             return (
-              this.m_bInitialized
-                ? this.InitFiltersWithRetry()
-                : (this.m_bFilterChangedWhileLoading = !0),
+              !this.m_bInitialized && !this.m_bOngoingLoad
+                ? (this.m_bFilterChangedWhileLoading = !0)
+                : ((this.m_nLoadLanguagesRetryDelaySec = _),
+                  this.EnsureFiltersLoaded()),
               _._
             );
           }
+          EnsureFiltersLoaded() {
+            return this.m_bOngoingLoad && this.m_promiseOngoingLoad
+              ? ((this.m_bFilterChangedWhileLoading = !0),
+                this.m_promiseOngoingLoad)
+              : ((this.m_promiseOngoingLoad = this.InitFiltersWithRetry()),
+                this.m_promiseOngoingLoad);
+          }
           async InitFiltersWithRetry() {
-            do
-              (this.m_bFilterChangedWhileLoading = !1),
-                (this.m_bInitialized = !1),
-                (this.m_bOngoingLoad = !0),
-                await this.LoadLanguages(),
-                this.OnFilterDataChanged(),
-                (this.m_bInitialized = !0);
-            while (this.m_bFilterChangedWhileLoading);
-            this.m_bOngoingLoad = !1;
+            this.m_bOngoingLoad = !0;
+            try {
+              do
+                (this.m_bFilterChangedWhileLoading = !1),
+                  await this.LoadLanguages(),
+                  this.OnFilterDataChanged(),
+                  (this.m_bInitialized = !0);
+              while (this.m_bFilterChangedWhileLoading);
+            } finally {
+              (this.m_bOngoingLoad = !1), (this.m_promiseOngoingLoad = null);
+            }
+          }
+          RegisterPlayerNotifications(_) {
+            this.m_rgUnregisterPlayerNotifications.forEach((_) => _()),
+              (this.m_rgUnregisterPlayerNotifications = []),
+              _ &&
+                this.m_rgUnregisterPlayerNotifications.push(
+                  _.RegisterServiceNotificationHandler(
+                    _.QAJ.NotifyCommunityPreferencesChangedHandler,
+                    (_) => (
+                      this.UpdateCommunityPreferences(_.Body().preferences()),
+                      this.OnPlayerSettingsChanged(),
+                      _._
+                    ),
+                  ).unregister,
+                  _.RegisterServiceNotificationHandler(
+                    _.QAJ.NotifyTextFilterWordsChangedHandler,
+                    (_) => (
+                      this.UpdateTextFilterWords(_.Body().words()),
+                      this.OnPlayerSettingsChanged(),
+                      _._
+                    ),
+                  ).unregister,
+                );
+          }
+          OnPlayerSettingsChanged() {
+            this.m_bInitialized &&
+              !this.m_bOngoingLoad &&
+              this.OnFilterDataChanged();
           }
           InitSteamEngineLanguage(_) {
             const _ = _._.Init(_);
@@ -2283,7 +2334,8 @@
               _ = await this.LoadObfuscatedString(
                 "CTextFilterStore_strCleanPattern",
               );
-            _ != null && _ != null && this.BRebuildFilter(_, _);
+            (this.m_bHaveCompleteFilter = _ != null && _ != null),
+              _ != null && _ != null && this.BRebuildFilter(_, _);
           }
           SaveFilter() {
             this.SaveObfuscatedString(
@@ -2375,38 +2427,35 @@
           UpdateTextFilterWords(_) {
             (this.m_TextFilterWords = _), this.SaveTextFilterWords();
           }
-          async LoadLanguages(_ = 15) {
+          async LoadLanguages() {
             (this.m_strBannedWords = ""),
               (this.m_strProfanityWords = ""),
-              (this.m_strCleanWords = "");
-            try {
-              await this.LoadLanguage(_._.LANGUAGE),
-                _._.LANGUAGE !== "english" &&
-                  (await this.LoadLanguage("english"));
-            } catch (_) {
+              (this.m_strCleanWords = ""),
+              (this.m_bWordListsComplete = !1),
               this.m_nLoadLanguagesRetryTimeout &&
-                ((0, _._)(
-                  !this.m_nLoadLanguagesRetryTimeout,
-                  "Got two concurrent calls to TextFilteringStore.LoadLanguages",
-                ),
-                window.clearTimeout(this.m_nLoadLanguagesRetryTimeout),
-                (this.m_nLoadLanguagesRetryTimeout = void 0)),
-                (_ = Math.min(_ * 2, _)),
-                console.warn(
-                  "LoadLanguages caught",
-                  _,
-                  "retry in",
-                  _,
-                  "seconds",
-                ),
-                (this.m_nLoadLanguagesRetryTimeout = window.setTimeout(
-                  async () => {
-                    (this.m_nLoadLanguagesRetryTimeout = void 0),
-                      await this.LoadLanguages(_),
-                      this.OnFilterDataChanged();
-                  },
-                  _ * 1e3,
-                ));
+                (window.clearTimeout(this.m_nLoadLanguagesRetryTimeout),
+                (this.m_nLoadLanguagesRetryTimeout = void 0));
+            try {
+              let _ = await this.LoadLanguage(_._.LANGUAGE);
+              if (
+                (_._.LANGUAGE !== "english" &&
+                  (_ = (await this.LoadLanguage("english")) && _),
+                !_)
+              )
+                throw new Error("clean_public dictionary unavailable");
+              (this.m_nLoadLanguagesRetryDelaySec = _),
+                (this.m_bWordListsComplete = !0);
+            } catch (_) {
+              this.m_nLoadLanguagesRetryDelaySec = Math.min(
+                this.m_nLoadLanguagesRetryDelaySec * 2,
+                _,
+              );
+              const _ = this.m_nLoadLanguagesRetryDelaySec;
+              console.warn("LoadLanguages caught", _, "retry in", _, "seconds"),
+                (this.m_nLoadLanguagesRetryTimeout = window.setTimeout(() => {
+                  (this.m_nLoadLanguagesRetryTimeout = void 0),
+                    this.EnsureFiltersLoaded();
+                }, _ * 1e3));
             }
           }
           async LoadLanguage(_) {
@@ -2448,11 +2497,20 @@
                 this.m_strProfanityWords += _.data;
               }
             }
+            const _ = this.m_WebUIServiceTransport.BIsValid(),
+              _ = "CTextFilterStore_strCleanPublic_" + _;
             _ = `${_._.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${_}&v=${_}&origin=${_()}`;
-            {
+            try {
               const _ = await _().get(_);
-              this.m_strCleanWords += _.data;
+              (this.m_strCleanWords += _.data),
+                _ && this.SaveObfuscatedString(_, _.data);
+            } catch (_) {
+              console.warn("LoadLanguage caught while loading clean list:", _);
+              const _ = _ ? await this.LoadObfuscatedString(_) : null;
+              if (!_) return !1;
+              this.m_strCleanWords += _;
             }
+            return !0;
           }
           CreatePattern(_) {
             let _ = _.filter(function (_) {
@@ -2461,6 +2519,8 @@
             return _.length > 0 ? "\\b(" + _.join("|") + ")\\b" : "";
           }
           OnFilterDataChanged() {
+            if (!this.m_bWordListsComplete && this.m_bHaveCompleteFilter)
+              return;
             let _ = new RegExp(/\s*[\r\n]+\s*/g),
               _ = [],
               _ = [];
@@ -2489,7 +2549,10 @@
             let _ = this.CreatePattern(_),
               _ = this.CreatePattern(_);
             _ != "" && (_ = "^(" + _ + ")$"),
-              this.BRebuildFilter(_, _) && this.SaveFilter();
+              this.BRebuildFilter(_, _) &&
+                this.m_bWordListsComplete &&
+                this.SaveFilter(),
+              (this.m_bHaveCompleteFilter = this.m_bWordListsComplete);
           }
           BRebuildFilter(_, _) {
             if (_ === this.m_strBannedPattern && _ === this.m_strCleanPattern)

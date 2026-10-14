@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [22162],
+    [2162],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -113,13 +113,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
-          const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
-            _ = (0, _._)(),
-            _ =
-              (_ = _ != null ? _ : _ == null ? void 0 : _.focusable) != null
-                ? _
-                : !!_.href,
+          const { underline: _ = "auto", ..._ } = _,
             _ = (0, _._)(
               {
                 ..._,
@@ -128,15 +122,9 @@
               },
               _,
             );
-          return _ && (_ || _)
-            ? (0, _.jsx)(_._, {
-                ..._,
-                ...(_ || {}),
-                focusable: _,
-              })
-            : (0, _.jsx)("a", {
-                ..._,
-              });
+          return (0, _.jsx)(_._, {
+            ..._,
+          });
         }
         const _ = [
           ..._._,

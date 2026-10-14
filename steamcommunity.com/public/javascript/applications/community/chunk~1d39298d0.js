@@ -3,7 +3,7 @@
 "use strict";
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [44072],
+    [4072],
     {
       15860: (C, I, n) => {
         n.d(I, { L: () => v, c: () => m });

@@ -527,9 +527,40 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        const _ = _.Fragment;
+        function _(_) {
+          const { event: _ } = _.context,
+            _ = Number.parseInt((0, _._)(_.args)),
+            _ = _.useMemo(() => {
+              if (_)
+                return _.jsondata.sale_sections?.find(
+                  (_) =>
+                    _.section_type == "vo_internal" &&
+                    (_.internal_section_data?.internal_type ==
+                      "reservation_widget" ||
+                      _.internal_section_data?.internal_type ==
+                        "while_supplies_last"),
+                );
+            }, [_]);
+          if (_ && _) {
+            const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
+              _ = Number.parseInt((0, _._)(_.args, "psulesspackageid")),
+              _ = (0, _._)(_.args, "out_of_stock_override"),
+              _ = (0, _._)(_.args, "delivery_override"),
+              _ = (0, _._)(_.args, "delivery_override_out_of_stock");
+            return (0, _.jsx)(_, {
+              section: _,
+              reservationPackageID: _,
+              depositPackageID: _,
+              psuLessPackageID: _,
+              strOutOfStockOverride: _,
+              strDeliveryOverride: _ || _,
+              bDeliveryOverrideOnlyIfOutOfStock: !!_,
+              PreviewActions: _.PreviewActions,
+            });
+          }
+          return (0, _.jsx)(_.Fragment, {});
+        }
         function _(_) {
           const {
               reservationPackageID: _,
@@ -540,6 +571,7 @@
               strDeliveryOverride: _,
               bDeliveryOverrideOnlyIfOutOfStock: _,
               section: _,
+              PreviewActions: _,
             } = _,
             { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)(_),
@@ -579,13 +611,14 @@
                 : void 0;
           return (0, _.jsxs)(_._, {
             children: [
-              (0, _.jsx)(_.Suspense, {
-                fallback: null,
-                children: (0, _.jsx)(_, {
-                  bIsPreview: !!_,
-                  rgReservationDef: _,
+              _ &&
+                (0, _.jsx)(_.Suspense, {
+                  fallback: null,
+                  children: (0, _.jsx)(_, {
+                    bIsPreview: !!_,
+                    rgReservationDef: _,
+                  }),
                 }),
-              }),
               !!_.allow_purchase_in_country &&
                 (0, _.jsxs)("div", {
                   className: _[0].unique_id,
@@ -616,26 +649,8 @@
             ],
           });
         }
-        function _(_) {
-          if (_?.bDepositRequired) {
-            if (
-              _.rgDepositPackageInfo &&
-              _.rgDepositPackageInfo?.length > 0 &&
-              _.rgDepositPackageInfo.filter((_) => _.bVisible).length == 0 &&
-              _?.rgReservationPackageInfo &&
-              _?.rgReservationPackageInfo?.length > 0 &&
-              _?.rgReservationPackageInfo.filter((_) => _.bVisible).length == 0
-            )
-              return !1;
-          } else if (
-            _?.rgReservationPackageInfo &&
-            _?.rgReservationPackageInfo?.length > 0 &&
-            _?.rgReservationPackageInfo.filter((_) => _.bVisible).length == 0
-          )
-            return !1;
-          return !0;
-        }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -710,6 +725,37 @@
             color: _,
             bgcolor: _,
           });
+        }
+        var _ = __webpack_require__("chunkid");
+        function _(_) {
+          const _ = Number(_.args.packageid);
+          return _
+            ? (0, _.jsx)(_._, {
+                packageID: _,
+                display_style: (0, _._)(_.args.display),
+              })
+            : null;
+        }
+        function _(_) {
+          const _ = Number(_.args.packageid),
+            _ = Number(_.args.compareid);
+          return !_ || !_
+            ? null
+            : (0, _.jsx)(_._, {
+                packageID: _,
+                compareID: _,
+              });
+        }
+        function _(_) {
+          const _ = _.args[""]?.trim();
+          return _
+            ? (0, _.jsx)("div", {
+                className: _,
+                children: _.children,
+              })
+            : (0, _.jsx)(_.Fragment, {
+                children: _.children,
+              });
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -802,6 +848,34 @@
                     autocloses: !1,
                   },
                 ],
+                [
+                  "classname",
+                  {
+                    Constructor: _,
+                    autocloses: !1,
+                  },
+                ],
+                [
+                  "price",
+                  {
+                    Constructor: _,
+                    autocloses: !1,
+                  },
+                ],
+                [
+                  "pricesavings",
+                  {
+                    Constructor: _,
+                    autocloses: !1,
+                  },
+                ],
+                [
+                  "reservationbutton",
+                  {
+                    Constructor: _,
+                    autocloses: !1,
+                  },
+                ],
               ])),
             _
           );
@@ -884,26 +958,6 @@
                       ],
                     }),
                 ],
-              });
-        }
-        var _ = __webpack_require__("chunkid");
-        function _(_) {
-          const _ = Number(_.args.packageid);
-          return _
-            ? (0, _.jsx)(_._, {
-                packageID: _,
-                display_style: (0, _._)(_.args.display),
-              })
-            : null;
-        }
-        function _(_) {
-          const _ = Number(_.args.packageid),
-            _ = Number(_.args.compareid);
-          return !_ || !_
-            ? null
-            : (0, _.jsx)(_._, {
-                packageID: _,
-                compareID: _,
               });
         }
         var _ = __webpack_require__("chunkid"),
@@ -1103,28 +1157,7 @@
                   },
                 ],
                 [
-                  "price",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "pricesavings",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
                   "eventdoorvisibility",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "chooseaccount",
                   {
                     Constructor: _,
                     autocloses: !1,
@@ -1139,13 +1172,6 @@
                 ],
                 [
                   "optindoorquest",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "classname",
                   {
                     Constructor: _,
                     autocloses: !1,
@@ -1256,25 +1282,6 @@
               : null;
         }
         function _(_) {
-          if (_._.logged_in) {
-            const _ = Number.parseInt((0, _._)(_.args)),
-              _ = Number.parseInt((0, _._)(_.args, "mod"));
-            if (_ > 0 && _ < _ && _._.accountid % _ == _) return _.children;
-          }
-          return null;
-        }
-        function _(_) {
-          const _ = (0, _._)(_.args);
-          return _?.trim().length > 0
-            ? (0, _.jsx)("div", {
-                className: _.trim(),
-                children: _.children,
-              })
-            : (0, _.jsx)(_.Fragment, {
-                children: _.children,
-              });
-        }
-        function _(_) {
           return (0, _.jsx)("span", {
             className: _.LocalizeBlock,
             children: (0, _._)(
@@ -1294,37 +1301,12 @@
               })
             : (0, _.jsx)(_.Fragment, {});
         }
+        const _ = void 0;
         function _(_) {
-          const { showErrorInfo: _, event: _ } = _.context,
-            _ = Number.parseInt((0, _._)(_.args)),
-            _ = _.useMemo(() => {
-              if (_)
-                return _.jsondata.sale_sections?.find(
-                  (_) =>
-                    _.section_type == "vo_internal" &&
-                    (_.internal_section_data?.internal_type ==
-                      "reservation_widget" ||
-                      _.internal_section_data?.internal_type ==
-                        "while_supplies_last"),
-                );
-            }, [_]);
-          if (_ && _) {
-            const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
-              _ = Number.parseInt((0, _._)(_.args, "psulesspackageid")),
-              _ = (0, _._)(_.args, "out_of_stock_override"),
-              _ = (0, _._)(_.args, "delivery_override"),
-              _ = (0, _._)(_.args, "delivery_override_out_of_stock");
-            return (0, _.jsx)(_, {
-              section: _,
-              reservationPackageID: _,
-              depositPackageID: _,
-              psuLessPackageID: _,
-              strOutOfStockOverride: _,
-              strDeliveryOverride: _ || _,
-              bDeliveryOverrideOnlyIfOutOfStock: !!_,
-            });
-          }
-          return (0, _.jsx)(_.Fragment, {});
+          return (0, _.jsx)(_, {
+            ..._,
+            PreviewActions: _,
+          });
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");

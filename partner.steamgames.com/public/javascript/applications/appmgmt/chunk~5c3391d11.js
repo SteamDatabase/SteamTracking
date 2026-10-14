@@ -5,9 +5,9 @@
     self.webpackChunkappmgmt_storeadmin || []).push([
     [44298],
     {
-      26356: (t1, Y, a) => {
+      26356: (t1, J, a) => {
         "use strict";
-        a.d(Y, {
+        a.d(J, {
           JR: () => j,
           ZJ: () => p,
           bY: () => O,
@@ -22,17 +22,17 @@
           O = 4,
           N = 5;
       },
-      21690: (t1, Y, a) => {
+      21690: (t1, J, a) => {
         "use strict";
-        a.d(Y, {
-          $o: () => L,
+        a.d(J, {
+          $o: () => v,
           FD: () => a1,
           Ff: () => q,
           Ns: () => z,
-          _R: () => Q,
+          _R: () => $,
           bh: () => F,
           oc: () => _,
-          z5: () => f,
+          z5: () => h,
         });
         var e = a(7850),
           p = a(75779),
@@ -41,9 +41,9 @@
           O = a(90626),
           N = a(36118),
           M = a(57866),
-          u1 = a.n(M),
+          f1 = a.n(M),
           i1 = a(36707),
-          X = a(3166),
+          Q = a(3166),
           V = a(26356);
         const o1 = O.createContext({
             bForceShowCompatInfo: !1,
@@ -52,16 +52,16 @@
             bSteamMachine: !1,
             bSteamFrame: !1,
           }),
-          f1 = () => O.useContext(o1);
-        function g1(u) {
+          x1 = () => O.useContext(o1);
+        function y1(m) {
           const {
               bSteamOS: w,
               bSteamDeck: c,
               bSteamMachine: o,
               bSteamFrame: d,
-              children: g,
-            } = u,
-            v = React.useMemo(
+              children: f,
+            } = m,
+            H = React.useMemo(
               () => ({
                 bForceShowCompatInfo: !1,
                 bSteamOS: w,
@@ -71,40 +71,40 @@
               }),
               [w, c, o, d],
             );
-          return React.createElement(o1.Provider, { value: v }, g);
+          return React.createElement(o1.Provider, { value: H }, f);
         }
         function a1() {
           const {
-            bForceShowCompatInfo: u,
+            bForceShowCompatInfo: m,
             bSteamDeck: w,
             bSteamOS: c,
             bSteamMachine: o,
             bSteamFrame: d,
-          } = f1();
-          return (c && w) || u || X.TS.FORCED_DISPLAY_MODE == "steamdeck"
+          } = x1();
+          return (c && w) || m || Q.TS.FORCED_DISPLAY_MODE == "steamdeck"
             ? [!0, V.ZJ]
-            : (c && o) || X.TS.FORCED_DISPLAY_MODE == "steammachine"
+            : (c && o) || Q.TS.FORCED_DISPLAY_MODE == "steammachine"
               ? [!0, V.JR]
-              : (c && d) || X.TS.FORCED_DISPLAY_MODE == "steamframe"
+              : (c && d) || Q.TS.FORCED_DISPLAY_MODE == "steamframe"
                 ? [!0, V.bY]
                 : c
                   ? [!0, V.c9]
                   : [!1, V.iA];
         }
-        function U(u) {
-          const { id: w, className: c } = u,
+        function U(m) {
+          const { id: w, className: c } = m,
             { data: o } = useStoreItemSupportedPlatforms(w);
           return o
-            ? jsx(L, { category: o?.steam_deck_compat_category, className: c })
+            ? jsx(v, { category: o?.steam_deck_compat_category, className: c })
             : null;
         }
-        function _(u) {
-          const { id: w, eHWCompat: c, className: o } = u,
+        function _(m) {
+          const { id: w, eHWCompat: c, className: o } = m,
             { data: d } = (0, j.qI)(w);
           if (!d) return null;
           switch (c) {
             case V.ZJ:
-              return (0, e.jsx)(L, {
+              return (0, e.jsx)(v, {
                 category: d.steam_deck_compat_category,
                 className: o,
               });
@@ -119,7 +119,7 @@
                 className: o,
               });
             case V.c9:
-              return (0, e.jsx)(J, {
+              return (0, e.jsx)(W, {
                 category: d.steam_os_compat_category,
                 className: o,
               });
@@ -127,9 +127,9 @@
               return null;
           }
         }
-        const L = (u) => {
-            const { category: w = p.YX, className: c } = u,
-              o = f(w);
+        const v = (m) => {
+            const { category: w = p.YX, className: c } = m,
+              o = h(w);
             return (0, e.jsxs)("div", {
               className: (0, i1.A)(M.SteamDeckCompatInfo, c),
               children: [
@@ -138,9 +138,9 @@
               ],
             });
           },
-          z = (u) => {
-            const { category: w = p.YX, className: c } = u,
-              o = f(w);
+          z = (m) => {
+            const { category: w = p.YX, className: c } = m,
+              o = h(w);
             return (0, e.jsxs)("div", {
               className: (0, i1.A)(M.SteamDeckCompatInfo, c),
               children: [
@@ -149,9 +149,9 @@
               ],
             });
           },
-          F = (u) => {
-            const { category: w = p.YX, className: c } = u,
-              o = f(w);
+          F = (m) => {
+            const { category: w = p.YX, className: c } = m,
+              o = h(w);
             return (0, e.jsxs)("div", {
               className: (0, i1.A)(M.SteamDeckCompatInfo, c),
               children: [
@@ -160,21 +160,21 @@
               ],
             });
           },
-          J = (u) => {
-            const { category: w = D.xs, elControllerSupport: c } = u,
-              o = Q(w);
+          W = (m) => {
+            const { category: w = D.xs, elControllerSupport: c } = m,
+              o = $(w);
             return (0, e.jsxs)("div", {
-              className: (0, i1.A)(M.SteamDeckCompatInfo, u.className),
+              className: (0, i1.A)(M.SteamDeckCompatInfo, m.className),
               children: [
                 c,
                 (0, e.jsx)(o, { className: M.SteamDeckCompatIcon }),
               ],
             });
           };
-        function q(u) {
-          const { eDisplay: w, storeItemPlatform: c, className: o } = u;
+        function q(m) {
+          const { eDisplay: w, storeItemPlatform: c, className: o } = m;
           return w == V.ZJ
-            ? (0, e.jsx)(L, {
+            ? (0, e.jsx)(v, {
                 category: c?.steam_deck_compat_category ?? p.YX,
                 className: o,
               })
@@ -184,7 +184,7 @@
                   className: o,
                 })
               : w == V.c9
-                ? (0, e.jsx)(J, {
+                ? (0, e.jsx)(W, {
                     category: c?.steam_os_compat_category ?? D.xs,
                     className: o,
                   })
@@ -195,149 +195,149 @@
                     })
                   : null;
         }
-        const h1 = {
+        const n1 = {
             [p.V8]: N.jIP,
             [p.sd]: N.aVR,
             [p.I2]: N.o5Q,
             [p.YX]: N.WX$,
           },
-          n1 = { [D.xs]: N.WX$, [D.u_]: N.jIP, [D.Hi]: N.ZjT };
-        function f(u) {
-          return h1[u] || N.WX$;
+          c1 = { [D.xs]: N.WX$, [D.u_]: N.jIP, [D.Hi]: N.ZjT };
+        function h(m) {
+          return n1[m] || N.WX$;
         }
-        function Q(u) {
-          return n1[u] || N.WX$;
+        function $(m) {
+          return c1[m] || N.WX$;
         }
-        const x1 = {
+        const g1 = {
           [p.I2]: "#DeckVerified_CategoryLabel_Verified",
           [p.sd]: "#DeckVerified_CategoryLabel_Playable",
           [p.V8]: "#DeckVerified_CategoryLabel_Unsupported",
           [p.YX]: "#DeckVerified_CategoryLabel_Unknown",
         };
-        function m1(u) {
+        function h1(m) {
           return HWCompatLocalization.Localize(
-            x1[u] || "#DeckVerified_CategoryLabel_Unknown",
+            g1[m] || "#DeckVerified_CategoryLabel_Unknown",
           );
         }
-        const l1 = {
+        const L1 = {
           [D.Hi]: "#SteamOS_CategoryLabel_Compatible",
           [D.u_]: "#SteamOS_CategoryLabel_Unsupported",
           [D.xs]: "#SteamOS_CategoryLabel_Unknown",
         };
-        function m(u) {
+        function u(m) {
           return HWCompatLocalization.Localize(
-            l1[u] || "#SteamOS_CategoryLabel_Unknown",
+            L1[m] || "#SteamOS_CategoryLabel_Unknown",
           );
         }
-        const $ = {
+        const P = {
           [p.I2]: "#DeckVerified_FilterLabel_Verified",
           [p.sd]: "#DeckVerified_FilterLabel_Verified_Playable",
           [p.YX]: "#DeckVerified_FilterLabel_Verified_Playable_Unknown",
           [p.V8]: "#DeckVerified_FilterLabel_AllGames",
         };
-        function C(u) {
+        function C(m) {
           return HWCompatLocalization.Localize(
-            $[u] || "#DeckVerified_FilterLabel_Unknown",
+            P[m] || "#DeckVerified_FilterLabel_Unknown",
           );
         }
-        const y = {
+        const x = {
           [p.I2]: "#DeckVerified_FilterDescription_Verified",
           [p.sd]: "#DeckVerified_FilterDescription_Verified_Playable",
           [p.YX]: "#DeckVerified_FilterDescription_Verified_Playable_Unknown",
           [p.V8]: "#DeckVerified_FilterDescription_AllGames",
         };
-        function l(u) {
+        function l(m) {
           return HWCompatLocalization.Localize(
-            y[u] || "#DeckVerified_FilterLabel_Unknown",
+            x[m] || "#DeckVerified_FilterLabel_Unknown",
           );
         }
-        const y1 = {
+        const l1 = {
           [D.Hi]: "#SteamOS_FilterLabel_Compatible",
           [D.xs]: "#SteamOS_FilterLabel_Compatible_Unknown",
           [D.u_]: "#SteamOS_FilterLabel_AllGames",
         };
-        function H(u) {
+        function L(m) {
           return HWCompatLocalization.Localize(
-            D1[u] || "#SteamOS_CategoryLabel_Unknown",
+            b1[m] || "#SteamOS_CategoryLabel_Unknown",
           );
         }
-        const H1 = {
+        const C1 = {
           [p.I2]: "#MachineVerified_FilterDescription_Verified",
           [p.sd]: "#MachineVerified_FilterDescription_Verified_Playable",
           [p.YX]:
             "#MachineVerified_FilterDescription_Verified_Playable_Unknown",
           [p.V8]: "#MachineVerified_FilterDescription_AllGames",
         };
-        function p1(u) {
+        function H1(m) {
           return HWCompatLocalization.Localize(
-            H1[u] || "#DeckVerified_FilterLabel_Unknown",
+            C1[m] || "#DeckVerified_FilterLabel_Unknown",
           );
         }
-        const k = {
+        const d1 = {
           [p.I2]: "#FrameVerified_FilterDescription_Verified",
           [p.sd]: "#FrameVerified_FilterDescription_Verified_Playable",
           [p.YX]: "#FrameVerified_FilterDescription_Verified_Playable_Unknown",
           [p.V8]: "#FrameVerified_FilterDescription_AllGames",
         };
-        function v1(u) {
+        function k(m) {
           return HWCompatLocalization.Localize(
-            k[u] || "#DeckVerified_FilterLabel_Unknown",
+            d1[m] || "#DeckVerified_FilterLabel_Unknown",
           );
         }
-        const D1 = {
+        const b1 = {
           [D.Hi]: "#SteamOS_FilterDescription_Compatible",
           [D.xs]: "#SteamOS_FilterDescription_Compatible_Unknown",
           [D.u_]: "#SteamOS_FilterDescription_AllGames",
         };
-        function V1(u) {
+        function V1(m) {
           return HWCompatLocalization.Localize(
-            y1[u] || "#SteamOS_CategoryLabel_Unknown",
+            l1[m] || "#SteamOS_CategoryLabel_Unknown",
           );
         }
-        function k1(u, w) {
-          return u ==
+        function k1(m, w) {
+          return m ==
             ESteamHWCompatibilityDisplay.k_ESteamHWCompatibility_SteamOS
             ? V1(w)
             : C(w);
         }
-        function N1(u, w) {
-          return u ==
+        function N1(m, w) {
+          return m ==
             ESteamHWCompatibilityDisplay.k_ESteamHWCompatibility_SteamOS
-            ? H(w)
-            : u ==
+            ? L(w)
+            : m ==
                 ESteamHWCompatibilityDisplay.k_ESteamHWCompatibility_SteamMachine
-              ? p1(w)
-              : u ==
+              ? H1(w)
+              : m ==
                   ESteamHWCompatibilityDisplay.k_ESteamHWCompatibility_SteamFrame
-                ? v1(w)
+                ? k(w)
                 : l(w);
         }
       },
-      75779: (t1, Y, a) => {
+      75779: (t1, J, a) => {
         "use strict";
-        a.d(Y, { I2: () => j, V8: () => p, YX: () => e, sd: () => D });
+        a.d(J, { I2: () => j, V8: () => p, YX: () => e, sd: () => D });
         const e = 0,
           p = 1,
           D = 2,
           j = 3;
       },
-      55546: (t1, Y, a) => {
+      55546: (t1, J, a) => {
         "use strict";
-        a.d(Y, { Hi: () => D, u_: () => p, xs: () => e });
+        a.d(J, { Hi: () => D, u_: () => p, xs: () => e });
         const e = 0,
           p = 1,
           D = 2;
       },
-      19563: (t1, Y, a) => {
+      19563: (t1, J, a) => {
         "use strict";
-        a.d(Y, {
-          Ez: () => k,
-          UN: () => D1,
-          cO: () => H,
+        a.d(J, {
+          Ez: () => d1,
+          UN: () => b1,
+          cO: () => L,
           Pu: () => N1,
-          Pj: () => y1,
+          Pj: () => l1,
           Nt: () => k1,
-          aw: () => v1,
+          aw: () => k,
           cP: () => V1,
         });
         var e = a(7850),
@@ -347,28 +347,28 @@
           O = a(55546),
           N = a(3367),
           M = a(64868),
-          u1 = a(40358),
+          f1 = a(40358),
           i1 = a(90626),
-          X = a(21690),
+          Q = a(21690),
           V = a(41735),
           o1 = a.n(V),
-          f1 = a(72604),
-          g1 = a(34592),
+          x1 = a(72604),
+          y1 = a(34592),
           a1 = a(8323),
           U = a(54963),
           _ = a(3166),
-          L = Object.defineProperty,
+          v = Object.defineProperty,
           z = Object.getOwnPropertyDescriptor,
-          F = (c, o, d, g) => {
+          F = (c, o, d, f) => {
             for (
-              var v = g > 1 ? void 0 : g ? z(o, d) : o, h = c.length - 1, S;
-              h >= 0;
-              h--
+              var H = f > 1 ? void 0 : f ? z(o, d) : o, g = c.length - 1, S;
+              g >= 0;
+              g--
             )
-              (S = c[h]) && (v = (g ? S(o, d, v) : S(v)) || v);
-            return g && v && L(o, d, v), v;
+              (S = c[g]) && (H = (f ? S(o, d, H) : S(H)) || H);
+            return f && H && v(o, d, H), H;
           };
-        const J = class w1 {
+        const W = class D1 {
           m_mapAppResults = new Map();
           m_mapAppCallbackList = new Map();
           m_mapAppResultsPromises = new Map();
@@ -403,20 +403,20 @@
           async InternalLoadAppCompatability(o) {
             let d = null;
             try {
-              const g = { nAppID: o, l: _.TS.LANGUAGE, cc: _.TS.COUNTRY };
-              let v =
+              const f = { nAppID: o, l: _.TS.LANGUAGE, cc: _.TS.COUNTRY };
+              let H =
                 _.TS.STORE_BASE_URL +
                 "saleaction/ajaxgetdeckappcompatibilityreport";
-              const h = await o1().get(v, { params: g, withCredentials: !0 });
+              const g = await o1().get(H, { params: f, withCredentials: !0 });
               if (
-                h?.status == 200 &&
-                h.data?.success == f1.R &&
-                h.data?.results
+                g?.status == 200 &&
+                g.data?.success == x1.R &&
+                g.data?.results
               )
-                return this.AddCompatabilityResult(h.data.results), !0;
-              d = (0, g1.H)(h);
-            } catch (g) {
-              d = (0, g1.H)(g);
+                return this.AddCompatabilityResult(g.data.results), !0;
+              d = (0, y1.H)(g);
+            } catch (f) {
+              d = (0, y1.H)(f);
             }
             return (
               console.error(
@@ -430,13 +430,13 @@
           static s_Singleton;
           static Get() {
             return (
-              w1.s_Singleton || (w1.s_Singleton = new w1()), w1.s_Singleton
+              D1.s_Singleton || (D1.s_Singleton = new D1()), D1.s_Singleton
             );
           }
           constructor() {
             if (document.getElementById("application_config")) {
               let o = (0, _.Tc)("hardwarecompatibility", "application_config");
-              w1.ValidateCompatabilityResult(o) &&
+              D1.ValidateCompatabilityResult(o) &&
                 this.AddCompatabilityResult(o);
             }
           }
@@ -450,9 +450,9 @@
             );
           }
         };
-        F([U.oI], J.prototype, "LoadAppCompabitilityResult", 1);
-        let q = J;
-        function h1(c) {
+        F([U.oI], W.prototype, "LoadAppCompabitilityResult", 1);
+        let q = W;
+        function n1(c) {
           const [o, d] = i1.useState(q.Get().GetCompatabilityResultForApp(c));
           return (
             (0, U.hL)(q.Get().GetCallbackForAppList(c), d),
@@ -466,103 +466,103 @@
             o
           );
         }
-        var n1 = a(58534),
-          f = a(2801),
-          Q = a(36118),
-          x1 = a(51409),
-          m1 = a(85599),
-          l1 = a(36707),
-          m = a(39905),
-          $ = a(48473),
+        var c1 = a(58534),
+          h = a(2801),
+          $ = a(36118),
+          g1 = a(51409),
+          h1 = a(85599),
+          L1 = a(36707),
+          u = a(39905),
+          P = a(48473),
           C = a(35111),
-          y = a.n(C),
+          x = a.n(C),
           l = a(26356);
-        function y1(c) {
-          const { id: o, compatibility: d, onShowDialog: g } = c,
-            { data: v } = (0, u1.J$)(o),
-            { data: h } = (0, u1.qI)(o),
-            [S, W, P] = (0, M.uD)();
-          if (!v || !h || v.item_type !== N.c6.qI) return null;
+        function l1(c) {
+          const { id: o, compatibility: d, onShowDialog: f } = c,
+            { data: H } = (0, f1.J$)(o),
+            { data: g } = (0, f1.qI)(o),
+            [S, K, Y] = (0, M.uD)();
+          if (!H || !g || H.item_type !== N.c6.qI) return null;
           let G = null,
-            b1 = null;
+            j1 = null;
           if (d == l.bY) {
-            const c1 = h.steam_frame_compat_category || j.YX;
-            (G = (0, e.jsx)(X.bh, { category: c1 })),
-              (b1 = m.Z.Localize(
+            const u1 = g.steam_frame_compat_category || j.YX;
+            (G = (0, e.jsx)(Q.bh, { category: u1 })),
+              (j1 = u.Z.Localize(
                 "#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI",
               ));
           } else if (d == l.JR) {
-            const c1 = h.steam_machine_compat_category || j.YX;
-            (G = (0, e.jsx)(X.Ns, { category: c1 })),
-              (b1 = m.Z.Localize(
+            const u1 = g.steam_machine_compat_category || j.YX;
+            (G = (0, e.jsx)(Q.Ns, { category: u1 })),
+              (j1 = u.Z.Localize(
                 "#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI",
               ));
           } else {
-            const c1 = h.steam_deck_compat_category || j.YX;
-            (G = (0, e.jsx)(X.$o, { category: c1 })),
-              (b1 = m.Z.Localize(
+            const u1 = g.steam_deck_compat_category || j.YX;
+            (G = (0, e.jsx)(Q.$o, { category: u1 })),
+              (j1 = u.Z.Localize(
                 "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
               ));
           }
           return (0, e.jsxs)("div", {
-            className: (0, l1.A)(y().LearnMoreCtn, "LearnMoreCtn"),
+            className: (0, L1.A)(x().LearnMoreCtn, "LearnMoreCtn"),
             children: [
               G,
               (0, e.jsx)(p.Ii, {
-                onClick: (c1) => {
-                  c1.preventDefault(), (g ?? W)();
+                onClick: (u1) => {
+                  u1.preventDefault(), (f ?? K)();
                 },
                 children: (0, e.jsx)("span", {
-                  className: y().LearnMorePC,
-                  children: b1,
+                  className: x().LearnMorePC,
+                  children: j1,
                 }),
               }),
-              !g &&
-                (0, e.jsx)(H, {
-                  nAppID: v.appid,
-                  appName: v.name,
+              !f &&
+                (0, e.jsx)(L, {
+                  nAppID: H.appid,
+                  appName: H.name,
                   active: S,
                   startingTab: d,
-                  closeModal: P,
+                  closeModal: Y,
                 }),
             ],
           });
         }
-        function H(c) {
+        function L(c) {
           const {
             nAppID: o,
             active: d,
-            appName: g,
-            startingTab: v,
-            closeModal: h,
+            appName: f,
+            startingTab: H,
+            closeModal: g,
           } = c;
-          return (0, e.jsx)(f.EN, {
+          return (0, e.jsx)(h.EN, {
             active: d,
-            children: (0, e.jsx)(p1, {
+            children: (0, e.jsx)(H1, {
               nAppID: o,
-              appName: g,
-              startingTab: v,
-              closeModal: h,
+              appName: f,
+              startingTab: H,
+              closeModal: g,
             }),
           });
         }
-        function H1(c) {
+        function C1(c) {
           const {
               url: o,
               containerClass: d,
-              bIncludeIcon: g,
-              onOpenBlogPost: v,
+              bIncludeIcon: f,
+              onOpenBlogPost: H,
             } = c,
-            h = () => {
-              v ? v() : o && (window.location.href = o);
+            g = () => {
+              H ? H() : o && (window.location.href = o);
             };
           return jsxs(FocusableAnchor, {
             className: d,
-            onClick: h,
+            onClick: g,
             children: [
-              g && jsx("div", { className: styles.DeveloperComments_Icon }),
+              f && jsx("div", { className: styles.DeveloperComments_Icon }),
               jsx("div", {
-                className: g
+                className: f
                   ? styles.DeveloperComments_LinkIcon
                   : styles.DeveloperComments_LinkNoIcon,
                 children: SharedLocalization.Localize(
@@ -572,296 +572,296 @@
             ],
           });
         }
-        function p1(c) {
-          const { nAppID: o, appName: d, startingTab: g, closeModal: v } = c,
-            h = h1(o),
+        function H1(c) {
+          const { nAppID: o, appName: d, startingTab: f, closeModal: H } = c,
+            g = n1(o),
             S = i1.useId();
-          return (0, e.jsx)(f.eV, {
+          return (0, e.jsx)(h.eV, {
             "aria-labelledby": S,
             modalClassName: "DeckVerifiedModalDialog",
-            closeModal: v,
-            onCancel: v,
-            children: (0, e.jsx)(n1.nB, {
+            closeModal: H,
+            onCancel: H,
+            children: (0, e.jsx)(c1.nB, {
               children: (0, e.jsx)(D.Z, {
                 focusable: !1,
                 "flow-children": "column",
-                children: h
-                  ? (0, e.jsx)(x1.default, {
+                children: g
+                  ? (0, e.jsx)(g1.default, {
                       titleId: S,
                       appName: d,
-                      results: h,
-                      eStartingTab: g,
+                      results: g,
+                      eStartingTab: f,
                     })
-                  : (0, e.jsx)(m1.t, {
+                  : (0, e.jsx)(h1.t, {
                       size: "medium",
                       position: "center",
-                      string: m.Z.Localize("#Loading"),
+                      string: u.Z.Localize("#Loading"),
                     }),
               }),
             }),
           });
         }
-        function k(c) {
+        function d1(c) {
           const { category: o } = c;
           switch (o) {
             case j.I2:
-              return (0, e.jsx)(Q.o5Q, {
-                className: y().CategoryIcon,
+              return (0, e.jsx)($.o5Q, {
+                className: x().CategoryIcon,
                 role: "presentation",
               });
             case j.sd:
-              return (0, e.jsx)(Q.aVR, {
-                className: y().CategoryIcon,
+              return (0, e.jsx)($.aVR, {
+                className: x().CategoryIcon,
                 role: "presentation",
               });
             case j.V8:
-              return (0, e.jsx)(Q.jIP, {
-                className: y().CategoryIcon,
+              return (0, e.jsx)($.jIP, {
+                className: x().CategoryIcon,
                 role: "presentation",
               });
             case j.YX:
             default:
-              return (0, e.jsx)(Q.WX$, {
-                className: y().CategoryIcon,
+              return (0, e.jsx)($.WX$, {
+                className: x().CategoryIcon,
                 role: "presentation",
               });
           }
         }
-        function v1(c) {
+        function k(c) {
           const { category: o } = c;
           switch (o) {
             case O.Hi:
-              return (0, e.jsx)(Q.ZjT, {
-                className: y().CategoryIcon,
+              return (0, e.jsx)($.ZjT, {
+                className: x().CategoryIcon,
                 role: "presentation",
               });
             case O.u_:
-              return (0, e.jsx)(Q.jIP, {
-                className: y().CategoryIcon,
+              return (0, e.jsx)($.jIP, {
+                className: x().CategoryIcon,
                 role: "presentation",
               });
             case O.xs:
             default:
-              return (0, e.jsx)(Q.WX$, {
-                className: y().CategoryIcon,
+              return (0, e.jsx)($.WX$, {
+                className: x().CategoryIcon,
                 role: "presentation",
               });
           }
         }
-        function D1(c) {
-          const { id: o, category: d, appName: g, descriptionToken: v } = c;
+        function b1(c) {
+          const { id: o, category: d, appName: f, descriptionToken: H } = c;
           if (d == j.YX)
             return (0, e.jsx)("div", {
               id: o,
-              className: y().CompatibilityDetailRatingSummary,
-              children: g
-                ? m.Z.LocalizeReact(
+              className: x().CompatibilityDetailRatingSummary,
+              children: f
+                ? u.Z.LocalizeReact(
                     "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
-                    (0, e.jsx)("b", { children: (0, $.EK)(g) }),
+                    (0, e.jsx)("b", { children: (0, P.EK)(f) }),
                   )
-                : m.Z.Localize("#SteamDeckVerified_DescriptionHeader_Unknown"),
+                : u.Z.Localize("#SteamDeckVerified_DescriptionHeader_Unknown"),
             });
-          let h = "",
+          let g = "",
             S = null;
           switch (d) {
             case j.I2:
-              (h = "#SteamDeckVerified_DescriptionHeader_Verified"),
-                (S = y().Verified);
+              (g = "#SteamDeckVerified_DescriptionHeader_Verified"),
+                (S = x().Verified);
               break;
             case j.sd:
-              (h = "#SteamDeckVerified_DescriptionHeader_Playable"),
-                (S = y().Playable);
+              (g = "#SteamDeckVerified_DescriptionHeader_Playable"),
+                (S = x().Playable);
               break;
             case j.V8:
-              (h = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
-                (S = y().Unsupported);
+              (g = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
+                (S = x().Unsupported);
               break;
           }
-          const W = (0, e.jsx)("span", {
+          const K = (0, e.jsx)("span", {
               className: S,
-              children: m.Z.Localize(u(d)),
+              children: u.Z.Localize(m(d)),
             }),
-            P = (0, e.jsx)("span", {
-              className: y().CompatibilityDetailRatingSummary,
-              children: m.Z.Localize(v || h),
+            Y = (0, e.jsx)("span", {
+              className: x().CompatibilityDetailRatingSummary,
+              children: u.Z.Localize(H || g),
             }),
-            G = g
-              ? m.Z.LocalizeReact(
+            G = f
+              ? u.Z.LocalizeReact(
                   "#SteamDeckVerified_DescriptionHeader_WithAppName",
-                  (0, e.jsx)("b", { children: (0, $.EK)(g) }),
-                  W,
-                  P,
+                  (0, e.jsx)("b", { children: (0, P.EK)(f) }),
+                  K,
+                  Y,
                 )
-              : m.Z.LocalizeReact("#SteamDeckVerified_DescriptionHeader", W, P);
+              : u.Z.LocalizeReact("#SteamDeckVerified_DescriptionHeader", K, Y);
           return (0, e.jsx)("div", {
             id: o,
-            className: y().CompatibilityDetailRatingSummary,
+            className: x().CompatibilityDetailRatingSummary,
             children: G,
           });
         }
         function V1(c) {
-          const { id: o, category: d, appName: g, descriptionToken: v } = c;
+          const { id: o, category: d, appName: f, descriptionToken: H } = c;
           if (d == O.xs)
             return (0, e.jsx)("div", {
-              className: y().CompatibilityDetailRatingSummary,
-              children: g
-                ? m.Z.LocalizeReact(
+              className: x().CompatibilityDetailRatingSummary,
+              children: f
+                ? u.Z.LocalizeReact(
                     "#SteamOSCompatibility_DescriptionHeader_Unknown_WithAppName",
-                    (0, e.jsx)("b", { children: (0, $.EK)(g) }),
+                    (0, e.jsx)("b", { children: (0, P.EK)(f) }),
                   )
-                : m.Z.Localize(
+                : u.Z.Localize(
                     "#SteamOSCompatibility_DescriptionHeader_Unknown",
                   ),
             });
-          let h = "",
+          let g = "",
             S = null;
           switch (d) {
             case O.Hi:
-              (h = "#SteamOSCompatibility_DescriptionHeader_Compatible"),
-                (S = y().Compatible);
+              (g = "#SteamOSCompatibility_DescriptionHeader_Compatible"),
+                (S = x().Compatible);
               break;
             case O.u_:
-              (h = "#SteamOSCompatibility_DescriptionHeader_Unsupported"),
-                (S = y().Unsupported);
+              (g = "#SteamOSCompatibility_DescriptionHeader_Unsupported"),
+                (S = x().Unsupported);
               break;
           }
-          const W = (0, e.jsx)("span", {
+          const K = (0, e.jsx)("span", {
               className: S,
-              children: m.Z.Localize(w(d)),
+              children: u.Z.Localize(w(d)),
             }),
-            P = (0, e.jsx)("span", {
-              className: y().CompatibilityDetailRatingSummary,
-              children: m.Z.Localize(v || h),
+            Y = (0, e.jsx)("span", {
+              className: x().CompatibilityDetailRatingSummary,
+              children: u.Z.Localize(H || g),
             }),
-            G = g
-              ? m.Z.LocalizeReact(
+            G = f
+              ? u.Z.LocalizeReact(
                   "#SteamOSCompatibility_DescriptionHeader_WithAppName",
-                  (0, e.jsx)("b", { children: (0, $.EK)(g) }),
-                  W,
-                  P,
+                  (0, e.jsx)("b", { children: (0, P.EK)(f) }),
+                  K,
+                  Y,
                 )
-              : m.Z.LocalizeReact(
+              : u.Z.LocalizeReact(
                   "#SteamOSCompatibility_DescriptionHeader",
-                  W,
-                  P,
+                  K,
+                  Y,
                 );
           return (0, e.jsx)("div", {
             id: o,
-            className: y().CompatibilityDetailRatingSummary,
+            className: x().CompatibilityDetailRatingSummary,
             children: G,
           });
         }
         function k1(c) {
-          const { id: o, category: d, appName: g, descriptionToken: v } = c;
+          const { id: o, category: d, appName: f, descriptionToken: H } = c;
           if (d == j.YX)
             return (0, e.jsx)("div", {
-              className: y().CompatibilityDetailRatingSummary,
-              children: g
-                ? m.Z.LocalizeReact(
+              className: x().CompatibilityDetailRatingSummary,
+              children: f
+                ? u.Z.LocalizeReact(
                     "#SteamMachineVerified_DescriptionHeader_Unknown_WithAppName",
-                    (0, e.jsx)("b", { children: (0, $.EK)(g) }),
+                    (0, e.jsx)("b", { children: (0, P.EK)(f) }),
                   )
-                : m.Z.Localize(
+                : u.Z.Localize(
                     "#SteamMachineVerified_DescriptionHeader_Unknown",
                   ),
             });
-          let h = "",
+          let g = "",
             S = null;
           switch (d) {
             case j.I2:
-              (h = "#SteamMachineVerified_DescriptionHeader_Verified"),
-                (S = y().Verified);
+              (g = "#SteamMachineVerified_DescriptionHeader_Verified"),
+                (S = x().Verified);
               break;
             case j.sd:
-              (h = "#SteamMachineVerified_DescriptionHeader_Playable"),
-                (S = y().Playable);
+              (g = "#SteamMachineVerified_DescriptionHeader_Playable"),
+                (S = x().Playable);
               break;
             case j.V8:
-              (h = "#SteamMachineVerified_DescriptionHeader_Unsupported"),
-                (S = y().Unsupported);
+              (g = "#SteamMachineVerified_DescriptionHeader_Unsupported"),
+                (S = x().Unsupported);
               break;
           }
-          const W = (0, e.jsx)("span", {
+          const K = (0, e.jsx)("span", {
               className: S,
-              children: m.Z.Localize(u(d)),
+              children: u.Z.Localize(m(d)),
             }),
-            P = (0, e.jsx)("span", {
-              className: y().CompatibilityDetailRatingSummary,
-              children: m.Z.Localize(v || h),
+            Y = (0, e.jsx)("span", {
+              className: x().CompatibilityDetailRatingSummary,
+              children: u.Z.Localize(H || g),
             }),
-            G = g
-              ? m.Z.LocalizeReact(
+            G = f
+              ? u.Z.LocalizeReact(
                   "#SteamMachineVerified_DescriptionHeader_WithAppName",
-                  (0, e.jsx)("b", { children: (0, $.EK)(g) }),
-                  W,
-                  P,
+                  (0, e.jsx)("b", { children: (0, P.EK)(f) }),
+                  K,
+                  Y,
                 )
-              : m.Z.LocalizeReact(
+              : u.Z.LocalizeReact(
                   "#SteamMachineVerified_DescriptionHeader",
-                  W,
-                  P,
+                  K,
+                  Y,
                 );
           return (0, e.jsx)("div", {
             id: o,
-            className: y().CompatibilityDetailRatingSummary,
+            className: x().CompatibilityDetailRatingSummary,
             children: G,
           });
         }
         function N1(c) {
-          const { id: o, category: d, appName: g, descriptionToken: v } = c;
+          const { id: o, category: d, appName: f, descriptionToken: H } = c;
           if (d == j.YX)
             return (0, e.jsx)("div", {
-              className: y().CompatibilityDetailRatingSummary,
-              children: g
-                ? m.Z.LocalizeReact(
+              className: x().CompatibilityDetailRatingSummary,
+              children: f
+                ? u.Z.LocalizeReact(
                     "#SteamFrameVerified_DescriptionHeader_Unknown_WithAppName",
-                    (0, e.jsx)("b", { children: (0, $.EK)(g) }),
+                    (0, e.jsx)("b", { children: (0, P.EK)(f) }),
                   )
-                : m.Z.Localize("#SteamFrameVerified_DescriptionHeader_Unknown"),
+                : u.Z.Localize("#SteamFrameVerified_DescriptionHeader_Unknown"),
             });
-          let h = "",
+          let g = "",
             S = null;
           switch (d) {
             case j.I2:
-              (h = "#SteamFrameVerified_DescriptionHeader_Verified"),
-                (S = y().Verified);
+              (g = "#SteamFrameVerified_DescriptionHeader_Verified"),
+                (S = x().Verified);
               break;
             case j.sd:
-              (h = "#SteamFrameVerified_DescriptionHeader_Playable"),
-                (S = y().Playable);
+              (g = "#SteamFrameVerified_DescriptionHeader_Playable"),
+                (S = x().Playable);
               break;
             case j.V8:
-              (h = "#SteamFrameVerified_DescriptionHeader_Unsupported"),
-                (S = y().Unsupported);
+              (g = "#SteamFrameVerified_DescriptionHeader_Unsupported"),
+                (S = x().Unsupported);
               break;
           }
-          const W = (0, e.jsx)("span", {
+          const K = (0, e.jsx)("span", {
               className: S,
-              children: m.Z.Localize(u(d)),
+              children: u.Z.Localize(m(d)),
             }),
-            P = (0, e.jsx)("span", {
-              className: y().CompatibilityDetailRatingSummary,
-              children: m.Z.Localize(v || h),
+            Y = (0, e.jsx)("span", {
+              className: x().CompatibilityDetailRatingSummary,
+              children: u.Z.Localize(H || g),
             }),
-            G = g
-              ? m.Z.LocalizeReact(
+            G = f
+              ? u.Z.LocalizeReact(
                   "#SteamFrameVerified_DescriptionHeader_WithAppName",
-                  (0, e.jsx)("b", { children: (0, $.EK)(g) }),
-                  W,
-                  P,
+                  (0, e.jsx)("b", { children: (0, P.EK)(f) }),
+                  K,
+                  Y,
                 )
-              : m.Z.LocalizeReact(
+              : u.Z.LocalizeReact(
                   "#SteamFrameVerified_DescriptionHeader",
-                  W,
-                  P,
+                  K,
+                  Y,
                 );
           return (0, e.jsx)("div", {
             id: o,
-            className: y().CompatibilityDetailRatingSummary,
+            className: x().CompatibilityDetailRatingSummary,
             children: G,
           });
         }
-        function u(c) {
+        function m(c) {
           switch (c) {
             case j.I2:
               return "#SteamDeckVerified_Category_Verified";
@@ -884,10 +884,10 @@
           }
         }
       },
-      51409: (t1, Y, a) => {
+      51409: (t1, J, a) => {
         "use strict";
-        a.r(Y),
-          a.d(Y, {
+        a.r(J),
+          a.d(J, {
             SteamDeckCompatibilityTabContent: () => O1,
             SteamFrameCompatibilityTabContent: () => E1,
             SteamMachineCompatibilityTabContent: () => F1,
@@ -901,32 +901,32 @@
         const O = 0,
           N = 1,
           M = 2,
-          u1 = 3;
+          f1 = 3;
         var i1 = a(55546);
-        const X = 0,
+        const Q = 0,
           V = 1,
           o1 = 2,
-          f1 = 3,
-          g1 = 4;
+          x1 = 3,
+          y1 = 4;
         var a1 = a(90626),
           U = a(21690),
           _ = a(80755),
-          L = a(64415),
+          v = a(64415),
           z = a(8323),
           F = a(57589),
-          J = a(54963),
+          W = a(54963),
           q = Object.defineProperty,
-          h1 = Object.getOwnPropertyDescriptor,
-          n1 = (i, t, r, s) => {
+          n1 = Object.getOwnPropertyDescriptor,
+          c1 = (i, t, r, s) => {
             for (
-              var x = s > 1 ? void 0 : s ? h1(t, r) : t, T = i.length - 1, A;
+              var y = s > 1 ? void 0 : s ? n1(t, r) : t, T = i.length - 1, A;
               T >= 0;
               T--
             )
-              (A = i[T]) && (x = (s ? A(t, r, x) : A(x)) || x);
-            return s && x && q(t, r, x), x;
+              (A = i[T]) && (y = (s ? A(t, r, y) : A(y)) || y);
+            return s && y && q(t, r, y), y;
           },
-          f = ((i) => (
+          h = ((i) => (
             (i[(i.A = 0)] = "A"),
             (i[(i.B = 1)] = "B"),
             (i[(i.X = 2)] = "X"),
@@ -956,8 +956,8 @@
             (i[(i.RearRightUpper = 26)] = "RearRightUpper"),
             (i[(i.RearRightLower = 27)] = "RearRightLower"),
             i
-          ))(f || {});
-        function Q(i) {
+          ))(h || {});
+        function $(i) {
           switch (i) {
             case 0:
               return EGamepadButton.OK;
@@ -1003,53 +1003,53 @@
               return EGamepadButton.INVALID;
           }
         }
-        function x1(i) {
+        function g1(i) {
           switch (i) {
-            case L.pR.OK:
+            case v.pR.OK:
               return 0;
-            case L.pR.CANCEL:
+            case v.pR.CANCEL:
               return 1;
-            case L.pR.SECONDARY:
+            case v.pR.SECONDARY:
               return 2;
-            case L.pR.OPTIONS:
+            case v.pR.OPTIONS:
               return 3;
-            case L.pR.DIR_LEFT:
+            case v.pR.DIR_LEFT:
               return 4;
-            case L.pR.DIR_RIGHT:
+            case v.pR.DIR_RIGHT:
               return 5;
-            case L.pR.DIR_UP:
+            case v.pR.DIR_UP:
               return 6;
-            case L.pR.DIR_DOWN:
+            case v.pR.DIR_DOWN:
               return 7;
-            case L.pR.STEAM_GUIDE:
+            case v.pR.STEAM_GUIDE:
               return 8;
-            case L.pR.STEAM_QUICK_MENU:
+            case v.pR.STEAM_QUICK_MENU:
               return 9;
-            case L.pR.SELECT:
+            case v.pR.SELECT:
               return 10;
-            case L.pR.START:
+            case v.pR.START:
               return 11;
-            case L.pR.BUMPER_LEFT:
+            case v.pR.BUMPER_LEFT:
               return 12;
-            case L.pR.BUMPER_RIGHT:
+            case v.pR.BUMPER_RIGHT:
               return 13;
-            case L.pR.TRIGGER_LEFT:
+            case v.pR.TRIGGER_LEFT:
               return 14;
-            case L.pR.TRIGGER_RIGHT:
+            case v.pR.TRIGGER_RIGHT:
               return 15;
-            case L.pR.REAR_LEFT_UPPER:
+            case v.pR.REAR_LEFT_UPPER:
               return 24;
-            case L.pR.REAR_LEFT_LOWER:
+            case v.pR.REAR_LEFT_LOWER:
               return 25;
-            case L.pR.REAR_RIGHT_UPPER:
+            case v.pR.REAR_RIGHT_UPPER:
               return 26;
-            case L.pR.REAR_RIGHT_LOWER:
+            case v.pR.REAR_RIGHT_LOWER:
               return 27;
             default:
               return 0;
           }
         }
-        const m1 = class B1 {
+        const h1 = class B1 {
           m_boundActions = new Map();
           m_defaultActions = new Map();
           m_globalActionsSubscriptions = [];
@@ -1104,7 +1104,7 @@
                 this.m_actionDescriptionChangedCallbackRegistrations.push(
                   s.ActionDescriptionChangedCallbackList.Register(() => r()),
                 );
-            } else this.SetActionDescriptionsFromMap({ [L.pR.OK]: null });
+            } else this.SetActionDescriptionsFromMap({ [v.pR.OK]: null });
           }
           GetActionDescription(t) {
             let r;
@@ -1118,7 +1118,7 @@
             );
           }
           GetActionDescriptions() {
-            const t = Object.values(f).filter((s) => typeof s == "number"),
+            const t = Object.values(h).filter((s) => typeof s == "number"),
               r = {};
             for (const s of t) r[s] = this.GetActionDescription(s);
             return r;
@@ -1143,8 +1143,8 @@
           SetDefaultActionsFromMap(t) {
             let r = !1;
             for (const s in t) {
-              const x = parseInt(s);
-              this.SetDefaultAction(x, t[x]) && (r = !0);
+              const y = parseInt(s);
+              this.SetDefaultAction(y, t[y]) && (r = !0);
             }
             r && this.Notify();
           }
@@ -1156,10 +1156,10 @@
           SetActionsFromMap(t) {
             let r = !1;
             const s = Array.from(this.m_boundActions.keys());
-            for (let x of s)
-              t[x] === void 0 && this.SetAction(x, void 0) && (r = !0);
-            for (let x in t) {
-              const T = parseInt(x);
+            for (let y of s)
+              t[y] === void 0 && this.SetAction(y, void 0) && (r = !0);
+            for (let y in t) {
+              const T = parseInt(y);
               this.SetAction(T, t[T]) && (r = !0);
             }
             r && this.Notify();
@@ -1167,9 +1167,9 @@
           SetActionDescriptionsFromMap(t) {
             const r = {};
             for (const s in t) {
-              const x = parseInt(s),
-                T = x1(x);
-              r[T] = t[x];
+              const y = parseInt(s),
+                T = g1(y);
+              r[T] = t[y];
             }
             this.SetActionsFromMap(r);
           }
@@ -1198,30 +1198,30 @@
             );
           }
         };
-        n1([J.oI], m1.prototype, "OnFocusNavigationChanged", 1),
-          n1([J.oI], m1.prototype, "OnActiveNavTreeChanged", 1),
-          n1([J.oI], m1.prototype, "SetActionDescriptionsFromMap", 1);
-        let l1 = null;
-        var m = a(19563),
-          $ = a(35111),
-          C = a.n($),
-          y = a(28285),
-          l = a.n(y),
-          y1 = a(36707),
-          H = a(18210),
-          H1 = ((i) => (
+        c1([W.oI], h1.prototype, "OnFocusNavigationChanged", 1),
+          c1([W.oI], h1.prototype, "OnActiveNavTreeChanged", 1),
+          c1([W.oI], h1.prototype, "SetActionDescriptionsFromMap", 1);
+        let L1 = null;
+        var u = a(19563),
+          P = a(35111),
+          C = a.n(P),
+          x = a(28285),
+          l = a.n(x),
+          l1 = a(36707),
+          L = a(18210),
+          C1 = ((i) => (
             (i[(i.Knockout = 0)] = "Knockout"),
             (i[(i.Light = 1)] = "Light"),
             (i[(i.Dark = 2)] = "Dark"),
             i
-          ))(H1 || {}),
-          p1 = ((i) => (
+          ))(C1 || {}),
+          H1 = ((i) => (
             (i[(i.Small = 0)] = "Small"),
             (i[(i.Medium = 1)] = "Medium"),
             (i[(i.Large = 2)] = "Large"),
             i
-          ))(p1 || {});
-        function k(i) {
+          ))(H1 || {});
+        function d1(i) {
           switch (i) {
             case 0:
               return l().SizeSmall;
@@ -1233,7 +1233,7 @@
               return l().SizeMedium;
           }
         }
-        function v1(i) {
+        function k(i) {
           switch (i) {
             case 0:
               return l().Knockout;
@@ -1245,187 +1245,187 @@
               return l().Light;
           }
         }
-        function D1(i) {
-          const t = (0, y1.A)(
-              i.size != null ? k(i.size) : k(1),
-              i.type != null ? v1(i.type) : v1(1),
+        function b1(i) {
+          const t = (0, l1.A)(
+              i.size != null ? d1(i.size) : d1(1),
+              i.type != null ? k(i.type) : k(1),
               i.additionalClassName,
             ),
             r = i.type == 0;
           switch (i.button) {
-            case f.A:
+            case h.A:
               return (0, e.jsx)(V1, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_A"),
+                "aria-label": (0, L.we)("#ControllerButton_A"),
               });
-            case f.B:
+            case h.B:
               return (0, e.jsx)(k1, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_B"),
+                "aria-label": (0, L.we)("#ControllerButton_B"),
               });
-            case f.X:
+            case h.X:
               return (0, e.jsx)(N1, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_X"),
+                "aria-label": (0, L.we)("#ControllerButton_X"),
               });
-            case f.Y:
-              return (0, e.jsx)(u, {
+            case h.Y:
+              return (0, e.jsx)(m, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_Y"),
+                "aria-label": (0, L.we)("#ControllerButton_Y"),
               });
-            case f.Left:
+            case h.Left:
               return (0, e.jsx)(o, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_DpadLeft"),
+                "aria-label": (0, L.we)("#ControllerButton_DpadLeft"),
               });
-            case f.Right:
+            case h.Right:
               return (0, e.jsx)(d, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_DpadRight"),
+                "aria-label": (0, L.we)("#ControllerButton_DpadRight"),
               });
-            case f.Up:
+            case h.Up:
               return (0, e.jsx)(w, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_DpadUp"),
+                "aria-label": (0, L.we)("#ControllerButton_DpadUp"),
               });
-            case f.Down:
+            case h.Down:
               return (0, e.jsx)(c, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_DpadDown"),
+                "aria-label": (0, L.we)("#ControllerButton_DpadDown"),
               });
-            case f.HomeMenu:
+            case h.HomeMenu:
+              return (0, e.jsx)(f, {
+                bIsKnockout: r,
+                className: t,
+                "aria-label": (0, L.we)("#ControllerButton_Steam"),
+              });
+            case h.QuickMenu:
+              return (0, e.jsx)(H, {
+                bIsKnockout: r,
+                className: t,
+                "aria-label": (0, L.we)("#ControllerButton_QAM"),
+              });
+            case h.Select:
               return (0, e.jsx)(g, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_Steam"),
+                "aria-label": (0, L.we)("#ControllerButton_View"),
               });
-            case f.QuickMenu:
-              return (0, e.jsx)(v, {
-                bIsKnockout: r,
-                className: t,
-                "aria-label": (0, H.we)("#ControllerButton_QAM"),
-              });
-            case f.Select:
-              return (0, e.jsx)(h, {
-                bIsKnockout: r,
-                className: t,
-                "aria-label": (0, H.we)("#ControllerButton_View"),
-              });
-            case f.Start:
+            case h.Start:
               return (0, e.jsx)(S, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_Menu"),
+                "aria-label": (0, L.we)("#ControllerButton_Menu"),
               });
-            case f.LeftBumper:
-              return (0, e.jsx)(W, {
+            case h.LeftBumper:
+              return (0, e.jsx)(K, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_L1"),
+                "aria-label": (0, L.we)("#ControllerButton_L1"),
               });
-            case f.RightBumper:
-              return (0, e.jsx)(P, {
+            case h.RightBumper:
+              return (0, e.jsx)(Y, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_R1"),
+                "aria-label": (0, L.we)("#ControllerButton_R1"),
               });
-            case f.LeftTrigger:
+            case h.LeftTrigger:
               return (0, e.jsx)(G, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_L2"),
+                "aria-label": (0, L.we)("#ControllerButton_L2"),
               });
-            case f.RightTrigger:
-              return (0, e.jsx)(b1, {
+            case h.RightTrigger:
+              return (0, e.jsx)(j1, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_R2"),
+                "aria-label": (0, L.we)("#ControllerButton_R2"),
               });
-            case f.LeftStick:
+            case h.LeftStick:
               return (0, e.jsx)($1, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_LS"),
+                "aria-label": (0, L.we)("#ControllerButton_LS"),
               });
-            case f.RightStick:
+            case h.RightStick:
               return (0, e.jsx)(Q1, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_RS"),
+                "aria-label": (0, L.we)("#ControllerButton_RS"),
               });
-            case f.LeftStickClick:
-              return (0, e.jsx)(c1, {
+            case h.LeftStickClick:
+              return (0, e.jsx)(u1, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_L3"),
+                "aria-label": (0, L.we)("#ControllerButton_L3"),
               });
-            case f.RightStickClick:
+            case h.RightStickClick:
               return (0, e.jsx)(J1, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_R3"),
+                "aria-label": (0, L.we)("#ControllerButton_R3"),
               });
-            case f.LeftTrackpad:
+            case h.LeftTrackpad:
               return (0, e.jsx)(i2, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_LPad"),
+                "aria-label": (0, L.we)("#ControllerButton_LPad"),
               });
-            case f.RightTrackpad:
+            case h.RightTrackpad:
               return (0, e.jsx)(l2, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_RPad"),
+                "aria-label": (0, L.we)("#ControllerButton_RPad"),
               });
-            case f.LeftTrackpadClick:
+            case h.LeftTrackpadClick:
               return (0, e.jsx)(r2, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_LPad_Click"),
+                "aria-label": (0, L.we)("#ControllerButton_LPad_Click"),
               });
-            case f.RightTrackpadClick:
+            case h.RightTrackpadClick:
               return (0, e.jsx)(a2, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_RPad_Click"),
+                "aria-label": (0, L.we)("#ControllerButton_RPad_Click"),
               });
-            case f.RearLeftUpper:
+            case h.RearLeftUpper:
               return (0, e.jsx)(G1, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_L4"),
+                "aria-label": (0, L.we)("#ControllerButton_L4"),
               });
-            case f.RearRightUpper:
+            case h.RearRightUpper:
               return (0, e.jsx)(e2, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_R4"),
+                "aria-label": (0, L.we)("#ControllerButton_R4"),
               });
-            case f.RearLeftLower:
+            case h.RearLeftLower:
               return (0, e.jsx)(q1, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_L5"),
+                "aria-label": (0, L.we)("#ControllerButton_L5"),
               });
-            case f.RearRightLower:
+            case h.RearRightLower:
               return (0, e.jsx)(t2, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_R5"),
+                "aria-label": (0, L.we)("#ControllerButton_R5"),
               });
             default:
               return (0, e.jsx)(s2, {
                 bIsKnockout: r,
                 className: t,
-                "aria-label": (0, H.we)("#ControllerButton_Default"),
+                "aria-label": (0, L.we)("#ControllerButton_Default"),
               });
           }
         }
@@ -1534,7 +1534,7 @@
                 ],
               });
         }
-        function u({ bIsKnockout: i, ...t }) {
+        function m({ bIsKnockout: i, ...t }) {
           return i
             ? (0, e.jsx)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1709,7 +1709,7 @@
                 ],
               });
         }
-        function g({ bIsKnockout: i, ...t }) {
+        function f({ bIsKnockout: i, ...t }) {
           return i
             ? (0, e.jsx)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1762,7 +1762,7 @@
                 ],
               });
         }
-        function v({ bIsKnockout: i, ...t }) {
+        function H({ bIsKnockout: i, ...t }) {
           return i
             ? (0, e.jsx)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1811,7 +1811,7 @@
                 ],
               });
         }
-        function h({ bIsKnockout: i, ...t }) {
+        function g({ bIsKnockout: i, ...t }) {
           return i
             ? (0, e.jsx)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1905,7 +1905,7 @@
                 ],
               });
         }
-        function W({ bIsKnockout: i, ...t }) {
+        function K({ bIsKnockout: i, ...t }) {
           return i
             ? (0, e.jsx)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1943,7 +1943,7 @@
                 ],
               });
         }
-        function P({ bIsKnockout: i, ...t }) {
+        function Y({ bIsKnockout: i, ...t }) {
           return i
             ? (0, e.jsx)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -2019,7 +2019,7 @@
                 ],
               });
         }
-        function b1({ bIsKnockout: i, ...t }) {
+        function j1({ bIsKnockout: i, ...t }) {
           return i
             ? (0, e.jsx)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -2057,7 +2057,7 @@
                 ],
               });
         }
-        function c1({ bIsKnockout: i, ...t }) {
+        function u1({ bIsKnockout: i, ...t }) {
           return i
             ? (0, e.jsxs)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -2614,21 +2614,21 @@
                 ],
               });
         }
-        var C1 = a(36118),
+        var m1 = a(36118),
           R = a(39905),
           P1 = a(3166),
           S1 = a(25792),
           o2 = a(21418),
           n2 = a(35038),
-          L1 = a(80613),
-          d1 = a.n(L1),
+          v1 = a(80613),
+          p1 = a.n(v1),
           b = a(75245);
-        class Z extends L1.Message {
+        class Z extends v1.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
               Z.prototype.appid || b.Sg(Z.M()),
-              L1.Message.initialize(this, t, 0, -1, void 0, null);
+              v1.Message.initialize(this, t, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -2657,7 +2657,7 @@
             return b.Uq(Z.M(), t);
           }
           static deserializeBinary(t) {
-            let r = new (d1().BinaryReader)(t),
+            let r = new (p1().BinaryReader)(t),
               s = new Z();
             return Z.deserializeBinaryFromReader(s, r);
           }
@@ -2665,14 +2665,14 @@
             return b.zj(Z.MBF(), t, r);
           }
           serializeBinary() {
-            var t = new (d1().BinaryWriter)();
+            var t = new (p1().BinaryWriter)();
             return Z.serializeBinaryToWriter(this, t), t.getResultBuffer();
           }
           static serializeBinaryToWriter(t, r) {
             b.i0(Z.M(), t, r);
           }
           serializeBase64String() {
-            var t = new (d1().BinaryWriter)();
+            var t = new (p1().BinaryWriter)();
             return (
               Z.serializeBinaryToWriter(this, t), t.getResultBase64String()
             );
@@ -2681,12 +2681,12 @@
             return "CGamePerformanceStats_GetGameFrameRateStats_Request";
           }
         }
-        class I extends L1.Message {
+        class I extends v1.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
               I.prototype.frame_rates || b.Sg(I.M()),
-              L1.Message.initialize(this, t, 0, -1, [1], null);
+              v1.Message.initialize(this, t, 0, -1, [1], null);
           }
           static sm_m;
           static sm_mbf;
@@ -2713,7 +2713,7 @@
             return b.Uq(I.M(), t);
           }
           static deserializeBinary(t) {
-            let r = new (d1().BinaryReader)(t),
+            let r = new (p1().BinaryReader)(t),
               s = new I();
             return I.deserializeBinaryFromReader(s, r);
           }
@@ -2721,14 +2721,14 @@
             return b.zj(I.MBF(), t, r);
           }
           serializeBinary() {
-            var t = new (d1().BinaryWriter)();
+            var t = new (p1().BinaryWriter)();
             return I.serializeBinaryToWriter(this, t), t.getResultBuffer();
           }
           static serializeBinaryToWriter(t, r) {
             b.i0(I.M(), t, r);
           }
           serializeBase64String() {
-            var t = new (d1().BinaryWriter)();
+            var t = new (p1().BinaryWriter)();
             return (
               I.serializeBinaryToWriter(this, t), t.getResultBase64String()
             );
@@ -2737,12 +2737,12 @@
             return "CGamePerformanceStats_GetGameFrameRateStats_Response";
           }
         }
-        class B extends L1.Message {
+        class B extends v1.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
               B.prototype.clusterid || b.Sg(B.M()),
-              L1.Message.initialize(this, t, 0, -1, [8], null);
+              v1.Message.initialize(this, t, 0, -1, [8], null);
           }
           static sm_m;
           static sm_mbf;
@@ -2808,7 +2808,7 @@
             return b.Uq(B.M(), t);
           }
           static deserializeBinary(t) {
-            let r = new (d1().BinaryReader)(t),
+            let r = new (p1().BinaryReader)(t),
               s = new B();
             return B.deserializeBinaryFromReader(s, r);
           }
@@ -2816,14 +2816,14 @@
             return b.zj(B.MBF(), t, r);
           }
           serializeBinary() {
-            var t = new (d1().BinaryWriter)();
+            var t = new (p1().BinaryWriter)();
             return B.serializeBinaryToWriter(this, t), t.getResultBuffer();
           }
           static serializeBinaryToWriter(t, r) {
             b.i0(B.M(), t, r);
           }
           serializeBase64String() {
-            var t = new (d1().BinaryWriter)();
+            var t = new (p1().BinaryWriter)();
             return (
               B.serializeBinaryToWriter(this, t), t.getResultBase64String()
             );
@@ -2834,10 +2834,10 @@
         }
         var K1;
         ((i) => {
-          function t(r, s, x) {
+          function t(r, s, y) {
             return r.SendMsg(
               "GamePerformanceStats.GetGameFrameRateStats#1",
-              (0, n2.I8)(Z, s, x),
+              (0, n2.I8)(Z, s, y),
               I,
               {
                 bConstMethod: !0,
@@ -2873,11 +2873,11 @@
             results: t,
             titleId: r,
             descriptionId: s,
-            appName: x,
+            appName: y,
             buttonProps: T,
             autoFocus: A,
             onOpenBlogPost: r1,
-            eStartingTab: K = E.ZJ,
+            eStartingTab: X = E.ZJ,
             bShowTabs: n = !0,
           } = i;
           if (!t) return null;
@@ -2887,15 +2887,15 @@
               : t.steam_deck_blog_url &&
                 (window.location.href = t.steam_deck_blog_url);
           };
-          let j1 = T ?? {},
+          let w1 = T ?? {},
             s1 = null,
             M1 = null;
           if (
             (t.steam_deck_blog_url &&
-              ((j1.onOptionsActionDescription = R.Z.Localize(
+              ((w1.onOptionsActionDescription = R.Z.Localize(
                 "#SteamDeckVerified_ViewDeveloperPost",
               )),
-              (j1.onOptionsButton = A1),
+              (w1.onOptionsButton = A1),
               (s1 = (0, e.jsx)(Y1, {
                 blogURL: t.steam_deck_blog_url,
                 eHWCompatibiltyDisplay: E.ZJ,
@@ -2911,51 +2911,51 @@
             let e1 = "",
               W1 = null,
               _1 = null,
-              I1 = (0, e.jsx)(m.Ez, { category: t.resolved_category });
+              I1 = (0, e.jsx)(u.Ez, { category: t.resolved_category });
             return (
-              K == E.JR
+              X == E.JR
                 ? ((e1 = R.Z.Localize(
                     "#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI",
                   )),
-                  (_1 = (0, e.jsx)(m.Nt, {
+                  (_1 = (0, e.jsx)(u.Nt, {
                     id: s,
                     category: t.machine_resolved_category,
-                    appName: x,
+                    appName: y,
                   })),
-                  (I1 = (0, e.jsx)(m.Ez, {
+                  (I1 = (0, e.jsx)(u.Ez, {
                     category: t.machine_resolved_category,
                   })))
-                : K == E.c9
+                : X == E.c9
                   ? ((e1 = R.Z.Localize(
                       "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
                     )),
-                    (_1 = (0, e.jsx)(m.cP, {
+                    (_1 = (0, e.jsx)(u.cP, {
                       id: s,
                       category: t.steamos_resolved_category,
-                      appName: x,
+                      appName: y,
                     })),
-                    (I1 = (0, e.jsx)(m.aw, {
+                    (I1 = (0, e.jsx)(u.aw, {
                       category: t.steamos_resolved_category,
                     })),
                     (W1 = M1))
-                  : K == E.bY
+                  : X == E.bY
                     ? ((e1 = R.Z.Localize(
                         "#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI",
                       )),
-                      (_1 = (0, e.jsx)(m.Pu, {
+                      (_1 = (0, e.jsx)(u.Pu, {
                         id: s,
                         category: t.frame_resolved_category,
-                        appName: x,
+                        appName: y,
                       })),
-                      (I1 = (0, e.jsx)(m.Ez, {
+                      (I1 = (0, e.jsx)(u.Ez, {
                         category: t.frame_resolved_category,
                       })))
                     : ((e1 = R.Z.Localize(
                         "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
                       )),
-                      (_1 = (0, e.jsx)(m.UN, {
+                      (_1 = (0, e.jsx)(u.UN, {
                         category: t.resolved_category,
-                        appName: x,
+                        appName: y,
                       })),
                       (W1 = s1)),
               (0, e.jsxs)(p.Z, {
@@ -2963,7 +2963,7 @@
                 focusableIfEmpty: A,
                 noFocusRing: !0,
                 className: C().CompatibilityDetailsContainer,
-                ...j1,
+                ...w1,
                 children: [
                   (0, e.jsxs)("div", {
                     id: r,
@@ -2992,7 +2992,7 @@
             u2 = (0, U.z5)(t.frame_resolved_category || j.YX);
           if (!n) {
             let e1 = null;
-            switch (K) {
+            switch (X) {
               case E.JR:
                 e1 = (0, e.jsx)(F1, { ...i });
                 break;
@@ -3019,7 +3019,7 @@
                 name: (0, e.jsxs)("div", {
                   className: C().pillContent,
                   children: [
-                    (0, e.jsx)(C1.lRD, { className: C().SteamDeckDeviceIcon }),
+                    (0, e.jsx)(m1.lRD, { className: C().SteamDeckDeviceIcon }),
                     (0, e.jsx)(z1, { className: C().RatingIcon }),
                   ],
                 }),
@@ -3033,7 +3033,7 @@
                 name: (0, e.jsxs)("div", {
                   className: C().pillContent,
                   children: [
-                    (0, e.jsx)(C1.fhy, {
+                    (0, e.jsx)(m1.fhy, {
                       className: C().SteamMachineDeviceIcon,
                     }),
                     (0, e.jsx)(d2, { className: C().RatingIcon }),
@@ -3063,7 +3063,7 @@
                 name: (0, e.jsxs)("div", {
                   className: C().pillContent,
                   children: [
-                    (0, e.jsx)(C1.Ves, { className: C().SteamFrameDeviceIcon }),
+                    (0, e.jsx)(m1.Ves, { className: C().SteamFrameDeviceIcon }),
                     (0, e.jsx)(u2, { className: C().RatingIcon }),
                   ],
                 }),
@@ -3078,9 +3078,10 @@
             tabs: m2,
             classNameCtn: C().CompatibilityTabs,
             classNameTabContent: C().CompatibilityTabContent,
-            startingTab: K.toString(),
+            startingTab: X.toString(),
             preferredFocus: !0,
             bDisableRouting: !0,
+            focusRingHasBorderRadius: !0,
           });
         }
         function R1(i) {
@@ -3088,17 +3089,17 @@
               titleId: t,
               title: r,
               autoFocus: s,
-              buttonProps: x,
+              buttonProps: y,
               ratingIcon: T,
               ratingSummary: A,
               deckBlogContent: r1,
-              children: K,
+              children: X,
             } = i,
             [n, A1] = a1.useState(!1),
-            j1 = a1.useCallback(() => n, [n]),
+            w1 = a1.useCallback(() => n, [n]),
             s1 = a1.useRef(null),
             M1 = (0, P1.Qn)();
-          let z1 = x ?? {};
+          let z1 = y ?? {};
           return (
             a1.useEffect(() => {
               s1?.current?.scrollHeight !== void 0 &&
@@ -3131,14 +3132,14 @@
                 r1,
                 (0, e.jsx)(D.Qg, {
                   ref: s1,
-                  className: j1()
+                  className: w1()
                     ? C().CompatibilityDetailsInterior_Scroll
                     : C().CompatibilityDetailsInterior_NoScroll,
                   children: (0, e.jsx)(p.Z, {
                     autoFocus: s,
-                    focusableIfEmpty: s || j1(),
+                    focusableIfEmpty: s || w1(),
                     noFocusRing: !0,
-                    children: K,
+                    children: X,
                   }),
                 }),
               ],
@@ -3146,19 +3147,19 @@
           );
         }
         function T1(i) {
-          const { titleId: t, descriptionId: r, results: s, appName: x } = i,
+          const { titleId: t, descriptionId: r, results: s, appName: y } = i,
             T =
               s.steamos_resolved_items &&
               s.steamos_resolved_items?.findIndex(
                 (n) => n.display_type == N,
               ) !== -1,
-            A = (0, e.jsx)(m.cP, {
+            A = (0, e.jsx)(u.cP, {
               id: r,
               category: s.steamos_resolved_category ?? i1.xs,
-              appName: x,
+              appName: y,
             }),
-            r1 = (0, e.jsx)(m.aw, { category: s.steamos_resolved_category }),
-            K =
+            r1 = (0, e.jsx)(u.aw, { category: s.steamos_resolved_category }),
+            X =
               s.steamos_resolved_items && s.steamos_resolved_items?.length > 0;
           return (0, e.jsx)(R1, {
             titleId: t,
@@ -3170,7 +3171,7 @@
             ...i,
             children: (0, e.jsxs)(e.Fragment, {
               children: [
-                K &&
+                X &&
                   (0, e.jsx)("div", {
                     className: C().CompatibilityDetailsSeparator,
                   }),
@@ -3218,15 +3219,15 @@
           });
         }
         function O1(i) {
-          const { titleId: t, descriptionId: r, results: s, appName: x } = i,
+          const { titleId: t, descriptionId: r, results: s, appName: y } = i,
             T = s.resolved_items?.findIndex((n) => n.display_type == V) !== -1,
-            A = (0, e.jsx)(m.UN, {
+            A = (0, e.jsx)(u.UN, {
               id: r,
               category: s.resolved_category,
-              appName: x,
+              appName: y,
             }),
-            r1 = (0, e.jsx)(m.Ez, { category: s.resolved_category }),
-            K = s.resolved_items && s.resolved_items?.length > 0;
+            r1 = (0, e.jsx)(u.Ez, { category: s.resolved_category }),
+            X = s.resolved_items && s.resolved_items?.length > 0;
           return (0, e.jsx)(R1, {
             titleId: t,
             title: R.Z.Localize(
@@ -3237,7 +3238,7 @@
             ...i,
             children: (0, e.jsxs)(e.Fragment, {
               children: [
-                K &&
+                X &&
                   (0, e.jsx)("div", {
                     className: C().CompatibilityDetailsSeparator,
                   }),
@@ -3287,18 +3288,18 @@
           });
         }
         function F1(i) {
-          const { titleId: t, descriptionId: r, results: s, appName: x } = i,
+          const { titleId: t, descriptionId: r, results: s, appName: y } = i,
             T =
               s.machine_resolved_items?.findIndex(
                 (n) => n.display_type == V,
               ) !== -1,
-            A = (0, e.jsx)(m.Nt, {
+            A = (0, e.jsx)(u.Nt, {
               id: r,
               category: s.machine_resolved_category,
-              appName: x,
+              appName: y,
             }),
-            r1 = (0, e.jsx)(m.Ez, { category: s.machine_resolved_category }),
-            K =
+            r1 = (0, e.jsx)(u.Ez, { category: s.machine_resolved_category }),
+            X =
               s.machine_resolved_items && s.machine_resolved_items?.length > 0;
           return (0, e.jsx)(R1, {
             titleId: t,
@@ -3310,7 +3311,7 @@
             ...i,
             children: (0, e.jsxs)(e.Fragment, {
               children: [
-                K &&
+                X &&
                   (0, e.jsx)("div", {
                     className: C().CompatibilityDetailsSeparator,
                   }),
@@ -3356,19 +3357,19 @@
           });
         }
         function E1(i) {
-          const { titleId: t, descriptionId: r, results: s, appName: x } = i,
+          const { titleId: t, descriptionId: r, results: s, appName: y } = i,
             T =
               s.frame_resolved_items?.findIndex((n) => n.display_type == V) !==
               -1,
-            A = (0, e.jsx)(m.Pu, {
+            A = (0, e.jsx)(u.Pu, {
               id: r,
               category: s.frame_resolved_category ?? j.YX,
-              appName: x,
+              appName: y,
             }),
-            r1 = (0, e.jsx)(m.Ez, {
+            r1 = (0, e.jsx)(u.Ez, {
               category: s.frame_resolved_category ?? j.YX,
             }),
-            K = s.frame_resolved_items && s.frame_resolved_items?.length > 0;
+            X = s.frame_resolved_items && s.frame_resolved_items?.length > 0;
           return (0, e.jsx)(R1, {
             titleId: t,
             title: R.Z.Localize(
@@ -3379,7 +3380,7 @@
             ...i,
             children: (0, e.jsxs)(e.Fragment, {
               children: [
-                K &&
+                X &&
                   (0, e.jsx)("div", {
                     className: C().CompatibilityDetailsSeparator,
                   }),
@@ -3441,12 +3442,12 @@
                 T,
                 (0, e.jsx)("div", {
                   className: C().DeveloperBlogYButton,
-                  children: (0, e.jsx)(D1, { button: f.Y, type: H1.Knockout }),
+                  children: (0, e.jsx)(b1, { button: h.Y, type: C1.Knockout }),
                 }),
               ],
             });
           }
-          const x =
+          const y =
             r == E.c9
               ? R.Z.Localize("#SteamOS_DescriptionHeader_DeveloperBlog_Desktop")
               : R.Z.Localize(
@@ -3455,7 +3456,7 @@
           return (0, e.jsxs)("div", {
             className: C().CompatibilityDetailRatingSummary,
             children: [
-              x,
+              y,
               (0, e.jsx)("a", {
                 href: t,
                 className: C().DeveloperBlockLinkDesktop,
@@ -3467,20 +3468,20 @@
         function U1(i) {
           const { displaytype: t } = i;
           switch (t) {
-            case g1:
-              return (0, e.jsx)(C1.o5Q, {
+            case y1:
+              return (0, e.jsx)(m1.o5Q, {
                 className: C().CompatibilityDetailsResultIcon,
               });
-            case f1:
-              return (0, e.jsx)(C1.aVR, {
+            case x1:
+              return (0, e.jsx)(m1.aVR, {
                 className: C().CompatibilityDetailsResultIcon,
               });
             case o1:
-              return (0, e.jsx)(C1.jIP, {
+              return (0, e.jsx)(m1.jIP, {
                 className: C().CompatibilityDetailsResultIcon,
               });
-            case X:
-              return (0, e.jsx)(C1.WX$, {
+            case Q:
+              return (0, e.jsx)(m1.WX$, {
                 className: C().CompatibilityDetailsResultIcon,
               });
             case V:
@@ -3490,12 +3491,12 @@
         function X1(i) {
           const { displaytype: t } = i;
           switch (t) {
-            case u1:
-              return (0, e.jsx)(C1.ZjT, {
+            case f1:
+              return (0, e.jsx)(m1.ZjT, {
                 className: C().CompatibilityDetailsResultIcon,
               });
             case N:
-              return (0, e.jsx)(C1.bcZ, {
+              return (0, e.jsx)(m1.bcZ, {
                 className: C().CompatibilityDetailsResultIcon,
               });
             default:
@@ -3507,7 +3508,7 @@
           return useMemo(
             () =>
               t?.data?.frame_rates
-                ?.find((x) => x.clusterid == "1")
+                ?.find((y) => y.clusterid == "1")
                 ?.mean_frame_rate?.toFixed(0),
             [t],
           )
@@ -3515,9 +3516,9 @@
             : null;
         }
       },
-      21418: (t1, Y, a) => {
+      21418: (t1, J, a) => {
         "use strict";
-        a.d(Y, { V: () => f1, a: () => g1 });
+        a.d(J, { V: () => x1, a: () => y1 });
         var e = a(7850),
           p = a(90626),
           D = a(36707),
@@ -3525,94 +3526,94 @@
           O = a(179),
           N = a(1990),
           M = a.n(N),
-          u1 = a(71421),
+          f1 = a(71421),
           i1 = a(53107),
-          X = a(19298),
+          Q = a(19298),
           V = a(20169),
           o1 = a(92757);
-        function f1(U) {
+        function x1(U) {
           const {
               tabs: _,
-              bDisableRouting: L,
+              bDisableRouting: v,
               startingTab: z,
               controlledTab: F,
-              OnTabChanged: J,
+              OnTabChanged: W,
               classNameCtn: q,
-              classNameTab: h1,
-              classNameTabContent: n1,
-              preferredFocus: f,
-              bVerticalTabs: Q,
-              bSticky: x1,
-              bChecklistMode: m1,
+              classNameTab: n1,
+              focusRingHasBorderRadius: c1,
+              classNameTabContent: h,
+              preferredFocus: $,
+              bVerticalTabs: g1,
+              bSticky: h1,
+              bChecklistMode: L1,
             } = U,
-            l1 = (0, o1.zy)(),
-            m = (0, o1.W6)(),
-            [$, C] = (0, p.useState)(
+            u = (0, o1.zy)(),
+            P = (0, o1.W6)(),
+            [C, x] = (0, p.useState)(
               () =>
                 z ||
-                (!L && (0, O.f3)(l1, "tab")
-                  ? ((0, O.f3)(l1, "tab") ?? "")
-                  : ""),
+                (!v && (0, O.f3)(u, "tab") ? ((0, O.f3)(u, "tab") ?? "") : ""),
             );
           (0, p.useEffect)(() => {
-            if (!U.bDisableRouting && l1) {
-              const k = (0, O.f3)(l1, "tab");
-              k && C(k);
+            if (!U.bDisableRouting && u) {
+              const k = (0, O.f3)(u, "tab");
+              k && x(k);
             }
-          }, [l1, l1.key, U.bDisableRouting, C]);
-          const y = p.useCallback(
+          }, [u, u.key, U.bDisableRouting, x]);
+          const l = p.useCallback(
               (k) => {
-                C(k.key),
-                  L || (0, O.Bm)(m, "tab", k.key),
-                  J?.(k.key),
+                x(k.key),
+                  v || (0, O.Bm)(P, "tab", k.key),
+                  W?.(k.key),
                   k.onClick && k.onClick(k);
               },
-              [L, m, J],
+              [v, P, W],
             ),
-            l = _.filter((k) => !k.hidden);
-          if (!l.length) return null;
-          const y1 = F ?? $,
-            H = l.find((k) => k.key === y1) || l[0],
-            H1 = f ? (z ?? l[0].key) : void 0,
-            p1 = (0, e.jsxs)(e.Fragment, {
+            l1 = _.filter((k) => !k.hidden);
+          if (!l1.length) return null;
+          const L = F ?? C,
+            C1 = l1.find((k) => k.key === L) || l1[0],
+            H1 = $ ? (z ?? l1[0].key) : void 0,
+            d1 = (0, e.jsxs)(e.Fragment, {
               children: [
-                (0, e.jsx)(X.Z, {
+                (0, e.jsx)(Q.Z, {
                   className: (0, D.A)(
                     M().GraphicalAssetsTabs,
-                    Q && M().GraphicalAssetsTabsVertical,
-                    m1 && M().ChecklistMode,
-                    x1 && M().Sticky,
+                    g1 && M().GraphicalAssetsTabsVertical,
+                    L1 && M().ChecklistMode,
+                    h1 && M().Sticky,
                     q,
                   ),
-                  navEntryPreferPosition: f ? V.iU.PREFERRED_CHILD : V.iU.FIRST,
-                  children: l.map((k, v1) =>
+                  navEntryPreferPosition: $ ? V.iU.PREFERRED_CHILD : V.iU.FIRST,
+                  children: l1.map((k, b1) =>
                     (0, e.jsx)(
                       a1,
                       {
                         tab: k,
-                        OnTabClick: y,
-                        classNameTab: h1,
-                        active: k.key === H.key,
+                        OnTabClick: l,
+                        classNameTab: n1,
+                        focusRingHasBorderRadius: c1,
+                        active: k.key === C1.key,
                         preferredFocus: H1 === k.key,
                       },
                       k.key,
                     ),
                   ),
                 }),
-                H && (0, e.jsx)(X.Z, { className: n1, children: H.contents }),
+                C1 && (0, e.jsx)(Q.Z, { className: h, children: C1.contents }),
               ],
             });
-          return Q
-            ? (0, e.jsx)(X.Z, {
+          return g1
+            ? (0, e.jsx)(Q.Z, {
                 className: (0, D.A)(M().GraphicalAssetsTabsLayoutVertical),
-                children: p1,
+                children: d1,
               })
-            : p1;
+            : d1;
         }
-        function g1(U) {
+        function y1(U) {
           const {
             statusType: _ = "success",
-            bShowStatusBox: L,
+            bShowStatusBox: v,
             children: z,
           } = U;
           let F = "";
@@ -3630,7 +3631,7 @@
               className: (0, D.A)(
                 M().GraphicalAssetStatus,
                 F,
-                L ? M().checklistBox : "",
+                v ? M().checklistBox : "",
               ),
               children: z,
             })
@@ -3639,30 +3640,32 @@
         function a1(U) {
           const {
             tab: _,
-            OnTabClick: L,
+            OnTabClick: v,
             classNameTab: z,
-            active: F,
-            preferredFocus: J,
+            focusRingHasBorderRadius: F,
+            active: W,
+            preferredFocus: q,
           } = U;
           return (0, e.jsx)(i1.e7, {
             condition: !!(_.statusToolTip || _.tooltip),
-            wrap: (q) =>
-              (0, e.jsx)(u1.he, {
+            wrap: (n1) =>
+              (0, e.jsx)(f1.he, {
                 toolTipContent: _.statusToolTip || _.tooltip,
-                children: q,
+                children: n1,
               }),
-            children: (0, e.jsxs)(X.Z, {
+            children: (0, e.jsxs)(Q.Z, {
               className: (0, D.A)(
                 M().GraphicalAssetsTab,
-                F && M().Active,
-                F && "ActiveTab",
+                W && M().Active,
+                W && "ActiveTab",
                 z,
               ),
-              onActivate: () => L(_),
-              preferredFocus: J,
+              onActivate: () => v(_),
+              preferredFocus: q,
+              focusRingHasBorderRadius: F,
               children: [
                 !!_.vo_warning &&
-                  (0, e.jsx)(u1.he, {
+                  (0, e.jsx)(f1.he, {
                     toolTipContent: _.vo_warning,
                     children: (0, e.jsx)("div", {
                       className: M().VOWarning,

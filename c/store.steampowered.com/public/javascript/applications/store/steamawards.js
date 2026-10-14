@@ -101,9 +101,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
-            _ = (0, _._)(),
-            _ = _ ?? _?.focusable ?? !!_.href,
+          const { underline: _ = "auto", ..._ } = _,
             _ = (0, _._)(
               {
                 ..._,
@@ -112,15 +110,9 @@
               },
               _,
             );
-          return _ && (_ || _)
-            ? (0, _.jsx)(_._, {
-                ..._,
-                ...(_ || {}),
-                focusable: _,
-              })
-            : (0, _.jsx)("a", {
-                ..._,
-              });
+          return (0, _.jsx)(_._, {
+            ..._,
+          });
         }
         const _ = [
           ..._._,
@@ -761,6 +753,89 @@
         __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
+        });
+        var _ = __webpack_require__("chunkid");
+        const _ = {};
+        (_.arabic = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 98135, 19))),
+          (_.brazilian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 32427, 19))),
+          (_.bulgarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 56708, 19))),
+          (_.czech = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 18914, 19))),
+          (_.danish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 15670, 19))),
+          (_.dutch = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 93067, 19))),
+          (_.english = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 52777, 19))),
+          (_.finnish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 73934, 19))),
+          (_.french = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 31055, 19))),
+          (_.german = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 1509, 19))),
+          (_.greek = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 11934, 19))),
+          (_.hungarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 92760, 19))),
+          (_.indonesian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 41411, 19))),
+          (_.italian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 3905, 19))),
+          (_.japanese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 15816, 19))),
+          (_.koreana = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 40202, 19))),
+          (_.latam = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 61090, 19))),
+          (_.malay = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 94841, 19))),
+          (_.norwegian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 71693, 19))),
+          (_.polish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 57258, 19))),
+          (_.portuguese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 49994, 19))),
+          (_.romanian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 61540, 19))),
+          (_.russian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 13956, 19))),
+          (_.sc_schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 58430, 19))),
+          (_.schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 56983, 19))),
+          (_.spanish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 80657, 19))),
+          (_.swedish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 91712, 19))),
+          (_.tchinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 27228, 19))),
+          (_.thai = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 57001, 19))),
+          (_.turkish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 17681, 19))),
+          (_.ukrainian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 93275, 19))),
+          (_.vietnamese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 23352, 19)));
+        async function _(_) {
+          if (_[_]) return _[_]();
+        }
+        const _ = (0, _._)(_);
+        function _(_, _, _, _, ..._) {
+          const _ = `${_}${_ ? "_second" : "_third"}`;
+          if (_.HasKey(_))
+            return _ ? _.LocalizeReact(_, ..._) : _.LocalizeReact(_, _, ..._);
+          if (_.HasKey(_)) return _.LocalizeReact(_, ..._);
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
           _: () => _,
           _: () => _,
         });
@@ -962,6 +1037,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           return (0, _.jsx)(_._, {
@@ -1010,7 +1086,9 @@
         function _(_) {
           const { redirectURL: _, guestOption: _ } = _,
             [_] = (0, _.useState)(
-              new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+              new _._(
+                new _._(_._.WEBAPI_BASE_URL),
+              ).GetAnonymousServiceTransport(),
             ),
             [_, _] = (0, _.useState)(!1),
             _ = (_) => {
@@ -1047,6 +1125,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -2297,7 +2376,7 @@
                   (0, _.jsxs)(_.Fragment, {
                     children: [
                       (0, _.jsx)(_._, {
-                        children: (0, _._)("#YIR_ShareModal_YourLink"),
+                        children: _._.Localize("#YIR_ShareModal_YourLink"),
                       }),
                       (0, _.jsxs)("div", {
                         className: _().UrlContainer,
@@ -2309,7 +2388,7 @@
                           (0, _.jsx)(_._, {
                             className: _().Button,
                             onClick: _,
-                            children: (0, _._)(
+                            children: _._.Localize(
                               _
                                 ? "#YIR_ShareModal_CopyLink_Success"
                                 : "#YIR_ShareModal_CopyLink",

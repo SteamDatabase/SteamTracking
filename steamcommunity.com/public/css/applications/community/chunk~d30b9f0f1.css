@@ -4353,6 +4353,9 @@ html.responsive.touch ._3xpkvUfVoGX-QZFAF9bHX1 {
   --line-height: var(--line-height-4);
   --letter-spacing: var(--letter-spacing-4);
 }
+:where(._2gL71Yq-HzVI9oOGyWu3jH[data-dull-color]) {
+  --color-text-body-description: rgb(from var(--color-dull-12) r g b / 75%);
+}
 :where([data-status="highlight"]) {
   --status-outline-color: var(--color-accent-8);
 }
@@ -4664,6 +4667,9 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   background-color: var(--bg-highlight-color);
   width: 100%;
   height: 100%;
+}
+._2OvUYpkiij1e7K-4vW8i9W:where([data-accent-color]) {
+  --bg-highlight-color: var(--color-accent-8);
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM) {
   display: flex;
@@ -5993,6 +5999,9 @@ button.DialogButton._36RM9HiLN49wfehWU79FHe ._3nwxvp5yLdVg3iJ1eAi63z {
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   padding: 8px 10px;
+}
+.wC3_c2yhq3ppKA9AKQoTy select option {
+  background-color: #2a2e35;
 }
 .wC3_c2yhq3ppKA9AKQoTy a {
   color: #d8dee5;

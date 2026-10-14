@@ -2,7 +2,7 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [13156],
+    [3156],
     {
       97235: (Y, qr, _) => {
         "use strict";
@@ -1592,7 +1592,7 @@
         async function ro(s, t, i) {
           if (!X()) {
             const [{ CGameRecordingStore: n }] = await Promise.all([
-              _.e(90146).then(_.bind(_, 90146)),
+              _.e(146).then(_.bind(_, 90146)),
             ]);
             i && to(i);
             let l = new n();

@@ -2,107 +2,108 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [85836],
+    [5836],
     {
-      21521: (P, a, t) => {
+      21521: (M, a, t) => {
         "use strict";
-        t.r(a), t.d(a, { QAndARoutes: () => _, default: () => m });
+        t.r(a), t.d(a, { QAndARoutes: () => d, default: () => O });
         var n = t(7850),
-          i = t(67628),
-          s = t(92757),
+          o = t(67628),
+          e = t(92757),
           l = t(20076),
-          o = t(90783);
-        const _ = {
+          _ = t(90783);
+        const d = {
           Dashboard: (c) => `/questions/${c}/dashboard`,
-          FullPageView: (c, d) => `/questions/${c}/view/${d}`,
+          FullPageView: (c, r) => `/questions/${c}/view/${r}`,
         };
         function E(c) {
-          return (0, n.jsxs)(s.dO, {
+          return (0, n.jsxs)(e.dO, {
             children: [
-              (0, n.jsx)(s.qh, {
-                path: _.Dashboard(":vanity_str"),
-                render: (d) =>
+              (0, n.jsx)(e.qh, {
+                path: d.Dashboard(":vanity_str"),
+                render: (r) =>
                   (0, n.jsx)(l.X, {
                     config: {
                       "qanda-root": () => {
-                        const { vanity_str: D } = d.match.params;
-                        return (0, n.jsx)(i.xh, { vanity_str: D });
+                        const { vanity_str: m } = r.match.params;
+                        return (0, n.jsx)(o.xh, { vanity_str: m });
                       },
                     },
                   }),
               }),
-              (0, n.jsx)(s.qh, {
-                path: _.FullPageView(":vanity_str", ":session_gid"),
-                render: (d) =>
+              (0, n.jsx)(e.qh, {
+                path: d.FullPageView(":vanity_str", ":session_gid"),
+                render: (r) =>
                   (0, n.jsx)(l.X, {
                     config: {
                       "qanda-root": () => {
-                        const { vanity_str: D, session_gid: T } =
-                          d.match.params;
-                        return (0, n.jsx)(i.AC, { gidSession: T });
+                        const { vanity_str: m, session_gid: P } =
+                          r.match.params;
+                        return (0, n.jsx)(o.AC, { gidSession: P });
                       },
                     },
                   }),
               }),
-              (0, n.jsx)(s.qh, { component: o.a }),
+              (0, n.jsx)(e.qh, { component: _.a }),
             ],
           });
         }
-        const m = E;
+        const O = E;
       },
-      24642: (P, a, t) => {
+      24642: (M, a, t) => {
         "use strict";
-        t.d(a, { D: () => i });
+        t.d(a, { D: () => o });
         var n = t(84346);
-        function i(s) {
-          return s.toLocaleString((0, n.J)());
+        function o(e) {
+          return e.toLocaleString((0, n.J)());
         }
       },
-      84346: (P, a, t) => {
+      84346: (M, a, t) => {
         "use strict";
-        t.d(a, { J: () => s });
+        t.d(a, { J: () => e });
         var n = t(72609),
-          i = t(37901);
-        function s() {
-          return (0, i.A)().languages.map((o) => l(o.strISOCode));
+          o = t(37901);
+        function e() {
+          return (0, o.A)().languages.map((_) => l(_.strISOCode));
         }
-        function l(o) {
-          return o.length == 2 && n.TS.COUNTRY ? `${o}-${n.TS.COUNTRY}` : o;
+        function l(_) {
+          return _.length == 2 && n.TS.COUNTRY ? `${_}-${n.TS.COUNTRY}` : _;
         }
       },
-      86390: (P, a, t) => {
+      86390: (M, a, t) => {
         "use strict";
         t.d(a, { vg: () => v });
         var n = t(7850),
-          i = t(90626),
-          s = t(88003),
+          o = t(90626),
+          e = t(88003),
           l = t(18210),
-          o = t(3166),
-          _ = t(1317),
-          E = t(94276),
-          m = t(13018),
-          c = t(8059),
-          d = t(2801);
-        function D(r) {
-          return (0, n.jsx)(s.x_, {
-            onEscKeypress: r.closeModal,
+          _ = t(3166),
+          d = t(87242),
+          E = t(42780),
+          O = t(94276),
+          c = t(62179),
+          r = t(77008),
+          m = t(2801);
+        function P(s) {
+          return (0, n.jsx)(e.x_, {
+            onEscKeypress: s.closeModal,
             bDisableBackgroundDismiss: !0,
-            children: (0, n.jsx)(h, {
-              redirectURL: r.redirectURL,
-              guestOption: r.guestOption,
+            children: (0, n.jsx)(T, {
+              redirectURL: s.redirectURL,
+              guestOption: s.guestOption,
             }),
           });
         }
-        function T(r) {
-          const { redirectURL: e = window.location.href } = r;
+        function j(s) {
+          const { redirectURL: i = window.location.href } = s;
           return jsx(SimpleModal, {
             active: !0,
-            children: jsx(D, { redirectURL: e }),
+            children: jsx(P, { redirectURL: i }),
           });
         }
         function v() {
-          (0, s.pg)(
-            (0, n.jsx)(D, {
+          (0, e.pg)(
+            (0, n.jsx)(P, {
               ownerWin: window,
               redirectURL: window.location.href,
             }),
@@ -110,134 +111,136 @@
             { strTitle: (0, l.we)("#Login_SignInTitle") },
           );
         }
-        function g(r, e) {
+        function C(s, i) {
           ShowModalDialog(
-            jsx(D, { ownerWin: window, redirectURL: r, guestOption: e }),
+            jsx(P, { ownerWin: window, redirectURL: s, guestOption: i }),
             window,
             { strTitle: Localize("#Login_SignInTitle") },
           );
         }
-        function h(r) {
-          const { redirectURL: e, guestOption: u } = r,
-            [M] = (0, i.useState)(
-              new m.D(o.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+        function T(s) {
+          const { redirectURL: i, guestOption: u } = s,
+            [D] = (0, o.useState)(
+              new c.x(
+                new r.D(_.TS.WEBAPI_BASE_URL),
+              ).GetAnonymousServiceTransport(),
             ),
-            [O, j] = (0, i.useState)(!1),
+            [h, g] = (0, o.useState)(!1),
             L = (A) => {
-              A == c.wI.k_PrimaryDomainFail ? j(!0) : window.location.assign(e);
+              A == d.wI.k_PrimaryDomainFail ? g(!0) : window.location.assign(i);
             };
           return (0, n.jsx)("div", {
-            children: O
-              ? (0, n.jsx)(_.Fn, {})
-              : (0, n.jsx)(_.YN, {
+            children: h
+              ? (0, n.jsx)(E.Fn, {})
+              : (0, n.jsx)(E.YN, {
                   autoFocus: !0,
-                  transport: M,
-                  platform: E.SS.tS,
+                  transport: D,
+                  platform: O.SS.tS,
                   onComplete: L,
-                  redirectUrl: e,
+                  redirectUrl: i,
                   theme: "modal",
-                  children: u && (0, n.jsx)(_.Mk, { redirectURL: e }),
+                  children: u && (0, n.jsx)(E.Mk, { redirectURL: i }),
                 }),
           });
         }
       },
-      12932: (P, a, t) => {
+      12932: (M, a, t) => {
         "use strict";
-        t.d(a, { AQ: () => g, pn: () => r, qx: () => h });
+        t.d(a, { AQ: () => v, pn: () => T, qx: () => C });
         var n = t(7850),
-          i = t(19316),
-          s = t(18210),
+          o = t(19316),
+          e = t(18210),
           l = t(36118),
-          o = t(90626),
-          _ = t(36707),
+          _ = t(90626),
+          d = t(36707),
           E = t(95695),
-          m = t.n(E),
+          O = t.n(E),
           c = t(25792),
-          d = t(64734),
-          D = t.n(d),
-          T = t(65946),
-          v = t(11243);
-        function g(e) {
+          r = t(64734),
+          m = t.n(r),
+          P = t(65946),
+          j = t(11243);
+        function v(s) {
           const {
-              title: u,
-              tooltip: M,
-              getMinimized: O,
-              toggleMinimized: j,
-              className: L,
-              children: A,
-              elAdditionalButtons: R,
-            } = e,
-            C = (0, T.q3)(() => O());
+              title: i,
+              tooltip: u,
+              getMinimized: D,
+              toggleMinimized: h,
+              className: g,
+              children: L,
+              elAdditionalButtons: A,
+            } = s,
+            R = (0, P.q3)(() => D());
           return (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsxs)("div", {
-                className: (0, _.A)(
-                  L,
-                  d.SectionTitleHeader,
-                  d.required_title,
+                className: (0, d.A)(
+                  g,
+                  r.SectionTitleHeader,
+                  r.required_title,
                   "SectionTitleHeader",
                 ),
                 children: [
                   (0, n.jsxs)("div", {
-                    className: (0, _.A)(
+                    className: (0, d.A)(
                       E.CollapsableSectionTitle,
                       "EventEditorTextTitle",
                     ),
-                    children: [u, !!M && (0, n.jsx)(v.o, { tooltip: M })],
+                    children: [i, !!u && (0, n.jsx)(j.o, { tooltip: u })],
                   }),
                   (0, n.jsxs)("div", {
-                    className: d.SectionTitleButtons,
+                    className: r.SectionTitleButtons,
                     children: [
-                      R,
-                      (0, n.jsx)(r, { bIsMinimized: C, fnToggleMinimize: j }),
+                      A,
+                      (0, n.jsx)(T, { bIsMinimized: R, fnToggleMinimize: h }),
                     ],
                   }),
                 ],
               }),
-              !C && (0, n.jsx)(c.tH, { children: A }),
+              !R && (0, n.jsx)(c.tH, { children: L }),
             ],
           });
         }
-        function h(e) {
-          const [u, M] = o.useState(!!e.bStartMinimized);
-          return (0, n.jsx)(g, {
-            ...e,
-            getMinimized: () => u,
-            toggleMinimized: () => M(!u),
-            children: e.children,
+        function C(s) {
+          const [i, u] = _.useState(!!s.bStartMinimized);
+          return (0, n.jsx)(v, {
+            ...s,
+            getMinimized: () => i,
+            toggleMinimized: () => u(!i),
+            children: s.children,
           });
         }
-        function r(e) {
-          const { bIsMinimized: u, fnToggleMinimize: M } = e,
-            O = u ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-          return (0, n.jsx)(i.$n, {
-            "data-tooltip-text": (0, s.we)(O),
-            onClick: M,
-            children: e.bIsMinimized
+        function T(s) {
+          const { bIsMinimized: i, fnToggleMinimize: u } = s,
+            D = i ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+          return (0, n.jsx)(o.$n, {
+            "data-tooltip-text": (0, e.we)(D),
+            onClick: u,
+            children: s.bIsMinimized
               ? (0, n.jsx)(l.hz4, {})
               : (0, n.jsx)(l.Xjb, {}),
           });
         }
       },
-      47689: (P, a, t) => {
+      47689: (M, a, t) => {
         "use strict";
         t.d(a, { m: () => l });
         var n = t(41735),
-          i = t.n(n),
-          s = t(90626);
-        function l(o) {
-          const _ = s.useRef(i().CancelToken.source());
+          o = t.n(n),
+          e = t(90626);
+        function l(_) {
+          const d = e.useRef(o().CancelToken.source());
           return (
-            s.useEffect(() => {
-              const E = _.current;
-              return () => E.cancel(o ? `${o}: unmounting` : "unmounting");
-            }, [o]),
-            _.current
+            e.useEffect(() => {
+              const E = d.current;
+              return () => E.cancel(_ ? `${_}: unmounting` : "unmounting");
+            }, [_]),
+            d.current
           );
         }
       },
-      64734: (P) => {
-        P.exports = {
+      64734: (M) => {
+        M.exports = {
           SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
           SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
           required_title: "_3yDPZjnsoLc2FkrAH2UOEd",

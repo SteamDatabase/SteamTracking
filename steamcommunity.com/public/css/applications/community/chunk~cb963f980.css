@@ -889,6 +889,9 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   --line-height: var(--line-height-4);
   --letter-spacing: var(--letter-spacing-4);
 }
+:where(._2gL71Yq-HzVI9oOGyWu3jH[data-dull-color]) {
+  --color-text-body-description: rgb(from var(--color-dull-12) r g b / 75%);
+}
 :where([data-status="highlight"]) {
   --status-outline-color: var(--color-accent-8);
 }

@@ -4220,10 +4220,12 @@
                   (0, _.jsx)("img", {
                     src: _,
                     className: (0, _._)(_.Banner, _.Big),
+                    alt: _.GetNameWithFallback(_),
                   }),
                   (0, _.jsx)("img", {
                     src: _,
                     className: (0, _._)(_.Banner, _.Mobile),
+                    alt: _.GetNameWithFallback(_),
                   }),
                 ],
               });

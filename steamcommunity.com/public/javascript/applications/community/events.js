@@ -2,7 +2,7 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [74268],
+    [4268],
     {
       11161: (T, N, e) => {
         "use strict";
@@ -21,7 +21,7 @@
             bPreventRedirect: !0,
           });
         var L = e(92757),
-          K = e(13018),
+          K = e(77008),
           $ = e(85528),
           y = e(77495),
           q = e(10303),

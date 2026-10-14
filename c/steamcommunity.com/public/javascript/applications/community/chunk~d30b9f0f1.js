@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [36299],
+    [6299],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -4653,6 +4653,8 @@
               _.push("hardware"),
             _.hide_section_if_logged_out && _.push("logged_in"),
             _.visibility_by_door_index_state && _.push("door_index"),
+            _.next_fest_exploration_visibility &&
+              _.push("next_fest_exploration"),
             _.join(" + ")
           );
         }
@@ -16629,6 +16631,10 @@
                     (0, _.jsx)(_, {
                       ..._,
                     }),
+                  _(_) &&
+                    (0, _.jsx)(_, {
+                      ..._,
+                    }),
                 ],
               }),
           });
@@ -16692,6 +16698,43 @@
               (_.smart_section_max_apps = _ > 0 ? _ : void 0),
                 _.SetDirty(_._.jsondata_sales);
             },
+          });
+        }
+        function _(_) {
+          switch (_) {
+            case "wishlist_onsale":
+            case "interactive_recommender_onsale":
+            case "dlc_onsale":
+            case "dlc_music_onsale":
+            case "tag":
+            case "top_n":
+            case "all_discounted":
+              return !0;
+            default:
+              return !1;
+          }
+        }
+        function _(_) {
+          const { editModel: _, saleSection: _ } = _,
+            _ = (0, _._)(() => _.smart_section_min_discount_percent || "");
+          return (0, _.jsx)(_._, {
+            clanSteamID: _.GetClanSteamID(),
+            children: (0, _.jsx)(_._, {
+              type: "number",
+              label: "(VO) Minimum discount (%)",
+              tooltip:
+                "Only items discounted by at least this much are shown. Empty means any discount counts. Only server-rendered sale pages read this; the older sale page display ignores it.",
+              min: "1",
+              max: "99",
+              placeholder: "1",
+              value: _,
+              onChange: (_) => {
+                const _ = Number.parseInt(_.target.value);
+                (_.smart_section_min_discount_percent =
+                  _ > 0 ? Math.min(_, 99) : void 0),
+                  _.SetDirty(_._.jsondata_sales);
+              },
+            }),
           });
         }
         function _(_) {
@@ -23382,6 +23425,7 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -23561,7 +23605,9 @@
               _,
               "CVirtualItemRewardDefStore: promotion operation token is missing",
             ),
-              (this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL, _));
+              (this.m_SteamInterface = new _._(
+                new _._(_._.WEBAPI_BASE_URL, _),
+              ));
           }
         };
         _([_._], _.prototype, "CreateNewVirtualItemRewardDef", 1),
@@ -23738,7 +23784,9 @@
               _,
               "CSaleItemRewardsDefinitionStore: promotion operation token is missing",
             ),
-              (this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL, _));
+              (this.m_SteamInterface = new _._(
+                new _._(_._.WEBAPI_BASE_URL, _),
+              ));
           }
         };
         _([_._], _.prototype, "SetSaleItemRewardDef", 1);
@@ -28762,21 +28810,189 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        const _ = _.lazy(() =>
-            __webpack_require__
-              ._("chunkid")
-              .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-          ),
-          _ = _
-            ? function (_) {
-                return (0, _.jsx)(_.Suspense, {
-                  fallback: null,
-                  children: (0, _.jsx)(_, {
-                    ..._,
+        function _(_) {
+          const { value: _, onValueChange: _, label: _, tooltip: _ } = _,
+            [_, _] = (0, _.useState)(void 0);
+          let _;
+          return (
+            ((_ && _.length > 0) || _) &&
+              (_ =
+                _ === void 0
+                  ? (0, _.jsx)("span", {
+                      children: _._.LocalizeReact(
+                        "#SteamURLAccepted",
+                        (0, _.jsx)(_._, {
+                          color: "green-8",
+                        }),
+                      ),
+                    })
+                  : (0, _.jsx)("span", {
+                      children: _._.Localize("#SteamURLInvalid"),
+                    })),
+            (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsxs)(_._, {
+                  children: [
+                    _,
+                    _ &&
+                      (0, _.jsx)(_._, {
+                        tooltip: _,
+                      }),
+                  ],
+                }),
+                (0, _.jsx)(_._, {
+                  value: _ != null ? _ : _,
+                  valueToString: (_) => _,
+                  valueFromString: (_) => _,
+                  clearable: !1,
+                  checkValidText: () => _ === void 0,
+                  onValueChange: (_) => {
+                    !!(
+                      ((_ == null ? void 0 : _.length) > 8 &&
+                        _ != null &&
+                        _.startsWith("https://store.steampowered.com/")) ||
+                      (_ != null &&
+                        _.startsWith("https://steamcommunity.com/")) ||
+                      (_ != null &&
+                        _.startsWith("https://help.steampowered.com/"))
+                    )
+                      ? (_(_), _(void 0))
+                      : _(_);
+                  },
+                  afterContent: _,
+                }),
+              ],
+            })
+          );
+        }
+        var _ = __webpack_require__("chunkid");
+        function _(_) {
+          const { settings: _, fnOnUpdate: _ } = _,
+            [_, _] = (0, _.useState)(!!_),
+            [_, _, _, _, _] = (0, _._)(() => {
+              var _, _, _, _;
+              return [
+                (_ =
+                  _ == null
+                    ? void 0
+                    : _.collection_time_term_and_conditions_url) != null
+                  ? _
+                  : "",
+                (_ = _ == null ? void 0 : _.collection_rtime_end) != null
+                  ? _
+                  : 0,
+                (_ = _ == null ? void 0 : _.collection_time_learn_more_url) !=
+                null
+                  ? _
+                  : "",
+                !!(_ != null && _.collection_time_allow_multiple_models),
+                (_ = _ == null ? void 0 : _.waiting_learn_more_url) != null
+                  ? _
+                  : "",
+              ];
+            });
+          return _
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    children: "Shuffle Settings",
                   }),
-                });
-              }
-            : (_) => null;
+                  (0, _.jsx)("hr", {}),
+                  (0, _.jsx)(_, {
+                    label: "Shuffle Pool Terms and Conditions URLs",
+                    tooltip:
+                      "Host this on the store, community or help wiki. If provided, then joining the pool requires accepting these terms.",
+                    value: _,
+                    onValueChange: (_) => {
+                      const _ = _
+                        ? {
+                            ..._,
+                          }
+                        : {};
+                      (_.collection_time_term_and_conditions_url = _), _(_);
+                    },
+                  }),
+                  (0, _.jsx)(_, {
+                    label: "Shuffle Pool Learn More URL",
+                    tooltip:
+                      "Host this on the hardware blog or help site FAQ. Help regular people understand whats going on.",
+                    value: _,
+                    onValueChange: (_) => {
+                      const _ = _
+                        ? {
+                            ..._,
+                          }
+                        : {};
+                      (_.collection_time_learn_more_url = _), _(_);
+                    },
+                  }),
+                  (0, _.jsx)(_._, {
+                    label: "Unix Epoch Time Shuffle Closes",
+                    tooltip:
+                      "Optional. Purely for display purpose: we show the time the server closes the list unless you announce a different one here. Switching out of shuffle is control by server",
+                    rtime: _,
+                    onValueChange: (_) => {
+                      const _ = _
+                        ? {
+                            ..._,
+                          }
+                        : {};
+                      (_.collection_rtime_end = _), _(_);
+                    },
+                  }),
+                  (0, _.jsxs)(_._, {
+                    checked: _,
+                    onChange: (_) => {
+                      const _ = _
+                        ? {
+                            ..._,
+                          }
+                        : {};
+                      (_.collection_time_allow_multiple_models = _), _(_);
+                    },
+                    children: [
+                      "Allow Signing Up For Multiple Models",
+                      (0, _.jsx)(_._, {
+                        tooltip:
+                          "Off (default): the customer signs up for one model and can switch models for free while the shuffle list is open.",
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: "Waitlist Settings",
+                  }),
+                  (0, _.jsx)("hr", {}),
+                  (0, _.jsx)(_, {
+                    label: "Waitlist 'Learn More' Url",
+                    tooltip:
+                      "Details about the waiting list for the Steam user to read.",
+                    value: _,
+                    onValueChange: (_) => {
+                      const _ = _
+                        ? {
+                            ..._,
+                          }
+                        : {};
+                      (_.waiting_learn_more_url = _), _(_);
+                    },
+                  }),
+                ],
+              })
+            : (0, _.jsxs)(_._, {
+                gap: "1",
+                direction: "column",
+                children: [
+                  (0, _.jsx)(_._, {
+                    size: "4",
+                    children: "Enable Advanced Settings",
+                  }),
+                  (0, _.jsx)(_._, {
+                    checked: _,
+                    onChange: (_) => _(!0),
+                  }),
+                ],
+              });
+        }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
@@ -30230,10 +30446,12 @@
         }
         function _(_) {
           const { editModel: _, saleSection: _ } = _,
-            [_, _, _] = (0, _._)(() => [
+            [_, _, _, _, _] = (0, _._)(() => [
               _.hide_section || !1,
               _.hide_section_after_rtime,
               _.hide_section_before_rtime,
+              _.next_fest_exploration_visibility,
+              _.GetEventModel().BIsNextFest(),
             ]),
             [_, _] = (0, _.useState)(_ > 0),
             [_, _] = (0, _.useState)(_ > 0);
@@ -30304,6 +30522,51 @@
                     }),
                     (0, _._)("#Sale_Section_Visibility_TimeZone"),
                   ],
+                }),
+              _ &&
+                (0, _.jsx)(_._, {
+                  clanSteamID: _.GetClanSteamID(),
+                  children: (0, _.jsx)(_._, {
+                    rgOptions: [
+                      {
+                        label: (0, _._)(
+                          "#Sale_Section_Visibility_NextFestExploration_None",
+                        ),
+                        data: void 0,
+                      },
+                      {
+                        label: (0, _._)(
+                          "#Sale_Section_Visibility_NextFestExploration_ShowOnlyPersonalized",
+                        ),
+                        data: "show-only-personalized",
+                      },
+                      {
+                        label: (0, _._)(
+                          "#Sale_Section_Visibility_NextFestExploration_ShowOnlyPersonalizedAvailable",
+                        ),
+                        data: "show-only-personalized-available",
+                      },
+                      {
+                        label: (0, _._)(
+                          "#Sale_Section_Visibility_NextFestExploration_ShowOnlyPersonalizedUnavailable",
+                        ),
+                        data: "show-only-personalized-unavailable",
+                      },
+                    ],
+                    label:
+                      "(VO) " +
+                      (0, _._)("#Sale_Section_Visibility_NextFestExploration"),
+                    tooltip: (0, _._)(
+                      "#Sale_Section_Visibility_NextFestExploration_ttip",
+                    ),
+                    strDropDownClassName: _.DropDownScroll,
+                    selectedOption: _,
+                    onChange: (_) => {
+                      _.next_fest_exploration_visibility !== _.data &&
+                        ((_.next_fest_exploration_visibility = _.data),
+                        _.SetDirty(_._.jsondata_sales));
+                    },
+                  }),
                 }),
               (0, _.jsxs)(_._, {
                 requireAdmin: !0,
@@ -32591,7 +32854,9 @@
                     children: _,
                   }),
                   (0, _.jsx)(_._, {
-                    toolTipContent: "#Sale_CreatorHomeListFilter_ttip",
+                    toolTipContent: (0, _._)(
+                      "#Sale_CreatorHomeListFilter_ttip",
+                    ),
                     direction: "top",
                     children: (0, _.jsx)(_._, {
                       className: _.ChooseButton,
@@ -36682,7 +36947,7 @@
               disabled: _,
               variant: _,
             }),
-            _ = _ ? _._ : "textarea";
+            _ = _ ? _ : "textarea";
           return (0, _.jsx)(_, {
             ref: _,
             ..._,
@@ -36692,6 +36957,97 @@
             readOnly: _,
             "aria-disabled": _,
           });
+        }
+        function _(_) {
+          return (0, _.jsx)(_._, {
+            noFocusRing: !0,
+            ..._,
+          });
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+        });
+        function _(_) {
+          return () => (
+            (_ = (_ * 1664525 + 1013904223) % 4294967296),
+            (_ >>> 0) / 4294967296
+          );
+        }
+        function _() {
+          return Math.floor(Math.random() * 4294967296);
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid");
+        const _ = new Set();
+        function _() {
+          for (const _ of _) _(location.search);
+        }
+        function _() {
+          const [_, _] = (0, _.useState)(location.search);
+          return (
+            (0, _.useEffect)(() => {
+              function _() {
+                _(location.search);
+              }
+              return (
+                _.add(_),
+                window.addEventListener("popstate", _),
+                _(location.search),
+                () => {
+                  _.delete(_), window.removeEventListener("popstate", _);
+                }
+              );
+            }, []),
+            _
+          );
+        }
+        function _(_, _) {
+          const _ = _(),
+            _ = (0, _.useMemo)(() => {
+              const _ = new URLSearchParams(_.substring(1)).get(_);
+              return _ != null
+                ? _ != null
+                  ? typeof _ == "boolean"
+                    ? _.constructor(_ !== "false")
+                    : _.constructor(_)
+                  : _
+                : _;
+            }, [_, _, _]),
+            _ = _.useCallback(
+              (_, _ = !1) => {
+                const _ = new URLSearchParams(location.search.substring(1));
+                if (_ != null) {
+                  if (_.get(_) == _) return;
+                  _.set(_, String(_));
+                } else {
+                  if (!_.has(_)) return;
+                  _.delete(_);
+                }
+                _
+                  ? history.replaceState(
+                      history.state,
+                      "",
+                      decodeURIComponent(`${window.location.pathname}?${_}`),
+                    )
+                  : history.pushState(
+                      history.state,
+                      "",
+                      decodeURIComponent(`${window.location.pathname}?${_}`),
+                    ),
+                  (0, _.startTransition)(_);
+              },
+              [_],
+            );
+          return [_, _];
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -37396,6 +37752,60 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const { rtime: _ } = _;
+          return _
+            ? (0, _.jsx)(_._, {
+                dateAndTime: _,
+                bSingleLine: !0,
+              })
+            : null;
+        }
+        function _(_) {
+          const { rtime: _, onValueChange: _, label: _, tooltip: _ } = _;
+          let _;
+          return (
+            _ > 0 &&
+              (_ = (0, _.jsx)(_, {
+                rtime: _,
+              })),
+            (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsxs)(_._, {
+                  children: [
+                    _,
+                    _ &&
+                      (0, _.jsx)(_._, {
+                        tooltip: _,
+                      }),
+                  ],
+                }),
+                (0, _.jsx)(_._, {
+                  value: _,
+                  valueToString: (_) => _.toString(),
+                  valueFromString: (_) => Number.parseInt(_),
+                  clearable: !1,
+                  onValueChange: (_) => {
+                    _(Number(_));
+                  },
+                  afterContent: _,
+                }),
+              ],
+            })
+          );
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = 12;
@@ -37636,6 +38046,36 @@
         __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid");
+        function _(_) {
+          if (_.section_type === "crosspromotesalepage")
+            return _.sale_page_cross_promo_event_gid || void 0;
+        }
+        function _(_, _) {
+          return !_.sale_page_cross_promo_event_gid ||
+            !_.sale_page_cross_promo_featured_app_tagid
+            ? "setup"
+            : !_ || !_.BIsVisibleEvent()
+              ? "missing"
+              : null;
+        }
+        function _(_, _) {
+          var _;
+          return _
+            ? (0, _._)(
+                "#Sale_CrossPromoSale_SectionTitle",
+                (_ = _.GetNameWithFallback(_)) != null ? _ : "",
+              )
+            : (0, _._)("#Sale_CrossPromoSale_DefaultSectionTitle");
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid");
         function _(_) {
@@ -37680,6 +38120,48 @@
             nNumSections: _.length,
             nSectionIndex: _,
           };
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_, _, _) {
+          let _ = _,
+            _ = 0;
+          for (_ = 0; _ < _; _++) {
+            const _ = _[_ % _.length];
+            if (_ < _) break;
+            _ -= _;
+          }
+          return _;
+        }
+        function _(_, _) {
+          if ((0, _._)(_)) return 0;
+          const _ = (0, _._)(_);
+          return _ <= 0 ? 0 : _ + _;
+        }
+        function _(_, _, _, _, _) {
+          let _ =
+            "section_" +
+            _ +
+            "_" +
+            _.GID +
+            (_ || 0) +
+            (0, _._)(
+              _.unique_id ? _.unique_id.toString() : JSON.stringify(_),
+            ).toString();
+          return (
+            _ &&
+              _.rtime32_last_local_modification &&
+              (_ += "_" + _.rtime32_last_local_modification),
+            _
+          );
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -41371,7 +41853,114 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
+          _ = __webpack_require__("chunkid");
+        const _ = 4;
+        function _(_) {
+          return _.GetSaleSections().filter(
+            (_) =>
+              BIsSaleSectionTypeItemsLike(_.section_type) &&
+              GetSaleSectionSmartSectionType(_) === "personalized_carousel",
+          );
+        }
+        function _(_) {
+          if (_.appid())
+            return {
+              _: _.appid(),
+              type: "game",
+            };
+          if (_.bundleid())
+            return {
+              _: _.bundleid(),
+              type: "bundle",
+            };
+          if (_.packageid())
+            return {
+              _: _.packageid(),
+              type: "sub",
+            };
+        }
+        function _(_, _, _, _, _) {
+          var _;
+          const _ = _(_),
+            _ = {
+              rgSections: _.map((_) => {
+                var _, _;
+                return {
+                  eSort:
+                    (_ = _.smart_section_personalized_carousel_sort) != null
+                      ? _
+                      : EStoreQuerySort.k_EStoreQuerySort_GlobalLongTermSalesRank,
+                  nMinItems:
+                    (_ = _.smart_section_personalized_carousel_min_items) !=
+                    null
+                      ? _
+                      : _,
+                  bRandomize: !!_.smart_section_personalized_carousel_randomize,
+                };
+              }),
+              storePageFilter: GetSaleStorePageFilter(
+                _,
+                !!((_ = _[0]) != null && _.prioritize_discounts),
+                _,
+              ),
+              strStoreFilterJSON: _[0]
+                ? GetSaleSectionStoreFilter(_[0])
+                : void 0,
+            };
+          return {
+            queryKey: [
+              "SaleTech",
+              "PersonalizedCarousels",
+              _,
+              _.country,
+              _.language,
+              JSON.stringify(_),
+            ],
+            queryFn: () => _(_, _, _, _),
+            staleTime: 1 / 0,
+          };
+        }
+        async function _(_, _, _, _) {
+          if (!_ || _.rgSections.length === 0) return [];
+          const _ = CProtoBufMsg.Init(
+            CStoreQuery_GetItemsByUserRecommendedTags_Request,
+          );
+          for (const {
+            eSort: _,
+            nMinItems: _,
+            bRandomize: _,
+          } of _.rgSections) {
+            const _ = _.Body().add_sections();
+            _.set_sort(_), _.set_min_items(_), _.set_randomize(_);
+          }
+          _.Body().set_context(GetStoreBrowseContext(_)),
+            _.Body().set_filters(
+              GetStorePageFilterProto(_.storePageFilter, !1),
+            ),
+            _.strStoreFilterJSON &&
+              _.Body()
+                .filters(!0)
+                .add_store_filters()
+                .set_filter_json(_.strStoreFilterJSON);
+          const _ = await StoreQueryService.GetItemsByUserRecommendedTags(_, _);
+          if (_.GetEResult() != k_EResultOK)
+            throw new Error(
+              `GetItemsByUserRecommendedTags failed: ${_.GetEResult()}`,
+            );
+          return _.Body()
+            .sections()
+            .map((_) => {
+              var _;
+              return {
+                strTagName: (_ = _.tag_name()) != null ? _ : "",
+                rgCapsules: _.store_item_ids().flatMap((_) => {
+                  const _ = _(_);
+                  return _ ? [_] : [];
+                }),
+              };
+            });
+        }
+        var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _) =>
             _ in _
@@ -41399,7 +41988,7 @@
               _(this, "m_mapLoadedData", new Map()),
               (0, _._)(this);
             const _ = (0, _._)("loyalty_webapi_token", "application_config"),
-              _ = new _._(_._.WEBAPI_BASE_URL, _ || void 0);
+              _ = (0, _._)(new _._(_._.WEBAPI_BASE_URL, _ || void 0));
             this.m_serviceTransport = _.GetServiceTransport();
           }
           static GetRelevantSections(_) {
@@ -41491,28 +42080,11 @@
                 return {
                   sTagName: (_ = _.tag_name()) != null ? _ : "",
                   rgCapsules: _.store_item_ids().flatMap((_) => {
-                    const _ = _.ConvertStoreItemIDToAppType(_);
+                    const _ = _(_);
                     return _ ? [_] : [];
                   }),
                 };
               });
-          }
-          static ConvertStoreItemIDToAppType(_) {
-            if (_.appid())
-              return {
-                _: _.appid(),
-                type: "game",
-              };
-            if (_.bundleid())
-              return {
-                _: _.bundleid(),
-                type: "bundle",
-              };
-            if (_.packageid())
-              return {
-                _: _.tagid(),
-                type: "sub",
-              };
           }
           static Get() {
             return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
@@ -44402,6 +44974,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _, _) {
           const _ = _ == _._ || _ == _._ || _ == _._,
@@ -44480,18 +45053,12 @@
           return _ !== null ? (_ && _.startsWith("#") ? (0, _._)(_) : _) : null;
         }
         function _(_, _, _, _, _, _) {
-          var _, _, _;
+          var _, _;
           if (!_) return "";
           if (_.section_type === "crosspromotesalepage") {
-            const _ = _.sale_page_cross_promo_event_gid
-              ? _._.GetClanEventModel(_.sale_page_cross_promo_event_gid)
-              : void 0;
-            return _
-              ? (0, _._)(
-                  "#Sale_CrossPromoSale_SectionTitle",
-                  (_ = _.GetNameWithFallback(_)) != null ? _ : "",
-                )
-              : (0, _._)("#Sale_CrossPromoSale_DefaultSectionTitle");
+            const _ = (0, _._)(_),
+              _ = _ ? _._.GetClanEventModel(_) : void 0;
+            return (0, _._)(_, _);
           }
           const _ = _(_, _, _),
             _ = _._.GetWithFallback(_.localized_label, _),
@@ -44578,6 +45145,9 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -44586,8 +45156,166 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid");
+        const _ = 1,
+          _ = _._.PerHour;
+        function _(_, _, _, _) {
+          const _ = _(
+              _,
+              _.rtime32_last_modified,
+              (_) => "groups" in _ && Array.isArray(_.groups),
+            ),
+            _ = [],
+            _ = [];
+          let _ = _ > 0 ? Math.min(_, _.length) : _.length;
+          if (_)
+            for (const _ of _.data.groups) {
+              const _ = _.splice(0, _.nCount),
+                _ = _._(_.nSeed);
+              (0, _._)(_, Math.min(_, _.length), _),
+                (_ -= Math.min(_, _.length)),
+                _.push(..._),
+                _.push(_);
+            }
+          if (_.length > 0)
+            if (_ > 0) {
+              const _ = {
+                  nCount: _,
+                  nSeed: _._(),
+                },
+                _ = _._(_.nSeed);
+              (0, _._)(_, _, _),
+                _.push(..._),
+                _.push(_),
+                _(_, _.rtime32_last_modified, {
+                  groups: _,
+                });
+            } else _.push(..._);
+          return _;
+        }
+        function _(_, _, _, _, _) {
+          return !(0, _._)(_, _, _) || _.length <= 1
+            ? _
+            : _(_, _, _, _.random_order_top_x);
+        }
+        function _(_, _, _) {
+          const [_] = (0, _._)(_._, void 0);
+          return _.useMemo(() => _(_, _, _, _), [_, _, _, _]);
+        }
+        function _(_, _, _, _) {
+          var _, _;
+          if (!(0, _._)(_, _, _) || !window.sessionStorage) return _;
+          const _ = (0, _._)(_, _, _, "section"),
+            _ = _(
+              _,
+              _.rtime32_last_modified,
+              (_) => "nSeed" in _ && Number.isInteger(_.nSeed),
+            ),
+            _ = _ ? _.data.nSeed : _._(),
+            _ = _._(_),
+            _ = (_ = _.random_order_top_x) != null ? _ : 0,
+            _ = JSON.parse(JSON.stringify(_));
+          return (
+            (0, _._)(_.capsules, _, _),
+            (0, _._)(_.links, _, _),
+            (0, _._)(
+              (_ = _.events) == null ? void 0 : _.filter((_) => !!_),
+              _,
+              _,
+            ),
+            (0, _._)(_.featured_curator_list, _, _),
+            _(_, _.rtime32_last_modified, {
+              nSeed: _,
+            }),
+            _
+          );
+        }
+        function _(_) {
+          const _ = "nextfest_personalized_" + _.GID,
+            _ = _(
+              _,
+              _.rtime32_last_modified,
+              (_) => "nSeed" in _ && Number.isInteger(_.nSeed),
+            );
+          if (_) return _.data.nSeed;
+          const _ = _._();
+          try {
+            _(
+              _,
+              _.rtime32_last_modified,
+              {
+                nSeed: _,
+              },
+              _,
+            );
+          } catch {}
+          return _;
+        }
+        function _(_, _) {
+          let _ = (_ ^ Math.imul(_, 2654435761)) >>> 0;
+          return (
+            (_ = Math.imul(_ ^ (_ >>> 16), 2246822507)),
+            (_ = Math.imul(_ ^ (_ >>> 13), 3266489909)),
+            (_ = (_ ^ (_ >>> 16)) >>> 0),
+            (_ + 0.5) / 4294967296
+          );
+        }
+        function _(_, _, _) {
+          let _;
+          try {
+            const _ = window.sessionStorage.getItem(_);
+            _ = _ && JSON.parse(_);
+          } catch {}
+          if (
+            !(!_ || _.nVersion != _ || _.rtLastModified != _) &&
+            !(_.rtExpires && _.rtExpires < Date.now() / 1e3) &&
+            !(_ && !_(_.data))
+          )
+            return _;
+        }
+        function _(_, _, _, _) {
+          const _ = {
+            nVersion: _,
+            rtLastModified: _,
+            data: _,
+          };
+          _ > 0 && (_.rtExpires = Math.floor(Date.now() / 1e3) + _),
+            window.sessionStorage.setItem(_, JSON.stringify(_));
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        function _(_, _, _) {
+          return {
+            nSaleTagID: _.BUsesContentHubForItemSource()
+              ? void 0
+              : _.featured_app_tagid,
+            strContentHubType: _.GetContentHubType(),
+            strContentHubCategory: _.GetContentHubCategory(),
+            nContentHubTagID: _.GetContentHubTag(),
+            bDiscountsOnly: _.BContentHubDiscountedOnly(),
+            bPrioritizeDiscounts: _,
+            strOptInName: _.jsondata.prune_list_optin_name,
+            nOptInTagID: _.jsondata.optin_tagid,
+            nPruneTagID: _.jsondata.optin_prune_tagid,
+            bOptInOnly: _.jsondata.optin_only,
+            nCreatorClanAccountId: _ ? _.clanSteamID.GetAccountID() : void 0,
+          };
+        }
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -45221,24 +45949,9 @@
         var _ = __webpack_require__("chunkid");
         function _(_, _) {
           const _ = _._.GetClanInfoByClanAccountID(
-              _.clanSteamID.GetAccountID(),
-            ),
-            _ = (0, _._)(_, _);
-          return {
-            nSaleTagID: _.BUsesContentHubForItemSource()
-              ? void 0
-              : _.featured_app_tagid,
-            strContentHubType: _.GetContentHubType(),
-            strContentHubCategory: _.GetContentHubCategory(),
-            nContentHubTagID: _.GetContentHubTag(),
-            bDiscountsOnly: _.BContentHubDiscountedOnly(),
-            bPrioritizeDiscounts: _ || !1,
-            strOptInName: _.jsondata.prune_list_optin_name,
-            nOptInTagID: _.jsondata.optin_tagid,
-            nPruneTagID: _.jsondata.optin_prune_tagid,
-            bOptInOnly: _.jsondata.optin_only,
-            nCreatorClanAccountId: _ ? _.clanSteamID.GetAccountID() : void 0,
-          };
+            _.clanSteamID.GetAccountID(),
+          );
+          return _(_, _ || !1, (0, _._)(_, _));
         }
         function _(_, _) {
           const _ = _(_, _.prioritize_discounts),
@@ -45331,6 +46044,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -45339,6 +46053,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -45466,10 +46181,10 @@
             !(0, _._)(_, _, _)
           ) {
             const _ = (0, _._)("rgMLRecommenderWishlist", "application_config");
-            Array.isArray(_) &&
-              _.length > 0 &&
-              Number.isInteger(_[0]) &&
-              (_ = _([..._], _, (_) => _._));
+            if (Array.isArray(_) && _.length > 0 && Number.isInteger(_[0])) {
+              const _ = _.jsondata.sale_ml_recommender_weight_exponent || _._;
+              _ = _(_, _, (_) => _._, (0, _._)(_), _);
+            }
           }
           return _;
         }
@@ -45496,14 +46211,27 @@
           }
           return _;
         }
-        function _(_, _, _) {
-          const _ = new Map(_.map((_, _) => [_, _]));
-          return _.sort((_, _) => {
-            var _, _;
-            const _ = (_ = _.get(_(_))) != null ? _ : _.length,
-              _ = (_ = _.get(_(_))) != null ? _ : _.length;
-            return _ - _;
-          });
+        function _(_, _, _, _, _) {
+          const _ = new Map(_.map((_, _) => [_, _])),
+            _ = _ >= 0,
+            _ = [],
+            _ = [];
+          for (const _ of _) {
+            const _ = _(_),
+              _ = (0, _._)(_, _),
+              _ = _.get(_);
+            _ !== void 0
+              ? _.push({
+                  item: _,
+                  flSortKey: _ ? Math.log(_) * Math.pow(_ + 1, _) : -_,
+                })
+              : _.push({
+                  item: _,
+                  flSortKey: _ ? _ : 0,
+                });
+          }
+          const _ = (_, _) => _.flSortKey - _.flSortKey;
+          return [..._.sort(_), ..._.sort(_)].map((_) => _.item);
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -46133,7 +46861,7 @@
                   !!_ &&
                     (0, _.jsx)(_._, {
                       className: _.SaleSectionSubtext,
-                      toolTipContent: "#Sale_HiddenItem_Tooltip",
+                      toolTipContent: (0, _._)("#Sale_HiddenItem_Tooltip"),
                       children: (0, _.jsx)("a", {
                         href: _._.STORE_BASE_URL + "account/preferences",
                         children: (0, _._)(

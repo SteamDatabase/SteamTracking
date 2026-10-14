@@ -4574,7 +4574,16 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-end;
   align-self: flex-end;
+  min-width: var(--gamepad-slider-value-min-width, 0);
+  max-width: var(--gamepad-slider-value-max-width, none);
+}
+._2I8sf9EcaeDafQVkGR4nOC {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 ._3aMlipGagTx2AjSsMP_yZj,
 ._1iWWSmS4pDD1vKNDTkghbh {
@@ -7906,6 +7915,7 @@ html:has(dialog.ycpazsHLq6lCBFmWPCLCZ[open]) {
   flex-grow: 1;
   color: #fff;
   font-size: 22px;
+  font-weight: 700;
 }
 ._1w-TUMWBEOX_zsSa-BBhK8 .RC4JznqJb34yCm04FKk0I {
   border: none;

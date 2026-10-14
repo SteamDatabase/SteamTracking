@@ -161,5 +161,10 @@
     "PersonalCalendar_EmptyDay": "Kami tiada keluaran baharu untuk dicadangkan kepada anda pada hari ini. <1>Lihat selebihnya dalam kalendar anda!</1>",
     "NewBadge": "BAHARU",
     "Time_Today": "Hari ini",
+    "DiscountsAndEvents_Title": "Diskaun & Acara",
+    "DiscountsAndEvents_SeeMore": "Lihat Lagi",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Tawaran Hujung Minggu",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Tawaran Pertengahan Minggu",
+    "DiscountsAndEvents_Banner_DailyDeal": "Tawaran Hari Ini",
     "store_ui_dummy": "dont translate"
 }

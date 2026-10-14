@@ -350,10 +350,9 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _) {
-          const { data: _ } = (0, _._)((0, _._)(), _, _);
+          const { data: _ } = (0, _._)(_, _);
           return _ ?? null;
         }
         var _ = __webpack_require__("chunkid"),
@@ -861,7 +860,7 @@
               _.current && _.target !== _.current && _.current.focus();
             },
             _ = _ && _,
-            _ = _ ? _._ : "input",
+            _ = _ ? _ : "input",
             _ =
               _ && _ && !_
                 ? {
@@ -886,6 +885,12 @@
               ..._,
               ..._,
             }),
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)(_._, {
+            noFocusRing: !0,
+            ..._,
           });
         }
       },
@@ -1194,30 +1199,33 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        function _(_, _, _) {
+        const _ = "partnerevents/ajaxgetdraftandrecentsnippets";
+        function _(_, _) {
           return (0, _._)({
             queryKey: ["eventdraftrecent", _, _],
-            queryFn: async () => {
-              const _ = _._.Init(_._);
-              return (
-                _.Body().set_steamid(
-                  _._.InitFromClanID(_, _._.EUNIVERSE).ConvertTo64BitString(),
-                ),
-                _ && _.Body().set_rtime_oldest_date(_),
-                (await _._.GetDraftAndRecentPartnerEventSnippet(_, _))
-                  .Body()
-                  .toObject().snippets ?? []
-              );
-            },
+            queryFn: () => _(_, _),
             select: _,
             enabled: !!_,
           });
         }
-        function _(_, _, _) {
-          return (0, _._)(_(_, _, _));
+        function _(_, _) {
+          return (0, _._)(_(_, _));
+        }
+        async function _(_, _) {
+          const _ = new URLSearchParams({
+            clan_accountid: "" + _,
+          });
+          _ && _.set("rtime_oldest", "" + _);
+          const _ = `${_._.PARTNER_BASE_URL}${_}?${_}`,
+            _ = await fetch(_, {
+              credentials: "include",
+            });
+          if (!_._) throw new Error(`${_} answered HTTP ${_.status}`);
+          const _ = await _.json();
+          if (_?.success != _._)
+            throw new Error(`${_} failed with result ${_?.success}`);
+          return _.snippets ?? [];
         }
         function _(_) {
           return [..._].sort((_, _) =>
@@ -1611,6 +1619,23 @@
                 };
             }
           }
+        }
+        function _(_) {
+          if ("appid" in _)
+            return {
+              _: _.appid,
+              type: "game",
+            };
+          if ("packageid" in _)
+            return {
+              _: _.packageid,
+              type: "sub",
+            };
+          if ("bundleid" in _)
+            return {
+              _: _.bundleid,
+              type: "bundle",
+            };
         }
         function _(_, _) {
           switch (_) {

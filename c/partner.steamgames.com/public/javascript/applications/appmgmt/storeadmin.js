@@ -502,7 +502,7 @@
               (0, _.jsx)(_._, {
                 onClick: _,
                 toggled: _,
-                tooltip: "#StoreAdmin_GameDescription_InsertImage",
+                tooltip: (0, _._)("#StoreAdmin_GameDescription_InsertImage"),
                 children: (0, _.jsx)(_._V3, {}),
               }),
             ],
@@ -4012,7 +4012,7 @@
               jsx(ToggleButton, {
                 onClick: () => _(_),
                 toggled: _,
-                tooltip: "#FormattingToolbar_InsertLink",
+                tooltip: Localize("#FormattingToolbar_InsertLink"),
                 keyboardShortcut: "Mod-k",
                 children: _,
               }),
@@ -4233,8 +4233,8 @@
                 onClick: () => _(_),
                 toggled: _,
                 tooltip: _
-                  ? "#FormattingToolbar_Color"
-                  : "#FormattingToolbar_BgColor",
+                  ? (0, _._)("#FormattingToolbar_Color")
+                  : (0, _._)("#FormattingToolbar_BgColor"),
                 children: _,
               }),
             ],
@@ -4244,13 +4244,13 @@
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
-                tooltip: "#FormattingToolbar_Undo",
+                tooltip: (0, _._)("#FormattingToolbar_Undo"),
                 keyboardShortcut: "Mod-z",
                 command: _._,
                 children: (0, _.jsx)(_.VnB, {}),
               }),
               (0, _.jsx)(_._, {
-                tooltip: "#FormattingToolbar_Redo",
+                tooltip: (0, _._)("#FormattingToolbar_Redo"),
                 keyboardShortcut:
                   _._.PLATFORM == "macos" ? "Mod-Shift-z" : "Mod-y",
                 command: _._,
@@ -4264,33 +4264,33 @@
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
-                tooltip: "#FormattingToolbar_Bold",
+                tooltip: (0, _._)("#FormattingToolbar_Bold"),
                 keyboardShortcut: "Mod-b",
                 mark: _.marks.strong,
                 children: (0, _.jsx)(_.l4n, {}),
               }),
               (0, _.jsx)(_._, {
-                tooltip: "#FormattingToolbar_Italic",
+                tooltip: (0, _._)("#FormattingToolbar_Italic"),
                 keyboardShortcut: "Mod-i",
                 mark: _.marks.italic,
                 children: (0, _.jsx)(_.UKJ, {}),
               }),
               (0, _.jsx)(_._, {
-                tooltip: "#FormattingToolbar_Underline",
+                tooltip: (0, _._)("#FormattingToolbar_Underline"),
                 keyboardShortcut: "Mod-u",
                 mark: _.marks.underline,
                 children: (0, _.jsx)(_.Gj3, {}),
               }),
               "strike" in _.marks &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#FormattingToolbar_Strike",
+                  tooltip: (0, _._)("#FormattingToolbar_Strike"),
                   keyboardShortcut: "Mod-Shift-x",
                   mark: _.marks.strike,
                   children: (0, _.jsx)(_.tI4, {}),
                 }),
               "code" in _.marks &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#FormattingToolbar_InlineCode",
+                  tooltip: (0, _._)("#FormattingToolbar_InlineCode"),
                   keyboardShortcut: "Ctrl-Shift-c",
                   mark: _.marks.code,
                   children: (0, _.jsx)(_.bmT, {}),
@@ -4313,7 +4313,7 @@
         function _(_) {
           const { schema: _ } = _;
           return (0, _.jsx)(_._, {
-            tooltip: "#FormattingToolbar_Paragraph",
+            tooltip: (0, _._)("#FormattingToolbar_Paragraph"),
             keyboardShortcut: "Ctrl-Shift-0",
             nodeType: _.nodes.paragraph,
             children: (0, _.jsx)(_.iYj, {}),
@@ -4342,7 +4342,7 @@
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_, {
-                tooltip: "#FormattingToolbar_AlignLeft",
+                tooltip: (0, _._)("#FormattingToolbar_AlignLeft"),
                 keyboardShortcut: "Ctrl-Shift-L",
                 nodeTypes: _,
                 attrs: {
@@ -4351,7 +4351,7 @@
                 children: (0, _.jsx)(_.K6w, {}),
               }),
               (0, _.jsx)(_, {
-                tooltip: "#FormattingToolbar_AlignCenter",
+                tooltip: (0, _._)("#FormattingToolbar_AlignCenter"),
                 keyboardShortcut: "Ctrl-Shift-E",
                 nodeTypes: _,
                 attrs: {
@@ -4360,7 +4360,7 @@
                 children: (0, _.jsx)(_.q8c, {}),
               }),
               (0, _.jsx)(_, {
-                tooltip: "#FormattingToolbar_AlignRight",
+                tooltip: (0, _._)("#FormattingToolbar_AlignRight"),
                 keyboardShortcut: "Ctrl-Shift-R",
                 nodeTypes: _,
                 attrs: {
@@ -4378,7 +4378,7 @@
             children: [
               _ <= 1 &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#FormattingToolbar_HeadingLevel1",
+                  tooltip: (0, _._)("#FormattingToolbar_HeadingLevel1"),
                   keyboardShortcut: "Ctrl-Shift-1",
                   nodeType: _.nodes.heading,
                   attrs: {
@@ -4389,7 +4389,7 @@
               _ <= 2 &&
                 _ >= 2 &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#FormattingToolbar_HeadingLevel2",
+                  tooltip: (0, _._)("#FormattingToolbar_HeadingLevel2"),
                   keyboardShortcut: "Ctrl-Shift-2",
                   nodeType: _.nodes.heading,
                   attrs: {
@@ -4400,7 +4400,7 @@
               _ <= 3 &&
                 _ >= 3 &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#FormattingToolbar_HeadingLevel3",
+                  tooltip: (0, _._)("#FormattingToolbar_HeadingLevel3"),
                   keyboardShortcut: "Ctrl-Shift-3",
                   nodeType: _.nodes.heading,
                   attrs: {
@@ -4411,7 +4411,7 @@
               _ <= 4 &&
                 _ >= 4 &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#FormattingToolbar_HeadingLevel4",
+                  tooltip: (0, _._)("#FormattingToolbar_HeadingLevel4"),
                   keyboardShortcut: "Ctrl-Shift-4",
                   nodeType: _.nodes.heading,
                   attrs: {
@@ -4422,7 +4422,7 @@
               _ <= 5 &&
                 _ >= 5 &&
                 (0, _.jsx)(_._, {
-                  tooltip: "#FormattingToolbar_HeadingLevel5",
+                  tooltip: (0, _._)("#FormattingToolbar_HeadingLevel5"),
                   keyboardShortcut: "Ctrl-Shift-5",
                   nodeType: _.nodes.heading,
                   attrs: {
@@ -4453,7 +4453,7 @@
             (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)(_, {
-                  tooltip: "#FormattingToolbar_BulletedList",
+                  tooltip: (0, _._)("#FormattingToolbar_BulletedList"),
                   keyboardShortcut: "Ctrl-Shift-8",
                   list_type: _,
                   list_item: _,
@@ -4461,7 +4461,7 @@
                 }),
                 _ &&
                   (0, _.jsx)(_, {
-                    tooltip: "#FormattingToolbar_OrderedList",
+                    tooltip: (0, _._)("#FormattingToolbar_OrderedList"),
                     keyboardShortcut: "Ctrl-Shift-7",
                     list_type: _,
                     list_item: _,
@@ -4471,13 +4471,13 @@
                   (0, _.jsxs)(_.Fragment, {
                     children: [
                       (0, _.jsx)(_._, {
-                        tooltip: "#FormattingToolbar_OutdentList",
+                        tooltip: (0, _._)("#FormattingToolbar_OutdentList"),
                         keyboardShortcut: "Mod-[",
                         command: _,
                         children: (0, _.jsx)(_.LSz, {}),
                       }),
                       (0, _.jsx)(_._, {
-                        tooltip: "#FormattingToolbar_IndentList",
+                        tooltip: (0, _._)("#FormattingToolbar_IndentList"),
                         keyboardShortcut: "Mod-[",
                         command: _,
                         children: (0, _.jsx)(_.ycU, {}),
@@ -4525,8 +4525,8 @@
           const { bSpellcheckEnabled: _, setSpellcheckEnabled: _ } = _;
           return jsx(ToggleButton, {
             tooltip: _
-              ? "#FormattingToolbar_DisableSpellcheck"
-              : "#FormattingToolbar_EnableSpellcheck",
+              ? Localize("#FormattingToolbar_DisableSpellcheck")
+              : Localize("#FormattingToolbar_EnableSpellcheck"),
             toggled: _,
             onClick: () => _(!_),
             children: jsx(GamepadUISVG.SpellCheck, {}),
@@ -7256,6 +7256,20 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
+        function _(_) {
+          switch (_) {
+            case "Demo":
+              return "#StoreAdmin_GameDescription_AboutThisDemo";
+            case "DLC":
+              return "#StoreAdmin_GameDescription_AboutThisContent";
+            case "Music":
+              return "#StoreAdmin_GameDescription_AboutThisSoundtrack";
+            case "Application":
+              return "#StoreAdmin_GameDescription_AboutThisSoftware";
+            default:
+              return "#StoreAdmin_GameDescription_AboutThisGame";
+          }
+        }
         const _ = _.lazy(() =>
           Promise.resolve().then(
             __webpack_require__.bind(__webpack_require__, "chunkid"),
@@ -7269,6 +7283,7 @@
               rgPath: _,
               editorType: _,
               asset_mtime: _,
+              appType: _,
             } = _,
             _ = _.useMemo(() => new Map(_), [_]),
             _ = _.useMemo(() => Array.from(_.keys()).map(_.sfN), [_]),
@@ -7283,9 +7298,7 @@
             _ =
               _ == "aboutthegame"
                 ? (0, _.jsx)(_.StoreAppPageHeader, {
-                    children: (0, _._)(
-                      "#StoreAdmin_GameDescription_AboutThisGame",
-                    ),
+                    children: (0, _._)(_(_)),
                   })
                 : void 0;
           return (0, _.jsxs)("div", {
@@ -9031,6 +9044,7 @@
           (_[(_.Rejected_MissingCurrencies = 6)] =
             "Rejected_MissingCurrencies"),
           (_[(_.Rejected_MissingRegions = 7)] = "Rejected_MissingRegions"),
+          (_[(_.Failed = 8)] = "Failed"),
           _
         ))(_ || {});
         const _ = {
@@ -9042,6 +9056,7 @@
           5: "No Guideline Match",
           6: "Missing Currencies",
           7: "Missing Regions",
+          8: "Auto-Approval Failed",
         };
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -17427,7 +17442,8 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             }),
           });
         }
-        var _ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_) {
           const {
               nAppID: _,
@@ -17437,6 +17453,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               rgConflictClanAccountIDs: _,
               rgCatalogVerdicts: _,
               bCheckCatalogRoles: _,
+              bCheckFranchiseMinGames: _,
               rgNameMustMatchLinks: _,
               strMatchKey: _,
             } = _,
@@ -17453,22 +17470,40 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             ),
             { data: _ } = _(
               _,
-              !!_,
+              !!(_ || _),
               _?.find((_) => _.clan_account_id === _),
             ),
             _ = (0, _.useMemo)(() => {
               if (!_) return null;
               if (_?.includes(_))
-                return (0, _._)("#AppLanding_Creator_FranchiseSameAsDevPub");
-              if (_?.franchise_links_suppressed)
-                return (0, _._)(
-                  "#AppLanding_Creator_FranchiseIsDevPubElsewhere",
-                );
+                return {
+                  strIssue: (0, _._)(
+                    "#AppLanding_Creator_FranchiseSameAsDevPub",
+                  ),
+                };
+              if (_ && _?.franchise_links_suppressed)
+                return {
+                  strIssue: (0, _._)(
+                    "#AppLanding_Creator_FranchiseIsDevPubElsewhere",
+                  ),
+                  rgDevPubAppIDs: _.devpub_appids,
+                  cDevPubApps: _.devpub_app_count,
+                };
+              if (_ && _?.franchise_too_few_games)
+                return {
+                  strIssue: (0, _._)(
+                    "#AppLanding_Creator_FranchiseTooFewGames",
+                  ),
+                };
               const _ = _?.filter((_) => _.clanAccountID === _);
               return _?.length && !_.some((_) => _.strMatchKey === _)
-                ? (0, _._)("#AppLanding_Creator_DeveloperNameMismatch")
+                ? {
+                    strIssue: (0, _._)(
+                      "#AppLanding_Creator_DeveloperNameMismatch",
+                    ),
+                  }
                 : null;
-            }, [_, _, _, _, _, _]);
+            }, [_, _, _, _, _, _, _, _]);
           return (0, _.jsxs)(_._, {
             align: "start",
             gap: "2",
@@ -17496,7 +17531,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 (0, _.jsx)(_, {
                   pageLink: _,
                   strKvTargetName: _,
-                  strLinkIssue: _,
+                  linkIssue: _,
                 }),
               !_ &&
                 _?.trim().length > 0 &&
@@ -17549,7 +17584,8 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           };
         }
         function _(_) {
-          const { pageLink: _, strKvTargetName: _, strLinkIssue: _ } = _,
+          const { pageLink: _, strKvTargetName: _, linkIssue: _ } = _,
+            _ = _?.strIssue,
             { clanAccountID: _, clanInfo: _, strURL: _ } = _(_, _);
           return (0, _.jsxs)(_._, {
             justify: "between",
@@ -17588,12 +17624,20 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                   }),
                   !!_ &&
                     (0, _.jsx)(_._, {
-                      _: "p",
-                      size: "2",
-                      color: "text-error",
-                      marginLeft: "3",
-                      marginTop: "1",
-                      children: _,
+                      toolTipContent:
+                        _.rgDevPubAppIDs?.length > 0 &&
+                        (0, _.jsx)(_, {
+                          rgAppIDs: _.rgDevPubAppIDs,
+                          cTotal: _.cDevPubApps ?? 0,
+                        }),
+                      children: (0, _.jsx)(_._, {
+                        _: "p",
+                        size: "2",
+                        color: "text-error",
+                        marginLeft: "3",
+                        marginTop: "1",
+                        children: _,
+                      }),
                     }),
                 ],
               }),
@@ -17603,6 +17647,44 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 clanName: _?.group_name || "" + _,
               }),
             ],
+          });
+        }
+        function _(_) {
+          const { rgAppIDs: _, cTotal: _ } = _;
+          return (0, _.jsxs)(_._, {
+            direction: "column",
+            children: [
+              (0, _.jsx)("div", {
+                children: (0, _._)(
+                  "#AppLanding_Creator_FranchiseIsDevPubElsewhere_Apps",
+                ),
+              }),
+              _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    appid: _,
+                  },
+                  _,
+                ),
+              ),
+              _ > _.length &&
+                (0, _.jsx)("div", {
+                  children: (0, _._)(
+                    "#AppLanding_Creator_FranchiseIsDevPubElsewhere_More",
+                    _ - _.length,
+                  ),
+                }),
+            ],
+          });
+        }
+        function _(_) {
+          const { appid: _ } = _,
+            { data: _ } = (0, _._)({
+              appid: _,
+            });
+          return (0, _.jsx)("div", {
+            children: _?.visible && _.name ? `${_.name} (${_})` : _,
           });
         }
         function _(_) {
@@ -19998,6 +20080,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               size: _,
               radius: _,
               status: _,
+              color: _,
               rgOptions: _,
               multiselect: _,
               onClear: _,
@@ -20044,6 +20127,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               size: _,
               radius: _,
               status: _,
+              color: _,
               hasValue: _,
               tabIndex: 0,
               cursor: "pointer",
@@ -20842,7 +20926,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                   className: _().SimpleModalDialogHeader,
                   children: [
                     _ &&
-                      (0, _.jsx)("h2", {
+                      (0, _.jsx)("div", {
                         className: _().SimpleModalDialogTitle,
                         children: _,
                       }),
@@ -20871,7 +20955,6 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
           m_steamInterface;
@@ -20891,10 +20974,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               "promotion_operation_token",
               "application_config",
             );
-            (0, _._)(!!_, "require promotion_operation_token"),
-              (this.m_steamInterface = (0, _._)(
-                new _._(_._.WEBAPI_BASE_URL, _),
-              ));
+            this.m_steamInterface = (0, _._)(new _._(_._.WEBAPI_BASE_URL, _));
           }
         }
         function _() {
@@ -21788,7 +21868,6 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         const _ = () => _.useContext(_);
         function _(_) {
@@ -21928,7 +22007,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             className: _.TooltipWithShortcut,
             children: [
               (0, _.jsx)("div", {
-                children: typeof _ == "string" ? (0, _._)(_) : _,
+                children: _,
               }),
               (0, _.jsx)("div", {
                 children: (0, _.jsx)(_, {

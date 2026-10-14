@@ -7,6 +7,152 @@
         __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_, _, _, _ = _._.full, _ = !0) {
+          const _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)(_(_, _, _, _, _, _, _)).data ?? void 0;
+        }
+        function _(_, _, _, _ = _._.full, _ = !0) {
+          return ["useEventImageURLWithFallback", _?.GID, _, _, _, _];
+        }
+        function _(_, _, _, _, _, _ = _._.full, _ = !0) {
+          return {
+            queryKey: _(_, _, _, _, _),
+            enabled: !!_?.GID,
+            initialData: () => _(_, _, _, _, _),
+            queryFn: async () => {
+              if (!_) return null;
+              let _ = _(_, _, _, _, _);
+              if (_) return _;
+              const _ = await _.ensureQueryData(
+                (0, _._)(_.clanSteamID.GetAccountID(), _),
+              );
+              if (_ == "capsule") {
+                let _ = _.appid;
+                if (
+                  !_ &&
+                  _ &&
+                  ((_.is_creator_home && !_.is_ogg) || _.is_curator)
+                )
+                  if (_.jsondata?.referenced_appids?.length)
+                    _ = _.jsondata.referenced_appids[0];
+                  else return _.avatar_full_url ?? null;
+                const _ = await _.ensureQueryData(
+                  (0, _._)(_, {
+                    appid: _,
+                  }),
+                );
+                return _
+                  ? ((0, _._)(_, "main_capsule") ?? null)
+                  : _?.avatar_full_url
+                    ? _.avatar_full_url
+                    : `${_._.STORE_ITEM_BASE_URL}steam/apps/${_}/header.jpg`;
+              }
+              return _ == "background" &&
+                _ &&
+                ((_.is_creator_home && !_.is_ogg) || _.is_curator)
+                ? (_.creator_page_bg_url ?? null)
+                : await _.ensureQueryData((0, _._)(_, _, _));
+            },
+          };
+        }
+        function _(_, _, _, _ = _._.full, _ = !0) {
+          if (!_) return;
+          const _ = _.GetImageURL(_, _, _);
+          if (_ && _.trim().length > 0) return _;
+          const _ = _._.GetELanguageFallback(_);
+          if (_ != _) {
+            const _ = _.GetImageURL(_, _, _);
+            if (_ && _.trim().length > 0) return _;
+          }
+          if (_ == "capsule") {
+            let _ = _.GetImageFromBeginningOfDescription(_, Number.MAX_VALUE);
+            if (_ && (_ || (0, _._)(_))) return _;
+          }
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)(_(_, _, _)).data ?? void 0;
+        }
+        function _(_, _, _) {
+          return {
+            queryKey: _(_),
+            enabled: !!_?.GID,
+            queryFn: async () => {
+              if (!_) return null;
+              const _ = _.appid
+                  ? await _.ensureQueryData(
+                      (0, _._)(_, {
+                        appid: _.appid,
+                      }),
+                    )
+                  : null,
+                _ = await _.ensureQueryData(
+                  (0, _._)(_.clanSteamID.GetAccountID(), _),
+                );
+              if (_.appid)
+                if (_) {
+                  if (
+                    _.all_ages_screenshots &&
+                    _.all_ages_screenshots.length > 0
+                  ) {
+                    let _ = Number(
+                      _.bOldAnnouncement
+                        ? _.AnnouncementGID
+                        : _.GID == null
+                          ? 0
+                          : _.GID,
+                    );
+                    return (
+                      (_ = _ % _.all_ages_screenshots.length),
+                      `${_._.STORE_ITEM_BASE_URL}${_.all_ages_screenshots[_].filename}`
+                    );
+                  }
+                } else return "";
+              return _.GetEventType() != _.ajI &&
+                _ &&
+                ((_.is_creator_home && !_.is_ogg) || _.is_curator)
+                ? (_.avatar_full_url ?? null)
+                : null;
+            },
+          };
+        }
+        function _(_) {
+          return ["useFallbackArtworkScreenshot", _?.GID];
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
           _: () => _,
           _: () => _,
         });
@@ -451,6 +597,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -476,9 +623,9 @@
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           };
+        const _ = 4;
         class _ {
           m_SteamInterface;
-          m_SteamInterfacePromotions;
           m_setMessagesSeen = new Set();
           static sm_DefaultDataRequest = {
             include_release: !0,
@@ -490,9 +637,6 @@
           static sm_Instance;
           static Init(_) {
             _.sm_Instance = new _(_);
-          }
-          SetSteamInterfacePromotions(_) {
-            this.m_SteamInterfacePromotions = _;
           }
           static Get() {
             return (
@@ -664,7 +808,7 @@
               case "featured_video":
                 return _._._;
             }
-            return _._._;
+            return this.BShouldShowSaleItems() ? _._._ : _._._;
           }
           GetTemplateVars() {
             return this.m_templateVars;
@@ -742,6 +886,12 @@
           }
           GetSaleItemCount() {
             return this.m_nSaleItemCount;
+          }
+          BShouldShowSaleItems() {
+            const _ = !this.GetTemplateVars().custom_display,
+              _ = !!this.GetTemplateVars().sale_clan_event_gid,
+              _ = this.m_rgRecommendedAppIDs.length >= _;
+            return _ && _ && _;
           }
           SetRecommendedAppIDsOverride(_) {
             this.m_rgRecommendedAppIDs = _;
@@ -1117,12 +1267,20 @@
             ? _.replace("https://store.steampowered.com/", _._.STORE_BASE_URL)
             : _;
         }
-        function _(_, _, _ = !1) {
+        function _(_) {
           let _ = (0, _._)(),
             _ = (0, _._)(),
             _ = (0, _._)();
-          _ = _ !== null ? _ + 1 : 0;
-          let _;
+          return (
+            (_ = _ !== null ? _ + 1 : 0),
+            (0, _.useCallback)(() => {
+              (0, _._)(_, _._, _, _.GetTemplateTypeForReporting(), _);
+            }, [_, _, _, _])
+          );
+        }
+        function _(_, _, _ = !1) {
+          let _ = _(_),
+            _;
           _ == _._._
             ? (_ = "image")
             : _ == _._._
@@ -1140,11 +1298,11 @@
             _.startsWith("steam://") || (_ = `steam://openurl/${_}`),
             (0, _.useCallback)(
               (_) => {
-                (0, _._)(_, _._, _, _.GetTemplateTypeForReporting(), _);
+                _();
                 let _ = (0, _._)(_);
                 _.location.href = _;
               },
-              [_, _, _, _, _],
+              [_, _],
             )
           );
         }
@@ -1528,7 +1686,6 @@
                 className: _.MessagePriceCtn,
                 children: (0, _.jsx)(_._, {
                   _: _,
-                  bHidePrePurchase: !0,
                 }),
               });
         }
@@ -1555,17 +1712,21 @@
           });
         }
         function _(_) {
-          const { capsule: _, imageType: _ } = _;
-          return (
-            (_.overrideNavigation = (0, _._)(_._, _.type, _._._)),
-            (0, _.jsx)(_._, {
+          const { capsule: _, imageType: _, eClickLocation: _ } = _,
+            _ = (0, _._)(_._, _.type, _),
+            _ = (_) => {
+              _.preventDefault(), _(_);
+            };
+          return (0, _.jsx)("div", {
+            onClick: _,
+            children: (0, _.jsx)(_._, {
               capsule: _,
               imageType: _,
               bShowParentApp: !1,
               bHideStoreHover: !0,
               bPreferAssetWithoutOverride: !1,
-            })
-          );
+            }),
+          });
         }
         var _ = __webpack_require__("chunkid");
         function _(_) {
@@ -1782,6 +1943,7 @@
           return _.length >= 4
             ? (0, _.jsx)(_, {
                 rgSaleCapsules: _,
+                eClickLocation: _._._,
                 children: (0, _.jsx)(_, {
                   messageType: _,
                 }),
@@ -1804,6 +1966,7 @@
                     (0, _.jsx)(_, {
                       first: _[1],
                       second: _[2],
+                      eClickLocation: _._._,
                     }),
                   ],
                 })
@@ -1845,6 +2008,7 @@
                           children: (0, _.jsx)(_, {
                             capsule: _[0],
                             imageType: "main",
+                            eClickLocation: _._._,
                           }),
                         }),
                       ],
@@ -1852,7 +2016,7 @@
                   : null;
         }
         function _(_) {
-          const { rgSaleCapsules: _, children: _ } = _;
+          const { rgSaleCapsules: _, eClickLocation: _, children: _ } = _;
           return (0, _.jsxs)("div", {
             className: _.DlcCtn,
             children: [
@@ -1860,10 +2024,12 @@
               (0, _.jsx)(_, {
                 first: _[0],
                 second: _[1],
+                eClickLocation: _,
               }),
               (0, _.jsx)(_, {
                 first: _[2],
                 second: _[3],
+                eClickLocation: _,
               }),
             ],
           });
@@ -1875,7 +2041,7 @@
           });
         }
         function _(_) {
-          const { first: _, second: _ } = _;
+          const { first: _, second: _, eClickLocation: _ } = _;
           return (0, _.jsxs)("div", {
             className: _.TwoCapsuleRow,
             children: [
@@ -1884,6 +2050,7 @@
                 children: (0, _.jsx)(_, {
                   capsule: _,
                   imageType: "header",
+                  eClickLocation: _,
                 }),
               }),
               (0, _.jsx)("div", {
@@ -1891,6 +2058,7 @@
                 children: (0, _.jsx)(_, {
                   capsule: _,
                   imageType: "header",
+                  eClickLocation: _,
                 }),
               }),
             ],
@@ -2295,6 +2463,123 @@
               })
             : null;
         }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = [20, 50, 100, 200, 500, 1e3, 2e3, 5e3];
+        function _() {
+          const _ = _(),
+            { sale_clan_account: _, sale_clan_event_gid: _ } =
+              _.GetTemplateVars(),
+            { eventModel: _, bLoading: _ } = (0, _._)(
+              _ ? Number(_) : void 0,
+              _,
+            ),
+            _ = (0, _._)(_, "capsule", (0, _.sfN)(_._.LANGUAGE)),
+            _ = (0, _.useMemo)(
+              () =>
+                _.GetRecommendedAppIDs()
+                  .slice(0, _._)
+                  .map((_) => ({
+                    _: _,
+                    type: "game",
+                  })),
+              [_],
+            );
+          return (
+            (0, _.useEffect)(() => {
+              const _ = _(_.GetSaleItemCount());
+              _ &&
+                _.OverrideCustomText(
+                  (0, _._)("#MarketingMessages_See_AtLeast_Items", (0, _._)(_)),
+                );
+            }, [_]),
+            (0, _.jsx)(_._, {
+              submethod: "sale_items",
+              children: (0, _.jsxs)(_, {
+                children: [
+                  _
+                    ? (0, _.jsx)(_, {
+                        strImageURL: _,
+                      })
+                    : (0, _.jsx)(_, {
+                        isBackgroundBlur: !0,
+                      }),
+                  (0, _.jsxs)(_, {
+                    children: [
+                      (0, _.jsx)(_, {
+                        eventModel: _,
+                        strCapsuleURL: _,
+                        bLoading: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        rgSaleCapsules: _,
+                        eClickLocation: _._._,
+                        children: (0, _.jsx)(_, {
+                          strDesc: (0, _._)(
+                            "#MarketingMessages_SaleItems_Label",
+                          ),
+                        }),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
+                    bHidePrice: !0,
+                  }),
+                ],
+              }),
+            })
+          );
+        }
+        function _(_) {
+          return _.filter((_) => _ <= (_ ?? 0)).pop();
+        }
+        function _(_) {
+          const { eventModel: _, strCapsuleURL: _, bLoading: _ } = _,
+            _ = _(),
+            { linkurl: _ } = _.GetTemplateVars(),
+            _ = (0, _._)(_, _._._);
+          if (_)
+            return (0, _.jsx)("div", {
+              className: _.Header,
+            });
+          if (!_ || !_) return (0, _.jsx)(_, {});
+          const _ = _.GetNameWithFallback((0, _.sfN)(_._.LANGUAGE)),
+            _ = _.endTime,
+            _ = !!_ && _ > (0, _._)();
+          return (0, _.jsxs)(_._, {
+            focusable: !0,
+            noFocusRing: !0,
+            className: _.Header,
+            onActivate: _,
+            children: [
+              (0, _.jsx)("img", {
+                className: _.Capsule,
+                src: _,
+                alt: _,
+              }),
+              (0, _.jsxs)("div", {
+                className: _.HeaderText,
+                children: [
+                  (0, _.jsx)(_, {
+                    strType: (0, _._)("#MarketingMessages_SaleEvent"),
+                    strTitle: _,
+                    bSmallTitle: !0,
+                  }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.Dates,
+                      children: (0, _._)(
+                        "#MarketingMessages_SaleEvent_Through",
+                        (0, _._)(_, !1, !1, !1),
+                      ),
+                    }),
+                ],
+              }),
+            ],
+          });
+        }
         const _ = _.createContext(null);
         function _() {
           return _.useContext(_);
@@ -2360,13 +2645,15 @@
                 bLowBandwidthMode: _,
               });
           }
-          return _.GetTemplateType() === "image"
-            ? (0, _._)(_, _, _)
-              ? (0, _.jsx)(_, {})
-              : (0, _.jsx)(_, {
-                  bLowBandwidthMode: _,
-                })
-            : null;
+          return _.BShouldShowSaleItems()
+            ? (0, _.jsx)(_, {})
+            : _.GetTemplateType() === "image"
+              ? (0, _._)(_, _, _)
+                ? (0, _.jsx)(_, {})
+                : (0, _.jsx)(_, {
+                    bLowBandwidthMode: _,
+                  })
+              : null;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -2724,8 +3011,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = {
           List: () => `${_._.MarketingMessages()}list/`,
@@ -2776,17 +3061,7 @@
         }
         let _;
         function _(_) {
-          if (!_) {
-            const _ = (0, _._)("marketingmessage_config", "application_config");
-            if (((_ = new _._(_)), _?.promotion_operation_token)) {
-              const _ = new _._(
-                _._.WEBAPI_BASE_URL,
-                _.promotion_operation_token,
-              );
-              _.SetSteamInterfacePromotions(_);
-            }
-          }
-          return _;
+          return _ || (_ = new _._(_)), _;
         }
         function _() {
           const [_, _] = _.useState(null),
@@ -2946,6 +3221,27 @@
           "ItemFocusAnim-green": "_1rcnmgd1hOIPA9f3ngfevA",
           focusAnimation: "_3uCspaHoybU11f9AiHQU-o",
           hoverAnimation: "fLko22pxQFa4_xcoc8AEf",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          "duration-app-launch": "800ms",
+          Header: "_2m3RxInRYd11y5ewu7kLxr",
+          Capsule: "_1NQIYI_yPkSh0ZnjIjOb6w",
+          HeaderText: "_38qIDuTcZeQsAF13tF8lDi",
+          Dates: "_1eCCPp6vyvsBDfuTm0BZcD",
+          BackgroundAnimation: "_1EzScJ5OD3gGXn-0v81Mv2",
+          "ItemFocusAnim-darkerGrey-nocolor": "_2UvQorHrCjIq7P6EXRWm8i",
+          "ItemFocusAnim-darkerGrey": "_3AW-8WgVS3LoJefCcZEwEB",
+          "ItemFocusAnim-darkGreySettings": "Sm57uldLjwZAeFPp4rnOh",
+          "ItemFocusAnim-darkGrey": "ij9wCUcSCRfn3Zelf5tVn",
+          "ItemFocusAnim-grey": "nn7bODQXxrqm5vi65_Ghn",
+          "ItemFocusAnim-translucent-white-10": "aGQ816L9HVOe1yWXJxFbO",
+          "ItemFocusAnim-translucent-white-20": "EmgJ1FmL5KJswxAziYq02",
+          "ItemFocusAnimBorder-darkGrey": "Sd78C1xqBFwA6oDwNItn4",
+          "ItemFocusAnim-green": "_3kv1KnzqHXR-3c0S-AUI21",
+          focusAnimation: "_3KrQ3h-n6RWIC439NendKo",
+          hoverAnimation: "_2dE1gFZy2MzMZbRPHZfDIU",
         };
       },
       chunkid: (module) => {

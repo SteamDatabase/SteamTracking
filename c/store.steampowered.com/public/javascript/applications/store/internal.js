@@ -149,6 +149,7 @@
               disabled: _,
               className: _,
               status: _,
+              color: _,
               ..._
             } = _,
             _ = _ === "underline" ? "none" : _;
@@ -157,6 +158,7 @@
               ..._,
               radius: _,
               "data-status": _,
+              "data-dull-color": _ && _ !== "dull" ? _ : void 0,
               className: _()(
                 _.ControlBox,
                 _ && !_ && _.Focusable,
@@ -465,6 +467,7 @@
               radius: _,
               size: _,
               status: _,
+              color: _,
               children: _,
               value: _,
               onValueChange: _,
@@ -555,6 +558,7 @@
                   _ !== null &&
                     (0, _.jsx)(_, {
                       radius: _,
+                      color: _,
                     }),
                 ],
               }),
@@ -608,11 +612,12 @@
         }
         (_.Item = _), (_.Root = _);
         function _(_) {
-          const { radius: _ } = _;
+          const { radius: _, color: _ } = _;
           return (0, _.jsx)(_._, {
             className: _.IndicatorPosition,
             children: (0, _.jsx)("div", {
               className: _.Indicator,
+              "data-accent-color": _,
             }),
           });
         }
@@ -2069,6 +2074,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           return (0, _.jsx)(_._, {
@@ -2117,7 +2123,9 @@
         function _(_) {
           const { redirectURL: _, guestOption: _ } = _,
             [_] = (0, _.useState)(
-              new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+              new _._(
+                new _._(_._.WEBAPI_BASE_URL),
+              ).GetAnonymousServiceTransport(),
             ),
             [_, _] = (0, _.useState)(!1),
             _ = (_) => {
@@ -5096,7 +5104,16 @@
           m_strOAuthClientID = "";
           m_fnLoginComplete = null;
           m_bRequestInFlight = !1;
-          m_userFields = void 0;
+          m_userFields = {
+            strUserName: "",
+            strPassword: "",
+            strTwoFactorCode: "",
+            strEmailAuthCode: "",
+            emailSteamID: "",
+            gidCaptcha: "",
+            strCaptchaText: "",
+            bRememberLogin: !1,
+          };
           m_eCurrentStep = 1;
           m_strErrorMessage = "";
           m_strEmailDomain = "";
@@ -5105,17 +5122,7 @@
           constructor(_, _) {
             (0, _._)(this),
               (this.m_strBaseURL = _),
-              (this.m_strOAuthClientID = _),
-              (this.m_userFields = {
-                strUserName: "",
-                strPassword: "",
-                strTwoFactorCode: "",
-                strEmailAuthCode: "",
-                emailSteamID: "",
-                gidCaptcha: "",
-                strCaptchaText: "",
-                bRememberLogin: !1,
-              });
+              (this.m_strOAuthClientID = _ ?? "");
           }
           Shutdown() {
             this.m_fnLoginComplete = null;
@@ -6212,40 +6219,40 @@
       },
       chunkid: (module) => {
         module.exports = {
-          LoginDialog: "_2Hj3a-BYR5A9d6Y6eTxf8I",
-          AccountPasswordPanel: "_2LBKJjcyeeAER6uxAwF9VE",
-          LoginPanelBackground: "_3Xp1HnNhHklf3nBxkQQrb7",
-          LoginPanelContent: "UB5zID6zZyeYdo-h0Bvu4",
-          ErrorMessage: "_3oDNF1ifw_JtcirOe7AGyh",
-          AccountPasswordForm: "_2Mp7X_oS3ZCKkh1ZTF3bHM",
-          AuthenticationPanel: "ApHu0QG3MlAA5pqo21-O2",
-          AccountNameLabel: "_1WzDFzNss_PsfLbmsjMU6S",
-          MedName: "_3V1uwLCqLwTY_zSH-rXgsC",
-          LargeName: "_142CN0dD9Eao-3iX9ivMbZ",
-          PasswordDots: "_1Xbz8g2o51UqV4DtJPj0hk",
-          MedPass: "_2pUx4MzP1cOpmGrRyBWxjY",
-          LargePass: "_3268nsJ4zxGvIOXnx6jH8L",
-          AccountFieldHeader: "_2bLG3D_fmLYYr2bi7l9LYm",
-          PasswordFieldHeader: "a3a45KMiAsgNFqNRn_q7W",
-          NeedHelpLink: "_1Mi1lBerTs-M-thiecGA1l",
-          NeedHelpHighlight: "_2RCec4CXzaWlw2Uf_YFDfE",
-          CreateAccountLink: "x0CzniV8WOa1AUPRUHqQh",
-          LoginCreateSeperator: "_TANIZGgITd9i_qKPHgvC",
-          RefreshCaptchaText: "_1_C2PVNjSqHnFim6o1ZK0R",
-          SigningInAccountName: "_2Tg37XxB9T4pq5VU2WlA2c",
-          SigninTitle: "xJ2mRuljDUhf2a5fPUnIq",
-          RememberMeCheck: "_1caeWNoZH6AeHjpb1OOeMY",
-          SteamUpsellContainer: "_2Ge6aNfzBcM9sht2FBND1o",
-          SteamUpsell: "_3r5LWZO4CCHaIeZbOAv_T4",
-          CaptchaContainer: "_1waDjGmo6ZK85qbhzJrXqg",
-          CaptchaBlock: "_1ltax2W2FWryYCSN0l-AxZ",
-          CaptchaImageAndInput: "_3HUT29ELL8dnbkaS4kthbw",
-          CaptchaImageBox: "dzf2fULDUt9ZuS8EBBesQ",
-          CaptchaImage: "_3I-c16h7_cyh2s6MKplxCr",
-          CaptchaInput: "FnbIIpLdCsi4E5dFejm-s",
-          AuthenticatorInputcontainer: "_2_2v6YtNznSTXPdd4Sbe7n",
-          Highlight: "_1tsysfOlsIWIDxj2Pbecpa",
-          LoginComplete: "_2aP2Xz4mSeEEiQgMmrxzqj",
+          LoginDialog: "_1bOMwjEv0VPnCbCIXHn0MU",
+          AccountPasswordPanel: "_2TsLG2tMkE37m-BNbHvrJc",
+          LoginPanelBackground: "_2mIGMF-Jdi_N_9coPKVNFM",
+          LoginPanelContent: "_2MS2ZoNZh_oqiVvUGyHh9m",
+          ErrorMessage: "_3BmMF6pRx0W94B97vZTvdb",
+          AccountPasswordForm: "_1DnlW0kDl6u10k3Ppayvmb",
+          AuthenticationPanel: "_3Z8nzLnUEyfz2WMqJj1cd2",
+          AccountNameLabel: "_2U77IHTKBoUJ38DNPYVfvH",
+          MedName: "_20Gi0qD50szEeLj06XsZ3Z",
+          LargeName: "x37D-phxaGSNsZi6mpzQI",
+          PasswordDots: "_3jUHPnnvk2AXDp1iFHGxd1",
+          MedPass: "_2Hps1hH56vBFJJgXHkqljj",
+          LargePass: "tQnGPct_al8-iUWQuf6kv",
+          AccountFieldHeader: "HtxVN4b9fPDuS7W0FaLqi",
+          PasswordFieldHeader: "_1t03SX5MJ0b8jWS4fxbDTi",
+          NeedHelpLink: "_1GdK5C1JWAky1kjS70NvQN",
+          NeedHelpHighlight: "_3gBu02N3S9pnzvYTbzfR77",
+          CreateAccountLink: "_3bVw0PeUPTcTsuPlkTPGpI",
+          LoginCreateSeperator: "_35t4P-snn6716mxGm-Ki9b",
+          RefreshCaptchaText: "_1ZDJKWpT_nU_GDved7bxnd",
+          SigningInAccountName: "Qcb1FAzMpsqlSJNAV-1A",
+          SigninTitle: "_1ggRhTaLVqzY1PPxtIZTpI",
+          RememberMeCheck: "_2HTA85PF5pO-46JTcGI1gU",
+          SteamUpsellContainer: "_1q-Uirii8tDfKC6VRY61ei",
+          SteamUpsell: "_1dYtgxWsKDglJEujOvh1jE",
+          CaptchaContainer: "_3Uug3Nm1kL0c3e5-RM5da9",
+          CaptchaBlock: "_2kgp38GTVvClMxe5fyBft4",
+          CaptchaImageAndInput: "_2U0LTOvZ_ZfYJLZLcMrpSR",
+          CaptchaImageBox: "SsNXaiO0GRLZB04nZNff",
+          CaptchaImage: "_1G5YT_SnRKsL0Yh3OjU7Ke",
+          CaptchaInput: "_Gu34_OCHk02Dl6H9m-Oy",
+          AuthenticatorInputcontainer: "_1I7osrv3QXG9Py9FQWCb5G",
+          Highlight: "_2q3gmJ7JH65Nef8rMUAS32",
+          LoginComplete: "_1tujkMc7mFdQhTGXN_Nr7w",
         };
       },
       chunkid: (module) => {

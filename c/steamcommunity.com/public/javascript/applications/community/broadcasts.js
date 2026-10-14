@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [32079],
+    [2079],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -52,6 +52,9 @@
           }
           BShowInIframe() {
             return this.m_bShowOnlyChat || this.m_bShowOnlyVideo;
+          }
+          GetIFrameParentOrigin() {
+            return this.m_strIFrameParentOrigin;
           }
           async LoadBroadcastDebugInfo(_) {
             let _ = _._.COMMUNITY_BASE_URL + "broadcast/broadcastdebuginfo",
@@ -213,7 +216,9 @@
             this.ValidateStoreDefault(_) &&
               ((this.m_steamid = new _._(_.steamid)),
               (this.m_bShowOnlyChat = !!_.show_only_chat),
-              (this.m_bShowOnlyVideo = !!_.show_only_video));
+              (this.m_bShowOnlyVideo = !!_.show_only_video),
+              (this.m_strIFrameParentOrigin =
+                _.iframe_parent_origin || void 0));
           }
           ValidateStoreDefault(_) {
             const _ = _;
@@ -1141,70 +1146,115 @@
           );
           return _;
         }
+        function _(_) {
+          const _ = _.Get().GetIFrameParentOrigin();
+          _ &&
+            window.parent !== window &&
+            window.parent.postMessage(
+              {
+                msg: _,
+              },
+              _,
+            );
+        }
+        function _() {
+          const [_, _] = (0, _.useState)(
+            () =>
+              new URLSearchParams(window.location.search).get("broadcastid") ||
+              void 0,
+          );
+          return (
+            (0, _.useEffect)(() => {
+              const _ = _.Get().GetIFrameParentOrigin(),
+                _ = (_) => {
+                  var _;
+                  !_ ||
+                    _.origin !== _ ||
+                    ((_ = _.data) == null ? void 0 : _.msg) !==
+                      "OnVideoIFrameBroadcastIDChanged" ||
+                    !_.data.broadcastid ||
+                    _(String(_.data.broadcastid));
+                };
+              return (
+                window.addEventListener("message", _),
+                () => window.removeEventListener("message", _)
+              );
+            }, []),
+            _
+          );
+        }
         const _ = (0, _._)((_) => {
           const _ = _.Get().GetBroadcasterSteamID(),
             _ = _ == null ? void 0 : _.ConvertTo64BitString(),
             _ = _(),
             [_, _] = (0, _._)("muted", !0),
             _ = _._.GetBroadcast(_),
-            _ = _._.GetOrCreateBroadcastInfo(_);
-          return _
-            ? (0, _.jsx)(_.Fragment, {
-                children: (0, _.jsxs)("div", {
-                  className: (0, _._)(_.BroadcastPage),
-                  children: [
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().BroadcastAndChat),
-                      children: [
-                        !_.Get().BShowOnlyChat() &&
-                          (0, _.jsx)(_._, {
+            _ = _._.GetOrCreateBroadcastInfo(_),
+            _ = _();
+          if (!_) return null;
+          let _ = _ == null ? void 0 : _.m_ulBroadcastID;
+          _.Get().BShowOnlyChat() && (_ = _);
+          let _;
+          return (
+            _.Get().GetIFrameParentOrigin() &&
+              (_ = () => _("OnLoginButtonClicked")),
+            (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsxs)("div", {
+                className: (0, _._)(_.BroadcastPage),
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_().BroadcastAndChat),
+                    children: [
+                      !_.Get().BShowOnlyChat() &&
+                        (0, _.jsx)(_._, {
+                          children: (0, _.jsx)("div", {
+                            className: (0, _._)(_().wrapper),
                             children: (0, _.jsx)("div", {
-                              className: (0, _._)(_().wrapper),
+                              className: (0, _._)({
+                                [_().video_placeholder]: !0,
+                                video_placeholder_trgt: !0,
+                                [_().NoChat]: _.Get().BShowOnlyVideo(),
+                              }),
                               children: (0, _.jsx)("div", {
-                                className: (0, _._)({
-                                  [_().video_placeholder]: !0,
-                                  video_placeholder_trgt: !0,
-                                  [_().NoChat]: _.Get().BShowOnlyVideo(),
-                                }),
-                                children: (0, _.jsx)("div", {
-                                  className: _().BroadcastPlayerContainer,
-                                  children: (0, _.jsx)(_._, {
-                                    children: (0, _.jsx)(_.default, {
-                                      steamIDBroadcast: _,
-                                      watchLocation: _,
-                                      bStartMuted: _,
-                                    }),
+                                className: _().BroadcastPlayerContainer,
+                                children: (0, _.jsx)(_._, {
+                                  children: (0, _.jsx)(_.default, {
+                                    steamIDBroadcast: _,
+                                    watchLocation: _,
+                                    bStartMuted: _,
                                   }),
                                 }),
                               }),
                             }),
                           }),
-                        !_.Get().BShowOnlyVideo() &&
-                          (0, _.jsx)("div", {
-                            className: _().detail_chat_ctn,
-                            children: (0, _.jsx)("div", {
-                              className: _().ChatContainer,
+                        }),
+                      !_.Get().BShowOnlyVideo() &&
+                        (0, _.jsx)("div", {
+                          className: _().detail_chat_ctn,
+                          children: (0, _.jsx)("div", {
+                            className: _().ChatContainer,
+                            children: (0, _.jsx)(_._, {
                               children: (0, _.jsx)(_._, {
-                                children: (0, _.jsx)(_._, {
-                                  emoticonStore: _._,
-                                  watchLocation: _._._,
-                                  steamID: _,
-                                  broadcastID: _ ? _.m_ulBroadcastID : void 0,
-                                }),
+                                emoticonStore: _._,
+                                watchLocation: _._._,
+                                steamID: _,
+                                broadcastID: _,
+                                onSignIn: _,
                               }),
                             }),
                           }),
-                      ],
+                        }),
+                    ],
+                  }),
+                  !_.Get().BShowInIframe() &&
+                    (0, _.jsx)(_, {
+                      broadcasterSteamID: _,
+                      broadcastInfo: _,
                     }),
-                    !_.Get().BShowInIframe() &&
-                      (0, _.jsx)(_, {
-                        broadcasterSteamID: _,
-                        broadcastInfo: _,
-                      }),
-                  ],
-                }),
-              })
-            : null;
+                ],
+              }),
+            })
+          );
         });
         function _(_) {
           return _ != 0 && _ != _._;

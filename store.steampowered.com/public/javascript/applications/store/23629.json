@@ -48,7 +48,7 @@
     "Reservation_Cancel_Waitlist": "Sair da lista de espera?",
     "Reservation_Cancel_Waitlist_Desc": "Ao saíres da lista de espera, irás abandonar o teu lugar na lista. Se voltares a entrar na lista de espera, irás para o fim da lista.",
     "Reservation_Change_WaitList": "Mudar de lista de espera?",
-    "Reservation_Change_WaitList_Desc1": "Ao mudares de lista de espera, irás sair da lista de espera para a %1$s e abandonar o teu lugar na fila.",
+    "Reservation_Change_WaitList_Desc1": "Ao mudares de lista de espera, irás sair da lista de espera de %1$s e abandonar o teu lugar na fila.",
     "Reservation_Change_WaitList_Desc2": "Estás a entrar na lista de espera de %1$s.",
     "Reservation_In_Waitlist": "Na lista de espera desde %2$s",
     "Reservation_In_Waitlist_WithName": "Na lista de espera de %1$s desde %2$s",

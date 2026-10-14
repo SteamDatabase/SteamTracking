@@ -1,7 +1,7 @@
 "use strict";
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [12694],
+    [2694],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         __webpack_require__._(module_exports, {
@@ -1434,6 +1434,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
@@ -2237,9 +2238,8 @@
                 _.data.success == _._ &&
                 _.data.webapi_token
               ) {
-                this.m_transport = new _._(
-                  _._.WEBAPI_BASE_URL,
-                  _.data.webapi_token,
+                this.m_transport = (0, _._)(
+                  new _._(_._.WEBAPI_BASE_URL, _.data.webapi_token),
                 ).GetServiceTransport();
                 return;
               }

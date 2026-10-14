@@ -2316,50 +2316,6 @@ input[type='checkbox'] {
 
 	/* -----[ /modal stuff ] ----------- */
 
-.exception_letter
-{
-	background-color: #ffffff;
-	background-image: none;
-	color: #000000;
-	text-align: left;
-}
-
-.exception_letter_body
-{
-	padding-left: 100px;
-	padding-right: 100px;
-}
-
-.exception_letter a, .exception_letter a:hover, .exception_letter a:active, .exception_letter a:visited {
-	color: #0000ff;
-	text-decoration: underline;
-}
-
-.exception_letter .date
-{
-	margin-top: 25px;
-	margin-bottom: 25px;
-}
-
-.exception_letter .dear
-{
-	margin-bottom: 25px;
-}
-
-.exception_letter .text
-{
-	margin-bottom: 25px;
-}
-
-.exception_letter .closing
-{
-	margin-bottom: 25px;
-}
-
-.exception_letter .signature
-{
-}
-
 .rightSectionHolder select
 {
 	margin-left: 10px;

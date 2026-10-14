@@ -61,7 +61,6 @@
     "Reservation_Waitlist_NotSignedIn_Desc": "Συνδεθείτε στο Steam για να μπείτε στη λίστα αναμονής. Επιλέξτε ΟΚ για να μεταβείτε στη σελίδα σύνδεσης.",
     "Reservation_OnRegularReserveForModel": "Είστε στην ουρά κρατήσεων για: %1$s",
     "Reservation_PostShuffle_TAndC": "Ισχύουν <1>όροι και προϋποθέσεις</1>.",
-    "machine_dummy": "dummy",
     "PriceDisplay_YourPrice": "Η τιμή σας:",
     "PriceGrid_NormalPrice": "ΚΑΝΟΝΙΚΗ",
     "PriceGrid_RecentPrice": "ΧΑΜΗΛΟΤΕΡΗ (30 ΗΜΕΡΕΣ)",

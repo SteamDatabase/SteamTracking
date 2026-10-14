@@ -3,6 +3,7 @@ import "common.proto";
 message CStoreMarketing_GetFrontPageConfig_Request {
 	optional .StoreBrowseContext context = 1;
 	optional .StoreBrowseItemDataRequest data_request = 2;
+	optional string user_platform = 3;
 }
 
 message CStoreMarketing_GetFrontPageConfig_Response {

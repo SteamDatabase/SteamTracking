@@ -5,61 +5,61 @@
     self.webpackChunkappmgmt_storeadmin || []).push([
     [74268],
     {
-      73561: (L, le, i) => {
+      73561: (L, ce, i) => {
         "use strict";
-        i.r(le), i.d(le, { default: () => oo });
+        i.r(ce), i.d(ce, { default: () => aa });
         var n = i(7850),
-          fe = i(41735),
-          q = i.n(fe),
+          Se = i(41735),
+          X = i.n(Se),
           v = i(90626),
-          I = i(99412),
-          F = i(72604),
+          w = i(99412),
+          K = i(72604),
           te = i(32093),
-          k = i(73259),
-          Q = i(76559),
-          ce = i(58483),
-          Se = i(98534),
-          G = i(58534),
+          O = i(73259),
+          q = i(76559),
+          pe = i(58483),
+          ne = i(98534),
+          P = i(58534),
           de = i(25792),
           ee = i(75844),
           h = i(3166),
-          U = i(65804);
-        class w extends U.ZQ {
+          b = i(65804);
+        class T extends b.ZQ {
           async DeleteOldAnnouncement(e, s) {
-            let o = new URLSearchParams();
-            o.append("sessionid", (0, h.KC)());
-            let a =
+            let a = new URLSearchParams();
+            a.append("sessionid", (0, h.KC)());
+            let o =
                 h.TS.COMMUNITY_BASE_URL +
                 "/gid/" +
                 e.ConvertTo64BitString() +
                 "/announcements/ajaxdeleteannouncement/" +
                 s,
-              r = await q().post(a, o);
-            if (r.data.success != F.R) throw r.data;
-            return this.RemoveGIDFromList(e, k.cB + s), r.data;
+              r = await X().post(o, a);
+            if (r.data.success != K.R) throw r.data;
+            return this.RemoveGIDFromList(e, O.cB + s), r.data;
           }
           static sm_Instance;
           static sm_SummaryInstance;
           static Get() {
             return (
-              w.sm_Instance ||
-                ((w.sm_Instance = new w()), w.sm_Instance.Init()),
-              w.sm_Instance
+              T.sm_Instance ||
+                ((T.sm_Instance = new T()), T.sm_Instance.Init()),
+              T.sm_Instance
             );
           }
           static GetSummaryStore() {
             return (
-              w.sm_SummaryInstance ||
-                ((w.sm_SummaryInstance = new w(!0)),
-                w.sm_SummaryInstance.Init()),
-              w.sm_SummaryInstance
+              T.sm_SummaryInstance ||
+                ((T.sm_SummaryInstance = new T(!0)),
+                T.sm_SummaryInstance.Init()),
+              T.sm_SummaryInstance
             );
           }
         }
-        var b = i(14947),
+        var V = i(14947),
           N = i(41301),
           D = i(19298),
-          ne = i(72849),
+          se = i(72849),
           we = i(9046),
           ue = i(65946),
           Ne = i(18057),
@@ -67,20 +67,20 @@
           Zt = i(71684),
           Qt = i(38182),
           qe = i.n(Qt);
-        function uo(t) {
+        function da(t) {
           const {
               event: e,
               className: s,
-              nOverrideStartTime: o,
-              nOverrideEndTime: a,
+              nOverrideStartTime: a,
+              nOverrideEndTime: o,
             } = t,
             r = t.stylesmodule ? { ...styles, ...t.stylesmodule } : styles,
             [l, c, d] = useObserver(() => [
-              o ||
+              a ||
                 (e.bOldAnnouncement
                   ? e.postTime
                   : e.GetStartTimeAndDateUnixSeconds()),
-              a || e.GetEndTimeAndDateUnixSeconds(),
+              o || e.GetEndTimeAndDateUnixSeconds(),
               e.type,
             ]),
             m = !BClanEventTypeNeedEndTime(d);
@@ -98,8 +98,8 @@
           const {
               id: e,
               event: s,
-              className: o,
-              dateRangeLayout: a = "horizontal",
+              className: a,
+              dateRangeLayout: o = "horizontal",
             } = t,
             [r, l, c] = (0, ue.q3)(() => [
               s.GetStartTimeAndDateUnixSeconds(),
@@ -108,11 +108,11 @@
             ]),
             d = {};
           return (
-            a == "vertical" &&
+            o == "vertical" &&
               (d.ShortDateRange = qe().VerticalLocalDateAndTime),
             (0, n.jsx)("div", {
               id: e,
-              className: (0, S.A)(qe().EventDetailTimeInfo, o),
+              className: (0, S.A)(qe().EventDetailTimeInfo, a),
               children: (0, n.jsx)(Ne.u1, {
                 startDateAndTime: r,
                 endDateAndTime: l,
@@ -122,24 +122,24 @@
             })
           );
         }
-        var pe = i(813),
+        var he = i(813),
           Xt = i(7582),
           Jt = i(99047),
           Oe = i(34592),
           $t = Object.defineProperty,
           qt = Object.getOwnPropertyDescriptor,
-          en = (t, e, s, o) => {
+          en = (t, e, s, a) => {
             for (
-              var a = o > 1 ? void 0 : o ? qt(e, s) : e, r = t.length - 1, l;
+              var o = a > 1 ? void 0 : a ? qt(e, s) : e, r = t.length - 1, l;
               r >= 0;
               r--
             )
-              (l = t[r]) && (a = (o ? l(e, s, a) : l(a)) || a);
-            return o && a && $t(e, s, a), a;
+              (l = t[r]) && (o = (a ? l(e, s, o) : l(o)) || o);
+            return a && o && $t(e, s, o), o;
           };
         const et = class me {
           constructor() {
-            (0, b.Gn)(this);
+            (0, V.Gn)(this);
           }
           m_mapClanReposted = new Set();
           m_mapSourceEventGIDToPostedClans = new Map();
@@ -175,22 +175,22 @@
           GetRepostClanAccountID() {
             return Array.from(this.m_mapClanReposted);
           }
-          async LoadClansAlreadyRepostedTo(e, s, o) {
+          async LoadClansAlreadyRepostedTo(e, s, a) {
             if (this.m_mapSourceEventGIDToPostedClans.has(s))
               return this.m_mapSourceEventGIDToPostedClans.get(s);
-            const a = h.TS.STORE_BASE_URL + "events/ajaxgetrepostedevent",
+            const o = h.TS.STORE_BASE_URL + "events/ajaxgetrepostedevent",
               r = {
                 sessionid: (0, h.KC)(),
                 source_clan_accountid: e.GetAccountID(),
                 source_event_gid: s,
               };
             try {
-              const l = await q().get(a, {
+              const l = await X().get(o, {
                 params: r,
                 withCredentials: !0,
-                cancelToken: o?.token,
+                cancelToken: a?.token,
               });
-              if (l?.data?.success == F.R)
+              if (l?.data?.success == K.R)
                 return (
                   this.m_mapSourceEventGIDToPostedClans.set(
                     s,
@@ -213,31 +213,31 @@
             }
             return new Array();
           }
-          async RepostEvent(e, s, o, a, r) {
+          async RepostEvent(e, s, a, o, r) {
             const l = h.TS.STORE_BASE_URL + "events/ajaxrepostevent",
               c = new FormData();
             c.append("sessionid", (0, h.KC)()),
               c.append("source_clan_accountid", "" + e.GetAccountID()),
               c.append("source_event_gid", "" + s),
-              c.append("repost_clan_accountid", "" + o.GetAccountID()),
-              c.append("add", "" + a);
+              c.append("repost_clan_accountid", "" + a.GetAccountID()),
+              c.append("add", "" + o);
             try {
-              let d = await q().post(l, c, {
+              let d = await X().post(l, c, {
                 withCredentials: !0,
                 cancelToken: r?.token,
               });
-              if (d?.data?.success == F.R && d.data.repost_gid) {
+              if (d?.data?.success == K.R && d.data.repost_gid) {
                 this.m_mapSourceEventGIDToPostedClans.has(s) ||
                   this.m_mapSourceEventGIDToPostedClans.set(s, []);
                 const m = this.m_mapSourceEventGIDToPostedClans
                   .get(s)
-                  .findIndex((g) => o.GetAccountID() == g);
+                  .findIndex((g) => a.GetAccountID() == g);
                 return (
-                  a && m == -1
+                  o && m == -1
                     ? this.m_mapSourceEventGIDToPostedClans
                         .get(s)
-                        .push(o.GetAccountID())
-                    : !a &&
+                        .push(a.GetAccountID())
+                    : !o &&
                       m !== -1 &&
                       this.m_mapSourceEventGIDToPostedClans.get(s).splice(m, 1),
                   d.data.repost_gid
@@ -259,19 +259,19 @@
             return null;
           }
         };
-        en([b.sH], et.prototype, "m_mapClanReposted", 2);
-        let he = et;
+        en([V.sH], et.prototype, "m_mapClanReposted", 2);
+        let ve = et;
         var tt = i(95695),
-          H = i.n(tt),
+          k = i.n(tt),
           nt = i(47875),
           Ae = i(88003),
-          ve = i(82734),
+          ge = i(82734),
           u = i(18210),
           tn = i(13854),
-          se = i(53113),
+          ae = i(53113),
           je = i(2801),
           nn = i(14256),
-          B = i.n(nn),
+          I = i.n(nn),
           Le = i(64868),
           E = i(36118),
           Ee = i(18099),
@@ -282,7 +282,7 @@
             .then(i.bind(i, 56741))
             .then((t) => ({ default: t.ShareEventDialogBody })),
         );
-        function on(t) {
+        function an(t) {
           const { bActive: e, ...s } = t;
           return (0, n.jsx)(Re.E, {
             active: e,
@@ -292,63 +292,63 @@
             }),
           });
         }
-        function an(t) {
+        function on(t) {
           const { eventModel: e, emoticonStore: s } = t,
-            [o, a, r] = (0, Le.uD)(),
+            [a, o, r] = (0, Le.uD)(),
             l = (0, Ee.T7)(e);
           return (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsxs)(D.Z, {
                 focusable: !0,
-                className: (0, S.A)(H().Button, H().Icon, B().DiscussionButton),
-                onActivate: a,
+                className: (0, S.A)(k().Button, k().Icon, I().DiscussionButton),
+                onActivate: o,
                 children: [
-                  (0, n.jsx)(E.SYj, { className: B().ShareIcon }),
+                  (0, n.jsx)(E.SYj, { className: I().ShareIcon }),
                   (0, n.jsx)("span", {
-                    className: B().DiscussionButtonText,
+                    className: I().DiscussionButtonText,
                     children: (0, u.we)("#Button_Share"),
                   }),
                 ],
               }),
-              (0, n.jsx)(on, {
+              (0, n.jsx)(an, {
                 eventModel: e,
                 strEventLink: l ?? "",
-                bActive: o,
+                bActive: a,
                 closeModal: r,
                 emoticonStore: s,
               }),
             ],
           });
         }
-        var O = i(72609),
+        var F = i(72609),
           Fe = i(75233),
-          Pe = i(20194),
+          Ge = i(20194),
           ke = i(51614);
         function st(t, e) {
           return ["GetClanAnnouncementVoteForUser", e, t];
         }
-        function mo(t) {
+        function ua(t) {
           return t == "up" ? 1 : t == "down" ? -1 : 0;
         }
-        function rn(t, e, s, o) {
-          const a = (0, Fe.jE)(),
-            r = st(t, O.iA.accountid),
-            { data: l } = (0, Pe.I)({
+        function rn(t, e, s, a) {
+          const o = (0, Fe.jE)(),
+            r = st(t, F.iA.accountid),
+            { data: l } = (0, Ge.I)({
               queryKey: r,
               queryFn: async () => await s.GetMyEventVote(t),
-              initialData: o?.initialVote,
-              enabled: !!t && !!O.iA.accountid && (o?.bAsk ?? !0),
+              initialData: a?.initialVote,
+              enabled: !!t && !!F.iA.accountid && (a?.bAsk ?? !0),
               staleTime: 1 / 0,
               gcTime: 1 / 0,
             }),
             { mutate: c } = (0, ke.n)({
               mutationFn: async (m) => {
                 const g = await s.RateEvent(t, e, m);
-                if (g != F.R)
+                if (g != K.R)
                   throw new Error(`RateClanAnnouncement failed with ${g}`);
               },
-              onMutate: (m) => a.setQueryData(r, m),
-              onError: () => a.invalidateQueries({ queryKey: r }),
+              onMutate: (m) => o.setQueryData(r, m),
+              onError: () => o.invalidateQueries({ queryKey: r }),
             });
           return {
             myVote: l,
@@ -357,50 +357,50 @@
             },
           };
         }
-        function po(t, e) {
+        function ma(t, e) {
           if (t.length == 0) return;
           const s = e ?? GetEventStateQueryClient("SetMyEventVotes");
           s &&
-            t.forEach((o) =>
+            t.forEach((a) =>
               s.setQueryData(
-                st(o.gidAnnouncement, UserConfig.accountid),
-                o.vote,
+                st(a.gidAnnouncement, UserConfig.accountid),
+                a.vote,
               ),
             );
         }
         const ln = "partnereventaction/myvote",
           cn = "partnereventaction/rateevent";
         async function dn(t) {
-          const e = O.TS.STORE_BASE_URL + ln + "?gid=" + encodeURIComponent(t),
+          const e = F.TS.STORE_BASE_URL + ln + "?gid=" + encodeURIComponent(t),
             s = await fetch(e, { credentials: "include" });
           if (!s.ok) throw new Error(`${e} answered ${s.status}`);
           return (await s.json()).vote ?? null;
         }
         async function un(t, e, s) {
-          const o = O.TS.STORE_BASE_URL + cn,
-            a = {
+          const a = F.TS.STORE_BASE_URL + cn,
+            o = {
               gid: t,
               clanaccountid: String(e),
               voteup: s == "up" ? "1" : "0",
             },
-            r = await fetch(o, {
+            r = await fetch(a, {
               method: "POST",
               credentials: "include",
-              body: new URLSearchParams(a),
+              body: new URLSearchParams(o),
             });
-          if (!r.ok) throw new Error(`${o} answered ${r.status}`);
-          return (await r.json()).success ?? F.zi;
+          if (!r.ok) throw new Error(`${a} answered ${r.status}`);
+          return (await r.json()).success ?? K.zi;
         }
         const mn = { GetMyEventVote: dn, RateEvent: un };
-        var Ge = i(68312),
-          ot = i(71742),
-          at = i(67705);
+        var Pe = i(68312),
+          at = i(71742),
+          ot = i(67705);
         let be;
         function pn(t, e) {
           const s = t?.AnnouncementGID,
-            o = t?.clanSteamID.GetAccountID() ?? 0,
-            a = hn(),
-            { myVote: r, Vote: l } = rn(s, o, a, { initialVote: fn(s), ...e });
+            a = t?.clanSteamID.GetAccountID() ?? 0,
+            o = hn(),
+            { myVote: r, Vote: l } = rn(s, a, o, { initialVote: fn(s), ...e });
           return {
             myVote: r,
             Vote: (d) => {
@@ -412,15 +412,15 @@
           };
         }
         function hn() {
-          const { useActiveCMInterface: t } = (0, Ge.tc)(),
-            e = (0, Ge.KV)(),
+          const { useActiveCMInterface: t } = (0, Pe.tc)(),
+            e = (0, Pe.KV)(),
             s = !!t;
           return v.useMemo(
             () =>
               s
                 ? {
-                    GetMyEventVote: async (o) => await vn(e, o),
-                    RateEvent: async (o, a, r) => await gn(e, o, a, r),
+                    GetMyEventVote: async (a) => await vn(e, a),
+                    RateEvent: async (a, o, r) => await gn(e, a, o, r),
                   }
                 : mn,
             [s, e],
@@ -428,7 +428,7 @@
         }
         async function vn(t, e) {
           if (!t) return null;
-          const s = await ne.BE.GetClanAnnouncementVoteForUser(t, {
+          const s = await se.BE.GetClanAnnouncementVoteForUser(t, {
             announcementid: e,
           });
           return s.BSuccess()
@@ -439,26 +439,26 @@
                 : null
             : null;
         }
-        async function gn(t, e, s, o) {
+        async function gn(t, e, s, a) {
           return t
             ? (
-                await ne.BE.RateClanAnnouncement(t, {
+                await se.BE.RateClanAnnouncement(t, {
                   announcementid: e,
-                  vote_up: o == "up",
+                  vote_up: a == "up",
                   clan_accountid: s,
                 })
               ).GetEResult()
-            : F.Dy;
+            : K.Dy;
         }
         function fn(t) {
           if (typeof window > "u") {
-            (0, ot.wT)(!1, "GetVoteFromPageConfig is browser only");
+            (0, at.wT)(!1, "GetVoteFromPageConfig is browser only");
             return;
           }
           return (
             be ||
               ((be = new Map()),
-              (0, at.Fd)("uservotes", "application_config")?.forEach((s) => {
+              (0, ot.Fd)("uservotes", "application_config")?.forEach((s) => {
                 s.clanAnnouncementGID &&
                   be.set(
                     s.clanAnnouncementGID,
@@ -472,68 +472,68 @@
           Ce = i(85599);
         const An = (0, ee.PA)((t) => {
           const { eventModel: e } = t,
-            [s, o] = (0, v.useState)(!0),
-            [a, r] = (0, v.useState)(new Set()),
+            [s, a] = (0, v.useState)(!0),
+            [o, r] = (0, v.useState)(new Set()),
             [l, c] = (0, v.useState)(new Set()),
             [d, m] = (0, v.useState)(new Set()),
             [g, j] = (0, v.useState)(null),
-            [W, T] = (0, v.useState)(null),
-            V = (0, v.useRef)(null);
+            [z, B] = (0, v.useState)(null),
+            _ = (0, v.useRef)(null);
           (0, v.useEffect)(
             () => (
               s &&
                 (async () => {
-                  const M = q().CancelToken.source();
-                  V.current = M.cancel;
-                  const P = he
+                  const U = X().CancelToken.source();
+                  _.current = U.cancel;
+                  const G = ve
                     .Get()
-                    .LoadClansAlreadyRepostedTo(e.clanSteamID, e.GID, M);
-                  P.then((X) => {
-                    const ie = new Set();
-                    X.forEach((_) => ie.add(_)), r(ie);
+                    .LoadClansAlreadyRepostedTo(e.clanSteamID, e.GID, U);
+                  G.then((Y) => {
+                    const le = new Set();
+                    Y.forEach((M) => le.add(M)), r(le);
                   });
-                  let K = new Array();
-                  K.push(P),
-                    he
+                  let W = new Array();
+                  W.push(G),
+                    ve
                       .Get()
                       .GetRepostClanAccountID()
-                      .forEach((X) => {
-                        const ie = Q.b.InitFromClanID(X);
-                        K.push(pe.ac.LoadClanInfoForClanSteamID(ie));
+                      .forEach((Y) => {
+                        const le = q.b.InitFromClanID(Y);
+                        W.push(he.ac.LoadClanInfoForClanSteamID(le));
                       }),
-                    await Promise.all(K),
-                    o(!1);
+                    await Promise.all(W),
+                    a(!1);
                 })(),
-              () => V.current && V.current()
+              () => _.current && _.current()
             ),
             [s, e.GID, e.clanSteamID],
           );
           const x = new Array();
           return (
-            he
+            ve
               .Get()
               .GetRepostClanAccountID()
               .forEach((f) => {
-                const M = pe.ac.GetClanInfoByClanAccountID(f);
-                if (M && f != e.clanSteamID.GetAccountID()) {
-                  const P = a.has(f),
-                    K = l.has(f) || (P && !d.has(f));
+                const U = he.ac.GetClanInfoByClanAccountID(f);
+                if (U && f != e.clanSteamID.GetAccountID()) {
+                  const G = o.has(f),
+                    W = l.has(f) || (G && !d.has(f));
                   x.push(
                     (0, n.jsx)(
-                      G.Yh,
+                      P.Yh,
                       {
-                        label: P
+                        label: G
                           ? (0, u.we)(
                               "#EventRepost_Dialog_Existing",
-                              M.group_name,
+                              U.group_name,
                             )
-                          : M.group_name,
-                        checked: K,
+                          : U.group_name,
+                        checked: W,
                         disabled: g !== null,
-                        onChange: (X) => {
-                          a.has(f)
-                            ? (X ? d.delete(f) : d.add(f), m(new Set(d)))
-                            : (X ? l.add(f) : l.delete(f), c(new Set(l)));
+                        onChange: (Y) => {
+                          o.has(f)
+                            ? (Y ? d.delete(f) : d.add(f), m(new Set(d)))
+                            : (Y ? l.add(f) : l.delete(f), c(new Set(l)));
                         },
                       },
                       "checkbox" + f,
@@ -544,14 +544,14 @@
             (0, n.jsx)(de.tH, {
               children: (0, n.jsx)(je.x_, {
                 onEscKeypress: () => t.closeModal && t.closeModal(),
-                children: (0, n.jsxs)(G.UC, {
+                children: (0, n.jsxs)(P.UC, {
                   children: [
-                    (0, n.jsx)(G.Y9, {
+                    (0, n.jsx)(P.Y9, {
                       children: (0, u.we)("#EventRepost_Dialog_Title"),
                     }),
-                    (0, n.jsxs)(G.nB, {
+                    (0, n.jsxs)(P.nB, {
                       children: [
-                        (0, n.jsx)(G.a3, {
+                        (0, n.jsx)(P.a3, {
                           children: (0, u.we)("#EventRepost_Dialog_Desc"),
                         }),
                         s
@@ -586,63 +586,63 @@
                             ],
                           }),
                         !!g && (0, n.jsx)("div", { children: g }),
-                        !!W && (0, n.jsx)("div", { children: W }),
+                        !!z && (0, n.jsx)("div", { children: z }),
                       ],
                     }),
-                    (0, n.jsx)(G.wi, {
-                      children: (0, n.jsx)(G.CB, {
+                    (0, n.jsx)(P.wi, {
+                      children: (0, n.jsx)(P.CB, {
                         onCancel: () => t.closeModal && t.closeModal(),
                         strOKText: (0, u.we)("#EventRepost_Dialog_OK"),
                         bOKDisabled:
                           (l.size == 0 && d.size == 0) ||
                           g !== null ||
-                          W !== null,
+                          z !== null,
                         onOK: async () => {
-                          V.current && V.current();
-                          const f = q().CancelToken.source();
-                          V.current = f.cancel;
-                          const M = l.size + d.size;
-                          let P = 1;
-                          j((0, u.we)("#EventRepost_Dialog_Progress", P, M));
-                          for (const K of Array.from(l)) {
-                            const X = Q.b.InitFromClanID(K);
+                          _.current && _.current();
+                          const f = X().CancelToken.source();
+                          _.current = f.cancel;
+                          const U = l.size + d.size;
+                          let G = 1;
+                          j((0, u.we)("#EventRepost_Dialog_Progress", G, U));
+                          for (const W of Array.from(l)) {
+                            const Y = q.b.InitFromClanID(W);
                             if (
-                              await he
+                              await ve
                                 .Get()
-                                .RepostEvent(e.clanSteamID, e.GID, X, !0, f)
+                                .RepostEvent(e.clanSteamID, e.GID, Y, !0, f)
                             )
                               j(
                                 (0, u.we)(
                                   "#EventRepost_Dialog_Progress",
-                                  ++P,
-                                  M,
+                                  ++G,
+                                  U,
                                 ),
                               );
                             else {
-                              T((0, u.we)("#EventRepost_Dialog_ResultFail"));
+                              B((0, u.we)("#EventRepost_Dialog_ResultFail"));
                               return;
                             }
                           }
-                          for (const K of Array.from(d)) {
-                            const X = Q.b.InitFromClanID(K);
+                          for (const W of Array.from(d)) {
+                            const Y = q.b.InitFromClanID(W);
                             if (
-                              await he
+                              await ve
                                 .Get()
-                                .RepostEvent(e.clanSteamID, e.GID, X, !1, f)
+                                .RepostEvent(e.clanSteamID, e.GID, Y, !1, f)
                             )
                               j(
                                 (0, u.we)(
                                   "#EventRepost_Dialog_Progress",
-                                  ++P,
-                                  M,
+                                  ++G,
+                                  U,
                                 ),
                               );
                             else {
-                              T((0, u.we)("#EventRepost_Dialog_ResultFail"));
+                              B((0, u.we)("#EventRepost_Dialog_ResultFail"));
                               return;
                             }
                           }
-                          T((0, u.we)("#EventRepost_Dialog_ResultSuccess"));
+                          B((0, u.we)("#EventRepost_Dialog_ResultSuccess"));
                         },
                       }),
                     }),
@@ -658,8 +658,8 @@
           const {
             nVoteCount: e,
             nCommentCount: s,
-            myVote: o,
-            onVote: a,
+            myVote: a,
+            onVote: o,
             strDiscussionURL: r,
             onDiscussionUnavailable: l,
             bShowDiscussion: c,
@@ -667,21 +667,21 @@
             share: m,
           } = t;
           return (0, n.jsxs)(D.Z, {
-            className: B().Container,
+            className: I().Container,
             "flow-children": "row",
             focusable: !1,
             children: [
               (0, n.jsxs)("div", {
-                className: B().InnerContainer,
+                className: I().InnerContainer,
                 children: [
                   (0, n.jsxs)("div", {
-                    className: B().VoteContainer,
+                    className: I().VoteContainer,
                     children: [
                       (0, n.jsxs)("div", {
-                        className: B().VoteCount,
+                        className: I().VoteCount,
                         children: [
                           (0, n.jsx)(E.bfp, {
-                            className: B().VoteUpStaticIcon,
+                            className: I().VoteUpStaticIcon,
                           }),
                           (0, rt.Dq)(e),
                         ],
@@ -689,21 +689,21 @@
                       (0, n.jsxs)(D.Z, {
                         focusable: !0,
                         className: (0, S.A)(
-                          H().Button,
-                          H().Icon,
-                          B().DiscussionButton,
-                          o == "up" ? B().VoteButtonSelected : "",
+                          k().Button,
+                          k().Icon,
+                          I().DiscussionButton,
+                          a == "up" ? I().VoteButtonSelected : "",
                         ),
-                        onActivate: () => a("up"),
+                        onActivate: () => o("up"),
                         children: [
                           (0, n.jsx)(E.bfp, {
                             className:
-                              o == "up"
-                                ? B().VoteUpSelectedIcon
-                                : B().VoteUpIcon,
+                              a == "up"
+                                ? I().VoteUpSelectedIcon
+                                : I().VoteUpIcon,
                           }),
                           (0, n.jsx)("span", {
-                            className: B().DiscussionButtonText,
+                            className: I().DiscussionButtonText,
                             children: (0, u.we)("#Button_RateUp"),
                           }),
                         ],
@@ -711,18 +711,18 @@
                       (0, n.jsx)(D.Z, {
                         focusable: !0,
                         className: (0, S.A)(
-                          H().Button,
-                          H().Icon,
-                          B().DiscussionButton,
-                          o == "down" ? B().VoteButtonSelected : "",
+                          k().Button,
+                          k().Icon,
+                          I().DiscussionButton,
+                          a == "down" ? I().VoteButtonSelected : "",
                         ),
-                        onActivate: () => a("down"),
+                        onActivate: () => o("down"),
                         "aria-label": (0, u.we)("#Button_RateDown"),
                         children: (0, n.jsx)(E.bfp, {
                           className:
-                            o == "down"
-                              ? B().VoteDownSelectedIcon
-                              : B().VoteDownIcon,
+                            a == "down"
+                              ? I().VoteDownSelectedIcon
+                              : I().VoteDownIcon,
                         }),
                       }),
                     ],
@@ -738,34 +738,34 @@
               }),
               m &&
                 (0, n.jsx)("div", {
-                  className: B().ShareContainer,
+                  className: I().ShareContainer,
                   children: m,
                 }),
             ],
           });
         }
         function Dn(t) {
-          const { commentCount: e, discussionURL: s, gotoDiscussion: o } = t;
+          const { commentCount: e, discussionURL: s, gotoDiscussion: a } = t;
           return (0, n.jsxs)("div", {
-            className: B().DiscussContainer,
+            className: I().DiscussContainer,
             children: [
               (0, n.jsxs)("div", {
-                className: B().DiscussionCount,
+                className: I().DiscussionCount,
                 children: [(0, n.jsx)(E.ROZ, {}), (0, rt.Dq)(e)],
               }),
               s &&
                 (0, n.jsx)(En.Ii, {
-                  href: (0, se.k2)(s),
+                  href: (0, ae.k2)(s),
                   children: (0, n.jsxs)("div", {
                     className: (0, S.A)(
-                      H().Button,
-                      H().Icon,
-                      B().DiscussionButton,
+                      k().Button,
+                      k().Icon,
+                      I().DiscussionButton,
                     ),
                     children: [
                       (0, n.jsx)(E.ROZ, {}),
                       (0, n.jsx)("span", {
-                        className: B().DiscussionButtonText,
+                        className: I().DiscussionButtonText,
                         children: (0, u.we)("#Button_Discuss"),
                       }),
                     ],
@@ -774,16 +774,16 @@
               !s &&
                 (0, n.jsxs)(D.Z, {
                   focusable: !0,
-                  onActivate: o,
+                  onActivate: a,
                   className: (0, S.A)(
-                    H().Button,
-                    H().Icon,
-                    B().DiscussionButton,
+                    k().Button,
+                    k().Icon,
+                    I().DiscussionButton,
                   ),
                   children: [
                     (0, n.jsx)(E.ROZ, {}),
                     (0, n.jsx)("span", {
-                      className: B().DiscussionButtonText,
+                      className: I().DiscussionButtonText,
                       children: (0, u.we)("#Button_Discuss"),
                     }),
                   ],
@@ -815,12 +815,12 @@
         }
         function xn(t) {
           const { eventModel: e, emoticonStore: s } = t,
-            o = (0, h.Qn)(),
-            { myVote: a, Vote: r } = pn(e),
+            a = (0, h.Qn)(),
+            { myVote: o, Vote: r } = pn(e),
             l = (f) => {
-              yn() && a !== void 0 && r(f);
+              yn() && o !== void 0 && r(f);
             },
-            [, c] = (0, pe.TB)(e.clanSteamID.GetAccountID()),
+            [, c] = (0, he.TB)(e.clanSteamID.GetAccountID()),
             d = (f) => {
               (0, Ae.pg)(
                 (0, n.jsx)(je.KG, {
@@ -828,45 +828,45 @@
                     "#EventDisplay_Share_CommentMigrationInProcess",
                   ),
                 }),
-                (0, ve.uX)(f),
+                (0, ge.uX)(f),
               );
             },
             m = (f) => {
-              (0, Ae.pg)((0, n.jsx)(An, { eventModel: e }), (0, ve.uX)(f));
+              (0, Ae.pg)((0, n.jsx)(An, { eventModel: e }), (0, ge.uX)(f));
             },
-            [g, j, W, T] = (0, ue.q3)(() => [
+            [g, j, z, B] = (0, ue.q3)(() => [
               (0, tn.OQ)(e.nVotesUp - e.nVotesDown, 0, Number.MAX_SAFE_INTEGER),
-              (0, se.NT)(e.GetDiscussionURL(c?.vanity_url)),
+              (0, ae.NT)(e.GetDiscussionURL(c?.vanity_url)),
               e.BIsUnlistedEvent(),
               e.nCommentCount,
             ]),
-            V = (0, h.Y2)(),
-            x = h.iA.logged_in && he.Get().BCanRepostPartnerEvent();
+            _ = (0, h.Y2)(),
+            x = h.iA.logged_in && ve.Get().BCanRepostPartnerEvent();
           return (0, n.jsx)(Cn, {
             nVoteCount: g,
-            nCommentCount: T,
-            myVote: a ?? void 0,
+            nCommentCount: B,
+            myVote: o ?? void 0,
             onVote: l,
             strDiscussionURL: j,
             onDiscussionUnavailable: d,
-            bShowDiscussion: !V && !W,
+            bShowDiscussion: !_ && !z,
             repost:
               x &&
               (0, n.jsx)("div", {
-                className: B().VoteContainer,
+                className: I().VoteContainer,
                 children: (0, n.jsx)(D.Z, {
                   focusable: !0,
                   className: (0, S.A)(
-                    H().Button,
-                    H().Icon,
-                    B().DiscussionButton,
-                    a == "down" ? B().VoteButtonSelected : "",
+                    k().Button,
+                    k().Icon,
+                    I().DiscussionButton,
+                    o == "down" ? I().VoteButtonSelected : "",
                   ),
                   onActivate: m,
                   children: (0, u.we)("#EventRepost_Dialog_Title"),
                 }),
               }),
-            share: !o && (0, n.jsx)(an, { eventModel: e, emoticonStore: s }),
+            share: !a && (0, n.jsx)(on, { eventModel: e, emoticonStore: s }),
           });
         }
         var Tn = i(85820),
@@ -879,7 +879,7 @@
         function Nn() {
           return 2025;
         }
-        function ho(t) {
+        function pa(t) {
           return `${Config.MEDIA_CDN_URL}store/promo/${t}`;
         }
         const jn = "#173471",
@@ -887,10 +887,10 @@
           Ln = "#FFFFFF",
           Rn = Ve()("2026-12-17T09:30:00-08:00").unix(),
           ct = Ve()("2027-01-02T10:00:00-08:00").unix(),
-          vo = { 2023: 2640290, 2024: 3334340, 2025: 4147080, 2026: 5350740 },
+          ha = { 2023: 2640290, 2024: 3334340, 2025: 4147080, 2026: 5350740 },
           _e = 4147080,
-          go = 2215130;
-        function fo(t) {
+          va = 2215130;
+        function ga(t) {
           switch (t) {
             case 2023:
             case 2024:
@@ -901,30 +901,30 @@
           }
           return !1;
         }
-        function Pn(t) {
+        function Gn(t) {
           return t >= it && t < In;
         }
-        function So(t) {
+        function fa(t) {
           return t >= it;
         }
-        function Gn(t, e, s, o) {
-          const a = Pn(o),
+        function Pn(t, e, s, a) {
+          const o = Gn(a),
             r = dt(t, e),
             l = dt(t, s);
           if (!(!r.length && !l.length))
             return {
               nomination: r.length
-                ? { rgCategories: r, bNominationsLive: a }
+                ? { rgCategories: r, bNominationsLive: o }
                 : void 0,
               vote: l.length
-                ? { rgCategories: l, bNominationsLive: a }
+                ? { rgCategories: l, bNominationsLive: o }
                 : void 0,
             };
         }
-        function Ao(t) {
+        function Sa(t) {
           return t >= Rn && t < ct;
         }
-        function Eo(t) {
+        function Aa(t) {
           return t >= ct;
         }
         function He(t) {
@@ -932,14 +932,14 @@
         }
         function dt(t, e) {
           const s = [];
-          for (const o of e.filter(He)) {
-            const a = t.find((r) => r.voteid == o);
-            a?.localization?.title &&
+          for (const a of e.filter(He)) {
+            const o = t.find((r) => r.voteid == a);
+            o?.localization?.title &&
               s.push({
-                eCategoryID: o,
-                strTitle: a.localization.title,
-                strDescription: a.localization.award_description ?? "",
-                bLaborOfLove: a.flag == J.Xs.bV,
+                eCategoryID: a,
+                strTitle: o.localization.title,
+                strDescription: o.localization.award_description ?? "",
+                bLaborOfLove: o.flag == J.Xs.bV,
               });
           }
           return s;
@@ -952,55 +952,55 @@
         }
         function _n(t, e) {
           const s = (0, Fe.jE)(),
-            o = bn(O.iA.accountid),
-            { data: a, isPending: r } = (0, Pe.I)({
-              queryKey: o,
+            a = bn(F.iA.accountid),
+            { data: o, isPending: r } = (0, Ge.I)({
+              queryKey: a,
               queryFn: async () => await e.GetMySteamAwardNominations(),
-              enabled: !!O.iA.accountid,
+              enabled: !!F.iA.accountid,
             }),
             { mutate: l } = (0, ke.n)({
               mutationFn: async (c) => {
                 const d = await e.NominateForSteamAward(c, t);
-                if (d != F.R)
+                if (d != K.R)
                   throw new Error(`SteamAwards.Nominate failed with ${d}`);
               },
               onMutate: (c) =>
-                s.setQueryData(o, (d) => [
+                s.setQueryData(a, (d) => [
                   ...(d ?? []).filter((m) => m.category_id != t),
                   { category_id: t, appid: c },
                 ]),
-              onError: () => s.invalidateQueries({ queryKey: o }),
+              onError: () => s.invalidateQueries({ queryKey: a }),
             });
           return {
-            unNominatedAppID: a?.find((c) => c.category_id == t)?.appid,
-            bAnswered: a != null || !O.iA.accountid || !r,
+            unNominatedAppID: o?.find((c) => c.category_id == t)?.appid,
+            bAnswered: o != null || !F.iA.accountid || !r,
             Nominate: l,
           };
         }
         function Mn(t, e) {
           const s = (0, Fe.jE)(),
-            o = Vn(O.iA.accountid),
-            { data: a, isPending: r } = (0, Pe.I)({
-              queryKey: o,
+            a = Vn(F.iA.accountid),
+            { data: o, isPending: r } = (0, Ge.I)({
+              queryKey: a,
               queryFn: async () => await e.GetMySteamAwardVotes(),
-              enabled: !!O.iA.accountid,
+              enabled: !!F.iA.accountid,
             }),
             { mutate: l } = (0, ke.n)({
               mutationFn: async (c) => {
                 const d = await e.SetSteamAwardVote(c, t);
-                if (d != F.R)
+                if (d != K.R)
                   throw new Error(`StoreSales.SetVote failed with ${d}`);
               },
               onMutate: (c) =>
-                s.setQueryData(o, (d) => [
+                s.setQueryData(a, (d) => [
                   ...(d ?? []).filter((m) => m.voteid != t),
                   { voteid: t, appid: c },
                 ]),
-              onError: () => s.invalidateQueries({ queryKey: o }),
+              onError: () => s.invalidateQueries({ queryKey: a }),
             });
           return {
-            unVotedAppID: a?.find((c) => c.voteid == t)?.appid,
-            bAnswered: a != null || !O.iA.accountid || !r,
+            unVotedAppID: o?.find((c) => c.voteid == t)?.appid,
+            bAnswered: o != null || !F.iA.accountid || !r,
             Vote: l,
           };
         }
@@ -1012,14 +1012,14 @@
           On = i(12247),
           A = i.n(On);
         function pt(t) {
-          return `${O.TS.MEDIA_CDN_URL}${wn}${t}`;
+          return `${F.TS.MEDIA_CDN_URL}${wn}${t}`;
         }
         function ht(t) {
           const {
               strMainTitle: e,
               subtitle: s,
-              headerText: o,
-              headerContent: a,
+              headerText: a,
+              headerContent: o,
               children: r,
               footer: l,
             } = t,
@@ -1030,7 +1030,7 @@
             };
           return (0, n.jsxs)("div", {
             style: c,
-            className: (0, S.A)(A().SteamAwardContainer, H().PartnerEventFont),
+            className: (0, S.A)(A().SteamAwardContainer, k().PartnerEventFont),
             children: [
               (0, n.jsxs)("div", {
                 className: A().SteamAwardHeader,
@@ -1050,9 +1050,9 @@
                       s,
                       (0, n.jsx)("div", {
                         className: A().SteamAwardHeaderText,
-                        children: o,
+                        children: a,
                       }),
-                      a,
+                      o,
                     ],
                   }),
                 ],
@@ -1067,7 +1067,7 @@
           });
         }
         function vt(t) {
-          return `${O.TS.STORE_BASE_URL}steamawards/${t ? "nominations/" : ""}`;
+          return `${F.TS.STORE_BASE_URL}steamawards/${t ? "nominations/" : ""}`;
         }
         function ze() {
           return (0, n.jsx)(Ce.t, {
@@ -1079,19 +1079,19 @@
         }
         function gt(t) {
           const { elDialogElement: e, fnShowLogonDialog: s } = (0, Un.l)(),
-            [o, a, r] = (0, Le.uD)();
+            [a, o, r] = (0, Le.uD)();
           return {
             elDialogElement: (0, n.jsxs)(n.Fragment, {
               children: [
                 e,
                 (0, n.jsx)(Re.E, {
-                  active: o,
+                  active: a,
                   children: (0, n.jsx)(Fn, { bVote: t, closeModal: r }),
                 }),
               ],
             }),
             BCanTakeAction: () =>
-              O.iA.logged_in ? (O.iA.is_limited ? (a(), !1) : !0) : (s(), !1),
+              F.iA.logged_in ? (F.iA.is_limited ? (o(), !1) : !0) : (s(), !1),
           };
         }
         function Fn(t) {
@@ -1107,8 +1107,8 @@
                   ? "#SteamAward_Vote_LimitedAccount"
                   : "#SteamAward_Nominate_LimitedAccount",
                 (0, n.jsx)("a", {
-                  href: `${O.TS.HELP_BASE_URL}wizard/HelpWithLimitedAccount`,
-                  target: O.TS.IN_CLIENT ? void 0 : "_blank",
+                  href: `${F.TS.HELP_BASE_URL}wizard/HelpWithLimitedAccount`,
+                  target: F.TS.IN_CLIENT ? void 0 : "_blank",
                   rel: "noreferrer",
                   children: R.Z.Localize("#User_LimitedAccount_UrlInfo"),
                 }),
@@ -1120,14 +1120,14 @@
           const {
               strLocTokenInfix: e,
               unCurrentAppID: s,
-              unNewAppID: o,
-              fnOnConfirm: a,
+              unNewAppID: a,
+              fnOnConfirm: o,
               closeModal: r,
             } = t,
             { data: l } = (0, oe.J$)({ appid: s }),
-            { data: c } = (0, oe.J$)({ appid: o }),
+            { data: c } = (0, oe.J$)({ appid: a }),
             { data: d } = (0, oe.lv)({ appid: s }),
-            { data: m } = (0, oe.lv)({ appid: o }),
+            { data: m } = (0, oe.lv)({ appid: a }),
             g = d ? (0, ut.b0)(d, "small_capsule") : void 0,
             j = m ? (0, ut.b0)(m, "small_capsule") : void 0;
           return (0, n.jsx)(mt.o0, {
@@ -1138,7 +1138,7 @@
                 : "#SteamAward_NominationConflictWarning_Title",
             ),
             closeModal: r,
-            onOK: a,
+            onOK: o,
             onCancel: r,
             children: (0, n.jsxs)("div", {
               className: A().ConflictBody,
@@ -1175,26 +1175,26 @@
           });
         }
         function kn(t) {
-          const { unAppID: e, widget: s, actions: o, bNominationsOpen: a } = t,
+          const { unAppID: e, widget: s, actions: a, bNominationsOpen: o } = t,
             r = s.rgCategories[0],
             { data: l } = (0, oe.J$)({ appid: e }),
             {
               unNominatedAppID: c,
               bAnswered: d,
               Nominate: m,
-            } = _n(r.eCategoryID, o),
+            } = _n(r.eCategoryID, a),
             { elDialogElement: g, BCanTakeAction: j } = gt(!1),
-            [W, T, V] = (0, Le.uD)();
+            [z, B, _] = (0, Le.uD)();
           if (!s.bNominationsLive) return null;
           if (!d) return (0, n.jsx)(ze, {});
-          const x = (0, se.NT)(vt(!0)),
+          const x = (0, ae.NT)(vt(!0)),
             f = c == e,
-            M = s.rgCategories.length == 1,
-            P = a && !r.bLaborOfLove,
-            K = (X) => {
-              if (!(!X || !j())) {
+            U = s.rgCategories.length == 1,
+            G = o && !r.bLaborOfLove,
+            W = (Y) => {
+              if (!(!Y || !j())) {
                 if (c && c != e) {
-                  T();
+                  B();
                   return;
                 }
                 m(e);
@@ -1205,10 +1205,10 @@
             subtitle: (0, n.jsxs)("div", {
               className: A().SteamAwardSubTitle,
               children: [
-                a
+                o
                   ? R.Z.Localize("#SteamAwards_EventCallToAction")
                   : R.Z.Localize("#SteamAwards_EventVotingDateTeaser", Nn()),
-                a &&
+                o &&
                   (0, n.jsxs)("a", {
                     href: x,
                     className: A().SteamAwardLearnMore,
@@ -1220,8 +1220,8 @@
                   }),
               ],
             }),
-            headerText: a
-              ? M
+            headerText: o
+              ? U
                 ? R.Z.Localize(
                     "#SteamAwards_EventNominateGamePrompt_Long",
                     l?.name ?? "",
@@ -1236,7 +1236,7 @@
                   })
               : R.Z.Localize("#SteamAwards_Event_NominationsClosed"),
             footer:
-              P &&
+              G &&
               (0, n.jsx)("a", {
                 href: x,
                 children: R.Z.Localize(
@@ -1244,7 +1244,7 @@
                 ),
               }),
             children: [
-              !!(M && (a || f)) &&
+              !!(U && (o || f)) &&
                 (0, n.jsx)("div", {
                   className: (0, S.A)(
                     A().SteamAwardNominationWidget,
@@ -1259,14 +1259,14 @@
                           A().SteamAwardNominateButton,
                           f && A().Nominated,
                         ),
-                        children: (0, n.jsx)(G.Yh, {
+                        children: (0, n.jsx)(P.Yh, {
                           controlled: !0,
                           className: (0, S.A)(
                             A().SteamAwardVoteCheckBox,
                             f && A().Nominated,
                           ),
                           checked: f,
-                          onChange: K,
+                          onChange: W,
                           disabled: f,
                           color: "#FFFFFF",
                           highlightColor: "white",
@@ -1290,13 +1290,13 @@
                 }),
               g,
               (0, n.jsx)(Re.E, {
-                active: W,
+                active: z,
                 children: (0, n.jsx)(ft, {
                   strLocTokenInfix: "Nomination",
                   unCurrentAppID: c,
                   unNewAppID: e,
                   fnOnConfirm: () => m(e),
-                  closeModal: V,
+                  closeModal: _,
                 }),
               }),
             ],
@@ -1306,15 +1306,15 @@
           const {
               unAppID: e,
               widget: s,
-              actions: o,
-              bVotesOpen: a,
+              actions: a,
+              bVotesOpen: o,
               bHideCategoryDescriptions: r,
             } = t,
             { data: l } = (0, oe.J$)({ appid: e }),
-            c = (0, se.NT)(vt(!1));
+            c = (0, ae.NT)(vt(!1));
           return (0, n.jsx)(ht, {
             strMainTitle: R.Z.Localize("#SteamAwards_EventMainTitleCombined"),
-            headerText: a
+            headerText: o
               ? R.Z.Localize(
                   "#SteamAwards_EventVoteForGamePrompt",
                   l?.name ?? "",
@@ -1332,8 +1332,8 @@
                   {
                     unAppID: e,
                     category: d,
-                    actions: o,
-                    bVotesOpen: a,
+                    actions: a,
+                    bVotesOpen: o,
                     bHideDescription: r,
                   },
                   d.eCategoryID,
@@ -1350,19 +1350,19 @@
           const {
               unAppID: e,
               category: s,
-              actions: o,
-              bVotesOpen: a,
+              actions: a,
+              bVotesOpen: o,
               bHideDescription: r,
             } = t,
-            { unVotedAppID: l, bAnswered: c, Vote: d } = Mn(s.eCategoryID, o),
+            { unVotedAppID: l, bAnswered: c, Vote: d } = Mn(s.eCategoryID, a),
             { elDialogElement: m, BCanTakeAction: g } = gt(!0),
-            [j, W, T] = (0, Le.uD)(),
-            V = l == e;
-          if (!a && !V) return null;
+            [j, z, B] = (0, Le.uD)(),
+            _ = l == e;
+          if (!o && !_) return null;
           const x = () => {
             if (!(!c || !g())) {
               if (l && l != e) {
-                W();
+                z();
                 return;
               }
               d(e);
@@ -1387,7 +1387,7 @@
                       className: A().SteamAwardCategoryDesc,
                       children: s.strDescription,
                     }),
-                  V
+                  _
                     ? (0, n.jsx)("button", {
                         className: A().SteamAwardVoteButtonSubmitted,
                         children: (0, n.jsx)("span", {
@@ -1417,33 +1417,33 @@
                   unCurrentAppID: l,
                   unNewAppID: e,
                   fnOnConfirm: () => d(e),
-                  closeModal: T,
+                  closeModal: B,
                 }),
               }),
             ],
           });
         }
         var De = i(35038),
-          Co = i(27386),
+          Ea = i(27386),
           Wn = i(98609),
           St = i(19619),
-          Do = i(97983);
-        const yo = 2640290,
-          xo = 3334340,
-          To = null,
-          Bo = 2215130;
+          Ca = i(97983);
+        const Da = 2640290,
+          ya = 3334340,
+          xa = null,
+          Ta = 2215130;
         let We;
-        function ge() {
+        function fe() {
           return (
             We ||
-              (We = (0, at.Fd)("steam_awards_config", "application_config")),
+              (We = (0, ot.Fd)("steam_awards_config", "application_config")),
             We
           );
         }
         const Kn = v.createContext(null);
         function At(t) {
-          const e = (0, Ge.KV)();
-          return (0, Pe.I)({
+          const e = (0, Pe.KV)();
+          return (0, Ge.I)({
             queryKey: [`SteamAwardDefs_${t}`],
             queryFn: async () => {
               const s = De.w.Init(J.cD);
@@ -1453,7 +1453,7 @@
                 (await J.zF.GetVoteDefinitions(e, s)).Body().toObject()
               );
             },
-            initialData: () => ge()?.definitions,
+            initialData: () => fe()?.definitions,
             enabled: t > 0,
           });
         }
@@ -1469,11 +1469,11 @@
           return useQuery({
             queryKey: [`SteamAwardNominations_${UserConfig.accountid}`],
             queryFn: () => Et(t),
-            initialData: () => ge()?.user_nominations?.nominations,
+            initialData: () => fe()?.user_nominations?.nominations,
             enabled: UserConfig.logged_in,
           });
         }
-        function Io(t) {
+        function Ba(t) {
           const e = Ct();
           return e.isLoading
             ? { bLoadingNominationForCategory: !0 }
@@ -1485,7 +1485,7 @@
         function Dt() {
           return [`SteamAwardBadgeProgress_${UserConfig.accountid}`];
         }
-        function wo(t) {
+        function Ia(t) {
           const e = useActiveServiceTransport();
           return useQuery({
             queryKey: Dt(),
@@ -1501,11 +1501,11 @@
                   .toObject()
               );
             },
-            initialData: () => ge()?.badge_progress,
+            initialData: () => fe()?.badge_progress,
             enabled: UserConfig.logged_in,
           });
         }
-        function No(t) {
+        function wa(t) {
           const e = useActiveServiceTransport();
           return useQuery({
             queryKey: [`SteamAwardSuggestions_${t}`],
@@ -1526,19 +1526,19 @@
         function Zn(t, e) {
           t.setQueryData([`SteamAwardNominations_${UserConfig.accountid}`], e);
         }
-        async function yt(t, e, s, o) {
-          const a = De.w.Init(J.wz);
-          a.Body().set_category_id(s),
-            a.Body().set_source(o),
-            a.Body().set_nominated_id(e);
-          const r = await J.AH.Nominate(t, a);
+        async function yt(t, e, s, a) {
+          const o = De.w.Init(J.wz);
+          o.Body().set_category_id(s),
+            o.Body().set_source(a),
+            o.Body().set_nominated_id(e);
+          const r = await J.AH.Nominate(t, o);
           return (
             r.BSuccess() ||
               console.warn(`Failed to nominate app: ${r.GetEResult()}`),
             [r.GetEResult(), r.Body().toObject()]
           );
         }
-        function jo(t, e, s, o, a) {
+        function Na(t, e, s, a, o) {
           const r = useActiveServiceTransport(),
             l = useQueryClient();
           return useMutation({
@@ -1550,16 +1550,16 @@
                     () => l.invalidateQueries({ queryKey: Dt() }),
                     1e3,
                   ),
-                  a && a())
-                : o && o(c);
+                  o && o())
+                : a && a(c);
             },
             onError: () => {
-              o && o();
+              a && a();
             },
           });
         }
         async function Qn(t, e, s) {
-          let o = {
+          let a = {
             cc: Config.COUNTRY,
             l: Config.LANGUAGE,
             realm: ESteamRealm.k_ESteamRealmGlobal,
@@ -1574,34 +1574,34 @@
             excluded_apps: s,
           };
           e.release_date_max &&
-            (o.release_date_max = new Date(
+            (a.release_date_max = new Date(
               e.release_date_max * 1e3,
             ).toISOString()),
             e.release_date_min &&
-              (o.release_date_min = new Date(
+              (a.release_date_min = new Date(
                 e.release_date_min * 1e3,
               ).toISOString()),
             e.flag == EVoteDefinitionFlag.k_EVoteDefinitionFlag_OnlyVR &&
-              (o.vrsupport = 1),
+              (a.vrsupport = 1),
             e.flag == EVoteDefinitionFlag.k_EVoteDefinitionFlag_SteamDeck &&
-              (o.steam_deck_compat_categories = [
+              (a.steam_deck_compat_categories = [
                 ESteamDeckCompatibilityCategory.k_ESteamDeckCompatibilityCategory_Unknown,
                 ESteamDeckCompatibilityCategory.k_ESteamDeckCompatibilityCategory_Playable,
                 ESteamDeckCompatibilityCategory.k_ESteamDeckCompatibilityCategory_Verified,
               ]);
-          const a = `${Config.STORE_BASE_URL}search/suggest`;
+          const o = `${Config.STORE_BASE_URL}search/suggest`;
           return (
-            (await axios.get(a, { params: o, withCredentials: !0 })).data ?? []
+            (await axios.get(o, { params: a, withCredentials: !0 })).data ?? []
           );
         }
-        function Lo(t, e, s) {
+        function ja(t, e, s) {
           return useQuery({
             queryKey: [t, e.voteid, s],
             queryFn: () => Qn(t, e, s),
             staleTime: 1 / 0,
           });
         }
-        function Ro() {
+        function La() {
           const t = Ct();
           return t.data ? t.data.map((e) => e.appid) : [];
         }
@@ -1610,45 +1610,45 @@
             CSteamAwards_GetNominationShareLink_Request,
           );
           s.Body().set_generate_new(e);
-          const o = await SteamAwardsService.GetNominationShareLink(t, s);
+          const a = await SteamAwardsService.GetNominationShareLink(t, s);
           return (
-            o.BSuccess() ||
+            a.BSuccess() ||
               console.warn(
-                `Failed to GetNominationShareLink: ${o.GetEResult()}`,
+                `Failed to GetNominationShareLink: ${a.GetEResult()}`,
               ),
-            [o.GetEResult(), o.Body().toObject()]
+            [a.GetEResult(), a.Body().toObject()]
           );
         }
-        function Po() {
+        function Ra() {
           const t = useActiveServiceTransport();
           return useQuery({
             queryKey: [`GetNominationShareLink_${UserConfig.accountid}`],
             queryFn: async () => xt(t, !1),
-            initialData: () => [k_EResultOK, ge()?.share_link],
+            initialData: () => [k_EResultOK, fe()?.share_link],
             staleTime: 1 / 0,
             enabled: UserConfig.logged_in,
           });
         }
-        function Go() {
+        function Ga() {
           const t = useActiveServiceTransport(),
             e = useQueryClient();
           return useMutation({
             mutationFn: () => xt(t, !0),
-            onSuccess: ([s, o]) => {
+            onSuccess: ([s, a]) => {
               s == k_EResultOK &&
                 e.setQueryData(
                   [`GetNominationShareLink_${UserConfig.accountid}`],
-                  [s, o],
+                  [s, a],
                 );
             },
           });
         }
-        async function Tt(t, e, s, o) {
-          const a = De.w.Init(J.yX);
-          a.Body().set_voteid(s),
-            a.Body().set_appid(e),
-            a.Body().set_sale_appid(o);
-          const r = await J.zF.SetVote(t, a);
+        async function Tt(t, e, s, a) {
+          const o = De.w.Init(J.yX);
+          o.Body().set_voteid(s),
+            o.Body().set_appid(e),
+            o.Body().set_sale_appid(a);
+          const r = await J.zF.SetVote(t, o);
           return (
             r.BSuccess() ||
               console.warn(
@@ -1657,14 +1657,14 @@
             [r.GetEResult(), r.Body().toObject()]
           );
         }
-        function bo(t, e, s) {
-          const o = useActiveServiceTransport(),
-            a = useQueryClient();
+        function Pa(t, e, s) {
+          const a = useActiveServiceTransport(),
+            o = useQueryClient();
           return useMutation({
-            mutationFn: () => Tt(o, t, e, s),
+            mutationFn: () => Tt(a, t, e, s),
             onSuccess: ([r, l]) => {
               r == k_EResultOK &&
-                a.setQueryData(
+                o.setQueryData(
                   [`SteamAwardUserVotes_${UserConfig.accountid}`],
                   l.user_votes,
                 );
@@ -1674,11 +1674,11 @@
         async function Bt(t, e) {
           const s = De.w.Init(J.qX);
           s.Body().set_sale_appid(e);
-          const o = await J.zF.GetUserVotes(t, s);
+          const a = await J.zF.GetUserVotes(t, s);
           return (
-            o.BSuccess() ||
-              console.warn(`Failed to get votes for user: ${o.GetEResult()}`),
-            o.Body().toObject()?.user_votes
+            a.BSuccess() ||
+              console.warn(`Failed to get votes for user: ${a.GetEResult()}`),
+            a.Body().toObject()?.user_votes
           );
         }
         function Yn(t) {
@@ -1686,14 +1686,14 @@
           return useQuery({
             queryKey: [`SteamAwardUserVotes_${UserConfig.accountid}`],
             queryFn: () => Bt(e, t),
-            initialData: () => ge()?.user_votes,
+            initialData: () => fe()?.user_votes,
             enabled: UserConfig.logged_in,
           });
         }
-        function Vo(t, e) {
+        function ba(t, e) {
           const s = Yn(t);
           return useMemo(
-            () => s.data?.find((o) => o.voteid == e)?.appid,
+            () => s.data?.find((a) => a.voteid == e)?.appid,
             [e, s.data],
           );
         }
@@ -1714,23 +1714,23 @@
               );
             },
             staleTime: 1 / 0,
-            initialData: () => ge()?.item_definitions,
+            initialData: () => fe()?.item_definitions,
           });
         }
-        function _o(t, e) {
+        function Va(t, e) {
           const s = Xn(t),
-            o = At(t);
-          if (!s.data || !o.data) return null;
-          const a = o.data.votes.find((r) => r.voteid == e);
+            a = At(t);
+          if (!s.data || !a.data) return null;
+          const o = a.data.votes.find((r) => r.voteid == e);
           return s.data.item_definitions?.find(
-            (r) => r.item_type == a.item_type,
+            (r) => r.item_type == o.item_type,
           );
         }
-        function Mo() {
+        function _a() {
           return React.useContext(Kn).yearStyles;
         }
         var It = i(28515);
-        function Uo(t) {
+        function Ma(t) {
           return UserConfig.logged_in
             ? UserConfig.is_limited
               ? (ShowModalDialog(
@@ -1757,20 +1757,20 @@
               !1);
         }
         function wt(t) {
-          const e = (0, Ge.KV)();
+          const e = (0, Pe.KV)();
           return (0, v.useMemo)(
             () => ({
               GetMySteamAwardNominations: () => Et(e),
-              NominateForSteamAward: async (s, o) => {
-                if (t) return F.R;
-                const [a] = await yt(e, s, o, J.Ji.mP);
-                return a;
+              NominateForSteamAward: async (s, a) => {
+                if (t) return K.R;
+                const [o] = await yt(e, s, a, J.Ji.mP);
+                return o;
               },
               GetMySteamAwardVotes: () => Bt(e, _e),
-              SetSteamAwardVote: async (s, o) => {
-                if (t) return F.R;
-                const [a] = await Tt(e, s, o, _e);
-                return a;
+              SetSteamAwardVote: async (s, a) => {
+                if (t) return K.R;
+                const [o] = await Tt(e, s, a, _e);
+                return o;
               },
             }),
             [e, t],
@@ -1778,25 +1778,25 @@
         }
         const Ke = [];
         function Nt(t, e, s) {
-          const o = t.some(He) || e.some(He),
-            a = At(o ? _e : void 0);
-          return o
-            ? a.data
-              ? { widgets: Gn(a.data.votes ?? [], t, e, s), bLoading: !1 }
-              : { bLoading: a.isPending }
+          const a = t.some(He) || e.some(He),
+            o = At(a ? _e : void 0);
+          return a
+            ? o.data
+              ? { widgets: Pn(o.data.votes ?? [], t, e, s), bLoading: !1 }
+              : { bLoading: o.isPending }
             : { bLoading: !1 };
         }
         function Jn(t, e) {
           return e ? { ...t, bNominationsLive: !0 } : t;
         }
         function jt(t) {
-          return !!t && h.TS.EUNIVERSE == I.wLO;
+          return !!t && h.TS.EUNIVERSE == w.wLO;
         }
         function $n(t) {
           const { event: e, previewMode: s } = t,
-            [o, a] = (0, ue.q3)(() => [e.GetSteamAwardCategory(), e.appid]),
+            [a, o] = (0, ue.q3)(() => [e.GetSteamAwardCategory(), e.appid]),
             r = (0, It.n)(),
-            { widgets: l, bLoading: c } = Nt([o], Ke, r),
+            { widgets: l, bLoading: c } = Nt([a], Ke, r),
             d = wt(jt(s));
           if (c) return (0, n.jsx)(ze, {});
           if (!l?.nomination) return null;
@@ -1804,7 +1804,7 @@
             e.BIsEventActionEnabled(r) ||
             r < e.GetStartTimeAndDateUnixSeconds();
           return (0, n.jsx)(kn, {
-            unAppID: a,
+            unAppID: o,
             actions: d,
             widget: Jn(l.nomination, !!s),
             bNominationsOpen: m,
@@ -1814,13 +1814,13 @@
           const {
               appID: e,
               voteCategories: s,
-              bIsEventActionEnabled: o,
-              previewMode: a,
+              bIsEventActionEnabled: a,
+              previewMode: o,
               bRenderFromStorePage: r,
             } = t,
             l = (0, It.n)(),
             { widgets: c, bLoading: d } = Nt(Ke, s ?? Ke, l),
-            m = wt(jt(a));
+            m = wt(jt(o));
           return d
             ? (0, n.jsx)(ze, {})
             : c?.vote
@@ -1828,12 +1828,12 @@
                   unAppID: e,
                   widget: c.vote,
                   actions: m,
-                  bVotesOpen: o || !!a,
+                  bVotesOpen: a || !!o,
                   bHideCategoryDescriptions: r,
                 })
               : null;
         }
-        function Oo(t) {
+        function Ua(t) {
           const e = GetConfigJSON(
             "steamwawards",
             "application_config",
@@ -1853,16 +1853,16 @@
         var qn = i(90316),
           Z = i.n(qn),
           Rt = i(13465),
-          Pt = i(53107),
+          Gt = i(53107),
           es = i(5552),
           ts = i(8323),
-          Y = i(54963),
+          Q = i(54963),
           ns = i(17009),
           p = i.n(ns),
           ss = i(48647),
-          os = i(88812),
-          as = i(26589),
-          Gt = i(10142),
+          as = i(88812),
+          os = i(26589),
+          Pt = i(10142),
           rs = i(47689),
           is = i(24237),
           ls = i(95414);
@@ -1870,14 +1870,14 @@
           const {
               appId: e,
               clanId: s,
-              strCapsuleUrl: o,
-              strGroupTitle: a,
+              strCapsuleUrl: a,
+              strGroupTitle: o,
               strExtraBannerGroupStyle: r,
               actions: l,
             } = t,
-            c = e !== k.DU,
+            c = e !== O.DU,
             d = v.useMemo(() => (e ? { appid: e } : { creatorid: s }), [e, s]),
-            m = (0, n.jsx)("img", { className: p().AppBannerLogo, src: o });
+            m = (0, n.jsx)("img", { className: p().AppBannerLogo, src: a });
           return (0, h.Qn)()
             ? null
             : (0, n.jsxs)("div", {
@@ -1885,7 +1885,7 @@
                 children: [
                   (0, n.jsx)("div", {
                     className: p().AppBannerBackground,
-                    style: { backgroundImage: `url(${o})` },
+                    style: { backgroundImage: `url(${a})` },
                   }),
                   (0, n.jsxs)("div", {
                     className: (0, S.A)(p().AppBannerGroup, r),
@@ -1913,7 +1913,7 @@
                       (0, n.jsxs)("div", {
                         className: p().AppBannerTitle,
                         children: [
-                          a,
+                          o,
                           (0, n.jsx)("div", {
                             className: p().NewsHubSubTitle,
                             children: (0, u.we)(
@@ -1932,19 +1932,19 @@
                 ],
               });
         }
-        function Fo(t) {
+        function Oa(t) {
           const { appid: e, clanAccountID: s } = t,
-            o = React.useMemo(() => (e ? { appid: e } : void 0), [e]),
-            { data: a } = useStoreItemDefaultInfo(o),
-            { data: r } = useStoreItemAssets(o),
+            a = React.useMemo(() => (e ? { appid: e } : void 0), [e]),
+            { data: o } = useStoreItemDefaultInfo(a),
+            { data: r } = useStoreItemAssets(a),
             { data: l } = useClanInfoByAccountID(e ? void 0 : s),
-            { bIsOwned: c } = useIsStoreItemOwned(o),
+            { bIsOwned: c } = useIsStoreItemOwned(a),
             d = e
               ? r
                 ? StoreAssetURL(r, "header")
                 : void 0
               : l?.avatar_full_url,
-            m = e ? a?.name : l?.group_name;
+            m = e ? o?.name : l?.group_name;
           return jsx(bt, {
             appId: e ?? 0,
             clanId: s,
@@ -1958,8 +1958,8 @@
                     className: styles.HeaderWishlistButton,
                     children: jsx(WishlistButton, {
                       appid: e,
-                      bIsFree: !!a?.is_free,
-                      bIsComingSoon: !!a?.is_coming_soon,
+                      bIsFree: !!o?.is_free,
+                      bIsComingSoon: !!o?.is_coming_soon,
                       className: classnames(
                         styles.ActionButton,
                         styles.WishlistBtnShort,
@@ -1985,21 +1985,21 @@
         var Vt = i(1e3),
           cs = i(64774);
         function _t(t, e) {
-          const [s, o] = (0, v.useState)({}),
-            a = (0, rs.m)("useEventHeaderData");
+          const [s, a] = (0, v.useState)({}),
+            o = (0, rs.m)("useEventHeaderData");
           return (
             (0, v.useEffect)(() => {
               if (t)
-                Gt.A.Get()
+                Pt.A.Get()
                   .QueueAppRequest(t, {
                     include_assets: !0,
                     include_screenshots: !0,
                   })
                   .then(() => {
-                    const r = Gt.A.Get().GetApp(t);
+                    const r = Pt.A.Get().GetApp(t);
                     r &&
-                      !a?.token?.reason &&
-                      o({
+                      !o?.token?.reason &&
+                      a({
                         strCapsuleUrl: r.GetAssets().GetHeaderURL(),
                         strGroupTitle: r.GetName(),
                         strStoreURL:
@@ -2014,10 +2014,10 @@
                       });
                   });
               else if (e) {
-                const r = Q.b.InitFromClanID(e);
-                pe.ac.LoadClanInfoForClanSteamID(r).then((l) => {
-                  a?.token?.reason ||
-                    o({
+                const r = q.b.InitFromClanID(e);
+                he.ac.LoadClanInfoForClanSteamID(r).then((l) => {
+                  o?.token?.reason ||
+                    a({
                       strCapsuleUrl: l.avatar_full_url,
                       strGroupTitle: l.group_name,
                       strStoreURL:
@@ -2035,14 +2035,14 @@
                     });
                 });
               }
-            }, [t, a?.token?.reason, e]),
+            }, [t, o?.token?.reason, e]),
             s
           );
         }
-        const ko = {};
+        const Fa = {};
         function ds(t) {
-          const { appId: e, clanId: s, bShowRSSFeed: o } = t,
-            { strStoreURL: a, strCommunityURL: r, strForumURL: l } = _t(e, s),
+          const { appId: e, clanId: s, bShowRSSFeed: a } = t,
+            { strStoreURL: o, strCommunityURL: r, strForumURL: l } = _t(e, s),
             c = (0, h.Y2)(),
             d =
               h.TS.STORE_BASE_URL +
@@ -2053,36 +2053,36 @@
               h.TS.COUNTRY +
               "&l=" +
               h.TS.LANGUAGE,
-            { data: m } = (0, as.hM)(s),
+            { data: m } = (0, os.hM)(s),
             g = !!(m?.can_edit || m?.support_user),
             j = St.Fm.Get().BOwnsApp(e),
-            W = (0, v.useMemo)(() => {
-              const T = [];
+            z = (0, v.useMemo)(() => {
+              const B = [];
               return (
                 h.TS.IN_CLIENT &&
                   j &&
-                  T.push({
+                  B.push({
                     label: (0, u.we)("#EventDisplay_ViewInLibrary_ExtraShort"),
                     data: "steam://nav/games/details/" + e,
                   }),
-                T.push({
+                B.push({
                   label: (0, u.we)("#EventDisplay_ViewStorePage_ExtraShort"),
-                  data: (0, se.k2)(a),
+                  data: (0, ae.k2)(o),
                 }),
                 c ||
-                  (T.push({
+                  (B.push({
                     label: (0, u.we)(
                       "#EventDisplay_ViewCommunityPage_ExtraShort",
                     ),
-                    data: (0, se.k2)(r),
+                    data: (0, ae.k2)(r),
                   }),
                   l &&
-                    T.push({
+                    B.push({
                       label: (0, u.we)("#EventDisplay_ViewForum_ExtraShort"),
-                      data: (0, se.k2)(l),
+                      data: (0, ae.k2)(l),
                     }),
-                  o &&
-                    T.push({
+                  a &&
+                    B.push({
                       label: (0, n.jsxs)("div", {
                         className: p().RssRow,
                         children: [
@@ -2093,14 +2093,14 @@
                       data: d,
                     })),
                 g &&
-                  T.push({
+                  B.push({
                     label: (0, u.we)("#EventDisplay_Admin_ExtraShort"),
-                    data: (0, Ee.Hx)(e, Q.b.InitFromClanID(s), "admin"),
+                    data: (0, Ee.Hx)(e, q.b.InitFromClanID(s), "admin"),
                   }),
-                T
+                B
               );
-            }, [j, a, c, g, r, l, o, d, e, s]);
-          return (0, n.jsx)(G.m, {
+            }, [j, o, c, g, r, l, a, d, e, s]);
+          return (0, n.jsx)(P.m, {
             strDefaultLabel: (0, u.we)(
               "#EventDisplay_LinksDropDown_ExtraShort",
             ),
@@ -2109,15 +2109,15 @@
             strDropDownMenuCtnClass: p().AppBannerLinkDDContainer,
             contextMenuPositionOptions: { bMatchWidth: !1 },
             arrowClassName: p().DDButtonArrow,
-            rgOptions: W,
-            onChange: (T, V, x) => (0, Pt.EP)(x, T.data),
+            rgOptions: z,
+            onChange: (B, _, x) => (0, Gt.EP)(x, B.data),
           });
         }
         const us = (0, ee.PA)((t) => {
           const { appId: e, clanId: s } = t,
             {
-              strCapsuleUrl: o,
-              strGroupTitle: a,
+              strCapsuleUrl: a,
+              strGroupTitle: o,
               strExtraBannerGroupStyle: r,
             } = _t(e, s),
             l = (0, v.useMemo)(
@@ -2129,8 +2129,8 @@
           return (0, n.jsx)(bt, {
             appId: e,
             clanId: s,
-            strCapsuleUrl: o,
-            strGroupTitle: a,
+            strCapsuleUrl: a,
+            strGroupTitle: o,
             strExtraBannerGroupStyle: r,
             actions: (0, n.jsxs)(n.Fragment, {
               children: [
@@ -2182,16 +2182,16 @@
         function As(t) {
           const { event: e } = t,
             s = (0, ue.q3)(() => e.jsondata?.referenced_appids || []),
-            o = (0, hs.eG)(),
-            a = (0, vs.E)({
-              queries: s.map((c) => (0, oe.us)(o, { appid: c })),
+            a = (0, hs.eG)(),
+            o = (0, vs.E)({
+              queries: s.map((c) => (0, oe.us)(a, { appid: c })),
               combine: (c) => ({
                 bLoaded: c.every((d) => !d.isPending),
                 data: c.map((d) => d.data),
               }),
             });
-          if (!s.length || !a.bLoaded) return null;
-          const r = a.data
+          if (!s.length || !o.bLoaded) return null;
+          const r = o.data
               .flatMap((c) =>
                 c?.store_url_path && c?.name
                   ? [`[url="${(0, nt._)(c)}"]${c.name}[/url]`]
@@ -2207,14 +2207,14 @@
         var Es = i(7967),
           Cs = i(16512),
           Mt = i(84676);
-        function Ho(t) {
+        function ka(t) {
           const { bOn: e } = t;
           return jsx("div", {
             className: e ? sharedstyles.OnIndicator : sharedstyles.OffIndicator,
             children: Localize(e ? "#Dialog_On" : "#Dialog_Off"),
           });
         }
-        function zo(t) {
+        function Ha(t) {
           return CommunityConfig.IS_CREATOR_HOME
             ? jsx(Ds, { identifier: t.identifier })
             : CommunityConfig.IS_CURATOR
@@ -2260,7 +2260,7 @@
             : null;
         }
         function Ze(t) {
-          const { strURL: e, strImgUrl: s, strName: o } = t;
+          const { strURL: e, strImgUrl: s, strName: a } = t;
           return jsx("div", {
             className: sharedstyles.EventDashboardAppCtn,
             children: jsx("div", {
@@ -2268,7 +2268,7 @@
               children: jsxs("a", {
                 href: e,
                 target: Config.IN_CLIENT ? void 0 : "_blank",
-                children: [jsx("img", { src: s }), o],
+                children: [jsx("img", { src: s }), a],
               }),
             }),
           });
@@ -2320,27 +2320,27 @@
             [t],
           );
         }
-        function Wo(t) {
-          const { gidClanEvent: e, rgSocial: s, bIsCreatorHomeEvent: o } = t,
-            a = js(s);
-          if (a.length == 0) return null;
-          const r = o
+        function za(t) {
+          const { gidClanEvent: e, rgSocial: s, bIsCreatorHomeEvent: a } = t,
+            o = js(s);
+          if (o.length == 0) return null;
+          const r = a
             ? Localize("#EventDisplay_Sale_SocialTitle_Dev")
             : Localize("#EventDisplay_Sale_SocialTitle");
-          return jsx(Ot, { strTitle: r, id: e, rgSocialMedia: a });
+          return jsx(Ot, { strTitle: r, id: e, rgSocialMedia: o });
         }
         function Ot(t) {
-          const { strTitle: e, id: s, rgSocialMedia: o } = t;
+          const { strTitle: e, id: s, rgSocialMedia: a } = t;
           return (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsx)("div", {
                 className: (0, S.A)(
-                  H().EventEditorTextTitle,
+                  k().EventEditorTextTitle,
                   "EventEditorTextTitle",
                 ),
                 children: e,
               }),
-              (0, n.jsx)(Rs, { id: s, rgSocialMedia: o }),
+              (0, n.jsx)(Rs, { id: s, rgSocialMedia: a }),
             ],
           });
         }
@@ -2354,33 +2354,33 @@
           C.jL.Lk,
         ];
         function Rs(t) {
-          const { id: e, rgSocialMedia: s, className: o } = t,
-            a = O.TS.EREALM === te.TU.k_ESteamRealmChina;
+          const { id: e, rgSocialMedia: s, className: a } = t,
+            o = F.TS.EREALM === te.TU.k_ESteamRealmChina;
           return (0, n.jsx)("div", {
-            className: (0, S.A)(ye().AppSocialLinks, o),
+            className: (0, S.A)(ye().AppSocialLinks, a),
             children: s
-              .filter((r) => !a || Ls.includes(r.link_type || C.jL.I0))
+              .filter((r) => !o || Ls.includes(r.link_type || C.jL.I0))
               .map((r) =>
                 r.url
                   ? (0, n.jsx)(
-                      Ps,
+                      Gs,
                       { social: r },
                       "app_social_link_" + e + "_" + r.link_type,
                     )
                   : (0, n.jsx)(
-                      Gs,
+                      Ps,
                       { social: r },
                       "app_social_text_" + e + "_" + r.link_type + "_" + r.text,
                     ),
               ),
           });
         }
-        function Ps(t) {
+        function Gs(t) {
           const { social: e } = t;
           return e.url
             ? (0, n.jsx)("a", {
-                href: (0, se.NT)(e.url, !0),
-                target: O.TS.IN_CLIENT ? void 0 : "_blank",
+                href: (0, ae.NT)(e.url, !0),
+                target: F.TS.IN_CLIENT ? void 0 : "_blank",
                 rel: "noopener noreferrer",
                 children: (0, n.jsx)(Ut.he, {
                   toolTipContent: e.url,
@@ -2389,7 +2389,7 @@
               })
             : null;
         }
-        function Gs(t) {
+        function Ps(t) {
           const { social: e } = t;
           return (0, n.jsxs)("div", {
             className: ye().AppSocialLinkWithText,
@@ -2440,34 +2440,34 @@
         };
         function Vs(t) {
           const { linkType: e, ...s } = t,
-            o = bs[e];
-          return o ? (0, n.jsx)(o, { ...s }) : null;
+            a = bs[e];
+          return a ? (0, n.jsx)(a, { ...s }) : null;
         }
         var _s = i(41032),
           Ms = i(37589),
           Us = i(20169),
           Os = Object.defineProperty,
           Fs = Object.getOwnPropertyDescriptor,
-          z = (t, e, s, o) => {
+          H = (t, e, s, a) => {
             for (
-              var a = o > 1 ? void 0 : o ? Fs(e, s) : e, r = t.length - 1, l;
+              var o = a > 1 ? void 0 : a ? Fs(e, s) : e, r = t.length - 1, l;
               r >= 0;
               r--
             )
-              (l = t[r]) && (a = (o ? l(e, s, a) : l(a)) || a);
-            return o && a && Os(e, s, a), a;
+              (l = t[r]) && (o = (a ? l(e, s, o) : l(o)) || o);
+            return a && o && Os(e, s, o), o;
           };
         const ks = 56,
           Hs = 136,
           zs = v.lazy(() => i.e(68396).then(i.bind(i, 34169)));
         function Ws(t) {
           const [e, s] = (0, Mt.t7)(t.appid, { include_assets: !0 }),
-            [o, a] = (0, pe.TB)(t.clanID);
+            [a, o] = (0, he.TB)(t.clanID);
           let r = "";
           return (
             t.appid
               ? (r = e?.GetAssets()?.GetCommunityIconURL() || "")
-              : t.clanID && (r = a ? a.avatar_full_url : ""),
+              : t.clanID && (r = o ? o.avatar_full_url : ""),
             (0, n.jsx)("div", {
               className: (0, S.A)(p().ScrollButton, p().GameArt, p().AnimIn),
               onClick: t.onAppIconClick,
@@ -2500,11 +2500,11 @@
               return -1;
             let e = this.m_refContent.current.children,
               s = this.GetScrollTopForComparison();
-            for (let o = 0; o < e.length; o++) {
-              let a = e[o],
-                r = a.offsetTop,
-                l = r + a.clientHeight;
-              if (r <= s && l > s) return o;
+            for (let a = 0; a < e.length; a++) {
+              let o = e[a],
+                r = o.offsetTop,
+                l = r + o.clientHeight;
+              if (r <= s && l > s) return a;
             }
             return -1;
           }
@@ -2557,11 +2557,11 @@
             }
             let s = this.m_refContent.current;
             if (s) {
-              let o = s.children[t],
-                a = o.offsetTop,
-                r = a + o.clientHeight,
+              let a = s.children[t],
+                o = a.offsetTop,
+                r = o + a.clientHeight,
                 l = this.GetScrollTopForComparison();
-              (l = l - (r - a) * 0.3), a <= l && (e = t);
+              (l = l - (r - o) * 0.3), o <= l && (e = t);
             }
             this.ScrollToEvent(e);
           }
@@ -2597,8 +2597,8 @@
               return null;
             let s = this.m_refScroll.current;
             if (!s || !this.m_refScrollAnchor.current) return null;
-            let o = this.m_refScrollAnchor.current.GetDOM();
-            return o ? o.offsetTop - s.scrollTop : null;
+            let a = this.m_refScrollAnchor.current.GetDOM();
+            return a ? a.offsetTop - s.scrollTop : null;
           }
           OnTouchStart(t) {
             t.touches.length == 1 &&
@@ -2614,18 +2614,18 @@
           }
           SuppressUnwantedScrollEventsBecauseSafariIsDumb(t, e) {
             const s =
-                ve.kD(t.target) && ve.id(this.m_refScroll.current, t.target),
-              o = e < 0 && this.m_refScroll.current.scrollTop < 1,
-              a =
+                ge.kD(t.target) && ge.id(this.m_refScroll.current, t.target),
+              a = e < 0 && this.m_refScroll.current.scrollTop < 1,
+              o =
                 this.m_refScroll.current.scrollHeight -
                   this.m_refScroll.current.scrollTop <=
                 this.m_refScroll.current.clientHeight,
-              r = e > 0 && a;
-            (!s || o || r) && t.cancelable && t.preventDefault();
+              r = e > 0 && o;
+            (!s || a || r) && t.cancelable && t.preventDefault();
           }
           SetGlobalHeaderHidden(t) {
             const e = document.getElementsByClassName("responsive_header");
-            (0, ot.wT)(
+            (0, at.wT)(
               e.length <= 1,
               "Must have at most one responsive_header",
             ),
@@ -2637,7 +2637,7 @@
           }
           componentDidMount() {
             const t = this.m_refScroll.current;
-            t && !ve.id(t, t.ownerDocument.activeElement) && t.focus();
+            t && !ge.id(t, t.ownerDocument.activeElement) && t.focus();
             const e = this.m_refPage.current;
             e &&
               (e.addEventListener("touchstart", this.OnTouchStart),
@@ -2650,12 +2650,12 @@
           }
           componentDidUpdate(t, e, s) {
             if (s !== null) {
-              let o = this.m_refScroll.current;
-              o && !ve.id(o, o.ownerDocument.activeElement) && o.focus();
-              let a = this.m_refScrollAnchor.current
+              let a = this.m_refScroll.current;
+              a && !ge.id(a, a.ownerDocument.activeElement) && a.focus();
+              let o = this.m_refScrollAnchor.current
                 ? this.m_refScrollAnchor.current.GetDOM()
                 : null;
-              a && (o.scrollTop = a.offsetTop - s);
+              o && (a.scrollTop = o.offsetTop - s);
             }
           }
           componentWillUnmount() {
@@ -2670,14 +2670,14 @@
           render() {
             const { initialEvent: t, bShowOnlyInitialEvent: e } = this.props,
               s = !t,
-              o = s ? [] : e ? [t] : this.m_loader.GetEvents(),
-              a = [];
+              a = s ? [] : e ? [t] : this.m_loader.GetEvents(),
+              o = [];
             let r = this.props.appid,
               l = this.props.clanSteamID?.GetAccountID();
-            for (const c of o) {
+            for (const c of a) {
               const d = c.GID == this.props.initialEvent.GID,
                 m = d;
-              a.push(
+              o.push(
                 (0, n.jsx)(
                   Ht,
                   {
@@ -2699,7 +2699,7 @@
                 l == null && (l = c.clanSteamID.GetAccountID());
             }
             return (
-              (this.m_nCurrentRenderCount = a.length),
+              (this.m_nCurrentRenderCount = o.length),
               (0, n.jsxs)(D.Z, {
                 onCancelButton: this.props.closeModal,
                 className: p().AppPartnerEventsPage,
@@ -2791,7 +2791,7 @@
                                 p().AppPartnerEventsContainer,
                                 !this.props.onAppIconClick && p().NoGameLink,
                               ),
-                              children: a,
+                              children: o,
                             }),
                             !e &&
                               (0, n.jsx)(kt, {
@@ -2806,17 +2806,17 @@
             );
           }
         };
-        z([Y.oI], $.prototype, "ScrollToNextEvent", 1),
-          z([Y.oI], $.prototype, "ScrollToPrevEvent", 1),
-          z([Y.oI], $.prototype, "OnScrollComplete", 1),
-          z([Y.oI], $.prototype, "Close", 1),
-          z([Y.oI], $.prototype, "OnBackgroundClick", 1),
-          z([Y.oI], $.prototype, "OnKeyDown", 1),
-          z([Y.oI], $.prototype, "OnScroll", 1),
-          z([Y.oI], $.prototype, "OnTouchStart", 1),
-          z([Y.oI], $.prototype, "OnTouchMove", 1),
-          z([Y.oI], $.prototype, "OnWheel", 1),
-          ($ = z([ee.PA], $));
+        H([Q.oI], $.prototype, "ScrollToNextEvent", 1),
+          H([Q.oI], $.prototype, "ScrollToPrevEvent", 1),
+          H([Q.oI], $.prototype, "OnScrollComplete", 1),
+          H([Q.oI], $.prototype, "Close", 1),
+          H([Q.oI], $.prototype, "OnBackgroundClick", 1),
+          H([Q.oI], $.prototype, "OnKeyDown", 1),
+          H([Q.oI], $.prototype, "OnScroll", 1),
+          H([Q.oI], $.prototype, "OnTouchStart", 1),
+          H([Q.oI], $.prototype, "OnTouchMove", 1),
+          H([Q.oI], $.prototype, "OnWheel", 1),
+          ($ = H([ee.PA], $));
         const kt = (0, ee.PA)((t) => {
             let e = t.loader.GetNewerState(),
               s = t.loader.GetOlderState();
@@ -2833,16 +2833,16 @@
                 : null;
           }),
           Ht = v.forwardRef(function (e, s) {
-            const o = (0, h.Qn)(),
-              [a, r] = (0, Mt.t7)(e.event.appid, { include_assets: !0 }),
+            const a = (0, h.Qn)(),
+              [o, r] = (0, Mt.t7)(e.event.appid, { include_assets: !0 }),
               l = (0, _s.Zj)(e.event.appid),
               c = (0, ss.Y)();
             return (0, n.jsx)(xe, {
               ref: s,
               ...e,
-              bInGamepadUI: o,
+              bInGamepadUI: a,
               bShouldMaskImages: l,
-              storeItem: a,
+              storeItem: o,
               tracker: c,
             });
           });
@@ -2854,7 +2854,7 @@
             if (this.m_bSentRead || this.m_sendReadInfo.IsScheduled()) return;
             const t = 750,
               e = () => {
-                this.props.tracker.RecordEventRead(this.props.event, ne.Tc.ot),
+                this.props.tracker.RecordEventRead(this.props.event, se.Tc.ot),
                   (this.m_bSentRead = !0);
               };
             this.m_sendReadInfo.Schedule(t, e);
@@ -2870,38 +2870,38 @@
                 event: t,
                 langOverride: e,
                 partnerEventStore: s,
-                emoticonStore: o,
-                className: a,
+                emoticonStore: a,
+                className: o,
                 additionalTypeAndDateElement: r,
                 headerClassnames: l,
                 isPreview: c,
                 bShouldMaskImages: d,
                 storeItem: m,
               } = this.props,
-              g = e || (0, I.sfN)(h.TS.LANGUAGE),
+              g = e || (0, w.sfN)(h.TS.LANGUAGE),
               j = t.GetDescriptionWithFallback(g) || "",
-              W = l,
-              T = "300px",
-              V = t.GetCategoryAsString(),
+              z = l,
+              B = "300px",
+              _ = t.GetCategoryAsString(),
               x = t.type;
             let f = "";
             if (t.appid) f = m?.GetName() || "";
             else if (t.clanSteamID) {
-              const K = pe.ac.GetClanInfoByClanAccountID(
+              const W = he.ac.GetClanInfoByClanAccountID(
                 t.clanSteamID.GetAccountID(),
               );
-              f = K ? K.group_name : "";
+              f = W ? W.group_name : "";
             }
-            const M = Xt.HD.GetTimeNowWithOverride(),
-              P = x !== I.uYK && M < t.GetStartTimeAndDateUnixSeconds() && !c;
+            const U = Xt.HD.GetTimeNowWithOverride(),
+              G = x !== w.uYK && U < t.GetStartTimeAndDateUnixSeconds() && !c;
             return (0, n.jsx)(Ts, {
               children: (0, n.jsxs)("div", {
                 ref: this.m_refContent,
                 className: (0, S.A)(
-                  a,
+                  o,
                   p().PartnerEvent,
                   Z().InLibraryView,
-                  W == "editor" ? Z().InEditor : "",
+                  z == "editor" ? Z().InEditor : "",
                 ),
                 children: [
                   (0, n.jsx)(Ks, { ...this.props, eLanguage: g }),
@@ -2914,7 +2914,7 @@
                         (0, n.jsxs)("div", {
                           className: (0, S.A)(
                             p().EventTypeAndTimeRow,
-                            P && p().WithReminder,
+                            G && p().WithReminder,
                           ),
                           children: [
                             (0, n.jsxs)("div", {
@@ -2922,7 +2922,7 @@
                               children: [
                                 (0, n.jsx)("span", {
                                   className: p().EventType,
-                                  children: V,
+                                  children: _,
                                 }),
                                 (0, n.jsxs)("span", {
                                   className: p().PostedBy,
@@ -2939,7 +2939,7 @@
                                 }),
                               ],
                             }),
-                            P &&
+                            G &&
                               !c &&
                               (0, n.jsx)("div", {
                                 className: p().ReminderContainer,
@@ -2957,7 +2957,7 @@
                           (0, n.jsx)(Ms.Y, {
                             onEnter: this.OnEnterVisible,
                             onLeave: this.OnLeaveVisible,
-                            options: { rootMargin: `0px 0px -${T} 0px` },
+                            options: { rootMargin: `0px 0px -${B} 0px` },
                           }),
                         this.props.bInGamepadUI
                           ? (0, n.jsx)("div", {
@@ -3015,15 +3015,15 @@
                         onContextMenu: h.TS.IN_CLIENT ? Jt.aE : void 0,
                         children: [
                           (0, n.jsx)(Tn.fh, { text: j, event: t }),
-                          (0, n.jsx)("span", { className: H().Clear }),
+                          (0, n.jsx)("span", { className: k().Clear }),
                         ],
                       }),
                       (0, n.jsx)(As, { event: this.props.event }),
                       !!t.jsondata.read_more_link &&
                         (0, n.jsx)("div", {
                           className: (0, S.A)(p().ReadMoreCnt),
-                          children: (0, n.jsx)(Pt.uU, {
-                            className: (0, S.A)(H().Button),
+                          children: (0, n.jsx)(Gt.uU, {
+                            className: (0, S.A)(k().Button),
                             href: t.jsondata.read_more_link,
                             children: (0, u.we)(
                               "#EventEmail_Button_ClickForMoreDetails",
@@ -3038,8 +3038,8 @@
                           children: [
                             (0, n.jsx)(Bs.m, { gidEvent: t.GID }),
                             (0, n.jsx)("a", {
-                              className: (0, S.A)(H().Button, "LinkButton"),
-                              href: (0, se.k2)((0, Cs.n4)(t)),
+                              className: (0, S.A)(k().Button, "LinkButton"),
+                              href: (0, ae.k2)((0, Cs.n4)(t)),
                               children: (0, u.we)(
                                 "#Event_Button_VisitSalePage",
                               ),
@@ -3049,31 +3049,31 @@
                       (0, n.jsx)(ws, { appid: t.appid }),
                     ],
                   }),
-                  !c && (0, n.jsx)(xn, { eventModel: t, emoticonStore: o }),
+                  !c && (0, n.jsx)(xn, { eventModel: t, emoticonStore: a }),
                 ],
               }),
             });
           }
         };
-        z([Y.oI], xe.prototype, "OnEnterVisible", 1),
-          z([Y.oI], xe.prototype, "OnLeaveVisible", 1),
-          (xe = z([ee.PA], xe));
+        H([Q.oI], xe.prototype, "OnEnterVisible", 1),
+          H([Q.oI], xe.prototype, "OnLeaveVisible", 1),
+          (xe = H([ee.PA], xe));
         function Ks(t) {
           const {
               event: e,
               fnFilterImageURLsForKnownFailures: s,
-              fnImageFailureCallback: o,
-              eLanguage: a,
+              fnImageFailureCallback: a,
+              eLanguage: o,
               bShouldMaskImages: r,
             } = t,
-            l = e.BImageNeedScreenshotFallback("background", a),
+            l = e.BImageNeedScreenshotFallback("background", o),
             c = e.type;
-          let d = (0, os.WC)(e, "background", a, we.wI.background_main, !l);
+          let d = (0, as.WC)(e, "background", o, we.wI.background_main, !l);
           return (
             s && d && (d = s(d)),
             (0, n.jsxs)(n.Fragment, {
               children: [
-                c != I.Fwr &&
+                c != w.Fwr &&
                   !l &&
                   (0, n.jsx)(Rt.c, {
                     className: (0, S.A)(
@@ -3081,14 +3081,14 @@
                       r && Z().MaskImages,
                     ),
                     rgSources: d,
-                    onIncrementalError: (m, g, j) => o && o(g),
+                    onIncrementalError: (m, g, j) => a && a(g),
                   }),
                 d &&
                   d.length > 0 &&
                   (0, n.jsx)(Rt.c, {
                     className: Z().EventBackgroundBlur,
                     rgSources: d,
-                    onIncrementalError: (m, g, j) => o && o(g),
+                    onIncrementalError: (m, g, j) => a && a(g),
                   }),
               ],
             })
@@ -3110,7 +3110,7 @@
           m_eOlderDirection = 1;
           m_eNewerDirection = 1;
           constructor(e) {
-            (0, b.Gn)(this), (this.m_partnerEventStore = e);
+            (0, V.Gn)(this), (this.m_partnerEventStore = e);
           }
           GetEvents() {
             return this.m_rgEvents;
@@ -3125,7 +3125,7 @@
             return this.m_eNewerDirection;
           }
           async InitAroundEvent(e, s) {
-            const o = this.m_partnerEventStore;
+            const a = this.m_partnerEventStore;
             (this.m_nAppID = e.appid),
               (this.m_clanSteamID = e.clanSteamID),
               (this.m_rgEvents = []),
@@ -3133,9 +3133,9 @@
               (this.m_eNewerDirection = 2),
               (this.m_additionalParams = s),
               this.m_rgEvents.push(e);
-            let a = null;
+            let o = null;
             try {
-              a = await o.LoadAdjacentPartnerEventsByEvent(
+              o = await a.LoadAdjacentPartnerEventsByEvent(
                 e,
                 this.m_clanSteamID,
                 this.m_nAppID,
@@ -3144,17 +3144,17 @@
                 this.m_additionalParams,
               );
             } catch {}
-            (0, b.h5)(() => {
-              if (!a || a.length == 0) {
+            (0, V.h5)(() => {
+              if (!o || o.length == 0) {
                 (this.m_eOlderDirection = 3), (this.m_eNewerDirection = 3);
                 return;
               }
-              let r = a.findIndex((d) => d.GID == e.GID),
+              let r = o.findIndex((d) => d.GID == e.GID),
                 l = r,
-                c = r >= 0 ? a.length - r - 1 : 0;
+                c = r >= 0 ? o.length - r - 1 : 0;
               (this.m_eNewerDirection = l >= this.k_nMaxPerDirection ? 1 : 3),
                 (this.m_eOlderDirection = c >= this.k_nMaxPerDirection ? 1 : 3),
-                (this.m_rgEvents = a);
+                (this.m_rgEvents = o);
             });
           }
           async LoadMoreAtEnd() {
@@ -3174,14 +3174,14 @@
                   this.m_additionalParams,
                 );
             } catch {}
-            (0, b.h5)(() => {
+            (0, V.h5)(() => {
               if (!s) {
                 this.m_eOlderDirection = 1;
                 return;
               }
-              const o = new Set(this.m_rgEvents.map((a) => a.GID));
-              for (let a of s)
-                o.has(a.GID) || (this.m_rgEvents.push(a), o.add(a.GID));
+              const a = new Set(this.m_rgEvents.map((o) => o.GID));
+              for (let o of s)
+                a.has(o.GID) || (this.m_rgEvents.push(o), a.add(o.GID));
               this.m_eOlderDirection =
                 s.length >= this.k_nMaxPerDirection ? 1 : 3;
             });
@@ -3202,47 +3202,47 @@
                   0,
                 );
             } catch {}
-            (0, b.h5)(() => {
+            (0, V.h5)(() => {
               if (!s) {
                 this.m_eNewerDirection = 1;
                 return;
               }
-              const o = new Set(this.m_rgEvents.map((a) => a.GID));
-              for (let a of s.reverse())
-                o.has(a.GID) || (this.m_rgEvents.unshift(a), o.add(a.GID));
+              const a = new Set(this.m_rgEvents.map((o) => o.GID));
+              for (let o of s.reverse())
+                a.has(o.GID) || (this.m_rgEvents.unshift(o), a.add(o.GID));
               this.m_eNewerDirection =
                 s.length >= this.k_nMaxPerDirection ? 1 : 3;
             });
           }
         }
-        z([b.sH.shallow], Me.prototype, "m_rgEvents", 2),
-          z([b.sH], Me.prototype, "m_eOlderDirection", 2),
-          z([b.sH], Me.prototype, "m_eNewerDirection", 2);
+        H([V.sH.shallow], Me.prototype, "m_rgEvents", 2),
+          H([V.sH], Me.prototype, "m_eOlderDirection", 2),
+          H([V.sH], Me.prototype, "m_eNewerDirection", 2);
         var Qs = i(19332),
           Ys = Object.defineProperty,
           Xs = Object.getOwnPropertyDescriptor,
-          Qe = (t, e, s, o) => {
+          Qe = (t, e, s, a) => {
             for (
-              var a = o > 1 ? void 0 : o ? Xs(e, s) : e, r = t.length - 1, l;
+              var o = a > 1 ? void 0 : a ? Xs(e, s) : e, r = t.length - 1, l;
               r >= 0;
               r--
             )
-              (l = t[r]) && (a = (o ? l(e, s, a) : l(a)) || a);
-            return o && a && Ys(e, s, a), a;
+              (l = t[r]) && (o = (a ? l(e, s, o) : l(o)) || o);
+            return a && o && Ys(e, s, o), o;
           };
         function Js(t) {
           const { event: e, closeModal: s } = t,
-            o = useEmoticonStore();
+            a = useEmoticonStore();
           return jsx(AppPartnerEventsPage, {
             initialEvent: e,
             bShowOnlyInitialEvent: !0,
             partnerEventStore: g_PartnerEventStore,
-            emoticonStore: o,
+            emoticonStore: a,
             showAppHeader: !0,
             closeModal: s,
           });
         }
-        function Ko(t, e) {
+        function Wa(t, e) {
           ShowModalDialog(jsx(Js, { event: t }), e);
         }
         let Te = class extends v.Component {
@@ -3269,14 +3269,14 @@
               ref: this.m_refFocus,
               className: Qs.Main,
               onClick: this.OnBackgroundClick,
-              children: (0, n.jsx)(ce.sU, {
-                children: (o) =>
+              children: (0, n.jsx)(pe.sU, {
+                children: (a) =>
                   (0, n.jsx)(
                     Ht,
                     {
                       event: t,
-                      emoticonStore: o,
-                      partnerEventStore: w.Get(),
+                      emoticonStore: a,
+                      partnerEventStore: T.Get(),
                       langOverride: e,
                       isPreview: s,
                       bDisableBroadcastPlayer: !1,
@@ -3287,62 +3287,62 @@
             });
           }
         };
-        Qe([Y.oI], Te.prototype, "escFunction", 1),
-          Qe([Y.oI], Te.prototype, "OnBackgroundClick", 1),
+        Qe([Q.oI], Te.prototype, "escFunction", 1),
+          Qe([Q.oI], Te.prototype, "OnBackgroundClick", 1),
           (Te = Qe([ee.PA], Te));
         var zt = i(24806),
           $s = i(26251),
           qs = i(41635),
-          eo = i(20398),
+          ea = i(20398),
           y = i(58962);
         function Ue(t, e, s) {
-          const o = t && t.length > s ? [...t] : (0, qs.$Y)(t || [], s + 1, "");
-          return (o[s] = e), o;
+          const a = t && t.length > s ? [...t] : (0, qs.$Y)(t || [], s + 1, "");
+          return (a[s] = e), a;
         }
-        function ae(t, e) {
+        function re(t, e) {
           return (t && t.length > e && t[e]) || "";
         }
         function Wt(t, e) {
-          let o = !1,
-            a = !1;
-          for (let r = I.Bhc; r < I.bP9; r++) {
-            const l = ae(t, r).trim(),
-              c = ae(e, r).trim();
+          let a = !1,
+            o = !1;
+          for (let r = w.Bhc; r < w.bP9; r++) {
+            const l = re(t, r).trim(),
+              c = re(e, r).trim();
             if (!l && !c) continue;
-            const d = (0, u.we)("#Language_" + (0, I.LgB)(r));
-            if (((o = !0), !l))
+            const d = (0, u.we)("#Language_" + (0, w.LgB)(r));
+            if (((a = !0), !l))
               return (0, u.we)("#BuildNotes_Error_MissingTitle", d);
             if (!c) return (0, u.we)("#BuildNotes_Error_MissingDescription", d);
-            if (l.length > k.dm)
+            if (l.length > O.dm)
               return (0, u.we)("#BuildNotes_Error_TitleTooLong", d);
             if (c.length > 32768)
               return (0, u.we)("#BuildNotes_Error_DescriptionTooLong", d);
-            r === I.Bhc && (a = !0);
+            r === w.Bhc && (o = !0);
           }
-          return o
-            ? a
+          return a
+            ? o
               ? null
               : (0, u.we)("#BuildNotes_Error_NoEnglishProvided")
             : (0, u.we)("#BuildNotes_Error_NoLanguagesProvided");
         }
-        async function to(t, e, s) {
+        async function ta(t, e, s) {
           if (Wt(e, s)) return null;
-          const o = null;
-          if (o) return o;
-          const a = !!ae(e, I.ZLm).trim(),
+          const a = null;
+          if (a) return a;
+          const o = !!re(e, w.ZLm).trim(),
             r = new FormData();
           r.append("sessionid", (0, h.KC)()),
             r.append("appid", "" + t),
-            r.append("post_steam_china", "" + a),
+            r.append("post_steam_china", "" + o),
             r.append("titles", JSON.stringify(e)),
             r.append("descriptions", JSON.stringify(s)),
-            r.append("build_id", "" + re.Get().GetPostedBuildVersion()),
-            r.append("build_branch", re.Get().GetBuildBranch());
+            r.append("build_id", "" + ie.Get().GetPostedBuildVersion()),
+            r.append("build_branch", ie.Get().GetBuildBranch());
           const l =
             h.TS.PARTNER_BASE_URL + "partnerevents/ajaxpublishpatchnotes";
           try {
-            const c = await q().post(l, r, { withCredentials: !0 });
-            if (c?.data?.success == F.R) return c.data;
+            const c = await X().post(l, r, { withCredentials: !0 });
+            if (c?.data?.success == K.R) return c.data;
             console.error(
               "buildpatchnotes: OnSubmitCreateEvent error code  " +
                 c?.data?.success +
@@ -3358,19 +3358,19 @@
           }
           return null;
         }
-        function no(t, e) {
-          let s = new k.lh();
+        function na(t, e) {
+          let s = new O.lh();
           (s.GID = "PreviewPartnerEventRow_0"),
-            (s.clanSteamID = new Q.b(h.iA.steamid)),
+            (s.clanSteamID = new q.b(h.iA.steamid)),
             (s.postTime = Date.now() / 1e3),
             (s.startTime = Date.now() / 1e3),
             (s.createTime = Date.now() / 1e3),
-            (s.type = I.Fwr);
-          for (let o = I.Bhc; o < I.bP9; o++)
-            s.name.set(o, ae(t, o)), s.description.set(o, ae(e, o));
+            (s.type = w.Fwr);
+          for (let a = w.Bhc; a < w.bP9; a++)
+            s.name.set(a, re(t, a)), s.description.set(a, re(e, a));
           return s;
         }
-        function so() {
+        function sa() {
           const t = new URLSearchParams(window.location.search);
           t.delete("submittedbuild"), t.delete("buildbranch");
           const e = t.toString(),
@@ -3381,7 +3381,7 @@
               window.location.hash;
           window.history.replaceState({}, "", s);
         }
-        class re {
+        class ie {
           m_nBuildVersion;
           m_bSteamChina;
           m_strBuildBranch;
@@ -3389,7 +3389,7 @@
           static Get() {
             return (
               this.s_Singleton ||
-                ((this.s_Singleton = new re()), this.s_Singleton.Init()),
+                ((this.s_Singleton = new ie()), this.s_Singleton.Init()),
               this.s_Singleton
             );
           }
@@ -3417,41 +3417,41 @@
             return this.m_strBuildBranch;
           }
         }
-        function oo(t) {
-          const [e, s] = v.useState(I.Bhc),
-            [o, a] = v.useState(null),
+        function aa(t) {
+          const [e, s] = v.useState(w.Bhc),
+            [a, o] = v.useState(null),
             [r, l] = v.useState(null),
             [c, d] = v.useState(null),
             [m, g] = v.useState("editing"),
-            [j, W] = v.useState(null);
-          if (!re.Get().BShouldShowPatchNotesEditor()) return null;
-          const T = (_) => s(_),
-            V = () => d(no(o, r)),
-            x = (_) => !!(ae(o, _) || ae(r, _)),
+            [j, z] = v.useState(null);
+          if (!ie.Get().BShouldShowPatchNotesEditor()) return null;
+          const B = (M) => s(M),
+            _ = () => d(na(a, r)),
+            x = (M) => !!(re(a, M) || re(r, M)),
             f = () => d(null),
-            M = async () => {
+            U = async () => {
               d(null), g("submitting");
-              const _ = await to(t.appId, o, r);
-              _ ? (W(_.clan_event_gid), so(), g("submitted")) : g("failed");
+              const M = await ta(t.appId, a, r);
+              M ? (z(M.clan_event_gid), sa(), g("submitted")) : g("failed");
             },
-            P = (_, Be) => {
+            G = (M, Be) => {
               const Kt = new Array();
-              let Ye = o,
+              let Ye = a,
                 Xe = r;
               for (const Ie of Be) {
-                const Je = _.GetLocalization("Title", Ie) || "",
-                  $e = _.GetLocalization("Description", Ie) || "";
+                const Je = M.GetLocalization("Title", Ie) || "",
+                  $e = M.GetLocalization("Description", Ie) || "";
                 (Je || $e) && Kt.push(Ie),
                   Je && (Ye = Ue(Ye, Je, Ie)),
                   $e && (Xe = Ue(Xe, $e, Ie));
               }
-              return a(Ye), l(Xe), Kt;
+              return o(Ye), l(Xe), Kt;
             },
-            K = re.Get().BCanSubmitSteamChinaPatchNotes()
+            W = ie.Get().BCanSubmitSteamChinaPatchNotes()
               ? [te.TU.k_ESteamRealmChina, te.TU.k_ESteamRealmGlobal]
               : [te.TU.k_ESteamRealmGlobal],
-            X = Wt(o, r),
-            ie =
+            Y = Wt(a, r),
+            le =
               h.TS.COMMUNITY_BASE_URL +
               "ogg/" +
               t.appId +
@@ -3465,8 +3465,8 @@
                     className: y.BuildTitle,
                     children: (0, u.we)(
                       "#BuildNotes_Title",
-                      re.Get().GetPostedBuildVersion(),
-                      re.Get().GetBuildBranch() || "default",
+                      ie.Get().GetPostedBuildVersion(),
+                      ie.Get().GetBuildBranch() || "default",
                     ),
                   }),
                   (0, n.jsxs)("div", {
@@ -3488,57 +3488,57 @@
                             children: (0, u.PP)("#BuildNotes_Desc2"),
                           }),
                           (0, n.jsx)("a", {
-                            href: ie,
-                            children: (0, n.jsx)(G.$n, {
+                            href: le,
+                            children: (0, n.jsx)(P.$n, {
                               children: (0, u.we)("#BuildNotes_OpenFullEditor"),
                             }),
                           }),
                         ],
                       }),
                       m === "editing" &&
-                        (0, n.jsx)(ao, {
-                          sError: X,
+                        (0, n.jsx)(oa, {
+                          sError: Y,
                           eLanguage: e,
-                          realms: K,
+                          realms: W,
                           fnHasLanguage: x,
-                          fnSetLanguage: T,
-                          fnGetTitle: (_) => ae(o, _),
-                          fnSetTitle: (_, Be) => a(Ue(o, Be, _)),
-                          fnGetDescription: (_) => ae(r, _),
-                          fnSetDescription: (_, Be) => l(Ue(r, Be, _)),
-                          fnOnPreviewEvent: V,
-                          fnApplyLoc: P,
+                          fnSetLanguage: B,
+                          fnGetTitle: (M) => re(a, M),
+                          fnSetTitle: (M, Be) => o(Ue(a, Be, M)),
+                          fnGetDescription: (M) => re(r, M),
+                          fnSetDescription: (M, Be) => l(Ue(r, Be, M)),
+                          fnOnPreviewEvent: _,
+                          fnApplyLoc: G,
                         }),
-                      m === "submitting" && (0, n.jsx)(io, {}),
+                      m === "submitting" && (0, n.jsx)(ia, {}),
                       m === "failed" &&
-                        (0, n.jsx)(lo, {
+                        (0, n.jsx)(la, {
                           fnOnReturnToEditor: () => g("editing"),
                         }),
                       m === "submitted" &&
-                        (0, n.jsx)(co, { appId: t.appId, eventGid: j }),
+                        (0, n.jsx)(ca, { appId: t.appId, eventGid: j }),
                     ],
                   }),
                 ],
               }),
               !!(c && m === "editing") &&
-                (0, n.jsx)(ro, {
+                (0, n.jsx)(ra, {
                   event: c,
                   eLanguage: e,
-                  realms: K,
+                  realms: W,
                   fnOnClose: f,
-                  fnOnSubmitEvent: M,
+                  fnOnSubmitEvent: U,
                   fnHasLanguage: x,
-                  fnSetLanguage: T,
+                  fnSetLanguage: B,
                 }),
             ],
           });
         }
-        const ao = (t) => {
+        const oa = (t) => {
             const {
                 sError: e,
                 eLanguage: s,
-                realms: o,
-                fnHasLanguage: a,
+                realms: a,
+                fnHasLanguage: o,
                 fnSetLanguage: r,
                 fnGetTitle: l,
                 fnSetTitle: c,
@@ -3547,23 +3547,23 @@
                 fnOnPreviewEvent: g,
                 fnApplyLoc: j,
               } = t,
-              W = (0, ce.LJ)();
-            let T = "";
-            if (o.includes(te.TU.k_ESteamRealmChina)) {
-              const x = l(I.ZLm).trim() !== "";
-              T = (0, u.we)(
+              z = (0, pe.LJ)();
+            let B = "";
+            if (a.includes(te.TU.k_ESteamRealmChina)) {
+              const x = l(w.ZLm).trim() !== "";
+              B = (0, u.we)(
                 x
                   ? "#BuildNotes_SteamChina_Provided"
                   : "#BuildNotes_SteamChina_NotProvided",
               );
             }
-            const V = () => {
-              const x = new eo.G(),
+            const _ = () => {
+              const x = new ea.G(),
                 f = (0, u.we)("#BuildNotes_SampleTitle"),
-                M = (0, u.we)("#BuildNotes_SampleDescription");
-              for (let P = I.Bhc; P < I.bP9; P++)
-                x.SetLocalization("Title", P, f),
-                  x.SetLocalization("Description", P, M);
+                U = (0, u.we)("#BuildNotes_SampleDescription");
+              for (let G = w.Bhc; G < w.bP9; G++)
+                x.SetLocalization("Title", G, f),
+                  x.SetLocalization("Description", G, U);
               (0, Ae.pg)(
                 (0, n.jsx)($s.zZ, {
                   sampleLocData: x,
@@ -3586,36 +3586,36 @@
                     (0, n.jsxs)("div", {
                       className: y.LangPicker,
                       children: [
-                        (0, n.jsx)(G.$n, {
-                          onClick: V,
+                        (0, n.jsx)(P.$n, {
+                          onClick: _,
                           children: (0, u.we)("#BuildNotes_ImportLocalization"),
                         }),
                         (0, n.jsx)(zt.Ng, {
                           selectedLang: s,
                           fnOnLanguageChanged: r,
-                          fnLangHasData: a,
-                          realms: o,
+                          fnLangHasData: o,
+                          realms: a,
                         }),
                       ],
                     }),
                   ],
                 }),
-                (0, n.jsx)(G.pd, {
+                (0, n.jsx)(P.pd, {
                   value: l(s),
                   placeholder: (0, u.we)("#BuildNotes_TitlePlaceholder"),
                   onChange: (x) => c(s, x.currentTarget.value),
-                  maxLength: k.dm,
+                  maxLength: O.dm,
                 }),
                 (0, n.jsx)("div", {
                   className: y.EditTitle,
                   children: (0, u.we)("#BuildNotes_PatchnotesDesc"),
                 }),
-                (0, n.jsx)(Se.I, {
+                (0, n.jsx)(ne.I, {
                   fnGetCurText: () => d(s),
                   fnOnTextChange: (x) => m(s, x.currentTarget.value),
                   fnSetText: (x) => m(s, x),
                   strPlaceholder: (0, u.we)("#BuildNotes_DescPlaceholder"),
-                  emoticonStore: W,
+                  emoticonStore: z,
                   bSupportHTMLImport: !0,
                   showFormatHelp: "PartnerEvents",
                   classNameForTextArea: y.BBCodeEditor,
@@ -3624,28 +3624,28 @@
                   className: y.SubmitButtonCtn,
                   children: [
                     !e &&
-                      (0, n.jsx)(G.jn, {
+                      (0, n.jsx)(P.jn, {
                         onClick: g,
                         children: (0, u.we)("#BuildNotes_Preview"),
                       }),
                     !!e &&
                       (0, n.jsx)("div", { className: y.ErrorMsg, children: e }),
-                    !!(!e && T) &&
+                    !!(!e && B) &&
                       (0, n.jsx)("div", {
                         className: y.SteamChinaMsg,
-                        children: T,
+                        children: B,
                       }),
                   ],
                 }),
               ],
             });
           },
-          ro = (t) => {
+          ra = (t) => {
             const {
               event: e,
               eLanguage: s,
-              realms: o,
-              fnOnClose: a,
+              realms: a,
+              fnOnClose: o,
               fnOnSubmitEvent: r,
               fnHasLanguage: l,
               fnSetLanguage: c,
@@ -3659,16 +3659,16 @@
                       selectedLang: s,
                       fnOnLanguageChanged: c,
                       fnFilterLanguage: l,
-                      realms: o,
+                      realms: a,
                     }),
                     (0, n.jsxs)("div", {
                       className: y.SubmitButtonCtn,
                       children: [
-                        (0, n.jsx)(G.$n, {
-                          onClick: a,
+                        (0, n.jsx)(P.$n, {
+                          onClick: o,
                           children: (0, u.we)("#BuildNotes_Close"),
                         }),
-                        (0, n.jsx)(G.jn, {
+                        (0, n.jsx)(P.jn, {
                           onClick: r,
                           children: (0, u.we)("#BuildNotes_PostNotes"),
                         }),
@@ -3679,7 +3679,7 @@
                 (0, n.jsx)("div", {
                   children: (0, n.jsx)(Te, {
                     event: e,
-                    fnClose: a,
+                    fnClose: o,
                     langOverride: s,
                     isPreview: !0,
                   }),
@@ -3687,7 +3687,7 @@
               ],
             });
           },
-          io = (t) =>
+          ia = (t) =>
             (0, n.jsxs)("div", {
               className: (0, S.A)(y.RightPanel, y.SubmitPanel),
               children: [
@@ -3698,7 +3698,7 @@
                 }),
               ],
             }),
-          lo = (t) =>
+          la = (t) =>
             (0, n.jsxs)("div", {
               className: (0, S.A)(y.RightPanel, y.FailedPanel),
               children: [
@@ -3708,16 +3708,16 @@
                 }),
                 (0, n.jsx)("div", {
                   className: y.FailedButton,
-                  children: (0, n.jsx)(G.$n, {
+                  children: (0, n.jsx)(P.$n, {
                     onClick: t.fnOnReturnToEditor,
                     children: (0, u.we)("#BuildNotes_ReturnToEditor"),
                   }),
                 }),
               ],
             }),
-          co = (t) => {
+          ca = (t) => {
             const { appId: e, eventGid: s } = t,
-              o = `${h.TS.STORE_BASE_URL}news/app/${e}/view/${s}`;
+              a = `${h.TS.STORE_BASE_URL}news/app/${e}/view/${s}`;
             return (0, n.jsxs)("div", {
               className: (0, S.A)(y.RightPanel, y.SuccessPanel),
               children: [
@@ -3726,9 +3726,9 @@
                   children: (0, u.we)("#BuildNotes_Success"),
                 }),
                 (0, n.jsx)("a", {
-                  href: o,
+                  href: a,
                   className: y.ViewEventButton,
-                  children: (0, n.jsx)(G.$n, {
+                  children: (0, n.jsx)(P.$n, {
                     children: (0, u.we)("#BuildNotes_ViewPublished"),
                   }),
                 }),
@@ -3736,17 +3736,17 @@
             });
           };
       },
-      24981: (L, le, i) => {
+      24981: (L, ce, i) => {
         "use strict";
-        i.r(le), i.d(le, { SaleRoutes: () => U, default: () => w });
+        i.r(ce), i.d(ce, { SaleRoutes: () => b, default: () => T });
         var n = i(7850),
-          fe = i(90783),
-          q = i(58732),
+          Se = i(90783),
+          X = i(58732),
           v = i(17083),
-          I = i(92757),
-          F = i(26485),
+          w = i(92757),
+          K = i(26485),
           te = i(3166);
-        class k {
+        class O {
           static s_PageStore;
           m_mapSalePage = new Map();
           m_rgUnmigratedSalesPage = new Array();
@@ -3761,9 +3761,9 @@
           }
           static Get() {
             return (
-              k.s_PageStore ||
-                ((k.s_PageStore = new k()), k.s_PageStore.Init()),
-              k.s_PageStore
+              O.s_PageStore ||
+                ((O.s_PageStore = new O()), O.s_PageStore.Init()),
+              O.s_PageStore
             );
           }
           Init() {
@@ -3785,175 +3785,176 @@
               : !1;
           }
         }
-        var Q = i(18057),
-          ce = i(85599),
-          Se = i(76149);
-        function G(b) {
+        var q = i(18057),
+          pe = i(85599),
+          ne = i(76149);
+        function P(V) {
           return (0, n.jsxs)("div", {
             children: [
               (0, n.jsx)("h2", { children: "Unmigrated Sales Pages" }),
               (0, n.jsx)("hr", {}),
-              k
-                .Get()
+              O.Get()
                 .GetUnmigratedSalesPages()
                 .map((N) => (0, n.jsx)(de, { pageid: N.pageid }, N.pageid)),
             ],
           });
         }
-        function de(b) {
-          let N = k.Get().GetPageByID(b.pageid);
+        function de(V) {
+          let N = O.Get().GetPageByID(V.pageid);
           return (0, n.jsxs)("div", {
             children: [
               (0, n.jsx)("div", { children: N.pageid }),
               (0, n.jsx)(v.N_, {
-                to: U.SaleMigrationPageDebug(N.pageid),
+                to: b.SaleMigrationPageDebug(N.pageid),
                 children: "Debug Data",
               }),
             ],
           });
         }
-        function ee(b) {
-          const { pageid: N } = b,
-            D = k.Get().GetPageByID(N),
-            ne = (0, Se.gS)(D.accountid);
-          return ne
+        function ee(V) {
+          const { pageid: N } = V,
+            D = O.Get().GetPageByID(N),
+            se = (0, ne.gS)(D.accountid);
+          return se
             ? (0, n.jsxs)("div", {
                 children: [
                   (0, n.jsx)(v.N_, {
-                    to: U.SaleMigrationTool(),
+                    to: b.SaleMigrationTool(),
                     children: "< Return to Migration Toolset",
                   }),
-                  (0, n.jsxs)("h2", { children: ["Debug: ", b.pageid] }),
+                  (0, n.jsxs)("h2", { children: ["Debug: ", V.pageid] }),
                   (0, n.jsx)("hr", {}),
                   (0, n.jsxs)("div", { children: ["Name: ", D.display_name] }),
                   (0, n.jsxs)("div", {
-                    children: ["Creator: ", D.accountid, " - ", ne.persona],
+                    children: ["Creator: ", D.accountid, " - ", se.persona],
                   }),
                   (0, n.jsxs)("div", {
                     children: [
                       "Last Modified: ",
                       D.last_modified,
                       D.last_modified != 0 &&
-                        (0, n.jsx)(Q.K4, {
+                        (0, n.jsx)(q.K4, {
                           dateAndTime: D.last_modified,
                           bSingleLine: !0,
                         }),
                     ],
                   }),
                   (0, n.jsx)("h1", { children: "Sale Page Body Raw" }),
-                  (0, n.jsx)(F.G, { data: D }),
+                  (0, n.jsx)(K.G, { data: D }),
                 ],
               })
-            : (0, n.jsx)(ce.t, { string: "Loading User Info" });
+            : (0, n.jsx)(pe.t, { string: "Loading User Info" });
         }
         var h = i(20634);
-        const U = {
+        const b = {
           SaleDashboardView: () => "/(dashboard)?/",
           SaleMigrationTool: () => "/migration/",
-          SaleMigrationPageDebug: (b) => `/migration/debug/${b}/`,
+          SaleMigrationPageDebug: (V) => `/migration/debug/${V}/`,
         };
-        function w(b) {
+        function T(V) {
           return (0, n.jsx)(v.Kd, {
-            basename: (0, q.C)() + "sales/",
-            children: (0, n.jsxs)(I.dO, {
+            basename: (0, X.C)() + "sales/",
+            children: (0, n.jsxs)(w.dO, {
               children: [
-                (0, n.jsx)(I.qh, {
+                (0, n.jsx)(w.qh, {
                   exact: !0,
-                  path: q.B.DiagData(),
+                  path: X.B.DiagData(),
                   render: (N) =>
-                    (0, n.jsx)(F.z, {
+                    (0, n.jsx)(K.z, {
                       ...N,
                       strConfigID: "application_config",
                     }),
                 }),
-                (0, n.jsx)(I.qh, {
+                (0, n.jsx)(w.qh, {
                   exact: !0,
-                  path: U.SaleDashboardView(),
+                  path: b.SaleDashboardView(),
                   component: h.h,
                 }),
-                (0, n.jsx)(I.qh, {
+                (0, n.jsx)(w.qh, {
                   exact: !0,
-                  path: U.SaleMigrationTool(),
-                  component: G,
+                  path: b.SaleMigrationTool(),
+                  component: P,
                 }),
-                (0, n.jsx)(I.qh, {
+                (0, n.jsx)(w.qh, {
                   exact: !0,
-                  path: U.SaleMigrationPageDebug(":pageid"),
+                  path: b.SaleMigrationPageDebug(":pageid"),
                   render: (N) =>
                     (0, n.jsx)(ee, { pageid: N.match.params.pageid }),
                 }),
-                (0, n.jsx)(I.qh, { component: fe.a }),
+                (0, n.jsx)(w.qh, { component: Se.a }),
               ],
             }),
           });
         }
       },
-      79590: (L, le, i) => {
+      79590: (L, ce, i) => {
         "use strict";
-        i.d(le, { m: () => ee });
+        i.d(ce, { m: () => ee });
         var n = i(7850),
-          fe = i(99412),
-          q = i(90626),
-          v = i(48421),
-          I = i(36707),
-          F = i(18210),
-          te = i(53113),
-          k = i(72609),
-          Q = i(20193),
-          ce = i(29630),
-          Se = i(16512);
-        function G(h) {
-          const { gidEvent: U } = h,
-            w = usePartnerEventByEventGID(U);
-          return w
+          Se = i(99412),
+          X = i(29630),
+          v = i(72609),
+          w = i(90626),
+          K = i(48421),
+          te = i(16512),
+          O = i(36707),
+          q = i(18210),
+          pe = i(53113),
+          ne = i(20193);
+        function P(h) {
+          const { gidEvent: b } = h,
+            T = usePartnerEventByEventGID(b);
+          return T
             ? jsx(de, {
-                event: w,
+                event: T,
                 lang: PchLanguageToELanguage(Config.LANGUAGE),
-                href: NavLink(GetEventSaleURL(w) ?? ""),
+                href: NavLink(GetEventSaleURL(T) ?? ""),
               })
             : null;
         }
         function de(h) {
-          const { event: U, lang: w, href: b } = h,
-            [N, D] = (0, q.useMemo)(() => {
-              const ne = U.jsondata.localized_sale_product_banner,
-                we = U.jsondata.localized_sale_product_mobile_banner;
-              if (ne?.length && we?.length) {
-                const ue = F.NT.GetWithFallback(ne, w),
-                  Ne = F.NT.GetWithFallback(we, w);
+          const { event: b, lang: T, href: V } = h,
+            [N, D] = (0, w.useMemo)(() => {
+              const se = b.jsondata.localized_sale_product_banner,
+                we = b.jsondata.localized_sale_product_mobile_banner;
+              if (se?.length && we?.length) {
+                const ue = q.NT.GetWithFallback(se, T),
+                  Ne = q.NT.GetWithFallback(we, T);
                 if (ue?.length && Ne?.length)
                   return [
-                    ce.zU.GenerateURLFromHashAndExt(U.clanSteamID, ue),
-                    ce.zU.GenerateURLFromHashAndExt(U.clanSteamID, Ne),
+                    X.zU.GenerateURLFromHashAndExt(b.clanSteamID, ue),
+                    X.zU.GenerateURLFromHashAndExt(b.clanSteamID, Ne),
                   ];
               }
               return [void 0, void 0];
-            }, [U, w]);
+            }, [b, T]);
           return !N?.length || !D?.length
             ? null
             : (0, n.jsxs)("a", {
-                href: b,
-                className: Q.Link,
+                href: V,
+                className: ne.Link,
                 children: [
                   (0, n.jsx)("img", {
                     src: N,
-                    className: (0, I.A)(Q.Banner, Q.Big),
+                    className: (0, O.A)(ne.Banner, ne.Big),
+                    alt: b.GetNameWithFallback(T),
                   }),
                   (0, n.jsx)("img", {
                     src: D,
-                    className: (0, I.A)(Q.Banner, Q.Mobile),
+                    className: (0, O.A)(ne.Banner, ne.Mobile),
+                    alt: b.GetNameWithFallback(T),
                   }),
                 ],
               });
         }
         function ee(h) {
-          const { gidEvent: U } = h,
-            w = (0, v.RR)(U);
-          return w
+          const { gidEvent: b } = h,
+            T = (0, K.RR)(b);
+          return T
             ? (0, n.jsx)(de, {
-                event: w,
-                lang: (0, fe.sfN)(k.TS.LANGUAGE),
-                href: (0, te.k2)((0, Se.n4)(w) ?? ""),
+                event: T,
+                lang: (0, Se.sfN)(v.TS.LANGUAGE),
+                href: (0, pe.k2)((0, te.n4)(T) ?? ""),
               })
             : null;
         }

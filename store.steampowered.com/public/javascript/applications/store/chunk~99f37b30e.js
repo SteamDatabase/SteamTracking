@@ -5213,7 +5213,11 @@
               "PromotionPlanning.GetPlanByAssociationID#1",
               (0, z.I8)(Y, d, f),
               J,
-              { bConstMethod: !0, ePrivilege: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           B.GetPlanByAssociationID = Ir;
@@ -5464,17 +5468,15 @@
             "promotion_operation_token",
             "application_config",
           );
-          return (
-            (0, Ee.wT)(
-              B,
-              "GetPromotionWriteAccess: promotion operation token is missing",
-            ),
-            B
-              ? (0, Ie.p)(
-                  new ve.D(qe.TS.WEBAPI_BASE_URL, B),
-                ).GetServiceTransport()
-              : null
-          );
+          return B
+            ? (0, Ie.p)(
+                new ve.D(qe.TS.WEBAPI_BASE_URL, B),
+              ).GetServiceTransport()
+            : ((0, Ee.wT)(
+                !1,
+                "GetPromotionWriteAccess: promotion operation token is missing",
+              ),
+              null);
         }
         function pe(B, r) {
           const [t] = (0, Yr.useState)(() => Ae());

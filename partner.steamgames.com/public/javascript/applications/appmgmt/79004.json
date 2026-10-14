@@ -61,7 +61,6 @@
     "Reservation_Waitlist_NotSignedIn_Desc": "登录 Steam 以加入候补名单。选择“确定”以进入登录页面。",
     "Reservation_OnRegularReserveForModel": "您已在 %1$s 的预订队列中",
     "Reservation_PostShuffle_TAndC": "适用<1>条款和条件</1>。",
-    "machine_dummy": "dummy",
     "PriceDisplay_YourPrice": "您的价格：",
     "PriceGrid_NormalPrice": "正常价格",
     "PriceGrid_RecentPrice": "30 天最低价格",

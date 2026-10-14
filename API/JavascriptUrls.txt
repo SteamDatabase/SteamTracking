@@ -926,13 +926,6 @@ ${IMG_URL}valve_logo.png
 ${IMG_URL}webui/storeadmin/plus.png
 ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
-${IMG_URL}yearinreview/achievement_grid_02.webp
-${IMG_URL}yearinreview/bg_2023.svg
-${IMG_URL}yearinreview/controllers.png?v=2
-${IMG_URL}yearinreview/keyboard.png?v=3
-${IMG_URL}yearinreview/screenshot_placeholder.png
-${IMG_URL}yearinreview/streak_bg.jpg
-${IMG_URL}yearinreview/vr_background6.webp
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
 ${LOGIN_BASE_URL}jwt/ajaxrefresh
 ${LOGIN_BASE_URL}jwt/checkdevice/${m_steamid}
@@ -978,6 +971,7 @@ ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneop
 ${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}${}/ajaxstarttaxidentityworkflow/${partnerid}
+${PARTNER_BASE_URL}${}?${}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
 ${PARTNER_BASE_URL}/appsearch/suggestapps?json=1&apptype=1&term=${}
 ${PARTNER_BASE_URL}/dashboard/?requestedPrimaryPublisher=${}
@@ -1165,6 +1159,7 @@ ${PARTNER_BASE_URL}newpartner
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
 ${PARTNER_BASE_URL}optin/admin/analysis/${}
+${PARTNER_BASE_URL}optin/admin/backfilloptindemopageviews
 ${PARTNER_BASE_URL}optin/admin/demo_analysis/${}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}?tab=manage
@@ -1403,6 +1398,7 @@ ${STORE_BASE_URL}/events/ajaxgetdynamiceventmetadata
 ${STORE_BASE_URL}/events_admin/ajaxhidefromsteamchina
 ${STORE_BASE_URL}about
 ${STORE_BASE_URL}about/
+${STORE_BASE_URL}about/communitymods/
 ${STORE_BASE_URL}account
 ${STORE_BASE_URL}account/
 ${STORE_BASE_URL}account/ajaxgetcontrollersused
@@ -1719,6 +1715,7 @@ ${STORE_BASE_URL}search/?${}
 ${STORE_BASE_URL}search/?${}=${}
 ${STORE_BASE_URL}search/?controllersupport=${strCategory}
 ${STORE_BASE_URL}search/?controllersupport=${strCategory}%2C${strSecondaryCategory}
+${STORE_BASE_URL}search/?term=${}
 ${STORE_BASE_URL}search/results/?${}
 ${STORE_BASE_URL}search/suggest
 ${STORE_BASE_URL}sitemap
@@ -1788,6 +1785,7 @@ ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? `animated` : `still`}/${}.png
 ${STORE_CDN_URL}public/images/mobile/localizedimages/appleappstore/apple_store_${LANGUAGE}.png
 ${STORE_CDN_URL}public/images/mobile/localizedimages/googleplaystore/google_play_store_${LANGUAGE}.png
+${STORE_CDN_URL}public/images/yearinreview/${}
 ${STORE_CDN_URL}public/shared/images/footer/WeChat-QR.png?v=2
 ${STORE_CDN_URL}public/shared/images/footer/Weibo-QR.png?v=2
 ${STORE_CDN_URL}public/shared/images/footer/wechat_logo.svg?v=1
@@ -1809,6 +1807,7 @@ ${STORE_ITEM_BASE_URL}steam/spotlights/${}/${}${}
 ${STORE_URL}app/${DOTA_APP_ID}/Dota_2/
 ${STORE_URL}app/570/Dota_2/
 ${STORE_URL}app/730/CounterStrike_2/
+${SUPPORT_BASE_URL}${}
 ${SUPPORT_BASE_URL}account/overview/${}
 ${SUPPORT_BASE_URL}wizard/HelpWithPublishing?issueid=915
 ${URL}${URL}
@@ -2204,7 +2203,6 @@ http://
 http://${strURL}
 http://${}
 http://dashif.org/guidelines/thumbnail_tile
-http://dashif.org/guidelines/thumbnail_tile${}
 http://help.steampowered.com/
 http://json-schema.org/draft-04/schema#
 http://json-schema.org/draft-07/schema#
@@ -2253,7 +2251,6 @@ http://www.w3.org/1999/xhtml
 http://www.w3.org/1999/xlink
 http://www.w3.org/2000/svg
 http://www.w3.org/2000/svg${namespaceURI}
-http://www.w3.org/2000/xmlns/
 http://www.w3.org/XML/1998/namespace
 https://
 https://${strURL}/index.html
@@ -2761,7 +2758,6 @@ https://player.youku.com/embed/%s
 https://policies.google.com/privacy
 https://rd.playstation.com/controller/fwupdater/
 https://react.dev/errors/${}
-https://reactflow.dev
 https://s.team/deck
 https://s.team/frame
 https://s.team/join
@@ -3155,6 +3151,7 @@ https://store.steampowered.com/video/watch/${nAppID}
 https://store.steampowered.com/widget/${nAppId}/
 https://store.steampowered.com/widget/${nAppId}/${nSubId}/
 https://store.steampowered.com/wintercomic/
+https://support.apple.com/en-us/HT211814
 https://support.google.com/youtube/answer/72431
 https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223
 https://twitch.tv/

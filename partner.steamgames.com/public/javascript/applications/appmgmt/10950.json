@@ -61,7 +61,6 @@
     "Reservation_Waitlist_NotSignedIn_Desc": "เข้าสู่ระบบ Steam เพื่อเข้าร่วมรายชื่อผู้รอ การกดปุ่ม \"ตกลง\" จะนำไปยังหน้าลงชื่อเข้าใช้",
     "Reservation_OnRegularReserveForModel": "คุณอยู่ในคิวการสั่งจองสำหรับ %1$s",
     "Reservation_PostShuffle_TAndC": "<1>ข้อกำหนดและเงื่อนไข</1>มีผลบังคับใช้",
-    "machine_dummy": "dummy",
     "PriceDisplay_YourPrice": "ราคาของคุณ: ",
     "PriceGrid_NormalPrice": "ปกติ",
     "PriceGrid_RecentPrice": "ต่ำสุดใน 30 วัน",

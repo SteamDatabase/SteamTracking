@@ -20,8 +20,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
           m_steamInterface;
@@ -37,14 +35,7 @@
             );
           }
           Init() {
-            const _ = (0, _._)(
-              "partnerbrowse_webapi_token",
-              "application_config",
-            );
-            (0, _._)(!!_, "require partnerbrowse_webapi_token"),
-              (this.m_steamInterface = (0, _._)(
-                new _._(_._.WEBAPI_BASE_URL, _),
-              ));
+            this.m_steamInterface = (0, _._)(new _._(_._.WEBAPI_BASE_URL));
           }
         }
         function _() {
@@ -21111,6 +21102,7 @@
               rgCommonRedistWindows: _,
               rgCheckedDepots: _,
               nDetectedGameEngine: _,
+              bNoCommonRedistsNeeded: _,
             } = _,
             _ = (0, _.useMemo)(() => new Map(_), [_]),
             _ = (0, _.useMemo)(() => new Map(_), [_]),
@@ -21133,24 +21125,51 @@
               );
             }, [_]),
             [_, _] = (0, _.useState)(_(_, _, _)),
+            [_, _] = (0, _.useState)(_),
             _ = (_, _) => {
-              const _ = new Map(_);
-              _.set(_, _), _(_), _(_(_, _, _));
-              const _ = {};
+              const _ = {
+                noneneeded: _ ? 1 : 0,
+              };
               _.forEach((_, _) => {
                 _[_] = _ ? 1 : 0;
               }),
                 window.UpdateCommonRedistsReact(_);
             },
+            _ = (_, _) => {
+              const _ = new Map(_);
+              _.set(_, _), _(_), _(_(_, _, _)), _(_, _);
+            },
+            _ = (_) => {
+              _(_), _(_, _);
+            },
             _ = _.size > 0,
-            _ = _ == _;
+            _ = _ == _,
+            _ = Array.from(_.values()).some((_) => _);
           return (0, _.jsxs)("div", {
             children: [
+              !_ &&
+                (0, _.jsxs)("div", {
+                  className: _.NoRedistsNeeded,
+                  children: [
+                    (0, _.jsx)("input", {
+                      _: "noredistsneeded",
+                      type: "checkbox",
+                      checked: _,
+                      disabled: _ && !_,
+                      onChange: (_) => _(_.currentTarget.checked),
+                    }),
+                    (0, _.jsx)("label", {
+                      htmlFor: "noredistsneeded",
+                      children: (0, _._)("#StoreAdmin_Redist_NoneNeeded"),
+                    }),
+                  ],
+                }),
               _ &&
                 (0, _.jsx)(_, {
                   name: (0, _._)("#StoreAdmin_Platform_AllPlatforms"),
                   categories: _,
                   checkedState: _,
+                  disabled: _,
                   setChecked: _,
                 }),
               _ &&
@@ -21161,6 +21180,7 @@
                 name: (0, _._)("#StoreAdmin_Platform_Windows"),
                 categories: _,
                 checkedState: _,
+                disabled: _,
                 setChecked: _,
               }),
             ],
@@ -21193,7 +21213,13 @@
           });
         }
         function _(_) {
-          const { name: _, categories: _, checkedState: _, setChecked: _ } = _,
+          const {
+              name: _,
+              categories: _,
+              checkedState: _,
+              disabled: _,
+              setChecked: _,
+            } = _,
             _ = (0, _.useMemo)(() => {
               let _ = [];
               return (
@@ -21205,6 +21231,7 @@
                         name: _,
                         category: _,
                         checkedState: _,
+                        disabled: _,
                         setChecked: _,
                       },
                       _.category,
@@ -21213,7 +21240,7 @@
                 ),
                 _
               );
-            }, [_, _, _]);
+            }, [_, _, _, _]);
           return (0, _.jsxs)("div", {
             className: "section",
             children: [
@@ -21228,7 +21255,13 @@
           });
         }
         function _(_) {
-          const { name: _, category: _, checkedState: _, setChecked: _ } = _,
+          const {
+              name: _,
+              category: _,
+              checkedState: _,
+              disabled: _,
+              setChecked: _,
+            } = _,
             _ = Object.entries(_.components).map(([_, _]) =>
               (0, _.jsx)(
                 "li",
@@ -21237,6 +21270,7 @@
                     name: _,
                     depotID: _,
                     checked: _.get(_),
+                    disabled: _,
                     setChecked: _,
                   }),
                 },
@@ -21255,8 +21289,14 @@
           });
         }
         function _(_) {
-          const { name: _, depotID: _, checked: _, setChecked: _ } = _,
-            _ = (_ == 228987 || _ == 228986) && !_;
+          const {
+              name: _,
+              depotID: _,
+              checked: _,
+              disabled: _,
+              setChecked: _,
+            } = _,
+            _ = _ || ((_ == 228987 || _ == 228986) && !_);
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)("input", {
@@ -22398,6 +22438,7 @@
           DXVCNoticeText: "_3ONSEhSufFHQjBTa-qt0m4",
           DXVCNoticeTextChecked: "QmKToaPU7N03P2p9VRlqH",
           DXVCNoticeTextUnchecked: "_12HPIcBaY3YHgYnARVwc8M",
+          NoRedistsNeeded: "_2YvTzgG5wvReJHcD_bH7NR",
         };
       },
       chunkid: (module, module_exports, __webpack_require__) => {

@@ -298,20 +298,6 @@ a.dropdown.hover, a.dropdown:hover
 	width: 100%;
 }
 
-.beta_optin_toolbar {
-	display: flex;
-	gap: 8px;
-	max-width: 948px;
-    box-sizing: border-box;
-	background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-    padding: 12px;
-	margin-top: 6px;
-    margin-bottom: 12px;
-	text-align: start;
-}
-.beta_optin_toolbar > div:nth-child(2) {
-	flex: 1;
-}
 
 @media screen and (max-width: 910px)
 {

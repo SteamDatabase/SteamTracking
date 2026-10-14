@@ -1,535 +1,617 @@
-(self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [75976],
-  {
-    chunkid: (module) => {
-      module.exports = {
-        new_games_color: "#3cdf6a",
-        used_games_color: "#4df",
-        old_games_color: "#e496ff",
-        pie_windows: "#28aee1",
-        pie_linux: "#cd4141",
-        pie_deck: "#9c85d1",
-        pie_mac: "#939a9d",
-        pie_vr: "#55af30",
-        topApp_0: "#00a299",
-        topApp_1: "#017baa",
-        topApp_2: "#044fbb",
-        topApp_3: "#2325b9",
-        topApp_4: "#4a17a6",
-        topApp_5: "#881abf",
-        topApp_6: "#bf1a72",
-        topApp_7: "#cb5545",
-        monthOthersColor: "#7d98aa",
-        chartAccentColor: "#fff",
-        chartAccentColorAlt: "#1a9ffe",
-        ImagesCtn: "wLcoYWskcX-WdwM80FcWd",
-        SingleGame: "_31M-TwCA-eNzIjYjjbbRss",
-        ImageTint: "_1SZVVaG7UJhS9qlgdNBRB4",
-        Section: "_1tFD84W1yIF5XblONw48Er",
-        StreakSizeFullBar: "_2d2eXqEWJ0VqhjC3XNt955",
-        LongestStreakBgImage: "AEfs48npNOs7PsklaKQxL",
-        Tab: "_2ucSwGfZ2AsP91rIgpYzVq",
-        UserName: "_2abMWA9UNwMI6BYz8ageN",
-        ConclusionName: "_2LIZW41r4i3LCn9wYtJZFm",
-        GridItem: "_2VCOc-AY0D8dBOVhuBWjes",
-        AchievementBlock: "_3w6ckg8P8IMl8YXkmAoE-c",
-        StreakBlock: "Y5ho7ytc4Q0MFUzxAxUJE",
-        HardwareBlock: "_1ljEln7y5NmyV8-686A5tu",
-        DeviceBlock: "_20l6G_fpxCmwTlLTRBXvNh",
-        SummaryCtnShadow: "_2icFjx8wVXZL8n19vN1Pnt",
-        BackgroundImage: "_2_TD0l8kMc5PQlyTiIPFpU",
-        SummaryCtn: "_2m_pbZrGAbk7TRHDOwZJt9",
-        TimeRelatedCtn: "_1F5_QWHvb6XSU5S7oaSGpQ",
-        TopHonorsSection: "_1tc8tBjsTsJLvWaE-jrRC3",
-        MissingUserCtn: "_1tHOJGiDRW6DoHLKzI1c9G",
-        GenericBackground: "_1OocYvosa7WJeTFjtryhW2",
-        LogInCtn: "mU6TQvR7SGZ2x10Cl4uNN",
-        FriendCtn: "_10UIoD-XRojfRickf62ZTS",
-        TopGameBlockContainer: "_3cqzPE9ojgybX_YLM2LciT",
-        OddGradient: "_2MFzmPCaRDOMvCIKivbWEh",
-        EvenGradient: "_2DtTVV8bRP1azZaUDiFVHW",
-        TopMostGame: "TEmY-_rEET_mY-UvuQx7e",
-        FirstPlayCtn: "-cK9wrdjQGd-QRMbnBIR1",
-        GamePlayDetails: "_161UjXtlOv_RVKerItXecq",
-        PlatformChartsCtn: "_2gfncxf5WyN1lFA6C6mrMk",
-        IconAchievement: "_1ccyh3rmp7r54UTu4Kfu4P",
-        IconGamesPlayed: "_3qZMf_DUVgSslwkWJnAeAk",
-        IconStreak: "_3gW-bII_VXHVppmHWGQg66",
-        PlayBehaviorContainer: "_1SL9gkjIROp0eotN8Hr5Xk",
-        ProgressBarFilled: "_2lEhYA8vvTg168yH1rNQs0",
-        ProgressBarFilledGradient: "j_CK0NQKm75mWc5VPFMFc",
-        GameNewnessTitle: "_31cdzkQ4ZCu6E177tUexf4",
-        NewActive: "_2WOXA55SDgHgLI62aMu8QW",
-        DataBoxArrow: "_2j2hP_Ctg-1k6NFO-11Iev",
-        Background: "_1DEzdqjCUNYNmGO-4qZGJy",
-        UserData: "_3Lp_9mbe-5YFIirm_VUkgZ",
-        DataBox: "_2GDYoxSn-5bhfOnWwcQDfJ",
-        SteamData: "r2PuX38K6EeRxmQ88xzBf",
-        Border: "a5nHY6wCEy6XcQYM0SaS4",
-        PercentageLabel: "_3PPdnAvnF44YMICe8afQqk",
-        Color: "_10WCyc8Z0F62B8xlJTeioi",
-        PercentageDescriptionLabel: "_1BwKK43gcwo28Ai0IFXKhN",
-        UsedActive: "YETzIgKqRLjMFrtO-4mzm",
-        OldActive: "_3kJYFk_mL53rI9sBydEf4t",
-        AllGamesBGImage: "_3BT7r54MhJESU8AzMNlenV",
-        SeeRewindButton: "_12Vol7iOpxdPj9khHmvu-C",
-        MMFrame: "_2k7W3c6eHM1FF2eZzLHPko",
-        MMOverride: "_1-C7jjlJ_bFish0JBtAmO1",
-        Header: "qbl9w824tA4Rg_swy8lrh",
-        YearSubtitle: "o_tcGc2hbfz8yU4SmEmrX",
-        ReplayLogo: "_1AtgqYTkJSLJqOrCpWHra4",
-        ReplayLogoAccent: "_3eOhRpPKC2bUY7DggD6axj",
-        Hashtag: "_1HA1gn9Frk0gNww6J0fIQ",
-        Avatar: "_2z6vRQoDkvMy4-in2CDkGO",
-        DataBlock: "_1DMPjn9qVSsHxmOTOzqZ4v",
-        PersonaName: "_27aW3ZXUhoCo-hrB7BsBTN",
-        ReplayHighlight: "OoOok9dpo33D-vJaPWu2v",
-        ViewPageButton: "_36_yhgb9daer8pzM_3ol8M",
-        Description: "_2SJb0XwqKIo-DdjDrq4r2w",
-        OtherYearLink: "_3itf8y5EOGxutexNfOa8cQ",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        new_games_color: "#d67070",
-        used_games_color: "#683db4",
-        old_games_color: "#3898b0",
-        pie_windows: "#d67070",
-        pie_linux: "#683db4",
-        pie_deck: "#3898b0",
-        pie_mac: "#46ab46",
-        pie_vr: "#c7b84e",
-        topApp_0: "#d67070",
-        topApp_1: "#70d670",
-        topApp_2: "#683db4",
-        topApp_3: "#3898b0",
-        topApp_4: "#ab4646",
-        topApp_5: "#46ab46",
-        topApp_6: "#3d138a",
-        topApp_7: "#0e6e86",
-        monthOthersColor: "#7d98aa",
-        chartAccentColor: "#fff",
-        chartAccentColorAlt: "#1a9ffe",
-        ImagesCtn: "_2w-zjJjkoeDIb-C5GhTSof",
-        scaleBackground: "dO6cB-SqYkTl5OqLtW-JC",
-        SingleGame: "_10YwGIpb0ZJNaXfpGnHBt2",
-        ImageTint: "_2GknM_LlgKxbbtN-pcTf9t",
-        Section: "_1z6_Os-ntMNV2SB2jWuAKS",
-        StreakSizeFullBar: "_1YndkBDAjs6QdfA7WbPqJo",
-        LongestStreakBgImage: "_3rUSvxNxSynWWZDLv1Gj5f",
-        Tab: "_19KvzLtRQ9-Q5m1uXJOkR2",
-        UserName: "EJneUpw0eEOyIkpmR8rKb",
-        ConclusionName: "_2qriz4haXnDJcXhSonp6ws",
-        GridItem: "_2u4ymScF_4dMRGuXqN6YWl",
-        AchievementBlock: "SK6THAegoaWx7n2L1OMSR",
-        StreakBlock: "_1HWMUM4EvU8lG3lW8Wdnz3",
-        HardwareBlock: "_3u55AOzBK4Gw3F9Whr2g9F",
-        DeviceBlock: "_30NltD8972gdutFNYCw8gE",
-        SummaryCtnShadow: "_2pWvuCdj5il0MXggZMwLLV",
-        BackgroundImage: "KH2X2qTp8hdZp_fnGTvk_",
-        SummaryCtn: "_3B7MSTJad91FqdpvbYmYpM",
-        TimeRelatedCtn: "_1NReDjhB8y4CeL8J79cwG6",
-        TopHonorsSection: "_3_b2Ul0vfz1cfIQUGnvkgT",
-        FriendCtn: "_3vzUIbLPK4TC7FoOsbgo6x",
-        TopGameBlockContainer: "_3F7PUMGMU4V8RNuW8b9NID",
-        OddGradient: "w_LxbT-xjHVJAG3DwLvO-",
-        EvenGradient: "_94te0EvHMP3bmVjDN-sRr",
-        TopMostGame: "_1rn7C8gOo19reFJ4HWbHZO",
-        GamePlayDetails: "_2qarmb9HfWH9bNm4v9FONX",
-        PlatformChartsCtn: "_3cVLkHS6spdqo8eqv4d6_D",
-        gradient: "_3zLeBofiHQsX1ipOKpWIi-",
-        IconAchievement: "_3meexnu5EixWXQbNR2Xa1b",
-        IconGamesPlayed: "_1_Cfxc9HkVks-YETW9ZKPc",
-        IconStreak: "_3A0kFiNA546pYIag3hOb8N",
-        PlayBehaviorContainer: "_9YqCa_ldtOJ_KRu7KJoIt",
-        ProgressBarFilled: "_3wtv1zTckeY6KOlu1lKPc2",
-        ProgressBarFilledGradient: "_1bVTXXdcxLMc56aeAwIM-7",
-        GameNewnessTitle: "CuXwyUnaDZpkPXGWaDYqX",
-        NewActive: "_18-Ta9kFnxPV3MW8MaHLGk",
-        DataBoxArrow: "_1wfGD4gWsszIkGZXm0JDzG",
-        Background: "_2UelPoml_TdjiRoElz-jCO",
-        UserData: "_155LdBCpt-I6Jdq8vOvIMn",
-        DataBox: "_1PoOpWtYx_Pi_UBEgi7M8z",
-        SteamData: "_3So3GnRNE3gKqFMEHAvVnR",
-        Border: "XBvd9Chzj1W3qEc48o9MF",
-        PercentageLabel: "_2mv_7D9DDgIxQekwoVSx6Z",
-        Color: "_12oaMcntPSS_RU8FHUnPh6",
-        PercentageDescriptionLabel: "_19zcQYG67jYetSV0ej2Tv",
-        UsedActive: "dGZz3uSYGrONY12cANPNF",
-        OldActive: "_3XPjE1fVUnsM0vm4eb80hV",
-        AllGamesBGImage: "_1ujDQYkFU24pcZA1ZGeGME",
-        SeeRewindButton: "_2rDtQVS8ZlIw7YqmTAyNmm",
-        MMFrame: "_28xhDkykmhFaIAt4QQdn_p",
-        MMOverride: "_3kq0hsM0tSCDBxOeX-hZha",
-        Header: "_2jlbTLneTvBnboYMvfVaUD",
-        YearSubtitle: "_2OhWL3dLnJXdCGjYk3fEFj",
-        ReplayLogo: "_14dybFtjTMF7Zk63_bgxQW",
-        ReplayLogoAccent: "_3-RXvInFsNpERFnXTsYJyD",
-        Hashtag: "_1hMTHVqQqQR6H8O-L-1l06",
-        Avatar: "_8e85nNcJJGww2CphGMQtW",
-        DataBlock: "_1vGwbHGNBIZhsvIsHfW2VJ",
-        PersonaName: "_2zTjbc9r9LZ2vU3J8mkvdS",
-        ReplayHighlight: "X5blfXMgUPst2QE8pzH8B",
-        ViewPageButton: "_3YUlc6lbVRqgBTztta_9TL",
-        Description: "_1qc70O9sIUpckqH-jveYLN",
-        OtherYearLink: "_1AcAxWWu9yo7s4gOpoGGn0",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        new_games_color: "#34f3fe",
-        used_games_color: "#cc6670",
-        old_games_color: "#f4d760",
-        pie_windows: "#d67070",
-        pie_linux: "#aa3db4",
-        pie_deck: "#3898b0",
-        pie_mac: "#46ab46",
-        pie_vr: "#c7b84e",
-        topApp_0: "#d67070",
-        topApp_1: "#70d670",
-        topApp_2: "#683db4",
-        topApp_3: "#3898b0",
-        topApp_4: "#ab4646",
-        topApp_5: "#46ab46",
-        topApp_6: "#3d138a",
-        topApp_7: "#0e6e86",
-        monthOthersColor: "#7d98aa",
-        chartAccentColor: "#fff",
-        chartAccentColorAlt: "#1a9ffe",
-        ImagesCtn: "_3_yJrtI9CnRo7Vqso02WhP",
-        scaleBackground: "_3FyW_RSMfp3r4eHfuMQIA5",
-        SingleGame: "_11WV2YgKiO-25bj14xN4nF",
-        ImageTint: "aNFQO7OXrOXD4-a8kfVGc",
-        Section: "Lge6g_6u-62TV_cVPD7Ui",
-        LongestStreakBgImage: "fA_EY16-08_b1VWyI-yWb",
-        StreakSizeFullBar: "_2Xt_oaIv9INpfrjOEmjGxJ",
-        Tab: "_2v18EtoQUMe9VTbnzTG8td",
-        UserName: "cpHihmjgrbGMnejVUXb7P",
-        ConclusionName: "_2JN-hnKtHVoX9X7YXp-EBq",
-        SummaryCtnShadow: "zbwndVO7JL53kSxjqeLcs",
-        GridItem: "_2WPcf3wXBhMImWLz22RXmV",
-        BackgroundImage: "DZcTcsyLmBEj_dmGqve9",
-        TimeRelatedCtn: "_37goiEY1KefzjRKUKkEWgo",
-        FriendCtn: "dtzDI1loGbf-ScWbiNsMj",
-        TopGameBlockContainer: "_1_03H_PiAx5_TIA2Y4OOn0",
-        BackgroundImageFull: "XkDtww__eYTaxTvGXlhip",
-        OddGradient: "BdBfXPzFQrAIMxXLgo95x",
-        EvenGradient: "mU0ZPKqgrodRiIqDDPRJN",
-        TopMostGame: "_2U1A0BOBmU2Tm96VMDbN3y",
-        GamePlayDetails: "WBgtvXrESMem0KVSCFohg",
-        PlatformChartsCtn: "p2yOPk8RjNL2sgYPVdUl9",
-        gradient: "_3_0UA8g5haRH050dhrXY1c",
-        TopHonorsSection: "_3Xt_rws_Lz4-TXJH-R3wXI",
-        SectionDesc: "_3-uWyGRhRgXQz4UayHqn62",
-        IconAchievement: "_1Ary1qr2Dt1ycwBGxfz0fq",
-        IconGamesPlayed: "_1ghrcKVRru_utFcofkcTbk",
-        IconStreak: "_3dUH0KBuoVtpr5alU3jY9M",
-        PlayBehaviorContainer: "-giyIxoOslRPNdoAe4UfS",
-        ProgressBarFilled: "-A2NwyQKoK0uC_zGHLI1N",
-        ProgressBarFilledGradient: "_2l9tBf3n2J5llJPTTog4kT",
-        GameNewnessTitle: "_2R5I8QSZYVS2f-anYNfg-3",
-        NewActive: "_2GcnpaqNIZSrMhYtfj_-y0",
-        DataBoxArrow: "_1N16zDKyMMVJzQKmHNX50G",
-        Background: "XZe2fdvY-JGoNhdNV-l1x",
-        UserData: "_3QSJmi9aPGptdgOEFi2gzE",
-        DataBox: "_2Gsb4esS301xmkHX7WT_uO",
-        SteamData: "_2xcH0was3XiZQ5EOfgXfXJ",
-        Border: "_3hMPpTvRMmLyPRK1zxB-Ra",
-        PercentageLabel: "_1to-w6RT2f-vQQ459T4H8J",
-        Color: "_1io-EPyTr2q37DmZS-Iv2u",
-        PercentageDescriptionLabel: "pcHKKuXoww1KZ7a_1F--u",
-        UsedActive: "_1uknQZ7Xmx7VQ1da9Gc4n2",
-        OldActive: "_2gXOsiXV8vP0Ujd_ic1j_r",
-        AllGamesBGImage: "aI_Il7gY1Syqm796Upnp9",
-        SeeRewindButton: "hRwmhfYcSqvrvsdGJuU4J",
-        MMFrame: "_2duB07TZK47UjB_dhb3uK3",
-        MMOverride: "XbqPSndbEUkqiStSowtZK",
-        Header: "_352X1_lNn7pW_yScNLvtb6",
-        YearSubtitle: "_1avfzaLCwU_U1NmpVbFSST",
-        ReplayLogo: "_1Ao61JGqV1c_QgX5WaSiQ8",
-        ReplayLogoAccent: "_1OT6cjmQVBFsHOR0plxmms",
-        Hashtag: "_3ChmiAgSUsYOIDUGcx2ID3",
-        Avatar: "_2Cjn2QF0ijeU0iZlbggit2",
-        DataBlock: "qoG_vuXOr_yl9HwMqT6rV",
-        PersonaName: "_2w7Tb0xkf0VinWQKTn63_4",
-        ViewPageButton: "_2IfJlTSfJ9B2O7GrLSHZEu",
-        Description: "_3OaR0S3fMP3IqzGQkLo2LL",
-        OtherYearLink: "e2J3CJVLkCcWuogJlnJqA",
-        BackgroundAnimation: "_14OuUh1QjZE3TsW4NZNR2T",
-        "ItemFocusAnim-darkerGrey-nocolor": "_34-QNskZMB7mEWsqhnZP6b",
-        "ItemFocusAnim-darkerGrey": "_2mYgNS2XvBpQoFx7GpbaE8",
-        "ItemFocusAnim-darkGreySettings": "_2A4pb12mtvU-l5nClt2fv-",
-        "ItemFocusAnim-darkGrey": "_2wJw5tkwjDagaHTwWVdn1u",
-        "ItemFocusAnim-grey": "_1flpMlWbeXKOl-WYA3Xem3",
-        "ItemFocusAnim-translucent-white-10": "_2Du1mKAGG_7kB5hkqpPOqX",
-        "ItemFocusAnim-translucent-white-20": "_1mHlVprPR_Qin9oSqFmQwX",
-        "ItemFocusAnimBorder-darkGrey": "_1dQDG_S6sUmSjy1GFP6ybp",
-        "ItemFocusAnim-green": "_1X5ahFc-n3nVkWAsUpG49I",
-        focusAnimation: "_1ddfD3xnl7ZxtZ7TYShOPs",
-        hoverAnimation: "_2A0Chr-r6KVC7bWMKjWlOP",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        new_games_color: "#34f3fe",
-        used_games_color: "#cc6670",
-        old_games_color: "#f4d760",
-        pie_windows: "#d67070",
-        pie_linux: "#aa3db4",
-        pie_deck: "#3898b0",
-        pie_mac: "#46ab46",
-        pie_vr: "#c7b84e",
-        topApp_0: "#d67070",
-        topApp_1: "#70d670",
-        topApp_2: "#683db4",
-        topApp_3: "#3898b0",
-        topApp_4: "#ab4646",
-        topApp_5: "#46ab46",
-        topApp_6: "#3d138a",
-        topApp_7: "#0e6e86",
-        monthOthersColor: "#7d98aa",
-        chartAccentColor: "#fff",
-        chartAccentColorAlt: "#1a9ffe",
-        ImagesCtn: "_1FQxwxnbfp1DQRGwxjKNTx",
-        scaleBackground: "TdC9bwyeuoQ1F5DT8KspI",
-        SingleGame: "ifq_ya-yHyDQyuEtHXvkd",
-        ImageTint: "_14GpYsrLIrccl99_xXb_lH",
-        Section: "_2CzT2Ue4ljkWrfhI95JkJt",
-        LongestStreakBgImage: "_3bIVDFjju4u0AOB48TTZ7H",
-        StreakSizeFullBar: "_36Dty1V8Yk45GKPQ12JNl9",
-        Tab: "_2scTLgHhWMusg9Lj2H9F0M",
-        UserName: "_3i6QbKsUrNIRm_9L1iM1w1",
-        ConclusionName: "eMxpUkfmNZqXHXyEOpi9-",
-        SummaryCtnShadow: "Cw99TswABdwpty4wDm6Kv",
-        GridItem: "_3ng4jeWCIrH3Xf7gVbo758",
-        BackgroundImage: "cX2moiqfYAa9h4c6c6J56",
-        TimeRelatedCtn: "_2Zo5vVWEoZeXCAmvmNWdtA",
-        FriendCtn: "_1fLHP2iu-xMwF39bB2FE-f",
-        TopGameBlockContainer: "_2jMh7hzYtvCju1bimc2DCR",
-        BackgroundImageFull: "_1tKfGHKLUsuVr003d2jG4X",
-        OddGradient: "_3mCsh4BkMCnav5CzdFeIln",
-        EvenGradient: "_22nJMbrt7AfGR1wKoLVXIK",
-        TopMostGame: "_5gZaiaeySvC8QDwQUkDgQ",
-        GamePlayDetails: "_2UjU_Bqh7WIemfgCvlD1FN",
-        PlatformChartsCtn: "_2mkvkIYg5LeZ2ktuk6BK-w",
-        gradient: "_1uF_mJ2NoHHxjt8B6TtKTU",
-        TopHonorsSection: "_1Iak9Ls621_J54UW4a9Q_1",
-        SectionDesc: "wszKcm7YBxzCAlfaWiTAH",
-        IconAchievement: "_3d7jJ_skoesQRY7KoMAF8e",
-        IconGamesPlayed: "_2xTquiP8toNtUfqV0AVDkf",
-        IconStreak: "QYeU8JjvH6xQr-aFK1efW",
-        PlayBehaviorContainer: "_3Bpyxk-Np66shUkJs80vvZ",
-        ProgressBarFilled: "_1f8MtfTqD8Az_GM0JB7Rzc",
-        ProgressBarFilledGradient: "Q3vogB-yAyTY5rGGiGQYX",
-        GameNewnessTitle: "kSadYHEssRMc4gjfKBIi2",
-        NewActive: "_1tqxZtHc4QXKcJycbqiAOE",
-        DataBoxArrow: "_1bcbwF6Vo3DZxm6-DI847n",
-        Background: "_1noZDX1h45XBp4xI-eaLWz",
-        UserData: "_2C_3vOW-fgB1JljQ5WDf_u",
-        DataBox: "_3JvBPAurzZ-YFQ1kn-AcUI",
-        SteamData: "_2z9mUmuJfjxc9yzKSUZVp-",
-        Border: "_1B56xMSY38kOHC5b7if0NZ",
-        PercentageLabel: "_2oPIePedWi_UM8nqs9Krd_",
-        Color: "_39goClLihc9ZPYV3YaUFxh",
-        PercentageDescriptionLabel: "_1R6sP2SKKVCDceGJzjiu9q",
-        UsedActive: "_20rUBA-R0plfPxLoz-AaTt",
-        OldActive: "_3fE1LfsvZ6TSFOmBIX-hnd",
-        AllGamesBGImage: "_3LwhtMUR2vVFHRvyRMNxGK",
-        SeeRewindButton: "_2PM8va6tUvi6JiJjaXTe_k",
-        MMFrame: "_2GhRvyaz6BcUqn_8Ie84MN",
-        MMOverride: "_3hmSXaA49hWNpDmad_U2Y6",
-        Header: "_1RiSqDe-2hLW6Zh8gzWMQ2",
-        YearSubtitle: "_1FagSJOwqENaGOokSCJaw5",
-        ReplayLogo: "_2szJenhCRhwaeLkwGQiOIX",
-        ReplayLogoAccent: "_3HGA8vPogeG26iVY-5nmFS",
-        Hashtag: "_2mhWOxJsIcWe8uMpCZxosE",
-        Avatar: "_1ARS2PnjXATcgXNP0lEZBX",
-        DataBlock: "_2UNwHmsG9jJhvi_-hHqlUo",
-        PersonaName: "_2q2Real9LsQkftHC3gtzjn",
-        ViewPageButton: "_3Jien5Efkr3B0IQgbOMC0u",
-        Description: "_30TBldURmofivWIf4LDybD",
-        OtherYearLink: "LDdWtcd3cqcEwlnIqnp0m",
-        BackgroundAnimation: "Uwk2oDOlH9H45uB6SckjX",
-        "ItemFocusAnim-darkerGrey-nocolor": "_1HzbepuV2ne3fOiiw4M6L2",
-        "ItemFocusAnim-darkerGrey": "_3jhvEXbsQ8rwLbzgIG2YKY",
-        "ItemFocusAnim-darkGreySettings": "_22jVwj2EIKxChqvLWQbXuN",
-        "ItemFocusAnim-darkGrey": "_3E-Kmphz35Z5zxRRLBBv__",
-        "ItemFocusAnim-grey": "_1MX1VV5l2Txw56HFd3WETD",
-        "ItemFocusAnim-translucent-white-10": "_6H60CwBcO9kk4y1pOFm21",
-        "ItemFocusAnim-translucent-white-20": "_31Gmo3sGiGSz9BuXbnqa54",
-        "ItemFocusAnimBorder-darkGrey": "_2BlrdTd8j7eGp87-nNi7Md",
-        "ItemFocusAnim-green": "_3TnQtlMvVkjLUwNdMvKkKA",
-        focusAnimation: "_3xy4OMg8IMNU-GS54X-fou",
-        hoverAnimation: "_3TsGkEqTE3pjbkbIFVAmfi",
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "nicknames";
-      function _(_) {
-        const _ = (0, _._)(),
-          { data: _, isLoading: _ } = (0, _._)({
-            queryKey: [_],
-            queryFn: async () => {
-              const _ = new Map();
-              if (_._.logged_in) {
-                const _ = _._.Init(_.w_T),
-                  _ = (await _.xtC.GetNicknameList(_, _)).Body().toObject();
-                _?.nicknames &&
-                  _.nicknames.length > 0 &&
-                  _.nicknames.forEach((_) => {
-                    _.set(_.accountid, _.nickname);
-                  });
-              }
-              return _;
-            },
-          });
-        return _ ? __webpack_require__.get(_) : null;
-      }
-      const _ = new (_())(
-          (_) =>
-            (async function (_) {
-              if (!_ || 0 == _.length) return [];
-              const _ =
-                "community" == (0, _._)()
-                  ? _._.COMMUNITY_BASE_URL
-                  : _._.STORE_BASE_URL;
-              if (1 == _.length) {
-                const _ = {
-                    accountid: _[0],
-                    origin: self.origin,
-                  },
-                  _ = await _().get(`${_}actions/ajaxgetavatarpersona`, {
-                    params: _,
-                  });
-                if (
-                  !_ ||
-                  200 != _.status ||
-                  _.data?.success != _._ ||
-                  !_.data?.userinfo
-                )
-                  throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
-                return [_.data.userinfo];
-              }
-              {
-                const _ = {
-                    accountids: _.join(","),
-                    origin: self.origin,
-                  },
-                  _ = await _().get(`${_}actions/ajaxgetmultiavatarpersona`, {
-                    params: _,
-                  });
-                if (
-                  !_ ||
-                  200 != _.status ||
-                  _.data?.success != _._ ||
-                  !_.data?.userinfos
-                )
-                  throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
-                const _ = new Map();
-                return (
-                  _.data.userinfos.forEach((_) =>
-                    _.set(new _._(_.steamid).GetAccountID(), _),
-                  ),
-                  _.map((_) => _.get(_))
-                );
-              }
-            })(_),
-          {
-            cache: !1,
-          },
-        ),
-        _ = "avatarandpersonas";
-      function _(_) {
-        const { data: _, isLoading: _ } = (0, _._)({
-          queryKey: [_, _],
-          queryFn: () => _.load(_),
+(() => {
+  (self.webpackChunkstore = self.webpackChunkstore || []).push([
+    [75976],
+    {
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
         });
-        return [_, _];
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          { data: _, isLoading: _ } = (0, _._)({
+        var _ = __webpack_require__("chunkid");
+        const _ = {};
+        (_.arabic = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 98135, 19))),
+          (_.brazilian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 32427, 19))),
+          (_.bulgarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 56708, 19))),
+          (_.czech = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 18914, 19))),
+          (_.danish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 15670, 19))),
+          (_.dutch = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 93067, 19))),
+          (_.english = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 52777, 19))),
+          (_.finnish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 73934, 19))),
+          (_.french = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 31055, 19))),
+          (_.german = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 1509, 19))),
+          (_.greek = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 11934, 19))),
+          (_.hungarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 92760, 19))),
+          (_.indonesian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 41411, 19))),
+          (_.italian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 3905, 19))),
+          (_.japanese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 15816, 19))),
+          (_.koreana = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 40202, 19))),
+          (_.latam = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 61090, 19))),
+          (_.malay = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 94841, 19))),
+          (_.norwegian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 71693, 19))),
+          (_.polish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 57258, 19))),
+          (_.portuguese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 49994, 19))),
+          (_.romanian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 61540, 19))),
+          (_.russian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 13956, 19))),
+          (_.sc_schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 58430, 19))),
+          (_.schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 56983, 19))),
+          (_.spanish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 80657, 19))),
+          (_.swedish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 91712, 19))),
+          (_.tchinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 27228, 19))),
+          (_.thai = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 57001, 19))),
+          (_.turkish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 17681, 19))),
+          (_.ukrainian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 93275, 19))),
+          (_.vietnamese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 23352, 19)));
+        async function _(_) {
+          if (_[_]) return _[_]();
+        }
+        const _ = (0, _._)(_);
+        function _(_, _, _, _, ..._) {
+          const _ = `${_}${_ ? "_second" : "_third"}`;
+          if (_.HasKey(_))
+            return _ ? _.LocalizeReact(_, ..._) : _.LocalizeReact(_, _, ..._);
+          if (_.HasKey(_)) return _.LocalizeReact(_, ..._);
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = {
+            2022: _,
+            2023: _,
+            2024: _,
+            2025: _,
+          },
+          _ = Object.values(_).reduce(
+            (_, _) => ({
+              ..._,
+              ..._,
+            }),
+            {},
+          ),
+          _ = 2022;
+        function _(_) {
+          return (0, _.useMemo)(() => {
+            const _ = _[_] ?? _[_];
+            return {
+              ..._,
+              ..._,
+            };
+          }, [_]);
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = "nicknames";
+        function _(_) {
+          const _ = (0, _._)(),
+            { data: _, isLoading: _ } = (0, _._)({
+              queryKey: [_],
+              queryFn: async () => {
+                const _ = new Map();
+                if (_._.logged_in) {
+                  const _ = _._.Init(_.w_T),
+                    _ = (await _.xtC.GetNicknameList(_, _)).Body().toObject();
+                  _?.nicknames &&
+                    _.nicknames.length > 0 &&
+                    _.nicknames.forEach((_) => {
+                      _.accountid &&
+                        _.nickname &&
+                        _.set(_.accountid, _.nickname);
+                    });
+                }
+                return _;
+              },
+            });
+          return _ ? _.get(_) : null;
+        }
+        async function _(_) {
+          if (!_ || _.length == 0) return [];
+          const _ =
+            (0, _._)() == "community"
+              ? _._.COMMUNITY_BASE_URL
+              : _._.STORE_BASE_URL;
+          if (_.length == 1) {
+            const _ = {
+                accountid: _[0],
+                origin: self.origin,
+              },
+              _ = await _().get(`${_}actions/ajaxgetavatarpersona`, {
+                params: _,
+              });
+            if (
+              !_ ||
+              _.status != 200 ||
+              _.data?.success != _._ ||
+              !_.data?.userinfo
+            )
+              throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
+            return [_.data.userinfo];
+          } else {
+            const _ = {
+                accountids: _.join(","),
+                origin: self.origin,
+              },
+              _ = await _().get(`${_}actions/ajaxgetmultiavatarpersona`, {
+                params: _,
+              });
+            if (
+              !_ ||
+              _.status != 200 ||
+              _.data?.success != _._ ||
+              !_.data?.userinfos
+            )
+              throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
+            const _ = new Map();
+            return (
+              _.data.userinfos.forEach((_) =>
+                _.set(new _._(_.steamid).GetAccountID(), _),
+              ),
+              _.map((_) => _.get(_))
+            );
+          }
+        }
+        const _ = new (_())((_) => _(_), {
+            cache: !1,
+          }),
+          _ = "avatarandpersonas";
+        function _(_) {
+          const { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_, _],
-            queryFn: async () => {
-              const _ = await _.loadMany(_);
+            queryFn: () => _.load(_),
+          });
+          return [_, _];
+        }
+        function _(_) {
+          const _ = (0, _._)(),
+            { data: _, isLoading: _ } = (0, _._)({
+              queryKey: [_, _],
+              queryFn: async () => {
+                const _ = await _.loadMany(_);
+                return (
+                  _.forEach((_) => {
+                    if (_ instanceof Error) return;
+                    const _ = [_, new _._(_.steamid).GetAccountID()];
+                    _.setQueryData(_, _);
+                  }),
+                  _
+                );
+              },
+              enabled: _?.length > 0,
+            }),
+            _ = (0, _.useMemo)(() => {
+              const _ = new Array();
               return (
-                __webpack_require__.forEach((_) => {
-                  const _ = [_, new _._(_.steamid).GetAccountID()];
-                  _.setQueryData(_, _);
+                _?.forEach((_) => {
+                  _ instanceof Error || _.push(_);
                 }),
                 _
               );
-            },
-            enabled: _?.length > 0,
-          }),
-          _ = (0, _.useMemo)(() => {
-            const _ = new Array();
-            return (
-              __webpack_require__?.forEach((_) => {
-                _ instanceof Error || _.push(_);
-              }),
-              _
-            );
-          }, [_]);
-        return _ ? null : _;
-      }
+            }, [_]);
+          return _ ? null : _;
+        }
+        function _(_) {
+          return ReactQueryClient.getQueryData([_, _]);
+        }
+      },
+      chunkid: (module) => {
+        module.exports = {
+          new_games_color: "#3cdf6a",
+          used_games_color: "#4df",
+          old_games_color: "#e496ff",
+          pie_windows: "#28aee1",
+          pie_linux: "#cd4141",
+          pie_deck: "#9c85d1",
+          pie_mac: "#939a9d",
+          pie_vr: "#55af30",
+          topApp_0: "#00a299",
+          topApp_1: "#017baa",
+          topApp_2: "#044fbb",
+          topApp_3: "#2325b9",
+          topApp_4: "#4a17a6",
+          topApp_5: "#881abf",
+          topApp_6: "#bf1a72",
+          topApp_7: "#cb5545",
+          monthOthersColor: "#7d98aa",
+          chartAccentColor: "#fff",
+          chartAccentColorAlt: "#1a9ffe",
+          ImagesCtn: "_1mCWTI0JoiDqCmO8bDDES5",
+          SingleGame: "_2sI9nEpezKWeRW_uX3zDe9",
+          ImageTint: "_1KFiu2aZBbuwvWHItKoR7-",
+          Section: "ZbHrxezu8VrBxMPSTh9z3",
+          StreakSizeFullBar: "_14BklrGtK29m79DW3nqHWV",
+          LongestStreakBgImage: "_3bCDTuFBTstThIkVu8rZAK",
+          Tab: "_2RZyYiWAwDAPtAyy1l4EhC",
+          UserName: "_3ZGQww28rxBs_rNFt4A-Z",
+          ConclusionName: "_2QHBE_5MFY0OIfAJK-6KPs",
+          GridItem: "_3JsZSm646Y5ZkGhpSOODAW",
+          AchievementBlock: "_2DHea-Spjx2dRqPQcVfpqw",
+          StreakBlock: "_2Sd0qjwv69VPg701ROB46l",
+          HardwareBlock: "_2KTGrVdH4bYO-rOyHaGaXe",
+          DeviceBlock: "_33YJLXitiubERYxUXrbecK",
+          SummaryCtnShadow: "_3eIkBGJSxL654zOmmOBOz7",
+          BackgroundImage: "_36jZ71s237_s23yxdQgPFO",
+          SummaryCtn: "_2l4E7GqLFXFY_rYWRbFOIt",
+          TopHonorsSection: "_24OE-kMDyDQ0Ci29zIPqdq",
+          MissingUserCtn: "_3L0BnaPXE2Nuz3x60nrf8",
+          GenericBackground: "_1h36ybUWs1ZX5telCOk0XC",
+          LogInCtn: "_26pjxsotAYqvNMpivHzvaw",
+          FriendCtn: "_1mZ6NQJ_g6wG-NdlN86ksm",
+          TopGameBlockContainer: "_36knYDLxQo9AaZviPf_cnn",
+          OddGradient: "_1mrNpFA8PEjfLYXmvbboJl",
+          EvenGradient: "uGK9CVVk1pMAHGs62QINl",
+          TopMostGame: "_2pfc8dJefQjNg6UM3yLz9q",
+          FirstPlayCtn: "_1TBDwSyyCkodf5oKezdape",
+          GamePlayDetails: "vqmq5_0SK8i0bpeppqxnx",
+          PlatformChartsCtn: "_2PR724R2IuabDLtoLxWpfk",
+          IconAchievement: "_2IjTrxdj_wI9Gh7_aMbZTM",
+          IconGamesPlayed: "_1pYbm7SYRqjtbSjm99vybx",
+          IconStreak: "_3wrtHF8HGJ6k-7gSKy9tHu",
+          PlayBehaviorContainer: "tiuwqat5VX9DqGp1wTasT",
+          ProgressBarFilled: "_2TAF9zz_FTeA_XA7NabVmT",
+          ProgressBarFilledGradient: "_2Jn-XMt83DMEbyRglDjPZ-",
+          GameNewnessTitle: "_2S-kJn2DuxoMMQRJoCDp5K",
+          NewActive: "_3nz5W7FAYvN2-2n0MuWlwo",
+          DataBoxArrow: "_1EoUlR9aVJ5EMp7C5CYdlJ",
+          Background: "DxFS4y1E5x3-FXRmvNTjr",
+          UserData: "mjYOxpO92Sjjaq1vI0nPa",
+          DataBox: "_1TC4ZL8Igk0UZwM5n37MPP",
+          SteamData: "_1muEXi8fQZowcGSWQIP5EF",
+          Border: "_3APY0jBERnHXknBhjYaKzK",
+          PercentageLabel: "grEIxWPqvyXbDSONzpGyk",
+          Color: "_1jd63YNjr7wMQzLdB_QziW",
+          PercentageDescriptionLabel: "etu3gC0CbXo-55a8VnGLb",
+          UsedActive: "_3cggzJW9YF-UN83xHTZQ8v",
+          OldActive: "_2e8Hfol5roqPlMlmMEe4jK",
+          AllGamesBGImage: "_3ugWpF65a-Hzz9zZbMdFei",
+          SeeRewindButton: "_25JDT1O9te5Afb7dDcz4ry",
+          MMFrame: "_34F3ONj5DcTlh_joG-sHu5",
+          MMOverride: "_3410LOeYZJjY6R_H4U0YuQ",
+          Header: "_1wRDr7Zzwg-daOQ9jG5qY5",
+          YearSubtitle: "yqOBUuUlT4ChD5MB4Gfmb",
+          ReplayLogo: "_1Dj2Lm_eGilmq2aTCNLmKz",
+          ReplayLogoAccent: "_1boFekf-O9JBLOKZNRGpGL",
+          Hashtag: "rUjuX2Th6QbH4f1-l8H3c",
+          Avatar: "_3TIPQVu2JQ0Pp0s4DBxqdN",
+          DataBlock: "_2ZVTo1HmTUnFF3TNZBarJ3",
+          PersonaName: "_1n5x7nxPhP-Sq0AhY5ssVm",
+          ReplayHighlight: "_1t179jT3miESogxBPLvKso",
+          ViewPageButton: "jIjgB6ZoOX1pa2GftI1RS",
+          Description: "_1vouHy7Qkdo_QusE7gHag1",
+          OtherYearLink: "_1i52pDXbOiguTescoinJBz",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          new_games_color: "#d67070",
+          used_games_color: "#683db4",
+          old_games_color: "#3898b0",
+          pie_windows: "#d67070",
+          pie_linux: "#683db4",
+          pie_deck: "#3898b0",
+          pie_mac: "#46ab46",
+          pie_vr: "#c7b84e",
+          topApp_0: "#d67070",
+          topApp_1: "#70d670",
+          topApp_2: "#683db4",
+          topApp_3: "#3898b0",
+          topApp_4: "#ab4646",
+          topApp_5: "#46ab46",
+          topApp_6: "#3d138a",
+          topApp_7: "#0e6e86",
+          monthOthersColor: "#7d98aa",
+          chartAccentColor: "#fff",
+          chartAccentColorAlt: "#1a9ffe",
+          ImagesCtn: "_10kzTTAtqaz13b6p7OjG8S",
+          scaleBackground: "_1WW8z64-BrcfAZZpgbuRTM",
+          SingleGame: "_2Pj3-6RWhMQHDGPtVx1ftl",
+          ImageTint: "RdmGip0ngXjp9kSzfsMuc",
+          Section: "_1ihw3wAprvhicFWLMrq7hf",
+          StreakSizeFullBar: "_3s6e74lp5bDTtWMnpcnBbA",
+          LongestStreakBgImage: "_1GiTU8n2lD-sPz0sCR0Xhj",
+          Tab: "_25kqUwukU9GN1Ef9tihV6L",
+          UserName: "_1eLSYaRNKbAsXOhQTsmW1V",
+          ConclusionName: "_3Xy9Cx3rQeyhPKSjwGEfl6",
+          GridItem: "_3xyYnoaptMoTZ1HqL_koRs",
+          AchievementBlock: "_1M433GBUUxgHItBhMw0U94",
+          StreakBlock: "_2X6mwNm61FuayA-l1afHjg",
+          HardwareBlock: "GImwL8nsYgPpolltUalGf",
+          DeviceBlock: "_2s1BbZknfTzGiX0KPWI6sQ",
+          SummaryCtnShadow: "_18moaZsJq2bOBUKUFkgZXW",
+          BackgroundImage: "_1LIoXPNaAmjCNg--cqeYNJ",
+          SummaryCtn: "_2iEZg9UeJZPaXWH8DEQgAY",
+          TopHonorsSection: "_3pGXxrtry6vbrbKN05WUO6",
+          FriendCtn: "_2W45uTzo4s5qj5DLPHUt2f",
+          TopGameBlockContainer: "_36jqv5rato1nA9_Fm4TgqO",
+          OddGradient: "_2humxv5J-6yJS4voPPdZ2t",
+          EvenGradient: "_2Ri1edchogFKwyEY3XKJiq",
+          TopMostGame: "_3AeiaW8hpnC1ONnWJUXAj5",
+          GamePlayDetails: "il8qj5ZbFvylAOOLUaNtV",
+          PlatformChartsCtn: "_1VlT4dTCqBdYP-i3bxLhyJ",
+          gradient: "DcluJQjgDbSdO-U954rux",
+          IconAchievement: "_1dt08I2SCDobYoSlg6xjqf",
+          IconGamesPlayed: "_3Zy7ueS4aunldSTv-YA2GT",
+          IconStreak: "_22reoVLCzn-Fuh73p1pXr5",
+          PlayBehaviorContainer: "_1U1ZuwB1L9K4CPqioL0e5s",
+          ProgressBarFilled: "_3NgeYY9GD7yBtWM_upyPTT",
+          ProgressBarFilledGradient: "_2WMTIhxpdYdVPW8qMMaMIR",
+          GameNewnessTitle: "_3kzRWYdjSiT3NFAj2oVTVY",
+          NewActive: "_3YOjggFXHQrDGODGISowUn",
+          DataBoxArrow: "_2V5vsfJLUUAm8Dkwco2jw9",
+          Background: "_1P7u77iRdWEMNFa_uDOAgx",
+          UserData: "sT4Y_Mssd38IykTqpNttI",
+          DataBox: "sw8ZdGxYqpVlDpQ-O0ymi",
+          SteamData: "_3QBOqe7aPF_N0gIqkC9fmI",
+          Border: "_1LJoYGt4cvMN5B1_sAJP8f",
+          PercentageLabel: "_6GBP_G16XsdGbYC8NTZh6",
+          Color: "_5AuLAC-w6VzF8QR5dj5Xt",
+          PercentageDescriptionLabel: "SsulucKQh-HigrEyVzMIg",
+          UsedActive: "_3kPVLKj0dwg8U5A6Fg7ISA",
+          OldActive: "_3n3sqX8WsGOyPAMMvYy_O-",
+          AllGamesBGImage: "Da4bxMaQBEGNrVrq5DpDH",
+          SeeRewindButton: "_288f6z1gFOsYlF9sPrQjGL",
+          MMFrame: "_2uL2aC9JTgz2OiBYlYh0OV",
+          MMOverride: "_3r4GfYoEmqFKtRaTHW4kce",
+          Header: "_2a2ceVKfNdvTRhuk5GSdns",
+          YearSubtitle: "_2p3PzXE3K1nmqcMQq3_IfL",
+          ReplayLogo: "_3LKGj8E0hxcbos8M02X8Z5",
+          ReplayLogoAccent: "QA6ZiaAVMlmpcQ76Vh1ai",
+          Hashtag: "u0AZ32D3fSCUz7g34qqez",
+          Avatar: "_1YfBn_vDDQheFIvB_NS8jT",
+          DataBlock: "_2k0fIZXO_T84nzNLVPk3_8",
+          PersonaName: "cUavdbPuv_0xdR4Dn9zos",
+          ReplayHighlight: "_17c5leGvLNSi5Ww9tu6KYI",
+          ViewPageButton: "AwTMLvj9vwwJanUhUW0md",
+          Description: "_L5X9igrHe9C6CwhZe_ny",
+          OtherYearLink: "_1fHTilDQDzxqV57h1u1xHI",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          "duration-app-launch": "800ms",
+          new_games_color: "#34f3fe",
+          used_games_color: "#cc6670",
+          old_games_color: "#f4d760",
+          pie_windows: "#d67070",
+          pie_linux: "#aa3db4",
+          pie_deck: "#3898b0",
+          pie_mac: "#46ab46",
+          pie_vr: "#c7b84e",
+          topApp_0: "#d67070",
+          topApp_1: "#70d670",
+          topApp_2: "#683db4",
+          topApp_3: "#3898b0",
+          topApp_4: "#ab4646",
+          topApp_5: "#46ab46",
+          topApp_6: "#3d138a",
+          topApp_7: "#0e6e86",
+          monthOthersColor: "#7d98aa",
+          chartAccentColor: "#fff",
+          chartAccentColorAlt: "#1a9ffe",
+          ImagesCtn: "_3OQ6rgJBkGnH9Bf6r2e3HL",
+          scaleBackground: "_3JN7ZUgVCUsaPMpmqP7TwR",
+          SingleGame: "_1HbdEudMGphunPB0JEXg7i",
+          ImageTint: "_1gfY6mgm47-kMTUtqR0-Ou",
+          Section: "tRbx_6RHxbCDIMagDBI8p",
+          LongestStreakBgImage: "_1MVdzFDJOXawdsqr3Yhqsw",
+          StreakSizeFullBar: "_36N_E04MlrcS-OcKDAtap2",
+          Tab: "_1KD4j_7fmsom6XcRjCdT0Q",
+          UserName: "WSDA_clh_9sxDy4zdmbjD",
+          ConclusionName: "_1gHhZmVSITXh31m_yruKhR",
+          SummaryCtnShadow: "_2-LqaFKV7kacR8awEnhfJX",
+          GridItem: "_3OZGvnLThiIYbr4Ouh2bxp",
+          BackgroundImage: "_2aMzl_Delss7H1rWla6XDB",
+          FriendCtn: "_1_-90oN_7p0LZPblYQBANu",
+          TopGameBlockContainer: "_1Y5fJhtMjArQRouT4r3-C7",
+          BackgroundImageFull: "_3MOFeHUyOuqaV0X3Yr3VNf",
+          OddGradient: "_3ZMWDI255mEZaJyC56j0wL",
+          EvenGradient: "Juac3ZakPmb2mXfPy5vYL",
+          TopMostGame: "_1hCC5kg_wi3ka5DgsPuQSB",
+          GamePlayDetails: "_3rUVGxkgXErfzS1dUw-09d",
+          PlatformChartsCtn: "_37_pY_aEthje0YSZyP7Cs3",
+          gradient: "_3Z_LYJhCqdb8ZUUwCdpQgr",
+          TopHonorsSection: "_1JuNaCUGgdEe4Kg1wwxKiC",
+          SectionDesc: "frtdAP-rVslnmtiDFU5hj",
+          IconAchievement: "_1blrLRqm7dIEf-KlyXeucX",
+          IconGamesPlayed: "_3mFHXBXxcqOg-QN0otvPIV",
+          IconStreak: "_1BAN0pj-aWkXRxswwHZqJ6",
+          PlayBehaviorContainer: "_3K-BxOFebKlIgA3KHN3fRd",
+          ProgressBarFilled: "_149r1AuXIu7SWFlKGFPK2g",
+          ProgressBarFilledGradient: "_1dBow-Dbmq4zxmKY1jgQAn",
+          GameNewnessTitle: "_3yTxsy6ozFIGQBi_USS7Wq",
+          NewActive: "_3Q-lCYrQuOslt990fq-rr6",
+          DataBoxArrow: "_1op5IwtjH5Lq0XP38WK3LT",
+          Background: "_2j3GatBNdCKuNabv1m37Yq",
+          UserData: "_3m-Ki0zq5OMIcIZ41vG6wU",
+          DataBox: "ezwPo6nwskfStGExxxe2",
+          SteamData: "_3ki5fNFYPN-mUpMWp_7yBc",
+          Border: "_3OeymkaW96P8-ADBuNVDju",
+          PercentageLabel: "_3JxJmNw4L3TNLr0RgUvc-J",
+          Color: "GDFSAsxyT5cjNE1qUDVjI",
+          PercentageDescriptionLabel: "LkZ04ZMADGM3ycZyxP335",
+          UsedActive: "_1GIOMMTrITyIDVa9Vjc6JE",
+          OldActive: "_3U-IfPH0I8djRe2moFvzuF",
+          AllGamesBGImage: "_1yRd48MGRuylzC44_4Dmgb",
+          SeeRewindButton: "mf6UTLxYSeiKkvIhlAodx",
+          MMFrame: "_2vqAzxON4lE_16iKxhv8qT",
+          MMOverride: "_2HmEzExHY4aeyBFI6MUXmT",
+          Header: "_3gOcUL_xfcBkYU0g20TaXb",
+          YearSubtitle: "_3UwJLn8p1rV25mjYmzwrVA",
+          ReplayLogo: "_221R7vRZej1-5Itjx416tA",
+          ReplayLogoAccent: "_18J6u_1IgoXwwOwNs17yBg",
+          Hashtag: "_3bTOGmEBF0FW3IZn63KpR7",
+          Avatar: "_2zdVUZKCn5qRHBOk2Wvvhh",
+          DataBlock: "Cop9oURErdKz-xnG00D19",
+          PersonaName: "_1yc5XlMVWWlXCsludrsGM8",
+          ViewPageButton: "_8vh-tS_EH62zvZbZzF6Bq",
+          Description: "_1ImcGBhCVlOyWddPGdtGz9",
+          OtherYearLink: "_3LrPDKdIcbQ34J2OlNHDXh",
+          BackgroundAnimation: "_1iXipF4ysagEImD280CprP",
+          "ItemFocusAnim-darkerGrey-nocolor": "_1rmm8RPOlAxQMFUAP8bygH",
+          "ItemFocusAnim-darkerGrey": "_3Ws16JxP5tjYQMyhOCZPyl",
+          "ItemFocusAnim-darkGreySettings": "_1U1iTefDLSbKqIp4V19WVn",
+          "ItemFocusAnim-darkGrey": "_1Z34B8hAZCLKdCS-fIrGZl",
+          "ItemFocusAnim-grey": "_25oYhp1kwf6zZ5vtnsQBgc",
+          "ItemFocusAnim-translucent-white-10": "_12q-BgpP8S8I4o8Y7tVgP5",
+          "ItemFocusAnim-translucent-white-20": "LBhH9gPpgXf2pY0_Lc3Al",
+          "ItemFocusAnimBorder-darkGrey": "_3V_jsm1ATEfbvpDr6TIw3R",
+          "ItemFocusAnim-green": "_1CWlcSJ0K4nB9z9UY1GJO7",
+          focusAnimation: "xxHDLCKk6ZGZZcwkKMJ_o",
+          hoverAnimation: "_1JpeZ-3CBjNXMpN8RezwCI",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          "duration-app-launch": "800ms",
+          new_games_color: "#34f3fe",
+          used_games_color: "#cc6670",
+          old_games_color: "#f4d760",
+          pie_windows: "#d67070",
+          pie_linux: "#aa3db4",
+          pie_deck: "#3898b0",
+          pie_mac: "#46ab46",
+          pie_vr: "#c7b84e",
+          topApp_0: "#d67070",
+          topApp_1: "#70d670",
+          topApp_2: "#683db4",
+          topApp_3: "#3898b0",
+          topApp_4: "#ab4646",
+          topApp_5: "#46ab46",
+          topApp_6: "#3d138a",
+          topApp_7: "#0e6e86",
+          monthOthersColor: "#7d98aa",
+          chartAccentColor: "#fff",
+          chartAccentColorAlt: "#1a9ffe",
+          ImagesCtn: "_2s7mIvwS-3CubLZ0qh2JUW",
+          scaleBackground: "_26thFVUdrVT5cwl3ZNo621",
+          SingleGame: "Oi2hkZjaYSLMdFBa10fFW",
+          ImageTint: "_4dii7ZD-CzK6Hdr_1zFfz",
+          Section: "_1boQl7oW6GufFP0tCEqgPg",
+          LongestStreakBgImage: "Rb3f3N7xL755z9IQo1z3a",
+          StreakSizeFullBar: "_3232l-2EN_vmaNNFhu8wYg",
+          Tab: "_2oU8grgLlvrP-1kypqcmjG",
+          UserName: "_3tdBf9Fq7kubW0eXl3uhhM",
+          ConclusionName: "_1fViacRZXSttKAoUhRITId",
+          SummaryCtnShadow: "_2BWKGdK_xOyg1l3a2AgT4Z",
+          GridItem: "_1NKomKIPmTDGyDrAtz-2d4",
+          BackgroundImage: "_3wN5uwJqxQEIAmXkzKmCFm",
+          FriendCtn: "_64HO5Fgwc4BRCG8pcDvno",
+          TopGameBlockContainer: "DFb2vstqM2m5UIqllW6-z",
+          BackgroundImageFull: "_2BWkMEocB_PWAlCNnvwkpW",
+          OddGradient: "_31GzI9SB2Wj87sB13c7XHz",
+          EvenGradient: "_283mQrlso9fruh_DtsBP18",
+          TopMostGame: "_2PmC6qr8RF22oGrrTwa-Ai",
+          GamePlayDetails: "_3gAeRCR1lnQimVrfYKP6JD",
+          PlatformChartsCtn: "TSAyulrl5QSSKjK1gTZdg",
+          gradient: "_2kZoREa11DQ2pGPkasd9xs",
+          TopHonorsSection: "_3vxAkxTbGM_XzgF_jQu8MR",
+          SectionDesc: "CJ9awmTLX6bSz36NY4HT4",
+          IconAchievement: "_2vdLENzDQtBQjyAkyv9S_w",
+          IconGamesPlayed: "_3iBplwgmTqlW65lS36SzT2",
+          IconStreak: "_3muGaWbeottcWdmhZBqB53",
+          PlayBehaviorContainer: "_3g2ea3qJY6j67_cFF5Mgsq",
+          ProgressBarFilled: "_1LQbY-wdcf-dh-t3dkucGC",
+          ProgressBarFilledGradient: "_3aihmNXrhiBM33b7t7UKFC",
+          GameNewnessTitle: "_39lOiSYRWalnWaZ5SX3zhx",
+          NewActive: "_1sdItmmpaYbqIRLLUtrDrG",
+          DataBoxArrow: "_3ajjJPkrXfayfPA3Vivx-8",
+          Background: "A6FIZiuS0_nAypC7LbvhE",
+          UserData: "_1KHyWCx0wbs471k7TSRMAs",
+          DataBox: "_2c-eiPgDpepgIpD_jtHUzC",
+          SteamData: "_1yhuxYer1QE_Vm8FfAmsIa",
+          Border: "_1SA7sXKMgETCa_JaP3B6C4",
+          PercentageLabel: "_1c_OSzoiESQi8VycwjySgq",
+          Color: "_2dH3sotPVHLbsosd0aSRFe",
+          PercentageDescriptionLabel: "-_6lWC6tfX-A_YFsFXfOv",
+          UsedActive: "_3or6GTplqe7LbAyXhO8n4E",
+          OldActive: "_19DsdrAsV7SPTJTtHyxbx9",
+          AllGamesBGImage: "_2OdQZo0IGLXzoR4AUydRp3",
+          SeeRewindButton: "_1V87Pd_xyPBUjoW6T3yIYp",
+          MMFrame: "_1rm7lp0POJnMfv_wJCmj51",
+          MMOverride: "_3dXsGCw_Hqvycqp0ierI13",
+          Header: "_2Mb9gJJAqkyW-uwgteM7bR",
+          YearSubtitle: "_2JtAZbKQCRYsuq8Grhj9D_",
+          ReplayLogo: "mpZwdryoa_9MxYXp1Qr8Q",
+          ReplayLogoAccent: "_3TL2UyEq_QwjQ1KvR0c_LW",
+          Hashtag: "_2vAhvd0pJ4Bjao8aEg0lk0",
+          Avatar: "_1zOzJvJn7vryT-8zfXh6h4",
+          DataBlock: "_3AqjU369Dul6eM24tTW4Ro",
+          PersonaName: "_3C6Kgz1wyud6uRK9iRRtnZ",
+          ViewPageButton: "g4FuYY6kNOhx6ps41n66o",
+          Description: "_3ZFqletUdCzkvW-BpBfk0",
+          OtherYearLink: "_3_I-YXo6WE2pSgpSqOe90G",
+          BackgroundAnimation: "pim2eKmSTb2NQIYFR8-kO",
+          "ItemFocusAnim-darkerGrey-nocolor": "_34ksdmLRP6M-DL55A02DbT",
+          "ItemFocusAnim-darkerGrey": "_1rk5lOTR37WlC5N5CRPD_3",
+          "ItemFocusAnim-darkGreySettings": "_3fTyTKz8tIlcCsQ-iKdny7",
+          "ItemFocusAnim-darkGrey": "_1hxhmw8W2ifnYr2qLY4uPy",
+          "ItemFocusAnim-grey": "_3O7xVUyXHUO3jznnaVQkCj",
+          "ItemFocusAnim-translucent-white-10": "_3cPKti68OjsijubFhK8nJh",
+          "ItemFocusAnim-translucent-white-20": "_2WYaf97De-ZJ0mFANrqtDV",
+          "ItemFocusAnimBorder-darkGrey": "_2WH9L3RX3P6NaqBc2WQPlc",
+          "ItemFocusAnim-green": "_3YKGX14tVZ6u6O9dDCD9Sb",
+          focusAnimation: "_16qKuIfVUjk7_3Q-w67mSd",
+          hoverAnimation: "_2uOutcDfkb2CPTKk4_5i7l",
+        };
+      },
     },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      const _ = {
-          2022: __webpack_require__("chunkid"),
-          2023: __webpack_require__("chunkid"),
-          2024: __webpack_require__("chunkid"),
-          2025: __webpack_require__("chunkid"),
-        },
-        _ = Object.values(_).reduce(
-          (_, _) => ({
-            ..._,
-            ..._,
-          }),
-          {},
-        ),
-        _ = 2022;
-      function _(_) {
-        const [_, _] = (0, _.useState)({});
-        return (
-          (0, _.useEffect)(() => {
-            let _ = _[_];
-            _ || (_ = _[_]),
-              __webpack_require__({
-                ..._,
-                ..._,
-              });
-          }, [_]),
-          _
-        );
-      }
-    },
-  },
-]);
+  ]);
+})();

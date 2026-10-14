@@ -2,28 +2,28 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [22162],
+    [2162],
     {
-      15252: (A, i, c) => {
+      15252: (A, k, c) => {
         "use strict";
-        c.d(i, { Ae: () => r, EY: () => l, U6: () => d });
+        c.d(k, { Ae: () => r, EY: () => i, U6: () => _ });
         var e = c(7850),
           u = c(1039),
-          k = c(69289),
-          D = c(8928),
-          y = c(64238),
-          _ = c.n(y),
+          y = c(69289),
+          R = c(8928),
+          E = c(64238),
+          o = c.n(E),
           s = c(65274),
-          E = c.n(s);
-        function l(n) {
-          const { as: a = "span", ref: t, className: C, ...o } = n,
-            R = a;
-          return (0, e.jsx)(R, {
+          d = c.n(s);
+        function i(n) {
+          const { as: C = "span", ref: t, className: a, ...D } = n,
+            l = C;
+          return (0, e.jsx)(l, {
             ref: t,
-            ...(0, k.mz)({ ...o, className: _()(s.Text, C) }, r),
+            ...(0, y.mz)({ ...D, className: o()(s.Text, a) }, r),
           });
         }
-        const d = [
+        const _ = [
             {
               prop: "weight",
               responsive: !0,
@@ -39,13 +39,13 @@
             {
               prop: "color",
               responsive: !0,
-              cssProperty: (n, a, t) => {
-                var C;
+              cssProperty: (n, C, t) => {
+                var a;
                 return [
                   "--text-color",
-                  (0, k.To)(
+                  (0, y.To)(
                     n,
-                    (C = (0, u.I)(a.contrast, t)) != null ? C : "body",
+                    (a = (0, u.I)(C.contrast, t)) != null ? a : "body",
                   ),
                 ];
               },
@@ -53,12 +53,12 @@
             {
               prop: "contrast",
               responsive: !0,
-              cssProperty: (n, a, t) => {
-                var C;
+              cssProperty: (n, C, t) => {
+                var a;
                 return [
                   "--text-color",
-                  (0, k.To)(
-                    (C = (0, u.I)(a.color, t)) != null ? C : "text-body",
+                  (0, y.To)(
+                    (a = (0, u.I)(C.color, t)) != null ? a : "text-body",
                     n,
                   ),
                 ];
@@ -78,8 +78,8 @@
             },
           ],
           r = [
-            ...d,
-            ...D.L,
+            ..._,
+            ...R.L,
             {
               prop: "size",
               responsive: !0,
@@ -87,57 +87,49 @@
             },
           ];
       },
-      86336: (A, i, c) => {
+      86336: (A, k, c) => {
         "use strict";
-        c.d(i, { W: () => r, Y: () => l });
+        c.d(k, { W: () => r, Y: () => i });
         var e = c(7850),
           u = c(50122),
-          k = c.n(u),
-          D = c(15252),
-          y = c(69289),
-          _ = c(24660),
-          s = c(70182),
-          E = c(3166);
-        function l(n) {
-          var a;
-          const { underline: t = "auto", focusable: C, navProps: o, ...R } = n,
-            T = (0, E.Qn)(),
-            P =
-              (a = C != null ? C : o == null ? void 0 : o.focusable) != null
-                ? a
-                : !!R.href,
-            N = (0, y.mz)({ ...R, underline: t, className: u.TextLink }, d);
-          return T && (P || o)
-            ? (0, e.jsx)(_.Ii, { ...N, ...(o || {}), focusable: P })
-            : (0, e.jsx)("a", { ...N });
+          y = c.n(u),
+          R = c(15252),
+          E = c(69289),
+          o = c(70182),
+          s = c(3166),
+          d = c(2333);
+        function i(n) {
+          const { underline: C = "auto", ...t } = n,
+            a = (0, E.mz)({ ...t, underline: C, className: u.TextLink }, _);
+          return (0, e.jsx)(d.o, { ...a });
         }
-        const d = [
-          ...D.Ae,
+        const _ = [
+          ...R.Ae,
           { prop: "underline", className: (n) => u[`Underline-${n}`] },
         ];
         function r(n) {
-          var a;
-          const { underline: t = "auto", focusable: C, navProps: o, ...R } = n,
-            T = (0, E.Qn)(),
+          var C;
+          const { underline: t = "auto", focusable: a, navProps: D, ...l } = n,
+            T = (0, s.Qn)(),
             P =
-              (a = C != null ? C : o == null ? void 0 : o.focusable) != null
-                ? a
-                : !!R.onClick,
+              (C = a != null ? a : D == null ? void 0 : D.focusable) != null
+                ? C
+                : !!l.onClick,
             N = (0, e.jsx)("span", {
               role: "button",
-              ...(0, y.mz)(
-                { ...R, underline: t, className: u.TextLinkButton },
-                d,
+              ...(0, E.mz)(
+                { ...l, underline: t, className: u.TextLinkButton },
+                _,
               ),
             });
-          return T && (P || o)
-            ? (0, e.jsx)(s.J, { ...(o || {}), focusable: P, children: N })
+          return T && (P || D)
+            ? (0, e.jsx)(o.J, { ...(D || {}), focusable: P, children: N })
             : N;
         }
       },
-      33220: (A, i, c) => {
+      33220: (A, k, c) => {
         "use strict";
-        c.d(i, { rt: () => u });
+        c.d(k, { rt: () => u });
         var e = c(34104);
         function u(r) {
           switch (r == null ? void 0 : r.toUpperCase()) {
@@ -424,7 +416,7 @@
               return console.assert(!1, `Unhandled country code: ${r}`), e.CS;
           }
         }
-        function k(r) {
+        function y(r) {
           switch (r) {
             case k_ECurrencyCodeGBP:
               return "GBP";
@@ -522,7 +514,7 @@
               return "USD";
           }
         }
-        function D(r) {
+        function R(r) {
           switch (r) {
             case k_ECurrencyCodeUSD:
               return "US Dollar";
@@ -622,7 +614,7 @@
               return "";
           }
         }
-        function y(r, n = k_ERegionCodeInvalid) {
+        function E(r, n = k_ERegionCodeInvalid) {
           switch (r) {
             case k_ECurrencyCodeGBP:
               return "gbp";
@@ -728,7 +720,7 @@
                       : "usd";
           }
         }
-        function _(r) {
+        function o(r) {
           switch (r) {
             case k_ERegionCodeCIS:
               return "CIS";
@@ -843,7 +835,7 @@
             case "USD_SASIA":
               return k_ECurrencyCodeUSD;
             default:
-              return E(r)
+              return d(r)
                 ? s(r.substring(0, 3))
                 : Number.isInteger(Number(r))
                   ? Number(r)
@@ -854,22 +846,22 @@
                     k_ECurrencyCodeInvalid);
           }
         }
-        function E(r) {
+        function d(r) {
           return r.length == 6;
         }
-        function l(r) {
+        function i(r) {
           const n = s(r.slice(0, 3)),
-            a = r.slice(4, 6);
-          return { eCurrencyCode: n, strCountryCode: a };
+            C = r.slice(4, 6);
+          return { eCurrencyCode: n, strCountryCode: C };
         }
-        function d(r) {
+        function _(r) {
           const n = s(r.toUpperCase());
-          return `${D(n)} (${r})`;
+          return `${R(n)} (${r})`;
         }
       },
-      34104: (A, i, c) => {
+      34104: (A, k, c) => {
         "use strict";
-        c.d(i, {
+        c.d(k, {
           Bz: () => V,
           C6: () => B,
           CR: () => Y,
@@ -878,36 +870,36 @@
           D4: () => L,
           D5: () => p,
           DP: () => r,
-          En: () => a,
-          Fq: () => _,
+          En: () => C,
+          Fq: () => o,
           G1: () => O,
           G7: () => h,
           Gx: () => x,
           HQ: () => b,
-          JW: () => f,
+          JW: () => v,
           Jb: () => G,
           Jw: () => n,
-          KE: () => d,
+          KE: () => _,
           OD: () => X,
           S1: () => w,
           SJ: () => P,
           T_: () => I,
           WS: () => M,
           X0: () => Z,
-          a4: () => D,
-          aQ: () => o,
-          aU: () => v,
+          a4: () => R,
+          aQ: () => D,
+          aU: () => f,
           bO: () => m,
           bj: () => T,
-          cX: () => S,
-          cm: () => C,
+          cX: () => U,
+          cm: () => a,
           de: () => H,
           ds: () => N,
-          dz: () => k,
-          iU: () => E,
+          dz: () => y,
+          iU: () => d,
           jT: () => $,
           lK: () => z,
-          ln: () => y,
+          ln: () => E,
           m1: () => K,
           mh: () => j,
           rg: () => e,
@@ -916,31 +908,31 @@
           uZ: () => F,
           w7: () => g,
           wA: () => t,
-          xm: () => l,
+          xm: () => i,
           xt: () => J,
-          yR: () => R,
+          yR: () => l,
         });
         const e = 0,
           u = 1,
-          k = 2,
-          D = 3,
-          y = 4,
-          _ = 5,
+          y = 2,
+          R = 3,
+          E = 4,
+          o = 5,
           s = 6,
-          E = 7,
-          l = 8,
-          d = 9,
+          d = 7,
+          i = 8,
+          _ = 9,
           r = 10,
           n = 11,
-          a = 12,
+          C = 12,
           t = 13,
-          C = 14,
-          o = 15,
-          R = 16,
+          a = 14,
+          D = 15,
+          l = 16,
           T = 17,
           P = 18,
           N = 19,
-          S = 20,
+          U = 20,
           K = 21,
           M = 22,
           B = 23,
@@ -953,8 +945,8 @@
           G = 30,
           Y = 31,
           W = 32,
-          f = 33,
-          v = 34,
+          v = 33,
+          f = 34,
           h = 35,
           $ = 36,
           Z = 37,
@@ -969,8 +961,8 @@
           b = 46,
           Q = 47,
           j = 48;
-        function re(U) {
-          return typeof U == "number" && U > e && U < j;
+        function re(S) {
+          return typeof S == "number" && S > e && S < j;
         }
         function ce() {
           return [
@@ -1023,28 +1015,28 @@
             "RON",
           ];
         }
-        const q = [T, v];
+        const q = [T, f];
         function ee() {
           return [
             u,
-            k,
-            D,
             y,
-            _,
-            s,
+            R,
             E,
-            l,
+            o,
+            s,
             d,
+            i,
+            _,
             r,
             n,
-            a,
-            t,
             C,
-            o,
-            R,
+            t,
+            a,
+            D,
+            l,
             P,
             N,
-            S,
+            U,
             K,
             M,
             B,
@@ -1066,42 +1058,42 @@
           ];
         }
         function ne() {
-          return [...ee(), ...q, f, J, V, X, w, b, Q];
+          return [...ee(), ...q, v, J, V, X, w, b, Q];
         }
       },
-      27894: (A, i, c) => {
+      27894: (A, k, c) => {
         "use strict";
-        c.d(i, { n: () => y });
+        c.d(k, { n: () => E });
         var e = c(7850),
           u = c(72865),
-          k = c(72609);
-        function D(_) {
+          y = c(72609);
+        function R(o) {
           const {
               storeItem: s,
-              feature: E,
-              depth: l,
-              children: d,
+              feature: d,
+              depth: i,
+              children: _,
               noImpressionTracking: r,
               ...n
-            } = _,
-            a = s == null ? void 0 : s.appid,
-            t = y(s);
-          if (!s) return d;
-          const C = jsx(FocusableAnchor, { ...n, href: t, children: d });
-          return a && !r
+            } = o,
+            C = s == null ? void 0 : s.appid,
+            t = E(s);
+          if (!s) return _;
+          const a = jsx(FocusableAnchor, { ...n, href: t, children: _ });
+          return C && !r
             ? jsx(ImpressionTrackedElement, {
-                appID: a,
-                feature: E,
-                depth: l,
-                children: C,
+                appID: C,
+                feature: d,
+                depth: i,
+                children: a,
               })
-            : C;
+            : a;
         }
-        function y(_, s, E) {
+        function E(o, s, d) {
           return (0, u.aL)(
-            _ ? `${k.TS.STORE_BASE_URL}${_.store_url_path}` : void 0,
+            o ? `${y.TS.STORE_BASE_URL}${o.store_url_path}` : void 0,
             s,
-            E,
+            d,
           );
         }
       },

@@ -2,7 +2,7 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [70349],
+    [349],
     {
       28946: (k, w, t) => {
         "use strict";

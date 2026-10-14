@@ -1056,6 +1056,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -1066,6 +1067,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -1076,6 +1078,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -1086,6 +1089,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -1097,6 +1101,7 @@
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -1109,6 +1114,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3169,6 +3175,7 @@
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -3212,6 +3219,7 @@
                 bConstMethod: !0,
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -8459,7 +8467,8 @@
                     "_" +
                     _.forum_id +
                     "_" +
-                    _.topic_id;
+                    _.topic_id +
+                    (_.brate_limited ? "_ratelimited" : "");
                   let _ = _.findIndex((_) => _.rollup_key == _);
                   if (_ == -1)
                     _.push({
@@ -8756,6 +8765,7 @@
                 last_post: _.last_post,
                 bsubscribed: _(_.subscribed),
                 bis_owner: _(_.bis_owner),
+                brate_limited: !!_.brate_limited,
               };
               return (
                 _.json_data &&

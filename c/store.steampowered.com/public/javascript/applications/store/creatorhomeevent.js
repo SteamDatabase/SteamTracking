@@ -1527,18 +1527,235 @@
               }),
           });
         }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        function _(_, _) {
+          return _
+            ? _
+              ? !!_.valve_admin
+              : !!(_.valve_admin || _.support_user)
+            : !1;
+        }
+        function _(_, _) {
+          const _ = !!(_ && _.BIsClanAccount()),
+            { data: _ } = (0, _._)(_ ? _.GetAccountID() : 0);
+          return _ && _(_, _);
+        }
+        function _(_) {
+          const { clanSteamID: _, _: _ } = _;
+          return _(_, _.requireAdmin)
+            ? (0, _.jsx)("div", {
+                _: _,
+                className: (0, _._)(
+                  _.className,
+                  _.requireAdmin
+                    ? _.ValveOnlyAdminBackground
+                    : _.ValveOnlyBackground,
+                ),
+                children: _.children,
+              })
+            : null;
+        }
         var _ = __webpack_require__("chunkid");
+        const _ = 12,
+          _ = 240;
+        function _(_) {
+          const { event: _ } = _,
+            [_] = (0, _._)(_._, void 0),
+            [_, _] = _.useState(!1),
+            _ = (0, _._)("rgMLRecommenderWishlist", "application_config"),
+            _ = Array.isArray(_) && _.length > 0 && Number.isInteger(_[0]);
+          return !_.BIsNextFest() || !_ || _ == _._.Random || (0, _._)(_) > 0
+            ? null
+            : (0, _.jsxs)(_, {
+                clanSteamID: _.clanSteamID,
+                className: _().Ctn,
+                children: [
+                  (0, _.jsxs)(_._, {
+                    className: _().Header,
+                    onClick: () => _(!_),
+                    children: [
+                      _ ? "\u25BC" : "\u25B6",
+                      " Next Fest personalized order (VO)",
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsx)(_, {
+                      event: _,
+                      rgRecommendedAppIDs: _,
+                    }),
+                ],
+              });
+        }
+        function _(_) {
+          const { event: _, rgRecommendedAppIDs: _ } = _,
+            [_, _] = _.useState(void 0);
+          (0, _._)(_, _._);
+          const [_, _] = _.useState(void 0),
+            [_, _] = _.useState(""),
+            _ = _.jsondata.sale_ml_recommender_weight_exponent || _._,
+            _ = parseFloat(_),
+            _ = _ ?? (0, _._)(_),
+            _ = _ || _,
+            _ = _.useMemo(() => (0, _._)(_, _, (_) => _, _, _), [_, _, _]),
+            _ = _.useMemo(() => new Map(_.map((_, _) => [_, _])), [_]),
+            _ = _.useMemo(() => new Map(_.map((_, _) => [_, _])), [_]),
+            _ = _.length,
+            _ = (_) => _._.Get().GetApp(_)?.GetName() ?? `App ${_}`,
+            _ = (_) => `hsl(${Math.round((240 * _.get(_)) / _)}, 80%, 65%)`,
+            _ = (_, _) =>
+              (0, _.jsx)(
+                "div",
+                {
+                  className: (0, _._)(_().Row, _ == _ && _().Highlighted),
+                  style: {
+                    height: _,
+                    color: _(_),
+                  },
+                  title: `${_(_)} (${_}): recommended #${_.get(_) + 1}, shuffled to #${_.get(_) + 1}`,
+                  onMouseEnter: () => _(_),
+                  children: _,
+                },
+                _,
+              ),
+            _ = (_, _) =>
+              (0, _.jsx)(
+                "line",
+                {
+                  _: 0,
+                  _: (_.get(_) + 0.5) * _,
+                  _: _,
+                  _: (_.get(_) + 0.5) * _,
+                  stroke: _ ? "white" : _(_),
+                  strokeWidth: _ ? 2 : 1,
+                  strokeOpacity: _ ? 1 : _ === void 0 ? 0.6 : 0.15,
+                },
+                _,
+              );
+          return (0, _.jsxs)("div", {
+            className: _().Body,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().Summary,
+                children: [
+                  _,
+                  " recommendations, exponent ",
+                  _,
+                  _ < 0 && " (shuffle disabled)",
+                  ", seed ",
+                  _,
+                  ". Apps that aren't recommended are placed after these in a uniform random order. Each section shows the apps it contains in this same relative order. Hover a row to highlight it.",
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _().Controls,
+                children: [
+                  (0, _.jsx)(_._, {
+                    className: _().ControlButton,
+                    onClick: () => _(_._()),
+                    children: "Reshuffle",
+                  }),
+                  (0, _.jsxs)("label", {
+                    children: [
+                      "Exponent",
+                      " ",
+                      (0, _.jsx)("input", {
+                        type: "number",
+                        min: -1,
+                        step: 0.1,
+                        className: _().ExponentInput,
+                        placeholder: String(_),
+                        value: _,
+                        onChange: (_) => _(_.target.value),
+                      }),
+                    ],
+                  }),
+                  (_ !== void 0 || _ != "") &&
+                    (0, _.jsx)(_._, {
+                      className: _().ControlButton,
+                      onClick: () => {
+                        _(void 0), _("");
+                      },
+                      children: "Reset to page's order",
+                    }),
+                  (0, _.jsx)("span", {
+                    children: "Only affects this chart, not the page",
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _().Chart,
+                onMouseLeave: () => _(void 0),
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().Column,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().ColumnTitle,
+                        children: "Recommended order",
+                      }),
+                      _.map((_, _) => _(_, `#${_ + 1} ${_(_)}`)),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().Column,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().ColumnTitle,
+                        children: "\xA0",
+                      }),
+                      (0, _.jsxs)("svg", {
+                        width: _,
+                        height: _ * _,
+                        children: [
+                          _.filter((_) => _ != _).map((_) => _(_, !1)),
+                          _ !== void 0 && _.has(_) && _(_, !0),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().Column,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().ColumnTitle,
+                        children: "Shuffled order",
+                      }),
+                      _.map((_) => _(_, `#${_.get(_) + 1} ${_(_)}`)),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
+        }
         function _(_) {
           const {
             event: _,
             fnOnChangeDayIndex: _,
             addtionalAdminButtons: _,
           } = _;
-          return (0, _.jsx)(_._, {
-            eventModel: _,
-            fnOnUpdateSaleDayIndex: _,
-            addtionalAdminButtons: _,
-            bSupportsSticky: !0,
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
+                event: _,
+              }),
+              (0, _.jsx)(_._, {
+                eventModel: _,
+                fnOnUpdateSaleDayIndex: _,
+                addtionalAdminButtons: _,
+                bSupportsSticky: !0,
+              }),
+            ],
           });
         }
         var _ = __webpack_require__("chunkid"),
@@ -1674,7 +1891,6 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _, _, _) {
           let _ = _.jsondata.sale_background_img_groups.groups.find(
@@ -1797,7 +2013,6 @@
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         function _(_) {
@@ -1860,35 +2075,7 @@
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_, _) {
-          return _
-            ? _
-              ? !!_.valve_admin
-              : !!(_.valve_admin || _.support_user)
-            : !1;
-        }
-        function _(_, _) {
-          const _ = !!(_ && _.BIsClanAccount()),
-            { data: _ } = (0, _._)(_ ? _.GetAccountID() : 0);
-          return _ && _(_, _);
-        }
-        function _(_) {
-          const { clanSteamID: _, _: _ } = _;
-          return _(_, _.requireAdmin)
-            ? (0, _.jsx)("div", {
-                _: _,
-                className: (0, _._)(
-                  _.className,
-                  _.requireAdmin
-                    ? _.ValveOnlyAdminBackground
-                    : _.ValveOnlyBackground,
-                ),
-                children: _.children,
-              })
-            : null;
-        }
-        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -3237,7 +3424,6 @@
           });
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
@@ -5704,6 +5890,7 @@
           );
         }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const {
@@ -6000,6 +6187,7 @@
           let _ = null;
           const _ = (0, _._)(),
             _ = (0, _._)(),
+            _ = (0, _._)(_),
             _ = _.useMemo(() => {
               const _ = _();
               if (!_) return;
@@ -6015,7 +6203,7 @@
                 _.GetContentHubTag(),
               ),
               _ = _ && !_ && !_.jsondata.content_hub_restricted_width;
-            let _ = (0, _._)(_, _, _, _, _);
+            let _ = (0, _._)(_, _, _, _, _, _);
             if (_ === void 0) return;
             if (!_)
               if ((0, _._)(_) && !_._.logged_in)
@@ -6433,9 +6621,40 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        const _ = _.Fragment;
+        function _(_) {
+          const { event: _ } = _.context,
+            _ = Number.parseInt((0, _._)(_.args)),
+            _ = _.useMemo(() => {
+              if (_)
+                return _.jsondata.sale_sections?.find(
+                  (_) =>
+                    _.section_type == "vo_internal" &&
+                    (_.internal_section_data?.internal_type ==
+                      "reservation_widget" ||
+                      _.internal_section_data?.internal_type ==
+                        "while_supplies_last"),
+                );
+            }, [_]);
+          if (_ && _) {
+            const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
+              _ = Number.parseInt((0, _._)(_.args, "psulesspackageid")),
+              _ = (0, _._)(_.args, "out_of_stock_override"),
+              _ = (0, _._)(_.args, "delivery_override"),
+              _ = (0, _._)(_.args, "delivery_override_out_of_stock");
+            return (0, _.jsx)(_, {
+              section: _,
+              reservationPackageID: _,
+              depositPackageID: _,
+              psuLessPackageID: _,
+              strOutOfStockOverride: _,
+              strDeliveryOverride: _ || _,
+              bDeliveryOverrideOnlyIfOutOfStock: !!_,
+              PreviewActions: _.PreviewActions,
+            });
+          }
+          return (0, _.jsx)(_.Fragment, {});
+        }
         function _(_) {
           const {
               reservationPackageID: _,
@@ -6446,6 +6665,7 @@
               strDeliveryOverride: _,
               bDeliveryOverrideOnlyIfOutOfStock: _,
               section: _,
+              PreviewActions: _,
             } = _,
             { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)(_),
@@ -6485,13 +6705,14 @@
                 : void 0;
           return (0, _.jsxs)(_._, {
             children: [
-              (0, _.jsx)(_.Suspense, {
-                fallback: null,
-                children: (0, _.jsx)(_, {
-                  bIsPreview: !!_,
-                  rgReservationDef: _,
+              _ &&
+                (0, _.jsx)(_.Suspense, {
+                  fallback: null,
+                  children: (0, _.jsx)(_, {
+                    bIsPreview: !!_,
+                    rgReservationDef: _,
+                  }),
                 }),
-              }),
               !!_.allow_purchase_in_country &&
                 (0, _.jsxs)("div", {
                   className: _[0].unique_id,
@@ -6522,26 +6743,8 @@
             ],
           });
         }
-        function _(_) {
-          if (_?.bDepositRequired) {
-            if (
-              _.rgDepositPackageInfo &&
-              _.rgDepositPackageInfo?.length > 0 &&
-              _.rgDepositPackageInfo.filter((_) => _.bVisible).length == 0 &&
-              _?.rgReservationPackageInfo &&
-              _?.rgReservationPackageInfo?.length > 0 &&
-              _?.rgReservationPackageInfo.filter((_) => _.bVisible).length == 0
-            )
-              return !1;
-          } else if (
-            _?.rgReservationPackageInfo &&
-            _?.rgReservationPackageInfo?.length > 0 &&
-            _?.rgReservationPackageInfo.filter((_) => _.bVisible).length == 0
-          )
-            return !1;
-          return !0;
-        }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -6616,6 +6819,37 @@
             color: _,
             bgcolor: _,
           });
+        }
+        var _ = __webpack_require__("chunkid");
+        function _(_) {
+          const _ = Number(_.args.packageid);
+          return _
+            ? (0, _.jsx)(_._, {
+                packageID: _,
+                display_style: (0, _._)(_.args.display),
+              })
+            : null;
+        }
+        function _(_) {
+          const _ = Number(_.args.packageid),
+            _ = Number(_.args.compareid);
+          return !_ || !_
+            ? null
+            : (0, _.jsx)(_._, {
+                packageID: _,
+                compareID: _,
+              });
+        }
+        function _(_) {
+          const _ = _.args[""]?.trim();
+          return _
+            ? (0, _.jsx)("div", {
+                className: _,
+                children: _.children,
+              })
+            : (0, _.jsx)(_.Fragment, {
+                children: _.children,
+              });
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -6708,6 +6942,34 @@
                     autocloses: !1,
                   },
                 ],
+                [
+                  "classname",
+                  {
+                    Constructor: _,
+                    autocloses: !1,
+                  },
+                ],
+                [
+                  "price",
+                  {
+                    Constructor: _,
+                    autocloses: !1,
+                  },
+                ],
+                [
+                  "pricesavings",
+                  {
+                    Constructor: _,
+                    autocloses: !1,
+                  },
+                ],
+                [
+                  "reservationbutton",
+                  {
+                    Constructor: _,
+                    autocloses: !1,
+                  },
+                ],
               ])),
             _
           );
@@ -6790,26 +7052,6 @@
                       ],
                     }),
                 ],
-              });
-        }
-        var _ = __webpack_require__("chunkid");
-        function _(_) {
-          const _ = Number(_.args.packageid);
-          return _
-            ? (0, _.jsx)(_._, {
-                packageID: _,
-                display_style: (0, _._)(_.args.display),
-              })
-            : null;
-        }
-        function _(_) {
-          const _ = Number(_.args.packageid),
-            _ = Number(_.args.compareid);
-          return !_ || !_
-            ? null
-            : (0, _.jsx)(_._, {
-                packageID: _,
-                compareID: _,
               });
         }
         var _ = __webpack_require__("chunkid"),
@@ -7009,28 +7251,7 @@
                   },
                 ],
                 [
-                  "price",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "pricesavings",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
                   "eventdoorvisibility",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "chooseaccount",
                   {
                     Constructor: _,
                     autocloses: !1,
@@ -7045,13 +7266,6 @@
                 ],
                 [
                   "optindoorquest",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "classname",
                   {
                     Constructor: _,
                     autocloses: !1,
@@ -7162,25 +7376,6 @@
               : null;
         }
         function _(_) {
-          if (_._.logged_in) {
-            const _ = Number.parseInt((0, _._)(_.args)),
-              _ = Number.parseInt((0, _._)(_.args, "mod"));
-            if (_ > 0 && _ < _ && _._.accountid % _ == _) return _.children;
-          }
-          return null;
-        }
-        function _(_) {
-          const _ = (0, _._)(_.args);
-          return _?.trim().length > 0
-            ? (0, _.jsx)("div", {
-                className: _.trim(),
-                children: _.children,
-              })
-            : (0, _.jsx)(_.Fragment, {
-                children: _.children,
-              });
-        }
-        function _(_) {
           return (0, _.jsx)("span", {
             className: _.LocalizeBlock,
             children: (0, _._)(
@@ -7200,37 +7395,12 @@
               })
             : (0, _.jsx)(_.Fragment, {});
         }
+        const _ = void 0;
         function _(_) {
-          const { showErrorInfo: _, event: _ } = _.context,
-            _ = Number.parseInt((0, _._)(_.args)),
-            _ = _.useMemo(() => {
-              if (_)
-                return _.jsondata.sale_sections?.find(
-                  (_) =>
-                    _.section_type == "vo_internal" &&
-                    (_.internal_section_data?.internal_type ==
-                      "reservation_widget" ||
-                      _.internal_section_data?.internal_type ==
-                        "while_supplies_last"),
-                );
-            }, [_]);
-          if (_ && _) {
-            const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
-              _ = Number.parseInt((0, _._)(_.args, "psulesspackageid")),
-              _ = (0, _._)(_.args, "out_of_stock_override"),
-              _ = (0, _._)(_.args, "delivery_override"),
-              _ = (0, _._)(_.args, "delivery_override_out_of_stock");
-            return (0, _.jsx)(_, {
-              section: _,
-              reservationPackageID: _,
-              depositPackageID: _,
-              psuLessPackageID: _,
-              strOutOfStockOverride: _,
-              strDeliveryOverride: _ || _,
-              bDeliveryOverrideOnlyIfOutOfStock: !!_,
-            });
-          }
-          return (0, _.jsx)(_.Fragment, {});
+          return (0, _.jsx)(_, {
+            ..._,
+            PreviewActions: _,
+          });
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
@@ -7593,6 +7763,22 @@
           ExampleSpacer: "oAEZygc5smKi6PjD-981",
           BroadcastPreviewContainer: "_3aLcrZxS4I4KVtUF0BdHds",
           SaleHeaderPreviewContainer: "GORXZE3lrdjE-QiVxXceW",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          Ctn: "_1fmjHmozlsZ8ZXlDnql4Pe",
+          Header: "_1gKvHUxWanEHu-0GbjB4KV",
+          Body: "_3tPVeOGZDIVgS7KGdpTsXB",
+          Summary: "_3hyLqEQDWP9Sck6GY2mO9_",
+          Controls: "_2GkioR72RQBbHku00uxt47",
+          ControlButton: "_3ObP_u1dEak3ra2LLM7GVb",
+          ExponentInput: "_3a0Hx5NOSuPBHi9gp7kT2I",
+          Chart: "_2F7VrAMPKV6N4hhdOm4v6B",
+          Column: "FhDnO3NBSjZkWQv3No3N3",
+          ColumnTitle: "_2SG3j7hLVHdpo3WooeBJiv",
+          Row: "_2-m8vjFf_-iwN09EHqQm7c",
+          Highlighted: "kWJDRycQPH53McjlfFjQ-",
         };
       },
       chunkid: (module) => {

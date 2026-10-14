@@ -134,8 +134,9 @@
               onClose: _,
               navID: "CartModal",
               strTitle: _,
-              children: (0, _.jsxs)("div", {
+              children: (0, _.jsxs)(_._, {
                 className: _.ShoppingCartModalContent,
+                "flow-children": "column",
                 children: [
                   (0, _.jsx)(_._, {
                     lineItems: _,

@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [46662],
+    [6662],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -7492,7 +7492,7 @@
                     }),
                   _ &&
                     (0, _.jsx)(_._, {
-                      toolTipContent: "#Sale_ShowCreatorHome_ttip",
+                      toolTipContent: (0, _._)("#Sale_ShowCreatorHome_ttip"),
                       direction: "top",
                       children: (0, _.jsx)("div", {
                         className: _.InputBorder,
@@ -7603,7 +7603,7 @@
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
-                toolTipContent: "#Sale_OwnershipRestrictions_ttip",
+                toolTipContent: (0, _._)("#Sale_OwnershipRestrictions_ttip"),
                 direction: "top",
                 children: (0, _.jsx)("div", {
                   className: _.InputBorder,
@@ -7702,7 +7702,9 @@
                   ],
                 }),
               (0, _.jsx)(_._, {
-                toolTipContent: "#Sale_PartnerAppEditRestrictions_ttip",
+                toolTipContent: (0, _._)(
+                  "#Sale_PartnerAppEditRestrictions_ttip",
+                ),
                 direction: "top",
                 children: (0, _.jsx)("div", {
                   className: _.InputBorder,
@@ -8139,9 +8141,10 @@
         var _ = __webpack_require__("chunkid");
         function _(_) {
           const { editModel: _ } = _,
-            [_, _] = (0, _._)(() => [
+            [_, _, _] = (0, _._)(() => [
               _.GetEventModel().BIsNextFest(),
               _.GetEventModel().jsondata.sale_ml_recommender_delay_hours,
+              _.GetEventModel().jsondata.sale_ml_recommender_weight_exponent,
             ]);
           return _
             ? (0, _.jsxs)("div", {
@@ -8217,6 +8220,23 @@
                         _.SetDirty(_._.jsondata_sales);
                     },
                     placeholder: String(1e4),
+                    value: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    type: "number",
+                    mustBeNumeric: !0,
+                    rangeMin: -1,
+                    label: "Recommendation weight exponent",
+                    tooltip:
+                      "After the randomization delay, items are shuffled weighted by their ML recommended rank. Higher values keep the top recommendations closer to the front. Leave empty or 0 to use the default of " +
+                      _._ +
+                      ". Set to -1 to disable shuffling and use the exact recommended order.",
+                    onChange: (_) => {
+                      (_.GetEventModel().jsondata.sale_ml_recommender_weight_exponent =
+                        Number(_.target.value)),
+                        _.SetDirty(_._.jsondata_sales);
+                    },
+                    placeholder: String(_._),
                     value: _,
                   }),
                 ],
@@ -19620,9 +19640,47 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        const _ = _.Fragment;
+        function _(_) {
+          const { event: _ } = _.context,
+            _ = Number.parseInt((0, _._)(_.args)),
+            _ = _.useMemo(() => {
+              var _;
+              if (_)
+                return (_ = _.jsondata.sale_sections) == null
+                  ? void 0
+                  : _.find((_) => {
+                      var _, _;
+                      return (
+                        _.section_type == "vo_internal" &&
+                        (((_ = _.internal_section_data) == null
+                          ? void 0
+                          : _.internal_type) == "reservation_widget" ||
+                          ((_ = _.internal_section_data) == null
+                            ? void 0
+                            : _.internal_type) == "while_supplies_last")
+                      );
+                    });
+            }, [_]);
+          if (_ && _) {
+            const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
+              _ = Number.parseInt((0, _._)(_.args, "psulesspackageid")),
+              _ = (0, _._)(_.args, "out_of_stock_override"),
+              _ = (0, _._)(_.args, "delivery_override"),
+              _ = (0, _._)(_.args, "delivery_override_out_of_stock");
+            return (0, _.jsx)(_, {
+              section: _,
+              reservationPackageID: _,
+              depositPackageID: _,
+              psuLessPackageID: _,
+              strOutOfStockOverride: _,
+              strDeliveryOverride: _ || _,
+              bDeliveryOverrideOnlyIfOutOfStock: !!_,
+              PreviewActions: _.PreviewActions,
+            });
+          }
+          return (0, _.jsx)(_.Fragment, {});
+        }
         function _(_) {
           const {
               reservationPackageID: _,
@@ -19633,6 +19691,7 @@
               strDeliveryOverride: _,
               bDeliveryOverrideOnlyIfOutOfStock: _,
               section: _,
+              PreviewActions: _,
             } = _,
             { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)(_),
@@ -19672,13 +19731,14 @@
                 : void 0;
           return (0, _.jsxs)(_._, {
             children: [
-              (0, _.jsx)(_.Suspense, {
-                fallback: null,
-                children: (0, _.jsx)(_, {
-                  bIsPreview: !!_,
-                  rgReservationDef: _,
+              _ &&
+                (0, _.jsx)(_.Suspense, {
+                  fallback: null,
+                  children: (0, _.jsx)(_, {
+                    bIsPreview: !!_,
+                    rgReservationDef: _,
+                  }),
                 }),
-              }),
               !!_.allow_purchase_in_country &&
                 (0, _.jsxs)("div", {
                   className: _[0].unique_id,
@@ -19709,39 +19769,8 @@
             ],
           });
         }
-        function _(_) {
-          var _, _, _;
-          if (_ != null && _.bDepositRequired) {
-            if (
-              _.rgDepositPackageInfo &&
-              ((_ = _.rgDepositPackageInfo) == null ? void 0 : _.length) > 0 &&
-              _.rgDepositPackageInfo.filter((_) => _.bVisible).length == 0 &&
-              _ != null &&
-              _.rgReservationPackageInfo &&
-              ((_ = _ == null ? void 0 : _.rgReservationPackageInfo) == null
-                ? void 0
-                : _.length) > 0 &&
-              (_ == null
-                ? void 0
-                : _.rgReservationPackageInfo.filter((_) => _.bVisible)
-                    .length) == 0
-            )
-              return !1;
-          } else if (
-            _ != null &&
-            _.rgReservationPackageInfo &&
-            ((_ = _ == null ? void 0 : _.rgReservationPackageInfo) == null
-              ? void 0
-              : _.length) > 0 &&
-            (_ == null
-              ? void 0
-              : _.rgReservationPackageInfo.filter((_) => _.bVisible).length) ==
-              0
-          )
-            return !1;
-          return !0;
-        }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -19814,14 +19843,44 @@
             bgcolor: _,
           });
         }
+        var _ = __webpack_require__("chunkid");
+        function _(_) {
+          const _ = Number(_.args.packageid);
+          return _
+            ? (0, _.jsx)(_._, {
+                packageID: _,
+                display_style: (0, _._)(_.args.display),
+              })
+            : null;
+        }
+        function _(_) {
+          const _ = Number(_.args.packageid),
+            _ = Number(_.args.compareid);
+          return !_ || !_
+            ? null
+            : (0, _.jsx)(_._, {
+                packageID: _,
+                compareID: _,
+              });
+        }
+        function _(_) {
+          var _;
+          const _ = (_ = _.args[""]) == null ? void 0 : _.trim();
+          return _
+            ? (0, _.jsx)("div", {
+                className: _,
+                children: _.children,
+              })
+            : (0, _.jsx)(_.Fragment, {
+                children: _.children,
+              });
+        }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          const { clanAccountID: _, color: _, bgcolor: _ } = _;
-          (0, _._)();
-          const [_, _] = _.useState(!1);
+          const { clanAccountID: _, color: _, bgcolor: _ } = _,
+            [_, _] = _.useState(!1);
           return (0, _.jsx)("div", {
             className: (0, _._)(_().BBCodeFollowButton, _ && _().isHovered),
             onMouseEnter: () => _(!0),
@@ -19908,6 +19967,34 @@
                     autocloses: !1,
                   },
                 ],
+                [
+                  "classname",
+                  {
+                    Constructor: _,
+                    autocloses: !1,
+                  },
+                ],
+                [
+                  "price",
+                  {
+                    Constructor: _,
+                    autocloses: !1,
+                  },
+                ],
+                [
+                  "pricesavings",
+                  {
+                    Constructor: _,
+                    autocloses: !1,
+                  },
+                ],
+                [
+                  "reservationbutton",
+                  {
+                    Constructor: _,
+                    autocloses: !1,
+                  },
+                ],
               ])),
             _
           );
@@ -19989,26 +20076,6 @@
                       ],
                     }),
                 ],
-              });
-        }
-        var _ = __webpack_require__("chunkid");
-        function _(_) {
-          const _ = Number(_.args.packageid);
-          return _
-            ? (0, _.jsx)(_._, {
-                packageID: _,
-                display_style: (0, _._)(_.args.display),
-              })
-            : null;
-        }
-        function _(_) {
-          const _ = Number(_.args.packageid),
-            _ = Number(_.args.compareid);
-          return !_ || !_
-            ? null
-            : (0, _.jsx)(_._, {
-                packageID: _,
-                compareID: _,
               });
         }
         var _ = __webpack_require__("chunkid"),
@@ -20214,28 +20281,7 @@
                   },
                 ],
                 [
-                  "price",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "pricesavings",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
                   "eventdoorvisibility",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "chooseaccount",
                   {
                     Constructor: _,
                     autocloses: !1,
@@ -20250,13 +20296,6 @@
                 ],
                 [
                   "optindoorquest",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "classname",
                   {
                     Constructor: _,
                     autocloses: !1,
@@ -20368,25 +20407,6 @@
               : null;
         }
         function _(_) {
-          if (_._.logged_in) {
-            const _ = Number.parseInt((0, _._)(_.args)),
-              _ = Number.parseInt((0, _._)(_.args, "mod"));
-            if (_ > 0 && _ < _ && _._.accountid % _ == _) return _.children;
-          }
-          return null;
-        }
-        function _(_) {
-          const _ = (0, _._)(_.args);
-          return (_ == null ? void 0 : _.trim().length) > 0
-            ? (0, _.jsx)("div", {
-                className: _.trim(),
-                children: _.children,
-              })
-            : (0, _.jsx)(_.Fragment, {
-                children: _.children,
-              });
-        }
-        function _(_) {
           return (0, _.jsx)("span", {
             className: _.LocalizeBlock,
             children: (0, _._)(
@@ -20406,44 +20426,12 @@
               })
             : (0, _.jsx)(_.Fragment, {});
         }
+        const _ = void 0;
         function _(_) {
-          const { showErrorInfo: _, event: _ } = _.context,
-            _ = Number.parseInt((0, _._)(_.args)),
-            _ = _.useMemo(() => {
-              var _;
-              if (_)
-                return (_ = _.jsondata.sale_sections) == null
-                  ? void 0
-                  : _.find((_) => {
-                      var _, _;
-                      return (
-                        _.section_type == "vo_internal" &&
-                        (((_ = _.internal_section_data) == null
-                          ? void 0
-                          : _.internal_type) == "reservation_widget" ||
-                          ((_ = _.internal_section_data) == null
-                            ? void 0
-                            : _.internal_type) == "while_supplies_last")
-                      );
-                    });
-            }, [_]);
-          if (_ && _) {
-            const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
-              _ = Number.parseInt((0, _._)(_.args, "psulesspackageid")),
-              _ = (0, _._)(_.args, "out_of_stock_override"),
-              _ = (0, _._)(_.args, "delivery_override"),
-              _ = (0, _._)(_.args, "delivery_override_out_of_stock");
-            return (0, _.jsx)(_, {
-              section: _,
-              reservationPackageID: _,
-              depositPackageID: _,
-              psuLessPackageID: _,
-              strOutOfStockOverride: _,
-              strDeliveryOverride: _ || _,
-              bDeliveryOverrideOnlyIfOutOfStock: !!_,
-            });
-          }
-          return (0, _.jsx)(_.Fragment, {});
+          return (0, _.jsx)(_, {
+            ..._,
+            PreviewActions: _,
+          });
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),

@@ -6,98 +6,98 @@
     {
       84607: (v, g, t) => {
         "use strict";
-        t.d(g, { a: () => c });
+        t.d(g, { a: () => l });
         var e = t(7850),
-          l = t(89667),
-          C = t(72838),
-          f = t(42240),
-          n = t(39239),
-          u = t(36707),
-          i = t(76532),
-          s = t.n(i);
-        function c(a) {
+          i = t(89667),
+          u = t(72838),
+          h = t(42240),
+          r = t(39239),
+          m = t(36707),
+          c = t(76532),
+          a = t.n(c);
+        function l(f) {
           const {
-              id: r,
-              imageType: d,
-              bPreferAssetWithoutOverride: o,
-              strAdditionalClassName: m,
-              bNoShadow: p,
-            } = a,
-            { storeItemAsset: _, storeItemDefaultInfo: E } = (0, l.q)(r, d, o);
-          if (d === "library" || d == "vertical")
-            return (0, e.jsx)(C.G, {
-              id: r,
-              bPreferAssetWithoutOverride: o,
-              bNoShadow: p,
+              id: s,
+              imageType: o,
+              bPreferAssetWithoutOverride: n,
+              strAdditionalClassName: d,
+              bNoShadow: E,
+            } = f,
+            { storeItemAsset: _, storeItemDefaultInfo: C } = (0, i.q)(s, o, n);
+          if (o === "library" || o == "vertical")
+            return (0, e.jsx)(u.G, {
+              id: s,
+              bPreferAssetWithoutOverride: n,
+              bNoShadow: E,
             });
-          let h = "";
+          let p = "";
           if (
-            (d === "main"
-              ? (h = s().MainCapsuleImageContainer)
-              : (h = s().HeaderCapsuleImageContainer),
-            _ === void 0 || !E)
+            (o === "main"
+              ? (p = a().MainCapsuleImageContainer)
+              : (p = a().HeaderCapsuleImageContainer),
+            _ === void 0 || !C)
           )
             return (0, e.jsx)("div", {
-              className: (0, u.A)(h, "CapsuleImageCtn", m),
+              className: (0, m.A)(p, "CapsuleImageCtn", d),
             });
           if (_ == null) return null;
-          let M = (0, f.N)(_, d === "header");
+          let M = (0, h.N)(_, o === "header");
           return (0, e.jsx)("div", {
-            className: (0, u.A)(h, "CapsuleImageCtn", m),
-            children: (0, e.jsx)(n.o, {
+            className: (0, m.A)(p, "CapsuleImageCtn", d),
+            children: (0, e.jsx)(r.o, {
               lazyLoad: !0,
               srcs: M,
-              className: (0, u.A)(s().CapsuleImage),
-              alt: E.name,
+              className: (0, m.A)(a().CapsuleImage),
+              alt: C.name,
             }),
           });
         }
       },
       42240: (v, g, t) => {
         "use strict";
-        t.d(g, { M: () => C, N: () => l });
+        t.d(g, { M: () => u, N: () => i });
         var e = t(21721);
-        function l(n, u) {
-          let i = [];
-          return n && f(i, n, u), i.filter((s) => !!s);
+        function i(r, m) {
+          let c = [];
+          return r && h(c, r, m), c.filter((a) => !!a);
         }
-        function C(n, u) {
-          let i = (0, e.b0)(n, "hero_capsule"),
-            s = (0, e.b0)(n, "library_capsule");
-          return { strStoreVerticalURL: i, strLibraryVerticalURL: s };
+        function u(r, m) {
+          let c = (0, e.b0)(r, "hero_capsule"),
+            a = (0, e.b0)(r, "library_capsule");
+          return { strStoreVerticalURL: c, strLibraryVerticalURL: a };
         }
-        function f(n, u, i) {
-          const s = (0, e.b0)(u, "header_2x") ?? (0, e.b0)(u, "header"),
-            c = (0, e.b0)(u, "main_capsule_2x") ?? (0, e.b0)(u, "main_capsule");
-          i ? n.push(s, c) : n.push(c, s);
+        function h(r, m, c) {
+          const a = (0, e.b0)(m, "header_2x") ?? (0, e.b0)(m, "header"),
+            l = (0, e.b0)(m, "main_capsule_2x") ?? (0, e.b0)(m, "main_capsule");
+          c ? r.push(a, l) : r.push(l, a);
         }
       },
       86298: (v, g, t) => {
         "use strict";
-        t.d(g, { S: () => s });
+        t.d(g, { S: () => a });
         var e = t(39905),
-          l = t(47875),
-          C = t(83482),
-          f = t(71742),
-          n = t(82734),
-          u = t(53113),
-          i = t(6698);
-        function s(c, a, r, d, o, m) {
-          if (!r) return;
-          if (!(0, i.nz)(c.item_type)) {
-            (0, f.wT)(
+          i = t(47875),
+          u = t(83482),
+          h = t(71742),
+          r = t(82734),
+          m = t(53113),
+          c = t(6698);
+        function a(l, f, s, o, n, d) {
+          if (!s) return;
+          if (!(0, c.nz)(l.item_type)) {
+            (0, h.wT)(
               !1,
-              "StoreItemWidgetSalePageAction: unexpected type: " + c.item_type,
+              "StoreItemWidgetSalePageAction: unexpected type: " + l.item_type,
             );
             return;
           }
-          const _ = (0, C.wJ)(`${(0, l._)(c, d)}${o ? `?${o}` : ""}`, a);
+          const _ = (0, u.wJ)(`${(0, i._)(l, o)}${n ? `?${n}` : ""}`, f);
           return {
-            onClick: (h) => {
-              let M = (0, n.uX)(h) || window;
-              m
-                ? m(h)
-                : _.startsWith("steam://") || (M.location.href = (0, u.NT)(_));
+            onClick: (p) => {
+              let M = (0, r.uX)(p) || window;
+              d
+                ? d(p)
+                : _.startsWith("steam://") || (M.location.href = (0, m.NT)(_));
             },
             onOKActionDescription: e.Z.Localize("#Sale_Gamepad_Action_Select"),
           };
@@ -105,82 +105,82 @@
       },
       72838: (v, g, t) => {
         "use strict";
-        t.d(g, { G: () => o });
+        t.d(g, { G: () => n });
         var e = t(7850),
-          l = t(72609),
-          C = t(78192),
-          f = t(89667),
-          n = t(90626),
-          u = t(76532),
-          i = t.n(u),
-          s = t(39239),
-          c = t(36707),
-          a = t(42240),
-          r = t(83164),
-          d = t.n(r);
-        function o(m) {
+          i = t(72609),
+          u = t(48156),
+          h = t(89667),
+          r = t(90626),
+          m = t(76532),
+          c = t.n(m),
+          a = t(39239),
+          l = t(36707),
+          f = t(42240),
+          s = t(83164),
+          o = t.n(s);
+        function n(d) {
           const {
-              id: p,
+              id: E,
               bPreferLibrary: _,
-              bPreferAssetWithoutOverride: E,
-              bNoShadow: h,
-            } = m,
-            M = h ? i().NoShadow : "",
-            { storeItemDefaultInfo: x, storeItemAsset: A } = (0, f.q)(
-              p,
-              "vertical",
+              bPreferAssetWithoutOverride: C,
+              bNoShadow: p,
+            } = d,
+            M = p ? c().NoShadow : "",
+            { storeItemDefaultInfo: x, storeItemAsset: A } = (0, h.q)(
               E,
+              "vertical",
+              C,
             ),
-            [b, w] = n.useState(0);
+            [b, w] = r.useState(0);
           if (!x || !A)
             return (0, e.jsx)("div", {
-              className: i().HeroCapsuleImageContainer,
+              className: c().HeroCapsuleImageContainer,
             });
-          const { strStoreVerticalURL: N, strLibraryVerticalURL: U } = (0, a.M)(
+          const { strStoreVerticalURL: N, strLibraryVerticalURL: U } = (0, f.M)(
             A,
             x,
           );
           if (N && (!_ || !U))
             return (0, e.jsxs)("div", {
-              className: (0, c.A)(
-                i().HeroCapsuleImageContainer,
+              className: (0, l.A)(
+                c().HeroCapsuleImageContainer,
                 "HeroCapsuleImageContainer",
               ),
               children: [
                 (0, e.jsx)("img", {
                   src: N,
-                  className: i().CapsuleImage,
+                  className: c().CapsuleImage,
                   alt: x.name,
                 }),
-                x.type == C.uE._i &&
+                x.type == u.uE._i &&
                   (0, e.jsx)("img", {
-                    className: d().CornerSash,
-                    src: `${l.TS.MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png`,
+                    className: o().CornerSash,
+                    src: `${i.TS.MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png`,
                     alt: "DLC",
                   }),
               ],
             });
           if (U)
             return (0, e.jsxs)("div", {
-              className: (0, c.A)(
-                i().LibraryFallbackAssetImageContainer,
-                i().VerticalCapsule,
-                _ ? i().ForceLibrarySizing : "",
+              className: (0, l.A)(
+                c().LibraryFallbackAssetImageContainer,
+                c().VerticalCapsule,
+                _ ? c().ForceLibrarySizing : "",
                 M,
               ),
               children: [
                 (0, e.jsx)("div", {
-                  className: i().FallbackBackground,
+                  className: c().FallbackBackground,
                   style: { backgroundImage: `url(${U})` },
                 }),
                 (0, e.jsx)("img", {
                   src: U,
-                  className: i().CapsuleImage,
+                  className: c().CapsuleImage,
                   alt: x.name,
                 }),
               ],
             });
-          const W = (0, a.N)(A, !0),
+          const W = (0, f.N)(A, !0),
             Z = W.length - 1,
             I = (D) => {
               const L = W.indexOf(D);
@@ -189,16 +189,16 @@
           if (b < W.length) {
             const D = W[b];
             return (0, e.jsxs)("div", {
-              className: (0, c.A)(i().LibraryFallbackAssetImageContainer, M),
+              className: (0, l.A)(c().LibraryFallbackAssetImageContainer, M),
               children: [
                 (0, e.jsx)("div", {
-                  className: i().FallbackBackground,
+                  className: c().FallbackBackground,
                   style: { backgroundImage: `url(${D})` },
                 }),
-                (0, e.jsx)(s.o, {
+                (0, e.jsx)(a.o, {
                   lazyLoad: !0,
                   srcs: W,
-                  className: i().CapsuleImage,
+                  className: c().CapsuleImage,
                   alt: x.name,
                   onImageError: I,
                 }),
@@ -206,78 +206,83 @@
             });
           }
           return (0, e.jsx)("div", {
-            className: i().HeroCapsuleImageContainer,
+            className: c().HeroCapsuleImageContainer,
           });
         }
       },
       88743: (v, g, t) => {
         "use strict";
-        t.d(g, { Sh: () => i, dE: () => n, rt: () => C, zl: () => f });
+        t.d(g, { Sh: () => c, dE: () => r, rt: () => u, zl: () => h });
         var e = t(90626),
-          l = t(78192);
-        function C(a) {
-          return (0, e.useMemo)(() => i(a), [a?.id, a?.type]);
+          i = t(48156);
+        function u(s) {
+          return (0, e.useMemo)(() => c(s), [s?.id, s?.type]);
         }
-        function f(a, r) {
-          return (0, e.useMemo)(() => c(a, r), [a, r]);
+        function h(s, o) {
+          return (0, e.useMemo)(() => f(s, o), [s, o]);
         }
-        function n(a, r) {
-          return (0, e.useMemo)(() => s(a, r), [a, r]);
+        function r(s, o) {
+          return (0, e.useMemo)(() => l(s, o), [s, o]);
         }
-        function u(a, r) {
-          let d = "app";
+        function m(s, o) {
+          let n = "app";
           return (
-            r == EStoreItemType.k_EStoreItemType_Bundle
-              ? (d = "bundle")
-              : r == EStoreItemType.k_EStoreItemType_Package && (d = "sub"),
-            useMemo(() => s(a, d), [a, d])
+            o == EStoreItemType.k_EStoreItemType_Bundle
+              ? (n = "bundle")
+              : o == EStoreItemType.k_EStoreItemType_Package && (n = "sub"),
+            useMemo(() => l(s, n), [s, n])
           );
         }
-        function i(a) {
-          if (!(!a || !a.id)) {
-            if (!a.type) return { appid: a.id };
-            switch (a.type) {
+        function c(s) {
+          if (!(!s || !s.id)) {
+            if (!s.type) return { appid: s.id };
+            switch (s.type) {
               case "sub":
-                return { packageid: a.id };
+                return { packageid: s.id };
               case "bundle":
-                return { bundleid: a.id };
+                return { bundleid: s.id };
               default:
-                return { appid: a.id };
+                return { appid: s.id };
             }
           }
         }
-        function s(a, r) {
-          switch (r) {
+        function a(s) {
+          if ("appid" in s) return { id: s.appid, type: "game" };
+          if ("packageid" in s) return { id: s.packageid, type: "sub" };
+          if ("bundleid" in s) return { id: s.bundleid, type: "bundle" };
+        }
+        function l(s, o) {
+          switch (o) {
             case "sub":
-              return { packageid: a };
+              return { packageid: s };
             case "bundle":
-              return { bundleid: a };
+              return { bundleid: s };
             default:
-              return { appid: a };
+              return { appid: s };
           }
         }
-        function c(a, r) {
-          switch (r) {
+        function f(s, o) {
+          switch (o) {
             case "sub":
-              return { packageid: a };
+              return { packageid: s };
             case "bundle":
-              return { bundleid: a };
+              return { bundleid: s };
             default:
-              return { appid: a };
+              return { appid: s };
           }
         }
       },
       23627: (v, g, t) => {
         "use strict";
-        t.d(g, { K: () => n });
+        t.d(g, { K: () => r });
         var e = t(7850),
-          l = t(18210),
-          C = t(66901),
-          f = t.n(C);
-        function n() {
+          i = t(18210),
+          u = t(66901),
+          h = t.n(u);
+        function r() {
           return (0, e.jsx)("div", {
-            className: C.bordered_live_stream_icon,
-            children: (0, l.we)("#home_page_live_broadcast"),
+            className: u.bordered_live_stream_icon,
+            children: (0, i.we)("#home_page_live_broadcast"),
           });
         }
       },
@@ -285,18 +290,18 @@
         "use strict";
         t.d(g, { V: () => U });
         var e = t(7850),
-          l = t(72609),
-          C = t(39905),
-          f = t(80902),
-          n = t(75233),
-          u = t(67705),
-          i = t(34032);
-        async function s() {
-          let I = (0, u.Fd)(
+          i = t(72609),
+          u = t(39905),
+          h = t(80902),
+          r = t(75233),
+          m = t(67705),
+          c = t(34032);
+        async function a() {
+          let I = (0, m.Fd)(
             "broadcast_available_for_page",
             "application_config",
           );
-          if ((0, i.h7)(I)) {
+          if ((0, c.h7)(I)) {
             const D = new Set();
             return (
               I.filtered.forEach((L) => {
@@ -307,14 +312,14 @@
           }
           return [];
         }
-        var c = t(5827),
-          a = t(40358),
-          r = t(90626);
-        function d() {
-          return (0, f.I)(p());
+        var l = t(5827),
+          f = t(40358),
+          s = t(90626);
+        function o() {
+          return (0, h.I)(E());
         }
-        function o(I) {
-          const { data: D } = d(),
+        function n(I) {
+          const { data: D } = o(),
             L = useStoreItemKeyFromAppID(I),
             { data: y } = useStoreItemDefaultInfo(L);
           return !!(
@@ -324,18 +329,18 @@
                 D.has(y.related_items.parent_appid)))
           );
         }
-        function m(I) {
-          const { data: D } = d(),
-            [L, y] = (0, r.useState)(!1),
-            T = (0, n.jE)(),
-            R = (0, c.eG)();
+        function d(I) {
+          const { data: D } = o(),
+            [L, y] = (0, s.useState)(!1),
+            T = (0, r.jE)(),
+            R = (0, l.eG)();
           return (
-            (0, r.useEffect)(() => {
+            (0, s.useEffect)(() => {
               if (!I || I.length == 0 || !D) return y(!1);
               (async () => {
                 const O = await Promise.all(
                   I.filter((P) => !!P).map((P) =>
-                    T.fetchQuery((0, a.us)(R, { appid: P })),
+                    T.fetchQuery((0, f.us)(R, { appid: P })),
                   ),
                 );
                 y(
@@ -351,11 +356,11 @@
             L
           );
         }
-        function p() {
+        function E() {
           return {
             queryKey: _(),
             queryFn: async () => {
-              const I = await s();
+              const I = await a();
               return new Set(I);
             },
           };
@@ -363,8 +368,8 @@
         function _() {
           return ["BroadcastApps"];
         }
-        var E = t(24179),
-          h = t(54528);
+        var C = t(24179),
+          p = t(54528);
         const M =
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC";
         var x = t(76532),
@@ -374,11 +379,11 @@
           N = t(23627);
         function U(I) {
           const { appids: D, hide_status_banners: L, show_early_access: y } = I,
-            { data: T } = (0, E.$Y)(),
-            { data: R } = (0, h.F0)(),
+            { data: T } = (0, C.$Y)(),
+            { data: R } = (0, p.F0)(),
             B = D.length > 0 && D.every((V) => T && T.has(V)),
             O = D.length > 0 && D.every((V) => R && R.has(V)),
-            P = m(D),
+            P = d(D),
             K = B && !L,
             j = O && !L,
             S = !L && y;
@@ -390,11 +395,11 @@
                   className: (0, w.A)(A().Banner, A().Blue),
                   children: [
                     (0, e.jsx)("img", {
-                      src: (0, l.YJ)(M),
+                      src: (0, i.YJ)(M),
                       className: A().LinesImg,
-                      alt: C.Z.Localize("#Sale_InLibrary"),
+                      alt: u.Z.Localize("#Sale_InLibrary"),
                     }),
-                    C.Z.Localize("#Sale_InLibrary"),
+                    u.Z.Localize("#Sale_InLibrary"),
                   ],
                 }),
               j &&
@@ -402,7 +407,7 @@
                   className: A().Banner,
                   children: [
                     (0, e.jsx)(b.qnF, { className: A().LinesImg }),
-                    C.Z.Localize("#Sale_OnWishlist"),
+                    u.Z.Localize("#Sale_OnWishlist"),
                   ],
                 }),
               S && !K && !j && (0, e.jsx)(W, { appids: D }),
@@ -415,20 +420,20 @@
           return Z(D)
             ? (0, e.jsx)("span", {
                 className: (0, w.A)(A().Banner, A().EarlyAccessGradient),
-                children: C.Z.Localize("#Sale_EarlyAccess"),
+                children: u.Z.Localize("#Sale_EarlyAccess"),
               })
             : null;
         }
         function Z(I) {
-          const [D, L] = (0, r.useState)(!1),
-            y = (0, n.jE)(),
-            T = (0, c.eG)();
+          const [D, L] = (0, s.useState)(!1),
+            y = (0, r.jE)(),
+            T = (0, l.eG)();
           return (
-            (0, r.useEffect)(() => {
+            (0, s.useEffect)(() => {
               if (!I || I.length == 0) return L(!1);
               (async () => {
                 const B = await Promise.all(
-                  I.map((O) => y.fetchQuery((0, a.us)(T, { appid: O }))),
+                  I.map((O) => y.fetchQuery((0, f.us)(T, { appid: O }))),
                 );
                 L(B.some((O) => O && O.is_early_access));
               })();
@@ -439,151 +444,151 @@
       },
       89667: (v, g, t) => {
         "use strict";
-        t.d(g, { q: () => f });
+        t.d(g, { q: () => h });
         var e = t(71742),
-          l = t(78192),
-          C = t(40358);
-        function f(u, i, s = !1) {
-          const { data: c } = (0, C.J$)(u),
-            { data: a } = (0, C.lv)(u, s);
-          let r;
-          c &&
-            c.included_appids?.length == 1 &&
-            !n(a, i) &&
-            c.item_type &&
-            [l.c6.RD, l.c6.xO].includes(c.item_type) &&
-            (r = { appid: c.included_appids[0] });
-          const { data: d } = (0, C.J$)(r),
-            { data: o } = (0, C.lv)(r, s),
-            m = d?.visible ? d : c;
+          i = t(48156),
+          u = t(40358);
+        function h(m, c, a = !1) {
+          const { data: l } = (0, u.J$)(m),
+            { data: f } = (0, u.lv)(m, a);
+          let s;
+          l &&
+            l.included_appids?.length == 1 &&
+            !r(f, c) &&
+            l.item_type &&
+            [i.c6.RD, i.c6.xO].includes(l.item_type) &&
+            (s = { appid: l.included_appids[0] });
+          const { data: o } = (0, u.J$)(s),
+            { data: n } = (0, u.lv)(s, a),
+            d = o?.visible ? o : l;
           return {
-            storeItemAsset: d?.visible ? o : a,
-            storeItemDefaultInfo: m,
+            storeItemAsset: o?.visible ? n : f,
+            storeItemDefaultInfo: d,
           };
         }
-        function n(u, i) {
-          if (!u) return !1;
-          switch (i) {
+        function r(m, c) {
+          if (!m) return !1;
+          switch (c) {
             case "header":
-              return !!u.header;
+              return !!m.header;
             case "main":
-              return !!u.main_capsule;
+              return !!m.main_capsule;
             case "vertical":
             case "library":
-              return !!u.hero_capsule || !!u.library_capsule;
+              return !!m.hero_capsule || !!m.library_capsule;
             default:
-              return (0, e.z_)(i, `Unhandled imageType: ${i}`), !1;
+              return (0, e.z_)(c, `Unhandled imageType: ${c}`), !1;
           }
         }
       },
       40426: (v, g, t) => {
         "use strict";
-        t.d(g, { XC: () => a, _G: () => d });
+        t.d(g, { XC: () => f, _G: () => o });
         var e = t(7850),
-          l = t(90626),
-          C = t(36118),
-          f = t(36707),
-          n = t(41672),
-          u = t(96538),
-          i = t(75358),
-          s = t.n(i),
-          c = t(18210);
-        function a() {
-          const [o, m] = l.useState(void 0),
-            p = l.useCallback(() => m(void 0), []),
-            _ = (0, e.jsx)(u.EN, {
-              active: o !== void 0,
-              children: (0, e.jsx)(r, { closeModal: p, rgImageURL: o }),
+          i = t(90626),
+          u = t(36118),
+          h = t(36707),
+          r = t(41672),
+          m = t(96538),
+          c = t(75358),
+          a = t.n(c),
+          l = t(18210);
+        function f() {
+          const [n, d] = i.useState(void 0),
+            E = i.useCallback(() => d(void 0), []),
+            _ = (0, e.jsx)(m.EN, {
+              active: n !== void 0,
+              children: (0, e.jsx)(s, { closeModal: E, rgImageURL: n }),
             });
-          return [m, _];
+          return [d, _];
         }
-        function r(o) {
-          const { closeModal: m, rgImageURL: p } = o,
-            [_, E] = l.useState(0),
-            h = p?.length ?? 0,
-            M = l.useCallback(() => {
-              _ == 0 ? E(h - 1) : E(_ - 1);
-            }, [_, h]),
-            x = l.useCallback(() => {
-              p && _ + 1 >= h ? E(0) : E(_ + 1);
-            }, [_, p, h]);
-          return (0, e.jsxs)(u.eV, {
-            title: (0, c.we)("#SaleTech_Screenshot_Viewer"),
+        function s(n) {
+          const { closeModal: d, rgImageURL: E } = n,
+            [_, C] = i.useState(0),
+            p = E?.length ?? 0,
+            M = i.useCallback(() => {
+              _ == 0 ? C(p - 1) : C(_ - 1);
+            }, [_, p]),
+            x = i.useCallback(() => {
+              E && _ + 1 >= p ? C(0) : C(_ + 1);
+            }, [_, E, p]);
+          return (0, e.jsxs)(m.eV, {
+            title: (0, l.we)("#SaleTech_Screenshot_Viewer"),
             bAllowFullSize: !0,
             bOKDisabled: !0,
-            closeModal: m,
+            closeModal: d,
             bHideCloseIcon: !0,
-            modalClassName: s().PopupScreenshotModal,
+            modalClassName: a().PopupScreenshotModal,
             children: [
-              (0, e.jsx)(d, {
+              (0, e.jsx)(o, {
                 index: _,
-                numElements: p?.length || 0,
+                numElements: E?.length || 0,
                 fnForward: x,
                 fnBackwards: M,
-                fnClose: m,
+                fnClose: d,
                 bCircular: !0,
               }),
               (0, e.jsx)("div", {
-                className: s().PopupScreenshotContainer,
+                className: a().PopupScreenshotContainer,
                 children: (0, e.jsx)("img", {
-                  className: s().PopupScreenshot,
-                  src: p?.[_],
+                  className: a().PopupScreenshot,
+                  src: E?.[_],
                   alt: "",
                 }),
               }),
             ],
           });
         }
-        function d(o) {
+        function o(n) {
           const {
-            index: m,
-            numElements: p,
+            index: d,
+            numElements: E,
             fnForward: _,
-            fnBackwards: E,
-            fnClose: h,
+            fnBackwards: C,
+            fnClose: p,
             bCircular: M,
-          } = o;
-          (0, n.E)("ArrowLeft", () => E?.(), !0, !0),
-            (0, n.E)("Left", () => E?.(), !0, !0),
-            (0, n.E)("ArrowRight", () => _?.(), !0, !0),
-            (0, n.E)("Right", () => _?.(), !0, !0),
-            (0, n.E)("Escape", () => h && h(), !0, !0),
-            (0, n.E)("Esc", () => h && h(), !0, !0);
-          let x = p > 1;
+          } = n;
+          (0, r.E)("ArrowLeft", () => C?.(), !0, !0),
+            (0, r.E)("Left", () => C?.(), !0, !0),
+            (0, r.E)("ArrowRight", () => _?.(), !0, !0),
+            (0, r.E)("Right", () => _?.(), !0, !0),
+            (0, r.E)("Escape", () => p && p(), !0, !0),
+            (0, r.E)("Esc", () => p && p(), !0, !0);
+          let x = E > 1;
           return (0, e.jsxs)("div", {
-            className: s().ButtonCtn,
+            className: a().ButtonCtn,
             children: [
               x &&
                 (0, e.jsxs)(e.Fragment, {
                   children: [
                     (0, e.jsx)("button", {
                       type: "button",
-                      className: (0, f.A)(
-                        s().ButtonIcon,
-                        m === 0 && !M ? s().Disabled : null,
+                      className: (0, h.A)(
+                        a().ButtonIcon,
+                        d === 0 && !M ? a().Disabled : null,
                       ),
-                      onClick: E,
-                      "aria-label": (0, c.we)("#Carousel_Prev"),
-                      children: (0, e.jsx)(C.V5W, { angle: 270 }),
+                      onClick: C,
+                      "aria-label": (0, l.we)("#Carousel_Prev"),
+                      children: (0, e.jsx)(u.V5W, { angle: 270 }),
                     }),
                     (0, e.jsx)("button", {
                       type: "button",
-                      className: (0, f.A)(
-                        s().ButtonIcon,
-                        m === p - 1 && !M ? s().Disabled : null,
+                      className: (0, h.A)(
+                        a().ButtonIcon,
+                        d === E - 1 && !M ? a().Disabled : null,
                       ),
                       onClick: _,
-                      "aria-label": (0, c.we)("#Carousel_Next"),
-                      children: (0, e.jsx)(C.V5W, { angle: 90 }),
+                      "aria-label": (0, l.we)("#Carousel_Next"),
+                      children: (0, e.jsx)(u.V5W, { angle: 90 }),
                     }),
                   ],
                 }),
               (0, e.jsx)("button", {
                 type: "button",
-                className: s().ButtonIcon,
-                onClick: h,
-                "aria-label": (0, c.we)("#Button_Close"),
-                children: (0, e.jsx)(C.X, {}),
+                className: a().ButtonIcon,
+                onClick: p,
+                "aria-label": (0, l.we)("#Button_Close"),
+                children: (0, e.jsx)(u.X, {}),
               }),
             ],
           });
@@ -591,20 +596,20 @@
       },
       34032: (v, g, t) => {
         "use strict";
-        t.d(g, { PH: () => r, TT: () => n, h7: () => d, mY: () => a });
+        t.d(g, { PH: () => s, TT: () => r, h7: () => o, mY: () => f });
         var e = t(14947),
-          l = Object.defineProperty,
-          C = Object.getOwnPropertyDescriptor,
-          f = (o, m, p, _) => {
+          i = Object.defineProperty,
+          u = Object.getOwnPropertyDescriptor,
+          h = (n, d, E, _) => {
             for (
-              var E = _ > 1 ? void 0 : _ ? C(m, p) : m, h = o.length - 1, M;
-              h >= 0;
-              h--
+              var C = _ > 1 ? void 0 : _ ? u(d, E) : d, p = n.length - 1, M;
+              p >= 0;
+              p--
             )
-              (M = o[h]) && (E = (_ ? M(m, p, E) : M(E)) || E);
-            return _ && E && l(m, p, E), E;
+              (M = n[p]) && (C = (_ ? M(d, E, C) : M(C)) || C);
+            return _ && C && i(d, E, C), C;
           };
-        class n {
+        class r {
           constructor() {
             (0, e.Gn)(this);
           }
@@ -629,183 +634,183 @@
           default_selection_priority = 0;
           current_selection_priority = 0;
         }
-        f([e.sH], n.prototype, "title", 2),
-          f([e.sH], n.prototype, "viewer_count", 2),
-          f([e.sH], n.prototype, "gamedata_subtitle", 2),
-          f([e.sH], n.prototype, "current_selection_priority", 2);
-        const u = "primary",
-          i = "featured",
-          s = "default_featured",
-          c = "general";
-        var a = ((o) => (
-          (o[(o.k_ePrimary = 3)] = "k_ePrimary"),
-          (o[(o.k_eFeatured = 2)] = "k_eFeatured"),
-          (o[(o.k_eDefaultFeatured = 1)] = "k_eDefaultFeatured"),
-          (o[(o.k_eGeneral = 0)] = "k_eGeneral"),
-          o
-        ))(a || {});
-        function r(o) {
-          switch (o) {
-            case u:
+        h([e.sH], r.prototype, "title", 2),
+          h([e.sH], r.prototype, "viewer_count", 2),
+          h([e.sH], r.prototype, "gamedata_subtitle", 2),
+          h([e.sH], r.prototype, "current_selection_priority", 2);
+        const m = "primary",
+          c = "featured",
+          a = "default_featured",
+          l = "general";
+        var f = ((n) => (
+          (n[(n.k_ePrimary = 3)] = "k_ePrimary"),
+          (n[(n.k_eFeatured = 2)] = "k_eFeatured"),
+          (n[(n.k_eDefaultFeatured = 1)] = "k_eDefaultFeatured"),
+          (n[(n.k_eGeneral = 0)] = "k_eGeneral"),
+          n
+        ))(f || {});
+        function s(n) {
+          switch (n) {
+            case m:
               return 3;
-            case i:
-              return 2;
-            case s:
-              return 1;
             case c:
+              return 2;
+            case a:
+              return 1;
+            case l:
             default:
               return 0;
           }
         }
-        function d(o) {
-          const m = o;
-          return m &&
-            typeof m.success == "number" &&
-            m.filtered &&
-            Array.isArray(m.filtered) &&
-            m.broadcast_chat_visibility
-            ? m.filtered.length == 0
+        function o(n) {
+          const d = n;
+          return d &&
+            typeof d.success == "number" &&
+            d.filtered &&
+            Array.isArray(d.filtered) &&
+            d.broadcast_chat_visibility
+            ? d.filtered.length == 0
               ? !0
-              : typeof m.filtered[0].accountid == "string"
+              : typeof d.filtered[0].accountid == "string"
             : !1;
         }
       },
       24873: (v, g, t) => {
         "use strict";
-        t.d(g, { Dm: () => o, SC: () => m });
+        t.d(g, { Dm: () => n, SC: () => d });
         var e = t(7850),
-          l = t(39905),
-          C = t(40358),
-          f = t(64238),
-          n = t.n(f),
-          u = t(90626),
-          i = t(34713),
-          s = t.n(i),
-          c = t(55546),
-          a = t(75779),
-          r = t(71742),
-          d = t(26356);
-        function o(R) {
-          const { data: B } = (0, C.qI)(R.id);
-          return (0, e.jsx)(p, { platforms: B });
+          i = t(39905),
+          u = t(40358),
+          h = t(64238),
+          r = t.n(h),
+          m = t(90626),
+          c = t(34713),
+          a = t.n(c),
+          l = t(55546),
+          f = t(75779),
+          s = t(71742),
+          o = t(26356);
+        function n(R) {
+          const { data: B } = (0, u.qI)(R.id);
+          return (0, e.jsx)(E, { platforms: B });
         }
-        function m(R) {
+        function d(R) {
           const { id: B, ...O } = R,
-            { data: P } = (0, C.qI)(B);
+            { data: P } = (0, u.qI)(B);
           return (0, e.jsx)(_, { ...O, platforms: P });
         }
-        const p = u.memo(function (B) {
+        const E = m.memo(function (B) {
             const { platforms: O } = B;
             if (!O) return null;
             const { windows: P, mac: K, steamos_linux: j, vr_support: S } = O;
             return (0, e.jsxs)("span", {
-              className: s().SupportedPlatforms,
+              className: a().SupportedPlatforms,
               children: [
-                P && (0, e.jsx)(E, {}),
-                K && (0, e.jsx)(h, {}),
+                P && (0, e.jsx)(C, {}),
+                K && (0, e.jsx)(p, {}),
                 j && (0, e.jsx)(M, {}),
                 S?.vrhmd && (0, e.jsx)(x, {}),
               ],
             });
           }),
-          _ = u.memo(function (B) {
+          _ = m.memo(function (B) {
             const { platforms: O, eHWCompat: P, size: K = "small" } = B;
             let j;
-            if (P == d.iA)
+            if (P == o.iA)
               return (
-                (0, r.wT)(
+                (0, s.wT)(
                   !1,
                   "SteamHWCompatIndicator called for k_ESteamHWCompatibility_None",
                 ),
                 null
               );
-            if (P == d.c9) {
+            if (P == o.c9) {
               const S = O?.steam_os_compat_category;
               if (S === void 0) return null;
               switch (S) {
-                case c.Hi:
+                case l.Hi:
                   j = T;
                   break;
-                case c.u_:
+                case l.u_:
                   j = L;
                   break;
-                case c.xs:
+                case l.xs:
                   j = y;
                   break;
                 default:
                   return (
-                    (0, r.z_)(S, `Unhandled steam os category: ${S}`), null
+                    (0, s.z_)(S, `Unhandled steam os category: ${S}`), null
                   );
               }
             } else {
               let S;
               if (
-                (P == d.JR
+                (P == o.JR
                   ? (S = O?.steam_machine_compat_category)
-                  : P == d.bY
+                  : P == o.bY
                     ? (S = O?.steam_frame_compat_category)
                     : (S = O?.steam_deck_compat_category),
                 S === void 0)
               )
                 return null;
               switch (S) {
-                case a.I2:
+                case f.I2:
                   j = I;
                   break;
-                case a.sd:
+                case f.sd:
                   j = D;
                   break;
-                case a.V8:
+                case f.V8:
                   j = L;
                   break;
-                case a.YX:
+                case f.YX:
                   j = y;
                   break;
                 default:
                   return (
-                    (0, r.z_)(S, `Unhandled deck compat category: ${S}`), null
+                    (0, s.z_)(S, `Unhandled deck compat category: ${S}`), null
                   );
               }
             }
             return (0, e.jsxs)("span", {
-              className: n()(
-                s().DeckCompat,
-                K == "small" && s().Small,
-                K == "fill" && s().Fill,
+              className: r()(
+                a().DeckCompat,
+                K == "small" && a().Small,
+                K == "fill" && a().Fill,
               ),
               children: [
-                P == d.ZJ && (0, e.jsx)(U, {}),
-                P == d.JR && (0, e.jsx)(W, {}),
-                P == d.bY && (0, e.jsx)(Z, {}),
+                P == o.ZJ && (0, e.jsx)(U, {}),
+                P == o.JR && (0, e.jsx)(W, {}),
+                P == o.bY && (0, e.jsx)(Z, {}),
                 (0, e.jsx)(j, {}),
               ],
             });
           });
-        function E() {
+        function C() {
           return (0, e.jsx)("span", {
-            className: n()(s().PlatformIndicator, s().Windows),
-            title: l.Z.Localize("#Platform_Windows"),
+            className: r()(a().PlatformIndicator, a().Windows),
+            title: i.Z.Localize("#Platform_Windows"),
             children: (0, e.jsx)(A, {}),
           });
         }
-        function h() {
+        function p() {
           return (0, e.jsx)("span", {
-            className: n()(s().PlatformIndicator, s().Mac),
-            title: l.Z.Localize("#Platform_Mac"),
+            className: r()(a().PlatformIndicator, a().Mac),
+            title: i.Z.Localize("#Platform_Mac"),
             children: (0, e.jsx)(b, {}),
           });
         }
         function M() {
           return (0, e.jsx)("span", {
-            className: n()(s().PlatformIndicator, s().SteamOS),
-            title: l.Z.Localize("#Platform_Linux"),
+            className: r()(a().PlatformIndicator, a().SteamOS),
+            title: i.Z.Localize("#Platform_Linux"),
             children: (0, e.jsx)(w, {}),
           });
         }
         function x() {
           return (0, e.jsx)("span", {
-            className: s().PlatformIndicator,
-            title: l.Z.Localize("#Platform_VR"),
+            className: a().PlatformIndicator,
+            title: i.Z.Localize("#Platform_VR"),
             children: (0, e.jsx)(N, {}),
           });
         }
@@ -914,10 +919,10 @@
         }
         function U() {
           return (0, e.jsx)("span", {
-            title: l.Z.Localize(
+            title: i.Z.Localize(
               "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
             ),
-            className: n()(s().SteamDeckCompatLogo),
+            className: r()(a().SteamDeckCompatLogo),
             children: (0, e.jsx)("svg", {
               viewBox: "0 0 20 20",
               fill: "none",
@@ -934,10 +939,10 @@
         }
         function W() {
           return (0, e.jsx)("span", {
-            title: l.Z.Localize(
+            title: i.Z.Localize(
               "#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI",
             ),
-            className: n()(s().SteamDeckCompatLogo),
+            className: r()(a().SteamDeckCompatLogo),
             children: (0, e.jsxs)("svg", {
               viewBox: "0 0 20 20",
               fill: "none",
@@ -963,10 +968,10 @@
         }
         function Z() {
           return (0, e.jsx)("span", {
-            title: l.Z.Localize(
+            title: i.Z.Localize(
               "#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI",
             ),
-            className: n()(s().SteamDeckCompatLogo),
+            className: r()(a().SteamDeckCompatLogo),
             children: (0, e.jsxs)("svg", {
               viewBox: "0 0 20 20",
               fill: "none",
@@ -990,10 +995,10 @@
         }
         function I() {
           return (0, e.jsx)("span", {
-            title: l.Z.Localize("#SteamDeckVerified_Category_Verified"),
-            className: s().SteamDeckCompatIcon,
+            title: i.Z.Localize("#SteamDeckVerified_Category_Verified"),
+            className: a().SteamDeckCompatIcon,
             children: (0, e.jsx)("svg", {
-              className: n()(s().SteamDeckCompatVerified),
+              className: r()(a().SteamDeckCompatVerified),
               viewBox: "0 0 20 20",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
@@ -1008,10 +1013,10 @@
         }
         function D() {
           return (0, e.jsx)("span", {
-            title: l.Z.Localize("#SteamDeckVerified_Category_Playable"),
-            className: s().SteamDeckCompatIcon,
+            title: i.Z.Localize("#SteamDeckVerified_Category_Playable"),
+            className: a().SteamDeckCompatIcon,
             children: (0, e.jsx)("svg", {
-              className: n()(s().SteamDeckCompatPlayable),
+              className: r()(a().SteamDeckCompatPlayable),
               viewBox: "0 0 20 20",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
@@ -1026,10 +1031,10 @@
         }
         function L() {
           return (0, e.jsx)("span", {
-            title: l.Z.Localize("#SteamDeckVerified_Category_Unsupported"),
-            className: s().SteamDeckCompatIcon,
+            title: i.Z.Localize("#SteamDeckVerified_Category_Unsupported"),
+            className: a().SteamDeckCompatIcon,
             children: (0, e.jsx)("svg", {
-              className: n()(s().SteamDeckCompatUnsupported),
+              className: r()(a().SteamDeckCompatUnsupported),
               viewBox: "0 0 20 20",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
@@ -1044,10 +1049,10 @@
         }
         function y() {
           return (0, e.jsx)("span", {
-            title: l.Z.Localize("#SteamDeckVerified_Category_Unknown"),
-            className: s().SteamDeckCompatIcon,
+            title: i.Z.Localize("#SteamDeckVerified_Category_Unknown"),
+            className: a().SteamDeckCompatIcon,
             children: (0, e.jsx)("svg", {
-              className: n()(s().SteamDeckCompatUnknown),
+              className: r()(a().SteamDeckCompatUnknown),
               viewBox: "0 0 20 20",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
@@ -1062,10 +1067,10 @@
         }
         function T() {
           return (0, e.jsx)("span", {
-            title: l.Z.Localize("#SteamOSCompatibility_Category_Compatible"),
-            className: s().SteamDeckCompatIcon,
+            title: i.Z.Localize("#SteamOSCompatibility_Category_Compatible"),
+            className: a().SteamDeckCompatIcon,
             children: (0, e.jsx)("svg", {
-              className: n()(s().SteamOSCompatCompatible),
+              className: r()(a().SteamOSCompatCompatible),
               viewBox: "0 0 20 20",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
@@ -1081,179 +1086,179 @@
       },
       96155: (v, g, t) => {
         "use strict";
-        t.d(g, { J: () => c });
+        t.d(g, { J: () => l });
         var e = t(7850),
-          l = t(21690),
-          C = t(36707),
-          f = t(3166),
-          n = t(58855),
-          u = t.n(n),
-          i = t(24873),
-          s = t(26356);
-        function c(r) {
-          const { bAllowOutsideOfDeck: d } = r;
-          return !(0, f.Qn)() && !d ? null : (0, e.jsx)(a, { ...r });
+          i = t(21690),
+          u = t(36707),
+          h = t(3166),
+          r = t(58855),
+          m = t.n(r),
+          c = t(24873),
+          a = t(26356);
+        function l(s) {
+          const { bAllowOutsideOfDeck: o } = s;
+          return !(0, h.Qn)() && !o ? null : (0, e.jsx)(f, { ...s });
         }
-        function a(r) {
-          const { className: d, id: o } = r,
-            [m, p] = (0, l.FD)();
-          let _ = p;
-          if ((p == s.iA && (_ = s.ZJ), !o)) return null;
-          let E;
+        function f(s) {
+          const { className: o, id: n } = s,
+            [d, E] = (0, i.FD)();
+          let _ = E;
+          if ((E == a.iA && (_ = a.ZJ), !n)) return null;
+          let C;
           return (
-            p == s.bY && (E = n.CompatIconFrame),
+            E == a.bY && (C = r.CompatIconFrame),
             (0, e.jsx)("div", {
-              className: (0, C.A)(n.CompatIcon, E, d),
-              children: (0, e.jsx)(i.SC, { id: o, eHWCompat: _ }),
+              className: (0, u.A)(r.CompatIcon, C, o),
+              children: (0, e.jsx)(c.SC, { id: n, eHWCompat: _ }),
             })
           );
         }
       },
       39239: (v, g, t) => {
         "use strict";
-        t.d(g, { i: () => s, o: () => i });
+        t.d(g, { i: () => a, o: () => c });
         var e = t(7850),
-          l = t(90626),
-          C = t(18210),
-          f = t(67523),
-          n = t.n(f),
-          u = t(80150);
-        function i(c) {
+          i = t(90626),
+          u = t(18210),
+          h = t(67523),
+          r = t.n(h),
+          m = t(80150);
+        function c(l) {
           const {
-              className: a,
-              srcs: r,
-              lazyLoad: d,
-              width: o,
-              height: m,
-              alt: p,
+              className: f,
+              srcs: s,
+              lazyLoad: o,
+              width: n,
+              height: d,
+              alt: E,
               crossOrigin: _,
-            } = c,
-            [E, h] = l.useState(r.length),
-            [M, x] = l.useState(0);
-          l.useEffect(() => {
-            E != r.length && (h(r.length), x(0));
-          }, [E, r.length]);
-          const A = l.useCallback(() => {
-            c.onImageError && c.onImageError(c.srcs[M]),
-              M + 1 < c.srcs.length && x(M + 1);
-          }, [M, c]);
-          return r.length == 0
+            } = l,
+            [C, p] = i.useState(s.length),
+            [M, x] = i.useState(0);
+          i.useEffect(() => {
+            C != s.length && (p(s.length), x(0));
+          }, [C, s.length]);
+          const A = i.useCallback(() => {
+            l.onImageError && l.onImageError(l.srcs[M]),
+              M + 1 < l.srcs.length && x(M + 1);
+          }, [M, l]);
+          return s.length == 0
             ? null
             : (0, e.jsx)("img", {
-                className: a,
-                src: r[M],
+                className: f,
+                src: s[M],
                 crossOrigin: _,
                 onError: A,
-                loading: d ? "lazy" : void 0,
-                width: o,
-                height: m,
-                alt: p,
+                loading: o ? "lazy" : void 0,
+                width: n,
+                height: d,
+                alt: E,
               });
         }
-        function s(c) {
-          const [a, r] = l.useState(!1),
+        function a(l) {
+          const [f, s] = i.useState(!1),
             {
-              className: d,
-              src: o,
-              lazyLoad: m,
-              width: p,
+              className: o,
+              src: n,
+              lazyLoad: d,
+              width: E,
               height: _,
-              alt: E,
-              crossOrigin: h,
-            } = c;
-          return a
+              alt: C,
+              crossOrigin: p,
+            } = l;
+          return f
             ? (0, e.jsxs)("div", {
-                className: f.ErrorDiv,
+                className: h.ErrorDiv,
                 children: [
                   (0, e.jsx)("p", {
-                    children: (0, C.we)("#Image_ErrorTitle", o),
+                    children: (0, u.we)("#Image_ErrorTitle", n),
                   }),
                   (0, e.jsx)("ul", {
                     children: (0, e.jsx)("li", {
-                      children: (0, C.we)("#Image_Error_msg1"),
+                      children: (0, u.we)("#Image_Error_msg1"),
                     }),
                   }),
                   (0, e.jsx)("p", {
-                    children: (0, C.we)("#Image_Error_suggestion"),
+                    children: (0, u.we)("#Image_Error_suggestion"),
                   }),
                 ],
               })
-            : (0, e.jsx)(u.o, {
-                className: d,
-                src: o,
-                onError: () => r(!0),
-                crossOrigin: h,
-                loading: m ? "lazy" : void 0,
-                width: p,
+            : (0, e.jsx)(m.o, {
+                className: o,
+                src: n,
+                onError: () => s(!0),
+                crossOrigin: p,
+                loading: d ? "lazy" : void 0,
+                width: E,
                 height: _,
-                alt: E,
+                alt: C,
               });
         }
       },
       80150: (v, g, t) => {
         "use strict";
-        t.d(g, { o: () => d });
+        t.d(g, { o: () => o });
         var e = t(7850),
-          l = t(90626),
-          C = t(36118),
-          f = t(36707),
-          n = t(40426),
-          u = t(21659),
-          i = t(21038),
-          s = t.n(i);
-        const c = 1.3,
-          a = 3,
-          r = 256;
-        function d(o) {
-          const [m, p] = (0, l.useState)(!1),
-            [_, E] = (0, l.useState)({
+          i = t(90626),
+          u = t(36118),
+          h = t(36707),
+          r = t(40426),
+          m = t(21659),
+          c = t(21038),
+          a = t.n(c);
+        const l = 1.3,
+          f = 3,
+          s = 256;
+        function o(n) {
+          const [d, E] = (0, i.useState)(!1),
+            [_, C] = (0, i.useState)({
               naturalWidth: 0,
               naturalHeight: 0,
               displayWidth: 0,
               displayHeight: 0,
             }),
-            h = (0, l.useRef)(null),
-            [M, x] = (0, n.XC)();
+            p = (0, i.useRef)(null),
+            [M, x] = (0, r.XC)();
           return (
-            (0, l.useEffect)(() => {
-              _.naturalWidth > _.displayWidth * c &&
-                _.naturalHeight > _.displayHeight * c &&
-                _.naturalWidth > r &&
-                _.naturalWidth / _.naturalHeight < a &&
-                p(!0);
+            (0, i.useEffect)(() => {
+              _.naturalWidth > _.displayWidth * l &&
+                _.naturalHeight > _.displayHeight * l &&
+                _.naturalWidth > s &&
+                _.naturalWidth / _.naturalHeight < f &&
+                E(!0);
             }, [_]),
-            m
+            d
               ? (0, e.jsxs)("span", {
-                  className: i.PreviewCtn,
+                  className: c.PreviewCtn,
                   children: [
                     x,
                     (0, e.jsx)("span", {
-                      className: i.SVG,
-                      children: (0, e.jsx)(C.YNO, {}),
+                      className: c.SVG,
+                      children: (0, e.jsx)(u.YNO, {}),
                     }),
                     (0, e.jsx)("img", {
-                      ...o,
-                      className: (0, f.A)({
-                        ...(o.className && { [o.className]: !0 }),
+                      ...n,
+                      className: (0, h.A)({
+                        ...(n.className && { [n.className]: !0 }),
                       }),
                       onClick: (A) => {
-                        o.src && M([o.src]);
+                        n.src && M([n.src]);
                       },
                     }),
                   ],
                 })
               : (0, e.jsx)("img", {
-                  ...o,
-                  ref: h,
+                  ...n,
+                  ref: p,
                   onLoad: (A) => {
-                    if (!A.currentTarget.closest("a") && !(0, u.c5)()) {
+                    if (!A.currentTarget.closest("a") && !(0, m.c5)()) {
                       const {
                         naturalWidth: b,
                         naturalHeight: w,
                         width: N,
                         height: U,
                       } = A.currentTarget;
-                      E({
+                      C({
                         naturalWidth: b,
                         naturalHeight: w,
                         displayWidth: N,

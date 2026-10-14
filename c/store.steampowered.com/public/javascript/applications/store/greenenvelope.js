@@ -899,22 +899,22 @@
             count: _,
             icon: _,
             onActivate: _,
-            strLocToken: _,
+            strBody: _,
             bAlwaysShow: _,
             eUIMode: _,
             classNames: _,
             visible: _,
           } = _;
-          if (!_ && !_) return null;
-          const _ = (0, _._)(_, _);
-          return (0, _.jsx)(_, {
-            icon: _,
-            body: _,
-            onActivate: _,
-            eUIMode: _,
-            classNames: _,
-            visible: _,
-          });
+          return !_ && !_
+            ? null
+            : (0, _.jsx)(_, {
+                icon: _,
+                body: _,
+                onActivate: _,
+                eUIMode: _,
+                classNames: _,
+                visible: _,
+              });
         }
         var _ = ((_) => (
           (_[(_.none = 0)] = "none"),
@@ -1866,16 +1866,23 @@
                   : (_ = (0, _._)("#SteamNotifications_Comment_Screenshot"))
               : !_ && _.json_data?.title && (_ = _.json_data.title);
           let _ = null;
-          _.comment_type == _._ && _.bis_forum && _
-            ? (_ = (0, _.jsx)(_, {
-                children: (0, _._)(
-                  "#SteamNotifications_Comment_NewDiscussion",
+          _.brate_limited
+            ? _.comment_type == _._ && _.bis_forum && _
+              ? (_ = (0, _._)(
+                  "#SteamNotifications_Comment_RateLimited_Forum",
                   _,
-                ),
-              }))
-            : (_ = (0, _.jsxs)(_, {
-                children: ['"', _, '"'],
-              }));
+                ))
+              : (_ = (0, _._)("#SteamNotifications_Comment_RateLimited"))
+            : _.comment_type == _._ && _.bis_forum && _
+              ? (_ = (0, _.jsx)(_, {
+                  children: (0, _._)(
+                    "#SteamNotifications_Comment_NewDiscussion",
+                    _,
+                  ),
+                }))
+              : (_ = (0, _.jsxs)(_, {
+                  children: ['"', _, '"'],
+                }));
           let _ = (0, _._)("#SteamNotifications_Comment"),
             _ = null;
           if (_ !== void 0 && _ > 1) {
@@ -2599,7 +2606,7 @@
           });
         }
         function _(_) {
-          const { url: _, count: _, icon: _, strLocToken: _, eFeature: _ } = _,
+          const { url: _, count: _, icon: _, strBody: _, eFeature: _ } = _,
             _ = (0, _._)(_);
           return !_ || _
             ? null
@@ -2610,7 +2617,7 @@
                   icon: (0, _.jsx)(_, {}),
                   count: _,
                   onActivate: () => window.location.assign(_),
-                  strLocToken: _,
+                  strBody: _,
                   eUIMode: _.yrU,
                   visible: !0,
                 }),
@@ -2815,7 +2822,8 @@
               `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/inventory/#pending_gifts`,
             countItem: "pending_gifts",
             icon: _._,
-            strLocToken: "#Notification_NewGiftsPinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_NewGiftsPinned_Body", _),
             feature: _._,
           },
           {
@@ -2823,7 +2831,8 @@
               `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/home/invites`,
             countItem: "pending_invites",
             icon: _.sdo,
-            strLocToken: "#Notification_FriendInvitePinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_FriendInvitePinned_Body", _),
             feature: _._,
           },
           {
@@ -2831,7 +2840,8 @@
               `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/notifications#comments`,
             countItem: "comments",
             icon: _.MwB,
-            strLocToken: "#Notification_NewCommentPinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_NewCommentPinned_Body", _),
             feature: _._,
           },
           {
@@ -2839,7 +2849,8 @@
               `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/inventory`,
             countItem: "inventory_items",
             icon: _.rI_,
-            strLocToken: "#Notification_NewItemAnnouncementPinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_NewItemAnnouncementPinned_Body", _),
             feature: _._,
           },
           {
@@ -2847,7 +2858,8 @@
               `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/tradeoffers`,
             countItem: "trade_offers",
             icon: _.h20,
-            strLocToken: "#Notification_NewTradeOffersPinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_NewTradeOffersPinned_Body", _),
             feature: _._,
           },
           {
@@ -2855,27 +2867,31 @@
               `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/gamenotifications`,
             countItem: "async_game_updates",
             icon: _.wC1,
-            strLocToken: "#Notification_NewAsyncGamePinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_NewAsyncGamePinned_Body", _),
           },
           {
             fnUrl: () => `${_._.COMMUNITY_BASE_URL}my/moderatormessages`,
             countItem: "moderator_messages",
             icon: _.hJ4,
-            strLocToken: "#Notification_NewModeratorMessagePinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_NewModeratorMessagePinned_Body", _),
             feature: _._,
           },
           {
             fnUrl: () => `${_._.HELP_BASE_URL}wizard/HelpRequests`,
             countItem: "help_request_replies",
             icon: _.Cv4,
-            strLocToken: "#Notification_NewHelpRequestRepliesPinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_NewHelpRequestRepliesPinned_Body", _),
           },
           {
             fnUrl: () =>
               `${_._.STORE_BASE_URL}account/familymanagement/join?ft=${_._.steamid}`,
             countItem: "family_invites",
             icon: _.Qte,
-            strLocToken: "#Notification_FamilyInvitePinned_Body",
+            fnLocalizeBody: (_) =>
+              (0, _._)("#Notification_FamilyInvitePinned_Body", _),
           },
         ];
         function _() {
@@ -2888,7 +2904,7 @@
                   url: _.fnUrl(),
                   count: _.summary[_.countItem],
                   icon: _.icon,
-                  strLocToken: _.strLocToken,
+                  strBody: _.fnLocalizeBody(_.summary[_.countItem]),
                   eFeature: _.feature,
                 },
                 _.countItem,

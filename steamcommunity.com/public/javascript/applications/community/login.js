@@ -2,121 +2,124 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [96966],
+    [6966],
     {
-      75793: (h, E, o) => {
+      75793: (D, u, o) => {
         "use strict";
-        o.r(E), o.d(E, { default: () => s });
-        var _ = o(7850),
-          a = o(90626),
-          c = o(1317),
-          u = o(94276),
-          D = o(13018),
-          f = o(3166),
-          P = o(8059),
-          g = o(9211),
-          n = o.n(g);
-        function s(e) {
-          const { redirectUrl: r = f.TS.COMMUNITY_BASE_URL } = e,
-            [t] = (0, a.useState)(
-              new D.D(f.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+        o.r(u), o.d(u, { default: () => t });
+        var l = o(7850),
+          c = o(90626),
+          E = o(87242),
+          a = o(42780),
+          M = o(94276),
+          g = o(62179),
+          f = o(77008),
+          P = o(3166),
+          n = o(9211),
+          s = o.n(n);
+        function t(r) {
+          const { redirectUrl: e = P.TS.COMMUNITY_BASE_URL } = r,
+            [i] = (0, c.useState)(
+              new g.x(
+                new f.D(P.TS.WEBAPI_BASE_URL),
+              ).GetAnonymousServiceTransport(),
             ),
-            [i, l] = (0, a.useState)(!1),
-            M = (U) => {
-              U == P.wI.k_PrimaryDomainFail ? l(!0) : window.location.assign(r);
+            [_, h] = (0, c.useState)(!1),
+            U = (v) => {
+              v == E.wI.k_PrimaryDomainFail ? h(!0) : window.location.assign(e);
             };
-          return (0, _.jsx)("div", {
-            className: g.LoginContainer,
-            children: i
-              ? (0, _.jsx)(c.Fn, {})
-              : (0, _.jsx)(c.YN, {
+          return (0, l.jsx)("div", {
+            className: n.LoginContainer,
+            children: _
+              ? (0, l.jsx)(a.Fn, {})
+              : (0, l.jsx)(a.YN, {
                   autoFocus: !0,
-                  transport: t,
-                  platform: u.SS.tS,
-                  onComplete: M,
-                  redirectUrl: r,
+                  transport: i,
+                  platform: M.SS.tS,
+                  onComplete: U,
+                  redirectUrl: e,
                 }),
           });
         }
       },
-      179: (h, E, o) => {
+      179: (D, u, o) => {
         "use strict";
-        o.d(E, {
-          Bm: () => u,
-          QD: () => f,
-          f3: () => c,
-          iV: () => g,
-          ip: () => P,
-          le: () => D,
+        o.d(u, {
+          Bm: () => a,
+          QD: () => g,
+          f3: () => E,
+          iV: () => P,
+          ip: () => f,
+          le: () => M,
         });
-        var _ = o(90626),
-          a = o(92757);
-        function c(n, s) {
-          let e;
-          if (typeof n == "string") e = n;
-          else if ("location" in n) e = n.location.search;
-          else if ("search" in n) e = n.search;
+        var l = o(90626),
+          c = o(92757);
+        function E(n, s) {
+          let t;
+          if (typeof n == "string") t = n;
+          else if ("location" in n) t = n.location.search;
+          else if ("search" in n) t = n.search;
           else return;
-          const r = new URLSearchParams(e.substring(1));
+          const r = new URLSearchParams(t.substring(1));
           if (r.has(s)) {
-            const t = r.getAll(s);
-            return t[t.length - 1];
+            const e = r.getAll(s);
+            return e[e.length - 1];
           }
         }
-        function u(n, s, e, r = !1) {
-          const t = new URLSearchParams(n.location.search.substring(1));
-          if (e != null && e != null) {
-            if (t.get(s) == e) return;
-            t.set(s, e);
+        function a(n, s, t, r = !1) {
+          const e = new URLSearchParams(n.location.search.substring(1));
+          if (t != null && t != null) {
+            if (e.get(s) == t) return;
+            e.set(s, t);
           } else {
-            if (!t.has(s)) return;
-            t.delete(s);
+            if (!e.has(s)) return;
+            e.delete(s);
           }
           r
-            ? n.replace(`?${t.toString()}`, { ...n.location.state })
-            : n.push(`?${t.toString()}`);
+            ? n.replace(`?${e.toString()}`, { ...n.location.state })
+            : n.push(`?${e.toString()}`);
         }
-        function D(n, s, e) {
-          u(n, s, e, !0);
+        function M(n, s, t) {
+          a(n, s, t, !0);
         }
-        function f(n, s) {
-          const e = (0, a.W6)(),
-            r = (0, a.zy)(),
-            t = (0, _.useMemo)(() => {
-              const l = c(r.search, n);
-              return l != null && l != null
+        function g(n, s) {
+          const t = (0, c.W6)(),
+            r = (0, c.zy)(),
+            e = (0, l.useMemo)(() => {
+              const _ = E(r.search, n);
+              return _ != null && _ != null
                 ? s != null && s != null
                   ? typeof s == "boolean"
-                    ? s.constructor(l !== "false")
-                    : s.constructor(l)
-                  : l
+                    ? s.constructor(_ !== "false")
+                    : s.constructor(_)
+                  : _
                 : s;
             }, [r.search, n, s]),
-            i = (0, _.useCallback)(
-              (l, M = !1) => {
-                u(e, n, l != null && l != null ? String(l) : null, M);
+            i = (0, l.useCallback)(
+              (_, h = !1) => {
+                a(t, n, _ != null && _ != null ? String(_) : null, h);
               },
-              [e, n],
+              [t, n],
             );
-          return [t, i];
+          return [e, i];
         }
-        function P(n, s, e = !1) {
+        function f(n, s, t = !1) {
           const r = new URLSearchParams(n.location.search.substring(1));
-          for (const t in s)
-            if (s.hasOwnProperty(t)) {
-              const i = s[t];
-              r.delete(t), i != null && i != null && r.append(t, i);
+          for (const e in s)
+            if (s.hasOwnProperty(e)) {
+              const i = s[e];
+              r.delete(e), i != null && i != null && r.append(e, i);
             }
-          e
+          t
             ? n.replace(`?${r.toString()}`, { ...n.location.state })
             : n.push(`?${r.toString()}`);
         }
-        function g(n, s) {
-          P(n, s, !0);
+        function P(n, s) {
+          f(n, s, !0);
         }
       },
-      9211: (h) => {
-        h.exports = { LoginContainer: "_2vAS_iK_bJ7iv_7pRL7Zdk" };
+      9211: (D) => {
+        D.exports = { LoginContainer: "_2vAS_iK_bJ7iv_7pRL7Zdk" };
       },
     },
   ]);

@@ -808,69 +808,6 @@ html.responsive.GamepadMode
   flex-direction: row;
   align-items: center;
 }
-html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S {
-  height: unset !important;
-  margin: 0px var(--gpSpace-Gutter) 16px;
-  box-shadow: var(--gpShadow-Medium);
-}
-@media screen and (max-width: 910px) {
-  html.responsive ._2NgkNEEvdNAueuTkHH4V0S {
-    height: unset !important;
-    margin: 0px var(--gpSpace-Gutter) 16px;
-    box-shadow: var(--gpShadow-Medium);
-  }
-}
-@media screen and (max-width: 500px) {
-  html.responsive ._2NgkNEEvdNAueuTkHH4V0S {
-    margin: 0px 0px 16px 0px;
-    box-shadow: var(--gpShadow-Medium);
-  }
-}
-._2NgkNEEvdNAueuTkHH4V0S a {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a {
-  position: unset;
-  height: 32vw;
-  overflow: hidden;
-}
-@media screen and (max-width: 910px) {
-  html.responsive ._2NgkNEEvdNAueuTkHH4V0S a {
-    position: unset;
-    height: 32vw;
-    overflow: hidden;
-  }
-}
-@media screen and (max-width: 500px) {
-  html.responsive ._2NgkNEEvdNAueuTkHH4V0S a {
-    height: unset;
-  }
-}
-._2NgkNEEvdNAueuTkHH4V0S a img {
-  margin: 0 auto;
-  object-fit: contain;
-}
-html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
-  margin: auto;
-  height: inherit;
-}
-@media screen and (max-width: 910px) {
-  html.responsive ._2NgkNEEvdNAueuTkHH4V0S a img {
-    margin: auto;
-    height: inherit;
-  }
-}
-@media screen and (max-width: 500px) {
-  html.responsive ._2NgkNEEvdNAueuTkHH4V0S a img {
-    height: auto;
-    width: inherit;
-  }
-}
 ._3N0H151KuH7D3iNrbRNL3D {
   position: absolute;
   left: 100px;
@@ -1199,6 +1136,9 @@ html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
   --font-size: var(--text-size-4);
   --line-height: var(--line-height-4);
   --letter-spacing: var(--letter-spacing-4);
+}
+:where(._2gL71Yq-HzVI9oOGyWu3jH[data-dull-color]) {
+  --color-text-body-description: rgb(from var(--color-dull-12) r g b / 75%);
 }
 :where([data-status="highlight"]) {
   --status-outline-color: var(--color-accent-8);

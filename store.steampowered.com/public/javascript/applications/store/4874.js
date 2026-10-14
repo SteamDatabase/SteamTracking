@@ -12,7 +12,7 @@
           GF: () => q,
           y0: () => f,
           h: () => Z,
-          pr: () => A,
+          pr: () => L,
           Gt: () => E,
           yj: () => U,
           qb: () => T,
@@ -24,7 +24,7 @@
           YD: () => V,
           Oe: () => Y,
           Fk: () => N,
-          e$: () => L,
+          e$: () => A,
           cl: () => y,
           NP: () => Et,
           PQ: () => Tt,
@@ -89,8 +89,8 @@
             C2: () => Ct,
             Wr: () => Pr,
             DI: () => Gr,
-            Ec: () => Lr,
-            Yt: () => Ar,
+            Ec: () => Ar,
+            Yt: () => Lr,
             CB: () => _r,
             ro: () => te,
             qG: () => ur,
@@ -175,8 +175,8 @@
           Nr = 21,
           Jr = 22,
           pr = 23,
-          Lr = 24,
-          Ar = 25,
+          Ar = 24,
+          Lr = 25,
           Gr = 26,
           Pr = 27,
           _r = 28,
@@ -2216,20 +2216,20 @@
             return "CFamilyGroups_GetPurchaseRequests_Response";
           }
         }
-        class L extends a.Message {
+        class A extends a.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              L.prototype.family_groupid || r.Sg(L.M()),
+              A.prototype.family_groupid || r.Sg(A.M()),
               a.Message.initialize(this, t, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              L.sm_m ||
-                (L.sm_m = {
-                  proto: L,
+              A.sm_m ||
+                (A.sm_m = {
+                  proto: A,
                   fields: {
                     family_groupid: {
                       n: 1,
@@ -2244,40 +2244,40 @@
                     },
                   },
                 }),
-              L.sm_m
+              A.sm_m
             );
           }
           static MBF() {
-            return L.sm_mbf || (L.sm_mbf = r.w0(L.M())), L.sm_mbf;
+            return A.sm_mbf || (A.sm_mbf = r.w0(A.M())), A.sm_mbf;
           }
           toObject(t = !1) {
-            return L.toObject(t, this);
+            return A.toObject(t, this);
           }
           static toObject(t, e) {
-            return r.BT(L.M(), t, e);
+            return r.BT(A.M(), t, e);
           }
           static fromObject(t) {
-            return r.Uq(L.M(), t);
+            return r.Uq(A.M(), t);
           }
           static deserializeBinary(t) {
             let e = new (i().BinaryReader)(t),
-              s = new L();
-            return L.deserializeBinaryFromReader(s, e);
+              s = new A();
+            return A.deserializeBinaryFromReader(s, e);
           }
           static deserializeBinaryFromReader(t, e) {
-            return r.zj(L.MBF(), t, e);
+            return r.zj(A.MBF(), t, e);
           }
           serializeBinary() {
             var t = new (i().BinaryWriter)();
-            return L.serializeBinaryToWriter(this, t), t.getResultBuffer();
+            return A.serializeBinaryToWriter(this, t), t.getResultBuffer();
           }
           static serializeBinaryToWriter(t, e) {
-            r.i0(L.M(), t, e);
+            r.i0(A.M(), t, e);
           }
           serializeBase64String() {
             var t = new (i().BinaryWriter)();
             return (
-              L.serializeBinaryToWriter(this, t), t.getResultBase64String()
+              A.serializeBinaryToWriter(this, t), t.getResultBase64String()
             );
           }
           getClassName() {
@@ -2609,20 +2609,20 @@
             return "CFamilyGroupsClient_GroupChanged_Notification";
           }
         }
-        class A extends a.Message {
+        class L extends a.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              A.prototype.family_groupid || r.Sg(A.M()),
+              L.prototype.family_groupid || r.Sg(L.M()),
               a.Message.initialize(this, t, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              A.sm_m ||
-                (A.sm_m = {
-                  proto: A,
+              L.sm_m ||
+                (L.sm_m = {
+                  proto: L,
                   fields: {
                     family_groupid: {
                       n: 1,
@@ -2631,40 +2631,40 @@
                     },
                   },
                 }),
-              A.sm_m
+              L.sm_m
             );
           }
           static MBF() {
-            return A.sm_mbf || (A.sm_mbf = r.w0(A.M())), A.sm_mbf;
+            return L.sm_mbf || (L.sm_mbf = r.w0(L.M())), L.sm_mbf;
           }
           toObject(t = !1) {
-            return A.toObject(t, this);
+            return L.toObject(t, this);
           }
           static toObject(t, e) {
-            return r.BT(A.M(), t, e);
+            return r.BT(L.M(), t, e);
           }
           static fromObject(t) {
-            return r.Uq(A.M(), t);
+            return r.Uq(L.M(), t);
           }
           static deserializeBinary(t) {
             let e = new (i().BinaryReader)(t),
-              s = new A();
-            return A.deserializeBinaryFromReader(s, e);
+              s = new L();
+            return L.deserializeBinaryFromReader(s, e);
           }
           static deserializeBinaryFromReader(t, e) {
-            return r.zj(A.MBF(), t, e);
+            return r.zj(L.MBF(), t, e);
           }
           serializeBinary() {
             var t = new (i().BinaryWriter)();
-            return A.serializeBinaryToWriter(this, t), t.getResultBuffer();
+            return L.serializeBinaryToWriter(this, t), t.getResultBuffer();
           }
           static serializeBinaryToWriter(t, e) {
-            r.i0(A.M(), t, e);
+            r.i0(L.M(), t, e);
           }
           serializeBase64String() {
             var t = new (i().BinaryWriter)();
             return (
-              A.serializeBinaryToWriter(this, t), t.getResultBase64String()
+              L.serializeBinaryToWriter(this, t), t.getResultBase64String()
             );
           }
           getClassName() {
@@ -4392,37 +4392,37 @@
             return "CFamilyGroups_ClearCooldownSkip_Request";
           }
         }
-        class Lt extends a.Message {
+        class At extends a.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(), a.Message.initialize(this, t, 0, -1, void 0, null);
           }
           toObject(t = !1) {
-            return Lt.toObject(t, this);
+            return At.toObject(t, this);
           }
           static toObject(t, e) {
             return t ? { $jspbMessageInstance: e } : {};
           }
           static fromObject(t) {
-            return new Lt();
+            return new At();
           }
           static deserializeBinary(t) {
             let e = new (i().BinaryReader)(t),
-              s = new Lt();
-            return Lt.deserializeBinaryFromReader(s, e);
+              s = new At();
+            return At.deserializeBinaryFromReader(s, e);
           }
           static deserializeBinaryFromReader(t, e) {
             return t;
           }
           serializeBinary() {
             var t = new (i().BinaryWriter)();
-            return Lt.serializeBinaryToWriter(this, t), t.getResultBuffer();
+            return At.serializeBinaryToWriter(this, t), t.getResultBuffer();
           }
           static serializeBinaryToWriter(t, e) {}
           serializeBase64String() {
             var t = new (i().BinaryWriter)();
             return (
-              Lt.serializeBinaryToWriter(this, t), t.getResultBase64String()
+              At.serializeBinaryToWriter(this, t), t.getResultBase64String()
             );
           }
           getClassName() {
@@ -4496,37 +4496,37 @@
             return "CFamilyGroups_RollbackFamilyGroup_Request";
           }
         }
-        class At extends a.Message {
+        class Lt extends a.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(), a.Message.initialize(this, t, 0, -1, void 0, null);
           }
           toObject(t = !1) {
-            return At.toObject(t, this);
+            return Lt.toObject(t, this);
           }
           static toObject(t, e) {
             return t ? { $jspbMessageInstance: e } : {};
           }
           static fromObject(t) {
-            return new At();
+            return new Lt();
           }
           static deserializeBinary(t) {
             let e = new (i().BinaryReader)(t),
-              s = new At();
-            return At.deserializeBinaryFromReader(s, e);
+              s = new Lt();
+            return Lt.deserializeBinaryFromReader(s, e);
           }
           static deserializeBinaryFromReader(t, e) {
             return t;
           }
           serializeBinary() {
             var t = new (i().BinaryWriter)();
-            return At.serializeBinaryToWriter(this, t), t.getResultBuffer();
+            return Lt.serializeBinaryToWriter(this, t), t.getResultBuffer();
           }
           static serializeBinaryToWriter(t, e) {}
           serializeBase64String() {
             var t = new (i().BinaryWriter)();
             return (
-              At.serializeBinaryToWriter(this, t), t.getResultBase64String()
+              Lt.serializeBinaryToWriter(this, t), t.getResultBase64String()
             );
           }
           getClassName() {
@@ -4540,7 +4540,7 @@
               "FamilyGroups.CreateFamilyGroup#1",
               (0, l.I8)(f, b, z),
               W,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
             );
           }
           S.CreateFamilyGroup = t;
@@ -4549,7 +4549,11 @@
               "FamilyGroups.GetFamilyGroup#1",
               (0, l.I8)(T, b, z),
               h,
-              { bConstMethod: !0, ePrivilege: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           S.GetFamilyGroup = e;
@@ -4558,7 +4562,11 @@
               "FamilyGroups.GetFamilyGroupForUser#1",
               (0, l.I8)(E, b, z),
               U,
-              { bConstMethod: !0, ePrivilege: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           S.GetFamilyGroupForUser = s;
@@ -4567,7 +4575,7 @@
               "FamilyGroups.ModifyFamilyGroupDetails#1",
               (0, l.I8)(V, b, z),
               Kt,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
             );
           }
           S.ModifyFamilyGroupDetails = ie;
@@ -4576,7 +4584,7 @@
               "FamilyGroups.InviteToFamilyGroup#1",
               (0, l.I8)(H, b, z),
               R,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
             );
           }
           S.InviteToFamilyGroup = ne;
@@ -4585,7 +4593,7 @@
               "FamilyGroups.ConfirmInviteToFamilyGroup#1",
               (0, l.I8)(o, b, z),
               Yt,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
             );
           }
           S.ConfirmInviteToFamilyGroup = ae;
@@ -4594,7 +4602,7 @@
               "FamilyGroups.ResendInvitationToFamilyGroup#1",
               (0, l.I8)(wt, b, z),
               Zt,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
             );
           }
           S.ResendInvitationToFamilyGroup = se;
@@ -4603,7 +4611,7 @@
               "FamilyGroups.JoinFamilyGroup#1",
               (0, l.I8)($, b, z),
               F,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
             );
           }
           S.JoinFamilyGroup = ce;
@@ -4612,7 +4620,7 @@
               "FamilyGroups.ConfirmJoinFamilyGroup#1",
               (0, l.I8)(q, b, z),
               Xt,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
             );
           }
           S.ConfirmJoinFamilyGroup = Be;
@@ -4621,7 +4629,7 @@
               "FamilyGroups.RemoveFromFamilyGroup#1",
               (0, l.I8)(Y, b, z),
               It,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
             );
           }
           S.RemoveFromFamilyGroup = de;
@@ -4630,7 +4638,7 @@
               "FamilyGroups.CancelFamilyGroupInvite#1",
               (0, l.I8)(X, b, z),
               kt,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
             );
           }
           S.CancelFamilyGroupInvite = ge;
@@ -4639,7 +4647,11 @@
               "FamilyGroups.GetUsersSharingDevice#1",
               (0, l.I8)(D, b, z),
               C,
-              { bConstMethod: !0, ePrivilege: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           S.GetUsersSharingDevice = we;
@@ -4648,7 +4660,7 @@
               "FamilyGroups.DeleteFamilyGroup#1",
               (0, l.I8)(Z, b, z),
               Qt,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
             );
           }
           S.DeleteFamilyGroup = fe;
@@ -4657,7 +4669,7 @@
               "FamilyGroups.UndeleteFamilyGroup#1",
               (0, l.I8)(y, b, z),
               Nt,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
             );
           }
           S.UndeleteFamilyGroup = Me;
@@ -4666,7 +4678,7 @@
               "FamilyGroups.GetPlaytimeSummary#1",
               (0, l.I8)(st, b, z),
               ct,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
             );
           }
           S.GetPlaytimeSummary = be;
@@ -4675,7 +4687,7 @@
               "FamilyGroups.RequestPurchase#1",
               (0, l.I8)(N, b, z),
               p,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
             );
           }
           S.RequestPurchase = ze;
@@ -4684,25 +4696,33 @@
               "FamilyGroups.GetPurchaseRequests#1",
               (0, l.I8)(J, b, z),
               _,
-              { bConstMethod: !0, ePrivilege: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           S.GetPurchaseRequests = le;
           function Se(M, b, z) {
             return M.SendMsg(
               "FamilyGroups.RespondToRequestedPurchase#1",
-              (0, l.I8)(L, b, z),
+              (0, l.I8)(A, b, z),
               Vt,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
             );
           }
           S.RespondToRequestedPurchase = Se;
           function je(M, b, z) {
             return M.SendMsg(
               "FamilyGroups.GetChangeLog#1",
-              (0, l.I8)(A, b, z),
+              (0, l.I8)(L, b, z),
               nt,
-              { bConstMethod: !0, ePrivilege: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           S.GetChangeLog = je;
@@ -4720,7 +4740,11 @@
               "FamilyGroups.GetSharedLibraryApps#1",
               (0, l.I8)(u, b, z),
               dt,
-              { bConstMethod: !0, ePrivilege: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           S.GetSharedLibraryApps = Oe;
@@ -4764,7 +4788,7 @@
             return M.SendMsg(
               "FamilyGroups.ClearCooldownSkip#1",
               (0, l.I8)(Wt, b, z),
-              Lt,
+              At,
               { ePrivilege: 5 },
             );
           }
@@ -4773,7 +4797,7 @@
             return M.SendMsg(
               "FamilyGroups.RollbackFamilyGroup#1",
               (0, l.I8)(Ot, b, z),
-              At,
+              Lt,
               { ePrivilege: 5 },
             );
           }
@@ -4821,7 +4845,7 @@
           eS: () => er,
           fO: () => Nr,
           gv: () => Ir,
-          lF: () => Ar,
+          lF: () => Lr,
           ll: () => Er,
           p8: () => Qr,
           tN: () => Jr,
@@ -5480,7 +5504,7 @@
             },
           });
         }
-        function Lr(n) {
+        function Ar(n) {
           let c = [];
           n.sort((B, d) => B.time_start - d.time_start);
           let g = new Map();
@@ -5495,7 +5519,7 @@
           for (const B of g.values()) c.push(B);
           return c.sort((B, d) => B.time_start - d.time_start), c;
         }
-        function Ar(n) {
+        function Lr(n) {
           const c = (0, r.KV)();
           return (0, ht.I)({
             queryKey: yr(n),
@@ -5505,7 +5529,7 @@
               const B = await pt.xtC.GetRecentPlaytimeSessionsForChild(c, g);
               x(B.GetEResult(), "GetRecentPlaytimeSessionsForChild");
               let d = B.Body().toObject().sessions || [];
-              return Lr(d);
+              return Ar(d);
             },
           });
         }

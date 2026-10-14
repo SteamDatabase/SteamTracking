@@ -893,24 +893,27 @@
           return (0, _.jsx)(_._, {
             scrollable: _,
             children: _.map((_, _) =>
-              _
-                ? (0, _.jsx)(
-                    _._,
-                    {
-                      fallback: (_) =>
-                        (0, _.jsx)(_, {
+              (0, _.jsx)(
+                _._.Provider,
+                {
+                  value: !_ && _ == 0,
+                  children: _
+                    ? (0, _.jsx)(_._, {
+                        fallback: (_) =>
+                          (0, _.jsx)(_, {
+                            item: _,
+                            error: _,
+                          }),
+                        children: (0, _.jsx)(_, {
                           item: _,
-                          error: _,
+                          validatedItem: _[_.line_item_id],
+                          renderLineItem: _,
                         }),
-                      children: (0, _.jsx)(_, {
-                        item: _,
-                        validatedItem: _[_.line_item_id],
-                        renderLineItem: _,
-                      }),
-                    },
-                    _.line_item_id || _,
-                  )
-                : (0, _.jsx)(_._, {}, _),
+                      })
+                    : (0, _.jsx)(_._, {}),
+                },
+                _?.line_item_id || _,
+              ),
             ),
           });
         }
@@ -1130,8 +1133,9 @@
             placeholder: !0,
             children: [
               _ && (0, _.jsx)(_._, {}),
-              (0, _.jsxs)("div", {
+              (0, _.jsxs)(_._, {
                 className: _()(_().InnerLineItemCtn, _ && _().PendingLineItem),
+                "flow-children": "row",
                 children: [
                   (0, _.jsx)("div", {
                     className: _()(_().LineItemColumn, _().LineItemCapsule),
@@ -1160,6 +1164,7 @@
                       (0, _.jsx)(_._, {
                         className: _().LineItemSpaceBetween,
                         children: (0, _.jsx)(_._, {
+                          focusable: !0,
                           onActivate: () => _.mutate(),
                           className: _().RemoveLineItem,
                           children: _._.Localize("#Cart_Remove"),
@@ -1619,6 +1624,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -1626,6 +1632,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
@@ -1651,14 +1658,24 @@
             children: _,
           });
         }
+        const _ = _.createContext(!1);
         function _(_) {
-          const { placeholder: _, className: _, children: _ } = _;
+          const { placeholder: _, className: _, children: _ } = _,
+            _ = _.useContext(_);
           return (0, _.jsx)(_._, {
             className: _()(
               _().LineItemWrapper,
               _ && _().LineItemPlaceholder,
               _,
             ),
+            fnScrollIntoViewHandler: _
+              ? () => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }
+              : void 0,
             children: _,
           });
         }
@@ -1821,6 +1838,7 @@
                 })
                 .map((_) => _.ulfriendid());
             },
+            enabled: !!_,
           };
         }
         function _() {

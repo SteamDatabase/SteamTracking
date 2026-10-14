@@ -15,7 +15,7 @@
         });
         var t = i(7850),
           d = i(32093),
-          e = i(78192),
+          e = i(48156),
           u = i(72609),
           m = i(40358),
           r = i(90626),
@@ -188,7 +188,7 @@
       4515: (s, E, i) => {
         "use strict";
         i.d(E, { X: () => m, v: () => e });
-        var t = i(78192);
+        var t = i(48156);
         const d = {
           discord_server: t.jL.Eb,
           youtube: t.jL.lQ,

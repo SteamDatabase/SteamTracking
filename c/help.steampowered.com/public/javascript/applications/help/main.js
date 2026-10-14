@@ -461,6 +461,7 @@ Status Code:` +
           _([_._], _.prototype, "BHasSomeTextForLanguage", 1),
           _([_._], _.prototype, "GetLastTimeLanguageUpdated", 1);
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         class _ extends _.Message {
@@ -3162,7 +3163,7 @@ Status Code:` +
           }
           SetUpWebAPIInterface() {
             const _ = (0, _._)("faqstore", "application_config")?.webapi_token;
-            this.m_steamInterface = new _._(_._.WEBAPI_BASE_URL, _);
+            this.m_steamInterface = (0, _._)(new _._(_._.WEBAPI_BASE_URL, _));
           }
           ReadInitialPayload() {
             const _ = (0, _._)("faqstore", "application_config");
@@ -3646,9 +3647,15 @@ Status Code:` +
             [_, _]
           );
         }
+        var _ = __webpack_require__("chunkid");
+        let _;
+        function _(_) {
+          _ = _;
+        }
+        function _() {
+          return _;
+        }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _) {
@@ -6724,6 +6731,7 @@ Status Code:` +
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -6749,6 +6757,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -6761,6 +6770,7 @@ Status Code:` +
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -6783,6 +6793,7 @@ Status Code:` +
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -6793,6 +6804,7 @@ Status Code:` +
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -9178,16 +9190,17 @@ Status Code:` +
             );
           }
           GetServiceTransport() {
-            return (
-              this.m_serviceTransport ||
-                (console.warn(
-                  "Service transport not initialized for StoreItemCache",
-                ),
+            if (!this.m_serviceTransport) {
+              const _ = _();
+              if (_) return _.GetServiceTransport();
+              console.warn(
+                "Service transport not initialized for StoreItemCache",
+              ),
                 (this.m_serviceTransport = (0, _._)(
                   new _._(_._.WEBAPI_BASE_URL),
-                ).GetAnonymousServiceTransport())),
-              this.m_serviceTransport
-            );
+                ).GetAnonymousServiceTransport());
+            }
+            return this.m_serviceTransport;
           }
           async InternalHandleLoadStoreItems(_, _) {
             let _ = _._;
@@ -9602,6 +9615,7 @@ Status Code:` +
             (_[(_.Overlay = 2)] = "Overlay"),
             (_[(_.Opaque = 3)] = "Opaque"),
             (_[(_.OverlayKeyboard = 4)] = "OverlayKeyboard"),
+            (_[(_.VirtualMenu = 5)] = "VirtualMenu"),
             _
           ))(_ || {});
         const _ = "\0",
@@ -12542,7 +12556,8 @@ Status Code:` +
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid");
         function _(_) {
           const {
               target: _,
@@ -12566,9 +12581,10 @@ Status Code:` +
             [_, _] = _.useState(!1),
             [_, _] = _.useState(null),
             [_, _] = _.useState(null),
+            _ = (0, _._)(() => _?.visible),
             _ = _.useCallback(() => {
               let _ = _;
-              if (!_ || !_ || !_ || (_ && _ && !_.visible)) return;
+              if (!_ || !_ || !_ || (_ && _ && !_)) return;
               let _ = _.ownerDocument.defaultView;
               if (!_ || _.closed) return;
               (_.style.display = "flex"),
@@ -12639,7 +12655,7 @@ Status Code:` +
                 _ != _ && _(_),
                 _ != _ && _(_),
                 _ || _(!0);
-            }, [_, _, _, _, _, _, _, _, _, _, _, _, _]);
+            }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _]);
           _.useEffect(() => _(), [_]);
           let _ = Object.assign(
               {
@@ -12648,7 +12664,7 @@ Status Code:` +
               },
               _,
             ),
-            _ = !_ || _.visible;
+            _ = !_ || _;
           return (0, _.jsx)("div", {
             popover: "manual",
             ref: _,
@@ -12751,7 +12767,7 @@ Status Code:` +
             ..._,
             toolTipContent: _.toolTipContent
               ? (0, _.jsx)(_, {
-                  children: _(_.toolTipContent),
+                  children: _.toolTipContent,
                 })
               : null,
           });
@@ -12802,7 +12818,7 @@ Status Code:` +
               ..._,
               toolTipContent: _.toolTipContent
                 ? (0, _.jsx)(_, {
-                    children: _(_.toolTipContent),
+                    children: _.toolTipContent,
                   })
                 : null,
             });
@@ -12902,7 +12918,7 @@ Status Code:` +
           );
         }
         function _(_) {
-          return typeof _ == "string" ? _._.LocalizeIfToken(_, !0) : _;
+          return _;
         }
         function _(_) {
           const { divProps: _, tooltipProps: _, stateHandlers: _ } = _(_);
@@ -19365,6 +19381,7 @@ Status Code:` +
             if (!this.CanResetToDefault || this.m_eDragMode != 0) return;
             let _;
             (this.m_fLatestUserValue = this.props.resetValue),
+              (this.m_fLatestOnChangeValue = this.props.value),
               this.FireOnChange(this.props.resetValue, _),
               this.m_bInnerSliderHasFocus
                 ? (_ = this.props.resetValue > this.m_fLatestUserValue)
@@ -19411,6 +19428,7 @@ Status Code:` +
                 renderValue: _,
                 resetValue: _,
                 resetValueAppearance: _ = "top-caret",
+                resetValueSecondaryButtonDisabled: _,
                 showBookendLabels: _,
                 showHandle: _,
                 step: _,
@@ -19443,9 +19461,9 @@ Status Code:` +
               _ = _ == "top-caret",
               _ = !_,
               _ = _ || _,
-              _ = {};
-            this.CanResetToDefault &&
-              (_[_._.SECONDARY] = (0, _._)("#ResetToDefault"));
+              _ = {},
+              _ = this.CanResetToDefault && !_;
+            _ && (_[_._.SECONDARY] = (0, _._)("#ResetToDefault"));
             let _ = `${_().SliderHandle} SliderHandle`,
               _ = `${_().SliderHandleContainer} SliderHandleContainer `;
             _ == "verticalline"
@@ -19480,10 +19498,8 @@ Status Code:` +
               childFocusDisabled: _ || !_,
               onContextMenu: this.OnContextMenu,
               onOKButton: _ ? () => _._.PlayNavSound(_._.FailedNav) : void 0,
-              onSecondaryButton: this.CanResetToDefault
-                ? this.ResetToDefault
-                : void 0,
-              onSecondaryActionDescription: this.CanResetToDefault
+              onSecondaryButton: _ ? this.ResetToDefault : void 0,
+              onSecondaryActionDescription: _
                 ? (0, _._)("#ResetToDefault")
                 : void 0,
               actionDescriptionMap: _,
@@ -19756,7 +19772,10 @@ Status Code:` +
                   jsx("div", {
                     className: gamepadSliderStyles.DescriptionValue,
                     "aria-hidden": !0,
-                    children: _,
+                    children: jsx("span", {
+                      className: gamepadSliderStyles.DescriptionValueText,
+                      children: _,
+                    }),
                   }),
                 ],
               }));
@@ -25093,8 +25112,9 @@ Status Code:` +
                   children: (0, _._)("#Help_GoToHomepage"),
                 }),
               ],
-            }),
-          _ = null,
+            });
+        var _ = __webpack_require__("chunkid");
+        const _ = null,
           _ = 0,
           _ = 1;
         var _ = __webpack_require__("chunkid");
@@ -28890,10 +28910,7 @@ Status Code:` +
           }
           _.GetTimeRemaining = _;
         })(_ || (_ = {}));
-        const _ =
-            __webpack_require__._ +
-            "images/applications/help/login_mobile_auth.png?v=valveisgoodatcaching",
-          _ = __webpack_require__("chunkid")._,
+        const _ = __webpack_require__("chunkid")._,
           _ = new _._("Login"),
           _ = _.Info,
           _ = _.Debug,
@@ -29009,9 +29026,299 @@ Status Code:` +
             return null;
           let _ = await _(_, _.strUserName);
           return _
-            ? await _(_, _, _, _)
+            ? await _(
+                _,
+                _,
+                {
+                  ..._,
+                  strUserName: _.strUserName,
+                  strPassword: _.strPassword,
+                },
+                _,
+              )
             : (console.error(`Failed to get RSA key from ${_}`), null);
         }
+        var _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
+            for (
+              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
+              _ >= 0;
+              _--
+            )
+              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
+            return _ && _ && _(_, _, _), _;
+          },
+          _ = ((_) => (
+            (_[(_.None = 0)] = "None"),
+            (_[(_.Generic = 1)] = "Generic"),
+            (_[(_.Expired = 2)] = "Expired"),
+            (_[(_.Network = 3)] = "Network"),
+            (_[(_.MoveAuthenticator = 4)] = "MoveAuthenticator"),
+            (_[(_.RateLimitExceeded = 5)] = "RateLimitExceeded"),
+            (_[(_.AnonymousLogin = 6)] = "AnonymousLogin"),
+            _
+          ))(_ || {});
+        function _(_) {
+          const {
+            shared_secret: _,
+            identity_secret: _,
+            secret_1: _,
+            status: _,
+            uri: _,
+            server_time: _,
+            ..._
+          } = _;
+          return {
+            shared_secret: _._(_),
+            identity_secret: _._(_),
+            secret_1: _._(_),
+            ..._,
+          };
+        }
+        var _ = ((_) => (
+          (_[(_.k_Success = 0)] = "k_Success"),
+          (_[(_.k_PrimaryDomainFail = 1)] = "k_PrimaryDomainFail"),
+          (_[(_.k_SecondaryDomainFail = 2)] = "k_SecondaryDomainFail"),
+          _
+        ))(_ || {});
+        class _ {
+          m_transport;
+          m_strClientID;
+          m_msPollInterval;
+          m_activeTimerID;
+          m_rgRequestID;
+          m_strTokenToRevoke;
+          m_strChallengeURL = void 0;
+          m_onShowAgreement;
+          m_bRemoteInteraction = !1;
+          m_onCompleteCallback;
+          m_eFailureState = 0;
+          m_strExtendedErrorMessage = "";
+          m_onDeviceDetailsCallback;
+          constructor(_, _, _, _) {
+            (0, _._)(this),
+              (this.m_transport = _),
+              (this.m_onCompleteCallback = _),
+              (this.m_onDeviceDetailsCallback = _),
+              (this.m_onShowAgreement = _);
+          }
+          StartPolling(_ = !0) {
+            this.m_activeTimerID != null && this.StopPolling(),
+              _
+                ? this.PollForUpdate()
+                : (this.m_activeTimerID = window.setTimeout(
+                    this.PollForUpdate,
+                    this.m_msPollInterval,
+                  ));
+          }
+          StopPolling() {
+            window.clearTimeout(this.m_activeTimerID),
+              (this.m_activeTimerID = void 0);
+          }
+          async PollForUpdate() {
+            try {
+              const _ = _._.Init(_);
+              _.SetEMsg(_.Kec),
+                _.Body().set_client_id(this.m_strClientID),
+                _.Body().set_request_id(this.m_rgRequestID),
+                this.m_strTokenToRevoke &&
+                  _.Body().set_token_to_revoke(this.m_strTokenToRevoke);
+              const _ = await _.PollAuthSessionStatus(this.m_transport, _),
+                _ = _.GetEResult();
+              if (_ !== _._) {
+                if (_ === _._) {
+                  const _ = _.Hdr().transport_error();
+                  if (
+                    (_(
+                      `Failed to poll auth session. Result ${_}. Transport Error: ${_}`,
+                    ),
+                    _ === _.MhR || _ === _.VrD)
+                  )
+                    return (
+                      this.m_transport.MakeReady(), this.StartPolling(!1), _._
+                    );
+                }
+                if (_ === _._ || _ === _._) this.m_eFailureState = 2;
+                else if (_ === _._) this.m_eFailureState = 5;
+                else if (_ == _._) {
+                  const _ = _.Body().agreement_session_url();
+                  if (
+                    ((0, _._)(
+                      !!_,
+                      "Missing agreement session URL for result",
+                      _,
+                    ),
+                    this.m_onShowAgreement)
+                  )
+                    this.m_onShowAgreement(_);
+                  else {
+                    const _ = document.location.href;
+                    window.location.href = `${_}&redir=${encodeURIComponent(_)}`;
+                  }
+                  return (
+                    this.m_onCompleteCallback({
+                      bSuccess: !1,
+                    }),
+                    _
+                  );
+                } else
+                  _(`Failed to poll auth session. Result: ${_}`),
+                    (this.m_eFailureState = 1);
+                return (
+                  this.m_onCompleteCallback({
+                    bSuccess: !1,
+                  }),
+                  _
+                );
+              }
+              const {
+                new_challenge_url: _,
+                new_client_id: _,
+                refresh_token: _,
+                access_token: _,
+                account_name: _,
+                had_remote_interaction: _,
+                new_guard_data: _,
+              } = _.Body().toObject();
+              return (
+                (this.m_bRemoteInteraction = !!_),
+                _
+                  ? ((0, _._)(
+                      !!_ && !!_,
+                      "Missing access token or account name with refresh token",
+                    ),
+                    this.m_onCompleteCallback({
+                      bSuccess: !0,
+                      strRefreshToken: _,
+                      strAccessToken: _,
+                      strAccountName: _,
+                      strNewGuardData: _,
+                    }),
+                    _)
+                  : (_ && (this.m_strChallengeURL = _),
+                    _ && (this.m_strClientID = _),
+                    this.StartPolling(!1),
+                    _)
+              );
+            } catch (_) {
+              return (
+                _(`Failed to poll auth session. ${_}`),
+                (this.m_eFailureState = 1),
+                this.m_onCompleteCallback({
+                  bSuccess: !1,
+                }),
+                _._
+              );
+            }
+          }
+          SetTokenToRevoke(_) {
+            this.m_strTokenToRevoke = _;
+          }
+          GetFailureState() {
+            return this.m_eFailureState;
+          }
+          GetExtendedErrorMessage() {
+            return this.m_strExtendedErrorMessage;
+          }
+          BHadRemoteInteraction() {
+            return this.m_bRemoteInteraction;
+          }
+          async GetDeviceDetails() {
+            const _ = await this.m_onDeviceDetailsCallback();
+            return _.fromObject(_);
+          }
+        }
+        _([_._], _.prototype, "m_strChallengeURL", 2),
+          _([_._], _.prototype, "m_bRemoteInteraction", 2),
+          _([_._], _.prototype, "m_eFailureState", 2),
+          _([_._], _.prototype, "m_strExtendedErrorMessage", 2),
+          _([_._], _.prototype, "PollForUpdate", 1),
+          _([_._], _.prototype, "SetTokenToRevoke", 1);
+        function _(_) {
+          const _ = new FormData();
+          _.append("nonce", _), _.append("sessionid", (0, _._)());
+          let _ = new URL(document.location.href);
+          const _ = new URLSearchParams(_.search);
+          _.has("need_password") &&
+            (_.delete("need_password"), (_.search = _.toString())),
+            _.append("redir", _.toString());
+          const _ = `${_._.LOGIN_BASE_URL}jwt/finalizelogin`;
+          return _()
+            .post(_, _, {
+              withCredentials: !0,
+            })
+            .then(
+              (_) => {
+                const { data: _ } = _;
+                if (
+                  !_ ||
+                  !_.transfer_info ||
+                  !_.steamID ||
+                  !Array.isArray(_.transfer_info)
+                )
+                  return (
+                    _("Result of finalizelogin does not match expectations!"), 1
+                  );
+                const { transfer_info: _, steamID: _, primary_domain: _ } = _;
+                return Promise.all(
+                  _.map(({ url: _, params: _ }) =>
+                    _(_, {
+                      ..._,
+                      steamID: _,
+                    }),
+                  ),
+                ).then(
+                  (_) => _(_, _),
+                  () => 2,
+                );
+              },
+              () => (_("Failed to finalize login. Initial call failed."), 1),
+            );
+        }
+        function _(_, _) {
+          let _ = 0;
+          return (
+            _.forEach((_) => {
+              _.bSuccess ||
+                (_ && _.domain.toLowerCase() === _.toLowerCase()
+                  ? (_ = 1)
+                  : _ == 0 && (_ = 2));
+            }),
+            _
+          );
+        }
+        async function _(_, _) {
+          const _ = new URL(_);
+          let _ = !0;
+          try {
+            const _ = new FormData();
+            Object.keys(_).forEach((_) => _.append(_, _[_]));
+            const _ = await _().post(_, _, {
+              withCredentials: !0,
+              timeout: 1e4,
+            });
+            _.status !== 200
+              ? (_(
+                  `Transfer login to ${_.host} failed with status code: ${_.status}`,
+                ),
+                (_ = !1))
+              : _.data.result !== _._ &&
+                (_(
+                  `Transfer login to ${_.host} failed with result: ${_.data.result}`,
+                ),
+                (_ = !1));
+          } catch (_) {
+            _(`Transfer login to ${_.host} failed: "${_}"`), (_ = !1);
+          }
+          return {
+            bSuccess: _,
+            domain: _.host,
+          };
+        }
+        const _ =
+          __webpack_require__._ +
+          "images/applications/help/login_mobile_auth.png?v=valveisgoodatcaching";
         function _(_, _) {
           let _;
           if (typeof _ == "string") _ = _;
@@ -29193,275 +29500,6 @@ Status Code:` +
               _,
             ],
           });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          },
-          _ = ((_) => (
-            (_[(_.None = 0)] = "None"),
-            (_[(_.Generic = 1)] = "Generic"),
-            (_[(_.Expired = 2)] = "Expired"),
-            (_[(_.Network = 3)] = "Network"),
-            (_[(_.MoveAuthenticator = 4)] = "MoveAuthenticator"),
-            (_[(_.RateLimitExceeded = 5)] = "RateLimitExceeded"),
-            (_[(_.AnonymousLogin = 6)] = "AnonymousLogin"),
-            _
-          ))(_ || {});
-        function _(_) {
-          const {
-            shared_secret: _,
-            identity_secret: _,
-            secret_1: _,
-            status: _,
-            uri: _,
-            server_time: _,
-            ..._
-          } = _;
-          return {
-            shared_secret: _._(_),
-            identity_secret: _._(_),
-            secret_1: _._(_),
-            ..._,
-          };
-        }
-        var _ = ((_) => (
-          (_[(_.k_Success = 0)] = "k_Success"),
-          (_[(_.k_PrimaryDomainFail = 1)] = "k_PrimaryDomainFail"),
-          (_[(_.k_SecondaryDomainFail = 2)] = "k_SecondaryDomainFail"),
-          _
-        ))(_ || {});
-        class _ {
-          m_transport;
-          m_strClientID;
-          m_msPollInterval;
-          m_activeTimerID;
-          m_rgRequestID;
-          m_strTokenToRevoke;
-          m_strChallengeURL = void 0;
-          m_onShowAgreement;
-          m_bRemoteInteraction = !1;
-          m_onCompleteCallback;
-          m_eFailureState = 0;
-          m_strExtendedErrorMessage = "";
-          m_onDeviceDetailsCallback;
-          constructor(_, _, _, _) {
-            (0, _._)(this),
-              (this.m_transport = _),
-              (this.m_onCompleteCallback = _),
-              (this.m_onDeviceDetailsCallback = _),
-              (this.m_onShowAgreement = _);
-          }
-          StartPolling(_ = !0) {
-            this.m_activeTimerID != null && this.StopPolling(),
-              _
-                ? this.PollForUpdate()
-                : (this.m_activeTimerID = window.setTimeout(
-                    this.PollForUpdate,
-                    this.m_msPollInterval,
-                  ));
-          }
-          StopPolling() {
-            window.clearTimeout(this.m_activeTimerID),
-              (this.m_activeTimerID = void 0);
-          }
-          async PollForUpdate() {
-            try {
-              const _ = _._.Init(_);
-              _.SetEMsg(_.Kec),
-                _.Body().set_client_id(this.m_strClientID),
-                _.Body().set_request_id(this.m_rgRequestID),
-                this.m_strTokenToRevoke &&
-                  _.Body().set_token_to_revoke(this.m_strTokenToRevoke);
-              const _ = await _.PollAuthSessionStatus(this.m_transport, _),
-                _ = _.GetEResult();
-              if (_ !== _._) {
-                if (_ === _._) {
-                  const _ = _.Hdr().transport_error();
-                  if (
-                    (_(
-                      `Failed to poll auth session. Result ${_}. Transport Error: ${_}`,
-                    ),
-                    _ === _.MhR || _ === _.VrD)
-                  )
-                    return (
-                      this.m_transport.MakeReady(), this.StartPolling(!1), _._
-                    );
-                }
-                if (_ === _._ || _ === _._) this.m_eFailureState = 2;
-                else if (_ === _._) this.m_eFailureState = 5;
-                else if (_ == _._) {
-                  if (this.m_onShowAgreement)
-                    this.m_onShowAgreement(_.Body().agreement_session_url());
-                  else {
-                    const _ = _.Body().agreement_session_url(),
-                      _ = document.location.href;
-                    window.location.href = `${_}&redir=${encodeURIComponent(_)}`;
-                  }
-                  return (
-                    this.m_onCompleteCallback({
-                      bSuccess: !1,
-                    }),
-                    _
-                  );
-                } else
-                  _(`Failed to poll auth session. Result: ${_}`),
-                    (this.m_eFailureState = 1);
-                return (
-                  this.m_onCompleteCallback({
-                    bSuccess: !1,
-                  }),
-                  _
-                );
-              }
-              const {
-                new_challenge_url: _,
-                new_client_id: _,
-                refresh_token: _,
-                access_token: _,
-                account_name: _,
-                had_remote_interaction: _,
-                new_guard_data: _,
-              } = _.Body().toObject();
-              return (
-                (this.m_bRemoteInteraction = !!_),
-                _
-                  ? (this.m_onCompleteCallback({
-                      bSuccess: !0,
-                      strRefreshToken: _,
-                      strAccessToken: _,
-                      strAccountName: _,
-                      strNewGuardData: _,
-                    }),
-                    _)
-                  : (_ && (this.m_strChallengeURL = _),
-                    _ && (this.m_strClientID = _),
-                    this.StartPolling(!1),
-                    _)
-              );
-            } catch (_) {
-              return (
-                _(`Failed to poll auth session. ${_}`),
-                (this.m_eFailureState = 1),
-                this.m_onCompleteCallback({
-                  bSuccess: !1,
-                }),
-                _._
-              );
-            }
-          }
-          SetTokenToRevoke(_) {
-            this.m_strTokenToRevoke = _;
-          }
-          GetFailureState() {
-            return this.m_eFailureState;
-          }
-          GetExtendedErrorMessage() {
-            return this.m_strExtendedErrorMessage;
-          }
-          BHadRemoteInteraction() {
-            return this.m_bRemoteInteraction;
-          }
-          async GetDeviceDetails() {
-            const _ = await this.m_onDeviceDetailsCallback();
-            return _.fromObject(_);
-          }
-        }
-        _([_._], _.prototype, "m_strChallengeURL", 2),
-          _([_._], _.prototype, "m_bRemoteInteraction", 2),
-          _([_._], _.prototype, "m_eFailureState", 2),
-          _([_._], _.prototype, "m_strExtendedErrorMessage", 2),
-          _([_._], _.prototype, "PollForUpdate", 1),
-          _([_._], _.prototype, "SetTokenToRevoke", 1);
-        function _(_) {
-          const _ = new FormData();
-          _.append("nonce", _), _.append("sessionid", (0, _._)());
-          let _ = new URL(document.location.href);
-          const _ = new URLSearchParams(_.search);
-          _.has("need_password") &&
-            (_.delete("need_password"), (_.search = _.toString())),
-            _.append("redir", _.toString());
-          const _ = `${_._.LOGIN_BASE_URL}jwt/finalizelogin`;
-          return _()
-            .post(_, _, {
-              withCredentials: !0,
-            })
-            .then(
-              (_) => {
-                const { data: _ } = _;
-                if (
-                  !_ ||
-                  !_.transfer_info ||
-                  !_.steamID ||
-                  !Array.isArray(_.transfer_info)
-                )
-                  return (
-                    _("Result of finalizelogin does not match expectations!"), 1
-                  );
-                const { transfer_info: _, steamID: _, primary_domain: _ } = _;
-                return Promise.all(
-                  _.map(({ url: _, params: _ }) =>
-                    _(_, {
-                      ..._,
-                      steamID: _,
-                    }),
-                  ),
-                ).then(
-                  (_) => _(_, _),
-                  () => 2,
-                );
-              },
-              () => (_("Failed to finalize login. Initial call failed."), 1),
-            );
-        }
-        function _(_, _) {
-          let _ = 0;
-          return (
-            _.forEach((_) => {
-              _.bSuccess ||
-                (_ && _.domain.toLowerCase() === _.toLowerCase()
-                  ? (_ = 1)
-                  : _ == 0 && (_ = 2));
-            }),
-            _
-          );
-        }
-        async function _(_, _) {
-          const _ = new URL(_);
-          let _ = !0;
-          try {
-            const _ = new FormData();
-            Object.keys(_).forEach((_) => _.append(_, _[_]));
-            const _ = await _().post(_, _, {
-              withCredentials: !0,
-              timeout: 1e4,
-            });
-            _.status !== 200
-              ? (_(
-                  `Transfer login to ${_.host} failed with status code: ${_.status}`,
-                ),
-                (_ = !1))
-              : _.data.result !== _._ &&
-                (_(
-                  `Transfer login to ${_.host} failed with result: ${_.data.result}`,
-                ),
-                (_ = !1));
-          } catch (_) {
-            _(`Transfer login to ${_.host} failed: "${_}"`), (_ = !1);
-          }
-          return {
-            bSuccess: _,
-            domain: _.host,
-          };
         }
         var _ = __webpack_require__("chunkid");
         function _(_) {
@@ -31076,7 +31114,7 @@ Status Code:` +
                 _ = _._.Init(_);
               _.SetEMsg(_.Kec),
                 _.Body().set_account_name(_),
-                _.Body().set_encrypted_password(_),
+                _.Body().set_encrypted_password(_ ?? void 0),
                 _.Body().set_encryption_timestamp(_.timestamp),
                 _.Body().set_remember_login(!!_),
                 _.Body().set_persistence(_ ? _ : _),
@@ -31121,13 +31159,18 @@ Status Code:` +
                           _
                         );
                       case _._:
-                        if (this.m_onShowAgreement)
-                          this.m_onShowAgreement(
-                            _.Body().agreement_session_url(),
-                          );
+                        const _ = _.Body().agreement_session_url();
+                        if (
+                          ((0, _._)(
+                            !!_,
+                            "Missing agreement session URL for result",
+                            _,
+                          ),
+                          this.m_onShowAgreement)
+                        )
+                          this.m_onShowAgreement(_);
                         else {
-                          const _ = _.Body().agreement_session_url(),
-                            _ = document.location.href;
+                          const _ = document.location.href;
                           window.location.href = `${_}&redir=${encodeURIComponent(_)}`;
                         }
                         return (
@@ -31159,21 +31202,25 @@ Status Code:` +
                     client_id: _,
                     request_id: _,
                     interval: _,
-                    allowed_confirmations: _,
+                    allowed_confirmations: _ = [],
                     steamid: _,
                     weak_token: _,
                   } = _.Body().toObject();
                   if (
-                    ((this.m_msPollInterval = _ * 1e3),
+                    ((0, _._)(
+                      _ !== void 0 && !!_ && !!_,
+                      "Missing poll interval, client ID, or steamid for result",
+                      _,
+                    ),
+                    (this.m_msPollInterval = _ * 1e3),
                     (this.m_strClientID = _),
                     (this.m_rgRequestID = _),
                     (this.m_steamid = _),
-                    (this.m_strWeakAuthToken = _),
+                    (this.m_strWeakAuthToken = _ ?? ""),
                     _.find(({ confirmation_type: _ }) => _ === _))
                   ) {
                     const _ = new FormData();
-                    _.append("clientid", _),
-                      _.append("steamid", this.m_steamid);
+                    _.append("clientid", _), _.append("steamid", _);
                     const _ = `${_._.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
                     try {
                       if (
@@ -31210,7 +31257,17 @@ Status Code:` +
                       );
                     }
                   }
-                  const _ = _(_.map(({ confirmation_type: _ }) => _)),
+                  const _ = _(
+                      _.map(
+                        ({ confirmation_type: _ }) => (
+                          (0, _._)(
+                            _ !== void 0,
+                            "Missing confirmation type in allowed confirmations",
+                          ),
+                          _
+                        ),
+                      ),
+                    ),
                     _ = _.find(({ confirmation_type: _ }) => _ === _);
                   switch (
                     (_ &&
@@ -31332,11 +31389,18 @@ Status Code:` +
                       _
                     );
                   case _._:
-                    if (this.m_onShowAgreement)
-                      this.m_onShowAgreement(_.Body().agreement_session_url());
+                    const _ = _.Body().agreement_session_url();
+                    if (
+                      ((0, _._)(
+                        !!_,
+                        "Missing agreement session URL for result",
+                        _,
+                      ),
+                      this.m_onShowAgreement)
+                    )
+                      this.m_onShowAgreement(_);
                     else {
-                      const _ = _.Body().agreement_session_url(),
-                        _ = document.location.href;
+                      const _ = document.location.href;
                       window.location.href = `${_}&redir=${encodeURIComponent(_)}`;
                     }
                     return (
@@ -31417,6 +31481,10 @@ Status Code:` +
             }
           }
           async ResendMoveCode() {
+            (0, _._)(
+              !!this.m_weakAuthWebInterface,
+              "Resending move code before StartMoveAuthenticator",
+            );
             const _ = _._.Init(_),
               _ = await _.RemoveAuthenticatorViaChallengeStart(
                 this.m_weakAuthWebInterface.GetServiceTransport(),
@@ -31431,6 +31499,10 @@ Status Code:` +
               (this.m_eStatus = _);
           }
           async FinishMoveAuthenticator(_) {
+            (0, _._)(
+              !!this.m_weakAuthWebInterface,
+              "Finishing authenticator move before StartMoveAuthenticator",
+            );
             const _ = _._.Init(_);
             _.Body().set_sms_code(_),
               _.Body().set_generate_new_token(!0),
@@ -31439,24 +31511,28 @@ Status Code:` +
               this.m_weakAuthWebInterface.GetServiceTransport(),
               _,
             );
-            _._ == _.GetEResult()
-              ? (this.m_eStatus = _)
-              : _.Body().success()
-                ? (_.DEBUG_LogToConsole(),
-                  (this.m_replacementAuthenticator = _(
-                    _.Body().replacement_token().toObject(),
-                  )),
-                  (this.m_eStatus = _),
-                  (this.m_bUsingCodeOverride = !1))
-                : (_.DEBUG_LogToConsole(),
-                  _(
-                    "Error when calling RemoveAuthenticatorViaChallengeContinue",
-                    _.GetEResult(),
-                  ),
-                  this.SetFailureState(
-                    _.MoveAuthenticator,
-                    _.EResult(_.GetEResult()),
-                  ));
+            if (_._ == _.GetEResult()) this.m_eStatus = _;
+            else if (!_.Body().success())
+              _.DEBUG_LogToConsole(),
+                _(
+                  "Error when calling RemoveAuthenticatorViaChallengeContinue",
+                  _.GetEResult(),
+                ),
+                this.SetFailureState(
+                  _.MoveAuthenticator,
+                  _.EResult(_.GetEResult()),
+                );
+            else {
+              _.DEBUG_LogToConsole();
+              const _ = _.Body().replacement_token();
+              (0, _._)(
+                !!_,
+                "Missing replacement token on successful authenticator move",
+              ),
+                (this.m_replacementAuthenticator = _(_.toObject())),
+                (this.m_eStatus = _),
+                (this.m_bUsingCodeOverride = !1);
+            }
           }
           FinishMoveRecovery() {
             this.m_eStatus = _;
@@ -31513,11 +31589,15 @@ Status Code:` +
             this.m_eStatus = _.bSuccess ? _ : _;
             let _;
             _.bSuccess
-              ? (_ = {
+              ? ((0, _._)(
+                  !!this.m_strAccountName && !!this.m_steamid,
+                  "Missing account name or steamid on auth success",
+                ),
+                (_ = {
                   ..._,
                   strAccountName: this.m_strAccountName,
                   steamid: this.m_steamid,
-                })
+                }))
               : (_ = {
                   bSuccess: !1,
                 }),
@@ -31694,6 +31774,10 @@ Status Code:` +
                 request_id: _,
               } = _.Body().toObject();
               return (
+                (0, _._)(
+                  _ !== void 0,
+                  "Missing poll interval for QR auth session",
+                ),
                 (this.m_strClientID = _),
                 (this.m_strChallengeURL = _),
                 (this.m_msPollInterval = _ * 1e3),
@@ -31751,6 +31835,164 @@ Status Code:` +
               setTokenToRevoke: _.SetTokenToRevoke,
             }))
           );
+        }
+        function _(_) {
+          switch (_) {
+            case k_EUniverseDev:
+              return "dev";
+            case k_EUniverseBeta:
+              return "beta";
+            case k_EUniversePublic:
+              return "public";
+            default:
+              return "unknown";
+          }
+        }
+        async function _() {
+          const [_, _, _, _] = await Promise.all([
+            SteamClient.System.GetOSType(),
+            SteamClient.System.GetSystemInfo(),
+            SteamClient?.Auth?.GetLocalHostname?.() ?? "",
+            SteamClient?.Auth?.GetMachineID?.() ?? void 0,
+          ]);
+          return {
+            os_type: _,
+            device_friendly_name: _,
+            machine_id: _,
+            platform_type: _,
+            gaming_device_type: _.eGamingDeviceType,
+          };
+        }
+        async function _() {
+          return {
+            device_friendly_name: window.navigator.userAgent,
+            platform_type: _,
+          };
+        }
+        function _(_) {
+          const {
+              onSuccess: _,
+              secureComputer: _ = !0,
+              isProbablySharedPC: _ = !1,
+            } = _,
+            _ = (0, _.useCallback)(
+              (_) => {
+                if (_.bSuccess) {
+                  const {
+                    strRefreshToken: _,
+                    strAccessToken: _,
+                    strAccountName: _,
+                    strNewGuardData: _,
+                  } = _;
+                  _({
+                    strRefreshToken: _,
+                    strAccessToken: _,
+                    strAccountName: _,
+                    strNewGuardData: _,
+                  });
+                }
+              },
+              [_],
+            ),
+            _ = _({
+              transport: _.transport,
+              onComplete: _,
+              onDeviceDetails: _.onDeviceDetails,
+              onGetMachineAuth: _.onGetMachineAuth,
+              onShowAgreement: _.onShowAgreement,
+            }),
+            [_, _] = (0, _.useState)(_),
+            _ = "Login_RememberMeSetting",
+            [_, _] = (0, _.useState)(
+              _.refreshInfo?.account_name ?? _.defaultAccountName ?? "",
+            ),
+            [_, _] = (0, _.useState)(""),
+            [_, _] = (0, _.useState)(
+              _ && !_ && localStorage?.getItem(_) != "0",
+            ),
+            _ = !(_.eStatus === _ || _.eStatus === _ || _.eStatus === _),
+            _ = () => (!_ || !_ ? Promise.resolve(_._) : _.start(_, _, _)),
+            _ = () => {
+              _(`Logging in offline with username ${_}`),
+                SteamClient.User.SetLoginCredentials(_, _, _),
+                SteamClient.User.StartOffline(!0);
+            };
+          return (
+            (0, _.useEffect)(() => {
+              _.refreshInfo?.login_token_id &&
+                _.setTokenToRevoke(_.refreshInfo.login_token_id);
+            }, [_.refreshInfo, _]),
+            {
+              password: _,
+              onComplete: _,
+              eQRStatus: _,
+              onQRStatusChange: _,
+              strAccountName: _,
+              onAccountNameChange: _,
+              strPassword: _,
+              onPasswordChange: _,
+              bRememberMe: _,
+              onRememberMeChange: (_) => {
+                _(_), localStorage?.setItem(_, _ ? "1" : "0");
+              },
+              onPasswordSubmit: _,
+              bInPasswordFlow: _,
+              onTryOffline: _,
+            }
+          );
+        }
+        function _(_, _ = "") {
+          let _ = {
+            title: "",
+            description: "",
+          };
+          switch (_) {
+            case _.None:
+              return {
+                title: "",
+                description: "",
+              };
+            case _.Expired:
+              _ = {
+                title: (0, _._)("#Login_Error_Expired_Title"),
+                description: (0, _._)("#Login_Error_Expired_Description"),
+              };
+              break;
+            case _.Network:
+              _ = {
+                title: (0, _._)("#Login_Error_Network_Title"),
+                description: (0, _._)("#Login_Error_Network_Description"),
+              };
+              break;
+            case _.MoveAuthenticator:
+              _ = {
+                title: (0, _._)("#Error_Generic"),
+                description: (0, _._)(
+                  "#Login_Error_MoveAuthenticator_Description",
+                ),
+              };
+              break;
+            case _.RateLimitExceeded:
+              _ = {
+                title: (0, _._)("#Login_Error_RateLimit_Title"),
+                description: (0, _._)("#Login_Error_RateLimit_Description"),
+              };
+              break;
+            case _.AnonymousLogin:
+              _ = {
+                title: (0, _._)("#Login_Error_Anonymous_Title"),
+                description: (0, _._)("#Login_Error_Anonymous_Description"),
+              };
+              break;
+            case _.Generic:
+            default:
+              _ = {
+                title: (0, _._)("#Error_Generic"),
+                description: (0, _._)("#Login_Error_Default_Description"),
+              };
+              break;
+          }
+          return _ && (_.description = _), _;
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -31946,7 +32188,7 @@ Status Code:` +
               onDeviceDetails: _,
             });
           (0, _.useEffect)(() => _ && _(_), [_, _]);
-          const _ = _ === _ ? _ : _._.STORE_BASE_URL,
+          const _ = _ === _ && _ ? _ : _._.STORE_BASE_URL,
             _ = _ === _ || _ === _ || _,
             _ = _ === _,
             _ = _ === _,
@@ -32127,18 +32369,6 @@ Status Code:` +
           });
         }
         function _(_) {
-          switch (_) {
-            case k_EUniverseDev:
-              return "dev";
-            case k_EUniverseBeta:
-              return "beta";
-            case k_EUniversePublic:
-              return "public";
-            default:
-              return "unknown";
-          }
-        }
-        function _(_) {
           if (_()) return null;
           const { variant: _ } = _;
           return typeof _ == "function"
@@ -32207,99 +32437,6 @@ Status Code:` +
               }),
             ],
           });
-        }
-        async function _() {
-          const [_, _, _, _] = await Promise.all([
-            SteamClient.System.GetOSType(),
-            SteamClient.System.GetSystemInfo(),
-            SteamClient?.Auth?.GetLocalHostname?.() ?? "",
-            SteamClient?.Auth?.GetMachineID?.() ?? void 0,
-          ]);
-          return {
-            os_type: _,
-            device_friendly_name: _,
-            machine_id: _,
-            platform_type: _,
-            gaming_device_type: _.eGamingDeviceType,
-          };
-        }
-        async function _() {
-          return {
-            device_friendly_name: window.navigator.userAgent,
-            platform_type: _,
-          };
-        }
-        function _(_) {
-          const {
-              onSuccess: _,
-              secureComputer: _ = !0,
-              isProbablySharedPC: _ = !1,
-            } = _,
-            _ = (0, _.useCallback)(
-              (_) => {
-                if (_.bSuccess) {
-                  const {
-                    strRefreshToken: _,
-                    strAccessToken: _,
-                    strAccountName: _,
-                    strNewGuardData: _,
-                  } = _;
-                  _({
-                    strRefreshToken: _,
-                    strAccessToken: _,
-                    strAccountName: _,
-                    strNewGuardData: _,
-                  });
-                }
-              },
-              [_],
-            ),
-            _ = _({
-              transport: _.transport,
-              onComplete: _,
-              onDeviceDetails: _.onDeviceDetails,
-              onGetMachineAuth: _.onGetMachineAuth,
-              onShowAgreement: _.onShowAgreement,
-            }),
-            [_, _] = (0, _.useState)(_),
-            _ = "Login_RememberMeSetting",
-            [_, _] = (0, _.useState)(
-              _.refreshInfo?.account_name ?? _.defaultAccountName ?? "",
-            ),
-            [_, _] = (0, _.useState)(""),
-            [_, _] = (0, _.useState)(
-              _ && !_ && localStorage?.getItem(_) != "0",
-            ),
-            _ = !(_.eStatus === _ || _.eStatus === _ || _.eStatus === _),
-            _ = () => (!_ || !_ ? Promise.resolve(_._) : _.start(_, _, _)),
-            _ = () => {
-              _(`Logging in offline with username ${_}`),
-                SteamClient.User.SetLoginCredentials(_, _, _),
-                SteamClient.User.StartOffline(!0);
-            };
-          return (
-            (0, _.useEffect)(() => {
-              _.refreshInfo?.login_token_id &&
-                _.setTokenToRevoke(_.refreshInfo.login_token_id);
-            }, [_.refreshInfo, _]),
-            {
-              password: _,
-              onComplete: _,
-              eQRStatus: _,
-              onQRStatusChange: _,
-              strAccountName: _,
-              onAccountNameChange: _,
-              strPassword: _,
-              onPasswordChange: _,
-              bRememberMe: _,
-              onRememberMeChange: (_) => {
-                _(_), localStorage?.setItem(_, _ ? "1" : "0");
-              },
-              onPasswordSubmit: _,
-              bInPasswordFlow: _,
-              onTryOffline: _,
-            }
-          );
         }
         function _() {
           const _ = window?.location && _(window.location, "need_password");
@@ -32454,6 +32591,11 @@ Status Code:` +
             case _:
             case _:
             case _:
+              (0, _._)(
+                !!_.password.strAccountName,
+                "Missing account name in login session for status",
+                _,
+              );
               const _ = _ === _ || _ === _;
               return (0, _.jsx)(_, {
                 type: _ ? "mobile" : "email",
@@ -32466,6 +32608,11 @@ Status Code:` +
               });
             case _:
             case _:
+              (0, _._)(
+                !!_.password.strAccountName,
+                "Missing account name in login session for status",
+                _,
+              );
               const _ = _ === _;
               return (0, _.jsx)(_, {
                 type: _ ? "mobile" : "email",
@@ -32631,7 +32778,7 @@ Status Code:` +
               }),
               _
                 ? (0, _.jsx)(_, {
-                    toolTipContent: "#Login_RememberMe_Tooltip",
+                    toolTipContent: (0, _._)("#Login_RememberMe_Tooltip"),
                     direction: "bottom",
                     children: (0, _.jsx)(_, {
                       label: (0, _._)("#Login_RememberMe_Short"),
@@ -33097,59 +33244,6 @@ Status Code:` +
                 }),
             ],
           });
-        }
-        function _(_, _ = "") {
-          let _ = {
-            title: "",
-            description: "",
-          };
-          switch (_) {
-            case _.None:
-              return {
-                title: "",
-                description: "",
-              };
-            case _.Expired:
-              _ = {
-                title: (0, _._)("#Login_Error_Expired_Title"),
-                description: (0, _._)("#Login_Error_Expired_Description"),
-              };
-              break;
-            case _.Network:
-              _ = {
-                title: (0, _._)("#Login_Error_Network_Title"),
-                description: (0, _._)("#Login_Error_Network_Description"),
-              };
-              break;
-            case _.MoveAuthenticator:
-              _ = {
-                title: (0, _._)("#Error_Generic"),
-                description: (0, _._)(
-                  "#Login_Error_MoveAuthenticator_Description",
-                ),
-              };
-              break;
-            case _.RateLimitExceeded:
-              _ = {
-                title: (0, _._)("#Login_Error_RateLimit_Title"),
-                description: (0, _._)("#Login_Error_RateLimit_Description"),
-              };
-              break;
-            case _.AnonymousLogin:
-              _ = {
-                title: (0, _._)("#Login_Error_Anonymous_Title"),
-                description: (0, _._)("#Login_Error_Anonymous_Description"),
-              };
-              break;
-            case _.Generic:
-            default:
-              _ = {
-                title: (0, _._)("#Error_Generic"),
-                description: (0, _._)("#Login_Error_Default_Description"),
-              };
-              break;
-          }
-          return _ && (_.description = _), _;
         }
         function _(_) {
           const { reset: _ } = _;
@@ -35884,6 +35978,28 @@ Status Code:` +
           _ = 2,
           _ = 3,
           _ = 4,
+          _ = 1,
+          _ = 2,
+          _ = 4,
+          _ = 8,
+          _ = 16,
+          _ = 32,
+          _ = 64,
+          _ = 128,
+          _ = 256,
+          _ = 512,
+          _ = 1024,
+          _ = 2048,
+          _ = 4096,
+          _ = 8192,
+          _ = 16384,
+          _ = 32768,
+          _ = 65536,
+          _ = 0,
+          _ = 1,
+          _ = 2,
+          _ = 3,
+          _ = 4,
           _ = 5,
           _ = 0,
           _ = 1,
@@ -36587,6 +36703,30 @@ Status Code:` +
               secure: !0,
               httpOnly: !0,
               maxAge: 3600 * 24 * 1,
+            },
+            preferenceControls: {
+              isTechnicallyNecessary: !0,
+            },
+          },
+          _ = {
+            name: "steamparental",
+            preferenceControls: {
+              isTechnicallyNecessary: !0,
+            },
+          },
+          _ = {
+            name: "clientsessionid",
+            preferenceControls: {
+              isTechnicallyNecessary: !0,
+            },
+          },
+          _ = {
+            name: "steambrowserredirect",
+            options: {
+              secure: !0,
+              httpOnly: !0,
+              path: "/",
+              sameSite: "lax",
             },
             preferenceControls: {
               isTechnicallyNecessary: !0,
@@ -43662,6 +43802,7 @@ Status Code:` +
               {
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -44040,9 +44181,9 @@ Status Code:` +
                 let _;
                 return (
                   _.strComponentStack &&
-                    ((_ ??= {}),
-                    (_.componentStack = _.strComponentStack),
-                    (_.strDisplayVersion = _.strDisplayVersion)),
+                    ((_ ??= {}), (_.componentStack = _.strComponentStack)),
+                  _.strDisplayVersion &&
+                    ((_ ??= {}), (_.strDisplayVersion = _.strDisplayVersion)),
                   _ && _.set_context(JSON.stringify(_)),
                   _.strUrl && _.set_url(_.strUrl),
                   _
@@ -44344,7 +44485,7 @@ Status Code:` +
           _: () => _,
         });
         const _ =
-            /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\s"<>\[\],.ː:])?)/,
+            /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\^-~]+[.,](?:(?:[a-zA-Z]{2,4}[.?]*[/\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>[\]]*[^\s"<>[\],.ː:])?)/,
           _ = /^(steam|ftp|https?):\/\//;
         function _(_) {
           return _.test(_) ? _ : "https://" + _;
@@ -45492,6 +45633,7 @@ Status Code:` +
           _ = 341,
           _ = 342,
           _ = 343,
+          _ = 344,
           _ = 400,
           _ = 402,
           _ = 405,
@@ -47340,6 +47482,7 @@ Status Code:` +
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -55417,6 +55560,7 @@ Status Code:` +
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
+              rgBrowserAPISites: ["partner"],
             });
           }
           _.GetApps = _;
@@ -55617,6 +55761,7 @@ Status Code:` +
               _,
               {
                 ePrivilege: 3,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -56080,6 +56225,7 @@ Status Code:` +
           SCE: () => _,
           EyI: () => _,
           Bx6: () => _,
+          QAJ: () => _,
           xtC: () => _,
         });
         var _ = {};
@@ -61459,6 +61605,31 @@ Status Code:` +
                       _: 7,
                       _: _._.readBool,
                       _: _._.writeBool,
+                    },
+                    groups_completed_base: {
+                      _: 8,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    groups_total_base: {
+                      _: 9,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    groups_completed_dlc: {
+                      _: 10,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    groups_total_dlc: {
+                      _: 11,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    base_game_total: {
+                      _: 12,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
                     },
                   },
                 }),
@@ -67320,6 +67491,7 @@ Status Code:` +
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -67333,6 +67505,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -67354,6 +67527,7 @@ Status Code:` +
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
+              rgBrowserAPISites: ["partner"],
             });
           }
           _.GetOwnedGames = _;
@@ -67372,6 +67546,7 @@ Status Code:` +
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -67519,6 +67694,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -67550,6 +67726,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -67563,6 +67740,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -67575,6 +67753,7 @@ Status Code:` +
               {
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -67588,6 +67767,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -67601,6 +67781,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -67614,6 +67795,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -67846,6 +68028,7 @@ Status Code:` +
               _,
               {
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -71395,7 +71578,14 @@ Status Code:` +
           constructor(_ = null) {
             super(),
               _.prototype.steam_award || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [1, 10, 13, 15, 18], null);
+              _.Message.initialize(
+                this,
+                _,
+                0,
+                -1,
+                [1, 10, 13, 15, 18, 31],
+                null,
+              );
           }
           static sm_m;
           static sm_mbf;
@@ -71535,6 +71725,30 @@ Status Code:` +
                       _: 27,
                       _: _,
                     },
+                    system_requirements: {
+                      _: 28,
+                      _: _,
+                    },
+                    running_time_minutes: {
+                      _: 29,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    episode: {
+                      _: 30,
+                      _: _,
+                    },
+                    seasons: {
+                      _: 31,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                    video_extras_note: {
+                      _: 32,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
                   },
                 }),
               _.sm_m
@@ -71576,6 +71790,11 @@ Status Code:` +
           getClassName() {
             return "StoreItem_ExtraDetails";
           }
+        }
+        function _(_) {
+          return (
+            "unknown StoreItem_ExtraDetails_EVideoExtrasNote ( " + _ + " )"
+          );
         }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
@@ -72323,6 +72542,506 @@ Status Code:` +
           }
           getClassName() {
             return "StoreItem_ExtraDetails_CastAndCrew";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.platforms || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, [1], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    platforms: {
+                      _: 1,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "StoreItem_ExtraDetails_SystemRequirements";
+          }
+        }
+        function _(_) {
+          return (
+            "unknown StoreItem_ExtraDetails_SystemRequirements_EUnsupportedOSNote ( " +
+            _ +
+            " )"
+          );
+        }
+        function _(_) {
+          return (
+            "unknown StoreItem_ExtraDetails_SystemRequirements_ESysReqPlatform ( " +
+            _ +
+            " )"
+          );
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.amount || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    amount: {
+                      _: 1,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    units: {
+                      _: 2,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "StoreItem_ExtraDetails_SystemRequirements_Size";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.os_version || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    os_version: {
+                      _: 1,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    os_version_unsupported: {
+                      _: 2,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    processor: {
+                      _: 3,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    memory: {
+                      _: 4,
+                      _: _,
+                    },
+                    graphics: {
+                      _: 5,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    directx: {
+                      _: 6,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    broadband: {
+                      _: 7,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    storage: {
+                      _: 8,
+                      _: _,
+                    },
+                    storage_hq: {
+                      _: 9,
+                      _: _,
+                    },
+                    sound_card: {
+                      _: 10,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    vr_support: {
+                      _: 11,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    notes: {
+                      _: 12,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    legacy_bbcode: {
+                      _: 13,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "StoreItem_ExtraDetails_SystemRequirements_Requirements";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.platform || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    platform: {
+                      _: 1,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
+                    minimum: {
+                      _: 2,
+                      _: _,
+                    },
+                    recommended: {
+                      _: 3,
+                      _: _,
+                    },
+                    requires_64bit: {
+                      _: 4,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    requires_apple_silicon: {
+                      _: 5,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    unsupported_os_note: {
+                      _: 6,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "StoreItem_ExtraDetails_SystemRequirements_PlatformRequirements";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.number || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    number: {
+                      _: 1,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    type: {
+                      _: 2,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
+                    hide_details: {
+                      _: 3,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "StoreItem_ExtraDetails_Episode";
+          }
+        }
+        function _(_) {
+          return (
+            "unknown StoreItem_ExtraDetails_Episode_EEpisodeType ( " + _ + " )"
+          );
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.index || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, [3], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    index: {
+                      _: 1,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
+                    name: {
+                      _: 2,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    episode_appids: {
+                      _: 3,
+                      _: !0,
+                      _: !0,
+                      _: _._.readUint32,
+                      pbr: _._.readPackedUint32,
+                      _: _._.writeRepeatedUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "StoreItem_ExtraDetails_Season";
           }
         }
         class _ extends _.Message {
@@ -74623,6 +75342,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -74636,6 +75356,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -74675,6 +75396,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -74716,6 +75438,9 @@ Status Code:` +
         }
         function _(_) {
           return "unknown EStoreQueryReleaseDateFilter ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown EStoreQueryCompatDevice ( " + _ + " )";
         }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
@@ -74789,6 +75514,14 @@ Status Code:` +
                     },
                     discounted_dates_filter: {
                       _: 17,
+                      _: _,
+                    },
+                    compatibility_filter: {
+                      _: 18,
+                      _: _,
+                    },
+                    review_score_filter: {
+                      _: 19,
                       _: _,
                     },
                     content_descriptors_must_match: {
@@ -75352,6 +76085,143 @@ Status Code:` +
           }
           getClassName() {
             return "CStoreQueryFilters_DiscountedDatesFilter";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.device || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, [2], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    device: {
+                      _: 1,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
+                    categories: {
+                      _: 2,
+                      _: !0,
+                      _: !0,
+                      _: _._.readEnum,
+                      pbr: _._.readPackedEnum,
+                      _: _._.writeRepeatedEnum,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CStoreQueryFilters_CompatibilityFilter";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.min_score || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    min_score: {
+                      _: 1,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
+                    allow_unreviewed: {
+                      _: 2,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CStoreQueryFilters_ReviewScoreFilter";
           }
         }
         class _ extends _.Message {
@@ -76251,6 +77121,16 @@ Status Code:` +
                       _: _._.readBool,
                       _: _._.writeBool,
                     },
+                    include_dlc: {
+                      _: 6,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    min_discount_percent: {
+                      _: 7,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
                   },
                 }),
               _.sm_m
@@ -76607,6 +77487,7 @@ Status Code:` +
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
+              rgBrowserAPISites: ["partner"],
             });
           }
           _.Query = _;
@@ -76619,6 +77500,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -76644,6 +77526,7 @@ Status Code:` +
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
               },
             );
           }
@@ -78403,7 +79286,13 @@ Status Code:` +
                       .SendNotification(_, _, _);
               console.error("No browserapi version of", _, "and no fallback");
             }
-            return this.Send(_, _, _, _), !0;
+            return this.SendNotificationAndRetryIfUnauthorized(_, _, _, _), !0;
+          }
+          async SendNotificationAndRetryIfUnauthorized(_, _, _, _) {
+            (await this.Send(_, _, _, _)).status !== 401 ||
+              !_.bSendAuth ||
+              !(await this.BEnsureLoginCookieRefreshed()) ||
+              (await this.Send(_, _, _, _));
           }
           Send(_, _, _, _) {
             const _ = this.CreateBrowserAPIURL(_),
@@ -78946,7 +79835,7 @@ Status Code:` +
           return {
             queryKey: _(_, "include_included_items", _.cacheScope),
             queryFn: async () => (
-              _ && _(_, _, _),
+              _ && _(_, _, _).catch(() => {}),
               (await _(_, _, "include_included_items")).included_appids ?? []
             ),
             initialData: _ ? [_.appid] : void 0,
@@ -79130,6 +80019,7 @@ Status Code:` +
           _.setQueryData(_(_, "include_all_purchase_options", _), {
             purchase_options: _.purchase_options,
             package_groups: _.package_groups,
+            purchase_notes: _.purchase_notes,
           });
         }
         function _(_, _) {
@@ -79222,6 +80112,7 @@ Status Code:` +
               return {
                 purchase_options: _.purchase_options,
                 package_groups: _.package_groups,
+                purchase_notes: _.purchase_notes,
               };
             },
             staleTime: 600 * 1e3,
@@ -79236,8 +80127,9 @@ Status Code:` +
             staleTime: 600 * 1e3,
           };
         }
+        const _ = "StoreItem";
         function _(_, _, _) {
-          const _ = ["StoreItem", _ && (0, _._)(_), _];
+          const _ = [_, _ && (0, _._)(_), _];
           return _ && _.push(_), _;
         }
         function _(_, _, _, _) {
@@ -79292,6 +80184,7 @@ Status Code:` +
           "platforms",
           "release",
           "package_groups",
+          "purchase_notes",
           "extra_details",
           "optin_registration_tags",
         ];
@@ -79353,7 +80246,7 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
-        function _(_, _, _, _) {
+        function _(_, _, _, _, _ = !1) {
           (0, _._)(
             !_.bIncludeUnpublished || !!_.bUsePartnerAPI,
             "bIncludeUnpublished requires bUsePartnerAPI",
@@ -79396,6 +80289,8 @@ Status Code:` +
                   _.Body().set_include_unpublished(!!_.bIncludeUnpublished),
                   (_ = await _._.GetItems(_, _));
               } else _ = await _._.GetItems(_, _);
+              if (_ && !_.BSuccess())
+                throw `Error loading store items: ${_.GetErrorMessage()}`;
               const _ = new Map();
               return (
                 _.Body()
@@ -79468,6 +80363,7 @@ Status Code:` +
               msDelayBatch: _,
               serviceTransportOverride: _,
               legacyCacheStoreItemData: _,
+              bRejectOnRequestFailure: _,
               children: _,
             } = _,
             _ = (0, _._)(),
@@ -79505,8 +80401,9 @@ Status Code:` +
                   batchScheduleFn: _,
                 },
                 _,
+                _,
               );
-            }, [_, _, _, _]),
+            }, [_, _, _, _, _]),
             _ = _.useMemo(
               () => ({
                 dataLoader: _,
@@ -79517,6 +80414,23 @@ Status Code:` +
             );
           return (0, _.jsx)(_.Provider, {
             value: _,
+            children: _,
+          });
+        }
+        function _(_) {
+          const { bIncludeUnpublished: _, children: _ } = _,
+            _ = _(),
+            _ = React.useMemo(
+              () => ({
+                ..._,
+                bUsePartnerAPI: !0,
+                bIncludeUnpublished: _,
+              }),
+              [_, _],
+            );
+          return jsx(_, {
+            context: _,
+            serviceTransportOverride: k_RefusingServiceTransport,
             children: _,
           });
         }
@@ -80515,19 +81429,7 @@ Status Code:` +
 	"personalcalendar-calendar": 100802,
 	"personalcalendar-homepage": 100803,
 	"greatonframe": 100804
-}`),
-          _ = 4145017,
-          _ = 35143931,
-          _ = 39049601,
-          _ = 45479024,
-          _ = 41316928,
-          _ = 45784768,
-          _ = 4397053,
-          _ = 4,
-          _ = 20,
-          _ = 45559995,
-          _ = 45902273,
-          _ = [_, _, _, _, _];
+}`);
         function _(_) {
           return _ in _;
         }
@@ -80569,9 +81471,7 @@ Status Code:` +
                 _ = new URLSearchParams(_.search);
               return (
                 _.set("snr", encodeURIComponent(_ ?? "")),
-                _ &&
-                  !_.includes(_) &&
-                  _.set("curator_clanid", encodeURIComponent(_ ?? "")),
+                _ && _.set("curator_clanid", encodeURIComponent(_ ?? "")),
                 _.origin + _.pathname + "?" + _.toString() + _.hash
               );
             } catch (_) {
@@ -81240,11 +82140,19 @@ Status Code:` +
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           return (0, _._)() === _._.PARTNER_BASE_URL ? new _._(_) : _;
+        }
+        function _() {
+          return [_._.HELP_BASE_URL];
+        }
+        function _(_) {
+          const _ = (0, _._)();
+          return _ && _().includes(_) ? new _._(_) : _;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -82256,7 +83164,7 @@ Status Code:` +
               ..._
             } = this.props;
             const _ = this.context.styles ?? _();
-            let _ = _ ?? "#Button_Cancel";
+            let _ = _ ?? (0, _._)("#Button_Cancel");
             if (this.context.presentation == _._ && !_) {
               const _ = () => {
                 _ && _(), this.instance.Hide();
@@ -82301,7 +83209,7 @@ Status Code:` +
                           (0, _.jsx)(_, {
                             className: _.Cancel,
                             onSelected: _,
-                            children: (0, _._)(_),
+                            children: _,
                           }),
                           _,
                         ],
@@ -89735,6 +90643,7 @@ Status Code:` +
               uniformSizing: _ = !1,
               batteryCriticalThreshold: _ = 0.2,
               alert: _ = !1,
+              saver: _ = !1,
               className: _,
               forceWhiteChargingBolt: _,
               ..._
@@ -89742,37 +90651,72 @@ Status Code:` +
             _ = _ == EACState.k_EACState_Connected,
             _ = _ == EACState.k_EACState_ConnectedSlow,
             _ = _ || _,
+            [_, _] = useSvgId(),
             _ = jsxs("svg", {
               ..._,
               width: _ ? void 0 : "34px",
               height: _ ? void 0 : "24px",
-              viewBox: _ ? "-4 0 52 36" : "0 0 48 36",
+              viewBox: _ ? "-8 0 52 36" : "0 0 48 36",
               className: _ ? _ : void 0,
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
               children: [
-                !_ &&
-                  jsx("path", {
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    _: "M39 6H0V30H39V22H42V14H39V6ZM36 9H3V27H36V9Z",
-                    fill: "currentColor",
-                  }),
-                jsx("svg", {
-                  _: "6",
-                  _: "12",
-                  width: "27",
-                  height: "12",
-                  children: jsx("rect", {
-                    width: `${_ * 100}%`,
-                    height: "100%",
-                    fill: _ <= _ ? "#E01D79" : "#59BF40",
+                jsx("defs", {
+                  children: jsxs("mask", {
+                    _: _,
+                    children: [
+                      jsx("rect", {
+                        _: "-20",
+                        _: "-20",
+                        width: "100",
+                        height: "100",
+                        fill: "#ffffff",
+                      }),
+                      jsx("path", {
+                        _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
+                        fill: "none",
+                        stroke: "#000000",
+                        "stroke-width": "6",
+                        "stroke-linecap": "round",
+                        "stroke-linejoin": "round",
+                      }),
+                    ],
                   }),
                 }),
-                (_ || _) &&
-                  jsx("path", {
-                    _: "M16 20L21 11V16H26L21 25V20H16Z",
-                    fill: _ ? "white" : "currentColor",
+                jsxs("g", {
+                  mask: _ ? _ : void 0,
+                  children: [
+                    !_ &&
+                      jsx("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        _: "M39 6H0V30H39V22H42V14H39V6ZM36 9H3V27H36V9Z",
+                        fill: "currentColor",
+                      }),
+                    jsx("svg", {
+                      _: "6",
+                      _: "12",
+                      width: "27",
+                      height: "12",
+                      children: jsx("rect", {
+                        width: `${_ * 100}%`,
+                        height: "100%",
+                        fill: _ <= _ ? "#E01D79" : "#59BF40",
+                      }),
+                    }),
+                    (_ || _) &&
+                      jsx("path", {
+                        _: "M16 20L21 11V16H26L21 25V20H16Z",
+                        fill: _ ? "white" : "currentColor",
+                      }),
+                  ],
+                }),
+                _ &&
+                  jsx(Fragment, {
+                    children: jsx("path", {
+                      _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
+                      fill: "#59BF40",
+                    }),
                   }),
                 _ &&
                   jsxs(Fragment, {
@@ -89857,39 +90801,75 @@ Status Code:` +
               batteryLevel: _,
               uniformSizing: _ = !1,
               alert: _ = !1,
+              saver: _ = !1,
               className: _,
               forceWhiteChargingBolt: _,
             } = _,
+            [_, _] = useSvgId(),
             _ = jsxs("svg", {
               width: _ ? void 0 : "42",
               height: _ ? void 0 : "36",
-              viewBox: _ ? "-4 0 52 36" : _ ? "0 0 48 36" : "0 0 42 36",
+              viewBox: _ ? "-8 0 52 36" : _ ? "0 0 48 36" : "0 0 42 36",
               className: _ ? _ : void 0,
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
               children: [
-                jsx("path", {
-                  _: "M33 24V12L6 12V24H33Z",
-                  fill: "#59BF40",
-                }),
-                !_ &&
-                  jsx("path", {
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    _: "M0 6H39V14H42V22H39V30H0V6ZM3 9H36V27H3V9Z",
-                    fill: "currentColor",
+                jsx("defs", {
+                  children: jsxs("mask", {
+                    _: _,
+                    children: [
+                      jsx("rect", {
+                        _: "-20",
+                        _: "-20",
+                        width: "100",
+                        height: "100",
+                        fill: "#ffffff",
+                      }),
+                      jsx("path", {
+                        _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
+                        fill: "none",
+                        stroke: "#000000",
+                        "stroke-width": "6",
+                        "stroke-linecap": "round",
+                        "stroke-linejoin": "round",
+                      }),
+                    ],
                   }),
+                }),
+                jsxs("g", {
+                  mask: _ ? _ : void 0,
+                  children: [
+                    jsx("path", {
+                      _: "M33 24V12L6 12V24H33Z",
+                      fill: "#59BF40",
+                    }),
+                    !_ &&
+                      jsx("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        _: "M0 6H39V14H42V22H39V30H0V6ZM3 9H36V27H3V9Z",
+                        fill: "currentColor",
+                      }),
+                    _ &&
+                      jsx("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        _: "M38.4774 6H0V30H39V22H42V18.4895C39.6953 17.5151 38.08 15.2509 38.08 12.6132C38.08 11.4277 38.4063 10.3177 38.9747 9.36634L38.4774 6ZM36 9H3V27H36V9Z",
+                        fill: "currentColor",
+                      }),
+                    jsx("path", {
+                      _: "M23.591 13.3334L18.3713 18.8147L16.0198 16.355L14.1665 18.2756L18.3713 22.6667L25.4443 15.254L23.591 13.3334Z",
+                      fill: _ ? "white" : "currentColor",
+                    }),
+                  ],
+                }),
                 _ &&
-                  jsx("path", {
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    _: "M38.4774 6H0V30H39V22H42V18.4895C39.6953 17.5151 38.08 15.2509 38.08 12.6132C38.08 11.4277 38.4063 10.3177 38.9747 9.36634L38.4774 6ZM36 9H3V27H36V9Z",
-                    fill: "currentColor",
+                  jsx(Fragment, {
+                    children: jsx("path", {
+                      _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
+                      fill: "#59BF40",
+                    }),
                   }),
-                jsx("path", {
-                  _: "M23.591 13.3334L18.3713 18.8147L16.0198 16.355L14.1665 18.2756L18.3713 22.6667L25.4443 15.254L23.591 13.3334Z",
-                  fill: _ ? "white" : "currentColor",
-                }),
                 _ &&
                   jsxs(Fragment, {
                     children: [
@@ -119885,6 +120865,128 @@ Status Code:` +
       },
       chunkid: (module) => {
         module.exports = {
+          Login: "_3EoMsOmqpdSZOFkxEPOqTw",
+          SideBySide: "_26GwL4e6kWGCQPYX9_ZAC8",
+          GuestContainer: "rLcB9iUxp0k1vOk6m_BRU",
+          GuestLayout: "_2ZIDqonljXZgZzHHNugIga",
+          StandardLayout: "yJskfS6UJMuhCvWheUjae",
+          Embedded: "_3-xcRK-V8CusIG_CXsn33I",
+          GuestText: "_2kO4i4mULRag64E_KDrUg5",
+          GuestLink: "_1LmG2fq96wo5gmzAdRB6-x",
+          ConfirmCredntialsNag: "_1dKpPdS8HqvzBJKNpLpkFv",
+          QRSection: "K_2Ai5_jvZtY4oUCBDwQR",
+          MessagingContainer: "_15rdspGNdt2FyA-96GiHsb",
+          MessagingTag: "_2EGclwCQC0ib8xDSUC_hHh",
+          MessagingSubtitleCtn: "_14TXq09d3A7XdoFnAeqlMM",
+          MessagingIcon: "_3WENV13rx_2nOtqfCPIdjt",
+          MessagingSubtitle: "_1awiHLJOivIyO1a6tHqeYu",
+          MessagingButton: "_2FA-wGswb4_gH8XHPj6qhY",
+          MessagingLink: "_2H3VBR2Zb9wMgwal5VvNS6",
+          ScanQRButton: "_32aFqErf7QAi0DQrXEFJxf",
+          QRIcon: "_2keix-vBIE1EfoFz0Kf2dY",
+          QRCodeContainer: "TpNVwh59sdZg5-Vj6Q3gI",
+          _: "_3WFPt5JLLCLCDfnfg7tq8U",
+          QRHideLink: "ufgzMhvhzcaI96Vtm8RCW",
+          HideButton: "_138BG1s11dywuR39pfJ_mE",
+          UseMobileAppForQR: "_2aPWIUqiibGsbbAQ2L9Tvb",
+          InClient: "_1DbZPvmB-maGw3IrbnJBAX",
+          TextField: "_2WcVVbFBG83UELy8L47mhx",
+          TextInput: "_12BVjL3eO97hYIP0GX9FM4",
+          Danger: "_3fknRtD-7H3DjZylCHp5Vk",
+          LoginForm: "_330DKKE9L_jmFrf0afoxNl",
+          FieldLabel: "_3b5iWfynCg_r6hD9d08oXV",
+          Highlight: "_1zuuucB7YqhY_RMCWAJp6G",
+          CheckboxField: "_2cCWZqqqazcW4NU2qo0MR9",
+          CheckboxFieldLabel: "_2cqJp3NfMyZCwf9WMjNGp8",
+          Checkbox: "_2yqO16VrJmXTQtsz8EQTY9",
+          Check: "_2golWWWeCDL9Veo3SWc54h",
+          RefreshButtonContainer: "_38tDZT91546Hjtcr3yLOAw",
+          SignInButtonContainer: "_4f0Ay_i8qJK_OGchfnznu",
+          RefreshQuitButton: "_3a20KLIkla_4hh7nOwjF0s",
+          OfferOfflineButton: "LlCy5xHhJOBsK0dwvwFiZ",
+          TryAgainButton: "_3_ywpZx7p0NUA6i6aDRhG0",
+          GuestButton: "JZ8d4WZvtm8Q8DiIiyNnN",
+          SubmitButton: "_3r0A-NOc7ara3PHSF3Irh",
+          Loading: "_3MgO_F_9ZP02EzKnnt1nv6",
+          LoadingContainer: "_2ro7jfiitcAZEWggZev2Y-",
+          Text: "_2ZSz3czzvBWnU9UFq5-qVl",
+          Center: "_2GCrPwjFVnKNi-62x-9ueB",
+          TextLink: "_2GmYiBCtWUCWZ0JLymkz-n",
+          FormError: "_3QfTGN2Nik8ZpRND4qHypV",
+          TextAlignCenter: "_3ZszhV1rxNT-oGlegK-il9",
+          FlexCol: "_1xA3zY8qsXnoz5X0yTpzVp",
+          AlignItemsCenter: "_1-62c0brLy57pUJp9yCzMs",
+          JustifyContentCenter: "_3iBLSTTCztO8KnqJqUSQjL",
+          ProtectingAccount: "_3YghC3pSEVXvRvcefF9imL",
+          Label: "_1maTE41FBhseFUGoRndEZN",
+          AccountName: "_2vGa9R21vKtCftqXaF-zlx",
+          Description: "_2B5YFPWgcdxOGNlMyi6lGQ",
+          ConfirmationContainer: "_1wyzmoizDxt1_jtJkEWuXa",
+          AwaitingMobileConfText: "D2wDvK5PPSMMovLI504J1",
+          ConfirmationEntryContainer: "_150fBMw5kqH2Cz_p4RTp5Z",
+          AwaitingMobileConfIcon: "_1LQLTpv1Wc9Og_CjEDhwUz",
+          AwaitingEmailConfIcon: "_1tKOM6kFMJ5bX02eJaVJuS",
+          LinkContainer: "_1VGvKq8aejCLYIXuvsQUN4",
+          EnterCodeInsteadLink: "_1Km5Oqhbeuf4xo2BPIkQ2v",
+          EnterBackupCodeContainer: "oiJ1RKOjn4pU_HwQ7K_9J",
+          EnterCodeFromMobileContainer: "_33U5MpTzkUI1G-YrMwHjOa",
+          EnterCodeFromEmailContainer: "_2FF7DFRbKtCkOJb2cLhqbk",
+          EnterCodeFromMobile: "_16xa6JKOM6UxBn0KiTQ6qc",
+          EnterCodeFromEmail: "_1rTwS3qPZ8aLPyP90OZSgY",
+          EnterCodeEmailAddress: "_1x7e7uBi8V0DRQr18bLhgL",
+          CodeInputFieldContainer: "_353PGaprlCZrKXtPv3eWgd",
+          CodeInputField: "_2CquAyPMwC5fXKV89pBW9n",
+          SegmentContainer: "_3No2U7WBgXNv3trBe35u2p",
+          Segment: "_6dEEAOmICYjdPXfyJVs42",
+          RefreshTitle: "_3hZJzWdHW0dKM71CLaLgYH",
+          RefreshReason: "_1-59VgMCyMukDhl3Qyl6w3",
+          InsecureComputer: "dah0Jp3JNsKqpoTyaKyTn",
+          PrimaryHeader: "_47Dg51SMNXg14ErliHkeA",
+          FormContainer: "_3dtTo2VZCmIdsqb6yzVcS6",
+          Compact: "_2J1pVr5IFH3Iz9BxiKXCmW",
+          HeaderLogo: "_63TCBNFd_pkhljzxYXa6y",
+          LogoContainer: "oAWNw68bqhTRPJd84QL1Z",
+          BackArrowContainer: "_1je67rRPux5QzJww9Osj_u",
+          BackArrow: "_17kS9-opjUu0_sWVRWR1g-",
+          EmbeddedRoot: "TvElg4VsyN1GxOEpTVQc1",
+          RefreshReasonContainer: "_2iYNr-6LBFhneDZqzWalaD",
+          Universe: "_1wbhEJYSb4ZySFddXusGtW",
+          EmbeddedRootFooter: "_1xB7QcGIOGoU6PMrLiHHXk",
+          AccountCreation: "_3zv7g_AOkPxg_73GUDdzjR",
+          AccountCreationPrompt: "_35spav7NxktKwLc-_KJjrT",
+          FailureTitle: "ckyl8s69ac87iY9v9cBL",
+          FailureDescription: "_3x7ANq5knLAC5UtPzq1u5k",
+          FailureButtons: "_3Hv75NSt0fVMwiHkA0ygfL",
+          OfferOffline: "_3I_9j9dHmJkUk6hkskNGbA",
+          LoadingSpinner: "ghNum25mh1bMvcSYG7lMt",
+          LoadAmin: "_2baF4Zw0goGMRnJLUGxt_x",
+          Small: "_3KkzHVd-N0HZ5MMtCrgIqt",
+          Medium: "_2ZF4H4J_PDHHvkELDVdLhN",
+          Large: "AnwcqNyK7DSyV7N3OJUrl",
+          MutedErrorReference: "_36ocUpHPapyxxRIWSdS1NO",
+          WaitingForTokenContainer: "_351-GDJL2cMGtsTx06k8N2",
+          Client: "xkGF13f3kmhCqC-UPI3Lw",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          LoginQR: "_1RBdpuXQ8gNILSNU1JGlsC",
+          NonPublic: "_2pgLZjuLvDu9oZpL9uDUTj",
+          QRLoginDeck: "_2Xu3kVHfz2ij-c4aUzmT98",
+          QRLoginVR: "_1CXb1S0A9_RnDcZu9fl3Vk",
+          Blur: "_8PtnI20JWoadhNwmw5GFX",
+          Overlay: "_37oKNCfndx3PjHweL0klBq",
+          Box: "_2W9WUOLLUMsTLfneVVGHg5",
+          Column: "_1JretoIyL3tP4LUDBI5wXS",
+          Loading: "_2_A93rHbCQOrfsN-6FLD4o",
+          LoadAmin: "m0wuVVIpnB6yHn09bp33D",
+          Small: "_1B7PaZjS5Ta9rSSPo9VKbt",
+          Medium: "_2gRqqqBHOAlZNfKgjf40A0",
+          Large: "_174GHCvLhZKr1nVbcJBwcc",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
           PreviewYouTubeVideo: "uT9FPw-RIxscziWGUKvsY",
           sizeThumb: "_34JfgvTZH0JwSWKnwpT5tf",
           sizeFull: "_2i-wrmaduZQDwFtlSpRG5b",
@@ -119911,128 +121013,6 @@ Status Code:` +
           Important: "mRx2Io-gR5pz0gqZnF4e7",
           Warning: "_3Hvtr6roA7ZUH4Vmi-YiYS",
           FAQImage: "_3EebtYBetncFupzjwjtJ8k",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          Login: "lat0M-V5X4uYd6Mpm1DJ1",
-          SideBySide: "ZHRZ8czyqs7NaNmv65ARI",
-          GuestContainer: "_3Sfbz5IM9d2jNMdOV2aFal",
-          GuestLayout: "_1r_sYgW1VktkbK33MvFdMx",
-          StandardLayout: "_2EuR68sQbA8eP01DlIfu6O",
-          Embedded: "_2R_n2M6thAvA4On2yeR_Jd",
-          GuestText: "_2gE59p3vz8NzTRZIejilUN",
-          GuestLink: "_3zcmXq9FSDuc9eFPT7yj1A",
-          ConfirmCredntialsNag: "_2oMvaF46xYOE6Guy0xjCAl",
-          QRSection: "_3wSeH3OorL-tMzwXL55smN",
-          MessagingContainer: "mFCQSE5-57z0lcZgUiE9K",
-          MessagingTag: "_2vrvETim46niDklOy_kH33",
-          MessagingSubtitleCtn: "_1SepN-HT3pk6WedgBgXLeB",
-          MessagingIcon: "_1IIkZxuQobioLQwfUK5TcH",
-          MessagingSubtitle: "_14ZzKYkQD-qXL4aLAaupwp",
-          MessagingButton: "_3k-6J60Y5_Cs3sqk7SgbQU",
-          MessagingLink: "_1kBrGj8mpIJs7FywIdPpik",
-          ScanQRButton: "_3wGxEd3F_T8M0LIA0M9o-g",
-          QRIcon: "_27u_PDLDTJ3mTS-4_TmJKk",
-          QRCodeContainer: "_3ToZQDL9M9IP5o2tIhKLxH",
-          _: "_35Q-UW9L8wv2fkImoWScgQ",
-          QRHideLink: "_1MIDAnpFm2LhRX7Rvb3wlY",
-          HideButton: "_1kEk5_KBniai5Q7TYGCH1S",
-          UseMobileAppForQR: "_3pxTSyPhDmjNqXUYDIITS-",
-          InClient: "_1VAFgEYpKJDwl9aI8W5ctY",
-          TextField: "_3BkiHun-mminuTO-Y-zXke",
-          TextInput: "_2GBWeup5cttgbTw8FM3tfx",
-          Danger: "_16BUa8w2l6LPH1otvXnwAR",
-          LoginForm: "_2v60tM463fW0V7GDe92E5f",
-          FieldLabel: "XrYgea66b38RASmbI3PJo",
-          Highlight: "_12zBmIktqPpcwJXItTb8f9",
-          CheckboxField: "_1Qku5jMXBi5-wawzqY1kzG",
-          CheckboxFieldLabel: "_10bGilozn2bfCfiPfANMhC",
-          Checkbox: "LBS7IDpob52Sb4ZoKobh0",
-          Check: "_28MB9LhS2kVTalIp0NHDv4",
-          RefreshButtonContainer: "_1Y8X98of8RkwP6ga9F92LD",
-          SignInButtonContainer: "_16fbihk6Bi9CXuksG7_tLt",
-          RefreshQuitButton: "_9Ig1o0jVRia2uf_FKR3rs",
-          OfferOfflineButton: "_2Z68vjdOnUDA2ULQG41JVV",
-          TryAgainButton: "_25eT23F0cV5lmT3tXAIA56",
-          GuestButton: "_3t6QgWQmijDfZziPq3q3aQ",
-          SubmitButton: "DjSvCZoKKfoNSmarsEcTS",
-          Loading: "_2NVQcOnbtdGIu9O-mB9-YE",
-          LoadingContainer: "_3AseUd328DeQNUMkwlq8MV",
-          Text: "_1zFEayEDjKnMPSCnM-lzqE",
-          Center: "_2jDjxzENzZfyd-mEASaFdZ",
-          TextLink: "_1K431RbY14lkaFW6-XgSsC",
-          FormError: "_1W_6HXiG4JJ0By1qN_0fGZ",
-          TextAlignCenter: "_2FyQDUS2uHbW1fzoFK2jLx",
-          FlexCol: "_1NOsG2PAO2rRBb8glCFM_6",
-          AlignItemsCenter: "_2QHQ1DkwVuPafY7Yr1Df6w",
-          JustifyContentCenter: "_2tsIiF5suAf1CC2JA9djst",
-          ProtectingAccount: "_3JBYGcszFcaSNXHHSR3kCV",
-          Label: "_1hKgiFuFaVR_Sq1Gj_gCnd",
-          AccountName: "_31Vq4lzNWs4WikXVr9J4hz",
-          Description: "_2o5mE8JpPFOyJ0HwX_y0y7",
-          ConfirmationContainer: "_3zQ9hnkyXJEv7nN0oBU56M",
-          AwaitingMobileConfText: "_2WgwHabhUV3cP6dHQPybw8",
-          ConfirmationEntryContainer: "_3huyZ7Eoy2bX4PbCnH3p5w",
-          AwaitingMobileConfIcon: "_3WvDpj9Ng6SQliygcVqlJU",
-          AwaitingEmailConfIcon: "_3qdu3-d2Nbudcqe-VBrC8r",
-          LinkContainer: "_3yz6xIaXDcStXAUzK4pWgE",
-          EnterCodeInsteadLink: "_2YsaRupK3XuabHMh9_BfZP",
-          EnterBackupCodeContainer: "DdK_Fpa32ezl3qzyYJ85d",
-          EnterCodeFromMobileContainer: "_2Io_Jc8M4cRHn9cU4vHcqW",
-          EnterCodeFromEmailContainer: "_1YQZI88vD5NCUw4u35tB0m",
-          EnterCodeFromMobile: "_1rEWOv1g1uTXNhoWiJLQZs",
-          EnterCodeFromEmail: "_3aMbj3PT-p1yxEt98UM56K",
-          EnterCodeEmailAddress: "_3BKzb-aGSLOjp5jsQ8wwXK",
-          CodeInputFieldContainer: "_3FIQqsD10Zd2yrvusqjP_P",
-          CodeInputField: "_1gZuGaPQVYkRx3GH4wzBN3",
-          SegmentContainer: "_8gteGheBcDqzR7sDIhoDN",
-          Segment: "_3l55OgBEuGxUa2TRX_q6X2",
-          RefreshTitle: "_3yMMwjOGjHdmMrJbYQyst3",
-          RefreshReason: "_1b-mLIbA7lNlcrNICBrLu6",
-          InsecureComputer: "_3onX-q5mCgAQyvYp-RXyQy",
-          PrimaryHeader: "g5L61o-ZrHHmwLEugLjLI",
-          FormContainer: "_3XCnc4SuTz8V8-jXVwkt_s",
-          Compact: "_3FB9Kwzf1SnNWl8p2Mypu7",
-          HeaderLogo: "_3v6WnuVNx1rJx0x_1AAyPp",
-          LogoContainer: "_14exBrSFDthVqeknXgFh4X",
-          BackArrowContainer: "_2Jkgs1ZwjavbwnJy76UgUm",
-          BackArrow: "_3NHpq7ZDgg4uYEzUF9RxaQ",
-          EmbeddedRoot: "_2v9dClMg2Lmn8UVv6GUeJt",
-          RefreshReasonContainer: "_1kQPdUAn_5omUN8oZo_4ds",
-          Universe: "yQUZitCk5gaktq9hh0r4J",
-          EmbeddedRootFooter: "_27aItUQsVlk-hSm7K9UCJt",
-          AccountCreation: "_3oenaAqi9EDn5VBmQS596K",
-          AccountCreationPrompt: "_3dwSWEGgHCaDxQqEDOqTtN",
-          FailureTitle: "_1A8Mk6QeC0d7bvHDJIoW7o",
-          FailureDescription: "_3H-JHTYIWOo9uVrF0SXAX0",
-          FailureButtons: "Vf2Dk5xgRdq6KGJAuoz3A",
-          OfferOffline: "_2gqhnP9l70A6UQqREWHYY3",
-          LoadingSpinner: "_1VLukpV8qjL4BULw7Zob_l",
-          LoadAmin: "_14OTBjueEGnvcmdIsMqE2w",
-          Small: "WYrJyNEVnjgAnMVZgvPeg",
-          Medium: "CQ9fAVYxF10LejsSBLSz4",
-          Large: "_1EIKWuekEw7VTF9EjNPV5j",
-          MutedErrorReference: "J_2Q0Mk09u8np24KfSwHR",
-          WaitingForTokenContainer: "_1h8nX6TBOG2MHjtSFDK79v",
-          Client: "_3NSipG33PSv9wRw5VRHJGv",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          LoginQR: "xlEVpBeYO1h2tOqErt9fj",
-          NonPublic: "_39rmYMz2NhzK3kuX7QQoz8",
-          QRLoginDeck: "J3DO-HZVloRroBWQ4LcSK",
-          QRLoginVR: "_1Drp2pvGZ46_F0XaPI7EM1",
-          Blur: "_1rteFtfW8qmD6imQgrH-XM",
-          Overlay: "_464mFQmvIW2e9TQypXX7W",
-          Box: "_2ltn2BK4fnrPEGzNwxx6bx",
-          Column: "_2u8B99t9Tx_uGgP58AcGYT",
-          Loading: "_3jObIZzYUBbiU1dYHigzC_",
-          LoadAmin: "_3GMW9g9sRiQQcPyKloXOxy",
-          Small: "_3YZnIGSA-eyWBOOTC_4ODZ",
-          Medium: "rYn6LhErVIdynPax7oCwy",
-          Large: "_16VPM09Kxqdhwe3sCkvTOm",
         };
       },
       chunkid: (module) => {
@@ -120287,6 +121267,7 @@ Status Code:` +
           TickActive: "j418S4TEV2LS3JHn6an4s",
           LabelText: "_1eMTvSj5tJlivVheftbZ5S",
           DescriptionValue: "_11I0_AlsB40ak50752rsuy",
+          DescriptionValueText: "_2I8sf9EcaeDafQVkGR4nOC",
           EditableValue: "_3aMlipGagTx2AjSsMP_yZj",
           FakeEditableValue: "_1iWWSmS4pDD1vKNDTkghbh",
           RedBorder: "_2fKVyx5la8VQm8SreJZbjL",
@@ -121934,7 +122915,7 @@ Status Code:` +
     },
     (_) => {
       var _ = (_) => _((_._ = _));
-      _._(0, [8997], () => _(4455));
+      _._(0, [8997], () => _(8426));
       var _ = _._();
     },
   ]);

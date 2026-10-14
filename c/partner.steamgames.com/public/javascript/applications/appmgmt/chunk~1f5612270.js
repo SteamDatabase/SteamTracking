@@ -276,7 +276,16 @@
             _ = (0, _._)(_),
             _ = _.some((_) => _.nPriceInCents > _.nOldPriceInCents),
             _ = _(_, _),
-            { fnPublish: _, ePublishState: _ } = _(_);
+            {
+              fnPublish: _,
+              ePublishState: _,
+              strPublishError: _,
+              bBlockedByCooldown: _,
+            } = _(_),
+            _ = _ == 4 || _,
+            _ = _.useCallback(async () => {
+              (await _()) && _?.();
+            }, [_, _]);
           let _;
           if (_ == 3)
             _ = (0, _._)(
@@ -284,7 +293,7 @@
               (0, _.jsx)("div", {}),
               (0, _.jsx)("div", {}),
             );
-          else if (_ == 4) {
+          else if (_) {
             let _ = (0, _.jsx)(_._, {
               href: "https://partner.steamgames.com/doc/store/pricing",
             });
@@ -326,11 +335,13 @@
             });
           } else
             _ == 3 &&
-              (_ = (0, _._)(
-                "#PricingDashboard_PriceProposal_Publish_FailedToPublish",
-                (0, _.jsx)("div", {}),
-                (0, _.jsx)("div", {}),
-              ));
+              (_ =
+                _ ||
+                (0, _._)(
+                  "#PricingDashboard_PriceProposal_Publish_FailedToPublish",
+                  (0, _.jsx)("div", {}),
+                  (0, _.jsx)("div", {}),
+                ));
           if (_) {
             let _ = (0, _._)(
               _
@@ -338,7 +349,7 @@
                 : "#PricingDashboard_StageNewPrices_title",
             );
             return (
-              _ == 4 &&
+              _ &&
                 (_ = (0, _._)(
                   "#PricingDashboard_PriceProposal_Publish_CantPublishTitle",
                 )),
@@ -371,6 +382,7 @@
             bOKDisabled: _,
             bCancelDisabled: _,
             bDestructiveWarning: !0,
+            bCloseAfterOK: !1,
             onOK: _,
             onCancel: _,
             closeModal: _,
@@ -420,16 +432,22 @@
         ))(_ || {});
         function _(_) {
           const _ = (0, _._)(),
-            [_, _] = _.useState(0);
+            [_, _] = _.useState(0),
+            [_, _] = _.useState(void 0),
+            [_, _] = _.useState(!1);
           return {
             fnPublish: _.useCallback(async () => {
-              if ((_(1), (await _(_)).success != _._)) {
-                _(3);
-                return;
+              _(1), _(void 0), _(!1);
+              const _ = await _(_);
+              if (_.success != _._) {
+                const _ = _.success == _._;
+                return _(_ ? _.msg : void 0), _(_ && !!_.cooldown), _(3), !1;
               }
-              _(2);
+              return _(2), !0;
             }, [_, _, _]),
             ePublishState: _,
+            strPublishError: _,
+            bBlockedByCooldown: _,
           };
         }
         var _ = ((_) => (
@@ -520,7 +538,9 @@
                 : _?.eState == _._
                   ? ((_ = _().ApprovedCanPublish),
                     (_ = (0, _._)(
-                      "#PricingDashboard_PriceProposal_Approved_ttip",
+                      (0, _._)(_)
+                        ? "#PricingDashboard_PriceProposal_Approved_ttip"
+                        : "#PricingDashboard_PriceProposal_Approved_Stage_ttip",
                     )),
                     (_ = (0, _.jsx)(_, {
                       packageID: _,
@@ -1092,12 +1112,127 @@
             ],
           });
         }
+        const _ = {
+          USD_CIS: "#PricingDashboard_UnappliedProposal_PriceKeyName_USD_CIS",
+          USD_LATAM:
+            "#PricingDashboard_UnappliedProposal_PriceKeyName_USD_LATAM",
+          USD_MENA: "#PricingDashboard_UnappliedProposal_PriceKeyName_USD_MENA",
+          USD_SASIA:
+            "#PricingDashboard_UnappliedProposal_PriceKeyName_USD_SASIA",
+        };
+        function _(_) {
+          const { response: _, fnResolve: _ } = _,
+            { unappliedProposal: _, newProposal: _ } = _,
+            _ = (0, _._)(_.rtSubmitted),
+            _ = Array.from(
+              new Set([
+                ...Object.keys(_?.prices ?? {}),
+                ...Object.keys(_.prices ?? {}),
+              ]),
+            );
+          return (0, _.jsx)(_._, {
+            className: _().UnappliedProposalDialog,
+            strTitle: (0, _._)("#PricingDashboard_UnappliedProposal_Title"),
+            strDescription: (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("p", {
+                  children: (0, _._)(
+                    "#PricingDashboard_UnappliedProposal_Description",
+                    (0, _._)(_.packageID),
+                    _,
+                  ),
+                }),
+                (0, _.jsx)("p", {
+                  children: (0, _._)(
+                    "#PricingDashboard_UnappliedProposal_Instructions",
+                  ),
+                }),
+              ],
+            }),
+            strOKButtonText: (0, _._)(
+              "#PricingDashboard_UnappliedProposal_Proceed",
+            ),
+            strCancelButtonText: (0, _._)("#Button_Cancel"),
+            onOK: () => _(!0),
+            onCancel: () => _(!1),
+            bDestructiveWarning: !0,
+            children:
+              _.length > 0 &&
+              (0, _.jsxs)("table", {
+                className: _().UnappliedPriceTable,
+                children: [
+                  (0, _.jsx)("thead", {
+                    children: (0, _.jsxs)("tr", {
+                      children: [
+                        (0, _.jsx)("th", {
+                          children: (0, _._)(
+                            "#PricingDashboard_UnappliedProposal_PriceKey",
+                          ),
+                        }),
+                        (0, _.jsx)("th", {
+                          children: (0, _._)(
+                            "#PricingDashboard_UnappliedProposal_PriceKeyName",
+                          ),
+                        }),
+                        (0, _.jsxs)("th", {
+                          className: _().ApprovedHeader,
+                          children: [
+                            (0, _._)(
+                              "#PricingDashboard_UnappliedProposal_UnappliedPrice",
+                            ),
+                            (0, _.jsx)("br", {}),
+                            (0, _._)(
+                              "#PricingDashboard_UnappliedProposal_SubmittedDate",
+                              _,
+                            ),
+                          ],
+                        }),
+                        (0, _.jsx)("th", {
+                          children: (0, _._)(
+                            "#PricingDashboard_UnappliedProposal_NewPrice",
+                          ),
+                        }),
+                      ],
+                    }),
+                  }),
+                  (0, _.jsx)("tbody", {
+                    children: _.map((_) => {
+                      const _ = Number(_.prices?.[_] ?? 0),
+                        _ = Number(_?.prices?.[_] ?? 0);
+                      return (0, _.jsxs)(
+                        "tr",
+                        {
+                          children: [
+                            (0, _.jsx)("td", {
+                              children: _,
+                            }),
+                            (0, _.jsx)("td", {
+                              children: _[_] ? (0, _._)(_[_]) : (0, _._)(_),
+                            }),
+                            (0, _.jsx)("td", {
+                              children: (0, _._)(_, _).join(""),
+                            }),
+                            (0, _.jsx)("td", {
+                              className: (0, _._)(_ != _ && _().ChangedPrice),
+                              children: (0, _._)(_, _).join(""),
+                            }),
+                          ],
+                        },
+                        _,
+                      );
+                    }),
+                  }),
+                ],
+              }),
+          });
+        }
         function _(_) {
           const { closeModal: _, bAutoPublish: _, fnOnSuccess: _ } = _,
             _ = (0, _._)(),
             _ = (0, _._)(),
             _ = (0, _._)("SaveProgressDialog"),
             [_, _] = _.useState(0),
+            [_, _] = _.useState(null),
             [_, _] = _.useState(null),
             _ = () => {
               _.cancel("cancelled by user");
@@ -1109,9 +1244,27 @@
                 const _ = Array.from(new Set(_.map((_) => _.packageID)));
                 for (let _ = 0; _ < _.length; _++) {
                   _(_);
-                  const _ = _[_],
-                    _ = await _(_, _, _);
+                  const _ = _[_];
+                  let _ = await _(_, _, !1, _);
                   if (_.token.reason) return;
+                  if (_.unappliedProposal) {
+                    const _ = await new Promise((_) =>
+                      _({
+                        response: _,
+                        fnResolve: _,
+                      }),
+                    );
+                    if ((_(null), !_)) {
+                      _(
+                        (0, _._)(
+                          "#PricingDashboard_UnappliedProposal_Declined",
+                          (0, _._)(_),
+                        ),
+                      );
+                      return;
+                    }
+                    if (((_ = await _(_, _, !0, _)), _.token.reason)) return;
+                  }
                   if (_.success != _._) {
                     _(_.msg ?? (0, _._)("#PricingDashboard_SavePricesError"));
                     return;
@@ -1120,23 +1273,28 @@
                 _(_.length), _(), _();
               })();
             }, []),
-            (0, _.jsx)(_._, {
-              strTitle: (0, _._)("#PackageGrid_SaveInProgress"),
-              bAlertDialog: !!_,
-              strOKButtonText: _
-                ? (0, _._)("#Button_Close")
-                : (0, _._)("#Button_OK"),
-              onOK: _ ? _ : _,
-              onCancel: _,
-              closeModal: _,
-              bDestructiveWarning: !0,
-              children:
-                _ ??
-                (0, _.jsx)(_._, {
-                  position: "center",
-                  string: (0, _._)("#PricingDashboard_Progress", _),
-                }),
-            })
+            _
+              ? (0, _.jsx)(_, {
+                  response: _.response,
+                  fnResolve: _.fnResolve,
+                })
+              : (0, _.jsx)(_._, {
+                  strTitle: (0, _._)("#PackageGrid_SaveInProgress"),
+                  bAlertDialog: !!_,
+                  strOKButtonText: _
+                    ? (0, _._)("#Button_Close")
+                    : (0, _._)("#Button_OK"),
+                  onOK: _ ? _ : _,
+                  onCancel: _,
+                  closeModal: _,
+                  bDestructiveWarning: !0,
+                  children:
+                    _ ??
+                    (0, _.jsx)(_._, {
+                      position: "center",
+                      string: (0, _._)("#PricingDashboard_Progress", _),
+                    }),
+                })
           );
         }
       },
@@ -1250,6 +1408,10 @@
           PriceChangeSaveWarningArrow: "B3-IB6jhKQuhRCYOH9Zd5",
           PriceChangeSaveWarningText: "_2LN01zxswJjZ2gBihNCUsI",
           IncreasedCurrencies: "_13GstIJtNo2RVdUkwJtDSd",
+          UnappliedProposalDialog: "i1PGckHCuilaOweiMPIGr",
+          UnappliedPriceTable: "_36G3u9heuZBYdv9txHduM",
+          ApprovedHeader: "_21k60LQODNJFd0dC1gLNhT",
+          ChangedPrice: "_1vW3aukjDVBLu-1jAeXERo",
         };
       },
     },

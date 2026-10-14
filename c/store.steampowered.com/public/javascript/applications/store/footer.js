@@ -573,9 +573,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
-            _ = (0, _._)(),
-            _ = _ ?? _?.focusable ?? !!_.href,
+          const { underline: _ = "auto", ..._ } = _,
             _ = (0, _._)(
               {
                 ..._,
@@ -584,15 +582,9 @@
               },
               _,
             );
-          return _ && (_ || _)
-            ? (0, _.jsx)(_._, {
-                ..._,
-                ...(_ || {}),
-                focusable: _,
-              })
-            : (0, _.jsx)("a", {
-                ..._,
-              });
+          return (0, _.jsx)(_._, {
+            ..._,
+          });
         }
         const _ = [
           ..._._,

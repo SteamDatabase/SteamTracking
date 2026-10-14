@@ -42,6 +42,7 @@
     "ConversionMethod_FX": "Solo conversión basada en el tipo de cambio",
     "PricingExplorer_Time_Title": "Última actualización:",
     "PricingExplorer_Time_Disc": "Los métodos de conversión se generan utilizando datos públicos a partir de enero de 2026.",
+    "PricingExplorer_Time_Disc_Date": "Los métodos de conversión se generan utilizando datos públicos a partir de %1$s.",
     "Tour_ConversionMethod_Title": "Hay nuevos métodos de conversión disponibles",
     "Tour_ConversionMethod_Desc1": "Para ayudarte a fijar el precio de tu juego en 37 monedas diferentes y 4 regiones, Steam ahora ofrece varios métodos para la conversión a partir del precio base que desees.",
     "Tour_ConversionMethod_Desc2": "El precio lo decides tú; estas herramientas están diseñadas para ayudarte a simplificar el proceso si así lo deseas.",

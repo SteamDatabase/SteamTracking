@@ -141,6 +141,7 @@
               disabled: _,
               className: _,
               status: _,
+              color: _,
               ..._
             } = _,
             _ = _ === "underline" ? "none" : _;
@@ -149,6 +150,7 @@
               ..._,
               radius: _,
               "data-status": _,
+              "data-dull-color": _ && _ !== "dull" ? _ : void 0,
               className: _()(
                 _.ControlBox,
                 _ && !_ && _.Focusable,

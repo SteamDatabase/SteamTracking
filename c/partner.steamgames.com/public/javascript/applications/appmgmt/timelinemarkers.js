@@ -1232,7 +1232,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -1509,14 +1508,9 @@
             Init() {
               let _ = (0, _._)("asset_sets", "application_config");
               this.ValidateStoreDefault(_) &&
-                _.forEach((_) => this.m_mapAssetSets.set(_.assetset_id, _));
-              const _ = (0, _._)(
-                "promotion_operation_token",
-                "application_config",
-              );
-              (0, _._)(!!_, "require promotion_operation_token"),
+                _.forEach((_) => this.m_mapAssetSets.set(_.assetset_id, _)),
                 (this.m_SteamInterface = (0, _._)(
-                  new _._(_._.WEBAPI_BASE_URL, _),
+                  new _._(_._.WEBAPI_BASE_URL),
                 ));
             }
             ValidateStoreDefault(_) {
@@ -1643,7 +1637,8 @@
               ),
               null);
         }
-        var _ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_) {
           const { assetSetID: _, className: _, appid: _ } = _,
             { publicAssetSetID: _ } = _(_);

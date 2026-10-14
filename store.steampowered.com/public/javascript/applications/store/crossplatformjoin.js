@@ -6,37 +6,38 @@
     {
       86390: (J, B, n) => {
         "use strict";
-        n.d(B, { Cg: () => U, pZ: () => K, vg: () => z });
+        n.d(B, { Cg: () => U, pZ: () => p, vg: () => K });
         var e = n(7850),
-          P = n(90626),
+          y = n(90626),
           i = n(88003),
           d = n(18210),
-          N = n(3166),
-          g = n(34004),
-          y = n(6740),
+          I = n(3166),
+          E = n(87242),
+          S = n(74974),
+          z = n(6740),
+          A = n(62179),
           G = n(3685),
-          A = n(8059),
           F = n(96538);
-        function O(m) {
+        function N(m) {
           return (0, e.jsx)(i.x_, {
             onEscKeypress: m.closeModal,
             bDisableBackgroundDismiss: !0,
-            children: (0, e.jsx)(S, {
+            children: (0, e.jsx)(O, {
               redirectURL: m.redirectURL,
               guestOption: m.guestOption,
             }),
           });
         }
         function U(m) {
-          const { redirectURL: x = window.location.href } = m;
+          const { redirectURL: a = window.location.href } = m;
           return (0, e.jsx)(F.EN, {
             active: !0,
-            children: (0, e.jsx)(O, { redirectURL: x }),
+            children: (0, e.jsx)(N, { redirectURL: a }),
           });
         }
-        function z() {
+        function K() {
           (0, i.pg)(
-            (0, e.jsx)(O, {
+            (0, e.jsx)(N, {
               ownerWin: window,
               redirectURL: window.location.href,
             }),
@@ -44,33 +45,35 @@
             { strTitle: (0, d.we)("#Login_SignInTitle") },
           );
         }
-        function K(m, x) {
+        function p(m, a) {
           (0, i.pg)(
-            (0, e.jsx)(O, { ownerWin: window, redirectURL: m, guestOption: x }),
+            (0, e.jsx)(N, { ownerWin: window, redirectURL: m, guestOption: a }),
             window,
             { strTitle: (0, d.we)("#Login_SignInTitle") },
           );
         }
-        function S(m) {
-          const { redirectURL: x, guestOption: r } = m,
-            [c] = (0, P.useState)(
-              new G.D(N.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+        function O(m) {
+          const { redirectURL: a, guestOption: c } = m,
+            [h] = (0, y.useState)(
+              new A.x(
+                new G.D(I.TS.WEBAPI_BASE_URL),
+              ).GetAnonymousServiceTransport(),
             ),
-            [h, v] = (0, P.useState)(!1),
-            j = (o) => {
-              o == A.wI.k_PrimaryDomainFail ? v(!0) : window.location.assign(x);
+            [v, g] = (0, y.useState)(!1),
+            o = (t) => {
+              t == E.wI.k_PrimaryDomainFail ? g(!0) : window.location.assign(a);
             };
           return (0, e.jsx)("div", {
-            children: h
-              ? (0, e.jsx)(g.Fn, {})
-              : (0, e.jsx)(g.YN, {
+            children: v
+              ? (0, e.jsx)(S.Fn, {})
+              : (0, e.jsx)(S.YN, {
                   autoFocus: !0,
-                  transport: c,
-                  platform: y.SS.tS,
-                  onComplete: j,
-                  redirectUrl: x,
+                  transport: h,
+                  platform: z.SS.tS,
+                  onComplete: o,
+                  redirectUrl: a,
                   theme: "modal",
-                  children: r && (0, e.jsx)(g.Mk, { redirectURL: x }),
+                  children: c && (0, e.jsx)(S.Mk, { redirectURL: a }),
                 }),
           });
         }
@@ -78,70 +81,70 @@
       96538: (J, B, n) => {
         "use strict";
         n.d(B, {
-          mt: () => G,
-          o0: () => S.o0,
-          eV: () => m.eV,
-          KG: () => S.KG,
-          Ee: () => S.Ee,
-          x_: () => N.x_,
-          of: () => O,
-          pY: () => S.pY,
+          mt: () => z,
+          o0: () => p.o0,
+          eV: () => O.eV,
+          KG: () => p.KG,
+          Ee: () => p.Ee,
+          x_: () => I.x_,
+          of: () => F,
+          pY: () => p.pY,
           EN: () => d.E,
         });
         var e = n(7850),
-          P = n(90626),
+          y = n(90626),
           i = n(16412),
           d = n(69168),
-          N = n(50731),
-          g = n(15568);
-        function y(r) {
-          const { labelledBy: c } = r || {},
-            [h, v] = P.useState(void 0),
-            j = P.useMemo(() => ({ setHeaderId: v }), []);
-          return { headerId: c || h, context: j };
+          I = n(50731),
+          E = n(15568);
+        function S(a) {
+          const { labelledBy: c } = a || {},
+            [h, v] = y.useState(void 0),
+            g = y.useMemo(() => ({ setHeaderId: v }), []);
+          return { headerId: c || h, context: g };
         }
-        function G(r) {
+        function z(a) {
           const {
               active: c,
               onDismiss: h,
               className: v,
-              modalClassName: j,
+              modalClassName: g,
               bGamepadUIScrollWithin: o,
               children: t,
-              ...l
-            } = r,
-            { headerId: u, context: p } = y({
-              labelledBy: r["aria-labelledby"],
+              ...r
+            } = a,
+            { headerId: u, context: x } = S({
+              labelledBy: a["aria-labelledby"],
             });
           return (0, e.jsx)(i.t6.Provider, {
-            value: p,
+            value: x,
             children: (0, e.jsx)(d.E, {
               active: c,
-              children: (0, e.jsx)(N.x_, {
+              children: (0, e.jsx)(I.x_, {
                 onEscKeypress: h,
-                className: j,
+                className: g,
                 bGamepadUIScrollWithin: o,
                 children: (0, e.jsx)(i.UC, {
                   role: "dialog",
                   "aria-labelledby": u,
                   className: v,
-                  ...l,
+                  ...r,
                   children: t,
                 }),
               }),
             }),
           });
         }
-        function A(r) {
+        function A(a) {
           const {
               onDismiss: c,
               className: h,
               modalClassName: v,
-              bGamepadUIScrollWithin: j,
+              bGamepadUIScrollWithin: g,
               children: o,
               ...t
-            } = r,
-            { headerId: l, context: u } = y();
+            } = a,
+            { headerId: r, context: u } = S();
           return jsx(Dialog.DialogStructureContext.Provider, {
             value: u,
             children: jsx(PopupWindow, {
@@ -150,10 +153,10 @@
               children: jsx(ModalPosition, {
                 onEscKeypress: c,
                 className: v,
-                bGamepadUIScrollWithin: j,
+                bGamepadUIScrollWithin: g,
                 children: jsx(Dialog.Content, {
                   role: "dialog",
-                  "aria-labelledby": l,
+                  "aria-labelledby": r,
                   "aria-label": t.strTitle,
                   className: h,
                   children: o,
@@ -162,22 +165,22 @@
             }),
           });
         }
-        const F = (r) => A({ modal: !0, ...r });
-        function O(r) {
-          const { className: c, children: h } = r;
+        const G = (a) => A({ modal: !0, ...a });
+        function F(a) {
+          const { className: c, children: h } = a;
           return (0, e.jsx)(d.E, {
             active: !0,
             children: (0, e.jsx)("div", { className: c, children: h }),
           });
         }
-        var U = n(30343);
-        function z(r) {
+        var N = n(30343);
+        function U(a) {
           const c = React.useMemo(() => K(), []);
-          return jsx(DialogOverlay, { ...r, DialogWrapper: c });
+          return jsx(DialogOverlay, { ...a, DialogWrapper: c });
         }
         function K() {
           return function (c) {
-            const { className: h, active: v, children: j, modalKey: o } = c,
+            const { className: h, active: v, children: g, modalKey: o } = c,
               t = React.useRef(void 0);
             return (
               useActivateNavTree(t, v, !0),
@@ -187,73 +190,73 @@
                 modal: !0,
                 enabled: v,
                 navID: `ModalDialogOverlay_${o}`,
-                children: j,
+                children: g,
               })
             );
           };
         }
-        var S = n(1880),
-          m = n(90506),
-          x = n(47515);
+        var p = n(1880),
+          O = n(90506),
+          m = n(47515);
       },
       15568: (J, B, n) => {
         "use strict";
-        n.d(B, { wA: () => r });
+        n.d(B, { wA: () => a });
         var e = n(7850),
-          P = n(1418),
+          y = n(1418),
           i = n(2259),
           d = n(90626),
-          N = n(72739),
-          g = n(71568),
-          y = n(9705),
-          G = n(34360),
+          I = n(72739),
+          E = n(71568),
+          S = n(9705),
+          z = n(34360),
           A = n(31032),
-          F = n(69168),
-          O = n(83203),
-          U = n(44930),
-          z = n(36707),
+          G = n(69168),
+          F = n(83203),
+          N = n(44930),
+          U = n(36707),
           K = n(25091);
-        function S(o) {
-          const { popup: t, className: l, ...u } = o,
-            p = (0, K.GD)(t),
+        function p(o) {
+          const { popup: t, className: r, ...u } = o,
+            x = (0, K.GD)(t),
             L = d.useRef(null);
           return (
             d.useEffect(() => {
-              const I = L.current;
-              if (I && (0, U.Fj)(t, "Window.SetResizeGrip")) {
+              const P = L.current;
+              if (P && (0, N.Fj)(t, "Window.SetResizeGrip")) {
                 let w = 0,
                   C = 0;
-                const s = I.getBoundingClientRect(),
-                  a = I.ownerDocument.defaultView;
+                const s = P.getBoundingClientRect(),
+                  l = P.ownerDocument.defaultView;
                 s &&
-                  a &&
-                  !p &&
-                  ((w = Math.ceil(a.innerWidth - s.left)),
-                  (C = Math.ceil(a.innerHeight - s.top))),
+                  l &&
+                  !x &&
+                  ((w = Math.ceil(l.innerWidth - s.left)),
+                  (C = Math.ceil(l.innerHeight - s.top))),
                   t.SteamClient.Window.SetResizeGrip(w, C);
               }
               return () => {
-                (0, U.Fj)(t, "Window.SetResizeGrip") &&
+                (0, N.Fj)(t, "Window.SetResizeGrip") &&
                   t.SteamClient.Window.SetResizeGrip(0, 0);
               };
-            }, [t, p]),
-            p
+            }, [t, x]),
+            x
               ? null
               : (0, e.jsx)("div", {
-                  className: (0, z.A)("window_resize_grip", l),
+                  className: (0, U.A)("window_resize_grip", r),
                   ref: L,
                   ...u,
                 })
           );
         }
-        var m = n(30096),
-          x = n(3166);
-        const r = (o) => c({ modal: !0, ...o });
+        var O = n(30096),
+          m = n(3166);
+        const a = (o) => c({ modal: !0, ...o });
         function c(o) {
-          const t = (0, g.R7)().ownerWindow,
-            l = (0, x.Qn)(),
-            [u, p] = d.useState(() =>
-              l ||
+          const t = (0, E.R7)().ownerWindow,
+            r = (0, m.Qn)(),
+            [u, x] = d.useState(() =>
+              r ||
               (o.onlyPopoutIfNeeded === !0 &&
                 o.popupHeight < t.innerHeight * 0.9 &&
                 o.popupWidth < t.innerWidth * 0.9 &&
@@ -262,7 +265,7 @@
                 : "popout",
             );
           return u === "inline"
-            ? (0, e.jsx)(F.E, { active: !0, children: o.children })
+            ? (0, e.jsx)(G.E, { active: !0, children: o.children })
             : u === "popout"
               ? (0, e.jsx)(v, { ...o })
               : null;
@@ -270,55 +273,55 @@
         function h(o) {
           const {
               popup: t,
-              children: l,
+              children: r,
               bFitToContent: u,
-              className: p,
+              className: x,
               ...L
             } = o,
-            I = d.useCallback(
+            P = d.useCallback(
               (C) => {
                 const s = Math.ceil(C.borderBoxSize[0].inlineSize),
-                  a = Math.ceil(C.borderBoxSize[0].blockSize);
-                t?.SteamClient.Window.ResizeTo(s, a, !0);
+                  l = Math.ceil(C.borderBoxSize[0].blockSize);
+                t?.SteamClient.Window.ResizeTo(s, l, !0);
               },
               [t],
             ),
-            w = (0, i.wY)(I);
+            w = (0, i.wY)(P);
           return (0, e.jsx)("div", {
-            className: (0, z.A)("PopupFullWindow", u && "FitToContent", p),
+            className: (0, U.A)("PopupFullWindow", u && "FitToContent", x),
             ref: u ? w : void 0,
             ...L,
-            children: l,
+            children: r,
           });
         }
         function v(o) {
           const {
               strName: t,
-              strTitle: l,
+              strTitle: r,
               popupWidth: u,
-              popupHeight: p,
+              popupHeight: x,
               browserType: L,
-              onDismiss: I,
+              onDismiss: P,
               bFitToContent: w,
               refPopup: C,
               children: s,
-              titleBarClassName: a,
+              titleBarClassName: l,
               saveDimensionsKey: D,
             } = o,
-            b = (0, g.R7)()?.ownerWindow,
-            E = (0, A.yk)(),
-            R = { ...(0, y.h3)(D), onClose: I };
+            b = (0, E.R7)()?.ownerWindow,
+            j = (0, A.yk)(),
+            R = { ...(0, S.h3)(D), onClose: P };
           let T = 0;
-          o.resizable && (T |= g.Wf.Resizable),
+          o.resizable && (T |= E.Wf.Resizable),
             (o.minWidth || o.minHeight) &&
-              (T |= g.Wf.ApplyBrowserScaleToDimensions),
-            o.fullscreen && (T |= g.Wf.FullScreen);
+              (T |= E.Wf.ApplyBrowserScaleToDimensions),
+            o.fullscreen && (T |= E.Wf.FullScreen);
           const Y = "PopupWindow_" + (t ? `${t}_` : "") + d.useId(),
-            { popup: W, element: H } = (0, y.OJ)(
+            { popup: W, element: H } = (0, S.OJ)(
               Y,
               {
-                title: l,
-                dimensions: { width: u, height: p },
+                title: r,
+                dimensions: { width: u, height: x },
                 html_class: "client_chat_frame fullheight ModalDialogPopup",
                 body_class: "fullheight ModalDialogBody",
                 popup_class: "fullheight",
@@ -326,20 +329,20 @@
                 minWidth: o.minWidth,
                 minHeight: o.minHeight,
                 replace_existing_popup: !0,
-                center_on_window: E?.BCenterPopupsOnWindow() ? b : void 0,
+                center_on_window: j?.BCenterPopupsOnWindow() ? b : void 0,
                 eCreationFlags: T,
-                target_browser: E?.GetBrowserInfo(),
+                target_browser: j?.GetBrowserInfo(),
               },
               R,
             );
           if (
             (d.useEffect(
-              () => ((0, m.cZ)(C, W), () => (0, m.cZ)(C, void 0)),
+              () => ((0, O.cZ)(C, W), () => (0, O.cZ)(C, void 0)),
               [C, W],
             ),
             d.useEffect(() => {
-              W && (W.document.title = l ?? t);
-            }, [W, l, t]),
+              W && (W.document.title = r ?? t);
+            }, [W, r, t]),
             !H)
           )
             return null;
@@ -347,32 +350,32 @@
             V = !o.resizable;
           return (0, e.jsxs)(e.Fragment, {
             children: [
-              $ && (0, e.jsx)(j, { popup: W }),
-              N.createPortal(
-                (0, e.jsx)(g.kc, {
+              $ && (0, e.jsx)(g, { popup: W }),
+              I.createPortal(
+                (0, e.jsx)(E.kc, {
                   ownerWindow: W,
-                  children: (0, e.jsxs)(P.Y, {
+                  children: (0, e.jsxs)(y.Y, {
                     children: [
                       (0, e.jsxs)(h, {
                         popup: W,
                         bFitToContent: w,
-                        onContextMenu: G.aE,
+                        onContextMenu: z.aE,
                         children: [
-                          (0, e.jsx)(O.c, {
-                            className: a,
+                          (0, e.jsx)(F.c, {
+                            className: l,
                             hideMin: V,
                             hideMax: V,
                             popup: W,
-                            hideActions: !I,
+                            hideActions: !P,
                           }),
                           (0, e.jsx)(A.EO, {
-                            bCenterPopupsOnWindow: E?.BCenterPopupsOnWindow(),
-                            browserInfo: E?.GetBrowserInfo(),
+                            bCenterPopupsOnWindow: j?.BCenterPopupsOnWindow(),
+                            browserInfo: j?.GetBrowserInfo(),
                             children: s,
                           }),
                         ],
                       }),
-                      o.resizable && !w && (0, e.jsx)(S, { popup: W }),
+                      o.resizable && !w && (0, e.jsx)(p, { popup: W }),
                     ],
                   }),
                 }),
@@ -381,14 +384,14 @@
             ],
           });
         }
-        function j(o) {
+        function g(o) {
           const { popup: t } = o,
-            l = d.useCallback(() => {
+            r = d.useCallback(() => {
               t?.SteamClient.Window.BringToFront();
             }, [t]);
           return (
-            d.useEffect(l, [l]),
-            (0, e.jsx)(F.E, {
+            d.useEffect(r, [r]),
+            (0, e.jsx)(G.E, {
               active: !0,
               children: (0, e.jsx)("div", {
                 style: {
@@ -398,7 +401,7 @@
                   right: 0,
                   bottom: 0,
                 },
-                onClick: l,
+                onClick: r,
               }),
             })
           );
@@ -408,47 +411,47 @@
         "use strict";
         n.r(B), n.d(B, { default: () => C });
         var e = n(7850),
-          P = n(9054),
-          i = n.n(P),
+          y = n(9054),
+          i = n.n(y),
           d = n(92757),
-          N = n(68312),
-          g = n(50855),
-          y = n(58632),
-          G = n.n(y),
+          I = n(68312),
+          E = n(84732),
+          S = n(58632),
+          z = n.n(S),
           A = n(80902),
-          F = n(72604),
-          O = n(35038),
-          U = n(72849),
-          z = n(98609),
+          G = n(72604),
+          F = n(35038),
+          N = n(72849),
+          U = n(98609),
           K = n(99412);
-        let S;
-        const m = 1440 * 60 * 1e3;
-        function x(s) {
-          return `appinfo_${s}_${z.TS.LANGUAGE}`;
+        let p;
+        const O = 1440 * 60 * 1e3;
+        function m(s) {
+          return `appinfo_${s}_${U.TS.LANGUAGE}`;
         }
-        function r(s) {
-          return !!(s && Date.now() - s.timeCached < m);
+        function a(s) {
+          return !!(s && Date.now() - s.timeCached < O);
         }
-        function c(s, a) {
+        function c(s, l) {
           return (
-            S ||
-              (S = new (G())(
+            p ||
+              (p = new (z())(
                 async (D) => {
                   const M = new Map();
-                  (await Promise.all(D.map((f) => a.GetObject(x(f)))))
-                    .filter(r)
+                  (await Promise.all(D.map((f) => l.GetObject(m(f)))))
+                    .filter(a)
                     .forEach(({ value: f }) => M.set(f.appid, f));
-                  const E = D.slice().filter((f) => !M.has(f));
-                  if (E.length) {
-                    const f = O.w.Init(U._z);
-                    f.Body().set_language((0, K.sfN)(z.TS.LANGUAGE)),
-                      f.Body().set_appids(E);
-                    const R = await U.BE.GetApps(s, f);
-                    if (R.GetEResult() != F.R) throw R.GetErrorMessage();
+                  const j = D.slice().filter((f) => !M.has(f));
+                  if (j.length) {
+                    const f = F.w.Init(N._z);
+                    f.Body().set_language((0, K.sfN)(U.TS.LANGUAGE)),
+                      f.Body().set_appids(j);
+                    const R = await N.BE.GetApps(s, f);
+                    if (R.GetEResult() != G.R) throw R.GetErrorMessage();
                     R.Body()
                       .toObject()
                       .apps.forEach((T) => {
-                        a.StoreObject(x(T.appid), {
+                        l.StoreObject(m(T.appid), {
                           timeCached: Date.now(),
                           value: T,
                         }),
@@ -459,26 +462,26 @@
                 },
                 { cache: !1 },
               )),
-            S
+            p
           );
         }
         function h(s) {
-          const a = (0, N.KV)(),
-            D = (0, N.rX)();
+          const l = (0, I.KV)(),
+            D = (0, I.rX)();
           return (0, A.I)({
             queryKey: ["appinfo", s],
-            queryFn: async () => c(a, D).load(s),
-            staleTime: m,
+            queryFn: async () => c(l, D).load(s),
+            staleTime: O,
             enabled: !!s,
           }).data;
         }
         var v = n(23761),
-          j = n(18210),
+          g = n(18210),
           o = n(86390),
           t = n(16412),
-          l = n(85599),
+          r = n(85599),
           u = n(3166);
-        function p(s) {
+        function x(s) {
           return `?joinsessionid=${s}`;
         }
         function L(s) {
@@ -486,15 +489,15 @@
             className: i().JoinSessionButton,
             onClick: () =>
               (window.location.href =
-                `steam://launch/${s.steamAppId}` + p(s.sessionID)),
+                `steam://launch/${s.steamAppId}` + x(s.sessionID)),
             children: s.children,
           });
         }
-        function I(s) {
-          const a = (0, v.Vc)(),
-            D = (0, N.KV)();
-          return a.isSuccess
-            ? a.data?.sessions?.length > 0
+        function P(s) {
+          const l = (0, v.Vc)(),
+            D = (0, I.KV)();
+          return l.isSuccess
+            ? l.data?.sessions?.length > 0
               ? (0, e.jsxs)(e.Fragment, {
                   children: [
                     (0, e.jsx)(t.JU, {
@@ -503,7 +506,7 @@
                     }),
                     (0, e.jsx)("div", {
                       className: i().SessionList,
-                      children: a.data?.sessions.map((M) =>
+                      children: l.data?.sessions.map((M) =>
                         (0, e.jsxs)(
                           "div",
                           {
@@ -524,7 +527,7 @@
                                     D,
                                     M.client_instanceid,
                                     s.steamAppId,
-                                    p(s.sessionID),
+                                    x(s.sessionID),
                                   ),
                                 children: "Launch Game",
                               }),
@@ -540,16 +543,16 @@
                   className: i().Error,
                   children: "No logged in sessions",
                 })
-            : a.isFetching || a.isRefetching
-              ? (0, e.jsx)(l.t, {})
+            : l.isFetching || l.isRefetching
+              ? (0, e.jsx)(r.t, {})
               : (0, e.jsxs)("div", {
                   className: i().Error,
-                  children: ["Error ", a.error.message],
+                  children: ["Error ", l.error.message],
                 });
         }
         function w(s) {
-          const a = h(s.steamAppId);
-          return a
+          const l = h(s.steamAppId);
+          return l
             ? (0, e.jsxs)(e.Fragment, {
                 children: [
                   (0, e.jsx)("div", {
@@ -560,7 +563,7 @@
                     className: i().Explanation,
                     children: [
                       "You've been invited to join a game! Click below to launch ",
-                      a.friendly_name || a.name,
+                      l.friendly_name || l.name,
                       " on Steam and start playing.",
                     ],
                   }),
@@ -583,7 +586,7 @@
                           (0, e.jsx)("div", {
                             className: i().SectionCtr,
                             children: u.iA.logged_in
-                              ? (0, e.jsx)(I, { ...s })
+                              ? (0, e.jsx)(P, { ...s })
                               : (0, e.jsxs)(e.Fragment, {
                                   children: [
                                     (0, e.jsx)(t.JU, {
@@ -592,7 +595,7 @@
                                     }),
                                     (0, e.jsx)(t.$n, {
                                       onClick: o.vg,
-                                      children: (0, j.we)("#Login_SignIn"),
+                                      children: (0, g.we)("#Login_SignIn"),
                                     }),
                                   ],
                                 }),
@@ -614,24 +617,24 @@
                       }),
                 ],
               })
-            : (0, e.jsx)(l.t, {});
+            : (0, e.jsx)(r.t, {});
         }
         function C() {
           const s = (0, u.Tc)("multiplayersession_join", "application_config"),
             D = new URLSearchParams((0, d.zy)().search).get("jws"),
-            { header: M, body: b } = (0, g.I3)(D) || { header: {}, body: {} };
-          let { steamAppId: E } = b;
+            { header: M, body: b } = (0, E.I3)(D) || { header: {}, body: {} };
+          let { steamAppId: j } = b;
           const f = b[s.jws_sessionid_key],
             R = b[s.jws_livedata_url_key];
           return (
-            typeof E == "string" && (E = parseInt(E)),
+            typeof j == "string" && (j = parseInt(j)),
             (0, e.jsxs)("div", {
               className: i().JoinApp,
               children: [
-                !E || !R || !R
+                !j || !R || !R
                   ? (0, e.jsx)("div", { children: "Invalid session link" })
                   : (0, e.jsx)(w, {
-                      steamAppId: E,
+                      steamAppId: j,
                       sessionLiveDataUrl: R,
                       sessionID: f,
                     }),
