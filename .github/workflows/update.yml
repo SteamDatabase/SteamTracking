@@ -136,8 +136,19 @@ jobs:
             steamcommunity.com/ssr
           key: cache-${{ hashFiles('.support/**', '!.support/etags.json', 'store.steampowered.com/ssr/**', 'partner.steamgames.com/ssr/**', 'steamcommunity.com/ssr/**') }}
 
+      - name: Create Protobufs token
+        id: protobufs-token
+        if: steps.update.outputs.changed == 'true' && github.repository_owner == 'SteamTracking'
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ secrets.STEAMTRACKING_APP_CLIENT_ID }}
+          private-key: ${{ secrets.STEAMTRACKING_APP_PRIVATE_KEY }}
+          owner: SteamTracking
+          repositories: Protobufs
+          permission-contents: write
+
       - name: Dispatch to ValveProtobufs
-        if: steps.update.outputs.changed == 'true' && env.GH_TOKEN != ''
+        if: steps.update.outputs.changed == 'true' && github.repository_owner == 'SteamTracking'
         run: gh api repos/SteamTracking/Protobufs/dispatches -f event_type=sync
         env:
-          GH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
+          GH_TOKEN: ${{ steps.protobufs-token.outputs.token }}
