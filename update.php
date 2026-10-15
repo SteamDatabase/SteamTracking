@@ -38,6 +38,9 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		/** @var array<string, true> */
 		private array $CurrentSSRFiles = [];
 
+		/** @var array<string, true> */
+		private array $FilesToFormat = [];
+
 		/** @var array<int, mixed> */
 		private array $Options =
 		[
@@ -622,10 +625,12 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 							mkdir( $CleanFolder, 0755, true );
 						}
 
-						system(
-							'node tools/generate_clean_js.mjs ' . escapeshellarg( $File ) . ' ' . escapeshellarg( $CleanFile ) .
-							' && npm run prettier ' . escapeshellarg( $CleanFile )
-						);
+						system( 'node tools/generate_clean_js.mjs ' . escapeshellarg( $File ) . ' ' . escapeshellarg( $CleanFile ), $ReturnCode );
+
+						if( $ReturnCode === 0 )
+						{
+							$this->FilesToFormat[ $CleanFile ] = true;
+						}
 					}
 
 					$this->DumpJavascriptFiles = true;
@@ -660,10 +665,10 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 					file_put_contents( $CleanFile, $Data );
 
-					system( 'npm run prettier ' . escapeshellarg( $CleanFile ) );
+					$this->FilesToFormat[ $CleanFile ] = true;
 				}
 
-				system( 'npm run prettier ' . escapeshellarg( $File ) );
+				$this->FilesToFormat[ $File ] = true;
 
 				return true;
 			}
@@ -816,6 +821,28 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			while( $Running );
 
 			curl_multi_close( $Master );
+
+			$this->FormatFiles();
+		}
+
+		private function FormatFiles() : void
+		{
+			if( empty( $this->FilesToFormat ) )
+			{
+				return;
+			}
+
+			$this->Log( '{lightblue}Formatting ' . count( $this->FilesToFormat ) . ' files' );
+
+			// Batched to stay under command line length limits
+			foreach( array_chunk( array_keys( $this->FilesToFormat ), 50 ) as $Files )
+			{
+				$Arguments = implode( ' ', array_map( 'escapeshellarg', $Files ) );
+
+				system( 'npm run prettier ' . $Arguments );
+			}
+
+			$this->FilesToFormat = [];
 		}
 
 		/** @param array{URL: string, File: string} $URL */
