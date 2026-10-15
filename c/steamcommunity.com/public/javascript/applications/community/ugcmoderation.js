@@ -148,11 +148,23 @@
           _ = 2,
           _ = 3;
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         function _(_) {
           return !!_ && _ !== _;
+        }
+        function _(_) {
+          var _, _;
+          return (
+            _.subject_type === _._ &&
+            ((_ = _.coordinates) == null ? void 0 : _.ugc_content_type) ===
+              16 &&
+            !!(
+              (_ = _.reports) != null && _.some((_) => _.report_reason === _._)
+            )
+          );
         }
         function _(_) {
           return _(_.status)
@@ -183,13 +195,23 @@
             label: "Violent threat",
           });
         }
+        function _() {
+          return (0, _.jsx)("span", {
+            className: _()(_().Pill, _().MalwarePill),
+            children: "Malware?",
+          });
+        }
         function _(_) {
-          const { subject: _ } = _;
+          const { subject: _ } = _,
+            _ = _(_);
           return !_(_.terrorism_status) &&
             !_(_.csam_status) &&
-            !_(_.credible_threat_of_violence_status)
+            !_(_.credible_threat_of_violence_status) &&
+            !_
             ? null
-            : (0, _.jsxs)("div", {
+            : (0, _.jsxs)(_._, {
+                wrap: "wrap",
+                gap: "1",
                 children: [
                   (0, _.jsx)(_, {
                     status: _.terrorism_status,
@@ -200,6 +222,7 @@
                   (0, _.jsx)(_, {
                     status: _.credible_threat_of_violence_status,
                   }),
+                  _ && (0, _.jsx)(_, {}),
                 ],
               });
         }
@@ -578,6 +601,7 @@
           TerrorismPill: "_2JGuTxE_EPq5pzUfrneLF-",
           CSAMPill: "_2GfEACqYfP_xZgMYtfZK9-",
           ViolencePill: "_2bDmZI3RxXA50zYGByOynN",
+          MalwarePill: "_3_g8g_pUDJsmJaS1K0aRVZ",
         };
       },
     },
