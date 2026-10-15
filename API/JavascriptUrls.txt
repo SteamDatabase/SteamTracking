@@ -1678,6 +1678,7 @@ ${STORE_BASE_URL}recommended/friendactivity/
 ${STORE_BASE_URL}recommended/ignorerecommendation
 ${STORE_BASE_URL}recommended/ignorerecommendation/
 ${STORE_BASE_URL}recommender/
+${STORE_BASE_URL}recommenderdemos/getcreatorsales
 ${STORE_BASE_URL}recommenderdemos/getfests
 ${STORE_BASE_URL}recommenderdemos/getlist
 ${STORE_BASE_URL}remoteplay#anywhere

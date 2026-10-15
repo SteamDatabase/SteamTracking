@@ -5962,6 +5962,102 @@
               })
             );
           },
+          _ = (_) => {
+            const { sale: _ } = _;
+            return (0, _.jsxs)("div", {
+              className: _.RecommenderList,
+              children: [
+                (0, _.jsx)("a", {
+                  className: _.Title,
+                  href: _.url,
+                  children: _.name || _.url,
+                }),
+                (0, _.jsx)("div", {
+                  className: _.SubTitle,
+                  children: `Score ${_.score.toFixed(3)}`,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.CapsuleList,
+                  children: [
+                    _.capsule &&
+                      (0, _.jsx)("a", {
+                        href: _.url,
+                        children: (0, _.jsx)("img", {
+                          className: _.SaleCapsule,
+                          src: _.capsule,
+                        }),
+                      }),
+                    _.appids.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          nAppID: _,
+                        },
+                        _,
+                      ),
+                    ),
+                  ],
+                }),
+              ],
+            });
+          },
+          _ = (_) => {
+            const [_, _] = _.useState(void 0),
+              [_, _] = _.useState(void 0);
+            return (
+              _.useEffect(() => {
+                (async () => {
+                  const _ = {
+                    max_sales: 5,
+                    max_apps: 5,
+                    accountid: _.nAccountID,
+                  };
+                  try {
+                    const _ = await _().get(
+                      `${_._.STORE_BASE_URL}recommenderdemos/getcreatorsales`,
+                      {
+                        params: _,
+                        timeout: 1e4,
+                      },
+                    );
+                    _(_.data.sales), _(_.data.error);
+                  } catch (_) {
+                    console.error("Error fetching data", _);
+                  }
+                })();
+              }, [_.nAccountID]),
+              (0, _.jsxs)("div", {
+                className: _.RecommenderList,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Title,
+                    children: (0, _._)("#RecommenderDemos_CreatorSales"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.SubTitle,
+                    children: (0, _._)("#RecommenderDemos_CreatorSales_Desc"),
+                  }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.SubTitle,
+                      children: _,
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _.CreatorSales,
+                    children: _?.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          sale: _,
+                        },
+                        _.url,
+                      ),
+                    ),
+                  }),
+                ],
+              })
+            );
+          },
           _ = () => {
             const [_, _] = _.useState(!1),
               [_, _] = _.useState(0),
@@ -6078,6 +6174,9 @@
                   (0, _.jsx)(_, {
                     nAccountID: _,
                     bExclude: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    nAccountID: _,
                   }),
                   (0, _.jsx)(_, {
                     nAccountID: _,
@@ -6354,6 +6453,8 @@
           CheckBox: "_5aGW9oecPhpwTUVGvj3lg",
           Spacer: "_1kIkFPfBO9A3hDohTT_hoK",
           CapsuleList: "iWS569Edm4Rgt09fYlY2v",
+          CreatorSales: "_3BWewVtUpwrkIE664Jhksg",
+          SaleCapsule: "_3MEYk3E7bTo4Y1pQ6oFYqW",
           AppCapsule: "_2ZKToqUzsdeaKKdDTtGZkD",
           UnderInfo: "_3pPpZh7mj-S7Lxj6yU4Fzl",
           Name: "_1EvKcr6zM__ELCD8Hf9S8y",

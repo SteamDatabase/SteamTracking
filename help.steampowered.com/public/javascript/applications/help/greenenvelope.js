@@ -2649,7 +2649,7 @@
               "Parental.ValidateToken#1",
               (0, w.I8)(gr, g, F),
               ps,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["help"] },
             );
           }
           s.ValidateToken = m;
@@ -4027,7 +4027,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -4036,7 +4036,7 @@
             return f.SendNotification(
               "SteamNotification.MarkNotificationsRead#1",
               (0, w.I8)(zr, u),
-              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner", "help"] },
             );
           }
           s.MarkNotificationsRead = i;
@@ -4044,7 +4044,7 @@
             return f.SendNotification(
               "SteamNotification.MarkNotificationsViewed#1",
               (0, w.I8)(Mr, u),
-              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner", "help"] },
             );
           }
           s.MarkNotificationsViewed = e;
@@ -5770,7 +5770,7 @@
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 2,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }

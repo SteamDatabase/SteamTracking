@@ -2796,6 +2796,7 @@
           function _(_, _, _) {
             return _.SendMsg("Parental.ValidateToken#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
+              rgBrowserAPISites: ["help"],
             });
           }
           _.ValidateToken = _;
@@ -4252,7 +4253,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -4263,7 +4264,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -4274,7 +4275,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -6231,7 +6232,7 @@
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 2,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }

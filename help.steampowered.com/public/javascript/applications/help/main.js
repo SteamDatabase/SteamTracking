@@ -2949,7 +2949,7 @@ Status Code:` +
               "ClanFAQS.GetFAQVersion#1",
               (0, J.I8)(N, h2, L2),
               v1,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["help"] },
             );
           }
           e.GetFAQVersion = o1;
@@ -2958,7 +2958,7 @@ Status Code:` +
               "ClanFAQS.GetAllDrafts#1",
               (0, J.I8)(e2, h2, L2),
               p2,
-              { ePrivilege: 1 },
+              { ePrivilege: 1, rgBrowserAPISites: ["help"] },
             );
           }
           e.GetAllDrafts = w1;
@@ -2994,7 +2994,12 @@ Status Code:` +
               "ClanFAQS.SearchFAQs#1",
               (0, J.I8)($1, h2, L2),
               A1,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["help"],
+              },
             );
           }
           e.SearchFAQs = F1;
@@ -28932,7 +28937,11 @@ Status Code:` +
               "TwoFactor.QueryTime#1",
               (0, J.I8)(y6, o1, w1),
               k6,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["help"],
+              },
             );
           }
           e.QueryTime = t;
@@ -44409,7 +44418,7 @@ Status Code:` +
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -51986,7 +51995,7 @@ Status Code:` +
               "Community.GetClanMetadata#1",
               (0, s.I8)(M1, V2, O2),
               E1,
-              { bConstMethod: !0, ePrivilege: 1 },
+              { bConstMethod: !0, ePrivilege: 1, rgBrowserAPISites: ["help"] },
             );
           }
           j2.GetClanMetadata = G;
@@ -62985,7 +62994,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -63411,7 +63420,7 @@ Status Code:` +
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -63463,7 +63472,7 @@ Status Code:` +
               "Player.GetCommunityPreferences#1",
               (0, s.I8)(W5, z2, y2),
               q3,
-              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner", "help"] },
             );
           }
           J2.GetCommunityPreferences = z9;
@@ -70029,7 +70038,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }

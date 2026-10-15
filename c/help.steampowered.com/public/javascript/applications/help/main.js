@@ -3058,12 +3058,14 @@ Status Code:` +
           function _(_, _, _) {
             return _.SendMsg("ClanFAQS.GetFAQVersion#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
+              rgBrowserAPISites: ["help"],
             });
           }
           _.GetFAQVersion = _;
           function _(_, _, _) {
             return _.SendMsg("ClanFAQS.GetAllDrafts#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
+              rgBrowserAPISites: ["help"],
             });
           }
           _.GetAllDrafts = _;
@@ -3105,6 +3107,7 @@ Status Code:` +
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
+              rgBrowserAPISites: ["help"],
             });
           }
           _.SearchFAQs = _;
@@ -30954,6 +30957,7 @@ Status Code:` +
             return _.SendMsg("TwoFactor.QueryTime#1", (0, _._)(_, _, _), _, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
+              rgBrowserAPISites: ["help"],
             });
           }
           _.QueryTime = _;
@@ -47482,7 +47486,7 @@ Status Code:` +
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -55692,6 +55696,7 @@ Status Code:` +
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["help"],
               },
             );
           }
@@ -67505,7 +67510,7 @@ Status Code:` +
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -67976,7 +67981,7 @@ Status Code:` +
             return _.SendMsg("Player.GetNicknameList#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
-              rgBrowserAPISites: ["partner"],
+              rgBrowserAPISites: ["partner", "help"],
             });
           }
           _.GetNicknameList = _;
@@ -68028,7 +68033,7 @@ Status Code:` +
               _,
               {
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -75316,7 +75321,7 @@ Status Code:` +
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
-              rgBrowserAPISites: ["partner"],
+              rgBrowserAPISites: ["partner", "help"],
             });
           }
           _.GetItems = _;
