@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [8010],
+    [78010],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -1747,6 +1747,101 @@
         __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const {
+              children: _,
+              beforeContent: _,
+              afterContent: _,
+              hasValue: _,
+              ..._
+            } = _,
+            _ = _(_);
+          return (0, _.jsxs)(_._, {
+            ..._,
+            align: "center",
+            "data-has-value": !!_,
+            minWidth: "0",
+            children: [
+              _ &&
+                (0, _.jsx)(_._, {
+                  paddingRight: "2",
+                  children: _,
+                }),
+              (0, _.jsx)(_._, {
+                flexGrow: "1",
+                minWidth: "0",
+                children: _,
+              }),
+              _ &&
+                (0, _.jsx)(_._, {
+                  paddingLeft: "2",
+                  children: _,
+                }),
+            ],
+          });
+        }
+        function _(_) {
+          const {
+              variant: _ = "basic",
+              size: _ = "2",
+              radius: _,
+              focusable: _ = !0,
+              hoverable: _ = !0,
+              clickable: _ = !0,
+              disabled: _,
+              className: _,
+              status: _,
+              color: _,
+              ..._
+            } = _,
+            _ = _ === "underline" ? "none" : _;
+          return (0, _._)(
+            {
+              ..._,
+              radius: _,
+              "data-status": _,
+              "data-dull-color": _ && _ !== "dull" ? _ : void 0,
+              className: _()(
+                _.ControlBox,
+                _ && !_ && _.Focusable,
+                _ && !_ && _.Hoverable,
+                _ && !_ && _.Clickable,
+                _ && _.Disabled,
+                _[`Variant-${_}`],
+                _[`Size-${_}`],
+                _,
+              ),
+            },
+            _._,
+          );
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        function _() {
+          return _.TextEntry;
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -2008,6 +2103,31 @@
           SupervisorOnly: "_2dWYzwO95xQRO7W66aSsH7",
           AcquitIcon: "HA6Hw6Hc332GoPbma_9sZ",
           SanctionIcon: "_3WS1gYqe89ISF4mi7dvtBU",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          "Variant-basic": "xqG5GdDEeYauX2ots2DLl",
+          "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
+          "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
+          "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
+          Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+          "Variant-inset-glass": "_32JdL4FubsmwHfHXm6OB9I",
+          "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
+          "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
+          "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
+          "Variant-bare": "_3vxqpebgJYIYNTcigTXx21",
+          ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
+          Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
+          Clickable: "_1KONo9A0HE0_NOK2F6uvXy",
+          Disabled: "_2I6xXve3oCxh8fra7SWTnq",
+          "Size-1": "_2e1xlPghh48rkP13ydQOPb",
+          "Size-2": "B7HtDxiiORArIRcBR9kVB",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          TextEntry: "_1vE-LsK6l_D_5yjbywZV1p",
         };
       },
       chunkid: (module) => {

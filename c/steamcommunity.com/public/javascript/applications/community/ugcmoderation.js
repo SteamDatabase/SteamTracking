@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [7102],
+    [37102],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -17,26 +17,307 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
+        const _ = {};
+        (_.arabic = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 73735, 19))),
+          (_.brazilian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 14971, 19))),
+          (_.bulgarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 37236, 19))),
+          (_.czech = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 66898, 19))),
+          (_.danish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 19078, 19))),
+          (_.dutch = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 14875, 19))),
+          (_.english = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 46073, 19))),
+          (_.finnish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 17822, 19))),
+          (_.french = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 53951, 19))),
+          (_.german = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 71541, 19))),
+          (_.greek = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 46145, 19))),
+          (_.hungarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 5896, 19))),
+          (_.indonesian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 23187, 19))),
+          (_.italian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 80081, 19))),
+          (_.japanese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 41080, 19))),
+          (_.koreana = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 99770, 19))),
+          (_.latam = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 24306, 19))),
+          (_.malay = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 87049, 19))),
+          (_.norwegian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 70269, 19))),
+          (_.polish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 19226, 19))),
+          (_.portuguese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 70554, 19))),
+          (_.romanian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 94900, 19))),
+          (_.russian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 68852, 19))),
+          (_.sc_schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 98574, 19))),
+          (_.schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 94951, 19))),
+          (_.spanish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 43649, 19))),
+          (_.swedish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 14416, 19))),
+          (_.tchinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 17324, 19))),
+          (_.thai = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 18073, 19))),
+          (_.turkish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 17153, 19))),
+          (_.ukrainian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 71147, 19))),
+          (_.vietnamese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 1544, 19)));
+        async function _(_) {
+          if (_[_]) return _[_]();
+        }
+        const _ = (0, _._)(_);
+        var _ = __webpack_require__("chunkid");
+        const _ = [
+            {
+              labelToken: "#Workshop_ItemAdmin_Ban_Preset_None",
+            },
+            {
+              labelToken: "#Workshop_ItemAdmin_Ban_Preset_Copyright",
+              reasonToken: "#Workshop_ItemAdmin_Ban_Preset_CopyrightReason",
+              eModerationReason: _._,
+            },
+          ],
+          _ = [
+            {
+              labelToken: "#Workshop_ItemAdmin_Ban_Preset_None",
+            },
+            {
+              labelToken: "#Workshop_ItemAdmin_Ban_Preset_NoCounterNotice",
+              reasonToken:
+                "#Workshop_ItemAdmin_Ban_Preset_NoCounterNoticeReason",
+            },
+          ],
+          _ = ["copyright", "other"],
+          _ = ["copyright", "malware", "other"],
+          _ = {
+            copyright: "#Workshop_ItemAdmin_Ban_Preset_Copyright",
+            malware: "#Workshop_ItemAdmin_Ban_Category_Malware",
+            other: "#Workshop_ItemAdmin_Ban_Category_Other",
+          };
         function _(_) {
           return _._.Localize("#moderation_ugcban_default_note", (0, _._)(_));
         }
+        function _(_) {
+          const {
+              bBanned: _,
+              bIsSupport: _,
+              bWorkshopContent: _,
+              onConfirm: _,
+              onError: _,
+              onClose: _,
+            } = _,
+            _ = _ && !_,
+            _ = !_ && !_,
+            [_, _] = (0, _.useState)(_.strBanReason),
+            [_, _] = (0, _.useState)(null),
+            [_, _] = (0, _.useState)(!1),
+            [_, _] = (0, _.useState)(null),
+            [_, _] = (0, _.useState)(!1),
+            _ = _ ? _ : _,
+            _ = _.Localize(
+              _
+                ? "#Workshop_ItemAdmin_Ban_Unset"
+                : "#Workshop_ItemAdmin_Ban_Set",
+            ),
+            _ =
+              !_ &&
+              _.trim().length > 1 &&
+              !(_ && _ === null) &&
+              !(_ && _ && _ === null),
+            _ = () => {
+              _(!0);
+              const _ = _ == "malware" ? _._ : _ != null ? _ : _._;
+              Promise.resolve(_(_.trim(), _)).then(_, (_) => {
+                _(!1), _ == null || _(_);
+              });
+            },
+            _ = (_) => {
+              _ !== null &&
+                ((!_.trim() || (_ !== null && _ === _(_))) && _(_(_)), _(_)),
+                _(!1);
+            },
+            _ = (_) => {
+              _(_.reasonToken ? _.Localize(_.reasonToken) : ""),
+                _.eModerationReason !== void 0 &&
+                  _ === null &&
+                  _(_.eModerationReason);
+            },
+            _ = (_) => {
+              const _ = _.Localize(
+                "#Workshop_ItemAdmin_Ban_Preset_CopyrightReason",
+              );
+              _ == "copyright" && _.trim().length === 0
+                ? _(_)
+                : _ === _ && _(""),
+                _(_);
+            };
+          return _
+            ? (0, _.jsx)(_._, {
+                className: _.BanDialog,
+                strTitle: _,
+                onClose: _,
+                children: (0, _.jsx)(_._, {
+                  reasons: (0, _._)(),
+                  onSelect: _,
+                }),
+              })
+            : (0, _.jsxs)(_._, {
+                className: _.BanDialog,
+                strTitle: _,
+                onClose: _,
+                children: [
+                  _ &&
+                    (0, _.jsxs)(_._, {
+                      direction: "column",
+                      gap: "2",
+                      marginBottom: "2",
+                      children: [
+                        _ &&
+                          (0, _.jsxs)(_._, {
+                            direction: "row",
+                            gap: "2",
+                            align: "center",
+                            children: [
+                              (0, _.jsx)(_._, {
+                                children: _.Localize(
+                                  "#Workshop_ItemAdmin_Ban_Reason",
+                                ),
+                              }),
+                              (0, _.jsx)(_._, {
+                                size: "1",
+                                color: "dull",
+                                onClick: () => _(!0),
+                                children:
+                                  _ === null
+                                    ? _.Localize(
+                                        "#Workshop_ItemAdmin_Ban_Reason_Unselected",
+                                      )
+                                    : (0, _._)(_),
+                              }),
+                            ],
+                          }),
+                        (0, _.jsxs)(_._, {
+                          direction: "row",
+                          gap: "2",
+                          align: "center",
+                          children: [
+                            (0, _.jsx)(_._, {
+                              children: _.Localize(
+                                "#Workshop_ItemAdmin_Ban_Presets",
+                              ),
+                            }),
+                            (0, _.jsx)(_._, {
+                              options: _,
+                              getOptionLabel: (_) => _.Localize(_.labelToken),
+                              selectedValue: null,
+                              placeholder: _.Localize(_[0].labelToken),
+                              onSelectionChange: _,
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  _ &&
+                    (0, _.jsxs)(_._, {
+                      direction: "column",
+                      gap: "2",
+                      marginBottom: "2",
+                      children: [
+                        (0, _.jsxs)(_._, {
+                          direction: "row",
+                          gap: "2",
+                          align: "center",
+                          children: [
+                            (0, _.jsx)(_._, {
+                              children: _.Localize(
+                                "#Workshop_ItemAdmin_Ban_Reason",
+                              ),
+                            }),
+                            (0, _.jsx)(_._, {
+                              options: _ ? _ : _,
+                              getOptionLabel: (_) => _.Localize(_[_]),
+                              value: _,
+                              onValueChange: _,
+                            }),
+                          ],
+                        }),
+                        _ == "malware" &&
+                          (0, _.jsx)(_._, {
+                            children: _.Localize(
+                              "#Workshop_ItemAdmin_Ban_Category_MalwareDesc",
+                            ),
+                          }),
+                      ],
+                    }),
+                  (0, _.jsx)(_._, {
+                    value: _,
+                    onTextChange: _,
+                    maxLength: 256,
+                    rows: 6,
+                    resize: "vertical",
+                  }),
+                  (0, _.jsxs)(_._, {
+                    justify: "end",
+                    gap: "3",
+                    align: "center",
+                    marginTop: "3",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        disabled: !_,
+                        onClick: _,
+                        autoFocus: !0,
+                        children: _._.Localize("#Button_OK"),
+                      }),
+                      (0, _.jsx)(_._, {
+                        onClick: _,
+                        children: (0, _.jsx)("span", {
+                          children: _._.Localize("#Button_Cancel"),
+                        }),
+                      }),
+                    ],
+                  }),
+                ],
+              });
+        }
+        var _ = __webpack_require__("chunkid");
         function _() {
-          const [_, _] = _.useState(null),
-            [_, _] = _.useState(null),
-            [_, _] = _.useState(!1),
-            [_, _] = _.useState("");
-          if (
-            (_.useEffect(
+          const [_, _] = _.useState(null);
+          return (
+            _.useEffect(
               () => (
                 (window.ShowUGCBanDialog = (_, _) => {
-                  _(null),
-                    _(!1),
-                    _(""),
-                    _({
-                      cItems: _.length,
-                      fnOnConfirm: _,
-                    });
+                  _({
+                    ..._,
+                    key: Date.now(),
+                    fnOnConfirm: _,
+                  });
                 }),
                 () => {
                   delete window.ShowUGCBanDialog;
@@ -44,82 +325,21 @@
               ),
               [],
             ),
-            !_)
-          )
-            return null;
-          const _ = () => _(null),
-            _ = () => {
-              _ === null || !_.trim() || (_.fnOnConfirm(_, _.trim()), _());
-            },
-            _ = (_) => {
-              _ !== null &&
-                ((!_.trim() || (_ !== null && _ === _(_))) && _(_(_)), _(_)),
-                _(!1);
-            },
-            _ = _.cItems > 1 ? `Ban ${_.cItems} items` : "Ban item";
-          return (0, _.jsxs)(_._, {
-            onClose: _,
-            strTitle: _,
-            children: [
-              _ &&
-                (0, _.jsx)(_._, {
-                  reasons: (0, _._)(),
-                  onSelect: _,
-                }),
-              !_ &&
-                (0, _.jsxs)(_._, {
-                  direction: "column",
-                  gap: "2",
-                  minWidth: "400px",
-                  children: [
-                    (0, _.jsxs)(_._, {
-                      direction: "row",
-                      gap: "2",
-                      align: "center",
-                      marginBottom: "2",
-                      children: [
-                        (0, _.jsx)(_._, {
-                          children: "Select a reason:",
-                        }),
-                        (0, _.jsx)(_._, {
-                          size: "1",
-                          color: "dull",
-                          onClick: () => _(!0),
-                          children:
-                            _ === null ? "Click to select..." : (0, _._)(_),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsx)(_._, {
-                      children: "Note:",
-                    }),
-                    (0, _.jsx)(_._, {
-                      value: _,
-                      onTextChange: (_) => _(_),
-                      maxLength: 256,
-                    }),
-                    (0, _.jsxs)(_._, {
-                      direction: "row",
-                      gap: "2",
-                      justify: "end",
-                      marginTop: "3",
-                      children: [
-                        (0, _.jsx)(_._, {
-                          onClick: _,
-                          color: "dull",
-                          children: "Cancel",
-                        }),
-                        (0, _.jsx)(_._, {
-                          disabled: _ === null || !_.trim(),
-                          onClick: _,
-                          children: "Ban",
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-            ],
-          });
+            _
+              ? (0, _.jsx)(
+                  _,
+                  {
+                    bBanned: !1,
+                    strBanReason: "",
+                    bIsSupport: !!_._.is_support,
+                    bWorkshopContent: !!_.bWorkshopContent,
+                    onConfirm: (_, _) => _.fnOnConfirm(_, _),
+                    onClose: () => _(null),
+                  },
+                  _.key,
+                )
+              : null
+          );
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -393,208 +613,6 @@
           );
         }
       },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = (0, _.createContext)(null);
-        function _(_) {
-          const {
-              variant: _,
-              radius: _,
-              size: _,
-              status: _,
-              color: _,
-              children: _,
-              value: _,
-              onValueChange: _,
-            } = _,
-            [_, _] = (0, _.useState)({}),
-            _ = (0, _.useCallback)(
-              (_, _) =>
-                _((_) => ({
-                  ..._,
-                  [_]: _,
-                })),
-              [],
-            ),
-            _ = (0, _.useCallback)(
-              (_, _) =>
-                _((_) => {
-                  const _ = {
-                    ..._,
-                  };
-                  return _[_] === _ && delete _[_], _;
-                }),
-              [],
-            ),
-            _ = (_) => {
-              let _ = 0;
-              switch (_.key) {
-                case " ":
-                case "Enter":
-                case "ArrowRight":
-                  _ = 1;
-                  break;
-                case "ArrowLeft":
-                  _ = -1;
-                  break;
-              }
-              if (_) {
-                const _ = Array.from(Object.values(_)).sort(_);
-                let _;
-                if (_ === null) _ = _ > 0 ? 0 : _.length - 1;
-                else {
-                  const _ = _[_],
-                    _ = _.findIndex((_) => _ === _);
-                  (0, _._)(
-                    typeof _ == "number",
-                    "Could not find current segmented value position",
-                  ),
-                    (_ = _ + _);
-                }
-                const _ = _[_ < 0 ? _.length + _ : _ % _.length],
-                  _ = Object.keys(_).find((_) => _[_] === _);
-                typeof _ != "string"
-                  ? console.error("Could not find next segmeneted value")
-                  : (_(_), _.stopPropagation(), _.preventDefault());
-              }
-            },
-            _ = (0, _._)("SegmentedControl", _),
-            _ = (0, _.useMemo)(
-              () => ({
-                value: _,
-                onValueChange: _,
-                register: _,
-                unregister: _,
-                radius: _,
-                size: _,
-              }),
-              [_, _, _, _, _, _],
-            );
-          return (0, _.jsx)(_._, {
-            clickable: !1,
-            hoverable: !1,
-            focusable: !1,
-            variant: _,
-            radius: _,
-            size: _,
-            status: _,
-            className: _()(_.SegmentedControlBox, _[`Variant-${_}`]),
-            tabIndex: 0,
-            onKeyDown: _,
-            children: (0, _.jsx)(_.Provider, {
-              value: _,
-              children: (0, _.jsxs)(_._, {
-                className: _.SegmentedControl,
-                style: {
-                  "--outer-radius": `var(--radius-${_})`,
-                },
-                children: [
-                  _,
-                  _ !== null &&
-                    (0, _.jsx)(_, {
-                      radius: _,
-                      color: _,
-                    }),
-                ],
-              }),
-            }),
-          });
-        }
-        function _(_) {
-          const { value: _, children: _, disabled: _ } = _,
-            _ = (0, _.useContext)(_),
-            [_, _] = (0, _.useState)(),
-            { register: _, unregister: _ } = _ || {};
-          if (
-            ((0, _.useEffect)(
-              () => (!_ || !_ || !_ ? () => {} : (_(_, _), () => _(_, _))),
-              [_, _, _, _],
-            ),
-            !_)
-          )
-            return null;
-          const { value: _, onValueChange: _, radius: _, size: _ } = _,
-            _ = _ === _,
-            _ = (_) => {
-              _.stopPropagation(), _.preventDefault(), !(_ || _) && _(_);
-            },
-            _ = _ === void 0 ? _ : _;
-          return (0, _.jsx)(_._, {
-            justify: "center",
-            align: "center",
-            ref: _,
-            onClick: _,
-            "data-selected": _ ? "true" : "false",
-            className: _()(_.Item, _ && _[`Size-${_}`], _ ? _.disabled : ""),
-            children: _,
-          });
-        }
-        function _(_) {
-          const { options: _, getOptionLabel: _ = (_) => _, ..._ } = _;
-          return (0, _.jsx)(_.Root, {
-            ..._,
-            children: _.map((_) =>
-              (0, _.jsx)(
-                _.Item,
-                {
-                  value: _,
-                  children: _(_),
-                },
-                _,
-              ),
-            ),
-          });
-        }
-        (_.Item = _), (_.Root = _);
-        function _(_) {
-          const { radius: _, color: _ } = _;
-          return (0, _.jsx)(_._, {
-            className: _.IndicatorPosition,
-            children: (0, _.jsx)("div", {
-              className: _.Indicator,
-              "data-accent-color": _,
-            }),
-          });
-        }
-        function _(_, _) {
-          const _ = _.compareDocumentPosition(_);
-          return _ & Node.DOCUMENT_POSITION_FOLLOWING
-            ? -1
-            : _ & Node.DOCUMENT_POSITION_PRECEDING
-              ? 1
-              : 0;
-        }
-      },
-      chunkid: (module) => {
-        module.exports = {
-          SegmentedControlBox: "_3tuJ3SHrhBu16Q7GZBtKyt",
-          Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
-          SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
-          IndicatorPosition: "_1Dgxrv7wtUW1EViSgrdMlA",
-          Item: "_2aNlsjcdOdHOtP8uACA3bM",
-          "Size-1": "_2Y43gK-c1jI0x35n45iZ0",
-          "Size-3": "_3ohjaEz8PkzSzIrIZKEdt9",
-          disabled: "_3gVhaCZ4k3QSnF9WhRZk5m",
-          "Variant-basic": "d2NNa31iY_ztalFCMja9O",
-          "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
-          "Variant-inset-glass": "_1gVVovvLBjwCxSH4wWUabt",
-          "Variant-dim": "_3qc1Re1q3AH_JYfN49uj8r",
-        };
-      },
       chunkid: (module) => {
         module.exports = {
           Pill: "_3EvT6MP5NCj5Ptsctv6H3A",
@@ -602,6 +620,11 @@
           CSAMPill: "_2GfEACqYfP_xZgMYtfZK9-",
           ViolencePill: "_2bDmZI3RxXA50zYGByOynN",
           MalwarePill: "_3_g8g_pUDJsmJaS1K0aRVZ",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          BanDialog: "_2S6JKTLe0bTYcB5bC8nT3-",
         };
       },
     },

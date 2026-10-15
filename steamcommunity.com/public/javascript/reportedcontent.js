@@ -35,7 +35,7 @@ function BanItem( id )
 	// ShowUGCBanDialog is only mounted for support accounts, whose bans need a moderation reason; everyone else keeps the one-click ban
 	if ( window.ShowUGCBanDialog )
 	{
-		ShowUGCBanDialog( [ id ], ( eReason, strNote ) => UpdateBanState( id, true, eReason, strNote ) );
+		ShowUGCBanDialog( ( eReason, strNote ) => UpdateBanState( id, true, eReason, strNote ) );
 	}
 	else
 	{
@@ -316,7 +316,7 @@ function SelectedItems_Ban()
 	if ( !rgIDs.length )
 		return;
 
-	ShowUGCBanDialog( rgIDs, ( eReason, strNote ) => rgIDs.forEach( ( id ) => UpdateBanState( id, true, eReason, strNote ) ) );
+	ShowUGCBanDialog( ( eReason, strNote ) => rgIDs.forEach( ( id ) => UpdateBanState( id, true, eReason, strNote ) ) );
 }
 
 function SelectedItems_UnBan()

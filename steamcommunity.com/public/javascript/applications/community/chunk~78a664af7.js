@@ -2,44 +2,44 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [8010],
+    [78010],
     {
-      23582: (G, te, i) => {
+      23582: (k, V, i) => {
         "use strict";
-        i.d(te, { l: () => Ct });
+        i.d(V, { l: () => Et });
         var t = i(7850),
-          Q = i(86336),
-          F = i(68031),
-          W = i(15252),
-          N = i(75083),
-          V = i(24660),
+          N = i(86336),
+          L = i(68031),
+          U = i(15252),
+          G = i(75083),
+          Q = i(24660),
           f = i(19298),
-          w = i(86067),
+          x = i(86067),
           l = i(86392),
-          u = i(13725),
-          b = i(72524),
-          E = i(99412),
-          C = i(71742),
-          H = i(72604),
-          O = i(35038),
+          c = i(13725),
+          v = i(72524),
+          S = i(99412),
+          h = i(71742),
+          F = i(72604),
+          M = i(35038),
           P = i(64981),
-          p = i(21113),
-          A = i(20476),
-          z = i(4806),
-          g = i(80613),
-          d = i.n(g),
+          u = i(21113),
+          j = i(20476),
+          b = i(4806),
+          p = i(80613),
+          d = i.n(p),
           n = i(75245),
-          ne = Object.defineProperty,
-          me = (r, e, s) =>
+          Y = Object.defineProperty,
+          se = (r, e, s) =>
             e in r
-              ? ne(r, e, {
+              ? Y(r, e, {
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
                   value: s,
                 })
               : (r[e] = s),
-          U = (r, e, s) => me(r, typeof e != "symbol" ? e + "" : e, s);
+          z = (r, e, s) => se(r, typeof e != "symbol" ? e + "" : e, s);
         function pe(r) {
           return "unknown EHelpRequestType ( " + r + " )";
         }
@@ -49,66 +49,66 @@
         function Ie(r) {
           return "unknown EHelpRequestReviewState ( " + r + " )";
         }
-        function ke(r) {
+        function Pe(r) {
           return "unknown EHelpRequestStatsRollupInterval ( " + r + " )";
         }
-        function J(r) {
+        function Z(r) {
           return "unknown EHelpRequestStatsResponderType ( " + r + " )";
         }
         function fe(r) {
           return "unknown EHelpIssue ( " + r + " )";
         }
-        function Fe(r) {
+        function We(r) {
           return "unknown EHelpRequestEscalationLevel ( " + r + " )";
         }
-        function ae(r) {
+        function oe(r) {
           return "unknown EHelpRequestMsgType ( " + r + " )";
         }
-        function Pe(r) {
+        function _e(r) {
           return "unknown EHelpRequestAction ( " + r + " )";
         }
-        function $(r) {
+        function te(r) {
           return "unknown EHelpRequestSortOrder ( " + r + " )";
         }
-        function qe(r) {
+        function Fe(r) {
           return "unknown EHelpRequestPOPType ( " + r + " )";
         }
-        function oe(r) {
+        function le(r) {
           return "unknown EAnnouncementPlacement ( " + r + " )";
         }
-        function We(r) {
+        function ke(r) {
           return "unknown ETickerCategoryLanguageRule ( " + r + " )";
         }
         function he(r) {
           return "unknown EPreapprovalResolution ( " + r + " )";
         }
-        function v(r) {
+        function B(r) {
           return "unknown EHelpRequestFeedbackCategory ( " + r + " )";
         }
         function ot(r) {
           return "unknown EHelpRequestFeedbackTargetType ( " + r + " )";
         }
-        function qt(r) {
+        function Ft(r) {
           return "unknown EFeedbackState ( " + r + " )";
         }
-        function Wt(r) {
+        function kt(r) {
           return "unknown ESupportActionSource ( " + r + " )";
         }
         function Ht(r) {
           return "unknown ERefundSupportAction ( " + r + " )";
         }
-        const ve = class y extends g.Message {
+        const ve = class T extends p.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              y.prototype.quicktext_id || n.Sg(y.M()),
-              g.Message.initialize(this, e, 0, -1, [6, 10, 11], null);
+              T.prototype.quicktext_id || n.Sg(T.M()),
+              p.Message.initialize(this, e, 0, -1, [6, 10, 11], null);
           }
           static M() {
             return (
-              y.sm_m ||
-                (y.sm_m = {
-                  proto: y,
+              T.sm_m ||
+                (T.sm_m = {
+                  proto: T,
                   fields: {
                     quicktext_id: {
                       n: 1,
@@ -170,410 +170,6 @@
                     },
                   },
                 }),
-              y.sm_m
-            );
-          }
-          static MBF() {
-            return y.sm_mbf || (y.sm_mbf = n.w0(y.M())), y.sm_mbf;
-          }
-          toObject(e = !1) {
-            return y.toObject(e, this);
-          }
-          static toObject(e, s) {
-            return n.BT(y.M(), e, s);
-          }
-          static fromObject(e) {
-            return n.Uq(y.M(), e);
-          }
-          static deserializeBinary(e) {
-            let s = new (d().BinaryReader)(e),
-              a = new y();
-            return y.deserializeBinaryFromReader(a, s);
-          }
-          static deserializeBinaryFromReader(e, s) {
-            return n.zj(y.MBF(), e, s);
-          }
-          serializeBinary() {
-            var e = new (d().BinaryWriter)();
-            return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, s) {
-            n.i0(y.M(), e, s);
-          }
-          serializeBase64String() {
-            var e = new (d().BinaryWriter)();
-            return (
-              y.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CSupportData_QuickText";
-          }
-        };
-        U(ve, "sm_m"), U(ve, "sm_mbf");
-        let lt = ve;
-        const be = class S extends g.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              S.prototype.content || n.Sg(S.M()),
-              g.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              S.sm_m ||
-                (S.sm_m = {
-                  proto: S,
-                  fields: {
-                    content: {
-                      n: 1,
-                      br: n.qM.readString,
-                      bw: n.gp.writeString,
-                    },
-                    major_revision: {
-                      n: 2,
-                      br: n.qM.readUint32,
-                      bw: n.gp.writeUint32,
-                    },
-                    minor_revision: {
-                      n: 3,
-                      br: n.qM.readUint32,
-                      bw: n.gp.writeUint32,
-                    },
-                    author: { n: 4, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                    last_update: {
-                      n: 5,
-                      br: n.qM.readUint32,
-                      bw: n.gp.writeUint32,
-                    },
-                    language: { n: 6, br: n.qM.readInt32, bw: n.gp.writeInt32 },
-                  },
-                }),
-              S.sm_m
-            );
-          }
-          static MBF() {
-            return S.sm_mbf || (S.sm_mbf = n.w0(S.M())), S.sm_mbf;
-          }
-          toObject(e = !1) {
-            return S.toObject(e, this);
-          }
-          static toObject(e, s) {
-            return n.BT(S.M(), e, s);
-          }
-          static fromObject(e) {
-            return n.Uq(S.M(), e);
-          }
-          static deserializeBinary(e) {
-            let s = new (d().BinaryReader)(e),
-              a = new S();
-            return S.deserializeBinaryFromReader(a, s);
-          }
-          static deserializeBinaryFromReader(e, s) {
-            return n.zj(S.MBF(), e, s);
-          }
-          serializeBinary() {
-            var e = new (d().BinaryWriter)();
-            return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, s) {
-            n.i0(S.M(), e, s);
-          }
-          serializeBase64String() {
-            var e = new (d().BinaryWriter)();
-            return (
-              S.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CSupportData_QuickTextContent";
-          }
-        };
-        U(be, "sm_m"), U(be, "sm_mbf");
-        let He = be;
-        const ye = class j extends g.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              j.prototype.quicktext_id || n.Sg(j.M()),
-              g.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              j.sm_m ||
-                (j.sm_m = {
-                  proto: j,
-                  fields: {
-                    quicktext_id: {
-                      n: 1,
-                      br: n.qM.readUint32,
-                      bw: n.gp.writeUint32,
-                    },
-                    language: {
-                      n: 2,
-                      br: n.qM.readString,
-                      bw: n.gp.writeString,
-                    },
-                    from_sql: { n: 3, br: n.qM.readBool, bw: n.gp.writeBool },
-                  },
-                }),
-              j.sm_m
-            );
-          }
-          static MBF() {
-            return j.sm_mbf || (j.sm_mbf = n.w0(j.M())), j.sm_mbf;
-          }
-          toObject(e = !1) {
-            return j.toObject(e, this);
-          }
-          static toObject(e, s) {
-            return n.BT(j.M(), e, s);
-          }
-          static fromObject(e) {
-            return n.Uq(j.M(), e);
-          }
-          static deserializeBinary(e) {
-            let s = new (d().BinaryReader)(e),
-              a = new j();
-            return j.deserializeBinaryFromReader(a, s);
-          }
-          static deserializeBinaryFromReader(e, s) {
-            return n.zj(j.MBF(), e, s);
-          }
-          serializeBinary() {
-            var e = new (d().BinaryWriter)();
-            return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, s) {
-            n.i0(j.M(), e, s);
-          }
-          serializeBase64String() {
-            var e = new (d().BinaryWriter)();
-            return (
-              j.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CSupportAgents_GetQuickText_Request";
-          }
-        };
-        U(ye, "sm_m"), U(ye, "sm_mbf");
-        let Ne = ye;
-        const Se = class x extends g.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              x.prototype.quicktext || n.Sg(x.M()),
-              g.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              x.sm_m ||
-                (x.sm_m = {
-                  proto: x,
-                  fields: {
-                    quicktext: { n: 1, c: lt },
-                    english_reference: { n: 2, c: He },
-                  },
-                }),
-              x.sm_m
-            );
-          }
-          static MBF() {
-            return x.sm_mbf || (x.sm_mbf = n.w0(x.M())), x.sm_mbf;
-          }
-          toObject(e = !1) {
-            return x.toObject(e, this);
-          }
-          static toObject(e, s) {
-            return n.BT(x.M(), e, s);
-          }
-          static fromObject(e) {
-            return n.Uq(x.M(), e);
-          }
-          static deserializeBinary(e) {
-            let s = new (d().BinaryReader)(e),
-              a = new x();
-            return x.deserializeBinaryFromReader(a, s);
-          }
-          static deserializeBinaryFromReader(e, s) {
-            return n.zj(x.MBF(), e, s);
-          }
-          serializeBinary() {
-            var e = new (d().BinaryWriter)();
-            return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, s) {
-            n.i0(x.M(), e, s);
-          }
-          serializeBase64String() {
-            var e = new (d().BinaryWriter)();
-            return (
-              x.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CSupportAgents_GetQuickText_Response";
-          }
-        };
-        U(Se, "sm_m"), U(Se, "sm_mbf");
-        let ct = Se;
-        const je = class B extends g.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              B.prototype.appid || n.Sg(B.M()),
-              g.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              B.sm_m ||
-                (B.sm_m = {
-                  proto: B,
-                  fields: {
-                    appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                    log_type: {
-                      n: 2,
-                      br: n.qM.readString,
-                      bw: n.gp.writeString,
-                    },
-                    version_string: {
-                      n: 3,
-                      br: n.qM.readString,
-                      bw: n.gp.writeString,
-                    },
-                    log_contents: {
-                      n: 4,
-                      br: n.qM.readString,
-                      bw: n.gp.writeString,
-                    },
-                    request_id: {
-                      n: 5,
-                      br: n.qM.readUint64String,
-                      bw: n.gp.writeUint64String,
-                    },
-                  },
-                }),
-              B.sm_m
-            );
-          }
-          static MBF() {
-            return B.sm_mbf || (B.sm_mbf = n.w0(B.M())), B.sm_mbf;
-          }
-          toObject(e = !1) {
-            return B.toObject(e, this);
-          }
-          static toObject(e, s) {
-            return n.BT(B.M(), e, s);
-          }
-          static fromObject(e) {
-            return n.Uq(B.M(), e);
-          }
-          static deserializeBinary(e) {
-            let s = new (d().BinaryReader)(e),
-              a = new B();
-            return B.deserializeBinaryFromReader(a, s);
-          }
-          static deserializeBinaryFromReader(e, s) {
-            return n.zj(B.MBF(), e, s);
-          }
-          serializeBinary() {
-            var e = new (d().BinaryWriter)();
-            return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, s) {
-            n.i0(B.M(), e, s);
-          }
-          serializeBase64String() {
-            var e = new (d().BinaryWriter)();
-            return (
-              B.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CHelpRequestLogs_UploadUserApplicationLog_Request";
-          }
-        };
-        U(je, "sm_m"), U(je, "sm_mbf");
-        let ut = je;
-        const xe = class M extends g.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              M.prototype.id || n.Sg(M.M()),
-              g.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              M.sm_m ||
-                (M.sm_m = {
-                  proto: M,
-                  fields: {
-                    id: {
-                      n: 1,
-                      br: n.qM.readUint64String,
-                      bw: n.gp.writeUint64String,
-                    },
-                  },
-                }),
-              M.sm_m
-            );
-          }
-          static MBF() {
-            return M.sm_mbf || (M.sm_mbf = n.w0(M.M())), M.sm_mbf;
-          }
-          toObject(e = !1) {
-            return M.toObject(e, this);
-          }
-          static toObject(e, s) {
-            return n.BT(M.M(), e, s);
-          }
-          static fromObject(e) {
-            return n.Uq(M.M(), e);
-          }
-          static deserializeBinary(e) {
-            let s = new (d().BinaryReader)(e),
-              a = new M();
-            return M.deserializeBinaryFromReader(a, s);
-          }
-          static deserializeBinaryFromReader(e, s) {
-            return n.zj(M.MBF(), e, s);
-          }
-          serializeBinary() {
-            var e = new (d().BinaryWriter)();
-            return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, s) {
-            n.i0(M.M(), e, s);
-          }
-          serializeBase64String() {
-            var e = new (d().BinaryWriter)();
-            return (
-              M.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CHelpRequestLogs_UploadUserApplicationLog_Response";
-          }
-        };
-        U(xe, "sm_m"), U(xe, "sm_mbf");
-        let dt = xe;
-        const Be = class T extends g.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              T.prototype.appid || n.Sg(T.M()),
-              g.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              T.sm_m ||
-                (T.sm_m = {
-                  proto: T,
-                  fields: {
-                    appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  },
-                }),
               T.sm_m
             );
           }
@@ -611,17 +207,17 @@
             );
           }
           getClassName() {
-            return "CHelpRequestLogs_GetApplicationLogDemand_Request";
+            return "CSupportData_QuickText";
           }
         };
-        U(Be, "sm_m"), U(Be, "sm_mbf");
-        let mt = Be;
-        const Me = class R extends g.Message {
+        z(ve, "sm_m"), z(ve, "sm_mbf");
+        let lt = ve;
+        const be = class R extends p.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              R.prototype.request_id || n.Sg(R.M()),
-              g.Message.initialize(this, e, 0, -1, void 0, null);
+              R.prototype.content || n.Sg(R.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
           }
           static M() {
             return (
@@ -629,11 +225,28 @@
                 (R.sm_m = {
                   proto: R,
                   fields: {
-                    request_id: {
+                    content: {
                       n: 1,
-                      br: n.qM.readUint64String,
-                      bw: n.gp.writeUint64String,
+                      br: n.qM.readString,
+                      bw: n.gp.writeString,
                     },
+                    major_revision: {
+                      n: 2,
+                      br: n.qM.readUint32,
+                      bw: n.gp.writeUint32,
+                    },
+                    minor_revision: {
+                      n: 3,
+                      br: n.qM.readUint32,
+                      bw: n.gp.writeUint32,
+                    },
+                    author: { n: 4, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                    last_update: {
+                      n: 5,
+                      br: n.qM.readUint32,
+                      bw: n.gp.writeUint32,
+                    },
+                    language: { n: 6, br: n.qM.readInt32, bw: n.gp.writeInt32 },
                   },
                 }),
               R.sm_m
@@ -673,72 +286,459 @@
             );
           }
           getClassName() {
+            return "CSupportData_QuickTextContent";
+          }
+        };
+        z(be, "sm_m"), z(be, "sm_mbf");
+        let He = be;
+        const ye = class C extends p.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              C.prototype.quicktext_id || n.Sg(C.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              C.sm_m ||
+                (C.sm_m = {
+                  proto: C,
+                  fields: {
+                    quicktext_id: {
+                      n: 1,
+                      br: n.qM.readUint32,
+                      bw: n.gp.writeUint32,
+                    },
+                    language: {
+                      n: 2,
+                      br: n.qM.readString,
+                      bw: n.gp.writeString,
+                    },
+                    from_sql: { n: 3, br: n.qM.readBool, bw: n.gp.writeBool },
+                  },
+                }),
+              C.sm_m
+            );
+          }
+          static MBF() {
+            return C.sm_mbf || (C.sm_mbf = n.w0(C.M())), C.sm_mbf;
+          }
+          toObject(e = !1) {
+            return C.toObject(e, this);
+          }
+          static toObject(e, s) {
+            return n.BT(C.M(), e, s);
+          }
+          static fromObject(e) {
+            return n.Uq(C.M(), e);
+          }
+          static deserializeBinary(e) {
+            let s = new (d().BinaryReader)(e),
+              a = new C();
+            return C.deserializeBinaryFromReader(a, s);
+          }
+          static deserializeBinaryFromReader(e, s) {
+            return n.zj(C.MBF(), e, s);
+          }
+          serializeBinary() {
+            var e = new (d().BinaryWriter)();
+            return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, s) {
+            n.i0(C.M(), e, s);
+          }
+          serializeBase64String() {
+            var e = new (d().BinaryWriter)();
+            return (
+              C.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSupportAgents_GetQuickText_Request";
+          }
+        };
+        z(ye, "sm_m"), z(ye, "sm_mbf");
+        let qe = ye;
+        const xe = class E extends p.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              E.prototype.quicktext || n.Sg(E.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              E.sm_m ||
+                (E.sm_m = {
+                  proto: E,
+                  fields: {
+                    quicktext: { n: 1, c: lt },
+                    english_reference: { n: 2, c: He },
+                  },
+                }),
+              E.sm_m
+            );
+          }
+          static MBF() {
+            return E.sm_mbf || (E.sm_mbf = n.w0(E.M())), E.sm_mbf;
+          }
+          toObject(e = !1) {
+            return E.toObject(e, this);
+          }
+          static toObject(e, s) {
+            return n.BT(E.M(), e, s);
+          }
+          static fromObject(e) {
+            return n.Uq(E.M(), e);
+          }
+          static deserializeBinary(e) {
+            let s = new (d().BinaryReader)(e),
+              a = new E();
+            return E.deserializeBinaryFromReader(a, s);
+          }
+          static deserializeBinaryFromReader(e, s) {
+            return n.zj(E.MBF(), e, s);
+          }
+          serializeBinary() {
+            var e = new (d().BinaryWriter)();
+            return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, s) {
+            n.i0(E.M(), e, s);
+          }
+          serializeBase64String() {
+            var e = new (d().BinaryWriter)();
+            return (
+              E.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSupportAgents_GetQuickText_Response";
+          }
+        };
+        z(xe, "sm_m"), z(xe, "sm_mbf");
+        let ct = xe;
+        const Se = class w extends p.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              w.prototype.appid || n.Sg(w.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              w.sm_m ||
+                (w.sm_m = {
+                  proto: w,
+                  fields: {
+                    appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                    log_type: {
+                      n: 2,
+                      br: n.qM.readString,
+                      bw: n.gp.writeString,
+                    },
+                    version_string: {
+                      n: 3,
+                      br: n.qM.readString,
+                      bw: n.gp.writeString,
+                    },
+                    log_contents: {
+                      n: 4,
+                      br: n.qM.readString,
+                      bw: n.gp.writeString,
+                    },
+                    request_id: {
+                      n: 5,
+                      br: n.qM.readUint64String,
+                      bw: n.gp.writeUint64String,
+                    },
+                  },
+                }),
+              w.sm_m
+            );
+          }
+          static MBF() {
+            return w.sm_mbf || (w.sm_mbf = n.w0(w.M())), w.sm_mbf;
+          }
+          toObject(e = !1) {
+            return w.toObject(e, this);
+          }
+          static toObject(e, s) {
+            return n.BT(w.M(), e, s);
+          }
+          static fromObject(e) {
+            return n.Uq(w.M(), e);
+          }
+          static deserializeBinary(e) {
+            let s = new (d().BinaryReader)(e),
+              a = new w();
+            return w.deserializeBinaryFromReader(a, s);
+          }
+          static deserializeBinaryFromReader(e, s) {
+            return n.zj(w.MBF(), e, s);
+          }
+          serializeBinary() {
+            var e = new (d().BinaryWriter)();
+            return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, s) {
+            n.i0(w.M(), e, s);
+          }
+          serializeBase64String() {
+            var e = new (d().BinaryWriter)();
+            return (
+              w.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CHelpRequestLogs_UploadUserApplicationLog_Request";
+          }
+        };
+        z(Se, "sm_m"), z(Se, "sm_mbf");
+        let ut = Se;
+        const je = class A extends p.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              A.prototype.id || n.Sg(A.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              A.sm_m ||
+                (A.sm_m = {
+                  proto: A,
+                  fields: {
+                    id: {
+                      n: 1,
+                      br: n.qM.readUint64String,
+                      bw: n.gp.writeUint64String,
+                    },
+                  },
+                }),
+              A.sm_m
+            );
+          }
+          static MBF() {
+            return A.sm_mbf || (A.sm_mbf = n.w0(A.M())), A.sm_mbf;
+          }
+          toObject(e = !1) {
+            return A.toObject(e, this);
+          }
+          static toObject(e, s) {
+            return n.BT(A.M(), e, s);
+          }
+          static fromObject(e) {
+            return n.Uq(A.M(), e);
+          }
+          static deserializeBinary(e) {
+            let s = new (d().BinaryReader)(e),
+              a = new A();
+            return A.deserializeBinaryFromReader(a, s);
+          }
+          static deserializeBinaryFromReader(e, s) {
+            return n.zj(A.MBF(), e, s);
+          }
+          serializeBinary() {
+            var e = new (d().BinaryWriter)();
+            return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, s) {
+            n.i0(A.M(), e, s);
+          }
+          serializeBase64String() {
+            var e = new (d().BinaryWriter)();
+            return (
+              A.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CHelpRequestLogs_UploadUserApplicationLog_Response";
+          }
+        };
+        z(je, "sm_m"), z(je, "sm_mbf");
+        let dt = je;
+        const Be = class D extends p.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              D.prototype.appid || n.Sg(D.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              D.sm_m ||
+                (D.sm_m = {
+                  proto: D,
+                  fields: {
+                    appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  },
+                }),
+              D.sm_m
+            );
+          }
+          static MBF() {
+            return D.sm_mbf || (D.sm_mbf = n.w0(D.M())), D.sm_mbf;
+          }
+          toObject(e = !1) {
+            return D.toObject(e, this);
+          }
+          static toObject(e, s) {
+            return n.BT(D.M(), e, s);
+          }
+          static fromObject(e) {
+            return n.Uq(D.M(), e);
+          }
+          static deserializeBinary(e) {
+            let s = new (d().BinaryReader)(e),
+              a = new D();
+            return D.deserializeBinaryFromReader(a, s);
+          }
+          static deserializeBinaryFromReader(e, s) {
+            return n.zj(D.MBF(), e, s);
+          }
+          serializeBinary() {
+            var e = new (d().BinaryWriter)();
+            return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, s) {
+            n.i0(D.M(), e, s);
+          }
+          serializeBase64String() {
+            var e = new (d().BinaryWriter)();
+            return (
+              D.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CHelpRequestLogs_GetApplicationLogDemand_Request";
+          }
+        };
+        z(Be, "sm_m"), z(Be, "sm_mbf");
+        let mt = Be;
+        const Me = class O extends p.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              O.prototype.request_id || n.Sg(O.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              O.sm_m ||
+                (O.sm_m = {
+                  proto: O,
+                  fields: {
+                    request_id: {
+                      n: 1,
+                      br: n.qM.readUint64String,
+                      bw: n.gp.writeUint64String,
+                    },
+                  },
+                }),
+              O.sm_m
+            );
+          }
+          static MBF() {
+            return O.sm_mbf || (O.sm_mbf = n.w0(O.M())), O.sm_mbf;
+          }
+          toObject(e = !1) {
+            return O.toObject(e, this);
+          }
+          static toObject(e, s) {
+            return n.BT(O.M(), e, s);
+          }
+          static fromObject(e) {
+            return n.Uq(O.M(), e);
+          }
+          static deserializeBinary(e) {
+            let s = new (d().BinaryReader)(e),
+              a = new O();
+            return O.deserializeBinaryFromReader(a, s);
+          }
+          static deserializeBinaryFromReader(e, s) {
+            return n.zj(O.MBF(), e, s);
+          }
+          serializeBinary() {
+            var e = new (d().BinaryWriter)();
+            return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, s) {
+            n.i0(O.M(), e, s);
+          }
+          serializeBase64String() {
+            var e = new (d().BinaryWriter)();
+            return (
+              O.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
             return "CHelpRequestLogs_GetApplicationLogDemand_Response";
           }
         };
-        U(Me, "sm_m"), U(Me, "sm_mbf");
+        z(Me, "sm_m"), z(Me, "sm_mbf");
         let pt = Me;
         var Te;
         ((r) => {
-          function e(s, a, m) {
+          function e(s, a, g) {
             return s.SendMsg(
               "SupportAgents.GetQuickText#1",
-              (0, O.I8)(Ne, a, m),
+              (0, M.I8)(qe, a, g),
               ct,
               { bConstMethod: !0, ePrivilege: 5 },
             );
           }
           r.GetQuickText = e;
         })(Te || (Te = {}));
-        var Ge;
+        var Ne;
         ((r) => {
-          function e(a, m, h) {
+          function e(a, g, y) {
             return a.SendMsg(
               "HelpRequestLogs.UploadUserApplicationLog#1",
-              (0, O.I8)(ut, m, h),
+              (0, M.I8)(ut, g, y),
               dt,
               { ePrivilege: 1 },
             );
           }
           r.UploadUserApplicationLog = e;
-          function s(a, m, h) {
+          function s(a, g, y) {
             return a.SendMsg(
               "HelpRequestLogs.GetApplicationLogDemand#1",
-              (0, O.I8)(mt, m, h),
+              (0, M.I8)(mt, g, y),
               pt,
               { ePrivilege: 1 },
             );
           }
           r.GetApplicationLogDemand = s;
-        })(Ge || (Ge = {}));
+        })(Ne || (Ne = {}));
         var gt = i(68312),
-          Qe = i(66243),
-          Ve = i(88942),
-          D = i(90626),
+          Ge = i(66243),
+          Qe = i(88942),
+          I = i(90626),
           Re = i(56718),
           ft = i(85599),
-          le = i(36707),
-          we = i(3166),
+          ce = i(36707),
+          Ce = i(3166),
           ht = i(98580),
-          L = i.n(ht),
+          W = i.n(ht),
           vt = i(14432);
         const bt = {
-          [P.lN]: [p.lV, p.WA, p.XG, p.u1, p.Nd],
-          [P.NC]: [p.rf, p.M6, p.WA, p.o8, p.Nd],
+          [P.lN]: [u.lV, u.WA, u.XG, u.u1, u.Nd],
+          [P.NC]: [u.rf, u.M6, u.WA, u.o8, u.Nd],
         };
         function yt(r) {
           var e;
-          const [s, a] = (0, D.useState)(null),
-            [m, h] = (0, D.useState)("main"),
-            [c, Y] = (0, D.useState)(!1),
-            [_, ze] = (0, D.useState)(!1),
-            [K, ce] = (0, D.useState)(null),
-            [I, Z] = (0, D.useState)(null),
-            [k, se] = (0, D.useState)(null),
-            [re, ue] = (0, D.useState)(!1),
-            [X, de] = (0, D.useState)(!1),
-            [ee, ie] = (0, D.useState)(A.HH),
-            [Ue, Je] = (0, D.useState)(""),
+          const [s, a] = (0, I.useState)(null),
+            [g, y] = (0, I.useState)("main"),
+            [m, X] = (0, I.useState)(!1),
+            [K, De] = (0, I.useState)(!1),
+            [J, ue] = (0, I.useState)(null),
+            [_, $] = (0, I.useState)(null),
+            [H, re] = (0, I.useState)(null),
+            [ie, de] = (0, I.useState)(!1),
+            [ee, me] = (0, I.useState)(!1),
+            [ne, ae] = (0, I.useState)(j.HH),
+            [Oe, Je] = (0, I.useState)(""),
             Ye =
               r.rtContentCreatedAt !== void 0
                 ? (Date.now() / 1e3 - r.rtContentCreatedAt) / (30 * 86400)
@@ -749,20 +749,20 @@
                 : void 0) != null
                 ? e
                 : [],
-            Lt = c || _ || K || I || k || re || X,
-            De = jt(r.authorSteamID);
-          let Oe = E.Bhc;
-          if (De.isSuccess) {
-            const o = De.data;
+            Lt = m || K || J || _ || H || ie || ee,
+            Ue = St(r.authorSteamID);
+          let ze = S.Bhc;
+          if (Ue.isSuccess) {
+            const o = Ue.data;
             o.pref_primary_language !== void 0 && o.pref_primary_language !== -1
-              ? (Oe = o.pref_primary_language)
+              ? (ze = o.pref_primary_language)
               : o.last_logon_langauge !== void 0 &&
                 o.last_logon_langauge !== -1 &&
-                (Oe = o.last_logon_langauge);
+                (ze = o.last_logon_langauge);
           }
           const It = (0, l.AH)(s),
-            Le = St(It, Oe);
-          (0, D.useEffect)(() => {
+            Le = xt(It, ze);
+          (0, I.useEffect)(() => {
             var o, tt, nt, st, rt, it, at;
             Je(
               (at =
@@ -783,52 +783,52 @@
                 ? at
                 : "",
             );
-          }, [Le.data, De.data]);
+          }, [Le.data, Ue.data]);
           const Xe = !1,
             $e = !1,
             et = !1,
-            kt = async () => {
-              (0, C.wT)(s !== null, "eReason must be non-null to sanction");
+            Pt = async () => {
+              (0, h.wT)(s !== null, "eReason must be non-null to sanction");
               const o = [];
-              c && o.push({ sanction: z.EF }),
-                _ && o.push({ sanction: z.Cv }),
-                K && o.push({ sanction: z.ME, days: K }),
-                I && o.push({ sanction: z.sR, days: I }),
-                k && o.push({ sanction: z.bX, days: k }),
-                re && o.push({ sanction: z.Fh, days: -1 }),
-                X && o.push({ sanction: z.X5 }),
-                ee === A.lp
-                  ? o.push({ sanction: z.nw, escalate_to: A.lp })
-                  : ee === A.PV &&
-                    o.push({ sanction: z.nw, escalate_to: A.PV }),
+              m && o.push({ sanction: b.EF }),
+                K && o.push({ sanction: b.Cv }),
+                J && o.push({ sanction: b.ME, days: J }),
+                _ && o.push({ sanction: b.sR, days: _ }),
+                H && o.push({ sanction: b.bX, days: H }),
+                ie && o.push({ sanction: b.Fh, days: -1 }),
+                ee && o.push({ sanction: b.X5 }),
+                ne === j.lp
+                  ? o.push({ sanction: b.nw, escalate_to: j.lp })
+                  : ne === j.PV &&
+                    o.push({ sanction: b.nw, escalate_to: j.PV }),
                 await r.sanctionMutation.mutateAsync({
                   sanctions: o,
-                  message: Ue.trim(),
+                  message: Oe.trim(),
                   reason: s,
                 }),
                 r.onSanction();
             },
-            Ft = (o) => {
-              a(o), h("main");
+            Wt = (o) => {
+              a(o), y("main");
             },
-            Pt = (o) => {
-              o ? (de(!0), se(7), a(p.rU)) : (de(!1), se(-1));
+            _t = (o) => {
+              o ? (me(!0), re(7), a(u.rU)) : (me(!1), re(-1));
             };
           return (0, t.jsxs)(t.Fragment, {
             children: [
-              m === "reason" &&
-                (0, t.jsx)(vt.F, { reasons: l.UL, onSelect: Ft }),
-              m === "main" &&
+              g === "reason" &&
+                (0, t.jsx)(vt.F, { reasons: l.UL, onSelect: Wt }),
+              g === "main" &&
                 (0, t.jsxs)(f.Z, {
                   children: [
                     (0, t.jsxs)(f.Z, {
-                      className: L().SanctionForm,
+                      className: W().SanctionForm,
                       children: [
                         r.sanctionMutation.isError &&
                           (0, t.jsxs)("div", {
-                            className: (0, le.A)(
-                              L().OneColumn,
-                              L().ErrorMessage,
+                            className: (0, ce.A)(
+                              W().OneColumn,
+                              W().ErrorMessage,
                             ),
                             children: [
                               (0, t.jsx)(Re.Q9b, {}),
@@ -842,21 +842,21 @@
                         }),
                         (0, t.jsx)("button", {
                           id: "reason",
-                          className: L().ClickableText,
-                          onClick: () => h("reason"),
+                          className: W().ClickableText,
+                          onClick: () => y("reason"),
                           children:
                             s === null
-                              ? w.T.Localize(
+                              ? x.T.Localize(
                                   "#commentsanctiondialog_selectreason",
                                 )
                               : (0, l.Jt)(s),
                         }),
                         Ze.length > 0 &&
                           (0, t.jsx)("div", {
-                            className: L().QuickReasons,
+                            className: W().QuickReasons,
                             children: Ze.map((o) =>
                               (0, t.jsx)(
-                                N.$,
+                                G.$,
                                 {
                                   onClick: () => a(s === o ? null : o),
                                   size: "1",
@@ -868,33 +868,33 @@
                             ),
                           }),
                         (0, t.jsxs)("label", {
-                          className: L().OneColumn,
+                          className: W().OneColumn,
                           children: [
                             (0, t.jsx)("input", {
                               type: "checkbox",
-                              checked: c,
-                              onChange: (o) => Y(o.target.checked),
+                              checked: m,
+                              onChange: (o) => X(o.target.checked),
                             }),
                             " Delete",
                           ],
                         }),
                         (0, t.jsxs)("label", {
-                          className: L().OneColumn,
+                          className: W().OneColumn,
                           children: [
                             (0, t.jsx)("input", {
                               type: "checkbox",
-                              checked: _,
-                              onChange: (o) => ze(o.target.checked),
+                              checked: K,
+                              onChange: (o) => De(o.target.checked),
                             }),
                             " Issue Warning",
                           ],
                         }),
                         Ye &&
-                          !!K &&
+                          !!J &&
                           (0, t.jsxs)("div", {
-                            className: (0, le.A)(
-                              L().OneColumn,
-                              L().ErrorMessage,
+                            className: (0, ce.A)(
+                              W().OneColumn,
+                              W().ErrorMessage,
                             ),
                             children: [
                               (0, t.jsx)(Re.Q9b, {}),
@@ -912,12 +912,12 @@
                                 (0, t.jsxs)("select", {
                                   id: "hubban",
                                   onChange: (o) =>
-                                    ce(
+                                    ue(
                                       o.target.value === "0"
                                         ? null
                                         : parseInt(o.target.value),
                                     ),
-                                  value: K != null ? K : 0,
+                                  value: J != null ? J : 0,
                                   children: [
                                     (0, t.jsx)("option", {
                                       value: "0",
@@ -965,11 +965,11 @@
                             ],
                           }),
                         Ye &&
-                          !!I &&
+                          !!_ &&
                           (0, t.jsxs)("div", {
-                            className: (0, le.A)(
-                              L().OneColumn,
-                              L().ErrorMessage,
+                            className: (0, ce.A)(
+                              W().OneColumn,
+                              W().ErrorMessage,
                             ),
                             children: [
                               (0, t.jsx)(Re.Q9b, {}),
@@ -984,12 +984,12 @@
                           (0, t.jsxs)("select", {
                             id: "communityban",
                             onChange: (o) =>
-                              Z(
+                              $(
                                 o.target.value === "0"
                                   ? null
                                   : parseInt(o.target.value),
                               ),
-                            value: I != null ? I : 0,
+                            value: _ != null ? _ : 0,
                             children: [
                               (0, t.jsx)("option", {
                                 value: "0",
@@ -1040,14 +1040,14 @@
                         }),
                         (0, t.jsxs)("select", {
                           id: "deletecomments",
-                          disabled: X,
+                          disabled: ee,
                           onChange: (o) =>
-                            se(
+                            re(
                               o.target.value === "-1"
                                 ? null
                                 : parseInt(o.target.value),
                             ),
-                          value: k != null ? k : -1,
+                          value: H != null ? H : -1,
                           children: [
                             (0, t.jsx)("option", {
                               value: "-1",
@@ -1077,12 +1077,12 @@
                         }),
                         !et &&
                           (0, t.jsxs)("span", {
-                            className: L().OneColumn,
+                            className: W().OneColumn,
                             children: [
                               (0, t.jsx)("input", {
                                 type: "checkbox",
-                                checked: re,
-                                onChange: (o) => ue(o.target.checked),
+                                checked: ie,
+                                onChange: (o) => de(o.target.checked),
                               }),
                               "\xA0Permanent trade ban",
                             ],
@@ -1092,12 +1092,12 @@
                             children: "Already trade banned.",
                           }),
                         (0, t.jsxs)("span", {
-                          className: L().OneColumn,
+                          className: W().OneColumn,
                           children: [
                             (0, t.jsx)("input", {
                               type: "checkbox",
-                              checked: X,
-                              onChange: (o) => Pt(o.target.checked),
+                              checked: ee,
+                              onChange: (o) => _t(o.target.checked),
                             }),
                             "\xA0Mark as suspicious",
                           ],
@@ -1108,50 +1108,50 @@
                         }),
                         (0, t.jsxs)("select", {
                           id: "escalateto",
-                          onChange: (o) => ie(parseInt(o.target.value)),
-                          value: ee,
+                          onChange: (o) => ae(parseInt(o.target.value)),
+                          value: ne,
                           children: [
                             (0, t.jsx)("option", {
-                              value: A.HH,
+                              value: j.HH,
                               children: "Do not escalate",
                             }),
                             (0, t.jsx)("option", {
-                              value: A.lp,
+                              value: j.lp,
                               children: "Supervisor",
                             }),
                             (0, t.jsx)("option", {
-                              value: A.PV,
+                              value: j.PV,
                               children: "Valve",
                             }),
                           ],
                         }),
                         (0, t.jsx)("textarea", {
-                          className: (0, le.A)(
-                            L().OneColumn,
-                            L().MessageTextArea,
+                          className: (0, ce.A)(
+                            W().OneColumn,
+                            W().MessageTextArea,
                           ),
                           placeholder: "Message to send (required)",
-                          value: Ue,
+                          value: Oe,
                           onChange: (o) => Je(o.target.value),
                         }),
                       ],
                     }),
                     (0, t.jsxs)(f.Z, {
-                      className: L().BottomButtons,
+                      className: W().BottomButtons,
                       children: [
                         r.sanctionMutation.isPending &&
                           (0, t.jsx)(ft.t, { size: "small" }),
                         !r.sanctionMutation.isPending &&
                           (0, t.jsxs)(t.Fragment, {
                             children: [
-                              (0, t.jsx)(Qe.Oh, {
+                              (0, t.jsx)(Ge.Oh, {
                                 onClick: r.onCancel,
                                 children: "Cancel",
                               }),
-                              (0, t.jsx)(Qe.n9, {
-                                onClick: kt,
+                              (0, t.jsx)(Ge.n9, {
+                                onClick: Pt,
                                 disabled:
-                                  s === null || !Lt || Ue.trim().length === 0,
+                                  s === null || !Lt || Oe.trim().length === 0,
                                 children: "Sanction",
                               }),
                             ],
@@ -1163,82 +1163,82 @@
             ],
           });
         }
-        function St(r, e) {
+        function xt(r, e) {
           const s = (0, gt.KV)();
-          return (0, Ve.I)({
+          return (0, Qe.I)({
             queryKey: ["get_quick_text", r, e],
             queryFn: async () => {
               if (r == null || e === void 0) return null;
-              const a = O.w.Init(Ne);
+              const a = M.w.Init(qe);
               a.Body().set_quicktext_id(r),
-                a.Body().set_language((0, E.LgB)(e));
-              const m = await Te.GetQuickText(s, a);
-              if (m.GetEResult() !== H.R)
+                a.Body().set_language((0, S.LgB)(e));
+              const g = await Te.GetQuickText(s, a);
+              if (g.GetEResult() !== F.R)
                 throw new Error(
-                  "useQuickText failed with EResult " + m.GetEResult(),
+                  "useQuickText failed with EResult " + g.GetEResult(),
                 );
-              return m.Body().toObject();
+              return g.Body().toObject();
             },
             enabled: r !== void 0,
           });
         }
-        function jt(r) {
-          return (0, Ve.I)({
+        function St(r) {
+          return (0, Qe.I)({
             queryKey: ["get_primary_language_for_user", r],
             queryFn: async () => {
               if (r === "0" || !r) throw new Error("Invalid steamid");
               const s = await (
                 await fetch(
-                  `${we.TS.COMMUNITY_BASE_URL}profiles/${r}/ajaxlanguagepreferences`,
+                  `${Ce.TS.COMMUNITY_BASE_URL}profiles/${r}/ajaxlanguagepreferences`,
                 )
               ).json();
-              if (s.success === H.R) return s.preferences;
+              if (s.success === F.R) return s.preferences;
               throw new Error(
                 "Failed GetPrimaryLanguageForUser. EResult: " + s.success,
               );
             },
           });
         }
-        var Ce = i(46085),
-          _e = i(49527),
+        var Ee = i(46085),
+          Ve = i(49527),
           Ke = i(19316),
-          Ee = i(25792),
-          xt = i(2801),
+          we = i(25792),
+          jt = i(2801),
           Bt = i(15568),
           Ae = i(36118),
           Mt = i(21418),
           Tt = i(71421),
           Rt = i(41635),
-          wt = i(84670),
-          q = i.n(wt);
-        function Ct(r) {
+          Ct = i(84670),
+          q = i.n(Ct);
+        function Et(r) {
           const { subject: e } = r,
-            [s, a] = (0, D.useState)(!1),
-            m =
+            [s, a] = (0, I.useState)(!1),
+            g =
               e &&
               (e.unresolved_report_count > 0 || e.unresolved_dispute_count > 0),
-            h = (0, t.jsx)(Q.W, {
+            y = (0, t.jsx)(N.W, {
               onClick: () => a(!0),
-              children: (0, t.jsxs)(F.s, {
+              children: (0, t.jsxs)(L.s, {
                 direction: "row",
                 justify: "between",
                 align: "baseline",
                 gap: "1",
                 children: [
-                  m &&
+                  g &&
                     (0, t.jsx)("img", {
                       className: q().Flag,
-                      src: `${we.TS.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
+                      src: `${Ce.TS.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
                     }),
-                  w.T.Localize("#commentsanctiondialog_moderate"),
+                  x.T.Localize("#commentsanctiondialog_moderate"),
                   e &&
-                    e.required_moderator_level === A.PV &&
+                    e.required_moderator_level === j.PV &&
                     (0, t.jsx)("span", {
                       className: q().ValveOnly,
                       children: "(VO)",
                     }),
                   e &&
-                    e.required_moderator_level === A.lp &&
+                    e.required_moderator_level === j.lp &&
                     (0, t.jsx)("span", {
                       className: q().SupervisorOnly,
                       children: "(Supervisor)",
@@ -1251,40 +1251,40 @@
               s && (0, t.jsx)(At, { onClose: () => a(!1), ...r }),
               e &&
                 (0, t.jsx)(Tt.Gq, {
-                  toolTipContent: (0, t.jsx)(Et, { subject: e }),
+                  toolTipContent: (0, t.jsx)(wt, { subject: e }),
                   direction: "bottom",
                   nDelayShowMS: 0,
-                  children: h,
+                  children: y,
                 }),
-              !e && h,
+              !e && y,
             ],
           });
         }
-        function Et(r) {
+        function wt(r) {
           const { subject: e } = r,
-            s = (0, D.useMemo)(() => {
+            s = (0, I.useMemo)(() => {
               var a;
-              const m = (0, Rt.D5)(
+              const g = (0, Rt.D5)(
                 (a = e == null ? void 0 : e.reports) != null ? a : [],
-                (h) => h.report_reason,
+                (y) => y.report_reason,
               );
-              return m.sort((h, c) => h[1] - c[1]), m;
+              return g.sort((y, m) => y[1] - m[1]), g;
             }, [e.reports]);
           return s.length === 0
             ? null
             : (0, t.jsxs)(t.Fragment, {
                 children: [
                   (0, t.jsx)("div", {
-                    children: w.T.Localize("#reasonlist_title"),
+                    children: x.T.Localize("#reasonlist_title"),
                   }),
-                  s.map(([a, m]) =>
+                  s.map(([a, g]) =>
                     (0, t.jsx)(
                       "div",
                       {
-                        children: w.T.Localize(
+                        children: x.T.Localize(
                           "#reasonlist_reasonwithcount",
                           (0, l.Jt)(a),
-                          m,
+                          g,
                         ),
                       },
                       a,
@@ -1296,62 +1296,62 @@
         function At(r) {
           var e, s, a;
           const {
-              sanctionMutation: m,
-              acquitMutation: h,
-              subject: c,
-              eSubjectType: Y,
-              gidComment: _,
-              clanSteamID: ze,
-              authorSteamID: K,
-              onClose: ce,
+              sanctionMutation: g,
+              acquitMutation: y,
+              subject: m,
+              eSubjectType: X,
+              gidComment: K,
+              clanSteamID: De,
+              authorSteamID: J,
+              onClose: ue,
             } = r,
-            I = c == null ? void 0 : c.reported_content_id,
-            [Z, k] = (0, D.useState)("main"),
-            se = [
+            _ = m == null ? void 0 : m.reported_content_id,
+            [$, H] = (0, I.useState)("main"),
+            re = [
               {
                 name: "Reports",
                 key: "reports",
-                contents: (0, t.jsx)(Ee.tH, {
-                  children: (0, t.jsx)(u.lX, { subject: c }),
+                contents: (0, t.jsx)(we.tH, {
+                  children: (0, t.jsx)(c.lX, { subject: m }),
                 }),
               },
               {
                 name: "History",
                 key: "history",
-                contents: (0, t.jsx)(Ee.tH, {
-                  children: (0, t.jsx)(u.B8, { reportedContentID: I }),
+                contents: (0, t.jsx)(we.tH, {
+                  children: (0, t.jsx)(c.B8, { reportedContentID: _ }),
                 }),
               },
               {
                 name: "Details",
                 key: "details",
-                contents: (0, t.jsx)(Ee.tH, { children: r.children }),
+                contents: (0, t.jsx)(we.tH, { children: r.children }),
               },
             ],
-            re = () => {
+            ie = () => {
               r.onClose(),
                 window.location.href.split("#").length === 1 &&
-                  _ !== l.Ie &&
-                  (window.location.href += "#c" + _),
+                  K !== l.Ie &&
+                  (window.location.href += "#c" + K),
                 window.location.reload();
             };
-          let ue = 0,
-            X = 0;
-          if (c)
-            for (const ie of c.reports)
-              ie.time_resolved && !ie.time_disputed && ue++,
-                ie.time_dispute_resolved && X++;
-          const de =
-              !!(c != null && c.reported_content_id) &&
-              !c.owner_dispute_time &&
-              c.resolved === _e.S6,
-            ee = c !== void 0 && !!c.owner_dispute_time;
+          let de = 0,
+            ee = 0;
+          if (m)
+            for (const ae of m.reports)
+              ae.time_resolved && !ae.time_disputed && de++,
+                ae.time_dispute_resolved && ee++;
+          const me =
+              !!(m != null && m.reported_content_id) &&
+              !m.owner_dispute_time &&
+              m.resolved === Ve.S6,
+            ne = m !== void 0 && !!m.owner_dispute_time;
           return (0, t.jsx)(Bt.wA, {
             onlyPopoutIfNeeded: !0,
             popupHeight: 340,
             popupWidth: 640,
             strTitle: "Moderate subject",
-            children: (0, t.jsx)(xt.eV, {
+            children: (0, t.jsx)(jt.eV, {
               bAllowFullSize: !0,
               title: "Moderate",
               "aria-describedby": "moderate",
@@ -1362,40 +1362,40 @@
                   children: (0, t.jsxs)("div", {
                     className: q().ModerateDialogCtn,
                     children: [
-                      Z === "main" &&
+                      $ === "main" &&
                         (0, t.jsxs)("div", {
                           className: q().ModerateCtn,
                           children: [
                             (0, t.jsxs)("div", {
                               className: q().ModerationData,
                               children: [
-                                (0, t.jsxs)(W.EY, {
+                                (0, t.jsxs)(U.EY, {
                                   as: "div",
                                   size: "3",
                                   contrast: "description",
                                   children: [
                                     (e =
-                                      c == null
+                                      m == null
                                         ? void 0
-                                        : c.unresolved_report_count) != null
+                                        : m.unresolved_report_count) != null
                                       ? e
                                       : 0,
                                     " unresolved / ",
-                                    ue,
+                                    de,
                                     " resolved / ",
                                     (s =
-                                      c == null
+                                      m == null
                                         ? void 0
-                                        : c.unresolved_dispute_count) != null
+                                        : m.unresolved_dispute_count) != null
                                       ? s
                                       : 0,
                                     " disputed / ",
-                                    X,
+                                    ee,
                                     " disputes resolved",
                                   ],
                                 }),
                                 (0, t.jsx)(Mt.V, {
-                                  tabs: se,
+                                  tabs: re,
                                   bDisableRouting: !0,
                                 }),
                               ],
@@ -1404,8 +1404,8 @@
                               className: q().ModerationActionButtons,
                               children: [
                                 (0, t.jsx)("button", {
-                                  onClick: () => k("sanction"),
-                                  children: (0, t.jsxs)(F.s, {
+                                  onClick: () => H("sanction"),
+                                  children: (0, t.jsxs)(L.s, {
                                     direction: "row",
                                     justify: "center",
                                     align: "center",
@@ -1417,41 +1417,41 @@
                                     ],
                                   }),
                                 }),
-                                (0, t.jsx)(Dt, {
-                                  subject: c,
-                                  acquitMutation: h,
-                                  onClose: ce,
+                                (0, t.jsx)(Ut, {
+                                  subject: m,
+                                  acquitMutation: y,
+                                  onClose: ue,
                                 }),
-                                (0, t.jsx)(Ot, { subject: c, onClose: ce }),
-                                (0, t.jsx)(V.fu, {
-                                  disabled: !I,
-                                  onClick: () => k("escalate"),
-                                  children: w.T.Localize(
+                                (0, t.jsx)(zt, { subject: m, onClose: ue }),
+                                (0, t.jsx)(Q.fu, {
+                                  disabled: !_,
+                                  onClick: () => H("escalate"),
+                                  children: x.T.Localize(
                                     "#moderation_escalation_escalate",
                                   ),
                                 }),
-                                !ee &&
+                                !ne &&
                                   (0, t.jsx)("button", {
-                                    disabled: !de,
-                                    onClick: () => k("ownerdispute"),
+                                    disabled: !me,
+                                    onClick: () => H("ownerdispute"),
                                     children: "Owner Dispute",
                                   }),
-                                ee &&
+                                ne &&
                                   (0, t.jsxs)("span", {
                                     children: [
                                       (0, t.jsx)("a", {
-                                        href: `${we.TS.HELP_BASE_URL}tickermaster/ticket/${c.owner_dispute_details}`,
-                                        children: (0, t.jsx)(W.EY, {
+                                        href: `${Ce.TS.HELP_BASE_URL}tickermaster/ticket/${m.owner_dispute_details}`,
+                                        children: (0, t.jsx)(U.EY, {
                                           size: "2",
-                                          children: w.T.Localize(
+                                          children: x.T.Localize(
                                             "#moderation_already_owner_disputed",
                                           ),
                                         }),
                                       }),
                                       (0, t.jsx)("button", {
-                                        disabled: !I,
+                                        disabled: !_,
                                         onClick: () =>
-                                          k("editownerdisputedetails"),
+                                          H("editownerdisputedetails"),
                                         className: q().EditButton,
                                         children: (0, t.jsx)(Ae.ffu, {}),
                                       }),
@@ -1461,35 +1461,35 @@
                             }),
                           ],
                         }),
-                      Z === "escalate" &&
-                        !!I &&
-                        (0, t.jsx)(b.R, {
-                          reportedContentID: I,
-                          onClose: () => k("main"),
+                      $ === "escalate" &&
+                        !!_ &&
+                        (0, t.jsx)(v.R, {
+                          reportedContentID: _,
+                          onClose: () => H("main"),
                         }),
-                      Z === "sanction" &&
+                      $ === "sanction" &&
                         (0, t.jsx)(yt, {
-                          subject: c != null ? c : { subject_type: Y },
-                          clanSteamID: ze,
-                          authorSteamID: K,
-                          sanctionMutation: m,
-                          onSanction: re,
-                          onCancel: () => k("main"),
+                          subject: m != null ? m : { subject_type: X },
+                          clanSteamID: De,
+                          authorSteamID: J,
+                          sanctionMutation: g,
+                          onSanction: ie,
+                          onCancel: () => H("main"),
                         }),
-                      Z === "ownerdispute" &&
-                        !!I &&
-                        (0, t.jsx)(Ut, {
-                          reportedContentID: I,
-                          onClose: () => k("main"),
+                      $ === "ownerdispute" &&
+                        !!_ &&
+                        (0, t.jsx)(Ot, {
+                          reportedContentID: _,
+                          onClose: () => H("main"),
                         }),
-                      Z === "editownerdisputedetails" &&
-                        !!I &&
-                        (0, t.jsx)(zt, {
-                          reportedContentID: I,
-                          onClose: () => k("main"),
+                      $ === "editownerdisputedetails" &&
+                        !!_ &&
+                        (0, t.jsx)(Dt, {
+                          reportedContentID: _,
+                          onClose: () => H("main"),
                           currentDetails:
                             (a =
-                              c == null ? void 0 : c.owner_dispute_details) !=
+                              m == null ? void 0 : m.owner_dispute_details) !=
                             null
                               ? a
                               : "",
@@ -1501,70 +1501,70 @@
             }),
           });
         }
-        function zt(r) {
+        function Dt(r) {
           const { reportedContentID: e, onClose: s, currentDetails: a } = r,
-            [m, h] = (0, D.useState)(a),
-            c = (0, Ce.wy)(e, m),
-            Y = async () => {
-              await c.mutateAsync(), s();
+            [g, y] = (0, I.useState)(a),
+            m = (0, Ee.wy)(e, g),
+            X = async () => {
+              await m.mutateAsync(), s();
             };
           return (0, t.jsxs)(t.Fragment, {
             children: [
               (0, t.jsxs)("label", {
                 children: [
-                  (0, t.jsx)(W.EY, {
+                  (0, t.jsx)(U.EY, {
                     size: "2",
-                    children: w.T.Localize(
+                    children: x.T.Localize(
                       "#moderation_editownerdisputedetails_label",
                     ),
                   }),
                   (0, t.jsx)("input", {
                     type: "text",
-                    value: m,
-                    onChange: (_) => h(_.target.value),
+                    value: g,
+                    onChange: (K) => y(K.target.value),
                   }),
                 ],
               }),
-              (0, t.jsxs)(F.s, {
+              (0, t.jsxs)(L.s, {
                 justify: "between",
                 direction: "row",
                 children: [
-                  (0, t.jsx)(V.fu, {
-                    onClick: Y,
-                    children: w.T.Localize(
+                  (0, t.jsx)(Q.fu, {
+                    onClick: X,
+                    children: x.T.Localize(
                       "#moderation_editownerdisputedetails_save",
                     ),
                   }),
-                  (0, t.jsx)(N.$, {
+                  (0, t.jsx)(G.$, {
                     onClick: s,
-                    loading: c.isPending,
-                    children: w.T.Localize("#moderation_ownerdispute_cancel"),
+                    loading: m.isPending,
+                    children: x.T.Localize("#moderation_ownerdispute_cancel"),
                   }),
                 ],
               }),
             ],
           });
         }
-        function Ut(r) {
+        function Ot(r) {
           const { reportedContentID: e, onClose: s } = r,
-            [a, m] = (0, D.useState)(""),
-            h = (0, Ce.y4)(e, a),
-            c = async () => {
-              await h.mutateAsync(), s();
+            [a, g] = (0, I.useState)(""),
+            y = (0, Ee.y4)(e, a),
+            m = async () => {
+              await y.mutateAsync(), s();
             };
           return (0, t.jsxs)(f.Z, {
             className: q().OwnerDisputeCtn,
             children: [
-              (0, t.jsx)(W.EY, {
+              (0, t.jsx)(U.EY, {
                 as: "div",
                 size: "2",
-                children: w.T.Localize("#moderation_ownerdispute_description"),
+                children: x.T.Localize("#moderation_ownerdispute_description"),
               }),
               (0, t.jsxs)("label", {
                 children: [
-                  (0, t.jsx)(W.EY, {
+                  (0, t.jsx)(U.EY, {
                     size: "2",
-                    children: w.T.Localize(
+                    children: x.T.Localize(
                       "#moderation_ownerdispute_ticketmastercode",
                     ),
                   }),
@@ -1572,319 +1572,397 @@
                   (0, t.jsx)("input", {
                     type: "text",
                     value: a,
-                    onChange: (Y) => m(Y.target.value),
+                    onChange: (X) => g(X.target.value),
                   }),
                 ],
               }),
-              (0, t.jsxs)(F.s, {
+              (0, t.jsxs)(L.s, {
                 justify: "between",
                 direction: "row",
                 children: [
-                  (0, t.jsx)(V.fu, {
-                    onClick: c,
-                    children: w.T.Localize("#moderation_ownerdispute_dispute"),
+                  (0, t.jsx)(Q.fu, {
+                    onClick: m,
+                    children: x.T.Localize("#moderation_ownerdispute_dispute"),
                   }),
-                  (0, t.jsx)(V.fu, {
+                  (0, t.jsx)(Q.fu, {
                     onClick: s,
-                    children: w.T.Localize("#moderation_ownerdispute_cancel"),
+                    children: x.T.Localize("#moderation_ownerdispute_cancel"),
                   }),
                 ],
               }),
             ],
           });
         }
-        function Dt(r) {
+        function Ut(r) {
           const { acquitMutation: e, onClose: s, subject: a } = r,
-            m =
+            g =
               a &&
               (a.unresolved_report_count > 0 || a.unresolved_dispute_count > 0),
-            h = async () => {
+            y = async () => {
               await e.mutateAsync(void 0), s();
             };
           return (0, t.jsx)("button", {
-            onClick: h,
-            disabled: !m,
-            children: (0, t.jsxs)(F.s, {
+            onClick: y,
+            disabled: !g,
+            children: (0, t.jsxs)(L.s, {
               direction: "row",
               justify: "center",
               align: "center",
               children: [
                 (0, t.jsx)(Ae.jlt, { className: q().AcquitIcon }),
                 " ",
-                w.T.Localize("#moderation_actions_acquit"),
+                x.T.Localize("#moderation_actions_acquit"),
               ],
             }),
           });
         }
-        function Ot(r) {
+        function zt(r) {
           const { subject: e, onClose: s } = r,
             a =
               !!(e != null && e.reported_content_id) &&
-              e.resolved !== _e.z_ &&
+              e.resolved !== Ve.z_ &&
               (e.unresolved_dispute_count > 0 || e.unresolved_report_count > 0),
-            m = (0, Ce.N8)(),
-            h = async () => {
+            g = (0, Ee.N8)(),
+            y = async () => {
               e != null &&
                 e.reported_content_id &&
-                (await m.mutateAsync({
+                (await g.mutateAsync({
                   reportedContentID: e.reported_content_id,
                 }),
                 s());
             };
           return (0, t.jsx)("button", {
-            onClick: h,
+            onClick: y,
             disabled: !a,
-            children: w.T.Localize("#moderation_actions_sustain"),
+            children: x.T.Localize("#moderation_actions_sustain"),
           });
         }
       },
-      179: (G, te, i) => {
+      86946: (k, V, i) => {
         "use strict";
-        i.d(te, {
-          Bm: () => W,
-          QD: () => V,
-          f3: () => F,
-          iV: () => w,
-          ip: () => f,
-          le: () => N,
-        });
-        var t = i(90626),
-          Q = i(92757);
-        function F(l, u) {
-          let b;
-          if (typeof l == "string") b = l;
-          else if ("location" in l) b = l.location.search;
-          else if ("search" in l) b = l.search;
-          else return;
-          const E = new URLSearchParams(b.substring(1));
-          if (E.has(u)) {
-            const C = E.getAll(u);
-            return C[C.length - 1];
-          }
+        i.d(V, { j: () => c, w: () => v });
+        var t = i(7850),
+          N = i(64238),
+          L = i.n(N),
+          U = i(38878),
+          G = i.n(U),
+          Q = i(60351),
+          f = i(68031),
+          x = i(8928),
+          l = i(69289);
+        function c(S) {
+          const {
+              children: h,
+              beforeContent: F,
+              afterContent: M,
+              hasValue: P,
+              ...u
+            } = S,
+            j = v(u);
+          return (0, t.jsxs)(f.s, {
+            ...j,
+            align: "center",
+            "data-has-value": !!P,
+            minWidth: "0",
+            children: [
+              F && (0, t.jsx)(f.s, { paddingRight: "2", children: F }),
+              (0, t.jsx)(Q.az, { flexGrow: "1", minWidth: "0", children: h }),
+              M && (0, t.jsx)(f.s, { paddingLeft: "2", children: M }),
+            ],
+          });
         }
-        function W(l, u, b, E = !1) {
-          const C = new URLSearchParams(l.location.search.substring(1));
-          if (b != null && b != null) {
-            if (C.get(u) == b) return;
-            C.set(u, b);
-          } else {
-            if (!C.has(u)) return;
-            C.delete(u);
-          }
-          E
-            ? l.replace(`?${C.toString()}`, { ...l.location.state })
-            : l.push(`?${C.toString()}`);
-        }
-        function N(l, u, b) {
-          W(l, u, b, !0);
-        }
-        function V(l, u) {
-          const b = (0, Q.W6)(),
-            E = (0, Q.zy)(),
-            C = (0, t.useMemo)(() => {
-              const O = F(E.search, l);
-              return O != null && O != null
-                ? u != null && u != null
-                  ? typeof u == "boolean"
-                    ? u.constructor(O !== "false")
-                    : u.constructor(O)
-                  : O
-                : u;
-            }, [E.search, l, u]),
-            H = (0, t.useCallback)(
-              (O, P = !1) => {
-                W(b, l, O != null && O != null ? String(O) : null, P);
-              },
-              [b, l],
-            );
-          return [C, H];
-        }
-        function f(l, u, b = !1) {
-          const E = new URLSearchParams(l.location.search.substring(1));
-          for (const C in u)
-            if (u.hasOwnProperty(C)) {
-              const H = u[C];
-              E.delete(C), H != null && H != null && E.append(C, H);
-            }
-          b
-            ? l.replace(`?${E.toString()}`, { ...l.location.state })
-            : l.push(`?${E.toString()}`);
-        }
-        function w(l, u) {
-          f(l, u, !0);
+        function v(S) {
+          const {
+              variant: h = "basic",
+              size: F = "2",
+              radius: M,
+              focusable: P = !0,
+              hoverable: u = !0,
+              clickable: j = !0,
+              disabled: b,
+              className: p,
+              status: d,
+              color: n,
+              ...Y
+            } = S,
+            se = h === "underline" ? "none" : M;
+          return (0, l.mz)(
+            {
+              ...Y,
+              radius: se,
+              "data-status": d,
+              "data-dull-color": n && n !== "dull" ? n : void 0,
+              className: L()(
+                U.ControlBox,
+                P && !b && U.Focusable,
+                u && !b && U.Hoverable,
+                j && !b && U.Clickable,
+                b && U.Disabled,
+                U[`Variant-${h}`],
+                U[`Size-${F}`],
+                p,
+              ),
+            },
+            x.h,
+          );
         }
       },
-      21418: (G, te, i) => {
+      98929: (k, V, i) => {
         "use strict";
-        i.d(te, { V: () => C, a: () => H });
+        i.d(V, { F: () => L });
+        var t = i(24089),
+          N = i.n(t);
+        function L() {
+          return t.TextEntry;
+        }
+      },
+      179: (k, V, i) => {
+        "use strict";
+        i.d(V, {
+          Bm: () => U,
+          QD: () => Q,
+          f3: () => L,
+          iV: () => x,
+          ip: () => f,
+          le: () => G,
+        });
+        var t = i(90626),
+          N = i(92757);
+        function L(l, c) {
+          let v;
+          if (typeof l == "string") v = l;
+          else if ("location" in l) v = l.location.search;
+          else if ("search" in l) v = l.search;
+          else return;
+          const S = new URLSearchParams(v.substring(1));
+          if (S.has(c)) {
+            const h = S.getAll(c);
+            return h[h.length - 1];
+          }
+        }
+        function U(l, c, v, S = !1) {
+          const h = new URLSearchParams(l.location.search.substring(1));
+          if (v != null && v != null) {
+            if (h.get(c) == v) return;
+            h.set(c, v);
+          } else {
+            if (!h.has(c)) return;
+            h.delete(c);
+          }
+          S
+            ? l.replace(`?${h.toString()}`, { ...l.location.state })
+            : l.push(`?${h.toString()}`);
+        }
+        function G(l, c, v) {
+          U(l, c, v, !0);
+        }
+        function Q(l, c) {
+          const v = (0, N.W6)(),
+            S = (0, N.zy)(),
+            h = (0, t.useMemo)(() => {
+              const M = L(S.search, l);
+              return M != null && M != null
+                ? c != null && c != null
+                  ? typeof c == "boolean"
+                    ? c.constructor(M !== "false")
+                    : c.constructor(M)
+                  : M
+                : c;
+            }, [S.search, l, c]),
+            F = (0, t.useCallback)(
+              (M, P = !1) => {
+                U(v, l, M != null && M != null ? String(M) : null, P);
+              },
+              [v, l],
+            );
+          return [h, F];
+        }
+        function f(l, c, v = !1) {
+          const S = new URLSearchParams(l.location.search.substring(1));
+          for (const h in c)
+            if (c.hasOwnProperty(h)) {
+              const F = c[h];
+              S.delete(h), F != null && F != null && S.append(h, F);
+            }
+          v
+            ? l.replace(`?${S.toString()}`, { ...l.location.state })
+            : l.push(`?${S.toString()}`);
+        }
+        function x(l, c) {
+          f(l, c, !0);
+        }
+      },
+      21418: (k, V, i) => {
+        "use strict";
+        i.d(V, { V: () => h, a: () => F });
         var t = i(7850),
-          Q = i(90626),
-          F = i(36707),
-          W = i(18210),
-          N = i(179),
-          V = i(1990),
-          f = i.n(V),
-          w = i(71421),
+          N = i(90626),
+          L = i(36707),
+          U = i(18210),
+          G = i(179),
+          Q = i(1990),
+          f = i.n(Q),
+          x = i(71421),
           l = i(53107),
-          u = i(19298),
-          b = i(20169),
-          E = i(92757);
-        function C(P) {
+          c = i(19298),
+          v = i(20169),
+          S = i(92757);
+        function h(P) {
           const {
-              tabs: p,
-              bDisableRouting: A,
-              startingTab: z,
-              controlledTab: g,
+              tabs: u,
+              bDisableRouting: j,
+              startingTab: b,
+              controlledTab: p,
               OnTabChanged: d,
               classNameCtn: n,
-              classNameTab: ne,
-              focusRingHasBorderRadius: me,
-              classNameTabContent: U,
+              classNameTab: Y,
+              focusRingHasBorderRadius: se,
+              classNameTabContent: z,
               preferredFocus: pe,
               bVerticalTabs: ge,
               bSticky: Ie,
-              bChecklistMode: ke,
+              bChecklistMode: Pe,
             } = P,
-            J = (0, E.zy)(),
-            fe = (0, E.W6)(),
-            [Fe, ae] = (0, Q.useState)(() => {
-              var v;
+            Z = (0, S.zy)(),
+            fe = (0, S.W6)(),
+            [We, oe] = (0, N.useState)(() => {
+              var B;
               return (
-                z ||
-                (!A && (0, N.f3)(J, "tab") && (v = (0, N.f3)(J, "tab")) != null
-                  ? v
+                b ||
+                (!j && (0, G.f3)(Z, "tab") && (B = (0, G.f3)(Z, "tab")) != null
+                  ? B
                   : "")
               );
             });
-          (0, Q.useEffect)(() => {
-            if (!P.bDisableRouting && J) {
-              const v = (0, N.f3)(J, "tab");
-              v && ae(v);
+          (0, N.useEffect)(() => {
+            if (!P.bDisableRouting && Z) {
+              const B = (0, G.f3)(Z, "tab");
+              B && oe(B);
             }
-          }, [J, J.key, P.bDisableRouting, ae]);
-          const Pe = Q.useCallback(
-              (v) => {
-                ae(v.key),
-                  A || (0, N.Bm)(fe, "tab", v.key),
-                  d == null || d(v.key),
-                  v.onClick && v.onClick(v);
+          }, [Z, Z.key, P.bDisableRouting, oe]);
+          const _e = N.useCallback(
+              (B) => {
+                oe(B.key),
+                  j || (0, G.Bm)(fe, "tab", B.key),
+                  d == null || d(B.key),
+                  B.onClick && B.onClick(B);
               },
-              [A, fe, d],
+              [j, fe, d],
             ),
-            $ = p.filter((v) => !v.hidden);
-          if (!$.length) return null;
-          const qe = g != null ? g : Fe,
-            oe = $.find((v) => v.key === qe) || $[0],
-            We = pe ? (z != null ? z : $[0].key) : void 0,
+            te = u.filter((B) => !B.hidden);
+          if (!te.length) return null;
+          const Fe = p != null ? p : We,
+            le = te.find((B) => B.key === Fe) || te[0],
+            ke = pe ? (b != null ? b : te[0].key) : void 0,
             he = (0, t.jsxs)(t.Fragment, {
               children: [
-                (0, t.jsx)(u.Z, {
-                  className: (0, F.A)(
+                (0, t.jsx)(c.Z, {
+                  className: (0, L.A)(
                     f().GraphicalAssetsTabs,
                     ge && f().GraphicalAssetsTabsVertical,
-                    ke && f().ChecklistMode,
+                    Pe && f().ChecklistMode,
                     Ie && f().Sticky,
                     n,
                   ),
                   navEntryPreferPosition: pe
-                    ? b.iU.PREFERRED_CHILD
-                    : b.iU.FIRST,
-                  children: $.map((v, ot) =>
+                    ? v.iU.PREFERRED_CHILD
+                    : v.iU.FIRST,
+                  children: te.map((B, ot) =>
                     (0, t.jsx)(
-                      O,
+                      M,
                       {
-                        tab: v,
-                        OnTabClick: Pe,
-                        classNameTab: ne,
-                        focusRingHasBorderRadius: me,
-                        active: v.key === oe.key,
-                        preferredFocus: We === v.key,
+                        tab: B,
+                        OnTabClick: _e,
+                        classNameTab: Y,
+                        focusRingHasBorderRadius: se,
+                        active: B.key === le.key,
+                        preferredFocus: ke === B.key,
                       },
-                      v.key,
+                      B.key,
                     ),
                   ),
                 }),
-                oe && (0, t.jsx)(u.Z, { className: U, children: oe.contents }),
+                le && (0, t.jsx)(c.Z, { className: z, children: le.contents }),
               ],
             });
           return ge
-            ? (0, t.jsx)(u.Z, {
-                className: (0, F.A)(f().GraphicalAssetsTabsLayoutVertical),
+            ? (0, t.jsx)(c.Z, {
+                className: (0, L.A)(f().GraphicalAssetsTabsLayoutVertical),
                 children: he,
               })
             : he;
         }
-        function H(P) {
+        function F(P) {
           const {
-            statusType: p = "success",
-            bShowStatusBox: A,
-            children: z,
+            statusType: u = "success",
+            bShowStatusBox: j,
+            children: b,
           } = P;
-          let g = "";
+          let p = "";
           return (
-            p === "success"
-              ? (g = f().StatusSuccess)
-              : p === "danger"
-                ? (g = f().StatusDanger)
-                : p === "caution"
-                  ? (g = f().StatusCaution)
-                  : p === "info"
-                    ? (g = f().StatusInfo)
-                    : p === "incomplete" && (g = f().StatusIncomplete),
+            u === "success"
+              ? (p = f().StatusSuccess)
+              : u === "danger"
+                ? (p = f().StatusDanger)
+                : u === "caution"
+                  ? (p = f().StatusCaution)
+                  : u === "info"
+                    ? (p = f().StatusInfo)
+                    : u === "incomplete" && (p = f().StatusIncomplete),
             (0, t.jsx)("div", {
-              className: (0, F.A)(
+              className: (0, L.A)(
                 f().GraphicalAssetStatus,
-                g,
-                A ? f().checklistBox : "",
+                p,
+                j ? f().checklistBox : "",
               ),
-              children: z,
+              children: b,
             })
           );
         }
-        function O(P) {
+        function M(P) {
           const {
-            tab: p,
-            OnTabClick: A,
-            classNameTab: z,
-            focusRingHasBorderRadius: g,
+            tab: u,
+            OnTabClick: j,
+            classNameTab: b,
+            focusRingHasBorderRadius: p,
             active: d,
             preferredFocus: n,
           } = P;
           return (0, t.jsx)(l.e7, {
-            condition: !!(p.statusToolTip || p.tooltip),
-            wrap: (ne) =>
-              (0, t.jsx)(w.he, {
-                toolTipContent: p.statusToolTip || p.tooltip,
-                children: ne,
+            condition: !!(u.statusToolTip || u.tooltip),
+            wrap: (Y) =>
+              (0, t.jsx)(x.he, {
+                toolTipContent: u.statusToolTip || u.tooltip,
+                children: Y,
               }),
-            children: (0, t.jsxs)(u.Z, {
-              className: (0, F.A)(
+            children: (0, t.jsxs)(c.Z, {
+              className: (0, L.A)(
                 f().GraphicalAssetsTab,
                 d && f().Active,
                 d && "ActiveTab",
-                z,
+                b,
               ),
-              onActivate: () => A(p),
+              onActivate: () => j(u),
               preferredFocus: n,
-              focusRingHasBorderRadius: g,
+              focusRingHasBorderRadius: p,
               children: [
-                !!p.vo_warning &&
-                  (0, t.jsx)(w.he, {
-                    toolTipContent: p.vo_warning,
+                !!u.vo_warning &&
+                  (0, t.jsx)(x.he, {
+                    toolTipContent: u.vo_warning,
                     children: (0, t.jsx)("div", {
                       className: f().VOWarning,
-                      children: (0, W.we)("#EventEditor_VOWarning"),
+                      children: (0, U.we)("#EventEditor_VOWarning"),
                     }),
                   }),
-                p.status,
-                p.name,
+                u.status,
+                u.name,
               ],
             }),
           });
         }
       },
-      84670: (G) => {
-        G.exports = {
+      84670: (k) => {
+        k.exports = {
           ModerateDialogCtn: "_1JFB_3Ek9uIS-ml-7C1V3",
           Flag: "_24i0Jj7bXsdJSJdDY0a4e9",
           ModerateCtn: "_2f8lQGhpOdBN1nDokNV-_v",
@@ -1897,8 +1975,31 @@
           SanctionIcon: "_3WS1gYqe89ISF4mi7dvtBU",
         };
       },
-      98580: (G) => {
-        G.exports = {
+      38878: (k) => {
+        k.exports = {
+          "Variant-basic": "xqG5GdDEeYauX2ots2DLl",
+          "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
+          "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
+          "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
+          Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+          "Variant-inset-glass": "_32JdL4FubsmwHfHXm6OB9I",
+          "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
+          "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
+          "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
+          "Variant-bare": "_3vxqpebgJYIYNTcigTXx21",
+          ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
+          Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
+          Clickable: "_1KONo9A0HE0_NOK2F6uvXy",
+          Disabled: "_2I6xXve3oCxh8fra7SWTnq",
+          "Size-1": "_2e1xlPghh48rkP13ydQOPb",
+          "Size-2": "B7HtDxiiORArIRcBR9kVB",
+        };
+      },
+      24089: (k) => {
+        k.exports = { TextEntry: "_1vE-LsK6l_D_5yjbywZV1p" };
+      },
+      98580: (k) => {
+        k.exports = {
           BottomButtons: "mdeaaJPcT9kJyTGau_Zr7",
           SanctionForm: "_33cLeNjYsBEX2T0-B9gc5G",
           OneColumn: "_2LTDR9F3yb80ONcUPcDxo1",
@@ -1907,8 +2008,8 @@
           ErrorMessage: "_3_dhawEOV-fztaXEftlfxJ",
         };
       },
-      1990: (G) => {
-        G.exports = {
+      1990: (k) => {
+        k.exports = {
           narrowWidth: "500px",
           GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
           GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
