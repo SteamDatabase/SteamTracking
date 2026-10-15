@@ -28,55 +28,60 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-        with:
-          submodules: true
-          fetch-depth: 1
+      # These setup actions do not read the repository, so they run alongside the checkout
+      - parallel:
+          - name: Checkout
+            uses: actions/checkout@v6
+            with:
+              submodules: true
+              fetch-depth: 1
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.5'
+          - name: Setup PHP
+            uses: shivammathur/setup-php@v2
+            with:
+              php-version: '8.5'
 
+          - name: Setup Go
+            uses: actions/setup-go@v6
+            with:
+              go-version: 'stable'
+              cache: false
+
+          - name: Setup .NET
+            uses: actions/setup-dotnet@v5
+            with:
+              dotnet-version: '10.x'
+
+          - name: Setup Python
+            uses: actions/setup-python@v6
+            with:
+              python-version: '3.x'
+
+      # The npm cache key is computed from package-lock.json
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: 'current'
           cache: 'npm'
 
-      - name: Setup Go
-        uses: actions/setup-go@v6
-        with:
-          go-version: 'stable'
-          cache: false
+      - parallel:
+          - name: Install Node dependencies
+            run: npm ci
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: '10.x'
+          - name: Restore cache
+            uses: actions/cache/restore@v5
+            if: inputs.force != true
+            with:
+              path: |
+                .support
+                store.steampowered.com/ssr
+                partner.steamgames.com/ssr
+                steamcommunity.com/ssr
+              key: cache-
+              restore-keys: |
+                cache-
 
-      - name: Setup Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.x'
-
-      - name: Install Node dependencies
-        run: npm ci
-
-      - name: Restore cache
-        uses: actions/cache/restore@v5
-        if: inputs.force != true
-        with:
-          path: |
-            .support
-            store.steampowered.com/ssr
-            partner.steamgames.com/ssr
-            steamcommunity.com/ssr
-          key: cache-
-          restore-keys: |
-            cache-
-
+      # Runs after the cache restore above, which can also contain .support/etags.json
       - name: Restore etags cache
         uses: actions/cache/restore@v5
         if: inputs.force != true
