@@ -2330,8 +2330,6 @@ ${FILENAME}
 2. makr
 2.75
 2048
-20:46:01
-20:46:05
 20CCDDBAppDetailCommon
 20CCaptureFailedDialog
 20CControllerConfigMsg
@@ -2409,6 +2407,8 @@ ${FILENAME}
 22StoreItem_ExtraDetails
 22StoreItem_PackageGroup
 22StoreItem_RelatedItems
+23:23:28
+23:23:32
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CECKeyExchangePublicKey
@@ -8758,7 +8758,7 @@ Obreve
 Obtained EMS handle %u
 Obtained XMS handle %u
 Ocircumflex.smcp\vOtilde.smcp
-Oct 14 2026
+Oct 15 2026
 October
 Ocultar teclado virtual
 Oculte os controles por toque no menu de configura
@@ -18077,7 +18077,7 @@ lg inputtilstand for %s
 lg maskinen, der skal forbindes til
 lg maskinen, der skal forbindes til:
 lhatod r
-lib Oct 14 2026 20:46:04
+lib Oct 15 2026 23:23:31
 lib(%lu)
 libEGL.so.1
 libGL.so.1
