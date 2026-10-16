@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [4922],
+    [54922],
     {
       chunkid: function (module) {
         (function (_, _) {

@@ -2,7 +2,7 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [1477],
+    [41477],
     {
       71353: () => {},
       32728: (sn, ct, se) => {

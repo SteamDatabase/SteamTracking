@@ -35,14 +35,6 @@ message AppUpdateInfo {
 	optional uint32 target_build_id = 16;
 }
 
-message AssetPropertyFilter {
-	optional uint32 property_id = 1;
-	optional float float_min = 2;
-	optional float float_max = 3;
-	optional int64 int_min = 4;
-	optional int64 int_max = 5;
-}
-
 // Used by: common.proto
 message CAppOverview {
 	optional uint32 appid = 1;
