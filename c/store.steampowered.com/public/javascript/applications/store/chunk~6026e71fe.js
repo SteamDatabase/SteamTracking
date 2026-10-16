@@ -21559,6 +21559,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -21672,12 +21673,12 @@
           include_basic_info: !0,
           include_supported_languages: !0,
         };
-        function _(_) {
+        function _(_, _ = !1) {
           if (!_) return !0;
           const _ = _._.Get();
           if (
             ((0, _._)(_.BIsLoaded(), "Dynamic Store not loaded"),
-            _.GetStoreItemType() == _._._)
+            !_ && _.GetStoreItemType() == _._._)
           ) {
             const _ = _.GetParentAppID();
             if (
@@ -21726,7 +21727,7 @@
                   .filter((_) => !!_);
               _ && _.push(..._);
             }
-            _.some(_ || _)
+            _.some((_) => (_ || _)(_))
               ? (_++, _ && (_._.Get().BIsStoreItemOwned(_) || _.push(_)))
               : _.push(_);
           }
@@ -21773,6 +21774,12 @@
         }
         function _() {
           return (0, _._)(_._, _._.COUNTRY);
+        }
+        function _(_) {
+          return !!(
+            _?.BHasHideIgnoredItemsFacetValue() &&
+            !_.BIsUserPreferenceEnabled(_._.k_EHideIgnoredItems)
+          );
         }
         async function _(_, _, _, _) {
           const _ = _.BHasHideIgnoredItemsFacetValue(),
@@ -31304,10 +31311,10 @@
             ? _._.Get().BIsStoreItemOwned(_)
             : !1;
         }
-        function _(_, _ = null) {
+        function _(_, _ = null, _ = !1) {
           return !!(
             !_ ||
-            (0, _._)(_) ||
+            (0, _._)(_, _) ||
             (_?.BUsesContentHubForItemSource() &&
               ((_._.Get()?.GetHomeView()?.games_already_in_library &&
                 _(_, _)) ||
@@ -32275,7 +32282,8 @@
             const _ = _ || _;
             _.UpdateMatchCount(_, _.length);
           }
-          (_ = await (0, _._)(_, _, _, (_) => _(_, _) || _(_, _))),
+          const _ = !!_.enable_faceted_browsing && (0, _._)(_);
+          (_ = await (0, _._)(_, _, _, (_) => _(_, _, _) || _(_, _))),
             (_.store_item_filter_require_discount ||
               _.store_item_filter_require_coming_soon ||
               _.store_item_filter_require_released ||
@@ -33508,11 +33516,12 @@
                 _,
               ));
             let _ = new Array();
+            _?.enable_faceted_browsing &&
+              _ &&
+              (_ = await (0, _._)(_, _, !1, _));
+            const _ = !!_?.enable_faceted_browsing && (0, _._)(_);
             return (
-              _?.enable_faceted_browsing &&
-                _ &&
-                (_ = await (0, _._)(_, _, !1, _)),
-              (_ = await (0, _._)(_, !1, _, (_) => _(_, _))),
+              (_ = await (0, _._)(_, !1, _, (_) => _(_, _, _))),
               _.map((_) => ({
                 _: _._,
                 type: (0, _._)(_.type),

@@ -16,18 +16,18 @@
           f = i(19298),
           x = i(86067),
           l = i(86392),
-          c = i(13725),
-          v = i(72524),
+          u = i(13725),
+          h = i(72524),
           S = i(99412),
-          h = i(71742),
+          v = i(71742),
           F = i(72604),
           M = i(35038),
           P = i(64981),
-          u = i(21113),
+          d = i(21113),
           j = i(20476),
           b = i(4806),
           p = i(80613),
-          d = i.n(p),
+          m = i.n(p),
           n = i(75245),
           Y = Object.defineProperty,
           se = (r, e, s) =>
@@ -58,13 +58,13 @@
         function fe(r) {
           return "unknown EHelpIssue ( " + r + " )";
         }
-        function We(r) {
+        function _e(r) {
           return "unknown EHelpRequestEscalationLevel ( " + r + " )";
         }
         function oe(r) {
           return "unknown EHelpRequestMsgType ( " + r + " )";
         }
-        function _e(r) {
+        function We(r) {
           return "unknown EHelpRequestAction ( " + r + " )";
         }
         function te(r) {
@@ -186,7 +186,7 @@
             return n.Uq(T.M(), e);
           }
           static deserializeBinary(e) {
-            let s = new (d().BinaryReader)(e),
+            let s = new (m().BinaryReader)(e),
               a = new T();
             return T.deserializeBinaryFromReader(a, s);
           }
@@ -194,14 +194,14 @@
             return n.zj(T.MBF(), e, s);
           }
           serializeBinary() {
-            var e = new (d().BinaryWriter)();
+            var e = new (m().BinaryWriter)();
             return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
           static serializeBinaryToWriter(e, s) {
             n.i0(T.M(), e, s);
           }
           serializeBase64String() {
-            var e = new (d().BinaryWriter)();
+            var e = new (m().BinaryWriter)();
             return (
               T.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
@@ -212,18 +212,18 @@
         };
         z(ve, "sm_m"), z(ve, "sm_mbf");
         let lt = ve;
-        const be = class R extends p.Message {
+        const be = class C extends p.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              R.prototype.content || n.Sg(R.M()),
+              C.prototype.content || n.Sg(C.M()),
               p.Message.initialize(this, e, 0, -1, void 0, null);
           }
           static M() {
             return (
-              R.sm_m ||
-                (R.sm_m = {
-                  proto: R,
+              C.sm_m ||
+                (C.sm_m = {
+                  proto: C,
                   fields: {
                     content: {
                       n: 1,
@@ -249,74 +249,6 @@
                     language: { n: 6, br: n.qM.readInt32, bw: n.gp.writeInt32 },
                   },
                 }),
-              R.sm_m
-            );
-          }
-          static MBF() {
-            return R.sm_mbf || (R.sm_mbf = n.w0(R.M())), R.sm_mbf;
-          }
-          toObject(e = !1) {
-            return R.toObject(e, this);
-          }
-          static toObject(e, s) {
-            return n.BT(R.M(), e, s);
-          }
-          static fromObject(e) {
-            return n.Uq(R.M(), e);
-          }
-          static deserializeBinary(e) {
-            let s = new (d().BinaryReader)(e),
-              a = new R();
-            return R.deserializeBinaryFromReader(a, s);
-          }
-          static deserializeBinaryFromReader(e, s) {
-            return n.zj(R.MBF(), e, s);
-          }
-          serializeBinary() {
-            var e = new (d().BinaryWriter)();
-            return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, s) {
-            n.i0(R.M(), e, s);
-          }
-          serializeBase64String() {
-            var e = new (d().BinaryWriter)();
-            return (
-              R.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CSupportData_QuickTextContent";
-          }
-        };
-        z(be, "sm_m"), z(be, "sm_mbf");
-        let He = be;
-        const ye = class C extends p.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              C.prototype.quicktext_id || n.Sg(C.M()),
-              p.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              C.sm_m ||
-                (C.sm_m = {
-                  proto: C,
-                  fields: {
-                    quicktext_id: {
-                      n: 1,
-                      br: n.qM.readUint32,
-                      bw: n.gp.writeUint32,
-                    },
-                    language: {
-                      n: 2,
-                      br: n.qM.readString,
-                      bw: n.gp.writeString,
-                    },
-                    from_sql: { n: 3, br: n.qM.readBool, bw: n.gp.writeBool },
-                  },
-                }),
               C.sm_m
             );
           }
@@ -333,7 +265,7 @@
             return n.Uq(C.M(), e);
           }
           static deserializeBinary(e) {
-            let s = new (d().BinaryReader)(e),
+            let s = new (m().BinaryReader)(e),
               a = new C();
             return C.deserializeBinaryFromReader(a, s);
           }
@@ -341,16 +273,84 @@
             return n.zj(C.MBF(), e, s);
           }
           serializeBinary() {
-            var e = new (d().BinaryWriter)();
+            var e = new (m().BinaryWriter)();
             return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
           static serializeBinaryToWriter(e, s) {
             n.i0(C.M(), e, s);
           }
           serializeBase64String() {
-            var e = new (d().BinaryWriter)();
+            var e = new (m().BinaryWriter)();
             return (
               C.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSupportData_QuickTextContent";
+          }
+        };
+        z(be, "sm_m"), z(be, "sm_mbf");
+        let He = be;
+        const ye = class R extends p.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              R.prototype.quicktext_id || n.Sg(R.M()),
+              p.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              R.sm_m ||
+                (R.sm_m = {
+                  proto: R,
+                  fields: {
+                    quicktext_id: {
+                      n: 1,
+                      br: n.qM.readUint32,
+                      bw: n.gp.writeUint32,
+                    },
+                    language: {
+                      n: 2,
+                      br: n.qM.readString,
+                      bw: n.gp.writeString,
+                    },
+                    from_sql: { n: 3, br: n.qM.readBool, bw: n.gp.writeBool },
+                  },
+                }),
+              R.sm_m
+            );
+          }
+          static MBF() {
+            return R.sm_mbf || (R.sm_mbf = n.w0(R.M())), R.sm_mbf;
+          }
+          toObject(e = !1) {
+            return R.toObject(e, this);
+          }
+          static toObject(e, s) {
+            return n.BT(R.M(), e, s);
+          }
+          static fromObject(e) {
+            return n.Uq(R.M(), e);
+          }
+          static deserializeBinary(e) {
+            let s = new (m().BinaryReader)(e),
+              a = new R();
+            return R.deserializeBinaryFromReader(a, s);
+          }
+          static deserializeBinaryFromReader(e, s) {
+            return n.zj(R.MBF(), e, s);
+          }
+          serializeBinary() {
+            var e = new (m().BinaryWriter)();
+            return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, s) {
+            n.i0(R.M(), e, s);
+          }
+          serializeBase64String() {
+            var e = new (m().BinaryWriter)();
+            return (
+              R.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -392,7 +392,7 @@
             return n.Uq(E.M(), e);
           }
           static deserializeBinary(e) {
-            let s = new (d().BinaryReader)(e),
+            let s = new (m().BinaryReader)(e),
               a = new E();
             return E.deserializeBinaryFromReader(a, s);
           }
@@ -400,14 +400,14 @@
             return n.zj(E.MBF(), e, s);
           }
           serializeBinary() {
-            var e = new (d().BinaryWriter)();
+            var e = new (m().BinaryWriter)();
             return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
           static serializeBinaryToWriter(e, s) {
             n.i0(E.M(), e, s);
           }
           serializeBase64String() {
-            var e = new (d().BinaryWriter)();
+            var e = new (m().BinaryWriter)();
             return (
               E.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
@@ -470,7 +470,7 @@
             return n.Uq(w.M(), e);
           }
           static deserializeBinary(e) {
-            let s = new (d().BinaryReader)(e),
+            let s = new (m().BinaryReader)(e),
               a = new w();
             return w.deserializeBinaryFromReader(a, s);
           }
@@ -478,14 +478,14 @@
             return n.zj(w.MBF(), e, s);
           }
           serializeBinary() {
-            var e = new (d().BinaryWriter)();
+            var e = new (m().BinaryWriter)();
             return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
           static serializeBinaryToWriter(e, s) {
             n.i0(w.M(), e, s);
           }
           serializeBase64String() {
-            var e = new (d().BinaryWriter)();
+            var e = new (m().BinaryWriter)();
             return (
               w.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
@@ -532,7 +532,7 @@
             return n.Uq(A.M(), e);
           }
           static deserializeBinary(e) {
-            let s = new (d().BinaryReader)(e),
+            let s = new (m().BinaryReader)(e),
               a = new A();
             return A.deserializeBinaryFromReader(a, s);
           }
@@ -540,14 +540,14 @@
             return n.zj(A.MBF(), e, s);
           }
           serializeBinary() {
-            var e = new (d().BinaryWriter)();
+            var e = new (m().BinaryWriter)();
             return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
           static serializeBinaryToWriter(e, s) {
             n.i0(A.M(), e, s);
           }
           serializeBase64String() {
-            var e = new (d().BinaryWriter)();
+            var e = new (m().BinaryWriter)();
             return (
               A.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
@@ -590,7 +590,7 @@
             return n.Uq(D.M(), e);
           }
           static deserializeBinary(e) {
-            let s = new (d().BinaryReader)(e),
+            let s = new (m().BinaryReader)(e),
               a = new D();
             return D.deserializeBinaryFromReader(a, s);
           }
@@ -598,14 +598,14 @@
             return n.zj(D.MBF(), e, s);
           }
           serializeBinary() {
-            var e = new (d().BinaryWriter)();
+            var e = new (m().BinaryWriter)();
             return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
           static serializeBinaryToWriter(e, s) {
             n.i0(D.M(), e, s);
           }
           serializeBase64String() {
-            var e = new (d().BinaryWriter)();
+            var e = new (m().BinaryWriter)();
             return (
               D.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
@@ -652,7 +652,7 @@
             return n.Uq(O.M(), e);
           }
           static deserializeBinary(e) {
-            let s = new (d().BinaryReader)(e),
+            let s = new (m().BinaryReader)(e),
               a = new O();
             return O.deserializeBinaryFromReader(a, s);
           }
@@ -660,14 +660,14 @@
             return n.zj(O.MBF(), e, s);
           }
           serializeBinary() {
-            var e = new (d().BinaryWriter)();
+            var e = new (m().BinaryWriter)();
             return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
           static serializeBinaryToWriter(e, s) {
             n.i0(O.M(), e, s);
           }
           serializeBase64String() {
-            var e = new (d().BinaryWriter)();
+            var e = new (m().BinaryWriter)();
             return (
               O.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
@@ -715,25 +715,25 @@
           Ge = i(66243),
           Qe = i(88942),
           I = i(90626),
-          Re = i(56718),
+          Ce = i(56718),
           ft = i(85599),
           ce = i(36707),
-          Ce = i(3166),
+          Re = i(3166),
           ht = i(98580),
-          W = i.n(ht),
+          _ = i.n(ht),
           vt = i(14432);
         const bt = {
-          [P.lN]: [u.lV, u.WA, u.XG, u.u1, u.Nd],
-          [P.NC]: [u.rf, u.M6, u.WA, u.o8, u.Nd],
+          [P.lN]: [d.lV, d.WA, d.XG, d.u1, d.Nd],
+          [P.NC]: [d.rf, d.M6, d.WA, d.o8, d.Nd],
         };
         function yt(r) {
           var e;
           const [s, a] = (0, I.useState)(null),
             [g, y] = (0, I.useState)("main"),
-            [m, X] = (0, I.useState)(!1),
+            [c, X] = (0, I.useState)(!1),
             [K, De] = (0, I.useState)(!1),
             [J, ue] = (0, I.useState)(null),
-            [_, $] = (0, I.useState)(null),
+            [W, $] = (0, I.useState)(null),
             [H, re] = (0, I.useState)(null),
             [ie, de] = (0, I.useState)(!1),
             [ee, me] = (0, I.useState)(!1),
@@ -749,7 +749,7 @@
                 : void 0) != null
                 ? e
                 : [],
-            Lt = m || K || J || _ || H || ie || ee,
+            Lt = c || K || J || W || H || ie || ee,
             Ue = St(r.authorSteamID);
           let ze = S.Bhc;
           if (Ue.isSuccess) {
@@ -788,12 +788,12 @@
             $e = !1,
             et = !1,
             Pt = async () => {
-              (0, h.wT)(s !== null, "eReason must be non-null to sanction");
+              (0, v.wT)(s !== null, "eReason must be non-null to sanction");
               const o = [];
-              m && o.push({ sanction: b.EF }),
+              c && o.push({ sanction: b.EF }),
                 K && o.push({ sanction: b.Cv }),
                 J && o.push({ sanction: b.ME, days: J }),
-                _ && o.push({ sanction: b.sR, days: _ }),
+                W && o.push({ sanction: b.sR, days: W }),
                 H && o.push({ sanction: b.bX, days: H }),
                 ie && o.push({ sanction: b.Fh, days: -1 }),
                 ee && o.push({ sanction: b.X5 }),
@@ -808,30 +808,30 @@
                 }),
                 r.onSanction();
             },
-            Wt = (o) => {
+            _t = (o) => {
               a(o), y("main");
             },
-            _t = (o) => {
-              o ? (me(!0), re(7), a(u.rU)) : (me(!1), re(-1));
+            Wt = (o) => {
+              o ? (me(!0), re(7), a(d.rU)) : (me(!1), re(-1));
             };
           return (0, t.jsxs)(t.Fragment, {
             children: [
               g === "reason" &&
-                (0, t.jsx)(vt.F, { reasons: l.UL, onSelect: Wt }),
+                (0, t.jsx)(vt.F, { reasons: l.UL, onSelect: _t }),
               g === "main" &&
                 (0, t.jsxs)(f.Z, {
                   children: [
                     (0, t.jsxs)(f.Z, {
-                      className: W().SanctionForm,
+                      className: _().SanctionForm,
                       children: [
                         r.sanctionMutation.isError &&
                           (0, t.jsxs)("div", {
                             className: (0, ce.A)(
-                              W().OneColumn,
-                              W().ErrorMessage,
+                              _().OneColumn,
+                              _().ErrorMessage,
                             ),
                             children: [
-                              (0, t.jsx)(Re.Q9b, {}),
+                              (0, t.jsx)(Ce.Q9b, {}),
                               " Error: ",
                               r.sanctionMutation.error.message,
                             ],
@@ -842,7 +842,7 @@
                         }),
                         (0, t.jsx)("button", {
                           id: "reason",
-                          className: W().ClickableText,
+                          className: _().ClickableText,
                           onClick: () => y("reason"),
                           children:
                             s === null
@@ -853,7 +853,7 @@
                         }),
                         Ze.length > 0 &&
                           (0, t.jsx)("div", {
-                            className: W().QuickReasons,
+                            className: _().QuickReasons,
                             children: Ze.map((o) =>
                               (0, t.jsx)(
                                 G.$,
@@ -868,18 +868,18 @@
                             ),
                           }),
                         (0, t.jsxs)("label", {
-                          className: W().OneColumn,
+                          className: _().OneColumn,
                           children: [
                             (0, t.jsx)("input", {
                               type: "checkbox",
-                              checked: m,
+                              checked: c,
                               onChange: (o) => X(o.target.checked),
                             }),
                             " Delete",
                           ],
                         }),
                         (0, t.jsxs)("label", {
-                          className: W().OneColumn,
+                          className: _().OneColumn,
                           children: [
                             (0, t.jsx)("input", {
                               type: "checkbox",
@@ -893,11 +893,11 @@
                           !!J &&
                           (0, t.jsxs)("div", {
                             className: (0, ce.A)(
-                              W().OneColumn,
-                              W().ErrorMessage,
+                              _().OneColumn,
+                              _().ErrorMessage,
                             ),
                             children: [
-                              (0, t.jsx)(Re.Q9b, {}),
+                              (0, t.jsx)(Ce.Q9b, {}),
                               " Content is older than 30 days. Are you sure you want to ban?",
                             ],
                           }),
@@ -965,14 +965,14 @@
                             ],
                           }),
                         Ye &&
-                          !!_ &&
+                          !!W &&
                           (0, t.jsxs)("div", {
                             className: (0, ce.A)(
-                              W().OneColumn,
-                              W().ErrorMessage,
+                              _().OneColumn,
+                              _().ErrorMessage,
                             ),
                             children: [
-                              (0, t.jsx)(Re.Q9b, {}),
+                              (0, t.jsx)(Ce.Q9b, {}),
                               " Content is older than 30 days. Are you sure you want to ban?",
                             ],
                           }),
@@ -989,7 +989,7 @@
                                   ? null
                                   : parseInt(o.target.value),
                               ),
-                            value: _ != null ? _ : 0,
+                            value: W != null ? W : 0,
                             children: [
                               (0, t.jsx)("option", {
                                 value: "0",
@@ -1077,7 +1077,7 @@
                         }),
                         !et &&
                           (0, t.jsxs)("span", {
-                            className: W().OneColumn,
+                            className: _().OneColumn,
                             children: [
                               (0, t.jsx)("input", {
                                 type: "checkbox",
@@ -1092,12 +1092,12 @@
                             children: "Already trade banned.",
                           }),
                         (0, t.jsxs)("span", {
-                          className: W().OneColumn,
+                          className: _().OneColumn,
                           children: [
                             (0, t.jsx)("input", {
                               type: "checkbox",
                               checked: ee,
-                              onChange: (o) => _t(o.target.checked),
+                              onChange: (o) => Wt(o.target.checked),
                             }),
                             "\xA0Mark as suspicious",
                           ],
@@ -1127,8 +1127,8 @@
                         }),
                         (0, t.jsx)("textarea", {
                           className: (0, ce.A)(
-                            W().OneColumn,
-                            W().MessageTextArea,
+                            _().OneColumn,
+                            _().MessageTextArea,
                           ),
                           placeholder: "Message to send (required)",
                           value: Oe,
@@ -1137,7 +1137,7 @@
                       ],
                     }),
                     (0, t.jsxs)(f.Z, {
-                      className: W().BottomButtons,
+                      className: _().BottomButtons,
                       children: [
                         r.sanctionMutation.isPending &&
                           (0, t.jsx)(ft.t, { size: "small" }),
@@ -1189,7 +1189,7 @@
               if (r === "0" || !r) throw new Error("Invalid steamid");
               const s = await (
                 await fetch(
-                  `${Ce.TS.COMMUNITY_BASE_URL}profiles/${r}/ajaxlanguagepreferences`,
+                  `${Re.TS.COMMUNITY_BASE_URL}profiles/${r}/ajaxlanguagepreferences`,
                 )
               ).json();
               if (s.success === F.R) return s.preferences;
@@ -1208,9 +1208,9 @@
           Ae = i(36118),
           Mt = i(21418),
           Tt = i(71421),
-          Rt = i(41635),
-          Ct = i(84670),
-          q = i.n(Ct);
+          Ct = i(41635),
+          Rt = i(84670),
+          q = i.n(Rt);
         function Et(r) {
           const { subject: e } = r,
             [s, a] = (0, I.useState)(!1),
@@ -1228,7 +1228,7 @@
                   g &&
                     (0, t.jsx)("img", {
                       className: q().Flag,
-                      src: `${Ce.TS.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
+                      src: `${Re.TS.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
                     }),
                   x.T.Localize("#commentsanctiondialog_moderate"),
                   e &&
@@ -1264,11 +1264,11 @@
           const { subject: e } = r,
             s = (0, I.useMemo)(() => {
               var a;
-              const g = (0, Rt.D5)(
+              const g = (0, Ct.D5)(
                 (a = e == null ? void 0 : e.reports) != null ? a : [],
                 (y) => y.report_reason,
               );
-              return g.sort((y, m) => y[1] - m[1]), g;
+              return g.sort((y, c) => y[1] - c[1]), g;
             }, [e.reports]);
           return s.length === 0
             ? null
@@ -1298,28 +1298,28 @@
           const {
               sanctionMutation: g,
               acquitMutation: y,
-              subject: m,
+              subject: c,
               eSubjectType: X,
               gidComment: K,
               clanSteamID: De,
               authorSteamID: J,
               onClose: ue,
             } = r,
-            _ = m == null ? void 0 : m.reported_content_id,
+            W = c == null ? void 0 : c.reported_content_id,
             [$, H] = (0, I.useState)("main"),
             re = [
               {
                 name: "Reports",
                 key: "reports",
                 contents: (0, t.jsx)(we.tH, {
-                  children: (0, t.jsx)(c.lX, { subject: m }),
+                  children: (0, t.jsx)(u.lX, { subject: c }),
                 }),
               },
               {
                 name: "History",
                 key: "history",
                 contents: (0, t.jsx)(we.tH, {
-                  children: (0, t.jsx)(c.B8, { reportedContentID: _ }),
+                  children: (0, t.jsx)(u.B8, { reportedContentID: W }),
                 }),
               },
               {
@@ -1337,15 +1337,15 @@
             };
           let de = 0,
             ee = 0;
-          if (m)
-            for (const ae of m.reports)
+          if (c)
+            for (const ae of c.reports)
               ae.time_resolved && !ae.time_disputed && de++,
                 ae.time_dispute_resolved && ee++;
           const me =
-              !!(m != null && m.reported_content_id) &&
-              !m.owner_dispute_time &&
-              m.resolved === Ve.S6,
-            ne = m !== void 0 && !!m.owner_dispute_time;
+              !!(c != null && c.reported_content_id) &&
+              !c.owner_dispute_time &&
+              c.resolved === Ve.S6,
+            ne = c !== void 0 && !!c.owner_dispute_time;
           return (0, t.jsx)(Bt.wA, {
             onlyPopoutIfNeeded: !0,
             popupHeight: 340,
@@ -1375,18 +1375,18 @@
                                   contrast: "description",
                                   children: [
                                     (e =
-                                      m == null
+                                      c == null
                                         ? void 0
-                                        : m.unresolved_report_count) != null
+                                        : c.unresolved_report_count) != null
                                       ? e
                                       : 0,
                                     " unresolved / ",
                                     de,
                                     " resolved / ",
                                     (s =
-                                      m == null
+                                      c == null
                                         ? void 0
-                                        : m.unresolved_dispute_count) != null
+                                        : c.unresolved_dispute_count) != null
                                       ? s
                                       : 0,
                                     " disputed / ",
@@ -1418,18 +1418,19 @@
                                   }),
                                 }),
                                 (0, t.jsx)(Ut, {
-                                  subject: m,
+                                  subject: c,
                                   acquitMutation: y,
                                   onClose: ue,
                                 }),
-                                (0, t.jsx)(zt, { subject: m, onClose: ue }),
-                                (0, t.jsx)(Q.fu, {
-                                  disabled: !_,
-                                  onClick: () => H("escalate"),
-                                  children: x.T.Localize(
-                                    "#moderation_escalation_escalate",
-                                  ),
-                                }),
+                                (0, t.jsx)(zt, { subject: c, onClose: ue }),
+                                (0, h.h)(c) &&
+                                  (0, t.jsx)(Q.fu, {
+                                    disabled: !W,
+                                    onClick: () => H("escalate"),
+                                    children: x.T.Localize(
+                                      "#moderation_escalation_escalate",
+                                    ),
+                                  }),
                                 !ne &&
                                   (0, t.jsx)("button", {
                                     disabled: !me,
@@ -1440,7 +1441,7 @@
                                   (0, t.jsxs)("span", {
                                     children: [
                                       (0, t.jsx)("a", {
-                                        href: `${Ce.TS.HELP_BASE_URL}tickermaster/ticket/${m.owner_dispute_details}`,
+                                        href: `${Re.TS.HELP_BASE_URL}tickermaster/ticket/${c.owner_dispute_details}`,
                                         children: (0, t.jsx)(U.EY, {
                                           size: "2",
                                           children: x.T.Localize(
@@ -1449,7 +1450,7 @@
                                         }),
                                       }),
                                       (0, t.jsx)("button", {
-                                        disabled: !_,
+                                        disabled: !W,
                                         onClick: () =>
                                           H("editownerdisputedetails"),
                                         className: q().EditButton,
@@ -1462,14 +1463,16 @@
                           ],
                         }),
                       $ === "escalate" &&
-                        !!_ &&
-                        (0, t.jsx)(v.R, {
-                          reportedContentID: _,
+                        !!W &&
+                        (0, t.jsx)(h.R, {
+                          reportedContentID: W,
+                          eCurrentLevel:
+                            c == null ? void 0 : c.required_moderator_level,
                           onClose: () => H("main"),
                         }),
                       $ === "sanction" &&
                         (0, t.jsx)(yt, {
-                          subject: m != null ? m : { subject_type: X },
+                          subject: c != null ? c : { subject_type: X },
                           clanSteamID: De,
                           authorSteamID: J,
                           sanctionMutation: g,
@@ -1477,19 +1480,19 @@
                           onCancel: () => H("main"),
                         }),
                       $ === "ownerdispute" &&
-                        !!_ &&
+                        !!W &&
                         (0, t.jsx)(Ot, {
-                          reportedContentID: _,
+                          reportedContentID: W,
                           onClose: () => H("main"),
                         }),
                       $ === "editownerdisputedetails" &&
-                        !!_ &&
+                        !!W &&
                         (0, t.jsx)(Dt, {
-                          reportedContentID: _,
+                          reportedContentID: W,
                           onClose: () => H("main"),
                           currentDetails:
                             (a =
-                              m == null ? void 0 : m.owner_dispute_details) !=
+                              c == null ? void 0 : c.owner_dispute_details) !=
                             null
                               ? a
                               : "",
@@ -1504,9 +1507,9 @@
         function Dt(r) {
           const { reportedContentID: e, onClose: s, currentDetails: a } = r,
             [g, y] = (0, I.useState)(a),
-            m = (0, Ee.wy)(e, g),
+            c = (0, Ee.wy)(e, g),
             X = async () => {
-              await m.mutateAsync(), s();
+              await c.mutateAsync(), s();
             };
           return (0, t.jsxs)(t.Fragment, {
             children: [
@@ -1537,7 +1540,7 @@
                   }),
                   (0, t.jsx)(G.$, {
                     onClick: s,
-                    loading: m.isPending,
+                    loading: c.isPending,
                     children: x.T.Localize("#moderation_ownerdispute_cancel"),
                   }),
                 ],
@@ -1549,7 +1552,7 @@
           const { reportedContentID: e, onClose: s } = r,
             [a, g] = (0, I.useState)(""),
             y = (0, Ee.y4)(e, a),
-            m = async () => {
+            c = async () => {
               await y.mutateAsync(), s();
             };
           return (0, t.jsxs)(f.Z, {
@@ -1581,7 +1584,7 @@
                 direction: "row",
                 children: [
                   (0, t.jsx)(Q.fu, {
-                    onClick: m,
+                    onClick: c,
                     children: x.T.Localize("#moderation_ownerdispute_dispute"),
                   }),
                   (0, t.jsx)(Q.fu, {
@@ -1640,7 +1643,7 @@
       },
       86946: (k, V, i) => {
         "use strict";
-        i.d(V, { j: () => c, w: () => v });
+        i.d(V, { j: () => u, w: () => h });
         var t = i(7850),
           N = i(64238),
           L = i.n(N),
@@ -1650,15 +1653,15 @@
           f = i(68031),
           x = i(8928),
           l = i(69289);
-        function c(S) {
+        function u(S) {
           const {
-              children: h,
+              children: v,
               beforeContent: F,
               afterContent: M,
               hasValue: P,
-              ...u
+              ...d
             } = S,
-            j = v(u);
+            j = h(d);
           return (0, t.jsxs)(f.s, {
             ...j,
             align: "center",
@@ -1666,39 +1669,39 @@
             minWidth: "0",
             children: [
               F && (0, t.jsx)(f.s, { paddingRight: "2", children: F }),
-              (0, t.jsx)(Q.az, { flexGrow: "1", minWidth: "0", children: h }),
+              (0, t.jsx)(Q.az, { flexGrow: "1", minWidth: "0", children: v }),
               M && (0, t.jsx)(f.s, { paddingLeft: "2", children: M }),
             ],
           });
         }
-        function v(S) {
+        function h(S) {
           const {
-              variant: h = "basic",
+              variant: v = "basic",
               size: F = "2",
               radius: M,
               focusable: P = !0,
-              hoverable: u = !0,
+              hoverable: d = !0,
               clickable: j = !0,
               disabled: b,
               className: p,
-              status: d,
+              status: m,
               color: n,
               ...Y
             } = S,
-            se = h === "underline" ? "none" : M;
+            se = v === "underline" ? "none" : M;
           return (0, l.mz)(
             {
               ...Y,
               radius: se,
-              "data-status": d,
+              "data-status": m,
               "data-dull-color": n && n !== "dull" ? n : void 0,
               className: L()(
                 U.ControlBox,
                 P && !b && U.Focusable,
-                u && !b && U.Hoverable,
+                d && !b && U.Hoverable,
                 j && !b && U.Clickable,
                 b && U.Disabled,
-                U[`Variant-${h}`],
+                U[`Variant-${v}`],
                 U[`Size-${F}`],
                 p,
               ),
@@ -1728,73 +1731,73 @@
         });
         var t = i(90626),
           N = i(92757);
-        function L(l, c) {
-          let v;
-          if (typeof l == "string") v = l;
-          else if ("location" in l) v = l.location.search;
-          else if ("search" in l) v = l.search;
+        function L(l, u) {
+          let h;
+          if (typeof l == "string") h = l;
+          else if ("location" in l) h = l.location.search;
+          else if ("search" in l) h = l.search;
           else return;
-          const S = new URLSearchParams(v.substring(1));
-          if (S.has(c)) {
-            const h = S.getAll(c);
-            return h[h.length - 1];
+          const S = new URLSearchParams(h.substring(1));
+          if (S.has(u)) {
+            const v = S.getAll(u);
+            return v[v.length - 1];
           }
         }
-        function U(l, c, v, S = !1) {
-          const h = new URLSearchParams(l.location.search.substring(1));
-          if (v != null && v != null) {
-            if (h.get(c) == v) return;
-            h.set(c, v);
+        function U(l, u, h, S = !1) {
+          const v = new URLSearchParams(l.location.search.substring(1));
+          if (h != null && h != null) {
+            if (v.get(u) == h) return;
+            v.set(u, h);
           } else {
-            if (!h.has(c)) return;
-            h.delete(c);
+            if (!v.has(u)) return;
+            v.delete(u);
           }
           S
-            ? l.replace(`?${h.toString()}`, { ...l.location.state })
-            : l.push(`?${h.toString()}`);
+            ? l.replace(`?${v.toString()}`, { ...l.location.state })
+            : l.push(`?${v.toString()}`);
         }
-        function G(l, c, v) {
-          U(l, c, v, !0);
+        function G(l, u, h) {
+          U(l, u, h, !0);
         }
-        function Q(l, c) {
-          const v = (0, N.W6)(),
+        function Q(l, u) {
+          const h = (0, N.W6)(),
             S = (0, N.zy)(),
-            h = (0, t.useMemo)(() => {
+            v = (0, t.useMemo)(() => {
               const M = L(S.search, l);
               return M != null && M != null
-                ? c != null && c != null
-                  ? typeof c == "boolean"
-                    ? c.constructor(M !== "false")
-                    : c.constructor(M)
+                ? u != null && u != null
+                  ? typeof u == "boolean"
+                    ? u.constructor(M !== "false")
+                    : u.constructor(M)
                   : M
-                : c;
-            }, [S.search, l, c]),
+                : u;
+            }, [S.search, l, u]),
             F = (0, t.useCallback)(
               (M, P = !1) => {
-                U(v, l, M != null && M != null ? String(M) : null, P);
+                U(h, l, M != null && M != null ? String(M) : null, P);
               },
-              [v, l],
+              [h, l],
             );
-          return [h, F];
+          return [v, F];
         }
-        function f(l, c, v = !1) {
+        function f(l, u, h = !1) {
           const S = new URLSearchParams(l.location.search.substring(1));
-          for (const h in c)
-            if (c.hasOwnProperty(h)) {
-              const F = c[h];
-              S.delete(h), F != null && F != null && S.append(h, F);
+          for (const v in u)
+            if (u.hasOwnProperty(v)) {
+              const F = u[v];
+              S.delete(v), F != null && F != null && S.append(v, F);
             }
-          v
+          h
             ? l.replace(`?${S.toString()}`, { ...l.location.state })
             : l.push(`?${S.toString()}`);
         }
-        function x(l, c) {
-          f(l, c, !0);
+        function x(l, u) {
+          f(l, u, !0);
         }
       },
       21418: (k, V, i) => {
         "use strict";
-        i.d(V, { V: () => h, a: () => F });
+        i.d(V, { V: () => v, a: () => F });
         var t = i(7850),
           N = i(90626),
           L = i(36707),
@@ -1804,16 +1807,16 @@
           f = i.n(Q),
           x = i(71421),
           l = i(53107),
-          c = i(19298),
-          v = i(20169),
+          u = i(19298),
+          h = i(20169),
           S = i(92757);
-        function h(P) {
+        function v(P) {
           const {
-              tabs: u,
+              tabs: d,
               bDisableRouting: j,
               startingTab: b,
               controlledTab: p,
-              OnTabChanged: d,
+              OnTabChanged: m,
               classNameCtn: n,
               classNameTab: Y,
               focusRingHasBorderRadius: se,
@@ -1825,7 +1828,7 @@
             } = P,
             Z = (0, S.zy)(),
             fe = (0, S.W6)(),
-            [We, oe] = (0, N.useState)(() => {
+            [_e, oe] = (0, N.useState)(() => {
               var B;
               return (
                 b ||
@@ -1840,23 +1843,23 @@
               B && oe(B);
             }
           }, [Z, Z.key, P.bDisableRouting, oe]);
-          const _e = N.useCallback(
+          const We = N.useCallback(
               (B) => {
                 oe(B.key),
                   j || (0, G.Bm)(fe, "tab", B.key),
-                  d == null || d(B.key),
+                  m == null || m(B.key),
                   B.onClick && B.onClick(B);
               },
-              [j, fe, d],
+              [j, fe, m],
             ),
-            te = u.filter((B) => !B.hidden);
+            te = d.filter((B) => !B.hidden);
           if (!te.length) return null;
-          const Fe = p != null ? p : We,
+          const Fe = p != null ? p : _e,
             le = te.find((B) => B.key === Fe) || te[0],
             ke = pe ? (b != null ? b : te[0].key) : void 0,
             he = (0, t.jsxs)(t.Fragment, {
               children: [
-                (0, t.jsx)(c.Z, {
+                (0, t.jsx)(u.Z, {
                   className: (0, L.A)(
                     f().GraphicalAssetsTabs,
                     ge && f().GraphicalAssetsTabsVertical,
@@ -1865,14 +1868,14 @@
                     n,
                   ),
                   navEntryPreferPosition: pe
-                    ? v.iU.PREFERRED_CHILD
-                    : v.iU.FIRST,
+                    ? h.iU.PREFERRED_CHILD
+                    : h.iU.FIRST,
                   children: te.map((B, ot) =>
                     (0, t.jsx)(
                       M,
                       {
                         tab: B,
-                        OnTabClick: _e,
+                        OnTabClick: We,
                         classNameTab: Y,
                         focusRingHasBorderRadius: se,
                         active: B.key === le.key,
@@ -1882,11 +1885,11 @@
                     ),
                   ),
                 }),
-                le && (0, t.jsx)(c.Z, { className: z, children: le.contents }),
+                le && (0, t.jsx)(u.Z, { className: z, children: le.contents }),
               ],
             });
           return ge
-            ? (0, t.jsx)(c.Z, {
+            ? (0, t.jsx)(u.Z, {
                 className: (0, L.A)(f().GraphicalAssetsTabsLayoutVertical),
                 children: he,
               })
@@ -1894,21 +1897,21 @@
         }
         function F(P) {
           const {
-            statusType: u = "success",
+            statusType: d = "success",
             bShowStatusBox: j,
             children: b,
           } = P;
           let p = "";
           return (
-            u === "success"
+            d === "success"
               ? (p = f().StatusSuccess)
-              : u === "danger"
+              : d === "danger"
                 ? (p = f().StatusDanger)
-                : u === "caution"
+                : d === "caution"
                   ? (p = f().StatusCaution)
-                  : u === "info"
+                  : d === "info"
                     ? (p = f().StatusInfo)
-                    : u === "incomplete" && (p = f().StatusIncomplete),
+                    : d === "incomplete" && (p = f().StatusIncomplete),
             (0, t.jsx)("div", {
               className: (0, L.A)(
                 f().GraphicalAssetStatus,
@@ -1921,41 +1924,41 @@
         }
         function M(P) {
           const {
-            tab: u,
+            tab: d,
             OnTabClick: j,
             classNameTab: b,
             focusRingHasBorderRadius: p,
-            active: d,
+            active: m,
             preferredFocus: n,
           } = P;
           return (0, t.jsx)(l.e7, {
-            condition: !!(u.statusToolTip || u.tooltip),
+            condition: !!(d.statusToolTip || d.tooltip),
             wrap: (Y) =>
               (0, t.jsx)(x.he, {
-                toolTipContent: u.statusToolTip || u.tooltip,
+                toolTipContent: d.statusToolTip || d.tooltip,
                 children: Y,
               }),
-            children: (0, t.jsxs)(c.Z, {
+            children: (0, t.jsxs)(u.Z, {
               className: (0, L.A)(
                 f().GraphicalAssetsTab,
-                d && f().Active,
-                d && "ActiveTab",
+                m && f().Active,
+                m && "ActiveTab",
                 b,
               ),
-              onActivate: () => j(u),
+              onActivate: () => j(d),
               preferredFocus: n,
               focusRingHasBorderRadius: p,
               children: [
-                !!u.vo_warning &&
+                !!d.vo_warning &&
                   (0, t.jsx)(x.he, {
-                    toolTipContent: u.vo_warning,
+                    toolTipContent: d.vo_warning,
                     children: (0, t.jsx)("div", {
                       className: f().VOWarning,
                       children: (0, U.we)("#EventEditor_VOWarning"),
                     }),
                   }),
-                u.status,
-                u.name,
+                d.status,
+                d.name,
               ],
             }),
           });

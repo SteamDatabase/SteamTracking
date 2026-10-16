@@ -499,6 +499,9 @@
                       (0, _.jsx)(_, {
                         subject: _,
                       }),
+                      (0, _.jsx)(_, {
+                        subject: _,
+                      }),
                     ],
                   }),
                   _ &&
@@ -531,7 +534,7 @@
         function _(_) {
           const { subject: _ } = _,
             [_, _] = (0, _.useState)(!1);
-          return !_.reported_content_id || _.resolved !== _._
+          return !_.reported_content_id || !(0, _._)(_)
             ? null
             : (0, _.jsxs)(_.Fragment, {
                 children: [
@@ -547,11 +550,32 @@
                       strTitle: _._.Localize("#moderation_escalation_escalate"),
                       children: (0, _.jsx)(_._, {
                         reportedContentID: _.reported_content_id,
+                        eCurrentLevel: _.required_moderator_level,
                         onClose: () => _(!1),
                       }),
                     }),
                 ],
               });
+        }
+        function _(_) {
+          var _, _, _;
+          const { subject: _ } = _,
+            _ = (0, _._)();
+          return !!_.reported_content_id &&
+            ((_ = _.resolved) != null ? _ : _._) !== _._ &&
+            (((_ = _.unresolved_report_count) != null ? _ : 0) > 0 ||
+              ((_ = _.unresolved_dispute_count) != null ? _ : 0) > 0)
+            ? (0, _.jsx)(_._, {
+                size: "1",
+                color: "dull",
+                loading: _.isPending,
+                onClick: () =>
+                  _.mutate({
+                    reportedContentID: _.reported_content_id,
+                  }),
+                children: _._.Localize("#moderation_actions_sustain_short"),
+              })
+            : null;
         }
         function _(_) {
           const { subject: _, onClose: _ } = _,

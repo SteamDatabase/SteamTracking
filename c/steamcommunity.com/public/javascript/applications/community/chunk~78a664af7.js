@@ -1520,13 +1520,14 @@
                                   subject: _,
                                   onClose: _,
                                 }),
-                                (0, _.jsx)(_._, {
-                                  disabled: !_,
-                                  onClick: () => _("escalate"),
-                                  children: _._.Localize(
-                                    "#moderation_escalation_escalate",
-                                  ),
-                                }),
+                                (0, _._)(_) &&
+                                  (0, _.jsx)(_._, {
+                                    disabled: !_,
+                                    onClick: () => _("escalate"),
+                                    children: _._.Localize(
+                                      "#moderation_escalation_escalate",
+                                    ),
+                                  }),
                                 !_ &&
                                   (0, _.jsx)("button", {
                                     disabled: !_,
@@ -1562,6 +1563,8 @@
                         !!_ &&
                         (0, _.jsx)(_._, {
                           reportedContentID: _,
+                          eCurrentLevel:
+                            _ == null ? void 0 : _.required_moderator_level,
                           onClose: () => _("main"),
                         }),
                       _ === "sanction" &&

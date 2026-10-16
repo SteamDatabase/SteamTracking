@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Unlock Thread (%1$s)",
     "moderation_actions_sustain": "Sustain moderation",
     "moderation_actions_sustain_multiple": "Sustain moderation (%1$s)",
+    "moderation_actions_sustain_short": "Sustain",
     "moderation_actions_suspicious": "Mark Suspicious",
     "moderation_actions_suspicious_multiple": "Mark Suspicious (%1$s)",
     "moderation_actions_unknown": "Unknown",

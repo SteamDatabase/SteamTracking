@@ -595,6 +595,7 @@
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -608,8 +609,24 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
+        const _ = [
+          [_._, "#moderation_escalationlevel_any"],
+          [_._, "#moderation_escalationlevel_supervisor"],
+          [_._, "#moderation_escalationlevel_valve"],
+        ];
         function _(_) {
+          var _;
+          return (
+            ((_ = _ == null ? void 0 : _.required_moderator_level) != null
+              ? _
+              : _._) < _._
+          );
+        }
+        function _(_) {
+          var _;
           const { reportedContentID: _, onClose: _ } = _,
+            _ = (_ = _.eCurrentLevel) != null ? _ : _._,
+            _ = _.filter(([_]) => _ > _),
             [_, _] = (0, _.useState)(_._),
             _ = (0, _._)(_),
             [_, _] = (0, _.useState)(""),
@@ -626,26 +643,20 @@
               (0, _.jsx)(_._, {
                 children: _._.Localize("#moderation_escalation_description"),
               }),
-              (0, _.jsxs)("select", {
+              (0, _.jsx)("select", {
                 className: _().EscalationLevelSelect,
                 value: _,
                 onChange: (_) => _(parseInt(_.target.value)),
-                children: [
-                  (0, _.jsx)("option", {
-                    value: _._,
-                    children: _._.Localize("#moderation_escalationlevel_any"),
-                  }),
-                  (0, _.jsx)("option", {
-                    value: _._,
-                    children: _._.Localize(
-                      "#moderation_escalationlevel_supervisor",
-                    ),
-                  }),
-                  (0, _.jsx)("option", {
-                    value: _._,
-                    children: _._.Localize("#moderation_escalationlevel_valve"),
-                  }),
-                ],
+                children: _.map(([_, _]) =>
+                  (0, _.jsx)(
+                    "option",
+                    {
+                      value: _,
+                      children: _._.Localize(_),
+                    },
+                    _,
+                  ),
+                ),
               }),
               (0, _.jsx)("label", {
                 children: _._.Localize("#moderation_escalation_escalationnote"),
@@ -667,6 +678,7 @@
                   }),
                   (0, _.jsx)(_._, {
                     onClick: _,
+                    disabled: _.length == 0,
                     loading: _.isPending,
                     children: _._.Localize("#moderation_escalation_escalate"),
                   }),
