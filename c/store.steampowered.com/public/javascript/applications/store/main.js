@@ -67945,6 +67945,11 @@
                       _: _._.readBool,
                       _: _._.writeBool,
                     },
+                    use_name_match_scoring: {
+                      _: 11,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
                   },
                 }),
               _.sm_m
@@ -76903,6 +76908,7 @@
               filters: _,
               include_tags: _ = !1,
               include_creators: _ = !1,
+              use_name_match_scoring: _ = !1,
             } = _,
             _ = _._.Init(_._);
           (0, _._)(_, _),
@@ -76912,7 +76918,8 @@
             _.Body().set_max_results(_),
             _ && _.Body().set_filters(_._.fromObject(_)),
             _.Body().set_search_tags(_),
-            _.Body().set_search_creators(_);
+            _.Body().set_search_creators(_),
+            _ && _.Body().set_use_name_match_scoring(!0);
           const _ = await _._.SearchSuggestions(_, _);
           if (!_.BSuccess())
             throw `Error loading search suggestions: ${_.GetErrorMessage()}`;
@@ -135208,22 +135215,6 @@ Status Code:` +
           _: () => _,
           _: () => _,
         });
-        function _() {
-          const _ = navigator.userAgent.match(
-            /Valve (?<family>Steam (?:Client|GameOverlay|Tenfoot|ClientUI|Gamepad(?: VR)?(?:\/Steam Deck)?))( \[(?<betaid>[^\]]*)\])?(\/(?<launcher>[A-Za-z0-9_]+))?\/(?<version>[0-9]*)/,
-          );
-          if (_) return _.groups;
-        }
-        function _() {
-          const _ = _()?.betaid;
-          return (
-            _ &&
-            (_ == "Steam Main Client" ||
-              _ == "Steam Beta Update" ||
-              _ == "Steam Deck Beta" ||
-              _ == "Steam Deck Main")
-          );
-        }
         let _ = !1,
           _ = !1,
           _ = !1,
@@ -142277,7 +142268,49 @@ Status Code:` +
               .map((_) => _.toObject())
           );
         }
-        var _ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = ["Steam Main Client", "Steam Deck Main"],
+          _ = null,
+          _ = null;
+        function _() {
+          return typeof navigator < "u" ? navigator.userAgent : void 0;
+        }
+        function _(_ = _()) {
+          const _ = _?.match(
+            /Valve (?<family>Steam (?:Client|GameOverlay|Tenfoot|ClientUI|Gamepad(?: VR)?(?:\/Steam Deck)?))( \[(?<betaid>[^\]]*)\])?(\/(?<launcher>[A-Za-z0-9_]+))?\/(?<version>[0-9]*)/,
+          );
+          if (_) return _.groups;
+        }
+        function _(_, _) {
+          const _ = _(_)?.betaid;
+          return !!_ && _.includes(_);
+        }
+        function _(_ = _()) {
+          return _(_, _);
+        }
+        function _(_ = _()) {
+          return _(_, _);
+        }
+        function _(_ = _()) {
+          return _([..._, ..._], _);
+        }
+        function _(_ = _()) {
+          return _([..._, ..._, ..._], _);
+        }
+        const _ = {
+          name: "search_edismax",
+          options: {
+            path: "/",
+          },
+          preferenceControls: {
+            isTechnicallyNecessary: !0,
+          },
+        };
+        function _() {
+          const _ = (0, _._)(_);
+          return _ !== void 0 ? _ != "" && _ != "0" : _();
+        }
         const _ = {
             include_assets: !0,
             apply_user_filters: !0,
@@ -142390,7 +142423,17 @@ Status Code:` +
         function _(_, _, _, _ = !0) {
           const _ = (0, _._)(_),
             _ = _(),
-            _ = _.useMemo(() => (0, _._)(_, _), [_]),
+            _ = _.useMemo(
+              () =>
+                (0, _._)(
+                  {
+                    ..._,
+                    use_name_match_scoring: _(),
+                  },
+                  _,
+                ),
+              [_],
+            ),
             _ = (0, _._)(_, 5, _),
             _ = _(_, _ === void 0 ? "" : _),
             _ = _ && _ == "",
@@ -147023,7 +147066,7 @@ Status Code:` +
     },
     (_) => {
       var _ = (_) => _((_._ = _));
-      _._(0, [78997], () => _(87481));
+      _._(0, [78997], () => _(96718));
       var _ = _._();
     },
   ]);

@@ -105,7 +105,7 @@
     "Duration_Abbreviation_HourMinuteSecond": "%1$s h %2$s m %3$s s",
     "Duration_Abbreviation_MinuteSecond": "%1$s m %2$s s",
     "Duration_Abbreviation_Second": "%1$s s",
-    "Duration_WrittenNegation": "cu %1$s în urmă",
+    "Duration_WrittenNegation": "Acum %1$s",
     "ReadableDuration_Months": "%1$s luni",
     "ReadableDuration_OneMonth": "o lună",
     "ReadableDuration_Days": "%1$s zile",

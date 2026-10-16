@@ -912,6 +912,8 @@ $ORIGIN
 *pcubSignature > 0
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG;
+++CCUNG`
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +automatic
@@ -1801,8 +1803,6 @@ $ORIGIN
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
-18:44:16
-18:44:21
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CFutureSharedStateIbE
@@ -1846,6 +1846,9 @@ $ORIGIN
 2048
 208.64.200.0/22
 208.78.164.0/22
+20:46:01
+20:46:13
+20:46:14
 20CCDDBAppDetailCommon
 20CECSigningPrivateKey
 20CNetFilterEncryption
@@ -2058,7 +2061,6 @@ $ORIGIN
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
-9Hh3J
 9IMemAlloc
 9IValidate
 : Tried to copy from a message with a different type. to:
@@ -2066,7 +2068,6 @@ $ORIGIN
 : failed to parse contents
 : inherit\n
 :%02X
-:7Q7
 :BAD BOOLEAN
 :BAD ENUMERATED
 :BAD INTEGER
@@ -6761,7 +6762,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 13 2026
+Oct 14 2026
 October
 Odia
 Offensive Avatar
@@ -8201,7 +8202,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Oct 13 2026 18:44:21
+Startup - updater built Oct 14 2026 20:46:13
 State
 StaticFileWriterThread()
 Steam
@@ -12173,6 +12174,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
+ggen(
 givenName
 glBegin
 glBindTexture

@@ -1,6 +1,6 @@
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [864],
+    [20864],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -24,7 +24,7 @@
         }
         const _ = (0, _.createContext)(!1);
         function _() {
-          return (0, _.useContext)(_);
+          return !0;
         }
         var _;
         const _ = Intl.DateTimeFormat().resolvedOptions().timeZone,
@@ -42,6 +42,7 @@
         }
         function _() {
           "document" in globalThis &&
+            _ &&
             (document.cookie = `timezoneName=${_};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
         }
         _();

@@ -12,14 +12,11 @@
           const { appid: L, profileUrl: C, dlc: D } = f,
             gt = C
               ? `${C}/achievements/${L}`
-              : `${Config.COMMUNITY_BASE_URL}achievements/${L}`;
+              : `${e.TS.COMMUNITY_BASE_URL}achievements/${L}`;
           return D !== void 0 ? `${gt}?dlc=${D}` : gt;
         }
         function w(f) {
-          const { appid: L, profileUrl: C } = f;
-          return C
-            ? `${C}/stats/${L}/achievements/`
-            : `${e.TS.COMMUNITY_BASE_URL}stats/${L}/achievements/`;
+          return G(f);
         }
       },
       3946: (K, mt, i) => {
@@ -114,7 +111,7 @@
         }
         const f = (0, G.createContext)(!1);
         function L() {
-          return (0, G.useContext)(f);
+          return !0;
         }
         const C = Intl.DateTimeFormat().resolvedOptions().timeZone,
           D =
@@ -130,6 +127,7 @@
         }
         function g() {
           "document" in globalThis &&
+            C &&
             (document.cookie = `timezoneName=${C};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
         }
         g();

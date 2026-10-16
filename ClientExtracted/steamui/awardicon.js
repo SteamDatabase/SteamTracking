@@ -23,7 +23,7 @@
           a = n.n(d),
           I = n(7727),
           C = n(8658),
-          O = "11123049";
+          O = "11127589";
         function i(r) {
           const { reaction: t } = r,
             o = (0, _.KL)(t.reaction_type);
@@ -61,4 +61,4 @@
     },
   ]);
 })();
-//# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/awardicon.js.map
+//# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/awardicon.js.map

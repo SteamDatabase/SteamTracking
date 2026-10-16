@@ -1388,35 +1388,129 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 
-/* achievements completionist */
-.showcase_achievementscompletionist_games .showcase_content_bg {
-	padding-bottom: 2px;
+/* achievements completionist: two-column grid of capsule + 40px bar; slots scale with the column */
+.showcase_achievementscompletionist_slots {
+	display: grid;
+	grid-template-columns: repeat( 2, minmax( 0, 1fr ) );
+	gap: 12px 7px;
 }
 
 .showcase_achievementscompletionist_game {
 	position: relative;
-	width: 304px;
-	height: 167px;
-	line-height: 167px;
-	margin-left: 7px;
-	margin-bottom: 12px;
-	//box-shadow: 0 0 3px 2px rgba( 255, 246, 23, 0.8 );
+	float: none;
+	box-sizing: border-box;
+	line-height: normal;
 }
 
-.showcase_achievementscompletionist_games .showcase_achievementscompletionist_game:nth-child(2n-1) {
-	margin-left: 0;
+.showcase_achievementscompletionist_game > a {
+	display: block;
+	padding-bottom: 40px;
 }
 
 .showcase_achievementscompletionist_game img.game_capsule {
-	width: 304px;
-	height: 142px;
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 304 / 142;
 }
 
-.showcase_achievementscompletionist_game.openslot {
-	width: 300px;
+.showcase_achievementscompletionist_game .showcase_openslot_placeholder .profile_customization_edit_icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50% );
 }
 
-.showcase_achievementscompletionist_game_num_achievements {
+@media screen and ( max-width: 500px )
+{
+	html.responsive .showcase_achievementscompletionist_slots {
+		grid-template-columns: minmax( 0, 1fr );
+	}
+}
+
+/* completion trophies: blue = base game groups, purple = DLC groups; a count followed by up to three overlapping trophies.
+   Shared by the slot's bottom bar and the editor picker rows. */
+.showcase_completion_ribbons {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	line-height: normal;
+}
+
+.showcase_completion_ribbon_group {
+	--trophy-base: 24px;
+	display: inline-flex;
+	align-items: center;
+	color: #1a9fff;
+}
+
+.showcase_completion_ribbon_group.dlc {
+	color: #b658c4;
+}
+
+.showcase_completion_ribbon_count {
+	font-size: 14px;
+	font-weight: 500;
+	margin-right: 4px;
+}
+
+.showcase_completion_ribbon {
+	--trophy-h: var(--trophy-base);
+	--trophy-w: calc( var(--trophy-h) * 16 / 24 );
+	display: inline-block;
+	position: relative;
+	width: var(--trophy-w);
+	height: var(--trophy-h);
+	background: url( 'https://community.fastly.steamstatic.com/public/images/profile/achievement_trophy.svg' ) no-repeat center / contain;
+	z-index: 3;
+}
+
+.showcase_completion_ribbon_group.dlc .showcase_completion_ribbon {
+	background-image: url( 'https://community.fastly.steamstatic.com/public/images/profile/achievement_trophy_dlc.svg' );
+}
+
+.showcase_completion_ribbon_group.empty {
+	color: #8f98a0;
+}
+
+.showcase_completion_ribbon_group.empty .showcase_completion_ribbon {
+	filter: grayscale( 1 ) brightness( 0.7 );
+	opacity: 0.7;
+}
+
+/* Extra trophies sit behind the previous one, each smaller and darker, overlapping the one in front by 30% of its
+   width. A dilated silhouette of the trophy in front (achievement_trophy_dilated.svg, 1.5 units of padding on a
+   16x24 box) is cut out of each one so a thin gap separates it from the trophy in front. --prev-h is the height of
+   the trophy in front; the trophies are vertically centered on each other. */
+.showcase_completion_ribbon.stacked {
+	--trophy-h: calc( var(--trophy-base) * 0.875 );
+	--prev-h: var(--trophy-base);
+	--prev-w: calc( var(--prev-h) * 16 / 24 );
+	margin-left: calc( var(--prev-w) * -0.3 );
+	z-index: 2;
+	filter: brightness( 0.8 );
+	-webkit-mask-image: linear-gradient( #000, #000 ), url( 'https://community.fastly.steamstatic.com/public/images/profile/achievement_trophy_dilated.svg' );
+	mask-image: linear-gradient( #000, #000 ), url( 'https://community.fastly.steamstatic.com/public/images/profile/achievement_trophy_dilated.svg' );
+	-webkit-mask-size: 100% 100%, calc( var(--prev-w) * 19 / 16 ) calc( var(--prev-h) * 27 / 24 );
+	mask-size: 100% 100%, calc( var(--prev-w) * 19 / 16 ) calc( var(--prev-h) * 27 / 24 );
+	-webkit-mask-position: 0 0, calc( var(--prev-w) * ( -0.7 - 1.5 / 16 ) ) calc( ( var(--trophy-h) - var(--prev-h) ) / 2 - var(--prev-h) * 1.5 / 24 );
+	mask-position: 0 0, calc( var(--prev-w) * ( -0.7 - 1.5 / 16 ) ) calc( ( var(--trophy-h) - var(--prev-h) ) / 2 - var(--prev-h) * 1.5 / 24 );
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+}
+
+.showcase_completion_ribbon.stacked + .showcase_completion_ribbon.stacked {
+	--trophy-h: calc( var(--trophy-base) * 0.75 );
+	--prev-h: calc( var(--trophy-base) * 0.875 );
+	z-index: 1;
+	filter: brightness( 0.65 );
+}
+
+/* bottom bar over the capsule: theme header colors as an oval glow rising from the bottom edge,
+   trophies on the left scaled to the bar height, achievement counts on the right */
+.showcase_achievementscompletionist_game_bar {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 
@@ -1424,11 +1518,38 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	bottom: 0;
 	left: 0;
 	right: 0;
-	color: offWhite;
+	height: 40px;
+	padding: 0 8px;
+	z-index: 1; /* own stacking context, so trophies stay under the edit-mode hover overlay (z-index 2) */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	line-height: normal;
+	color: #ffffff;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.showcase_achievementscompletionist_game_bar .showcase_completion_ribbon_group {
+	--trophy-base: 32px;
+}
+
+.showcase_achievementscompletionist_game_ribbons {
+	display: flex;
+	align-items: center;
+}
+
+.showcase_achievementscompletionist_game_counts {
+	text-align: right;
+}
+
+.showcase_achievementscompletionist_game_counts .num_achievements {
+	font-size: 13px;
 	font-weight: 400;
-	background: linear-gradient(90deg, #055ae3 0%, #2d73ff 90%);
-	padding: 2px 8px;
-	line-height: 19px;
+}
+
+.showcase_achievementscompletionist_game_counts .num_rare {
+	font-size: 11px;
+	color: #ffd60a;
 }
 
 .achievement_icon
@@ -2364,6 +2485,41 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	background: linear-gradient(180deg, rgba(255, 255, 255, .3) 0%, var(--color-showcase-header) 80%);;
 }
 
+.achievement_progress_bar_ctn .achievement_segmented_bar {
+	display: grid;
+	height: 8px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.achievement_segmented_bar .segment.base {
+	background-color: #1A9FFF;
+}
+
+.achievement_segmented_bar .segment.base.alternate {
+	background-color: #56abff;
+}
+
+.achievement_segmented_bar .segment.dlc {
+	background-color: #b658c4;
+}
+
+.achievement_segmented_bar .segment.dlc.alternate {
+	background-color: #e796f3;
+}
+
+.game_info_achievements_ribbons {
+	flex: none;
+}
+
+.game_info_achievements_ribbons .showcase_completion_ribbon_group {
+	--trophy-base: 34px;
+}
+
+.game_info_achievement_summary .num_rare {
+	flex: none;
+	color: #ffd60a;
+}
 
 .achievement_icons {
 	flex: none;

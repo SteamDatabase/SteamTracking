@@ -21,9 +21,9 @@
         }
         const a = (0, E.createContext)(!1);
         function M() {
-          return (0, E.useContext)(a);
+          return !0;
         }
-        const x = Intl.DateTimeFormat().resolvedOptions().timeZone,
+        const T = Intl.DateTimeFormat().resolvedOptions().timeZone,
           C =
             "document" in globalThis
               ? document.cookie
@@ -33,11 +33,12 @@
               : void 0,
           B = C && decodeURIComponent(C);
         function m() {
-          return M() ? x : (B ?? x);
+          return M() ? T : (B ?? T);
         }
         function o() {
           "document" in globalThis &&
-            (document.cookie = `timezoneName=${x};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
+            T &&
+            (document.cookie = `timezoneName=${T};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
         }
         o();
       },
@@ -68,7 +69,7 @@
           j = t(80902),
           a = t(16369),
           M = t(36174),
-          x = t(65946),
+          T = t(65946),
           C = t(92264),
           B = t(87937),
           m = t.n(B);
@@ -110,7 +111,7 @@
         function v(l) {
           return (0, j.I)(A(l));
         }
-        function T(l, g) {
+        function x(l, g) {
           return {
             queryKey: ["useMeetSteamQRCode", l, g],
             queryFn: () => (0, e.EI)(l, g),
@@ -119,7 +120,7 @@
           };
         }
         function U(l, g) {
-          return (0, j.I)(T(l, g)).data?.qrcode;
+          return (0, j.I)(x(l, g)).data?.qrcode;
         }
         function b(l, g = Intl.DateTimeFormat().resolvedOptions().timeZone) {
           return l.location_type === "in_person"
@@ -128,7 +129,7 @@
         }
         function W(l) {
           const g = (0, E.B)();
-          return (0, x.q3)(() => ({
+          return (0, T.q3)(() => ({
             rtime_start: l.rtime_start,
             rtime_end: l.rtime_end,
             sDisplayTimeZone: b(l, g),
@@ -178,11 +179,11 @@
           j = "meetsteam/registrations",
           a = "meetsteam/registrationdetails",
           M = "meetsteam/updateregistration",
-          x = "meetsteam/registrantinfo",
+          T = "meetsteam/registrantinfo",
           C = "meetsteam/attendance_qrcode";
         async function B(h, P) {
           const A = new URL(e.TS.STORE_BASE_URL + h);
-          for (const [T, U] of Object.entries(P)) A.searchParams.set(T, U);
+          for (const [x, U] of Object.entries(P)) A.searchParams.set(x, U);
           const v = await fetch(A, { credentials: "include" });
           if (!v.ok) throw new Error(`${A} answered ${v.status}`);
           return await v.json();
@@ -198,7 +199,7 @@
         }
         async function D() {
           return (
-            (await B(x, {})).info ?? { realname: "", email: "", partners: [] }
+            (await B(T, {})).info ?? { realname: "", email: "", partners: [] }
           );
         }
         async function i(h, P) {
@@ -225,13 +226,13 @@
       },
       24525: (N, L, t) => {
         "use strict";
-        t.d(L, { $e: () => E, B7: () => a, Pe: () => T, Pv: () => j });
+        t.d(L, { $e: () => E, B7: () => a, Pe: () => x, Pv: () => j });
         const e = 0,
           E = 1,
           j = 2,
           a = 4,
           M = 8,
-          x = 16,
+          T = 16,
           C = 32,
           B = 64,
           m = 128,
@@ -244,7 +245,7 @@
           P = 16384,
           A = 32768,
           v = 65536,
-          T = 1073741824,
+          x = 1073741824,
           U = null;
       },
       67529: (N, L, t) => {
@@ -255,7 +256,7 @@
           j = t(71742),
           a = t(24525);
         const M = 0,
-          x = "061818254b2c99ac49e6626adb128ed1282a392f",
+          T = "061818254b2c99ac49e6626adb128ed1282a392f",
           C = "338200c5d6c4d9bdcf6632642a2aeb591fb8a5c2.gif",
           B = "338200c5d6c4d9bdcf6632642a2aeb591fb8a5c2.gif",
           m = 120;
@@ -282,10 +283,10 @@
             return this.m_strName;
           }
           get icon_url_no_default() {
-            return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, x);
+            return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, T);
           }
           get icon_url() {
-            return this.BuildAppURL(this.m_strIconURL, x);
+            return this.BuildAppURL(this.m_strIconURL, T);
           }
           get time_updated_from_server() {
             return this.m_dtUpdatedFromServer;
@@ -356,9 +357,9 @@
         var e = t(3166);
         const E = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
         function j(a, M) {
-          let x = ".jpg";
+          let T = ".jpg";
           (!a || a === "0000000000000000000000000000000000000000") && (a = E),
-            a.length == 44 && ((x = a.substr(-4)), (a = a.substr(0, 40)));
+            a.length == 44 && ((T = a.substr(-4)), (a = a.substr(0, 40)));
           let C = e.TS.AVATAR_BASE_URL;
           return (
             C ||
@@ -366,7 +367,7 @@
               (C += a.substr(0, 2) + "/")),
             (C += a),
             M && M != "small" && (C += "_" + M),
-            (C += x),
+            (C += T),
             C
           );
         }
@@ -379,7 +380,7 @@
           j = t(90626),
           a = t(59432),
           M = t(47689),
-          x = t(77291);
+          T = t(77291);
         class C {
           bIncludeFeaturedAsGameSource = !0;
           get nOverrideDateNow() {
@@ -409,12 +410,12 @@
           }
         }
         const B = new C();
-        (0, x.V)("g_EventCalendarDevFeatures", B);
+        (0, T.V)("g_EventCalendarDevFeatures", B);
         function m(P = 1) {
           const [A, v] = React.useState(() => D()),
-            T = useCancelTokenSource("useTimeNowWithOverride"),
+            x = useCancelTokenSource("useTimeNowWithOverride"),
             U = React.useCallback(() => {
-              T.token.reason || v(D());
+              x.token.reason || v(D());
             }, []);
           return (
             React.useEffect(() => {
@@ -452,7 +453,7 @@
           j = t(58632),
           a = t.n(j),
           M = t(90626),
-          x = t(80902),
+          T = t(80902),
           C = t(75233),
           B = t(72604),
           m = t(76559),
@@ -464,7 +465,7 @@
         const h = "nicknames";
         function P(c) {
           const S = (0, O.KV)(),
-            { data: y, isLoading: R } = (0, x.I)({
+            { data: y, isLoading: R } = (0, T.I)({
               queryKey: [h],
               queryFn: async () => {
                 const l = new Map();
@@ -525,24 +526,24 @@
           }
         }
         const v = new (a())((c) => A(c), { cache: !1 }),
-          T = "avatarandpersonas";
+          x = "avatarandpersonas";
         function U(c) {
-          const { data: S, isLoading: y } = (0, x.I)({
-            queryKey: [T, c],
+          const { data: S, isLoading: y } = (0, T.I)({
+            queryKey: [x, c],
             queryFn: () => v.load(c),
           });
           return [S, y];
         }
         function b(c) {
           const S = (0, C.jE)(),
-            { data: y, isLoading: R } = (0, x.I)({
-              queryKey: [T, c],
+            { data: y, isLoading: R } = (0, T.I)({
+              queryKey: [x, c],
               queryFn: async () => {
                 const g = await v.loadMany(c);
                 return (
                   g.forEach((I) => {
                     if (I instanceof Error) return;
-                    const w = [T, new m.b(I.steamid).GetAccountID()];
+                    const w = [x, new m.b(I.steamid).GetAccountID()];
                     S.setQueryData(w, I);
                   }),
                   g
@@ -562,7 +563,7 @@
           return R ? null : l;
         }
         function W(c) {
-          return ReactQueryClient.getQueryData([T, c]);
+          return ReactQueryClient.getQueryData([x, c]);
         }
       },
       73191: (N, L, t) => {
@@ -573,13 +574,13 @@
           j = t(96538),
           a = t(56330),
           M = t.n(a),
-          x = t(18210),
+          T = t(18210),
           C = t(85599);
         function B(p) {
           const [D, i] = (0, E.useState)(() => !!p),
             [O, h] = (0, E.useState)(!1),
             [P, A] = (0, E.useState)(!1),
-            [v, T] = (0, E.useState)(null),
+            [v, x] = (0, E.useState)(null),
             [U, b] = (0, E.useState)(null),
             [W, c] = (0, E.useState)(null),
             [S, y] = (0, E.useState)(null),
@@ -596,7 +597,7 @@
             fnSetLoading: i,
             fnSetError: h,
             fnSetSuccess: A,
-            fnSetStrError: T,
+            fnSetStrError: x,
             fnSetStrSuccess: b,
             fnSetElSuccess: y,
             fnSetElError: c,
@@ -617,24 +618,24 @@
               bLoading: P,
               bError: A,
               bSuccess: v,
-              strError: T,
+              strError: x,
               strSuccess: U,
               elSuccess: b,
               elError: W,
               strThrobber: c,
             } = i;
-          return A || T || W
+          return A || x || W
             ? (0, e.jsxs)(j.o0, {
                 strTitle: D,
                 bAlertDialog: !0,
                 closeModal: O,
                 className: a.SuccessErrorDialog,
                 children: [
-                  !!T &&
+                  !!x &&
                     (0, e.jsx)("div", {
                       className: a.ErrorStylesWithIcon,
                       children:
-                        T || (0, x.we)("#Error_ErrorCommunicatingWithNetwork"),
+                        x || (0, T.we)("#Error_ErrorCommunicatingWithNetwork"),
                     }),
                   !!W && W,
                 ],
@@ -642,7 +643,7 @@
             : v || U || b
               ? (0, e.jsx)(j.o0, {
                   strTitle: D,
-                  strDescription: U || (0, x.we)("#EventDisplay_Share_Success"),
+                  strDescription: U || (0, T.we)("#EventDisplay_Share_Success"),
                   bAlertDialog: !0,
                   closeModal: O,
                   className: a.SuccessErrorDialog,
@@ -654,7 +655,7 @@
                   bProgressDialog: !0,
                   closeModal: () => {},
                   children: (0, e.jsx)(C.t, {
-                    string: h || c || (0, x.we)("#Loading"),
+                    string: h || c || (0, T.we)("#Loading"),
                     size: "medium",
                     position: "center",
                   }),
@@ -665,7 +666,7 @@
         "use strict";
         t.d(L, {
           Bm: () => a,
-          QD: () => x,
+          QD: () => T,
           f3: () => j,
           iV: () => B,
           ip: () => C,
@@ -701,7 +702,7 @@
         function M(m, o, p) {
           a(m, o, p, !0);
         }
-        function x(m, o) {
+        function T(m, o) {
           const p = (0, E.W6)(),
             D = (0, E.zy)(),
             i = (0, e.useMemo)(() => {
@@ -745,7 +746,7 @@
           j = t(76559),
           a = t(54407),
           M = t(15736),
-          x = t.n(M),
+          T = t.n(M),
           C = t(3166);
         function B(m) {
           const {
@@ -801,16 +802,16 @@
           j = t(16412),
           a = t(69168),
           M = t(50731),
-          x = t(15568);
+          T = t(15568);
         function C(v) {
-          const { labelledBy: T } = v || {},
+          const { labelledBy: x } = v || {},
             [U, b] = E.useState(void 0),
             W = E.useMemo(() => ({ setHeaderId: b }), []);
-          return { headerId: T || U, context: W };
+          return { headerId: x || U, context: W };
         }
         function B(v) {
           const {
-              active: T,
+              active: x,
               onDismiss: U,
               className: b,
               modalClassName: W,
@@ -824,7 +825,7 @@
           return (0, e.jsx)(j.t6.Provider, {
             value: l,
             children: (0, e.jsx)(a.E, {
-              active: T,
+              active: x,
               children: (0, e.jsx)(M.x_, {
                 onEscKeypress: U,
                 className: W,
@@ -842,7 +843,7 @@
         }
         function m(v) {
           const {
-              onDismiss: T,
+              onDismiss: x,
               className: U,
               modalClassName: b,
               bGamepadUIScrollWithin: W,
@@ -854,9 +855,9 @@
             value: R,
             children: jsx(PopupWindow, {
               ...S,
-              onDismiss: T,
+              onDismiss: x,
               children: jsx(ModalPosition, {
-                onEscKeypress: T,
+                onEscKeypress: x,
                 className: b,
                 bGamepadUIScrollWithin: W,
                 children: jsx(Dialog.Content, {
@@ -872,20 +873,20 @@
         }
         const o = (v) => m({ modal: !0, ...v });
         function p(v) {
-          const { className: T, children: U } = v;
+          const { className: x, children: U } = v;
           return (0, e.jsx)(a.E, {
             active: !0,
-            children: (0, e.jsx)("div", { className: T, children: U }),
+            children: (0, e.jsx)("div", { className: x, children: U }),
           });
         }
         var D = t(30343);
         function i(v) {
-          const T = React.useMemo(() => O(), []);
-          return jsx(DialogOverlay, { ...v, DialogWrapper: T });
+          const x = React.useMemo(() => O(), []);
+          return jsx(DialogOverlay, { ...v, DialogWrapper: x });
         }
         function O() {
-          return function (T) {
-            const { className: U, active: b, children: W, modalKey: c } = T,
+          return function (x) {
+            const { className: U, active: b, children: W, modalKey: c } = x,
               S = React.useRef(void 0);
             return (
               useActivateNavTree(S, b, !0),
@@ -912,7 +913,7 @@
           j = t(2259),
           a = t(90626),
           M = t(72739),
-          x = t(71568),
+          T = t(71568),
           C = t(9705),
           B = t(34360),
           m = t(31032),
@@ -956,9 +957,9 @@
         }
         var P = t(30096),
           A = t(3166);
-        const v = (c) => T({ modal: !0, ...c });
-        function T(c) {
-          const S = (0, x.R7)().ownerWindow,
+        const v = (c) => x({ modal: !0, ...c });
+        function x(c) {
+          const S = (0, T.R7)().ownerWindow,
             y = (0, A.Qn)(),
             [R, l] = a.useState(() =>
               y ||
@@ -1013,14 +1014,14 @@
               titleBarClassName: Q,
               saveDimensionsKey: Z,
             } = c,
-            re = (0, x.R7)()?.ownerWindow,
+            re = (0, T.R7)()?.ownerWindow,
             le = (0, m.yk)(),
             ge = { ...(0, C.h3)(Z), onClose: I };
           let ee = 0;
-          c.resizable && (ee |= x.Wf.Resizable),
+          c.resizable && (ee |= T.Wf.Resizable),
             (c.minWidth || c.minHeight) &&
-              (ee |= x.Wf.ApplyBrowserScaleToDimensions),
-            c.fullscreen && (ee |= x.Wf.FullScreen);
+              (ee |= T.Wf.ApplyBrowserScaleToDimensions),
+            c.fullscreen && (ee |= T.Wf.FullScreen);
           const he = "PopupWindow_" + (S ? `${S}_` : "") + a.useId(),
             { popup: $, element: fe } = (0, C.OJ)(
               he,
@@ -1057,7 +1058,7 @@
             children: [
               se && (0, e.jsx)(W, { popup: $ }),
               M.createPortal(
-                (0, e.jsx)(x.kc, {
+                (0, e.jsx)(T.kc, {
                   ownerWindow: $,
                   children: (0, e.jsxs)(E.Y, {
                     children: [
@@ -1120,7 +1121,7 @@
           j = t(18210),
           a = t(36118),
           M = t(90626),
-          x = t(36707),
+          T = t(36707),
           C = t(95695),
           B = t.n(C),
           m = t(25792),
@@ -1131,7 +1132,7 @@
         function O(A) {
           const {
               title: v,
-              tooltip: T,
+              tooltip: x,
               getMinimized: U,
               toggleMinimized: b,
               className: W,
@@ -1142,7 +1143,7 @@
           return (0, e.jsxs)(e.Fragment, {
             children: [
               (0, e.jsxs)("div", {
-                className: (0, x.A)(
+                className: (0, T.A)(
                   W,
                   o.SectionTitleHeader,
                   o.required_title,
@@ -1150,11 +1151,11 @@
                 ),
                 children: [
                   (0, e.jsxs)("div", {
-                    className: (0, x.A)(
+                    className: (0, T.A)(
                       C.CollapsableSectionTitle,
                       "EventEditorTextTitle",
                     ),
-                    children: [v, !!T && (0, e.jsx)(i.o, { tooltip: T })],
+                    children: [v, !!x && (0, e.jsx)(i.o, { tooltip: x })],
                   }),
                   (0, e.jsxs)("div", {
                     className: o.SectionTitleButtons,
@@ -1170,20 +1171,20 @@
           });
         }
         function h(A) {
-          const [v, T] = M.useState(!!A.bStartMinimized);
+          const [v, x] = M.useState(!!A.bStartMinimized);
           return (0, e.jsx)(O, {
             ...A,
             getMinimized: () => v,
-            toggleMinimized: () => T(!v),
+            toggleMinimized: () => x(!v),
             children: A.children,
           });
         }
         function P(A) {
-          const { bIsMinimized: v, fnToggleMinimize: T } = A,
+          const { bIsMinimized: v, fnToggleMinimize: x } = A,
             U = v ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
           return (0, e.jsx)(E.$n, {
             "data-tooltip-text": (0, j.we)(U),
-            onClick: T,
+            onClick: x,
             children: A.bIsMinimized
               ? (0, e.jsx)(a.hz4, {})
               : (0, e.jsx)(a.Xjb, {}),
@@ -1197,13 +1198,13 @@
           E = t.n(e),
           j = t(90626);
         function a(M) {
-          const x = j.useRef(E().CancelToken.source());
+          const T = j.useRef(E().CancelToken.source());
           return (
             j.useEffect(() => {
-              const C = x.current;
+              const C = T.current;
               return () => C.cancel(M ? `${M}: unmounting` : "unmounting");
             }, [M]),
-            x.current
+            T.current
           );
         }
       },
@@ -1215,7 +1216,7 @@
           j = t(92757),
           a = t(25792),
           M = t(99412),
-          x = t(72604),
+          T = t(72604),
           C = t(51614),
           B = t(41735),
           m = t.n(B),
@@ -1238,7 +1239,7 @@
               const z = `${i.TS.STORE_BASE_URL}meetsteam/ajaxupdateattendance`;
               return (
                 (await m().post(z, f, { withCredentials: !0 }))?.data
-                  ?.success == x.R
+                  ?.success == T.R
               );
             },
           });
@@ -1255,7 +1256,7 @@
               const r = `${i.TS.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`;
               return (
                 (await m().post(r, d, { withCredentials: !0 }))?.data
-                  ?.success == x.R
+                  ?.success == T.R
               );
             },
           });
@@ -1278,7 +1279,7 @@
             }
           return { group: null, session: null };
         }
-        function T(_, s) {
+        function x(_, s) {
           const n = (0, D.f1)(),
             [u] = (0, o.useState)(() =>
               (0, O.Tc)("registrations", "application_config")
@@ -1402,7 +1403,7 @@
         }
         function fe(_) {
           const { eventModel: s } = _,
-            n = U(T(s)),
+            n = U(x(s)),
             [u] = (0, l.QD)("accountid"),
             d = (0, D.f1)();
           return (0, e.jsxs)("div", {
@@ -1733,7 +1734,7 @@
         }
         function Oe(_) {
           const { eventModel: s, strSearch: n } = _,
-            u = T(s, n),
+            u = x(s, n),
             [d, r] = (0, o.useState)(null),
             [f, z] = (0, o.useMemo)(() => {
               const K = new Map();

@@ -314262,7 +314262,7 @@
           _ = __webpack_require__("chunkid");
         const _ =
           __webpack_require__._ +
-          "noisegate-audio-worklet.js?contenthash=140b82500accd1ef5a47";
+          "noisegate-audio-worklet.js?contenthash=24b0171ece1d8377f278";
         var _ = __webpack_require__("chunkid"),
           _ = "steamdb",
           _ = Object.defineProperty,
@@ -699067,7 +699067,7 @@ Status Code:` +
               _.nSteamVersion > 0
                 ? _.nSteamVersion.toString()
                 : (0, _._)("#Settings_System_SteamLocalBuild"),
-            _ = parseInt(1791917108),
+            _ = parseInt(1791995983),
             _ = _ && (0, _._)(_, _, _),
             _ = _.sSteamBuildDate,
             _ = (0, _._)() ? " GMT+0000" : " GMT-0800",
@@ -740046,7 +740046,7 @@ Status Code:` +
             _ = (0, _._)(_),
             _ = !0,
             _ = _.nSteamVersion > 0 ? _.nSteamVersion.toString() : "local",
-            _ = parseInt(1791917108),
+            _ = parseInt(1791995983),
             _ = _ && (0, _._)(_, _, _),
             _ = ((_.nCPUHz || 0) / 1e3 / 1e3 / 1e3).toFixed(2) + " GHz",
             _ = (0, _._)(_.nSystemRAMSizeMB * 1024 * 1024, 0),

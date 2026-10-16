@@ -16,6 +16,7 @@
     "Review_RateFunny": "Lucu",
     "Review_GiveAward": "Anugerah",
     "Review_RatingStats_Helpful": "%1$s pemain merasakan ulasan ini berguna",
+    "Review_RatingStats_helpful_none": "Tiada sesiapa yang menilai ulasan ini sebagai bermanfaat lagi",
     "Review_RatingStats_Helpful_Plural": "%1$s orang mendapati ulasan ini bermanfaat",
     "Review_RatingStats_helpful_yours": "%1$s pemain merasakan ulasan anda berguna",
     "Review_RatingStats_helpful_yours_none": "Tiada sesiapa yang menilai ulasan anda sebagai bermanfaat lagi",

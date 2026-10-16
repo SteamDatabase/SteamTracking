@@ -160,7 +160,7 @@
         }
         const _ = (0, _.createContext)(!1);
         function _() {
-          return (0, _.useContext)(_);
+          return !0;
         }
         const _ = Intl.DateTimeFormat().resolvedOptions().timeZone,
           _ =
@@ -176,6 +176,7 @@
         }
         function _() {
           "document" in globalThis &&
+            _ &&
             (document.cookie = `timezoneName=${_};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
         }
         _();

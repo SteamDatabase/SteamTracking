@@ -8,18 +8,15 @@
         "use strict";
         i.d(ce, { v: () => Q });
         var t = i(72609);
-        function m(H) {
-          const { appid: q, profileUrl: k, dlc: Y } = H,
+        function m(X) {
+          const { appid: q, profileUrl: k, dlc: Y } = X,
             C = k
               ? `${k}/achievements/${q}`
-              : `${Config.COMMUNITY_BASE_URL}achievements/${q}`;
+              : `${t.TS.COMMUNITY_BASE_URL}achievements/${q}`;
           return Y !== void 0 ? `${C}?dlc=${Y}` : C;
         }
-        function Q(H) {
-          const { appid: q, profileUrl: k } = H;
-          return k
-            ? `${k}/stats/${q}/achievements/`
-            : `${t.TS.COMMUNITY_BASE_URL}stats/${q}/achievements/`;
+        function Q(X) {
+          return m(X);
         }
       },
       84909: (b, ce, i) => {
@@ -28,7 +25,7 @@
         var t = i(7850),
           m = i(90626),
           Q = i(73788),
-          H = i(8083),
+          X = i(8083),
           q = i(94621),
           k = i(18938),
           Y = i(24660),
@@ -41,13 +38,13 @@
           de = i(3166),
           se = i(28020);
         const N = (0, m.createContext)(null);
-        function L(X) {
-          const { children: le, ...J } = X,
+        function L(H) {
+          const { children: le, ...J } = H,
             ie = te(J);
           return (0, t.jsx)(N.Provider, { value: ie, children: le });
         }
-        function re(X) {
-          const { children: le } = X,
+        function re(H) {
+          const { children: le } = H,
             J = m.Children.only(le),
             ie = (0, m.useContext)(N);
           return J
@@ -62,8 +59,8 @@
                 null)
             : null;
         }
-        function K(X) {
-          const { children: le, className: J, ref: ie, label: oe } = X,
+        function K(H) {
+          const { children: le, className: J, ref: ie, label: oe } = H,
             pe = (0, m.useContext)(N),
             Ee = (0, Q.SV)([ie, pe?.floating.refs.setFloating]);
           if (!pe)
@@ -94,13 +91,13 @@
             })
           );
         }
-        function ae(X) {
+        function ae(H) {
           return (0, de.Qn)()
-            ? (0, t.jsx)(ee, { ...X })
-            : (0, t.jsx)(je, { ...X });
+            ? (0, t.jsx)(ee, { ...H })
+            : (0, t.jsx)(je, { ...H });
         }
-        function ee(X) {
-          const { children: le } = X,
+        function ee(H) {
+          const { children: le } = H,
             J = (0, m.useContext)(N);
           (0, S.wT)(
             !!J,
@@ -122,8 +119,8 @@
             })
           );
         }
-        function je(X) {
-          const { children: le } = X,
+        function je(H) {
+          const { children: le } = H,
             J = (0, m.useContext)(N);
           return (
             (0, S.wT)(
@@ -138,7 +135,7 @@
             })
           );
         }
-        function te(X) {
+        function te(H) {
           const {
             open: le,
             interactions: J = {},
@@ -146,10 +143,10 @@
             maxHeight: oe,
             gutter: pe,
             scroll: Ee,
-          } = X;
+          } = H;
           let Mt = le;
-          const Dt = (0, se.Pr)(X.presentation),
-            Z = U(X, Mt, Dt),
+          const Dt = (0, se.Pr)(H.presentation),
+            Z = U(H, Mt, Dt),
             ge = { enabled: !!J.click },
             hn = typeof J.click == "function" ? J.click(ge) : ge,
             rs = (0, Q.kp)(Z.context, hn),
@@ -175,24 +172,24 @@
             sizing: { width: ie, maxHeight: oe, gutter: pe, scroll: Ee },
           };
         }
-        function U(X, le, J) {
-          const { onOpenChange: ie, placement: oe } = X,
+        function U(H, le, J) {
+          const { onOpenChange: ie, placement: oe } = H,
             pe = J === "anchor";
           return (0, Q.we)({
             open: le,
             onOpenChange: ie,
-            middleware: pe ? ue(X) : [],
-            whileElementsMounted: pe ? H.ll : void 0,
+            middleware: pe ? ue(H) : [],
+            whileElementsMounted: pe ? X.ll : void 0,
             placement: oe && typeof oe == "object" ? oe.initial : oe,
             strategy: "fixed",
             platform: {
-              ...H.iD,
+              ...X.iD,
               getOffsetParent: (Ee) => Ee?.ownerDocument?.defaultView ?? window,
             },
           });
         }
-        function ue(X) {
-          const { gutter: le = 0, placement: J } = X,
+        function ue(H) {
+          const { gutter: le = 0, placement: J } = H,
             ie = [],
             oe = J && typeof J == "object";
           return (
@@ -214,7 +211,7 @@
                       zIndex: "1",
                       "-webkit-app-region": "no-drag",
                     };
-                  switch ((X.scroll && (Z.overflowY = "auto"), X.width)) {
+                  switch ((H.scroll && (Z.overflowY = "auto"), H.width)) {
                     case "target": {
                       Z.width = `${Ee.reference.width}px`;
                       break;
@@ -231,20 +228,20 @@
                         (Z.width = `${hn}px`);
                     }
                   }
-                  typeof X.width == "function" &&
-                    (Z.width = X.width({
+                  typeof H.width == "function" &&
+                    (Z.width = H.width({
                       unContentWidth: Ee.floating.width,
                       unTargetWidth: Ee.reference.width,
                     }));
                   const ge =
                     typeof le == "number" ? `${le}px` : `var(--spacing-${le})`;
-                  typeof X.maxHeight == "function"
-                    ? (Z.maxHeight = X.maxHeight({
+                  typeof H.maxHeight == "function"
+                    ? (Z.maxHeight = H.maxHeight({
                         unAvailableHeight: Dt,
                         gutter: ge,
                       }))
-                    : typeof X.maxHeight == "number"
-                      ? (Z.maxHeight = `min( calc( ${Dt}px - ${ge} ), ${X.maxHeight}px )`)
+                    : typeof H.maxHeight == "number"
+                      ? (Z.maxHeight = `min( calc( ${Dt}px - ${ge} ), ${H.maxHeight}px )`)
                       : typeof le == "number"
                         ? (Z.maxHeight = `${Dt - le}px`)
                         : (Z.maxHeight = `calc( ${Dt}px - var(--spacing-${le}) )`),
@@ -263,7 +260,7 @@
       },
       12204: (b, ce, i) => {
         "use strict";
-        i.d(ce, { V: () => H });
+        i.d(ce, { V: () => X });
         var t = i(7850),
           m = i(31857);
         const Q = {
@@ -271,7 +268,7 @@
           left: "rotate( 90, 10, 10 )",
           right: "rotate( 270, 10, 10 )",
         };
-        function H(q) {
+        function X(q) {
           const { direction: k = "down" } = q,
             Y = Q[k];
           return (0, t.jsx)(m.I, {
@@ -291,7 +288,7 @@
         var t = i(7850),
           m = i(70182),
           Q = i(64238),
-          H = i.n(Q),
+          X = i.n(Q),
           q = i(8928),
           k = i(69289),
           Y = i(75180),
@@ -306,7 +303,7 @@
               ...L
             } = _,
             re = (0, T.Qn)(),
-            K = (0, k.mz)({ ...L, className: H()(Y.Grid, _.className) }, V),
+            K = (0, k.mz)({ ...L, className: X()(Y.Grid, _.className) }, V),
             ae = se ?? N?.focusable ?? !!L.onClick,
             ee = (0, t.jsx)($, { ref: de, ...K });
           return re
@@ -418,7 +415,7 @@
         var t = i(7850),
           m = i(39049),
           Q = i(8928),
-          H = i(15252),
+          X = i(15252),
           q = i(69289),
           k = i(90626);
         function Y(N) {
@@ -447,7 +444,7 @@
           });
         }
         const de = [
-          ...H.U6,
+          ...X.U6,
           ...Q.L,
           {
             prop: "size",
@@ -475,12 +472,12 @@
         "use strict";
         i.d(ce, { A: () => Q, i: () => m });
         var t = i(90626);
-        function m(H, ...q) {
+        function m(X, ...q) {
           const k = [],
             Y = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs");
           let C = 0,
             T;
-          for (; (T = Y.exec(H)); ) {
+          for (; (T = Y.exec(X)); ) {
             (C += T[0].length), k.push(T[1]);
             const S = parseInt(T[2]),
               V = T[3] || "",
@@ -490,9 +487,9 @@
                 : V;
             k.push(de);
           }
-          return k.push(H.substr(C)), t.createElement(t.Fragment, null, ...k);
+          return k.push(X.substr(C)), t.createElement(t.Fragment, null, ...k);
         }
-        function Q(H, q = ["b", "i", "br"]) {
+        function Q(X, q = ["b", "i", "br"]) {
           const k = q.join("|"),
             Y = [],
             C = new RegExp(
@@ -501,7 +498,7 @@
             );
           let T = 0,
             S;
-          for (; (S = C.exec(H)); ) {
+          for (; (S = C.exec(X)); ) {
             if (!S.groups) continue;
             if (!S.groups?.endtag) {
               const se = S.groups.before.length + S.groups.tagname.length + 2;
@@ -519,7 +516,7 @@
             const de = t.createElement(V, {}, $);
             Y.push(de);
           }
-          return Y.push(H.slice(T)), t.createElement(t.Fragment, null, ...Y);
+          return Y.push(X.slice(T)), t.createElement(t.Fragment, null, ...Y);
         }
       },
       76962: (b, ce, i) => {
@@ -528,7 +525,7 @@
         var t = i(7850),
           m = i(24660),
           Q = i(38566),
-          H = i(54130),
+          X = i(54130),
           q = i(64238),
           k = i.n(q),
           Y = i(90626),
@@ -553,18 +550,18 @@
               ...je
             } = N,
             [te, U] = Y.useState(!1),
-            ue = Y.useCallback((X) => {
-              X &&
-                (X.showModal(),
-                X.ownerDocument.defaultView &&
+            ue = Y.useCallback((H) => {
+              H &&
+                (H.showModal(),
+                H.ownerDocument.defaultView &&
                   U(
-                    X.ownerDocument.body.scrollHeight >
-                      X.ownerDocument.defaultView.innerHeight,
+                    H.ownerDocument.body.scrollHeight >
+                      H.ownerDocument.defaultView.innerHeight,
                   ));
             }, []),
             me = Y.useCallback(
-              (X) => {
-                X.target == X.currentTarget && L("backdropclick");
+              (H) => {
+                H.target == H.currentTarget && L("backdropclick");
               },
               [L],
             );
@@ -577,7 +574,7 @@
               onClose: () => L("onclose"),
               onClick: me,
               ...je,
-              children: (0, t.jsx)(H.q, { children: ae }),
+              children: (0, t.jsx)(X.q, { children: ae }),
             }),
           });
         }
@@ -613,7 +610,7 @@
         var t = i(7850),
           m = i(19298),
           Q = i(64238),
-          H = i.n(Q),
+          X = i.n(Q),
           q = i(36118),
           k = i(76962),
           Y = i(5598),
@@ -633,7 +630,7 @@
             navID: $ ?? "SimpleModalDialog",
             ...L,
             children: (0, t.jsxs)("div", {
-              className: H()(_, C().SimpleModalDialog, N && C().WideMode),
+              className: X()(_, C().SimpleModalDialog, N && C().WideMode),
               children: [
                 " ",
                 (0, t.jsxs)(m.Z, {
@@ -666,7 +663,7 @@
         var t = i(7850),
           m = i(90626),
           Q = i(72609),
-          H = i(38340);
+          X = i(38340);
         function q(S, V) {
           return {
             store_page_asset_url: `${Q.TS.BASE_URL_SHARED_CDN}store_item_assets/steam/apps/${S}/%s?t=${V}`,
@@ -686,8 +683,8 @@
           return m.useCallback(
             (V) => {
               if (V)
-                if (V.startsWith(H.qR + "/")) {
-                  const _ = V.replace(H.qR + "/", "");
+                if (V.startsWith(X.qR + "/")) {
+                  const _ = V.replace(X.qR + "/", "");
                   return S.replace("%s", _);
                 } else return V;
             },
@@ -701,7 +698,7 @@
         var t = i(7850),
           m = i(29950),
           Q = i(33770),
-          H = i(7487),
+          X = i(7487),
           q = i(99412),
           k = i(24660),
           Y = i(90626),
@@ -714,7 +711,7 @@
           de = i(33001),
           se = i.n(de);
         function N(te) {
-          return new H.OJ(new H.R8());
+          return new X.OJ(new X.R8());
         }
         function L(te) {
           const U = new Map([
@@ -748,10 +745,10 @@
         }
         function ee(te) {
           const { text: U, languageOverride: ue, bBypassLinkFilter: me } = te,
-            [X] = (0, Y.useState)(new Q.B(L(me), N, ue || q.Bhc));
+            [H] = (0, Y.useState)(new Q.B(L(me), N, ue || q.Bhc));
           return (0, t.jsx)("div", {
             className: se().StorePageBBCode,
-            children: X.ParseBBCode(U, {}, !0),
+            children: H.ParseBBCode(U, {}, !0),
           });
         }
         function je(te) {
@@ -809,7 +806,7 @@
         var t = i(72604),
           m = i(35038),
           Q = i(83153),
-          H = i(9682),
+          X = i(9682),
           q = i(41735),
           k = i.n(q),
           Y = i(80902),
@@ -857,9 +854,9 @@
           return ee;
         }
         async function K(ee, je) {
-          const te = m.w.Init(H.KV);
+          const te = m.w.Init(X.KV);
           te.Body().set_appid(je);
-          const U = await H.YK.GetFriendsRecommendedApp(ee, te),
+          const U = await X.YK.GetFriendsRecommendedApp(ee, te),
             ue = U.GetEResult();
           if (ue == t.R) return U.Body().toObject();
           throw `Error ${ue} failed to call GetFriendsRecommendedApp ${je}`;
@@ -894,10 +891,10 @@
         var t = i(14947),
           m = i(98609),
           Q = Object.defineProperty,
-          H = Object.getOwnPropertyDescriptor,
+          X = Object.getOwnPropertyDescriptor,
           q = (C, T, S, V) => {
             for (
-              var _ = V > 1 ? void 0 : V ? H(T, S) : T, $ = C.length - 1, de;
+              var _ = V > 1 ? void 0 : V ? X(T, S) : T, $ = C.length - 1, de;
               $ >= 0;
               $--
             )
@@ -970,7 +967,7 @@
         var t = i(72604),
           m = i(35038),
           Q = i(55051),
-          H = i(72609),
+          X = i(72609),
           q = i(80902),
           k = i(75233),
           Y = i(51614),
@@ -1029,7 +1026,7 @@
           return (0, q.I)({
             queryKey: $(N),
             queryFn: async () => {
-              if (H.iA.logged_in) {
+              if (X.iA.logged_in) {
                 const re = m.w.Init(Q.eW);
                 N && re.Body().set_appid(N);
                 const K = await Q.BX.GetUserStatus(L, re);
@@ -1064,32 +1061,32 @@
         var t = i(7850),
           m = i(90626),
           Q = i(25792),
-          H = i(97824),
-          q = i.n(H),
+          X = i(97824),
+          q = i.n(X),
           k = i(3166),
           Y = i(97996),
           C = i(18210);
         const T = (0, Q.Nr)(function ($) {
           const { fnOpenInSteamClient: de } = S();
           return (0, t.jsx)("div", {
-            className: H.OpenInBannerContainer,
+            className: X.OpenInBannerContainer,
             children: (0, t.jsxs)("div", {
-              className: H.OpenInBannerContent,
+              className: X.OpenInBannerContent,
               children: [
                 (0, t.jsx)("div", {
-                  className: H.BannerButtonContainer,
+                  className: X.BannerButtonContainer,
                   children: (0, t.jsx)("div", {
                     onClick: de,
-                    className: H.BannerButton,
+                    className: X.BannerButton,
                     children: (0, C.we)(
                       "#OpenInDesktopAppBanner_OpenAppButton",
                     ),
                   }),
                 }),
                 (0, t.jsx)("div", {
-                  className: H.BannerMessage,
+                  className: X.BannerMessage,
                   children: (0, t.jsxs)("div", {
-                    className: H.BannerTitle,
+                    className: X.BannerTitle,
                     children: [
                       (0, t.jsx)("b", {
                         children: (0, C.we)(
@@ -1133,7 +1130,7 @@
         var t = i(7850),
           m = i(90626),
           Q = i(18210),
-          H = i(3166),
+          X = i(3166),
           q = i(63404),
           k = i.n(q),
           Y = i(24660),
@@ -1255,13 +1252,13 @@
           const [ae, ee] = (0, m.useState)(K.initialOpen ?? !1),
             je = m.useId(),
             te = Object.entries(K.features)
-              .filter(([me, X]) => X)
+              .filter(([me, H]) => H)
               .map(([me]) => me);
           if (te.length === 0) return null;
           const U = {};
           te.forEach((me) => {
-            const X = _[me];
-            (U[X] ??= []), U[X].push(me);
+            const H = _[me];
+            (U[H] ??= []), U[H].push(me);
           });
           const ue = Object.keys(U).length > 1;
           return (0, t.jsxs)("details", {
@@ -1294,7 +1291,7 @@
                       }),
                       (0, t.jsx)("a", {
                         className: k().InfoLink,
-                        href: `${H.TS.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36`,
+                        href: `${X.TS.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36`,
                         target: "_blank",
                         children: "?",
                       }),
@@ -1406,7 +1403,7 @@
         }
         function re(K) {
           return (0, t.jsx)(Y.Ii, {
-            href: `${H.TS.STORE_BASE_URL}category/${S[K.feature]}`,
+            href: `${X.TS.STORE_BASE_URL}category/${S[K.feature]}`,
             className: k().InfoRow,
             focusable: K.open,
             children: (0, t.jsx)("span", {
@@ -1425,7 +1422,7 @@
         var t = i(7850),
           m = i(54130),
           Q = i(19298),
-          H = i(20169),
+          X = i(20169),
           q = i(97525),
           k = i(18210),
           Y = i(3166),
@@ -1448,7 +1445,7 @@
             { bShowSeeMoreHint: te, panelProps: U } = (0, q.i)(N);
           return (0, t.jsx)(Q.Z, {
             className: (0, V.A)(T().StoreItemsCarousel, ee && T().FullWidth),
-            navEntryPreferPosition: H.iU.PREFERRED_CHILD,
+            navEntryPreferPosition: X.iU.PREFERRED_CHILD,
             ...U,
             children: (0, t.jsxs)(m.q, {
               children: [
@@ -1487,7 +1484,7 @@
         var t = i(7850),
           m = i(24660),
           Q = i(48156),
-          H = i(90626),
+          X = i(90626),
           q = i(24805),
           k = i(18994),
           Y = i(6469),
@@ -1507,7 +1504,7 @@
         function ee(ue) {
           const {
               navKey: me,
-              classes: X,
+              classes: H,
               appIDs: le,
               sortOrder: J,
               scorePenaltyIfOwned: ie,
@@ -1520,10 +1517,10 @@
             Z = (0, k.a4)(910),
             ge = (0, $.Qn)(),
             [hn, rs] = (0, Y.L2)(),
-            [kt, is] = H.useState(le),
+            [kt, is] = X.useState(le),
             as = (0, S.zX)(le, q.Xh),
-            [Vn, xs] = H.useState(null);
-          H.useEffect(() => {
+            [Vn, xs] = X.useState(null);
+          X.useEffect(() => {
             if (as == S.Sq) return;
             const Vt = le.filter(
               (At) => !C.A.Get().BIsStoreItemMissing(At, Q.c6.qI),
@@ -1535,7 +1532,7 @@
           }, [le, ge, Z, as, Dt, Mt]);
           const E = ge;
           return (0, t.jsx)(de.F, {
-            className: (0, V.A)(X, {
+            className: (0, V.A)(H, {
               SaleSectionCarousel: !0,
               [L().Carousel]: !0,
             }),
@@ -1566,7 +1563,7 @@
         function je(ue) {
           const {
               appID: me,
-              size: X,
+              size: H,
               creatorClanAccountID: le,
               strFeaturingMsg: J,
             } = ue,
@@ -1575,7 +1572,7 @@
             return (0, t.jsx)("div", {
               className: (0, V.A)({
                 [L().Capsule]: !0,
-                [L().Small]: X == "small",
+                [L().Small]: H == "small",
               }),
             });
           if (!ie)
@@ -1589,7 +1586,7 @@
             className: (0, V.A)({
               [L().Capsule]: !0,
               [L().TwoWide]: Ee,
-              [L().Small]: X == "small",
+              [L().Small]: H == "small",
             }),
             children: (0, t.jsx)(se.W, {
               capsule: pe,
@@ -1602,16 +1599,16 @@
             }),
           });
         }
-        function te(ue, me, X, le) {
-          const J = H.useMemo(
+        function te(ue, me, H, le) {
+          const J = X.useMemo(
               () => me.filter((oe) => !ue.BIsGameIgnored(oe)),
               [me, ue],
             ),
-            ie = H.useMemo(
+            ie = X.useMemo(
               () => Array.from({ length: J.length }, () => Math.random()),
               [J.length],
             );
-          return X == "shuffle"
+          return H == "shuffle"
             ? J.map((oe, pe) => {
                 const Ee =
                   (ue.BIsGameOwned(oe) ? le : 0) +
@@ -1621,7 +1618,7 @@
               })
                 .sort((oe, pe) => oe.score - pe.score)
                 .map((oe) => oe.id)
-            : X == "scored"
+            : H == "scored"
               ? J.map((oe, pe) => ({
                   id: oe,
                   score: ue.BIsGameOwned(oe) ? le + pe : pe,
@@ -1657,7 +1654,7 @@
         var t = i(7850),
           m = i(90626),
           Q = i(65329),
-          H = i(72849),
+          X = i(72849),
           q = i(7582),
           k = i(53025),
           Y = i(71157),
@@ -1817,7 +1814,7 @@
                 })
           );
         }
-        var X = i(49984),
+        var H = i(49984),
           le = i(19188),
           J = i(96538),
           ie = i(30096);
@@ -1929,7 +1926,7 @@
             [y] = (0, Y.Q)("announce_gid", void 0);
           return (
             (0, m.useEffect)(() => {
-              const j = (0, X.v)("EventWebRowEmbed");
+              const j = (0, H.v)("EventWebRowEmbed");
               let B = !1;
               if (Ee(j)) {
                 (B = j.bPreLoaded), d(j.last_update_event);
@@ -2023,7 +2020,7 @@
               exclude_event_types: [Q.G$._C],
             },
             strClassName: "early_access_announcements",
-            trackingLocation: H.Tc.j$,
+            trackingLocation: X.Tc.j$,
           });
         }
         var Z = i(99412),
@@ -19529,7 +19526,7 @@
         }
         function gy(s, e) {
           const { data: n } = jr(s);
-          if (!n || e) return;
+          if (!n) return;
           const r = new Set();
           let a = 0;
           const o = [];
@@ -19546,7 +19543,7 @@
             }
           }
           if (o?.length)
-            return { achievements: o, nDLCCount: 0, nGroupCount: 1 };
+            return { achievements: o, nDLCCount: r.size, nGroupCount: a };
         }
         function py(s) {
           const { appid: e, dlcappid: n, iconCount: r = 4 } = s;

@@ -472,8 +472,6 @@ $ORIGIN
 *pcubPlaintextData
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG=
-++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 ++KEY_PAD_PLUS
@@ -705,6 +703,7 @@ $ORIGIN
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEFP
 0123456789abcdef
 1!KEY_1
 1.2.11
@@ -8005,7 +8004,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(C"
+ggen
 givenName
 glBegin
 glBindTexture

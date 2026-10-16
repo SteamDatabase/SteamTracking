@@ -12,14 +12,11 @@
           const { appid: _, profileUrl: _, dlc: _ } = _,
             _ = _
               ? `${_}/achievements/${_}`
-              : `${Config.COMMUNITY_BASE_URL}achievements/${_}`;
+              : `${_._.COMMUNITY_BASE_URL}achievements/${_}`;
           return _ !== void 0 ? `${_}?dlc=${_}` : _;
         }
         function _(_) {
-          const { appid: _, profileUrl: _ } = _;
-          return _
-            ? `${_}/stats/${_}/achievements/`
-            : `${_._.COMMUNITY_BASE_URL}stats/${_}/achievements/`;
+          return _(_);
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -21968,7 +21965,7 @@
         }
         function _(_, _) {
           const { data: _ } = _(_);
-          if (!_ || _) return;
+          if (!_) return;
           const _ = new Set();
           let _ = 0;
           const _ = [];
@@ -21987,8 +21984,8 @@
           if (_?.length)
             return {
               achievements: _,
-              nDLCCount: 0,
-              nGroupCount: 1,
+              nDLCCount: _.size,
+              nGroupCount: _,
             };
         }
         function _(_) {

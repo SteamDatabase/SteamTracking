@@ -87,6 +87,7 @@ message CStoreQuery_SearchSuggestions_Request {
 	optional bool use_spellcheck = 7;
 	optional bool search_tags = 8;
 	optional bool search_creators = 9;
+	optional bool use_name_match_scoring = 11;
 }
 
 message CStoreQuery_SearchSuggestions_Response {

@@ -12,14 +12,11 @@
           const { appid: _, profileUrl: _, dlc: _ } = _,
             _ = _
               ? `${_}/achievements/${_}`
-              : `${Config.COMMUNITY_BASE_URL}achievements/${_}`;
+              : `${_._.COMMUNITY_BASE_URL}achievements/${_}`;
           return _ !== void 0 ? `${_}?dlc=${_}` : _;
         }
         function _(_) {
-          const { appid: _, profileUrl: _ } = _;
-          return _
-            ? `${_}/stats/${_}/achievements/`
-            : `${_._.COMMUNITY_BASE_URL}stats/${_}/achievements/`;
+          return _(_);
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -141,7 +138,7 @@
         }
         const _ = (0, _.createContext)(!1);
         function _() {
-          return (0, _.useContext)(_);
+          return !0;
         }
         const _ = Intl.DateTimeFormat().resolvedOptions().timeZone,
           _ =
@@ -157,6 +154,7 @@
         }
         function _() {
           "document" in globalThis &&
+            _ &&
             (document.cookie = `timezoneName=${_};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
         }
         _();

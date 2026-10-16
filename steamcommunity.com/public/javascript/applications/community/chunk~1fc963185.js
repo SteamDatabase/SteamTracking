@@ -2,44 +2,45 @@
  ****/
 (() => {
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [864],
+    [20864],
     {
       54357: (M, A, n) => {
         "use strict";
         n.d(A, { B: () => o });
         var e = n(7850),
           v = n(90626);
-        function E(m) {
+        function E(u) {
           const [D, g] = useState(!1);
           return (
             useEffect(() => {
               window.SSR && (window.SSR.hydrated = !0),
                 startTransition(() => g(!0));
             }, []),
-            jsx(s.Provider, { value: D, children: m.children })
+            jsx(s.Provider, { value: D, children: u.children })
           );
         }
         const s = (0, v.createContext)(!1);
         function f() {
-          return (0, v.useContext)(s);
+          return !0;
         }
         var x;
-        const u = Intl.DateTimeFormat().resolvedOptions().timeZone,
+        const m = Intl.DateTimeFormat().resolvedOptions().timeZone,
           y =
             "document" in globalThis
               ? (x = document.cookie
                   .split(";")
-                  .find((m) => m.trim().startsWith("timezoneName"))) == null
+                  .find((u) => u.trim().startsWith("timezoneName"))) == null
                 ? void 0
                 : x.split("=")[1]
               : void 0,
           a = y && decodeURIComponent(y);
         function o() {
-          return f() ? u : a != null ? a : u;
+          return f() ? m : a != null ? a : m;
         }
         function j() {
           "document" in globalThis &&
-            (document.cookie = `timezoneName=${u};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
+            m &&
+            (document.cookie = `timezoneName=${m};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
         }
         j();
       },
@@ -51,16 +52,16 @@
         function E() {
           return v.get();
         }
-        function s(u) {
-          (0, e.h5)(() => v.set(u));
+        function s(m) {
+          (0, e.h5)(() => v.set(m));
         }
         function f() {
-          const u = v.get();
-          return u || Math.floor(Date.now() / 1e3);
+          const m = v.get();
+          return m || Math.floor(Date.now() / 1e3);
         }
         function x() {
-          const u = v.get();
-          return u ? new Date(u * 1e3) : new Date();
+          const m = v.get();
+          return m ? new Date(m * 1e3) : new Date();
         }
       },
       28515: (M, A, n) => {
@@ -70,31 +71,31 @@
           v = n(90626),
           E = n(59432);
         const s = v.createContext(void 0);
-        function f(u) {
-          const [y, a] = React.useState(u.rtServerNow),
-            o = !!u.bHoldSeed;
+        function f(m) {
+          const [y, a] = React.useState(m.rtServerNow),
+            o = !!m.bHoldSeed;
           return (
             React.useEffect(() => {
               o || a(void 0);
             }, [o]),
-            jsx(s.Provider, { value: y, children: u.children })
+            jsx(s.Provider, { value: y, children: m.children })
           );
         }
         function x() {
-          var u;
-          return (u = v.useContext(s)) != null ? u : (0, E.Gw)();
+          var m;
+          return (m = v.useContext(s)) != null ? m : (0, E.Gw)();
         }
       },
       7582: (M, A, n) => {
         "use strict";
-        n.d(A, { HD: () => m, P_: () => D, f1: () => z, sB: () => w });
+        n.d(A, { HD: () => u, P_: () => D, f1: () => z, sB: () => w });
         var e = n(19367),
           v = n.n(e),
           E = n(90626),
           s = n(59432),
           f = n(47689),
           x = n(82734),
-          u = n(77291),
+          m = n(77291),
           y = Object.defineProperty,
           a = (h, T, L) =>
             T in h
@@ -136,8 +137,8 @@
             new URLSearchParams(T[0] == "?" ? T.substring(1) : T).has("t");
           }
         }
-        const m = new j();
-        (0, u.V)("g_EventCalendarDevFeatures", m);
+        const u = new j();
+        (0, m.V)("g_EventCalendarDevFeatures", u);
         function D(h = 1) {
           const [T, L] = E.useState(() => b()),
             I = (0, f.m)("useTimeNowWithOverride"),
@@ -160,17 +161,17 @@
         const P = Math.floor(new Date().getTime() / 1e3);
         function b() {
           const h = Math.floor(Date.now() / 1e3);
-          return m.nOverrideDateNow ? m.nOverrideDateNow + (h - P) : h;
+          return u.nOverrideDateNow ? u.nOverrideDateNow + (h - P) : h;
         }
         function w() {
           var h;
-          return (h = m.nOverrideDateNow) != null ? h : P;
+          return (h = u.nOverrideDateNow) != null ? h : P;
         }
         function z() {
           return E.useMemo(() => w(), []);
         }
         function N() {
-          return React.useMemo(() => m.GetTimeNowWithOverrideAsDate(), []);
+          return React.useMemo(() => u.GetTimeNowWithOverrideAsDate(), []);
         }
       },
       179: (M, A, n) => {
@@ -180,7 +181,7 @@
           QD: () => x,
           f3: () => E,
           iV: () => y,
-          ip: () => u,
+          ip: () => m,
           le: () => f,
         });
         var e = n(90626),
@@ -191,13 +192,13 @@
           else if ("location" in a) j = a.location.search;
           else if ("search" in a) j = a.search;
           else return;
-          const m = new URLSearchParams(j.substring(1));
-          if (m.has(o)) {
-            const D = m.getAll(o);
+          const u = new URLSearchParams(j.substring(1));
+          if (u.has(o)) {
+            const D = u.getAll(o);
             return D[D.length - 1];
           }
         }
-        function s(a, o, j, m = !1) {
+        function s(a, o, j, u = !1) {
           const D = new URLSearchParams(a.location.search.substring(1));
           if (j != null && j != null) {
             if (D.get(o) == j) return;
@@ -206,7 +207,7 @@
             if (!D.has(o)) return;
             D.delete(o);
           }
-          m
+          u
             ? a.replace(`?${D.toString()}`, { ...a.location.state })
             : a.push(`?${D.toString()}`);
         }
@@ -215,9 +216,9 @@
         }
         function x(a, o) {
           const j = (0, v.W6)(),
-            m = (0, v.zy)(),
+            u = (0, v.zy)(),
             D = (0, e.useMemo)(() => {
-              const P = E(m.search, a);
+              const P = E(u.search, a);
               return P != null && P != null
                 ? o != null && o != null
                   ? typeof o == "boolean"
@@ -225,7 +226,7 @@
                     : o.constructor(P)
                   : P
                 : o;
-            }, [m.search, a, o]),
+            }, [u.search, a, o]),
             g = (0, e.useCallback)(
               (P, b = !1) => {
                 s(j, a, P != null && P != null ? String(P) : null, b);
@@ -234,19 +235,19 @@
             );
           return [D, g];
         }
-        function u(a, o, j = !1) {
-          const m = new URLSearchParams(a.location.search.substring(1));
+        function m(a, o, j = !1) {
+          const u = new URLSearchParams(a.location.search.substring(1));
           for (const D in o)
             if (o.hasOwnProperty(D)) {
               const g = o[D];
-              m.delete(D), g != null && g != null && m.append(D, g);
+              u.delete(D), g != null && g != null && u.append(D, g);
             }
           j
-            ? a.replace(`?${m.toString()}`, { ...a.location.state })
-            : a.push(`?${m.toString()}`);
+            ? a.replace(`?${u.toString()}`, { ...a.location.state })
+            : a.push(`?${u.toString()}`);
         }
         function y(a, o) {
-          u(a, o, !0);
+          m(a, o, !0);
         }
       },
       18057: (M, A, n) => {
@@ -266,12 +267,12 @@
           s = n(18210),
           f = n(75844),
           x = n(36707),
-          u = n(36174),
+          m = n(36174),
           y = n(55351),
           a = n.n(y),
           o = n(7582),
           j = n(28515),
-          m = n(54357),
+          u = n(54357),
           D = n(87937),
           g = n.n(D);
         function P(l, t) {
@@ -318,7 +319,7 @@
                 bOnlyTime: d,
                 bOnlyDate: r,
               } = l,
-              c = (0, m.B)(),
+              c = (0, u.B)(),
               _ = !d && !!t,
               S = !r && !!t,
               R = _ && w(t, c),
@@ -379,7 +380,7 @@
           T = (0, f.PA)((l) => {
             const { startDateAndTime: t, endDateAndTime: i = 0 } = l,
               d = l.stylesmodule ? { ...a(), ...l.stylesmodule } : a(),
-              r = (0, m.B)(),
+              r = (0, u.B)(),
               c = (0, j.n)(),
               _ =
                 l.bHideEndTime ||
@@ -479,7 +480,7 @@
                 bHideEndTime: d,
               } = l,
               r = l.stylesmodule ? { ...a(), ...l.stylesmodule } : a(),
-              c = (0, m.B)(),
+              c = (0, u.B)(),
               _ = (0, j.n)();
             if (t == null || t == 0)
               return (0, e.jsxs)("div", {
@@ -514,7 +515,7 @@
             });
             if (
               (_ < t &&
-                t < _ + u.Kp.PerWeek &&
+                t < _ + m.Kp.PerWeek &&
                 (O = (0, e.jsx)(h, {
                   rtFullDate: t,
                   stylesmodule: r,
@@ -546,7 +547,7 @@
               }));
             let C = null;
             const U = B ? i - _ : i - t;
-            if (U <= u.Kp.PerDay) {
+            if (U <= m.Kp.PerDay) {
               const p = (0, e.jsx)("div", {
                 className: r.ShortDateAndTime,
                 children: (0, s.Hq)(U, !0),
