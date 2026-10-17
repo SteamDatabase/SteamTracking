@@ -148,7 +148,7 @@
     "Wishlist_Controls_Categories_Header_Other": "Інші мої категорії",
     "Wishlist_Controls_Categories_Header_Suggested": "Рекомендовані категорії",
     "Wishlist_Categories_Max_Per_App_Reached": "Цей продукт, доданий до списку бажаного, досягнув ліміту категорій. Максимум — %1$s.",
-    "Wishlist_Categories_Dialog_Advanced": "Advanced...",
+    "Wishlist_Categories_Dialog_Advanced": "Розширене…",
     "Price_History_Normal_Price": "ЗВИЧАЙНА",
     "Price_History_Recent_Low_Price": "МІН. ЗА 30 ДНІВ",
     "Price_History_Recent_Low_Price_Ttip": "Ціна цієї гри зі знижкою становила %1$s протягом останніх %2$s дн.",
@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "На цей день для вас немає рекомендованих релізів <1>Перегляньте решту свого календаря!</1>",
     "NewBadge": "НОВЕ",
     "Time_Today": "Сьогодні",
+    "DiscountsAndEvents_Title": "Знижки та події",
+    "DiscountsAndEvents_SeeMore": "Більше",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Акція на вихідних",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Акція серед тижня",
+    "DiscountsAndEvents_Banner_DailyDeal": "Пропозиція дня",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Найбільша знижка",
+    "DiscountsAndEvents_LoadError": "Не вдалося завантажити знижки та події. Будь ласка, спробуйте пізніше.",
     "store_ui_dummy": "dont translate"
 }

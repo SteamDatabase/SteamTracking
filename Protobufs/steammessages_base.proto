@@ -126,6 +126,14 @@ message CMsgProtoBufHeader {
 	optional fixed64 admin_request_spoofing_steamid = 43;
 	optional bool is_valveds = 44;
 	optional fixed64 trace_tag = 45;
+	optional uint32 wg_msg_trace_flags = 46;
+	optional uint32 wg_msg_trace_instance = 47;
+	optional uint32 wg_msg_trace_gid = 48;
+	optional string wg_msg_trace_token = 49;
+	optional fixed64 wg_msg_trace_steamid = 50;
+	optional string wg_msg_trace_status = 51;
+	optional uint32 trace_flags = 52;
+	optional string browserapi_site = 53;
 
 	oneof ip_addr {
 		uint32 ip = 15;

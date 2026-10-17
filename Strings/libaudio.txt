@@ -470,6 +470,12 @@ SteamThreadTools::CThreadEvent::CThreadEvent(bool)
 SteamThreadTools::CThreadEvent::Set()
 SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
+SteamThreadTools::CThreadSharedMutex::CThreadSharedMutex()
+SteamThreadTools::CThreadSharedMutex::LockExclusive()
+SteamThreadTools::CThreadSharedMutex::LockShared() const
+SteamThreadTools::CThreadSharedMutex::UnlockExclusive()
+SteamThreadTools::CThreadSharedMutex::UnlockShared() const
+SteamThreadTools::CThreadSharedMutex::~CThreadSharedMutex()
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 StringAfterPrefix
@@ -990,6 +996,7 @@ pa_threaded_mainloop_stop
 pa_threaded_mainloop_unlock
 pa_threaded_mainloop_wait
 pa_timeval_add
+pchNode
 pclose
 phone
 pipewire-pulse:bluetooth-headset-autoswitch

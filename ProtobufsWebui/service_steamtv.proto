@@ -459,9 +459,9 @@ message GetBroadcastChannelEntry {
 }
 
 service SteamTV {
-	// ePrivilege=1, eWebAPIKeyRequirement=2
+	// ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc AddChatBan (.CSteamTV_AddChatBan_Request) returns (.CSteamTV_AddChatBan_Response);
-	// ePrivilege=1, eWebAPIKeyRequirement=2
+	// ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc AddChatModerator (.CSteamTV_AddChatModerator_Request) returns (.CSteamTV_AddChatModerator_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc AddWordBan (.CSteamTV_AddWordBan_Request) returns (.CSteamTV_AddWordBan_Response);
@@ -491,7 +491,7 @@ service SteamTV {
 	rpc GetChannels (.CSteamTV_GetChannels_Request) returns (.CSteamTV_GetChannels_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc GetChatBans (.CSteamTV_GetChatBans_Request) returns (.CSteamTV_GetChatBans_Response);
-	// bConstMethod=true, ePrivilege=0
+	// bConstMethod=true, ePrivilege=0, rgBrowserAPISites=ArrayExpression
 	rpc GetChatModerators (.CSteamTV_GetChatModerators_Request) returns (.CSteamTV_GetChatModerators_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc GetFollowedChannels (.CSteamTV_GetFollowedChannels_Request) returns (.CSteamTV_GetFollowedChannels_Response);
@@ -507,7 +507,7 @@ service SteamTV {
 	rpc GetSubscribedChannels (.CSteamTV_GetSubscribedChannels_Request) returns (.CSteamTV_GetSubscribedChannels_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc GetWordBans (.CSteamTV_GetWordBans_Request) returns (.CSteamTV_GetWordBans_Response);
-	// ePrivilege=2, eWebAPIKeyRequirement=1
+	// ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc JoinChat (.CSteamTV_JoinChat_Request) returns (.CSteamTV_JoinChat_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc ReportBroadcastChannel (.CSteamTV_ReportBroadcastChannel_Request) returns (.CSteamTV_ReportBroadcastChannel_Response);

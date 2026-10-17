@@ -47,6 +47,8 @@ $ORIGIN
 *NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN9Fossilize13StateRecorder21init_recording_threadEPNS3_17DatabaseInterfaceEEUlvE_EEEEEE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGE+\n
+++CCUNGj3\n
 ++CCUNGstd::exception
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
@@ -194,6 +196,7 @@ Fossilize ERROR: Failed to add blob to cache.\n
 Fossilize ERROR: Failed to allocate space for metadata block.\n
 Fossilize ERROR: Failed to create child process.\n
 Fossilize ERROR: Failed to create directory %s.\n
+Fossilize ERROR: Failed to create file "%s".\n
 Fossilize ERROR: Failed to create session.\n
 Fossilize ERROR: Failed to create shared memory.\n
 Fossilize ERROR: Failed to extract blob.\n
@@ -663,6 +666,8 @@ bool
 boolean
 borderColor
 btowc
+bucket
+bucket.json
 bucketVariantDependencies
 bucketVariantFeatureDependencies
 buf error
@@ -755,6 +760,8 @@ descriptorBufferCaptureReplay
 descriptorBufferImageLayoutIgnored
 descriptorBufferPushDescriptors
 descriptorCount
+descriptorHeap
+descriptorHeapCaptureReplay
 descriptorSet
 descriptorType
 dgettext
@@ -914,6 +921,7 @@ long double
 long long
 lower
 magFilter
+maintenance8
 malloc
 mapEntries
 mappings
@@ -936,6 +944,9 @@ memmove
 memset
 meshShader
 meshShaderQueries
+micromap
+micromapCaptureReplay
+micromapHostCommands
 minDepth
 minDepthBounds
 minDepthClamp
@@ -992,6 +1003,7 @@ pipe
 pipelineBindPoint
 pipelineFragmentShadingRate
 pipelineLayouts
+pipelineRobustness
 polygonMode
 posix_fadvise
 prctl

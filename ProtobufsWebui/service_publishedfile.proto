@@ -1,5 +1,13 @@
 import "common_base.proto";
 
+message CPublishedFile_AcquitPublishedFile_Request {
+	optional fixed64 publishedfileid = 1;
+	optional int32 resolved_by_automation = 2 [(.description) = "enum"];
+}
+
+message CPublishedFile_AcquitPublishedFile_Response {
+}
+
 message CPublishedFile_AddAppRelationship_Request {
 	optional uint64 publishedfileid = 1;
 	optional uint32 appid = 2;
@@ -334,6 +342,7 @@ message CPublishedFile_GetUserVoteSummary_Response_VoteSummary {
 	optional bool vote_for = 2;
 	optional bool vote_against = 3;
 	optional bool reported = 4;
+	optional bool vote_later = 5;
 }
 
 message CPublishedFile_Publish_Request {
@@ -455,6 +464,24 @@ message CPublishedFile_RemoveChild_Request {
 }
 
 message CPublishedFile_RemoveChild_Response {
+}
+
+message CPublishedFile_SanctionPublishedFile_Request {
+	optional fixed64 publishedfileid = 1;
+	optional int32 reason = 2 [(.description) = "enum"];
+	optional string note = 3;
+	optional int32 resolved_by_automation = 4 [(.description) = "enum"];
+	repeated .CPublishedFile_SanctionPublishedFile_Request_Sanction sanctions = 5;
+}
+
+message CPublishedFile_SanctionPublishedFile_Request_Sanction {
+	optional int32 sanction = 1 [(.description) = "enum"];
+	optional int32 days = 2;
+	optional int32 escalate_to = 3 [(.description) = "enum"];
+}
+
+message CPublishedFile_SanctionPublishedFile_Response {
+	optional bool force_unbanned = 1;
 }
 
 message CPublishedFile_SetCollectionChildren_Request {
@@ -718,6 +745,8 @@ message PublishedFileSubSection {
 }
 
 service PublishedFile {
+	// ePrivilege=5
+	rpc AcquitPublishedFile (.CPublishedFile_AcquitPublishedFile_Request) returns (.CPublishedFile_AcquitPublishedFile_Response);
 	// ePrivilege=1
 	rpc AddAppRelationship (.CPublishedFile_AddAppRelationship_Request) returns (.CPublishedFile_AddAppRelationship_Response);
 	// ePrivilege=1
@@ -732,9 +761,9 @@ service PublishedFile {
 	rpc GetAppRelationships (.CPublishedFile_GetAppRelationships_Request) returns (.CPublishedFile_GetAppRelationships_Response);
 	// bConstMethod=true, ePrivilege=0
 	rpc GetAppRelationshipsBatched (.CPublishedFile_GetAppRelationshipsBatched_Request) returns (.CPublishedFile_GetAppRelationshipsBatched_Response);
-	// bConstMethod=true, ePrivilege=0
+	// bConstMethod=true, ePrivilege=2
 	rpc GetChangeHistory (.CPublishedFile_GetChangeHistory_Request) returns (.CPublishedFile_GetChangeHistory_Response);
-	// bConstMethod=true, ePrivilege=0
+	// bConstMethod=true, ePrivilege=2
 	rpc GetChangeHistoryEntry (.CPublishedFile_GetChangeHistoryEntry_Request) returns (.CPublishedFile_GetChangeHistoryEntry_Response);
 	// ePrivilege=0
 	rpc GetContentDescriptors (.CPublishedFile_GetContentDescriptors_Request) returns (.CPublishedFile_GetContentDescriptors_Response);
@@ -762,6 +791,8 @@ service PublishedFile {
 	rpc RemoveAppRelationship (.CPublishedFile_RemoveAppRelationship_Request) returns (.CPublishedFile_RemoveAppRelationship_Response);
 	// ePrivilege=1
 	rpc RemoveChild (.CPublishedFile_RemoveChild_Request) returns (.CPublishedFile_RemoveChild_Response);
+	// ePrivilege=5
+	rpc SanctionPublishedFile (.CPublishedFile_SanctionPublishedFile_Request) returns (.CPublishedFile_SanctionPublishedFile_Response);
 	// ePrivilege=1
 	rpc SetCollectionChildren (.CPublishedFile_SetCollectionChildren_Request) returns (.CPublishedFile_SetCollectionChildren_Response);
 	// ePrivilege=1

@@ -23,18 +23,6 @@
           AutoplayCheckboxCtn: "_2J3J__8l3sk6LI4mpUfWDT",
           AOWarning: "_2IxWvaCkHcMl0aL8NM8v6T",
           Text: "_1r5F1Fy8uG639opEIjyS5Z",
-          BackgroundAnimation: "_1G9QIfwsMh2XRR-bMBE97j",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2bun2taA5e3StPJT3cs6jH",
-          "ItemFocusAnim-darkerGrey": "_39J4X61tugDHvSmGBzKD7p",
-          "ItemFocusAnim-darkGreySettings": "_13-B6AE59KUQ-ABnyKYXkP",
-          "ItemFocusAnim-darkGrey": "_2xXdz148UoxpJlfyVlUo0D",
-          "ItemFocusAnim-grey": "_3-Rh6nRz4sRZLRVEQKPefw",
-          "ItemFocusAnim-translucent-white-10": "_1b0mYc5KheDLRLQoHqAqhU",
-          "ItemFocusAnim-translucent-white-20": "_3WVHjFeBrJOv0Xsqd7X2Vp",
-          "ItemFocusAnimBorder-darkGrey": "_1TaBFa6F_r2oTJvni2yNqQ",
-          "ItemFocusAnim-green": "_1dPdL7c_2dvq8gAaWTSq04",
-          focusAnimation: "_3BX0kUvHLGH3mZJG4BP4cc",
-          hoverAnimation: "_1om-YMcnj-8DLjL_ek0CxW",
           "capsule-trans-out": "YvTbl9XD-HkAs9W3pcEgp",
         };
       },
@@ -53,18 +41,6 @@
           UndoIgnoreButton: "_1rPGVQftqLzqjH04tebuaT",
           UndoButton: "_1nz7pkRvV4rRrybZrUZu0R",
           Disabled: "_2JvEs3_qRtYncXG7WCALur",
-          BackgroundAnimation: "_64dUS3S7fOwtNFhEALHhx",
-          "ItemFocusAnim-darkerGrey-nocolor": "UXmjEpq-9pbtC7T5d0MPv",
-          "ItemFocusAnim-darkerGrey": "_1olTI2tKYS6IUSkIpca3Qo",
-          "ItemFocusAnim-darkGreySettings": "_3JjCik6ZoOCqrb2F2DUuI1",
-          "ItemFocusAnim-darkGrey": "_37RRjG54p7sk3Yvb-5BDVv",
-          "ItemFocusAnim-grey": "yOH4BAo3sriSZckG9yR1g",
-          "ItemFocusAnim-translucent-white-10": "_1USieHqb4yVt2P3Okqs7hF",
-          "ItemFocusAnim-translucent-white-20": "_2MtHgIAnILIt8d4PMuS5mi",
-          "ItemFocusAnimBorder-darkGrey": "_dHmntK-X7hqNpoiZplVM",
-          "ItemFocusAnim-green": "_3CT6dHnuA3SYWZrgk1Sf1Y",
-          focusAnimation: "_34YOI6hVEDmEAWHAHlUXon",
-          hoverAnimation: "_1UXiQtSunyxlP1LxWHXACi",
         };
       },
       chunkid: (module) => {
@@ -159,18 +135,6 @@
           SaleRewardsCtn: "u42zSEWdGrvBDimhV4QNI",
           RewardStatusCtn: "_2C1i6xEuF431h_KHPB53zS",
           SaleRewardAppTitle: "_1-pK3SWEOk30eo-q0EKyH7",
-          BackgroundAnimation: "_3tn052OQVu3Bbdx7lAg8v3",
-          "ItemFocusAnim-darkerGrey-nocolor": "WFiTs9SPGUObvgDncLEFm",
-          "ItemFocusAnim-darkerGrey": "_18LH9gSLwgTgUzIl1C0-pq",
-          "ItemFocusAnim-darkGreySettings": "_3bomS6MjDv4c5XbYu2Caqu",
-          "ItemFocusAnim-darkGrey": "_3BW-wlgbU7_7zOW8-2d7OI",
-          "ItemFocusAnim-grey": "_2PCW9DVf1EkOJw0pwtlWSj",
-          "ItemFocusAnim-translucent-white-10": "A-_kb_s9v8pLyRrldCupj",
-          "ItemFocusAnim-translucent-white-20": "_1fugsBQAve_CPDYfcK5fou",
-          "ItemFocusAnimBorder-darkGrey": "_1X5xeHixS4XJusrPGRQ4nL",
-          "ItemFocusAnim-green": "guH2fAOEkfwuIvOhn0oHl",
-          focusAnimation: "_2XCqyPQ8Leg6L1dwSjpULK",
-          hoverAnimation: "zU1NJEk7QqOdsECL2PI2d",
         };
       },
       chunkid: (module) => {
@@ -181,18 +145,6 @@
           ProgressDotActive: "_3z2pS3DFn3MEl5ZPw6lsa9",
           ProgressDotSelected: "_1qJVCZsv51RtfBGao-PV8V",
           ProgressDotClickable: "jKfeFH4S6YhaeZ7RCZ8BN",
-          BackgroundAnimation: "_3B8qOyTqC7rzOP_X5kvWK-",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2wYIdqvoWTU_8MPGJtV4j",
-          "ItemFocusAnim-darkerGrey": "_5noNLXRGVi51cgI8nYBAm",
-          "ItemFocusAnim-darkGreySettings": "_3UqXfp4k1blu2wv57exkEd",
-          "ItemFocusAnim-darkGrey": "_6iLF1QqShrpEW0UiF0x2o",
-          "ItemFocusAnim-grey": "PuZXrV7q9vI7p-jK9x2pN",
-          "ItemFocusAnim-translucent-white-10": "_2RwwslrDVdOXePDy6QCEkZ",
-          "ItemFocusAnim-translucent-white-20": "_1VijReQZ-moslCOSkJYKIt",
-          "ItemFocusAnimBorder-darkGrey": "_1HaTvS9ANJY56lTVTb35I3",
-          "ItemFocusAnim-green": "_3mF4OtweD7vY2bcN6piLTq",
-          focusAnimation: "rpa_zF1YXxbH3-m1-AI6Q",
-          hoverAnimation: "_2WTZTfL3dbXnfZM3Ly10Jo",
         };
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -232,8 +184,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
+          _ = __webpack_require__("chunkid");
         function _(_) {
           const { tagid: _, language: _ = _._.LANGUAGE } = _;
           return (0, _._)(_, _) || String(_);
@@ -261,12 +212,11 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
+          _ = __webpack_require__("chunkid");
         async function _(_, _) {
           const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code);
           return (await (await fetch(_)).json()).rgRecommendedTags || [];
         }
-        var _ = "steamdb";
         function _() {
           const _ = (0, _._)(),
             _ = _._.accountid;
@@ -290,8 +240,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
+          _ = __webpack_require__("chunkid");
         const _ = {
             name: "trailerPrefs",
             options: {
@@ -358,8 +307,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
+          _ = __webpack_require__("chunkid");
         const _ = 0,
           _ = 1,
           _ = 2;
@@ -411,8 +359,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = "steamdb";
+          _ = __webpack_require__._(_);
         function _(_, _) {
           _.useEffect(() => {
             if (!_ || !_.onended || !_) return;
@@ -461,8 +408,7 @@
                 (_ == _ && _ ? _.play() : _ == _ && _ && _.Play(), _(!1));
           }, [_, _, _, _, _, _, _]);
         }
-        var _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
+        var _ = __webpack_require__("chunkid");
         const _ = new _._("TrailerAppVideo"),
           _ = "bGameHighlightAutoplayDisabled";
         function _(_) {
@@ -786,7 +732,6 @@
             }),
           });
         }
-        var _ = "steamdb";
         function _(_) {
           const {
               appID: _,
@@ -947,8 +892,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
+          _ = __webpack_require__("chunkid");
         function _(_) {
           return ["AppRelevanceStore", "FriendsRecommended", _];
         }
@@ -1031,8 +975,7 @@
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
+          _ = __webpack_require__("chunkid");
         const _ = new _._("AppRelevance").Debug;
         function _(_, _) {
           const _ = (0, _.useMemo)(
@@ -1478,19 +1421,17 @@
             ],
           });
         }
-        var _ = "steamdb";
         const _ = {
-          include_assets: !0,
-          include_trailers: !0,
-          include_basic_info: !0,
-          include_tag_count: 20,
-          include_release: !0,
-          include_platforms: !0,
-          include_screenshots: !0,
-          include_reviews: !0,
-        };
-        var _ = "steamdb";
-        const _ = new _._("DiscoveryQueueApp").Debug;
+            include_assets: !0,
+            include_trailers: !0,
+            include_basic_info: !0,
+            include_tag_count: 20,
+            include_release: !0,
+            include_platforms: !0,
+            include_screenshots: !0,
+            include_reviews: !0,
+          },
+          _ = new _._("DiscoveryQueueApp").Debug;
         function _(_) {
           const {
               appID: _,
@@ -1799,8 +1740,7 @@
           };
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = "steamdb";
+          _ = __webpack_require__._(_);
         function _(_) {
           const {
             className: _,
@@ -1832,8 +1772,7 @@
           });
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
+          _ = __webpack_require__("chunkid");
         const _ = new _._("DiscoveryQueueWizard").Debug,
           _ = 1,
           _ = 1400,

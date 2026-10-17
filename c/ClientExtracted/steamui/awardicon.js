@@ -26,8 +26,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
+          _ = __webpack_require__("chunkid");
         function _(_) {
           const { reaction: _ } = _,
             _ = (0, _._)(_.reaction_type);

@@ -148,7 +148,7 @@
     "Wishlist_Controls_Categories_Header_Other": "Muut omat kategoriat",
     "Wishlist_Controls_Categories_Header_Suggested": "Ehdotetut kategoriat",
     "Wishlist_Categories_Max_Per_App_Reached": "Toivelistalla oleva tuote on saavuttanut %1$s kategorian ylärajan.",
-    "Wishlist_Categories_Dialog_Advanced": "Advanced...",
+    "Wishlist_Categories_Dialog_Advanced": "Lisäasetukset",
     "Price_History_Normal_Price": "NORMAALI",
     "Price_History_Recent_Low_Price": "30 PÄIVÄN ALIN",
     "Price_History_Recent_Low_Price_Ttip": "Peli oli saatavilla hintaan %1$s viimeisen %2$s päivän aikana.",
@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Meillä ei ole tänään suositeltavia uusia julkaisuja <1>Tutustu pelikalenterisi muuhun sisältöön!</1>",
     "NewBadge": "UUTTA",
     "Time_Today": "Tänään",
+    "DiscountsAndEvents_Title": "Alennukset ja tapahtumat",
+    "DiscountsAndEvents_SeeMore": "Näytä lisää",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Viikonlopputarjous",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Viikkotarjous",
+    "DiscountsAndEvents_Banner_DailyDeal": "Päivän tarjous",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Suurin alennus",
+    "DiscountsAndEvents_LoadError": "Alennuksia ja tapahtumia ei voitu ladata juuri nyt. Yritä uudelleen myöhemmin.",
     "store_ui_dummy": "dont translate"
 }

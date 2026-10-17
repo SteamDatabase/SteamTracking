@@ -1,0 +1,51 @@
+._19Vm5Rp9my8iJURrNMCKUo {
+  overflow-anchor: none;
+  outline: 1px solid var(--color-greyneutral-6);
+}
+._19Vm5Rp9my8iJURrNMCKUo._2VeFXNqMTBkLnytILUwxhS {
+  outline: none;
+}
+._2GPPm0eEkGp3FduoQQNudM {
+  position: relative;
+  width: 100%;
+}
+._1MhihHiVesUDdXIXdMLM1H {
+  display: flow-root;
+}
+.PvkY7hiM54lbxeMpdHkhr {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--color-greyneutral-4);
+}
+._3uWAjibsDAHb6c7aCgjRWS {
+  background-color: var(--color-greyneutral-6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+._2FEGacABHSl1K-7wogXXf3 {
+  opacity: 0.5;
+}
+._3eaokkqWXK9f7ixEuHEYeI {
+  flex-grow: 1;
+  min-width: 0;
+}
+._3eaokkqWXK9f7ixEuHEYeI > :first-child {
+  border-top: none;
+}
+._1XjJ-Blbt_FHc8LaQAkVNm {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-inline-end: var(--spacing-2);
+  color: var(--color-greyneutral-11);
+  cursor: grab;
+}
+._1q5kVKMMVxawjhdK2UkKei {
+  visibility: hidden;
+}
+._241cCP7iNXYFnVbuS4HqJ0 {
+  display: contents;
+}
+/*# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/css/8624.css.map*/

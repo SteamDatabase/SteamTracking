@@ -112,5 +112,7 @@
     "ReadableDuration_Hours": "%1$s ชั่วโมง",
     "ReadableDuration_Minutes": "%1$s นาที",
     "ReadableDuration_OneMinute": "1 นาที",
-    "ReadableDuration_LessThanOneMinute": "น้อยกว่า 1 นาที"
+    "ReadableDuration_LessThanOneMinute": "น้อยกว่า 1 นาที",
+    "Playtime_Hours": "%1$s ชั่วโมง",
+    "Playtime_Minutes": "%1$s นาที"
 }

@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Sprachchat in %chat% kann nicht gestartet werden, da nicht ausreichend freie Sprachchat-Slots zur Verfügung stehen."
 "Friends_Chat_VoiceStatus"		"%availslots% verfügbare Eingänge [%maxslots% insgesamt]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% IM SPIEL, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% IM CHAT, %online% ONLINE"

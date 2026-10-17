@@ -60,13 +60,13 @@ create_legacy_entry_points () {
 	ln -fns ../legacy-setup-stub.sh "$legacy/setup.sh"
 }
 
-# Opt-in to the steamrt3c client
+# The steamrt3c client is the default; the sentinel file opts out to scout
 case "${STEAM_FORCE_CLIENT-}" in
 	(ubuntu12_32 | scout | ldlp)
-		rm -f "$STEAMROOT/.steam-enable-steamrt64-client"
+		touch "$STEAMROOT/.steam-disable-steamrt64-client"
 		;;
 	(steamrt64 | steamrt3c | steamrt)
-		touch "$STEAMROOT/.steam-enable-steamrt64-client"
+		rm -f "$STEAMROOT/.steam-disable-steamrt64-client"
 		;;
 	("")
 		;;
@@ -75,7 +75,7 @@ case "${STEAM_FORCE_CLIENT-}" in
 		;;
 esac
 
-if [ -e "$STEAMROOT/.steam-enable-steamrt64-client" ]; then
+if [ ! -e "$STEAMROOT/.steam-disable-steamrt64-client" ]; then
 	if [ -x "$STEAMROOT/steamrt64/steam" ]; then
 		log "Starting SteamRT3 Steam"
 

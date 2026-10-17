@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "ไม่สามารถเริ่มเสียงพูดใน %chat% ได้ ช่องสำหรับพูดที่ว่างไม่เพียงพอ"
 "Friends_Chat_VoiceStatus"		"ใช้ได้ %availslots% ช่อง [ทั้งหมด %maxslots%]"
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ออนไลน์"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% ในเกม, %online% ออนไลน์"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% ในแช็ต, %online% ออนไลน์"

@@ -69,9 +69,9 @@ message CStoreCuration_RecommendedApp {
 }
 
 service StoreCuration {
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetListDetails (.CStoreCuration_GetListDetails_Request) returns (.CStoreCuration_GetListDetails_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetLists (.CStoreCuration_GetLists_Request) returns (.CStoreCuration_GetLists_Response);
 }
 

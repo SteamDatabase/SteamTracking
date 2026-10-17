@@ -221,6 +221,7 @@ $ORIGIN
 --disable-ffmpeg-hevc
 --disable-gpu
 --disable-gpu-compositing
+--disable-gpu-early-init
 --disable-gpu-sandbox
 --disable-gpu-watchdog
 --disable-hang-monitor
@@ -279,6 +280,7 @@ $ORIGIN
 -cef-disable-xcomposite-workaround
 -cef-enable-debugging
 -cef-enable-gpu-debugging
+-cef-enable-gpu-early-init
 -cef-enable-low-delay-live-stream
 -cef-enable-vaapi
 -cef-force-accessibility
@@ -408,6 +410,7 @@ $ORIGIN
 /proc/mounts
 /proc/self/fd/%d
 /proc/self/maps
+/proc/self/ns/pid
 /run/host/root
 /steamrt64
 /steamsysinfo
@@ -765,6 +768,7 @@ Bad Access flag on shared mem create: %s: %u\n
 Bangla
 Basque
 Belarusian
+Block webhelper startup waiting on the GPU channel like stock Chromium, instead of connecting on first use
 BlockPromptsIfIgnoredOften
 Boolean default must be true or false.
 Bosnian
@@ -1813,6 +1817,7 @@ SetRepeatedUInt64
 SetString
 SetUInt32
 SetUInt64
+Shared object manager is owned by another pid namespace; IPC disabled in pid %d\n
 Should not reach here.
 Shutting down webhelper process %u
 Simplified_Chinese

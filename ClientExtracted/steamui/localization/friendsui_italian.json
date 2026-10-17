@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Invita al canale vocale",
     "VoiceChat_SendInviteMessage": "Invia messaggio di invito",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Silenziata",
     "VoiceChat_Unavailable_NotFriend": "Chat vocale non disponibile: %1$s non è nella tua lista amici.",
     "VoiceChat_Unavailable_NotOnline": "Chat vocale non disponibile: %1$s non è online.",
     "VoiceChat_Unavailable_NotInBeta": "Chat vocale non disponibile: %1$s non sta usando la nuova beta della chat.",
@@ -640,6 +641,7 @@
     "Button_Share": "Condividi",
     "Button_Ignore": "Ignora",
     "DirectMessageFromNonFriend": "Messaggio da un utente che non è nella tua lista amici",
+    "DirectMessageFromNonFriend_SharedGroup": "Siete entrambi membri della chat di gruppo \"%1$s\".",
     "NonFriendAction_Block": "Blocca tutte le comunicazioni",
     "NonFriendAction_Allow": "Riattiva le comunicazioni",
     "SuspiciousMessage_Header": "Chat sospetta",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "È stato risolto un problema con le finestre degli amici e delle chat che non comparivano nell'overlay in gioco su Linux e macOS.",
     "BBCode_Loading": "Caricamento",
     "BBCode_Failed": "Caricamento non riuscito",
-    "broadcastDetails_Playing": "Riproduzione",
-    "VoiceChat_Muted_Deck": "Silenziata"
+    "broadcastDetails_Playing": "Riproduzione"
 }

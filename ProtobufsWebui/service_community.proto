@@ -482,7 +482,7 @@ service Community {
 	rpc FetchTranslationFromCrowdIn (.CCommunity_FetchTranslationFromCrowdIn_Request) returns (.CCommunity_FetchTranslationFromCrowdIn_Response);
 	// ePrivilege=1
 	rpc GetAppRichPresenceLocalization (.CCommunity_GetAppRichPresenceLocalization_Request) returns (.CCommunity_GetAppRichPresenceLocalization_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetApps (.CCommunity_GetApps_Request) returns (.CCommunity_GetApps_Response);
 	// ePrivilege=1
 	rpc GetAvatarHistory (.CCommunity_GetAvatarHistory_Request) returns (.CCommunity_GetAvatarHistory_Response);
@@ -496,7 +496,7 @@ service Community {
 	rpc GetClanEventCrowdInMetadata (.CCommunity_GetClanEventCrowdInMetadata_Request) returns (.CCommunity_GetClanEventCrowdInMetadata_Response);
 	// bConstMethod=true, ePrivilege=0
 	rpc GetClanLocGroupImages (.CCommunity_GetClanLocGroupImages_Request) returns (.CCommunity_GetClanLocGroupImages_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetClanMetadata (.CCommunity_GetClanMetadata_Request) returns (.CCommunity_GetClanMetadata_Response);
 	// bConstMethod=true, ePrivilege=5
 	rpc GetComment (.CCommunity_GetComment_Request) returns (.CCommunity_GetComment_Response);
@@ -510,7 +510,7 @@ service Community {
 	rpc GetUserPartnerEventsAppPriorities (.CCommunity_GetUserPartnerEventsAppPriorities_Request) returns (.CCommunity_GetUserPartnerEventsAppPriorities_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetUserPartnerEventViewStatus (.CCommunity_GetUserPartnerEventViewStatus_Request) returns (.CCommunity_GetUserPartnerEventViewStatus_Response);
-	// ePrivilege=3
+	// ePrivilege=3, rgBrowserAPISites=ArrayExpression
 	rpc HideAndReportComment (.CCommunity_HideAndReportComment_Request) returns (.CCommunity_HideAndReportComment_Response);
 	// ePrivilege=1
 	rpc MarkPartnerEventsForUser (.CCommunity_MarkPartnerEventsForUser_Request) returns (.CCommunity_MarkPartnerEventsForUser_Response);

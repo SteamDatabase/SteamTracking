@@ -57,7 +57,7 @@ message CClan_RespondToClanInvite_Response {
 service Clan {
 	// bConstMethod=true, ePrivilege=1
 	rpc GetDraftAndRecentPartnerEventSnippet (.CClan_GetDraftAndRecentPartnerEventSnippet_Request) returns (.CClan_GetDraftAndRecentPartnerEventSnippet_Response);
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetPartnerEventsByBuildIDRange (.CClan_GetPartnerEventsByBuildIDRange_Request) returns (.CClan_GetPartnerEventsByBuildIDRange_Response);
 	// ePrivilege=1
 	rpc RespondToClanInvite (.CClan_RespondToClanInvite_Request) returns (.CClan_RespondToClanInvite_Response);

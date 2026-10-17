@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Afișează toate titlurile etichetate cu „Verificat”, plus titlurile jucabile, dar care ar putea necesita un efort suplimentar pentru interacțiune sau configurare.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Afișează toate titlurile etichetate cu „Verificat” sau „Jucabil”, plus titlurile care nu au fost testate încă pentru compatibilitatea cu Steam Machine.",
     "MachineVerified_FilterDescription_AllGames": "Afișează toate jocurile din biblioteca ta, inclusiv cele care nu rulează bine pe Steam Machine.",
-    "FrameVerified_FilterDescription_Verified": "Afișează numai jocurile care funcționează perfect cu Steam Frame.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Afișează toate titlurile etichetate cu „Verificat” pentru Steam Frame, plus titlurile jucabile, dar care ar putea necesita un efort suplimentar pentru interacțiune sau configurare.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Afișează toate titlurile etichetate cu „Verificat” sau „Jucabil”, plus titlurile care nu au fost testate încă pentru compatibilitatea cu Steam Frame.",
-    "FrameVerified_FilterDescription_AllGames": "Afișează toate jocurile din biblioteca ta, inclusiv cele care nu rulează bine pe Steam Frame."
+    "FrameVerified_FilterDescription_Verified": "Afișează numai jocurile care funcționează perfect cu ecranul și comenzile integrate ale dispozitivului Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Afișează toate titlurile etichetate cu „Verificat”, plus titlurile jucabile, dar care ar putea necesita un efort suplimentar pentru interacțiune sau configurare.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Afișează toate titlurile etichetate cu „Verificat” sau „Jucabil”, plus titlurile care nu au fost testate încă pentru compatibilitatea cu Steam Frame (rulare autonomă).",
+    "FrameVerified_FilterDescription_AllGames": "Afișează toate jocurile din biblioteca ta, inclusiv cele care nu rulează bine pe Steam Frame în modul autonom."
 }

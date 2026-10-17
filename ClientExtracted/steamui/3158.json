@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Show all Verified titles, plus games that are playable but might require extra effort to interact with or configure.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Show all Verified and Playable titles, plus games that haven't yet been tested for Steam Machine compatibility.",
     "MachineVerified_FilterDescription_AllGames": "Show all games in your library, including those that Steam Machine doesn't run well.",
-    "FrameVerified_FilterDescription_Verified": "Show only games that work naturally with Steam Frame.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Show all Frame Verified titles, plus games that are playable but might require extra effort to interact with or configure.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Show all Verified and Playable titles, plus games that haven't yet been tested for Steam Frame compatibility.",
-    "FrameVerified_FilterDescription_AllGames": "Show all games in your library, including those that Steam Frame doesn't run well."
+    "FrameVerified_FilterDescription_Verified": "Show only games that work naturally with Steam Frame's built-in controls and display.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Show all Verified titles, plus games that are playable but might require extra effort to interact with or configure.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Show all Verified and Playable titles, plus games that haven't yet been tested for Steam Frame Standalone compatibility.",
+    "FrameVerified_FilterDescription_AllGames": "Show all games in your library, including those that Steam Frame doesn't run well in standalone mode."
 }

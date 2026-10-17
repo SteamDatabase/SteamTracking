@@ -18,7 +18,7 @@ message CGamePerformanceStats_GetGameFrameRateStats_Response_FrameRate {
 }
 
 service GamePerformanceStats {
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetGameFrameRateStats (.CGamePerformanceStats_GetGameFrameRateStats_Request) returns (.CGamePerformanceStats_GetGameFrameRateStats_Response);
 }
 

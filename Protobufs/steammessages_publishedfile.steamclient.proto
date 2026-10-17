@@ -1,6 +1,7 @@
 import "steammessages_base.proto";
 import "steammessages_unified_base.steamclient.proto";
 import "enums_productinfo.proto";
+import "enums.proto";
 
 option cc_generic_services = true;
 
@@ -676,6 +677,7 @@ message CPublishedFile_GetUserVoteSummary_Response {
 		optional bool vote_for = 2;
 		optional bool vote_against = 3;
 		optional bool reported = 4;
+		optional bool vote_later = 5;
 	}
 
 	repeated .CPublishedFile_GetUserVoteSummary_Response.VoteSummary summaries = 1;
@@ -725,6 +727,32 @@ message CPublishedFile_UpdateContentDescriptors_Request {
 
 message CPublishedFile_UpdateContentDescriptors_Response {
 	optional uint32 timestamp_updated = 1;
+}
+
+message CPublishedFile_SanctionPublishedFile_Request {
+	message Sanction {
+		optional .EContentModerationSanction sanction = 1 [default = k_EContentModerationSanction_Invalid];
+		optional int32 days = 2;
+		optional .EContentModeratorLevel escalate_to = 3 [default = k_EContentModeratorLevel_Any];
+	}
+
+	optional fixed64 publishedfileid = 1;
+	optional .EContentReportReason reason = 2 [default = k_EContentReportReason_Invalid];
+	optional string note = 3;
+	optional .EResolutionAutomation resolved_by_automation = 4 [default = k_EResolutionAutomation_Manual];
+	repeated .CPublishedFile_SanctionPublishedFile_Request.Sanction sanctions = 5;
+}
+
+message CPublishedFile_SanctionPublishedFile_Response {
+	optional bool force_unbanned = 1;
+}
+
+message CPublishedFile_AcquitPublishedFile_Request {
+	optional fixed64 publishedfileid = 1;
+	optional .EResolutionAutomation resolved_by_automation = 2 [default = k_EResolutionAutomation_Manual];
+}
+
+message CPublishedFile_AcquitPublishedFile_Response {
 }
 
 message CPublishedFile_FileSubscribed_Notification {
@@ -791,6 +819,8 @@ service PublishedFile {
 	rpc GetItemChanges (.CPublishedFile_GetItemChanges_Request) returns (.CPublishedFile_GetItemChanges_Response);
 	rpc GetContentDescriptors (.CPublishedFile_GetContentDescriptors_Request) returns (.CPublishedFile_GetContentDescriptors_Response);
 	rpc UpdateContentDescriptors (.CPublishedFile_UpdateContentDescriptors_Request) returns (.CPublishedFile_UpdateContentDescriptors_Response);
+	rpc SanctionPublishedFile (.CPublishedFile_SanctionPublishedFile_Request) returns (.CPublishedFile_SanctionPublishedFile_Response);
+	rpc AcquitPublishedFile (.CPublishedFile_AcquitPublishedFile_Request) returns (.CPublishedFile_AcquitPublishedFile_Response);
 }
 
 service PublishedFileClient {

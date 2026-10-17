@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "남아있는 대화 슬롯이 충분하지 않아 %chat%에서 음성 채팅을 시작할 수 없습니다."
 "Friends_Chat_VoiceStatus"		"사용 가능 슬롯 %availslots% [총 %maxslots%]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% 온라인"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% 게임 중, %online% 온라인"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% 채팅 중, %online% 온라인"

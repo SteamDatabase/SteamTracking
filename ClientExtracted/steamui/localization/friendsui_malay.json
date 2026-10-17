@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Jemput ke Saluran Suara",
     "VoiceChat_SendInviteMessage": "Hantar Mesej Jemputan",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Diredamkan",
     "VoiceChat_Unavailable_NotFriend": "Suara tidak tersedia: %1$s bukan dalam senarai rakan anda.",
     "VoiceChat_Unavailable_NotOnline": "Suara tidak tersedia: %1$s bukan berada dalam talian sekarang.",
     "VoiceChat_Unavailable_NotInBeta": "Suara tidak tersedia: %1$s tidak menjalankan beta sembang baharu.",
@@ -1207,6 +1208,5 @@
     "changeLog_UpdateItem57": "Tetingkap Rakan dan Sembang yang tidak dipaparkan dalam tindanan dalam permainan di Linux dan macOS telah dibaiki.",
     "BBCode_Loading": "Memuatkan",
     "BBCode_Failed": "Gagal memuatkan",
-    "broadcastDetails_Playing": "Bermain",
-    "VoiceChat_Muted_Deck": "Diredamkan"
+    "broadcastDetails_Playing": "Bermain"
 }

@@ -148,7 +148,7 @@
     "Wishlist_Controls_Categories_Header_Other": "我的其它類別",
     "Wishlist_Controls_Categories_Header_Suggested": "建議的類別",
     "Wishlist_Categories_Max_Per_App_Reached": "此願望清單項目屬於 %1$s 個類別，已達上限。",
-    "Wishlist_Categories_Dialog_Advanced": "Advanced...",
+    "Wishlist_Categories_Dialog_Advanced": "進階…",
     "Price_History_Normal_Price": "一般價格",
     "Price_History_Recent_Low_Price": "30 天內最低",
     "Price_History_Recent_Low_Price_Ttip": "此遊戲在過去 %2$s 天內特價為 %1$s",
@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "這一天沒有任何新發行的遊戲能推薦給您<1>歡迎查看行事曆上的其它日期！</1>",
     "NewBadge": "新",
     "Time_Today": "今天",
+    "DiscountsAndEvents_Title": "折扣與活動",
+    "DiscountsAndEvents_SeeMore": "查看更多",
+    "DiscountsAndEvents_Banner_WeekendDeal": "週末特價",
+    "DiscountsAndEvents_Banner_MidweekDeal": "週中特價",
+    "DiscountsAndEvents_Banner_DailyDeal": "今日特惠",
+    "DiscountsAndEvents_Banner_LargestDiscount": "最大折扣",
+    "DiscountsAndEvents_LoadError": "目前無法載入折扣與活動。請稍後再試。",
     "store_ui_dummy": "dont translate"
 }

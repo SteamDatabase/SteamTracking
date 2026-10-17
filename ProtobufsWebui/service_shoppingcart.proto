@@ -163,11 +163,11 @@ service ShoppingCart {
 	rpc AddPackages (.CShoppingCart_AddPackages_Request) returns (.CShoppingCart_AddPackages_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=1
 	rpc CreateNewShoppingCart (.CShoppingCart_CreateNew_Request) returns (.CShoppingCart_CreateNew_Response);
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetShoppingCartContents (.CShoppingCart_GetContents_Request) returns (.CShoppingCart_GetContents_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=1
 	rpc ModifyLineItem (.CShoppingCart_ModifyLineItem_Request) returns (.CShoppingCart_ModifyLineItem_Response);
-	// ePrivilege=1, eWebAPIKeyRequirement=1
+	// ePrivilege=1, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc RemoveLineItems (.CShoppingCart_RemoveLineItems_Request) returns (.CShoppingCart_RemoveLineItems_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=1
 	rpc UpdatePackageQuantity (.CShoppingCart_UpdatePackageQuantity_Request) returns (.CShoppingCart_UpdatePackageQuantity_Response);

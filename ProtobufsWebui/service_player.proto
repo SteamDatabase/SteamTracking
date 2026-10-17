@@ -960,15 +960,15 @@ service Player {
 	rpc ClientGetLastPlayedTimes (.CPlayer_GetLastPlayedTimes_Request) returns (.CPlayer_GetLastPlayedTimes_Response);
 	// ePrivilege=1
 	rpc DeletePostedStatus (.CPlayer_DeletePostedStatus_Request) returns (.CPlayer_DeletePostedStatus_Response);
-	// ePrivilege=1, eWebAPIKeyRequirement=2
+	// ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetAchievementsProgress (.CPlayer_GetAchievementsProgress_Request) returns (.CPlayer_GetAchievementsProgress_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetAnimatedAvatar (.CPlayer_GetAnimatedAvatar_Request) returns (.CPlayer_GetAnimatedAvatar_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetAvatarFrame (.CPlayer_GetAvatarFrame_Request) returns (.CPlayer_GetAvatarFrame_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=2
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetCommunityBadgeProgress (.CPlayer_GetCommunityBadgeProgress_Request) returns (.CPlayer_GetCommunityBadgeProgress_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetCommunityPreferences (.CPlayer_GetCommunityPreferences_Request) returns (.CPlayer_GetCommunityPreferences_Response);
 	// ePrivilege=1
 	rpc GetDurationControl (.CPlayer_GetDurationControl_Request) returns (.CPlayer_GetDurationControl_Response);
@@ -976,15 +976,15 @@ service Player {
 	rpc GetEmoticonList (.CPlayer_GetEmoticonList_Request) returns (.CPlayer_GetEmoticonList_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetFavoriteBadge (.CPlayer_GetFavoriteBadge_Request) returns (.CPlayer_GetFavoriteBadge_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetFriendsGameplayInfo (.CPlayer_GetFriendsGameplayInfo_Request) returns (.CPlayer_GetFriendsGameplayInfo_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetGameAchievements (.CPlayer_GetGameAchievements_Request) returns (.CPlayer_GetGameAchievements_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetGameBadgeLevels (.CPlayer_GetGameBadgeLevels_Request) returns (.CPlayer_GetGameBadgeLevels_Response);
 	// bConstMethod=true, ePrivilege=2, rgBrowserAPISites=ArrayExpression
 	rpc GetGamesWithAchievementProgress (.CPlayer_GetGamesWithAchievementProgress_Request) returns (.CPlayer_GetGamesWithAchievementProgress_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetGlobalAchievementPercentages (.CPlayer_GetGlobalAchievementPercentages_Request) returns (.CPlayer_GetGlobalAchievementPercentages_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetMiniProfileBackground (.CPlayer_GetMiniProfileBackground_Request) returns (.CPlayer_GetMiniProfileBackground_Response);
@@ -992,13 +992,13 @@ service Player {
 	rpc GetMutualFriendsForIncomingInvites (.CPlayer_GetMutualFriendsForIncomingInvites_Request) returns (.CPlayer_GetMutualFriendsForIncomingInvites_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetNewSteamAnnouncementState (.CPlayer_GetNewSteamAnnouncementState_Request) returns (.CPlayer_GetNewSteamAnnouncementState_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetNicknameList (.CPlayer_GetNicknameList_Request) returns (.CPlayer_GetNicknameList_Response);
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetOwnedGames (.CPlayer_GetOwnedGames_Request) returns (.CPlayer_GetOwnedGames_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetPerFriendPreferences (.CPlayer_GetPerFriendPreferences_Request) returns (.CPlayer_GetPerFriendPreferences_Response);
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetPlayerLinkDetails (.CPlayer_GetPlayerLinkDetails_Request) returns (.CPlayer_GetPlayerLinkDetails_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetPlayNext (.CPlayer_GetPlayNext_Request) returns (.CPlayer_GetPlayNext_Response);
@@ -1010,7 +1010,7 @@ service Player {
 	rpc GetProfileBackground (.CPlayer_GetProfileBackground_Request) returns (.CPlayer_GetProfileBackground_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetProfileCustomization (.CPlayer_GetProfileCustomization_Request) returns (.CPlayer_GetProfileCustomization_Response);
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetProfileItemsEquipped (.CPlayer_GetProfileItemsEquipped_Request) returns (.CPlayer_GetProfileItemsEquipped_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetProfileItemsOwned (.CPlayer_GetProfileItemsOwned_Request) returns (.CPlayer_GetProfileItemsOwned_Response);
@@ -1020,7 +1020,7 @@ service Player {
 	rpc GetPurchasedAndUpgradedProfileCustomizations (.CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request) returns (.CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetPurchasedProfileCustomizations (.CPlayer_GetPurchasedProfileCustomizations_Request) returns (.CPlayer_GetPurchasedProfileCustomizations_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetRecentPlaytimeSessionsForChild (.CPlayer_GetRecentPlaytimeSessionsForChild_Request) returns (.CPlayer_GetRecentPlaytimeSessionsForChild_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetSteamDeckKeyboardSkin (.CPlayer_GetSteamDeckKeyboardSkin_Request) returns (.CPlayer_GetSteamDeckKeyboardSkin_Response);
@@ -1028,9 +1028,9 @@ service Player {
 	rpc GetTextFilterWords (.CPlayer_GetTextFilterWords_Request) returns (.CPlayer_GetTextFilterWords_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetTimeSSAAccepted (.CPlayer_GetTimeSSAAccepted_Request) returns (.CPlayer_GetTimeSSAAccepted_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=2
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetTopAchievementsForGames (.CPlayer_GetTopAchievementsForGames_Request) returns (.CPlayer_GetTopAchievementsForGames_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetUserAchievements (.CPlayer_GetUserAchievements_Request) returns (.CPlayer_GetUserAchievements_Response);
 	// bConstMethod=true, ePrivilege=2
 	rpc GetUserStats (.CPlayer_GetUserStats_Request) returns (.CPlayer_GetUserStats_Response);

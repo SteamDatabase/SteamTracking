@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "عرض جميع الألعاب الموثقة بالإضافة إلى الألعاب القابلة للعب ولكنها قد تتطلب مجهودًا إضافيًا للتفاعل أو التهيئة.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "عرض جميع الألعاب التي تم التحقق منها والتي يمكن تشغيلها، بالإضافة إلى الألعاب التي لم يتم اختبارها بعد من حيث التوافق مع Steam Machine.",
     "MachineVerified_FilterDescription_AllGames": "عرض جميع الألعاب في مكتبتك، بما في ذلك الألعاب التي لا تعمل بشكل جيد على Steam Machine.",
-    "FrameVerified_FilterDescription_Verified": "عرض فقط الألعاب التي تعمل بشكل طبيعي مع Steam Frame.",
-    "FrameVerified_FilterDescription_Verified_Playable": "عرض جميع الألعاب الموثقة على Steam Frame بالإضافة إلى الألعاب التي يمكن لعبها ولكنها قد تتطلب مجهودًا إضافيًا للتفاعل أو الضبط.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "اعرض جميع الألعاب التي تم التحقق منها والتي يمكن تشغيلها، بالإضافة إلى الألعاب التي لم يتم اختبارها بعد من حيث التوافق مع Steam Frame.",
-    "FrameVerified_FilterDescription_AllGames": "عرض جميع الألعاب في مكتبتك، بما في ذلك الألعاب التي لا تعمل بشكل جيد على Steam Frame."
+    "FrameVerified_FilterDescription_Verified": "عرض الألعاب التي تعمل بشكل طبيعي مع عناصر التحكم المدمجة والشاشة في Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "عرض جميع الألعاب الموثقة بالإضافة إلى الألعاب القابلة للعب ولكنها قد تتطلب مجهودًا إضافيًا للتفاعل أو التهيئة.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "عرض جميع الألعاب التي تم التحقق من توافقها والتي يمكن تشغيلها، بالإضافة إلى الألعاب التي لم تخضع لاختبار التوافق مع Steam Frame Standalone.",
+    "FrameVerified_FilterDescription_AllGames": "عرض جميع الألعاب في مكتبتك، بما في ذلك الألعاب التي لا تعمل بشكل جيد على Steam Frame Standalone."
 }

@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Vis alle verifiserte spill, samt spill som er spillbare, men som kan kreve ekstra arbeid for å bruke eller konfigurere.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Vis alle verifiserte og spillbare spill, samt spill som ikke er blitt testet for kompatibilitet på Steam Machine ennå.",
     "MachineVerified_FilterDescription_AllGames": "Vis alle spill i biblioteket, inkludert de som Steam Machine ikke kjører bra.",
-    "FrameVerified_FilterDescription_Verified": "Vis kun spill som fungerer uten videre med Steam Frame.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Vis alle verifiserte spill på Frame, samt spill som er spillbare, men som kan kreve ekstra arbeid for å bruke eller konfigurere.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Vis alle verifiserte og spillbare spill, samt spill som ikke er blitt testet for kompatibilitet på Steam Frame ennå.",
-    "FrameVerified_FilterDescription_AllGames": "Vis alle spill i biblioteket, inkludert de som Steam Frame ikke kjører bra."
+    "FrameVerified_FilterDescription_Verified": "Vis kun spill som fungerer uten videre med Steam Frames innebygde kontroller og skjerm.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Vis alle verifiserte spill, samt spill som er spillbare, men som kan kreve ekstra arbeid for å bruke eller konfigurere.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Vis alle verifiserte og spillbare spill, samt spill som ikke er blitt testet for kompatibilitet på Steam Frame (frittstående) ennå.",
+    "FrameVerified_FilterDescription_AllGames": "Vis alle spill i biblioteket, inkludert de som Steam Frame ikke kjører bra i frittstående modus."
 }

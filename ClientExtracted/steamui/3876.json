@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Bugün size önerebileceğimiz yeni çıkan bir oyun yok. <1>Takviminizin geri kalanına göz atın!</1>",
     "NewBadge": "YENİ",
     "Time_Today": "Bugün",
+    "DiscountsAndEvents_Title": "İndirimler ve Etkinlikler",
+    "DiscountsAndEvents_SeeMore": "Daha Fazlasını Göster",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Hafta Sonu Fırsatı",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Hafta Ortası Fırsatı",
+    "DiscountsAndEvents_Banner_DailyDeal": "Günün Fırsatı",
+    "DiscountsAndEvents_Banner_LargestDiscount": "En Büyük İndirim",
+    "DiscountsAndEvents_LoadError": "İndirimler ve etkinlikler şu anda yüklenemiyor. Lütfen daha sonra tekrar deneyin.",
     "store_ui_dummy": "dont translate"
 }

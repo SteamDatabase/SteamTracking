@@ -431,6 +431,7 @@ $ORIGIN
 *10CUtlMemoryIN10CUtlRBTreeIN12_GLOBAL__N_121CLocalizedStringTable17localizedstring_tEiPFbRKS3_S5_E25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 *10CUtlRBTreeIN12_GLOBAL__N_121CLocalizedStringTable11fastvalue_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E
 *10CUtlRBTreeIN12_GLOBAL__N_121CLocalizedStringTable17localizedstring_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E
+*N12_GLOBAL__N_114CSerializedIMEE
 *N12_GLOBAL__N_117io_error_categoryE
 *N12_GLOBAL__N_121CLocalizedStringTableE
 *N12_GLOBAL__N_121system_error_categoryE
@@ -472,6 +473,7 @@ $ORIGIN
 *pcubPlaintextData
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGB
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 ++KEY_PAD_PLUS
@@ -885,7 +887,6 @@ $ORIGIN
 14CMachineIDInfo
 14CMessageObject
 14CSchemeManager
-14CSerializedIME
 14CUIFontPackage
 14CUtlLinkedListI10CUtlStringiE
 14CUtlLinkedListI13MessageItem_tiE
@@ -4819,6 +4820,12 @@ SteamThreadTools::CThreadLocalBase::Set(void*)
 SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
+SteamThreadTools::CThreadSharedMutex::CThreadSharedMutex()
+SteamThreadTools::CThreadSharedMutex::LockExclusive()
+SteamThreadTools::CThreadSharedMutex::LockShared() const
+SteamThreadTools::CThreadSharedMutex::UnlockExclusive()
+SteamThreadTools::CThreadSharedMutex::UnlockShared() const
+SteamThreadTools::CThreadSharedMutex::~CThreadSharedMutex()
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
@@ -5661,6 +5668,7 @@ XSelectInput
 XSendEvent
 XSetClassHint
 XSetErrorHandler
+XSetIMValues
 XSetIOErrorHandler
 XSetInputFocus
 XSetSelectionOwner
@@ -7299,6 +7307,7 @@ description
 descs.Count() >= 1
 desktop
 destinationIndicator
+destroyCallback
 desx
 desx-cbc
 detached content
@@ -8004,7 +8013,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenh@"
 givenName
 glBegin
 glBindTexture
@@ -9929,6 +9938,7 @@ pcPathLengthConstraint
 pchBuffer
 pchData
 pchEncodedData
+pchNode
 pclose
 pcubDecodedData
 pcubEncryptedData
@@ -10358,7 +10368,6 @@ requireExplicitPolicy
 required
 required cipher missing
 required compression algorithm missing
-res > 0
 res binder
 res master
 reseed error

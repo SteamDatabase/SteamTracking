@@ -22,20 +22,19 @@
           d = n(91645),
           a = n.n(d),
           I = n(7727),
-          C = n(8658),
-          O = "11127589";
+          C = n(8658);
         function i(r) {
           const { reaction: t } = r,
             o = (0, _.KL)(t.reaction_type);
           if (!o) return null;
-          const M = (0, I.Yp)(
+          const O = (0, I.Yp)(
             "#RewardsReaction_Tooltip",
             t.count || 0,
             o.localized_title,
           );
           return (0, s.jsxs)(E.he, {
             className: (0, C.A)(a().InfoContainer, a().IconContainer),
-            toolTipContent: M,
+            toolTipContent: O,
             children: [
               (0, s.jsx)("img", {
                 className: a().IconImg,
@@ -61,4 +60,4 @@
     },
   ]);
 })();
-//# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/awardicon.js.map
+//# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/awardicon.js.map

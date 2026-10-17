@@ -370,6 +370,7 @@ $ORIGIN
 *pcubDecodedData
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGcrE
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 , bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars, string font
@@ -380,8 +381,6 @@ $ORIGIN
 , not just within "
 , string URLText
 , string command, int default
-, string image
-, string image, string imagecolor, alignment imageAlignment, int preserveAspectRatio, int filtered
 , string labelText, string associate, alignment textAlignment, int wrap, string font, string flow_right
 , string progress, string variable
 , string text, bool scrollbar
@@ -482,21 +481,17 @@ $ORIGIN
 ../vgui2/controls/EditablePanel.cpp
 ../vgui2/controls/FileOpenDialog.cpp
 ../vgui2/controls/Frame.cpp
-../vgui2/controls/GraphPanel.cpp
 ../vgui2/controls/HTML.cpp
 ../vgui2/controls/ImageList.cpp
 ../vgui2/controls/ImagePanel.cpp
 ../vgui2/controls/Label.cpp
 ../vgui2/controls/ListPanel.cpp
-../vgui2/controls/ListViewPanel.cpp
 ../vgui2/controls/Menu.cpp
 ../vgui2/controls/MenuItem.cpp
 ../vgui2/controls/Panel.cpp
-../vgui2/controls/PropertySheet.cpp
 ../vgui2/controls/RichText.cpp
 ../vgui2/controls/TextEntry.cpp
 ../vgui2/controls/TextImage.cpp
-../vgui2/controls/ToolWindow.cpp
 ../vgui2/controls/TreeView.cpp
 ../vgui2/controls/TreeViewListControl.cpp
 ../vgui2/controls/controls.cpp
@@ -629,7 +624,6 @@ $ORIGIN
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI12CWatchingLogiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI14CLogWatchParamiE10ListElem_tEE
-10CUtlMemoryIN14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN4vgui9ListPanel8column_tEhE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES2_EiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP11CHTMLWindowiE10ListElem_tEE
@@ -643,7 +637,6 @@ $ORIGIN
 10CUtlMemoryIN27CSteamUIMessagingController15QueuedMessage_tEE
 10CUtlMemoryIN4vgui10BoundKey_tEE
 10CUtlMemoryIN4vgui11layoutcmd_tEE
-10CUtlMemoryIN4vgui13PropertySheet6Page_tEE
 10CUtlMemoryIN4vgui15KeyBindingMap_tEE
 10CUtlMemoryIN4vgui16MessageMapItem_tEE
 10CUtlMemoryIN4vgui19AnimationController13AnimCommand_tEE
@@ -669,7 +662,6 @@ $ORIGIN
 10CUtlMemoryIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tEE
 10CUtlMemoryIPN4vgui10ClickPanelEE
 10CUtlMemoryIPN4vgui10MenuButtonEE
-10CUtlMemoryIPN4vgui10ToolWindowEE
 10CUtlMemoryIPN4vgui13MenuSeparatorEE
 10CUtlMemoryIPN4vgui6ButtonEE
 10CUtlMemoryIPN4vgui6IImageEE
@@ -677,7 +669,6 @@ $ORIGIN
 10CUtlMemoryIPN4vgui8URLLabelEE
 10CUtlMemoryIPcE
 10CUtlMemoryIPwE
-10CUtlMemoryIfE
 10CUtlMemoryIhE
 10CUtlMemoryIiE
 10CUtlMemoryImE
@@ -723,7 +714,6 @@ $ORIGIN
 10CUtlVectorIN27CSteamUIMessagingController15QueuedMessage_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui10BoundKey_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui11layoutcmd_tE10CUtlMemoryIS1_EE
-10CUtlVectorIN4vgui13PropertySheet6Page_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui15KeyBindingMap_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui16MessageMapItem_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui19AnimationController13AnimCommand_tE10CUtlMemoryIS2_EE
@@ -749,7 +739,6 @@ $ORIGIN
 10CUtlVectorIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tE10CUtlMemoryIS5_EE
 10CUtlVectorIPN4vgui10ClickPanelE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui10MenuButtonE10CUtlMemoryIS2_EE
-10CUtlVectorIPN4vgui10ToolWindowE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui13MenuSeparatorE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui6ButtonE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
@@ -757,7 +746,6 @@ $ORIGIN
 10CUtlVectorIPN4vgui8URLLabelE10CUtlMemoryIS2_EE
 10CUtlVectorIPc10CUtlMemoryIS0_EE
 10CUtlVectorIPw10CUtlMemoryIS0_EE
-10CUtlVectorIf10CUtlMemoryIfEE
 10CUtlVectorIh10CUtlMemoryIhEE
 10CUtlVectorIi10CUtlMemoryIiEE
 10CUtlVectorIm10CUtlMemoryImEE
@@ -872,12 +860,10 @@ $ORIGIN
 14CUtlLinkedListI10CUtlStringiE
 14CUtlLinkedListI12CWatchingLogiE
 14CUtlLinkedListI14CLogWatchParamiE
-14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE
 14CUtlLinkedListIN4vgui9ListPanel8column_tEhE
 14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES1_EiE
 14CUtlLinkedListIP11CHTMLWindowiE
 14CUtlLinkedListIP8CUtlDictIb22CDefCaselessStringLessiEiE
-14CUtlLinkedListIPN4vgui12ListViewItemEiE
 14CUtlLinkedListIPN4vgui13ListPanelItemEiE
 14CUtlLinkedListIPN4vgui8MenuItemEiE
 14CUtlLinkedListIPN4vgui8TreeNodeEiE
@@ -1409,9 +1395,7 @@ AddFloat
 AddInt32
 AddInt64
 AddMessage
-AddNewTab
 AddString
-AddTabButton
 AddUInt32
 AddUInt64
 Address too small!
@@ -1419,19 +1403,15 @@ Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
 Afrikaans
 Albanian
 All files
-Alpha
 Already have converter for type %s, ignoring...\n
 Already saw decimal point or exponent; can't have another one.
 Amharic
-AnimatingImagePanel
 AnimationController
 Application built with libpng-
 Application jmp_buf size changed
 Application must supply a known background gamma
 Application transferred too few scanlines
 Application transferred too many scanlines
-ApplyButtonEnable
-ApplyChanges
 ApplySchemeSettings did not chain back to base class: %s
 April
 Arabic
@@ -1481,7 +1461,6 @@ BaseControls
 Basque
 Belarusian
 BgColor
-BitmapImagePanel
 Block size: %s\tAlloc'd: %d (peak: %d)\tNum blobs: %d (%s)\n
 Blocking global navigation to: %s\n
 Bogus DAC index %d
@@ -1531,7 +1510,6 @@ Byte size calculation and serialization were inconsistent.  This may indicate a 
 CANCELLED
 CAdHocValidation::~CAdHocValidation()
 CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
-CBitmapImagePanel
 CBroadcastController::OnBroadcastMicrophoneStatus
 CBroadcastController::OnBroadcastStatus
 CBroadcastController::OnBroadcastUploadStatus
@@ -2049,8 +2027,6 @@ Compression buffer size cannot be reduced below 6
 ConCommand '%s' not currently supported in config file\n
 ConVar
 ConVar::InternalSetValue: called with NULL
-Context
-ContextLabel
 ContextMenu
 ControlFactory
 ControlName
@@ -2129,7 +2105,6 @@ DirectoryTreeView
 Disables new faster overlay HTML path (or enables if on a branch it's not on by default)
 DisarmItem
 DismissJSDialog
-Divider
 Division or mod by zero: dividend.hi=
 DoConversionModeChanged
 DoCopyAllText
@@ -2149,7 +2124,6 @@ DragDrop
 DragDrop.DragFrame
 DragDrop.DropFrame
 DragDroppedText
-DragPropertySheet
 Draws html perf data
 DropContext
 Duplicate property %s in object
@@ -2292,7 +2266,6 @@ Files with optimize_for = LITE_RUNTIME cannot define services unless you set bot
 Filipino
 FindBar
 FindCount
-FindDefaultButton
 FindEntry
 Finnish
 First argument to Swap() (of type "
@@ -2404,7 +2377,6 @@ GetUInt32
 GetUInt64
 GetUint64FromString() did not get correct peCS parameter
 GetVParent()
-GraphPanel
 Gray color space not permitted on RGB PNG
 Greek
 GripPanel
@@ -2506,7 +2478,6 @@ Input size too large:
 InputCanceled
 InputCompleted
 InputDialog
-InsertTabImage
 Insufficient memory (case %d)
 Insufficient memory for eXIf chunk data
 Insufficient memory for hIST chunk data
@@ -2884,14 +2855,12 @@ ListImage
 ListItemSelected
 ListPanel
 ListPanel column does not support both CUSTOMPANEL and CHECKABLE at the same time\n
-ListPanel.BgColor
 ListPanel.DisabledSelectedTextColor
 ListPanel.DisabledTextColor
 ListPanel.PostSectionLeading
 ListPanel.SelectedBgColor
 ListPanel.SelectedOutOfFocusBgColor
 ListPanel.SelectedTextColor
-ListPanel.TextBgColor
 ListPanel.TextColor
 ListPanel::AddColumnHeader() can only have one checkable column, which must be called 'check'\n
 ListPanel::AddItem
@@ -2913,9 +2882,6 @@ ListPanelDragger
 ListPanelInterior
 ListPanelSectionCollapser
 ListPanelSectionHeader
-ListViewItem
-ListViewItemSelected
-ListViewPanel
 Lithuanian
 LoadDefaultControlSettings
 LoadFileIntoBuffer: NULL parameters
@@ -3100,44 +3066,33 @@ N27CSteamUIMessagingController17ChannelCallback_tE
 N27CSteamUIMessagingController37CCallbackInternal_OnClientPostMessageE
 N4vgui10ClickPanelE
 N4vgui10FrameTitleE
-N4vgui10GraphPanelE
 N4vgui10ImagePanelE
 N4vgui10MenuButtonE
 N4vgui10MessageBoxE
-N4vgui10ToolWindowE
 N4vgui11CStyleImageE
 N4vgui11CheckButtonE
 N4vgui11FrameButtonE
 N4vgui11InputDialogE
 N4vgui11ProgressBarE
 N4vgui11RadioButtonE
-N4vgui12ContextLabelE
 N4vgui12IClientPanelE
-N4vgui12ListViewItemE
-N4vgui12PropertyPageE
 N4vgui12ToggleButtonE
 N4vgui12TreeNodeTextE
 N4vgui13EditablePanelE
 N4vgui13FocusNavGroupE
 N4vgui13ListPanelItemE
-N4vgui13ListViewPanelE
 N4vgui13MenuSeparatorE
-N4vgui13PageDragFrameE
-N4vgui13PageDragPanelE
-N4vgui13PropertySheetE
 N4vgui13TooltipWindowE
 N4vgui13TreeNodeImageE
 N4vgui14ComboBoxButtonE
 N4vgui14CompositeImageE
 N4vgui14FileOpenDialogE
-N4vgui14TabCloseButtonE
 N4vgui15CFontWidthCacheE
 N4vgui15ScrollBarSliderE
 N4vgui16CaptionGripPanelE
 N4vgui16FrameCloseButtonE
 N4vgui16RichTextInteriorE
 N4vgui16TreeViewSubPanelE
-N4vgui17CBitmapImagePanelE
 N4vgui17FrameSystemButtonE
 N4vgui17ListPanelCheckBoxE
 N4vgui17ListPanelInteriorE
@@ -3146,10 +3101,8 @@ N4vgui18CTypingJumpHandler17ITypingJumpClientE
 N4vgui18CTypingJumpHandlerE
 N4vgui18FileCompletionEditE
 N4vgui18FileCompletionMenuE
-N4vgui18IToolWindowFactoryE
 N4vgui18MenuItemCheckImageE
 N4vgui18ThrobberImagePanelE
-N4vgui19AnimatingImagePanelE
 N4vgui19AnimationControllerE
 N4vgui19FrameMaximizeButtonE
 N4vgui19FrameMinimizeButtonE
@@ -3171,9 +3124,7 @@ N4vgui5LabelE
 N4vgui5PanelE
 N4vgui6ButtonE
 N4vgui6IImageE
-N4vgui7DividerE
 N4vgui7MenuBarE
-N4vgui7PageTabE
 N4vgui7TooltipE
 N4vgui8ComboBoxE
 N4vgui8MenuItemE
@@ -3192,7 +3143,6 @@ N4vgui9RGBAImageE
 N4vgui9ScrollBarE
 N4vgui9TextEntryE
 N4vgui9TextImageE
-N4vgui9ToolPanelE
 N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat17FieldValuePrinterE
 N6google8protobuf10TextFormat21FastFieldValuePrinterE
@@ -3432,7 +3382,6 @@ Open Chrome devtools on launch for every HTML window
 OpenButton
 OpenColumnChoiceMenu
 OpenContextMenu
-OpenTabPage
 Opened temporary file %s
 Option "
 Option field "
@@ -3454,16 +3403,7 @@ PNG unsigned integer out of range
 PNG_TRANSFORM_STRIP_FILLER: BEFORE+AFTER not supported
 POSIX
 PS3 Unattributed
-Page
-PageChanged
-PageCountChanged
-PageDragFrame
-PageDragPanel
-PageHide
 PageLoadThrobber
-PageShow
-PageTab
-PageTabActivated
 PageTitleChange
 Palette is NULL in indexed image
 Panel
@@ -3525,12 +3465,6 @@ PrepareBuffer( nNewLength ) == pstrNew
 PressButton
 ProgressBar
 Prompt
-PropertyPage
-PropertyPageControls
-PropertySheet
-PropertySheet.FlashTabColor
-PropertySheet.TabGap
-PropertySheet.TransitionEffectTime
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
@@ -3584,7 +3518,6 @@ Required fields are not allowed in proto3.
 Reserved numbers must be positive integers.
 Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
 Reserved range end number must be greater than start number.
-ResetData
 ResizeColumnToContents
 Resource\warning.wav
 RichText
@@ -3703,7 +3636,6 @@ Should not reach here.
 Show browser tooltips
 ShowChatRoomGroupDialog
 ShowChatRoomGroupInvite
-ShowContextMenu
 ShowFriendChatDialog
 ShowIMECandidates
 ShowInviteToTradeDialog
@@ -3892,6 +3824,12 @@ SteamThreadTools::CThreadLocalBase::Set(void*)
 SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
+SteamThreadTools::CThreadSharedMutex::CThreadSharedMutex()
+SteamThreadTools::CThreadSharedMutex::LockExclusive()
+SteamThreadTools::CThreadSharedMutex::LockShared() const
+SteamThreadTools::CThreadSharedMutex::UnlockExclusive()
+SteamThreadTools::CThreadSharedMutex::UnlockShared() const
+SteamThreadTools::CThreadSharedMutex::~CThreadSharedMutex()
 SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
@@ -3942,14 +3880,7 @@ TSQueueBase_Push
 TSQueueBase_UnsafeDummy
 TSQueueBase_UnsafePeek
 TSQueue_PopIntoFreeList
-TabCloseButton
-TabClosed
-TabMenuButton
-TabMenuButtonFlash
-TabMenuItemFlash
-TabPageCloseButton
 TabPosition
-TabPressed
 Table %s Key %d\n
 Tajik
 Tamil
@@ -4006,10 +3937,6 @@ Too many arguments. %d arguments at most.
 Too many bytes for PNG signature
 Too many color components: %d, max %d
 Too much image data
-ToolPanel
-ToolWindow
-ToolWindow::s_ToolWindows
-ToolWindowSheet
 Tooltip.Anchor
 Tooltip.Delay
 TooltipHTML
@@ -4836,7 +4763,6 @@ filetx
 filipino
 fillcolor
 filter
-filtered
 filterinfo
 findactive
 findcount
@@ -4852,7 +4778,6 @@ flock %s %s failed. errno = %d
 flock LOCK_EX %s failed, errno = %d\n
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 floor
-fmodf
 fnmatch
 font
 fopen
@@ -4877,7 +4802,6 @@ frame_menu
 frame_minimize
 frame_mintosystray
 frame_title
-frames
 framesettitlebarvisible
 frametitle
 fread
@@ -5176,9 +5100,7 @@ image
 image row stride too large
 image-height-only
 image-width-only
-imageAlignment
 imageSelected
-imagecolor
 import "$0";\n
 import public "$0";\n
 import weak "$0";\n
@@ -5375,7 +5297,6 @@ longjmp
 loopback
 lost rgb to gray
 lost/gained channels
-lowRange < highRange
 lower
 lseek
 lseek64
@@ -5402,7 +5323,6 @@ m_ExpandStateQueue
 m_Filenames
 m_FormatStream
 m_FormatStream[i].textStreamIndex > cullPos
-m_Frames
 m_HandleTable
 m_Images
 m_LineBreaks
@@ -5420,17 +5340,14 @@ m_MessageMaps[ iMessageMap ].map->entries
 m_NodeList
 m_NodeList.IsValidIndex( endItem )
 m_NodeList.IsValidIndex(itemIndex)
-m_Pages
 m_PanelAnimationMapPool
 m_PanelKeyBindingMapPool
 m_PanelMessageMapPool
 m_ParentalSettings
 m_PerLineEllipses
 m_PostedMessages
-m_RangeList
 m_ReplacedKVs
 m_ResourceCache
-m_Samples
 m_SelectedItems
 m_SeparatorPanels
 m_SeparatorPanels.Count() == 0
@@ -5518,7 +5435,6 @@ m_pLogInstance
 m_pObj
 m_pObj == NULL
 m_pParent == this
-m_pParent->IsDraggableTab()
 m_pRef->m_pT
 m_pRootNode == NULL
 m_pSetIntValue
@@ -5787,11 +5703,8 @@ pScheme
 pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 3) || pDest > pSrc + (srcWidth * srcHeight * 4)
 pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 4) || pDest > pSrc + (srcWidth * srcHeight * 3)
 pToken
-pToolWindow
 pWatcher != NULL
 package $0;\n\n
-page
-page->m_pToolWindow == this
 paintbackground
 palette color-map: too few entries
 panel
@@ -5811,6 +5724,7 @@ pchData
 pchEncodedData
 pchInput
 pchMsg
+pchNode
 pchSteam2ID
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 pclose
@@ -5879,14 +5793,12 @@ posix_fadvise
 postdata
 pread64
 prepend
-preserveAspectRatio
 previous
 print
 printf
 profile '
 profile matches sRGB but writing iCCP instead
 progress
-propertypage
 propertysheet
 proportional_float
 proportional_int
@@ -5974,8 +5886,6 @@ resource/layout/%s.layout
 resource/layout/%s_%s.layout
 resource/layout/htmlfindbar.layout
 resource/layout/htmlpopup.layout
-resource/layout/pagedragframe.layout
-resource/layout/toolwindow.layout
 resource/webkit.css
 result
 rgFilters
@@ -6176,7 +6086,6 @@ stdout
 steam
 steam-runtime-launch-client --alongside-steam --
 steam.pid
-steam/cached/icon_tab_placement_arrow
 steam:
 steam://
 steam://open-devtools-file/
@@ -6281,11 +6190,8 @@ tEXt: text too long
 tIME
 tRNS chunk has out-of-range samples for bit_depth
 tRNS must be after
-tabMenuMenu
 tabPosition
-tabname
 tabposition
-tabtitle
 tag count too large
 tajik
 tall
@@ -6334,7 +6240,6 @@ too many sPLT chunks
 too many text chunks
 too many unknown chunks
 too short
-toolpanelgroup
 tooltip
 tooltip_headline
 tooltip_label
@@ -6460,7 +6365,6 @@ vgui::Menu
 vgui::MenuBar
 vgui::MenuItem
 vgui::Panel
-vgui::PropertySheet
 vgui::RichText
 vgui::TextEntry
 vgui::TextImage

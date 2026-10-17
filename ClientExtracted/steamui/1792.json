@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Alle geverifieerde titels weergeven, plus spellen die speelbaar zijn maar mogelijk extra aanpassingen nodig hebben om te navigeren of in te stellen.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Alle geverifieerde en speelbare titels weergeven, plus spellen die nog niet zijn getest op compatibiliteit met de Steam Machine.",
     "MachineVerified_FilterDescription_AllGames": "Alle spellen in je bibliotheek weergeven, inclusief spellen die niet goed op de Steam Machine draaien.",
-    "FrameVerified_FilterDescription_Verified": "Alleen spellen weergeven die goed functioneren op de Steam Frame.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Alle voor Frame geverifieerde titels weergeven, plus spellen die speelbaar zijn maar mogelijk extra aanpassingen nodig hebben om te navigeren of in te stellen.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Alle geverifieerde en speelbare titels weergeven, plus spellen die nog niet zijn getest op compatibiliteit met de Steam Frame.",
-    "FrameVerified_FilterDescription_AllGames": "Alle spellen in je bibliotheek weergeven, inclusief spellen die niet goed op de Steam Frame draaien."
+    "FrameVerified_FilterDescription_Verified": "Alleen spellen weergeven die goed functioneren met de ingebouwde besturing en weergave van de Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Alle geverifieerde titels weergeven, plus spellen die speelbaar zijn maar mogelijk extra aanpassingen nodig hebben om te navigeren of in te stellen.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Alle geverifieerde en speelbare titels weergeven, plus spellen die nog niet zijn getest op compatibiliteit met de Steam Frame als standalone.",
+    "FrameVerified_FilterDescription_AllGames": "Alle spellen in je bibliotheek weergeven, inclusief spellen die niet goed op de Steam Frame als standalone draaien."
 }

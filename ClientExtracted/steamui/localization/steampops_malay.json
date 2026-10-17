@@ -1,5 +1,4 @@
 {
-    "language": "english",
     "sdrpop_bl2": "Bellevue, Washington|Valve|Bellevue 2 - geganti sahaja",
     "sdrpop_blv": "Bellevue, Washington|Valve|Bellevue 1 - geganti dan pelayan permainan",
     "sdrpop_blv1": "Bellevue, Washington|Valve|Bellevue 1 - geganti dan pelayan permainan",
@@ -56,7 +55,7 @@
     "sdrpop_glhr": "London, UK|Google|europe-west2",
     "sdrpop_gmad": "Madrid, Sepanyol|Google|europe-southwest1",
     "sdrpop_gmel": "Melbourne, Australia|Google|australia-southeast2",
-    "sdrpop_gmks": "Moncks Corner, South Carolina|Google|us-east1",
+    "sdrpop_gmks": "Moncks Corner, Carolina Selatan|Google|us-east1",
     "sdrpop_gmum": "Mumbai, India|Google|asia-south1",
     "sdrpop_gmxp": "Milan, Itali|Google|europe-west8",
     "sdrpop_gosa": "Osaka, Jepun|Google|asia-northeast2",
@@ -82,7 +81,7 @@
     "sdrpop_hkgm": "Hong Kong|Multiplay|",
     "sdrpop_iad": "Sterling, Virginia|Valve|",
     "sdrpop_jfk": "New York|Valve|",
-    "sdrpop_jnb": "Johannesburg, South Africa|Valve|",
+    "sdrpop_jnb": "Johannesburg, Afrika Selatan|Valve|",
     "sdrpop_lax": "Los Angeles, California|Valve|",
     "sdrpop_lhr": "London, England|Valve|",
     "sdrpop_lim": "Lima, Peru|Valve|",

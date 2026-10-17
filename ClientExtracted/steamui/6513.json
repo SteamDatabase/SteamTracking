@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "모든 완벽 호환 게임과 플레이가 가능하지만 상호 작용 또는 구성을 위해 추가 작업이 필요할 수도 있는 게임을 표시합니다.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "모든 완벽 호환 및 플레이 가능 게임과 Steam Machine 호환성 검토를 아직 거치지 않은 게임을 표시합니다.",
     "MachineVerified_FilterDescription_AllGames": "Steam Machine에서 원활하게 실행되지 않는 게임을 포함한 라이브러리의 모든 게임을 표시합니다.",
-    "FrameVerified_FilterDescription_Verified": "Steam Frame에서 원활하게 작동하는 게임만 표시합니다.",
-    "FrameVerified_FilterDescription_Verified_Playable": "모든 Frame 완벽 호환 게임과 플레이가 가능하지만 상호 작용 또는 구성을 위해 추가 작업이 필요할 수도 있는 게임을 표시합니다.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "모든 완벽 호환 및 플레이 가능 게임과 Steam Frame 호환성 검토를 아직 거치지 않은 게임을 표시합니다.",
-    "FrameVerified_FilterDescription_AllGames": "Steam Frame에서 원활하게 실행되지 않는 게임을 포함한 라이브러리의 모든 게임을 표시합니다."
+    "FrameVerified_FilterDescription_Verified": "Steam Frame의 내장 컨트롤 및 디스플레이가 원활하게 작동하는 게임만 표시합니다.",
+    "FrameVerified_FilterDescription_Verified_Playable": "모든 완벽 호환 게임과 플레이가 가능하지만 상호 작용 또는 구성을 위해 추가 작업이 필요할 수도 있는 게임을 표시합니다.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "모든 완벽 호환 및 플레이 가능 게임과 Steam Frame 독립형 호환성 검토를 아직 거치지 않은 게임을 표시합니다.",
+    "FrameVerified_FilterDescription_AllGames": "Steam Frame 독립형 모드에서 원활하게 실행되지 않는 게임을 포함한 라이브러리의 모든 게임을 표시합니다."
 }

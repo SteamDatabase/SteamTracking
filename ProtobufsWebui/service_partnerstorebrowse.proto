@@ -23,9 +23,9 @@ message CPartnerStoreBrowse_GetItems_Request {
 }
 
 service PartnerStoreBrowse {
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetCountryRestrictions (.CPartnerStoreBrowse_GetCountryRestrictions_Request) returns (.CPartnerStoreBrowse_GetCountryRestrictions_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetItems (.CPartnerStoreBrowse_GetItems_Request) returns (.CStoreBrowse_GetItems_Response);
 }
 

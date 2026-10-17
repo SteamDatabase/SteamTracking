@@ -17,8 +17,36 @@ message CAchievements_GetInfo_Response_Info {
 	optional uint32 unlock_time = 7;
 }
 
+message CAchievements_GetUserAchievements_Request {
+	optional uint64 gameid = 1;
+}
+
+message CAchievements_GetUserAchievements_Response {
+	repeated .CAchievements_GetUserAchievements_Response_Achievement achievements = 1;
+	repeated .CAchievements_GetUserAchievements_Response_Group groups = 2;
+	optional int32 schema_version = 3;
+}
+
+message CAchievements_GetUserAchievements_Response_Achievement {
+	optional uint32 internal_key = 1;
+	optional bool unlocked = 2;
+	optional fixed32 unlock_time = 3;
+	optional int32 progress_int = 4;
+	optional float progress_float = 5;
+}
+
+message CAchievements_GetUserAchievements_Response_Group {
+	optional uint32 groupid = 1;
+	optional bool is_achievable = 2;
+	optional uint32 completed_achievements = 3;
+	optional bool is_completed = 4;
+	optional fixed32 time_completed = 9;
+}
+
 service Achievements {
 	// ePrivilege=1, eClientExecutionSite=2
 	rpc GetInfo (.CAchievements_GetInfo_Request) returns (.CAchievements_GetInfo_Response);
+	// ePrivilege=1, eClientExecutionSite=2
+	rpc GetUserAchievements (.CAchievements_GetUserAchievements_Request) returns (.CAchievements_GetUserAchievements_Response);
 }
 

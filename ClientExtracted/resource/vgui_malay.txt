@@ -14,7 +14,6 @@
 "FileOpenDialog_Look_in"	"Lihat dalam:"
 "FileOpenDialog_File_Name"	"Nama fail:"
 "FileOpenDialog_File_Type"	"Jenis fail:"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Nama"
 "FileOpenDialog_Type"		"Jenis"
 "SysMenu_Minimize"		" Minimumkan "

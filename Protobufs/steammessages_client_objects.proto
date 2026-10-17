@@ -568,9 +568,10 @@ message CMsgSelectOSBranchParams {
 }
 
 message CMsgSystemUpdateProgress {
-	optional float stage_progress = 1;
+	optional float total_progress = 1;
 	optional int64 stage_size_bytes = 2;
 	optional fixed32 rtime_estimated_completion = 3;
+	optional int64 stage_bytes_downloaded = 4;
 }
 
 message CMsgSystemUpdateCheckResult {
@@ -585,6 +586,7 @@ message CMsgSystemUpdateCheckResult {
 
 message CMsgSystemUpdateApplyParams {
 	repeated .EUpdaterType apply_types = 1;
+	repeated .EUpdaterType recheck_types = 2;
 }
 
 message CMsgSystemUpdateApplyResult {

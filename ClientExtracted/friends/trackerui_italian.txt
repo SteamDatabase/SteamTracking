@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Impossibile avviare la voce in %chat%, slot vocali liberi insufficienti."
 "Friends_Chat_VoiceStatus"		"%availslots% slot disponibili [%maxslots% totali]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% IN GIOCO, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% IN CHAT, %online% ONLINE"

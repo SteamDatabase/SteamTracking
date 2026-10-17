@@ -112,5 +112,7 @@
     "ReadableDuration_Hours": "%1$s시간",
     "ReadableDuration_Minutes": "%1$s분",
     "ReadableDuration_OneMinute": "1분",
-    "ReadableDuration_LessThanOneMinute": "1분 미만"
+    "ReadableDuration_LessThanOneMinute": "1분 미만",
+    "Playtime_Hours": "%1$s시간",
+    "Playtime_Minutes": "%1$s분"
 }

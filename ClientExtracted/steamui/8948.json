@@ -112,5 +112,7 @@
     "ReadableDuration_Hours": "%1$s jam",
     "ReadableDuration_Minutes": "%1$s menit",
     "ReadableDuration_OneMinute": "satu menit",
-    "ReadableDuration_LessThanOneMinute": "kurang dari satu menit"
+    "ReadableDuration_LessThanOneMinute": "kurang dari satu menit",
+    "Playtime_Hours": "%1$s menit",
+    "Playtime_Minutes": "%1$s menit"
 }

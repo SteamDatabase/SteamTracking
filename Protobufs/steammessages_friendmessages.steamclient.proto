@@ -95,6 +95,14 @@ message CFriendMessages_IsInFriendsUIBeta_Response {
 	optional bool has_used_friendsui = 2;
 }
 
+message CFriendMessages_GetPartnerSharedChatGroup_Request {
+	optional fixed64 steamid = 1;
+}
+
+message CFriendMessages_GetPartnerSharedChatGroup_Response {
+	optional uint64 chat_group_id = 1;
+}
+
 message CFriendMessages_UpdateMessageReaction_Request {
 	optional fixed64 steamid = 1;
 	optional uint32 server_timestamp = 2;
@@ -129,6 +137,7 @@ message CFriendMessages_ResolveReport_Request {
 	optional .EContentReportResolution resolution = 5 [default = k_EContentReportResolution_Unresolved];
 	optional .EContentReportReason reason = 6 [default = k_EContentReportReason_Invalid];
 	optional bool skip_lock = 7;
+	optional uint64 reported_content_id = 8;
 }
 
 message CFriendMessages_ResolveReport_Response {
@@ -173,6 +182,7 @@ service FriendMessages {
 	rpc SendMessage (.CFriendMessages_SendMessage_Request) returns (.CFriendMessages_SendMessage_Response);
 	rpc AckMessage (.CFriendMessages_AckMessage_Notification) returns (.NoResponse);
 	rpc IsInFriendsUIBeta (.CFriendMessages_IsInFriendsUIBeta_Request) returns (.CFriendMessages_IsInFriendsUIBeta_Response);
+	rpc GetPartnerSharedChatGroup (.CFriendMessages_GetPartnerSharedChatGroup_Request) returns (.CFriendMessages_GetPartnerSharedChatGroup_Response);
 	rpc UpdateMessageReaction (.CFriendMessages_UpdateMessageReaction_Request) returns (.CFriendMessages_UpdateMessageReaction_Response);
 	rpc ReportMessage (.CFriendMessages_ReportMessage_Request) returns (.CFriendMessages_ReportMessage_Response);
 	rpc ResolveReport (.CFriendMessages_ResolveReport_Request) returns (.CFriendMessages_ResolveReport_Response);

@@ -244,49 +244,49 @@ message CMarketingMessages_UpdateMarketingMessage_Response {
 }
 
 service MarketingMessages {
-	// ePrivilege=4
+	// ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc CreateMarketingMessage (.CMarketingMessages_CreateMarketingMessage_Request) returns (.CMarketingMessages_CreateMarketingMessage_Response);
-	// ePrivilege=4
+	// ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc DeleteMarketingMessage (.CMarketingMessages_DeleteMarketingMessage_Request) returns (.CMarketingMessages_DeleteMarketingMessage_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc DoesUserHavePendingMarketingMessages (.CMarketingMessages_DoesUserHavePendingMarketingMessages_Request) returns (.CMarketingMessages_DoesUserHavePendingMarketingMessages_Response);
-	// ePrivilege=5
+	// ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc FindMarketingMessages (.CMarketingMessages_FindMarketingMessages_Request) returns (.CMarketingMessages_FindMarketingMessages_Response);
 	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
 	rpc GetActiveMarketingMessages (.CMarketingMessages_GetActiveMarketingMessages_Request) returns (.CMarketingMessages_GetActiveMarketingMessages_Response);
-	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetDisplayMarketingMessage (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response);
 	// bConstMethod=true, ePrivilege=4
 	rpc GetDisplayMarketingMessageAdmin (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetDisplayMarketingMessageForUser (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response);
 	// ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetMarketingMessage (.CMarketingMessages_GetMarketingMessage_Request) returns (.CMarketingMessages_GetMarketingMessage_Response);
-	// ePrivilege=4
+	// ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc GetMarketingMessageClickedStats (.CMarketingMessages_GetMarketingMessageClickedStats_Request) returns (.CMarketingMessages_GetMarketingMessageClickedStats_Response);
 	// ePrivilege=4
 	rpc GetMarketingMessagesForApps (.CMarketingMessage_GetMarketingMessagesForApps_Request) returns (.CMarketingMessage_GetMarketingMessagesForApps_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc GetMarketingMessagesForPartner (.CMarketingMessage_GetMarketingMessagesForPartner_Request) returns (.CMarketingMessage_GetMarketingMessagesForPartner_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetMarketingMessagesForUser (.CMarketingMessages_GetMarketingMessagesForUser_Request) returns (.CMarketingMessages_GetMarketingMessagesForUser_Response);
-	// ePrivilege=4
+	// ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc GetMarketingMessagesViewerRangeStats (.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request) returns (.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response);
-	// ePrivilege=4
+	// ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc GetMarketingMessageViewerStats (.CMarketingMessages_GetMarketingMessageViewerStats_Request) returns (.CMarketingMessages_GetMarketingMessageViewerStats_Response);
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetPartnerMessagePreview (.CMarketingMessages_GetPartnerMessagePreview_Request) returns (.CMarketingMessages_GetPartnerMessagePreview_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc GetPartnerReadyToPublishMessages (.CMarketingMessages_GetPartnerReadyToPublishMessages_Request) returns (.CMarketingMessages_GetPartnerReadyToPublishMessages_Response);
-	// bConstMethod=true, ePrivilege=4
+	// bConstMethod=true, ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc GetPastMarketingMessages (.CMarketingMessages_GetPastMarketingMessages_Request) returns (.CMarketingMessages_GetPastMarketingMessages_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc MarkMessageClicked (.CMarketingMessages_MarkMessageClicked_Notification) returns (.NoResponse);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc MarkMessageSeen (.CMarketingMessages_MarkMessageSeen_Notification) returns (.NoResponse);
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc PublishPartnerMessage (.CMarketingMessages_PartnerPublishMessage_Request) returns (.CMarketingMessages_PartnerPublishMessage_Response);
-	// ePrivilege=5
+	// ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc UpdateMarketingMessage (.CMarketingMessages_UpdateMarketingMessage_Request) returns (.CMarketingMessages_UpdateMarketingMessage_Response);
 }
 

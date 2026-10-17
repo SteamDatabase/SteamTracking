@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Convidar para canal de voz",
     "VoiceChat_SendInviteMessage": "Enviar convite",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Silenciado",
     "VoiceChat_Unavailable_NotFriend": "Voz indisponível: %1$s não está na sua lista de amigos.",
     "VoiceChat_Unavailable_NotOnline": "Voz indisponível: %1$s está off-line.",
     "VoiceChat_Unavailable_NotInBeta": "Voz indisponível: %1$s não está usando a versão beta da lista de amigos.",
@@ -640,6 +641,7 @@
     "Button_Share": "Compartilhar",
     "Button_Ignore": "Ignorar",
     "DirectMessageFromNonFriend": "Mensagem de um usuário que não está na sua lista de amigos",
+    "DirectMessageFromNonFriend_SharedGroup": "Vocês dois são membros da sala de conversa \"%1$s\".",
     "NonFriendAction_Block": "Bloquear comunicação",
     "NonFriendAction_Allow": "Permitir comunicação",
     "SuspiciousMessage_Header": "Conversa suspeita",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Correção de erro que impedia a exibição da lista de amigos e janelas de conversa no Painel Steam no Linux e macOS.",
     "BBCode_Loading": "Carregando",
     "BBCode_Failed": "Erro ao carregar",
-    "broadcastDetails_Playing": "Jogando",
-    "VoiceChat_Muted_Deck": "Silenciado"
+    "broadcastDetails_Playing": "Jogando"
 }

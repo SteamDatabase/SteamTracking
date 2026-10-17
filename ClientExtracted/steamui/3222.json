@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Onaylandı etiketli oyunları ve oynanabilir olan ancak etkileşim ya da yapılandırma için ilave çaba gerektirebilecek oyunları da göster.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Onaylandı ve Oynanabilir etiketli oyunları, ayrıca henüz Steam Machine uyumuluğu test edilmemiş oyunları göster.",
     "MachineVerified_FilterDescription_AllGames": "Steam Machine'de çok iyi çalışmayan oyunlar da dâhil olmak üzere tüm oyunları göster.",
-    "FrameVerified_FilterDescription_Verified": "Sadece Steam Frame ile sorunsuz çalışacak oyunları göster.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Frame'de Onaylandı etiketli oyunları ve oynanabilir olan ancak etkileşim ya da yapılandırma için ilave çaba gerektirebilecek oyunları da göster.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Onaylandı ve Oynanabilir etiketli oyunları, ayrıca henüz Steam Frame uyumuluğu test edilmemiş oyunları göster.",
-    "FrameVerified_FilterDescription_AllGames": "Steam Frame'de çok iyi çalışmayan oyunlar da dâhil olmak üzere tüm oyunları göster."
+    "FrameVerified_FilterDescription_Verified": "Sadece Steam Frame'in entegre kontrolleri ve ekranıyla sorunsuz çalışacak oyunları göster.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Onaylandı etiketli oyunları ve oynanabilir olan ancak etkileşim ya da yapılandırma için ilave işlem gerektirebilecek oyunları da göster.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Onaylandı ve Oynanabilir etiketli oyunları, ayrıca henüz Steam Frame (Yerel) uyumuluğu test edilmemiş oyunları göster.",
+    "FrameVerified_FilterDescription_AllGames": "Steam Frame (Yerel)'de çok iyi çalışmayan oyunlar da dâhil olmak üzere tüm oyunları göster."
 }

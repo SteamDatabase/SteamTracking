@@ -112,5 +112,7 @@
     "ReadableDuration_Hours": "%1$s 小时",
     "ReadableDuration_Minutes": "%1$s 分钟",
     "ReadableDuration_OneMinute": "一分钟",
-    "ReadableDuration_LessThanOneMinute": "少于一分钟"
+    "ReadableDuration_LessThanOneMinute": "少于一分钟",
+    "Playtime_Hours": "%1$s 小时",
+    "Playtime_Minutes": "%1$s 分钟"
 }

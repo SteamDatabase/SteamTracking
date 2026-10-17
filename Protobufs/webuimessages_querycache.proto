@@ -1,0 +1,34 @@
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+enum EQueryCache {
+	k_eQueryCacheInvalid = 0;
+	k_eQueryCacheAchievements = 1;
+	k_eQueryCacheStoreItems = 2;
+}
+
+message CQueryCache_GetDocument_Request {
+	optional .EQueryCache cache = 1 [default = k_eQueryCacheInvalid];
+	repeated string key_parts = 2;
+	optional uint32 max_age_seconds = 3;
+}
+
+message CQueryCache_GetDocument_Response {
+	optional bytes data = 1;
+}
+
+message CQueryCache_SetDocument_Notification {
+	optional .EQueryCache cache = 1 [default = k_eQueryCacheInvalid];
+	repeated string key_parts = 2;
+	optional bytes data = 3;
+}
+
+service QueryCache {
+	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
+
+	rpc GetDocument (.CQueryCache_GetDocument_Request) returns (.CQueryCache_GetDocument_Response);
+	rpc SetDocument (.CQueryCache_SetDocument_Notification) returns (.WebUINoResponse);
+}

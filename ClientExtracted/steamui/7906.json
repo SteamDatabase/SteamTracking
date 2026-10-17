@@ -148,7 +148,7 @@
     "Wishlist_Controls_Categories_Header_Other": "Meine anderen Kategorien",
     "Wishlist_Controls_Categories_Header_Suggested": "Empfohlene Kategorien",
     "Wishlist_Categories_Max_Per_App_Reached": "Dieser Wunschlistenartikel hat das Limit von %1$s Kategorien erreicht.",
-    "Wishlist_Categories_Dialog_Advanced": "Advanced...",
+    "Wishlist_Categories_Dialog_Advanced": "Erweitert …",
     "Price_History_Normal_Price": "STANDARD",
     "Price_History_Recent_Low_Price": "30-TAGE-TIEF",
     "Price_History_Recent_Low_Price_Ttip": "Auf dieses Spiel wurde in den vergangenen %2$s Tagen folgender Rabatt gewährt: %1$s.",
@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Für das ausgewählte Datum liegen keine Neuerscheinungen vor, die wir empfehlen können. <1>Schauen Sie sich den Rest Ihres Kalenders an</1>",
     "NewBadge": "NEU",
     "Time_Today": "Heute",
+    "DiscountsAndEvents_Title": "Rabatte und Events",
+    "DiscountsAndEvents_SeeMore": "Weitere anzeigen",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Wochenend-Deal",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Deal zur Wochenmitte",
+    "DiscountsAndEvents_Banner_DailyDeal": "Tagesangebot",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Höchster Rabatt",
+    "DiscountsAndEvents_LoadError": "Der Bereich „Rabatte und Events“ kann derzeit nicht geladen werden. Bitte versuchen Sie es später erneut.",
     "store_ui_dummy": "dont translate"
 }

@@ -156,7 +156,7 @@ SteamIDStatsPage
 }
 SteamIDAchievementsPage
 {
-	url		"%community%/%mystuff%/stats/appid/%p1%/achievements"
+	url		"%community%/%mystuff%/achievements/%p1%"
 	method		"internal"
 	filter		"profile"
 }
@@ -168,7 +168,7 @@ UserStatsPage
 }
 UserAchievementsPage
 {
-	url		"%community%/profiles/%p1%/stats/appid/%p2%/achievements"
+	url		"%community%/profiles/%p1%/achievements/%p2%"
 	method		"internal"
 	filter		"community"
 }
@@ -186,7 +186,7 @@ UserRecentlyPlayedPage
 }
 GlobalAchievementStatsPage
 {
-	url		"%community%/stats/%p1%/achievements"
+	url		"%community%/achievements/%p1%"
 	method		"internal"
 	filter		"community"
 }
@@ -1035,6 +1035,12 @@ UserWishlist
 	url		"%community%/%mystuff%/wishlist"
 	method	"internal"
 	filter	"profile"
+}
+StorePersonalCalendar
+{
+	url		"%store%/personalcalendar/"
+	method	"internal"
+	filter	"store"
 }
 StoreStats
 {

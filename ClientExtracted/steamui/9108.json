@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "We don't have any new releases to recommend to you on this day <1>Check out the rest of your calendar!</1>",
     "NewBadge": "NEW",
     "Time_Today": "Today",
+    "DiscountsAndEvents_Title": "Discounts & Events",
+    "DiscountsAndEvents_SeeMore": "See More",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Weekend Deal",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Midweek Deal",
+    "DiscountsAndEvents_Banner_DailyDeal": "Today's Deal",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Largest Discount",
+    "DiscountsAndEvents_LoadError": "Discounts and events couldn't be loaded right now. Please try again later.",
     "store_ui_dummy": "dont translate"
 }

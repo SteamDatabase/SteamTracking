@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Näytä kaikki vahvistetut pelit sekä mahdollisia lisätoimia ja lisämäärityksiä vaativat, pelattavissa olevat pelit.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Näytä kaikki vahvistetut ja pelattavissa olevat pelit sekä pelit, joiden Steam Machine -yhteensopivuutta ei ole vielä testattu.",
     "MachineVerified_FilterDescription_AllGames": "Näytä kaikki kirjaston pelit, myös ne, jotka eivät toimi hyvin Steam Machinella.",
-    "FrameVerified_FilterDescription_Verified": "Näytä vain pelit, jotka toimivat sujuvasti Steam Framella.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Näytä kaikki Steam Framelle vahvistetut pelit sekä mahdollisia lisätoimia ja lisämäärityksiä vaativat, pelattavissa olevat pelit.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Näytä kaikki Steam Framelle vahvistetut ja pelattavissa olevat pelit sekä pelit, joiden Steam Frame -yhteensopivuutta ei ole vielä testattu.",
-    "FrameVerified_FilterDescription_AllGames": "Näytä kaikki kirjaston pelit, myös ne, jotka eivät toimi hyvin Steam Framella."
+    "FrameVerified_FilterDescription_Verified": "Näytä vain pelit, jotka toimivat sujuvasti Steam Framen ohjainten ja näytön kanssa.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Näytä kaikki vahvistetut pelit sekä mahdollisia lisätoimia ja lisämäärityksiä vaativat, pelattavissa olevat pelit.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Näytä kaikki vahvistetut ja pelattavissa olevat pelit sekä pelit, joiden Steam Frame Standalone -yhteensopivuutta ei ole vielä testattu.",
+    "FrameVerified_FilterDescription_AllGames": "Näytä kaikki kirjaston pelit – myös ne, jotka eivät toimi hyvin Steam Framella, kun niitä pelataan paikallisesti."
 }

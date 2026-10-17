@@ -807,6 +807,7 @@ message CChatRoom_ResolveReport_Request {
 	optional uint64 chat_group_id = 6;
 	optional uint32 kick_expiration_time = 7;
 	optional bool skip_lock = 8;
+	optional uint64 reported_content_id = 9;
 }
 
 message CChatRoom_ResolveReport_Response {

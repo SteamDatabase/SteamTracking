@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Sesli Sohbet Kanalına Davet Et",
     "VoiceChat_SendInviteMessage": "Davet Mesajı Gönder",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Susturuldu",
     "VoiceChat_Unavailable_NotFriend": "Sesli sohbet kullanılamıyor: %1$s arkadaş listenizde değil.",
     "VoiceChat_Unavailable_NotOnline": "Sesli sohbet kullanılamıyor: %1$s çevrimiçi değil.",
     "VoiceChat_Unavailable_NotInBeta": "Sesli sohbet kullanılamıyor: %1$s yeni beta sohbeti kullanmıyor.",
@@ -640,6 +641,7 @@
     "Button_Share": "Paylaş",
     "Button_Ignore": "Yok Say",
     "DirectMessageFromNonFriend": "Arkadaşınız olmayan kullanıcıdan gelen mesaj",
+    "DirectMessageFromNonFriend_SharedGroup": "İkiniz de \"%1$s\" grup sohbetinin üyesisiniz.",
     "NonFriendAction_Block": "İletişimi Engelle",
     "NonFriendAction_Allow": "İletişime İzin Ver",
     "SuspiciousMessage_Header": "Şüpheli Sohbet",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Linux ve macOS'teki oyun içi arayüzlerde arkadaşlar ve sohbet pencerelerinin görünmemesi hatası giderildi.",
     "BBCode_Loading": "Yükleniyor",
     "BBCode_Failed": "Yüklenemedi",
-    "broadcastDetails_Playing": "Oynuyor:",
-    "VoiceChat_Muted_Deck": "Susturuldu"
+    "broadcastDetails_Playing": "Oynuyor:"
 }

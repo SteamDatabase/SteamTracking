@@ -82,13 +82,13 @@ service Playtest {
 	rpc GetInviteHistory (.CPlaytest_GetInviteHistory_Request) returns (.CPlaytest_GetInviteHistory_Response);
 	// ePrivilege=1
 	rpc GetInviteOptions (.CPlaytest_GetInviteOptions_Request) returns (.CPlaytest_GetInviteOptions_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetInvites (.CPlaytest_GetInvites_Request) returns (.CPlaytest_GetInvites_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetUserStatus (.CPlaytest_GetUserStatus_Request) returns (.CPlaytest_GetUserStatus_Response);
 	// ePrivilege=1
 	rpc RequestInvite (.CPlaytest_RequestInvite_Request) returns (.CPlaytest_RequestInvite_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc UpdateInvites (.CPlaytest_UpdateInvites_Request) returns (.CPlaytest_UpdateInvites_Response);
 }
 

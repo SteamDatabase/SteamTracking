@@ -112,5 +112,7 @@
     "ReadableDuration_Hours": "%1$s timmar",
     "ReadableDuration_Minutes": "%1$s minuter",
     "ReadableDuration_OneMinute": "en minut",
-    "ReadableDuration_LessThanOneMinute": "mindre än en minut"
+    "ReadableDuration_LessThanOneMinute": "mindre än en minut",
+    "Playtime_Hours": "%1$s timmar",
+    "Playtime_Minutes": "%1$s minuter"
 }

@@ -129,7 +129,7 @@ service SteamCharts {
 	rpc GetMonthTopAppReleases (.CSteamCharts_GetMonthTopAppReleases_Request) returns (.CSteamCharts_GetMonthTopAppReleases_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetMostPlayedGames (.CSteamCharts_GetMostPlayedGames_Request) returns (.CSteamCharts_GetMostPlayedGames_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetMostPlayedSteamDeckGames (.CSteamCharts_GetMostPlayedSteamDeckGames_Request) returns (.CSteamCharts_GetMostPlayedSteamDeckGames_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetTopReleasesPages (.CSteamCharts_GetTopReleasesPages_Request) returns (.CSteamCharts_GetTopReleasesPages_Response);

@@ -1,0 +1,35 @@
+import "enums.proto";
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CSystemReport_Generate_Request {
+}
+
+message CSystemReport_Generate_Response {
+	optional string report_id = 1;
+}
+
+message CSystemReport_Submit_Request {
+	optional string report_id = 1;
+}
+
+message CSystemReport_Submit_Response {
+}
+
+message CSystemReport_SaveToDesktop_Request {
+	optional string report_id = 1;
+}
+
+message CSystemReport_SaveToDesktop_Response {
+}
+
+service SystemReport {
+	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
+
+	rpc Generate (.CSystemReport_Generate_Request) returns (.CSystemReport_Generate_Response);
+	rpc Submit (.CSystemReport_Submit_Request) returns (.CSystemReport_Submit_Response);
+	rpc SaveToDesktop (.CSystemReport_SaveToDesktop_Request) returns (.CSystemReport_SaveToDesktop_Response);
+}

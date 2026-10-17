@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "음성 채널에 초대",
     "VoiceChat_SendInviteMessage": "초대 메시지 보내기",
     "VoiceChat_AudioLevelDb": "%1$sdB",
+    "VoiceChat_Muted_Deck": "음소거됨",
     "VoiceChat_Unavailable_NotFriend": "음성 채팅을 사용할 수 없음: %1$s 님이 친구 목록에 없습니다.",
     "VoiceChat_Unavailable_NotOnline": "음성 채팅을 사용할 수 없음: %1$s 님이 현재 온라인 상태가 아닙니다.",
     "VoiceChat_Unavailable_NotInBeta": "음성 채팅을 사용할 수 없음: %1$s 님이 새로운 채팅 베타 버전을 사용하고 있지 않습니다.",
@@ -640,6 +641,7 @@
     "Button_Share": "공유",
     "Button_Ignore": "무시",
     "DirectMessageFromNonFriend": "친구가 아닌 사용자의 메시지",
+    "DirectMessageFromNonFriend_SharedGroup": "두 사용자 모두 '%1$s' 그룹 채팅에 참여하고 있습니다.",
     "NonFriendAction_Block": "대화 차단",
     "NonFriendAction_Allow": "대화 허용",
     "SuspiciousMessage_Header": "의심스러운 채팅",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Linux와 macOS의 게임 내 오버레이에서 친구와 채팅창이 표시되지 않는 문제를 해결했습니다.",
     "BBCode_Loading": "불러오는 중",
     "BBCode_Failed": "불러오기 실패",
-    "broadcastDetails_Playing": "플레이 중",
-    "VoiceChat_Muted_Deck": "음소거됨"
+    "broadcastDetails_Playing": "플레이 중"
 }

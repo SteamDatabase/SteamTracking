@@ -100,13 +100,13 @@ service PartnerMeetSteam {
 	rpc EmailInvitees (.CPartnerMeetSteam_EmailInvitees_Request) returns (.CPartnerMeetSteam_EmailInvitees_Response);
 	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
 	rpc GetAvailability (.CPartnerMeetSteam_GetAvailability_Request) returns (.CPartnerMeetSteam_GetAvailability_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetBatchPartnerEmailAndName (.CPartnerMeetSteam_GetBatchPartnerEmailAndName_Request) returns (.CPartnerMeetSteam_GetBatchPartnerEmailAndName_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetRegistrations (.CPartnerMeetSteam_GetRegistrations_Request) returns (.CPartnerMeetSteam_GetRegistrations_Response);
-	// bConstMethod=true, ePrivilege=4
+	// bConstMethod=true, ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc GetSaleEventOrganizers (.CPartnerMeetSteam_GetSaleEventOrganizers_Request) returns (.CPartnerMeetSteam_GetSaleEventOrganizers_Response);
-	// ePrivilege=4
+	// ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc TestFireEmails (.CParterMeetSteam_TestFireEmails_Request) returns (.CParterMeetSteam_TestFireEmails_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc UpdateRegistration (.CPartnerMeetSteam_UpdateRegistration_Request) returns (.CPartnerMeetSteam_UpdateRegistration_Response);

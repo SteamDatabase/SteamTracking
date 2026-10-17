@@ -364,16 +364,6 @@ message CAuthenticationSupport_MarkTokenCompromised_Request {
 message CAuthenticationSupport_MarkTokenCompromised_Response {
 }
 
-message CCloudGaming_CreateNonce_Request {
-	optional string platform = 1;
-	optional uint32 appid = 2;
-}
-
-message CCloudGaming_CreateNonce_Response {
-	optional string nonce = 1;
-	optional uint32 expiry = 2;
-}
-
 message CCloudGaming_GetTimeRemaining_Request {
 	optional string platform = 1;
 	repeated uint32 appid_list = 2;
@@ -414,6 +404,5 @@ service AuthenticationSupport {
 }
 
 service CloudGaming {
-	rpc CreateNonce (.CCloudGaming_CreateNonce_Request) returns (.CCloudGaming_CreateNonce_Response);
 	rpc GetTimeRemaining (.CCloudGaming_GetTimeRemaining_Request) returns (.CCloudGaming_GetTimeRemaining_Response);
 }

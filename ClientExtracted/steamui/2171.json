@@ -148,7 +148,7 @@
     "Wishlist_Controls_Categories_Header_Other": "다른 카테고리",
     "Wishlist_Controls_Categories_Header_Suggested": "추천 카테고리",
     "Wishlist_Categories_Max_Per_App_Reached": "이 게임은 찜 목록 카테고리 추가 제한(최대 %1$s개)에 도달했습니다.",
-    "Wishlist_Categories_Dialog_Advanced": "Advanced...",
+    "Wishlist_Categories_Dialog_Advanced": "고급...",
     "Price_History_Normal_Price": "기본 가격",
     "Price_History_Recent_Low_Price": "30일 기준 최저 가격",
     "Price_History_Recent_Low_Price_Ttip": "이 게임은 지난 %2$s일 이내에 할인을 제공하여 %1$s에 판매되었습니다.",
@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "오늘은 추천해 드릴 신규 게임이 없습니다. <1>캘린더의 다른 일정을 확인해 보세요!</1>",
     "NewBadge": "신규",
     "Time_Today": "오늘",
+    "DiscountsAndEvents_Title": "할인 및 이벤트",
+    "DiscountsAndEvents_SeeMore": "더 보기",
+    "DiscountsAndEvents_Banner_WeekendDeal": "주말 특가",
+    "DiscountsAndEvents_Banner_MidweekDeal": "주중 특가",
+    "DiscountsAndEvents_Banner_DailyDeal": "일일 특가",
+    "DiscountsAndEvents_Banner_LargestDiscount": "최대 할인",
+    "DiscountsAndEvents_LoadError": "현재 할인 및 이벤트를 불러올 수 없습니다. 나중에 다시 시도해 주세요.",
     "store_ui_dummy": "dont translate"
 }

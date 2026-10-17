@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "แสดงเกม \"เล่นได้ดี\" ทั้งหมด รวมถึงเกมที่ \"เล่นได้\" แต่อาจต้องมีการดำเนินการเพิ่มเติมหรือกำหนดค่าเพื่อให้เล่นได้",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "แสดงเกม \"เล่นได้ดี\" และ \"เล่นได้\" ทั้งหมด รวมถึงเกมที่ยังไม่ได้ทดสอบความเข้ากันได้กับ Steam Machine",
     "MachineVerified_FilterDescription_AllGames": "แสดงเกมทั้งหมดในคลังของคุณ รวมถึงเกมที่เล่นได้ไม่ค่อยดีนักบน Steam Machine ด้วย",
-    "FrameVerified_FilterDescription_Verified": "แสดงเฉพาะเกมที่สามารถเล่นบน Steam Frame ได้โดยไม่ต้องมีการดำเนินการเพิ่มเติม",
-    "FrameVerified_FilterDescription_Verified_Playable": "แสดงเกม \"เล่นได้ดี\" ทั้งหมด รวมถึงเกมที่ \"เล่นได้\" บน Steam Frame แต่อาจต้องมีการดำเนินการเพิ่มเติมหรือกำหนดค่าเพื่อให้เล่นได้",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "แสดงเกม \"เล่นได้ดี\" และ \"เล่นได้\" ทั้งหมด รวมถึงเกมที่ยังไม่ได้ทดสอบความเข้ากันได้กับ Steam Frame",
-    "FrameVerified_FilterDescription_AllGames": "แสดงเกมทั้งหมดในคลังของคุณ รวมถึงเกมที่เล่นได้ไม่ค่อยดีนักบน Steam Frame ด้วย"
+    "FrameVerified_FilterDescription_Verified": "แสดงเฉพาะเกมที่ทำงานร่วมกับการควบคุมและจอแสดงผลในตัวของ Steam Frame ได้โดยไม่ต้องมีการดำเนินการเพิ่มเติม",
+    "FrameVerified_FilterDescription_Verified_Playable": "แสดงเกม \"เล่นได้ดี\" ทั้งหมด รวมถึงเกมที่ \"เล่นได้\" แต่อาจต้องมีการดำเนินการเพิ่มเติมหรือกำหนดค่าเพื่อให้เล่นได้",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "แสดงเกม \"เล่นได้ดี\" และ \"เล่นได้\" ทั้งหมด รวมถึงเกมที่ยังไม่ได้ทดสอบความเข้ากันได้กับ Steam Frame (สแตนด์อโลน)",
+    "FrameVerified_FilterDescription_AllGames": "แสดงเกมทั้งหมดในคลังของคุณ รวมถึงเกมที่เล่นได้ไม่ค่อยดีนักบน Steam Frame ในโหมดสแตนด์อโลนด้วย"
 }

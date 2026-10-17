@@ -112,5 +112,7 @@
     "ReadableDuration_Hours": "%1$s tuntia",
     "ReadableDuration_Minutes": "%1$s minuuttia",
     "ReadableDuration_OneMinute": "minuutti",
-    "ReadableDuration_LessThanOneMinute": "alle minuutti"
+    "ReadableDuration_LessThanOneMinute": "alle minuutti",
+    "Playtime_Hours": "%1$s tuntia",
+    "Playtime_Minutes": "%1$s minuuttia"
 }

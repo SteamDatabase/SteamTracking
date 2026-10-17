@@ -127,6 +127,14 @@ message CGameServers_MasterServerQuery_Response {
 	optional .CMsgGMSClientServerQueryResponse query_response = 1;
 }
 
+message CGameServers_RestrictPlayersToSteamClan_Request {
+	optional fixed64 steamid = 1;
+	optional fixed64 steamidclan = 2;
+}
+
+message CGameServers_RestrictPlayersToSteamClan_Response {
+}
+
 message GameServerClient_QueryServerData_Request {
 }
 
@@ -143,6 +151,7 @@ service GameServers {
 	rpc FriendsQuery (.CGameServers_FriendsQuery_Request) returns (.CGameServers_FriendsQuery_Response);
 	rpc ReportServerPingReply (.CGameServers_ReportServerPingReply_Notification) returns (.NoResponse);
 	rpc MasterServerQuery (.CGameServers_MasterServerQuery_Request) returns (.CGameServers_MasterServerQuery_Response);
+	rpc RestrictPlayersToSteamClan (.CGameServers_RestrictPlayersToSteamClan_Request) returns (.CGameServers_RestrictPlayersToSteamClan_Response);
 }
 
 service GameServerClient {

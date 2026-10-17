@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Hiện tất cả tựa sản phẩm Hợp chuẩn, cùng các trò chơi được nhưng có thể cần thêm chút công sức để tương tác hoặc thiết lập.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Hiện tất cả tựa sản phẩm Hợp chuẩn và Chơi được, cùng các trò chơi chưa kiểm tra độ tương thích Steam Machine.",
     "MachineVerified_FilterDescription_AllGames": "Hiện tất cả trò chơi trong thư viện, bao gồm những tựa chưa chạy tốt trên Steam Machine.",
-    "FrameVerified_FilterDescription_Verified": "Chỉ hiển thị trò chơi hoạt động tự nhiên với Steam Frame.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Hiện tất cả tựa sản phẩm Hợp chuẩn trên Steam Frame, cùng các trò chơi được nhưng có thể cần thêm chút công sức để tương tác hoặc thiết lập.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Hiện tất cả tựa sản phẩm Hợp chuẩn và Chơi được, cùng các trò chơi chưa kiểm tra độ tương thích Steam Frame.",
-    "FrameVerified_FilterDescription_AllGames": "Hiện tất cả trò chơi trong thư viện, bao gồm những tựa chưa chạy tốt trên Steam Frame."
+    "FrameVerified_FilterDescription_Verified": "Chỉ hiện trò chơi hoạt động tự nhiên với điều khiển và màn hình tích hợp của Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Hiện tất cả tựa sản phẩm Hợp chuẩn, cùng các trò chơi được nhưng có thể cần thêm chút công sức để tương tác hoặc thiết lập.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Hiện tất cả tựa sản phẩm Hợp chuẩn và Chơi được, cùng các trò chơi chưa kiểm tra độ tương thích Steam Frame Standalone.",
+    "FrameVerified_FilterDescription_AllGames": "Hiện tất cả trò chơi trong thư viện, bao gồm những tựa chưa chạy tốt trên Steam Frame trong chế độ độc lập."
 }

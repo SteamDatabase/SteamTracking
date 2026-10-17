@@ -559,7 +559,7 @@ $ORIGIN
 *ZN19CCompositorGLThread22OnStackingOrderChangedEmmEUlPK19ICompositorDrawableE_
 *ZN19CX11EventDispatcher23UnregisterEventListenerEP24ICompositorEventListenerEUlPKS0_E_
 *ZN23CV8ManagerRenderProcess30CreateCallbackUnregisterObjectER13scoped_refptrI10CefV8ValueES0_I10CefBrowserEyEUlvE_
-*ZN23CV8ManagerRenderProcess32BRegisterOverlayCallbackInternalERK13scoped_refptrI12CefV8ContextERKS0_I10CefV8ValueERKSt6vectorIS6_SaIS6_EERS6_P13CefStringBaseI19CefStringTraitsUTF8EPKcP14CUtlLinkedListINS_12CallbackInfoEiEEUlvE_
+*ZN23CV8ManagerRenderProcess32BRegisterOverlayCallbackInternalERK13scoped_refptrI12CefV8ContextERKS0_I10CefV8ValueERKSt6vectorIS6_SaIS6_EERS6_P13CefStringBaseI19CefStringTraitsUTF8EPKcP14CUtlLinkedListI16V8CallbackInfo_tiEEUlvE_
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
 *pchMsg && *pchMsg == '%'
@@ -655,7 +655,7 @@ $ORIGIN
 ../overlay/common/shmemstream.cpp
 ../public/html/htmlprotobuf.cpp
 ../public/rtime.cpp
-../public/steam_tray_posix.tga
+../public/steam_tray_posix.png
 ../public/tier0/memoverride.cpp
 ../public/tier0/tslist.h
 ../public/tier1/bitstring.h
@@ -782,6 +782,7 @@ $ORIGIN
 /proc/mounts
 /proc/self/fd/%d
 /proc/self/maps
+/proc/self/ns/pid
 /run/host/root
 /sbin/lsof
 /steamrt64
@@ -1117,8 +1118,8 @@ $ORIGIN
 14CUtlLinkedListI10CUtlStringiE
 14CUtlLinkedListI12CWatchingLogiE
 14CUtlLinkedListI14CLogWatchParamiE
+14CUtlLinkedListI16V8CallbackInfo_tiE
 14CUtlLinkedListI7CUtlPtrI12CBrowserViewEiE
-14CUtlLinkedListIN23CV8ManagerRenderProcess12CallbackInfoEiE
 14CUtlLinkedListIP14CClientHandleriE
 14CUtlLinkedListIP16IBrowserComposeriE
 14CUtlLinkedListISt4pairIPmjEiE
@@ -1628,6 +1629,7 @@ $ORIGIN
 20CefReadHandlerCppToC
 20CefV8ExceptionCToCpp
 20CefX509CertPrincipal
+21:57:05
 21CClanAnnouncementInfo
 21CHTMLPageSecurityInfo
 21CLogFileAsyncCallback
@@ -1684,7 +1686,6 @@ $ORIGIN
 22CefRenderHandlerCppToC
 22CefStringVisitorCppToC
 22CefV8InterceptorCppToC
-23:23:35
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -1707,6 +1708,7 @@ $ORIGIN
 23CefResourceSkipCallback
 23CefResponseFilterCppToC
 23CefRunQuickMenuCallback
+23CefSchemeHandlerFactory
 23_cef_browser_settings_t
 24 Mbps
 24CDirWatcherPollingThread
@@ -1844,6 +1846,7 @@ $ORIGIN
 33CefMediaRouteCreateCallbackCppToC
 33CefPermissionPromptCallbackCToCpp
 34CefSelectClientCertificateCallback
+35CLoopbackWorkerSchemeHandlerFactory
 35CMsgControllerActionSetMiscSettings
 35CMsgControllerInputModeShiftBinding
 35CMsgHorizontalScrollBarSizeResponse
@@ -1936,7 +1939,6 @@ $ORIGIN
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CefClient
-9H(Cn
 : Tried to copy from a message with a different type. to:
 : Tried to merge from a message with a different type.  to:
 : failed to parse contents
@@ -1971,6 +1973,7 @@ $ORIGIN
 >/dev/null
 >= or is NULL
 ???\f???????\n???\r?\t?\v
+?contenthash=
 @bEnableLogTearOff
 @bEnableSpewThrottle
 @nSpewThrottleNagFrequencyMs
@@ -3393,6 +3396,7 @@ CardNumber
 Carnet
 Cart is not valid for purchase
 Carte Bleue
+Cash App Pay
 Cash Card (Nodwin)
 Cash Options (Thailand)
 Cash on Delivery
@@ -5950,6 +5954,7 @@ IVRSteamPrivate_028
 IVRSteamPrivate_029
 IVRSteamPrivate_030
 IVRSteamPrivate_031
+IVRSteamPrivate_032
 IVRSystem_022
 Icelandic
 Icon
@@ -6570,6 +6575,7 @@ Looking to Trade
 Lookup
 Loop Detected
 LoopSetup
+Loopback worker request blocked, first party:%s request:%s
 Lost connection to the display %s;\nmost likely the X server was shut down or you killed/destroyed\nthe application.\n
 Low FPS
 Low Violence
@@ -6811,6 +6817,7 @@ N2vr19IVRSteamPrivate_028E
 N2vr19IVRSteamPrivate_029E
 N2vr19IVRSteamPrivate_030E
 N2vr19IVRSteamPrivate_031E
+N2vr19IVRSteamPrivate_032E
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
 N3IPC17PosixSharedMemoryE
@@ -6837,7 +6844,7 @@ N5vrapi16IOpenVRInterfaceIN2vr14IVRHeadsetViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr14IVROverlayViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr15IVRApplicationsEEE
 N5vrapi16IOpenVRInterfaceIN2vr16IVRNotificationsEEE
-N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_031EEE
+N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_032EEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRInputEEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRPathsEEE
 N5vrapi16IOpenVRInterfaceIN2vr9IVRSystemEEE
@@ -6870,6 +6877,7 @@ N5vrapi33CVRSteamPrivateAdapter_027_as_028E
 N5vrapi33CVRSteamPrivateAdapter_028_as_029E
 N5vrapi33CVRSteamPrivateAdapter_029_as_030E
 N5vrapi33CVRSteamPrivateAdapter_030_as_031E
+N5vrapi33CVRSteamPrivateAdapter_031_as_032E
 N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat17FieldValuePrinterE
 N6google8protobuf10TextFormat21FastFieldValuePrinterE
@@ -7323,7 +7331,7 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 15 2026
+Oct 16 2026
 October
 Odia
 Offensive Avatar
@@ -8316,6 +8324,7 @@ SDL_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR
 SDL_VIDEO_X11_SCALING_FACTOR
 SDL_VIDEO_X11_WINDOW_VISUALID
 SDL_WINDOWS_DETECT_DEVICE_HOTPLUG
+SDL_WINDOWS_ENABLE_MENU_MNEMONICS
 SDL_WINDOWS_ERASE_BACKGROUND_MODE
 SDL_WINDOW_ACTIVATE_WHEN_RAISED
 SDL_WINDOW_ACTIVATE_WHEN_SHOWN
@@ -8755,6 +8764,7 @@ SetupByUID
 Shader
 Shared Only
 Shared library locked
+Shared object manager is owned by another pid namespace; IPC disabled in pid %d\n
 Shift
 Shipping
 Shipping address failed validation
@@ -9223,6 +9233,7 @@ SuspendTv
 SuspendWithFlags
 Suspended
 Suspension not allowed here
+Suspicious Content
 Swahili
 Swap
 Swedish
@@ -10063,6 +10074,7 @@ Webhelper: CCEFThread::BInit
 Webhelper: StartForceDisableAntiAliasingAndSharpening
 Wednesday
 Welsh
+Wero
 What city were you born in?
 What is the name of your pet?
 What is the name of your school?
@@ -10107,7 +10119,7 @@ Window.ProcessShuttingDown
 Window.ResizeTo
 Window.RestoreWindowSizeAndPosition
 Window.SetComposition
-Window.SetComposition requires 3 arguments. mode: {0 = hidden, 1 = notification, 2 = overlay, 3 = opaque}, appidCompositionQueue: [123456, 769], windowID: 1234
+Window.SetComposition requires 3 arguments. mode: {0 = hidden, 1 = notification, 2 = overlay, 3 = opaque, 4 = overlay keyboard, 5 = virtual menu}, appidCompositionQueue: [123456, 769], windowID: 1234
 Window.SetHideOnClose
 Window.SetHideOnClose takes one argument: <hide on close>?
 Window.SetKeyFocus
@@ -18599,7 +18611,6 @@ m_p == NULL
 m_pComposer.IsValid()
 m_pCompositeThread == nullptr
 m_pDataWritten
-m_pDragSource != nullptr
 m_pFontPackagePB
 m_pFontPackagePB->package_version() == 1
 m_pFromChromeStream
@@ -18749,6 +18760,7 @@ maskGenFunc
 master secret
 master_key
 matTransform
+max-age=31536000, immutable
 max-age=3600
 max-charge-level
 max-realtime-priority
@@ -18880,7 +18892,7 @@ mobilechat
 modal
 modalias
 mode
-mode must be one of: {0 = hidden, 1 = notification, 2 = overlay, 3 = opaque, 4 = overlay keyboard}
+mode must be one of: {0 = hidden, 1 = notification, 2 = overlay, 3 = opaque, 4 = overlay keyboard, 5 = virtual menu}
 model
 modf
 module
@@ -18939,7 +18951,7 @@ nBytes < (size_t)INT_MAX - curInsertPos - 1
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nCertBits
 nCommand > 0 && nCommand < eHTMLCommands_None
-nCompositionMode >= k_EUIComposition_Hidden && nCompositionMode <= k_EUIComposition_OverlayKeyboard
+nCompositionMode >= k_EUIComposition_Hidden && nCompositionMode <= k_EUIComposition_VirtualMenu
 nDay < 32
 nDay > 0
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
@@ -20963,6 +20975,7 @@ steam.tv
 steam://
 steam://close/bigpicture
 steam://openexternalforpid/%u/%s
+steam://openurlforpid/%u/%s
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
 steamIDClan.GetEAccountType() == k_EAccountTypeClan
 steamRealm
@@ -21843,6 +21856,7 @@ unknown trust id
 unknown ttyget errno value
 unknown version
 unknown\n%*s
+unknown_type
 unlink
 unnamed_arg0
 unnamed_arg1

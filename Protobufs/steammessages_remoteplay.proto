@@ -170,6 +170,12 @@ enum EStreamP2PScope {
 	k_EStreamP2PScopeEveryone = 4;
 }
 
+enum EDisplayStyle {
+	k_EDisplayStyleLetterbox = 0;
+	k_EDisplayStyleStretch = 1;
+	k_EDisplayStyleZoom = 2;
+}
+
 enum EStreamHostPlayAudioPreference {
 	k_EStreamHostPlayAudioDefault = 0;
 	k_EStreamHostPlayAudioAlways = 1;
@@ -446,6 +452,7 @@ message CStreamingClientConfig {
 	optional float pyrowave_quality_modifier = 38;
 	optional bool pyrowave_yuv444 = 39;
 	optional int32 pyrowave_bitrate_kbps = 40 [default = -1];
+	optional .EDisplayStyle display_style = 41 [default = k_EDisplayStyleLetterbox];
 }
 
 message CStreamingServerConfig {

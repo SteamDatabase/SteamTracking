@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Tidak dapat memulakan sembang suara dalam %chat%, tidak cukup slot bercakap yang kosong."
 "Friends_Chat_VoiceStatus"		"%availslots% slot tersedia [%maxslots% secara keseluruhan]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% DALAM TALIAN"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% DALAM PERMAINAN, %online% DALAM TALIAN"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% DALAM SEMBANG, %online% DALAM TALIAN"
@@ -619,8 +618,8 @@
 "friends_trade_they_are_school"	"Anda tidak boleh melakukan pertukaran dengan %friend% kerana mereka sedang menggunakan akaun School Lab."
 "friends_trade_they_are_blocked"	"Anda tidak boleh melakukan pertukaran dengan %friend% kerana anda telah menyekat mereka."
 "friends_trade_you_need_verified_email"		"Anda mestilah mengesahkan alamat e-mel anda sebelum anda boleh menyertai pertukaran. Sahkan alamat e-mel anda daripada tetingkap Tetapan."
-"friends_trade_you_have_steam_guard_disabled"	"Anda mestilah mendayakan Pengawal Steam sebelum anda boleh menyertai pertukaran. Dayakan Pengawal Steam daripada tetingkap Tetapan."
-"friends_trade_you_havent_had_steam_guard_enabled_long_enough"	"Anda mesti telah mendayakan Pengawal Steam sekurang-kurangnya selama %days% hari sebelum anda boleh menyertai pertukaran."
+"friends_trade_you_have_steam_guard_disabled"	"Anda mestilah mendayakan Steam Guard sebelum anda boleh menyertai pertukaran. Dayakan Steam Guard daripada tetingkap Tetapan."
+"friends_trade_you_havent_had_steam_guard_enabled_long_enough"	"Anda mesti telah mendayakan Steam Guard sekurang-kurangnya selama %days% hari sebelum anda boleh menyertai pertukaran."
 "friends_trade_you_are_using_new_device"	"Anda telah log masuk daripada peranti baharu. Untuk melindungi item dalam inventori anda, anda tidak boleh melakukan pertukaran daripada peranti ini selama %days% hari."
 "friends_trade_you_recently_reset_password"	"Anda terlupa, kemudian menetapkan semula kata laluan akaun Steam anda baru-baru ini. Anda tidak boleh melakukan pertukaran sehingga kira-kira lima hari selepas penetapan semula kata laluan yang paling terkini."
 "friends_trade_you_recently_reset_password_long" "Anda terlupa, kemudian menetapkan semula kata laluan akaun Steam anda baru-baru ini selepas akaun anda tidak aktif selama beberapa bulan. Untuk melindungi item dalam inventori anda, anda tidak boleh melakukan pertukaran selama %days% hari lagi."
@@ -796,7 +795,7 @@
 "Steam_SettingsBrowserDeleteAllData"	"Padamkan Data Pelayar Web"
 "Steam_SettingsBrowserDeleteAllDataMsg"	"Padamkan semua fail cache pelayar, kuki dan sejarah Steam?"
 
-"RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Bersama"
+"RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Jemput sesiapa sahaja untuk bermain dengan pautan dari senarai Rakan anda."
 
 } 

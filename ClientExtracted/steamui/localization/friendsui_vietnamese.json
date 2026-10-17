@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Mời vào kênh đàm thoại",
     "VoiceChat_SendInviteMessage": "Gửi tin nhắn mời",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Tắt tiếng",
     "VoiceChat_Unavailable_NotFriend": "Không thể đàm thoại: %1$s không có trong danh sách bạn bè.",
     "VoiceChat_Unavailable_NotOnline": "Không thể đàm thoại: %1$s hiện không có trên mạng.",
     "VoiceChat_Unavailable_NotInBeta": "Không thể đàm thoại: %1$s hiện đang chạy phiên bản trò chuyện beta.",
@@ -640,6 +641,7 @@
     "Button_Share": "Chia sẻ",
     "Button_Ignore": "Phớt lờ",
     "DirectMessageFromNonFriend": "Tin nhắn từ một người dùng không phải bạn bè",
+    "DirectMessageFromNonFriend_SharedGroup": "Cả hai đều là thành viên của nhóm trò chuyện '%1$s'.",
     "NonFriendAction_Block": "Chặn giao tiếp",
     "NonFriendAction_Allow": "Mở giao tiếp",
     "SuspiciousMessage_Header": "Nội dung trò chuyện đáng ngờ",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Sửa lỗi cửa sổ bạn bè và trò chuyện không hiển thị bên trong lớp phủ của trò chơi trên Linux và macOS.",
     "BBCode_Loading": "Đang tải",
     "BBCode_Failed": "Tải thất bại",
-    "broadcastDetails_Playing": "Đang chơi",
-    "VoiceChat_Muted_Deck": "Tắt tiếng"
+    "broadcastDetails_Playing": "Đang chơi"
 }

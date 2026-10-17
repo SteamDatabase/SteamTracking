@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Kami tidak memiliki rilisan terbaru untuk direkomendasikan kepadamu pada hari ini <1>Lihat sisa keseluruhan kalendermu!</1>",
     "NewBadge": "BARU",
     "Time_Today": "Hari ini",
+    "DiscountsAndEvents_Title": "Diskon & Event",
+    "DiscountsAndEvents_SeeMore": "Lebih banyak lagi",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Penawaran Akhir Minggu",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Penawaran Tengah Minggu",
+    "DiscountsAndEvents_Banner_DailyDeal": "Penawaran Hari Ini",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Diskon Terbesar",
+    "DiscountsAndEvents_LoadError": "Diskon dan event tidak dapat dimuat sekarang. Silakan coba lagi nanti.",
     "store_ui_dummy": "dont translate"
 }

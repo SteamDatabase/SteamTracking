@@ -369,59 +369,59 @@ message PurchaseRequest {
 }
 
 service FamilyGroups {
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc CancelFamilyGroupInvite (.CFamilyGroups_CancelFamilyGroupInvite_Request) returns (.CFamilyGroups_CancelFamilyGroupInvite_Response);
 	// ePrivilege=5
 	rpc ClearCooldownSkip (.CFamilyGroups_ClearCooldownSkip_Request) returns (.CFamilyGroups_ClearCooldownSkip_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc ConfirmInviteToFamilyGroup (.CFamilyGroups_ConfirmInviteToFamilyGroup_Request) returns (.CFamilyGroups_ConfirmInviteToFamilyGroup_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc ConfirmJoinFamilyGroup (.CFamilyGroups_ConfirmJoinFamilyGroup_Request) returns (.CFamilyGroups_ConfirmJoinFamilyGroup_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc CreateFamilyGroup (.CFamilyGroups_CreateFamilyGroup_Request) returns (.CFamilyGroups_CreateFamilyGroup_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc DeleteFamilyGroup (.CFamilyGroups_DeleteFamilyGroup_Request) returns (.CFamilyGroups_DeleteFamilyGroup_Response);
 	// ePrivilege=5
 	rpc ForceAcceptInvite (.CFamilyGroups_ForceAcceptInvite_Request) returns (.CFamilyGroups_ForceAcceptInvite_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetChangeLog (.CFamilyGroups_GetChangeLog_Request) returns (.CFamilyGroups_GetChangeLog_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetFamilyGroup (.CFamilyGroups_GetFamilyGroup_Request) returns (.CFamilyGroups_GetFamilyGroup_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetFamilyGroupForUser (.CFamilyGroups_GetFamilyGroupForUser_Request) returns (.CFamilyGroups_GetFamilyGroupForUser_Response);
 	// bConstMethod=true, ePrivilege=5
 	rpc GetInviteCheckResults (.CFamilyGroups_GetInviteCheckResults_Request) returns (.CFamilyGroups_GetInviteCheckResults_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetPlaytimeSummary (.CFamilyGroups_GetPlaytimeSummary_Request) returns (.CFamilyGroups_GetPlaytimeSummary_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetPreferredLenders (.CFamilyGroups_GetPreferredLenders_Request) returns (.CFamilyGroups_GetPreferredLenders_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetPurchaseRequests (.CFamilyGroups_GetPurchaseRequests_Request) returns (.CFamilyGroups_GetPurchaseRequests_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetSharedLibraryApps (.CFamilyGroups_GetSharedLibraryApps_Request) returns (.CFamilyGroups_GetSharedLibraryApps_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetUsersSharingDevice (.CFamilyGroups_GetUsersSharingDevice_Request) returns (.CFamilyGroups_GetUsersSharingDevice_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc InviteToFamilyGroup (.CFamilyGroups_InviteToFamilyGroup_Request) returns (.CFamilyGroups_InviteToFamilyGroup_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc JoinFamilyGroup (.CFamilyGroups_JoinFamilyGroup_Request) returns (.CFamilyGroups_JoinFamilyGroup_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc ModifyFamilyGroupDetails (.CFamilyGroups_ModifyFamilyGroupDetails_Request) returns (.CFamilyGroups_ModifyFamilyGroupDetails_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc RemoveFromFamilyGroup (.CFamilyGroups_RemoveFromFamilyGroup_Request) returns (.CFamilyGroups_RemoveFromFamilyGroup_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc RequestPurchase (.CFamilyGroups_RequestPurchase_Request) returns (.CFamilyGroups_RequestPurchase_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc ResendInvitationToFamilyGroup (.CFamilyGroups_ResendInvitationToFamilyGroup_Request) returns (.CFamilyGroups_ResendInvitationToFamilyGroup_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc RespondToRequestedPurchase (.CFamilyGroups_RespondToRequestedPurchase_Request) returns (.CFamilyGroups_RespondToRequestedPurchase_Response);
 	// ePrivilege=5
 	rpc RollbackFamilyGroup (.CFamilyGroups_RollbackFamilyGroup_Request) returns (.CFamilyGroups_RollbackFamilyGroup_Response);
-	// ePrivilege=1
+	// ePrivilege=5
 	rpc SetFamilyCooldownOverrides (.CFamilyGroups_SetFamilyCooldownOverrides_Request) returns (.CFamilyGroups_SetFamilyCooldownOverrides_Response);
 	// ePrivilege=1
 	rpc SetPreferredLender (.CFamilyGroups_SetPreferredLender_Request) returns (.CFamilyGroups_SetPreferredLender_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc UndeleteFamilyGroup (.CFamilyGroups_UndeleteFamilyGroup_Request) returns (.CFamilyGroups_UndeleteFamilyGroup_Response);
 }
 

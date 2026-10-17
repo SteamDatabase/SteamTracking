@@ -77,17 +77,17 @@ message SteamNotificationPreference {
 }
 
 service SteamNotification {
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetPreferences (.CSteamNotification_GetPreferences_Request) returns (.CSteamNotification_GetPreferences_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetSteamNotifications (.CSteamNotification_GetSteamNotifications_Request) returns (.CSteamNotification_GetSteamNotifications_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc HideNotification (.CSteamNotification_HideNotification_Notification) returns (.NoResponse);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc MarkNotificationsRead (.CSteamNotification_MarkNotificationsRead_Notification) returns (.NoResponse);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc MarkNotificationsViewed (.CSteamNotification_MarkNotificationsViewed_Notification) returns (.NoResponse);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc SetPreferences (.CSteamNotification_SetPreferences_Request) returns (.CSteamNotification_SetPreferences_Response);
 }
 

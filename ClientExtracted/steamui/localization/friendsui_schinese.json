@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "邀请至语音频道",
     "VoiceChat_SendInviteMessage": "发送邀请消息",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "已禁言",
     "VoiceChat_Unavailable_NotFriend": "语音不可用：%1$s 不在您的好友列表中。",
     "VoiceChat_Unavailable_NotOnline": "语音不可用：%1$s 当前不在线。",
     "VoiceChat_Unavailable_NotInBeta": "语音不可用：%1$s 未运行新的聊天测试版。",
@@ -640,6 +641,7 @@
     "Button_Share": "共享",
     "Button_Ignore": "忽略",
     "DirectMessageFromNonFriend": "来自非好友的消息",
+    "DirectMessageFromNonFriend_SharedGroup": "你们都是“%1$s”群聊的成员。",
     "NonFriendAction_Block": "屏蔽通信",
     "NonFriendAction_Allow": "允许通信",
     "SuspiciousMessage_Header": "可疑聊天",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "修复了好友和聊天窗口在 Linux 及 macOS 上的游戏内叠加界面中不显示的问题。",
     "BBCode_Loading": "正在载入",
     "BBCode_Failed": "载入失败",
-    "broadcastDetails_Playing": "正在播放",
-    "VoiceChat_Muted_Deck": "已禁言"
+    "broadcastDetails_Playing": "正在播放"
 }

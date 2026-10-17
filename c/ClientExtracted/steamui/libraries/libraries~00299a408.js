@@ -12877,7 +12877,6 @@
         __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = function () {},
@@ -34626,10 +34625,10 @@ Error generating stack: ` +
           _ = class extends _._ {
             #e;
             #t;
-            #r;
+            #n;
             constructor() {
               super(),
-                (this.#r = (_) => {
+                (this.#n = (_) => {
                   if (!_._ && window.addEventListener) {
                     const _ = () => _();
                     return (
@@ -34642,13 +34641,13 @@ Error generating stack: ` +
                 });
             }
             onSubscribe() {
-              this.#t || this.setEventListener(this.#r);
+              this.#t || this.setEventListener(this.#n);
             }
             onUnsubscribe() {
               this.hasListeners() || (this.#t?.(), (this.#t = void 0));
             }
             setEventListener(_) {
-              (this.#r = _),
+              (this.#n = _),
                 this.#t?.(),
                 (this.#t = _((_) => {
                   typeof _ == "boolean" ? this.setFocused(_) : this.onFocus();
@@ -34787,7 +34786,7 @@ Error generating stack: ` +
           _ = class extends _._ {
             #e;
             #t;
-            #r;
+            #n;
             constructor(_) {
               super(),
                 (this.mutationId = _.mutationId),
@@ -34829,28 +34828,28 @@ Error generating stack: ` +
                   : this.#t.remove(this));
             }
             continue() {
-              return this.#r?.continue() ?? this.execute(this.state.variables);
+              return this.#n?.continue() ?? this.execute(this.state.variables);
             }
             async execute(_) {
-              this.#r = (0, _._)({
+              this.#n = (0, _._)({
                 _: () =>
                   this.options.mutationFn
                     ? this.options.mutationFn(_)
                     : Promise.reject(new Error("No mutationFn found")),
                 onFail: (_, _) => {
-                  this.#n({
+                  this.#r({
                     type: "failed",
                     failureCount: _,
                     error: _,
                   });
                 },
                 onPause: () => {
-                  this.#n({
+                  this.#r({
                     type: "pause",
                   });
                 },
                 onContinue: () => {
-                  this.#n({
+                  this.#r({
                     type: "continue",
                   });
                 },
@@ -34860,10 +34859,10 @@ Error generating stack: ` +
                 canRun: () => this.#t.canRun(this),
               });
               const _ = this.state.status === "pending",
-                _ = !this.#r.canStart();
+                _ = !this.#n.canStart();
               try {
                 if (!_) {
-                  this.#n({
+                  this.#r({
                     type: "pending",
                     variables: _,
                     isPaused: _,
@@ -34871,14 +34870,14 @@ Error generating stack: ` +
                     await this.#t.config.onMutate?.(_, this);
                   const _ = await this.options.onMutate?.(_);
                   _ !== this.state.context &&
-                    this.#n({
+                    this.#r({
                       type: "pending",
                       context: _,
                       variables: _,
                       isPaused: _,
                     });
                 }
-                const _ = await this.#r.start();
+                const _ = await this.#n.start();
                 return (
                   await this.#t.config.onSuccess?.(
                     _,
@@ -34900,7 +34899,7 @@ Error generating stack: ` +
                     _,
                     this.state.context,
                   ),
-                  this.#n({
+                  this.#r({
                     type: "success",
                     data: _,
                   }),
@@ -34932,7 +34931,7 @@ Error generating stack: ` +
                     _)
                   );
                 } finally {
-                  this.#n({
+                  this.#r({
                     type: "error",
                     error: _,
                   });
@@ -34941,7 +34940,7 @@ Error generating stack: ` +
                 this.#t.runNext(this);
               }
             }
-            #n(_) {
+            #r(_) {
               const _ = (_) => {
                 switch (_.type) {
                   case "failed":
@@ -35098,10 +35097,10 @@ Error generating stack: ` +
           _ = class extends _._ {
             #e = !0;
             #t;
-            #r;
+            #n;
             constructor() {
               super(),
-                (this.#r = (_) => {
+                (this.#n = (_) => {
                   if (!_._ && window.addEventListener) {
                     const _ = () => _(!0),
                       _ = () => _(!1);
@@ -35117,13 +35116,13 @@ Error generating stack: ` +
                 });
             }
             onSubscribe() {
-              this.#t || this.setEventListener(this.#r);
+              this.#t || this.setEventListener(this.#n);
             }
             onUnsubscribe() {
               this.hasListeners() || (this.#t?.(), (this.#t = void 0));
             }
             setEventListener(_) {
-              (this.#r = _),
+              (this.#n = _),
                 this.#t?.(),
                 (this.#t = _(this.setOnline.bind(this)));
             }
@@ -35153,17 +35152,17 @@ Error generating stack: ` +
           _ = class extends _._ {
             #e;
             #t;
-            #r;
             #n;
-            #a;
+            #r;
             #i;
+            #a;
             constructor(_) {
               super(),
-                (this.#i = !1),
-                (this.#a = _.defaultOptions),
+                (this.#a = !1),
+                (this.#i = _.defaultOptions),
                 this.setOptions(_.options),
                 (this.observers = []),
-                (this.#r = _.cache),
+                (this.#n = _.cache),
                 (this.queryKey = _.queryKey),
                 (this.queryHash = _.queryHash),
                 (this.#e = _(this.options)),
@@ -35174,11 +35173,11 @@ Error generating stack: ` +
               return this.options.meta;
             }
             get promise() {
-              return this.#n?.promise;
+              return this.#r?.promise;
             }
             setOptions(_) {
               (this.options = {
-                ...this.#a,
+                ...this.#i,
                 ..._,
               }),
                 this.updateGcTime(this.options.gcTime);
@@ -35186,7 +35185,7 @@ Error generating stack: ` +
             optionalRemove() {
               !this.observers.length &&
                 this.state.fetchStatus === "idle" &&
-                this.#r.remove(this);
+                this.#n.remove(this);
             }
             setData(_, _) {
               const _ = (0, _._)(this.state.data, _, this.options);
@@ -35208,9 +35207,9 @@ Error generating stack: ` +
               });
             }
             cancel(_) {
-              const _ = this.#n?.promise;
+              const _ = this.#r?.promise;
               return (
-                this.#n?.cancel(_),
+                this.#r?.cancel(_),
                 _ ? _.then(_._).catch(_._) : Promise.resolve()
               );
             }
@@ -35255,7 +35254,7 @@ Error generating stack: ` +
                 ?.refetch({
                   cancelRefetch: !1,
                 }),
-                this.#n?.continue();
+                this.#r?.continue();
             }
             onOnline() {
               this.observers
@@ -35263,13 +35262,13 @@ Error generating stack: ` +
                 ?.refetch({
                   cancelRefetch: !1,
                 }),
-                this.#n?.continue();
+                this.#r?.continue();
             }
             addObserver(_) {
               this.observers.includes(_) ||
                 (this.observers.push(_),
                 this.clearGcTimeout(),
-                this.#r.notify({
+                this.#n.notify({
                   type: "observerAdded",
                   query: this,
                   observer: _,
@@ -35279,14 +35278,14 @@ Error generating stack: ` +
               this.observers.includes(_) &&
                 ((this.observers = this.observers.filter((_) => _ !== _)),
                 this.observers.length ||
-                  (this.#n &&
-                    (this.#i
-                      ? this.#n.cancel({
+                  (this.#r &&
+                    (this.#a
+                      ? this.#r.cancel({
                           revert: !0,
                         })
-                      : this.#n.cancelRetry()),
+                      : this.#r.cancelRetry()),
                   this.scheduleGc()),
-                this.#r.notify({
+                this.#n.notify({
                   type: "observerRemoved",
                   query: this,
                   observer: _,
@@ -35307,8 +35306,8 @@ Error generating stack: ` +
                   this.cancel({
                     silent: !0,
                   });
-                else if (this.#n)
-                  return this.#n.continueRetry(), this.#n.promise;
+                else if (this.#r)
+                  return this.#r.continueRetry(), this.#r.promise;
               }
               if ((_ && this.setOptions(_), !this.options.queryFn)) {
                 const _ = this.observers.find((_) => _.options.queryFn);
@@ -35318,7 +35317,7 @@ Error generating stack: ` +
                 _ = (_) => {
                   Object.defineProperty(_, "signal", {
                     enumerable: !0,
-                    get: () => ((this.#i = !0), _.signal),
+                    get: () => ((this.#a = !0), _.signal),
                   });
                 },
                 _ = () => {
@@ -35329,7 +35328,7 @@ Error generating stack: ` +
                     };
                   return (
                     _(_),
-                    (this.#i = !1),
+                    (this.#a = !1),
                     this.options.persister
                       ? this.options.persister(_, _, this)
                       : _(_)
@@ -35358,12 +35357,12 @@ Error generating stack: ` +
                     error: _,
                   }),
                   (0, _._)(_) ||
-                    (this.#r.config.onError?.(_, this),
-                    this.#r.config.onSettled?.(this.state.data, _, this)),
+                    (this.#n.config.onError?.(_, this),
+                    this.#n.config.onSettled?.(this.state.data, _, this)),
                   this.scheduleGc();
               };
               return (
-                (this.#n = (0, _._)({
+                (this.#r = (0, _._)({
                   initialPromise: _?.initialPromise,
                   _: _.fetchFn,
                   abort: _.abort.bind(_),
@@ -35378,8 +35377,8 @@ Error generating stack: ` +
                       _(_);
                       return;
                     }
-                    this.#r.config.onSuccess?.(_, this),
-                      this.#r.config.onSettled?.(_, this.state.error, this),
+                    this.#n.config.onSuccess?.(_, this),
+                      this.#n.config.onSettled?.(_, this.state.error, this),
                       this.scheduleGc();
                   },
                   onError: _,
@@ -35405,7 +35404,7 @@ Error generating stack: ` +
                   networkMode: _.options.networkMode,
                   canRun: () => !0,
                 })),
-                this.#n.start()
+                this.#r.start()
               );
             }
             #o(_) {
@@ -35482,7 +35481,7 @@ Error generating stack: ` +
                   this.observers.forEach((_) => {
                     _.onQueryUpdate();
                   }),
-                    this.#r.notify({
+                    this.#n.notify({
                       query: this,
                       type: "updated",
                       action: _,
@@ -35723,23 +35722,23 @@ Error generating stack: ` +
           _ = class {
             #e;
             #t;
-            #r;
             #n;
-            #a;
+            #r;
             #i;
+            #a;
             #o;
             #s;
             constructor(_ = {}) {
               (this.#e = _.queryCache || new _()),
                 (this.#t = _.mutationCache || new _()),
-                (this.#r = _.defaultOptions || {}),
-                (this.#n = new Map()),
-                (this.#a = new Map()),
-                (this.#i = 0);
+                (this.#n = _.defaultOptions || {}),
+                (this.#r = new Map()),
+                (this.#i = new Map()),
+                (this.#a = 0);
             }
             mount() {
-              this.#i++,
-                this.#i === 1 &&
+              this.#a++,
+                this.#a === 1 &&
                   ((this.#o = _._.subscribe(async (_) => {
                     _ &&
                       (await this.resumePausedMutations(), this.#e.onFocus());
@@ -35750,8 +35749,8 @@ Error generating stack: ` +
                   })));
             }
             unmount() {
-              this.#i--,
-                this.#i === 0 &&
+              this.#a--,
+                this.#a === 0 &&
                   (this.#o?.(),
                   (this.#o = void 0),
                   this.#s?.(),
@@ -35918,19 +35917,19 @@ Error generating stack: ` +
               return this.#t;
             }
             getDefaultOptions() {
-              return this.#r;
+              return this.#n;
             }
             setDefaultOptions(_) {
-              this.#r = _;
+              this.#n = _;
             }
             setQueryDefaults(_, _) {
-              this.#n.set((0, _._)(_), {
+              this.#r.set((0, _._)(_), {
                 queryKey: _,
                 defaultOptions: _,
               });
             }
             getQueryDefaults(_) {
-              const _ = [...this.#n.values()];
+              const _ = [...this.#r.values()];
               let _ = {};
               return (
                 _.forEach((_) => {
@@ -35944,13 +35943,13 @@ Error generating stack: ` +
               );
             }
             setMutationDefaults(_, _) {
-              this.#a.set((0, _._)(_), {
+              this.#i.set((0, _._)(_), {
                 mutationKey: _,
                 defaultOptions: _,
               });
             }
             getMutationDefaults(_) {
-              const _ = [...this.#a.values()];
+              const _ = [...this.#i.values()];
               let _ = {};
               return (
                 _.forEach((_) => {
@@ -35966,7 +35965,7 @@ Error generating stack: ` +
             defaultQueryOptions(_) {
               if (_._defaulted) return _;
               const _ = {
-                ...this.#r.queries,
+                ...this.#n.queries,
                 ...this.getQueryDefaults(_.queryKey),
                 ..._,
                 _defaulted: !0,
@@ -35987,7 +35986,7 @@ Error generating stack: ` +
               return _?._defaulted
                 ? _
                 : {
-                    ...this.#r.mutations,
+                    ...this.#n.mutations,
                     ...(_?.mutationKey &&
                       this.getMutationDefaults(_.mutationKey)),
                     ..._,
@@ -35998,6 +35997,430 @@ Error generating stack: ` +
               this.#e.clear(), this.#t.clear();
             }
           };
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = class extends _._ {
+            constructor(_, _) {
+              super(),
+                (this.options = _),
+                (this.#e = _),
+                (this.#s = null),
+                (this.#o = (0, _._)()),
+                this.options.experimental_prefetchInRender ||
+                  this.#o.reject(
+                    new Error(
+                      "experimental_prefetchInRender feature flag is not enabled",
+                    ),
+                  ),
+                this.bindMethods(),
+                this.setOptions(_);
+            }
+            #e;
+            #t = void 0;
+            #n = void 0;
+            #r = void 0;
+            #i;
+            #a;
+            #o;
+            #s;
+            #c;
+            #f;
+            #l;
+            #u;
+            #g;
+            #p;
+            #h = new Set();
+            bindMethods() {
+              this.refetch = this.refetch.bind(this);
+            }
+            onSubscribe() {
+              this.listeners.size === 1 &&
+                (this.#t.addObserver(this),
+                _(this.#t, this.options) ? this.#d() : this.updateResult(),
+                this.#v());
+            }
+            onUnsubscribe() {
+              this.hasListeners() || this.destroy();
+            }
+            shouldFetchOnReconnect() {
+              return _(this.#t, this.options, this.options.refetchOnReconnect);
+            }
+            shouldFetchOnWindowFocus() {
+              return _(
+                this.#t,
+                this.options,
+                this.options.refetchOnWindowFocus,
+              );
+            }
+            destroy() {
+              (this.listeners = new Set()),
+                this.#b(),
+                this.#S(),
+                this.#t.removeObserver(this);
+            }
+            setOptions(_, _) {
+              const _ = this.options,
+                _ = this.#t;
+              if (
+                ((this.options = this.#e.defaultQueryOptions(_)),
+                this.options.enabled !== void 0 &&
+                  typeof this.options.enabled != "boolean" &&
+                  typeof this.options.enabled != "function" &&
+                  typeof (0, _._)(this.options.enabled, this.#t) != "boolean")
+              )
+                throw new Error(
+                  "Expected enabled to be a boolean or a callback that returns a boolean",
+                );
+              this.#E(),
+                this.#t.setOptions(this.options),
+                _._defaulted &&
+                  !(0, _._)(this.options, _) &&
+                  this.#e.getQueryCache().notify({
+                    type: "observerOptionsUpdated",
+                    query: this.#t,
+                    observer: this,
+                  });
+              const _ = this.hasListeners();
+              _ && _(this.#t, _, this.options, _) && this.#d(),
+                this.updateResult(_),
+                _ &&
+                  (this.#t !== _ ||
+                    (0, _._)(this.options.enabled, this.#t) !==
+                      (0, _._)(_.enabled, this.#t) ||
+                    (0, _._)(this.options.staleTime, this.#t) !==
+                      (0, _._)(_.staleTime, this.#t)) &&
+                  this.#y();
+              const _ = this.#_();
+              _ &&
+                (this.#t !== _ ||
+                  (0, _._)(this.options.enabled, this.#t) !==
+                    (0, _._)(_.enabled, this.#t) ||
+                  _ !== this.#p) &&
+                this.#m(_);
+            }
+            getOptimisticResult(_) {
+              const _ = this.#e.getQueryCache().build(this.#e, _),
+                _ = this.createResult(_, _);
+              return (
+                _(this, _) &&
+                  ((this.#r = _),
+                  (this.#a = this.options),
+                  (this.#i = this.#t.state)),
+                _
+              );
+            }
+            getCurrentResult() {
+              return this.#r;
+            }
+            trackResult(_, _) {
+              const _ = {};
+              return (
+                Object.keys(_).forEach((_) => {
+                  Object.defineProperty(_, _, {
+                    configurable: !1,
+                    enumerable: !0,
+                    get: () => (this.trackProp(_), _?.(_), _[_]),
+                  });
+                }),
+                _
+              );
+            }
+            trackProp(_) {
+              this.#h.add(_);
+            }
+            getCurrentQuery() {
+              return this.#t;
+            }
+            refetch({ ..._ } = {}) {
+              return this.fetch({
+                ..._,
+              });
+            }
+            fetchOptimistic(_) {
+              const _ = this.#e.defaultQueryOptions(_),
+                _ = this.#e.getQueryCache().build(this.#e, _);
+              return _.fetch().then(() => this.createResult(_, _));
+            }
+            fetch(_) {
+              return this.#d({
+                ..._,
+                cancelRefetch: _.cancelRefetch ?? !0,
+              }).then(() => (this.updateResult(), this.#r));
+            }
+            #d(_) {
+              this.#E();
+              let _ = this.#t.fetch(this.options, _);
+              return _?.throwOnError || (_ = _.catch(_._)), _;
+            }
+            #y() {
+              this.#b();
+              const _ = (0, _._)(this.options.staleTime, this.#t);
+              if (_._ || this.#r.isStale || !(0, _._)(_)) return;
+              const _ = (0, _._)(this.#r.dataUpdatedAt, _) + 1;
+              this.#u = setTimeout(() => {
+                this.#r.isStale || this.updateResult();
+              }, _);
+            }
+            #_() {
+              return (
+                (typeof this.options.refetchInterval == "function"
+                  ? this.options.refetchInterval(this.#t)
+                  : this.options.refetchInterval) ?? !1
+              );
+            }
+            #m(_) {
+              this.#S(),
+                (this.#p = _),
+                !(
+                  _._ ||
+                  (0, _._)(this.options.enabled, this.#t) === !1 ||
+                  !(0, _._)(this.#p) ||
+                  this.#p === 0
+                ) &&
+                  (this.#g = setInterval(() => {
+                    (this.options.refetchIntervalInBackground ||
+                      _._.isFocused()) &&
+                      this.#d();
+                  }, this.#p));
+            }
+            #v() {
+              this.#y(), this.#m(this.#_());
+            }
+            #b() {
+              this.#u && (clearTimeout(this.#u), (this.#u = void 0));
+            }
+            #S() {
+              this.#g && (clearInterval(this.#g), (this.#g = void 0));
+            }
+            createResult(_, _) {
+              const _ = this.#t,
+                _ = this.options,
+                _ = this.#r,
+                _ = this.#i,
+                _ = this.#a,
+                _ = _ !== _ ? _.state : this.#n,
+                { state: _ } = _;
+              let _ = {
+                  ..._,
+                },
+                _ = !1,
+                _;
+              if (_._optimisticResults) {
+                const _ = this.hasListeners(),
+                  _ = !_ && _(_, _),
+                  _ = _ && _(_, _, _, _);
+                (_ || _) &&
+                  (_ = {
+                    ..._,
+                    ...(0, _._)(_.data, _.options),
+                  }),
+                  _._optimisticResults === "isRestoring" &&
+                    (_.fetchStatus = "idle");
+              }
+              let { error: _, errorUpdatedAt: _, status: _ } = _;
+              if (_.select && _.data !== void 0)
+                if (_ && _.data === _?.data && _.select === this.#c)
+                  _ = this.#f;
+                else
+                  try {
+                    (this.#c = _.select),
+                      (_ = _.select(_.data)),
+                      (_ = (0, _._)(_?.data, _, _)),
+                      (this.#f = _),
+                      (this.#s = null);
+                  } catch (_) {
+                    this.#s = _;
+                  }
+              else _ = _.data;
+              if (
+                _.placeholderData !== void 0 &&
+                _ === void 0 &&
+                _ === "pending"
+              ) {
+                let _;
+                if (
+                  _?.isPlaceholderData &&
+                  _.placeholderData === _?.placeholderData
+                )
+                  _ = _.data;
+                else if (
+                  ((_ =
+                    typeof _.placeholderData == "function"
+                      ? _.placeholderData(this.#l?.state.data, this.#l)
+                      : _.placeholderData),
+                  _.select && _ !== void 0)
+                )
+                  try {
+                    (_ = _.select(_)), (this.#s = null);
+                  } catch (_) {
+                    this.#s = _;
+                  }
+                _ !== void 0 &&
+                  ((_ = "success"), (_ = (0, _._)(_?.data, _, _)), (_ = !0));
+              }
+              this.#s &&
+                ((_ = this.#s), (_ = this.#f), (_ = Date.now()), (_ = "error"));
+              const _ = _.fetchStatus === "fetching",
+                _ = _ === "pending",
+                _ = _ === "error",
+                _ = _ && _,
+                _ = _ !== void 0,
+                _ = {
+                  status: _,
+                  fetchStatus: _.fetchStatus,
+                  isPending: _,
+                  isSuccess: _ === "success",
+                  isError: _,
+                  isInitialLoading: _,
+                  isLoading: _,
+                  data: _,
+                  dataUpdatedAt: _.dataUpdatedAt,
+                  error: _,
+                  errorUpdatedAt: _,
+                  failureCount: _.fetchFailureCount,
+                  failureReason: _.fetchFailureReason,
+                  errorUpdateCount: _.errorUpdateCount,
+                  isFetched: _.dataUpdateCount > 0 || _.errorUpdateCount > 0,
+                  isFetchedAfterMount:
+                    _.dataUpdateCount > _.dataUpdateCount ||
+                    _.errorUpdateCount > _.errorUpdateCount,
+                  isFetching: _,
+                  isRefetching: _ && !_,
+                  isLoadingError: _ && !_,
+                  isPaused: _.fetchStatus === "paused",
+                  isPlaceholderData: _,
+                  isRefetchError: _ && _,
+                  isStale: _(_, _),
+                  refetch: this.refetch,
+                  promise: this.#o,
+                };
+              if (this.options.experimental_prefetchInRender) {
+                const _ = (_) => {
+                    _.status === "error"
+                      ? _.reject(_.error)
+                      : _.data !== void 0 && _.resolve(_.data);
+                  },
+                  _ = () => {
+                    const _ = (this.#o = _.promise = (0, _._)());
+                    _(_);
+                  },
+                  _ = this.#o;
+                switch (_.status) {
+                  case "pending":
+                    _.queryHash === _.queryHash && _(_);
+                    break;
+                  case "fulfilled":
+                    (_.status === "error" || _.data !== _.value) && _();
+                    break;
+                  case "rejected":
+                    (_.status !== "error" || _.error !== _.reason) && _();
+                    break;
+                }
+              }
+              return _;
+            }
+            updateResult(_) {
+              const _ = this.#r,
+                _ = this.createResult(this.#t, this.options);
+              if (
+                ((this.#i = this.#t.state),
+                (this.#a = this.options),
+                this.#i.data !== void 0 && (this.#l = this.#t),
+                (0, _._)(_, _))
+              )
+                return;
+              this.#r = _;
+              const _ = {},
+                _ = () => {
+                  if (!_) return !0;
+                  const { notifyOnChangeProps: _ } = this.options,
+                    _ = typeof _ == "function" ? _() : _;
+                  if (_ === "all" || (!_ && !this.#h.size)) return !0;
+                  const _ = new Set(_ ?? this.#h);
+                  return (
+                    this.options.throwOnError && _.add("error"),
+                    Object.keys(this.#r).some((_) => {
+                      const _ = _;
+                      return this.#r[_] !== _[_] && _.has(_);
+                    })
+                  );
+                };
+              _?.listeners !== !1 && _() && (_.listeners = !0),
+                this.#T({
+                  ..._,
+                  ..._,
+                });
+            }
+            #E() {
+              const _ = this.#e.getQueryCache().build(this.#e, this.options);
+              if (_ === this.#t) return;
+              const _ = this.#t;
+              (this.#t = _),
+                (this.#n = _.state),
+                this.hasListeners() &&
+                  (_?.removeObserver(this), _.addObserver(this));
+            }
+            onQueryUpdate() {
+              this.updateResult(), this.hasListeners() && this.#v();
+            }
+            #T(_) {
+              _._.batch(() => {
+                _.listeners &&
+                  this.listeners.forEach((_) => {
+                    _(this.#r);
+                  }),
+                  this.#e.getQueryCache().notify({
+                    query: this.#t,
+                    type: "observerResultsUpdated",
+                  });
+              });
+            }
+          };
+        function _(_, _) {
+          return (
+            (0, _._)(_.enabled, _) !== !1 &&
+            _.state.data === void 0 &&
+            !(_.state.status === "error" && _.retryOnMount === !1)
+          );
+        }
+        function _(_, _) {
+          return (
+            _(_, _) || (_.state.data !== void 0 && _(_, _, _.refetchOnMount))
+          );
+        }
+        function _(_, _, _) {
+          if ((0, _._)(_.enabled, _) !== !1) {
+            const _ = typeof _ == "function" ? _(_) : _;
+            return _ === "always" || (_ !== !1 && _(_, _));
+          }
+          return !1;
+        }
+        function _(_, _, _, _) {
+          return (
+            (_ !== _ || (0, _._)(_.enabled, _) === !1) &&
+            (!_.suspense || _.state.status !== "error") &&
+            _(_, _)
+          );
+        }
+        function _(_, _) {
+          return (
+            (0, _._)(_.enabled, _) !== !1 &&
+            _.isStaleByTime((0, _._)(_.staleTime, _))
+          );
+        }
+        function _(_, _) {
+          return !(0, _._)(_.getCurrentResult(), _);
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -36216,6 +36639,7 @@ Error generating stack: ` +
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = typeof window > "u" || "Deno" in globalThis;
         function _() {}
@@ -36410,6 +36834,412 @@ Error generating stack: ` +
               children: _,
             })
           );
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _() {
+          let _ = !1;
+          return {
+            clearReset: () => {
+              _ = !1;
+            },
+            reset: () => {
+              _ = !0;
+            },
+            isReset: () => _,
+          };
+        }
+        var _ = _.createContext(_()),
+          _ = () => _.useContext(_),
+          _ = ({ children: _ }) => {
+            const [_] = React.useState(() => _());
+            return jsx(_.Provider, {
+              value: _,
+              children: typeof _ == "function" ? _(_) : _,
+            });
+          };
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = (_, _) => {
+            (_.suspense || _.throwOnError || _.experimental_prefetchInRender) &&
+              (_.isReset() || (_.retryOnMount = !1));
+          },
+          _ = (_) => {
+            _.useEffect(() => {
+              _.clearReset();
+            }, [_]);
+          },
+          _ = ({
+            result: _,
+            errorResetBoundary: _,
+            throwOnError: _,
+            query: _,
+          }) =>
+            _.isError &&
+            !_.isReset() &&
+            !_.isFetching &&
+            _ &&
+            (0, _._)(_, [_.error, _]);
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = _.createContext(!1),
+          _ = () => _.useContext(_),
+          _ = _.Provider;
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = (_, _) => _.state.data === void 0,
+          _ = (_) => {
+            _.suspense &&
+              (_.staleTime === void 0 && (_.staleTime = 1e3),
+              typeof _.gcTime == "number" &&
+                (_.gcTime = Math.max(_.gcTime, 1e3)));
+          },
+          _ = (_, _) => _.isLoading && _.isFetching && !_,
+          _ = (_, _) => _?.suspense && _.isPending,
+          _ = (_, _, _) =>
+            _.fetchOptimistic(_).catch(() => {
+              _.clearReset();
+            });
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_, _, _) {
+          const _ = (0, _._)(_),
+            _ = (0, _._)(),
+            _ = (0, _._)(),
+            _ = _.defaultQueryOptions(_);
+          _.getDefaultOptions().queries?._experimental_beforeQuery?.(_),
+            (_._optimisticResults = _ ? "isRestoring" : "optimistic"),
+            (0, _._)(_),
+            (0, _._)(_, _),
+            (0, _._)(_);
+          const _ = !_.getQueryCache().get(_.queryHash),
+            [_] = _.useState(() => new _(_, _)),
+            _ = _.getOptimisticResult(_);
+          if (
+            (_.useSyncExternalStore(
+              _.useCallback(
+                (_) => {
+                  const _ = _ ? _._ : _.subscribe(_._.batchCalls(_));
+                  return _.updateResult(), _;
+                },
+                [_, _],
+              ),
+              () => _.getCurrentResult(),
+              () => _.getCurrentResult(),
+            ),
+            _.useEffect(() => {
+              _.setOptions(_, {
+                listeners: !1,
+              });
+            }, [_, _]),
+            (0, _._)(_, _))
+          )
+            throw (0, _._)(_, _, _);
+          if (
+            (0, _._)({
+              result: _,
+              errorResetBoundary: _,
+              throwOnError: _.throwOnError,
+              query: _.getQueryCache().get(_.queryHash),
+            })
+          )
+            throw _.error;
+          return (
+            _.getDefaultOptions().queries?._experimental_afterQuery?.(_, _),
+            _.experimental_prefetchInRender &&
+              !_._ &&
+              (0, _._)(_, _) &&
+              (_
+                ? (0, _._)(_, _, _)
+                : _.getQueryCache().get(_.queryHash)?.promise
+              )
+                ?.catch(_._)
+                .finally(() => {
+                  _.updateResult();
+                }),
+            _.notifyOnChangeProps ? _ : _.trackResult(_)
+          );
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_, _) {
+          return _.filter((_) => !_.includes(_));
+        }
+        function _(_, _, _) {
+          const _ = _.slice(0);
+          return (_[_] = _), _;
+        }
+        var _ = class extends _._ {
+            #e;
+            #t;
+            #n;
+            #r;
+            #i;
+            #a;
+            #o;
+            #s;
+            constructor(_, _, _) {
+              super(),
+                (this.#e = _),
+                (this.#r = _),
+                (this.#n = []),
+                (this.#i = []),
+                (this.#t = []),
+                this.setQueries(_);
+            }
+            onSubscribe() {
+              this.listeners.size === 1 &&
+                this.#i.forEach((_) => {
+                  _.subscribe((_) => {
+                    this.#u(_, _);
+                  });
+                });
+            }
+            onUnsubscribe() {
+              this.listeners.size || this.destroy();
+            }
+            destroy() {
+              (this.listeners = new Set()),
+                this.#i.forEach((_) => {
+                  _.destroy();
+                });
+            }
+            setQueries(_, _, _) {
+              (this.#n = _),
+                (this.#r = _),
+                _._.batch(() => {
+                  const _ = this.#i,
+                    _ = this.#l(this.#n);
+                  _.forEach((_) =>
+                    _.observer.setOptions(_.defaultedQueryOptions, _),
+                  );
+                  const _ = _.map((_) => _.observer),
+                    _ = _.map((_) => _.getCurrentResult()),
+                    _ = _.some((_, _) => _ !== _[_]);
+                  (_.length === _.length && !_) ||
+                    ((this.#i = _),
+                    (this.#t = _),
+                    this.hasListeners() &&
+                      (_(_, _).forEach((_) => {
+                        _.destroy();
+                      }),
+                      _(_, _).forEach((_) => {
+                        _.subscribe((_) => {
+                          this.#u(_, _);
+                        });
+                      }),
+                      this.#g()));
+                });
+            }
+            getCurrentResult() {
+              return this.#t;
+            }
+            getQueries() {
+              return this.#i.map((_) => _.getCurrentQuery());
+            }
+            getObservers() {
+              return this.#i;
+            }
+            getOptimisticResult(_, _) {
+              const _ = this.#l(_).map((_) =>
+                _.observer.getOptimisticResult(_.defaultedQueryOptions),
+              );
+              return [_, (_) => this.#f(_ ?? _, _), () => this.#c(_, _)];
+            }
+            #c(_, _) {
+              const _ = this.#l(_);
+              return _.map((_, _) => {
+                const _ = _[_];
+                return _.defaultedQueryOptions.notifyOnChangeProps
+                  ? _
+                  : _.observer.trackResult(_, (_) => {
+                      _.forEach((_) => {
+                        _.observer.trackProp(_);
+                      });
+                    });
+              });
+            }
+            #f(_, _) {
+              return _
+                ? ((!this.#a || this.#t !== this.#s || _ !== this.#o) &&
+                    ((this.#o = _),
+                    (this.#s = this.#t),
+                    (this.#a = (0, _._)(this.#a, _(_)))),
+                  this.#a)
+                : _;
+            }
+            #l(_) {
+              const _ = new Map(this.#i.map((_) => [_.options.queryHash, _])),
+                _ = [];
+              return (
+                _.forEach((_) => {
+                  const _ = this.#e.defaultQueryOptions(_),
+                    _ = _.get(_.queryHash);
+                  _
+                    ? _.push({
+                        defaultedQueryOptions: _,
+                        observer: _,
+                      })
+                    : _.push({
+                        defaultedQueryOptions: _,
+                        observer: new _._(this.#e, _),
+                      });
+                }),
+                _
+              );
+            }
+            #u(_, _) {
+              const _ = this.#i.indexOf(_);
+              _ !== -1 && ((this.#t = _(this.#t, _, _)), this.#g());
+            }
+            #g() {
+              if (this.hasListeners()) {
+                const _ = this.#a,
+                  _ = this.#f(this.#c(this.#t, this.#n), this.#r?.combine);
+                _ !== _ &&
+                  _._.batch(() => {
+                    this.listeners.forEach((_) => {
+                      _(this.#t);
+                    });
+                  });
+              }
+            }
+          },
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _({ queries: _, ..._ }, _) {
+          const _ = (0, _._)(_),
+            _ = (0, _._)(),
+            _ = (0, _._)(),
+            _ = _.useMemo(
+              () =>
+                _.map((_) => {
+                  const _ = _.defaultQueryOptions(_);
+                  return (
+                    (_._optimisticResults = _ ? "isRestoring" : "optimistic"), _
+                  );
+                }),
+              [_, _, _],
+            );
+          _.forEach((_) => {
+            (0, _._)(_), (0, _._)(_, _);
+          }),
+            (0, _._)(_);
+          const [_] = _.useState(() => new _(_, _, _)),
+            [_, _, _] = _.getOptimisticResult(_, _.combine);
+          _.useSyncExternalStore(
+            _.useCallback(
+              (_) => (_ ? _._ : _.subscribe(_._.batchCalls(_))),
+              [_, _],
+            ),
+            () => _.getCurrentResult(),
+            () => _.getCurrentResult(),
+          ),
+            _.useEffect(() => {
+              _.setQueries(_, _, {
+                listeners: !1,
+              });
+            }, [_, _, _]);
+          const _ = _.some((_, _) => (0, _._)(_[_], _))
+            ? _.flatMap((_, _) => {
+                const _ = _[_];
+                if (_) {
+                  const _ = new _._(_, _);
+                  if ((0, _._)(_, _)) return (0, _._)(_, _, _);
+                  (0, _._)(_, _) && (0, _._)(_, _, _);
+                }
+                return [];
+              })
+            : [];
+          if (_.length > 0) throw Promise.all(_);
+          const _ = _.find((_, _) => {
+            const _ = _[_];
+            return (
+              _ &&
+              (0, _._)({
+                result: _,
+                errorResetBoundary: _,
+                throwOnError: _.throwOnError,
+                query: _.getQueryCache().get(_.queryHash),
+              })
+            );
+          });
+          if (_?.error) throw _.error;
+          return _(_());
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_, _) {
+          return (0, _._)(_, _._, _);
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+        });
+        function _(_, _) {
+          return typeof _ == "function" ? _(..._) : !!_;
+        }
+        function _() {}
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";

@@ -49,7 +49,8 @@ enum EMarketingMessageTemplateType {
 	k_EMarketingMessageTemplate_Replay = 5;
 	k_EMarketingMessageTemplate_Event = 6;
 	k_EMarketingMessageTemplate_AutoRender = 7;
-	k_EMarketingMessageTemplate_MAX = 8;
+	k_EMarketingMessageTemplate_SaleItems = 8;
+	k_EMarketingMessageTemplate_MAX = 9;
 }
 
 enum EMarketingMessageClickLocation {
@@ -138,6 +139,7 @@ message CDisplayMarketingMessage {
 	optional string template_type = 10;
 	optional string template_vars_json = 11;
 	repeated .StoreItemID recommended_items = 12;
+	optional uint32 sale_item_count = 13;
 }
 
 message CMarketingMessages_GetMarketingMessagesForUser_Response {

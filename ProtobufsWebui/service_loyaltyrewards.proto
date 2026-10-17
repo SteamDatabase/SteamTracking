@@ -257,7 +257,7 @@ service LoyaltyRewards {
 	rpc GetReactionsSummaryForUser (.CLoyaltyRewards_GetReactionsSummaryForUser_Request) returns (.CLoyaltyRewards_GetReactionsSummaryForUser_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetSummary (.CLoyaltyRewards_GetSummary_Request) returns (.CLoyaltyRewards_GetSummary_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc QueryRewardItems (.CLoyaltyRewards_QueryRewardItems_Request) returns (.CLoyaltyRewards_QueryRewardItems_Response);
 	// ePrivilege=1
 	rpc RedeemPoints (.CLoyaltyRewards_RedeemPoints_Request) returns (.CLoyaltyRewards_RedeemPoints_Response);

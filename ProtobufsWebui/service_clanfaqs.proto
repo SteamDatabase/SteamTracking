@@ -210,7 +210,7 @@ service ClanFAQS {
 	rpc Delete (.CClanFAQS_Delete_Request) returns (.CClanFAQS_Delete_Response);
 	// bConstMethod=true, ePrivilege=5
 	rpc FetchLocalizationFromCrowdIn (.CClanFAQs_FetchLocalizationFromCrowdIn_Request) returns (.CClanFAQs_FetchLocalizationFromCrowdIn_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetAllDrafts (.CClanFAQS_GetAllDrafts_Request) returns (.CClanFAQS_GetAllDrafts_Response);
 	// ePrivilege=1
 	rpc GetAllFAQsForClan (.CClanFAQS_GetAllFAQsForClan_Request) returns (.CClanFAQS_GetAllFAQsForClan_Response);
@@ -220,13 +220,13 @@ service ClanFAQS {
 	rpc GetCrowdInMetadata (.CClanFAQs_GetCrowdInMetadata_Request) returns (.CClanFAQs_GetCrowdInMetadata_Response);
 	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
 	rpc GetFAQ (.CClanFAQS_GetFAQ_Request) returns (.CClanFAQS_GetFAQ_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetFAQVersion (.CClanFAQS_GetFAQVersion_Request) returns (.CClanFAQS_GetFAQVersion_Response);
 	// ePrivilege=1
 	rpc PreviewDraft (.CClanFAQS_PreviewDraft_Request) returns (.CClanFAQS_PreviewDraft_Response);
 	// ePrivilege=1
 	rpc PublishDraft (.CClanFAQS_PublishDraft_Request) returns (.CClanFAQS_PublishDraft_Response);
-	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc SearchFAQs (.CClanFAQS_SearchFAQs_Request) returns (.CClanFAQS_SearchFAQs_Response);
 	// ePrivilege=1
 	rpc SetVisibility (.CClanFAQS_SetVisibility_Request) returns (.CClanFAQS_SetVisibility_Response);

@@ -377,9 +377,9 @@ service SaleFeature {
 	rpc GetAllUserActionDataForType (.CSaleFeature_GetAllUserActionDataForType_Request) returns (.CSaleFeature_GetAllUserActionDataForType_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc GetFriendsSharedYearInReview (.CSaleFeature_GetFriendsSharedYearInReview_Request) returns (.CSaleFeature_GetFriendsSharedYearInReview_Response);
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetMultipleUserActionData (.CSaleFeature_GetMultipleUserActionData_Request) returns (.CSaleFeature_GetMultipleUserActionData_Response);
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetUserActionData (.CSaleFeature_GetUserActionData_Request) returns (.CSaleFeature_GetUserActionData_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc GetUserSharingPermissions (.CSaleFeature_GetUserSharingPermissions_Request) returns (.CSaleFeature_GetUserSharingPermissions_Response);

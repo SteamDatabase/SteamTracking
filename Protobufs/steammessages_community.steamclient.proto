@@ -163,6 +163,7 @@ message CCommunity_SanctionComment_Request {
 	optional .EContentReportReason reason = 4 [default = k_EContentReportReason_Invalid];
 	optional string note = 5;
 	repeated .CCommunity_SanctionComment_Request.Sanction sanctions = 6;
+	optional bool skip_lock = 7;
 }
 
 message CCommunity_SanctionComment_Response {
@@ -506,6 +507,7 @@ message CCommentModeration_UpdateCommentReportState_Request {
 	optional uint64 comment_thread_id = 11;
 	repeated .CCommentModeration_UpdateCommentReportState_Request.Sanction sanctions = 12;
 	optional string note = 13;
+	optional bool skip_lock = 14;
 }
 
 message CCommentModeration_UpdateCommentReportState_Response {

@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Покана към гласов канал",
     "VoiceChat_SendInviteMessage": "Изпращане на съобщение с покана",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Заглушен",
     "VoiceChat_Unavailable_NotFriend": "Гласовият чат е недостъпен: %1$s не е в списъка Ви с приятели.",
     "VoiceChat_Unavailable_NotOnline": "Гласовият чат е недостъпен: %1$s понастоящем не е на линия.",
     "VoiceChat_Unavailable_NotInBeta": "Гласовият чат е недостъпен: %1$s не е в новата чат бета.",
@@ -640,6 +641,7 @@
     "Button_Share": "Споделяне",
     "Button_Ignore": "Игнориране",
     "DirectMessageFromNonFriend": "Съобщение от потребител, който не Ви е приятел",
+    "DirectMessageFromNonFriend_SharedGroup": "И двамата членувате в груповия чат „%1$s“.",
     "NonFriendAction_Block": "Блокиране на комуникациите",
     "NonFriendAction_Allow": "Позволяване на комуникациите",
     "SuspiciousMessage_Header": "Подозрителен чат",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Поправено е, че списъкът с приятели и чат прозорците не се изобразяваха в игралния Steam слой под Linux и macOS.",
     "BBCode_Loading": "Зареждане",
     "BBCode_Failed": "Неуспешно зареждане",
-    "broadcastDetails_Playing": "Играе",
-    "VoiceChat_Muted_Deck": "Заглушен"
+    "broadcastDetails_Playing": "Играе"
 }

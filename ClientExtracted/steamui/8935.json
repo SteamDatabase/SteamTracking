@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Nu avem nicio lansare nouă pe care să ți-o recomandăm pentru această zi. <1>Vezi restul calendarului tău!</1>",
     "NewBadge": "NOU",
     "Time_Today": "Astăzi",
+    "DiscountsAndEvents_Title": "Reduceri și evenimente",
+    "DiscountsAndEvents_SeeMore": "Vezi mai multe",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Ofertă de weekend",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Ofertă săptămânală",
+    "DiscountsAndEvents_Banner_DailyDeal": "Oferta zilei",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Cea mai mare reducere",
+    "DiscountsAndEvents_LoadError": "Reducerile și evenimentele nu au putut fi încărcate momentan. Te rugăm să încerci din nou mai târziu.",
     "store_ui_dummy": "dont translate"
 }

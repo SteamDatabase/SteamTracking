@@ -343,7 +343,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Tidak dapat bergabung ke obrolan suara di %chat%. Slot berbicara tidak cukup."
 "Friends_Chat_VoiceStatus"		"%availslots% slot tersedia [total %maxslots% slot]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% DI DALAM GAME, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% DI DALAM OBROLAN, %online% ONLINE"

@@ -33,8 +33,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = "steamdb";
+          _ = __webpack_require__._(_);
         function _(_) {
           const { clipToUpload: _, finishUpload: _ } = _,
             [_, _] = _.useState(!1),
@@ -123,8 +122,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
+          _ = __webpack_require__("chunkid");
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -645,7 +643,6 @@
             return "CVideo_GameRecordingSegmentUploadInfo_HTTPHeaders";
           }
         }
-        var _ = "steamdb";
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -770,7 +767,7 @@
                     },
                     video_ids: {
                       _: 9,
-                      _: _,
+                      _,
                       _: !0,
                       _: !0,
                     },
@@ -1781,8 +1778,7 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
+          _ = __webpack_require__("chunkid");
         function _(_) {
           const { previewURL: _ } = _,
             [_, _] = _.useState(!1);

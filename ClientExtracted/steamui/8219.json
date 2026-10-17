@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Az összes Ellenőrzött, valamint olyan játékok mutatása, amelyek játszhatók, de plusz erőfeszítést igényelhet a kezelés vagy konfigurálás.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Az összes Ellenőrzött és Játszható, valamint olyan játékok mutatása, amelyek Machine-kompatibilitása még nincs tesztelve.",
     "MachineVerified_FilterDescription_AllGames": "Az összes játék mutatása a Könyvtáradban, azok is, amelyek nem futnak jól Steam Machine-en.",
-    "FrameVerified_FilterDescription_Verified": "Csak olyan játékok mutatása, amelyek alapból működnek a Steam Frame-en.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Az összes Frame-en Ellenőrzött, valamint olyan játékok mutatása, amelyek játszhatók, de plusz erőfeszítést igényelhet a kezelés vagy konfigurálás.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Az összes Ellenőrzött és Játszható, valamint olyan játékok mutatása, amelyek Frame-kompatibilitása még nincs tesztelve.",
-    "FrameVerified_FilterDescription_AllGames": "Az összes játék mutatása a Könyvtáradban, azok is, amelyek nem futnak jól Steam Frame-en."
+    "FrameVerified_FilterDescription_Verified": "Csak olyan játékok mutatása, amelyek alapból működnek a Steam Frame beépített vezérlésével és kijelzőjével.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Az összes Ellenőrzött, valamint olyan játékok mutatása, amelyek játszhatók, de plusz erőfeszítést igényelhet a kezelés vagy konfigurálás.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Az összes Ellenőrzött és Játszható, valamint olyan játékok mutatása, amelyek önálló módú Frame-kompatibilitása még nincs tesztelve.",
+    "FrameVerified_FilterDescription_AllGames": "Az összes játék mutatása a Könyvtáradban, azok is, amelyek nem futnak jól Steam Frame-en önálló módban."
 }

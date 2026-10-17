@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Δεν έχουμε να σας προτείνουμε καμία νέα κυκλοφορία για αυτήν την ημέρα<1>Ρίξτε μια ματιά στο υπόλοιπο ημερολόγιό σας!</1>",
     "NewBadge": "ΝΕΟ",
     "Time_Today": "Σήμερα",
+    "DiscountsAndEvents_Title": "Εκπτώσεις και συμβάντα",
+    "DiscountsAndEvents_SeeMore": "Δείτε περισσότερα",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Προσφορά Σαββατοκύριακου",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Μεσοβδόμαδη Προσφορά",
+    "DiscountsAndEvents_Banner_DailyDeal": "Σημερινή Προσφορά",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Μεγαλύτερη έκπτωση",
+    "DiscountsAndEvents_LoadError": "Δεν ήταν δυνατή η φόρτωση των εκπτώσεων και των συμβάντων. Δοκιμάστε ξανά αργότερα.",
     "store_ui_dummy": "dont translate"
 }

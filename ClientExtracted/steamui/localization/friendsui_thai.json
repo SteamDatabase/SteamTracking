@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "เชิญเข้าร่วมช่องเสียง",
     "VoiceChat_SendInviteMessage": "ส่งข้อความเชิญ",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "ปิดเสียง",
     "VoiceChat_Unavailable_NotFriend": "แช็ตด้วยเสียงไม่พร้อมใช้งาน:  %1$s ไม่ได้อยู่ในรายชื่อเพื่อนของคุณ",
     "VoiceChat_Unavailable_NotOnline": "แช็ตด้วยเสียงไม่พร้อมใช้งาน:  %1$s ไม่ได้ออนไลน์อยู่ในขณะนี้",
     "VoiceChat_Unavailable_NotInBeta": "แช็ตด้วยเสียงไม่พร้อมใช้งาน:  %1$s ไม่ได้ใช้การแช็ตรุ่นเบต้าใหม่",
@@ -640,6 +641,7 @@
     "Button_Share": "แบ่งปัน",
     "Button_Ignore": "ละเว้น",
     "DirectMessageFromNonFriend": "ข้อความจากผู้ใช้ที่ไม่ใช่เพื่อนของคุณ",
+    "DirectMessageFromNonFriend_SharedGroup": "คุณทั้งสองคนเป็นสมาชิกของแช็ตแบบกลุ่ม \"%1$s\"",
     "NonFriendAction_Block": "บล็อกการติดต่อ",
     "NonFriendAction_Allow": "อนุญาตการติดต่อ",
     "SuspiciousMessage_Header": "แช็ตที่น่าสงสัย",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "แก้ไขหน้าต่างเพื่อนและแช็ตที่ไม่แสดงในโอเวอร์เลย์ภายในเกมบน Linux และ macOS",
     "BBCode_Loading": "กำลังโหลด",
     "BBCode_Failed": "ล้มเหลวในการโหลด",
-    "broadcastDetails_Playing": "กำลังเล่น",
-    "VoiceChat_Muted_Deck": "ปิดเสียง"
+    "broadcastDetails_Playing": "กำลังเล่น"
 }

@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Kan spraak in %chat% niet starten, niet genoeg vrije spraakposities."
 "Friends_Chat_VoiceStatus"		"%availslots% posities beschikbaar [%maxslots% total]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% IN SPEL, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% IN CHAT, %online% ONLINE"

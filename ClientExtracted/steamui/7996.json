@@ -112,5 +112,7 @@
     "ReadableDuration_Hours": "%1$s saat",
     "ReadableDuration_Minutes": "%1$s dakika",
     "ReadableDuration_OneMinute": "1 dakika",
-    "ReadableDuration_LessThanOneMinute": "1 dakikadan az"
+    "ReadableDuration_LessThanOneMinute": "1 dakikadan az",
+    "Playtime_Hours": "%1$s saat",
+    "Playtime_Minutes": "%1$s dakika"
 }

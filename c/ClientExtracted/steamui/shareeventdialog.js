@@ -1,7 +1,15 @@
 (() => {
   (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
-    [1129],
+    [8656],
     {
+      chunkid: (module) => {
+        module.exports = {
+          Container: "_340f4eUQ6g1wEP6XkvOi2m",
+          SmallAvatar: "ZcSEHEBy6UFM8ApdYw48V",
+          ShareDescription: "tGyGdizK9jd1VLqtQkToE",
+          ShareLink: "_2hGcij8WDcw-rJXIjWEBu",
+        };
+      },
       chunkid: (module) => {
         module.exports = {
           DragTarget: "_2sUvh2ZpsDAw1xNqgRBELg",
@@ -47,14 +55,6 @@
           ImageContainer: "_2ti3yMwzfkGoiW68FuNjTG",
           Image: "y902_9A0Wj5bTshbt4xRb",
           ImageFilename: "_2jzLZXXxgDMMcA9X0QDSdg",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          Container: "_2vGr9KsApU0s59_ZsZVxXY",
-          SmallAvatar: "_3V8w8CrYHVYB0voJ3gp87x",
-          ShareDescription: "_3CqiH5i7kc5lXyEb0TGl2C",
-          ShareLink: "_1WTiWXO3q8jMnJc_cPKJbE",
         };
       },
       chunkid: (module) => {
@@ -120,28 +120,45 @@
         "use strict";
         __webpack_require__._(module_exports),
           __webpack_require__._(module_exports, {
-            default: () => _,
+            ShareEventDialogBody: () => _,
           });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        const _ =
-          "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDAgMTQwMCAxNDA5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNDAwIDE0MDkiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNjk4LjE5NSwxMC4xMjVjLTM2NC4zNDcsMC02NjIuODM4LDI4MC45MzgtNjkxLjIwNiw2MzcuOTY5TDM3OC43NCw4MDEuNzk3CgljMzEuNTAyLTIxLjUzOSw2OS41NTUtMzQuMTMzLDExMC40OTUtMzQuMTMzYzMuNjY5LDAsNy4zMTUsMC4wOSwxMC45MzksMC4zMTNsMTY1LjMzLTIzOS42MzdjMC0xLjEzNy0wLjAyOS0yLjI1LTAuMDI5LTMuMzk1CgljMC0xNDQuMjI3LDExNy4zMzUtMjYxLjU3NCwyNjEuNTgyLTI2MS41NzRjMTQ0LjIzMywwLDI2MS41ODMsMTE3LjM0OCwyNjEuNTgzLDI2MS41NzRjMCwxNDQuMjQ2LTExNy4zNSwyNjEuNTk4LTI2MS41ODMsMjYxLjU5OAoJYy0xLjk5LDAtMy45NS0wLjA0Ny01LjkyNi0wLjA5TDY4NS4zNDEsOTU0LjY4OGMwLjExOSwzLjA3NCwwLjIzLDYuMTkxLDAuMjMsOS4yOTdjMCwxMDguMjczLTg4LjA3NiwxOTYuMzUyLTE5Ni4zMzYsMTk2LjM1MgoJYy05NS4wNDEsMC0xNzQuNDk0LTY3Ljg0OC0xOTIuNDk2LTE1Ny42NzZMMzAuODcyLDg5Mi43NTRjODIuMzIsMjkxLjEzNywzNDkuODA3LDUwNC41ODIsNjY3LjMyMyw1MDQuNTgyCgljMzgzLjA2MiwwLDY5My41OTgtMzEwLjU1MSw2OTMuNTk4LTY5My42MTNDMTM5MS43OTMsMzIwLjY2NCwxMDgxLjI1NywxMC4xMjUsNjk4LjE5NSwxMC4xMjUiLz4KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQ0MS42NDgsMTA2Mi41NjNsLTg1LjIwMi0zNS4yMDNjMTUuMTA1LDMxLjQ0NSw0MS4yMyw1Ny43NjIsNzUuOTExLDcyLjIxNQoJYzc0Ljk2MSwzMS4yNSwxNjEuNDEtNC4zMzYsMTkyLjY2Ny03OS4zNTljMTUuMTEyLTM2LjMxMywxNS4yMjQtNzYuMzU1LDAuMjIzLTExMi43NDJjLTE0Ljk3OS0zNi4zOTEtNDMuMjUtNjQuNzczLTc5LjU3Mi03OS45MjIKCWMtMzYuMDQ3LTE1LjAwNC03NC42NTYtMTQuNDM4LTEwOC41ODctMS42MzdsODguMDA5LDM2LjM5MWM1NS4zMDQsMjMuMDUxLDgxLjQ0NCw4Ni41NTksNTguNDA4LDE0MS44NTUKCUM1NjAuNDc2LDEwNTkuNDU3LDQ5Ni45NDQsMTA4NS42MTMsNDQxLjY0OCwxMDYyLjU2MyIvPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEwMS4zNTMsNTI0Ljk2MWMwLTk2LjExMy03OC4xODQtMTc0LjMxMy0xNzQuMjk1LTE3NC4zMTNjLTk2LjA5NiwwLTE3NC4yOTQsNzguMTk5LTE3NC4yOTQsMTc0LjMxMwoJYzAsOTYuMTAyLDc4LjE5OCwxNzQuMjc3LDE3NC4yOTQsMTc0LjI3N0MxMDIzLjE2OSw2OTkuMjM4LDExMDEuMzUzLDYyMS4wNjMsMTEwMS4zNTMsNTI0Ljk2MSBNNzk2LjQxNSw1MjQuNjU2CgljMC03Mi4zMjQsNTguNjM4LTEzMC45MTgsMTMwLjk0LTEzMC45MThjNzIuMzE2LDAsMTMwLjkyNSw1OC41OTQsMTMwLjkyNSwxMzAuOTE4YzAsNzIuMzE2LTU4LjYwOCwxMzAuOTE4LTEzMC45MjUsMTMwLjkxOAoJQzg1NS4wNTMsNjU1LjU3NCw3OTYuNDE1LDU5Ni45NzMsNzk2LjQxNSw1MjQuNjU2Ii8+Cjwvc3ZnPgo=";
+        const _ = _.createContext(null);
+        let _ = null;
+        function _() {
+          return (
+            _ ||
+              (console.warn(
+                "Missing context, this is not ssr safe, using s_FallbackEmoticonStore",
+              ),
+              (_ = new _._())),
+            _
+          );
+        }
+        function _(_) {
+          const [_] = _.useState(() => new _._()),
+            _ = _.store ?? _;
+          return (0, _.jsx)(_.Provider, {
+            value: _,
+            children: _.children,
+          });
+        }
+        function _() {
+          return _.useContext(_) ?? _();
+        }
+        function _(_) {
+          return jsx(Fragment, {
+            children: _.children(_()),
+          });
+        }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -149,7 +166,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -215,7 +231,12 @@
           return useObserver(() => _.Get().GetCurEditLanguage());
         }
         var _ = __webpack_require__("chunkid"),
-          _ = "steamdb",
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -375,6 +396,73 @@
           );
         }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const { eventLink: _, labelOverride: _ } = _,
+            _ = _.useRef(null),
+            [_, _] = _.useState(""),
+            _ = () => {
+              const _ = _.current?.ownerDocument.defaultView;
+              !_.current ||
+                !_ ||
+                _.navigator.clipboard
+                  .writeText(_.current.value)
+                  .then(() =>
+                    _((0, _._)("#EventDisplay_Share_CopiedToClipboard")),
+                  )
+                  .catch((_) => {
+                    _((0, _._)("#EventDisplay_Share_FailedToCopyToClipboard")),
+                      console.error("Failed to copy link to clipboard:", _);
+                  });
+            };
+          return (0, _.jsxs)("div", {
+            children: [
+              (0, _.jsxs)("div", {
+                className: (0, _._)(_().FlexRowContainer, _().linkField),
+                children: [
+                  (0, _.jsx)("span", {
+                    className: _().LinkInputLabel,
+                    children: (0, _._)(_ ?? "#EventDisplay_Share_Link"),
+                  }),
+                  (0, _.jsx)("input", {
+                    className: _().LinkInput,
+                    ref: _,
+                    value: _,
+                    readOnly: !0,
+                    onClick: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(_().Button, _().Icon, _().LinkButton),
+                    onActivate: _,
+                    children: (0, _.jsx)(_._, {
+                      toolTipContent: (0, _._)("#ToolTip_CopyLinkToClipboard"),
+                      children: (0, _.jsx)("img", {
+                        className: _().ClipboardIcon,
+                        src: _._,
+                        alt: (0, _._)("#ToolTip_CopyLinkToClipboard"),
+                      }),
+                    }),
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: _().ClipboardText,
+                children: _,
+              }),
+            ],
+          });
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -382,13 +470,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -598,8 +679,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = "steamdb";
+          _ = __webpack_require__._(_);
         class _ extends _._ {
           performSearch(_) {
             let _ = Array();
@@ -659,8 +739,7 @@
             return Number.MAX_VALUE;
           }
         }
-        var _ = "steamdb",
-          _ = Object.defineProperty,
+        var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
             for (
@@ -889,6 +968,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         const _ =
@@ -898,25 +978,9 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
-        const _ = 622,
-          _ = 1920,
-          _ = 450,
-          _ = 800,
-          _ = 460,
-          _ = 2108,
-          _ = 300,
-          _ = 800,
-          _ = 300,
-          _ = 644,
-          _ = 337,
-          _ = 155,
-          _ = 433,
-          _ = 199,
-          _ = ["app_header_capsule", "app_main_capsule"],
+          _ = __webpack_require__("chunkid");
+        const _ = ["app_header_capsule", "app_main_capsule"],
           _ = [
             "sale_header",
             "sale_logo",
@@ -940,6 +1004,21 @@
             "marketingmessage_art_2_eventcapsule",
           ],
           _ = ["spotlight_art_hero"],
+          _ = [..._, ..._, ..._, ..._, ..._, ..._, ..._],
+          _ = 622,
+          _ = 1920,
+          _ = 450,
+          _ = 800,
+          _ = 460,
+          _ = 2108,
+          _ = 300,
+          _ = 800,
+          _ = 300,
+          _ = 644,
+          _ = 337,
+          _ = 155,
+          _ = 433,
+          _ = 199,
           _ = [
             "spotlight",
             "background",
@@ -978,7 +1057,7 @@
             "sale_store_capsule_small",
             "sale_store_capsule_main",
             "sale_store_capsule_vertical",
-            ...[..._, ..._, ..._, ..._, ..._, ..._, ..._],
+            ..._,
           ];
         function _(_) {
           return Array.isArray(_) ? _[0] : _;
@@ -1367,7 +1446,6 @@
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -1585,8 +1663,7 @@
           }
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
+          _ = __webpack_require__("chunkid");
         const _ = (_) => {
             const { clanSteamID: _, fnImageSelectCallBack: _ } = _,
               [_, _] = (0, _.useState)(""),
@@ -1739,7 +1816,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -1797,8 +1873,7 @@
           _([_._], _.prototype, "status", 2),
           _([_._.ref], _.prototype, "message", 2),
           _([_._], _.prototype, "language", 2);
-        var _ = "steamdb",
-          _ = Object.defineProperty,
+        var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
             for (
@@ -2046,7 +2121,6 @@
             for (let _ of _) if (_ ? _(_, _, _) : _(_, _, _)) return _;
           }
         }
-        var _ = "steamdb";
         class _ {}
         function _(_, _, _) {
           const _ = _.filter((_) => {
@@ -2175,8 +2249,7 @@
             baseFilename: _ > 0 ? _(_.substring(0, _.length - _)) : _,
           };
         }
-        var _ = "steamdb",
-          _ = Object.defineProperty,
+        var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
             for (
@@ -2440,7 +2513,6 @@
             _ = _.ConvertTo64BitString();
           return _.useMemo(() => new _(_, _, _), [_, _]);
         }
-        var _ = "steamdb";
         const _ = (0, _._)((_) => {
           const {
               clanSteamID: _,
@@ -2604,8 +2676,7 @@
             ],
           });
         });
-        var _ = "steamdb",
-          _ = Object.defineProperty,
+        var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _) =>
             _ in _
@@ -2704,7 +2775,6 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _) =>
@@ -4069,140 +4139,62 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = "steamdb";
-        const _ = (0, _._)((_) => {
-          const { appid: _, eventLink: _ } = _,
-            _ = _.useRef(null),
+          _ = __webpack_require__._(_);
+        function _(_, _) {
+          return _.trim().length
+            ? _ +
+                `
+
+` +
+                _
+            : _;
+        }
+        async function _(_, _, _) {
+          if (_._.IN_STEAMUI) {
+            const _ = _._.Init(_.kVt);
+            _.Body().set_appid(_), _.Body().set_status_text(_);
+            const _ = await _.xtC.PostStatusToFriends(
+              _._.CMInterface.GetServiceTransport(),
+              _,
+            );
+            if (_.GetEResult() != _._) throw new Error(String(_.GetEResult()));
+            return;
+          }
+          const _ = new FormData();
+          _.append("appid", String(_ ?? 0)),
+            _.append("status_text", _),
+            _.append("sessionid", (0, _._)());
+          const _ = await fetch(_ + "ajaxpostuserstatus", {
+            method: "POST",
+            body: _,
+            credentials: "include",
+          });
+          let _;
+          try {
+            _ = _._ ? await _.json() : void 0;
+          } catch {
+            _ = void 0;
+          }
+          if (_?.success != _._) throw new Error(_?.message ?? _.statusText);
+        }
+        function _(_) {
+          const { appid: _, eventLink: _, emoticonStore: _, closeModal: _ } = _,
             { data: _ } = (0, _._)(_._.steamid),
             [_, _] = _.useState(""),
-            [_, _] = _.useState(!1),
-            [_, _] = _.useState(""),
-            [_, _] = _.useState(!1);
-          _.useEffect(
-            () => () => {
-              _.current?.("ShareEventOnFriendsActivityFeed: unmounting");
-            },
-            [],
-          );
-          const _ = _?.avatar_url,
-            _ = _._.InitFromAccountID(_._.accountid),
-            _ = async () => {
-              _.current &&
-                _.current(
-                  "ShareEventOnFriendsActivityFeed: cancel previous...",
-                );
-              const _ = _().CancelToken.source();
-              (_.current = _.cancel), _(!0);
-              let _ = _;
-              _.trim().length != 0 &&
-                (_ += `
-
-`),
-                (_ += _);
-              const _ =
-                _._.COMMUNITY_BASE_URL +
-                "profiles/" +
-                _.ConvertTo64BitString() +
-                "/ajaxpostuserstatus";
-              try {
-                if (_._.IN_STEAMUI) {
-                  let _ = _._.Init(_.kVt);
-                  _.Body().set_appid(_), _.Body().set_status_text(_);
-                  let _ = await _.xtC.PostStatusToFriends(
-                    _._.CMInterface.GetServiceTransport(),
-                    _,
-                  );
-                  if (_.GetEResult() != _._) {
-                    const _ =
-                      (0, _._)("#EventDisplay_Share_Failure") +
-                      `
-
-` +
-                      _.GetEResult();
-                    console.error(_, !_.token.reason), _.token.reason || _(_);
-                    return;
-                  }
-                } else {
-                  const _ = new FormData();
-                  _.append("appid", "" + _),
-                    _.append("status_text", _),
-                    _.append("sessionid", (0, _._)());
-                  const _ = await _().post(_, _, {
-                    withCredentials: !0,
-                  });
-                  if (_.status != 200 || _?.data?.success != _._) {
-                    const _ =
-                      (0, _._)("#EventDisplay_Share_Failure") +
-                      `
-
-` +
-                      _?.data?.message;
-                    console.error(_), _.token.reason || _(_);
-                    return;
-                  }
-                }
-                _.token.reason ||
-                  (_(!0), _((0, _._)("#EventDisplay_Share_Success")));
-              } catch (_) {
-                const _ = (0, _._)(_),
-                  _ =
-                    (0, _._)("#EventDisplay_Share_Failure") +
-                    `
-
-` +
-                    _.strErrorMsg;
-                _.token.reason || _(_), console.error(_);
-              }
-            };
-          return _
+            _ =
+              _._.COMMUNITY_BASE_URL +
+              "profiles/" +
+              _._.InitFromAccountID(_._.accountid).ConvertTo64BitString() +
+              "/",
+            _ = (0, _._)({
+              mutationFn: () => _(_, _, _(_, _)),
+            });
+          return _.isIdle
             ? (0, _.jsx)(_._, {
                 strDescription: "",
                 strTitle: (0, _._)("#Button_Share"),
-                onCancel: _.closeModal,
-                onOK: _.closeModal,
-                bAlertDialog: !0,
-                children: (0, _.jsxs)("div", {
-                  className: _().FlexColumnContainer,
-                  children: [
-                    (0, _.jsx)("div", {
-                      children: (0, _._)(
-                        "#EventDisplay_Share_OnMyStatus_Details",
-                      ),
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().Container,
-                      children: [
-                        _?.length == 0
-                          ? (0, _.jsx)(_._, {
-                              position: "center",
-                            })
-                          : (0, _.jsx)("div", {
-                              children: _,
-                            }),
-                        !!_ &&
-                          (0, _.jsx)("a", {
-                            href:
-                              _._.COMMUNITY_BASE_URL +
-                              "profiles/" +
-                              _.ConvertTo64BitString() +
-                              "/home",
-                            target: _._.IN_CLIENT ? void 0 : "_blank",
-                            children: (0, _._)(
-                              "#EventDisplay_Share_OpenActivityFeed",
-                            ),
-                          }),
-                      ],
-                    }),
-                  ],
-                }),
-              })
-            : (0, _.jsx)(_._, {
-                strDescription: "",
-                strTitle: (0, _._)("#Button_Share"),
-                onCancel: _.closeModal,
-                onOK: _,
+                onCancel: _,
+                onOK: () => _.mutate(),
                 strOKButtonText: (0, _._)("#Button_Post"),
                 children: (0, _.jsxs)("div", {
                   className: _().FlexColumnContainer,
@@ -4222,7 +4214,8 @@
                           children: [
                             (0, _.jsx)("img", {
                               className: _().SmallAvatar,
-                              src: _,
+                              src: _?.avatar_url,
+                              alt: "",
                               "data-miniprofile": "s" + _._.steamid,
                             }),
                             (0, _.jsx)("div", {
@@ -4234,7 +4227,7 @@
                                 fnGetCurText: () => _,
                                 fnOnTextChange: (_) => _(_.currentTarget.value),
                                 fnSetText: _,
-                                emoticonStore: _.emoticonStore,
+                                emoticonStore: _,
                                 bSupportHTMLImport: !1,
                                 showFormatHelp: "UserStatusPublished",
                                 limitBBCode: _._,
@@ -4247,283 +4240,240 @@
                         (0, _.jsx)("div", {
                           className: _().ShareLink,
                           children: (0, _.jsx)(_._, {
-                            linkWidgets: (0, _._)(),
-                            children: (0, _.jsx)(_._, {
-                              text: _,
-                              partnerEventStore: _.partnerEventStore,
-                            }),
+                            text: _,
                           }),
                         }),
                       ],
                     }),
                   ],
                 }),
-              });
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
-        const _ = (_) => {
-          const _ = _.createRef(),
-            [_, _] = _.useState(""),
-            _ = _.createRef(),
-            _ = () => {
-              const _ = _.current?.ownerDocument.defaultView;
-              _.current &&
-                _ &&
-                _.navigator.clipboard
-                  .writeText(_.current.value)
-                  .then((_) => {
-                    _((0, _._)("#EventDisplay_Share_CopiedToClipboard"));
-                  })
-                  .catch((_) => {
-                    _((0, _._)("#EventDisplay_Share_FailedToCopyToClipboard")),
-                      console.error("Failed to copy link to clipboard:", _);
-                  });
-            };
-          return (0, _.jsxs)("div", {
-            children: [
-              (0, _.jsxs)("div", {
-                className: (0, _._)(_().FlexRowContainer, _().linkField),
-                onClick: _,
-                children: [
-                  (0, _.jsx)("span", {
-                    className: _().LinkInputLabel,
-                    children: (0, _._)(
-                      _.labelOverride
-                        ? _.labelOverride
-                        : "#EventDisplay_Share_Link",
-                    ),
-                  }),
-                  (0, _.jsx)("input", {
-                    className: _().LinkInput,
-                    ref: _,
-                    value: _.eventLink,
-                    readOnly: !0,
-                  }),
-                  document.queryCommandSupported("copy") &&
-                    (0, _.jsx)(_._, {
-                      className: (0, _._)(_().Button, _().Icon, _().LinkButton),
-                      onActivate: _,
-                      children: (0, _.jsx)(_._, {
-                        toolTipContent: (0, _._)(
-                          "#ToolTip_CopyLinkToClipboard",
-                        ),
-                        children: (0, _.jsx)("img", {
-                          className: _().ClipboardIcon,
-                          src: _._,
-                        }),
-                      }),
+              })
+            : (0, _.jsx)(_._, {
+                strDescription: "",
+                strTitle: (0, _._)("#Button_Share"),
+                onCancel: _,
+                onOK: _,
+                bAlertDialog: !0,
+                children: (0, _.jsxs)("div", {
+                  className: _().FlexColumnContainer,
+                  children: [
+                    (0, _.jsx)("div", {
+                      children: (0, _._)(
+                        "#EventDisplay_Share_OnMyStatus_Details",
+                      ),
                     }),
-                ],
-              }),
-              (0, _.jsx)("div", {
-                ref: _,
-                className: _().ClipboardText,
-                children: _,
-              }),
-            ],
-          });
-        };
-        var _ = "steamdb",
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        class _ extends _.Component {
-          state = {
-            bShareOnSteamDialog: !1,
-            bRequireLoginToShare: !1,
-          };
-          ShareOnSteamActivityFeed() {
-            _._.logged_in
-              ? this.setState({
-                  bShareOnSteamDialog: !0,
-                })
-              : _._.IN_CLIENT
-                ? console.log(
-                    "ShareEventOnSocialMediaDialog: In Client: Cannot use login widget. We expect to be already logged in.",
-                  )
-                : this.setState({
-                    bRequireLoginToShare: !0,
-                  });
-          }
-          render() {
-            const {
-              eventLink: _,
-              sharePageUrls: _,
-              appid: _,
-              closeModal: _,
-              emoticonStore: _,
-              partnerEventStore: _,
-            } = this.props;
-            return this.state.bRequireLoginToShare
-              ? (0, _.jsx)(_._, {
-                  strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
-                  strDescription: (0, _._)(
-                    "#EventDisplay_Share_NotLoggedIn_Description",
-                  ),
-                  strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
-                  onCancel: this.props.closeModal,
-                  onOK: () => (0, _._)(),
-                })
-              : this.state.bShareOnSteamDialog
-                ? (0, _.jsx)(_, {
-                    eventLink: _,
-                    appid: _,
-                    emoticonStore: _,
-                    partnerEventStore: _,
-                    closeModal: _,
-                  })
-                : (0, _.jsx)(_._, {
-                    strDescription: "",
-                    strTitle: (0, _._)("#Button_Share"),
-                    onCancel: this.props.closeModal,
-                    onOK: this.props.closeModal,
-                    bAlertDialog: !0,
-                    modalClassName: "EventDisplay_Share_Dialog",
-                    children: (0, _.jsx)(_, {
-                      eventLink: _,
-                      sharePageUrls: _,
-                      fnShareOnSteamActivityFeed: this.ShareOnSteamActivityFeed,
-                    }),
-                  });
-          }
-        }
-        _([_._], _.prototype, "ShareOnSteamActivityFeed", 1);
-        const _ = "l",
-          _ = (_) => {
-            const {
-                eventLink: _,
-                sharePageUrls: _,
-                fnShareOnSteamActivityFeed: _,
-              } = _,
-              _ = (0, _._)(),
-              [_, _] = (0, _.useState)((0, _.sfN)(_._.LANGUAGE)),
-              _ = (0, _.useMemo)(() => {
-                const _ = new URL(_);
-                return _.searchParams.set(_, (0, _.LgB)(_)), _.href;
-              }, [_, _]);
-            return (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().FlexColumnContainer,
-                _().share_controls_ctn,
-              ),
-              children: [
-                !_ &&
-                  (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: _().ShareLanguagePicker,
-                        children: [
+                    (0, _.jsxs)("div", {
+                      className: _().Container,
+                      children: [
+                        _.isPending &&
                           (0, _.jsx)(_._, {
-                            className: _().LanguageLabel,
-                            children: (0, _._)(
-                              "#EventDisplay_Share_LanguageLabel",
-                            ),
+                            position: "center",
                           }),
+                        _.isSuccess &&
                           (0, _.jsx)("div", {
-                            children: (0, _.jsx)(_, {
-                              selectedLang: _,
-                              fnOnLanguageChanged: _,
-                            }),
+                            children: (0, _._)("#EventDisplay_Share_Success"),
                           }),
-                        ],
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(
-                          _().FlexRowContainer,
-                          _().ShareButtonContainer,
-                        ),
-                        style: {
-                          flexWrap: "wrap",
-                        },
-                        children: [
-                          (0, _.jsx)(_._, {
-                            toolTipContent: (0, _._)(
-                              "#EventDisplay_Share_OnSteam",
+                        _.isError &&
+                          (0, _.jsx)("div", {
+                            children:
+                              (0, _._)("#EventDisplay_Share_Failure") +
+                              `
+
+` +
+                              _.error.message,
+                          }),
+                        _.isSuccess &&
+                          (0, _.jsx)("a", {
+                            href: _ + "home",
+                            target: _._.IN_CLIENT ? void 0 : "_blank",
+                            rel: "noreferrer",
+                            children: (0, _._)(
+                              "#EventDisplay_Share_OpenActivityFeed",
                             ),
-                            children: (0, _.jsxs)(_._, {
-                              onClick: _,
-                              className: (0, _._)(
-                                _().Button,
-                                _().ShareBtn,
-                                _().ShareSteamBtn,
-                              ),
+                          }),
+                      ],
+                    }),
+                  ],
+                }),
+              });
+        }
+        const _ =
+          "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDAgMTQwMCAxNDA5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNDAwIDE0MDkiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNjk4LjE5NSwxMC4xMjVjLTM2NC4zNDcsMC02NjIuODM4LDI4MC45MzgtNjkxLjIwNiw2MzcuOTY5TDM3OC43NCw4MDEuNzk3CgljMzEuNTAyLTIxLjUzOSw2OS41NTUtMzQuMTMzLDExMC40OTUtMzQuMTMzYzMuNjY5LDAsNy4zMTUsMC4wOSwxMC45MzksMC4zMTNsMTY1LjMzLTIzOS42MzdjMC0xLjEzNy0wLjAyOS0yLjI1LTAuMDI5LTMuMzk1CgljMC0xNDQuMjI3LDExNy4zMzUtMjYxLjU3NCwyNjEuNTgyLTI2MS41NzRjMTQ0LjIzMywwLDI2MS41ODMsMTE3LjM0OCwyNjEuNTgzLDI2MS41NzRjMCwxNDQuMjQ2LTExNy4zNSwyNjEuNTk4LTI2MS41ODMsMjYxLjU5OAoJYy0xLjk5LDAtMy45NS0wLjA0Ny01LjkyNi0wLjA5TDY4NS4zNDEsOTU0LjY4OGMwLjExOSwzLjA3NCwwLjIzLDYuMTkxLDAuMjMsOS4yOTdjMCwxMDguMjczLTg4LjA3NiwxOTYuMzUyLTE5Ni4zMzYsMTk2LjM1MgoJYy05NS4wNDEsMC0xNzQuNDk0LTY3Ljg0OC0xOTIuNDk2LTE1Ny42NzZMMzAuODcyLDg5Mi43NTRjODIuMzIsMjkxLjEzNywzNDkuODA3LDUwNC41ODIsNjY3LjMyMyw1MDQuNTgyCgljMzgzLjA2MiwwLDY5My41OTgtMzEwLjU1MSw2OTMuNTk4LTY5My42MTNDMTM5MS43OTMsMzIwLjY2NCwxMDgxLjI1NywxMC4xMjUsNjk4LjE5NSwxMC4xMjUiLz4KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQ0MS42NDgsMTA2Mi41NjNsLTg1LjIwMi0zNS4yMDNjMTUuMTA1LDMxLjQ0NSw0MS4yMyw1Ny43NjIsNzUuOTExLDcyLjIxNQoJYzc0Ljk2MSwzMS4yNSwxNjEuNDEtNC4zMzYsMTkyLjY2Ny03OS4zNTljMTUuMTEyLTM2LjMxMywxNS4yMjQtNzYuMzU1LDAuMjIzLTExMi43NDJjLTE0Ljk3OS0zNi4zOTEtNDMuMjUtNjQuNzczLTc5LjU3Mi03OS45MjIKCWMtMzYuMDQ3LTE1LjAwNC03NC42NTYtMTQuNDM4LTEwOC41ODctMS42MzdsODguMDA5LDM2LjM5MWM1NS4zMDQsMjMuMDUxLDgxLjQ0NCw4Ni41NTksNTguNDA4LDE0MS44NTUKCUM1NjAuNDc2LDEwNTkuNDU3LDQ5Ni45NDQsMTA4NS42MTMsNDQxLjY0OCwxMDYyLjU2MyIvPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEwMS4zNTMsNTI0Ljk2MWMwLTk2LjExMy03OC4xODQtMTc0LjMxMy0xNzQuMjk1LTE3NC4zMTNjLTk2LjA5NiwwLTE3NC4yOTQsNzguMTk5LTE3NC4yOTQsMTc0LjMxMwoJYzAsOTYuMTAyLDc4LjE5OCwxNzQuMjc3LDE3NC4yOTQsMTc0LjI3N0MxMDIzLjE2OSw2OTkuMjM4LDExMDEuMzUzLDYyMS4wNjMsMTEwMS4zNTMsNTI0Ljk2MSBNNzk2LjQxNSw1MjQuNjU2CgljMC03Mi4zMjQsNTguNjM4LTEzMC45MTgsMTMwLjk0LTEzMC45MThjNzIuMzE2LDAsMTMwLjkyNSw1OC41OTQsMTMwLjkyNSwxMzAuOTE4YzAsNzIuMzE2LTU4LjYwOCwxMzAuOTE4LTEzMC45MjUsMTMwLjkxOAoJQzg1NS4wNTMsNjU1LjU3NCw3OTYuNDE1LDU5Ni45NzMsNzk2LjQxNSw1MjQuNjU2Ii8+Cjwvc3ZnPgo=";
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = "l";
+        function _(_) {
+          const { emoticonStore: _, ..._ } = _;
+          return (0, _.jsx)(_, {
+            store: _,
+            children: (0, _.jsx)(_, {
+              ..._,
+            }),
+          });
+        }
+        function _(_) {
+          const { eventModel: _, strEventLink: _, closeModal: _ } = _,
+            _ = (0, _._)(_),
+            _ = _(),
+            [_, _] = _.useState(() => (0, _.sfN)(_._.LANGUAGE)),
+            [_, _] = _.useState(!1),
+            { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(
+              (0, _._)("#EventDisplay_Share_NotLoggedIn_Description"),
+            ),
+            _ = _.useMemo(() => {
+              if (!_) return "";
+              const _ = new URL(_);
+              return _.searchParams.set(_, (0, _.LgB)(_)), _.href;
+            }, [_, _]),
+            _ = _._.EREALM === _._.k_ESteamRealmChina,
+            _ = () => {
+              _._.logged_in ? _(!0) : _();
+            };
+          return _
+            ? (0, _.jsx)(_, {
+                eventLink: _,
+                appid: _.appid,
+                emoticonStore: _,
+                closeModal: _,
+              })
+            : (0, _.jsxs)(_._, {
+                strDescription: "",
+                strTitle: (0, _._)("#Button_Share"),
+                onCancel: _,
+                onOK: _,
+                bAlertDialog: !0,
+                modalClassName: "EventDisplay_Share_Dialog",
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(
+                      _().FlexColumnContainer,
+                      _().share_controls_ctn,
+                    ),
+                    children: [
+                      !_ &&
+                        (0, _.jsxs)(_.Fragment, {
+                          children: [
+                            (0, _.jsxs)("div", {
+                              className: _().ShareLanguagePicker,
                               children: [
-                                (0, _.jsx)("img", {
-                                  className: _().SteamIcon,
-                                  src: _,
-                                }),
-                                (0, _.jsx)("span", {
-                                  style: {
-                                    whiteSpace: "nowrap",
-                                  },
+                                (0, _.jsx)("div", {
+                                  className: _().LanguageLabel,
                                   children: (0, _._)(
-                                    "#EventDisplay_Share_OnMyStatus",
+                                    "#EventDisplay_Share_LanguageLabel",
                                   ),
+                                }),
+                                (0, _.jsx)("div", {
+                                  children: (0, _.jsx)(_, {
+                                    selectedLang: _,
+                                    fnOnLanguageChanged: _,
+                                  }),
                                 }),
                               ],
                             }),
-                          }),
-                          (0, _.jsx)(_._, {
-                            toolTipContent: (0, _._)(
-                              "#EventDisplay_Share_OnFaceBook",
-                            ),
-                            children: (0, _.jsx)(_._, {
-                              href: _.strFacebookUrl,
-                              className: _().ShareBtn,
-                              children: (0, _.jsx)("img", {
-                                className: (0, _._)(_().Button),
-                                src: _._,
-                              }),
+                            (0, _.jsxs)("div", {
+                              className: (0, _._)(
+                                _().FlexRowContainer,
+                                _().ShareButtonContainer,
+                              ),
+                              style: {
+                                flexWrap: "wrap",
+                              },
+                              children: [
+                                (0, _.jsx)(_._, {
+                                  toolTipContent: (0, _._)(
+                                    "#EventDisplay_Share_OnSteam",
+                                  ),
+                                  children: (0, _.jsxs)(_._, {
+                                    onClick: _,
+                                    className: (0, _._)(
+                                      _().Button,
+                                      _().ShareBtn,
+                                      _().ShareSteamBtn,
+                                    ),
+                                    children: [
+                                      (0, _.jsx)("img", {
+                                        className: _().SteamIcon,
+                                        src: _,
+                                        alt: (0, _._)(
+                                          "#EventDisplay_Share_OnSteam",
+                                        ),
+                                      }),
+                                      (0, _.jsx)("span", {
+                                        style: {
+                                          whiteSpace: "nowrap",
+                                        },
+                                        children: (0, _._)(
+                                          "#EventDisplay_Share_OnMyStatus",
+                                        ),
+                                      }),
+                                    ],
+                                  }),
+                                }),
+                                (0, _.jsx)(_._, {
+                                  toolTipContent: (0, _._)(
+                                    "#EventDisplay_Share_OnFaceBook",
+                                  ),
+                                  children: (0, _.jsx)(_._, {
+                                    href: _.strFacebookUrl,
+                                    className: _().ShareBtn,
+                                    children: (0, _.jsx)("img", {
+                                      className: (0, _._)(_().Button),
+                                      src: _._,
+                                      alt: (0, _._)(
+                                        "#EventDisplay_Share_OnFaceBook",
+                                      ),
+                                    }),
+                                  }),
+                                }),
+                                (0, _.jsx)(_._, {
+                                  toolTipContent: (0, _._)(
+                                    "#EventDisplay_Share_OnTwitter",
+                                  ),
+                                  children: (0, _.jsx)(_._, {
+                                    href: _.strTwitterUrl,
+                                    className: _().ShareBtn,
+                                    children: (0, _.jsx)("img", {
+                                      className: (0, _._)(_().Button),
+                                      src: _._,
+                                      alt: (0, _._)(
+                                        "#EventDisplay_Share_OnTwitter",
+                                      ),
+                                    }),
+                                  }),
+                                }),
+                                (0, _.jsx)(_._, {
+                                  toolTipContent: (0, _._)(
+                                    "#EventDisplay_Share_OnReddit",
+                                  ),
+                                  children: (0, _.jsx)(_._, {
+                                    href: _.strRedditUrl,
+                                    className: _().ShareBtn,
+                                    children: (0, _.jsx)("img", {
+                                      className: (0, _._)(_().Button),
+                                      src: _._,
+                                      alt: (0, _._)(
+                                        "#EventDisplay_Share_OnReddit",
+                                      ),
+                                    }),
+                                  }),
+                                }),
+                              ],
                             }),
-                          }),
-                          (0, _.jsx)(_._, {
-                            toolTipContent: (0, _._)(
-                              "#EventDisplay_Share_OnTwitter",
-                            ),
-                            children: (0, _.jsx)(_._, {
-                              href: _.strTwitterUrl,
-                              className: _().ShareBtn,
-                              children: (0, _.jsx)("img", {
-                                className: (0, _._)(_().Button),
-                                src: _._,
-                              }),
+                            (0, _.jsx)("div", {
+                              className: _().Divider,
                             }),
-                          }),
-                          (0, _.jsx)(_._, {
-                            toolTipContent: (0, _._)(
-                              "#EventDisplay_Share_OnReddit",
-                            ),
-                            children: (0, _.jsx)(_._, {
-                              href: _.strRedditUrl,
-                              className: _().ShareBtn,
-                              children: (0, _.jsx)("img", {
-                                className: (0, _._)(_().Button),
-                                src: _._,
-                              }),
-                            }),
-                          }),
-                        ],
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().Divider,
+                          ],
+                        }),
+                      (0, _.jsx)(_, {
+                        eventLink: _,
                       }),
                     ],
                   }),
-                (0, _.jsx)(_, {
-                  eventLink: _,
-                }),
-              ],
-            });
-          };
+                  _,
+                ],
+              });
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -4541,7 +4491,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {

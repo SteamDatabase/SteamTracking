@@ -112,5 +112,7 @@
     "ReadableDuration_Hours": "%1$s ore",
     "ReadableDuration_Minutes": "%1$s minute",
     "ReadableDuration_OneMinute": "un minut",
-    "ReadableDuration_LessThanOneMinute": "mai puțin de un minut"
+    "ReadableDuration_LessThanOneMinute": "mai puțin de un minut",
+    "Playtime_Hours": "%1$s ore",
+    "Playtime_Minutes": "%1$s minute"
 }

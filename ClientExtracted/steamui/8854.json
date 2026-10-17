@@ -13,7 +13,7 @@
     "DeckVerified_FilterLabel_Unknown": "Sconosciuto",
     "DeckVerified_FilterDescription_Verified": "Mostra solo i giochi che funzionano senza problemi con i controlli integrati e il display del Deck.",
     "DeckVerified_FilterDescription_Verified_NotOnDeck": "Mostra solo i giochi che funzionano senza problemi con i controlli integrati e il display del Deck.",
-    "DeckVerified_FilterDescription_Verified_Playable": "Mostra tutti i titoli Verificati, più i giochi che sono giocabili ma che potrebbero richiedere del lavoro in più per le interazioni o la configurazione.",
+    "DeckVerified_FilterDescription_Verified_Playable": "Mostra tutti i titoli Verificati, più i giochi che sono giocabili ma che potrebbero richiedere un impegno maggiore per le interazioni o la configurazione.",
     "DeckVerified_FilterDescription_Verified_Playable_Unknown": "Mostra tutti i titoli Verificati e Giocabili, più i giochi che non sono ancora stati testati per la compatibilità con il Deck.",
     "DeckVerified_FilterDescription_AllGames": "Mostra tutti giochi nella tua Libreria, compresi quelli che non funzionano bene su Steam Deck.",
     "SteamOS_CompatibilitySection_Title": "Compatibilità con SteamOS",
@@ -28,11 +28,11 @@
     "SteamOS_FilterDescription_Compatible_Unknown": "Includi i giochi che sono stati testati per supportare SteamOS, oltre a giochi che non sono ancora stati testati per la compatibilità con SteamOS.",
     "SteamOS_FilterDescription_AllGames": "Mostra tutti giochi nella tua Libreria, compresi quelli che non funzionano bene su SteamOS.",
     "MachineVerified_FilterDescription_Verified": "Mostra solo i giochi che funzionano senza problemi su Steam Machine.",
-    "MachineVerified_FilterDescription_Verified_Playable": "Mostra tutti i titoli Verificati, più i giochi che sono giocabili ma che potrebbero richiedere del lavoro in più per le interazioni o la configurazione.",
+    "MachineVerified_FilterDescription_Verified_Playable": "Mostra tutti i titoli Verificati, più i giochi che sono giocabili ma che potrebbero richiedere un impegno maggiore per le interazioni o la configurazione.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Mostra tutti i titoli Verificati e Giocabili, più i giochi che non sono ancora stati testati per la compatibilità con Steam Machine.",
     "MachineVerified_FilterDescription_AllGames": "Mostra tutti giochi nella tua Libreria, compresi quelli che non funzionano bene su Steam Machine.",
-    "FrameVerified_FilterDescription_Verified": "Mostra solo i giochi che funzionano senza problemi su Steam Frame.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Mostra tutti i titoli Verificati su Steam Frame, più i giochi che sono giocabili ma che potrebbero richiedere del lavoro in più per le interazioni o la configurazione.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Mostra tutti i titoli Verificati e Giocabili, più i giochi che non sono ancora stati testati per la compatibilità con Steam Frame.",
-    "FrameVerified_FilterDescription_AllGames": "Mostra tutti giochi nella tua Libreria, compresi quelli che non funzionano bene su Steam Frame."
+    "FrameVerified_FilterDescription_Verified": "Mostra solo i giochi che funzionano senza problemi con i controlli integrati e lo schermo di Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Mostra tutti i titoli Verificati, più i giochi che sono giocabili ma che potrebbero richiedere un impegno maggiore per le interazioni o la configurazione.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Mostra tutti i titoli Verificati e Giocabili, più i giochi che non sono ancora stati testati per la compatibilità con Steam Frame (standalone).",
+    "FrameVerified_FilterDescription_AllGames": "Mostra tutti i giochi nella tua Libreria, compresi quelli che non funzionano bene su Steam Frame (standalone)."
 }

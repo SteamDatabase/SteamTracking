@@ -396,55 +396,55 @@ message CStoreDiscoveryQueueSettings {
 }
 
 service Store {
-	// ePrivilege=4
+	// ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc DeleteReservationPositionMessage (.CStore_DeleteReservationPositionMessage_Request) returns (.CStore_DeleteReservationPositionMessage_Response);
 	// bConstMethod=true, ePrivilege=4
 	rpc GetAllReservationPositionMessages (.CStore_GetAllReservationPositionMessages_Request) returns (.CStore_GetAllReservationPositionMessages_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetDiscoveryQueue (.CStore_GetDiscoveryQueue_Request) returns (.CStore_GetDiscoveryQueue_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetDiscoveryQueueSettings (.CStore_GetDiscoveryQueueSettings_Request) returns (.CStore_GetDiscoveryQueueSettings_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetDiscoveryQueueSkippedApps (.CStore_GetDiscoveryQueueSkippedApps_Request) returns (.CStore_GetDiscoveryQueueSkippedApps_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetGamesFollowed (.CStore_GetGamesFollowed_Request) returns (.CStore_GetGamesFollowed_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetGamesFollowedCount (.CStore_GetGamesFollowedCount_Request) returns (.CStore_GetGamesFollowedCount_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1
 	rpc GetLocalizedNameForTags (.CStore_GetLocalizedNameForTags_Request) returns (.CStore_GetLocalizedNameForTags_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1
 	rpc GetMostPopularTags (.CStore_GetMostPopularTags_Request) returns (.CStore_GetMostPopularTags_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetRecommendedTagsForUser (.CStore_GetRecommendedTagsForUser_Request) returns (.CStore_GetRecommendedTagsForUser_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetStorePreferences (.CStore_GetStorePreferences_Request) returns (.CStore_GetStorePreferences_Response);
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetTagList (.CStore_GetTagList_Request) returns (.CStore_GetTagList_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetTrendingAppsAmongFriends (.CStore_GetTrendingAppsAmongFriends_Request) returns (.CStore_GetTrendingAppsAmongFriends_Response);
 	// ePrivilege=1
 	rpc GetUserGameInterestState (.CStore_GetUserGameInterestState_Request) returns (.CStore_GetUserGameInterestState_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetWishlistDemoEmailStatus (.CStore_GetWishlistDemoEmailStatus_Request) returns (.CStore_GetWishlistDemoEmailStatus_Response);
 	// ePrivilege=1
 	rpc MigratePartnerLinkTracking (.CStore_MigratePartnerLinkTracking_Notification) returns (.NoResponse);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc QueueWishlistDemoEmailToFire (.CStore_QueueWishlistDemoEmailToFire_Request) returns (.CStore_QueueWishlistDemoEmailToFire_Response);
 	// ePrivilege=1
 	rpc RegisterCDKey (.CStore_RegisterCDKey_Request) returns (.CStore_RegisterCDKey_Response);
-	// ePrivilege=4
+	// ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc ReloadAllReservationPositionMessages (.CStore_ReloadAllReservationPositionMessages_Notification) returns (.NoResponse);
 	// ePrivilege=3
 	rpc ReportApp (.CStore_ReportApp_Request) returns (.CStore_ReportApp_Response);
 	// ePrivilege=1
 	rpc SetCompatibilityFeedback (.CSteamDeckCompatibility_SetFeedback_Request) returns (.CSteamDeckCompatibility_SetFeedback_Response);
-	// ePrivilege=4
+	// ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc SetReservationPositionMessage (.CStore_SetReservationPositionMessage_Request) returns (.CStore_SetReservationPositionMessage_Response);
 	// ePrivilege=1
 	rpc ShouldPromptForCompatibilityFeedback (.CSteamDeckCompatibility_ShouldPrompt_Request) returns (.CSteamDeckCompatibility_ShouldPrompt_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc SkipDiscoveryQueueItem (.CStore_SkipDiscoveryQueueItem_Request) returns (.CStore_SkipDiscoveryQueueItem_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc UpdatePackageReservations (.CStore_UpdatePackageReservations_Request) returns (.CStore_UpdatePackageReservations_Response);
 }
 

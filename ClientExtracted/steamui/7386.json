@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Tampilkan semua judul yang Terverifikasi, beserta game yang dapat dimainkan tapi mungkin membutuhkan upaya ekstra untuk dapat berinteraksi atau dikonfigurasi.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Tampilkan semua judul yang Terverifikasi Steam Deck dan Dapat Dimainkan, beserta game yang belum diuji kompatibilitasnya dengan Steam Machine.",
     "MachineVerified_FilterDescription_AllGames": "Tampilkan semua game yang ada di perpustakaanmu, termasuk yang belum dapat berjalan dengan baik di Steam Machine.",
-    "FrameVerified_FilterDescription_Verified": "Hanya tampilkan game-game yang langsung dapat berfungsi dengan Steam Frame.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Tampilkan semua judul yang Terverifikasi Steam Frame, beserta game yang dapat dimainkan tapi mungkin membutuhkan upaya ekstra untuk dapat berinteraksi atau dikonfigurasi.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Tampilkan semua judul yang Terverifikasi dan Dapat Dimainkan, beserta game yang belum diuji kompatibilitasnya dengan Steam Frame.",
-    "FrameVerified_FilterDescription_AllGames": "Tampilkan semua game yang ada di perpustakaanmu, termasuk yang belum dapat berjalan dengan baik di Steam Frame."
+    "FrameVerified_FilterDescription_Verified": "Hanya tampilkan game-game yang langsung dapat berfungsi dengan pengaturan kontrol dan tampilan bawaan dari Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Tampilkan semua judul yang Terverifikasi, beserta game yang dapat dimainkan tapi mungkin membutuhkan upaya ekstra untuk dapat berinteraksi atau dikonfigurasi.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Tampilkan semua judul yang Terverifikasi dan Dapat Dimainkan, beserta game yang belum diuji kompatibilitasnya dengan Steam Frame (Mandiri).",
+    "FrameVerified_FilterDescription_AllGames": "Tampilkan semua game yang ada di perpustakaanmu, termasuk yang belum dapat berjalan dengan baik di Steam Frame dalam mode mandiri."
 }

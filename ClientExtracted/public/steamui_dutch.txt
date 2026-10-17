@@ -21,7 +21,6 @@
 "SteamUI_ConvertExistingInfo" "Bestaande installatie van het spel converteren. Dit kan een paar minuten duren."
 "SteamUI_ConversionCompleteInfo" "Voorladen van Steam voltooid."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "%s1 bestanden voorladen van schijf."
 "SteamUI_ConvertExistingStatus2" "%s1 bestanden voorladen van schijf.."
 "SteamUI_ConvertExistingStatus3" "%s1 bestanden voorladen van schijf..."
@@ -520,7 +519,6 @@ Dit duurt niet langer dan een minuut."
 "Steam_SetJumplistOptions"		"Voorkeuren voor taakbalkmenu"
 "Steam_ShowOnlineStatusOptions"	"Selecteer statusopties die je wilt weergeven"
 "Steam_ShowDestinationOptions"	"Selecteer bestemmingen die je wilt weergeven"
-"Steam_MustRestartToTakeEffect"			"Deze instelling wordt pas van kracht wanneer je\nSteam opnieuw opstart."
 "Steam_LanguageSelect"				"Selecteer de taal waarin je Steam wilt gebruiken (herstart vereist)"
 "Steam_SteamChinaLanguageSelect"	"Je kunt Steam enkel in het vereenvoudigd Chinees gebruiken"
 "Steam_SelectSkinToUse"				"Kies het uiterlijk waarin je Steam wilt weergeven (herstart vereist):"
@@ -561,9 +559,7 @@ Dit duurt niet langer dan een minuut."
 "Steam_PasswordStrength"				"Wachtwoord-sterkte:"
 
 "Steam_MustRestart_Title"		"Steam - Opnieuw starten vereist"
-"Steam_MustRestart_Info"		"Je moet Steam nu opnieuw starten om de laatste update te ontvangen.\nJe kunt Steam niet gebruiken voordat je het programma opnieuw hebt gestart."
 "Steam_MustRestart_Button"		"Herstarten"
-"Steam_MustRestart_Language"		"Je moet Steam nu opnieuw starten om de taal te wijzigen."
 
 "Steam_ChangeBeta_Title"		"Steam - Bètadeelname"
 "Steam_ChangeBeta_Text"			"Wil je deelnemen aan het Steam-bètaprogramma?\nSteam wordt herstart om de nieuwe bètaclient te downloaden."
@@ -704,8 +700,6 @@ Dit duurt niet langer dan een minuut."
 "Steam_RecoverAuthenticator_BadPassword"			"Het wachtwoord is onjuist. Controleer het en probeer het opnieuw."
 "Steam_RecoverAuthenticator_BadCode"				"De code of het wachtwoord was niet juist. Controleer ze en probeer het opnieuw."
 "Steam_RecoverAuthenticator_BadCodes"				"De codes of het wachtwoord zijn onjuist. Controleer ze en probeer het opnieuw."
-"Steam_RecoverAuthenticator_SupportURL"				""
-
 "Steam_RecoverAuthenticator_Done"					"De Steam Guard-authenticator is van je account verwijderd.\n\nJe zou nu in je account moeten kunnen inloggen."
 
 
@@ -1519,7 +1513,7 @@ Je moet uitloggen op OSX om de veranderingen door te voeren."
 "Steam_AllowDownloadsDuringGameplayDetails"	"Als dit is aangevinkt, kan Steam beginnen of doorgaan met het downloaden van updates terwijl je een spel of een andere toepassing\nvan Steam draait. Je kunt deze optie voor elk spel afzonderlijk uitschakelen in het venster Eigenschappen."
 "Steam_ThrottleDownloadsWhileStreaming"	"Downloads beperken tijdens het streamen"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Als dit is aangevinkt zal Steam de downloadsnelheid beperken om een hoge kwaliteit van Remote Play te behouden."
-"Steam_DownloadRatesInBits"			"Downloadsnelheden in bits per seconde weergeven"
+"Steam_DownloadRatesInBits"			"Downloadsnelheden weergeven in bits per seconde"
 
 "Steam_PeerContentTitle"			"Overdracht van spelbestanden via lokale netwerk"
 "Steam_PeerContentInfo"			"Deze functie laat overdracht van spelbestanden toe vanuit andere pc's op je lokale netwerk, zodat je internetverkeer afneemt als je een spel aan het downloaden bent. Je kunt ook andere gebruikers toestaan om spellen over te dragen vanuit deze pc."
@@ -1574,7 +1568,6 @@ Je moet uitloggen op OSX om de veranderingen door te voeren."
 "SteamUI_HardwarePromoWizard_Title" "Aanbieding registreren"
 "Steam_HardwarePromo_Intro" "Gefeliciteerd! Jouw computer komt in aanmerking voor deze aanbieding. Je kunt de aanbieding gebruiken door deze bij één Steam-account (dus niet meerdere) te registreren. Je kunt de spellen uit de aanbieding op elke computer spelen zolang je maar bent aangemeld op dit Steam-account."
 "Steam_Legal_HardwarePromo_Unreleased" "Enkele producten in dit pakket zijn nog niet uitgebracht en daarom nog niet beschikbaar. Je krijgt via Steam automatisch toegang tot deze producten zodra ze worden uitgebracht. De uitgavedatum staat niet vast en kopers kunnen dan ook niet zeker zijn van de geschatte uitgavedatum. Als je op 'Volgende' klikt, worden de aanvullende voorwaarden en bepalingen weergegeven."
-"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Aanbieding bij registratie..."
 "SteamUI_OEMTicketWizard_Title" "OEM-licentie registreren"
 
@@ -3190,9 +3183,6 @@ Om aan een van deze bètaprogramma's deel te nemen, kies je deze in de onderstaa
 
 "Steam_ReadMoreAboutBetas"	"Lees meer over hoe bètaprogramma's op Steam werken"
 "Steam_SelectNoBeta"	"GEEN - uitschrijven van alle bètaprogramma's"
-"Steam_BetaIsOver" "Hartelijk dank voor je deelname aan het bètaprogramma %betaname% op Steam.  
-
-De bètaperiode is afgelopen. Start Steam opnieuw op om terug te gaan naar de huidige release."
 
 "Steam_ChooseGameLanguage"	"Selecteer de taal die je wilt gebruiken:"
 "Steam_GameProperties_LanguageTab" "Taal"
@@ -4344,7 +4334,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 
 "Steam_Parental_UnlockTitle"			"Gezinsweergave"
 "Steam_Parental_UnlockInstructions"		"Voer je pincode hieronder in om Gezinsweergave te verlaten."
-"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Ik ben mijn pincode vergeten"
 "Steam_Parental_NoRecoveryEmail"		"Geen herstel-e-mailadres ingesteld"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Geen herstel-e-mailadres ingesteld voor je account. Sluit gezinsweergave en start de configuratie voor gezinsweergave opnieuw op om je herstel-e-mailadres in te stellen."
@@ -4459,7 +4448,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Music_Track_Menu_ShowAlbumInUI" "Album weergeven"
 "Music_Menu_Play" "Afspelen"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% van de %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% nummers - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% nummer - %queueduration%"
@@ -4533,7 +4521,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Music_Playlist_RenameDialog_Title" "Afspeellijst hernoemen"
 "Music_Playlist_RenameDialog_Prompt" "Afspeellijst '%playlistname%' hernoemen"
 "Music_Playlist_AddDialog_Title" "Nieuwe afspeellijst maken"
-"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Afspeellijst verwijderen"
 "Music_Playlist_DeleteDialog_Prompt" "Weet je zeker dat je de afspeellijst '%playlistname%' wilt verwijderen?"
 "Music_Playlist_Details_Play" "Lijst afspelen"
@@ -4552,8 +4539,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Music_Queue_Menu_ReplacePlaylist" "Afspeellijst voor wachtrij vervangen"
 "Music_Queue_Menu_AppendPlaylist" "Toevoegen aan afspeellijst"
 "Music_Queue_AddPlaylist_Dialog_Title" "Afspeellijst toevoegen"
-"Music_Queue_AddPlaylist_Dialog_Prompt" ""
-
 "Steam_Settings_Controller"					"Controller"
 "Steam_SettingsControllerTitle"				"Controllerconfiguratie"
 "Steam_SettingsControllerDescription"		"In de algemene controllerinstellingen kunnen het aan- en afmelden voor configuratiehulp, personalisatie en andere opties worden gewijzigd."

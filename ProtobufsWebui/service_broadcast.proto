@@ -541,7 +541,7 @@ service Broadcast {
 	rpc HeartbeatBroadcast (.CBroadcast_HeartbeatBroadcast_Notification) returns (.NoResponse);
 	// ePrivilege=1
 	rpc InviteToBroadcast (.CBroadcast_InviteToBroadcast_Request) returns (.CBroadcast_InviteToBroadcast_Response);
-	// ePrivilege=3
+	// ePrivilege=3, rgBrowserAPISites=ArrayExpression
 	rpc MuteBroadcastChatUser (.CBroadcast_MuteBroadcastChatUser_Request) returns (.CBroadcast_MuteBroadcastChatUser_Response);
 	// ePrivilege=1
 	rpc NotifyBroadcastSessionHeartbeat (.CBroadcast_NotifyBroadcastSessionHeartbeat_Notification) returns (.NoResponse);
@@ -549,9 +549,9 @@ service Broadcast {
 	rpc NotifyBroadcastUploadStop (.CBroadcast_NotifyBroadcastUploadStop_Notification) returns (.NoResponse);
 	// ePrivilege=1
 	rpc NotifyWebRTCHaveTURNServer (.CBroadcast_WebRTCHaveTURNServer_Notification) returns (.NoResponse);
-	// ePrivilege=3
+	// ePrivilege=3, rgBrowserAPISites=ArrayExpression
 	rpc PostChatMessage (.CBroadcast_PostChatMessage_Request) returns (.CBroadcast_PostChatMessage_Response);
-	// ePrivilege=3
+	// ePrivilege=3, rgBrowserAPISites=ArrayExpression
 	rpc RemoveUserChatText (.CBroadcast_RemoveUserChatText_Request) returns (.CBroadcast_RemoveUserChatText_Response);
 	// ePrivilege=1
 	rpc SendBroadcastStateToServer (.CBroadcast_SendBroadcastStateToServer_Request) returns (.CBroadcast_SendBroadcastStateToServer_Response);
@@ -565,7 +565,7 @@ service Broadcast {
 	rpc StartBuildClip (.CBroadcast_StartBuildClip_Request) returns (.CBroadcast_StartBuildClip_Response);
 	// ePrivilege=2
 	rpc StopWatchingBroadcast (.CBroadcast_StopWatchingBroadcast_Notification) returns (.NoResponse);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc UpdateChatMessageFlair (.CBroadcast_UpdateChatMessageFlair_Request) returns (.CBroadcast_UpdateChatMessageFlair_Response);
 	// ePrivilege=2
 	rpc WatchBroadcast (.CBroadcast_WatchBroadcast_Request) returns (.CBroadcast_WatchBroadcast_Response);

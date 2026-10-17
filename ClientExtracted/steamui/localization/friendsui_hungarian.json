@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Meghívás hangcsatornába",
     "VoiceChat_SendInviteMessage": "Meghívóüzenet küldése",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Némítva",
     "VoiceChat_Unavailable_NotFriend": "Hang nem elérhető: %1$s nincs a barátlistádon.",
     "VoiceChat_Unavailable_NotOnline": "Hang nem elérhető: %1$s jelenleg nem online.",
     "VoiceChat_Unavailable_NotInBeta": "Hang nem elérhető: %1$s nem az új csevegés bétát használja.",
@@ -640,6 +641,7 @@
     "Button_Share": "Megosztás",
     "Button_Ignore": "Mellőzés",
     "DirectMessageFromNonFriend": "Üzenet egy olyan felhasználótól, aki nem a barátod",
+    "DirectMessageFromNonFriend_SharedGroup": "Mindketten tagjai vagytok a(z) „%1$s” csoportos csevegésnek.",
     "NonFriendAction_Block": "Kommunikáció blokkolása",
     "NonFriendAction_Allow": "Kommunikáció engedélyezése",
     "SuspiciousMessage_Header": "Gyanús csevegés",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Javítottuk, hogy a barát- és csevegésablakok Linuxon és macOS-en nem jelentek meg a játékbeli átfedésen.",
     "BBCode_Loading": "Betöltés",
     "BBCode_Failed": "Nem sikerült betölteni",
-    "broadcastDetails_Playing": "Ezzel játszik:",
-    "VoiceChat_Muted_Deck": "Némítva"
+    "broadcastDetails_Playing": "Ezzel játszik:"
 }

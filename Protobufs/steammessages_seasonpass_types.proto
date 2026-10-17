@@ -1,0 +1,27 @@
+import "steammessages_base.proto";
+
+option optimize_for = SPEED;
+
+message CSeasonPassDateAndDisplay {
+	optional uint32 rtime = 1;
+	optional string coming_soon_display_type = 2;
+}
+
+message CSeasonPassMilestone {
+	optional int32 milestone_id = 1;
+	repeated .CLocalizationToken title = 2;
+	optional uint32 appid = 3;
+	optional fixed64 event_gid = 4;
+	repeated .CSeasonPassDateAndDisplay dates = 5;
+	optional bool shipped = 6;
+	optional uint32 rtime_complete = 7;
+	repeated .CLocalizationToken milestone_desc = 9;
+	repeated .CLocalizationToken image = 10;
+	optional bool backfilled_release = 11;
+	optional uint32 coming_soon_appid = 12;
+}
+
+message CSeasonPass {
+	optional uint32 appid = 1;
+	repeated .CSeasonPassMilestone milestones = 2;
+}

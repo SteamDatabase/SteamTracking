@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "In den Sprachkanal einladen",
     "VoiceChat_SendInviteMessage": "Einladungsnachricht senden",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Stummgeschaltet",
     "VoiceChat_Unavailable_NotFriend": "Sprachchat nicht verfügbar: %1$s ist nicht auf Ihrer Freundesliste.",
     "VoiceChat_Unavailable_NotOnline": "Sprachchat nicht verfügbar: %1$s ist zurzeit nicht online.",
     "VoiceChat_Unavailable_NotInBeta": "Sprachchat nicht verfügbar: %1$s nimmt nicht an der neuen Chatbeta teil.",
@@ -640,6 +641,7 @@
     "Button_Share": "Teilen",
     "Button_Ignore": "Ignorieren",
     "DirectMessageFromNonFriend": "Nachricht von einem Nutzer, der nicht Ihr Freund ist",
+    "DirectMessageFromNonFriend_SharedGroup": "Sie sind beide Mitglieder des Gruppenchats „%1$s“.",
     "NonFriendAction_Block": "Kommunikation blocken",
     "NonFriendAction_Allow": "Kommunikation erlauben",
     "SuspiciousMessage_Header": "Verdächtiger Chat",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Fehler behoben, durch den Freunde- und Chatfenster im In-Game-Overlay unter Linux und macOS nicht angezeigt wurden.",
     "BBCode_Loading": "Ladevorgang läuft",
     "BBCode_Failed": "Konnte nicht geladen werden",
-    "broadcastDetails_Playing": "Spielt",
-    "VoiceChat_Muted_Deck": "Stummgeschaltet"
+    "broadcastDetails_Playing": "Spielt"
 }

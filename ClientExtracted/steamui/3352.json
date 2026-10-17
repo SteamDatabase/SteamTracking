@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "我们在这一天没有可向您推荐的新品 <1>快去看看您日历上的其他日期吧！</1>",
     "NewBadge": "新",
     "Time_Today": "今天",
+    "DiscountsAndEvents_Title": "折扣与活动",
+    "DiscountsAndEvents_SeeMore": "查看更多",
+    "DiscountsAndEvents_Banner_WeekendDeal": "周末特惠",
+    "DiscountsAndEvents_Banner_MidweekDeal": "周间特惠",
+    "DiscountsAndEvents_Banner_DailyDeal": "今日特惠",
+    "DiscountsAndEvents_Banner_LargestDiscount": "最大折扣",
+    "DiscountsAndEvents_LoadError": "暂时无法载入折扣与活动。请稍后重试。",
     "store_ui_dummy": "dont translate"
 }

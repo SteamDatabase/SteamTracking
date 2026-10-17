@@ -29,12 +29,26 @@ enum EAppRatingSource {
 	k_EAppRatingSource_Generated = 2;
 }
 
+enum ERatingDescriptorImage {
+	k_ERatingDescriptorImage_Invalid = 0;
+	k_ERatingDescriptorImage_CERO_Love = 1;
+	k_ERatingDescriptorImage_CERO_SexualContent = 2;
+	k_ERatingDescriptorImage_CERO_Violence = 3;
+	k_ERatingDescriptorImage_CERO_Horror = 4;
+	k_ERatingDescriptorImage_CERO_DrinkingSmoking = 5;
+	k_ERatingDescriptorImage_CERO_Gambling = 6;
+	k_ERatingDescriptorImage_CERO_Crime = 7;
+	k_ERatingDescriptorImage_CERO_Drugs = 8;
+	k_ERatingDescriptorImage_CERO_Language = 9;
+}
+
 message AppRatingAuxData {
 	repeated string descriptors = 1;
 	repeated string interactive_elements = 2;
 	optional string official_id = 3;
 	optional bool esrb_online_music_not_rated = 4;
 	optional bool esrb_online_interactions_not_rated = 5;
+	repeated .ERatingDescriptorImage descriptor_images = 6;
 }
 
 message AppRating {

@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Pozvat do hlasového kanálu",
     "VoiceChat_SendInviteMessage": "Odeslat pozvánku",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Umlčeno",
     "VoiceChat_Unavailable_NotFriend": "Hlasová konverzace není dostupná: %1$s není Vaším přítelem.",
     "VoiceChat_Unavailable_NotOnline": "Hlasová konverzace není dostupná: %1$s není online.",
     "VoiceChat_Unavailable_NotInBeta": "Hlasová konverzace není dostupná: %1$s se neúčastní beta verze nových konverzací.",
@@ -640,6 +641,7 @@
     "Button_Share": "Sdílet",
     "Button_Ignore": "Ignorovat",
     "DirectMessageFromNonFriend": "Zpráva od uživatele, který není Váš přítel",
+    "DirectMessageFromNonFriend_SharedGroup": "Oba jste členy konverzační místnosti „%1$s“.",
     "NonFriendAction_Block": "Blokovat komunikaci",
     "NonFriendAction_Allow": "Povolit komunikaci",
     "SuspiciousMessage_Header": "Podezřelá konverzace",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Byl opraven seznam přátel a okna konverzací, která se v systémech Linux a macOS nezobrazovala v překrytí služby Steam.",
     "BBCode_Loading": "Načítání",
     "BBCode_Failed": "Načítání se nezdařilo",
-    "broadcastDetails_Playing": "Hraje",
-    "VoiceChat_Muted_Deck": "Umlčeno"
+    "broadcastDetails_Playing": "Hraje"
 }

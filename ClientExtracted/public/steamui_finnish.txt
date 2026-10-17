@@ -19,7 +19,6 @@
 "SteamUI_ConvertExistingInfo" "Muunnetaan pelin tämänhetkistä asennusta. Tämä voi kestää useita minuutteja."
 "SteamUI_ConversionCompleteInfo" "Steamin esilataus on valmis."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Esiladataan pelin %s1 tiedostoja levyltä."
 "SteamUI_ConvertExistingStatus2" "Esiladataan pelin %s1 tiedostoja levyltä.."
 "SteamUI_ConvertExistingStatus3" "Esiladataan pelin %s1 tiedostoja levyltä..."
@@ -405,8 +404,8 @@ Tämä kestää alle minuutin."
 "Steam_Working_GetFinalPrice"		"Haetaan lopullista hintaa..."
 "Steam_PurchaseFailedTitle"			"Steam - Virhe"
 "Steam_PurchaseFailedMessage"			"Ostoksen suorittaminen epäonnistui maksutapahtuman\n käsittelyvirheen vuoksi. Yritä myöhemmin uudelleen."
-"Steam_CVV2_Info"					"Anna luottokorttisi turvatunnus."
-"Steam_CardSecurityInstruction"		"Turvatunnus on kortin kääntöpuolen allekirjoitusalueella. Se on viimeiset kolme numeroa (tilinumeron jälkeen)."
+"Steam_CVV2_Info"					"Anna luottokorttisi turvakoodi."
+"Steam_CardSecurityInstruction"		"Turvakoodi löytyy kortin kääntöpuolen allekirjoitusalueelta. Koodi koostuu (tilinumeron jälkeisestä) kolmesta numerosta."
 "Steam_Working_ContactingSvr"		"Muodostetaan yhteyttä palvelimeen..."
 "Steam_PayPalIntroToBrowser"		"%provider%-tapahtumat valtuutetaan %provider%-sivuston kautta. Allaolevaa painiketta klikkaamalla avaat selainikkunan ja aloitat maksutapahtuman."
 "Steam_PayPalOpenBrowserButton"		"Aloita %provider%-osto"
@@ -418,9 +417,9 @@ Tämä kestää alle minuutin."
 "Steam_CancelPurchase_ContinueButton"	"Jatka ostoa"
 "Steam_CancelPurchase_CancelButton"	"Peruuta osto"
 
-"Steam_CardSecurityInstruction_Amex"	"American Express -korttien turvatunnus sijaitsee kortin etupuolella, kortin päänumeron yläpuolella. Se sisältää neljä numeroa."
+"Steam_CardSecurityInstruction_Amex"	"American Express -korttien turvakoodi sijaitsee kortin etupuolella. Se sisältää neljä numeroa."
 
-"Steam_CardSecurityLabel"			"Turvatunnus"
+"Steam_CardSecurityLabel"			"Turvakoodi"
 "Steam_MonitorTitle"				"Steam-seuranta"
 "Steam_Game"					"Peli"
 "Steam_Status"					"Tila"
@@ -518,7 +517,6 @@ Tämä kestää alle minuutin."
 "Steam_SetJumplistOptions"		"Määritä tehtäväpalkin asetukset"
 "Steam_ShowOnlineStatusOptions"	"Valitse näytettävät verkkoasetukset"
 "Steam_ShowDestinationOptions"	"Valitse näytettävät kohteet"
-"Steam_MustRestartToTakeEffect"			"Asetus tulee voimaan vasta,\nkun käynnistät Steamin uudelleen."
 "Steam_LanguageSelect"				"Valitse Steamin kieli (vaatii Steamin uudelleenkäynnistyksen)"
 "Steam_SteamChinaLanguageSelect"	"Steamiä voi käyttää ainoastaan kiinaksi (yksinkertaistettu)"
 "Steam_SelectSkinToUse"				"Valitse Steamin ulkoasu (vaatii Steamin uudelleenkäynnistyksen)"
@@ -559,9 +557,7 @@ Tämä kestää alle minuutin."
 "Steam_PasswordStrength"				"Salasanan vahvuus:"
 
 "Steam_MustRestart_Title"		"Steam - Uudelleenkäynnistys vaaditaan"
-"Steam_MustRestart_Info"		"Steam on käynnistettävä uudelleen uusimman päivityksen asentamiseksi.\nSteamin käyttöä ei voi jatkaa, ennen kuin se on käynnistetty uudelleen."
 "Steam_MustRestart_Button"		"Käynnistä uudelleen"
-"Steam_MustRestart_Language"		"Muuta kieliasetuksia käynnistämällä Steam uudelleen."
 
 "Steam_ChangeBeta_Title"		"Steam: betaversioiden käyttö"
 "Steam_ChangeBeta_Text"			"Haluatko ottaa osaa Steamin betaohjelmaan?\nSteam-ohjelma käynnistyy uudelleen betaversion käyttöönottamiseksi."
@@ -702,8 +698,6 @@ Tämä kestää alle minuutin."
 "Steam_RecoverAuthenticator_BadPassword"			"Väärä salasana. Tarkista salasana ja yritä uudelleen."
 "Steam_RecoverAuthenticator_BadCode"				"Koodi tai salasana oli väärin. Ole hyvä ja tarkista ne, ennen kuin yrität uudelleen."
 "Steam_RecoverAuthenticator_BadCodes"				"Koodit tai salasana eivät olleet oikein. Tarkista ne ja yritä uudelleen."
-"Steam_RecoverAuthenticator_SupportURL"				""
-
 "Steam_RecoverAuthenticator_Done"					"Steam Guard -varmenne on poistettu tililtäsi.\n\nPystyt nyt kirjautumaan tilillesi."
 
 
@@ -1571,7 +1565,6 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "SteamUI_HardwarePromoWizard_Title" "Rekisteröi tarjous"
 "Steam_HardwarePromo_Intro" "Onnittelut! Tietokoneesi täyttää tarjouksen vaatimukset. Voit lunastaa tarjouksen rekisteröimällä sen yhteen - ja vain yhteen - Steam-tiliin. Pystyt pelaamaan tarjouksen sisältämiä pelejä millä tahansa tietokoneella, kun kirjaudut tähän Steam-tiliin."
 "Steam_Legal_HardwarePromo_Unreleased" "Joitakin tämän paketin tuotteista ei ole vielä julkaistu, joten ne eivät ole tällä hetkellä saatavilla. Tuotteet tulevat automaattisesti saataville Steamin kautta, kun ne julkaistaan. Tuotteiden julkaisupäivämäärää ei ole varmistettu. Ostajien ei tule luottaa arvioituihin julkaisupäivämääriin. Muihin ehtoihin voi tutustua valitsemalla Seuraava."
-"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Tarjousta rekisteröidään..."
 "SteamUI_OEMTicketWizard_Title" "Rekisteröi OEM-lisenssi"
 
@@ -3186,9 +3179,6 @@ Voit osallistua haluamaasi betaohjelmaan valitsemalla sen alta ja valitsemalla s
 
 "Steam_ReadMoreAboutBetas"	"Lue lisätietoja Steam-betaversioista"
 "Steam_SelectNoBeta"	"EI MITÄÄN - Älä osallistu betaohjelmiin"
-"Steam_BetaIsOver" "Kiitos osallistumisesta Steam-betaversioon %betaname%.  
-
-Betaversio on päättynyt - palaa nykyiseen versioon käynnistämällä Steam uudelleen."
 
 "Steam_ChooseGameLanguage"	"Valitse pelin kieli:"
 "Steam_GameProperties_LanguageTab" "Kieli"
@@ -4339,7 +4329,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 
 "Steam_Parental_UnlockTitle"			"Perhenäkymä"
 "Steam_Parental_UnlockInstructions"		"Syötä PIN-koodi poistuaksesi Perhenäkymästä"
-"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Unohdin PIN-koodini"
 "Steam_Parental_NoRecoveryEmail"		"Palautussähköpostiosoitetta ei ole asetettu"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Et ole ilmoittanut palautussähköpostiosoitetta. Voit päivittää palautussähköpostiosoitteesi poistumalla Perhenäkymästä ja suorittamalla Perhenäkymän valmistelun uudelleen."
@@ -4454,7 +4443,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Music_Track_Menu_ShowAlbumInUI" "Näytä albumi"
 "Music_Menu_Play" "Toista"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% / %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% kappaletta - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% kappale - %queueduration%"
@@ -4528,7 +4516,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Music_Playlist_RenameDialog_Title" "Nimeä soittolista uudelleen"
 "Music_Playlist_RenameDialog_Prompt" "Nimeä soittolista \"%playlistname%\" uudelleen"
 "Music_Playlist_AddDialog_Title" "Luo uusi soittolista"
-"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Poista soittolista"
 "Music_Playlist_DeleteDialog_Prompt" "Haluatko varmasti poistaa soittolistan \"%playlistname%\"?"
 "Music_Playlist_Details_Play" "Toista lista"
@@ -4547,8 +4534,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Music_Queue_Menu_ReplacePlaylist" "Korvaa soittolista jonolla"
 "Music_Queue_Menu_AppendPlaylist" "Lisää soittolistaan"
 "Music_Queue_AddPlaylist_Dialog_Title" "Lisää soittolista"
-"Music_Queue_AddPlaylist_Dialog_Prompt" ""
-
 "Steam_Settings_Controller"					"Ohjain"
 "Steam_SettingsControllerTitle"				"Ohjainmääritykset"
 "Steam_SettingsControllerDescription"		"Steam-ohjaimen yleisasetukset sallivat määritystuen käyttöön ottamisen/käyttämättä jättämisen, muokkaamisen ja muut asetukset."

@@ -149,7 +149,7 @@ service TwoFactor {
 	rpc FinalizeAddAuthenticator (.CTwoFactor_FinalizeAddAuthenticator_Request) returns (.CTwoFactor_FinalizeAddAuthenticator_Response);
 	// ePrivilege=1
 	rpc QueryStatus (.CTwoFactor_Status_Request) returns (.CTwoFactor_Status_Response);
-	// ePrivilege=0, eWebAPIKeyRequirement=1
+	// ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc QueryTime (.CTwoFactor_Time_Request) returns (.CTwoFactor_Time_Response);
 	// ePrivilege=9
 	rpc RemoveAuthenticator (.CTwoFactor_RemoveAuthenticator_Request) returns (.CTwoFactor_RemoveAuthenticator_Response);

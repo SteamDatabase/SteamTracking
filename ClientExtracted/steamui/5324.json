@@ -148,7 +148,7 @@
     "Wishlist_Controls_Categories_Header_Other": "Mes autres catégories",
     "Wishlist_Controls_Categories_Header_Suggested": "Catégories recommandées",
     "Wishlist_Categories_Max_Per_App_Reached": "Cet article de la liste de souhaits a atteint la limite de %1$s catégories.",
-    "Wishlist_Categories_Dialog_Advanced": "Advanced...",
+    "Wishlist_Categories_Dialog_Advanced": "Paramètres avancés…",
     "Price_History_Normal_Price": "NORMALEMENT",
     "Price_History_Recent_Low_Price": "PLUS BAS (30 DER. JOURS)",
     "Price_History_Recent_Low_Price_Ttip": "Ce jeu était en réduction au prix de %1$s lors des %2$s derniers jours.",
@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Nous n'avons aucune nouveauté à vous recommander aujourd'hui. <1>Consultez le reste de votre calendrier !</1>",
     "NewBadge": "NOUVEAUTÉ",
     "Time_Today": "aujourd'hui",
+    "DiscountsAndEvents_Title": "Promotions et évènements",
+    "DiscountsAndEvents_SeeMore": "En voir plus",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Offre du weekend",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Offre de mi-semaine",
+    "DiscountsAndEvents_Banner_DailyDeal": "L'offre du jour",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Remise la plus importante",
+    "DiscountsAndEvents_LoadError": "Les remises et évènements n'ont pas pu être chargés pour le moment. Veuillez réessayer plus tard.",
     "store_ui_dummy": "dont translate"
 }

@@ -148,7 +148,7 @@
     "Wishlist_Controls_Categories_Header_Other": "หมวดหมู่อื่น ๆ ของฉัน",
     "Wishlist_Controls_Categories_Header_Suggested": "หมวดหมู่ที่แนะนำ",
     "Wishlist_Categories_Max_Per_App_Reached": "สิ่งที่อยากได้รายการนี้มีหมวดหมู่ครบ %1$s หมวดหมู่ที่จำกัดไว้แล้ว",
-    "Wishlist_Categories_Dialog_Advanced": "Advanced...",
+    "Wishlist_Categories_Dialog_Advanced": "ขั้นสูง...",
     "Price_History_Normal_Price": "ตามปกติ",
     "Price_History_Recent_Low_Price": "ต่ำสุดใน 30 วัน",
     "Price_History_Recent_Low_Price_Ttip": "เกมนี้เคยลดราคา %1$s มาก่อนภายในเวลา %2$s วันที่ผ่านมา",
@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "เราไม่มีรายการวางจำหน่ายล่าสุดที่จะแนะนำให้คุณในวันนี้ <1>โปรดดูรายการที่เหลือในปฏิทินของคุณ!</1>",
     "NewBadge": "ใหม่",
     "Time_Today": "วันนี้",
+    "DiscountsAndEvents_Title": "ส่วนลดและกิจกรรม",
+    "DiscountsAndEvents_SeeMore": "ดูเพิ่มเติม",
+    "DiscountsAndEvents_Banner_WeekendDeal": "ข้อเสนอสุดสัปดาห์",
+    "DiscountsAndEvents_Banner_MidweekDeal": "ลดพิเศษกลางสัปดาห์",
+    "DiscountsAndEvents_Banner_DailyDeal": "ข้อเสนอประจำวัน",
+    "DiscountsAndEvents_Banner_LargestDiscount": "ส่วนลดที่มากที่สุด",
+    "DiscountsAndEvents_LoadError": "ไม่สามารถโหลดส่วนลดและกิจกรรมได้ในขณะนี้ โปรดลองใหม่อีกครั้งในภายหลัง",
     "store_ui_dummy": "dont translate"
 }

@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Zaproś na kanał głosowy",
     "VoiceChat_SendInviteMessage": "Wyślij wiadomość z zaproszeniem",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Wyciszenie",
     "VoiceChat_Unavailable_NotFriend": "Czat głosowy niedostępny: %1$s nie jest na twojej liście znajomych.",
     "VoiceChat_Unavailable_NotOnline": "Czat głosowy niedostępny: %1$s nie jest obecnie online.",
     "VoiceChat_Unavailable_NotInBeta": "Czat głosowy niedostępny: %1$s nie korzysta z wersji beta nowego czatu.",
@@ -640,6 +641,7 @@
     "Button_Share": "Udostępnij",
     "Button_Ignore": "Ignoruj",
     "DirectMessageFromNonFriend": "Wiadomość od użytkownika, który nie jest twoim znajomym",
+    "DirectMessageFromNonFriend_SharedGroup": "Oboje jesteście członkami czatu grupowego „%1$s”.",
     "NonFriendAction_Block": "Zablokuj komunikację",
     "NonFriendAction_Allow": "Zezwól na komunikację",
     "SuspiciousMessage_Header": "Podejrzana rozmowa",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Naprawiono błąd powodujący, że okna czatu i znajomych nie wyświetlały się w nakładce w systemach Linux i macOS.",
     "BBCode_Loading": "Wczytywanie",
     "BBCode_Failed": "Nie udało się wczytać",
-    "broadcastDetails_Playing": "Gra w",
-    "VoiceChat_Muted_Deck": "Wyciszenie"
+    "broadcastDetails_Playing": "Gra w"
 }

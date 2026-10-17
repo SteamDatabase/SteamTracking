@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "邀請至語音頻道",
     "VoiceChat_SendInviteMessage": "傳送邀請訊息",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "已靜音",
     "VoiceChat_Unavailable_NotFriend": "無法使用語音：%1$s 不在您的好友名單中。",
     "VoiceChat_Unavailable_NotOnline": "無法使用語音：%1$s 目前不在線上。",
     "VoiceChat_Unavailable_NotInBeta": "無法使用語音：%1$s 未執行新的聊天測試版。",
@@ -640,6 +641,7 @@
     "Button_Share": "分享",
     "Button_Ignore": "忽略",
     "DirectMessageFromNonFriend": "非好友傳來的訊息",
+    "DirectMessageFromNonFriend_SharedGroup": "您們兩位都是「%1$s」群組聊天的成員。",
     "NonFriendAction_Block": "封鎖通訊",
     "NonFriendAction_Allow": "允許通訊",
     "SuspiciousMessage_Header": "可疑聊天",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "修正在 Linux 和 macOS 中，好友與聊天視窗無法顯示於遊戲內嵌介面中的問題",
     "BBCode_Loading": "載入中",
     "BBCode_Failed": "載入失敗",
-    "broadcastDetails_Playing": "正在遊玩",
-    "VoiceChat_Muted_Deck": "已靜音"
+    "broadcastDetails_Playing": "正在遊玩"
 }

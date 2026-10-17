@@ -57,6 +57,7 @@ message CCloud_BeginUGCUpload_Request {
 	optional string filename = 3;
 	optional string file_sha = 4;
 	optional string content_type = 5;
+	optional bool is_public = 6;
 }
 
 message CCloud_BeginUGCUpload_Response {

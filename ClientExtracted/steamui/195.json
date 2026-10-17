@@ -148,7 +148,7 @@
     "Wishlist_Controls_Categories_Header_Other": "Danh mục khác của tôi",
     "Wishlist_Controls_Categories_Header_Suggested": "Danh mục khuyến nghị",
     "Wishlist_Categories_Max_Per_App_Reached": "Sản phẩm trong danh sách ước này đã đạt giới hạn %1$s danh mục.",
-    "Wishlist_Categories_Dialog_Advanced": "Advanced...",
+    "Wishlist_Categories_Dialog_Advanced": "Nâng cao...",
     "Price_History_Normal_Price": "THÔNG THƯỜNG",
     "Price_History_Recent_Low_Price": "THẤP NHẤT 30 NGÀY QUA",
     "Price_History_Recent_Low_Price_Ttip": "Trò chơi này vừa có ưu đãi %1$s trong vòng %2$s ngày qua",
@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Chúng tôi không có sản phẩm mới nào để đề xuất cho bạn vào ngày này <1>Xem những ngày khác trên lịch của bạn!</1>",
     "NewBadge": "MỚI",
     "Time_Today": "Hôm nay",
+    "DiscountsAndEvents_Title": "Giảm giá & sự kiện",
+    "DiscountsAndEvents_SeeMore": "Xem thêm",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Ưu đãi cuối tuần",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Ưu đãi giữa tuần",
+    "DiscountsAndEvents_Banner_DailyDeal": "Ưu đãi hôm nay",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Ưu đãi lớn nhất",
+    "DiscountsAndEvents_LoadError": "Không thể nạp sự kiện và khuyến mãi vào lúc này. Vui lòng thử lại sau.",
     "store_ui_dummy": "dont translate"
 }

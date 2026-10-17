@@ -61,6 +61,7 @@ $ORIGIN
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_common.cc
 /proc/self/exe
 /proc/self/fd
+/proc/self/ns/pid
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 /tmp/.steam-sem-names
@@ -348,6 +349,7 @@ STEAM_OVERLAY_WINDOW_BLACKLIST
 SetNotificationInset
 SetNotificationPosition
 SetScaleFactors( %1.2f, %1.2f, %1.2f, %1.2f)\n
+Shared object manager is owned by another pid namespace; IPC disabled in pid %d\n
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 St10bad_typeid
 St11logic_error
@@ -563,6 +565,7 @@ __pthread_key_create
 __register_atfork
 __stack_chk_fail
 __tls_get_addr
+__xstat
 __xstat64
 _exit
 abort
@@ -900,6 +903,14 @@ pthread_mutexattr_destroy
 pthread_mutexattr_init
 pthread_mutexattr_settype
 pthread_once
+pthread_rwlock_destroy
+pthread_rwlock_init
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+pthread_rwlockattr_destroy
+pthread_rwlockattr_init
+pthread_rwlockattr_setkind_np
 pthread_self
 pthread_setname_np
 pthread_setschedparam

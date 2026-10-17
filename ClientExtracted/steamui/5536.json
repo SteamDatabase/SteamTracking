@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Показувати всі сумісні ігри та ігри, у які можна грати, але з додатковими налаштуваннями.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Показувати всі сумісні ігри й ті, у які можна грати, а також ігри, які ще не були перевірені на сумісність зі Steam Machine.",
     "MachineVerified_FilterDescription_AllGames": "Показувати всі ігри в бібліотеці, включно з тими, які не повністю сумісні зі Steam Machine.",
-    "FrameVerified_FilterDescription_Verified": "Показувати лише ігри, які чудово працюють на Steam Frame.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Показувати всі сумісні з Frame ігри та ігри, у які можна грати, але з додатковими налаштуваннями.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Показувати всі сумісні ігри й ті, у які можна грати, а також ігри, які ще не були перевірені на сумісність зі Steam Frame.",
-    "FrameVerified_FilterDescription_AllGames": "Показувати всі ігри в бібліотеці, включно з тими, які не повністю сумісні зі Steam Frame."
+    "FrameVerified_FilterDescription_Verified": "Показувати лише ігри, які чудово працюють із вбудованими елементами керування та екраном Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Показувати всі сумісні ігри та ігри, у які можна грати, але з додатковими налаштуваннями.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Показувати всі сумісні ігри й ті, у які можна грати, а також ігри, які ще не були перевірені на сумісність зі Steam Frame (автономна гра).",
+    "FrameVerified_FilterDescription_AllGames": "Показувати всі ігри в бібліотеці, включно з тими, які не повністю сумісні зі Steam Frame в режимі автономної гри."
 }

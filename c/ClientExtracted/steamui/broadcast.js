@@ -103,8 +103,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
+          _ = __webpack_require__("chunkid");
         const _ = (0, _._)((_) => {
           const { appid: _ } = _,
             _ = (0, _._)(),
@@ -188,8 +187,7 @@
             ],
           });
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = "steamdb";
+        var _ = __webpack_require__("chunkid");
         function _() {
           let _ = window.GetUsabilityTracker;
           if (_) return _();
@@ -212,15 +210,14 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = "steamdb";
+          _ = __webpack_require__._(_);
         const _ = (0, _._)((_) => {
           const { event: _ } = _,
             _ = _.clanSteamID.GetAccountID(),
             _ = !_ || !_.jsondata || !_.jsondata.broadcast_item_drops_enabled,
             _ = (0, _.useRef)(null),
             [_, _] = (0, _.useState)(
-              _ ? _._.GetCreatorHome(_.clanSteamID) : null,
+              _ ? _._.GetCreatorHome(_.clanSteamID) : void 0,
             );
           if (
             ((0, _.useEffect)(() => {
@@ -241,32 +238,25 @@
           )
             return null;
           const _ =
-            _._.COMMUNITY_BASE_URL +
-            "gid/" +
-            _.jsondata.broadcast_item_drops_details_clan_accountid +
-            "/partnerevents/view/" +
-            _.jsondata.broadcast_item_drops_details_event_gid;
+              _._.COMMUNITY_BASE_URL +
+              "gid/" +
+              _.jsondata.broadcast_item_drops_details_clan_accountid +
+              "/partnerevents/view/" +
+              _.jsondata.broadcast_item_drops_details_event_gid,
+            _ = _.jsondata.broadcast_item_drops_min_watch_time_minutes ?? 0;
           return (0, _.jsx)("div", {
             className: _().item_drop_ctn,
             children: (0, _.jsxs)("div", {
               children: [
                 (0, _._)(
                   _.GetName().length > 0
-                    ? _.jsondata.broadcast_item_drops_min_watch_time_minutes %
-                        60 ==
-                      0
+                    ? _ % 60 == 0
                       ? "#SalePage_WatchForDrop_Hours_CreatorNamed"
                       : "#SalePage_WatchForDrop_Minutes_CreatorNamed"
-                    : _.jsondata.broadcast_item_drops_min_watch_time_minutes %
-                          60 ==
-                        0
+                    : _ % 60 == 0
                       ? "#SalePage_WatchForDrop_Hours_Developer"
                       : "#SalePage_WatchForDrop_Minutes_Developer",
-                  _.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 ==
-                    0
-                    ? _.jsondata.broadcast_item_drops_min_watch_time_minutes /
-                        60
-                    : _.jsondata.broadcast_item_drops_min_watch_time_minutes,
+                  _ % 60 == 0 ? _ / 60 : _,
                   _.GetName(),
                 ),
                 !!_.jsondata.broadcast_item_drops_details_clan_accountid &&
@@ -288,8 +278,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = "steamdb";
+          _ = __webpack_require__._(_);
         function _(_) {
           const { steamid: _, closeModal: _ } = _;
           return (0, _.jsxs)(_._, {
@@ -359,7 +348,7 @@
             _ = _.useCallback(
               (_) => {
                 _.current &&
-                  _.current.ownerDocument.defaultView.navigator.clipboard
+                  _.current.ownerDocument.defaultView?.navigator.clipboard
                     .writeText(_.current.value)
                     .then((_) => {
                       _((0, _._)("#EventDisplay_Share_CopiedToClipboard"));
@@ -428,7 +417,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "steamdb",
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -523,7 +511,7 @@
                 }),
               await (this.props.bIsPreview &&
               this.props.accountIDs &&
-              !this.props.event.BUsesContentHubForItemSource()
+              !this.props.event?.BUsesContentHubForItemSource()
                 ? _._.Get().HintLoadEmbeddablePreviewStreams(this.props)
                 : _._.Get().HintLoadEmbeddableStreams(this.props)),
               this.props.nAppIDVOD &&
@@ -548,12 +536,13 @@
           }
           ToggleBroadcastExpandShrink() {
             let _ = _._.Get().GetPlayReadyStream(this.props);
+            if (!_) return;
             const _ = this.state.bExpanded,
               _ = _.BroadcastWatchStore.GetOrCreateBroadcastInfo(
                 _.steamid,
               ).m_nAppID;
             (0, _._)(_, _ ? _._._ : _._._, _.snr),
-              _ && _() && _().AddEvent(_._._),
+              _ && _()?.AddEvent(_._._),
               window.setTimeout(
                 () =>
                   this.setState({
@@ -586,7 +575,7 @@
             this.setState({
               bStartMuted: !1,
             }),
-              _._.Get().GetPlayReadyStream(this.props).accountid !=
+              _._.Get().GetPlayReadyStream(this.props)?.accountid !=
                 _.accountid &&
                 (await _._.Get().AttemptToPlayStream(this.props, _));
           }
@@ -594,18 +583,14 @@
             this.setState({
               bStartMuted: !1,
             });
-            const _ = _._.Get()
-              .GetStreams(this.props)
-              .filter(
-                (_) =>
-                  !this.props.fnFilterStreams || this.props.fnFilterStreams(_),
-              );
+            const _ = (_._.Get().GetStreams(this.props) ?? []).filter(
+              (_) =>
+                !this.props.fnFilterStreams || this.props.fnFilterStreams(_),
+            );
             await _._.Get().PlayFromAvailableStreams(this.props, _, !0);
           }
           ConstructSidePanels(_, _) {
             let _ = {
-              leftPanel: null,
-              rightPanel: null,
               bRightPanelArtworkOrEmpty: !0,
             };
             if (this.props.bWidePlayer) return _;
@@ -629,7 +614,9 @@
               );
             const _ = 11;
             if (_ < _) {
-              const _ = _._.GetAppIDListForBroadcasterSteamID(_.steamid);
+              const _ = _.steamid
+                ? _._.GetAppIDListForBroadcasterSteamID(_.steamid)
+                : void 0;
               _ && _.length === 1 && (_ = _[0]);
             }
             return (
@@ -674,35 +661,36 @@
           }
           MarkBroadcastSeen() {
             this.m_bMarkedUsabilitySeen ||
-              ((this.m_bMarkedUsabilitySeen = !0), _() && _().AddEvent(_._._));
+              ((this.m_bMarkedUsabilitySeen = !0), _()?.AddEvent(_._._));
           }
           render() {
             if (this.state.bLoadingPreference) return null;
-            let _ = _._.Get().GetPlayReadyStream(this.props);
+            const _ = _._.Get().GetPlayReadyStream(this.props);
             if (_) {
               this.MarkBroadcastSeen();
               let _ = _._.Get().GetChatVisibility() === "show";
               const {
-                event: _,
-                language: _,
-                fnRenderBroadcastContext: _,
-              } = this.props;
-              _ &&
-                (_ = {
-                  ..._,
-                  left_panel: _.GetImageURL(
-                    "broadcast_left",
-                    _ || (0, _.sfN)(_._.LANGUAGE),
-                  ),
-                  right_panel: _.GetImageURL(
-                    "broadcast_right",
-                    _ || (0, _.sfN)(_._.LANGUAGE),
-                  ),
-                  store_title: _.GetBroadcastTitle(
-                    _ || (0, _.sfN)(_._.LANGUAGE),
-                  ),
-                  broadcast_chat_visibility: _.GetBroadcastChatVisibility(),
-                });
+                  event: _,
+                  language: _,
+                  fnRenderBroadcastContext: _,
+                } = this.props,
+                _ = _
+                  ? {
+                      ..._,
+                      left_panel: _.GetImageURL(
+                        "broadcast_left",
+                        _ || (0, _.sfN)(_._.LANGUAGE),
+                      ),
+                      right_panel: _.GetImageURL(
+                        "broadcast_right",
+                        _ || (0, _.sfN)(_._.LANGUAGE),
+                      ),
+                      store_title: _.GetBroadcastTitle(
+                        _ || (0, _.sfN)(_._.LANGUAGE),
+                      ),
+                      broadcast_chat_visibility: _.GetBroadcastChatVisibility(),
+                    }
+                  : _;
               let _ = this.ConstructSidePanels(_, _),
                 _ = _.store_title ? _.store_title : _.title,
                 _ = _._.Get().GetConcurrentStreams(this.props) > 1;
@@ -811,11 +799,10 @@
                           }),
                       ],
                     }),
-                    !!(
-                      _ &&
-                      _.jsondata &&
-                      _.jsondata.broadcast_item_drops_enabled
-                    ) &&
+                    !!_ &&
+                      !!(
+                        _.jsondata && _.jsondata.broadcast_item_drops_enabled
+                      ) &&
                       (0, _.jsx)(_, {
                         event: _,
                       }),
@@ -850,7 +837,7 @@
               this.props.stream.steamid,
             ).m_nAppID;
             (0, _._)(_, _._._, this.props.stream.snr),
-              _() && _().AddEvent(_._._),
+              _()?.AddEvent(_._._),
               this.setState({
                 bPopout: !1,
                 bPreventPopup: !0,
@@ -1030,13 +1017,16 @@
                           (0, _.jsx)("a", {
                             href: "#",
                             className: _().ChatToggle,
-                            onClick: (_) =>
-                              (0, _._)(
-                                (0, _.jsx)(_, {
-                                  steamid: this.props.stream.steamid,
-                                }),
-                                (0, _._)(_),
-                              ),
+                            onClick: (_) => {
+                              const _ = (0, _._)(_);
+                              _ &&
+                                (0, _._)(
+                                  (0, _.jsx)(_, {
+                                    steamid: this.props.stream.steamid ?? "",
+                                  }),
+                                  _,
+                                );
+                            },
                             children: (0, _._)("#Broadcast_ShareBroadcast"),
                           }),
                         ],
@@ -1143,11 +1133,11 @@
               bShowCapsuleArt: _,
               broadcastEmbedContext: _,
             } = _,
-            _ = (0, _.useRef)(void 0),
+            _ = (0, _.useRef)(null),
             _ = (0, _.useMemo)(() => {
-              const _ = _._.Get()
-                .GetStreams(_)
-                .filter((_) => !_ || _(_));
+              const _ = (_._.Get().GetStreams(_) ?? []).filter(
+                (_) => !_ || _(_),
+              );
               return (0, _._)(_), _;
             }, [_, _]);
           return (
@@ -1217,7 +1207,7 @@
             { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)(_);
           if (!(0, _._)(_)) return null;
-          const _ = _ && _ && (0, _._)(_, "header"),
+          const _ = _ && _ ? (0, _._)(_, "header") : void 0,
             _ = Number.parseInt("" + _.viewer_count),
             _ = !Number.isNaN(_),
             _ = !!_.nAppIDVOD && _?.name;
@@ -1289,10 +1279,12 @@
         function _(_) {
           const { stream: _, orientation: _ } = _,
             _ = _ == "below",
-            [_, _] = (0, _._)(() => [
-              _.BroadcastWatchStore.GetBroadcast(_.steamid),
-              _.BroadcastWatchStore.GetBroadcast(_.steamid)?.m_ulBroadcastID,
-            ]),
+            [_, _] = (0, _._)(() => {
+              const _ = _.steamid
+                ? _.BroadcastWatchStore.GetBroadcast(_.steamid)
+                : void 0;
+              return [_, _?.m_ulBroadcastID];
+            }),
             _ = (0, _._)(() => _.steamid);
           return _
             ? (0, _.jsx)("div", {

@@ -148,7 +148,7 @@
     "Wishlist_Controls_Categories_Header_Other": "Mijn andere categorieën",
     "Wishlist_Controls_Categories_Header_Suggested": "Aanbevolen categorieën",
     "Wishlist_Categories_Max_Per_App_Reached": "Dit artikel op je verlanglijst heeft de limiet van %1$s categorieën bereikt.",
-    "Wishlist_Categories_Dialog_Advanced": "Advanced...",
+    "Wishlist_Categories_Dialog_Advanced": "Geavanceerd ...",
     "Price_History_Normal_Price": "NORMAAL",
     "Price_History_Recent_Low_Price": "LAAGSTE IN 30 DAGEN",
     "Price_History_Recent_Low_Price_Ttip": "Dit spel was in de afgelopen %2$s dagen in de uitverkoop voor %1$s.",
@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "We hebben op deze dag geen nieuwe uitgaven die we je kunnen aanbevelen <1>Bekijk de rest van je agenda!</1>",
     "NewBadge": "NIEUW",
     "Time_Today": "Vandaag",
+    "DiscountsAndEvents_Title": "Kortingen en evenementen",
+    "DiscountsAndEvents_SeeMore": "Meer tonen",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Weekenddeal",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Weekdeal",
+    "DiscountsAndEvents_Banner_DailyDeal": "De aanbieding van vandaag",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Hoogste korting",
+    "DiscountsAndEvents_LoadError": "Kortingen en evenementen konden niet worden geladen. Probeer het later opnieuw.",
     "store_ui_dummy": "dont translate"
 }

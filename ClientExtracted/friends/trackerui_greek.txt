@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Δεν μπορείτε να εκκινήσετε φωνητική συνομιλία στο %chat%, δεν υπάρχουν αρκετές ελεύθερες θέσεις για ομιλία."
 "Friends_Chat_VoiceStatus"		"%availslots% θέσεις διαθέσιμες [%maxslots% ολικές]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ΣΕ ΣΥΝΔΕΣΗ"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% ΣΕ ΠΑΙΧΝΙΔΙ, %online% ΣΕ ΣΥΝΔΕΣΗ"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% ΣΕ ΣΥΝΟΜΙΛΙΑ, %online% ΣΕ ΣΥΝΔΕΣΗ"

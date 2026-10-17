@@ -152,7 +152,6 @@ message CMsgClientSettings {
 	optional bool enable_gamescope_composer = 5010 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\EnableGamescopeComposer", (setting_default_bool) = false];
 	optional bool enable_gamescope_composer_vr = 5011 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\EnableGamescopeComposerVR", (setting_default_bool) = true];
 	optional bool show_switch_to_desktop_at_login = 5012 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "system\\ShowSwitchToDesktopAtLogin", (setting_pre_login) = true];
-	optional bool enable_steamrt64_client = 5013 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool disable_all_toasts = 6000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "DisableAllToasts"];
 	optional bool disable_toasts_in_game = 6001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "DisableToastsInGame"];
 	optional bool play_sound_on_toast = 6002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "PlaySoundOnToast", (setting_default_bool) = true];

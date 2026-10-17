@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Bjud in till röstkanal",
     "VoiceChat_SendInviteMessage": "Skicka inbjudan",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Tystad",
     "VoiceChat_Unavailable_NotFriend": "Röst otillgänglig: %1$s är inte på din vänlista.",
     "VoiceChat_Unavailable_NotOnline": "Röst otillgänglig: %1$s är inte online för tillfället.",
     "VoiceChat_Unavailable_NotInBeta": "Röst otillgänglig: %1$s kör inte den nya chatt-betan.",
@@ -640,6 +641,7 @@
     "Button_Share": "Dela",
     "Button_Ignore": "Ignorera",
     "DirectMessageFromNonFriend": "Meddelande från en användare som inte är din vän",
+    "DirectMessageFromNonFriend_SharedGroup": "Ni är båda med i gruppchatten %1$s.",
     "NonFriendAction_Block": "Blockera kommunikation",
     "NonFriendAction_Allow": "Tillåt kommunikation",
     "SuspiciousMessage_Header": "Misstänkt chatt",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Fixade att vän- och chattfönster inte visades i spelövertoningen på Linux och macOS.",
     "BBCode_Loading": "Läser in",
     "BBCode_Failed": "Inläsning misslyckades",
-    "broadcastDetails_Playing": "Spelar",
-    "VoiceChat_Muted_Deck": "Tystad"
+    "broadcastDetails_Playing": "Spelar"
 }

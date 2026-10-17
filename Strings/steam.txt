@@ -82,8 +82,6 @@
  --label '%s'
  --log-directory="%s"
  --sh-syntax --background --parse-level-prefix -t steam
- -child-update-ui
- -child-update-ui-socket %d
  -foreground
  <+%d truncated>
  = { <proto text format> }". To set fields within it, use syntax like "
@@ -198,6 +196,7 @@
 !m_bFindingBestServer
 !m_bHasStartMsg
 !m_bInitialRequest
+!m_bInitialized
 !m_bIsShutdown
 !m_bJustCount
 !m_bMounted
@@ -205,6 +204,7 @@
 !m_bRunJobFromMsgEntryPoint
 !m_cubPkt || ( m_cubPkt >= ( m_cubMsgHdr + m_cubStruct ) )
 !m_data.HasError()
+!m_pAcceptState
 !m_pHTTP2Session
 !m_pInt
 !m_pParsedBody
@@ -224,12 +224,15 @@
 !m_pvecLocks || !m_pvecLocks->HasElement( pLock )
 !m_sFrameCur.m_pubPayload
 !nghttp2_ksl_it_begin(it)
+!pAcceptState->m_bActive
 !pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
 !pCompletionData->pSSLConnectionToRelease
+!pCompletionData->pvUserData
 !pKeyCallback
 !pLock->BIsLocked()
 !pParent->m_bInDeleteQueue
 !pRecvState->m_pSSLConnectionDirect || BNetInMainThread()
+!pRoute || !pRoute->m_bSet
 !pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pTracker->IsClaimed( pKey )
 !pWorkItem->BIsRunning()
@@ -614,6 +617,7 @@ $ORIGIN
 %s: (%d bit)\n
 %s: Failed to setup linux config dir\n
 %s: Failed to start steamrt auxillary proccesses\n
+%s: GetSSLContextForNewConnection returned null, disconnecting %s\n
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: child exec failed: %d\n
 %s: child terminated unexpectedly: sig:%d\n
@@ -893,6 +897,7 @@ $ORIGIN
 *ZNK24CChildEnvironmentBuilder22GetFilteredEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
+*m_pMsgTraceVProfile
 *m_pQueuedNetMsgs
 *m_pmapJobsDependentOnUs
 *m_pvecLocks
@@ -912,8 +917,6 @@ $ORIGIN
 *pcubSignature > 0
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG;
-++CCUNG`
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +automatic
@@ -1245,7 +1248,7 @@ $ORIGIN
 .pac
 .placeholder.proto
 .steam
-.steam-enable-steamrt64-client
+.steam-disable-steamrt64-client
 .steam-first-start-breadcrumb
 .steam/steam/logs
 .steam_exec_test
@@ -1363,7 +1366,9 @@ $ORIGIN
 0 == m_WorkThreads.Count()
 0 == m_cubMsgIncomingAlloc
 0 == m_cubMsgIncomingRecv
+0 == m_ulIncomingPeerKey
 0 == m_vecChoices.Count()
+0 == pCompletionData->ulResult
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 00000000
@@ -1375,6 +1380,7 @@ $ORIGIN
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEF`
 0123456789abcdef
 1 Mbps
 1.2.11
@@ -1416,8 +1422,8 @@ $ORIGIN
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIiP25CHTTPClientNetworkRequesti8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyN4CJob14JobDependent_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyji8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_tS_IS2_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
@@ -1474,6 +1480,9 @@ $ORIGIN
 10CUtlMemoryIN11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIyj10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIyj10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
+10CUtlMemoryIN12CHTTPHeaders8Header_tEE
 10CUtlMemoryIN14CUDPConnection20ConnectPingResults_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI12CWatchingLogiE10ListElem_tEE
@@ -1549,8 +1558,8 @@ $ORIGIN
 10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapIiP25CHTTPClientNetworkRequesti8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
 10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+10CUtlRBTreeIN7CUtlMapIyN4CJob14JobDependent_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIN7CUtlMapIyii8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
-10CUtlRBTreeIN7CUtlMapIyji8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS1_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E
 10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
 10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
@@ -1595,6 +1604,8 @@ $ORIGIN
 10CUtlVectorIN11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN11CUtlHashMapIyj10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN12CHTTPHeaders8Header_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN14CUDPConnection20ConnectPingResults_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN15CBaseFileSystem10FindData_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN15CBaseFileSystem11COpenedFileE10CUtlMemoryIS1_EE
@@ -1666,7 +1677,9 @@ $ORIGIN
 11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE
 11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE
+11CUtlHashMapIyj10CDefEqualsIyE11HashFunctorIyEyE
 11CWorkThread
+11DTLSState_t
 11IFileSystem
 12 Mbps
 123456789
@@ -1682,6 +1695,7 @@ $ORIGIN
 12CAutoReleaseI21COpenSSLCachedSessionE
 12CAutoReleaseI8CMetricsE
 12CGlxUpdateUI
+12CHTTPHeaders
 12CHTTPRequest
 12CIPRangeList
 12CLicenseInfo
@@ -1797,6 +1811,7 @@ $ORIGIN
 17CUtlPriorityQueueIN21CScheduledFunctionMgr15ScheduledItem_tEPFbRKS1_S3_E32CDefUtlPriorityQueueSetIndexFuncIS1_EE
 17CUtlPriorityQueueIN7CJobMgr12JobTimeout_tEPFbRKS1_S3_ENS0_15TimeoutSetIndexEE
 17CUtlPriorityQueueIN7CJobMgr13JobSleeping_tEPFbRKS1_S3_ENS0_16SleepingSetIndexEE
+17CUtlStringBuilder
 17CWorkItemPipeline
 17CXWindowsUpdateUI
 17IDebugStatsSystem
@@ -1829,6 +1844,7 @@ $ORIGIN
 19CDirContentsWatcher
 19CECSigningPublicKey
 19CHTTPClientResponse
+19CHTTPRequestSpewLog
 19CMsgIPAddressBucket
 19CMsgProtobufWrapped
 19CNullMetricsFactory
@@ -1863,6 +1879,10 @@ $ORIGIN
 20IHTTPRedirectHandler
 20ISSLThreadedSendSink
 20IUniformRandomStream
+21:54:48
+21:57:03
+21:57:06
+21:57:08
 21CClanAnnouncementInfo
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
@@ -1882,12 +1902,11 @@ $ORIGIN
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
-23:23:28
-23:23:33
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23CECKeyExchangePublicKey
+23CFreeNetPacketsWorkItem
 23GamePerformanceSettings
 23IUnbufferedSendCallback
 24 Mbps
@@ -2030,8 +2049,8 @@ $ORIGIN
 7CUtlMapIPvii8CDefLessE
 7CUtlMapIiP25CHTTPClientNetworkRequesti8CDefLessE
 7CUtlMapIjbi8CDefLessE
+7CUtlMapIyN4CJob14JobDependent_tEi8CDefLessE
 7CUtlMapIyii8CDefLessE
-7CUtlMapIyji8CDefLessE
 7CUtlSetI10CUtlStringi8CDefLessE
 7CUtlSetIyi8CDefLessE
 8 Mbps
@@ -2127,18 +2146,16 @@ $ORIGIN
 @bEnableLogTearOff
 @bEnableNetworkJobsOwnStartList
 @bEnableSpewThrottle
+@bHTTPClientCaptureAllRequestSpew
 @bHttpClientRecordHostnameDimension
 @bLogMessageToProtobufClass
 @bMeasureSSLLatencyStats
 @bMetricsEnabled
 @bMsgErrorDump
+@bParseKVSpewRejectedValue
 @bProfileYieldsInTestSuiteJobs
-@bProtoBufNetPacketDropRawBytes
 @bProtobufParseSizeProfile
 @bProtobufParseTimeProfile
-@bSSLThreadedMsgParse
-@bSSLThreadedMsgParseRelayedBodies
-@bSSLThreadedSendDelivery
 @cMinimumJobTimeoutsToCheckPerFrame
 @cNetEncryptionHandshakeWorkMax_HighPri
 @cNetEncryptionHandshakeWorkMax_LowPri
@@ -2392,6 +2409,7 @@ AVS Failure
 AbortConnection - (%p) Aborting client HTTP connection\n
 Aborting HTTP request because !bSent\n
 Aborting HTTP request because body content is larger than range request\n
+Aborting HTTP request because chunked is not the final transfer-encoding: %s\n
 Aborting HTTP request because pResponse->BSetBodyData() failed (RecvHTTPResponseData)\n
 Aborting HTTP request because pResponse->BSetBodyData() failed. URL: %s - %s\n
 Aborting HTTP request because range request response header didn't match\n
@@ -2595,6 +2613,7 @@ B64_write_ASN1
 BAD RECURSION DEPTH\n
 BAD-TYPE
 BASIC_CONSTRAINTS
+BAsyncSend
 BBVA Continental
 BC (default)
 BCallerDeadlineTriggered()
@@ -2670,6 +2689,7 @@ BITLIST
 BITSTR
 BITSTRING
 BITWRAP
+BIsDTLS()
 BIsDirectoryWritable Yielding IO Job
 BIsFixedDisk Yielding IO Job
 BIsOpen()
@@ -2995,6 +3015,8 @@ CFrameFunctionMgr::BRun - OverageWarning
 CFrameFunctionMgr::BRun - SingleFunc
 CFrameFunctionMgr::Deregister: function to deregister not found
 CFrameFunctionMgr::~CFrameFunctionMgr: non static FrameFunction[%s] still registered
+CFreeNetPacketsWorkItem
+CFreeNetPacketsWorkItem::ThreadProcess
 CGlxUpdateUI::BCreateWindow: CreateWindow failed\n
 CHACHA20
 CHACHA20/POLY1305(256)
@@ -3274,6 +3296,8 @@ CHTTPClientRequest::FinalizeRequest
 CHTTPClientResponse::BSetBodyData - gzip
 CHTTPClientThreadPool
 CHTTPClientWorkThread
+CHTTPHeaders::Find
+CHTTPHeaders::SetString called with no header name
 CHTTPRequest
 CHTTPRequest::BPopulatePostParamNameHashes
 CHTTPRequest::RetrieveURLEncodedData
@@ -3336,6 +3360,8 @@ CKeyValuesSystem dumping last %u keys added to system (oldest first):\n
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
 CKeyValuesSystem::AddStringToPool: over 75%% full (%u bytes left)
+CKeyValuesSystem::BSetHashTableBuckets: %u buckets is not a power of 2
+CKeyValuesSystem::BSetHashTableBuckets: %u key names were already added, keeping %u buckets
 CLIENT_EARLY_TRAFFIC_SECRET
 CLIENT_HANDSHAKE_TRAFFIC_SECRET
 CLIENT_RANDOM
@@ -3482,6 +3508,7 @@ CNet::s_FrameFuncHandleCompletedWorkItems == NULL
 CNet::s_FrameFuncPollConnections == NULL
 CNet::s_FrameFuncRunHosts == NULL
 CNet::s_FrameFuncWakeUpConnections == NULL
+CNetConnection: routed frame on connection #%d from %s, a peer not trusted to route; discarding it and disconnecting\n
 CNetConnection::BAsyncSend: data size of %d bytes exceeds max of %d, failing send to ip %s
 CNetConnection::BAsyncSend: suspiciously large traffic of %d bytes - passing traffic anyway\n
 CNetConnection::BVerifyCertificate called with no SSL callback, but we still have base Net callback!
@@ -3520,15 +3547,15 @@ CONNECT %s HTTP/1.1\r\nHost: %s\r\n\r\n
 CONNECT_ERROR
 CONTINUATION: unexpected
 COpenSSLConnection
+COpenSSLConnection(%c%p) %s after shutdown
 COpenSSLConnection(%c%p) %s session established to %s peer using %d-bit cipher %s\n
-COpenSSLConnection(%c%p) BAsyncSend after shutdown
 COpenSSLConnection(%c%p) BAsyncUnbufferedSend after shutdown
 COpenSSLConnection(%c%p) Error: %d - %s\n
 COpenSSLConnection(%c%p) failed cert verification: X509_V_ERR_... %d\n
 COpenSSLConnection(%c%p) failed to complete. %u BIO reads (%u calls) of %llu bytes. %u BIO writes of %llu bytes. %u calls to SSL_do_handshake (%u errors: %u want read %u want write).\n
 COpenSSLConnection(%c%p) handshake complete after %u BIO reads (%u calls) of %llu bytes. %u BIO writes of %llu bytes. %u calls to SSL_do_handshake (%u errors: %u want read %u want write).\n
 COpenSSLConnection(%c%p) made no progress: %s (%u in %d out)
-COpenSSLConnection(%c%p) waiting in connect: %s (last err = %d)\n
+COpenSSLConnection(%c%p) waiting in connect: %s (last err = %d) after %u BIO reads (%u calls, %u truncated) of %llu bytes, %u BIO writes of %llu bytes, %u DTLS retransmits\n
 COpenSSLConnection(c%p) reused session certificate was previously accepted, now rejected by callback\n
 COpenSSLConnection::BAsyncSend
 COpenSSLConnection::BAsyncSend (prefixed)
@@ -3537,15 +3564,15 @@ COpenSSLConnection::BAsyncSend prefix + payload size overflow
 COpenSSLConnection::BAsyncUnbufferedSend
 COpenSSLConnection::BYieldingWaitForSendsCompleted
 COpenSSLConnection::COpenSSLConnection
+COpenSSLConnection::OnDTLSTimeoutPoll
 COpenSSLConnection::OnThreadedWorkItemCompleted
 COpenSSLConnection::QueueRunSSL - actual
 COpenSSLConnection::RecvPkt
+COpenSSLConnection::RecvPktTakeOwnership
 COpenSSLConnection::ThreadedFlushEncryptedSendChunks
 COpenSSLConnection::ThreadedPerformInitialHandshake
 COpenSSLConnection::ThreadedPerformRead
 COpenSSLConnection::ThreadedPerformWrite
-COpenSSLConnection::ThreadedPerformWrite has a non-zero count, but an invalid head index (%d).
-COpenSSLConnection::ThreadedPerformWrite received an empty buffer
 COpenSSLConnection::ThreadedRunSSL
 COpenSSLConnection::ThreadedRunSSL iter
 COpenSSLConnection::ThreadedTransferWorkToThread
@@ -3639,6 +3666,7 @@ CTCPConnection not initialized, was GlobalInit called?
 CTCPConnection not initialized, was Init called?
 CTCPConnection stream parser indicates an error.  Disconnecting.\n
 CTCPConnection: message size %d exceeds max size of %d, received from %s, disconnecting
+CTCPConnection: routed frame on connection #%d from %s, a peer not trusted to route; discarding it and disconnecting\n
 CTCPConnection::AppendToIncomingMessage
 CTCPConnection::AppendToIncomingMessage (copy)
 CTCPConnection::AppendToIncomingMessage (repost)
@@ -3647,7 +3675,7 @@ CTCPConnection::BAsyncUnbufferedSend not implemented without IOCP!
 CTCPConnection::BFrameFuncRunConnections
 CTCPConnection::BFrameFuncRunConnections: got work item with no job mgr set, possible but unexpected during shutdown, otherwise likely a bug\n
 CTCPConnection::BFrameFuncRunConnections: outgoing connect to %s failed, error %d (%s)\n
-CTCPConnection::BInternalAsyncConnect: GetSSLContextForNewConnection returned null, aborting connect to %s\n
+CTCPConnection::BInternalAsyncConnect
 CTCPConnection::BInternalAsyncSend
 CTCPConnection::BInternalAsyncSend - MsgAlloc
 CTCPConnection::BInternalAsyncSend - memcpy
@@ -3664,17 +3692,15 @@ CTCPConnection::DispatchWorkItemToJob
 CTCPConnection::GlobalInit()
 CTCPConnection::NotifyOwnerOfRecv
 CTCPConnection::OnDataArrived
-CTCPConnection::SetIncoming: GetSSLContextForNewConnection returned null, disconnecting %s\n
+CTCPConnection::SetIncoming
 CTCPConnection::ThreadedDataArrived
 CTCPHost
 CTCPHost Globals
-CTCPHost: AcceptEx failed with error %d\n
-CTCPHost: AcceptEx succeeded after failure with new pCompletionData...\n
-CTCPHost::BPostSocketAccept
-CTCPHost::OnAcceptComplete: 1000 consecutive errors.  Last error %d (%s).  Stopping accepts, TCP host is no longer functioning
-CTCPHost::OnAcceptComplete: BPostSocketAccept failed, no more posted accepts, TCP host is no longer functioning
-CTCPHost::OnAcceptComplete: BPostSocketAccept failed, only %d current posted accepts\n
-CTCPHost::OnAcceptComplete: accept failed with fatal error %d (%s), TCP host is no longer functioning!
+CTCPHost: AcceptEx failed with error %d, %d current posted accepts\n
+CTCPHost::BPostAcceptIfWanted
+CTCPHost::BPostAcceptIfWanted: AcceptEx failed with error %d, no more posted accepts, TCP host is no longer functioning
+CTCPHost::ThreadedFunc_Accept: 1000 consecutive errors.  Last error %d (%s).  Stopping accepts, TCP host is no longer functioning
+CTCPHost::ThreadedFunc_Accept: accept failed with fatal error %d (%s), TCP host is no longer functioning!
 CTLOG_FILE
 CTLOG_STORE_load_file
 CTLOG_STORE_new
@@ -3734,6 +3760,7 @@ CUpdateUIChildProcess: failed to run child process
 CUpdateUICommandProcessor: invalid message size
 CUpdateUICommandProcessor: unexpected amount of bytes read
 CUpdateUILinux: error communicating with child process, detaching: %d\n
+CUpdateUILinux: failed to get our own executable path, no update UI\n
 CUtlBuffer
 CUtlBuffer sink
 CUtlBuffer::GetStringFast: binary buffers only
@@ -3764,6 +3791,7 @@ CWSARecvFrom (UDP) -- while completion data
 CWSARecvFrom (UDP) --ioctl(FIONREAD
 CWSASendThread
 CWSASendThread -- Sleep
+CWSASendThread: unexpected item type %d
 CWebSocketConnection
 CWebSocketConnection Globals
 CWebSocketConnection not initialized, was Init called?
@@ -3835,6 +3863,7 @@ CWorkThreadPool::~CWorkThreadPool: %d items were waiting on output ordering, dis
 CWorkThreadPool::~CWorkThreadPool: work complete queue not empty, %d items discarded.\n
 CWorkThreadPool::~CWorkThreadPool: work processing queue not empty: %d items discarded.\n
 CYieldingScopedJobLock failed - there is no indication to the caller!!!
+CZipEntryStreamInflater::SetInput called when it doesn't need input
 CZipWriterFile was not finalized before destruction
 CZipWriterFile was not finalized before reuse
 Cabal
@@ -3930,6 +3959,7 @@ CardNumber
 Carnet
 Cart is not valid for purchase
 Carte Bleue
+Cash App Pay
 Cash Card (Nodwin)
 Cash Options (Thailand)
 Cash on Delivery
@@ -4052,14 +4082,12 @@ Contact Support
 Content Server
 Content Version
 Content unavailable
-Content-Disposition
 Content-Disposition: attachment;
 Content-Disposition: form-data; name="%s"; filename="%s"\r\n
 Content-Disposition: form-data; name="%s"\r\n
 Content-Encoding
 Content-Length
 Content-Range
-Content-Transfer-Encoding
 Content-Transfer-Encoding: base64%s
 Content-Transfer-Encoding: base64%s%s
 Content-Type
@@ -5075,7 +5103,7 @@ Failed to unzip item %d (%s)\n
 Failed to unzip package (%s)
 Failed to unzip symlink %d (%s)\n
 Failed to verify manifest
-Failed! http%s://%s%s\n
+Failed! http%s://%s%s (status %d)\n
 Failed!999 Web Socket connect failure http%s://%s%s\n
 Failing manifest download with http error %d
 Failure
@@ -5152,6 +5180,7 @@ FiveHours
 Flags
 Flooding was detected in this HTTP/2 session, and it must be closed
 Flow control error
+Following redirect (status %d) to %s\n
 Forbidden
 Force Bounce
 Force Password Change
@@ -5435,6 +5464,8 @@ HTTP client connection (%p) HTTP2OnStreamCloseCallback %d - %s for stream %d whi
 HTTP client connection (%p) HTTP2OnStreamCloseCallback %d - %s for stream %d\n
 HTTP client connection (%p) NGHTTP2_OnErrorCallback %d - %s\n
 HTTP client not initialized
+HTTP request %s http%s://%s%s %s after %.3fs; %u captured HTTP client spew line(s) follow, prefixed with seconds since submit:\n
+HTTP request http%s://%s%s failed, as expected\n
 HTTP/1.0
 HTTP/1.1
 HTTP/1.1 101 Switching Protocols\r\n
@@ -5527,7 +5558,7 @@ INVALID_SOCKET != m_hSocket
 INVALID_SOCKET == m_hSocket
 IOCP Thread
 IOCP Thread %u
-IOTYPE_ACCEPT == pCompletionData->type
+IOTYPE_ACCEPT == pCompletionData->type && 0 == pCompletionData->ulResult
 IOTYPE_RECV should never be posted back to main thread
 IOTYPE_SEND/UNBUFERREDSEND
 IOTYPE_SOCKETFAIL
@@ -5731,7 +5762,6 @@ Invalid float number:
 Invalid format for pCAL parameter
 Invalid frame octets
 Invalid header block
-Invalid headers pkv in http request object?
 Invalid iCCP compression method
 Invalid image color type specified
 Invalid image height in IHDR
@@ -5839,6 +5869,7 @@ Japanese
 Job %llu (%s) aborting.  %s\n
 Job %llu (%s) caller deadline reached, but not aborting because '%s'\n
 Job %s being started by message %s, but prototype is not the same as the previously-registered one %s?
+Job %s got a work item completion it was not waiting for, wait count %d
 Job %s trying to release lock it's not holding\n
 Job %s trying to release lock though the lock is held by %s\n
 Job (%s) is trying to take the same lock more than once
@@ -6761,7 +6792,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 15 2026
+Oct 16 2026
 October
 Odia
 Offensive Avatar
@@ -6859,7 +6890,6 @@ P-224
 P-256
 P-384
 P-521
-P-521:P-384:P-256
 PARAMETERS
 PATCH
 PBE-MD2-DES
@@ -7112,7 +7142,6 @@ Parental Settings
 Parental control blocked
 ParentalSetup
 ParityStripe
-Parse framed Steam3 message headers and bodies on the SSL work thread, as well as framing them there.  Read per message, so it takes effect live.
 Parse protobuf message bodies of at least this many bytes on a worker thread instead of on the job thread.  0 disables threaded parsing entirely.
 Partial Content
 Partial refund
@@ -7197,8 +7226,6 @@ PostTime
 PostedAnnouncement
 PosterID
 Potential overflow in png_zalloc()
-Pragma
-Pre-parse the bodies of service methods that execute on the client.  Off by default: the only\nservers those pass through - CM and UDS - relay them by header and never look at the body, so\nparsing it here is work nobody on this side consumes.  Watch 'protobuf_parse_stats'.
 Pre-parsed body type disagrees with the handler for %s%s%s: parsed as %s, handler wants %s
 Pre-parsed net packet header is not a CMsgProtoBufHeader, parsing it again
 Preallocating
@@ -7457,6 +7484,7 @@ ReceivesGroupComment
 RecipientAddress
 RecommendedGame
 Reconfiguring
+Record every SPEW_HTTPCLIENT line per request (CHTTPRequestHandle::GetCapturedSpew), not just failures and anomalies, so a timeout or an error handler can dump the full story of that one request.  Always on while a server test set is running.
 RecordPadding
 Recurring
 Recurring Charge
@@ -7481,11 +7509,11 @@ Red Pagos
 RedCompra
 ReexecInSteamRuntime failed\n
 ReexecSteamLinux
-ReexecToLauncher: Running steamrt64 client but not opted in. Re-starting the scout environment\n
+ReexecToLauncher: Running steamrt64 client but opted out. Re-starting the scout environment\n
 ReexecToLauncher: don't have a valid steamrt64/steam executable\n
-ReexecToLauncher: not opted into steamrt3 client\n
-ReexecToLauncher: opted into steamrt3 client\n
+ReexecToLauncher: opted out of steamrt3 client\n
 ReexecToLauncher: proceeding in current environment\n
+ReexecToLauncher: steamrt3 client enabled\n
 Refundable
 Refunded
 Refunded to wallet
@@ -7500,7 +7528,6 @@ Registered ID:
 Registry
 Relay Failed
 Release State Override
-Release the raw packet bytes of an inbound message whose header and body were both parsed for us, rebuilding them on demand for the few callers that want them.  Also read by the SSL work thread, which then never copies those bytes out of its read buffer in the first place.  Watch 'protobuf_parse_stats' for how often that happens.
 ReleaseCleared() can only be used on a RepeatedPtrField not on
 ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena,
@@ -7547,7 +7574,6 @@ RequestCAPath
 RequestDenied
 RequestFriends
 RequestGlobal
-RequestHeaders
 RequestPostHandshake
 Requested feature was omitted at compile time
 Requested non-existent write path %s!\n
@@ -7571,7 +7597,6 @@ ResourceID 0x%x
 Response Not Received
 Response for %s can be cached? No.\n
 Response for %s can be cached? Yes.\n
-ResponseHeaders
 Restored data doesn't match checksum
 Restricted country
 Restricted device
@@ -7585,6 +7610,8 @@ Revive
 Revoked
 Romanian
 Root
+Routed-frame stream parser on a connection whose owner does not vouch for its peers; using the plain parser instead
+Routed-frame stream parser on an SSL context that does not require a verified peer certificate; using the plain parser instead
 Routing Domain Identifiers
 Row has too many bytes to allocate in memory
 RuPay
@@ -7707,6 +7734,7 @@ SRP-DSS-AES-128-CBC-SHA
 SRP-DSS-AES-256-CBC-SHA
 SRP-RSA-AES-128-CBC-SHA
 SRP-RSA-AES-256-CBC-SHA
+SRTP keys asked of a connection that is not DTLS
 SRTP_AEAD_AES_128_GCM
 SRTP_AEAD_AES_256_GCM
 SRTP_AES128_CM_SHA1_32
@@ -7934,6 +7962,9 @@ Send Owner
 Send Proxied Owner
 Send Proxied Router
 Send Router
+SendThreadCloseSocket
+SendThreadNoop
+SendThreadShutdownSocket
 SenderAddress
 SenderName
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
@@ -8201,7 +8232,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Oct 15 2026 23:23:33
+Startup - updater built Oct 16 2026 21:56:57
 State
 StaticFileWriterThread()
 Steam
@@ -8282,7 +8313,7 @@ Subscribed
 Subscribers
 Succeeded
 Success
-Success! http%s://%s%s\n
+Success! http%s://%s%s (status %d)\n
 SuggestedFriend
 Suite B: cannot sign P-384 with P-256
 Suite B: certificate version invalid
@@ -8299,6 +8330,7 @@ Suspect
 Suspected Hijacker
 Suspended
 Suspension not allowed here
+Suspicious Content
 Swahili
 Swap
 Swedish
@@ -8641,6 +8673,7 @@ Thread(0x%p/0x%p/0x%x)
 ThreadGetProcessExitCode
 ThreadInMainThread()
 ThreadedParsePacketToProtoBufMsg
+ThreadedPerformInitialHandshake DTLSv1_handle_timeout
 ThreadedPerformInitialHandshake SSL_do_handshake
 ThreeHours
 Thursday
@@ -8701,7 +8734,6 @@ Transaction expired
 TransactionID
 TransactionTime
 Transcode Behind
-Transfer-Encoding
 TransmitFile
 Tried to Seek NULL file handle!\n
 Tried to close unknown file pointer %p\n
@@ -8731,6 +8763,7 @@ Type is already registered:
 Type=
 Type=nil
 UDP Socket %i too full (%d bytes, warning limit %d)\n
+UDP incoming peer index points at a connection that no longer exists
 UDPSocket: ThreadedFunc_RecvUDP got error %d (%s) from socket %d, (invalid) hSocketOwner %d, we're not receiving on this socket now!\n
 UDPSocket: WSARecvFrom returned benign error %d, retrying\n
 UDPSocket: WSARecvFrom synchronously returned error %d (%s) from socket %d, (invalid) hSocketOwner %d, we're not receiving on this socket now.\n
@@ -8905,7 +8938,6 @@ UpdateUI freetype function FT_Set_Pixel_Sizes missing
 UpdateUI freetype initialization failed
 UpdateUI libfreetype.so.6 not found
 UpdateUI: showing logo
-UpdateUI: skip show logo\n
 Updated Disabled by app
 Updating Steam...
 Updating symlink: %s -> %s\n
@@ -9078,9 +9110,9 @@ WalletAmt
 WalletCur
 Warning
 Warning parsing text-format
-Warning: %s
 Warning: %s: lsof is required to run steam and it may not be available - please install
 Warning: %s: unexpected number of address fields
+Warning: failed to get our own executable path, no update UI\n
 Warning: failed to init crash handler: failed to create crash handler\n
 Warning: failed to init crash handler: no factory\n
 Warning: failed to set thread priority: foreign thread unsupported\n
@@ -9106,11 +9138,13 @@ WebMoney Steam Card Top Up (Japan)
 WebSocket
 Wednesday
 Welsh
+Wero
 What city were you born in?
 What is the name of your pet?
 What is the name of your school?
 What is your favorite team?
 What is your mother's maiden name?
+When ParseKV rejects a field that isn't a valid integer, include the rejected value in the warning
 When a local endpoint expects to receive SETTINGS frame, it receives an other type of frame
 When we send a message expecting a reply from a job with a deadline, set the timeout on the message to [current time remaining in this job] - N ms.  A negative value prevents propagating caller deadlines down the chain
 Whitelist
@@ -9149,7 +9183,7 @@ Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 Work Item (%s) for Work Pool %s completed but job no longer existed to notify\n
 Work pool %s completed an item with no order group, dispatching unordered
 Work pool %s ensures output ordering, it must be drained via BDispatchCompletedWorkItems()
-Work thread '%s' is marked exited, but we could not immediately join prior to deleting -- proceeding without join\n
+Work thread '%s' is marked exited, but we could not join prior to deleting -- proceeding without join\n
 Workshop
 Workshop Items
 WorkshopItemPublished
@@ -9169,6 +9203,7 @@ Wrote palette index exceeding num_palette
 X Error
 X-Forwarded-For
 X25519
+X25519:P-256:P-384:P-521
 X360
 X400Name
 X400Name:<unsupported>
@@ -9400,7 +9435,6 @@ XQueryKeymap
 XQueryPointer
 XRRFreeCrtcInfo
 XRRFreeOutputInfo
-XRRFreeScreenResources
 XRRGetCrtcInfo
 XRRGetCrtcInfo Workaround: Returning dummy CRTC info for GDK workaround\n
 XRRGetCrtcInfo Workaround: initialized with override: %d real: %p\n
@@ -9409,8 +9443,6 @@ XRRGetOutputInfo
 XRRGetOutputInfo Workaround: Returning dummy output info for GDK workaround\n
 XRRGetOutputInfo Workaround: initialized with override: %d real: %p\n
 XRRGetOutputInfo Workaround: skipping release of dummy crtc info\n
-XRRGetScreenResources
-XRRGetScreenResourcesCurrent
 XRaiseWindow
 XRegisterIMInstantiateCallback
 XRequest
@@ -10202,7 +10234,7 @@ bn_to_asn1_string
 bnrand
 bnrand_range
 bodies pre-parsed and never used (%s bytes)
-bodies skipped as client-relayed
+bodies skipped as relayed
 body pre-parses discarded by a second wrapper
 body size
 bool
@@ -10320,8 +10352,10 @@ cHRM chunk does not match sRGB
 cMicrosecondsToSleep < k_cMicroSecJobPausedTimeout
 cNAMERecord
 cRLSign
+cRef >= 0
 cRefCount >= 0
 cSecs >= 0
+cSeqsAcked <= cRetryInfo
 cSeqsAcked > 0
 ca dn length mismatch
 ca key too small
@@ -11303,6 +11337,7 @@ data too large for key size
 data too large for modulus
 data too small
 data too small for key size
+data:
 dataEncipherment
 data_ == other.data_
 data_collect_method
@@ -12173,7 +12208,6 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(
 givenName
 glBegin
 glBindTexture
@@ -12198,17 +12232,11 @@ glTexParameterf
 glVertex2f
 glVertex3f
 glViewport
-glXChooseFBConfig
 glXChooseVisual
 glXCreateContext
 glXDestroyContext
-glXGetFBConfigAttrib
-glXGetProcAddress
-glXGetProcAddressARB
-glXGetVisualFromFBConfig
 glXMakeCurrent
 glXSwapBuffers
-glXSwapIntervalEXT
 glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
@@ -13787,7 +13815,7 @@ level3
 level_add_node
 lib(%lu)
 libGL.so.1
-libGLX.so
+libGLX.so.0
 libSDL3.so.0
 libX11.so.6
 libXrandr.so.2
@@ -13963,9 +13991,12 @@ m_QueueScheduledItems
 m_QueueScheduledItems.Count() >= m_ListScheduledFunctions.Count()
 m_ReceiveBuffer
 m_Reporters
+m_RequestHeaders
+m_ResponseHeaders
 m_STimeSwitched.LTime() == CSTime::LServerTimeCur()
 m_SearchPaths
 m_SearchPaths[ iPath ].m_PackFiles
+m_SpewLog
 m_SpewThrottle
 m_StatExecutionTime
 m_StatWaitTime
@@ -14012,8 +14043,6 @@ m_cachedRequest.GetPtr()
 m_cachedResponse.GetPtr()
 m_configOverride
 m_cubAlreadySentFromHeadBuffer < head.len
-m_cubEncryptedSendPending == 0
-m_cubEncryptedSendPending >= chunk.m_cubData
 m_cubMsgIncomingRecv <= m_cubMsgIncomingAlloc
 m_data
 m_decoratedFactory
@@ -14091,7 +14120,7 @@ m_nRecursions > 0
 m_nTheirSeqNacked < m_nTheirSeqReceived
 m_nWorkItemState != k_nSSLWorkItemIdle
 m_nWorkItemState == k_nSSLWorkItemRunningPending
-m_nWritesPendingInEncryptedBuffer == 0 && m_cubEncryptedSendPending == 0
+m_nWritesPendingInEncryptedBuffer == 0 && m_listEncryptedSendChunks.Count() == 0
 m_p == NULL
 m_pBudgetGroups
 m_pBudgetGroups == NULL
@@ -14107,6 +14136,7 @@ m_pConnectionCallback == NULL
 m_pConnectionRemoteIntraProcess->m_pConnectionRemoteIntraProcess == this
 m_pCookieContainer
 m_pCurrentWorkItem
+m_pDTLS
 m_pFontPackagePB
 m_pFontPackagePB->package_version() == 1
 m_pHTTP2Session
@@ -14115,6 +14145,7 @@ m_pHTTPRedirectHandler
 m_pHTTPRequest
 m_pHeader->ip_v6().length() == 16
 m_pInitializationThread
+m_pJob->m_pMsgTraceVProfSlice == this
 m_pJobFuncsData->m_listActiveJobs.Count()
 m_pKeyValues
 m_pListQueuedSSLRecvsPostHandshake
@@ -14123,6 +14154,7 @@ m_pLogInstance
 m_pMemory
 m_pMetrics
 m_pMetricsPayload
+m_pMsgTraceVProfSlice == NULL
 m_pNetConnection
 m_pNetConnection->m_pConnectionCallback != this
 m_pNetConnection->m_pConnectionCallback == this
@@ -14168,8 +14200,6 @@ m_pWebSocketConnectionCallback
 m_pZip
 m_pZip == NULL
 m_pkvLastKeyAdded != NULL
-m_pkvRequestHeaders
-m_pkvResponseHeaders
 m_pmapAdrToClientSessionLRU
 m_pmapAdrToClientSessionLRU->Peek(i).Get()
 m_prescientDimensions
@@ -14190,6 +14220,7 @@ m_sLanguage
 m_sPreviousFilename
 m_sWaitDetails
 m_sYieldInfo
+m_sb
 m_stackDoNotYieldGuards
 m_stackDoNotYieldGuards.Count() == 0
 m_stimeFakeTimeout.LTime() < INT64_MAX
@@ -14226,7 +14257,7 @@ m_strProxyHostString
 m_strProxyOverride
 m_strRawQueryString
 m_strRequestHostName
-m_strSRTPPRofileSelected
+m_strSRTPProfileSelected
 m_strSource
 m_strTargetHostName
 m_strURL
@@ -14250,6 +14281,9 @@ m_vecDrives
 m_vecGetParams
 m_vecGetParams[i]
 m_vecHashBuckets
+m_vecHeaders
+m_vecHeaders[iHeader].m_strName
+m_vecHeaders[iHeader].m_strValue
 m_vecIPFilterRanges
 m_vecIPFilterRangesV6
 m_vecMetrics
@@ -15156,6 +15190,7 @@ pRSAKey
 pReceivedPkt
 pReceivedPkt == m_pReceivedPktFirst
 pRecvFileProgress->pIAsync
+pRecvState
 pReq->AccessBodyDataBuffer().TellPut() == 0
 pReq->GetRequestHandle()->AccessClientRequest()->GetBodyBuffer()->TellPut() == (int)pReq->m_cRequestBodyBytesTotal
 pReq->m_cRequestBodyBytesSent == pReq->m_cRequestBodyBytesTotal
@@ -15271,6 +15306,7 @@ pchInput
 pchMsg
 pchName
 pchNeedle != NULL
+pchNode
 pchOut
 pchSearch != nullptr
 pchSteam2ID
@@ -15626,6 +15662,9 @@ pthread_rwlock_init
 pthread_rwlock_rdlock
 pthread_rwlock_unlock
 pthread_rwlock_wrlock
+pthread_rwlockattr_destroy
+pthread_rwlockattr_init
+pthread_rwlockattr_setkind_np
 pthread_self
 pthread_setname_np
 pthread_setschedparam
@@ -15721,7 +15760,7 @@ rang
 range
 raw byte reads on pre-parsed packets
 raw packets rebuilt after being dropped: %s, %s bytes re-serialized (%s per rebuild)\n
-raw packets rebuilt after being dropped: none (@bProtoBufNetPacketDropRawBytes = %d)\n
+raw packets rebuilt after being dropped: none\n
 rblk->n >= (16 - 1)
 rc2-40-cbc
 rc2-64-cbc
@@ -16007,7 +16046,6 @@ scheduledItem.m_ulTime
 scheme=
 schinese
 scots
-script
 scrypt
 scsv received when renegotiating
 sct future timestamp
@@ -16401,6 +16439,7 @@ sm4-cfb8
 sm4-ctr
 sm4-ecb
 sm4-ofb
+sm_HashMapIncomingByPeer
 sm_HashMapPTCPConnection
 sm_HashMapPTCPConnection[ i ]
 sm_HashMapPUDPConnection
@@ -16555,7 +16594,6 @@ ssl3_setup_write_buffer
 ssl3_write_bytes
 ssl3_write_pending
 sslCA
-sslType == k_EDTLSConnectionType_Client || sslType == k_EDTLSConnectionType_Server
 ssl_add_cert_chain
 ssl_add_cert_to_wpacket
 ssl_bad_method
@@ -17146,7 +17184,6 @@ transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
 transfer-encodin
 transfer-encoding
-transfer-encoding: %s not yet implemented\n
 transit
 tree_init
 true
@@ -17379,6 +17416,7 @@ unknown trust id
 unknown ttyget errno value
 unknown version
 unknown\n%*s
+unknown_type
 unlink
 unlink_dep
 unlink_sib

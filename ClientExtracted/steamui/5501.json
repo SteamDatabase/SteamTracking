@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "E napon nincs új megjelenés, amit neked tudnánk ajánlani. <1>Nézd meg a naptárad többi részét!</1>",
     "NewBadge": "ÚJ",
     "Time_Today": "Ma",
+    "DiscountsAndEvents_Title": "Leárazások és események",
+    "DiscountsAndEvents_SeeMore": "Több mutatása",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Hét végi ajánlat",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Hét közepi ajánlat",
+    "DiscountsAndEvents_Banner_DailyDeal": "Mai ajánlat",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Legnagyobb kedvezmény",
+    "DiscountsAndEvents_LoadError": "A Leárazások és események jelenleg nem tölthető be. Kérjük, próbáld újra később.",
     "store_ui_dummy": "dont translate"
 }

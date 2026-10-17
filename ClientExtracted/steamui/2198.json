@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Afficher tous les titres ayant reçu l'étiquette « Compatible » ou « Jouable » (jeux pouvant nécessiter des étapes supplémentaires dans leur configuration ou interaction).",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Afficher tous les jeux ayant reçu l'étiquette « Compatible » ou « Jouable », ainsi que ceux dont la compatibilité avec la Steam Machine n'a pas encore été vérifiée.",
     "MachineVerified_FilterDescription_AllGames": "Afficher tous les jeux de votre bibliothèque, y compris ceux qui ne fonctionnent pas correctement sur la Steam Machine.",
-    "FrameVerified_FilterDescription_Verified": "Afficher uniquement les jeux ayant reçu l'étiquette « Compatible » avec le Steam Frame.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Afficher tous les titres ayant reçu l'étiquette « Compatible » ou « Jouable » (jeux pouvant nécessiter des étapes supplémentaires dans leur configuration ou interaction) avec le Steam Frame.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Afficher tous les jeux ayant reçu l'étiquette « Compatible » ou « Jouable », ainsi que ceux dont la compatibilité avec le Steam Frame n'a pas encore été vérifiée.",
-    "FrameVerified_FilterDescription_AllGames": "Afficher tous les jeux de votre bibliothèque, y compris ceux qui ne fonctionnent pas correctement sur le Steam Frame."
+    "FrameVerified_FilterDescription_Verified": "Afficher uniquement les jeux parfaitement compatibles avec les contrôles et l'affichage intégrés du Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Afficher tous les titres ayant reçu l'étiquette « Compatible » ou « Jouable » (jeux pouvant nécessiter des étapes supplémentaires dans leur configuration ou interaction).",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Afficher tous les jeux ayant reçu l'étiquette « Compatible » ou « Jouable », ainsi que ceux dont la compatibilité avec le Steam Frame en mode autonome n'a pas encore été vérifiée.",
+    "FrameVerified_FilterDescription_AllGames": "Afficher tous les jeux de votre bibliothèque, y compris ceux qui ne fonctionnent pas correctement sur le Steam Frame en mode autonome."
 }

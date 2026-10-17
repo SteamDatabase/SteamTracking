@@ -927,7 +927,7 @@ service Econ {
 	rpc GetAssetClassInfoInternal (.CEcon_GetAssetClassInfo_Request) returns (.CEcon_GetAssetClassInfo_Response);
 	// ePrivilege=0
 	rpc GetAssetClassProperties (.CEcon_GetAssetClassProperties_Request) returns (.CEcon_GetAssetClassProperties_Response);
-	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetAssetPropertySchema (.CEcon_GetAssetPropertySchema_Request) returns (.CEcon_GetAssetPropertySchema_Response);
 	// ePrivilege=7
 	rpc GetEconAppSettings (.CEcon_GetEconAppSettings_Request) returns (.CEcon_GetEconAppSettings_Response);
@@ -935,7 +935,7 @@ service Econ {
 	rpc GetEconSummary (.CEcon_GetEconSummary_Request) returns (.CEcon_GetEconSummary_Response);
 	// ePrivilege=0
 	rpc GetEligibleOneOffRefunds (.CEcon_GetEligibleOneOffRefunds_Request) returns (.CEcon_GetEligibleOneOffRefunds_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=2
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetInventoryItemsWithDescriptions (.CEcon_GetInventoryItemsWithDescriptions_Request) returns (.CEcon_GetInventoryItemsWithDescriptions_Response);
 	// ePrivilege=0
 	rpc GetItemShopPartnerToken (.CEcon_GetItemShopPartnerToken_Request) returns (.CEcon_GetItemShopPartnerToken_Response);

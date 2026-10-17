@@ -944,7 +944,6 @@ This should take less than a minute."
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Primary Monitor Vendor:  %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Primary Monitor Model:  %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Supported MSAA Modes:  %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity Detected (%s1 Displays)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Driver Not Detected"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"DirectX Driver Name Not Detected"
@@ -4836,9 +4835,6 @@ Set a category for these games to help you find them quickly and organize your L
 
 "Steam_VacBanOnAccount"		"VAC Ban(s) on Account"
 "Steam_NoVacBanOnAccount"	"No VAC Bans on Account"
-
-"Steam_NeedToRestart"		"Restart Needed"
-"Steam_NeedToRestartDifferentClientLauncher" "Another version of Steam on this computer is trying to start.\n\nTo run it you must first exit this version of Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Allow desktop Web browsers to automatically log into Steam sites\n  (requires restart for changes to apply)"
 

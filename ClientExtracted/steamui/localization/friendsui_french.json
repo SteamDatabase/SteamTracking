@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Inviter dans le canal vocal",
     "VoiceChat_SendInviteMessage": "Envoyer une invitation par message",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "En sourdine",
     "VoiceChat_Unavailable_NotFriend": "Voix non disponible : %1$s n'est pas dans votre liste de contacts.",
     "VoiceChat_Unavailable_NotOnline": "Voix non disponible : %1$s n'est pas en ligne.",
     "VoiceChat_Unavailable_NotInBeta": "Voix non disponible : %1$s n'exécute pas la nouvelle version bêta du chat.",
@@ -640,6 +641,7 @@
     "Button_Share": "Partager",
     "Button_Ignore": "Ignorer",
     "DirectMessageFromNonFriend": "Message d'une personne qui n'est pas dans votre liste de contacts",
+    "DirectMessageFromNonFriend_SharedGroup": "Vous êtes tous deux membres du chat de groupe « %1$s ».",
     "NonFriendAction_Block": "Bloquer les communications",
     "NonFriendAction_Allow": "Autoriser les communications",
     "SuspiciousMessage_Header": "Discussion par chat suspecte",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Correction du problème suivant : les fenêtres de contacts et de chat ne s'affichaient pas dans l'overlay en jeu sur Linux et macOS.",
     "BBCode_Loading": "Chargement",
     "BBCode_Failed": "Échec du chargement",
-    "broadcastDetails_Playing": "Joue à",
-    "VoiceChat_Muted_Deck": "En sourdine"
+    "broadcastDetails_Playing": "Joue à"
 }

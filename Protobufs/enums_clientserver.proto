@@ -39,6 +39,7 @@ enum EMsg {
 	k_EMsgTimestampResponse = 150;
 	k_EMsgServiceMethodCallFromClient = 151;
 	k_EMsgServiceMethodSendToClient = 152;
+	k_EMsgShellStatsToAggregator = 153;
 	k_EMsgBaseShell = 200;
 	k_EMsgAssignSysID = 200;
 	k_EMsgExit = 201;
@@ -71,6 +72,7 @@ enum EMsg {
 	k_EMsgGMDynamicRoutingUpdate = 248;
 	k_EMsgEnsureBillingConfigReload_TEST = 249;
 	k_EMsgEnsureBillingConfigReloadResponse_TEST = 250;
+	k_EMsgHubShellHubSet = 251;
 	k_EMsgBaseGM = 300;
 	k_EMsgHeartbeat = 300;
 	k_EMsgShellFailed = 301;
@@ -99,6 +101,9 @@ enum EMsg {
 	k_EMsgGMGetModifiedConVars = 339;
 	k_EMsgGMGetModifiedConVarsResponse = 340;
 	k_EMsgGMNeedShellAndServerAddresses = 341;
+	k_EMsgGMAdminStatsSubscribe = 342;
+	k_EMsgGMAdminStatsTablesWanted = 343;
+	k_EMsgGMHotfixDeployedToShells = 344;
 	k_EMsgBaseAIS = 400;
 	k_EMsgAISRequestContentDescription = 402;
 	k_EMsgAISGetPackageChangeNumber = 405;

@@ -1540,7 +1540,8 @@ ${FILENAME}
 *uYO
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG['
+++CCUNG;
+++CCUNG`
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +AVpd
@@ -2073,6 +2074,8 @@ ${FILENAME}
 10CUtlMemoryIN11CUtlHashMapIj10CUtlVectorIP15COverlayElementS_IS3_EE10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIj34CVirtualControllerActionSetState_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIj34CVirtualControllerActionSetState_t10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIjN25SteamNetworkingSocketsLib17SharedClusterData14DataCenterPingESt8equal_toIjESt4hashIjEjE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIjN25SteamNetworkingSocketsLib17SharedClusterData14DataCenterPingESt8equal_toIjESt4hashIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIjP15COverlayElement10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIjP15COverlayElement10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIjP31CVirtualControllerLayoutPackage10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
@@ -2103,6 +2106,7 @@ ${FILENAME}
 10CUtlVectorIN11CUtlHashMapI10CUtlStringP10CUtlBuffer10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapIiPN15COverlayElement11ImageData_tE10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIj34CVirtualControllerActionSetState_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS7_EE
+10CUtlVectorIN11CUtlHashMapIjN25SteamNetworkingSocketsLib17SharedClusterData14DataCenterPingESt8equal_toIjESt4hashIjEjE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIjP15COverlayElement10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIjP31CVirtualControllerLayoutPackage10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIjS_IP15COverlayElement10CUtlMemoryIS2_EE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tES3_ISB_EE
@@ -2128,12 +2132,14 @@ ${FILENAME}
 11CFrameStats
 11CPathString
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
+11CSeasonPass
 11CServerList
 11CSetIconMsg
 11CUtlHashMapI10CUtlStringP10CUtlBuffer10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapIiPN15COverlayElement11ImageData_tE10CDefEqualsIiE11HashFunctorIiEiE
 11CUtlHashMapIj10CUtlVectorIP15COverlayElement10CUtlMemoryIS2_EE10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIj34CVirtualControllerActionSetState_t10CDefEqualsIjE11HashFunctorIjEjE
+11CUtlHashMapIjN25SteamNetworkingSocketsLib17SharedClusterData14DataCenterPingESt8equal_toIjESt4hashIjEjE
 11CUtlHashMapIjP15COverlayElement10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjP31CVirtualControllerLayoutPackage10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE
@@ -2211,7 +2217,6 @@ ${FILENAME}
 14IShakeListener
 14IStreamDecoder
 14StoreItem_Demo
-14StoreItem_Eula
 14StoreItem_Link
 1536
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
@@ -2317,7 +2322,6 @@ ${FILENAME}
 19CTransportSignalMsg
 19CUtlNoEscConversion
 19CVirtualHereManager
-19StoreItem_Anticheat
 19StoreItem_BasicInfo
 19StoreItem_Platforms
 19StreamDecoderThread
@@ -2344,6 +2348,7 @@ ${FILENAME}
 20CPyrowaveVulkanFrame
 20CRecordedInputStream
 20CRefCountServiceBaseILb1E6CRefMTE
+20CSeasonPassMilestone
 20CSetSpectatorModeMsg
 20CSetTargetBitrateMsg
 20CSetTouchIconDataMsg
@@ -2359,6 +2364,8 @@ ${FILENAME}
 20IUniformRandomStream
 20StoreItem_Categories
 20StoreItem_RelatedF2P
+21:54:48
+21:57:07
 21AES_ECB_CipherContext
 21AES_GCM_CipherContext
 21CClanAnnouncementInfo
@@ -2374,8 +2381,6 @@ ${FILENAME}
 21CUtlCStringConversion
 21ISteamNetworkingUtils
 21StoreItem_FreeWeekend
-21StoreItem_PageSection
-21StoreItem_PressReview
 21StoreItem_ReleaseInfo
 21StoreItem_Screenshots
 21UserSystemInformation
@@ -2406,9 +2411,8 @@ ${FILENAME}
 22IServerManagerDelegate
 22StoreItem_ExtraDetails
 22StoreItem_PackageGroup
+22StoreItem_PurchaseNote
 22StoreItem_RelatedItems
-23:23:28
-23:23:32
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CECKeyExchangePublicKey
@@ -2453,6 +2457,7 @@ ${FILENAME}
 25CRemotePlayTogetherDialog
 25CResumeControllerInputMsg
 25CSaveTouchConfigLayoutMsg
+25CSeasonPassDateAndDisplay
 25CSetStreamingClientConfig
 25CStreamPlayerMenubarToast
 25CStreamPlayerOverlayToast
@@ -2476,6 +2481,7 @@ ${FILENAME}
 27CMsgSteamDatagramDiagnostic
 27CRemoteClient_ClientDetails
 27CRemoteClient_DeviceDetails
+27StoreItem_ExtraDetails_Eula
 27StoreItem_SupportedLanguage
 28CGameNetworkingUI_AppSummary
 28CMsgRemoteDeviceProofRequest
@@ -2495,6 +2501,7 @@ ${FILENAME}
 29CStreamDecoderVideoStandalone
 29CStreamingClientHandshakeInfo
 29CStreamingServerHandshakeInfo
+29StoreItem_ExtraDetails_Season
 29StoreItem_Platforms_VRSupport
 2>/dev/null
 2UT\r
@@ -2510,6 +2517,7 @@ ${FILENAME}
 30CStoreBrowse_GetItems_Response
 30CTouchActionSetLayerRemovedMsg
 30CVirtualControllerGlobalConfig
+30StoreItem_ExtraDetails_Episode
 30StoreItem_Trailers_VideoSource
 31CAdHocValidation_SimpleCallback
 31CCommunity_ClanAnnouncementInfo
@@ -2521,6 +2529,7 @@ ${FILENAME}
 31CSetInputTemporarilyDisabledMsg
 31CStorePageFilter_SalePageFilter
 31CVirtualControllerLayoutPackage
+31StoreItem_OptInRegistrationTags
 3265
 32CMsgRemoteDeviceStreamingRequest
 32CMsgSteamDatagramP2PRoutes_Route
@@ -2531,6 +2540,7 @@ ${FILENAME}
 32CRemotePlayTogether_Notification
 32CStreamPlayerConfig_CAudioConfig
 32CVirtualControllerConfig_Control
+32StoreItem_ExtraDetails_Anticheat
 32StoreItem_Screenshots_Screenshot
 32UserContentDescriptorPreferences
 33CGameNetworkingUI_ConnectionState
@@ -2546,6 +2556,7 @@ ${FILENAME}
 33CRemotePlayTogetherGroupUpdateMsg
 33CStorePageFilter_ContentHubFilter
 33CTransportSignalMsg_WebRTCMessage
+33StoreItem_ExtraDetails_Metacritic
 33StoreItem_PurchaseOption_Discount
 34CMsgRemoteClientBroadcastDiscovery
 34CMsgSteamDatagramCertificateSigned
@@ -2561,6 +2572,10 @@ ${FILENAME}
 34CStoreBrowse_GetPriceStops_Request
 34CVirtualControllerActionSetState_t
 34CVirtualControllerConfig_ActionSet
+34StoreItem_ExtraDetails_CastAndCrew
+34StoreItem_ExtraDetails_EarlyAccess
+34StoreItem_ExtraDetails_PageSection
+34StoreItem_ExtraDetails_PressReview
 34StoreItem_Trailers_AdaptiveTrailer
 35CControllerPersonalizationUpdateMsg
 35CGameNetworkingUI_ConnectionSummary
@@ -2576,8 +2591,8 @@ ${FILENAME}
 35CStoreBrowse_GetDLCForApps_Response
 35CStoreBrowse_GetPriceStops_Response
 35ISteamNetworkingConnectionSignaling
-35StoreItem_AIGeneratedContentService
 35StoreItem_BasicInfo_CreatorHomeLink
+35StoreItem_ExtraDetails_LinksAndInfo
 36$32
 36CHIDMessageToRemote_DeviceDisconnect
 36CMsgRemoteClientBroadcastStatus_User
@@ -2652,6 +2667,7 @@ ${FILENAME}
 41CRemoteClient_AllocateRelayServer_Request
 41CRemoteClient_SteamBroadcast_Notification
 41CStoreBrowse_GetContentHubConfig_Response
+41StoreItem_ExtraDetails_SystemRequirements
 42CHIDMessageToRemote_DeviceGetFeatureReport
 42CHIDMessageToRemote_DeviceGetProductString
 42CMsgRemoteDeviceAuthorizationCancelRequest
@@ -2688,6 +2704,7 @@ ${FILENAME}
 46CMsgSteamDatagramConnectionStatsRouterToServer
 46CMsgSteamDatagramConnectionStatsServerToRouter
 46CMsgSteamDatagramGameserverPingRequestEnvelope
+46StoreItem_ExtraDetails_SystemRequirements_Size
 47CHIDMessageToRemote_DeviceGetSerialNumberString
 47CMsgSteamDatagramRouterPingReply_RouteException
 47CMsgSteamNetworkingP2PRendezvous_ConnectRequest
@@ -2698,6 +2715,7 @@ ${FILENAME}
 48CMsgRemoteDeviceStreamingRequest_ReservedGamepad
 48CMsgSteamNetworkingP2PRendezvous_ReliableMessage
 48CRemoteClient_DisableSteamBroadcast_Notification
+48StoreItem_ExtraDetails_AIGeneratedContentService
 49CMsgRemoteClientBroadcastClientPairingExclusivity
 49CMsgSteamDatagramConnectionStatsP2PClientToRouter
 49CMsgSteamDatagramConnectionStatsP2PRouterToClient
@@ -2715,6 +2733,7 @@ ${FILENAME}
 546632
 54CControllerConfigMsg_ControllerPersonalizationResponse
 54CMsgRemoteDeviceAuthorizationRequest_CKeyEscrow_Ticket
+54StoreItem_ExtraDetails_SystemRequirements_Requirements
 5546632
 56CRemoteClient_CreateRemotePlayTogetherInvitation_Request
 56CRemoteClient_DeleteRemotePlayTogetherInvitation_Request
@@ -2731,6 +2750,7 @@ ${FILENAME}
 6!9@i
 6. makr
 6144
+62StoreItem_ExtraDetails_SystemRequirements_PlatformRequirements
 64KKhJI55JI64KK
 6632
 666666666666666666666666666666666666666666666666
@@ -2795,7 +2815,6 @@ ${FILENAME}
 9CUtlQueueIP13CStreamPacketE
 9CUtlQueueIP28HIDDeviceSDLGamepadStateV2_tE
 9CUtlQueueIP7CLogMsgE
-9HH3l
 9IMemAlloc
 9StoreItem
 9[A&57*8.
@@ -2814,7 +2833,6 @@ ${FILENAME}
 : inherit\n
 : zabezpe
 :%dx%d@%d %u
-:7FY
 :BAD BOOLEAN
 :BAD ENUMERATED
 :BAD INTEGER
@@ -4356,6 +4374,7 @@ CHECK failed: uninterpreted_options_field != nullptr:
 CHECK failed: value != nullptr:
 CHECK failed: z.first != NULL:
 CHI STA GIOCANDO?
+CHIDDeviceListSDL(): Couldn't load %s, not enumerating devices\n
 CHROMEOS
 CHTTPRequest to %s being destructed, but we never executed the callback or canceled it
 CINE JOAC
@@ -4368,6 +4387,8 @@ CKeyValuesSystem dumping last %u keys added to system (oldest first):\n
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
 CKeyValuesSystem::AddStringToPool: over 75%% full (%u bytes left)
+CKeyValuesSystem::BSetHashTableBuckets: %u buckets is not a power of 2
+CKeyValuesSystem::BSetHashTableBuckets: %u key names were already added, keeping %u buckets
 CLEAR_DIGITAL_MAPPINGS failed for controller at /dev/hidraw%d\n
 CLIENTENGINE_INTERFACE_VERSION005
 CLIENT_EARLY_TRAFFIC_SECRET
@@ -8128,9 +8149,11 @@ N25SteamNetworkingSocketsLib16LinkStatsTrackerINS_34LinkStatsTrackerClientRelayS
 N25SteamNetworkingSocketsLib17CPacketLaggerRecvE
 N25SteamNetworkingSocketsLib17CPacketLaggerSendE
 N25SteamNetworkingSocketsLib17CRawUDPSocketImplE
+N25SteamNetworkingSocketsLib17SharedClusterDataE
 N25SteamNetworkingSocketsLib19CQueuedTaskOnTargetINS_27CSteamNetworkConnectionPipeEEE
 N25SteamNetworkingSocketsLib20CConnectionTransportE
 N25SteamNetworkingSocketsLib20LinkStatsTrackerBaseE
+N25SteamNetworkingSocketsLib20SteamDatagramNetworkE
 N25SteamNetworkingSocketsLib21CDedicatedBoundSocketE
 N25SteamNetworkingSocketsLib21CSteamNetworkingUtilsE
 N25SteamNetworkingSocketsLib22ScheduledMethodThinkerINS_27CConnectionTransportP2PBaseEEE
@@ -8758,7 +8781,7 @@ Obreve
 Obtained EMS handle %u
 Obtained XMS handle %u
 Ocircumflex.smcp\vOtilde.smcp
-Oct 15 2026
+Oct 16 2026
 October
 Ocultar teclado virtual
 Oculte os controles por toque no menu de configura
@@ -10469,6 +10492,7 @@ SDRClient_EnableTOSProbes
 SDRClient_FakeClusterPing
 SDRClient_ForceProxyAddr
 SDRClient_ForceRelayCluster
+SDRClient_FreeStaticMemory
 SDRClient_LimitPingProbesToNearestN
 SDRClient_MinPingsBeforePingAccurate
 SDRClient_SingleSocket
@@ -13303,6 +13327,7 @@ Zvuky z headsetu Steam Frame budou automaticky ztlumeny
 [%s] Lost all sessions.  Will re-confirm end-to-end connectivity.\n
 [%s] Lost backup #%d %s.  %s
 [%s] Lost primary session %s %s
+[%s] No forwarding target for %s, sending ConnectionClosed to relay only\n
 [%s] No relevant changes to SDR routing messsage, revision %d.\n
 [%s] Not using STUN servers as per P2P_Transport_ICE_Enable\n
 [%s] Not using TURN servers as per P2P_Transport_ICE_Enable\n
@@ -15380,6 +15405,7 @@ data too large for key size
 data too large for modulus
 data too small
 data too small for key size
+data:
 dataEncipherment
 data_ == other.data_
 data_collect_method
@@ -16441,7 +16467,7 @@ gg i de avancerade streaminginst
 gg i streaminginst
 gga till en f
 gga till och d
-ggenX
+ggen
 ghi h
 gioco
 givenName
@@ -18077,7 +18103,7 @@ lg inputtilstand for %s
 lg maskinen, der skal forbindes til
 lg maskinen, der skal forbindes til:
 lhatod r
-lib Oct 15 2026 23:23:31
+lib Oct 16 2026 21:57:00
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -18403,6 +18429,7 @@ m_listReadyRetryReliableRange[ relSeg.m_hStatusOrRetry ] == hSeg
 m_listSamples
 m_mapChildConnections.Count() == n-1
 m_mapConditionalSymbolTable
+m_mapDataCenterPingsByID
 m_mapDynamicJoysticks
 m_mapFileTimes
 m_mapFileWatchData
@@ -18505,6 +18532,7 @@ m_pktNumInFlight == 0 && m_eActivityLevel == ELinkActivityLevel::Active
 m_pkvLastKeyAdded != NULL
 m_pszName
 m_pthreadWatcher
+m_publicKeyGlobal
 m_queueFreeReports
 m_queueIndex == -1
 m_queueIndex >= 0
@@ -20247,6 +20275,7 @@ ponse : %2.2f ms (%s)
 ponse : <1 ms (%s)
 pontban.
 poor
+pop.m_publicKeyPOP
 pop3
 pop3.
 popen
@@ -20403,6 +20432,9 @@ pthread_rwlock_init
 pthread_rwlock_rdlock
 pthread_rwlock_unlock
 pthread_rwlock_wrlock
+pthread_rwlockattr_destroy
+pthread_rwlockattr_init
+pthread_rwlockattr_setkind_np
 pthread_self
 pthread_setname_np
 pthread_setschedparam
@@ -21033,7 +21065,6 @@ scheme=
 schermo
 schinese
 scots
-script
 scrypt
 scsv received when renegotiating
 sct future timestamp
@@ -21817,6 +21848,7 @@ steammessages_hiddevices.proto
 steammessages_remoteclient_discovery.proto
 steammessages_remoteclient_service_messages.proto
 steammessages_remoteplay.proto
+steammessages_seasonpass_types.proto
 steammessages_steamawards_types.proto
 steammessages_storebrowse.steamclient.proto
 steammessages_streamplayer.proto

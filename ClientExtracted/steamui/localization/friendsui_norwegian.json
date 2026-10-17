@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Inviter til stemmekanal",
     "VoiceChat_SendInviteMessage": "Send invitasjon",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Dempet",
     "VoiceChat_Unavailable_NotFriend": "Kan ikke bruke stemmesamtale: %1$s er ikke på vennelisten.",
     "VoiceChat_Unavailable_NotOnline": "Kan ikke bruke stemmesamtale: %1$s er ikke tilkoblet for øyeblikket.",
     "VoiceChat_Unavailable_NotInBeta": "Kan ikke bruke stemmesamtale: %1$s bruker ikke den nye samtalebetaen.",
@@ -640,6 +641,7 @@
     "Button_Share": "Del",
     "Button_Ignore": "Ignorer",
     "DirectMessageFromNonFriend": "Melding fra en bruker som ikke er en venn",
+    "DirectMessageFromNonFriend_SharedGroup": "Dere er begge medlemmer i gruppesamtalen «%1$s».",
     "NonFriendAction_Block": "Blokker kommunikasjon",
     "NonFriendAction_Allow": "Tillat kommunikasjon",
     "SuspiciousMessage_Header": "Mistenkelig samtale",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Fikset at venne- og samtalevinduer ikke ble vist i spilloverlegget på Linux og macOS.",
     "BBCode_Loading": "Laster",
     "BBCode_Failed": "Kunne ikke laste inn",
-    "broadcastDetails_Playing": "Spiller",
-    "VoiceChat_Muted_Deck": "Dempet"
+    "broadcastDetails_Playing": "Spiller"
 }

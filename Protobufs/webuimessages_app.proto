@@ -1,0 +1,28 @@
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CApp_GetCachedDetails_Request {
+	optional uint32 appid = 1;
+}
+
+message CApp_GetCachedDetails_Response {
+	optional string details = 1;
+}
+
+message CApp_SetCachedDetails_Request {
+	optional uint32 appid = 1;
+	optional string details = 2;
+}
+
+message CApp_SetCachedDetails_Response {
+}
+
+service App {
+	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
+
+	rpc GetCachedDetails (.CApp_GetCachedDetails_Request) returns (.CApp_GetCachedDetails_Response);
+	rpc SetCachedDetails (.CApp_SetCachedDetails_Request) returns (.CApp_SetCachedDetails_Response);
+}

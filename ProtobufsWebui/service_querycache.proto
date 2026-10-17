@@ -1,0 +1,25 @@
+import "common_base.proto";
+
+message CQueryCache_GetDocument_Request {
+	optional int32 cache = 1 [(.description) = "enum"];
+	repeated string key_parts = 2;
+	optional uint32 max_age_seconds = 3;
+}
+
+message CQueryCache_GetDocument_Response {
+	optional bytes data = 1;
+}
+
+message CQueryCache_SetDocument_Notification {
+	optional int32 cache = 1 [(.description) = "enum"];
+	repeated string key_parts = 2;
+	optional bytes data = 3;
+}
+
+service QueryCache {
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc GetDocument (.CQueryCache_GetDocument_Request) returns (.CQueryCache_GetDocument_Response);
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc SetDocument (.CQueryCache_SetDocument_Notification) returns (.NoResponse);
+}
+

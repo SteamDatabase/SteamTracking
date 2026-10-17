@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Invitar al canal de voz",
     "VoiceChat_SendInviteMessage": "Enviar mensaje de invitación",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Silenciado",
     "VoiceChat_Unavailable_NotFriend": "Voz no disponible: %1$s no está en tu lista de amigos.",
     "VoiceChat_Unavailable_NotOnline": "Voz no disponible: %1$s no tiene conexión actualmente.",
     "VoiceChat_Unavailable_NotInBeta": "Voz no disponible: %1$s no está ejecutando la nueva beta del chat.",
@@ -640,6 +641,7 @@
     "Button_Share": "Compartir",
     "Button_Ignore": "Ignorar",
     "DirectMessageFromNonFriend": "Mensaje de un usuario que no es tu amigo",
+    "DirectMessageFromNonFriend_SharedGroup": "Ambos sois integrantes del grupo de chat «%1$s».",
     "NonFriendAction_Block": "Bloquear comunicación",
     "NonFriendAction_Allow": "Permitir comunicación",
     "SuspiciousMessage_Header": "Chat sospechoso",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Se corrigió un problema por el que las ventanas de amigos y de chat no se mostraban en la interfaz superpuesta durante las partidas en Linux y macOS.",
     "BBCode_Loading": "Cargando",
     "BBCode_Failed": "Error al cargar",
-    "broadcastDetails_Playing": "Reproduciendo",
-    "VoiceChat_Muted_Deck": "Silenciado"
+    "broadcastDetails_Playing": "Reproduciendo"
 }

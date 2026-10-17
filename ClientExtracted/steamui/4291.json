@@ -148,7 +148,7 @@
     "Wishlist_Controls_Categories_Header_Other": "Moje další kategorie",
     "Wishlist_Controls_Categories_Header_Suggested": "Navrhované kategorie",
     "Wishlist_Categories_Max_Per_App_Reached": "Tato položka dosáhla limitu %1$s kategorií.",
-    "Wishlist_Categories_Dialog_Advanced": "Advanced...",
+    "Wishlist_Categories_Dialog_Advanced": "Pokročilé...",
     "Price_History_Normal_Price": "BĚŽNÁ CENA",
     "Price_History_Recent_Low_Price": "NEJNIŽŠÍ CENA",
     "Price_History_Recent_Low_Price_Ttip": "Tento produkt byl v posledních %2$s dnech dostupný za nejnižší zlevněnou cenu %1$s.",
@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Pro tento den Vám nemáme co ukázat. <1>Zbytek svého osobního kalendáře najdete zde!</1>",
     "NewBadge": "NOVINKA",
     "Time_Today": "Dnes",
+    "DiscountsAndEvents_Title": "Slevy a výprodeje",
+    "DiscountsAndEvents_SeeMore": "Zobrazit další",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Víkendová akce",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Slevové šílenství",
+    "DiscountsAndEvents_Banner_DailyDeal": "Nabídka dne",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Nejvyšší sleva",
+    "DiscountsAndEvents_LoadError": "V tuto chvíli se nepodařilo načíst slevy a výprodeje. Zkuste to později znovu.",
     "store_ui_dummy": "dont translate"
 }

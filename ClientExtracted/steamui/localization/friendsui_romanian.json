@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Invită în canalul vocal",
     "VoiceChat_SendInviteMessage": "Trimite un mesaj de invitație",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Amuțit",
     "VoiceChat_Unavailable_NotFriend": "Vocea nu este disponibilă: %1$s nu este în lista ta de prieteni.",
     "VoiceChat_Unavailable_NotOnline": "Vocea nu este disponibilă: acum %1$s nu este acum online.",
     "VoiceChat_Unavailable_NotInBeta": "Vocea nu este disponibilă: %1$s nu rulează noua versiune beta pentru chat.",
@@ -640,6 +641,7 @@
     "Button_Share": "Împărtășește",
     "Button_Ignore": "Ignoră",
     "DirectMessageFromNonFriend": "Mesaj de la un utilizator care nu-ți este prieten",
+    "DirectMessageFromNonFriend_SharedGroup": "Amândoi sunteți membri ai grupului de chat „%1$s”.",
     "NonFriendAction_Block": "Blochează comunicațiile",
     "NonFriendAction_Allow": "Permite comunicațiile",
     "SuspiciousMessage_Header": "Conversație suspectă",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "S-a reparat faptul că ferestrele pentru prieteni și chat nu erau afișate în interfața din joc pe Linux și macOS.",
     "BBCode_Loading": "Se încarcă",
     "BBCode_Failed": "Nu s-a putut încărca",
-    "broadcastDetails_Playing": "Se joacă",
-    "VoiceChat_Muted_Deck": "Amuțit"
+    "broadcastDetails_Playing": "Se joacă"
 }

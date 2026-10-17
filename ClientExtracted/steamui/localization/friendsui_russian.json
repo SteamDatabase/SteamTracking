@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Пригласить в голосовой канал",
     "VoiceChat_SendInviteMessage": "Отправить приглашение",
     "VoiceChat_AudioLevelDb": "%1$s дБ",
+    "VoiceChat_Muted_Deck": "Заглушено",
     "VoiceChat_Unavailable_NotFriend": "Голосовой чат недоступен: пользователя %1$s нет в списке ваших друзей.",
     "VoiceChat_Unavailable_NotOnline": "Голосовой чат недоступен: %1$s сейчас не в сети.",
     "VoiceChat_Unavailable_NotInBeta": "Голосовой чат недоступен: %1$s не участвует в программе бета-тестирования чата.",
@@ -640,6 +641,7 @@
     "Button_Share": "Поделиться",
     "Button_Ignore": "Отклонить",
     "DirectMessageFromNonFriend": "Сообщение от пользователя, который не является вашим другом",
+    "DirectMessageFromNonFriend_SharedGroup": "Вы являетесь участниками группового чата «%1$s».",
     "NonFriendAction_Block": "Запретить сообщения",
     "NonFriendAction_Allow": "Разрешить сообщения",
     "SuspiciousMessage_Header": "Подозрительная переписка в чате",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Исправлена ошибка, из-за которой окна друзей и чата не отображались во внутриигровом оверлее на Linux и macOS.",
     "BBCode_Loading": "Загрузка",
     "BBCode_Failed": "Ошибка загрузки",
-    "broadcastDetails_Playing": "Воспроизведение",
-    "VoiceChat_Muted_Deck": "Заглушено"
+    "broadcastDetails_Playing": "Воспроизведение"
 }

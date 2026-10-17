@@ -1,5 +1,5 @@
 {
-    "language": "الإنجليزية",
+    "language": "arabic",
     "WindowTitle_FriendsList": "قائمة الأصدقاء",
     "WindowTitle_ChatTabTitle": "%1$s + دردشة واحدة",
     "WindowTitle_ChatTabTitlePlural": "%1$s + %2$s من الدردشات",
@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "إرسال دعوة لقناة الدردشة الصوتية",
     "VoiceChat_SendInviteMessage": "إرسال رسالة دعوة",
     "VoiceChat_AudioLevelDb": "%1$s ديسيبل",
+    "VoiceChat_Muted_Deck": "صوت مكتوم",
     "VoiceChat_Unavailable_NotFriend": "الصوت غير متاح: %1$s ليس في قائمة أصدقائك.",
     "VoiceChat_Unavailable_NotOnline": "الصوت غير متاح: %1$s غير متصل حاليًا.",
     "VoiceChat_Unavailable_NotInBeta": "الصوت غير متاح: %1$s لا يستخدم النسخة التجريبية الجديدة للدردشة.",
@@ -640,6 +641,7 @@
     "Button_Share": "مشاركة",
     "Button_Ignore": "تجاهل",
     "DirectMessageFromNonFriend": "رسالة من مستخدم ليس ضمن أصدقائك",
+    "DirectMessageFromNonFriend_SharedGroup": "أنتما عضوان في الدردشة الجماعية \"%1$s\".",
     "NonFriendAction_Block": "حظر الاتصالات",
     "NonFriendAction_Allow": "السماح بالاتصالات",
     "SuspiciousMessage_Header": "دردشة غير آمنة",

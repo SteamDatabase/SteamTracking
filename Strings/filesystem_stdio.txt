@@ -47,9 +47,9 @@ $ORIGIN
 *N12_GLOBAL__N_122generic_error_categoryE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGa
+++CCUNGa/
 ++CCUNGstd::exception
-++CCUNGv%
+++CCUNGv7
 ---------------\n
 ---FS:  %s %s\n
 ---FS:  close %s %p %i\n
@@ -364,6 +364,12 @@ SteamThreadTools::CThreadEvent::CThreadEvent(bool)
 SteamThreadTools::CThreadEvent::Set()
 SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
+SteamThreadTools::CThreadSharedMutex::CThreadSharedMutex()
+SteamThreadTools::CThreadSharedMutex::LockExclusive()
+SteamThreadTools::CThreadSharedMutex::LockShared() const
+SteamThreadTools::CThreadSharedMutex::UnlockExclusive()
+SteamThreadTools::CThreadSharedMutex::UnlockShared() const
+SteamThreadTools::CThreadSharedMutex::~CThreadSharedMutex()
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 StringAfterPrefix
@@ -811,6 +817,7 @@ pWildCard
 packfile.m_bIsPackFile
 packfile.m_hPackFile
 pathID
+pchNode
 pclose
 popen
 posix_fadvise

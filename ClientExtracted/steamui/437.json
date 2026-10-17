@@ -33,6 +33,6 @@
     "MachineVerified_FilterDescription_AllGames": "Zobrazí se všechny hry z Vaší knihovny, včetně těch, které na zařízení Steam Machine nemusí fungovat.",
     "FrameVerified_FilterDescription_Verified": "Zobrazí se pouze hry, které bez problémů fungují s headsetem Steam Frame.",
     "FrameVerified_FilterDescription_Verified_Playable": "Zobrazí se všechny plně kompatibilní a také částečně kompatibilní hry, které fungují, ale interakce s nimi nebo jejich konfigurace může skrývat nějaké překážky.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Zobrazí se všechny plně i částečně kompatibilní hry a také hry, jejichž kompatibilita s headsetem Steam Frame ještě nebyla zkontrolována.",
-    "FrameVerified_FilterDescription_AllGames": "Zobrazí se všechny hry z Vaší knihovny, včetně těch, které v headsetu Steam Frame nemusí fungovat."
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Zobrazí se všechny plně i částečně kompatibilní hry a také hry, jejichž kompatibilita s headsetem Steam Frame při hraní přímo v něm ještě nebyla zkontrolována.",
+    "FrameVerified_FilterDescription_AllGames": "Zobrazí se všechny hry z Vaší knihovny, včetně těch, které v headsetu Steam Frame při hraní přímo v něm nemusí fungovat."
 }

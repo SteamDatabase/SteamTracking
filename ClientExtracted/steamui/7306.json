@@ -112,5 +112,7 @@
     "ReadableDuration_Hours": "%1$s год",
     "ReadableDuration_Minutes": "%1$s хв.",
     "ReadableDuration_OneMinute": "1 хвилина",
-    "ReadableDuration_LessThanOneMinute": "менше хвилини"
+    "ReadableDuration_LessThanOneMinute": "менше хвилини",
+    "Playtime_Hours": "%1$s год",
+    "Playtime_Minutes": "%1$s хв"
 }

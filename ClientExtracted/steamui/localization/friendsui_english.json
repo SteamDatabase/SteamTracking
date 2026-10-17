@@ -641,6 +641,7 @@
     "Button_Share": "Share",
     "Button_Ignore": "Ignore",
     "DirectMessageFromNonFriend": "Message from a user that is not your friend",
+    "DirectMessageFromNonFriend_SharedGroup": "You are both members of the '%1$s' group chat.",
     "NonFriendAction_Block": "Block Communications",
     "NonFriendAction_Allow": "Allow Communications",
     "SuspiciousMessage_Header": "Suspicious Chat",

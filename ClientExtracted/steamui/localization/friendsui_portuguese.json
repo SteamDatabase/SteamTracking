@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Convidar para canal de voz",
     "VoiceChat_SendInviteMessage": "Enviar convite para conversar",
     "VoiceChat_AudioLevelDb": "%1$s dB",
+    "VoiceChat_Muted_Deck": "Silenciado(a)",
     "VoiceChat_Unavailable_NotFriend": "Voz indisponível: %1$s não está na tua lista de amigos.",
     "VoiceChat_Unavailable_NotOnline": "Voz indisponível: %1$s está offline.",
     "VoiceChat_Unavailable_NotInBeta": "Voz indisponível: %1$s não está a usar a nova versão beta do chat.",
@@ -640,6 +641,7 @@
     "Button_Share": "Partilhar",
     "Button_Ignore": "Ignorar",
     "DirectMessageFromNonFriend": "Mensagem de um utilizador que não está na tua lista de amigos",
+    "DirectMessageFromNonFriend_SharedGroup": "Tu e esta pessoa estão na sala de chat \"%1$s\".",
     "NonFriendAction_Block": "Bloquear comunicações",
     "NonFriendAction_Allow": "Permitir comunicações",
     "SuspiciousMessage_Header": "Chat suspeito",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Foi resolvido um problema em que as janelas do chat e dos amigos não apareciam no Painel Steam durante jogos no Linux e no macOS.",
     "BBCode_Loading": "A carregar",
     "BBCode_Failed": "Erro ao carregar",
-    "broadcastDetails_Playing": "A jogar",
-    "VoiceChat_Muted_Deck": "Silenciado(a)"
+    "broadcastDetails_Playing": "A jogar"
 }

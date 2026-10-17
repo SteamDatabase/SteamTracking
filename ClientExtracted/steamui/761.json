@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "顯示所有已驗證遊戲，以及可能需要進行調整或設定才能遊玩的遊戲。",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "顯示所有已驗證和可遊玩遊戲，以及尚未測試 Steam Machine 相容性的遊戲。",
     "MachineVerified_FilterDescription_AllGames": "顯示收藏庫中的所有遊戲，包括無法在 Steam Machine 上順暢執行的遊戲。",
-    "FrameVerified_FilterDescription_Verified": "僅顯示可在 Steam Frame 上順暢執行的遊戲。",
-    "FrameVerified_FilterDescription_Verified_Playable": "顯示所有 Steam Frame 已驗證遊戲，以及可能需要進行調整或設定才能遊玩的遊戲。",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "顯示所有已驗證和可遊玩遊戲，以及尚未測試 Steam Frame 相容性的遊戲。",
-    "FrameVerified_FilterDescription_AllGames": "顯示收藏庫中的所有遊戲，包括無法在 Steam Frame 上順暢執行的遊戲。"
+    "FrameVerified_FilterDescription_Verified": "僅顯示可順暢在 Steam Frame 內建控制和螢幕上執行的遊戲。",
+    "FrameVerified_FilterDescription_Verified_Playable": "顯示所有已驗證遊戲，以及可能需要進行調整或設定才能遊玩的遊戲。",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "顯示所有已驗證和可遊玩遊戲，以及尚未測試 Steam Frame 獨立運作相容性的遊戲。",
+    "FrameVerified_FilterDescription_AllGames": "顯示收藏庫中的所有遊戲，包括無法在 Steam Frame 獨立運作模式中順暢執行的遊戲。"
 }

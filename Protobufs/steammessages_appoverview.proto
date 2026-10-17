@@ -151,6 +151,7 @@ message CAppOverview {
 	optional uint64 bitfield_supported_languages = 77 [default = 0];
 	repeated .CAppOverview_PerClientData remote_per_client_data = 78;
 	repeated .EContentDescriptorID content_descriptors = 79;
+	optional uint32 custom_images_found = 80;
 }
 
 message CAppOverview_Change {

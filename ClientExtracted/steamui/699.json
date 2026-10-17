@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Mostrar todos os jogos Aprovados e jogos que são Jogáveis, mas que podem precisar de passos adicionais para a interação ou configuração.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Mostrar todos os jogos Aprovados e Jogáveis, para além de jogos cuja compatibilidade com a Steam Machine ainda não foi testada.",
     "MachineVerified_FilterDescription_AllGames": "Mostrar todos os jogos da tua biblioteca, incluindo aqueles que não funcionam bem na Steam Machine.",
-    "FrameVerified_FilterDescription_Verified": "Mostrar apenas jogos que funcionam naturalmente no Steam Frame.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Mostrar todos os jogos Aprovados e jogos que são Jogáveis no Steam Frame, mas que podem precisar de passos adicionais para a interação ou configuração.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Mostrar todos os jogos Aprovados e Jogáveis, para além de jogos cuja compatibilidade com o Steam Frame ainda não foi testada.",
-    "FrameVerified_FilterDescription_AllGames": "Mostrar todos os jogos da tua biblioteca, incluindo aqueles que não funcionam bem no Steam Frame."
+    "FrameVerified_FilterDescription_Verified": "Mostrar apenas jogos que funcionam naturalmente com o ecrã e controlos integrados do Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Mostrar todos os jogos Aprovados e jogos que são Jogáveis, mas que podem precisar de passos adicionais para a interação ou configuração.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Mostrar todos os jogos Aprovados e Jogáveis, para além de jogos cuja compatibilidade com o Steam Frame via execução direta ainda não foi testada.",
+    "FrameVerified_FilterDescription_AllGames": "Mostrar todos os jogos da tua biblioteca, incluindo aqueles que não funcionam bem no Steam Frame via execução direta."
 }

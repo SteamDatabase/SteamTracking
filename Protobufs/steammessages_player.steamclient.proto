@@ -126,6 +126,7 @@ message CPlayer_GetOwnedGames_Request {
 	optional bool skip_unvetted_apps = 6 [default = true];
 	optional string language = 7;
 	optional bool include_extended_appinfo = 8;
+	optional bool include_family_licenses = 9;
 }
 
 message CPlayer_GetOwnedGames_Response {
@@ -149,6 +150,7 @@ message CPlayer_GetOwnedGames_Response {
 		optional bool has_leaderboards = 17;
 		repeated uint32 content_descriptorids = 18;
 		optional int32 playtime_disconnected = 19;
+		optional bool family_shared = 21;
 	}
 
 	optional uint32 game_count = 1;
@@ -167,6 +169,7 @@ message CPlayer_GetPlayNext_Response {
 
 message CPlayer_GetFriendsGameplayInfo_Request {
 	optional uint32 appid = 1;
+	optional bool include_family_licenses = 2;
 }
 
 message CPlayer_GetFriendsGameplayInfo_Response {
@@ -422,6 +425,11 @@ message CPlayer_GetAchievementsProgress_Response {
 		optional bool all_unlocked = 5;
 		optional uint32 cache_time = 6;
 		optional bool vetted = 7;
+		optional uint32 groups_completed_base = 8;
+		optional uint32 groups_total_base = 9;
+		optional uint32 groups_completed_dlc = 10;
+		optional uint32 groups_total_dlc = 11;
+		optional uint32 base_game_total = 12;
 	}
 
 	repeated .CPlayer_GetAchievementsProgress_Response.AchievementProgress achievement_progress = 1;
@@ -489,6 +497,7 @@ message CPlayer_GetUserAchievements_Response {
 		optional bool is_achievable = 2;
 		optional uint32 completed_achievements = 3;
 		optional bool is_completed = 4;
+		optional fixed32 time_completed = 9;
 	}
 
 	repeated .CPlayer_GetUserAchievements_Response.Achievement achievements = 1;
@@ -507,7 +516,13 @@ message CPlayer_GetGlobalAchievementPercentages_Response {
 		optional float player_percent_unlocked = 2;
 	}
 
+	message Group {
+		optional uint32 groupid = 1;
+		optional float player_percent_completed = 2;
+	}
+
 	repeated .CPlayer_GetGlobalAchievementPercentages_Response.Achievement achievements = 1;
+	repeated .CPlayer_GetGlobalAchievementPercentages_Response.Group groups = 2;
 }
 
 message CPlayer_GetUserStats_Request {

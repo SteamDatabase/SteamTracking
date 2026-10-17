@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Muestra todos los títulos Verificados, además de aquellos que son Jugables pero pueden requerir un esfuerzo adicional a la hora de interactuar con ellos o configurarlos.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Muestra todos los títulos Verificados y Jugables, además de aquellos cuya compatibilidad con Steam Machine aún no se ha comprobado.",
     "MachineVerified_FilterDescription_AllGames": "Muestra todos los juegos de tu biblioteca, incluidos los que no funcionan bien en Steam Machine.",
-    "FrameVerified_FilterDescription_Verified": "Muestra solo los juegos que funcionan de manera natural con Steam Frame.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Muestra todos los títulos verificados en Steam Frame, además de aquellos que son jugables, pero pueden requerir un esfuerzo adicional a la hora de interactuar con ellos o configurarlos.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Muestra todos los títulos verificados y jugables, además de aquellos cuya compatibilidad con Steam Frame aún no se ha comprobado.",
-    "FrameVerified_FilterDescription_AllGames": "Muestra todos los juegos de tu biblioteca, incluidos los que no funcionan bien en Steam Frame."
+    "FrameVerified_FilterDescription_Verified": "Muestra solo los juegos que funcionan de manera natural con los controles y la pantalla de Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Muestra todos los títulos Verificados, además de aquellos que son Jugables pero pueden requerir un esfuerzo adicional a la hora de interactuar con ellos o configurarlos.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Muestra todos los títulos verificados y jugables, además de aquellos cuya compatibilidad con Steam Frame (ejecución nativa) aún no se ha comprobado.",
+    "FrameVerified_FilterDescription_AllGames": "Muestra todos los juegos de tu biblioteca, incluidos los que no funcionan bien en Steam Frame (ejecución nativa)."
 }

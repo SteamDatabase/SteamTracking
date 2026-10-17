@@ -71,15 +71,15 @@ message CStoreCatalog_SetDevPageLink_Response {
 }
 
 service StoreCatalog {
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetDevPageAllAppsLinked (.CStoreCatalog_GetDevPageAllAppsLinked_Request) returns (.CStoreCatalog_GetDevPageAllAppsLinked_Response);
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetDevPageLinks (.CStoreCatalog_GetDevPageLinks_Request) returns (.CStoreCatalog_GetDevPageLinks_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetDevPageListApps (.CStoreCatalog_GetDevPageListApps_Request) returns (.CStoreCatalog_GetDevPageListApps_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetDevPagesForPartner (.CStoreCatalog_GetDevPagesForPartner_Request) returns (.CStoreCatalog_GetDevPagesForPartner_Response);
-	// ePrivilege=1, eWebAPIKeyRequirement=2
+	// ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc SetDevPageLink (.CStoreCatalog_SetDevPageLink_Request) returns (.CStoreCatalog_SetDevPageLink_Response);
 }
 

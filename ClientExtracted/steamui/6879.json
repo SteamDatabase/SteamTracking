@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Показване на всички потвърдени заглавия, плюс игри, които са годни за пускане, но е възможно да изискват допълнителни усилия за взаимодействие или конфигуриране.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Показване на всички потвърдени и годни за пускане заглавия, плюс игри, които все още не са изпитани за съвместимост на Steam машини.",
     "MachineVerified_FilterDescription_AllGames": "Показване на всички игри в библиотеката Ви, включително тези, които не функционират добре на Steam машини.",
-    "FrameVerified_FilterDescription_Verified": "Показване само на игри, които работят по естествен начин на Steam Frame.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Показване на всички потвърдени на Steam Frame заглавия, плюс игри, които са годни за пускане, но е възможно да изискват допълнителни усилия за взаимодействие или конфигуриране.",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Показване на всички потвърдени и годни за пускане заглавия, плюс игри, които все още не са изпитани за съвместимост на Steam Frame.",
-    "FrameVerified_FilterDescription_AllGames": "Показване на всички игри в библиотеката Ви, включително тези, които не функционират добре на Steam Frame."
+    "FrameVerified_FilterDescription_Verified": "Показване само на игри, които работят по естествен начин с вградените в Steam Frame контролери и екран.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Показване на всички потвърдени заглавия, плюс игри, които са годни за пускане, но е възможно да изискват допълнителни усилия за взаимодействие или конфигуриране.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Показване на всички потвърдени и годни за пускане заглавия, плюс игри, които все още не са изпитани за самостоятелна съвместимост на Steam Frame.",
+    "FrameVerified_FilterDescription_AllGames": "Показване на всички игри в библиотеката Ви, включително тези, които не функционират добре в самостоятелен режим на Steam Frame."
 }

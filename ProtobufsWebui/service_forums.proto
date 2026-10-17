@@ -1,30 +1,5 @@
 import "common_base.proto";
 
-message CForums_DeleteModeratedComment_Request {
-	optional fixed64 steamid = 1;
-	optional int32 comment_thread_type = 2 [(.description) = "enum"];
-	optional uint64 gidfeature = 3;
-	optional uint64 gidfeature2 = 4;
-	optional uint64 gidcomment = 5;
-	optional int32 reason = 6 [(.description) = "enum"];
-	optional int32 resolution = 7 [(.description) = "enum"];
-}
-
-message CForums_DeleteModeratedComment_Response {
-}
-
-message CForums_DeleteModeratedTopic_Request {
-	optional fixed64 steamid = 1;
-	optional int32 comment_thread_type = 2 [(.description) = "enum"];
-	optional uint64 gidfeature = 3;
-	optional uint64 gidfeature2 = 4;
-	optional int32 reason = 5 [(.description) = "enum"];
-	optional int32 resolution = 6 [(.description) = "enum"];
-}
-
-message CForums_DeleteModeratedTopic_Response {
-}
-
 message CForums_GetForumDetails_Response {
 	optional uint64 gidforum = 1;
 	optional uint32 clanidowner = 2;
@@ -118,17 +93,6 @@ message CForums_SanctionReportedPost_Request_Sanction {
 message CForums_SanctionReportedPost_Response {
 }
 
-message CForums_SetTopicLocked_Request {
-	optional fixed64 steamid = 1;
-	optional uint64 gidforum = 2;
-	optional uint64 gidtopic = 3;
-	optional bool locked = 4;
-	optional string audit_note = 5;
-}
-
-message CForums_SetTopicLocked_Response {
-}
-
 message CForums_Topic {
 	optional uint64 gidforumtopic = 1;
 	optional uint32 originalpost_accountid = 2;
@@ -167,27 +131,6 @@ message CForums_Topic_TopicMoved {
 	optional .CForums_GetForumDetails_Response forum = 3;
 }
 
-message CForums_UndeleteDisputedComment_Request {
-	optional fixed64 steamid = 1;
-	optional int32 comment_thread_type = 2 [(.description) = "enum"];
-	optional uint64 gidfeature = 3;
-	optional uint64 gidfeature2 = 4;
-	optional uint64 gidcomment = 5;
-}
-
-message CForums_UndeleteDisputedComment_Response {
-}
-
-message CForums_UndeleteDisputedTopic_Request {
-	optional fixed64 steamid = 1;
-	optional int32 comment_thread_type = 2 [(.description) = "enum"];
-	optional uint64 gidfeature = 3;
-	optional uint64 gidfeature2 = 4;
-}
-
-message CForums_UndeleteDisputedTopic_Response {
-}
-
 message CForums_UserBan {
 	optional uint32 accountid_ban_actor = 1;
 	optional uint32 time_ban_start = 2;
@@ -207,10 +150,6 @@ message CForums_UserPermissions {
 }
 
 service Forums {
-	// ePrivilege=1
-	rpc DeleteModeratedComment (.CForums_DeleteModeratedComment_Request) returns (.CForums_DeleteModeratedComment_Response);
-	// ePrivilege=1
-	rpc DeleteModeratedTopic (.CForums_DeleteModeratedTopic_Request) returns (.CForums_DeleteModeratedTopic_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetTopicDetails (.CForums_GetTopicDetails_Request) returns (.CForums_GetTopicDetails_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=2
@@ -221,11 +160,5 @@ service Forums {
 	rpc ResolveReportedPosts (.CForums_ResolveReportedPosts_Request) returns (.CForums_ResolveReportedPosts_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc SanctionReportedPost (.CForums_SanctionReportedPost_Request) returns (.CForums_SanctionReportedPost_Response);
-	// ePrivilege=1
-	rpc SetTopicLocked (.CForums_SetTopicLocked_Request) returns (.CForums_SetTopicLocked_Response);
-	// ePrivilege=1
-	rpc UndeleteDisputedComment (.CForums_UndeleteDisputedComment_Request) returns (.CForums_UndeleteDisputedComment_Response);
-	// ePrivilege=1
-	rpc UndeleteDisputedTopic (.CForums_UndeleteDisputedTopic_Request) returns (.CForums_UndeleteDisputedTopic_Response);
 }
 

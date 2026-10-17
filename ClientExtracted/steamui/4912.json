@@ -1,5 +1,5 @@
 {
-    "language": "العربية",
+    "language": "arabic",
     "review_summary_reviewrate": "%1$s% من مراجعات المستخدمين الـ%2$s لهذه اللعبة إيجابية",
     "review_summary_reviewrate_language_specific": "%1$s% من مراجعات المستخدمين الـ%2$s في %3$s لهذه اللعبة إيجابية",
     "Discount_ARIA_Label": "خصم بنسبة %1$s%. %2$s عادةً يتم تخفيضه إلى %3$s",
@@ -97,7 +97,7 @@
     "Menu_Section_Hardware": "الأجهزة",
     "Menu_Section_Hardware_VRHardware": "أجهزة VR",
     "Menu_Section_Hardware_SteamDeck": "Steam Deck",
-    "Menu_Section_Hardware_SteamController": "وحدة تحكم Steam",
+    "Menu_Section_Hardware_SteamController": "Steam Controller",
     "Menu_Section_Hardware_SteamMachine": "جهاز Steam",
     "Menu_Section_Hardware_SteamFrame": "Steam Frame",
     "Menu_Section_Hardware_ValveIndex": "Valve Index",
@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "ليس لدينا أي إصدارات جديدة نوصي بها لك في هذا اليوم <1>تحقق من بقية التقويم لديك!</1>",
     "NewBadge": "الجديد",
     "Time_Today": "اليوم",
+    "DiscountsAndEvents_Title": "الخصومات والفعاليات",
+    "DiscountsAndEvents_SeeMore": "عرض المزيد",
+    "DiscountsAndEvents_Banner_WeekendDeal": "صفقة نهاية الأسبوع",
+    "DiscountsAndEvents_Banner_MidweekDeal": "صفقة منتصف الأسبوع",
+    "DiscountsAndEvents_Banner_DailyDeal": "صفقة اليوم",
+    "DiscountsAndEvents_Banner_LargestDiscount": "أكبر خصم",
+    "DiscountsAndEvents_LoadError": "تعذر تحميل الخصومات والفعاليات. يرجى المحاولة لاحقًا.",
     "store_ui_dummy": "dont translate"
 }

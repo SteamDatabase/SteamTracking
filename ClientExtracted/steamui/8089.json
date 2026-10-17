@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "「確認済み」のすべてのタイトルに加えて、プレイ可能であるものの操作や設定に追加の作業が必要な場合があるゲームを表示します。",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "「確認済み」および「プレイ可能」のすべてのタイトルに加えて、Steam Machineの互換性テストがまだ行われていないゲームを表示します。",
     "MachineVerified_FilterDescription_AllGames": "Steam Machineで快適に動作しないゲームを含め、ライブラリ内のすべてのゲームを表示します。",
-    "FrameVerified_FilterDescription_Verified": "Steam Frameで快適に動作するゲームのみを表示します。",
-    "FrameVerified_FilterDescription_Verified_Playable": "「Frameで確認済み」のすべてのタイトルに加えて、プレイ可能であるものの操作や設定に追加の作業が必要な場合があるゲームを表示します。",
-    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "「確認済み」および「プレイ可能」のすべてのタイトルに加えて、Steam Frameの互換性テストがまだ行われていないゲームを表示します。",
-    "FrameVerified_FilterDescription_AllGames": "Steam Frameで快適に動作しないゲームを含め、ライブラリ内のすべてのゲームを表示します。"
+    "FrameVerified_FilterDescription_Verified": "Steam Frame内蔵のコントロールとディスプレイで快適に動作するゲームのみを表示します。",
+    "FrameVerified_FilterDescription_Verified_Playable": "「確認済み」のすべてのタイトルに加えて、プレイ可能であるものの操作や設定に追加の作業が必要な場合があるゲームを表示します。",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "「確認済み」および「プレイ可能」のすべてのタイトルに加えて、Steam Frame Standaloneの互換性テストがまだ行われていないゲームを表示します。",
+    "FrameVerified_FilterDescription_AllGames": "Steam Frameのスタンドアロンモードで快適に動作しないゲームを含め、ライブラリ内のすべてのゲームを表示します。"
 }

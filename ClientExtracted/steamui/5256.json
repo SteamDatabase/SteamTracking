@@ -31,8 +31,8 @@
     "MachineVerified_FilterDescription_Verified_Playable": "Alle verifizierten Spiele anzeigen, zzgl. Spiele, die spielbar sind, aber ggf. zusätzliche Schritte für Interaktion oder Konfiguration erfordern.",
     "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Alle verifizierten und spielbaren Spiele anzeigen, zzgl. Spiele, die noch nicht auf Steam-Machine-Kompatibilität überprüft wurden.",
     "MachineVerified_FilterDescription_AllGames": "Alle Spiele in Ihrer Bibliothek anzeigen, inklusive solcher, die nicht gut auf der Steam Machine laufen.",
-    "FrameVerified_FilterDescription_Verified": "Nur Spiele anzeigen, die problemlos auf dem Steam Frame laufen.",
-    "FrameVerified_FilterDescription_Verified_Playable": "Alle für Steam Frame verifizierten Spiele anzeigen, zzgl. Spiele, die spielbar sind, aber ggf. zusätzliche Schritte für Interaktion oder Konfiguration erfordern.",
+    "FrameVerified_FilterDescription_Verified": "Nur Spiele anzeigen, die mit der eingebauten Steuerung und Anzeige des Steam Frame funktionieren.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Alle verifizierten Spiele anzeigen, zzgl. Spiele, die spielbar sind, aber ggf. zusätzliche Schritte für Interaktion oder Konfiguration erfordern.",
     "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Alle verifizierten und spielbaren Spiele anzeigen, zzgl. Spiele, die noch nicht auf Steam-Frame-Kompatibilität überprüft wurden.",
     "FrameVerified_FilterDescription_AllGames": "Alle Spiele in Ihrer Bibliothek anzeigen, inklusive solcher, die nicht gut auf dem Steam Frame laufen."
 }

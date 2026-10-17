@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Нямаме никакви нови издания, които да Ви препоръчаме за този ден. <1>Вижте останалата част от календара си!</1>",
     "NewBadge": "НОВО",
     "Time_Today": "Днес",
+    "DiscountsAndEvents_Title": "Отстъпки и събития",
+    "DiscountsAndEvents_SeeMore": "Вижте още",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Уикенд сделка",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Средседмична сделка",
+    "DiscountsAndEvents_Banner_DailyDeal": "Днешната сделка",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Най-голяма отстъпка",
+    "DiscountsAndEvents_LoadError": "Зареждането на отстъпки и събития беше неуспешно в момента. Моля, опитайте отново по-късно.",
     "store_ui_dummy": "dont translate"
 }

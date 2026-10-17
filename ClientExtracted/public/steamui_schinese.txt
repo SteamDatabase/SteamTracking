@@ -519,7 +519,6 @@
 "Steam_SetJumplistOptions"		"设置任务栏偏好"
 "Steam_ShowOnlineStatusOptions"	"选择要显示的在线选项"
 "Steam_ShowDestinationOptions"	"选择要显示的目标内容"
-"Steam_MustRestartToTakeEffect"			"此设置将在您重启\n Steam 客户端后才会生效。"
 "Steam_LanguageSelect"				"选择您希望 Steam 使用的语言（需要重新启动 Steam）"
 "Steam_SteamChinaLanguageSelect"	"蒸汽平台仅支持简体中文"
 "Steam_SelectSkinToUse"				"选择您希望 Steam 使用的皮肤（需要重新启动 Steam）"
@@ -560,9 +559,7 @@
 "Steam_PasswordStrength"				"密码强度："
 
 "Steam_MustRestart_Title"		"Steam - 需要重启"
-"Steam_MustRestart_Info"		"Steam 现在必须重新启动以接收最新的更新。\n重新启动之后您将能继续使用 Steam。"
 "Steam_MustRestart_Button"		"重新启动 Steam"
-"Steam_MustRestart_Language"		"您现在必须重新启动 Steam 才能更改语言设置。"
 
 "Steam_ChangeBeta_Title"		"Steam - 参与测试"
 "Steam_ChangeBeta_Text"			"您希望参与 Steam 测试活动吗？\nSteam 将重启以接收测试客户端。"
@@ -3189,9 +3186,6 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 
 "Steam_ReadMoreAboutBetas"	"了解更多关于 Steam 如何执行 Beta 的信息"
 "Steam_SelectNoBeta"	"无 - 不选择任何测试活动"
-"Steam_BetaIsOver" "感谢您参与 Steam 上的 %betaname% 试用活动。  
-
-该试用现已结束 - 请重新启动 Steam 以返回至当前版本。"
 
 "Steam_ChooseGameLanguage"	"选择您玩游戏时要使用的语言："
 "Steam_GameProperties_LanguageTab" "语言"

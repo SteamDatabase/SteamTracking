@@ -159,6 +159,7 @@
     "VoiceChat_InviteToChannel": "Запросити до голосового каналу",
     "VoiceChat_SendInviteMessage": "Надіслати запрошення",
     "VoiceChat_AudioLevelDb": "%1$s дБ",
+    "VoiceChat_Muted_Deck": "Приглушено",
     "VoiceChat_Unavailable_NotFriend": "Голосовий чат недоступний: %1$s не у вашому списку друзів.",
     "VoiceChat_Unavailable_NotOnline": "Голосовий чат недоступний: %1$s не в мережі.",
     "VoiceChat_Unavailable_NotInBeta": "Голосовий чат недоступний: %1$s не має доступу до бета-версії чату.",
@@ -640,6 +641,7 @@
     "Button_Share": "Поділитися",
     "Button_Ignore": "Ігнорувати",
     "DirectMessageFromNonFriend": "Повідомлення від користувача, який не є вашим другом",
+    "DirectMessageFromNonFriend_SharedGroup": "Ви є учасниками групового чату (%1$s).",
     "NonFriendAction_Block": "Заблокувати спілкування",
     "NonFriendAction_Allow": "Дозволити спілкування",
     "SuspiciousMessage_Header": "Підозрілий чат",
@@ -1218,6 +1220,5 @@
     "changeLog_UpdateItem57": "Виправлено помилку, внаслідок якої вікна списку друзів і чату не зображувалися в оверлеї Linux і macOS.",
     "BBCode_Loading": "Завантаження",
     "BBCode_Failed": "Не вдалося завантажити",
-    "broadcastDetails_Playing": "Відтворення",
-    "VoiceChat_Muted_Deck": "Приглушено"
+    "broadcastDetails_Playing": "Відтворення"
 }

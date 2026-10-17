@@ -112,5 +112,7 @@
     "ReadableDuration_Hours": "%1$s giờ",
     "ReadableDuration_Minutes": "%1$s phút",
     "ReadableDuration_OneMinute": "một phút",
-    "ReadableDuration_LessThanOneMinute": "chưa đến một phút"
+    "ReadableDuration_LessThanOneMinute": "chưa đến một phút",
+    "Playtime_Hours": "%1$s giờ",
+    "Playtime_Minutes": "%1$s phút"
 }

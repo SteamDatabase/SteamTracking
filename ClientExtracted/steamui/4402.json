@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Vi har ingen nye udgivelser at anbefale dig i dag. <1>Tjek resten af kalenderen!</1>",
     "NewBadge": "NYT",
     "Time_Today": "I dag",
+    "DiscountsAndEvents_Title": "Rabatter og begivenheder",
+    "DiscountsAndEvents_SeeMore": "Se mere",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Weekendtilbud",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Midtugetilbud",
+    "DiscountsAndEvents_Banner_DailyDeal": "Dagens tilbud",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Største rabat",
+    "DiscountsAndEvents_LoadError": "Rabatter og begivenheder kunne ikke indlæses lige nu. Prøv igen senere.",
     "store_ui_dummy": "dont translate"
 }

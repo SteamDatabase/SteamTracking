@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Nem indítható hangos csevegés a(z) %chat% csevegésben, nincs szabad csatorna."
 "Friends_Chat_VoiceStatus"		"%availslots% szabad csatorna [összesen %maxslots%]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% JÁTÉKBAN, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% CSEVEG, %online% ONLINE"

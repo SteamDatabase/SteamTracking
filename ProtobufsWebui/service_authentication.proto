@@ -236,9 +236,9 @@ message CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response {
 }
 
 service Authentication {
-	// ePrivilege=0, eWebAPIKeyRequirement=1
+	// ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc BeginAuthSessionViaCredentials (.CAuthentication_BeginAuthSessionViaCredentials_Request) returns (.CAuthentication_BeginAuthSessionViaCredentials_Response);
-	// ePrivilege=0, eWebAPIKeyRequirement=1
+	// ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc BeginAuthSessionViaQR (.CAuthentication_BeginAuthSessionViaQR_Request) returns (.CAuthentication_BeginAuthSessionViaQR_Response);
 	// ePrivilege=1
 	rpc EnumerateTokens (.CAuthentication_RefreshToken_Enumerate_Request) returns (.CAuthentication_RefreshToken_Enumerate_Response);
@@ -250,13 +250,13 @@ service Authentication {
 	rpc GetAuthSessionRiskInfo (.CAuthentication_GetAuthSessionRiskInfo_Request) returns (.CAuthentication_GetAuthSessionRiskInfo_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetAuthSessionsForAccount (.CAuthentication_GetAuthSessionsForAccount_Request) returns (.CAuthentication_GetAuthSessionsForAccount_Response);
-	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetPasswordRSAPublicKey (.CAuthentication_GetPasswordRSAPublicKey_Request) returns (.CAuthentication_GetPasswordRSAPublicKey_Response);
 	// ePrivilege=0, eWebAPIKeyRequirement=1
 	rpc MigrateMobileSession (.CAuthentication_MigrateMobileSession_Request) returns (.CAuthentication_MigrateMobileSession_Response);
 	// ePrivilege=1
 	rpc NotifyRiskQuizResults (.CAuthentication_NotifyRiskQuizResults_Notification) returns (.NoResponse);
-	// ePrivilege=0, eWebAPIKeyRequirement=1
+	// ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc PollAuthSessionStatus (.CAuthentication_PollAuthSessionStatus_Request) returns (.CAuthentication_PollAuthSessionStatus_Response);
 	// ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc RevokeRefreshToken (.CAuthentication_RefreshToken_Revoke_Request) returns (.CAuthentication_RefreshToken_Revoke_Response);
@@ -264,7 +264,7 @@ service Authentication {
 	rpc RevokeToken (.CAuthentication_Token_Revoke_Request) returns (.CAuthentication_Token_Revoke_Response);
 	// ePrivilege=1
 	rpc UpdateAuthSessionWithMobileConfirmation (.CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request) returns (.CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response);
-	// ePrivilege=0, eWebAPIKeyRequirement=1
+	// ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc UpdateAuthSessionWithSteamGuardCode (.CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request) returns (.CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response);
 }
 

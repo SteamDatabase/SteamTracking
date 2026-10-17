@@ -148,7 +148,7 @@
     "Wishlist_Controls_Categories_Header_Other": "Andra kategorier",
     "Wishlist_Controls_Categories_Header_Suggested": "Föreslagna kategorier",
     "Wishlist_Categories_Max_Per_App_Reached": "Den här produkten på din önskelista har nått gränsen på %1$s kategorier.",
-    "Wishlist_Categories_Dialog_Advanced": "Advanced...",
+    "Wishlist_Categories_Dialog_Advanced": "Avancerat ...",
     "Price_History_Normal_Price": "NORMALPRIS",
     "Price_History_Recent_Low_Price": "LÄGSTA (30 DAGAR)",
     "Price_History_Recent_Low_Price_Ttip": "Detta spel var på rea för %1$s under de senaste %2$s dagarna",
@@ -163,5 +163,12 @@
     "PersonalCalendar_EmptyDay": "Vi har inga nya lanseringar att rekommendera till dig den här dagen. <1>Kolla in resten av kalendern!</1>",
     "NewBadge": "NYTT",
     "Time_Today": "Idag",
+    "DiscountsAndEvents_Title": "Rabatter och event",
+    "DiscountsAndEvents_SeeMore": "Se fler",
+    "DiscountsAndEvents_Banner_WeekendDeal": "Helgerbjudande",
+    "DiscountsAndEvents_Banner_MidweekDeal": "Mitt i veckan-erbjudande",
+    "DiscountsAndEvents_Banner_DailyDeal": "Dagens erbjudande",
+    "DiscountsAndEvents_Banner_LargestDiscount": "Största rabatt",
+    "DiscountsAndEvents_LoadError": "Rabatter och event kunde inte läsas in just nu. Försök igen senare.",
     "store_ui_dummy": "dont translate"
 }

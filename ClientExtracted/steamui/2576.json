@@ -112,5 +112,7 @@
     "ReadableDuration_Hours": "%1$s時間",
     "ReadableDuration_Minutes": "%1$s分",
     "ReadableDuration_OneMinute": "1分",
-    "ReadableDuration_LessThanOneMinute": "1分以内"
+    "ReadableDuration_LessThanOneMinute": "1分以内",
+    "Playtime_Hours": "%1$s時間",
+    "Playtime_Minutes": "%1$s分"
 }

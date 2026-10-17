@@ -1,0 +1,31 @@
+
+message CSystemReport_Generate_Request {
+}
+
+message CSystemReport_Generate_Response {
+	optional string report_id = 1;
+}
+
+message CSystemReport_SaveToDesktop_Request {
+	optional string report_id = 1;
+}
+
+message CSystemReport_SaveToDesktop_Response {
+}
+
+message CSystemReport_Submit_Request {
+	optional string report_id = 1;
+}
+
+message CSystemReport_Submit_Response {
+}
+
+service SystemReport {
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc Generate (.CSystemReport_Generate_Request) returns (.CSystemReport_Generate_Response);
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc SaveToDesktop (.CSystemReport_SaveToDesktop_Request) returns (.CSystemReport_SaveToDesktop_Response);
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc Submit (.CSystemReport_Submit_Request) returns (.CSystemReport_Submit_Response);
+}
+

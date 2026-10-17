@@ -4,6 +4,7 @@ import "enums_productinfo.proto";
 import "enums.proto";
 import "steammessages_appratings_types.proto";
 import "steammessages_steamawards_types.proto";
+import "steammessages_seasonpass_types.proto";
 import "contenthubs.proto";
 
 option cc_generic_services = true;
@@ -99,6 +100,19 @@ enum EStoreLinkType {
 	k_EStoreLinkType_MAX = 25;
 }
 
+enum EStoreAppDocumentType {
+	k_EStoreAppDocumentType_None = 0;
+	k_EStoreAppDocumentType_Manual = 1;
+	k_EStoreAppDocumentType_QuickRef = 2;
+	k_EStoreAppDocumentType_Map = 3;
+	k_EStoreAppDocumentType_GettingStarted = 4;
+	k_EStoreAppDocumentType_ReadMe = 5;
+	k_EStoreAppDocumentType_TechTree = 6;
+	k_EStoreAppDocumentType_Keybindings = 7;
+	k_EStoreAppDocumentType_Warranty = 8;
+	k_EStoreAppDocumentType_MAX = 9;
+}
+
 enum EStoreCategoryType {
 	k_EStoreCategoryType_Category = 0;
 	k_EStoreCategoryType_SupportedPlayers = 1;
@@ -144,6 +158,7 @@ message StoreBrowseItemDataRequest {
 	optional bool include_links = 17;
 	optional bool include_extra_details = 18;
 	optional bool include_best_purchase_option = 19 [default = true];
+	optional bool include_optin_registration_tags = 20;
 }
 
 message CStoreBrowse_GetItems_Request {
@@ -185,6 +200,7 @@ message StoreItem {
 		repeated .StoreItem included_apps = 1;
 		repeated .StoreItem included_packages = 2;
 		repeated .StoreItem included_bundles = 3;
+		repeated .StoreItem included_creators = 4;
 	}
 
 	message Categories {
@@ -246,6 +262,7 @@ message StoreItem {
 		optional string raw_page_background = 16;
 		optional string edition_comparison = 17;
 		optional uint32 last_modified = 21;
+		optional string creator_home_background = 22;
 	}
 
 	message ReleaseInfo {
@@ -270,6 +287,7 @@ message StoreItem {
 		message VRSupport {
 			optional bool vrhmd = 1;
 			optional bool vrhmd_only = 2;
+			optional bool show_optional_vr_mode_notice = 3;
 			optional bool htc_vive = 40;
 			optional bool oculus_rift = 41;
 			optional bool windows_mr = 42;
@@ -333,6 +351,7 @@ message StoreItem {
 		optional int64 price_to_base_discount_on = 53;
 		optional uint32 free_with_master_sub_appid = 54;
 		optional string formatted_lowest_recent_price = 55;
+		optional bool is_free_license = 56;
 	}
 
 	message Screenshots {
@@ -407,46 +426,160 @@ message StoreItem {
 		optional string dropdown_description_bbcode = 5;
 	}
 
-	message Anticheat {
-		optional bool kernel_mode = 1;
-		optional bool uninstall_completely = 2;
-		optional bool boot_protection = 3;
-		optional string boot_protection_name = 4;
-		optional string name = 5;
-		optional string name_loc = 6;
-	}
-
-	message Eula {
-		optional string name = 1;
-		optional string url = 2;
-	}
-
-	message AIGeneratedContentService {
-		optional string name = 1;
-		optional string url = 2;
-	}
-
-	message PageSection {
-		enum EPageSectionBanner {
-			k_EPageSectionBanner_None = 0;
-			k_EPageSectionBanner_Workshop = 1;
-			k_EPageSectionBanner_Follow = 2;
-			k_EPageSectionBanner_MachineController = 3;
+	message ExtraDetails {
+		message Anticheat {
+			optional bool kernel_mode = 1;
+			optional bool uninstall_completely = 2;
+			optional bool boot_protection = 3;
+			optional string boot_protection_name = 4;
+			optional string name = 5;
+			optional string name_loc = 6;
 		}
 
-		optional string label = 1;
-		optional string content_bbcode = 2;
-		optional .StoreItem.PageSection.EPageSectionBanner banner = 3 [default = k_EPageSectionBanner_None];
-	}
+		message Eula {
+			optional string name = 1;
+			optional string url = 2;
+		}
 
-	message PressReview {
-		optional string quote = 1;
-		optional string score = 2;
-		optional string site = 3;
-		optional string url = 4;
-	}
+		message AIGeneratedContentService {
+			optional string name = 1;
+			optional string url = 2;
+		}
 
-	message ExtraDetails {
+		message PageSection {
+			enum EPageSectionBanner {
+				k_EPageSectionBanner_None = 0;
+				k_EPageSectionBanner_Workshop = 1;
+				k_EPageSectionBanner_Follow = 2;
+				k_EPageSectionBanner_MachineController = 3;
+			}
+
+			optional string label = 1;
+			optional string content_bbcode = 2;
+			optional .StoreItem.ExtraDetails.PageSection.EPageSectionBanner banner = 3 [default = k_EPageSectionBanner_None];
+		}
+
+		message PressReview {
+			optional string quote = 1;
+			optional string score = 2;
+			optional string site = 3;
+			optional string url = 4;
+		}
+
+		message EarlyAccess {
+			optional string why_bbcode = 1;
+			optional string how_long_bbcode = 2;
+			optional string full_version_bbcode = 3;
+			optional string current_state_bbcode = 4;
+			optional string pricing_bbcode = 5;
+			optional string community_bbcode = 6;
+			optional string description_bbcode = 7;
+		}
+
+		message LinksAndInfo {
+			optional string website = 1;
+			optional string stats_url = 2;
+			optional string online_manual_url = 3;
+			optional string health_warning_url = 4;
+			optional string privacy_policy_url = 5;
+			repeated .EStoreAppDocumentType available_documents = 6;
+			repeated uint32 genreids = 7;
+			repeated string manufacturers = 8;
+			optional bool achievements_visible = 9;
+			optional uint32 achievement_count = 10;
+		}
+
+		message Metacritic {
+			optional uint32 score = 1;
+			optional string url = 2;
+			optional bool always_show = 3;
+		}
+
+		message CastAndCrew {
+			repeated string directors = 1;
+			repeated string producers = 2;
+			repeated string writers = 3;
+			repeated string music = 4;
+			repeated string actors = 5;
+		}
+
+		message SystemRequirements {
+			message Size {
+				optional string amount = 1;
+				optional string units = 2;
+			}
+
+			message Requirements {
+				optional string os_version = 1;
+				optional bool os_version_unsupported = 2;
+				optional string processor = 3;
+				optional .StoreItem.ExtraDetails.SystemRequirements.Size memory = 4;
+				optional string graphics = 5;
+				optional string directx = 6;
+				optional bool broadband = 7;
+				optional .StoreItem.ExtraDetails.SystemRequirements.Size storage = 8;
+				optional .StoreItem.ExtraDetails.SystemRequirements.Size storage_hq = 9;
+				optional string sound_card = 10;
+				optional string vr_support = 11;
+				optional string notes = 12;
+				optional string legacy_bbcode = 13;
+			}
+
+			message PlatformRequirements {
+				optional .StoreItem.ExtraDetails.SystemRequirements.ESysReqPlatform platform = 1 [default = k_ESysReqPlatform_Unknown];
+				optional .StoreItem.ExtraDetails.SystemRequirements.Requirements minimum = 2;
+				optional .StoreItem.ExtraDetails.SystemRequirements.Requirements recommended = 3;
+				optional bool requires_64bit = 4;
+				optional bool requires_apple_silicon = 5;
+				optional .StoreItem.ExtraDetails.SystemRequirements.EUnsupportedOSNote unsupported_os_note = 6 [default = k_EUnsupportedOSNote_None];
+			}
+
+			enum EUnsupportedOSNote {
+				k_EUnsupportedOSNote_None = 0;
+				k_EUnsupportedOSNote_Windows = 1;
+				k_EUnsupportedOSNote_Mac = 2;
+			}
+
+			enum ESysReqPlatform {
+				k_ESysReqPlatform_Unknown = 0;
+				k_ESysReqPlatform_Windows = 1;
+				k_ESysReqPlatform_Mac = 2;
+				k_ESysReqPlatform_Linux = 3;
+				k_ESysReqPlatform_Android = 4;
+			}
+
+			repeated .StoreItem.ExtraDetails.SystemRequirements.PlatformRequirements platforms = 1;
+		}
+
+		message Episode {
+			enum EEpisodeType {
+				k_EEpisodeType_Unknown = 0;
+				k_EEpisodeType_Episode = 1;
+				k_EEpisodeType_Chapter = 2;
+				k_EEpisodeType_Bonus = 3;
+				k_EEpisodeType_BehindTheScenes = 4;
+				k_EEpisodeType_Deleted = 5;
+			}
+
+			optional string number = 1;
+			optional .StoreItem.ExtraDetails.Episode.EEpisodeType type = 2 [default = k_EEpisodeType_Unknown];
+			optional bool hide_details = 3;
+		}
+
+		message Season {
+			optional int32 index = 1;
+			optional string name = 2;
+			repeated uint32 episode_appids = 3;
+		}
+
+		enum EVideoExtrasNote {
+			k_EVideoExtrasNote_Purchase = 0;
+			k_EVideoExtrasNote_Rental = 1;
+			k_EVideoExtrasNote_PurchaseRental = 2;
+			k_EVideoExtrasNote_PurchaseSpecialEdition = 3;
+			k_EVideoExtrasNote_PurchaseDeluxeEdition = 4;
+		}
+
 		repeated .SteamAward steam_award = 1;
 		optional bool vetted = 2;
 		optional bool no_mouse_keyboard_support = 3;
@@ -455,17 +588,48 @@ message StoreItem {
 		optional string drm_activation_limit = 6;
 		optional string user_account_third_party = 7;
 		optional bool user_account_third_party_link_to_steam = 8;
-		optional .StoreItem.Anticheat anticheat = 9;
-		repeated .StoreItem.Eula eula = 10;
-		optional .StoreItem.AIGeneratedContentService ai_generation_service = 11;
+		optional .StoreItem.ExtraDetails.Anticheat anticheat = 9;
+		repeated .StoreItem.ExtraDetails.Eula eula = 10;
+		optional .StoreItem.ExtraDetails.AIGeneratedContentService ai_generation_service = 11;
 		optional bool refund_checks_ea_playtime = 12;
-		repeated .StoreItem.PageSection section = 13;
+		repeated .StoreItem.ExtraDetails.PageSection section = 13;
 		optional string legal_notice_bbcode = 14;
 		repeated .EInteractiveElement interactive_elements = 15;
 		optional string content_survey_notes = 16;
 		optional string content_survey_ai_notes = 17;
-		repeated .StoreItem.PressReview press_review = 18;
+		repeated .StoreItem.ExtraDetails.PressReview press_review = 18;
 		optional string partner_awards_bbcode = 19;
+		optional .StoreItem.ExtraDetails.EarlyAccess early_access = 20;
+		optional .CSeasonPass season_pass = 21;
+		optional .StoreItem.ExtraDetails.LinksAndInfo links_and_info = 22;
+		optional bool item_store_eligible = 23;
+		optional bool points_shop_eligible = 24;
+		optional .StoreItem.ExtraDetails.Metacritic metacritic = 26;
+		optional .StoreItem.ExtraDetails.CastAndCrew cast_and_crew = 27;
+		optional .StoreItem.ExtraDetails.SystemRequirements system_requirements = 28;
+		optional uint32 running_time_minutes = 29;
+		optional .StoreItem.ExtraDetails.Episode episode = 30;
+		repeated .StoreItem.ExtraDetails.Season seasons = 31;
+		optional .StoreItem.ExtraDetails.EVideoExtrasNote video_extras_note = 32 [default = k_EVideoExtrasNote_Purchase];
+	}
+
+	message OptInRegistrationTags {
+		optional string optin_name = 1;
+		repeated string values = 2;
+	}
+
+	message PurchaseNote {
+		enum EPurchaseNoteType {
+			k_EPurchaseNoteType_None = 0;
+			k_EPurchaseNoteType_Notice = 1;
+			k_EPurchaseNoteType_LowViolence = 2;
+			k_EPurchaseNoteType_CreditCardRequired = 3;
+			k_EPurchaseNoteType_SystemRequirements = 4;
+		}
+
+		optional .StoreItem.PurchaseNote.EPurchaseNoteType type = 1 [default = k_EPurchaseNoteType_None];
+		optional bool highlighted = 2;
+		optional string text_bbcode = 3;
 	}
 
 	optional .EStoreItemType item_type = 1 [default = k_EStoreItemType_Invalid];
@@ -515,6 +679,8 @@ message StoreItem {
 	optional string purchase_description_bbcode = 72;
 	repeated .StoreItem.PackageGroup package_groups = 74;
 	optional .StoreItem.ExtraDetails extra_details = 75;
+	repeated .StoreItem.OptInRegistrationTags optin_registration_tags = 77;
+	repeated .StoreItem.PurchaseNote purchase_notes = 78;
 }
 
 message StoreGameRating {
@@ -529,6 +695,8 @@ message StoreGameRating {
 	repeated .EInteractiveElement survey_interactive_elements = 9;
 	optional int32 required_age = 10;
 	optional bool use_age_gate = 11;
+	repeated .ERatingDescriptorImage descriptor_images = 12;
+	optional string content_survey_notes = 13;
 	optional string image_url = 20;
 	optional string image_target = 21;
 }
