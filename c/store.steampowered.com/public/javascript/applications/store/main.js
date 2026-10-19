@@ -75834,6 +75834,7 @@
               purchaseOption: _,
               size: _ = "large",
               transparentBackground: _ = !1,
+              legacyStyle: _ = !1,
             } = _,
             {
               discount_pct: _ = 0,
@@ -75845,25 +75846,29 @@
             } = _;
           if (!_) return null;
           const _ = _ && !_;
-          return (0, _.jsxs)(_, {
-            percentage: _,
-            original_price: _,
-            final_price: _,
-            hide_discount_pct: _,
-            size: _,
-            transparent: _,
-            children: [
-              _ > 0 &&
+          return (
+            console.log(_, _),
+            (0, _.jsxs)(_, {
+              percentage: _,
+              original_price: _,
+              final_price: _,
+              hide_discount_pct: _,
+              size: _,
+              transparent: _,
+              legacy: _,
+              children: [
+                _ > 0 &&
+                  (0, _.jsx)(_, {
+                    percentage: _,
+                    hide_discount_pct: _,
+                  }),
                 (0, _.jsx)(_, {
-                  percentage: _,
-                  hide_discount_pct: _,
+                  final_price: _,
+                  original_price: _ ? _ : void 0,
                 }),
-              (0, _.jsx)(_, {
-                final_price: _,
-                original_price: _ ? _ : void 0,
-              }),
-            ],
-          });
+              ],
+            })
+          );
         });
         function _(_) {
           const { final_price: _, original_price: _ } = _;
@@ -75912,34 +75917,36 @@
             hide_discount_pct: _,
             size: _,
             transparent: _,
+            legacy: _,
             children: _,
           } = _;
           let _ = {};
-          return (
-            _ &&
-              ((_.role = "link"),
-              _
-                ? (_["aria-label"] = _._.Localize(
-                    "#Discount_ARIA_Label_SpecialPrice",
-                    _,
-                  ))
-                : (_["aria-label"] = _._.Localize(
-                    "#Discount_ARIA_Label",
-                    _,
-                    _,
-                    _,
-                  ))),
-            (0, _.jsx)("div", {
-              ..._,
-              className: _()(
-                _.DiscountBlock,
-                _ && _.Transparent,
-                _ == "large" && _.SizeLarge,
-                _ == "inline" && _.SizeInline,
-              ),
-              children: _,
-            })
+          _ &&
+            ((_.role = "link"),
+            _
+              ? (_["aria-label"] = _._.Localize(
+                  "#Discount_ARIA_Label_SpecialPrice",
+                  _,
+                ))
+              : (_["aria-label"] = _._.Localize(
+                  "#Discount_ARIA_Label",
+                  _,
+                  _,
+                  _,
+                )));
+          const _ = _()(
+            _.DiscountBlock,
+            _ && _.Transparent,
+            _ == "large" && _.SizeLarge,
+            _ == "inline" && _.SizeInline,
+            _ && _.Legacy,
+            _ && !_ && _.NoDiscount,
           );
+          return (0, _.jsx)("div", {
+            ..._,
+            className: _,
+            children: _,
+          });
         }
         function _() {
           return (0, _.jsx)("svg", {
@@ -146219,6 +146226,8 @@ Status Code:` +
           WithOriginalPrice: "_1gp3t-2iXZJ_KLMSNHXImo",
           OriginalPrice: "_1xgg-R84IHS6h5_x6ZycXi",
           FinalPrice: "_2L23Sk2CNSFCplu_7mMmQx",
+          Legacy: "-VpxFrAdDTkxFet2-yS4i",
+          NoDiscount: "_1SFckkXJlIjHTP6YDYyaeK",
         };
       },
       chunkid: (module) => {

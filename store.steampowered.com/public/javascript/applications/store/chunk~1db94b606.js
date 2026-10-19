@@ -78,12 +78,12 @@
         }
         function W(S, v, w) {
           return {
-            queryKey: A(S),
+            queryKey: j(S),
             queryFn: async () => await U(S, v, w),
             enabled: !!S,
           };
         }
-        function A(S) {
+        function j(S) {
           return ["useEventUserPermissions", n.iA.accountid, S];
         }
       },
@@ -184,7 +184,7 @@
           F = r.n(N),
           _ = r(53107),
           W = r(36707),
-          A = r(53113),
+          j = r(53113),
           S = r(69596),
           v = r(35265);
         function w(B) {
@@ -458,8 +458,8 @@
           const { strURL: ee, children: ye } = B;
           return (
             typeof ee == "string"
-              ? !(0, A.ZF)(ee)
-              : ee.some((Je) => !(0, A.ZF)(Je))
+              ? !(0, j.ZF)(ee)
+              : ee.some((Je) => !(0, j.ZF)(Je))
           )
             ? (0, n.jsx)(Se, { children: ye })
             : (0, n.jsx)(n.Fragment, { children: ye });
@@ -579,7 +579,7 @@
             Me = $e;
             let T;
             return (
-              (T = !(0, A.ZF)(Me)),
+              (T = !(0, j.ZF)(Me)),
               ye?.BHasTag("auto_rssfeed") && (T = !1),
               ee
                 ? (0, n.jsx)(Ie.i, {
@@ -587,7 +587,7 @@
                     src: Me,
                     crossOrigin: T ? "anonymous" : void 0,
                   })
-                : ((Me = (0, A.L$)(Me)),
+                : ((Me = (0, j.L$)(Me)),
                   (0, n.jsx)(Ee, {
                     strURL: Me,
                     children: (0, n.jsx)(Re.o, {
@@ -727,7 +727,7 @@
           }
         }
         const W = "[\u02D0:]([a-zA-Z0-9_]+)[\u02D0:]";
-        class A extends a.K0 {
+        class j extends a.K0 {
           m_EmoteRegex = new RegExp(W);
           AppendText(c, m = !1) {
             let M = c;
@@ -806,7 +806,7 @@
             D = t.useCallback(
               (G) =>
                 new S(
-                  new A(new _(new a.OJ(new a.R8()), G, P, { event: M })),
+                  new j(new _(new a.OJ(new a.R8()), G, P, { event: M })),
                   G,
                 ),
               [M, P],
@@ -859,7 +859,7 @@
           F = r(36707),
           _ = r(87949),
           W = r(55483),
-          A = r(10985),
+          j = r(10985),
           S = r(99412),
           v = r(47797),
           w = r(76559);
@@ -1068,7 +1068,7 @@
           const X = De(Z),
             ie = X ? Z.clanSteamID.GetAccountID() : void 0,
             { data: Pe, isLoading: Oe } = (0, W.TB)(ie),
-            { data: Ye, isLoading: _e } = (0, A.A5)(ie);
+            { data: Ye, isLoading: _e } = (0, j.A5)(ie);
           if (!X) return null;
           if (!(Oe || _e))
             return !Ye || !Pe || !(0, v.Ns)(Z, Pe) ? null : (Ye.appids ?? []);
@@ -1518,7 +1518,7 @@
             (!!v.eventGID || !!v.announcementGID)
           );
         }
-        function A(v, w) {
+        function j(v, w) {
           const g = W(v);
           return {
             queryKey: _(v ?? {}, w),
@@ -1531,7 +1531,7 @@
         }
         function S(v) {
           const w = (0, x.sfN)(a.TS.LANGUAGE);
-          return (0, s.I)(A(v, w));
+          return (0, s.I)(j(v, w));
         }
       },
       56492: (ge, de, r) => {
@@ -1562,7 +1562,7 @@
           F = r(64165),
           _ = r(71742),
           W = r(53113),
-          A = r(3166),
+          j = r(3166),
           S = r(72609),
           v = r(39905),
           w = r(47875),
@@ -1603,9 +1603,9 @@
             Re =
               Ie &&
               Te == Y &&
-              ((ve.appid && ve.appid === A.UF.APPID) ||
+              ((ve.appid && ve.appid === j.UF.APPID) ||
                 (!ve.appid &&
-                  ve.clanSteamID.GetAccountID() === A.UF.CLANACCOUNTID));
+                  ve.clanSteamID.GetAccountID() === j.UF.CLANACCOUNTID));
           switch (E) {
             case "view":
               return Re || (be && !p());
@@ -1666,7 +1666,7 @@
         function m(E, ve, me) {
           if (me)
             return (
-              (E ? "/games/" + A.UF.VANITY_ID : "/groups/" + A.UF.VANITY_ID) +
+              (E ? "/games/" + j.UF.VANITY_ID : "/groups/" + j.UF.VANITY_ID) +
               "/"
             );
           const Y = E ? "ogg/" + E : "gid/" + ve.ConvertTo64BitString();
@@ -1876,7 +1876,7 @@
               event: F,
               className: _,
               nOverrideStartTime: W,
-              nOverrideEndTime: A,
+              nOverrideEndTime: j,
             } = N,
             S = N.stylesmodule ? { ...z(), ...N.stylesmodule } : z(),
             [v, w, g] = (0, x.q3)(() => [
@@ -1884,7 +1884,7 @@
                 (F.bOldAnnouncement
                   ? F.postTime
                   : F.GetStartTimeAndDateUnixSeconds()),
-              A || F.GetEndTimeAndDateUnixSeconds(),
+              j || F.GetEndTimeAndDateUnixSeconds(),
               F.type,
             ]),
             o = !(0, t.JS)(g);
@@ -1903,7 +1903,7 @@
               id: F,
               event: _,
               className: W,
-              dateRangeLayout: A = "horizontal",
+              dateRangeLayout: j = "horizontal",
             } = N,
             [S, v, w] = (0, x.q3)(() => [
               _.GetStartTimeAndDateUnixSeconds(),
@@ -1912,7 +1912,7 @@
             ]),
             g = {};
           return (
-            A == "vertical" &&
+            j == "vertical" &&
               (g.ShortDateRange = z().VerticalLocalDateAndTime),
             (0, n.jsx)("div", {
               id: F,
@@ -1941,9 +1941,9 @@
           U = r(20881),
           N = r.n(U);
         function F(_) {
-          const { inputType: W, id: A, bApplyUserContentPref: S } = _,
+          const { inputType: W, id: j, bApplyUserContentPref: S } = _,
             v = W == "bundle" ? "bundle" : W == "sub" ? "sub" : "game",
-            w = (0, t.zl)(A, v),
+            w = (0, t.zl)(j, v),
             { data: g } = (0, s.J$)(w),
             { data: o, isPending: h } = (0, s.Ij)(S ? w : void 0);
           if (!g) return null;
@@ -1976,7 +1976,7 @@
           return (0, n.jsx)("div", {
             className: (0, z.A)(N().AppSummaryWidgetCtn, "AppSummaryWidgetCtn"),
             children: (0, n.jsx)(y.p, {
-              id: A,
+              id: j,
               type: v,
               bShowDemoButton: g.type == x.uE.ue,
               bAllowTwoLinesForHeader: !0,
@@ -2000,14 +2000,14 @@
         function V(F) {
           return F == "up" ? 1 : F == "down" ? -1 : 0;
         }
-        function U(F, _, W, A) {
+        function U(F, _, W, j) {
           const S = (0, a.jE)(),
             v = z(F, x.iA.accountid),
             { data: w } = (0, s.I)({
               queryKey: v,
               queryFn: async () => await W.GetMyEventVote(F),
-              initialData: A?.initialVote,
-              enabled: !!F && !!x.iA.accountid && (A?.bAsk ?? !0),
+              initialData: j?.initialVote,
+              enabled: !!F && !!x.iA.accountid && (j?.bAsk ?? !0),
               staleTime: 1 / 0,
               gcTime: 1 / 0,
             }),
@@ -2031,8 +2031,8 @@
           if (F.length == 0) return;
           const W = _ ?? (0, y.X)("SetMyEventVotes");
           W &&
-            F.forEach((A) =>
-              W.setQueryData(z(A.gidAnnouncement, x.iA.accountid), A.vote),
+            F.forEach((j) =>
+              W.setQueryData(z(j.gidAnnouncement, x.iA.accountid), j.vote),
             );
         }
       },
@@ -2051,16 +2051,16 @@
           N = r.n(U);
         function F(_) {
           const { event: W } = _,
-            A = (0, y.q3)(() => W.jsondata?.referenced_appids || []),
+            j = (0, y.q3)(() => W.jsondata?.referenced_appids || []),
             S = (0, x.eG)(),
             v = (0, t.E)({
-              queries: A.map((o) => (0, a.us)(S, { appid: o })),
+              queries: j.map((o) => (0, a.us)(S, { appid: o })),
               combine: (o) => ({
                 bLoaded: o.every((h) => !h.isPending),
                 data: o.map((h) => h.data),
               }),
             });
-          if (!A.length || !v.bLoaded) return null;
+          if (!j.length || !v.bLoaded) return null;
           const w = v.data
               .flatMap((o) =>
                 o?.store_url_path && o?.name
@@ -2068,7 +2068,7 @@
                   : [],
               )
               .join((0, V.we)("#EventDisplay_ReferencedApps_Joiner")),
-            g = (0, V.Yp)("#EventDisplay_ReferencedApps", A.length, w);
+            g = (0, V.Yp)("#EventDisplay_ReferencedApps", j.length, w);
           return (0, n.jsx)("div", {
             className: N().ReferencedApps,
             children: (0, n.jsx)(z.Zn, { text: g, event: W }),
@@ -2085,33 +2085,33 @@
           t = r(71742),
           y = r(68266),
           z = r(85741);
-        function V(F, _, W, A, S) {
+        function V(F, _, W, j, S) {
           const v = (0, a.jE)(),
             w = (0, x.eG)();
-          return (0, s.I)(N(v, w, F, _, W, A, S)).data ?? void 0;
+          return (0, s.I)(N(v, w, F, _, W, j, S)).data ?? void 0;
         }
-        function U(F, _, W, A, S) {
+        function U(F, _, W, j, S) {
           return [
             "useEventImageForSizeAsArrayWithFallback",
             F?.GID,
             _,
             W,
-            A,
+            j,
             S,
           ];
         }
-        function N(F, _, W, A, S, v, w) {
+        function N(F, _, W, j, S, v, w) {
           return {
-            queryKey: U(W, A, S, v, w),
+            queryKey: U(W, j, S, v, w),
             enabled: W && !!W.GID,
             queryFn: async () => {
               if (!W) return null;
               let g = new Array();
-              if (!W.BImageNeedScreenshotFallback(A, S)) {
-                const o = await F.ensureQueryData((0, y.lx)(F, _, W, A, S, v));
+              if (!W.BImageNeedScreenshotFallback(j, S)) {
+                const o = await F.ensureQueryData((0, y.lx)(F, _, W, j, S, v));
                 if ((o && g.push(o), v != n.wI.full)) {
                   const h = await F.ensureQueryData(
-                    (0, y.lx)(F, _, W, A, S, n.wI.full),
+                    (0, y.lx)(F, _, W, j, S, n.wI.full),
                   );
                   h && g.push(h);
                 }
@@ -2137,7 +2137,7 @@
       },
       68266: (ge, de, r) => {
         "use strict";
-        r.d(de, { lx: () => A, m0: () => _ });
+        r.d(de, { lx: () => j, m0: () => _ });
         var n = r(9046),
           x = r(55483),
           a = r(72609),
@@ -2152,12 +2152,12 @@
         function _(v, w, g, o = n.wI.full, h = !0) {
           const b = (0, z.jE)(),
             k = (0, t.eG)();
-          return (0, V.I)(A(b, k, v, w, g, o, h)).data ?? void 0;
+          return (0, V.I)(j(b, k, v, w, g, o, h)).data ?? void 0;
         }
         function W(v, w, g, o = n.wI.full, h = !0) {
           return ["useEventImageURLWithFallback", v?.GID, w, g, o, h];
         }
-        function A(v, w, g, o, h, b = n.wI.full, k = !0) {
+        function j(v, w, g, o, h, b = n.wI.full, k = !0) {
           return {
             queryKey: W(g, o, h, b, k),
             enabled: !!g?.GID,
@@ -2230,17 +2230,17 @@
             enabled: !!W?.GID,
             queryFn: async () => {
               if (!W) return null;
-              const A = W.appid
+              const j = W.appid
                   ? await F.ensureQueryData((0, t.OE)(_, { appid: W.appid }))
                   : null,
                 S = await F.ensureQueryData(
                   (0, n.ec)(W.clanSteamID.GetAccountID(), F),
                 );
               if (W.appid)
-                if (A) {
+                if (j) {
                   if (
-                    A.all_ages_screenshots &&
-                    A.all_ages_screenshots.length > 0
+                    j.all_ages_screenshots &&
+                    j.all_ages_screenshots.length > 0
                   ) {
                     let v = Number(
                       W.bOldAnnouncement
@@ -2250,8 +2250,8 @@
                           : W.GID,
                     );
                     return (
-                      (v = v % A.all_ages_screenshots.length),
-                      `${a.TS.STORE_ITEM_BASE_URL}${A.all_ages_screenshots[v].filename}`
+                      (v = v % j.all_ages_screenshots.length),
+                      `${a.TS.STORE_ITEM_BASE_URL}${j.all_ages_screenshots[v].filename}`
                     );
                   }
                 } else return "";
@@ -2290,7 +2290,7 @@
       },
       90533: (ge, de, r) => {
         "use strict";
-        r.d(de, { Eg: () => V, m4: () => S, EG: () => A, fm: () => g });
+        r.d(de, { Eg: () => V, m4: () => S, EG: () => j, fm: () => g });
         var n = r(61639),
           x = r(75233),
           a = r(51614),
@@ -2357,7 +2357,7 @@
         function W(o, h, b) {
           return clearTimeout(o), setTimeout(b, h);
         }
-        function A(o) {
+        function j(o) {
           y(n.Mc.ej, o);
         }
         function S(o, h) {
@@ -2415,7 +2415,7 @@
               mutationFn: async (b) => {
                 switch (b.type) {
                   case "interaction":
-                    A(b.interaction);
+                    j(b.interaction);
                     break;
                   case "filter-change":
                     S(o, b.nFilterBitMask);
@@ -2488,7 +2488,7 @@
           return (0, a.I)(F(c, m));
         }
         const W = (c, m) => ["useMeetSteamGetAvailability", c, m];
-        function A(c, m, M) {
+        function j(c, m, M) {
           return {
             queryKey: v(c, m, M),
             queryFn: async () => {
@@ -2499,7 +2499,7 @@
           };
         }
         function S(c, m, M) {
-          return (0, a.I)(A(c, m, M));
+          return (0, a.I)(j(c, m, M));
         }
         const v = (c, m, M) => ["useMeetSteamGetRegistrationDetails", c, m, M];
         function w(c) {
@@ -2582,7 +2582,7 @@
           F = r(90626),
           _ = r(16346),
           W = r(40650),
-          A = r(16412),
+          j = r(16412),
           S = r(18057),
           v = r(96538),
           w = r(36118),
@@ -2833,7 +2833,7 @@ ${Ce}`;
                             ? "#EventReminder_NotifyByEmail_ttip"
                             : "#EventReminder_NotifyByEmail_Missing",
                         ),
-                        children: (0, n.jsx)(A.Yh, {
+                        children: (0, n.jsx)(j.Yh, {
                           label: (0, b.we)("#EventDisplay_Reminder_ViaEmail"),
                           disabled: !et,
                           checked: yt,
@@ -2866,7 +2866,7 @@ ${Ce}`;
                             ? "#EventReminder_NotifyByMobile_ttip"
                             : "#EventReminder_NotifyByMobile_Missing",
                         ),
-                        children: (0, n.jsx)(A.Yh, {
+                        children: (0, n.jsx)(j.Yh, {
                           label: (0, b.we)(
                             "#EventDisplay_Reminder_ViaMobileApp",
                           ),
@@ -3204,8 +3204,8 @@ ${Ce}`;
           F = r(36707),
           _ = r(18210),
           W = r(53113),
-          A = r(19890),
-          S = r.n(A),
+          j = r(19890),
+          S = r.n(j),
           v = r(4515);
         function w(M) {
           const { appid: p } = M;
@@ -3409,7 +3409,7 @@ ${Ce}`;
           Nc: () => _,
           vd: () => F,
           _V: () => N,
-          kR: () => A,
+          kR: () => j,
         });
         var n = r(72609);
         const x = "meetsteam/availability",
@@ -3442,7 +3442,7 @@ ${Ce}`;
         async function W(S, v) {
           return await V(z, { gid: S, accountid: String(v) });
         }
-        async function A(S) {
+        async function j(S) {
           const v = n.TS.STORE_BASE_URL + t,
             w = new URLSearchParams({
               gid: S.gid,
@@ -3487,7 +3487,7 @@ ${Ce}`;
           F = 2,
           _ = 3,
           W = 4,
-          A = 5,
+          j = 5,
           S = 6,
           v = 7,
           w = 8,
@@ -9464,7 +9464,7 @@ ${Ce}`;
           F = 5,
           _ = 6,
           W = 7,
-          A = 8,
+          j = 8,
           S = 9,
           v = 10,
           w = 11,
@@ -9633,7 +9633,7 @@ ${Ce}`;
         r.d(de, {
           Ay: () => z,
           Cs: () => N,
-          HN: () => A,
+          HN: () => j,
           HY: () => t,
           LD: () => U,
           MU: () => W,
@@ -9667,7 +9667,7 @@ ${Ce}`;
         function W() {
           return F().eLocation == t;
         }
-        function A() {
+        function j() {
           const S = F();
           return S.eLocation == t || S.eLocation == s;
         }
@@ -9688,7 +9688,7 @@ ${Ce}`;
           F = r(85599),
           _ = r(36707),
           W = r(18210),
-          A = r(6881),
+          j = r(6881),
           S = r(4105),
           v = r(94253),
           w = r(74187),
@@ -9844,7 +9844,7 @@ ${Ce}`;
         }
         function te(re) {
           const { appid: J, community_item_type: Q } = re,
-            c = (0, A.fw)(J),
+            c = (0, j.fw)(J),
             { mutate: m, isSuccess: M } = (0, v.t5)();
           if (!c) return null;
           const p = c.find((L) => L.item_type == Q);
@@ -9926,7 +9926,7 @@ ${Ce}`;
         function W(w, g) {
           return ["sale", "giveawayregistration", w, g];
         }
-        function A(w, g) {
+        function j(w, g) {
           return {
             queryKey: W(w, g),
             queryFn: () => U(w),
@@ -9935,7 +9935,7 @@ ${Ce}`;
           };
         }
         function S(w) {
-          const { data: g, isError: o } = (0, x.I)(A(w, n.iA.accountid));
+          const { data: g, isError: o } = (0, x.I)(j(w, n.iA.accountid));
           return o ? _ : g;
         }
         function v() {
@@ -10002,7 +10002,7 @@ ${Ce}`;
         function W(o) {
           return ["LoyaltyRewardDef", o];
         }
-        function A(o, h) {
+        function j(o, h) {
           return ["LoyaltyRewardDefsByCategoryAndClass", o, h];
         }
         function S(o) {
@@ -10024,7 +10024,7 @@ ${Ce}`;
         }
         function v(o, h) {
           return {
-            queryKey: A(o, h),
+            queryKey: j(o, h),
             queryFn: () => F({ strCategory: o, itemClass: h }),
             enabled: !!(o && h),
             staleTime: _,
@@ -10074,7 +10074,7 @@ ${Ce}`;
           return P.Body().toObject().items ?? [];
         }
         let W;
-        function A() {
+        function j() {
           const p = (0, y.q)();
           if (p) return p.GetServiceTransport();
           if (!W) {
@@ -10084,7 +10084,7 @@ ${Ce}`;
           return W.GetServiceTransport();
         }
         async function S(p) {
-          return _(A(), p);
+          return _(j(), p);
         }
         const v = 3 * 1e3,
           w = 5 * 1e3,
@@ -10173,7 +10173,7 @@ ${Ce}`;
         const F = "minigamev2/itemdefs",
           _ = "appid",
           W = "editor";
-        function A() {
+        function j() {
           return (typeof self < "u" ? self.origin + "/" : "") ===
             y.TS.STORE_BASE_URL
             ? y.TS.STORE_BASE_URL
@@ -10183,7 +10183,7 @@ ${Ce}`;
           if (!te) return [];
           const J = new URLSearchParams({ [_]: String(te), l: y.TS.LANGUAGE });
           re && J.set(W, "1");
-          const Q = `${A()}${F}?${J}`,
+          const Q = `${j()}${F}?${J}`,
             c = await fetch(Q, { credentials: re ? "include" : "same-origin" });
           if (!c.ok) throw new Error(`${Q} answered ${c.status}`);
           const m = await c.json();
@@ -10336,10 +10336,10 @@ ${Ce}`;
           F = r(67705),
           _ = r(72604),
           W = r(31224),
-          A = r(7112);
+          j = r(7112);
         const S = { bCanClaimNewItem: !1, bAlreadyClaimedCurrentItem: !1 };
         async function v(Y, be) {
-          const fe = await A.Qm.CanClaimItem(Y, { language: be });
+          const fe = await j.Qm.CanClaimItem(Y, { language: be });
           if (fe.GetEResult() != _.R)
             throw new Error(
               "SaleItemRewards.CanClaimItem answered " + fe.GetEResult(),
@@ -10357,7 +10357,7 @@ ${Ce}`;
           };
         }
         async function w(Y, be) {
-          const fe = await A.Qm.ClaimItem(Y, { language: be });
+          const fe = await j.Qm.ClaimItem(Y, { language: be });
           if (fe.GetEResult() == _.Ze) return v(Y, be);
           if (fe.GetEResult() != _.R)
             throw new Error(
@@ -10390,7 +10390,7 @@ ${Ce}`;
         }
         async function o(Y, be, fe, Ie) {
           return (
-            await A.Qm.GetCurrentDefinition(Y, {
+            await j.Qm.GetCurrentDefinition(Y, {
               sale_def_type: be,
               language: fe,
               include_community_item_def: Ie,
@@ -10401,7 +10401,7 @@ ${Ce}`;
         }
         async function h(Y, be, fe, Ie) {
           return (
-            await A.Qm.GetClaimedSaleRewards(Y, {
+            await j.Qm.GetClaimedSaleRewards(Y, {
               sale_def_type: be,
               language: fe,
               include_community_item_def: Ie,
@@ -10568,7 +10568,7 @@ ${Ce}`;
           F = 4,
           _ = null,
           W = 0.005;
-        function A(g, o) {
+        function j(g, o) {
           if (!(!g || !o || g <= 0 || o <= 0)) return S(g / o);
         }
         function S(g) {
@@ -10580,7 +10580,7 @@ ${Ce}`;
           const o = g.trim();
           if (!o) return;
           const h = /^(\d+(?:\.\d+)?)\s*[:x/]\s*(\d+(?:\.\d+)?)$/i.exec(o);
-          if (h) return A(parseFloat(h[1]), parseFloat(h[2]));
+          if (h) return j(parseFloat(h[1]), parseFloat(h[2]));
           if (/^\d+(?:\.\d+)?$/.test(o)) return S(parseFloat(o));
         }
         function w(g) {
@@ -10626,7 +10626,7 @@ ${Ce}`;
           F = r(36707),
           _ = r(18210),
           W = r(72609),
-          A = r(96538),
+          j = r(96538),
           S = r(85599),
           v = r(64271),
           w = r(48963),
@@ -10935,9 +10935,9 @@ ${Ce}`;
             }, [I]);
           return !I || !I.adaptive_trailers || q.length == 0
             ? null
-            : (0, n.jsx)(A.EN, {
+            : (0, n.jsx)(j.EN, {
                 active: M,
-                children: (0, n.jsxs)(A.eV, {
+                children: (0, n.jsxs)(j.eV, {
                   "aria-labelledby": (0, V.q)(C, G),
                   bAllowFullSize: !0,
                   bOKDisabled: !0,
@@ -11013,7 +11013,7 @@ ${Ce}`;
         r.d(de, {
           $G: () => J,
           Hu: () => S,
-          TY: () => A,
+          TY: () => j,
           VV: () => D,
           Xx: () => P,
           aS: () => m,
@@ -11039,7 +11039,7 @@ ${Ce}`;
         function W(I) {
           return `${Config.MEDIA_CDN_URL}store/promo/${I}`;
         }
-        const A = "#173471",
+        const j = "#173471",
           S = "#ee6c5d",
           v = "#FFFFFF",
           w = V()("2026-12-17T09:30:00-08:00").unix(),
@@ -11232,9 +11232,9 @@ ${Ce}`;
           if (typeof window > "u" || typeof document > "u" || _.has(c)) return;
           const m = (0, z.Fd)("groupvanityinfo", "application_config");
           (m === void 0 && document.readyState != "complete") ||
-            (_.add(c), A(m) && (0, N.aA)(c, m));
+            (_.add(c), j(m) && (0, N.aA)(c, m));
         }
-        function A(c) {
+        function j(c) {
           const m = c;
           return m &&
             Array.isArray(m) &&
@@ -11289,7 +11289,7 @@ ${Ce}`;
             );
           }
           AddGroupVanities(m) {
-            this.LazyInit(), A(m) && (0, N.aA)(this.m_queryClient, m);
+            this.LazyInit(), j(m) && (0, N.aA)(this.m_queryClient, m);
           }
           BHasClanInfoLoaded(m) {
             return (
@@ -11531,7 +11531,7 @@ ${Ce}`;
           F = r(67705),
           _ = r(6469),
           W = r(41735),
-          A = r.n(W),
+          j = r.n(W),
           S = r(75779),
           v = r(90626),
           w = r(31224),
@@ -11686,7 +11686,7 @@ ${Ce}`;
               (oe.steam_deck_compat_categories = [S.YX, S.sd, S.I2]);
           const se = `${N.TS.STORE_BASE_URL}search/suggest`;
           return (
-            (await A().get(se, { params: oe, withCredentials: !0 })).data ?? []
+            (await j().get(se, { params: oe, withCredentials: !0 })).data ?? []
           );
         }
         function q(H, ue, K) {
@@ -11833,7 +11833,7 @@ ${Ce}`;
           z = r(85599);
         function V(F) {
           const [_, W] = (0, x.useState)(() => !!F),
-            [A, S] = (0, x.useState)(!1),
+            [j, S] = (0, x.useState)(!1),
             [v, w] = (0, x.useState)(!1),
             [g, o] = (0, x.useState)(null),
             [h, b] = (0, x.useState)(null),
@@ -11842,7 +11842,7 @@ ${Ce}`;
             [Q, c] = (0, x.useState)(null);
           return {
             bLoading: _,
-            bError: A,
+            bError: j,
             bSuccess: v,
             strError: g,
             strSuccess: h,
@@ -11866,7 +11866,7 @@ ${Ce}`;
           const {
               strDialogTitle: _,
               state: W,
-              closeModal: A,
+              closeModal: j,
               strThrobber: S,
             } = F,
             {
@@ -11883,7 +11883,7 @@ ${Ce}`;
             ? (0, n.jsxs)(a.o0, {
                 strTitle: _,
                 bAlertDialog: !0,
-                closeModal: A,
+                closeModal: j,
                 className: s.SuccessErrorDialog,
                 children: [
                   !!o &&
@@ -11900,7 +11900,7 @@ ${Ce}`;
                   strTitle: _,
                   strDescription: h || (0, y.we)("#EventDisplay_Share_Success"),
                   bAlertDialog: !0,
-                  closeModal: A,
+                  closeModal: j,
                   className: s.SuccessErrorDialog,
                   children: (0, n.jsx)(n.Fragment, { children: !!b && b }),
                 })
@@ -11933,7 +11933,7 @@ ${Ce}`;
           F = r(813),
           _ = r(7582),
           W = r(34360),
-          A = r(31117),
+          j = r(31117),
           S = r(94520),
           v = r(98144),
           w = r(90316),
@@ -12677,7 +12677,7 @@ ${Ce}`;
                       (0, n.jsx)(se.lS, { appid: T.appid }),
                     ],
                   }),
-                  !ut && (0, n.jsx)(A.F, { eventModel: T, emoticonStore: xe }),
+                  !ut && (0, n.jsx)(j.F, { eventModel: T, emoticonStore: xe }),
                 ],
               }),
             });
@@ -12864,7 +12864,7 @@ ${Ce}`;
           F = r(36118),
           _ = r(53107),
           W = r(47689),
-          A = r(36707),
+          j = r(36707),
           S = r(18210),
           v = r(53113),
           w = r(3166),
@@ -12895,7 +12895,7 @@ ${Ce}`;
                     style: { backgroundImage: `url(${C})` },
                   }),
                   (0, n.jsxs)("div", {
-                    className: (0, A.A)(o().AppBannerGroup, q),
+                    className: (0, j.A)(o().AppBannerGroup, q),
                     children: [
                       E
                         ? D
@@ -13149,7 +13149,7 @@ ${Ce}`;
                       appid: D,
                       bIsFree: !!E?.is_free,
                       bIsComingSoon: !!E?.is_coming_soon,
-                      className: (0, A.A)(
+                      className: (0, j.A)(
                         o().ActionButton,
                         o().WishlistBtnShort,
                       ),
@@ -13189,7 +13189,7 @@ ${Ce}`;
           F = r.n(N),
           _ = Object.defineProperty,
           W = Object.getOwnPropertyDescriptor,
-          A = (g, o, h, b) => {
+          j = (g, o, h, b) => {
             for (
               var k = b > 1 ? void 0 : b ? W(o, h) : o, te = g.length - 1, re;
               te >= 0;
@@ -13255,9 +13255,9 @@ ${Ce}`;
             });
           }
         };
-        A([U.oI], w.prototype, "escFunction", 1),
-          A([U.oI], w.prototype, "OnBackgroundClick", 1),
-          (w = A([x.PA], w));
+        j([U.oI], w.prototype, "escFunction", 1),
+          j([U.oI], w.prototype, "OnBackgroundClick", 1),
+          (w = j([x.PA], w));
       },
       31117: (ge, de, r) => {
         "use strict";
@@ -13285,7 +13285,7 @@ ${Ce}`;
               (se = Fe[oe]) && (K = (ue ? se(De, H, K) : se(K)) || K);
             return ue && K && F(De, H, K), K;
           };
-        const A = class Jt {
+        const j = class Jt {
           constructor() {
             (0, z.Gn)(this);
           }
@@ -13409,8 +13409,8 @@ ${Ce}`;
             return null;
           }
         };
-        W([z.sH], A.prototype, "m_mapClanReposted", 2);
-        let S = A;
+        W([z.sH], j.prototype, "m_mapClanReposted", 2);
+        let S = j;
         var v = r(95695),
           w = r.n(v),
           g = r(47875),
@@ -13888,11 +13888,11 @@ ${Ce}`;
         function z(u) {
           const { MissingEventFallback: l } = u,
             { event: d, showErrorInfo: f } = u.context,
-            j = (0, a.j$)(u.args),
-            R = !!j && j != d?.GID,
+            A = (0, a.j$)(u.args),
+            R = !!A && A != d?.GID,
             { data: ae, isPending: ce } = (0, y.vE)(
               R && d
-                ? { clanAccountID: d.clanSteamID.GetAccountID(), eventGID: j }
+                ? { clanAccountID: d.clanSteamID.GetAccountID(), eventGID: A }
                 : void 0,
             );
           if (!R)
@@ -13906,12 +13906,12 @@ ${Ce}`;
           }
           return l
             ? (0, n.jsx)(l, {
-                eventGID: j,
+                eventGID: A,
                 lang: u.language,
                 bShowErrorInfo: !!f,
               })
             : f
-              ? (0, n.jsx)(V, { eventGID: j })
+              ? (0, n.jsx)(V, { eventGID: A })
               : null;
         }
         function V({ eventGID: u }) {
@@ -13931,9 +13931,9 @@ ${Ce}`;
         var F = r(48421);
         const _ = new Map([["remindme", { Constructor: W, autocloses: !1 }]]);
         function W(u) {
-          return (0, n.jsx)(z, { ...u, MissingEventFallback: A });
+          return (0, n.jsx)(z, { ...u, MissingEventFallback: j });
         }
-        function A({ eventGID: u, lang: l, bShowErrorInfo: d }) {
+        function j({ eventGID: u, lang: l, bShowErrorInfo: d }) {
           const f = (0, F.RR)(u);
           return f
             ? (0, n.jsx)(x.j, { eventModel: f, lang: l })
@@ -13980,11 +13980,11 @@ ${Ce}`;
           const l = (0, a.j$)(u.args, "action"),
             d = (0, a.j$)(u.args, "initialToken"),
             f = (0, a.j$)(u.args, "successToken"),
-            j = (0, a.j$)(u.args, "failToken"),
+            A = (0, a.j$)(u.args, "failToken"),
             R = re(l),
             { elDialogElement: ae, fnShowLogonDialog: ce } = (0, g.l)(),
             [Ke, Xe, rt] = (0, S.uD)();
-          return !l || !d || !f || !j
+          return !l || !d || !f || !A
             ? u.context.showErrorInfo
               ? (0, n.jsx)("div", {
                   children:
@@ -14010,7 +14010,7 @@ ${Ce}`;
                       children: [
                         !!R.bInitialState && (0, t.we)(d),
                         !!R.bSuccessState && (0, t.we)(f),
-                        !!R.bFailedState && (0, t.we)(j),
+                        !!R.bFailedState && (0, t.we)(A),
                       ],
                     }),
                     (0, n.jsx)(k.E, {
@@ -14019,7 +14019,7 @@ ${Ce}`;
                         strAction: l,
                         strInitialToken: d,
                         strSuccessToken: f,
-                        strFailToken: j,
+                        strFailToken: A,
                         closeModal: rt,
                         children: u.children,
                       }),
@@ -14032,7 +14032,7 @@ ${Ce}`;
               strAction: l,
               children: d,
               closeModal: f,
-              strInitialToken: j,
+              strInitialToken: A,
               strSuccessToken: R,
               strFailToken: ae,
             } = u,
@@ -14055,7 +14055,7 @@ ${Ce}`;
               (0, n.jsxs)(h.Y9, {
                 id: Ze,
                 children: [
-                  !!ce.bInitialState && (0, t.we)(j),
+                  !!ce.bInitialState && (0, t.we)(A),
                   !!ce.bSuccessState && (0, t.we)(R),
                   !!ce.bFailedState && (0, t.we)(ae),
                 ],
@@ -14090,10 +14090,10 @@ ${Ce}`;
                 d,
               ],
             });
-          const j = (0, a.j$)(u.args, "type");
+          const A = (0, a.j$)(u.args, "type");
           let R;
-          if (j)
-            switch (j) {
+          if (A)
+            switch (A) {
               case "profilemodifier":
                 R = c.jE;
                 break;
@@ -14129,8 +14129,8 @@ ${Ce}`;
           const l = new Set();
           for (const d of u.matchAll(/\[giveawayeligible\b([^\]]*)\]/gi)) {
             const f = P.exec(d[1] ?? ""),
-              j = f?.[1] ?? f?.[2] ?? f?.[3];
-            j && l.add(j);
+              A = f?.[1] ?? f?.[2] ?? f?.[3];
+            A && l.add(A);
           }
           return Array.from(l);
         }
@@ -14146,14 +14146,14 @@ ${Ce}`;
           (0, C.l6)(window, "beforeunload", u ? d : void 0),
             o.useEffect(() => {
               if (!u || !window.navigation) return;
-              const f = (j) => {
-                (j.navigationType != "push" &&
-                  j.navigationType != "traverse") ||
-                  j.hashChange ||
-                  j.downloadRequest !== null ||
-                  !j.cancelable ||
+              const f = (A) => {
+                (A.navigationType != "push" &&
+                  A.navigationType != "traverse") ||
+                  A.hashChange ||
+                  A.downloadRequest !== null ||
+                  !A.cancelable ||
                   window.confirm(l) ||
-                  j.preventDefault();
+                  A.preventDefault();
               };
               return (
                 window.navigation.addEventListener("navigate", f),
@@ -14194,13 +14194,13 @@ ${Ce}`;
                 d = new Map();
               return (
                 l.forEach((f) => {
-                  const j = {
+                  const A = {
                     ...f,
                     regmodel: f.jsondata ? JSON.parse(f.jsondata) : void 0,
                   };
-                  j.group_id === void 0 ||
-                    j.session_id === void 0 ||
-                    d.set(j.group_id, j);
+                  A.group_id === void 0 ||
+                    A.session_id === void 0 ||
+                    d.set(A.group_id, A);
                 }),
                 d
               );
@@ -14224,13 +14224,13 @@ ${Ce}`;
               clanAccountID: l,
               gidClanEvent: d,
               userAccountID: f,
-              children: j,
+              children: A,
             } = u,
             R = o.useMemo(
               () => ({ clanAccountID: l, gidClanEvent: d, userAccountID: f }),
               [l, d, f],
             );
-          return (0, n.jsx)(je.Provider, { value: R, children: j });
+          return (0, n.jsx)(je.Provider, { value: R, children: A });
         }
         function Le() {
           const u = o.useContext(je),
@@ -14264,15 +14264,15 @@ ${Ce}`;
         function ze(u, l, d) {
           if (l === void 0 || d === void 0) return Fe;
           const f = u.registrations.get(l)?.session_id == d,
-            j = u.selections.get(l) == d;
-          return f && j ? De : !f && j ? H : f && !j ? ue : Fe;
+            A = u.selections.get(l) == d;
+          return f && A ? De : !f && A ? H : f && !A ? ue : Fe;
         }
         function B(u, l, d) {
           if (l === void 0 || d === void 0) return !1;
           const f = !!u.registrations.get(l),
-            j = u.selections.get(l) == d,
+            A = u.selections.get(l) == d,
             R = u.registrations.get(l)?.session_id == u.selections.get(l);
-          return f && !j && R;
+          return f && !A && R;
         }
         function ee(u, l) {
           return l === void 0 ? void 0 : u.registrations.get(l)?.session_id;
@@ -14317,16 +14317,16 @@ ${Ce}`;
         }
         function we(u, l, d) {
           return l
-            .filter((f) => f.sessions.some((j) => ze(u, f.group_id, j.id) == d))
+            .filter((f) => f.sessions.some((A) => ze(u, f.group_id, A.id) == d))
             .map((f) => f.group_id)
             .filter((f) => f !== void 0);
         }
         function Qe(u, l, d, f) {
           d !== void 0 &&
-            u.setQueryData(Se(l.gidClanEvent, l.userAccountID), (j) => {
+            u.setQueryData(Se(l.gidClanEvent, l.userAccountID), (A) => {
               const R =
                   u.getQueryData(Ee(l.gidClanEvent, l.userAccountID)) ?? K,
-                ae = new Map(j ?? Ge(R));
+                ae = new Map(A ?? Ge(R));
               return f !== void 0 && f > 0 ? ae.set(d, f) : ae.delete(d), ae;
             });
         }
@@ -14335,10 +14335,10 @@ ${Ce}`;
             l = (0, Ie.jE)(),
             d = Le();
           return o.useCallback(
-            (f, j) => {
+            (f, A) => {
               if (!u) return;
-              const R = ke(d, f) == j;
-              Qe(l, u, f, R ? void 0 : j);
+              const R = ke(d, f) == A;
+              Qe(l, u, f, R ? void 0 : A);
             },
             [u, l, d],
           );
@@ -14348,10 +14348,10 @@ ${Ce}`;
             l = (0, Ie.jE)(),
             d = Le(),
             { mutateAsync: f } = (0, Te.n)({
-              mutationFn: async (j) => {
+              mutationFn: async (A) => {
                 if (!u) return !1;
                 const R = Object.fromEntries(
-                    Object.entries(j).filter(
+                    Object.entries(A).filter(
                       ([Ke]) => !Ke.startsWith("registration_emailed_"),
                     ),
                   ),
@@ -14361,7 +14361,7 @@ ${Ce}`;
                     gid: u.gidClanEvent,
                     group_id: Ke,
                     session_id: Xe,
-                    guest_count: j.guests_registered ?? 1,
+                    guest_count: A.guests_registered ?? 1,
                     jsondata: JSON.stringify(R),
                     skip_email: !1,
                   });
@@ -14423,8 +14423,8 @@ ${Ce}`;
         function dt(u, l, d) {
           if (u === void 0) return !0;
           const f = qe(u),
-            j = f[f.length - 1];
-          return j?.strTag == l && j.nID == d;
+            A = f[f.length - 1];
+          return A?.strTag == l && A.nID == d;
         }
         const Et = o.createContext(null);
         function It(u) {
@@ -14446,7 +14446,7 @@ ${Ce}`;
               eventModel: l,
               fnConfirm: d,
               fnHideModal: f,
-              nMaxPerTeam: j,
+              nMaxPerTeam: A,
               bAddingOrChangingSessions: R,
             } = u,
             ae = (0, I.sfN)(v.TS.LANGUAGE),
@@ -14614,13 +14614,13 @@ ${Ce}`;
                                 onChange: (ft) =>
                                   Ze({ game: ft.currentTarget.value }),
                               }),
-                              j > 0 &&
+                              A > 0 &&
                                 (0, n.jsx)(h.m, {
                                   label: (0, t.we)("#MeetSteam_Reg_GuestCount"),
                                   tooltip: (0, t.we)(
                                     "#MeetSteam_Reg_GuestCount_ttip",
                                   ),
-                                  rgOptions: Array.from({ length: j + 1 }).map(
+                                  rgOptions: Array.from({ length: A + 1 }).map(
                                     (ft, Ot) => ({ data: Ot, label: Ot }),
                                   ),
                                   selectedOption:
@@ -14687,8 +14687,8 @@ ${Ce}`;
         }
         function jt(u) {
           const { eventModel: l, oReg: d, fnUpdateRegistration: f } = u,
-            j = xe(l.jsondata.meet_steam_groups ?? [], H);
-          return !j || j.length == 0
+            A = xe(l.jsondata.meet_steam_groups ?? [], H);
+          return !A || A.length == 0
             ? null
             : (0, n.jsxs)("div", {
                 children: [
@@ -14698,7 +14698,7 @@ ${Ce}`;
                   (0, n.jsx)("p", {
                     children: (0, t.we)("#MeetSteam_Reg_Question_desc"),
                   }),
-                  j.map((R) => {
+                  A.map((R) => {
                     const ae = l.jsondata.meet_steam_groups?.find(
                       (ce) => ce.group_id == R,
                     );
@@ -14728,9 +14728,9 @@ ${Ce}`;
         }
         function Nt(u) {
           const { fnUpdateText: l, groupInfo: d, oReg: f } = u,
-            j = (0, I.sfN)(v.TS.LANGUAGE),
+            A = (0, I.sfN)(v.TS.LANGUAGE),
             [R, ae] = (0, q.q3)(() => [
-              t.NT.GetWithFallback(d.localized_session_title, j) ?? "",
+              t.NT.GetWithFallback(d.localized_session_title, A) ?? "",
               f.pre_event_partner_questions?.find(
                 (ce) => ce.group_id == d.group_id,
               )?.question || "",
@@ -14759,20 +14759,20 @@ ${Ce}`;
           const l = u.context.event,
             d = u.context.showErrorInfo,
             f = (0, a.j$)(u.args, "group_id"),
-            j = Number.parseInt(f),
-            R = (0, q.q3)(() => Dt(l, j));
+            A = Number.parseInt(f),
+            R = (0, q.q3)(() => Dt(l, A));
           if (!R || !l)
             return d
               ? (0, n.jsxs)("div", {
-                  children: ["Failed to find session group id ", j],
+                  children: ["Failed to find session group id ", A],
                 })
               : null;
           if (l.clanSteamID.GetAccountID() != (0, Re.H)())
             return d
               ? (0, n.jsx)("div", { children: "Only support on special group" })
               : null;
-          const ae = at(u.context.bbcode, j),
-            ce = dt(u.context.bbcode, "meetsteamsessiongroup", j);
+          const ae = at(u.context.bbcode, A),
+            ce = dt(u.context.bbcode, "meetsteamsessiongroup", A);
           return (0, n.jsxs)(Ae, {
             clanAccountID: l.clanSteamID.GetAccountID(),
             gidClanEvent: l.GID ?? "",
@@ -14809,7 +14809,7 @@ ${Ce}`;
         function ie(u) {
           const { groupData: l, eventModel: d } = u,
             f = (0, lt.MU)(),
-            j = bt(),
+            A = bt(),
             R = $e(),
             ae = (0, me.my)(d.clanSteamID.GetAccountID(), d.GID ?? ""),
             ce = (0, o.useMemo)(
@@ -14848,7 +14848,7 @@ ${Ce}`;
             });
           const ot = (mt) => gt(l.group_id, mt),
             At = l.group_visibility_tokens ?? [],
-            zt = j !== null && At.includes(j);
+            zt = A !== null && At.includes(A);
           return At.length > 0 && !zt && !f
             ? null
             : (0, n.jsxs)(Pe, {
@@ -14888,7 +14888,7 @@ ${Ce}`;
         function Pe(u) {
           const { groupData: l, children: d } = u,
             f = (0, I.sfN)(v.TS.LANGUAGE),
-            j = t.NT.GetWithFallback(l?.localized_session_title, f),
+            A = t.NT.GetWithFallback(l?.localized_session_title, f),
             R = t.NT.GetWithFallback(l?.localized_session_description, f),
             ae = t.NT.GetWithFallback(l?.localized_intended_audience, f),
             ce = t.NT.GetWithFallback(l?.localized_sesssion_faq, f),
@@ -14903,10 +14903,10 @@ ${Ce}`;
                     Ke && (l.group_visibility_tokens?.length ?? 0) > 0,
                 }),
                 children: [
-                  !!j &&
+                  !!A &&
                     (0, n.jsx)("div", {
                       className: Ve().SessionTitle,
-                      children: j,
+                      children: A,
                     }),
                   !!R &&
                     (0, n.jsx)("div", {
@@ -14952,7 +14952,7 @@ ${Ce}`;
             : null;
         }
         function Oe(u, l, d, f) {
-          const j = d || (u === Fe && l > 0) || u === De || u === H || u === ue;
+          const A = d || (u === Fe && l > 0) || u === De || u === H || u === ue;
           let R = null,
             ae = null;
           return (
@@ -14968,7 +14968,7 @@ ${Ce}`;
                   : f &&
                     ((R = (0, t.we)("#MeetSteam_Already")),
                     (ae = Ve().RegisteredElsewhere)),
-            { bEnabled: j, strStatusClass: ae, strStatusToken: R }
+            { bEnabled: A, strStatusClass: ae, strStatusToken: R }
           );
         }
         function Ye(u) {
@@ -14976,7 +14976,7 @@ ${Ce}`;
               sessionData: l,
               onClick: d,
               nGuestReservations: f,
-              eRegistrationStatus: j = Fe,
+              eRegistrationStatus: A = Fe,
               bAllowedToRegisterIfFull: R,
             } = u,
             ae = (0, q.q3)(() => l.max_capacity ?? 0),
@@ -14985,7 +14985,7 @@ ${Ce}`;
               strStatusClass: Ke,
               strStatusToken: Xe,
               bEnabled: rt,
-            } = Oe(j, ce, !!R),
+            } = Oe(A, ce, !!R),
             {
               sDisplayTimeZone: Ze,
               rtime_start: gt,
@@ -15054,14 +15054,14 @@ ${Ce}`;
         }
         function it(u) {
           const { eventModel: l, bIsLast: d } = u,
-            [f, j] = o.useState(!1),
+            [f, A] = o.useState(!1),
             [R, ae] = o.useState(!1),
             ce = (0, me.my)(l.clanSteamID.GetAccountID(), l.GID ?? ""),
             [Ke, Xe, rt] = (0, S.uD)(),
             { elLogInDialog: Ze, fnRequireLogIn: gt } = Zt(),
             Ft = ut(),
             Lt = async (Bt) => {
-              j(!0), (await Ft(Bt)) || Xe(), ce.refetch(), j(!1);
+              A(!0), (await Ft(Bt)) || Xe(), ce.refetch(), A(!1);
             },
             vt = $e(),
             ot = f || vt,
@@ -15159,19 +15159,19 @@ ${Ce}`;
           const l = u.context.event,
             d = u.context.showErrorInfo,
             f = (0, a.j$)(u.args, "schedule_id"),
-            j = Number.parseInt(f),
-            R = (0, q.q3)(() => Yt(l, j));
+            A = Number.parseInt(f),
+            R = (0, q.q3)(() => Yt(l, A));
           if (!R || !l)
             return d
               ? (0, n.jsxs)("div", {
-                  children: ["Failed to find session schedule id ", j],
+                  children: ["Failed to find session schedule id ", A],
                 })
               : null;
           if (l.clanSteamID.GetAccountID() != (0, Re.H)())
             return d
               ? (0, n.jsx)("div", { children: "Only support on special group" })
               : null;
-          const ae = dt(u.context.bbcode, "meetsteamscheduleview", j);
+          const ae = dt(u.context.bbcode, "meetsteamscheduleview", A);
           return (0, n.jsxs)(Ae, {
             clanAccountID: l.clanSteamID.GetAccountID(),
             gidClanEvent: l.GID ?? "",
@@ -15186,14 +15186,14 @@ ${Ce}`;
           const { eventModel: l } = u,
             d = Ce(),
             f = $e(),
-            j = (0, me.my)(l.clanSteamID.GetAccountID(), l.GID ?? ""),
+            A = (0, me.my)(l.clanSteamID.GetAccountID(), l.GID ?? ""),
             R = (0, me.mG)(
               l.clanSteamID.GetAccountID(),
               l.GID ?? "",
               v.iA.accountid,
             ),
-            ae = j.data;
-          return j.isError
+            ae = A.data;
+          return A.isError
             ? (0, n.jsx)("div", {
                 children: (0, t.we)("#Error_ErrorCommunicatingWithNetwork"),
               })
@@ -15215,7 +15215,7 @@ ${Ce}`;
               eventModel: l,
               scheduleData: d,
               bAllowedToRegisterIfFull: f,
-              fnOnClick: j,
+              fnOnClick: A,
               rgAvailability: R,
             } = u,
             ae = (0, lt.HN)(),
@@ -15281,7 +15281,7 @@ ${Ce}`;
                       children: (0, n.jsx)(O, {
                         scheduleData: d,
                         bAllowedToRegisterIfFull: !!f,
-                        fnOnClick: j,
+                        fnOnClick: A,
                         rgDayGroupSessions: ot ?? [],
                         rgBreakSessions: Ft.get(vt) || [],
                         rgAvailability: R ?? [],
@@ -15300,7 +15300,7 @@ ${Ce}`;
               scheduleData: l,
               rgDayGroupSessions: d,
               rgBreakSessions: f,
-              bAllowedToRegisterIfFull: j,
+              bAllowedToRegisterIfFull: A,
               fnOnClick: R,
               rgAvailability: ae,
             } = u,
@@ -15351,7 +15351,7 @@ ${Ce}`;
                   {
                     children: [
                       (0, n.jsx)(en, {
-                        bAllowedToRegisterIfFull: j,
+                        bAllowedToRegisterIfFull: A,
                         fnOnClick: R,
                         scheduleData: l,
                         rgSlotSessions: Ze,
@@ -15388,7 +15388,7 @@ ${Ce}`;
         function Xt(u) {
           const { scheduleData: l, breakSession: d } = u,
             f = (0, I.sfN)(v.TS.LANGUAGE),
-            j = (0, q.q3)(
+            A = (0, q.q3)(
               () =>
                 t.NT.GetWithFallback(d.localized_break_description, f) ?? "",
             ),
@@ -15402,7 +15402,7 @@ ${Ce}`;
             className: Ve().ScheduleRow,
             children: [
               (0, n.jsx)(rn, { session: R }),
-              (0, n.jsx)("div", { children: j }),
+              (0, n.jsx)("div", { children: A }),
             ],
           });
         }
@@ -15411,7 +15411,7 @@ ${Ce}`;
             scheduleData: l,
             rgSlotSessions: d,
             bAllowedToRegisterIfFull: f,
-            fnOnClick: j,
+            fnOnClick: A,
             rgAvailability: R,
           } = u;
           return (0, n.jsxs)("div", {
@@ -15425,7 +15425,7 @@ ${Ce}`;
                     un,
                     {
                       bAllowedToRegisterIfFull: f,
-                      fnOnClick: j,
+                      fnOnClick: A,
                       session: ae,
                       rgAvailability: R,
                     },
@@ -15441,10 +15441,10 @@ ${Ce}`;
             {
               sDisplayTimeZone: d,
               rtime_start: f,
-              rtime_end: j,
+              rtime_end: A,
             } = (0, me._t)(l),
             R = (0, me.rF)(f ?? 0, d),
-            ae = (0, me.Mr)(f ?? 0, j ?? 0, d);
+            ae = (0, me.Mr)(f ?? 0, A ?? 0, d);
           return (0, n.jsxs)("div", {
             className: Ve().ScheduleTimeColumn,
             children: [
@@ -15458,7 +15458,7 @@ ${Ce}`;
               session: l,
               bAllowedToRegisterIfFull: d,
               fnOnClick: f,
-              rgAvailability: j,
+              rgAvailability: A,
             } = u,
             R = (0, I.sfN)(v.TS.LANGUAGE),
             [ae, ce, Ke, Xe] = (0, q.q3)(() => [
@@ -15476,7 +15476,7 @@ ${Ce}`;
               B(Ft, l.group.group_id, l.session.id),
               ee(Ft, l.group.group_id),
             ]),
-            At = j?.find(
+            At = A?.find(
               (Ut) =>
                 Ut.group_id === l.group.group_id &&
                 Ut.session_id === l.session.id,
@@ -15576,8 +15576,8 @@ ${Ce}`;
               ((0, a.j$)(u.args, "visible") || "false").toLowerCase() ===
               "true",
             f = u.context.showErrorInfo,
-            j = (0, cn.oc)(l),
-            { data: R, isPending: ae } = (0, dn.J$)(j);
+            A = (0, cn.oc)(l),
+            { data: R, isPending: ae } = (0, dn.J$)(A);
           if (!l)
             return f
               ? (0, n.jsx)("div", { children: "Error: PackageID Not Set" })
@@ -15596,8 +15596,8 @@ ${Ce}`;
           const l = new Set();
           for (const d of u.matchAll(/\[packagepurchaseable\b([^\]]*)\]/gi)) {
             const f = fn.exec(d[1] ?? ""),
-              j = Number.parseInt(f?.[1] ?? f?.[2] ?? f?.[3] ?? "");
-            j && l.add(j);
+              A = Number.parseInt(f?.[1] ?? f?.[2] ?? f?.[3] ?? "");
+            A && l.add(A);
           }
           return Array.from(l);
         }
@@ -15684,21 +15684,21 @@ ${Ce}`;
               (this.m_fileUploadProps.displayFileName = void 0);
           }
           async StartFileExportToUpload(l, d = {}) {
-            const { displayFilename: f, info: j, onComplete: R } = d;
+            const { displayFilename: f, info: A, onComplete: R } = d;
             (this.m_fileUploadProps.eUploadState = ln),
               (this.m_fileUploadProps.uploadProgress = 0),
               (this.m_onComplete = R),
-              (this.m_fileUploadProps.fileInfo = j),
+              (this.m_fileUploadProps.fileInfo = A),
               this.SetFileToUpload(l),
               (this.m_fileUploadProps.displayFileName = f);
           }
           async SetImageFileToUpload(l, d = {}) {
-            const { processor: f = Sn, info: j } = d;
+            const { processor: f = Sn, info: A } = d;
             if (!l) {
               this.SetFileToUpload(void 0);
               return;
             }
-            this.m_fileUploadProps.fileInfo = j;
+            this.m_fileUploadProps.fileInfo = A;
             const R = this.m_Callbacks.GetFileNameOverride?.() ?? l.name;
             if (l.size > this.m_Callbacks.GetMaxFileSizeMB() * 1024 * 1024) {
               this.SetUploadFileError(
@@ -15759,9 +15759,9 @@ ${Ce}`;
               );
               return;
             }
-            let j = ["zip"],
+            let A = ["zip"],
               R = l.name.split(".").pop()?.toLowerCase() ?? "";
-            if (j.indexOf(R) == -1) {
+            if (A.indexOf(R) == -1) {
               let ae = R || f;
               this.SetUploadFileError(
                 _t,
@@ -15794,8 +15794,8 @@ ${Ce}`;
                 (this.m_fileUploadProps.exportFn = void 0);
               try {
                 d = URL.createObjectURL(l);
-              } catch (j) {
-                console.error(`Failed to created object URL from file: ${j}`);
+              } catch (A) {
+                console.error(`Failed to created object URL from file: ${A}`);
               }
               (this.m_fileUploadProps.displayFileName =
                 this.m_fileUploadProps.file.name),
@@ -15822,13 +15822,13 @@ ${Ce}`;
               this.m_fileUploadProps.exportFn)
             ) {
               this.m_fileUploadProps.eUploadState = ln;
-              const { eResult: j, file: R } =
+              const { eResult: A, file: R } =
                 await this.m_fileUploadProps.exportFn((ae) => {
                   (0, Tt.h5)(() => {
                     this.m_fileUploadProps.uploadProgress = ae * 0.5;
                   });
                 });
-              if (j != Y.R || !R)
+              if (A != Y.R || !R)
                 return (
                   this.SetUploadFileError(
                     Vt,
@@ -15873,21 +15873,21 @@ ${Ce}`;
                   this.file_upload_props.fileInfo,
                 );
             try {
-              let j = await fetch(
+              let A = await fetch(
                   this.m_Callbacks.GetBeginFileUploadURL() +
                     `?l=${v.TS.LANGUAGE}`,
                   { method: "POST", body: f, credentials: "include" },
                 ),
                 R;
               try {
-                R = await j.json();
+                R = await A.json();
               } catch {}
-              if (!j.ok) {
+              if (!A.ok) {
                 let ae = "";
                 throw (
                   ((0, Tt.h5)(() => {
                     (this.m_fileUploadProps.eUploadState = Vt),
-                      this.LogFileUploadMessage(j),
+                      this.LogFileUploadMessage(A),
                       R?.message
                         ? (ae = R?.message)
                         : (ae = (0, t.we)("#Chat_Settings_Error_ServerError")),
@@ -15905,8 +15905,8 @@ ${Ce}`;
                 (this.m_fileUploadProps.hmac = R.hmac),
                 this.DoFileUpload(R.result, d)
               );
-            } catch (j) {
-              let R = j || (0, t.we)("#ConnectionTrouble_FailedToConnect");
+            } catch (A) {
+              let R = A || (0, t.we)("#ConnectionTrouble_FailedToConnect");
               throw (
                 ((0, Tt.h5)(() => {
                   (this.m_fileUploadProps.eUploadState = Vt),
@@ -15922,7 +15922,7 @@ ${Ce}`;
           async DoFileUpload(l, d) {
             let f = l.use_https ? "https://" : "http://";
             f += l.url_host + l.url_path;
-            const j = {};
+            const A = {};
             for (const ae of l.request_headers) {
               if (
                 ae.name.toLowerCase() == "content-length" ||
@@ -15931,7 +15931,7 @@ ${Ce}`;
                 continue;
               let ce = ae.name;
               ce.toLowerCase() === "content-type" && (ce = "Content-Type"),
-                (j[ce] = ae.value);
+                (A[ce] = ae.value);
             }
             let R = {
               onUploadProgress: (ae) => {
@@ -15944,7 +15944,7 @@ ${Ce}`;
                     this.m_fileUploadProps.uploadProgress = rt;
                   });
               },
-              headers: j,
+              headers: A,
               transformRequest: [(ae) => ae],
             };
             try {
@@ -15967,12 +15967,12 @@ ${Ce}`;
             }
           }
           async CommitFileUpload(l, d, f) {
-            let j = this.m_fileUploadProps.sha1,
+            let A = this.m_fileUploadProps.sha1,
               R = new FormData();
             R.append("sessionid", (0, sn.KC)()),
               R.append("l", v.TS.LANGUAGE),
               R.append("file_name", this.m_fileUploadProps.uploadFileName),
-              R.append("file_sha", j),
+              R.append("file_sha", A),
               R.append("success", l ? "1" : "0"),
               R.append("ugcid", d),
               R.append("file_type", f.type),
@@ -16049,8 +16049,8 @@ ${Ce}`;
             let d = new FileReader();
             (d.onload = () => {
               let f = u,
-                j = d.result,
-                R = wn(j),
+                A = d.result,
+                R = wn(A),
                 ae = new Blob([R], { type: u.type });
               if (ae) {
                 let ce = ae;
@@ -16073,14 +16073,14 @@ ${Ce}`;
           let l = new DataView(u),
             d = 0,
             f = 0,
-            j = [],
+            A = [],
             R = 0;
           if (l.getUint16(d) == 65496) {
             d += 2;
             let ae = l.getUint16(d);
             for (d += 2; d < l.byteLength && d < 131072; ) {
               if (ae == 65505)
-                (j[R] = { recess: f, offset: d - 2 }),
+                (A[R] = { recess: f, offset: d - 2 }),
                   (f = d + l.getUint16(d)),
                   R++;
               else if (ae == 65498) break;
@@ -16088,16 +16088,16 @@ ${Ce}`;
             }
             let ce = u.byteLength - f;
             if (
-              (j.forEach((Xe) => {
+              (A.forEach((Xe) => {
                 ce += Xe.offset - Xe.recess;
               }),
               ce === u.byteLength)
             )
               return u;
             const Ke = new Uint8Array(ce);
-            if (j.length > 0) {
+            if (A.length > 0) {
               let Xe = 0;
-              j.forEach((rt) => {
+              A.forEach((rt) => {
                 let Ze = rt.offset - rt.recess;
                 Ke.set(new Uint8Array(u.slice(rt.recess, rt.offset)), Xe),
                   (Xe += Ze);
@@ -16125,9 +16125,9 @@ ${Ce}`;
                 name: "fileupload",
                 ref: d,
                 onChange: (f) => {
-                  const j = f.currentTarget.files;
-                  j?.length &&
-                    (l.SetImageFileToUpload(j[0]),
+                  const A = f.currentTarget.files;
+                  A?.length &&
+                    (l.SetImageFileToUpload(A[0]),
                     (f.currentTarget.value = ""));
                 },
               }),
@@ -16189,13 +16189,13 @@ ${Ce}`;
         }
         function $n(u) {
           const { fileUploadManager: l } = u,
-            [d, f, j] = (0, q.q3)(() => [
+            [d, f, A] = (0, q.q3)(() => [
               l.file_upload_props.file,
               l.file_upload_props.displayFileName,
               l.file_upload_props.uploadProgress,
             ]),
             R = d ? (0, t.we)("#Uploading_Item", f ?? "") : "",
-            ae = { width: j + "%" };
+            ae = { width: A + "%" };
           return (0, n.jsxs)("div", {
             className: We().FileUploadProgressContainer,
             children: [
@@ -16218,7 +16218,7 @@ ${Ce}`;
         }
         function Qn(u) {
           const { fileUploadManager: l } = u,
-            [d, f, j] = (0, q.q3)(() => [
+            [d, f, A] = (0, q.q3)(() => [
               l.file_upload_props.strErrorDescription,
               l.file_upload_props.displayFileName,
               l.file_upload_props.eUploadState,
@@ -16241,7 +16241,7 @@ ${Ce}`;
                 children: (0, n.jsxs)(h.dR, {
                   className: "DialogLayout_NoMinWidth",
                   children: [
-                    j == Vt &&
+                    A == Vt &&
                       (0, n.jsx)(h.jn, {
                         onClick: async () => {
                           await l.RetryFileUpload(), l.Reset();
@@ -16309,11 +16309,11 @@ ${Ce}`;
         function Un(u, l, d) {
           const f = _n(u, l);
           return (0, o.useMemo)(() => {
-            const j = f.results.find((R) => d == R.unique_id);
+            const A = f.results.find((R) => d == R.unique_id);
             return {
               bLoading: f.bLoading,
               success: f.success,
-              userPollData: j,
+              userPollData: A,
               error_message: f.error_message,
               userPollSubmitData: f.userPollSubmitData,
             };
@@ -16323,13 +16323,13 @@ ${Ce}`;
           const d = (0, fe.I)({
             queryKey: on(u, l),
             queryFn: async () => {
-              const j = await (
+              const A = await (
                 await fetch(Bn(u, l, !1), {
                   method: "GET",
                   credentials: "include",
                 })
               ).json();
-              return Wn(j);
+              return Wn(A);
             },
             placeholderData: {
               results: [],
@@ -16356,17 +16356,17 @@ ${Ce}`;
               l,
             ],
             mutationFn: async (f) => {
-              const j = { votes: f.votes },
+              const A = { votes: f.votes },
                 R = await fetch(Bn(u, l, !0), {
                   method: "POST",
                   headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify(j),
+                  body: JSON.stringify(A),
                   credentials: "include",
                 });
               if (!R.ok) throw new Error(`Server returned ${R.status}`);
               return await R.json();
             },
-            onSuccess: (f, j) => {
+            onSuccess: (f, A) => {
               if (f.success == Y.R) d.setQueryData(on(u, l), () => Wn(f));
               else {
                 const R = d.getQueryData(on(u, l));
@@ -16447,13 +16447,13 @@ ${Ce}`;
           const l = u.context.event,
             d = u.context.showErrorInfo,
             f = (0, a.j$)(u.args, "poll_id"),
-            j = Number.parseInt(f),
-            R = (0, q.q3)(() => ur(l, j));
+            A = Number.parseInt(f),
+            R = (0, q.q3)(() => ur(l, A));
           if (!R || !l)
             return d
               ? (0, n.jsx)("div", {
                   className: Rn.ErrorStylesWithIcon,
-                  children: (0, t.we)("#UserPolls_Editor_FailToFindModel", j),
+                  children: (0, t.we)("#UserPolls_Editor_FailToFindModel", A),
                 })
               : null;
           const ae = (0, I.sfN)(v.TS.LANGUAGE);
@@ -16472,7 +16472,7 @@ ${Ce}`;
         }
         function cr(u) {
           const { eventModel: l, userPollDef: d, lang: f } = u,
-            { userPollData: j, ...R } = Un(
+            { userPollData: A, ...R } = Un(
               l.clanSteamID,
               l.GID || "0",
               d.poll_id,
@@ -16482,8 +16482,8 @@ ${Ce}`;
             [Ke, Xe] = (0, o.useState)(void 0),
             [rt, Ze] = (0, o.useState)(!1),
             [gt, Ft] = (0, o.useState)(!1),
-            Lt = j?.option_results && j?.option_results.length > 0,
-            vt = ((j && j.voted_option_id?.length) || 0) > 0;
+            Lt = A?.option_results && A?.option_results.length > 0,
+            vt = ((A && A.voted_option_id?.length) || 0) > 0;
           return (
             (0, o.useEffect)(() => {
               !gt &&
@@ -16504,11 +16504,11 @@ ${Ce}`;
               ...u,
               children: [
                 d.options?.map((ot) => {
-                  const At = j?.option_results.find(
+                  const At = A?.option_results.find(
                       (mt) => mt.unique_id == ot.option_id,
                     ),
                     zt =
-                      j?.voted_option_id.includes(ot.option_id || 0) ||
+                      A?.voted_option_id.includes(ot.option_id || 0) ||
                       Ke === ot.option_id;
                   return (0, n.jsx)(
                     gr,
@@ -16519,7 +16519,7 @@ ${Ce}`;
                       nPercentage: gt ? At?.percent : void 0,
                       onClick: () => Xe(ot.option_id),
                       bDisableSelection:
-                        R.bLoading || !j?.vote_permitted || ae || rt || vt,
+                        R.bLoading || !A?.vote_permitted || ae || rt || vt,
                     },
                     "polloption" + ot.option_id,
                   );
@@ -16569,7 +16569,7 @@ ${Ce}`;
           );
         }
         function dr(u) {
-          const { userPollDef: l, lang: d, eventModel: f, children: j } = u,
+          const { userPollDef: l, lang: d, eventModel: f, children: A } = u,
             R = (0, ar.n)(),
             [ae, ce] = (0, q.q3)(() => [
               t.NT.GetWithFallback(l.localized_poll_description, d),
@@ -16604,7 +16604,7 @@ ${Ce}`;
                   className: Kt().PollQuestion,
                   children: ae,
                 }),
-                (0, n.jsx)("div", { className: Kt().PollOptions, children: j }),
+                (0, n.jsx)("div", { className: Kt().PollOptions, children: A }),
                 (0, n.jsxs)("div", {
                   className: Kt().PollStatus,
                   children: [
@@ -16633,7 +16633,7 @@ ${Ce}`;
               pollOptionDef: l,
               onClick: d,
               lang: f,
-              bDisableSelection: j,
+              bDisableSelection: A,
               bSelected: R,
               nPercentage: ae,
             } = u,
@@ -16641,16 +16641,16 @@ ${Ce}`;
               t.NT.GetWithFallback(l.localized_option, f),
             ]),
             Ke = Math.round((ae ?? 0) * 100),
-            Xe = !j && !!d;
+            Xe = !A && !!d;
           return (0, n.jsxs)("div", {
             className: (0, Mt.A)({
               [Kt().PollOption]: !0,
               [Kt().Selected]: R,
-              [Kt().Disabled]: j,
+              [Kt().Disabled]: A,
             }),
             role: "button",
             "aria-pressed": !!R,
-            "aria-disabled": !!j,
+            "aria-disabled": !!A,
             tabIndex: Xe ? 0 : void 0,
             onClick: Xe ? d : void 0,
             onKeyDown: Xe
@@ -16691,7 +16691,7 @@ ${Ce}`;
           vr = r(30364);
         function hr(u) {
           const { dynamicImport: l, fallback: d, ...f } = u,
-            [j] = (0, o.useState)(() =>
+            [A] = (0, o.useState)(() =>
               o.lazy(async () => {
                 const R = await l();
                 return await (0, yr.u)(), { default: R };
@@ -16701,7 +16701,7 @@ ${Ce}`;
             fallback: d,
             children: (0, n.jsx)(o.Suspense, {
               fallback: d,
-              children: (0, n.jsx)(j, { ...f }),
+              children: (0, n.jsx)(A, { ...f }),
             }),
           });
         }
@@ -16760,8 +16760,8 @@ ${Ce}`;
           const l = new Set();
           for (const d of u.matchAll(/\[vod\b([^\]]*)\]/gi)) {
             const f = k_BBCodeAppIDArgRegExp.exec(d[1] ?? ""),
-              j = f ? Number.parseInt(f[1] ?? f[2] ?? f[3] ?? "") : 0;
-            j && l.add(j);
+              A = f ? Number.parseInt(f[1] ?? f[2] ?? f[3] ?? "") : 0;
+            A && l.add(A);
           }
           return Array.from(l);
         }
@@ -16876,7 +16876,7 @@ ${Ce}`;
           F = r(90626),
           _ = r(71742),
           W = r(67705);
-        let A;
+        let j;
         function S(h, b) {
           const k = h?.AnnouncementGID,
             te = h?.clanSteamID.GetAccountID() ?? 0,
@@ -16940,16 +16940,16 @@ ${Ce}`;
             return;
           }
           return (
-            A ||
-              ((A = new Map()),
+            j ||
+              ((j = new Map()),
               (0, W.Fd)("uservotes", "application_config")?.forEach((k) => {
                 k.clanAnnouncementGID &&
-                  A.set(
+                  j.set(
                     k.clanAnnouncementGID,
                     k.voted_up ? "up" : k.voted_down ? "down" : null,
                   );
               })),
-            h ? A.get(h) : void 0
+            h ? j.get(h) : void 0
           );
         }
       },
@@ -16975,7 +16975,7 @@ ${Ce}`;
           F = r(1880),
           _ = r(69168),
           W = r(12247),
-          A = r.n(W),
+          j = r.n(W),
           S = r(95695),
           v = r.n(S),
           w = r(85599),
@@ -16999,26 +16999,26 @@ ${Ce}`;
             };
           return (0, n.jsxs)("div", {
             style: je,
-            className: (0, g.A)(A().SteamAwardContainer, v().PartnerEventFont),
+            className: (0, g.A)(j().SteamAwardContainer, v().PartnerEventFont),
             children: [
               (0, n.jsxs)("div", {
-                className: A().SteamAwardHeader,
+                className: j().SteamAwardHeader,
                 children: [
                   (0, n.jsx)("img", {
-                    className: A().SteamAwardHeaderImage,
+                    className: j().SteamAwardHeaderImage,
                     src: o("trophy_220.png?v=1"),
                     alt: "",
                   }),
                   (0, n.jsxs)("div", {
-                    className: A().SteamAwardMainCtn,
+                    className: j().SteamAwardMainCtn,
                     children: [
                       (0, n.jsx)("div", {
-                        className: A().SteamAwardMainTitle,
+                        className: j().SteamAwardMainTitle,
                         children: oe,
                       }),
                       se,
                       (0, n.jsx)("div", {
-                        className: A().SteamAwardHeaderText,
+                        className: j().SteamAwardHeaderText,
                         children: Ee,
                       }),
                       Se,
@@ -17029,7 +17029,7 @@ ${Ce}`;
               ne,
               !!le &&
                 (0, n.jsx)("div", {
-                  className: A().SteamAwardLinkToNominationPage,
+                  className: j().SteamAwardLinkToNominationPage,
                   children: le,
                 }),
             ],
@@ -17040,7 +17040,7 @@ ${Ce}`;
         }
         function k() {
           return (0, n.jsx)(w.t, {
-            className: A().SteamAwardContainer,
+            className: j().SteamAwardContainer,
             size: "medium",
             position: "center",
             string: V.Z.Localize("#Loading"),
@@ -17100,7 +17100,7 @@ ${Ce}`;
             Ge = Ae ? (0, N.b0)(Ae, "small_capsule") : void 0,
             ke = Le ? (0, N.b0)(Le, "small_capsule") : void 0;
           return (0, n.jsx)(F.o0, {
-            modalClassName: A().SteamAwardConflictModal,
+            modalClassName: j().SteamAwardConflictModal,
             strTitle: V.Z.Localize(
               oe == "Vote"
                 ? "#SteamAward_VoteConflictWarning_Title"
@@ -17110,24 +17110,24 @@ ${Ce}`;
             onOK: Se,
             onCancel: ne,
             children: (0, n.jsxs)("div", {
-              className: A().ConflictBody,
+              className: j().ConflictBody,
               children: [
                 V.Z.LocalizeReact(
                   oe == "Vote"
                     ? "#SteamAward_VoteConflictWarning_Explanation"
                     : "#SteamAward_NominationConflictWarning_Explanation",
                   (0, n.jsx)("span", {
-                    className: A().SteamAwardModalGameTitle,
+                    className: j().SteamAwardModalGameTitle,
                     children: le?.name,
                   }),
                   (0, n.jsx)("span", {
-                    className: A().SteamAwardModalGameTitle,
+                    className: j().SteamAwardModalGameTitle,
                     children: je?.name,
                   }),
                 ),
                 Ge && ke
                   ? (0, n.jsxs)("div", {
-                      className: A().NominationSwitchCtn,
+                      className: j().NominationSwitchCtn,
                       children: [
                         (0, n.jsx)("img", { src: Ge, alt: "" }),
                         "\u2192",
@@ -17179,7 +17179,7 @@ ${Ce}`;
           return (0, n.jsxs)(h, {
             strMainTitle: V.Z.Localize("#SteamAwards_EventMainTitle"),
             subtitle: (0, n.jsxs)("div", {
-              className: A().SteamAwardSubTitle,
+              className: j().SteamAwardSubTitle,
               children: [
                 Se
                   ? V.Z.Localize("#SteamAwards_EventCallToAction")
@@ -17190,7 +17190,7 @@ ${Ce}`;
                 Se &&
                   (0, n.jsxs)("a", {
                     href: ee,
-                    className: A().SteamAwardLearnMore,
+                    className: j().SteamAwardLearnMore,
                     children: [
                       "(",
                       V.Z.Localize("#EventDisplay_CallToAction_LearnMore"),
@@ -17206,7 +17206,7 @@ ${Ce}`;
                     le?.name ?? "",
                   )
                 : (0, n.jsx)("a", {
-                    className: A().LinkText,
+                    className: j().LinkText,
                     href: ee,
                     children: V.Z.Localize(
                       "#SteamAwards_EventNominateGamePrompt_NoCategory",
@@ -17226,23 +17226,23 @@ ${Ce}`;
               !!(Me && (Se || ye)) &&
                 (0, n.jsx)("div", {
                   className: (0, g.A)(
-                    A().SteamAwardNominationWidget,
-                    A().SteamAwardVoteWidget,
+                    j().SteamAwardNominationWidget,
+                    j().SteamAwardVoteWidget,
                   ),
                   children: (0, n.jsxs)("div", {
-                    className: A().NominateCtn,
+                    className: j().NominateCtn,
                     children: [
                       (0, n.jsx)("div", {
                         style: { background: s.Hu },
                         className: (0, g.A)(
-                          A().SteamAwardNominateButton,
-                          ye && A().Nominated,
+                          j().SteamAwardNominateButton,
+                          ye && j().Nominated,
                         ),
                         children: (0, n.jsx)(Q.Yh, {
                           controlled: !0,
                           className: (0, g.A)(
-                            A().SteamAwardVoteCheckBox,
-                            ye && A().Nominated,
+                            j().SteamAwardVoteCheckBox,
+                            ye && j().Nominated,
                           ),
                           checked: ye,
                           onChange: $e,
@@ -17250,7 +17250,7 @@ ${Ce}`;
                           color: "#FFFFFF",
                           highlightColor: "white",
                           label: (0, n.jsx)("div", {
-                            className: A().SteamAwardCategoryTitle,
+                            className: j().SteamAwardCategoryTitle,
                             children: V.Z.Localize(
                               ye
                                 ? "#SteamAwards_NominateWidget_CTA_PastTense"
@@ -17261,7 +17261,7 @@ ${Ce}`;
                         }),
                       }),
                       (0, n.jsx)("div", {
-                        className: A().SteamAwardCategoryDesc,
+                        className: j().SteamAwardCategoryDesc,
                         children: ne.strDescription,
                       }),
                     ],
@@ -17300,11 +17300,11 @@ ${Ce}`;
                 )
               : (0, n.jsx)("a", {
                   href: je,
-                  className: A().LinkText,
+                  className: j().LinkText,
                   children: V.Z.Localize("#SteamAwards_Event_VotesClosed"),
                 }),
             headerContent: (0, n.jsx)("div", {
-              className: A().AwardCategoriesCtn,
+              className: j().AwardCategoriesCtn,
               children: se.rgCategories.map((Ae) =>
                 (0, n.jsx)(
                   p,
@@ -17353,38 +17353,38 @@ ${Ce}`;
           };
           return (0, n.jsxs)("div", {
             style: { backgroundColor: s.Hu },
-            className: A().SteamAwardVoteWidget,
+            className: j().SteamAwardVoteWidget,
             children: [
               (0, n.jsxs)("div", {
-                className: A().SteamAwardVoteButtonArea,
+                className: j().SteamAwardVoteButtonArea,
                 children: [
                   (0, n.jsx)("div", {
                     className: (0, g.A)(
-                      A().SteamAwardCategoryTitle,
-                      A().VotingTitle,
+                      j().SteamAwardCategoryTitle,
+                      j().VotingTitle,
                     ),
                     children: se.strTitle,
                   }),
                   !ne &&
                     (0, n.jsx)("div", {
-                      className: A().SteamAwardCategoryDesc,
+                      className: j().SteamAwardCategoryDesc,
                       children: se.strDescription,
                     }),
                   B
                     ? (0, n.jsx)("button", {
-                        className: A().SteamAwardVoteButtonSubmitted,
+                        className: j().SteamAwardVoteButtonSubmitted,
                         children: (0, n.jsx)("span", {
-                          className: A().SteamAwardVoteButtonText,
+                          className: j().SteamAwardVoteButtonText,
                           children: V.Z.Localize(
                             "#SteamAward_VoteButton_VotedText",
                           ),
                         }),
                       })
                     : (0, n.jsx)("button", {
-                        className: A().SteamAwardVoteButton,
+                        className: j().SteamAwardVoteButton,
                         onClick: ee,
                         children: (0, n.jsx)("span", {
-                          className: A().SteamAwardVoteButtonText,
+                          className: j().SteamAwardVoteButtonText,
                           children: V.Z.Localize(
                             "#SteamAward_VoteButton_PromptText",
                           ),
@@ -17544,7 +17544,7 @@ ${Ce}`;
       },
       79590: (ge, de, r) => {
         "use strict";
-        r.d(de, { m: () => A });
+        r.d(de, { m: () => j });
         var n = r(7850),
           x = r(99412),
           a = r(29630),
@@ -17602,7 +17602,7 @@ ${Ce}`;
                 ],
               });
         }
-        function A(S) {
+        function j(S) {
           const { gidEvent: v } = S,
             w = (0, y.RR)(v);
           return w
@@ -17637,16 +17637,16 @@ ${Ce}`;
           F = r(28515),
           _ = r(54357),
           W = r(87937),
-          A = r.n(W);
+          j = r.n(W);
         function S(J, Q) {
-          const m = Q ?? A().tz.guess(),
-            M = A().unix(J).tz(m),
+          const m = Q ?? j().tz.guess(),
+            M = j().unix(J).tz(m),
             p = (0, s.l4)();
           return p && M.locale(p), M.format("LT");
         }
         function v(J, Q, c) {
-          const M = c ?? A().tz.guess(),
-            p = A().unix(J).tz(M),
+          const M = c ?? j().tz.guess(),
+            p = j().unix(J).tz(M),
             L = (0, s.l4)();
           return (
             L && p.locale(L),
@@ -17673,7 +17673,10 @@ ${Ce}`;
           });
         }
         function g(J, Q, c, m) {
-          return A().unix(J).tz(c).isSame(A().unix(Q).tz(c), m);
+          return (
+            c || (c = j().tz.guess()),
+            j().unix(J).tz(c).isSame(j().unix(Q).tz(c), m)
+          );
         }
         const o = (0, t.PA)((J) => {
             const {

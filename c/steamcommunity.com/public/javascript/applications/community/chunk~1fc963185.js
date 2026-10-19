@@ -332,7 +332,10 @@
           });
         }
         function _(_, _, _, _) {
-          return _().unix(_)._(_).isSame(_().unix(_)._(_), _);
+          return (
+            _ || (_ = _()._.guess()),
+            _().unix(_)._(_).isSame(_().unix(_)._(_), _)
+          );
         }
         const _ = (0, _._)((_) => {
             const {

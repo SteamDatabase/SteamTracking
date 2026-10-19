@@ -809,8 +809,8 @@
           return _
             ? (0, _.jsx)(_._, {
                 purchaseOption: _,
-                size: "large",
-                transparentBackground: !0,
+                size: "inline",
+                legacyStyle: !0,
               })
             : _.is_free || _?.is_free
               ? (0, _.jsx)("div", {

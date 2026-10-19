@@ -51,7 +51,7 @@
               },
               [I, O, M, d],
             ),
-            V = P.useCallback(
+            $ = P.useCallback(
               (K) => {
                 h(d) &&
                   (I && K.relatedTarget && I(!1),
@@ -68,9 +68,9 @@
             ref: u,
             className: c,
             onMouseEnter: Z,
-            onMouseLeave: V,
+            onMouseLeave: $,
             onFocus: Z,
-            onBlur: V,
+            onBlur: $,
             children: N,
           });
         }
@@ -289,10 +289,10 @@
           const Z = (X) => {
               N.current = X.currentTarget.currentTime;
             },
-            V = (0, B.kB)(c ? d : void 0);
-          if ((O && v.TS.IN_MOBILE) || !c || !M || !M.visible || !V)
+            $ = (0, B.kB)(c ? d : void 0);
+          if ((O && v.TS.IN_MOBILE) || !c || !M || !M.visible || !$)
             return null;
-          const K = V.filter(
+          const K = $.filter(
             (X) => X.microtrailer && X.microtrailer.length > 0,
           );
           if (K.length === 0)
@@ -346,7 +346,7 @@
       19908: (R, S, e) => {
         "use strict";
         e.r(S),
-          e.d(S, { BuildDiscountsAndEventsPages: () => re, default: () => xe });
+          e.d(S, { BuildDiscountsAndEventsPages: () => re, default: () => ye });
         var t = e(7850),
           P = e(24660),
           v = e(19298),
@@ -369,7 +369,7 @@
           N = e(43135),
           u = e(45931),
           Z = e(95995),
-          V = e(27894),
+          $ = e(27894),
           K = e(95242),
           s = e(38939),
           w = e(80902);
@@ -434,18 +434,18 @@
               z = U < L.length || W < A.length,
               Y = Math.min(z ? _ : r, f.length - G);
             for (let F = 0; F < Y; F++) {
-              const k = f[G++];
-              m.push({ key: `full_${ee(k)}`, items: [k] });
+              const V = f[G++];
+              m.push({ key: `full_${ee(V)}`, items: [V] });
             }
-            const $ = (r - m.length) * 2,
-              p = Math.min(D, $, L.length - U),
-              x = L.slice(U, U + p);
+            const k = (r - m.length) * 2,
+              p = Math.min(D, k, L.length - U),
+              y = L.slice(U, U + p);
             U += p;
-            const y = Math.min($ - p, A.length - W);
-            x.push(...A.slice(W, W + y)), (W += y);
-            for (let F = 0; F < x.length; F += 2) {
-              const k = x.slice(F, F + 2);
-              m.push({ key: `half_${ee(k[0])}`, items: k });
+            const x = Math.min(k - p, A.length - W);
+            y.push(...A.slice(W, W + x)), (W += x);
+            for (let F = 0; F < y.length; F += 2) {
+              const V = y.slice(F, F + 2);
+              m.push({ key: `half_${ee(V[0])}`, items: V });
             }
             H.push(m);
           }
@@ -484,22 +484,22 @@
             G = u.d.Localize("#DiscountsAndEvents_SeeMore"),
             { bShowSeeMoreHint: U, panelProps: W } = (0, I.i)(H),
             [m, z] = (0, g.L2)(),
-            { rgPages: Y, rgColumns: $ } = n.useMemo(() => {
+            { rgPages: Y, rgColumns: k } = n.useMemo(() => {
               let p = A.data?.items ?? [];
               m ||
                 (p = p.filter(
-                  (y) =>
-                    !y.appid ||
-                    y.sale_page ||
-                    (!z.BIsGameOwned(y.appid) && !z.BIsGameIgnored(y.appid)),
+                  (x) =>
+                    !x.appid ||
+                    x.sale_page ||
+                    (!z.BIsGameOwned(x.appid) && !z.BIsGameIgnored(x.appid)),
                 ));
-              const x = re(p, ne, Me, De, ge);
-              return { rgPages: x, rgColumns: x.flat() };
+              const y = re(p, ne, Me, De, ge);
+              return { rgPages: y, rgColumns: y.flat() };
             }, [A.data, m, z]);
           return !A.data && A.isError
             ? (0, t.jsx)(Ae, {})
             : A.data
-              ? $.length
+              ? k.length
                 ? (0, t.jsxs)(v.Z, {
                     className: (0, c.A)(s.DiscountsAndEvents, q),
                     navEntryPreferPosition: E.iU.PREFERRED_CHILD,
@@ -522,7 +522,7 @@
                         gap: Oe,
                         className: (0, c.A)(s.Carousel, !L && s.Scrolling),
                         children: L
-                          ? Y.map((p, x) =>
+                          ? Y.map((p, y) =>
                               (0, t.jsx)(
                                 v.Z,
                                 {
@@ -531,21 +531,21 @@
                                   role: "list",
                                   "aria-labelledby":
                                     "discounts_and_events_title",
-                                  children: p.map((y) =>
+                                  children: p.map((x) =>
                                     (0, t.jsx)(
                                       ie,
-                                      { column: y, depth: x + 1 },
-                                      y.key,
+                                      { column: x, depth: y + 1 },
+                                      x.key,
                                     ),
                                   ),
                                 },
                                 p[0].key,
                               ),
                             )
-                          : $.map((p, x) =>
+                          : k.map((p, y) =>
                               (0, t.jsx)(
                                 ie,
-                                { column: p, depth: Math.floor(x / ne) + 1 },
+                                { column: p, depth: Math.floor(y / ne) + 1 },
                                 p.key,
                               ),
                             ),
@@ -628,12 +628,12 @@
             { data: m } = (0, T.J$)(G ? i : void 0),
             { data: z } = (0, T.lv)(U ? i : void 0),
             { data: Y } = (0, T.Q_)(W ? i : void 0),
-            { data: $ } = (0, l.lI)(),
-            p = $?.preferences?.disable_microtrailers,
-            [x, y] = n.useState(!1),
-            [F, k] = n.useState(!1),
+            { data: k } = (0, l.lI)(),
+            p = k?.preferences?.disable_microtrailers,
+            [y, x] = n.useState(!1),
+            [F, V] = n.useState(!1),
             le = !!i && !D && !r.sale_page && !p,
-            ce = le && (x || F),
+            ce = le && (y || F),
             te = Te(r),
             de = (0, C.aL)(r.url, te, _),
             se = z ?? void 0;
@@ -643,7 +643,7 @@
               ? ((0, j.l)(se, "hero_capsule") ?? (0, j.l)(se, "header"))
               : (0, j.l)(se, "header"));
           const ue = Ie(r),
-            ye = r.alt ?? m?.name ?? "";
+            xe = r.alt ?? m?.name ?? "";
           if (i && ((!f && m === null) || (!A && z === null))) return null;
           const me = (0, t.jsxs)(t.Fragment, {
             children: [
@@ -651,7 +651,7 @@
                 className: s.ImageCtn,
                 children: [
                   Q &&
-                    (0, t.jsx)("img", { className: s.Image, src: Q, alt: ye }),
+                    (0, t.jsx)("img", { className: s.Image, src: Q, alt: xe }),
                   le &&
                     (0, t.jsx)(M.mj, { id: i, active: ce, bIsHoverMode: !0 }),
                   ue &&
@@ -684,7 +684,7 @@
                 })
               : he;
           } else
-            J = (0, t.jsx)(V.p, {
+            J = (0, t.jsx)($.p, {
               storeItem: m,
               feature: te,
               depth: _,
@@ -698,13 +698,13 @@
               r.banner === "daily_deal" && s.DailyDeal,
               ce && s.Hovered,
             ),
-            onGamepadFocus: () => k(!0),
-            onGamepadBlur: () => k(!1),
+            onGamepadFocus: () => V(!0),
+            onGamepadBlur: () => V(!1),
             children: i
               ? (0, t.jsx)(b.j, {
                   id: i,
                   hoverClassName: s.HoverSource,
-                  fnHoverState: y,
+                  fnHoverState: x,
                   disableScreenshots: !0,
                   children: J,
                 })
@@ -723,8 +723,8 @@
           return i
             ? (0, t.jsx)(K.z, {
                 purchaseOption: i,
-                size: "large",
-                transparentBackground: !0,
+                size: "inline",
+                legacyStyle: !0,
               })
             : r.is_free || _?.is_free
               ? (0, t.jsx)("div", {
@@ -733,7 +733,7 @@
                 })
               : null;
         }
-        function xe(o) {
+        function ye(o) {
           return (0, t.jsx)(d.K, {
             placeholderHeight: Pe,
             rootMargin: "100% 0px 100% 0px",

@@ -838,23 +838,28 @@ html.responsive.touch .fiveElementEightGap {
 ._1gsW0WuP7ZclL1_ScZlsvo ._1-29ksrfQaORRCqN2AVf06 {
   display: flex;
   justify-content: flex-end;
+  align-items: flex-start;
   min-height: 36px;
   color: #99d4ff;
 }
 ._1gsW0WuP7ZclL1_ScZlsvo ._2wlqkq-0fkggDE-Kll8Rwd {
   display: flex;
   align-items: center;
-  padding: 0 5px;
-  background: rgba(76, 107, 34, 0.5);
-  color: #beee11;
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 34px;
+  min-height: 28px;
+  padding: 0 6px;
+  background: var(--green, #a1cd44);
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 15px;
+  white-space: nowrap;
 }
 ._1gsW0WuP7ZclL1_ScZlsvo ._3KFNh7n6I49ARX6I0oXdel {
   display: flex;
   align-items: center;
-  padding: 0 8px;
+  padding: 8px 12px;
+  background: var(--price-dark-bg, rgba(0, 0, 0, 0.25));
   color: #fff;
-  font-size: 15px;
+  font-size: 14px;
+  line-height: 12px;
 }
