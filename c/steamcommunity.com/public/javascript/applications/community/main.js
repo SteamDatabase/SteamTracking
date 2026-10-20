@@ -27460,7 +27460,7 @@
               path: "/",
               secure: !0,
               httpOnly: !1,
-              maxAge: 3600 * 24 * 7 * 365,
+              maxAge: 1e3 * 3600 * 24 * 365,
             },
             preferenceControls: {
               isTechnicallyNecessary: !0,
@@ -27519,7 +27519,7 @@
         }
         function _(_, _) {
           var _, _, _, _, _;
-          if (!document.cookie || !(0, _._)(_)) return;
+          if (!("document" in globalThis) || !(0, _._)(_)) return;
           const _ =
             (_ = (_ = _.options) == null ? void 0 : _.path) != null ? _ : "/";
           let _ = "";
@@ -78206,7 +78206,8 @@
           _ = ((_) => (
             (_[(_.None = 0)] = "None"),
             (_[(_.Header = 1)] = "Header"),
-            (_[(_.Fallback = 2)] = "Fallback"),
+            (_[(_.Measured = 2)] = "Measured"),
+            (_[(_.Guess = 3)] = "Guess"),
             _
           ))(_ || {});
         const _ = (0, _.createContext)({});
@@ -78215,35 +78216,37 @@
           return (
             useEffect(() => {
               var _, _;
-              const _ = [];
-              if (
-                ((_ = _.viewportWidth) == null ? void 0 : _.source) === 2 ||
-                ((_ = _.viewportHeight) == null ? void 0 : _.source) === 2
-              ) {
-                const _ = () => {
-                  var _, _;
-                  return WriteClientHintsToCookie({
-                    ..._,
-                    viewportWidth:
-                      ((_ = _.viewportWidth) == null ? void 0 : _.source) === 2
-                        ? {
-                            value: window.innerWidth,
-                            source: 2,
-                          }
-                        : _.viewportWidth,
-                    viewportHeight:
-                      ((_ = _.viewportHeight) == null ? void 0 : _.source) === 2
-                        ? {
-                            value: window.innerHeight,
-                            source: 2,
-                          }
-                        : _.viewportHeight,
-                  });
-                };
-                document.addEventListener("resize", _),
-                  _.push(() => document.removeEventListener("resize", _));
-              }
-              return () => _.forEach((_) => _());
+              const _ =
+                  ((_ = _.viewportWidth) == null ? void 0 : _.source) !== 1,
+                _ = ((_ = _.viewportHeight) == null ? void 0 : _.source) !== 1;
+              if (!_ && !_) return () => {};
+              const _ = () =>
+                WriteClientHintsToCookie({
+                  ..._,
+                  viewportWidth: _
+                    ? {
+                        value: window.innerWidth,
+                        source: 2,
+                      }
+                    : _.viewportWidth,
+                  viewportHeight: _
+                    ? {
+                        value: window.innerHeight,
+                        source: 2,
+                      }
+                    : _.viewportHeight,
+                });
+              _();
+              let _;
+              const _ = () => {
+                clearTimeout(_), (_ = setTimeout(_, 250));
+              };
+              return (
+                window.addEventListener("resize", _),
+                () => {
+                  clearTimeout(_), window.removeEventListener("resize", _);
+                }
+              );
             }, [_]),
             jsx(_, {
               value: _,

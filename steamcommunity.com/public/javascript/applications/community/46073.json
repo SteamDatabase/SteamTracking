@@ -584,6 +584,7 @@
     "Workshop_ItemAdmin_Incompatible_UnsetConfirm": "Are you sure you want to set this item as compatible?",
     "Workshop_ItemAdmin_Ban_Set": "Ban Item",
     "Workshop_ItemAdmin_Ban_Unset": "Unban Item",
+    "Workshop_ItemAdmin_Ban_Sustain": "Sustain Ban",
     "Workshop_ItemAdmin_Ban_Reason": "Please provide a reason:",
     "Workshop_ItemAdmin_Ban_Reason_Unselected": "Click to select...",
     "Workshop_ItemAdmin_Ban_Presets": "Presets:",
