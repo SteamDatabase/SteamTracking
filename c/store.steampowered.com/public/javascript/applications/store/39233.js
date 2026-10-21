@@ -240,6 +240,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = ((_) => (
@@ -344,7 +345,9 @@
         }
         function _(_) {
           const { lineItem: _ } = _,
-            _ = _();
+            _ = _(),
+            { bShowValidationNotices: _ } = (0, _._)();
+          if (!_) return null;
           let _ = [],
             _ = !!_.gift_info?.accountid_giftee;
           return (
@@ -905,6 +908,7 @@
                       children: (0, _.jsx)(_, {
                         item: _,
                         validatedItem: _[_.line_item_id],
+                        bCartValidated: !!_,
                         renderLineItem: _,
                       }),
                     },
@@ -915,7 +919,12 @@
           });
         }
         function _(_) {
-          const { item: _, validatedItem: _, renderLineItem: _ } = _,
+          const {
+              item: _,
+              validatedItem: _,
+              bCartValidated: _,
+              renderLineItem: _,
+            } = _,
             _ = _(_);
           if (!_) throw `Unknown line item type (${_.type})`;
           const { data: _ } = (0, _._)(_),
@@ -925,7 +934,7 @@
           return (
             (0, _._)(_),
             (0, _._)(_),
-            _ && (!_.visible || _ === null)
+            _ && (!_.visible || _ === null || (_ && !_))
               ? (0, _.jsx)(_, {
                   lineItemID: _.line_item_id,
                   validatedItem: _,
@@ -945,7 +954,8 @@
         }
         function _(_) {
           const { item: _, error: _ } = _,
-            _ = (0, _._)(_.line_item_id);
+            _ = (0, _._)(_.line_item_id),
+            _ = (0, _._)();
           return (0, _.jsxs)(_._, {
             className: _().ErrorLineItem,
             children: [
@@ -962,11 +972,12 @@
                   }),
                 ],
               }),
-              (0, _.jsx)(_._, {
-                onActivate: () => _.mutate(),
-                className: _().RemoveButton,
-                children: _._.Localize("#Cart_Remove"),
-              }),
+              !_ &&
+                (0, _.jsx)(_._, {
+                  onActivate: () => _.mutate(),
+                  className: _().RemoveButton,
+                  children: _._.Localize("#Cart_Remove"),
+                }),
             ],
           });
         }
@@ -1125,6 +1136,7 @@
         function _(_) {
           const { lineItemID: _, validatedItem: _, storeItem: _ } = _,
             _ = (0, _._)(_),
+            _ = (0, _._)(),
             _ = _.isPending;
           return (0, _.jsxs)(_._, {
             placeholder: !0,
@@ -1158,15 +1170,16 @@
                         (0, _.jsx)(_, {
                           validatedItem: _,
                         }),
-                      (0, _.jsx)(_._, {
-                        className: _().LineItemSpaceBetween,
-                        children: (0, _.jsx)(_._, {
-                          focusable: !0,
-                          onActivate: () => _.mutate(),
-                          className: _().RemoveLineItem,
-                          children: _._.Localize("#Cart_Remove"),
+                      !_ &&
+                        (0, _.jsx)(_._, {
+                          className: _().LineItemSpaceBetween,
+                          children: (0, _.jsx)(_._, {
+                            focusable: !0,
+                            onActivate: () => _.mutate(),
+                            className: _().RemoveLineItem,
+                            children: _._.Localize("#Cart_Remove"),
+                          }),
                         }),
-                      }),
                     ],
                   }),
                 ],
@@ -1459,12 +1472,14 @@
             _ = (0, _._)(),
             _ = (0, _._)(),
             _ = (0, _._)(),
+            { bShowPurchaseOptionPicker: _ } = (0, _._)(),
             { data: _ } = (0, _._)(
               _.gift_info?.accountid_giftee
                 ? _.gift_info.accountid_giftee
                 : null,
-            ),
-            _ = !_(_) || _,
+            );
+          if (!_) return null;
+          const _ = !_(_) || _,
             _ = !_(_);
           let _ = [
             {
@@ -1767,7 +1782,7 @@
         }
         async function _(_, _, _, _, _, _) {
           const _ = _._.Init(_._);
-          (0, _._)(_) || (0, _._)(_)
+          (0, _._)(_) || (0, _._)(_) || (0, _._)(_)
             ? (_.Body().set_gidshoppingcart(_.gid),
               _ && _.Body().set_gift_info(_._.fromObject(_)))
             : (0, _._)(_) && _.Body().set_gidreplayoftransid(_.gid),

@@ -643,38 +643,76 @@
       48366: (S1, g1, i) => {
         "use strict";
         i.d(g1, {
-          EJ: () => d,
-          ZB: () => u,
+          EJ: () => M,
+          ZB: () => D,
           c2: () => l,
+          cN: () => o,
           kx: () => n,
-          sI: () => c,
+          nn: () => u,
+          sI: () => B,
           sb: () => t,
           uU: () => e,
         });
         var s = i(78280);
-        function l(C) {
-          return C.type === "account";
+        function l(a) {
+          return a.type === "account";
         }
-        function n(C) {
-          return C.type === "anonymous";
+        function n(a) {
+          return a.type === "anonymous";
         }
-        function e(C) {
-          return C.type === "request";
+        function e(a) {
+          return a.type === "request";
         }
-        function t(C) {
-          return C.type === "replay";
+        function t(a) {
+          return a.type === "replay";
         }
-        function u() {
-          const C = (0, s.j4)();
-          return !e(C) && !t(C);
+        function u(a) {
+          return a.type === "history";
         }
-        function d() {
-          const C = (0, s.j4)();
-          return t(C);
+        const d = {
+            bCanAddItems: !0,
+            bCanModify: !0,
+            bCanPurchase: !0,
+            bShowValidationNotices: !0,
+            bShowPurchaseOptionPicker: !0,
+            bShowPageFooter: !0,
+            bCanChangeCountry: !0,
+          },
+          c = {
+            account: d,
+            anonymous: d,
+            request: { ...d, bCanAddItems: !1, bShowPageFooter: !1 },
+            replay: {
+              ...d,
+              bCanAddItems: !1,
+              bCanModify: !1,
+              bShowPageFooter: !1,
+            },
+            history: {
+              bCanAddItems: !1,
+              bCanModify: !1,
+              bCanPurchase: !1,
+              bShowValidationNotices: !1,
+              bShowPurchaseOptionPicker: !1,
+              bShowPageFooter: !1,
+              bCanChangeCountry: !1,
+            },
+          };
+        function C(a) {
+          return c[a.type];
         }
-        function c() {
-          const C = (0, s.j4)();
-          return e(C) ? C.requestID : void 0;
+        function o() {
+          return C((0, s.j4)());
+        }
+        function D() {
+          return o().bCanAddItems;
+        }
+        function M() {
+          return !o().bCanModify;
+        }
+        function B() {
+          const a = (0, s.j4)();
+          return e(a) ? a.requestID : void 0;
         }
       },
       30815: (S1, g1, i) => {

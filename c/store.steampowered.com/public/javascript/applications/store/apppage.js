@@ -2773,6 +2773,7 @@
             [_, "steam_australia"],
             [_, "cadpa"],
           ]),
+          _ = "esrb",
           _ = "crl",
           _ = "dejus",
           _ = "0",
@@ -2892,19 +2893,11 @@
             .filter((_) => _ !== void 0)
             .map((_) => _.Localize(_));
         }
-        const _ = new Map([
-          ["in-game purchases", _],
-          ["in-game purchases (includes random items)", _],
-          ["users interact", _],
-        ]);
         function _(_) {
           const _ = [];
           for (const _ of _) {
             const _ = _.trim();
-            if (!_) continue;
-            const _ = _.get(_.toLowerCase()),
-              _ = _ !== void 0 ? _([_])[0] : _;
-            _.includes(_) || _.push(_);
+            _ && !_.includes(_) && _.push(_);
           }
           return _;
         }
@@ -3096,10 +3089,11 @@
         }
         function _(_) {
           const {
+              strType: _,
               rgRatingInteractiveElements: _,
               rgSurveyInteractiveElements: _,
             } = _.rating,
-            _ = _.length > 0,
+            _ = _ === _,
             _ = _ ? _ : _;
           return _.length === 0
             ? null

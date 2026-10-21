@@ -757,6 +757,8 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid");
         function _(_) {
@@ -771,13 +773,53 @@
         function _(_) {
           return _.type === "replay";
         }
-        function _() {
-          const _ = (0, _._)();
-          return !_(_) && !_(_);
+        function _(_) {
+          return _.type === "history";
+        }
+        const _ = {
+            bCanAddItems: !0,
+            bCanModify: !0,
+            bCanPurchase: !0,
+            bShowValidationNotices: !0,
+            bShowPurchaseOptionPicker: !0,
+            bShowPageFooter: !0,
+            bCanChangeCountry: !0,
+          },
+          _ = {
+            account: _,
+            anonymous: _,
+            request: {
+              ..._,
+              bCanAddItems: !1,
+              bShowPageFooter: !1,
+            },
+            replay: {
+              ..._,
+              bCanAddItems: !1,
+              bCanModify: !1,
+              bShowPageFooter: !1,
+            },
+            history: {
+              bCanAddItems: !1,
+              bCanModify: !1,
+              bCanPurchase: !1,
+              bShowValidationNotices: !1,
+              bShowPurchaseOptionPicker: !1,
+              bShowPageFooter: !1,
+              bCanChangeCountry: !1,
+            },
+          };
+        function _(_) {
+          return _[_.type];
         }
         function _() {
-          const _ = (0, _._)();
-          return _(_);
+          return _((0, _._)());
+        }
+        function _() {
+          return _().bCanAddItems;
+        }
+        function _() {
+          return !_().bCanModify;
         }
         function _() {
           const _ = (0, _._)();

@@ -1603,7 +1603,7 @@ function addToCart( subid, dedupe )
 
 		if ( !$Form.length )
 		{
-			$Form= $J('<form/>', { name: 'add_to_cart_' + subid, action: 'https://store.steampowered.com/cart/', method: 'POST', style: 'display: none;' } );
+			$Form= $J('<form/>', { name: 'add_to_cart_' + subid, action: 'https://store.steampowered.com/cart/addtocart?redirect=1', method: 'POST', style: 'display: none;' } );
 			$Form.append( $J('<input/>', { type: 'hidden', name: 'action', value: 'add_to_cart' } ) );
 			$Form.append( $J('<input/>', { type: 'hidden', name: 'subid', value: subid } ) );
 			$Form.append( $J('<input/>', { type: 'hidden', name: 'sessionid', value: g_sessionID } ) );
@@ -1810,7 +1810,7 @@ function addBundleToCart( bundleid, dedupe, bIsGift )
 
 		if ( !$Form.length )
 		{
-			$Form= $J('<form/>', { name: 'add_bundle_to_cart_' + bundleid, action: 'https://store.steampowered.com/cart/', method: 'POST', style: 'display: none;' } );
+			$Form= $J('<form/>', { name: 'add_bundle_to_cart_' + bundleid, action: 'https://store.steampowered.com/cart/addtocart?redirect=1', method: 'POST', style: 'display: none;' } );
 			$Form.append( $J('<input/>', { type: 'hidden', name: 'action', value: 'add_to_cart' } ) );
 			$Form.append( $J('<input/>', { type: 'hidden', name: 'bundleid', value: bundleid } ) );
 			$Form.append( $J('<input/>', { type: 'hidden', name: 'sessionid', value: g_sessionID } ) );

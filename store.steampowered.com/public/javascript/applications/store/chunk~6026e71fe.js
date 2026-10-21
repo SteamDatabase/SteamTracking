@@ -33930,7 +33930,7 @@
           }
           let r = (0, $a.uX)(a),
             i = r.document.createElement("form");
-          (i.action = _.TS.STORE_BASE_URL + "cart/"),
+          (i.action = _.TS.STORE_BASE_URL + "cart/addtocart?redirect=1"),
             (i.method = "POST"),
             (i.style.display = "none"),
             vi(document, i, "action", "add_to_cart"),
